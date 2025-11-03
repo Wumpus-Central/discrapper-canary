@@ -1,32 +1,46 @@
 n.d(t, {
-    FN: () => E,
-    NE: () => c,
-    NO: () => u,
-    Oq: () => A,
-    RF: () => y,
-    Un: () => b,
-    X: () => h,
-    YW: () => d,
-    ae: () => O,
-    b3: () => _,
-    cf: () => S,
-    dr: () => I,
-    fY: () => m,
-    iU: () => l,
-    l7: () => g,
-    md: () => p,
-    qm: () => f,
-    yZ: () => v,
+    BN: () => j,
+    FN: () => v,
+    NE: () => d,
+    NO: () => f,
+    Ni: () => D,
+    Oq: () => w,
+    RF: () => S,
+    Un: () => I,
+    X: () => b,
+    YW: () => _,
+    a4: () => M,
+    ae: () => A,
+    b3: () => g,
+    cf: () => P,
+    dr: () => N,
+    fY: () => y,
+    iU: () => u,
+    kk: () => m,
+    l7: () => O,
+    md: () => E,
+    qm: () => p,
+    rZ: () => U,
+    t9: () => k,
+    vN: () => L,
+    yZ: () => C,
+    yx: () => h,
+    zz: () => T,
 }),
-    n(953529);
+    n(953529),
+    n(388685),
+    n(35282),
+    n(539854);
 var r = n(348327),
     i = n.n(r),
-    a = n(388032);
-function o(e, t) {
+    a = n(624138),
+    o = n(981631),
+    s = n(388032);
+function l(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = s(e, t);
+        i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -34,7 +48,7 @@ function o(e, t) {
     }
     return i;
 }
-function s(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -43,41 +57,50 @@ function s(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let l = 100,
-    c = 50,
-    u = 100,
-    d = 15,
-    f = 50,
-    _ = 4,
-    p = 7,
-    h = 5,
-    m = 13;
-var g = (function (e) {
+let u = 100,
+    d = 50,
+    f = 100,
+    _ = 15,
+    p = 50,
+    h = 10,
+    m = 100,
+    g = 4,
+    E = 7,
+    b = 5,
+    y = 13;
+var O = (function (e) {
         return (e[(e.CUSTOMIZE = 0)] = "CUSTOMIZE"), (e[(e.BROWSE = 1)] = "BROWSE"), e;
     })({}),
-    E = (function (e) {
+    v = (function (e) {
         return (e[(e.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (e[(e.DROPDOWN = 1)] = "DROPDOWN"), e;
     })({}),
-    b = (function (e) {
+    I = (function (e) {
         return (
             (e[(e.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
             (e[(e.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
             e
         );
+    })({}),
+    T = (function (e) {
+        return (
+            (e[(e.APPLICATION = 0)] = "APPLICATION"),
+            (e[(e.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
+            e
+        );
     })({});
-function y(e) {
+function S(e) {
     if (e.options.length > 0) return !1;
-    let t = O(),
+    let t = A(),
         { id: n } = t,
-        r = o(t, ["id"]),
+        r = l(t, ["id"]),
         { id: a } = e,
-        s = o(e, ["id"]);
-    return i()(r, s);
+        o = l(e, ["id"]);
+    return i()(r, o);
 }
-function O() {
+function A() {
     return {
         id: String(Date.now()),
-        title: a.intl.string(a.t.vY91C9),
+        title: s.intl.string(s.t.vY91C9),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -85,7 +108,7 @@ function O() {
         type: 0,
     };
 }
-function v(e) {
+function C(e) {
     return {
         id: String(Date.now()),
         title: "",
@@ -96,7 +119,7 @@ function v(e) {
         type: 0,
     };
 }
-function I(e) {
+function N(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -121,7 +144,7 @@ function I(e) {
         type: e.type,
     };
 }
-function T(e) {
+function R(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -143,10 +166,10 @@ function T(e) {
         type: e.type,
     };
 }
-function S(e) {
-    var t, n, r;
+function P(e) {
+    var t, n, r, i;
     return {
-        prompts: e.prompts.map(T),
+        prompts: e.prompts.map(R),
         defaultChannelIds: e.default_channel_ids,
         responses: null != (t = e.responses) ? t : [],
         mode: e.mode,
@@ -154,8 +177,65 @@ function S(e) {
         onboardingPromptsSeen: null != (n = e.onboarding_prompts_seen) ? n : {},
         onboardingResponsesSeen: null != (r = e.onboarding_responses_seen) ? r : {},
         belowRequirements: e.below_requirements,
+        connections: null != (i = e.connections) ? i : [],
     };
 }
-function A(e) {
+function w(e) {
     return null == e || (null == e.id && null == e.name);
+}
+let D = new Set([
+        o.ABu.PLAYSTATION_STAGING,
+        o.ABu.CONTACTS,
+        o.ABu.DOMAIN,
+        o.ABu.TWITTER_LEGACY,
+        o.ABu.MASTODON,
+        o.ABu.INSTAGRAM,
+        o.ABu.LEAGUE_OF_LEGENDS,
+        o.ABu.SKYPE,
+    ]),
+    x = Object.values(o.ABu).filter((e) => !D.has(e)),
+    L = [];
+function M(e) {
+    return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
+}
+function j(e) {
+    let [t, n] = e.split(":");
+    return "app" === t && void 0 !== n && "" !== n
+        ? {
+              type: 0,
+              applicationId: n,
+          }
+        : "provider" === t && void 0 !== n && "" !== n
+          ? {
+                type: 1,
+                providerId: n,
+            }
+          : null;
+}
+function k(e) {
+    let t = [];
+    return (
+        0 !== e.connection_type && 1 !== e.connection_type
+            ? t.push("Invalid connection type")
+            : 0 === e.connection_type
+              ? ((0, a.Ew)(e.application_id) && t.push("Application ID is required for application connections"),
+                (0, a.Ew)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
+              : 1 === e.connection_type &&
+                ((0, a.Ew)(e.provider_id)
+                    ? t.push("Platform ID is required for platform connections")
+                    : x.includes(e.provider_id) || t.push("Invalid platform ID"),
+                (0, a.Ew)(e.application_id) || t.push("Application ID not allowed for platform connections")),
+        t
+    );
+}
+function U(e) {
+    let t = [],
+        n = new Set();
+    for (let [r, i] of e.entries()) {
+        let e = k(i);
+        t.push(...e.map((e) => "Connection ".concat(r + 1, ": ").concat(e)));
+        let a = M(i);
+        n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
+    }
+    return t;
 }

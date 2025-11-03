@@ -1,8 +1,9 @@
 n.d(t, {
-    $$: () => x,
-    P_: () => _,
-    ap: () => v,
-    ku: () => j,
+    $$: () => v,
+    P_: () => C,
+    ap: () => O,
+    ih: () => y,
+    ku: () => _,
 }),
     n(953529),
     n(388685);
@@ -13,13 +14,15 @@ var r = n(951288),
     s = n(45966),
     o = n(637853),
     c = n(734893),
-    d = n(8426),
-    u = n(969632),
-    g = n(974513),
-    m = n(290511),
-    p = n(388032),
-    f = n(54028);
-function h(e) {
+    d = n(926958),
+    u = n(8426),
+    g = n(969632),
+    m = n(641938),
+    p = n(974513),
+    f = n(290511),
+    h = n(388032),
+    b = n(54028);
+function x(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
     switch (o) {
@@ -29,13 +32,13 @@ function h(e) {
                     (0, r.jsx)(a.dz2, {
                         size: "xs",
                         color: "currentColor",
-                        className: f.checkmark,
+                        className: b.checkmark,
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/semibold",
                         color: "status-positive",
-                        className: f.statusText,
-                        children: p.intl.string(p.t.rPnzRf),
+                        className: b.statusText,
+                        children: h.intl.string(h.t.rPnzRf),
                     }),
                 ],
             });
@@ -46,13 +49,13 @@ function h(e) {
                     (0, r.jsx)(a.Mgn, {
                         size: "xs",
                         color: "currentColor",
-                        className: f.warning,
+                        className: b.warning,
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/semibold",
                         color: "status-warning",
-                        className: f.statusText,
-                        children: p.intl.string(p.t["yTa+di"]),
+                        className: b.statusText,
+                        children: h.intl.string(h.t["yTa+di"]),
                     }),
                 ],
             });
@@ -63,29 +66,29 @@ function h(e) {
                     (0, r.jsx)(a.Mgn, {
                         size: "xs",
                         color: "currentColor",
-                        className: f.danger,
+                        className: b.danger,
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/semibold",
                         color: "status-danger",
-                        className: f.statusText,
-                        children: p.intl.string(p.t.EkokLy),
+                        className: b.statusText,
+                        children: h.intl.string(h.t.EkokLy),
                     }),
                 ],
             });
     }
     return (0, r.jsxs)("div", {
-        className: f.onboardingStepContainer,
+        className: b.onboardingStepContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: f.leftContainer,
+                className: b.leftContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: f.iconContainer,
+                        className: b.iconContainer,
                         children: l,
                     }),
                     (0, r.jsxs)("div", {
-                        className: f.onboardingStepText,
+                        className: b.onboardingStepText,
                         children: [
                             (0, r.jsx)(a.Heading, {
                                 variant: "heading-md/semibold",
@@ -101,18 +104,18 @@ function h(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: f.rightContainer,
+                className: b.rightContainer,
                 children: [
                     t,
                     d,
                     (0, r.jsx)("div", {
-                        className: f.cta,
+                        className: b.cta,
                         children: s
                             ? (0, r.jsx)(a.Button, {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t.bt75uw),
+                                  text: h.intl.string(h.t.bt75uw),
                               })
                             : (0, r.jsx)(a.Button, {
                                   icon: a.ZSh,
@@ -120,7 +123,7 @@ function h(e) {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t["0GWElc"]),
+                                  text: h.intl.string(h.t["0GWElc"]),
                               }),
                     }),
                 ],
@@ -128,70 +131,70 @@ function h(e) {
         ],
     });
 }
-function b(e) {
+function j(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
         [r, a] = (0, o.VF)(e, n);
-    return a.length >= m.md && r.length >= m.X;
+    return a.length >= f.md && r.length >= f.X;
 }
-function x(e) {
-    let t = b(e),
-        n = (0, g.O4)(e);
+function v(e) {
+    let t = j(e),
+        n = (0, p.O4)(e);
     return t || n;
 }
-function j(e) {
+function _(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
         d = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
         u = (0, l.e7)([s.Z], () => (0, o.kl)(t, s.Z.getDefaultChannelIds(t), s.Z.getOnboardingPrompts(t)).length),
-        x = i.useMemo(() => new Set(d), [d]),
-        [, j] = (0, o.VF)(t, x),
-        v = j.length,
-        _ = b(t),
-        C = (0, g.O4)(t),
-        O = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        y = O
-            ? p.intl.formatToPlainString(p.t.nHwnLK, {
+        g = i.useMemo(() => new Set(d), [d]),
+        [, m] = (0, o.VF)(t, g),
+        v = m.length,
+        _ = j(t),
+        O = (0, p.O4)(t),
+        C = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
+        y = C
+            ? h.intl.formatToPlainString(h.t.nHwnLK, {
                   numDefaultChannels: v,
                   numFromQuestions: u - v,
               })
             : _
-              ? p.intl.formatToPlainString(p.t.HxEwSv, { numDefaultChannels: v })
-              : p.intl.formatToPlainString(p.t.ey3uVZ, {
-                    numDefaultChannels: m.md,
-                    numChattableChannels: m.X,
+              ? h.intl.formatToPlainString(h.t.HxEwSv, { numDefaultChannels: v })
+              : h.intl.formatToPlainString(h.t.ey3uVZ, {
+                    numDefaultChannels: f.md,
+                    numChattableChannels: f.X,
                 });
-    return (0, r.jsx)(h, {
-        title: O ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
+    return (0, r.jsx)(x, {
+        title: C ? h.intl.string(h.t.YZookV) : h.intl.string(h.t["4GSygh"]),
         description: y,
         icon: (0, r.jsx)(a.VL1, {
             size: "md",
             color: "currentColor",
-            className: f.channelIcon,
+            className: b.channelIcon,
         }),
-        hasStarted: v > 0 || O,
-        status: _ || C ? (c ? "none" : "good") : "required",
+        hasStarted: v > 0 || C,
+        status: _ || O ? (c ? "none" : "good") : "required",
         onEdit: n,
     });
 }
-function v(e) {
+function O(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
         c = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
         d = (0, l.Wu)([s.Z], () => s.Z.getOnboardingPrompts(t)),
         u = d.length,
         [g, m] = (0, o.dF)(t, d, c),
-        b = g.length,
-        x = g.length + m.length,
-        j = (b / x) * 100,
+        p = g.length,
+        f = g.length + m.length,
+        j = (p / f) * 100,
         v = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         _ = u > 0,
-        C = "none";
+        O = "none";
     return (
-        _ && (j >= 85 && !i ? (C = "good") : j < 85 && (C = "warning")),
-        (0, r.jsx)(h, {
-            title: v ? p.intl.string(p.t.AGjtFv) : p.intl.string(p.t.dqCzoT),
-            description: p.intl.format(p.t.iuNisr, {
-                numChannels: b,
-                numTotalChannels: x,
+        _ && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
+        (0, r.jsx)(x, {
+            title: v ? h.intl.string(h.t.AGjtFv) : h.intl.string(h.t.dqCzoT),
+            description: h.intl.format(h.t.iuNisr, {
+                numChannels: p,
+                numTotalChannels: f,
                 channelsHook: (e, t) =>
                     (0, r.jsx)(
                         "span",
@@ -205,52 +208,80 @@ function v(e) {
             icon: (0, r.jsx)(a.iFz, {
                 size: "md",
                 color: "currentColor",
-                className: f.channelIcon,
+                className: b.channelIcon,
             }),
             hasStarted: _,
-            status: C,
+            status: O,
             onEdit: n,
         })
     );
 }
-function _(e) {
+function C(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
-        g = (0, l.e7)([u.Z], () => u.Z.getSettings()),
+        d = (0, l.e7)([g.Z], () => g.Z.getSettings()),
         m = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
-        b = (0, c.uo)(g),
-        x = g.enabled,
+        p = (0, c.uo)(d),
+        f = d.enabled,
         j = i.useCallback(() => {
-            (0, d.To)(t, !x);
-        }, [t, x]),
-        v = !(0, c.av)(g),
+            (0, u.To)(t, !f);
+        }, [t, f]),
+        v = !(0, c.av)(d),
         _ = "none";
-    v && (b && !o ? (_ = "good") : b || (_ = "required"));
-    let C = p.intl.string(p.t.GMOwOD);
-    b ? v || (C = p.intl.string(p.t.wHOoyE)) : (C = p.intl.string(p.t.wXFbgZ));
-    let O = null;
+    v && (p && !o ? (_ = "good") : p || (_ = "required"));
+    let O = h.intl.string(h.t.GMOwOD);
+    p ? v || (O = h.intl.string(h.t.wHOoyE)) : (O = h.intl.string(h.t.wXFbgZ));
+    let C = null;
     return (
         v &&
             m &&
-            (O = (0, r.jsx)("div", {
-                className: f.inlineSwitch,
+            (C = (0, r.jsx)("div", {
+                className: b.inlineSwitch,
                 children: (0, r.jsx)(a.rsf, {
-                    checked: x,
+                    checked: f,
                     onChange: j,
-                    disabled: !b,
+                    disabled: !p,
                 }),
             })),
-        (0, r.jsx)(h, {
-            title: p.intl.string(p.t.mRHqsj),
-            description: C,
+        (0, r.jsx)(x, {
+            title: h.intl.string(h.t.mRHqsj),
+            description: O,
             icon: (0, r.jsx)(a.Vy8, {
                 size: "md",
                 color: "currentColor",
-                className: f.channelIcon,
+                className: b.channelIcon,
             }),
             hasStarted: v,
             status: _,
             onEdit: n,
-            extra: O,
+            extra: C,
         })
     );
+}
+function y(e) {
+    let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
+        { enabled: s } = m.Z.useExperiment(
+            {
+                guildId: t,
+                location: "guild_settings",
+            },
+            { autoTrackExposure: !0 },
+        ),
+        o = (0, l.Wu)([d.Z], () => d.Z.getEditedConnections());
+    if (!s) return null;
+    let c = o.length > 0,
+        u = "none";
+    c && !i && (u = "good");
+    let g = c ? h.intl.format(h.t["9swnQZ"], { count: o.length }) : h.intl.string(h.t["3d3Cd5"]);
+    return (0, r.jsx)(x, {
+        title: h.intl.string(h.t.oL60eW),
+        description: g,
+        icon: (0, r.jsx)(a.xPt, {
+            size: "md",
+            color: "currentColor",
+            className: b.channelIcon,
+        }),
+        hasStarted: c,
+        status: u,
+        onEdit: n,
+    });
 }

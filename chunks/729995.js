@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => N });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -19,8 +19,8 @@ var i = n(442837),
     j = n(677892),
     v = n(981631),
     _ = n(388032),
-    C = n(820983);
-function O(e) {
+    O = n(820983);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-function E(e) {
+function N(e) {
     let { guildId: t, completed: n } = e,
         l = (0, i.e7)([o.Z], () => o.Z.getEnabled(t)),
         { location: c } = (0, a.O)();
@@ -74,7 +74,7 @@ function E(e) {
                 ? (await (0, h.$y)(t, !1),
                   g.default.track(
                       v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                      y(O({}, (0, s.hH)(t)), {
+                      y(C({}, (0, s.hH)(t)), {
                           action_taken: b.W$[b.W$.TOGGLE_DISABLED],
                           location: c,
                       }),
@@ -84,14 +84,14 @@ function E(e) {
                   n
                       ? g.default.track(
                             v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, s.hH)(t)), {
+                            y(C({}, (0, s.hH)(t)), {
                                 action_taken: b.W$[b.W$.TOGGLE_ENABLED],
                                 location: c,
                             }),
                         )
                       : g.default.track(
                             v.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                            y(O({}, (0, s.hH)(t)), {
+                            y(C({}, (0, s.hH)(t)), {
                                 step: b.PG[b.PG.REVIEW],
                                 back: !1,
                                 skip: !1,
@@ -102,7 +102,7 @@ function E(e) {
         f = () => {
             g.default.track(
                 v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                y(O({}, (0, s.hH)(t)), {
+                y(C({}, (0, s.hH)(t)), {
                     action_taken: b.W$[b.W$.PREVIEW],
                     location: c,
                 }),
@@ -116,7 +116,7 @@ function E(e) {
                     onEdit: () => {
                         g.default.track(
                             v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, s.hH)(t)), {
+                            y(C({}, (0, s.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_DEFAULT_CHANNELS],
                                 location: c,
                             }),
@@ -125,13 +125,28 @@ function E(e) {
                     },
                     disableGoodStatus: n,
                 }),
-                (0, r.jsx)(d.Z, { className: C.divider }),
+                (0, r.jsx)(d.Z, { className: O.divider }),
+                (0, r.jsx)(j.ih, {
+                    guildId: t,
+                    onEdit: () => {
+                        g.default.track(
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                            y(C({}, (0, s.hH)(t)), {
+                                action_taken: b.W$[b.W$.EDIT_CONNECTIONS],
+                                location: c,
+                            }),
+                        ),
+                            (0, m.$K)(b.PG.CONNECTIONS);
+                    },
+                    disableGoodStatus: n,
+                }),
+                (0, r.jsx)(d.Z, { className: O.divider }),
                 (0, r.jsx)(j.ap, {
                     guildId: t,
                     onEdit: () => {
                         g.default.track(
                             v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, s.hH)(t)), {
+                            y(C({}, (0, s.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_CUSTOMIZATION_QUESTIONS],
                                 location: c,
                             }),
@@ -140,13 +155,13 @@ function E(e) {
                     },
                     disableGoodStatus: n,
                 }),
-                (0, r.jsx)(d.Z, { className: C.divider }),
+                (0, r.jsx)(d.Z, { className: O.divider }),
                 (0, r.jsx)(j.P_, {
                     guildId: t,
                     onEdit: () => {
                         g.default.track(
                             v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, s.hH)(t)), {
+                            y(C({}, (0, s.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_HOME_SETTINGS],
                                 location: c,
                             }),
@@ -160,13 +175,13 @@ function E(e) {
     return n
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(N, {
+                  (0, r.jsx)(E, {
                       guildId: t,
                       handlePreview: f,
                   }),
                   (0, r.jsx)(I, {}),
                   (0, r.jsxs)("div", {
-                      className: C.content,
+                      className: O.content,
                       children: [
                           (0, r.jsx)(S, {
                               guildId: t,
@@ -180,7 +195,7 @@ function E(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: C.content,
+                      className: O.content,
                       children: [
                           (0, r.jsx)(T, {
                               guildId: t,
@@ -194,24 +209,24 @@ function E(e) {
               ],
           });
 }
-function N(e) {
+function E(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                className: C.header,
+                className: O.header,
                 children: _.intl.string(_.t.mhxUsE),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: C.subheader,
+                className: O.subheader,
                 children: _.intl.string(_.t.GtWdQH),
             }),
             (0, r.jsxs)("div", {
-                className: C.help,
+                className: O.help,
                 children: [
                     (0, r.jsx)(l.Anchor, {
                         target: "_blank",
@@ -222,7 +237,7 @@ function N(e) {
                             children: _.intl.string(_.t.Ok55Kh),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: C.helpSeparator }),
+                    (0, r.jsx)("div", { className: O.helpSeparator }),
                     (0, r.jsx)(l.Anchor, {
                         onClick: n,
                         children: (0, r.jsx)(l.Text, {
@@ -231,7 +246,7 @@ function N(e) {
                             children: _.intl.string(_.t["6gsjdM"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: C.helpSeparator }),
+                    (0, r.jsx)("div", { className: O.helpSeparator }),
                     (0, r.jsx)(x.Wu, { guildId: t }),
                 ],
             }),
@@ -241,10 +256,10 @@ function N(e) {
 function I() {
     let e = "\u2022 ";
     return (0, r.jsxs)("div", {
-        className: C.notice,
+        className: O.notice,
         children: [
             (0, r.jsx)("img", {
-                className: C.wumpus,
+                className: O.wumpus,
                 src: n(33631),
                 alt: "wumpus",
             }),
@@ -253,7 +268,7 @@ function I() {
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
-                        className: C.header,
+                        className: O.header,
                         children: _.intl.string(_.t.WslWRL),
                     }),
                     (0, r.jsxs)(l.Text, {
@@ -276,7 +291,7 @@ function S(e) {
         a = (0, j.$$)(t),
         s = (0, i.e7)([o.Z], () => o.Z.getEnabled(t));
     return (0, r.jsx)("div", {
-        className: C.review,
+        className: O.review,
         children: (0, r.jsx)(l.rsf, {
             label: s ? _.intl.string(_.t.MBdTCZ) : _.intl.string(_.t["Wslim+"]),
             description: s ? _.intl.string(_.t.LokpLi) : _.intl.string(_.t.nBIyJp),
@@ -292,10 +307,10 @@ function T(e) {
         o = (0, i.e7)([f.Z], () => f.Z.getSettings()),
         d = (0, c.uo)(o);
     return (0, r.jsxs)("div", {
-        className: C.reviewHeader,
+        className: O.reviewHeader,
         children: [
             (0, r.jsxs)("div", {
-                className: C.reviewHeaderText,
+                className: O.reviewHeaderText,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
@@ -308,7 +323,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: C.reviewActions,
+                className: O.reviewActions,
                 children: [
                     (0, r.jsx)(l.Button, {
                         size: "sm",
@@ -334,12 +349,12 @@ function P(e) {
     return null == n || n.verificationLevel < v.sFg.VERY_HIGH
         ? null
         : (0, r.jsxs)("div", {
-              className: C.rolesWarning,
+              className: O.rolesWarning,
               children: [
                   (0, r.jsx)(l.Mgn, {
                       size: "xs",
                       color: "currentColor",
-                      className: C.warningIcon,
+                      className: O.warningIcon,
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/medium",

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => O,
-    Zm: () => E,
+    ZP: () => E,
+    Zm: () => S,
 }),
     n(388685);
 var r = n(951288),
@@ -14,15 +14,18 @@ var r = n(951288),
     u = n(999382),
     g = n(889369),
     m = n(983135),
-    p = n(570961),
-    f = n(208665),
-    h = n(974513),
-    b = n(716130),
-    x = n(981631),
-    j = n(290511),
-    v = n(388032),
-    _ = n(314160);
-function C(e) {
+    p = n(190007),
+    f = n(926958),
+    h = n(570961),
+    b = n(208665),
+    x = n(974513),
+    j = n(38703),
+    v = n(716130),
+    _ = n(981631),
+    O = n(290511),
+    C = n(388032),
+    y = n(314160);
+function N(e) {
     let { guildId: t, prompts: n } = e,
         a = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
         [c, u] = (0, d.dF)(t, n, [...a]),
@@ -33,41 +36,41 @@ function C(e) {
         [b, x] = i.useState(!1),
         j = b ? s.CJ0 : s.u04;
     return (0, r.jsxs)("div", {
-        className: _.channelCoverage,
+        className: y.channelCoverage,
         children: [
             (0, r.jsxs)(s.P3F, {
-                className: _.coverageHeader,
+                className: y.coverageHeader,
                 onClick: () => x(!b),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: _.warningTextContainer,
+                        className: y.warningTextContainer,
                         children: [
                             f <= 85 &&
                                 (0, r.jsx)(s.Mgn, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: _.warning,
+                                    className: y.warning,
                                 }),
                             (0, r.jsx)(s.Text, {
-                                className: _.coverageTitle,
+                                className: y.coverageTitle,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: v.intl.format(v.t.nMVKCX, { numChannelsMissing: p - m }),
+                                children: C.intl.format(C.t.nMVKCX, { numChannelsMissing: p - m }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: _.progressContainer,
+                        className: y.progressContainer,
                         children: [
                             (0, r.jsx)(s.Exd, {
-                                className: _.coverageProgress,
+                                className: y.coverageProgress,
                                 foregroundColor: f > 85 ? "var(--status-positive)" : "var(--status-warning)",
                                 percent: f,
                             }),
                             (0, r.jsx)(j, {
                                 size: "md",
                                 color: "currentColor",
-                                className: _.caret,
+                                className: y.caret,
                             }),
                         ],
                     }),
@@ -75,24 +78,24 @@ function C(e) {
             }),
             b
                 ? (0, r.jsxs)("div", {
-                      className: _.channelCoverageDetails,
+                      className: y.channelCoverageDetails,
                       children: [
                           (0, r.jsx)(s.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: v.intl.string(v.t["0FM4i+"]),
+                              children: C.intl.string(C.t["0FM4i+"]),
                           }),
                           (0, r.jsx)("div", {
-                              className: _.channels,
+                              className: y.channels,
                               children: u.map((e) => {
                                   var t;
                                   let n = null != (t = (0, o.KS)(e)) ? t : s.VL1;
                                   return (0, r.jsx)(
                                       "div",
                                       {
-                                          className: _.channelPill,
+                                          className: y.channelPill,
                                           children: (0, r.jsxs)(s.Text, {
-                                              className: _.channel,
+                                              className: y.channel,
                                               variant: "text-xs/normal",
                                               color: "interactive-active",
                                               children: [
@@ -109,7 +112,7 @@ function C(e) {
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: _.channelCoverageHint,
+                              className: y.channelCoverageHint,
                               children:
                                   h > 0
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -121,14 +124,14 @@ function C(e) {
                                                 (0, r.jsx)(s.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: v.intl.format(v.t.sX8890, { numChannels: h }),
+                                                    children: C.intl.format(C.t.sX8890, { numChannels: h }),
                                                 }),
                                             ],
                                         })
                                       : (0, r.jsx)(s.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
-                                            children: v.intl.string(v.t.o4s29v),
+                                            children: C.intl.string(C.t.o4s29v),
                                         }),
                           }),
                       ],
@@ -137,24 +140,24 @@ function C(e) {
         ],
     });
 }
-function O(e) {
+function E(e) {
     let { saveOnClose: t } = e,
         n = (0, l.e7)([u.Z], () => u.Z.getGuild());
     return null == n
         ? null
-        : (0, r.jsx)(y, {
+        : (0, r.jsx)(I, {
               guild: n,
               saveOnClose: t,
           });
 }
-function y(e) {
+function I(e) {
     let { guild: t, saveOnClose: n } = e,
         a = (0, l.e7)([c.Z], () => c.Z.isLoading()),
-        o = (0, l.e7)([f.Z], () => f.Z.editedOnboardingPrompts),
-        d = (0, l.e7)([f.Z], () => f.Z.advancedMode),
+        o = (0, l.e7)([b.Z], () => b.Z.editedOnboardingPrompts),
+        d = (0, l.e7)([b.Z], () => b.Z.advancedMode),
         u = i.useRef(!1);
     i.useEffect(() => {
-        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, p.tS)(t, [(0, j.ae)()], !1));
+        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, h.tS)(t, [(0, O.ae)()], !1));
     });
     let g = i.useRef(t);
     if (
@@ -164,63 +167,68 @@ function y(e) {
         i.useEffect(() => {
             if (n)
                 return () => {
-                    (0, p.rS)(g.current, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                    let e = g.current;
+                    null != e &&
+                        (0, h.rS)(e, { ignoreDefaultPrompt: !0 })
+                            .then(() => (0, p.ss)(e.id))
+                            .catch(() => {});
                 };
         }, [n]),
         null == t)
     )
         return null;
-    let O = async () => {
+    let f = async () => {
         try {
-            await (0, p.rS)(t), await (0, m.di)(t.id);
+            await (0, h.rS)(t), await (0, m.di)(t.id);
         } catch (e) {}
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Heading, {
-                className: _.header,
+                className: y.header,
                 variant: "heading-lg/extrabold",
-                children: d ? v.intl.string(v.t.AGjtFv) : v.intl.string(v.t.dqCzoT),
+                children: d ? C.intl.string(C.t.AGjtFv) : C.intl.string(C.t.dqCzoT),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: v.intl.string(v.t["q/6MLL"]),
+                children: C.intl.string(C.t["q/6MLL"]),
             }),
             (0, r.jsxs)("div", {
-                className: _.links,
+                className: y.links,
                 children: [
                     (0, r.jsx)(s.Anchor, {
                         target: "_blank",
-                        href: x.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        href: _.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: v.intl.string(v.t.Ok55Kh),
+                            children: C.intl.string(C.t.Ok55Kh),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: _.dot }),
+                    (0, r.jsx)("div", { className: y.dot }),
                     (0, r.jsx)(s.Anchor, {
-                        onClick: O,
+                        onClick: f,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: v.intl.string(v.t["6gsjdM"]),
+                            children: C.intl.string(C.t["6gsjdM"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: _.dot }),
-                    (0, r.jsx)(h.Wu, { guildId: t.id }),
+                    (0, r.jsx)("div", { className: y.dot }),
+                    (0, r.jsx)(x.Wu, { guildId: t.id }),
                 ],
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(N, {
                 guildId: t.id,
                 prompts: o,
             }),
+            n && (0, r.jsx)(j.Z, {}),
             (0, r.jsx)("div", {
-                className: _.prompts,
+                className: y.prompts,
                 children: a
                     ? (0, r.jsx)(s.$jN, {})
-                    : (0, r.jsx)(b.Z, {
+                    : (0, r.jsx)(v.Z, {
                           postjoinOnly: d,
                           guildId: t.id,
                       }),
@@ -228,19 +236,23 @@ function y(e) {
         ],
     });
 }
-function E() {
+function S() {
     let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, l.e7)([f.Z], () => f.Z.submitting);
+        t = (0, l.e7)([b.Z], () => b.Z.submitting),
+        n = (0, l.e7)([f.Z], () => f.Z.isSubmitting()),
+        i = (0, l.e7)([f.Z], () => f.Z.hasChanges());
     return null == e
         ? null
         : (0, r.jsx)(a.Z, {
-              onSave: () => {
+              onSave: async () => {
                   try {
-                      (0, p.rS)(e);
+                      await (0, h.rS)(e), i && (await (0, p.e$)(e.id));
                   } catch (e) {}
               },
-              onReset: p.NB,
-              submitting: t,
-              onSaveText: v.intl.string(v.t["R3BPH+"]),
+              onReset: () => {
+                  (0, h.NB)(), i && (0, p.Pk)();
+              },
+              submitting: t || (i && n),
+              onSaveText: C.intl.string(C.t["R3BPH+"]),
           });
 }

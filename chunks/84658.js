@@ -15,6 +15,7 @@ var l,
         (l[(l.CUSTOMIZATION_QUESTIONS = 4)] = "CUSTOMIZATION_QUESTIONS"),
         (l[(l.REVIEW = 5)] = "REVIEW"),
         (l[(l.HOME_SETTINGS = 6)] = "HOME_SETTINGS"),
+        (l[(l.CONNECTIONS = 7)] = "CONNECTIONS"),
         l);
 let a = [0, 1, 2, 4, 6, 5];
 var s =
@@ -24,6 +25,7 @@ var s =
     (r[(r.EDIT_DEFAULT_CHANNELS = 3)] = "EDIT_DEFAULT_CHANNELS"),
     (r[(r.EDIT_CUSTOMIZATION_QUESTIONS = 4)] = "EDIT_CUSTOMIZATION_QUESTIONS"),
     (r[(r.EDIT_HOME_SETTINGS = 5)] = "EDIT_HOME_SETTINGS"),
+    (r[(r.EDIT_CONNECTIONS = 6)] = "EDIT_CONNECTIONS"),
     r);
 let o = a.filter((e) => 0 !== e);
 function c(e) {
