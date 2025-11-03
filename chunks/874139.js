@@ -1,61 +1,80 @@
-n.d(t, { Z: () => p }), n(539854);
+n.d(t, { Z: () => f }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(906732),
-    s = n(541699),
-    o = n(502762),
-    c = n(5337),
-    d = n(388032),
-    u = n(815743);
-function p(e) {
-    let { wishlistItems: t = [], profileOwner: n, onClick: p } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { cards: f, singleCollectibleItem: g } = (0, i.useMemo)(() => {
+    s = n(636466),
+    o = n(541699),
+    c = n(321947),
+    d = n(502762),
+    u = n(5337),
+    p = n(388032),
+    h = n(815743);
+function f(e) {
+    let { wishlistItems: t = [], profileOwner: n, onClick: f } = e,
+        { analyticsLocations: g } = (0, a.ZP)(),
+        { cards: m, singleItem: b } = (0, i.useMemo)(() => {
             let e = [],
                 r = null;
             for (let i = 0; i < t.length && e.length < 4; i++) {
                 let l = t[i],
                     a = 3 === e.length && t.length > 4;
-                !l.isOwned &&
-                    (0, s.Q)(l) &&
-                    (0 === e.length && (r = l),
-                    e.push(
-                        (0, c.c)(l, {
-                            moreCount: a ? t.length - 4 + 1 : void 0,
-                            profileOwner: n,
-                            analyticsLocations: h,
-                            onViewWishlist: p,
-                        }),
-                    ));
+                l.isOwned ||
+                    ((0, o.Q)(l)
+                        ? e.push(
+                              (0, u.c)(l, {
+                                  moreCount: a ? t.length - 4 + 1 : void 0,
+                                  profileOwner: n,
+                                  analyticsLocations: g,
+                                  onViewWishlist: f,
+                              }),
+                          )
+                        : (0, c.F)(l) &&
+                          e.push(
+                              (0, s.J)(l, {
+                                  moreCount: a ? t.length - 4 + 1 : void 0,
+                                  profileOwner: n,
+                                  analyticsLocations: g,
+                                  onViewWishlist: f,
+                              }),
+                          ),
+                    1 === e.length && null == r && (r = l));
             }
             return {
                 cards: e,
-                singleCollectibleItem: 1 === e.length ? r : null,
+                singleItem: r,
             };
-        }, [t, n, h, p]);
-    if (0 === f.length) return null;
-    let m =
-        1 === f.length && null != g
-            ? (0, c.g)(g, {
-                  profileOwner: n,
-                  analyticsLocations: h,
-              })
-            : f;
-    return (0, r.jsxs)(o.Z.Overlay, {
-        className: u.container,
-        children: [
-            (0, r.jsx)("div", {
-                className: u.header,
-                children: (0, r.jsx)(l.Text, {
-                    variant: "text-sm/medium",
-                    children: d.intl.string(d.t["7lZ31J"]),
+        }, [t, n, g, f]);
+    if (0 === m.length) return null;
+    let _ = 1 === m.length && null != b,
+        y = m;
+    return (
+        _ &&
+            ((0, o.Q)(b)
+                ? (y = (0, u.g)(b, {
+                      profileOwner: n,
+                      analyticsLocations: g,
+                  }))
+                : (0, c.F)(b) &&
+                  (y = (0, s.B)(b, {
+                      profileOwner: n,
+                      analyticsLocations: g,
+                  }))),
+        (0, r.jsxs)(d.Z.Overlay, {
+            className: h.container,
+            children: [
+                (0, r.jsx)("div", {
+                    className: h.header,
+                    children: (0, r.jsx)(l.Text, {
+                        variant: "text-sm/medium",
+                        children: p.intl.string(p.t["7lZ31J"]),
+                    }),
                 }),
-            }),
-            (0, r.jsx)("div", {
-                className: u.cardsContainer,
-                children: m,
-            }),
-        ],
-    });
+                (0, r.jsx)("div", {
+                    className: h.cardsContainer,
+                    children: y,
+                }),
+            ],
+        })
+    );
 }

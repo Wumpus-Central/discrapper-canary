@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => F }), n(388685);
+n.r(t), n.d(t, { default: () => D }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -12,135 +12,122 @@ var r = n(951288),
     g = n(906732),
     f = n(977395),
     h = n(214852),
-    C = n(621853),
-    m = n(484459),
-    _ = n(602733),
-    b = n(594174),
-    v = n(381585),
-    E = n(597688),
-    x = n(994587),
-    O = n(780475),
-    S = n(223143),
-    y = n(298228),
-    j = n(908430),
-    k = n(99767),
-    I = n(501431),
-    T = n(98535),
-    L = n(426171),
-    B = n(963102),
-    P = n(508498),
-    A = n(681435),
-    N = n(811847),
-    R = n(215023),
-    Z = n(981631),
-    w = n(295907),
-    H = n(887353),
-    D = n(219588);
-let M = (e) => {
+    C = n(602733),
+    m = n(594174),
+    _ = n(381585),
+    b = n(597688),
+    v = n(994587),
+    E = n(780475),
+    x = n(223143),
+    O = n(298228),
+    S = n(908430),
+    y = n(99767),
+    j = n(501431),
+    k = n(98535),
+    I = n(426171),
+    T = n(963102),
+    L = n(508498),
+    B = n(681435),
+    P = n(811847),
+    A = n(215023),
+    N = n(981631),
+    R = n(295907),
+    Z = n(887353),
+    w = n(219588);
+let H = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
         return (
             l.useEffect(() => {
                 if (!n || i) return;
                 let e = (e) => {
-                    e.key === w.mR.Escape && r();
+                    e.key === R.mR.Escape && r();
                 };
                 return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
             }, [n, i, r]),
             t
         );
     },
-    F = function (e) {
-        let { tab: t = R.AW.HOME } = e;
-        (0, h.z)(f.f), (0, j.f)();
+    D = function (e) {
+        let { tab: t = A.AW.HOME } = e;
+        (0, h.z)(f.f), (0, S.f)();
         let n = (0, p.Z)((0, a.Z)()),
-            i = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-            { userProfile: c, wishlistId: w } = (0, o.cj)(
-                [C.Z],
-                () => ({
-                    userProfile: null != i ? C.Z.getUserProfile(i.id) : null,
-                    wishlistId: null != i ? C.Z.getFirstWishlistId(i.id) : null,
-                }),
-                [i],
-            );
-        l.useEffect(() => {
-            null != i && null == c && (0, m.Z)(i.id, i.getAvatarURL(null, 80));
-        }, [i, c]),
-            (0, _.kZ)(w, null == i ? void 0 : i.id);
-        let F = (0, N.B)("CollectiblesShop"),
-            { onClose: W } = (0, P.Db)(),
-            { currentTab: V, hasFilters: U } = (0, I.S)(),
-            z = l.useMemo(() => (t === R.AW.HOME && V && U() ? V : t), [t, V, U]),
-            { categories: G, refreshCategories: K } = (0, S.ZP)(
+            i = (0, o.e7)([m.default], () => m.default.getCurrentUser());
+        (0, C.p2)();
+        let c = (0, P.B)("CollectiblesShop"),
+            { onClose: R } = (0, L.Db)(),
+            { currentTab: D, hasFilters: M } = (0, j.S)(),
+            F = l.useMemo(() => (t === A.AW.HOME && D && M() ? D : t), [t, D, M]),
+            { categories: W, refreshCategories: V } = (0, x.ZP)(
                 { logPerf: !0 },
                 {
                     sessionId: n,
-                    tab: z,
+                    tab: F,
                 },
             ),
-            Y = (0, y.O)(G),
-            [q, J] = l.useState(),
-            Q = (0, o.e7)([E.Z], () => {
+            U = (0, O.O)(W),
+            [z, G] = l.useState(),
+            K = (0, o.e7)([b.Z], () => {
                 var e;
-                return null == (e = E.Z.getCategory(q)) ? void 0 : e.name;
+                return null == (e = b.Z.getCategory(z)) ? void 0 : e.name;
             }),
-            [X, $] = l.useState();
-        (0, L.Kp)();
-        let ee = l.useCallback((e, t) => {
-                $(e), J(t);
+            [Y, q] = l.useState();
+        (0, I.Kp)();
+        let J = l.useCallback((e, t) => {
+                q(e), G(t);
             }, []),
-            { selectedTab: et, transitionState: en, transitionToTab: er } = (0, k.B)(z);
-        (0, O.q3)(n, et, Q, en, X), (0, O.EB)(et, i);
-        let { dismissShopButtonDC: el } = (0, A.Z)();
+            { selectedTab: Q, transitionState: X, transitionToTab: $ } = (0, y.B)(F);
+        (0, E.q3)(n, Q, K, X, Y), (0, E.EB)(Q, i);
+        let { dismissShopButtonDC: ee } = (0, B.Z)();
         l.useEffect(() => {
-            el();
-        }, [el]),
+            ee();
+        }, [ee]),
             l.useEffect(() => {
-                (0, d.Y)(Z.Z5c.COLLECTIBLES_SHOP);
+                (0, d.Y)(N.Z5c.COLLECTIBLES_SHOP);
             }, []);
-        let ei = l.useRef(null),
-            es = l.useRef(null);
-        (0, u.Tbt)(ei),
+        let et = l.useRef(null),
+            en = l.useRef(null);
+        (0, u.Tbt)(et),
             l.useEffect(() => {
                 var e;
-                null == (e = es.current) || e.focus();
+                null == (e = en.current) || e.focus();
             }, []);
-        let { analyticsLocations: ea } = (0, O.MV)(et);
+        let { analyticsLocations: er } = (0, E.MV)(Q);
         return (0, r.jsx)(g.Gt, {
-            value: ea,
-            children: (0, r.jsx)(v.k0, {
+            value: er,
+            children: (0, r.jsx)(_.k0, {
                 newValue: {
                     sessionId: n,
-                    pageCategory: Q,
-                    pageSize: R.kN,
+                    pageCategory: K,
+                    pageSize: A.kN,
                 },
-                children: (0, r.jsx)(x.ni, {
-                    tab: et,
-                    children: (0, r.jsx)(M, {
-                        onClose: W,
+                children: (0, r.jsx)(v.ni, {
+                    tab: Q,
+                    children: (0, r.jsx)(H, {
+                        onClose: R,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {
-                            className: s()(H.shop, { [D.customCursors]: F }),
-                            ref: es,
+                            className: s()(Z.shop, { [w.customCursors]: c }),
+                            ref: en,
                             tabIndex: -1,
                             children: [
-                                (0, r.jsx)(B.I, {
-                                    handleTransition: er,
-                                    selectedTab: et,
+                                (0, r.jsx)(T.I, {
+                                    handleTransition: $,
+                                    selectedTab: Q,
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: s()(H.shopViewWrapper, {
-                                        [H.visible]: en === R.f7.VISIBLE,
-                                        [H.in]: en === R.f7.IN,
-                                        [H.out]: en === R.f7.OUT,
+                                    className: s()(Z.shopViewWrapper, {
+                                        [Z.visible]: X === A.f7.VISIBLE,
+                                        [Z.in]: X === A.f7.IN,
+                                        [Z.out]: X === A.f7.OUT,
                                     }),
-                                    children: (0, r.jsx)(T.Z, {
-                                        tab: et,
-                                        refreshCategories: K,
-                                        transitionToTab: er,
-                                        transitionState: en,
-                                        sortedCategories: Y,
-                                        updateAnalyticsState: ee,
+                                    children: (0, r.jsx)(k.Z, {
+                                        tab: Q,
+                                        refreshCategories: V,
+                                        transitionToTab: $,
+                                        transitionState: X,
+                                        sortedCategories: U,
+                                        updateAnalyticsState: J,
                                     }),
                                 }),
                             ],

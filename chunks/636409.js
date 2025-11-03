@@ -6,10 +6,10 @@ var t = l(951288),
     d = l(442837),
     o = l(481060),
     s = l(703656),
-    c = l(55563),
-    u = l(411935),
-    p = l(210218),
-    g = l(242723),
+    c = l(602733),
+    u = l(55563),
+    p = l(411935),
+    g = l(210218),
     I = l(436585),
     v = l(720983),
     x = l(323540),
@@ -70,20 +70,20 @@ function C(e) {
 function _(e) {
     let { match: n } = e,
         { guildId: l, gameShopPageIndex: a, gameShopSkuId: s } = n.params,
-        I = (0, d.e7)([p.Z], () => (null != l ? p.Z.getStorefrontData(l) : void 0)),
-        v = (0, d.e7)([c.Z], () => c.Z.get(s), [s]);
-    (0, g.p)();
+        I = (0, d.e7)([g.Z], () => (null != l ? g.Z.getStorefrontData(l) : void 0)),
+        v = (0, d.e7)([u.Z], () => u.Z.get(s), [s]);
+    (0, c.p2)();
     let x = i.useMemo(() => {
         if (null == a) return 0;
         let e = parseInt(a, 10);
         return isNaN(e) || (null != I && null != I.storefront && e >= I.storefront.pages.length) ? 0 : e;
     }, [a, I]);
     return (i.useEffect(() => {
-        null != l && (0, u.m0)(l, x, null != s ? s : null);
+        null != l && (0, p.m0)(l, x, null != s ? s : null);
     }, [l, x, s]),
     i.useEffect(() => {
         var e;
-        null != l && (null == (e = p.Z.getStorefrontData(l)) ? void 0 : e.loading) !== !0 && (0, u.YL)(l);
+        null != l && (null == (e = g.Z.getStorefrontData(l)) ? void 0 : e.loading) !== !0 && (0, p.YL)(l);
     }, [l]),
     ((null == I ? void 0 : I.storefront) != null || (null == I ? void 0 : I.error)) &&
         !(null == I ? void 0 : I.loading) &&
