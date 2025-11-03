@@ -839,6 +839,7 @@ function X(e) {
                 ),
                 eu &&
                     null != tr &&
+                    !t6 &&
                     (0, r.jsx)(s.animated.div, {
                         className: Y.captionContainer,
                         ref: t8,
