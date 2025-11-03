@@ -40,6 +40,7 @@ var r = (function (e) {
         (e.PREMIUM_UPSELL_MODAL = "premium upsell modal"),
         (e.PREMIUM_SETTINGS = "premium settings"),
         (e.PAYMENT_FLOW_TEST_PAGE = "payment flow test page"),
+        (e.REVENUE_SMOKE_TEST = "revenue smoke test"),
         (e.REVENUE_STORYBOOK_TEST_PAGE = "revenue storybook test page"),
         (e.VIRTUAL_CURRENCY_BALANCE_WIDGET = "virtual currency balance widget"),
         (e.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE = "virtual currency orb profile badge"),
