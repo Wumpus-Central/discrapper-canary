@@ -52,18 +52,21 @@ function u(e) {
                                 isOpen: d,
                                 setIsOpen: f,
                                 compact: !0,
-                                children: g.map((e, t) =>
-                                    (0, r.jsxs)(
-                                        l.Fragment,
-                                        {
-                                            children: [
-                                                (0, r.jsx)(i.Z, { node: e }),
-                                                t !== g.length - 1 && (0, r.jsx)(o.izJ, {}),
-                                            ],
-                                        },
-                                        e.key,
+                                children: (0, r.jsx)(o.Kqy, {
+                                    gap: 8,
+                                    children: g.map((e, t) =>
+                                        (0, r.jsxs)(
+                                            l.Fragment,
+                                            {
+                                                children: [
+                                                    (0, r.jsx)(i.Z, { node: e }),
+                                                    t !== g.length - 1 && (0, r.jsx)(o.izJ, {}),
+                                                ],
+                                            },
+                                            e.key,
+                                        ),
                                     ),
-                                ),
+                                }),
                             }),
                         ],
                     }),

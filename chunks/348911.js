@@ -5,5 +5,5 @@ var i = n(509613),
     u = n(388032);
 let s = (0, i.k4)(l.n.NOTIFICATIONS_SOUNDS_CATEGORY, {
     useTitle: () => u.intl.string(u.t.LweOYy),
-    buildLayout: () => [r.ZP],
+    buildLayout: () => [r.Z],
 });

@@ -182,10 +182,6 @@ function U(e) {
                         finePrintClassname: j.fineprint,
                         purchaseType: K,
                         isGift: J,
-                        checkboxLabel:
-                            er.productLine === L.POd.COLLECTIBLES
-                                ? M.intl.format(M.t["1EdAld"], { paidURL: L.EYA.PAID_TERMS })
-                                : void 0,
                         finePrint: (0, r.jsx)(d.Z, {
                             paymentSourceType: e_,
                             isEmbeddedIAP: W,
