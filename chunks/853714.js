@@ -6,30 +6,30 @@ var r = n(951288),
     s = n(91192),
     o = n(374470),
     c = n(442837),
-    d = n(481060),
-    u = n(480137),
-    g = n(239091),
-    m = n(497321),
-    p = n(724757),
-    f = n(210887),
-    h = n(387667),
-    b = n(598077),
-    x = n(592125),
-    j = n(430824),
-    v = n(246946),
-    _ = n(594174),
-    C = n(823379),
-    O = n(51144),
-    y = n(999382),
-    E = n(909746),
-    N = n(233857),
-    I = n(501801),
-    S = n(603784),
-    T = n(981631),
-    P = n(388032),
-    w = n(912864),
-    Z = n(630016),
-    R = n(315091);
+    d = n(333200),
+    u = n(481060),
+    g = n(480137),
+    m = n(239091),
+    p = n(497321),
+    f = n(724757),
+    h = n(210887),
+    b = n(387667),
+    x = n(598077),
+    j = n(592125),
+    v = n(430824),
+    _ = n(246946),
+    C = n(594174),
+    O = n(823379),
+    y = n(51144),
+    E = n(999382),
+    N = n(909746),
+    I = n(233857),
+    S = n(501801),
+    T = n(603784),
+    P = n(981631),
+    w = n(388032),
+    Z = n(912864),
+    R = n(630016);
 function D(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let G = i.forwardRef((e, t) => {
     return null == l
         ? null
         : (0, r.jsx)(
-              S.Z,
+              T.Z,
               L(A({ ref: t }, s), {
                   guildId: l,
                   guild: a,
@@ -116,7 +116,7 @@ let G = i.forwardRef((e, t) => {
                           { user: i } = t;
                       null != i &&
                           null != l &&
-                          (0, g.jW)(e, async () => {
+                          (0, m.jW)(e, async () => {
                               let { default: e } = await n.e("50929").then(n.bind(n, 595011));
                               return (t) =>
                                   (0, r.jsx)(
@@ -130,11 +130,11 @@ let G = i.forwardRef((e, t) => {
                   },
                   onChannelContextMenu: (e) => {
                       let { log: t } = s,
-                          i = j.Z.getGuild(l);
+                          i = v.Z.getGuild(l);
                       null != t.options.channel &&
                           "string" != typeof t.options.channel &&
                           null != i &&
-                          (0, g.jW)(e, async () => {
+                          (0, m.jW)(e, async () => {
                               let { default: e } = await n.e("51529").then(n.bind(n, 228620));
                               return (n) =>
                                   null != t.options.channel
@@ -145,30 +145,30 @@ let G = i.forwardRef((e, t) => {
                   onTargetContextMenu: (e) => {
                       let { log: t } = s;
                       switch (t.targetType) {
-                          case T.KFR.CHANNEL:
-                          case T.KFR.CHANNEL_OVERWRITE:
-                              let i = x.Z.getChannel(t.targetId),
-                                  a = j.Z.getGuild(l);
+                          case P.KFR.CHANNEL:
+                          case P.KFR.CHANNEL_OVERWRITE:
+                              let i = j.Z.getChannel(t.targetId),
+                                  a = v.Z.getGuild(l);
                               if (null != i && null != a)
-                                  return (0, g.jW)(e, async () => {
+                                  return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e("51529").then(n.bind(n, 228620));
                                       return (t) => (0, r.jsx)(e, L(A({}, t), { channel: i }));
                                   });
-                              return (0, g.jW)(e, async () => {
+                              return (0, m.jW)(e, async () => {
                                   let { default: e } = await n.e("5396").then(n.bind(n, 999588));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
                                           L(A({}, n), {
                                               id: t.targetId,
-                                              label: P.intl.string(P.t.rCazna),
+                                              label: w.intl.string(w.t.rCazna),
                                           }),
                                       );
                               });
-                          case T.KFR.USER:
-                              let o = _.default.getUser(t.targetId);
+                          case P.KFR.USER:
+                              let o = C.default.getUser(t.targetId);
                               if (null != o && null != l)
-                                  return (0, g.jW)(e, async () => {
+                                  return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e("50929").then(n.bind(n, 595011));
                                       return (t) =>
                                           (0, r.jsx)(
@@ -198,11 +198,11 @@ function M(e) {
             onHeaderClick: g,
             onContentClick: m,
         } = e,
-        f = i.useRef(c);
+        p = i.useRef(c);
     i.useEffect(() => {
-        f.current = c;
+        p.current = c;
     }, [c]);
-    let h = (0, p.Z)("audit-log", f);
+    let h = (0, f.Z)("audit-log", p);
     return (0, r.jsx)(s.bG, {
         navigator: h,
         children: (0, r.jsx)(s.SJ, {
@@ -212,7 +212,7 @@ function M(e) {
                 return (0, r.jsx)(
                     "div",
                     L(A({ ref: i }, s), {
-                        className: w.list,
+                        className: Z.list,
                         children: t.map((e) => {
                             let t = a === e.id,
                                 i = o === e.id,
@@ -225,7 +225,7 @@ function M(e) {
                                     ref: (e) => {
                                         null == s || s(e);
                                     },
-                                    className: w.row,
+                                    className: Z.row,
                                     onHeaderClick: g,
                                     onContentClick: m,
                                     log: e,
@@ -243,7 +243,7 @@ function M(e) {
 G.displayName = "AuditLogClickWrap";
 class U extends i.PureComponent {
     componentDidMount() {
-        (0, u.bY)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick);
+        (0, g.bY)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick);
     }
     componentWillUnmount() {
         document.removeEventListener("click", this.handleOutsideClick);
@@ -254,7 +254,7 @@ class U extends i.PureComponent {
                 this.props.logs.length !== e.logs.length &&
                 null != this._scrollerRef &&
                 this.isScrollerAtBottom() &&
-                (0, u.OY)(this.props.guildId, !0);
+                (0, g.OY)(this.props.guildId, !0);
     }
     isScrollerAtBottom() {
         var e;
@@ -286,33 +286,25 @@ class U extends i.PureComponent {
         }
         return e;
     }
-    renderUserQuickSelectValue(e) {
-        var t;
-        return null != (t = e.valueLabel) ? t : e.label;
-    }
-    renderActionQuickSelectValue(e) {
-        var t;
-        return null != (t = e.valueLabel) ? t : e.label;
-    }
     renderHeader() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.customHeader,
+                    className: Z.customHeader,
                     children: [
-                        (0, r.jsx)(d.Heading, {
+                        (0, r.jsx)(u.Heading, {
                             variant: "heading-lg/semibold",
-                            children: P.intl.string(P.t.SPWLyT),
+                            children: w.intl.string(w.t.SPWLyT),
                         }),
                         this.renderHeaderDropdowns(),
                     ],
                 }),
-                (0, r.jsx)(d.izJ, { className: w.divider }),
+                (0, r.jsx)(u.izJ, { className: Z.divider }),
             ],
         });
     }
     renderSpinner() {
-        return (0, r.jsx)(d.$jN, { type: d.$jN.Type.SPINNING_CIRCLE });
+        return (0, r.jsx)(u.$jN, { type: u.$jN.Type.SPINNING_CIRCLE });
     }
     renderContent() {
         let { expandedId: e, lastExpandedId: t } = this.state,
@@ -323,25 +315,25 @@ class U extends i.PureComponent {
                 isInitialLoading: s,
                 isLoading: o,
                 hasError: c,
-                guildId: u,
+                guildId: d,
                 guild: g,
             } = this.props;
-        if (a) return (0, r.jsx)(m.Z, {});
+        if (a) return (0, r.jsx)(p.Z, {});
         if (o || s) return this.renderSpinner();
         if (0 === i.length) {
-            let e = c ? P.intl.string(P.t.tzkaD7) : P.intl.string(P.t.lNuYhh),
-                t = c ? P.intl.string(P.t.Ww5Tjy) : P.intl.string(P.t["RHhk+P"]);
-            return (0, r.jsxs)(d.ubH, {
+            let e = c ? w.intl.string(w.t.tzkaD7) : w.intl.string(w.t.lNuYhh),
+                t = c ? w.intl.string(w.t.Ww5Tjy) : w.intl.string(w.t["RHhk+P"]);
+            return (0, r.jsxs)(u.ubH, {
                 theme: l,
-                className: w.empty,
+                className: Z.empty,
                 children: [
-                    (0, r.jsx)(d.oxh, {
+                    (0, r.jsx)(u.oxh, {
                         darkSrc: n(28269),
                         lightSrc: n(357115),
                         width: 272,
                         height: 130,
                     }),
-                    (0, r.jsx)(d.OZU, {
+                    (0, r.jsx)(u.OZU, {
                         note: e,
                         style: { maxWidth: 300 },
                         children: t,
@@ -351,7 +343,7 @@ class U extends i.PureComponent {
         }
         return (0, r.jsx)(M, {
             logs: i,
-            guildId: u,
+            guildId: d,
             guild: g,
             expandedId: e,
             lastExpandedId: t,
@@ -365,17 +357,17 @@ class U extends i.PureComponent {
     render() {
         let { isLoadingNextPage: e, hide: t, isLoading: n } = this.props;
         return (0, r.jsx)("div", {
-            className: Z.customColumn,
+            className: R.customColumn,
             children: (0, r.jsx)("div", {
-                className: Z.customContainer,
-                children: (0, r.jsx)(d.yWw, {
-                    className: a()(Z.customScroller, w.scroller),
+                className: R.customContainer,
+                children: (0, r.jsx)(u.yWw, {
+                    className: a()(R.customScroller, Z.scroller),
                     onScroll: this.handleOnScroll,
                     ref: this.handleSetScrollerRef,
                     children: (0, r.jsx)("div", {
-                        className: w.content,
+                        className: Z.content,
                         ref: this._contentRef,
-                        children: (0, r.jsxs)(d.JcV, {
+                        children: (0, r.jsxs)(u.JcV, {
                             containerRef: this._contentRef,
                             children: [
                                 this.renderHeader(),
@@ -402,112 +394,76 @@ class U extends i.PureComponent {
                 lastExpandedId: null,
                 actionFilterQuery: "",
             }),
-            D(this, "renderActionQuickSelectItem", (e, t) => {
-                var n;
-                let { actionFilter: i } = this.props,
-                    l = (0, h.Pw)(e.value),
-                    a = (0, h.p5)(e.value),
-                    s = e.value === i;
-                return (0, r.jsxs)(
-                    d.lo1,
-                    {
-                        value: e.value,
-                        selectedColor: d.lo1.Colors.BRAND,
-                        children: [
-                            (0, r.jsx)(d.lo1.Icon, {
-                                children: (0, r.jsx)(I.mp, {
-                                    themeOverride: s ? T.BRd.DARK : null,
-                                    actionType: l,
-                                    targetType: a,
-                                    action: e.value,
-                                }),
-                            }),
-                            (0, r.jsx)(d.lo1.Label, { children: e.label }),
-                            (0, r.jsx)(d.lo1.Checkmark, {}),
-                        ],
-                    },
-                    null != (n = e.key) ? n : t,
-                );
+            D(this, "formatActionOption", (e) => {
+                let t = (0, b.Pw)(e.value),
+                    n = (0, b.p5)(e.value);
+                return {
+                    id: e.value,
+                    value: e.value,
+                    label: e.label,
+                    leading: (0, r.jsx)(S.mp, {
+                        themeOverride: null,
+                        actionType: t,
+                        targetType: n,
+                        action: e.value,
+                    }),
+                };
             }),
-            D(this, "renderUserQuickSelectItem", (e, t) => {
-                var n;
-                if (e.user instanceof b.Z) {
-                    let t = e.user;
-                    return (0, r.jsxs)(
-                        d.lo1,
-                        {
-                            value: t.id,
-                            selectedColor: d.lo1.Colors.BRAND,
-                            children: [
-                                (0, r.jsx)(d.lo1.Icon, {
-                                    children: (0, r.jsx)(d.qEK, {
-                                        size: d.EFr.SIZE_32,
-                                        src: t.getAvatarURL(this.props.guildId, 32),
-                                        "aria-label": t.username,
-                                        className: w.avatar,
-                                    }),
-                                }),
-                                (0, r.jsxs)(d.lo1.Label, {
-                                    children: [
-                                        (0, r.jsx)(d.Text, {
-                                            variant: "text-sm/normal",
-                                            children: O.ZP.getUserTag(t, { mode: "username" }),
-                                        }),
-                                        !t.hasUniqueUsername() &&
-                                            (0, r.jsxs)(d.Text, {
-                                                variant: "text-xs/normal",
-                                                className: w.discriminator,
-                                                children: ["#", t.discriminator],
-                                            }),
-                                    ],
-                                }),
-                                (0, r.jsx)(d.lo1.Checkmark, {}),
-                            ],
-                        },
-                        t.id,
-                    );
-                }
-                return (0, r.jsxs)(
-                    d.lo1,
-                    {
+            D(this, "formatUserOption", (e) => {
+                if (!(e.user instanceof x.Z))
+                    return {
+                        id: e.value,
                         value: e.value,
-                        selectedColor: d.lo1.Colors.BRAND,
-                        children: [
-                            (0, r.jsx)(d.lo1.Icon, {
-                                children: (0, r.jsx)(d.BFJ, {
-                                    size: "custom",
-                                    color: "currentColor",
-                                    width: 30,
-                                    height: 30,
-                                }),
-                            }),
-                            (0, r.jsx)(d.lo1.Label, { children: e.label }),
-                            (0, r.jsx)(d.lo1.Checkmark, {}),
-                        ],
-                    },
-                    null != (n = e.key) ? n : t,
-                );
+                        label: e.label,
+                        leading: (0, r.jsx)(u.BFJ, {
+                            size: "custom",
+                            color: "currentColor",
+                            width: 30,
+                            height: 30,
+                        }),
+                    };
+                {
+                    let t = e.user;
+                    return {
+                        id: t.id,
+                        value: t.id,
+                        label: y.ZP.getUserTag(t, { mode: "username" }),
+                        leading: (0, r.jsx)(u.qEK, {
+                            size: u.EFr.SIZE_24,
+                            src: t.getAvatarURL(this.props.guildId, 32),
+                            "aria-label": t.username,
+                            className: Z.avatar,
+                        }),
+                        trailing: t.hasUniqueUsername()
+                            ? void 0
+                            : (0, r.jsxs)(u.Text, {
+                                  variant: "text-xs/normal",
+                                  className: Z.discriminator,
+                                  children: ["#", t.discriminator],
+                              }),
+                    };
+                }
             }),
             D(this, "renderHeaderDropdowns", () => {
                 var e, t;
-                let { actionFilter: n, hide: i, userIdFilter: l, moderators: s } = this.props;
+                let { actionFilter: n, hide: i, userIdFilter: l, moderators: a } = this.props;
                 if (i) return null;
-                let o = E.Iv(),
-                    c =
+                let s = N.Iv(),
+                    o =
                         null !=
-                        (e = o.find((e) => {
+                        (e = s.find((e) => {
                             let { value: t } = e;
                             return n === t;
                         }))
                             ? e
-                            : o[0],
-                    u = {
-                        label: P.intl.string(P.t.ZRFdsL),
-                        valueLabel: P.intl.string(P.t.an9Ry3),
+                            : s[0],
+                    c = {
+                        label: w.intl.string(w.t.ZRFdsL),
+                        valueLabel: w.intl.string(w.t.an9Ry3),
                         value: null,
                     },
-                    g = [u, ...s].map((e) =>
-                        e instanceof b.Z
+                    u = [c, ...a].map((e) =>
+                        e instanceof x.Z
                             ? (function (e) {
                                   return {
                                       label: e.username,
@@ -517,44 +473,34 @@ class U extends i.PureComponent {
                               })(e)
                             : e,
                     ),
-                    m =
+                    g =
                         null !=
-                        (t = g.find((e) => {
+                        (t = u.find((e) => {
                             let { value: t } = e;
                             return t === l;
                         }))
                             ? t
-                            : u;
+                            : c;
                 return (0, r.jsxs)("div", {
-                    className: w.quickSelect,
+                    className: Z.quickSelect,
                     children: [
-                        (0, r.jsx)(d.EFH, {
-                            popoutClassName: a()(w.selectFilterPopout, R.elevationBorderHigh),
-                            items: g,
-                            renderItem: this.renderUserQuickSelectItem,
-                            renderValue: this.renderUserQuickSelectValue,
-                            value: m,
-                            onChange: this.handleFilterUserChange,
-                            label: P.intl.string(P.t["hxnY/q"]),
-                            placeholder: P.intl.string(P.t.pYHobK),
-                            popoutProps: {
-                                autoInvert: !1,
-                                position: "bottom",
-                            },
+                        (0, r.jsx)(d.V, {
+                            options: u,
+                            formatOption: this.formatUserOption,
+                            value: g.value,
+                            onSelectionChange: this.handleFilterUserChange,
+                            label: w.intl.string(w.t["hxnY/q"]),
+                            placeholder: w.intl.string(w.t.pYHobK),
+                            selectionMode: "single",
                         }),
-                        (0, r.jsx)(d.EFH, {
-                            placeholder: P.intl.string(P.t.I288Zx),
-                            label: P.intl.string(P.t.rautds),
-                            popoutClassName: a()(w.selectFilterPopout, R.elevationBorderLow),
-                            items: o,
-                            renderItem: this.renderActionQuickSelectItem,
-                            renderValue: this.renderActionQuickSelectValue,
-                            value: c,
-                            onChange: this.handleFilterActionChange,
-                            popoutProps: {
-                                autoInvert: !1,
-                                position: "bottom",
-                            },
+                        (0, r.jsx)(d.V, {
+                            placeholder: w.intl.string(w.t.I288Zx),
+                            label: w.intl.string(w.t.rautds),
+                            options: s,
+                            formatOption: this.formatActionOption,
+                            value: o.value,
+                            onSelectionChange: this.handleFilterActionChange,
+                            selectionMode: "single",
                         }),
                     ],
                 });
@@ -564,19 +510,19 @@ class U extends i.PureComponent {
                 if (e && t && !n)
                     return (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: w.loadMore,
-                        children: (0, r.jsx)(d.Button, {
+                        className: Z.loadMore,
+                        children: (0, r.jsx)(u.Button, {
                             variant: "secondary",
-                            text: P.intl.string(P.t["Q/LSXp"]),
+                            text: w.intl.string(w.t["Q/LSXp"]),
                             onClick: this.handleFetchNextPage,
                         }),
                     });
             }),
             D(this, "handleFilterActionChange", (e) => {
-                (0, u.ZX)(e, this.props.guildId);
+                (0, g.ZX)(e, this.props.guildId);
             }),
             D(this, "handleFilterUserChange", (e) => {
-                (0, u.uo)(e, this.props.guildId);
+                (0, g.uo)(e, this.props.guildId);
             }),
             D(this, "handleHeaderClick", (e) => {
                 let { expandedId: t } = this.state;
@@ -616,7 +562,7 @@ class U extends i.PureComponent {
                 this.isScrollerAtBottom() && this.handleFetchNextPage();
             }),
             D(this, "handleFetchNextPage", () => {
-                (0, u.OY)(this.props.guildId);
+                (0, g.OY)(this.props.guildId);
             }),
             D(this, "handleActionFilterQueryChange", (e) => {
                 this.setState({ actionFilterQuery: e });
@@ -632,24 +578,24 @@ class U extends i.PureComponent {
             });
     }
 }
-let B = c.ZP.connectStores([N.Z, y.Z, j.Z, f.Z, v.Z, _.default], () => {
-    let e = y.Z.getGuildId(),
-        t = j.Z.getGuild(e),
-        n = N.Z.logs;
+let B = c.ZP.connectStores([I.Z, E.Z, v.Z, h.Z, _.Z, C.default], () => {
+    let e = E.Z.getGuildId(),
+        t = v.Z.getGuild(e),
+        n = I.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: N.Z.userIds.map((e) => _.default.getUser(e)).filter(C.lm),
-        isInitialLoading: N.Z.isInitialLoading,
-        isLoading: N.Z.isLoading,
-        isLoadingNextPage: N.Z.isLoadingNextPage,
-        showLoadMore: N.Z.groupedFetchCount > 2,
-        hasError: N.Z.hasError,
-        hasOlderLogs: N.Z.hasOlderLogs,
-        logs: null != n && null != t ? E._$(n, t) : [],
-        actionFilter: N.Z.actionFilter,
-        userIdFilter: N.Z.userIdFilter,
-        theme: f.Z.theme,
-        hide: v.Z.enabled,
+        moderators: I.Z.userIds.map((e) => C.default.getUser(e)).filter(O.lm),
+        isInitialLoading: I.Z.isInitialLoading,
+        isLoading: I.Z.isLoading,
+        isLoadingNextPage: I.Z.isLoadingNextPage,
+        showLoadMore: I.Z.groupedFetchCount > 2,
+        hasError: I.Z.hasError,
+        hasOlderLogs: I.Z.hasOlderLogs,
+        logs: null != n && null != t ? N._$(n, t) : [],
+        actionFilter: I.Z.actionFilter,
+        userIdFilter: I.Z.userIdFilter,
+        theme: h.Z.theme,
+        hide: _.Z.enabled,
     };
 })(U);

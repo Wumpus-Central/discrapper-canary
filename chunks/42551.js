@@ -1,96 +1,84 @@
-n.d(t, { Z: () => H }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(120356),
+    i = n(658722),
     o = n.n(i),
-    a = n(658722),
+    a = n(954955),
     s = n.n(a),
-    c = n(954955),
+    c = n(498607),
     u = n.n(c),
-    d = n(498607),
-    C = n.n(d),
-    m = n(399606),
-    b = n(481060),
-    p = n(563115),
-    f = n(910693),
-    h = n(893966),
-    g = n(527379),
-    j = n(285173),
-    x = n(388032),
-    v = n(115491),
-    y = n(266631);
-let O = new Set();
-function H(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, f.BG)(t),
-        a = (0, m.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], C()),
-        [c, d] = l.useState(a.selectedRoleIds),
-        H = (0, p.h)(t, O, !0),
-        _ = (e, n) => {
-            let { record: l } = e;
-            return (0, r.jsx)(
-                b.lo1,
-                {
-                    value: l.id,
-                    children: (0, r.jsxs)("div", {
-                        className: v.roleNameContainer,
-                        children: [
-                            (0, r.jsxs)("div", {
-                                className: v.roleLabel,
-                                children: [
-                                    (0, r.jsx)("div", { className: o()(v.labelBackground, n && v.selected) }),
-                                    (0, r.jsx)(b.lo1.Label, {
-                                        children: (0, r.jsx)(
-                                            j.Z,
-                                            {
-                                                className: y.roleTooltipItem,
-                                                role: l,
-                                                guildId: t,
-                                            },
-                                            l.id,
-                                        ),
-                                    }),
-                                ],
-                            }),
-                            (0, r.jsx)("div", {
-                                className: v.checkboxContainer,
-                                children: (0, r.jsx)(b.lo1.Checkbox, { checked: n }),
-                            }),
-                        ],
-                    }),
-                },
-                l.id,
-            );
-        },
-        w = l.useCallback(
+    d = n(399606),
+    C = n(333200),
+    m = n(563115),
+    b = n(910693),
+    p = n(893966),
+    f = n(527379),
+    h = n(285173),
+    g = n(388032);
+let j = new Set();
+function x(e) {
+    let { guildId: t } = e,
+        n = (0, b.BG)(t),
+        i = (0, d.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], u()),
+        [a, c] = l.useState(i.selectedRoleIds),
+        x = (0, m.h)(t, j, !0),
+        v = l.useCallback(
             (e) => {
-                (0, g.Dr)(t, { selectedRoleIds: e }), i(e);
+                (0, f.Dr)(t, { selectedRoleIds: e }), n(e);
             },
-            [t, i],
+            [t, n],
         ),
-        S = l.useMemo(() => u()(w, 300), [w]),
-        Z = l.useCallback(
+        y = l.useMemo(() => s()(v, 300), [v]),
+        O = l.useCallback(
             (e) => {
-                let t;
-                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t);
+                let t = new Set(null != e ? e : []);
+                c(t), y(t);
             },
-            [c, S],
+            [y],
+        ),
+        H = l.useCallback(
+            (e) => {
+                let { record: n } = e;
+                return {
+                    id: n.id,
+                    value: n.id,
+                    label: n.name,
+                    leading: (0, r.jsx)(
+                        h.$,
+                        {
+                            role: n,
+                            guildId: t,
+                        },
+                        n.id,
+                    ),
+                };
+            },
+            [t],
+        ),
+        _ = l.useCallback(
+            (e, t) => {
+                let n = new Map(x.map((e) => [e.record.id, e]));
+                return e.filter((e) => {
+                    let r = n.get(e.value);
+                    if (null == r) return !1;
+                    let { record: l } = r;
+                    return o()(t.toLowerCase(), l.name.toLowerCase());
+                });
+            },
+            [x],
         );
-    return (0, r.jsx)(b.DBG, {
-        className: v.rolePopout,
-        placeholder: x.intl.string(x.t.ZveC7e),
-        value: c,
-        onChange: Z,
-        onClose: () => {
-            n();
-        },
-        multiSelect: !0,
+    return (0, r.jsx)(C.V, {
+        label: g.intl.string(g.t.ZveC7e),
+        hideLabel: !0,
+        placeholder: g.intl.string(g.t.ZveC7e),
+        value: Array.from(a),
+        onSelectionChange: O,
+        options: x,
+        formatOption: H,
+        customMatchSorter: _,
+        selectionMode: "multiple",
         autoFocus: !0,
-        children: (e) =>
-            H.reduce((t, n) => {
-                let { record: r } = n,
-                    l = c.has(r.id);
-                return s()(e.toLowerCase(), r.name.toLowerCase()) ? t.push(_(n, l)) : l && t.push(_(n, l)), t;
-            }, []),
+        closeOnSelect: !1,
+        shouldFocusWrap: !0,
     });
 }
