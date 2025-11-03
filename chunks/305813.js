@@ -95,16 +95,15 @@ function A(e) {
             image: z.pendingAvatar,
         }),
         { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
-        V = null != K ? (0, g.Pb)(K) : void 0,
-        W = G ? y.BRd.DARK : y.BRd.LIGHT;
-    ((M && G) || (!M && !G)) && (W = Z);
-    let $ = (0, o.useCallback)(() => {
+        V = null != K ? (0, g.Pb)(K) : void 0;
+    G && !M ? (Z = y.BRd.DARK) : !G && M && (Z = y.BRd.LIGHT);
+    let W = (0, o.useCallback)(() => {
             P.default.track(y.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
         }, [B]),
-        J = (0, o.useCallback)((e) => {
+        $ = (0, o.useCallback)((e) => {
             Y(e === y.BRd.DARK), P.default.track(y.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === y.BRd.DARK });
         }, []),
-        Q = (0, o.useMemo)(
+        J = (0, o.useMemo)(
             () =>
                 R(D({}, (0, m.ij)(t, null)), {
                     nick: r,
@@ -125,7 +124,7 @@ function A(e) {
                 className: E.sectionHeader,
                 children: (0, l.jsx)(s.olH, {
                     "data-migration-pending": !0,
-                    onClick: $,
+                    onClick: W,
                     innerClassName: E.closeButton,
                 }),
             }),
@@ -142,7 +141,7 @@ function A(e) {
                     }),
                 }),
             (0, l.jsx)(s.f6W, {
-                theme: W,
+                theme: Z,
                 children: (e) =>
                     (0, l.jsxs)("div", {
                         className: i()(E.previewCards, e),
@@ -161,7 +160,7 @@ function A(e) {
                                     {
                                         pendingAvatar: U,
                                         pendingGlobalName: r,
-                                        pendingDisplayNameStyles: Q.displayNameStyles,
+                                        pendingDisplayNameStyles: J.displayNameStyles,
                                         canUsePremiumCustomization: !0,
                                         disabledInputs: !0,
                                         hideCustomStatus: !0,
@@ -173,7 +172,7 @@ function A(e) {
                                 ),
                             ),
                             (0, l.jsx)(f.Z, {
-                                author: Q,
+                                author: J,
                                 message: (0, u.e5)(
                                     R(
                                         D(
@@ -201,7 +200,7 @@ function A(e) {
                                 nameplate: X,
                                 nameplateData: null == X ? (null != V ? V : q) : void 0,
                                 pendingGlobalName: r,
-                                pendingDisplayNameStyles: Q.displayNameStyles,
+                                pendingDisplayNameStyles: J.displayNameStyles,
                                 isHighlighted: !0,
                                 className: E.nameplate,
                             }),
@@ -220,7 +219,7 @@ function A(e) {
                     }),
                     (0, l.jsx)(I, {
                         darkPreview: G,
-                        onToggleTheme: J,
+                        onToggleTheme: $,
                     }),
                 ],
             }),

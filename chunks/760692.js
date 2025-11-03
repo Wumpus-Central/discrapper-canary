@@ -73,19 +73,18 @@ function E(e) {
     };
 }
 function b(e) {
-    return e.length < 2
-        ? b(["#999", "#999"])
+    return 0 === e.length
+        ? {}
         : {
               [c]: e[0],
-              [u]: e[1],
+              [u]: e.length > 1 ? e[1] : e[0],
               [d]: e[0],
           };
 }
 function y(e, t) {
     let { shouldWrap: n = !1, fontOpacity: i = 1 } =
-        arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if (0 === t.length) return {};
-    let a = {};
+            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        a = {};
     switch (e) {
         case r.m.GRADIENT:
         case r.m.GLOW:
@@ -96,7 +95,7 @@ function y(e, t) {
         case r.m.TOON:
         case r.m.SOLID:
         default:
-            a = E(t[0]);
+            t.length > 0 && (a = E(t[0]));
     }
     return l(o({}, a), {
         [m]: n ? "wrap" : "nowrap",
