@@ -123,7 +123,7 @@ function B(e) {
                 (0, r.jsx)(
                     e,
                     k(M({}, n), {
-                        quest: t,
+                        initialQuest: t,
                         preview: o,
                         sourceQuestContent: c,
                         questContentPosition: a,
@@ -171,7 +171,7 @@ function F(e, t, i) {
                 (0, r.jsx)(
                     a,
                     k(M({}, n), {
-                        quest: e,
+                        initialQuest: e,
                         location: t,
                         sourceQuestContent: i,
                     }),
@@ -197,7 +197,7 @@ function V(e, t, i) {
                 (0, r.jsx)(
                     a,
                     k(M({}, n), {
-                        quest: e,
+                        initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
                     }),
@@ -222,7 +222,7 @@ function H(e, t, i, a) {
                 (0, r.jsx)(
                     o,
                     k(M({}, n), {
-                        quest: e,
+                        initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
                         preview: a,
