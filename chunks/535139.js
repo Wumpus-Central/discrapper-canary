@@ -11,29 +11,32 @@ var r,
     c = n(758677),
     u = (((r = {}).RPC = "rpc"), (r.WEB = "web"), r);
 function d(e) {
-    let { allowedFlows: t = ["rpc", "web"] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = (0, c.t)(e),
-        r = (0, l.t)(null == n ? void 0 : n.id, "AUTHORIZE_REQUEST"),
-        u = t.includes("rpc") && r,
-        d = t.includes("web") && (null == n ? void 0 : n.connectionEntrypointUrl) != null,
-        p = u || d,
-        { token: h, fetched: f } = (0, s.o)(null == n ? void 0 : n.id);
+    var t;
+    let { allowedFlows: n = ["rpc", "web"] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        r = (0, c.t)(e),
+        u = (0, l.t)(null == r ? void 0 : r.id, "AUTHORIZE_REQUEST"),
+        d = n.includes("rpc") && u,
+        p = n.includes("web") && (null == r ? void 0 : r.connectionEntrypointUrl) != null,
+        h = d || p,
+        { token: f, fetched: g } = (0, s.o)(
+            null != (t = null == r ? void 0 : r.parentId) ? t : null == r ? void 0 : r.id,
+        );
     return {
-        fetched: f,
-        hasAlreadyLinked: f && null != h,
-        canStartAuthorization: p,
+        fetched: g,
+        hasAlreadyLinked: g && null != f,
+        canStartAuthorization: h,
         startAuthorization: i.useCallback(
             () =>
-                null == n
+                null == r
                     ? null
-                    : u
-                      ? (o.Z.dispatchToSubscriptions("AUTHORIZE_REQUEST", (e) => e.socket.application.id === n.id, {}),
+                    : d
+                      ? (o.Z.dispatchToSubscriptions("AUTHORIZE_REQUEST", (e) => e.socket.application.id === r.id, {}),
                         "rpc")
-                      : d
-                        ? ((0, a.q)({ href: n.connectionEntrypointUrl }), "web")
+                      : p
+                        ? ((0, a.q)({ href: r.connectionEntrypointUrl }), "web")
                         : null,
-            [u, d, n],
+            [d, p, r],
         ),
-        connectionApp: n,
+        connectionApp: r,
     };
 }
