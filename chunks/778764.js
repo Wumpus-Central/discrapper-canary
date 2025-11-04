@@ -1,6 +1,6 @@
 n.d(t, {
-    RegisterWebAuthnCredentialModal: () => R,
-    Z: () => w,
+    RegisterWebAuthnCredentialModal: () => P,
+    Z: () => D,
 }),
     n(388685),
     n(49124),
@@ -12,22 +12,23 @@ var r = n(951288),
     s = n(755721),
     l = n(481060),
     c = n(239091),
-    u = n(313201),
-    d = n(454585),
-    f = n(313789),
-    _ = n(202858),
-    p = n(518596),
-    h = n(287880),
-    m = n(358085),
-    g = n(960048),
-    E = n(998502),
-    b = n(365007),
-    y = n(15980),
-    O = n(755733),
-    v = n(981631),
-    I = n(388032),
-    T = n(421156);
-function S(e, t, n) {
+    u = n(136097),
+    d = n(313201),
+    f = n(454585),
+    _ = n(313789),
+    p = n(202858),
+    h = n(518596),
+    m = n(287880),
+    g = n(358085),
+    E = n(960048),
+    b = n(998502),
+    y = n(365007),
+    O = n(15980),
+    v = n(755733),
+    I = n(981631),
+    T = n(388032),
+    S = n(421156);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +41,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,12 +52,12 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,69 +69,69 @@ function C(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function R(e) {
+function P(e) {
     let {
             transitionState: t,
             onClose: o,
             ticket: s,
             challenge: c,
-            showAccountSettingsButton: h = !1,
-            initialSlide: y = O.x.INIT,
+            showAccountSettingsButton: u = !1,
+            initialSlide: m = v.x.INIT,
         } = e,
-        S = (0, u.Dt)(),
-        [A, C] = i.useState(I.intl.string(I.t["I/sJtJ"])),
+        O = (0, d.Dt)(),
+        [A, C] = i.useState(T.intl.string(T.t["I/sJtJ"])),
         [N, R] = i.useState(!1),
-        [P, w] = i.useState(y),
+        [P, w] = i.useState(m),
         [D, x] = i.useState(""),
         [L, M] = i.useState(null),
         j = async () => {
             let e;
-            w(O.x.REGISTER);
+            w(v.x.REGISTER);
             let t =
-                m.isPlatformEmbedded && E.ZP.supportsFeature(v.eRX.WEBAUTHN)
-                    ? E.ZP.webAuthnRegister(c)
+                g.isPlatformEmbedded && b.ZP.supportsFeature(I.eRX.WEBAUTHN)
+                    ? b.ZP.webAuthnRegister(c)
                     : a.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), M(I.intl.string(I.t.xSCvBf)), w(O.x.INIT);
+                E.Z.captureException(e), M(T.intl.string(T.t.xSCvBf)), w(v.x.INIT);
                 return;
             }
-            x(e), w(O.x.NAME);
+            x(e), w(v.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        "aria-labelledby": S,
+        "aria-labelledby": O,
         parentComponent: "UserSettingsWebAuthn",
         children: [
             (0, r.jsxs)(l.xBx, {
-                className: T.header,
+                className: S.header,
                 separator: !1,
                 children: [
                     (0, r.jsxs)(l.Heading, {
-                        id: S,
+                        id: O,
                         variant: "heading-lg/semibold",
                         children: [
-                            P === O.x.INIT && I.intl.string(I.t.vrOCCk),
-                            P === O.x.REGISTER && I.intl.string(I.t.wePEBF),
-                            P === O.x.NAME && I.intl.string(I.t["cY/IOu"]),
-                            P === O.x.SUCCESS && d.Z.parse(I.intl.string(I.t.FXC7ZC)),
+                            P === v.x.INIT && T.intl.string(T.t.vrOCCk),
+                            P === v.x.REGISTER && T.intl.string(T.t.wePEBF),
+                            P === v.x.NAME && T.intl.string(T.t["cY/IOu"]),
+                            P === v.x.SUCCESS && f.Z.parse(T.intl.string(T.t.FXC7ZC)),
                         ],
                     }),
                     (0, r.jsx)(l.olH, {
                         onClick: o,
-                        className: T.modalCloseButton,
+                        className: S.modalCloseButton,
                     }),
                 ],
             }),
@@ -139,13 +140,13 @@ function R(e) {
                 width: 440,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
-                        id: O.x.INIT,
+                        id: v.x.INIT,
                         children: [
                             (0, r.jsxs)(l.hzk, {
-                                className: T.content,
+                                className: S.content,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: T.icon,
+                                        className: S.icon,
                                         children: (0, r.jsx)("img", {
                                             alt: "",
                                             src: n(773072),
@@ -163,7 +164,7 @@ function R(e) {
                                     (0, r.jsx)("div", {
                                         children: (0, r.jsx)(l.Text, {
                                             variant: "text-md/normal",
-                                            children: I.intl.string(I.t.Lh5vTW),
+                                            children: T.intl.string(T.t.Lh5vTW),
                                         }),
                                     }),
                                 ],
@@ -171,20 +172,20 @@ function R(e) {
                             (0, r.jsx)(l.mzw, {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
-                                    text: I.intl.string(I.t.oibaQa),
+                                    text: T.intl.string(T.t.oibaQa),
                                     onClick: j,
                                 }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)(l.Mi4, {
-                        id: O.x.REGISTER,
+                        id: v.x.REGISTER,
                         children: [
                             (0, r.jsxs)(l.hzk, {
-                                className: T.content,
+                                className: S.content,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: T.icon,
+                                        className: S.icon,
                                         children: (0, r.jsx)("img", {
                                             alt: "",
                                             src: n(773072),
@@ -193,7 +194,7 @@ function R(e) {
                                     (0, r.jsx)("div", {
                                         children: (0, r.jsx)(l.Text, {
                                             variant: "text-md/normal",
-                                            children: I.intl.string(I.t.aVMiX3),
+                                            children: T.intl.string(T.t.aVMiX3),
                                         }),
                                     }),
                                 ],
@@ -208,25 +209,25 @@ function R(e) {
                         ],
                     }),
                     (0, r.jsx)(l.Mi4, {
-                        id: O.x.NAME,
+                        id: v.x.NAME,
                         children: (0, r.jsxs)("form", {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    b
+                                    y
                                         .Sr(A, s, D)
                                         .then(async () => {
-                                            h ? w(O.x.SUCCESS) : (await (0, _.Yn)(!1), o());
+                                            u ? w(v.x.SUCCESS) : (await (0, p.Yn)(!1), o());
                                         })
                                         .catch(() => {
-                                            M(I.intl.string(I.t.fEptJP)), w(O.x.INIT);
+                                            M(T.intl.string(T.t.fEptJP)), w(v.x.INIT);
                                         });
                             },
                             children: [
                                 (0, r.jsxs)(l.hzk, {
-                                    className: T.content,
+                                    className: S.content,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: T.icon,
+                                            className: S.icon,
                                             children: (0, r.jsx)("img", {
                                                 alt: "",
                                                 src: n(637163),
@@ -237,7 +238,7 @@ function R(e) {
                                             children: [
                                                 (0, r.jsx)(l.Text, {
                                                     variant: "text-md/normal",
-                                                    children: I.intl.string(I.t["Jzd+z/"]),
+                                                    children: T.intl.string(T.t["Jzd+z/"]),
                                                 }),
                                                 (0, r.jsx)(l.oil, {
                                                     value: A,
@@ -252,21 +253,21 @@ function R(e) {
                                     ],
                                 }),
                                 (0, r.jsx)(l.mzw, {
-                                    className: T.footer,
+                                    className: S.footer,
                                     children: (0, r.jsxs)(l.ButtonGroup, {
                                         direction: "horizontal-reverse",
                                         children: [
                                             (0, r.jsx)(l.Button, {
                                                 variant: "primary",
-                                                text: I.intl.string(I.t["5dyZ1S"]),
+                                                text: T.intl.string(T.t["5dyZ1S"]),
                                                 type: "submit",
                                                 disabled: N,
                                             }),
                                             (0, r.jsx)(l.Button, {
                                                 variant: "secondary",
-                                                text: I.intl.string(I.t["13/7kX"]),
+                                                text: T.intl.string(T.t["13/7kX"]),
                                                 onClick: () => {
-                                                    w(O.x.INIT);
+                                                    w(v.x.INIT);
                                                 },
                                             }),
                                         ],
@@ -276,13 +277,13 @@ function R(e) {
                         }),
                     }),
                     (0, r.jsxs)(l.Mi4, {
-                        id: O.x.SUCCESS,
+                        id: v.x.SUCCESS,
                         children: [
                             (0, r.jsxs)(l.hzk, {
-                                className: T.content,
+                                className: S.content,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: T.icon,
+                                        className: S.icon,
                                         children: (0, r.jsx)("img", {
                                             alt: "",
                                             src: n(637163),
@@ -291,29 +292,29 @@ function R(e) {
                                     (0, r.jsx)("div", {
                                         children: (0, r.jsx)(l.Text, {
                                             variant: "text-md/normal",
-                                            children: I.intl.string(I.t.e1qv6i),
+                                            children: T.intl.string(T.t.e1qv6i),
                                         }),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(l.mzw, {
-                                className: T.footer,
+                                className: S.footer,
                                 children: (0, r.jsxs)(l.ButtonGroup, {
                                     direction: "horizontal-reverse",
                                     children: [
                                         (0, r.jsx)(l.Button, {
                                             variant: "primary",
-                                            text: I.intl.string(I.t.MubYG8),
+                                            text: T.intl.string(T.t.MubYG8),
                                             onClick: () => {
                                                 o(),
-                                                    (0, p.openUserSettings)(f.n.ACCOUNT_PANEL, {
-                                                        section: v.oAB.ACCOUNT,
+                                                    (0, h.openUserSettings)(_.n.ACCOUNT_PANEL, {
+                                                        section: I.oAB.ACCOUNT,
                                                     });
                                             },
                                         }),
                                         (0, r.jsx)(l.Button, {
                                             variant: "secondary",
-                                            text: I.intl.string(I.t.i4jeWR),
+                                            text: T.intl.string(T.t.i4jeWR),
                                             onClick: o,
                                         }),
                                     ],
@@ -326,65 +327,65 @@ function R(e) {
         ],
     });
 }
-function P(e) {
+function w(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(l.v2r, {
         navId: "webauthn-credential-actions",
         onClose: c.Zy,
-        "aria-label": I.intl.string(I.t["+nrTbK"]),
+        "aria-label": T.intl.string(T.t["+nrTbK"]),
         onSelect: t,
         children: [
             (0, r.jsx)(l.sNh, {
                 id: "webauthn-edit-credential-".concat(i.id),
-                label: I.intl.string(I.t.bt75uw),
+                label: T.intl.string(T.t.bt75uw),
                 action: () => {
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e("804").then(n.bind(n, 89616));
-                        return (t) => (0, r.jsx)(e, A({ credential: i }, t));
+                        return (t) => (0, r.jsx)(e, C({ credential: i }, t));
                     });
                 },
             }),
             (0, r.jsx)(l.sNh, {
                 id: "webauthn-delete-credential-".concat(i.id),
-                label: I.intl.string(I.t["+xgS+L"]),
+                label: T.intl.string(T.t["+xgS+L"]),
                 color: "danger",
                 action: () => {
-                    b.cT(i);
+                    y.cT(i);
                 },
             }),
         ],
     });
 }
-function w() {
+function D() {
     let {
         credentials: e,
         hasFetchedCredentials: t,
         hasPendingRegisterTrigger: n,
-    } = (0, o.cj)([y.Z], () => ({
-        hasFetchedCredentials: y.Z.hasFetchedCredentials(),
-        credentials: y.Z.getCredentials(),
-        hasPendingRegisterTrigger: y.Z.hasPendingRegisterTrigger(),
+    } = (0, o.cj)([O.Z], () => ({
+        hasFetchedCredentials: O.Z.hasFetchedCredentials(),
+        credentials: O.Z.getCredentials(),
+        hasPendingRegisterTrigger: O.Z.hasPendingRegisterTrigger(),
     }));
     i.useEffect(() => {
-        t || b.hL();
+        t || y.hL();
     }, [t]),
         i.useEffect(
             () => () => {
-                y.Z.hasPendingRegisterTrigger() && b.vg();
+                O.Z.hasPendingRegisterTrigger() && y.vg();
             },
             [],
         );
-    let [a, u] = i.useState(!1),
-        d = i.useCallback(() => {
-            u(!0),
-                b
+    let [a, s] = i.useState(!1),
+        c = i.useCallback(() => {
+            s(!0),
+                y
                     .startRegisterWebAuthnCredential()
                     .then((e) => {
                         let { ticket: t, challenge: n } = e;
                         (0, l.h7j)((e) =>
                             (0, r.jsx)(
-                                R,
-                                N(A({}, e), {
+                                P,
+                                R(C({}, e), {
                                     ticket: t,
                                     challenge: n,
                                 }),
@@ -392,66 +393,75 @@ function w() {
                         );
                     })
                     .catch((e) => {
-                        e.message !== I.intl.string(I.t.N2yb9a) && g.Z.captureException(e);
+                        e.message !== T.intl.string(T.t.N2yb9a) && E.Z.captureException(e);
                     })
                     .finally(() => {
-                        u(!1);
+                        s(!1);
                     });
         }, []);
     return (
         i.useEffect(() => {
-            n && !a && (b.vg(), d());
-        }, [n, a, d]),
+            n && !a && (y.vg(), c());
+        }, [n, a, c]),
         (0, r.jsxs)(l.gNt, {
-            label: I.intl.string(I.t.y7SXYX),
-            description: I.intl.string(I.t.TMukAN),
+            label: T.intl.string(T.t.y7SXYX),
+            description: T.intl.string(T.t.TMukAN),
             children: [
                 e.length > 0 &&
                     (0, r.jsx)("div", {
-                        className: T.credentialList,
-                        children: e.map((e) =>
-                            (0, r.jsxs)(
-                                "div",
-                                {
-                                    className: T.credentialItem,
-                                    children: [
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "text-md/semibold",
-                                            children: e.name,
-                                        }),
-                                        (0, r.jsx)(s.zx, {
-                                            look: s.zx.Looks.BLANK,
-                                            color: s.zx.Colors.TRANSPARENT,
-                                            size: s.zx.Sizes.ICON,
-                                            onClick: (t) => {
-                                                (0, c.vq)(t, (t) => (0, r.jsx)(P, N(A({}, t), { credential: e })));
-                                            },
-                                            "aria-label": I.intl.string(I.t["+nrTbK"]),
-                                            innerClassName: T.credentialOptions,
-                                            children: (0, r.jsx)(l.Huf, {
-                                                size: "md",
-                                                className: T.__invalid_overflowIcon,
-                                                colorClass: T.__invalid_overflowIconFg,
-                                                "aria-hidden": !0,
-                                            }),
-                                        }),
-                                    ],
-                                },
-                                e.id,
-                            ),
-                        ),
+                        className: S.credentialList,
+                        children: e.map(L),
                     }),
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: I.intl.string(I.t.vrOCCk),
-                        onClick: d,
+                        text: T.intl.string(T.t.vrOCCk),
+                        onClick: c,
                         loading: a,
-                        disabled: !h.Ae,
+                        disabled: !m.Ae,
                     }),
                 }),
             ],
         })
+    );
+}
+function x(e) {
+    if (null !== e.last_used)
+        return (0, r.jsx)(l.Text, {
+            variant: "text-sm/normal",
+            children: T.intl.format(T.t["7JgxF5"], { lastUsed: (0, u.p)(e.last_used) }),
+        });
+}
+function L(e) {
+    return (0, r.jsxs)(
+        "div",
+        {
+            className: S.credentialItem,
+            children: [
+                (0, r.jsx)(l.Text, {
+                    variant: "text-md/semibold",
+                    children: e.name,
+                }),
+                x(e),
+                (0, r.jsx)(s.zx, {
+                    look: s.zx.Looks.BLANK,
+                    color: s.zx.Colors.TRANSPARENT,
+                    size: s.zx.Sizes.ICON,
+                    onClick: (t) => {
+                        (0, c.vq)(t, (t) => (0, r.jsx)(w, R(C({}, t), { credential: e })));
+                    },
+                    "aria-label": T.intl.string(T.t["+nrTbK"]),
+                    innerClassName: S.credentialOptions,
+                    children: (0, r.jsx)(l.Huf, {
+                        size: "md",
+                        className: S.__invalid_overflowIcon,
+                        colorClass: S.__invalid_overflowIconFg,
+                        "aria-hidden": !0,
+                    }),
+                }),
+            ],
+        },
+        e.id,
     );
 }

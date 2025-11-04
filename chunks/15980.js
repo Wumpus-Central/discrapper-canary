@@ -31,8 +31,9 @@ function _() {
     u = !1;
 }
 function p(e) {
-    let t = !1;
-    return c !== e.credentials && ((c = e.credentials), (t = !0)), l || ((l = !0), (t = !0)), t;
+    let { credentials: t } = e,
+        n = !1;
+    return c !== t && ((c = t), (n = !0)), l || ((l = !0), (n = !0)), n;
 }
 function h(e) {
     let { credential: t } = e;
