@@ -111,7 +111,7 @@ let w = {
                 A(
                     {
                         load_id: n,
-                        application_id: (0, E.N)(r),
+                        application_id: (0, E.Nb)(r),
                         location: i,
                         location_stack: i,
                         payment_gateway: I.ht.VIRTUAL_CURRENCY,
@@ -134,7 +134,7 @@ let w = {
                         A(
                             {
                                 load_id: r,
-                                application_id: (0, E.N)(o),
+                                application_id: (0, E.Nb)(o),
                                 location: l,
                                 location_stack: l,
                                 sku_id: o,
@@ -308,7 +308,7 @@ let w = {
                 [a, s],
             );
         return (0, r.jsx)(p.PaymentModal, {
-            applicationId: (0, E.N)(t),
+            applicationId: (0, E.Nb)(t),
             transitionState: a.transitionState,
             analyticsDataOverride: l,
             onClose: c,
@@ -323,7 +323,7 @@ let w = {
         var { skuId: t, loadId: n, onCheckoutSuccess: i, analyticsSourceLocation: a, analyticsLocations: o = [] } = e,
             s = R(e, ["skuId", "loadId", "onCheckoutSuccess", "analyticsSourceLocation", "analyticsLocations"]);
         return (0, r.jsx)(u.PaymentContextProvider, {
-            applicationId: (0, E.N)(t),
+            applicationId: (0, E.Nb)(t),
             activeSubscription: null,
             loadId: n,
             stepConfigs: j,

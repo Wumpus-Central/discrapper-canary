@@ -1,6 +1,7 @@
 n.d(t, {
-    N: () => c,
-    m: () => u,
+    Nb: () => c,
+    _r: () => d,
+    m4: () => u,
 });
 var r = n(704215),
     i = n(266454),
@@ -23,4 +24,11 @@ let c = (e) => (e === o.Vt.FRACTIONAL_PREMIUM ? l.CL : a.XAJ),
                 dismissAction: s.L.INDIRECT_ACTION,
                 groupName: s.R.VIRTUAL_CURRENCY_ONBOARDING,
             }));
+    },
+    d = () => {
+        (0, i.zu)(r.z.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_ANNOUNCEMENT_MODAL) ||
+            (0, i.Q3)(r.z.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_ANNOUNCEMENT_MODAL, {
+                dismissAction: s.L.INDIRECT_ACTION,
+                groupName: s.R.VIRTUAL_CURRENCY_MOBILE_ONBOARDING,
+            });
     };
