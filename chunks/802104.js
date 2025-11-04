@@ -55,6 +55,7 @@ class b extends o.Z {
         let e = !0;
         this.isNewUpdater() && e !== (await f.ZP.getOptionalUpdates()) && (await f.ZP.setOptionalUpdates(e)),
             this.checkForUpdates(),
+            clearInterval(this._checkInterval),
             (this._checkInterval = setInterval(this.checkForUpdates, p));
     }
     async _requestNewUpdaterBootstrap() {
@@ -132,7 +133,7 @@ class b extends o.Z {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || "dcb3ff805646482955644e9393961f693b39ac62" === e.body.hash)
+                                if (null == e.body || "8162b6b46636455a93a6dfbcd7616dbc5c56ac29" === e.body.hash)
                                     return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, s.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : m;
