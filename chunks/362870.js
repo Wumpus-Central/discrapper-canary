@@ -1,52 +1,49 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(358458),
-    o = n(91192),
+    o = n(689628),
+    s = n(91192),
     c = n(704215),
     u = n(481060),
     d = n(515753),
     p = n(393903),
     f = n(266454),
-    m = n(426032),
-    h = n(626135),
-    g = n(937797),
-    _ = n(150560),
-    b = n(551913),
-    E = n(46140),
-    O = n(981631),
-    I = n(921944),
-    y = n(388032),
-    v = n(228624);
-let C = Math.ceil(Math.sqrt(115200)),
-    S = (C - 240) / 2,
-    T = function (e) {
+    h = n(426032),
+    g = n(626135),
+    m = n(150560),
+    _ = n(551913),
+    b = n(981631),
+    E = n(921944),
+    O = n(388032),
+    y = n(228624);
+let v = Math.ceil(Math.sqrt(115200)),
+    I = (v - 240) / 2,
+    C = function (e) {
         var t, n;
         let { selected: l } = e,
-            T = (0, o.JA)("quests"),
-            N = i.useRef(null),
+            C = (0, s.JA)("quests"),
+            S = i.useRef(null),
             {
-                shouldShowPopover: j,
-                shouldShowGradientAndBadge: P,
-                dismissContent: x,
+                shouldShowPopover: T,
+                shouldShowGradientAndBadge: N,
+                dismissContent: j,
             } = (function () {
-                let { enabled: e } = g.GE.useConfig({ location: E.dr.PRIVATE_CHANNELS_LIST }),
-                    [t, n] = (0, m.US)(e ? [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], I.R.PRIVATE_CHANNELS_LIST, !0),
-                    r = i.useCallback(() => {
-                        e && n(I.L.TAKE_ACTION);
-                    }, [n, e]);
+                let [e, t] = (0, h.US)([c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING], E.R.PRIVATE_CHANNELS_LIST, !0),
+                    n = i.useCallback(() => {
+                        t(E.L.TAKE_ACTION);
+                    }, [t]);
                 return {
-                    shouldShowPopover: t === c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING,
-                    shouldShowGradientAndBadge: !(0, f.Nj)(c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING) && e,
-                    dismissContent: r,
+                    shouldShowPopover: e === c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING,
+                    shouldShowGradientAndBadge: !(0, f.Nj)(c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING),
+                    dismissContent: n,
                 };
             })(),
-            A = i.useCallback(() => {
-                _.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
+            P = i.useCallback(() => {
+                m.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
             }, []),
-            [{ glowSpring: Z }, w] = (0, u.q_F)(() => ({
+            [{ glowSpring: x }, A] = (0, u.q_F)(() => ({
                 from: { glowSpring: 0 },
                 config: {
                     clamp: !0,
@@ -55,7 +52,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 12,
                 },
             })),
-            [{ shineSpring: L }, R] = (0, u.q_F)(() => ({
+            [{ shineSpring: Z }, w] = (0, u.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
                     clamp: !0,
@@ -64,51 +61,51 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 38,
                 },
             })),
-            D = i.useCallback(() => {
-                R({ shineSpring: 1 }),
-                    w({
+            L = i.useCallback(() => {
+                w({ shineSpring: 1 }),
+                    A({
                         glowSpring: 1,
                         delay: 200,
                     });
-            }, [R, w]),
-            M = i.useCallback(() => {
-                R({
+            }, [w, A]),
+            R = i.useCallback(() => {
+                w({
                     shineSpring: 0,
                     immediate: !0,
                 }),
-                    w({
+                    A({
                         glowSpring: 0,
                         delay: 0,
                     });
-            }, [R, w]),
-            k = i.useCallback(() => {
-                R({
+            }, [w, A]),
+            D = i.useCallback(() => {
+                w({
                     shineSpring: 1,
                     delay: 500,
                 }),
-                    w({
+                    A({
                         glowSpring: 1,
                         delay: 700,
                     }),
-                    h.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
-            }, [R, w]),
-            [U, G] = i.useState(-1),
-            B = i.useCallback((e) => {
-                G(e.contentRect.width);
+                    g.default.track(b.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            }, [w, A]),
+            [M, k] = i.useState(-1),
+            U = i.useCallback((e) => {
+                k(e.contentRect.width);
             }, []),
-            H = (0, p.y)(B, [], { fireOnMount: !0 });
+            G = (0, p.y)(U, [], { fireOnMount: !0 });
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: v.wrapper,
-                    onMouseEnter: D,
-                    onMouseLeave: M,
-                    onFocus: D,
-                    onBlur: M,
-                    ref: H,
+                    className: y.wrapper,
+                    onMouseEnter: L,
+                    onMouseLeave: R,
+                    onFocus: L,
+                    onBlur: R,
+                    ref: G,
                     style: {
                         "--custom-shine-dimensions": "".concat(240, "px"),
-                        "--custom-shine-rotated-dimensions-delta": "".concat(S, "px"),
+                        "--custom-shine-rotated-dimensions-delta": "".concat(I, "px"),
                     },
                     children: (0, r.jsx)(
                         d.Qj,
@@ -138,44 +135,44 @@ let C = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [v.withGradientAndBadge]: P }),
+                                className: a()({ [y.withGradientAndBadge]: N }),
                                 icon: u.qDn,
-                                listItemRef: N,
-                                onClick: A,
-                                route: O.Z5c.QUEST_HOME_V2,
+                                listItemRef: S,
+                                onClick: P,
+                                route: b.Z5c.QUEST_HOME_V2,
                                 selected: l,
-                                text: y.intl.string(y.t.JALI2K),
+                                text: O.intl.string(O.t.JALI2K),
                             },
-                            T,
+                            C,
                         )),
                         (n = n =
                             {
                                 children:
-                                    P &&
+                                    N &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(s.animated.div, {
-                                                className: v.shine,
+                                            (0, r.jsx)(o.animated.div, {
+                                                className: y.shine,
                                                 style: {
-                                                    transform: L.to((e) =>
+                                                    transform: Z.to((e) =>
                                                         "translateX(calc("
-                                                            .concat(e * U, "px + ")
-                                                            .concat(e * C, "px)) translateY(-50%) rotate(45deg)"),
+                                                            .concat(e * M, "px + ")
+                                                            .concat(e * v, "px)) translateY(-50%) rotate(45deg)"),
                                                     ),
                                                 },
                                             }),
-                                            (0, r.jsx)(s.animated.div, {
-                                                className: v.glow,
+                                            (0, r.jsx)(o.animated.div, {
+                                                className: y.glow,
                                                 style: {
-                                                    opacity: Z.to({
+                                                    opacity: x.to({
                                                         range: [0, 1],
                                                         output: [0, 0.5],
                                                     }),
                                                 },
                                             }),
                                             (0, r.jsx)(u.IGR, {
-                                                className: v.badge,
-                                                text: y.intl.string(y.t.y2b7CA),
+                                                className: y.badge,
+                                                text: O.intl.string(O.t.y2b7CA),
                                                 color: u.TVs.colors.BG_BRAND.css,
                                             }),
                                         ],
@@ -196,12 +193,12 @@ let C = Math.ceil(Math.sqrt(115200)),
                         t),
                     ),
                 }),
-                j &&
-                    (0, r.jsx)(b.Z, {
-                        targetElementRef: N,
-                        onNavigateToQuestHome: A,
-                        onRender: k,
-                        onRequestClose: x,
+                T &&
+                    (0, r.jsx)(_.Z, {
+                        targetElementRef: S,
+                        onNavigateToQuestHome: P,
+                        onRender: D,
+                        onRequestClose: j,
                     }),
             ],
         });
