@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(290297),
     T = n(244317),
     N = n(765717),
-    j = n(358221),
-    P = n(823748),
+    P = n(358221),
+    j = n(823748),
     x = n(626421),
     A = n(118379),
     Z = n(267161),
@@ -78,8 +78,8 @@ var r = n(951288),
     eS = n(55589),
     eT = n(933429),
     eN = n(626135),
-    ej = n(823379),
-    eP = n(709054),
+    eP = n(823379),
+    ej = n(709054),
     ex = n(450876),
     eA = n(981631),
     eZ = n(176505),
@@ -153,16 +153,24 @@ let ek = (0, u.Un)({
     }),
     ez = (0, u.Un)({
         createPromise: () =>
-            Promise.all([n.e("8271"), n.e("15851"), n.e("51453"), n.e("845"), n.e("58227"), n.e("58121")]).then(
-                n.bind(n, 603072),
-            ),
+            Promise.all([
+                n.e("8271"),
+                n.e("15851"),
+                n.e("51453"),
+                n.e("845"),
+                n.e("58227"),
+                n.e("26494"),
+                n.e("58121"),
+            ]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: "ChannelsAndRolesPage",
         renderLoader: eU,
     }),
     eY = (0, u.Un)({
         createPromise: () =>
-            Promise.all([n.e("8271"), n.e("15851"), n.e("51453"), n.e("845"), n.e("37709")]).then(n.bind(n, 599263)),
+            Promise.all([n.e("8271"), n.e("15851"), n.e("51453"), n.e("845"), n.e("26494"), n.e("37709")]).then(
+                n.bind(n, 599263),
+            ),
         webpackId: 599263,
         name: "GuildOnboardingPage",
         renderLoader: eU,
@@ -252,9 +260,9 @@ let ek = (0, u.Un)({
                 case eZ.oC.GAME_SERVERS:
                     return (0, r.jsx)(eq, { guildId: l });
                 case eZ.oC.REPORT_TO_MOD:
-                    return (0, r.jsx)(P.Z, {});
+                    return (0, r.jsx)(j.Z, {});
                 default:
-                    (0, ej.vE)(u);
+                    (0, eP.vE)(u);
             }
         if ((0, H.p3)(d, f))
             return (0, r.jsx)(V.Z, {
@@ -262,7 +270,7 @@ let ek = (0, u.Un)({
                 channelId: u,
             });
         if ((null == i ? void 0 : i.type) === eA.d4z.GUILD_STORE) {
-            let e = eP.default.cast(t.params.messageId);
+            let e = ej.default.cast(t.params.messageId);
             return (0, r.jsx)(
                 g.Z,
                 {
@@ -272,7 +280,7 @@ let ek = (0, u.Un)({
                 i.id,
             );
         }
-        return (0, r.jsx)(P.Z, {});
+        return (0, r.jsx)(j.Z, {});
     },
     eQ = i.memo(function () {
         let { guildId: e, channelId: t } = (0, em.Z)(),
@@ -406,7 +414,7 @@ function tl(e) {
     (0, y.t)(!0);
     let c = "app view user trigger debugging";
     I.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), I.R6.trackExposure({ location: c });
-    let u = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
+    let u = (0, p.e7)([P.Z], () => P.Z.isFullscreenInContext()),
         h = (0, R.T)("ChannelSidebar"),
         g = (0, Z.useAppSidebarState)((e) => !e.isOpen) && h;
     i.useLayoutEffect(() => {
@@ -598,7 +606,7 @@ function ta() {
         b = i.useCallback(() => $.Z.openSidebar(), []),
         E = (0, R.T)("AppView"),
         O = (0, Z.useAppSidebarState)((e) => !e.isOpen),
-        I = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
+        I = (0, p.e7)([P.Z], () => P.Z.isFullscreenInContext()),
         y = (0, p.e7)([D.Z], () => D.Z.isFrameActive());
     return (0, r.jsx)("div", {
         className: eD.container,

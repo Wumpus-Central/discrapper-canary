@@ -9,8 +9,8 @@ e.exports = {
     error: "error__5d7c9",
     promptOptions: "promptOptions__5d7c9",
     sectionSeparator: "sectionSeparator__5d7c9",
-    emptyContainer: "emptyContainer__5d7c9",
     emptyPage: "emptyPage__5d7c9",
+    emptyContainer: "emptyContainer__5d7c9",
     emptyIcon: "emptyIcon__5d7c9",
     emptyHeader: "emptyHeader__5d7c9",
     helpText: "helpText__5d7c9",
@@ -23,4 +23,5 @@ e.exports = {
     roles: "roles__5d7c9",
     role: "role__5d7c9",
     roleDot: "roleDot__5d7c9",
+    connectionsContainer: "connectionsContainer__5d7c9",
 };

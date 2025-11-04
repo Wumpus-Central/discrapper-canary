@@ -217,14 +217,17 @@ function k(e) {
     return (
         0 !== e.connection_type && 1 !== e.connection_type
             ? t.push("Invalid connection type")
-            : 0 === e.connection_type
-              ? ((0, a.Ew)(e.application_id) && t.push("Application ID is required for application connections"),
-                (0, a.Ew)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
-              : 1 === e.connection_type &&
-                ((0, a.Ew)(e.provider_id)
-                    ? t.push("Platform ID is required for platform connections")
-                    : x.includes(e.provider_id) || t.push("Invalid platform ID"),
-                (0, a.Ew)(e.application_id) || t.push("Application ID not allowed for platform connections")),
+            : (0 === e.connection_type
+                  ? ((0, a.Ew)(e.application_id) && t.push("Application ID is required for application connections"),
+                    (0, a.Ew)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
+                  : 1 === e.connection_type &&
+                    ((0, a.Ew)(e.provider_id)
+                        ? t.push("Platform ID is required for platform connections")
+                        : x.includes(e.provider_id) || t.push("Invalid platform ID"),
+                    (0, a.Ew)(e.application_id) || t.push("Application ID not allowed for platform connections")),
+              null != e.description &&
+                  e.description.length > m &&
+                  t.push("Description must be ".concat(m, " characters or less"))),
         t
     );
 }

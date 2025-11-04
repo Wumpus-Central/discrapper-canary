@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(539854), n(472816), n(794429);
+n.d(t, { Z: () => Z }), n(539854), n(472816), n(794429);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -196,8 +196,9 @@ function M(e) {
 }
 let j = [],
     k = [],
-    U = [];
-class G extends (r = o.ZP.Store) {
+    U = [],
+    G = [];
+class B extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, _.ZP, l.Z);
     }
@@ -294,11 +295,11 @@ class G extends (r = o.ZP.Store) {
     }
     getConnections(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.connections) ? n : [];
+        return null != (n = null == (t = b[e]) ? void 0 : t.connections) ? n : G;
     }
 }
-h(G, "displayName", "GuildOnboardingPromptsStore");
-let B = new G(s.Z, {
+h(B, "displayName", "GuildOnboardingPromptsStore");
+let Z = new B(s.Z, {
     CONNECTION_OPEN: T,
     GUILD_ONBOARDING_PROMPTS_FETCH_START: I,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: C,
