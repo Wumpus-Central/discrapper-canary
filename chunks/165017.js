@@ -1,4 +1,4 @@
-n.d(t, { H: () => p });
+n.d(t, { H: () => _ });
 var r = n(498607),
     i = n.n(r),
     a = n(442837),
@@ -7,22 +7,21 @@ var r = n(498607),
     l = n(430824),
     c = n(914010),
     u = n(945577),
-    d = n(125085),
-    f = n(981631);
-function _(e) {
+    d = n(981631);
+function f(e) {
     let {
         isSearchDesktopXDMExperimentEnabled: t,
-        isGlobalXDMSettingSupported: n,
+        crossDMSearchSettingUnsetValue: n,
         isCrossDMSearchEnabledSetting: r,
     } = e;
-    return t && n ? (null != r ? r : d.K) : !!t;
+    return t ? (null != r ? r : n) : !!t;
 }
-function p(e) {
+function _(e) {
     let { guildId: t, channelId: n } = e,
-        r = (0, u.u5)({ location: "useDesktopSearchContext" }),
-        d = _({
+        r = (0, u.xy)({ location: "useDesktopSearchContext" }),
+        _ = f({
             isSearchDesktopXDMExperimentEnabled: (0, u.UX)({ location: "useDesktopSearchContext" }),
-            isGlobalXDMSettingSupported: r,
+            crossDMSearchSettingUnsetValue: r,
             isCrossDMSearchEnabledSetting: o.rR.useSetting(),
         });
     return (0, a.e7)(
@@ -30,23 +29,23 @@ function p(e) {
         () => {
             let e = l.Z.getGuild(t),
                 r = s.Z.getChannel(n);
-            return c.Z.getGuildId() === f.I_8
-                ? { type: f.aib.FAVORITES }
+            return c.Z.getGuildId() === d.I_8
+                ? { type: d.aib.FAVORITES }
                 : null != t && null != e
                   ? {
-                        type: f.aib.GUILD,
+                        type: d.aib.GUILD,
                         guildId: t,
                     }
                   : null != n && null != r && r.isPrivate()
-                    ? d
-                        ? { type: f.aib.DMS }
+                    ? _
+                        ? { type: d.aib.DMS }
                         : {
-                              type: f.aib.CHANNEL,
+                              type: d.aib.CHANNEL,
                               channelId: n,
                           }
                     : null;
         },
-        [n, t, d],
+        [n, t, _],
         i(),
     );
 }
