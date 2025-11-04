@@ -24,7 +24,7 @@ function p(e) {
             pendingLegacyUsernameDisabled: y,
             pendingBadges: O,
             pendingDisplayNameStyles: v,
-            isTryItOutFlow: I,
+            isTryItOut: I,
             hideBioSection: T,
             shouldOpenBadgeTooltip: S,
         } = e,

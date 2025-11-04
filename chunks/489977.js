@@ -19,7 +19,7 @@ class f extends l.Z {
     maybeOpenProfilePreviewModal(e) {
         return e.uploadType === p.pC.AVATAR
             ? ((e) => {
-                  let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOutFlow: f } = e;
+                  let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOut: f } = e;
                   if (f) return void (0, c.c_)(t);
                   let m = u.default.getCurrentUser(),
                       h = null != r ? a.I5 : i.I5,
@@ -39,7 +39,7 @@ class f extends l.Z {
               })(e)
             : e.uploadType === p.pC.BANNER
               ? ((e) => {
-                    let { image: t, guildId: n, analyticsSource: r, isTryItOutFlow: i } = e,
+                    let { image: t, guildId: n, analyticsSource: r, isTryItOut: i } = e,
                         l = t.imageUri;
                     if (i) return void (0, c.f4)(l);
                     let o = u.default.getCurrentUser(),

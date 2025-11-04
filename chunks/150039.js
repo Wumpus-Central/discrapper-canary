@@ -1,17 +1,18 @@
 n.d(t, {
-    $U: () => b,
     Jw: () => S,
-    Kg: () => v,
     PO: () => A,
     UK: () => C,
     Wh: () => N,
     Ys: () => R,
-    Zx: () => y,
-    bd: () => I,
+    Zx: () => E,
     f$: () => w,
-    gc: () => E,
+    gc: () => g,
     gd: () => P,
-    mD: () => O,
+    i3: () => y,
+    mD: () => b,
+    nh: () => O,
+    sY: () => I,
+    wE: () => v,
     xQ: () => T,
 }),
     n(539854);
@@ -21,18 +22,17 @@ var r = n(647438),
     o = n(979554),
     s = n(442837),
     l = n(809206),
-    c = n(676742),
-    u = n(594928),
-    d = n(18438),
-    f = n(778825),
-    _ = n(350327),
-    p = n(621853),
-    h = n(271383),
-    m = n(25990),
-    g = n(594174);
-function E(e) {
+    c = n(594928),
+    u = n(18438),
+    d = n(778825),
+    f = n(350327),
+    _ = n(621853),
+    p = n(271383),
+    h = n(25990),
+    m = n(594174);
+function g(e) {
     return r.useMemo(() => {
-        let t = h.ZP.getMutableAllGuildsAndMembers(),
+        let t = p.ZP.getMutableAllGuildsAndMembers(),
             n = {};
         for (let i in t) {
             var r;
@@ -42,35 +42,17 @@ function E(e) {
         return null != n ? Object.entries(n).map((e) => e[1][0]) : [];
     }, [e]);
 }
-function b(e, t) {
-    let n = (0, s.e7)([h.ZP], () => (void 0 === t ? null : h.ZP.getMember(t.id, e.id))),
-        r = (0, c.Z)(e.avatarDecoration),
-        { pendingUserAvatarDecoration: i, userErrors: a } = (0, s.cj)([m.Z], () => ({
-            pendingUserAvatarDecoration: m.Z.getPendingAvatarDecoration(),
-            userErrors: m.Z.getErrors().avatarDecoration,
-        })),
-        { pendingGuildAvatarDecoration: o, guildErrors: l } = (0, s.cj)([f.Z], () => ({
-            pendingGuildAvatarDecoration: f.Z.getPendingAvatarDecoration(),
-            guildErrors: f.Z.getErrors().avatarDecoration,
-        }));
-    return {
-        userAvatarDecoration: r,
-        guildAvatarDecoration: null == n ? void 0 : n.avatarDecoration,
-        pendingAvatarDecoration: null != t ? o : i,
-        pendingErrors: null != t ? l : a,
-    };
-}
-function y(e, t) {
+function E(e, t) {
     var n;
-    let r = (0, s.e7)([h.ZP], () => (void 0 === t ? null : h.ZP.getMember(t, e.id))),
+    let r = (0, s.e7)([p.ZP], () => (void 0 === t ? null : p.ZP.getMember(t, e.id))),
         i = e.nameplate,
-        { pendingUserNameplate: a, userErrors: o } = (0, s.cj)([m.Z], () => ({
-            pendingUserNameplate: m.Z.getPendingNameplate(),
-            userErrors: m.Z.getErrors().nameplate,
+        { pendingUserNameplate: a, userErrors: o } = (0, s.cj)([h.Z], () => ({
+            pendingUserNameplate: h.Z.getPendingNameplate(),
+            userErrors: h.Z.getErrors().nameplate,
         })),
-        { pendingGuildNameplate: l, guildErrors: c } = (0, s.cj)([f.Z], () => ({
-            pendingGuildNameplate: f.Z.getPendingNameplate(),
-            guildErrors: f.Z.getErrors().nameplate,
+        { pendingGuildNameplate: l, guildErrors: c } = (0, s.cj)([d.Z], () => ({
+            pendingGuildNameplate: d.Z.getPendingNameplate(),
+            guildErrors: d.Z.getErrors().nameplate,
         }));
     return {
         userNameplate: i,
@@ -79,16 +61,16 @@ function y(e, t) {
         pendingErrors: null != t ? c : o,
     };
 }
-function O(e, t) {
-    (0, u.cL)({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }) || (t = void 0);
-    let n = (0, s.e7)([h.ZP], () => (void 0 === t || null == e ? null : h.ZP.getMember(t, e.id))),
-        { pendingUserDisplayNameStyles: r, userErrors: i } = (0, s.cj)([m.Z], () => ({
-            pendingUserDisplayNameStyles: m.Z.getPendingDisplayNameStyles(),
-            userErrors: m.Z.getErrors().displayNameStyles,
+function b(e, t) {
+    (0, c.cL)({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }) || (t = void 0);
+    let n = (0, s.e7)([p.ZP], () => (void 0 === t || null == e ? null : p.ZP.getMember(t, e.id))),
+        { pendingUserDisplayNameStyles: r, userErrors: i } = (0, s.cj)([h.Z], () => ({
+            pendingUserDisplayNameStyles: h.Z.getPendingDisplayNameStyles(),
+            userErrors: h.Z.getErrors().displayNameStyles,
         })),
-        { pendingGuildDisplayNameStyles: a, guildErrors: o } = (0, s.cj)([f.Z], () => ({
-            pendingGuildDisplayNameStyles: f.Z.getPendingDisplayNameStyles(),
-            guildErrors: f.Z.getErrors().displayNameStyles,
+        { pendingGuildDisplayNameStyles: a, guildErrors: o } = (0, s.cj)([d.Z], () => ({
+            pendingGuildDisplayNameStyles: d.Z.getPendingDisplayNameStyles(),
+            guildErrors: d.Z.getErrors().displayNameStyles,
         }));
     return {
         userDisplayNameStyles: null == e ? void 0 : e.displayNameStyles,
@@ -97,42 +79,64 @@ function O(e, t) {
         pendingErrors: null != t ? o : i,
     };
 }
-function v(e, t) {
-    return (0, s.e7)([p.Z], () => {
-        var n, r;
-        return null == t
-            ? null == (n = p.Z.getUserProfile(e.id))
+function y(e) {
+    let { user: t, guildId: n } = e,
+        r = (0, s.e7)([p.ZP], () => (null != n ? p.ZP.getMember(n, t.id) : null));
+    return null != n ? (null == r ? void 0 : r.avatarDecoration) : t.avatarDecoration;
+}
+function O(e) {
+    let { user: t, guildId: n } = e;
+    return (0, s.e7)([_.Z], () => {
+        var e, r;
+        return null == n
+            ? null == (e = _.Z.getUserProfile(t.id))
                 ? void 0
-                : n.profileEffect
-            : null == (r = p.Z.getGuildMemberProfile(e.id, t.id))
+                : e.profileEffect
+            : null == (r = _.Z.getGuildMemberProfile(t.id, n))
               ? void 0
               : r.profileEffect;
     });
 }
+function v(e) {
+    let { guildId: t, isTryItOut: n } = e;
+    return (0, s.cj)([d.Z, h.Z], () =>
+        n
+            ? { pendingAvatarDecoration: h.Z.getTryItOutAvatarDecoration() }
+            : null == t
+              ? {
+                    pendingAvatarDecoration: h.Z.getPendingAvatarDecoration(),
+                    errors: h.Z.getErrors().avatarDecoration,
+                }
+              : {
+                    pendingAvatarDecoration: d.Z.getPendingAvatarDecoration(),
+                    errors: d.Z.getErrors().avatarDecoration,
+                },
+    );
+}
 function I(e) {
-    return (0, s.cj)(
-        [m.Z, f.Z],
-        () =>
-            null == e
-                ? {
-                      pendingProfileEffect: m.Z.getPendingProfileEffect(),
-                      errors: m.Z.getErrors().profileEffect,
-                  }
-                : {
-                      pendingProfileEffect: f.Z.getPendingProfileEffect(),
-                      errors: f.Z.getErrors().profileEffect,
-                  },
-        [e],
+    let { guildId: t, isTryItOut: n } = e;
+    return (0, s.cj)([h.Z, d.Z], () =>
+        n
+            ? { pendingProfileEffect: h.Z.getTryItOutProfileEffect() }
+            : null == t
+              ? {
+                    pendingProfileEffect: h.Z.getPendingProfileEffect(),
+                    errors: d.Z.getErrors().profileEffect,
+                }
+              : {
+                    pendingProfileEffect: d.Z.getPendingProfileEffect(),
+                    errors: h.Z.getErrors().profileEffect,
+                },
     );
 }
 function T(e, t) {
-    (0, _.Cf)(e === t ? void 0 : e);
+    (0, f.Cf)(e === t ? void 0 : e);
 }
 function S(e, t) {
     (0, l.I5)((null == e ? void 0 : e.imageUri) === t ? void 0 : e);
 }
 function A(e, t) {
-    let n = g.default.getCurrentUser();
+    let n = m.default.getCurrentUser();
     if ((a()(null != n, "user cannot be null"), null == t)) {
         let t = n.avatarDecoration;
         (0, l.ZB)({
@@ -141,8 +145,8 @@ function A(e, t) {
         });
     } else {
         var r;
-        let i = null == (r = h.ZP.getMember(t, n.id)) ? void 0 : r.avatarDecoration;
-        (0, d.ZB)({
+        let i = null == (r = p.ZP.getMember(t, n.id)) ? void 0 : r.avatarDecoration;
+        (0, u.ZB)({
             type: o.Z.AVATAR_DECORATION,
             value: (null == e ? void 0 : e.skuId) === (null == i ? void 0 : i.skuId) ? void 0 : e,
         });
@@ -150,16 +154,16 @@ function A(e, t) {
 }
 function C(e, t) {
     var n, r;
-    let i = g.default.getCurrentUser();
+    let i = m.default.getCurrentUser();
     if ((a()(null != i, "user cannot be null"), null == t)) {
-        let t = null == (n = p.Z.getUserProfile(i.id)) ? void 0 : n.profileEffect;
+        let t = null == (n = _.Z.getUserProfile(i.id)) ? void 0 : n.profileEffect;
         (0, l.ZB)({
             type: o.Z.PROFILE_EFFECT,
             value: (null == e ? void 0 : e.skuId) === (null == t ? void 0 : t.skuId) ? void 0 : e,
         });
     } else {
-        let n = null == (r = p.Z.getGuildMemberProfile(i.id, t)) ? void 0 : r.profileEffect;
-        (0, d.ZB)({
+        let n = null == (r = _.Z.getGuildMemberProfile(i.id, t)) ? void 0 : r.profileEffect;
+        (0, u.ZB)({
             type: o.Z.PROFILE_EFFECT,
             value: (null == e ? void 0 : e.skuId) === (null == n ? void 0 : n.skuId) ? void 0 : e,
         });
@@ -167,7 +171,7 @@ function C(e, t) {
 }
 function N(e, t) {
     var n, r, i;
-    let s = g.default.getCurrentUser();
+    let s = m.default.getCurrentUser();
     if ((a()(null != s, "user cannot be null"), null == t)) {
         let t = null == (n = s.collectibles) ? void 0 : n.nameplate;
         (0, l.ZB)({
@@ -175,8 +179,8 @@ function N(e, t) {
             value: (null == e ? void 0 : e.skuId) === (null == t ? void 0 : t.skuId) ? void 0 : e,
         });
     } else {
-        let n = null == (i = h.ZP.getMember(t, s.id)) || null == (r = i.collectibles) ? void 0 : r.nameplate;
-        (0, d.ZB)({
+        let n = null == (i = p.ZP.getMember(t, s.id)) || null == (r = i.collectibles) ? void 0 : r.nameplate;
+        (0, u.ZB)({
             type: o.Z.NAMEPLATE,
             value: (null == e ? void 0 : e.skuId) === (null == n ? void 0 : n.skuId) ? void 0 : e,
         });

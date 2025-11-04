@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -10,82 +10,83 @@ var r = n(951288),
     d = n(1585),
     f = n(580747),
     _ = n(345861),
-    p = n(150039),
-    h = n(993413),
-    m = n(388032),
-    g = n(642588);
-function E(e) {
+    p = n(350327),
+    h = n(150039),
+    m = n(993413),
+    g = n(388032),
+    E = n(642588);
+function b(e) {
     let {
             user: t,
             guild: n,
             className: a,
             sectionTitle: _,
-            forcedDivider: E = !1,
-            withTutorial: b = !1,
-            isTryItOutFlow: O = !1,
+            forcedDivider: b = !1,
+            withTutorial: y = !1,
+            isTryItOut: v = !1,
         } = e,
-        { analyticsLocations: v } = (0, c.ZP)(),
-        I = null != n,
-        {
-            userAvatarDecoration: T,
-            guildAvatarDecoration: S,
-            pendingAvatarDecoration: A,
-            pendingErrors: C,
-        } = (0, p.$U)(t, n),
-        N = I ? S : T,
-        R = (0, f.Z)("enable_avatar_decoration_uploads"),
-        P = i.useCallback(
+        { analyticsLocations: I } = (0, c.ZP)(),
+        T = (0, f.Z)("enable_avatar_decoration_uploads"),
+        S = (0, h.i3)({
+            user: t,
+            guildId: null == n ? void 0 : n.id,
+        }),
+        { pendingAvatarDecoration: A, errors: C } = (0, h.wE)({
+            guildId: null == n ? void 0 : n.id,
+            isTryItOut: v,
+        }),
+        N = i.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: v,
-                    isTryItOutFlow: O,
+                    analyticsLocations: I,
                     guild: n,
+                    isTryItOut: v,
                 }),
-            [v, O, n],
+            [I, n, v],
         ),
-        w = O || void 0 !== A ? null != A : null != N;
-    function D() {
-        (0, p.PO)(null, null == n ? void 0 : n.id);
+        R = v || void 0 !== A ? null != A : null != S;
+    function P() {
+        v ? (0, p.Xz)(null) : (0, h.PO)(null, null == n ? void 0 : n.id);
     }
-    let x = b ? l.gtL : s.zx;
-    return (0, r.jsxs)(h.Z, {
+    let w = y ? l.gtL : s.zx;
+    return (0, r.jsxs)(m.Z, {
         className: a,
-        forcedDivider: E,
+        forcedDivider: b,
         hasBackground: !0,
         title: _,
         errors: C,
         children: [
             (0, r.jsxs)("div", {
-                className: g.buttonsContainer,
+                className: E.buttonsContainer,
                 children: [
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(w, {
                         size: s.zx.Sizes.SMALL,
-                        onClick: P,
-                        className: o()({ [g.buttonHighlighted]: b }),
-                        children: m.intl.string(m.t.BVcYCx),
+                        onClick: N,
+                        className: o()({ [E.buttonHighlighted]: y }),
+                        children: g.intl.string(g.t.BVcYCx),
                     }),
-                    w &&
+                    R &&
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: g.removeButton,
+                            className: E.removeButton,
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: (0, u.ad)(t, n) ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.OrokWm),
-                                onClick: D,
+                                text: (0, u.ad)(t, n) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
+                                onClick: P,
                             }),
                         }),
                 ],
             }),
-            t.isStaff() && R && (0, r.jsx)(y, { user: t }),
+            t.isStaff() && T && (0, r.jsx)(O, { user: t }),
         ],
     });
 }
-let b = "PALUE000000001",
-    y = (e) => {
+let y = "PALUE000000001",
+    O = (e) => {
         let { user: t } = e;
         return (0, r.jsxs)("div", {
-            className: g.overrideButtonsContainer,
+            className: E.overrideButtonsContainer,
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/bold",
@@ -96,12 +97,12 @@ let b = "PALUE000000001",
                         null != e &&
                             (t.avatarDecoration = {
                                 asset: e,
-                                skuID: b,
+                                skuID: y,
                             });
                     },
                     size: "sm",
                     variant: "primary",
-                    text: m.intl.string(m.t.a9F1Qu),
+                    text: g.intl.string(g.t.a9F1Qu),
                 }),
             ],
         });

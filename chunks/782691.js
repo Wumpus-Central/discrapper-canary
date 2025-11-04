@@ -11,9 +11,9 @@ n.d(t, { Z: () => S }),
     n(490233),
     n(97749);
 var a = n(951288),
-    i = n(647438),
-    l = n(120356),
-    r = n.n(l),
+    r = n(647438),
+    i = n(120356),
+    l = n.n(i),
     s = n(480210),
     o = n(442837),
     c = n(481060),
@@ -79,17 +79,17 @@ let y = {
     S = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, h.n6)(),
-            l = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-            [S, E] = i.useState(!0),
-            T = i.useRef({}),
-            [N, O] = i.useState(!1),
-            [P, w] = i.useState(!1),
-            [I, k] = i.useState([]),
-            [A, R] = i.useState(y),
-            Z = i.useRef([]),
-            [D, L] = i.useState(t.name),
+            i = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+            [S, E] = r.useState(!0),
+            T = r.useRef({}),
+            [N, O] = r.useState(!1),
+            [P, I] = r.useState(!1),
+            [w, k] = r.useState([]),
+            [R, A] = r.useState(y),
+            Z = r.useRef([]),
+            [D, L] = r.useState(t.name),
             M = D.toLowerCase().replace(/\s+/g, "_"),
-            U = i.useMemo(
+            U = r.useMemo(
                 () => ({
                     id: C,
                     skuId: C,
@@ -98,10 +98,10 @@ let y = {
                     accessibilityLabel: C,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
-                    effects: I,
+                    effects: w,
                     animationType: s.y.ANIMATION_TYPE_UNSPECIFIED,
                 }),
-                [I],
+                [w],
             ),
             F = (e) => {
                 let t = e.currentTarget.files;
@@ -111,10 +111,10 @@ let y = {
                 let n = F(t);
                 null != n &&
                     (0, x.i0)(n, (t) => {
-                        R((a) => _(j({}, a), { [e]: (0, x.z)(t, n) }));
+                        A((a) => _(j({}, a), { [e]: (0, x.z)(t, n) }));
                     });
             };
-        i.useEffect(() => {
+        r.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
                 k(
@@ -127,14 +127,14 @@ let y = {
                     }),
                 );
         }, [t.config.effects]),
-            i.useEffect(() => {
+            r.useEffect(() => {
                 let e = t.config.stillFrames;
                 null != e &&
                     Object.entries(e).forEach((e) => {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, x.$j)(n.base64);
-                            (n.src = e), Z.current.push(e), R((e) => _(j({}, e), { [t]: n }));
+                            (n.src = e), Z.current.push(e), A((e) => _(j({}, e), { [t]: n }));
                         }
                     });
             }, [t.config.stillFrames]);
@@ -142,23 +142,23 @@ let y = {
                 effect: t,
                 upsertConfig: n,
             },
-            z = i.useRef(G);
-        return (i.useEffect(() => {
+            z = r.useRef(G);
+        return (r.useEffect(() => {
             z.current = G;
         }),
-        i.useEffect(() => {
+        r.useEffect(() => {
             let { effect: e, upsertConfig: t } = z.current;
             e.readonly ||
                 t({
                     skuId: e.skuId,
                     name: D,
                     config: {
-                        effects: I,
-                        stillFrames: A,
+                        effects: w,
+                        stillFrames: R,
                     },
                 });
-        }, [I, A, D]),
-        i.useEffect(
+        }, [w, R, D]),
+        r.useEffect(
             () => () => {
                 Z.current.forEach((e) => {
                     URL.revokeObjectURL(e);
@@ -167,7 +167,7 @@ let y = {
             },
             [],
         ),
-        null == l)
+        null == i)
             ? (0, a.jsx)("div", {})
             : (0, a.jsxs)("div", {
                   className: f.root,
@@ -183,7 +183,7 @@ let y = {
                                       let t = F(e);
                                       null != t &&
                                           (0, x.i0)(t, async (e) => {
-                                              let n = await (0, x.Xv)(e, t, I.length);
+                                              let n = await (0, x.Xv)(e, t, w.length);
                                               k((e) => [...e, n]);
                                           });
                                   },
@@ -216,7 +216,7 @@ let y = {
                           className: f.grid,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: r()(f.col, f.preview),
+                                  className: l()(f.col, f.preview),
                                   children: [
                                       (0, a.jsx)("img", {
                                           src: N ? b : v,
@@ -230,7 +230,7 @@ let y = {
                                   className: f.col,
                                   children: [
                                       (0, a.jsxs)("div", {
-                                          className: r()(f.col, f.section),
+                                          className: l()(f.col, f.section),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-md/normal",
@@ -278,7 +278,7 @@ let y = {
                                                           checked: P,
                                                           className: f.checkBox,
                                                           onChange: () => {
-                                                              w(!P);
+                                                              I(!P);
                                                           },
                                                       }),
                                                   ],
@@ -353,7 +353,7 @@ let y = {
                                           }),
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: r()(f.bottomControls, f.shareSection),
+                                          className: l()(f.bottomControls, f.shareSection),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-sm/semibold",
@@ -368,7 +368,7 @@ let y = {
                                                   className: f.row,
                                                   children: [
                                                       (0, a.jsx)(d.Z, {
-                                                          fileContents: () => (0, x.yR)(t.name, I),
+                                                          fileContents: () => (0, x.yR)(t.name, w),
                                                           contentType: "text/plain",
                                                           fileName: "".concat(M, "_timing_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
@@ -383,8 +383,8 @@ let y = {
                                                                   _(j({}, t), {
                                                                       name: D,
                                                                       config: _(j({}, t.config), {
-                                                                          effects: I,
-                                                                          stillFrames: A,
+                                                                          effects: w,
+                                                                          stillFrames: R,
                                                                       }),
                                                                   }),
                                                               ),
@@ -409,7 +409,7 @@ let y = {
                                               }),
                                               (0, a.jsx)("div", {
                                                   className: f.stillFramesContainer,
-                                                  children: Object.entries(A).map((e) => {
+                                                  children: Object.entries(R).map((e) => {
                                                       let [t, n] = e;
                                                       return (0, a.jsxs)(
                                                           "div",
@@ -431,7 +431,7 @@ let y = {
                                                                           size: "sm",
                                                                           text: "Clear",
                                                                           onClick: () => {
-                                                                              R((e) => _(j({}, e), { [t]: null }));
+                                                                              A((e) => _(j({}, e), { [t]: null }));
                                                                           },
                                                                       }),
                                                               ],
@@ -442,12 +442,12 @@ let y = {
                                               }),
                                           ],
                                       }),
-                                      I.some((e) => {
+                                      w.some((e) => {
                                           var t;
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
                                           (0, a.jsxs)("div", {
-                                              className: r()(f.section, f.randomizedRules),
+                                              className: l()(f.section, f.randomizedRules),
                                               children: [
                                                   (0, a.jsx)(c.Text, {
                                                       variant: "text-md/bold",
@@ -479,14 +479,14 @@ let y = {
                                           children:
                                               P &&
                                               (0, a.jsxs)("div", {
-                                                  className: r()(f.userProfilePreview, f.preview),
+                                                  className: l()(f.userProfilePreview, f.preview),
                                                   children: [
                                                       (0, a.jsx)(m.Z, {
-                                                          user: l,
+                                                          user: i,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffect: null,
                                                           canUsePremiumCustomization: !0,
-                                                          isTryItOutFlow: !0,
+                                                          isTryItOut: !0,
                                                       }),
                                                       (0, a.jsx)(g.Z, { config: U }),
                                                   ],
@@ -495,7 +495,7 @@ let y = {
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: r()(f.grid, f.layers),
+                                  className: l()(f.grid, f.layers),
                                   children: [
                                       (0, a.jsx)("div", {
                                           className: f.dangerControls,
@@ -503,11 +503,11 @@ let y = {
                                               variant: "critical-secondary",
                                               text: "Clear Assets",
                                               onClick: () => {
-                                                  k([]), R(y);
+                                                  k([]), A(y);
                                               },
                                           }),
                                       }),
-                                      I.map((e, t) =>
+                                      w.map((e, t) =>
                                           (0, a.jsxs)(
                                               "div",
                                               {
@@ -561,7 +561,7 @@ let y = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: r()(f.grid, f.section),
+                                                          className: l()(f.grid, f.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
                                                                   className: f.col,
@@ -577,10 +577,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      i = n[t];
+                                                                                      r = n[t];
                                                                                   return (
-                                                                                      (i.start = +e.target.value),
-                                                                                      (a[t] = i),
+                                                                                      (r.start = +e.target.value),
+                                                                                      (a[t] = r),
                                                                                       a
                                                                                   );
                                                                               });
@@ -603,10 +603,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      i = n[t];
+                                                                                      r = n[t];
                                                                                   return (
-                                                                                      (i.duration = +e.target.value),
-                                                                                      (a[t] = i),
+                                                                                      (r.duration = +e.target.value),
+                                                                                      (a[t] = r),
                                                                                       a
                                                                                   );
                                                                               });
@@ -618,7 +618,7 @@ let y = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: r()(f.grid, f.section),
+                                                          className: l()(f.grid, f.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
                                                                   className: f.col,
@@ -634,10 +634,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      i = n[t];
+                                                                                      r = n[t];
                                                                                   return (
-                                                                                      (i.loop = e.target.checked),
-                                                                                      (a[t] = i),
+                                                                                      (r.loop = e.target.checked),
+                                                                                      (a[t] = r),
                                                                                       a
                                                                                   );
                                                                               });
@@ -662,11 +662,11 @@ let y = {
                                                                                   onChange: (e) => {
                                                                                       k((n) => {
                                                                                           let a = [...n],
-                                                                                              i = n[t];
+                                                                                              r = n[t];
                                                                                           return (
-                                                                                              (i.loopDelay =
+                                                                                              (r.loopDelay =
                                                                                                   +e.target.value),
-                                                                                              (a[t] = i),
+                                                                                              (a[t] = r),
                                                                                               a
                                                                                           );
                                                                                       });
@@ -690,19 +690,19 @@ let y = {
                                                                       null != n &&
                                                                           (0, x.i0)(n, (e) => {
                                                                               k((a) => {
-                                                                                  let i = [...a],
-                                                                                      l = a[t];
-                                                                                  if (null == l) return a;
-                                                                                  let r = j({}, l);
+                                                                                  let r = [...a],
+                                                                                      i = a[t];
+                                                                                  if (null == i) return a;
+                                                                                  let l = j({}, i);
                                                                                   return (
-                                                                                      null == r.randomizedSources &&
-                                                                                          (r.randomizedSources = []),
-                                                                                      r.randomizedSources.push({
+                                                                                      null == l.randomizedSources &&
+                                                                                          (l.randomizedSources = []),
+                                                                                      l.randomizedSources.push({
                                                                                           src: e,
                                                                                           filename: n.name,
                                                                                       }),
-                                                                                      (i[t] = r),
-                                                                                      i
+                                                                                      (r[t] = l),
+                                                                                      r
                                                                                   );
                                                                               });
                                                                           });
@@ -711,7 +711,7 @@ let y = {
                                                           }),
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: r()(f.row, f.end),
+                                                          className: l()(f.row, f.end),
                                                           children: [
                                                               (0, a.jsx)(c.Button, {
                                                                   variant: "secondary",

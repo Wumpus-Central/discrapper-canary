@@ -27,7 +27,7 @@ function m(e) {
             guildId: E,
             className: b,
             disabled: y = !1,
-            isTryItOutFlow: O = !1,
+            isTryItOut: O = !1,
             forcedDivider: v,
             withHighlight: I = !1,
         } = e,
@@ -39,7 +39,7 @@ function m(e) {
                 analyticsSource: T,
                 filters: O ? h : void 0,
                 guildId: E,
-                isTryItOutFlow: O,
+                isTryItOut: O,
             });
         }, [E, T, O]);
     return (0, r.jsx)(d.Z, {

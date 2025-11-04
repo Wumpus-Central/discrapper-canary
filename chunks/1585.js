@@ -63,7 +63,7 @@ function u(e) {
     return "number" != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
 }
 let d = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: a, isTryItOutFlow: o, guild: l, onClose: u } = e;
+    let { analyticsLocations: t, initialSelectedDecoration: a, isTryItOut: o, guild: l, onClose: u } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e("79589"), n.e("87510")]).then(n.bind(n, 235400));
         return (n) =>
@@ -74,7 +74,7 @@ let d = (e) => {
                     onClose: u,
                     analyticsLocations: t,
                     initialSelectedDecoration: a,
-                    isTryItOutFlow: o,
+                    isTryItOut: o,
                     guild: l,
                 }),
             );

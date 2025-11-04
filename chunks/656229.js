@@ -18,7 +18,7 @@ function _(e) {
             canUsePremiumCustomization: p,
             pendingBanner: h,
             pendingAccentColor: m,
-            isTryItOutFlow: g,
+            isTryItOut: g,
             disabledInputs: E,
             onUpsellClick: b,
         } = e,
@@ -35,7 +35,7 @@ function _(e) {
                 uploadType: c.pC.BANNER,
                 analyticsSource: y,
                 guildId: _,
-                isTryItOutFlow: g,
+                isTryItOut: g,
             });
         };
     return (0, r.jsx)(s.Z, {

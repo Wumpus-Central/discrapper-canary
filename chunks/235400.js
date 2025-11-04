@@ -1,4 +1,4 @@
-r.d(t, { default: () => w }), r(388685);
+r.d(t, { default: () => T }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(442837),
@@ -18,11 +18,11 @@ var n = r(951288),
     y = r(594174),
     O = r(626135),
     f = r(74538),
-    S = r(240781),
-    P = r(818611),
+    P = r(240781),
+    S = r(818611),
     b = r(981631),
-    E = r(474936),
-    I = r(388032),
+    I = r(474936),
+    E = r(388032),
     C = r(88785);
 function A(e) {
     let {
@@ -32,11 +32,11 @@ function A(e) {
             analyticsLocations: m,
             onClose: y,
             initialSelectedDecoration: O,
-            isTryItOutFlow: b,
+            isTryItOut: b,
             guild: A,
         } = e,
-        w = (0, l.e7)([j.ZP], () => (null != A ? j.ZP.getMember(A.id, t.id) : null)),
-        T = null != w ? w.avatarDecoration : t.avatarDecoration,
+        T = (0, l.e7)([j.ZP], () => (null != A ? j.ZP.getMember(A.id, t.id) : null)),
+        w = null != T ? T.avatarDecoration : t.avatarDecoration,
         { pendingAvatarDecoration: Z, setPendingAvatarDecoration: N } = (0, v.Z)({
             analyticsLocations: m,
             isTryItOut: b,
@@ -48,12 +48,12 @@ function A(e) {
                 ? O
                 : void 0 !== Z
                   ? Z
-                  : null == T
+                  : null == w
                     ? null
                     : null !=
                         (e = (0, u.iC)(o, r).find((e) => {
                             let { skuId: t } = e;
-                            return t === T.skuId;
+                            return t === w.skuId;
                         }))
                       ? e
                       : null;
@@ -61,18 +61,19 @@ function A(e) {
         k = (0, g.Ys)({
             pendingValue: D,
             userValue: null == t ? void 0 : t.avatarDecoration,
-            guildValue: null == w ? void 0 : w.avatarDecoration,
+            guildValue: null == T ? void 0 : T.avatarDecoration,
             guildId: null == A ? void 0 : A.id,
         }),
         { product: R, purchase: L } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        M = f.ZP.canUseCollectibles(t),
-        U = i.useRef(null),
+        M = (0, u.G1)(R),
+        U = f.ZP.canUseCollectibles(t),
+        z = i.useRef(null),
         F = (0, p.Z)(m),
-        z =
+        G =
             void 0 === Z
-                ? (null == D ? void 0 : D.skuId) === (null == T ? void 0 : T.skuId)
+                ? (null == D ? void 0 : D.skuId) === (null == w ? void 0 : w.skuId)
                 : (null == D ? void 0 : D.skuId) === (null == Z ? void 0 : Z.skuId),
-        G = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 y(),
                     (0, c.mK)({
@@ -92,7 +93,7 @@ function A(e) {
                 children: [
                     (0, n.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: I.intl.string(I.t.HykynS),
+                        children: E.intl.string(E.t.HykynS),
                     }),
                     (0, n.jsx)(s.olH, {
                         "data-migration-pending": !0,
@@ -106,17 +107,18 @@ function A(e) {
                 className: C.modalContent,
                 scrollbarType: "none",
                 children: [
-                    (0, n.jsx)(P.Z, {
+                    (0, n.jsx)(S.Z, {
                         user: t,
                         guild: A,
                         pendingAvatarDecoration: D,
-                        selectedAvatarDecorationRef: U,
+                        selectedAvatarDecorationRef: z,
+                        isTryItOut: b,
                         onSelect: (e) => {
                             _(e), null != e && F(e);
                         },
-                        onOpenShop: G,
+                        onOpenShop: B,
                     }),
-                    (0, n.jsx)(S.Z, {
+                    (0, n.jsx)(P.Z, {
                         className: C.modalPreview,
                         user: t,
                         guildId: null == A ? void 0 : A.id,
@@ -128,61 +130,61 @@ function A(e) {
                 "data-migration-pending": !0,
                 className: C.modalFooter,
                 children: [
-                    (null != L && (!(0, u.qS)(L) || M)) || null === D
+                    (null != L && (U || !M)) || null === D || (b && M)
                         ? (0, n.jsx)(s.Button, {
                               variant: "primary",
-                              text: I.intl.string(I.t.Jh8fJz),
+                              text: E.intl.string(E.t.Jh8fJz),
                               onClick: () => {
                                   N(D), y();
                               },
-                              disabled: z,
+                              disabled: G,
                           })
-                        : null == L && (M || !(0, u.G1)(R))
+                        : null == L && (U || !M)
                           ? (0, n.jsx)(s.Button, {
                                 variant: "primary",
-                                onClick: () => G(null == R ? void 0 : R.skuId),
-                                text: I.intl.string(I.t.fYfGgK),
+                                onClick: () => B(null == R ? void 0 : R.skuId),
+                                text: E.intl.string(E.t.fYfGgK),
                             })
                           : (0, n.jsx)(x.Z, {
-                                subscriptionTier: E.Si.TIER_2,
-                                showGradient: !M,
+                                subscriptionTier: I.Si.TIER_2,
+                                showGradient: !U,
                                 textOptions: {
                                     textOverride: f.ZP.isPremium(t)
-                                        ? I.intl.string(I.t.KXLX7l)
-                                        : M
-                                          ? I.intl.string(I.t.mr4K7D)
-                                          : I.intl.string(I.t.pj0XBN),
+                                        ? E.intl.string(E.t.KXLX7l)
+                                        : U
+                                          ? E.intl.string(E.t.mr4K7D)
+                                          : E.intl.string(E.t.pj0XBN),
                                 },
                             }),
-                    !M && (0, u.G1)(R)
-                        ? (0, n.jsx)(h.Z, {
+                    U || b || !M
+                        ? (0, n.jsx)(s.Button, {
+                              variant: "secondary",
+                              text: E.intl.string(E.t["ETE/oC"]),
+                              onClick: y,
+                          })
+                        : (0, n.jsx)(h.Z, {
                               product: R,
                               onClose: y,
-                          })
-                        : (0, n.jsx)(s.Button, {
-                              variant: "secondary",
-                              text: I.intl.string(I.t["ETE/oC"]),
-                              onClick: y,
                           }),
                 ],
             }),
         ],
     });
 }
-function w(e) {
+function T(e) {
     let {
             transitionState: t,
             analyticsLocations: r,
             onClose: c,
             onCloseModal: u,
             initialSelectedDecoration: d,
-            isTryItOutFlow: p,
+            isTryItOut: p,
             guild: h,
         } = e,
         x = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
         { analyticsLocations: g } = (0, o.ZP)(r, a.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: v, purchases: j, isFetchingCategories: f, isFetchingPurchases: S } = (0, m.ZP)(),
-        P = f || (S && 0 === j.size);
+        { categories: v, purchases: j, isFetchingCategories: f, isFetchingPurchases: P } = (0, m.ZP)(),
+        S = f || (P && 0 === j.size);
     return (
         i.useEffect(() => {
             O.default.track(b.rMx.OPEN_MODAL, {
@@ -197,10 +199,10 @@ function w(e) {
                   children: (0, n.jsx)(s.Y0X, {
                       transitionState: t,
                       className: C.modal,
-                      size: P ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
+                      size: S ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       "data-migration-pending": !0,
-                      children: P
+                      children: S
                           ? (0, n.jsx)(s.$jN, {
                                 className: C.spinner,
                                 type: s.$jN.Type.SPINNING_CIRCLE,
@@ -215,7 +217,7 @@ function w(e) {
                                 onClose: () => {
                                     u(), null == c || c();
                                 },
-                                isTryItOutFlow: p,
+                                isTryItOut: p,
                             }),
                   }),
               })

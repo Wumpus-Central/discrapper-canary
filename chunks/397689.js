@@ -78,7 +78,7 @@ function v(e) {
             previewPrimaryColor: I,
             className: T,
             disabledInputs: S,
-            isTryItOutFlow: A,
+            isTryItOut: A,
             onUpsellClick: C,
         } = e,
         N = i.useRef(null),
@@ -113,13 +113,13 @@ function v(e) {
                                 uploadType: h.pC.AVATAR,
                                 guildId: null == n ? void 0 : n.id,
                                 analyticsSource: P,
-                                isTryItOutFlow: A,
+                                isTryItOut: A,
                             }),
                         onChangeAvatarDecoration: () => {
                             (0, u.ps)({
                                 guild: null == n ? void 0 : n,
                                 analyticsLocations: R,
-                                isTryItOutFlow: A,
+                                isTryItOut: A,
                             });
                         },
                     });
