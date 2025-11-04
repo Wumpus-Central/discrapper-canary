@@ -1,11 +1,10 @@
-n.d(t, { m: () => p }), n(539854);
+n.d(t, { m: () => d }), n(539854);
 var r = n(876215),
     i = n(626135),
-    l = n(408721),
-    a = n(144725),
-    s = n(797394),
+    l = n(144725),
+    a = n(797394),
     o = n(981631);
-function c(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +29,7 @@ function c(e) {
     }
     return e;
 }
-let u = (e) => {
+let c = (e) => {
         switch (e.data.kind) {
             case "end":
                 return "end";
@@ -58,36 +57,35 @@ let u = (e) => {
                 return "unknown";
         }
     },
-    d = (e) => {
+    u = (e) => {
         switch (e.type) {
-            case s.Ni.MESSAGE:
+            case a.Ni.MESSAGE:
                 if (e.data.channel_type === o.d4z.GUILD_ANNOUNCEMENT) return "announcement";
                 return "message";
-            case s.Ni.SUMMARY:
+            case a.Ni.SUMMARY:
                 return "summary";
-            case s.Ni.ACTIVITY:
+            case a.Ni.ACTIVITY:
                 return "hotwheels_gaming_activity";
-            case s.Ni.CUSTOM_STATUS:
+            case a.Ni.CUSTOM_STATUS:
                 return "hotwheels_custom_status";
-            case s.Ni.GUILD_EVENT:
+            case a.Ni.GUILD_EVENT:
                 return "guild_event";
-            case s.Ni.RECOMMENDED_GUILDS:
+            case a.Ni.RECOMMENDED_GUILDS:
                 return "recommended_guilds";
-            case s.Ni.GENERATED_CANDIDATE:
+            case a.Ni.GENERATED_CANDIDATE:
                 return "generated_candidate";
         }
     },
-    p = {
+    d = {
         trackItemInteraction(e) {
-            var t;
             i.default.track(o.rMx.FEED_ITEM_INTERACTED, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 feed_item_type: e.type,
                 feed_item_id: e.id,
                 home_session_id: "gravity",
                 action_type: e.actionType,
-                feed_item_index: a.Z.getIndexInHydratedFeed(e.id),
-                icymi_session_id: null == (t = l.ZP.currentSession) ? void 0 : t.sessionId,
+                feed_item_index: l.Z.getIndexInHydratedFeed(e.id),
+                icymi_session_id: e.icymiSessionId,
                 impression_id: e.impressionId,
                 ux_variation: e.uxVariation,
                 session_interaction_index: e.sessionInteractionIndex,
@@ -95,10 +93,10 @@ let u = (e) => {
         },
         trackItemShortImpression(e, t, n) {
             i.default.track(o.rMx.FEED_ITEM_SEEN_BATCH, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
                 feed_item_ids: e.map((e) => e.item.id),
-                feed_item_types: e.map((e) => u(e.item)),
+                feed_item_types: e.map((e) => c(e.item)),
                 num_items: e.length,
                 all_feed_item_ids: t.map((e) => e.id),
                 all_feed_item_types: t.map((e) => e.type),
@@ -110,10 +108,10 @@ let u = (e) => {
         },
         trackItemLongImpression(e, t, n) {
             i.default.track(o.rMx.FEED_ITEM_SEEN_LONG, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
                 feed_item_ids: e.map((e) => e.item.id),
-                feed_item_types: e.map((e) => u(e.item)),
+                feed_item_types: e.map((e) => c(e.item)),
                 num_items: e.length,
                 all_feed_item_ids: t.map((e) => e.id),
                 all_feed_item_types: t.map((e) => e.type),
@@ -128,16 +126,16 @@ let u = (e) => {
             let r = [],
                 l = [],
                 a = [],
-                s = [];
+                c = [];
             e.unreadFeedItems.forEach((e) => {
-                r.push(e.id), a.push(d(e));
+                r.push(e.id), a.push(u(e));
             }),
                 e.readFeedItems.forEach((e) => {
-                    l.push(e.id), s.push(d(e));
+                    l.push(e.id), c.push(u(e));
                 }),
                 i.default.track(
                     o.rMx.FEED_LOADED,
-                    ((t = c({}, e.newTrackingProps)),
+                    ((t = s({}, e.newTrackingProps)),
                     (n = n =
                         {
                             home_session_id: e.homeSessionId,
@@ -145,7 +143,7 @@ let u = (e) => {
                             unread_feed_item_ids: r,
                             read_feed_item_ids: l,
                             unread_feed_item_types: a,
-                            read_feed_item_types: s,
+                            read_feed_item_types: c,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -164,14 +162,14 @@ let u = (e) => {
         },
         trackFeedShown(e) {
             i.default.track(o.rMx.FEED_SHOWN, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 home_session_id: e.homeSessionId,
                 variant: e.variant,
             });
         },
         trackFeedFirstScrollStarted() {
             i.default.track(o.rMx.HOME_FIRST_SCROLL_STARTED, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
             });
         },
@@ -181,9 +179,9 @@ let u = (e) => {
         trackFeedFeedbackSubmitted(e) {
             i.default.track(
                 o.rMx.HOME_FEEDBACK_SUBMITTED,
-                c(
+                s(
                     {
-                        load_id: a.Z.getLoadId(),
+                        load_id: l.Z.getLoadId(),
                         home_session_id: "gravity",
                     },
                     e,
@@ -191,7 +189,7 @@ let u = (e) => {
             );
         },
         trackGeneratedCandidateFeedback(e) {
-            var t, n, r, l;
+            var t, n, r, a;
             i.default.track(o.rMx.FEED_ITEM_CONTENT_GEN_FEEDBACK, {
                 feedback_type: e.isPositive ? "thumbs_up" : "thumbs_down",
                 content_id: parseInt(e.item.content_id),
@@ -199,12 +197,12 @@ let u = (e) => {
                 content_type: e.item.type.toString(),
                 guild_id: e.item.guild_id,
                 home_session_id: "gravity",
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 version: 1,
                 primary_text_length: null != (t = e.item.primary_text.length) ? t : 0,
                 secondary_text_length: null != (n = e.item.secondary_text.length) ? n : 0,
                 message_count: null != (r = e.item.message_ids.length) ? r : 0,
-                user_count: null != (l = e.item.user_ids.length) ? l : 0,
+                user_count: null != (a = e.item.user_ids.length) ? a : 0,
                 generated_item_index: e.generatedItemIndex,
             });
         },
@@ -225,28 +223,28 @@ let u = (e) => {
         },
         trackFeedEmptyLoadingSeen() {
             i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_SEEN, {
-                load_id: a.Z.getLoadId(),
-                version: a.Z.getVersion(),
+                load_id: l.Z.getLoadId(),
+                version: l.Z.getVersion(),
             });
         },
         trackFeedEmptyLoadingComplete(e) {
             i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_COMPLETE, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 dwell_time_ms: e.dwellTimeMs,
-                version: a.Z.getVersion(),
+                version: l.Z.getVersion(),
             });
         },
         trackFeedEmptyLoadingAbandoned(e) {
             i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_ABANDONED, {
-                load_id: a.Z.getLoadId(),
+                load_id: l.Z.getLoadId(),
                 dwell_time_ms: e.dwellTimeMs,
-                version: a.Z.getVersion(),
+                version: l.Z.getVersion(),
             });
         },
         trackFeedSessionStarted(e) {
             i.default.track(o.rMx.FEED_SESSION_STARTED, {
-                load_id: a.Z.getLoadId(),
-                version: a.Z.getVersion(),
+                load_id: l.Z.getLoadId(),
+                version: l.Z.getVersion(),
                 session_start_time_ms: e.sessionStartTimeMs,
                 icymi_session_id: e.icymiSessionId,
                 previous_icymi_session_count: e.previousIcymiSessionCount,
@@ -255,8 +253,8 @@ let u = (e) => {
         },
         trackFeedSessionCompleted(e) {
             i.default.track(o.rMx.FEED_SESSION_COMPLETED, {
-                load_id: a.Z.getLoadId(),
-                version: a.Z.getVersion(),
+                load_id: l.Z.getLoadId(),
+                version: l.Z.getVersion(),
                 session_duration_ms: e.sessionDurationMs,
                 session_start_time_ms: e.sessionStartTimeMs,
                 session_end_time_ms: e.sessionEndTimeMs,
@@ -278,8 +276,8 @@ let u = (e) => {
         trackFeedItemDwell1s(e) {
             var t;
             i.default.track(o.rMx.FEED_ITEM_1S_DWELLED, {
-                load_id: a.Z.getLoadId(),
-                version: a.Z.getVersion(),
+                load_id: l.Z.getLoadId(),
+                version: l.Z.getVersion(),
                 impression_id: e.impressionId,
                 item_id: e.itemId,
                 item_type: e.itemType,
@@ -302,8 +300,8 @@ let u = (e) => {
         trackFeedItemDwelled(e) {
             var t;
             i.default.track(o.rMx.FEED_ITEM_DWELLED, {
-                load_id: a.Z.getLoadId(),
-                version: a.Z.getVersion(),
+                load_id: l.Z.getLoadId(),
+                version: l.Z.getVersion(),
                 impression_id: e.impressionId,
                 dwell_time_ms: e.dwellTimeMs,
                 item_id: e.itemId,

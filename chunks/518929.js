@@ -2,9 +2,9 @@ n.d(t, {
     VZ: () => d,
     ZY: () => f,
     b5: () => u,
-    cM: () => h,
     q3: () => p,
-});
+}),
+    n(647438);
 var r = n(818083),
     i = n(427164),
     a = n(638395),
@@ -35,7 +35,7 @@ function u(e) {
                 disable: n,
             },
         ),
-        i = m.useExperiment(
+        i = g.useExperiment(
             { location: e },
             {
                 autoTrackExposure: !1,
@@ -55,7 +55,7 @@ function d(e) {
             },
         );
     {
-        let t = m.getCurrentConfig(
+        let t = g.getCurrentConfig(
             { location: e },
             {
                 autoTrackExposure: !1,
@@ -102,15 +102,16 @@ function p(e) {
         },
     );
 }
-let h = (0, i.le)({
+let h = {
+        isNewHeaderAndInteractions: !1,
+        isNewCardDesign: !1,
+        isBottomSheetInteractions: !1,
+        uxVariation: "default",
+    },
+    m = (0, i.le)({
         name: "2025-09-destination-icymi-ux-v2",
         kind: "user",
-        defaultConfig: {
-            isNewHeaderAndInteractions: !1,
-            isNewCardDesign: !1,
-            isBottomSheetInteractions: !1,
-            uxVariation: "default",
-        },
+        defaultConfig: h,
         variations: {
             1: {
                 isNewHeaderAndInteractions: !0,
@@ -138,7 +139,7 @@ let h = (0, i.le)({
             },
         },
     }),
-    m = (0, r.B)({
+    g = (0, r.B)({
         kind: "user",
         id: "2025-10_icymi_desktop_client",
         label: "ICYMI desktop client",
