@@ -50901,7 +50901,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58234,9 +58234,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -70944,7 +70944,6 @@ html .progress__61462 {
     margin: 0
 }
 
-.hasMore_e8b59c,
 .loadingMore_e8b59c {
     height: 32px;
     margin-top: 8px
@@ -70953,8 +70952,9 @@ html .progress__61462 {
 .hasMore_e8b59c {
     align-items: center;
     display: flex;
+    margin-top: 8px;
     padding-block: 0 16px;
-    padding-inline: 16px 9px
+    padding-inline: 16px
 }
 
 .messagesPopout_e8b59c {
@@ -87591,15 +87591,6 @@ html .invoiceCancelRow__968a4 {
 
 .errorPage__01b8d {
     width: 100%
-}
-
-.buttons__01b8d {
-    display: flex
-}
-
-.clearOverrideButton__01b8d {
-    -webkit-margin-start: 8px;
-    margin-inline-start: 8px
 }
 
 .dismissButton_dd40b0 {
