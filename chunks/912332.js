@@ -62,7 +62,14 @@ function c(e, t) {
 }
 let u = "forward-modal";
 function d(e) {
-    let { message: t, source: o, initialSelectedDestinations: l = [], forwardOptions: d, onRequestSent: f } = e;
+    let {
+        message: t,
+        source: o,
+        initialSelectedDestinations: l = [],
+        forwardOptions: d,
+        onRequestSent: f,
+        customSendHandler: _,
+    } = e;
     (0, a.Lb)(t.channel_id, t.id, o),
         (0, i.ZDy)(
             async () => {
@@ -77,6 +84,7 @@ function d(e) {
                             initialSelectedDestinations: l,
                             forwardOptions: d,
                             onRequestSent: f,
+                            customSendHandler: _,
                         }),
                     );
             },

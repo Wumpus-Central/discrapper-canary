@@ -1,13 +1,17 @@
-r.d(t, { Z: () => s });
-var n = r(951288),
-    e = r(793030),
-    a = r(198358);
-function s() {
-    return (0, n.jsx)(a.Z, {
-        children: (0, n.jsx)(e.xvT, {
-            variant: "display-lg",
-            color: "text-primary",
-            children: "Thanks for being a capital G Gamer.",
-        }),
+r.d(e, { Z: () => s });
+var i = r(951288),
+    n = r(793030),
+    l = r(198358),
+    a = r(612776);
+function s(t) {
+    let { step: e } = t;
+    return (0, i.jsx)(l.Z, {
+        children:
+            e === a.ij.END_REWARD &&
+            (0, i.jsx)(n.xvT, {
+                variant: "display-lg",
+                color: "text-primary",
+                children: "Thanks for being a capital G Gamer.",
+            }),
     });
 }
