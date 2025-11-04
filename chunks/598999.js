@@ -210,30 +210,30 @@ function H(e) {
             items: n,
             hasMore: a,
             loading: s,
-            loadMore: _,
-            renderHeader: m,
-            renderEmptyState: g,
-            renderItem: E,
-            getProTip: b,
-            scrollerClassName: T,
-            className: S,
-            listName: R,
+            loadMore: d,
+            renderHeader: _,
+            renderEmptyState: m,
+            renderItem: g,
+            getProTip: E,
+            scrollerClassName: b,
+            className: T,
+            listName: S,
         } = e,
-        w = i.useRef(null),
-        L = (0, p.Z)(R, w),
-        B = (0, u.e7)([y.ZP], () => y.ZP.hasNotice()),
-        Z = (0, u.e7)([O.Z], () => O.Z.windowSize());
+        R = i.useRef(null),
+        w = (0, p.Z)(S, R),
+        L = (0, u.e7)([y.ZP], () => y.ZP.hasNotice()),
+        B = (0, u.e7)([O.Z], () => O.Z.windowSize());
     i.useEffect(() => {
         v.default.track(A.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = w.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = R.current) || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null == (e = w.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = R.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
                 I.S.subscribe(A.CkL.SCROLL_PAGE_DOWN, t),
@@ -243,15 +243,15 @@ function H(e) {
                 }
             );
         }, []);
-    let F = i.useCallback(() => {
+    let Z = i.useCallback(() => {
             var e;
-            let t = null == (e = w.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && a && !s && (null == _ || _());
-        }, [a, _, s]),
-        V = [],
-        H = !0;
+            let t = null == (e = R.current) ? void 0 : e.getScrollerState();
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && a && !s && (null == d || d());
+        }, [a, d, s]),
+        F = [],
+        V = !0;
     null == n || (s && 0 === n.length)
-        ? (V = [
+        ? (F = [
               (0, r.jsx)(
                   "div",
                   {
@@ -262,17 +262,17 @@ function H(e) {
               ),
           ])
         : 0 === n.length
-          ? V.push((0, r.jsx)(i.Fragment, { children: g() }, "empty-state"))
-          : ((H = !1),
-            (V = []),
+          ? F.push((0, r.jsx)(i.Fragment, { children: m() }, "empty-state"))
+          : ((V = !1),
+            (F = []),
             l().each(n, (e) => {
-                V.push(...E(e));
+                F.push(...g(e));
             }));
-    let Y = null;
+    let H = null;
     null != n &&
         n.length > 0 &&
-        null != _ &&
-        (Y = s
+        null != d &&
+        (H = s
             ? (0, r.jsx)(
                   "div",
                   {
@@ -284,21 +284,21 @@ function H(e) {
             : a
               ? (0, r.jsx)("div", {
                     className: N.hasMore,
-                    children: (0, r.jsx)(d.zx, {
-                        look: d.zx.Looks.FILLED,
-                        color: d.zx.Colors.PRIMARY,
-                        size: d.zx.Sizes.MAX,
-                        onClick: _,
-                        children: C.intl.string(C.t.XBlaiC),
+                    children: (0, r.jsx)(f.Button, {
+                        variant: "secondary",
+                        size: "sm",
+                        fullWidth: !0,
+                        text: C.intl.string(C.t.XBlaiC),
+                        onClick: d,
                     }),
                 })
               : (0, r.jsx)("div", {
                     className: N.scrollingFooterWrap,
-                    children: g(),
+                    children: m(),
                 }));
-    let W = null == b ? void 0 : b(),
-        K =
-            H && null != W
+    let Y = null == E ? void 0 : E(),
+        W =
+            V && null != Y
                 ? (0, r.jsx)("div", {
                       className: N.footer,
                       children: (0, r.jsx)(h.Z, {
@@ -307,41 +307,41 @@ function H(e) {
                               paddingTop: 10,
                               paddingBottom: 10,
                           },
-                          children: W,
+                          children: Y,
                       }),
                   })
                 : null,
-        z = { maxHeight: Z.height - M - j - 48 };
-    B && (z.maxHeight -= k);
-    let q = null != _ && a;
+        K = { maxHeight: B.height - M - j - 48 };
+    L && (K.maxHeight -= k);
+    let z = null != d && a;
     return (0, r.jsx)("div", {
-        className: o()(S, N.messagesPopoutWrap),
-        style: z,
+        className: o()(T, N.messagesPopoutWrap),
+        style: K,
         onClick: G,
         onDoubleClick: G,
         "aria-label": e["aria-label"],
         children: (0, r.jsxs)(f.y5t, {
-            component: m(),
+            component: _(),
             children: [
                 (0, r.jsxs)(f.Den, {
-                    className: o()(N.messagesPopout, T),
-                    onScroll: q ? F : void 0,
-                    ref: w,
+                    className: o()(N.messagesPopout, b),
+                    onScroll: z ? Z : void 0,
+                    ref: R,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: L,
+                            navigator: w,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
                                         n = x(e, ["ref"]);
-                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: V }));
+                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: F }));
                                 },
                             }),
                         }),
-                        Y,
+                        H,
                     ],
                 }),
-                K,
+                W,
             ],
         }),
     });

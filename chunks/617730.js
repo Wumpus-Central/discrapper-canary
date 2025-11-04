@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(755721),
+var i = n(481060),
     s = n(973616),
     l = n(131704),
     a = n(598077),
@@ -61,14 +61,14 @@ function f(e) {
         x = null != t.channel ? (0, l.jD)(t.channel) : null,
         E = null != t.target_application ? new s.ZP(t.target_application) : null,
         v = f || null == t.inviter ? null : new a.Z(t.inviter),
-        b =
+        j =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
                 (null != _ && _.features.has(d.GuildFeatures.COMMUNITY))
             ) &&
             null != v &&
             (0, c.WT)(t),
-        j = ((e) => {
+        b = ((e) => {
             let { state: t } = e;
             switch (t) {
                 case d.r2o.ACCEPTING:
@@ -89,7 +89,7 @@ function f(e) {
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: x,
-              isSubmitting: j,
+              isSubmitting: b,
               onAcceptInvite: n,
           })
         : (0, r.jsxs)("div", {
@@ -98,16 +98,21 @@ function f(e) {
                   (0, r.jsx)(c.GB, {
                       application: E,
                       guild: _,
-                      user: b || (0, c.X7)(t) ? v : null,
+                      user: j || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: b })),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: j })),
+                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: j })),
                   (0, r.jsx)(c.V6, p({}, I)),
-                  (0, r.jsx)(i.zx, {
-                      onClick: n,
-                      submitting: j,
+                  (0, r.jsx)("div", {
                       className: g.acceptButton,
-                      children: h.intl.string(h.t.ohMvm1),
+                      children: (0, r.jsx)(i.Button, {
+                          variant: "primary",
+                          size: "md",
+                          text: h.intl.string(h.t.ohMvm1),
+                          onClick: n,
+                          loading: b,
+                          fullWidth: !0,
+                      }),
                   }),
               ],
           });

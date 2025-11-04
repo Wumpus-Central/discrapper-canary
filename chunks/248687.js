@@ -7,8 +7,8 @@ var r = n(951288),
     l = n(587158),
     c = n(286379),
     u = n(903772),
-    d = n(442837),
-    f = n(755721),
+    d = n(793030),
+    f = n(442837),
     _ = n(386506),
     p = n(304761),
     h = n(865427),
@@ -38,7 +38,7 @@ function A() {
     let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, d.e7)([p.C], () => {
+        (0, f.e7)([p.C], () => {
             var e;
             return (0, h.fD)()
                 ? null == (e = p.C.getCurrentBuildOverride().overrides)
@@ -55,12 +55,12 @@ function A() {
             t(!1);
         }
     };
-    return (0, r.jsx)(f.zx, {
-        size: f.Ph.LARGE,
+    return (0, r.jsx)(d.zxk, {
+        variant: "primary",
+        size: "md",
+        text: I.intl.string(I.t["/Nz9rY"]),
         onClick: n,
-        submitting: e,
-        className: T.clearOverrideButton,
-        children: I.intl.string(I.t["/Nz9rY"]),
+        loading: e,
     });
 }
 let C = o().throttle(
@@ -128,13 +128,13 @@ class N extends i.PureComponent {
                         (0, r.jsx)("p", { children: I.intl.string(I.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, r.jsxs)("div", {
-                    className: T.buttons,
+                n = (0, r.jsxs)(d.hE2, {
                     children: [
-                        (0, r.jsx)(f.zx, {
-                            size: f.Ph.LARGE,
+                        (0, r.jsx)(d.zxk, {
+                            variant: "primary",
+                            size: "md",
+                            text: I.intl.string(I.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
-                            children: I.intl.string(I.t["+hivLW"]),
                         }),
                         (0, r.jsx)(A, {}),
                     ],
