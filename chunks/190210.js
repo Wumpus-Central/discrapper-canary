@@ -16,7 +16,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(13941),
+    c = n(358458),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -29,8 +29,8 @@ var r = n(951288),
     y = n(100527),
     C = n(906732),
     v = n(998698),
-    O = n(326133),
-    x = n(507366),
+    x = n(326133),
+    O = n(507366),
     E = n(570220),
     j = n(951394),
     S = n(805680),
@@ -44,8 +44,8 @@ var r = n(951288),
     M = n(398327),
     R = n(117530),
     D = n(956664),
-    L = n(358085),
-    k = n(127654),
+    k = n(358085),
+    L = n(127654),
     U = n(746877),
     B = n(541716),
     F = n(667829),
@@ -136,7 +136,7 @@ let er = i.memo(
                 disabled: I,
                 accessibilityLabel: Z,
                 channel: D,
-                type: k,
+                type: L,
                 focused: G,
                 onChange: K,
                 onResize: er,
@@ -154,16 +154,16 @@ let er = i.memo(
                 setEditorRef: ey,
                 autoCompletePosition: eC,
                 children: ev,
-                disableThemedBackground: eO = !1,
-                emojiPickerCloseOnModalOuterClick: ex,
+                disableThemedBackground: ex = !1,
+                emojiPickerCloseOnModalOuterClick: eO,
                 parentModalKey: eE,
             } = e,
-            ej = x.Z.useField("channelDrafts")[D.id],
+            ej = O.Z.useField("channelDrafts")[D.id],
             eS = null != (l = null == ej ? void 0 : ej.title) ? l : "",
             eP = null == ej ? void 0 : ej.heroFile,
             eI = null == (o = null == ej ? void 0 : ej.publish) || o,
             eZ = null == (u = null == ej ? void 0 : ej.createThread) || u;
-        s()(null != k, "chat input type must be set");
+        s()(null != L, "chat input type must be set");
         let { analyticsLocations: eT } = (0, C.ZP)(y.Z.CHANNEL_TEXT_AREA),
             eN = (0, H.qz)(t),
             eA = i.useRef(null),
@@ -174,21 +174,21 @@ let er = i.memo(
         let { activeCommand: eD } = (0, d.cj)([v.Z], () => {
                 var e, t;
                 return {
-                    activeCommand: (null == (e = k.commands) ? void 0 : e.enabled) ? v.Z.getActiveCommand(D.id) : null,
-                    activeCommandSection: (null == (t = k.commands) ? void 0 : t.enabled)
+                    activeCommand: (null == (e = L.commands) ? void 0 : e.enabled) ? v.Z.getActiveCommand(D.id) : null,
+                    activeCommandSection: (null == (t = L.commands) ? void 0 : t.enabled)
                         ? v.Z.getActiveCommandSection(D.id)
                         : null,
                 };
             }),
             {
-                isLurking: eL,
-                isPendingMember: ek,
+                isLurking: ek,
+                isPendingMember: eL,
                 disabled: eU,
                 canAttachFiles: eB,
                 canEveryoneSendMessages: eF,
-            } = (0, H.TE)(D, k, eD, I),
-            eV = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
-            eH = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+            } = (0, H.TE)(D, L, eD, I),
+            eV = !A.dN.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
+            eH = !eV || !(null == (n = L.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
             eG = (0, T.Z)(),
             { fontSize: eW } = (0, d.cj)([_.Z], () => ({
                 fontSize: _.Z.fontSize,
@@ -196,14 +196,14 @@ let er = i.memo(
             })),
             ez = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
             eq = (0, N.NE)(D);
-        (0, H.hJ)(k, eU);
+        (0, H.hJ)(L, eU);
         let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, H.x2)(ew, p, f),
             eX = i.useCallback(
                 (e) => {
                     let t = (e) => {
                             if (e.shouldClear) {
                                 var t;
-                                (0, x.c)(D.id, {
+                                (0, O.c)(D.id, {
                                     title: "",
                                     heroFile: null,
                                 }),
@@ -273,7 +273,7 @@ let er = i.memo(
                 },
                 [ed, eS, eP, D.id, eZ, eI, eq],
             ),
-            { submit: eJ, handleSubmit: eQ } = (0, H.bL)(eX, k, ew, eR, D.id),
+            { submit: eJ, handleSubmit: eQ } = (0, H.bL)(eX, L, ew, eR, D.id),
             { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, H.jx)(),
             e2 = i.useCallback(() => {
                 var e;
@@ -316,17 +316,17 @@ let er = i.memo(
                     ),
                 };
             })(e$, eA, eH),
-            { expressionPickerView: e5, shouldHideExpressionPicker: e9, handleOuterClick: te } = (0, H.iV)(k, ew),
+            { expressionPickerView: e5, shouldHideExpressionPicker: e9, handleOuterClick: te } = (0, H.iV)(L, ew),
             tt = (0, H.aT)(p),
             { currentAutocompleteType: tn, handleAutocompleteVisibilityChange: tr } = (0, H.vB)(),
             ti = (0, H.ae)(ew),
-            tl = (0, H.Sg)(eJ, k, ew),
+            tl = (0, H.Sg)(eJ, L, ew),
             ta = (0, H.O1)({
                 editorRef: ew,
                 disabled: eU,
                 textValue: p,
                 channelId: D.id,
-                chatInputType: k,
+                chatInputType: L,
                 submit: eX,
             });
         (0, U.S)(eY, D.guild_id, D.id);
@@ -362,11 +362,11 @@ let er = i.memo(
                 var e;
                 if (null == eP) return;
                 let t =
-                    null == (e = R.Z.getUploads(D.id, k.drafts.type).find((e) => e.filename === eP.name))
+                    null == (e = R.Z.getUploads(D.id, L.drafts.type).find((e) => e.filename === eP.name))
                         ? void 0
                         : e.id;
-                null != t && m.Z.remove(D.id, t, w.d.ChannelMessage), (0, x.c)(D.id, { heroFile: null });
-            }, [D.id, eP, k.drafts.type]);
+                null != t && m.Z.remove(D.id, t, w.d.ChannelMessage), (0, O.c)(D.id, { heroFile: null });
+            }, [D.id, eP, L.drafts.type]);
         return (0, r.jsx)(E.f6, {
             value: eY,
             children: (0, r.jsxs)(C.Gt, {
@@ -380,7 +380,7 @@ let er = i.memo(
                             (0, r.jsx)("div", {
                                 ref: eM,
                                 onScroll: e2,
-                                className: a()(Q.announcementScrollableContainer, { [Q.themedBackground]: !eO }),
+                                className: a()(Q.announcementScrollableContainer, { [Q.themedBackground]: !ex }),
                                 children: (0, r.jsxs)("div", {
                                     className: a()(Q.inner, J.inner),
                                     children: [
@@ -405,7 +405,7 @@ let er = i.memo(
                                                             : (0, r.jsx)(eo, {
                                                                   channel: D,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, x.c)(D.id, { heroFile: e }),
+                                                                      (0, O.c)(D.id, { heroFile: e }),
                                                                   onFocus: () => ts(!0),
                                                               }),
                                                         (0, r.jsx)("input", {
@@ -415,7 +415,7 @@ let er = i.memo(
                                                             className: J.titleInput,
                                                             placeholder: X.intl.string(X.t.Z8fYjO),
                                                             value: eS,
-                                                            onChange: (e) => (0, x.c)(D.id, { title: e.target.value }),
+                                                            onChange: (e) => (0, O.c)(D.id, { title: e.target.value }),
                                                         }),
                                                     ],
                                                 }),
@@ -435,7 +435,7 @@ let er = i.memo(
                                                             placeholder: eg,
                                                             required: P,
                                                             accessibilityLabel: Z,
-                                                            isPreviewing: (eL || ek) && eF,
+                                                            isPreviewing: (ek || eL) && eF,
                                                             channel: D,
                                                             type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eB,
@@ -471,7 +471,7 @@ let er = i.memo(
                                             className: J.attachmentsContainer,
                                             children: (0, r.jsx)(W.Z, {
                                                 channelId: D.id,
-                                                type: k,
+                                                type: L,
                                                 canAttachFiles: eB,
                                                 ignoreFile: null == eP ? void 0 : eP.name,
                                                 smallAttachments: !0,
@@ -567,7 +567,7 @@ let er = i.memo(
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(x.Z, {
                                 targetRef: eN,
                                 ref: e$,
                                 channel: D,
@@ -580,7 +580,7 @@ let er = i.memo(
                                 focused: G,
                                 isEditorIdle: tt,
                                 expressionPickerView: e5,
-                                type: k,
+                                type: L,
                                 editorRef: ew,
                                 onSendMessage: eJ,
                                 onSendSticker: () => {},
@@ -596,12 +596,12 @@ let er = i.memo(
                         ? null
                         : (0, r.jsx)(S.Z, {
                               positionTargetRef: eN,
-                              type: k,
+                              type: L,
                               onSelectGIF: tl,
                               onSelectEmoji: ti,
                               onSelectSticker: ta,
                               channel: D,
-                              closeOnModalOuterClick: ex,
+                              closeOnModalOuterClick: eO,
                               parentModalKey: eE,
                               position: "top",
                               align: "right",
@@ -615,7 +615,7 @@ let er = i.memo(
 function ei(e) {
     var t, n;
     let { channelId: i, canCreateThread: l } = e,
-        a = x.Z.useField("channelDrafts")[i],
+        a = O.Z.useField("channelDrafts")[i],
         o = null == (t = null == a ? void 0 : a.createThread) || t,
         s = null == (n = null == a ? void 0 : a.publish) || n;
     return (0, r.jsxs)(h.v2r, {
@@ -630,7 +630,7 @@ function ei(e) {
                 checked: l && o,
                 disabled: !l,
                 action: () => {
-                    (0, x.c)(i, { createThread: !o });
+                    (0, O.c)(i, { createThread: !o });
                 },
             }),
             (0, r.jsx)(h.S89, {
@@ -638,7 +638,7 @@ function ei(e) {
                 label: X.intl.string(X.t.MFGE51),
                 checked: s,
                 action: () => {
-                    (0, x.c)(i, { publish: !s });
+                    (0, O.c)(i, { publish: !s });
                 },
             }),
         ],
@@ -700,7 +700,7 @@ function ea(e) {
         color: "transparent",
         look: "blank",
         onChange: (e) => {
-            (0, k.d)(e.currentTarget.files, t, w.d.ChannelMessage, {
+            (0, L.d)(e.currentTarget.files, t, w.d.ChannelMessage, {
                 requireConfirm: !0,
                 origin: "file_picker",
             }),

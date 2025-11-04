@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(13941),
+    l = n(358458),
     a = n(442837),
     o = n(481060),
     s = n(596454),
@@ -18,8 +18,8 @@ function b(e) {
         { emoji: b, sentAt: _ } = n,
         y = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         [C, v] = i.useState(!0),
-        O = !y,
-        x = (0, o.Yzy)(C, {
+        x = !y,
+        O = (0, o.Yzy)(C, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -36,18 +36,18 @@ function b(e) {
                 ? (0, d.H)(t)
                 : (e = setTimeout(
                       () => {
-                          v(!1), O && (0, d.H)(t);
+                          v(!1), x && (0, d.H)(t);
                       },
-                      O ? h : f,
+                      x ? h : f,
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [_, t, O]),
-    O)
+    }, [_, t, x]),
+    x)
         ? null
-        : x((e, t) => {
+        : O((e, t) => {
               var n;
               let { rotate: i } = e;
               return (

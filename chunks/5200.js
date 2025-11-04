@@ -4,7 +4,7 @@ var r,
     l = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(13941),
+    s = n(358458),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -26,8 +26,8 @@ function C(e) {
     var t;
     let { context: n, activityItem: r, onClick: a, aspectRatio: y = 0, animatedDivClass: C, commandOrigin: v } = e,
         {
-            onActivityItemSelected: O,
-            imageBackground: x,
+            onActivityItemSelected: x,
+            imageBackground: O,
             activityAction: E,
             labelType: j,
         } = (0, u.ZP)({
@@ -90,7 +90,7 @@ function C(e) {
             }
         }, [E]);
     return (0, i.jsx)(c.P3F, {
-        onClick: O,
+        onClick: x,
         onFocus: I,
         onBlur: Z,
         onMouseEnter: I,
@@ -115,7 +115,7 @@ function C(e) {
                             },
                             children: [
                                 (0, i.jsx)(d.Z, {
-                                    imageBackground: x,
+                                    imageBackground: O,
                                     applicationName: r.application.name,
                                     imageClassName: g.activitySuggestionImage,
                                     imageNotFoundClassName: g.brokenImageIconWrapper,

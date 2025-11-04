@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     o = n(120356),
     l = n.n(o),
-    a = n(13941),
+    a = n(358458),
     s = n(442837),
     c = n(481060),
     u = n(846027),
@@ -108,19 +108,19 @@ function _(e) {
         N = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
         T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         D = i.useRef(0),
-        Z = n !== o ? D.current + 1 : D.current;
+        k = n !== o ? D.current + 1 : D.current;
     i.useEffect(() => {
-        D.current = Z;
-    }, [Z]);
-    let k = null != n,
-        M = !k,
-        A = k && null != o,
+        D.current = k;
+    }, [k]);
+    let Z = null != n,
+        M = !Z,
+        A = Z && null != o,
         L = null == n && null != o,
         R = (0, c.q_F)(
             {
-                opacity: +!!k,
-                height: 72 * !!k,
-                pointerEvents: k ? "auto" : "none",
+                opacity: +!!Z,
+                height: 72 * !!Z,
+                pointerEvents: Z ? "auto" : "none",
                 backgroundColor: null != (t = null == _ ? void 0 : _.baseColor) ? t : N,
                 config: (e) =>
                     "backgroundColor" === e
@@ -136,7 +136,7 @@ function _(e) {
         V = (0, c.Yzy)(
             null == _ ? void 0 : _.id,
             {
-                key: Z,
+                key: k,
                 from: {
                     opacity: 0,
                     background: null == _ ? void 0 : _.splashGradient,
@@ -195,7 +195,7 @@ function _(e) {
         U = (0, c.Yzy)(
             null == _ ? void 0 : _.iconURL,
             {
-                key: Z,
+                key: k,
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
@@ -209,8 +209,8 @@ function _(e) {
                 },
                 leave: {
                     opacity: 0,
-                    scale: k ? 80 / 88 : 1,
-                    translateX: 24 * !!k,
+                    scale: Z ? 80 / 88 : 1,
+                    translateX: 24 * !!Z,
                     delay: 150 * !A,
                 },
                 config: (e) =>
@@ -219,7 +219,7 @@ function _(e) {
                               easing: h,
                               duration: 200,
                           }
-                        : k
+                        : Z
                           ? x
                           : P,
             },
@@ -228,7 +228,7 @@ function _(e) {
         Y = (0, c.Yzy)(
             null == _ ? void 0 : _.name,
             {
-                key: Z,
+                key: k,
                 from: {
                     opacity: 0,
                     scale: A ? 0.9 : 1,
@@ -328,7 +328,7 @@ function _(e) {
                         "aria-label": H,
                         tooltipClassName: y.tooltip,
                         tooltipContentClassName: y.tooltipContent,
-                        shouldShow: k,
+                        shouldShow: Z,
                         text: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(c.Heading, {
@@ -355,8 +355,8 @@ function _(e) {
                                             {
                                                 className: l()(y.button, { [y.loopbackEnabled]: C }),
                                                 "aria-hidden": M,
-                                                focusProps: { enabled: k },
-                                                tabIndex: k ? 0 : -1,
+                                                focusProps: { enabled: Z },
+                                                tabIndex: Z ? 0 : -1,
                                             },
                                             e,
                                         ),
@@ -375,7 +375,7 @@ function _(e) {
                     }),
                     (0, r.jsx)(c.aML, {
                         "data-migration-pending": !0,
-                        shouldShow: k,
+                        shouldShow: Z,
                         text: g.intl.string(g.t.UvMx7F),
                         children: (e) =>
                             (0, r.jsx)(a.animated.div, {
@@ -388,8 +388,8 @@ function _(e) {
                                             {
                                                 className: y.button,
                                                 "aria-hidden": M,
-                                                focusProps: { enabled: k },
-                                                tabIndex: k ? 0 : -1,
+                                                focusProps: { enabled: Z },
+                                                tabIndex: Z ? 0 : -1,
                                             },
                                             e,
                                         ),

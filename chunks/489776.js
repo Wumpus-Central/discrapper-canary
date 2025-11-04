@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(13941),
+    l = n(358458),
     a = n(722770),
     s = n(481060),
     o = n(236413),
@@ -59,29 +59,29 @@ function h(e) {
         [b] = i.useState(h),
         [x, j] = i.useState(!1),
         { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
-        { getDefaultRuleName: C } = c.I6[n],
-        O = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [y, E] = i.useState(O ? v : b),
-        N = (0, s.q_F)({
-            opacity: +!O,
-            pointerEvents: O ? "none" : "all",
+        { getDefaultRuleName: O } = c.I6[n],
+        C = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
+        [y, N] = i.useState(C ? v : b),
+        E = (0, s.q_F)({
+            opacity: +!C,
+            pointerEvents: C ? "none" : "all",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
         }),
         I = (0, s.q_F)({
-            opacity: +!!O,
-            pointerEvents: O ? "all" : "none",
+            opacity: +!!C,
+            pointerEvents: C ? "all" : "none",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                E(O ? v : b);
+                N(C ? v : b);
             },
             onRest: () => {
-                E(O ? v : b), j(O);
+                N(C ? v : b), j(C);
             },
         });
-    return null == v || O
+    return null == v || C
         ? (0, r.jsxs)("div", {
               className: m.mainRuleContainer,
-              style: { height: O ? "auto" : "60px" },
+              style: { height: C ? "auto" : "60px" },
               children: [
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedRuleCardContainer,
@@ -93,7 +93,7 @@ function h(e) {
                   }),
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedNewRuleContainer,
-                      style: N,
+                      style: E,
                       children: (0, r.jsxs)(s.P3F, {
                           className: m.addAnotherRuleCardContainer,
                           onClick: () => {
@@ -110,7 +110,7 @@ function h(e) {
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: g.intl.format(g.t.dNjRAf, { ruleName: C() }),
+                                  children: g.intl.format(g.t.dNjRAf, { ruleName: O() }),
                               }),
                           ],
                       }),

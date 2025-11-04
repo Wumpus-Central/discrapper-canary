@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(13941),
+    o = n(358458),
     s = n(442837),
     c = n(481060),
     u = n(393238),
@@ -18,8 +18,8 @@ var r = n(951288),
     y = n(641033),
     C = n(989830),
     v = n(388032),
-    O = n(23586);
-let x = i.memo(function (e) {
+    x = n(23586);
+let O = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
             a = (0, s.e7)([_.ZP], () => _.ZP.getMostRecentMessageCombo(t), [t]),
@@ -49,10 +49,10 @@ let x = i.memo(function (e) {
         return (
             null != a &&
             (0, r.jsx)(o.animated.div, {
-                className: O.messageComboScore,
+                className: x.messageComboScore,
                 style: h,
                 children: (0, r.jsx)(c.Text, {
-                    className: O.comboScore,
+                    className: x.comboScore,
                     variant: "text-sm/bold",
                     children: (0, y.Eo)(a.combo),
                 }),
@@ -66,16 +66,16 @@ let x = i.memo(function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Text, {
-                    className: O.comboValue,
+                    className: x.comboValue,
                     variant: "text-sm/bold",
                     children: t,
                 }),
                 (0, r.jsxs)("div", {
-                    className: O.comboNameplate,
+                    className: x.comboNameplate,
                     style: { color: u },
                     children: [
                         (0, r.jsx)(c.Text, {
-                            className: O.comboMultiplier,
+                            className: x.comboMultiplier,
                             style: { color: u },
                             variant: "text-sm/bold",
                             children: v.intl.format(v.t["6bgVlq"], { multiplier: n }),
@@ -84,11 +84,11 @@ let x = i.memo(function (e) {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: a()(O.comboSquare, O.left),
+                                        className: a()(x.comboSquare, x.left),
                                         style: { backgroundColor: u },
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: a()(O.comboSquare, O.right),
+                                        className: a()(x.comboSquare, x.right),
                                         style: { backgroundColor: u },
                                     }),
                                 ],
@@ -97,14 +97,14 @@ let x = i.memo(function (e) {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: a()(O.confettiIcon, O.left),
+                                        className: a()(x.confettiIcon, x.left),
                                         children: (0, r.jsx)(m.Z, {
                                             width: 24,
                                             height: 24,
                                         }),
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: a()(O.confettiIcon, O.right),
+                                        className: a()(x.confettiIcon, x.right),
                                         children: (0, r.jsx)(m.Z, {
                                             width: 24,
                                             height: 24,
@@ -114,7 +114,7 @@ let x = i.memo(function (e) {
                             }),
                         1 === n &&
                             (0, r.jsx)(c.Text, {
-                                className: O.tip,
+                                className: x.tip,
                                 variant: "text-sm/bold",
                                 children: v.intl.string(v.t.b5Cpof),
                             }),
@@ -167,13 +167,13 @@ let x = i.memo(function (e) {
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(x, {
+                (0, r.jsx)(O, {
                     channelId: t,
                     width: m,
                 }),
                 (0, r.jsx)(o.animated.div, {
                     ref: p,
-                    className: O.combo,
+                    className: x.combo,
                     style: S,
                     children: (0, r.jsx)(E, {
                         value: T,

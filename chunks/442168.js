@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
-    l = n(13941),
+    l = n(358458),
     a = n(442837),
     o = n(780384),
     s = n(481060),
@@ -52,8 +52,8 @@ let b = { visibility: "hidden" },
 function v(e) {
     let { stream: t, popoutType: n } = e,
         { reducedMotion: v } = i.useContext(o.Sf),
-        O = (0, i.useRef)(null),
-        x = p.n.getState().clipsButtonRef,
+        x = (0, i.useRef)(null),
+        O = p.n.getState().clipsButtonRef,
         E = (0, f.V9)(t),
         j = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
         S = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(E)),
@@ -66,7 +66,7 @@ function v(e) {
     );
     let I = (e) => {
             if (n !== c.P.NO_POPOUT) return b;
-            let t = null == x ? void 0 : x.getBoundingClientRect();
+            let t = null == O ? void 0 : O.getBoundingClientRect();
             if (((P.current = t), e.timestamp !== j || null == t)) return b;
             let { top: r, left: i } = t;
             return {
@@ -106,7 +106,7 @@ function v(e) {
                             : (() => {
                                   var e;
                                   if (n !== c.P.NO_POPOUT) return b;
-                                  let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
+                                  let t = null == (e = x.current) ? void 0 : e.getBoundingClientRect();
                                   return null == t
                                       ? b
                                       : {
@@ -158,7 +158,7 @@ function v(e) {
             children: [
                 (0, r.jsx)("div", {
                     className: m.hidden,
-                    ref: O,
+                    ref: x,
                 }),
                 T(
                     (e, t) =>

@@ -10,7 +10,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(13941),
+    c = n(358458),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -23,8 +23,8 @@ var r = n(951288),
     y = n(596040),
     C = n(100527),
     v = n(906732),
-    O = n(358221),
-    x = n(659580),
+    x = n(358221),
+    O = n(659580),
     E = n(855844),
     j = n(793865),
     S = n(575175),
@@ -38,8 +38,8 @@ var r = n(951288),
     M = n(803647),
     R = n(554747),
     D = n(95764),
-    L = n(459502),
-    k = n(728285),
+    k = n(459502),
+    L = n(728285),
     U = n(853170),
     B = n(140465),
     F = n(800966),
@@ -87,7 +87,7 @@ function ev() {
             return e;
         }).apply(this, arguments);
 }
-function eO(e) {
+function ex(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -112,7 +112,7 @@ function eO(e) {
     }
     return e;
 }
-function ex(e, t) {
+function eO(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -138,7 +138,7 @@ function eE(e, t) {
 function ej(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: a, hasPermission: o, disabled: s } = e,
         { parentAnalyticsLocation: c, analyticsLocations: f } = (0, v.ZP)(),
-        h = (0, k.bp)(),
+        h = (0, L.bp)(),
         m = (0, u.Wu)([et.Z], () => et.Z.getAllActiveStreams()),
         g = m.find((e) => e.ownerId === n.id),
         b = i.useRef(null),
@@ -148,8 +148,8 @@ function ej(e) {
             if ((null == l || l(), !a)) return (0, eh.Z)();
             (0, em.Z)(y, t.id, f);
         }, [y, t.id, a, l, f]),
-        O = (0, B.B4)(),
-        [x, E] = i.useState(!1),
+        x = (0, B.B4)(),
+        [O, E] = i.useState(!1),
         j = () => {
             if (((0, P.v)(c, P.d.STREAM, !0), a)) return void C();
             (0, eh.Z)();
@@ -160,7 +160,7 @@ function ej(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (() => {
-                if (O && 0 === m.length)
+                if (x && 0 === m.length)
                     return (0, r.jsx)(Z.ZP, {
                         contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                         bypassAutoDismiss: !0,
@@ -242,7 +242,7 @@ function ej(e) {
                                     a = null != g;
                                 return (0, r.jsx)(
                                     J.O,
-                                    ex(eO({}, l), {
+                                    eO(ex({}, l), {
                                         centerButton: !0,
                                         disabled: s || !o,
                                         className: eC.controlButton,
@@ -256,7 +256,7 @@ function ej(e) {
                                             : null,
                                         popoutOpen: t,
                                         shouldShowTooltip: !t,
-                                        renderNUXHighlight: x,
+                                        renderNUXHighlight: O,
                                         buttonRef: b,
                                         onClick: null != g ? S : j,
                                     }),
@@ -287,7 +287,7 @@ function eS(e) {
 let eP = i.memo(function (e) {
     let { currentUser: t, onDisconnectCall: n, channel: l, connectedEmbeddedActivity: a } = e,
         { parentAnalyticsLocation: o } = (0, v.ZP)(),
-        s = (0, u.e7)([O.Z], () => O.Z.getSelectedParticipant(l.id)),
+        s = (0, u.e7)([x.Z], () => x.Z.getSelectedParticipant(l.id)),
         { reducedMotion: d } = i.useContext(p.Sfi),
         [f, h] = i.useState(!1),
         b = null == s ? void 0 : s.id,
@@ -299,7 +299,7 @@ let eP = i.memo(function (e) {
                 return n !== (null == t ? void 0 : t.id);
             }),
         ),
-        x = (0, R.qY)(l.id),
+        O = (0, R.qY)(l.id),
         E = i.useRef(null),
         j = i.useCallback(
             () =>
@@ -308,10 +308,10 @@ let eP = i.memo(function (e) {
                     ? "ACTIVITY"
                     : y
                       ? "STREAM"
-                      : null != x
+                      : null != O
                         ? "EVENT"
                         : "CALL",
-            [s, null == a ? void 0 : a.applicationId, y, x],
+            [s, null == a ? void 0 : a.applicationId, y, O],
         ),
         [S, I] = i.useState(j()),
         Z = (0, p.q_F)(
@@ -372,7 +372,7 @@ let eP = i.memo(function (e) {
                             if (null == s || null == t || s.type !== e_.fO.ACTIVITY || null == a) return;
                             return (0, r.jsx)(
                                 q.Z,
-                                ex(eO({}, c), {
+                                eO(ex({}, c), {
                                     applicationId: s.applicationId,
                                     color: "disconnect",
                                     location: a.location,
@@ -382,7 +382,7 @@ let eP = i.memo(function (e) {
                         case "STREAM":
                             return (0, r.jsx)(
                                 J.O,
-                                ex(eO({}, c), {
+                                eO(ex({}, c), {
                                     hasPermission: !0,
                                     streamActive: !0,
                                     color: "disconnect",
@@ -396,7 +396,7 @@ let eP = i.memo(function (e) {
                         case "CALL":
                             return (0, r.jsx)(
                                 Y.Z,
-                                ex(eO({}, c), {
+                                eO(ex({}, c), {
                                     color: "disconnect",
                                     onClick: () => {
                                         (0, P.v)(o, P.d.DISCONNECT), null == n || n();
@@ -419,7 +419,7 @@ let eP = i.memo(function (e) {
 });
 function eI(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: l, currentUser: a } = e,
-        o = (0, k.bp)(),
+        o = (0, L.bp)(),
         { parentAnalyticsLocation: s } = (0, v.ZP)(),
         { reachedLimit: c, limit: d } = (0, eo.Z)(t),
         p = i.useCallback(() => {
@@ -478,12 +478,12 @@ let eT = function (e) {
             let e = el.default.getCurrentUser();
             return s()(null != e, "CenterControlTray: currentUser cannot be undefined"), e;
         }),
-        { cameraUnavailable: O, enabled: P } = (0, ea.Z)(),
+        { cameraUnavailable: x, enabled: P } = (0, ea.Z)(),
         I = (0, es.Z)(n),
         { suppress: Z, selfMute: A, mute: M } = (0, ec.Z)(n),
         { canGoLive: R } = (0, u.cj)([er.Z], () => ({ canGoLive: (0, w.Z)(er.Z) })),
         D = (0, N.Z)(),
-        k = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
+        L = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
         B = null != D,
         F = (0, u.e7)([ei.Z], () => {
             var e;
@@ -504,7 +504,7 @@ let eT = function (e) {
             ? (e) => {
                   (0, h.jW)(e, () =>
                       Promise.resolve(() =>
-                          (0, r.jsx)(x.default, {
+                          (0, r.jsx)(O.default, {
                               onClose: h.Zy,
                               renderInputDevices: !0,
                               renderOutputDevices: !0,
@@ -527,7 +527,7 @@ let eT = function (e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: eC.eventPromptsContainer,
-                          children: (0, r.jsx)(L.Z, { channelId: n.id }),
+                          children: (0, r.jsx)(k.Z, { channelId: n.id }),
                       }),
                       (0, r.jsxs)("div", {
                           ref: f,
@@ -562,7 +562,7 @@ let eT = function (e) {
                                                               renderOutputVolume: !0,
                                                               renderSettingsButton: !0,
                                                           })
-                                                        : (0, r.jsx)(x.default, {
+                                                        : (0, r.jsx)(O.default, {
                                                               onClose: n,
                                                               renderInputDevices: !0,
                                                               renderOutputDevices: !0,
@@ -593,7 +593,7 @@ let eT = function (e) {
                                                   serverMute: M,
                                                   suppress: Z,
                                                   popoutOpen: i,
-                                                  awaitingRemote: k,
+                                                  awaitingRemote: L,
                                                   onClick: () => (0, S.Z)(M, Z, eb.jXE.VOICE_CONTROL_TRAY),
                                                   onContextMenu: ep,
                                               });
@@ -624,7 +624,7 @@ let eT = function (e) {
                                                       centerButton: !0,
                                                       hasPermission: I,
                                                       enabled: P,
-                                                      cameraUnavailable: O,
+                                                      cameraUnavailable: x,
                                                       onChange: eE,
                                                       onCameraUnavailable: ef.Z,
                                                       channelLimitReached: W,
@@ -684,7 +684,7 @@ let eT = function (e) {
               value: q,
               children: (0, r.jsx)(eI, {
                   channel: n,
-                  cameraUnavailable: O,
+                  cameraUnavailable: x,
                   hasCameraPermission: I,
                   currentUser: y,
               }),

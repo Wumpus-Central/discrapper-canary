@@ -1,9 +1,9 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(13941),
+    o = n(358458),
     s = n(468194),
     c = n(442837),
     u = n(692547),
@@ -18,8 +18,8 @@ var r = n(951288),
     y = n(626135),
     C = n(74538),
     v = n(557457),
-    O = n(475674),
-    x = n(981631),
+    x = n(475674),
+    O = n(981631),
     E = n(474936),
     j = n(388032),
     S = n(386393);
@@ -85,7 +85,7 @@ let Z = (0, s.Mg)(p.Z.LIVE_INDICATOR_BORDER_RADIUS),
         friction: 18,
         clamp: !0,
     },
-    L = (e) => {
+    k = (e) => {
         let t,
             l,
             {
@@ -100,7 +100,7 @@ let Z = (0, s.Mg)(p.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 quality: w,
             } = e,
             { analyticsLocations: M } = (0, m.ZP)(),
-            R = null != (0, O.Z)(o);
+            R = null != (0, x.Z)(o);
         try {
             t = (0, v.nG)(w);
         } catch (e) {
@@ -112,22 +112,22 @@ let Z = (0, s.Mg)(p.Z.LIVE_INDICATOR_BORDER_RADIUS),
             l = !1;
         }
         let D = t || l,
-            { location: L } = (0, h.O)(),
-            k = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
-            U = s && !C.ZP.isPremium(k, E.PremiumTypes.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, k),
+            { location: k } = (0, h.O)(),
+            L = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
+            U = s && !C.ZP.isPremium(L, E.PremiumTypes.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, L),
             B = i.useCallback(() => {
                 U &&
                     D &&
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e("28479").then(n.bind(n, 78865));
-                        return (t) => (0, r.jsx)(e, I(P({}, t), { analyticsSource: L }));
+                        return (t) => (0, r.jsx)(e, I(P({}, t), { analyticsSource: k }));
                     });
-            }, [U, D, L]);
+            }, [U, D, k]);
         if (
             (i.useEffect(() => {
                 !Z &&
                     D &&
-                    (y.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                    (y.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: E.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: l,
@@ -173,7 +173,7 @@ let Z = (0, s.Mg)(p.Z.LIVE_INDICATOR_BORDER_RADIUS),
             shape: g.eE[p],
         });
     },
-    k = (e) => {
+    L = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: l = !0, size: s, className: c, premiumIndicator: u } = e,
             [d, p] = i.useState(!1),
             h = (0, v.W3)(t),
@@ -211,7 +211,7 @@ let Z = (0, s.Mg)(p.Z.LIVE_INDICATOR_BORDER_RADIUS),
                             n
                                 ? (0, r.jsx)(o.animated.div, {
                                       style: e,
-                                      children: (0, r.jsx)(L, {
+                                      children: (0, r.jsx)(k, {
                                           className: S.liveQualityIndicator,
                                           participant: t,
                                           size: s,

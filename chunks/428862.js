@@ -5,7 +5,7 @@ var r,
     a = n(647438),
     s = n(120356),
     o = n.n(s),
-    c = n(13941),
+    c = n(358458),
     d = n(442837),
     u = n(481060),
     g = n(205641),
@@ -60,7 +60,7 @@ let v = {
                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
               }),
         r);
-function C(e) {
+function O(e) {
     let [t, n] = a.useState(0),
         { numUnlocked: r, numRequired: i } = e,
         s = () => {
@@ -106,7 +106,7 @@ function C(e) {
             }),
     });
 }
-function O(e) {
+function C(e) {
     let {
             withCardBody: t,
             isAnimatedTo: n,
@@ -155,7 +155,7 @@ function O(e) {
                                 children: s.title,
                             }),
                             c
-                                ? (0, l.jsx)(E, {
+                                ? (0, l.jsx)(N, {
                                       transform:
                                           null == e
                                               ? void 0
@@ -165,7 +165,7 @@ function O(e) {
                                       hasAnimatedUnlocked: r,
                                   })
                                 : null,
-                            (0, l.jsx)(C, {
+                            (0, l.jsx)(O, {
                                 numUnlocked: m,
                                 numRequired: g,
                             }),
@@ -192,15 +192,15 @@ function y(e) {
             var e, t;
             return null != (t = null == (e = f.Z.getGuild(h)) ? void 0 : e.premiumTier) ? t : b.Eu4.NONE;
         }),
-        C = b.oCV[i.tier],
+        O = b.oCV[i.tier],
         y = a && i.tier <= _,
-        E = i.tier !== b.Eu4.NONE && i.tier !== b.Eu4.TIER_1;
+        N = i.tier !== b.Eu4.NONE && i.tier !== b.Eu4.TIER_1;
     return (0, l.jsxs)(
         "div",
         {
             className: o()(j.tier, { [j.tierBottomMargin]: s }),
             children: [
-                (0, l.jsx)(O, {
+                (0, l.jsx)(C, {
                     subscriptionCount: n,
                     tier: i,
                     headerButton: c,
@@ -211,7 +211,7 @@ function y(e) {
                     withCardBody: g,
                     guildId: h,
                     hasBottomMargin: s,
-                    subscriptionsRequired: C,
+                    subscriptionsRequired: O,
                     hasAnimatedUnlocked: y,
                     isAnimatedTo: a,
                 }),
@@ -222,7 +222,7 @@ function y(e) {
                             ? t
                             : (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      E
+                                      N
                                           ? (0, l.jsx)("div", {
                                                 className: j.previousPerks,
                                                 children: x.intl.string(x.t.oKzyRQ),
@@ -284,11 +284,11 @@ function y(e) {
         i.tier,
     );
 }
-let E = (e) => {
+let N = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
-        return null !== r ? r : n ? (0, l.jsx)(N, { transform: t }) : (0, l.jsx)(I, { subscriptionsRequired: i });
+        return null !== r ? r : n ? (0, l.jsx)(E, { transform: t }) : (0, l.jsx)(I, { subscriptionsRequired: i });
     },
-    N = (e) => {
+    E = (e) => {
         let { transform: t } = e;
         return (0, l.jsx)(c.animated.div, {
             style: { transform: t },

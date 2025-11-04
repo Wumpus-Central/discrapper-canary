@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     o = n(120356),
     l = n.n(o),
-    a = n(13941),
+    a = n(358458),
     s = n(442837),
     c = n(481060),
     u = n(493773),
@@ -29,8 +29,8 @@ var r = n(951288),
     N = n(448697),
     T = n(946196),
     D = n(365831),
-    Z = n(639539),
-    k = n(627325),
+    k = n(639539),
+    Z = n(627325),
     M = n(981631),
     A = n(354459),
     L = n(474936),
@@ -166,7 +166,7 @@ function z(e) {
                         query: B,
                         onClear: ec,
                     }),
-                (0, r.jsx)(k.w, {
+                (0, r.jsx)(Z.w, {
                     query: B,
                     columns: n ? 5 : 4,
                     handleScroll: (e) => {
@@ -185,7 +185,7 @@ function z(e) {
                             null != J &&
                                 (0, r.jsx)(a.animated.div, {
                                     style: eo,
-                                    children: (0, r.jsx)(Z.J, {
+                                    children: (0, r.jsx)(k.J, {
                                         catalogUpdateTime: J,
                                         isScrolled: $,
                                     }),

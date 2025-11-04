@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => E,
     x: () => v,
 }),
     n(388685);
@@ -8,7 +8,7 @@ var r,
     l = n(647438),
     a = n(120356),
     s = n.n(a),
-    o = n(13941),
+    o = n(358458),
     c = n(772848),
     d = n(374470),
     u = n(681715),
@@ -34,8 +34,8 @@ function j(e, t, n) {
 }
 let v = -1,
     _ = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    C = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    O = {
+    O = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    C = {
         tension: 140,
         friction: 30,
     },
@@ -43,10 +43,10 @@ let v = -1,
         tension: 800,
         friction: 20,
     };
-class E extends (r = l.Component) {
+class N extends (r = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + C / 2;
+        return e[e.length - 1].y + O / 2;
     }
     getProgressHeight(e) {
         let t,
@@ -130,7 +130,7 @@ class E extends (r = l.Component) {
             g = e.key === a[0].key,
             p = this.getTierDisabled(e);
         r = g ? x.tierFirst : p ? x.tierInProgress : d ? x.tierCurrent : c ? x.tierAccomplished : x.tierInProgress;
-        let f = e.y - (g ? 0 : C / 2),
+        let f = e.y - (g ? 0 : O / 2),
             h = this.state.tierMarkerActive >= t,
             b = !g && d && h,
             j = this.getTierMarkerTooltipText(e);
@@ -209,7 +209,7 @@ class E extends (r = l.Component) {
                 (0, i.jsx)(m.AMe, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: O,
+                    config: C,
                     delay: r ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: r ? void 0 : this.handleFinishedInitialAnimation,
@@ -290,5 +290,5 @@ class E extends (r = l.Component) {
             });
     }
 }
-j(E, "defaultProps", { initialAnimationDelay: 0 });
-let N = E;
+j(N, "defaultProps", { initialAnimationDelay: 0 });
+let E = N;
