@@ -1,40 +1,42 @@
 n.d(t, {
-    Q: () => f,
-    r: () => O,
+    Q: () => _,
+    r: () => I,
 }),
     n(35282),
     n(388685);
 var r = n(392711),
     i = n(212819),
     a = n(590921),
-    o = n(375954),
-    s = n(483360),
-    l = n(657871),
-    c = n(389458);
-let u = {
+    o = n(650774),
+    s = n(375954),
+    l = n(483360),
+    c = n(657871),
+    u = n(389458);
+let d = {
         startIndex: 0,
         query: "",
         prefix: "",
         suffix: "",
     },
-    d = {
+    f = {
         results: {
             suggestions: [],
-            queryInfo: u,
+            queryInfo: d,
         },
     },
-    f = 3,
-    _ = 5,
-    p = 100,
-    h = /\w/,
-    m = /[^\w\s]/;
-function g(e, t) {
-    if (t < 0 || t > e.length) return u;
+    _ = 3,
+    p = 5,
+    h = 100,
+    m = 200,
+    g = /\w/,
+    E = /[^\w\s]/;
+function b(e, t) {
+    if (t < 0 || t > e.length) return d;
     let n = t;
-    for (; n > 0 && m.test(e[n - 1]); ) n--;
+    for (; n > 0 && E.test(e[n - 1]); ) n--;
     let r = n;
-    for (; n > 0 && h.test(e[n - 1]); ) n--;
-    for (; r < e.length && h.test(e[r]); ) r++;
+    for (; n > 0 && g.test(e[n - 1]); ) n--;
+    for (; r < e.length && g.test(e[r]); ) r++;
     let i = e.substring(n, r),
         a = e.substring(0, n);
     return {
@@ -44,51 +46,59 @@ function g(e, t) {
         suffix: e.substring(r, e.length),
     };
 }
-function E(e, t, n, r) {
-    let { isIdle: u, currentAutocompleteType: h } = r;
-    if (0 === t.length) return d;
-    let { onlyExactMatch: m, eagerRecentSenders: E } = (0, l.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
-        b = g(t, n),
-        { query: y } = b;
-    if (y.length < f || c.Z.getMaxWordCount() < p || c.Z.isFrequentlyUsedWord(y)) return d;
-    let O = (0, s.Cq)(i.h8.USER),
-        v = o.Z.getMessages(e.id).toArray(),
-        I = new Set();
-    for (let e = 0; e < v.length; e++) {
-        var T;
-        let t = v[e];
-        (O[t.author.id] = (null != (T = O[t.author.id]) ? T : 1) + (v.length - e) / v.length), I.add(t.author.id);
+function y(e, t, n, r) {
+    var d, g;
+    let { isIdle: E, currentAutocompleteType: y } = r;
+    if (0 === t.length) return f;
+    let {
+            onlyExactMatch: O,
+            eagerRecentSenders: v,
+            largeGuildExactMatchRecentSenders: I,
+        } = (0, c.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
+        T = b(t, n),
+        { query: S } = T;
+    if (S.length < _ || u.Z.getMaxWordCount() < h || u.Z.isFrequentlyUsedWord(S)) return f;
+    let A = (0, l.Cq)(i.h8.USER),
+        C = s.Z.getMessages(e.id).toArray(),
+        N = new Set();
+    for (let e = 0; e < C.length; e++) {
+        let t = C[e];
+        (A[t.author.id] = (null != (d = A[t.author.id]) ? d : 1) + (C.length - e) / C.length), N.add(t.author.id);
     }
-    let S = s.ZP.queryMentionSuggestionResults({
-        query: y,
+    let R = !1;
+    I && (R = null != e.guild_id && (null != (g = o.Z.getMemberCount(e.guild_id)) ? g : 0) > m);
+    let P = l.ZP.queryMentionSuggestionResults({
+        query: S,
         channel: e,
-        boosters: O,
-        onlyExactMatch: m && !E,
+        boosters: A,
+        onlyExactMatch: O && (!v || R),
     });
-    return (E && (S = S.filter((e) => "exact" === e.matchType || I.has(e.user.id))),
-    u ||
-        h === a.eq.MENTION_SUGGESTIONS ||
-        !(y.length < _) ||
-        S.some((e) => "exact" === e.matchType || (E && I.has(e.user.id))))
+    return (R
+        ? (P = P.filter((e) => N.has(e.user.id)))
+        : v && (P = P.filter((e) => "exact" === e.matchType || N.has(e.user.id))),
+    E ||
+        y === a.eq.MENTION_SUGGESTIONS ||
+        !(S.length < p) ||
+        P.some((e) => "exact" === e.matchType || (v && N.has(e.user.id))))
         ? {
               results: {
-                  suggestions: S,
-                  queryInfo: b,
+                  suggestions: P,
+                  queryInfo: T,
               },
           }
-        : d;
+        : f;
 }
-let b = (0, r.memoize)(E, (e, t, n, r) =>
+let O = (0, r.memoize)(y, (e, t, n, r) =>
         "".concat(e.id, "-").concat(r.isIdle, "-").concat(r.currentAutocompleteType, "-").concat(t, "-").concat(n),
     ),
-    y = null;
-function O(e, t, n, r) {
+    v = null;
+function I(e, t, n, r) {
     return (
-        null == y &&
-            (y = setTimeout(() => {
+        null == v &&
+            (v = setTimeout(() => {
                 var e, t;
-                null == (e = (t = b.cache).clear) || e.call(t), (y = null);
+                null == (e = (t = O.cache).clear) || e.call(t), (v = null);
             }, 0)),
-        b(e, t, n, r)
+        O(e, t, n, r)
     );
 }

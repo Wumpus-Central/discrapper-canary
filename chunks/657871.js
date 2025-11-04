@@ -12,6 +12,7 @@ let r = (0, n(818083).B)({
         highlightDesign: "mention",
         onlyExactMatch: !1,
         eagerRecentSenders: !1,
+        largeGuildExactMatchRecentSenders: !1,
     },
     treatments: [
         {
@@ -23,6 +24,7 @@ let r = (0, n(818083).B)({
                 highlightDesign: "simple",
                 onlyExactMatch: !1,
                 eagerRecentSenders: !1,
+                largeGuildExactMatchRecentSenders: !1,
             },
         },
         {
@@ -34,6 +36,7 @@ let r = (0, n(818083).B)({
                 highlightDesign: "simple",
                 onlyExactMatch: !0,
                 eagerRecentSenders: !1,
+                largeGuildExactMatchRecentSenders: !1,
             },
         },
         {
@@ -45,6 +48,7 @@ let r = (0, n(818083).B)({
                 highlightDesign: "mention",
                 onlyExactMatch: !1,
                 eagerRecentSenders: !1,
+                largeGuildExactMatchRecentSenders: !1,
             },
         },
         {
@@ -56,6 +60,7 @@ let r = (0, n(818083).B)({
                 highlightDesign: "simple",
                 onlyExactMatch: !1,
                 eagerRecentSenders: !1,
+                largeGuildExactMatchRecentSenders: !1,
             },
         },
         {
@@ -67,6 +72,19 @@ let r = (0, n(818083).B)({
                 highlightDesign: "simple",
                 onlyExactMatch: !0,
                 eagerRecentSenders: !0,
+                largeGuildExactMatchRecentSenders: !1,
+            },
+        },
+        {
+            id: 6,
+            label: "Eager match recent senders for small guilds, exact match for large guilds",
+            config: {
+                enabled: !0,
+                suggestionDesign: "vertical",
+                highlightDesign: "simple",
+                onlyExactMatch: !0,
+                eagerRecentSenders: !0,
+                largeGuildExactMatchRecentSenders: !0,
             },
         },
     ],
