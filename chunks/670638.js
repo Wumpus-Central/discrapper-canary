@@ -1,4 +1,4 @@
-n.d(t, { r: () => L });
+n.d(t, { r: () => x });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -7,23 +7,22 @@ var r = n(951288),
     l = n(479531),
     c = n(703656),
     u = n(390322),
-    d = n(594174),
-    f = n(572004),
-    _ = n(63063),
-    p = n(22095),
-    h = n(617136),
-    m = n(915750),
-    g = n(509212),
-    E = n(113434),
-    b = n(569984),
-    y = n(497505),
-    O = n(36243),
-    v = n(110560),
-    I = n(46140),
-    T = n(981631),
-    S = n(231338),
-    A = n(388032);
-function C(e, t, n) {
+    d = n(572004),
+    f = n(63063),
+    _ = n(22095),
+    p = n(617136),
+    h = n(915750),
+    m = n(509212),
+    g = n(113434),
+    E = n(569984),
+    b = n(497505),
+    y = n(36243),
+    O = n(110560),
+    v = n(46140),
+    I = n(981631),
+    T = n(231338),
+    S = n(388032);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +35,7 @@ function C(e, t, n) {
         e
     );
 }
-function N(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +46,12 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function R(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,22 +63,22 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function w(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -87,7 +86,7 @@ function w(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,112 +95,108 @@ function D(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function D(e) {
     var t;
-    let n = (0, a.e7)([b.Z], () => b.Z.questDeliveryOverride, []),
-        u = (0, g.GN)(e.questContent),
-        C = [y.jn.QUEST_BAR_V2, y.jn.QUEST_BAR].includes(e.questContent),
-        N = (0, h.O5)(),
-        R = (0, m.aM)(),
-        P = (0, E.ly)(e.quest),
-        w = !0 === e.showShareLink && (0, g.vB)(e.quest.config),
+    let n = (0, a.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
+        u = (0, m.GN)(e.questContent),
+        A = [b.jn.QUEST_BAR_V2, b.jn.QUEST_BAR].includes(e.questContent),
+        C = (0, p.O5)(),
+        N = (0, h.aM)(),
+        R = (0, g.ly)(e.quest),
+        P = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
-            handleComplete: D,
-            handleProgress: x,
-            handleResetDismissibilityClick: L,
-            handleResetStatusClick: M,
-            handleOverrideDeliveryClick: j,
-        } = (0, E.kJ)(e.quest.id),
-        k = () => {
-            x(0.9 * Math.random() + 0.03);
+            handleComplete: w,
+            handleProgress: D,
+            handleResetDismissibilityClick: x,
+            handleResetStatusClick: L,
+            handleOverrideDeliveryClick: M,
+        } = (0, g.kJ)(e.quest.id),
+        j = () => {
+            D(0.9 * Math.random() + 0.03);
         },
-        U = i.useCallback(() => {
-            if (e.quest.id === I.V6) return void window.open(_.Z.getArticleURL(T.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
-            (0, g.nc)(e.quest, {
+        k = i.useCallback(() => {
+            if (e.quest.id === v.V6) return void window.open(f.Z.getArticleURL(I.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+            (0, m.nc)(e.quest, {
                 content: e.questContent,
-                ctaContent: h.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
-                impressionId: R,
+                ctaContent: p.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
+                impressionId: N,
                 sourceQuestContent: e.sourceQuestContent,
             });
-        }, [R, e.quest, e.questContent, e.sourceQuestContent]),
-        G = i.useCallback(() => {
-            w &&
-                ((0, g.f2)(e.quest.id, {
+        }, [N, e.quest, e.questContent, e.sourceQuestContent]),
+        U = i.useCallback(() => {
+            P &&
+                ((0, m.f2)(e.quest.id, {
                     content: e.questContent,
                     position: e.questContentPosition,
-                    ctaContent: h.jZ.CONTEXT_MENU_COPY_LINK,
-                    impressionId: R,
+                    ctaContent: p.jZ.CONTEXT_MENU_COPY_LINK,
+                    impressionId: N,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
-                (0, o.showToast)((0, o.createToast)(A.intl.string(A.t["+5kSoW"]), o.ToastType.SUCCESS)));
-        }, [R, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent, w]),
-        B = () => {
-            (0, v.openDisclosureModal)(e.quest, {
+                (0, o.showToast)((0, o.createToast)(S.intl.string(S.t["+5kSoW"]), o.ToastType.SUCCESS)));
+        }, [N, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent, P]),
+        G = () => {
+            (0, O.openDisclosureModal)(e.quest, {
                 content: e.questContent,
                 position: e.questContentPosition,
-                ctaContent: h.jZ.CONTEXT_MENU_OPEN_DISCLOSURE,
-                impressionId: R,
+                ctaContent: p.jZ.CONTEXT_MENU_OPEN_DISCLOSURE,
+                impressionId: N,
                 sourceQuestContent: e.sourceQuestContent,
             });
         },
-        Z = () => {
-            N({
+        B = () => {
+            C({
                 questId: e.quest.id,
                 questContent: e.questContent,
                 questContentPosition: e.questContentPosition,
-                questContentCTA: h.jZ.CONTEXT_MENU_LEARN_MORE,
+                questContentCTA: p.jZ.CONTEXT_MENU_LEARN_MORE,
                 sourceQuestContent: e.sourceQuestContent,
             }),
-                (0, v.navigateToQuestHome)({
+                (0, O.navigateToQuestHome)({
                     fromContent: e.questContent,
                     questId: e.quest.id,
                 });
         },
-        F = () => {
+        Z = () => {
             null != e.onSelect ? e.onSelect() : (0, s.Zy)();
         },
-        V = () => {
-            N({
+        F = () => {
+            C({
                 questId: e.quest.id,
                 questContent: e.questContent,
                 questContentPosition: e.questContentPosition,
-                questContentCTA: h.jZ.CONTEXT_MENU_HIDE_CONTENT,
+                questContentCTA: p.jZ.CONTEXT_MENU_HIDE_CONTENT,
                 sourceQuestContent: e.sourceQuestContent,
             }),
-                (0, g.GN)(e.questContent) &&
-                    ((0, p.gl)(e.quest.id, e.questContent), C && (0, v.maybeShowSurveyForQuest)(e.quest));
+                (0, m.GN)(e.questContent) &&
+                    ((0, _.gl)(e.quest.id, e.questContent), A && (0, O.maybeShowSurveyForQuest)(e.quest));
         },
-        H = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
-        Y = () => (0, p.CS)(e.quest.id, !0).catch(H),
-        W = () => (0, p.is)(e.quest.id).catch(H),
-        K = () => {
-            M(), W();
+        V = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
+        H = () => (0, _.CS)(e.quest.id, !0).catch(V),
+        Y = () => (0, _.is)(e.quest.id).catch(V),
+        W = () => {
+            L(), Y();
         },
-        z = !1,
-        q = i.useMemo(() => {
-            var e;
-            return (null == (e = d.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0;
-        }, []),
-        X = i.useMemo(
+        K = (0, g.m4)(e.quest),
+        z = i.useMemo(
             () =>
                 (0, r.jsx)(o.S89, {
                     id: "delivery",
                     label: "Show in Quest Bar",
                     checked: (null == n ? void 0 : n.id) === e.quest.id,
-                    action: j,
+                    action: M,
                 }),
-            [j, e.quest.id, null == n ? void 0 : n.id],
+            [M, e.quest.id, null == n ? void 0 : n.id],
         ),
-        Q = i.useCallback(() => {
-            (0, c.uL)(T.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
+        q = i.useCallback(() => {
+            (0, c.uL)(I.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
-        J = e.shouldShowDisclosure && e.quest.id !== I.V6;
+        X = e.shouldShowDisclosure && e.quest.id !== v.V6;
     return (0, r.jsxs)(o.v2r, {
         variant: "fixed",
-        onSelect: F,
+        onSelect: Z,
         navId: "quests-entry",
-        "aria-label": A.intl.string(A.t.ogxXGq),
-        onClose: null != (t = null == e ? void 0 : e.onClose) ? t : S.dG,
+        "aria-label": S.intl.string(S.t.ogxXGq),
+        onClose: null != (t = null == e ? void 0 : e.onClose) ? t : T.dG,
         children: [
             (0, r.jsxs)(
                 o.kSQ,
@@ -209,18 +204,18 @@ function x(e) {
                     children: [
                         (0, r.jsx)(o.sNh, {
                             id: "play-game",
-                            label: P,
-                            action: U,
+                            label: R,
+                            action: k,
                             icon: o.zFc,
                         }),
-                        w &&
+                        P &&
                             (0, r.jsx)(o.sNh, {
                                 id: "share-link",
-                                label: A.intl.string(A.t.RDE0Sc),
-                                action: G,
+                                label: S.intl.string(S.t.RDE0Sc),
+                                action: U,
                                 icon: o.TIy,
                             }),
-                        (z || q) && X,
+                        K && z,
                     ],
                 },
                 "major-actions",
@@ -232,22 +227,22 @@ function x(e) {
                         !e.hideLearnMore &&
                             (0, r.jsx)(o.sNh, {
                                 id: "learn-more",
-                                label: A.intl.string(A.t["Ws2Bl+"]),
-                                action: Z,
+                                label: S.intl.string(S.t["Ws2Bl+"]),
+                                action: B,
                                 icon: o.qDn,
                             }),
-                        J &&
+                        X &&
                             (0, r.jsx)(o.sNh, {
                                 id: "display-disclosure",
-                                label: A.intl.string(A.t.GcsZKJ),
-                                action: B,
+                                label: S.intl.string(S.t.GcsZKJ),
+                                action: G,
                             }),
                         u &&
                             (0, r.jsx)(o.sNh, {
                                 id: "hide-entrypoint",
-                                label: A.intl.string(A.t.NN79E9),
-                                action: V,
-                                subtext: A.intl.string(A.t.RK9gxo),
+                                label: S.intl.string(S.t.NN79E9),
+                                action: F,
+                                subtext: S.intl.string(S.t.RK9gxo),
                             }),
                     ],
                 },
@@ -257,30 +252,29 @@ function x(e) {
                 (0, r.jsxs)(
                     o.kSQ,
                     {
-                        label: A.intl.string(A.t["Ape+mm"]),
+                        label: S.intl.string(S.t["Ape+mm"]),
                         children: [
-                            !(z || q) && X,
                             (0, r.jsx)(o.sNh, {
                                 id: "dismiss",
-                                label: A.intl.string(A.t.JF6W66),
-                                action: L,
+                                label: S.intl.string(S.t.JF6W66),
+                                action: x,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
-                                label: A.intl.string(A.t.taqkwK),
-                                action: K,
+                                label: S.intl.string(S.t.taqkwK),
+                                action: W,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "progress",
-                                label: A.intl.string(A.t.cKSLr4),
-                                action: k,
+                                label: S.intl.string(S.t.cKSLr4),
+                                action: j,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
-                                label: A.intl.string(A.t.jQEfRT),
-                                action: D,
+                                label: S.intl.string(S.t.jQEfRT),
+                                action: w,
                             }),
-                            (0, g.$J)(e.quest) &&
+                            (0, m.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
                                     id: "console",
                                     label: "Console Heartbeat",
@@ -288,32 +282,32 @@ function x(e) {
                                         (0, r.jsx)(o.sNh, {
                                             disabled: !0,
                                             id: "status",
-                                            label: "Status: ".concat((0, g.Bz)(e.quest) ? "alive" : "dead"),
+                                            label: "Status: ".concat((0, m.Bz)(e.quest) ? "alive" : "dead"),
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: "start",
                                             label: "Start heartbeat (cheatmode)",
-                                            action: Y,
+                                            action: H,
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: "stop",
                                             label: "Stop heartbeat",
-                                            action: W,
+                                            action: Y,
                                         }),
                                     ],
                                 }),
                             (0, r.jsx)(o.sNh, {
                                 id: "copy-quest-id",
-                                label: A.intl.string(A.t.oisrFi),
+                                label: S.intl.string(S.t.oisrFi),
                                 action: () => {
-                                    (0, f.JG)(e.quest.id);
+                                    (0, d.JG)(e.quest.id);
                                 },
                             }),
-                            (0, O.T)({ location: I.dr.QUEST_PREVIEW_TOOL_2 }) &&
+                            (0, y.T)({ location: v.dr.QUEST_PREVIEW_TOOL_2 }) &&
                                 (0, r.jsx)(o.sNh, {
                                     id: "preview",
-                                    label: A.intl.string(A.t.tx5Ax5),
-                                    action: Q,
+                                    label: S.intl.string(S.t.tx5Ax5),
+                                    action: q,
                                 }),
                         ],
                     },
@@ -322,7 +316,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let {
             children: t,
             onOpen: n,
@@ -333,7 +327,7 @@ function L(e) {
             questContentPosition: d,
             sourceQuestContent: f,
         } = e,
-        _ = w(e, [
+        _ = P(e, [
             "children",
             "onOpen",
             "onClose",
@@ -343,18 +337,18 @@ function L(e) {
             "questContentPosition",
             "sourceQuestContent",
         ]),
-        p = (0, h.O5)(),
+        h = (0, p.O5)(),
         m = i.useRef(null),
         g = i.useCallback(() => {
-            p({
+            h({
                 questId: l.id,
                 questContent: c,
-                questContentCTA: h.jZ.OPEN_CONTEXT_MENU,
+                questContentCTA: p.jZ.OPEN_CONTEXT_MENU,
                 questContentPosition: d,
                 sourceQuestContent: f,
             }),
                 null != n && n();
-        }, [n, l.id, c, d, p, f]);
+        }, [n, l.id, c, d, h, f]);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: m,
         onRequestOpen: g,
@@ -364,8 +358,8 @@ function L(e) {
             return s
                 ? (0, r.jsx)(u.Z, {
                       children: (0, r.jsx)(
-                          x,
-                          P(N({}, _), {
+                          D,
+                          R(C({}, _), {
                               quest: l,
                               questContent: c,
                               questContentPosition: d,
@@ -375,8 +369,8 @@ function L(e) {
                       ),
                   })
                 : (0, r.jsx)(
-                      x,
-                      P(N({}, _), {
+                      D,
+                      R(C({}, _), {
                           quest: l,
                           questContent: c,
                           questContentPosition: d,

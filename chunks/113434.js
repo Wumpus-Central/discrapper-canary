@@ -27,6 +27,7 @@ n.d(t, {
     iO: () => eA,
     kJ: () => eN,
     ly: () => eh,
+    m4: () => e0,
     me: () => eU,
     qI: () => eZ,
     qb: () => eG,
@@ -1002,3 +1003,11 @@ function e$(e) {
                 (o.current = t);
         }, [n, i]);
 }
+let e0 = (e) => {
+    let t = !1,
+        n = r.useMemo(() => {
+            var e;
+            return (null == (e = E.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0;
+        }, []);
+    return t || n || e.preview;
+};
