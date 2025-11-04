@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(570140),
     l = n(765250),
@@ -47,13 +47,19 @@ let m = (0, o.Un)({
         createPromise: () => Promise.all([n.e("50751"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: "PopoutWindowActivity",
+    }),
+    E = (0, o.Un)({
+        createPromise: () => Promise.all([n.e("91862"), n.e("50751"), n.e("69283")]).then(n.bind(n, 980811)),
+        webpackId: 980811,
+        name: "ShuffleNamesPopout",
     });
-class E extends a.Z {
+class O extends a.Z {
     _initialize() {
         i.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
             i.Z.subscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+            i.Z.subscribe("SHUFFLE_NAMES_POPOUT_WINDOW_OPEN", this.handleOpenShuffleNamesPopout),
             this.initializeStyleSheetObserver();
     }
     _terminate() {
@@ -61,6 +67,7 @@ class E extends a.Z {
             i.Z.unsubscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+            i.Z.unsubscribe("SHUFFLE_NAMES_POPOUT_WINDOW_OPEN", this.handleOpenShuffleNamesPopout),
             this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
@@ -113,6 +120,23 @@ class E extends a.Z {
                 defaultHeight: 480,
             });
     }
+    handleOpenShuffleNamesPopout(e) {
+        let { channelId: t, guildId: n } = e;
+        u.bA(
+            d.KJ3.SHUFFLE_NAMES_POPOUT,
+            (e) =>
+                (0, r.jsx)(E, {
+                    windowKey: e,
+                    channelId: t,
+                    guildId: n,
+                }),
+            {
+                defaultWidth: 1000,
+                defaultHeight: 600,
+                alwaysOnTop: !0,
+            },
+        );
+    }
     constructor(...e) {
         super(...e),
             f(this, "_observer", null),
@@ -135,4 +159,4 @@ class E extends a.Z {
             });
     }
 }
-let O = new E();
+let I = new O();

@@ -6251,6 +6251,7 @@ var rv = (function (e) {
             (e.ACTIVITY_POPOUT = "DISCORD_ACTIVITY_POPOUT"),
             (e.OVERLAY_POPOUT = "DISCORD_OVERLAY_POPOUT"),
             (e.DEVTOOLS_POPOUT = "DISCORD_DEVTOOLS_POPOUT"),
+            (e.SHUFFLE_NAMES_POPOUT = "DISCORD_SHUFFLE_NAMES_POPOUT"),
             e
         );
     })({}),
