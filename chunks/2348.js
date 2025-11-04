@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854);
+n.d(t, { Z: () => E }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -59,7 +59,7 @@ function _(e, t) {
         e
     );
 }
-function C(e) {
+function O(e) {
     let { guild: t, channel: i } = e,
         l = (0, f.Mf)(i.id);
     return "null" === i.id
@@ -81,7 +81,7 @@ function C(e) {
                           n.e("90508"),
                           n.e("24358"),
                           n.e("8965"),
-                          n.e("98350"),
+                          n.e("23899"),
                       ]).then(n.bind(n, 139035));
                       return (n) =>
                           (0, r.jsx)(
@@ -122,7 +122,7 @@ function C(e) {
               ],
           });
 }
-let O = i.memo(function () {
+let C = i.memo(function () {
         return (0, r.jsx)("div", { className: j.separator });
     }),
     y = i.memo(function (e) {
@@ -137,16 +137,16 @@ let O = i.memo(function () {
             "separator-".concat(t),
         );
     }),
-    E = i.memo(function (e) {
+    N = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
                 isFirstChannel: m,
-                isLastChannel: C,
-                tooltipDirection: E = "right",
+                isLastChannel: O,
+                tooltipDirection: N = "right",
             } = e,
-            N = (0, f.Mf)(t.id, i.id),
+            E = (0, f.Mf)(t.id, i.id),
             I = (0, f.t4)(t.id, i.id),
             S = (0, f.EH)(t.id, i.id),
             T = (0, f.lL)(l.id, i.id),
@@ -157,11 +157,11 @@ let O = i.memo(function () {
                     asContainer: !0,
                     __unsupportedReactNodeAsText: null != S ? S : T,
                     delay: 500,
-                    position: E,
+                    position: N,
                     children: (0, r.jsxs)(c.P3F, {
                         className: a()(j.channelRow, {
                             [j.firstChannel]: m,
-                            [j.lastChannel]: C,
+                            [j.lastChannel]: O,
                             [j.disabled]: I,
                         }),
                         onClick: (e) => {
@@ -193,7 +193,7 @@ let O = i.memo(function () {
                                           n.e("24358"),
                                           n.e("18320"),
                                           n.e("83331"),
-                                          n.e("19899"),
+                                          n.e("56648"),
                                       ]).then(n.bind(n, 213202));
                                       return (n) =>
                                           (0, r.jsx)(
@@ -224,8 +224,7 @@ let O = i.memo(function () {
                                           n.e("88647"),
                                           n.e("91053"),
                                           n.e("18320"),
-                                          n.e("26503"),
-                                          n.e("85496"),
+                                          n.e("65100"),
                                           n.e("1854"),
                                       ]).then(n.bind(n, 373651));
                                       return (n) =>
@@ -278,7 +277,7 @@ let O = i.memo(function () {
                                 className: j.channelActions,
                                 children: (0, u.s)(t.guild_id, t.id)
                                     ? (0, r.jsx)(c.FZ5, {
-                                          checked: N,
+                                          checked: E,
                                           disabled: I,
                                       })
                                     : (0, r.jsx)(c.Button, {
@@ -292,17 +291,17 @@ let O = i.memo(function () {
                         ],
                     }),
                 }),
-                !C && (0, r.jsx)(O, {}),
+                !O && (0, r.jsx)(C, {}),
             ],
         });
     });
-function N(e) {
+function E(e) {
     let { categories: t, guild: n, className: l, hasSidebar: a } = e,
         s = i.useCallback(
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    C,
+                    O,
                     {
                         channel: i.channel,
                         guild: n,
@@ -319,7 +318,7 @@ function N(e) {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          E,
+                          N,
                           {
                               category: l.channel,
                               channel: s.channel,
