@@ -31,7 +31,7 @@ function o(e) {
     return e;
 }
 function s(e, t) {
-    let { isGift: a } = t;
+    let { isGift: a, giftRecipient: s, giftingOrigin: l } = t;
     (0, i.ZDy)(
         async () => {
             let { default: t } = await n.e("45227").then(n.bind(n, 556266));
@@ -44,6 +44,8 @@ function s(e, t) {
                             applicationId: e.applicationId,
                             analyticsLocations: [],
                             isGift: a,
+                            giftRecipient: s,
+                            giftingOrigin: l,
                         },
                         n,
                     ),

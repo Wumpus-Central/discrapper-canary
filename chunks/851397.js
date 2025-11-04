@@ -1,4 +1,4 @@
-r.d(t, { Z: () => I }), r(388685);
+r.d(t, { Z: () => j }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(442837),
@@ -13,13 +13,14 @@ var n = r(951288),
     p = r(594914),
     O = r(848118),
     g = r(981631),
-    h = r(388032),
+    h = r(474936),
+    I = r(388032),
     b = r(63602);
-function I(e) {
+function j(e) {
     var t,
         r,
-        { profileOwner: I, showIcons: j = !1 } = e,
-        P = (function (e, t) {
+        { profileOwner: j, showIcons: P = !1 } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -40,30 +41,34 @@ function I(e) {
             }
             return i;
         })(e, ["profileOwner", "showIcons"]);
-    let { item: v, isOwner: w } = P,
-        y = v.sku,
-        S = y.applicationId,
-        x = (0, o.q)(S),
-        k = i.useRef(null),
-        [E] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(v.skuId, I.id)], [v.skuId, I.id]),
-        N = v.skuName,
-        C = w ? h.intl.string(h.t.FdGl5A) : h.intl.string(h.t.ilhtIa),
-        T = w ? void 0 : a.OgN,
-        L = i.useCallback(() => {
-            if (w && (null == x ? void 0 : x.guildId) != null)
-                (0, u.closeUserProfileModal)(), (0, c.uL)(g.Z5c.CHANNELS_GAME_SHOP(x.guildId, 0, v.skuId, y.slug));
+    let { item: w, isOwner: y, giftingOrigin: S = h.Wt.USER_PROFILE_WISHLIST } = v,
+        x = w.sku,
+        E = x.applicationId,
+        k = (0, o.q)(E),
+        N = i.useRef(null),
+        [C] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(w.skuId, j.id)], [w.skuId, j.id]),
+        T = w.skuName,
+        L = y ? I.intl.string(I.t.FdGl5A) : I.intl.string(I.t.ilhtIa),
+        _ = y ? void 0 : a.OgN,
+        Z = i.useCallback(() => {
+            if (y && (null == k ? void 0 : k.guildId) != null)
+                (0, u.closeUserProfileModal)(), (0, c.uL)(g.Z5c.CHANNELS_GAME_SHOP(k.guildId, 0, w.skuId, x.slug));
             else {
-                if (E) return;
-                (0, p.P)(y, { isGift: !0 });
+                if (C) return;
+                (0, p.P)(x, {
+                    isGift: !0,
+                    giftRecipient: j,
+                    giftingOrigin: S,
+                });
             }
-        }, [w, null == x ? void 0 : x.guildId, v.skuId, y, E]),
-        Z = i.useCallback(
+        }, [y, null == k ? void 0 : k.guildId, w.skuId, x, C, j, S]),
+        R = i.useCallback(
             () =>
-                j
+                P
                     ? (0, n.jsx)("div", {
                           className: b.itemIcon,
                           children: (0, n.jsx)(s.u, {
-                              text: h.intl.formatToPlainString(h.t.p3RmJF, { username: m.ZP.getName(I) }),
+                              text: I.intl.formatToPlainString(I.t.p3RmJF, { username: m.ZP.getName(j) }),
                               position: "top",
                               children: (0, n.jsx)(a.h_8, {
                                   size: "custom",
@@ -75,18 +80,18 @@ function I(e) {
                           }),
                       })
                     : null,
-            [j, I],
+            [P, j],
         ),
-        _ = i.useCallback(
+        F = i.useCallback(
             () =>
                 (0, n.jsx)(O.A, {
                     shape: "custom",
                     containerClassName: b.card,
                     backgroundImageClassName: b.cardBackgroundImage,
                     foregroundImageClassName: b.cardImage,
-                    sku: y,
+                    sku: x,
                 }),
-            [y],
+            [x],
         );
     return (0, n.jsx)(
         d.Z,
@@ -114,17 +119,17 @@ function I(e) {
                     });
             }
             return e;
-        })({}, P)),
+        })({}, v)),
         (r = r =
             {
-                cardRef: k,
-                accessibleLabel: N,
-                onCardClick: L,
-                buttonCTALabel: C,
-                buttonIcon: T,
-                isOwned: E,
-                renderItemPreview: _,
-                renderSourceIcon: Z,
+                cardRef: N,
+                accessibleLabel: T,
+                onCardClick: Z,
+                buttonCTALabel: L,
+                buttonIcon: _,
+                isOwned: C,
+                renderItemPreview: F,
+                renderSourceIcon: R,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

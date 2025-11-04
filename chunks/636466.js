@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => f,
+    B: () => g,
     J: () => p,
 });
 var r = n(951288),
@@ -8,51 +8,61 @@ var r = n(951288),
     a = n(766717),
     s = n(594914),
     o = n(848118),
-    c = n(388032),
-    d = n(758650),
-    u = n(976218);
+    c = n(474936),
+    d = n(388032),
+    u = n(758650),
+    h = n(976218);
 function p(e, t) {
-    let { moreCount: n, onViewWishlist: i, isSingleCard: l = !1 } = t,
-        u = null != n && n > 0,
-        p = u ? c.intl.string(c.t.TxBQzD) : c.intl.string(c.t.ilhtIa);
+    let { moreCount: n, onViewWishlist: i, isSingleCard: l = !1, profileOwner: h, analyticsLocations: p } = t,
+        f = null != n && n > 0,
+        g = f ? d.intl.string(d.t.TxBQzD) : d.intl.string(d.t.ilhtIa);
     return (0, r.jsx)(
         a.Z,
         {
             onCardClick: () => {
-                if (u) return void i();
-                (0, s.P)(e.sku, { isGift: !0 });
+                if (f) return void i();
+                (0, s.P)(e.sku, {
+                    isGift: !0,
+                    giftRecipient: h,
+                    giftingOrigin: c.Wt.USER_PROFILE_WISHLIST,
+                });
             },
-            tooltipText: p,
+            tooltipText: g,
             shouldScalePreview: !1,
             renderPreview: () =>
                 (0, r.jsx)(o.A, {
-                    containerClassName: d.card,
-                    backgroundImageClassName: d.cardBackgroundImage,
-                    foregroundImageClassName: d.cardImage,
+                    containerClassName: u.card,
+                    backgroundImageClassName: u.cardBackgroundImage,
+                    foregroundImageClassName: u.cardImage,
                     sku: e.sku,
                     shape: "custom",
                 }),
             moreCount: n,
             isSingleCard: l,
+            analyticsLocations: p,
         },
         e.skuId,
     );
 }
-function h(e) {
-    let { item: t, card: n } = e,
-        { data: a } = (0, l.IX)(t.sku.applicationId);
+function f(e) {
+    let { item: t, card: n, profileOwner: a } = e,
+        { data: o } = (0, l.IX)(t.sku.applicationId);
     return (0, r.jsxs)("div", {
-        className: u.singleItemContainer,
+        className: h.singleItemContainer,
         children: [
             n,
             (0, r.jsx)("div", {
-                className: u.singleItemInfo,
+                className: h.singleItemInfo,
                 children: (0, r.jsxs)(i.P3F, {
                     onClick: () => {
-                        (0, s.P)(t.sku, { isGift: !0 });
+                        (0, s.P)(t.sku, {
+                            isGift: !0,
+                            giftRecipient: a,
+                            giftingOrigin: c.Wt.USER_PROFILE_WISHLIST,
+                        });
                     },
-                    className: u.singleItemName,
-                    "aria-label": c.intl.string(c.t.ilhtIa),
+                    className: h.singleItemName,
+                    "aria-label": d.intl.string(d.t.ilhtIa),
                     children: [
                         (0, r.jsx)(i.Text, {
                             variant: "text-sm/semibold",
@@ -63,7 +73,7 @@ function h(e) {
                         (0, r.jsx)(i.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: c.intl.format(c.t["CqpEC+"], { applicationName: null == a ? void 0 : a.name }),
+                            children: d.intl.format(d.t["CqpEC+"], { applicationName: null == o ? void 0 : o.name }),
                         }),
                     ],
                 }),
@@ -71,7 +81,7 @@ function h(e) {
         ],
     });
 }
-function f(e, t) {
+function g(e, t) {
     let { profileOwner: n, analyticsLocations: i } = t,
         l = p(e, {
             profileOwner: n,
@@ -79,8 +89,9 @@ function f(e, t) {
             onViewWishlist: () => {},
             isSingleCard: !0,
         });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(f, {
         item: e,
         card: l,
+        profileOwner: n,
     });
 }

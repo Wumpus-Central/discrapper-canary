@@ -2,18 +2,18 @@ n.d(t, { default: () => x }), n(388685);
 var i = n(951288);
 n(647438);
 var r = n(100527),
-    a = n(906732),
-    l = n(987209),
-    s = n(563132),
-    o = n(409813),
+    l = n(906732),
+    a = n(987209),
+    o = n(563132),
+    s = n(409813),
     c = n(107998),
     d = n(791785),
     u = n(961830),
     f = n(444448),
     g = n(439293),
-    m = n(152242),
-    p = n(231338);
-function b(e) {
+    p = n(152242),
+    m = n(231338);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-let v = function () {
+let b = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return (t, n, r) =>
         (0, i.jsx)(g.Z, {
@@ -52,55 +52,65 @@ function h(e) {
             onClose: t,
             onComplete: n,
             transitionState: r,
-            applicationId: l,
-            analyticsLocationObject: o,
+            applicationId: a,
+            analyticsLocationObject: s,
             skuId: c,
             isGift: u,
         } = e,
-        {} = (0, s.JL)(),
-        { analyticsLocations: f } = (0, a.ZP)();
+        {} = (0, o.JL)(),
+        { analyticsLocations: f } = (0, l.ZP)();
     return (0, i.jsx)(d.PaymentModal, {
         onClose: t,
         onComplete: n,
-        applicationId: l,
+        applicationId: a,
         skuId: c,
-        renderHeader: v(u),
+        renderHeader: b(u),
         initialPlanId: null,
-        analyticsObject: o,
+        analyticsObject: s,
         analyticsLocations: f,
         transitionState: r,
     });
 }
 function x(e) {
-    let { loadId: t, applicationId: n, skuId: d, analyticsLocations: g, isGift: v = !1 } = e,
-        { analyticsLocations: x } = (0, a.ZP)(g, r.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, i.jsx)(a.Gt, {
-        value: x,
-        children: (0, i.jsx)(s.PaymentContextProvider, {
+    let {
+            loadId: t,
+            applicationId: n,
+            skuId: d,
+            analyticsLocations: g,
+            isGift: b = !1,
+            giftRecipient: x,
+            giftingOrigin: j,
+        } = e,
+        { analyticsLocations: C } = (0, l.ZP)(g, r.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, i.jsx)(l.Gt, {
+        value: C,
+        children: (0, i.jsx)(o.PaymentContextProvider, {
             loadId: t,
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return [
                     u.WA,
-                    ...(e ? [m.jM] : []),
+                    ...(e ? [p.jM] : []),
                     u.s2,
                     ...u.yp,
                     u.wo,
                     {
-                        key: o.h8.CONFIRM,
-                        renderStep: (e) => (0, i.jsx)(f.d, b({}, e)),
+                        key: s.h8.CONFIRM,
+                        renderStep: (e) => (0, i.jsx)(f.d, v({}, e)),
                     },
                 ];
-            })(v),
+            })(b),
             applicationId: n,
             skuIDs: [d],
             activeSubscription: null,
-            purchaseType: p.GZ.ONE_TIME,
-            isGift: v,
+            purchaseType: m.GZ.ONE_TIME,
+            isGift: b,
             children: (0, i.jsx)(c.c1, {
-                children: (0, i.jsx)(l.KB, {
-                    isGift: v,
-                    children: (0, i.jsx)(h, b({}, e)),
+                children: (0, i.jsx)(a.KB, {
+                    isGift: b,
+                    giftRecipient: x,
+                    giftingOrigin: j,
+                    children: (0, i.jsx)(h, v({}, e)),
                 }),
             }),
         }),
