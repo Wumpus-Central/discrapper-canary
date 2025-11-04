@@ -1,25 +1,32 @@
-e.d(n, { default: () => h });
+e.d(n, { default: () => p });
 var i = e(951288);
 e(647438);
-var s = e(793030),
+var r = e(793030),
     a = e(481060),
-    r = e(471253),
-    c = e(388032),
-    o = e(981038),
-    l = e(768982);
-function h(t) {
-    let { transitionState: n, onClose: e, channel: h } = t,
-        u = (t) => {
-            (0, r.RK)(h, t), e();
+    s = e(168107),
+    o = e(480916),
+    c = e(471253),
+    l = e(430104),
+    h = e(388032),
+    u = e(981038),
+    d = e(768982);
+function p(t) {
+    let { transitionState: n, onClose: e, channel: p } = t,
+        f = (t) => {
+            if (!t && (0, l.u1)()) {
+                s.Z.showAgeVerificationGetStartedModal({ entryPoint: o.cU.STAGE_CHANNEL_RAISE_HAND }), e();
+                return;
+            }
+            (0, c.RK)(p, t), e();
         };
-    return (0, i.jsx)(s.ExpressiveModal, {
+    return (0, i.jsx)(r.ExpressiveModal, {
         transitionState: n,
         graphic: {
             type: "image",
-            src: l.Z,
+            src: d.Z,
         },
-        title: c.intl.string(c.t.Ul1RJQ),
-        subtitle: c.intl.format(c.t["Z+3bWy"], {
+        title: h.intl.string(h.t.Ul1RJQ),
+        subtitle: h.intl.format(h.t["Z+3bWy"], {
             stageChannelHook: () =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -28,22 +35,22 @@ function h(t) {
                             color: "currentColor",
                             height: 14,
                             width: 14,
-                            className: o.channelIcon,
+                            className: u.channelIcon,
                         }),
-                        h.name,
+                        p.name,
                     ],
                 }),
         }),
-        onClose: () => (u(!0), Promise.resolve()),
+        onClose: () => (f(!0), Promise.resolve()),
         actions: [
             {
-                text: c.intl.string(c.t.L5eIZ2),
+                text: h.intl.string(h.t.L5eIZ2),
                 onClick: () => e(),
                 variant: "secondary",
             },
             {
-                text: c.intl.string(c.t.MMlhsr),
-                onClick: () => u(!1),
+                text: h.intl.string(h.t.MMlhsr),
+                onClick: () => f(!1),
                 variant: "active",
             },
         ],

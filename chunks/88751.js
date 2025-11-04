@@ -13,7 +13,7 @@ var r,
     p = n(700785),
     h = n(146085),
     m = n(590415),
-    g = n(647767);
+    g = n(430104);
 function E(e, t, n) {
     return (
         t in e
@@ -134,7 +134,7 @@ class M extends (r = o.ZP.Store) {
     getPermissionsForUser(e, t) {
         var n, r;
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || null == t || (e === (null == (n = f.default.getCurrentUser()) ? void 0 : n.id) && (0, g.N)()))
+        if (null == e || null == t || (e === (null == (n = f.default.getCurrentUser()) ? void 0 : n.id) && (0, g.NE)()))
             return y;
         let a = null == (r = b[t]) ? void 0 : r[e];
         if (null != a)

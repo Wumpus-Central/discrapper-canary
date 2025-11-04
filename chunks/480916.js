@@ -35,6 +35,8 @@ var r = n(626135),
             (e.SAFETY_FLOWS = "safety_flows"),
             (e.AUTOMATED_UNDERAGE_APPEALS = "automated_underage_appeals"),
             (e.EXPRESSIVE_GET_STARTED = "expressive_get_started"),
+            (e.STAGE_CHANNEL_RAISE_HAND = "stage_channel_raise_hand"),
+            (e.START_STAGE_PROMPT = "start_stage_prompt"),
             e
         );
     })({}),

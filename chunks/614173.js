@@ -1,22 +1,20 @@
-n.d(t, { h: () => d }), n(388685);
+n.d(t, { h: () => c }), n(388685);
 var r = n(647438),
     i = n(442837),
     l = n(592125),
     a = n(700785),
     s = n(471253),
-    o = n(647767),
-    c = n(981631);
-function d(e) {
+    o = n(981631);
+function c(e) {
     let t = (0, i.e7)([l.Z], () => l.Z.getChannel(e), [e]),
-        n = (0, o.s)(),
-        d = a.Uu(c.Plq.REQUEST_TO_SPEAK, t) && !n,
-        [u, p] = r.useState(d);
+        n = a.Uu(o.Plq.REQUEST_TO_SPEAK, t),
+        [c, d] = r.useState(n);
     return (
-        d !== u && p(d),
+        n !== c && d(n),
         [
-            u,
+            c,
             (e) => {
-                null != t && (p(e), (0, s.Pq)(t, c.Plq.REQUEST_TO_SPEAK, e));
+                null != t && (d(e), (0, s.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
             },
         ]
     );

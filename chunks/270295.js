@@ -1,22 +1,27 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(647438),
     i = n(442837),
-    l = n(314897),
-    a = n(471253),
-    s = n(590415);
-function o(e) {
-    let t = (0, i.e7)([l.default], () => l.default.getId()),
-        n = (0, s.ZP)(t, e.id),
-        o = n === s.xO.REQUESTED_TO_SPEAK || n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-        [c, d] = r.useState(o);
+    l = n(168107),
+    a = n(480916),
+    s = n(314897),
+    o = n(471253),
+    c = n(590415),
+    d = n(430104);
+function u(e) {
+    let t = (0, i.e7)([s.default], () => s.default.getId()),
+        n = (0, c.ZP)(t, e.id),
+        u = n === c.xO.REQUESTED_TO_SPEAK || n === c.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+        [p, h] = r.useState(u);
     return (
         r.useEffect(() => {
-            d(o);
-        }, [o]),
+            h(u);
+        }, [u]),
         [
-            c,
+            p,
             function () {
-                n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, a.RK)(e, !0) : (0, a.Q1)(e, !c), d(!c);
+                if ((0, d.u1)())
+                    return void l.Z.showAgeVerificationGetStartedModal({ entryPoint: a.cU.STAGE_CHANNEL_RAISE_HAND });
+                n === c.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, o.RK)(e, !0) : (0, o.Q1)(e, !p), h(!p);
             },
         ]
     );

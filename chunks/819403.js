@@ -1,47 +1,53 @@
-n.d(t, { Z: () => m });
-var l = n(951288);
-n(647438);
-var i = n(442837),
-    r = n(481060),
-    a = n(430824),
-    o = n(594174),
-    s = n(979651),
-    u = n(471253),
-    d = n(200498),
-    c = n(88751),
-    g = n(267980),
-    f = n(647767),
-    b = n(623633),
-    Z = n(388032);
-function m(e) {
-    var t;
-    let n = (0, b.Z)(),
-        m = null == n ? void 0 : n.id,
-        v = null == n ? void 0 : n.guild_id,
-        p = (0, i.e7)([a.Z], () => a.Z.getGuild(v), [v]),
-        O = (0, i.e7)([s.Z], () => (null != m ? s.Z.getVoiceStateForChannel(m, e.id) : null), [m, e.id]),
-        h = (null == (t = o.default.getCurrentUser()) ? void 0 : t.id) === e.id,
-        j = (0, g.Z)(),
-        x = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, m), [m, e.id]),
-        _ = (0, d.B)(m),
-        y = (0, f.s)();
-    if (null == n || null == p || null == O || x.speaker) return null;
-    let I = () => {
-        h ? (0, u.RK)(n, !1) : (0, u._0)(n, e.id);
+t.d(n, { Z: () => h });
+var l = t(951288);
+t(647438);
+var i = t(442837),
+    r = t(481060),
+    a = t(168107),
+    u = t(480916),
+    o = t(430824),
+    s = t(594174),
+    d = t(979651),
+    c = t(471253),
+    g = t(200498),
+    Z = t(88751),
+    f = t(267980),
+    b = t(623633),
+    O = t(430104),
+    m = t(388032);
+function h(e) {
+    var n;
+    let t = (0, b.Z)(),
+        h = null == t ? void 0 : t.id,
+        p = null == t ? void 0 : t.guild_id,
+        P = (0, i.e7)([o.Z], () => o.Z.getGuild(p), [p]),
+        j = (0, i.e7)([d.Z], () => (null != h ? d.Z.getVoiceStateForChannel(h, e.id) : null), [h, e.id]),
+        v = (null == (n = s.default.getCurrentUser()) ? void 0 : n.id) === e.id,
+        y = (0, f.Z)(),
+        N = (0, i.e7)([Z.ZP], () => Z.ZP.getPermissionsForUser(e.id, h), [h, e.id]),
+        x = (0, g.B)(h),
+        E = (0, O.sP)();
+    if (null == t || null == P || null == j || N.speaker) return null;
+    let _ = () => {
+        if (v) {
+            if ((0, O.u1)())
+                return void a.Z.showAgeVerificationGetStartedModal({ entryPoint: u.cU.STAGE_CHANNEL_RAISE_HAND });
+            (0, c.RK)(t, !1);
+        } else (0, c._0)(t, e.id);
     };
-    return h && y
+    return v && E
         ? null
-        : _
+        : x
           ? (0, l.jsx)(r.sNh, {
                 id: "invite-speaker",
-                label: h ? Z.intl.string(Z.t["W6c/Vf"]) : Z.intl.string(Z.t.VUCWcO),
-                action: I,
+                label: v ? m.intl.string(m.t["W6c/Vf"]) : m.intl.string(m.t.VUCWcO),
+                action: _,
             })
-          : j && h
+          : y && v
             ? (0, l.jsx)(r.sNh, {
                   id: "invite-speaker",
-                  label: Z.intl.string(Z.t["W6c/Vf"]),
-                  action: I,
+                  label: m.intl.string(m.t["W6c/Vf"]),
+                  action: _,
               })
             : null;
 }
