@@ -96,57 +96,49 @@ function w() {
     );
 }
 function D(e) {
-    let {
-            onComplete: t,
-            isRetry: n = !1,
-            visibleContent: o = null,
-            shouldShowExpressiveModal: s = !1,
-            classificationId: d = null,
-        } = e,
-        [f, m] = r.useState(!1),
-        g = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
-        { current: E } = r.useRef(null == g ? void 0 : g.ageVerificationStatus),
-        y = (0, c.GE)(),
-        O = r.useCallback(() => {
+    let { onComplete: t, isRetry: n = !1, visibleContent: o = null, classificationId: s = null } = e,
+        [d, f] = r.useState(!1),
+        m = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
+        { current: g } = r.useRef(null == m ? void 0 : m.ageVerificationStatus),
+        E = (0, c.GE)(),
+        y = r.useCallback(() => {
             a.Z.dispatch({
                 type: "CLOSE_AGE_VERIFICATION_MODAL",
-                status: E,
+                status: g,
             }),
                 n ||
-                    y ||
+                    E ||
                     u.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_intro_screen",
                         visibleContent: o,
                     });
-        }, [E, n, o, y]),
-        v = r.useCallback(
+        }, [g, n, o, E]);
+    return {
+        loading: d,
+        initiateAgeVerification: r.useCallback(
             async (e, n) => {
-                m(!0);
+                f(!0);
                 try {
                     a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await (0, h.pU)({
                         method: n,
-                        classificationId: null != d ? d : void 0,
+                        classificationId: null != s ? s : void 0,
                     });
                     p.Z.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
                         onComplete: t,
-                        onClose: O,
-                        onCancel: O,
+                        onClose: y,
+                        onCancel: y,
                         entryPoint: e,
-                        shouldShowExpressiveModal: s,
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(b.wQ.TIGGER_PAWTECT_ERROR), O();
+                    l.Z.showFailedToast(b.wQ.TIGGER_PAWTECT_ERROR), y();
                 } finally {
-                    m(!1);
+                    f(!1);
                 }
             },
-            [t, O, s, d],
-        );
-    return {
-        loading: f,
-        initiateAgeVerification: v,
+            [t, y, s],
+        ),
     };
 }
 function x(e) {

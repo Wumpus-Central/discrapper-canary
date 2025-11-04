@@ -84,23 +84,20 @@ function h(e) {
 }
 let m = {
     showAgeVerification: (e) => {
-        var { onClose: t, entryPoint: o, shouldShowExpressiveModal: s = !1 } = e,
-            c = _(e, ["onClose", "entryPoint", "shouldShowExpressiveModal"]);
-        let d = {
-            modalKey: l.zJ,
-            onCloseCallback: t,
-            backdropStyle: h(o),
-            Layer: a.ZP,
-        };
-        s
-            ? (0, i.ZDy)(async () => {
-                  let { default: e } = await n.e("67749").then(n.bind(n, 91175));
-                  return (t) => (0, r.jsx)(e, u({}, c, t));
-              }, d)
-            : (0, i.ZDy)(async () => {
-                  let { default: e } = await n.e("12014").then(n.bind(n, 879367));
-                  return (t) => (0, r.jsx)(e, u({}, c, t));
-              }, d);
+        var { onClose: t, entryPoint: o } = e,
+            s = _(e, ["onClose", "entryPoint"]);
+        (0, i.ZDy)(
+            async () => {
+                let { default: e } = await n.e("67749").then(n.bind(n, 91175));
+                return (t) => (0, r.jsx)(e, u({}, s, t));
+            },
+            {
+                modalKey: l.zJ,
+                onCloseCallback: t,
+                backdropStyle: h(o),
+                Layer: a.ZP,
+            },
+        );
     },
     showAgeVerificationGetStartedModal: (e) => {
         let { onClose: t, entryPoint: c } = e;
@@ -119,7 +116,7 @@ let m = {
             );
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e("80144").then(n.bind(n, 634997));
+                let { default: e } = await n.e("50614").then(n.bind(n, 17597));
                 return (t) => (0, r.jsx)(e, f(u({}, t), { entryPoint: c }));
             },
             {

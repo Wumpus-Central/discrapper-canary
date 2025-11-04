@@ -1,21 +1,20 @@
 n.d(t, { Z: () => u }), n(953529);
 var a = n(647438),
-    i = n(442837),
-    l = n(480916),
-    r = n(292263),
+    r = n(442837),
+    i = n(480916),
+    l = n(292263),
     s = n(352138),
     o = n(81643),
     c = n(469775),
     d = n(388032);
 let u = function (e) {
     let { onClose: t, onMethodClick: n, classificationId: u } = e,
-        { methods: m, loading: p } = (0, i.cj)([r.Z], () => ({
-            methods: r.Z.methods,
-            loading: r.Z.loading,
+        { methods: m, loading: p } = (0, r.cj)([l.Z], () => ({
+            methods: l.Z.methods,
+            loading: l.Z.loading,
         })),
         { initiateAgeVerification: h } = (0, o.WD)({
             onComplete: t,
-            shouldShowExpressiveModal: !0,
             classificationId: u,
         });
     return (
@@ -30,15 +29,15 @@ let u = function (e) {
                           .map((e) => {
                               let t = c.ed[e];
                               if (null == t) return null;
-                              let { title: a, description: i } = t;
+                              let { title: a, description: r } = t;
                               return {
                                   id: e,
                                   title: d.intl.string(a),
-                                  description: d.intl.string(i),
+                                  description: d.intl.string(r),
                                   onClick: async (t) => {
-                                      (0, l.x3)(t, l.d_.EXPRESSIVE_PRIMARY, l.sU.METHOD_SELECT, e),
+                                      (0, i.x3)(t, i.d_.EXPRESSIVE_PRIMARY, i.sU.METHOD_SELECT, e),
                                           null == n || n(),
-                                          await h(l.cU.EXPRESSIVE_GET_STARTED, e);
+                                          await h(i.cU.EXPRESSIVE_GET_STARTED, e);
                                   },
                               };
                           })
