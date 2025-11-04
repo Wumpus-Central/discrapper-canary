@@ -1,54 +1,52 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    o = n(809206),
-    s = n(906732),
-    l = n(18438),
-    c = n(318110),
-    u = n(150039),
-    d = n(993413),
-    f = n(388032),
-    _ = n(526265);
-function p(e) {
-    let { user: t, guild: n, titleIcon: p } = e,
-        { analyticsLocations: h } = (0, s.ZP)(),
-        m = null != n,
+    o = n(906732),
+    s = n(318110),
+    l = n(150039),
+    c = n(993413),
+    u = n(388032),
+    d = n(526265);
+function f(e) {
+    let { user: t, guild: n, titleIcon: f } = e,
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        p = null != n,
         {
-            userNameplate: g,
-            guildNameplate: E,
-            pendingNameplate: b,
-            pendingErrors: y,
-        } = (0, u.Zx)(t, null == n ? void 0 : n.id),
-        O = void 0 === b ? (m ? E : g) != null : null != b,
-        v = i.useCallback(() => {
-            (0, c.f)({
-                analyticsLocations: h,
+            userNameplate: h,
+            guildNameplate: m,
+            pendingNameplate: g,
+            pendingErrors: E,
+        } = (0, l.Zx)(t, null == n ? void 0 : n.id),
+        b = void 0 === g ? (p ? m : h) != null : null != g,
+        y = i.useCallback(() => {
+            (0, s.f)({
+                analyticsLocations: _,
                 guildId: null == n ? void 0 : n.id,
             });
-        }, [h, null == n ? void 0 : n.id]),
-        I = i.useCallback(() => {
-            (null == n ? void 0 : n.id) != null ? (0, l.RH)(null) : (0, o.Rx)(null);
+        }, [_, null == n ? void 0 : n.id]),
+        O = i.useCallback(() => {
+            (0, l.Wh)(null, null == n ? void 0 : n.id);
         }, [null == n ? void 0 : n.id]);
-    return (0, r.jsx)(d.Z, {
-        title: f.intl.string(f.t.x5CoXR),
-        titleIcon: p,
-        errors: y,
+    return (0, r.jsx)(c.Z, {
+        title: u.intl.string(u.t.x5CoXR),
+        titleIcon: f,
+        errors: E,
         children: (0, r.jsxs)("div", {
-            className: _.section,
+            className: d.section,
             children: [
                 (0, r.jsx)(a.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: f.intl.string(f.t.BwdeM1),
-                    onClick: v,
+                    text: u.intl.string(u.t.BwdeM1),
+                    onClick: y,
                 }),
-                O &&
+                b &&
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: m ? f.intl.string(f.t.CHf9iJ) : f.intl.string(f.t["9zwziY"]),
-                        onClick: I,
+                        text: p ? u.intl.string(u.t.CHf9iJ) : u.intl.string(u.t["9zwziY"]),
+                        onClick: O,
                     }),
             ],
         }),

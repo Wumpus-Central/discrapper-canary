@@ -1,134 +1,135 @@
 n.d(t, {
     _Y: () => T,
-    aB: () => S,
-    th: () => E,
-    ub: () => N,
+    aB: () => E,
+    th: () => N,
+    ub: () => O,
 }),
     n(388685),
     n(457542);
 var a = n(647438),
-    i = n(524437),
-    l = n(809206),
-    r = n(153867),
+    r = n(524437),
+    i = n(809206),
+    l = n(153867),
     s = n(857595),
     o = n(607070),
     c = n(1870),
     d = n(884697),
-    u = n(164946),
-    m = n(210887),
-    p = n(695346),
-    h = n(675478),
-    x = n(25990),
-    g = n(594174),
-    f = n(74538),
-    b = n(981631),
-    v = n(469115),
-    j = n(959517);
-let _ = [b.BRd.DARK, b.BRd.LIGHT, b.BRd.DARKER, b.BRd.MIDNIGHT],
-    y = [i.Pi.COMPACT, i.Pi.COZY, i.Pi.DEFAULT];
-function C(e) {
+    u = n(150039),
+    m = n(164946),
+    p = n(210887),
+    h = n(695346),
+    x = n(675478),
+    g = n(25990),
+    f = n(594174),
+    b = n(74538),
+    v = n(981631),
+    j = n(469115),
+    _ = n(959517);
+let y = [v.BRd.DARK, v.BRd.LIGHT, v.BRd.DARKER, v.BRd.MIDNIGHT],
+    C = [r.Pi.COMPACT, r.Pi.COZY, r.Pi.DEFAULT];
+function S(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-async function S() {
+async function E() {
     let e = (function () {
-            let e = g.default.getCurrentUser();
-            return f.ZP.canUseClientThemes(e) ? Object.keys(v.qt).map((e) => Number(e)) : [];
+            let e = f.default.getCurrentUser();
+            return b.ZP.canUseClientThemes(e) ? Object.keys(j.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
         if (t) {
             let t,
                 a = [...e, null],
-                i = C(a);
-            if (null != i) {
+                r = S(a);
+            if (null != r) {
                 var n;
-                let e = v.qt[i];
-                t = null != (n = null == e ? void 0 : e.theme) ? n : b.BRd.DARK;
-            } else t = C([b.BRd.DARK, b.BRd.DARKER, b.BRd.MIDNIGHT]);
-            await r.ZI(
+                let e = j.qt[r];
+                t = null != (n = null == e ? void 0 : e.theme) ? n : v.BRd.DARK;
+            } else t = S([v.BRd.DARK, v.BRd.DARKER, v.BRd.MIDNIGHT]);
+            await l.ZI(
                 {
                     theme: t,
-                    backgroundGradientPresetId: null != i ? i : void 0,
+                    backgroundGradientPresetId: null != r ? r : void 0,
                     customUserThemeSettings: void 0,
                 },
-                h.fy.INFREQUENT_USER_ACTION,
+                x.fy.INFREQUENT_USER_ACTION,
             );
         } else {
-            let e = C(_);
-            await r.ZI(
+            let e = S(y);
+            await l.ZI(
                 {
                     theme: e,
                     backgroundGradientPresetId: void 0,
                     customUserThemeSettings: void 0,
                 },
-                h.fy.INFREQUENT_USER_ACTION,
+                x.fy.INFREQUENT_USER_ACTION,
             );
         }
     } catch (e) {}
 }
-async function E() {
+async function N() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
         a = t.length > 0,
-        i = n.length > 0;
-    if (a || i)
+        r = n.length > 0;
+    if (a || r)
         try {
             if (a) {
-                let e = C([...t, null]);
-                (0, l.cV)(e);
+                let e = S([...t, null]);
+                (0, u.PO)(e);
             }
-            if (i) {
-                let e = C([...n, null]);
-                (0, l.Rx)(e);
+            if (r) {
+                let e = S([...n, null]);
+                (0, u.Wh)(e);
             }
-            let e = x.Z.getAllPending(),
-                r = (0, u.ED)(e);
-            await (0, l.Mn)(r).finally(l.si);
+            let e = g.Z.getAllPending(),
+                l = (0, m.ED)(e);
+            await (0, i.Mn)(l).finally(i.si);
         } catch (e) {}
 }
 function T() {
     try {
-        let e = C(b.yqN.FONT_SIZES);
+        let e = S(v.yqN.FONT_SIZES);
         (0, s.oL)(e);
-        let t = C(j.fP);
+        let t = S(_.fP);
         (0, s.ZZ)(t);
-        let n = C(y);
-        p.YC.updateSetting(n);
+        let n = S(C);
+        h.YC.updateSetting(n);
     } catch (e) {}
 }
-function N() {
+function O() {
     a.useEffect(() => {
-        var e, t, n, a, i;
-        let f = g.default.getCurrentUser(),
-            b = p.L1.getSetting(),
-            v = c.Z.purchases,
-            j = (0, d.Ad)(v),
-            _ = (0, d.jT)(v),
-            y = m.Z.theme,
-            C = b.backgroundGradientPresetId,
-            S = null == f || null == (e = f.avatarDecoration) ? void 0 : e.skuId,
-            E = null == f || null == (n = f.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            T = null != S && null != (a = j.find((e) => e.skuId === S)) ? a : null,
-            N = null != E && null != (i = _.find((e) => e.skuId === E)) ? i : null,
-            O = o.Z.fontSize,
-            P = o.Z.messageGroupSpacing,
-            w = p.YC.getSetting();
+        var e, t, n, a, r;
+        let b = f.default.getCurrentUser(),
+            v = h.L1.getSetting(),
+            j = c.Z.purchases,
+            _ = (0, d.Ad)(j),
+            y = (0, d.jT)(j),
+            C = p.Z.theme,
+            S = v.backgroundGradientPresetId,
+            E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
+            N = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            T = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
+            O = null != N && null != (r = y.find((e) => e.skuId === N)) ? r : null,
+            P = o.Z.fontSize,
+            I = o.Z.messageGroupSpacing,
+            w = h.YC.getSetting();
         return () => {
             try {
-                r.ZI(
+                l.ZI(
                     {
-                        theme: y,
-                        backgroundGradientPresetId: null != C ? C : void 0,
+                        theme: C,
+                        backgroundGradientPresetId: null != S ? S : void 0,
                         customUserThemeSettings: void 0,
                     },
-                    h.fy.INFREQUENT_USER_ACTION,
+                    x.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, l.cV)(T),
-                    (0, l.Rx)(N);
-                let e = x.Z.getAllPending(),
-                    t = (0, u.ED)(e);
-                (0, l.Mn)(t).finally(l.si), (0, s.oL)(O), (0, s.ZZ)(P), p.YC.updateSetting(w);
+                    (0, u.PO)(T),
+                    (0, u.Wh)(O);
+                let e = g.Z.getAllPending(),
+                    t = (0, m.ED)(e);
+                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
             } catch (e) {}
         };
     }, []);
