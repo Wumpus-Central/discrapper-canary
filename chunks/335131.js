@@ -116,7 +116,6 @@ let P = (e) => {
         x(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) &&
         x(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) &&
         x(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) &&
-        x(null == e ? void 0 : e.includePopularPicks, null == t ? void 0 : t.includePopularPicks) &&
         x(null == e ? void 0 : e.includeDynamicBlocks, null == t ? void 0 : t.includeDynamicBlocks) &&
         x(null == e ? void 0 : e.includeNameplatesOnMobile, null == t ? void 0 : t.includeNameplatesOnMobile) &&
         (null == e ? void 0 : e.countryCode) === (null == t ? void 0 : t.countryCode) &&

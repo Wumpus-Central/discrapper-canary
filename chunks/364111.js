@@ -56,7 +56,6 @@ function p(e, t, n) {
                 (n = n =
                     {
                         variantsReturnStyle: d,
-                        includePopularPicks: !0,
                         includeDynamicBlocks: !0,
                         shopHomeConfig: I,
                         skipNumCategories: f,
