@@ -95,7 +95,7 @@ let j = {
     },
     ExistingUserAgeGatePrompt: async () => {
         let { default: e } = await Promise.all([n.e("1716"), n.e("8430")]).then(n.bind(n, 701509));
-        return (t) => (0, a.jsx)(e, v(b({}, t), { source: h.L0.NSFW_CHANNEL }));
+        return (t) => (0, a.jsx)(e, v(b({}, t), { source: h.L0.NSFW_SERVER }));
     },
     ExistingUserAgeGateUnderage: async () => {
         let { default: e } = await n.e("80478").then(n.bind(n, 920644));

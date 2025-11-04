@@ -1,21 +1,41 @@
 n.d(t, {
-    Rp: () => l,
-    dx: () => a,
-    ed: () => c,
-    ux: () => s,
-    zJ: () => o,
+    Rp: () => _,
+    dx: () => c,
+    ed: () => p,
+    uH: () => u,
+    ux: () => f,
+    zJ: () => d,
 }),
-    n(388685),
-    n(63063),
-    n(168107);
-var r = n(480916);
-n(981631);
-var i = n(153177);
-n(388032);
-let a = new Set([r.cU.NSFW_GUILD]),
-    o = "AGE_VERIFICATION_MODAL_KEY",
-    s = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
-var l = (function (e) {
+    n(388685);
+var r = n(63063),
+    i = n(168107),
+    a = n(480916),
+    o = n(981631),
+    s = n(153177),
+    l = n(388032);
+let c = new Set([a.cU.NSFW_GUILD]),
+    u = (e) => [
+        {
+            title: l.intl.string(l.t.HphYKp),
+            description: l.intl.string(l.t["GCZC+9"]),
+        },
+        {
+            title: l.intl.string(l.t.nkO4L3),
+            description: l.intl.string(l.t.rHZFsH),
+        },
+        {
+            title: l.intl.string(l.t.aVwLfn),
+            description: l.intl.format(l.t.n5vd1E, {
+                handleOnHelpUrlHook: () => {
+                    i.Z.openUrl(r.Z.getArticleURL(o.BhN.TIGGER_PAWTECT_SYSTEM_DMS)),
+                        (0, a.x3)(e, a.d_.PRIMARY, a.sU.SYSTEM_DMS_LEARN_MORE);
+                },
+            }),
+        },
+    ],
+    d = "AGE_VERIFICATION_MODAL_KEY",
+    f = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
+var _ = (function (e) {
     return (
         (e[(e.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
         (e[(e.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
@@ -23,13 +43,13 @@ var l = (function (e) {
         e
     );
 })({});
-let c = {
+let p = {
     1: {
-        title: i.default["2yLvkS"],
-        description: i.default.eJmat5,
+        title: s.default["2yLvkS"],
+        description: s.default.eJmat5,
     },
     2: {
-        title: i.default.dwkwo0,
-        description: i.default.ZdmRwW,
+        title: s.default.dwkwo0,
+        description: s.default.ZdmRwW,
     },
 };

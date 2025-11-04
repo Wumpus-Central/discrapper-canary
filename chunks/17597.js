@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685), n(953529);
+n.d(t, { default: () => E }), n(388685), n(953529);
 var a = n(951288),
     r = n(647438),
     i = n(772848),
@@ -21,56 +21,33 @@ var a = n(951288),
     y = n(388032),
     C = n(70402),
     S = n(736056);
-function E(e) {
-    let { modalSessionId: t, entryPoint: n } = e;
-    return (0, m.GE)()
-        ? (0, a.jsx)(o.Text, {
-              variant: "text-xs/medium",
-              children: y.intl.format(_.default.htWh1G, {
-                  handleOnHelpUrlHook: () => {
-                      x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, g.x3)(t, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
-                  },
-              }),
-          })
-        : n === g.cU.SAFETY_FLOWS
-          ? (0, a.jsx)(o.Avr, {
-                size: "sm",
-                textVariant: "text-sm/medium",
-                text: y.intl.string(y.t["2jxGer"]),
-                onClick: () => {
-                    (0, g.x3)(t, g.d_.EXPRESSIVE_PRIMARY, g.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
-                },
-            })
-          : null;
-}
-let N = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: T } = e,
-        [O, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = r.useRef(O),
-        [w, k] = (0, c.US)([O], void 0, !0),
-        R = r.useMemo(() => (0, i.Z)(), []),
-        A = r.useRef(!1),
-        Z = (0, m.GE)();
+let E = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: E, onComplete: T, dismissable: N, classificationId: O } = e,
+        [P, I] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        w = r.useRef(P),
+        [k, R] = (0, c.US)([P], void 0, !0),
+        A = r.useMemo(() => (0, i.Z)(), []),
+        Z = r.useRef(!1),
+        D = (0, m.GE)();
     r.useEffect(() => {
-        I.current = w;
-    }, [w]);
-    let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
+        w.current = k;
+    }, [k]);
+    let { loading: L, ageVerificationMethods: M } = (0, b.Z)({
         onClose: () => {
-            null == j || j(), u();
+            null == T || T(), E();
         },
         onMethodClick: () => {
-            P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            I(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: T,
+        classificationId: O,
     });
     return (
         r.useLayoutEffect(
             () => () => {
-                if (A.current) return;
-                let e = I.current;
+                if (Z.current) return;
+                let e = w.current;
                 null != e &&
-                    ((A.current = !0),
+                    ((Z.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -79,11 +56,11 @@ let N = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, g.lA)(R, g.d_.EXPRESSIVE_PRIMARY, n);
-        }, [R, n]),
+            (0, g.lA)(A, g.d_.EXPRESSIVE_PRIMARY, n);
+        }, [A, n]),
         (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
-            onClose: u,
+            onClose: E,
             gradientColor: "blue",
             dismissable: N,
             graphic: {
@@ -91,18 +68,33 @@ let N = function (e) {
                 src: S.Z,
             },
             title: y.intl.string(y.t.JHNunj),
-            subtitle: Z
+            subtitle: D
                 ? y.intl.string(_.default["1/6wta"])
                 : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, g.x3)(R, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
+                              (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
                       },
                   }),
-            actionBarInput: (0, a.jsx)(E, {
-                modalSessionId: R,
-                entryPoint: n,
-            }),
+            actionBarInput: D
+                ? (0, a.jsx)(o.Text, {
+                      variant: "text-xs/medium",
+                      children: y.intl.format(_.default.htWh1G, {
+                          handleOnHelpUrlHook: () => {
+                              x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
+                                  (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
+                          },
+                      }),
+                  })
+                : (0, a.jsx)(o.Avr, {
+                      size: "sm",
+                      textVariant: "text-sm/medium",
+                      text: y.intl.string(y.t["2jxGer"]),
+                      onClick: () => {
+                          (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LOG_OUT),
+                              (0, u.R)("age_verification_get_started_modal");
+                      },
+                  }),
             children: (0, a.jsxs)(o.Kqy, {
                 direction: "vertical",
                 gap: 16,
@@ -131,7 +123,7 @@ let N = function (e) {
                             }),
                         ],
                     }),
-                    null == L || 0 === L.length
+                    null == M || 0 === M.length
                         ? (0, a.jsxs)(o.Kqy, {
                               direction: "vertical",
                               align: "center",
@@ -155,7 +147,7 @@ let N = function (e) {
                         : (0, a.jsx)(o.Kqy, {
                               direction: "vertical",
                               gap: 8,
-                              children: L.map((e) => {
+                              children: M.map((e) => {
                                   let { title: t, description: n, onClick: r } = e;
                                   return (0, a.jsx)(
                                       d.JZ,
@@ -163,8 +155,8 @@ let N = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: D,
-                                          onButtonPress: () => r(R),
+                                          buttonDisabled: L,
+                                          onButtonPress: () => r(A),
                                       },
                                       t,
                                   );

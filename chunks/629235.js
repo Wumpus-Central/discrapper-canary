@@ -15,6 +15,7 @@ let u = function (e) {
         })),
         { initiateAgeVerification: h } = (0, o.WD)({
             onComplete: t,
+            shouldShowExpressiveModal: !0,
             classificationId: u,
         });
     return (
