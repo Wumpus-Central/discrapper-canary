@@ -1,42 +1,40 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(399606),
-    a = n(755721),
-    o = n(481060),
-    s = n(130067),
-    l = n(131951),
-    c = n(63063),
-    u = n(981631),
-    d = n(65154),
-    f = n(388032),
-    _ = n(830026);
-function p() {
-    return (0, i.e7)([l.Z], () => l.Z.supports(d.AN.LOOPBACK))
+    a = n(481060),
+    o = n(130067),
+    s = n(131951),
+    l = n(63063),
+    c = n(981631),
+    u = n(65154),
+    d = n(388032),
+    f = n(830026);
+function _() {
+    return (0, i.e7)([s.Z], () => s.Z.supports(u.AN.LOOPBACK))
         ? (0, r.jsx)("div", {
-              className: _.micTest,
-              children: (0, r.jsx)(s.Z, {
-                  title: f.intl.string(f.t.gyljWE),
-                  description: f.intl.string(f.t["8hhsCU"]),
-                  notchBackground: s._.GRAY,
-                  captionVoice: f.intl.string(f.t.bp3JOV),
+              className: f.micTest,
+              children: (0, r.jsx)(o.Z, {
+                  title: d.intl.string(d.t.gyljWE),
+                  description: d.intl.string(d.t["8hhsCU"]),
+                  notchBackground: o._.GRAY,
+                  captionVoice: d.intl.string(d.t.bp3JOV),
                   captionNoVoice: (0, r.jsxs)(r.Fragment, {
                       children: [
-                          f.intl.string(f.t["MA+OZh"]),
-                          (0, r.jsx)(o.Anchor, {
-                              className: _.micTestHelpLink,
-                              href: c.Z.getArticleURL(u.BhN.NO_INPUT_DETECTED),
-                              children: f.intl.string(f.t.RYKKox),
+                          d.intl.string(d.t["MA+OZh"]),
+                          (0, r.jsx)(a.Anchor, {
+                              className: f.micTestHelpLink,
+                              href: l.Z.getArticleURL(c.BhN.NO_INPUT_DETECTED),
+                              children: d.intl.string(d.t.RYKKox),
                           }),
                       ],
                   }),
-                  buttonTest: f.intl.string(f.t.c4qHt6),
-                  buttonStop: f.intl.string(f.t.I6OnJ3),
-                  buttonClassName: _.micTestButton,
-                  buttonColor: a.zx.Colors.BRAND,
+                  buttonTest: d.intl.string(d.t.c4qHt6),
+                  buttonStop: d.intl.string(d.t.I6OnJ3),
+                  buttonVariant: "primary",
                   location: {
-                      page: u.ZY5.USER_SETTINGS,
-                      section: u.jXE.SETTINGS_VOICE_AND_VIDEO,
+                      page: c.ZY5.USER_SETTINGS,
+                      section: c.jXE.SETTINGS_VOICE_AND_VIDEO,
                   },
               }),
           })

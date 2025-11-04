@@ -51053,7 +51053,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58234,9 +58234,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -86488,6 +86488,11 @@ html .invoiceCancelRow__968a4 {
     width: 100%
 }
 
+.buttonWrapper__011b7 {
+    -webkit-margin-end: var(--space-8);
+    margin-inline-end: var(--space-8)
+}
+
 .micTest__169b3 {
     margin-bottom: 16px
 }
@@ -86495,13 +86500,6 @@ html .invoiceCancelRow__968a4 {
 .micTestHelpLink__169b3 {
     -webkit-margin-start: 4px;
     margin-inline-start: 4px
-}
-
-.micTestButton__169b3 {
-    flex: 1 0 auto;
-    padding: 0 4px;
-    -webkit-margin-end: 8px;
-    margin-inline-end: 8px
 }
 
 .krispCard_fb7bea {

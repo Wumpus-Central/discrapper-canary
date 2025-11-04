@@ -4,4 +4,5 @@ e.exports = {
     micTestCaption: "micTestCaption__011b7",
     buttonSizer: "buttonSizer__011b7",
     buttonSizerSpacer: "buttonSizerSpacer__011b7",
+    buttonWrapper: "buttonWrapper__011b7",
 };

@@ -6,7 +6,6 @@ e.exports = {
     noiseCancellationTooltip: "noiseCancellationTooltip_e131a9",
     krispLogo: "krispLogo_e131a9",
     krispLink: "krispLink_e131a9",
-    micTestButton: "micTestButton_e131a9",
     connection: "connection_e131a9",
     voiceUsers: "voiceUsers_e131a9",
     actionButtons: "actionButtons_e131a9",
