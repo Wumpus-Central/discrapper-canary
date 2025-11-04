@@ -1,5 +1,5 @@
 function a(e) {
-    var t, n, a, i, l, r, s;
+    var t, n, a, r, i, l, s;
     let o = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
@@ -27,11 +27,12 @@ function a(e) {
                 ? s
                 : "",
         provider:
-            null == (r = e.tenant_metadata) || null == (l = r.guild_monetization) || null == (i = l.game_server)
+            null == (l = e.tenant_metadata) || null == (i = l.guild_monetization) || null == (r = i.game_server)
                 ? void 0
-                : i.provider,
+                : r.provider,
         plans: o,
         baseCost: c,
+        disabled: e.disabled,
     };
 }
 n.d(t, { m: () => a }), n(953529), n(642613), n(388685);

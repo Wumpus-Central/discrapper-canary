@@ -101,6 +101,7 @@
   "r9pa9K": "{boostCount, plural, one { Boost} other { Boosts} }",
   "Az5bjs": "What are we playing? Choose a game to get started.",
   "NIwDqW": "Start a new game server",
+  "uVpJYf": "New \"!!{gameName}!!\" servers can’t be started right now. Please check back later.",
   "xta2U9": "You’ve reached the limit of !!{maxInstances}!! game servers. Disable one to create a new server.",
   "BOWmmT": "Your game servers",
   "3vWDMz": "Start a game server",
