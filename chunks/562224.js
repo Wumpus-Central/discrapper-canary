@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(268146),
     i = n(872810),
     a = n(594190),
@@ -14,10 +14,11 @@ var r = n(268146),
     h = n(580991),
     m = n(451467),
     g = n(537413),
-    E = n(143135),
-    b = n(37113),
-    y = n(761274);
-function O(e, t, n) {
+    E = n(960861),
+    b = n(143135),
+    y = n(37113),
+    O = n(761274);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +31,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +42,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,37 +59,40 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
+function A(e) {
     return e.hasOwnProperty("pid");
 }
-function A(e) {
-    if (S(e)) return { pid: e.pid };
-    let t = (0, E.Z)(void 0, e, a.ZP.getRunningGames()),
-        n =
-            !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t
-                ? null
-                : t.pid;
-    return null != n
-        ? { pid: n }
-        : {
+function C(e) {
+    var t;
+    if (A(e)) return { pid: e.pid };
+    let n = (0, b.Z)(void 0, e, a.ZP.getRunningGames()),
+        i = !(0, p.isWindows)() || null == n || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)),
+        o = null != n ? n.pid : null;
+    return i || null == o
+        ? (null == o &&
+              (null == (t = e.id) ? void 0 : t.startsWith("prepicked:")) &&
+              (o = E.ZP.getLastPickedContentPID()),
+          {
               sourceId: e.id,
               sourceName: e.name,
               sourceIcon: e.icon,
-          };
+              sourcePid: o,
+          })
+        : { pid: o };
 }
-async function C(e, t) {
-    var n, p, E, O, I, S, C, N;
+async function N(e, t) {
+    var n, p, E, b, v, T, A, N;
     let R = _.default.getCurrentUser(),
         P = f.Z.getVoiceChannelId(),
         w = c.Z.getChannel(P),
@@ -99,24 +103,24 @@ async function C(e, t) {
     if (null == (L = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
         !d.Z.getUseSystemScreensharePicker() &&
-        !(await o.Z.hasPermission(y.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
+        !(await o.Z.hasPermission(O.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
     let { preset: M, resolution: j, fps: k, soundshareEnabled: U } = l.Z.getState(),
         G = null != (E = null == t ? void 0 : t.preset) ? E : M,
         { allowAutoQuality: B } = (0, h.IK)({ location: "startStreamWithSource" });
-    G !== b.ApplicationStreamPresets.PRESET_AUTO || B || (G = b.ApplicationStreamPresets.PRESET_VIDEO);
-    let Z = G === b.ApplicationStreamPresets.PRESET_AUTO ? b.ApplicationStreamPresets.PRESET_VIDEO : G,
-        [F, V] = null != (O = (0, g.Z)(Z, R, x)) ? O : [],
-        H = null != (I = null != F ? F : null == t ? void 0 : t.resolution) ? I : j,
-        Y = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : k,
-        W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
+    G !== y.ApplicationStreamPresets.PRESET_AUTO || B || (G = y.ApplicationStreamPresets.PRESET_VIDEO);
+    let Z = G === y.ApplicationStreamPresets.PRESET_AUTO ? y.ApplicationStreamPresets.PRESET_VIDEO : G,
+        [F, V] = null != (b = (0, g.Z)(Z, R, x)) ? b : [],
+        H = null != (v = null != F ? F : null == t ? void 0 : t.resolution) ? v : j,
+        Y = null != (T = null != V ? V : null == t ? void 0 : t.fps) ? T : k,
+        W = null != (A = null == t ? void 0 : t.previewDisabled) ? A : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (
         (0, m.Z)(Z, H, Y, R, x, w) ||
-            ((G = b.ApplicationStreamPresets.PRESET_VIDEO),
-            (H = b.ApplicationStreamResolutions.RESOLUTION_720),
-            (Y = b.ApplicationStreamFPS.FPS_30)),
+            ((G = y.ApplicationStreamPresets.PRESET_VIDEO),
+            (H = y.ApplicationStreamResolutions.RESOLUTION_720),
+            (Y = y.ApplicationStreamFPS.FPS_30)),
         (0, i.Rc)({
             preset: G,
             resolution: H,
@@ -126,7 +130,7 @@ async function C(e, t) {
         (0, i.WH)(
             D,
             P,
-            T(v({}, A(L)), {
+            S(I({}, C(L)), {
                 audioSourceId: (null == (p = L.id) ? void 0 : p.startsWith(r.vA.CAMERA))
                     ? null == t
                         ? void 0

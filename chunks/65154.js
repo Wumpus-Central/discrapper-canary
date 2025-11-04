@@ -286,6 +286,7 @@ var W = (function (e) {
             (e.SOFTWARE_FALLBACK_ON_ERRORS = "software_fallback_on_errors"),
             (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = "software_fallback_on_consecutive_errors"),
             (e.BROWSER_HEVC = "browser_hevc"),
+            (e.LOW_LATENCY_RATE_CONTROL = "low_latency_rate_control"),
             e
         );
     })({}),

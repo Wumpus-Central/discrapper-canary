@@ -75,32 +75,34 @@ function k(e) {
             appContext: i,
             pid: a,
             sourceId: o,
-            nativePickerStyleUsed: s,
-            goLiveModalDurationMs: c,
-            analyticsLocations: u,
+            sourcePid: s,
+            nativePickerStyleUsed: c,
+            goLiveModalDurationMs: u,
+            analyticsLocations: d,
         } = e,
-        d = (0, p.V9)({
+        _ = (0, p.V9)({
             streamType: t,
             guildId: n,
             channelId: r,
             ownerId: E.default.getId(),
         });
     if (
-        ((S[d] = {
+        ((S[_] = {
             appContext: i,
-            analyticsLocations: u,
+            analyticsLocations: d,
         }),
         l().forEach(D, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
-            t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
+            t.setActionContext(i), t.setNativePickerStyleUsed(c), n && t.trackStart();
         }),
-        (N[d] = o),
-        (C[d] = a),
+        null == a && (a = s),
+        (N[_] = o),
+        (C[_] = a),
         null != a)
     ) {
         let e = f.ZP.getGameForPID(a);
         null != e &&
-            (A[d] = {
+            (A[_] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
@@ -109,7 +111,7 @@ function k(e) {
                 gameMetadata: e.gameMetadata,
             });
     }
-    null != c ? (R[d] = c) : delete R[d];
+    null != u ? (R[_] = u) : delete R[_];
 }
 function U(e) {
     let { appContext: t, streamKey: n } = e;
