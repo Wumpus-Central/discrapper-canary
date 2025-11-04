@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(388032);
 function b(e) {
     let { user: t, application: n, onDismiss: b } = e,
-        { trackUserProfileEditAction: y } = (0, c.KZ)(),
-        h = i.useMemo(
+        { trackUserProfileEditAction: h } = (0, c.KZ)(),
+        y = i.useMemo(
             () =>
                 new s.q({
                     type: a.l.APPLICATION,
@@ -24,17 +24,18 @@ function b(e) {
             [n.id],
         ),
         v = i.useCallback(() => {
-            null != h &&
-                ((0, u.qH)(h.type, h, !0),
-                y({
+            null != y &&
+                ((0, u.qH)(y.type, y, !0),
+                h({
                     action: "WIDGET_ADDED",
-                    widgetEdited: h.type,
+                    widgetEdited: y.type,
                 }),
                 (0, d.L$)(g.qb.WIDGET_ADDED));
-        }, [h, y]);
+        }, [y, h]);
     return (0, r.jsx)(f.Z, {
         user: t,
-        widget: h,
+        widget: y,
+        subtle: !0,
         cta: (0, r.jsx)(f.Z.Cta, {
             heading: m.intl.format(m.t.OIzLCy, { applicationName: n.name }),
             content: m.intl.format(m.t.BQySru, { applicationName: n.name }),

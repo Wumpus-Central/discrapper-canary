@@ -7256,6 +7256,7 @@
   "2PJ1NP": "You gifted a subscription!",
   "mdLtb5": "You couldn't claim this gift because you already have it.",
   "jcSP+g": "Gift Inventory",
+  "6plpZi": "!!{applicationName}!! — {copies, plural, one { copy} other { copies} }",
   "6u680g": "Available Gifts",
   "sohr7I": "Claim",
   "zMcvcA": "{copies, plural, one { copy} other { copies} }",

@@ -50901,7 +50901,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58234,9 +58234,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -81954,9 +81954,23 @@ div.nagbar_d74ef8 {
     color: var(--primary-300)
 }
 
-.subTextHeader__6bc46 {
+.subtitleHeader__6bc46 {
+    align-items: center;
     color: var(--text-muted);
-    font-weight: var(--font-weight-semibold)
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--font-weight-semibold);
+    gap: 4px
+}
+
+.applicationSubtitleHeader__6bc46 {
+    margin-top: 2px
+}
+
+.applicationSubtitleIcon__6bc46 {
+    border-radius: 6px;
+    height: 20px;
+    width: 20px
 }
 
 .codeText__6bc46 {
@@ -82027,7 +82041,7 @@ div.nagbar_d74ef8 {
     background: var(--primary-300)
 }
 
-.seasonalGiftBox__6bc46 {
+.giftIcon__6bc46 {
     height: 40px;
     width: 40px
 }
