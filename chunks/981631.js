@@ -1,6 +1,6 @@
 n.d(t, {
     $7l: () => b.$7,
-    $92: () => e3,
+    $92: () => e2,
     $Ab: () => x,
     $R1: () => E.$R,
     $VG: () => E.$V,
@@ -18,7 +18,7 @@ n.d(t, {
     AzA: () => rm,
     B1h: () => E.B1,
     B9o: () => tf,
-    BFP: () => t2,
+    BFP: () => t3,
     BRd: () => E.BR,
     BVn: () => rV,
     BZL: () => E.BZ,
@@ -90,7 +90,7 @@ n.d(t, {
     McO: () => rY,
     NYc: () => E.NY,
     NYg: () => nV,
-    N_j: () => n3,
+    N_j: () => n2,
     NgX: () => T,
     O0b: () => n_,
     O0n: () => es,
@@ -104,7 +104,7 @@ n.d(t, {
     OYC: () => $,
     OcF: () => e9,
     Odu: () => ee,
-    PEY: () => e2,
+    PEY: () => e3,
     PNu: () => ej,
     POd: () => rf,
     PRK: () => e0,
@@ -148,7 +148,7 @@ n.d(t, {
     TzF: () => nJ,
     U66: () => E.U6,
     ULH: () => P,
-    UWR: () => t3,
+    UWR: () => t2,
     Ucd: () => rU,
     Uk1: () => E.Uk,
     UkZ: () => rw,
@@ -169,7 +169,7 @@ n.d(t, {
     X6Q: () => E.X6,
     X7u: () => E.X7,
     XAJ: () => eT,
-    XKF: () => n2,
+    XKF: () => n3,
     XmY: () => e1,
     Xyh: () => e4,
     YeM: () => ec,
@@ -1945,6 +1945,7 @@ let em = "@me",
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => "/app/invite-with-guild-onboarding/".concat(e),
+        APP_WITH_GIFT_CODE: (e) => "/app/gifts/".concat(e),
         ACTIVITY: "/activity",
         ACTIVITIES: "/activities",
         ACTIVITIES_HAPPENING_NOW: "/activities/happening-now",
@@ -2191,8 +2192,8 @@ let ew = 100,
     e$ = 10485760,
     e0 = 524288000,
     e1 = (e) => "||".concat(e, "||"),
-    e3 = /^\|\|([\s\S]+?)\|\|/,
-    e2 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e2 = /^\|\|([\s\S]+?)\|\|/,
+    e3 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e4 = /^\d{17,19}$/;
 var e8 = (function (e) {
         return (
@@ -3678,8 +3679,8 @@ var t$ = (function (e) {
     t1 = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let t3 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
-    t2 = new Set(["facebook", "contacts"]),
+let t2 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
+    t3 = new Set(["facebook", "contacts"]),
     t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t8 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
@@ -6053,8 +6054,8 @@ let n1 = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    n3 = 6016,
-    n2 = 3384;
+    n2 = 6016,
+    n3 = 3384;
 var n4 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),

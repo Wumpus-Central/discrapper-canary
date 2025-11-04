@@ -97,10 +97,11 @@ function y(e) {
             spacing: T,
             layerContext: S,
             targetElementRef: A,
-            caretConfig: C,
-            positionKey: N,
+            anchorRef: C,
+            caretConfig: N,
+            positionKey: R,
         } = e,
-        R = E(e, [
+        P = E(e, [
             "children",
             "text",
             "keyboardShortcut",
@@ -112,15 +113,16 @@ function y(e) {
             "spacing",
             "layerContext",
             "targetElementRef",
+            "anchorRef",
             "caretConfig",
             "positionKey",
         ]);
-    let P = (0, f.c)(A),
-        w = i.useId(),
-        { isVisible: D, triggerProps: x } = (0, u.l)(h({ targetElementRef: P.targetElementRef }, R)),
-        L = (0, d.Q)({ shouldShow: D }),
-        { defaultLayerContext: M } = (0, o.ZFG)(),
-        j = i.useMemo(
+    let w = (0, f.c)(A),
+        D = i.useId(),
+        { isVisible: x, triggerProps: L } = (0, u.l)(h({ targetElementRef: w.targetElementRef }, P)),
+        M = (0, d.Q)({ shouldShow: x }),
+        { defaultLayerContext: j } = (0, o.ZFG)(),
+        k = i.useMemo(
             () =>
                 null != b
                     ? b
@@ -140,24 +142,24 @@ function y(e) {
                         : p,
             [p, m, b],
         );
-    if (null == j || ("string" == typeof j && "" === j)) return n;
-    let k = null != N ? N : (0, c.Sw)(p);
+    if (null == k || ("string" == typeof k && "" === k)) return n;
+    let U = null != R ? R : (0, c.Sw)(p);
     if (y) {
-        let e = g(h({}, x), {
-            onFocus: (0, c.tS)(x.onFocus, (e) => {
+        let e = g(h({}, L), {
+            onFocus: (0, c.tS)(L.onFocus, (e) => {
                 let t = e.target;
                 if (null != t) {
                     var n;
-                    let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, w);
+                    let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, D);
                     t.setAttribute("aria-describedby", e);
                 }
             }),
-            onBlur: (0, c.tS)(x.onBlur, (e) => {
+            onBlur: (0, c.tS)(L.onBlur, (e) => {
                 let t = e.target;
                 if (null != t) {
                     let e = t.getAttribute("aria-describedby");
                     if (null != e) {
-                        let n = e.split(" ").filter((e) => e !== w);
+                        let n = e.split(" ").filter((e) => e !== D);
                         n.length > 0
                             ? t.setAttribute("aria-describedby", n.join(" "))
                             : t.removeAttribute("aria-describedby");
@@ -169,40 +171,41 @@ function y(e) {
             tag: O,
             children: n,
             triggerHandlers: e,
-            triggerRef: P.triggerRef,
+            triggerRef: w.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, c.C9)(n, x, w, P.triggerRef);
+        t = (0, c.C9)(n, L, D, w.triggerRef);
     }
-    let U = L((e, t) =>
+    let G = M((e, t) =>
         t
             ? (0, r.jsx)(l.N, {
-                  isVisible: D,
+                  isVisible: x,
                   isRendered: !0,
-                  targetElementRef: P.targetElementRef,
-                  id: w,
-                  content: j,
+                  targetElementRef: w.targetElementRef,
+                  anchorRef: C,
+                  id: D,
+                  content: k,
                   position: v,
                   align: I,
                   spacing: T,
-                  caretConfig: C,
-                  layerContext: null != S ? S : M,
+                  caretConfig: N,
+                  layerContext: null != S ? S : j,
                   animationStyle: e,
-                  positionKey: k,
+                  positionKey: U,
               })
             : null,
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != j && "" !== j
+            null != k && "" !== k
                 ? (0, r.jsx)(a.n, {
-                      id: w,
-                      children: j,
+                      id: D,
+                      children: k,
                   })
                 : null,
-            U,
+            G,
         ],
     });
 }
