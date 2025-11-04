@@ -1376,4 +1376,5 @@ let te = (0, ee.oH)((e, t, n) => {
                 if (t.username.startsWith(e.toLowerCase())) return !0;
             return !1;
         },
+        queryMemberList: e0,
     };
