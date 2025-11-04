@@ -132,22 +132,16 @@ function A(e) {
     );
 }
 function C(e) {
-    let { id: t, animated: n, size: r, forcePNG: i = !1, forceSDR: a = !1 } = e,
-        o = O ? "webp" : "png",
-        s = O ? "webp" : "gif",
-        c = i ? "png" : n ? s : o,
-        u = O && n ? "&animated=true" : "",
-        d = a ? "&force_sdr=true" : "",
-        _ = "size=".concat((0, l.oO)(r * (0, l.x_)(), S));
-    if (null != window.GLOBAL_ENV.CDN_HOST)
-        return (
-            "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(c) +
-            "?".concat(_).concat(u).concat(d)
-        );
-    {
-        let e = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, c);
-        return a ? "".concat(e, "?force_sdr=true") : e;
-    }
+    let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
+        a = O ? "webp" : "png",
+        o = O ? "webp" : "gif",
+        s = i ? "png" : n ? o : a,
+        c = O && n ? "&animated=true" : "",
+        u = "size=".concat((0, l.oO)(r * (0, l.x_)(), S));
+    return null != window.GLOBAL_ENV.CDN_HOST
+        ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(s) +
+              "?".concat(u).concat(c)
+        : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, s);
 }
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
