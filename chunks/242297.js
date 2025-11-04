@@ -1,4 +1,4 @@
-n.d(t, { _: () => b }), n(415506), n(388685);
+n.d(t, { _: () => T }), n(415506), n(388685);
 var r = n(579806),
     i = n(710845),
     a = n(928518),
@@ -27,9 +27,40 @@ function g(e, t, n) {
     );
 }
 let E = new i.Z("OverlayV3NativeModule");
-class b {
+function b(e, t) {
+    (0, d.bs)(e, "renderer_window_focus_changed", {
+        windowHandle: t,
+        popoutInitializationStages: u.Z.getPopoutInitializationStages(),
+    }),
+        (0, d.P9)(e, null != t ? (0, f.rd)(t) : null);
+}
+function y(e) {
+    (0, d.bs)(e, "renderer_window_focus_lost", { popoutInitializationStages: u.Z.getPopoutInitializationStages() }),
+        (0, d.VQ)(e);
+}
+function O(e) {
+    (0, d.bs)(e, "successfully_shown", { popoutInitializationStages: u.Z.getPopoutInitializationStages() }),
+        (0, d.uD)(e);
+}
+function v(e) {
+    (0, d.bs)((0, s.getPID)(), "window_handle_initialized", {
+        real_initialized: e,
+        popoutInitializationStages: u.Z.getPopoutInitializationStages(),
+    }),
+        (0, d.zg)(e);
+}
+function I(e) {
+    var t, n, r, i;
+    null == (t = e.setFocusCallback) || t.call(e, b),
+        null == (n = e.setFocusLostCallback) || n.call(e, y),
+        null == (r = e.setSuccessfullyShownCallback) || r.call(e, O),
+        null == (i = e.setOnWindowHandleInitializedCallback) || i.call(e, v),
+        (0, d.bs)((0, s.getPID)(), "native_module_callbacks_setup"),
+        E.verbose("Native module callbacks setup");
+}
+class T {
     static getInstance() {
-        return null == this.instance && (this.instance = new b()), this.instance;
+        return null == this.instance && (this.instance = new T()), this.instance;
     }
     async initialize() {
         return await this.prepareOverlayModule();
@@ -68,6 +99,7 @@ class b {
                 (this.module = e),
                 (0, d.bs)((0, s.getPID)(), "module_loaded"),
                 (0, s.setOutOfProcessSupport)(!0),
+                I(this.module),
                 (0, d.U9)(),
                 E.info("OverlayV3 Module Loaded");
         } catch (e) {
@@ -107,6 +139,7 @@ class b {
         }
         let n = null;
         try {
+            var i;
             (n = await this.getNativeWindowHandleWithRetry()),
                 c.Z.resetWindowState(),
                 (0, d.bs)(e, "native_window_handle_retrieved", {
@@ -114,7 +147,9 @@ class b {
                     hasWindow: null != n,
                     popoutInitializationStages: u.Z.getPopoutInitializationStages(),
                 }),
-                await (0, d.xO)(e, n);
+                await (0, d.xO)(e, n),
+                (null == (i = this.module) ? void 0 : i.setOnWindowHandleInitializedCallback) == null &&
+                    (await (0, d.zg)(!0));
         } catch (t) {
             E.error("Error getting native window handle:", t),
                 (0, d.MP)(e, t, n),
@@ -207,46 +242,6 @@ class b {
             t,
         );
     }
-    setFocusCallback(e) {
-        var t, n;
-        let r = (t, n) => {
-            (0, d.bs)(t, "renderer_window_focus_changed", {
-                windowHandle: n,
-                popoutInitializationStages: u.Z.getPopoutInitializationStages(),
-            }),
-                e(t, null != n ? (0, f.rd)(n) : null);
-        };
-        null == (n = this.module) || null == (t = n.setFocusCallback) || t.call(n, r);
-    }
-    setFocusLostCallback(e) {
-        var t, n;
-        let r = (t) => {
-            (0, d.bs)(t, "renderer_window_focus_lost", {
-                popoutInitializationStages: u.Z.getPopoutInitializationStages(),
-            }),
-                e(t);
-        };
-        null == (n = this.module) || null == (t = n.setFocusLostCallback) || t.call(n, r);
-    }
-    setSuccessfullyShownCallback(e) {
-        var t, n;
-        let r = (t) => {
-            (0, d.bs)(t, "successfully_shown", { popoutInitializationStages: u.Z.getPopoutInitializationStages() }),
-                e(t);
-        };
-        null == (n = this.module) || null == (t = n.setSuccessfullyShownCallback) || t.call(n, r);
-    }
-    setOnWindowHandleInitializedCallback(e) {
-        var t, n;
-        let r = (t) => {
-            (0, d.bs)((0, s.getPID)(), "window_handle_initialized", {
-                real_initialized: t,
-                popoutInitializationStages: u.Z.getPopoutInitializationStages(),
-            }),
-                e(!0);
-        };
-        null == (n = this.module) || null == (t = n.setOnWindowHandleInitializedCallback) || t.call(n, r);
-    }
     getNativeBreadcrumbs(e, t) {
         var n, r;
         null == (r = this.module) || null == (n = r.getBreadcrumbs) || n.call(r, e, t);
@@ -308,4 +303,4 @@ class b {
             g(this, "trackedGamePids", new Set());
     }
 }
-g(b, "instance", null);
+g(T, "instance", null);

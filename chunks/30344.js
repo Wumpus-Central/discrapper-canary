@@ -1,13 +1,14 @@
-n.d(t, { Z: () => f });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    a = n(314897),
-    l = n(733231),
-    o = n(890814),
-    c = n(753436),
-    s = n(34335);
-function u(e) {
+n.d(t, { Z: () => p }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    l = n(314897),
+    o = n(733231),
+    c = n(890814),
+    s = n(385153),
+    u = n(753436),
+    d = n(34335);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +33,7 @@ function u(e) {
     }
     return e;
 }
-function d(e) {
+function g(e) {
     var { games: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -55,13 +56,13 @@ function d(e) {
             }
             return i;
         })(e, ["games"]);
-    let { registerItemRef: i, manageFocusOnDelete: a } = (0, l.C)();
-    return (0, r.jsx)(o.Z, {
+    let { registerItemRef: i, manageFocusOnDelete: a } = (0, o.C)();
+    return (0, r.jsx)(c.Z, {
         games: t,
         renderGame: (e, t) =>
             (0, r.jsx)(
-                c.S,
-                u(
+                u.S,
+                f(
                     {
                         index: t,
                         game: e,
@@ -73,15 +74,46 @@ function d(e) {
             ),
     });
 }
-function f(e) {
-    let { userId: t, widgetType: n, disableInteraction: o } = e,
-        c = (0, i.e7)([a.default], () => a.default.getId() === t),
-        { getManageButtonForWidget: f } = (0, s.j)(),
-        g = f(n);
-    return c && !o
-        ? (0, r.jsx)(l.d, {
-              emptyListFallbackRef: g,
-              children: (0, r.jsx)(d, u({}, e)),
+function p(e) {
+    var t, n;
+    let { userId: c, widgetType: u, disableInteraction: p, games: m } = e,
+        b = (0, a.e7)([l.default], () => l.default.getId() === c),
+        { getManageButtonForWidget: y } = (0, d.j)(),
+        h = y(u),
+        [v, O] = i.useState(!1),
+        j = v ? m : m.slice(0, 8),
+        x = m.length > 8,
+        _ = (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(
+                    g,
+                    ((t = f({}, e)),
+                    (n = n = { games: j }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t),
+                ),
+                x &&
+                    (0, r.jsx)(s.Z, {
+                        expanded: v,
+                        onClick: () => O((e) => !e),
+                    }),
+            ],
+        });
+    return b && !p
+        ? (0, r.jsx)(o.d, {
+              emptyListFallbackRef: h,
+              children: _,
           })
-        : (0, r.jsx)(d, u({}, e));
+        : _;
 }

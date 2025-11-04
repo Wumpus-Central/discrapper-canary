@@ -36,11 +36,7 @@ function f(e) {
                     disableInteraction: !0,
                 }),
             });
-        if (
-            "GAME_COVER" === i &&
-            (null == a ? void 0 : a.imageSrc) != null &&
-            (null == a ? void 0 : a.gameName) != null
-        ) {
+        if ("GAME_COVER" === i && (null == a ? void 0 : a.gameName) != null) {
             let { imageSrc: e, gameName: i } = a;
             return (0, r.jsx)(c.Z, {
                 className: d.gamePreview,

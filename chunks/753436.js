@@ -6,46 +6,45 @@ var r = n(951288),
     o = n(79116),
     c = n(594174),
     s = n(86419),
-    u = n(747101),
-    d = n(780899),
-    f = n(733231),
-    g = n(817053),
-    p = n(533815),
-    m = n(919498),
+    u = n(780899),
+    d = n(733231),
+    f = n(817053),
+    g = n(533815),
+    p = n(919498),
+    m = n(394606),
     b = n(853072),
     y = n(388032),
     h = n(932366),
     v = n(133458);
 function O(e) {
-    let { index: t, widgetType: n, game: a, children: l } = e,
-        { registerDragHandleRef: o, manageFocusOnReorder: c } = (0, f.C)(),
-        u = i.useRef(null),
-        g = {
-            imageSrc: a.imageSrc,
-            gameName: a.gameName,
-        };
-    return (0, r.jsx)(d.yW, {
+    let { index: t, widgetType: n, game: a, coverImageUrl: l, gameName: o, children: c } = e,
+        { registerDragHandleRef: f, manageFocusOnReorder: g } = (0, d.C)(),
+        p = i.useRef(null);
+    return (0, r.jsx)(u.yW, {
         index: t,
         itemId: a.applicationId,
         listType: n,
         itemType: "GAME_COVER",
-        itemPreviewProps: g,
+        itemPreviewProps: {
+            imageSrc: l,
+            gameName: o,
+        },
         "aria-label": y.intl.formatToPlainString(y.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, s.Eq)(n, e, t),
-        onEnd: () => c(a.applicationId),
+        onEnd: () => g(a.applicationId),
         className: v.container,
         dropBeforeClassName: v.dropIndicatorBefore,
         dropAfterClassName: v.dropIndicatorAfter,
         draggingClassName: v.isDragging,
         children: (0, r.jsxs)("div", {
-            ref: u,
+            ref: p,
             className: v.dragHandleContainer,
             children: [
-                l,
-                (0, r.jsx)(d.e_, {
-                    buttonRef: o(a.applicationId),
+                c,
+                (0, r.jsx)(u.e_, {
+                    buttonRef: f(a.applicationId),
                     className: v.dragHandle,
-                    focusProps: { ringTarget: u },
+                    focusProps: { ringTarget: p },
                 }),
             ],
         }),
@@ -58,43 +57,43 @@ function j(e) {
             widgetType: i,
             guildId: a,
             channelId: s,
-            disableInteraction: d = !1,
-            index: f,
+            disableInteraction: u = !1,
+            index: d,
             onRemoveGame: y,
             coverRef: j,
         } = e,
-        x = (0, b.Z)(t.applicationId).length > 0,
-        _ = c.default.getCurrentUser(),
-        P = (null == _ ? void 0 : _.id) === n,
-        I = !d && P,
-        w = (0, u.kO)(t.applicationId),
-        { isDragging: S } = (0, o.f)((e) => ({ isDragging: e.isDragging() })),
-        E = () =>
+        { coverImageUrl: x, gameName: _, isLoading: P } = (0, m.Z)(t.applicationId),
+        I = (0, b.Z)(t.applicationId).length > 0,
+        w = c.default.getCurrentUser(),
+        S = (null == w ? void 0 : w.id) === n,
+        E = !u && S,
+        { isDragging: T } = (0, o.f)((e) => ({ isDragging: e.isDragging() })),
+        C = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(g.Z, {
-                        imageSrc: t.imageSrc,
-                        gameName: t.gameName,
+                    (0, r.jsx)(f.Z, {
+                        imageSrc: x,
+                        gameName: _,
                         applicationId: t.applicationId,
                         userId: n,
-                        disableInteraction: d,
+                        disableInteraction: u,
                         className: l()(
-                            x ? v.socialProofBackdrop : void 0,
-                            (null == t ? void 0 : t.imageSrc) == null || d ? void 0 : h.hoverActiveEffect,
+                            I ? v.socialProofBackdrop : void 0,
+                            null == x || u ? void 0 : h.hoverActiveEffect,
                         ),
-                        hideTooltip: S,
+                        hideTooltip: T,
                         coverRef: j,
                     }),
-                    I &&
-                        (0, r.jsx)(p.Z, {
+                    E &&
+                        (0, r.jsx)(g.Z, {
                             game: t,
                             widgetType: i,
                             className: v.removeGameButton,
                             iconSize: "xs",
                             onRemove: () => (null == y ? void 0 : y(t.applicationId)),
                         }),
-                    !d &&
-                        (0, r.jsx)(m.Z, {
+                    !u &&
+                        (0, r.jsx)(p.Z, {
                             className: v.socialProof,
                             applicationId: t.applicationId,
                             guildId: a,
@@ -103,17 +102,19 @@ function j(e) {
                         }),
                 ],
             });
-    return w
+    return P
         ? (0, r.jsx)("div", { className: h.loadingCover })
-        : I
+        : E
           ? (0, r.jsx)(O, {
                 widgetType: i,
-                index: null != f ? f : 0,
+                index: null != d ? d : 0,
                 game: t,
-                children: E(),
+                coverImageUrl: x,
+                gameName: _,
+                children: C(),
             })
           : (0, r.jsx)("div", {
                 className: v.container,
-                children: E(),
+                children: C(),
             });
 }

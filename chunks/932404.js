@@ -4,10 +4,12 @@ n.d(t, {
     MP: () => g,
     NB: () => f,
     Nk: () => c,
+    P9: () => T,
     PV: () => y,
     PY: () => v,
     U9: () => d,
     UK: () => u,
+    VQ: () => S,
     _l: () => O,
     bs: () => I,
     k0: () => _,
@@ -16,7 +18,9 @@ n.d(t, {
     rI: () => o,
     ry: () => l,
     sG: () => h,
+    uD: () => A,
     xO: () => m,
+    zg: () => C,
 });
 var r = n(570140),
     i = n(145597),
@@ -137,5 +141,30 @@ function I(e, t, n, r) {
         type: a.C7.OOPModule,
         data: n,
         logType: r,
+    });
+}
+function T(e, t) {
+    return r.Z.dispatch({
+        type: "OVERLAY_V3_NATIVE_FOCUS_GAINED",
+        pid: e,
+        windowHandle: t,
+    });
+}
+function S(e) {
+    return r.Z.dispatch({
+        type: "OVERLAY_V3_NATIVE_FOCUS_LOST",
+        pid: e,
+    });
+}
+function A(e) {
+    return r.Z.dispatch({
+        type: "OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN",
+        pid: e,
+    });
+}
+function C(e) {
+    return r.Z.dispatch({
+        type: "OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED",
+        initialized: e,
     });
 }

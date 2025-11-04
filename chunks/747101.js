@@ -1,64 +1,17 @@
 n.d(t, {
-    FX: () => m,
-    ZP: () => g,
-    kN: () => p,
-    kO: () => d,
-    qU: () => f,
+    kN: () => s,
+    kO: () => o,
+    qU: () => c,
 }),
     n(388685);
 var r = n(647438),
     i = n(442837),
     a = n(224706),
-    l = n(669764),
-    o = n(77498),
-    c = n(836197);
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function d(e) {
+    l = n(669764);
+function o(e) {
     return (0, i.e7)([l.Z], () => l.Z.isFetching(e));
 }
-function f(e) {
+function c(e) {
     r.useEffect(() => {
         if (e.length > 0) {
             let t = e.filter((e) => l.Z.canFetch(e));
@@ -66,26 +19,7 @@ function f(e) {
         }
     }, [e]);
 }
-function g(e) {
-    f(
-        r.useMemo(
-            () =>
-                (function (e) {
-                    let t = new Set();
-                    return (
-                        e.forEach((e) => {
-                            e.games.forEach((e) => {
-                                t.add(e.applicationId);
-                            });
-                        }),
-                        [...t]
-                    );
-                })(e),
-            [e],
-        ),
-    );
-}
-function p(e) {
+function s(e) {
     let [t, n] = (0, i.Wu)([l.Z], () => [l.Z.numNoDataAvailable(), l.Z.numSupplementalGames()]);
     return r.useMemo(() => {
         let t = {};
@@ -96,25 +30,4 @@ function p(e) {
             t
         );
     }, [e, t, n]);
-}
-function m(e) {
-    let t = p(e.games.map((e) => e.applicationId));
-    return r.useMemo(
-        () =>
-            new c.zy(
-                u(s({}, e), {
-                    games: e.games.map((e) => {
-                        let n = t[e.applicationId];
-                        if (null != n)
-                            return u(s({}, e), {
-                                gameName: n.name,
-                                imageSrc: n.coverImageUrl,
-                            });
-                        let r = o.Z.getDetectableGame(e.applicationId);
-                        return u(s({}, e), { gameName: null == r ? void 0 : r.name });
-                    }),
-                }),
-            ),
-        [e, t],
-    );
 }
