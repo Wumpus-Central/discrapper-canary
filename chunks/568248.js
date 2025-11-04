@@ -3,12 +3,12 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(95398),
-    l = n(936141),
-    c = n(768494),
-    u = n(499376),
-    d = n(128854),
-    f = n(524444),
+    s = n(936141),
+    l = n(768494),
+    c = n(499376),
+    u = n(128854),
+    d = n(524444),
+    f = n(411405),
     _ = n(630388),
     p = n(295435),
     h = n(217702),
@@ -16,9 +16,9 @@ var r = n(951288),
 let g = 85;
 function E(e) {
     let { media: t, spoiler: n, description: a } = e,
-        E = (0, u.pU)(t),
-        b = (0, _.yE)(t.flags, c.hR.IS_ANIMATED),
-        { gifAutoPlay: y } = (0, d.c)(),
+        E = (0, c.pU)(t),
+        b = (0, _.yE)(t.flags, l.hR.IS_ANIMATED),
+        { gifAutoPlay: y } = (0, u.c)(),
         [O, v] = i.useState(n),
         I = (e) => {
             var n, i;
@@ -32,7 +32,7 @@ function E(e) {
                       maxHeight: g,
                       hiddenSpoilers: e,
                   })
-                : (0, r.jsx)(f.Yi, {
+                : (0, r.jsx)(d.Yi, {
                       containerClassName: o()(m.imgContainer, { [m.hiddenSpoiler]: e }),
                       imageClassName: m.img,
                       src: t.proxyUrl,
@@ -54,9 +54,9 @@ function E(e) {
                   });
         };
     return n
-        ? (0, r.jsx)(s.ZP, {
-              type: s.ZP.Types.ATTACHMENT,
-              reason: l.wk.SPOILER,
+        ? (0, r.jsx)(f.ZP, {
+              type: f.ZP.Types.ATTACHMENT,
+              reason: s.wk.SPOILER,
               obscured: O,
               onToggleObscurity: () => v((e) => !e),
               children: (e) => I(e),

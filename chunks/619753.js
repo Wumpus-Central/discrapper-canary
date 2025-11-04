@@ -11,13 +11,13 @@ var r = n(951288),
     d = n(607070),
     _ = n(933557),
     A = n(471445),
-    T = n(95398),
-    I = n(905405),
-    m = n(255269),
-    g = n(937889),
-    N = n(804063),
-    h = n(703656),
-    O = n(359110),
+    T = n(905405),
+    I = n(255269),
+    m = n(937889),
+    g = n(804063),
+    N = n(703656),
+    h = n(359110),
+    O = n(411405),
     f = n(695346),
     R = n(131704),
     S = n(592125),
@@ -27,8 +27,8 @@ var r = n(951288),
     U = n(944486),
     L = n(594174),
     M = n(607802),
-    b = n(101695),
-    x = n(683101),
+    x = n(101695),
+    b = n(683101),
     v = n(981631),
     P = n(388032),
     j = n(858283);
@@ -73,20 +73,20 @@ function G(e) {
             highlighter: c,
             startIndex: E,
             resultRefs: d,
-            totalResults: N,
-            scrollTo: h,
+            totalResults: g,
+            scrollTo: N,
             renderEmbeds: R,
             offset: M,
-            jumpToMessage: b,
+            jumpToMessage: x,
             listNavigator: P,
             favoriteSearch: G,
         } = e,
         k = f.cC.useSetting(),
-        F = (0, I.p)(),
+        F = (0, T.p)(),
         w = l.useCallback((e) => {
             if (e === U.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
+            null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.Kh)(t.id);
         }, []),
         z = null != s ? (0, _.F6)(s, L.default, D.Z, !1) : "???",
         V = G && null != s.guild_id ? (null == (t = p.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
@@ -94,7 +94,7 @@ function G(e) {
         B = null != (n = null == Z ? void 0 : Z.name) ? n : null,
         H = null != (i = (0, A.KS)(s)) ? i : u.VL1,
         K = C.Z.can(v.Plq.MANAGE_MESSAGES, s),
-        { content: W } = (0, g.ZP)(
+        { content: W } = (0, m.ZP)(
             {
                 content: z,
                 embeds: [],
@@ -111,8 +111,8 @@ function G(e) {
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
     let J = [z, B, V].filter((e) => null != e).join(", ");
-    return (0, r.jsx)(T.aQ.Provider, {
-        value: (0, m.Z)(k, K),
+    return (0, r.jsx)(O.aQ.Provider, {
+        value: (0, I.Z)(k, K),
         children: (0, r.jsxs)("ul", {
             role: "group",
             className: j.searchResultGroup,
@@ -148,19 +148,19 @@ function G(e) {
                 a.map((e, t) => {
                     let n = E + t;
                     return (0, r.jsx)(
-                        x.Z,
+                        b.Z,
                         {
                             ref: (e) => {
                                 d.current[n] = e;
                             },
-                            totalResults: N,
-                            scrollTo: h,
+                            totalResults: g,
+                            scrollTo: N,
                             renderEmbeds: R,
                             searchOffset: M,
                             pageResultsLength: a.length,
                             message: e,
                             index: n,
-                            onJump: b,
+                            onJump: x,
                             listItemProps: P.getItemProps({ index: n }),
                         },
                         "search-result-".concat(n),
@@ -180,7 +180,7 @@ let k = l.memo(function (e) {
             blockCount: T,
             ignoreCount: I,
             onPageChange: m,
-            onClick: g,
+            onClick: h,
             paginationTotalCount: O,
             renderPageWrapper: f,
             onBlockedResultsClick: R,
@@ -188,17 +188,17 @@ let k = l.memo(function (e) {
             searchResultsQuery: C,
             isFavoritesSearch: U,
         } = e,
-        { offset: L, totalResults: x, isSearching: y, showBlockedResults: k } = s,
+        { offset: L, totalResults: b, isSearching: y, showBlockedResults: k } = s,
         F = l.useCallback(
             (e, t) => {
-                if ((null == g || g(e, t), (0, N.Z)(e))) {
+                if ((null == h || h(e, t), (0, g.Z)(e))) {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
-                        (0, h.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
+                        (0, N.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [g, p],
+            [h, p],
         ),
         w = l.useMemo(() => {
             let e,
@@ -259,7 +259,7 @@ let k = l.memo(function (e) {
                     highlighter: K,
                     startIndex: l,
                     resultRefs: z,
-                    totalResults: x,
+                    totalResults: b,
                     scrollTo: _,
                     renderEmbeds: o,
                     offset: L,
@@ -353,11 +353,11 @@ let k = l.memo(function (e) {
                 : null,
             !y &&
                 !U &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(x.Z, {
                     renderPageWrapper: f,
                     onPageChange: m,
                     offset: L,
-                    totalCount: null != O ? O : x,
+                    totalCount: null != O ? O : b,
                     pageSize: v.vpv,
                 }),
         ],

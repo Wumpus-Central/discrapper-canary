@@ -8,16 +8,16 @@ var r = n(951288),
     c = n(570140),
     u = n(794295),
     d = n(663993),
-    f = n(95398),
-    _ = n(339085),
-    p = n(779699),
-    h = n(359875),
-    m = n(124072),
-    g = n(891984),
-    E = n(695503),
-    b = n(628692),
-    y = n(590956),
-    O = n(703656),
+    f = n(339085),
+    _ = n(779699),
+    p = n(359875),
+    h = n(124072),
+    m = n(891984),
+    g = n(695503),
+    E = n(628692),
+    b = n(590956),
+    y = n(703656),
+    O = n(411405),
     v = n(271383),
     I = n(485386),
     T = n(430824),
@@ -94,7 +94,7 @@ function V(e) {
             let { key: o, channelId: s, messageId: l } = a;
             return e.src
                 ? (0, r.jsx)(
-                      y.c,
+                      b.c,
                       {
                           node: e,
                           tooltipPosition: t,
@@ -113,13 +113,13 @@ function H(e) {
     return {
         react(e, i, a) {
             let { key: o, guildId: s, channelId: l, messageId: c, isInteracting: u } = a,
-                d = _.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+                d = f.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
                 e = F(B({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
             }
             return (0, r.jsx)(
-                y.Y,
+                b.Y,
                 {
                     isInteracting: u,
                     node: e,
@@ -137,7 +137,7 @@ function Y(e, t, n) {
     let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(M.GuildFeatures.COMMUNITY) && (0, O.uL)(M.Z5c.CHANNEL(e, t));
+        r.features.has(M.GuildFeatures.COMMUNITY) && (0, y.uL)(M.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case "home":
@@ -287,9 +287,9 @@ let K = {
     spoiler: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                f.ZP,
+                O.ZP,
                 {
-                    type: f.ZP.Types.TEXT,
+                    type: O.ZP.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
                         null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 }),
@@ -300,7 +300,7 @@ let K = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, r.jsx)(b.ZP, {
+            (0, r.jsx)(E.ZP, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -315,7 +315,7 @@ let K = {
             };
             return (0, A.k)(e.id)
                 ? (0, r.jsxs)(
-                      m.Z,
+                      h.Z,
                       {
                           role: "link",
                           onClick: i,
@@ -323,7 +323,7 @@ let K = {
                           iconType: e.id,
                           children: [
                               t(e.mainContent, n),
-                              null != e.itemContent ? (0, r.jsx)(g.Z, {}) : null,
+                              null != e.itemContent ? (0, r.jsx)(m.Z, {}) : null,
                               null != e.itemContent ? t(e.itemContent, n) : null,
                           ],
                       },
@@ -365,7 +365,7 @@ let K = {
         react: (e, t, n) => {
             let i = T.Z.getGuild(e.guildId);
             return (0, r.jsx)(
-                h.Z,
+                p.Z,
                 {
                     guild: i,
                     children: (0, A.S)(e, t, n),
@@ -377,7 +377,7 @@ let K = {
     channel: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                p.Z,
+                _.Z,
                 {
                     iconType: e.iconType,
                     children: (0, A.S)(e, t, n),
@@ -385,7 +385,7 @@ let K = {
                 n.key,
             ),
     },
-    message: { react: (e, t, n) => (0, r.jsx)(E.Z, {}, n.key) },
+    message: { react: (e, t, n) => (0, r.jsx)(g.Z, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
             let r = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });

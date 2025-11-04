@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => p });
 var l = t(951288),
     i = t(647438),
     r = t(442837),
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, n) {
+function h(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -56,43 +56,43 @@ function p(e, n) {
         e
     );
 }
-function h(e, n, h) {
-    let j = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, u.$)(j, "useThreadAdminActionItems"), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
-    let P = (0, r.e7)([g.Z], () => g.Z.getChannel(h)),
+function p(e, n, p) {
+    let P = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
+    (0, u.$)(P, "useThreadAdminActionItems"), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
+    let j = (0, r.e7)([g.Z], () => g.Z.getChannel(p)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-        x = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-        y = (0, o.Z)(P, "Context Menu"),
-        N = (0, c.yw)(null == P ? void 0 : P.id);
-    return (null == x ? void 0 : x.id) === e.id
-        ? [y]
-        : null == v || null == P || null == x
+        y = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
+        N = (0, o.Z)(j, "Context Menu"),
+        x = (0, c.yw)(null == j ? void 0 : j.id);
+    return (null == y ? void 0 : y.id) === e.id
+        ? [N]
+        : null == v || null == j || null == y
           ? []
           : [
-                N
+                x
                     ? (0, l.jsx)(a.sNh, {
                           id: "remove",
-                          label: P.isForumPost()
+                          label: j.isForumPost()
                               ? O.intl.formatToPlainString(O.t.v2KNNx, { user: e.username })
                               : O.intl.formatToPlainString(O.t["27xWaT"], { user: e.username }),
                           color: "danger",
-                          action: () => d.Z.removeMember(P.id, e.id, "Context Menu"),
+                          action: () => d.Z.removeMember(j.id, e.id, "Context Menu"),
                       })
                     : null,
                 (0, s.BK)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "kick",
-                          label: N
+                          label: x
                               ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: e.username })
                               : O.intl.formatToPlainString(O.t["9l/iTS"], { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("36760").then(t.bind(t, 854360));
+                                  let { default: n } = await t.e("79939").then(t.bind(t, 495494));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          p(m({}, t), {
+                                          h(m({}, t), {
                                               guildId: v.id,
                                               user: e,
                                           }),
@@ -103,17 +103,17 @@ function h(e, n, h) {
                 (0, s.mm)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "ban",
-                          label: N
+                          label: x
                               ? O.intl.formatToPlainString(O.t.i62APf, { user: e.username })
                               : O.intl.formatToPlainString(O.t.WnpUBi, { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("4114").then(t.bind(t, 98746));
+                                  let { default: n } = await t.e("18910").then(t.bind(t, 497880));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          p(m({}, t), {
+                                          h(m({}, t), {
                                               guildId: v.id,
                                               user: e,
                                           }),

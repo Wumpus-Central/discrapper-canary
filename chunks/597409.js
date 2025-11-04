@@ -30,7 +30,7 @@ let b = function (e) {
                             color: "danger",
                             action: () =>
                                 (0, o.ZDy)(async () => {
-                                    let { default: e } = await r.e("4114").then(r.bind(r, 98746));
+                                    let { default: e } = await r.e("18910").then(r.bind(r, 497880));
                                     return (t) => {
                                         var r, c;
                                         return (0, n.jsx)(

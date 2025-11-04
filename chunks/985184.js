@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(95398),
-    l = n(936141),
+    s = n(936141),
+    l = n(411405),
     c = n(197653),
     u = n(979372),
     d = n(821618);
@@ -30,9 +30,9 @@ function f(e) {
     return null == t || 0 === t.length
         ? null
         : a
-          ? (0, r.jsx)(s.ZP, {
-                type: s.ZP.Types.ATTACHMENT,
-                reason: l.wk.SPOILER,
+          ? (0, r.jsx)(l.ZP, {
+                type: l.ZP.Types.ATTACHMENT,
+                reason: s.wk.SPOILER,
                 obscured: _,
                 onToggleObscurity: () => p((e) => !e),
                 children: (e) => h(e),

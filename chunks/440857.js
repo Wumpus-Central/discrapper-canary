@@ -106,7 +106,7 @@ function y(e) {
                 }),
             ],
         }),
-        N = (0, r.jsxs)("span", {
+        D = (0, r.jsxs)("span", {
             className: j.buttonContainer,
             children: [
                 (0, r.jsx)(c.pgN, {
@@ -141,7 +141,7 @@ function y(e) {
                                   }),
                               ),
                                   (0, c.ZDy)(async () => {
-                                      let { default: e } = await n.e("43350").then(n.bind(n, 98746));
+                                      let { default: e } = await n.e("10533").then(n.bind(n, 497880));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
@@ -154,7 +154,7 @@ function y(e) {
                                           );
                                   });
                           },
-                          onSaveText: N,
+                          onSaveText: D,
                           onSaveButtonColor: s.Tt.RED,
                           message: Z,
                       }),
