@@ -1,29 +1,26 @@
-l.d(n, { t: () => o });
-var t = l(951288);
-l(647438);
-var i = l(120356),
-    a = l.n(i),
-    r = l(840724),
-    d = l(180165);
-function o(e) {
-    let { applicationId: n, skuIds: l, variant: i = r.Z.SMALL, guildId: o } = e;
-    return null == l || 0 === l.length
+t.d(e, { t: () => o });
+var l = t(951288);
+t(647438);
+var i = t(120356),
+    a = t.n(i),
+    r = t(840724),
+    d = t(180165);
+function o(n) {
+    let { applicationId: e, skuIds: t, variant: i = r.Z.SMALL, guildId: o } = n;
+    return null == t || 0 === t.length
         ? null
-        : (0, t.jsx)("div", {
-              className: a()(d.container, d.cardGrid, {
-                  [d.mediumCardGrid]: i === r.Z.MEDIUM,
-                  [d.largeCardGrid]: i === r.Z.LARGE,
-              }),
-              children: l.map((e, l) =>
-                  (0, t.jsx)(
+        : (0, l.jsx)("div", {
+              className: a()(d.container, d.cardGrid, { [d.mediumCardGrid]: i === r.Z.MEDIUM }),
+              children: t.map((n, t) =>
+                  (0, l.jsx)(
                       r.C,
                       {
-                          applicationId: n,
-                          skuId: e,
+                          applicationId: e,
+                          skuId: n,
                           variant: i,
                           guildId: o,
                       },
-                      "".concat(e, "-").concat(l),
+                      "".concat(n, "-").concat(t),
                   ),
               ),
           });

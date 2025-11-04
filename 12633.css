@@ -41362,7 +41362,6 @@ body .headerAnimation_b54a5b {
     align-items: center;
     background-position: 50%;
     background-size: cover;
-    border-radius: var(--radius-xs);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -41371,7 +41370,8 @@ body .headerAnimation_b54a5b {
 }
 
 .cardContainer__47729.square__47729 {
-    aspect-ratio: 1
+    aspect-ratio: 1;
+    border-radius: var(--radius-xs)
 }
 
 .cardBackgroundImage__47729 {
@@ -41387,13 +41387,13 @@ body .headerAnimation_b54a5b {
 .skuImage__47729 {
     border-radius: var(--radius-xs);
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     z-index: 1
 }
 
 .skuImage__47729.square__47729 {
-    transform: scale(2)
+    aspect-ratio: 1
 }
 
 .invoiceTable__25766 {
@@ -50901,7 +50901,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58234,9 +58234,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -66179,12 +66179,11 @@ html .progress__61462 {
 .card_abfd90 {
     background: var(--background-base-low);
     border: 2px solid var(--border-subtle);
-    border-radius: 8px;
+    border-radius: var(--radius-xs);
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 246px;
     justify-content: flex-end;
     overflow: hidden;
     position: relative;
@@ -66196,8 +66195,17 @@ html .progress__61462 {
     height: 270px
 }
 
-.cardLarge_abfd90 {
-    height: 516px
+.cardSmall_abfd90 {
+    height: 246px
+}
+
+.cardImageContainer_abfd90 {
+    bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0
 }
 
 .cardEmbedded_abfd90 {
@@ -66246,14 +66254,7 @@ html .progress__61462 {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    inset-inline: 0;
-    bottom: 0;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    transform: scale(110%);
-    width: 100%
+    transform: scale(110%)
 }
 
 .full-motion .cardBackgroundImage_abfd90 {
@@ -66261,15 +66262,8 @@ html .progress__61462 {
 }
 
 .cardImage_abfd90 {
-    inset-inline: 0;
-    bottom: 0;
     height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    position: absolute;
-    top: 0;
-    transform: scale(100%);
-    width: 100%
+    object-fit: cover
 }
 
 .full-motion .cardImage_abfd90 {
@@ -66351,11 +66345,6 @@ html .progress__61462 {
 .card_abfd90:focus-within .bottomGradient_abfd90,
 .card_abfd90:hover .bottomGradient_abfd90 {
     transform: translateY(-15%)
-}
-
-.card_abfd90:focus-within .bottomGradientLarge_abfd90,
-.card_abfd90:hover .bottomGradientLarge_abfd90 {
-    transform: translateY(-5%)
 }
 
 .card_abfd90:focus-within .cardBackgroundImage_abfd90,
