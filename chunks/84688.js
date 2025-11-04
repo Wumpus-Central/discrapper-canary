@@ -18,7 +18,5 @@ e.exports = {
     muted: "muted__29444",
     dismissButton: "dismissButton__29444",
     dismiss: "dismiss__29444",
-    voiceChannelsToggleIcon: "voiceChannelsToggleIcon__29444",
     refreshVoiceChannelsButton: "refreshVoiceChannelsButton__29444",
-    refreshVoiceChannelsButtonInner: "refreshVoiceChannelsButtonInner__29444",
 };
