@@ -95,9 +95,10 @@ function p() {
         })
         .then((e) => {
             if (null != e.body) {
-                let t = e.body.map((e) =>
-                    "string" == typeof e.last_used ? d(c({}, e), { last_used: new Date(e.last_used) }) : e,
-                );
+                let t = e.body.map((e) => {
+                    let t = null == e.last_used ? null : new Date(e.last_used);
+                    return d(c({}, e), { last_used: t });
+                });
                 a.Z.dispatch({
                     type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
                     credentials: t,
@@ -126,9 +127,8 @@ async function m(e, t) {
     });
     if (null != n.body) {
         let e = n.body,
-            t = null;
-        "string" == typeof e.last_used && (t = new Date(e.last_used));
-        let r = d(c({}, e), { last_used: t });
+            t = null == e.last_used ? null : new Date(e.last_used),
+            r = d(c({}, e), { last_used: t });
         a.Z.dispatch({
             type: "AUTHENTICATOR_UPDATE",
             credential: r,
