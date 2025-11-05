@@ -3,7 +3,6 @@ n.d(t, {
     Gu: () => N,
     Jb: () => S,
     jm: () => A,
-    l7: () => O,
 }),
     n(953529);
 var r = n(951288),
@@ -91,12 +90,7 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = {
-    NOT_SET: "",
-    NONE: "0",
-    SMALL: "7px 10px",
-    MEDIUM: "10px",
-};
+let O = "10px";
 function v(e) {
     let { checked: t, radioItemIconClassName: n, icon: i, disabled: a } = e,
         s = i;
@@ -323,7 +317,7 @@ function C(e) {
             collapsibleClassName: s,
             className: l,
             value: c = null,
-            size: d = O.MEDIUM,
+            size: d = O,
             radioPosition: _ = "left",
             onChange: h = f.dG,
             disabled: g = !1,
