@@ -1,4 +1,4 @@
-n.d(t, { O: () => T });
+n.d(t, { O: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -11,17 +11,16 @@ var r = n(951288),
     g = n(999382),
     m = n(432774),
     p = n(682255),
-    f = n(888429),
-    h = n(217472),
-    b = n(202905),
-    x = n(44867),
-    j = n(557359),
-    v = n(658666),
-    _ = n(307375),
-    C = n(384632),
+    f = n(217472),
+    h = n(202905),
+    b = n(44867),
+    x = n(557359),
+    j = n(658666),
+    v = n(307375),
+    _ = n(384632),
     O = n(981631),
-    y = n(388032),
-    E = n(912231);
+    C = n(388032),
+    y = n(912231);
 function N(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
@@ -37,15 +36,15 @@ function N(e) {
             [n],
         );
     switch (t.joinType) {
-        case C.A.INVITE:
-            return (0, r.jsx)(j.A, {
+        case _.A.INVITE:
+            return (0, r.jsx)(x.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules,
             });
-        case C.A.APPLY:
-            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
-        case C.A.DISCOVERABLE:
-            return (0, r.jsx)(x.c, {
+        case _.A.APPLY:
+            return (0, r.jsx)(h.r, { pendingFields: t.pendingVerificationFields });
+        case _.A.DISCOVERABLE:
+            return (0, r.jsx)(b.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -53,7 +52,7 @@ function N(e) {
             });
     }
 }
-function I(e) {
+function E(e) {
     let { guildId: t } = e,
         { nsfwLevel: n, ownerConfiguredContentLevel: s } = (0, l.cj)([d.Z], () => {
             var e, n;
@@ -62,20 +61,20 @@ function I(e) {
                 ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel,
             };
         }),
-        o = (0, l.e7)([v.Z], () => {
+        o = (0, l.e7)([j.Z], () => {
             var e;
-            return null == (e = v.Z.pendingState) ? void 0 : e.isAgeRestricted;
+            return null == (e = j.Z.pendingState) ? void 0 : e.isAgeRestricted;
         }),
         c = i.useCallback(
             (e) => {
-                h.Z.setIsAgeRestricted(t, e);
+                f.Z.setIsAgeRestricted(t, e);
             },
             [t],
         ),
         g = n === O.V_K.AGE_RESTRICTED && s !== O.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(a.rsf, {
-        label: y.intl.string(y.t.N9xEJF),
-        description: y.intl.format(y.t.iyQQ62, {
+        label: C.intl.string(C.t.N9xEJF),
+        description: C.intl.format(C.t.iyQQ62, {
             helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
         }),
         checked: o,
@@ -83,47 +82,39 @@ function I(e) {
         disabled: g,
     });
 }
-function S(e) {
-    let { guildId: t } = e,
-        n = (0, c.U)();
-    return !(0, f.j0)({
-        guildId: t,
-        location: "guild-settings",
-    }) || n
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(I, { guildId: t }), (0, r.jsx)("div", { className: E.divider })],
-          });
-}
-function T() {
+function I() {
     let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
-        t = (0, l.e7)([v.Z], () => v.Z.pendingState);
+        t = (0, l.e7)([j.Z], () => j.Z.pendingState),
+        n = (0, c.U)();
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
-    let n = i.useCallback(
+    let s = i.useCallback(
         (t) => {
-            (null == e ? void 0 : e.id) != null && h.Z.setSelectedJoinType(e.id, t);
+            (null == e ? void 0 : e.id) != null && f.Z.setSelectedJoinType(e.id, t);
         },
         [null == e ? void 0 : e.id],
     );
     if (null == e || null == t) return null;
-    let { joinType: s } = t;
+    let { joinType: d } = t;
     return (0, r.jsxs)(a.Kqy, {
         gap: 32,
         children: [
             (0, r.jsx)(a.Heading, {
                 color: "header-primary",
                 variant: "heading-lg/semibold",
-                children: y.intl.string(y.t.YJlvBM),
+                children: C.intl.string(C.t.YJlvBM),
             }),
-            (0, r.jsx)(_.h, {
-                onTypePicked: n,
-                activeType: s,
+            (0, r.jsx)(v.h, {
+                onTypePicked: s,
+                activeType: d,
                 guild: e,
             }),
-            (0, r.jsx)("div", { className: E.divider }),
-            null != e && (0, r.jsx)(S, { guildId: e.id }),
+            (0, r.jsx)("div", { className: y.divider }),
+            !n &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(E, { guildId: e.id }), (0, r.jsx)("div", { className: y.divider })],
+                }),
             (0, r.jsx)("div", { children: (0, r.jsx)(N, { pendingState: t }) }),
         ],
     });
