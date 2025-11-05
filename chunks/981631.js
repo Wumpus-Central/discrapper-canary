@@ -1512,9 +1512,16 @@ let em = "@me",
             "/users/@me/billing/subscriptions/".concat(e, "/promotion-reward"),
         Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (e) =>
             "/users/@me/billing/subscriptions/".concat(e, "/reward-eligibility"),
+        BILLING_SUBSCRIPTION_ELIGIBLE_USERS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/eligible-users"),
+        BILLING_SUBSCRIPTION_INVITE: (e, t) =>
+            "/users/@me/billing/subscriptions/".concat(e, "/members/").concat(t, "/invite"),
+        BILLING_SUBSCRIPTION_REMOVE_USER: (e, t) =>
+            "/users/@me/billing/subscriptions/".concat(e, "/members/").concat(t),
+        BILLING_SUBSCRIPTION_MEMBERS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/members"),
         BILLING_COUNTRY_CODE: "/users/@me/billing/country-code",
         BILLING_LOCATION: "/users/@me/billing/location-info",
         BILLING_LOCALIZED_PROMO: "/users/@me/billing/localized-pricing-promo",
+        PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
         VERIFY_PURCHASE: "/google-play/verify-purchase-token",
         DOWNGRADE_SUBSCRIPTION: "/google-play/downgrade-subscription",
         GOOGLE_PLAY_VALIDATE_PURCHASE: "/google-play/validate-purchase",
