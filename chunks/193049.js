@@ -271,6 +271,7 @@ function A(e) {
             parentComponent: "PomeloModal",
             children: [
                 (0, r.jsx)(c.zx, {
+                    "data-migration-pending": !0,
                     onClick: () => {
                         w === T.A.SUGGESTIONS || w === T.A.EDIT_SCREEN ? L(T.A.FINISH_LATER) : A();
                     },
@@ -287,6 +288,7 @@ function A(e) {
                     }),
                 }),
                 (0, r.jsx)(u.hzk, {
+                    "data-migration-pending": !0,
                     className: P.contentContainer,
                     children: (0, r.jsxs)(u.MyZ, {
                         activeSlide: w,
@@ -344,6 +346,7 @@ let R = (e, t, n, i, a) =>
     0 === e.length
         ? null
         : (0, r.jsxs)(u.mzw, {
+              "data-migration-pending": !0,
               className: P.footer,
               children: [
                   (0, r.jsxs)("div", {
@@ -351,6 +354,7 @@ let R = (e, t, n, i, a) =>
                       children: [
                           e.includes("REMIND_ME_LATER") &&
                               (0, r.jsx)(c.zx, {
+                                  "data-migration-pending": !0,
                                   className: P.unfilledButton,
                                   type: "button",
                                   size: c.zx.Sizes.SMALL,
@@ -407,6 +411,7 @@ let R = (e, t, n, i, a) =>
                   }),
                   e.includes("BACK") &&
                       (0, r.jsx)(c.zx, {
+                          "data-migration-pending": !0,
                           className: P.unfilledButton,
                           type: "button",
                           size: c.zx.Sizes.SMALL,
