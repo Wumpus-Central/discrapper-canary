@@ -1,4 +1,4 @@
-t.d(n, { Z: () => S }), t(388685);
+t.d(n, { Z: () => Z }), t(388685);
 var l = t(951288),
     r = t(647438),
     i = t(512722),
@@ -6,24 +6,23 @@ var l = t(951288),
     a = t(392711),
     c = t.n(a),
     o = t(856901),
-    u = t(755721),
-    d = t(481060),
-    m = t(670863),
-    x = t(72897),
-    g = t(537135),
-    h = t(176940),
-    j = t(65154),
-    p = t(388032),
+    u = t(481060),
+    d = t(670863),
+    m = t(72897),
+    x = t(537135),
+    g = t(176940),
+    h = t(65154),
+    j = t(388032),
     v = t(591554),
-    f = t(542257),
-    Z = t(197571);
-function S(e) {
+    p = t(542257),
+    f = t(197571);
+function Z(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: i } = e;
     s()(null != n, "Camera capture device cannot be null");
-    let a = (0, h.Z)(),
-        [S, N] = (0, x.Ls)(j.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
-        C = S.concat(N),
-        [b, T] = r.useState(
+    let a = (0, g.Z)(),
+        [Z, N] = (0, m.Ls)(h.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        S = Z.concat(N),
+        [b, C] = r.useState(
             (function (e, n, t) {
                 var l;
                 let r = n.find((n) => n.id === e);
@@ -32,46 +31,48 @@ function S(e) {
                     (0, o.stringSimilarity)(r.name, n.name) > (0, o.stringSimilarity)(r.name, e.name) ? n : e,
                 );
                 return null != (l = null == i ? void 0 : i.id) ? l : null;
-            })(n.id, a, C),
+            })(n.id, a, S),
         );
     return (
         null != b && i(b),
         (0, l.jsxs)("div", {
-            className: f.modalContent,
+            className: p.modalContent,
             children: [
-                (0, l.jsx)(d.Heading, {
+                (0, l.jsx)(u.Heading, {
                     variant: "heading-md/semibold",
-                    className: f.formItemTitle,
+                    className: p.formItemTitle,
                     children: "Capture Device",
                 }),
-                (0, l.jsxs)(d.Kqy, {
+                (0, l.jsxs)(u.Kqy, {
                     gap: 8,
                     children: [
                         (0, l.jsx)("div", {
-                            className: Z.marginTop8,
-                            children: (0, l.jsxs)(g.Z, {
+                            className: f.marginTop8,
+                            children: (0, l.jsxs)(x.Z, {
                                 children: [
                                     (0, l.jsx)("span", {
                                         className: v.ellipsisText,
                                         children: n.name,
                                     }),
-                                    (0, l.jsx)(u.zx, {
+                                    (0, l.jsx)("div", {
                                         className: v.changeButton,
-                                        color: u.zx.Colors.PRIMARY,
-                                        size: u.zx.Sizes.SMALL,
-                                        onClick: t,
-                                        children: p.intl.string(p.t.GEgsA4),
+                                        children: (0, l.jsx)(u.Button, {
+                                            size: "sm",
+                                            variant: "secondary",
+                                            onClick: t,
+                                            text: j.intl.string(j.t.GEgsA4),
+                                        }),
                                     }),
                                 ],
                             }),
                         }),
-                        (0, l.jsx)(m.j, {
-                            label: p.intl.string(p.t.y4ooer),
-                            deviceType: j.h7.AUDIO_INPUT,
+                        (0, l.jsx)(d.j, {
+                            label: j.intl.string(j.t.y4ooer),
+                            deviceType: h.h7.AUDIO_INPUT,
                             location: "CaptureDeviceConfig",
-                            className: Z.__invalid_marginaTop8,
+                            className: f.__invalid_marginaTop8,
                             selectedDeviceId: b,
-                            onSelectDevice: (e) => (T(e), i(e), !1),
+                            onSelectDevice: (e) => (C(e), i(e), !1),
                         }),
                     ],
                 }),
