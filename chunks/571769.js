@@ -8,10 +8,10 @@ var s = n(951288),
     c = n(442837),
     d = n(198168),
     p = n(481060),
-    f = n(100527),
-    u = n(454585),
-    m = n(494620),
-    x = n(905551),
+    u = n(100527),
+    f = n(454585),
+    x = n(494620),
+    m = n(905551),
     _ = n(60482),
     h = n(587065),
     v = n(986841),
@@ -25,16 +25,16 @@ function C(e) {
             return null == (e = _.Z.getStateForGuild(t)) ? void 0 : e.instructions[n.planId];
         });
     i.useEffect(() => {
-        null == S && (0, x.iX)(t, n.planId);
+        null == S && (0, m.iX)(t, n.planId);
     }, [t, n.planId, S]);
-    let T = (0, v.Z)(n),
-        { handleCopyServerIp: E, animateCopyIcon: A } = (0, h.Z)(
+    let g = (0, v.Z)(n),
+        { handleCopyServerIp: T, animateCopyIcon: E } = (0, h.Z)(
             t,
             n.id,
-            f.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
-            null != T ? T : "",
+            u.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
+            null != g ? g : "",
         ),
-        g = i.useMemo(() => {
+        A = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
                     return N.intl.string(I.default.ud4hxY);
@@ -44,27 +44,32 @@ function C(e) {
                     return;
             }
         }, [n.status]);
-    return (0, s.jsx)(o.ExpressiveModal, {
-        graphic: {
-            type: "dynamic",
-            component: d.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
-            props: { instance: n },
-        },
-        title: n.name,
-        subtitle: N.intl.string(I.default["4HqfaU"]),
-        size: "md",
+    return (0, s.jsxs)(o.IX, {
+        size: "lg",
+        paddingSize: "lg",
         transitionState: C,
         onClose: r,
-        children:
+        children: [
+            (0, s.jsx)(o.xBx, {
+                gradientColor: "purple",
+                graphic: {
+                    type: "dynamic",
+                    component: d.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                    props: { instance: n },
+                },
+                alignCenter: !0,
+                title: n.name,
+                subtitle: N.intl.string(I.default["4HqfaU"]),
+            }),
             null == S
                 ? (0, s.jsx)(p.$jN, {})
                 : (0, s.jsxs)("div", {
                       className: j.content,
                       children: [
-                          null != g &&
-                              (0, s.jsx)(m.Z, {
+                          null != A &&
+                              (0, s.jsx)(x.Z, {
                                   className: j.infoBox,
-                                  children: g,
+                                  children: A,
                               }),
                           (0, s.jsx)("div", {
                               className: j.stepsContainer,
@@ -87,7 +92,7 @@ function C(e) {
                                               (0, s.jsx)(p.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-secondary",
-                                                  children: u.Z.parse(e, !1, { allowLinks: !0 }),
+                                                  children: f.Z.parse(e, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
@@ -95,27 +100,28 @@ function C(e) {
                                   ),
                               ),
                           }),
-                          null != T &&
+                          null != g &&
                               (0, s.jsxs)("div", {
                                   className: j.serverIpContainer,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          className: a()(j.serverIpInput, A && j.animate),
+                                          className: a()(j.serverIpInput, E && j.animate),
                                           children: (0, s.jsx)(p.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: T,
+                                              children: g,
                                           }),
                                       }),
                                       (0, s.jsx)(p.Button, {
-                                          variant: A ? "active" : "primary",
-                                          text: A ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
-                                          onClick: E,
+                                          variant: E ? "active" : "primary",
+                                          text: E ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
+                                          onClick: T,
                                           icon: p.TIy,
                                       }),
                                   ],
                               }),
                       ],
                   }),
+        ],
     });
 }
