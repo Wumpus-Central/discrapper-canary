@@ -7,9 +7,9 @@ var i = n(524437),
     s = n(247206),
     l = n(925513),
     c = n(294602),
-    u = n(915009),
-    d = n(880257),
-    f = n(312870),
+    u = n(666515),
+    d = n(915009),
+    f = n(880257),
     _ = n(400313),
     p = n(947707),
     h = n(726985),
@@ -46,9 +46,9 @@ function b(e) {
 }
 function y() {
     var e;
-    let t = null == (e = (0, d.Z)()) || e,
-        n = (0, u.LN)(),
-        E = (0, f.s)("gore_media_redaction_settings_web"),
+    let t = null == (e = (0, f.Z)()) || e,
+        n = (0, d.LN)(),
+        E = (0, u.r)(),
         { goreContentGuilds: y, goreContentFriendDm: O, goreContentNonFriendDm: v } = (0, c.K)(),
         I = (e) => {
             let t = Object.values(e);
@@ -80,7 +80,7 @@ function y() {
         };
     t && (T.unshift(A), S.unshift(A));
     let C = {
-        isDisabled: n || E,
+        isDisabled: E,
         tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
     };
     return (0, r.jsxs)(_.n, {
@@ -115,7 +115,7 @@ function y() {
                 title: m.intl.string(m.t["FP+a42"]),
                 value: y,
                 onChange: (e) => I({ goreContentGuilds: e }),
-                isDisabled: !t || n,
+                isDisabled: !t || E,
                 options: S,
                 tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
             }),

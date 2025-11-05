@@ -7,9 +7,9 @@ var i = n(524437),
     s = n(247206),
     l = n(656577),
     c = n(294602),
-    u = n(915009),
-    d = n(880257),
-    f = n(312870),
+    u = n(666515),
+    d = n(915009),
+    f = n(880257),
     _ = n(400313),
     p = n(947707),
     h = n(526761),
@@ -47,9 +47,9 @@ function y(e) {
 }
 function O() {
     var e;
-    let t = null == (e = (0, d.Z)()) || e,
-        n = (0, u.LN)(),
-        b = (0, f.s)("explicit_media_redaction_settings_web"),
+    let t = null == (e = (0, f.Z)()) || e,
+        n = (0, d.LN)(),
+        b = (0, u.r)(),
         { explicitContentGuilds: O, explicitContentFriendDm: v, explicitContentNonFriendDm: I } = (0, c.B)(),
         T = (e) => {
             let t = Object.values(e);
@@ -81,7 +81,7 @@ function O() {
         };
     t && (S.unshift(C), A.unshift(C));
     let N = {
-        isDisabled: n || b,
+        isDisabled: b,
         tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
     };
     return (0, r.jsxs)(_.n, {
@@ -117,7 +117,7 @@ function O() {
                 title: g.intl.string(g.t["FP+a42"]),
                 value: O,
                 onChange: (e) => T({ explicitContentGuilds: e }),
-                isDisabled: !t || n,
+                isDisabled: !t || b,
                 tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
                 options: A,
             }),
