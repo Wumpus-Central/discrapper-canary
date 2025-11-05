@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(426032),
-    p = n(695346),
-    h = n(63063),
+    h = n(695346),
+    p = n(63063),
     f = n(607802),
     g = n(945577),
     m = n(28964),
@@ -69,8 +69,8 @@ function S(e) {
             searchMode: l,
             onSearchModeChange: o,
             totalResults: c,
-            isIndexing: p,
-            isSearching: h,
+            isIndexing: h,
+            isSearching: p,
             documentsIndexed: _,
             selectedChannelId: S,
         } = e,
@@ -88,7 +88,7 @@ function S(e) {
             return null;
         }, [t.type, N]),
         [L, M] = i.useState(null),
-        k = i.useMemo(() => (h ? [] : [s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [h]),
+        k = i.useMemo(() => (p ? [] : [s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [p]),
         [U, G] = (0, u.US)(k),
         H = U === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         F = i.useCallback(
@@ -217,8 +217,8 @@ function S(e) {
                 children: (0, r.jsx)(E, {
                     totalResults: c,
                     subtitle: D,
-                    isIndexing: p,
-                    isSearching: h,
+                    isIndexing: h,
+                    isSearching: p,
                     documentsIndexed: _,
                 }),
             }),
@@ -260,7 +260,7 @@ function P(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: O.helpdeskLink,
-                        href: h.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
+                        href: p.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
                         children: j.intl.string(j.t["G3EA+4"]),
                     }),
                 }),
@@ -312,9 +312,9 @@ function R(e) {
             onPopoverRequestClose: c,
             isPopoverVisible: u,
         } = e,
-        h = i.useRef(null),
+        p = i.useRef(null),
         f = (0, g.xy)({ location: "SearchSettingsPopout" }),
-        m = null != (t = p.rR.useSetting()) ? t : f,
+        m = null != (t = h.rR.useSetting()) ? t : f,
         b = i.useCallback(
             (e) => {
                 if (m !== e) {
@@ -341,16 +341,23 @@ function R(e) {
                             });
                         });
                     }
-                    s(null), p.rR.updateSetting(e);
+                    s(null), h.rR.updateSetting(e);
                 }
             },
             [m, s, n, l],
         ),
-        y = i.useMemo(() => ({ align: "end" }), []);
+        [y, v] = i.useMemo(
+            () => [
+                m ? j.intl.string(j.t["8lklch"]) : j.intl.string(j.t.ji3jTF),
+                m ? j.intl.string(j.t.RMQZCa) : j.intl.string(j.t["v/PagC"]),
+            ],
+            [m],
+        ),
+        O = i.useMemo(() => ({ align: "end" }), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.yRy, {
-                targetElementRef: h,
+                targetElementRef: p,
                 shouldShow: a,
                 animation: d.yRy.Animation.NONE,
                 position: "bottom",
@@ -392,7 +399,7 @@ function R(e) {
                     (0, r.jsx)(
                         d.hU,
                         I(C({}, e), {
-                            buttonRef: h,
+                            buttonRef: p,
                             variant: "secondary",
                             icon: d.ewm,
                             onClick: () => {
@@ -404,12 +411,13 @@ function R(e) {
                     ),
             }),
             (0, r.jsx)(o.J2, {
-                targetElementRef: h,
+                targetElementRef: p,
                 shouldShow: u,
                 onRequestClose: c,
-                title: j.intl.string(j.t.qha2Zv),
-                body: j.intl.string(j.t.IQWEoV),
-                caretConfig: y,
+                title: y,
+                body: v,
+                caretConfig: O,
+                badge: "new",
             }),
         ],
     });
