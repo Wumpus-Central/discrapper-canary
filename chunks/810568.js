@@ -29,6 +29,7 @@ var r = n(772848),
             (e[(e.ShowLess = 11)] = "ShowLess"),
             (e[(e.JoinOfficialServer = 12)] = "JoinOfficialServer"),
             (e[(e.ClickImage = 13)] = "ClickImage"),
+            (e[(e.GameShop = 14)] = "GameShop"),
             e
         );
     })({}),

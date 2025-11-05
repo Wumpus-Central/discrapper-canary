@@ -1,52 +1,54 @@
-l.d(n, { Z: () => u });
-var t = l(951288),
-    i = l(120356),
-    a = l.n(i),
-    r = l(481060),
-    d = l(703656),
-    o = l(73346),
-    s = l(981631),
-    c = l(260999);
-function u(e) {
-    let { guildId: n, storefront: l, selectedPageIndex: i } = e;
-    if (null == l) return null;
-    let u = null != l.logoAssetId ? (0, o._W)(l.applicationId, l.logoAssetId, 75) : null;
-    return (0, t.jsxs)("div", {
-        className: c.headerContainer,
+t.d(n, { Z: () => c });
+var l = t(951288),
+    i = t(120356),
+    a = t.n(i),
+    r = t(481060),
+    d = t(73346),
+    o = t(705338),
+    s = t(260999);
+function c(e) {
+    let { guildId: n, storefront: t, selectedPageIndex: i } = e;
+    if (null == t) return null;
+    let c = null != t.logoAssetId ? (0, d._W)(t.applicationId, t.logoAssetId, 75) : null;
+    return (0, l.jsxs)("div", {
+        className: s.headerContainer,
         children: [
-            (0, t.jsxs)("div", {
-                className: c.titleContainer,
+            (0, l.jsxs)("div", {
+                className: s.titleContainer,
                 children: [
-                    null != u &&
-                        (0, t.jsx)("img", {
-                            className: c.logo,
-                            src: u,
-                            alt: l.title,
+                    null != c &&
+                        (0, l.jsx)("img", {
+                            className: s.logo,
+                            src: c,
+                            alt: t.title,
                         }),
-                    (0, t.jsx)(r.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: l.title,
+                        children: t.title,
                     }),
                 ],
             }),
-            l.pages.map((e, l) =>
-                (0, t.jsx)(
+            t.pages.map((e, t) =>
+                (0, l.jsx)(
                     r.P3F,
                     {
                         onClick: () => {
-                            (0, d.uL)(s.Z5c.CHANNELS_GAME_SHOP(n, l));
+                            (0, o.Z)({
+                                guildId: n,
+                                pageIndex: t,
+                            });
                         },
-                        className: a()(c.pageTitleContainer, { [c.selectedPageIndicator]: i === l }),
-                        children: (0, t.jsx)(r.Heading, {
+                        className: a()(s.pageTitleContainer, { [s.selectedPageIndicator]: i === t }),
+                        children: (0, l.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             lineClamp: 1,
                             children: e.title,
                         }),
                     },
-                    "".concat(e.title, "-").concat(l),
+                    "".concat(e.title, "-").concat(t),
                 ),
             ),
         ],

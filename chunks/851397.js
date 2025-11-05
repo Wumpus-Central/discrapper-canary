@@ -1,26 +1,25 @@
-r.d(t, { Z: () => j }), r(388685);
+r.d(t, { Z: () => y }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(442837),
     s = r(681715),
-    a = r(481060),
-    o = r(835473),
-    c = r(703656),
-    u = r(892001),
-    d = r(688192),
+    o = r(481060),
+    a = r(835473),
+    c = r(892001),
+    u = r(688192),
     f = r(89196),
-    m = r(51144),
+    d = r(51144),
+    O = r(436585),
     p = r(594914),
-    O = r(848118),
-    g = r(981631),
-    h = r(474936),
-    I = r(388032),
-    b = r(63602);
-function j(e) {
+    b = r(848118),
+    m = r(474936),
+    g = r(388032),
+    I = r(63602);
+function y(e) {
     var t,
         r,
-        { profileOwner: j, showIcons: P = !1 } = e,
-        v = (function (e, t) {
+        { profileOwner: y, showIcons: j = !1 } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -41,60 +40,66 @@ function j(e) {
             }
             return i;
         })(e, ["profileOwner", "showIcons"]);
-    let { item: w, isOwner: y, giftingOrigin: S = h.Wt.USER_PROFILE_WISHLIST } = v,
-        x = w.sku,
-        E = x.applicationId,
-        k = (0, o.q)(E),
-        N = i.useRef(null),
-        [C] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(w.skuId, j.id)], [w.skuId, j.id]),
-        T = w.skuName,
-        L = y ? I.intl.string(I.t.FdGl5A) : I.intl.string(I.t.ilhtIa),
-        _ = y ? void 0 : a.OgN,
-        Z = i.useCallback(() => {
-            if (y && (null == k ? void 0 : k.guildId) != null)
-                (0, u.closeUserProfileModal)(), (0, c.uL)(g.Z5c.CHANNELS_GAME_SHOP(k.guildId, 0, w.skuId, x.slug));
+    let { item: P, isOwner: S, giftingOrigin: v = m.Wt.USER_PROFILE_WISHLIST } = h,
+        w = P.sku,
+        k = w.applicationId,
+        x = (0, a.q)(k),
+        C = i.useRef(null),
+        [E] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(P.skuId, y.id)], [P.skuId, y.id]),
+        N = P.skuName,
+        T = S ? g.intl.string(g.t.FdGl5A) : g.intl.string(g.t.ilhtIa),
+        Z = S ? void 0 : o.OgN,
+        L = i.useCallback(() => {
+            if (S && (null == x ? void 0 : x.guildId) != null)
+                (0, c.closeUserProfileModal)(),
+                    (0, O.g)({
+                        skuId: w.id,
+                        applicationId: x.id,
+                        guildId: x.guildId,
+                        isStorefront: !1,
+                    });
             else {
-                if (C) return;
-                (0, p.P)(x, {
+                if (E) return;
+                (0, p.P)(w, {
                     isGift: !0,
-                    giftRecipient: j,
-                    giftingOrigin: S,
+                    giftRecipient: y,
+                    giftingOrigin: v,
                 });
             }
-        }, [y, null == k ? void 0 : k.guildId, w.skuId, x, C, j, S]),
+        }, [S, x, E, w, y, v]),
         R = i.useCallback(
             () =>
-                P
+                j
                     ? (0, n.jsx)("div", {
-                          className: b.itemIcon,
+                          className: I.itemIcon,
                           children: (0, n.jsx)(s.u, {
-                              text: I.intl.formatToPlainString(I.t.p3RmJF, { username: m.ZP.getName(j) }),
+                              text: g.intl.formatToPlainString(g.t.p3RmJF, { username: d.ZP.getName(y) }),
                               position: "top",
-                              children: (0, n.jsx)(a.h_8, {
+                              children: (0, n.jsx)(o.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: b.itemIconHeart,
+                                  colorClass: I.itemIconHeart,
                               }),
                           }),
                       })
                     : null,
-            [P, j],
+            [j, y],
         ),
-        F = i.useCallback(
+        _ = i.useCallback(
             () =>
-                (0, n.jsx)(O.A, {
+                (0, n.jsx)(b.A, {
                     shape: "custom",
-                    containerClassName: b.card,
-                    backgroundImageClassName: b.cardBackgroundImage,
-                    foregroundImageClassName: b.cardImage,
-                    sku: x,
+                    containerClassName: I.card,
+                    backgroundImageClassName: I.cardBackgroundImage,
+                    foregroundImageClassName: I.cardImage,
+                    sku: w,
                 }),
-            [x],
+            [w],
         );
     return (0, n.jsx)(
-        d.Z,
+        u.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -119,16 +124,16 @@ function j(e) {
                     });
             }
             return e;
-        })({}, v)),
+        })({}, h)),
         (r = r =
             {
-                cardRef: N,
-                accessibleLabel: T,
-                onCardClick: Z,
-                buttonCTALabel: L,
-                buttonIcon: _,
-                isOwned: C,
-                renderItemPreview: F,
+                cardRef: C,
+                accessibleLabel: N,
+                onCardClick: L,
+                buttonCTALabel: T,
+                buttonIcon: Z,
+                isOwned: E,
+                renderItemPreview: _,
                 renderSourceIcon: R,
             }),
         Object.getOwnPropertyDescriptors
