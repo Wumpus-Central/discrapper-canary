@@ -14,7 +14,7 @@ function _() {
     return (0, r.jsxs)(s.Z, {
         webSetting: d.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
         children: [
-            (0, r.jsx)(l.Z, { children: (0, r.jsx)(u.Z, {}) }),
+            (0, r.jsx)(l.Z, { children: (0, r.jsx)(u.ZP, {}) }),
             (0, r.jsx)(o.F, {
                 setting: d.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                 children: (0, r.jsx)(i.Button, {

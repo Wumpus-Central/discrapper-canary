@@ -1,4 +1,10 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, {
+    W2: () => P,
+    ZP: () => M,
+    rT: () => x,
+    xI: () => L,
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -171,7 +177,21 @@ function x(e) {
         ),
     );
 }
-function L() {
+async function L(e) {
+    let { onUploadStart: t, onUploadFinish: n } = e;
+    null == t || t();
+    try {
+        await g.Z.getMediaEngine().writeAudioDebugState(),
+            await b.Z.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
+            await (0, _.E)(v.GU0.RTC),
+            w();
+    } catch (e) {
+        D(e.displayMessage);
+    } finally {
+        null == n || n();
+    }
+}
+function M() {
     let [e, t] = i.useState(!1),
         { debugLogging: n, aecDumpEnabled: o } = (0, a.cj)([g.Z], () => ({
             aecDumpSupported: g.Z.isAecDumpSupported(),
@@ -180,18 +200,10 @@ function L() {
             supportsConnectionReplay: g.Z.supports(I.AN.CONNECTION_REPLAY),
         })),
         d = (0, a.e7)([m.default], () => m.default.isStreamInfoOverlayEnabled),
-        p = (0, a.e7)([E.ZP], () => E.ZP.shouldRecordNextConnection());
-    async function A() {
-        t(!0);
-        try {
-            await g.Z.getMediaEngine().writeAudioDebugState(),
-                await b.Z.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
-                await (0, _.E)(v.GU0.RTC),
-                w();
-        } catch (e) {
-            D(e.displayMessage);
-        }
-    }
+        _ = (0, a.e7)([E.ZP], () => E.ZP.shouldRecordNextConnection()),
+        p = i.useCallback(async () => {
+            await L({ onUploadStart: () => t(!0) });
+        }, []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.F, {
@@ -220,7 +232,7 @@ function L() {
                     (0, r.jsx)(s.rsf, {
                         label: T.intl.string(T.t.U4FgFK),
                         description: T.intl.string(T.t.Lm72RU),
-                        checked: p,
+                        checked: _,
                         onChange: (e) => u.TC(e),
                     }),
                     (0, r.jsx)(f.Z, {
@@ -255,7 +267,7 @@ function L() {
                                     variant: "primary",
                                     text: T.intl.string(T.t["3UB9ad"]),
                                     disabled: e,
-                                    onClick: A,
+                                    onClick: p,
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     variant: "secondary",
