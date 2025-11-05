@@ -1,17 +1,13 @@
-i.d(e, {
-    Z: () => y,
-    h: () => w,
-}),
-    i(388685);
+i.d(e, { h: () => w }), i(388685);
 var s,
     n = i(951288),
-    a = i(647438),
-    h = i(120356),
-    r = i.n(h),
-    o = i(477690),
-    l = i(877604),
-    d = i(624138),
-    c = i(133853),
+    r = i(647438),
+    a = i(120356),
+    h = i.n(a),
+    l = i(477690),
+    o = i(877604),
+    c = i(624138),
+    d = i(133853),
     u = i(686694),
     p = i(898625),
     f = i(771858);
@@ -28,37 +24,37 @@ function m(t, e, i) {
         t
     );
 }
-let v = (0, d.Mg)(o.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
-function g(t, e) {
+let g = (0, c.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
+function v(t, e) {
     let { innerWidth: i, innerHeight: s } = window;
     if (0 === t || 0 === e) return null;
     let n = e / t,
-        a = i,
-        h = Math.round(i * n);
+        r = i,
+        a = Math.round(i * n);
     return (
-        h < s && ((h = s), (a = Math.round(s * (n = t / e)))),
+        a < s && ((a = s), (r = Math.round(s * (n = t / e)))),
         {
             naturalWidth: t,
             naturalHeight: e,
-            width: a,
-            height: h,
+            width: r,
+            height: a,
         }
     );
 }
 function w(t) {
     let { splash: e, children: i } = t,
-        [{ width: s, height: h }, o] = a.useState({
+        [{ width: s, height: a }, l] = r.useState({
             width: 0,
             height: 0,
             naturalHeight: 0,
             naturalWidth: 0,
         });
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             function t() {
-                o((t) => {
+                l((t) => {
                     let { naturalWidth: e, naturalHeight: i } = t,
-                        s = g(e, i);
+                        s = v(e, i);
                     return null != s ? s : t;
                 });
             }
@@ -66,39 +62,39 @@ function w(t) {
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(l.Z, {
+                (0, n.jsx)(o.Z, {
                     className: f.rightSplit,
                     onLoad: function (t) {
                         let { currentTarget: e } = t,
                             { naturalWidth: i, naturalHeight: s } = e,
-                            n = g(i, s);
-                        null != n && o(n);
+                            n = v(i, s);
+                        null != n && l(n);
                     },
                     src: e,
                     width: s,
-                    height: h,
+                    height: a,
                 }),
                 (0, n.jsx)("div", {
-                    className: r()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: !0 }),
+                    className: h()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: !0 }),
                     children: i,
                 }),
             ],
         })
     );
 }
-class b extends (s = a.PureComponent) {
+class b extends (s = r.PureComponent) {
     componentWillUnmount() {
         window.removeEventListener("resize", this.handleResize);
     }
     calculateShowWaveAnimation() {
-        return window.innerWidth > v;
+        return window.innerWidth > g;
     }
     renderSplashArt() {
         let { splash: t, embedded: e } = this.props,
             { width: i, height: s } = this.state;
         return null != t
-            ? (0, n.jsx)(l.Z, {
-                  className: r()(f.rightSplit, { [f.embedded]: e }),
+            ? (0, n.jsx)(o.Z, {
+                  className: h()(f.rightSplit, { [f.embedded]: e }),
                   src: t,
                   width: i,
                   height: s,
@@ -108,29 +104,29 @@ class b extends (s = a.PureComponent) {
     }
     renderWave() {
         let { waveState: t, updateWaveState: e, embedded: i } = this.props,
-            { showWaveAnimation: s, splashLoaded: a } = this.state;
+            { showWaveAnimation: s, splashLoaded: r } = this.state;
         return s
             ? (0, n.jsx)(u.Z, {
                   embedded: i,
                   waveState: t,
                   updateWaveState: e,
-                  hideFallback: !a,
+                  hideFallback: !r,
               })
             : (0, n.jsx)("div", { className: f.mobileWave });
     }
     renderContent() {
-        let { children: t, waveState: e, showLogo: i, logoClassName: s, embedded: h } = this.props,
-            { showWaveAnimation: o } = this.state;
-        return (0, n.jsxs)(a.Fragment, {
+        let { children: t, waveState: e, showLogo: i, logoClassName: s, embedded: a } = this.props,
+            { showWaveAnimation: l } = this.state;
+        return (0, n.jsxs)(r.Fragment, {
             children: [
                 this.renderWave(),
                 (0, n.jsxs)("div", {
-                    className: r()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: h }),
+                    className: h()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: a }),
                     children: [
                         i
-                            ? (0, n.jsx)(c.Z, {
-                                  show: !o || (e === p.hO.ENTERED && e !== p.hO.FILLING),
-                                  className: r()(f.logo, s),
+                            ? (0, n.jsx)(d.Z, {
+                                  show: !l || (e === p.hO.ENTERED && e !== p.hO.FILLING),
+                                  className: h()(f.logo, s),
                               })
                             : null,
                         t,
@@ -142,7 +138,7 @@ class b extends (s = a.PureComponent) {
     render() {
         let { className: t } = this.props;
         return (0, n.jsxs)("div", {
-            className: r()(t, f.wrapper),
+            className: h()(t, f.wrapper),
             children: [this.renderSplashArt(), this.renderContent()],
         });
     }
@@ -158,7 +154,7 @@ class b extends (s = a.PureComponent) {
             }),
             m(this, "handleResize", () => {
                 let { naturalWidth: t, naturalHeight: e } = this.state,
-                    i = g(t, e),
+                    i = v(t, e),
                     s = this.calculateShowWaveAnimation();
                 null != i
                     ? this.setState(
@@ -204,7 +200,7 @@ class b extends (s = a.PureComponent) {
             m(this, "handleLoad", (t) => {
                 let { currentTarget: e } = t,
                     { naturalWidth: i, naturalHeight: s } = e,
-                    n = g(i, s);
+                    n = v(i, s);
                 null != n && this.setState(n),
                     this.setState({ splashLoaded: !0 }),
                     window.removeEventListener("resize", this.handleResize),
@@ -213,4 +209,3 @@ class b extends (s = a.PureComponent) {
     }
 }
 m(b, "defaultProps", { embedded: !1 });
-let y = 12633 == i.j ? b : null;

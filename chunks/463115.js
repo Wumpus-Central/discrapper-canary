@@ -1,44 +1,88 @@
-n.d(t, { Z: () => d });
-var r = n(951288);
-n(647438);
-var l = n(120356),
-    i = n.n(l),
-    a = n(481060),
-    s = n(888592),
-    o = n(388032),
-    c = n(330966);
-let d = (e) => {
-    let { school: t, setStep: n } = e;
-    return (0, r.jsxs)("div", {
-        className: c.container,
-        children: [
-            (0, r.jsx)("div", { className: c.topImage }),
-            (0, r.jsx)(a.Heading, {
-                className: i()(c.centerText, c.header),
-                variant: "heading-xl/semibold",
-                children: o.intl.string(o.t.OaloU5),
-            }),
-            (0, r.jsx)("div", {
-                className: c.descriptionWidth,
-                children: (0, r.jsx)(a.Text, {
-                    className: c.centerText,
-                    variant: "text-sm/normal",
-                    color: "header-secondary",
-                    children: o.intl.format(o.t.Rs7MXJ, { school: t }),
-                }),
-            }),
-            (0, r.jsx)("div", {
-                "data-button-hoisted-classname-wrapper": !0,
-                className: c.__invalid_resendLink,
-                children: (0, r.jsx)(a.Avr, {
+r.d(t, { Z: () => c });
+var n = r(951288);
+r(647438);
+var i = r(793030),
+    l = r(481060),
+    o = r(888592),
+    a = r(388032);
+let c = (e) => {
+    var t,
+        r,
+        { school: c, setStep: s } = e,
+        u = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        i = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+            }
+            return i;
+        })(e, ["school", "setStep"]);
+    return (0, n.jsx)(
+        i.Modal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        }),
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                title: a.intl.string(a.t.OaloU5),
+                subtitle: a.intl.format(a.t.Rs7MXJ, { school: c }),
+                actions: [],
+                children: (0, n.jsx)(l.Avr, {
                     variant: "primary",
                     size: "sm",
-                    text: o.intl.string(o.t.Zg63h4),
+                    text: a.intl.string(a.t.Zg63h4),
                     onClick: () => {
-                        n(s.tF.VERIFY_EMAIL);
+                        s(o.tF.VERIFY_EMAIL);
                     },
                 }),
             }),
-        ],
-    });
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t),
+    );
 };

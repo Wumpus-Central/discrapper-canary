@@ -212,7 +212,7 @@ function T(e) {
                                 children: y.intl.format(y.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, s.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
+                                            let { default: e } = await Promise.all([n.e("7082"), n.e("98639")]).then(
                                                 n.bind(n, 650233),
                                             );
                                             return (t) => (0, r.jsx)(e, I({}, t));

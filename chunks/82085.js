@@ -1,9 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(703656),
-    i = n(981631);
-let a = {
+    i = n(430824),
+    a = n(815016),
+    o = n(981631);
+let s = {
     onOpenHubInvite(e) {
         let { guild: t } = e;
-        null != t && (0, r.uL)(i.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(t.id, e.code));
+        null != t && (null != i.Z.getGuild(t.id) ? (0, r.uL)(o.Z5c.CHANNEL(t.id)) : (0, a.Z)(e.code));
     },
 };

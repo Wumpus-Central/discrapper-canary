@@ -34,7 +34,7 @@ let s = (e) => {
                 variant: t ? "secondary" : "active",
                 onClick: () =>
                     (0, i.ZDy)(async () => {
-                        let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
+                        let { default: e } = await Promise.all([n.e("7082"), n.e("60903")]).then(n.bind(n, 650233));
                         return (t) =>
                             (0, r.jsx)(
                                 e,

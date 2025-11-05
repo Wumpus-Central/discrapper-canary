@@ -9,12 +9,11 @@ function s() {
         { pathname: t } = (0, r.TH)(),
         n = t.startsWith(a.Z5c.GUILD_DISCOVERY) || t.startsWith(a.Z5c.GLOBAL_DISCOVERY),
         s = t.startsWith(a.Z5c.GUILD_MEMBER_VERIFICATION("")),
-        c = t.startsWith(a.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB("")),
-        u = (0, i.D)(),
-        d =
+        c = (0, i.D)(),
+        u =
             l.o.useConfig({ location: "guildsbar" }).dmsTab &&
             t.startsWith(a.Z5c.CHANNEL(a.ME)) &&
             t !== a.Z5c.CHANNEL(a.ME) &&
             t !== a.Z5c.ME_ACTIVITY;
-    return null == e && !(n || s || c || u) && !d;
+    return null == e && !(n || s || c) && !u;
 }

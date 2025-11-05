@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(593473),
     a = n(843611),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(893776),
     u = n(943094),
     d = n(533307),
@@ -57,8 +57,8 @@ var r = n(951288),
     ei = n(495784),
     el = n(883311),
     ea = n(975533),
-    eo = n(377400),
-    es = n(285865),
+    es = n(377400),
+    eo = n(285865),
     ec = n(659971),
     eu = n(929809),
     ed = n(122333),
@@ -112,8 +112,8 @@ var r = n(951288),
     e5 = n(346329),
     e2 = n(981631),
     e6 = n(176505),
-    e7 = n(701476),
-    e9 = n(186901);
+    e9 = n(701476),
+    e7 = n(186901);
 function te(e, t, n) {
     return (
         t in e
@@ -167,7 +167,7 @@ n(117240),
     n(606206);
 let tn = !1;
 (0, S.DL)(),
-    o.ZP.initialize(),
+    s.ZP.initialize(),
     eS.Z.loadServer(),
     e4.isPlatformEmbedded &&
         (e3.ZP.on("USER_SETTINGS_OPEN", (e, t) => {
@@ -196,7 +196,7 @@ let tr = (0, m.l)((e) => {
                     });
                 }),
             (0, r.jsx)(g.Z, {
-                deepLinkType: e9.jE.USER_SETTINGS,
+                deepLinkType: e7.jE.USER_SETTINGS,
                 path: t.pathname,
                 search: t.search,
                 paramsBuilder: function (e, t, n) {
@@ -213,7 +213,7 @@ let tr = (0, m.l)((e) => {
             })
         );
     }),
-    ti = o.ZP.connectStores([K.Z, eW.Z, eF.default], () => ({
+    ti = s.ZP.connectStores([K.Z, eW.Z, eF.default], () => ({
         isConnected: K.Z.isConnected(),
         defaultRoute: eW.Z.defaultRoute,
         defaultRouteFallback: eW.Z.fallbackRoute,
@@ -241,11 +241,11 @@ let tr = (0, m.l)((e) => {
     ),
     tl = (0, m.l)((0, N.e)(P.Z, null, { passProps: !1 })),
     ta = (0, N.e)(J.default, null, { passProps: !1 }),
-    to = [
+    ts = [
         e2.Z5c.GUILD_BOOSTING_MARKETING(eI.Hw.guildId()),
         ...Array.from(e6.Vg).map((e) => e2.Z5c.CHANNEL(eI.Hw.guildId(), e)),
     ];
-function ts(e) {
+function to(e) {
     let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
     return {
         guildId: null != t ? t : e2.ME,
@@ -352,13 +352,13 @@ let tc = [
         render: function (e) {
             let { match: t } = e,
                 { section: n, subsection: i } = t.params,
-                o = (0, l.parse)(location.search).feature;
+                s = (0, l.parse)(location.search).feature;
             return (
                 (0, Q.h)(() =>
                     en.v({
                         section: (0, et.Z)(e2.pNK, n),
                         subsection: (0, et.Z)(e2.KsC, i),
-                        feature: o,
+                        feature: s,
                     }),
                 ),
                 (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute })
@@ -378,7 +378,7 @@ let tc = [
                 { guildId: i } = t.params;
             return (
                 (0, Q.h)(() => {
-                    (0, s.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("15076"), n.e("38203")]).then(n.bind(n, 907941));
                         return (t) => {
                             var n, l;
@@ -423,7 +423,7 @@ let tc = [
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: i } = t.params;
-            (0, eu.c)(e7.M5.MARKETING_UNCLAIMED);
+            (0, eu.c)(e9.M5.MARKETING_UNCLAIMED);
             let l = e2.Z5c.CHANNEL(n, i);
             return (0, r.jsx)(a.l_, { to: l });
         },
@@ -563,14 +563,14 @@ class tp extends i.PureComponent {
             F.Z.initialize(),
             el.Z.initialize(),
             ei.Z.init({
-                hasModalOpen: s.$sL,
+                hasModalOpen: o.$sL,
                 openModal: () =>
-                    (0, s.ZDy)(async () => {
-                        let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
+                    (0, o.ZDy)(async () => {
+                        let { default: e } = await Promise.all([n.e("7082"), n.e("60903")]).then(n.bind(n, 650233));
                         return (t) => (0, r.jsx)(e, tt({}, t));
                     }),
             }),
-            eo.Z.initialize(),
+            es.Z.initialize(),
             ey.Z.initialize(),
             e_.Z.initialize(),
             M.Z.initialize(),
@@ -595,7 +595,7 @@ class tp extends i.PureComponent {
             eD.Z.terminate(),
             O.Z.terminate(),
             G.Z.terminate(),
-            eo.Z.terminate(),
+            es.Z.terminate(),
             E.Z.terminate(),
             ey.Z.terminate(),
             eT.Z.terminate(),
@@ -636,22 +636,22 @@ class tp extends i.PureComponent {
             (function (e, t) {
                 let n = tu(e);
                 if (null == n) return;
-                let { guildId: r, channelId: i, messageId: o, threadId: s } = ts(n),
+                let { guildId: r, channelId: i, messageId: s, threadId: o } = to(n),
                     c = (0, eI.Ss)(r),
                     u = (0, eI.cq)(i),
-                    d = (0, eI.cq)(s),
+                    d = (0, eI.cq)(o),
                     h = eX.Z.getGuildId(),
                     g = h !== r;
                 if ((c && g && p.Z.selectGuild(r), c && u)) {
                     let n = eJ.Z.getChannelId(h),
                         a = n !== i,
                         c = null != ez.ZP.getGuildSidebarState(r);
-                    if (!tn || g || a || null != o) {
+                    if (!tn || g || a || null != s) {
                         (tn = !0),
                             f.default.selectChannel({
                                 guildId: r,
                                 channelId: i,
-                                messageId: o,
+                                messageId: s,
                             });
                         let { summaryId: e } = (0, l.parse)(t);
                         null != e && eZ.ZP.setSelectedSummary(i, e);
@@ -662,33 +662,33 @@ class tp extends i.PureComponent {
                             null != i &&
                             null != ez.ZP.getCurrentSidebarChannelId(i) &&
                             eN.Z.closeChannelSidebar(i),
-                        null != s && d)
+                        null != o && d)
                     ) {
                         let e = ez.ZP.getCurrentSidebarChannelId(n),
-                            t = e !== s;
-                        if (null != i && null != s && t)
-                            if (c) (0, eC.dL)(e2.Z5c.CHANNEL(r, s, o));
+                            t = e !== o;
+                        if (null != i && null != o && t)
+                            if (c) (0, eC.dL)(e2.Z5c.CHANNEL(r, o, s));
                             else {
                                 let e = { type: ej.Ff.THREAD };
-                                null != o && (e.initialMessageId = o),
+                                null != s && (e.initialMessageId = s),
                                     eN.Z.openThreadAsSidebar({
                                         guildId: r,
                                         baseChannelId: i,
-                                        channelId: s,
+                                        channelId: o,
                                         details: e,
                                     });
                             }
                         else c && null != e && null != i && eN.Z.closeChannelSidebar(i);
                     } else null == i || a || eN.Z.closeChannelSidebar(i);
                     let u = ec.Z.getIsOpen();
-                    if (i === e6.oC.ROLE_SUBSCRIPTIONS) es.Z.closeSidebar();
+                    if (i === e6.oC.ROLE_SUBSCRIPTIONS) eo.Z.closeSidebar();
                     else if (g && u) {
                         let t = null == h && r === e2.ME,
                             n = e === e2.Z5c.GUILD_DISCOVERY;
-                        t || n ? es.Z.closeSidebar() : es.Z.openSidebar();
-                    } else ((a && u) || (!g && !a)) && es.Z.closeSidebar();
+                        t || n ? eo.Z.closeSidebar() : eo.Z.openSidebar();
+                    } else ((a && u) || (!g && !a)) && eo.Z.closeSidebar();
                 } else
-                    to.some((t) => {
+                    ts.some((t) => {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
                     }) || (0, eC.dL)(eW.Z.fallbackRoute);
@@ -700,7 +700,7 @@ class tp extends i.PureComponent {
         let { pathname: t } = e,
             n = tu(t);
         if (null == n) return null;
-        let { guildId: r, channelId: i, threadId: l } = ts(n),
+        let { guildId: r, channelId: i, threadId: l } = to(n),
             a = (0, eI.Ss)(r) && r !== e2.ME && r !== e2.I_8;
         if (null != i && (0, eI.cq)(i) && !(0, e6.AB)(i) && a) {
             let n = eY.Z.getChannel(i);

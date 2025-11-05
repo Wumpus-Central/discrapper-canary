@@ -1,205 +1,212 @@
-n.d(t, { Z: () => E }), n(388685), n(953529);
-var r = n(951288),
-    l = n(647438),
-    i = n(120356),
-    a = n.n(i),
-    s = n(658722),
-    o = n.n(s),
-    c = n(481060),
-    d = n(231239),
-    u = n(881052),
-    m = n(686546),
-    f = n(565138),
-    g = n(768581),
-    p = n(411198),
-    h = n(888592),
-    _ = n(388032),
-    v = n(642480),
-    x = n(216019);
-function N(e) {
-    var t, n, l;
-    let { guildInfo: i, onClick: a, submitting: s } = e,
+r.d(t, { Z: () => I }), r(388685);
+var n = r(951288),
+    i = r(647438),
+    l = r(120356),
+    o = r.n(l),
+    a = r(658722),
+    c = r.n(a),
+    s = r(793030),
+    u = r(481060),
+    d = r(231239),
+    f = r(881052),
+    O = r(686546),
+    p = r(565138),
+    y = r(768581),
+    b = r(411198),
+    g = r(888592),
+    j = r(388032),
+    m = r(642480),
+    v = r(216019);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                }),
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function S(e) {
+    var t;
+    let { guildInfo: r, onClick: i, submitting: l } = e,
         o =
             null !=
-            (t = g.ZP.getGuildIconURL({
-                id: i.id,
-                icon: i.icon,
+            (t = y.ZP.getGuildIconURL({
+                id: r.id,
+                icon: r.icon,
                 size: 40,
             }))
                 ? t
                 : void 0;
-    return (0, r.jsxs)(c.P3F, {
-        className: v.clickableGuildInfoRow,
-        onClick: a,
+    return (0, n.jsxs)(u.P3F, {
+        className: m.clickableGuildInfoRow,
+        onClick: i,
         children: [
-            (0, r.jsx)(m.ZP, {
-                mask: m.ZP.Masks.AVATAR_DEFAULT,
+            (0, n.jsx)(O.ZP, {
+                mask: O.ZP.Masks.AVATAR_DEFAULT,
                 width: 40,
                 height: 40,
-                children: (0, r.jsx)(f.Z, {
-                    className: v.guildIcon,
+                children: (0, n.jsx)(p.Z, {
+                    className: m.guildIcon,
                     iconSrc: o,
-                    guild: (0, p.yS)(
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, i)),
-                        (l = l = { features: [] }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                              }),
-                        n),
-                    ),
-                    size: f.Z.Sizes.MEDIUM,
+                    guild: (0, b.yS)(E(h({}, r), { features: [] })),
+                    size: p.Z.Sizes.MEDIUM,
                 }),
             }),
-            (0, r.jsx)(c.Text, {
-                className: v.guildName,
+            (0, n.jsx)(u.Text, {
+                className: m.guildName,
                 variant: "text-md/semibold",
-                children: i.name,
+                children: r.name,
             }),
-            s
-                ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.PULSING_ELLIPSIS })
-                : (0, r.jsx)("img", {
-                      className: v.__invalid_arrow,
+            l
+                ? (0, n.jsx)(u.$jN, { type: u.$jN.Type.PULSING_ELLIPSIS })
+                : (0, n.jsx)("img", {
                       alt: "",
-                      src: x,
+                      src: v,
                   }),
         ],
     });
 }
-let E = (e) => {
-    let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [f, g] = l.useState(null),
-        [p, x] = l.useState(void 0),
-        [E, y] = l.useState(null),
-        S = () => t(h.tF.SUBMIT_SCHOOL),
-        j = i;
+let I = (e) => {
+    var { setStep: t, email: r, guildsInfo: l, setGuildId: a } = e,
+        O = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        i = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+            }
+            return i;
+        })(e, ["setStep", "email", "guildsInfo", "setGuildId"]);
+    let [p, y] = i.useState(null),
+        [b, v] = i.useState(void 0),
+        [I, P] = i.useState(null),
+        _ = () => t(g.tF.SUBMIT_SCHOOL),
+        w = l;
     return (
-        null != p && "" !== p && (j = i.filter((e) => o()(p.toLowerCase(), e.name.toLowerCase()))),
-        (0, r.jsxs)("div", {
-            className: v.container,
-            children: [
-                (0, r.jsx)(c.Heading, {
-                    className: a()(v.centerText, v.header),
-                    variant: "heading-xl/semibold",
-                    children: _.intl.string(_.t.mOMeiR),
-                }),
-                (0, r.jsx)("div", {
-                    className: v.description,
-                    children: (0, r.jsx)(c.Text, {
-                        className: v.centerText,
-                        variant: "text-sm/normal",
-                        color: "header-secondary",
-                        children: _.intl.format(_.t.dZeiTJ, { onJoinWaitlist: S }),
-                    }),
-                }),
-                (0, r.jsxs)("div", {
-                    className: a()(v.guildList, { [v.forcedHeight]: m }),
+        null != b && "" !== b && (w = l.filter((e) => c()(b.toLowerCase(), e.name.toLowerCase()))),
+        (0, n.jsx)(
+            s.Modal,
+            E(h({}, O), {
+                title: j.intl.string(j.t.mOMeiR),
+                subtitle: j.intl.format(j.t.dZeiTJ, { onJoinWaitlist: _ }),
+                input: (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: v.searchContainer,
-                            children: [
-                                (0, r.jsx)(c.E1j, {
-                                    placeholder: _.intl.string(_.t["5h0QOP"]),
-                                    onChange: (e) => {
-                                        x(e);
-                                    },
-                                    "aria-label": _.intl.string(_.t["5h0QOP"]),
-                                    query: null != p ? p : "",
-                                    onClear: () => {
-                                        x(void 0);
-                                    },
-                                }),
-                                (0, r.jsx)(c.Text, {
-                                    color: "text-danger",
-                                    variant: "text-xs/normal",
-                                    children: null == f ? void 0 : f.getAnyErrorMessage(),
-                                }),
-                            ],
+                        (0, n.jsx)(u.E1j, {
+                            placeholder: j.intl.string(j.t["5h0QOP"]),
+                            onChange: (e) => {
+                                v(e);
+                            },
+                            "aria-label": j.intl.string(j.t["5h0QOP"]),
+                            query: null != b ? b : "",
+                            onClear: () => {
+                                v(void 0);
+                            },
                         }),
-                        j.length > 0
-                            ? (0, r.jsx)(c.zJl, {
-                                  className: v.scroller,
-                                  children: j.map((e) => {
-                                      let l;
-                                      return void 0 === e
-                                          ? null
-                                          : (0, r.jsx)(
-                                                N,
-                                                {
-                                                    guildInfo: e,
-                                                    onClick:
-                                                        ((l = e.id),
-                                                        async () => {
-                                                            g(null), s(l), y(l);
-                                                            try {
-                                                                await d.Z.sendVerificationEmail(n, !0, l),
-                                                                    t(h.tF.VERIFY_PIN);
-                                                            } catch (e) {
-                                                                g(new u.Hx(e));
-                                                            } finally {
-                                                                y(null);
-                                                            }
-                                                        }),
-                                                    submitting: E === e.id,
-                                                },
-                                                e.id,
-                                            );
-                                  }),
-                              })
-                            : (0, r.jsx)("div", {
-                                  className: v.noResultsContainer,
-                                  children: (0, r.jsxs)("div", {
-                                      className: v.noResultsContent,
-                                      children: [
-                                          (0, r.jsx)("div", { className: v.noResultsImage }),
-                                          (0, r.jsx)(c.Heading, {
-                                              className: a()(v.centerText, v.header),
-                                              variant: "heading-xl/semibold",
-                                              children: _.intl.string(_.t["1eUrDc"]),
-                                          }),
-                                          (0, r.jsx)(c.Text, {
-                                              className: v.centerText,
-                                              variant: "text-md/normal",
-                                              children: _.intl.format(_.t.flgDKM, { onJoinWaitlist: S }),
-                                          }),
-                                      ],
-                                  }),
-                              }),
+                        (0, n.jsx)(u.Text, {
+                            color: "text-danger",
+                            variant: "text-xs/normal",
+                            children: null == p ? void 0 : p.getAnyErrorMessage(),
+                        }),
                     ],
                 }),
-            ],
-        })
+                actions: [],
+                children:
+                    w.length > 0
+                        ? (0, n.jsx)("div", {
+                              className: m.forcedHeight,
+                              children: w.map((e) => {
+                                  let i;
+                                  return void 0 === e
+                                      ? null
+                                      : (0, n.jsx)(
+                                            S,
+                                            {
+                                                guildInfo: e,
+                                                onClick:
+                                                    ((i = e.id),
+                                                    async () => {
+                                                        y(null), a(i), P(i);
+                                                        try {
+                                                            await d.Z.sendVerificationEmail(r, !0, i),
+                                                                t(g.tF.VERIFY_PIN);
+                                                        } catch (e) {
+                                                            y(new f.Hx(e));
+                                                        } finally {
+                                                            P(null);
+                                                        }
+                                                    }),
+                                                submitting: I === e.id,
+                                            },
+                                            e.id,
+                                        );
+                              }),
+                          })
+                        : (0, n.jsx)("div", {
+                              className: m.noResultsContainer,
+                              children: (0, n.jsxs)("div", {
+                                  className: m.noResultsContent,
+                                  children: [
+                                      (0, n.jsx)(u.Heading, {
+                                          className: o()(m.centerText, m.header),
+                                          variant: "heading-xl/semibold",
+                                          children: j.intl.string(j.t["1eUrDc"]),
+                                      }),
+                                      (0, n.jsx)(u.Text, {
+                                          className: m.centerText,
+                                          variant: "text-md/normal",
+                                          children: j.intl.format(j.t.flgDKM, { onJoinWaitlist: _ }),
+                                      }),
+                                  ],
+                              }),
+                          }),
+            }),
+        )
     );
 };
