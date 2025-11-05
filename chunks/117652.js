@@ -117,10 +117,15 @@ function k(e) {
     (0, o.ZP)(() => {
         null != B &&
             null != x &&
-            (v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: B }), Q(x, B));
+            (M !== R.Wt.DM_CHANNEL_WISHLIST &&
+                v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: B }),
+            Q(x, B));
     });
     let J = (e) => {
-            v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != x && Q(x, e), Z(e);
+            M !== R.Wt.DM_CHANNEL_WISHLIST &&
+                v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }),
+                null != x && Q(x, e),
+                Z(e);
         },
         $ = (e) => {
             let t = H[e],

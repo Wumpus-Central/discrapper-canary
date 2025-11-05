@@ -4177,6 +4177,7 @@ var nE = (function (e) {
             (e.PAYMENT_REQUEST_COMPLETED = "payment_request_completed"),
             (e.GIFT_CATEGORY_SELECT_MODAL_OPENED = "gift_category_select_modal_opened"),
             (e.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED = "collectibles_gifting_shop_item_clicked"),
+            (e.GIFTING_ITEM_CLICKED = "gifting_item_clicked"),
             (e.ORBS_ENTRYPOINT_CLICKED = "orbs_entrypoint_clicked"),
             (e.PAYMENT_SOURCE_CREATION_FAILED = "payment_source_creation_failed"),
             (e.PREMIUM_UPGRADE_STARTED = "premium_upgrade_started"),
