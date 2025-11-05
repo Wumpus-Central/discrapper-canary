@@ -71,7 +71,6 @@ function O(e) {
                                 className: y.detailsTitleDescription,
                                 children: [
                                     (0, r.jsx)(s.Text, {
-                                        color: "always-white",
                                         variant: "text-md/bold",
                                         lineClamp: 1,
                                         children: P.name,
@@ -87,7 +86,6 @@ function O(e) {
                                                 }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-md/semibold",
-                                                color: "always-white",
                                                 lineClamp: 1,
                                                 children: (0, d.T4)(
                                                     null != (I = null == (t = P.price) ? void 0 : t.amount) ? I : 0,
