@@ -6,7 +6,7 @@ var i = n(442837),
     s = n(998502),
     a = n(313789),
     o = n(388032);
-let c = (0, r.qs)(a.n.STREAMING_OPENH264_CODEC, {
+let c = (0, r.qs)(a.n.STREAMING_EXPERIMENTAL_ENCODERS, {
     useTitle: () => o.intl.string(o.t.AxnPm1),
     useSearchTerms: () => [o.intl.string(o.t.AxnPm1)],
     usePredicate: function () {

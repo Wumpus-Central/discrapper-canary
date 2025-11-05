@@ -97,6 +97,7 @@ var r = (function (e) {
         (e.STREAMING_EXPERIMENTAL_SOUNDSHARE = "streaming_experimental_soundshare"),
         (e.STREAMING_ADVANCED_SCREENSHARE = "streaming_advanced_screenshare"),
         (e.STREAMING_OPENH264_CODEC = "streaming_openh264_codec"),
+        (e.STREAMING_EXPERIMENTAL_ENCODERS = "streaming_experimental_encoders"),
         (e.VOICE_AND_VIDEO_DIAGNOSTICS_CATEGORY = "voice_and_video_diagnostics_category"),
         (e.VOICE_AND_VIDEO_DIAGNOSTICS_ACCORDION = "voice_and_video_diagnostics_accordion"),
         (e.VOICE_AND_VIDEO_STREAM_INFO_OVERLAY = "voice_and_video_stream_info_overlay"),
