@@ -66398,12 +66398,16 @@ html .progress__61462 {
 }
 
 .container_e95ba0 {
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     display: flex;
     flex-direction: column;
     height: 380px;
     overflow: hidden;
     width: 512px
+}
+
+.container_e95ba0,
+.innerCard_e95ba0 {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0
 }
 
 .spinner_e95ba0 {
