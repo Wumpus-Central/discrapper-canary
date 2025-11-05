@@ -44,6 +44,7 @@ let i = [
         r.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         r.z.GAME_SERVER_HOSTING_NEW_BADGE,
         r.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
+        r.z.GAME_SHOP_NEW_BADGE,
     ],
     l = [];
 function c(e) {

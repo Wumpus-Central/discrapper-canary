@@ -64,14 +64,17 @@ function p(e, t, n) {
     let i = {};
     for (let [e, n] of Object.entries(t)) {
         let t = r.Questions[e];
-        null != t &&
-            (t.QuestionType === l.S.MULTIPLE_CHOICE && t.Selector === l.E_.MULTIPLE_ANSWER
-                ? ((i[e] = n.split(",")), null != t.ChoiceOrder && (i["".concat(e, "_DO")] = t.ChoiceOrder))
-                : t.QuestionType === l.S.MULTIPLE_CHOICE && t.Selector === l.E_.SINGLE_ANSWER
-                  ? ((i[e] = parseInt(n)), null != t.ChoiceOrder && (i["".concat(e, "_DO")] = t.ChoiceOrder))
-                  : t.QuestionType === l.S.TEXT_ENTRY
-                    ? (i["".concat(e, "_TEXT")] = n)
-                    : (i[e] = n));
+        if (null != t)
+            if (t.QuestionType === l.S.MULTIPLE_CHOICE && t.Selector === l.E_.MULTIPLE_ANSWER)
+                (i[e] = n.split(",")), null != t.ChoiceOrder && (i["".concat(e, "_DO")] = t.ChoiceOrder);
+            else if (t.QuestionType === l.S.MULTIPLE_CHOICE && t.Selector === l.E_.SINGLE_ANSWER) {
+                if (n.includes(":TEXT:")) {
+                    let t = n.split(":TEXT:", 2)[0],
+                        r = n.split(":TEXT:", 2)[1];
+                    (i[e] = parseInt(t)), (i["".concat(e, "_").concat(t, "_TEXT")] = r);
+                } else i[e] = parseInt(n);
+                null != t.ChoiceOrder && (i["".concat(e, "_DO")] = t.ChoiceOrder);
+            } else t.QuestionType === l.S.TEXT_ENTRY ? (i["".concat(e, "_TEXT")] = n) : (i[e] = n);
     }
     let a = Object.keys(t);
     return (

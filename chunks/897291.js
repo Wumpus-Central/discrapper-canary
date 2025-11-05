@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(996146),
@@ -8,12 +8,14 @@ var r = n(951288),
     c = n(906732),
     u = n(963249),
     d = n(109213),
-    f = n(51144),
-    _ = n(443603),
-    p = n(981631),
-    h = n(388032),
-    m = n(564355);
-function g(e, t, n) {
+    f = n(998030),
+    _ = n(909917),
+    p = n(51144),
+    h = n(443603),
+    m = n(981631),
+    g = n(388032),
+    E = n(564355);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +39,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,79 +56,91 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
+function I(e) {
     let { disabled: t, channel: i } = e,
-        { analyticsLocations: g } = (0, c.ZP)(l.Z.GIFT_BUTTON),
-        b = (0, f.Ft)(i),
-        { Component: O, events: v, play: I } = (0, a.$)(),
-        { enabled: T } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
-        S = i.type === p.d4z.DM;
+        { analyticsLocations: b } = (0, c.ZP)(l.Z.GIFT_BUTTON),
+        O = (0, p.Ft)(i),
+        { Component: I, events: T, play: S } = (0, a.$)(),
+        { enabled: A } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
+        C = (0, f.yc)({ location: "gift-button" }),
+        N = i.type === m.d4z.DM;
     if (t) return null;
-    let A = () => {
-        T && S && null != b
-            ? (0, s.ZDy)(async () => {
-                  let { default: e } = await n.e("59207").then(n.bind(n, 435626));
-                  return (t) =>
-                      (0, r.jsx)(
-                          e,
-                          E(
-                              {
-                                  analyticsObject: {
-                                      page: p.ZY5.DM_CHANNEL,
-                                      section: p.jXE.CHANNEL_TEXT_AREA,
-                                      object: p.qAy.BUTTON_ICON,
-                                      objectType: p.AnalyticsObjectTypes.GIFT,
-                                  },
-                                  analyticsLocations: g,
-                                  giftRecipient: b,
-                              },
-                              t,
-                          ),
-                      );
-              })
-            : (0, u.Z)({
-                  isGift: !0,
-                  giftRecipient: null === b ? void 0 : b,
-                  initialPlanId: null,
-                  analyticsLocations: g,
+    let R = () => {
+        C && N && null != O
+            ? (0, _.Z)({
+                  giftRecipient: O,
+                  analyticsLocations: b,
                   analyticsObject: {
-                      page: i.isPrivate() ? p.ZY5.DM_CHANNEL : p.ZY5.GUILD_CHANNEL,
-                      section: p.jXE.CHANNEL_TEXT_AREA,
-                      object: p.qAy.BUTTON_ICON,
-                      objectType: p.AnalyticsObjectTypes.GIFT,
+                      page: i.isPrivate() ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL,
+                      section: m.jXE.CHANNEL_TEXT_AREA,
+                      object: m.qAy.BUTTON_ICON,
+                      objectType: m.AnalyticsObjectTypes.GIFT,
                   },
-              });
+              })
+            : A && N && null != O
+              ? (0, s.ZDy)(async () => {
+                    let { default: e } = await n.e("59207").then(n.bind(n, 435626));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            y(
+                                {
+                                    analyticsObject: {
+                                        page: m.ZY5.DM_CHANNEL,
+                                        section: m.jXE.CHANNEL_TEXT_AREA,
+                                        object: m.qAy.BUTTON_ICON,
+                                        objectType: m.AnalyticsObjectTypes.GIFT,
+                                    },
+                                    analyticsLocations: b,
+                                    giftRecipient: O,
+                                },
+                                t,
+                            ),
+                        );
+                })
+              : (0, u.Z)({
+                    isGift: !0,
+                    giftRecipient: null === O ? void 0 : O,
+                    initialPlanId: null,
+                    analyticsLocations: b,
+                    analyticsObject: {
+                        page: i.isPrivate() ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL,
+                        section: m.jXE.CHANNEL_TEXT_AREA,
+                        object: m.qAy.BUTTON_ICON,
+                        objectType: m.AnalyticsObjectTypes.GIFT,
+                    },
+                });
     };
     return (0, r.jsx)(o.u, {
-        text: h.intl.string(h.t.sWtWDX),
+        text: g.intl.string(g.t.sWtWDX),
         children: (0, r.jsx)(
-            _.Z,
-            y(
-                E(
+            h.Z,
+            v(
+                y(
                     {
-                        className: m.button,
+                        className: E.button,
                         isActive: !1,
-                        "aria-label": h.intl.string(h.t.Z1RnTk),
+                        "aria-label": g.intl.string(g.t.Z1RnTk),
                         "aria-haspopup": "dialog",
                         onClick: () => {
-                            A(), I();
+                            R(), S();
                         },
                     },
-                    v,
+                    T,
                 ),
                 {
-                    children: (0, r.jsx)(O, {
+                    children: (0, r.jsx)(I, {
                         size: "refresh_sm",
                         color: "currentColor",
                     }),
@@ -135,4 +149,4 @@ function O(e) {
         ),
     });
 }
-let v = i.memo(O);
+let T = i.memo(I);

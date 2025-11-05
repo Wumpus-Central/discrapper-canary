@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(30954);
 function s(e) {
     let { question: t, questionId: n, value: s, onValueChange: l } = e,
-        c = t.Selector === a.E_.MULTI_LINE;
+        c = t.Selector !== a.E_.SINGLE_LINE;
     return (0, r.jsx)("div", {
         className: o.container,
         children: c

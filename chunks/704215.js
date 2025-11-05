@@ -497,6 +497,7 @@ var r = (function (e) {
             (e[(e.RECURRING_3P_PROMOTION_POPOVER = 637)] = "RECURRING_3P_PROMOTION_POPOVER"),
             (e[(e.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE = 638)] = "PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE"),
             (e[(e.GAME_SERVER_HOSTING_NEW_COACHMARK = 639)] = "GAME_SERVER_HOSTING_NEW_COACHMARK"),
+            (e[(e.GAME_SHOP_NEW_BADGE = 640)] = "GAME_SHOP_NEW_BADGE"),
             e
         );
     })({}),

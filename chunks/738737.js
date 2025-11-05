@@ -99,7 +99,7 @@ function p(e) {
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
                 { PaymentModal: i } = await Promise.resolve().then(n.bind(n, 791785)),
-                { STEPS: s } = await Promise.all([n.e("94758"), n.e("84992"), n.e("3270")]).then(n.bind(n, 7305));
+                { STEPS: s } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
             return (n) => {
                 var { onClose: T } = n,
                     S = f(n, ["onClose"]);
