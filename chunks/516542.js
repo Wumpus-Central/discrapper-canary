@@ -11,7 +11,7 @@ var i = n(951288),
     p = n(893718),
     h = n(957730),
     f = n(849522),
-    m = n(145597),
+    m = n(610394),
     g = n(981631),
     y = n(959517),
     O = n(572985);
@@ -53,7 +53,7 @@ function E(e) {
             () => (
                 C.length > S ||
                     (l.Z.sendMessage(E.id, h.ZP.parse(E, C), !1, { location: y.dy.OVERLAY }),
-                    o.Z.setInputLocked(!0, (0, m.getPID)()),
+                    o.Z.setInputLocked(!0, m.Z.getTargetPID()),
                     o.Z.updateNotificationStatus(t, g._1z.DISMISSED),
                     null == v || v(C)),
                 Promise.resolve({

@@ -7,7 +7,7 @@ var r = n(13245),
     i = n(556296),
     a = n(237997),
     o = n(13140),
-    s = n(145597),
+    s = n(610394),
     l = n(987650),
     c = n(981631);
 function u(e, t, n) {
@@ -63,7 +63,7 @@ function _(e, t) {
     );
 }
 function p() {
-    return a.default.isLocked((0, s.getPID)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY;
+    return a.default.isLocked(s.Z.getTargetPID()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY;
 }
 function h(e, t) {
     return {

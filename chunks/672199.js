@@ -4,8 +4,8 @@ var i = n(13245),
     l = n(580991),
     o = n(562224),
     a = n(361291),
-    s = n(145597),
-    u = n(624864),
+    s = n(624864),
+    u = n(610394),
     c = n(620954),
     d = n(987650),
     p = n(981631),
@@ -13,7 +13,7 @@ var i = n(13245),
     f = n(388032),
     m = n(978967);
 function g(e, t, n, g) {
-    if (u.Z.isNotificationDisabled(d.n0.RequestToStream)) return null;
+    if (s.Z.isNotificationDisabled(d.n0.RequestToStream)) return null;
     let y = t.username,
         O = f.intl.format(m.default.jTbTAF, {
             username: "",
@@ -41,7 +41,7 @@ function g(e, t, n, g) {
                 let { allowAutoQuality: e } = (0, l.IK)({ location: "requestToStreamNotification" });
                 n = e ? h.ApplicationStreamPresets.PRESET_AUTO : h.ApplicationStreamPresets.PRESET_VIDEO;
             }
-            (0, o.Z)((0, s.getPID)(), { preset: n }), S("request-to-stream"), i.Z.updateNotificationStatus(t);
+            (0, o.Z)(u.Z.getTargetPID(), { preset: n }), S("request-to-stream"), i.Z.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
             (0, r.ack)(

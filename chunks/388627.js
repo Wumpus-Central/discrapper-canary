@@ -16,7 +16,7 @@ var c = n(594190);
 n(569545), n(522474), n(199902), n(314897), n(355863);
 var u = n(293273);
 n(944486), n(808506);
-var d = n(145597);
+var d = n(610394);
 function f() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
@@ -42,28 +42,29 @@ function h() {
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Z,
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.ZP,
         s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
-        f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.e)(),
-        _ = i.getCurrentEmbeddedActivity(),
-        p = null == _ ? void 0 : _.applicationId,
-        h = null == p ? void 0 : s.getApplication(p);
-    if (null != _ && null != h && f)
+        f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : d.Z,
+        _ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : (0, o.e)(),
+        p = i.getCurrentEmbeddedActivity(),
+        h = null == p ? void 0 : p.applicationId,
+        m = null == h ? void 0 : s.getApplication(h);
+    if (null != p && null != m && _)
         return {
-            id: _.applicationId,
+            id: p.applicationId,
             altId: void 0,
-            name: h.name,
+            name: m.name,
         };
-    let m = (0, d.getPID)(),
-        g = n.getGameForPID(m),
-        E = r.getActivityForPID(m);
-    return (null == g || null == g.id || null == g.name) && (null == E || null == E.application_id)
+    let g = f.getTargetPID(),
+        E = n.getGameForPID(g),
+        b = r.getActivityForPID(g);
+    return (null == E || null == E.id || null == E.name) && (null == b || null == b.application_id)
         ? void 0
         : {
-              id: null != (e = null == g ? void 0 : g.id) ? e : null == E ? void 0 : E.application_id,
-              altId: null == E ? void 0 : E.application_id,
-              name: null != (t = null == g ? void 0 : g.name) ? t : null == E ? void 0 : E.name,
+              id: null != (e = null == E ? void 0 : E.id) ? e : null == b ? void 0 : b.application_id,
+              altId: null == b ? void 0 : b.application_id,
+              name: null != (t = null == E ? void 0 : E.name) ? t : null == b ? void 0 : b.name,
           };
 }
 function m() {
     let e = (0, s.P)();
-    return (0, r.e7)([c.ZP, u.Z, a.ZP, l.Z], () => h(c.ZP, u.Z, a.ZP, l.Z, e), [e], i.Z);
+    return (0, r.e7)([c.ZP, u.Z, a.ZP, l.Z, d.Z], () => h(c.ZP, u.Z, a.ZP, l.Z, d.Z, e), [e], i.Z);
 }

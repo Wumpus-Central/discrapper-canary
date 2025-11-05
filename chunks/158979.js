@@ -83,14 +83,13 @@ function y(e) {
                     y();
                 },
                 onNotificationClick: (e, t) => {
-                    O("unlock"), l.Z.updateNotificationStatus(t);
-                    let c = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
-                    if (
-                        (c ? l.Z.setInputLocked(!1, (0, a.getPID)()) : l.Z.setInstanceLocked(!1),
-                        null == s.default.getCurrentUser())
-                    )
+                    O("unlock");
+                    let c = (0, a.getPID)();
+                    l.Z.updateNotificationStatus(t);
+                    let u = o.default.isOverlayOOPEnabledForPid(c);
+                    if ((u ? l.Z.setInputLocked(!1, c) : l.Z.setInstanceLocked(!1), null == s.default.getCurrentUser()))
                         return;
-                    let u = c ? { contextKey: r.u1M } : void 0;
+                    let h = u ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
                             n.bind(n, 60594),
@@ -99,13 +98,13 @@ function y(e) {
                             (0, i.jsx)(
                                 e,
                                 g(f({}, t), {
-                                    sourcePID: (0, a.getPID)(),
+                                    sourcePID: c,
                                     selectSource: !1,
                                     guildId: p.id,
                                     analyticsLocation: d.Sbl.OVERLAY_NUDGE,
                                 }),
                             );
-                    }, u);
+                    }, h);
                 },
                 onDismissClick: () => {
                     O("dismiss");
@@ -127,10 +126,12 @@ function y(e) {
                     s();
                 },
                 onNotificationClick: (e, t) => {
-                    p("unlock"), l.Z.updateNotificationStatus(t);
-                    let s = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
-                    s ? l.Z.setInputLocked(!1, (0, a.getPID)()) : l.Z.setInstanceLocked(!1);
-                    let c = s ? { contextKey: r.u1M } : void 0;
+                    p("unlock");
+                    let s = (0, a.getPID)();
+                    l.Z.updateNotificationStatus(t);
+                    let c = o.default.isOverlayOOPEnabledForPid(s);
+                    c ? l.Z.setInputLocked(!1, s) : l.Z.setInstanceLocked(!1);
+                    let u = c ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
                             n.bind(n, 60594),
@@ -139,13 +140,13 @@ function y(e) {
                             (0, i.jsx)(
                                 e,
                                 g(f({}, t), {
-                                    sourcePID: (0, a.getPID)(),
+                                    sourcePID: s,
                                     selectSource: !1,
                                     selectGuild: !0,
                                     analyticsLocation: d.Sbl.OVERLAY_NUDGE,
                                 }),
                             );
-                    }, c);
+                    }, u);
                 },
                 onDismissClick: () => {
                     p("dismiss");

@@ -31,9 +31,9 @@ var r = n(951288),
     C = n(823379),
     N = n(136015),
     R = n(426563),
-    P = n(145597),
-    w = n(444295),
-    D = n(804570),
+    P = n(444295),
+    w = n(804570),
+    D = n(610394),
     x = n(388627),
     L = n(532658),
     M = n(501787),
@@ -161,7 +161,7 @@ let K = i.memo(function (e) {
             avatarSizeMode: b,
             maxDisplayedVoiceStates: y = M.At,
         } = e,
-        O = (0, w.ee)(() => W(o), [o]),
+        O = (0, P.ee)(() => W(o), [o]),
         [v, I] = o,
         T = I.length > 0 && null != n && null != a && (!d || f),
         S = (0, s.Wu)(
@@ -175,7 +175,7 @@ let K = i.memo(function (e) {
         );
     i.useEffect(() => {
         T &&
-            (0, w.zi)(j.Odu.VOICE_V3, {
+            (0, P.zi)(j.Odu.VOICE_V3, {
                 locked: A.default.isInstanceLocked(),
                 shownUserIds: Array.from(O),
                 liveUserIds: S,
@@ -185,13 +185,13 @@ let K = i.memo(function (e) {
     let N = () =>
             d || !p
                 ? null
-                : (0, r.jsx)(D.E, {
+                : (0, r.jsx)(w.E, {
                       emptyText: U.intl.string(U.t.hEh0l1),
                       icon: l.gj8,
                   }),
         R = y !== M.Og ? I.slice(0, y) : I,
-        P = y !== M.Og ? I.slice(y) : [],
-        x = v.get(P[0]),
+        D = y !== M.Og ? I.slice(y) : [],
+        x = v.get(D[0]),
         B = u === j.OYC.ALWAYS && y !== M.Og;
     return T
         ? (0, r.jsxs)("div", {
@@ -220,7 +220,7 @@ let K = i.memo(function (e) {
                             );
                   }),
                   B &&
-                      1 === P.length &&
+                      1 === D.length &&
                       null != x &&
                       (0, r.jsx)(
                           L.ZP,
@@ -237,12 +237,12 @@ let K = i.memo(function (e) {
                               displayUserMode: u,
                               locked: d,
                           },
-                          P[0],
+                          D[0],
                       ),
                   B &&
-                      P.length > 1 &&
+                      D.length > 1 &&
                       (0, r.jsx)(Y, {
-                          hiddenVoiceStates: P,
+                          hiddenVoiceStates: D,
                           voiceStateMap: v,
                           size: (0, L.px)(b),
                           locked: d,
@@ -327,13 +327,13 @@ function q(e) {
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
         c = (0, x.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
-        p = (0, s.cj)([E.Z, A.default], () => {
+        p = (0, s.cj)([E.Z, A.default, D.Z], () => {
             let e = E.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: A.default.getDisplayUserMode(),
                 displayNameMode: A.default.getDisplayNameMode(),
                 avatarSizeMode: A.default.getAvatarSizeMode(),
-                streamApplication: (null == l ? void 0 : l.pid) === (0, P.getPID)() ? (0, _.Z)(c) : null,
+                streamApplication: (null == l ? void 0 : l.pid) === D.Z.getTargetPID() ? (0, _.Z)(c) : null,
                 stream: e,
             };
         });

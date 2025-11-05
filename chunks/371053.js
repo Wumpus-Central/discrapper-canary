@@ -1,6 +1,6 @@
 n.d(t, {
-    N: () => x,
-    P: () => b,
+    N: () => b,
+    P: () => S,
 }),
     n(388685);
 var i = n(951288),
@@ -18,11 +18,10 @@ var i = n(951288),
     m = n(496675),
     g = n(944486),
     y = n(594174),
-    O = n(145597),
-    E = n(981631),
-    v = n(37113),
-    S = n(388032);
-function b(e) {
+    O = n(981631),
+    E = n(37113),
+    v = n(388032);
+function S(e) {
     let {
             pid: t,
             analyticsLocation: n,
@@ -38,7 +37,7 @@ function b(e) {
         S = (0, l.e7)([f.Z], () => (0, u.Z)(f.Z)),
         b = (0, l.e7)([h.Z, m.Z], () => null != O && (0, s.JL)(O, h.Z, m.Z));
     return r.useCallback(async () => {
-        await j({
+        await x({
             pid: t,
             voiceChannelId: d,
             user: E,
@@ -53,7 +52,7 @@ function b(e) {
         });
     }, [t, d, E, v, S, b, n, i, o, a, c]);
 }
-async function x(e) {
+async function b(e) {
     let {
             pid: t,
             analyticsLocation: n,
@@ -68,7 +67,7 @@ async function x(e) {
         O = null == c ? void 0 : c.getGuildId(),
         E = null != c && (0, s.JL)(c, h.Z, m.Z),
         v = (0, u.Z)(f.Z);
-    await j({
+    await x({
         pid: t,
         voiceChannelId: a,
         user: d,
@@ -82,7 +81,7 @@ async function x(e) {
         appContext: o,
     });
 }
-async function j(e) {
+async function x(e) {
     let {
         pid: t,
         voiceChannelId: r,
@@ -99,9 +98,9 @@ async function j(e) {
     if (u && p) {
         if (f && null !== r) {
             let e = d.Z.getState().preset;
-            if (e === v.ApplicationStreamPresets.PRESET_DOCUMENTS) {
+            if (e === E.ApplicationStreamPresets.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: t } = (0, a.IK)({ location: "overlay _goLive" });
-                e = t ? v.ApplicationStreamPresets.PRESET_AUTO : v.ApplicationStreamPresets.PRESET_VIDEO;
+                e = t ? E.ApplicationStreamPresets.PRESET_AUTO : E.ApplicationStreamPresets.PRESET_VIDEO;
             }
             let [n] = await (0, c.Z)(t, { preset: e });
             if (n) {
@@ -111,7 +110,7 @@ async function j(e) {
         }
         if (null == l)
             return void (0, o.showToast)(
-                (0, o.createToast)(S.intl.string(S.t.OKnWyb), o.ToastType.FAILURE, { appContext: E.IlC.OVERLAY }),
+                (0, o.createToast)(v.intl.string(v.t.OKnWyb), o.ToastType.FAILURE, { appContext: O.IlC.OVERLAY }),
             );
         null == m || m(),
             (0, o.ZDy)(
@@ -119,11 +118,11 @@ async function j(e) {
                     let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("56784")]).then(
                         n.bind(n, 60594),
                     );
-                    return (t) => {
-                        var n, r;
+                    return (n) => {
+                        var r, l;
                         return (0, i.jsx)(
                             e,
-                            ((n = (function (e) {
+                            ((r = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
@@ -147,17 +146,17 @@ async function j(e) {
                                         });
                                 }
                                 return e;
-                            })({}, t)),
-                            (r = r =
+                            })({}, n)),
+                            (l = l =
                                 {
-                                    sourcePID: (0, O.getPID)(),
+                                    sourcePID: t,
                                     selectSource: !1,
                                     guildId: s,
                                     selectGuild: null == s,
                                     analyticsLocation: h,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -165,10 +164,10 @@ async function j(e) {
                                           n.push.apply(n, i);
                                       }
                                       return n;
-                                  })(Object(r)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            n),
+                            r),
                         );
                     };
                 },

@@ -263,7 +263,7 @@ function ev() {
             t.add(n);
     let r = new Set();
     for (let e of n) t.has(e) || r.add(e);
-    let l = L.Z.isOverlayV3EnabledForPID((0, A.getPID)()) || null != L.Z.getFocusedPID();
+    let l = L.Z.isOverlayV3EnabledForPID(L.Z.getTargetPID()) || null != L.Z.getFocusedPID();
     for (let e of r)
         if (
             !(function (e) {

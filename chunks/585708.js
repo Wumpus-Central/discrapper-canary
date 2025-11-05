@@ -10,8 +10,8 @@ var r = n(13245),
     c = n(974180),
     d = n(358085),
     p = n(998502),
-    h = n(145597),
-    f = n(624864),
+    h = n(624864),
+    f = n(610394),
     m = n(322155),
     g = n(516542),
     y = n(618373),
@@ -21,7 +21,7 @@ var r = n(13245),
     S = n(388032);
 function b(e, t, n, b) {
     var x;
-    if (f.Z.isNotificationDisabled(E.n0.TextChat)) return (0, u.GN)(c.Ay, c.yk), null;
+    if (h.Z.isNotificationDisabled(E.n0.TextChat)) return (0, u.GN)(c.Ay, c.yk), null;
     let { icon: j, title: I, body: C } = (0, a.Xi)(e, t, n),
         { trackView: Z, trackClick: N } = (0, O.R)(E.n0.TextChat, {
             notif_type: E.n0.TextChat,
@@ -58,7 +58,7 @@ function b(e, t, n, b) {
             b && (0, u.GN)(c.Ay, c.yk), Z();
         },
         onNotificationClick: () => {
-            let n = (0, h.getPID)();
+            let n = f.Z.getTargetPID();
             (0, l.ack)(
                 e.id,
                 {
