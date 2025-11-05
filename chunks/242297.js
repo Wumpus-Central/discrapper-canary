@@ -43,7 +43,7 @@ function O(e) {
         (0, d.uD)(e);
 }
 function v(e) {
-    (0, d.bs)((0, s.getPID)(), "window_handle_initialized", {
+    (0, d.bs)(null, "window_handle_initialized", {
         real_initialized: e,
         popoutInitializationStages: u.Z.getPopoutInitializationStages(),
     }),
@@ -55,7 +55,7 @@ function I(e) {
         null == (n = e.setFocusLostCallback) || n.call(e, y),
         null == (r = e.setSuccessfullyShownCallback) || r.call(e, O),
         null == (i = e.setOnWindowHandleInitializedCallback) || i.call(e, v),
-        (0, d.bs)((0, s.getPID)(), "native_module_callbacks_setup"),
+        (0, d.bs)(null, "native_module_callbacks_setup"),
         E.verbose("Native module callbacks setup");
 }
 class T {
@@ -97,7 +97,7 @@ class T {
                     (e) => this.refreshOutOfProcessOverlayHostWindow(e),
                 ),
                 (this.module = e),
-                (0, d.bs)((0, s.getPID)(), "module_loaded"),
+                (0, d.bs)(null, "module_loaded"),
                 (0, s.setOutOfProcessSupport)(!0),
                 I(this.module),
                 (0, d.U9)(),
