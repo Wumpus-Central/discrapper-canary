@@ -32,7 +32,7 @@ function x(e) {
             },
             void 0,
         );
-    void 0 !== y
+    null != y
         ? (_ = {
               type: "expiring",
               expiringAt: y,
@@ -70,7 +70,8 @@ function x(e) {
         U = null != Z.viewCtaTooltip && "" !== Z.viewCtaTooltip ? Z.viewCtaTooltip : void 0;
     return (0, r.jsxs)(u.aB, {
         label: Z.title,
-        isActive: P,
+        isActive: (null == _ ? void 0 : _.type) === "active",
+        isWarning: (null == _ ? void 0 : _.type) === "expiring",
         badge: Z.badge,
         onClick: () => Z.openModal(j),
         onMouseOver: () => w(!0),
