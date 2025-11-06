@@ -102,19 +102,16 @@ function f() {
             name: s.intl.string(s.t["4IaoCI"]),
             desc: s.intl.string(s.t.TgipjE),
             value: r.Xr.FRIENDS_AND_NON_FRIENDS,
-            color: (0, i.Fw)("GREEN_360"),
         },
         {
             name: s.intl.string(s.t["6NnX6F"]),
             desc: s.intl.string(s.t["+dw1qu"]),
             value: r.Xr.NON_FRIENDS,
-            color: (0, i.Fw)("YELLOW_360"),
         },
         {
             name: s.intl.string(s.t["1tiAFz"]),
             desc: s.intl.string(s.t.LKTyeA),
             value: r.Xr.DISABLED,
-            color: (0, i.Fw)("RED_400"),
         },
     ];
 }
