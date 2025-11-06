@@ -850,8 +850,8 @@ let i = {
     NON_AD_SERVING_COUNTRIES: new Set(["RU", "TR"]),
     TAX_EXCLUSIVE: new Set(["CA", "KR", "US"]),
     TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
-    QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: new Set(["CA", "MT", "NH", "OR"]),
-    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "MD", "NJ"]),
+    QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: new Set(["CA", "NH", "OR"]),
+    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY"]),
     QUESTS_3P_DATA_OPT_OUT_COUNTRIES: new Set(["BR", "KR"]),
     NITRO_TAX_EXCLUSIVE_US_STATES: new Set([
         "AL",
