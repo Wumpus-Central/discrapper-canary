@@ -17,6 +17,7 @@ let _ = {
     XSMALL: f.xsmall,
     SMALL: f.small,
     MEDIUM: f.medium,
+    MEDIUM_LARGE: f.mediumLarge,
     LARGE: f.large,
     XLARGE: f.xlarge,
 };
@@ -30,6 +31,8 @@ function p(e) {
             return 30;
         case _.MEDIUM:
             return 40;
+        case _.MEDIUM_LARGE:
+            return 48;
         case _.LARGE:
             return 60;
         default:

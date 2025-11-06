@@ -40766,9 +40766,18 @@ body .headerAnimation_b54a5b {
 }
 
 .medium_b52e4f {
-    border-radius: var(--radius-md);
     height: 40px;
     width: 40px
+}
+
+.medium_b52e4f,
+.mediumLarge_b52e4f {
+    border-radius: var(--radius-md)
+}
+
+.mediumLarge_b52e4f {
+    height: 48px;
+    width: 48px
 }
 
 .large_b52e4f {

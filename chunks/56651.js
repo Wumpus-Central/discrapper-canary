@@ -1,5 +1,1 @@
-e.exports = {
-    gameIcon: "gameIcon__5a366",
-    textContainer: "textContainer__5a366",
-    timestamp: "timestamp__5a366",
-};
+e.exports = { gameIcon: "gameIcon__5a366" };
