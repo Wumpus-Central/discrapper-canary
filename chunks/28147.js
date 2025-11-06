@@ -201,7 +201,7 @@ function M(e) {
                             searchResultsPosition: t,
                             onClick: () => {
                                 let e = v.Z.entrypoint();
-                                h.yT(y.ti.DISMISSED),
+                                h.y(y.ti.DISMISSED),
                                     (0, p.Mo)({
                                         command: n,
                                         location: d.Vh.APP_LAUNCHER_HOME_SEARCH,

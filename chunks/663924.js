@@ -20,7 +20,7 @@ var r = n(951288),
     v = n(681524);
 let O = { height: b.lv };
 function x() {
-    f.yT(h.ti.DISMISSED);
+    f.y(h.ti.DISMISSED);
 }
 function E(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,

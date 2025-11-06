@@ -65,7 +65,7 @@ let P = (e, t) =>
             F = (0, a.e7)([g.default], () => g.default.locale),
             { displayParticipants: V, participant1: H, participant2: Y, numOtherParticipants: W } = (0, O.Z)(n, 3),
             K = () => {
-                _.__(p._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
+                _._(p._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
             z = i.useCallback(
                 (e) => {

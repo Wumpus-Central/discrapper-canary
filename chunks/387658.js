@@ -37,7 +37,7 @@ function k(e) {
     let { context: r, command: a, section: s, sectionName: c } = e,
         d = l.useCallback(() => {
             let e = N.Z.entrypoint();
-            b.yT(j.ti.COMMAND),
+            b.y(j.ti.COMMAND),
                 (0, g.Mo)({
                     command: a,
                     location: v.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -175,7 +175,7 @@ function U(e) {
                             sectionName: r,
                             commandOrigin: v.bB.APP_LAUNCHER_APPLICATION_VIEW,
                         }),
-                        b.yT(j.ti.COMMAND));
+                        b.y(j.ti.COMMAND));
                 } finally {
                     c(!1);
                 }

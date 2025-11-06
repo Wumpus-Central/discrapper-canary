@@ -9,7 +9,6 @@ function o() {
         children: [
             (0, r.jsx)("div", { className: l()(a.placeholderItem, a.chatTextAreaPlaceholder) }),
             (0, r.jsx)("div", { className: l()(a.placeholderItem, a.appLauncherPlaceholder) }),
-            (0, r.jsx)("div", { className: l()(a.placeholderItem, a.entryPointAppCommandPlaceholder) }),
         ],
     });
 }

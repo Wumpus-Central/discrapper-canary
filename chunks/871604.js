@@ -91,7 +91,7 @@ function R(e) {
                             null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal())
                                 ? f.Ie.SIDEBAR
                                 : f.Ie.NORMAL;
-                    l.__(c._b.TEXT, r, { applicationId: R.id }),
+                    l._(c._b.TEXT, r, { applicationId: R.id }),
                         (0, o.Mr3)((0, O.z)(D, null == P ? void 0 : P.guild_id)),
                         null == n || n(),
                         m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });

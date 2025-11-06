@@ -20,7 +20,7 @@ function b(e) {
     let { context: t, application: n, sectionName: b, primaryEntryPointCommand: N } = e,
         j = l.useId(),
         C = l.useCallback(() => {
-            d.yT(m.ti.ACTIVITY);
+            d.y(m.ti.ACTIVITY);
         }, []),
         E = l.useCallback(() => {
             p.Z.shouldShowModal() && C();

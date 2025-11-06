@@ -22,7 +22,7 @@ function f(e) {
         application: n,
         guildId: i,
         onItemClick: () => {
-            (0, l.Mr3)(p.e9), (0, u.yT)(d.ti.DISMISSED);
+            (0, l.Mr3)(p.e9), (0, u.y)(d.ti.DISMISSED);
         },
     });
 }

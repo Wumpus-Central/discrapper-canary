@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -6,41 +6,39 @@ var r = n(951288),
     o = n(793030),
     s = n(442837),
     c = n(566620),
-    u = n(989573),
-    d = n(499254),
-    p = n(541099),
-    f = n(827498),
-    h = n(663924),
-    m = n(533379),
-    g = n(562129),
-    b = n(685006),
-    _ = n(61356),
-    y = n(314734),
-    C = n(388032),
-    v = n(124886);
-let O = i.forwardRef(function (e, t) {
+    u = n(499254),
+    d = n(541099),
+    p = n(827498),
+    f = n(663924),
+    h = n(533379),
+    m = n(562129),
+    g = n(61356),
+    b = n(314734),
+    _ = n(388032),
+    y = n(124886);
+let C = i.forwardRef(function (e, t) {
         var n, l;
-        let { type: u, animateRef: h } = e,
-            m = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === u),
-            { Component: b, events: _, play: O } = (0, g.Z)("ChannelAppLauncherButton");
+        let { type: f, animateRef: h } = e,
+            g = (0, s.e7)([d.Z], () => d.Z.shouldShowPopup() && d.Z.activeViewType() === f),
+            { Component: C, events: v, play: O } = (0, m.Z)("ChannelAppLauncherButton");
         i.useImperativeHandle(
             h,
             () => ({
                 animate: () => {
-                    _.onMouseEnter();
+                    v.onMouseEnter();
                 },
             }),
-            [_],
+            [v],
         );
         let x = i.useCallback(() => {
-                m ? d.yT(f.ti.DISMISSED) : (d.__(f._b.TEXT, u), c.ux()), O();
-            }, [m, u, O]),
-            E = (0, r.jsx)(b, {
+                g ? u.y(p.ti.DISMISSED) : (u._(p._b.TEXT, f), c.ux()), O();
+            }, [g, f, O]),
+            E = (0, r.jsx)(C, {
                 size: "refresh_sm",
                 color: "currentColor",
             });
         return (0, r.jsx)("div", {
-            className: a()(v.buttonContainer, y.t4),
+            className: a()(y.buttonContainer, b.t4),
             ref: t,
             children: (0, r.jsx)(
                 o.P3F,
@@ -71,10 +69,10 @@ let O = i.forwardRef(function (e, t) {
                 })(
                     {
                         tabIndex: 0,
-                        className: a()(v.button, { [v.buttonActive]: m }),
+                        className: a()(y.button, { [y.buttonActive]: g }),
                         onClick: x,
-                        "aria-label": C.intl.string(C.t.erHFxI),
-                        "aria-expanded": m,
+                        "aria-label": _.intl.string(_.t.erHFxI),
+                        "aria-expanded": g,
                         "aria-haspopup": "dialog",
                         focusProps: {
                             offset: {
@@ -85,7 +83,7 @@ let O = i.forwardRef(function (e, t) {
                             },
                         },
                     },
-                    _,
+                    v,
                 )),
                 (l = l = { children: E }),
                 Object.getOwnPropertyDescriptors
@@ -104,29 +102,26 @@ let O = i.forwardRef(function (e, t) {
             ),
         });
     }),
-    x = i.memo(function (e) {
-        let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
-            o = i.useRef(null),
-            c = (0, m.R)({
+    v = i.memo(function (e) {
+        let { channel: t, type: n, animateRef: l } = e,
+            a = i.useRef(null),
+            o = (0, h.R)({
                 channel: t,
                 chatInputType: n,
             }),
-            d = (0, _.Z)({ type: n }),
-            f = (0, u.Z)(t),
-            g = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
-            { visible: y } = (0, b.xL)();
-        return c
+            s = (0, g.Z)({ type: n });
+        return o
             ? (0, r.jsxs)("div", {
-                  className: v.channelAppLauncher,
+                  className: y.channelAppLauncher,
                   children: [
-                      (0, r.jsx)(O, {
+                      (0, r.jsx)(C, {
                           type: n,
-                          ref: o,
+                          ref: a,
                           animateRef: l,
                       }),
-                      d
-                          ? (0, r.jsx)(h.Z, {
-                                positionTargetRef: f && !g && y ? a : o,
+                      s
+                          ? (0, r.jsx)(f.Z, {
+                                positionTargetRef: a,
                                 channel: t,
                             })
                           : null,

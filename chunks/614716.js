@@ -29,6 +29,6 @@ function _(e) {
                       openInPopout: h,
                       initialState: { applicationId: t },
                   })
-                : (0, a.__)(o._b.TEXT, l.Ie.NORMAL, { applicationId: t });
+                : (0, a._)(o._b.TEXT, l.Ie.NORMAL, { applicationId: t });
     };
 }

@@ -14,7 +14,7 @@ function u(e) {
         f = (0, s.Jg)(t) ? c.t.vPg1JT : c.t.rPqqts,
         _ = {
             onClick: () => {
-                r.__(i._b.TEXT, o.Ie.NORMAL, { applicationId: t.extra.application_id });
+                r._(i._b.TEXT, o.Ie.NORMAL, { applicationId: t.extra.application_id });
             },
             ariaDescription: c.intl.formatToPlainString(c.t.NTHttN, { title: d }),
         };

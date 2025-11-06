@@ -144,7 +144,7 @@ function R(e) {
             locationObject: S.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                p && E.yT(y.ti.ACTIVITY),
+                p && E.y(y.ti.ACTIVITY),
                     (0, d.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
