@@ -59,7 +59,7 @@ function O(e) {
                 className: y.container,
                 children: [
                     (0, r.jsx)(g.C, {
-                        cardClassName: y.innerCard,
+                        className: y.card,
                         applicationId: P.applicationId,
                         skuId: N,
                         variant: g.Z.EMBEDDED,

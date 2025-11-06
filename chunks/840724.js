@@ -57,7 +57,7 @@ function k(e) {
 }
 function U(e) {
     var t, n, a, s, c, m, A, j, U, G, B, Z, F, V, H, Y;
-    let { applicationId: W, skuId: K, variant: z = 0, guildId: q, onClick: X, cardClassName: Q } = e,
+    let { applicationId: W, skuId: K, variant: z = 0, guildId: q, onClick: X, className: Q } = e,
         J = i.useRef(null),
         $ = (0, f.e7)([b.Z], () => b.Z.get(K)),
         ee = (0, f.e7)([E.Z], () => (0, d.wjy)(E.Z.theme)),
