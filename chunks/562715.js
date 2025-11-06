@@ -1,37 +1,88 @@
-t.d(n, { Z: () => m }), t(953529);
-var l = t(951288),
-    i = t(647438),
-    a = t(780384),
-    o = t(481060),
-    r = t(410030),
-    s = t(726542),
-    u = t(298692),
-    c = t(826380),
-    d = t(388032);
-function m(e) {
-    var n, t;
-    let { connection: m } = e,
-        h = (0, r.ZP)(),
+n.d(t, { Z: () => f }), n(953529);
+var l = n(951288),
+    r = n(647438),
+    i = n(780384),
+    o = n(481060),
+    a = n(410030),
+    c = n(726542),
+    s = n(367907),
+    u = n(298692),
+    d = n(626135),
+    m = n(826380),
+    p = n(981631),
+    h = n(388032);
+function f(e) {
+    var t, n;
+    let { connection: f, guildId: g, location: j } = e,
+        v = (0, a.ZP)(),
         x =
-            null != (t = null != m.provider_id ? (null == (n = s.Z.get(m.provider_id)) ? void 0 : n.name) : null)
-                ? t
-                : d.intl.string(d.t.NzCoRx),
-        { hasConnection: f, canConnect: g, startConnection: p, loading: v } = (0, u.B)(m.provider_id),
-        j = i.useCallback(async () => {
-            await p("Guild Onboarding");
-        }, [p]),
-        C = i.useMemo(() => {
-            if (null != m.provider_id) {
-                let e = s.Z.get(m.provider_id),
-                    n =
+            null != (n = null != f.provider_id ? (null == (t = c.Z.get(f.provider_id)) ? void 0 : t.name) : null)
+                ? n
+                : h.intl.string(h.t.NzCoRx),
+        { hasConnection: y, canConnect: b, startConnection: C, loading: O } = (0, u.B)(f.provider_id),
+        w = r.useCallback(async () => {
+            var e, t, n;
+            d.default.track(
+                p.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            l = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (l = l.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            l.forEach(function (t) {
+                                var l;
+                                (l = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: l,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = l);
+                            });
+                    }
+                    return e;
+                })({}, (0, s.hH)(g))),
+                (n = n =
+                    {
+                        connection_type: "provider",
+                        provider_id: null != (e = f.provider_id) ? e : void 0,
+                        location: j,
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var l = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, l);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t),
+            ),
+                await C(j);
+        }, [C, g, f.provider_id, j]),
+        Z = r.useMemo(() => {
+            if (null != f.provider_id) {
+                let e = c.Z.get(f.provider_id),
+                    t =
                         (null == e ? void 0 : e.icon) != null
-                            ? (0, a.wj)(h)
+                            ? (0, i.wj)(v)
                                 ? e.icon.darkPNG
                                 : e.icon.lightPNG
                             : null;
-                if (null != n)
+                if (null != t)
                     return (0, l.jsx)("img", {
-                        src: n,
+                        src: t,
                         alt: x,
                         width: 40,
                         height: 40,
@@ -43,14 +94,14 @@ function m(e) {
                 height: 40,
                 color: "currentColor",
             });
-        }, [m.provider_id, h, x]);
-    return (0, l.jsx)(c.Z, {
+        }, [f.provider_id, v, x]);
+    return (0, l.jsx)(m.Z, {
         displayName: x,
-        description: m.description,
-        icon: C,
-        isLoading: v,
-        isConnected: f,
-        canConnect: g,
-        onConnect: j,
+        description: f.description,
+        icon: Z,
+        isLoading: O,
+        isConnected: y,
+        canConnect: b,
+        onConnect: w,
     });
 }

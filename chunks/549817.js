@@ -175,7 +175,10 @@ let x = {
             b = [...a, ...o],
             C = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
             R = (0, I.v)(e, new Set(b), C, !0).length,
-            D = null == n ? [] : n.options.map((e) => e.id);
+            D = null == n ? [] : n.options.map((e) => e.id),
+            x = O.Z.getConnections(e),
+            L = (0, v.OZ)(x),
+            M = (0, v.N4)(x);
         if (
             (m.default.track(
                 T.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
@@ -190,6 +193,10 @@ let x = {
                     channels_granted: R,
                     guild_onboarding_covered_channel_ids: c.map((e) => e.id),
                     guild_onboarding_uncovered_channel_ids: f.map((e) => e.id),
+                    provider_connections_connected: L.connected,
+                    provider_connections_not_connected: L.notConnected,
+                    application_connections_connected: M.connected,
+                    application_connections_not_connected: M.notConnected,
                 }),
             ),
             (0, s.Ju)(e, A.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
@@ -199,8 +206,8 @@ let x = {
             (0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i));
             let t = h.default.getCurrentUser();
             if (null != t) {
-                var x, L;
-                let n = null != (L = null == (x = p.ZP.getMember(e, t.id)) ? void 0 : x.flags) ? L : 0;
+                var j, k;
+                let n = null != (k = null == (j = p.ZP.getMember(e, t.id)) ? void 0 : j.flags) ? k : 0;
                 (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, S.q.COMPLETED_ONBOARDING, !0) } });
             }
         }

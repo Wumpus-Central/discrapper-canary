@@ -641,9 +641,9 @@ let ef = (e) => {
     em = (0, d.U)(() => ({ searchQuery: "" })),
     eg = () => {
         let e = (0, p.e7)([j.Z], () => j.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, p.cj)([x.Z], () => ({
-                fetchState: x.Z.getFetchState(),
-                appAuthTokens: x.Z.getNewestTokensForNonChildrenApplications(),
+            { fetchState: t, appAuthTokens: n } = (0, p.cj)([x.default], () => ({
+                fetchState: x.default.getFetchState(),
+                appAuthTokens: x.default.getNewestTokensForNonChildrenApplications(),
             })),
             a = (0, p.e7)([V.default], () => V.default.locale),
             o = (0, p.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivities()),
@@ -705,7 +705,7 @@ let ef = (e) => {
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
             T = () =>
-                null == n || null == y || t !== x.M.FETCHED
+                null == n || null == y || t !== x.FetchState.FETCHED
                     ? (0, r.jsx)(g.$jN, {
                           className: ea.marginTop20,
                           type: g.$jN.Type.SPINNING_CIRCLE,

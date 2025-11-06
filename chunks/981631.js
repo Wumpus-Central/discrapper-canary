@@ -4915,6 +4915,7 @@ var nE = (function (e) {
             (e.GUILD_ONBOARDING_LOADED = "guild_onboarding_loaded"),
             (e.GUILD_ONBOARDING_STEP_VIEWED = "guild_onboarding_step_viewed"),
             (e.GUILD_ONBOARDING_STEP_COMPLETED = "guild_onboarding_step_completed"),
+            (e.GUILD_ONBOARDING_CONNECTION_CLICKED = "guild_onboarding_connection_clicked"),
             (e.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED =
                 "guild_settings_onboarding_wizard_progress_cta_clicked"),
             (e.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED = "guild_settings_onboarding_edit_page_clicked"),

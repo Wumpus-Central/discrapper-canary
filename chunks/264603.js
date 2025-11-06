@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var a = n(951288),
     i = n(647438),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     s = n(442837),
     o = n(524437),
     c = n(481060),
@@ -40,7 +40,7 @@ let C = [
 function S() {
     let e = i.useRef(null),
         t = f.JG.useSetting(),
-        [n, l] = i.useState(""),
+        [n, r] = i.useState(""),
         o = (0, s.e7)([x.ZP, v.Z], () => (0, g.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
         E = (0, s.Wu)([p.Z], () => {
@@ -56,8 +56,8 @@ function S() {
         T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
         N = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         O = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: w } = (function (e) {
-            let t = (0, s.e7)([b.Z], () => b.Z.getNewestTokenForApplication(e)),
+        { canDeauthorize: P, deauthorize: I } = (function (e) {
+            let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
                 n = i.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
@@ -68,7 +68,7 @@ function S() {
         })(null == S ? void 0 : S.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: r()(_.panel, y.panel),
+        className: l()(_.panel, y.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: y.container,
@@ -97,11 +97,11 @@ function S() {
                     (0, a.jsx)(c.oil, {
                         label: "Application ID",
                         value: n,
-                        onChange: l,
+                        onChange: r,
                     }),
                     null != o && null != o.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => l(o.id),
+                              onClick: () => r(o.id),
                               variant: "primary",
                               text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
                           })
@@ -160,7 +160,7 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P,
-                        onClick: w,
+                        onClick: I,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

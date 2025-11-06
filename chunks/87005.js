@@ -40,12 +40,12 @@ function g(e) {
 }
 function E(e) {
     let { sectionDescriptors: t, context: n, onlyActivityApps: s, includeAuthorizedAppsAndFetch: l } = e,
-        h = (0, a.e7)([d.Z], () => d.Z.getFetchState());
+        h = (0, a.e7)([d.default], () => d.default.getFetchState());
     r.useEffect(() => {
-        l && h === d.M.NOT_FETCHED && o.Z.fetch();
+        l && h === d.FetchState.NOT_FETCHED && o.Z.fetch();
     }, [l, h]);
-    let m = (0, a.Wu)([d.Z], () =>
-            l ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [],
+    let m = (0, a.Wu)([d.default], () =>
+            l ? d.default.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [],
         ),
         g = t.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
         E = "contextless" === n.type,

@@ -66,9 +66,9 @@ function H(e) {
             { autoTrackExposure: null != (t = p.isSystemDM()) && t },
         ),
         G = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : L.lds),
-        { authorizedAppToken: W, authorizedAppsFetchState: z } = (0, l.cj)([C.Z], () => ({
-            authorizedAppToken: C.Z.getNewestTokenForApplication(null == G ? void 0 : G.id),
-            authorizedAppsFetchState: C.Z.getFetchState(),
+        { authorizedAppToken: W, authorizedAppsFetchState: z } = (0, l.cj)([C.default], () => ({
+            authorizedAppToken: C.default.getNewestTokenForApplication(null == G ? void 0 : G.id),
+            authorizedAppsFetchState: C.default.getFetchState(),
         })),
         q = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
@@ -79,7 +79,7 @@ function H(e) {
                 o.Z.wait(() => (0, _.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [D, v, p, P]),
         i.useEffect(() => {
-            (null == P ? void 0 : P.bot) && z === C.M.NOT_FETCHED && s.Z.fetch();
+            (null == P ? void 0 : P.bot) && z === C.FetchState.NOT_FETCHED && s.Z.fetch();
         }, [null == P ? void 0 : P.bot, z]),
         p.isSystemDM())
     )

@@ -302,7 +302,17 @@ function et(e) {
                   }),
                   (0, r.jsx)("div", {
                       className: X.connectionsContainer,
-                      children: t.map((e, n) => (0, r.jsx)(H.Z, { connection: e }, n)),
+                      children: t.map((e, t) =>
+                          (0, r.jsx)(
+                              H.Z,
+                              {
+                                  connection: e,
+                                  guildId: n.id,
+                                  location: "channels-and-roles",
+                              },
+                              t,
+                          ),
+                      ),
                   }),
               ],
           });

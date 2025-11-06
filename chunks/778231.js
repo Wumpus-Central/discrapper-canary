@@ -17,7 +17,7 @@ let b = (e) => {
     var t, n;
     let { entry: b } = e,
         { name: x } = b,
-        f = (0, l.e7)([m.Z], () => m.Z.getNewestTokenForApplication(b.id)),
+        f = (0, l.e7)([m.default], () => m.default.getNewestTokenForApplication(b.id)),
         v = null != (n = b.getIconURL(40)) ? n : h,
         j = (0, d.Z)({ application: b }),
         y = i.useRef(!1);

@@ -24,7 +24,7 @@ function E(e) {
         C = !0,
         N = (0, l.LD)(y, C),
         R = (0, l.PL)(A, C),
-        P = (0, a.e7)([_.Z], () => null != _.Z.getNewestTokenForApplication(I)),
+        P = (0, a.e7)([_.default], () => null != _.default.getNewestTokenForApplication(I)),
         { isUserApp: w, isGuildApp: D } = i.useMemo(() => {
             var e, t, n, r;
             if (null == I)
