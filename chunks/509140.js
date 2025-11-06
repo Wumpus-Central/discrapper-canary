@@ -93,7 +93,7 @@ let R = new N(
         __OVERLAY__ || !f.iP
             ? {}
             : {
-                  POST_CONNECTION_OPEN: C,
+                  CONNECTION_OPEN: C,
                   EXPERIMENT_OVERRIDE_BUCKET: I,
                   OVERLAY_SET_ENABLED: T,
                   OVERLAY_V3_LOAD_NATIVE_MODULE: S,
