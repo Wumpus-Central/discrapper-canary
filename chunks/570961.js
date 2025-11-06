@@ -1,7 +1,7 @@
 n.d(t, {
     $y: () => x,
-    Kk: () => N,
-    NB: () => p,
+    Kk: () => p,
+    NB: () => I,
     en: () => j,
     fi: () => O,
     n_: () => T,
@@ -47,7 +47,7 @@ function f(e) {
     }
     return e;
 }
-function I(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,10 +65,10 @@ function I(e, t) {
         e
     );
 }
-function p() {
+function I() {
     r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
 }
-function N(e, t, n) {
+function p(e, t, n) {
     E(
         e,
         u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? f({}, e, n) : e)),
@@ -97,15 +97,15 @@ function E(e, t) {
     }
 }
 async function S(e, t) {
+    if (!u.Z.hasChanges()) return;
     let n = u.Z.getChangedPrompts();
-    if (0 === n.length) return;
     null != t && t.ignoreDefaultPrompt && 1 === n.length && (0, g.RF)(n[0]) && (n = []);
     let l = u.Z.editedOnboardingPrompts.map((t) => {
             if (!n.some((e) => e.id === t.id)) return t;
             let l = t.options.map((t) => {
                 let n = null == t.roleIds ? t.roleIds : t.roleIds.filter((t) => null != c.Z.getRole(e.id, t)),
                     l = null == t.channelIds ? t.channelIds : t.channelIds.filter((e) => null != o.Z.getChannel(e));
-                return I(f({}, t), {
+                return N(f({}, t), {
                     roleIds: n,
                     channelIds: l,
                     emoji: (function (e) {
@@ -119,19 +119,19 @@ async function S(e, t) {
                     })(t),
                 });
             });
-            return I(f({}, t), {
+            return N(f({}, t), {
                 options: l,
                 type: l.length >= g.fY ? g.FN.DROPDOWN : g.FN.MULTIPLE_CHOICE,
             });
         }),
         m = l.filter((e) => e.inOnboarding),
-        p = l.filter((e) => !0 !== e.inOnboarding),
-        N = l.map((t) => (n.some((e) => e.id === t.id) ? _(e, l, t) : null));
-    if (N.filter(d.lm).length > 0)
+        I = l.filter((e) => !0 !== e.inOnboarding),
+        p = l.map((t) => (n.some((e) => e.id === t.id) ? _(e, l, t) : null));
+    if (p.filter(d.lm).length > 0)
         throw (
             (r.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-                errors: N,
+                errors: p,
             }),
             Error("failed to locally validate prompts"))
         );
@@ -143,11 +143,11 @@ async function S(e, t) {
             }),
             r.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-                errors: N,
+                errors: p,
             }),
             Error("too many prompts in onboarding"))
         );
-    let O = [...m, ...p];
+    let O = [...m, ...I];
     r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
     try {
         await T(e.id, { prompts: O.map(g.dr) }),
