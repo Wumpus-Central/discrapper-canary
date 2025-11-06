@@ -1,38 +1,33 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
-var i = n(524437),
-    a = n(755721),
-    o = n(63063),
-    s = n(78451),
-    l = n(695346),
+var i = n(755721),
+    a = n(63063),
+    o = n(78451),
+    s = n(695346),
+    l = n(580183),
     c = n(838436),
-    u = n(973005),
-    d = n(726985),
-    f = n(981631),
-    _ = n(388032),
-    p = n(918526);
-function h(e, t) {
-    var n;
-    return e !== i.Xr.DEFAULT_UNSET ? e : null != (n = u.O7.get(t)) ? n : i.Xr.NON_FRIENDS;
-}
-function m() {
-    let e = h(l.Xr.useSetting(), l.UP.useSetting());
+    u = n(726985),
+    d = n(981631),
+    f = n(388032),
+    _ = n(918526);
+function p() {
+    let e = (0, l.m)();
     return (0, r.jsxs)(c.U, {
-        setting: d.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
+        setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, r.jsx)(c.H, {
-                header: _.intl.string(_.t.tiCXaH),
-                description: _.intl.format(_.t.RvjRRI, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
+                header: f.intl.string(f.t.tiCXaH),
+                description: f.intl.format(f.t.RvjRRI, { appealLink: a.Z.getArticleURL(d.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
-            (0, r.jsx)(a.Gu, {
-                className: p.radioGroup,
-                radioItemClassName: p.radioGroupItem,
+            (0, r.jsx)(i.Gu, {
+                className: _.radioGroup,
+                radioItemClassName: _.radioGroupItem,
                 value: e,
-                options: (0, s.c7)(),
+                options: (0, o.c7)(),
                 onChange: (e) => {
                     let { value: t } = e;
-                    return l.Xr.updateSetting(t);
+                    return s.Xr.updateSetting(t);
                 },
             }),
         ],
