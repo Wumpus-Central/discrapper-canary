@@ -1,49 +1,102 @@
-e.d(n, { default: () => h }), e(388685);
-var i = e(951288),
-    a = e(647438),
-    l = e(793030),
-    s = e(153867),
-    c = e(493773),
-    r = e(933557),
-    o = e(626135),
-    d = e(981631),
-    u = e(388032);
-let h = (t) => {
-    let { onConfirm: n, channel: e, onClose: h, transitionState: p } = t,
-        C = (0, r.ZP)(e),
-        [g, k] = a.useState(!1);
-    return ((0, c.ZP)(() => {
-        o.default.track(d.rMx.OPEN_MODAL, {
+n.d(e, { default: () => b }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(793030),
+    o = n(153867),
+    l = n(493773),
+    c = n(933557),
+    u = n(626135),
+    s = n(981631),
+    f = n(388032);
+let b = (t) => {
+    var { onConfirm: e, channel: n, onClose: b, transitionState: p } = t,
+        d = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                r,
+                i = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(t);
+                    for (r = 0; r < a.length; r++) (n = a[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                    return i;
+                })(t, e);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
+            }
+            return i;
+        })(t, ["onConfirm", "channel", "onClose", "transitionState"]);
+    let y = (0, c.ZP)(n),
+        [O, h] = i.useState(!1);
+    return ((0, l.ZP)(() => {
+        u.default.track(s.rMx.OPEN_MODAL, {
             type: "Voice channel change confirmation",
-            channel_id: e.id,
+            channel_id: n.id,
         });
     }),
-    null == C)
+    null == y)
         ? null
-        : (0, i.jsx)(l.Modal, {
-              title: u.intl.string(u.t["0LZN5F"]),
-              subtitle: u.intl.format(u.t["vA+uEs"], { channel: C }),
-              transitionState: p,
-              size: "md",
-              onClose: h,
-              actionBarInput: (0, i.jsx)(l.XZJ, {
-                  checked: g,
-                  onChange: (t) => {
-                      s.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), k(t);
-                  },
-                  label: u.intl.string(u.t["JdIQ/Y"]),
-              }),
-              actions: [
+        : (0, r.jsx)(
+              a.Modal,
+              (function (t) {
+                  for (var e = 1; e < arguments.length; e++) {
+                      var n = null != arguments[e] ? arguments[e] : {},
+                          r = Object.keys(n);
+                      "function" == typeof Object.getOwnPropertySymbols &&
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (t) {
+                                  return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                              }),
+                          )),
+                          r.forEach(function (e) {
+                              var r;
+                              (r = n[e]),
+                                  e in t
+                                      ? Object.defineProperty(t, e, {
+                                            value: r,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0,
+                                        })
+                                      : (t[e] = r);
+                          });
+                  }
+                  return t;
+              })(
                   {
-                      variant: "secondary",
-                      text: u.intl.string(u.t["ETE/oC"]),
-                      onClick: h,
+                      title: f.intl.string(f.t["0LZN5F"]),
+                      subtitle: f.intl.format(f.t["vA+uEs"], { channel: y }),
+                      transitionState: p,
+                      size: "md",
+                      onClose: b,
+                      actionBarInput: (0, r.jsx)(a.XZJ, {
+                          checked: O,
+                          onChange: (t) => {
+                              o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), h(t);
+                          },
+                          label: f.intl.string(f.t["JdIQ/Y"]),
+                      }),
+                      actions: [
+                          {
+                              variant: "secondary",
+                              text: f.intl.string(f.t["ETE/oC"]),
+                              onClick: b,
+                          },
+                          {
+                              variant: "primary",
+                              text: f.intl.string(f.t["cY+Oob"]),
+                              onClick: () => {
+                                  e(), b();
+                              },
+                          },
+                      ],
                   },
-                  {
-                      variant: "primary",
-                      text: u.intl.string(u.t["cY+Oob"]),
-                      onClick: n,
-                  },
-              ],
-          });
+                  d,
+              ),
+          );
 };

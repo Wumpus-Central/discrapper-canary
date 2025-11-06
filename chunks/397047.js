@@ -1,4 +1,10 @@
-n.d(t, { $: () => r });
+n.d(t, {
+    $k: () => r,
+    Ce: () => o,
+    dh: () => a,
+    fA: () => i,
+}),
+    n(388685);
 var r = (function (e) {
     return (
         (e[(e.THIRD_PARTY = 0)] = "THIRD_PARTY"),
@@ -9,3 +15,6 @@ var r = (function (e) {
         e
     );
 })({});
+let i = "steelseries",
+    a = "kontrolfreek",
+    o = new Set([i, a]);

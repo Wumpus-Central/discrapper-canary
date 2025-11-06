@@ -43,22 +43,22 @@ class l extends r.Z {
         });
     }
     get isThirdPartyOutbound() {
-        return this.promotionType === i.$.THIRD_PARTY_OUTBOUND;
+        return this.promotionType === i.$k.THIRD_PARTY_OUTBOUND;
     }
     get isBogo() {
-        return this.promotionType === i.$.BOGO;
+        return this.promotionType === i.$k.BOGO;
     }
     get isMarketingMoment() {
-        return this.promotionType === i.$.MARKETING_MOMENT;
+        return this.promotionType === i.$k.MARKETING_MOMENT;
     }
     hasFlag(e) {
         return (0, a.yE)(this.flags, e);
     }
     isCountryRestricted(e) {
         switch (this.promotionType) {
-            case i.$.THIRD_PARTY_INBOUND:
+            case i.$k.THIRD_PARTY_INBOUND:
                 return this.inboundRestrictedCountries.includes(e);
-            case i.$.THIRD_PARTY_OUTBOUND:
+            case i.$k.THIRD_PARTY_OUTBOUND:
                 return this.outboundRestrictedCountries.includes(e);
             default:
                 return !1;
