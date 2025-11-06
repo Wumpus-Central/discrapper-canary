@@ -18,7 +18,7 @@ let u = (e) => "".concat(e.toFixed(0), "%"),
                 "aria-label": h,
             } = e,
             m = i.useRef(null),
-            g = i.useRef(o().debounce(() => (null == _ ? void 0 : _(s.U.SLIDER)), 100));
+            g = i.useMemo(() => o().debounce(() => (null == _ ? void 0 : _(s.U.SLIDER)), 100), [_]);
         i.useImperativeHandle(
             t,
             () => ({
@@ -35,7 +35,7 @@ let u = (e) => "".concat(e.toFixed(0), "%"),
             [],
         );
         let E = (e) => {
-            f(e), g.current();
+            f(e), g();
         };
         return (0, r.jsx)("div", {
             className: c.sliderContainer,

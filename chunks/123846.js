@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(781311);
+n.d(t, { Z: () => D }), n(388685), n(781311);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -150,25 +150,29 @@ function Z(e) {
         ],
     });
 }
-function N(e) {
+function D(e) {
     var t;
     let { guildId: n, onClose: i } = e,
         a = (0, d.e7)([h.Z], () => h.Z.getSearchStateByGuildId(n), [n], u()),
         { inviteCodes: c } = (0, x.s)(n),
         p = (0, d.e7)([m.Z], () => m.Z.getGuild(n)),
-        N = null != (t = null == p ? void 0 : p.vanityURLCode) ? t : null,
-        [D, R] = l.useState(!1),
+        D = null != (t = null == p ? void 0 : p.vanityURLCode) ? t : null,
+        [N, R] = l.useState(!1),
         { selectedSourceInviteCode: L, selectedJoinSourceType: P } = a,
         I = null != P && P !== j.gq.UNSPECIFIED,
         V = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
     V && (c = []);
-    let M = s()((e) => {
-        let t = e.trim();
-        (0, g.Dr)(n, {
-            selectedSourceInviteCode: "" !== t ? t : void 0,
-            selectedJoinSourceType: void 0,
-        });
-    }, 300);
+    let M = l.useMemo(
+        () =>
+            s()((e) => {
+                let t = e.trim();
+                (0, g.Dr)(n, {
+                    selectedSourceInviteCode: "" !== t ? t : void 0,
+                    selectedJoinSourceType: void 0,
+                });
+            }, 300),
+        [n],
+    );
     l.useEffect(
         () => () => {
             M.cancel();
@@ -217,7 +221,7 @@ function N(e) {
         },
         "aria-label": y.intl.string(y.t["u/7Rdc"]),
         onSelect: v.dG4,
-        children: D
+        children: N
             ? (0, r.jsxs)(C.kSQ, {
                   children: [
                       (0, r.jsx)(C.sNh, {
@@ -255,8 +259,8 @@ function N(e) {
                                           Z,
                                           w(_({}, t), {
                                               type: e,
-                                              vanityUrl: N,
-                                              text: (0, j.bE)(e, N, V),
+                                              vanityUrl: D,
+                                              text: (0, j.bE)(e, D, V),
                                           }),
                                       ),
                                   checked: P === e,
@@ -311,7 +315,7 @@ function N(e) {
                                           Z,
                                           w(_({}, t), {
                                               type: j.gq.INVITE,
-                                              vanityUrl: N,
+                                              vanityUrl: D,
                                               text: e,
                                           }),
                                       ),
@@ -350,9 +354,9 @@ function N(e) {
                                                                 Z,
                                                                 w(_({}, e), {
                                                                     size: 12,
-                                                                    text: (0, j.bE)(P, N, V),
+                                                                    text: (0, j.bE)(P, D, V),
                                                                     type: P,
-                                                                    vanityUrl: N,
+                                                                    vanityUrl: D,
                                                                 }),
                                                             ),
                                                         })

@@ -1,9 +1,9 @@
 let i;
 n.d(t, { Z: () => ej }), n(539854);
 var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    s = n.n(o),
+    o = n(647438),
+    l = n(120356),
+    s = n.n(l),
     a = n(921738),
     c = n.n(a),
     d = n(954955),
@@ -56,8 +56,8 @@ var I = n(266454),
     en = n(454991),
     ei = n(837268),
     er = n(32300),
-    el = n(681603),
-    eo = n(358446),
+    eo = n(681603),
+    el = n(358446),
     es = n(348733),
     ea = n(312178),
     ec = n(708383),
@@ -131,20 +131,20 @@ function eE(e) {
 }
 q.isPlatformEmbedded;
 let eS = (e) => {
-        let { keybind: t, onClick: n, isPreviewingInGame: i, locked: l } = e,
-            o = l ? m.P3F : "div";
-        return (0, r.jsx)(o, {
+        let { keybind: t, onClick: n, isPreviewingInGame: i, locked: o } = e,
+            l = o ? m.P3F : "div";
+        return (0, r.jsx)(l, {
             className: s()(eO.overlayBackground, {
-                [eO.overlayActive]: !l,
-                [eO.overlayLocked]: l,
-                [eO.previewMode]: !l && i,
+                [eO.overlayActive]: !o,
+                [eO.overlayLocked]: o,
+                [eO.previewMode]: !o && i,
             }),
             onMouseDown: (e) => {
                 let { currentTarget: t, target: i, button: r } = e;
                 r === em.AeJ.PRIMARY && t === i && n();
             },
             onContextMenu: eE,
-            children: l
+            children: o
                 ? null
                 : (0, r.jsx)("div", {
                       className: eO.closeContainer,
@@ -157,16 +157,16 @@ let eS = (e) => {
         });
     },
     ex = (e) => {
-        let { keyCode: t, shiftKey: n, metaKey: i, altKey: r, ctrlKey: l } = e;
+        let { keyCode: t, shiftKey: n, metaKey: i, altKey: r, ctrlKey: o } = e;
         return {
             keyCode: t,
             shiftKey: n,
             metaKey: i,
             altKey: r,
-            ctrlKey: l,
+            ctrlKey: o,
         };
     };
-class eZ extends l.Component {
+class eZ extends o.Component {
     handleLock() {
         (0, m.$sL)() || G.Z.isOpen() || _.Z.setInputLocked(!0, (0, ee.getPID)());
     }
@@ -211,8 +211,8 @@ class eZ extends l.Component {
                 locked: n,
                 canGoLive: i,
                 isStreaming: r,
-                voiceGuild: l,
-                voiceChannelId: o,
+                voiceGuild: o,
+                voiceChannelId: l,
                 game: s,
                 showKeybindNotification: a,
                 dismissKeybindNotification: c,
@@ -225,7 +225,7 @@ class eZ extends l.Component {
         }),
             et.Z.trackExposure({ location: "Overlay" });
         let d = i && !r && null != s,
-            u = t && null != l && null != o;
+            u = t && null != o && null != l;
         (0, I.zu)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX) || (0, I.Q3)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         let h = ep.Z.isNotificationDisabled(ef.n0.WelcomeNudge),
             p = ep.Z.isNotificationDisabled(ef.n0.GoLiveNudge);
@@ -240,8 +240,8 @@ class eZ extends l.Component {
                   ? (e = {
                         type: ef.nc.GO_LIVE_VOICE,
                         game: s,
-                        voiceChannelId: o,
-                        voiceGuild: l,
+                        voiceChannelId: l,
+                        voiceGuild: o,
                     })
                   : d &&
                     !p &&
@@ -313,8 +313,8 @@ class eZ extends l.Component {
                 locked: e,
                 keybind: t,
                 incompatibleApp: n,
-                initialized: l,
-                isPreviewingInGame: o,
+                initialized: o,
+                isPreviewingInGame: l,
                 activeRegions: a,
                 windowSize: c,
                 voiceGuild: d,
@@ -322,14 +322,14 @@ class eZ extends l.Component {
                 isOOPOverlayAvailable: h,
             } = this.props,
             { width: p, height: f } = c;
-        if (0 === p || 0 === f || n || !l) return null;
-        let g = e || o,
+        if (0 === p || 0 === f || n || !o) return null;
+        let g = e || l,
             m = R.default.getId();
         return (0, r.jsxs)("div", {
             className: eO.overlay,
             children: [
                 (0, r.jsx)(ec.Z, {}),
-                o &&
+                l &&
                     (0, r.jsx)("header", {
                         className: eO.previewingInGameHeader,
                         children: ey.intl.string(ey.t.iOq96m),
@@ -340,7 +340,7 @@ class eZ extends l.Component {
                         locked: e,
                         keybind: t,
                         onClick: e ? this.handleDeactivate : this.handleLock,
-                        isPreviewingInGame: o,
+                        isPreviewingInGame: l,
                     }),
                 (0, ee.validResolution)(c)
                     ? (0, r.jsx)(ea.Z, {
@@ -365,7 +365,7 @@ class eZ extends l.Component {
                     locked: g,
                     keybind: t,
                 }),
-                (0, r.jsx)(el.Z, {}),
+                (0, r.jsx)(eo.Z, {}),
                 (0, r.jsx)("div", { className: eO.overlayMountPx }),
             ],
         });
@@ -373,12 +373,15 @@ class eZ extends l.Component {
     constructor(e) {
         super(e),
             e_(this, "didUpdate", !1),
+            e_(
+                this,
+                "debouncedForceUpdate",
+                u()(() => {
+                    this.forceUpdate();
+                }, 500),
+            ),
             e_(this, "handleWindowResize", () => {
-                F.default.isFocusedPidOutOfProcess()
-                    ? this.forceUpdate()
-                    : u()(() => {
-                          this.forceUpdate();
-                      }, 500);
+                F.default.isFocusedPidOutOfProcess() ? this.forceUpdate() : this.debouncedForceUpdate();
             }),
             e_(this, "activeKeyEventShapes", []),
             e_(this, "lockEventShape", (0, $.d2)(this.props.keybindKeyCodes)),
@@ -391,8 +394,8 @@ class eZ extends l.Component {
                     this.activeKeyEventShapes.length === this.lockEventShape.length &&
                         this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) &&
                         (e.preventDefault(), e.stopPropagation());
-                let { locked: r, activeRegions: l } = this.props;
-                t.keyCode === c().codes.esc && r && l.has(em.O0n.TEXT_WIDGET) && _.Z.deactivateAllRegions();
+                let { locked: r, activeRegions: o } = this.props;
+                t.keyCode === c().codes.esc && r && o.has(em.O0n.TEXT_WIDGET) && _.Z.deactivateAllRegions();
             }),
             e_(this, "onKeyUpGlobal", (e) => {
                 let t = ex(e),
@@ -408,7 +411,7 @@ function ej() {
     let {
             locked: n,
             initialized: i,
-            incompatibleApp: o,
+            incompatibleApp: l,
             activeRegions: s,
             isPreviewingInGame: a,
             trackedGame: c,
@@ -429,14 +432,14 @@ function ej() {
         y = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         O = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
         { analyticsLocations: _ } = (0, j.ZP)(Z.Z.OVERLAY),
-        { showKeybindIndicators: v, dismissKeybindNotification: E } = (0, eo.K)(),
+        { showKeybindIndicators: v, dismissKeybindNotification: E } = (0, el.K)(),
         S = (null == c ? void 0 : c.fullscreenType) === b.Jx.FULLSCREEN,
         x = null != (e = null == c ? void 0 : c.oopEnabled) && e,
         C = en.v.oopEnabled,
         I = null != (t = null == c ? void 0 : c.hasChangedRenderMode) && t,
         { useContextualNudge: T, disableNudge: D } = (0, er.J0)("OverlaySetup");
     return (
-        l.useEffect(() => {
+        o.useEffect(() => {
             i && (0, er.F3)();
         }, [i]),
         (0, r.jsx)(j.Gt, {
@@ -444,7 +447,7 @@ function ej() {
             children: (0, r.jsx)(eZ, {
                 locked: n,
                 initialized: i,
-                incompatibleApp: o,
+                incompatibleApp: l,
                 activeRegions: s,
                 isPreviewingInGame: a,
                 windowSize: d,

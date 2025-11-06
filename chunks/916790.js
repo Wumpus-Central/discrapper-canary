@@ -1,36 +1,37 @@
-n.d(t, { Z: () => Z }), n(35282), n(388685), n(49124), n(975844), n(781311);
+n.d(t, { Z: () => D }), n(35282), n(388685), n(49124), n(975844), n(781311);
 var a = n(951288),
     i = n(647438),
-    l = n(120356),
-    r = n.n(l),
-    s = n(392711),
-    o = n(913527),
-    c = n.n(o),
-    d = n(28664),
-    u = n(755721),
-    m = n(481060),
-    p = n(570140),
-    h = n(665149),
-    x = n(886118),
-    g = n(301801),
-    f = n(4912),
-    b = n(572004),
-    v = n(55935),
-    j = n(428530),
-    _ = n(257785),
-    y = n(484036),
-    C = n(681619),
-    S = n(621060),
-    E = n(981631),
-    T = n(687278),
-    N = n(451429);
-function O(e) {
+    r = n(120356),
+    l = n.n(r),
+    s = n(299608),
+    o = n.n(s),
+    c = n(913527),
+    d = n.n(c),
+    u = n(28664),
+    m = n(755721),
+    p = n(481060),
+    h = n(570140),
+    x = n(665149),
+    g = n(886118),
+    f = n(301801),
+    b = n(4912),
+    v = n(572004),
+    j = n(55935),
+    _ = n(428530),
+    y = n(257785),
+    C = n(484036),
+    S = n(681619),
+    E = n(621060),
+    T = n(981631),
+    N = n(687278),
+    O = n(451429);
+function P(e) {
     return parseFloat(e.toFixed(3));
 }
-let P = [
+let I = [
     {
         key: "store",
-        cellClassName: T.actionColumn,
+        cellClassName: N.actionColumn,
         render(e) {
             let { trace: t } = e;
             return t.name;
@@ -38,10 +39,10 @@ let P = [
     },
     {
         key: "time",
-        cellClassName: T.totalTimeColumn,
+        cellClassName: N.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return "".concat(O(t.time), " ms");
+            return "".concat(P(t.time), " ms");
         },
     },
 ];
@@ -55,44 +56,44 @@ function w(e) {
                 })),
             [t],
         );
-    return (0, a.jsx)(m.zJl, {
-        children: (0, a.jsx)(C.Z, {
-            columns: P,
+    return (0, a.jsx)(p.zJl, {
+        children: (0, a.jsx)(S.Z, {
+            columns: I,
             data: n,
         }),
     });
 }
-let I = [
+let k = [
     {
         id: "action",
         name: "Action",
-        group: S.v0.NONE,
+        group: E.v0.NONE,
         render(e) {
             var t;
             let { actionLog: n } = e,
-                i = c()(n.createdAt);
+                i = d()(n.createdAt);
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsxs)(_.E, {
-                        className: T.actionProperties,
+                    (0, a.jsxs)(y.E, {
+                        className: N.actionProperties,
                         children: [
-                            (0, a.jsx)(_.Z9, {
+                            (0, a.jsx)(y.Z9, {
                                 name: "Created at",
                                 children: (0, a.jsx)("time", {
                                     dateTime: null == (t = n.createdAt) ? void 0 : t.toISOString(),
-                                    title: (0, v.vc)(i, "LLLL"),
-                                    children: (0, v.Y4)(i),
+                                    title: (0, j.vc)(i, "LLLL"),
+                                    children: (0, j.Y4)(i),
                                 }),
                             }),
-                            (0, a.jsxs)(_.Z9, {
+                            (0, a.jsxs)(y.Z9, {
                                 name: "Total Time",
-                                children: [O(n.totalTime), " ms"],
+                                children: [P(n.totalTime), " ms"],
                             }),
                         ],
                     }),
-                    (0, a.jsx)(m.zJl, {
-                        className: T.inspectorContainer,
-                        children: (0, a.jsx)(j.Z, { data: n.action }),
+                    (0, a.jsx)(p.zJl, {
+                        className: N.inspectorContainer,
+                        children: (0, a.jsx)(_.Z, { data: n.action }),
                     }),
                 ],
             });
@@ -101,90 +102,90 @@ let I = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: S.v0.NONE,
+        group: E.v0.NONE,
         render(e) {
             let { actionLog: t } = e;
             return (0, a.jsx)(w, { actionLog: t });
         },
     },
 ];
-function k(e) {
+function R(e) {
     let { actionLog: t, initialHeight: n } = e,
-        l = i.useMemo(
+        r = i.useMemo(
             () =>
                 t.error
                     ? [
-                          ...I,
+                          ...k,
                           {
                               id: "error",
                               name: (0, a.jsxs)(a.Fragment, {
-                                  children: [(0, a.jsx)(f.Z, { className: T.errorIcon }), "Error"],
+                                  children: [(0, a.jsx)(b.Z, { className: N.errorIcon }), "Error"],
                               }),
-                              group: S.v0.NONE,
+                              group: E.v0.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)("div", {
-                                              className: r()(T.errorToolbar, N.toolbar),
+                                              className: l()(N.errorToolbar, O.toolbar),
                                               children: (0, a.jsx)("div", {
-                                                  className: N.toolbarGroup,
-                                                  children: (0, a.jsx)(u.zx, {
-                                                      className: N.toolbarButton,
-                                                      size: u.zx.Sizes.MIN,
+                                                  className: O.toolbarGroup,
+                                                  children: (0, a.jsx)(m.zx, {
+                                                      className: O.toolbarButton,
+                                                      size: m.zx.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: "Log to Console",
                                                   }),
                                               }),
                                           }),
-                                          (0, a.jsx)(m.zJl, {
-                                              className: T.inspectorContainer,
-                                              children: (0, a.jsx)(j.Z, { data: t.error }),
+                                          (0, a.jsx)(p.zJl, {
+                                              className: N.inspectorContainer,
+                                              children: (0, a.jsx)(_.Z, { data: t.error }),
                                           }),
                                       ],
                                   });
                               },
                           },
                       ]
-                    : I,
+                    : k,
             [t],
         ),
-        { TabBar: s, renderSelectedTab: o } = (0, S.ZP)({ tabs: l }, [l]);
-    return (0, a.jsxs)(y.Z, {
-        className: T.subPanel,
+        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: r }, [r]);
+    return (0, a.jsxs)(C.Z, {
+        className: N.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, a.jsx)(s, {}),
-            (0, a.jsxs)(h.ZP, {
-                className: r()(N.headerBar, T.subPanelHeaderBar),
+            (0, a.jsxs)(x.ZP, {
+                className: l()(O.headerBar, N.subPanelHeaderBar),
                 children: [
-                    (0, a.jsx)(h.ZP.Icon, {
-                        icon: m.xVZ,
+                    (0, a.jsx)(x.ZP.Icon, {
+                        icon: p.xVZ,
                         tooltip: t.name,
                     }),
-                    (0, a.jsx)(h.ZP.Title, {
-                        wrapperClassName: r()(N.headerTitle, N.dispatcherHeader),
-                        className: N.headerTitleText,
+                    (0, a.jsx)(x.ZP.Title, {
+                        wrapperClassName: l()(O.headerTitle, O.dispatcherHeader),
+                        className: O.headerTitleText,
                         children: t.name,
                     }),
-                    (0, a.jsx)(h.ZP.Icon, {
-                        icon: m.TIy,
+                    (0, a.jsx)(x.ZP.Icon, {
+                        icon: p.TIy,
                         tooltip: "Copy event data",
                         onClick: () => {
                             var e;
                             let n = JSON.stringify(
                                 Object.keys((e = t.action)).reduce((t, n) => {
                                     var a;
-                                    return (t[n] = ((a = e[n]), E.Jn9.test(a) ? "REDACTED" : a)), t;
+                                    return (t[n] = ((a = e[n]), T.Jn9.test(a) ? "REDACTED" : a)), t;
                                 }, {}),
                                 null,
                                 2,
                             );
-                            (0, b.JG)(n, () =>
-                                (0, m.showToast)({
+                            (0, v.JG)(n, () =>
+                                (0, p.showToast)({
                                     id: "copy-action-log-name",
-                                    type: m.ToastType.SUCCESS,
+                                    type: p.ToastType.SUCCESS,
                                     message: "Copied action log data to clipboard",
                                 }),
                             );
@@ -199,107 +200,104 @@ function k(e) {
 let A = [
         {
             key: "action",
-            cellClassName: T.actionColumn,
+            cellClassName: N.actionColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [t.error && (0, a.jsx)(f.Z, { className: T.errorIcon }), t.name],
+                    children: [t.error && (0, a.jsx)(b.Z, { className: N.errorIcon }), t.name],
                 });
             },
         },
         {
             key: "total time",
-            cellClassName: T.totalTimeColumn,
+            cellClassName: N.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return "".concat(O(t.totalTime), " ms");
+                return "".concat(P(t.totalTime), " ms");
             },
         },
         {
             key: "timestamp",
-            cellClassName: T.totalTimeColumn,
+            cellClassName: N.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return c()(t.createdAt).format("HH:mm:ss.SSS");
+                return d()(t.createdAt).format("HH:mm:ss.SSS");
             },
         },
     ],
-    R = {
-        searchType: x.S.REGEX,
+    Z = {
+        searchType: g.S.REGEX,
         searchStringGenerator: (e) => {
             let { actionLog: t } = e;
             return t.name;
         },
         throttleMs: 100,
     };
-function Z() {
+function D() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        l = (function (e) {
-            let [t, n] = i.useState(e.logs),
-                a = i.useCallback(() => {
-                    (0, s.debounce)(() => {
-                        n([...e.logs]);
-                    }, 500)();
-                }, [e]);
+        r = (function (e) {
+            let [t, n] = i.useState(e.logs);
             return (
-                i.useEffect(
-                    () => (
-                        e.on("log", a),
+                i.useEffect(() => {
+                    let t = o()(() => {
+                        n([...e.logs]);
+                    }, 500);
+                    return (
+                        e.on("log", t),
                         () => {
-                            e.off("log", a);
+                            e.off("log", t);
                         }
-                    ),
-                    [e, a],
-                ),
+                    );
+                }, [e]),
                 t
             );
-        })(p.Z.actionLogger),
-        o = i.useMemo(
+        })(h.Z.actionLogger),
+        s = i.useMemo(
             () =>
-                l
+                r
                     .map((e) => ({
                         key: e.id.toString(),
                         actionLog: e,
                     }))
                     .toReversed(),
-            [l],
+            [r],
         ),
-        [c, u] = i.useState(o),
-        [h, x] = i.useState(o),
-        [f, b] = i.useState(!1),
+        [c, d] = i.useState(s),
+        [m, x] = i.useState(s),
+        [g, b] = i.useState(!1),
         [v, j] = i.useState(),
         _ = i.useCallback((e) => {
             x(e);
         }, []);
-    (0, g.BO)(t, f ? c : o, _, R);
+    (0, f.BO)(t, g ? c : s, _, Z);
     let y = i.useCallback(
             (e) => {
-                u(o), b(e);
+                d(s), b(e);
             },
-            [o],
+            [s],
         ),
-        S = t.trim().length > 0,
-        E = i.useMemo(() => (S ? h : f ? c : o), [o, h, S, f, c]),
-        O = f ? "Enable Event Tracking" : "Pause Event Tracking";
+        C = t.trim().length > 0,
+        E = i.useMemo(() => (C ? m : g ? c : s), [s, m, C, g, c]),
+        T = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
-        className: r()(N.panel, T.panel),
+        className: l()(O.panel, N.panel),
         children: [
             (0, a.jsxs)("div", {
-                className: T.toolbar,
+                className: N.toolbar,
                 children: [
-                    (0, a.jsx)(d.u, {
-                        text: O,
-                        children: (0, a.jsx)(m.hU, {
+                    (0, a.jsx)(u.u, {
+                        text: T,
+                        children: (0, a.jsx)(p.hU, {
                             size: "sm",
-                            variant: f ? "primary" : "active",
-                            icon: f ? m.o1U : m.fpf,
-                            "aria-label": O,
-                            onClick: () => y(!f),
+                            variant: g ? "primary" : "active",
+                            icon: g ? p.o1U : p.fpf,
+                            "aria-label": T,
+                            onClick: () => y(!g),
                         }),
                     }),
-                    (0, a.jsx)(m.E1j, {
+                    (0, a.jsx)(p.E1j, {
                         size: "sm",
                         query: t,
                         onChange: n,
@@ -308,14 +306,14 @@ function Z() {
                     }),
                 ],
             }),
-            (0, a.jsx)(C.Z, {
+            (0, a.jsx)(S.Z, {
                 columns: A,
                 data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
                 onClickRow: (e) => j(e.actionLog),
             }),
             null != v &&
-                (0, a.jsx)(k, {
+                (0, a.jsx)(R, {
                     actionLog: v,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

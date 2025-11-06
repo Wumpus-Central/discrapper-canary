@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(570140),
     p = n(365113),
     f = n(509212),
-    m = n(569984),
-    h = n(93127),
-    g = n(752048),
+    h = n(569984),
+    g = n(93127),
+    m = n(752048),
     _ = n(594174),
     b = n(801077),
     E = n(626135),
     O = n(70956),
-    I = n(225559),
-    y = n(910436),
-    v = n(203028),
+    y = n(225559),
+    v = n(910436),
+    I = n(203028),
     C = n(358924),
     S = n(292140),
     T = n(525296),
@@ -31,23 +31,23 @@ let A = 15 * O.Z.Millis.MINUTE,
     Z = (0, T.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = i.useRef(null),
-            c = (0, r.jsx)(v.Z, {
+            c = (0, r.jsx)(I.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
-            d = (0, r.jsx)(y.Z, {
+            d = (0, r.jsx)(v.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a,
             }),
-            { partiedMembers: f, applicationStreams: m, currentActivities: h, voiceChannels: g } = t,
+            { partiedMembers: f, applicationStreams: h, currentActivities: g, voiceChannels: m } = t,
             _ = f.length,
-            b = m.length,
-            O = h.length,
-            I = g.length > 0,
+            b = h.length,
+            O = g.length,
+            y = m.length > 0,
             T = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
             j = i.useCallback(() => {
-                let e = h
+                let e = g
                     .filter((e) => {
                         var t, n;
                         return (
@@ -60,11 +60,11 @@ let A = 15 * O.Z.Millis.MINUTE,
                     num_users: _,
                     num_streams: b,
                     num_activities: O,
-                    in_voice_channel: I,
+                    in_voice_channel: y,
                     games_detected: e,
                 });
-            }, [_, b, O, I, h]),
-            P = o()(j, A);
+            }, [_, b, O, y, g]),
+            P = i.useMemo(() => o()(j, A), [j]);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: s,
@@ -137,7 +137,7 @@ let A = 15 * O.Z.Millis.MINUTE,
               })
             : null;
     }),
-    w = a().throttle(() => h._(), 300000);
+    w = a().throttle(() => g._(), 300000);
 function L() {
     let {
             nowPlayingCards: e,
@@ -145,15 +145,15 @@ function L() {
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, c.cj)([b.Z, g.Z, _.default], () => ({
+        } = (0, c.cj)([b.Z, m.Z, _.default], () => ({
             nowPlayingCards: b.Z.nowPlayingCards,
             loaded: b.Z.loaded,
-            needsRefresh: g.Z.shouldFetch(),
-            fetching: g.Z.isFetching(),
+            needsRefresh: m.Z.shouldFetch(),
+            fetching: m.Z.isFetching(),
             currentUser: _.default.getCurrentUser(),
         })),
-        s = (0, c.e7)([m.Z], () => m.Z.quests);
-    i.useEffect(() => (d.Z.wait(() => I.L()), () => d.Z.wait(() => I.v())), [null == a ? void 0 : a.id]),
+        s = (0, c.e7)([h.Z], () => h.Z.quests);
+    i.useEffect(() => (d.Z.wait(() => y.L()), () => d.Z.wait(() => y.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && w();
         }, [n, l]);

@@ -106,7 +106,7 @@ let d = l.forwardRef(function (e, t) {
                             });
                     }
                     return e;
-                })({}, N)),
+                })({ "data-migration-pending": !0 }, N)),
                 (s = s =
                     {
                         buttonRef: t,

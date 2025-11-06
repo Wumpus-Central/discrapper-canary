@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(755721),
     p = n(481060),
     f = n(239091),
-    m = n(100527),
-    h = n(906732),
-    g = n(522651),
+    h = n(100527),
+    g = n(906732),
+    m = n(522651),
     _ = n(795318),
     b = n(706140),
     E = n(294629),
     O = n(131951),
-    I = n(459273),
-    y = n(242291),
-    v = n(792165),
+    y = n(459273),
+    v = n(242291),
+    I = n(792165),
     C = n(603074),
     S = n(981631),
     T = n(921944),
@@ -97,9 +97,9 @@ function A(e) {
         R = Z || w || L,
         [D, M] = i.useState(!1),
         k = t.getGuildId(),
-        U = (0, y.sR)({ isSoundboardButtonDisabled: R }),
+        U = (0, v.sR)({ isSoundboardButtonDisabled: R }),
         [G, B] = (0, b.cv)(U),
-        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, h.ZP)(m.Z.SOUNDBOARD_BUTTON);
+        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, g.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function F(e) {
         null != k &&
             (0, f.jW)(e, async () => {
@@ -115,7 +115,7 @@ function A(e) {
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, _.u)("SoundboardContextMenu", m.Z.RTC_PANEL) },
+                            { onInteraction: (0, _.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
                         ),
                     );
             });
@@ -129,11 +129,11 @@ function A(e) {
             R || M(!D);
         }, [R, D]);
     return (
-        (0, I.yp)({
+        (0, y.yp)({
             event: S.CkL.TOGGLE_SOUNDBOARD,
             handler: K,
         }),
-        (0, r.jsx)(h.Gt, {
+        (0, r.jsx)(g.Gt, {
             value: H,
             children: (0, r.jsx)(u.u, {
                 targetElementRef: A,
@@ -159,7 +159,7 @@ function A(e) {
                             onClose: n,
                             gridNotice:
                                 G === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                (0, r.jsx)(v.o, {
+                                (0, r.jsx)(I.o, {
                                     onClose: n,
                                     markAsDismissed: B,
                                 }),
@@ -173,7 +173,7 @@ function A(e) {
                                 d.zx,
                                 x(
                                     P(
-                                        x(P({}, e), {
+                                        x(P({ "data-migration-pending": !0 }, e), {
                                             className: a()(j.button, j.buttonColor, {
                                                 [j.greyButtonActive]: D,
                                                 [j.disabled]: R,
@@ -187,7 +187,7 @@ function A(e) {
                                                     B(T.L.UNKNOWN),
                                                     M(!D),
                                                     Y(),
-                                                    (0, g.v)(V, g.d.SOUNDBOARD);
+                                                    (0, m.v)(V, m.d.SOUNDBOARD);
                                             },
                                             onMouseEnter: (e) => {
                                                 var t;

@@ -149,9 +149,13 @@ let A = (e) => {
             L = i.useRef(null),
             M = i.useRef(0),
             j = S(n),
-            k = (0, s.debounce)(() => {
-                p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
-            }, 800),
+            k = i.useMemo(
+                () =>
+                    (0, s.debounce)(() => {
+                        p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
+                    }, 800),
+                [n],
+            ),
             U = () => {
                 null == L.current || N || ((L.current.currentTime = M.current), L.current.play());
             },

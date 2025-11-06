@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I }), n(388685);
-var r = n(392711),
-    i = n(106351),
+var r = n(106351),
+    i = n(846519),
     a = n(904245),
     o = n(147913),
     s = n(622822),
@@ -33,15 +33,15 @@ let y = 50,
 class v extends o.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
-            case i.d.DM:
-            case i.d.GROUP_DM:
+            case r.d.DM:
+            case r.d.GROUP_DM:
                 return !0;
-            case i.d.GUILD_TEXT:
+            case r.d.GUILD_TEXT:
                 let n = f.Z.getGuild(t),
-                    r = u.Z.getMemberCount(t);
+                    i = u.Z.getMemberCount(t);
                 return (
-                    null != r &&
-                    r <= y &&
+                    null != i &&
+                    i <= y &&
                     (null == n ? void 0 : n.rulesChannelId) !== e.id &&
                     !(0, s.Y3)(e) &&
                     !(0, l.Z)(e) &&
@@ -51,19 +51,19 @@ class v extends o.Z {
                 return !1;
         }
     }
-    maybeSendGiftingPromptSystemMessageDebounced(e, t, n, i) {
-        (0, r.debounce)(() => {
-            let r = p.Z.getChannelId();
+    maybeSendGiftingPromptSystemMessageDelayed(e, t, n, r) {
+        new i.sW(O, () => {
+            let i = p.Z.getChannelId();
             !g.Z.isGiftIntentMessageInCooldown(n) &&
-                e === r &&
+                e === i &&
                 _.Z.isReady(e) &&
                 (a.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
-                    giftIntentSecondaryAction: i,
+                    giftIntentSecondaryAction: r,
                 }),
                 (0, m.PV)(n));
-        }, O)();
+        }).delay();
     }
     handleChannelSelect(e, t) {
         let { enabled: n } = h.w.getCurrentConfig(
@@ -76,7 +76,7 @@ class v extends o.Z {
                 i = g.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (n && i.length > 0) {
                 let e = i[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(
+                this.maybeSendGiftingPromptSystemMessageDelayed(
                     r.id,
                     E.hX.FRIEND_ANNIVERSARY,
                     e,

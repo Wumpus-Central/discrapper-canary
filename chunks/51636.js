@@ -86,16 +86,26 @@ let R = i.memo((e) => {
         M = (0, g.Z)(),
         [j, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
-        F = (0, s.debounce)(() => {
-            p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, s.snakeCase)(t) });
-        }, 800),
-        V = (0, s.debounce)(() => {
-            null != y &&
-                p.default.track(O.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
-                    card_type: (0, s.snakeCase)(t),
-                    function_name: (0, s.snakeCase)(y.name),
-                });
-        }, 800),
+        F = i.useMemo(
+            () =>
+                (0, s.debounce)(() => {
+                    p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                        card_type: (0, s.snakeCase)(t),
+                    });
+                }, 800),
+            [t],
+        ),
+        V = i.useMemo(
+            () =>
+                (0, s.debounce)(() => {
+                    null != y &&
+                        p.default.track(O.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                            card_type: (0, s.snakeCase)(t),
+                            function_name: (0, s.snakeCase)(y.name),
+                        });
+                }, 800),
+            [t, y],
+        ),
         H = () => {
             null == y || y(), V();
         };

@@ -40,7 +40,7 @@ function g() {
     i.useEffect(() => {
         b();
         let e = (0, a.debounce)(b, 100);
-        window.addEventListener("resize", e);
+        return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
     }, [b]);
     let y = {
             [u.Sn.ALL_GOOD]: {

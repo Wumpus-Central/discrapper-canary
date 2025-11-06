@@ -190,13 +190,25 @@ function ec(e) {
         Z = (0, o.e7)([m.Z], () => m.Z.getSelectedParticipant(c.id)),
         N = b && C !== ee.IlC.POPOUT,
         [R, w] = i.useState(0),
-        { isOnStartStageScreen: A } = (0, z.ZP)();
+        A = i.useMemo(
+            () =>
+                (0, s.debounce)(
+                    (e) => {
+                        let { scrollTop: t } = e.target;
+                        w(t);
+                    },
+                    1000,
+                    { leading: !0 },
+                ),
+            [],
+        ),
+        { isOnStartStageScreen: L } = (0, z.ZP)();
     (0, z.MV)(c);
-    let L = (0, o.e7)([D.Z], () => D.Z.getToastsEnabled(c.id)),
-        U = (0, $.Z)(c) ? (null != Z ? "84px" : "124px") : null != Z ? "0px" : "48px";
+    let U = (0, o.e7)([D.Z], () => D.Z.getToastsEnabled(c.id)),
+        G = (0, $.Z)(c) ? (null != Z ? "84px" : "124px") : null != Z ? "0px" : "48px";
     return (
-        A && (U = "0px"),
-        (l = A
+        L && (G = "0px"),
+        (l = L
             ? (0, r.jsx)(X.Z, {
                   channel: c,
                   onContinueClick: () => {
@@ -206,10 +218,7 @@ function ec(e) {
             : I
               ? (0, r.jsx)(K.Z, {
                     channel: c,
-                    onScroll: (e) => {
-                        let { scrollTop: t } = e.target;
-                        (0, s.debounce)(() => w(t), 1000, { leading: !0 })();
-                    },
+                    onScroll: A,
                     popoutType: y,
                 })
               : (0, r.jsx)(Y.Z, {
@@ -222,8 +231,8 @@ function ec(e) {
             ((t = ei(
                 {
                     style: {
-                        height: "calc(100% - ".concat(U, ")"),
-                        paddingTop: U,
+                        height: "calc(100% - ".concat(G, ")"),
+                        paddingTop: G,
                     },
                     disableGradients: !I || (0 === R && T.e.TOP),
                     renderBottomCenter: () =>
@@ -232,7 +241,7 @@ function ec(e) {
                                   value: j,
                                   children: (0, r.jsx)(Q.Z, {
                                       channel: c,
-                                      isOnStartStageScreen: A,
+                                      isOnStartStageScreen: L,
                                   }),
                               })
                             : null,
@@ -257,7 +266,7 @@ function ec(e) {
                             channel: c,
                         }),
                     renderChatToasts: () =>
-                        !L || x || N
+                        !U || x || N
                             ? null
                             : (0, r.jsx)(_.ZP, {
                                   children: (0, r.jsx)(P.Z, {

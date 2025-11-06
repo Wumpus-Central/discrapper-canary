@@ -8,23 +8,18 @@ function s(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         [s, o] = r.useState((0, a.se)(t)),
         { errorMessage: c, handleValidateKeywords: d } = (function (e) {
-            let [t, n] = r.useState(null),
-                a = r.useRef(null);
+            let [t, n] = r.useState(null);
             return {
                 errorMessage: t,
-                handleValidateKeywords: r.useCallback(
+                handleValidateKeywords: r.useMemo(
                     () =>
                         (0, i.debounce)(
                             (t) => {
-                                clearTimeout(a.current),
-                                    (a.current = setTimeout(() => {
-                                        try {
-                                            (0, l.km)(t, e), n(null);
-                                        } catch (e) {
-                                            n(e.message);
-                                        }
-                                        clearTimeout(a.current);
-                                    }, 500));
+                                try {
+                                    (0, l.km)(t, e), n(null);
+                                } catch (e) {
+                                    n(e.message);
+                                }
                             },
                             300,
                             {
@@ -45,7 +40,7 @@ function s(e) {
                 let n = t.currentTarget.value;
                 "insertFromPaste" === t.nativeEvent.inputType && (n = u(n));
                 let r = (0, a.Ac)(n);
-                o(n), e(r), d()(r);
+                o(n), e(r), d(r);
             },
             [d, u, e],
         ),

@@ -190,14 +190,18 @@ let F = function () {
         ex = a.useCallback(() => {
             null != (0, N.Uc)() ? (0, f.op)() : (0, T.Yp)();
         }, []),
-        ev = (0, s.debounce)((e) => {
-            let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
-            t > 0 &&
-                (0, P.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
-                    scroll_visible_percentile: (t + n) / r,
-                    current_page: a,
-                });
-        }, 200),
+        ev = a.useMemo(
+            () =>
+                (0, s.debounce)((e) => {
+                    let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
+                    t > 0 &&
+                        (0, P.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+                            scroll_visible_percentile: (t + n) / r,
+                            current_page: a,
+                        });
+                }, 200),
+            [],
+        ),
         eC = a.useCallback(
             (e, t) => {
                 n(e),
