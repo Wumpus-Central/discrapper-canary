@@ -560,6 +560,7 @@ let eu = i.memo(function (e) {
                           direction: "horizontal",
                           gap: 8,
                           justify: "end",
+                          fullWidth: !1,
                           children: [
                               (0, r.jsx)(eh, { parentChannel: t }),
                               (0, r.jsx)(e_, {
