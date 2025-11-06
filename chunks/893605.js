@@ -5,5 +5,6 @@ function a(e) {
         name: e.name,
         countryCode: e.country_code,
         pingUrl: e.ping_url,
+        enabled: e.enabled,
     };
 }

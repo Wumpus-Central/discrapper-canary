@@ -115,6 +115,7 @@ function w() {
                 (e = L.sort((e, n) => (0, C.Z)(e, n, D)).map((e) => ({
                     value: e,
                     label: e.name,
+                    disabled: !0 !== e.enabled,
                 })))
                 ? e
                 : [];
