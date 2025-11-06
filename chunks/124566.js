@@ -64,7 +64,10 @@ let g = {
         },
         planSelection: {
             heading: () => c.intl.string(c.t.OEtqpm),
-            subheading: () => c.intl.string(c.t.vPeaOS),
+            subheading: function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+                return c.intl.formatToPlainString(c.t["2h5M+X"], { availableCount: e });
+            },
             mobileSubheading: (e) => c.intl.formatToPlainString(c.t["2h5M+X"], { availableCount: e }),
             gradientConfig: y,
             getImageUrl: (e, t) => (t ? _.Z : f.Z),

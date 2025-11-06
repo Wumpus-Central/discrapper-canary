@@ -17832,7 +17832,7 @@
   "qyhlUP": "You've gifted {intervalCount, plural, one { month} other { months} } of Nitro. What a way to celebrate the holiday season!",
   "0Z0G7m": "You've gifted {intervalCount, plural, one { year} other { years} } of Nitro. What a way to celebrate the holiday season!",
   "IuMZS3": "Sometimes the best gifts aren't wrapped, they're sent over Discord! Gift Nitro and get one of this year's top-selling decorations for free.",
-  "2h5M+X": "!!{availableCount}!! available {availableCount, plural, one { option} other { options} }",
+  "2h5M+X": "!!{availableCount}!! available {availableCount, plural, one {option} other {options} }",
   "y5wftM": "Spread even more cheer to collect them all!",
   "v54NrN": "Customize your gift BOX:",
   "gV5p7A": "Send a personalized Nitro gift to spread holiday cheer!",

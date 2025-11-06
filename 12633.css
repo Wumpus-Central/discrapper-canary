@@ -50906,7 +50906,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58239,9 +58239,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -72949,6 +72949,18 @@ html .progress__61462 {
     position: absolute;
     top: -50px;
     z-index: 1
+}
+
+.bannerImage__72cd3 {
+    background-position-x: 95%;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    inset: 0;
+    opacity: .5;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 0
 }
 
 .container_e99fef,

@@ -60,11 +60,12 @@ function _(e) {
     return [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2].includes(null == e ? void 0 : e.id);
 }
 function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 78.98;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 78.98,
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e) return;
-    let n = Array.isArray(e) ? e : e.gradient,
-        r = Array.isArray(e) || null == e.angle ? t : e.angle;
-    return { background: "linear-gradient(".concat(r, "deg, ").concat(n.join(", "), ")") };
+    let r = Array.isArray(e) ? e : e.gradient,
+        i = Array.isArray(e) || null == e.angle ? t : e.angle;
+    return n && (i = (i + 180) % 360), { background: "linear-gradient(".concat(i, "deg, ").concat(r.join(", "), ")") };
 }
 function h(e) {
     if (null != e)
