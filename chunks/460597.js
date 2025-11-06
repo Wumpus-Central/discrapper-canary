@@ -29,23 +29,27 @@ let o = (e) => {
                 return {
                     type: r.X.STREAM_ON_DESKTOP,
                     target: e.target,
+                    applications: e.applications,
                 };
             case r.X.PLAY_ACTIVITY:
                 return {
                     type: r.X.PLAY_ACTIVITY,
                     target: e.target,
+                    applications: e.applications,
                 };
             case r.X.PLAY_ON_XBOX:
                 return {
                     type: r.X.PLAY_ON_XBOX,
                     target: e.target,
                     externalIds: e.external_ids,
+                    applications: e.applications,
                 };
             case r.X.PLAY_ON_PLAYSTATION:
                 return {
                     type: r.X.PLAY_ON_PLAYSTATION,
                     target: e.target,
                     externalIds: e.external_ids,
+                    applications: e.applications,
                 };
             case r.X.ACHIEVEMENT_IN_GAME:
                 return {
@@ -56,6 +60,7 @@ let o = (e) => {
                         taskTitle: e.messages.task_title,
                         taskDescription: e.messages.task_description,
                     },
+                    applications: e.applications,
                 };
             case r.X.ACHIEVEMENT_IN_ACTIVITY:
                 return {
@@ -66,6 +71,7 @@ let o = (e) => {
                         taskTitle: e.messages.task_title,
                         taskDescription: e.messages.task_description,
                     },
+                    applications: e.applications,
                 };
             default:
                 return null;
