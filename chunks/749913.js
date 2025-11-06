@@ -29,7 +29,7 @@ var r = n(951288),
     I = n(216572),
     E = n(913663),
     R = n(268350),
-    M = n(456077),
+    M = n(543855),
     Z = n(488131),
     k = n(602034),
     A = n(23750),
@@ -139,9 +139,8 @@ function ed(e) {
                 !i &&
                     (setTimeout(() => {
                         if ((0, h.kK)(t.current, HTMLTextAreaElement)) {
-                            var e, n;
-                            null == (e = t.current) || e.setSelectionRange(l.length, l.length),
-                                null == (n = t.current) || n.focus();
+                            var e;
+                            null == (e = t.current) || e.focus();
                         }
                     }, 0),
                     ((o && l.length > 0) ||
