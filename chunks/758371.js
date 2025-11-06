@@ -10,14 +10,14 @@ var r = n(594174),
     a = n(981631),
     o = n(388032),
     s = n(978967);
-function l(e, t) {
+function l(e, t, n) {
     switch (t) {
         case a.mFx.LISTEN:
             return o.intl.formatToPlainString(o.t["/8czH4"], { name: e });
         case a.mFx.WATCH:
             return o.intl.formatToPlainString(o.t.BBJXVk, { name: e });
         case a.mFx.JOIN:
-            return o.intl.string(o.t.pkq6Vq);
+            return n ? void 0 : o.intl.string(o.t.pkq6Vq);
         case a.mFx.STREAM_REQUEST:
             return o.intl.string(s.default.DKHhec);
         case a.mFx.JOIN_REQUEST:

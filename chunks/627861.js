@@ -136,7 +136,7 @@ function ed(e) {
         S = i.useMemo(() => {
             if (null != g) return () => (0, C.aG)(g);
         }, [g]),
-        A = (0, B.dQ)(l.name, null == (t = f.activity) ? void 0 : t.type);
+        A = (0, B.dQ)(l.name, null == (t = f.activity) ? void 0 : t.type, v);
     if (v) {
         let e = (0, r.jsx)(c.Text, {
             variant: "text-xs/medium",
@@ -459,7 +459,7 @@ function ep(e) {
             () =>
                 ei && null != et
                     ? {
-                          label: ea.intl.string(ea.t.RscU7I),
+                          label: ea.intl.string(ea.t["s+J8Dl"]),
                           trackingArea: m.j_.PLAY,
                           isDeadEnd: !0,
                           onClick: () => {
@@ -489,7 +489,7 @@ function ep(e) {
         },
         { disableTrack: !eI },
     );
-    let eT = (0, B.dQ)(S.name, null == (t = P.activity) ? void 0 : t.type),
+    let eT = (0, B.dQ)(S.name, null == (t = P.activity) ? void 0 : t.type, K),
         eS = (0, I.N)(S.id).some((e) => (0, y.ig)(e) === o.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
