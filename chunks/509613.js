@@ -1,9 +1,10 @@
 n.d(e, {
-    $l: () => T,
-    CB: () => S,
-    Em: () => _,
-    J9: () => f,
-    ON: () => N,
+    $l: () => O,
+    CB: () => T,
+    Em: () => f,
+    IC: () => d,
+    J9: () => N,
+    ON: () => b,
     Ql: () =>
         function t(e, n) {
             if ("function" == typeof (null == e ? void 0 : e.buildLayout)) {
@@ -43,10 +44,10 @@ n.d(e, {
             return e;
         },
     UO: () => A,
-    ax: () => I,
-    k4: () => d,
+    ax: () => g,
+    k4: () => S,
     m7: () => o,
-    qs: () => g,
+    qs: () => _,
     so: () => s,
     vB: () => a,
     wf: () => c,
@@ -120,35 +121,38 @@ function E(t, e) {
     return u(t, i.Jq.PANE, e);
 }
 function d(t, e) {
-    return u(t, i.Jq.CATEGORY, e);
+    return u(t, i.Jq.SPLIT, e);
 }
 function S(t, e) {
-    return u(t, i.Jq.ACCORDION, e);
+    return u(t, i.Jq.CATEGORY, e);
 }
 function T(t, e) {
+    return u(t, i.Jq.ACCORDION, e);
+}
+function O(t, e) {
     return u(t, i.Jq.LIST, e);
 }
-function O(t, e, n) {
+function I(t, e, n) {
     return r(l({}, n), {
         key: t,
         type: e,
     });
 }
-function I(t, e) {
-    return O(t, i.Jq.BUTTON, e);
-}
 function g(t, e) {
-    return O(t, i.Jq.TOGGLE, e);
-}
-function A(t, e) {
-    return O(t, i.Jq.SLIDER, e);
+    return I(t, i.Jq.BUTTON, e);
 }
 function _(t, e) {
-    return O(t, i.Jq.SELECT, e);
+    return I(t, i.Jq.TOGGLE, e);
+}
+function A(t, e) {
+    return I(t, i.Jq.SLIDER, e);
 }
 function f(t, e) {
-    return O(t, i.Jq.RADIO, e);
+    return I(t, i.Jq.SELECT, e);
 }
 function N(t, e) {
-    return O(t, i.Jq.CUSTOM, e);
+    return I(t, i.Jq.RADIO, e);
+}
+function b(t, e) {
+    return I(t, i.Jq.CUSTOM, e);
 }
