@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(951288),
-    i = n(647438),
-    l = n(120356),
-    r = n.n(l),
+    r = n(647438),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(259580),
     c = n(422665);
@@ -10,7 +10,7 @@ function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: l,
+            subtitle: i,
             children: d,
             className: u,
             isExpanded: m,
@@ -19,22 +19,30 @@ function d(e) {
             onOpen: x,
             maxHeight: g,
         } = e,
-        [f, b] = i.useState(h),
-        v = void 0 !== m,
-        j = v ? m : f,
-        _ = i.useCallback(() => {
-            let e = !j;
-            v || b(e), null == p || p(e), e && null != x && x();
-        }, [j, v, p, x]),
-        y = i.useMemo(() => {
-            if (null != g && j) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
-        }, [g, j]);
+        [f, b] = r.useState(h),
+        v = r.useRef(null),
+        [j, _] = r.useState(null),
+        y = void 0 !== m,
+        C = y ? m : f;
+    r.useEffect(() => {
+        C && null != v.current && _(v.current.scrollHeight);
+    }, [C, d]);
+    let S = r.useCallback(() => {
+            let e = !C;
+            y || b(e), null == p || p(e), e && null != x && x();
+        }, [C, y, p, x]),
+        E = r.useMemo(() => {
+            if (C) {
+                if (null != g) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
+                if (null != j) return { maxHeight: "".concat(j, "px") };
+            }
+        }, [g, C, j]);
     return (0, a.jsxs)("div", {
-        className: r()(c.accordionContainer, u, { [c.opened]: j }),
+        className: l()(c.accordionContainer, u, { [c.opened]: C }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
-                onClick: _,
+                onClick: S,
                 children: [
                     null != t &&
                         (0, a.jsx)("div", {
@@ -49,17 +57,17 @@ function d(e) {
                                 color: "header-secondary",
                                 children: n,
                             }),
-                            null != l &&
-                                "" !== l &&
+                            null != i &&
+                                "" !== i &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "interactive-normal",
-                                    children: l,
+                                    children: i,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: r()(c.caret, { [c.opened]: j }),
+                        className: l()(c.caret, { [c.opened]: C }),
                         children: (0, a.jsx)(o.Z, {
                             width: 18,
                             height: 18,
@@ -69,8 +77,9 @@ function d(e) {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: r()(c.content, { [c.opened]: j }),
-                style: y,
+                ref: v,
+                className: l()(c.content, { [c.opened]: C }),
+                style: E,
                 children: d,
             }),
         ],
