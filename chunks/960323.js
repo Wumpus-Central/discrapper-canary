@@ -10,27 +10,27 @@ var i = n(657707),
     E = n(279362),
     d = n(90794),
     S = n(756893),
-    O = n(927947),
-    T = n(776570),
-    I = n(726985),
-    g = n(388032);
+    T = n(927947),
+    O = n(776570),
+    g = n(726985),
+    I = n(388032);
 let _ = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
         buildLayout: () => [],
         render: a.Z,
         usePredicate: () => !(0, s.BK)("LegacyVoiceAndVideoPane"),
     }),
     A = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [T.Z, o.Z, O.Z, S.Z, d.Z, c.Z, E.Z],
+        buildLayout: () => [O.Z, o.Z, T.Z, S.Z, d.Z, c.Z, E.Z],
         usePredicate: () => (0, s.BK)("VoiceAndVideoPane"),
     }),
     f = (0, l.wf)(u.n.VOICE_AND_VIDEO_PANEL, {
-        useTitle: () => g.intl.string(g.t.B1fFpf),
+        useTitle: () => I.intl.string(I.t.B1fFpf),
         buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [A] : [_]),
     }),
     N = (0, l.m7)(u.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         icon: i.S6n,
-        useTitle: () => g.intl.string(g.t.B1fFpf),
+        useTitle: () => I.intl.string(I.t.B1fFpf),
         usePredicate: () => r.Z.isSupported(),
-        legacySearchKey: I.s6.VOICE_AND_VIDEO,
+        getLegacySearchKey: () => ((0, s.Ml)("VoiceAndVideoPanel") ? void 0 : g.s6.VOICE_AND_VIDEO),
         buildLayout: () => [f],
     });

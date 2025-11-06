@@ -9,38 +9,39 @@ function s(t, e, n) {
             var a;
             let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 c = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                d = (null == (a = t.usePredicate) ? void 0 : a.call(t)) === !1 || o,
-                E =
+                E = (null == (a = t.usePredicate) ? void 0 : a.call(t)) === !1 || o,
+                d =
                     (function (t, e, n, i) {
-                        var s, a, o, c, d;
-                        if (null != t.legacySearchKey) return e.length < 2 || i.has(t.legacySearchKey);
+                        var s, a, o, c, E, d;
+                        let S = null == (s = t.getLegacySearchKey) ? void 0 : s.call(t);
+                        if (null != S) return e.length < 2 || i.has(S);
                         if (t.type === u.Jq.SECTION && t.hoisted) return !0;
-                        let E = "useTitle" in t ? (null == (s = t.useTitle) ? void 0 : s.call(t, !1)) : void 0,
+                        let T = "useTitle" in t ? (null == (a = t.useTitle) ? void 0 : a.call(t, !1)) : void 0,
                             O =
                                 "useNavigationTitle" in t
-                                    ? null == (a = t.useNavigationTitle)
+                                    ? null == (o = t.useNavigationTitle)
                                         ? void 0
-                                        : a.call(t)
+                                        : o.call(t)
                                     : void 0,
-                            T = "useSearchTerms" in t ? (null == (o = t.useSearchTerms) ? void 0 : o.call(t)) : void 0;
-                        if (n || (null == E && null == O && null == T)) return !1;
+                            g = "useSearchTerms" in t ? (null == (c = t.useSearchTerms) ? void 0 : c.call(t)) : void 0;
+                        if (n || (null == T && null == O && null == g)) return !1;
                         if ("" === e) return !0;
-                        let S = e.toLowerCase();
-                        for (let t of null != T ? T : []) if (l()(S, t.toLowerCase())) return !0;
-                        let g = !1;
-                        if (null != E) {
-                            let t = null == (c = (0, r.qgQ)(E)) ? void 0 : c.toLowerCase();
-                            null != t && (g = l()(S, t));
+                        let I = e.toLowerCase();
+                        for (let t of null != g ? g : []) if (l()(I, t.toLowerCase())) return !0;
+                        let _ = !1;
+                        if (null != T) {
+                            let t = null == (E = (0, r.qgQ)(T)) ? void 0 : E.toLowerCase();
+                            null != t && (_ = l()(I, t));
                         }
-                        if (null != O && !g) {
+                        if (null != O && !_) {
                             let t = null == (d = (0, r.qgQ)(O)) ? void 0 : d.toLowerCase();
-                            null != t && (g = l()(S, t));
+                            null != t && (_ = l()(I, t));
                         }
-                        return g;
-                    })(t, e, d, n) || c,
-                O = !1;
-            if ((0, u.Lk)(t)) for (let e of t.layout) O = s(e, d, E) || O;
-            return !d && (E || O) && i.add(t.key), E || O;
+                        return _;
+                    })(t, e, E, n) || c,
+                S = !1;
+            if ((0, u.Lk)(t)) for (let e of t.layout) S = s(e, E, d) || S;
+            return !E && (d || S) && i.add(t.key), d || S;
         };
     return s(t), i;
 }

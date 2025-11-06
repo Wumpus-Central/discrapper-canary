@@ -1,4 +1,4 @@
-n.d(e, { x: () => d });
+n.d(e, { x: () => E });
 var i = n(657707),
     l = n(509613),
     r = n(313789),
@@ -14,9 +14,9 @@ let o = (0, l.x1)(r.n.ACCOUNT_PANE, {
         useTitle: () => a.intl.string(a.t["JAIM/m"]),
         buildLayout: () => [o],
     }),
-    d = (0, l.m7)(r.n.ACCOUNT_SIDEBAR_ITEM, {
+    E = (0, l.m7)(r.n.ACCOUNT_SIDEBAR_ITEM, {
         icon: i.tBG,
         useTitle: () => a.intl.string(a.t["JAIM/m"]),
-        legacySearchKey: s.s6.ACCOUNT,
+        getLegacySearchKey: () => s.s6.ACCOUNT,
         buildLayout: () => [c],
     });

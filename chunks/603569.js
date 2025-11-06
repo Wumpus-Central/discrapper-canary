@@ -7,23 +7,23 @@ var i = n(951288),
     a = n(509613),
     o = n(28682),
     c = n(313789),
-    d = n(54942),
-    E = n(726985),
-    O = n(388032),
+    E = n(54942),
+    d = n(726985),
+    S = n(388032),
     T = n(602698);
-let S = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
-        useTitle: () => O.intl.string(T.default.RZqaJn),
+let O = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
+        useTitle: () => S.intl.string(T.default.RZqaJn),
         buildLayout: () => [],
-        render: () => (0, i.jsx)(d.Z, {}),
+        render: () => (0, i.jsx)(E.Z, {}),
     }),
     g = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
-        useTitle: () => O.intl.string(T.default.RZqaJn),
-        buildLayout: () => [S],
+        useTitle: () => S.intl.string(T.default.RZqaJn),
+        buildLayout: () => [O],
     }),
     I = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
         icon: l.BFJ,
-        useTitle: () => O.intl.string(T.default.RZqaJn),
-        legacySearchKey: E.s6.PRIVACY_FAMILY_CENTER,
+        useTitle: () => S.intl.string(T.default.RZqaJn),
+        getLegacySearchKey: () => d.s6.PRIVACY_FAMILY_CENTER,
         buildLayout: () => [g],
         trailing: {
             type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
@@ -31,7 +31,7 @@ let S = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
             useDecoration: function (t) {
                 let e = (0, s.gU)();
                 return t === r.z.FAMILY_CENTER_NEW_BADGE
-                    ? (0, i.jsx)(u.IGR, { text: O.intl.string(O.t.y2b7CA) })
+                    ? (0, i.jsx)(u.IGR, { text: S.intl.string(S.t.y2b7CA) })
                     : e > 0
                       ? (0, i.jsx)(u.mAB, { count: e })
                       : null;

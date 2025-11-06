@@ -7,22 +7,22 @@ var i = n(951288),
     a = n(813732),
     o = n(509613),
     c = n(28682),
-    d = n(313789),
-    E = n(726985),
-    O = n(388032);
-let T = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
+    E = n(313789),
+    d = n(726985),
+    S = n(388032);
+let T = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
         render: a.Z,
     }),
-    S = (0, o.wf)(d.n.SUBSCRIPTIONS_PANEL, {
-        useTitle: () => O.intl.string(O.t.trSpHX),
+    O = (0, o.wf)(E.n.SUBSCRIPTIONS_PANEL, {
+        useTitle: () => S.intl.string(S.t.trSpHX),
         buildLayout: () => [T],
     }),
-    g = (0, o.m7)(d.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
+    g = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
         icon: l.XOf,
-        useTitle: () => O.intl.string(O.t.trSpHX),
-        legacySearchKey: E.s6.SUBSCRIPTIONS,
-        buildLayout: () => [S],
+        useTitle: () => S.intl.string(S.t.trSpHX),
+        getLegacySearchKey: () => d.s6.SUBSCRIPTIONS,
+        buildLayout: () => [O],
         trailing: {
             type: c.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () =>

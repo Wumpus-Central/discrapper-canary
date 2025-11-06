@@ -7,25 +7,25 @@ var i = n(951288),
     a = n(313789),
     o = n(726985),
     c = n(388032),
-    d = n(781652);
-let E = (0, s.x1)(a.n.POGGERMODE_PANE, {
+    E = n(781652);
+let d = (0, s.x1)(a.n.POGGERMODE_PANE, {
         useTitle: () => c.intl.string(c.t.AtCukI),
         buildLayout: () => [],
         render: u.Z,
     }),
-    O = (0, s.wf)(a.n.POGGERMODE_PANEL, {
+    S = (0, s.wf)(a.n.POGGERMODE_PANEL, {
         useTitle: () => c.intl.string(c.t.AtCukI),
-        buildLayout: () => [E],
+        buildLayout: () => [d],
     }),
     T = (0, s.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
         icon: () =>
             (0, i.jsx)("img", {
                 alt: "",
                 src: n(348621),
-                className: d.poggermodeIcon,
+                className: E.poggermodeIcon,
             }),
         useTitle: () => c.intl.string(c.t.AtCukI),
-        legacySearchKey: o.s6.POGGERMODE,
+        getLegacySearchKey: () => o.s6.POGGERMODE,
         usePredicate: () => (0, l.e7)([r.Z], () => r.Z.settingsVisible),
-        buildLayout: () => [O],
+        buildLayout: () => [S],
     });

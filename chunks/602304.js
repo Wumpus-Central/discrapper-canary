@@ -1,4 +1,4 @@
-n.d(e, { a: () => E });
+n.d(e, { a: () => d });
 var i = n(951288),
     l = n(657707),
     r = n(509613),
@@ -10,13 +10,13 @@ let c = (0, r.x1)(u.n.LOCALE_PANE, {
         buildLayout: () => [],
         render: () => (0, i.jsx)(s.Z, {}),
     }),
-    d = (0, r.wf)(u.n.LOCALE_PANEL, {
+    E = (0, r.wf)(u.n.LOCALE_PANEL, {
         useTitle: () => o.intl.string(o.t.IHMsPn),
         buildLayout: () => [c],
     }),
-    E = (0, r.m7)(u.n.LOCALE_SIDEBAR_ITEM, {
+    d = (0, r.m7)(u.n.LOCALE_SIDEBAR_ITEM, {
         icon: l.os0,
         useTitle: () => o.intl.string(o.t.IHMsPn),
-        legacySearchKey: a.s6.LANGUAGE,
-        buildLayout: () => [d],
+        getLegacySearchKey: () => a.s6.LANGUAGE,
+        buildLayout: () => [E],
     });

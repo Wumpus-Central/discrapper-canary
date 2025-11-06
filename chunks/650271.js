@@ -1,4 +1,4 @@
-n.d(e, { z: () => O });
+n.d(e, { z: () => S });
 var i = n(657707),
     l = n(509613),
     r = n(28682),
@@ -7,20 +7,20 @@ var i = n(657707),
     a = n(501348),
     o = n(726985),
     c = n(388032);
-let d = (0, l.x1)(u.n.APPEARANCE_PANE, {
+let E = (0, l.x1)(u.n.APPEARANCE_PANE, {
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
         buildLayout: () => [],
         render: a.Z,
     }),
-    E = (0, l.wf)(u.n.APPEARANCE_PANEL, {
+    d = (0, l.wf)(u.n.APPEARANCE_PANEL, {
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
-        buildLayout: () => [d],
+        buildLayout: () => [E],
     }),
-    O = (0, l.m7)(u.n.APPEARANCE_SIDEBAR_ITEM, {
+    S = (0, l.m7)(u.n.APPEARANCE_SIDEBAR_ITEM, {
         icon: i.V3v,
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
-        legacySearchKey: o.s6.APPEARANCE,
-        buildLayout: () => [E],
+        getLegacySearchKey: () => o.s6.APPEARANCE,
+        buildLayout: () => [d],
         trailing: {
             type: r.PU.BADGE_NEW,
             getDismissibleContentTypes: s.$Z,

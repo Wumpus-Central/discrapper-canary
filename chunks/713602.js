@@ -1,4 +1,4 @@
-n.d(e, { B: () => d });
+n.d(e, { B: () => E });
 var i = n(657707),
     l = n(509613),
     r = n(906467),
@@ -13,10 +13,10 @@ let o = (0, l.x1)(u.n.DEVELOPER_OPTIONS_PANE, {
         useTitle: () => "Developer Options",
         buildLayout: () => [o],
     }),
-    d = (0, l.m7)(u.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
+    E = (0, l.m7)(u.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
         icon: i.Che,
         useTitle: () => "Developer Options",
-        legacySearchKey: a.s6.DEVELOPER_OPTIONS,
+        getLegacySearchKey: () => a.s6.DEVELOPER_OPTIONS,
         usePredicate: () => r.Z.isDeveloper,
         buildLayout: () => [c],
     });

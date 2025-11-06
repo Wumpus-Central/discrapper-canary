@@ -18,7 +18,7 @@ let E = (0, r.x1)(u.n.STREAMER_MODE_PANE, {
     S = (0, r.m7)(u.n.STREAMER_MODE_SIDEBAR_ITEM, {
         icon: l.m3e,
         useTitle: () => c.intl.string(c.t.S5GfOW),
-        legacySearchKey: o.s6.STREAMER_MODE,
+        getLegacySearchKey: () => o.s6.STREAMER_MODE,
         usePredicate: function () {
             return !(0, s.BK)("StreamerModeSidebarItem");
         },

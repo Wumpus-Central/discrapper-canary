@@ -1,4 +1,4 @@
-n.d(e, { o: () => E });
+n.d(e, { o: () => d });
 var i = n(657707),
     l = n(509613),
     r = n(358085),
@@ -10,14 +10,14 @@ let c = (0, l.x1)(u.n.LINUX_PANE, {
         buildLayout: () => [],
         render: s.Z,
     }),
-    d = (0, l.wf)(u.n.LINUX_PANEL, {
+    E = (0, l.wf)(u.n.LINUX_PANEL, {
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
+    d = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
         icon: i.pzj,
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
-        legacySearchKey: a.s6.LINUX_SETTINGS,
+        getLegacySearchKey: () => a.s6.LINUX_SETTINGS,
         usePredicate: () => r.isPlatformEmbedded && (0, r.isLinux)(),
-        buildLayout: () => [d],
+        buildLayout: () => [E],
     });
