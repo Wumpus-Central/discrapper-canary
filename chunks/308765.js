@@ -354,7 +354,7 @@ let i = {
             "KEYBINDS_SET_KEYBIND",
             "OVERLAY_READY",
         ],
-        inlineRequire: () => n(991186).Z,
+        inlineRequire: () => n(991186).ZP,
         neverLoadBeforeConnectionOpen: !0,
     },
     OverlayNegativeWidgetExperimentManager: {

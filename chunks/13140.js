@@ -6,6 +6,7 @@ n.d(t, {
     UR: () => v,
     d2: () => j,
     dU: () => T,
+    m3: () => G,
 }),
     n(388685),
     n(704826),
@@ -286,4 +287,15 @@ function U(e) {
     return t
         ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(w) : r).join(" + ").toUpperCase()
         : r.join("+");
+}
+function G(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return (
+        e.length === t.length &&
+        e.every((e, r) => {
+            let [i, a, o] = e,
+                [s, l, c] = t[r];
+            return i === s && a === l && (!n || o === c);
+        })
+    );
 }

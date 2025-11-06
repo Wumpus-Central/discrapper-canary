@@ -39,7 +39,6 @@ var r = (function (e) {
             (e.TrackFocusPIDs = "track_focus_pids"),
             (e.OverlayRafManagerForceEnabled = "overlay_raf_manager_force_enabled"),
             (e.LegacyOverlayLogging = "legacy_overlay_logging"),
-            (e.OverrideIsNewOverlayUser = "override_is_new_overlay_user"),
             e
         );
     })({}),

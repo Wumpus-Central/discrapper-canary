@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eN }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => eA }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -19,33 +19,36 @@ var a = n(951288),
     j = n(984370),
     _ = n(427860),
     y = n(837268),
-    C = n(371651),
-    S = n(829907),
-    E = n(610394),
-    T = n(338949),
-    N = n(556809),
-    O = n(886118),
-    P = n(301801),
-    I = n(352527),
-    w = n(355863),
-    k = n(449224),
-    R = n(808506),
-    A = n(572004),
-    Z = n(55935),
-    D = n(70956),
-    L = n(136015),
-    M = n(145597),
-    U = n(246992),
-    F = n(257785),
-    B = n(484036),
-    G = n(681619),
-    z = n(621060),
-    V = n(981631),
-    H = n(757744),
-    W = n(388032),
-    K = n(454741),
-    q = n(451429);
-function Y(e) {
+    C = n(991186),
+    S = n(371651),
+    E = n(829907),
+    T = n(610394),
+    N = n(338949),
+    O = n(556809),
+    P = n(886118),
+    I = n(301801),
+    w = n(352527),
+    k = n(355863),
+    R = n(449224),
+    A = n(556296),
+    Z = n(808506),
+    D = n(572004),
+    L = n(55935),
+    M = n(70956),
+    U = n(136015),
+    F = n(13140),
+    B = n(145597),
+    G = n(246992),
+    z = n(257785),
+    V = n(484036),
+    H = n(681619),
+    W = n(621060),
+    K = n(981631),
+    q = n(757744),
+    Y = n(388032),
+    J = n(454741),
+    X = n(451429);
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -70,7 +73,7 @@ function Y(e) {
     }
     return e;
 }
-function J(e, t) {
+function $(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,12 +91,12 @@ function J(e, t) {
         e
     );
 }
-let X = {
-        [V.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            J(
-                Y(
+let ee = {
+        [K.Odu.CLICK_ZONE_DEBUG]: (e) =>
+            $(
+                Q(
                     {
-                        type: V.Odu.CLICK_ZONE_DEBUG,
+                        type: K.Odu.CLICK_ZONE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -105,15 +108,15 @@ let X = {
                             height: 100,
                         },
                     },
-                    w.Z.getWidgetDefaultSettings(V.Odu.CLICK_ZONE_DEBUG),
+                    k.Z.getWidgetDefaultSettings(K.Odu.CLICK_ZONE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
-        [V.Odu.PERFORMANCE_DEBUG]: (e) =>
-            J(
-                Y(
+        [K.Odu.PERFORMANCE_DEBUG]: (e) =>
+            $(
+                Q(
                     {
-                        type: V.Odu.PERFORMANCE_DEBUG,
+                        type: K.Odu.PERFORMANCE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -126,13 +129,13 @@ let X = {
                             height: "auto",
                         },
                     },
-                    w.Z.getWidgetDefaultSettings(V.Odu.PERFORMANCE_DEBUG),
+                    k.Z.getWidgetDefaultSettings(K.Odu.PERFORMANCE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
     },
-    Q = {};
-function $(e) {
+    et = {};
+function en(e) {
     let { id: t } = e,
         [n, i] = r.useState(!1);
     return (
@@ -153,20 +156,20 @@ function $(e) {
             color: u.zx.Colors.LINK,
             size: u.zx.Sizes.MIN,
             onClick: function () {
-                (0, A.JG)(t, () => i(!0));
+                (0, D.JG)(t, () => i(!0));
             },
-            className: K.copyId,
-            children: ["Application Id: ", t, " ", n ? W.intl.string(W.t.t5VZ88) : null],
+            className: J.copyId,
+            children: ["Application Id: ", t, " ", n ? Y.intl.string(Y.t.t5VZ88) : null],
         })
     );
 }
-let ee = r.memo(function (e) {
+let ea = r.memo(function (e) {
         let { trackedGame: t } = e,
             n = (0, d.e7)([v.ZP], () => v.ZP.getGameOrTransformedSubgameForPID(t.pid)),
-            r = (0, d.e7)([k.Z], () => k.Z.getGameForPID(t.pid)),
+            r = (0, d.e7)([R.Z], () => R.Z.getGameForPID(t.pid)),
             i = (0, d.e7)([v.ZP], () => (null == n ? null : v.ZP.getGameOverlayStatus(n)));
         return (0, a.jsxs)("div", {
-            className: K.panelGroup,
+            className: J.panelGroup,
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/bold",
@@ -192,12 +195,12 @@ let ee = r.memo(function (e) {
                     (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
                         color: "text-primary",
-                        children: (0, a.jsx)($, { id: t.applicationId }),
+                        children: (0, a.jsx)(en, { id: t.applicationId }),
                     }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["fullscreenType: ", (0, S.sS)(t.fullscreenType)],
+                    children: ["fullscreenType: ", (0, E.sS)(t.fullscreenType)],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
@@ -210,7 +213,7 @@ let ee = r.memo(function (e) {
                     children: ["successfullyShown: ", t.successfullyShown ? "Yes" : "No"],
                 }),
                 (0, a.jsxs)("div", {
-                    className: K.panelGroup,
+                    className: J.panelGroup,
                     children: [
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
@@ -230,13 +233,13 @@ let ee = r.memo(function (e) {
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: ["overlayMethod: ", (0, S.P_)(t.overlayMethod)],
+                            children: ["overlayMethod: ", (0, E.P_)(t.overlayMethod)],
                         }),
                     ],
                 }),
                 null != i &&
                     (0, a.jsxs)("div", {
-                        className: K.panelGroup,
+                        className: J.panelGroup,
                         children: [
                             (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
@@ -256,7 +259,7 @@ let ee = r.memo(function (e) {
                             (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw overlayMethod: ", (0, S.P_)(i.overlayMethod)],
+                                children: ["raw overlayMethod: ", (0, E.P_)(i.overlayMethod)],
                             }),
                         ],
                     }),
@@ -294,16 +297,16 @@ let ee = r.memo(function (e) {
             ],
         });
     }),
-    et = r.memo(function (e) {
+    er = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.cj)([R.default], () => R.default.getOverlayPIDStatuses()),
-            r = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
-            i = (0, d.e7)([R.default], () => R.default.isInputLocked(t), [t]),
-            l = (0, d.e7)([R.default], () => R.default.DEV_isInputLockedV3(t), [t]),
-            s = (0, d.e7)([R.default], () => R.default.DEV_isInputLocked(t), [t]),
-            o = (0, d.e7)([R.default], () => R.default.isReady(t), [t]);
+            n = (0, d.cj)([Z.default], () => Z.default.getOverlayPIDStatuses()),
+            r = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+            i = (0, d.e7)([Z.default], () => Z.default.isInputLocked(t), [t]),
+            l = (0, d.e7)([Z.default], () => Z.default.DEV_isInputLockedV3(t), [t]),
+            s = (0, d.e7)([Z.default], () => Z.default.DEV_isInputLocked(t), [t]),
+            o = (0, d.e7)([Z.default], () => Z.default.isReady(t), [t]);
         return (0, a.jsxs)("div", {
-            className: K.panelGroup,
+            className: J.panelGroup,
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/semibold",
@@ -386,27 +389,27 @@ let ee = r.memo(function (e) {
             ],
         });
     });
-function en(e) {
+function ei(e) {
     let t,
-        n = ((t = Object.values((0, d.Wu)([w.Z], () => w.Z.getWidgetsForLayout(H.$S)))), t.find((t) => t.type === e));
+        n = ((t = Object.values((0, d.Wu)([k.Z], () => k.Z.getWidgetsForLayout(q.$S)))), t.find((t) => t.type === e));
     return [
         n,
         () => {
             if (null != n) (0, h.E9)(n.id);
             else {
-                let t = X[e];
+                let t = ee[e];
                 if (null == t) return;
-                let n = t(H.$S);
+                let n = t(q.$S);
                 (0, h.A4)(n);
             }
         },
     ];
 }
-function ea(e) {
+function el(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t ? "".concat(e.toFixed(2), "ms") : (0, Z.vc)(o()(e), "h:mm:ss.SSS");
+    return t ? "".concat(e.toFixed(2), "ms") : (0, L.vc)(o()(e), "h:mm:ss.SSS");
 }
-let er = r.memo(function (e) {
+let es = r.memo(function (e) {
     var { pid: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -429,41 +432,41 @@ let er = r.memo(function (e) {
             }
             return r;
         })(e, ["pid"]);
-    let r = (0, d.e7)([C.default], () => {
+    let r = (0, d.e7)([S.default], () => {
         var e, n;
         if (null == t) return "Unknown";
-        let a = null == (e = C.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
-        return null != a ? ((Q[t] = a), a) : null != (n = Q[t]) ? n : "Unknown";
+        let a = null == (e = S.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
+        return null != a ? ((et[t] = a), a) : null != (n = et[t]) ? n : "Unknown";
     }, [t]);
     return (0, a.jsx)(
         m.Text,
-        J(Y({}, n), {
+        $(Q({}, n), {
             variant: "text-md/semibold",
             color: "text-primary",
             children: r,
         }),
     );
 });
-function ei() {
-    let e = (0, d.e7)([T.Z], () => T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
-        t = (0, d.Wu)([C.default], () => C.default.getDevToolsFocusedPidsWithTimestamp());
+function eo() {
+    let e = (0, d.e7)([N.Z], () => N.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
+        t = (0, d.Wu)([S.default], () => S.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
-        className: K.panelGroup,
+        className: J.panelGroup,
         children: [
             (0, a.jsxs)("div", {
-                className: K.panelHeader,
+                className: J.panelHeader,
                 children: [
                     (0, a.jsx)(m.rsf, {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs),
+                                !N.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs),
                                 y.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
                     }),
                     (0, a.jsx)(m.P3F, {
-                        className: K.panelButton,
+                        className: J.panelButton,
                         onClick: () => x.Z.clearTrackedPids(),
                         children: (0, a.jsx)(m.XHJ, {
                             size: "md",
@@ -473,7 +476,7 @@ function ei() {
                 ],
             }),
             (0, a.jsxs)(m.zJl, {
-                className: l()(K.panelGroup, K.scroller),
+                className: l()(J.panelGroup, J.scroller),
                 children: [
                     0 === t.length &&
                         (0, a.jsx)(m.Text, {
@@ -494,19 +497,19 @@ function ei() {
                                         var r;
                                         return (0, a.jsx)(
                                             "div",
-                                            J(Y({}, e), {
+                                            $(Q({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
                                                     color: i === y.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
-                                                        (0, a.jsx)(er, {
+                                                        (0, a.jsx)(es, {
                                                             pid: n,
                                                             tag: "span",
                                                         }),
                                                         " - ",
                                                         null != (r = null == n ? void 0 : n.toString()) ? r : "null",
                                                         " @ ",
-                                                        ea(t),
+                                                        el(t),
                                                     ],
                                                 }),
                                             }),
@@ -522,12 +525,12 @@ function ei() {
         ],
     });
 }
-let el = r.memo(function (e) {
+let ec = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.e7)([C.default, v.ZP], () => {
+            n = (0, d.e7)([S.default, v.ZP], () => {
                 var e, n;
                 if (null == t) return null;
-                let a = null == (e = C.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
+                let a = null == (e = S.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
                 if (null != a) return a;
                 let r = v.ZP.getGameOrTransformedSubgameForPID(t);
                 return null != (n = null == r ? void 0 : r.fullscreenType) ? n : g.Jx.UNKNOWN;
@@ -536,11 +539,11 @@ let el = r.memo(function (e) {
             variant: "text-sm/normal",
             color: "text-secondary",
             tag: "span",
-            children: ["Original Screen Type: ", null != n ? (0, S.sS)(n) : "Unknown"],
+            children: ["Original Screen Type: ", null != n ? (0, E.sS)(n) : "Unknown"],
         });
     }),
-    es = r.memo(function () {
-        let e = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
+    ed = r.memo(function () {
+        let e = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
             [t, n] = r.useState({}),
             i = r.useRef(null);
         return (
@@ -550,7 +553,7 @@ let el = r.memo(function (e) {
                         let e = v.ZP.getRunningGames(),
                             t = [],
                             a = Date.now();
-                        for (let n of e) t.push((0, S.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
+                        for (let n of e) t.push((0, E.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
                         let r = await Promise.all(t);
                         n((e) =>
                             r.reduce(
@@ -573,10 +576,10 @@ let el = r.memo(function (e) {
                                         e
                                     );
                                 },
-                                Y({}, e),
+                                Q({}, e),
                             ),
                         );
-                    }, +D.Z.Millis.SECOND)),
+                    }, +M.Z.Millis.SECOND)),
                     () => clearInterval(i.current)
                 ),
                 [],
@@ -588,9 +591,9 @@ let el = r.memo(function (e) {
                 children: (n) =>
                     (0, a.jsx)(
                         "div",
-                        J(Y({}, n), {
+                        $(Q({}, n), {
                             children: (0, a.jsxs)(m.zJl, {
-                                className: l()(K.panelGroup, K.scroller),
+                                className: l()(J.panelGroup, J.scroller),
                                 children: [
                                     0 === Object.keys(e).length &&
                                         (0, a.jsx)(m.Text, {
@@ -603,11 +606,11 @@ let el = r.memo(function (e) {
                                             "div",
                                             {
                                                 children: [
-                                                    (0, a.jsx)(er, {
+                                                    (0, a.jsx)(es, {
                                                         tag: "div",
                                                         pid: e.pid,
                                                     }),
-                                                    (0, a.jsx)(el, { pid: e.pid }),
+                                                    (0, a.jsx)(ec, { pid: e.pid }),
                                                     null != t[e.pid] &&
                                                         [...t[e.pid]].reverse().map((t) => {
                                                             let { screenType: n, timestamp: r } = t;
@@ -618,8 +621,8 @@ let el = r.memo(function (e) {
                                                                     color: "text-default",
                                                                     children: ""
                                                                         .concat(n, ":")
-                                                                        .concat((0, S.sS)(n), " @ ")
-                                                                        .concat(ea(r)),
+                                                                        .concat((0, E.sS)(n), " @ ")
+                                                                        .concat(el(r)),
                                                                 },
                                                                 "".concat(e.pid, "-").concat(n, "-").concat(r),
                                                             );
@@ -636,16 +639,16 @@ let el = r.memo(function (e) {
             })
         );
     }),
-    eo = r.memo(function () {
+    eu = r.memo(function () {
         var e, t;
-        let n = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
-            r = (0, M.getPID)(),
-            i = (0, d.e7)([C.default], () => C.default.isOverlayOOPEnabledForPid(r), [r]),
-            [l, s] = (0, d.Wu)([I.Z], () => [I.Z.enabled, I.Z.keepOpen]),
-            o = (0, d.e7)([R.default], () => R.default.getFocusedPID()),
-            c = (0, d.e7)([R.default], () => R.default.isFocusedPidOutOfProcess());
+        let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+            r = (0, B.getPID)(),
+            i = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(r), [r]),
+            [l, s] = (0, d.Wu)([w.Z], () => [w.Z.enabled, w.Z.keepOpen]),
+            o = (0, d.e7)([Z.default], () => Z.default.getFocusedPID()),
+            c = (0, d.e7)([Z.default], () => Z.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
-            className: K.panelGroup,
+            className: J.panelGroup,
             children: [
                 0 === Object.keys(n).length &&
                     (0, a.jsx)(m.Text, {
@@ -653,7 +656,7 @@ let el = r.memo(function (e) {
                         color: "text-default",
                         children: "No tracked game times",
                     }),
-                Object.values(n).map((e) => (0, a.jsx)(et, { pid: e.pid }, e.pid)),
+                Object.values(n).map((e) => (0, a.jsx)(er, { pid: e.pid }, e.pid)),
                 (0, a.jsxs)("div", {
                     children: [
                         (0, a.jsxs)(m.Text, {
@@ -691,7 +694,7 @@ let el = r.memo(function (e) {
             ],
         });
     }),
-    ec = [
+    em = [
         {
             mode: y.GO.ClickZones,
             label: "Click Zone Debug Mode",
@@ -728,16 +731,11 @@ let el = r.memo(function (e) {
             label: "Legacy Overlay Logging",
             tooltip: "Enables legacy overlay logging, which will forward all legacy logging to the main apps console.",
         },
-        {
-            mode: y.GO.OverrideIsNewOverlayUser,
-            label: "Is New Overlay User Override",
-            tooltip: "Treats the current user as a new overlay user for the sake of experimentation targeting.",
-        },
     ],
-    ed = r.memo(function () {
-        let [e, t] = en(V.Odu.CLICK_ZONE_DEBUG),
-            [n, i] = en(V.Odu.PERFORMANCE_DEBUG),
-            l = (0, d.e7)([T.Z], () => T.Z.getRenderDebugModes()),
+    ep = r.memo(function () {
+        let [e, t] = ei(K.Odu.CLICK_ZONE_DEBUG),
+            [n, i] = ei(K.Odu.PERFORMANCE_DEBUG),
+            l = (0, d.e7)([N.Z], () => N.Z.getRenderDebugModes()),
             [s, o] = r.useState({});
         return (
             r.useEffect(() => {
@@ -747,11 +745,11 @@ let el = r.memo(function (e) {
                 return () => clearInterval(e);
             }, []),
             (0, a.jsx)("div", {
-                className: K.panelGroup,
-                children: ec.map((s) => {
+                className: J.panelGroup,
+                children: em.map((s) => {
                     let o =
                             s.mode === y.GO.OverlayRafManagerForceEnabled
-                                ? "".concat(s.label, " (").concat(N.Z.getLastRAFCallbackReason(), ")")
+                                ? "".concat(s.label, " (").concat(O.Z.getLastRAFCallbackReason(), ")")
                                 : s.label,
                         c = () =>
                             s.mode === y.GO.ClickZones
@@ -782,8 +780,8 @@ let el = r.memo(function (e) {
             })
         );
     }),
-    eu = r.memo(function () {
-        let e = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
+    eh = r.memo(function () {
+        let e = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
             t = (0, d.e7)([v.ZP], () => v.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -795,9 +793,9 @@ let el = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                J(Y({}, e), {
+                                $(Q({}, e), {
                                     children: (0, a.jsxs)("div", {
-                                        className: K.panelGroup,
+                                        className: J.panelGroup,
                                         children: [
                                             (0, a.jsx)(m.Text, {
                                                 variant: "text-md/bold",
@@ -819,7 +817,7 @@ let el = r.memo(function (e) {
                                                             },
                                                             e.pid,
                                                         ),
-                                                        (0, a.jsx)(el, { pid: e.pid }),
+                                                        (0, a.jsx)(ec, { pid: e.pid }),
                                                     ],
                                                 }),
                                             ),
@@ -835,9 +833,9 @@ let el = r.memo(function (e) {
                     children: (t) =>
                         (0, a.jsx)(
                             "div",
-                            J(Y({}, t), {
+                            $(Q({}, t), {
                                 children: (0, a.jsxs)("div", {
-                                    className: K.panelGroup,
+                                    className: J.panelGroup,
                                     children: [
                                         0 === Object.keys(e).length &&
                                             (0, a.jsx)(m.Text, {
@@ -845,7 +843,7 @@ let el = r.memo(function (e) {
                                                 color: "text-default",
                                                 children: "No running games",
                                             }),
-                                        Object.values(e).map((e) => (0, a.jsx)(ee, { trackedGame: e }, e.pid)),
+                                        Object.values(e).map((e) => (0, a.jsx)(ea, { trackedGame: e }, e.pid)),
                                     ],
                                 }),
                             }),
@@ -854,8 +852,8 @@ let el = r.memo(function (e) {
             ],
         });
     }),
-    em = r.memo(function () {
-        let e = (0, d.e7)([C.default], () => C.default.getForcedRenderMode()),
+    ex = r.memo(function () {
+        let e = (0, d.e7)([S.default], () => S.default.getForcedRenderMode()),
             [t, n] = r.useState(e),
             i = (e) => {
                 n(e), x.Z.forceRenderMode(e);
@@ -877,7 +875,7 @@ let el = r.memo(function (e) {
                     label: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                     value: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
-            ].map((t) => J(Y({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
+            ].map((t) => $(Q({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.aML, {
             "data-migration-pending": !0,
             position: "left",
@@ -885,20 +883,20 @@ let el = r.memo(function (e) {
             children: (e) =>
                 (0, a.jsx)(
                     "div",
-                    J(Y({}, e), {
-                        className: K.panelGroup,
+                    $(Q({}, e), {
+                        className: J.panelGroup,
                         children: (0, a.jsx)(m.PhF, {
                             serialize: (e) => e,
                             isSelected: (e) => e === t,
                             options: l,
                             select: i,
-                            popoutLayerContext: U.O$,
+                            popoutLayerContext: G.O$,
                         }),
                     }),
                 ),
         });
     });
-function ep(e) {
+function eg(e) {
     let { modalProps: t, onClose: n } = e,
         [i, l] = r.useState(null);
     function s() {
@@ -906,8 +904,8 @@ function ep(e) {
     }
     return (0, a.jsxs)(
         m.Y0X,
-        J(
-            Y(
+        $(
+            Q(
                 {
                     size: m.CgR.LARGE,
                     "aria-label": "Breadcrumb Import",
@@ -932,7 +930,7 @@ function ep(e) {
                     }),
                     (0, a.jsx)(m.hzk, {
                         children: (0, a.jsx)("div", {
-                            className: K.panelGroup,
+                            className: J.panelGroup,
                             children: (0, a.jsx)(m.Kx8, {
                                 label: "Paste JSON Here",
                                 onChange: l,
@@ -965,7 +963,7 @@ function ep(e) {
         ),
     );
 }
-let eh = {
+let ef = {
     native: {
         label: "Native",
         filter: (e) => e.type === _.C7.NativeLegacy || e.type === _.C7.NativeOOP,
@@ -983,7 +981,7 @@ let eh = {
         filter: (e) => e.type === _.C7.OOPModule || e.type === _.C7.LegacyModule,
     },
 };
-function ex(e) {
+function eb(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.l6.Info;
     if (t === _.l6.Error) return "var(--text-danger)";
     switch (e) {
@@ -1003,17 +1001,17 @@ function ex(e) {
             return "var(--gray-400)";
     }
 }
-let eg = [
+let ev = [
     {
         key: "type",
-        cellClassName: K.tableBarColumn,
+        cellClassName: J.tableBarColumn,
         renderHeader: () => null,
         render(e) {
             let { type: t, logType: n } = e,
-                r = ef(t);
+                r = ej(t);
             return (0, a.jsx)("div", {
-                className: K.tableBar,
-                style: { color: ex(t, n) },
+                className: J.tableBar,
+                style: { color: eb(t, n) },
                 children: (0, a.jsx)(r, {
                     color: "currentColor",
                     size: "sm",
@@ -1023,7 +1021,7 @@ let eg = [
     },
     {
         key: "name",
-        cellClassName: K.nameColumn,
+        cellClassName: J.nameColumn,
         render(e) {
             let { name: t, type: n, logType: r } = e;
             return (0, a.jsxs)(a.Fragment, {
@@ -1055,14 +1053,14 @@ let eg = [
     },
     {
         key: "timestamp",
-        cellClassName: K.rightColumn,
+        cellClassName: J.rightColumn,
         render(e) {
             let { timestamp: t } = e;
-            return (0, Z.vc)(o()(t), "h:mm:ss.SSS");
+            return (0, L.vc)(o()(t), "h:mm:ss.SSS");
         },
     },
 ];
-function ef(e) {
+function ej(e) {
     switch (e) {
         case _.C7.NativeLegacy:
             return m.GON;
@@ -1079,38 +1077,38 @@ function ef(e) {
             return m.pzj;
     }
 }
-function eb(e) {
+function e_(e) {
     return JSON.stringify(e, (e, t) => (void 0 === t ? null : t), 2);
 }
-let ev = ["__webpack_require__", "fn"],
-    ej = ["web.js", "web.js.map"],
-    e_ = [
+let ey = ["__webpack_require__", "fn"],
+    eC = ["web.js", "web.js.map"],
+    eS = [
         {
             id: "details",
             name: "Details",
-            group: z.v0.NONE,
+            group: W.v0.NONE,
             render: (e) => {
                 var t, n, r, i;
                 let { breadcrumb: s, onClose: c } = e,
                     { name: d, type: u, logType: p, nativeId: h, stack: x, data: g, timestamp: f, pid: b } = s,
                     v = o()(f),
-                    _ = ef(u);
+                    _ = ej(u);
                 return (0, a.jsxs)(m.w0Z, {
-                    className: K.subPanelScroller,
+                    className: J.subPanelScroller,
                     children: [
                         (0, a.jsxs)(j.Z, {
-                            className: l()(q.headerBar, K.subPanelHeaderBar),
+                            className: l()(X.headerBar, J.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)("div", {
-                                    style: { color: ex(u, p) },
-                                    className: K.headerIcon,
+                                    style: { color: eb(u, p) },
+                                    className: J.headerIcon,
                                     children: (0, a.jsx)(_, {
                                         color: "currentColor",
                                         size: "sm",
                                     }),
                                 }),
                                 (0, a.jsxs)(j.Z.Title, {
-                                    wrapperClassName: K.headerTitle,
+                                    wrapperClassName: J.headerTitle,
                                     children: [
                                         d,
                                         " (",
@@ -1118,8 +1116,8 @@ let ev = ["__webpack_require__", "fn"],
                                         ")",
                                         (0, a.jsx)(m.P3F, {
                                             tag: "span",
-                                            className: K.copyEventButton,
-                                            onClick: () => (0, A.JG)(d),
+                                            className: J.copyEventButton,
+                                            onClick: () => (0, D.JG)(d),
                                             children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -1131,7 +1129,7 @@ let ev = ["__webpack_require__", "fn"],
                                     icon: m.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, A.JG)(eb(s));
+                                        (0, D.JG)(e_(s));
                                     },
                                 }),
                                 (0, a.jsx)(j.Z.Icon, {
@@ -1141,44 +1139,44 @@ let ev = ["__webpack_require__", "fn"],
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(F.E, {
-                            className: K.commonProperties,
+                        (0, a.jsxs)(z.E, {
+                            className: J.commonProperties,
                             children: [
-                                (0, a.jsx)(F.Z9, {
+                                (0, a.jsx)(z.Z9, {
                                     name: "Timestamp",
                                     copyValue: v.toISOString(),
                                     children: (0, a.jsx)("time", {
                                         dateTime: v.toISOString(),
-                                        title: (0, Z.vc)(v, "LLLL"),
-                                        children: (0, Z.vc)(v, "L h:mm:ss.SSS"),
+                                        title: (0, L.vc)(v, "LLLL"),
+                                        children: (0, L.vc)(v, "L h:mm:ss.SSS"),
                                     }),
                                 }),
-                                (0, a.jsx)(F.Z9, {
+                                (0, a.jsx)(z.Z9, {
                                     name: "Log Type",
                                     copyValue: p,
                                     children: (0, a.jsx)("code", { children: p }),
                                 }),
-                                (0, a.jsx)(F.Z9, {
+                                (0, a.jsx)(z.Z9, {
                                     name: "PID",
                                     copyValue: null != (t = null == b ? void 0 : b.toString()) ? t : "null",
                                     children: (0, a.jsx)("code", {
                                         children: null != (n = null == b ? void 0 : b.toString()) ? n : "null",
                                     }),
                                 }),
-                                (0, a.jsx)(F.Z9, {
+                                (0, a.jsx)(z.Z9, {
                                     name: "Native ID",
                                     copyValue: null != (r = null == h ? void 0 : h.toString()) ? r : "null",
                                     children: (0, a.jsx)("code", {
                                         children: null != (i = null == h ? void 0 : h.toString()) ? i : "null",
                                     }),
                                 }),
-                                (0, a.jsx)(F.Z9, {
+                                (0, a.jsx)(z.Z9, {
                                     name: "Data",
-                                    copyValue: eb(g),
-                                    children: (0, a.jsx)("code", { children: eb(g) }),
+                                    copyValue: e_(g),
+                                    children: (0, a.jsx)("code", { children: e_(g) }),
                                 }),
                                 null != x &&
-                                    (0, a.jsx)(F.Z9, {
+                                    (0, a.jsx)(z.Z9, {
                                         name: "Stack Trace",
                                         copyValue: x,
                                         children: (0, a.jsx)("code", {
@@ -1187,22 +1185,22 @@ let ev = ["__webpack_require__", "fn"],
                                                 if (null != n) {
                                                     let [, e, r, i, l] = n,
                                                         s = r.split(/[\\/]/).pop();
-                                                    return ev.includes(e.trim())
+                                                    return ey.includes(e.trim())
                                                         ? null
                                                         : (0, a.jsxs)(
                                                               "div",
                                                               {
                                                                   children: [
                                                                       (0, a.jsx)("span", {
-                                                                          className: K.stackTraceFunction,
+                                                                          className: J.stackTraceFunction,
                                                                           children: e.trim(),
                                                                       }),
-                                                                      !ej.includes(null != s ? s : "") &&
+                                                                      !eC.includes(null != s ? s : "") &&
                                                                           (0, a.jsxs)(a.Fragment, {
                                                                               children: [
                                                                                   " (",
                                                                                   (0, a.jsxs)("span", {
-                                                                                      className: K.stackTraceLocation,
+                                                                                      className: J.stackTraceLocation,
                                                                                       title: r,
                                                                                       children: [s, ":", i, ":", l],
                                                                                   }),
@@ -1225,8 +1223,8 @@ let ev = ["__webpack_require__", "fn"],
             },
         },
     ],
-    ey = {
-        searchType: O.S.REGEX,
+    eE = {
+        searchType: P.S.REGEX,
         searchStringGenerator: (e) => {
             let { name: t, type: n, stack: a, data: r } = e,
                 i = [t, n, JSON.stringify(r)];
@@ -1234,14 +1232,14 @@ let ev = ["__webpack_require__", "fn"],
         },
         throttleMs: 100,
     };
-function eC() {
+function eT() {
     let { ref: e, height: t } = (0, f.ZP)(),
-        n = (0, d.e7)([T.Z], () => T.Z.isModuleLoggingEnabled()),
+        n = (0, d.e7)([N.Z], () => N.Z.isModuleLoggingEnabled()),
         [i, s] = r.useState(n),
         [o, c] = r.useState(!1),
         [u, p] = r.useState(null),
-        [h, g] = r.useState(Object.keys(eh)),
-        [b, v] = (0, d.e7)([T.Z], () => T.Z.getOverlayLoggingBreadcrumbs(), [], L.Q),
+        [h, g] = r.useState(Object.keys(ef)),
+        [b, v] = (0, d.e7)([N.Z], () => N.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
         [j, _] = r.useState(null),
         y = null != j ? j : b,
         C = null != j ? -1 : v;
@@ -1252,89 +1250,89 @@ function eC() {
                 : p(null));
     }, [o, y, C]);
     let [S, E] = r.useState(""),
-        N = r.useMemo(
+        T = r.useMemo(
             () =>
                 0 === C
                     ? []
                     : y.filter((e) => {
                           if (o && null != u && e.timestamp < u) return !1;
                           for (let t of h) {
-                              let { filter: n } = eh[t];
+                              let { filter: n } = ef[t];
                               if (n(e)) return !0;
                           }
                           return !1;
                       }),
             [y, h, u, o, C],
         ),
-        [O, I] = r.useState(N),
+        [O, P] = r.useState(T),
         [w, k] = r.useState(null),
         R = r.useMemo(() => y.find((e) => e.key === w), [y, w]),
-        Z = r.useCallback((e) => {
-            I(e);
+        A = r.useCallback((e) => {
+            P(e);
         }, []),
-        { renderSelectedTab: D } = (0, z.ZP)({ tabs: e_ }, []);
-    (0, P.BO)(S, N, Z, ey, [y]);
-    let M = r.useCallback((e) => {
+        { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
+    (0, I.BO)(S, T, A, eE, [y]);
+    let L = r.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
-        [U, F] = r.useState(!1),
-        V = r.useRef(null),
-        H = r.useCallback(() => {
-            (0, A.JG)(JSON.stringify(N)), F(!0);
-        }, [N]);
+        [M, F] = r.useState(!1),
+        B = r.useRef(null),
+        G = r.useCallback(() => {
+            (0, D.JG)(JSON.stringify(T)), F(!0);
+        }, [T]);
     r.useEffect(() => {
-        if (U)
+        if (M)
             return (
-                (V.current = setTimeout(() => {
+                (B.current = setTimeout(() => {
                     F(!1);
                 }, 4000)),
                 () => {
-                    null != V.current && clearTimeout(V.current);
+                    null != B.current && clearTimeout(B.current);
                 }
             );
-    }, [U]);
-    let W = r.useCallback((e) => {
+    }, [M]);
+    let z = r.useCallback((e) => {
             _(null != e ? JSON.parse(e) : null);
         }, []),
-        q = r.useCallback(
+        K = r.useCallback(
             (e) => {
                 if (e) return _(null);
                 (0, m.h7j)(
                     (e) =>
-                        (0, a.jsx)(ep, {
+                        (0, a.jsx)(eg, {
                             modalProps: e,
                             onClose: (t) => {
-                                W(t), e.onClose();
+                                z(t), e.onClose();
                             },
                         }),
                     { modalKey: "breadcrumb-import-panel" },
                     m.z1l,
                 );
             },
-            [W],
+            [z],
         );
     return (0, a.jsxs)("div", {
         ref: e,
-        className: K.panelContainer,
+        className: J.panelContainer,
         children: [
             (0, a.jsxs)("div", {
-                className: K.panelGroup,
+                className: J.panelGroup,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: l()(K.toolbar, K.filtersToolbar),
+                        className: l()(J.toolbar, J.filtersToolbar),
                         children: [
                             (0, a.jsx)("div", {
                                 title: "Toggles the Polling of Native",
-                                className: K.pollBreadcrumbs,
+                                className: J.pollBreadcrumbs,
                                 children: (0, a.jsx)(m.Checkbox, {
                                     label: "Poll Native",
                                     checked: i,
-                                    onChange: (e) => M(e),
+                                    onChange: (e) => L(e),
                                 }),
                             }),
                             (0, a.jsx)("div", {
                                 title: "Only show breadcrumbs for active games",
-                                className: K.pollBreadcrumbs,
+                                className: J.pollBreadcrumbs,
                                 children: (0, a.jsx)(m.Checkbox, {
                                     label: "Only Active Games",
                                     checked: o,
@@ -1342,15 +1340,15 @@ function eC() {
                                 }),
                             }),
                             (0, a.jsxs)(m.P3F, {
-                                className: K.copyAll,
-                                onClick: H,
+                                className: J.copyAll,
+                                onClick: G,
                                 children: [
                                     (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-secondary",
-                                        children: U ? "Copied" : "Copy All",
+                                        children: M ? "Copied" : "Copy All",
                                     }),
-                                    U
+                                    M
                                         ? (0, a.jsx)(m.dz2, {
                                               size: "sm",
                                               color: m.TVs.unsafe_rawColors.GREEN_330.css,
@@ -1362,8 +1360,8 @@ function eC() {
                                 ],
                             }),
                             (0, a.jsx)(m.P3F, {
-                                className: K.copyAll,
-                                onClick: () => q(null != j),
+                                className: J.copyAll,
+                                onClick: () => K(null != j),
                                 children: (0, a.jsx)(m.Text, {
                                     variant: "text-sm/normal",
                                     color: "currentColor",
@@ -1373,13 +1371,13 @@ function eC() {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: l()(K.toolbar, K.filtersToolbar),
-                        children: Object.entries(eh).map((e) => {
+                        className: l()(J.toolbar, J.filtersToolbar),
+                        children: Object.entries(ef).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 m.P3F,
                                 {
-                                    className: l()(K.filter, h.includes(t) && K.activeFilter),
+                                    className: l()(J.filter, h.includes(t) && J.activeFilter),
                                     onClick: () => {
                                         g((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -1394,7 +1392,7 @@ function eC() {
                         }),
                     }),
                     (0, a.jsx)("div", {
-                        className: K.toolbar,
+                        className: J.toolbar,
                         children: (0, a.jsx)(m.E1j, {
                             query: S,
                             onChange: E,
@@ -1405,20 +1403,20 @@ function eC() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: l()(K.panelGroup, K.tableContainer),
-                children: (0, a.jsx)(G.Z, {
-                    columns: eg,
+                className: l()(J.panelGroup, J.tableContainer),
+                children: (0, a.jsx)(H.Z, {
+                    columns: ev,
                     data: O,
                     selectedRowKey: null != w ? w : void 0,
                     onClickRow: (e) => k(e.key),
                 }),
             }),
             null != R &&
-                (0, a.jsx)(B.Z, {
-                    className: l()(K.panelGroup, K.subPanel),
+                (0, a.jsx)(V.Z, {
+                    className: l()(J.panelGroup, J.subPanel),
                     minHeight: 100,
                     initialHeight: null != t ? t / 3 : 300,
-                    children: D({
+                    children: Z({
                         breadcrumb: R,
                         onClose: () => k(null),
                     }),
@@ -1426,13 +1424,13 @@ function eC() {
         ],
     });
 }
-let eS = r.memo(function () {
-        let e = (0, d.e7)([E.Z], () => E.Z.getPopoutInitializationStages());
+let eN = r.memo(function () {
+        let e = (0, d.e7)([T.Z], () => T.Z.getPopoutInitializationStages());
         return (0, a.jsxs)("div", {
-            className: K.panelGroup,
+            className: J.panelGroup,
             children: [
                 (0, a.jsx)("div", {
-                    className: K.panelHeader,
+                    className: J.panelHeader,
                     children: (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
                         color: "text-primary",
@@ -1447,9 +1445,9 @@ let eS = r.memo(function () {
             ],
         });
     }),
-    eE = r.memo(function () {
-        let e = (0, d.e7)([T.Z], () => T.Z.isStateDebuggingEnabled()),
-            t = (0, d.e7)([T.Z], () => T.Z.getDebuggingState());
+    eO = r.memo(function () {
+        let e = (0, d.e7)([N.Z], () => N.Z.isStateDebuggingEnabled()),
+            t = (0, d.e7)([N.Z], () => N.Z.getDebuggingState());
         return (
             r.useEffect(
                 () => (
@@ -1461,10 +1459,10 @@ let eS = r.memo(function () {
                 [],
             ),
             (0, a.jsxs)("div", {
-                className: K.panelGroup,
+                className: J.panelGroup,
                 children: [
                     (0, a.jsx)("div", {
-                        className: K.panelHeader,
+                        className: J.panelHeader,
                         children: (0, a.jsx)(m.rsf, {
                             checked: e,
                             onChange: () => x.Z.setStateDebugging(!e),
@@ -1480,24 +1478,133 @@ let eS = r.memo(function () {
             })
         );
     });
-function eT() {
+function eP() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsxs)("div", {
-            className: l()(q.panel, K.subPanel),
+            className: l()(X.panel, J.subPanel),
             children: [
-                (0, a.jsx)(ed, {}),
-                (0, a.jsx)(em, {}),
+                (0, a.jsx)(ep, {}),
+                (0, a.jsx)(ex, {}),
+                (0, a.jsx)(eh, {}),
                 (0, a.jsx)(eu, {}),
                 (0, a.jsx)(eo, {}),
-                (0, a.jsx)(ei, {}),
-                (0, a.jsx)(es, {}),
-                (0, a.jsx)(eS, {}),
-                (0, a.jsx)(eE, {}),
+                (0, a.jsx)(ed, {}),
+                (0, a.jsx)(eN, {}),
+                (0, a.jsx)(eO, {}),
             ],
         }),
     });
 }
-function eN() {
+let eI = (e) => {
+        switch (e) {
+            case "Disabled":
+                return;
+            case "False":
+                return !1;
+            case "True":
+                return !0;
+        }
+    },
+    ew = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
+    ek = r.memo(function () {
+        let e = (0, C.xj)(),
+            t = (0, d.e7)([A.ZP], () => A.ZP.getOverlayKeybind());
+        return (0, a.jsxs)("div", {
+            className: J.panelGroup,
+            children: [
+                (0, a.jsx)(m.Heading, {
+                    variant: "heading-lg/semibold",
+                    children: "Overlay Default Keybind Experiment",
+                }),
+                (0, a.jsx)(m.Heading, {
+                    variant: "heading-md/semibold",
+                    children: "Experiment State",
+                }),
+                (0, a.jsx)(m.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: (0, a.jsx)("pre", {
+                        children: JSON.stringify($(Q({}, e), { overlayKeybind: (0, F.BB)(t.shortcut) }), void 0, 2),
+                    }),
+                }),
+                (0, a.jsx)(m.Heading, {
+                    variant: "heading-md/semibold",
+                    children: "Overrides",
+                }),
+                (0, a.jsx)(m.PhF, {
+                    label: "Overlay User Status",
+                    description: "Override whether the current user was a new or existing user",
+                    serialize: (e) => (null != e ? e.toString() : "Disabled"),
+                    isSelected: (t) => t === ew(e.overrideIsNewOverlayUser),
+                    options: [
+                        {
+                            label: "Disabled (no override)",
+                            value: "Disabled",
+                        },
+                        {
+                            label: "Existing user",
+                            value: "False",
+                        },
+                        {
+                            label: "New user",
+                            value: "True",
+                        },
+                    ],
+                    select: (e) => {
+                        (0, C.jt)(eI(e));
+                    },
+                    popoutLayerContext: G.O$,
+                }),
+                (0, a.jsx)(m.PhF, {
+                    label: "Override Previous Keybind Status",
+                    description: "Override whether the user's pre-experiment keybind was the default keybind",
+                    serialize: (e) => (null != e ? e.toString() : "Disabled"),
+                    isSelected: (t) => t === ew(e.overrideIsUsingDefaultOverlayKeybind),
+                    options: [
+                        {
+                            label: "Disabled (no override)",
+                            value: "Disabled",
+                        },
+                        {
+                            label: "Using default keybind",
+                            value: "True",
+                        },
+                        {
+                            label: "Not using default keybind",
+                            value: "False",
+                        },
+                    ],
+                    select: (e) => {
+                        (0, C.FM)(eI(e));
+                    },
+                    popoutLayerContext: G.O$,
+                }),
+                (0, a.jsx)(m.Heading, {
+                    variant: "heading-md/semibold",
+                    children: "Actions",
+                }),
+                (0, a.jsx)(m.Button, {
+                    size: "sm",
+                    text: "Reset isNewOverlayUser",
+                    onClick: () => (0, C.Wx)(),
+                }),
+                (0, a.jsx)(m.Button, {
+                    size: "sm",
+                    text: "Reset isUsingDefaultOverlayKeybind",
+                    onClick: () => (0, C.Zh)(),
+                }),
+            ],
+        });
+    });
+function eR() {
+    return (0, a.jsx)(m.w0Z, {
+        children: (0, a.jsx)("div", {
+            className: l()(X.panel, J.subPanel),
+            children: (0, a.jsx)(ek, {}),
+        }),
+    });
+}
+function eA() {
     let [e, t] = r.useState("state");
     return (
         r.useEffect(
@@ -1516,13 +1623,13 @@ function eN() {
             [],
         ),
         (0, a.jsxs)("div", {
-            className: l()(q.panel, K.panel),
+            className: l()(X.panel, J.panel),
             children: [
                 (0, a.jsxs)("div", {
-                    className: K.toolbar,
+                    className: J.toolbar,
                     children: [
                         (0, a.jsx)(m.P3F, {
-                            className: l()(K.paneOption, "state" === e && K.activePaneOption),
+                            className: l()(J.paneOption, "state" === e && J.activePaneOption),
                             onClick: () => t("state"),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-md/medium",
@@ -1531,7 +1638,7 @@ function eN() {
                             }),
                         }),
                         (0, a.jsx)(m.P3F, {
-                            className: l()(K.paneOption, "logging" === e && K.activePaneOption),
+                            className: l()(J.paneOption, "logging" === e && J.activePaneOption),
                             onClick: () => t("logging"),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-md/medium",
@@ -1539,10 +1646,20 @@ function eN() {
                                 children: "Logging",
                             }),
                         }),
+                        (0, a.jsx)(m.P3F, {
+                            className: l()(J.paneOption, "experiments" === e && J.activePaneOption),
+                            onClick: () => t("experiments"),
+                            children: (0, a.jsx)(m.Text, {
+                                variant: "text-md/medium",
+                                color: "currentColor",
+                                children: "Experiments",
+                            }),
+                        }),
                     ],
                 }),
-                "state" === e && (0, a.jsx)(eT, {}),
-                "logging" === e && (0, a.jsx)(eC, {}),
+                "state" === e && (0, a.jsx)(eP, {}),
+                "logging" === e && (0, a.jsx)(eT, {}),
+                "experiments" === e && (0, a.jsx)(eR, {}),
             ],
         })
     );
