@@ -134,8 +134,9 @@ function Y() {
         N.error("Error clearing tracked games:", e), (0, _.PV)(d.UNSET_PID, e, { crashType: "native" });
     }
 }
-function W() {
+async function W() {
     if (!b.Z.isOverlayEnabled) return void Y();
+    await ee();
     let e = new Set(
         l.ZP.getRunningGames()
             .filter((e) => l.ZP.getOverlayEnabledForGame(e))
@@ -199,11 +200,11 @@ function $(e) {
     }
 }
 async function ee() {
-    await (0, _.Nk)(), await (0, O.H)();
+    b.Z.isModuleLoaded || b.Z.isModuleLoading || (await (0, _.Nk)()), (w = await (0, O.H)());
 }
 async function et(e) {
     e.overlayMethod === f.gl.OutOfProcess || e.overlayMethod === f.gl.OutOfProcessLimitedInteraction
-        ? (null == w && (await ee()), V(e.pid, e.overlayMethod))
+        ? (await ee(), V(e.pid, e.overlayMethod))
         : H(e.pid),
         ey.emitChange();
 }

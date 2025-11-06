@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(442837),
     a = n(579092),
@@ -27,11 +27,11 @@ let p = new a.Yd("OverlayV3NativeModuleStore"),
     m = !1,
     g = null,
     E = !1,
-    b = new Set(),
-    y = (() => {
-        let e = null;
-        async function t() {
-            v(), (g = d._.getInstance());
+    b = null,
+    y = new Set(),
+    O = (() => {
+        async function e() {
+            I(), (g = d._.getInstance());
             try {
                 await g.initialize(), (h = !0);
             } catch (e) {
@@ -39,34 +39,37 @@ let p = new a.Yd("OverlayV3NativeModuleStore"),
                     (h = !1),
                     (0, u.PV)(l.UNSET_PID, e, { crashType: "native" });
             } finally {
-                N.emitChange();
+                R.emitChange();
             }
         }
-        return () => (null == e && (e = t()), e);
+        return () => (null == b && (b = e()), b);
     })();
-function O(e) {
+function v(e) {
     !__OVERLAY__ && f.iP && (m = e);
 }
-function v() {
-    !__OVERLAY__ && f.iP && (p.verbose("Maybe Enable Overlay"), O(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
+function I() {
+    !__OVERLAY__ && f.iP && (p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
 }
-function I(e) {
+function T(e) {
     let { oopEnabled: t } = e;
-    O(t);
+    v(t);
 }
-function T() {
-    return y(), !1;
+function S() {
+    return O(), !1;
 }
-function S(e) {
+function A(e) {
     let { pid: t, isCrashedDisabled: n } = e;
-    return !0 === n && (E = !0), !!b.has(t) || !0 === E;
+    return !0 === n && (E = !0), !!y.has(t) || !0 === E;
 }
-function A() {
-    return y(), !1;
+function C() {
+    return O(), !1;
 }
-class C extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
+    }
+    get isModuleLoading() {
+        return null != b;
     }
     get isOverlayEnabled() {
         return m;
@@ -84,17 +87,17 @@ class C extends (r = i.ZP.Store) {
         return g;
     }
 }
-_(C, "displayName", "Overlay-v3-Native-Module-Store");
-let N = new C(
+_(N, "displayName", "Overlay-v3-Native-Module-Store");
+let R = new N(
         o.Z,
         __OVERLAY__ || !f.iP
             ? {}
             : {
-                  POST_CONNECTION_OPEN: A,
-                  EXPERIMENT_OVERRIDE_BUCKET: v,
-                  OVERLAY_SET_ENABLED: I,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE: T,
-                  OVERLAY_CRASHED: S,
+                  POST_CONNECTION_OPEN: C,
+                  EXPERIMENT_OVERRIDE_BUCKET: I,
+                  OVERLAY_SET_ENABLED: T,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE: S,
+                  OVERLAY_CRASHED: A,
               },
     ),
-    R = N;
+    P = R;

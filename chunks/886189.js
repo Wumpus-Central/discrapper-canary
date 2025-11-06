@@ -1,61 +1,63 @@
 n.d(t, {
-    H: () => u,
-    s: () => c,
+    H: () => f,
+    s: () => u,
 }),
     n(388685),
     n(415506);
 var r = n(579092),
-    i = n(570140),
-    a = n(522474),
-    o = n(509140),
-    s = n(501787);
-let l = new r.Yd("OverlayV3NativeModuleUtils");
-async function c() {
+    i = n(379649),
+    a = n(570140),
+    o = n(522474),
+    s = n(509140),
+    l = n(501787);
+let c = new r.Yd("OverlayV3NativeModuleUtils");
+async function u() {
     let e;
-    if (null == a.Z.getWindow(s.$J)) return;
-    l.warn("Waiting for previous overlay popout to be destroyed.");
+    if (null == o.Z.getWindow(l.$J)) return;
+    c.warn("Waiting for previous overlay popout to be destroyed.");
     let t = new Promise((e) => {
         setTimeout(() => {
             e();
         }, 5000);
     });
     function n() {
-        null == a.Z.getWindow(s.$J) && (null == e || e());
+        null == o.Z.getWindow(l.$J) && (null == e || e());
     }
     let r = new Promise((t) => {
-        (e = t), a.Z.addChangeListener(n);
+        (e = t), o.Z.addChangeListener(n);
     });
     try {
         await Promise.race([t, r]);
     } finally {
-        a.Z.removeChangeListener(n);
+        o.Z.removeChangeListener(n);
     }
-    null != a.Z.getWindow(s.$J) && l.error("Previous overlay popout was not destroyed after 5 seconds!");
+    null != o.Z.getWindow(l.$J) && c.error("Previous overlay popout was not destroyed after 5 seconds!");
 }
-async function u() {
+let d = 1000;
+async function f() {
     let e,
-        t = o.Z.isModuleLoaded,
-        n = o.Z.getNativeModule();
-    if (t && null != n) return n;
+        t = s.Z.isModuleLoaded,
+        n = s.Z.getNativeModule();
+    if (t && null != n) return await (0, i._v)(d), n;
     if (t && null == n) throw Error("Native module loaded but not found in store");
     let r = new Promise((e) => {
         setTimeout(() => {
             e();
         }, 5000);
     });
-    function a() {
+    function o() {
         null == e || e();
     }
-    let s = new Promise((t) => {
+    let l = new Promise((t) => {
         (e = t),
-            i.Z.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", a),
-            i.Z.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", a);
+            a.Z.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", o),
+            a.Z.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", o);
     });
     try {
-        await Promise.race([r, s]);
+        await Promise.race([r, l]);
     } finally {
-        i.Z.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", a),
-            i.Z.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", a);
+        a.Z.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", o),
+            a.Z.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", o);
     }
-    return o.Z.getNativeModule();
+    return s.Z.getNativeModule();
 }
