@@ -17348,14 +17348,6 @@ screen and (max-width:485px) {
     inset-inline-end: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-channel-textarea-app-launcher-button-gap))
 }
 
-.barWithAppsDMsUI__0f481 {
-    inset-inline-end: calc(16px + var(--custom-app-dm-chat-input-primary-button-width) + var(--custom-channel-textarea-app-launcher-button-gap))
-}
-
-.barWithAppLauncherButton__0f481.barWithAppsDMsUI__0f481 {
-    inset-inline-end: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-app-dm-chat-input-primary-button-width) + var(--custom-channel-textarea-app-launcher-button-gap)*2)
-}
-
 .bottomBar__0f481 {
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-normal);
@@ -50914,7 +50906,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58247,9 +58239,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
