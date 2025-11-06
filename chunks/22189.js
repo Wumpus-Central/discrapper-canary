@@ -311,9 +311,7 @@ let ey = () => {
                 name: "serverBoosts",
                 title: B.intl.string(B.t["NyDu/6"]),
                 subtitle: B.intl.string(B.t["4pEwXL"]),
-                description: eA
-                    ? B.intl.format(B.t.uPiIBe, { link: "https://discord.com" })
-                    : B.intl.string(B.t.jsyNHm),
+                description: eA ? "" : B.intl.string(B.t.jsyNHm),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
                 onCtaClick: eA ? void 0 : eD,
                 perkImage: q,
