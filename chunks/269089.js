@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(570140),
     l = n(765250),
@@ -23,17 +23,17 @@ function f(e, t, n) {
     );
 }
 n(966117);
-let m = (0, o.Un)({
+let h = (0, o.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
         name: "PopoutWindowChannelCall",
     }),
-    h = (0, o.Un)({
+    g = (0, o.Un)({
         createPromise: () => n.e("31688").then(n.bind(n, 205557)),
         webpackId: 205557,
         name: "PopoutWindowCallTile",
     }),
-    g = (0, o.Un)({
+    m = (0, o.Un)({
         createPromise: () => n.e("20176").then(n.bind(n, 432472)),
         webpackId: 432472,
         name: "PopoutWindowStageChannelCall",
@@ -47,19 +47,13 @@ let m = (0, o.Un)({
         createPromise: () => Promise.all([n.e("50751"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: "PopoutWindowActivity",
-    }),
-    E = (0, o.Un)({
-        createPromise: () => Promise.all([n.e("91862"), n.e("50751"), n.e("69283")]).then(n.bind(n, 980811)),
-        webpackId: 980811,
-        name: "ShuffleNamesPopout",
     });
-class O extends a.Z {
+class E extends a.Z {
     _initialize() {
         i.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
             i.Z.subscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
-            i.Z.subscribe("SHUFFLE_NAMES_POPOUT_WINDOW_OPEN", this.handleOpenShuffleNamesPopout),
             this.initializeStyleSheetObserver();
     }
     _terminate() {
@@ -67,7 +61,6 @@ class O extends a.Z {
             i.Z.unsubscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
-            i.Z.unsubscribe("SHUFFLE_NAMES_POPOUT_WINDOW_OPEN", this.handleOpenShuffleNamesPopout),
             this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
@@ -76,11 +69,11 @@ class O extends a.Z {
             d.KJ3.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
-                    ? (0, r.jsx)(g, {
+                    ? (0, r.jsx)(m, {
                           windowKey: e,
                           channelId: t.id,
                       })
-                    : (0, r.jsx)(m, {
+                    : (0, r.jsx)(h, {
                           windowKey: e,
                           channelId: t.id,
                       }),
@@ -120,23 +113,6 @@ class O extends a.Z {
                 defaultHeight: 480,
             });
     }
-    handleOpenShuffleNamesPopout(e) {
-        let { channelId: t, guildId: n } = e;
-        u.bA(
-            d.KJ3.SHUFFLE_NAMES_POPOUT,
-            (e) =>
-                (0, r.jsx)(E, {
-                    windowKey: e,
-                    channelId: t,
-                    guildId: n,
-                }),
-            {
-                defaultWidth: 1000,
-                defaultHeight: 600,
-                alwaysOnTop: !0,
-            },
-        );
-    }
     constructor(...e) {
         super(...e),
             f(this, "_observer", null),
@@ -146,7 +122,7 @@ class O extends a.Z {
                 u.bA(
                     i,
                     (e) =>
-                        (0, r.jsx)(h, {
+                        (0, r.jsx)(g, {
                             windowKey: e,
                             channelId: t,
                             participantId: n,
@@ -159,4 +135,4 @@ class O extends a.Z {
             });
     }
 }
-let I = new O();
+let O = new E();
