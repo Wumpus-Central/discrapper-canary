@@ -106,7 +106,7 @@ function S(e, t) {
     (y[e] = g({}, y[e], t)), null != i && (y[e].error = i), null != a && (y[e].error_description = a);
 }
 function A(e) {
-    v(e), s.default.track(h.rMx.OVERLAY_HOOK_RESULT, T(e));
+    s.default.track(h.rMx.OVERLAY_HOOK_RESULT, T(e));
 }
 function C(e, t) {
     e !== l.UNSET_PID &&
@@ -182,6 +182,7 @@ function k(e) {
             total_mount_time_ms: null != i ? new Date().getTime() - i : void 0,
             success: !0,
         }),
+        v(r),
         !0
     );
 }
