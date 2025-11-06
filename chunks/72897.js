@@ -141,10 +141,11 @@ function S(e, t) {
             n = Object.keys(l),
             r = s && e !== _.h7.VIDEO_INPUT ? [_.w5] : [],
             a = (0, i.intersection)(p, n),
-            o = (0, i.difference)(n, p);
-        return (null == a ? void 0 : a.length) === 0
+            o = (0, i.difference)(n, p),
+            u = (0, i.difference)(o, r, [h]);
+        return (null == a ? void 0 : a.length) === 0 || u.length <= 1
             ? [(0, i.union)(r, [h], a, o), []].map(t)
-            : [(0, i.union)(r, [h], a), (0, i.difference)(o, r, [h])].map(t);
+            : [(0, i.union)(r, [h], a), u].map(t);
     }, [l, e, p, h, s]);
 }
 function A(e) {
