@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685), n(457542);
 var a = n(951288),
     i = n(647438),
-    l = n(442837),
-    r = n(704215),
+    r = n(442837),
+    l = n(704215),
     s = n(907862),
     o = n(535139),
     c = n(243778),
@@ -18,7 +18,7 @@ function b(e) {
     var t;
     let { targetElementRef: n, onClose: b } = e,
         [v, j] = i.useState(!1),
-        _ = (0, l.e7)([h.default], () => h.default.getId()),
+        _ = (0, r.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
         { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: N } = (0, o.F)(C),
         O = (0, m.ZP)(_),
@@ -28,17 +28,18 @@ function b(e) {
                 : t.some((e) => e instanceof d.q && e.applicationId === (null == C ? void 0 : C.id));
     return null != y && null != y.edit_profile_upsell_image && null != C && S
         ? (0, a.jsx)(c.ZP, {
+              bypassAutoDismiss: !0,
               contentTypes: E
                   ? P
                       ? []
-                      : [r.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
+                      : [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
                   : T
-                    ? [r.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
+                    ? [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: i } = e;
                   if (null == t) return null;
-                  let l = t === r.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let r = t === l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(s.J2, {
                       targetElementRef: n,
                       position: "right",
@@ -48,9 +49,12 @@ function b(e) {
                           src: y.edit_profile_upsell_image,
                       },
                       title: f.intl.format(f.t.TXDztH, { applicationName: C.name }),
-                      body: l ? f.intl.string(f.t["63Kso0"]) : f.intl.string(f.t.HwXoeC),
+                      body: r ? f.intl.string(f.t["63Kso0"]) : f.intl.string(f.t.HwXoeC),
+                      onRequestClose: () => {
+                          i(x.L.USER_DISMISS);
+                      },
                       actions: [
-                          l
+                          r
                               ? {
                                     text: f.intl.string(f.t.VSLDly),
                                     onClick: () => {
