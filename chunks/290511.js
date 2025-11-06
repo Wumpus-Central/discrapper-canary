@@ -1,5 +1,5 @@
 n.d(t, {
-    BN: () => j,
+    BN: () => M,
     FN: () => v,
     NE: () => d,
     NO: () => f,
@@ -9,7 +9,7 @@ n.d(t, {
     Un: () => I,
     X: () => b,
     YW: () => _,
-    a4: () => M,
+    a4: () => L,
     ae: () => A,
     b3: () => g,
     cf: () => P,
@@ -20,9 +20,8 @@ n.d(t, {
     l7: () => O,
     md: () => E,
     qm: () => p,
-    rZ: () => U,
-    t9: () => k,
-    vN: () => L,
+    rZ: () => k,
+    t9: () => j,
     yZ: () => C,
     yx: () => h,
     zz: () => T,
@@ -193,12 +192,11 @@ let D = new Set([
         o.ABu.LEAGUE_OF_LEGENDS,
         o.ABu.SKYPE,
     ]),
-    x = Object.values(o.ABu).filter((e) => !D.has(e)),
-    L = [];
-function M(e) {
+    x = Object.values(o.ABu).filter((e) => !D.has(e));
+function L(e) {
     return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
 }
-function j(e) {
+function M(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
         ? {
@@ -212,7 +210,7 @@ function j(e) {
             }
           : null;
 }
-function k(e) {
+function j(e) {
     let t = [];
     return (
         0 !== e.connection_type && 1 !== e.connection_type
@@ -231,13 +229,13 @@ function k(e) {
         t
     );
 }
-function U(e) {
+function k(e) {
     let t = [],
         n = new Set();
     for (let [r, i] of e.entries()) {
-        let e = k(i);
+        let e = j(i);
         t.push(...e.map((e) => "Connection ".concat(r + 1, ": ").concat(e)));
-        let a = M(i);
+        let a = L(i);
         n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
     }
     return t;

@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685), n(539854), n(953529), n(642613), n(781311);
+n.d(t, { default: () => O }), n(388685), n(539854), n(953529), n(642613), n(781311);
 var l = n(951288),
     i = n(647438),
     r = n(793030),
@@ -7,38 +7,49 @@ var l = n(951288),
     c = n(410030),
     s = n(726542),
     d = n(728345),
-    p = n(812206),
-    u = n(624138),
-    h = n(190007),
-    g = n(290511),
-    x = n(388032),
-    f = n(342203);
-function v(e) {
+    u = n(812206),
+    p = n(624138),
+    h = n(999382),
+    g = n(980555),
+    f = n(987350),
+    I = n(190007),
+    _ = n(290511),
+    A = n(388032),
+    x = n(342203);
+function O(e) {
     var t;
-    let { transitionState: n, onClose: v, connection: m, index: j } = e,
-        y = (0, c.ZP)(),
-        b = null != m && null != j;
+    let { transitionState: n, onClose: O, connection: S, index: v } = e,
+        m = (0, c.ZP)(),
+        L = null != S && null != v,
+        N = h.Z.getGuildId(),
+        C = (0, o.e7)([f.Z], () => {
+            var e;
+            return null != (e = f.Z.getAllowedApplicationIds(N)) ? e : [];
+        }, [N]);
     i.useEffect(() => {
-        for (let e of g.vN)
-            null != p.Z.getApplication(e) || p.Z.isFetchingApplication(e) || (0, d.UM)(e).catch(() => {});
-    }, []);
-    let C = (0, o.Wu)([p.Z], () => {
+        null != N && (0, g.X)(N);
+    }, [N]),
+        i.useEffect(() => {
+            for (let e of C)
+                null != u.Z.getApplication(e) || u.Z.isFetchingApplication(e) || (0, d.UM)(e).catch(() => {});
+        }, [C]);
+    let T = (0, o.Wu)([u.Z], () => {
             let e = [];
-            for (let t of g.vN) {
-                let n = p.Z.getApplication(t);
+            for (let t of C) {
+                let n = u.Z.getApplication(t);
                 null != n && e.push(n);
             }
             return e;
-        }),
-        [w, k] = i.useState(() => (null != m ? (0, g.a4)(m) : void 0)),
-        [N, O] = i.useState(null != (t = null == m ? void 0 : m.description) ? t : ""),
-        [I, P] = i.useState([]),
-        Z = i.useMemo(() => {
+        }, [C]),
+        [E, y] = i.useState(() => (null != S ? (0, _.a4)(S) : void 0)),
+        [b, j] = i.useState(null != (t = null == S ? void 0 : S.description) ? t : ""),
+        [G, P] = i.useState([]),
+        D = i.useMemo(() => {
             let e = [];
-            for (let l of s.Z.filter((e) => e.enabled && !g.Ni.has(e.type))) {
+            for (let l of s.Z.filter((e) => e.enabled && !_.Ni.has(e.type))) {
                 var t, n;
                 let i =
-                    "light" === y
+                    "light" === m
                         ? null == (t = l.icon)
                             ? void 0
                             : t.lightPNG
@@ -51,27 +62,27 @@ function v(e) {
                     icon: i,
                 });
             }
-            for (let t of C)
+            for (let t of T)
                 e.push({
                     label: t.name,
                     value: "app:".concat(t.id),
                     icon: t.getIconURL(128),
                 });
-            for (let t of g.vN)
-                null == p.Z.getApplication(t) &&
-                    p.Z.isFetchingApplication(t) &&
+            for (let t of C)
+                null == u.Z.getApplication(t) &&
+                    u.Z.isFetchingApplication(t) &&
                     e.push({
                         label: "Loading...",
                         value: "app:".concat(t),
                         icon: void 0,
                     });
             return e.sort((e, t) => e.label.localeCompare(t.label)), e;
-        }, [C, y]),
-        _ = i.useCallback(() => {
-            if (null == w || "" === w) return void P(["Please select a connection"]);
-            let e = (0, g.BN)(w);
+        }, [T, C, m]),
+        w = i.useCallback(() => {
+            if (null == E || "" === E) return void P(["Please select a connection"]);
+            let e = (0, _.BN)(E);
             if (null == e) return void P(["Invalid connection selected"]);
-            let t = N.trim(),
+            let t = b.trim(),
                 n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -99,16 +110,16 @@ function v(e) {
                 })(
                     {
                         connection_type: e.type,
-                        description: (0, u.Ew)(t) ? void 0 : t,
+                        description: (0, p.Ew)(t) ? void 0 : t,
                     },
                     null != e.applicationId && { application_id: e.applicationId },
                     null != e.providerId && { provider_id: e.providerId },
                 ),
-                l = (0, g.t9)(n);
+                l = (0, _.t9)(n);
             if (l.length > 0) return void P(l);
-            b ? (0, h.HZ)(j, n) : (0, h.HE)(n), v();
-        }, [w, N, b, j, v]),
-        E = i.useCallback(
+            L ? (0, I.HZ)(v, n) : (0, I.HE)(n), O();
+        }, [E, b, L, v, O]),
+        Z = i.useCallback(
             (e) =>
                 (0, l.jsxs)("div", {
                     style: {
@@ -137,7 +148,7 @@ function v(e) {
                 }),
             [],
         ),
-        W = i.useCallback((e) => {
+        R = i.useCallback((e) => {
             if (0 === e.length) return null;
             let t = e[0];
             return (0, l.jsxs)("div", {
@@ -166,52 +177,52 @@ function v(e) {
         }, []);
     return (0, l.jsx)(r.Modal, {
         transitionState: n,
-        title: b ? x.intl.string(x.t.yqegs1) : x.intl.string(x.t.B6qOe2),
-        onClose: v,
+        title: L ? A.intl.string(A.t.yqegs1) : A.intl.string(A.t.B6qOe2),
+        onClose: O,
         actions: [
             {
                 variant: "secondary",
-                text: x.intl.string(x.t["ETE/oC"]),
-                onClick: v,
+                text: A.intl.string(A.t["ETE/oC"]),
+                onClick: O,
             },
             {
                 variant: "primary",
-                text: b ? x.intl.string(x.t["R3BPH+"]) : x.intl.string(x.t.qMOnJu),
-                onClick: _,
+                text: L ? A.intl.string(A.t["R3BPH+"]) : A.intl.string(A.t.qMOnJu),
+                onClick: w,
             },
         ],
         children: (0, l.jsxs)("div", {
-            className: f.content,
+            className: x.content,
             children: [
-                !b &&
+                !L &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: x.intl.string(x.t.mGhCgX),
+                                children: A.intl.string(A.t.mGhCgX),
                             }),
                             (0, l.jsx)(a.xJW, {
-                                title: x.intl.string(x.t.joNLrt),
+                                title: A.intl.string(A.t.joNLrt),
                                 children: (0, l.jsx)(a.q4e, {
-                                    value: null != w ? w : "",
+                                    value: null != E ? E : "",
                                     onChange: (e) => {
-                                        k(e), P([]);
+                                        y(e), P([]);
                                     },
-                                    options: Z,
-                                    placeholder: x.intl.string(x.t.Wq1LfI),
-                                    renderOptionLabel: E,
-                                    renderOptionValue: W,
+                                    options: D,
+                                    placeholder: A.intl.string(A.t.Wq1LfI),
+                                    renderOptionLabel: Z,
+                                    renderOptionValue: R,
                                 }),
                             }),
-                            I.length > 0 &&
+                            G.length > 0 &&
                                 (0, l.jsx)("div", {
-                                    className: f.errors,
-                                    children: I.map((e, t) =>
+                                    className: x.errors,
+                                    children: G.map((e, t) =>
                                         (0, l.jsxs)(
                                             "div",
                                             {
-                                                className: f.errorRow,
+                                                className: x.errorRow,
                                                 children: [
                                                     (0, l.jsx)(r.Mgn, {
                                                         size: "sm",
@@ -243,20 +254,20 @@ function v(e) {
                                 (0, l.jsx)(a.Text, {
                                     variant: "text-md/medium",
                                     color: "text-primary",
-                                    children: x.intl.string(x.t.WoyrU8),
+                                    children: A.intl.string(A.t.WoyrU8),
                                 }),
                                 (0, l.jsx)(a.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-secondary",
-                                    children: x.intl.string(x.t.zdWNET),
+                                    children: A.intl.string(A.t.zdWNET),
                                 }),
                             ],
                         }),
                         (0, l.jsx)(a.Kx8, {
-                            value: N,
-                            onChange: O,
-                            placeholder: x.intl.string(x.t["28bQNf"]),
-                            maxLength: g.kk,
+                            value: b,
+                            onChange: j,
+                            placeholder: A.intl.string(A.t["28bQNf"]),
+                            maxLength: _.kk,
                         }),
                     ],
                 }),
