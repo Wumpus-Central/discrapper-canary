@@ -25,8 +25,8 @@ var r = n(951288),
     O = n(314897),
     v = n(626135),
     I = n(361207),
-    T = n(690032),
-    S = n(358085),
+    S = n(690032),
+    T = n(358085),
     A = n(998502),
     C = n(981631),
     N = n(188785),
@@ -153,7 +153,6 @@ let L = (0, h.Un)({
                 n.e("24358"),
                 n.e("38342"),
                 n.e("66201"),
-                n.e("35755"),
                 n.e("86863"),
                 n.e("37220"),
                 n.e("76511"),
@@ -162,7 +161,7 @@ let L = (0, h.Un)({
                 n.e("95546"),
                 n.e("52407"),
                 n.e("91689"),
-                n.e("13140"),
+                n.e("86642"),
                 n.e("14953"),
                 n.e("34297"),
                 n.e("22516"),
@@ -176,7 +175,7 @@ let L = (0, h.Un)({
                 n.e("78825"),
                 n.e("77803"),
                 n.e("27"),
-                n.e("28532"),
+                n.e("99904"),
                 n.e("69844"),
                 n.e("29709"),
                 n.e("13532"),
@@ -238,14 +237,13 @@ let L = (0, h.Un)({
                 n.e("24358"),
                 n.e("38342"),
                 n.e("66201"),
-                n.e("35755"),
                 n.e("86863"),
                 n.e("37220"),
                 n.e("76511"),
                 n.e("91315"),
                 n.e("30474"),
                 n.e("95546"),
-                n.e("13140"),
+                n.e("86642"),
                 n.e("14953"),
                 n.e("22173"),
                 n.e("60831"),
@@ -313,7 +311,7 @@ class ei extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : R.KO
-                      ? S.isPlatformEmbedded
+                      ? T.isPlatformEmbedded
                           ? (0, r.jsxs)(o.rs, {
                                 children: [
                                     t
@@ -508,7 +506,7 @@ class ei extends i.Component {
                                         render: () => {
                                             var e, t;
                                             let n = null == (e = v.default.getSuperProperties()) ? void 0 : e.os,
-                                                i = (0, T.o)(null != (t = window.location.search) ? t : "");
+                                                i = (0, S.o)(null != (t = window.location.search) ? t : "");
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, r.jsx)(o.l_, {
                                                     to:
@@ -573,7 +571,7 @@ class ei extends i.Component {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,
-                    S.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
+                    T.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
                         ? (0, r.jsx)(E.Z, {})
                         : null,
                 ],

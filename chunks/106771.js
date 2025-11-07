@@ -1,111 +1,111 @@
-n.d(t, { Z: () => h }), n(953529);
-var i = n(951288),
-    l = n(647438),
-    r = n(481060),
-    a = n(239091),
-    o = n(973616),
-    s = n(783097),
+n.d(t, { Z: () => g }), n(953529);
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(239091),
+    s = n(973616),
+    l = n(783097),
     c = n(176412),
     u = n(570949),
     d = n(753972),
-    p = n(532309),
-    m = n(934347),
-    f = n(413097);
-function h(e) {
+    f = n(532309),
+    _ = n(934347),
+    p = n(413097);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e) {
     var t;
-    let { command: n, application: h, onClick: v, query: y, searchResultsPosition: g } = e,
-        x = l.useCallback(
+    let { command: n, application: h, onClick: g, query: E, searchResultsPosition: b } = e,
+        y = i.useCallback(
             (e) => {
-                if ((0, s.BQ)(h)) {
-                    let t = h instanceof o.ZP ? h : o.ZP.createFromServer(h);
-                    (0, a.vq)(e, (e) =>
-                        (0, i.jsx)(
-                            u.Z,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: i,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = i);
-                                        });
-                                }
-                                return e;
-                            })({ application: t }, e),
-                        ),
-                    );
+                if ((0, l.BQ)(h)) {
+                    let t = h instanceof s.ZP ? h : s.ZP.createFromServer(h);
+                    (0, o.vq)(e, (e) => (0, r.jsx)(u.Z, m({ application: t }, e)));
                 }
             },
             [h],
         ),
-        { iconURL: b, name: N, description: j } = l.useMemo(() => (0, s.sl)(h, { fakeAppIconURL: f }), [h]),
-        C = l.useMemo(() => {
+        { iconURL: O, name: v, description: I } = i.useMemo(() => (0, l.sl)(h, { fakeAppIconURL: p }), [h]),
+        S = i.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : j;
+            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : I;
             return null == t ? null : (0, c.ae)(t, void 0);
-        }, [j, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: E } = (0, p.Z)({
+        }, [I, null == n ? void 0 : n.displayDescription]),
+        { trackSearchResultsItemImpressionRef: T } = (0, f.Z)({
             applicationId: h.id,
             commandId: null == n ? void 0 : n.id,
-            query: y,
-            searchResultsPosition: g,
+            query: E,
+            searchResultsPosition: b,
         });
-    return (0, i.jsx)(r.P3F, {
-        className: m.clickable,
+    return (0, r.jsx)(a.P3F, {
+        className: _.clickable,
         innerRef: (e) => {
-            E.current = e;
+            T.current = e;
         },
-        onClick: v,
-        onContextMenu: x,
-        children: (0, i.jsxs)(r.Rny, {
-            className: m.focusBlock,
+        onClick: g,
+        onContextMenu: y,
+        children: (0, r.jsxs)(a.Rny, {
+            className: _.focusBlock,
             children: [
-                (0, i.jsx)(d.Z, {
-                    src: b,
-                    className: m.icon,
+                (0, r.jsx)(d.Z, {
+                    src: O,
+                    className: _.icon,
                     "aria-hidden": !0,
                     rendersPlaceholder: !0,
                 }),
-                (0, i.jsxs)("div", {
-                    className: m.cmdDetails,
+                (0, r.jsxs)("div", {
+                    className: _.cmdDetails,
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, r.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
                             color: "header-primary",
                             lineClamp: 1,
-                            children: null != (t = null == n ? void 0 : n.displayName) ? t : N,
+                            children: null != (t = null == n ? void 0 : n.displayName) ? t : v,
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             lineClamp: 1,
-                            children: C,
+                            children: S,
                         }),
                     ],
                 }),
                 null != n
-                    ? (0, i.jsx)(r.Text, {
-                          className: m.cmdAppName,
+                    ? (0, r.jsx)(a.Text, {
+                          className: _.cmdAppName,
                           variant: "text-sm/normal",
                           color: "text-secondary",
-                          children: N,
+                          children: v,
                       })
                     : null,
-                (0, i.jsx)("div", { className: m.underline }),
+                (0, r.jsx)("div", { className: _.underline }),
             ],
         }),
     });

@@ -1,47 +1,47 @@
 n.d(t, {
-    P: () => f,
+    P: () => p,
     Z: () => h,
-}),
-    n(388685);
-var i = n(951288),
-    l = n(481060),
-    r = n(239091),
-    a = n(299206),
-    o = n(276022),
-    s = n(695346),
+});
+var r = n(951288),
+    i = n(481060),
+    a = n(239091),
+    o = n(299206),
+    s = n(276022),
+    l = n(695346),
     c = n(914010),
     u = n(499254),
     d = n(827498),
-    p = n(314734),
-    m = n(388032);
-function f(e) {
+    f = n(314734),
+    _ = n(388032);
+function p(e) {
     var t;
     let { application: n } = e,
-        i = null != (t = c.Z.getGuildId()) ? t : void 0;
-    return (0, o.Z)({
+        r = null != (t = c.Z.getGuildId()) ? t : void 0,
+        a = () => {
+            (0, i.Mr3)(f.e9), (0, u.y)(d.ti.DISMISSED);
+        };
+    return (0, s.Z)({
         application: n,
-        guildId: i,
-        onItemClick: () => {
-            (0, l.Mr3)(p.e9), (0, u.y)(d.ti.DISMISSED);
-        },
+        guildId: r,
+        onItemClick: a,
     });
 }
 function h(e) {
     let { application: t, onSelect: n } = e,
-        o = s.Sb.useSetting(),
-        c = (0, a.Z)({
+        s = l.Sb.useSetting(),
+        c = (0, o.Z)({
             id: t.id,
-            label: m.intl.string(m.t["+NP/b2"]),
+            label: _.intl.string(_.t["+NP/b2"]),
         }),
-        u = f({ application: t });
-    return (0, i.jsxs)(l.v2r, {
+        u = p({ application: t });
+    return (0, r.jsxs)(i.v2r, {
         navId: "activity-shelf-item-context",
-        onClose: r.Zy,
-        "aria-label": m.intl.string(m.t.WkcHT9),
+        onClose: a.Zy,
+        "aria-label": _.intl.string(_.t.WkcHT9),
         onSelect: n,
         children: [
-            null != u && (0, i.jsxs)(l.kSQ, { children: [...u] }, "manage-app-actions"),
-            o && (0, i.jsx)(l.kSQ, { children: c }, "developer-actions"),
+            null != u && (0, r.jsx)(i.kSQ, { children: u }, "manage-app-actions"),
+            s && (0, r.jsx)(i.kSQ, { children: c }, "developer-actions"),
         ],
     });
 }

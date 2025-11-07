@@ -1,69 +1,78 @@
 n.d(t, { Z: () => L }), n(997841);
-var i = n(951288),
-    l = n(647438),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
-    s = n(481060),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
     c = n(367907),
     u = n(895924),
     d = n(970321),
-    p = n(311819),
-    m = n(433534),
-    f = n(299206),
+    f = n(311819),
+    _ = n(433534),
+    p = n(299206),
     h = n(726521),
-    v = n(973616),
-    y = n(914010),
-    g = n(594174),
-    x = n(626135),
-    b = n(572004),
-    N = n(630388),
-    j = n(135431),
-    C = n(541099),
-    E = n(783097),
-    P = n(570949),
+    m = n(973616),
+    g = n(914010),
+    E = n(594174),
+    b = n(626135),
+    y = n(572004),
+    O = n(630388),
+    v = n(135431),
+    I = n(541099),
+    S = n(783097),
+    T = n(570949),
     A = n(314734),
-    _ = n(981631),
-    O = n(388032),
-    I = n(820607);
-function S(e) {
+    C = n(981631),
+    N = n(388032),
+    R = n(820607);
+function P(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                P(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e, t) {
+function D(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -71,104 +80,104 @@ function T(e, t) {
 }
 function L(e) {
     var t;
-    let { application: r, context: L, className: R, sectionName: Z } = e,
-        w = l.useRef(null),
-        k = (0, o.e7)([C.Z], () => C.Z.entrypoint()),
-        M = (0, E.L1)(r),
-        U = (0, m.Eb)(M),
-        D = (0, d.R)(r.id),
-        H = (0, o.e7)([y.Z], () => {
+    let { application: a, context: P, className: D, sectionName: L } = e,
+        M = i.useRef(null),
+        j = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
+        k = (0, S.L1)(a),
+        U = (0, _.Eb)(k),
+        G = (0, d.R)(a.id),
+        B = (0, s.e7)([g.Z], () => {
             var e;
-            return null != (e = y.Z.getGuildId()) ? e : void 0;
+            return null != (e = g.Z.getGuildId()) ? e : void 0;
         }, []),
-        B = {
+        Z = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
-            application_id: r.id,
-            section_name: Z,
-            source: C.Z.lastShownEntrypoint(),
+            application_id: a.id,
+            section_name: L,
+            source: I.Z.lastShownEntrypoint(),
         },
-        V = g.default.getCurrentUser(),
-        W = (0, f.Z)({
-            id: r.id,
-            label: O.intl.string(O.t["+NP/b2"]),
+        F = E.default.getCurrentUser(),
+        V = (0, p.Z)({
+            id: a.id,
+            label: N.intl.string(N.t["+NP/b2"]),
         }),
-        F = (0, P.P)({ application: r }),
-        G = (0, N.yE)(null != (t = r.flags) ? t : 0, _.udG.EMBEDDED),
-        Y = "channel" === L.type ? L.channel : void 0;
-    return (0, i.jsxs)("div", {
-        className: I.container,
+        H = (0, T.P)({ application: a }),
+        Y = (0, O.yE)(null != (t = a.flags) ? t : 0, C.udG.EMBEDDED),
+        W = "channel" === P.type ? P.channel : void 0;
+    return (0, r.jsxs)("div", {
+        className: R.container,
         children: [
-            (0, i.jsx)(s.P3F, {
+            (0, r.jsx)(l.P3F, {
                 onClick: () => {
-                    let e = G
-                        ? (0, p.H)({
-                              applicationId: r.id,
-                              referrerId: null == V ? void 0 : V.id,
+                    let e = Y
+                        ? (0, f.H)({
+                              applicationId: a.id,
+                              referrerId: null == F ? void 0 : F.id,
                           })
-                        : (0, p.J)(S({ id: r.id }, M));
-                    (0, b.JG)(e, () =>
-                        (0, s.showToast)((0, s.createToast)(O.intl.string(O.t["L/PwZf"]), s.ToastType.SUCCESS)),
+                        : (0, f.J)(w({ id: a.id }, k));
+                    (0, y.JG)(e, () =>
+                        (0, l.showToast)((0, l.createToast)(N.intl.string(N.t["L/PwZf"]), l.ToastType.SUCCESS)),
                     ),
-                        x.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
-                            application_id: r.id,
-                            source: k,
+                        b.default.track(C.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                            application_id: a.id,
+                            source: j,
                         });
                 },
-                className: a()(I.clickable, R),
-                "aria-label": O.intl.string(O.t.WqhZss),
-                children: (0, i.jsx)(s.xPt, {
+                className: o()(R.clickable, D),
+                "aria-label": N.intl.string(N.t.WqhZss),
+                children: (0, r.jsx)(l.xPt, {
                     size: "sm",
-                    color: s.TVs.colors.INTERACTIVE_ACTIVE,
+                    color: l.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
-            (0, i.jsx)(s.yRy, {
-                targetElementRef: w,
+            (0, r.jsx)(l.yRy, {
+                targetElementRef: M,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsxs)(s.v2r, {
+                    return (0, r.jsxs)(l.v2r, {
                         className: A.NN,
                         navId: "app-details-more-menu",
                         onClose: t,
-                        "aria-label": O.intl.string(O.t.AXIHpV),
+                        "aria-label": N.intl.string(N.t.AXIHpV),
                         onSelect: void 0,
                         children: [
-                            (0, i.jsxs)(s.kSQ, {
+                            (0, r.jsxs)(l.kSQ, {
                                 children: [
-                                    D &&
-                                        (0, i.jsx)(s.sNh, {
+                                    G &&
+                                        (0, r.jsx)(l.sNh, {
                                             id: "open-storefront",
-                                            label: O.intl.string(O.t.kRvlKJ),
+                                            label: N.intl.string(N.t.kRvlKJ),
                                             action: () => {
-                                                (0, s.ZDy)(async () => {
+                                                (0, l.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("77803"),
                                                         n.e("42124"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
-                                                        (0, i.jsx)(e, {
+                                                        (0, r.jsx)(e, {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
-                                                            appId: r.id,
-                                                            guildId: H,
+                                                            appId: a.id,
+                                                            guildId: B,
                                                         });
                                                 });
                                             },
                                         }),
                                     U
-                                        ? (0, i.jsx)(s.sNh, {
+                                        ? (0, r.jsx)(l.sNh, {
                                               id: "add-app",
-                                              label: O.intl.string(O.t.NgXl3C),
+                                              label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
-                                                  null == M.customInstallUrl &&
-                                                      (0, c.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
-                                                      (0, j.L)(
-                                                          T(S({}, M), {
+                                                  null == k.customInstallUrl &&
+                                                      (0, c.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
+                                                      (0, v.L)(
+                                                          x(w({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
                                                                       (0, c.yw)(
-                                                                          _.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
-                                                                          B,
+                                                                          C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
+                                                                          Z,
                                                                       );
                                                               },
                                                               source: "app_launcher_app_details",
@@ -177,44 +186,44 @@ function L(e) {
                                               },
                                           })
                                         : null,
-                                    r instanceof v.ZP
-                                        ? (0, i.jsx)(s.sNh, {
+                                    a instanceof m.ZP
+                                        ? (0, r.jsx)(l.sNh, {
                                               id: "report-app",
                                               color: "danger",
-                                              label: O.intl.string(O.t.jhJzez),
+                                              label: N.intl.string(N.t.jhJzez),
                                               action: () => {
                                                   var e;
                                                   (0, h.uu)({
-                                                      application: r,
+                                                      application: a,
                                                       entrypoint: "app_launcher",
                                                       contextualGuildId:
-                                                          null != (e = null == Y ? void 0 : Y.getGuildId())
+                                                          null != (e = null == W ? void 0 : W.getGuildId())
                                                               ? e
                                                               : void 0,
-                                                      contextualChannelId: null == Y ? void 0 : Y.id,
+                                                      contextualChannelId: null == W ? void 0 : W.id,
                                                   });
                                               },
                                           })
                                         : null,
-                                    F,
+                                    H,
                                 ],
                             }),
-                            (0, i.jsx)(s.kSQ, { children: W }),
+                            (0, r.jsx)(l.kSQ, { children: V }),
                         ],
                     });
                 },
                 align: "right",
                 position: "bottom",
                 children: (e) =>
-                    (0, i.jsx)(
-                        s.P3F,
-                        T(S({ innerRef: w }, e), {
+                    (0, r.jsx)(
+                        l.P3F,
+                        x(w({ innerRef: M }, e), {
                             onClick: e.onClick,
-                            className: a()(I.clickable, R),
-                            "aria-label": O.intl.string(O.t["UKOtz+"]),
-                            children: (0, i.jsx)(s.xhG, {
+                            className: o()(R.clickable, D),
+                            "aria-label": N.intl.string(N.t["UKOtz+"]),
+                            children: (0, r.jsx)(l.xhG, {
                                 size: "sm",
-                                color: s.TVs.colors.INTERACTIVE_ACTIVE,
+                                color: l.TVs.colors.INTERACTIVE_ACTIVE,
                             }),
                         }),
                     ),

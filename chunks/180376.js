@@ -2,7 +2,6 @@ e.exports = {
     barBase: "barBase__0f481",
     barButtonBase: "barButtonBase__0f481",
     barButtonIcon: "barButtonIcon__0f481",
-    barWithAppLauncherButton: "barWithAppLauncherButton__0f481",
     bottomBar: "bottomBar__0f481 barBase__0f481",
     jumpToPresentBar: "jumpToPresentBar__0f481 bottomBar__0f481 barBase__0f481",
     spinner: "spinner__0f481",

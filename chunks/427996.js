@@ -1,21 +1,21 @@
-n.d(t, { W: () => p });
-var i = n(951288);
+n.d(t, { W: () => f });
+var r = n(951288);
 n(647438);
-var l = n(120356),
-    r = n.n(l),
-    a = n(399606),
-    o = n(481060),
-    s = n(337682),
+var i = n(120356),
+    a = n.n(i),
+    o = n(399606),
+    s = n(481060),
+    l = n(337682),
     c = n(115130),
     u = n(388032),
     d = n(625234);
-function p(e) {
+function f(e) {
     let { hideSearch: t, className: n } = e,
         {
-            activityUrlOverride: l,
-            useActivityUrlOverride: p,
-            filter: m,
-        } = (0, a.cj)(
+            activityUrlOverride: i,
+            useActivityUrlOverride: f,
+            filter: _,
+        } = (0, o.cj)(
             [c.Z],
             () => ({
                 activityUrlOverride: c.Z.getActivityUrlOverride(),
@@ -24,33 +24,34 @@ function p(e) {
             }),
             [],
         );
-    return (0, i.jsxs)("div", {
-        className: r()(d.container, n),
+    function p() {
+        l.a8("");
+    }
+    return (0, r.jsxs)("div", {
+        className: a()(d.container, n),
         children: [
-            (0, i.jsx)(o.Checkbox, {
-                checked: p,
-                onChange: s.Y$,
+            (0, r.jsx)(s.Checkbox, {
+                checked: f,
+                onChange: l.Y$,
                 label: u.intl.string(u.t["3TSGuD"]),
             }),
-            p
-                ? (0, i.jsx)(o.oil, {
+            f
+                ? (0, r.jsx)(s.oil, {
                       label: u.intl.string(u.t["9rnmem"]),
-                      disabled: !p,
-                      value: null != l ? l : void 0,
-                      onChange: s.jS,
+                      disabled: !f,
+                      value: null != i ? i : void 0,
+                      onChange: l.jS,
                       placeholder: "https://localhost:3000",
                   })
                 : null,
             !0 === t
                 ? null
-                : (0, i.jsx)("div", {
-                      children: (0, i.jsx)(o.E1j, {
+                : (0, r.jsx)("div", {
+                      children: (0, r.jsx)(s.E1j, {
                           size: "sm",
-                          query: m,
-                          onChange: s.a8,
-                          onClear: function () {
-                              s.a8("");
-                          },
+                          query: _,
+                          onChange: l.a8,
+                          onClear: p,
                       }),
                   }),
         ],
