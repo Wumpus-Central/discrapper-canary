@@ -45,6 +45,7 @@ function v(e, t, n) {
         voiceState: r,
         voicePlatform: null,
         speaking: !1,
+        latched: !1,
         lastSpoke: 0,
         soundsharing: !1,
         ringing: !1,
@@ -61,7 +62,7 @@ function I(e) {
         r = O.delete(e);
     return t || n || r;
 }
-function T() {
+function S() {
     var e;
     let t = f.Z.getChannelId();
     if (null == t) return !1;
@@ -76,16 +77,16 @@ function T() {
         r
     );
 }
-function S() {
+function T() {
     b.clear(), y.clear(), O.clear();
 }
 function A() {
-    S();
+    T();
 }
 function C(e) {
     let { state: t, context: n } = e;
     if (n !== a.Yn.DEFAULT || t !== m.hes.DISCONNECTED) return !1;
-    S();
+    T();
 }
 function N(e) {
     let { voiceStates: t } = e,
@@ -115,7 +116,7 @@ function P(e) {
 }
 class w extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], T);
+        this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], S);
     }
     get desyncedVoiceStatesCount() {
         return b.size();
@@ -133,7 +134,7 @@ class w extends (r = i.ZP.Store) {
 E(w, "displayName", "RTCConnectionDesyncStore");
 let D = new w(o.Z, {
     CONNECTION_OPEN: A,
-    VOICE_CHANNEL_SELECT: S,
+    VOICE_CHANNEL_SELECT: T,
     RTC_CONNECTION_STATE: C,
     VOICE_STATE_UPDATES: N,
     RTC_CONNECTION_CLIENT_CONNECT: R,

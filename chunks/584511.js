@@ -45,23 +45,24 @@ function p(e) {
             userId: t,
             size: n,
             speaking: i = !1,
-            muted: d = !1,
-            deafen: _ = !1,
-            src: p,
-            disabled: h = !1,
-            ringing: m,
-            ringingType: g = 0,
-            avatarClassName: E,
-            renderIcon: b,
-            style: y,
-            onClick: O,
-            onContextMenu: v,
-            className: I,
+            latched: d = !1,
+            muted: _ = !1,
+            deafen: p = !1,
+            src: h,
+            disabled: m = !1,
+            ringing: g,
+            ringingType: E = 0,
+            avatarClassName: b,
+            renderIcon: y,
+            style: O,
+            onClick: v,
+            onContextMenu: I,
+            className: S,
         } = e,
         T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
-        S = () => {
-            let e = T ? s.v0G : _ ? s.wE8 : s.nRN;
-            return d || _ || T
+        A = () => {
+            let e = T ? s.v0G : p ? s.wE8 : s.nRN;
+            return _ || p || T
                 ? (0, r.jsx)("div", {
                       className: u.statusContainer,
                       children: (0, r.jsx)(
@@ -75,28 +76,38 @@ function p(e) {
                   })
                 : null;
         },
-        A = () => (0, r.jsx)("div", { className: a()(u.border, { [u.speaking]: i }) }, "border"),
         C = () =>
-            d && i
+            (0, r.jsx)(
+                "div",
+                {
+                    className: a()(u.border, {
+                        [u.speaking]: i,
+                        [u.latched]: d && !i,
+                    }),
+                },
+                "border",
+            ),
+        N = () =>
+            _ && i
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [A(), S()],
+                      children: [C(), A()],
                   })
-                : d || _ || T
-                  ? (0, r.jsx)(r.Fragment, { children: S() })
-                  : (0, r.jsx)(r.Fragment, { children: A() }),
-        N = () => {
+                : _ || p || T
+                  ? (0, r.jsx)(r.Fragment, { children: A() })
+                  : (0, r.jsx)(r.Fragment, { children: C() }),
+        R = () => {
             let e = (0, s.pxk)(n),
                 t = (0, r.jsx)("img", {
-                    src: p,
+                    src: h,
                     alt: " ",
-                    className: a()(u.voiceAvatar, E, { [u.ringingOutgoing]: m && 0 === g }),
+                    className: a()(u.voiceAvatar, b, { [u.ringingOutgoing]: g && 0 === E }),
                 });
-            if (h) return t;
+            if (m) return t;
             let i = l.QS.AVATAR_DEFAULT;
             return (
-                null != b
+                null != y
                     ? (i = n === s.EFr.SIZE_32 ? l.QS.AVATAR_CALL_ICON_32 : l.QS.AVATAR_CALL_ICON)
-                    : (d || _ || T) && (i = l.QS.AVATAR_VOICE_CALL_80),
+                    : (_ || p || T) && (i = l.QS.AVATAR_VOICE_CALL_80),
                 (0, r.jsxs)("div", {
                     className: u.callAvatarMaskContainer,
                     children: [
@@ -105,35 +116,35 @@ function p(e) {
                             width: e,
                             height: e,
                             mask: i,
-                            children: [null == b ? void 0 : b(), t],
+                            children: [null == y ? void 0 : y(), t],
                         }),
-                        C(),
+                        N(),
                     ],
                 })
             );
         },
-        R = a()(
+        P = a()(
             u.wrapper,
             {
-                [u.clickable]: null != O,
-                [u.ringingOutgoing]: m && 0 === g,
-                [u.ringingIncoming]: m && 1 === g,
+                [u.clickable]: null != v,
+                [u.ringingOutgoing]: g && 0 === E,
+                [u.ringingIncoming]: g && 1 === E,
             },
-            I,
+            S,
         ),
-        P = (0, s.pxk)(n),
-        w = f(
+        w = (0, s.pxk)(n),
+        D = f(
             {
-                height: P,
-                width: P,
+                height: w,
+                width: w,
             },
-            y,
+            O,
         );
     return (0, r.jsx)("div", {
-        style: w,
-        onContextMenu: v,
-        className: R,
-        children: N(),
+        style: D,
+        onContextMenu: I,
+        className: P,
+        children: R(),
     });
 }
 p.RingingType = _;

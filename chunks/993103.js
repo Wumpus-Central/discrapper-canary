@@ -10,6 +10,7 @@ e.exports = {
     voiceAvatar: "voiceAvatar_f910d0",
     border: "border_f910d0",
     speaking: "speaking_f910d0",
+    latched: "latched_f910d0",
     callAvatarMask: "callAvatarMask_f910d0",
     callAvatarMaskContainer: "callAvatarMaskContainer_f910d0",
 };

@@ -121,7 +121,9 @@ function O(e) {
                     ? M && O === f.h8.CREDIT_CARD_INFORMATION
                         ? f.h8.PAYMENT_ELEMENT
                         : O
-                    : f.h8.PAYMENT_TYPE,
+                    : M
+                      ? f.h8.PAYMENT_ELEMENT
+                      : f.h8.PAYMENT_TYPE,
             [O, x.current, M],
         );
     return (0, s.vP)({

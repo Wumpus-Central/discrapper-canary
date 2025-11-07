@@ -1,6 +1,6 @@
 n.d(t, {
     Yr: () => P,
-    ZP: () => D,
+    ZP: () => x,
     gN: () => R,
     sI: () => w,
 }),
@@ -28,7 +28,7 @@ var r = n(392711),
     O = n(354459),
     v = n(981631),
     I = n(65154);
-function T(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -114,7 +114,10 @@ var w = (function (e) {
         e
     );
 })({});
-class D {
+function D(e) {
+    return u.default.getId() === e && p.Z.isCurrentUserPTTLatched();
+}
+class x {
     get version() {
         return this.participantByIndex.version;
     }
@@ -190,8 +193,9 @@ class D {
                                       t && (this.lastSpoke[e] = Date.now()),
                                       this.participantByIndex.set(
                                           n.id,
-                                          C(S({}, n), {
+                                          C(T({}, n), {
                                               speaking: t,
+                                              latched: D(e),
                                               lastSpoke: this.lastSpoke[e],
                                               soundsharing: p.Z.isSoundSharing(e),
                                           }),
@@ -215,7 +219,7 @@ class D {
                                   r.type === O.fO.STREAM
                                       ? (this.participantByIndex.set(
                                             r.id,
-                                            C(S({}, r), {
+                                            C(T({}, r), {
                                                 maxResolution: t,
                                                 maxFrameRate: n,
                                             }),
@@ -261,8 +265,8 @@ class D {
         let b,
             y,
             v = [],
-            T = h.default.getUser(e);
-        if (null == T) return v;
+            S = h.default.getUser(e);
+        if (null == S) return v;
         let A = g.Z.getVoiceStateForChannel(this.channelId, e),
             N = g.Z.getVoicePlatformForChannel(this.channelId, e),
             R = f.Z.getChannel(this.channelId),
@@ -273,43 +277,44 @@ class D {
                         (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) ||
                         this.guildRingingUsers.has(e)) && r;
         (null != A || w) &&
-            ((b = C(S({ type: O.fO.USER }, m.Z.getUserStreamData(e, P)), {
-                user: T,
-                id: T.id,
+            ((b = C(T({ type: O.fO.USER }, m.Z.getUserStreamData(e, P)), {
+                user: S,
+                id: S.id,
                 voiceState: A,
                 voicePlatform: N,
                 speaking: (0, a.O)({
                     userId: e,
                     checkIsMuted: !0,
                 }),
+                latched: D(e),
                 lastSpoke: null != (i = this.lastSpoke[e]) ? i : 0,
                 soundsharing: p.Z.isSoundSharing(e),
                 ringing: w,
-                userNick: E.ZP.getName(P, this.channelId, T),
-                userAvatarDecoration: (0, s.o)(T, P),
-                localVideoDisabled: _.Z.isLocalVideoDisabled(T.id),
-                isPoppedOut: this.poppedOutParticipants.has(T.id),
+                userNick: E.ZP.getName(P, this.channelId, S),
+                userAvatarDecoration: (0, s.o)(S, P),
+                localVideoDisabled: _.Z.isLocalVideoDisabled(S.id),
+                isPoppedOut: this.poppedOutParticipants.has(S.id),
             })),
             v.push(b));
-        let D = null != (o = c.Z.getStreamForUser(e, P)) ? o : c.Z.getActiveStreamForUser(e, P);
-        if (null != D && D.channelId === this.channelId) {
-            let t = (0, l.V9)(D),
+        let x = null != (o = c.Z.getStreamForUser(e, P)) ? o : c.Z.getActiveStreamForUser(e, P);
+        if (null != x && x.channelId === this.channelId) {
+            let t = (0, l.V9)(x),
                 n = this.getParticipant(t),
-                r = D.ownerId === u.default.getId() && c.Z.isSelfStreamHidden(this.channelId),
+                r = x.ownerId === u.default.getId() && c.Z.isSelfStreamHidden(this.channelId),
                 i =
                     (null == n ? void 0 : n.type) === O.fO.STREAM
                         ? {
-                              maxResolution: null != n.maxResolution ? S({}, n.maxResolution) : void 0,
+                              maxResolution: null != n.maxResolution ? T({}, n.maxResolution) : void 0,
                               maxFrameRate: n.maxFrameRate,
                           }
                         : null;
-            (y = C(S({}, m.Z.getUserStreamData(e, P, I.Yn.STREAM), i), {
+            (y = C(T({}, m.Z.getUserStreamData(e, P, I.Yn.STREAM), i), {
                 type: r ? O.fO.HIDDEN_STREAM : O.fO.STREAM,
                 id: t,
                 userVideo: null != (d = null == A ? void 0 : A.selfVideo) && d,
-                user: T,
-                userNick: E.ZP.getName(P, this.channelId, T),
-                stream: D,
+                user: S,
+                userNick: E.ZP.getName(P, this.channelId, S),
+                stream: x,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             })),
                 v.push(y);
@@ -317,13 +322,13 @@ class D {
         return v;
     }
     constructor(e) {
-        T(this, "channelId", void 0),
-            T(this, "call", void 0),
-            T(this, "participants", {}),
-            T(this, "lastSpoke", {}),
-            T(this, "guildRingingUsers", new Set()),
-            T(this, "poppedOutParticipants", new Set()),
-            T(
+        S(this, "channelId", void 0),
+            S(this, "call", void 0),
+            S(this, "participants", {}),
+            S(this, "lastSpoke", {}),
+            S(this, "guildRingingUsers", new Set()),
+            S(this, "poppedOutParticipants", new Set()),
+            S(
                 this,
                 "participantByIndex",
                 new i.h((e) => {
