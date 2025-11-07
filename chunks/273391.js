@@ -111,43 +111,31 @@ let j = new m.Z("ImageEditor"),
             ee = r.useCallback(
                 (e) => {
                     if (null == T) return;
-                    let t = C(T, e, V),
-                        { x: n, y: l } = N.current;
-                    A(e),
-                        Z(t),
-                        $({
-                            x: n,
-                            y: l,
-                        }),
-                        null == K || K();
+                    let t = C(T, e, V);
+                    A(e), Z(t), $(), null == K || K();
                 },
                 [T, $, V, K],
             ),
             et = r.useCallback(() => {
                 if (null == M.current || null == T) return;
                 let e = (z + 90) % 360,
-                    t = -N.current.x,
-                    n = N.current.y,
-                    l = T.height,
-                    r = T.width,
-                    i = C(
+                    t = T.height,
+                    n = T.width,
+                    l = C(
                         {
-                            width: l,
-                            height: r,
+                            width: t,
+                            height: n,
                         },
                         R,
                         V,
                     );
-                $({
-                    x: n,
-                    y: t,
-                }),
-                    L(e),
+                L(e),
                     P({
-                        width: l,
-                        height: r,
+                        width: t,
+                        height: n,
                     }),
-                    Z(i),
+                    Z(l),
+                    $(),
                     null == K || K();
             }, [T, z, $, R, V, K]),
             en = r.useCallback(() => {
@@ -267,10 +255,6 @@ let j = new m.Z("ImageEditor"),
                     width: e,
                     height: t,
                 }),
-                    w({
-                        x: 0,
-                        y: 0,
-                    }),
                     L(0),
                     k(!1);
                 let n = Math.min(Math.max(e, t) / Math.min(e, t), 4);
@@ -286,8 +270,12 @@ let j = new m.Z("ImageEditor"),
                             n,
                             V,
                         ),
-                    );
-            }, [M, V]),
+                    ),
+                    $({
+                        x: 0,
+                        y: 0,
+                    });
+            }, [M, V, $]),
             ed = r.useCallback(() => {
                 ec();
             }, [ec]);
