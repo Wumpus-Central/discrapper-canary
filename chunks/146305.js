@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(610403),
     x = n(923726),
     j = n(303737),
-    v = n(15030),
-    _ = n(220685),
+    _ = n(15030),
+    v = n(220685),
     O = n(536442),
     C = n(575258),
     y = n(276687),
@@ -40,8 +40,8 @@ var r = n(951288),
     B = n(84658),
     F = n(142961),
     H = n(815977),
-    z = n(730910),
-    W = n(103576),
+    W = n(730910),
+    z = n(103576),
     V = n(475013),
     K = n(17699),
     Y = n(213956),
@@ -70,7 +70,7 @@ var r = n(951288),
     eb = n(135899),
     ex = n(388032),
     ej = n(566386);
-function ev(e) {
+function e_(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -95,7 +95,7 @@ function ev(e) {
     }
     return e;
 }
-function e_(e, t) {
+function ev(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -208,11 +208,11 @@ let eO = {
                     type: o.bT.MINIMAL,
                     ariaLabel: ex.intl.string(ex.t.KXcEC9),
                     notice: {
-                        stores: [W.Z],
+                        stores: [z.Z],
                         element: V._,
                     },
                     predicate: () => t.canManageRoles,
-                    icon: t.pinPermissionMigrationAvailable ? (0, r.jsx)("div", { className: ej.redDot }) : void 0,
+                    icon: t.permissionMigrationAvailable ? (0, r.jsx)("div", { className: ej.redDot }) : void 0,
                 };
             case eh.pNK.EMOJI:
                 return {
@@ -374,7 +374,7 @@ let eO = {
                         : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                     notice: {
                         stores: [U.Z, M.Z, G.Z],
-                        element: z.Z,
+                        element: W.Z,
                     },
                     predicate: () => (0, f.wC)(t.guild.id),
                     decoration: (function (e, t) {
@@ -440,9 +440,9 @@ let eO = {
                         !t.guild.features.has(eh.GuildFeatures.GUILD_SERVER_GUIDE),
                 };
             case eh.pNK.ROLE_SUBSCRIPTIONS:
-                return e_(ev({}, eN), {
+                return ev(e_({}, eN), {
                     section: eh.pNK.ROLE_SUBSCRIPTIONS,
-                    element: v.Z,
+                    element: _.Z,
                     type: o.bT.CUSTOM,
                     predicate: () =>
                         eC
@@ -471,7 +471,7 @@ let eO = {
                     newIndicator: 2022 === new Date().getFullYear(),
                     label: ex.intl.string(ex.t.ipTYsk),
                     ariaLabel: ex.intl.string(ex.t.ipTYsk),
-                    element: _.Z,
+                    element: v.Z,
                     predicate: () => t.monetizationPredicate() && (0, x.sy)(t.guild),
                 };
             case eh.pNK.GUILD_PREMIUM:
@@ -518,7 +518,7 @@ let eO = {
                             ? (0, a.h7j)((e) =>
                                   (0, r.jsx)(
                                       a.ConfirmModal,
-                                      e_(ev({}, e), {
+                                      ev(e_({}, e), {
                                           header: ex.intl.formatToPlainString(ex.t.us7mC1, { name: i }),
                                           confirmText: ex.intl.string(ex.t.l3hWP6),
                                           cancelText: ex.intl.string(ex.t["ETE/oC"]),
@@ -535,7 +535,7 @@ let eO = {
                                   return (t) =>
                                       (0, r.jsx)(
                                           e,
-                                          e_(ev({}, t), {
+                                          ev(e_({}, t), {
                                               onConfirm: l,
                                               guildName: i,
                                           }),

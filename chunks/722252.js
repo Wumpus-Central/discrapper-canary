@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(415506), n(953529);
+n.d(t, { Z: () => p }), n(415506), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(149765),
@@ -6,10 +6,8 @@ var i = n(951288),
     o = n(208884),
     s = n(453628),
     c = n(996987),
-    d = n(231338),
-    u = n(388032),
-    p = n(55667);
-class m extends r.PureComponent {
+    d = n(55667);
+class u extends r.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
@@ -62,7 +60,7 @@ class m extends r.PureComponent {
                             children: (0, i.jsx)(a.t6m, {
                                 size: "sm",
                                 color: "currentColor",
-                                className: p.icon,
+                                className: d.icon,
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
@@ -84,19 +82,19 @@ class m extends r.PureComponent {
     }
     renderComponent(e, t) {
         let { title: n, description: r, flag: l } = e,
-            { permissions: s, locked: p, permissionRender: m } = this.props,
-            b = null == m ? void 0 : m(l),
-            g = !!(p || b),
-            f = "string" == typeof b && "" !== b ? a.t6m : void 0,
-            h =
+            { permissions: s, locked: d, permissionRender: u, hasBypassSlowmodePermission: p } = this.props,
+            m = null == u ? void 0 : u(l),
+            b = !!(d || m),
+            g = "string" == typeof m && "" !== m ? a.t6m : void 0,
+            f =
                 null == s
                     ? (0, i.jsx)(
                           c.Z,
                           {
                               label: n,
                               description: (0, o._u)(r),
-                              icon: f,
-                              disabled: g,
+                              icon: g,
+                              disabled: b,
                               value: this.getOverwriteValue(l),
                               onChange: (e) => this.handleChange(l, e),
                           },
@@ -107,32 +105,32 @@ class m extends r.PureComponent {
                           {
                               label: n,
                               description: (0, o._u)(r),
-                              icon: f,
-                              disabled: g,
+                              icon: g,
+                              disabled: b,
                               checked: this.getPermissionValue(l, s),
                               onChange: (e) => this.handleChange(l, e),
                           },
                           String(l),
-                      );
+                      ),
+            h = (0, o.ih)(l, p);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 t > 0 && (0, i.jsx)(a.izJ, {}),
                 (0, i.jsxs)(a.Kqy, {
                     gap: 8,
                     children: [
-                        h,
-                        l === d.Pl.MANAGE_MESSAGES
-                            ? (0, i.jsx)(a.Wn, {
-                                  messageType: a.QYI.WARNING,
-                                  children: u.intl.string(u.t["2XIdPp"]),
-                              })
-                            : null,
-                        "string" == typeof b &&
-                            "" !== b &&
+                        f,
+                        null != h &&
+                            (0, i.jsx)(a.M14, {
+                                type: "warning",
+                                children: h,
+                            }),
+                        "string" == typeof m &&
+                            "" !== m &&
                             (0, i.jsx)(a.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-feedback-critical",
-                                children: b,
+                                children: m,
                             }),
                     ],
                 }),
@@ -152,4 +150,4 @@ class m extends r.PureComponent {
         });
     }
 }
-let b = m;
+let p = u;

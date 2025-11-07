@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(953529);
+n.d(t, { Z: () => w }), n(953529), n(539854), n(388685);
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -108,6 +108,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
             await Promise.all([
                 n.e("57804"),
                 n.e("13599"),
+                n.e("70018"),
                 n.e("36599"),
                 n.e("49049"),
                 n.e("38697"),
@@ -533,6 +534,24 @@ let R = new s.Z("GuildSettingsActionCreators"),
                         guildId: e,
                     }),
                 );
+        },
+        async migrateSlowmodePermission(e) {
+            await i.tn
+                .post({
+                    url: O.ANM.GUILD_MIGRATE_SLOWMODE_PERMISSION(e),
+                    rejectWithError: !0,
+                })
+                .then(() =>
+                    a.Z.dispatch({
+                        type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED",
+                        guildId: e,
+                    }),
+                );
+        },
+        async migratePermissions(e, t) {
+            let { migratePin: n, migrateSlowmode: r } = t,
+                i = [];
+            n && i.push(P.migratePinPermission(e)), r && i.push(P.migrateSlowmodePermission(e)), await Promise.all(i);
         },
     },
     w = P;

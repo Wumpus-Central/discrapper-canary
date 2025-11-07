@@ -4,7 +4,7 @@ var r = n(951288),
     l = n(120356),
     o = n.n(l),
     a = n(100568),
-    s = n(358458),
+    s = n(509442),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(271383),
     j = n(771845),
     C = n(727258),
-    x = n(276952),
-    E = n(249792),
+    E = n(276952),
+    x = n(249792),
     S = n(40153),
     I = n(593618),
     P = n(252686),
@@ -83,6 +83,7 @@ let L = {
 function M(e, t) {
     (0, f.jW)(e, async () => {
         let { default: e } = await Promise.all([
+            n.e("70018"),
             n.e("36599"),
             n.e("76692"),
             n.e("8271"),
@@ -168,12 +169,12 @@ let k = i.memo(function (e) {
             let e = (0, b.V)(H.id);
             null != e && h.Z.preload(H.id, e);
         }, [V, H, q, et]),
-        ex = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
-        eE = i.useCallback(
+        eE = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
+        ex = i.useCallback(
             (e) => {
-                null == H || ex || J(e, H);
+                null == H || eE || J(e, H);
             },
-            [H, J, ex],
+            [H, J, eE],
         ),
         eS = i.useCallback(
             (e) => {
@@ -201,7 +202,7 @@ let k = i.memo(function (e) {
     if (null == H) return null;
     let eZ =
             ey || eb
-                ? (0, r.jsx)(E.Z, {
+                ? (0, r.jsx)(x.Z, {
                       guild: H,
                       show: ey,
                       active: W,
@@ -230,7 +231,7 @@ let k = i.memo(function (e) {
                                       ee || eg(!1);
                                   },
                                   onMouseDown: eC,
-                                  onContextMenu: eE,
+                                  onContextMenu: ex,
                                   onKeyDown: eS,
                                   icon: (0, O.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em,
@@ -271,7 +272,7 @@ let k = i.memo(function (e) {
     return (0, r.jsxs)(N.H, {
         ref: eP,
         children: [
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(E.Z, {
                 hovered: !ed && em,
                 selected: !ed && W,
                 unread: !ed && K,

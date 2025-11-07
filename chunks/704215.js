@@ -499,6 +499,8 @@ var r = (function (e) {
             (e[(e.GAME_SERVER_HOSTING_NEW_COACHMARK = 639)] = "GAME_SERVER_HOSTING_NEW_COACHMARK"),
             (e[(e.GAME_SHOP_NEW_BADGE = 640)] = "GAME_SHOP_NEW_BADGE"),
             (e[(e.GAME_SHOP_RTC_POPOVER = 641)] = "GAME_SHOP_RTC_POPOVER"),
+            (e[(e.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION = 642)] =
+                "GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION"),
             e
         );
     })({}),

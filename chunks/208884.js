@@ -5,6 +5,7 @@ E.d(i, {
     WW: () => s,
     _u: () => R,
     aW: () => g,
+    ih: () => a,
     kv: () => I,
     s4: () => A,
     uu: () => O,
@@ -557,4 +558,15 @@ function O(t, i) {
 }
 function R(t) {
     return null == t ? t : "string" == typeof t ? t.trim() : "function" == typeof t ? S.intl.format(t, {}) : t;
+}
+function a(t, i) {
+    return i
+        ? t === l.Pl.MANAGE_CHANNELS || t === l.Pl.MANAGE_THREADS
+            ? S.intl.string(S.t.Han3PH)
+            : t === l.Pl.MANAGE_MESSAGES
+              ? S.intl.string(S.t.zSc2tb)
+              : null
+        : t === l.Pl.MANAGE_MESSAGES
+          ? S.intl.string(S.t["2XIdPp"])
+          : null;
 }

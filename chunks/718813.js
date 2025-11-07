@@ -10,16 +10,16 @@ var r,
     d = n(481060),
     p = n(37234),
     f = n(134616),
-    m = n(714338),
-    h = n(663993),
-    g = n(84615),
+    h = n(714338),
+    g = n(663993),
+    m = n(84615),
     _ = n(984802),
     b = n(819640),
     E = n(585483),
     O = n(981631),
-    I = n(388032),
-    y = n(506945),
-    v = n(256076);
+    y = n(388032),
+    v = n(506945),
+    I = n(256076);
 function C(e, t, n) {
     return (
         t in e
@@ -67,35 +67,36 @@ function T(e, t) {
         e
     );
 }
-let N = (0, h.Un)({
+let N = (0, g.Un)({
         createPromise: () => n.e("69470").then(n.bind(n, 989804)),
         webpackId: 989804,
         name: "UserSettings",
     }),
-    j = (0, h.Un)({
+    j = (0, g.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 653592)),
         webpackId: 653592,
         name: "ComponentPlayground",
     }),
-    P = (0, h.Un)({
+    P = (0, g.Un)({
         createPromise: () => n.e("80448").then(n.bind(n, 765457)),
         webpackId: 765457,
         name: "CheckpointSlides",
     }),
-    x = (0, h.Un)({
+    x = (0, g.Un)({
         createPromise: () =>
             Promise.all([n.e("36599"), n.e("7654"), n.e("86736"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    A = (0, h.Un)({
+    A = (0, g.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    Z = (0, h.Un)({
+    Z = (0, g.Un)({
         createPromise: () =>
             Promise.all([
+                n.e("70018"),
                 n.e("36599"),
                 n.e("76692"),
                 n.e("8271"),
@@ -129,7 +130,7 @@ let N = (0, h.Un)({
         tension: 100,
     };
 function M() {
-    return l.useEffect(() => (m.Z.enable(), m.Z.enableTemp(f.u), () => m.Z.disableTemp()), []), null;
+    return l.useEffect(() => (h.Z.enable(), h.Z.enableTemp(f.u), () => h.Z.disableTemp()), []), null;
 }
 class k extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
@@ -208,7 +209,7 @@ class k extends (r = l.PureComponent) {
             u = r === R,
             p = e || u ? this.getAnimatedStyle() : null,
             f = !u && !a,
-            m = (0, i.jsx)(
+            h = (0, i.jsx)(
                 o.Z.div,
                 T(
                     S(
@@ -221,24 +222,24 @@ class k extends (r = l.PureComponent) {
                                 ? (function (e) {
                                       switch (e) {
                                           case O.S9g.USER_SETTINGS:
-                                              return I.intl.string(I.t.cduTBL);
+                                              return y.intl.string(y.t.cduTBL);
                                           case O.S9g.CHANNEL_SETTINGS:
-                                              return I.intl.string(I.t.XPDhcc);
+                                              return y.intl.string(y.t.XPDhcc);
                                           case O.S9g.COLLECTIBLES_SHOP:
-                                              return I.intl.string(I.t.pWG4ze);
+                                              return y.intl.string(y.t.pWG4ze);
                                           case O.S9g.COMPONENT_PLAYGROUND:
                                               return "Component Playground";
                                           case O.S9g.CHECKPOINT:
-                                              return I.intl.string(y.default["CdU/PF"]);
+                                              return y.intl.string(v.default["CdU/PF"]);
                                           default:
                                               return "";
                                       }
                                   })(n)
                                 : void 0,
                             role: f ? "dialog" : void 0,
-                            className: s()(v.layer, {
-                                [v.baseLayer]: a,
-                                [v.animating]: e,
+                            className: s()(I.layer, {
+                                [I.baseLayer]: a,
+                                [I.animating]: e,
                                 "stop-animations": r === R,
                             }),
                             style: p,
@@ -249,10 +250,10 @@ class k extends (r = l.PureComponent) {
                 ),
             );
         return a
-            ? m
+            ? h
             : (0, i.jsx)(d.EqS, {
                   containerRef: this.containerRef,
-                  children: m,
+                  children: h,
               });
     }
     getAnimatedStyle() {
@@ -323,7 +324,7 @@ class U extends l.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(d.f6W, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)("div", { className: s()(v.bg, e) }),
+            children: (e) => (0, i.jsx)("div", { className: s()(I.bg, e) }),
         });
     }
     render() {
@@ -332,7 +333,7 @@ class U extends l.PureComponent {
                 this.renderArtisanalHack(),
                 (0, i.jsx)(u.W, {
                     component: "div",
-                    className: s()(v.layers, this.props.className),
+                    className: s()(I.layers, this.props.className),
                     children: this.renderLayers(),
                 }),
             ],
@@ -342,7 +343,7 @@ class U extends l.PureComponent {
 function G(e) {
     let t = (0, _.Ll)(),
         n = (0, c.e7)([b.Z], () => b.Z.getLayers()),
-        r = (0, g.QP)((e) => e.fullScreenLayers.length > 0);
+        r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(
         U,
         T(S({}, e), {

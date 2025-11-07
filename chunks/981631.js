@@ -33,11 +33,11 @@ n.d(t, {
     DJE: () => re,
     DJj: () => eM,
     DZw: () => ew,
-    E07: () => tS,
+    E07: () => tT,
     EKQ: () => E.EK,
     EOG: () => n1,
     ETv: () => E.ET,
-    EYA: () => tT,
+    EYA: () => tS,
     EkH: () => v,
     Etm: () => E.Et,
     Eu4: () => ns,
@@ -57,7 +57,7 @@ n.d(t, {
     HGf: () => n5,
     HN8: () => eF,
     HeQ: () => E.He,
-    Hqc: () => nS,
+    Hqc: () => nT,
     IE4: () => F,
     IIU: () => e6,
     IWh: () => rN,
@@ -91,7 +91,7 @@ n.d(t, {
     NYc: () => E.NY,
     NYg: () => nV,
     N_j: () => n2,
-    NgX: () => T,
+    NgX: () => S,
     O0b: () => n_,
     O0n: () => es,
     O42: () => b.O4,
@@ -132,7 +132,7 @@ n.d(t, {
     S7T: () => E.S7,
     S9g: () => nN,
     SOq: () => n8,
-    SRg: () => nT,
+    SRg: () => nS,
     STv: () => eE,
     SaU: () => tZ,
     Sap: () => ni,
@@ -168,7 +168,7 @@ n.d(t, {
     X5t: () => E.X5,
     X6Q: () => E.X6,
     X7u: () => E.X7,
-    XAJ: () => eT,
+    XAJ: () => eS,
     XKF: () => n3,
     XmY: () => e1,
     Xyh: () => e4,
@@ -183,7 +183,7 @@ n.d(t, {
     Zuq: () => E.Zu,
     _1z: () => er,
     _8R: () => rj,
-    _s_: () => S,
+    _s_: () => T,
     _vf: () => ei,
     a5g: () => tz,
     aIL: () => ev,
@@ -240,7 +240,7 @@ n.d(t, {
     j3N: () => ek,
     j8d: () => E.j8,
     jXE: () => tU,
-    jm8: () => rT,
+    jm8: () => rS,
     jwA: () => nw,
     kEZ: () => U,
     kGb: () => rd,
@@ -290,7 +290,7 @@ n.d(t, {
     sFg: () => el,
     sHY: () => ra,
     scU: () => tv,
-    si2: () => rS,
+    si2: () => rT,
     t4x: () => tY,
     tG9: () => eZ,
     tHP: () => eD,
@@ -473,10 +473,10 @@ var o = n(106351),
             e
         );
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -808,6 +808,7 @@ var o = n(106351),
             (e.REPORT_TO_MOD_PILOT = "REPORT_TO_MOD_PILOT"),
             (e.TIERLESS_BOOSTING_SYSTEM_MESSAGE = "TIERLESS_BOOSTING_SYSTEM_MESSAGE"),
             (e.PIN_PERMISSION_MIGRATION_COMPLETE = "PIN_PERMISSION_MIGRATION_COMPLETE"),
+            (e.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE = "BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE"),
             (e.GUILD_TAGS_BADGE_PACK_PETS = "GUILD_TAGS_BADGE_PACK_PETS"),
             (e.GUILD_TAGS_BADGE_PACK_FLEX = "GUILD_TAGS_BADGE_PACK_FLEX"),
             (e.GAME_SERVERS = "GAME_SERVERS"),
@@ -1068,8 +1069,8 @@ let em = "@me",
     eO = "null",
     ev = "0",
     eI = "null",
-    eT = "1096190356233670716",
-    eS = Object.freeze({
+    eS = "1096190356233670716",
+    eT = Object.freeze({
         USER: (e) => "/users/".concat(e),
         USER_RELATIONSHIPS: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : em;
@@ -1948,6 +1949,7 @@ let em = "@me",
         CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => "/conference-mode/channels/".concat(e, "/users"),
         GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
         GET_APPLICATION_TOKENS: (e) => "/oauth2/applications/".concat(e, "/tokens"),
+        GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-bypass-slowmode-permission"),
     }),
     eA = Object.freeze({
         INDEX: "/",
@@ -2135,7 +2137,7 @@ let em = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => "/quest-home?tab=preview_tool&quest_id=".concat(e),
         ICYMI: "/icymi",
     }),
-    eC = (0, f.Ft)(eS),
+    eC = (0, f.Ft)(eT),
     eN = (0, f.Ft)(eA, [":", "?", "@"]);
 var eR = (function (e) {
         return (
@@ -2264,7 +2266,7 @@ let te = 128,
     tO = "DEVICE_TOKEN",
     tv = "DEVICE_VOIP_TOKEN",
     tI = "first_run_date_key",
-    tT = Object.freeze({
+    tS = Object.freeze({
         API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
             window.GLOBAL_ENV.MARKETING_ENDPOINT,
@@ -2320,7 +2322,7 @@ let te = 128,
         SAFETY_CENTER: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safetycenter"),
         VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
-    tS = Object.freeze({
+    tT = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => "/developers/servers/".concat(e),
         DEVELOPER_PORTAL_TEAMS: "/developers/teams",
@@ -5399,7 +5401,7 @@ var nE = (function (e) {
             e
         );
     })({});
-let nT = Object.freeze({
+let nS = Object.freeze({
         STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
         INSTALL_DIR: (e) => "".concat(e, "/content"),
         ROOT_PATTERN: ["**/*"],
@@ -5411,7 +5413,7 @@ let nT = Object.freeze({
             linux: "linux",
         },
     }),
-    nS = 86400000;
+    nT = 86400000;
 var nA = (function (e) {
         return (
             (e.NORMAL = "normal"), (e.MINIMUM = "minimum"), (e.NO_CHAT = "no-chat"), (e.FULL_SCREEN = "full-screen"), e
@@ -5521,6 +5523,7 @@ let nR = Object.freeze({
     GUILD_MEMBER_VERIFICATION_UPDATE: 210,
     GUILD_PROFILE_UPDATE: 211,
     GUILD_MIGRATE_PIN_PERMISSION: 212,
+    GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION: 213,
 });
 var nP = (function (e) {
         return (e.ALL = "ALL"), (e.CREATE = "CREATE"), (e.UPDATE = "UPDATE"), (e.DELETE = "DELETE"), e;
@@ -6268,7 +6271,7 @@ var rv = (function (e) {
     rI = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rT = (function (e) {
+    rS = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6279,7 +6282,7 @@ var rv = (function (e) {
             e
         );
     })({}),
-    rS = (function (e) {
+    rT = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6379,4 +6382,4 @@ let rY = Object.freeze({
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? "useParentSkuData/".concat(e) : null),
     }),
     rW = 4096,
-    rK = 1768248000000;
+    rK = 1771876800000;

@@ -56,7 +56,7 @@ function c(e) {
     else if (e <= o.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
     else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= o.rsA.GUILD_PROFILE_UPDATE) return o.KFR.GUILD_PROFILE;
-    else if (e <= o.rsA.GUILD_MIGRATE_PIN_PERMISSION) return o.KFR.GUILD;
+    else if (e <= o.rsA.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return o.KFR.GUILD;
     return s.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
 }
 function E(e) {
@@ -140,6 +140,7 @@ function E(e) {
         case o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE:
         case o.rsA.GUILD_PROFILE_UPDATE:
         case o.rsA.GUILD_MIGRATE_PIN_PERMISSION:
+        case o.rsA.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION:
             return o.vB8.UPDATE;
     }
     return o.vB8.ALL;

@@ -20,8 +20,8 @@ var r,
     v = n(592125),
     j = n(888369),
     C = n(430824),
-    x = n(158776),
-    E = n(306680),
+    E = n(158776),
+    x = n(306680),
     S = n(944486),
     I = n(938475),
     P = n(483360),
@@ -115,12 +115,12 @@ class H extends (r = l.Component) {
     }
 }
 U(H, "defaultProps", { unread: !1 });
-let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
+let z = c.ZP.connectStores([x.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: E.ZP.hasUnread(t.id),
-            mentions: E.ZP.getMentionCount(t.id),
-            isMentionLowImportance: E.ZP.getIsMentionLowImportance(t.id),
+            unread: x.ZP.hasUnread(t.id),
+            mentions: x.ZP.getMentionCount(t.id),
+            isMentionLowImportance: x.ZP.getIsMentionLowImportance(t.id),
             category: v.Z.getChannel(t.parent_id),
         };
     })(H),
@@ -134,26 +134,26 @@ let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
         let { guild: t } = e;
         return { unread: j.default.hasUnread(t.id) };
     })(R.ic),
-    Y = c.ZP.connectStores([E.ZP, x.Z], (e) => {
+    Y = c.ZP.connectStores([x.ZP, E.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
-            i = x.Z.getState().statuses;
+            i = E.Z.getState().statuses;
         return (
             (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
             {
-                mentions: E.ZP.getMentionCount(n.id),
+                mentions: x.ZP.getMentionCount(n.id),
                 status: r,
             }
         );
     })(R.PZ),
-    q = c.ZP.connectStores([v.Z, E.ZP, x.Z], (e) => {
+    q = c.ZP.connectStores([v.Z, x.ZP, E.Z], (e) => {
         let { user: t } = e,
             n = v.Z.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? E.ZP.getMentionCount(n) : 0,
-            status: x.Z.getStatus(t.id),
-            isMobile: x.Z.isMobileOnline(t.id),
+            mentions: null != n ? x.ZP.getMentionCount(n) : 0,
+            status: E.Z.getStatus(t.id),
+            isMobile: E.Z.isMobileOnline(t.id),
         };
     })(R.n5);
 function X(e, t, n) {
@@ -325,6 +325,7 @@ class Q extends l.PureComponent {
                     case g.h8.GUILD:
                         return (0, p.jW)(e, async () => {
                             let { default: e } = await Promise.all([
+                                n.e("70018"),
                                 n.e("36599"),
                                 n.e("76692"),
                                 n.e("8271"),

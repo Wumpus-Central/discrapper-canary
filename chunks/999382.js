@@ -1,5 +1,5 @@
 let r, i, a, o, s, l, c, u, d, f;
-n.d(t, { Z: () => te }), n(388685), n(997841);
+n.d(t, { Z: () => tt }), n(388685), n(997841);
 var _,
     p = n(392711),
     h = n.n(p),
@@ -11,8 +11,8 @@ var _,
     O = n(570140),
     v = n(311929),
     I = n(314852),
-    T = n(131704),
-    S = n(601964),
+    S = n(131704),
+    T = n(601964),
     A = n(758449),
     C = n(598077),
     N = n(430824),
@@ -222,7 +222,7 @@ function eb(e) {
         if (((u = null), t !== e.section)) return eK(e);
     } else
         r === M.pNK.MEMBERS
-            ? (u = (0, S.lV)(s))
+            ? (u = (0, T.lV)(s))
             : r === M.pNK.VANITY_URL
               ? (0, x.U5)(s.id)
               : r === M.pNK.SAFETY &&
@@ -246,11 +246,11 @@ function ev() {
 function eI() {
     K = M.QZA.OPEN;
 }
-function eT(e) {
+function eS(e) {
     var t;
     (K = M.QZA.OPEN), (r = null != r ? r : (0, L.r)()), (i = null), (z = null != (t = e.errors) ? t : {});
 }
-function eS() {
+function eT() {
     let e = s;
     if (null == e) return !1;
     V.some((t) => e[t] !== o[t]) || (s = o);
@@ -263,7 +263,7 @@ function eA(e) {
             s = (0, v.t8)(s, t, null != (n = e[t]) ? n : null);
         }
     }),
-        eS();
+        eT();
 }
 function eC(e) {
     let { guildId: t } = e;
@@ -282,7 +282,7 @@ function eN(e) {
         temporary: e.temporary,
         revoked: e.revoked,
         inviter: null != e.inviter ? new C.Z(e.inviter) : null,
-        channel: (0, T.jD)(e.channel),
+        channel: (0, S.jD)(e.channel),
         guild: null != e.guild ? (0, P.Qs)(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
@@ -396,11 +396,19 @@ function eK(e) {
 }
 function ez(e) {
     let { guildId: t } = e;
-    null != s &&
-        t === s.id &&
-        (s = (0, v.t8)(s, "features", s.features.union(new Set([M.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]))));
+    if (null == s || t !== s.id) return !1;
+    s = (0, v.t8)(s, "features", new Set([...s.features, M.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]));
 }
 function eq(e) {
+    let { guildId: t } = e;
+    if (null == s || t !== s.id) return !1;
+    s = (0, v.t8)(
+        s,
+        "features",
+        new Set([...s.features, M.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
+    );
+}
+function eX(e) {
     var t, n, r, i, a, o, l, c, u, d;
     let { guildId: f, metadata: _ } = e;
     null != s &&
@@ -421,18 +429,18 @@ function eq(e) {
             }),
         (z = {}));
 }
-function eX() {
+function eQ() {
     es = el = ea;
 }
-function eQ(e) {
+function eJ(e) {
     let { slug: t } = e;
     f = t;
 }
-function eJ(e) {
+function e$(e) {
     let {} = e;
     f = null;
 }
-function e$(e) {
+function e0(e) {
     let { guildId: t, categoryId: n } = e;
     null != s &&
         t === s.id &&
@@ -443,7 +451,7 @@ function e$(e) {
             secondaryCategoryIds: [...es.secondaryCategoryIds, n],
         })));
 }
-function e0(e) {
+function e1(e) {
     let t,
         { guildId: n, categoryId: r } = e;
     if (null == s || n !== s.id) return;
@@ -452,7 +460,7 @@ function e0(e) {
         -1 !== (i = es.secondaryCategoryIds.indexOf(r)) &&
             ((t = [...es.secondaryCategoryIds]).splice(i, 1), (es = Z(G({}, es), { secondaryCategoryIds: t })));
 }
-function e1(e) {
+function e2(e) {
     let { guildId: t, errors: n } = e;
     null != s && t === s.id && (z = null != n ? n : {});
 }
@@ -479,35 +487,35 @@ function e3(e) {
             about: null != c ? c : el.about,
         }));
 }
-function e2(e) {
+function e4(e) {
     let { guildId: t, errors: n } = e;
     null != s && t === s.id && (z = null != n ? n : {});
 }
-function e4(e) {
+function e8(e) {
     let { profile: t } = e;
     t.id === (null == s ? void 0 : s.id) && (l = c = t);
 }
-function e8(e) {
+function e5(e) {
     let { guildId: t } = e;
     if (null == s || s.id !== t) return !1;
     q = null;
 }
-function e5(e) {
+function e6(e) {
     let { profile: t } = e;
     if ((null == c ? void 0 : c.id) == null || !ep(c.id)) return !1;
     t.id === (null == s ? void 0 : s.id) && ((l = c = t), (q = null));
 }
-function e6(e) {
+function e7(e) {
     let { guildId: t, error: n } = e;
     if (null == s || s.id !== t) return !1;
     q = n;
 }
-function e7(e) {
+function e9(e) {
     let { guildId: t } = e;
     if ((null == c ? void 0 : c.id) == null || !ep(c.id)) return !1;
     t === (null == s ? void 0 : s.id) && ((l = c = I.Z.getProfile(t)), (q = null));
 }
-class e9 extends (_ = E.ZP.Store) {
+class te extends (_ = E.ZP.Store) {
     initialize() {
         this.waitFor(N.Z, I.Z, R.default);
     }
@@ -604,8 +612,8 @@ class e9 extends (_ = E.ZP.Store) {
         };
     }
 }
-U(e9, "displayName", "GuildSettingsStore");
-let te = new e9(
+U(te, "displayName", "GuildSettingsStore");
+let tt = new te(
     O.Z,
     __OVERLAY__
         ? {}
@@ -619,7 +627,7 @@ let te = new e9(
               GUILD_SETTINGS_SAVE_ROUTE_STACK: eE,
               GUILD_SETTINGS_SUBMIT: ev,
               GUILD_SETTINGS_SUBMIT_SUCCESS: eI,
-              GUILD_SETTINGS_SUBMIT_FAILURE: eT,
+              GUILD_SETTINGS_SUBMIT_FAILURE: eS,
               GUILD_SETTINGS_SET_SECTION: eb,
               GUILD_SETTINGS_SET_SEARCH_QUERY: ey,
               GUILD_SETTINGS_LOADED_BANS: eD,
@@ -631,6 +639,7 @@ let te = new e9(
               GUILD_SETTINGS_ROLE_SELECT: eU,
               GUILD_SETTINGS_LOADED_INTEGRATIONS: eW,
               GUILD_SETTINGS_PIN_PERMISSION_MIGRATED: ez,
+              GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED: eq,
               GUILD_BAN_ADD: eL,
               GUILD_BAN_REMOVE: eM,
               GUILD_ROLE_CREATE: eG,
@@ -638,26 +647,26 @@ let te = new e9(
               GUILD_ROLE_DELETE: eZ,
               GUILD_UPDATE: ej,
               GUILD_DELETE: ek,
-              GUILD_PROFILE_FETCH_SUCCESS: e4,
-              GUILD_PROFILE_UPDATE: e8,
-              GUILD_PROFILE_UPDATE_SUCCESS: e5,
-              GUILD_PROFILE_UPDATE_FAILURE: e6,
-              GUILD_PROFILE_UPDATE_VISIBILITY: e8,
-              GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: e7,
-              GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: e6,
+              GUILD_PROFILE_FETCH_SUCCESS: e8,
+              GUILD_PROFILE_UPDATE: e5,
+              GUILD_PROFILE_UPDATE_SUCCESS: e6,
+              GUILD_PROFILE_UPDATE_FAILURE: e7,
+              GUILD_PROFILE_UPDATE_VISIBILITY: e5,
+              GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: e9,
+              GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: e7,
               USER_CONNECTIONS_UPDATE: eK,
               GUILD_INTEGRATIONS_UPDATE: eK,
               INSTANT_INVITE_REVOKE_SUCCESS: eP,
               INSTANT_INVITE_CREATE_SUCCESS: ew,
-              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eq,
-              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eX,
-              GUILD_DISCOVERY_CATEGORY_ADD: e$,
-              GUILD_DISCOVERY_CATEGORY_DELETE: e0,
-              GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e1,
+              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eX,
+              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eQ,
+              GUILD_DISCOVERY_CATEGORY_ADD: e0,
+              GUILD_DISCOVERY_CATEGORY_DELETE: e1,
+              GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e2,
               GUILD_UPDATE_DISCOVERY_METADATA: e3,
-              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e2,
-              GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: eQ,
-              GUILD_DISCOVERY_SLUG_FETCH_FAIL: eJ,
+              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e4,
+              GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: eJ,
+              GUILD_DISCOVERY_SLUG_FETCH_FAIL: e$,
               GUILD_SETTINGS_WIDGET_UPDATE: eV,
           },
 );
