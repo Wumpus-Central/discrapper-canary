@@ -1,59 +1,60 @@
-n.d(t, { R: () => f });
+n.d(t, { R: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     a = n(906732),
     o = n(608579),
-    s = n(610005),
-    l = n(793202),
-    c = n(981631);
-let u = (e) => {
+    s = n(683144),
+    l = n(610005),
+    c = n(793202),
+    u = n(981631);
+let d = (e) => {
         let { skuId: t, isGift: n } = e,
             {
-                analyticsLocations: l,
-                loadId: u,
+                analyticsLocations: s,
+                loadId: c,
                 handleClose: d,
                 handleComplete: f,
                 isFetching: _,
                 sku: p,
-            } = (0, s.a0)({
+            } = (0, l.a0)({
                 skuId: t,
                 isGift: n,
-                applicationId: c.XAJ,
+                applicationId: u.XAJ,
             });
         return _ || null == p
             ? (0, r.jsx)("div", { children: (0, r.jsx)(i.$jN, { type: i.RAz.SPINNING_CIRCLE }) })
             : (0, r.jsx)(a.Gt, {
-                  value: l,
+                  value: s,
                   children: (0, r.jsx)(
                       o.Z,
                       {
                           onClose: d,
                           onComplete: f,
                           transitionState: i.Dvm.ENTERED,
-                          loadId: u,
+                          loadId: c,
                           skuId: t,
                           isGift: n,
-                          analyticsLocations: l,
+                          analyticsLocations: s,
                       },
-                      "".concat(t, "-").concat(n, "-").concat(u),
+                      "".concat(t, "-").concat(n, "-").concat(c),
                   ),
               });
     },
-    d = (0, l.F)(),
-    f = {
+    f = (0, c.F)(),
+    _ = {
         title: "Collectibles Checkout",
         stories: [
             {
                 name: "Collectibles Checkout",
                 id: "collectibles-checkout",
-                component: u,
+                component: d,
                 controls: {
                     skuId: {
                         label: "SKU ID",
                         type: "select",
-                        options: d.options,
-                        defaultValue: d.defaultValue,
+                        options: f.options,
+                        defaultValue: f.defaultValue,
                     },
                     isGift: {
                         label: "Is Gift",
@@ -62,5 +63,6 @@ let u = (e) => {
                     },
                 },
             },
+            s._,
         ],
     };

@@ -1,7 +1,7 @@
 n.d(t, {
     Gy: () => C,
     Vy: () => N,
-    a0: () => S,
+    a0: () => T,
     rC: () => A,
 }),
     n(388685);
@@ -64,7 +64,7 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function T(e, t) {
         e
     );
 }
-let S = (e) => {
+let T = (e) => {
         let { skuId: t, isGift: n, applicationId: r } = e,
             { analyticsLocations: l } = (0, _.ZP)(f.Z.PAYMENT_FLOW_TEST_PAGE),
             c = i.useRef(null),
@@ -147,7 +147,7 @@ let S = (e) => {
                 disablePurchases: O,
                 paymentContextOverrides: I,
             } = e,
-            S = b
+            T = b
                 ? v(
                       {
                           purchasePreviewError: null,
@@ -156,21 +156,21 @@ let S = (e) => {
                       I,
                   )
                 : v({}, I);
-        O && (S.disablePurchasesForStorybook = !0);
+        O && (T.disablePurchasesForStorybook = !0);
         let A = "".concat(i, "-").concat(a, "-").concat(f);
         return (0, r.jsx)(
             h.PaymentContextProvider,
             {
                 stepConfigs: d,
                 applicationId: n,
-                skuIDs: [i],
+                skuIDs: null != i ? [i] : [],
                 isGift: a,
                 activeSubscription: null,
                 purchaseType: u,
                 excludeSubscriptionPlansBySKU: _,
                 children: (0, r.jsx)(
                     y.$,
-                    T(v({}, S), {
+                    S(v({}, T), {
                         children: (0, r.jsx)(m.c1, {
                             children: (0, r.jsx)(p.KB, {
                                 isGift: a,

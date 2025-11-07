@@ -80,8 +80,8 @@ function O(e) {
         {
             contextMetadata: v,
             step: I,
-            paymentSources: T,
-            paymentSourceId: S,
+            paymentSources: S,
+            paymentSourceId: T,
             setPaymentSourceId: A,
             purchaseError: C,
             setPurchaseError: N,
@@ -95,8 +95,8 @@ function O(e) {
         } = (0, d.JL)(),
         { isGift: j } = (0, u.wD)(),
         k = b(g({}, (0, s.fL)()), {
-            paymentSources: T,
-            paymentSourceId: S,
+            paymentSources: S,
+            paymentSourceId: T,
             setPaymentSourceId: A,
             purchaseError: C,
             setPurchaseError: N,
@@ -108,7 +108,7 @@ function O(e) {
         U = (0, o.N)(m),
         G = !j && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
         B = () => {
-            c(Object.values(T).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, {
+            c(Object.values(S).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, {
                 trackedFromStep: M ? f.h8.PAYMENT_ELEMENT : f.h8.PAYMENT_TYPE,
             });
         },
@@ -121,7 +121,9 @@ function O(e) {
                     ? M && O === f.h8.CREDIT_CARD_INFORMATION
                         ? f.h8.PAYMENT_ELEMENT
                         : O
-                    : f.h8.PAYMENT_TYPE,
+                    : M
+                      ? f.h8.PAYMENT_ELEMENT
+                      : f.h8.PAYMENT_TYPE,
             [O, x.current, M],
         );
     return (0, s.vP)({
