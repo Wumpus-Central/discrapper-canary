@@ -387,7 +387,7 @@ function em(e) {
                                   : await Promise.all([
                                         n.e("79695"),
                                         n.e("90508"),
-                                        n.e("98783"),
+                                        n.e("66165"),
                                         n.e("6915"),
                                         n.e("56826"),
                                         n.e("653"),
@@ -454,7 +454,20 @@ function em(e) {
             : eX,
         e0 = l.useRef(null),
         e1 = (0, M.Y)({ location: "PrivateChannel" }) && (null == p ? void 0 : p.displayNameStyles) != null,
-        e8 = (0, f.Z)();
+        e8 = (0, f.Z)(),
+        e5 = [
+            (0, I.ZP)({
+                channel: t,
+                unread: ek,
+            }),
+            (0, I.Yb)({
+                channel: t,
+                muted: eT,
+                userStatus: F,
+            }),
+        ]
+            .filter(Boolean)
+            .join(", ");
     return (0, r.jsx)(d.mh, {
         id: t.id,
         children: (e) => {
@@ -503,10 +516,7 @@ function em(e) {
                                             innerRef: ev,
                                             to: et.Z5c.CHANNEL(et.ME, t.id),
                                             className: er.link,
-                                            "aria-label": (0, I.ZP)({
-                                                channel: t,
-                                                unread: ek,
-                                            }),
+                                            "aria-label": e5,
                                         },
                                         l,
                                     ),
