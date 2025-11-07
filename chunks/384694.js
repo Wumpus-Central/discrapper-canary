@@ -1,127 +1,125 @@
-n.d(t, { q: () => E }), n(467055), n(388685);
-var l = n(951288),
-    r = n(647438),
-    i = n(442837),
+n.d(t, { q: () => _ }), n(467055), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(442837),
     a = n(481060),
-    o = n(339085),
-    s = n(565138),
+    s = n(339085),
+    o = n(565138),
     u = n(889564),
     c = n(430824),
     d = n(496675),
-    m = n(771845),
-    h = n(823379),
+    h = n(771845),
+    m = n(823379),
     g = n(267642),
-    f = n(598117),
-    b = n(981631),
+    p = n(598117),
+    f = n(981631),
     v = n(388032),
-    p = n(503366);
-let x = (e) => ({
+    x = n(503366);
+let b = (e) => ({
         label: e.name,
         value: e.id,
     }),
-    j = (e) => d.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, e),
-    E = (e) => {
+    j = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    _ = (e) => {
         let {
                 onChange: t,
                 selected: n,
                 onError: d,
-                labelledBy: E,
-                isEmojiAnimated: _,
-                label: O,
-                required: y,
-                errorMessage: C,
+                labelledBy: _,
+                isEmojiAnimated: O,
+                label: y,
+                required: E,
+                errorMessage: D,
             } = e,
-            I = (0, i.cj)([c.Z, m.ZP], () =>
+            w = (0, l.cj)([c.Z, h.ZP], () =>
                 Object.fromEntries(
-                    m.ZP.getFlattenedGuildIds()
+                    h.ZP.getFlattenedGuildIds()
                         .map((e) => c.Z.getGuild(e))
-                        .filter(h.lm)
+                        .filter(m.lm)
                         .map((e) => [e.id, e]),
                 ),
             ),
-            N = (0, i.cj)(
-                [o.ZP],
+            N = (0, l.cj)(
+                [s.ZP],
                 () =>
                     Object.fromEntries(
-                        Object.entries(I).map((e) => {
+                        Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return [
                                 t,
                                 (function (e) {
                                     var t;
-                                    let { guild: n, emojis: l, isEmojiAnimated: r } = e,
-                                        i =
+                                    let { guild: n, emojis: r, isEmojiAnimated: i } = e,
+                                        l =
                                             null !=
-                                            (t = l.filter((e) => e.animated === r && !(0, u.Kt)(e, n.id)).length)
+                                            (t = r.filter((e) => e.animated === i && !(0, u.Kt)(e, n.id)).length)
                                                 ? t
                                                 : 0;
-                                    return (0, g.y4)(n) - i;
+                                    return (0, g.y4)(n) - l;
                                 })({
                                     guild: n,
-                                    emojis: o.ZP.getGuildEmoji(t),
-                                    isEmojiAnimated: _,
+                                    emojis: s.ZP.getGuildEmoji(t),
+                                    isEmojiAnimated: O,
                                 }),
                             ];
                         }),
                     ),
-                [I, _],
+                [w, O],
             ),
-            S = r.useMemo(() => Object.values(I).filter(j).map(x), [I]),
-            w = r.useCallback(
+            C = i.useMemo(() => Object.values(w).filter(j).map(b), [w]),
+            I = i.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
-                    let n = I[t.value];
+                    let n = w[t.value];
                     return null == n
                         ? null
-                        : (0, l.jsxs)("div", {
-                              className: p.value,
+                        : (0, r.jsxs)("div", {
+                              className: x.value,
                               children: [
-                                  (0, l.jsx)(s.Z, {
+                                  (0, r.jsx)(o.Z, {
                                       guild: n,
-                                      size: s.Z.Sizes.SMALLER,
+                                      size: o.Z.Sizes.SMALLER,
                                       active: !0,
-                                      className: p.icon,
+                                      className: x.icon,
                                   }),
-                                  (0, l.jsx)(a.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: "text-sm/normal",
-                                      className: p.label,
+                                      className: x.text,
                                       children: t.label,
                                   }),
                               ],
                           });
                 },
-                [I],
+                [w],
             ),
-            M = r.useCallback(
+            S = i.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
-                    let t = I[e.value];
+                    let t = w[e.value];
                     return null == t
                         ? null
-                        : (0, l.jsxs)("div", {
-                              className: p.option,
+                        : (0, r.jsxs)("div", {
+                              className: x.option,
                               children: [
-                                  (0, l.jsx)(s.Z, {
+                                  (0, r.jsx)(o.Z, {
                                       guild: t,
-                                      size: s.Z.Sizes.MEDIUM,
+                                      size: o.Z.Sizes.MEDIUM,
                                       active: !0,
-                                      className: p.icon,
+                                      className: x.icon,
                                   }),
-                                  (0, l.jsxs)("div", {
-                                      className: p.optionLabelContainer,
+                                  (0, r.jsxs)("div", {
+                                      className: x.optionLabelContainer,
                                       children: [
-                                          (0, l.jsx)(a.Text, {
-                                              variant: "text-md/medium",
-                                              className: p.label,
-                                              lineClamp: 1,
+                                          (0, r.jsx)(a.Text, {
+                                              variant: "text-sm/medium",
+                                              className: x.text,
                                               children: e.label,
                                           }),
-                                          (0, l.jsx)(a.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               variant: "text-xs/normal",
                                               color: "text-tertiary",
-                                              className: p.sublabel,
-                                              lineClamp: 1,
+                                              className: x.text,
                                               children: v.intl.format(v.t.WkK72v, { count: N[e.value] }),
                                           }),
                                       ],
@@ -129,31 +127,31 @@ let x = (e) => ({
                               ],
                           });
                 },
-                [N, I],
+                [N, w],
             );
         return (
-            r.useEffect(() => {
+            i.useEffect(() => {
                 var e;
-                S.length < 1
-                    ? d(f.ze.NO_PERMISSIONS)
+                C.length < 1
+                    ? d(p.ze.NO_PERMISSIONS)
                     : null != n && (null != (e = null == N ? void 0 : N[n]) ? e : 0) < 1
-                      ? d(b.evJ.TOO_MANY_EMOJI)
+                      ? d(f.evJ.TOO_MANY_EMOJI)
                       : d(null);
-            }, [S, t, d, n, N]),
-            (0, l.jsx)(a.q4e, {
-                label: O,
-                required: y,
-                errorMessage: C,
+            }, [C, t, d, n, N]),
+            (0, r.jsx)(a.q4e, {
+                label: y,
+                required: E,
+                errorMessage: D,
                 onChange: t,
-                options: S,
-                popoutPosition: "bottom",
+                options: C,
+                popoutPosition: "top",
                 popoutWidth: 240,
-                renderOptionLabel: M,
-                renderOptionValue: w,
+                renderOptionLabel: S,
+                renderOptionValue: I,
                 value: n,
-                "aria-labelledby": E,
-                placeholder: S.length < 1 ? v.intl.string(v.t.jHpxwo) : v.intl.string(v.t["4mqeQO"]),
-                isDisabled: S.length < 1,
+                "aria-labelledby": _,
+                placeholder: C.length < 1 ? v.intl.string(v.t.jHpxwo) : v.intl.string(v.t["4mqeQO"]),
+                isDisabled: C.length < 1,
             })
         );
     };

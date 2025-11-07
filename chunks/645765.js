@@ -6,9 +6,8 @@ e.exports = {
     overlay: "overlay_ab2592",
     panHint: "panHint_ab2592",
     animatedInfoContainer: "animatedInfoContainer_ab2592",
-    toolbar: "toolbar_ab2592",
-    toolbarGroup: "toolbarGroup_ab2592",
-    slider: "slider_ab2592",
+    toolsContainer: "toolsContainer_ab2592",
     zoomControls: "zoomControls_ab2592",
-    toolbarButton: "toolbarButton_ab2592",
+    slider: "slider_ab2592",
+    toolButton: "toolButton_ab2592",
 };

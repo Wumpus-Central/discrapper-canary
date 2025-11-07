@@ -238,7 +238,7 @@ function R(e) {
                 });
                 "object" == typeof a &&
                     "id" in a &&
-                    p.M({
+                    p.MK({
                         emojiId: a.id,
                         userImage: {
                             data: i,

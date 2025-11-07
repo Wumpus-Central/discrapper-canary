@@ -1,72 +1,93 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => A });
 var r,
-    i,
-    l = n(31775),
-    a = n.n(l),
-    s = n(442837),
-    o = n(570140),
-    c = n(40572),
-    d = n(914010),
+    i = n(31775),
+    a = n.n(i),
+    o = n(442837),
+    s = n(570140),
+    l = n(40572),
+    c = n(914010),
     u = n(70956);
-let g = {},
-    m = {},
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let f = {},
+    _ = {},
     p = 0,
-    f = new (a())({
+    h = !1,
+    m = new (a())({
         max: 5,
         maxAge: u.Z.Millis.HOUR,
     });
-class h extends (i = s.ZP.Store) {
+function g(e) {
+    let { guildId: t, emojis: n } = e;
+    _[t] = n.map((e) => new l.Z(e));
+}
+function E(e) {
+    let { guildId: t } = e;
+    _[t] = [];
+}
+function b() {
+    p++;
+}
+function y() {
+    p--;
+}
+function O(e) {
+    let { autoOpen: t } = e;
+    h = t;
+}
+function v(e) {
+    var t;
+    let { guildId: n } = e;
+    f[n] = (null != (t = f[n]) ? t : 0) + 1;
+}
+function I(e) {
+    let { guildId: t, emojiId: n } = e;
+    _[t] = _[t].filter((e) => e.id !== n);
+}
+function S(e) {
+    let { emojiId: t, userImage: n } = e;
+    m.set(t, n);
+}
+class T extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(c.Z);
     }
     isUploadingEmoji() {
         return p > 0;
     }
     getEmojiRevision(e) {
         var t;
-        return null != (t = g[e]) ? t : 0;
+        return null != (t = f[e]) ? t : 0;
     }
     getEmojis(e) {
-        return m[e];
+        return _[e];
+    }
+    getEmojiFileInputAutoOpen() {
+        return h;
     }
     getEmojiRawAsset(e) {
-        return f.get(e);
+        return m.get(e);
     }
 }
-(r = "displayName") in h
-    ? Object.defineProperty(h, r, {
-          value: "GuildSettingsEmojiStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (h[r] = "GuildSettingsEmojiStore");
-let b = new h(o.Z, {
-    EMOJI_DELETE: function (e) {
-        let { guildId: t, emojiId: n } = e;
-        m[t] = m[t].filter((e) => e.id !== n);
-    },
-    EMOJI_FETCH_SUCCESS: function (e) {
-        let { guildId: t, emojis: n } = e;
-        m[t] = n.map((e) => new c.Z(e));
-    },
-    EMOJI_FETCH_FAILURE: function (e) {
-        let { guildId: t } = e;
-        m[t] = [];
-    },
-    EMOJI_UPLOAD_START: function () {
-        p++;
-    },
-    EMOJI_UPLOAD_STOP: function () {
-        p--;
-    },
-    EMOJI_CACHE_RAW_EMOJI_ASSET: function (e) {
-        let { emojiId: t, userImage: n } = e;
-        f.set(t, n);
-    },
-    GUILD_EMOJIS_UPDATE: function (e) {
-        var t;
-        let { guildId: n } = e;
-        g[n] = (null != (t = g[n]) ? t : 0) + 1;
-    },
+d(T, "displayName", "GuildSettingsEmojiStore");
+let A = new T(s.Z, {
+    EMOJI_DELETE: I,
+    EMOJI_FETCH_SUCCESS: g,
+    EMOJI_FETCH_FAILURE: E,
+    EMOJI_UPLOAD_START: b,
+    EMOJI_UPLOAD_STOP: y,
+    EMOJI_FILE_INPUT_AUTO_OPEN: O,
+    EMOJI_CACHE_RAW_EMOJI_ASSET: S,
+    GUILD_EMOJIS_UPDATE: v,
 });
