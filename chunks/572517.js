@@ -1,52 +1,55 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => x });
 var r = n(951288),
     i = n(442837),
     l = n(780384),
     a = n(481060),
     s = n(410030),
     o = n(607070),
-    d = n(987209),
-    c = n(347896),
-    C = n(717401),
+    C = n(987209),
+    d = n(347896),
+    c = n(717401),
     u = n(897942),
     p = n(432483);
-function h() {
+function x() {
     var e, t;
     let n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        h = (0, s.ZP)(),
-        m = (0, l.wj)(h),
-        _ = (0, c.Z)(),
-        f = null == _ ? void 0 : _.planSelectionBanner,
-        { claimableRewards: x } = (0, d.wD)();
-    if (null == f || null == x) return null;
-    let j = null == (e = f.getBackgroundImageUrl) ? void 0 : e.call(f, m),
-        g = (0, C.Yr)(j),
+        x = (0, s.ZP)(),
+        h = (0, l.wj)(x),
+        f = (0, d.Z)(),
+        _ = null == f ? void 0 : f.planSelectionBanner,
+        { claimableRewards: m } = (0, C.wD)();
+    if (null == _ || null == m) return null;
+    let j = null == (e = _.getBackgroundImageUrl) ? void 0 : e.call(_, h),
+        g = (0, c.Yr)(j),
         b =
-            null == (t = f.gradientConfig)
+            null == (t = _.gradientConfig)
                 ? void 0
-                : t.call(f, {
-                      isDarkMode: m,
+                : t.call(_, {
+                      isDarkMode: h,
                       isAndroid: !1,
                   }),
-        L = (0, C.Tl)(b);
+        y = (0, c.Tl)(b, {
+            colorStops: [0, 12, 100],
+        }),
+        L = (0, c.$q)(g, y);
     return (0, r.jsxs)("div", {
         className: p.promotionalFooterBanner,
-        style: null != g ? g : L,
+        style: L,
         children: [
             (0, r.jsx)("div", {
                 className: p.avatar,
                 children: (0, r.jsx)(u.Z, {
-                    claimableRewards: x,
-                    maxRewardImageSrc: f.getImageUrl(m, n),
+                    claimableRewards: m,
+                    maxRewardImageSrc: _.getImageUrl(h, n),
                     size: a.EFr.SIZE_40,
-                    imageScaling: 2,
+                    imageScaling: 1.25,
                 }),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/medium",
                 className: p.bannerText,
                 color: "always-white",
-                children: f.desktopBannerText(x.length),
+                children: _.desktopBannerText(m.length),
             }),
         ],
     });

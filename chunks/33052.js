@@ -16,7 +16,7 @@ function f() {
         _ = null == f ? void 0 : f.planSelection;
     if (null == _ || null == n || 0 === n.length) return null;
     let p = (0, c.Yr)(null == (e = _.getBannerImageUrl) ? void 0 : e.call(_)),
-        h = (0, c.Tl)(_.gradientConfig, 180);
+        h = (0, c.Tl)(_.gradientConfig, { defaultAngle: 180 });
     return (0, r.jsxs)("div", {
         className: d.promotionalGiftMessage,
         style: null != p ? p : h,

@@ -1,4 +1,5 @@
 n.d(t, {
+    $q: () => m,
     Tl: () => p,
     YV: () => u,
     Yr: () => h,
@@ -11,7 +12,8 @@ n.d(t, {
 }),
     n(388685),
     n(361932),
-    n(187205);
+    n(187205),
+    n(583741);
 var r = n(647438),
     i = n(223143),
     a = n(347896),
@@ -59,13 +61,14 @@ function f(e, t, n) {
 function _(e) {
     return [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2].includes(null == e ? void 0 : e.id);
 }
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 78.98,
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+function p(e, t) {
     if (null == e) return;
-    let r = Array.isArray(e) ? e : e.gradient,
-        i = Array.isArray(e) || null == e.angle ? t : e.angle;
-    return n && (i = (i + 180) % 360), { background: "linear-gradient(".concat(i, "deg, ").concat(r.join(", "), ")") };
+    let { reverse: n = !1, colorStops: r, defaultAngle: i = 78.98 } = null != t ? t : {},
+        a = Array.isArray(e) ? e : e.gradient,
+        o = Array.isArray(e) || null == e.angle ? i : e.angle;
+    n && (o = (o + 180) % 360);
+    let s = null != r ? a.map((e, t) => "".concat(e, " ").concat(r[t], "%")).join(", ") : a.join(", ");
+    return { background: "linear-gradient(".concat(o, "deg, ").concat(s, ")") };
 }
 function h(e) {
     if (null != e)
@@ -75,4 +78,18 @@ function h(e) {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
         };
+}
+function m(e, t) {
+    if (null != e && null != t) {
+        let n = t.background,
+            r = e.backgroundImage;
+        return {
+            backgroundImage: "".concat(r, ", ").concat(n),
+            backgroundColor: "lightgray",
+            backgroundSize: "cover, auto",
+            backgroundPosition: "right center, 0% 0%",
+            backgroundRepeat: "no-repeat, no-repeat",
+        };
+    }
+    return null != e ? e : null != t ? t : {};
 }

@@ -14,7 +14,7 @@ function f() {
         { claimableRewards: n } = (0, s.wD)(),
         f = (0, l.Z)(),
         _ = null == f ? void 0 : f.planSelection,
-        p = (0, c.Tl)(null == _ ? void 0 : _.gradientConfig, 78.98, !0),
+        p = (0, c.Tl)(null == _ ? void 0 : _.gradientConfig, { reverse: !0 }),
         h = null == _ || null == (e = _.getBannerImageUrl) ? void 0 : e.call(_);
     return null == _ || null == n || 0 === n.length
         ? null
