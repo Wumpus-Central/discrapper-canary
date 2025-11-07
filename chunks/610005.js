@@ -163,7 +163,7 @@ let T = (e) => {
             {
                 stepConfigs: d,
                 applicationId: n,
-                skuIDs: null != i ? [i] : [],
+                skuIDs: [i],
                 isGift: a,
                 activeSubscription: null,
                 purchaseType: u,
