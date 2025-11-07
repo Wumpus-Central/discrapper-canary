@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C;
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T, A, C;
 n.d(t, { Z: () => ez }), n(388685);
 var N,
     R = n(392711),
@@ -93,9 +93,9 @@ function X() {
         (v = new Map()),
         (g = new Set()),
         (I = new Map()),
-        (T = new Map()),
+        (S = new Map()),
         eH(),
-        (S = null),
+        (T = null),
         (C = new Map()),
         (z = new Map()),
         (A = new Map());
@@ -175,7 +175,7 @@ function eo(e) {
                 );
     for (let e of ((l = new Map()), n)) l.set(e.id, e);
     for (let e of null == C ? void 0 : C.values()) s.has(e.id) || (s.set(e.id, e), a.set(e.id, (0, M.zi)(e)));
-    (T = a), eV(), (S = null != i ? new Date(i) : null);
+    (S = a), eV(), (T = null != i ? new Date(i) : null);
 }
 function es() {
     (u = 0), (r = !1);
@@ -251,12 +251,12 @@ function eI(e) {
         r = new Set(p);
     r.delete(t), (p = r), ee(t, n);
 }
-function eT(e) {
+function eS(e) {
     let { questId: t } = e,
         n = new Set(p);
     n.delete(t), (p = n);
 }
-function eS(e) {
+function eT(e) {
     let { questId: t } = e,
         n = new Set(_);
     n.add(t), (_ = n);
@@ -301,7 +301,7 @@ function ex(e) {
     let i = s.get(t.quest_id);
     if (null != i) {
         let e = (0, M.zi)(i);
-        T.get(t.quest_id) !== e && (T = new Map(T).set(t.quest_id, e));
+        S.get(t.quest_id) !== e && (S = new Map(S).set(t.quest_id, e));
     }
     0 === Object.keys(r.progress).length &&
         W.has(r.questId) &&
@@ -315,7 +315,7 @@ function eL(e) {
     let n = s.get(t.questId);
     if (null != n) {
         let e = (0, M.zi)(n);
-        T.get(t.questId) !== e && (T = new Map(T).set(t.questId, e));
+        S.get(t.questId) !== e && (S = new Map(S).set(t.questId, e));
     }
 }
 function eM(e) {
@@ -337,15 +337,25 @@ function eU(e) {
     W.has(t) && W.delete(t), k.ZP.getState().resetQuest(t);
 }
 function eG(e) {
-    let { quest: t, placement: n, adDecisionData: r, adContext: o, responseTtlSeconds: s, metadataRaw: l } = e;
+    let {
+        quest: t,
+        placement: n,
+        adDecisionData: r,
+        adContext: o,
+        responseTtlSeconds: s,
+        metadataRaw: l,
+        fetchedAt: c,
+    } = e;
     (d = Date.now()), (i = !1), (a = new Map(a)).set(n, !1);
-    let { enableNewRequestBehavior: c } = U.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
-    if (c) {
-        var u;
+    let { enableNewRequestBehavior: u } = U.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+    if (u) {
+        var f, _, p;
         let e = {
-            questId: null != (u = null == t ? void 0 : t.id) ? u : null,
-            fetchedAt: d,
+            questId: null != (f = null == t ? void 0 : t.id) ? f : null,
+            fetchedAt: c,
             ttlMillis: eB(s),
+            adSetId: null != (_ = null == r ? void 0 : r.ad_set_id) ? _ : null,
+            adRequestId: null != (p = null == r ? void 0 : r.decision_id) ? p : null,
         };
         (A = new Map(A)).set(n, e);
     } else
@@ -369,11 +379,11 @@ function eZ(e) {
 }
 function eF() {
     let e = !1,
-        t = new Map(T);
+        t = new Map(S);
     s.forEach((n, r) => {
         !0 !== t.get(r) && ((0, M.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((T = t), eK.emitChange());
+        e && ((S = t), eK.emitChange());
 }
 function eV() {
     null === K &&
@@ -387,7 +397,7 @@ function eH() {
 }
 function eY(e) {
     let { quest_enrollment_blocked_until: t } = e;
-    S = null != t ? new Date(t) : null;
+    T = null != t ? new Date(t) : null;
 }
 X();
 class eW extends (N = D.ZP.Store) {
@@ -429,7 +439,7 @@ class eW extends (N = D.ZP.Store) {
         return I;
     }
     get questEnrollmentBlockedUntil() {
-        return S;
+        return T;
     }
     get questAdDecisionByPlacement() {
         return A;
@@ -473,11 +483,11 @@ class eW extends (N = D.ZP.Store) {
         return null == (n = W.get(e)) ? void 0 : n.get(t);
     }
     getExpiredQuestsMap() {
-        return T;
+        return S;
     }
     isQuestExpired(e) {
         var t;
-        return null != (t = T.get(e)) && t;
+        return null != (t = S.get(e)) && t;
     }
     getQuestLoadedViaPreview(e) {
         return C.get(e);
@@ -505,8 +515,8 @@ let eK = new eW(x.Z, {
         QUESTS_ENROLL_FAILURE: eO,
         QUESTS_FETCH_REWARD_CODE_BEGIN: ev,
         QUESTS_FETCH_REWARD_CODE_SUCCESS: eI,
-        QUESTS_FETCH_REWARD_CODE_FAILURE: eT,
-        QUESTS_CLAIM_REWARD_BEGIN: eS,
+        QUESTS_FETCH_REWARD_CODE_FAILURE: eS,
+        QUESTS_CLAIM_REWARD_BEGIN: eT,
         QUESTS_CLAIM_REWARD_SUCCESS: eA,
         QUESTS_CLAIM_REWARD_FAILURE: eC,
         QUESTS_DISMISS_CONTENT_BEGIN: eR,
