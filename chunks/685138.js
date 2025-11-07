@@ -126,7 +126,7 @@ function c(e) {
                       status: i(s({}, d.status), {
                           label1: (null == (e = d.status) ? void 0 : e.label1) && !f,
                           label2: (null == (t = d.status) ? void 0 : t.label2) && !f,
-                          shineWipe: (null == (n = d.status) ? void 0 : n.shineWipe) || f,
+                          shineWipe: null == (n = d.status) ? void 0 : n.shineWipe,
                       }),
                   })
                 : {
