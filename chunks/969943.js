@@ -15,12 +15,7 @@ var r = (function (e) {
         );
     })({}),
     i = (function (e) {
-        return (
-            (e.REDUCED_MOTION = "REDUCED_MOTION"),
-            (e.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"),
-            (e.LOW_PERFORMANCE_MODE = "LOW_PERFORMANCE_MODE"),
-            e
-        );
+        return (e.REDUCED_MOTION = "REDUCED_MOTION"), (e.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"), e;
     })({}),
     a = (function (e) {
         return (e.AUTO = "auto"), (e.COMPACT = "compact"), (e.COZY = "cozy"), e;
