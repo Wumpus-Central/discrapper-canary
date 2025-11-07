@@ -23,9 +23,9 @@ var r = n(951288),
     O = n(7284),
     v = n(649739),
     j = n(352978),
-    C = n(936847),
-    E = n(512384),
-    x = n(522474),
+    x = n(936847),
+    C = n(512384),
+    E = n(522474),
     S = n(788983),
     I = n(210975),
     P = n(763296),
@@ -64,7 +64,7 @@ let ei = [$.fO.ACTIVITY],
         let {
                 participant: y,
                 popoutType: O,
-                onDoubleClick: x,
+                onDoubleClick: E,
                 onContextMenu: S,
                 onClick: G,
                 onMouseDown: U,
@@ -89,9 +89,9 @@ let ei = [$.fO.ACTIVITY],
             } = e,
             eO = i.useContext(Z.h9) || ey,
             [ev, ej] = i.useState(!1),
-            eC = N.Sb.useSetting(),
-            eE = (0, a.e7)([R.default], () => R.default.isStreamInfoOverlayEnabled),
-            [ex, eS] = i.useState(!1),
+            ex = N.Sb.useSetting(),
+            eC = (0, a.e7)([R.default], () => R.default.isStreamInfoOverlayEnabled),
+            [eE, eS] = i.useState(!1),
             eI = (0, a.e7)([A.default], () => A.default.getId()),
             eP = y.type === $.fO.ACTIVITY ? null : y.user,
             eN = null != (l = null == eP ? void 0 : eP.id) ? l : null,
@@ -190,9 +190,9 @@ let ei = [$.fO.ACTIVITY],
             ),
             eJ = i.useCallback(
                 (e) => {
-                    null == x || x(y, e);
+                    null == E || E(y, e);
                 },
-                [x, y],
+                [E, y],
             ),
             e$ = i.useCallback(
                 (e, t, n) => {
@@ -214,6 +214,7 @@ let ei = [$.fO.ACTIVITY],
                     onVideoResize: ea,
                     paused: eb,
                     focused: eh,
+                    idle: eO,
                 })),
                     (e1 = (0, r.jsx)(Y._, {
                         participant: y,
@@ -267,6 +268,7 @@ let ei = [$.fO.ACTIVITY],
                     paused: eb,
                     popoutType: O,
                     focused: eh,
+                    idle: eO,
                 });
         }
         let e8 = i.useRef(null),
@@ -282,7 +284,7 @@ let ei = [$.fO.ACTIVITY],
                 onMouseLeave: () => {
                     eS(!1);
                 },
-                children: (0, r.jsxs)(E.Z, {
+                children: (0, r.jsxs)(C.Z, {
                     shakeLocation: ee.oZ.VOICE_USER,
                     isShaking: eR,
                     className: er.tile,
@@ -415,7 +417,7 @@ let ei = [$.fO.ACTIVITY],
                                                       channel: el,
                                                       application: eW,
                                                       secureFramesVerified: eq,
-                                                      isHovered: ex,
+                                                      isHovered: eE,
                                                       popoutType: O,
                                                   }),
                                               Object.getOwnPropertyDescriptors
@@ -448,14 +450,14 @@ let ei = [$.fO.ACTIVITY],
                                 ],
                             }),
                         }),
-                        eC &&
+                        ex &&
+                            eC &&
                             eE &&
-                            ex &&
                             (0, r.jsx)(z.Z, {
                                 currentUserId: eI,
                                 participant: y,
                             }),
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(x.Z, {
                             isFiring: ev,
                             callTileRef: e8.current,
                         }),
@@ -510,7 +512,7 @@ function ea(e) {
 function es(e) {
     let { channelId: t, participantId: n, isContextMenuOpen: l } = e,
         o = i.useMemo(() => (0, _.Z)(t, n), [t, n]),
-        s = (0, a.e7)([x.Z], () => x.Z.getIsAlwaysOnTop(o)),
+        s = (0, a.e7)([E.Z], () => E.Z.getIsAlwaysOnTop(o)),
         c = i.useCallback(() => {
             S.hY(o, !s);
         }, [o, s]);
@@ -537,9 +539,9 @@ let ec = i.memo((e) => {
             participantType: _,
             participantUserId: v,
             channel: j,
-            platform: C,
-            secureFramesVerified: E,
-            onContextMenu: x,
+            platform: x,
+            secureFramesVerified: C,
+            onContextMenu: E,
             muted: S,
             deafened: I,
             localMuted: P,
@@ -653,7 +655,7 @@ let ec = i.memo((e) => {
                                     ? null
                                     : (0, r.jsx)(eo, {
                                           participantType: _,
-                                          platform: C,
+                                          platform: x,
                                           className: o()(er.experimentTitleIcon, { [er.compact]: B }),
                                       }),
                                 null == n || "" === n || t
@@ -662,7 +664,7 @@ let ec = i.memo((e) => {
                                           className: o()(er.overlayTitleText, k),
                                           children: n,
                                       }),
-                                E &&
+                                C &&
                                     (0, r.jsx)(c.u, {
                                         text: en.intl.string(en.t.ZEem6O),
                                         children: (0, r.jsx)(u.tQf, {
@@ -687,7 +689,7 @@ let ec = i.memo((e) => {
                                   children: [
                                       (0, r.jsx)(ea, {
                                           onClick: (e) => {
-                                              e.stopPropagation(), V(!0), x(e, !0, $.A5.THREE_DOT);
+                                              e.stopPropagation(), V(!0), E(e, !0, $.A5.THREE_DOT);
                                           },
                                           tooltipText: en.intl.string(en.t["+1H47t"]),
                                           icon: u.xhG,

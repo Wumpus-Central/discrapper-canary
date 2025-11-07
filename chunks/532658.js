@@ -8,7 +8,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -22,11 +22,11 @@ var r = n(951288),
     E = n(415635),
     b = n(701362),
     y = n(172751),
-    O = n(670188),
+    O = n(456077),
     v = n(597998),
     I = n(199902),
-    T = n(314897),
-    S = n(355863),
+    S = n(314897),
+    T = n(355863),
     A = n(131951),
     C = n(979651),
     N = n(136015),
@@ -199,13 +199,13 @@ let K = i.memo(function (e) {
                     },
                 }),
             ),
-            T = i.useMemo(() => (h || y ? "none" : "block"), [h, y]);
+            S = i.useMemo(() => (h || y ? "none" : "block"), [h, y]);
         return (0, r.jsx)(s.animated.div, {
             className: o()(x.connectedAnimationContainer, { [x.right]: d }),
             style: {
                 width: v,
                 opacity: I,
-                display: T,
+                display: S,
             },
             children: (0, r.jsxs)("div", {
                 ref: E,
@@ -276,7 +276,7 @@ let K = i.memo(function (e) {
                 onClick: g,
                 onContextMenu: E,
                 context: O,
-                guildId: S,
+                guildId: T,
                 isSettingsPreview: R = !1,
                 voiceState: D,
                 showStreamPreview: L,
@@ -285,7 +285,7 @@ let K = i.memo(function (e) {
                 connectedOn: k,
                 ref: B,
             } = e,
-            Z = (0, l.e7)([T.default], () => T.default.getId() === s.id, [s.id]),
+            Z = (0, l.e7)([S.default], () => S.default.getId() === s.id, [s.id]),
             { ref: F, width: V } = (0, p.ZP)(),
             { showConnectedAnimation: H } = W(k, R),
             Y = null == D ? void 0 : D.sessionId,
@@ -322,7 +322,7 @@ let K = i.memo(function (e) {
                     userId: s.id,
                     context: O,
                 }) || ei,
-            eo = (0, l.e7)([I.Z], () => I.Z.getStreamForUser(s.id, S)),
+            eo = (0, l.e7)([I.Z], () => I.Z.getStreamForUser(s.id, T)),
             es = null != eo,
             el = i.useCallback(() => {
                 (L || null != es) && M(null);
@@ -360,7 +360,7 @@ let K = i.memo(function (e) {
             ef = a || R,
             e_ = i.useMemo(() => U(m), [m]),
             ep = i.useMemo(() => G(e_), [e_]),
-            eh = i.useMemo(() => s.getAvatarURL(S, ep), [s, S, ep]);
+            eh = i.useMemo(() => s.getAvatarURL(T, ep), [s, T, ep]);
         return (f === w.OYC.ONLY_WHILE_SPEAKING && ef && !ea) || null == $
             ? null
             : n
@@ -392,7 +392,7 @@ let K = i.memo(function (e) {
                                           ref: F,
                                           children: [
                                               (0, r.jsx)(v.nm, {
-                                                  guildId: S,
+                                                  guildId: T,
                                                   user: s,
                                                   video: $.selfVideo,
                                                   isStreaming: es,
@@ -411,7 +411,7 @@ let K = i.memo(function (e) {
                                                   (0, r.jsx)(y.ZP, {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
-                                                      contextGuildId: S,
+                                                      contextGuildId: T,
                                                       className: x.clanTag,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
@@ -501,7 +501,7 @@ let K = i.memo(function (e) {
                                                   (0, r.jsx)(y.ZP, {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
-                                                      contextGuildId: S,
+                                                      contextGuildId: T,
                                                       className: x.clanTag,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
@@ -513,7 +513,7 @@ let K = i.memo(function (e) {
                                                       },
                                                   }),
                                               (0, r.jsx)(v.nm, {
-                                                  guildId: S,
+                                                  guildId: T,
                                                   user: s,
                                                   video: $.selfVideo,
                                                   isStreaming: es,
@@ -550,27 +550,25 @@ let K = i.memo(function (e) {
             } = e,
             E = i.useRef(null),
             { user: b, member: y, voiceState: v, connectedOn: I } = o,
-            [T, A] = i.useState(null),
+            [S, A] = i.useState(null),
             [C, N] = i.useState(null);
         i.useEffect(() => {
             c && N(null);
         }, [c]),
             i.useEffect(() => {
-                null != T &&
+                null != S &&
                     (0, P.Ws)(w.Odu.VOICE_V3, {
                         type: P.Qu.GO_LIVE,
                         value: P.bk.STREAM_PREVIEWED,
                     });
-            }, [T]);
+            }, [S]);
         let D = (e) => {
                 A(e);
             },
             x = (e, t) => {
                 m ||
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("79695"), n.e("6524"), n.e("39834")]).then(
-                            n.bind(n, 27900),
-                        );
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
                         return (
                             (0, P.Ws)(w.Odu.VOICE_V3, {
                                 type: P.Qu.VOICE,
@@ -602,10 +600,10 @@ let K = i.memo(function (e) {
             L = i.useCallback(
                 (e) => {
                     var n, r;
-                    let i = null == (n = S.Z.getWidget(t)) ? void 0 : n.layoutId,
+                    let i = null == (n = T.Z.getWidget(t)) ? void 0 : n.layoutId,
                         o =
                             null != i
-                                ? null == (r = S.Z.getWidgetsForLayout(i))
+                                ? null == (r = T.Z.getWidgetsForLayout(i))
                                     ? void 0
                                     : r.find((e) => e.type === w.Odu.GO_LIVE)
                                 : null;
@@ -660,7 +658,7 @@ let K = i.memo(function (e) {
                         onClick: x,
                         context: g,
                         channel: a,
-                        showStreamPreview: b.id === T,
+                        showStreamPreview: b.id === S,
                         onShowStreamPreview: D,
                         onWatchStream: L,
                         isSettingsPreview: m,

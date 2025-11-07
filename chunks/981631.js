@@ -4030,6 +4030,7 @@ var nE = (function (e) {
             (e.APP_NOTICE_ANCHOR_CLICKED = "app_notice_anchor_clicked"),
             (e.VIDEO_LAYOUT_TOGGLED = "video_layout_toggled"),
             (e.VIDEO_INPUT_TOGGLED = "video_input_toggled"),
+            (e.VIDEO_STREAM_ZOOM_CHANGED = "video_stream_zoom_changed"),
             (e.AUTHORIZED_APP_CONNECTED = "authorized_app_connected"),
             (e.OPEN_MODAL = "open_modal"),
             (e.OPEN_POPOUT = "open_popout"),

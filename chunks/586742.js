@@ -109,9 +109,7 @@ let k = r.memo(function (e) {
                         userId: null == l ? void 0 : l.id,
                     }),
                         (0, u.jW)(r, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("6524"), n.e("74820")]).then(
-                                n.bind(n, 27900),
-                            );
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
