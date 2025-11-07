@@ -1,10 +1,11 @@
-n.d(t, { i: () => f });
+n.d(t, { i: () => _ });
 var r = n(951288),
     i = n(481060),
     a = n(626135),
     o = n(598117),
-    s = n(981631);
-function l(e, t, n) {
+    s = n(457574),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,16 +29,16 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = d(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -45,7 +46,7 @@ function u(e, t) {
     }
     return i;
 }
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -54,18 +55,23 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = async (e) => {
+let _ = async (e) => {
     let { analyticsLocation: t = null } = e,
-        l = u(e, ["analyticsLocation"]);
-    a.default.track(s.rMx.OPEN_MODAL, {
+        c = d(e, ["analyticsLocation"]);
+    a.default.track(l.rMx.OPEN_MODAL, {
         type: "Emoji Studio",
         source: t,
     }),
         await (0, i.ZDy)(
             async () => {
-                let { EmojiStudioModal: e } = await Promise.all([n.e("63575"), n.e("2262")]).then(n.bind(n, 546200));
-                return (t) => (0, r.jsx)(e, c({}, t, l));
+                let { EmojiStudioModal: e } = await n.e("2262").then(n.bind(n, 546200));
+                return (t) => (0, r.jsx)(e, u({}, t, c));
             },
-            { modalKey: o.Hj },
+            {
+                modalKey: o.Hj,
+                onCloseRequest: () => {
+                    (0, s.E)();
+                },
+            },
         );
 };

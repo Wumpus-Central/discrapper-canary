@@ -1,42 +1,7 @@
-n.d(t, { qt: () => c });
+n.d(t, { qt: () => l });
 var r = n(203311),
     i = n(818083);
 let a = (0, i.B)({
-        kind: "user",
-        id: "2025-04_emoji_studio",
-        label: "Emoji Studio",
-        defaultConfig: {
-            enabled: !1,
-            showExpressionPickerButton: !1,
-        },
-        treatments: [
-            {
-                id: 1,
-                label: "Enabled - New Modal",
-                config: {
-                    enabled: !0,
-                    showExpressionPickerButton: !1,
-                },
-            },
-            {
-                id: 2,
-                label: "Enabled - New Modal with Expression Picker Button",
-                config: {
-                    enabled: !0,
-                    showExpressionPickerButton: !0,
-                },
-            },
-            {
-                id: 3,
-                label: "Enabled - New Entrypoint Only",
-                config: {
-                    enabled: !1,
-                    showExpressionPickerButton: !0,
-                },
-            },
-        ],
-    }),
-    o = (0, i.B)({
         kind: "user",
         id: "2025-07_emoji_studio_mobile",
         label: "Emoji Studio (Mobile)",
@@ -49,7 +14,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: "user",
         id: "2025-08_emoji_studio_entrypoint",
         label: "Emoji Studio Entrypoint",
@@ -62,7 +27,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    l = (0, i.B)({
+    s = (0, i.B)({
         kind: "user",
         id: "2025-08_emoji_studio_speedrun",
         label: "Emoji Studio V2 Speedrun",
@@ -89,44 +54,32 @@ let a = (0, i.B)({
             },
         ],
     });
-function c(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
-        c = (0, r.$u)(t),
-        { enabled: u, showExpressionPickerButton: d } = a.useExperiment(
+        l = (0, r.$u)(t),
+        { enabled: c } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: c || i,
+                disable: l || i,
             },
         ),
-        { enabled: f } = o.useExperiment(
+        { enabled: u } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: c || i,
+                disable: l || i,
             },
         ),
-        { enabled: _ } = s.useExperiment(
+        { isEmojiEditingExperimentEnabled: d, isSelectFileBeforeEmojiStudioExperimentEnabled: f } = s.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: c || i,
-            },
-        ),
-        { isEmojiEditingExperimentEnabled: p, isSelectFileBeforeEmojiStudioExperimentEnabled: h } = l.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                disable: c || i,
+                disable: l || i,
             },
         );
     return {
-        enabled: u,
-        isMobileEnabled: f,
-        isEntrypointEnabled: d || _ || p || h,
-        isEntrypointEnabledInDMs: d || p || h,
-        isEntrypointOnlyExperimentEnabled: _,
-        isEmojiEditingExperimentEnabled: p,
-        isSelectFileBeforeEmojiStudioExperimentEnabled: h,
+        enabled: u || d || f,
+        isMobileEnabled: c,
     };
 }
