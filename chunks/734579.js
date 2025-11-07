@@ -4,13 +4,13 @@ var r = n(951288),
     l = n(442837),
     o = n(704215),
     a = n(952265),
-    s = n(481060),
-    c = n(239091),
-    u = n(377171),
-    d = n(243778),
-    p = n(703656),
-    h = n(210218),
-    f = n(445606),
+    s = n(907862),
+    c = n(481060),
+    u = n(239091),
+    d = n(377171),
+    p = n(243778),
+    h = n(703656),
+    f = n(210218),
     g = n(819640),
     m = n(434479),
     b = n(981631),
@@ -21,20 +21,43 @@ let O = i.memo(function (e) {
         v = i.useRef(null),
         j = (0, a.f9)(),
         C = (0, l.e7)([g.Z], () => g.Z.hasLayers()),
-        [E, x] = (0, d.ZT)([o.z.GAME_SHOP_NEW_BADGE], t.id),
+        [E, x] = (0, p.ZT)([o.z.GAME_SHOP_NEW_BADGE], t.id),
         S = i.useCallback(() => {
             var e, n;
             x(_.L.USER_DISMISS);
-            let r = null != (n = null == (e = h.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, p.uL)(b.Z5c.CHANNELS_GAME_SHOP(t.id, r));
+            let r = null != (n = null == (e = f.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
+            (0, h.uL)(b.Z5c.CHANNELS_GAME_SHOP(t.id, r));
         }, [t, x]),
-        I = i.useCallback(() => {
-            x(_.L.USER_DISMISS);
-        }, [x]),
+        I = i.useCallback(
+            () =>
+                (0, r.jsx)(s.J2, {
+                    size: "lg",
+                    shouldShow: !0,
+                    position: "right",
+                    caretConfig: { align: "start" },
+                    align: "top",
+                    badge: {
+                        type: "new",
+                        variant: "default",
+                    },
+                    onRequestClose: () => x(_.L.USER_DISMISS),
+                    actions: [
+                        {
+                            text: y.intl.string(y.t.RzWDqY),
+                            variant: "primary",
+                            onClick: S,
+                        },
+                    ],
+                    targetElementRef: v,
+                    title: y.intl.string(y.t.Ylu2JM),
+                    body: y.intl.string(y.t.vgylLQ),
+                }),
+            [x, S],
+        ),
         P = i.useCallback(
             (e) => {
                 null != t &&
-                    (0, c.jW)(e, async () => {
+                    (0, u.jW)(e, async () => {
                         let { default: e } = await n.e("73848").then(n.bind(n, 98409));
                         return (n) => {
                             var i, l;
@@ -91,9 +114,9 @@ let O = i.memo(function (e) {
                 ref: v,
                 id: "game-shop-".concat(t.id),
                 renderIcon: (e) =>
-                    (0, r.jsx)(s.EOn, {
+                    (0, r.jsx)(c.EOn, {
                         size: "custom",
-                        color: s.TVs.colors.CHANNEL_ICON,
+                        color: c.TVs.colors.CHANNEL_ICON,
                         width: 20,
                         height: 20,
                         className: e,
@@ -104,19 +127,13 @@ let O = i.memo(function (e) {
                 onContextMenu: P,
                 trailing:
                     E === o.z.GAME_SHOP_NEW_BADGE
-                        ? (0, r.jsx)(s.IGR, {
+                        ? (0, r.jsx)(c.IGR, {
                               text: y.intl.string(y.t.y2b7CA),
-                              color: u.Z.BG_BRAND,
+                              color: d.Z.BG_BRAND,
                           })
                         : null,
             }),
-            j || C || E !== o.z.GAME_SHOP_NEW_BADGE
-                ? null
-                : (0, r.jsx)(f.Z, {
-                      onActionClick: S,
-                      onRequestClose: I,
-                      targetElementRef: v,
-                  }),
+            !j && !C && E === o.z.GAME_SHOP_NEW_BADGE && I(),
         ],
     });
 });
