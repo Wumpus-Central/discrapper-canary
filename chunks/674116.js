@@ -65,7 +65,7 @@ function A() {
                         children: [
                             (0, r.jsx)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                children: (0, r.jsx)(_.Z, {}),
+                                children: (0, r.jsx)(_.ZP, {}),
                             }),
                             (0, r.jsx)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_SENSITIVITY,
@@ -78,7 +78,7 @@ function A() {
             (0, r.jsx)(l.Z, {
                 webSetting: v.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                 title: T.intl.string(T.t["6I6GUv"]),
-                children: (0, r.jsx)(b.Z, {}),
+                children: (0, r.jsx)(b.ZP, {}),
             }),
             (0, r.jsx)(l.Z, {
                 title: T.intl.string(T.t["8/udY0"]),

@@ -1,4 +1,4 @@
-n.d(e, { K: () => N });
+n.d(e, { K: () => L });
 var i = n(657707),
     l = n(509613),
     r = n(131951),
@@ -8,29 +8,31 @@ var i = n(657707),
     o = n(901567),
     c = n(98022),
     E = n(279362),
-    d = n(90794),
-    S = n(756893),
-    T = n(927947),
-    O = n(776570),
-    g = n(726985),
-    I = n(388032);
-let _ = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
+    d = n(264413),
+    S = n(556080),
+    T = n(90794),
+    O = n(756893),
+    g = n(927947),
+    I = n(776570),
+    _ = n(726985),
+    A = n(388032);
+let N = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
         buildLayout: () => [],
         render: a.Z,
         usePredicate: () => !(0, s.BK)("LegacyVoiceAndVideoPane"),
     }),
-    A = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [O.Z, o.Z, T.Z, S.Z, d.Z, c.Z, E.Z],
+    f = (0, l.x1)(u.n.VOICE_AND_VIDEO_PANE, {
+        buildLayout: () => [I.Z, S.Z, d.Z, o.Z, g.Z, O.Z, T.Z, c.Z, E.Z],
         usePredicate: () => (0, s.BK)("VoiceAndVideoPane"),
     }),
-    f = (0, l.wf)(u.n.VOICE_AND_VIDEO_PANEL, {
-        useTitle: () => I.intl.string(I.t.B1fFpf),
-        buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [A] : [_]),
+    b = (0, l.wf)(u.n.VOICE_AND_VIDEO_PANEL, {
+        useTitle: () => A.intl.string(A.t.B1fFpf),
+        buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [f] : [N]),
     }),
-    N = (0, l.m7)(u.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
+    L = (0, l.m7)(u.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         icon: i.S6n,
-        useTitle: () => I.intl.string(I.t.B1fFpf),
+        useTitle: () => A.intl.string(A.t.B1fFpf),
         usePredicate: () => r.Z.isSupported(),
-        getLegacySearchKey: () => ((0, s.Ml)("VoiceAndVideoPanel") ? void 0 : g.s6.VOICE_AND_VIDEO),
-        buildLayout: () => [f],
+        getLegacySearchKey: () => ((0, s.Ml)("VoiceAndVideoPanel") ? void 0 : _.s6.VOICE_AND_VIDEO),
+        buildLayout: () => [b],
     });

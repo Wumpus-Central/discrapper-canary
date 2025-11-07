@@ -1,4 +1,8 @@
-n.d(t, { Z: () => I });
+n.d(t, {
+    XH: () => I,
+    ZP: () => T,
+    cO: () => O,
+});
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -100,10 +104,32 @@ function v(e) {
         })
     );
 }
-function I() {
+function I(e, t) {
+    e === m.pM4.PUSH_TO_TALK &&
+        y &&
+        (0, o.ZDy)(async () => {
+            let { default: e } = await Promise.resolve().then(n.bind(n, 273352));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    b(
+                        {
+                            title: g.intl.string(g.t.Kdt0Gb),
+                            confirmText: g.intl.string(g.t["1WjMbC"]),
+                            cancelText: g.intl.string(g.t.BddRzS),
+                            onConfirm: () => (0, h.y)("PTT Limited Modal"),
+                            body: g.intl.string(g.t.NIozvt),
+                        },
+                        t,
+                    ),
+                );
+        }),
+        s.Z.setMode(e, void 0, void 0, { analyticsLocations: t });
+}
+function T() {
     let { analyticsLocations: e } = (0, c.ZP)(),
         t = (0, a.e7)([u.Z], () => u.Z.getMode()),
-        l = [
+        n = [
             {
                 value: m.pM4.VOICE_ACTIVITY,
                 name: g.intl.string(g.t.cHCEOJ),
@@ -113,29 +139,10 @@ function I() {
                 name: y ? g.intl.string(g.t["1AINrB"]) : g.intl.string(g.t.Q8gkVL),
             },
         ],
-        d = i.useCallback(
+        s = i.useCallback(
             (t) => {
-                let { value: i } = t;
-                i === m.pM4.PUSH_TO_TALK &&
-                    y &&
-                    (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.resolve().then(n.bind(n, 273352));
-                        return (t) =>
-                            (0, r.jsx)(
-                                e,
-                                b(
-                                    {
-                                        title: g.intl.string(g.t.Kdt0Gb),
-                                        confirmText: g.intl.string(g.t["1WjMbC"]),
-                                        cancelText: g.intl.string(g.t.BddRzS),
-                                        onConfirm: () => (0, h.y)("PTT Limited Modal"),
-                                        body: g.intl.string(g.t.NIozvt),
-                                    },
-                                    t,
-                                ),
-                            );
-                    }),
-                    s.Z.setMode(i, void 0, void 0, { analyticsLocations: e });
+                let { value: n } = t;
+                I(n, e);
             },
             [e],
         );
@@ -144,8 +151,8 @@ function I() {
         children: [
             (0, r.jsx)(o.FXm, {
                 label: g.intl.string(g.t["pS+K2L"]),
-                onChange: (e) => d({ value: e }),
-                options: l,
+                onChange: (e) => s({ value: e }),
+                options: n,
                 value: t,
             }),
             t === m.pM4.PUSH_TO_TALK && (0, r.jsx)(v, { inputMode: t }),

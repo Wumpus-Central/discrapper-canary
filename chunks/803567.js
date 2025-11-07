@@ -1,4 +1,9 @@
-n.d(t, { Z: () => T }), n(539854);
+n.d(t, {
+    MP: () => v,
+    Q4: () => O,
+    ZP: () => S,
+}),
+    n(539854);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -17,12 +22,15 @@ var i = n(442837),
     g = n(388032),
     E = n(419659);
 let b = n(775322),
-    y = n(853453),
-    O = {
-        page: m.ZY5.USER_SETTINGS,
-        section: m.jXE.SETTINGS_VOICE_AND_VIDEO,
-    };
-function v(e) {
+    y = n(853453);
+var O = (function (e) {
+    return (e.NONE = "NONE"), (e.STANDARD = "STANDARD"), (e.KRISP = "KRISP"), e;
+})({});
+let v = {
+    page: m.ZY5.USER_SETTINGS,
+    section: m.jXE.SETTINGS_VOICE_AND_VIDEO,
+};
+function I(e) {
     let t = e.currentTarget;
     d.default.track(m.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
@@ -33,7 +41,7 @@ function v(e) {
         },
     });
 }
-function I() {
+function T() {
     let e = (0, i.e7)([_.Z], () => _.Z.theme),
         {
             noiseCancellation: t,
@@ -47,23 +55,23 @@ function I() {
             noiseCancellationSupported: u.Z.isNoiseCancellationSupported(),
         }));
     if (!l && !c) return null;
-    let d = +!!n,
-        p = t ? 2 : d,
+    let d = n ? "STANDARD" : "NONE",
+        p = t ? "KRISP" : d,
         h = [];
     return (
         c &&
             h.push({
                 name: g.intl.string(g.t.rdoNzt),
-                value: 2,
+                value: "KRISP",
             }),
         l &&
             h.push({
                 name: g.intl.string(g.t.qXeYHw),
-                value: 1,
+                value: "STANDARD",
             }),
         h.push({
             name: g.intl.string(g.t.wkYAlz),
-            value: 0,
+            value: "NONE",
         }),
         (0, r.jsxs)(o.Kqy, {
             gap: 8,
@@ -73,7 +81,7 @@ function I() {
                     description: g.intl.string(g.t.najZCV),
                     options: h,
                     onChange: (e) => {
-                        s.Z.setNoiseCancellation(2 === e, O), s.Z.setNoiseSuppression(1 === e, O);
+                        s.Z.setNoiseCancellation("KRISP" === e, v), s.Z.setNoiseSuppression("STANDARD" === e, v);
                     },
                     value: p,
                 }),
@@ -91,7 +99,7 @@ function I() {
                                 }),
                                 (0, r.jsx)(o.Anchor, {
                                     href: f.Z.getArticleURL(m.BhN.NOISE_SUPPRESSION),
-                                    onClick: v,
+                                    onClick: I,
                                     children: g.intl.string(g.t.hvVgAZ),
                                 }),
                             ],
@@ -101,7 +109,7 @@ function I() {
         })
     );
 }
-function T() {
+function S() {
     let {
             inputMode: e,
             inputDeviceId: t,
@@ -156,7 +164,7 @@ function T() {
             }),
             (0, r.jsx)(l.F, {
                 setting: h.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
-                children: (0, r.jsx)(I, {}),
+                children: (0, r.jsx)(T, {}),
             }),
             (0, r.jsx)(l.F, {
                 setting: h.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
