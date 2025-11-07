@@ -18,6 +18,7 @@ let b = function (t) {
     let { transitionState: e, entryPoint: n, onClose: b } = t,
         { loading: m, initiateAgeVerification: O } = (0, p.WD)({
             onComplete: b,
+            entryPoint: d.cU.RETRY_MODAL,
             isRetry: !0,
         }),
         _ = r.useMemo(() => (0, o.Z)(), []);
@@ -32,7 +33,7 @@ let b = function (t) {
                 buttonText: g.intl.string(g.t.RtOE1v),
                 buttonLoading: m,
                 onButtonPress: () => {
-                    O(d.cU.RETRY_MODAL), (0, d.x3)(_, d.d_.RETRY, d.sU.GET_STARTED);
+                    O(), (0, d.x3)(_, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {

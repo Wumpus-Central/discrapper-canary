@@ -1,7 +1,7 @@
 n.d(t, {
     AY: () => L,
     F5: () => x,
-    Jm: () => S,
+    Jm: () => T,
     L0: () => N,
     L5: () => I,
     M$: () => A,
@@ -12,7 +12,7 @@ n.d(t, {
     l6: () => w,
     pY: () => R,
     sf: () => v,
-    yo: () => T,
+    yo: () => S,
 }),
     n(388685),
     n(35282);
@@ -50,11 +50,11 @@ function I() {
     let e = (0, i.e7)([_.default], () => _.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
 }
-function T() {
+function S() {
     let e = _.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
 }
-function S() {
+function T() {
     let e = (0, i.e7)([_.default], () => _.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
 }
@@ -98,55 +98,58 @@ function w() {
 function D(e) {
     let {
             onComplete: t,
-            isRetry: n = !1,
-            visibleContent: o = null,
-            shouldShowExpressiveModal: s = !1,
-            classificationId: d = null,
+            entryPoint: n,
+            isRetry: o = !1,
+            visibleContent: s = null,
+            shouldShowExpressiveModal: d = !1,
+            classificationId: f = null,
         } = e,
-        [f, m] = r.useState(!1),
-        g = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
-        { current: E } = r.useRef(null == g ? void 0 : g.ageVerificationStatus),
-        y = (0, c.GE)(),
-        O = r.useCallback(() => {
+        [m, g] = r.useState(!1),
+        E = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
+        { current: y } = r.useRef(null == E ? void 0 : E.ageVerificationStatus),
+        O = (0, c.GE)(),
+        v = r.useCallback(() => {
             a.Z.dispatch({
                 type: "CLOSE_AGE_VERIFICATION_MODAL",
-                status: E,
+                status: y,
             }),
-                n ||
-                    y ||
+                o ||
+                    O ||
                     u.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_intro_screen",
-                        visibleContent: o,
+                        visibleContent: s,
                     });
-        }, [E, n, o, y]),
-        v = r.useCallback(
-            async (e, n) => {
-                m(!0);
+        }, [y, o, s, O]),
+        I = r.useCallback(
+            async (e) => {
+                g(!0);
                 try {
                     a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await (0, h.pU)({
-                        method: n,
-                        classificationId: null != d ? d : void 0,
+                        method: e,
+                        classificationId: null != f ? f : void 0,
                     });
                     p.Z.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
+                        verificationRequestId: r.verification_request_id,
+                        verificationVendorName: r.verification_vendor_name,
                         onComplete: t,
-                        onClose: O,
-                        onCancel: O,
-                        entryPoint: e,
-                        shouldShowExpressiveModal: s,
+                        onClose: v,
+                        onCancel: v,
+                        entryPoint: n,
+                        shouldShowExpressiveModal: d,
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(b.wQ.TIGGER_PAWTECT_ERROR), O();
+                    l.Z.showFailedToast(b.wQ.TIGGER_PAWTECT_ERROR), v();
                 } finally {
-                    m(!1);
+                    g(!1);
                 }
             },
-            [t, O, s, d],
+            [t, v, d, f, n],
         );
     return {
-        loading: f,
-        initiateAgeVerification: v,
+        loading: m,
+        initiateAgeVerification: I,
     };
 }
 function x(e) {

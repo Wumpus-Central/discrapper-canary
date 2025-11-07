@@ -1,14 +1,18 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(429142),
-    o = n(128064),
-    s = n(312870),
-    l = n(580222),
-    c = n(81643),
-    u = n(469775);
-function d(e, t, n) {
+var i = n(147829),
+    a = n(481060),
+    o = n(429142),
+    s = n(681678),
+    l = n(128064),
+    c = n(312870),
+    u = n(580222),
+    d = n(240758),
+    f = n(81643),
+    _ = n(469775),
+    p = n(484710);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +25,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +36,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,22 +53,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -72,7 +76,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,53 +85,84 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g(e) {
-    if (null != e) return (0, c.AY)(e) ? i.fCB.LIGHTBOX : void 0;
+function O(e) {
+    if (null != e) return (0, f.AY)(e) ? a.fCB.LIGHTBOX : void 0;
 }
-let E = {
+let v = {
     showAgeVerification: (e) => {
-        var { onClose: t, entryPoint: o, shouldShowExpressiveModal: s = !1 } = e,
-            c = h(e, ["onClose", "entryPoint", "shouldShowExpressiveModal"]);
-        let d = {
-            modalKey: u.zJ,
+        var {
+                onClose: t,
+                entryPoint: l,
+                shouldShowExpressiveModal: c = !1,
+                verificationVendorName: f,
+                verificationRequestId: h,
+                webviewUrl: g,
+            } = e,
+            E = b(e, [
+                "onClose",
+                "entryPoint",
+                "shouldShowExpressiveModal",
+                "verificationVendorName",
+                "verificationRequestId",
+                "webviewUrl",
+            ]);
+        if (f === _.Rh.PERSONA) {
+            if (!(0, d.e)("AgeVerificationActionCreators") || null == h) return;
+            new i.Client({
+                inquiryId: h,
+                onComplete: () => {
+                    E.onComplete(), null != t && t();
+                },
+                onError: (e) => {
+                    s.Z.showFailedToast(p.wQ.TIGGER_PAWTECT_ERROR), null != t && t();
+                },
+                onCancel: () => {
+                    null != t && t();
+                },
+            }).open();
+            return;
+        }
+        if (null == g) return;
+        let y = {
+            modalKey: _.zJ,
             onCloseCallback: t,
-            backdropStyle: g(o),
-            Layer: a.ZP,
+            backdropStyle: O(l),
+            Layer: o.ZP,
         };
-        s || (0, l.v)(o)
-            ? (0, i.ZDy)(async () => {
+        c || (0, u.v)(l)
+            ? (0, a.ZDy)(async () => {
                   let { default: e } = await n.e("67749").then(n.bind(n, 91175));
-                  return (t) => (0, r.jsx)(e, f({}, c, t));
-              }, d)
-            : (0, i.ZDy)(async () => {
+                  return (t) => (0, r.jsx)(e, m({ webviewUrl: g }, E, t));
+              }, y)
+            : (0, a.ZDy)(async () => {
                   let { default: e } = await n.e("12014").then(n.bind(n, 879367));
-                  return (t) => (0, r.jsx)(e, f({}, c, t));
-              }, d);
+                  return (t) => (0, r.jsx)(e, m({ webviewUrl: g }, E, t));
+              }, y);
     },
     showAgeVerificationGetStartedModal: (e) => {
-        let { onClose: t, entryPoint: l } = e;
-        if ((0, c.kJ)() && ((0, o.c_)("age_verification_utils") || (0, s.U)("age_verification_utils")))
-            return void (0, i.ZDy)(
+        let { onClose: t, entryPoint: i } = e;
+        if ((0, f.kJ)() && ((0, l.c_)("age_verification_utils") || (0, c.U)("age_verification_utils")))
+            return void (0, a.ZDy)(
                 async () => {
                     let { default: e } = await n.e("22447").then(n.bind(n, 686768));
-                    return (t) => (0, r.jsx)(e, p(f({}, t), { entryPoint: l }));
+                    return (t) => (0, r.jsx)(e, E(m({}, t), { entryPoint: i }));
                 },
                 {
-                    modalKey: u.ux,
-                    backdropStyle: g(l),
-                    Layer: a.ZP,
+                    modalKey: _.ux,
+                    backdropStyle: O(i),
+                    Layer: o.ZP,
                     onCloseCallback: t,
                 },
             );
-        (0, i.ZDy)(
+        (0, a.ZDy)(
             async () => {
                 let { default: e } = await n.e("80144").then(n.bind(n, 634997));
-                return (t) => (0, r.jsx)(e, p(f({}, t), { entryPoint: l }));
+                return (t) => (0, r.jsx)(e, E(m({}, t), { entryPoint: i }));
             },
             {
-                modalKey: u.ux,
-                backdropStyle: g(l),
-                Layer: a.ZP,
+                modalKey: _.ux,
+                backdropStyle: O(i),
+                Layer: o.ZP,
                 onCloseCallback: t,
             },
         );
