@@ -1,27 +1,39 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => f }), n(953529);
 var l = n(951288),
-    r = n(647438),
-    i = n(442837),
-    o = n(481060),
-    a = n(367907),
-    c = n(535139),
+    i = n(647438),
+    r = n(442837),
+    o = n(367907),
+    a = n(535139),
+    c = n(728345),
     s = n(812206),
-    u = n(626135),
-    d = n(826380),
-    m = n(981631),
-    p = n(388032);
-function h(e) {
+    u = n(925329),
+    d = n(626135),
+    m = n(826380),
+    p = n(981631),
+    h = n(388032);
+function f(e) {
     var t;
-    let { connection: n, guildId: h, location: f } = e,
-        g = (0, i.e7)([s.Z], () => (null != n.application_id ? s.Z.getApplication(n.application_id) : null), [
+    let { connection: n, guildId: f, location: g } = e,
+        j = (0, r.e7)([s.Z], () => (null != n.application_id ? s.Z.getApplication(n.application_id) : null), [
             n.application_id,
-        ]),
-        j = null != (t = null == g ? void 0 : g.name) ? t : p.intl.string(p.t.cgPbaZ),
-        { hasAlreadyLinked: v, canStartAuthorization: x, startAuthorization: y, fetched: b } = (0, c.F)(g),
-        C = r.useCallback(() => {
+        ]);
+    i.useEffect(() => {
+        null != j ||
+            null == n.application_id ||
+            s.Z.isFetchingApplication(n.application_id) ||
+            s.Z.didFetchingApplicationFail(n.application_id) ||
+            (0, c.UM)(n.application_id).catch(() => {});
+    }, [j, n.application_id]);
+    let v = null != (t = null == j ? void 0 : j.name) ? t : h.intl.string(h.t.cgPbaZ),
+        { hasAlreadyLinked: x, canStartAuthorization: y, startAuthorization: b, fetched: C } = (0, a.F)(j),
+        O = (0, l.jsx)(u.Z, {
+            game: j,
+            size: u.A.MEDIUM,
+        }),
+        Z = i.useCallback(() => {
             var e, t, l;
-            u.default.track(
-                m.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
+            d.default.track(
+                p.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,12 +58,12 @@ function h(e) {
                             });
                     }
                     return e;
-                })({}, (0, a.hH)(h))),
+                })({}, (0, o.hH)(f))),
                 (l = l =
                     {
                         connection_type: "application",
                         application_id: null != (e = n.application_id) ? e : void 0,
-                        location: f,
+                        location: g,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
@@ -67,21 +79,15 @@ function h(e) {
                       }),
                 t),
             ),
-                y();
-        }, [y, h, n.application_id, f]),
-        O = (0, l.jsx)(o.xPt, {
-            size: "custom",
-            width: 40,
-            height: 40,
-            color: "currentColor",
-        });
-    return (0, l.jsx)(d.Z, {
-        displayName: j,
+                b();
+        }, [b, f, n.application_id, g]);
+    return (0, l.jsx)(m.Z, {
+        displayName: v,
         description: n.description,
         icon: O,
-        isLoading: !b,
-        isConnected: v,
-        canConnect: x,
-        onConnect: C,
+        isLoading: !C,
+        isConnected: x,
+        canConnect: y,
+        onConnect: Z,
     });
 }
