@@ -39,8 +39,8 @@ var i = n(772848),
     O = n(184299),
     v = n(66340),
     I = n(862847),
-    T = n(5881),
-    S = n(323811),
+    S = n(5881),
+    T = n(323811),
     A = n(492112),
     C = n(566078),
     N = n(61115),
@@ -113,12 +113,10 @@ function B(e) {
         sourceQuestContent: c,
     } = e;
     (0, s.ZDy)(async () => {
-        let e = (0, S.i)("openQuestsRewardCodeModal"),
+        let e = (0, T.i)("openQuestsRewardCodeModal"),
             s = C.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("62006")]).then(
-                n.bind(n, 188209),
-            );
+            let { default: e } = await Promise.all([n.e("64838"), n.e("10150"), n.e("62006")]).then(n.bind(n, 188209));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -130,9 +128,7 @@ function B(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("6006")]).then(
-            n.bind(n, 985866),
-        );
+        let { default: u } = await Promise.all([n.e("64838"), n.e("10150"), n.e("6006")]).then(n.bind(n, 985866));
         return (e) =>
             (0, r.jsx)(
                 u,
@@ -165,7 +161,7 @@ function Z(e, t) {
 }
 function F(e, t, i) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestInGameRewardModal")) {
+        if ((0, T.i)("openQuestInGameRewardModal")) {
             let { default: a } = await n.e("76418").then(n.bind(n, 34251));
             return (n) =>
                 (0, r.jsx)(
@@ -191,7 +187,7 @@ function F(e, t, i) {
 }
 function V(e, t, i) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestOrbsRewardModal")) {
+        if ((0, T.i)("openQuestOrbsRewardModal")) {
             let { default: a } = await n.e("74560").then(n.bind(n, 246855));
             return (n) =>
                 (0, r.jsx)(
@@ -216,7 +212,7 @@ function V(e, t, i) {
 }
 function H(e, t, i, a) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestCollectibleRewardModal")) {
+        if ((0, T.i)("openQuestCollectibleRewardModal")) {
             let { default: o } = await n.e("41023").then(n.bind(n, 305815));
             return (n) =>
                 (0, r.jsx)(
@@ -295,7 +291,7 @@ function K() {
 }
 let z = 0.2;
 function q(e) {
-    let t = (0, T.T)({ quest: e }),
+    let t = (0, S.T)({ quest: e }),
         n = { location: P.dr.QUESTS_BAR };
     if (!(0, I.j)(n) || Math.random() > z) return;
     let r = (0, A.Z)(e);
@@ -306,7 +302,7 @@ function q(e) {
         });
 }
 function X() {
-    return Promise.all([n.e("13193"), n.e("52407"), n.e("32249"), n.e("57290")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("13193"), n.e("32249"), n.e("24875")]).then(n.bind(n, 536687));
 }
 function Q(e) {
     var t;

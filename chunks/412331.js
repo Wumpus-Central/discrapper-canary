@@ -9,4 +9,5 @@ e.exports = {
     bufferHovered: "bufferHovered__370d1",
     timeDisplay: "timeDisplay__370d1",
     grabber: "grabber__370d1",
+    rounded: "rounded__370d1",
 };

@@ -7,7 +7,8 @@ n.r(t),
         JetpackWumpusWithTrinketsRive: () => s.z,
         PerfTestRive: () => l.t,
         PulseGradientRive: () => c.z,
-        WandAndSparklesRive: () => u.x,
+        UnlockRive: () => u.a,
+        WandAndSparklesRive: () => d.x,
     });
 var r = n(47985),
     i = n(58231),
@@ -16,4 +17,5 @@ var r = n(47985),
     s = n(343276),
     l = n(734428),
     c = n(984696),
-    u = n(963969);
+    u = n(682376),
+    d = n(963969);
