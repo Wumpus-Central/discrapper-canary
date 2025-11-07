@@ -4,7 +4,7 @@ var r = n(951288),
     l = n(544891),
     a = n(28664),
     s = n(481060),
-    o = n(466721),
+    o = n(39952),
     c = n(375954),
     d = n(981631),
     u = n(388032);
@@ -26,7 +26,7 @@ function h(e) {
     let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: h } = e,
         [f, g] = i.useState(!1),
         [m, b] = i.useState(!1),
-        { enableAIFeatures: _ } = o.C.useExperiment({ location: "CreateThreadSidebar" }),
+        _ = (0, o.o)(),
         y = i.useCallback(async () => {
             if (_) {
                 g(!0);

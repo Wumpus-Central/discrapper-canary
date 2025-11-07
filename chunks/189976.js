@@ -5,19 +5,18 @@ var r = n(951288),
     a = n(544891),
     o = n(481060),
     s = n(570140),
-    c = n(466721),
+    c = n(39952),
     u = n(706454),
     d = n(981631),
     f = n(388032),
     g = n(418087);
 let b = new Map();
 function p(e, t) {
-    let p = c.C.useExperiment({ location: "MessageContextMenu" }),
-        {
-            handleTranslate: y,
-            handleRevertTranslation: O,
-            isTranslating: h,
-            isTranslated: m,
+    let {
+            handleTranslate: p,
+            handleRevertTranslation: y,
+            isTranslating: O,
+            isTranslated: h,
         } = (function (e) {
             let [t, n] = i.useState(!1),
                 r = (0, l.e7)([u.default], () => u.default.locale);
@@ -93,7 +92,7 @@ function p(e, t) {
                 isTranslated: b.has(e.id),
             };
         })(e),
-        v = (function (e, t) {
+        m = (function (e, t) {
             let l = (0, f.getAvailableLocales)();
             return i.useMemo(
                 () =>
@@ -123,22 +122,23 @@ function p(e, t) {
                     }),
                 [e, t, l],
             );
-        })(y, h);
-    return null != e.content && "" !== e.content.trim() && (null == p ? void 0 : p.enableAIFeatures)
-        ? m
+        })(p, O),
+        v = (0, c.o)();
+    return null != e.content && "" !== e.content.trim() && v
+        ? h
             ? (0, r.jsx)(o.sNh, {
                   id: "revert-translation",
                   label: f.intl.string(f.t.JC9BXn),
                   icon: o.os0,
-                  action: O,
-                  disabled: h,
+                  action: y,
+                  disabled: O,
               })
             : (0, r.jsx)(o.sNh, {
                   id: "translate",
-                  label: h ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
-                  action: () => y(),
-                  disabled: h,
-                  children: v,
+                  label: O ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
+                  action: () => p(),
+                  disabled: O,
+                  children: m,
               })
         : null;
 }

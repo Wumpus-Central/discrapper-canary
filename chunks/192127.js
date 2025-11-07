@@ -3,21 +3,20 @@ var i = e(951288);
 e(647438);
 var a = e(442837),
     l = e(481060),
-    r = e(466721),
+    r = e(39952),
     s = e(346479),
     o = e(286934),
     d = e(388032);
 function u(t) {
-    let n = r.C.useExperiment({ location: "useSummarizeThreadItem" }),
-        e = (0, a.e7)([o.Z], () => o.Z.isInProgress());
-    return (null == n ? void 0 : n.enableAIFeatures) && t.isThread()
+    let n = (0, a.e7)([o.Z], () => o.Z.isInProgress());
+    return (0, r.o)() && t.isThread()
         ? (0, i.jsx)(l.sNh, {
               id: "summarize-thread",
-              label: e ? d.intl.string(d.t.oKECxB) : d.intl.string(d.t.EXfguE),
-              disabled: e,
-              icon: e ? (0, i.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS }) : null,
+              label: n ? d.intl.string(d.t.oKECxB) : d.intl.string(d.t.EXfguE),
+              disabled: n,
+              icon: n ? (0, i.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS }) : null,
               action: () => s.Z.summarizeThread(t),
-              children: e
+              children: n
                   ? null
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
