@@ -328,6 +328,7 @@ let i = {
                   "AUDIO_TOGGLE_SELF_MUTE",
                   "OVERLAY_SUCCESSFULLY_SHOWN",
                   "OVERLAY_UPDATE_OVERLAY_METHOD",
+                  "OVERLAY_TRACK_STATE_CHANGED",
               ],
         inlineRequire: () => n(645644).Z,
         neverLoadBeforeConnectionOpen: !0,

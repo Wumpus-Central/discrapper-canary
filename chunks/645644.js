@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685), n(415506), n(642613);
+n.d(t, { Z: () => er }), n(388685), n(415506), n(642613);
 var r = n(772848),
     i = n(379649),
     a = n(570140),
@@ -74,7 +74,7 @@ function R(e, t) {
         e
     );
 }
-let P = 3,
+let P = 4,
     w = !1,
     D = new c.Z("OverlayUsageStatsManager");
 w || (D.verbose = () => {});
@@ -390,6 +390,9 @@ class U {
                 overlayMethodStats: this.overlayMethodStats,
             });
     }
+    setOverlayState(e) {
+        this.overlayState = e;
+    }
     getSettingMethod() {
         return null == this.overlayMethod ? f.gl[f.gl.Disabled] : f.gl[this.overlayMethod];
     }
@@ -468,6 +471,7 @@ class U {
                 {
                     original_method: f.gl[y.original_method],
                     any_other_method: O,
+                    last_overlay_state: this.overlayState,
                 },
             ),
             notifications: this.notificationAnalytics.getCounterAnalytics(this.uuid),
@@ -517,6 +521,7 @@ class U {
             A(this, "overlayStatus", void 0),
             A(this, "overlayMethod", void 0),
             A(this, "overlayMethodStats", void 0),
+            A(this, "overlayState", void 0),
             A(this, "notificationAnalytics", void 0),
             A(this, "widgetAnalytics", void 0),
             A(this, "screenAnalytics", void 0),
@@ -543,6 +548,7 @@ class U {
             (this.uuid = k()),
             (this.overlayMethod = null),
             (this.overlayMethodStats = null),
+            (this.overlayState = null),
             (this.notificationAnalytics = new L()),
             (this.widgetAnalytics = new M()),
             (this.uiUnlockedCount = 0),
@@ -569,7 +575,7 @@ class U {
             (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),
             U.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(),
-            $.hasConnection() && this.rtcConnectionTimer.start();
+            ee.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function G() {
@@ -704,27 +710,32 @@ function J(e) {
     e.overlayMethod !== f.gl.Disabled &&
         (D.verbose("OVERLAY_UPDATE_OVERLAY_METHOD", e), t.setOverlayMethod(e.overlayMethod));
 }
+function $(e) {
+    let t = U.getByPid(e.pid);
+    if (null == t) return void D.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, U.debug);
+    e.newState !== f.mM.OVERLAY_DISABLED && t.setOverlayState(e.newState);
+}
 A(U, "gamesByPid", {}), A(U, "gamesByName", {}), A(U, "desktopMainWindowHasFocus", document.hasFocus());
-class $ {
+class ee {
     static hasConnection() {
-        return $.connections.size > 0;
+        return ee.connections.size > 0;
     }
     static handleRTCConnectionState(e) {
         var t;
         let n = (null != (t = e.channelId) ? t : "unknown") + e.context;
         switch (e.state) {
             case T.hes.RTC_CONNECTED:
-                $.connections.add(n);
+                ee.connections.add(n);
                 break;
             case T.hes.DISCONNECTED:
-                $.connections.delete(n);
+                ee.connections.delete(n);
         }
-        let r = $.hasConnection();
-        $.previousHasConnection !== r && (U.toggleRtcConnection(r), ($.previousHasConnection = r));
+        let r = ee.hasConnection();
+        ee.previousHasConnection !== r && (U.toggleRtcConnection(r), (ee.previousHasConnection = r));
     }
 }
-A($, "connections", new Set()), A($, "previousHasConnection", !1);
-class ee {
+A(ee, "connections", new Set()), A(ee, "previousHasConnection", !1);
+class et {
     static handleMessageAcked(e) {
         D.verbose("MESSAGE_ACKED", e);
         let t = h.Z.getGame();
@@ -754,7 +765,7 @@ w &&
     setInterval(async () => {
         for (let e of Object.values(U.debug.gamesByName)) D.verbose("Game analytics", await e.getAnalytics());
     }, 5000);
-class et extends s.Z {
+class en extends s.Z {
     constructor(...e) {
         super(...e),
             A(
@@ -762,8 +773,8 @@ class et extends s.Z {
                 "actions",
                 __OVERLAY__
                     ? {
-                          MESSAGE_ACKED: ee.handleMessageAcked,
-                          MESSAGE_CREATE: ee.handleMessageCreate,
+                          MESSAGE_ACKED: et.handleMessageAcked,
+                          MESSAGE_CREATE: et.handleMessageCreate,
                       }
                     : {
                           OVERLAY_FOCUSED: H,
@@ -776,12 +787,13 @@ class et extends s.Z {
                           MESSAGE_ACKED: K,
                           MESSAGE_CREATE: z,
                           WINDOW_FOCUS: X,
-                          RTC_CONNECTION_STATE: $.handleRTCConnectionState,
+                          RTC_CONNECTION_STATE: ee.handleRTCConnectionState,
                           AUDIO_TOGGLE_SELF_MUTE: q,
                           OVERLAY_SUCCESSFULLY_SHOWN: Q,
                           OVERLAY_UPDATE_OVERLAY_METHOD: J,
+                          OVERLAY_TRACK_STATE_CHANGED: $,
                       },
             );
     }
 }
-let en = new et();
+let er = new en();
