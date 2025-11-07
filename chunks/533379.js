@@ -1,15 +1,12 @@
-n.d(t, { R: () => a });
+n.d(t, { R: () => o });
 var r = n(442837),
     i = n(998698),
-    l = n(873387);
-function a(e) {
-    let { channel: t, chatInputType: n } = e,
-        a = (0, l.g)(t),
-        { activeCommand: o } = (0, r.cj)([i.Z], () => {
-            var e;
-            return {
-                activeCommand: (null == (e = n.commands) ? void 0 : e.enabled) ? i.Z.getActiveCommand(t.id) : null,
-            };
-        });
-    return null == o && a;
+    a = n(873387);
+function o(e) {
+    var t, n;
+    let { channel: o, chatInputType: s } = e,
+        l = null != (n = null == (t = s.commands) ? void 0 : t.enabled) && n,
+        c = (0, a.g)(o),
+        { activeCommand: u } = (0, r.cj)([i.Z], () => ({ activeCommand: l ? i.Z.getActiveCommand(o.id) : null }));
+    return l && c && null == u;
 }

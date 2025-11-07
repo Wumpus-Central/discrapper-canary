@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -10,14 +10,13 @@ var r = n(951288),
     d = n(541099),
     f = n(827498),
     _ = n(663924),
-    p = n(533379),
-    h = n(562129),
-    m = n(570220),
-    g = n(61356),
-    E = n(314734),
-    b = n(388032),
-    y = n(124886);
-function O(e, t, n) {
+    p = n(562129),
+    h = n(570220),
+    m = n(61356),
+    g = n(314734),
+    E = n(388032),
+    b = n(124886);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +29,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +40,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,52 +57,52 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let T = i.forwardRef(function (e, t) {
+let S = i.forwardRef(function (e, t) {
     let { type: n } = e,
         a = (0, l.e7)([d.Z], () => d.Z.shouldShowPopup() && d.Z.activeViewType() === n),
-        { Component: _, events: p, play: g } = (0, h.Z)("ChannelAppLauncherButton"),
-        O = i.useContext(m.ZP);
+        { Component: _, events: m, play: y } = (0, p.Z)("ChannelAppLauncherButton"),
+        v = i.useContext(h.ZP);
     i.useEffect(() => {
         let e = () => {
-            p.onMouseEnter();
+            m.onMouseEnter();
         };
         return (
-            O.on("command-sentinel-typed", e),
+            v.on("command-sentinel-typed", e),
             () => {
-                O.off("command-sentinel-typed", e);
+                v.off("command-sentinel-typed", e);
             }
         );
-    }, [O, p]);
-    let I = i.useCallback(() => {
-            a ? u.y(f.ti.DISMISSED) : (u._(f._b.TEXT, n), c.ux()), g();
-        }, [a, n, g]),
+    }, [v, m]);
+    let S = i.useCallback(() => {
+            a ? u.y(f.ti.DISMISSED) : (u._(f._b.TEXT, n), c.ux()), y();
+        }, [a, n, y]),
         T = (0, r.jsx)(_, {
             size: "refresh_sm",
             color: "currentColor",
         });
     return (0, r.jsx)("div", {
-        className: o()(y.buttonContainer, E.t4),
+        className: o()(b.buttonContainer, g.t4),
         ref: t,
         children: (0, r.jsx)(
             s.P3F,
-            S(
-                v(
+            I(
+                O(
                     {
                         tabIndex: 0,
-                        className: o()(y.button, { [y.buttonActive]: a }),
-                        onClick: I,
-                        "aria-label": b.intl.string(b.t.erHFxI),
+                        className: o()(b.button, { [b.buttonActive]: a }),
+                        onClick: S,
+                        "aria-label": E.intl.string(E.t.erHFxI),
                         "aria-expanded": a,
                         "aria-haspopup": "dialog",
                         focusProps: {
@@ -115,37 +114,31 @@ let T = i.forwardRef(function (e, t) {
                             },
                         },
                     },
-                    p,
+                    m,
                 ),
                 { children: T },
             ),
         ),
     });
 });
-function A(e) {
+function T(e) {
     let { channel: t, type: n } = e,
         a = i.useRef(null),
-        o = (0, p.R)({
-            channel: t,
-            chatInputType: n,
-        }),
-        s = (0, g.Z)({ type: n });
-    return o
-        ? (0, r.jsxs)("div", {
-              className: y.channelAppLauncher,
-              children: [
-                  (0, r.jsx)(T, {
-                      type: n,
-                      ref: a,
-                  }),
-                  s
-                      ? (0, r.jsx)(_.Z, {
-                            positionTargetRef: a,
-                            channel: t,
-                        })
-                      : null,
-              ],
-          })
-        : null;
+        o = (0, m.Z)({ type: n });
+    return (0, r.jsxs)("div", {
+        className: b.channelAppLauncher,
+        children: [
+            (0, r.jsx)(S, {
+                type: n,
+                ref: a,
+            }),
+            o
+                ? (0, r.jsx)(_.Z, {
+                      positionTargetRef: a,
+                      channel: t,
+                  })
+                : null,
+        ],
+    });
 }
-let C = i.memo(A);
+let A = i.memo(T);
