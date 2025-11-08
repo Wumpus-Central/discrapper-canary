@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(593472),
     v = n(493773),
     I = n(812206),
-    T = n(835473),
-    S = n(243778),
+    S = n(835473),
+    T = n(243778),
     A = n(594190),
     C = n(137920),
     N = n(320724),
@@ -141,15 +141,15 @@ function eI(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let eT = ew(null),
-    eS = 20,
+let eS = ew(null),
+    eT = 20,
     eA = 16,
     eC = 1,
     eN = 25,
     eR = [0, 5, 10, 15, 20, 25];
 function eP() {
-    let e = ew(eT);
-    f().isEqual(e, eT) || (ei.default.track(eu.rMx.OVERLAY_SETTINGS_UPDATED, e), (eT = e));
+    let e = ew(eS);
+    f().isEqual(e, eS) || (ei.default.track(eu.rMx.OVERLAY_SETTINGS_UPDATED, e), (eS = e));
 }
 function ew(e) {
     var t;
@@ -268,14 +268,14 @@ function ex(e) {
                             l
                                 ? (0, r.jsx)(h.CJ0, {
                                       size: "custom",
-                                      width: eS,
-                                      height: eS,
+                                      width: eT,
+                                      height: eT,
                                       color: "var(--interactive-active)",
                                   })
                                 : (0, r.jsx)(h.Fbu, {
                                       size: "custom",
-                                      width: eS,
-                                      height: eS,
+                                      width: eT,
+                                      height: eT,
                                       color: "var(--interactive-active)",
                                   }),
                         ],
@@ -294,6 +294,7 @@ let eL = new Set([
         x.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE,
         x.mM.WAITING_FOR_REACT_INITIALIZATION,
         x.mM.WAITING_FOR_PID_FOCUS,
+        x.mM.WAITING_FOR_SUCCESSFUL_SHOW,
     ]),
     eM = (e) => {
         e.preventDefault(), e.stopPropagation();
@@ -326,7 +327,7 @@ function ej(e) {
         p = (0, _.e7)([A.ZP, Q.Z, $.Z], () => (null == o ? null : (0, A.FZ)(o, A.ZP, Q.Z, $.Z)), [o], l()),
         [g, E] = i.useState(f),
         [y, I] = i.useState(d),
-        [T, S] = i.useState(!1);
+        [S, T] = i.useState(!1);
     i.useEffect(() => {
         E(f), I(d);
     }, [f, d]);
@@ -552,8 +553,8 @@ function ej(e) {
     return null == o
         ? null
         : (0, r.jsxs)(ex, {
-              onExpand: S,
-              className: T ? eh.expandedContainer : void 0,
+              onExpand: T,
+              className: S ? eh.expandedContainer : void 0,
               title: (0, r.jsxs)(r.Fragment, {
                   children: [
                       null !=
@@ -732,7 +733,7 @@ function eG() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        s = (0, T.Z)(o.map((e) => e.id)),
+        s = (0, S.Z)(o.map((e) => e.id)),
         l = !(0, el.supportsLegacy)(),
         c = (e) => {
             var t, r;
@@ -823,7 +824,7 @@ function eB() {
         { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = !(0, el.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        l = (0, T.Z)(s.map((e) => e.id)),
+        l = (0, S.Z)(s.map((e) => e.id)),
         c = (e) => {
             var t, r;
             let i = !e && n;
@@ -1248,7 +1249,7 @@ function eK() {
     });
 }
 function ez() {
-    let [e, t] = (0, S.US)([p.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
+    let [e, t] = (0, T.US)([p.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
         n = () => {
             t(ed.L.DISMISS);
         };

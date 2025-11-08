@@ -24,7 +24,12 @@ let d = new a.Z("OverlayWidgetPinManager"),
     _ = 28800000,
     p = !1,
     h = new Set([c.Odu.GO_LIVE]),
-    m = new Set([s.mM.WAITING_FOR_POPOUT_OPEN, s.mM.WAITING_FOR_REACT_INITIALIZATION, s.mM.WAITING_FOR_PID_FOCUS]),
+    m = new Set([
+        s.mM.WAITING_FOR_POPOUT_OPEN,
+        s.mM.WAITING_FOR_REACT_INITIALIZATION,
+        s.mM.WAITING_FOR_PID_FOCUS,
+        s.mM.WAITING_FOR_SUCCESSFUL_SHOW,
+    ]),
     g = (e) => {
         let t = f[e];
         return null == t || Date.now() - t < _;

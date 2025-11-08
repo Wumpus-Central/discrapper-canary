@@ -20,7 +20,7 @@ var r,
     O = n(886189),
     v = n(987650),
     I = n(757744);
-function T(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -186,7 +186,10 @@ function X() {
     q(null, null, !0);
 }
 function Q(e) {
-    P.has(e) && Z.allDone && o.Z.successfullyShown(e);
+    if (Z.allDone) {
+        if (!P.has(e)) return void o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW);
+        o.Z.successfullyShown(e);
+    }
 }
 function J(e) {
     let { pid: t } = e;
@@ -194,9 +197,12 @@ function J(e) {
 }
 function $(e) {
     let { initialized: t } = e;
-    if (((Z = C(S({}, Z), { windowHandleSentToNative: t })), t)) {
+    if (((Z = C(T({}, Z), { windowHandleSentToNative: t })), t)) {
         let e = null != L ? L : d.UNSET_PID;
-        o.Z.updateOverlayState(e, f.mM.WAITING_FOR_REACT_INITIALIZATION), (0, _.bs)(e, "window_handle_initialized");
+        Z.reactInitializationStarted
+            ? o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW)
+            : o.Z.updateOverlayState(e, f.mM.WAITING_FOR_REACT_INITIALIZATION),
+            (0, _.bs)(e, "window_handle_initialized");
     }
 }
 async function ee() {
@@ -213,7 +219,7 @@ function en() {
 }
 function er(e) {
     let { createWindowTriggeringPID: t } = e;
-    (Z = C(S({}, Z), { popoutOpened: !0 })), K(t), (k = t), (L = t), (0, d.setPID)(t);
+    (Z = C(T({}, Z), { popoutOpened: !0 })), K(t), (k = t), (L = t), (0, d.setPID)(t);
 }
 function ei(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
@@ -222,7 +228,7 @@ function ei(e) {
 function ea(e) {
     let { createWindowTriggeringPID: t, error: n, nativeWindowHandle: r } = e;
     o.Z.updateOverlayState(t, f.mM.OVERLAY_CRASHED_DISABLED),
-        (Z = C(S({}, Z), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + n })),
+        (Z = C(T({}, Z), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + n })),
         (0, _.bs)(t, "renderer_window_mounting_failed", {
             error: n,
             popoutInitializationStages: Z,
@@ -265,18 +271,18 @@ function eu(e) {
 }
 function ed() {
     var e;
-    (Z = C(S({}, Z), { showInactiveCalled: !0 })),
+    (Z = C(T({}, Z), { showInactiveCalled: !0 })),
         null == w || null == (e = w.onNativePopoutShowInactiveSuccess) || e.call(w);
 }
 function ef() {
-    (Z = C(S({}, Z), { allDone: !0 })),
-        P.forEach((e) => {
+    (Z = C(T({}, Z), { allDone: !0 })),
+        R.forEach((e) => {
             Q(e);
         });
 }
 function e_(e) {
     let { update: t } = e;
-    Z = S({}, Z, t);
+    Z = T({}, Z, t);
 }
 function ep(e) {
     let { pid: t, windowHandle: n } = e;
@@ -360,7 +366,7 @@ class eb extends (r = i.ZP.Store) {
         return null != (t = B[e]) ? t : null;
     }
 }
-T(eb, "displayName", "Overlay-V3-Store");
+S(eb, "displayName", "Overlay-V3-Store");
 let ey = new eb(
         a.Z,
         __OVERLAY__ || !v.iP

@@ -37,4 +37,9 @@ function o() {
         errorMessage: null,
     };
 }
-let s = new Set([r.mM.WAITING_FOR_POPOUT_OPEN, r.mM.WAITING_FOR_REACT_INITIALIZATION, r.mM.WAITING_FOR_PID_FOCUS]);
+let s = new Set([
+    r.mM.WAITING_FOR_POPOUT_OPEN,
+    r.mM.WAITING_FOR_REACT_INITIALIZATION,
+    r.mM.WAITING_FOR_PID_FOCUS,
+    r.mM.WAITING_FOR_SUCCESSFUL_SHOW,
+]);

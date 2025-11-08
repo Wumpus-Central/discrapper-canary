@@ -90,6 +90,7 @@ var r = (function (e) {
             (e.WAITING_FOR_MODULE_POPOUT_CAPTURE = "waiting_for_module_popout_capture"),
             (e.WAITING_FOR_REACT_INITIALIZATION = "waiting_for_react_initialization"),
             (e.WAITING_FOR_PID_FOCUS = "waiting_for_pid_focus"),
+            (e.WAITING_FOR_SUCCESSFUL_SHOW = "waiting_for_successful_show"),
             (e.OVERLAY_RENDERING = "overlay_rendering"),
             (e.OVERLAY_CRASHED = "overlay_crashed"),
             (e.OVERLAY_CRASHED_DISABLED = "overlay_crashed_disabled"),
