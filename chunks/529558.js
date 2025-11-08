@@ -1,14 +1,16 @@
 n.d(t, {
-    N: () => a,
-    m: () => i,
+    NJ: () => o,
+    Th: () => s,
+    m8: () => a,
 });
-var r = n(818083);
-let i = (0, r.B)({
+var r = n(818083),
+    i = n(427164);
+let a = (0, r.B)({
         kind: "user",
         id: "2023-08_secure_frames_encryption",
         label: "Allowing testing DAVE protocol for voice/video",
         defaultConfig: {
-            protocolVersionFloor: 0,
+            protocolVersionFloor: 1,
             canSupportDaveProtocol: !1,
         },
         treatments: [
@@ -22,7 +24,7 @@ let i = (0, r.B)({
             },
         ],
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: "user",
         id: "2025-06_dave_for_browser",
         label: "Allowing testing DAVE protocol for browser",
@@ -60,4 +62,10 @@ let i = (0, r.B)({
                 },
             },
         ],
+    }),
+    s = (0, i.le)({
+        kind: "user",
+        name: "2025-11-dave-opt-in",
+        defaultConfig: { allowOptIn: !1 },
+        variations: { 1: { allowOptIn: !0 } },
     });
