@@ -1,4 +1,4 @@
-n.d(t, { default: () => w }), n(388685);
+n.d(t, { default: () => L }), n(388685);
 var l = n(951288),
     o = n(647438),
     r = n(990547),
@@ -7,174 +7,164 @@ var l = n(951288),
     s = n(442837),
     c = n(902704),
     d = n(481060),
-    u = n(809206),
-    p = n(100527),
-    m = n(906732),
-    f = n(213609),
-    g = n(18438),
-    h = n(778825),
-    x = n(150039),
-    b = n(271383),
-    _ = n(430824),
-    S = n(25990),
-    j = n(594174),
-    C = n(626135),
-    v = n(51144),
-    P = n(364747),
-    N = n(131016),
-    y = n(489511),
-    k = n(579346),
-    O = n(438759),
-    T = n(512070),
-    E = n(299939),
-    D = n(305813),
-    R = n(981631),
-    A = n(352609),
-    I = n(388032),
-    L = n(300119);
-function w(e) {
-    var t, n, w, B;
-    let { transitionState: Z, analyticsLocations: M, guildId: G, onClose: Y } = e,
-        H = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
-        F = null != (t = v.ZP.useName(H)) ? t : "",
-        z = (0, s.e7)([h.Z, S.Z, b.ZP], () => {
+    u = n(100527),
+    p = n(906732),
+    m = n(213609),
+    f = n(778825),
+    g = n(150039),
+    h = n(271383),
+    x = n(430824),
+    b = n(25990),
+    _ = n(594174),
+    S = n(626135),
+    j = n(51144),
+    C = n(364747),
+    v = n(131016),
+    P = n(489511),
+    N = n(768446),
+    y = n(579346),
+    k = n(438759),
+    O = n(512070),
+    T = n(299939),
+    E = n(305813),
+    D = n(981631),
+    R = n(593082),
+    A = n(388032),
+    I = n(845378);
+function L(e) {
+    var t, n, L, w;
+    let { transitionState: B, analyticsLocations: Z, guildId: M, onClose: G } = e,
+        Y = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        H = null != (t = j.ZP.useName(Y)) ? t : "",
+        z = (0, s.e7)([f.Z, b.Z, h.ZP], () => {
             var e, t, n;
-            return null != G
-                ? null != (t = null != (e = h.Z.getPendingNickname()) ? e : b.ZP.getNick(G, null == H ? void 0 : H.id))
+            return null != M
+                ? null != (t = null != (e = f.Z.getPendingNickname()) ? e : h.ZP.getNick(M, null == Y ? void 0 : Y.id))
                     ? t
-                    : F
-                : null != (n = S.Z.getPendingGlobalName())
+                    : H
+                : null != (n = b.Z.getPendingGlobalName())
                   ? n
-                  : F;
-        }, [G, H, F]),
-        U = (0, s.e7)([_.Z], () => _.Z.getGuild(G)),
-        { userDisplayNameStyles: q, guildDisplayNameStyles: K, pendingDisplayNameStyles: X } = (0, x.mD)(H, G),
-        V = void 0 !== X ? X : null != K ? K : q,
-        [W, $] = o.useState(null != (n = null == V ? void 0 : V.fontId) ? n : a.C.DEFAULT),
-        [J, Q] = o.useState(null != (w = null == V ? void 0 : V.effectId) ? w : i.m.SOLID),
-        ee = (0, y.R)(J),
-        et = (0, y.R)(i.m.GRADIENT),
-        en = null != (B = null == V ? void 0 : V.colors) ? B : [],
-        [el, eo] = o.useState(en.length > 0 && J !== i.m.GRADIENT ? en[0] : ee.defaultColors[0]),
-        [er, ei] = o.useState(en.length > 0 && J === i.m.GRADIENT ? en : et.defaultColors);
-    (0, f.Z)(
+                  : H;
+        }, [M, Y, H]),
+        F = (0, s.e7)([x.Z], () => x.Z.getGuild(M)),
+        { userDisplayNameStyles: U, guildDisplayNameStyles: q, pendingDisplayNameStyles: K } = (0, g.mD)(Y, M),
+        X = void 0 !== K ? K : null != q ? q : U,
+        [V, W] = o.useState(null != (n = null == X ? void 0 : X.fontId) ? n : a.C.DEFAULT),
+        [$, J] = o.useState(null != (L = null == X ? void 0 : X.effectId) ? L : i.m.SOLID),
+        Q = (0, P.R)($),
+        ee = (0, P.R)(i.m.GRADIENT),
+        et = null != (w = null == X ? void 0 : X.colors) ? w : [],
+        [en, el] = o.useState(et.length > 0 && $ !== i.m.GRADIENT ? et[0] : Q.defaultColors[0]),
+        [eo, er] = o.useState(et.length > 0 && $ === i.m.GRADIENT ? et : ee.defaultColors);
+    (0, m.Z)(
         {
             type: r.ImpressionTypes.POPOUT,
             name: r.ImpressionNames.DISPLAY_NAME_STYLES_MODAL,
         },
         { trackOnInitialLoad: !0 },
     );
-    let { analyticsLocations: ea } = (0, m.ZP)(M, p.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
-        es = o.useMemo(() => (J === i.m.GRADIENT ? er : [el]), [J, er, el]),
-        ec = o.useMemo(() => {
+    let { analyticsLocations: ei } = (0, p.ZP)(Z, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+        ea = o.useMemo(() => ($ === i.m.GRADIENT ? eo : [en]), [$, eo, en]),
+        es = o.useMemo(() => {
             var e;
             return (
-                W !== (null == V ? void 0 : V.fontId) ||
-                J !== (null == V ? void 0 : V.effectId) ||
-                !(0, c.E)(es, null != (e = null == V ? void 0 : V.colors) ? e : [])
+                V !== (null == X ? void 0 : X.fontId) ||
+                $ !== (null == X ? void 0 : X.effectId) ||
+                !(0, c.E)(ea, null != (e = null == X ? void 0 : X.colors) ? e : [])
             );
-        }, [V, W, J, es]),
+        }, [X, V, $, ea]),
+        ec = (0, N.z)({
+            hasChanges: es,
+            selectedFontId: V,
+            selectedEffectId: $,
+            selectedColors: ea,
+            defaultColor: Q.defaultColors[0],
+            guildId: M,
+            onClose: G,
+        }),
         ed = o.useCallback(() => {
-            if (ec) {
-                let e = es;
-                J === i.m.SOLID && es.length > 0 && es[0] === ee.defaultColors[0] && (e = []);
-                let t = {
-                    fontId: W,
-                    effectId: J,
-                    colors: e,
-                };
-                null != G ? (0, g.N_)(t) : (0, u.NI)(t),
-                    C.default.track(R.rMx.DISPLAY_NAME_STYLES_APPLIED, {
-                        font_name: a.C[W],
-                        effect_name: i.m[J],
-                        colors: es,
-                    }),
-                    Y();
-            }
-        }, [ec, W, J, es, ee, Y, G]),
-        eu = o.useCallback(() => {
-            let { fontId: e, effectId: t, colors: n } = (0, N.aY)();
-            $(e), Q(t), t === i.m.GRADIENT ? ei(n) : eo(n[0]), C.default.track(R.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
-        }, [ei, eo]),
+            let { fontId: e, effectId: t, colors: n } = (0, v.aY)();
+            W(e), J(t), t === i.m.GRADIENT ? er(n) : el(n[0]), S.default.track(D.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+        }, [er, el]),
+        eu = o.useCallback(
+            (e) => {
+                J(e);
+            },
+            [J],
+        ),
         ep = o.useCallback(
             (e) => {
-                Q(e);
+                $ === i.m.GRADIENT ? er(e) : el(e[0]);
             },
-            [Q],
-        ),
-        em = o.useCallback(
-            (e) => {
-                J === i.m.GRADIENT ? ei(e) : eo(e[0]);
-            },
-            [J, ei, eo],
+            [$, er, el],
         );
-    return null == H
+    return null == Y
         ? null
-        : (0, l.jsx)(m.Gt, {
-              value: ea,
-              children: (0, l.jsx)(P.k.Provider, {
+        : (0, l.jsx)(p.Gt, {
+              value: ei,
+              children: (0, l.jsx)(C.k.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, l.jsxs)(d.Y0X, {
                       "data-migration-pending": !0,
-                      transitionState: Z,
+                      transitionState: B,
                       size: d.CgR.LARGE,
                       parentComponent: "DisplayNameStylesModal",
-                      className: L.modalRoot,
+                      className: I.modalRoot,
                       children: [
                           (0, l.jsxs)(d.hzk, {
                               "data-migration-pending": !0,
-                              className: L.modalContent,
+                              className: I.modalContent,
                               style: { overflow: "hidden auto" },
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: L.selectionSection,
+                                      className: I.selectionSection,
                                       children: [
                                           (0, l.jsx)(d.xBx, {
                                               "data-migration-pending": !0,
                                               separator: !1,
-                                              className: L.sectionHeader,
+                                              className: I.sectionHeader,
                                               children: (0, l.jsx)(d.Heading, {
                                                   variant: "heading-lg/semibold",
-                                                  children: I.intl.string(A.default.ZPMAlX),
+                                                  children: A.intl.string(R.default.ZPMAlX),
                                               }),
                                           }),
-                                          (0, l.jsx)(T.Z, {
-                                              selectedFontId: W,
-                                              setSelectedFontId: $,
-                                              displayName: z,
-                                              className: L.selectionSubSection,
-                                          }),
                                           (0, l.jsx)(O.Z, {
-                                              selectedEffectId: J,
-                                              setSelectedEffectId: ep,
-                                              className: L.selectionSubSection,
+                                              selectedFontId: V,
+                                              setSelectedFontId: W,
+                                              displayName: z,
+                                              className: I.selectionSubSection,
                                           }),
                                           (0, l.jsx)(k.Z, {
-                                              selectedColors: es,
-                                              setSelectedColors: em,
-                                              selectedEffectId: J,
-                                              className: L.selectionSubSection,
-                                              defaultColor: ee.defaultColors[0],
+                                              selectedEffectId: $,
+                                              setSelectedEffectId: eu,
+                                              className: I.selectionSubSection,
+                                          }),
+                                          (0, l.jsx)(y.Z, {
+                                              selectedColors: ea,
+                                              setSelectedColors: ep,
+                                              selectedEffectId: $,
+                                              className: I.selectionSubSection,
+                                              defaultColor: Q.defaultColors[0],
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(D.Z, {
-                                      user: H,
-                                      guild: U,
+                                  (0, l.jsx)(E.Z, {
+                                      user: Y,
+                                      guild: F,
                                       displayName: z,
-                                      selectedFontId: W,
-                                      selectedEffectId: J,
-                                      selectedColors: J === i.m.SOLID && (0, c.E)(es, ee.defaultColors) ? [] : es,
-                                      onClose: Y,
+                                      selectedFontId: V,
+                                      selectedEffectId: $,
+                                      selectedColors: $ === i.m.SOLID && (0, c.E)(ea, Q.defaultColors) ? [] : ea,
+                                      onClose: G,
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(E.B, {
-                              onApply: ed,
-                              onSurpriseMe: eu,
-                              onClose: Y,
-                              canApply: ec,
-                              analyticsLocations: ea,
+                          (0, l.jsx)(T.B, {
+                              onApply: ec,
+                              onSurpriseMe: ed,
+                              onClose: G,
+                              canApply: es,
+                              analyticsLocations: ei,
                           }),
                       ],
                   }),
