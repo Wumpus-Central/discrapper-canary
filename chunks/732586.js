@@ -5,7 +5,7 @@ var r = n(951288),
     o = n(911969),
     s = n(970184),
     l = n(293979),
-    c = n(59718);
+    c = n(138441);
 function u(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function f(e) {
     i.useEffect(() => {
         (null == y ? void 0 : y.type) === n && b(y.value);
     }, [n, y]);
-    let T = {
+    let S = {
         value: E,
         placeholder: _,
         minLength: p,
@@ -73,10 +73,10 @@ function f(e) {
     };
     switch (u) {
         case o.PT.SMALL:
-            t = (0, r.jsx)(a.oil, d({}, T));
+            t = (0, r.jsx)(a.oil, d({}, S));
             break;
         case o.PT.PARAGRAPH:
-            t = (0, r.jsx)(a.Kx8, d({ autosize: !0 }, T));
+            t = (0, r.jsx)(a.Kx8, d({ autosize: !0 }, S));
     }
     return null != f
         ? (0, r.jsx)(a.xJW, {

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(518596),
     v = n(726985),
     I = n(981631),
-    T = n(388032),
-    S = n(61365);
+    S = n(388032),
+    T = n(275765);
 function A(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ function R(e, t) {
 }
 let P = () =>
     (0, r.jsx)("div", {
-        className: S.syncing,
+        className: T.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
 class w extends i.PureComponent {
@@ -118,13 +118,13 @@ class w extends i.PureComponent {
                       (0, r.jsx)(_.F, {
                           setting: v.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)("div", {
-                              className: S.paymentHistory,
+                              className: T.paymentHistory,
                               children: (0, r.jsxs)(o.Kqy, {
                                   gap: 16,
                                   children: [
                                       (0, r.jsx)(o.Heading, {
                                           variant: "heading-lg/semibold",
-                                          children: T.intl.string(T.t.obLrcK),
+                                          children: S.intl.string(S.t.obLrcK),
                                       }),
                                       (0, r.jsx)(f.oQ, {}),
                                       (0, r.jsx)(u.Z, { locale: a }),
@@ -134,8 +134,8 @@ class w extends i.PureComponent {
                       }),
                       (0, r.jsx)(o.Wn, {
                           messageType: o.QYI.INFO,
-                          className: S.codeRedemptionRedirect,
-                          children: T.intl.format(T.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
+                          className: T.codeRedemptionRedirect,
+                          children: S.intl.format(S.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
                       }),
                   ],
               });

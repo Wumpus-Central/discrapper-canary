@@ -18,13 +18,13 @@ var r = n(951288),
     m = n(213609),
     b = n(795318),
     _ = n(728285),
-    y = n(670188),
+    y = n(456077),
     x = n(314897),
     O = n(271383),
-    j = n(5192),
-    v = n(590415),
+    v = n(5192),
+    j = n(590415),
     C = n(354459),
-    I = n(383519);
+    I = n(28594);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ let Z = i.memo(function (e) {
                     className: I.text,
                     variant: "text-sm/normal",
                     color: "header-primary",
-                    children: j.ZP.getName(t, n, i),
+                    children: v.ZP.getName(t, n, i),
                 }),
                 l
                     ? (0, r.jsx)(p.Ucv, {
@@ -105,8 +105,8 @@ let Z = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
-            h = u === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = u === v.xO.REQUESTED_TO_SPEAK || h;
+            h = u === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = u === j.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -141,16 +141,16 @@ let Z = i.memo(function (e) {
     N = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
-            j = l.getGuildId(),
-            v = x.default.getId(),
+            v = l.getGuildId(),
+            j = x.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
             T = (0, _.bp)(),
             N = (0, d.e7)([O.ZP], () => {
                 var e;
-                return null != j && (null == (e = O.ZP.getMember(j, s.id)) ? void 0 : e.premiumSince) != null;
-            }, [j, s.id]),
+                return null != v && (null == (e = O.ZP.getMember(v, s.id)) ? void 0 : e.premiumSince) != null;
+            }, [v, s.id]),
             R = i.useRef(null);
-        o()(null != j, "Channel cannot be guildless");
+        o()(null != v, "Channel cannot be guildless");
         let w = i.useCallback(
             (e) => {
                 (0, m.h)({
@@ -158,7 +158,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: "AudienceTile",
-                        is_tile_owner: s.id === v,
+                        is_tile_owner: s.id === j,
                         tile_type: C.TH.USER,
                     },
                 }),
@@ -167,17 +167,17 @@ let Z = i.memo(function (e) {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("79695"),
-                                n.e("98783"),
+                                n.e("66165"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
                                     E(S({}, t), {
                                         user: s,
-                                        guildId: j,
+                                        guildId: v,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
@@ -192,7 +192,7 @@ let Z = i.memo(function (e) {
                         { context: T },
                     );
             },
-            [s, v, T, j, l, Z],
+            [s, j, T, v, l, Z],
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: R,
@@ -218,7 +218,7 @@ let Z = i.memo(function (e) {
                         {
                             children: (0, r.jsx)(P, {
                                 participant: t,
-                                guildId: j,
+                                guildId: v,
                                 channel: l,
                                 isPremium: N,
                             }),

@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(51144),
     p = n(553393),
     f = n(981631),
-    m = n(388032),
-    h = n(818923),
-    g = n(746882);
+    h = n(388032),
+    g = n(674455),
+    m = n(6723);
 let _ = function (e) {
     let { quest: t } = e,
         [n, l] = i.useState(!1),
@@ -20,7 +20,7 @@ let _ = function (e) {
         b = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
         E = d.ZP.useName(b),
         O = (0, c.Z)(null == b ? void 0 : b.id),
-        I = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -82,24 +82,24 @@ let _ = function (e) {
             [t, O, E],
         );
     return (0, r.jsx)("div", {
-        className: h.previewBackground,
+        className: g.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: h.previewCard,
+            className: g.previewCard,
             children: [
                 (0, r.jsx)(o.Heading, {
-                    className: g.heading,
+                    className: m.heading,
                     variant: "heading-md/semibold",
-                    children: m.intl.string(m.t.jY7Zxg),
+                    children: h.intl.string(h.t.jY7Zxg),
                 }),
                 (0, r.jsx)("div", {
-                    className: g.previewDescription,
-                    children: m.intl.string(m.t.q3hbne),
+                    className: m.previewDescription,
+                    children: h.intl.string(h.t.q3hbne),
                 }),
                 (0, r.jsx)("div", {
-                    className: g.memberListContainer,
+                    className: m.memberListContainer,
                     children: (0, r.jsx)(o.yRy, {
                         targetElementRef: _,
-                        renderPopout: I,
+                        renderPopout: y,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => l(!1),
@@ -112,12 +112,12 @@ let _ = function (e) {
                         children: () =>
                             (0, r.jsx)("div", {
                                 ref: _,
-                                className: a()(g.minimalMemberItem, { [g.selected]: n }),
+                                className: a()(m.minimalMemberItem, { [m.selected]: n }),
                                 children: (0, r.jsx)(o.P3F, {
                                     onClick: () => l(!n),
                                     tabIndex: 0,
                                     children: (0, r.jsxs)("div", {
-                                        className: g.memberItemContent,
+                                        className: m.memberItemContent,
                                         children: [
                                             (0, r.jsx)(o.qEK, {
                                                 size: o.EFr.SIZE_32,
@@ -126,7 +126,7 @@ let _ = function (e) {
                                                 "aria-label": null == b ? void 0 : b.username,
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: g.memberInfo,
+                                                className: m.memberInfo,
                                                 children: [
                                                     (0, r.jsx)(o.Text, {
                                                         variant: "text-md/semibold",
@@ -136,7 +136,7 @@ let _ = function (e) {
                                                     (0, r.jsx)(o.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: m.intl.string(m.t.b9w3bO),
+                                                        children: h.intl.string(h.t.b9w3bO),
                                                     }),
                                                 ],
                                             }),

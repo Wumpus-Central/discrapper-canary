@@ -20,10 +20,10 @@ var r = n(951288),
     O = n(392552),
     v = n(784222),
     I = n(926243),
-    T = n(149203),
-    S = n(981631),
+    S = n(149203),
+    T = n(981631),
     A = n(388032),
-    C = n(999642);
+    C = n(39162);
 function N(e, t, n) {
     return (
         t in e
@@ -150,8 +150,8 @@ let L = (e) => {
         i.useEffect(() => {
             E.DZ.loadIfNecessary();
         }, []);
-    let e_ = a === T.Su.LARGE,
-        ep = a === T.Su.MEDIUM,
+    let e_ = a === S.Su.LARGE,
+        ep = a === S.Su.MEDIUM,
         eh = (e) => {
             let t = "".concat(e.rowIndex, "c").concat(e.columnIndex),
                 n = function () {
@@ -211,7 +211,7 @@ let L = (e) => {
                                     }),
                                     (0, f.D)(e.guildId),
                                     e.sectionCollapsedToThreeRows || q(),
-                                    y.default.track(S.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
+                                    y.default.track(T.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
                                         collapsed: e.sectionCollapsedToThreeRows,
                                         guild_id: e.guildId,
                                     }));
@@ -253,7 +253,7 @@ let L = (e) => {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1,
                                 }),
-                                m.Z.open(e.guildId, S.pNK.EMOJI, S.jXE.EMOJI_PICKER_POPOUT));
+                                m.Z.open(e.guildId, T.pNK.EMOJI, T.jXE.EMOJI_PICKER_POPOUT));
                     };
                     return n({
                         handleSelect: t,
@@ -316,7 +316,7 @@ let L = (e) => {
                     children: e.map(eh),
                 }),
             );
-    if (V === T.UX.SOUNDMOJI)
+    if (V === S.UX.SOUNDMOJI)
         return (0, r.jsx)("ul", {
             className: C.emojiListRow,
             ref: ef,
@@ -325,13 +325,13 @@ let L = (e) => {
                 onSelectSoundmoji: P,
             }),
         });
-    if (V !== T.En.TOP_GUILD_EMOJI) return em(t);
+    if (V !== S.En.TOP_GUILD_EMOJI) return em(t);
     let eg = t.filter((e) => {
             if (X && e.type === v.ld.CREATE_EMOJI) return !0;
             let t = e;
             return (
-                t.subCategory === T.t0.TOP_GUILD_EMOJI ||
-                (t.subCategory === T.t0.NEWLY_ADDED_EMOJI &&
+                t.subCategory === S.t0.TOP_GUILD_EMOJI ||
+                (t.subCategory === S.t0.NEWLY_ADDED_EMOJI &&
                     t.emoji.type === _.B.GUILD &&
                     !p.Z.isNewerThanLastSeen(t.emoji.guildId, t.emoji.id))
             );
@@ -339,7 +339,7 @@ let L = (e) => {
         eE = t.filter((e) => {
             let t = e;
             return (
-                t.subCategory === T.t0.NEWLY_ADDED_EMOJI &&
+                t.subCategory === S.t0.NEWLY_ADDED_EMOJI &&
                 t.emoji.type === _.B.GUILD &&
                 p.Z.isNewerThanLastSeen(t.emoji.guildId, t.emoji.id)
             );

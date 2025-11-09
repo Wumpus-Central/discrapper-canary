@@ -20,14 +20,14 @@ var r = n(951288),
     O = n(802529),
     v = n(11133),
     I = n(303524),
-    T = n(329520),
-    S = n(233023),
+    S = n(329520),
+    T = n(233023),
     A = n(868781),
     C = n(122943),
     N = n(556638),
     R = n(981631),
     P = n(388032),
-    w = n(80568);
+    w = n(666998);
 function D(e, t, n) {
     return (
         t in e
@@ -211,7 +211,7 @@ function Z(e) {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || D;
             if (null != L)
-                return (0, r.jsx)(T.Z, {
+                return (0, r.jsx)(S.Z, {
                     stream: L,
                     game: Y,
                     textVariant: "text-".concat(h, "/medium"),
@@ -256,7 +256,7 @@ function Z(e) {
                 null != L &&
                     e.push(
                         (0, r.jsx)(
-                            T.Z,
+                            S.Z,
                             M(
                                 x(
                                     {
@@ -315,7 +315,7 @@ function Z(e) {
         eo = () =>
             null == Z && null == V
                 ? null
-                : (0, r.jsx)(S.Z, {
+                : (0, r.jsx)(T.Z, {
                       customStatusActivity: Z,
                       textSize: h,
                       animateEmoji: O,

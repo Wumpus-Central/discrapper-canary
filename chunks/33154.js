@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(41776),
     f = n(981631),
     _ = n(388032),
-    p = n(576385),
+    p = n(29030),
     h = (function (e) {
         return (e[(e.CHAT = 0)] = "CHAT"), (e[(e.REACTIONS = 1)] = "REACTIONS"), e;
     })({});
@@ -39,7 +39,7 @@ let m = (e) => {
             return (0, u.vE)(t);
     }
     if (null == v) return null;
-    let T = async () => {
+    let S = async () => {
         y(!0);
         try {
             await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m();
@@ -76,7 +76,7 @@ let m = (e) => {
                                 variant: "primary",
                                 text: _.intl.string(_.t["9VLmlZ"]),
                                 buttonRef: g,
-                                onClick: T,
+                                onClick: S,
                                 loading: b,
                             }),
                             (0, r.jsx)(o.zx, {

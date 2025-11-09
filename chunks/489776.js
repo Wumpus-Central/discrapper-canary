@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(358458),
+    l = n(509442),
     a = n(722770),
     s = n(481060),
     o = n(236413),
@@ -9,7 +9,7 @@ var r = n(951288),
     d = n(65912),
     u = n(564488),
     g = n(388032),
-    m = n(32490);
+    m = n(593631);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,10 +58,10 @@ function h(e) {
         h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [b] = i.useState(h),
         [x, j] = i.useState(!1),
-        { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
+        { editingRule: _, createNewEditingRule: v } = (0, d.V)(),
         { getDefaultRuleName: O } = c.I6[n],
-        C = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [y, N] = i.useState(C ? v : b),
+        C = !(0, o.Vb)(_) && (null == _ ? void 0 : _.triggerType) === n,
+        [y, N] = i.useState(C ? _ : b),
         E = (0, s.q_F)({
             opacity: +!C,
             pointerEvents: C ? "none" : "all",
@@ -72,13 +72,13 @@ function h(e) {
             pointerEvents: C ? "all" : "none",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(C ? v : b);
+                N(C ? _ : b);
             },
             onRest: () => {
-                N(C ? v : b), j(C);
+                N(C ? _ : b), j(C);
             },
         });
-    return null == v || C
+    return null == _ || C
         ? (0, r.jsxs)("div", {
               className: m.mainRuleContainer,
               style: { height: C ? "auto" : "60px" },
@@ -97,7 +97,7 @@ function h(e) {
                       children: (0, r.jsxs)(s.P3F, {
                           className: m.addAnotherRuleCardContainer,
                           onClick: () => {
-                              _(t, n);
+                              v(t, n);
                           },
                           children: [
                               (0, r.jsx)(s.oFk, {

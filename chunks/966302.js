@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(442837),
     c = n(481060),
     u = n(26151),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(932724),
     v = n(672339),
     I = n(898531),
-    T = n(923973),
-    S = n(189771),
+    S = n(923973),
+    T = n(189771),
     A = n(560688),
     C = n(88479),
     N = n(136995),
@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(295907),
     W = n(65154),
     K = n(388032),
-    z = n(993103),
-    q = n(450943),
-    X = n(315091);
+    z = n(327667),
+    q = n(70623),
+    X = n(285236);
 function Q(e, t, n) {
     return (
         t in e
@@ -147,8 +147,8 @@ function eo(e) {
 function es(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
-        { cameraUnavailable: l, enabled: d } = (0, T.Z)(),
-        _ = (0, S.Z)(n),
+        { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
+        _ = (0, T.Z)(n),
         p = i.useRef(null),
         g = a > 1;
     return (0, r.jsxs)("div", {
@@ -247,7 +247,7 @@ function el(e) {
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
-        T =
+        S =
             null != I
                 ? k.ZP.getGuildIconURL({
                       id: I.id,
@@ -255,7 +255,7 @@ function el(e) {
                       size: ea,
                   })
                 : null,
-        S = null != (t = (0, g.x)(h, ea, !0)) ? t : T,
+        T = null != (t = (0, g.x)(h, ea, !0)) ? t : S,
         A = (0, E.ZP)(h),
         [C, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         R = null != I ? "".concat(A, ", ").concat(I.name) : A,
@@ -288,7 +288,7 @@ function el(e) {
                 : K.intl.string(K.t.KcnWCO),
         $ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != I && null == T
+                null != I && null == S
                     ? (0, r.jsx)("div", {
                           className: o()(q.icon, z.wrapper, z.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
@@ -308,7 +308,7 @@ function el(e) {
                     : (0, r.jsx)(G.Z, {
                           className: q.icon,
                           ringing: L,
-                          src: null != S ? S : "",
+                          src: null != T ? T : "",
                           ringingType: G.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80,
                       }),

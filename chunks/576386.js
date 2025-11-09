@@ -1,50 +1,50 @@
 n.d(t, { Z: () => v });
 var l = n(951288),
-    i = n(647438),
-    r = n(120356),
-    s = n.n(r),
+    r = n(647438),
+    i = n(120356),
+    s = n.n(i),
     a = n(481060),
     o = n(135483),
     c = n(171019),
-    d = n(104505),
-    u = n(74538),
+    u = n(104505),
+    d = n(74538),
     p = n(539530),
     m = n(566697),
-    x = n(388032),
-    h = n(24391);
-let g = (e) => {
+    h = n(388032),
+    g = n(801707);
+let x = (e) => {
         var t;
-        let { currentUser: n, nameplate: r, section: o, canUsePremiumCollectibles: u, isSelected: g, onClick: v } = e,
-            _ = (0, i.useRef)(null),
-            { isHoveringOrFocusing: C } = (0, d.Z)(_);
+        let { currentUser: n, nameplate: i, section: o, canUsePremiumCollectibles: d, isSelected: x, onClick: v } = e,
+            _ = (0, r.useRef)(null),
+            { isHoveringOrFocusing: j } = (0, u.Z)(_);
         return (0, l.jsxs)(a.P3F, {
             innerRef: _,
-            "aria-label": null != (t = r.label) ? t : x.intl.string(x.t.x5CoXR),
-            className: h.nameplateItem,
+            "aria-label": null != (t = i.label) ? t : h.intl.string(h.t.x5CoXR),
+            className: g.nameplateItem,
             onClick: v,
             children: [
                 (0, l.jsx)(m.Z, {
-                    nameplate: r,
+                    nameplate: i,
                     user: n,
                     showPlaceholderUser: !0,
-                    isHighlighted: C,
+                    isHighlighted: j,
                 }),
-                (0, l.jsx)("div", { className: s()(h.nameplateItemOverlay, { [h.selected]: g }) }),
+                (0, l.jsx)("div", { className: s()(g.nameplateItemOverlay, { [g.selected]: x }) }),
                 (0, l.jsx)(c.Z, {
                     isPurchaseSection: o === p.$0.PURCHASE,
                     isPremiumSection: o === p.$0.PREMIUM_PURCHASE,
-                    canUsePremiumCollectibles: u,
-                    skuId: r.skuId,
+                    canUsePremiumCollectibles: d,
+                    skuId: i.skuId,
                 }),
             ],
         });
     },
     v = (e) => {
-        let { currentUser: t, selectedNameplate: n, guildId: i, onSelect: r, onOpenShop: c } = e,
-            d = u.ZP.canUseCollectibles(t),
+        let { currentUser: t, selectedNameplate: n, guildId: r, onSelect: i, onOpenShop: c } = e,
+            u = d.ZP.canUseCollectibles(t),
             m = (0, p.ZP)();
         return (0, l.jsx)(a.u2D, {
-            className: h.inventory,
+            className: g.inventory,
             children: m.map((e) =>
                 (0, l.jsxs)(
                     a.Kqy,
@@ -57,11 +57,11 @@ let g = (e) => {
                             }),
                             e.section === p.$0.PURCHASE &&
                                 (0, l.jsxs)("div", {
-                                    className: h.inventoryControls,
+                                    className: g.inventoryControls,
                                     children: [
                                         (0, l.jsxs)(a.P3F, {
-                                            className: s()(h.inventoryControlsButton, { [h.selected]: null == n }),
-                                            onClick: () => r(null),
+                                            className: s()(g.inventoryControlsButton, { [g.selected]: null == n }),
+                                            onClick: () => i(null),
                                             children: [
                                                 (0, l.jsx)(a.t6m, {
                                                     size: "md",
@@ -70,14 +70,14 @@ let g = (e) => {
                                                 (0, l.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     children:
-                                                        null != i
-                                                            ? x.intl.string(x.t.CHf9iJ)
-                                                            : x.intl.string(x.t.PoWNfe),
+                                                        null != r
+                                                            ? h.intl.string(h.t.CHf9iJ)
+                                                            : h.intl.string(h.t.PoWNfe),
                                                 }),
                                             ],
                                         }),
                                         (0, l.jsxs)(a.P3F, {
-                                            className: h.inventoryControlsButton,
+                                            className: g.inventoryControlsButton,
                                             onClick: c,
                                             children: [
                                                 (0, l.jsx)(a.EOn, {
@@ -86,26 +86,26 @@ let g = (e) => {
                                                 }),
                                                 (0, l.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
-                                                    children: x.intl.string(x.t.pWG4ze),
+                                                    children: h.intl.string(h.t.pWG4ze),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
                             (0, l.jsx)("div", {
-                                className: h.list,
-                                children: e.items.filter(o.k).map((i) =>
+                                className: g.list,
+                                children: e.items.filter(o.k).map((r) =>
                                     (0, l.jsx)(
-                                        g,
+                                        x,
                                         {
                                             currentUser: t,
-                                            nameplate: i,
+                                            nameplate: r,
                                             section: e.section,
-                                            canUsePremiumCollectibles: d,
-                                            isSelected: (null == n ? void 0 : n.skuId) === i.skuId,
-                                            onClick: () => r(i),
+                                            canUsePremiumCollectibles: u,
+                                            isSelected: (null == n ? void 0 : n.skuId) === r.skuId,
+                                            onClick: () => i(r),
                                         },
-                                        i.skuId,
+                                        r.skuId,
                                     ),
                                 ),
                             }),

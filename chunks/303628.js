@@ -18,9 +18,9 @@ var r = n(951288),
     b = n(444282),
     y = n(898463),
     O = n(981631),
-    v = n(83120),
-    I = n(154257);
-function T(e, t, n) {
+    v = n(300981),
+    I = n(525685);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function R(e, t) {
 }
 let P = [];
 function w(e) {
-    let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
+    let { channelId: t, type: n, ignoreFile: a, smallAttachments: S = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
         w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
@@ -184,7 +184,7 @@ function w(e) {
                           a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          C(S({ ref: i }, a), {
+                          C(T({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
                                   ? M.map((e) =>
@@ -207,7 +207,7 @@ function w(e) {
                                                 upload: e,
                                                 keyboardModeEnabled: A,
                                                 clip: e.clip,
-                                                size: T ? E.q.SMALL : E.q.MEDIUM,
+                                                size: S ? E.q.SMALL : E.q.MEDIUM,
                                             },
                                             e.id,
                                         ),

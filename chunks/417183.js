@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(239091),
     d = n(617015),
-    p = n(67165);
+    p = n(165342);
 function f(e, t, n) {
     return (
         t in e
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ function h(e, t) {
         e
     );
 }
-class g extends i.PureComponent {
+class m extends i.PureComponent {
     componentWillLeave(e) {
         s.Z.parallel([
             s.Z.timing(this.state.opacity, {
@@ -85,7 +85,7 @@ class g extends i.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: i } = this.state,
-            { children: l, user: u, onClick: d, isActive: f, className: g, activeClassName: _ } = this.props;
+            { children: l, user: u, onClick: d, isActive: f, className: m, activeClassName: _ } = this.props;
         return (0, r.jsx)(o.mh, {
             id: u.id,
             children: (o) =>
@@ -96,10 +96,10 @@ class g extends i.PureComponent {
                     },
                     children: (0, r.jsx)(
                         s.Z.div,
-                        h(
-                            m(
+                        g(
+                            h(
                                 {
-                                    className: a()(g, p.peopleListItem, null != _ ? { [_]: f || i } : null, {
+                                    className: a()(m, p.peopleListItem, null != _ ? { [_]: f || i } : null, {
                                         [p.active]: f || i,
                                     }),
                                     onContextMenu: (e) => this.handleContextMenu(e, u),
@@ -143,7 +143,7 @@ class g extends i.PureComponent {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(e, h(m({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, g(h({}, n), { user: t }));
                         },
                         {
                             onClose: () => {
@@ -154,4 +154,4 @@ class g extends i.PureComponent {
             });
     }
 }
-let _ = g;
+let _ = m;

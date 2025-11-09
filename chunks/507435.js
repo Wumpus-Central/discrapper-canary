@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(139256),
     g = n(489887),
     E = n(388032),
-    b = n(18294);
+    b = n(314900);
 function y(e, t, n) {
     return (
         t in e
@@ -66,8 +66,8 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = 16;
-function S() {
+let S = 16;
+function T() {
     return (0, r.jsx)("svg", {
         width: "24",
         height: "24",
@@ -85,7 +85,7 @@ function S() {
 function A(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(S, {});
+    if (n) t = (0, r.jsx)(T, {});
     else if (null != i) {
         let e = "" !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -145,7 +145,7 @@ function N(e) {
                                 children: o,
                             }),
                             (0, r.jsx)(m.ZY, {
-                                size: T,
+                                size: S,
                                 className: b.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0,
@@ -221,7 +221,7 @@ function P(e) {
             messageId: n.id,
         }),
         I = n.messageReference,
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             null != I &&
                 c.Z.jumpToMessage({
                     channelId: I.channel_id,
@@ -242,13 +242,13 @@ function P(e) {
                           username: O.nick,
                           usernameHook: v(O),
                           title: y,
-                          titleOnClick: T,
+                          titleOnClick: S,
                       }),
                   }),
                   (0, r.jsx)(R, {
                       className: b.embed,
                       data: m,
-                      onClickPollLink: u ? void 0 : T,
+                      onClickPollLink: u ? void 0 : S,
                   }),
               ],
           });

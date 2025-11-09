@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(481060),
     c = n(359135),
     u = n(516817),
-    d = n(81298);
+    d = n(386841);
 function f(e, t, n) {
     return (
         t in e
@@ -95,8 +95,8 @@ let E = function (e) {
             hovered: O,
             selected: v,
             muted: I,
-            to: T,
-            avatarClassName: S,
+            to: S,
+            avatarClassName: T,
             selectedClassName: A,
             innerClassName: C,
             wrapContent: N,
@@ -127,7 +127,7 @@ let E = function (e) {
         [d.selected]: v,
         [d.highlighted]: R,
         [null != A ? A : ""]: v,
-        [d.clickable]: !v && (null != T || null != y),
+        [d.clickable]: !v && (null != S || null != y),
     })),
         (w["aria-selected"] = null != (t = w["aria-selected"]) ? t : v);
     let D = i.useRef(null),
@@ -149,7 +149,7 @@ let E = function (e) {
                     }),
                     children: [
                         (0, r.jsx)("div", {
-                            className: o()(d.avatar, S),
+                            className: o()(d.avatar, T),
                             children: a,
                         }),
                         (0, r.jsxs)("div", {
@@ -183,7 +183,7 @@ let E = function (e) {
                 }),
             ],
         });
-    return null != T
+    return null != S
         ? (0, r.jsx)(
               l.tEY,
               h(_({}, P), {
@@ -192,7 +192,7 @@ let E = function (e) {
                       h(
                           _(
                               {
-                                  to: T,
+                                  to: S,
                                   onClick: y,
                               },
                               w,

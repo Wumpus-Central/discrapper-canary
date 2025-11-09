@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(726985),
     p = n(981631),
     h = n(388032),
-    m = n(40086);
+    m = n(459289);
 function g(e, t, n) {
     return (
         t in e
@@ -79,16 +79,16 @@ function b() {
                     }),
                 ],
             }),
-        T = () => {
+        S = () => {
             if (c.isPlatformEmbedded)
                 return (0, r.jsx)(a.rsf, {
                     label: h.intl.string(h.t["PKDAJ/"]),
                     description: h.intl.string(h.t.ZPi4lM),
                     checked: t,
-                    onChange: (e) => S("autoToggle", e),
+                    onChange: (e) => T("autoToggle", e),
                 });
         },
-        S = (e, t) => {
+        T = (e, t) => {
             o.Z.update({ [e]: t });
         },
         A = () => {
@@ -112,9 +112,9 @@ function b() {
                                 label: h.intl.string(h.t.p9ZAJZ),
                                 description: h.intl.format(h.t.MLVL2M, { onClick: A }),
                                 checked: e,
-                                onChange: (e) => S("enabled", e),
+                                onChange: (e) => T("enabled", e),
                             }),
-                            T(),
+                            S(),
                             (0, r.jsx)(a.izJ, {}),
                         ],
                     }),
@@ -129,7 +129,7 @@ function b() {
                                 label: h.intl.string(h.t.UpQziA),
                                 description: h.intl.string(h.t["+9Lra7"]),
                                 checked: b,
-                                onChange: (e) => S("hidePersonalInformation", e),
+                                onChange: (e) => T("hidePersonalInformation", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -138,7 +138,7 @@ function b() {
                                 label: h.intl.string(h.t.q7WNGv),
                                 description: h.intl.string(h.t.m7mS2U),
                                 checked: g,
-                                onChange: (e) => S("hideInstantInvites", e),
+                                onChange: (e) => T("hideInstantInvites", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -147,7 +147,7 @@ function b() {
                                 label: h.intl.string(h.t.o56OZu),
                                 description: h.intl.string(h.t.eAkaik),
                                 checked: y,
-                                onChange: (e) => S("disableSounds", e),
+                                onChange: (e) => T("disableSounds", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -156,7 +156,7 @@ function b() {
                                 label: h.intl.string(h.t.qmYiYd),
                                 description: h.intl.string(h.t["ZAmpQ/"]),
                                 checked: O,
-                                onChange: (e) => S("disableNotifications", e),
+                                onChange: (e) => T("disableNotifications", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -165,7 +165,7 @@ function b() {
                                 label: h.intl.string(h.t["iA81+a"]),
                                 description: h.intl.string(h.t.P4vj0h),
                                 checked: v,
-                                onChange: (e) => S("enableContentProtection", e),
+                                onChange: (e) => T("enableContentProtection", e),
                             }),
                         }),
                     ],

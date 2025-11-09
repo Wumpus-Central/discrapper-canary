@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ });
 var a = n(951288);
 n(647438);
-var i = n(120356),
-    l = n.n(i),
-    r = n(668757),
+var r = n(120356),
+    i = n.n(r),
+    l = n(668757),
     s = n(481060),
     o = n(168107),
     c = n(480916),
@@ -15,10 +15,10 @@ var i = n(120356),
     x = n(695346),
     g = n(306052),
     f = n(594174),
-    b = n(517269),
-    v = n(197571);
+    b = n(103088),
+    v = n(10198);
 let j = () => {
-    Promise.all([n.e("52030"), n.e("1286")])
+    Promise.all([n.e("52030"), n.e("91403")])
         .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
@@ -50,11 +50,11 @@ function _() {
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom20),
+                className: i()(b.buttonsContainer, v.marginBottom20),
                 children: (0, a.jsx)(g.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom8),
+                className: i()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -63,7 +63,7 @@ function _() {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom8),
+                className: i()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -75,7 +75,7 @@ function _() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -84,7 +84,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -93,7 +93,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -102,7 +102,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -114,7 +114,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -123,16 +123,16 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Force libdiscore Crash",
-                                onClick: r.$R,
+                                onClick: l.$R,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: i()(b.buttonsContainer, v.marginBottom20),
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: n,

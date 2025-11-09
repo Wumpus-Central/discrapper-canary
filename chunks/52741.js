@@ -17,7 +17,7 @@ var i = n(120356),
     g = n(504865),
     E = n(474936),
     b = n(388032),
-    y = n(560230);
+    y = n(40747);
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
@@ -39,8 +39,8 @@ function v(e) {
             showYearlyPrice: m,
             priceOptions: v,
             textVariant: I,
-            className: T,
-            isApplicationHome: S,
+            className: S,
+            isApplicationHome: T,
             enablePremiumBrandRefresh: A,
             headerClassName: C,
             headingVariant: N = "heading-md/normal",
@@ -61,7 +61,7 @@ function v(e) {
         j = (0, h.N)(),
         k = (0, p.Ng)(),
         U = null == j ? void 0 : j.subscription_trial;
-    if (!S && !t && null != M && n === M && null != P && null != P.planIdFromItems) {
+    if (!T && !t && null != M && n === M && null != P && null != P.planIdFromItems) {
         let e = null != P.trialEndsAt ? s()(null == P ? void 0 : P.trialEndsAt).diff(s()(), "d") : 0,
             t = E.GP[P.planIdFromItems],
             n = f.ZP.formatPriceString(f.ZP.getDefaultPrice(t.id), t.interval),
@@ -90,7 +90,7 @@ function v(e) {
             children: i(),
         });
     }
-    if (!S && !t && i) {
+    if (!T && !t && i) {
         let e = f.ZP.formatPriceString(
             f.ZP.getDefaultPrice(n === E.PremiumTypes.TIER_0 ? E.Xh.PREMIUM_MONTH_TIER_0 : E.Xh.PREMIUM_MONTH_TIER_2),
             E.rV.MONTH,
@@ -133,21 +133,21 @@ function v(e) {
             (0, r.jsx)(g.Z, {
                 subscriptionTier: L,
                 isGift: t,
-                className: null != T ? T : y.price,
+                className: null != S ? S : y.price,
                 priceOptions: v,
                 variant: I,
-                isApplicationHome: S,
+                isApplicationHome: T,
                 enablePremiumBrandRefresh: A,
             }),
             m &&
                 (0, r.jsx)(g.Z, {
                     subscriptionTier: L,
                     interval: E.rV.YEAR,
-                    className: null != T ? T : y.price,
+                    className: null != S ? S : y.price,
                     isGift: t,
                     priceOptions: v,
                     variant: I,
-                    isApplicationHome: S,
+                    isApplicationHome: T,
                     enablePremiumBrandRefresh: A,
                 }),
         ],

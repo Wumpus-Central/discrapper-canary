@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(194359),
     p = n(313201),
     f = n(657682),
-    m = n(981631),
-    h = n(295907),
-    g = n(388032),
-    _ = n(470840),
-    b = n(197571);
+    h = n(981631),
+    g = n(295907),
+    m = n(388032),
+    _ = n(118213),
+    b = n(10198);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,24 +58,24 @@ function O(e, t) {
         e
     );
 }
-let I = n(349181),
-    y = {
+let y = n(349181),
+    v = {
         canSend: !1,
         hint: null,
         success: null,
         error: null,
     },
-    v = (0, p.hQ)(),
-    C = "".concat(v, "-decription"),
-    S = "".concat(v, "-error");
+    I = (0, p.hQ)(),
+    C = "".concat(I, "-decription"),
+    S = "".concat(I, "-error");
 function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return y;
+            return v;
         case "SUCCESS":
-            return O(E({}, y), { success: t.text });
+            return O(E({}, v), { success: t.text });
         case "HINT":
-            return O(E({}, y), {
+            return O(E({}, v), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -87,10 +87,10 @@ function T(e, t) {
     }
 }
 function N(e) {
-    let { placeholder: t = g.intl.string(g.t["Rn/sLl"]) } = e,
+    let { placeholder: t = m.intl.string(m.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [s, p] = i.useReducer(T, y),
+        [s, p] = i.useReducer(T, v),
         { canSend: E, hint: O, error: N, success: j } = s;
     return (
         i.useEffect(() => {
@@ -117,7 +117,7 @@ function N(e) {
                     () =>
                         p({
                             type: "SUCCESS",
-                            text: g.intl.format(g.t.Rtl1Ep, { discordTag: t }),
+                            text: m.intl.format(m.t.Rtl1Ep, { discordTag: t }),
                         }),
                     (e) => {
                         var n;
@@ -136,10 +136,10 @@ function N(e) {
                         (0, r.jsx)(u.Text, {
                             tag: "div",
                             variant: "heading-md/normal",
-                            children: g.intl.string(g.t["Rn/sLl"]),
+                            children: m.intl.string(m.t["Rn/sLl"]),
                         }),
                         (0, r.jsx)("img", {
-                            src: I,
+                            src: y,
                             alt: "Wumpus Waving",
                         }),
                     ],
@@ -156,20 +156,20 @@ function N(e) {
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
-                                id: v,
+                                id: I,
                                 inputRef: n,
                                 className: _.addFriendInput,
                                 inputClassName: _.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== h.mR.Enter && t.includes("#")) {
+                                    if (e.key !== g.mR.Enter && t.includes("#")) {
                                         o()(null != n.current, "Input is handling keypress when not mounted");
                                         let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
                                             l =
-                                                e.key === h.mR.Backspace ||
-                                                e.key === h.mR.ArrowRight ||
-                                                e.key === h.mR.ArrowLeft,
+                                                e.key === g.mR.Backspace ||
+                                                e.key === g.mR.ArrowRight ||
+                                                e.key === g.mR.ArrowLeft,
                                             a = e.which >= 48 && e.which <= 57;
                                         null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
                                             ? e.preventDefault()
@@ -180,7 +180,7 @@ function N(e) {
                                     if (e.length <= 0) return void p({ type: "RESET" });
                                     let t = "",
                                         [, n] = e.split("#");
-                                    null != n && (t = e + m.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
                                         p({
                                             type: "HINT",
                                             text: t,
@@ -207,7 +207,7 @@ function N(e) {
                             (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: g.intl.string(g.t["PMsq/b"]),
+                                text: m.intl.string(m.t["PMsq/b"]),
                                 disabled: !E,
                                 type: "submit",
                             }),

@@ -24,9 +24,9 @@ var r = n(951288),
     O = n(240126),
     v = n(147522),
     j = n(809780),
-    C = n(981631),
-    x = n(388032),
-    E = n(915087);
+    x = n(981631),
+    C = n(388032),
+    E = n(77902);
 function S(e) {
     var t, n, l, a, y, S, P;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
@@ -59,9 +59,9 @@ function S(e) {
                 null != e && y.markChannelRead(e);
             };
             return (
-                b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [y, a.channels]),
@@ -82,7 +82,7 @@ function S(e) {
             );
         }, [S]),
         i.useEffect(() => {
-            m.default.track(C.rMx.OPEN_POPOUT, { type: "Inbox" });
+            m.default.track(x.rMx.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         i.useEffect(
             () => (
@@ -95,9 +95,9 @@ function S(e) {
         ),
         (0, h.ZP)(
             () => (
-                b.S.subscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
-                    b.S.unsubscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                    b.S.unsubscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
                 }
             ),
         );
@@ -105,11 +105,11 @@ function S(e) {
     if (0 === M.length) {
         return (0, r.jsx)(O.Z, {
             Icon: d.xx7,
-            header: x.intl.string(x.t["6XMM+D"]),
+            header: C.intl.string(C.t["6XMM+D"]),
             tip:
                 (null == (P = s().os) ? void 0 : P.family) === "OS X"
-                    ? x.intl.string(x.t.w9uDOW)
-                    : x.intl.string(x.t.BiUJC6),
+                    ? C.intl.string(C.t.w9uDOW)
+                    : C.intl.string(C.t.BiUJC6),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -223,12 +223,12 @@ function I(e) {
                     (0, r.jsx)(d.Heading, {
                         className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: x.intl.string(x.t.vZPktJ),
+                        children: C.intl.string(C.t.vZPktJ),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: x.intl.string(x.t.vWkIII),
+                        children: C.intl.string(C.t.vWkIII),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -236,7 +236,7 @@ function I(e) {
                         children: (0, r.jsx)(d.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: x.intl.string(x.t["+IrDzN"]),
+                            text: C.intl.string(C.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -249,12 +249,12 @@ function P() {
     return (0, r.jsx)(O.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: x.intl.string(x.t["KG/ynf"]),
-        tip: x.intl.string(x.t.cvcKzX),
+        header: C.intl.string(C.t["KG/ynf"]),
+        tip: C.intl.string(C.t.cvcKzX),
     });
 }
 let N = () =>
     (0, r.jsx)(y.Z, {
-        onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ),
+        onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => x,
-    NK: () => C,
+    I: () => C,
+    NK: () => x,
 }),
     n(388685);
 var r,
@@ -13,9 +13,9 @@ var r,
     u = n(695346),
     d = n(885110),
     p = n(223730),
-    h = n(500275),
+    h = n(959067),
     f = n(388032),
-    g = n(87587),
+    g = n(515438),
     m = n(354810);
 function b(e) {
     let { closePopout: t } = e;
@@ -166,7 +166,7 @@ function j(e) {
         ],
     });
 }
-var C =
+var x =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -174,7 +174,7 @@ var C =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function x(e) {
+function C(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
         [g, b] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
@@ -244,16 +244,16 @@ function x(e) {
                     return null;
             }
         })(g),
-        C = (0, l.useRef)(t);
+        x = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !C.current && b(n), t !== C.current && (C.current = t);
+            t && !x.current && b(n), t !== x.current && (x.current = t);
         }, [n, t]),
         null == y || !t)
     )
         return d;
     if ("popover" === y.type) {
-        var x, E;
+        var C, E;
         let { action: e, title: t, body: n, textLink: l } = y;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -272,7 +272,7 @@ function x(e) {
                         src: m.Z,
                     },
                     actions: [
-                        ((x = (function (e) {
+                        ((C = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -305,7 +305,7 @@ function x(e) {
                                 },
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(E))
+                            ? Object.defineProperties(C, Object.getOwnPropertyDescriptors(E))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -314,9 +314,9 @@ function x(e) {
                                   }
                                   return n;
                               })(Object(E)).forEach(function (e) {
-                                  Object.defineProperty(x, e, Object.getOwnPropertyDescriptor(E, e));
+                                  Object.defineProperty(C, e, Object.getOwnPropertyDescriptor(E, e));
                               }),
-                        x),
+                        C),
                     ],
                 }),
                 d,

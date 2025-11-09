@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(275759),
     v = n(231757),
     I = n(888496),
-    T = n(266454),
-    S = n(565138),
+    S = n(266454),
+    T = n(565138),
     A = n(297700),
     C = n(553795),
     N = n(430824),
@@ -39,7 +39,7 @@ var r = n(951288),
     B = n(856651),
     Z = n(921944),
     F = n(388032),
-    V = n(11049);
+    V = n(465631);
 function H(e, t, n) {
     return (
         t in e
@@ -128,8 +128,8 @@ let z = (e) => {
                 (0, r.jsxs)("div", {
                     className: V.integration,
                     children: [
-                        (0, r.jsx)(S.Z, {
-                            size: S.Z.Sizes.SMALL,
+                        (0, r.jsx)(T.Z, {
+                            size: T.Z.Sizes.SMALL,
                             guild: a.guild,
                             className: V.guildIcon,
                         }),
@@ -172,8 +172,8 @@ function q(e) {
     let { onDisconnect: t, account: n, theme: a, locale: l } = e,
         [c, p] = i.useState(n.friendSync),
         [m, g] = i.useState(n.visibility),
-        [E, T] = i.useState(n.metadataVisibility),
-        [S, C] = i.useState(n.showActivity),
+        [E, S] = i.useState(n.metadataVisibility),
+        [T, C] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
         [P, D] = i.useState(null),
         [j, Z] = i.useState(!1),
@@ -181,7 +181,7 @@ function q(e) {
         q = (0, y.rR)(n.type),
         X = b.Z.get(q);
     i.useEffect(() => {
-        p(n.friendSync), g(n.visibility), T(n.metadataVisibility), C(n.showActivity);
+        p(n.friendSync), g(n.visibility), S(n.metadataVisibility), C(n.showActivity);
     }, [n]);
     let Q = {
             inProgressVisibility: N,
@@ -386,7 +386,7 @@ function q(e) {
             G.vbS.has(n.type) &&
                 (a = (0, r.jsx)(_.rsf, {
                     label: F.intl.format(F.t["6u6J0q"], { platform: e.name }),
-                    checked: S,
+                    checked: T,
                     onChange: eu,
                 })),
             (null == (t = b.Z.get(n.type)) ? void 0 : t.hasMetadata) === !0 &&
@@ -493,7 +493,7 @@ function q(e) {
                 });
             return;
         }
-        T(r), h.Z.setMetadataVisibility(n.type, n.id, r);
+        S(r), h.Z.setMetadataVisibility(n.type, n.id, r);
     }
     function ec(e) {
         p(e), h.Z.setFriendSync(n.type, n.id, e);
@@ -508,7 +508,7 @@ function q(e) {
             if (!1 === n.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
             null != e && (g(e), h.Z.setVisibility(n.type, n.id, e), R(null)),
-                null != t && (T(t), h.Z.setMetadataVisibility(n.type, n.id, t), D(null));
+                null != t && (S(t), h.Z.setMetadataVisibility(n.type, n.id, t), D(null));
         }, [n]);
     let ed = (0, x.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {
@@ -520,7 +520,7 @@ function X() {
     return (
         i.useEffect(
             () => () => {
-                (0, T.Q3)(c.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: Z.L.AUTO });
+                (0, S.Q3)(c.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: Z.L.AUTO });
             },
             [],
         ),

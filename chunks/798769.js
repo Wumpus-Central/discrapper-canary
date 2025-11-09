@@ -11,7 +11,7 @@ var i = n(442837),
     d = n(616030),
     f = n(474936),
     _ = n(388032),
-    p = n(15962);
+    p = n(900678);
 function h(e) {
     let {
             currentStep: t,
@@ -25,8 +25,8 @@ function h(e) {
             isGift: O,
             giftRecipient: v,
             isEligibleForTrial: I,
-            enablePremiumBrandRefresh: T,
-            isDisplayingWowMomentConfirmation: S,
+            enablePremiumBrandRefresh: S,
+            isDisplayingWowMomentConfirmation: T,
         } = e,
         A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         C = () => {
@@ -59,7 +59,7 @@ function h(e) {
                   }),
               ],
           })
-        : T || S
+        : S || T
           ? (0, r.jsx)(c.Z, {
                 hideCloseOnFullScreen: !0,
                 hideCloseButton: E,

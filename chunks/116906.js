@@ -19,8 +19,8 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     I = t(388032),
-    y = t(7994),
-    _ = t(878449);
+    y = t(847540),
+    _ = t(883172);
 function Z(e) {
     let { user: n, currentUser: t, guildId: Z, subsection: O, onClose: N } = e,
         { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),

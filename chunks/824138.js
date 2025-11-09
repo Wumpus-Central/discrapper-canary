@@ -7,15 +7,15 @@ var r = n(951288),
     o = n(481060),
     c = n(100527),
     u = n(600164),
-    d = n(670188),
+    d = n(456077),
     p = n(237583),
     f = n(63063),
-    m = n(870569),
-    h = n(582642),
-    g = n(115530),
+    h = n(870569),
+    g = n(345243),
+    m = n(115530),
     _ = n(981631),
     b = n(388032),
-    E = n(79822);
+    E = n(934537);
 function O(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ function O(e, t, n) {
         e
     );
 }
-function I(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function I(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-class v extends i.PureComponent {
+class I extends i.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -71,12 +71,12 @@ class v extends i.PureComponent {
     renderTitle() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(m.Z, {
                     children: this.isHost()
                         ? b.intl.formatToPlainString(b.t["6UJ7mh"], { count: this.props.party.length })
                         : b.intl.string(b.t.RZufbH),
                 }),
-                (0, r.jsx)(h.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
+                (0, r.jsx)(g.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -84,7 +84,7 @@ class v extends i.PureComponent {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, r.jsx)(m.Z, {
+            : (0, r.jsx)(h.Z, {
                   tooltipText: b.intl.string(b.t.LeZSpz),
                   onClick: e,
                   icon: o.Dio,
@@ -92,7 +92,7 @@ class v extends i.PureComponent {
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, r.jsx)(m.Z, {
+            ? (0, r.jsx)(h.Z, {
                   tooltipText: b.intl.string(b.t.U7N2Hs),
                   onClick: () => {
                       window.open(f.Z.getArticleURL(_.BhN.SPOTIFY_CONNECTION), "_blank");
@@ -150,7 +150,7 @@ class v extends i.PureComponent {
                                     text: n,
                                     children: (0, i.createElement)(
                                         o.qEK,
-                                        y(I({}, l), {
+                                        v(y({}, l), {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: o.EFr.SIZE_24,
@@ -178,7 +178,7 @@ class v extends i.PureComponent {
                                 text: b.intl.string(b.t.Zf4NPe),
                                 children: (0, r.jsx)(
                                     "div",
-                                    y(I({}, n), {
+                                    v(y({}, n), {
                                         ref: this.partyMemberOverflowRef,
                                         className: a()(E.overflow, t),
                                         children: e,
@@ -191,4 +191,4 @@ class v extends i.PureComponent {
             });
     }
 }
-let C = v;
+let C = I;

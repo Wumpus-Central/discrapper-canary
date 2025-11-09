@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(35282), n(388685);
+n.d(t, { Z: () => m }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(772848),
@@ -10,17 +10,17 @@ var r = n(951288),
     d = n(289341),
     p = n(981631),
     f = n(186901),
-    m = n(388032),
-    h = n(87805);
-function g(e) {
+    h = n(388032),
+    g = n(961588);
+function m(e) {
     let { applicationId: t } = e.match.params,
-        [g, _] = i.useState(!1),
+        [m, _] = i.useState(!1),
         b = i.useRef(!1),
         [E, O] = i.useState(null),
-        I = !u.isPlatformEmbedded && !a.tq && !g,
-        y = i.useMemo(() => (0, l.Z)(), []);
+        y = !u.isPlatformEmbedded && !a.tq && !m,
+        v = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
-        I &&
+        y &&
             !0 !== b.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
@@ -31,7 +31,7 @@ function g(e) {
                         params: {
                             applicationId: t,
                             url: location.href,
-                            attemptId: y,
+                            attemptId: v,
                         },
                     })
                         .then((e) => {
@@ -40,7 +40,7 @@ function g(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: y,
+                                    attempt_id: v,
                                     rpc_success: n,
                                 });
                         })
@@ -49,40 +49,40 @@ function g(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: y,
+                                    attempt_id: v,
                                     rpc_success: !1,
                                 });
                         })
                         .then(() => n.disconnect());
                 }),
             (b.current = !0));
-    }, [t, I, y]),
-    I && !1 !== E)
+    }, [t, y, v]),
+    y && !1 !== E)
         ? !0 === E
             ? (0, r.jsxs)("div", {
-                  className: h.container,
+                  className: g.container,
                   children: [
                       (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
-                          children: m.intl.string(m.t.csrAMJ),
+                          children: h.intl.string(h.t.csrAMJ),
                       }),
                       (0, r.jsx)(o.Text, {
                           variant: "text-xs/semibold",
-                          children: m.intl.string(m.t["m1+IBn"]),
+                          children: h.intl.string(h.t["m1+IBn"]),
                       }),
                       (0, r.jsx)(s.zxk, {
                           variant: "primary",
-                          text: m.intl.string(m.t.fIv16B),
+                          text: h.intl.string(h.t.fIv16B),
                           onClick: () => _(!0),
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: h.container,
+                  className: g.container,
                   children: [
                       (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
-                          children: m.intl.string(m.t["Z+hCVU"]),
+                          children: h.intl.string(h.t["Z+hCVU"]),
                       }),
                       (0, r.jsx)(o.$jN, {}),
                   ],

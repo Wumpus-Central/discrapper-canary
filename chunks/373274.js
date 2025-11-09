@@ -25,8 +25,8 @@ var r,
     O = n(915885),
     v = n(258871),
     j = n(216306),
-    C = n(398758),
-    x = n(737982),
+    x = n(398758),
+    C = n(737982),
     E = n(486311),
     S = n(620304),
     I = n(220444),
@@ -55,7 +55,7 @@ var r,
     X = n(53425),
     Q = n(424785),
     J = n(770202),
-    $ = n(437621),
+    $ = n(79556),
     ee = n(428127),
     et = n(950969),
     en = n(233657),
@@ -65,7 +65,7 @@ var r,
     eo = n(981631),
     ea = n(176505),
     es = n(388032),
-    ec = n(776677);
+    ec = n(344110);
 function eu(e, t, n) {
     return (
         t in e
@@ -705,7 +705,7 @@ class ef extends (r = l.PureComponent) {
                             );
                         case ei.z.GAME_SERVERS:
                             return (0, i.jsx)(
-                                x.Z,
+                                C.Z,
                                 {
                                     guildId: r.id,
                                     selected: a === ea.oC.GAME_SERVERS,
@@ -722,7 +722,7 @@ class ef extends (r = l.PureComponent) {
                 let { category: b, channel: _ } = m,
                     y = b instanceof D.VR,
                     j = _.record,
-                    C = "".concat(t).concat(_.id);
+                    x = "".concat(t).concat(_.id);
                 switch (j.type) {
                     case eo.d4z.GUILD_ANNOUNCEMENT:
                     case eo.d4z.GUILD_TEXT:
@@ -759,7 +759,7 @@ class ef extends (r = l.PureComponent) {
                                         : null,
                                 ],
                             },
-                            C,
+                            x,
                         );
                     case eo.d4z.GUILD_STAGE_VOICE:
                         var I, P;
@@ -777,7 +777,7 @@ class ef extends (r = l.PureComponent) {
                                 disableManageChannels: p,
                                 isFavoriteCategory: y,
                             },
-                            C,
+                            x,
                         );
                     case eo.d4z.GUILD_VOICE:
                         return (0, i.jsx)(
@@ -796,7 +796,7 @@ class ef extends (r = l.PureComponent) {
                                 isFavoriteCategory: y,
                                 withGuildIcon: g,
                             },
-                            C,
+                            x,
                         );
                     case eo.d4z.GUILD_STORE:
                         return (0, i.jsx)(
@@ -807,7 +807,7 @@ class ef extends (r = l.PureComponent) {
                                 position: _.position,
                                 selected: a === _.id,
                             },
-                            C,
+                            x,
                         );
                     case eo.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
@@ -828,7 +828,7 @@ class ef extends (r = l.PureComponent) {
                                 isFavoriteCategory: !1,
                                 forceTopLevelThread: !0,
                             },
-                            C,
+                            x,
                         );
                     default:
                         return null;
@@ -902,7 +902,7 @@ let eg = (e) => {
         d = (0, u.e7)([w.Z], () => w.Z.getChannel(n)),
         p = (0, u.e7)([w.Z], () => w.Z.getChannel(r)),
         h = (0, u.e7)([R.Z], () => R.Z.getGuildId()),
-        _ = (0, C.DM)(t),
+        _ = (0, x.DM)(t),
         y = l.useRef(null),
         O = l.useCallback((e, t) => {
             let n = y.current;
@@ -937,7 +937,7 @@ let eg = (e) => {
                 }),
             [],
         ),
-        x = (0, c.ZP)({
+        C = (0, c.ZP)({
             id: "channels",
             defaultFocused: null != n ? n : void 0,
             isEnabled: o,
@@ -945,7 +945,7 @@ let eg = (e) => {
             scrollToStart: v,
             scrollToEnd: j,
         }),
-        E = x.setFocus;
+        E = C.setFocus;
     l.useEffect(() => {
         null != n && E(n);
     }, [n, E]);
@@ -955,11 +955,11 @@ let eg = (e) => {
         children: (0, i.jsx)(f.Z, {
             section: eo.jXE.GUILD_CHANNEL_LIST,
             children: (0, i.jsx)(s.bG, {
-                navigator: x,
+                navigator: C,
                 children: (0, i.jsx)(
                     ef,
                     ep(ed({}, e), {
-                        listNavigator: x,
+                        listNavigator: C,
                         ref: y,
                         selectedChannel: d,
                         selectedVoiceChannel: p,

@@ -1,47 +1,47 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
     a = n.n(l),
     o = n(399606),
-    s = n(618158),
-    c = n(594174),
+    c = n(618158),
+    s = n(594174),
     u = n(822183),
     d = n(364125),
-    p = n(90753),
-    f = n(806777);
-function h(e) {
+    f = n(90753),
+    p = n(9589);
+function m(e) {
     let { focused: t, channelId: n, streamerId: l, stream: u } = e,
-        h = i.useRef(null),
-        m = (0, o.e7)([c.default], () => c.default.getCurrentUser());
-    a()(null != m, "user cannot be null"), (0, p.Z)(h, m, l, n);
+        m = i.useRef(null),
+        _ = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    a()(null != _, "user cannot be null"), (0, f.Z)(m, _, l, n);
     let {
         handleClick: g,
-        handleMouseDown: b,
-        handleMouseEnter: _,
-        handleMouseMove: y,
-        handleMouseUp: C,
+        handleMouseDown: v,
+        handleMouseEnter: b,
+        handleMouseMove: E,
+        handleMouseUp: h,
     } = (0, d.Z)({
-        user: m,
+        user: _,
         channelId: n,
         streamerId: l,
         stream: u,
         focused: t,
-        canvas: h.current,
+        canvas: m.current,
     });
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)("canvas", {
-            ref: h,
+            ref: m,
             onClick: g,
-            onMouseDown: b,
-            onMouseEnter: _,
-            onMouseMove: y,
-            onMouseUp: C,
-            className: f.sharedCanvas,
+            onMouseDown: v,
+            onMouseEnter: b,
+            onMouseMove: E,
+            onMouseUp: h,
+            className: p.sharedCanvas,
         }),
     });
 }
-function m(e) {
+function _(e) {
     let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
         {
             guildId: e.guildId,
@@ -52,7 +52,7 @@ function m(e) {
     return !t || e.hasScreenMessage
         ? null
         : (0, r.jsx)(
-              h,
+              m,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

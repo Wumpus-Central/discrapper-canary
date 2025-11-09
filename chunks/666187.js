@@ -10,9 +10,9 @@ var r,
     d = n(993365),
     f = n(639317),
     _ = n(388032),
-    p = n(8542),
-    h = n(979712),
-    m = n(154257);
+    p = n(258422),
+    h = n(219990),
+    m = n(525685);
 function g(e, t, n) {
     return (
         t in e
@@ -121,21 +121,21 @@ class I extends (r = a.Component) {
                 className: O,
                 id: v,
                 rows: I,
-                flex: T,
-                autosize: S,
+                flex: S,
+                autosize: T,
                 required: A,
                 onInvalid: C,
                 inputRef: N,
             } = this.props,
-            R = S ? f.g : "textarea",
+            R = T ? f.g : "textarea",
             P = this.hasError(),
             w = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
             D = this.getAriaDescribedBy();
         return (0, i.jsxs)("div", {
-            className: s()(h.inputWrapper, { [p.flex]: T }),
+            className: s()(h.inputWrapper, { [p.flex]: S }),
             children: [
                 (0, i.jsxs)("div", {
-                    className: s()(p.inputMaxLength, { [p.flex]: T }),
+                    className: s()(p.inputMaxLength, { [p.flex]: S }),
                     children: [
                         (0, i.jsx)(c.tEY, {
                             children: (0, i.jsx)(R, {

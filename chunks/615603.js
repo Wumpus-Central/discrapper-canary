@@ -20,10 +20,10 @@ var r = n(951288),
     O = n(283029),
     v = n(357956),
     I = n(275909),
-    T = n(981631),
-    S = n(474936),
+    S = n(981631),
+    T = n(474936),
     A = n(388032),
-    C = n(387473);
+    C = n(79665);
 function N(e, t, n) {
     return (
         t in e
@@ -88,7 +88,7 @@ function D(e) {
         } = e,
         _ = i.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
         p = (0, b.tl)(t),
-        h = (null == s ? void 0 : s.isPaused) === !0 && f === S.a$.NONE,
+        h = (null == s ? void 0 : s.isPaused) === !0 && f === T.a$.NONE,
         m = A.intl.string(A.t.mOWsF1);
     return (0, r.jsxs)(
         "li",
@@ -178,7 +178,7 @@ function x(e) {
                 _.default,
                 w(R({}, t), {
                     guildBoostSlots: [e],
-                    locationSection: T.jXE.SETTINGS_PREMIUM,
+                    locationSection: S.jXE.SETTINGS_PREMIUM,
                 }),
             ),
     );
@@ -199,8 +199,8 @@ let j = function (e) {
         { fractionalState: h } = (0, f.Z)(),
         v = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         I = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        T = h === S.a$.FP_SUB_PAUSED,
-        N = p && !T,
+        S = h === T.a$.FP_SUB_PAUSED,
+        N = p && !S,
         {
             appliedGuildBoostSlots: P,
             unappliedGuildBoostSlots: j,
@@ -281,7 +281,7 @@ let j = function (e) {
             ? A.intl.string(A.t["8pcUZi"])
             : A.intl.formatToPlainString(A.t.Kaw82o, { numUnappliedGuildBoostSlots: K });
     return (
-        (a = p && h === S.a$.NONE ? A.intl.string(A.t.mOWsF1) : A.intl.string(A.t.xr4m5B)),
+        (a = p && h === T.a$.NONE ? A.intl.string(A.t.mOWsF1) : A.intl.string(A.t.xr4m5B)),
         (0, r.jsx)("div", {
             className: C.wrapper,
             children: (0, r.jsxs)("div", {

@@ -17,7 +17,7 @@ var r = n(951288),
     _ = n(982183),
     y = n(981631),
     O = n(388032),
-    v = n(361584);
+    v = n(66449);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,7 +43,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function C(e, t) {
         e
     );
 }
-let x = {
+let C = {
     [_.ln.MENTION]: [_.r0.SETTINGS],
     [_.ln.REPLY]: [_.r0.SETTINGS],
     [_.ln.REACTION]: [_.r0.SETTINGS],
@@ -103,7 +103,7 @@ function S(e) {
         [h, f] = (0, i.useState)(!1),
         [m, _] = (0, i.useState)(!1),
         y = (0, i.useRef)(null),
-        { openMenu: O, closeMenu: x } = (0, b.z)();
+        { openMenu: O, closeMenu: C } = (0, b.z)();
     return (0, r.jsx)(a.yRy, {
         shouldShow: m,
         animation: a.yRy.Animation.NONE,
@@ -112,7 +112,7 @@ function S(e) {
         autoInvert: !1,
         targetElementRef: y,
         onRequestClose: () => {
-            _(!1), x(n.id, d);
+            _(!1), C(n.id, d);
         },
         renderPopout: (e) =>
             (0, r.jsx)(a.VqE, {
@@ -143,11 +143,11 @@ function S(e) {
                         }),
                             e.stopPropagation();
                         let t = !m;
-                        _(t), t ? O(n.id, d) : x(n.id, d);
+                        _(t), t ? O(n.id, d) : C(n.id, d);
                     },
                     children: (0, r.jsx)(
                         s,
-                        C(j({}, e), {
+                        x(j({}, e), {
                             message: n,
                             "aria-label": l,
                             className: v.actionIcon,
@@ -199,7 +199,7 @@ let I = {
                 });
             return (0, r.jsxs)(
                 a.v2r,
-                C(j({}, n), {
+                x(j({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": O.intl.string(O.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -246,7 +246,7 @@ let I = {
             return t.isThread()
                 ? (0, r.jsx)(
                       f.Z,
-                      C(j({}, n), {
+                      x(j({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: O.intl.string(O.t["1NBjqb"]),
@@ -254,7 +254,7 @@ let I = {
                   )
                 : (0, r.jsx)(
                       u.Z,
-                      C(j({}, n), {
+                      x(j({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: O.intl.string(O.t.Xm41aV),
@@ -270,7 +270,7 @@ function P(e) {
             return (0, i.useMemo)(() => {
                 let e = _.ln.MENTION,
                     r = new Set();
-                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), x[e].forEach((e) => r.add(e)), Array.from(r);
+                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), C[e].forEach((e) => r.add(e)), Array.from(r);
             }, [e, t, n]);
         })(t, l);
     return (0, r.jsx)(a.Kqy, {
@@ -285,7 +285,7 @@ function P(e) {
                 case "standard":
                     return (0, r.jsx)(
                         E,
-                        C(j({}, i), {
+                        x(j({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -294,7 +294,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         S,
-                        C(j({}, i), {
+                        x(j({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

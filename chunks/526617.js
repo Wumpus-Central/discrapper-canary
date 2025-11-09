@@ -27,8 +27,8 @@ var r = n(951288),
     O = n(409700),
     v = n(53691),
     I = n(75145),
-    T = n(609218),
-    S = n(386965),
+    S = n(609218),
+    T = n(386965),
     A = n(695346),
     C = n(19780),
     N = n(594174),
@@ -52,7 +52,7 @@ var r = n(951288),
     W = n(957825),
     K = n(474936),
     z = n(388032),
-    q = n(412553);
+    q = n(25220);
 function X(e, t, n) {
     return (
         t in e
@@ -236,22 +236,22 @@ function eu(e) {
             inExpressionPicker: ep,
             analyticsSource: eh,
         } = e,
-        { audioRef: em } = i.useContext(S.Z),
+        { audioRef: em } = i.useContext(T.Z),
         { analyticsLocations: eg } = (0, p.ZP)(),
         { analyticsLocations: eE } = (0, p.ZP)(_.Z.PREMIUM_UPSELL),
         { location: eb } = (0, f.O)(),
         ey = i.useMemo(() => $(Q({}, eb), { section: Y.jXE.SOUNDBOARD_SOUND_PICKER }), [eb]),
         [eO, ev] = i.useState(null),
         eI = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        eT = (0, D.I5)(eI, K.PremiumTypes.TIER_2),
-        eS = (0, l.e7)([R.Z], () => {
+        eS = (0, D.I5)(eI, K.PremiumTypes.TIER_2),
+        eT = (0, l.e7)([R.Z], () => {
             var e;
             return R.Z.getVoiceState(t, null != (e = null == eI ? void 0 : eI.id) ? e : Y.lds);
         }),
         eA =
-            (null == eS ? void 0 : eS.selfDeaf) ||
-            (null == eS ? void 0 : eS.mute) ||
-            (null == eS ? void 0 : eS.suppress),
+            (null == eT ? void 0 : eT.selfDeaf) ||
+            (null == eT ? void 0 : eT.mute) ||
+            (null == eT ? void 0 : eT.suppress),
         eC = (0, b.Iu)((e) => e.searchQuery),
         eN = null != eC && "" !== eC,
         eR = (0, m.Dt)(),
@@ -266,7 +266,7 @@ function eu(e) {
             () => eB.findLastIndex((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eB],
         ),
-        eF = !eT && J && -1 !== eZ,
+        eF = !eS && J && -1 !== eZ,
         eV = i.useMemo(() => (eF ? [0, 0, 8, 0] : [0, 0, 0, 0]), [eF]),
         eH = A.T4.useSetting(),
         eY = i.useMemo(() => new Set(eH), [eH]),
@@ -322,7 +322,7 @@ function eu(e) {
         eQ = i.useCallback(
             (e, n, i, s, l) => {
                 let c = eB[i.sectionIndex],
-                    u = J && es(c.categoryInfo, eT, t) && eF;
+                    u = J && es(c.categoryInfo, eS, t) && eF;
                 return (0, r.jsx)(
                     "ul",
                     $(Q({}, n), {
@@ -357,18 +357,18 @@ function eu(e) {
                     "row-".concat(n["aria-rowindex"]),
                 );
             },
-            [eB, J, eT, t, X, eX, a, eW, eK, eA, eg, eu, eF, ep],
+            [eB, J, eS, t, X, eX, a, eW, eK, eA, eg, eu, eF, ep],
         ),
         eJ = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !J) return !1;
                 let n = eB[e],
                     r = eB[e - 1],
-                    i = es(n.categoryInfo, eT, t),
-                    a = es(r.categoryInfo, eT, t);
+                    i = es(n.categoryInfo, eS, t),
+                    a = es(r.categoryInfo, eS, t);
                 return i && !a;
             },
-            [eB, J, eT],
+            [eB, J, eS],
         ),
         e$ = i.useCallback(() => {
             let e = L.Z.getSoundById(ea);
@@ -382,18 +382,18 @@ function eu(e) {
             });
         }, [e$]),
         e1 = i.useCallback((e) => (eJ(e, t) ? er : en), [t, eJ]),
-        e3 = i.useCallback(
+        e2 = i.useCallback(
             (e) => {
                 let t = e === eB.length - 1;
                 return eF && t ? 50 : eF && e === eZ ? 20 : 0;
             },
             [eB.length, eF, eZ],
         ),
-        e2 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
+        e3 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
         e4 = i.useCallback(
             (e, n) => {
                 let i = "".concat(e.key),
-                    a = J && es(e.categoryInfo, eT, t),
+                    a = J && es(e.categoryInfo, eS, t),
                     o = eJ(n, t),
                     s = eY.has(i),
                     l = () => {
@@ -419,7 +419,7 @@ function eu(e) {
                     "header-".concat(i),
                 );
             },
-            [eY, ez, t, eJ, J, eT, eF],
+            [eY, ez, t, eJ, J, eS, eF],
         ),
         e8 = i.useCallback(
             (e, t) => {
@@ -547,8 +547,8 @@ function eu(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != eO
-                    ? (0, r.jsx)(T.Z, {
-                          containerContext: ep ? T.p.TAB_PARENT_CONTAINER : T.p.NONE,
+                    ? (0, r.jsx)(S.Z, {
+                          containerContext: ep ? S.p.TAB_PARENT_CONTAINER : S.p.NONE,
                           image: {
                               url: tr,
                               width: 220,
@@ -582,12 +582,12 @@ function eu(e) {
                     renderRow: eQ,
                     renderSectionHeader: e4,
                     renderSectionFooter: e8,
-                    renderSection: e2,
+                    renderSection: e3,
                     renderCategoryList: e9,
                     renderHeaderAccessories: e7,
                     rowHeight: et,
                     sectionHeaderHeight: e1,
-                    sectionFooterHeight: e3,
+                    sectionFooterHeight: e2,
                     listPadding: eV,
                     itemNodeWidth: ei,
                     gridNavigatorId: eR,

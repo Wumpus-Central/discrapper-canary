@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(907331),
     c = n(793030),
     u = n(442837),
@@ -20,16 +20,16 @@ var r = n(951288),
     O = n(905128),
     v = n(156732),
     I = n(639777),
-    T = n(70300),
-    S = n(973772),
+    S = n(70300),
+    T = n(973772),
     A = n(441536),
     C = n(535396),
     N = n(981631),
-    R = n(269794),
-    P = n(459196),
+    R = n(97200),
+    P = n(789142),
     w = n(388032),
-    D = n(765179),
-    x = n(630564),
+    D = n(722177),
+    x = n(546241),
     L = n(611087);
 function M(e, t, n) {
     return (
@@ -97,8 +97,8 @@ function G(e) {
             onClose: O,
             onHover: v,
         } = e,
-        { analyticsLocations: T } = (0, _.ZP)(),
-        S = n !== C.A3.INACTIVE,
+        { analyticsLocations: S } = (0, _.ZP)(),
+        T = n !== C.A3.INACTIVE,
         R = (0, I.Z)(t),
         [L, M] = i.useState(!1),
         [k, G] = i.useState(!1),
@@ -112,10 +112,10 @@ function G(e) {
                         section: N.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: T,
+                    analyticsLocations: S,
                     guild: e,
                 });
-        }, [t, T]),
+        }, [t, S]),
         F = i.useCallback(() => {
             O(), (0, A.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, b);
         }, [t, b, O]),
@@ -177,7 +177,7 @@ function G(e) {
                             quantity: u,
                             decorator: null != g ? g : "",
                         }),
-                        isEnabled: S,
+                        isEnabled: T,
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: W,
@@ -218,7 +218,7 @@ function G(e) {
 function B(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         [o, s] = i.useState(!1),
-        l = (0, S.ZP)(t, n).type,
+        l = (0, T.ZP)(t, n).type,
         c = (0, v.Z)(n, o);
     return (0, r.jsx)(G, {
         guildId: t,
@@ -241,7 +241,7 @@ let Z = 3,
         }, [n.id]);
         let o = (0, E.BU)(n.id, "GuildPowerupsMarketingPowerupCards"),
             s = (0, u.e7)([b.Z], () => b.Z.getLowestGameCostForGuild(n.id)),
-            l = (0, T.Z)(n.id),
+            l = (0, S.Z)(n.id),
             d = (null != l ? l : []).slice(0, Z);
         return 0 === d.length
             ? null

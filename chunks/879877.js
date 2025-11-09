@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -8,18 +8,18 @@ var r = n(951288),
     s = n(481060),
     u = n(259580),
     d = n(785717),
-    f = n(86419),
-    g = n(978369),
+    g = n(86419),
+    f = n(978369),
     p = n(286957),
     m = n(388032),
-    b = n(44258);
-function y(e) {
+    b = n(200344);
+function h(e) {
     var t;
-    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: y = !1 } = e,
+    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
         P = o.qH,
-        I = a && !y && (0, f.M8)(c) && x.length < P,
+        I = a && !h && (0, g.M8)(c) && x.length < P,
         { trackUserProfileAction: w } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
@@ -53,7 +53,7 @@ function y(e) {
                             "aria-label": m.intl.string(m.t.EfjTi4),
                             children: Z.map((e) =>
                                 (0, r.jsx)(
-                                    h,
+                                    y,
                                     {
                                         tag: e,
                                         isCurrentUser: a,
@@ -62,7 +62,7 @@ function y(e) {
                                         ref: (t) => {
                                             null != t && S.current.set(e, t);
                                         },
-                                        disableInteraction: y,
+                                        disableInteraction: h,
                                     },
                                     e,
                                 ),
@@ -81,12 +81,12 @@ function y(e) {
                                           N(!0), w({ action: "EXPAND_GAME_TAGS" });
                                       },
                                       ref: E,
-                                      disableInteraction: y,
+                                      disableInteraction: h,
                                   })),
                     ],
                 }),
             I &&
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(f.Z, {
                     tags: n,
                     widgetType: c,
                     applicationId: s,
@@ -95,21 +95,21 @@ function y(e) {
         ],
     });
 }
-let h = (e) => {
+let y = (e) => {
         let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: l, ref: o } = e,
             { trackUserProfileEditAction: u } = (0, d.KZ)(),
-            g = (0, p.zK)(t);
-        if (null == g) return null;
-        let { getText: y, icon: h } = g;
+            f = (0, p.zK)(t);
+        if (null == f) return null;
+        let { getText: h, icon: y } = f;
         return (0, r.jsxs)("li", {
             className: b.tag,
             ref: o,
             children: [
-                (0, r.jsx)(h, { size: "xxs" }),
+                (0, r.jsx)(y, { size: "xxs" }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-xxs/medium",
                     color: "text-secondary",
-                    children: y(),
+                    children: h(),
                 }),
                 n &&
                     !l &&
@@ -117,7 +117,7 @@ let h = (e) => {
                         text: m.intl.string(m.t.Otv9fP),
                         children: (0, r.jsx)(s.P3F, {
                             onClick: () => {
-                                (0, f.RZ)(a, i, t),
+                                (0, g.RZ)(a, i, t),
                                     u({
                                         action: "TAG_REMOVED",
                                         widgetEdited: a,
@@ -125,7 +125,7 @@ let h = (e) => {
                                     });
                             },
                             className: b.removeButton,
-                            "aria-label": m.intl.formatToPlainString(m.t.GCn1ne, { tag: y() }),
+                            "aria-label": m.intl.formatToPlainString(m.t.GCn1ne, { tag: h() }),
                             children: (0, r.jsx)(s.Dio, {
                                 size: "xxs",
                                 color: "currentColor",
@@ -187,23 +187,23 @@ let h = (e) => {
             let s = null != (o = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? o : 0,
                 u = null != (c = null == (l = t.current) ? void 0 : l.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
-                f = 0,
                 g = 0,
+                f = 0,
                 p = r.current;
             for (let e = 0; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((g += t.offsetWidth + 4) > 296) break;
-                    f++;
+                    if ((f += t.offsetWidth + 4) > 296) break;
+                    g++;
                 }
             }
-            g = 0;
-            for (let e = f; e < n.length; e++) {
+            f = 0;
+            for (let e = g; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
-                    f++;
+                    if ((f += t.offsetWidth + 4) > 296 - s - u - d) break;
+                    g++;
                 }
             }
-            a(n.length - f);
+            a(n.length - g);
         }, [e, t, null == n ? void 0 : n.join(""), r, a]);

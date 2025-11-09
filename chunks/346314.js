@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(607070),
     f = n(865672),
     _ = n(109161),
-    p = n(836484);
+    p = n(10515);
 function h(e, t, n) {
     return (
         t in e
@@ -104,10 +104,10 @@ function O(e) {
         } = e,
         O = i.useContext(u.d),
         [v, I] = i.useState(!1),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             I(!0);
         }, []),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             I(!1);
         }, []),
         A = "username" === t,
@@ -146,8 +146,8 @@ function O(e) {
             : null;
     return (0, r.jsxs)("span", {
         className: o()(h, p.container),
-        onMouseEnter: T,
-        onMouseLeave: S,
+        onMouseEnter: S,
+        onMouseLeave: T,
         children: [
             "left" === d && j,
             (0, r.jsxs)("span", {

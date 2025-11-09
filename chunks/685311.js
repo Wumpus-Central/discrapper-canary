@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(35282), n(388685);
+n.d(t, { Z: () => m }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     s = n(120356),
@@ -9,13 +9,13 @@ var r = n(951288),
     u = n(388905),
     d = n(703656),
     h = n(388032),
-    g = n(197571);
-let p = function (e) {
+    g = n(10198);
+let m = function (e) {
     let { match: t, location: n, attemptDeepLink: s } = e,
-        [p, m] = i.useState(0);
+        [m, p] = i.useState(0);
     i.useEffect(() => {
         o.default.once("connected", () => {
-            m(1);
+            p(1);
         }),
             o.default.once("disconnected", () => {
                 (0, d.uL)((0, c.M)());
@@ -23,14 +23,14 @@ let p = function (e) {
             o.default.connect();
     }, []),
         i.useEffect(() => {
-            if (0 !== p) return;
+            if (0 !== m) return;
             let e = setTimeout(() => (0, d.uL)((0, c.M)()), 3000);
             return () => clearTimeout(e);
-        }, [p]);
+        }, [m]);
     let f = i.useCallback(
         async (e, t) => {
             try {
-                m(2), await s(e, t), m(3);
+                p(2), await s(e, t), p(3);
             } catch (e) {
                 console.error("Error opening deeplink", e);
             }
@@ -38,7 +38,7 @@ let p = function (e) {
         [s],
     );
     if ((0, d.DB)()) return null;
-    switch (p) {
+    switch (m) {
         case 1:
             return (0, r.jsxs)(u.ZP, {
                 children: [

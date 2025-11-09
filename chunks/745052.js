@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(907862),
     p = n(481060),
     f = n(150063),
-    m = n(112724),
-    h = n(183126),
-    g = n(493773),
+    h = n(112724),
+    g = n(183126),
+    m = n(493773),
     _ = n(209613),
     b = n(325708),
     E = n(320149),
     O = n(82295),
-    I = n(252618),
-    y = n(605236),
-    v = n(243778),
+    y = n(252618),
+    v = n(605236),
+    I = n(243778),
     C = n(984370),
     S = n(797614),
     T = n(359110),
@@ -50,8 +50,8 @@ var r = n(951288),
     J = n(921944),
     X = n(526761),
     $ = n(388032),
-    ee = n(803882),
-    et = n(97009);
+    ee = n(735516),
+    et = n(161655);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,14 +100,14 @@ function ei() {
         t = (0, V.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
-        c = (0, h.N)(),
+        c = (0, g.N)(),
         u = i.useCallback(() => {
             (0, p.showToast)((0, p.createToast)($.intl.string($.t["EDYbS+"]), p.ToastType.FAILURE));
         }, []),
         { rejectAll: d } = (0, B.m)({ onError: u }),
         f = (0, _.Z)("message-requests-list"),
-        { channelId: m } = (0, H._)(),
-        g = i.useCallback(() => {
+        { channelId: h } = (0, H._)(),
+        m = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
         b = i.useCallback(
@@ -122,8 +122,8 @@ function ei() {
                     {
                         index: s,
                         className: a()({
-                            [ee.selected]: null != m && m === u,
-                            [ee.siblingSelected]: null != m && m === c,
+                            [ee.selected]: null != h && h === u,
+                            [ee.siblingSelected]: null != h && h === c,
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -132,7 +132,7 @@ function ei() {
                     u,
                 );
             },
-            [l, n, m],
+            [l, n, h],
         ),
         E = i.useCallback(
             () =>
@@ -153,7 +153,7 @@ function ei() {
                                               children: "\u2022",
                                           }),
                                           (0, r.jsx)(p.Avr, {
-                                              onClick: g,
+                                              onClick: m,
                                               textVariant: "text-sm/normal",
                                               text: $.intl.string($.t.p6t7RC),
                                               "aria-label": $.intl.string($.t.p6t7RC),
@@ -165,7 +165,7 @@ function ei() {
                     },
                     "title",
                 ),
-            [t, g, c],
+            [t, m, c],
         );
     return (n.length !== t && S.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, r.jsx)(Y.Z, { section: K.pS.REQUESTS })
@@ -247,11 +247,11 @@ function el(e) {
 let ea = (e) => {
     let t = (0, U.Z)();
     return (i.useEffect(() => {
-        (0, y.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+        (0, v.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
     null == e.targetElementRef.current || R.Z.hasLayers() || (0, p.$sL)())
         ? e.children
-        : (0, r.jsx)(v.ZP, {
+        : (0, r.jsx)(I.ZP, {
               contentTypes: [u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
               children: (n) => {
                   let { visibleContent: i, markAsDismissed: l } = n,
@@ -318,10 +318,10 @@ function es(e) {
     let { section: t } = e;
     return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
 }
-let eo = (0, m.Z)(function (e) {
+let eo = (0, h.Z)(function (e) {
     let { width: t } = e,
         n = (0, V.q)();
-    (0, g.ZP)(() => {
+    (0, m.ZP)(() => {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
             (0, P.e)("message-requests"),
             D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
@@ -330,24 +330,24 @@ let eo = (0, m.Z)(function (e) {
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
         s = (0, z.w)(),
         [u, d] = i.useState(!1),
-        m = (0, c.e7)([w.ZP], () => {
+        h = (0, c.e7)([w.ZP], () => {
             let e = w.ZP.getSidebarState(w.uZ);
             return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
-        h = null == m ? void 0 : m.channelId,
-        _ = null != m,
-        b = (0, k.T)(h),
-        E = (0, M.J)(h),
+        g = null == h ? void 0 : h.channelId,
+        _ = null != h,
+        b = (0, k.T)(g),
+        E = (0, M.J)(g),
         O = i.useRef(null);
     i.useEffect(() => {
-        null != h && !b && E && _ && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
-    }, [h, E, _, b]);
-    let [y, v] = i.useState(K.pS.REQUESTS),
+        null != g && !b && E && _ && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
+    }, [g, E, _, b]);
+    let [v, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
-            v(e);
+            I(e);
         };
     return (
-        (0, I.Tt)({ location: $.intl.string($.t.e7GWjQ) }),
+        (0, y.Tt)({ location: $.intl.string($.t.e7GWjQ) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -377,7 +377,7 @@ let eo = (0, m.Z)(function (e) {
                                         (0, r.jsx)(C.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
                                             "aria-label": $.intl.string($.t.e7GWjQ),
-                                            selectedItem: y,
+                                            selectedItem: v,
                                             type: "top-pill",
                                             onItemSelect: A,
                                             children: [
@@ -401,7 +401,7 @@ let eo = (0, m.Z)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: et.content,
-                            children: (0, r.jsx)(es, { section: y }),
+                            children: (0, r.jsx)(es, { section: v }),
                         }),
                     ],
                 }),

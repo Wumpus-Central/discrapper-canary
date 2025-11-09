@@ -10,18 +10,18 @@ var r = n(951288),
     d = n(924557),
     p = n(435064),
     f = n(779618),
-    m = n(175470),
-    h = n(203259),
-    g = n(356659),
+    h = n(175470),
+    g = n(203259),
+    m = n(356659),
     _ = n(388032);
 function b(e) {
     let { canShowReminder: t = !1, className: b } = e,
         E = (0, f.Z)(u.Z),
         { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
-            hasNewClips: I,
-            lastClipsSession: y,
-            remindersEnabled: v,
+            hasNewClips: y,
+            lastClipsSession: v,
+            remindersEnabled: I,
             hasAnyClipAnimations: C,
         } = (0, l.cj)([p.Z], () => ({
             hasNewClips: p.Z.getNewClipIds().length > 0,
@@ -29,15 +29,15 @@ function b(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
-        S = null != y && y.newClipIds.length > 0,
-        T = (0, m.n)((e) => e.clipsButtonRef),
-        N = (0, m.n)((e) => e.setClipsButtonRef),
+        S = null != v && v.newClipIds.length > 0,
+        T = (0, h.n)((e) => e.clipsButtonRef),
+        N = (0, h.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: P, allowIdle: x } = (0, o.Y)("animation");
     function A() {
         (0, a.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("61342"), n.e("2161")]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("61342"), n.e("57882")]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -68,7 +68,7 @@ function b(e) {
                         })({}, t),
                     );
             },
-            { modalKey: g.Qr },
+            { modalKey: m.Qr },
         );
     }
     return (i.useEffect(() => (C ? P() : x(), () => x()), [C, P, x]), O && E)
@@ -76,13 +76,13 @@ function b(e) {
               children: [
                   null != T &&
                       t &&
-                      v &&
+                      I &&
                       S &&
                       !(0, a.$sL)() &&
                       !j &&
-                      (0, r.jsx)(h.Z, {
+                      (0, r.jsx)(g.Z, {
                           clipIconRef: T,
-                          lastClipsSession: y,
+                          lastClipsSession: v,
                           onOpenClipsGallery: A,
                       }),
                   (0, r.jsx)("div", {
@@ -90,7 +90,7 @@ function b(e) {
                       children: (0, r.jsx)(s.JO, {
                           className: b,
                           icon: a.AlX,
-                          showBadge: I,
+                          showBadge: y,
                           tooltip: _.intl.string(_.t.MXaLEM),
                           onClick: A,
                       }),

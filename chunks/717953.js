@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(531421),
+    b = n(24864),
     y = n(388032),
-    O = n(279457);
+    O = n(617385);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,
@@ -64,8 +64,8 @@ function I(e) {
                 ? void 0
                 : e.customUserThemeSettings;
         }),
-        { shouldShowNewBadge: I, markNewBadgeAsDismissed: T } = (0, g.w)(),
-        S = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { shouldShowNewBadge: I, markNewBadgeAsDismissed: S } = (0, g.w)(),
+        T = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         A = (0, d.ZP)(),
         C = (0, u.wjy)(A) ? O.darkOverlay : O.lightOverlay,
         N = null != a && null != a.colors && a.colors.length > 0,
@@ -89,8 +89,8 @@ function I(e) {
         L = (0, f.Sl)(E.Il.RED_430).hex,
         M = w ? x : void 0,
         j = i.useCallback(() => {
-            I && T(), null == n || n();
-        }, [I, T, n]);
+            I && S(), null == n || n();
+        }, [I, S, n]);
     return (0, r.jsxs)("div", {
         className: O.badgeContainer,
         children: [
@@ -104,7 +104,7 @@ function I(e) {
                 showLockedBadge: !1,
                 style: D,
                 children: [
-                    !S && !w && (0, r.jsx)(v, {}),
+                    !T && !w && (0, r.jsx)(v, {}),
                     (0, r.jsx)("div", { className: O.borderOverlay }),
                     (0, r.jsx)(s.V3v, {
                         color: M,

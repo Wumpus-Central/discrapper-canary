@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,7 +12,7 @@ var r = n(951288),
     m = n(838221),
     p = n(246364),
     f = n(388032),
-    h = n(31829);
+    h = n(866234);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -113,15 +113,15 @@ function j(e) {
                   }),
     });
 }
-let v = "FORM_FIELD";
-function _(e) {
+let _ = "FORM_FIELD";
+function v(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: m } = e,
         f = (0, s.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
         x = i.useRef(null),
-        [, _] = (0, o.c)({
-            type: v,
+        [, v] = (0, o.c)({
+            type: _,
             item: {
                 index: t,
                 field: n,
@@ -130,8 +130,8 @@ function _(e) {
                 null == e || t.didDrop() || f(e.field, null, !0);
             },
         }),
-        [, C] = (0, c.L)({
-            accept: v,
+        [, O] = (0, c.L)({
+            accept: _,
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
@@ -149,12 +149,12 @@ function _(e) {
     return (
         i.useLayoutEffect(
             () => (
-                _(C(x)),
+                v(O(x)),
                 () => {
-                    C(null), _(null);
+                    O(null), v(null);
                 }
             ),
-            [_, C],
+            [v, O],
         ),
         (0, r.jsxs)("div", {
             ref: x,
@@ -174,13 +174,13 @@ function _(e) {
         })
     );
 }
-function C(e) {
+function O(e) {
     return (0, r.jsxs)("div", {
         className: a()(h.formFieldContainer, { [h.compact]: e.fieldStyle === p.it.COMPACT }),
         children: [
             (0, r.jsx)("div", {
                 className: h.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(_, b({}, e)) : (0, r.jsx)(j, b({}, e)),
+                children: e.isDragEnabled ? (0, r.jsx)(v, b({}, e)) : (0, r.jsx)(j, b({}, e)),
             }),
             "side" === e.actionsLocation &&
                 (0, r.jsxs)("div", {

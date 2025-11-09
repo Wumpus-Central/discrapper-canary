@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(474936),
     p = n(981631),
     h = n(388032),
-    m = n(12033);
+    m = n(810270);
 let g = (0, f.createChannelRecord)({
     id: "1",
     type: p.d4z.DM,
@@ -30,11 +30,11 @@ function E(e) {
             disabled: O = !1,
             disableThemedBackground: v = !1,
         } = e,
-        [I, T] = i.useState(null != f ? f : E),
-        [S, A] = i.useState((0, c.JM)(I)),
+        [I, S] = i.useState(null != f ? f : E),
+        [T, A] = i.useState((0, c.JM)(I)),
         C = i.useRef(!1);
     function N(e, t, n) {
-        t !== I && (T(t), A(n), a(t));
+        t !== I && (S(t), A(n), a(t));
     }
     function R() {
         return new Promise((e) => {
@@ -51,7 +51,7 @@ function E(e) {
         i.useEffect(() => {
             if (void 0 === f) {
                 let e = (0, c.JM)(E);
-                T(E), A(e);
+                S(E), A(e);
             }
         }, [f, E]),
         (0, r.jsx)("div", {
@@ -69,7 +69,7 @@ function E(e) {
                         placeholder: p,
                         channel: g,
                         textValue: I,
-                        richValue: S,
+                        richValue: T,
                         type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
                             C.current = !1;

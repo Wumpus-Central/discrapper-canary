@@ -10,33 +10,33 @@ var r = n(951288),
     d = n(541692),
     h = n(952802),
     g = n(388905),
-    p = n(815660),
-    m = n(388032),
-    f = n(149715),
-    _ = n(197571);
+    m = n(815660),
+    p = n(388032),
+    f = n(465106),
+    _ = n(10198);
 let x = () => {
     let [e, t] = i.useState(""),
         [s, x] = i.useState(""),
         [E, v] = i.useState(!1),
-        [b, j] = i.useState(!1),
+        [j, b] = i.useState(!1),
         [I, y] = i.useState(null),
-        [O, S] = i.useState(null),
-        N = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
-        C = N.code.split(" ")[0],
+        [S, N] = i.useState(null),
+        O = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
+        C = O.code.split(" ")[0],
         A = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                S(e.body.message);
+                N(e.body.message);
             }
         },
         T = async () => {
             v(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, s);
-                y(null), S(null), j(!0), c.Z.validatePhoneForSupport(t);
+                y(null), N(null), b(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (y(null), S(e.body.message)) : (y(e.body.phone), S(e.body.code));
+                e.body.message ? (y(null), N(e.body.message)) : (y(e.body.phone), N(e.body.code));
             } finally {
                 v(!1);
             }
@@ -47,7 +47,7 @@ let x = () => {
                 (0, r.jsxs)(g.Dx, {
                     className: l()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
-                        m.intl.string(m.t.WWzQta),
+                        p.intl.string(p.t.WWzQta),
                         (0, r.jsx)(o.owK, {
                             size: "md",
                             color: "currentColor",
@@ -57,21 +57,21 @@ let x = () => {
                 }),
             ],
         });
-    return b
+    return j
         ? Z
         : (0, r.jsxs)(g.ZP, {
               children: [
-                  (0, r.jsx)(g.Dx, { children: m.intl.string(m.t.o4JNrO) }),
+                  (0, r.jsx)(g.Dx, { children: p.intl.string(p.t.o4JNrO) }),
                   (0, r.jsx)(g.DK, {
                       className: _.marginTop8,
-                      children: m.intl.string(m.t.y0tVbq),
+                      children: p.intl.string(p.t.y0tVbq),
                   }),
                   (0, r.jsxs)(g.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(h.Z, {
-                              label: m.intl.string(m.t["eJnn0+"]),
-                              alpha2: N.alpha2,
+                              label: p.intl.string(p.t["eJnn0+"]),
+                              alpha2: O.alpha2,
                               countryCode: C,
                               value: e,
                               autoComplete: "off",
@@ -82,20 +82,20 @@ let x = () => {
                           }),
                           (0, r.jsx)(g.II, {
                               className: _.marginTop20,
-                              label: m.intl.string(m.t.OdzNbm),
+                              label: p.intl.string(p.t.OdzNbm),
                               value: s,
                               onChange: x,
-                              maxLength: p.z,
-                              error: O,
+                              maxLength: m.z,
+                              error: S,
                           }),
                           (0, r.jsx)(o.Avr, {
-                              text: m.intl.string(m.t["5b60gi"]),
+                              text: p.intl.string(p.t["5b60gi"]),
                               onClick: A,
                           }),
                           (0, r.jsx)("div", {
                               className: _.marginTop20,
                               children: (0, r.jsx)(o.Button, {
-                                  text: m.intl.string(m.t.i4jeWR),
+                                  text: p.intl.string(p.t.i4jeWR),
                                   fullWidth: !0,
                                   onClick: T,
                                   loading: E,

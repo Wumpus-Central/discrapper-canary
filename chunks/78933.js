@@ -1,7 +1,7 @@
 n.d(t, { Z: () => ec }), n(388685);
 var a = n(951288),
-    i = n(647438),
-    r = n(873546),
+    r = n(647438),
+    i = n(873546),
     l = n(793030),
     s = n(442837),
     o = n(704215),
@@ -54,10 +54,10 @@ var a = n(951288),
     et = n(981631),
     en = n(921944),
     ea = n(228168),
-    ei = n(671955),
-    er = n(388032),
-    el = n(54482),
-    es = n(116649);
+    er = n(671955),
+    ei = n(388032),
+    el = n(138005),
+    es = n(593540);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -103,10 +103,10 @@ function ec(e) {
         }),
         { ref: eb, height: ev } = (0, d.ZP)(),
         { isHoveringOrFocusing: ej, isHovering: e_ } = (0, p.Z)(eb);
-    i.useEffect(() => {
+    r.useEffect(() => {
         null == ec || ec(eb.current);
     }, [eb, ec]),
-        i.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
+        r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
     let ey = (0, s.e7)([B.Z], () => B.Z.getStatus(t.id)),
         eC = F.Cr.useSetting(),
         eS = (0, $.F)(eC),
@@ -119,12 +119,12 @@ function ec(e) {
         ew = (0, H.I5)(t),
         ek = (0, h.p)({ location: "UserProfileAccountPopout" }),
         eR = (0, C.b)({ location: "UserProfileAccountPopout" }),
-        eA = i.useRef(null),
-        eZ = i.useRef(null),
-        eD = i.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
-        eL = i.useMemo(() => (0, x.Z)(), []),
-        [eM, eU] = i.useState(!0);
-    i.useEffect(() => {
+        eA = r.useRef(null),
+        eZ = r.useRef(null),
+        eD = r.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
+        eL = r.useMemo(() => (0, x.Z)(), []),
+        [eM, eU] = r.useState(!0);
+    r.useEffect(() => {
         setTimeout(() => {
             eU(!1);
         }, 500);
@@ -147,10 +147,10 @@ function ec(e) {
         ez = eG ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eV, eH] = (0, g.US)(ez),
         eW = eV === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
-        eK = i.useCallback(() => {
+        eK = r.useCallback(() => {
             eH(en.L.USER_DISMISS), n();
         }, [eH, n]),
-        eq = i.useCallback(() => {
+        eq = r.useCallback(() => {
             (ep && null != em) || (eI(), eK());
         }, [eI, eK, ep, em]),
         eY = ep && null != em,
@@ -179,7 +179,7 @@ function ec(e) {
                         className: el.themeContainer,
                         user: t,
                         displayProfile: ex,
-                        themeType: ei.l.POPOUT,
+                        themeType: er.l.POPOUT,
                         children: [
                             (0, a.jsxs)("div", {
                                 className: es.header,
@@ -187,18 +187,18 @@ function ec(e) {
                                     (0, a.jsx)(P.Z, {
                                         user: t,
                                         displayProfile: ex,
-                                        themeType: ei.l.POPOUT,
+                                        themeType: er.l.POPOUT,
                                     }),
                                     (0, a.jsx)(N.Z, {
                                         user: t,
                                         displayProfile: ex,
-                                        themeType: ei.l.POPOUT,
+                                        themeType: er.l.POPOUT,
                                         onOpenProfile: eh ? void 0 : eF,
                                     }),
                                     (0, a.jsx)(L.Z, {
                                         ref: eA,
                                         user: t,
-                                        themeType: ei.l.POPOUT,
+                                        themeType: er.l.POPOUT,
                                         onCloseProfile: n,
                                         prompt: ek ? eL : null,
                                     }),
@@ -216,7 +216,7 @@ function ec(e) {
                                         pronouns: null == ex ? void 0 : ex.pronouns,
                                         tags: (0, a.jsx)(O.Z, {
                                             displayProfile: ex,
-                                            themeType: ei.l.POPOUT,
+                                            themeType: er.l.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != ed ? (e) => e === ed : void 0,
                                             shouldGlowTenureBadge: eD.current,
@@ -271,8 +271,8 @@ function ec(e) {
                                                         (0, a.jsx)(J.V4, {
                                                             action: "EDIT_PROFILE",
                                                             label: ep
-                                                                ? er.intl.string(er.t.Ip9nBS)
-                                                                : er.intl.string(er.t.s5vZlQ),
+                                                                ? ei.intl.string(ei.t.Ip9nBS)
+                                                                : ei.intl.string(ei.t.s5vZlQ),
                                                             icon: c.vdY,
                                                             onClick: eq,
                                                             renderSubmenu: eY
@@ -280,7 +280,7 @@ function ec(e) {
                                                                       let { closePopout: t } = e;
                                                                       return (0, a.jsx)(J.gp, {
                                                                           navId: "edit-profile-submenu",
-                                                                          "aria-label": er.intl.string(er.t.szTA8E),
+                                                                          "aria-label": ei.intl.string(ei.t.szTA8E),
                                                                           onClose: t,
                                                                           children: eJ,
                                                                       });
@@ -288,7 +288,7 @@ function ec(e) {
                                                                 : void 0,
                                                             trailing: eW
                                                                 ? (0, a.jsx)(c.IGR, {
-                                                                      text: er.intl.string(er.t.y2b7CA),
+                                                                      text: ei.intl.string(ei.t.y2b7CA),
                                                                   })
                                                                 : void 0,
                                                             ref: eZ,
@@ -305,19 +305,19 @@ function ec(e) {
                                                             trailing:
                                                                 (eT || ey === et.Skl.DND) &&
                                                                 (0, a.jsx)(c.owu, { size: "xxs" }),
-                                                            renderSubmenu: r.tq
+                                                            renderSubmenu: i.tq
                                                                 ? void 0
                                                                 : (e) => {
                                                                       let { closePopout: t } = e;
                                                                       return (0, a.jsx)(J.gp, {
                                                                           navId: "set-status-submenu",
                                                                           className: el.statusPickerModalMenu,
-                                                                          "aria-label": er.intl.string(er.t.E13trI),
+                                                                          "aria-label": ei.intl.string(ei.t.E13trI),
                                                                           onClose: t,
                                                                           children: eO,
                                                                       });
                                                                   },
-                                                            onClick: r.tq
+                                                            onClick: i.tq
                                                                 ? () => {
                                                                       n(),
                                                                           (0, c.ZDy)(
@@ -326,13 +326,13 @@ function ec(e) {
                                                                                       e((e) => {
                                                                                           var t,
                                                                                               n,
-                                                                                              { onClose: i } = e,
-                                                                                              r = (function (e, t) {
+                                                                                              { onClose: r } = e,
+                                                                                              i = (function (e, t) {
                                                                                                   if (null == e)
                                                                                                       return {};
                                                                                                   var n,
                                                                                                       a,
-                                                                                                      i = (function (
+                                                                                                      r = (function (
                                                                                                           e,
                                                                                                           t,
                                                                                                       ) {
@@ -340,44 +340,44 @@ function ec(e) {
                                                                                                               return {};
                                                                                                           var n,
                                                                                                               a,
-                                                                                                              i = {},
-                                                                                                              r =
+                                                                                                              r = {},
+                                                                                                              i =
                                                                                                                   Object.keys(
                                                                                                                       e,
                                                                                                                   );
                                                                                                           for (
                                                                                                               a = 0;
                                                                                                               a <
-                                                                                                              r.length;
+                                                                                                              i.length;
                                                                                                               a++
                                                                                                           )
                                                                                                               (n =
-                                                                                                                  r[a]),
+                                                                                                                  i[a]),
                                                                                                                   t.indexOf(
                                                                                                                       n,
                                                                                                                   ) >=
                                                                                                                       0 ||
-                                                                                                                      (i[
+                                                                                                                      (r[
                                                                                                                           n
                                                                                                                       ] =
                                                                                                                           e[
                                                                                                                               n
                                                                                                                           ]);
-                                                                                                          return i;
+                                                                                                          return r;
                                                                                                       })(e, t);
                                                                                                   if (
                                                                                                       Object.getOwnPropertySymbols
                                                                                                   ) {
-                                                                                                      var r =
+                                                                                                      var i =
                                                                                                           Object.getOwnPropertySymbols(
                                                                                                               e,
                                                                                                           );
                                                                                                       for (
                                                                                                           a = 0;
-                                                                                                          a < r.length;
+                                                                                                          a < i.length;
                                                                                                           a++
                                                                                                       )
-                                                                                                          (n = r[a]),
+                                                                                                          (n = i[a]),
                                                                                                               !(
                                                                                                                   t.indexOf(
                                                                                                                       n,
@@ -387,27 +387,27 @@ function ec(e) {
                                                                                                                       e,
                                                                                                                       n,
                                                                                                                   ) &&
-                                                                                                                  (i[
+                                                                                                                  (r[
                                                                                                                       n
                                                                                                                   ] =
                                                                                                                       e[
                                                                                                                           n
                                                                                                                       ]);
                                                                                                   }
-                                                                                                  return i;
+                                                                                                  return r;
                                                                                               })(e, ["onClose"]);
                                                                                           return (0, a.jsx)(
                                                                                               l.IX,
                                                                                               ((t = eo(
-                                                                                                  { onClose: i },
-                                                                                                  r,
+                                                                                                  { onClose: r },
+                                                                                                  i,
                                                                                               )),
                                                                                               (n = n =
                                                                                                   {
                                                                                                       size: "sm",
                                                                                                       "aria-label":
-                                                                                                          er.intl.string(
-                                                                                                              er.t[
+                                                                                                          ei.intl.string(
+                                                                                                              ei.t[
                                                                                                                   "3Uj+2p"
                                                                                                               ],
                                                                                                           ),
@@ -417,15 +417,15 @@ function ec(e) {
                                                                                                           variant:
                                                                                                               "fixed",
                                                                                                           "aria-label":
-                                                                                                              er.intl.string(
-                                                                                                                  er.t
+                                                                                                              ei.intl.string(
+                                                                                                                  ei.t
                                                                                                                       .E13trI,
                                                                                                               ),
                                                                                                           className:
                                                                                                               el.statusPickerModal,
                                                                                                           hideScroller:
                                                                                                               !0,
-                                                                                                          onClose: i,
+                                                                                                          onClose: r,
                                                                                                           onSelect:
                                                                                                               void 0,
                                                                                                           children: eO,
@@ -488,7 +488,7 @@ function ec(e) {
                                                         (0, a.jsx)(J.V4, {
                                                             action: "PRESS_SWITCH_ACCOUNTS",
                                                             icon: c.lMe,
-                                                            label: er.intl.string(er.t.oMNyYN),
+                                                            label: ei.intl.string(ei.t.oMNyYN),
                                                             onClick: () => {
                                                                 n(), (0, ee.Z)();
                                                             },
@@ -496,7 +496,7 @@ function ec(e) {
                                                                 let { closePopout: t } = e;
                                                                 return (0, a.jsx)(J.gp, {
                                                                     navId: "switch-accounts-submenu",
-                                                                    "aria-label": er.intl.string(er.t.wFhVqL),
+                                                                    "aria-label": ei.intl.string(ei.t.wFhVqL),
                                                                     onClose: t,
                                                                     children: eP,
                                                                 });
@@ -508,7 +508,7 @@ function ec(e) {
                                                             (0, a.jsx)(J.V4, {
                                                                 action: "COPY_USER_ID",
                                                                 icon: c.VuL,
-                                                                label: er.intl.string(er.t["/AXYnE"]),
+                                                                label: ei.intl.string(ei.t["/AXYnE"]),
                                                                 onClick: () => {
                                                                     (0, z.JG)(t.id), n();
                                                                 },

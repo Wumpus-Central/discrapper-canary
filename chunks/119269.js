@@ -13,7 +13,7 @@ var r = n(951288),
     d = n(967538),
     f = n(885302),
     _ = n(914677),
-    p = n(86852),
+    p = n(544074),
     h = (function (e) {
         return (
             (e[(e.NITRO_GEM = 0)] = "NITRO_GEM"),
@@ -53,10 +53,10 @@ let m = (e) => {
                 ellipseOpacity: O,
                 customAnimationClassName: v,
                 circleColor: I,
-                circleStroke: T,
+                circleStroke: S,
             } = e,
-            S = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            A = t && !S,
+            T = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            A = t && !T,
             C = () => {
                 switch (E) {
                     case 0:
@@ -88,7 +88,7 @@ let m = (e) => {
                     [p.activeProgressCircleAnimation]: A,
                     [null != v ? v : ""]: A,
                 }),
-                progressCircleStroke: T,
+                progressCircleStroke: S,
                 progressCircleStrokeSize: l,
                 percentage: null != i ? i : h,
                 initialPercentage: null != i ? i : g,

@@ -16,9 +16,9 @@ var r = n(951288),
     g = n(840724),
     E = n(231338),
     b = n(388032),
-    y = n(54602);
+    y = n(953692);
 function O(e) {
-    var t, n, O, v, I, T, S, A;
+    var t, n, O, v, I, S, T, A;
     let { guildId: C, skuId: N } = e,
         R = (0, o.e7)([u.Z], () => u.Z.isFetchingForSKU(N)),
         P = (0, o.e7)([c.Z], () => c.Z.get(N)),
@@ -90,8 +90,8 @@ function O(e) {
                                                 lineClamp: 1,
                                                 children: (0, d.T4)(
                                                     null != (I = null == (t = P.price) ? void 0 : t.amount) ? I : 0,
-                                                    null != (T = null == (n = P.price) ? void 0 : n.currency)
-                                                        ? T
+                                                    null != (S = null == (n = P.price) ? void 0 : n.currency)
+                                                        ? S
                                                         : E.pK.USD,
                                                 ),
                                             }),
@@ -114,7 +114,7 @@ function O(e) {
                                         onClick: M,
                                         text: b.intl.format(b.t.Xp5WTn, {
                                             price: (0, d.T4)(
-                                                null != (S = null == (O = P.price) ? void 0 : O.amount) ? S : 0,
+                                                null != (T = null == (O = P.price) ? void 0 : O.amount) ? T : 0,
                                                 null != (A = null == (v = P.price) ? void 0 : v.currency)
                                                     ? A
                                                     : E.pK.USD,

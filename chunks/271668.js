@@ -20,13 +20,13 @@ var r = n(951288),
     O = n(367790),
     v = n(895924),
     I = n(581364),
-    T = n(56801),
-    S = n(342687),
+    S = n(56801),
+    T = n(342687),
     A = n(826298),
     C = n(689079),
     N = n(981631),
     R = n(388032),
-    P = n(57507),
+    P = n(587222),
     w = n(239840);
 let D = 512,
     x = 7,
@@ -221,7 +221,7 @@ let D = 512,
                         (a.section.id !== o.applicationId && a.section.id !== C.bi.FRECENCY) ||
                         o.inputType === v.iw.PLACEHOLDER
                     )
-                        return (0, r.jsx)(S.Z, {}, s);
+                        return (0, r.jsx)(T.Z, {}, s);
                     let l = z.find((e) => e.id === o.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
@@ -258,7 +258,7 @@ let D = 512,
                 innerClassName: P.wrapper,
                 onMouseDown: F,
                 children: [
-                    (0, r.jsx)(T.Z, {
+                    (0, r.jsx)(S.Z, {
                         className: P.rail,
                         channel: n,
                         sections: z,

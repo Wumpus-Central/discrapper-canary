@@ -26,8 +26,8 @@ var r = n(951288),
     O = n(600164),
     v = n(313201),
     I = n(518738),
-    T = n(434404),
-    S = n(884902),
+    S = n(434404),
+    T = n(884902),
     A = n(48950),
     C = n(635042),
     N = n(608798),
@@ -39,7 +39,7 @@ var r = n(951288),
     L = n(700785),
     M = n(981631),
     j = n(388032),
-    k = n(85703);
+    k = n(250781);
 function U(e, t, n) {
     return (
         t in e
@@ -160,7 +160,7 @@ function K(e) {
 let z = i.forwardRef(function (e, t) {
     var a, s, l;
     let c,
-        { canRemove: d, className: g, role: E, onRemove: O, guildId: v, disableBorderColor: T, onMouseDown: C } = e,
+        { canRemove: d, className: g, role: E, onRemove: O, guildId: v, disableBorderColor: S, onMouseDown: C } = e,
         N = (0, u.JA)(E.id),
         { tabIndex: R } = N,
         P = F(N, ["tabIndex"]),
@@ -170,12 +170,12 @@ let z = i.forwardRef(function (e, t) {
             guildId: v,
         }),
         D = (0, _.e7)([b.Z], () => b.Z.roleStyle),
-        x = (0, S._f)(v, E, E.colorStrings),
+        x = (0, T._f)(v, E, E.colorStrings),
         L = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
         M = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
-                    let { default: e } = await n.e("5396").then(n.bind(n, 999588));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -215,8 +215,8 @@ let z = i.forwardRef(function (e, t) {
                 }));
     let W = i.useMemo(() => {
         var t;
-        return G({ borderColor: T ? void 0 : V }, null != (t = e.style) ? t : {});
-    }, [V, T, e.style]);
+        return G({ borderColor: S ? void 0 : V }, null != (t = e.style) ? t : {});
+    }, [V, S, e.style]);
     return (0, r.jsx)(h.tEY, {
         children: (0, r.jsxs)(
             "div",
@@ -363,20 +363,20 @@ function Q(e) {
                 let r = s.filter((t) => t !== e.id);
                 (null == (t = e.tags) ? void 0 : t.guild_connections) === null
                     ? g.Z.unassignGuildRoleConnection(a.id, e.id)
-                    : T.Z.updateMemberRoles(a.id, n.id, r, [], [e.id]);
+                    : S.Z.updateMemberRoles(a.id, n.id, r, [], [e.id]);
             },
             [s, a.id, n.id],
         ),
         I = i.useCallback(
             (e) => {
                 let t = s;
-                t.includes(e) || (t = [...t, e]), T.Z.updateMemberRoles(a.id, n.id, t, [e], []);
+                t.includes(e) || (t = [...t, e]), S.Z.updateMemberRoles(a.id, n.id, t, [e], []);
             },
             [s, a.id, n.id],
         ),
-        [S, A] = i.useState(null),
+        [T, A] = i.useState(null),
         N = (0, _.Wu)([w.Z], () => w.Z.getManyRoles(a.id, s).sort(C.Z)),
-        R = i.useMemo(() => (null != S ? N.slice(0, S) : N), [N, S]),
+        R = i.useMemo(() => (null != T ? N.slice(0, T) : N), [N, T]),
         P = s.length - R.length;
     i.useLayoutEffect(() => {
         if (f) return;
@@ -426,7 +426,7 @@ function Q(e) {
             );
         });
     return (
-        null != S && 0 !== P
+        null != T && 0 !== P
             ? (t = (0, r.jsx)(q, Z(G({}, e), { numRolesHidden: P })))
             : B && (t = (0, r.jsx)(X, Z(G({}, e), { handleAddRole: I }))),
         (0, r.jsx)(u.bG, {

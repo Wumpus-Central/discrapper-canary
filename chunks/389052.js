@@ -78,12 +78,12 @@ function m(e) {
             return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
         }, [O]),
         I = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
-        T = I ? "default" : "danger";
+        S = I ? "default" : "danger";
     return v
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "block",
-              color: null != T ? T : "default",
+              color: null != S ? S : "default",
               label: I ? d.intl.string(d.t.XyHpKH) : d.intl.string(d.t.l4Emac),
               action: I
                   ? () => {
@@ -94,7 +94,7 @@ function m(e) {
                   : () => {
                         (0, a.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.all([n.e("97652"), n.e("13093")]).then(
+                                let { default: e } = await Promise.all([n.e("97652"), n.e("1783")]).then(
                                     n.bind(n, 478923),
                                 );
                                 return (n) =>

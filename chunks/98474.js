@@ -1,8 +1,8 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(238651),
-    o = n(358458),
+    o = n(509442),
     s = n(748780),
     l = n(481060),
     c = n(596454),
@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(768581),
     p = n(176354),
     h = n(675654),
-    m = n(42868);
+    m = n(255971);
 function g(e, t, n) {
     return (
         t in e
@@ -68,9 +68,9 @@ function y(e, t) {
 let O = 450,
     v = 0.5,
     I = [];
-function T(e) {
+function S(e) {
     let { messageId: t, emoji: n, startPosition: g, targetPosition: b } = e,
-        [T, S] = i.useState(0),
+        [S, T] = i.useState(0),
         [A, C] = i.useState(0),
         [N, R] = i.useState(null),
         { confettiCanvas: P } = i.useContext(u.h),
@@ -125,25 +125,25 @@ function T(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                S(t);
+                T(t);
             },
         });
     return (
         i.useEffect(() => {
-            T > 0 &&
+            S > 0 &&
                 A > 0 &&
                 w.createConfetti(
                     y(E({}, h.We), {
                         position: {
                             type: "static",
                             value: {
-                                x: T,
+                                x: S,
                                 y: A,
                             },
                         },
                     }),
                 );
-        }, [w, T, A]),
+        }, [w, S, A]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {

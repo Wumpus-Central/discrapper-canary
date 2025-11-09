@@ -19,17 +19,17 @@ var r = n(951288),
     O = n(594174),
     v = n(979651),
     j = n(938475),
-    C = n(990734),
-    x = n(714794),
+    x = n(990734),
+    C = n(714794),
     E = n(876548),
     S = n(25601),
     I = n(207055),
     P = n(981631),
     N = n(124368),
     Z = n(388032),
-    w = n(55940),
-    T = n(509612),
-    A = n(113914);
+    w = n(33082),
+    T = n(516966),
+    A = n(95701);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -182,7 +182,7 @@ let k = i.memo(function (e) {
             isMentionLowImportance: y.ZP.getIsMentionLowImportance(t.id),
         })),
         V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
-        H = (0, C.p)({ location: "GuildSidebarThreadListEntry" }),
+        H = (0, x.p)({ location: "GuildSidebarThreadListEntry" }),
         z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
@@ -313,7 +313,7 @@ let k = i.memo(function (e) {
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, x.Z)(B)
+                                                (0, C.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,

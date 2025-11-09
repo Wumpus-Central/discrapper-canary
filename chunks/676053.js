@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(966902),
     f = n(562618),
     _ = n(803866),
-    p = n(982519),
+    p = n(893026),
     h = n(388032),
-    m = n(37751);
+    m = n(869918);
 function g(e, t, n) {
     return (
         t in e
@@ -94,11 +94,11 @@ function I(e) {
             previewUrl: b = g,
             disableMediaViewer: v = !1,
             action: I,
-            caretConfig: T = {
+            caretConfig: S = {
                 position: "bottom",
                 align: "center",
             },
-            badge: S,
+            badge: T,
             textLink: A,
             onWatchVideo: C,
             onRequestClose: N,
@@ -190,7 +190,7 @@ function I(e) {
                 ref: R,
                 children: [
                     (0, r.jsx)(_.N, { onClick: M }),
-                    (0, r.jsx)(d.$, { caretConfig: T }),
+                    (0, r.jsx)(d.$, { caretConfig: S }),
                     (0, r.jsx)("div", {
                         className: m.assetContainer,
                         children: k,
@@ -198,7 +198,7 @@ function I(e) {
                     (0, r.jsx)(f.Y, {
                         title: t,
                         body: n,
-                        badge: S,
+                        badge: T,
                         textLink: A,
                     }),
                     null != I ? (0, r.jsx)(u.k, { actions: [I] }) : null,

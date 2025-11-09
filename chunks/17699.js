@@ -16,16 +16,16 @@ var r = n(951288),
     b = n(733026),
     x = n(246946),
     j = n(594174),
-    v = n(626135),
-    _ = n(136015),
-    C = n(51144),
-    O = n(434404),
+    _ = n(626135),
+    v = n(136015),
+    O = n(51144),
+    C = n(434404),
     y = n(999382),
-    E = n(84613),
-    N = n(740903),
+    N = n(84613),
+    E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(40175);
+    T = n(298814);
 function P(e, t, n) {
     return (
         t in e
@@ -79,19 +79,19 @@ function R(e) {
         [m, h] = i.useState(!1),
         [b, x] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
-        _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
-    async function O() {
+        v = null != (t = null == j ? void 0 : j[0]) ? t : null;
+    async function C() {
         if (null != l) {
             x(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, a.id),
                     g(),
-                    v.default.track(
+                    _.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
                         Z(w({}, (0, p.hH)(l.id)), {
                             target_user_id: a.id,
                             reason: s.reason,
-                            location: _,
+                            location: v,
                         }),
                     );
             } catch (e) {
@@ -111,7 +111,7 @@ function R(e) {
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
                         className: T.userUsername,
-                        children: C.ZP.getUserTag(a, {
+                        children: O.ZP.getUserTag(a, {
                             mode: "username",
                             identifiable: c ? "never" : "always",
                         }),
@@ -160,7 +160,7 @@ function R(e) {
                         (0, r.jsx)(o.Button, {
                             variant: "critical-secondary",
                             text: S.intl.string(S.t.UPcIa5),
-                            onClick: O,
+                            onClick: C,
                             loading: m,
                         }),
                     ],
@@ -281,17 +281,17 @@ function L(e) {
         [l, a] = i.useState(null != n ? n : ""),
         [s, c] = i.useState(!1),
         u = i.useCallback(() => {
-            O.Z.setSection(I.pNK.SAFETY), (0, E.K)(N.u.DM_AND_SPAM_PROTECTION);
+            C.Z.setSection(I.pNK.SAFETY), (0, N.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         g = i.useCallback((e) => {
-            a(e), 0 === e.trim().length && O.Z.setSearchQuery(e);
+            a(e), 0 === e.trim().length && C.Z.setSearchQuery(e);
         }, []),
         m = i.useCallback(() => {
-            a(""), O.Z.setSearchQuery("");
+            a(""), C.Z.setSearchQuery("");
         }, []),
         p = i.useCallback(async () => {
             if (0 === l.trim().length) {
-                O.Z.setSearchQuery(l), c(!1);
+                C.Z.setSearchQuery(l), c(!1);
                 return;
             }
             if (!s)
@@ -299,7 +299,7 @@ function L(e) {
                     c(!0);
                     let [e, n] = (0, b.C)(l),
                         r = e[0];
-                    O.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
+                    C.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
@@ -357,12 +357,12 @@ function k() {
         p = null != u && u.trim().length > 0,
         f = (0, g.Z)(p),
         h = p !== f,
-        [x] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], _.Q),
-        v = null != (e = null == x ? void 0 : x.size) ? e : 0,
-        C = (0, m.ZP)(),
-        O = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
-        E = i.useRef(null),
-        N = i.useCallback(
+        [x] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], v.Q),
+        _ = null != (e = null == x ? void 0 : x.size) ? e : 0,
+        O = (0, m.ZP)(),
+        C = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
+        N = i.useRef(null),
+        E = i.useCallback(
             (e) =>
                 null == e || 0 === e.length
                     ? (e) => null != e
@@ -386,13 +386,13 @@ function k() {
                 let r = [];
                 for (let n of e.keys()) {
                     let e = j.default.getUser(n);
-                    null != e && N(t)(e) && r.push(e);
+                    null != e && E(t)(e) && r.push(e);
                 }
                 return r;
             },
-            [N],
+            [E],
         ),
-        R = i.useMemo(() => P(x, u, v), [x, P, u, v]),
+        R = i.useMemo(() => P(x, u, _), [x, P, u, _]),
         D = null != x,
         k = R.length % 1000 == 0 && R.length > 0 && D,
         G = 0 === R.length,
@@ -405,15 +405,15 @@ function k() {
     }, [h, M.currentPage]);
     let B = i.useCallback(
             (e) => {
-                d.Z.fetchGuildBansBatch(O, 1000, e);
+                d.Z.fetchGuildBansBatch(C, 1000, e);
             },
-            [O],
+            [C],
         ),
         F = i.useMemo(() => a().chunk(R, M.pageSize), [M.pageSize, R]),
         H = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = E.current) || t.scrollToSectionTop(0),
+                null == (t = N.current) || t.scrollToSectionTop(0),
                     (e + 1) * M.pageSize > R.length &&
                         k &&
                         !p &&
@@ -437,7 +437,7 @@ function k() {
               className: T.container,
               children: [
                   (0, r.jsx)(L, {
-                      guildId: O,
+                      guildId: C,
                       storedSearchQuery: u,
                   }),
                   (0, r.jsxs)("div", {
@@ -448,12 +448,12 @@ function k() {
                                   guild: c,
                                   bans: x,
                                   sortedBans: z,
-                                  ref: E,
+                                  ref: N,
                               }),
                           !k &&
                               G &&
                               (0, r.jsxs)(o.ubH, {
-                                  theme: C,
+                                  theme: O,
                                   className: T.emptyState,
                                   children: [
                                       (0, r.jsx)(o.oxh, {

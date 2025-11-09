@@ -14,15 +14,15 @@ var r = n(951288),
     f = n(486324),
     h = n(200299),
     b = n(388032),
-    x = n(197530);
+    x = n(359449);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(m.GuildFeatures.BANNER),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -69,7 +69,7 @@ let j = function (e) {
             },
             [t.id],
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -94,7 +94,7 @@ let j = function (e) {
             },
             [t],
         ),
-        C = (0, r.jsx)(c.Z, {
+        O = (0, r.jsx)(c.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -104,7 +104,7 @@ let j = function (e) {
                       })
                     : null,
             disabled: !j,
-            onChange: v,
+            onChange: _,
             hint: b.intl.string(b.t.NyXznh),
             enabled: j,
             maxFileSizeBytes: h.B,
@@ -124,7 +124,7 @@ let j = function (e) {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: m.GuildFeatures.BANNER,
-                              onClick: _,
+                              onClick: v,
                           }),
                       ],
                   }),
@@ -142,7 +142,7 @@ let j = function (e) {
                                   (0, r.jsx)("div", {
                                       className: x.uploadButton,
                                       children: (0, r.jsx)(d.Z, {
-                                          onChange: v,
+                                          onChange: _,
                                           maxFileSizeBytes: h.B,
                                           text: b.intl.string(b.t.yG2pUi),
                                           size: "md",
@@ -151,7 +151,7 @@ let j = function (e) {
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", { children: C }),
+                          (0, r.jsx)("div", { children: O }),
                       ],
                   }),
               ],
@@ -170,7 +170,7 @@ let j = function (e) {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: m.GuildFeatures.BANNER,
-                              onClick: _,
+                              onClick: v,
                           }),
                       ],
                   }),
@@ -190,7 +190,7 @@ let j = function (e) {
                                       variant: "expressive",
                                       icon: l.Ucv,
                                       text: b.intl.string(b.t["+7XY31"]),
-                                      onClick: _,
+                                      onClick: v,
                                   }),
                               ],
                           }),
@@ -198,8 +198,8 @@ let j = function (e) {
                               children: (0, r.jsx)(l.P3F, {
                                   "aria-hidden": !0,
                                   tabIndex: -1,
-                                  onClick: _,
-                                  children: C,
+                                  onClick: v,
+                                  children: O,
                               }),
                           }),
                       ],

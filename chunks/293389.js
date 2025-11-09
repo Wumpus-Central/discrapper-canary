@@ -20,14 +20,14 @@ var r = n(951288),
     O = n(251625),
     v = n(358085),
     I = n(210887),
-    T = n(273313),
-    S = n(981631),
+    S = n(273313),
+    T = n(981631),
     A = n(295907),
     C = n(388032),
-    N = n(740508),
-    R = n(315091),
-    P = n(149715),
-    w = n(197571);
+    N = n(313911),
+    R = n(285236),
+    P = n(465106),
+    w = n(10198);
 function D(e, t, n) {
     return (
         t in e
@@ -139,7 +139,7 @@ function B(e) {
 function Z(e) {
     let { rawGame: t, nowPlaying: a = !1, isOverride: p, subgames: m, isSubgame: O = !1, parentGame: v } = e,
         I = (0, s.cj)([_.ZP, E.Z, b.Z], () => (0, _.FZ)(t, _.ZP, E.Z, b.Z)),
-        { canToggleDetection: T, isCurrentGameDetectionEnabled: R } = (0, s.cj)([_.ZP], () => ({
+        { canToggleDetection: S, isCurrentGameDetectionEnabled: R } = (0, s.cj)([_.ZP], () => ({
             canToggleDetection: null == v || _.ZP.isDetectionEnabled(v),
             isCurrentGameDetectionEnabled: _.ZP.isDetectionEnabled(I),
         })),
@@ -210,7 +210,7 @@ function Z(e) {
     function z() {
         if (D) return;
         let e = null != I.id ? E.Z.getDetectableGame(I.id) : null;
-        y.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        y.default.track(T.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: (0, g.le)(I) ? I.gameName : I.name,
         }),
@@ -226,7 +226,7 @@ function Z(e) {
                                 name: null != (i = I.name) ? i : "",
                                 application_id:
                                     null != (o = null != (a = null == e ? void 0 : e.id) ? a : I.id) ? o : void 0,
-                                type: S.IIU.PLAYING,
+                                type: T.IIU.PLAYING,
                             },
                             onSubmitted: () => {},
                         }),
@@ -344,7 +344,7 @@ function Z(e) {
     function J() {
         let { detectable: e } = I,
             t =
-                e && T
+                e && S
                     ? (0, r.jsx)(c.tEF, {
                           size: "md",
                           color: "currentColor",
@@ -354,7 +354,7 @@ function Z(e) {
                     : (0, r.jsx)(c.kZF, {
                           size: "md",
                           color: "currentColor",
-                          className: T ? N.toggleIconOff : N.toggleIconInactive,
+                          className: S ? N.toggleIconOff : N.toggleIconInactive,
                           colorClass: N.fill,
                       });
         return (0, r.jsx)("div", {
@@ -363,7 +363,7 @@ function Z(e) {
                 "data-migration-pending": !0,
                 text: C.intl.string(C.t.QmitzM),
                 children: (e) =>
-                    T
+                    S
                         ? (0, r.jsx)(
                               c.P3F,
                               M(x({}, e), {
@@ -530,7 +530,7 @@ let H = (0, O.oH)(function () {
         }
         return (
             i.useEffect(() => ((0, p.Ky)(), p.P7), []),
-            (0, r.jsxs)(T.Z, {
+            (0, r.jsxs)(S.Z, {
                 title: n ? C.intl.string(C.t.AVDyEj) : null,
                 className: t,
                 children: [

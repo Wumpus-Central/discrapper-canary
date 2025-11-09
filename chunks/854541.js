@@ -19,7 +19,7 @@ var r = n(951288),
     p = n(44315),
     h = n(981631),
     m = n(388032),
-    g = n(164688);
+    g = n(68701);
 function E(e, t, n) {
     return (
         t in e
@@ -93,8 +93,8 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
-    S = 7,
+let S = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
+    T = 7,
     A = () => Promise.resolve();
 function C(e) {
     return null == e ? null : "string" == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
@@ -114,13 +114,13 @@ function N(e) {
             gradientEnd: v,
             gradientDegrees: I = 180,
         } = e,
-        T = (0, s.JA)("color-".concat(t)),
-        S = {};
+        S = (0, s.JA)("color-".concat(t)),
+        T = {};
     if (m && null != y && null != v) {
         let e = (0, c.Rf)(y),
             t = (0, c.Rf)(v);
-        S = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
-    } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
+        T = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
+    } else T = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
     let A = m ? y : t,
         C = !1;
     function N() {
@@ -163,10 +163,10 @@ function N(e) {
                                                 }
                                               : t,
                                       ),
-                            style: b({}, d, S),
-                            "aria-label": null != E ? E : m ? "Gradient ".concat(y, "-").concat(v) : S.backgroundColor,
+                            style: b({}, d, T),
+                            "aria-label": null != E ? E : m ? "Gradient ".concat(y, "-").concat(v) : T.backgroundColor,
                         },
-                        T,
+                        S,
                     ),
                     {
                         children: [
@@ -292,7 +292,7 @@ function w(e) {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
-                    children: (0, r.jsx)(T, {
+                    children: (0, r.jsx)(S, {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
@@ -305,7 +305,7 @@ function w(e) {
                 (0, r.jsx)(f.oil, {
                     value: w.input.slice(1),
                     onChange: x,
-                    maxLength: S - 1,
+                    maxLength: T - 1,
                     leading: "#",
                     trailing:
                         E && null != I
@@ -362,7 +362,7 @@ function x(e) {
             gradientDegrees: y,
             allowBlackCustomColor: I,
         } = e,
-        T = (e) =>
+        S = (e) =>
             (0, r.jsx)("div", {
                 className: g.colorPickerRow,
                 children: m
@@ -397,7 +397,7 @@ function x(e) {
                           ),
                       ),
             }),
-        S = a.slice(0, a.length / 2),
+        T = a.slice(0, a.length / 2),
         C = a.slice(a.length / 2, a.length),
         R = (0, l.ZP)({
             id: "color-picker",
@@ -458,7 +458,7 @@ function x(e) {
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {
-                                    children: [T(S), T(C)],
+                                    children: [S(T), S(C)],
                                 }),
                             ],
                         },

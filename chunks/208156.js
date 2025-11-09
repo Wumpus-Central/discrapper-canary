@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(953101),
     h = n(701488),
     m = n(981631),
-    g = n(702255);
+    g = n(40037);
 function E(e, t, n) {
     return (
         t in e
@@ -78,11 +78,11 @@ function v(e) {
             referrerPolicy: v = "origin",
         } = e,
         I = (0, f.sU)({}),
-        T = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
-        S = i.useRef(null),
-        A = (0, _.Z)(S, g, null == I ? window : I),
+        S = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = i.useRef(null),
+        A = (0, _.Z)(T, g, null == I ? window : I),
         C = O(b({}, E), {
-            frame_id: T,
+            frame_id: S,
             platform: h.S4.DESKTOP,
         }),
         [N, R] = i.useState(!1),
@@ -91,7 +91,7 @@ function v(e) {
     function D(e) {
         var n;
         null == o || o(e.target),
-            (S.current = e.target),
+            (T.current = e.target),
             A(!0),
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
     }
@@ -99,12 +99,12 @@ function v(e) {
         P === m.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: S }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: S });
                 }
             ),
-            [T],
+            [S],
         ),
         i.useEffect(() => {
             let e = (e) => {

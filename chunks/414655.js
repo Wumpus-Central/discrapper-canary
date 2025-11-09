@@ -8,30 +8,30 @@ var r = n(951288),
     s = n(481060),
     u = n(100527),
     d = n(906732),
-    f = n(335131),
-    g = n(277511),
+    g = n(335131),
+    f = n(277511),
     p = n(602733),
     m = n(594174),
     b = n(221292),
-    y = n(621853),
-    h = n(661462),
+    h = n(621853),
+    y = n(661462),
     v = n(319396),
     O = n(778567),
     j = n(228168),
     x = n(388032),
-    _ = n(10094);
+    _ = n(363725);
 function P(e) {
     let { profileOwner: t } = e,
         {
             wishlistId: n,
             currentUser: P,
             wishlistSettings: I,
-        } = (0, l.cj)([y.Z, m.default], () => {
-            let e = y.Z.getFirstWishlistId(t.id);
+        } = (0, l.cj)([h.Z, m.default], () => {
+            let e = h.Z.getFirstWishlistId(t.id);
             return {
                 wishlistId: e,
                 currentUser: m.default.getCurrentUser(),
-                wishlistSettings: null != e ? y.Z.getWishlistSettings(t.id, e) : null,
+                wishlistSettings: null != e ? h.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
         { analyticsLocations: w } = (0, d.ZP)(),
@@ -46,7 +46,7 @@ function P(e) {
             if (null == n) return;
             let e = T ? a.f.PRIVATE : a.f.PUBLIC;
             C(!T),
-                g.Z.updateWishlistVisibility(n, e),
+                f.Z.updateWishlistVisibility(n, e),
                 (0, b.Er)({
                     wishlistId: n,
                     action: T ? j.NW.WISHLIST_TOGGLE_PRIVATE : j.NW.WISHLIST_TOGGLE_PUBLIC,
@@ -55,7 +55,7 @@ function P(e) {
         }, [n, T, w]),
         A = i.useCallback(() => {
             (0, o.pT)(),
-                (0, f.mK)({
+                (0, g.mK)({
                     analyticsLocations: w,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });
@@ -63,7 +63,7 @@ function P(e) {
     return null != k
         ? null
         : null == D || 0 === D.items.length
-          ? (0, r.jsx)(h.F, {
+          ? (0, r.jsx)(y.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
                     className: _.emptyStateContainer,
@@ -94,7 +94,7 @@ function P(e) {
                     ],
                 }),
             })
-          : (0, r.jsxs)(h.F, {
+          : (0, r.jsxs)(y.F, {
                 className: _.scroller,
                 fade: !0,
                 children: [

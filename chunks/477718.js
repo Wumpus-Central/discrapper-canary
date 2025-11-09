@@ -22,8 +22,8 @@ var r = n(951288),
     R = n(776767),
     S = n(981631),
     p = n(388032),
-    C = n(87437),
-    D = n(938556);
+    C = n(114891),
+    D = n(885930);
 function U(e) {
     var t, n;
     let { log: i, member: a, guild: d } = e,
@@ -33,14 +33,14 @@ function U(e) {
         U = null == (t = I.V$(S.zUn.REASON, i)) ? void 0 : t.newValue,
         L = I.J5(i),
         M = (0, A.LJ)(i.id),
-        b = (0, u.e7)([h.ZP], () => (null != i.userId ? h.ZP.getMember(a.guildId, i.userId) : null), [
+        x = (0, u.e7)([h.ZP], () => (null != i.userId ? h.ZP.getMember(a.guildId, i.userId) : null), [
             a.guildId,
             i.userId,
         ]),
-        x = (0, N.X7)(
-            null == b ? void 0 : b.guildId,
-            null == b ? void 0 : b.userId,
-            null != (n = null == b ? void 0 : b.colorStrings) ? n : null,
+        b = (0, N.X7)(
+            null == x ? void 0 : x.guildId,
+            null == x ? void 0 : x.userId,
+            null != (n = null == x ? void 0 : x.colorStrings) ? n : null,
         ),
         v = l.useCallback(
             (e) => (t) => {
@@ -56,7 +56,7 @@ function U(e) {
                       asContainer: !0,
                       text: p.intl.string(p.t.mvsi9n),
                       children: (0, r.jsx)(E.P3F, {
-                          onClick: v(b),
+                          onClick: v(x),
                           tag: "span",
                           className: C.username,
                           children: (0, r.jsxs)(E.Text, {
@@ -66,14 +66,14 @@ function U(e) {
                                   "@",
                                   (0, r.jsx)(E.PUh, {
                                       name: f.ZP.getName(a.guildId, null, i.user),
-                                      colorString: null != (e = null == b ? void 0 : b.colorString) ? e : null,
-                                      colorStrings: x,
+                                      colorString: null != (e = null == x ? void 0 : x.colorString) ? e : null,
+                                      colorStrings: b,
                                   }),
                               ],
                           }),
                       }),
                   });
-        }, [v, i.user, a.guildId, b, x])();
+        }, [v, i.user, a.guildId, x, b])();
     return (0, r.jsxs)("div", {
         className: s()(D.modInfoItem, C.auditLogItem),
         children: [

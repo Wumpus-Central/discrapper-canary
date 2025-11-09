@@ -1,65 +1,65 @@
-t.d(n, { Z: () => _ }), t(388685), t(953529);
-var l = t(951288),
-    r = t(647438),
-    i = t(120356),
-    a = t.n(i),
-    o = t(358458),
-    s = t(399606),
-    c = t(692547),
-    d = t(780384),
-    u = t(481060),
-    m = t(596454),
-    h = t(410030),
-    p = t(339085),
-    f = t(14263),
-    g = t(388032),
-    x = t(830626);
-function _(e) {
-    let { guildId: n, option: t, selected: i, onSelect: _, hideMemberCount: C, canBeNew: b } = e,
-        j = (0, d.wj)((0, h.ZP)()),
-        [v, y] = r.useState(!1),
-        O = v && !C,
-        N = r.useRef(null),
-        { reducedMotion: Z } = r.useContext(u.Sfi),
-        I = (0, s.e7)([p.ZP], () => {
-            var e, n, l, r;
+n.d(t, { Z: () => v }), n(388685), n(953529);
+var l = n(951288),
+    i = n(647438),
+    r = n(120356),
+    o = n.n(r),
+    a = n(509442),
+    c = n(399606),
+    s = n(692547),
+    u = n(780384),
+    d = n(481060),
+    m = n(596454),
+    p = n(410030),
+    h = n(339085),
+    f = n(14263),
+    g = n(388032),
+    j = n(46807);
+function v(e) {
+    let { guildId: t, option: n, selected: r, onSelect: v, hideMemberCount: x, canBeNew: y } = e,
+        b = (0, u.wj)((0, p.ZP)()),
+        [C, O] = i.useState(!1),
+        Z = C && !x,
+        w = i.useRef(null),
+        { reducedMotion: _ } = i.useContext(d.Sfi),
+        N = (0, c.e7)([h.ZP], () => {
+            var e, t, l, i;
             return (
-                (null == (e = t.emoji) ? void 0 : e.id) != null &&
+                (null == (e = n.emoji) ? void 0 : e.id) != null &&
                 null !=
-                    (r =
-                        null == (n = p.ZP.getCustomEmojiById(null == (l = t.emoji) ? void 0 : l.id))
+                    (i =
+                        null == (t = h.ZP.getCustomEmojiById(null == (l = n.emoji) ? void 0 : l.id))
                             ? void 0
-                            : n.animated) &&
-                r
+                            : t.animated) &&
+                i
             );
         }),
-        w = (0, f.Z)(n, 1000),
-        P = null == w || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => w[e])),
-        E = b && !i && t.isUnseen,
-        S = (0, u.q_F)(
+        P = (0, f.Z)(t, 1000),
+        k = null == P || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => P[e])),
+        E = y && !r && n.isUnseen,
+        I = (0, d.q_F)(
             {
-                transform: i || Z.enabled ? "scale(1)" : "scale(0.7)",
-                opacity: +!!i,
+                transform: r || _.enabled ? "scale(1)" : "scale(0.7)",
+                opacity: +!!r,
                 config: { duration: 150 },
             },
             "animate-always",
         ),
-        T = (0, u.dQu)(c.Z.colors.BORDER_SUBTLE),
-        B = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
-        A = (0, u.q_F)(
+        D = (0, d.dQu)(s.Z.colors.BORDER_SUBTLE),
+        M = (0, d.dQu)(s.Z.unsafe_rawColors.BRAND_500),
+        A = (0, d.q_F)(
             {
-                from: { color: B.spring() },
-                color: T.spring({ opacity: j ? 0.5 : 0.25 }),
+                from: { color: M.spring() },
+                color: D.spring({ opacity: b ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500,
             },
             "animate-always",
         ),
-        R = (0, u.Yzy)(
-            O,
+        R = (0, d.Yzy)(
+            Z,
             {
                 from: {
-                    transform: Z.enabled ? "translateX(0)" : "translateX(8px)",
+                    transform: _.enabled ? "translateX(0)" : "translateX(8px)",
                     opacity: 0,
                 },
                 enter: {
@@ -72,88 +72,88 @@ function _(e) {
             },
             "animate-always",
         ),
-        [k, D] = r.useState(!1);
-    r.useEffect(() => {
-        if (O)
+        [T, S] = i.useState(!1);
+    i.useEffect(() => {
+        if (Z)
             return (
-                (N.current = setTimeout(() => {
-                    y(!1), (N.current = null);
+                (w.current = setTimeout(() => {
+                    O(!1), (w.current = null);
                 }, 3000)),
                 () => {
-                    null != N.current && clearTimeout(N.current);
+                    null != w.current && clearTimeout(w.current);
                 }
             );
-    }, [O]);
-    let L = a()(x.optionButtonWrapper, {
-            [x.selected]: i,
-            [x.pressed]: k,
+    }, [Z]);
+    let B = o()(j.optionButtonWrapper, {
+            [j.selected]: r,
+            [j.pressed]: T,
         }),
-        M = E ? { borderColor: A.color } : {};
-    return (0, l.jsx)(o.animated.div, {
-        style: M,
-        className: L,
-        children: (0, l.jsxs)(u.P3F, {
-            className: x.optionButton,
+        z = E ? { borderColor: A.color } : {};
+    return (0, l.jsx)(a.animated.div, {
+        style: z,
+        className: B,
+        children: (0, l.jsxs)(d.P3F, {
+            className: j.optionButton,
             onClick: () => {
-                y(!i), _(!i);
+                O(!r), v(!r);
             },
-            onMouseDown: () => D(!0),
-            onMouseUp: () => D(!1),
+            onMouseDown: () => S(!0),
+            onMouseUp: () => S(!1),
             children: [
-                null != t.emoji && (null != t.emoji.id || null != t.emoji.name)
+                null != n.emoji && (null != n.emoji.id || null != n.emoji.name)
                     ? (0, l.jsx)(m.Z, {
-                          animated: t.emoji.animated || I,
-                          className: x.buttonEmoji,
-                          emojiId: t.emoji.id,
-                          emojiName: t.emoji.name,
+                          animated: n.emoji.animated || N,
+                          className: j.buttonEmoji,
+                          emojiId: n.emoji.id,
+                          emojiName: n.emoji.name,
                       })
                     : null,
                 (0, l.jsxs)("div", {
-                    className: x.buttonText,
+                    className: j.buttonText,
                     children: [
-                        (0, l.jsx)(u.Text, {
+                        (0, l.jsx)(d.Text, {
                             variant: "text-md/medium",
                             color: "header-primary",
-                            children: t.title,
+                            children: n.title,
                         }),
-                        t.description.length > 0
-                            ? (0, l.jsx)(u.Text, {
+                        n.description.length > 0
+                            ? (0, l.jsx)(d.Text, {
                                   variant: "text-xs/normal",
                                   color: "header-secondary",
-                                  children: t.description,
+                                  children: n.description,
                               })
                             : null,
                     ],
                 }),
-                (0, l.jsx)(o.animated.div, {
-                    className: x.checkIcon,
-                    style: S,
-                    children: (0, l.jsx)(u.dz2, {
+                (0, l.jsx)(a.animated.div, {
+                    className: j.checkIcon,
+                    style: I,
+                    children: (0, l.jsx)(d.dz2, {
                         size: "custom",
                         width: 10,
                         height: 10,
-                        color: c.Z.unsafe_rawColors.WHITE_500.css,
+                        color: s.Z.unsafe_rawColors.WHITE_500.css,
                     }),
                 }),
                 R(
-                    (e, n) =>
-                        P > 0 &&
-                        n &&
-                        (0, l.jsx)(o.animated.div, {
-                            className: x.memberCount,
+                    (e, t) =>
+                        k > 0 &&
+                        t &&
+                        (0, l.jsx)(a.animated.div, {
+                            className: j.memberCount,
                             style: e,
-                            children: (0, l.jsx)(u.Text, {
+                            children: (0, l.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                children: g.intl.format(g.t.EgKsZA, { memberCount: P }),
+                                children: g.intl.format(g.t.EgKsZA, { memberCount: k }),
                             }),
                         }),
                 ),
                 E &&
-                    (0, l.jsx)(u.IGR, {
-                        color: c.Z.unsafe_rawColors.BRAND_260.css,
+                    (0, l.jsx)(d.IGR, {
+                        color: s.Z.unsafe_rawColors.BRAND_260.css,
                         text: g.intl.string(g.t.y2b7CA),
-                        className: x.newBadge,
+                        className: j.newBadge,
                     }),
             ],
         }),

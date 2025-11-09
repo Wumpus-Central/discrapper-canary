@@ -26,8 +26,8 @@ var r = n(951288),
     O = n(160404),
     v = n(777861),
     I = n(565799),
-    T = n(501655),
-    S = n(517334),
+    S = n(501655),
+    T = n(517334),
     A = n(344185),
     C = n(752048),
     N = n(439944),
@@ -39,8 +39,8 @@ var r = n(951288),
     L = n(938475),
     M = n(981631),
     j = n(388032),
-    k = n(132789),
-    U = n(78480);
+    k = n(102647),
+    U = n(395530);
 function G(e, t, n) {
     return (
         t in e
@@ -109,7 +109,7 @@ function V(e) {
             ],
             [t],
         ),
-        r = (0, S.ZP)(t),
+        r = (0, T.ZP)(t),
         a = i.useMemo(() => r.map((e) => e.id), [r]),
         o = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
         s = (0, c.Wu)([w.Z], () => w.Z.getBlockedOrIgnoredIDs()),
@@ -125,8 +125,8 @@ function V(e) {
         d = (0, c.Wu)([I.Z], () =>
             l().flatMap(a, (t) => {
                 if (t === e.afkChannelId) return [];
-                let n = I.Z.getMutableParticipants(t, T.pV.SPEAKER)
-                    .filter((e) => e.type === T.Ui.VOICE)
+                let n = I.Z.getMutableParticipants(t, S.pV.SPEAKER)
+                    .filter((e) => e.type === S.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -136,7 +136,7 @@ function V(e) {
         ),
         _ = (0, c.e7)([I.Z], () => {
             let e = 0;
-            for (let t of a) e += I.Z.getParticipantCount(t, T.pV.AUDIENCE);
+            for (let t of a) e += I.Z.getParticipantCount(t, S.pV.AUDIENCE);
             return e;
         }),
         h = (0, c.Wu)([R.Z], () => {

@@ -19,12 +19,12 @@ var r = n(951288),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    I = n(36190);
-let T = (0, f.createChannelRecord)({
+    I = n(336821);
+let S = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,
     }),
-    S = (e) => {
+    T = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
@@ -93,7 +93,7 @@ function C(e) {
                 : s === y.n_.STATUS
                   ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
                   : C({ action: "SEND_REPLY_ACTIVITY" });
-            let n = S({
+            let n = T({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: s,
@@ -130,7 +130,7 @@ function C(e) {
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
-                channel: T,
+                channel: S,
                 textValue: x,
                 richValue: M,
                 onChange: (e, t, n) => {

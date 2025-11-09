@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(474936),
     y = n(388032),
-    O = n(961987);
+    O = n(93128);
 let v = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, c.a0)(),
@@ -29,13 +29,13 @@ let v = (e) => {
                 disable: v,
             },
         ),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             p.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, f.openUserSettings)(d.n.GIFT_PANEL, { section: E.oAB.INVENTORY }),
                 u.ZP.dismissOutboundPromotionNotice();
         }, []);
     if (null == n) return null;
-    let S = (e) =>
+    let T = (e) =>
         (0, r.jsxs)(s.qXd, {
             color: s.DM8.PREMIUM_TIER_2,
             children: [
@@ -54,7 +54,7 @@ let v = (e) => {
                 (0, r.jsx)(s.NoS, {
                     noticeType: E.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        T(), null !== e && e(g.L.TAKE_ACTION);
+                        S(), null !== e && e(g.L.TAKE_ACTION);
                     },
                     children: y.intl.string(y.t.jVcuVY),
                 }),
@@ -68,7 +68,7 @@ let v = (e) => {
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
-            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return S(n);
+            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return T(n);
         },
     });
 };

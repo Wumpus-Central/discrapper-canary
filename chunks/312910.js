@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(442837),
     l = n(481060),
@@ -16,48 +16,48 @@ var r = n(951288),
     b = n(999382),
     x = n(981631),
     j = n(611480),
-    v = n(388032),
-    _ = n(96761);
-let C = {
+    _ = n(388032),
+    v = n(881332);
+let O = {
         page: x.ZY5.GUILD_SETTINGS,
         section: x.jXE.GUILD_SETTINGS_STICKERS,
         object: x.qAy.BOOSTING_BANNER,
     },
-    O = (e) => {
+    C = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, s.ZP)(),
             i = (0, u.Z)(t.id).available,
             a = x.oCV[x.Eu4.TIER_1] - i;
         return (0, r.jsxs)("div", {
-            className: _.upsellContainer,
+            className: v.upsellContainer,
             children: [
                 (0, r.jsx)(l.Heading, {
-                    className: _.upsellHeader,
+                    className: v.upsellHeader,
                     variant: "heading-xl/semibold",
-                    children: v.intl.string(v.t.hzCkyg),
+                    children: _.intl.string(_.t.hzCkyg),
                 }),
                 (0, r.jsx)(l.Text, {
-                    className: _.upsellDescription,
+                    className: v.upsellDescription,
                     variant: "text-md/normal",
-                    children: v.intl.string(v.t.jcesAE),
+                    children: _.intl.string(_.t.jcesAE),
                 }),
                 (0, r.jsxs)(l.ButtonGroup, {
-                    className: _.upsellButtons,
+                    className: v.upsellButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "overlay-primary",
-                            text: v.intl.string(v.t.Q5dbTi),
+                            text: _.intl.string(_.t.Q5dbTi),
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: C,
+                                    analyticsLocation: O,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: a,
                                 }),
                         }),
                         (0, r.jsx)(l.Button, {
                             variant: "overlay-primary",
-                            text: v.intl.string(v.t.hvVgAZ),
+                            text: _.intl.string(_.t.hvVgAZ),
                             onClick: () =>
                                 (0, o.f)({
                                     guildId: t.id,
@@ -75,19 +75,19 @@ let C = {
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: "text-md/medium",
-                    children: v.intl.string(v.t["9N2OWD"]),
+                    children: _.intl.string(_.t["9N2OWD"]),
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: v.intl.format(v.t.hxLviw, { fileSize: (0, p.IC)(j.Ht, { useKibibytes: !0 }) }),
+                    children: _.intl.format(_.t.hxLviw, { fileSize: (0, p.IC)(j.Ht, { useKibibytes: !0 }) }),
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: v.intl.format(v.t.UBj0aX, { articleUrl: h.Z.getArticleURL(x.BhN.STICKERS_UPLOAD) }),
+                    children: _.intl.format(_.t.UBj0aX, { articleUrl: h.Z.getArticleURL(x.BhN.STICKERS_UPLOAD) }),
                 }),
             ],
         }),
-    E = (e) => {
+    N = (e) => {
         let t,
             n,
             i,
@@ -100,11 +100,11 @@ let C = {
         return null == d || s === x.Eu4.TIER_3 || o > 0
             ? null
             : (g > u
-                  ? ((t = v.intl.formatToPlainString(v.t.ZtAY1f, { level: d })),
-                    (n = v.intl.formatToPlainString(v.t["13hOWm"], { level: d })),
+                  ? ((t = _.intl.formatToPlainString(_.t.ZtAY1f, { level: d })),
+                    (n = _.intl.formatToPlainString(_.t["13hOWm"], { level: d })),
                     (i = x.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = v.intl.string(v.t.zT9SxY)),
-                    (n = v.intl.formatToPlainString(v.t.YaW9wI, {
+                  : ((t = _.intl.string(_.t.zT9SxY)),
+                    (n = _.intl.formatToPlainString(_.t.YaW9wI, {
                         level: d,
                         numAdditional: (0, f.ig)(d),
                     })),
@@ -121,7 +121,7 @@ let C = {
                   },
               }));
     },
-    N = () => {
+    E = () => {
         let e = (0, i.e7)([b.Z], () => b.Z.getGuild()),
             t = (0, i.e7)([g.Z], () => {
                 var t;
@@ -137,20 +137,20 @@ let C = {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
-                        children: v.intl.string(v.t.R5nQkS),
+                        children: _.intl.string(_.t.R5nQkS),
                     }),
                     o
                         ? (0, r.jsxs)("div", {
                               children: [
-                                  (0, r.jsx)(E, {
+                                  (0, r.jsx)(N, {
                                       guild: e,
                                       guildStickers: t,
                                   }),
                                   (0, r.jsx)(y, {}),
                               ],
                           })
-                        : (0, r.jsx)(O, { guild: e }),
-                    (0, r.jsx)(l.izJ, { className: _.divider }),
+                        : (0, r.jsx)(C, { guild: e }),
+                    (0, r.jsx)(l.izJ, { className: v.divider }),
                     (0, r.jsx)(m.Z, { guild: e }),
                 ],
             }),

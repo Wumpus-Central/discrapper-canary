@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eI }), n(388685), n(472816), n(794429);
+n.d(t, { Z: () => ey }), n(388685), n(472816), n(794429);
 var r,
     i = n(951288),
     l = n(647438),
@@ -10,16 +10,16 @@ var r,
     d = n(692547),
     p = n(28664),
     f = n(481060),
-    m = n(287734),
-    h = n(438139),
-    g = n(2052),
+    h = n(287734),
+    g = n(438139),
+    m = n(2052),
     _ = n(726542),
     b = n(638880),
     E = n(655922),
     O = n(122810),
-    I = n(833664),
-    y = n(503438),
-    v = n(420660),
+    y = n(833664),
+    v = n(503438),
+    I = n(420660),
     C = n(74433),
     S = n(206074),
     T = n(100527),
@@ -56,7 +56,7 @@ var r,
     er = n(599706),
     ei = n(981631),
     el = n(388032),
-    ea = n(84822);
+    ea = n(544284);
 let es = [14, 14, 12, 12, 10, 8, 6],
     eo = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -76,7 +76,7 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             children: e,
         });
     },
-    eu = (0, h.Z)((e) => {
+    eu = (0, g.Z)((e) => {
         let { message: t } = e;
         return (0, i.jsx)("div", {
             className: ea.__invalid_timestamp,
@@ -114,7 +114,7 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             })
         );
     },
-    em = (e) => {
+    eh = (e) => {
         let { activity: t, user: n } = e,
             r = (0, F.e)({
                 activity: t,
@@ -128,9 +128,9 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             hasButton: i,
         };
     },
-    eh = (e) => {
+    eg = (e) => {
         let { activity: t, user: n } = e,
-            { joinActivityButtonAction: r, isJoinActivityButtonShown: l } = em({
+            { joinActivityButtonAction: r, isJoinActivityButtonShown: l } = eh({
                 activity: t,
                 user: n,
             });
@@ -154,7 +154,7 @@ let es = [14, 14, 12, 12, 10, 8, 6],
         }
         return null;
     },
-    eg = (e) => {
+    em = (e) => {
         let { activity: t, analyticsLocations: n } = e,
             { application_id: r, name: l } = t,
             { data: a } = (0, P.IX)(r),
@@ -391,7 +391,7 @@ let eO = (e) => {
             u = l.useRef(null),
             d = (0, A.ZP)(r, !0),
             p = (0, q.EB)(n, 32),
-            h = (0, q.gM)(n);
+            g = (0, q.gM)(n);
         return (0, i.jsx)(ed, {
             children: (0, i.jsxs)("div", {
                 className: ea.voiceSection,
@@ -415,8 +415,8 @@ let eO = (e) => {
                                           className: ea.voiceSectionNoGuildImageWrapper,
                                           children: (0, i.jsx)("div", {
                                               className: ea.voiceSectionNoGuildImage,
-                                              style: { fontSize: null != (t = es[h.length]) ? t : es[es.length - 1] },
-                                              children: h,
+                                              style: { fontSize: null != (t = es[g.length]) ? t : es[es.length - 1] },
+                                              children: g,
                                           }),
                                       }),
                                 (0, i.jsx)("div", {
@@ -432,7 +432,7 @@ let eO = (e) => {
                     }),
                     (0, i.jsx)(f.P3F, {
                         onClick: () => {
-                            m.default.selectVoiceChannel(r.id), (0, z.Kh)(r.id);
+                            h.default.selectVoiceChannel(r.id), (0, z.Kh)(r.id);
                         },
                         focusProps: { ringTarget: u },
                         children: (0, i.jsxs)("div", {
@@ -476,7 +476,7 @@ let eO = (e) => {
                         }),
                     ],
                 }),
-                (0, i.jsx)(eg, {
+                (0, i.jsx)(em, {
                     activity: a,
                     analyticsLocations: s,
                 }),
@@ -488,8 +488,8 @@ let eO = (e) => {
         let { activity: o, getAssetImage: c, user: u } = e,
             { analyticsLocations: d } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: p } = (0, P.IX)(o.application_id),
-            { assets: f, details: m, state: h, application_id: g } = o,
-            { hasButton: _ } = em({
+            { assets: f, details: h, state: g, application_id: m } = o,
+            { hasButton: _ } = eh({
                 activity: o,
                 user: u,
             }),
@@ -510,7 +510,7 @@ let eO = (e) => {
                                         children: [
                                             (0, i.jsx)("img", {
                                                 alt: null != (l = f.large_text) ? l : "",
-                                                src: c(g, f.large_image, [160, 160]),
+                                                src: c(m, f.large_image, [160, 160]),
                                                 className: s()(ea.largeImage, {
                                                     [ea.largeImageMask]: null != f.small_image,
                                                 }),
@@ -518,7 +518,7 @@ let eO = (e) => {
                                             null != f.small_image
                                                 ? (0, i.jsx)("img", {
                                                       alt: null != (a = f.small_text) ? a : "",
-                                                      src: c(g, f.small_image, [64, 64]),
+                                                      src: c(m, f.small_image, [64, 64]),
                                                       className: ea.smallImage,
                                                   })
                                                 : null,
@@ -535,11 +535,11 @@ let eO = (e) => {
                               (0, i.jsxs)("div", {
                                   className: ea.activitySectionDetails,
                                   children: [
-                                      eo(null != m && "" !== m ? m : o.name),
-                                      null != h ? ec(h) : null,
+                                      eo(null != h && "" !== h ? h : o.name),
+                                      null != g ? ec(g) : null,
                                       (() => {
                                           let { timestamps: e } = o;
-                                          return null == e || !(0, I.Z)(o) || (0, y.Z)(o)
+                                          return null == e || !(0, y.Z)(o) || (0, v.Z)(o)
                                               ? null
                                               : ec(
                                                     (0, O.Z)(o)
@@ -554,13 +554,13 @@ let eO = (e) => {
                                       })(),
                                   ],
                               }),
-                              (0, i.jsx)(eh, {
+                              (0, i.jsx)(eg, {
                                   activity: o,
                                   user: u,
                               }),
                           ],
                       }),
-                      (0, i.jsx)(eg, {
+                      (0, i.jsx)(em, {
                           activity: o,
                           analyticsLocations: d,
                       }),
@@ -632,8 +632,8 @@ let eO = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: o } = e,
             { name: c, details: u, assets: d, application_id: p } = r;
-        if (null != d && (0, v.Z)(r)) {
-            var m;
+        if (null != d && (0, I.Z)(r)) {
+            var h;
             t = (0, i.jsx)(R.Z, {
                 className: ea.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
@@ -643,7 +643,7 @@ let eO = (e) => {
                     target: "_blank",
                     children: [
                         (0, i.jsx)("img", {
-                            alt: null != (m = d.large_text) ? m : "",
+                            alt: null != (h = d.large_text) ? h : "",
                             src: a(p, d.large_image, [900, 500]),
                             className: ea.twitchSectionPreview,
                         }),
@@ -691,7 +691,7 @@ let eO = (e) => {
         let { activity: r, user: l, applicationStream: a, onPreviewClick: s, guildId: o } = e,
             u = (0, c.e7)([Q.Z], () => Q.Z.getChannel(a.channelId)),
             [d, p] = (0, U.wq)(u),
-            m = (0, i.jsxs)(f.P3F, {
+            h = (0, i.jsxs)(f.P3F, {
                 onClick: d ? s : void 0,
                 className: ea.applicationStreamingPreviewWrapper,
                 children: [
@@ -707,7 +707,7 @@ let eO = (e) => {
                     }),
                 ],
             }),
-            h = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7B);
+            g = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7B);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
@@ -720,12 +720,12 @@ let eO = (e) => {
                             className: ea.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [eo(en.ZP.getName(l)), ec(h)],
+                            children: [eo(en.ZP.getName(l)), ec(g)],
                         }),
                         (0, i.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL }),
                     ],
                 }),
-                m,
+                h,
             ],
         });
     }),
@@ -745,20 +745,20 @@ let eO = (e) => {
                     .map((e) => (K.default.getId() === e ? null : J.default.getUser(e)))
                     .filter(et.lm),
             ),
-            p = (0, g.O)(),
-            { analyticsLocations: m } = (0, N.ZP)();
+            p = (0, m.O)(),
+            { analyticsLocations: h } = (0, N.ZP)();
         if (null == u) return null;
-        let h = x.Z.getApplication(u);
-        if (null == h) return null;
+        let g = x.Z.getApplication(u);
+        if (null == g) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            E = (0, ee.xF)(h.id, s, 300);
+            E = (0, ee.xF)(g.id, s, 300);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
                     className: ea.embeddedActivityTopRow,
                     children: [
                         (0, i.jsx)(k.Z, {
-                            game: h,
+                            game: g,
                             size: k.A.XSMALL,
                             className: ea.embeddedActivityIcon,
                         }),
@@ -766,7 +766,7 @@ let eO = (e) => {
                             className: ea.embeddedActivityName,
                             children: (0, i.jsx)(f.Text, {
                                 variant: "text-sm/semibold",
-                                children: h.name,
+                                children: g.name,
                             }),
                         }),
                         null != _
@@ -787,7 +787,7 @@ let eO = (e) => {
                         null != E
                             ? (0, i.jsx)("img", {
                                   src: E,
-                                  alt: h.name,
+                                  alt: g.name,
                                   className: ea.embeddedActivityImage,
                               })
                             : null,
@@ -811,7 +811,7 @@ let eO = (e) => {
                                                     applicationId: u,
                                                     activityChannelId: n.id,
                                                     locationObject: p.location,
-                                                    analyticsLocations: m,
+                                                    analyticsLocations: h,
                                                 });
                                         },
                                     }),
@@ -823,4 +823,4 @@ let eO = (e) => {
             ],
         });
     });
-let eI = eO;
+let ey = eO;

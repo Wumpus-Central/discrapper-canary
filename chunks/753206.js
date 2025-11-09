@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(25015),
     d = n(963550),
     f = n(845080),
-    _ = n(360514);
+    _ = n(5898);
 function p(e, t, n) {
     return (
         t in e
@@ -76,12 +76,12 @@ function E(e) {
             preview: v,
             author: I,
         } = e,
-        T = null != O ? O : (0, l.k)(n),
-        S = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        S = null != O ? O : (0, l.k)(n),
+        T = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: A } = (0, u.Z)(n, {
             hideSimpleEmbedContent: b,
-            allowList: S,
-            allowHeading: S,
+            allowList: T,
+            allowHeading: T,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -90,10 +90,10 @@ function E(e) {
                 (0, f.Z)(
                     g(h({}, e), {
                         channel: a,
-                        guildId: T,
+                        guildId: S,
                     }),
                 ),
-            [e, a, T],
+            [e, a, S],
         );
     return (0, r.jsx)(c.Z, {
         compact: p,

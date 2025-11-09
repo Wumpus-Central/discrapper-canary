@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(532657),
     g = n(556638),
     E = n(388032),
-    b = n(80568);
+    b = n(666998);
 function y(e, t, n) {
     return (
         t in e
@@ -68,7 +68,7 @@ function I(e, t) {
         e
     );
 }
-function T(e) {
+function S(e) {
     let {
             channel: t,
             textVariant: n,
@@ -77,13 +77,13 @@ function T(e) {
             hideText: m = !1,
             hideTooltip: y = !1,
             canTruncate: v = !0,
-            showChannelName: T = !1,
+            showChannelName: S = !1,
         } = e,
-        S = (0, s.vjg)(s.Skl.ONLINE),
+        T = (0, s.vjg)(s.Skl.ONLINE),
         A = (0, u.ZP)(t),
         C = t.isDM() || t.isGroupDM(),
         { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
-        R = !N && T,
+        R = !N && S,
         { analyticsLocations: P } = (0, l.ZP)(),
         w = i.useCallback(() => {
             (0, p.A)({
@@ -96,7 +96,7 @@ function T(e) {
             y || C
                 ? (0, r.jsx)(_.Z, {
                       size: "custom",
-                      color: S,
+                      color: T,
                       channel: t,
                       className: o()(b.icon, f),
                   })
@@ -111,7 +111,7 @@ function T(e) {
                               _.Z,
                               I(O({}, e), {
                                   size: "custom",
-                                  color: S,
+                                  color: T,
                                   channel: t,
                                   className: o()(b.icon, f),
                               }),
@@ -139,7 +139,7 @@ function T(e) {
         ],
     });
 }
-function S(e) {
+function T(e) {
     let {
             channel: t,
             textVariant: n,
@@ -163,7 +163,7 @@ function S(e) {
                     ? E.intl.string(E.t.QygGCN)
                     : E.intl.string(E.t.msxteM),
         I = null == g || O ? v : "".concat(v, " (").concat(g, ")"),
-        T = p ? I : v;
+        S = p ? I : v;
     return (0, r.jsx)(m.Z, {
         icon: (0, r.jsx)(_.Z, {
             size: "custom",
@@ -171,7 +171,7 @@ function S(e) {
             channel: t,
             className: o()(b.icon, a),
         }),
-        text: T,
+        text: S,
         tooltipText: c ? void 0 : I,
         textVariant: n,
         textClassName: i,
@@ -183,6 +183,6 @@ function S(e) {
 }
 function A(e) {
     return (0, f.b)({ location: "VoiceActivityStatusExperimentWrapper" })
-        ? (0, r.jsx)(S, O({}, e))
-        : (0, r.jsx)(T, O({}, e));
+        ? (0, r.jsx)(T, O({}, e))
+        : (0, r.jsx)(S, O({}, e));
 }

@@ -18,11 +18,11 @@ var r = n(951288),
     y = n(82295),
     x = n(623624),
     O = n(518738),
-    j = n(850020),
-    v = n(48950),
+    v = n(850020),
+    j = n(48950),
     C = n(965376),
     I = n(159299),
-    S = n(670188),
+    S = n(456077),
     E = n(199902),
     Z = n(271383),
     P = n(485386),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(61722),
-    V = n(32482);
+    B = n(101265),
+    V = n(854641);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +85,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
             O = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
-            v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
+            j = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, j.K)({
+            q = (0, v.K)({
                 user: b,
                 guildId: t.guild_id,
             }),
@@ -212,7 +212,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: v,
+                            isMobile: j,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -253,7 +253,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(v.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(j.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -368,7 +368,7 @@ function X(e) {
     )
         return (0, r.jsx)(J, { channel: t });
     let O = o().omit(g.containerProps, ["ref"]),
-        j = M.iJ(n);
+        v = M.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
@@ -409,7 +409,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: j,
+                                                guildOwnerId: v,
                                             },
                                             l[i],
                                         );

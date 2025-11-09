@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -14,7 +14,7 @@ var i = n(392711),
     p = n(590921),
     h = n(689079),
     m = n(388032),
-    g = n(352647),
+    g = n(31275),
     E = n(239840);
 let b = { results: { choices: [] } },
     y = {
@@ -38,10 +38,10 @@ let b = { results: { choices: [] } },
         leading: !0,
         trailing: !0,
     });
-function T(e) {
+function S(e) {
     return e.displayName;
 }
-let S = {
+let T = {
     stores: [c.Z, l.Z],
     showEmpty: !0,
     matches(e, t, n, r, i) {
@@ -130,6 +130,6 @@ let S = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(T(i)), { type: p.z2.CHOICE };
+        return r.insertText(S(i)), { type: p.z2.CHOICE };
     },
 };

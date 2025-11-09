@@ -21,11 +21,11 @@ var i = n(442837),
     O = n(827313),
     v = n(420654),
     I = n(166584),
-    T = n(915014),
-    S = n(671955),
+    S = n(915014),
+    T = n(671955),
     A = n(388032),
-    C = n(57842),
-    N = n(116649);
+    C = n(759253),
+    N = n(593540);
 function R(e) {
     let {
             user: t,
@@ -57,7 +57,7 @@ function R(e) {
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
-                    themeType: S.l.POPOUT,
+                    themeType: T.l.POPOUT,
                     onClose: L,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -72,7 +72,7 @@ function R(e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(S.Z, {
                 user: t,
                 onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
             }),

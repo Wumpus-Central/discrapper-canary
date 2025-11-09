@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(999642);
+    v = n(39162);
 function I(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,7 +106,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                 rowIndex: m,
                 size: b,
                 surrogateCodePoint: I,
-                allowAnimatedEmoji: S,
+                allowAnimatedEmoji: T,
                 selectedItemClassName: N,
                 inNitroLockedSection: R,
             } = e,
@@ -142,7 +142,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
         return (0, r.jsx)(l.tEY, {
             children: (0, r.jsx)(
                 "button",
-                A(T({}, P), {
+                A(S({}, P), {
                     className: o()(v.emojiItem, {
                         [v.emojiItemLarge]: a,
                         [v.emojiItemMedium]: c,
@@ -163,7 +163,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                         emoji: n,
                         size: b,
                         surrogateCodePoint: I,
-                        allowAnimatedEmoji: S,
+                        allowAnimatedEmoji: T,
                         isLocked: x,
                     }),
                 }),
@@ -182,7 +182,7 @@ function w(e) {
             isScrolling: y,
             isUsingKeyboardNavigation: v,
             showEmojiFavoriteTooltip: I,
-            surrogateCodePoint: S,
+            surrogateCodePoint: T,
             selectedItemClassName: N,
             getEmojiItemProps: w,
             isMediumSize: D,
@@ -216,7 +216,7 @@ function w(e) {
         J = (e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("39010").then(n.bind(n, 269254));
-                return (t) => (0, r.jsx)(e, T({}, t));
+                return (t) => (0, r.jsx)(e, S({}, t));
             });
         },
         $ = function () {
@@ -228,7 +228,7 @@ function w(e) {
                 d = C(s, ["ref", "tabIndex", "onFocus"]);
             return (0, i.createElement)(
                 "li",
-                A(T({}, d), {
+                A(S({}, d), {
                     key: a,
                     ref: Y,
                 }),
@@ -269,7 +269,7 @@ function w(e) {
                         columnIndex: q,
                         rowIndex: f,
                         size: K,
-                        surrogateCodePoint: S,
+                        surrogateCodePoint: T,
                         selectedItemClassName: N,
                         inNitroLockedSection: B,
                     }),

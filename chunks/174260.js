@@ -1,13 +1,31 @@
-e.exports = {
-    wrapper: "wrapper__1505a",
-    videoContainer: "videoContainer__1505a",
-    zoomed: "zoomed__1505a",
-    zoomEnabled: "zoomEnabled__1505a",
-    zoomDragging: "zoomDragging__1505a",
-    minimap: "minimap__1505a",
-    fadeOut: "fadeOut__1505a",
-    minimapVideo: "minimapVideo__1505a",
-    minimapIndicator: "minimapIndicator__1505a",
-    zoomControls: "zoomControls__1505a",
-    zoomLevelIndicator: "zoomLevelIndicator__1505a",
-};
+t.d(n, { Z: () => o });
+var l = t(951288);
+t(647438);
+var i = t(481060),
+    a = t(840724),
+    r = t(727366),
+    d = t(650750);
+function o(e) {
+    let { applicationId: n, guildId: t, sectionTitle: o, skuIds: s, variant: c = a.Z.SMALL } = e;
+    return null == s || 0 === s.length
+        ? null
+        : (0, l.jsxs)("div", {
+              className: d.sectionContainer,
+              children: [
+                  null != o &&
+                      (0, l.jsx)(i.Heading, {
+                          variant: "heading-lg/semibold",
+                          color: "header-primary",
+                          lineClamp: 1,
+                          className: d.sectionTitle,
+                          children: o,
+                      }),
+                  (0, l.jsx)(r.t, {
+                      applicationId: n,
+                      skuIds: s,
+                      variant: c,
+                      guildId: t,
+                  }),
+              ],
+          });
+}

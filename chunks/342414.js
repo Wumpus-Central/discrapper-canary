@@ -21,8 +21,8 @@ var i = n(120356),
     O = n(775412),
     v = n(695349),
     I = n(104494),
-    T = n(639119),
-    S = n(715130),
+    S = n(639119),
+    T = n(715130),
     A = n(179918),
     C = n(8647),
     N = n(533525),
@@ -42,8 +42,8 @@ var i = n(120356),
     F = n(474936),
     V = n(981631),
     H = n(388032),
-    Y = n(644219),
-    W = n(526980),
+    Y = n(24202),
+    W = n(318271),
     K = n(872905),
     z = n(578478);
 function q(e, t, n) {
@@ -124,7 +124,7 @@ let $ = (e, t, i) => {
                 buttonVisibilityRef: N,
             } = ea(),
             { analyticsLocations: P } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_HERO_CTA),
-            w = (0, S.H)(o.I.MARKETING_PAGE_BANNER),
+            w = (0, T.H)(o.I.MARKETING_PAGE_BANNER),
             M = null;
         null != w && "marketingPageBanner" === w.properties.properties.oneofKind
             ? (M = (0, r.jsx)(A.u, {
@@ -138,7 +138,7 @@ let $ = (e, t, i) => {
                 : p && (M = (0, r.jsx)(R._, {}));
         let G = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             K = null != G && G.status === V.O0b.CANCELED && null != O,
-            z = (0, T.N)(),
+            z = (0, S.N)(),
             q = (0, I.Ng)(),
             X = (0, I.Wp)(q, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
             Q = null != G && G.status !== V.O0b.ACCOUNT_HOLD && G.hasAnyPremiumNitro,
@@ -221,9 +221,9 @@ let $ = (e, t, i) => {
             { analyticsLocations: E } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_HERO_CTA),
             y = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             O = null != y && y.status === V.O0b.CANCELED && null != d,
-            v = (0, T.N)(),
-            S = (0, I.Ng)(),
-            A = (0, I.Wp)(S, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
+            v = (0, S.N)(),
+            T = (0, I.Ng)(),
+            A = (0, I.Wp)(T, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
             C = null != y && y.status !== V.O0b.ACCOUNT_HOLD && y.hasAnyPremiumNitro,
             N = (0, h.Z)().isFractionalPremiumActive && !C && !O;
         return (0, r.jsxs)("div", {
@@ -409,13 +409,13 @@ let $ = (e, t, i) => {
             g = (0, O._O)(),
             b = H.intl.string(H.t.qYKftX),
             I = (0, N.b)(),
-            T = (0, r.jsx)(et, { className: t }),
-            S = H.intl.string(H.t.ifwQZb),
+            S = (0, r.jsx)(et, { className: t }),
+            T = H.intl.string(H.t.ifwQZb),
             { fractionalState: A, endsAt: C } = (0, h.Z)(),
             R = (0, p.ZP)(C, p.aj.CREDITS_ENDS_IN);
         d || m
-            ? (T = (0, r.jsx)(er, { isEligibleForBogoPromotion: m }))
-            : I && ((b = H.intl.string(H.t.qYKftX)), (T = (0, r.jsx)(en, {})));
+            ? (S = (0, r.jsx)(er, { isEligibleForBogoPromotion: m }))
+            : I && ((b = H.intl.string(H.t.qYKftX)), (S = (0, r.jsx)(en, {})));
         let P = null;
         if (A === F.a$.NONE || d)
             P = n
@@ -471,7 +471,7 @@ let $ = (e, t, i) => {
             value: c,
             children: (0, r.jsx)(ei.Provider, {
                 value: {
-                    headingText: S,
+                    headingText: T,
                     headingTop: P,
                     showPill: g,
                     userDiscountOffer: o,
@@ -485,7 +485,7 @@ let $ = (e, t, i) => {
                           isInReverseTrial: d,
                           shouldShowReferralProgressBar: I,
                       })
-                    : T,
+                    : S,
             }),
         });
     };

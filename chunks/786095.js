@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(35282);
+n.d(t, { Z: () => S }), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -14,7 +14,7 @@ var r = n(951288),
     p = n(981631),
     y = n(273504),
     O = n(388032),
-    h = n(335260);
+    h = n(31593);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,9 +59,9 @@ function v(e, t) {
     );
 }
 let j = y.fX.KEYWORD;
-function E(e, t) {
+function S(e, t) {
     let { perGuildMaxCount: n } = c.I6[j],
-        { isLoading: E, saveRule: S, errorMessage: P } = (0, d.w)(),
+        { isLoading: S, saveRule: E, errorMessage: P } = (0, d.w)(),
         { createNewEditingRule: Z } = (0, d.V)(),
         [_, T] = i.useState(!1),
         [I, N] = (0, s.I2)(t),
@@ -94,7 +94,7 @@ function E(e, t) {
                     });
                 }, 400));
         },
-        k = async (t) => {
+        G = async (t) => {
             var n, r;
             if (((0, a.Zy)(), !(await (0, g.XN)(t.name, e)))) return;
             let i = v(m({}, t), {
@@ -105,26 +105,26 @@ function E(e, t) {
                     ],
                 }),
             });
-            await S(i, x),
+            await E(i, x),
                 A(i),
                 null != P
                     ? (0, l.showToast)((0, l.createToast)(O.intl.string(O.t.wH6L0r), l.ToastType.FAILURE))
                     : (0, l.showToast)((0, l.createToast)(O.intl.string(O.t["0rdYm2"]), l.ToastType.SUCCESS));
         },
-        G = (0, r.jsx)(l.sNh, {
+        k = (0, r.jsx)(l.sNh, {
             id: "automod-rules-loading",
             label: O.intl.string(O.t.ZTNur7),
         });
     return (
         I ||
-            (G = (0, r.jsxs)(r.Fragment, {
+            (k = (0, r.jsxs)(r.Fragment, {
                 children: [
                     M &&
                         (0, r.jsx)(l.sNh, {
                             id: "add-first-rule",
                             label: O.intl.string(O.t.f72Zqb),
                             action: L,
-                            disabled: E,
+                            disabled: S,
                         }),
                     x.map((e) => {
                         let t = (0, c.V9)(j).reduce((t, n) => {
@@ -149,8 +149,8 @@ function E(e, t) {
                                 }),
                                 group: "automod-rule-selection",
                                 checked: !1,
-                                disabled: E,
-                                action: () => k(e),
+                                disabled: S,
+                                action: () => G(e),
                             },
                             e.id,
                         );
@@ -163,7 +163,7 @@ function E(e, t) {
                                     id: "add-another-rule",
                                     label: O.intl.string(O.t["0K5jDE"]),
                                     action: L,
-                                    disabled: E,
+                                    disabled: S,
                                 }),
                             ],
                         }),
@@ -175,7 +175,7 @@ function E(e, t) {
             onFocus: () => {
                 _ || (T(!0), N());
             },
-            children: G,
+            children: k,
         })
     );
 }

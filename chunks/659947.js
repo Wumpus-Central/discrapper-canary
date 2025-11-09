@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(914010),
     h = n(727785),
     m = n(388032),
-    g = n(704563);
+    g = n(47976);
 function E(e, t, n) {
     return (
         t in e
@@ -68,18 +68,18 @@ function O(e, t) {
 }
 function v() {}
 let I = [h.h8.VOICE_CHANNEL];
-function T(e) {
+function S(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function S(e) {
+function T(e) {
     let { height: t } = e;
     return (0, r.jsx)("div", { style: { height: t } });
 }
 function A() {
-    return (0, r.jsx)(S, { height: 16 }, "footer");
+    return (0, r.jsx)(T, { height: 16 }, "footer");
 }
 function C() {
-    return (0, r.jsx)(S, { height: 8 }, "header");
+    return (0, r.jsx)(T, { height: 8 }, "header");
 }
 function N() {
     return (0, r.jsx)("div", {
@@ -192,19 +192,19 @@ function x(e) {
         } = (0, l.Z)({
             visible: !0,
             autocompleterResultTypes: I,
-            autocompleterBeforeCreateSearchContext: T,
+            autocompleterBeforeCreateSearchContext: S,
         }),
         v = R(b),
-        { focusedIndex: S, setFocusedIndex: P } = D(b);
+        { focusedIndex: T, setFocusedIndex: P } = D(b);
     i.useEffect(() => {
         let { current: e } = c;
         null == e ||
-            e.isItemVisible(0, S, !0) ||
+            e.isItemVisible(0, T, !0) ||
             e.scrollToIndex({
                 section: 0,
-                row: S,
+                row: T,
             });
-    }, [S]);
+    }, [T]);
     let x = null != v ? v.length : O.length;
     function L(e) {
         let { row: t } = e,
@@ -222,7 +222,7 @@ function x(e) {
                 id: i.id,
                 channel: i,
                 category: o,
-                focused: S === t,
+                focused: T === t,
                 onMouseEnter: () => f.current && P(t),
                 onClick: () => {
                     a(i.id), n();
@@ -249,26 +249,26 @@ function x(e) {
                     break;
                 case "enter": {
                     let e = (() => {
-                        if (null != v) return v[S];
-                        let e = O[S];
+                        if (null != v) return v[T];
+                        let e = O[T];
                         if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
                     })();
                     null == e ? a(void 0) : a(e.id), n();
                     break;
                 }
                 case "arrowup":
-                    0 === S ? P(x - 1) : P(S - 1);
+                    0 === T ? P(x - 1) : P(T - 1);
                     break;
                 case "arrowdown":
-                    S >= x - 1 ? P(0) : P(S + 1);
+                    T >= x - 1 ? P(0) : P(T + 1);
             }
     }
     let j = (() => {
         if (null != v) {
             var e;
-            return null == (e = v[S]) ? void 0 : e.id;
+            return null == (e = v[T]) ? void 0 : e.id;
         }
-        let t = O[S];
+        let t = O[T];
         if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
     })();
     return (0, r.jsx)(o.IX, {

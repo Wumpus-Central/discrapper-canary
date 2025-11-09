@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(391690),
     p = n(424218),
     f = n(358085),
-    m = n(998502),
-    h = n(388032),
-    g = n(499126),
-    _ = n(197571);
+    h = n(998502),
+    g = n(388032),
+    m = n(167103),
+    _ = n(10198);
 function b(e, t, n) {
     return (
         t in e
@@ -46,41 +46,41 @@ class E extends i.PureComponent {
                 ((e = null != u.availableKB ? (0, p.BU)(u.availableKB, { useKibibytes: !0 }) : null),
                 (t = null != u.totalKB ? (0, p.BU)(u.totalKB, { useKibibytes: !0 }) : null)),
             (0, r.jsxs)(c.Z, {
-                className: g.installationPath,
+                className: m.installationPath,
                 align: c.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(c.Z, {
                         direction: c.Z.Direction.VERTICAL,
-                        className: g.__invalid_descriptionWrapper,
+                        className: m.__invalid_descriptionWrapper,
                         children: [
                             (0, r.jsxs)(c.Z, {
                                 align: c.Z.Align.CENTER,
                                 children: [
                                     (0, r.jsx)(a.Heading, {
-                                        className: g.rowTitle,
+                                        className: m.rowTitle,
                                         variant: "heading-md/semibold",
                                         children: null != i ? i : d.Z.getLabelFromPath(n),
                                     }),
                                     s
                                         ? (0, r.jsx)("span", {
-                                              className: g.defaultIndicator,
-                                              children: h.intl.string(h.t.bBvAEH),
+                                              className: m.defaultIndicator,
+                                              children: g.intl.string(g.t.bBvAEH),
                                           })
                                         : null,
                                 ],
                             }),
                             null != u && null != e && null != t
                                 ? (0, r.jsx)(o.Z, {
-                                      className: g.rowBody,
-                                      hoverText: h.intl.formatToPlainString(h.t["Fxo9e+"], {
+                                      className: m.rowBody,
+                                      hoverText: g.intl.formatToPlainString(g.t["Fxo9e+"], {
                                           available: e,
                                           total: t,
                                       }),
                                       children: n,
                                   })
                                 : (0, r.jsx)(a.Text, {
-                                      className: g.rowBody,
+                                      className: m.rowBody,
                                       variant: "text-xs/normal",
                                       children: n,
                                   }),
@@ -89,7 +89,7 @@ class E extends i.PureComponent {
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: h.intl.string(h.t.bt75uw),
+                        text: g.intl.string(g.t.bt75uw),
                         disabled: null != l,
                         onClick: this.handleStartEditing,
                     }),
@@ -102,14 +102,14 @@ class E extends i.PureComponent {
             { label: n, isDefault: i } = this.state;
         return (0, r.jsx)(a.Zbd, {
             editable: !0,
-            className: g.installationPathEditing,
+            className: m.installationPathEditing,
             children: (0, r.jsxs)(c.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(c.Z.Child, {
                         children: [
                             (0, r.jsx)(a.oil, {
-                                label: h.intl.string(h.t.AJkKCB),
+                                label: g.intl.string(g.t.AJkKCB),
                                 value: n,
                                 placeholder: d.Z.getLabelFromPath(e),
                                 onChange: this.handleLabelChange,
@@ -117,27 +117,27 @@ class E extends i.PureComponent {
                             (0, r.jsx)("div", {
                                 className: _.marginTop20,
                                 children: (0, r.jsx)(a.oil, {
-                                    label: h.intl.string(h.t.lnUCwX),
+                                    label: g.intl.string(g.t.lnUCwX),
                                     disabled: !0,
                                     value: e,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: g.defaultLocationCheckbox,
+                                className: m.defaultLocationCheckbox,
                                 children: (0, r.jsx)(a.Checkbox, {
                                     checked: null != i ? i : this.props.isDefault,
                                     disabled: this.props.isDefault,
                                     onChange: this.handleToggleDefault,
-                                    label: h.intl.string(h.t.Z2MWuH),
+                                    label: g.intl.string(g.t.Z2MWuH),
                                 }),
                             }),
-                            (0, r.jsx)(a.izJ, { className: g.separator }),
+                            (0, r.jsx)(a.izJ, { className: m.separator }),
                             (0, r.jsxs)(c.Z, {
                                 children: [
                                     (0, r.jsx)(a.Button, {
                                         variant: "critical-secondary",
                                         size: "sm",
-                                        text: h.intl.string(h.t.iBUzS5),
+                                        text: g.intl.string(g.t.iBUzS5),
                                         disabled: t || this.props.isDefault,
                                         onClick: this.handleRemoveLocation,
                                     }),
@@ -148,13 +148,13 @@ class E extends i.PureComponent {
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "secondary",
                                                     size: "sm",
-                                                    text: h.intl.string(h.t["ETE/oC"]),
+                                                    text: g.intl.string(g.t["ETE/oC"]),
                                                     onClick: this.handleStopEditing,
                                                 }),
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "active",
                                                     size: "sm",
-                                                    text: h.intl.string(h.t["R3BPH+"]),
+                                                    text: g.intl.string(g.t["R3BPH+"]),
                                                     disabled:
                                                         e === this.props.path &&
                                                         n === this.props.label &&
@@ -236,15 +236,15 @@ class E extends i.PureComponent {
                                 return e;
                             })({}, e),
                             {
-                                header: h.intl.string(h.t.iBUzS5),
-                                confirmText: h.intl.string(h.t.iBUzS5),
-                                cancelText: h.intl.string(h.t["ETE/oC"]),
+                                header: g.intl.string(g.t.iBUzS5),
+                                confirmText: g.intl.string(g.t.iBUzS5),
+                                cancelText: g.intl.string(g.t["ETE/oC"]),
                                 onConfirm: () => {
                                     this.handleStopEditing(), (0, s.iD)(this.props.path);
                                 },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    children: h.intl.string(h.t["1XqeW2"]),
+                                    children: g.intl.string(g.t["1XqeW2"]),
                                 }),
                             },
                         ),
@@ -279,9 +279,9 @@ class O extends i.PureComponent {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
             { editingPath: i } = this.state;
         return (0, r.jsx)("div", {
-            className: g.wrapper,
+            className: m.wrapper,
             children: (0, r.jsxs)(a.gNt, {
-                label: h.intl.string(h.t.aLszkC),
+                label: g.intl.string(g.t.aLszkC),
                 children: [
                     e.map((e) => {
                         let { path: l, label: a } = e;
@@ -300,11 +300,11 @@ class O extends i.PureComponent {
                         );
                     }),
                     (0, r.jsx)("div", {
-                        className: g.buttonRowWrapper,
+                        className: m.buttonRowWrapper,
                         children: (0, r.jsx)(a.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: h.intl.string(h.t.pnZ2uk),
+                            text: g.intl.string(g.t.pnZ2uk),
                             disabled: !f.isPlatformEmbedded,
                             onClick: this.handleAddInstallationLocation,
                         }),
@@ -317,7 +317,7 @@ class O extends i.PureComponent {
         super(...e),
             b(this, "state", { editingPath: null }),
             b(this, "handleAddInstallationLocation", () => {
-                m.ZP.showOpenDialog(["openDirectory"]).then((e) => {
+                h.ZP.showOpenDialog(["openDirectory"]).then((e) => {
                     null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, s.RY)(e[0]);
                 });
             }),
@@ -326,7 +326,7 @@ class O extends i.PureComponent {
             });
     }
 }
-let I = l.ZP.connectStores([d.Z], () => ({
+let y = l.ZP.connectStores([d.Z], () => ({
     installationPaths: d.Z.installationPaths,
     installationPathsMetadata: d.Z.installationPathsMetadata,
     defaultInstallationPath: d.Z.defaultInstallationPath,

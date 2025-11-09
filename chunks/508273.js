@@ -19,9 +19,9 @@ var r = n(951288),
     y = n(358595),
     O = n(981631),
     v = n(388032),
-    I = n(492681);
-let T = 292,
-    S = 36,
+    I = n(69643);
+let S = 292,
+    T = 36,
     A = 48;
 function C(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
@@ -32,7 +32,7 @@ function C(e) {
         w = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
-        R((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > T);
+        R((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > S);
     }, [R]);
     let D = (0, _.PC)(t),
         x = i.useCallback(() => {
@@ -45,7 +45,7 @@ function C(e) {
             var e;
             return C && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: p ? T : f.current.clientHeight + S + A,
+                      height: p ? S : f.current.clientHeight + T + A,
                       transition: w ? void 0 : "height 0.2s ease",
                   }
                 : {};

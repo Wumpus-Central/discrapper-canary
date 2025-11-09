@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(600164),
     f = n(695103),
     _ = n(388032),
-    p = n(39205),
-    h = n(197571);
+    p = n(518952),
+    h = n(10198);
 let m = /^\d+$|^$/;
 function g(e, t, n) {
     if (null == e) return null;
@@ -35,21 +35,21 @@ function E(e) {
         })),
         [y, O] = i.useState(null != u ? u : ""),
         [v, I] = i.useState("8080"),
-        [T, S] = i.useState("localhost"),
+        [S, T] = i.useState("localhost"),
         A = m.test(y);
     async function C() {
         c.q$();
-        let e = g(T, v, y);
+        let e = g(S, v, y);
         null != (await c.Wt(y, e)) && t();
     }
     function N() {
-        c.mc(), O(""), S(null);
+        c.mc(), O(""), T(null);
     }
     function R(e) {
         O(e);
     }
     function P(e) {
-        S(e);
+        T(e);
     }
     function w() {
         return null == E
@@ -63,7 +63,7 @@ function E(e) {
               });
     }
     function D() {
-        return "localhost" !== T
+        return "localhost" !== S
             ? null
             : (0, r.jsx)("div", {
                   className: p.inputWrapper,
@@ -84,13 +84,13 @@ function E(e) {
             () => [
                 {
                     loading: b,
-                    disabled: !A || 0 === y.length || ("localhost" === T && 0 === v.length),
+                    disabled: !A || 0 === y.length || ("localhost" === S && 0 === v.length),
                     variant: x ? "critical-primary" : "active",
                     text: x ? _.intl.string(_.t.d6TR3I) : _.intl.string(_.t.qwuK5I),
                     onClick: L,
                 },
             ],
-            [y.length, b, x, A, v.length, L, T],
+            [y.length, b, x, A, v.length, L, S],
         );
     return (0, r.jsxs)(a.Modal, {
         title: _.intl.string(_.t.f8fzky),
@@ -121,7 +121,7 @@ function E(e) {
                         children: (0, r.jsx)(s.q4e, {
                             label: _.intl.string(_.t["/GTqXG"]),
                             isDisabled: !A || "" === y,
-                            value: T,
+                            value: S,
                             options: [
                                 {
                                     value: "localhost",

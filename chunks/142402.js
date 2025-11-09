@@ -15,7 +15,7 @@ var r = n(951288),
     _ = n(531578),
     g = n(70722),
     O = n(388032),
-    y = n(51278);
+    y = n(448832);
 let v = [g.kr.OTHER];
 function h(e) {
     let { isStreamer: t, stream: h, streamApplication: j, onClose: E, transitionState: x, analyticsData: S } = e;

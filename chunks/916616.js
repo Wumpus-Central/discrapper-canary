@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(217702),
     m = n(388032),
-    g = n(12464),
+    g = n(609966),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -68,11 +68,11 @@ function I(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -80,7 +80,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,7 +101,7 @@ let A = i.forwardRef((e, t) => {
             alt: b,
             width: y,
             height: v,
-            maxWidth: S = y,
+            maxWidth: T = y,
             maxHeight: A = v,
             minWidth: P = 0,
             minHeight: w = 0,
@@ -126,7 +126,7 @@ let A = i.forwardRef((e, t) => {
             useFullWidth: F = !1,
             srcIsAnimated: V,
         } = e,
-        H = T(e, [
+        H = S(e, [
             "className",
             "imageClassName",
             "readyState",
@@ -159,7 +159,7 @@ let A = i.forwardRef((e, t) => {
     let K = (0, d.Tj)({
             width: y,
             height: v,
-            maxWidth: S,
+            maxWidth: T,
             maxHeight: A,
             minWidth: P,
             minHeight: w,

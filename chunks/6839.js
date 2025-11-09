@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(660189),
     v = n(372900),
     I = n(566006),
-    T = n(620652),
-    S = n(815605),
+    S = n(620652),
+    T = n(815605),
     A = n(665906),
     C = n(210887),
     N = n(314897),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(995774),
     V = n(981631),
     H = n(388032),
-    Y = n(302854),
-    W = n(197571);
+    Y = n(839489),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -128,14 +128,14 @@ let er = (e) => {
             [c, u] = i.useState([]),
             d = i.useMemo(() => {
                 if (null == c || c.length < 1) return;
-                let e = (0, S.Zn)(t, c[0], n, {
-                    emojiSize: T.M.LARGE,
+                let e = (0, T.Zn)(t, c[0], n, {
+                    emojiSize: S.M.LARGE,
                     messageId: a,
                 });
-                return (0, r.jsx)(T.Z, {
+                return (0, r.jsx)(S.Z, {
                     className: Y.__invalid_effect,
                     effect: e,
-                    emojiSize: T.M.LARGE,
+                    emojiSize: S.M.LARGE,
                     onComplete: () => l(!1),
                 });
             }, [c, t, n, a]);
@@ -507,7 +507,7 @@ function eu(e) {
         }, [t]),
         m = el(h),
         E = m[0],
-        [b, T] = ec(
+        [b, S] = ec(
             n,
             null != E
                 ? {
@@ -517,7 +517,7 @@ function eu(e) {
                 : null,
             m,
         ),
-        S = i.useMemo(() => {
+        T = i.useMemo(() => {
             var e;
             return null == b ? null : null != (e = h.find((e) => (0, F.ir)(e.emoji, b.emoji))) ? e : null;
         }, [h, b]),
@@ -525,9 +525,9 @@ function eu(e) {
         N = (0, u.e7)([C.Z], () => (0, f.wj)(C.Z.theme));
     if (
         (i.useEffect(() => {
-            (0 === h.length || (null == b && null == S)) && setImmediate(s);
-        }, [s, h.length, S, b]),
-        null == b || null == S)
+            (0 === h.length || (null == b && null == T)) && setImmediate(s);
+        }, [s, h.length, T, b]),
+        null == b || null == T)
     )
         return (0, r.jsx)(_.$jN, {});
     if (null == d) throw Error("MessageReactions.render: Message does not have a channelId");
@@ -552,7 +552,7 @@ function eu(e) {
                                   ei,
                                   {
                                       isSelected: ed(b, e, n ? I.O.BURST : I.O.NORMAL),
-                                      setSelected: T,
+                                      setSelected: S,
                                       reactionType: n ? I.O.BURST : I.O.NORMAL,
                                       emoji: e.emoji,
                                       count: n ? e.burst_count : e.count,
@@ -567,7 +567,7 @@ function eu(e) {
                       }),
                 (0, r.jsx)(es, {
                     message: t,
-                    reaction: S,
+                    reaction: T,
                     guildId: p,
                     channel: d,
                     reactionType: b.reactionType,

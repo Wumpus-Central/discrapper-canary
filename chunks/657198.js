@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(436660),
     h = n(887490),
     m = n(388032),
-    g = n(953782);
+    g = n(53457);
 function E(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ let I = (e) => {
         y = (0, s.vt)(),
         v = (0, s.UE)(),
         I = (0, s._7)(),
-        { optionType: T, errored: S } = (0, l.cj)([u.Z], () => {
+        { optionType: S, errored: T } = (0, l.cj)([u.Z], () => {
             var e, t, r;
             return {
                 optionType: null == (e = u.Z.getOption(n, a.optionName)) ? void 0 : e.type,
@@ -120,14 +120,14 @@ let I = (e) => {
         N = null != C && h.LC.isText(C) && C.text.endsWith("\n"),
         R = o()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: v && y,
-            [g.erroredPill]: (!v || !y) && S,
+            [g.erroredPill]: (!v || !y) && T,
         }),
         P = i.useCallback(() => {
             h.bN.isVoid(I, a) || p.Q.selectCommandOption(I, a.optionName, !0);
         }, [I, a]);
     return (
         (t =
-            T === c.jw.ATTACHMENT
+            S === c.jw.ATTACHMENT
                 ? (null == A ? void 0 : A.filename) != null
                     ? (0, r.jsxs)("span", {
                           className: o()(g.optionPillValue, g.attachmentFilename),

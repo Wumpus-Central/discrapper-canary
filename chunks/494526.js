@@ -10,20 +10,20 @@ var r = n(951288),
     d = n(99690),
     h = n(937154),
     g = n(448986),
-    p = n(388905),
-    m = n(198993),
+    m = n(388905),
+    p = n(198993),
     f = n(710845),
     _ = n(314897),
     x = n(585483),
     E = n(358085),
     v = n(172517),
-    b = n(51144),
-    j = n(998502),
+    j = n(51144),
+    b = n(998502),
     I = n(981631),
     y = n(231338),
-    O = n(388032),
-    S = n(819286),
-    N = n(197571);
+    S = n(388032),
+    N = n(967557),
+    O = n(10198);
 let C = n(515695),
     A = new f.Z("LoginQRSocket");
 function T(e) {
@@ -35,21 +35,21 @@ function T(e) {
             (e.src = C), (e.onload = () => s(!0)), (e.onerror = () => s(!0));
         }, [C]),
         i.useEffect(() => {
-            n && c.uvj.announce(O.intl.string(O.t.j2p125));
+            n && c.uvj.announce(S.intl.string(S.t.j2p125));
         }, [n]),
         (0, r.jsx)("div", {
-            className: S.qrCodeContainer,
+            className: N.qrCodeContainer,
             children:
                 "" !== t && n
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(m.ZP, {
-                                  className: S.qrCode,
+                              (0, r.jsx)(p.ZP, {
+                                  className: N.qrCode,
                                   size: 160,
                                   text: t,
                               }),
                               (0, r.jsx)("div", {
-                                  className: S.qrCodeOverlay,
+                                  className: N.qrCodeOverlay,
                                   children: (0, r.jsx)("img", {
                                       src: C,
                                       alt: "",
@@ -58,11 +58,11 @@ function T(e) {
                           ],
                       })
                     : (0, r.jsx)("div", {
-                          className: S.qrCodeOverlay,
-                          "aria-label": O.intl.string(O.t.BUGkVF),
+                          className: N.qrCodeOverlay,
+                          "aria-label": S.intl.string(S.t.BUGkVF),
                           "aria-busy": !0,
                           children: (0, r.jsx)(c.$jN, {
-                              className: S.qrCode,
+                              className: N.qrCode,
                               type: c.$jN.Type.WANDERING_CUBES,
                               "aria-hidden": !0,
                           }),
@@ -87,24 +87,24 @@ function P(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(T, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
-                    (0, r.jsx)(p.Dx, {
-                        className: N.marginBottom8,
-                        children: O.intl.string(O.t.UPiHaL),
+                    (0, r.jsx)(m.Dx, {
+                        className: O.marginBottom8,
+                        children: S.intl.string(S.t.UPiHaL),
                     }),
                     null != i
                         ? (0, r.jsx)(Z, { children: i })
-                        : (0, r.jsx)(p.DK, { children: O.intl.format(O.t["Qq+A6i"], {}) }),
+                        : (0, r.jsx)(m.DK, { children: S.intl.format(S.t["Qq+A6i"], {}) }),
                     (0, r.jsx)(c.Kqy, {
                         padding: 8,
                         align: "center",
                         children: (0, r.jsx)(c.Avr, {
-                            text: O.intl.string(O.t["/kpMDt"]),
+                            text: S.intl.string(S.t["/kpMDt"]),
                             textVariant: "text-sm/normal",
                             onClick: () =>
                                 (function (e) {
                                     let t =
-                                        E.isPlatformEmbedded && j.ZP.supportsFeature(I.eRX.WEBAUTHN)
-                                            ? j.ZP.webAuthnAuthenticate
+                                        E.isPlatformEmbedded && b.ZP.supportsFeature(I.eRX.WEBAUTHN)
+                                            ? b.ZP.webAuthnAuthenticate
                                             : (e) => {
                                                   let t = (0, s.wz)(JSON.parse(e));
                                                   return (0, s.U2)(t).then((e) => JSON.stringify(e));
@@ -125,23 +125,23 @@ function P(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        className: S.qrAvatar,
+                        className: N.qrAvatar,
                         user: e,
                         size: c.EFr.SIZE_120,
                         isMobile: !0,
                         status: y.Sk.ONLINE,
                     }),
-                    (0, r.jsx)(p.Dx, {
-                        className: N.marginBottom8,
-                        children: O.intl.string(O.t.apGCUT),
+                    (0, r.jsx)(m.Dx, {
+                        className: O.marginBottom8,
+                        children: S.intl.string(S.t.apGCUT),
                     }),
-                    (0, r.jsx)(p.DK, {
-                        children: O.intl.format(O.t.Cbl5JK, { username: "".concat(b.ZP.getUserTag(e)) }),
+                    (0, r.jsx)(m.DK, {
+                        children: S.intl.format(S.t.Cbl5JK, { username: "".concat(j.ZP.getUserTag(e)) }),
                     }),
                     (0, r.jsx)("div", {
-                        className: S.startOverButton,
+                        className: N.startOverButton,
                         children: (0, r.jsx)(c.Avr, {
-                            text: O.intl.string(O.t.nOOhwo),
+                            text: S.intl.string(S.t.nOOhwo),
                             textVariant: "text-sm/normal",
                             onClick: n,
                         }),
@@ -160,16 +160,16 @@ function R(e) {
         {
             state: u,
             rsaKeyPair: d,
-            cancel: p,
-            handleFailure: m,
+            cancel: m,
+            handleFailure: p,
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, s] = i.useState(!1),
                 [a, o] = i.useState({ step: 0 }),
                 [c, u] = i.useState(null),
                 d = (0, h.Z)(),
-                p = i.useMemo(() => new l.Z(1500, 30000), []),
-                m = (0, g.Z)(() => {
+                m = i.useMemo(() => new l.Z(1500, 30000), []),
+                p = (0, g.Z)(() => {
                     o({ step: 0 }),
                         d
                             ? n((e) => e + 1)
@@ -181,8 +181,8 @@ function R(e) {
                 f = i.useCallback(() => {
                     A.error("Could not complete QR code login, trying to restart with a new QR code."),
                         o({ step: 0 }),
-                        p.pending || p.fail(m);
-                }, [m, p]);
+                        m.pending || m.fail(p);
+                }, [p, m]);
             return (
                 i.useEffect(() => {
                     d &&
@@ -229,7 +229,7 @@ function R(e) {
                                     return;
                                 }
                                 case "pending_remote_init": {
-                                    p.succeed(), x.S.dispatch(I.CkL.WAVE_EMPHASIZE);
+                                    m.succeed(), x.S.dispatch(I.CkL.WAVE_EMPHASIZE);
                                     let e = await (0, v.Pk)(h());
                                     if (e !== s.fingerprint)
                                         throw Error("bad fingerprint ".concat(e, " !== ").concat(s.fingerprint));
@@ -276,7 +276,7 @@ function R(e) {
                                     return;
                                 }
                                 case "cancel":
-                                    i("remote auth handshake cancelled."), m();
+                                    i("remote auth handshake cancelled."), p();
                                     return;
                                 case "hello": {
                                     i("got hello, auth timeout=".concat(s.timeout_ms, "ms"));
@@ -318,16 +318,16 @@ function R(e) {
                                 (r.onclose = () => null),
                                 (r.onerror = () => null),
                                 r.close(1000),
-                                p.cancel(),
+                                m.cancel(),
                                 null != c && clearTimeout(c),
                                 null != a && clearInterval(a);
                         }
                     );
-                }, [m, e, t, p, f]),
+                }, [p, e, t, m, f]),
                 {
                     state: a,
                     rsaKeyPair: c,
-                    cancel: m,
+                    cancel: p,
                     handleFailure: f,
                 }
             );
@@ -362,27 +362,27 @@ function R(e) {
                                     r = await (0, v.Pk)(d);
                                 t(n, r);
                             } catch (e) {
-                                m();
+                                p();
                             }
-                        else m();
+                        else p();
                     })
                     .catch(() => {
-                        m();
+                        p();
                     });
-        }, [u, t, d, m]),
+        }, [u, t, d, p]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)("div", { className: S.verticalSeparator }),
+                (0, r.jsx)("div", { className: N.verticalSeparator }),
                 (0, r.jsx)(c.qBt, {
                     fillParent: !0,
-                    className: S.qrLogin,
+                    className: N.qrLogin,
                     step: f,
                     steps: [0, 1],
                     children: (0, r.jsx)("div", {
-                        className: S.qrLoginInner,
+                        className: N.qrLoginInner,
                         children: (0, r.jsx)(P, {
                             state: u,
-                            cancel: p,
+                            cancel: m,
                             conditionalMediationAbortController: n,
                             isPasswordlessActive: s,
                         }),

@@ -21,7 +21,7 @@ var a = n(951288),
     I = n(939716),
     j = n(231338),
     P = n(388032),
-    k = n(424215);
+    k = n(73262);
 function S(e) {
     var t, n, r, l;
     let { sku: i, guildId: o, shouldShowShopLink: c, onClose: u } = e;

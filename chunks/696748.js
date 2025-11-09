@@ -1,4 +1,4 @@
-n.d(t, { a: () => T }), n(953529), n(415506), n(388685);
+n.d(t, { a: () => S }), n(953529), n(415506), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(913527),
@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(626135),
     m = n(981631),
     g = n(388032),
-    E = n(422622),
-    b = n(197571);
+    E = n(755802),
+    b = n(10198);
 function y(e, t, n) {
     return (
         t in e
@@ -200,7 +200,7 @@ class v extends i.PureComponent {
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { libraryApplication: r, analyticsParams: i } = t.props;
                 t.onClose(),
-                    T(r.id, r, {
+                    S(r.id, r, {
                         analyticsParams: i,
                         cloudSync: e,
                         cloudSyncForceHash: n,
@@ -223,7 +223,7 @@ let I = s.ZP.connectStores([p.Z, f.Z], (e) => {
         application: f.Z.getApplication(t.id),
     };
 })(v);
-async function T(e, t, n) {
+async function S(e, t, n) {
     let i = f.Z.getApplication(e);
     if (null == i) return;
     let { cloudSync: a = !0, cloudSyncForceHash: o = null, analyticsParams: s } = n;

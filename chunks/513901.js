@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(78946);
+    y = n(445143);
 function O(e) {
     let {
             user: t,
@@ -25,8 +25,8 @@ function O(e) {
             className: O,
             sectionTitle: v,
             forcedDivider: I = !1,
-            withTutorial: T = !1,
-            showBorder: S = !1,
+            withTutorial: S = !1,
+            showBorder: T = !1,
             isTryItOut: A = !1,
         } = e,
         { analyticsLocations: C } = (0, c.ZP)(),
@@ -58,13 +58,13 @@ function O(e) {
     function L() {
         A ? (0, d.Ju)(null) : (0, p.UK)(null, null == n ? void 0 : n.id);
     }
-    let M = T ? l.gtL : s.zx;
+    let M = S ? l.gtL : s.zx;
     return (0, r.jsx)(h.Z, {
         forcedDivider: I,
         borderType: m.Y.PREMIUM,
         hasBackground: !0,
         title: v,
-        showBorder: S,
+        showBorder: T,
         errors: w,
         className: O,
         children: (0, r.jsxs)("div", {
@@ -73,7 +73,7 @@ function O(e) {
                 (0, r.jsx)(M, {
                     size: s.zx.Sizes.SMALL,
                     onClick: D,
-                    className: o()({ [y.buttonHighlighted]: T }),
+                    className: o()({ [y.buttonHighlighted]: S }),
                     children: b.intl.string(b.t["/dRfCf"]),
                 }),
                 x &&

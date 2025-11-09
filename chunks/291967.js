@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var a = n(158040),
-    i = n(979611);
-function s(e) {
+    i = n(29321);
+function o(e) {
     let { rewardName: t, children: n } = e;
     return (0, r.jsxs)("div", {
         className: i.container,

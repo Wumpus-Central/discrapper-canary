@@ -12,21 +12,21 @@ var r = n(951288),
     m = n(616780),
     p = n(100527),
     f = n(906732),
-    h = n(670188),
+    h = n(456077),
     b = n(594174),
     x = n(626135),
     j = n(243730),
-    v = n(434404),
-    _ = n(103576),
-    C = n(130341),
-    O = n(95242),
+    _ = n(434404),
+    v = n(103576),
+    O = n(130341),
+    C = n(95242),
     y = n(420966),
-    E = n(566476),
-    N = n(203377),
+    N = n(566476),
+    E = n(203377),
     I = n(981631),
     S = n(388032),
-    T = n(472039),
-    P = n(21321);
+    T = n(37134),
+    P = n(10083);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function Z(e, t) {
 async function R(e, t, n) {
     let i = e.roles.filter((e) => e !== n);
     try {
-        await v.Z.updateMemberRoles(t, e.id, i, [], [n]);
+        await _.Z.updateMemberRoles(t, e.id, i, [], [n]);
     } catch (t) {
         let e = new g.Z(t);
         (0, d.h7j)((t) =>
@@ -105,7 +105,7 @@ function D(e) {
     function x(e) {
         if ((e.stopPropagation(), !g)) {
             if (e.shiftKey) return void R(t, l, o);
-            let n = _.Z.getRole(o);
+            let n = v.Z.getRole(o);
             (0, d.h7j)((e) =>
                 (0, r.jsx)(
                     s.Modal,
@@ -144,7 +144,7 @@ function D(e) {
         let i = b.default.getUser(t.id);
         null != i &&
             (0, u.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -176,7 +176,7 @@ function D(e) {
                             className: T.memberRow,
                             onContextMenu: j,
                             children: [
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(N.Z, {
                                     className: T.memberDetails,
                                     avatarURL: t.avatarURL,
                                     name: t.name,
@@ -253,8 +253,8 @@ function L(e) {
         } = e,
         { analyticsLocations: g } = (0, f.ZP)(p.Z.MEMBER_LIST),
         m = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, C.rY)(t, m);
-    let h = i.useMemo(() => c.filter((e) => (0, C.eg)(m, e)), [c, m]),
+    (0, O.rY)(t, m);
+    let h = i.useMemo(() => c.filter((e) => (0, O.eg)(m, e)), [c, m]),
         b = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(f.Gt, {
         value: g,
@@ -317,23 +317,23 @@ function k(e) {
 function G(e) {
     let { guild: t, role: l, locked: s, setSelectedSection: c } = e,
         [u, g] = i.useState(""),
-        { headerHeight: m, headerRef: p } = (0, O.Z)(0),
+        { headerHeight: m, headerRef: p } = (0, C.Z)(0),
         { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
         b = l.managed || s,
-        v = (0, C.e)(t.id, l.id),
-        _ =
+        _ = (0, O.e)(t.id, l.id),
+        v =
             (0, o.e7)([j.Z], () => {
                 var e, n;
                 return null != (n = null == (e = j.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
-            }) > v.length,
-        E = () => {
+            }) > _.length,
+        N = () => {
             x.default.track(I.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
                 location_section: "Members",
             }),
                 (0, d.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -358,16 +358,16 @@ function G(e) {
                             (0, r.jsx)(y.Z, {
                                 guild: t,
                                 role: l,
-                                selectedSection: N.ZI.MEMBERS,
+                                selectedSection: E.ZI.MEMBERS,
                                 setSelectedSection: c,
                             }),
                             (0, r.jsx)(k, {
                                 query: u,
                                 setQuery: g,
                                 locked: b,
-                                handleAddClick: E,
+                                handleAddClick: N,
                             }),
-                            _
+                            v
                                 ? (0, r.jsx)(d.Wn, {
                                       className: T.searchWarning,
                                       messageType: d.QYI.INFO,
@@ -385,8 +385,8 @@ function G(e) {
                 roleId: l.id,
                 locked: b,
                 onScroll: h,
-                roleMembers: v,
-                handleAddClick: E,
+                roleMembers: _,
+                handleAddClick: N,
             }),
         ],
     });

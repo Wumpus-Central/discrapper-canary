@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(843611),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(993977),
     p = n(981631),
     f = n(388032),
-    m = n(50089);
-function h() {
+    h = n(801488);
+function g() {
     return (0, r.jsxs)(l.rs, {
         children: [
             (0, r.jsx)(s.Z, {
@@ -34,14 +34,14 @@ function h() {
         ],
     });
 }
-let g = i.memo(function () {
+let m = i.memo(function () {
     return (
         i.useEffect(() => {
             (0, c.e)("application_library");
         }, []),
         (0, r.jsxs)("div", {
-            className: m.container,
-            children: [(0, r.jsx)(o.yY, { location: f.intl.string(f.t.cw57ar) }), (0, r.jsx)(h, {})],
+            className: h.container,
+            children: [(0, r.jsx)(o.yY, { location: f.intl.string(f.t.cw57ar) }), (0, r.jsx)(g, {})],
         })
     );
 });

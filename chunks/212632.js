@@ -1,15 +1,15 @@
 n.d(t, { Z: () => m }), n(388685);
 var i = n(951288),
     r = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    s = n(481060),
+    s = n(120356),
+    o = n.n(s),
+    l = n(481060),
     a = n(981631),
     c = n(388032),
-    d = n(379249),
-    u = n(197571);
-let h = 0,
-    p = (e) => {
+    d = n(244033),
+    u = n(10198);
+let p = 0,
+    h = (e) => {
         switch (e) {
             case a._vf.TOP_LEFT:
                 return c.intl.string(c.t.xlchpU);
@@ -26,14 +26,14 @@ let h = 0,
     f = [a._vf.DISABLED, a._vf.TOP_LEFT, a._vf.TOP_RIGHT, a._vf.BOTTOM_LEFT, a._vf.BOTTOM_RIGHT];
 function g(e) {
     let { position: t, onChange: n } = e,
-        [l] = r.useState(() => "notification-position-selector-".concat(h++)),
+        [s] = r.useState(() => "notification-position-selector-".concat(p++)),
         g =
             t === a._vf.DISABLED
                 ? c.intl.string(c.t.R6LxVf)
-                : c.intl.formatToPlainString(c.t["XXHDM/"], { position: p(t) });
+                : c.intl.formatToPlainString(c.t["XXHDM/"], { position: h(t) });
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(s.tEY, {
+            (0, i.jsx)(l.tEY, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)("div", {
@@ -51,9 +51,9 @@ function g(e) {
                                     [d.bottomLeft]: e === a._vf.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    p(e),
+                                    h(e),
                                     e === a._vf.DISABLED
-                                        ? (0, i.jsx)(s.t6m, {
+                                        ? (0, i.jsx)(l.t6m, {
                                               size: "md",
                                               color: "currentColor",
                                               className: d.disabledIcon,
@@ -61,7 +61,7 @@ function g(e) {
                                         : null,
                                     (0, i.jsx)("input", {
                                         type: "radio",
-                                        name: l,
+                                        name: s,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: d.hiddenInput,
@@ -73,7 +73,7 @@ function g(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 className: u.marginTop8,
                 children: g,

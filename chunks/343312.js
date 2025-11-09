@@ -20,7 +20,7 @@ var l = n(951288),
     p = n(60482),
     b = n(627045),
     _ = n(619733),
-    x = n(269794),
+    x = n(97200),
     j = n(388032);
 let [E, h] = (0, c.Z)();
 function S(e) {
@@ -60,14 +60,14 @@ function y(e) {
         null != l && V(l);
     }, [null == M ? void 0 : M.entitlements, null == k ? void 0 : k.entitlementId, B]);
     let [z, K] = i.useState(void 0),
-        U = i.useMemo(() => {
+        J = i.useMemo(() => {
             var e;
             if (null != B)
                 return Object.values(null != (e = null == M ? void 0 : M.catalog) ? e : {}).find((e) => e.id === B);
         }, [null == M ? void 0 : M.catalog, B]),
-        [F, J] = i.useState(k),
-        [H, W] = i.useState(null != (n = S(C)) ? n : null == k ? void 0 : k.planId),
-        X = (function (e, t, n, l) {
+        [U, F] = i.useState(k),
+        [Y, H] = i.useState(null != (n = S(C)) ? n : null == k ? void 0 : k.planId),
+        W = (function (e, t, n, l) {
             var i, r, s, u, o, c, d, m;
             let v = (0, a.e7)([p.Z], () => {
                     var t;
@@ -89,11 +89,11 @@ function y(e) {
                               : r.boost_price)
                           ? m
                           : 0);
-        })(I, U, H, F),
-        Y = i.useCallback(
+        })(I, J, Y, U),
+        X = i.useCallback(
             (e) => {
                 var t, n, l, i, a, r;
-                J(e);
+                F(e);
                 let s =
                     null == M ||
                     null == (l = M.entitlements) ||
@@ -102,7 +102,7 @@ function y(e) {
                         ? void 0
                         : t.product_id;
                 null != s && V(s),
-                    W(null == e ? void 0 : e.planId),
+                    H(null == e ? void 0 : e.planId),
                     et(null != (a = null == e ? void 0 : e.name) ? a : ""),
                     el(null != (r = null == e ? void 0 : e.regionId) ? r : "");
             },
@@ -110,9 +110,9 @@ function y(e) {
         ),
         q = i.useCallback(
             (e, t) => {
-                Y(void 0), V(null == e ? void 0 : e.id), W(null != t ? t : S(e));
+                X(void 0), V(null == e ? void 0 : e.id), H(null != t ? t : S(e));
             },
-            [Y],
+            [X],
         ),
         [$, Q] = i.useState(),
         [ee, et] = i.useState(null != (c = null == k ? void 0 : k.name) ? c : ""),
@@ -121,18 +121,18 @@ function y(e) {
         er = i.useRef(!1),
         es = i.useCallback(() => {
             var e, t, n;
-            if ((K(void 0), null == T || null == U || "" === ee || "" === en || null == H)) return;
-            let l = U.plans.find((e) => e.id === H);
+            if ((K(void 0), null == T || null == J || "" === ee || "" === en || null == Y)) return;
+            let l = J.plans.find((e) => e.id === Y);
             (0, f.g$)({
                 guildId: T.id,
-                productId: U.id,
-                productName: U.name,
-                skuId: H,
+                productId: J.id,
+                productName: J.name,
+                skuId: Y,
                 planName: null != (e = null == l ? void 0 : l.name) ? e : "",
                 planCost: null != (t = null == l ? void 0 : l.cost) ? t : 0,
-                previousPlanCost: null == F ? 0 : (null != (n = null == l ? void 0 : l.cost) ? n : 0) + X,
+                previousPlanCost: null == U ? 0 : (null != (n = null == l ? void 0 : l.cost) ? n : 0) + W,
                 region: en,
-                type: null == F ? "create" : "edit",
+                type: null == U ? "create" : "edit",
             });
             let i = () => {
                 if (er.current) return;
@@ -140,11 +140,11 @@ function y(e) {
                 let e = new Promise((e) => {
                     setTimeout(() => e(void 0), _.tq);
                 });
-                Promise.all([null != F ? (0, g.EY)(T.id, F.entitlementId, H, ee) : (0, g.NE)(T.id, H, ee, en), e])
+                Promise.all([null != U ? (0, g.EY)(T.id, U.entitlementId, Y, ee) : (0, g.NE)(T.id, Y, ee, en), e])
                     .then(() => {
                         Z(),
-                            (null == F ? void 0 : F.planId) !== H &&
-                                (0, b.Z)(T.id, U, null == F ? "created" : "updated");
+                            (null == U ? void 0 : U.planId) !== Y &&
+                                (0, b.Z)(T.id, J, null == U ? "created" : "updated");
                     })
                     .catch((e) => {
                         var t, n;
@@ -159,10 +159,10 @@ function y(e) {
                         ea(!1);
                     });
             };
-            A < X
+            A < W
                 ? (0, s.u)({
                       analyticsLocation: w,
-                      numberOfBoostsToAdd: X - A,
+                      numberOfBoostsToAdd: W - A,
                       analyticsLocations: G,
                       guild: T,
                       intent: u.P.PERK,
@@ -177,7 +177,7 @@ function y(e) {
                       },
                   })
                 : i();
-        }, [G, T, A, H, w, U, ee, en, Z, X, F]),
+        }, [G, T, A, Y, w, J, ee, en, Z, W, U]),
         eu = i.useCallback(
             (e) => {
                 switch (e.type) {
@@ -217,17 +217,17 @@ function y(e) {
             onNext: ec,
             gameServerGames: null != (y = null == M ? void 0 : M.catalog) ? y : {},
             instances: Object.values(null != (O = null == M ? void 0 : M.instances) ? O : {}),
-            currentGame: U,
+            currentGame: J,
             setCurrentGame: q,
-            gameServerInstance: F,
-            setGameServerInstance: Y,
+            gameServerInstance: U,
+            setGameServerInstance: X,
             name: ee,
             setName: et,
             regionId: en,
             setRegionId: el,
-            planCost: X,
-            planId: H,
-            setPlanId: W,
+            planCost: W,
+            planId: Y,
+            setPlanId: H,
             footerNode: $,
             setFooterNode: Q,
             availableBoostCount: A,

@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(131951),
     h = n(65154),
     m = n(388032),
-    g = n(192294),
-    E = n(89079),
-    b = n(197571);
+    g = n(558254),
+    E = n(43404),
+    b = n(10198);
 let y = (0, _.hQ)();
 function O() {
     let [e, t] = i.useState(-100),
@@ -27,13 +27,13 @@ function O() {
         {
             inputMode: v,
             automaticVADSupported: I,
-            isEnabled: T,
+            isEnabled: S,
         } = (0, s.cj)([p.Z], () => ({
             inputMode: p.Z.getMode(),
             automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
             isEnabled: p.Z.isEnabled(),
         }));
-    function S(e, n) {
+    function T(e, n) {
         t(e), a((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
     function A(e, t) {
@@ -46,10 +46,10 @@ function O() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                p.Z.getMediaEngine().on(l.aB.VoiceActivity, S), e.stop();
+                p.Z.getMediaEngine().on(l.aB.VoiceActivity, T), e.stop();
             }),
             () => {
-                p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, S), e.stop();
+                p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, T), e.stop();
             }
         );
     }, []);
@@ -103,7 +103,7 @@ function O() {
                         onChange: (e) => A(_, e),
                     }),
                 C,
-                !T &&
+                !S &&
                     (0, r.jsx)(d.Wn, {
                         messageType: d.QYI.WARNING,
                         className: b.marginBottom8,

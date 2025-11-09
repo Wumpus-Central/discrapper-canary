@@ -71,7 +71,7 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,8 +88,8 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
-let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
+n(521510);
+let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function A(e) {
     var t,
         n,
@@ -102,7 +102,7 @@ function A(e) {
             channelId: g,
             messageId: b,
             animated: O,
-            size: T = "default",
+            size: S = "default",
             isInteracting: A = !1,
             shouldAnimate: C,
             onMouseEnter: N,
@@ -138,9 +138,9 @@ function A(e) {
         B = i.useRef(void 0),
         { triggerAnimation: Z, untriggerAnimation: F } = i.useContext(u.Rm),
         V = _.Yk.useSetting(),
-        H = S(),
+        H = T(),
         Y = null == w ? V : w,
-        W = E.kV[T],
+        W = E.kV[S],
         K = i.useRef(null),
         z = i.useMemo(() => {
             if (null != a) return a;
@@ -177,7 +177,7 @@ function A(e) {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": p };
             return y(
                 v(y({}, M), {
-                    className: o()("emoji", c, { jumboable: "jumbo" === T }),
+                    className: o()("emoji", c, { jumboable: "jumbo" === S }),
                     onError: q,
                     onMouseEnter: X,
                     onMouseLeave: Q,
@@ -185,7 +185,7 @@ function A(e) {
                 }),
                 e,
             );
-        }, [c, f, p, X, Q, q, M, T]);
+        }, [c, f, p, X, Q, q, M, S]);
     i.useEffect(
         () => () => {
             var e;

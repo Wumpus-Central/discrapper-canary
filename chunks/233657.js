@@ -12,7 +12,7 @@ var i = n(442837),
     p = n(434479),
     h = n(490897),
     f = n(388032),
-    g = n(509612);
+    g = n(516966);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,13 +69,13 @@ function _(e) {
         v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function j() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("5836")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let C = (0, c.ZP)(t.id),
-        x = C.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: C.length }) : f.intl.string(f.t.tlopTM);
+    let x = (0, c.ZP)(t.id),
+        C = x.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: x.length }) : f.intl.string(f.t.tlopTM);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
@@ -84,7 +84,7 @@ function _(e) {
                 color: "currentColor",
                 className: e,
             }),
-        text: x,
+        text: C,
         selected: _,
         onClick: j,
         onContextMenu: (e) => {

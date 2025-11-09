@@ -13,7 +13,7 @@ var i = n(120356),
     _ = n(834129),
     p = n(674563),
     h = n(388032),
-    m = n(682392);
+    m = n(78642);
 function g(e) {
     var t;
     let { message: n, compact: i, usernameHook: g, channel: E } = e,
@@ -22,11 +22,11 @@ function g(e) {
         O = g(y),
         {
             avatarSrc: v,
-            eventHandlers: { onMouseEnter: I, onMouseLeave: T },
+            eventHandlers: { onMouseEnter: I, onMouseLeave: S },
         } = (0, f.m)(!0);
     return (0, r.jsx)("div", {
         onMouseEnter: I,
-        onMouseLeave: T,
+        onMouseLeave: S,
         children: (0, r.jsx)(_.Z, {
             className: a()(m.mainContainer, { [m.compact]: i }),
             iconNode: i ? null : (0, r.jsx)(f.S, { src: v }),

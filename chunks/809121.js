@@ -15,8 +15,8 @@ var r = t(951288),
     _ = t(823379),
     v = t(49012),
     b = t(639777),
-    p = t(905551),
-    j = t(578756),
+    j = t(905551),
+    p = t(578756),
     h = t(441494),
     y = t(775146),
     C = t(941762),
@@ -27,9 +27,9 @@ var r = t(951288),
     P = t(110381),
     E = t(619733),
     T = t(921944),
-    w = t(269794),
+    w = t(97200),
     R = t(388032),
-    k = t(500104);
+    k = t(395161);
 function Z(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -60,7 +60,7 @@ function G(e) {
         [i, l] = a.useState(!1),
         s = a.useCallback(() => {
             l(!0),
-                (0, p.WX)(n, t.id).finally(() => {
+                (0, j.WX)(n, t.id).finally(() => {
                     l(!1);
                 });
         }, [n, t.id]);
@@ -120,7 +120,7 @@ function V(e) {
         [t, i] = a.useState(!1),
         l = a.useCallback(() => {
             i(!0),
-                (0, p.mF)(n).finally(() => {
+                (0, j.mF)(n).finally(() => {
                     i(!1);
                 });
         }, [n]);
@@ -146,12 +146,12 @@ function M(e) {
 function W(e) {
     let { guildId: n, instance: t } = e,
         i = (0, N.Z)(t),
-        [p, E] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        Z = p !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        [j, E] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        Z = j !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
         W = (0, o.e7)([x.Z], () => x.Z.getDetectableGame(t.gameId)),
         L = a.useCallback(() => {
             var e;
-            (0, j.wz)(n, t.gameId, null != (e = null == W ? void 0 : W.name) ? e : "", t.id),
+            (0, p.wz)(n, t.gameId, null != (e = null == W ? void 0 : W.name) ? e : "", t.id),
                 Z || null == t.providerType
                     ? (0, S.Z)(n, t)
                     : (0, P.Z)({
@@ -166,7 +166,7 @@ function W(e) {
         K = (0, b.Z)(n),
         q = a.useCallback(() => {
             var e;
-            (0, j.$M)(n, t.id), (0, v.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
+            (0, p.$M)(n, t.id), (0, v.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl, n, t.id]),
         H = a.useMemo(() => {
             switch (t.status) {

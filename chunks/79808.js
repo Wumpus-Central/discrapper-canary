@@ -8,7 +8,7 @@ var r = n(951288),
     s = n(924052),
     u = n(59662),
     d = n(996435),
-    f = n(990757);
+    f = n(4640);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -113,8 +113,8 @@ function y(e) {
         } else Z(p(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
     }, [C, _, k, j, D, O]);
     let I = l.useMemo(() => ({ navTransition: T }), [T]),
-        A = () => D(g),
-        R = null != C ? j.get(C) : void 0;
+        R = () => D(g),
+        A = null != C ? j.get(C) : void 0;
     return (0, r.jsx)(u.j.Provider, {
         value: I,
         children: (0, r.jsxs)("div", {
@@ -124,12 +124,12 @@ function y(e) {
                     root: y,
                     header: h,
                     footer: x,
-                    onClose: A,
+                    onClose: R,
                     emptyState: P,
                 }),
                 (0, r.jsx)(a.Z, {
-                    onClose: A,
-                    setting: null != R ? R : N,
+                    onClose: R,
+                    setting: null != A ? A : N,
                 }),
             ],
         }),

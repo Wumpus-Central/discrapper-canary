@@ -1,6 +1,6 @@
 t.d(n, { Z: () => A }), t(539854);
-var l = t(951288),
-    r = t(647438),
+var r = t(951288),
+    l = t(647438),
     i = t(442837),
     a = t(481060),
     o = t(239091),
@@ -8,47 +8,47 @@ var l = t(951288),
     c = t(622822),
     d = t(367907),
     u = t(188471),
-    m = t(541716),
+    p = t(541716),
     h = t(526120),
-    p = t(563534),
+    m = t(563534),
     f = t(736052),
     g = t(665149),
-    x = t(442336),
-    _ = t(910611),
-    C = t(41776),
-    b = t(703656),
+    _ = t(442336),
+    x = t(910611),
+    b = t(41776),
+    C = t(703656),
     j = t(6025),
-    v = t(340501),
-    y = t(592125),
-    O = t(703558),
+    O = t(340501),
+    v = t(592125),
+    y = t(703558),
     N = t(430824),
-    Z = t(375954),
-    I = t(933557),
-    w = t(287746),
+    I = t(375954),
+    w = t(933557),
+    Z = t(287746),
     P = t(981631),
-    E = t(388032),
-    S = t(10832);
+    S = t(388032),
+    E = t(952713);
 function T(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+            r = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            l.forEach(function (n) {
-                var l;
-                (l = t[n]),
+            r.forEach(function (n) {
+                var r;
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = l);
+                        : (e[n] = r);
             });
     }
     return e;
@@ -61,8 +61,8 @@ function B(e, n) {
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, l);
+                      var r = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, r);
                   }
                   return t;
               })(Object(n)).forEach(function (t) {
@@ -72,94 +72,94 @@ function B(e, n) {
     );
 }
 function A(e) {
-    let { channelId: n, baseChannelId: A, channelViewSource: R = "Split View", isResourceChannelView: k } = e,
-        D = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
-        L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == D ? void 0 : D.getGuildId())),
-        M = (0, I.ZP)(D),
-        H = (0, i.e7)([C.Z], () => (null == L ? void 0 : L.id) != null && C.Z.isLurking(L.id), [L]),
+    let { channelId: n, baseChannelId: A, channelViewSource: k = "Split View", isResourceChannelView: D } = e,
+        R = (0, i.e7)([v.Z], () => v.Z.getChannel(n)),
+        L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        H = (0, w.ZP)(R),
+        M = (0, i.e7)([b.Z], () => (null == L ? void 0 : L.id) != null && b.Z.isLurking(L.id), [L]),
         U = (0, f.Z)(n),
-        W = (0, i.e7)([p.Z], () => {
+        G = (0, i.e7)([m.Z], () => {
             var e;
-            return null == (e = p.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
+            return null == (e = m.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
         }),
-        G = (0, c.$5)(D),
-        F = r.useRef(!1);
+        W = (0, c.$5)(R),
+        F = l.useRef(!1);
     if (
-        (r.useEffect(() => {
-            null == D ||
+        (l.useEffect(() => {
+            null == R ||
                 F.current ||
                 ((F.current = !0),
-                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(D.id)), { channel_view: R })),
-                (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D.id }));
-        }, [D, R]),
-        null == D || null == L)
+                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(R.id)), { channel_view: k })),
+                (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id }));
+        }, [R, k]),
+        null == R || null == L)
     )
         return null;
     let q = [];
-    return (H || q.push((0, l.jsx)(x.Z, { channel: D }, "notifications")),
+    return (M || q.push((0, r.jsx)(_.Z, { channel: R }, "notifications")),
     q.push(
-        (0, l.jsx)(
+        (0, r.jsx)(
             g.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: E.intl.string(E.t.cpT0Cq),
+                tooltip: S.intl.string(S.t.cpT0Cq),
                 onClick: () => j.Z.closeChannelSidebar(A),
             },
             "close",
         ),
     ),
-    G)
-        ? (0, l.jsx)(v.Z, {
+    W)
+        ? (0, r.jsx)(O.Z, {
               guild: L,
-              channelId: D.id,
+              channelId: R.id,
           })
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, l.jsx)(s.Z, {
-                      channel: D,
-                      draftType: O.d.ChannelMessage,
+                  (0, r.jsx)(s.Z, {
+                      channel: R,
+                      draftType: y.d.ChannelMessage,
                   }),
-                  (0, l.jsx)(g.ZP, {
+                  (0, r.jsx)(g.ZP, {
                       toolbar: q,
-                      "aria-label": E.intl.string(E.t.BIYAqa),
-                      children: (0, _.ud)({
-                          channel: D,
-                          channelName: U ? W : M,
+                      "aria-label": S.intl.string(S.t.BIYAqa),
+                      children: (0, x.ud)({
+                          channel: R,
+                          channelName: U ? G : H,
                           guild: L,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([t.e("24783"), t.e("41815")]).then(
+                                  let { default: e } = await Promise.all([t.e("24783"), t.e("63384")]).then(
                                       t.bind(t, 439635),
                                   );
                                   return (n) =>
-                                      (0, l.jsx)(
+                                      (0, r.jsx)(
                                           e,
                                           B(T({}, n), {
-                                              channel: D,
+                                              channel: R,
                                               guild: L,
                                           }),
                                       );
                               });
                           },
                           handleClick: () => {
-                              let e = Z.Z.getMessages(D.id);
-                              if (k) {
-                                  (0, b.uL)(P.Z5c.CHANNEL(D.guild_id, D.id)), (0, h.C3)(D.guild_id, null);
+                              let e = I.Z.getMessages(R.id);
+                              if (D) {
+                                  (0, C.uL)(P.Z5c.CHANNEL(R.guild_id, R.id)), (0, h.C3)(R.guild_id, null);
                                   return;
                               }
-                              (0, b.XU)(D.guild_id, D.id, e.jumpTargetId);
+                              (0, C.XU)(R.guild_id, R.id, e.jumpTargetId);
                           },
                       }),
                   }),
-                  (0, l.jsx)("div", {
-                      className: S.chat,
-                      children: (0, l.jsx)(
-                          w.Z,
+                  (0, r.jsx)("div", {
+                      className: E.chat,
+                      children: (0, r.jsx)(
+                          Z.Z,
                           {
-                              channel: D,
+                              channel: R,
                               guild: L,
-                              chatInputType: m.Ie.SIDEBAR,
+                              chatInputType: p.Ie.SIDEBAR,
                           },
                           n,
                       ),

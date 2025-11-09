@@ -25,16 +25,16 @@ var r,
     O = n(626135),
     v = n(70956),
     I = n(36703),
-    T = n(228488),
-    S = n(540026),
+    S = n(228488),
+    T = n(540026),
     A = n(455813),
     C = n(283756),
     N = n(793148),
     R = n(981631),
     P = n(217702),
     w = n(388032),
-    D = n(55343),
-    x = n(149715);
+    D = n(174050),
+    x = n(465106);
 function L(e, t, n) {
     return (
         t in e
@@ -254,13 +254,13 @@ class K extends (r = o.Component) {
                           duration: r,
                       })
                     : null,
-                (0, a.jsx)(S.Z, {
+                (0, a.jsx)(T.Z, {
                     buffers: e,
                     value: null != r ? r : 0,
                     onDrag: o,
                     onDragEnd: s,
                     onDragStart: l,
-                    type: S.Z.Types.DURATION,
+                    type: T.Z.Types.DURATION,
                     ref: this.setDurationRef,
                 }),
                 (0, a.jsx)("div", {
@@ -272,7 +272,7 @@ class K extends (r = o.Component) {
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => o(e, S.Z.Types.VOLUME),
+                        onValueChange: (e) => o(e, T.Z.Types.VOLUME),
                         onToggleMute: c,
                         onVolumeShow: u,
                         onVolumeHide: f,
@@ -629,16 +629,16 @@ class J extends (i = o.PureComponent) {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a)))
             : !a && t.playing && (u.pause(), null == d || d.pop(a), null == n || n()),
             a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let f = (0, T.fn)(u.parentNode, u);
+        let f = (0, S.fn)(u.parentNode, u);
         o && !t.fullscreen && null != f
-            ? ((0, T.Dj)(f), f.addEventListener(T.NO, this.handleFullScreenExit))
+            ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != f &&
-              (f.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(f, f.ownerDocument)),
-            l === S.Z.Types.DURATION && t.dragging !== S.Z.Types.DURATION && a
+              (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f, f.ownerDocument)),
+            l === T.Z.Types.DURATION && t.dragging !== T.Z.Types.DURATION && a
                 ? u.pause()
-                : l !== S.Z.Types.DURATION && t.dragging === S.Z.Types.DURATION && a && u.play(),
+                : l !== T.Z.Types.DURATION && t.dragging === T.Z.Types.DURATION && a && u.play(),
             s !== t.muted && ((u.muted = s), null == i || i(s)),
             c !== t.volume && ((u.volume = c), null == r || r(c));
     }
@@ -646,8 +646,8 @@ class J extends (i = o.PureComponent) {
         this._unmounted = !0;
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, T.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(t));
+        let t = (0, S.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -813,7 +813,7 @@ class J extends (i = o.PureComponent) {
                                 iconClassName: D.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, T.fn)(null == e ? void 0 : e.parentNode, e),
+                                node: (0, S.fn)(null == e ? void 0 : e.parentNode, e),
                             })
                           : null,
               })
@@ -974,8 +974,8 @@ class J extends (i = o.PureComponent) {
             L(this, "handleFullScreenExit", () => {
                 let { current: e } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, T.fn)(e.parentNode, e);
-                (null != t && (0, T.rB)(t, null == t ? void 0 : t.ownerDocument)) || this.setState({ fullscreen: !1 });
+                let t = (0, S.fn)(e.parentNode, e);
+                (null != t && (0, S.rB)(t, null == t ? void 0 : t.ownerDocument)) || this.setState({ fullscreen: !1 });
             }),
             L(this, "toggleFullscreen", () => {
                 let e = !this.state.fullscreen;
@@ -1006,8 +1006,8 @@ class J extends (i = o.PureComponent) {
             }),
             L(this, "handleDrag", (e, t) => {
                 let { current: n } = this.mediaRef;
-                if (t === S.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-                else if (t === S.Z.Types.VOLUME) {
+                if (t === T.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+                else if (t === T.Z.Types.VOLUME) {
                     let t = (0, I.A)(e, 1);
                     0 === t
                         ? this.setState({

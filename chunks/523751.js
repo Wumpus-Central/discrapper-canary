@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(854218),
     v = n(682947),
     I = n(981631),
-    T = n(388032),
-    S = n(73704);
+    S = n(388032),
+    T = n(767991);
 function A(e, t, n) {
     return (
         t in e
@@ -149,15 +149,15 @@ let D = {
 function x(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
-        className: S.tooltipPremiumFooterContainer,
+        className: T.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: o()(S.tooltipPremiumFooterSegment, S.tooltipPremiumFooterTierSegment),
+                className: o()(T.tooltipPremiumFooterSegment, T.tooltipPremiumFooterTierSegment),
                 children: [
                     (0, r.jsx)(E.Z, {
                         width: 18,
                         height: 18,
-                        className: S.gemIcon,
+                        className: T.gemIcon,
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-xs/semibold",
@@ -167,11 +167,11 @@ function x(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: S.tooltipPremiumFooterSegment,
+                className: T.tooltipPremiumFooterSegment,
                 children: (0, r.jsx)(u.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: T.intl.format(T.t["dR/SVH"], { count: t.premiumSubscriberCount }),
+                    children: S.intl.format(S.t["dR/SVH"], { count: t.premiumSubscriberCount }),
                 }),
             }),
         ],
@@ -183,7 +183,7 @@ function L(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: S.tooltipBodyContainer,
+                className: T.tooltipBodyContainer,
                 children: [
                     (0, r.jsx)(u.Text, {
                         color: "interactive-active",
@@ -221,7 +221,7 @@ function M(e) {
             flowerStarClassName: E,
             iconClassName: b,
             badgeStrokeColor: v,
-            badgeColor: T,
+            badgeColor: S,
             disableBoostClick: A,
             "aria-label": N = !1,
         } = e;
@@ -289,7 +289,7 @@ function M(e) {
             badgeType: k,
             guildTraits: j,
         }),
-        tooltipContentClassName: S.tooltipRemovePadding,
+        tooltipContentClassName: T.tooltipRemovePadding,
         children: (e) =>
             (0, r.jsx)(u.P3F, {
                 onClick: G,
@@ -300,7 +300,7 @@ function M(e) {
                         className: g,
                         flowerStarClassName: E,
                         allowFullSizedIcon: !0,
-                        color: null != n ? n : T,
+                        color: null != n ? n : S,
                         stroke: v,
                         size: w,
                         children: (0, r.jsx)(B, {

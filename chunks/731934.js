@@ -19,11 +19,11 @@ var r = n(951288),
     y = n(250285),
     O = n(292352),
     v = n(134612),
-    I = n(602698),
-    T = n(388032),
-    S = n(519279),
-    A = n(790680),
-    C = n(197571),
+    I = n(382402),
+    S = n(388032),
+    T = n(152269),
+    A = n(153437),
+    C = n(10198),
     N = n(926895);
 function R(e, t, n) {
     return (
@@ -106,7 +106,7 @@ function x(e) {
 }
 function L() {
     return (0, r.jsxs)("div", {
-        className: o()(A.box, S.box, A.linkingBanner, A.linkingBannerParent),
+        className: o()(A.box, T.box, A.linkingBanner, A.linkingBannerParent),
         children: [
             (0, r.jsxs)("div", {
                 className: A.linkingBannerUpper,
@@ -116,20 +116,20 @@ function L() {
                             (0, r.jsx)(c.Heading, {
                                 className: C.marginBottom8,
                                 variant: "heading-xl/medium",
-                                children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default.pHEnV5) }),
+                                children: (0, r.jsx)(c.y5t, { children: S.intl.string(I.default.pHEnV5) }),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
                                 className: C.marginBottom20,
-                                children: T.intl.string(I.default["1J/gZ4"]),
+                                children: S.intl.string(I.default["1J/gZ4"]),
                             }),
                         ],
                     }),
                     (0, r.jsx)("img", {
                         className: A.bannerArt,
                         src: N,
-                        alt: T.intl.string(I.default["r+PDmu"]),
+                        alt: S.intl.string(I.default["r+PDmu"]),
                     }),
                 ],
             }),
@@ -137,18 +137,18 @@ function L() {
                 className: A.steps,
                 children: [
                     (0, r.jsx)(x, {
-                        header: T.intl.string(I.default["7xxAni"]),
-                        description: T.intl.string(I.default["1M9So2"]),
+                        header: S.intl.string(I.default["7xxAni"]),
+                        description: S.intl.string(I.default["1M9So2"]),
                         stepNumber: 1,
                     }),
                     (0, r.jsx)(x, {
-                        header: T.intl.string(I.default["AXgx+a"]),
-                        description: T.intl.string(I.default.GzMFnb),
+                        header: S.intl.string(I.default["AXgx+a"]),
+                        description: S.intl.string(I.default.GzMFnb),
                         stepNumber: 2,
                     }),
                     (0, r.jsx)(x, {
-                        header: T.intl.string(I.default.MZn1tG),
-                        description: T.intl.string(I.default["8rLBxD"]),
+                        header: S.intl.string(I.default.MZn1tG),
+                        description: S.intl.string(I.default["8rLBxD"]),
                         stepNumber: 3,
                     }),
                 ],
@@ -159,20 +159,20 @@ function L() {
 function M() {
     let e = (0, h.VM)();
     return (0, r.jsxs)("div", {
-        className: o()(A.box, S.box, A.linkingBanner),
+        className: o()(A.box, T.box, A.linkingBanner),
         children: [
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         className: C.marginBottom8,
                         variant: "heading-xl/medium",
-                        children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default.zUCWEL) }),
+                        children: (0, r.jsx)(c.y5t, { children: S.intl.string(I.default.zUCWEL) }),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         className: C.marginBottom20,
-                        children: T.intl.format(I.default.yMnoDl, {
+                        children: S.intl.format(I.default.yMnoDl, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
@@ -182,7 +182,7 @@ function M() {
             (0, r.jsx)("img", {
                 className: A.bannerArt,
                 src: N,
-                alt: T.intl.string(I.default["r+PDmu"]),
+                alt: S.intl.string(I.default["r+PDmu"]),
             }),
         ],
     });
@@ -273,8 +273,8 @@ let k = () => {
                 max: n,
             },
             a = (0, f.o)(
-                T.intl.formatToPlainString(I.default["+tnO34"], i),
-                T.intl.formatToPlainString(I.default["pu6/U0"], i),
+                S.intl.formatToPlainString(I.default["+tnO34"], i),
+                S.intl.formatToPlainString(I.default["pu6/U0"], i),
             );
         return t.length > 0
             ? (0, r.jsx)(j, {
@@ -293,7 +293,7 @@ let k = () => {
                       }),
                       (0, r.jsx)("div", {
                           className: A.box,
-                          children: (0, r.jsx)(m.Z, { text: T.intl.string(I.default.C4ScLD) }),
+                          children: (0, r.jsx)(m.Z, { text: S.intl.string(I.default.C4ScLD) }),
                       }),
                   ],
               });
@@ -302,8 +302,8 @@ let k = () => {
         let e = (0, h.VM)(),
             t = (0, p.Z)() ? O.AG : O.i0,
             n = (0, f.o)(
-                T.intl.formatToPlainString(I.default["1/PzIj"], { maxConnections: t }),
-                T.intl.formatToPlainString(I.default.RcTgiE, { maxConnections: t }),
+                S.intl.formatToPlainString(I.default["1/PzIj"], { maxConnections: t }),
+                S.intl.formatToPlainString(I.default.RcTgiE, { maxConnections: t }),
             );
         return e
             ? (0, r.jsx)("div", {
@@ -324,11 +324,11 @@ let k = () => {
                 throughline: t,
             })
                 .with({ helpline: !0 }, () =>
-                    T.intl.format(I.default["KOwsf/"], {
+                    S.intl.format(I.default["KOwsf/"], {
                         helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
                     }),
                 )
-                .with({ throughline: !0 }, () => T.intl.format(I.default["6tsC8u"], { helpLink: v.$l }))
+                .with({ throughline: !0 }, () => S.intl.format(I.default["6tsC8u"], { helpLink: v.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -338,7 +338,7 @@ let k = () => {
                       (0, r.jsx)(c.Heading, {
                           className: A.supportHeader,
                           variant: "heading-sm/semibold",
-                          children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default["7/tVhv"]) }),
+                          children: (0, r.jsx)(c.y5t, { children: S.intl.string(I.default["7/tVhv"]) }),
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
@@ -351,8 +351,8 @@ let k = () => {
     B = () => {
         let e = (0, h.ov)(O.ne.PENDING),
             t = (0, f.o)(
-                T.intl.formatToPlainString(I.default.IkAgkG, { count: e.length }),
-                T.intl.formatToPlainString(I.default.Q8XnAa, { count: e.length }),
+                S.intl.formatToPlainString(I.default.IkAgkG, { count: e.length }),
+                S.intl.formatToPlainString(I.default.Q8XnAa, { count: e.length }),
             );
         return 0 === e.length
             ? null

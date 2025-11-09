@@ -99,10 +99,10 @@ function p(e) {
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
                 { PaymentModal: i } = await Promise.resolve().then(n.bind(n, 791785)),
-                { STEPS: s } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
+                { STEPS: s } = await Promise.all([n.e("84992"), n.e("16"), n.e("4125")]).then(n.bind(n, 7305));
             return (n) => {
-                var { onClose: T } = n,
-                    S = f(n, ["onClose"]);
+                var { onClose: S } = n,
+                    T = f(n, ["onClose"]);
                 return (0, r.jsx)(e, {
                     activeSubscription: l,
                     stepConfigs: s,
@@ -111,10 +111,10 @@ function p(e) {
                         children: (0, r.jsx)(a.KB, {
                             children: (0, r.jsx)(
                                 i,
-                                d(c({}, S), {
+                                d(c({}, T), {
                                     initialPlanId: t,
                                     onClose: (e) => {
-                                        T(), null == p || p(e);
+                                        S(), null == p || p(e);
                                     },
                                     analyticsLocations: g,
                                     analyticsObject: h,

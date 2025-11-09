@@ -26,7 +26,7 @@ var r = n(951288),
     v = n(699516),
     y = n(594174),
     O = n(388032),
-    H = n(9226);
+    H = n(444573);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,8 +86,8 @@ function S(e) {
 function Z(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let N = (0, b.hQ)(),
-    D = (0, b.hQ)(),
+let D = (0, b.hQ)(),
+    N = (0, b.hQ)(),
     R = "text-sm/medium";
 function L(e) {
     return 1 === e.type;
@@ -287,7 +287,7 @@ function k(e) {
     let Y = (e, t, n) => {
             n.stopPropagation(), n.preventDefault(), 2 === t ? M(e) : (1 === t || M(e), k(e));
         },
-        Q = l.useCallback(
+        W = l.useCallback(
             (e) => {
                 let t = _({}, g);
                 P(e) ? (t[e.id] = V(e.record)) : L(e) && (t[e.id] = I(e.record)),
@@ -307,7 +307,7 @@ function k(e) {
             },
             [G, g],
         ),
-        W = l.useCallback(
+        Q = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
                     i = B[n][l];
@@ -316,7 +316,7 @@ function k(e) {
                     {
                         className: o()(H.selectableSearchRow, H.rowHeight),
                         onClick: (e) => {
-                            e.stopPropagation(), Q(i);
+                            e.stopPropagation(), W(i);
                         },
                         children: (0, r.jsx)("div", {
                             className: H.rowContainer,
@@ -326,7 +326,7 @@ function k(e) {
                     i.id,
                 );
             },
-            [t, Q, B],
+            [t, W, B],
         ),
         K = l.useMemo(
             () =>
@@ -386,8 +386,8 @@ function k(e) {
                         placeholder: null != b ? b : O.intl.string(O.t.uqHLzW),
                         sections: [v.length],
                         inputProps: {
-                            "aria-labelledby": N,
-                            "aria-controls": D,
+                            "aria-labelledby": D,
+                            "aria-controls": N,
                             "aria-expanded": A,
                             onFocus: (e) => Y(!0, 2, e),
                             onBlur: (e) => Y(!1, 2, e),
@@ -403,7 +403,7 @@ function k(e) {
                                 className: H.resultsListContainer,
                                 innerClassName: H.resultsList,
                                 sections: q,
-                                renderRow: W,
+                                renderRow: Q,
                                 rowHeight: 34,
                                 renderSection: (e) => {
                                     let { section: t } = e;
@@ -444,7 +444,7 @@ function k(e) {
                                 footerHeight: (e) => (0 === e ? (0 === q[1] && q[0] > 0 ? 0 : 32) : 0),
                                 role: void 0,
                                 innerRole: "listbox",
-                                innerId: D,
+                                innerId: N,
                                 innerAriaOrientation: "vertical",
                             }),
                         }),

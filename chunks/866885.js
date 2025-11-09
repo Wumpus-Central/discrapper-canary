@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(366050),
     v = n(944486),
     I = n(594174),
-    T = n(566620),
-    S = n(317381),
+    S = n(566620),
+    T = n(317381),
     A = n(531826),
     C = n(175894),
     N = n(963614),
@@ -32,9 +32,9 @@ var r = n(951288),
     x = n(918559),
     L = n(981631),
     M = n(354459),
-    j = n(505386),
-    k = n(186880),
-    U = n(315091);
+    j = n(51434),
+    k = n(533362),
+    U = n(285236);
 function G(e, t, n) {
     return (
         t in e
@@ -89,10 +89,10 @@ function V(e) {
     var t, n, a;
     let { channel: _, isLoading: p } = e,
         [C, G] = i.useState(!1),
-        B = (0, s.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
+        B = (0, s.e7)([T.ZP], () => T.ZP.getCurrentEmbeddedActivity()),
         Z = null == B ? void 0 : B.applicationId,
-        F = (0, s.e7)([S.ZP], () => null != Z && S.ZP.isProxyTicketRefreshing(Z), [Z]),
-        V = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
+        F = (0, s.e7)([T.ZP], () => null != Z && T.ZP.isProxyTicketRefreshing(Z), [Z]),
+        V = (0, s.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
         H = (0, h.q)(Z),
         Y = null == B ? void 0 : B.launchId,
         W = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == _ ? void 0 : _.id)),
@@ -173,7 +173,7 @@ function V(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            eo(), (0, T.tg)(x.Ez.PANEL);
+                            eo(), (0, S.tg)(x.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,
@@ -299,7 +299,7 @@ function V(e) {
 let H = (e) => {
     var { channel: t } = e,
         n = Z(e, ["channel"]);
-    let i = S.ZP.getCurrentEmbeddedActivity();
+    let i = T.ZP.getCurrentEmbeddedActivity();
     (0, C.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
         o = null == i;

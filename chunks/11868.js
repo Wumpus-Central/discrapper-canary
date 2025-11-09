@@ -24,13 +24,13 @@ var r = n(951288),
     O = n(236373),
     v = n(954313),
     I = n(405613),
-    T = n(95291),
-    S = n(742593),
+    S = n(95291),
+    T = n(742593),
     A = n(217804),
     C = n(139712),
     N = n(765305),
     R = n(388032),
-    P = n(182279);
+    P = n(98435);
 let w = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -223,11 +223,11 @@ let w = (e, t) => (n) => {
                 onClick: b,
                 children: [
                     null != n.image &&
-                        (0, r.jsx)(T.Z, {
+                        (0, r.jsx)(S.Z, {
                             source: (0, I.Z)(n),
                             className: P.banner,
                         }),
-                    (0, r.jsx)(S.ZP, {
+                    (0, r.jsx)(T.ZP, {
                         name: n.name,
                         description: null != (t = n.description) ? t : void 0,
                         descriptionClassName: P.eventDescription,

@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(445924),
     p = n(654904),
     h = n(486324),
-    m = n(86698);
+    m = n(729295);
 function g(e, t, n) {
     return (
         t in e
@@ -76,8 +76,8 @@ function v(e) {
             previewAvatarDecorationSrc: b,
             previewTheme: v,
             previewPrimaryColor: I,
-            className: T,
-            disabledInputs: S,
+            className: S,
+            disabledInputs: T,
             isTryItOut: A,
             onUpsellClick: C,
         } = e,
@@ -88,14 +88,14 @@ function v(e) {
         x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: o()(T, { [m.overlay]: !S }),
+            imageClassName: o()(S, { [m.overlay]: !T }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
             status: w,
             statusTooltip: !1,
             statusBackdropColor: null != I ? (0, l.QFD)(v) : void 0,
         });
-    return S
+    return T
         ? (0, r.jsx)("div", {
               className: m.avatar,
               children: x,

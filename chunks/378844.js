@@ -17,7 +17,7 @@ var l = n(442837),
     f = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,8 +50,8 @@ let O = (e) => {
         {
             notClaimed: v,
             notEmailVerified: j,
-            notPhoneVerified: C,
-            newAccount: x,
+            notPhoneVerified: x,
+            newAccount: C,
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
@@ -60,14 +60,14 @@ let O = (e) => {
     return (0 === t &&
         (v
             ? ((I = m.intl.string(m.t.IRxUlG)), (P = m.intl.string(m.t.fiNVin)))
-            : C
+            : x
               ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
               : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
                   ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
-                  : x &&
+                  : C &&
                     ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
@@ -107,7 +107,7 @@ let O = (e) => {
                                                 onClick: () => {
                                                     v
                                                         ? c.j()
-                                                        : C
+                                                        : x
                                                           ? (0, a.ZDy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.resolve().then(
@@ -176,7 +176,7 @@ let O = (e) => {
                                             }),
                                         })
                                       : null,
-                                  v || C || j
+                                  v || x || j
                                       ? (0, i.jsx)(a.Avr, {
                                             onClick: y,
                                             text: m.intl.string(m.t.oEAioF),

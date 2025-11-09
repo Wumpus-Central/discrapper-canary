@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(441319),
     m = n(526761),
     g = n(388032),
-    E = n(339637),
-    b = n(226518);
+    E = n(871976),
+    b = n(5874);
 function y(e, t, n) {
     return (
         t in e
@@ -68,11 +68,11 @@ function I(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -80,7 +80,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,7 +91,7 @@ function S(e, t) {
 }
 function A(e) {
     let { className: t, disabled: n, isEditor: y, renderCTAButtons: v } = e,
-        [S] = (0, a.Wu)([_.Z], () => [_.Z.getCurrentDesktopIcon()]),
+        [T] = (0, a.Wu)([_.Z], () => [_.Z.getCurrentDesktopIcon()]),
         A = (0, f.T)("app_icons_settings_web"),
         C = i.useRef(null);
     (0, d.Z)(C, m.h1.CUSTOM_APP_ICONS);
@@ -101,7 +101,7 @@ function A(e) {
             labelledBy: N,
         }),
         { ref: P } = R,
-        w = T(R, ["ref"]),
+        w = S(R, ["ref"]),
         D = (e) => {
             l.Z.dispatch({
                 type: "APP_ICON_UPDATED",
@@ -161,7 +161,7 @@ function A(e) {
                                         p.Z,
                                         {
                                             icon: e,
-                                            isSelected: S === e.id,
+                                            isSelected: T === e.id,
                                             onSelect: (e) => D(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,

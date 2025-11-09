@@ -16,12 +16,12 @@ var r = n(120356),
     g = n(430824),
     h = n(594174),
     f = n(626135),
-    I = n(999382),
-    p = n(983135),
-    N = n(84658),
+    N = n(999382),
+    I = n(983135),
+    p = n(84658),
     O = n(981631),
     E = n(388032),
-    S = n(473450);
+    S = n(72362);
 function x(e) {
     let { isTooltip: t = !1 } = e,
         n = [
@@ -136,7 +136,7 @@ function T() {
     return (0, l.jsx)(d.i, { testimonials: e });
 }
 function _() {
-    let e = (0, a.e7)([I.Z], () => I.Z.getGuildId()),
+    let e = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
         t = (0, a.e7)([g.Z], () => g.Z.getGuild(e)),
         n = (0, a.e7)([h.default], () => h.default.getCurrentUser());
     return null == e || null == t || null == n
@@ -210,7 +210,7 @@ function _() {
                                               })({}, (0, o.hH)(e))),
                                               (n = n =
                                                   {
-                                                      step: N.PG[N.PG.LANDING],
+                                                      step: p.PG[p.PG.LANDING],
                                                       back: !1,
                                                       skip: !1,
                                                   }),
@@ -232,7 +232,7 @@ function _() {
                                                     }),
                                               t),
                                           ),
-                                              (0, p.IG)(e, N.PG.LANDING);
+                                              (0, I.IG)(e, p.PG.LANDING);
                                       }
                                   },
                                   disabled: !1,

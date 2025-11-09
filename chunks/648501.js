@@ -19,13 +19,13 @@ var i = n(442837),
     y = n(790901),
     O = n(714794),
     v = n(355363),
-    j = n(259404),
-    C = n(876548),
-    x = n(25601),
+    j = n(687352),
+    x = n(876548),
+    C = n(25601),
     E = n(981631),
     S = n(490897),
     I = n(388032),
-    P = n(885525);
+    P = n(88448);
 function N(e) {
     var t;
     let {
@@ -65,7 +65,7 @@ function N(e) {
             );
         });
     if ((0, O.Z)(G))
-        return (0, r.jsx)(x.Z, {
+        return (0, r.jsx)(C.Z, {
             mentionsCount: G,
             isMentionLowImportance: U,
         });
@@ -90,7 +90,7 @@ function N(e) {
         });
     let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
     return null != T && T && W
-        ? (0, r.jsx)(C.Z, {
+        ? (0, r.jsx)(x.Z, {
               userCount: X,
               video: H || z,
               channel: n,

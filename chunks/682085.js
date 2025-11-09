@@ -8,23 +8,23 @@ var r = n(951288),
     s = n(491662),
     u = n(243778),
     d = n(594174),
-    f = n(785717),
-    g = n(931847),
+    g = n(785717),
+    f = n(931847),
     p = n(50130),
     m = n(28671),
     b = n(430790),
-    y = n(795990),
-    h = n(388032),
-    v = n(66582);
+    h = n(795990),
+    y = n(388032),
+    v = n(267233);
 function O() {
-    let { trackUserProfileEditAction: e } = (0, f.KZ)(),
+    let { trackUserProfileEditAction: e } = (0, g.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         { application: O, config: j } = (0, p.G)(),
         { token: x, fetched: _ } = (0, s.o)(null == j ? void 0 : j.application_id),
         P = i.useMemo(
             () =>
                 (null == j ? void 0 : j.application_id) != null
-                    ? new g.q({
+                    ? new f.q({
                           type: a.l.APPLICATION,
                           applicationId: j.application_id,
                       })
@@ -90,7 +90,7 @@ function O() {
             className: v.loading,
             children: (0, r.jsx)(c.$jN, {}),
         });
-    if (null == x) return (0, r.jsx)(y.Z, {});
+    if (null == x) return (0, r.jsx)(h.Z, {});
     let w = (0, r.jsxs)(c.Kqy, {
         gap: 4,
         className: v.header,
@@ -98,12 +98,12 @@ function O() {
             (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: h.intl.string(h.t["oqalC+"]),
+                children: y.intl.string(y.t["oqalC+"]),
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: h.intl.format(h.t.YnNFWa, { applicationName: O.name }),
+                children: y.intl.format(y.t.YnNFWa, { applicationName: O.name }),
             }),
         ],
     });
@@ -137,7 +137,7 @@ function O() {
                             w,
                             (0, r.jsx)(c.Button, {
                                 icon: c.qJs,
-                                text: h.intl.string(h.t["lBG2s/"]),
+                                text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
                                 onClick: I,

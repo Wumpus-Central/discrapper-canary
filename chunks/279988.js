@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    g = n(31829);
+    g = n(866234);
 let m = function (e) {
     let {
             channelId: t,
@@ -22,12 +22,12 @@ let m = function (e) {
             onRemove: b,
             canRemove: x,
             title: j,
-            actionsLocation: v,
-            fieldStyle: _,
+            actionsLocation: _,
+            fieldStyle: v,
         } = e,
-        C = n.values,
-        O = C.slice(0, 1),
-        y = C.length - O.length;
+        O = n.values,
+        C = O.slice(0, 1),
+        y = O.length - C.length;
     return (0, r.jsxs)(d.Z, {
         field: n,
         index: i,
@@ -38,11 +38,11 @@ let m = function (e) {
         onRemove: b,
         title: j,
         canRemove: x,
-        actionsLocation: v,
-        fieldStyle: _,
+        actionsLocation: _,
+        fieldStyle: v,
         children: [
             (0, r.jsx)(c.EK, {
-                terms: O,
+                terms: C,
                 channelId: t,
             }),
             0 !== y &&

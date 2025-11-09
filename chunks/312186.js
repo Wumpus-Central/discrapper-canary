@@ -1,25 +1,25 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
-    l = n(442837),
+    s = n(442837),
     o = n(481060),
-    s = n(13245),
+    l = n(13245),
     a = n(600164),
     c = n(212632),
     d = n(906467),
     u = n(556296),
-    h = n(237997),
-    p = n(998502),
+    p = n(237997),
+    h = n(998502),
     f = n(13140),
     g = n(486016),
     m = n(809357),
     y = n(624864),
-    O = n(987650),
-    _ = n(981631),
-    v = n(388032),
-    b = n(183322),
-    E = n(197571);
-function S(e, t, n) {
+    _ = n(987650),
+    O = n(981631),
+    b = n(388032),
+    v = n(627641),
+    E = n(10198);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,66 +32,66 @@ function S(e, t, n) {
         e
     );
 }
-function x() {
-    let e = h.default.getNotificationPositionMode(),
-        t = e !== _._vf.DISABLED,
+function S() {
+    let e = p.default.getNotificationPositionMode(),
+        t = e !== O._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    s.Z.track(_.rMx.OVERLAY_SETTINGS_UPDATED, {
+    l.Z.track(O.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
-        text_notifications_mode: y.Z.isNotificationDisabled(O.n0.TextChat) ? "DISABLED" : "ENABLED",
-        text_opacity_slider: h.default.getTextWidgetOpacity(),
+        text_notifications_mode: y.Z.isNotificationDisabled(_.n0.TextChat) ? "DISABLED" : "ENABLED",
+        text_opacity_slider: p.default.getTextWidgetOpacity(),
         hotkey: null != n ? (0, f.BB)(n.shortcut) : null,
         text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null,
     });
 }
 class Z extends r.PureComponent {
     componentDidMount() {
-        s.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
+        l.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
             destination_pane: "OVERLAY SETTINGS",
             origin_pane: null,
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        s.Z.setNotificationPositionMode(t), x();
+        l.Z.setNotificationPositionMode(t), S();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
-        s.Z.setAvatarSizeMode(t);
+        l.Z.setAvatarSizeMode(t);
     }
     handleChangeDisplayNameMode(e) {
         let { value: t } = e;
-        s.Z.setDisplayNameMode(t);
+        l.Z.setDisplayNameMode(t);
     }
     handleChangeDisplayUserMode(e) {
         let { value: t } = e;
-        s.Z.setDisplayUserMode(t);
+        l.Z.setDisplayUserMode(t);
     }
     renderHeader() {
         return (0, i.jsxs)(a.Z, {
             direction: a.Z.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
-            className: b.header,
+            className: v.header,
             children: [
                 (0, i.jsxs)(a.Z, {
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
-                            className: b.headerTitle,
-                            children: v.intl.string(v.t["35G2Mq"]),
+                            className: v.headerTitle,
+                            children: b.intl.string(b.t["35G2Mq"]),
                         }),
                         (0, i.jsx)("div", {
-                            className: b.headerClose,
+                            className: v.headerClose,
                             children: (0, i.jsx)(o.hU, {
                                 variant: "icon-only",
                                 size: "md",
                                 icon: o.Dio,
                                 onClick: this.props.onClose,
-                                "aria-label": v.intl.string(v.t.cpT0Cq),
+                                "aria-label": b.intl.string(b.t.cpT0Cq),
                             }),
                         }),
                     ],
@@ -105,25 +105,25 @@ class Z extends r.PureComponent {
             t = d.Z.isDeveloper
                 ? (0, i.jsx)(o.njP.Item, {
                       id: "DEVELOPER",
-                      className: b.tabBarItem,
+                      className: v.tabBarItem,
                       children: "Developer",
                   })
                 : null;
         return (0, i.jsxs)(o.njP, {
             selectedItem: e,
             type: "top",
-            className: b.__invalid_tabBar,
+            className: v.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
                 (0, i.jsx)(o.njP.Item, {
                     id: "GENERAL",
-                    className: b.tabBarItem,
-                    children: v.intl.string(v.t["0FYxxw"]),
+                    className: v.tabBarItem,
+                    children: b.intl.string(b.t["0FYxxw"]),
                 }),
                 (0, i.jsx)(o.njP.Item, {
                     id: "VOICE",
-                    className: b.tabBarItem,
-                    children: v.intl.string(v.t["3WeSiE"]),
+                    className: v.tabBarItem,
+                    children: b.intl.string(b.t["3WeSiE"]),
                 }),
                 t,
             ],
@@ -145,7 +145,7 @@ class Z extends r.PureComponent {
         return (0, i.jsx)(
             o.h21,
             {
-                className: b.content,
+                className: v.content,
                 children: e,
             },
             t,
@@ -158,34 +158,34 @@ class Z extends r.PureComponent {
                 showKeybindIndicators: n,
                 shouldShowInviteNotification: r,
             } = this.props,
-            l = !y.Z.isNotificationDisabled(O.n0.TextChat),
-            a = e !== _._vf.DISABLED;
+            s = !y.Z.isNotificationDisabled(_.n0.TextChat),
+            a = e !== O._vf.DISABLED;
         return (0, i.jsxs)(o.C3N, {
             children: [
                 (0, i.jsx)(o.gNt, {
-                    label: v.intl.string(v.t.IQv8Eo),
+                    label: b.intl.string(b.t.IQv8Eo),
                     children: (0, i.jsx)(c.Z, {
                         position: e,
                         onChange: this.handleChangeNotificationPositionMode,
                     }),
                 }),
                 (0, i.jsx)(o.rsf, {
-                    label: v.intl.string(v.t.Fy5kPp),
-                    checked: l && a,
+                    label: b.intl.string(b.t.Fy5kPp),
+                    checked: s && a,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !a,
                 }),
                 (0, i.jsx)(o.rsf, {
-                    label: v.intl.string(v.t["f+c48/"]),
-                    description: v.intl.string(v.t.W9DVVf),
+                    label: b.intl.string(b.t["f+c48/"]),
+                    description: b.intl.string(b.t.W9DVVf),
                     checked: r,
                     onChange: this.handleToggleInviteNotification,
                 }),
                 n &&
                     (0, i.jsx)(o.rsf, {
-                        label: v.intl.string(v.t.XZTl9r),
+                        label: b.intl.string(b.t.XZTl9r),
                         checked: t,
-                        onChange: (e) => s.Z.setShowKeybindIndicators(e),
+                        onChange: (e) => l.Z.setShowKeybindIndicators(e),
                     }),
             ],
         });
@@ -196,50 +196,50 @@ class Z extends r.PureComponent {
             gap: 20,
             children: [
                 (0, i.jsx)(o.FXm, {
-                    label: v.intl.string(v.t.dnvZSg),
+                    label: b.intl.string(b.t.dnvZSg),
                     onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
                         {
-                            value: _.ipw.LARGE,
-                            name: v.intl.string(v.t.YcOxtr),
+                            value: O.ipw.LARGE,
+                            name: b.intl.string(b.t.YcOxtr),
                         },
                         {
-                            value: _.ipw.SMALL,
-                            name: v.intl.string(v.t.BKIKqx),
+                            value: O.ipw.SMALL,
+                            name: b.intl.string(b.t.BKIKqx),
                         },
                     ],
                     value: e,
                 }),
                 (0, i.jsx)(o.FXm, {
-                    label: v.intl.string(v.t.J0dpcB),
+                    label: b.intl.string(b.t.J0dpcB),
                     onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
                         {
-                            value: _.wC$.ALWAYS,
-                            name: v.intl.string(v.t.nBmDrT),
+                            value: O.wC$.ALWAYS,
+                            name: b.intl.string(b.t.nBmDrT),
                         },
                         {
-                            value: _.wC$.ONLY_WHILE_SPEAKING,
-                            name: v.intl.string(v.t["2OvIZY"]),
+                            value: O.wC$.ONLY_WHILE_SPEAKING,
+                            name: b.intl.string(b.t["2OvIZY"]),
                         },
                         {
-                            value: _.wC$.NEVER,
-                            name: v.intl.string(v.t.ekjlPL),
+                            value: O.wC$.NEVER,
+                            name: b.intl.string(b.t.ekjlPL),
                         },
                     ],
                     value: t,
                 }),
                 (0, i.jsx)(o.FXm, {
-                    label: v.intl.string(v.t.swsWWC),
+                    label: b.intl.string(b.t.swsWWC),
                     onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
                         {
-                            value: _.OYC.ALWAYS,
-                            name: v.intl.string(v.t.nBmDrT),
+                            value: O.OYC.ALWAYS,
+                            name: b.intl.string(b.t.nBmDrT),
                         },
                         {
-                            value: _.OYC.ONLY_WHILE_SPEAKING,
-                            name: v.intl.string(v.t["2OvIZY"]),
+                            value: O.OYC.ONLY_WHILE_SPEAKING,
+                            name: b.intl.string(b.t["2OvIZY"]),
                         },
                     ],
                     value: n,
@@ -279,50 +279,50 @@ class Z extends r.PureComponent {
                         label: "Out of Memory",
                     },
                 ],
-                onChange: (e) => null != e && p.ZP.crash(e),
+                onChange: (e) => null != e && h.ZP.crash(e),
             }),
         });
     }
     render() {
         return (0, i.jsxs)(o.VqE, {
-            "aria-label": v.intl.string(v.t["35G2Mq"]),
-            className: b.container,
+            "aria-label": b.intl.string(b.t["35G2Mq"]),
+            className: v.container,
             children: [this.renderHeader(), this.renderBody()],
         });
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", { selectedSection: "GENERAL" }),
-            S(this, "handleSelectSection", (e) => {
+            x(this, "state", { selectedSection: "GENERAL" }),
+            x(this, "handleSelectSection", (e) => {
                 this.setState({ selectedSection: e });
             }),
-            S(this, "handleToggleTextChatNotifications", () => {
-                s.Z.setNotificationDisabledSetting(g.i.TEXT_CHAT, !this.props.textChatDisabled), x();
+            x(this, "handleToggleTextChatNotifications", () => {
+                l.Z.setNotificationDisabledSetting(g.i.TEXT_CHAT, !this.props.textChatDisabled), S();
             }),
-            S(this, "handleToggleInviteNotification", () => {
+            x(this, "handleToggleInviteNotification", () => {
                 let e = this.props.shouldShowInviteNotification;
-                s.Z.setNotificationDisabledSetting(g.i.GAME_ACTIVITY, !e);
+                l.Z.setNotificationDisabledSetting(g.i.GAME_ACTIVITY, !e);
             });
     }
 }
-function j(e) {
+function C(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
             displayNameMode: r,
             displayUserMode: o,
-            notificationPositionMode: s,
+            notificationPositionMode: l,
             textChatDisabled: a,
             shouldShowKeybindIndicators: c,
             shouldShowInviteNotification: d,
-        } = (0, l.cj)([h.default, y.Z], () => ({
-            avatarSizeMode: h.default.getAvatarSizeMode(),
-            displayNameMode: h.default.getDisplayNameMode(),
-            displayUserMode: h.default.getDisplayUserMode(),
-            notificationPositionMode: h.default.getNotificationPositionMode(),
-            textChatDisabled: y.Z.isNotificationDisabled(O.n0.TextChat),
-            shouldShowKeybindIndicators: h.default.showKeybindIndicators,
-            shouldShowInviteNotification: !y.Z.isNotificationDisabled(O.n0.ActivityInvite),
+        } = (0, s.cj)([p.default, y.Z], () => ({
+            avatarSizeMode: p.default.getAvatarSizeMode(),
+            displayNameMode: p.default.getDisplayNameMode(),
+            displayUserMode: p.default.getDisplayUserMode(),
+            notificationPositionMode: p.default.getNotificationPositionMode(),
+            textChatDisabled: y.Z.isNotificationDisabled(_.n0.TextChat),
+            shouldShowKeybindIndicators: p.default.showKeybindIndicators,
+            shouldShowInviteNotification: !y.Z.isNotificationDisabled(_.n0.ActivityInvite),
         })),
         u = (0, m.Z)({ location: "Overlay Settings" });
     return (0, i.jsx)(Z, {
@@ -330,7 +330,7 @@ function j(e) {
         avatarSizeMode: n,
         displayNameMode: r,
         displayUserMode: o,
-        notificationPositionMode: s,
+        notificationPositionMode: l,
         textChatDisabled: a,
         shouldShowKeybindIndicators: c,
         showKeybindIndicators: u,

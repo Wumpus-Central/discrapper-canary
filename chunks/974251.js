@@ -9,19 +9,19 @@ var i = n(951288),
     u = n(53281),
     d = n(110924),
     p = n(595519),
-    f = n(39952),
-    h = n(924557),
+    h = n(39952),
+    f = n(924557),
     m = n(435064),
     g = n(712114),
     b = n(680056),
     y = n(266454),
     C = n(536442),
-    _ = n(728285),
-    v = n(79390),
+    v = n(728285),
+    _ = n(79390),
     x = n(216789),
     O = n(665906),
-    E = n(695346),
-    j = n(433355),
+    j = n(695346),
+    E = n(433355),
     S = n(819640),
     P = n(375954),
     I = n(496675),
@@ -32,13 +32,13 @@ var i = n(951288),
     w = n(316595),
     M = n(443603),
     R = n(193910),
-    D = n(951211),
-    L = n(981631),
+    L = n(951211),
+    D = n(981631),
     k = n(356659),
     U = n(921944),
-    F = n(388032),
-    V = n(90274);
-function B(e) {
+    B = n(388032),
+    H = n(935730);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -63,7 +63,7 @@ function B(e) {
     }
     return e;
 }
-function H(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,28 +83,28 @@ function H(e, t) {
 }
 let G = r.memo(function (e) {
     var t, l;
-    let { className: G, channel: W, draftType: z, editorTextContent: q, setValue: Y, canOnlyUseTextCommands: K } = e,
-        X = (0, _.bp)(),
+    let { className: G, channel: z, draftType: W, editorTextContent: q, setValue: K, canOnlyUseTextCommands: Y } = e,
+        X = (0, v.bp)(),
         J = r.useRef(null),
         Q = r.useRef(null),
         $ = (0, o.e7)([Z.Z], () => Z.Z.getActivities()),
         ee = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
         et = (0, o.e7)([m.Z], () => m.Z.getLastClipsSession()),
         en = (0, o.Wu)([m.Z], () => m.Z.getNewClipIds()),
-        ei = (0, o.e7)([j.ZP], () => null == j.ZP.getCurrentSidebarChannelId(W.id)),
-        { showClipsHeaderEntrypoint: er } = h.NV.useExperiment(
+        ei = (0, o.e7)([E.ZP], () => null == E.ZP.getCurrentSidebarChannelId(z.id)),
+        { showClipsHeaderEntrypoint: er } = f.NV.useExperiment(
             { location: "ChannelAttachButton" },
             { autoTrackExposure: !1 },
         ),
-        { onShareClick: el } = (0, b.Z)(W.id),
+        { onShareClick: el } = (0, b.Z)(z.id),
         ea = (0, o.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         eo = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
         es = (0, o.e7)([S.Z], () => S.Z.hasLayers()),
         ec = (0, o.e7)([m.Z], () => m.Z.hasClips()),
         [eu, ed] = r.useState(null),
-        ep = (0, h.Go)() && (ee || ec),
-        ef = W.isPrivate(),
-        eh = (0, o.e7)([I.Z], () => ef || (I.Z.can(L.Plq.ATTACH_FILES, W) && I.Z.can(L.Plq.SEND_MESSAGES, W))),
+        ep = (0, f.Go)() && (ee || ec),
+        eh = z.isPrivate(),
+        ef = (0, o.e7)([I.Z], () => eh || (I.Z.can(D.Plq.ATTACH_FILES, z) && I.Z.can(D.Plq.SEND_MESSAGES, z))),
         em = (0, d.Z)(et);
     (null == em ? void 0 : em.newClipIds.length) !== (null == et ? void 0 : et.newClipIds.length) &&
         (null != (t = null == et ? void 0 : et.newClipIds.length) ? t : 0) > 0 &&
@@ -119,12 +119,12 @@ let G = r.memo(function (e) {
     function eb() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("61342"), n.e("69311")]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("61342"), n.e("9260")]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        H(B({}, t), {
-                            channelId: W.id,
+                        F(V({}, t), {
+                            channelId: z.id,
                             onClipClick: (e) => el({ clips: [e] }),
                         }),
                     );
@@ -139,40 +139,40 @@ let G = r.memo(function (e) {
             return null == (e = J.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            T.S.subscribe(L.CkL.UPLOAD_FILE, e),
+            T.S.subscribe(D.CkL.UPLOAD_FILE, e),
             () => {
-                T.S.unsubscribe(L.CkL.UPLOAD_FILE, e);
+                T.S.unsubscribe(D.CkL.UPLOAD_FILE, e);
             }
         );
     });
-    let ey = (0, O.NE)(W),
-        eC = (0, O.Xu)(W),
-        e_ = !E.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
-        ev = (0, v.UI)(null != W ? W : void 0),
+    let ey = (0, O.NE)(z),
+        eC = (0, O.Xu)(z),
+        ev = !j.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
+        e_ = (0, _.UI)(null != z ? z : void 0),
         ex = (0, p.qB)(),
         eO = (0, x.Us)({ location: "ChannelAttachButton" }),
-        eE = (0, f.o)(),
-        ej = null != (l = null == en ? void 0 : en.length) ? l : 0,
-        eS = (0, D.Z)({
-            canAttachFiles: eh,
+        ej = (0, h.o)(),
+        eE = null != (l = null == en ? void 0 : en.length) ? l : 0,
+        eS = (0, L.Z)({
+            canAttachFiles: ef,
             canStartThreads: ey || eC,
-            useSlate: e_,
+            useSlate: ev,
             hasClips: ep,
-            canUseApplicationCommands: !K,
-            channel: W,
+            canUseApplicationCommands: !Y,
+            channel: z,
             activities: $,
-            newClipsCount: ej,
-            canPostPolls: ev,
+            newClipsCount: eE,
+            canPostPolls: e_,
             canLaunchActivities: ex,
             appContext: X,
             canSendScheduledMessages: eO,
-            canSummarizeThreads: eE,
+            canSummarizeThreads: ej,
         });
     if (0 === eS.length) return null;
     let eP = (0, i.jsx)(c.svS, {
             size: "refresh_sm",
             color: "currentColor",
-            colorClass: V.attachButtonPlus,
+            colorClass: H.attachButtonPlus,
         }),
         eI = (0, i.jsx)(c.yRy, {
             targetElementRef: Q,
@@ -194,7 +194,7 @@ let G = r.memo(function (e) {
                     case "recentClips":
                         return (0, i.jsx)(
                             g.Z,
-                            H(B({}, e), {
+                            F(V({}, e), {
                                 onOpenClips: eb,
                                 lastClipsSession: et,
                             }),
@@ -202,17 +202,17 @@ let G = r.memo(function (e) {
                     case "attachMenu":
                         return (0, i.jsx)(
                             R.Z,
-                            H(B({}, e), {
+                            F(V({}, e), {
                                 onClose: () => ed(null),
                                 options: eS,
-                                channel: W,
+                                channel: z,
                                 onFileUpload: () => {
                                     var e;
                                     return null == (e = J.current) ? void 0 : e.activateUploadDialogue();
                                 },
-                                draftType: z,
+                                draftType: W,
                                 editorTextContent: q,
-                                setValue: Y,
+                                setValue: K,
                                 openClips: eb,
                             }),
                         );
@@ -223,15 +223,15 @@ let G = r.memo(function (e) {
             children: (e) =>
                 (0, i.jsx)(
                     M.Z,
-                    H(
-                        B(
+                    F(
+                        V(
                             {
                                 ref: Q,
-                                className: a()(V.attachButton, G),
-                                childClassName: V.attachButtonInner,
+                                className: a()(H.attachButton, G),
+                                childClassName: H.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": F.intl.string(F.t.d56gCa),
-                                onDoubleClick: eh
+                                "aria-label": B.intl.string(B.t.d56gCa),
+                                onDoubleClick: ef
                                     ? () => {
                                           var e;
                                           return null == (e = J.current) ? void 0 : e.activateUploadDialogue();
@@ -248,37 +248,37 @@ let G = r.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: V.uploadInput,
+                className: H.uploadInput,
                 children: (0, i.jsx)(u.Z, {
                     ref: J,
                     onChange: (e) => {
                         var t, n, i;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
-                                ? (0, A.G)(W, [])
-                                : (0, A.d)(t, W, z, {
+                                ? (0, A.G)(z, [])
+                                : (0, A.d)(t, z, W, {
                                       requireConfirm: !0,
                                       showLargeMessageDialog: i,
                                       origin: "file_picker",
                                   }),
-                            T.S.dispatchToLastSubscribed(L.CkL.TEXTAREA_FOCUS),
+                            T.S.dispatchToLastSubscribed(D.CkL.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
-                    multiple: W.rateLimitPerUser <= 0,
+                    multiple: z.rateLimitPerUser <= 0,
                     tabIndex: -1,
                     "aria-hidden": !0,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: V.attachWrapper,
+                className: H.attachWrapper,
                 children: (0, i.jsx)(w.Z, {
-                    channel: W,
+                    channel: z,
                     isOmniMenuOpen: "attachMenu" === eu,
                     openOmniMenu: () => ed("attachMenu"),
                     enabled: ex,
-                    animationContainerClassName: V.buttonAnimation,
-                    glowClassName: V.buttonAnimationGlow,
-                    trinketsClassName: V.buttonAnimationTrinkets,
+                    animationContainerClassName: H.buttonAnimation,
+                    glowClassName: H.buttonAnimationGlow,
+                    trinketsClassName: H.buttonAnimationTrinkets,
                     children: eI,
                 }),
             }),

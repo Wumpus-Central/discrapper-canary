@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(415506);
+n.d(t, { Z: () => L }), n(35282), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     s = n(120356),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(533307),
     h = n(978085),
     g = n(232567),
-    p = n(388905),
-    m = n(362762),
+    m = n(388905),
+    p = n(362762),
     f = n(164670),
     _ = n(108427),
     x = n(314897),
@@ -21,13 +21,13 @@ var r = n(951288),
     b = n(55563),
     I = n(669079),
     y = n(63063),
-    O = n(51144),
-    S = n(481153),
-    N = n(781428),
+    S = n(51144),
+    N = n(481153),
+    O = n(781428),
     C = n(423527),
     A = n(981631),
     T = n(388032),
-    Z = n(197571);
+    Z = n(10198);
 function P(e, t, n) {
     return (
         t in e
@@ -89,23 +89,23 @@ class R extends i.PureComponent {
                     : void 0;
     }
     renderSpinner(e) {
-        return (0, r.jsxs)(p.ZP, {
-            children: [(0, r.jsx)(p.Dx, { children: e }), (0, r.jsx)(p.Hh, {})],
+        return (0, r.jsxs)(m.ZP, {
+            children: [(0, r.jsx)(m.Dx, { children: e }), (0, r.jsx)(m.Hh, {})],
         });
     }
     renderExpiredInvite() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(m.ZP, {
             children: [
-                (0, r.jsx)(p.Ee, {
+                (0, r.jsx)(m.Ee, {
                     src: n(167969),
                     className: Z.marginBottom8,
                 }),
-                (0, r.jsx)(p.Dx, {
+                (0, r.jsx)(m.Dx, {
                     className: l()(Z.marginTop8, Z.marginBottom8),
                     children: T.intl.string(T.t.KPowgn),
                 }),
-                (0, r.jsx)(p.DK, { children: T.intl.string(T.t.j8734b) }),
+                (0, r.jsx)(m.DK, { children: T.intl.string(T.t.j8734b) }),
                 (0, r.jsx)("div", {
                     className: l()(Z.marginTop40, Z.marginBottom8),
                     children: (0, r.jsx)(o.Button, {
@@ -123,13 +123,13 @@ class R extends i.PureComponent {
         });
     }
     renderAppOpened() {
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(m.ZP, {
             children: [
-                (0, r.jsx)(p.Dx, {
+                (0, r.jsx)(m.Dx, {
                     className: Z.marginBottom8,
                     children: T.intl.string(T.t.csrAMJ),
                 }),
-                (0, r.jsx)(p.DK, { children: T.intl.string(T.t["m1+IBn"]) }),
+                (0, r.jsx)(m.DK, { children: T.intl.string(T.t["m1+IBn"]) }),
                 (0, r.jsx)("div", {
                     className: Z.marginTop40,
                     children: (0, r.jsx)(o.Button, {
@@ -143,14 +143,14 @@ class R extends i.PureComponent {
     }
     renderVerification(e) {
         let { sentVerification: t } = this.state;
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(m.ZP, {
             children: [
-                (0, r.jsx)(p.Ee, {
+                (0, r.jsx)(m.Ee, {
                     src: n(892235),
                     className: Z.marginBottom8,
                 }),
-                (0, r.jsx)(p.Dx, { children: T.intl.format(T.t["ivLUf/"], { username: e.username }) }),
-                (0, r.jsx)(p.DK, {
+                (0, r.jsx)(m.Dx, { children: T.intl.format(T.t["ivLUf/"], { username: e.username }) }),
+                (0, r.jsx)(m.DK, {
                     className: Z.marginTop20,
                     children: T.intl.string(T.t["8Su18+"]),
                 }),
@@ -177,13 +177,13 @@ class R extends i.PureComponent {
     renderAuthenticated(e, t, n) {
         let { transitionTo: i } = this.props,
             s = this.getErrorMessage(e);
-        return (0, r.jsx)(L, {
+        return (0, r.jsx)(w, {
             sku: n,
             giftCodeCode: e.code,
             transitionTo: i,
-            children: (0, r.jsxs)(p.ZP, {
+            children: (0, r.jsxs)(m.ZP, {
                 children: [
-                    (0, r.jsx)(S.Z, { giftCode: e }),
+                    (0, r.jsx)(N.Z, { giftCode: e }),
                     (0, r.jsx)("div", {
                         className: Z.marginTop40,
                         children: (0, r.jsx)(o.Button, {
@@ -194,14 +194,14 @@ class R extends i.PureComponent {
                         }),
                     }),
                     null != s
-                        ? (0, r.jsx)(p.DK, {
+                        ? (0, r.jsx)(m.DK, {
                               className: Z.marginTop20,
                               children: s,
                           })
-                        : (0, r.jsx)(p.i_, {
+                        : (0, r.jsx)(m.i_, {
                               className: Z.marginTop20,
                               children: T.intl.format(T.t.NYM08s, {
-                                  userTag: O.ZP.getUserTag(t),
+                                  userTag: S.ZP.getUserTag(t),
                                   onLogoutClick: this.handleLogout,
                               }),
                           }),
@@ -235,7 +235,7 @@ class R extends i.PureComponent {
                       : this.renderAuthenticated(i, e, t);
             }
             return "login" === this.getMode()
-                ? (0, r.jsx)(N.Z, {
+                ? (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,
@@ -297,7 +297,7 @@ class R extends i.PureComponent {
             });
     }
 }
-let w = a.ZP.connectStores([v.Z, j.Z, x.default, b.Z, E.Z, m.Z], (e) => {
+let L = a.ZP.connectStores([v.Z, j.Z, x.default, b.Z, E.Z, p.Z], (e) => {
         let t = e.match.params.giftCode,
             n = v.Z.get(t),
             r = null != n ? b.Z.get(n.skuId) : null;
@@ -313,18 +313,18 @@ let w = a.ZP.connectStores([v.Z, j.Z, x.default, b.Z, E.Z, m.Z], (e) => {
             isResolved: v.Z.getIsResolved(t),
             isAccepting: v.Z.getIsAccepting(t),
             libraryApplicationsFetched: j.Z.fetched,
-            nativeAppState: m.Z.getState(t),
+            nativeAppState: p.Z.getState(t),
         };
     })(R),
-    L = (e) => {
+    w = (e) => {
         let { sku: t, children: n, giftCodeCode: s, transitionTo: l } = e,
             a = (0, f.K$)(t);
         return (i.useEffect(() => {
             null != s && a && l(A.Z5c.APP_WITH_GIFT_CODE(s));
         }, [a, s, l]),
         a)
-            ? (0, r.jsxs)(p.ZP, {
-                  children: [(0, r.jsx)(p.Dx, { children: T.intl.string(T.t.b3lf1c) }), (0, r.jsx)(p.Hh, {})],
+            ? (0, r.jsxs)(m.ZP, {
+                  children: [(0, r.jsx)(m.Dx, { children: T.intl.string(T.t.b3lf1c) }), (0, r.jsx)(m.Hh, {})],
               })
             : n;
     };

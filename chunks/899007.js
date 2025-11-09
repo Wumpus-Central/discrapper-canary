@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(981631),
     v = n(474936),
     I = n(671955),
-    T = n(66856);
-function S(e, t, n) {
+    S = n(111886);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -80,7 +80,7 @@ function P(e) {
             displayProfile: n,
             guildId: a,
             channelId: h,
-            themeType: S,
+            themeType: T,
             animateOnHover: C,
             onOpenProfile: P,
             className: w,
@@ -98,8 +98,8 @@ function P(e) {
             isMobileOnline: _.Z.isMobileOnline(t.id),
         })),
         F = void 0 !== D ? D : B,
-        V = [I.l.MODAL, I.l.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        H = o()(T.avatar, w),
+        V = [I.l.MODAL, I.l.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        H = o()(S.avatar, w),
         {
             avatarDecorationSrc: Y,
             avatarSrc: W,
@@ -115,7 +115,7 @@ function P(e) {
             avatarDecoration: Y,
             size: V,
             "aria-label": t.username,
-            imageClassName: null != P ? T.overlay : void 0,
+            imageClassName: null != P ? S.overlay : void 0,
             status: k ? O.Skl.UNKNOWN : F,
             statusBackdropColor: j && !k ? (0, l.QFD)(x) : void 0,
             isMobile: Z,
@@ -133,8 +133,8 @@ function P(e) {
         : (0, r.jsx)(
               l.P3F,
               N(A({}, K), {
-                  className: o()(H, T.clickable),
-                  focusProps: { ringClassName: T.focusRing },
+                  className: o()(H, S.clickable),
+                  focusProps: { ringClassName: S.focusRing },
                   onClick: () => {
                       M({
                           action: "PRESS_VIEW_PROFILE",

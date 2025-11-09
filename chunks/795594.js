@@ -29,8 +29,8 @@ var r = n(951288),
     O = n(497321),
     v = n(317381),
     I = n(513202),
-    T = n(367907),
-    S = n(162685),
+    S = n(367907),
+    T = n(162685),
     A = n(979200),
     C = n(870822),
     N = n(589414),
@@ -62,9 +62,9 @@ var r = n(951288),
     ee = n(981631),
     et = n(468788),
     en = n(388032),
-    er = n(392082),
-    ei = n(430864),
-    ea = n(197571);
+    er = n(609157),
+    ei = n(602009),
+    ea = n(10198);
 function eo(e, t, n) {
     return (
         t in e
@@ -301,7 +301,7 @@ let ef = (e) => {
                     ? void 0
                     : e.allowMobilePush;
             }, [E]),
-            C = S.w.useExperiment({ location: "oauth2_authorize" }),
+            C = T.w.useExperiment({ location: "oauth2_authorize" }),
             x = a.bot,
             M = (0, p.e7)([L.Z], () => L.Z.getDMFromUserId(null == x ? void 0 : x.id)),
             { appDMChannelMuteConfig: j, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
@@ -516,7 +516,7 @@ let ef = (e) => {
                     },
                     W.fy.INFREQUENT_USER_ACTION,
                 ),
-                    T.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+                    S.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: et.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
                         label: e ? Z.ZB.Unmuted : Z.ZB.Muted,
@@ -704,7 +704,7 @@ let ef = (e) => {
                       ? n.filter((t) => l()(e, t.application.name.toLowerCase()))
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
-            T = () =>
+            S = () =>
                 null == n || null == y || t !== x.FetchState.FETCHED
                     ? (0, r.jsx)(g.$jN, {
                           className: ea.marginTop20,
@@ -757,7 +757,7 @@ let ef = (e) => {
                               }),
                           ],
                       }),
-                      children: T(),
+                      children: S(),
                   }),
               });
     };

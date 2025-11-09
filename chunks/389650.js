@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(365023),
     v = n(509140),
     I = n(825655),
-    T = n(131951),
-    S = n(556296),
+    S = n(131951),
+    T = n(556296),
     A = n(63063),
     C = n(358085),
     N = n(13140),
@@ -31,9 +31,9 @@ var r = n(951288),
     D = n(981631),
     x = n(295907),
     L = n(388032),
-    M = n(894462),
-    j = n(620842),
-    k = n(197571);
+    M = n(958047),
+    j = n(504401),
+    k = n(10198);
 function U(e, t, n) {
     return (
         t in e
@@ -283,7 +283,7 @@ class Y extends i.PureComponent {
                     label: L.intl.string(L.t.hurHWo),
                 })),
             t &&
-                ((0, C.isWindows)() || T.Z.getUseSystemScreensharePicker()) &&
+                ((0, C.isWindows)() || S.Z.getUseSystemScreensharePicker()) &&
                 o.push({
                     value: D.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: L.intl.string(L.t.ybdjJD),
@@ -548,8 +548,8 @@ class Y extends i.PureComponent {
     }
 }
 function W() {
-    let e = (0, c.e7)([S.ZP], () => S.ZP.getState()),
-        t = (0, c.e7)([T.Z], () => (0, b.Z)(T.Z)),
+    let e = (0, c.e7)([T.ZP], () => T.ZP.getState()),
+        t = (0, c.e7)([S.Z], () => (0, b.Z)(S.Z)),
         n = (0, c.e7)([v.Z], () => v.Z.isSupported),
         i = (0, E.Go)(),
         a = (0, E.PP)(),

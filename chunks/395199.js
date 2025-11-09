@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(78839),
     _ = n(709054),
     p = n(388032),
-    h = n(542886);
+    h = n(76409);
 function m(e) {
     let { imageClass: t, children: n, error: i } = e;
     return (0, r.jsxs)("div", {
@@ -197,8 +197,8 @@ let v = (e) => {
             onCancel: v,
             error: I,
         } = e,
-        T = O(h, m, g, y, v),
-        S = () =>
+        S = O(h, m, g, y, v),
+        T = () =>
             f && null != p
                 ? (0, r.jsx)(b, {
                       imageClass: null != o ? o : "",
@@ -226,9 +226,9 @@ let v = (e) => {
         size: "sm",
         children: [
             (0, r.jsx)(s.xBx, { title: i }),
-            (0, r.jsx)(s.fef, { children: S() }),
+            (0, r.jsx)(s.fef, { children: T() }),
             (0, r.jsx)(s.Go$, {
-                actions: T,
+                actions: S,
                 actionsFullWidth: !1,
             }),
         ],

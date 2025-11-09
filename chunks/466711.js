@@ -20,11 +20,11 @@ var r = n(951288),
     O = n(51144),
     v = n(897291),
     I = n(443603),
-    T = n(981631),
-    S = n(921944),
+    S = n(981631),
+    T = n(921944),
     A = n(388032),
-    C = n(30989),
-    N = n(564355);
+    C = n(276088),
+    N = n(744114);
 function R(e, t, n) {
     return (
         t in e
@@ -160,7 +160,7 @@ function j(e) {
         B = I || G,
         Z = (0, O.Ft)(l),
         F = (0, p.yc)({ location: "gift-button" }),
-        V = l.type === T.d4z.DM;
+        V = l.type === S.d4z.DM;
     if (s) return null;
     let H = () => {
             F && V && null != Z
@@ -168,10 +168,10 @@ function j(e) {
                       giftRecipient: Z,
                       analyticsLocations: b,
                       analyticsObject: {
-                          page: l.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
-                          section: T.jXE.CHANNEL_TEXT_AREA,
-                          object: T.qAy.BUTTON_ICON,
-                          objectType: T.AnalyticsObjectTypes.GIFT,
+                          page: l.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                          section: S.jXE.CHANNEL_TEXT_AREA,
+                          object: S.qAy.BUTTON_ICON,
+                          objectType: S.AnalyticsObjectTypes.GIFT,
                       },
                   })
                 : (0, _.Z)({
@@ -180,15 +180,15 @@ function j(e) {
                       initialPlanId: null,
                       analyticsLocations: b,
                       analyticsObject: {
-                          page: l.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
-                          section: T.jXE.CHANNEL_TEXT_AREA,
-                          object: T.qAy.GIFTING_PROMOTION_BUTTON,
-                          objectType: T.AnalyticsObjectTypes.GIFT,
+                          page: l.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                          section: S.jXE.CHANNEL_TEXT_AREA,
+                          object: S.qAy.GIFTING_PROMOTION_BUTTON,
+                          objectType: S.AnalyticsObjectTypes.GIFT,
                       },
                   });
         },
         Y = () => {
-            A(!1), U(S.L.TAKE_ACTION), H();
+            A(!1), U(T.L.TAKE_ACTION), H();
         },
         W =
             void 0 !== w

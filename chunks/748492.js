@@ -26,8 +26,8 @@ var i = n(120356),
     O = n(402113),
     v = n(800965),
     I = n(157813),
-    T = n(25827),
-    S = n(131951),
+    S = n(25827),
+    T = n(131951),
     A = n(636449),
     C = n(566620),
     N = n(884338),
@@ -35,8 +35,8 @@ var i = n(120356),
     P = n(981631),
     w = n(231338),
     D = n(388032),
-    x = n(702952),
-    L = n(186880);
+    x = n(44149),
+    L = n(533362);
 function M(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
@@ -60,8 +60,8 @@ function j(e) {
             embeddedActivity: k,
         } = e,
         U = (0, p.bp)() === P.IlC.POPOUT,
-        G = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
-        B = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
+        G = (0, o.e7)([T.Z], () => T.Z.isVideoEnabled()),
+        B = (0, o.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
         Z = !1 === (null == (t = null == B ? void 0 : B.disabled) || t),
         F = (0, u.Z)([s])[0],
         V = (0, m.Z)(a),
@@ -108,7 +108,7 @@ function j(e) {
                         basis: "50%",
                         align: _.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(T.C, {
+                            (0, r.jsx)(S.C, {
                                 className: x.leftPipIcon,
                                 enabled: G,
                                 cameraUnavailable: !Z,

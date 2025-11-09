@@ -1,4 +1,4 @@
-n.d(t, { m: () => x });
+n.d(t, { m: () => C });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -19,9 +19,9 @@ var r = n(951288),
     O = n(176505),
     v = n(490897),
     j = n(388032),
-    C = n(885525);
-function x(e) {
-    let { guild: t, selected: x } = e,
+    x = n(88448);
+function C(e) {
+    let { guild: t, selected: C } = e,
         E = (0, p.Z)(t),
         S = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([h.Z], () =>
@@ -95,12 +95,12 @@ function x(e) {
         A = null;
     return (
         (S && !P && !N) ||
-            x ||
+            C ||
             Z ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: j.intl.string(j.t.y2b7CA),
-                className: C.newChannel,
+                className: x.newChannel,
             })),
         (0, r.jsx)(_.m, {
             id: "channels-".concat(t.id),
@@ -111,7 +111,7 @@ function x(e) {
                     className: e,
                 }),
             text: E ? j.intl.string(j.t.h9mGOP) : j.intl.string(j.t.et6wav),
-            selected: x,
+            selected: C,
             onClick: w,
             onContextMenu: T,
             trailing: A,

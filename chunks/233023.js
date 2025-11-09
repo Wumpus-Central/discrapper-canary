@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(741570),
     f = n(584973),
     _ = n(556638),
-    p = n(80568);
+    p = n(666998);
 let h = 14;
 function m(e) {
     let {
@@ -27,14 +27,14 @@ function m(e) {
             hideEmoji: v = !1,
             hideTooltip: I = !1,
         } = e,
-        T = (0, d.E)("ActivityStatus", g),
-        { defaultStatusVariant: S } = (0, l.bN)({
+        S = (0, d.E)("ActivityStatus", g),
+        { defaultStatusVariant: T } = (0, l.bN)({
             guildId: null == g ? void 0 : g.guild_id,
             location: "CustomStatusActivityStatus",
         });
     if (null == t && null == E) return null;
-    let A = null != E && T,
-        C = A && null != b ? (0, c.O8)(b, E, S) : null,
+    let A = null != E && S,
+        C = A && null != b ? (0, c.O8)(b, E, T) : null,
         N = null == t ? void 0 : t.emoji,
         R = null != C ? C : null == t ? void 0 : t.state,
         P = null != R && "" !== R,

@@ -1,6 +1,6 @@
 n.d(t, { A: () => b });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(596454),
@@ -9,55 +9,55 @@ var r = n(951288),
     u = n(314897),
     d = n(592125),
     p = n(944486),
-    f = n(223135),
-    h = n(981631),
+    h = n(223135),
+    f = n(981631),
     m = n(185923),
-    g = n(787267);
+    g = n(34101);
 function b(e) {
     let {
             customStatusEmoji: t,
             setCustomStatusEmoji: n,
             selectedDefaultStatus: b,
-            setIsEmojiPickerOpen: _,
-            defaultStatusVariant: y,
+            setIsEmojiPickerOpen: y,
+            defaultStatusVariant: C,
         } = e,
-        C = i.useRef(null),
-        v = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
-        O = i.useCallback(
+        v = r.useRef(null),
+        _ = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        x = r.useCallback(
             () =>
                 null != t
-                    ? (0, r.jsx)(o.Z, {
+                    ? (0, i.jsx)(o.Z, {
                           emojiId: t.id,
                           emojiName: t.name,
                           animated: !!t.animated,
                       })
                     : null != b
-                      ? (0, r.jsx)(f.Z, {
+                      ? (0, i.jsx)(h.Z, {
                             className: g.icon,
                             userId: u.default.getId(),
                             size: 20,
                             hangStatusActivity: {
-                                type: h.IIU.HANG_STATUS,
+                                type: f.IIU.HANG_STATUS,
                                 state: b,
                             },
-                            fallbackVariant: y,
+                            fallbackVariant: C,
                         })
                       : null,
-            [t, y, b],
+            [t, C, b],
         );
-    return (0, r.jsx)(a.yRy, {
-        targetElementRef: C,
-        onRequestOpen: () => _(!0),
-        onRequestClose: () => _(!1),
+    return (0, i.jsx)(a.yRy, {
+        targetElementRef: v,
+        onRequestOpen: () => y(!0),
+        onRequestClose: () => y(!1),
         renderPopout: (e) => {
             var t;
-            let { closePopout: i } = e;
-            return (0, r.jsx)(c.Z, {
-                channel: v,
-                guildId: null != (t = null == v ? void 0 : v.guild_id) ? t : void 0,
-                closePopout: i,
+            let { closePopout: r } = e;
+            return (0, i.jsx)(c.Z, {
+                channel: _,
+                guildId: null != (t = null == _ ? void 0 : _.guild_id) ? t : void 0,
+                closePopout: r,
                 onSelectEmoji: (e) => {
-                    let { emoji: t, willClose: r } = e;
+                    let { emoji: t, willClose: i } = e;
                     ((e) => {
                         var t;
                         if (null == e) return n(null);
@@ -75,7 +75,7 @@ function b(e) {
                                   },
                         );
                     })(t),
-                        r && i();
+                        i && r();
                 },
                 pickerIntention: m.Hz.STATUS,
             });
@@ -84,55 +84,55 @@ function b(e) {
         animation: a.yRy.Animation.NONE,
         align: "top",
         children: (e, n) => {
-            var i, l;
+            var r, l;
             let { isShown: a } = n;
-            return (0, r.jsx)(
+            return (0, i.jsx)(
                 s.Z,
-                ((i = (function (e) {
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
                 })({}, e)),
                 (l = l =
                     {
-                        ref: C,
+                        ref: v,
                         active: a,
                         tabIndex: 0,
-                        renderButtonContents: null == t && null == b ? null : O,
+                        renderButtonContents: null == t && null == b ? null : x,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                i),
+                r),
             );
         },
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -20,20 +20,20 @@ var r = n(951288),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    T = n(28616);
-function S(e) {
+    S = n(136588);
+function T(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),
-        S = i.useMemo(() => Object.values(n), [n]),
+        T = i.useMemo(() => Object.values(n), [n]),
         A = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
         C = m.ZP.isPremium(A, I.PremiumTypes.TIER_2),
         N = (0, a.e7)([f.Z], () => f.Z.affinities),
         R = (0, a.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()),
         P = N.length > 0 || R.length > 0,
-        w = S.length > 0,
-        D = i.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
+        w = T.length > 0,
+        D = i.useMemo(() => T.filter((e) => null != e.premiumGuildSubscription), [T]),
         x = D.length > 0,
-        L = S.length > D.length,
+        L = T.length > D.length,
         M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
         k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
@@ -41,7 +41,7 @@ function S(e) {
         G = C && j === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
+            (0, r.jsx)(s.oQ, { className: S.blockedPaymentsWarning }),
             (0, r.jsx)(E.Z, {
                 hasGuildBoostSlots: w,
                 hasAppliedGuildBoosts: x,
@@ -66,7 +66,7 @@ function S(e) {
                       premiumSubscription: t,
                   }),
             (0, r.jsx)(v.Z, {
-                guildBoostSlots: S,
+                guildBoostSlots: T,
                 fractionalPremiumState: j,
             }),
             (0, r.jsx)(y.Z, {
@@ -74,12 +74,12 @@ function S(e) {
                 canApplyBoosts: L,
             }),
             (0, r.jsx)(u.Z, {
-                className: T.tierComparisonTable,
+                className: S.tierComparisonTable,
                 hideHeading: !0,
                 hideTier0: !0,
             }),
-            (0, r.jsx)(l.Z, { cardClassName: T.boosterRecognitionCard }),
-            (0, r.jsx)(c.Z, { className: T.faq }),
+            (0, r.jsx)(l.Z, { cardClassName: S.boosterRecognitionCard }),
+            (0, r.jsx)(c.Z, { className: S.faq }),
         ],
     });
 }

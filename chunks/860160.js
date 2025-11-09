@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(592125),
     p = n(430824),
     f = n(594174),
-    m = n(709054),
-    h = n(981631),
-    g = n(388032),
-    _ = n(25493);
+    h = n(709054),
+    g = n(981631),
+    m = n(388032),
+    _ = n(590981);
 function b(e) {
     var t;
     let { item: n } = e,
@@ -51,28 +51,28 @@ function b(e) {
                 return null == e ? void 0 : e.guild_id;
             }
         }, [n]),
-        I = i.useMemo(() => {
+        y = i.useMemo(() => {
             if ("contentInventory" === n.data.kind) return n.data.content.author_id;
         }, [n]),
-        y = i.useMemo(() => {
+        v = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "forumThread":
-                    return m.default.extractTimestamp(n.data.message.id);
+                    return h.default.extractTimestamp(n.data.message.id);
                 case "channelSummary":
-                    return m.default.extractTimestamp(n.data.topic.endId);
+                    return h.default.extractTimestamp(n.data.topic.endId);
                 case "guildEvent":
-                    return m.default.extractTimestamp(n.data.eventId);
+                    return h.default.extractTimestamp(n.data.eventId);
                 case "generatedCandidate":
-                    return m.default.extractTimestamp(n.data.item.content_id);
+                    return h.default.extractTimestamp(n.data.item.content_id);
                 default:
                     return n.timestamp;
             }
         }, [n]),
-        v = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
-        C = null != (t = null == v ? void 0 : v.guild_id) ? t : O,
+        I = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
+        C = null != (t = null == I ? void 0 : I.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
-        T = (0, a.e7)([f.default], () => (null != I ? f.default.getUser(I) : null), [I]);
+        T = (0, a.e7)([f.default], () => (null != y ? f.default.getUser(y) : null), [y]);
     return "unknown" === b
         ? null
         : (0, r.jsx)("div", {
@@ -123,7 +123,7 @@ function b(e) {
                                                 : null,
                                           (0, r.jsx)("div", {
                                               className: _.timestamp,
-                                              children: (0, u.a3)(y),
+                                              children: (0, u.a3)(v),
                                           }),
                                       ],
                                   }),
@@ -132,23 +132,23 @@ function b(e) {
                                   let e = (() => {
                                       switch (n.data.kind) {
                                           case "message":
-                                              if (n.channelType === h.d4z.GUILD_ANNOUNCEMENT)
-                                                  return g.intl.string(g.t["8P08G9"]);
-                                              return g.intl.string(g.t.hMFMY9);
+                                              if (n.channelType === g.d4z.GUILD_ANNOUNCEMENT)
+                                                  return m.intl.string(m.t["8P08G9"]);
+                                              return m.intl.string(m.t.hMFMY9);
                                           case "channelSummary":
                                           case "generatedCandidate":
-                                              return g.intl.string(g.t.ljgIO9);
+                                              return m.intl.string(m.t.ljgIO9);
                                           case "guildEvent":
-                                              return g.intl.string(g.t["6pFsLQ"]);
+                                              return m.intl.string(m.t["6pFsLQ"]);
                                           case "forumThread":
-                                              return g.intl.string(g.t.bYNuVx);
+                                              return m.intl.string(m.t.bYNuVx);
                                           case "contentInventory":
                                               switch (n.data.content.content_type) {
                                                   case l.s.CUSTOM_STATUS:
-                                                      return g.intl.string(g.t.fxOLPR);
+                                                      return m.intl.string(m.t.fxOLPR);
                                                   case l.s.TOP_GAME:
                                                   case l.s.PLAYED_GAME:
-                                                      return g.intl.string(g.t.ktOTRQ);
+                                                      return m.intl.string(m.t.ktOTRQ);
                                                   default:
                                                       return "".concat(n.data.content.content_type);
                                               }
@@ -164,8 +164,8 @@ function b(e) {
                                               children: e,
                                           }),
                                       });
-                                  if (null != v && null != e) {
-                                      let t = (0, s.KS)(v, S);
+                                  if (null != I && null != e) {
+                                      let t = (0, s.KS)(I, S);
                                       return (0, r.jsxs)("div", {
                                           className: _.subtitle,
                                           children: [
@@ -175,7 +175,7 @@ function b(e) {
                                               }),
                                               (0, r.jsx)("span", {
                                                   className: _.subtitleText,
-                                                  children: g.intl.string(g.t.CHUAYk),
+                                                  children: m.intl.string(m.t.CHUAYk),
                                               }),
                                               (0, r.jsxs)("span", {
                                                   className: _.subtitleText,
@@ -187,7 +187,7 @@ function b(e) {
                                                               height: 16,
                                                               className: _.channelIcon,
                                                           }),
-                                                      v.name,
+                                                      I.name,
                                                   ],
                                               }),
                                           ],

@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(981631),
     _ = n(474936),
     p = n(388032),
-    h = n(227919);
+    h = n(29990);
 let m = () => {
     var e;
     let { analyticsLocations: t } = (0, s.ZP)(o.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
@@ -26,7 +26,7 @@ let m = () => {
             version: y,
         });
     }, [t, y]);
-    let T = () => {
+    let S = () => {
         I(() =>
             (0, u.mK)({
                 analyticsLocations: t,
@@ -66,7 +66,7 @@ let m = () => {
                 ],
             }),
             (0, r.jsx)(a.Button, {
-                onClick: T,
+                onClick: S,
                 variant: "overlay-primary",
                 text: p.intl.string(p.t.fYfGgK),
             }),

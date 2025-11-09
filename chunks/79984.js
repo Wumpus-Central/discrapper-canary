@@ -1,32 +1,32 @@
 n.d(t, { Z: () => d });
-var i = n(951288),
-    l = n(647438),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
-    s = n(481060),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
     c = n(607070),
-    u = n(75243);
+    u = n(619834);
 function d() {
-    let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        { styleLarge: t, styleSmall: n } = l.useMemo(
+    let e = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        { styleLarge: t, styleSmall: n } = i.useMemo(
             () => ({
                 styleLarge: { width: "".concat(10 + 50 * Math.random(), "%") },
                 styleSmall: { width: "".concat(30 + 60 * Math.random(), "%") },
             }),
             [],
         );
-    return (0, i.jsxs)("div", {
-        className: a()(u.container, { [u.noAnimation]: e }),
+    return (0, r.jsxs)("div", {
+        className: o()(u.container, { [u.noAnimation]: e }),
         children: [
-            (0, i.jsx)("div", { className: u.iconPlaceholder }),
-            (0, i.jsxs)("div", {
+            (0, r.jsx)("div", { className: u.iconPlaceholder }),
+            (0, r.jsxs)("div", {
                 className: u.textContainer,
                 children: [
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: u.textPlaceholder,
                         style: t,
-                        children: (0, i.jsx)(s.Heading, {
+                        children: (0, r.jsx)(l.Heading, {
                             className: u.hidden,
                             variant: "heading-md/semibold",
                             color: "header-primary",
@@ -34,10 +34,10 @@ function d() {
                             children: "_",
                         }),
                     }),
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: u.textPlaceholder,
                         style: n,
-                        children: (0, i.jsx)(s.Text, {
+                        children: (0, r.jsx)(l.Text, {
                             className: u.hidden,
                             variant: "text-sm/normal",
                             color: "text-secondary",
@@ -47,7 +47,7 @@ function d() {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: u.underline }),
+            (0, r.jsx)("div", { className: u.underline }),
         ],
     });
 }

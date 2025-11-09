@@ -20,10 +20,10 @@ var r = n(951288),
     O = n(963550),
     v = n(845080),
     I = n(295790),
-    T = n(145807),
-    S = n(56744),
+    S = n(145807),
+    T = n(56744),
     A = n(981631),
-    C = n(360514);
+    C = n(5898);
 function N(e, t, n) {
     return (
         t in e
@@ -166,8 +166,8 @@ function L(e) {
                     [C.disableInteraction]: F,
                 }),
                 disableInteraction: F,
-                childrenRepliedMessage: (0, S.Z)(i, M, K, z, a),
-                childrenExecutedCommand: (0, T.Z)(i, M, a),
+                childrenRepliedMessage: (0, T.Z)(i, M, K, z, a),
+                childrenExecutedCommand: (0, S.Z)(i, M, a),
                 childrenHeader: (0, v.Z)(
                     w(R({}, e), {
                         guildId: M.guild_id,

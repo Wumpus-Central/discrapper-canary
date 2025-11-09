@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(172751),
     h = n(228168),
     m = n(388032),
-    g = n(954677);
+    g = n(69295);
 function E(e) {
     let {
             user: t,
@@ -26,8 +26,8 @@ function E(e) {
             pendingDisplayNameStyles: O,
             pronouns: v,
             className: I,
-            tagClassName: T,
-            isTryItOut: S,
+            tagClassName: S,
+            isTryItOut: T,
             onOpenProfile: A,
             onClose: C,
             nicknameVariant: N = "heading-lg/bold",
@@ -100,8 +100,8 @@ function E(e) {
                                 user: t,
                                 usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: S,
-                                className: a()(g.userTag, T),
+                                forcePomelo: T,
+                                className: a()(g.userTag, S),
                                 usernameClass: g.userTagUsername,
                                 discriminatorClass: g.userTagDiscriminator,
                                 hideBotTag: !0,
@@ -119,7 +119,7 @@ function E(e) {
                                     text: m.intl.string(m.t.GI2A8C),
                                     delay: h.vB,
                                     children: (0, r.jsx)(s.Text, {
-                                        className: a()(g.pronounsText, T),
+                                        className: a()(g.pronounsText, S),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
                                         children: v,

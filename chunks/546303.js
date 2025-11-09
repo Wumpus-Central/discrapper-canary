@@ -13,10 +13,10 @@ var r,
     f = t(899789),
     x = t(735276),
     _ = t(619733),
-    v = t(269794),
+    v = t(97200),
     b = t(388032),
-    p = t(62525);
-let j =
+    j = t(204613);
+let p =
     ((r = (function (e) {
         for (var n = 1; n < arguments.length; n++) {
             var t = null != arguments[n] ? arguments[n] : {},
@@ -72,29 +72,29 @@ function h(e) {
         h = a.length >= _.YX;
     return 0 === r.length
         ? (0, i.jsx)("div", {
-              className: p.container,
+              className: j.container,
               children: (0, i.jsx)(c.$jN, {
                   type: c.RAz.SPINNING_CIRCLE,
-                  className: p.spinner,
+                  className: j.spinner,
               }),
           })
         : (0, i.jsxs)("div", {
-              className: p.container,
+              className: j.container,
               children: [
                   (0, i.jsx)(s.X6q, {
-                      className: p.heading,
+                      className: j.heading,
                       variant: "heading-md/semibold",
                       children: b.intl.string(v.default["3vWDMz"]),
                   }),
                   h &&
                       (0, i.jsx)("div", {
-                          className: p.maxInstancesWarning,
+                          className: j.maxInstancesWarning,
                           children: (0, i.jsx)(f.C, {}),
                       }),
                   (0, i.jsx)(s.zJl, {
-                      className: p.gameContainerWrapper,
+                      className: j.gameContainerWrapper,
                       children: (0, i.jsx)("div", {
-                          className: p.gameContainer,
+                          className: j.gameContainer,
                           children: r.map((e, t) =>
                               (0, i.jsx)(
                                   g.Z,
@@ -104,12 +104,12 @@ function h(e) {
                                       onClick: () =>
                                           (0, x.Z)({
                                               guildId: n,
-                                              stepConfig: j,
+                                              stepConfig: p,
                                               initialGameServerGame: e,
                                               analyticsLocation: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                           }),
-                                      imageClassName: p.image,
-                                      titleClassName: p.title,
+                                      imageClassName: j.image,
+                                      titleClassName: j.title,
                                       disabled: h,
                                       location: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                   },

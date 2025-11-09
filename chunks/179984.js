@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(46062),
     v = n(104494),
     I = n(639119),
-    T = n(736519),
-    S = n(784238),
+    S = n(736519),
+    T = n(784238),
     A = n(230916),
     C = n(346497),
     N = n(382791),
     R = n(21023),
     P = n(474936),
     w = n(388032),
-    D = n(17355),
+    D = n(213599),
     x = n(102655),
     L = n(768236),
     M = n(314907),
@@ -234,21 +234,21 @@ let Z = () => {
                   column1: (0, r.jsxs)(r.Fragment, {
                       children: [
                           J === P.Si.TIER_2 || el
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(T.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_0,
                                     showIcon: !1,
                                     look: c.iL.OUTLINED,
                                     color: z ? c.Tt.BRAND : c.Tt.WHITE,
                                 })
-                              : (0, r.jsx)(S.Z, {
+                              : (0, r.jsx)(T.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_0,
                                     showIcon: !1,
                                 }),
                           $ === P.PremiumTypes.TIER_2 || null != J
                               ? null
-                              : (0, r.jsx)(T.Z, {
+                              : (0, r.jsx)(S.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_0,
                                 }),
@@ -257,14 +257,14 @@ let Z = () => {
                   column2: (0, r.jsxs)(r.Fragment, {
                       children: [
                           J === P.Si.TIER_0
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(T.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_2,
                                     showIcon: !1,
                                     look: c.iL.OUTLINED,
                                     color: z ? c.Tt.BRAND : c.Tt.WHITE,
                                 })
-                              : (0, r.jsx)(S.Z, {
+                              : (0, r.jsx)(T.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_2,
                                     showIcon: !1,
@@ -272,7 +272,7 @@ let Z = () => {
                                 }),
                           $ === P.PremiumTypes.TIER_0 || null != J
                               ? null
-                              : (0, r.jsx)(T.Z, {
+                              : (0, r.jsx)(S.Z, {
                                     className: D.button,
                                     subscriptionTier: P.Si.TIER_2,
                                 }),

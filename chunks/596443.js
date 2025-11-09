@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(953529), n(388685), n(539854);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -23,16 +23,16 @@ var r = n(951288),
     S = n(351127),
     p = n(981631),
     C = n(388032),
-    D = n(87819),
-    U = n(625109);
+    D = n(152540),
+    U = n(186905);
 function L(e) {
     var t, n, i, a;
     let { permission: o, roleIds: m, guild: N, specMap: O, categoryTitle: f, userId: R } = e,
         D = (0, u.Wu)([g.Z], () => g.Z.getManyRoles(N.id, m)),
         L = p.Plq[o],
         M = null != (i = null == (t = O[L.toString()]) ? void 0 : t.title) ? i : (0, T.wt)(L),
-        b = null != (a = null == (n = O[L.toString()]) ? void 0 : n.description) ? a : "",
-        x = S._o.has(L),
+        x = null != (a = null == (n = O[L.toString()]) ? void 0 : n.description) ? a : "",
+        b = S._o.has(L),
         v = S.Qn.includes(o),
         P = m.length,
         j = (0, u.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_ROLES, N), [N]),
@@ -43,7 +43,7 @@ function L(e) {
             [j, N.id],
         );
     return (0, r.jsxs)("div", {
-        className: s()(U.permissionItemContainer, { [U.elevatedPermission]: x }),
+        className: s()(U.permissionItemContainer, { [U.elevatedPermission]: b }),
         children: [
             (0, r.jsxs)("div", {
                 className: U.permissionItemHeader,
@@ -65,7 +65,7 @@ function L(e) {
                                             color: "header-muted",
                                             children: f,
                                         }),
-                                        x &&
+                                        b &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
                                                     (0, r.jsx)(d.Z, {
@@ -95,7 +95,7 @@ function L(e) {
                                                     }),
                                                 ],
                                             }),
-                                        !x &&
+                                        !b &&
                                             v &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
@@ -126,13 +126,13 @@ function L(e) {
                     }),
                 ],
             }),
-            null != b &&
+            null != x &&
                 (0, r.jsx)("div", {
                     className: U.permissionItemDescription,
                     children: (0, r.jsx)(E.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: b,
+                        children: x,
                     }),
                 }),
             (0, r.jsx)("div", {
@@ -175,7 +175,7 @@ function L(e) {
 function M(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
-function b(e) {
+function x(e) {
     let { userId: t, guildId: n, location: i, className: a, onNavigate: c } = e,
         d = (0, u.e7)([O.default], () => O.default.getUser(t), [t]),
         _ = (0, u.e7)([N.Z], () => N.Z.getGuild(n), [n]),
@@ -183,8 +183,8 @@ function b(e) {
         I = (0, S.B2)(t, n, S.pd),
         g = Object.keys(I).length,
         h = l.useMemo(() => (null != _ ? f.Z.getGuildPermissionSpecMap(_) : null), [_]),
-        b = l.useMemo(() => (null != _ ? f.Z.generateGuildPermissionSpec(_) : null), [_]),
-        [x, v] = l.useState(""),
+        x = l.useMemo(() => (null != _ ? f.Z.generateGuildPermissionSpec(_) : null), [_]),
+        [b, v] = l.useState(""),
         [P, j] = l.useState(""),
         y = l.useMemo(() => o()(j, 300), []),
         G = l.useCallback(
@@ -205,8 +205,8 @@ function b(e) {
                 });
             let e = [];
             return (
-                null == b ||
-                    b.forEach((n) => {
+                null == x ||
+                    x.forEach((n) => {
                         n.permissions.forEach((l) => {
                             let i = l.flag,
                                 s = S.pd.find((e) => p.Plq[e] === i);
@@ -256,7 +256,7 @@ function b(e) {
                     }),
                 e
             );
-        }, [_, h, A, g, b, I, P, t]);
+        }, [_, h, A, g, x, I, P, t]);
     return null == d || null == A
         ? null
         : (0, r.jsxs)("div", {
@@ -276,7 +276,7 @@ function b(e) {
                               children: [
                                   (0, r.jsx)(E.E1j, {
                                       size: "sm",
-                                      query: x,
+                                      query: b,
                                       placeholder: C.intl.string(C.t["yD9+dN"]),
                                       onChange: G,
                                       onClear: k,

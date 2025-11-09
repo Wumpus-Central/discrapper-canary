@@ -14,19 +14,19 @@ var r = n(951288),
     g = n(665149),
     m = n(134612),
     b = n(388032),
-    _ = n(807597);
+    _ = n(554828);
 let y = i.memo(function (e) {
     let { channel: t } = e,
         y = (0, d.h)(t.id),
         x = (0, u.o)(t.id),
         O = (0, p.M)(t.id),
-        j = (0, a.f9)(),
-        v = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+        v = (0, a.f9)(),
+        j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         C = i.useCallback(
             () => (x ? b.intl.string(b.t["16QyDv"]) : null != O ? b.intl.string(b.t.kCN9i0) : null),
             [x, O],
         ),
-        I = i.useMemo(() => (x || null != O) && !j && !v, [x, O, j, v]),
+        I = i.useMemo(() => (x || null != O) && !v && !j, [x, O, v, j]),
         [S, E] = i.useState(C());
     i.useEffect(() => {
         null != O &&
@@ -69,7 +69,7 @@ let y = i.memo(function (e) {
             null != y &&
                 ((0, s.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("37157")]).then(
+                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("2742")]).then(
                             n.bind(n, 611446),
                         );
                         return (n) => {

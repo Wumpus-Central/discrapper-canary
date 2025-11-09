@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -19,11 +19,11 @@ var r = n(951288),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    I = n(375646);
-let T = function (e) {
+    I = n(15470);
+let S = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
-        T = i.useRef(null),
-        S = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        S = i.useRef(null),
+        T = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         A = (0, s.e7)([g.Z], () => g.Z.boostSlots),
         { analyticsLocations: C } = (0, d.ZP)(),
         { fractionalState: N } = (0, f.Z)({ forceFetch: !1 }),
@@ -109,11 +109,11 @@ let T = function (e) {
                 className: I.guildBoostCtas,
                 children: [
                     (0, r.jsx)(l.$, {
-                        innerRef: T,
+                        innerRef: S,
                         onChange: a,
                         threshold: 0.9,
                         children: (0, r.jsx)("div", {
-                            ref: T,
+                            ref: S,
                             className: o()(I.guildBoostCta, I.guildBoostCtaBoostWrapper),
                             children: (0, r.jsx)(b.Z, {
                                 className: I.guildBoostCtaBoost,
@@ -133,7 +133,7 @@ let T = function (e) {
                             }),
                         }),
                     }),
-                    E.ZP.hasFreeBoosts(S, N) || E.ZP.isPremium(S, O.PremiumTypes.TIER_2)
+                    E.ZP.hasFreeBoosts(T, N) || E.ZP.isPremium(T, O.PremiumTypes.TIER_2)
                         ? (0, r.jsxs)(c.zx, {
                               "data-migration-pending": !0,
                               className: o()(I.guildBoostCta, I.guildBoostCtaSecondary),

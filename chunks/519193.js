@@ -1,35 +1,35 @@
-i.d(n, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => f });
+i.d(n, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => p });
 var a = i(951288);
 i(647438);
 var e = i(793030),
-    o = i(481060),
+    l = i(481060),
     s = i(535139),
-    l = i(877481),
+    o = i(877481),
     r = i(579201),
     c = i(683668),
     u = i(55121),
     d = i(438926),
     x = i(388032),
-    p = i(786081);
-function f(t) {
-    let { transitionState: n, onClose: i, sku: f, application: m } = t,
-        T = (0, c.a)(m),
-        { fetched: h, hasAlreadyLinked: C, canStartAuthorization: I, startAuthorization: v } = (0, s.F)(m),
-        g = (0, r.I)(m);
-    if (!h || null == T)
+    f = i(40399);
+function p(t) {
+    let { transitionState: n, onClose: i, sku: p, application: m } = t,
+        h = (0, c.a)(m),
+        { fetched: T, hasAlreadyLinked: v, canStartAuthorization: I, startAuthorization: g } = (0, s.F)(m),
+        C = (0, r.I)(m);
+    if (!T || null == h)
         return (0, a.jsx)(e.IX, {
             transitionState: n,
             onClose: i,
-            children: (0, a.jsx)(e.fef, { children: (0, a.jsx)(o.$jN, {}) }),
+            children: (0, a.jsx)(e.fef, { children: (0, a.jsx)(l.$jN, {}) }),
         });
-    if (C) {
+    if (v) {
         let t =
-            T && !g
+            h && !C
                 ? {
                       variant: "primary",
                       text: x.intl.string(x.t["s+J8Dl"]),
                       onClick: () => {
-                          l.Z.launchGame(m.id);
+                          o.Z.launchGame(m.id);
                       },
                       icon: e.rgF,
                   }
@@ -43,15 +43,15 @@ function f(t) {
             onClose: i,
             children: [
                 (0, a.jsx)(d.y, {
-                    sku: f,
+                    sku: p,
                     title: x.intl.string(x.t["5glWta"]),
                 }),
                 (0, a.jsx)(e.fef, {
-                    children: (0, a.jsx)(o.Text, {
+                    children: (0, a.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        className: p.modalBodyText,
+                        className: f.modalBodyText,
                         children: x.intl.formatToPlainString(x.t.W2znvX, {
-                            skuName: f.name,
+                            skuName: p.name,
                             applicationName: m.name,
                         }),
                     }),
@@ -67,16 +67,16 @@ function f(t) {
         let t = {
             variant: "primary",
             text: x.intl.string(x.t["VDAhr+"]),
-            onClick: v,
+            onClick: g,
             icon: e.uIJ,
             disabled: !I,
         };
         return (0, a.jsx)(u.M, {
-            sku: f,
+            sku: p,
             application: m,
             transitionState: n,
             onClose: i,
-            hasAlreadyLinked: C,
+            hasAlreadyLinked: v,
             canStartAuthorization: I,
             primaryCTAButtonProps: t,
             bodyText: x.intl.formatToPlainString(x.t.Qmkje8, { applicationName: m.name }),

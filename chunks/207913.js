@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(318713),
     v = n(47930),
     j = n(123145),
-    C = n(25015),
-    x = n(178480),
+    x = n(25015),
+    C = n(178480),
     E = n(518950),
     S = n(131704),
     I = n(601964),
@@ -34,9 +34,9 @@ var r = n(951288),
     D = n(987889),
     L = n(586694),
     M = n(981631),
-    k = n(400705),
+    k = n(472475),
     G = n(388032),
-    U = n(361584);
+    U = n(66449);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,7 +86,7 @@ function V(e) {
         m = (0, f.ZP)(n, !1),
         b = (0, c.e7)([Z.Z], () => Z.Z.getGuild(n.getGuildId())),
         { nick: y, colorString: O } = (0, _.ZP)(t),
-        { avatarSrc: C, eventHandlers: x } = (0, E.Z)({
+        { avatarSrc: x, eventHandlers: C } = (0, E.Z)({
             userId: t.author.id,
             size: d.EFr.SIZE_32,
             guildId: null == b ? void 0 : b.id,
@@ -119,8 +119,8 @@ function V(e) {
             d.tEY,
             F(B({}, l), {
                 children: (0, r.jsxs)("div", {
-                    onMouseLeave: x.onMouseLeave,
-                    onMouseEnter: x.onMouseEnter,
+                    onMouseLeave: C.onMouseLeave,
+                    onMouseEnter: C.onMouseEnter,
                     className: U.messageContainer,
                     children: [
                         s && !a && (0, r.jsx)("div", { className: U.unreadDot }),
@@ -133,7 +133,7 @@ function V(e) {
                             children: S
                                 ? (0, r.jsx)(L.q, {
                                       "aria-label": "User Avatar",
-                                      src: C,
+                                      src: x,
                                       size: d.EFr.SIZE_32,
                                       cornerIconUrl: null != b ? (0, I.EB)(b, 24) : void 0,
                                       cornerIconOffsetX: 4,
@@ -278,7 +278,7 @@ function H(e) {
 }
 function z(e) {
     let { message: t } = e,
-        n = (0, x.a3)(t.timestamp.getTime());
+        n = (0, C.a3)(t.timestamp.getTime());
     return (0, r.jsx)(O.Z, {
         timestamp: t.timestamp,
         className: U.timestamp,
@@ -291,7 +291,7 @@ function W(e) {
     let { message: t, channel: n, isUnread: l, isSelected: a } = e,
         { previewContent: s, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: a } = (0, C.Z)(t, {
+                { content: a } = (0, x.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,

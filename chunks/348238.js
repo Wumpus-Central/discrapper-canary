@@ -39,8 +39,8 @@ var r = n(951288),
     O = n(51144),
     v = n(91047),
     I = n(50284),
-    T = n(804063),
-    S = n(981631);
+    S = n(804063),
+    T = n(981631);
 function A(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ function w(e, t, n) {
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
             let a = "@".concat(O.ZP.getUserTag(i, { decoration: "never" })),
                 o = "<@".concat(e, ">");
-            E.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            E.S.dispatchToLastSubscribed(T.CkL.INSERT_TEXT, {
                 plainText: a,
                 rawText: o,
             }),
@@ -151,7 +151,7 @@ function G(e, t) {
 function B(e, t, a, s) {
     let { id: l } = t,
         { id: u, flags: d } = e,
-        f = (0, b.yE)(d, S.iLy.EPHEMERAL),
+        f = (0, b.yE)(d, T.iLy.EPHEMERAL),
         _ = (0, c.bp)();
     return i.useCallback(
         (e, t) => {
@@ -176,7 +176,7 @@ function B(e, t, a, s) {
                             n.e("93375"),
                             n.e("38342"),
                             n.e("37220"),
-                            n.e("79531"),
+                            n.e("951"),
                         ]).then(n.bind(n, 225138));
                         return (n) =>
                             (0, r.jsx)(
@@ -255,12 +255,12 @@ function Y(e) {
     l.current = u || l.current;
     let f = i.useCallback(
             (e) => {
-                (0, _.T6)(), u || (E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
+                (0, _.T6)(), u || (E.S.dispatchKeyed(T.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
             },
             [u, s, c],
         ),
         p = i.useCallback(() => {
-            E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
+            E.S.dispatchKeyed(T.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
         }, [s]);
     return {
         hasHovered: l.current,
@@ -296,7 +296,7 @@ function W(e, t) {
 function K(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e;
-        (null == t || (0, T.Z)(t)) &&
+        (null == t || (0, S.Z)(t)) &&
             s.Z.jumpToMessage({
                 channelId: n.channel_id,
                 messageId: n.message_id,

@@ -8,7 +8,7 @@ var i = n(442837),
     l = n(594174),
     c = n(981631),
     u = n(388032),
-    d = n(502980);
+    d = n(527908);
 function f(e, t, n) {
     return (
         t in e
@@ -77,7 +77,7 @@ function m(e) {
             var e;
             return (null == (e = l.default.getCurrentUser()) ? void 0 : e.id) === O;
         }, [O]),
-        { isIgnored: I, isBlocked: T } = (0, i.cj)(
+        { isIgnored: I, isBlocked: S } = (0, i.cj)(
             [s.Z],
             () => ({
                 isIgnored: s.Z.isIgnored(O),
@@ -85,7 +85,7 @@ function m(e) {
             }),
             [O],
         );
-    return v || T
+    return v || S
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "ignore",
@@ -104,7 +104,7 @@ function m(e) {
                   : () => {
                         (0, a.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.all([n.e("97652"), n.e("13093")]).then(
+                                let { default: e } = await Promise.all([n.e("97652"), n.e("1783")]).then(
                                     n.bind(n, 240515),
                                 );
                                 return (n) =>

@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(667105),
     c = n(211712),
     u = n(388032),
-    d = n(19895);
+    d = n(781353);
 function f(e) {
     let { preset: t, onShuffle: n } = e,
         f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),

@@ -8,10 +8,10 @@ var r = n(951288),
     s = n(881410),
     u = n(985748),
     d = n(566007),
-    f = n(173951),
-    g = n(455731),
+    g = n(173951),
+    f = n(455731),
     p = n(272289),
-    m = n(39642);
+    m = n(517143);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +37,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -57,34 +57,34 @@ function y(e, t) {
     }
     return i;
 }
-let h = (e) => {
+let y = (e) => {
         var { widget: t } = e,
-            n = y(e, ["widget"]);
+            n = h(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
                 return (0, r.jsx)(d.Z, b({ widget: t }, n));
             case i.l.CURRENT_GAMES:
                 return (0, r.jsx)(u.Z, b({ widget: t }, n));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(g.Z, b({ widget: t }, n));
-            case i.l.PLAYED_GAMES:
                 return (0, r.jsx)(f.Z, b({ widget: t }, n));
+            case i.l.PLAYED_GAMES:
+                return (0, r.jsx)(g.Z, b({ widget: t }, n));
             default:
                 return null;
         }
     },
     v = (e) => {
         var { widget: t, user: n, disableInteraction: i } = e,
-            u = y(e, ["widget", "user", "disableInteraction"]);
-        let { shouldShowSuggestions: d, handleDismissSuggestions: f } = (0, c.h)(t),
-            g = (0, a.e7)([l.default], () => l.default.getId() === n.id),
-            v = g && !i && d,
+            u = h(e, ["widget", "user", "disableInteraction"]);
+        let { shouldShowSuggestions: d, handleDismissSuggestions: g } = (0, c.h)(t),
+            f = (0, a.e7)([l.default], () => l.default.getId() === n.id),
+            v = f && !i && d,
             O = (0, o.mR)(t),
-            j = (0, o.Hy)(t, { isCurrentUser: g }),
+            j = (0, o.Hy)(t, { isCurrentUser: f }),
             x = (0, o.kQ)(t),
             _ = 1 === (0, o.Gv)(t.type);
         return (0, r.jsx)(
-            h,
+            y,
             b(
                 {
                     widget: t,
@@ -93,7 +93,7 @@ let h = (e) => {
                     headerTitle: O,
                     headerSubtitle: j,
                     headerActionButtons:
-                        g && !_
+                        f && !_
                             ? [
                                   (0, r.jsx)(
                                       s.yX,
@@ -111,7 +111,7 @@ let h = (e) => {
                         (0, r.jsx)(p.Z, {
                             userId: n.id,
                             widgetType: t.type,
-                            onDismiss: f,
+                            onDismiss: g,
                             className: m.suggestedGames,
                         }),
                 },

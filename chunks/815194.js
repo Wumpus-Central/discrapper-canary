@@ -10,7 +10,7 @@ var i = n(951288),
     E = n(595373),
     d = n(981631),
     S = n(388032),
-    T = n(53179);
+    T = n(420496);
 function O() {
     let t = (0, r.e7)([o.Z], () => {
         let { shortcut: t } = o.Z.getModeOptions();

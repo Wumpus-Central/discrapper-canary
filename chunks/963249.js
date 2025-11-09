@@ -33,7 +33,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,7 +66,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -98,7 +98,7 @@ function R(e) {
     let {
             initialPlanId: i,
             followupSKUInfo: I,
-            onClose: S,
+            onClose: T,
             onComplete: N,
             onSubscriptionConfirmation: R,
             analyticsLocations: P,
@@ -131,13 +131,13 @@ function R(e) {
         en = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("4125")]).then(n.bind(n, 7305));
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);
                 return (0, r.jsx)(
                     e,
-                    A(T({}, a), {
+                    A(S({}, a), {
                         loadId: Q,
                         subscriptionTier: B,
                         skuId: et,
@@ -153,7 +153,7 @@ function R(e) {
                             (en = !0), g.S.dispatch(O.CkL.PREMIUM_PAYMENT_MODAL_CLOSED);
                             let r = () => {
                                 n(),
-                                    null == S || S(e),
+                                    null == T || T(e),
                                     e &&
                                         (null == R || R(),
                                         (0, p.M)(j, $, t) && g.S.dispatch(O.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
@@ -223,7 +223,7 @@ function R(e) {
                     (0, u.fw)(),
                     (0, c.fw)(),
                     (0, d.p)(),
-                    null == S || S(X),
+                    null == T || T(X),
                     X && (null == R || R());
             },
         },

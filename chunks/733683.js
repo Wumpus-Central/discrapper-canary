@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    x: () => v,
+    x: () => _,
 }),
     n(388685);
 var r,
@@ -8,7 +8,7 @@ var r,
     l = n(647438),
     a = n(120356),
     s = n.n(a),
-    o = n(358458),
+    o = n(509442),
     c = n(772848),
     d = n(374470),
     u = n(681715),
@@ -16,9 +16,9 @@ var r,
     m = n(481060),
     p = n(624138),
     f = n(981631),
-    h = n(459196),
+    h = n(789142),
     b = n(388032),
-    x = n(31441);
+    x = n(301142);
 function j(e, t, n) {
     return (
         t in e
@@ -32,8 +32,8 @@ function j(e, t, n) {
         e
     );
 }
-let v = -1,
-    _ = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+let _ = -1,
+    v = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
     O = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     C = {
         tension: 140,
@@ -176,7 +176,7 @@ class N extends (r = l.Component) {
                 (0, i.jsx)("rect", {
                     x: "0",
                     y: "0",
-                    width: _,
+                    width: v,
                     height: e,
                     fill: "white",
                 }),
@@ -184,9 +184,9 @@ class N extends (r = l.Component) {
                     (0, i.jsx)(
                         "circle",
                         {
-                            cx: _ / 2,
+                            cx: v / 2,
                             cy: e.y,
-                            r: _ / 2,
+                            r: v / 2,
                             fill: "black",
                         },
                         e.key,
@@ -235,8 +235,8 @@ class N extends (r = l.Component) {
             style: { height: r },
             children: [
                 (0, i.jsxs)("svg", {
-                    viewBox: "0 0 ".concat(_, " ").concat(r),
-                    width: _,
+                    viewBox: "0 0 ".concat(v, " ").concat(r),
+                    width: v,
                     height: r,
                     children: [this.renderProgressMask(r), this.renderProgressBar(r, n)],
                 }),

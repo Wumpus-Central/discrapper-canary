@@ -20,9 +20,9 @@ var r = n(951288),
     O = n(769140),
     v = n(864141),
     I = n(228168),
-    T = n(231338),
-    S = n(388032),
-    A = n(31948);
+    S = n(231338),
+    T = n(388032),
+    A = n(923805);
 function C(e, t, n) {
     return (
         t in e
@@ -115,7 +115,7 @@ function M(e) {
         B = t.id === n.id,
         Z = (0, s.e7)([p.Z, _.Z], () => {
             let e = B ? p.Z.getStatus() : _.Z.getStatus(t.id, a);
-            return e === T.Sk.OFFLINE || e === T.Sk.INVISIBLE;
+            return e === S.Sk.OFFLINE || e === S.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, u.U)({ location: "UserProfileStackedActivity" }),
         V = F && null == k && null == G && null != U,
@@ -156,7 +156,7 @@ function M(e) {
                                   h({ section: I.oh.ACTIVITY });
                           },
                           variant: "secondary",
-                          text: S.intl.string(S.t.pD1L1u),
+                          text: T.intl.string(T.t.pD1L1u),
                           textVariant: "text-xs/medium",
                       }),
                   })
@@ -199,7 +199,7 @@ function M(e) {
                   (0, r.jsx)(l.nn4, {
                       children: (0, r.jsx)(l.H, {
                           id: R,
-                          children: S.intl.string(S.t.J6STd9),
+                          children: T.intl.string(T.t.J6STd9),
                       }),
                   }),
                   (0, r.jsxs)("div", {
@@ -231,7 +231,7 @@ function M(e) {
                                                       children: (0, r.jsx)(l.Text, {
                                                           variant: "text-xs/medium",
                                                           color: "none",
-                                                          children: S.intl.format(S.t.wv8Q7k, {
+                                                          children: T.intl.format(T.t.wv8Q7k, {
                                                               activitiesCount: ea.length,
                                                           }),
                                                       }),

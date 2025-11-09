@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(481060),
     c = n(889963),
     u = n(388032),
-    d = n(18039);
+    d = n(384);
 function f(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: s } = e,
         [c, u] = i.useState(!1),
@@ -148,7 +148,7 @@ function _(e) {
         let t = v(e);
         return null != g ? g(e, t) : t;
     }
-    function T(e) {
+    function S(e) {
         return (0, r.jsx)(
             f,
             {
@@ -160,7 +160,7 @@ function _(e) {
             e.key,
         );
     }
-    function S(e) {
+    function T(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)("div", {
@@ -174,7 +174,7 @@ function _(e) {
                               case c.s.PAGE:
                                   return I(e);
                               case c.s.GAP:
-                                  return T(e);
+                                  return S(e);
                               case c.s.NEXT:
                                   return O(e);
                               default:
@@ -191,6 +191,6 @@ function _(e) {
         maxVisiblePages: a,
         hideMaxPage: h,
         onPageChange: b,
-        children: S,
+        children: T,
     });
 }

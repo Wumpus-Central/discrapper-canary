@@ -19,9 +19,9 @@ var r = n(951288),
     y = n(47760),
     O = n(629452),
     v = n(981631),
-    I = n(531421),
-    T = n(388032),
-    S = n(306518);
+    I = n(24864),
+    S = n(388032),
+    T = n(132705);
 let A = (e) => e.map((e) => "#".concat(e)),
     C = (e) => {
         let { message: t } = e,
@@ -29,11 +29,11 @@ let A = (e) => e.map((e) => "#".concat(e)),
             { setAll: i } = (0, b.Ig)();
         return (0, O.b)("Share Client Theme Widget") && void 0 !== n
             ? (0, r.jsxs)("div", {
-                  className: S.container,
+                  className: T.container,
                   children: [
                       (0, r.jsx)(R, { message: t }),
                       (0, r.jsx)(u.zxk, {
-                          text: T.intl.string(T.t.SKNnqq),
+                          text: S.intl.string(S.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
@@ -64,7 +64,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
                 : (0, r.jsxs)(
                       "span",
                       {
-                          className: S.avatarContainer,
+                          className: T.avatarContainer,
                           children: [
                               (0, r.jsx)(c.qE, {
                                   "aria-label": n,
@@ -108,27 +108,27 @@ let A = (e) => e.map((e) => "#".concat(e)),
         return void 0 === n
             ? null
             : (0, r.jsxs)("div", {
-                  className: S.themePreviewContainer,
+                  className: T.themePreviewContainer,
                   ref: p,
                   children: [
                       (0, r.jsx)("div", {
-                          className: S.colorPreview,
+                          className: T.colorPreview,
                           style: { background: "".concat(m) },
                       }),
                       (0, r.jsxs)("div", {
-                          className: S.sharedByContainer,
+                          className: T.sharedByContainer,
                           children: [
                               (0, r.jsxs)(d.Heading, {
                                   variant: "heading-md/semibold",
-                                  className: S.sharedTitle,
-                                  children: [T.intl.string(I.default.KSBBpC), " ", (0, r.jsx)(l.SrA, {})],
+                                  className: T.sharedTitle,
+                                  children: [S.intl.string(I.default.KSBBpC), " ", (0, r.jsx)(l.SrA, {})],
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-secondary",
-                                  className: S.sharedBy,
+                                  className: T.sharedBy,
                                   children: N(
-                                      "".concat(T.intl.format(I.default.fQPSEf, { username: "__USERNAME__" })),
+                                      "".concat(S.intl.format(I.default.fQPSEf, { username: "__USERNAME__" })),
                                       t.author,
                                       c.nick,
                                   ),

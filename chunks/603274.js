@@ -20,17 +20,17 @@ var i = n(120356),
     O = n(709054),
     v = n(853856),
     j = n(981631),
-    C = n(388032),
-    x = n(132789),
-    E = n(78480);
+    x = n(388032),
+    C = n(102647),
+    E = n(395530);
 function S(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
-              className: x.row,
+              className: C.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: x.activityIcon,
+                      className: C.activityIcon,
                       color: "currentColor",
                   }),
                   (0, r.jsx)(p.ZP, {
@@ -72,7 +72,7 @@ function I() {
                     }),
             ),
         ),
-        C = (0, s.e7)([h.Z], () => {
+        x = (0, s.e7)([h.Z], () => {
             let e = 0;
             for (let t of i) e += h.Z.getParticipantCount(t, f.pV.AUDIENCE);
             return e;
@@ -108,12 +108,12 @@ function I() {
             0 === o.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: x.row,
+                      className: C.row,
                       children: [
                           (0, r.jsx)(c.ewx, {
                               size: "lg",
                               color: "currentColor",
-                              className: x.activityIcon,
+                              className: C.activityIcon,
                           }),
                           (0, r.jsx)(p.ZP, {
                               guildId: void 0,
@@ -121,17 +121,17 @@ function I() {
                               max: 3,
                           }),
                           (0, r.jsxs)("div", {
-                              className: x.stageListenerPill,
+                              className: C.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.VWR, {
                                       size: "xs",
                                       color: "currentColor",
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: x.stageListenerCount,
+                                      className: C.stageListenerCount,
                                       color: "text-default",
                                       variant: "text-xs/medium",
-                                      children: C,
+                                      children: x,
                                   }),
                               ],
                           }),
@@ -151,10 +151,10 @@ function P() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: l()(x.row, x.rowGuildName),
+                className: l()(C.row, C.rowGuildName),
                 children: (0, r.jsx)("span", {
-                    className: l()(x.guildNameText, x.guildNameTextLimitedSize),
-                    children: C.intl.string(C.t.wMWyci),
+                    className: l()(C.guildNameText, C.guildNameTextLimitedSize),
+                    children: x.intl.string(x.t.wMWyci),
                 }),
             }),
             (0, r.jsx)(I, {}),

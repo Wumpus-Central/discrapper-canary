@@ -1,6 +1,6 @@
 n.d(t, {
     p: () => j,
-    s: () => v,
+    s: () => _,
 }),
     n(953529);
 var r = n(951288),
@@ -17,7 +17,7 @@ var r = n(951288),
     p = n(157018),
     f = n(828656),
     h = n(388032),
-    b = n(172931);
+    b = n(28742);
 function x(e) {
     let {
             guildId: t,
@@ -32,16 +32,16 @@ function x(e) {
             onMove: x,
             disabled: j = !1,
         } = e,
-        v = i.useRef(null),
         _ = i.useRef(null),
-        { drag: C, dragPreview: O, drop: y, isDragging: E } = (0, f.Z)(v, d, u, x);
+        v = i.useRef(null),
+        { drag: O, dragPreview: C, drop: y, isDragging: N } = (0, f.Z)(_, d, u, x);
     return (
-        C(_),
-        O(y(v)),
+        O(v),
+        C(y(_)),
         (0, r.jsxs)("div", {
-            ref: v,
+            ref: _,
             className: a()(b.card, {
-                [b.cardDragging]: E,
+                [b.cardDragging]: N,
                 [b.disabled]: j,
             }),
             children: [
@@ -56,7 +56,7 @@ function x(e) {
                         }),
                         !j &&
                             (0, r.jsx)("div", {
-                                ref: _,
+                                ref: v,
                                 className: b.dragIconWrapper,
                                 "data-dnd-name": m,
                                 children: (0, r.jsx)(o.Vni, {
@@ -137,7 +137,7 @@ function j(e) {
               ),
           });
 }
-function v(e) {
+function _(e) {
     let { onClick: t, children: n, disabled: i = !1 } = e;
     return (0, r.jsx)(o.P3F, {
         className: b.container,

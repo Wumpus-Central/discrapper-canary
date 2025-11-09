@@ -19,9 +19,9 @@ var r = n(951288),
     O = n(601964),
     v = n(271383),
     j = n(771845),
-    C = n(727258),
-    E = n(276952),
-    x = n(249792),
+    x = n(727258),
+    C = n(276952),
+    E = n(249792),
     S = n(40153),
     I = n(593618),
     P = n(252686),
@@ -29,7 +29,7 @@ var r = n(951288),
     Z = n(674552),
     w = n(981631),
     T = n(388032),
-    A = n(534175);
+    A = n(857668);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,16 +91,16 @@ function M(e, t) {
             n.e("51453"),
             n.e("7654"),
             n.e("845"),
-            n.e("86736"),
+            n.e("99063"),
             n.e("6850"),
             n.e("58227"),
             n.e("44686"),
             n.e("30378"),
-            n.e("64982"),
+            n.e("29679"),
             n.e("22516"),
             n.e("87154"),
             n.e("33213"),
-            n.e("73709"),
+            n.e("8209"),
         ]).then(n.bind(n, 545135));
         return (n) => (0, r.jsx)(e, D(R({}, n), { guild: t }));
     });
@@ -138,7 +138,7 @@ let k = i.memo(function (e) {
         : null == ec && null != en && (ec = null != (f = (0, Z.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
     let eu = null != (k = e.lowerBadgeSize) ? k : { width: (0, p.OVM)(X) },
         [{ dragging: ed }, ep] = (0, a.c)({
-            type: C.eD.GUILD,
+            type: x.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
                     null == B || B();
@@ -164,17 +164,17 @@ let k = i.memo(function (e) {
             if (null != V) return void (0, _.uL)(V, { state: L });
             (0, y.X)(eo, { state: L });
         }, [eo, V]),
-        eC = i.useCallback(() => {
+        ex = i.useCallback(() => {
             if (null != V || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
             null != e && h.Z.preload(H.id, e);
         }, [V, H, q, et]),
-        eE = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
-        ex = i.useCallback(
+        eC = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
+        eE = i.useCallback(
             (e) => {
-                null == H || eE || J(e, H);
+                null == H || eC || J(e, H);
             },
-            [H, J, eE],
+            [H, J, eC],
         ),
         eS = i.useCallback(
             (e) => {
@@ -202,7 +202,7 @@ let k = i.memo(function (e) {
     if (null == H) return null;
     let eZ =
             ey || eb
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(E.Z, {
                       guild: H,
                       show: ey,
                       active: W,
@@ -230,8 +230,8 @@ let k = i.memo(function (e) {
                                   onMouseLeave: function () {
                                       ee || eg(!1);
                                   },
-                                  onMouseDown: eC,
-                                  onContextMenu: ex,
+                                  onMouseDown: ex,
+                                  onContextMenu: eE,
                                   onKeyDown: eS,
                                   icon: (0, O.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em,
@@ -272,7 +272,7 @@ let k = i.memo(function (e) {
     return (0, r.jsxs)(N.H, {
         ref: eP,
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(C.Z, {
                 hovered: !ed && em,
                 selected: !ed && W,
                 unread: !ed && K,

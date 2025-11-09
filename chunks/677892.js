@@ -1,9 +1,9 @@
 n.d(t, {
-    $$: () => v,
+    $$: () => _,
     P_: () => C,
     ap: () => O,
     ih: () => y,
-    ku: () => _,
+    ku: () => v,
 }),
     n(953529),
     n(388685);
@@ -21,7 +21,7 @@ var r = n(951288),
     p = n(974513),
     f = n(290511),
     h = n(388032),
-    b = n(54028);
+    b = n(376933);
 function x(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
@@ -137,28 +137,28 @@ function j(e) {
         [r, a] = (0, o.VF)(e, n);
     return a.length >= f.md && r.length >= f.X;
 }
-function v(e) {
+function _(e) {
     let t = j(e),
         n = (0, p.O4)(e);
     return t || n;
 }
-function _(e) {
+function v(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
         d = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
         u = (0, l.e7)([s.Z], () => (0, o.kl)(t, s.Z.getDefaultChannelIds(t), s.Z.getOnboardingPrompts(t)).length),
         g = i.useMemo(() => new Set(d), [d]),
         [, m] = (0, o.VF)(t, g),
-        v = m.length,
-        _ = j(t),
+        _ = m.length,
+        v = j(t),
         O = (0, p.O4)(t),
         C = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         y = C
             ? h.intl.formatToPlainString(h.t.nHwnLK, {
-                  numDefaultChannels: v,
-                  numFromQuestions: u - v,
+                  numDefaultChannels: _,
+                  numFromQuestions: u - _,
               })
-            : _
-              ? h.intl.formatToPlainString(h.t.HxEwSv, { numDefaultChannels: v })
+            : v
+              ? h.intl.formatToPlainString(h.t.HxEwSv, { numDefaultChannels: _ })
               : h.intl.formatToPlainString(h.t.ey3uVZ, {
                     numDefaultChannels: f.md,
                     numChattableChannels: f.X,
@@ -171,8 +171,8 @@ function _(e) {
             color: "currentColor",
             className: b.channelIcon,
         }),
-        hasStarted: v > 0 || C,
-        status: _ || O ? (c ? "none" : "good") : "required",
+        hasStarted: _ > 0 || C,
+        status: v || O ? (c ? "none" : "good") : "required",
         onEdit: n,
     });
 }
@@ -185,13 +185,13 @@ function O(e) {
         p = g.length,
         f = g.length + m.length,
         j = (p / f) * 100,
-        v = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        _ = u > 0,
+        _ = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
+        v = u > 0,
         O = "none";
     return (
-        _ && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
+        v && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
         (0, r.jsx)(x, {
-            title: v ? h.intl.string(h.t.AGjtFv) : h.intl.string(h.t.dqCzoT),
+            title: _ ? h.intl.string(h.t.AGjtFv) : h.intl.string(h.t.dqCzoT),
             description: h.intl.format(h.t.iuNisr, {
                 numChannels: p,
                 numTotalChannels: f,
@@ -210,7 +210,7 @@ function O(e) {
                 color: "currentColor",
                 className: b.channelIcon,
             }),
-            hasStarted: _,
+            hasStarted: v,
             status: O,
             onEdit: n,
         })
@@ -225,14 +225,14 @@ function C(e) {
         j = i.useCallback(() => {
             (0, u.To)(t, !f);
         }, [t, f]),
-        v = !(0, c.av)(d),
-        _ = "none";
-    v && (p && !o ? (_ = "good") : p || (_ = "required"));
+        _ = !(0, c.av)(d),
+        v = "none";
+    _ && (p && !o ? (v = "good") : p || (v = "required"));
     let O = h.intl.string(h.t.GMOwOD);
-    p ? v || (O = h.intl.string(h.t.wHOoyE)) : (O = h.intl.string(h.t.wXFbgZ));
+    p ? _ || (O = h.intl.string(h.t.wHOoyE)) : (O = h.intl.string(h.t.wXFbgZ));
     let C = null;
     return (
-        v &&
+        _ &&
             m &&
             (C = (0, r.jsx)("div", {
                 className: b.inlineSwitch,
@@ -250,8 +250,8 @@ function C(e) {
                 color: "currentColor",
                 className: b.channelIcon,
             }),
-            hasStarted: v,
-            status: _,
+            hasStarted: _,
+            status: v,
             onEdit: n,
             extra: C,
         })

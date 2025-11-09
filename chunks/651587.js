@@ -13,8 +13,8 @@ var l = n(951288),
     f = n(410426),
     y = n(356659),
     b = n(388032),
-    v = n(280407);
-let h = 16 / 9,
+    h = n(132851);
+let v = 16 / 9,
     g = [0, 16, 0, 16],
     j = g[1] + g[3];
 function O(e, t) {
@@ -93,7 +93,7 @@ function x(e) {
             );
         }, [x]),
         { width: D } = I,
-        { tileWidth: L, columns: T } = r.useMemo(
+        { tileWidth: L, columns: H } = r.useMemo(
             () =>
                 (function (e, t) {
                     let n = t - j,
@@ -118,11 +118,11 @@ function x(e) {
             }
         })();
     }, [E]);
-    let H = r.useCallback(
+    let T = r.useCallback(
             (e) => {
                 (0, s.ZDy)(
                     async () => {
-                        let { default: r } = await Promise.all([n.e("98920"), n.e("8789")]).then(n.bind(n, 22989));
+                        let { default: r } = await Promise.all([n.e("98920"), n.e("60090")]).then(n.bind(n, 22989));
                         return (n) => {
                             var i, a;
                             return (0, l.jsx)(
@@ -181,20 +181,20 @@ function x(e) {
             },
             [t],
         ),
-        A = r.useMemo(() => Z.map((e) => O(T, e.clips.length)), [Z, T]),
+        A = r.useMemo(() => Z.map((e) => O(H, e.clips.length)), [Z, H]),
         R = r.useMemo(() => A.reduce((e, t) => e + t, 0), [A]),
-        V = Math.floor(L / h),
+        V = Math.floor(L / v),
         _ = r.useCallback(
             (e, t) => {
                 let { sectionIndex: n, sectionRowIndex: r } = t,
                     i = Z[n];
                 if (null == i) return null;
-                let a = r * T,
-                    s = i.clips.slice(a, a + T);
+                let a = r * H,
+                    s = i.clips.slice(a, a + H);
                 return (0, l.jsx)(
                     "div",
                     {
-                        className: v.clipsRow,
+                        className: h.clipsRow,
                         children: s.map((e) =>
                             (0, l.jsx)(
                                 "div",
@@ -203,7 +203,7 @@ function x(e) {
                                     children: (0, l.jsx)(m.Z, {
                                         actionsDisabled: M,
                                         isNew: N.includes(e.id),
-                                        onClick: null != w ? w : H,
+                                        onClick: null != w ? w : T,
                                         clip: e,
                                     }),
                                 },
@@ -214,7 +214,7 @@ function x(e) {
                     "row-".concat(n, "-").concat(r),
                 );
             },
-            [Z, T, L, M, N, H, w],
+            [Z, H, L, M, N, T, w],
         ),
         U = r.useCallback(
             (e) => {
@@ -231,7 +231,7 @@ function x(e) {
                     : (0, l.jsxs)(
                           "div",
                           {
-                              className: v.sectionHeaderContainer,
+                              className: h.sectionHeaderContainer,
                               children: [
                                   (0, l.jsx)(s.Heading, {
                                       variant: "text-md/semibold",
@@ -242,7 +242,7 @@ function x(e) {
                                       (0, l.jsx)(s.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-secondary",
-                                          className: v.sectionDescription,
+                                          className: h.sectionDescription,
                                           children: t.description,
                                       }),
                               ],
@@ -255,7 +255,7 @@ function x(e) {
     return P || 0 !== Z.length
         ? P
             ? (0, l.jsx)("div", {
-                  className: v.spinnerContainer,
+                  className: h.spinnerContainer,
                   children: (0, l.jsx)(s.$jN, {}),
               })
             : (0, l.jsx)(o.Z, {

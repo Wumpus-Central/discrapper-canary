@@ -19,7 +19,7 @@ var r = n(951288),
     g = n(626135),
     E = n(153066),
     b = n(981631),
-    y = n(855364);
+    y = n(21874);
 function O(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function T(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -117,7 +117,7 @@ function N(e) {
             hideHeader: y = !1,
             showChannelDetails: O = !1,
         } = e,
-        I = S(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
+        I = T(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
     let A = (0, a.e7)([m.Z, p.Z], () => {
             var e;
             return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
@@ -166,7 +166,7 @@ function N(e) {
     (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || N)
         ? (0, r.jsx)(
               s.Z,
-              T(v({}, I), {
+              S(v({}, I), {
                   activity: t,
                   user: n,
                   application: x,
@@ -178,7 +178,7 @@ function N(e) {
                       ? () =>
                             (0, r.jsx)(
                                 C,
-                                T(v({}, I), {
+                                S(v({}, I), {
                                     applicationStream: R,
                                     activity: t,
                                     user: n,

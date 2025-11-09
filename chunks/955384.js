@@ -1,13 +1,13 @@
-n.d(t, { Z: () => h }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => f }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(911969),
     a = n(925975),
     o = n(957730),
     s = n(981631),
     c = n(295907),
     u = n(388032),
-    d = n(26896);
+    d = n(287921);
 function p(e, t, n) {
     return (
         t in e
@@ -21,28 +21,28 @@ function p(e, t, n) {
         e
     );
 }
-function f(e) {
+function h(e) {
     e.stopPropagation();
 }
-class h extends i.PureComponent {
+class f extends r.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o } = this.props,
-            s = (0, r.jsx)("div", {
+        let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
+            s = (0, i.jsx)("div", {
                 className: d.operations,
                 children: u.intl.format(u.t.wDsPXs, {
                     onCancel: () => a(l.id),
                     onSave: this.onClickSave,
                 }),
             });
-        return (0, r.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: e,
             ref: this.node,
-            onContextMenu: f,
+            onContextMenu: h,
             children: [
                 o({
                     textValue: t,
                     richValue: n,
-                    message: i,
+                    message: r,
                     channel: l,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
@@ -55,7 +55,7 @@ class h extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, "node", i.createRef()),
+            p(this, "node", r.createRef()),
             p(this, "onClickSave", () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
@@ -64,14 +64,14 @@ class h extends i.PureComponent {
                 let {
                     message: t,
                     channel: n,
-                    onConfirmDelete: r,
-                    onCancel: i,
+                    onConfirmDelete: i,
+                    onCancel: r,
                     saveMessage: c,
                     validateEdit: u,
                 } = this.props;
                 return 0 === e.length
-                    ? (r(n, t),
-                      i(n.id),
+                    ? (i(n, t),
+                      r(n.id),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !1,
@@ -79,8 +79,8 @@ class h extends i.PureComponent {
                     : u({
                           value: e,
                           channel: n,
-                      }).then((r) => {
-                          let { valid: u } = r;
+                      }).then((i) => {
+                          let { valid: u } = i;
                           if (!u)
                               return Promise.resolve({
                                   shouldClear: !1,
@@ -97,8 +97,8 @@ class h extends i.PureComponent {
                               let t = o.ZP.parse(this.props.channel, e),
                                   n = this.props.message.components.filter((e) => e.type === l.re.TEXT_DISPLAY);
                               if (1 === n.length) {
-                                  let r = n[0];
-                                  e !== r.content && c(this.props.channel.id, this.props.message.id, t);
+                                  let i = n[0];
+                                  e !== i.content && c(this.props.channel.id, this.props.message.id, t);
                               }
                           } else {
                               let t = o.ZP.parse(this.props.channel, e);
@@ -106,7 +106,7 @@ class h extends i.PureComponent {
                                   c(this.props.channel.id, this.props.message.id, t);
                           }
                           return (
-                              i(n.id),
+                              r(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
                                   shouldRefocus: !0,
@@ -115,8 +115,8 @@ class h extends i.PureComponent {
                       });
             }),
             p(this, "onChange", (e, t, n) => {
-                let { channel: r, onChange: i } = this.props;
-                i(r.id, t, n);
+                let { channel: i, onChange: r } = this.props;
+                r(i.id, t, n);
             }),
             p(this, "onKeyDown", (e) => {
                 if (e.key === c.vn.ESCAPE && !e.shiftKey) {

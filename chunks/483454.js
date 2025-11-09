@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(561448),
     b = n(981631),
     y = n(231338),
-    O = n(26973);
+    O = n(599695);
 function v(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,12 +67,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -249,7 +249,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
                     }),
                     children: (0, r.jsx)(
                         R,
-                        S(I({}, o), {
+                        T(I({}, o), {
                             step: t,
                             analyticsContext: _,
                         }),
@@ -259,7 +259,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
                     className: s()(O.addressElementContainer, m ? O.visible : [O.hidden, O.rightToLeftEntry]),
                     children: (0, r.jsx)(
                         w,
-                        S(I({}, l), {
+                        T(I({}, l), {
                             internalKey: d,
                             renderAsStandaloneElement: u === y.He.PAYMENT_REQUEST,
                             billingAddressInfo: n,
@@ -363,10 +363,10 @@ let N = [f.h8.PAYMENT_ELEMENT],
                 }
             );
         }, [I, r]);
-        let T = i.useCallback(() => {
+        let S = i.useCallback(() => {
                 m(null);
             }, []),
-            [S, A] = i.useState(void 0);
+            [T, A] = i.useState(void 0);
         return {
             shouldRenderPaymentElement: b,
             stripePaymentElementProps: O,
@@ -377,8 +377,8 @@ let N = [f.h8.PAYMENT_ELEMENT],
             paymentElementSelectedType: h,
             setPaymentElementSelectedType: m,
             handlePaymentElementStep: I,
-            onBackFromPaymentElement: T,
-            addressElementKey: S,
+            onBackFromPaymentElement: S,
+            addressElementKey: T,
             remountAddressElement: i.useCallback(() => {
                 A(Date.now().toString());
             }, []),

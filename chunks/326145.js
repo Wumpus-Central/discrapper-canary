@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,20 +10,20 @@ var r = n(951288),
     d = n(998730),
     p = n(546247),
     f = n(430824),
-    m = n(768581),
-    h = n(302221),
-    g = n(745752),
+    h = n(768581),
+    g = n(302221),
+    m = n(745752),
     _ = n(17181),
     b = n(388032),
-    E = n(76531),
-    O = n(718215);
-function I(e) {
+    E = n(812070),
+    O = n(904885);
+function y(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: I, height: y } = (0, c.ZP)(),
-        v = i.useCallback(() => {
+        { ref: l, width: y, height: v } = (0, c.ZP)(),
+        I = i.useCallback(() => {
             null != t &&
                 null != n &&
-                ((0, g.I1)(t),
+                ((0, m.I1)(t),
                 (0, _.default)({
                     guildId: t,
                     returnChannelId: n,
@@ -34,7 +34,7 @@ function I(e) {
             () =>
                 null == C
                     ? null
-                    : m.ZP.getGuildSplashURL({
+                    : h.ZP.getGuildSplashURL({
                           id: C.id,
                           splash: C.splash,
                       }),
@@ -49,8 +49,8 @@ function I(e) {
                 ? (0, r.jsx)(u.Z, {
                       className: O.artwork,
                       src: S,
-                      width: I,
-                      height: y,
+                      width: y,
+                      height: v,
                       imageClassName: O.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
@@ -60,8 +60,8 @@ function I(e) {
                     className: O.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, h.aD)(T, 0.16), " 0%, ")
-                            .concat((0, h.aD)(T, 1), " 100%)"),
+                            .concat((0, g.aD)(T, 0.16), " 0%, ")
+                            .concat((0, g.aD)(T, 1), " 100%)"),
                     },
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),
@@ -87,7 +87,7 @@ function I(e) {
                         variant: "overlay-primary",
                         size: "md",
                         text: b.intl.string(b.t.VVFjAC),
-                        onClick: v,
+                        onClick: I,
                     }),
                 ],
             }),

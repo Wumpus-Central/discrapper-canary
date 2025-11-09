@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(809780),
     v = n(981631),
     j = n(388032),
-    C = n(557047);
-let x = {
+    x = n(39620);
+let C = {
     left: 4,
     right: -12,
 };
@@ -38,7 +38,7 @@ function E(e) {
             [o.id],
         );
     return (0, r.jsx)(c.tEY, {
-        offset: x,
+        offset: C,
         children: (0, r.jsxs)(
             "div",
             ((n = (function (e) {
@@ -67,7 +67,7 @@ function E(e) {
                 return e;
             })(
                 {
-                    className: C.messageContainer,
+                    className: x.messageContainer,
                     onKeyDown: m,
                 },
                 g,
@@ -76,14 +76,14 @@ function E(e) {
                 {
                     children: [
                         (0, r.jsx)(y.Z, {
-                            className: C.jumpButton,
+                            className: x.jumpButton,
                             onJump: (e) => h(e, s.id),
                         }),
                         (0, r.jsx)(f.Z, {
                             id: s.id,
                             message: s,
                             channel: o,
-                            className: C.message,
+                            className: x.message,
                             compact: u,
                             animateAvatar: !1,
                             isGroupStart: d,
@@ -114,7 +114,7 @@ function S(e) {
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
         { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         y = g.jU.useSetting(),
-        x = (0, p.P1)(l),
+        C = (0, p.P1)(l),
         S = !1,
         I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
         P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
@@ -130,7 +130,7 @@ function S(e) {
                     (0, r.jsx)(
                         h.Z,
                         {
-                            className: C.divider,
+                            className: x.divider,
                             children: t,
                         },
                         t,
@@ -149,7 +149,7 @@ function S(e) {
                             message: n,
                             compact: y,
                             isGroupStart: i,
-                            treatSpam: !P && f && (0, p.DQ)(n) && x,
+                            treatSpam: !P && f && (0, p.DQ)(n) && C,
                             gotoChannel: a,
                         },
                         n.id,
@@ -172,9 +172,9 @@ function S(e) {
             0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        S && x && u.Z.trackExposure({ location: "20e3b0_2" }),
+        S && C && u.Z.trackExposure({ location: "20e3b0_2" }),
         (0, r.jsx)("div", {
-            className: C.messages,
+            className: x.messages,
             children: N,
         })
     );

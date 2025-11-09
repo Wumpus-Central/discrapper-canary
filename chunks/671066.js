@@ -10,25 +10,25 @@ var i = n(442837),
     d = n(594174),
     u = n(556012),
     g = n(388032),
-    m = n(464992);
+    m = n(75765);
 function p(e) {
     var t;
     let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
         b = (e) => () => h(e),
         x = (0, u.c)(n.type, n, p),
         j = null == (t = n.metadata) ? void 0 : t.channelId,
-        v = (0, i.e7)([d.default, c.Z, o.Z], () => {
+        _ = (0, i.e7)([d.default, c.Z, o.Z], () => {
             let e = o.Z.getChannel(j);
             return null == e ? null : (0, s.F6)(e, d.default, c.Z);
         }, [j]);
     if (null == x) return null;
-    let { headerText: _, descriptionText: C, icon: O } = x;
+    let { headerText: v, descriptionText: O, icon: C } = x;
     return (0, r.jsxs)("div", {
         className: m.actionContainer,
         children: [
             (0, r.jsx)("div", {
                 className: m.actionIconContainer,
-                children: (0, r.jsx)(O, {
+                children: (0, r.jsx)(C, {
                     size: "md",
                     color: "currentColor",
                     className: m.actionIcon,
@@ -39,19 +39,19 @@ function p(e) {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/semibold",
-                        children: _,
+                        children: v,
                     }),
                     (0, r.jsx)(a.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: C,
+                        children: O,
                     }),
                     f &&
                         (0, r.jsxs)(a.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != v && g.intl.format(g.t["8Sr/ar"], { channelName: v }),
+                                null != _ && g.intl.format(g.t["8Sr/ar"], { channelName: _ }),
                                 (0, r.jsx)(a.P3F, {
                                     onClick: b(!0),
                                     className: m.editChannel,

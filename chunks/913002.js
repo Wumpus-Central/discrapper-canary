@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(695346),
     p = n(785717),
     h = n(388032),
-    m = n(81064);
+    m = n(650054);
 function g(e, t, n) {
     return (
         t in e
@@ -77,8 +77,8 @@ function I(e) {
         { trackUserProfileAction: E } = (0, p.KZ)(),
         b = i.useRef(null),
         y = i.useRef(null),
-        [I, T] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
-        S = !n || I || T ? 0 : O,
+        [I, S] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
+        T = !n || I || S ? 0 : O,
         A = () => {
             E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == a || a();
         },
@@ -95,7 +95,7 @@ function I(e) {
                 asContainer: !0,
                 targetElementRef: b,
                 text: h.intl.string(h.t.bt75uw),
-                delay: S,
+                delay: T,
                 "aria-label": !1,
                 children: (0, r.jsx)(f.zx, {
                     ref: b,
@@ -112,7 +112,7 @@ function I(e) {
             (0, r.jsx)(l.u, {
                 asContainer: !0,
                 text: h.intl.string(h.t.VkKicb),
-                delay: S,
+                delay: T,
                 "aria-label": !1,
                 children: (0, r.jsx)(f.zx, {
                     ref: y,

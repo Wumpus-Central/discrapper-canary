@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(767714),
     v = n(430824),
     I = n(594174),
-    T = n(626135),
-    S = n(74538),
+    S = n(626135),
+    T = n(74538),
     A = n(453070),
     C = n(926491),
     N = n(378233),
@@ -30,8 +30,8 @@ var r = n(951288),
     w = n(981631),
     D = n(474936),
     x = n(388032),
-    L = n(564651),
-    M = n(975900);
+    L = n(24506),
+    M = n(702417);
 function j(e, t, n) {
     return (
         t in e
@@ -107,7 +107,7 @@ let B = 80,
         );
     };
 function z(e) {
-    T.default.track(w.rMx.PREMIUM_PROMOTION_OPENED, {
+    S.default.track(w.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? w.ZY5.GUILD_CHANNEL : w.ZY5.DM_CHANNEL,
         location_section: w.jXE.STICKER_POPOUT,
     }),
@@ -169,7 +169,7 @@ let X = (e) => {
             }, [c]),
             i.useEffect(() => {
                 let { channel: e } = m.current;
-                T.default.track(
+                S.default.track(
                     w.rMx.OPEN_POPOUT,
                     k(
                         {
@@ -241,7 +241,7 @@ let X = (e) => {
             [A, C] = i.useState(null),
             [N, P] = i.useState(!1),
             j = I.default.getCurrentUser(),
-            U = S.ZP.canUseCustomStickersEverywhere(j),
+            U = T.ZP.canUseCustomStickersEverywhere(j),
             B = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             Z = null != B,
             [H, W] = i.useState(!1),
@@ -299,7 +299,7 @@ let X = (e) => {
                 e();
             }, [N, A]),
             (0, _.ZP)(() => {
-                T.default.track(w.rMx.OPEN_POPOUT, k({ type: ei }, J));
+                S.default.track(w.rMx.OPEN_POPOUT, k({ type: ei }, J));
             }),
             !N)
         )

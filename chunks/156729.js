@@ -18,7 +18,7 @@ var r,
     b = n(211667),
     y = n(244526),
     O = n(388032),
-    v = n(719221);
+    v = n(65084);
 function I(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,7 +113,7 @@ class R extends (r = a.PureComponent) {
                 }),
                 (0, i.jsx)(
                     E.ZP,
-                    A(T({}, e), {
+                    A(S({}, e), {
                         mode: E.ZP.Modes.EDIT,
                         layout: r,
                         onBillingAddressChange: this.handleAddressUpdate,
@@ -163,7 +163,7 @@ class R extends (r = a.PureComponent) {
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   "div",
-                                                  T(
+                                                  S(
                                                       {
                                                           "aria-hidden": !0,
                                                           className: v.disabledTooltipTarget,
@@ -293,7 +293,7 @@ class R extends (r = a.PureComponent) {
                 this.setState({
                     billingAddress: e,
                     billingAddressValid: t,
-                    dirtyFields: A(T({}, this.state.dirtyFields), { billingAddress: n }),
+                    dirtyFields: A(S({}, this.state.dirtyFields), { billingAddress: n }),
                 });
             }),
             I(this, "handleExpirationDateUpdate", (e, t) => {
@@ -310,7 +310,7 @@ class R extends (r = a.PureComponent) {
                 null != t &&
                     this.setState({
                         [t]: e,
-                        dirtyFields: A(T({}, this.state.dirtyFields), { [t]: !0 }),
+                        dirtyFields: A(S({}, this.state.dirtyFields), { [t]: !0 }),
                     });
             });
         let { paymentSource: l, isDefault: c } = e,

@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(493892),
     v = n(901461),
     j = n(739566),
-    C = n(443877),
-    x = n(492593),
+    x = n(443877),
+    C = n(492593),
     E = n(453687),
     S = n(938353),
     I = n(25015),
@@ -33,8 +33,8 @@ var r = n(951288),
     R = n(834129),
     D = n(981631),
     L = n(388032),
-    M = n(378661),
-    k = n(360514);
+    M = n(77162),
+    k = n(5898);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ let B = i.memo(function e(t) {
         $ = f.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
-        { disableReactionCreates: en } = (0, C.Z)(l),
+        { disableReactionCreates: en } = (0, x.Z)(l),
         { content: er, hasSpoilerEmbeds: ei } = (0, I.Z)(s, {
             hideSimpleEmbedContent: Q && J,
             allowList: ee,
@@ -150,7 +150,7 @@ let B = i.memo(function e(t) {
                 count: 1,
                 collapsedReason: i,
             })
-          : (0, r.jsx)(x.Z, {
+          : (0, r.jsx)(C.Z, {
                 compact: R,
                 className: o()(M, {
                     [k.ephemeral]: (0, y.Pv)(s),
@@ -203,7 +203,7 @@ let B = i.memo(function e(t) {
 });
 function F(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(x.Z, {
+    return (0, r.jsx)(C.Z, {
         className: t,
         compact: i,
         role: "group",

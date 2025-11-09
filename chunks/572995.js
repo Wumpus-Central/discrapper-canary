@@ -20,12 +20,12 @@ var r = n(647438),
     g = n(981631),
     E = n(526761),
     b = n(388032),
-    y = n(531421),
-    O = n(352609),
+    y = n(24864),
+    O = n(593082),
     v = n(509614),
     I = n(880511),
-    T = n(985443),
-    S = n(612253),
+    S = n(985443),
+    T = n(612253),
     A = n(872532),
     C = n(398300),
     N = n(184071),
@@ -157,11 +157,11 @@ let ef = (e, t) =>
                           assetUrl: e ? $.ZP : et.ZP,
                       },
                       showYourStyle: {
-                          thumbnail: S,
+                          thumbnail: T,
                           assetUrl: e ? ei.Z : ea.Z,
                       },
                       yourSpace: {
-                          thumbnail: T,
+                          thumbnail: S,
                           assetUrl: e ? eo.Z : es.Z,
                       },
                       emojis: {
@@ -182,7 +182,7 @@ let ef = (e, t) =>
             }),
             v = (0, s.cL)({ location: "useBentoBoxes" }),
             I = h.Z.useExperiment({ location: "useBentoBoxes" }),
-            T = (0, r.useCallback)(() => {
+            S = (0, r.useCallback)(() => {
                 (0, d.openUserSettings)(
                     u.n.PROFILE_PANEL,
                     {
@@ -192,7 +192,7 @@ let ef = (e, t) =>
                     () => (0, l.I)({ analyticsLocations: e }),
                 );
             }, [e]),
-            S = () => {
+            T = () => {
                 {
                     let { openUserSettings: t } = n(518596);
                     t(u.n.APPEARANCE_PANEL, {
@@ -237,7 +237,7 @@ let ef = (e, t) =>
                 description: b.intl.string(O.default.MFNXZh),
                 descriptionCta: b.intl.string(b.t.jVcuVY),
                 previewImage: N.displayNameStyles.thumbnail,
-                onClick: T,
+                onClick: S,
                 badgeText: b.intl.string(b.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: N.displayNameStyles.assetUrl,
             },
@@ -268,7 +268,7 @@ let ef = (e, t) =>
                 description: b.intl.string(b.t["/aAIqV"]),
                 descriptionCta: b.intl.string(b.t.jVcuVY),
                 previewImage: N.yourSpace.thumbnail,
-                onClick: S,
+                onClick: T,
                 videoUrl: N.yourSpace.assetUrl,
             },
             j = {
