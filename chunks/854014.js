@@ -8,7 +8,7 @@ var r = n(951288),
     s = n(996435),
     u = n(950941),
     d = n(721611),
-    f = n(873395);
+    f = n(843816);
 function b(e) {
     var t, n;
     let { onClick: l, active: o, node: a, visibleContent: s, itemProps: d } = e,
@@ -108,7 +108,9 @@ function p(e) {
                 : t.onClick,
         p = l.useMemo(() => {
             var e;
-            return null != (e = null == i ? void 0 : i.layout.flatMap((e) => e.layout)) ? e : [];
+            return (null != (e = null == i ? void 0 : i.layout.flatMap((e) => e.layout)) ? e : []).filter(
+                (e) => null != e.useTitle || null != e.useNavigationTitle,
+            );
         }, [i]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
