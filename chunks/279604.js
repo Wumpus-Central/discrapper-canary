@@ -2,7 +2,7 @@ n.d(t, {
     KE: () => O,
     KT: () => y,
     Td: () => v,
-    ZP: () => x,
+    ZP: () => C,
     _C: () => j,
 }),
     n(388685),
@@ -70,9 +70,7 @@ function O(e, t) {
                             ),
                         );
                 case m.Us.PERK: {
-                    let { default: i } = await Promise.all([n.e("76692"), n.e("30378"), n.e("47285")]).then(
-                        n.bind(n, 326055),
-                    );
+                    let { default: i } = await Promise.all([n.e("76692"), n.e("81242")]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -116,7 +114,7 @@ function v(e, t) {
 }
 function j(e, t) {
     let { analyticsLocations: n } = (0, a.ZP)(),
-        { onToggle: r } = C(e, t),
+        { onToggle: r } = x(e, t),
         d = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
         p = v(e, t);
     return {
@@ -156,7 +154,7 @@ function j(e, t) {
         ),
     };
 }
-function C(e, t) {
+function x(e, t) {
     let [n, r] = i.useState(!1),
         [l, o] = i.useState(void 0);
     return {
@@ -183,8 +181,8 @@ function C(e, t) {
         ),
     };
 }
-function x(e, t) {
-    let { isLoading: l, error: a, onToggle: s } = C(e, t),
+function C(e, t) {
+    let { isLoading: l, error: a, onToggle: s } = x(e, t),
         { onActivate: c } = j(e, t),
         u = i.useCallback((e) => (e.stopPropagation(), s(!1)), [s]);
     return {

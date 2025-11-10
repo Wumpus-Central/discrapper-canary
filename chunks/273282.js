@@ -1,79 +1,71 @@
-n.d(t, { c: () => j });
+n.d(t, { c: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(159691),
     a = n(906732),
     s = n(884858),
     o = n(813197),
-    c = n(892803),
-    d = n(434404),
-    u = n(465682),
-    g = n(821458),
-    m = n(585961),
-    p = n(981631),
-    f = n(30513),
-    h = n(200299),
-    b = n(388032),
-    x = n(43628);
-function j(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: j } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        v = t.features.has(p.GuildFeatures.INVITE_SPLASH),
-        O = n && v,
-        C = i.useRef(null),
-        { enabled: y } = c.Z.useConfig({ location: "GuildSettingsInviteBackgroundUploadButton" }),
-        N = i.useCallback((e) => {
-            d.Z.updateGuild({ splash: e });
+    c = n(434404),
+    d = n(465682),
+    u = n(821458),
+    g = n(981631),
+    m = n(30513),
+    p = n(200299),
+    f = n(388032),
+    h = n(43628);
+function b(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: b } = e,
+        { analyticsLocations: x } = (0, a.ZP)(),
+        j = t.features.has(g.GuildFeatures.INVITE_SPLASH),
+        _ = n && j,
+        v = i.useRef(null),
+        O = i.useCallback((e) => {
+            c.Z.updateGuild({ splash: e });
         }, []),
-        E = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, g.E6)({
+                    (0, u.E6)({
                         guild: t,
-                        analyticsLocations: _,
-                        analyticsSection: p.jXE.GUILD_INVITE_BACKGROUND,
-                        analyticsObject: p.qAy.BUTTON_CTA,
-                        perks: (0, f.o9)(),
+                        analyticsLocations: x,
+                        analyticsSection: g.jXE.GUILD_INVITE_BACKGROUND,
+                        analyticsObject: g.qAy.BUTTON_CTA,
+                        perks: (0, m.o9)(),
                     });
             },
-            [_, t],
+            [x, t],
         ),
-        I = i.useCallback(() => {
+        y = i.useCallback(() => {
             var e;
-            null == (e = C.current) || e.activateUploadDialogue();
+            null == (e = v.current) || e.activateUploadDialogue();
         }, []);
-    return v
+    return j
         ? (0, r.jsxs)("div", {
-              className: j,
+              className: b,
               children: [
                   (0, r.jsx)(l.zxk, {
-                      disabled: !O,
+                      disabled: !_,
                       variant: "primary",
-                      text: b.intl.string(b.t.yG2pUi),
-                      onClick: I,
+                      text: f.intl.string(f.t.yG2pUi),
+                      onClick: y,
                   }),
                   (0, r.jsx)("div", {
-                      className: x.hiddenInputContainer,
+                      className: h.hiddenInputContainer,
                       children: (0, r.jsx)(o.ZP, {
-                          ref: C,
-                          disabled: !O,
-                          onChange: N,
-                          maxFileSizeBytes: h.B,
-                          onFileSizeError: () => (0, s.Z)(h.B),
+                          ref: v,
+                          disabled: !_,
+                          onChange: O,
+                          maxFileSizeBytes: p.B,
+                          onFileSizeError: () => (0, s.Z)(p.B),
                           tabIndex: -1,
                           "aria-hidden": !0,
                       }),
                   }),
               ],
           })
-        : y
-          ? (0, r.jsx)("div", {
-                className: j,
-                children: (0, r.jsx)(u.v, { onClick: E }),
-            })
-          : (0, r.jsx)(m.P, {
-                className: j,
-                onClick: E,
-            });
+        : (0, r.jsx)("div", {
+              className: b,
+              children: (0, r.jsx)(d.v, { onClick: C }),
+          });
 }
