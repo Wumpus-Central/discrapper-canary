@@ -1,7 +1,7 @@
 n.d(t, { Z: () => H }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(358458),
+    l = n(509442),
     a = n(793030),
     s = n(442837),
     o = n(481060),
@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(787309),
     y = n(687158),
     x = n(612600),
-    v = n(510659),
+    O = n(510659),
     j = n(892001),
-    O = n(899007),
+    v = n(899007),
     C = n(867176),
     I = n(451834),
     S = n(502762),
@@ -35,7 +35,7 @@ var r = n(951288),
     L = n(228168),
     M = n(671955),
     k = n(388032),
-    U = n(231688);
+    U = n(910455);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ function H(e) {
         }),
         q = i.useRef(null),
         { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, v.$m)(),
+        X = (0, O.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
@@ -107,7 +107,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(v.NJ, {
+            children: (0, r.jsx)(O.NJ, {
                 value: X,
                 children: (0, r.jsxs)(S.Z, {
                     ref: q,
@@ -146,7 +146,7 @@ function H(e) {
                                             userId: n.id,
                                             className: U.toast,
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             user: n,
                                             displayProfile: B,
                                             channelId: k.id,
@@ -186,6 +186,7 @@ function H(e) {
                                         children: (0, r.jsx)(D.Z, {
                                             profileOwner: n,
                                             wishlistItems: ei.items,
+                                            wishlistId: er,
                                             onClick: () => {
                                                 null == $ || $({ section: L.oh.WISHLIST });
                                             },

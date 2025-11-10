@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(681715),
     l = n(481060),
     a = n(221292),
-    s = n(239990);
+    s = n(226291);
 function o(e) {
     let {
             onCardClick: t,
@@ -12,30 +12,34 @@ function o(e) {
             renderPreview: c,
             moreCount: d,
             isSingleCard: u = !1,
-            analyticsLocations: p,
+            skuId: p,
+            analyticsLocations: h,
+            wishlistId: f,
         } = e,
-        h = o ? s.cardPreview : s.cardPreviewNoScale,
-        f = u ? s.cardSingle : s.card,
-        g = null != d && d > 0;
+        g = o ? s.cardPreview : s.cardPreviewNoScale,
+        m = u ? s.cardSingle : s.card,
+        b = null != d && d > 0;
     return (0, r.jsx)(i.u, {
         text: n,
         position: "top",
         children: (0, r.jsxs)(l.P3F, {
             onClick: () => {
                 t(),
-                    (0, a.pQ)({
-                        action: g ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        analyticsLocations: p,
+                    (0, a.Er)({
+                        action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        analyticsLocations: h,
+                        skuId: b ? null : p,
+                        wishlistId: f,
                     });
             },
-            className: f,
+            className: m,
             "aria-label": n,
             children: [
                 (0, r.jsx)("div", {
-                    className: h,
+                    className: g,
                     children: c(),
                 }),
-                g &&
+                b &&
                     (0, r.jsx)("div", {
                         className: s.moreOverlay,
                         children: (0, r.jsxs)(l.Text, {

@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => g,
-    J: () => p,
+    J: () => h,
 });
 var r = n(951288),
     i = n(481060),
@@ -10,24 +10,31 @@ var r = n(951288),
     o = n(848118),
     c = n(474936),
     d = n(388032),
-    u = n(758650),
-    h = n(976218);
-function p(e, t) {
-    let { moreCount: n, onViewWishlist: i, isSingleCard: l = !1, profileOwner: h, analyticsLocations: p } = t,
-        f = null != n && n > 0,
-        g = f ? d.intl.string(d.t.TxBQzD) : d.intl.string(d.t.ilhtIa);
+    u = n(470146),
+    p = n(207661);
+function h(e, t) {
+    let {
+            moreCount: n,
+            onViewWishlist: i,
+            isSingleCard: l = !1,
+            profileOwner: p,
+            analyticsLocations: h,
+            wishlistId: f,
+        } = t,
+        g = null != n && n > 0,
+        m = g ? d.intl.string(d.t.TxBQzD) : d.intl.string(d.t.ilhtIa);
     return (0, r.jsx)(
         a.Z,
         {
             onCardClick: () => {
-                if (f) return void i();
+                if (g) return void i();
                 (0, s.P)(e.sku, {
                     isGift: !0,
-                    giftRecipient: h,
+                    giftRecipient: p,
                     giftingOrigin: c.Wt.USER_PROFILE_WISHLIST,
                 });
             },
-            tooltipText: g,
+            tooltipText: m,
             shouldScalePreview: !1,
             renderPreview: () =>
                 (0, r.jsx)(o.A, {
@@ -39,7 +46,9 @@ function p(e, t) {
                 }),
             moreCount: n,
             isSingleCard: l,
-            analyticsLocations: p,
+            skuId: e.skuId,
+            analyticsLocations: h,
+            wishlistId: f,
         },
         e.skuId,
     );
@@ -48,11 +57,11 @@ function f(e) {
     let { item: t, card: n, profileOwner: a } = e,
         { data: o } = (0, l.IX)(t.sku.applicationId);
     return (0, r.jsxs)("div", {
-        className: h.singleItemContainer,
+        className: p.singleItemContainer,
         children: [
             n,
             (0, r.jsx)("div", {
-                className: h.singleItemInfo,
+                className: p.singleItemInfo,
                 children: (0, r.jsxs)(i.P3F, {
                     onClick: () => {
                         (0, s.P)(t.sku, {
@@ -61,7 +70,7 @@ function f(e) {
                             giftingOrigin: c.Wt.USER_PROFILE_WISHLIST,
                         });
                     },
-                    className: h.singleItemName,
+                    className: p.singleItemName,
                     "aria-label": d.intl.string(d.t.ilhtIa),
                     children: [
                         (0, r.jsx)(i.Text, {
@@ -82,16 +91,17 @@ function f(e) {
     });
 }
 function g(e, t) {
-    let { profileOwner: n, analyticsLocations: i } = t,
-        l = p(e, {
+    let { profileOwner: n, analyticsLocations: i, wishlistId: l } = t,
+        a = h(e, {
             profileOwner: n,
             analyticsLocations: i,
             onViewWishlist: () => {},
             isSingleCard: !0,
+            wishlistId: l,
         });
     return (0, r.jsx)(f, {
         item: e,
-        card: l,
+        card: a,
         profileOwner: n,
     });
 }

@@ -11,9 +11,9 @@ var r = n(951288),
     p = n(388032),
     h = n(373863);
 function f(e) {
-    let { wishlistItems: t = [], profileOwner: n, onClick: f } = e,
-        { analyticsLocations: g } = (0, a.ZP)(),
-        { cards: m, singleItem: b } = (0, i.useMemo)(() => {
+    let { wishlistItems: t = [], profileOwner: n, onClick: f, wishlistId: g } = e,
+        { analyticsLocations: m } = (0, a.ZP)(),
+        { cards: b, singleItem: _ } = (0, i.useMemo)(() => {
             let e = [],
                 r = null;
             for (let i = 0; i < t.length && e.length < 4; i++) {
@@ -25,8 +25,9 @@ function f(e) {
                               (0, u.c)(l, {
                                   moreCount: a ? t.length - 4 + 1 : void 0,
                                   profileOwner: n,
-                                  analyticsLocations: g,
+                                  analyticsLocations: m,
                                   onViewWishlist: f,
+                                  wishlistId: g,
                               }),
                           )
                         : (0, c.F)(l) &&
@@ -34,8 +35,9 @@ function f(e) {
                               (0, s.J)(l, {
                                   moreCount: a ? t.length - 4 + 1 : void 0,
                                   profileOwner: n,
-                                  analyticsLocations: g,
+                                  analyticsLocations: m,
                                   onViewWishlist: f,
+                                  wishlistId: g,
                               }),
                           ),
                     1 === e.length && null == r && (r = l));
@@ -44,21 +46,23 @@ function f(e) {
                 cards: e,
                 singleItem: r,
             };
-        }, [t, n, g, f]);
-    if (0 === m.length) return null;
-    let _ = 1 === m.length && null != b,
-        y = m;
+        }, [t, n, m, f, g]);
+    if (0 === b.length) return null;
+    let y = 1 === b.length && null != _,
+        x = b;
     return (
-        _ &&
-            ((0, o.Q)(b)
-                ? (y = (0, u.g)(b, {
+        y &&
+            ((0, o.Q)(_)
+                ? (x = (0, u.g)(_, {
                       profileOwner: n,
-                      analyticsLocations: g,
+                      analyticsLocations: m,
+                      wishlistId: g,
                   }))
-                : (0, c.F)(b) &&
-                  (y = (0, s.B)(b, {
+                : (0, c.F)(_) &&
+                  (x = (0, s.B)(_, {
                       profileOwner: n,
-                      analyticsLocations: g,
+                      analyticsLocations: m,
+                      wishlistId: g,
                   }))),
         (0, r.jsxs)(d.Z.Overlay, {
             className: h.container,
@@ -72,7 +76,7 @@ function f(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: h.cardsContainer,
-                    children: y,
+                    children: x,
                 }),
             ],
         })
