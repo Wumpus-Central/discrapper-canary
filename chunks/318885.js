@@ -74,7 +74,7 @@ async function E(e, t) {
         O = i.ZP.getRunningGames().find((e) => e.name === (null == y ? void 0 : y.name)),
         v = (null == O ? void 0 : O.pid) != null ? o.default.getTrackedGameByPid(null == O ? void 0 : O.pid) : null,
         I = null != (c = null == v ? void 0 : v.source) ? c : null,
-        T =
+        S =
             null !=
             (g =
                 null != (h = null == v ? void 0 : v.overlayMethod)
@@ -82,14 +82,14 @@ async function E(e, t) {
                     : o.default.getRenderMethod(null == O ? void 0 : O.pid))
                 ? g
                 : null,
-        S = {
+        T = {
             overlay_game_source: I,
             overlay_game_name: null != y ? y.name : "Unknown Game",
             overlay_app_id: null != y ? y.id : null,
-            overlay_render_method: null != T ? a.gl[T] : null,
+            overlay_render_method: null != S ? a.gl[S] : null,
             media_session_id: u.Z.getMediaSessionId(),
             overlay_game_elevated: null == O ? void 0 : O.elevated,
-            input_service_initialized: i.ZP.isInputServiceInitialized(),
+            input_service_initialized: i.ZP.isSystemServiceInitialized("input-service"),
             hardware_display_count:
                 null !=
                 (E = await (null === r.Z ||
@@ -101,7 +101,7 @@ async function E(e, t) {
                     ? E
                     : null,
         };
-    switch ((__OVERLAY__ && (S.overlay_render_method = a.gl[a.gl.Hook]), (t = m({}, S, t)), e)) {
+    switch ((__OVERLAY__ && (T.overlay_render_method = a.gl[a.gl.Hook]), (t = m({}, T, t)), e)) {
         case p.rMx.VOICE_CHANNEL_SELECTED:
         case p.rMx.SETTINGS_PANE_VIEWED:
         case p.rMx.GUILD_VIEWED:

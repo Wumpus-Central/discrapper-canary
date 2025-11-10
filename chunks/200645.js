@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(998502),
     _ = n(981631),
     p = n(388032),
-    h = n(761588);
+    h = n(680465);
 function m(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function E() {
     let e = (0, l.O9)(),
         [t, n] = i.useState(!1),
         [c, d] = i.useState(() => (0, l.aL)()),
-        f = (0, a.e7)([s.ZP], () => s.ZP.getInputServiceStatus()),
+        f = (0, a.e7)([s.ZP], () => s.ZP.getSystemServiceStatus("input-service")),
         m = i.useCallback(async () => {
             n(!0), c ? await (0, l.OK)("windows-settings") : await (0, l.sU)("windows-settings"), n(!1), d((0, l.aL)());
         }, [c]);

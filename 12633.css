@@ -52168,7 +52168,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59501,9 +59501,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -80354,6 +80354,10 @@ div.nagbar_d74ef8 {
 
 .statusTagGrey_e9cb00 {
     background-color: var(--primary-400)
+}
+
+.statusTagYellow_e9cb00 {
+    background-color: var(--yellow-360)
 }
 
 .price_e9cb00 {
