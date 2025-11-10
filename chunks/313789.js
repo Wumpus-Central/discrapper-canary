@@ -46,7 +46,6 @@ var r = (function (e) {
         (e.UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS = "unsubscribe_from_all_marketing_emails"),
         (e.NOTIFICATIONS_ADVANCED_CATEGORY = "notifications_advanced_category"),
         (e.NOTIFICATIONS_ADVANCED_ACCORDION = "notifications_advanced_accordion"),
-        (e.HIGH_ACTIVITY_NOTIFICATIONS = "high_activity_notifications"),
         (e.MOBILE_NOTIFICATION_DELAY = "mobile_notification_delay"),
         (e.TEXT_TO_SPEECH_COMMAND = "text_to_speech_command"),
         (e.TEXT_TO_SPEECH_NOTIFICATIONS = "text_to_speech_notifications"),

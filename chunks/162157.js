@@ -1,34 +1,32 @@
 n.d(t, {
-    BT: () => c,
-    N8: () => s,
+    BT: () => d,
+    N8: () => c,
+    al: () => l,
 });
-var i = n(442837);
+var r = n(442837);
 n(467319);
-var r = n(496675),
-    l = n(533244),
-    a = n(487419),
-    o = n(981631);
-function s(e) {
-    let t = (0, i.e7)(
-            [r.Z],
-            () =>
-                (function (e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z;
-                    return t.can(o.Plq.BAN_MEMBERS, e) || t.can(o.Plq.KICK_MEMBERS, e) || t.can(o.Plq.MANAGE_GUILD, e);
-                })(e, r.Z),
-            [e],
-        ),
-        n = (0, i.e7)([a.Z], () => (null != e ? a.Z.getGuildIncident(e.id) : null), [e]);
-    return !(null != n && (0, l.i9)(n)) && t;
+var i = n(496675),
+    a = n(533244),
+    o = n(487419),
+    s = n(981631);
+function l(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+    return (
+        t.can(s.Plq.BAN_MEMBERS, e) ||
+        t.can(s.Plq.KICK_MEMBERS, e) ||
+        t.can(s.Plq.MODERATE_MEMBERS, e) ||
+        t.can(s.Plq.MANAGE_GUILD, e)
+    );
 }
 function c(e) {
-    return (0, i.e7)(
-        [r.Z],
-        () =>
-            (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z;
-                return t.can(o.Plq.MANAGE_GUILD, e);
-            })(e, r.Z),
-        [e],
-    );
+    let t = (0, r.e7)([i.Z], () => l(e, i.Z), [e]),
+        n = (0, r.e7)([o.Z], () => (null != e ? o.Z.getGuildIncident(e.id) : null), [e]);
+    return !(null != n && (0, a.i9)(n)) && t;
+}
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+    return t.can(s.Plq.MANAGE_GUILD, e);
+}
+function d(e) {
+    return (0, r.e7)([i.Z], () => u(e, i.Z), [e]);
 }
