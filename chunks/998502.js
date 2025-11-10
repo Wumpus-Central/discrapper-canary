@@ -80,8 +80,8 @@ function v(e, t) {
     );
 }
 let I = window.DiscordNative,
-    S = new Set(["jpg", "jpeg", "png"]),
-    T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
+    S = new Set(["jpg", "jpeg", "jfif", "png"]),
+    T = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
     C = 5,
     N = null,

@@ -1,7 +1,7 @@
 n.d(t, {
     CO: () => c,
-    NU: () => T,
-    X2: () => S,
+    NU: () => S,
+    X2: () => T,
     cb: () => v,
     d$: () => f,
     tw: () => u,
@@ -21,7 +21,7 @@ let o = (e, t) => {
         let [n, r] = e.split("/");
         return n === t;
     },
-    l = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
+    l = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i,
     c = (e) => null != e && l.test(e),
     u = (e) => s(e, "image"),
     d = /\.(webp|gif|avif)$/i,
@@ -37,5 +37,5 @@ let o = (e, t) => {
     O = (e) => (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoUrl" }).enabled && o(e, m),
     v = (e) => o(e, y) || O(e),
     I = (e) => null != e && (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoFile" }).enabled && m.test(e),
-    T = (e) => null != e && (y.test(e) || I(e)),
-    S = (e) => s(e, "video");
+    S = (e) => null != e && (y.test(e) || I(e)),
+    T = (e) => s(e, "video");

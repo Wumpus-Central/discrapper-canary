@@ -27,7 +27,7 @@ function u() {
     return [
         {
             name: l.intl.string(l.t["Sp2NF+"]),
-            extensions: ["jpg", "jpeg", "png", "gif", "webp", "avif"],
+            extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"],
         },
     ];
 }
