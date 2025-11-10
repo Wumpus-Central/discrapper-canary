@@ -1,10 +1,11 @@
 n.d(t, {
-    J7: () => b,
-    LJ: () => O,
-    Zh: () => m,
-    rC: () => y,
-    tA: () => g,
-    wO: () => E,
+    J7: () => O,
+    LJ: () => I,
+    Zh: () => E,
+    rC: () => v,
+    tA: () => b,
+    wO: () => y,
+    zp: () => m,
 }),
     n(388685);
 var r = n(647438),
@@ -19,8 +20,12 @@ var r = n(647438),
     f = n(956472),
     _ = n(619899),
     p = n(215023),
-    h = n(981631),
-    m = (function (e) {
+    h = n(981631);
+let m = r.createContext({ flattenProductVariants: !1 });
+function g() {
+    return r.useContext(m).flattenProductVariants;
+}
+var E = (function (e) {
         return (
             (e.NONE = "none"),
             (e.NEW = "new"),
@@ -29,10 +34,10 @@ var r = n(647438),
             e
         );
     })({}),
-    g = (function (e) {
+    b = (function (e) {
         return (e.FIAT = "fiat"), (e.ORBS = "orbs"), e;
     })({});
-let E = (e, t, n) => (r) => {
+let y = (e, t, n) => (r) => {
         l.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
             collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
             sku_id: e.skuId,
@@ -46,7 +51,7 @@ let E = (e, t, n) => (r) => {
             cta_name: r,
         });
     },
-    b = (e, t, n) => {
+    O = (e, t, n) => {
         let i = (0, u.Nd)(),
             l = null == i ? void 0 : i.tab,
             { analyticsLocations: _ } = (0, s.ZP)(o.Z.COLLECTIBLES_SHOP_CARD),
@@ -71,7 +76,7 @@ let E = (e, t, n) => (r) => {
             [e, l, p, _, n],
         )(t);
     },
-    y = (e) => {
+    v = (e) => {
         if (null == e) return null;
         if (e.type === i.Z.VARIANTS_GROUP) {
             if (null == e.variants || 0 === e.variants.length) return null;
@@ -82,8 +87,15 @@ let E = (e, t, n) => (r) => {
         }
         return e.type;
     },
-    O = (e) => {
-        let t = (0, a.e7)([c.Z], () => c.Z.getCategoryForProduct(e)),
-            n = null == t ? void 0 : t.products.find((t) => t.skuId === e);
+    I = (e) => {
+        let t = g(),
+            n = (0, a.e7)([c.Z], () => {
+                var n;
+                return t
+                    ? c.Z.getProduct(e)
+                    : null == (n = c.Z.getCategoryForProduct(e))
+                      ? void 0
+                      : n.products.find((t) => t.skuId === e);
+            });
         return (0, _.Cr)(n);
     };
