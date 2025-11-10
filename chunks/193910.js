@@ -1,6 +1,6 @@
-n.d(t, { Z: () => M }), n(413496), n(433524), n(35282), n(539854), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => L }), n(413496), n(433524), n(35282), n(539854), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(831209),
     a = n(442837),
     o = n(704215),
@@ -8,47 +8,49 @@ var r = n(951288),
     c = n(278323),
     u = n(566620),
     d = n(906732),
-    p = n(397698),
-    f = n(266454),
-    h = n(706140),
-    m = n(243778),
-    g = n(618857),
-    b = n(346479),
-    _ = n(286934),
-    y = n(488131),
-    C = n(375954),
-    v = n(626135),
+    p = n(499254),
+    h = n(827498),
+    f = n(397698),
+    m = n(266454),
+    g = n(706140),
+    b = n(243778),
+    y = n(618857),
+    C = n(346479),
+    v = n(286934),
+    _ = n(488131),
+    x = n(375954),
+    j = n(626135),
     O = n(585483),
-    x = n(403182),
-    E = n(127654),
-    j = n(752305),
-    S = n(951211),
-    P = n(981631),
-    I = n(921944),
-    Z = n(489887),
-    T = n(388032),
-    N = n(749723);
-let A = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
-function w() {
-    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    E = n(403182),
+    S = n(127654),
+    P = n(752305),
+    I = n(951211),
+    Z = n(981631),
+    T = n(921944),
+    N = n(489887),
+    A = n(388032),
+    w = n(878066);
+let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
+function R() {
+    let e = (0, a.e7)([x.Z], () => x.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, h.cv)(t);
+    let [n] = (0, g.cv)(t);
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, f.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
+                    (0, m.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.L.TAKE_ACTION });
             },
             [n],
         ),
-        (0, r.jsx)(m.ZP, {
+        (0, i.jsx)(b.ZP, {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
                 return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
-                    ? (0, r.jsx)(s.IGR, {
-                          text: T.intl.string(T.t.y2b7CA),
+                    ? (0, i.jsx)(s.IGR, {
+                          text: A.intl.string(A.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND,
                       })
                     : null;
@@ -56,91 +58,92 @@ function w() {
         })
     );
 }
-function M(e) {
+function L(e) {
     let {
             channel: t,
-            options: h,
-            onFileUpload: m,
-            onClose: C,
-            onSelect: M,
-            draftType: R,
-            editorTextContent: D,
-            setValue: L,
-            openClips: k,
+            chatInputType: g,
+            options: b,
+            onFileUpload: x,
+            onClose: L,
+            onSelect: D,
+            draftType: k,
+            editorTextContent: U,
+            setValue: B,
+            openClips: H,
         } = e,
-        { analyticsLocations: U, newestAnalyticsLocation: B } = (0, d.ZP)(),
-        F = (0, g.Dt)({ channel: t }),
-        V = (0, a.e7)([_.Z], () => _.Z.isInProgress());
-    function H() {
-        (0, y.R6)(t, void 0, "Plus Button");
-    }
-    function G() {
-        v.default.track(P.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), L("/", (0, j.JM)("/"));
-    }
+        { analyticsLocations: V, newestAnalyticsLocation: F } = (0, d.ZP)(),
+        G = (0, y.Dt)({ channel: t }),
+        z = (0, a.e7)([v.Z], () => v.Z.isInProgress());
     function W() {
-        k();
+        (0, _.R6)(t, void 0, "Plus Button");
     }
-    function z() {
-        (0, f.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
+    function q() {
+        j.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), B("/", (0, P.JM)("/"));
+    }
+    function K() {
+        H();
+    }
+    function Y() {
+        (0, m.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e("68784").then(n.bind(n, 611611));
                     return (n) => {
-                        var i, l;
-                        return (0, r.jsx)(
+                        var r, l;
+                        return (0, i.jsx)(
                             e,
-                            ((i = (function (e) {
+                            ((r = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
+                                        i = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
+                                        i.forEach(function (t) {
+                                            var i;
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = i);
                                         });
                                 }
                                 return e;
                             })({}, n)),
                             (l = l = { channel: t }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var i = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, i);
                                       }
                                       return n;
                                   })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            i),
+                            r),
                         );
                     };
                 },
-                { modalKey: Z.$z },
+                { modalKey: N.$z },
             );
     }
-    function q() {
-        v.default.track(P.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function X() {
+        j.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
         }),
-            (0, p.Z)({
+            (0, f.Z)({
                 context:
                     null != t
                         ? {
@@ -149,233 +152,243 @@ function M(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: B,
+                analyticsLocation: F,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
-    function Y() {
-        let e = D,
+    function J() {
+        let e = U,
             n = "txt",
-            r = "",
-            i = D.match(A);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])),
-            (0, E.d)([(0, x.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, R),
-            O.S.dispatchToLastSubscribed(P.CkL.CLEAR_TEXT),
-            "" !== r && O.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, { plainText: r });
+            i = "",
+            r = U.match(M);
+        null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
+            (0, S.d)([(0, E.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            O.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
+            "" !== i && O.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
-        i.useEffect(() => {
-            v.default.track(P.rMx.OPEN_POPOUT, {
+        r.useEffect(() => {
+            j.default.track(Z.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
-        (0, r.jsx)(s.v2r, {
-            onSelect: M,
+        (0, i.jsx)(s.v2r, {
+            onSelect: D,
             navId: "channel-attach",
-            onClose: C,
-            "aria-label": T.intl.string(T.t.Xm41aV),
-            className: N.menu,
-            children: h.map(function (e) {
+            onClose: L,
+            "aria-label": A.intl.string(A.t.Xm41aV),
+            className: w.menu,
+            children: b.map(function (e) {
                 var n;
-                let i = (0, r.jsxs)("div", {
-                    className: N.optionLabel,
+                let r = (0, i.jsxs)("div", {
+                    className: w.optionLabel,
                     children: [
-                        (0, r.jsx)(e.icon, {
-                            className: N.optionIcon,
+                        (0, i.jsx)(e.icon, {
+                            className: w.optionIcon,
                             color: "currentColor",
                         }),
-                        (0, r.jsx)("div", {
-                            className: N.optionName,
+                        (0, i.jsx)("div", {
+                            className: w.optionName,
                             children: e.display,
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
-                            (0, r.jsx)(s.mAB, {
-                                className: N.badge,
+                            (0, i.jsx)(s.mAB, {
+                                className: w.badge,
                                 color: null != (n = e.badgeColor) ? n : l.Z.STATUS_DANGER,
                                 count: e.badgeVal,
                             }),
                     ],
                 });
                 switch (e.type) {
-                    case S.r.UPLOAD_A_FILE:
-                        return (0, r.jsx)(
+                    case I.r.UPLOAD_A_FILE:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "upload-file",
-                                label: i,
-                                action: m,
+                                label: r,
+                                action: x,
                             },
                             "upload-file",
                         );
-                    case S.r.UPLOAD_TEXT_AS_FILE:
-                        if ("" === D) return null;
-                        return (0, r.jsx)(
+                    case I.r.UPLOAD_TEXT_AS_FILE:
+                        if ("" === U) return null;
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "upload-text-as-file",
-                                label: i,
-                                action: Y,
+                                label: r,
+                                action: J,
                             },
                             "upload-text-as-file",
                         );
-                    case S.r.CLIPS:
-                        return (0, r.jsx)(
+                    case I.r.CLIPS:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "clips",
-                                label: i,
-                                action: W,
+                                label: r,
+                                action: K,
                             },
                             "clips",
                         );
-                    case S.r.POLL:
-                        return (0, r.jsx)(
+                    case I.r.POLL:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "poll",
-                                label: i,
-                                action: z,
+                                label: r,
+                                action: Y,
                             },
                             "poll",
                         );
-                    case S.r.INVITE_TO_PLAY_GAME:
-                        return (0, r.jsx)(
+                    case I.r.INVITE_TO_PLAY_GAME:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "play",
-                                label: i,
+                                label: r,
                                 action: () => {
                                     var n;
                                     return (
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: P.mFx.JOIN,
+                                            type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: U[U.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
                             },
                             "play",
                         );
-                    case S.r.INVITE_TO_LISTEN:
-                        return (0, r.jsx)(
+                    case I.r.INVITE_TO_LISTEN:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "listen",
-                                label: i,
+                                label: r,
                                 action: () => {
                                     var n;
                                     return (
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: P.mFx.LISTEN,
+                                            type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: U[U.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
                             },
                             "listen",
                         );
-                    case S.r.INVITE_TO_WATCH:
-                        return (0, r.jsx)(
+                    case I.r.INVITE_TO_WATCH:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "watch",
-                                label: i,
+                                label: r,
                                 action: () => {
                                     var n;
                                     return (
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: P.mFx.WATCH,
+                                            type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: U[U.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
                             },
                             "watch",
                         );
-                    case S.r.CREATE_THREAD:
-                        return (0, r.jsx)(
+                    case I.r.CREATE_THREAD:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "THREAD",
-                                label: i,
-                                action: H,
+                                label: r,
+                                action: W,
                             },
                             "THREAD",
                         );
-                    case S.r.SLASH_COMMAND:
-                        return (0, r.jsx)(
+                    case I.r.SLASH_COMMAND:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "SLASH_COMMAND",
-                                label: i,
-                                action: G,
+                                label: r,
+                                action: q,
                             },
                             "SLASH_COMMAND",
                         );
-                    case S.r.ACTIVITY:
-                        return (0, r.jsx)(
+                    case I.r.APP_LAUNCHER:
+                        return (0, i.jsx)(
+                            s.sNh,
+                            {
+                                id: "APP_LAUNCHER",
+                                label: r,
+                                action: () => (0, p._)(h._b.TEXT, g),
+                            },
+                            "APP_LAUNCHER",
+                        );
+                    case I.r.ACTIVITY:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "activity",
-                                label: i,
-                                action: q,
-                                hint: (0, r.jsx)(w, {}),
+                                label: r,
+                                action: X,
+                                hint: (0, i.jsx)(R, {}),
                             },
                             "activity",
                         );
-                    case S.r.SCHEDULED_MESSAGE:
-                        return (0, r.jsx)(
+                    case I.r.SCHEDULED_MESSAGE:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "scheduled_message",
-                                label: i,
-                                action: () => (0, g.$f)({ channel: t }),
-                                children: F,
+                                label: r,
+                                action: () => (0, y.$f)({ channel: t }),
+                                children: G,
                             },
                             "scheduled_message",
                         );
-                    case S.r.SUMMARIZE_THREAD:
-                        return (0, r.jsx)(
+                    case I.r.SUMMARIZE_THREAD:
+                        return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "summarize_thread",
-                                label: i,
-                                action: () => b.Z.summarizeThread(t),
-                                icon: V ? (0, r.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: V,
-                                children: V
+                                label: r,
+                                action: () => C.Z.summarizeThread(t),
+                                icon: z ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: z,
+                                children: z
                                     ? null
-                                    : (0, r.jsxs)(r.Fragment, {
+                                    : (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              (0, r.jsx)(
+                                              (0, i.jsx)(
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: T.intl.string(T.t.eCzSdd),
+                                                      label: A.intl.string(A.t.eCzSdd),
                                                       iconLeft: s.BFJ,
-                                                      action: () => b.Z.summarizeThread(t, !1),
+                                                      action: () => C.Z.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
-                                              (0, r.jsx)(
+                                              (0, i.jsx)(
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: T.intl.string(T.t["HOe+Hq"]),
+                                                      label: A.intl.string(A.t["HOe+Hq"]),
                                                       iconLeft: s.tBG,
-                                                      action: () => b.Z.summarizeThread(t),
+                                                      action: () => C.Z.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),

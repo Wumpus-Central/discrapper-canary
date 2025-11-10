@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,24 +6,25 @@ var r = n(951288),
     s = n(574583),
     l = n(318766),
     c = n(28546),
-    u = n(957825),
-    d = n(564355);
-function f(e, t) {
-    let { disabled: n, type: a } = e,
-        [f, _, p] = (0, c.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
-        h = i.useCallback(() => {
-            (0, c.RO)(u.X1.EMOJI, a);
-        }, [a]);
+    u = n(541716),
+    d = n(957825),
+    f = n(744114);
+function _(e, t) {
+    let { disabled: n, type: a, pickerView: _ = d.X1.EMOJI } = e,
+        [p, h, m] = (0, c.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
+        g = i.useCallback(() => {
+            (0, c.RO)(_, a);
+        }, [a, _]);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(u.CT, d.buttonContainer),
+              className: o()(d.CT, f.buttonContainer),
               ref: t,
               children: (0, r.jsx)(l.Z, {
-                  className: d.emojiButton,
-                  onClick: h,
-                  active: f === u.X1.EMOJI && _ === a,
-                  "aria-controls": p,
+                  className: f.emojiButton,
+                  onClick: g,
+                  active: p === _ && h === a,
+                  "aria-controls": m,
                   tabIndex: 0,
                   focusProps: {
                       offset: {
@@ -33,7 +34,8 @@ function f(e, t) {
                           right: -4,
                       },
                   },
+                  allowKeybindHint: a === u.Ie.NORMAL,
               }),
           });
 }
-let _ = i.memo(i.forwardRef(f));
+let p = i.memo(i.forwardRef(_));

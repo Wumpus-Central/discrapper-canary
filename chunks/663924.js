@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(149203),
     y = n(388032),
-    O = n(681524);
+    O = n(679862);
 function v(e, t, n) {
     return (
         t in e
@@ -70,15 +70,15 @@ function T(e, t) {
 }
 let A = { height: g.lv };
 function C(e) {
-    var { positionTargetRef: t } = e,
-        n = S(e, ["positionTargetRef"]);
+    var { positionTargetRef: t, align: n } = e,
+        i = S(e, ["positionTargetRef", "align"]);
     return (0, r.jsx)("span", {
         style: g.u$,
         children: (0, r.jsx)(c.W5, {
             className: O.positionLayer,
             targetRef: t,
             position: "top",
-            align: "right",
+            align: null != n ? n : "right",
             spacing: 24,
             autoInvert: !0,
             clickTrap: !0,
@@ -89,7 +89,7 @@ function C(e) {
                     role: "dialog",
                     style: A,
                     "aria-label": y.intl.string(y.t["3CNGLK"]),
-                    children: t && (0, r.jsx)(R, I({}, n)),
+                    children: t && (0, r.jsx)(R, I({}, i)),
                 });
             },
         }),

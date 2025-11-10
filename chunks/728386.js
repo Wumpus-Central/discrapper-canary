@@ -1,16 +1,19 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(574583),
     l = n(532772),
-    c = n(28546),
-    u = n(443603),
-    d = n(957825),
-    f = n(388032),
-    _ = n(564355);
-function p(e, t, n) {
+    c = n(681715),
+    u = n(400332),
+    d = n(28546),
+    f = n(713913),
+    _ = n(443603),
+    p = n(957825),
+    h = n(388032),
+    m = n(744114);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +37,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,51 +54,57 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function O(e, t) {
     let { disabled: n, type: a } = e,
-        [p, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], s.X),
-        E = !1,
-        b = p === d.X1.STICKER,
-        y = !1,
-        O = i.useCallback(() => {
-            (0, c.RO)(d.X1.STICKER, a);
+        [g, b] = (0, d.Iu)((e) => [e.activeView, e.pickerId], s.X),
+        O = !1,
+        v = g === p.X1.STICKER,
+        I = !1,
+        S = i.useCallback(() => {
+            (0, d.RO)(p.X1.STICKER, a);
         }, [a]),
-        { Component: v, events: I, play: T } = (0, l.z)();
+        { Component: T, events: A, play: C } = (0, l.z)(),
+        N = (0, f.v)(u.U);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(d.CT, _.buttonContainer),
+              className: o()(p.CT, m.buttonContainer),
               ref: t,
-              children: (0, r.jsx)(
-                  u.Z,
-                  g(h({ className: o()(_.button, _.stickerButton) }, I), {
-                      onClick: () => {
-                          O(), T();
-                      },
-                      isActive: b,
-                      "aria-label": f.intl.string(f.t.rZpidU),
-                      "aria-expanded": b,
-                      "aria-haspopup": "dialog",
-                      "aria-controls": m,
-                      sparkle: E,
-                      notification: y ? u.j.UPDATE : null,
-                      children: (0, r.jsx)(v, {
-                          size: "refresh_sm",
-                          color: "currentColor",
+              children: (0, r.jsx)(c.u, {
+                  shouldShow: null != N,
+                  text: h.intl.string(h.t.oOJ7KU),
+                  keyboardShortcut: N,
+                  children: (0, r.jsx)(
+                      _.Z,
+                      y(E({ className: o()(m.button, m.stickerButton) }, A), {
+                          onClick: () => {
+                              S(), C();
+                          },
+                          isActive: v,
+                          "aria-label": h.intl.string(h.t.rZpidU),
+                          "aria-expanded": v,
+                          "aria-haspopup": "dialog",
+                          "aria-controls": b,
+                          sparkle: O,
+                          notification: I ? _.j.UPDATE : null,
+                          children: (0, r.jsx)(T, {
+                              size: "refresh_sm",
+                              color: "currentColor",
+                          }),
                       }),
-                  }),
-              ),
+                  ),
+              }),
           });
 }
-let b = i.memo(i.forwardRef(E));
+let v = i.memo(i.forwardRef(O));
