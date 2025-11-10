@@ -1,13 +1,17 @@
 n.d(t, {
-    CY: () => a,
-    Y1: () => s,
-    rq: () => i,
+    CY: () => c,
+    Cq: () => m,
+    Y1: () => u,
+    _H: () => d,
+    rq: () => s,
 });
 var r,
     o,
     l,
-    i = (((r = {}).PLAYING = "playing"), (r.PAUSED = "paused"), (r.ENDED = "ended"), r),
-    a =
+    i,
+    a,
+    s = (((r = {}).PLAYING = "playing"), (r.PAUSED = "paused"), (r.ENDED = "ended"), r),
+    c =
         (((o = {}).ERROR = "ERROR"),
         (o.SOURCE_ERROR = "SOURCE_ERROR"),
         (o.ABORT = "ABORT"),
@@ -20,7 +24,7 @@ var r,
         (o.HLS_KEY_SYSTEM_ERROR = "HLS_KEY_SYSTEM_ERROR"),
         (o.HLS_OTHER_ERROR = "HLS_OTHER_ERROR"),
         o),
-    s =
+    u =
         (((l = {}).PLAYBACK = "k"),
         (l.SPACE = " "),
         (l.SEEK_BACK = "j"),
@@ -28,4 +32,6 @@ var r,
         (l.CAPTION = "c"),
         (l.FULLSCREEN = "f"),
         (l.MUTE = "m"),
-        l);
+        l),
+    d = (((i = {}).MD = "md"), (i.LG = "lg"), i),
+    m = (((a = {}).MD = "md"), (a.LG = "lg"), a);
