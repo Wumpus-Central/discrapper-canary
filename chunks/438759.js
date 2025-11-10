@@ -9,10 +9,10 @@ var o = n(120356),
     c = n(821795),
     d = n(892567),
     u = n(660662),
-    p = n(593082),
+    p = n(352609),
     m = n(388032),
-    f = n(77426),
-    g = n(6073);
+    f = n(959389),
+    g = n(771880);
 function h(e) {
     let { selectedEffectId: t, setSelectedEffectId: n, className: o } = e;
     return (0, l.jsxs)("div", {

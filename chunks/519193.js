@@ -1,62 +1,62 @@
-i.d(n, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => p });
-var a = i(951288);
-i(647438);
-var e = i(793030),
-    l = i(481060),
-    s = i(535139),
-    o = i(877481),
-    r = i(579201),
-    c = i(683668),
-    u = i(55121),
-    d = i(438926),
-    x = i(388032),
-    f = i(40399);
-function p(t) {
-    let { transitionState: n, onClose: i, sku: p, application: m } = t,
-        h = (0, c.a)(m),
-        { fetched: T, hasAlreadyLinked: v, canStartAuthorization: I, startAuthorization: g } = (0, s.F)(m),
-        C = (0, r.I)(m);
-    if (!T || null == h)
-        return (0, a.jsx)(e.IX, {
+a.d(n, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => h });
+var i = a(951288);
+a(647438);
+var s = a(793030),
+    e = a(481060),
+    o = a(535139),
+    r = a(877481),
+    c = a(579201),
+    l = a(683668),
+    d = a(55121),
+    u = a(438926),
+    x = a(388032),
+    m = a(786081);
+function h(t) {
+    let { transitionState: n, onClose: a, sku: h, application: p } = t,
+        f = (0, l.a)(p),
+        { fetched: j, hasAlreadyLinked: g, canStartAuthorization: v, startAuthorization: C } = (0, o.F)(p),
+        y = (0, c.I)(p);
+    if (!j || null == f)
+        return (0, i.jsx)(s.IX, {
             transitionState: n,
-            onClose: i,
-            children: (0, a.jsx)(e.fef, { children: (0, a.jsx)(l.$jN, {}) }),
+            onClose: a,
+            children: (0, i.jsx)(s.fef, { children: (0, i.jsx)(e.$jN, {}) }),
         });
-    if (v) {
+    if (g) {
         let t =
-            h && !C
+            f && !y
                 ? {
                       variant: "primary",
                       text: x.intl.string(x.t["s+J8Dl"]),
                       onClick: () => {
-                          o.Z.launchGame(m.id);
+                          r.Z.launchGame(p.id);
                       },
-                      icon: e.rgF,
+                      icon: s.rgF,
                   }
                 : {
                       variant: "primary",
                       text: x.intl.string(x.t.cpT0Cq),
-                      onClick: i,
+                      onClick: a,
                   };
-        return (0, a.jsxs)(e.IX, {
+        return (0, i.jsxs)(s.IX, {
             transitionState: n,
-            onClose: i,
+            onClose: a,
             children: [
-                (0, a.jsx)(d.y, {
-                    sku: p,
+                (0, i.jsx)(u.y, {
+                    sku: h,
                     title: x.intl.string(x.t["5glWta"]),
                 }),
-                (0, a.jsx)(e.fef, {
-                    children: (0, a.jsx)(l.Text, {
+                (0, i.jsx)(s.fef, {
+                    children: (0, i.jsx)(e.Text, {
                         variant: "text-md/normal",
-                        className: f.modalBodyText,
+                        className: m.modalBodyText,
                         children: x.intl.formatToPlainString(x.t.W2znvX, {
-                            skuName: p.name,
-                            applicationName: m.name,
+                            skuName: h.name,
+                            applicationName: p.name,
                         }),
                     }),
                 }),
-                (0, a.jsx)(e.Go$, {
+                (0, i.jsx)(s.Go$, {
                     actions: [t],
                     actionsFullWidth: !0,
                 }),
@@ -67,19 +67,19 @@ function p(t) {
         let t = {
             variant: "primary",
             text: x.intl.string(x.t["VDAhr+"]),
-            onClick: g,
-            icon: e.uIJ,
-            disabled: !I,
+            onClick: C,
+            icon: s.uIJ,
+            disabled: !v,
         };
-        return (0, a.jsx)(u.M, {
-            sku: p,
-            application: m,
+        return (0, i.jsx)(d.M, {
+            sku: h,
+            application: p,
             transitionState: n,
-            onClose: i,
-            hasAlreadyLinked: v,
-            canStartAuthorization: I,
+            onClose: a,
+            hasAlreadyLinked: g,
+            canStartAuthorization: v,
             primaryCTAButtonProps: t,
-            bodyText: x.intl.formatToPlainString(x.t.Qmkje8, { applicationName: m.name }),
+            bodyText: x.intl.formatToPlainString(x.t.Qmkje8, { applicationName: p.name }),
             title: x.intl.string(x.t.GPAtvf),
         });
     }

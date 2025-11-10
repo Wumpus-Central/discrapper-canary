@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(481060),
     u = n(100527),
     d = n(906732),
-    f = n(335131),
-    g = n(699955),
+    g = n(335131),
+    f = n(699955),
     p = n(705338),
     m = n(277511),
     b = n(602733),
@@ -23,7 +23,7 @@ var r = n(951288),
     P = n(228168),
     I = n(132724),
     w = n(388032),
-    S = n(363725);
+    S = n(10094);
 function E(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: i } = e;
     return t
@@ -88,7 +88,7 @@ function C(e) {
                 wishlistSettings: null != e ? v.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
-        C = (0, g.c)({ location: "user-profile-modal-v2-wishlist" }),
+        C = (0, f.c)({ location: "user-profile-modal-v2-wishlist" }),
         { analyticsLocations: D } = (0, d.ZP)(),
         k = (null == x ? void 0 : x.id) === t.id,
         N = !1 === t.nsfwAllowed,
@@ -110,7 +110,7 @@ function C(e) {
         }, [n, A, D]),
         B = i.useCallback(() => {
             (0, o.pT)(),
-                (0, f.mK)({
+                (0, g.mK)({
                     analyticsLocations: D,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });

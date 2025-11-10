@@ -15,7 +15,7 @@ var r = n(951288),
     b = n(430790),
     h = n(795990),
     y = n(388032),
-    v = n(267233);
+    v = n(66582);
 function O() {
     let { trackUserProfileEditAction: e } = (0, g.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),

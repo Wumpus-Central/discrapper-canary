@@ -74,16 +74,16 @@ function y(e) {
         (0, p.KQ)(b(g({}, x), { viewName: p.pb.SAFETY_WARNING_BANNER })),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [x]);
-    let O = r.useCallback(
+    let j = r.useCallback(
             (e) => {
                 (0, p.qc)(b(g({}, x), { cta: e }));
             },
             [x],
         ),
-        j = r.useCallback(() => {
+        O = r.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("41837")]).then(
+                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
                         n.bind(n, 611446),
                     );
                     return (n) => {
@@ -100,14 +100,14 @@ function y(e) {
                 },
                 { modalKey: f.X_ },
             ),
-                O(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, C, y, O]),
+                j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+        }, [t, C, y, j]),
         E = r.useCallback(() => {
-            v(), O(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [v, O]),
+            v(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [v, j]),
         S = r.useCallback(() => {
-            v(), O(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [v, O]),
+            v(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [v, j]),
         P = r.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("19538").then(n.bind(n, 699783));
@@ -118,7 +118,7 @@ function y(e) {
                         onBlock: E,
                         onBlockAndReport: S,
                         onCancel: () => {
-                            null == l || l(), O(p.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: l,
                         userId: C,
@@ -126,7 +126,7 @@ function y(e) {
                     });
                 };
             });
-        }, [E, S, C, t, O]);
+        }, [E, S, C, t, j]);
     return (0, i.jsx)(h.Q, {
         channelId: t,
         warningId: y,
@@ -139,7 +139,7 @@ function y(e) {
             {
                 text: m.intl.string(m.t.Qyu4UK),
                 variant: "primary",
-                onClick: j,
+                onClick: O,
             },
             ...(_
                 ? []

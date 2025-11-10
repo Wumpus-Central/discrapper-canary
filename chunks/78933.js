@@ -23,8 +23,8 @@ var a = n(951288),
     S = n(687158),
     E = n(612600),
     T = n(892001),
-    N = n(899007),
-    O = n(648052),
+    O = n(899007),
+    N = n(648052),
     P = n(867176),
     I = n(537006),
     w = n(483424),
@@ -56,8 +56,8 @@ var a = n(951288),
     ea = n(228168),
     er = n(671955),
     ei = n(388032),
-    el = n(138005),
-    es = n(593540);
+    el = n(54482),
+    es = n(116649);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -112,8 +112,8 @@ function ec(e) {
         eS = (0, $.F)(eC),
         eE = (0, s.e7)([G.Z], () => G.Z.hidePersonalInformation),
         eT = (0, f.p)(),
-        eN = F.Sb.useSetting(),
-        eO = (0, $.I)(ey),
+        eO = F.Sb.useSetting(),
+        eN = (0, $.I)(ey),
         eP = (0, q.g)(n),
         eI = (0, v.Z)({ analyticsLocations: eg }),
         ew = (0, H.I5)(t),
@@ -189,7 +189,7 @@ function ec(e) {
                                         displayProfile: ex,
                                         themeType: er.l.POPOUT,
                                     }),
-                                    (0, a.jsx)(N.Z, {
+                                    (0, a.jsx)(O.Z, {
                                         user: t,
                                         displayProfile: ex,
                                         themeType: er.l.POPOUT,
@@ -214,7 +214,7 @@ function ec(e) {
                                         nickname: V.ZP.getName(em, null, t),
                                         onOpenProfile: eh ? void 0 : eF,
                                         pronouns: null == ex ? void 0 : ex.pronouns,
-                                        tags: (0, a.jsx)(O.Z, {
+                                        tags: (0, a.jsx)(N.Z, {
                                             displayProfile: ex,
                                             themeType: er.l.POPOUT,
                                             onClose: n,
@@ -314,7 +314,7 @@ function ec(e) {
                                                                           className: el.statusPickerModalMenu,
                                                                           "aria-label": ei.intl.string(ei.t.E13trI),
                                                                           onClose: t,
-                                                                          children: eO,
+                                                                          children: eN,
                                                                       });
                                                                   },
                                                             onClick: i.tq
@@ -428,7 +428,7 @@ function ec(e) {
                                                                                                           onClose: r,
                                                                                                           onSelect:
                                                                                                               void 0,
-                                                                                                          children: eO,
+                                                                                                          children: eN,
                                                                                                       }),
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -504,7 +504,7 @@ function ec(e) {
                                                         }),
                                                         !__OVERLAY__ &&
                                                             z.wS &&
-                                                            eN &&
+                                                            eO &&
                                                             (0, a.jsx)(J.V4, {
                                                                 action: "COPY_USER_ID",
                                                                 icon: c.VuL,

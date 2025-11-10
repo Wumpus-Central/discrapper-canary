@@ -24,14 +24,14 @@ var i = n(951288),
     N = n(768581),
     S = n(63063),
     E = n(709054),
-    I = n(51144),
-    P = n(466070),
-    w = n(585835),
+    w = n(51144),
+    I = n(466070),
+    P = n(585835),
     T = n(997787),
     Z = n(981631),
     k = n(49898),
-    A = n(388032),
-    D = n(280219),
+    D = n(388032),
+    A = n(81187),
     R = n(509399),
     L = n(790904),
     M = n(609182);
@@ -47,13 +47,13 @@ function B(e) {
             [n],
         );
     return (0, i.jsx)("div", {
-        className: D.searchContainer,
+        className: A.searchContainer,
         children: (0, i.jsx)(u.E1j, {
             query: t,
             onChange: l,
             onClear: () => n(""),
-            placeholder: A.intl.string(A.t["5prvKe"]),
-            "aria-label": A.intl.string(A.t["5prvKe"]),
+            placeholder: D.intl.string(D.t["5prvKe"]),
+            "aria-label": D.intl.string(D.t["5prvKe"]),
         }),
     });
 }
@@ -66,8 +66,8 @@ function W(e) {
             builtInIntegrations: F,
             customWebhooks: K,
             followedChannelWebhooks: z,
-            isLoadingWebhooks: q,
-            canCreateWebhook: V,
+            isLoadingWebhooks: V,
+            canCreateWebhook: q,
             onManageBuiltIn: Y,
             onManageCustomWebhooks: J,
             onManageFollowedChannels: Q,
@@ -168,22 +168,22 @@ function W(e) {
                 null != l.user
                     ? a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.Nu9sat, {
+                          text: D.intl.formatToPlainString(D.t.Nu9sat, {
                               timestamp: E.default.extractTimestamp(l.id),
-                              user: I.ZP.getUserTag(l.user),
+                              user: w.ZP.getUserTag(l.user),
                           }),
                       })
                     : a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: E.default.extractTimestamp(l.id) }),
+                          text: D.intl.formatToPlainString(D.t.gcdJ8J, { timestamp: E.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
-                    w.Z,
+                    P.Z,
                     {
                         name: r.name,
                         imageSrc: null != (t = r.getIconURL(48)) ? t : N.pK["0"],
                         integration: e,
-                        buttonText: A.intl.string(A.t["Z/qRnM"]),
+                        buttonText: D.intl.string(D.t["Z/qRnM"]),
                         hasNextSection: !0,
                         onButtonClick: () => {
                             X(r.id),
@@ -202,7 +202,7 @@ function W(e) {
                 )
             );
         }),
-        eS = (0, i.jsx)("div", { className: D.footerImage });
+        eS = (0, i.jsx)("div", { className: A.footerImage });
     0 === eN.length &&
         ea &&
         ((eN = (function (e, t, n) {
@@ -210,44 +210,44 @@ function W(e) {
                 l = (0, i.jsxs)(h.Z, {
                     direction: h.Z.Direction.VERTICAL,
                     align: h.Z.Align.CENTER,
-                    className: D.emptyStateWrapper,
+                    className: A.emptyStateWrapper,
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
                             src: r,
-                            className: D.emptyStateSearchImage,
+                            className: A.emptyStateSearchImage,
                         }),
                         (0, i.jsx)(u.Zbd, {
                             editable: !0,
-                            className: D.emptyStateCard,
+                            className: A.emptyStateCard,
                             children: (0, i.jsx)(u.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                children: A.intl.string(A.t.EVWFNr),
+                                children: D.intl.string(D.t.EVWFNr),
                             }),
                         }),
                     ],
                 }),
                 a = (0, i.jsx)(u.Zbd, {
                     editable: !0,
-                    className: D.emptyStateCard,
+                    className: A.emptyStateCard,
                     children: (0, i.jsxs)("div", {
-                        className: D.emptyStateText,
+                        className: A.emptyStateText,
                         children: [
                             (0, i.jsx)("img", {
                                 alt: "",
                                 src: R,
-                                className: D.emptyStateImage,
+                                className: A.emptyStateImage,
                             }),
                             (0, i.jsx)(u.Heading, {
                                 color: "header-secondary",
                                 variant: "heading-xl/bold",
-                                children: A.intl.string(A.t.nQQeFM),
+                                children: D.intl.string(D.t.nQQeFM),
                             }),
                             (0, i.jsx)(u.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: A.intl.format(A.t.snvKU3, {
+                                children: D.intl.format(D.t.snvKU3, {
                                     handleGoToAppDirectory: () => {
                                         (0, x.transitionToGlobalDiscovery)({
                                             tab: k.GlobalDiscoveryTab.APPS,
@@ -267,46 +267,46 @@ function W(e) {
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
     let eE = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        eI = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
-        eP = [];
+        ew = null != H ? D.t.YV0vh6 : D.t.FnZEJs,
+        eI = [];
     if (el) {
         let e, t, r, a, o;
-        eP.push(
+        eI.push(
             ((n = K.length),
-            n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
+            n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = D.intl.string(D.t.lOQqJK)),
             (0, i.jsx)(
-                w.Z,
+                P.Z,
                 {
-                    name: A.intl.string(A.t.xOg4SP),
+                    name: D.intl.string(D.t.xOg4SP),
                     icon: u.tYf,
                     buttonText: e,
-                    buttonDisabled: !V,
+                    buttonDisabled: !q,
                     trailing: t,
                     onButtonClick: J,
                     hasNextSection: n > 0,
-                    details: [{ text: A.intl.formatToPlainString(A.t["6HqDfT"], { count: n }) }],
+                    details: [{ text: D.intl.formatToPlainString(D.t["6HqDfT"], { count: n }) }],
                 },
                 "webhooks",
             )),
         ),
             (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                eP.push(
+                eI.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
-                        : ((r = A.intl.string(A.t["ZwSt+T"])),
+                        : ((r = D.intl.string(D.t["ZwSt+T"])),
                           (a = () => open(S.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        w.Z,
+                        P.Z,
                         {
-                            name: A.intl.string(A.t.OrV60r),
+                            name: D.intl.string(D.t.OrV60r),
                             icon: u.AsW,
                             buttonText: r,
                             onButtonClick: a,
                             trailing: o,
                             hasNextSection: l > 0,
-                            details: [{ text: A.intl.formatToPlainString(A.t.JUNGIZ, { count: l }) }],
+                            details: [{ text: D.intl.formatToPlainString(D.t.JUNGIZ, { count: l }) }],
                         },
                         "channels-followed",
                     )),
@@ -314,23 +314,23 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        eP.push(
+        eI.push(
             ((o = ec.length),
             (0, i.jsx)(
-                w.Z,
+                P.Z,
                 {
-                    name: A.intl.string(A.t.tqtDXC),
+                    name: D.intl.string(D.t.tqtDXC),
                     icon: u.DuK,
                     trailing: (0, i.jsx)(u.LJT, { size: "xs" }),
                     onButtonClick: $,
                     hasNextSection: !0,
-                    details: [{ text: A.intl.formatToPlainString(A.t["puxS4+"], { count: o }) }],
+                    details: [{ text: D.intl.formatToPlainString(D.t["puxS4+"], { count: o }) }],
                 },
                 "channels-syncing",
             )),
         ),
         eb &&
-            eP.push(
+            eI.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -340,22 +340,22 @@ function W(e) {
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
-                              (l = A.intl.formatToPlainString(A.t.FFpnT8, { count: t })),
+                              (l = D.intl.formatToPlainString(D.t.FFpnT8, { count: t })),
                               (a = () => n(Z.ABu.TWITCH)))
-                            : ((r = A.intl.string(A.t.bkvGkn)),
-                              (l = A.intl.string(A.t.Qq3X2M)),
+                            : ((r = D.intl.string(D.t.bkvGkn)),
+                              (l = D.intl.string(D.t.Qq3X2M)),
                               (a = () =>
                                   (0, f.Z)({
                                       platformType: Z.ABu.TWITCH,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            w.Z,
+                            P.Z,
                             {
-                                name: A.intl.string(A.t.q4pBG3),
+                                name: D.intl.string(D.t.q4pBG3),
                                 icon: s.icon.whiteSVG,
                                 iconBackgroundColor: s.color,
-                                iconClassName: D.platformIcon,
+                                iconClassName: A.platformIcon,
                                 buttonText: r,
                                 onButtonClick: a,
                                 trailing: o,
@@ -368,7 +368,7 @@ function W(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            eP.push(
+            eI.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -378,22 +378,22 @@ function W(e) {
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
-                              (l = A.intl.formatToPlainString(A.t.b2g5vC, { count: t })),
+                              (l = D.intl.formatToPlainString(D.t.b2g5vC, { count: t })),
                               (a = () => n(Z.ABu.YOUTUBE)))
-                            : ((r = A.intl.string(A.t.xEyQ3X)),
-                              (l = A.intl.string(A.t.T0ivgQ)),
+                            : ((r = D.intl.string(D.t.xEyQ3X)),
+                              (l = D.intl.string(D.t.T0ivgQ)),
                               (a = () =>
                                   (0, f.Z)({
                                       platformType: Z.ABu.YOUTUBE,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            w.Z,
+                            P.Z,
                             {
-                                name: A.intl.string(A.t.aS6cK4),
+                                name: D.intl.string(D.t.aS6cK4),
                                 icon: s.icon.whiteSVG,
                                 iconBackgroundColor: s.color,
-                                iconClassName: D.platformIcon,
+                                iconClassName: A.platformIcon,
                                 buttonText: r,
                                 onButtonClick: a,
                                 trailing: o,
@@ -405,39 +405,39 @@ function W(e) {
                     );
                 })(eu, em, Y),
             );
-    let ew = null != H && eo && null != es;
+    let eP = null != H && eo && null != es;
     return (0, i.jsxs)("div", {
-        className: a()(null != eS ? D.footerPlaceholder : null),
+        className: a()(null != eS ? A.footerPlaceholder : null),
         children: [
             (0, i.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(eI, { helpdeskArticle: eE }),
+                children: D.intl.format(ew, { helpdeskArticle: eE }),
             }),
-            (0, i.jsx)(u.izJ, { className: D.divider }),
-            q || ei || null == W
+            (0, i.jsx)(u.izJ, { className: A.divider }),
+            V || ei || null == W
                 ? (0, i.jsx)(u.$jN, {
-                      className: D.__invalid_spinner,
+                      className: A.__invalid_spinner,
                       type: u.$jN.Type.SPINNING_CIRCLE,
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eP,
-                          ew &&
+                          eI,
+                          eP &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eP.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      eI.length > 0 ? (0, i.jsx)(u.izJ, { className: A.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
-                                          className: D.sectionHeader,
-                                          children: A.intl.string(A.t.oAvIAg),
+                                          className: A.sectionHeader,
+                                          children: D.intl.string(D.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(P.t, {
+                                      (0, i.jsx)(I.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
                                           name: es.name,
                                           hasNextSection: !0,
-                                          iconClassName: D.linkedLobbyIcon,
+                                          iconClassName: A.linkedLobbyIcon,
                                           trailing: (0, i.jsx)(u.vdY, { size: "xs" }),
                                       }),
                                   ],
@@ -445,11 +445,11 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eP.length > 0 || ew ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        eI.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: A.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
-                                            className: D.sectionHeader,
-                                            children: A.intl.string(A.t.pUBKht),
+                                            className: A.sectionHeader,
+                                            children: D.intl.string(D.t.pUBKht),
                                         }),
                                         ef > 4
                                             ? (0, i.jsx)(B, {

@@ -14,7 +14,7 @@ var a = n(951288),
     x = n(711325),
     g = n(852630),
     f = n(731994),
-    b = n(761804);
+    b = n(30827);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,8 +64,8 @@ function _() {
         [s, d] = (0, r.useState)(!1),
         [h, g] = (0, r.useState)(null),
         _ = (0, u.ZP)((e) => e.toolsCache),
-        { setToolsCache: T, removeToolsCache: N } = (0, u.L3)(),
-        { setImgCache: O } = (0, u.W_)(),
+        { setToolsCache: T, removeToolsCache: O } = (0, u.L3)(),
+        { setImgCache: N } = (0, u.W_)(),
         P = (0, r.useCallback)(
             (e) => {
                 let t = _[e];
@@ -102,9 +102,9 @@ function _() {
         }, []),
         w = (0, r.useCallback)(
             (e) => {
-                N(e);
+                O(e);
             },
-            [N],
+            [O],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -166,7 +166,7 @@ function _() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         a = await n.arrayBuffer();
-                                    O(t, t, (0, p.xh)(a)), T(t, t, m.jD);
+                                    N(t, t, (0, p.xh)(a)), T(t, t, m.jD);
                                 },
                             }),
                             (0, a.jsx)("div", {
@@ -258,12 +258,12 @@ function y(e) {
                         variant: "text-sm/semibold",
                         children: "DMs",
                     }),
-                    (0, a.jsx)(N, { nameplate: t }),
+                    (0, a.jsx)(O, { nameplate: t }),
                     (0, a.jsx)(l.Text, {
                         variant: "text-sm/semibold",
                         children: "RTC",
                     }),
-                    (0, a.jsx)(O, { nameplate: t }),
+                    (0, a.jsx)(N, { nameplate: t }),
                     (0, a.jsx)("div", {
                         className: b.resizeHandle,
                         onMouseDown: m,
@@ -385,7 +385,7 @@ function T(e) {
         }),
     });
 }
-function N(e) {
+function O(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: b.preview,
@@ -416,7 +416,7 @@ function N(e) {
         }),
     });
 }
-function O(e) {
+function N(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: b.preview,

@@ -19,25 +19,25 @@ var i = n(951288),
     v = n(345162),
     _ = n(485386),
     x = n(430824),
-    O = n(496675),
-    j = n(594174),
+    j = n(496675),
+    O = n(594174),
     E = n(700785),
     S = n(51144),
     P = n(967128),
     I = n(786721),
     Z = n(981631),
     T = n(388032),
-    N = n(73288),
-    A = n(602009);
+    N = n(338518),
+    A = n(430864);
 function w(e) {
     let { channel: t } = e,
         [n, l] = r.useState(!1),
         o = (0, m.ZP)(t, !0),
         w = t.guild_id,
         M = (0, u.e7)([_.Z], () => (null != w ? _.Z.getSortedRoles(w) : void 0)),
-        R = (0, u.e7)([j.default, x.Z], () => {
+        R = (0, u.e7)([O.default, x.Z], () => {
             var e;
-            return j.default.getUser(null == (e = x.Z.getGuild(w)) ? void 0 : e.ownerId);
+            return O.default.getUser(null == (e = x.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
         L = r.useMemo(() => (null != M ? M.filter((e) => !(0, v.fI)(e)) : []), [M]),
         D = r.useMemo(
@@ -54,11 +54,11 @@ function w(e) {
                     .value(),
             [t, w, L],
         ),
-        k = (0, u.Wu)([j.default], () => {
+        k = (0, u.Wu)([O.default], () => {
             let e = {};
             for (let n of (null != R && (e[R.id] = R), Object.values(t.permissionOverwrites))) {
                 if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
-                let t = j.default.getUser(n.id);
+                let t = O.default.getUser(n.id);
                 null != t && (e[t.id] = t);
             }
             return s()(e)
@@ -75,7 +75,7 @@ function w(e) {
                 })
                 .value();
         }, [t, R]),
-        U = O.Z.can(Z.Plq.MANAGE_CHANNELS, t) || O.Z.can(Z.Plq.MANAGE_ROLES, t),
+        U = j.Z.can(Z.Plq.MANAGE_CHANNELS, t) || j.Z.can(Z.Plq.MANAGE_ROLES, t),
         B = r.useCallback(() => l(!1), []);
     return (0, i.jsxs)(P.ZP, {
         channelId: t.id,

@@ -8,7 +8,7 @@ var r = n(951288),
     s = n(924052),
     u = n(59662),
     d = n(996435),
-    f = n(4640);
+    f = n(990757);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,8 +60,8 @@ function y(e) {
             target: m,
             defaultTarget: v,
             onClose: g,
-            sidebarHeader: h,
-            sidebarFooter: x,
+            sidebarHeader: x,
+            sidebarFooter: h,
             onPanelChange: O,
             emptyState: P,
         } = e,
@@ -122,8 +122,8 @@ function y(e) {
             children: [
                 (0, r.jsx)(c.P, {
                     root: y,
-                    header: h,
-                    footer: x,
+                    header: x,
+                    footer: h,
                     onClose: R,
                     emptyState: P,
                 }),

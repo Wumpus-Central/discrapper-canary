@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    S = n(136588);
+    S = n(28616);
 function T(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),

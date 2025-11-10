@@ -18,13 +18,13 @@ var r = n(951288),
     y = n(359110),
     x = n(592125),
     O = n(703558),
-    v = n(430824),
-    j = n(979651),
+    j = n(430824),
+    v = n(979651),
     C = n(664342),
     I = n(124368),
     S = n(981631),
     E = n(388032),
-    Z = n(229);
+    Z = n(952899);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,10 +71,10 @@ function T(e, t) {
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
         R = (0, s.e7)([x.Z], () => x.Z.getChannel(t)),
-        w = (0, s.e7)([v.Z], () => v.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        w = (0, s.e7)([j.Z], () => j.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
-    let L = (0, s.e7)([j.Z], () => null != D && !a().isEmpty(j.Z.getVoiceStatesForChannel(D.id)));
+    let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
     i.useEffect(() => {
         L &&
             null != D &&

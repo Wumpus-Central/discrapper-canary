@@ -17,18 +17,18 @@ var i = n(951288),
     y = n(518950),
     C = n(967128),
     v = n(388032),
-    _ = n(40036);
+    _ = n(963392);
 function x(e) {
     var t;
-    let { channel: n, children: x, user: O } = e,
-        j = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { channel: n, children: x, user: j } = e,
+        O = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         E = null != (t = (0, d.ZP)(n)) ? t : "",
         {
             avatarDecorationSrc: S,
             eventHandlers: P,
             isAnimating: I,
         } = (0, y.Z)({
-            userId: null == O ? void 0 : O.id,
+            userId: null == j ? void 0 : j.id,
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
         }),
@@ -39,14 +39,14 @@ function x(e) {
         A = r.useCallback(() => {
             P.onMouseLeave(), T(!1);
         }, [P]),
-        w = !n.isMultiUserDM() && (null == O ? void 0 : O.displayNameStyles) != null;
+        w = !n.isMultiUserDM() && (null == j ? void 0 : j.displayNameStyles) != null;
     return (0, i.jsxs)(C.ZP, {
         channelId: n.id,
         onMouseEnter: N,
         onMouseLeave: A,
         children: [
             (() => {
-                let e = !j && I;
+                let e = !O && I;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(m.v, {
                           channel: n,
@@ -71,7 +71,7 @@ function x(e) {
                 children: w
                     ? (0, i.jsx)(h.Z, {
                           userName: E,
-                          displayNameStyles: null == O ? void 0 : O.displayNameStyles,
+                          displayNameStyles: null == j ? void 0 : j.displayNameStyles,
                           effectDisplayType: Z ? p.F.ANIMATED : p.F.STATIC,
                           loop: !0,
                       })

@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(831209),
     l = n(481060),
-    o = n(49675);
+    o = n(655645);
 function a(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
     return (0, r.jsx)("div", {

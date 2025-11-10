@@ -19,13 +19,13 @@ var i = n(951288),
     v = n(892001),
     _ = n(433355),
     x = n(699516),
-    O = n(594174),
-    j = n(768581),
+    j = n(594174),
+    O = n(768581),
     E = n(525541),
     S = n(981631),
     P = n(228168),
     I = n(388032),
-    Z = n(90985);
+    Z = n(291738);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
             l = (0, s.e7)([C.Z], () => C.Z.getMutualGuilds(t), [t]),
@@ -38,7 +38,7 @@ let T = (e) => {
                                   let { guild: n } = e,
                                       r =
                                           null != n
-                                              ? j.ZP.getGuildIconURL({
+                                              ? O.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
                                                     size: 24,
@@ -106,7 +106,7 @@ let T = (e) => {
     N = (e) => {
         var t;
         let { relationshipType: n, userId: r, showingBanner: l } = e,
-            a = null == (t = O.default.getUser(r)) ? void 0 : t.bot,
+            a = null == (t = j.default.getUser(r)) ? void 0 : t.bot,
             o = () => {
                 u.Z.addRelationship({
                     userId: r,
@@ -215,7 +215,7 @@ let T = (e) => {
                 isOptimisticAccepted: h,
                 isOptimisticRejected: f,
             } = (0, m.m)({
-                user: O.default.getUser(n),
+                user: j.default.getUser(n),
                 onError: l,
                 onAcceptSuccess: o,
                 onRejectSuccess: a,

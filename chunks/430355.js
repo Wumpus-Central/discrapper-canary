@@ -1,6 +1,5 @@
 e.exports = {
-    upsellOverlayContainer: "upsellOverlayContainer__0f7dc",
-    upsellOverlay: "upsellOverlay__0f7dc",
-    upsellImage: "upsellImage__0f7dc",
-    upsellTextContainer: "upsellTextContainer__0f7dc",
+    applicationStore: "applicationStore_f07d62",
+    marketingHeader: "marketingHeader_f07d62",
+    marketingFooter: "marketingFooter_f07d62",
 };

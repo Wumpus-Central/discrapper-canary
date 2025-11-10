@@ -14,11 +14,11 @@ var i = n(951288),
     g = n(486016),
     m = n(809357),
     y = n(624864),
-    _ = n(987650),
-    O = n(981631),
+    O = n(987650),
+    _ = n(981631),
     b = n(388032),
-    v = n(627641),
-    E = n(10198);
+    v = n(183322),
+    E = n(197571);
 function x(e, t, n) {
     return (
         t in e
@@ -34,14 +34,14 @@ function x(e, t, n) {
 }
 function S() {
     let e = p.default.getNotificationPositionMode(),
-        t = e !== O._vf.DISABLED,
+        t = e !== _._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    l.Z.track(O.rMx.OVERLAY_SETTINGS_UPDATED, {
+    l.Z.track(_.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
-        text_notifications_mode: y.Z.isNotificationDisabled(_.n0.TextChat) ? "DISABLED" : "ENABLED",
+        text_notifications_mode: y.Z.isNotificationDisabled(O.n0.TextChat) ? "DISABLED" : "ENABLED",
         text_opacity_slider: p.default.getTextWidgetOpacity(),
         hotkey: null != n ? (0, f.BB)(n.shortcut) : null,
         text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null,
@@ -49,7 +49,7 @@ function S() {
 }
 class Z extends r.PureComponent {
     componentDidMount() {
-        l.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
+        l.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
             destination_pane: "OVERLAY SETTINGS",
             origin_pane: null,
@@ -158,8 +158,8 @@ class Z extends r.PureComponent {
                 showKeybindIndicators: n,
                 shouldShowInviteNotification: r,
             } = this.props,
-            s = !y.Z.isNotificationDisabled(_.n0.TextChat),
-            a = e !== O._vf.DISABLED;
+            s = !y.Z.isNotificationDisabled(O.n0.TextChat),
+            a = e !== _._vf.DISABLED;
         return (0, i.jsxs)(o.C3N, {
             children: [
                 (0, i.jsx)(o.gNt, {
@@ -200,11 +200,11 @@ class Z extends r.PureComponent {
                     onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
                         {
-                            value: O.ipw.LARGE,
+                            value: _.ipw.LARGE,
                             name: b.intl.string(b.t.YcOxtr),
                         },
                         {
-                            value: O.ipw.SMALL,
+                            value: _.ipw.SMALL,
                             name: b.intl.string(b.t.BKIKqx),
                         },
                     ],
@@ -215,15 +215,15 @@ class Z extends r.PureComponent {
                     onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
                         {
-                            value: O.wC$.ALWAYS,
+                            value: _.wC$.ALWAYS,
                             name: b.intl.string(b.t.nBmDrT),
                         },
                         {
-                            value: O.wC$.ONLY_WHILE_SPEAKING,
+                            value: _.wC$.ONLY_WHILE_SPEAKING,
                             name: b.intl.string(b.t["2OvIZY"]),
                         },
                         {
-                            value: O.wC$.NEVER,
+                            value: _.wC$.NEVER,
                             name: b.intl.string(b.t.ekjlPL),
                         },
                     ],
@@ -234,11 +234,11 @@ class Z extends r.PureComponent {
                     onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
                         {
-                            value: O.OYC.ALWAYS,
+                            value: _.OYC.ALWAYS,
                             name: b.intl.string(b.t.nBmDrT),
                         },
                         {
-                            value: O.OYC.ONLY_WHILE_SPEAKING,
+                            value: _.OYC.ONLY_WHILE_SPEAKING,
                             name: b.intl.string(b.t["2OvIZY"]),
                         },
                     ],
@@ -320,9 +320,9 @@ function C(e) {
             displayNameMode: p.default.getDisplayNameMode(),
             displayUserMode: p.default.getDisplayUserMode(),
             notificationPositionMode: p.default.getNotificationPositionMode(),
-            textChatDisabled: y.Z.isNotificationDisabled(_.n0.TextChat),
+            textChatDisabled: y.Z.isNotificationDisabled(O.n0.TextChat),
             shouldShowKeybindIndicators: p.default.showKeybindIndicators,
-            shouldShowInviteNotification: !y.Z.isNotificationDisabled(_.n0.ActivityInvite),
+            shouldShowInviteNotification: !y.Z.isNotificationDisabled(O.n0.ActivityInvite),
         })),
         u = (0, m.Z)({ location: "Overlay Settings" });
     return (0, i.jsx)(Z, {

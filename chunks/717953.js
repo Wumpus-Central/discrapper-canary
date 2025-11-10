@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(24864),
+    b = n(531421),
     y = n(388032),
-    O = n(617385);
+    O = n(279457);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,

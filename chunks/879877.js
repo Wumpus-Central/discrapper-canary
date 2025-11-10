@@ -12,7 +12,7 @@ var r = n(951288),
     f = n(978369),
     p = n(286957),
     m = n(388032),
-    b = n(200344);
+    b = n(44258);
 function h(e) {
     var t;
     let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,

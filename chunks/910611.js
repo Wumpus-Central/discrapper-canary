@@ -24,8 +24,8 @@ var i = n(951288),
     v = n(484459),
     _ = n(699516),
     x = n(914010),
-    O = n(594174),
-    j = n(768581),
+    j = n(594174),
+    O = n(768581),
     E = n(63063),
     S = n(374386),
     P = n(946734),
@@ -36,14 +36,14 @@ var i = n(951288),
     A = n(981631),
     w = n(921944),
     M = n(388032),
-    R = n(161655);
+    R = n(97009);
 function L(e) {
     var t;
     let { channel: n, children: r } = e,
         l = (0, d.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
         [a, o] = (0, m.US)([s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == l) return null;
-    let p = j.ZP.getApplicationIconURL({
+    let p = O.ZP.getApplicationIconURL({
             id: l.id,
             icon: l.icon,
             size: 14,
@@ -275,25 +275,25 @@ function D(e) {
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, h.F6)(l, O.default, _.Z),
+                            children: (0, h.F6)(l, j.default, _.Z),
                         }),
                         (0, i.jsx)(T.Z.Caret, {}),
                     ],
                 });
             }
-            let j = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
+            let O = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     x,
-                    B(j ? null : b, M.intl.string(M.t["7Xm5QI"])),
+                    B(O ? null : b, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(T.Z.Title, {
                         level: C,
                         onContextMenu: d,
                         onClick: c,
                         className: a()({
                             [R.cursorPointer]: s,
-                            [R.forumPostTitle]: j,
-                            [R.forumPostSidebarTitle]: s && j,
+                            [R.forumPostTitle]: O,
+                            [R.forumPostSidebarTitle]: s && O,
                         }),
                         children: v,
                     }),
@@ -334,8 +334,8 @@ function D(e) {
 let k = (e) => {
     var t, n, l;
     let { channel: a } = e,
-        s = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
-        c = (0, o.e7)([O.default], () => O.default.getUser(a.getRecipientId())),
+        s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
+        c = (0, o.e7)([j.default], () => j.default.getUser(a.getRecipientId())),
         u = (0, S.G)(),
         d = (0, o.e7)([C.Z], () => (null != c ? C.Z.getUserProfile(c.id) : null)),
         h = null != d && (null != (t = null == d ? void 0 : d.fetchEndedAt) ? t : 0) > 0;

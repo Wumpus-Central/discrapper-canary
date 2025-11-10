@@ -5,7 +5,7 @@ var i = n(681715),
     a = n(481060),
     o = n(925329),
     s = n(388032),
-    l = n(386312);
+    l = n(56651);
 function c(e) {
     let { application: t, children: n } = e;
     return (0, r.jsx)(i.i_, {

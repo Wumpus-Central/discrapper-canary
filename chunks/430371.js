@@ -18,9 +18,9 @@ var i = n(951288),
     C = n(796638),
     v = n(981631),
     _ = n(354459),
-    x = n(450906),
-    O = n(74246);
-function j(e) {
+    x = n(394024),
+    j = n(597843);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -126,7 +126,7 @@ function I(e) {
             {
                 value: +!!et,
                 delay: ep || !et ? 0 : 100,
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
                 onStart: () => X(!0),
                 onChange: () => f.S.dispatch(v.CkL.REMEASURE_TARGET),
                 onRest: () => {
@@ -138,21 +138,21 @@ function I(e) {
         eg = (0, s.q_F)(
             {
                 value: +!!et,
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
             ef,
         ),
         eb = (0, s.q_F)(
             {
                 value: eu,
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
             (en === et && eg.value.idle && !el) || ea || eh ? "animate-never" : "animate-always",
         ),
         ey = (0, s.q_F)(
             {
                 value: n,
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
             ef,
         ),
@@ -160,7 +160,7 @@ function I(e) {
             R,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
                 initial: null,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
@@ -172,21 +172,21 @@ function I(e) {
             z(e), K(!1);
         }, []),
         e_ = et ? [] : (0, y.n3)(T, R, F),
-        { visibleParticipants: ex, participantTileWidth: eO } = (0, C.ZB)(k, N);
+        { visibleParticipants: ex, participantTileWidth: ej } = (0, C.ZB)(k, N);
     return (0, i.jsxs)("div", {
-        className: a()(O.root, x.flexCenter, D),
+        className: a()(j.root, x.flexCenter, D),
         children: [
             (0, i.jsxs)("div", {
-                className: O.tileWrapper,
+                className: j.tileWrapper,
                 style: { opacity: $ && q ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(o.animated.div, {
-                        className: O.videoFrame,
+                        className: j.videoFrame,
                         style: { top: eg.value.to((e) => (-e * P) / 2) },
                         children: [
                             (0, i.jsx)(o.animated.div, {
                                 style: { width: eb.value },
-                                className: O.videoWrapper,
+                                className: j.videoWrapper,
                                 children: (0, i.jsx)("div", {
                                     className: x.videoSizer,
                                     style: { aspectRatio: es },
@@ -222,7 +222,7 @@ function I(e) {
                             }),
                             er
                                 ? (0, i.jsx)(o.animated.div, {
-                                      className: a()(O.actionRow, { [O.idle]: H }),
+                                      className: a()(j.actionRow, { [j.idle]: H }),
                                       style: { bottom: ey.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: M.id,
@@ -234,7 +234,7 @@ function I(e) {
                         ],
                     }),
                     (0, i.jsx)(o.animated.div, {
-                        className: O.participantsWrapperAnimated,
+                        className: j.participantsWrapperAnimated,
                         style: {
                             translateY: em.value.to((e) => (e * P) / 2),
                             opacity: em.value,
@@ -246,7 +246,7 @@ function I(e) {
                             onContextMenu: I,
                             onDoubleClick: Z,
                             participants: ex,
-                            participantTileWidth: eO,
+                            participantTileWidth: ej,
                             selectedParticipantId: R.id,
                             inCall: w,
                             popoutType: A,

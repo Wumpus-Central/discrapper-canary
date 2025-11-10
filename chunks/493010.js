@@ -16,7 +16,7 @@ var i = n(951288),
     b = n(981631),
     y = n(921944),
     C = n(388032),
-    v = n(229);
+    v = n(952899);
 let _ = function (e) {
     let { channel: t, guild: n, maxWidth: _ } = e;
     r.useEffect(() => {
@@ -25,7 +25,7 @@ let _ = function (e) {
     let x = r.useCallback(() => {
             o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
-        O = (0, i.jsx)(h.ZP.Icon, {
+        j = (0, i.jsx)(h.ZP.Icon, {
             icon: a.Dio,
             tooltip: C.intl.string(C.t.cpT0Cq),
             onClick: x,
@@ -40,7 +40,7 @@ let _ = function (e) {
                 draftType: f.d.ChannelMessage,
             }),
             (0, i.jsxs)(h.ZP, {
-                toolbar: O,
+                toolbar: j,
                 "aria-label": C.intl.string(C.t.BIYAqa),
                 children: [
                     (0, i.jsx)(h.ZP.ChannelIcon, {

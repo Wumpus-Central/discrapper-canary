@@ -26,7 +26,7 @@ var r = n(951288),
     j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(77902);
+    E = n(915087);
 function S(e) {
     var t, n, l, a, y, S, P;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,

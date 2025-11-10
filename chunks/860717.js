@@ -26,7 +26,7 @@ var r = n(951288),
     S = n(750312),
     E = n(919498),
     T = n(388032),
-    C = n(895652);
+    C = n(18827);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -357,11 +357,11 @@ function W(e) {
 }
 function z() {
     let e = (function () {
-            let e = i.useContext(V);
+            let e = i.useContext(q);
             if (null == e) throw Error("ApplicationWidgetContext provider not found");
             return e;
         })(),
-        { game: t } = X(e.widget);
+        { game: t } = Y(e.widget);
     return null == t
         ? null
         : (0, r.jsx)(E.Z, {
@@ -394,7 +394,7 @@ function K(e, t) {
     }
     return r;
 }
-function Y(e, t) {
+function V(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
     let i = null == (r = e.match(N)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
@@ -402,8 +402,8 @@ function Y(e, t) {
     let a = t.variables[i];
     return null == a || "unfurled_media" !== a.type ? null : a.media;
 }
-let V = i.createContext(null);
-function X(e) {
+let q = i.createContext(null);
+function Y(e) {
     return (0, o.cj)([g.Z, w.Z, P.Z], () => {
         let t = g.Z.getApplication(e.applicationId);
         return {
@@ -413,7 +413,7 @@ function X(e) {
         };
     });
 }
-function q(e) {
+function X(e) {
     let { children: t, widget: n } = e;
     return (0, r.jsx)(b.am.Root, {
         containerInnerWidth: 396,
@@ -472,7 +472,7 @@ function J(e) {
 let Q = Object.assign(
     function (e) {
         let { user: t, widget: n, cta: a, subtle: u = !1 } = e,
-            { application: g, game: m, config: b } = X(n),
+            { application: g, game: m, config: b } = Y(n),
             h = null == g ? void 0 : g.getIconURL(16),
             y = (0, x.O)(t.id).data,
             v = null == y ? void 0 : y.find((e) => e.application_id === n.applicationId),
@@ -589,7 +589,7 @@ let Q = Object.assign(
                                 type: "HERO",
                                 body: n.body.map(t),
                                 title: K(n.title, e),
-                                image: Y(n.image, e),
+                                image: V(n.image, e),
                                 imagePlaceholder: null == (r = e.config) ? void 0 : r.hero_placeholder_image,
                             };
                         case "GRID":
@@ -612,7 +612,7 @@ let Q = Object.assign(
                             return {
                                 type: "TEXT_WITH_IMAGE",
                                 content: K(n.content, e),
-                                image: Y(n.image, e),
+                                image: V(n.image, e),
                                 imagePosition: n.imagePosition,
                             };
                         case "SEPARATOR":
@@ -638,9 +638,9 @@ let Q = Object.assign(
                           })
                         : null,
                 children: [
-                    (0, r.jsx)(V.Provider, {
+                    (0, r.jsx)(q.Provider, {
                         value: e,
-                        children: (0, r.jsx)(q, {
+                        children: (0, r.jsx)(X, {
                             widget: n,
                             children: (0, r.jsx)(R, { component: M }),
                         }),

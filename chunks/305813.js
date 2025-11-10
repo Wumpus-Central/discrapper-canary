@@ -24,9 +24,9 @@ var l = n(951288),
     N = n(63063),
     y = n(981631),
     k = n(671955),
-    O = n(593082),
+    O = n(352609),
     T = n(388032),
-    E = n(43659);
+    E = n(270816);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,15 +84,15 @@ function A(e) {
         M = (0, s.wjy)(Z),
         [G, Y] = (0, o.useState)(M),
         H = (0, S.ZP)(t.id, null),
-        { bannerSrc: F } = (0, j.Z)({
+        { bannerSrc: z } = (0, j.Z)({
             displayProfile: H,
             size: 413,
             canAnimate: !1,
         }),
-        z = (0, a.cj)([v.Z, d.Z], () => (null == n ? v.Z.getAllPending() : d.Z.getAllPending())),
+        F = (0, a.cj)([v.Z, d.Z], () => (null == n ? v.Z.getAllPending() : d.Z.getAllPending())),
         U = (0, _.SD)({
             userId: t.id,
-            image: z.pendingAvatar,
+            image: F.pendingAvatar,
         }),
         { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
         V = null != K ? (0, g.Pb)(K) : void 0;
@@ -128,7 +128,7 @@ function A(e) {
                     innerClassName: E.closeButton,
                 }),
             }),
-            null != F &&
+            null != z &&
                 (0, l.jsx)(C.Z, {
                     user: t,
                     displayProfile: H,
@@ -137,7 +137,7 @@ function A(e) {
                     forceUserTheme: !0,
                     children: (0, l.jsx)("div", {
                         className: E.bannerBackground,
-                        style: { backgroundImage: "url(".concat(F, ")") },
+                        style: { backgroundImage: "url(".concat(z, ")") },
                     }),
                 }),
             (0, l.jsx)(s.f6W, {
@@ -155,7 +155,7 @@ function A(e) {
                                             user: t,
                                             guild: n,
                                         },
-                                        z,
+                                        F,
                                     ),
                                     {
                                         pendingAvatar: U,

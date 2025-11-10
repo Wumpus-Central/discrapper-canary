@@ -1,6 +1,6 @@
 n.d(t, {
     QR: () => y,
-    Yj: () => _,
+    Yj: () => O,
     ZP: () => b,
 });
 var i,
@@ -11,8 +11,8 @@ var i,
     a = n(481060),
     c = n(294033),
     d = n(388032),
-    u = n(681212),
-    p = n(10198);
+    u = n(866497),
+    p = n(197571);
 function h(e, t, n) {
     return (
         t in e
@@ -51,12 +51,12 @@ let f = (e) => e.stopPropagation(),
                     ),
             }),
         }),
-    _ = (e, t) =>
+    O = (e, t) =>
         (0, r.jsx)("div", {
             className: u.hintSubtleText,
             children: t,
         });
-class O extends (i = s.PureComponent) {
+class _ extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -261,9 +261,9 @@ class O extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-h(O, "defaultProps", {
+h(_, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let b = O;
+let b = _;

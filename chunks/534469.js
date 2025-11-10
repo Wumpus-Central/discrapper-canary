@@ -23,8 +23,8 @@ var i = n(951288),
     v = n(869765),
     _ = n(703656),
     x = n(695346),
-    O = n(592125),
-    j = n(906467),
+    j = n(592125),
+    O = n(906467),
     E = n(323873),
     S = n(709054),
     P = n(786761),
@@ -50,7 +50,7 @@ var i = n(951288),
     q = n(959517),
     K = n(981631),
     Y = n(388032),
-    X = n(5898);
+    X = n(360514);
 function J() {
     return (J =
         Object.assign ||
@@ -196,7 +196,7 @@ function ei(e) {
             compact: b = !1,
             className: y,
             groupId: C,
-            viewingChannelId: O,
+            viewingChannelId: j,
         } = e,
         E = o.type === K.uaV.REPLY ? o.messageReference : void 0,
         S = (0, c.JA)(null != (t = e.id) ? t : ""),
@@ -221,7 +221,7 @@ function ei(e) {
         ec = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         eu = J || (ec && k),
         ed = eu || es,
-        ep = (0, u.e7)([j.Z], () => j.Z.isDeveloper),
+        ep = (0, u.e7)([O.Z], () => O.Z.isDeveloper),
         { content: eh, hasSpoilerEmbeds: ef } = (0, D.Z)(o, {
             hideSimpleEmbedContent: en && ei,
             isInteracting: ed,
@@ -231,7 +231,7 @@ function ei(e) {
             allowLinks: !0,
             allowDevLinks: ep,
             previewLinkTarget: !0,
-            viewingChannelId: O,
+            viewingChannelId: j,
         }),
         em = (0, R.Z)(s, h, ec),
         eg = (0, T.ZP)(o),
@@ -344,14 +344,14 @@ let er = r.memo(function (e) {
             handleMouseEnter: ev,
             handleMouseLeave: e_,
             hasHovered: ex,
-            isHovered: eO,
+            isHovered: ej,
         } = (0, M.tn)({
             groupId: el,
             message: _,
             defaultValue: eg,
             popouts: em,
         }),
-        { isFocused: ej, hasFocused: eE, handleFocus: eS, handleBlur: eP } = (0, M.bb)(ec),
+        { isFocused: eO, hasFocused: eE, handleFocus: eS, handleBlur: eP } = (0, M.bb)(ec),
         eI = r.useCallback(
             (e) => {
                 eS(e), ev(e);
@@ -366,15 +366,15 @@ let er = r.memo(function (e) {
         ),
         eT = (0, u.e7)([E.Z], () => E.Z.isEditing(et, I), [et, I]),
         eN = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        eA = eg || eT || (eN && ej),
-        ew = eA || eO,
+        eA = eg || eT || (eN && eO),
+        ew = eA || ej,
         eM = (0, u.e7)(
-            [O.Z],
-            () => _.hasFlag(K.iLy.HAS_THREAD) && O.Z.getChannel(S.default.castMessageIdAsChannelId(_.id)),
+            [j.Z],
+            () => _.hasFlag(K.iLy.HAS_THREAD) && j.Z.getChannel(S.default.castMessageIdAsChannelId(_.id)),
         ),
         eR = _.isFirstMessageInForumPost(J),
         eL = (0, m.A)((null != (n = _.editedTimestamp) ? n : _.timestamp).valueOf()),
-        eD = (0, u.e7)([j.Z], () => j.Z.isDeveloper),
+        eD = (0, u.e7)([O.Z], () => O.Z.isDeveloper),
         { content: ek, hasSpoilerEmbeds: eU } = (0, D.Z)(_, {
             hideSimpleEmbedContent: ep && eh,
             isInteracting: ew,
@@ -427,7 +427,7 @@ let er = r.memo(function (e) {
                         (0, i.jsx)(g.Z, {
                             compact: en,
                             message: _,
-                            hovering: eO && !eT && !eJ,
+                            hovering: ej && !eT && !eJ,
                         }),
                     (0, i.jsx)(
                         A.Z,
@@ -499,7 +499,7 @@ let er = r.memo(function (e) {
                                           buttonProps: e,
                                           setPopout: eb,
                                           messagePopouts: em,
-                                          isFocused: eO || ej,
+                                          isFocused: ej || eO,
                                           messageWindow: eY.current,
                                       })
                                     : void 0,

@@ -19,8 +19,8 @@ var i = n(951288),
     v = n(937111),
     _ = n(270801),
     x = n(652730),
-    O = n(41776),
-    j = n(657352),
+    j = n(41776),
+    O = n(657352),
     E = n(33154),
     S = n(144114),
     P = n(703656),
@@ -38,7 +38,7 @@ var i = n(951288),
     U = n(701488),
     B = n(815660),
     H = n(388032),
-    V = n(989028);
+    V = n(97508);
 function F(e, t, n) {
     return (
         t in e
@@ -122,7 +122,7 @@ class W extends r.PureComponent {
                 showLinkedLobbyApplicationLoadingIndicator: _,
                 requiredLinkedLobbyApplication: x,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: O, shouldShowLurkerModeSuccessPopout: j } = this.state,
+            { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: O } = this.state,
             E = {
                 theme: d,
                 useReducedMotion: b,
@@ -189,7 +189,7 @@ class W extends r.PureComponent {
             targetElementRef: this.textAreaContainerRef,
             position: "top",
             align: "left",
-            shouldShow: j,
+            shouldShow: O,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
@@ -204,7 +204,7 @@ class W extends r.PureComponent {
                                     ? (0, i.jsx)(c.yRy, {
                                           targetElementRef: this.upsellTargetRef,
                                           renderPopout: this.renderLurkerModeUpsellPopout,
-                                          shouldShow: O,
+                                          shouldShow: j,
                                           position: "top",
                                           children: (e) =>
                                               (0, i.jsx)(
@@ -237,7 +237,7 @@ class W extends r.PureComponent {
                     { guild: n } = this.props;
                 return (
                     a()(null != n, "This guildID cannot be null"),
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(O.Z, {
                         onClose: t,
                         guild: n,
                     })
@@ -380,7 +380,7 @@ function q(e) {
         c = (0, o.e7)([A.Z], () => A.Z.getCheck(a)),
         u = r.type === k.d4z.GUILD_ANNOUNCEMENT && null != s && s.features.has(k.GuildFeatures.NEWS),
         d = (0, o.e7)([Z.Z], () => (u ? Z.Z.getFollowerStatsForChannel(r.id) : null)),
-        p = (0, o.e7)([O.Z], () => O.Z.isLurking(a)),
+        p = (0, o.e7)([j.Z], () => j.Z.isLurking(a)),
         f = (0, o.e7)([M.default], () => M.default.getCurrentUser()),
         m = null != (t = null == f ? void 0 : f.isStaff()) && t,
         g = (0, o.e7)([T.ZP], () => {
@@ -389,7 +389,7 @@ function q(e) {
         }),
         b = !!(0, C.Dc)(s),
         _ = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),
-        j = (0, o.e7)([w.Z], () => w.Z.can(k.Plq.SEND_MESSAGES, r)),
+        O = (0, o.e7)([w.Z], () => w.Z.can(k.Plq.SEND_MESSAGES, r)),
         E = (0, o.e7)([v.Z], () => v.Z.getRequest(a)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, L.Z)(r.linkedLobby),
         D = z(G({}, c), {
@@ -399,7 +399,7 @@ function q(e) {
             shouldShowLurkerModeSuccessPopout: _,
             showLurkerModeUpsellPopout: p && null != s && R.Uu(k.Plq.SEND_MESSAGES, r),
             theme: I.Z.theme,
-            canSendMessages: j,
+            canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: b,
             showMemberVerificationModal: g && b,

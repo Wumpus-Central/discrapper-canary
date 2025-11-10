@@ -3,7 +3,7 @@ var i = n(951288);
 n(647438);
 var l = n(120356),
     r = n.n(l),
-    s = n(189651);
+    s = n(56589);
 function a(e) {
     let { icon: t, iconClassName: n, description: l, color: a } = e;
     return (0, i.jsxs)("div", {

@@ -276,7 +276,7 @@ function eZ(e) {
         ),
         d = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("91315"), n.e("91792")]).then(n.bind(n, 223901));
+                let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
                 return (t) => (0, r.jsx)(e, eD({ channel: a }, t));
             });
         }, [a]),
@@ -286,7 +286,7 @@ function eZ(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("68869")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("43233")]).then(
                             n.bind(n, 422200),
                         );
                         return (t) => (0, r.jsx)(e, eL(eD({}, t), { channel: a }));
@@ -585,7 +585,7 @@ function e1(e) {
         usernameHook: a,
     });
 }
-function e2(e) {
+function e3(e) {
     var t, n;
     let { message: i, channel: s, compact: c } = e,
         u = (0, ee.l)({
@@ -623,7 +623,7 @@ function e2(e) {
         ],
     });
 }
-function e3(e) {
+function e2(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(_.Z, {
         message: t,
@@ -761,13 +761,13 @@ let ti = Object.freeze({
     [eN.uaV.STAGE_START]: eJ,
     [eN.uaV.STAGE_END]: e$,
     [eN.uaV.STAGE_SPEAKER]: e1,
-    [eN.uaV.STAGE_RAISE_HAND]: e2,
+    [eN.uaV.STAGE_RAISE_HAND]: e3,
     [eN.uaV.STAGE_TOPIC]: e0,
     [eN.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.Z,
     [eN.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: C.P,
     [eN.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: C.e,
     [eN.uaV.PREMIUM_REFERRAL]: tt,
-    [eN.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e3,
+    [eN.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e2,
     [eN.uaV.CUSTOM_GIFT]: void 0,
     [eN.uaV.GUILD_GAMING_STATS_PROMPT]: e4,
     [eN.uaV.VOICE_HANGOUT_INVITE]: void 0,

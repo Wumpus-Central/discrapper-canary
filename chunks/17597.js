@@ -17,9 +17,9 @@ var a = n(951288),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(953334),
+    _ = n(153177),
     y = n(388032),
-    C = n(450192),
+    C = n(70402),
     S = n(736056);
 function E(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -45,10 +45,10 @@ function E(e) {
           : null;
 }
 let T = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: N } = e,
-        [O, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = r.useRef(O),
-        [w, k] = (0, c.US)([O], void 0, !0),
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: O } = e,
+        [N, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        I = r.useRef(N),
+        [w, k] = (0, c.US)([N], void 0, !0),
         R = r.useMemo(() => (0, i.Z)(), []),
         A = r.useRef(!1),
         Z = (0, m.GE)();
@@ -62,7 +62,7 @@ let T = function (e) {
         onMethodClick: () => {
             P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: N,
+        classificationId: O,
     });
     return (
         r.useLayoutEffect(

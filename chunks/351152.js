@@ -16,8 +16,8 @@ var i = n(120356),
     _ = n(102172),
     g = n(148381),
     x = n(388032),
-    v = n(79985),
-    j = n(324680);
+    v = n(542257),
+    j = n(949678);
 function b(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
