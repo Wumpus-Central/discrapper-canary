@@ -10,7 +10,6 @@ e.exports = {
     fullWidthShinyCtaButtonWrapper: "fullWidthShinyCtaButtonWrapper__2055a",
     ctaButtonWrapper: "ctaButtonWrapper__2055a",
     learnMoreLink: "learnMoreLink__2055a",
-    ctaTooltipText: "ctaTooltipText__2055a",
     root: "root__2055a",
     rewardTileWrapper: "rewardTileWrapper__2055a",
     rewardTileExpired: "rewardTileExpired__2055a",
