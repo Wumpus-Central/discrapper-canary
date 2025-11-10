@@ -3,15 +3,15 @@ var r = n(951288);
 n(647438);
 var i = n(793030),
     o = n(442837),
-    l = n(194983),
+    l = n(681715),
     a = n(481060),
-    s = n(834129),
+    s = n(318713),
     c = n(271383),
     u = n(709054),
     d = n(884902),
-    p = n(459196),
+    p = n(789142),
     f = n(388032),
-    m = n(238937);
+    m = n(503142);
 function g(e) {
     let { boost: t } = e,
         n = new Date(u.default.extractTimestamp(t.id)),
@@ -30,35 +30,43 @@ function g(e) {
             };
         }, [t]),
         _ = (0, d.X7)(t.guildId, t.userId, null != x ? x : null);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsxs)("div", {
         className: m.systemMessageContainer,
-        contentClassName: m.systemMessageContent,
-        iconNode: (0, r.jsx)(a.Ucv, {
-            className: m.icon,
-            color: "currentColor",
-            size: "sm",
-        }),
-        iconContainerClassName: m.iconContainer,
-        timestampClassName: m.timestamp,
-        timestamp: n,
-        timestampFormat: "L",
-        compact: !0,
-        children: (0, r.jsxs)("span", {
-            className: m.boostMessage,
-            children: [
-                (0, r.jsx)(a.PUh, {
-                    className: m.boostMessageUser,
-                    variant: "text-md/semibold",
-                    name: g,
-                    colorString: null != v ? v : null,
-                    colorStrings: _,
-                }),
-                (0, r.jsx)(i.xvT, {
+        children: [
+            (0, r.jsx)(a.Ucv, {
+                className: m.icon,
+                color: "currentColor",
+                size: "sm",
+            }),
+            (0, r.jsx)("span", {
+                className: m.boostMessage,
+                children: (0, r.jsxs)(i.xvT, {
+                    tag: "span",
                     variant: "text-md/medium",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: f.intl.string(p.default.plwH8d) }),
+                    children: [
+                        (0, r.jsx)(l.u, {
+                            text: g,
+                            shouldShow: !0,
+                            asContainer: !0,
+                            delay: 1000,
+                            children: (0, r.jsx)(a.PUh, {
+                                className: m.boostMessageUser,
+                                variant: "text-md/semibold",
+                                name: g,
+                                colorString: null != v ? v : null,
+                                colorStrings: _,
+                            }),
+                        }),
+                        f.intl.string(p.default.plwH8d),
+                    ],
                 }),
-            ],
-        }),
+            }),
+            (0, r.jsx)(s.Z, {
+                timestamp: n,
+                timestampFormat: "L",
+                className: m.timestamp,
+            }),
+        ],
     });
 }
