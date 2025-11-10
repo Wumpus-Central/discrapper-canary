@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(594174),
     v = n(100604),
     I = n(694784),
-    T = n(39154),
-    S = n(245216),
+    S = n(39154),
+    T = n(245216),
     A = n(388032),
-    C = n(823914);
+    C = n(761053);
 function N() {
     return (0, r.jsxs)("div", {
         className: C.headerContainer,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(T.Z, {
                 size: "xs",
                 className: C.headerIcon,
                 color: l.Z.colors.TEXT_LOW_CONTRAST,
@@ -59,6 +59,7 @@ function R(e) {
         : (0, r.jsxs)(c.P3F, {
               className: C.footerContainer,
               onClick: p,
+              "aria-label": _.accessibilityLabel,
               children: [
                   null != _.originIconUrl
                       ? (0, r.jsx)("img", {
@@ -83,7 +84,7 @@ function R(e) {
 function P(e) {
     var t;
     let { message: n, snapshot: a, index: s } = e,
-        l = i.useMemo(() => (0, T.Z)(n, a), [n, a]),
+        l = i.useMemo(() => (0, S.Z)(n, a), [n, a]),
         c = h.RS.useSetting(),
         u = h.NA.useSetting(),
         E = c && u,
@@ -100,7 +101,7 @@ function P(e) {
             previewLinkTarget: !0,
         }),
         I = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id)),
-        S = h.jU.useSetting();
+        T = h.jU.useSetting();
     return null == I
         ? null
         : (0, r.jsxs)(
@@ -116,13 +117,13 @@ function P(e) {
                               (0, r.jsx)(f.ZP, {
                                   message: l,
                                   content: O,
-                                  compact: S,
+                                  compact: T,
                               }),
                               (0, p.Z)({
                                   channelMessageProps: {
                                       message: l,
                                       channel: I,
-                                      compact: S,
+                                      compact: T,
                                   },
                                   hasSpoilerEmbeds: v,
                                   isInteracting: !1,
