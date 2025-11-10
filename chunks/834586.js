@@ -7,5 +7,5 @@ e.exports = {
     partnerCopyContainer: "partnerCopyContainer__7eb2b",
     partnerGameTile: "partnerGameTile__7eb2b",
     partnerTitle: "partnerTitle__7eb2b",
-    partnerCtaContainer: "partnerCtaContainer__7eb2b",
+    bottomContainer: "bottomContainer__7eb2b",
 };

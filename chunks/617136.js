@@ -44,7 +44,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -111,7 +111,7 @@ function D(e, t, n) {
     var r, i;
     let a = y.r.build(e.config),
         s = (0, o.Gy)(n).uuid;
-    return T(
+    return S(
         {
             quest_id: e.id,
             quest_type: a.questType,
@@ -144,7 +144,7 @@ function L(e) {
         s = m.Z.quests.get(t);
     if (null == s || ((0, b.X)({ location: O.dr.QUEST_PREVIEW_TOOL }) && d.Z.getLayers().includes(v.S9g.USER_SETTINGS)))
         return;
-    let c = T({}, D(s, o, a), r);
+    let c = S({}, D(s, o, a), r);
     if ((u.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, c), s.preview)) return;
     let _ = N.has(n);
     if (i) return l.ZP.trackWithMetadata(n, c, _);
@@ -180,6 +180,7 @@ var M = (function (e) {
         (e.OPEN_QUEST_HOME = "OPEN_QUEST_HOME"),
         (e.QUEST_BAR_COPY_LINK = "QUEST_BAR.COPY_LINK"),
         (e.CONTEXT_MENU_COPY_LINK = "CONTEXT_MENU.COPY_LINK"),
+        (e.REWARD_MODAL_COPY_LINK = "REWARD_MODAL.COPY_LINK"),
         (e.CONTEXT_MENU_HIDE_CONTENT = "CONTEXT_MENU.HIDE_CONTENT"),
         (e.CONTEXT_MENU_OPEN_GAME_LINK = "CONTEXT_MENU.OPEN_GAME_LINK"),
         (e.CONTEXT_MENU_OPEN_DISCLOSURE = "CONTEXT_MENU.OPEN_DISCLOSURE"),
@@ -225,7 +226,7 @@ async function j(e) {
     L({
         questId: t,
         event: v.rMx.QUEST_CONTENT_CLICKED,
-        properties: A(T({}, x(n, o, s), (0, c.Z)()), {
+        properties: A(S({}, x(n, o, s), (0, c.Z)()), {
             cta_name: r,
             quest_status: null != f ? P(f) : null,
             impression_id: l,
@@ -258,7 +259,7 @@ function U() {
     let e = (0, p.WD)();
     return r.useCallback(
         (t) => {
-            L(A(T({}, t), { properties: A(T({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
+            L(A(S({}, t), { properties: A(S({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
         },
         [e],
     );
@@ -282,7 +283,7 @@ function G() {
                 e({
                     questId: n,
                     event: v.rMx.QUEST_CONTENT_CLICKED,
-                    properties: A(T({}, x(r, s, l), (0, c.Z)()), {
+                    properties: A(S({}, x(r, s, l), (0, c.Z)()), {
                         cta_name: o,
                         quest_status: null != f ? P(f) : null,
                         click_id: (0, i.Z)(),
