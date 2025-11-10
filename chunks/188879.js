@@ -16,13 +16,13 @@ var i = n(951288),
     y = n(788080),
     _ = n(451284),
     b = n(613734),
-    E = n(846488),
-    v = n(384725),
+    v = n(846488),
+    E = n(384725),
     x = n(97568),
     j = n(800530),
     O = n(981631),
     A = n(388032),
-    P = n(586449);
+    P = n(642527);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -251,9 +251,9 @@ let T = (e) => {
             N = (0, d.e7)([g.Z], () => g.Z.getAppealEligibility()),
             I = (0, _.P)(),
             k = null != p && null != p.flagged_content && p.flagged_content.length > 0,
-            Z = (0, E.e)(),
+            Z = (0, v.e)(),
             M = !!(null == p ? void 0 : p.is_coppa) && N.includes(h.tG.AGE_VERIFY_ELIGIBLE),
-            R = M && N.includes(h.tG.AGE_VERIFY_GLOBAL_ELIGIBLE),
+            R = !!(null == p ? void 0 : p.is_coppa) && N.includes(h.tG.AGE_VERIFY_GLOBAL_ELIGIBLE),
             H = {
                 accountStanding: I,
                 classificationId: n,
@@ -325,12 +325,13 @@ let T = (e) => {
                                                 is_dsa_eligible: w,
                                                 violation_type: L,
                                             }),
-                                                M
-                                                    ? R
-                                                        ? f.Z.openV2(n, c)
-                                                        : f.Z.open(n, c)
-                                                    : C &&
-                                                      (u.Z.increment({ name: s.V.APPEAL_INGESTION_VIEW }), v.Z.open(n));
+                                                R
+                                                    ? f.Z.openV2(n, c)
+                                                    : M
+                                                      ? f.Z.open(n, c)
+                                                      : C &&
+                                                        (u.Z.increment({ name: s.V.APPEAL_INGESTION_VIEW }),
+                                                        E.Z.open(n));
                                         },
                                         isAppealEligible: C || M,
                                     }),
