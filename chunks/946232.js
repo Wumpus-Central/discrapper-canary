@@ -26,8 +26,6 @@ e.exports = {
     videoControlsBtnCont: "videoControlsBtnCont_de2fa0",
     videoControlsBtn: "videoControlsBtn_de2fa0",
     videoControlsBtnContDisabled: "videoControlsBtnContDisabled_de2fa0",
-    videoControlsBtnTooltip: "videoControlsBtnTooltip_de2fa0",
-    videoControlsBtnTooltipKeyCombo: "videoControlsBtnTooltipKeyCombo_de2fa0",
     volumeControlGroup: "volumeControlGroup_de2fa0",
     controlsBarItem: "controlsBarItem_de2fa0",
     controlsBarItemActive: "controlsBarItemActive_de2fa0",

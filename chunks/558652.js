@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(843611),
@@ -9,13 +9,13 @@ var r = n(951288),
     u = n(710914),
     d = n(46140),
     p = n(388032),
-    f = n(872058);
-let m = [];
-function h() {
+    f = n(937018);
+let h = [];
+function g() {
     let [e, t] = i.useState(d.yq.SUGGESTED),
-        [n, h] = i.useState(m),
+        [n, g] = i.useState(h),
         {
-            quests: g,
+            quests: m,
             isFetchingCurrentQuests: _,
             hasFetched: b,
         } = (0, s.bA)(
@@ -29,18 +29,18 @@ function h() {
             ),
         ),
         E = i.useCallback(() => {
-            h(m);
+            g(h);
         }, []),
         O = i.useRef(null),
-        I = i.useRef(null),
-        y = (0, l.TH)(),
-        v = (0, l.k6)();
+        y = i.useRef(null),
+        v = (0, l.TH)(),
+        I = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== y.hash && null != O.current && null != I.current) {
+            if ("" !== v.hash && null != O.current && null != y.current) {
                 var t, r;
-                (e !== O.current || n !== I.current) &&
-                    v.replace(
+                (e !== O.current || n !== y.current) &&
+                    I.replace(
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +65,7 @@ function h() {
                                     });
                             }
                             return e;
-                        })({}, y)),
+                        })({}, v)),
                         (r = r = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -82,17 +82,17 @@ function h() {
                         t),
                     );
             }
-        }, [e, n, y, v]),
+        }, [e, n, v, I]),
         i.useEffect(() => {
             O.current = e;
         }, [e]),
         i.useEffect(() => {
-            I.current = n;
+            y.current = n;
         }, [n]),
         (0, s.SU)({
             selectedSortMethod: e,
             selectedFilters: n,
-            numQuestsVisible: g.length,
+            numQuestsVisible: m.length,
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -112,8 +112,7 @@ function h() {
                                     selectedSortMethod: e,
                                 }),
                                 (0, r.jsx)(o.Z, {
-                                    onChange: h,
-                                    optionClassName: f.filterSortOption,
+                                    onChange: g,
                                     selectedFilters: n,
                                 }),
                             ],
@@ -121,7 +120,7 @@ function h() {
                     ],
                 }),
                 (0, r.jsx)(u.Z, {
-                    quests: g,
+                    quests: m,
                     isFetching: _,
                     hasFetched: b,
                     hasFiltersApplied: n.length > 0,

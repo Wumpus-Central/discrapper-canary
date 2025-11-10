@@ -1,66 +1,59 @@
 n.d(t, { Z: () => d }), n(388685);
-var r = n(951288);
-n(647438);
-var i = n(755721),
+var r = n(951288),
+    i = n(647438),
     l = n(481060),
     a = n(509212),
     s = n(113434),
     o = n(670362),
     c = n(388032),
-    u = n(477813);
+    u = n(793384);
 let d = function (e) {
-    let { onChange: t, optionClassName: n, selectedFilters: d } = e,
-        p = (0, s.N8)();
+    let { onChange: t, selectedFilters: n } = e,
+        d = (0, s.N8)(),
+        p = i.useCallback(
+            (e) => (r) => {
+                let i = e.filter((e) => r.includes(e.filter));
+                t([...n.filter((t) => !e.some((e) => e.filter === t.filter)), ...i]);
+            },
+            [n, t],
+        );
     return (0, r.jsx)(o.Z, {
-        renderPopout: (e, s) => {
-            let { closePopout: f } = e;
+        renderPopout: (e, i) => {
+            let { closePopout: s } = e;
             return (0, r.jsxs)("div", {
                 children: [
-                    p.map((e, c) =>
-                        (0, r.jsxs)(
+                    d.map((e, t) => {
+                        let s = e.options.map((e) => ({
+                                label: (0, a.Nt)(e.filter),
+                                value: e.filter,
+                            })),
+                            c = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
+                        return (0, r.jsxs)(
                             "div",
                             {
                                 className: u.filterOptionGroup,
                                 children: [
                                     (0, r.jsx)(o.g, {
-                                        id: s,
+                                        id: i,
                                         children: e.heading,
                                     }),
-                                    e.options.map((e, s) =>
-                                        (0, r.jsx)(
-                                            i.$q,
-                                            {
-                                                className: n,
-                                                innerClassName: u.checkboxInput,
-                                                onChange: (n) => {
-                                                    t(
-                                                        n.currentTarget.checked
-                                                            ? [...d, e]
-                                                            : d.filter((t) => t.filter !== e.filter),
-                                                    );
-                                                },
-                                                reverse: !0,
-                                                type: i.M0.INVERTED,
-                                                value: -1 !== d.findIndex((t) => t.filter === e.filter),
-                                                children: (0, r.jsx)(l.Text, {
-                                                    variant: "text-md/normal",
-                                                    children: (0, a.Nt)(e.filter),
-                                                }),
-                                            },
-                                            s,
-                                        ),
-                                    ),
+                                    (0, r.jsx)(l.cOn, {
+                                        "aria-labelledby": i,
+                                        options: s,
+                                        selectedValues: c,
+                                        onChange: p(e.options),
+                                    }),
                                 ],
                             },
-                            c,
-                        ),
-                    ),
+                            t,
+                        );
+                    }),
                     (0, r.jsx)("div", {
                         className: u.filterOptionGroup,
                         children: (0, r.jsx)(l.Button, {
                             fullWidth: !0,
                             onClick: () => {
-                                t([]), f();
+                                t([]), s();
                             },
                             size: "sm",
                             text: c.intl.string(c.t.VkKicb),
@@ -71,10 +64,10 @@ let d = function (e) {
             });
         },
         children: (e, t) => {
-            var n, i;
+            var i, a;
             return (0, r.jsx)(
                 l.Button,
-                ((n = (function (e) {
+                ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -99,17 +92,17 @@ let d = function (e) {
                     }
                     return e;
                 })({}, e)),
-                (i = i =
+                (a = a =
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: c.intl.formatToPlainString(c.t.CEfkXl, { numSelectedFilters: d.length }),
+                        text: c.intl.formatToPlainString(c.t.CEfkXl, { numSelectedFilters: n.length }),
                         icon: l.gXV,
                         iconPosition: "end",
                         variant: "secondary",
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -117,10 +110,10 @@ let d = function (e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                n),
+                i),
             );
         },
     });
