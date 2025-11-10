@@ -28,7 +28,7 @@ var l = n(311570),
     I = n(215023),
     T = n(474936),
     L = n(388032),
-    B = n(192676);
+    B = n(660606);
 let P = (e) => {
         let {
                 product: t,
@@ -233,66 +233,67 @@ let P = (e) => {
                 null != C.Z.isClaiming && C.Z.isClaiming !== t.skuId,
             ]),
             { handleUseNow: K, isApplying: Y } = (0, b.W)({ product: t });
-        return null != s
-            ? (0, r.jsx)(Z, {
-                  onClick: s,
-                  skuId: t.skuId,
-                  text: c,
-              })
-            : !S || h || k
-              ? !T || I
-                  ? (0, r.jsx)(N, {
-                        handlePreviewButtonClick: U,
-                        text: c,
-                    })
-                  : m
-                    ? (0, r.jsx)(R, {
-                          handleUseNow: K,
-                          isApplying: Y,
-                          text: c,
-                      })
-                    : S
-                      ? (0, r.jsx)(w, {
-                            product: t,
-                            isClaimPremiumProductDisabled: G,
-                            isClaiming: z,
-                            analyticsLocations: V,
-                            text: c,
-                            onClickAnalytics: d,
-                        })
-                      : M && F
-                        ? (0, r.jsx)(H, {
-                              product: t,
-                              checkoutEligiblePrices: W,
-                              analyticsLocations: V,
-                              selectedVariantIndex: l,
-                              text: c,
-                              onClickAnalytics: d,
-                          })
-                        : M && !F
-                          ? (0, r.jsx)(N, {
-                                handlePreviewButtonClick: U,
-                                text: c,
-                            })
-                          : u === x.tA.ORBS
-                            ? (0, r.jsx)(D, {
-                                  handlePreviewButtonClick: U,
-                                  text: c,
-                              })
-                            : (0, r.jsx)(P, {
-                                  product: t,
-                                  cardRef: n,
-                                  isPremiumUser: h,
-                                  analyticsLocations: V,
-                                  selectedVariantIndex: l,
-                                  hasDiscountOffer: B,
-                                  discountOfferAmount: L,
-                                  text: c,
-                              })
-              : (0, r.jsx)(A, {
-                    isClaimPremiumProductDisabled: G,
+        if (null != s)
+            return (0, r.jsx)(Z, {
+                onClick: s,
+                skuId: t.skuId,
+                text: c,
+            });
+        if (S && !h && !k)
+            return (0, r.jsx)(A, {
+                isClaimPremiumProductDisabled: G,
+                text: c,
+            });
+        if (!T || I)
+            return (0, r.jsx)(N, {
+                handlePreviewButtonClick: U,
+                text: c,
+            });
+        if (m)
+            return (0, r.jsx)(R, {
+                handleUseNow: K,
+                isApplying: Y,
+                text: c,
+            });
+        if (S)
+            return (0, r.jsx)(w, {
+                product: t,
+                isClaimPremiumProductDisabled: G,
+                isClaiming: z,
+                analyticsLocations: V,
+                text: c,
+                onClickAnalytics: d,
+            });
+        if (M && F)
+            return (0, r.jsx)(H, {
+                product: t,
+                checkoutEligiblePrices: W,
+                analyticsLocations: V,
+                selectedVariantIndex: l,
+                text: c,
+                onClickAnalytics: d,
+            });
+        if (M && !F)
+            if (W.length > 1)
+                return (0, r.jsx)(D, {
+                    handlePreviewButtonClick: U,
                     text: c,
                 });
+            else
+                return (0, r.jsx)(N, {
+                    handlePreviewButtonClick: U,
+                    text: c,
+                });
+        return (0, r.jsx)(P, {
+            product: t,
+            cardRef: n,
+            isPremiumUser: h,
+            analyticsLocations: V,
+            selectedVariantIndex: l,
+            hasDiscountOffer: B,
+            discountOfferAmount: L,
+            text: c,
+        });
     },
     F = (e) => {
         let { skuId: t, cardRef: n, onClick: l, text: i, prioritizedCurrency: s, onClickAnalytics: a } = e,
