@@ -971,6 +971,7 @@ function nr(e) {
         index: 0,
         name: e,
         disabled: !0,
+        guid: void 0,
         hardwareId: void 0,
         containerId: void 0,
     };
@@ -987,6 +988,7 @@ function ni(e, t) {
             name: e.name,
             disabled: !1,
             facing: e.facing,
+            guid: e.originalId,
             hardwareId: e.hardwareId,
             containerId: e.containerId,
         }))
