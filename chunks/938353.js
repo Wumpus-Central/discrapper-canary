@@ -30,8 +30,8 @@ var r,
     O = n(162297),
     v = n(222709),
     I = n(446411),
-    T = n(36129),
-    S = n(960904),
+    S = n(36129),
+    T = n(960904),
     A = n(161314),
     C = n(247206),
     N = n(629710),
@@ -84,8 +84,8 @@ var r,
     eO = n(630388),
     ev = n(709054),
     eI = n(591759),
-    eT = n(594173),
-    eS = n(169525),
+    eS = n(594173),
+    eT = n(169525),
     eA = n(786761),
     eC = n(161010),
     eN = n(255269),
@@ -112,7 +112,7 @@ var r,
     eq = n(981631),
     eX = n(474936),
     eQ = n(388032),
-    eJ = n(636428),
+    eJ = n(448494),
     e$ = n(680674);
 function e0(e, t, n) {
     return (
@@ -143,7 +143,7 @@ function e1(e) {
     }
     return e;
 }
-function e3(e, t) {
+function e2(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -155,12 +155,12 @@ function e3(e, t) {
     }
     return n;
 }
-function e2(e, t) {
+function e3(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : e3(Object(t)).forEach(function (n) {
+            : e2(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -259,13 +259,13 @@ class tn extends (r = a.Component) {
         let { message: e, channel: t, ctaButtonType: n } = this.props,
             r = null;
         switch (n) {
-            case eT.aD.MARK_AS_FALSE_POSITIVE:
+            case eS.aD.MARK_AS_FALSE_POSITIVE:
                 r = (0, i.jsx)(w.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
                 break;
-            case eT.aD.AGE_VERIFICATION_RETRY:
+            case eS.aD.AGE_VERIFICATION_RETRY:
                 r = (0, i.jsx)(g.Z, { channelId: t.id });
                 break;
             default:
@@ -285,7 +285,7 @@ class tn extends (r = a.Component) {
             ? null
             : e.codedLinks.map((t) => {
                   let { type: n, code: r, url: a } = t;
-                  if (n === S.g.INVITE)
+                  if (n === T.g.INVITE)
                       return this.shouldRenderInvite(r)
                           ? (0, i.jsx)(
                                 ej.Z,
@@ -297,9 +297,9 @@ class tn extends (r = a.Component) {
                                 r,
                             )
                           : null;
-                  if (n === S.g.TEMPLATE) return (0, i.jsx)(G.Z, { code: r }, r);
-                  if (n === S.g.EVENT) return (0, i.jsx)(U.Z, { code: r }, r);
-                  if (n === S.g.CHANNEL_LINK)
+                  if (n === T.g.TEMPLATE) return (0, i.jsx)(G.Z, { code: r }, r);
+                  if (n === T.g.EVENT) return (0, i.jsx)(U.Z, { code: r }, r);
+                  if (n === T.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           eD.Z,
                           {
@@ -308,7 +308,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  if (n === S.g.APP_DIRECTORY_PROFILE)
+                  if (n === T.g.APP_DIRECTORY_PROFILE)
                       return (0, i.jsx)(
                           L.Z,
                           {
@@ -317,7 +317,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === S.g.ACTIVITY_BOOKMARK) {
+                  else if (n === T.g.ACTIVITY_BOOKMARK) {
                       let { referrerId: t = e.author.id, customId: n, linkId: o } = (0, y.U)(a);
                       return (0, i.jsx)(
                           m.Z,
@@ -330,20 +330,22 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === S.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
-                  else if (n === S.g.SERVER_SHOP) return (0, i.jsx)(A.Z, { guildId: r }, r);
-                  else if (n === S.g.SOCIAL_LAYER_STOREFRONT) {
-                      let [e, t] = r.split("-");
+                  } else if (n === T.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  else if (n === T.g.SERVER_SHOP) return (0, i.jsx)(A.Z, { guildId: r }, r);
+                  else if (n === T.g.SOCIAL_LAYER_STOREFRONT) {
+                      let [e, t] = r.split("-"),
+                          { channel: n } = this.props;
                       return (0, i.jsx)(
                           ea.Z,
                           {
                               guildId: t,
                               skuId: e,
+                              channel: n,
                           },
                           r,
                       );
-                  } else if (n === S.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
-                  else if (n === S.g.APP_DIRECTORY_STOREFRONT)
+                  } else if (n === T.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
+                  else if (n === T.g.APP_DIRECTORY_STOREFRONT)
                       return (0, i.jsx)(
                           b.P,
                           {
@@ -352,7 +354,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === S.g.APP_DIRECTORY_STOREFRONT_SKU) {
+                  else if (n === T.g.APP_DIRECTORY_STOREFRONT_SKU) {
                       let t = (0, E.Q)(r);
                       return null == t
                           ? null
@@ -365,7 +367,7 @@ class tn extends (r = a.Component) {
                                 },
                                 r,
                             );
-                  } else if (n === S.g.APP_OAUTH2_LINK)
+                  } else if (n === T.g.APP_OAUTH2_LINK)
                       return (0, i.jsx)(
                           O.Z,
                           {
@@ -374,8 +376,8 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === S.g.COLLECTIBLES_SHOP) return null;
-                  else if (n === S.g.EXPERIMENT) return null;
+                  else if (n === T.g.COLLECTIBLES_SHOP) return null;
+                  else if (n === T.g.EXPERIMENT) return null;
                   else throw Error("Unknown coded link type: ".concat(n));
               });
     }
@@ -445,7 +447,7 @@ class tn extends (r = a.Component) {
         let f = d
                 .map((t) => {
                     var n;
-                    return e2(e1({}, (0, W.JD)(t, e)), {
+                    return e3(e1({}, (0, W.JD)(t, e)), {
                         original: t.url,
                         srcIsAnimated: (0, eO.yE)(null != (n = t.flags) ? n : 0, eq.J0y.IS_ANIMATED),
                     });
@@ -462,7 +464,7 @@ class tn extends (r = a.Component) {
             h = f.length > 1,
             m = (0, eO.yE)(u, eq.iLy.IS_VOICE_MESSAGE);
         function g(e, t) {
-            return (0, eS.dn)(e.originalItem, t);
+            return (0, eT.dn)(e.originalItem, t);
         }
         let E = d.map((i) => {
             let s = (e, n, r) => {
@@ -746,7 +748,7 @@ class tn extends (r = a.Component) {
             });
     }
     renderShareClientTheme(e) {
-        return null != e.sharedClientTheme ? (0, i.jsx)(T.q, { message: e }) : null;
+        return null != e.sharedClientTheme ? (0, i.jsx)(S.q, { message: e }) : null;
     }
     renderReportedMessage(e) {
         if (e.messageSnapshots.length > 0 && (0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
@@ -780,8 +782,8 @@ class tn extends (r = a.Component) {
             O = this.renderComponentAccessories(t),
             v = this.renderThreadRoleMentionWarning(t),
             I = this.renderEmbeddedApplicationInstanceEmbed(t),
-            T = this.renderInteractionPremiumUpsell(t),
-            S = this.renderMediaPostEmbeds(t),
+            S = this.renderInteractionPremiumUpsell(t),
+            T = this.renderMediaPostEmbeds(t),
             A = this.renderSafetyPolicyNotice(t),
             C = this.renderSafetySystemNotification(t),
             N = this.renderMediaObscureNotice(t),
@@ -802,9 +804,9 @@ class tn extends (r = a.Component) {
             null == O &&
             null == I &&
             null == v &&
-            null == S &&
+            null == T &&
             null == A &&
-            null != T &&
+            null != S &&
             null == R &&
             null == P &&
             null == w &&
@@ -821,7 +823,7 @@ class tn extends (r = a.Component) {
                       D,
                       c,
                       u,
-                      S,
+                      T,
                       d,
                       f,
                       p,
@@ -830,7 +832,7 @@ class tn extends (r = a.Component) {
                       b,
                       O,
                       I,
-                      T,
+                      S,
                       _,
                       l,
                       m,
@@ -871,7 +873,7 @@ class tn extends (r = a.Component) {
                         enabledContentHarmTypeFlags: f,
                         shouldAgeVerify: _,
                     } = this.props,
-                    p = (0, eS.BP)(e, r, d, f);
+                    p = (0, eT.BP)(e, r, d, f);
                 if (e.type === eq.hBH.GIFT) return null;
                 let h = e6.includes(e.type)
                     ? e.url
@@ -978,8 +980,8 @@ function tr(e) {
             !(0, eO.yE)(r.flags, eq.iLy.EPHEMERAL) &&
             v &&
             1 === (0, eR.Z)(r),
-        T = s === r.author.id && v && !o,
-        S = r.author.id === s,
+        S = s === r.author.id && v && !o,
+        T = r.author.id === s,
         A = r.isFirstMessageInForumPost(n),
         N = (0, ew.Z)({
             channel: n,
@@ -997,17 +999,17 @@ function tr(e) {
         D = (0, Q.Z)(r),
         x = (0, R.v)(r),
         L = (0, eN._)(n),
-        k = (0, eT.ro)(r.id, r.channel_id),
+        k = (0, eS.ro)(r.id, r.channel_id),
         U = (0, C.m8)();
     return (0, i.jsx)(
         tn,
-        e2(
+        e3(
             e1(
-                e2(
+                e3(
                     e1(
                         {
                             canSuppressEmbeds: I,
-                            canDeleteAttachments: T,
+                            canDeleteAttachments: S,
                         },
                         N,
                     ),
@@ -1020,7 +1022,7 @@ function tr(e) {
                 isLurking: h && p,
                 isGuest: m && p,
                 isPendingMember: g && p,
-                isCurrentUser: S,
+                isCurrentUser: T,
                 inlineAttachmentMedia: l,
                 inlineEmbedMedia: u,
                 renderEmbeds: d,
@@ -1068,11 +1070,11 @@ let ti = (e) => {
         h = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         m = (0, z.Z)(null == r ? void 0 : r.id),
         g = (0, R.v)(n),
-        E = (0, eT.ro)(n.id, n.channel_id),
+        E = (0, eS.ro)(n.id, n.channel_id),
         b = (0, Q.Z)(n);
     return (0, i.jsx)(
         tn,
-        e2(e1({}, u), {
+        e3(e1({}, u), {
             message: n,
             channel: r,
             disableReactionReads: a,

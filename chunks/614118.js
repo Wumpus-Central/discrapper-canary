@@ -1,98 +1,106 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
     o = n(442837),
     s = n(481060),
     l = n(602733),
-    c = n(55563),
-    u = n(551428),
-    d = n(937615),
-    f = n(164670),
-    _ = n(411935),
-    p = n(436585),
-    h = n(594914),
-    m = n(433386),
-    g = n(840724),
-    E = n(231338),
-    b = n(388032),
-    y = n(953692);
-function O(e) {
-    var t, n, O, v, I, S, T, A;
-    let { guildId: C, skuId: N } = e,
-        R = (0, o.e7)([u.Z], () => u.Z.isFetchingForSKU(N)),
-        P = (0, o.e7)([c.Z], () => c.Z.get(N)),
-        w = null == P ? void 0 : P.applicationId;
+    c = n(594174),
+    u = n(55563),
+    d = n(551428),
+    f = n(937615),
+    _ = n(164670),
+    p = n(411935),
+    h = n(436585),
+    m = n(594914),
+    g = n(433386),
+    E = n(840724),
+    b = n(231338),
+    y = n(388032),
+    O = n(953692);
+function v(e) {
+    var t, n, v, I, S, T, A, C;
+    let { guildId: N, skuId: R, channel: P } = e,
+        w = (0, o.e7)([d.Z], () => d.Z.isFetchingForSKU(R)),
+        D = (0, o.e7)([u.Z], () => u.Z.get(R)),
+        x = null == D ? void 0 : D.applicationId;
     (0, l.p2)();
-    let { primaryIconAsset: D, primaryIconLabel: x } = i.useMemo(() => (0, f.FE)(P, w), [P, w]);
+    let L = (0, o.e7)([c.default], () =>
+            P.isDM() && null != P.recipients && 0 !== P.recipients.length ? c.default.getUser(P.recipients[0]) : null,
+        ),
+        { primaryIconAsset: M, primaryIconLabel: j } = i.useMemo(() => (0, _.FE)(D, x), [D, x]);
     i.useEffect(() => {
-        null == C || null == N || u.Z.isFetchingForSKU(N) || (0, _.y)(C, N);
-    }, [C, N]);
-    let L = i.useCallback(
+        null == N || null == R || d.Z.isFetchingForSKU(R) || (0, p.y)(N, R);
+    }, [N, R]);
+    let k = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (null == P ? void 0 : P.applicationId) != null &&
-                        null != C &&
-                        (0, p.g)({
-                            skuId: N,
-                            applicationId: P.applicationId,
-                            guildId: C,
+                    (null == D ? void 0 : D.applicationId) != null &&
+                        null != N &&
+                        (0, h.g)({
+                            skuId: R,
+                            applicationId: D.applicationId,
+                            guildId: N,
                             isStorefront: !1,
                         });
             },
-            [N, null == P ? void 0 : P.applicationId, C],
+            [R, null == D ? void 0 : D.applicationId, N],
         ),
-        M = i.useCallback(() => {
-            null != P && (0, h.P)(P, { isGift: !1 });
-        }, [P]),
-        j = i.useCallback(() => {
-            null != P && (0, h.P)(P, { isGift: !0 });
-        }, [P]);
-    return R && null == P
+        U = i.useCallback(() => {
+            null != D && (0, m.P)(D, { isGift: !1 });
+        }, [D]),
+        G = i.useCallback(() => {
+            null != D &&
+                (0, m.P)(D, {
+                    isGift: !0,
+                    giftRecipient: null != L ? L : void 0,
+                });
+        }, [D, L]);
+    return w && null == D
         ? (0, r.jsx)("div", {
-              className: y.container,
-              children: (0, r.jsx)(s.$jN, { className: y.spinner }),
+              className: O.container,
+              children: (0, r.jsx)(s.$jN, { className: O.spinner }),
           })
-        : null == P
+        : null == D
           ? null
           : (0, r.jsxs)("div", {
-                className: y.container,
+                className: O.container,
                 children: [
-                    (0, r.jsx)(g.C, {
-                        className: y.card,
-                        applicationId: P.applicationId,
-                        skuId: N,
-                        variant: g.Z.EMBEDDED,
-                        onClick: L,
+                    (0, r.jsx)(E.C, {
+                        className: O.card,
+                        applicationId: D.applicationId,
+                        skuId: R,
+                        variant: E.Z.EMBEDDED,
+                        onClick: k,
                     }),
                     (0, r.jsxs)("div", {
-                        className: y.details,
+                        className: O.details,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: y.detailsTitleDescription,
+                                className: O.detailsTitleDescription,
                                 children: [
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-md/bold",
                                         lineClamp: 1,
-                                        children: P.name,
+                                        children: D.name,
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: y.detailsDescription,
+                                        className: O.detailsDescription,
                                         children: [
-                                            null != D &&
+                                            null != M &&
                                                 (0, r.jsx)("img", {
-                                                    src: D.toString(),
-                                                    alt: x,
-                                                    className: y.iconAsset,
+                                                    src: M.toString(),
+                                                    alt: j,
+                                                    className: O.iconAsset,
                                                 }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-md/semibold",
                                                 lineClamp: 1,
-                                                children: (0, d.T4)(
-                                                    null != (I = null == (t = P.price) ? void 0 : t.amount) ? I : 0,
-                                                    null != (S = null == (n = P.price) ? void 0 : n.currency)
-                                                        ? S
-                                                        : E.pK.USD,
+                                                children: (0, f.T4)(
+                                                    null != (S = null == (t = D.price) ? void 0 : t.amount) ? S : 0,
+                                                    null != (T = null == (n = D.price) ? void 0 : n.currency)
+                                                        ? T
+                                                        : b.pK.USD,
                                                 ),
                                             }),
                                         ],
@@ -105,24 +113,24 @@ function O(e) {
                                 children: [
                                     (0, r.jsx)(a.zxk, {
                                         variant: "secondary",
-                                        onClick: L,
-                                        text: b.intl.string(b.t.KLBTgF),
+                                        onClick: k,
+                                        text: y.intl.string(y.t.KLBTgF),
                                         fullWidth: !0,
                                     }),
                                     (0, r.jsx)(a.zxk, {
                                         variant: "primary",
-                                        onClick: M,
-                                        text: b.intl.format(b.t.Xp5WTn, {
-                                            price: (0, d.T4)(
-                                                null != (T = null == (O = P.price) ? void 0 : O.amount) ? T : 0,
-                                                null != (A = null == (v = P.price) ? void 0 : v.currency)
-                                                    ? A
-                                                    : E.pK.USD,
+                                        onClick: U,
+                                        text: y.intl.format(y.t.Xp5WTn, {
+                                            price: (0, f.T4)(
+                                                null != (A = null == (v = D.price) ? void 0 : v.amount) ? A : 0,
+                                                null != (C = null == (I = D.price) ? void 0 : I.currency)
+                                                    ? C
+                                                    : b.pK.USD,
                                             ),
                                         }),
                                         fullWidth: !0,
                                     }),
-                                    (0, r.jsx)(m.Z, { onGift: j }),
+                                    (0, r.jsx)(g.Z, { onGift: G }),
                                 ],
                             }),
                         ],
