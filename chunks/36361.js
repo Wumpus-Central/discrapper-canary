@@ -4,7 +4,7 @@ n(647438);
 var l = n(28682),
     o = n(30434),
     i = n(550964),
-    a = n(211512),
+    a = n(558731),
     c = n(401250),
     s = n(976713),
     u = n(72704),
@@ -12,11 +12,12 @@ var l = n(28682),
     f = n(867694),
     b = n(4794),
     p = n(142118),
-    y = n(409322),
-    j = n(670304),
-    m = n(357660),
-    v = n(166292);
-function g(e) {
+    y = n(149865),
+    j = n(409322),
+    m = n(670304),
+    v = n(357660),
+    g = n(166292);
+function x(e) {
     let { node: t } = e;
     switch (t.type) {
         case l.Jq.ROOT:
@@ -24,17 +25,19 @@ function g(e) {
         case l.Jq.SIDEBAR_ITEM:
             throw Error("".concat(t.type, " nodes should never be rendered directly"));
         case l.Jq.PANEL:
-            return (0, r.jsx)(m.T, { node: t });
+            return (0, r.jsx)(v.T, { node: t });
         case l.Jq.PANE:
-            return (0, r.jsx)(j.Z, { node: t });
+            return (0, r.jsx)(m.Z, { node: t });
         case l.Jq.LIST:
+            return (0, r.jsx)(j.Z, { node: t });
+        case l.Jq.FIELD_SET:
             return (0, r.jsx)(y.Z, { node: t });
         case l.Jq.CATEGORY:
             return (0, r.jsx)(p.Z, { node: t });
         case l.Jq.ACCORDION:
             return (0, r.jsx)(b.Z, { node: t });
         case l.Jq.SPLIT:
-            return (0, r.jsx)(v.Z, { node: t });
+            return (0, r.jsx)(g.Z, { node: t });
         case l.Jq.TOGGLE:
             return (0, r.jsx)(f.I, { node: t });
         case l.Jq.BUTTON:
@@ -54,9 +57,9 @@ function g(e) {
 function h(e) {
     let { node: t } = e;
     return t.type === l.Jq.PANEL || t.type === l.Jq.PANE
-        ? (0, r.jsx)(g, { node: t })
+        ? (0, r.jsx)(x, { node: t })
         : (0, r.jsx)(o.Z, {
               node: t,
-              children: (0, r.jsx)(g, { node: t }),
+              children: (0, r.jsx)(x, { node: t }),
           });
 }
