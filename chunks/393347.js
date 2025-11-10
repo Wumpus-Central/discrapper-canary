@@ -1,10 +1,12 @@
 n.d(t, {
+        Cp: () => f,
         RR: () => c,
         X5: () => l,
-        cv: () => _,
-        dp: () => h,
+        cv: () => m,
+        dp: () => b,
+        dr: () => E,
         oo: () => a,
-        uY: () => p
+        uY: () => g
     });
     var r = n(119576);
     function i(e, t, n) {
@@ -188,22 +190,22 @@ n.d(t, {
                             b[(0, r.k3)(O)],
                             b[v[0]],
                             b[v[1]]
-                        ], T = [
+                        ], S = [
                             ...(null == (i = c.autoPlacement) ? void 0 : i.overflows) || [],
                             {
                                 placement: O,
                                 overflows: I
                             }
-                        ], S = E[y + 1];
-                    if (S)
+                        ], T = E[y + 1];
+                    if (T)
                         return {
                             data: {
                                 index: y + 1,
-                                overflows: T
+                                overflows: S
                             },
-                            reset: { placement: S }
+                            reset: { placement: T }
                         };
-                    let A = T.map(e => {
+                    let A = S.map(e => {
                             let t = (0, r.hp)(e.placement);
                             return [
                                 e.placement,
@@ -214,7 +216,7 @@ n.d(t, {
                     return C !== u ? {
                         data: {
                             index: y + 1,
-                            overflows: T
+                            overflows: S
                         },
                         reset: { placement: C }
                     } : {};
@@ -244,14 +246,14 @@ n.d(t, {
                         } = (0, r.ku)(e, t);
                     if (null != (n = u.arrow) && n.alignmentOffset)
                         return {};
-                    let v = (0, r.k3)(c), I = (0, r.Qq)(f), T = (0, r.k3)(f) === f, S = await (null == _.isRTL ? void 0 : _.isRTL(p.floating)), A = g || (T || !y ? [(0, r.pw)(f)] : (0, r.gy)(f)), C = 'none' !== b;
-                    !g && C && A.push(...(0, r.KX)(f, y, b, S));
+                    let v = (0, r.k3)(c), I = (0, r.Qq)(f), S = (0, r.k3)(f) === f, T = await (null == _.isRTL ? void 0 : _.isRTL(p.floating)), A = g || (S || !y ? [(0, r.pw)(f)] : (0, r.gy)(f)), C = 'none' !== b;
+                    !g && C && A.push(...(0, r.KX)(f, y, b, T));
                     let N = [
                             f,
                             ...A
                         ], R = await o(t, O), P = [], w = (null == (i = u.flip) ? void 0 : i.overflows) || [];
                     if (h && P.push(R[v]), m) {
-                        let e = (0, r.i8)(c, d, S);
+                        let e = (0, r.i8)(c, d, T);
                         P.push(R[e[0]], R[e[1]]);
                     }
                     if (w = [
@@ -297,7 +299,58 @@ n.d(t, {
                 }
             };
         };
-    function u(e) {
+    function u(e, t) {
+        return {
+            top: e.top - t.height,
+            right: e.right - t.width,
+            bottom: e.bottom - t.height,
+            left: e.left - t.width
+        };
+    }
+    function d(e) {
+        return r.mA.some(t => e[t] >= 0);
+    }
+    let f = function (e) {
+        return void 0 === e && (e = {}), {
+            name: 'hide',
+            options: e,
+            async fn(t) {
+                let {rects: n} = t, {
+                        strategy: i = 'referenceHidden',
+                        ...a
+                    } = (0, r.ku)(e, t);
+                switch (i) {
+                case 'referenceHidden': {
+                        let e = u(await o(t, {
+                            ...a,
+                            elementContext: 'reference'
+                        }), n.reference);
+                        return {
+                            data: {
+                                referenceHiddenOffsets: e,
+                                referenceHidden: d(e)
+                            }
+                        };
+                    }
+                case 'escaped': {
+                        let e = u(await o(t, {
+                            ...a,
+                            altBoundary: !0
+                        }), n.floating);
+                        return {
+                            data: {
+                                escapedOffsets: e,
+                                escaped: d(e)
+                            }
+                        };
+                    }
+                default:
+                    return {};
+                }
+            }
+        };
+    };
+    function _(e) {
         let t = min(...e.map(e => e.left)), n = min(...e.map(e => e.top));
         return {
             x: t,
@@ -306,37 +359,37 @@ n.d(t, {
             height: max(...e.map(e => e.bottom)) - n
         };
     }
-    let d = new Set([
+    let p = new Set([
         'left',
         'top'
     ]);
-    async function f(e, t) {
+    async function h(e, t) {
         let {
                 placement: n,
                 platform: i,
                 elements: a
-            } = e, o = await (null == i.isRTL ? void 0 : i.isRTL(a.floating)), s = (0, r.k3)(n), l = (0, r.hp)(n), c = 'y' === (0, r.Qq)(n), u = d.has(s) ? -1 : 1, f = o && c ? -1 : 1, _ = (0, r.ku)(t, e), {
-                mainAxis: p,
+            } = e, o = await (null == i.isRTL ? void 0 : i.isRTL(a.floating)), s = (0, r.k3)(n), l = (0, r.hp)(n), c = 'y' === (0, r.Qq)(n), u = p.has(s) ? -1 : 1, d = o && c ? -1 : 1, f = (0, r.ku)(t, e), {
+                mainAxis: _,
                 crossAxis: h,
                 alignmentAxis: m
-            } = 'number' == typeof _ ? {
-                mainAxis: _,
+            } = 'number' == typeof f ? {
+                mainAxis: f,
                 crossAxis: 0,
                 alignmentAxis: null
             } : {
-                mainAxis: _.mainAxis || 0,
-                crossAxis: _.crossAxis || 0,
-                alignmentAxis: _.alignmentAxis
+                mainAxis: f.mainAxis || 0,
+                crossAxis: f.crossAxis || 0,
+                alignmentAxis: f.alignmentAxis
             };
         return l && 'number' == typeof m && (h = 'end' === l ? -1 * m : m), c ? {
-            x: h * f,
-            y: p * u
+            x: h * d,
+            y: _ * u
         } : {
-            x: p * u,
-            y: h * f
+            x: _ * u,
+            y: h * d
         };
     }
-    let _ = function (e) {
+    let m = function (e) {
             return void 0 === e && (e = 0), {
                 name: 'offset',
                 options: e,
@@ -347,7 +400,7 @@ n.d(t, {
                             y: a,
                             placement: o,
                             middlewareData: s
-                        } = t, l = await f(t, e);
+                        } = t, l = await h(t, e);
                     return o === (null == (n = s.offset) ? void 0 : n.placement) && null != (r = s.arrow) && r.alignmentOffset ? {} : {
                         x: i + l.x,
                         y: a + l.y,
@@ -358,7 +411,7 @@ n.d(t, {
                     };
                 }
             };
-        }, p = function (e) {
+        }, g = function (e) {
             return void 0 === e && (e = {}), {
                 name: 'shift',
                 options: e,
@@ -413,7 +466,47 @@ n.d(t, {
                     };
                 }
             };
-        }, h = function (e) {
+        }, E = function (e) {
+            return void 0 === e && (e = {}), {
+                options: e,
+                fn(t) {
+                    let {
+                            x: n,
+                            y: i,
+                            placement: a,
+                            rects: o,
+                            middlewareData: s
+                        } = t, {
+                            offset: l = 0,
+                            mainAxis: c = !0,
+                            crossAxis: u = !0
+                        } = (0, r.ku)(e, t), d = {
+                            x: n,
+                            y: i
+                        }, f = (0, r.Qq)(a), _ = (0, r.Rn)(f), h = d[_], m = d[f], g = (0, r.ku)(l, t), E = 'number' == typeof g ? {
+                            mainAxis: g,
+                            crossAxis: 0
+                        } : {
+                            mainAxis: 0,
+                            crossAxis: 0,
+                            ...g
+                        };
+                    if (c) {
+                        let e = 'y' === _ ? 'height' : 'width', t = o.reference[_] - o.floating[e] + E.mainAxis, n = o.reference[_] + o.reference[e] - E.mainAxis;
+                        h < t ? h = t : h > n && (h = n);
+                    }
+                    if (u) {
+                        var b, y;
+                        let e = 'y' === _ ? 'width' : 'height', t = p.has((0, r.k3)(a)), n = o.reference[f] - o.floating[e] + (t && (null == (b = s.offset) ? void 0 : b[f]) || 0) + (t ? 0 : E.crossAxis), i = o.reference[f] + o.reference[e] + (t ? 0 : (null == (y = s.offset) ? void 0 : y[f]) || 0) - (t ? E.crossAxis : 0);
+                        m < n ? m = n : m > i && (m = i);
+                    }
+                    return {
+                        [_]: h,
+                        [f]: m
+                    };
+                }
+            };
+        }, b = function (e) {
             return void 0 === e && (e = {}), {
                 name: 'size',
                 options: e,
@@ -433,15 +526,15 @@ n.d(t, {
                             height: b
                         } = c.floating;
                     'top' === h || 'bottom' === h ? (a = h, s = m === (await (null == u.isRTL ? void 0 : u.isRTL(d.floating)) ? 'start' : 'end') ? 'left' : 'right') : (s = h, a = 'end' === m ? 'top' : 'bottom');
-                    let y = b - p.top - p.bottom, O = E - p.left - p.right, v = (0, r.VV)(b - p[a], y), I = (0, r.VV)(E - p[s], O), T = !t.middlewareData.shift, S = v, A = I;
-                    if (null != (n = t.middlewareData.shift) && n.enabled.x && (A = O), null != (i = t.middlewareData.shift) && i.enabled.y && (S = y), T && !m) {
+                    let y = b - p.top - p.bottom, O = E - p.left - p.right, v = (0, r.VV)(b - p[a], y), I = (0, r.VV)(E - p[s], O), S = !t.middlewareData.shift, T = v, A = I;
+                    if (null != (n = t.middlewareData.shift) && n.enabled.x && (A = O), null != (i = t.middlewareData.shift) && i.enabled.y && (T = y), S && !m) {
                         let e = (0, r.Fp)(p.left, 0), t = (0, r.Fp)(p.right, 0), n = (0, r.Fp)(p.top, 0), i = (0, r.Fp)(p.bottom, 0);
-                        g ? A = E - 2 * (0 !== e || 0 !== t ? e + t : (0, r.Fp)(p.left, p.right)) : S = b - 2 * (0 !== n || 0 !== i ? n + i : (0, r.Fp)(p.top, p.bottom));
+                        g ? A = E - 2 * (0 !== e || 0 !== t ? e + t : (0, r.Fp)(p.left, p.right)) : T = b - 2 * (0 !== n || 0 !== i ? n + i : (0, r.Fp)(p.top, p.bottom));
                     }
                     await f({
                         ...t,
                         availableWidth: A,
-                        availableHeight: S
+                        availableHeight: T
                     });
                     let C = await u.getDimensions(d.floating);
                     return E !== C.width || b !== C.height ? { reset: { rects: !0 } } : {};

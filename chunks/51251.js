@@ -1,4 +1,4 @@
-n.d(t, { g: () => b });
+n.d(t, { g: () => y });
 var r = n(653598),
     i = n(886031),
     a = n(644100),
@@ -14,13 +14,14 @@ var r = n(653598),
     h = n(239090),
     m = n(321769),
     g = n(322217),
-    E = n(348000);
-let b = {
+    E = n(348000),
+    b = n(720846);
+let y = {
     collections: [
         {
             id: "mana",
             name: "Mana",
-            groups: [g.i, i.B, a.X, o._, s.I, l.b, _.t, h.R, d.I, u.z, p.W, f.y, E.D, m.E, c.i],
+            groups: [g.i, i.B, a.X, o._, s.I, l.b, _.t, h.R, d.I, u.z, p.W, f.y, E.D, m.E, c.i, b.t],
         },
         r.U,
     ],

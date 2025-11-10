@@ -1,18 +1,20 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(990547),
-    o = n(442837),
-    s = n(481060),
-    l = n(239091),
-    c = n(213609),
-    u = n(314910),
-    d = n(728285),
-    f = n(210887),
-    _ = n(574254),
-    p = n(585483),
-    h = n(981631);
-function m(e, t, n) {
+    o = n(762328),
+    s = n(442837),
+    l = n(682973),
+    c = n(481060),
+    u = n(239091),
+    d = n(213609),
+    f = n(314910),
+    _ = n(728285),
+    p = n(210887),
+    h = n(574254),
+    m = n(585483),
+    g = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +27,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +38,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,48 +55,48 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y() {
+function v() {
     window.getSelection().removeAllRanges();
 }
-let O = (e) => {
+let I = (e) => {
     let {
             children: t,
             close: n,
-            onUnmount: o,
-            target: l,
-            rect: f,
-            position: _,
-            align: p,
-            impressionName: m,
-            impressionProperties: g,
-            disableClickTrap: E = !1,
+            onUnmount: s,
+            target: u,
+            rect: p,
+            position: h,
+            align: m,
+            impressionName: E,
+            impressionProperties: b,
+            disableClickTrap: y = !1,
         } = e,
-        b = i.useRef(null),
-        O = i.useMemo(() => ({ current: l }), [l]),
-        v = i.useRef(n);
+        O = i.useRef(null),
+        I = i.useMemo(() => ({ current: u }), [u]),
+        S = i.useRef(n);
     i.useEffect(() => {
-        v.current = n;
+        S.current = n;
     }),
         i.useEffect(() => {
             var e, t, n;
-            let r = null == (e = b.current) ? void 0 : e.elementRef.current;
+            let r = null == (e = O.current) ? void 0 : e.elementRef.current;
             if (null == r) return;
             let i = (e) => {
                 var t;
                 let n = e.target,
-                    r = null == (t = b.current) ? void 0 : t.elementRef.current;
-                (null != r && (0, s.ty$)(r, n)) || (y(), v.current());
+                    r = null == (t = O.current) ? void 0 : t.elementRef.current;
+                (null != r && (0, c.ty$)(r, n)) || (v(), S.current());
             };
             return (
                 null == (t = r.ownerDocument) || t.addEventListener("click", i, !0),
@@ -106,57 +108,72 @@ let O = (e) => {
                 }
             );
         }, []);
-    let I = i.useRef(o);
+    let T = i.useRef(s);
     i.useEffect(() => {
-        I.current = o;
+        T.current = s;
     }),
         i.useEffect(
             () => () => {
                 var e;
-                return null == (e = I.current) ? void 0 : e.call(I);
+                return null == (e = T.current) ? void 0 : e.call(T);
             },
             [],
         ),
         i.useLayoutEffect(() => {
             var e;
-            null == (e = b.current) || e.updatePosition();
+            null == (e = O.current) || e.updatePosition();
         }),
-        (0, c.Z)({
+        (0, d.Z)({
             type: a.ImpressionTypes.MENU,
-            name: m,
-            properties: g,
+            name: E,
+            properties: b,
         });
-    let T = (0, d.Aq)(),
-        S = i.useCallback(() => {
-            T.dispatch(h.CkL.POPOUT_SHOW);
-        }, [T]),
-        A = i.useCallback(() => {
-            T.dispatch(h.CkL.POPOUT_HIDE);
-        }, [T]);
-    return (0, r.jsx)(u.W5, {
-        onMount: S,
-        onUnmount: A,
-        targetRef: O,
-        overrideTargetRect: f,
-        position: null != _ ? _ : "right",
-        align: null != p ? p : "top",
-        autoInvert: !0,
-        ref: b,
-        nudgeAlignIntoViewport: !0,
-        clickTrap: !E,
-        children: t,
-    });
+    let A = (0, _.Aq)(),
+        C = i.useCallback(() => {
+            A.dispatch(g.CkL.POPOUT_SHOW);
+        }, [A]),
+        N = i.useCallback(() => {
+            A.dispatch(g.CkL.POPOUT_HIDE);
+        }, [A]);
+    return (0, l.E)("ContextMenu")
+        ? (0, r.jsx)(o.pS, {
+              open: !0,
+              onOpenChange: (e) => {
+                  e ? C() : (N(), v(), S.current());
+              },
+              overrideTargetRect: p,
+              placement: (0, o.a_)(null != h ? h : "right", null != m ? m : "top"),
+              blockPointerEvents: !y,
+              renderLayer: (e) => {
+                  let { update: n } = e;
+                  return t({ position: h }, n);
+              },
+              children: () => null,
+          })
+        : (0, r.jsx)(f.W5, {
+              onMount: C,
+              onUnmount: N,
+              targetRef: I,
+              overrideTargetRect: p,
+              position: null != h ? h : "right",
+              align: null != m ? m : "top",
+              autoInvert: !0,
+              ref: O,
+              nudgeAlignIntoViewport: !0,
+              clickTrap: !y,
+              children: t,
+          });
 };
-class v extends i.PureComponent {
+class S extends i.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            p.S.subscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            m.S.subscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
-                this.setState({ render: () => (0, r.jsx)(s.TlX, {}) });
+                this.setState({ render: () => (0, r.jsx)(c.TlX, {}) });
             }, 300);
             e().then((e) => {
                 this.setState({ render: e }), clearTimeout(t);
@@ -173,7 +190,7 @@ class v extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         e.removeEventListener("resize", this.closeResize, !0),
-            p.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+            m.S.unsubscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     render() {
         var e, t, n;
@@ -186,7 +203,7 @@ class v extends i.PureComponent {
             null != d &&
             l.context === i &&
             (null == (e = a.ownerDocument) ? void 0 : e.defaultView) === u
-            ? (0, r.jsx)(O, {
+            ? (0, r.jsx)(I, {
                   target: a,
                   rect: c,
                   close: this.close,
@@ -212,43 +229,43 @@ class v extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            m(this, "state", { render: void 0 }),
-            m(this, "closeResize", (e) => {
+            E(this, "state", { render: void 0 }),
+            E(this, "closeResize", (e) => {
                 let { renderWindow: t } = this.props;
                 e.target === t && this.close();
             }),
-            m(this, "close", () => {
+            E(this, "close", () => {
                 let { isOpen: e, closeContextMenu: t } = this.props;
                 e && t();
             });
     }
 }
-function I() {
+function T() {
     let {
             contextMenu: e,
             version: t,
             isOpen: n,
-        } = (0, o.cj)([_.Z], () => ({
-            contextMenu: _.Z.getContextMenu(),
-            version: _.Z.version,
-            isOpen: _.Z.isOpen(),
+        } = (0, s.cj)([h.Z], () => ({
+            contextMenu: h.Z.getContextMenu(),
+            version: h.Z.version,
+            isOpen: h.Z.isOpen(),
         })),
-        a = (0, o.e7)([f.Z], () => f.Z.theme),
-        { appContext: s, renderWindow: c } = i.useContext(d.ZP);
+        a = (0, s.e7)([p.Z], () => p.Z.theme),
+        { appContext: o, renderWindow: l } = i.useContext(_.ZP);
     return (0, r.jsx)(
-        v,
-        b(
-            g(
+        S,
+        O(
+            b(
                 {
-                    appContext: s,
-                    renderWindow: c,
+                    appContext: o,
+                    renderWindow: l,
                 },
                 e,
             ),
             {
                 isOpen: n,
                 theme: a,
-                closeContextMenu: l.Zy,
+                closeContextMenu: u.Zy,
             },
         ),
         t,

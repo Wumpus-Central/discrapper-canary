@@ -1,112 +1,114 @@
 n.d(t, {
-    Ct: () => i,
-    Fp: () => o,
-    GW: () => l,
-    Go: () => I,
-    I4: () => g,
-    JB: () => x,
-    KX: () => R,
-    NM: () => s,
-    Qq: () => b,
-    Rn: () => m,
-    VV: () => a,
-    Wh: () => y,
-    gy: () => v,
-    hp: () => h,
-    i8: () => O,
-    k3: () => p,
-    ku: () => _,
-    pw: () => P,
-    uZ: () => f,
-    yd: () => D,
-    ze: () => c,
+    Ct: () => a,
+    Fp: () => s,
+    GW: () => c,
+    Go: () => S,
+    I4: () => E,
+    JB: () => L,
+    KX: () => P,
+    NM: () => l,
+    Qq: () => y,
+    Rn: () => g,
+    VV: () => o,
+    Wh: () => O,
+    gy: () => I,
+    hp: () => m,
+    i8: () => v,
+    k3: () => h,
+    ku: () => p,
+    mA: () => r,
+    pw: () => w,
+    uZ: () => _,
+    yd: () => x,
+    ze: () => u,
 });
-let r = ["start", "end"],
-    i = ["top", "right", "bottom", "left"].reduce((e, t) => e.concat(t, t + "-" + r[0], t + "-" + r[1]), []),
-    a = Math.min,
-    o = Math.max,
-    s = Math.round,
-    l = Math.floor,
-    c = (e) => ({
+let r = ["top", "right", "bottom", "left"],
+    i = ["start", "end"],
+    a = r.reduce((e, t) => e.concat(t, t + "-" + i[0], t + "-" + i[1]), []),
+    o = Math.min,
+    s = Math.max,
+    l = Math.round,
+    c = Math.floor,
+    u = (e) => ({
         x: e,
         y: e,
     }),
-    u = {
+    d = {
         left: "right",
         right: "left",
         bottom: "top",
         top: "bottom",
     },
-    d = {
+    f = {
         start: "end",
         end: "start",
     };
-function f(e, t, n) {
-    return o(e, a(t, n));
+function _(e, t, n) {
+    return s(e, o(t, n));
 }
-function _(e, t) {
+function p(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function p(e) {
+function h(e) {
     return e.split("-")[0];
 }
-function h(e) {
+function m(e) {
     return e.split("-")[1];
 }
-function m(e) {
+function g(e) {
     return "x" === e ? "y" : "x";
 }
-function g(e) {
+function E(e) {
     return "y" === e ? "height" : "width";
 }
-let E = new Set(["top", "bottom"]);
-function b(e) {
-    return E.has(p(e)) ? "y" : "x";
-}
+let b = new Set(["top", "bottom"]);
 function y(e) {
-    return m(b(e));
+    return b.has(h(e)) ? "y" : "x";
 }
-function O(e, t, n) {
+function O(e) {
+    return g(y(e));
+}
+function v(e, t, n) {
     void 0 === n && (n = !1);
-    let r = h(e),
-        i = y(e),
-        a = g(i),
+    let r = m(e),
+        i = O(e),
+        a = E(i),
         o = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
-    return t.reference[a] > t.floating[a] && (o = P(o)), [o, P(o)];
-}
-function v(e) {
-    let t = P(e);
-    return [I(e), t, I(t)];
+    return t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)];
 }
 function I(e) {
-    return e.replace(/start|end/g, (e) => d[e]);
+    let t = w(e);
+    return [S(e), t, S(t)];
+}
+function S(e) {
+    return e.replace(/start|end/g, (e) => f[e]);
 }
 let T = ["left", "right"],
-    S = ["right", "left"],
-    A = ["top", "bottom"],
-    C = ["bottom", "top"];
-function N(e, t, n) {
+    A = ["right", "left"],
+    C = ["top", "bottom"],
+    N = ["bottom", "top"];
+function R(e, t, n) {
     switch (e) {
         case "top":
         case "bottom":
-            if (n) return t ? S : T;
-            return t ? T : S;
+            if (n) return t ? A : T;
+            return t ? T : A;
         case "left":
         case "right":
-            return t ? A : C;
+            return t ? C : N;
         default:
             return [];
     }
 }
-function R(e, t, n, r) {
-    let i = h(e),
-        a = N(p(e), "start" === n, r);
-    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(I)))), a;
-}
-function P(e) {
-    return e.replace(/left|right|bottom|top/g, (e) => u[e]);
+function P(e, t, n, r) {
+    let i = m(e),
+        a = R(h(e), "start" === n, r);
+    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(S)))), a;
 }
 function w(e) {
+    return e.replace(/left|right|bottom|top/g, (e) => d[e]);
+}
+function D(e) {
     return {
         top: 0,
         right: 0,
@@ -115,9 +117,9 @@ function w(e) {
         ...e,
     };
 }
-function D(e) {
+function x(e) {
     return "number" != typeof e
-        ? w(e)
+        ? D(e)
         : {
               top: e,
               right: e,
@@ -125,7 +127,7 @@ function D(e) {
               left: e,
           };
 }
-function x(e) {
+function L(e) {
     let { x: t, y: n, width: r, height: i } = e;
     return {
         width: r,

@@ -1,13 +1,15 @@
-n.d(t, { _: () => g }), n(388685);
+n.d(t, { _: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(793030),
-    l = n(743236),
-    c = n(481060),
-    u = n(334405);
-function d(e, t, n) {
+    s = n(762328),
+    l = n(793030),
+    c = n(682973),
+    u = n(743236),
+    d = n(481060),
+    f = n(334405);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +33,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +50,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +73,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,53 +82,62 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: d, renderSubmenu: _ } = e,
-        { focusIndex: m, isUsingKeyboardNavigation: g } = d,
-        E = h(d, ["focusIndex", "isUsingKeyboardNavigation"]),
-        b = i.useRef(null),
-        y = i.useRef(null),
+function b(e) {
+    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: _, renderSubmenu: h } = e,
+        { focusIndex: E, isUsingKeyboardNavigation: b } = _,
+        y = g(_, ["focusIndex", "isUsingKeyboardNavigation"]),
         O = i.useRef(null),
-        [v, I] = i.useState(!1);
-    return (
-        i.useLayoutEffect(() => {
-            I(!0);
-        }, []),
+        v = i.useRef(null),
+        I = i.useRef(null),
+        [S, T] = i.useState(!1);
+    i.useLayoutEffect(() => {
+        T(!0);
+    }, []),
         i.useLayoutEffect(() => {
             var e;
-            a && ((0, l.F)(b), null == (e = O.current) || e.focus());
-        }, [a]),
-        (0, r.jsxs)("div", {
-            ref: b,
-            children: [
-                (0, r.jsx)("div", { ref: y }),
-                n,
-                a && v
-                    ? (0, r.jsx)(c.jRF, {
-                          targetRef: y,
-                          autoInvert: !0,
-                          nudgeAlignIntoViewport: !0,
-                          fixed: !0,
-                          spacing: 4,
-                          position: "right",
-                          align: "top",
-                          children: () =>
-                              (0, r.jsx)("div", {
-                                  className: u.submenuPaddingContainer,
-                                  children: (0, r.jsx)(
-                                      "div",
-                                      p(f({ className: o()(u.submenu, t) }, E), {
-                                          ref: O,
-                                          children: (0, r.jsx)(s.zJl, {
-                                              className: u.scroller,
-                                              children: _(),
-                                          }),
-                                      }),
-                                  ),
-                              }),
-                      })
-                    : null,
-            ],
-        })
-    );
+            a && ((0, u.F)(O), null == (e = I.current) || e.focus());
+        }, [a]);
+    let A = (0, r.jsx)("div", {
+            className: f.submenuPaddingContainer,
+            children: (0, r.jsx)(
+                "div",
+                m(p({ className: o()(f.submenu, t) }, y), {
+                    ref: I,
+                    children: (0, r.jsx)(l.zJl, {
+                        className: f.scroller,
+                        children: h(),
+                    }),
+                }),
+            ),
+        }),
+        C = (0, c.E)("MenuSubmenuItem"),
+        [N, R] = i.useState(!1);
+    if (C)
+        return (0, r.jsx)(s.pS, {
+            open: N,
+            onOpenChange: R,
+            spacing: 4,
+            placement: "right-start",
+            portal: !1,
+            trigger: "hover",
+            renderLayer: () => A,
+            children: (e) => {
+                let { ref: t, props: i } = e;
+                return (0, r.jsx)("div", m(p({ ref: t }, i), { children: n }));
+            },
+        });
+    let P = (0, r.jsx)(d.jRF, {
+        targetRef: v,
+        autoInvert: !0,
+        nudgeAlignIntoViewport: !0,
+        fixed: !0,
+        spacing: 4,
+        position: "right",
+        align: "top",
+        children: () => A,
+    });
+    return (0, r.jsxs)("div", {
+        ref: O,
+        children: [(0, r.jsx)("div", { ref: v }), n, a && S ? P : null],
+    });
 }

@@ -1,10 +1,12 @@
 n.d(t, {
+    Cp: () => F,
     Me: () => j,
     RR: () => B,
     X5: () => U,
     cv: () => k,
     dp: () => Z,
-    oo: () => F,
+    dr: () => V,
+    oo: () => H,
     uY: () => G,
 });
 var r = n(119576),
@@ -213,7 +215,7 @@ function I(e, t) {
     let n = (0, a.Ow)(e);
     return !(n === t || !(0, a.kK)(n) || (0, a.Py)(n)) && ("fixed" === (0, a.Dx)(n).position || I(n, t));
 }
-function T(e, t) {
+function S(e, t) {
     let n = t.get(e);
     if (n) return n;
     let r = (0, a.Kx)(e, [], !1).filter((e) => (0, a.kK)(e) && "body" !== (0, a.wk)(e)),
@@ -235,9 +237,9 @@ function T(e, t) {
     }
     return t.set(e, r), r;
 }
-function S(e) {
+function T(e) {
     let { element: t, boundary: n, rootBoundary: i, strategy: o } = e,
-        s = [...("clippingAncestors" === n ? ((0, a.tR)(t) ? [] : T(t, this._c)) : [].concat(n)), i],
+        s = [...("clippingAncestors" === n ? ((0, a.tR)(t) ? [] : S(t, this._c)) : [].concat(n)), i],
         l = s[0],
         c = s.reduce(
             (e, n) => {
@@ -337,7 +339,7 @@ function D(e) {
 let x = {
     convertOffsetParentRelativeRectToViewportRelativeRect: h,
     getDocumentElement: a.tF,
-    getClippingRect: S,
+    getClippingRect: T,
     getOffsetParent: P,
     getElementRects: w,
     getClientRects: m,
@@ -453,7 +455,9 @@ let k = i.cv,
     G = i.uY,
     B = i.RR,
     Z = i.dp,
-    F = (e, t, n) => {
+    F = i.Cp,
+    V = i.dr,
+    H = (e, t, n) => {
         let r = new Map(),
             a = {
                 platform: x,

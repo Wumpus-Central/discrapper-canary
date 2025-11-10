@@ -1,41 +1,44 @@
 n.d(t, {
-    NI: () => J,
-    YF: () => X,
-    Y_: () => ea,
-    bQ: () => z,
+    NI: () => ed,
+    XI: () => x,
+    YF: () => ec,
+    Y_: () => eE,
+    bQ: () => es,
+    xp: () => ev,
+    y0: () => er,
 });
 var r,
     i = n(647438),
-    a = n(71448);
-n(951288);
-var o = n(274676),
-    s = n(603113),
-    l = n(863785);
-let c = "data-floating-ui-focusable",
-    u = "active",
-    d = "selected",
-    f = "ArrowLeft",
-    _ = "ArrowRight",
-    p = "ArrowUp",
-    h = "ArrowDown",
-    m = { ...(r || (r = n.t(i, 2))) },
-    g = !1,
-    E = 0,
-    b = () => "floating-ui-" + Math.random().toString(36).slice(2, 6) + E++;
-function y() {
-    let [e, t] = i.useState(() => (g ? b() : void 0));
+    a = n(71448),
+    o = n(951288),
+    s = n(274676),
+    l = n(603113),
+    c = n(863785);
+let u = "data-floating-ui-focusable",
+    d = "active",
+    f = "selected",
+    _ = "ArrowLeft",
+    p = "ArrowRight",
+    h = "ArrowUp",
+    m = "ArrowDown",
+    g = { ...(r || (r = n.t(i, 2))) },
+    E = !1,
+    b = 0,
+    y = () => "floating-ui-" + Math.random().toString(36).slice(2, 6) + b++;
+function O() {
+    let [e, t] = i.useState(() => (E ? y() : void 0));
     return (
         (0, a.Xj)(() => {
-            null == e && t(b());
+            null == e && t(y());
         }, []),
         i.useEffect(() => {
-            g = !0;
+            E = !0;
         }, []),
         e
     );
 }
-let O = m.useId || y;
-function v() {
+let v = g.useId || O;
+function I() {
     let e = new Map();
     return {
         emit(t, n) {
@@ -51,50 +54,292 @@ function v() {
         },
     };
 }
-let I = i.createContext(null),
+let S = i.createContext(null),
     T = i.createContext(null),
-    S = () => {
+    A = () => {
         var e;
-        return (null == (e = i.useContext(I)) ? void 0 : e.id) || null;
+        return (null == (e = i.useContext(S)) ? void 0 : e.id) || null;
     },
-    A = () => i.useContext(T);
-function C(e) {
+    C = () => i.useContext(T);
+function N(e) {
     return "data-floating-ui-" + e;
 }
-let N = null,
-    R = 0;
-function P(e) {
+function R(e) {
+    -1 !== e.current && (clearTimeout(e.current), (e.current = -1));
+}
+let P = N("safe-polygon");
+function w(e, t, n) {
+    if (n && !(0, a.r)(n)) return 0;
+    if ("number" == typeof e) return e;
+    if ("function" == typeof e) {
+        let n = e();
+        return "number" == typeof n ? n : null == n ? void 0 : n[t];
+    }
+    return null == e ? void 0 : e[t];
+}
+function D(e) {
+    return "function" == typeof e ? e() : e;
+}
+function x(e, t) {
+    void 0 === t && (t = {});
+    let { open: n, onOpenChange: r, dataRef: o, events: l, elements: c } = e,
+        { enabled: u = !0, delay: d = 0, handleClose: f = null, mouseOnly: _ = !1, restMs: p = 0, move: h = !0 } = t,
+        m = C(),
+        g = A(),
+        E = (0, a.II)(f),
+        b = (0, a.II)(d),
+        y = (0, a.II)(n),
+        O = (0, a.II)(p),
+        v = i.useRef(),
+        I = i.useRef(-1),
+        S = i.useRef(),
+        T = i.useRef(-1),
+        N = i.useRef(!0),
+        x = i.useRef(!1),
+        L = i.useRef(() => {}),
+        M = i.useRef(!1),
+        j = (0, a.iW)(() => {
+            var e;
+            let t = null == (e = o.current.openEvent) ? void 0 : e.type;
+            return (null == t ? void 0 : t.includes("mouse")) && "mousedown" !== t;
+        });
+    i.useEffect(() => {
+        if (u)
+            return (
+                l.on("openchange", e),
+                () => {
+                    l.off("openchange", e);
+                }
+            );
+        function e(e) {
+            let { open: t } = e;
+            t || (R(I), R(T), (N.current = !0), (M.current = !1));
+        }
+    }, [u, l]),
+        i.useEffect(() => {
+            if (!u || !E.current || !n) return;
+            function e(e) {
+                j() && r(!1, e, "hover");
+            }
+            let t = (0, a.Me)(c.floating).documentElement;
+            return (
+                t.addEventListener("mouseleave", e),
+                () => {
+                    t.removeEventListener("mouseleave", e);
+                }
+            );
+        }, [c.floating, n, r, u, E, j]);
+    let k = i.useCallback(
+            function (e, t, n) {
+                void 0 === t && (t = !0), void 0 === n && (n = "hover");
+                let i = w(b.current, "close", v.current);
+                i && !S.current
+                    ? (R(I), (I.current = window.setTimeout(() => r(!1, e, n), i)))
+                    : t && (R(I), r(!1, e, n));
+            },
+            [b, r],
+        ),
+        U = (0, a.iW)(() => {
+            L.current(), (S.current = void 0);
+        }),
+        G = (0, a.iW)(() => {
+            if (x.current) {
+                let e = (0, a.Me)(c.floating).body;
+                (e.style.pointerEvents = ""), e.removeAttribute(P), (x.current = !1);
+            }
+        }),
+        B = (0, a.iW)(() => !!o.current.openEvent && ["click", "mousedown"].includes(o.current.openEvent.type));
+    i.useEffect(() => {
+        if (u && (0, s.kK)(c.domReference)) {
+            let r = c.domReference,
+                a = c.floating;
+            return (
+                n && r.addEventListener("mouseleave", i),
+                h && r.addEventListener("mousemove", e, { once: !0 }),
+                r.addEventListener("mouseenter", e),
+                r.addEventListener("mouseleave", t),
+                a &&
+                    (a.addEventListener("mouseleave", i),
+                    a.addEventListener("mouseenter", l),
+                    a.addEventListener("mouseleave", d)),
+                () => {
+                    n && r.removeEventListener("mouseleave", i),
+                        h && r.removeEventListener("mousemove", e),
+                        r.removeEventListener("mouseenter", e),
+                        r.removeEventListener("mouseleave", t),
+                        a &&
+                            (a.removeEventListener("mouseleave", i),
+                            a.removeEventListener("mouseenter", l),
+                            a.removeEventListener("mouseleave", d));
+                }
+            );
+        }
+        function e(e) {
+            if ((R(I), (N.current = !1), (_ && !(0, a.r)(v.current)) || (D(O.current) > 0 && !w(b.current, "open"))))
+                return;
+            let t = w(b.current, "open", v.current);
+            t
+                ? (I.current = window.setTimeout(() => {
+                      y.current || r(!0, e, "hover");
+                  }, t))
+                : n || r(!0, e, "hover");
+        }
+        function t(e) {
+            if (B()) return void G();
+            L.current();
+            let t = (0, a.Me)(c.floating);
+            if ((R(T), (M.current = !1), E.current && o.current.floatingContext)) {
+                n || R(I),
+                    (S.current = E.current({
+                        ...o.current.floatingContext,
+                        tree: m,
+                        x: e.clientX,
+                        y: e.clientY,
+                        onClose() {
+                            G(), U(), B() || k(e, !0, "safe-polygon");
+                        },
+                    }));
+                let r = S.current;
+                t.addEventListener("mousemove", r),
+                    (L.current = () => {
+                        t.removeEventListener("mousemove", r);
+                    });
+                return;
+            }
+            ("touch" === v.current && (0, a.r3)(c.floating, e.relatedTarget)) || k(e);
+        }
+        function i(e) {
+            !B() &&
+                o.current.floatingContext &&
+                (null == E.current ||
+                    E.current({
+                        ...o.current.floatingContext,
+                        tree: m,
+                        x: e.clientX,
+                        y: e.clientY,
+                        onClose() {
+                            G(), U(), B() || k(e);
+                        },
+                    })(e));
+        }
+        function l() {
+            R(I);
+        }
+        function d(e) {
+            B() || k(e, !1);
+        }
+    }, [c, u, e, _, h, k, U, G, r, n, y, m, b, E, o, B, O]),
+        (0, a.Xj)(() => {
+            var e, t;
+            if (u && n && null != (e = E.current) && null != (e = e.__options) && e.blockPointerEvents && j()) {
+                x.current = !0;
+                let e = c.floating;
+                if ((0, s.kK)(c.domReference) && e) {
+                    let n = (0, a.Me)(c.floating).body;
+                    n.setAttribute(P, "");
+                    let r = c.domReference,
+                        i =
+                            null == m ||
+                            null == (t = m.nodesRef.current.find((e) => e.id === g)) ||
+                            null == (t = t.context)
+                                ? void 0
+                                : t.elements.floating;
+                    return (
+                        i && (i.style.pointerEvents = ""),
+                        (n.style.pointerEvents = "none"),
+                        (r.style.pointerEvents = "auto"),
+                        (e.style.pointerEvents = "auto"),
+                        () => {
+                            (n.style.pointerEvents = ""), (r.style.pointerEvents = ""), (e.style.pointerEvents = "");
+                        }
+                    );
+                }
+            }
+        }, [u, n, g, c, m, E, j]),
+        (0, a.Xj)(() => {
+            n || ((v.current = void 0), (M.current = !1), U(), G());
+        }, [n, U, G]),
+        i.useEffect(
+            () => () => {
+                U(), R(I), R(T), G();
+            },
+            [u, c.domReference, U, G],
+        );
+    let Z = i.useMemo(() => {
+        function e(e) {
+            v.current = e.pointerType;
+        }
+        return {
+            onPointerDown: e,
+            onPointerEnter: e,
+            onMouseMove(e) {
+                let { nativeEvent: t } = e;
+                function i() {
+                    N.current || y.current || r(!0, t, "hover");
+                }
+                (!_ || (0, a.r)(v.current)) &&
+                    !n &&
+                    0 !== D(O.current) &&
+                    ((M.current && e.movementX ** 2 + e.movementY ** 2 < 2) ||
+                        (R(T),
+                        "touch" === v.current
+                            ? i()
+                            : ((M.current = !0), (T.current = window.setTimeout(i, D(O.current))))));
+            },
+        };
+    }, [_, r, n, y, O]);
+    return i.useMemo(() => (u ? { reference: Z } : {}), [u, Z]);
+}
+let L = null,
+    M = 0;
+function j(e, t) {
+    if (!e || !t) return !1;
+    let n = null == t.getRootNode ? void 0 : t.getRootNode();
+    if (e.contains(t)) return !0;
+    if (n && (0, s.Zq)(n)) {
+        let n = t;
+        for (; n; ) {
+            if (e === n) return !0;
+            n = n.parentNode || n.host;
+        }
+    }
+    return !1;
+}
+function k(e) {
+    return "composedPath" in e ? e.composedPath()[0] : e.target;
+}
+function U(e) {
     return (null == e ? void 0 : e.ownerDocument) || document;
 }
-let w = {
+let G = {
     inert: new WeakMap(),
     "aria-hidden": new WeakMap(),
     none: new WeakMap(),
 };
-function D(e) {
-    return "inert" === e ? w.inert : "aria-hidden" === e ? w["aria-hidden"] : w.none;
+function B(e) {
+    return "inert" === e ? G.inert : "aria-hidden" === e ? G["aria-hidden"] : G.none;
 }
-let x = new WeakSet(),
-    L = null,
-    M = 0,
-    j = (e) => e && (e.host || j(e.parentNode)),
-    k = (e, t) =>
+let Z = new WeakSet(),
+    F = null,
+    V = 0,
+    H = (e) => e && (e.host || H(e.parentNode)),
+    Y = (e, t) =>
         t
             .map((t) => {
                 if (e.contains(t)) return t;
-                let n = j(t);
+                let n = H(t);
                 return e.contains(n) ? n : null;
             })
             .filter((e) => null != e);
-function U(e, t, n, r) {
+function W(e, t, n, r) {
     let i = "data-floating-ui-inert",
         a = r ? "inert" : n ? "aria-hidden" : null,
-        o = k(t, e),
+        o = Y(t, e),
         s = new Set(),
         l = new Set(o),
         c = [];
-    L[i] || (L[i] = new WeakMap());
-    let u = L[i];
+    F[i] || (F[i] = new WeakMap());
+    let u = F[i];
     function d(e) {
         !(!e || s.has(e)) && (s.add(e), e.parentNode && d(e.parentNode));
     }
@@ -107,13 +352,13 @@ function U(e, t, n, r) {
                     else {
                         let t = a ? e.getAttribute(a) : null,
                             n = null !== t && "false" !== t,
-                            r = D(a),
+                            r = B(a),
                             o = (r.get(e) || 0) + 1,
                             s = (u.get(e) || 0) + 1;
                         r.set(e, o),
                             u.set(e, s),
                             c.push(e),
-                            1 === o && n && x.add(e),
+                            1 === o && n && Z.add(e),
                             1 === s && e.setAttribute(i, ""),
                             !n && a && e.setAttribute(a, "inert" === a ? "" : "true");
                     }
@@ -123,54 +368,121 @@ function U(e, t, n, r) {
         o.forEach(d),
         f(t),
         s.clear(),
-        M++,
+        V++,
         () => {
             c.forEach((e) => {
-                let t = D(a),
+                let t = B(a),
                     n = (t.get(e) || 0) - 1,
                     r = (u.get(e) || 0) - 1;
                 t.set(e, n),
                     u.set(e, r),
-                    n || (!x.has(e) && a && e.removeAttribute(a), x.delete(e)),
+                    n || (!Z.has(e) && a && e.removeAttribute(a), Z.delete(e)),
                     r || e.removeAttribute(i);
             }),
-                --M ||
-                    ((w.inert = new WeakMap()),
-                    (w["aria-hidden"] = new WeakMap()),
-                    (w.none = new WeakMap()),
-                    (x = new WeakSet()),
-                    (L = {}));
+                --V ||
+                    ((G.inert = new WeakMap()),
+                    (G["aria-hidden"] = new WeakMap()),
+                    (G.none = new WeakMap()),
+                    (Z = new WeakSet()),
+                    (F = {}));
         }
     );
 }
-let G = null,
-    B = null,
-    Z = () => React.useContext(G),
-    F = 20,
-    V = null;
-function H() {
-    V = V.filter((e) => e.isConnected);
+let K = null,
+    z = null,
+    q = () => React.useContext(K),
+    X = 20,
+    Q = null;
+function J() {
+    Q = Q.filter((e) => e.isConnected);
 }
-let Y = {
+let $ = 0,
+    ee = "--floating-ui-scrollbar-width";
+function et() {
+    let e = (0, a.Xf)(),
+        t = /iP(hone|ad|od)|iOS/.test(e) || ("MacIntel" === e && navigator.maxTouchPoints > 1),
+        n = document.body.style,
+        r =
+            Math.round(document.documentElement.getBoundingClientRect().left) + document.documentElement.scrollLeft
+                ? "paddingLeft"
+                : "paddingRight",
+        i = window.innerWidth - document.documentElement.clientWidth,
+        o = n.left ? parseFloat(n.left) : window.scrollX,
+        s = n.top ? parseFloat(n.top) : window.scrollY;
+    if (((n.overflow = "hidden"), n.setProperty(ee, i + "px"), i && (n[r] = i + "px"), t)) {
+        var l, c;
+        let e = (null == (l = window.visualViewport) ? void 0 : l.offsetLeft) || 0;
+        Object.assign(n, {
+            position: "fixed",
+            top: -(s - Math.floor((null == (c = window.visualViewport) ? void 0 : c.offsetTop) || 0)) + "px",
+            left: -(o - Math.floor(e)) + "px",
+            right: "0",
+        });
+    }
+    return () => {
+        Object.assign(n, {
+            overflow: "",
+            [r]: "",
+        }),
+            n.removeProperty(ee),
+            t &&
+                (Object.assign(n, {
+                    position: "",
+                    top: "",
+                    left: "",
+                    right: "",
+                }),
+                window.scrollTo(o, s));
+    };
+}
+let en = () => {},
+    er = i.forwardRef(function (e, t) {
+        let { lockScroll: n = !1, ...r } = e;
+        return (
+            (0, a.Xj)(() => {
+                if (n)
+                    return (
+                        1 == ++$ && (en = et()),
+                        () => {
+                            0 == --$ && en();
+                        }
+                    );
+            }, [n]),
+            (0, o.jsx)("div", {
+                ref: t,
+                ...r,
+                style: {
+                    position: "fixed",
+                    overflow: "auto",
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    ...r.style,
+                },
+            })
+        );
+    }),
+    ei = {
         pointerdown: "onPointerDown",
         mousedown: "onMouseDown",
         click: "onClick",
     },
-    W = {
+    ea = {
         pointerdown: "onPointerDownCapture",
         mousedown: "onMouseDownCapture",
         click: "onClickCapture",
     },
-    K = (e) => {
+    eo = (e) => {
         var t, n;
         return {
             escapeKey: "boolean" == typeof e ? e : null != (t = null == e ? void 0 : e.escapeKey) && t,
             outsidePress: "boolean" == typeof e ? e : null == (n = null == e ? void 0 : e.outsidePress) || n,
         };
     };
-function z(e, t) {
+function es(e, t) {
     void 0 === t && (t = {});
-    let { open: n, onOpenChange: r, elements: s, dataRef: l } = e,
+    let { open: n, onOpenChange: r, elements: o, dataRef: l } = e,
         {
             enabled: c = !0,
             escapeKey: u = !0,
@@ -182,16 +494,16 @@ function z(e, t) {
             bubbles: m,
             capture: g,
         } = t,
-        E = A(),
+        E = C(),
         b = (0, a.iW)("function" == typeof d ? d : () => !1),
         y = "function" == typeof d ? b : d,
         O = i.useRef(!1),
-        { escapeKey: v, outsidePress: I } = K(m),
-        { escapeKey: T, outsidePress: S } = K(g),
-        N = i.useRef(!1),
+        { escapeKey: v, outsidePress: I } = eo(m),
+        { escapeKey: S, outsidePress: T } = eo(g),
+        A = i.useRef(!1),
         R = (0, a.iW)((e) => {
             var t;
-            if (!n || !c || !u || "Escape" !== e.key || N.current) return;
+            if (!n || !c || !u || "Escape" !== e.key || A.current) return;
             let i = null == (t = l.current.floatingContext) ? void 0 : t.nodeId,
                 o = E ? (0, a.El)(E.nodesRef.current, i) : [];
             if (!v && (e.stopPropagation(), o.length > 0)) {
@@ -225,33 +537,33 @@ function z(e, t) {
             let i = O.current;
             if (((O.current = !1), ("click" === f && i) || n || ("function" == typeof y && !y(e)))) return;
             let c = (0, a.U9)(e),
-                u = "[" + C("inert") + "]",
-                d = (0, a.Me)(s.floating).querySelectorAll(u),
-                _ = (0, o.kK)(c) ? c : null;
-            for (; _ && !(0, o.Py)(_); ) {
-                let e = (0, o.Ow)(_);
-                if ((0, o.Py)(e) || !(0, o.kK)(e)) break;
+                u = "[" + N("inert") + "]",
+                d = (0, a.Me)(o.floating).querySelectorAll(u),
+                _ = (0, s.kK)(c) ? c : null;
+            for (; _ && !(0, s.Py)(_); ) {
+                let e = (0, s.Ow)(_);
+                if ((0, s.Py)(e) || !(0, s.kK)(e)) break;
                 _ = e;
             }
             if (
                 d.length &&
-                (0, o.kK)(c) &&
+                (0, s.kK)(c) &&
                 !(0, a.ex)(c) &&
-                !(0, a.r3)(c, s.floating) &&
+                !(0, a.r3)(c, o.floating) &&
                 Array.from(d).every((e) => !(0, a.r3)(_, e))
             )
                 return;
-            if ((0, o.Re)(c) && L) {
-                let t = (0, o.Py)(c),
-                    n = (0, o.Dx)(c),
+            if ((0, s.Re)(c) && L) {
+                let t = (0, s.Py)(c),
+                    n = (0, s.Dx)(c),
                     r = /auto|scroll/,
                     i = t || r.test(n.overflowX),
                     a = t || r.test(n.overflowY),
-                    s = i && c.clientWidth > 0 && c.scrollWidth > c.clientWidth,
+                    o = i && c.clientWidth > 0 && c.scrollWidth > c.clientWidth,
                     l = a && c.clientHeight > 0 && c.scrollHeight > c.clientHeight,
                     u = "rtl" === n.direction,
                     d = l && (u ? e.offsetX <= c.offsetWidth - c.clientWidth : e.offsetX > c.clientWidth),
-                    f = s && e.offsetY > c.clientHeight;
+                    f = o && e.offsetY > c.clientHeight;
                 if (d || f) return;
             }
             let p = null == (t = l.current.floatingContext) ? void 0 : t.nodeId,
@@ -261,7 +573,7 @@ function z(e, t) {
                         var n;
                         return (0, a.Pe)(e, null == (n = t.context) ? void 0 : n.elements.floating);
                     });
-            if ((0, a.Pe)(e, s.floating) || (0, a.Pe)(e, s.domReference) || h) return;
+            if ((0, a.Pe)(e, o.floating) || (0, a.Pe)(e, o.domReference) || h) return;
             let m = E ? (0, a.El)(E.nodesRef.current, p) : [];
             if (m.length > 0) {
                 let e = !0;
@@ -295,31 +607,31 @@ function z(e, t) {
             r(!1, e, "ancestor-scroll");
         }
         function i() {
-            window.clearTimeout(e), (N.current = !0);
+            window.clearTimeout(e), (A.current = !0);
         }
         function d() {
             e = window.setTimeout(
                 () => {
-                    N.current = !1;
+                    A.current = !1;
                 },
-                5 * !!(0, o.Pf)(),
+                5 * !!(0, s.Pf)(),
             );
         }
-        let _ = (0, a.Me)(s.floating);
+        let _ = (0, a.Me)(o.floating);
         u &&
-            (_.addEventListener("keydown", T ? P : R, T),
+            (_.addEventListener("keydown", S ? P : R, S),
             _.addEventListener("compositionstart", i),
             _.addEventListener("compositionend", d)),
-            y && _.addEventListener(f, S ? D : w, S);
+            y && _.addEventListener(f, T ? D : w, T);
         let p = [];
         return (
             h &&
-                ((0, o.kK)(s.domReference) && (p = (0, o.Kx)(s.domReference)),
-                (0, o.kK)(s.floating) && (p = p.concat((0, o.Kx)(s.floating))),
-                !(0, o.kK)(s.reference) &&
-                    s.reference &&
-                    s.reference.contextElement &&
-                    (p = p.concat((0, o.Kx)(s.reference.contextElement)))),
+                ((0, s.kK)(o.domReference) && (p = (0, s.Kx)(o.domReference)),
+                (0, s.kK)(o.floating) && (p = p.concat((0, s.Kx)(o.floating))),
+                !(0, s.kK)(o.reference) &&
+                    o.reference &&
+                    o.reference.contextElement &&
+                    (p = p.concat((0, s.Kx)(o.reference.contextElement)))),
             (p = p.filter((e) => {
                 var t;
                 return e !== (null == (t = _.defaultView) ? void 0 : t.visualViewport);
@@ -328,17 +640,17 @@ function z(e, t) {
             }),
             () => {
                 u &&
-                    (_.removeEventListener("keydown", T ? P : R, T),
+                    (_.removeEventListener("keydown", S ? P : R, S),
                     _.removeEventListener("compositionstart", i),
                     _.removeEventListener("compositionend", d)),
-                    y && _.removeEventListener(f, S ? D : w, S),
+                    y && _.removeEventListener(f, T ? D : w, T),
                     p.forEach((e) => {
                         e.removeEventListener("scroll", t);
                     }),
                     window.clearTimeout(e);
             }
         );
-    }, [l, s, u, y, f, n, r, h, c, v, I, R, T, P, w, S, D]),
+    }, [l, o, u, y, f, n, r, h, c, v, I, R, S, P, w, T, D]),
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
@@ -346,7 +658,7 @@ function z(e, t) {
             () => ({
                 onKeyDown: R,
                 ...(_ && {
-                    [Y[p]]: (e) => {
+                    [ei[p]]: (e) => {
                         r(!1, e.nativeEvent, "reference-press");
                     },
                     ...("click" !== p && {
@@ -367,7 +679,7 @@ function z(e, t) {
                 onMouseUp() {
                     O.current = !0;
                 },
-                [W[f]]: () => {
+                [ea[f]]: () => {
                     l.current.insideReactTree = !0;
                 },
             }),
@@ -384,12 +696,12 @@ function z(e, t) {
         [c, x, L],
     );
 }
-function q(e) {
+function el(e) {
     let { open: t = !1, onOpenChange: n, elements: r } = e,
-        o = O(),
+        o = v(),
         s = i.useRef({}),
-        [l] = i.useState(() => v()),
-        c = null != S(),
+        [l] = i.useState(() => I()),
+        c = null != A(),
         [u, d] = i.useState(r.reference),
         f = (0, a.iW)((e, t, r) => {
             (s.current.openEvent = e ? t : void 0),
@@ -423,10 +735,10 @@ function q(e) {
         [t, f, p, l, o, _],
     );
 }
-function X(e) {
+function ec(e) {
     void 0 === e && (e = {});
     let { nodeId: t } = e,
-        n = q({
+        n = el({
             ...e,
             elements: {
                 reference: null,
@@ -435,25 +747,25 @@ function X(e) {
             },
         }),
         r = e.rootContext || n,
-        s = r.elements,
-        [c, u] = i.useState(null),
+        o = r.elements,
+        [l, u] = i.useState(null),
         [d, f] = i.useState(null),
-        _ = (null == s ? void 0 : s.domReference) || c,
+        _ = (null == o ? void 0 : o.domReference) || l,
         p = i.useRef(null),
-        h = A();
+        h = C();
     (0, a.Xj)(() => {
         _ && (p.current = _);
     }, [_]);
-    let m = (0, l.YF)({
+    let m = (0, c.YF)({
             ...e,
             elements: {
-                ...s,
+                ...o,
                 ...(d && { reference: d }),
             },
         }),
         g = i.useCallback(
             (e) => {
-                let t = (0, o.kK)(e)
+                let t = (0, s.kK)(e)
                     ? {
                           getBoundingClientRect: () => e.getBoundingClientRect(),
                           getClientRects: () => e.getClientRects(),
@@ -466,10 +778,10 @@ function X(e) {
         ),
         E = i.useCallback(
             (e) => {
-                ((0, o.kK)(e) || null === e) && ((p.current = e), u(e)),
-                    ((0, o.kK)(m.refs.reference.current) ||
+                ((0, s.kK)(e) || null === e) && ((p.current = e), u(e)),
+                    ((0, s.kK)(m.refs.reference.current) ||
                         null === m.refs.reference.current ||
-                        (null !== e && !(0, o.kK)(e))) &&
+                        (null !== e && !(0, s.kK)(e))) &&
                         m.refs.setReference(e);
             },
             [m.refs],
@@ -517,18 +829,18 @@ function X(e) {
         )
     );
 }
-function Q(e, t, n) {
+function eu(e, t, n) {
     let r = new Map(),
         i = "item" === n,
         a = e;
     if (i && e) {
-        let { [u]: t, [d]: n, ...r } = e;
+        let { [d]: t, [f]: n, ...r } = e;
         a = r;
     }
     return {
         ...("floating" === n && {
             tabIndex: -1,
-            [c]: "",
+            [u]: "",
         }),
         ...a,
         ...t
@@ -542,7 +854,7 @@ function Q(e, t, n) {
                     t &&
                         Object.entries(t).forEach((t) => {
                             let [n, a] = t;
-                            if (!(i && [u, d].includes(n)))
+                            if (!(i && [d, f].includes(n)))
                                 if (0 === n.indexOf("on")) {
                                     if ((r.has(n) || r.set(n, []), "function" == typeof a)) {
                                         var o;
@@ -563,14 +875,14 @@ function Q(e, t, n) {
             ),
     };
 }
-function J(e) {
+function ed(e) {
     void 0 === e && (e = []);
     let t = e.map((e) => (null == e ? void 0 : e.reference)),
         n = e.map((e) => (null == e ? void 0 : e.floating)),
         r = e.map((e) => (null == e ? void 0 : e.item)),
-        a = i.useCallback((t) => Q(t, e, "reference"), t),
-        o = i.useCallback((t) => Q(t, e, "floating"), n),
-        s = i.useCallback((t) => Q(t, e, "item"), r);
+        a = i.useCallback((t) => eu(t, e, "reference"), t),
+        o = i.useCallback((t) => eu(t, e, "floating"), n),
+        s = i.useCallback((t) => eu(t, e, "item"), r);
     return i.useMemo(
         () => ({
             getReferenceProps: a,
@@ -580,8 +892,8 @@ function J(e) {
         [a, o, s],
     );
 }
-let $ = "Escape";
-function ee(e, t, n) {
+let ef = "Escape";
+function e_(e, t, n) {
     switch (e) {
         case "vertical":
             return t;
@@ -591,11 +903,11 @@ function ee(e, t, n) {
             return t || n;
     }
 }
-let et = (e) => e.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (e, t) => (t ? "-" : "") + e.toLowerCase());
-function en(e, t) {
+let ep = (e) => e.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (e, t) => (t ? "-" : "") + e.toLowerCase());
+function eh(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function er(e, t) {
+function em(e, t) {
     let [n, r] = i.useState(e);
     return (
         e && !n && r(!0),
@@ -608,16 +920,16 @@ function er(e, t) {
         n
     );
 }
-function ei(e, t) {
+function eg(e, t) {
     void 0 === t && (t = {});
     let {
             open: n,
             elements: { floating: r },
         } = e,
         { duration: o = 250 } = t,
-        l = ("number" == typeof o ? o : o.close) || 0,
+        s = ("number" == typeof o ? o : o.close) || 0,
         [c, u] = i.useState("unmounted"),
-        d = er(n, l);
+        d = em(n, s);
     return (
         d || "close" !== c || u("unmounted"),
         (0, a.Xj)(() => {
@@ -625,7 +937,7 @@ function ei(e, t) {
                 if (n) {
                     u("initial");
                     let e = requestAnimationFrame(() => {
-                        s.flushSync(() => {
+                        l.flushSync(() => {
                             u("open");
                         });
                     });
@@ -642,7 +954,7 @@ function ei(e, t) {
         }
     );
 }
-function ea(e, t) {
+function eE(e, t) {
     void 0 === t && (t = {});
     let { initial: n = { opacity: 0 }, open: r, close: o, common: s, duration: l = 250 } = t,
         c = e.placement,
@@ -658,20 +970,20 @@ function ea(e, t) {
         _ = (f ? l : l.open) || 0,
         p = (f ? l : l.close) || 0,
         [h, m] = i.useState(() => ({
-            ...en(s, d),
-            ...en(n, d),
+            ...eh(s, d),
+            ...eh(n, d),
         })),
-        { isMounted: g, status: E } = ei(e, { duration: l }),
+        { isMounted: g, status: E } = eg(e, { duration: l }),
         b = (0, a.II)(n),
         y = (0, a.II)(r),
         O = (0, a.II)(o),
         v = (0, a.II)(s);
     return (
         (0, a.Xj)(() => {
-            let e = en(b.current, d),
-                t = en(O.current, d),
-                n = en(v.current, d),
-                r = en(y.current, d) || Object.keys(e).reduce((e, t) => ((e[t] = ""), e), {});
+            let e = eh(b.current, d),
+                t = eh(O.current, d),
+                n = eh(v.current, d),
+                r = eh(y.current, d) || Object.keys(e).reduce((e, t) => ((e[t] = ""), e), {});
             if (
                 ("initial" === E &&
                     m((t) => ({
@@ -681,7 +993,7 @@ function ea(e, t) {
                     })),
                 "open" === E &&
                     m({
-                        transitionProperty: Object.keys(r).map(et).join(","),
+                        transitionProperty: Object.keys(r).map(ep).join(","),
                         transitionDuration: _ + "ms",
                         ...n,
                         ...r,
@@ -690,7 +1002,7 @@ function ea(e, t) {
             ) {
                 let r = t || e;
                 m({
-                    transitionProperty: Object.keys(r).map(et).join(","),
+                    transitionProperty: Object.keys(r).map(ep).join(","),
                     transitionDuration: p + "ms",
                     ...n,
                     ...r,
@@ -702,4 +1014,171 @@ function ea(e, t) {
             styles: h,
         }
     );
+}
+function eb(e, t, n) {
+    return (
+        void 0 === n && (n = !0),
+        e
+            .filter((e) => {
+                var r;
+                return e.parentId === t && (!n || (null == (r = e.context) ? void 0 : r.open));
+            })
+            .flatMap((t) => [t, ...eb(e, t.id, n)])
+    );
+}
+function ey(e, t) {
+    let [n, r] = e,
+        i = !1,
+        a = t.length;
+    for (let e = 0, o = a - 1; e < a; o = e++) {
+        let [a, s] = t[e] || [0, 0],
+            [l, c] = t[o] || [0, 0];
+        s >= r != c >= r && n <= ((l - a) * (r - s)) / (c - s) + a && (i = !i);
+    }
+    return i;
+}
+function eO(e, t) {
+    return e[0] >= t.x && e[0] <= t.x + t.width && e[1] >= t.y && e[1] <= t.y + t.height;
+}
+function ev(e) {
+    void 0 === e && (e = {});
+    let { buffer: t = 0.5, blockPointerEvents: n = !1, requireIntent: r = !0 } = e,
+        i = { current: -1 },
+        a = !1,
+        o = null,
+        l = null,
+        c = "undefined" != typeof performance ? performance.now() : 0;
+    function u(e, t) {
+        let n = performance.now(),
+            r = n - c;
+        if (null === o || null === l || 0 === r) return (o = e), (l = t), (c = n), null;
+        let i = e - o,
+            a = t - l,
+            s = Math.sqrt(i * i + a * a) / r;
+        return (o = e), (l = t), (c = n), s;
+    }
+    let d = (e) => {
+        let { x: n, y: o, placement: l, elements: c, onClose: d, nodeId: f, tree: _ } = e;
+        return function (e) {
+            function p() {
+                R(i), d();
+            }
+            if ((R(i), !c.domReference || !c.floating || null == l || null == n || null == o)) return;
+            let { clientX: h, clientY: m } = e,
+                g = [h, m],
+                E = k(e),
+                b = "mouseleave" === e.type,
+                y = j(c.floating, E),
+                O = j(c.domReference, E),
+                v = c.domReference.getBoundingClientRect(),
+                I = c.floating.getBoundingClientRect(),
+                S = l.split("-")[0],
+                T = n > I.right - I.width / 2,
+                A = o > I.bottom - I.height / 2,
+                C = eO(g, v),
+                N = I.width > v.width,
+                P = I.height > v.height,
+                w = (N ? v : I).left,
+                D = (N ? v : I).right,
+                x = (P ? v : I).top,
+                L = (P ? v : I).bottom;
+            if (y && ((a = !0), !b)) return;
+            if ((O && (a = !1), O && !b)) {
+                a = !0;
+                return;
+            }
+            if (
+                (b && (0, s.kK)(e.relatedTarget) && j(c.floating, e.relatedTarget)) ||
+                (_ && eb(_.nodesRef.current, f).length)
+            )
+                return;
+            if (
+                ("top" === S && o >= v.bottom - 1) ||
+                ("bottom" === S && o <= v.top + 1) ||
+                ("left" === S && n >= v.right - 1) ||
+                ("right" === S && n <= v.left + 1)
+            )
+                return p();
+            let M = [];
+            switch (S) {
+                case "top":
+                    M = [
+                        [w, v.top + 1],
+                        [w, I.bottom - 1],
+                        [D, I.bottom - 1],
+                        [D, v.top + 1],
+                    ];
+                    break;
+                case "bottom":
+                    M = [
+                        [w, I.top + 1],
+                        [w, v.bottom - 1],
+                        [D, v.bottom - 1],
+                        [D, I.top + 1],
+                    ];
+                    break;
+                case "left":
+                    M = [
+                        [I.right - 1, L],
+                        [I.right - 1, x],
+                        [v.left + 1, x],
+                        [v.left + 1, L],
+                    ];
+                    break;
+                case "right":
+                    M = [
+                        [v.right - 1, L],
+                        [v.right - 1, x],
+                        [I.left + 1, x],
+                        [I.left + 1, L],
+                    ];
+            }
+            function U(e) {
+                let [n, r] = e;
+                switch (S) {
+                    case "top":
+                        return [
+                            [N ? n + t / 2 : T ? n + 4 * t : n - 4 * t, r + t + 1],
+                            [N ? n - t / 2 : T ? n + 4 * t : n - 4 * t, r + t + 1],
+                            [I.left, T || N ? I.bottom - t : I.top],
+                            [I.right, T ? (N ? I.bottom - t : I.top) : I.bottom - t],
+                        ];
+                    case "bottom":
+                        return [
+                            [N ? n + t / 2 : T ? n + 4 * t : n - 4 * t, r - t],
+                            [N ? n - t / 2 : T ? n + 4 * t : n - 4 * t, r - t],
+                            [I.left, T || N ? I.top + t : I.bottom],
+                            [I.right, T ? (N ? I.top + t : I.bottom) : I.top + t],
+                        ];
+                    case "left": {
+                        let e = [n + t + 1, P ? r + t / 2 : A ? r + 4 * t : r - 4 * t],
+                            i = [n + t + 1, P ? r - t / 2 : A ? r + 4 * t : r - 4 * t];
+                        return [
+                            [A || P ? I.right - t : I.left, I.top],
+                            [A ? (P ? I.right - t : I.left) : I.right - t, I.bottom],
+                            e,
+                            i,
+                        ];
+                    }
+                    case "right":
+                        return [
+                            [n - t, P ? r + t / 2 : A ? r + 4 * t : r - 4 * t],
+                            [n - t, P ? r - t / 2 : A ? r + 4 * t : r - 4 * t],
+                            [A || P ? I.left + t : I.right, I.top],
+                            [A ? (P ? I.left + t : I.right) : I.left + t, I.bottom],
+                        ];
+                }
+            }
+            if (!ey([h, m], M)) {
+                if (a && !C) return p();
+                if (!b && r) {
+                    let t = u(e.clientX, e.clientY),
+                        n = 0.1;
+                    if (null !== t && t < n) return p();
+                }
+                ey([h, m], U([n, o])) ? !a && r && (i.current = window.setTimeout(p, 40)) : p();
+            }
+        };
+    };
+    return (d.__options = { blockPointerEvents: n }), d;
 }
