@@ -177,7 +177,7 @@ async function M() {
                         I.r.build(e.config).rewardPlatforms.length > 0
                     );
                 }),
-                o = e.body.excluded_quests;
+                o = e.body.excluded_quests.map((e) => (0, g.Qr)(e));
             a.Z.dispatch({
                 type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
                 quests: r,

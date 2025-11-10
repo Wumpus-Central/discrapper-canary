@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(722334),
     f = n(683650),
     _ = n(864306),
-    p = n(506207);
+    p = n(978221);
 function h(e) {
     let { questId: t } = e,
         {
@@ -21,7 +21,7 @@ function h(e) {
             fetchPolicy: "cache-or-network",
             callerSource: "embed",
         }),
-        g = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
+        g = i.useMemo(() => (0, s._x)(t, n, h), [t, n, h]),
         E = i.useMemo(() => h.find((e) => e.id === t), [t, h]),
         b = i.useMemo(
             () => (null == g ? void 0 : g.config.features.includes(a.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
@@ -29,27 +29,27 @@ function h(e) {
         );
     return m
         ? (0, r.jsx)(o.$jN, { className: p.spinner })
-        : null != E
-          ? (0, r.jsx)(d.W, { questId: t })
-          : null == g
+        : null == g
+          ? null != E
+              ? (0, r.jsx)(d.W, { questId: t })
+              : (0, r.jsx)(f.o, {
+                    questId: t,
+                    reason: f.X.NOT_FOUND,
+                })
+          : (0, s.HJ)(g) && !b
             ? (0, r.jsx)(f.o, {
                   questId: t,
-                  reason: f.X.NOT_FOUND,
+                  reason: f.X.MOBILE_ONLY,
               })
-            : (0, s.HJ)(g) && !b
-              ? (0, r.jsx)(f.o, {
-                    questId: t,
-                    reason: f.X.MOBILE_ONLY,
-                })
-              : (0, s.vB)(g.config)
-                ? (0, r.jsx)(
-                      u.Z,
-                      {
-                          quest: g,
-                          location: c.jn.QUESTS_EMBED,
-                          sourceQuestContent: c.jn.QUESTS_EMBED,
-                      },
-                      g.id,
-                  )
-                : (0, r.jsx)(_.J, { questId: t });
+            : (0, s.vB)(g.config)
+              ? (0, r.jsx)(
+                    u.Z,
+                    {
+                        quest: g,
+                        location: c.jn.QUESTS_EMBED,
+                        sourceQuestContent: c.jn.QUESTS_EMBED,
+                    },
+                    g.id,
+                )
+              : (0, r.jsx)(_.J, { questId: t });
 }
