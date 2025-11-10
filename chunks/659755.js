@@ -94,13 +94,13 @@ let x = (e) => {
         });
     },
     y = (e) => {
-        let { skuId: t, isCardHovered: n } = e,
-            l = (0, f.LJ)(t),
-            i = (0, p.o)(l);
-        if (null == l) return null;
-        let s = (0, b.W)(l, i);
+        let { skuId: t, isCardHovered: n, overrideVariantIndex: l } = e,
+            i = (0, f.LJ)(t),
+            s = (0, p.o)(i);
+        if (null == i) return null;
+        let a = (0, b.W)(i, null != l ? l : s);
         return (0, r.jsx)(x, {
-            product: s,
+            product: a,
             isCardHovered: n,
         });
     };
