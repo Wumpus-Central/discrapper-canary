@@ -14,19 +14,21 @@ var r = t(951288),
     x = t(52021),
     _ = t(809121),
     v = t(546303),
-    b = t(981631),
+    b = t(17790),
+    p = t(981631),
     j = t(269794),
-    p = t(388032),
-    h = t(215365);
+    h = t(388032),
+    C = t(215365);
 function y(e) {
     let { guildId: n } = e;
     (0, g.cX)(n),
+        (0, b.Z)(n),
         a.useEffect(() => {
             (0, m.mF)(n), o.Z.getDetectableGames();
         }, [n]);
     let t = (0, u.Z)(n),
         y = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(n)),
-        C = a.useMemo(
+        O = a.useMemo(
             () =>
                 (null == y ? void 0 : y.instances) == null
                     ? void 0
@@ -44,51 +46,51 @@ function y(e) {
                         ),
             [null == y ? void 0 : y.instances, n],
         ),
-        [O, I] = a.useState(!1);
+        [I, N] = a.useState(!1);
     return (
         a.useEffect(() => {
-            (null == C || C.length > 0) && I(!0);
-        }, [C]),
+            (null == O || O.length > 0) && N(!0);
+        }, [O]),
         (0, r.jsxs)("div", {
-            className: h.container,
+            className: C.container,
             children: [
                 (0, r.jsxs)(c.ZP, {
-                    className: h.toolbar,
+                    className: C.toolbar,
                     toolbar: (0, r.jsx)("div", {}),
                     children: [
                         (0, r.jsx)(c.ZP.Icon, {
                             icon: i.iWm,
                             "aria-label": "",
                         }),
-                        (0, r.jsx)(c.ZP.Title, { children: p.intl.string(j.default.vCzwM7) }),
+                        (0, r.jsx)(c.ZP.Title, { children: h.intl.string(j.default.vCzwM7) }),
                         (0, r.jsx)(s.IGR, {
                             disableColor: !0,
-                            text: p.intl.string(p.t.oW0eUd),
-                            className: h.badge,
+                            text: h.intl.string(h.t.oW0eUd),
+                            className: C.badge,
                         }),
-                        (0, r.jsx)(c.ZP.Divider, { className: h.divider }),
+                        (0, r.jsx)(c.ZP.Divider, { className: C.divider }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: p.intl.format(j.default.LiR4eN, {
-                                helpCenterUrl: d.Z.getArticleURL(b.BhN.GAME_SERVER_HOSTING),
+                            children: h.intl.format(j.default.LiR4eN, {
+                                helpCenterUrl: d.Z.getArticleURL(p.BhN.GAME_SERVER_HOSTING),
                             }),
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.contentContainer,
+                    className: C.contentContainer,
                     children: [
                         (null == y ? void 0 : y.instances) != null
                             ? (0, r.jsx)(s.zJl, {
-                                  className: h.gameContainerWrapper,
+                                  className: C.gameContainerWrapper,
                                   children: (0, r.jsxs)("div", {
-                                      className: h.gameContainer,
-                                      children: [C, O && (0, r.jsx)(x.Z, { guildId: n })],
+                                      className: C.gameContainer,
+                                      children: [O, I && (0, r.jsx)(x.Z, { guildId: n })],
                                   }),
                               })
                             : (0, r.jsx)("div", {
-                                  className: h.spinnerContainer,
+                                  className: C.spinnerContainer,
                                   children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
                               }),
                         t && (0, r.jsx)(v.Z, { guildId: n }),
