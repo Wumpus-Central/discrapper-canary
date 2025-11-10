@@ -88,7 +88,6 @@ function y(e) {
         case c.n0.TextChat:
             return l.i.TEXT_CHAT;
         case c.n0.WelcomeNudge:
-        case c.n0.OopWelcomeNudge:
             return l.i.WELCOME_GENERAL;
         case c.n0.GoLiveNudge:
         case c.n0.GoLiveNonVoiceNudge:

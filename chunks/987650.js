@@ -18,7 +18,6 @@ var a = (function (e) {
         (e[(e.GO_LIVE_NON_VOICE = 3)] = "GO_LIVE_NON_VOICE"),
         (e[(e.KEYBIND_INDICATORS = 4)] = "KEYBIND_INDICATORS"),
         (e[(e.CONTENT_INVENTORY = 5)] = "CONTENT_INVENTORY"),
-        (e[(e.OOP_WELCOME = 6)] = "OOP_WELCOME"),
         e
     );
 })({});
@@ -26,7 +25,6 @@ function o(e) {
     switch (e) {
         case "News Nudge":
         case "Welcome Nudge":
-        case "Oop Welcome Nudge":
         case "Go Live Nudge":
         case "Go Live Non Voice Nudge":
             return 0;
@@ -59,7 +57,6 @@ var s = (function (e) {
         return (
             (e.NewsNudge = "News Nudge"),
             (e.WelcomeNudge = "Welcome Nudge"),
-            (e.OopWelcomeNudge = "Oop Welcome Nudge"),
             (e.TextChat = "Text Chat"),
             (e.ActivityUserJoin = "Activity User Join"),
             (e.ActivityInvite = "Activity Invite"),
