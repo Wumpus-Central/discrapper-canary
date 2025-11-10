@@ -1,23 +1,21 @@
-n.d(t, { default: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+n.d(t, { default: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(755721),
+    s = n(793030),
     l = n(481060),
     c = n(166459),
     u = n(990169),
     d = n(476326),
     f = n(752305),
-    _ = n(849522),
-    p = n(703558),
-    h = n(626135),
-    m = n(358085),
-    g = n(998502),
-    E = n(981631),
-    b = n(388032),
-    y = n(374450);
-function O(e, t, n) {
+    _ = n(703558),
+    p = n(358085),
+    h = n(998502),
+    m = n(981631),
+    g = n(388032),
+    E = n(854835);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +39,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,20 +56,20 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = 104,
-    A = 16;
-function C(e) {
+let I = 104,
+    S = 16;
+function T(e) {
     var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
@@ -95,61 +93,54 @@ function C(e) {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
                         ? p({
-                              width: S,
-                              height: S,
+                              width: I,
+                              height: I,
                           })
                         : t > 1
                           ? p({
-                                width: S * t,
+                                width: I * t,
                                 height: void 0,
                             })
                           : p({
                                 width: void 0,
-                                height: S / t,
+                                height: I / t,
                             }),
                         f(!0);
                 });
         }, []);
     let m = (0, u.Z)(h),
-        g = Math.max(16, (A + S - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+        g = Math.max(16, (S + I - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)("img", {
         ref: h,
         src: l,
-        className: o()(y.icon, { [y.image]: !d }),
+        className: o()(E.fileIcon, { [E.image]: !d }),
         "aria-hidden": !0,
         alt: "",
         style: {
             width: null != (n = _.width) ? n : "initial",
-            maxHeight: null != (a = _.height) ? a : S,
+            maxHeight: null != (a = _.height) ? a : I,
             height: "unset",
             marginLeft: g,
             marginRight: g,
-            marginTop: null != _.height ? S - _.height - 33 : -33,
+            marginTop: 0,
         },
     });
 }
-class N extends i.Component {
+class A extends i.Component {
     render() {
         var e;
         return this.props.upload.item.platform !== d.ow.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, r.jsx)(C, { file: this.props.upload.item.file })
+              ? (0, r.jsx)(T, { file: this.props.upload.item.file })
               : (0, r.jsx)("div", {
-                    className: o()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
+                    className: o()(E.fileIcon, { [E[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
                 });
     }
 }
-class R extends i.Component {
+class C extends i.Component {
     componentDidMount() {
-        var e;
-        (null == (e = this.props.upload) ? void 0 : e.showLargeMessageDialog) &&
-            this.props.upload.item.platform === d.ow.WEB &&
-            h.default.track(E.rMx.OPEN_MODAL, {
-                type: "Upload Large Message",
-                message_content_length: this.props.upload.item.file.size,
-            }),
-            m.isPlatformEmbedded && g.ZP.focus();
+        p.isPlatformEmbedded && h.ZP.focus();
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -160,100 +151,60 @@ class R extends i.Component {
             this.setState({ filename: null != (i = null == (r = this.props.upload) ? void 0 : r.filename) ? i : "" });
     }
     render() {
-        let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: i } = this.props,
+        let { upload: e, transitionState: t, disableSpoiler: n, onClose: i } = this.props,
             { hasSpoiler: a } = this.state;
-        return (0, r.jsxs)(l.Y0X, {
-            "aria-label": b.intl.string(b.t["3AS4UM"]),
-            size: l.CgR.DYNAMIC,
+        return (0, r.jsxs)(s.Modal, {
             transitionState: t,
-            className: y.uploadModal,
-            parentComponent: "UploadAttachment",
+            onClose: i,
+            title: g.intl.string(g.t.Y8ujqr),
+            actions: [
+                {
+                    variant: "secondary",
+                    text: g.intl.string(g.t["ETE/oC"]),
+                    onClick: this.cancel,
+                },
+                {
+                    variant: "primary",
+                    text: g.intl.string(g.t["TY+auE"]),
+                    onClick: this.handleSubmit,
+                },
+            ],
             children: [
-                (0, r.jsxs)("div", {
-                    className: y.inner,
+                (0, r.jsx)(A, { upload: e }),
+                (0, r.jsxs)(l.Kqy, {
+                    gap: 24,
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: o()(y.file, { [y.expandable]: e.isImage }),
+                        (0, r.jsxs)(l.Kqy, {
+                            gap: 16,
                             children: [
-                                (0, r.jsx)(N, { upload: e }),
-                                (0, r.jsxs)("div", {
-                                    className: y.description,
-                                    children: [
-                                        (0, r.jsx)("div", {
-                                            className: y.filename,
-                                            children: e.showLargeMessageDialog
-                                                ? b.intl.formatToPlainString(b.t.QWQxtC, { maxLength: n })
-                                                : e.filename,
-                                        }),
-                                        e.showLargeMessageDialog
-                                            ? (0, r.jsx)("div", {
-                                                  className: y.subtitle,
-                                                  children: b.intl.string(b.t.Plcu02),
-                                              })
-                                            : null,
-                                    ],
+                                (0, r.jsx)(l.oil, {
+                                    label: g.intl.string(g.t.ILJuBq),
+                                    value: this.state.filename,
+                                    onChange: (e) => this.setState({ filename: e }),
+                                    onKeyDown: (e) => {
+                                        if (e.which === m.yXg.ENTER) return this.handleSubmit();
+                                    },
                                 }),
+                                e.isImage
+                                    ? (0, r.jsx)(l.oil, {
+                                          label: g.intl.string(g.t.eOB2eR),
+                                          placeholder: g.intl.string(g.t.RNH1jn),
+                                          value: this.state.description,
+                                          onChange: (e) => this.setState({ description: e }),
+                                          onKeyDown: (e) => {
+                                              if (e.which === m.yXg.ENTER) return this.handleSubmit();
+                                          },
+                                      })
+                                    : null,
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: y.form,
-                            children: (0, r.jsxs)(l.Kqy, {
-                                gap: 24,
-                                children: [
-                                    (0, r.jsxs)(l.Kqy, {
-                                        gap: 16,
-                                        children: [
-                                            (0, r.jsx)(l.oil, {
-                                                label: b.intl.string(b.t.ILJuBq),
-                                                value: this.state.filename,
-                                                onChange: (e) => this.setState({ filename: e }),
-                                                onKeyDown: (e) => {
-                                                    if (e.which === E.yXg.ENTER) return this.handleSubmit();
-                                                },
-                                            }),
-                                            e.isImage
-                                                ? (0, r.jsx)(l.oil, {
-                                                      label: b.intl.string(b.t.eOB2eR),
-                                                      placeholder: b.intl.string(b.t.RNH1jn),
-                                                      value: this.state.description,
-                                                      onChange: (e) => this.setState({ description: e }),
-                                                      onKeyDown: (e) => {
-                                                          if (e.which === E.yXg.ENTER) return this.handleSubmit();
-                                                      },
-                                                  })
-                                                : null,
-                                        ],
-                                    }),
-                                    !0 !== i &&
-                                        (0, r.jsx)(l.Checkbox, {
-                                            checked: a,
-                                            onChange: (e) => this.setState({ hasSpoiler: e }),
-                                            label: b.intl.string(b.t["gsI+xC"]),
-                                        }),
-                                ],
+                        !0 !== n &&
+                            (0, r.jsx)(l.Checkbox, {
+                                checked: a,
+                                onChange: (e) => this.setState({ hasSpoiler: e }),
+                                label: g.intl.string(g.t["gsI+xC"]),
                             }),
-                        }),
                     ],
-                }),
-                (0, r.jsx)("div", {
-                    className: y.footer,
-                    children: (0, r.jsxs)("div", {
-                        className: o()(y.hasSpoilers, y.footerRightAlign),
-                        children: [
-                            (0, r.jsx)(s.zx, {
-                                type: "button",
-                                look: s.zx.Looks.LINK,
-                                color: s.zx.Colors.PRIMARY,
-                                onClick: this.cancel,
-                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["ETE/oC"]) }),
-                            }),
-                            (0, r.jsx)(s.zx, {
-                                type: "submit",
-                                onClick: this.handleSubmit,
-                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["TY+auE"]) }),
-                            }),
-                        ],
-                    }),
                 }),
             ],
         });
@@ -261,19 +212,19 @@ class R extends i.Component {
     constructor(e) {
         var t, n, r, i, a, o;
         super(e),
-            O(this, "cancelAll", () => {
+            b(this, "cancelAll", () => {
                 c.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
             }),
-            O(this, "cancel", () => {
+            b(this, "cancel", () => {
                 this.props.onClose();
             }),
-            O(this, "handleTextChange", (e, t, n) => {
+            b(this, "handleTextChange", (e, t, n) => {
                 this.setState({
                     textValue: t,
                     richValue: n,
                 });
             }),
-            O(this, "handleSubmit", () => {
+            b(this, "handleSubmit", () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
                     { filename: r, description: i, hasSpoiler: a } = this.state;
                 n({
@@ -284,8 +235,8 @@ class R extends i.Component {
                 }),
                     t();
             });
-        let s = e.ignoreDraft ? "" : p.Z.getDraft(this.props.channelId, e.draftType);
-        this.state = T(v({}, (0, f.eK)(s)), {
+        let s = e.ignoreDraft ? "" : _.Z.getDraft(this.props.channelId, e.draftType);
+        this.state = v(y({}, (0, f.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
             filename: null != (a = null == (n = e.upload) ? void 0 : n.filename) ? a : "",
@@ -294,15 +245,6 @@ class R extends i.Component {
         });
     }
 }
-function P(e) {
-    let t = (0, _.Z)();
-    return e.upload.item.platform !== d.ow.WEB
-        ? null
-        : (0, r.jsx)(
-              R,
-              T(v({}, e), {
-                  file: e.upload.item.file,
-                  messageMaxLength: t,
-              }),
-          );
+function N(e) {
+    return e.upload.item.platform !== d.ow.WEB ? null : (0, r.jsx)(C, v(y({}, e), { file: e.upload.item.file }));
 }
