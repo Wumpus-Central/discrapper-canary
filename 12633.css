@@ -68774,6 +68774,14 @@ html .progress__61462 {
     }
 }
 
+.inlineApplicationText_c8f246 {
+    align-items: flex-end;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
+    vertical-align: text-bottom
+}
+
 .reactions_f8896c {
     align-items: center;
     display: flex;

@@ -8,4 +8,5 @@ e.exports = {
     footerSupportedPlatformIconsContainer: "footerSupportedPlatformIconsContainer_c8f246",
     footerSupportedPlatformIconContainer: "footerSupportedPlatformIconContainer_c8f246",
     footerSupportedPlatformText: "footerSupportedPlatformText_c8f246",
+    inlineApplicationText: "inlineApplicationText_c8f246",
 };

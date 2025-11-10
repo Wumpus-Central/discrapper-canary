@@ -320,6 +320,15 @@ class y {
             (null == n || n(this._array[e])) && a.unshift(this._array[e]);
         return a;
     }
+    hasAnyAfter(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+            r = this.get(e);
+        if (null == r) return !1;
+        let i = this._array.indexOf(r);
+        if (-1 === i) return !1;
+        for (let e = i + 1; e < this.length && (-1 === n || e <= i + n); e++) if (t(this._array[e])) return !0;
+        return !1;
+    }
     has(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return null != this._map[e] || (t && (this._before.has(e) || this._after.has(e)));
@@ -568,8 +577,8 @@ class y {
             O = null != (t = e.isBefore) && t,
             v = null != (n = e.isAfter) && n,
             I = null != (r = e.jump) ? r : null,
-            T = null != (s = e.hasMoreBefore) && s,
-            S = null != (l = e.hasMoreAfter) && l,
+            S = null != (s = e.hasMoreBefore) && s,
+            T = null != (l = e.hasMoreAfter) && l,
             A = null != (u = e.avoidInitialScroll) && u,
             C = null != (d = e.cached) && d,
             N = i()(y)
@@ -614,8 +623,8 @@ class y {
             jumpTargetOffset: null != I && null != I.messageId && null != I.offset ? I.offset : 0,
             jumpSequenceId: null == I || A ? R.jumpSequenceId : R.jumpSequenceId + 1,
             jumpReturnTargetId: null != (b = null == I ? void 0 : I.returnMessageId) ? b : null,
-            hasMoreBefore: null == I && v ? R.hasMoreBefore : T,
-            hasMoreAfter: null == I && O ? R.hasMoreAfter : S,
+            hasMoreBefore: null == I && v ? R.hasMoreBefore : S,
+            hasMoreAfter: null == I && O ? R.hasMoreAfter : T,
             cached: C,
             hasFetched: e.hasFetched,
             error: !1,
