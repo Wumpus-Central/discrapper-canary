@@ -13,6 +13,7 @@ e.exports = {
     statusTagGreen: "statusTagGreen_e9cb00 statusTag_e9cb00",
     statusTagRed: "statusTagRed_e9cb00 statusTag_e9cb00",
     statusTagGrey: "statusTagGrey_e9cb00 statusTag_e9cb00",
+    statusTagYellow: "statusTagYellow_e9cb00 statusTag_e9cb00",
     price: "price_e9cb00",
     description: "description_e9cb00",
     descriptionIcon: "descriptionIcon_e9cb00",

@@ -1,9 +1,11 @@
-n.d(t, { Z: () => l });
-var r = n(81825),
-    i = n(74538),
-    a = n(659181),
-    o = n(981631);
-function s(e, t, n) {
+n.d(t, { Z: () => u });
+var r = n(361268),
+    i = n(81825),
+    a = n(74538),
+    o = n(659181),
+    s = n(598077),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,13 +18,14 @@ function s(e, t, n) {
         e
     );
 }
-class l extends r.Z {
+class u extends i.Z {
     static createFromServer(e) {
-        var t, n, r;
-        return new l({
+        var t, n, r, i;
+        return new u({
             id: e.id,
             skuId: e.sku_id,
             applicationId: e.application_id,
+            user: null != e.user ? new s.Z(e.user) : null,
             userId: e.user_id,
             gifterId: e.gifter_user_id,
             type: e.type,
@@ -37,19 +40,20 @@ class l extends r.Z {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? a.Z.createFromServer(e.sku) : null,
+            sku: null != e.sku ? o.Z.createFromServer(e.sku) : null,
             sourceType: null != (r = e.source_type) ? r : null,
+            fulfillmentStatus: null != (i = e.fulfillment_status) ? i : null,
         });
     }
     get isGiftable() {
-        return this.type === o.qc2.USER_GIFT && null == this.gifterId;
+        return this.type === l.qc2.USER_GIFT && null == this.gifterId;
     }
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === o.qc2.PREMIUM_SUBSCRIPTION) {
+        if (this.type === l.qc2.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
-            if ((null != n && !n.premium) || !i.ZP.canInstallPremiumApplications(e)) return !1;
+            if ((null != n && !n.premium) || !a.ZP.canInstallPremiumApplications(e)) return !1;
         }
         let r = new Date();
         if ((null != this.startsAt && r < this.startsAt) || (null != this.endsAt && r >= this.endsAt)) return !1;
@@ -60,29 +64,35 @@ class l extends r.Z {
         }
         return !0;
     }
+    isFulfilled() {
+        return this.fulfillmentStatus === r.m.FULFILLED;
+    }
     constructor(e) {
         super(),
-            s(this, "id", void 0),
-            s(this, "skuId", void 0),
-            s(this, "applicationId", void 0),
-            s(this, "userId", void 0),
-            s(this, "gifterId", void 0),
-            s(this, "type", void 0),
-            s(this, "branches", void 0),
-            s(this, "startsAt", void 0),
-            s(this, "endsAt", void 0),
-            s(this, "subscriptionId", void 0),
-            s(this, "subscriptionPlanId", void 0),
-            s(this, "parentId", void 0),
-            s(this, "consumed", void 0),
-            s(this, "giftCodeBatchId", void 0),
-            s(this, "giftStyle", void 0),
-            s(this, "guildId", void 0),
-            s(this, "deleted", void 0),
-            s(this, "sourceType", void 0),
+            c(this, "id", void 0),
+            c(this, "skuId", void 0),
+            c(this, "applicationId", void 0),
+            c(this, "user", void 0),
+            c(this, "userId", void 0),
+            c(this, "gifterId", void 0),
+            c(this, "type", void 0),
+            c(this, "branches", void 0),
+            c(this, "startsAt", void 0),
+            c(this, "endsAt", void 0),
+            c(this, "subscriptionId", void 0),
+            c(this, "subscriptionPlanId", void 0),
+            c(this, "parentId", void 0),
+            c(this, "consumed", void 0),
+            c(this, "giftCodeBatchId", void 0),
+            c(this, "giftStyle", void 0),
+            c(this, "guildId", void 0),
+            c(this, "deleted", void 0),
+            c(this, "sourceType", void 0),
+            c(this, "fulfillmentStatus", void 0),
             (this.id = e.id),
             (this.skuId = e.skuId),
             (this.applicationId = e.applicationId),
+            (this.user = e.user),
             (this.userId = e.userId),
             (this.gifterId = e.gifterId),
             (this.type = e.type),
@@ -97,6 +107,7 @@ class l extends r.Z {
             (this.giftStyle = e.giftStyle),
             (this.guildId = e.guildId),
             (this.deleted = e.deleted),
-            (this.sourceType = e.sourceType);
+            (this.sourceType = e.sourceType),
+            (this.fulfillmentStatus = e.fulfillmentStatus);
     }
 }

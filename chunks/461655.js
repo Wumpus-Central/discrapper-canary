@@ -1,13 +1,14 @@
-n.d(t, { Z: () => f }), n(953529), n(997841);
+n.d(t, { Z: () => _ }), n(953529), n(997841);
 var r = n(314877),
     i = n(81825),
     a = n(630388),
-    o = n(46141),
-    s = n(659181),
-    l = n(255078),
-    c = n(981631),
-    u = n(474936);
-function d(e, t, n) {
+    o = n(959546),
+    s = n(46141),
+    l = n(659181),
+    c = n(255078),
+    u = n(981631),
+    d = n(474936);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +21,12 @@ function d(e, t, n) {
         e
     );
 }
-class f extends i.Z {
+class _ extends i.Z {
     static createFromServer(e) {
-        let t = null != e.payment_source ? o.ZP.createFromServer(e.payment_source) : null,
-            n = null != e.sku ? s.Z.createFromServer(e.sku) : null,
-            r = null != e.subscription ? l.Z.createFromServer(e.subscription) : null;
-        return new f({
+        let t = null != e.payment_source ? s.ZP.createFromServer(e.payment_source) : null,
+            n = null != e.sku ? l.Z.createFromServer(e.sku) : null,
+            r = null != e.subscription ? c.Z.createFromServer(e.subscription) : null;
+        return new _({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,
@@ -48,13 +49,14 @@ class f extends i.Z {
             hasInvoiceURL: e.has_invoice_url,
             hasRefundInvoiceURLs: e.has_refund_invoice_urls,
             premiumRefundDisqualificationReasons: e.premium_refund_disqualification_reasons,
+            entitlements: null != e.entitlements ? e.entitlements.map((e) => o.Z.createFromServer(e)) : void 0,
         });
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === c.gg$.APPLE;
+        return this.paymentGateway === u.gg$.APPLE;
     }
     get isPurchasedViaGoogle() {
-        return this.paymentGateway === c.gg$.GOOGLE;
+        return this.paymentGateway === u.gg$.GOOGLE;
     }
     get isPurchasedExternally() {
         return this.isPurchasedViaApple || this.isPurchasedViaGoogle;
@@ -63,7 +65,7 @@ class f extends i.Z {
         return null != this.subscription;
     }
     get isPremiumSubscription() {
-        return null != this.subscription && u.dJ.has(this.subscription.planId);
+        return null != this.subscription && d.dJ.has(this.subscription.planId);
     }
     get isPremiumGuildSubscription() {
         return (
@@ -71,7 +73,7 @@ class f extends i.Z {
             null !=
                 this.subscription.additionalPlans.find((e) => {
                     let { planId: t } = e;
-                    return u.Z1.has(t);
+                    return d.Z1.has(t);
                 })
         );
     }
@@ -79,12 +81,12 @@ class f extends i.Z {
         return a.yE(this.flags, 1);
     }
     get isPremiumGift() {
-        return this.isGift && Object.values(u.Si).includes(this.skuId);
+        return this.isGift && Object.values(d.Si).includes(this.skuId);
     }
     get isGuildProductPurchase() {
         return (
             null != this.sku &&
-            (this.sku.productLine === c.POd.GUILD_PRODUCT || a.yE(this.sku.flags, r.l.GUILD_PRODUCT))
+            (this.sku.productLine === u.POd.GUILD_PRODUCT || a.yE(this.sku.flags, r.l.GUILD_PRODUCT))
         );
     }
     get isSoftDeletedProduct() {
@@ -92,31 +94,32 @@ class f extends i.Z {
         return (null == (e = this.sku) ? void 0 : e.deleted) === !0;
     }
     get isCollectible() {
-        return null != this.sku && this.sku.productLine === c.POd.COLLECTIBLES;
+        return null != this.sku && this.sku.productLine === u.POd.COLLECTIBLES;
     }
     constructor(e) {
         super(),
-            d(this, "id", void 0),
-            d(this, "createdAt", void 0),
-            d(this, "currency", void 0),
-            d(this, "tax", void 0),
-            d(this, "taxInclusive", void 0),
-            d(this, "amount", void 0),
-            d(this, "amountRefunded", void 0),
-            d(this, "status", void 0),
-            d(this, "description", void 0),
-            d(this, "hasInvoiceURL", void 0),
-            d(this, "hasRefundInvoiceURLs", void 0),
-            d(this, "downloadableInvoice", void 0),
-            d(this, "downloadableRefundInvoices", void 0),
-            d(this, "flags", void 0),
-            d(this, "paymentSource", void 0),
-            d(this, "paymentGateway", void 0),
-            d(this, "subscription", void 0),
-            d(this, "skuId", void 0),
-            d(this, "skuPrice", void 0),
-            d(this, "sku", void 0),
-            d(this, "premiumRefundDisqualificationReasons", void 0),
+            f(this, "id", void 0),
+            f(this, "createdAt", void 0),
+            f(this, "currency", void 0),
+            f(this, "tax", void 0),
+            f(this, "taxInclusive", void 0),
+            f(this, "amount", void 0),
+            f(this, "amountRefunded", void 0),
+            f(this, "status", void 0),
+            f(this, "description", void 0),
+            f(this, "hasInvoiceURL", void 0),
+            f(this, "hasRefundInvoiceURLs", void 0),
+            f(this, "downloadableInvoice", void 0),
+            f(this, "downloadableRefundInvoices", void 0),
+            f(this, "flags", void 0),
+            f(this, "paymentSource", void 0),
+            f(this, "paymentGateway", void 0),
+            f(this, "subscription", void 0),
+            f(this, "skuId", void 0),
+            f(this, "skuPrice", void 0),
+            f(this, "sku", void 0),
+            f(this, "premiumRefundDisqualificationReasons", void 0),
+            f(this, "entitlements", void 0),
             (this.id = e.id),
             (this.amount = e.amount),
             (this.amountRefunded = e.amountRefunded),
@@ -137,6 +140,7 @@ class f extends i.Z {
             (this.downloadableRefundInvoices = e.downloadableRefundInvoices),
             (this.hasInvoiceURL = e.hasInvoiceURL),
             (this.hasRefundInvoiceURLs = e.hasRefundInvoiceURLs),
-            (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons);
+            (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons),
+            (this.entitlements = e.entitlements);
     }
 }

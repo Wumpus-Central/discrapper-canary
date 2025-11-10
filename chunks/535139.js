@@ -1,42 +1,44 @@
 n.d(t, {
-    F: () => d,
-    r: () => u,
+    F: () => u,
+    r: () => c,
 });
-var r,
-    i = n(647438),
-    l = n(906555),
-    o = n(812967),
-    a = n(49012),
+var r = n(647438),
+    i = n(906555),
+    a = n(812967),
+    o = n(49012),
     s = n(491662),
-    c = n(758677),
-    u = (((r = {}).RPC = "rpc"), (r.WEB = "web"), r);
-function d(e) {
+    l = n(758677),
+    c = (function (e) {
+        return (e.RPC = "rpc"), (e.WEB = "web"), e;
+    })({});
+function u(e) {
     var t;
     let { allowedFlows: n = ["rpc", "web"] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = (0, c.t)(e),
-        u = (0, l.t)(null == r ? void 0 : r.id, "AUTHORIZE_REQUEST"),
+        c = (0, l.t)(e),
+        u = (0, i.t)(null == c ? void 0 : c.id, "AUTHORIZE_REQUEST"),
         d = n.includes("rpc") && u,
-        p = n.includes("web") && (null == r ? void 0 : r.connectionEntrypointUrl) != null,
-        h = d || p,
-        { token: f, fetched: g } = (0, s.o)(
-            null != (t = null == r ? void 0 : r.parentId) ? t : null == r ? void 0 : r.id,
-        );
+        f = n.includes("web") && (null == c ? void 0 : c.connectionEntrypointUrl) != null,
+        _ = d || f,
+        { token: p, fetched: h } = (0, s.o)(
+            null != (t = null == c ? void 0 : c.parentId) ? t : null == c ? void 0 : c.id,
+        ),
+        m = h && null != p;
     return {
-        fetched: g,
-        hasAlreadyLinked: g && null != f,
-        canStartAuthorization: h,
-        startAuthorization: i.useCallback(
+        fetched: h,
+        hasAlreadyLinked: m,
+        canStartAuthorization: _,
+        startAuthorization: r.useCallback(
             () =>
-                null == r
+                null == c
                     ? null
                     : d
-                      ? (o.Z.dispatchToSubscriptions("AUTHORIZE_REQUEST", (e) => e.socket.application.id === r.id, {}),
+                      ? (a.Z.dispatchToSubscriptions("AUTHORIZE_REQUEST", (e) => e.socket.application.id === c.id, {}),
                         "rpc")
-                      : p
-                        ? ((0, a.q)({ href: r.connectionEntrypointUrl }), "web")
+                      : f
+                        ? ((0, o.q)({ href: c.connectionEntrypointUrl }), "web")
                         : null,
-            [d, p, r],
+            [d, f, c],
         ),
-        connectionApp: r,
+        connectionApp: c,
     };
 }
