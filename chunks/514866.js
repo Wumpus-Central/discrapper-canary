@@ -30,10 +30,7 @@ let j = () => {
                             type: "webauthn",
                             challenge: "{}",
                         },
-                        {
-                            type: "totp",
-                            backup_codes_allowed: !0,
-                        },
+                        { type: "totp" },
                         { type: "sms" },
                         { type: "password" },
                     ],
