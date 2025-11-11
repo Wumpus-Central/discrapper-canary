@@ -21,8 +21,8 @@ var a = n(442837),
     O = n(598077),
     v = n(592125),
     I = n(271383),
-    T = n(819640),
-    S = n(594174),
+    S = n(819640),
+    T = n(594174),
     A = n(979651),
     C = n(509545),
     N = n(78839),
@@ -254,7 +254,7 @@ function X(e, t, n) {
             display_name_styles: O,
         } = n,
         v = I.ZP.getMember(e, t.id),
-        T = (0, f.bN)(O);
+        S = (0, f.bN)(O);
     (null != v &&
         v.nick === c &&
         v.avatar === d &&
@@ -267,7 +267,7 @@ function X(e, t, n) {
         v.flags === p &&
         (null != (a = v.unusualDMActivityUntil) ? a : null) === (null != b ? b : null) &&
         i().isEqual(null != (o = v.collectibles) ? o : null, null != y ? y : null) &&
-        i().isEqual(null != (s = v.displayNameStyles) ? s : null, null != T ? T : null)) ||
+        i().isEqual(null != (s = v.displayNameStyles) ? s : null, null != S ? S : null)) ||
         q({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -283,7 +283,7 @@ function X(e, t, n) {
             unusualDMActivityUntil: b,
             flags: p,
             collectibles: y,
-            displayNameStyles: T,
+            displayNameStyles: S,
         });
 }
 function Q(e) {
@@ -338,7 +338,7 @@ W(
         g.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
                 let t = P.Fx(e, D.Wb.identifyStartTime);
-                null != S.default.getCurrentUser() &&
+                null != T.default.getCurrentUser() &&
                     (q({
                         type: "GUILD_CREATE",
                         guild: t,
@@ -1357,10 +1357,17 @@ W(
         });
     }),
     Y(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        T.Z.hasLayers() && (n(355467).tZ(), l.Gn(C.Z.getFetchedSKUIDs()));
+        S.Z.hasLayers() && (n(355467).tZ(), l.Gn(C.Z.getFetchedSKUIDs()));
     }),
     Y(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        c.k(), T.Z.hasLayers() && n(355467).jg();
+        c.k(), S.Z.hasLayers() && n(355467).jg();
+    }),
+    Y(["WISHLIST_ITEM_PURCHASED"], (e) => {
+        q({
+            type: "WISHLIST_ITEM_PURCHASED",
+            recipientId: e.recipient_id,
+            skuId: e.sku_id,
+        });
     }),
     Y(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         q({

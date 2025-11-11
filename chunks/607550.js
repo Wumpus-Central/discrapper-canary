@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+n.d(t, { Z: () => I }), n(539854), n(388685);
 var r = n(442837),
     i = n(570140),
     a = n(960048),
@@ -62,7 +62,13 @@ function y(e) {
     let { error: t } = e;
     a.Z.captureException(t);
 }
-class O extends r.ZP.Store {
+function O(e) {
+    var t;
+    let { recipientId: r, skuId: i } = e,
+        a = n(621853).Z.getFirstWishlistId(r);
+    null != a && null != s[a] && (null == (t = s[a].data) ? void 0 : t.hasSkuId(i)) && (s[a].updatedAt = void 0);
+}
+class v extends r.ZP.Store {
     get(e) {
         var t;
         return null != (t = s[e]) ? t : u();
@@ -94,7 +100,7 @@ class O extends r.ZP.Store {
         return this.get(e).updatedAt;
     }
 }
-let v = new O(i.Z, {
+let I = new v(i.Z, {
     WISHLIST_FETCH_START: f,
     WISHLIST_FETCH_SUCCESS: _,
     WISHLIST_FETCH_FAILURE: p,
@@ -104,4 +110,5 @@ let v = new O(i.Z, {
     WISHLIST_REMOVE_SKU_FAILURE: E,
     WISHLIST_UPDATE_VISIBILITY_SUCCESS: b,
     WISHLIST_UPDATE_VISIBILITY_FAILURE: y,
+    WISHLIST_ITEM_PURCHASED: O,
 });
