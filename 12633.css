@@ -52209,7 +52209,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59542,9 +59542,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -78526,6 +78526,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .container_ca1a02 {
+    --custom-content-width-with-padding: calc(100% - 32px);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -78549,7 +78550,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .perksCards_ca1a02 {
-    width: calc(100% - 32px)
+    width: var(--custom-content-width-with-padding)
 }
 
 .manageMembership_ca1a02 {
@@ -78559,7 +78560,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .giftNitro_ca1a02 {
     margin-top: 64px;
-    width: calc(100% - 32px)
+    width: var(--custom-content-width-with-padding)
 }
 
 .seeAllPerksButton_ca1a02 {
@@ -78594,7 +78595,8 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .heroHeading_ca1a02 {
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    width: var(--custom-content-width-with-padding)
 }
 
 .heading_ca1a02 {
