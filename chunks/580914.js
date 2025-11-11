@@ -175,7 +175,10 @@ let M = (0, v.IC)(90),
                             })
                           : null,
                       (0, r.jsx)("div", {
-                          className: s()(D.banner, { [D.rivBanner]: ea }),
+                          className: s()(D.banner, {
+                              [D.rivBanner]: ea,
+                              [D.responsive]: ei,
+                          }),
                           style: null != es ? { background: es } : void 0,
                           children:
                               null != en &&
