@@ -50,11 +50,11 @@ function v(e) {
 function I() {
     !__OVERLAY__ && f.iP && (p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
 }
-function T(e) {
+function S(e) {
     let { oopEnabled: t } = e;
     v(t);
 }
-function S() {
+function T() {
     return O(), !1;
 }
 function A(e) {
@@ -62,7 +62,7 @@ function A(e) {
     return !0 === n && (E = !0), !!y.has(t) || !0 === E;
 }
 function C() {
-    return O(), !1;
+    return !1;
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
@@ -95,8 +95,8 @@ let R = new N(
             : {
                   CONNECTION_OPEN: C,
                   EXPERIMENT_OVERRIDE_BUCKET: I,
-                  OVERLAY_SET_ENABLED: T,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE: S,
+                  OVERLAY_SET_ENABLED: S,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE: T,
                   OVERLAY_CRASHED: A,
               },
     ),
