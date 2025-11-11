@@ -83,6 +83,7 @@ var r = (function (e) {
         return (
             (e.INITIALIZING = "initializing"),
             (e.OVERLAY_DISABLED = "overlay_disabled"),
+            (e.OVERLAY_TEARING_DOWN = "overlay_tearing_down"),
             (e.WAITING_FOR_SCREEN_TYPE_RESOLUTION = "waiting_for_screen_type_resolution"),
             (e.WAITING_FOR_MODULE_TRACKING = "waiting_for_module_tracking"),
             (e.WAITING_FOR_OVERLAY_OPEN = "waiting_for_overlay_open"),

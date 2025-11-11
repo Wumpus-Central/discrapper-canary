@@ -31,7 +31,8 @@ class d extends i.Z {
             }),
             (e.newState === o.mM.OVERLAY_RENDERING ||
                 e.newState === o.mM.OVERLAY_DISABLED ||
-                e.newState === o.mM.OVERLAY_CRASHED_DISABLED) &&
+                e.newState === o.mM.OVERLAY_CRASHED_DISABLED ||
+                e.newState === o.mM.OVERLAY_TEARING_DOWN) &&
                 u.delete(e.pid));
     }
     handleRunningGamesChange(e) {

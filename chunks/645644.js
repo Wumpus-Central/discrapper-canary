@@ -20,8 +20,8 @@ var r = n(772848),
     O = n(830917),
     v = n(554174),
     I = n(938038),
-    T = n(981631),
-    S = n(987650);
+    S = n(981631),
+    T = n(987650);
 function A(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ class x {
         ++this.actions[e];
     }
     getAnalytics(e, t) {
-        let n = this.actions[S.bv.Viewed],
-            r = this.actions[S.bv.Clicked];
+        let n = this.actions[T.bv.Viewed],
+            r = this.actions[T.bv.Clicked];
         return 0 === n && 0 === r
             ? null
             : {
@@ -96,25 +96,25 @@ class x {
     }
     constructor() {
         A(this, "actions", {
-            [S.bv.Viewed]: 0,
-            [S.bv.Clicked]: 0,
+            [T.bv.Viewed]: 0,
+            [T.bv.Clicked]: 0,
         });
     }
 }
 class L {
     static makeEmptyGroupAnalytics() {
         return {
-            [S.Vk.Nudge]: 0,
-            [S.Vk.TextChat]: 0,
-            [S.Vk.VoiceCall]: 0,
-            [S.Vk.Activity]: 0,
-            [S.Vk.Clips]: 0,
-            [S.Vk.Other]: 0,
+            [T.Vk.Nudge]: 0,
+            [T.Vk.TextChat]: 0,
+            [T.Vk.VoiceCall]: 0,
+            [T.Vk.Activity]: 0,
+            [T.Vk.Clips]: 0,
+            [T.Vk.Other]: 0,
         };
     }
     static makeCounters() {
         let e = {},
-            t = Object.values(S.n0);
+            t = Object.values(T.n0);
         for (let n of t) e[n] = new x();
         if (Object.keys(e).length !== t.length) throw Error("NotificationAnalytics: Failed to make counters");
         return e;
@@ -122,7 +122,7 @@ class L {
     increment(e, t) {
         let n = this.groupCounters[t];
         if (null == n) return void D.error("NotificationCounter: Unknown notification action: ".concat(t));
-        let r = (0, S.YK)(e);
+        let r = (0, T.YK)(e);
         if (!(r in n)) return void D.error("NotificationCounter: Unknown notification action: ".concat(e));
         ++n[r], ++this.actionCounters[t];
         let i = this.counters[e];
@@ -130,23 +130,23 @@ class L {
         i.increment(t);
     }
     getAnalytics() {
-        let e = this.groupCounters[S.bv.Viewed],
-            t = this.groupCounters[S.bv.Clicked];
+        let e = this.groupCounters[T.bv.Viewed],
+            t = this.groupCounters[T.bv.Clicked];
         return {
-            notices_viewed: this.actionCounters[S.bv.Viewed],
-            notices_clicked: this.actionCounters[S.bv.Clicked],
-            notice_nudge_viewed: e[S.Vk.Nudge],
-            notice_text_chat_viewed: e[S.Vk.TextChat],
-            notice_voice_call_viewed: e[S.Vk.VoiceCall],
-            notice_activity_viewed: e[S.Vk.Activity],
-            notice_clips_viewed: e[S.Vk.Clips],
-            notice_other_viewed: e[S.Vk.Other],
-            notice_nudge_clicked: t[S.Vk.Nudge],
-            notice_text_chat_clicked: t[S.Vk.TextChat],
-            notice_voice_call_clicked: t[S.Vk.VoiceCall],
-            notice_activity_clicked: t[S.Vk.Activity],
-            notice_clips_clicked: t[S.Vk.Clips],
-            notice_other_clicked: t[S.Vk.Other],
+            notices_viewed: this.actionCounters[T.bv.Viewed],
+            notices_clicked: this.actionCounters[T.bv.Clicked],
+            notice_nudge_viewed: e[T.Vk.Nudge],
+            notice_text_chat_viewed: e[T.Vk.TextChat],
+            notice_voice_call_viewed: e[T.Vk.VoiceCall],
+            notice_activity_viewed: e[T.Vk.Activity],
+            notice_clips_viewed: e[T.Vk.Clips],
+            notice_other_viewed: e[T.Vk.Other],
+            notice_nudge_clicked: t[T.Vk.Nudge],
+            notice_text_chat_clicked: t[T.Vk.TextChat],
+            notice_voice_call_clicked: t[T.Vk.VoiceCall],
+            notice_activity_clicked: t[T.Vk.Activity],
+            notice_clips_clicked: t[T.Vk.Clips],
+            notice_other_clicked: t[T.Vk.Other],
         };
     }
     getCounterAnalytics(e) {
@@ -159,12 +159,12 @@ class L {
     }
     constructor() {
         A(this, "actionCounters", {
-            [S.bv.Viewed]: 0,
-            [S.bv.Clicked]: 0,
+            [T.bv.Viewed]: 0,
+            [T.bv.Clicked]: 0,
         }),
             A(this, "groupCounters", {
-                [S.bv.Viewed]: L.makeEmptyGroupAnalytics(),
-                [S.bv.Clicked]: L.makeEmptyGroupAnalytics(),
+                [T.bv.Viewed]: L.makeEmptyGroupAnalytics(),
+                [T.bv.Clicked]: L.makeEmptyGroupAnalytics(),
             }),
             A(this, "counters", L.makeCounters());
     }
@@ -183,9 +183,9 @@ class M {
     }
     getByWidget(e) {
         switch (e) {
-            case T.Odu.VOICE:
+            case S.Odu.VOICE:
                 return this.getByType(0);
-            case T.Odu.TEXT:
+            case S.Odu.TEXT:
                 return this.getByType(1);
             default:
                 return null;
@@ -374,8 +374,8 @@ class U {
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
-            for (let e of (E.default.track(T.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications))
-                E.default.track(T.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+            for (let e of (E.default.track(S.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications))
+                E.default.track(S.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
             D.verbose("OVERLAY_USAGE_STATS: ".concat(e.name), t), delete U.gamesByPid[e.pid];
         }
         delete U.gamesByName[t];
@@ -406,7 +406,7 @@ class U {
                 setting_display_name: g.default.getDisplayNameMode(),
                 setting_avatar_size: g.default.getAvatarSizeMode(),
                 setting_notification_position: g.default.getNotificationPositionMode(),
-                setting_chat_notification: p.Z.isNotificationDisabled(S.n0.TextChat) ? "DISABLED" : "ENABLED",
+                setting_chat_notification: p.Z.isNotificationDisabled(T.n0.TextChat) ? "DISABLED" : "ENABLED",
             },
             E = (0, d.b6)(this.game),
             b = (0, u.G8)(this.game),
@@ -670,7 +670,7 @@ function K(e) {
     });
 }
 function z(e) {
-    if (e.message.state !== T.yb.SENDING) return;
+    if (e.message.state !== S.yb.SENDING) return;
     D.verbose("MESSAGE_CREATE", e, Error().stack);
     let t = G();
     if (null == t) return void U.desktopMessageEvent("created");
@@ -713,7 +713,7 @@ function J(e) {
 function $(e) {
     let t = U.getByPid(e.pid);
     if (null == t) return void D.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, U.debug);
-    e.newState !== f.mM.OVERLAY_DISABLED && t.setOverlayState(e.newState);
+    e.newState !== f.mM.OVERLAY_TEARING_DOWN && t.setOverlayState(e.newState);
 }
 A(U, "gamesByPid", {}), A(U, "gamesByName", {}), A(U, "desktopMainWindowHasFocus", document.hasFocus());
 class ee {
@@ -724,10 +724,10 @@ class ee {
         var t;
         let n = (null != (t = e.channelId) ? t : "unknown") + e.context;
         switch (e.state) {
-            case T.hes.RTC_CONNECTED:
+            case S.hes.RTC_CONNECTED:
                 ee.connections.add(n);
                 break;
-            case T.hes.DISCONNECTED:
+            case S.hes.DISCONNECTED:
                 ee.connections.delete(n);
         }
         let r = ee.hasConnection();
@@ -748,7 +748,7 @@ class et {
         });
     }
     static handleMessageCreate(e) {
-        if (e.message.state !== T.yb.SENDING) return;
+        if (e.message.state !== S.yb.SENDING) return;
         D.verbose("MESSAGE_CREATE", e, Error().stack);
         let t = h.Z.getGame();
         if (null == t) return void D.error("Game not found.");

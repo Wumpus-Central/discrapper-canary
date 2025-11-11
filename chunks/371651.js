@@ -20,8 +20,8 @@ var r,
     O = n(542750),
     v = n(829907),
     I = n(624864),
-    T = n(932404),
-    S = n(987650);
+    S = n(932404),
+    T = n(987650);
 function A(e, t, n) {
     return (
         t in e
@@ -111,7 +111,7 @@ let D = new u.Z("OverlayRenderStore"),
     Y = new c.Z(10000);
 function W(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.l6.Info;
-    (0, T._l)({
+    (0, S._l)({
         pid: e,
         name: t,
         type: g.C7.Renderer,
@@ -343,7 +343,7 @@ async function es(e) {
             enabledLegacy: null != (r = null == i ? void 0 : i.legacyEnabled) && r,
             overlayMethod: b.gl.Disabled,
         };
-    await eu(e, a), $(e), eU.emitChange(), await s.Z.updateTrackedGame(e, null);
+    await eu(e, a, !0), $(e), eU.emitChange(), await s.Z.updateTrackedGame(e, null);
 }
 async function el(e) {
     var t;
@@ -380,9 +380,18 @@ async function ec(e) {
 }
 async function eu(e, t) {
     var n;
-    let r = t.overlayMethod;
-    et(e, "state", r === b.gl.Disabled ? b.mM.OVERLAY_DISABLED : b.mM.WAITING_FOR_MODULE_TRACKING),
-        et(e, "overlayMethod", r),
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = t.overlayMethod;
+    et(
+        e,
+        "state",
+        i === b.gl.Disabled
+            ? r
+                ? b.mM.OVERLAY_TEARING_DOWN
+                : b.mM.OVERLAY_DISABLED
+            : b.mM.WAITING_FOR_MODULE_TRACKING,
+    ),
+        et(e, "overlayMethod", i),
         et(e, "source", t.source),
         et(e, "oopEnabled", t.enabledOOP),
         et(e, "legacyEnabled", t.enabledLegacy),
@@ -390,11 +399,11 @@ async function eu(e, t) {
             "Updating overlay method for pid "
                 .concat(e, ' "')
                 .concat(null == (n = X(e)) ? void 0 : n.gameName, '" to ')
-                .concat((0, v.P_)(r)),
+                .concat((0, v.P_)(i)),
         ),
         eU.emitChange();
-    let i = X(e);
-    return null != i && (await s.Z.updateTrackedGame(e, i)), s.Z.updateOverlayMethod(e, r);
+    let a = X(e);
+    return null != a && (await s.Z.updateTrackedGame(e, a)), s.Z.updateOverlayMethod(e, i);
 }
 async function ed() {
     let e = new Set(
@@ -508,7 +517,7 @@ function em(e) {
         }, e)));
 }
 async function eg(e, t) {
-    if (!S.iP) return void D.verbose("setOverlayEnabled: not supported");
+    if (!T.iP) return void D.verbose("setOverlayEnabled: not supported");
     D.info("setOverlayEnabled: supported", {
         newLegacyEnabled: e,
         newOopEnabled: t,
@@ -590,7 +599,7 @@ function ev(e) {
     );
 }
 async function eI() {
-    await eT(), await (0, a._v)(2000);
+    await eS(), await (0, a._v)(2000);
     let e = Q(),
         t = new Set([
             ...f.ZP.getRunningGames()
@@ -602,10 +611,10 @@ async function eI() {
         await eo(n), await (0, a._v)(16);
     D.info("Retracked ".concat(e.length, " games"));
 }
-async function eT() {
+async function eS() {
     for (let e of Q()) await es(e), await (0, a._v)(16);
 }
-function eS(e) {
+function eT(e) {
     return D.error("Overlay reload for pid", { pid: e.pid }), eI(), !0;
 }
 function eA(e) {
@@ -658,7 +667,7 @@ function eM() {
     (j = !1), (Z = null);
 }
 function ej() {
-    (j = !1), (Z = null), eT();
+    (j = !1), (Z = null), eS();
 }
 class ek extends (r = i.ZP.Store) {
     initialize() {
@@ -765,7 +774,7 @@ let eU = new ek(
                   OVERLAY_UPDATE_OVERLAY_STATE: eN,
                   OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: eR,
                   OVERLAY_CRASHED: eA,
-                  OVERLAY_RELOAD: eS,
+                  OVERLAY_RELOAD: eT,
                   OVERLAY_FOCUSED: eD,
                   OVERLAY_SUCCESSFULLY_SHOWN: ex,
                   OVERLAY_RENDER_DEBUG_MODE: eP,
