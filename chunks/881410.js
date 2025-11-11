@@ -1,6 +1,6 @@
 n.d(t, {
     wl: () => v,
-    yX: () => h,
+    yX: () => y,
 }),
     n(388685),
     n(781311);
@@ -13,8 +13,8 @@ var r = n(951288),
     s = n(706454),
     u = n(785717),
     d = n(86419),
-    f = n(388032),
-    g = n(302627);
+    g = n(388032),
+    f = n(302627);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,92 +78,93 @@ function b(e, t) {
     }
     return i;
 }
-function y(e) {
-    var { widgetType: t, widget: n, children: y } = e,
-        h = b(e, ["widgetType", "widget", "children"]);
-    let [v] = (0, o.ynZ)(),
-        [O, j] = i.useState(""),
-        x = i.useRef(""),
-        _ = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
-        { trackUserProfileEditAction: P } = (0, u.KZ)(),
-        I = (0, l.e7)([s.default], () => ["en-US", "en-GB"].includes(s.default.locale)),
-        w = i.useCallback(
+function h(e) {
+    var { widgetType: t, widget: n, onAddGame: h, children: y } = e,
+        v = b(e, ["widgetType", "widget", "onAddGame", "children"]);
+    let [O] = (0, o.ynZ)(),
+        [j, x] = i.useState(""),
+        _ = i.useRef(""),
+        P = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
+        { trackUserProfileEditAction: I } = (0, u.KZ)(),
+        w = (0, l.e7)([s.default], () => ["en-US", "en-GB"].includes(s.default.locale)),
+        S = i.useCallback(
             (e) => {
                 (0, d.ES)(t, { applicationId: e }),
-                    o.uvj.announce(f.intl.string(f.t.q0U3DE)),
-                    P({
+                    o.uvj.announce(g.intl.string(g.t.q0U3DE)),
+                    I({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: t,
-                    });
+                    }),
+                    null == h || h();
             },
-            [t, P],
+            [t, I, h],
         ),
-        { options: S, matchSorterOptions: E } = (0, c.h)(),
-        T = i.useCallback(
-            (e) => ("" === e.trim() ? S : (0, a.Lu)(S, e, m(p({}, E), { threshold: a.Lu.rankings.CONTAINS }))),
-            [S, E],
-        ),
+        { options: E, matchSorterOptions: T } = (0, c.h)(),
         C = i.useCallback(
+            (e) => ("" === e.trim() ? E : (0, a.Lu)(E, e, m(p({}, T), { threshold: a.Lu.rankings.CONTAINS }))),
+            [E, T],
+        ),
+        D = i.useCallback(
             (e) => {
-                "" === O.trim() &&
+                "" === j.trim() &&
                     "" !== e.trim() &&
-                    P({
+                    I({
                         action: "GAME_SEARCH_SESSION_STARTED",
                         widgetEdited: t,
                         numCharacters: e.trim().length,
-                        numResults: T(e).length,
+                        numResults: C(e).length,
                     }),
-                    j(e),
-                    (x.current = e);
+                    x(e),
+                    (_.current = e);
             },
-            [O, P, t, T],
+            [j, I, t, C],
         ),
-        D = i.useMemo(
+        k = i.useMemo(
             () =>
-                "" !== O.trim() && I ? f.intl.format(f.t.jhiTsN, { searchTerm: O.trim() }) : f.intl.string(f.t.QwSXv8),
-            [O, I],
+                "" !== j.trim() && w ? g.intl.format(g.t.jhiTsN, { searchTerm: j.trim() }) : g.intl.string(g.t.QwSXv8),
+            [j, w],
         );
     return (0, r.jsx)(
         o.yRy,
-        m(p({}, h), {
+        m(p({}, v), {
             onRequestOpen: () => {
-                P({
+                I({
                     action: "PRESS_ADD_GAME",
                     widgetEdited: t,
                 }),
-                    j(""),
-                    (x.current = "");
+                    x(""),
+                    (_.current = "");
             },
             onRequestClose: () => {
-                P({
+                I({
                     action: "GAME_SEARCH_SESSION_ENDED",
                     widgetEdited: t,
-                    numCharacters: x.current.trim().length,
-                    numResults: T(x.current).length,
+                    numCharacters: _.current.trim().length,
+                    numResults: C(_.current).length,
                 });
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(o.DBG, {
-                    className: g.gameSearchCombobox,
-                    placeholder: f.intl.string(f.t["5h0QOP"]),
+                    className: f.gameSearchCombobox,
+                    placeholder: g.intl.string(g.t["5h0QOP"]),
                     autoFocus: !0,
-                    value: v,
+                    value: O,
                     onChange: (e) => {
-                        w(e), t();
+                        S(e), t();
                     },
                     multiSelect: !1,
                     maxVisibleItems: 7,
-                    emptyStateText: D,
+                    emptyStateText: k,
                     emptyStateHeader: "",
-                    onQueryChange: C,
+                    onQueryChange: D,
                     children: (e) =>
-                        T(e).map((e) =>
+                        C(e).map((e) =>
                             (0, r.jsx)(
                                 o.lo1,
                                 {
-                                    disabled: _.has(e.value),
+                                    disabled: P.has(e.value),
                                     value: String(e.value),
                                     children: (0, r.jsx)(o.lo1.Label, {
                                         children: (0, r.jsx)(o.Text, {
@@ -182,12 +183,12 @@ function y(e) {
         }),
     );
 }
-function h(e) {
+function y(e) {
     var { disabled: t } = e,
         n = b(e, ["disabled"]);
     let a = i.useRef(null);
     return (0, r.jsx)(
-        y,
+        h,
         m(
             p(
                 {
@@ -207,7 +208,7 @@ function h(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: o.qJs,
-                                text: f.intl.string(f.t.SgTOtX),
+                                text: g.intl.string(g.t.SgTOtX),
                                 disabled: t,
                             },
                             e,
@@ -220,7 +221,7 @@ function h(e) {
 function v(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        y,
+        h,
         m(
             p(
                 {
@@ -238,8 +239,8 @@ function v(e) {
                             p(
                                 {
                                     innerRef: t,
-                                    className: g.coverButton,
-                                    "aria-label": f.intl.string(f.t.SgTOtX),
+                                    className: f.coverButton,
+                                    "aria-label": g.intl.string(g.t.SgTOtX),
                                 },
                                 e,
                             ),

@@ -1,14 +1,15 @@
-n.d(t, { Z: () => p }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    l = n(314897),
-    o = n(733231),
+n.d(t, { Z: () => p });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    a = n(314897),
+    l = n(733231),
+    o = n(141014),
     c = n(385153),
     s = n(623132),
     u = n(34335),
     d = n(112794);
-function f(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function g(e) {
+function f(e) {
     var { games: t, user: n, widgetType: i } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -56,7 +57,7 @@ function g(e) {
             }
             return i;
         })(e, ["games", "user", "widgetType"]);
-    let { registerItemRef: l, manageFocusOnDelete: c } = (0, o.C)();
+    let { registerItemRef: o, manageFocusOnDelete: c } = (0, l.C)();
     return (0, r.jsx)("ul", {
         className: d.cardList,
         children: t.map((e, t) =>
@@ -65,13 +66,13 @@ function g(e) {
                 {
                     children: (0, r.jsx)(
                         s.Z,
-                        f(
+                        g(
                             {
                                 index: t,
                                 user: n,
                                 game: e,
                                 widgetType: i,
-                                coverRef: l(e.applicationId),
+                                coverRef: o(e.applicationId),
                                 onRemoveGame: c,
                             },
                             a,
@@ -86,17 +87,17 @@ function g(e) {
 function p(e) {
     var t, n;
     let { user: s, widgetType: d, disableInteraction: p, games: m } = e,
-        b = (0, a.e7)([l.default], () => l.default.getId() === s.id),
-        { getManageButtonForWidget: y } = (0, u.j)(),
-        h = y(d),
-        [v, O] = i.useState(!1),
+        b = (0, i.e7)([a.default], () => a.default.getId() === s.id),
+        { getManageButtonForWidget: h } = (0, u.j)(),
+        y = h(d),
+        { expanded: v, setExpanded: O } = (0, o.g)(),
         j = v ? m : m.slice(0, 2),
         x = m.length > 2,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
-                    g,
-                    ((t = f({}, e)),
+                    f,
+                    ((t = g({}, e)),
                     (n = n = { games: j }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -120,8 +121,8 @@ function p(e) {
             ],
         });
     return b && !p
-        ? (0, r.jsx)(o.d, {
-              emptyListFallbackRef: h,
+        ? (0, r.jsx)(l.d, {
+              emptyListFallbackRef: y,
               children: _,
           })
         : _;

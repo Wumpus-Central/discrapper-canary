@@ -1,18 +1,20 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
-    i = n(296009),
-    a = n(442837),
-    l = n(314897),
-    o = n(86419),
-    c = n(556045),
-    s = n(881410),
-    u = n(985748),
-    d = n(566007),
-    g = n(173951),
-    f = n(455731),
-    p = n(272289),
-    m = n(39642);
-function b(e) {
+    i = n(647438),
+    a = n(296009),
+    l = n(442837),
+    o = n(314897),
+    c = n(86419),
+    s = n(556045),
+    u = n(881410),
+    d = n(141014),
+    g = n(985748),
+    f = n(566007),
+    p = n(173951),
+    m = n(455731),
+    b = n(272289),
+    h = n(39642);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +39,7 @@ function b(e) {
     }
     return e;
 }
-function h(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -57,65 +59,73 @@ function h(e, t) {
     }
     return i;
 }
-let y = (e) => {
+let O = (e) => {
         var { widget: t } = e,
-            n = h(e, ["widget"]);
+            n = v(e, ["widget"]);
         switch (t.type) {
-            case i.l.FAVORITE_GAMES:
-                return (0, r.jsx)(d.Z, b({ widget: t }, n));
-            case i.l.CURRENT_GAMES:
-                return (0, r.jsx)(u.Z, b({ widget: t }, n));
-            case i.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(f.Z, b({ widget: t }, n));
-            case i.l.PLAYED_GAMES:
-                return (0, r.jsx)(g.Z, b({ widget: t }, n));
+            case a.l.FAVORITE_GAMES:
+                return (0, r.jsx)(f.Z, y({ widget: t }, n));
+            case a.l.CURRENT_GAMES:
+                return (0, r.jsx)(g.Z, y({ widget: t }, n));
+            case a.l.WANT_TO_PLAY_GAMES:
+                return (0, r.jsx)(m.Z, y({ widget: t }, n));
+            case a.l.PLAYED_GAMES:
+                return (0, r.jsx)(p.Z, y({ widget: t }, n));
             default:
                 return null;
         }
     },
-    v = (e) => {
-        var { widget: t, user: n, disableInteraction: i } = e,
-            u = h(e, ["widget", "user", "disableInteraction"]);
-        let { shouldShowSuggestions: d, handleDismissSuggestions: g } = (0, c.h)(t),
-            f = (0, a.e7)([l.default], () => l.default.getId() === n.id),
-            v = f && !i && d,
-            O = (0, o.mR)(t),
-            j = (0, o.Hy)(t, { isCurrentUser: f }),
-            x = (0, o.kQ)(t),
-            _ = 1 === (0, o.Gv)(t.type);
-        return (0, r.jsx)(
-            y,
-            b(
-                {
-                    widget: t,
-                    user: n,
-                    disableInteraction: i,
-                    headerTitle: O,
-                    headerSubtitle: j,
-                    headerActionButtons:
-                        f && !_
-                            ? [
-                                  (0, r.jsx)(
-                                      s.yX,
-                                      {
-                                          disabled: x,
-                                          widgetType: t.type,
-                                          widget: t,
-                                      },
-                                      "".concat(t.type, "-browse-games-popout"),
-                                  ),
-                              ]
-                            : void 0,
-                    trailingContent:
-                        v &&
-                        (0, r.jsx)(p.Z, {
-                            userId: n.id,
-                            widgetType: t.type,
-                            onDismiss: g,
-                            className: m.suggestedGames,
-                        }),
-                },
-                u,
+    j = (e) => {
+        var { widget: t, user: n, disableInteraction: a } = e,
+            g = v(e, ["widget", "user", "disableInteraction"]);
+        let { shouldShowSuggestions: f, handleDismissSuggestions: p } = (0, s.h)(t),
+            m = (0, l.e7)([o.default], () => o.default.getId() === n.id),
+            j = m && !a && f,
+            x = (0, c.mR)(t),
+            _ = (0, c.Hy)(t, { isCurrentUser: m }),
+            P = (0, c.kQ)(t),
+            I = 1 === (0, c.Gv)(t.type),
+            [w, S] = i.useState(!1);
+        return (0, r.jsx)(d.N, {
+            value: {
+                expanded: w,
+                setExpanded: S,
+            },
+            children: (0, r.jsx)(
+                O,
+                y(
+                    {
+                        widget: t,
+                        user: n,
+                        disableInteraction: a,
+                        headerTitle: x,
+                        headerSubtitle: _,
+                        headerActionButtons:
+                            m && !I
+                                ? [
+                                      (0, r.jsx)(
+                                          u.yX,
+                                          {
+                                              disabled: P,
+                                              widgetType: t.type,
+                                              widget: t,
+                                              onAddGame: () => S(!0),
+                                          },
+                                          "".concat(t.type, "-browse-games-popout"),
+                                      ),
+                                  ]
+                                : void 0,
+                        trailingContent:
+                            j &&
+                            (0, r.jsx)(b.Z, {
+                                userId: n.id,
+                                widgetType: t.type,
+                                onDismiss: p,
+                                className: h.suggestedGames,
+                            }),
+                    },
+                    g,
+                ),
             ),
-        );
+        });
     };
