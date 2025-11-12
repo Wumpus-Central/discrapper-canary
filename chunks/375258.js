@@ -1,0 +1,19 @@
+n.d(e, { Z: () => g });
+var i = n(509613),
+    l = n(313789),
+    u = n(292591),
+    r = n(383713),
+    s = n(51397),
+    a = n(782134),
+    o = n(894470),
+    c = n(422767),
+    E = n(754680),
+    d = n(919723),
+    S = n(792971),
+    T = n(956853),
+    I = n(388032);
+let g = (0, i.CB)(l.n.VOICE_ADVANCED_ACCORDION, {
+    useTitle: (t) => (t ? I.intl.string(I.t.KHsSWK) : I.intl.string(I.t.PPDo5V)),
+    useSubtitle: () => I.intl.string(I.t["4n3WTh"]),
+    buildLayout: () => [a.Z, r.Z, E.Z, u.Z, o.Z, T.Z, c.Z, s.Z, d.Z, S.Z],
+});
