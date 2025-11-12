@@ -90,15 +90,17 @@ function F() {
     Z = (0, y.r4)();
 }
 function V(e, t) {
-    if (null != w && (null != t && (B[e] = t), !R.has(e)))
+    if (null != w) {
+        null != t && (B[e] = t);
         try {
-            w.trackGame(e),
-                R.add(e),
+            if ((w.trackGame(e), R.has(e))) return;
+            R.add(e),
                 (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
                 o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN);
         } catch (t) {
             N.error("Error tracking game:", t), (0, _.PV)(e, t, { crashType: "renderer" });
         }
+    }
 }
 function H(e) {
     if (!R.has(e)) return;
