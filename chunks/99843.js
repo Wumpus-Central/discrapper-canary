@@ -127,7 +127,6 @@ let b = (e) => {
                                 channel: t,
                                 size: o.EFr.SIZE_20,
                                 facepileSizeOverride: o.EFr.SIZE_24,
-                                experimentLocation: "header_bar",
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/medium",

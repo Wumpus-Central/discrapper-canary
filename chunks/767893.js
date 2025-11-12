@@ -49,7 +49,6 @@ function b(e) {
           ? (0, r.jsx)(f.Z, {
                 channel: t,
                 size: c.EFr.SIZE_24,
-                experimentLocation: "ForLaterChannelHeader",
             })
           : (0, r.jsx)("div", {
                 className: a()(m.icon, m.dmIcon),

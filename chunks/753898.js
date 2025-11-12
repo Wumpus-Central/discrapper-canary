@@ -55,7 +55,6 @@ function x(e) {
                           children: (0, i.jsx)(f.Z, {
                               channel: n,
                               size: o.EFr.SIZE_80,
-                              experimentLocation: "empty_messages",
                               animated: e,
                               "aria-label": E,
                           }),

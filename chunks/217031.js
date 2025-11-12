@@ -3,8 +3,8 @@ var l = n(951288),
     r = n(647438),
     i = n(120356),
     s = n.n(i),
-    a = n(913527),
-    u = n.n(a),
+    u = n(913527),
+    a = n.n(u),
     c = n(91192),
     o = n(442837),
     d = n(481060),
@@ -21,8 +21,8 @@ var l = n(951288),
     v = n(306680),
     P = n(699516),
     j = n(594174),
-    x = n(55935),
-    O = n(823379),
+    O = n(55935),
+    x = n(823379),
     L = n(51144),
     _ = n(784384),
     N = n(490897),
@@ -95,8 +95,8 @@ function T(e) {
             destination: t,
             icon: n,
             label: i,
-            subLabel: a,
-            selected: u,
+            subLabel: u,
+            selected: a,
             disabled: o,
             onPressDestination: f,
             "aria-setsize": h,
@@ -114,7 +114,7 @@ function T(e) {
                 {
                     className: s()(C.destinationRow, b, { [C.disabled]: o }),
                     onClick: o ? void 0 : p,
-                    "aria-selected": u,
+                    "aria-selected": a,
                     "aria-setsize": h,
                     "aria-posinset": m,
                 },
@@ -143,7 +143,7 @@ function T(e) {
                                         className: C.subLabel,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: a,
+                                        children: u,
                                     }),
                                 ],
                             }),
@@ -152,7 +152,7 @@ function T(e) {
                     (0, l.jsx)("div", {
                         className: C.checkbox,
                         children: (0, l.jsx)(d.FZ5, {
-                            checked: !!u,
+                            checked: !!a,
                             disabled: o,
                         }),
                     }),
@@ -161,13 +161,13 @@ function T(e) {
         ),
     );
 }
-function w(e) {
+function D(e) {
     var { user: t, subLabel: n } = e,
         r = I(e, ["user", "subLabel"]);
     let i = L.ZP.useName(t),
         s = L.ZP.useUserTag(t, { decoration: "never" }),
-        a = (0, o.e7)([P.Z], () => P.Z.getNickname(t.id)),
-        u = (0, o.e7)([Z.Z], () => Z.Z.getStatus(t.id));
+        u = (0, o.e7)([P.Z], () => P.Z.getNickname(t.id)),
+        a = (0, o.e7)([Z.Z], () => Z.Z.getStatus(t.id));
     return (0, l.jsx)(
         T,
         A(M({}, r), {
@@ -175,14 +175,14 @@ function w(e) {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 user: t,
-                status: u,
+                status: a,
             }),
-            label: null != a ? a : i,
+            label: null != u ? u : i,
             subLabel: null != n ? n : s,
         }),
     );
 }
-function D(e) {
+function w(e) {
     var { channel: t, subLabel: n } = e,
         r = I(e, ["channel", "subLabel"]);
     let i = (0, m.ZP)(t),
@@ -194,7 +194,6 @@ function D(e) {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 channel: t,
-                experimentLocation: "forward-modal",
             }),
             label: i,
             subLabel: null != n ? n : s,
@@ -206,7 +205,7 @@ function R(e) {
         r = I(e, ["channel", "subLabel"]);
     let i = (0, o.e7)([S.Z], () => S.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, m.ZP)(t),
-        a = (0, o.e7)([E.Z, j.default, P.Z], () => {
+        u = (0, o.e7)([E.Z, j.default, P.Z], () => {
             let e = E.Z.getChannel(t.parent_id);
             return null == e ? null : (0, m.F6)(e, j.default, P.Z, !1);
         }),
@@ -225,7 +224,7 @@ function R(e) {
                     variant: "text-xs/medium",
                     color: "text-secondary",
                     lineClamp: 1,
-                    children: a,
+                    children: u,
                 }),
                 null != c
                     ? (0, l.jsxs)(l.Fragment, {
@@ -239,7 +238,7 @@ function R(e) {
                               (0, l.jsx)(d.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-secondary",
-                                  children: (0, x.Xf)(u()(c)),
+                                  children: (0, O.Xf)(a()(c)),
                               }),
                           ],
                       })
@@ -266,8 +265,8 @@ function U(e) {
             message: n,
             originChannel: i,
             selectedDestinations: s,
-            handleToggleDestination: a,
-            disableSelection: u,
+            handleToggleDestination: u,
+            disableSelection: a,
             rowClassName: c,
             validateDestination: o,
         } = e,
@@ -299,22 +298,22 @@ function U(e) {
                         message: n,
                         destination: b,
                         subLabel: null != p ? p.label : void 0,
-                        disabled: (u && !E) || null != p,
+                        disabled: (a && !E) || null != p,
                         selected: E,
-                        onPressDestination: a,
+                        onPressDestination: u,
                         "aria-posinset": s + 1,
                         "aria-setsize": t.length,
                         className: c,
                     };
                 return f === h.h8.USER
-                    ? (0, l.jsx)(w, M({ user: m }, S))
+                    ? (0, l.jsx)(D, M({ user: m }, S))
                     : f === h.h8.GROUP_DM
-                      ? (0, l.jsx)(D, M({ channel: m }, S))
+                      ? (0, l.jsx)(w, M({ channel: m }, S))
                       : f === h.h8.TEXT_CHANNEL || f === h.h8.VOICE_CHANNEL
                         ? (0, l.jsx)(R, M({ channel: m }, S))
-                        : void (0, O.vE)(f);
+                        : void (0, x.vE)(f);
             },
-            [u, a, n, i, t, d, c, o],
+            [a, u, n, i, t, d, c, o],
         );
     return {
         sections: [t.length],

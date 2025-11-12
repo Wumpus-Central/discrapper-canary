@@ -38,7 +38,6 @@ function m(e) {
             className: h.searchResultGDMChannelIcon,
             channel: t,
             size: o.EFr.SIZE_20,
-            experimentLocation: "search_popout",
         });
     let i = (0, l.KS)(t);
     return null == i

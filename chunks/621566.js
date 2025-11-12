@@ -58,7 +58,6 @@ let S = (e) => {
                     "aria-hidden": !0,
                     size: i.EFr.SIZE_32,
                     channel: t,
-                    experimentLocation: "forward-modal",
                 }),
                 (0, s.jsxs)("div", {
                     className: P.resultText,

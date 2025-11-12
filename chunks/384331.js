@@ -10,10 +10,10 @@ var l = t(951288),
     d = t(810123),
     f = t(592125),
     h = t(430824),
-    m = t(158776),
+    b = t(158776),
     p = t(699516),
-    b = t(594174),
-    j = t(51144),
+    j = t(594174),
+    m = t(51144),
     g = t(912332),
     y = t(388032),
     O = t(296719);
@@ -40,16 +40,15 @@ function _(e) {
             "aria-hidden": !0,
             size: o.EFr.SIZE_32,
             channel: n,
-            experimentLocation: "forward-failed-retry-modal",
         }),
         label: t,
     });
 }
 function v(e) {
     let { user: n } = e,
-        t = j.ZP.useName(n),
+        t = m.ZP.useName(n),
         r = (0, i.e7)([p.Z], () => p.Z.getNickname(n.id)),
-        c = (0, i.e7)([m.Z], () => m.Z.getStatus(n.id));
+        c = (0, i.e7)([b.Z], () => b.Z.getStatus(n.id));
     return (0, l.jsx)(x, {
         icon: (0, l.jsx)(a.Z, {
             "aria-hidden": !0,
@@ -75,9 +74,9 @@ function w(e) {
 }
 function P(e) {
     let { destination: n } = e,
-        { channel: t, user: r } = (0, i.cj)([f.Z, b.default], () => ({
+        { channel: t, user: r } = (0, i.cj)([f.Z, j.default], () => ({
             channel: "channel" === n.type ? f.Z.getChannel(n.id) : null,
-            user: "user" === n.type ? b.default.getUser(n.id) : null,
+            user: "user" === n.type ? j.default.getUser(n.id) : null,
         }));
     return (null == t ? void 0 : t.isGroupDM())
         ? (0, l.jsx)(_, { channel: t })
