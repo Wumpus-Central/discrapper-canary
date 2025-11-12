@@ -104,8 +104,8 @@ function I(e) {
         iconComponent: b,
         themeable: v = !1,
         disabled: I = !1,
-        isActive: T = !1,
-        tooltipPosition: S = "top",
+        isActive: S = !1,
+        tooltipPosition: T = "top",
         shouldShowTooltip: A = !0,
         forceTooltipOpen: C = !1,
         buttonRef: N,
@@ -119,19 +119,20 @@ function I(e) {
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
-            position: S,
+            position: T,
             text: t,
             "aria-label": P,
             shouldShow: A,
             forceOpen: C,
             children: (e) => {
-                var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: S } = e,
+                var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: T } = e,
                     A = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
                 return (0, r.jsxs)(
                     l.zx,
                     y(
                         E(
                             {
+                                "data-migration-pending": !0,
                                 look: null != w ? w : l.zx.Looks.BLANK,
                                 size: null != x ? x : l.zx.Sizes.NONE,
                                 color: L,
@@ -148,7 +149,7 @@ function I(e) {
                                     null == _ || _(), null == a || a(e);
                                 },
                                 onMouseLeave: (e) => {
-                                    null == S || S(), null == u || u(e);
+                                    null == T || T(), null == u || u(e);
                                 },
                                 onContextMenu: (e) => {
                                     null == c || c(), null == d || d(e);
@@ -157,11 +158,11 @@ function I(e) {
                                     null == _ || _(), null == a || a(e);
                                 },
                                 onBlur: (e) => {
-                                    null == S || S(), null == u || u(e);
+                                    null == T || T(), null == u || u(e);
                                 },
                                 disabled: I,
                                 innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != D }),
-                                className: o()({ [m.active]: T }, f),
+                                className: o()({ [m.active]: S }, f),
                                 wrapperClassName: p,
                                 buttonRef: N,
                                 grow: R,
@@ -176,7 +177,7 @@ function I(e) {
                                     className: o()(h, {
                                         [m.controlIcon]: null == D,
                                         [m.themeable]: v,
-                                        [m.active]: T,
+                                        [m.active]: S,
                                     }),
                                     color: g,
                                 }),
@@ -189,7 +190,7 @@ function I(e) {
         }),
     });
 }
-let T = {
+let S = {
         disconnect: m.disconnect,
         join: m.join,
         red: m.red,
@@ -201,7 +202,7 @@ let T = {
         activeLight: m.activeLight,
         premiumGradient: m.premiumGradient,
     },
-    S = {
+    T = {
         disconnect: m.disconnect,
         join: m.join,
         red: m.redGlow,
@@ -263,7 +264,7 @@ function A(e) {
                     x || R ? g : null,
                     l && m.active,
                     m.centerButton,
-                    S[w],
+                    T[w],
                     k && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
@@ -277,7 +278,7 @@ function A(e) {
                   m.attachedCaretButtonContainer,
                   A && m.popoutOpen,
                   g,
-                  U && [m.fullRegionDropdownButton, T[w]],
+                  U && [m.fullRegionDropdownButton, S[w]],
               ),
               children: [
                   B,
@@ -289,7 +290,7 @@ function A(e) {
                                 className: o()(
                                     m.contextMenuNub,
                                     N && m.attachedCaret,
-                                    S[D],
+                                    T[D],
                                     A && [m.popoutOpen, m.active],
                                     C && m.disabled,
                                 ),
