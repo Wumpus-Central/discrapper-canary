@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => v });
 var r = t(951288),
     a = t(647438),
     i = t(481060),
@@ -6,25 +6,27 @@ var r = t(951288),
     s = t(100527),
     o = t(49012),
     c = t(639777),
-    d = t(735276),
-    u = t(619733),
-    m = t(269794),
-    g = t(388032),
-    f = t(799070);
-let x = {
+    d = t(47695),
+    u = t(735276),
+    m = t(619733),
+    g = t(269794),
+    f = t(388032),
+    x = t(799070);
+let _ = {
     steps: {
-        [u.EK.SERVER_SETTINGS]: {
+        [m.EK.SERVER_SETTINGS]: {
             onBack: { type: "close" },
             onNext: { type: "save" },
         },
     },
 };
-function _(e) {
+function v(e) {
     let { guildId: n, instance: t } = e,
-        _ = a.useRef(null);
+        m = a.useRef(null),
+        v = (0, d.Z)(t.providerType, t.gameServerPanelUrl);
     return (0, c.Z)(n)
         ? (0, r.jsx)(i.yRy, {
-              targetElementRef: _,
+              targetElementRef: m,
               align: "top",
               position: "right",
               animationPosition: "bottom",
@@ -36,27 +38,27 @@ function _(e) {
                       onClose: () => {
                           (0, l.Zy)(), a();
                       },
-                      "aria-label": g.intl.string(m.default["yb+ork"]),
+                      "aria-label": f.intl.string(g.default["yb+ork"]),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
-                              null != t.providerType &&
+                              null != v &&
                                   (0, r.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
-                                      label: g.intl.string(m.default.bBkeMs),
+                                      label: f.intl.string(g.default.bBkeMs),
                                       action: () => {
-                                          (0, o.q)({ href: u.uz[t.providerType] });
+                                          (0, o.q)({ href: v });
                                       },
                                   }),
                               (0, r.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
-                                  label: g.intl.string(m.default["feUiM/"]),
+                                  label: f.intl.string(g.default["feUiM/"]),
                                   action: () => {
-                                      (0, d.Z)({
+                                      (0, u.Z)({
                                           guildId: n,
-                                          stepConfig: x,
+                                          stepConfig: _,
                                           initialGameServerInstance: t,
                                           analyticsLocation: s.Z.GAME_SERVER_PAGE,
                                       });
@@ -96,14 +98,14 @@ function _(e) {
                           return e;
                       })(
                           {
-                              "aria-label": g.intl.string(g.t["UKOtz+"]),
-                              className: f.clickable,
+                              "aria-label": f.intl.string(f.t["UKOtz+"]),
+                              className: x.clickable,
                           },
                           e,
                       )),
                       (t = t =
                           {
-                              innerRef: _,
+                              innerRef: m,
                               children: (0, r.jsx)(i.xhG, {
                                   color: "currentColor",
                                   size: "sm",
