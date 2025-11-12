@@ -1,5 +1,5 @@
 n.d(t, {
-    A2: () => e3,
+    A2: () => e2,
     AY: () => ea,
     CM: () => ec,
     CW: () => ek,
@@ -17,7 +17,7 @@ n.d(t, {
     JT: () => el,
     JY: () => N,
     L1: () => ew,
-    NA: () => eS,
+    NA: () => eT,
     OW: () => e_,
     Ok: () => eO,
     Ou: () => W,
@@ -26,7 +26,7 @@ n.d(t, {
     QK: () => eD,
     QZ: () => P,
     R$: () => O,
-    RS: () => eT,
+    RS: () => eS,
     R_: () => eF,
     Rt: () => e1,
     SE: () => ej,
@@ -39,13 +39,13 @@ n.d(t, {
     Xc: () => V,
     Xk: () => k,
     Xr: () => eh,
-    YC: () => e2,
+    YC: () => e3,
     Yk: () => ex,
     _O: () => L,
     _j: () => eV,
     bh: () => es,
     bm: () => ef,
-    cC: () => T,
+    cC: () => S,
     cP: () => Y,
     co: () => eE,
     d$: () => F,
@@ -80,7 +80,7 @@ n.d(t, {
     tU: () => ev,
     uL: () => Z,
     uh: () => eX,
-    vF: () => S,
+    vF: () => T,
     x4: () => eI,
     xM: () => ed,
     xq: () => ee,
@@ -141,7 +141,7 @@ let y = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    T = (0, _.Zc)(
+    S = (0, _.Zc)(
         "textAndImages",
         "renderSpoilers",
         (e) => {
@@ -150,7 +150,7 @@ let y = (0, _.Zc)(
         },
         (e) => o.Gm.create({ value: e }),
     ),
-    S = (0, _.Zc)(
+    T = (0, _.Zc)(
         "textAndImages",
         "useThreadSidebar",
         (e) => {
@@ -626,7 +626,7 @@ let eg = new Set(Object.values(g.Skl)),
         "text",
         "inlineAttachmentMedia",
     ),
-    eT = (0, _.KM)(
+    eS = (0, _.KM)(
         (0, _.Zc)(
             "textAndImages",
             "inlineEmbedMedia",
@@ -639,7 +639,7 @@ let eg = new Set(Object.values(g.Skl)),
         "text",
         "inlineEmbedMedia",
     ),
-    eS = (0, _.KM)(
+    eT = (0, _.KM)(
         (0, _.Zc)(
             "textAndImages",
             "renderEmbeds",
@@ -773,14 +773,12 @@ let eP = (0, _.KM)(
         "gifAutoPlay",
         () => {
             var e;
-            return (!l.Z.visible || !l.Z.enabled) && (null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value);
+            return !l.Z.active && (null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value);
         },
         () =>
             (0, i.e7)([l.Z, p.Z], () => {
                 var e;
-                return (
-                    (!l.Z.visible || !l.Z.enabled) && (null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value)
-                );
+                return !l.Z.active && (null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value);
             }),
     ),
     ex = (0, _.R2)(
@@ -800,14 +798,12 @@ let eP = (0, _.KM)(
         "animateEmoji",
         () => {
             var e;
-            return (!l.Z.visible || !l.Z.enabled) && (null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value);
+            return !l.Z.active && (null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value);
         },
         () =>
             (0, i.e7)([l.Z, p.Z], () => {
                 var e;
-                return (
-                    (!l.Z.visible || !l.Z.enabled) && (null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value)
-                );
+                return !l.Z.active && (null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value);
             }),
     ),
     eL = (0, _.R2)(
@@ -827,7 +823,7 @@ let eP = (0, _.KM)(
         "animateStickers",
         () => {
             var e;
-            return l.Z.visible && l.Z.enabled
+            return l.Z.active
                 ? b.yr.NEVER_ANIMATE
                 : null == (e = p.Z.getOverride("animateStickers"))
                   ? void 0
@@ -836,7 +832,7 @@ let eP = (0, _.KM)(
         () =>
             (0, i.e7)([l.Z, p.Z], () => {
                 var e;
-                return l.Z.visible && l.Z.enabled
+                return l.Z.active
                     ? b.yr.NEVER_ANIMATE
                     : null == (e = p.Z.getOverride("animateStickers"))
                       ? void 0
@@ -1030,13 +1026,13 @@ let e0 = (0, _.Zc)(
         (e) => null != e && e,
         (e) => e,
     ),
-    e2 = (0, _.Zc)(
+    e3 = (0, _.Zc)(
         "appearance",
         "uiDensity",
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e3 = (0, _.Zc)(
+    e2 = (0, _.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>

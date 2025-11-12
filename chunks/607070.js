@@ -126,11 +126,11 @@ let O = {
         20: "font-size-20",
         24: "font-size-24",
     };
-function T(e) {
+function S(e) {
     return f.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : f.yqN.FONT_SIZE_DEFAULT;
 }
-function S(e) {
-    let t = T(e.fontSize);
+function T(e) {
+    let t = S(e.fontSize);
     if (t > f.yqN.FONT_SIZE_MAX || t < f.yqN.FONT_SIZE_MIN || v.fontSize === t) return !1;
     (v = h({}, v)).fontSize = t;
 }
@@ -313,7 +313,7 @@ class J extends (r = i.ZP.DeviceSettingsStore) {
         return v.prefersReducedMotion;
     }
     get useReducedMotion() {
-        if (l.Z.visible && l.Z.enabled) return !0;
+        if (l.Z.active) return !0;
         switch (v.prefersReducedMotion) {
             case "no-preference":
                 return !1;
@@ -431,7 +431,7 @@ p(J, "displayName", "AccessibilityStore"),
         (e) => g(h({}, e), { enableCustomCursor: !0 }),
     ]);
 let $ = new J(s.Z, {
-    ACCESSIBILITY_SET_FONT_SIZE: S,
+    ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: A,
     ACCESSIBILITY_RESET_TO_DEFAULT: C,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
