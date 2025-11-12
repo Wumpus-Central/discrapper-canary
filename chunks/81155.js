@@ -1,10 +1,10 @@
-o.d(e, { default: () => p });
-var l = o(951288),
-    n = o(647438),
-    s = o(481060),
-    i = o(782568),
-    r = o(690221),
-    a = o(460181),
+o.d(e, { default: () => b });
+var n = o(951288),
+    l = o(647438),
+    i = o(481060),
+    a = o(782568),
+    s = o(690221),
+    r = o(460181),
     d = o(388032),
     u = o(943584);
 let c = [
@@ -23,24 +23,26 @@ let c = [
         postBold: "lievable!",
     },
 ];
-function b(t) {
+function p(t) {
     let { punConfig: e } = t;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [e.preBold, (0, l.jsx)("b", { children: (0, l.jsx)("i", { children: e.bold }) }), e.postBold],
+    return (0, n.jsxs)(n.Fragment, {
+        children: [e.preBold, (0, n.jsx)("b", { children: (0, n.jsx)("i", { children: e.bold }) }), e.postBold],
     });
 }
-function p(t) {
-    let { transitionState: e, onClose: o, asanaTask: p } = t;
-    n.useEffect(() => {
-        (0, a.GN)("success", 0.1);
+function b(t) {
+    let { transitionState: e, onClose: o, asanaTask: b } = t;
+    l.useEffect(() => {
+        (0, r.GN)("success", 0.1);
     }, []);
-    let m = n.useRef(c[Math.floor(Math.random() * c.length)]).current;
-    return (0, l.jsx)(s.Y0X, {
+    let m = l.useRef(c[Math.floor(Math.random() * c.length)]).current;
+    return (0, n.jsx)(i.Y0X, {
+        "data-migration-pending": !0,
         className: u.bugReporterSubmitModalRoot,
         transitionState: e,
         "aria-label": d.intl.string(d.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
-        children: (0, l.jsxs)(s.hzk, {
+        children: (0, n.jsxs)(i.hzk, {
+            "data-migration-pending": !0,
             style: {
                 overflow: "hidden",
                 paddingRight: "0px",
@@ -48,24 +50,25 @@ function p(t) {
             className: u.modalContent,
             paddingFix: !1,
             children: [
-                (0, l.jsx)(s.olH, {
+                (0, n.jsx)(i.olH, {
+                    "data-migration-pending": !0,
                     onClick: () => {
                         null == o || o();
                     },
                     className: u.closeButton,
                 }),
-                (0, l.jsxs)(s.Text, {
+                (0, n.jsxs)(i.Text, {
                     className: u.submitText,
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",
-                        (0, l.jsx)(r.Z, {
-                            onClick: () => (0, i.Z)(p.permalink_url),
+                        (0, n.jsx)(s.Z, {
+                            onClick: () => (0, a.Z)(b.permalink_url),
                             children: "bug",
                         }),
                         "!",
-                        (0, l.jsx)("br", {}),
-                        (0, l.jsx)(b, { punConfig: m }),
+                        (0, n.jsx)("br", {}),
+                        (0, n.jsx)(p, { punConfig: m }),
                     ],
                 }),
             ],
