@@ -1,4 +1,4 @@
-n.d(t, { z: () => h });
+n.d(t, { z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -8,25 +8,30 @@ var i = n(442837),
     l = n(496675),
     c = n(585483),
     u = n(713913),
-    d = n(443603),
-    f = n(981631),
-    _ = n(388032),
-    p = n(744114);
-function h(e) {
-    let { disabled: t, channel: n } = e,
-        h = (0, u.v)(s.U);
-    return (0, i.e7)([l.Z], () => n.isPrivate() || (l.Z.can(f.Plq.ATTACH_FILES, n) && l.Z.can(f.Plq.SEND_MESSAGES, n)))
+    d = n(541716),
+    f = n(443603),
+    _ = n(981631),
+    p = n(388032),
+    h = n(564355);
+let m = [d.Ie.NORMAL, d.Ie.SIDEBAR, d.Ie.CREATE_FORUM_POST];
+function g(e) {
+    let { disabled: t, channel: n, inputType: d } = e,
+        g = (0, u.v)(s.U);
+    return (0, i.e7)(
+        [l.Z],
+        () => n.isPrivate() || (l.Z.can(_.Plq.ATTACH_FILES, n) && l.Z.can(_.Plq.SEND_MESSAGES, n)),
+    ) && m.includes(d)
         ? (0, r.jsx)(a.u, {
-              shouldShow: !t && null != h,
-              keyboardShortcut: h,
-              text: _.intl.string(_.t.nzoF5p),
-              children: (0, r.jsx)(d.Z, {
+              shouldShow: !t && null != g,
+              keyboardShortcut: g,
+              text: p.intl.string(p.t.nzoF5p),
+              children: (0, r.jsx)(f.Z, {
                   disabled: t,
                   isActive: !1,
-                  className: p.button,
-                  "aria-label": _.intl.string(_.t.nzoF5p),
+                  className: h.button,
+                  "aria-label": p.intl.string(p.t.nzoF5p),
                   onClick: () => {
-                      c.S.dispatch(f.CkL.UPLOAD_FILE);
+                      c.S.dispatch(_.CkL.UPLOAD_FILE, { channelId: n.id });
                   },
                   children: (0, r.jsx)(o.XBm, {
                       size: "refresh_sm",

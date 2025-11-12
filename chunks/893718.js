@@ -82,7 +82,7 @@ var r = n(951288),
     ed = n(981631),
     ef = n(761652),
     e_ = n(957825),
-    ep = n(744114);
+    ep = n(564355);
 function eh(e, t, n) {
     return (
         t in e
@@ -166,7 +166,7 @@ function eI(e, t, a, o, s) {
                                 n.e("90508"),
                                 n.e("22173"),
                                 n.e("95546"),
-                                n.e("44576"),
+                                n.e("48890"),
                             ]).then(n.bind(n, 273602));
                             return (t) =>
                                 (0, r.jsx)(
@@ -562,11 +562,11 @@ function eG(e, t) {
         e0 = i.useRef(null),
         e1 = i.useRef(null);
     null == eZ || eZ(e$.current);
-    let e2 = (0, y.Z)(U),
-        [e3, e4] = i.useState(!e2);
+    let e3 = (0, y.Z)(U),
+        [e2, e4] = i.useState(!e3);
     (0, m.PM)(eX, (e) => {
         let { width: t } = e;
-        return e4(!e2 && (null == t || t > eb));
+        return e4(!e3 && (null == t || t > eb));
     });
     let { activeCommand: e8, activeCommandSection: e5 } = (0, _.cj)([I.Z], () => {
             var e, t;
@@ -657,7 +657,7 @@ function eG(e, t) {
         }),
         tz = tk
             ? (0, r.jsx)(v.Z, {
-                  align: tj ? "left" : "right",
+                  align: tj && G !== ee.Ie.SIDEBAR ? "left" : "right",
                   positionTargetRef: eJ,
                   channel: U,
               })
@@ -668,7 +668,7 @@ function eG(e, t) {
             channel: U,
             handleSubmit: th,
             isEmpty: tH,
-            showAllButtons: e3,
+            showAllButtons: e2,
         }),
         tX = tZ
             ? (0, r.jsx)(es.Z, {

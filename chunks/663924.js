@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(149203),
     y = n(388032),
-    O = n(679862);
+    O = n(681524);
 function v(e, t, n) {
     return (
         t in e
@@ -81,6 +81,7 @@ function C(e) {
             align: null != n ? n : "right",
             spacing: 24,
             autoInvert: !0,
+            nudgeAlignIntoViewport: !0,
             clickTrap: !0,
             children: (e) => {
                 let { isPositioned: t } = e;

@@ -30,7 +30,7 @@ var r = n(951288),
     w = n(728386),
     D = n(763679),
     x = n(957825),
-    L = n(744114);
+    L = n(564355);
 function M(e) {
     let { disabled: t, channel: n } = e,
         i = (0, E.Z)();
@@ -131,23 +131,24 @@ function j(e) {
                         "sticker",
                     ),
                 }),
-            N === S.Ie.NORMAL &&
-                (X.push({
-                    key: "upload",
-                    node: (0, r.jsx)(
-                        D.z,
-                        {
-                            disabled: R,
-                            channel: j,
-                        },
-                        "upload",
-                    ),
-                }),
+            X.push({
+                key: "upload",
+                node: (0, r.jsx)(
+                    D.z,
+                    {
+                        disabled: R,
+                        inputType: N,
+                        channel: j,
+                    },
+                    "upload",
+                ),
+            }),
+            N !== S.Ie.NORMAL ||
                 et ||
-                    X.push({
-                        key: "spacer",
-                        node: (0, r.jsx)("div", { className: L.spacer }, "spacer"),
-                    }))),
+                X.push({
+                    key: "spacer",
+                    node: (0, r.jsx)("div", { className: L.spacer }, "spacer"),
+                })),
         (null == (a = N.emojis) ? void 0 : a.button) != null &&
             (null == V || (null != H && H.type !== u.jw.ATTACHMENT)))
     ) {

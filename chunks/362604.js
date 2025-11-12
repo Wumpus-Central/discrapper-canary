@@ -54,7 +54,7 @@ function b(e) {
                                       guild_id: a.guild_id,
                                       action_type: "upload_file",
                                   }),
-                                      p.S.dispatch(m.CkL.UPLOAD_FILE),
+                                      p.S.dispatch(m.CkL.UPLOAD_FILE, { channelId: a.id }),
                                       (0, u.fE)({
                                           message: t,
                                           channel: a,
