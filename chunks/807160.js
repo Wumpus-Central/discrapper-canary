@@ -51,7 +51,7 @@ var r,
     J = n(474936),
     $ = n(231338),
     ee = n(388032),
-    et = n(708016);
+    et = n(982710);
 function en(e, t, n) {
     return (
         t in e
@@ -294,36 +294,8 @@ class eO extends (r = a.PureComponent) {
                 return t;
             });
     }
-    renderStatusForInGameItem() {
-        let { payment: e, hasLinkedToApplication: t } = this.props;
-        return null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
-            ? (0, i.jsx)("span", {
-                  className: et.statusTagGreen,
-                  children: ee.intl.string(ee.t.Osji1u),
-              })
-            : e.isGift
-              ? null != e.entitlements && e.entitlements.some((e) => null != e.gifterId)
-                  ? (0, i.jsx)("span", {
-                        className: et.statusTagGreen,
-                        children: ee.intl.string(ee.t.lIsIFo),
-                    })
-                  : (0, i.jsx)("span", {
-                        className: et.statusTagYellow,
-                        children: ee.intl.string(ee.t["+tqSi3"]),
-                    })
-              : t
-                ? (0, i.jsx)("span", {
-                      className: et.statusTagYellow,
-                      children: ee.intl.string(ee.t.y7F0Re),
-                  })
-                : (0, i.jsx)("span", {
-                      className: et.statusTagYellow,
-                      children: ee.intl.string(ee.t.HHC5Z4),
-                  });
-    }
-    renderStatus() {
+    renderDefaultStatus() {
         let { payment: e } = this.props;
-        if ((0, R.K$)(e.sku) && e.status === Q.PyE.COMPLETED) return this.renderStatusForInGameItem();
         switch (e.status) {
             case Q.PyE.PENDING:
                 return (0, i.jsx)("span", {
@@ -358,6 +330,39 @@ class eO extends (r = a.PureComponent) {
             default:
                 return null;
         }
+    }
+    renderTenantStatusOverride() {
+        let { payment: e, hasLinkedToApplication: t } = this.props;
+        return (0, R.K$)(e.sku) && e.status === Q.PyE.COMPLETED
+            ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
+                ? (0, i.jsx)("span", {
+                      className: et.statusTagGreen,
+                      children: ee.intl.string(ee.t.Osji1u),
+                  })
+                : e.isGift
+                  ? null != e.entitlements && e.entitlements.some((e) => null != e.gifterId)
+                      ? (0, i.jsx)("span", {
+                            className: et.statusTagGreen,
+                            children: ee.intl.string(ee.t.lIsIFo),
+                        })
+                      : (0, i.jsx)("span", {
+                            className: et.statusTagYellow,
+                            children: ee.intl.string(ee.t["+tqSi3"]),
+                        })
+                  : t
+                    ? (0, i.jsx)("span", {
+                          className: et.statusTagYellow,
+                          children: ee.intl.string(ee.t.y7F0Re),
+                      })
+                    : (0, i.jsx)("span", {
+                          className: et.statusTagYellow,
+                          children: ee.intl.string(ee.t.HHC5Z4),
+                      })
+            : null;
+    }
+    renderStatus() {
+        var e;
+        return null != (e = this.renderTenantStatusOverride()) ? e : this.renderDefaultStatus();
     }
     renderPrice() {
         let { payment: e } = this.props,
@@ -459,11 +464,10 @@ class eO extends (r = a.PureComponent) {
         return (0, i.jsx)(E.Z, { payment: e });
     }
     renderAdditionalGameItemDetails() {
-        var e, t;
-        let { claimedGiftUser: n, payment: r, hasLinkedToApplication: o, application: s } = this.props;
-        if (!(0, R.K$)(r.sku)) return null;
-        let l = null != r.entitlements && r.entitlements.some((e) => e.isFulfilled());
-        return r.status === Q.PyE.REFUNDED
+        var e, t, n;
+        let { claimedGiftUser: r, payment: o, hasLinkedToApplication: s, application: l, locale: c } = this.props,
+            u = null == (e = o.entitlements) ? void 0 : e.some((e) => e.isFulfilled());
+        return o.status === Q.PyE.REFUNDED
             ? (0, i.jsxs)(a.Fragment, {
                   children: [
                       (0, i.jsx)(p.H, {
@@ -472,13 +476,11 @@ class eO extends (r = a.PureComponent) {
                       }),
                       (0, i.jsx)("div", {
                           className: et.paymentText,
-                          children: (0, i.jsx)("div", {
-                              children: ee.intl.format(ee.t.IBtGwC, { applicationName: null == s ? void 0 : s.name }),
-                          }),
+                          children: ee.intl.format(ee.t.IBtGwC, { applicationName: null == l ? void 0 : l.name }),
                       }),
                   ],
               })
-            : r.isGift
+            : o.isGift
               ? (0, i.jsxs)(a.Fragment, {
                     children: [
                         (0, i.jsx)(p.H, {
@@ -487,19 +489,24 @@ class eO extends (r = a.PureComponent) {
                         }),
                         (0, i.jsx)("div", {
                             className: et.paymentText,
-                            children: (0, i.jsx)("div", {
-                                children:
-                                    null != n
-                                        ? ee.intl.format(ee.t.vfUW65, { username: q.ZP.getName(n) })
-                                        : ee.intl.format(ee.t["18wIqp"], {
-                                              onGiftInventoryClick: () =>
-                                                  (0, M.openUserSettings)(x.n.GIFT_PANEL, { section: Q.oAB.INVENTORY }),
-                                          }),
-                            }),
+                            children:
+                                null != r
+                                    ? ee.intl.format(ee.t.vfUW65, { username: q.ZP.getName(r) })
+                                    : ee.intl.string(ee.t["18wIqp"]),
                         }),
+                        null == r &&
+                            (0, i.jsx)("div", {
+                                className: et.additionalInformationButtonContainer,
+                                children: (0, i.jsx)(_.zxk, {
+                                    variant: "primary",
+                                    text: ee.intl.string(ee.t["jcSP+g"]),
+                                    onClick: () =>
+                                        (0, M.openUserSettings)(x.n.GIFT_PANEL, { section: Q.oAB.INVENTORY }),
+                                }),
+                            }),
                     ],
                 })
-              : l
+              : u
                 ? null
                 : (0, i.jsxs)(a.Fragment, {
                       children: [
@@ -509,28 +516,43 @@ class eO extends (r = a.PureComponent) {
                           }),
                           (0, i.jsx)("div", {
                               className: et.paymentText,
-                              children: (0, i.jsx)("div", {
-                                  children: o
-                                      ? ee.intl.format(ee.t.DQQCAw, {
-                                            applicationName: null == s ? void 0 : s.name,
-                                            skuName: null == (e = r.sku) ? void 0 : e.name,
-                                        })
-                                      : ee.intl.format(ee.t.ED2BqF, {
-                                            applicationName: null == s ? void 0 : s.name,
-                                            skuName: null == (t = r.sku) ? void 0 : t.name,
-                                            onHereClick: () => {
-                                                null != r.sku &&
-                                                    null != s &&
-                                                    (0, P.I)({
-                                                        sku: r.sku,
-                                                        application: s,
-                                                    });
-                                            },
-                                        }),
-                              }),
+                              children: s
+                                  ? ee.intl.format(ee.t.DQQCAw, {
+                                        applicationName: null == l ? void 0 : l.name,
+                                        skuName: null == (t = o.sku) ? void 0 : t.name,
+                                    })
+                                  : ee.intl.format(ee.t.ED2BqF, {
+                                        applicationName: null == l ? void 0 : l.name,
+                                        skuName: null == (n = o.sku) ? void 0 : n.name,
+                                    }),
+                          }),
+                          (0, i.jsx)("div", {
+                              className: et.additionalInformationButtonContainer,
+                              children: s
+                                  ? (0, i.jsx)(_.zxk, {
+                                        variant: "primary",
+                                        text: ee.intl.string(ee.t.zoztQA),
+                                        onClick: () => (0, h.Z)(ed(c)),
+                                    })
+                                  : (0, i.jsx)(_.zxk, {
+                                        variant: "primary",
+                                        text: ee.intl.string(ee.t["jCqvk/"]),
+                                        onClick: () => {
+                                            null != o.sku &&
+                                                null != l &&
+                                                (0, P.I)({
+                                                    sku: o.sku,
+                                                    application: l,
+                                                });
+                                        },
+                                    }),
                           }),
                       ],
                   });
+    }
+    renderAdditionalTenantInfo() {
+        let { payment: e } = this.props;
+        if ((0, R.K$)(e.sku)) return this.renderAdditionalGameItemDetails();
     }
     renderRefundDetails() {
         let e,
@@ -802,7 +824,7 @@ class eO extends (r = a.PureComponent) {
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),
                     this.renderInvoiceDownload(),
-                    this.renderAdditionalGameItemDetails(),
+                    this.renderAdditionalTenantInfo(),
                     this.renderRefundDetails(),
                 ],
             }),

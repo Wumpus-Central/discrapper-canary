@@ -6,6 +6,7 @@ e.exports = {
     paymentText: "paymentText_e9cb00",
     paymentBreakdown: "paymentBreakdown_e9cb00",
     paymentDetail: "paymentDetail_e9cb00",
+    additionalInformationButtonContainer: "additionalInformationButtonContainer_e9cb00",
     guildProductDetail: "guildProductDetail_e9cb00 paymentDetail_e9cb00",
     date: "date_e9cb00",
     amount: "amount_e9cb00",
