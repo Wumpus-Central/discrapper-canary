@@ -219,6 +219,7 @@ let er = (e) => {
                     [Y.reactionSelected]: a,
                 }),
                 "aria-label": g,
+                "aria-selected": a,
                 onClick: y,
                 style: E,
                 children: [
@@ -263,6 +264,8 @@ function ea(e) {
         className: Y.reactorDefault,
         onContextMenu: (e) => (0, B.Pv)(e, n, a),
         align: E.Z.Align.CENTER,
+        tabIndex: 0,
+        "aria-label": n.username,
         children: [
             (0, r.jsx)(E.Z.Child, {
                 wrap: !0,
@@ -300,6 +303,7 @@ function ea(e) {
                 g &&
                 (0, r.jsx)(_.P3F, {
                     onClick: y,
+                    "aria-label": H.intl.string(H.t["+BdaDn"]),
                     children: (0, r.jsx)(_.Dio, {
                         size: "xs",
                         color: "currentColor",
