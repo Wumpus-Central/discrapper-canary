@@ -37,8 +37,8 @@ var i = n(658722),
     O = n(931261),
     v = n(510231),
     I = n(277078),
-    T = n(208049),
-    S = n(763296),
+    S = n(208049),
+    T = n(763296),
     A = n(421673),
     C = n(285651),
     N = n(822179),
@@ -141,8 +141,8 @@ let ey = new m.Z("AutocompleteUtils"),
     eO = 10,
     ev = 8,
     eI = 7,
-    eT = 5,
-    eS = 3,
+    eS = 5,
+    eT = 3,
     eA = 1,
     eC = 1,
     eN = 3,
@@ -222,8 +222,8 @@ function eQ(e, t) {
             if (e.toLocaleLowerCase() === i) return eO;
             return eI;
         }
-        if (r.test(e)) return eT;
-        if (eX(i, e)) return eS;
+        if (r.test(e)) return eS;
+        if (eX(i, e)) return eT;
         if (o && a()(i, e)) return eA;
     } catch (e) {
         ey.error(e);
@@ -251,7 +251,7 @@ function e0(e) {
         m = 0,
         g = 0;
     for (; m < h; ) {
-        var E, b, y, O, v, I, T, S, A;
+        var E, b, y, O, v, I, S, T, A;
         let e,
             r,
             f = n[m];
@@ -287,7 +287,7 @@ function e0(e) {
                         record: r,
                         score: eK(eA, null == s ? void 0 : s[r.id]),
                         comparator: null != (I = null != h ? h : e) ? I : n,
-                        sortable: null != (T = null != m ? m : c) ? T : i,
+                        sortable: null != (S = null != m ? m : c) ? S : i,
                     })
                   : g < eU &&
                     (a()(u, i) ||
@@ -300,7 +300,7 @@ function e0(e) {
                         type: eu.h8.USER,
                         record: r,
                         score: eK(eA, null == s ? void 0 : s[r.id]),
-                        comparator: null != (S = null != h ? h : e) ? S : n,
+                        comparator: null != (T = null != h ? h : e) ? T : n,
                         sortable: null != (A = null != m ? m : c) ? A : i,
                     }),
                     (g += 1));
@@ -725,7 +725,7 @@ let te = (0, ee.oH)((e, t, n) => {
                     null != n && s.push(n), null != r && s.push(r), null != i && s.push(i);
                 }
                 for (let e of s) {
-                    let t = Math.min(eT, eQ((0, es._I)((0, es.Fv)(e.toLocaleLowerCase())), l, r));
+                    let t = Math.min(eS, eQ((0, es._I)((0, es.Fv)(e.toLocaleLowerCase())), l, r));
                     t > o && (o = t);
                 }
                 o > 0 &&
@@ -944,7 +944,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 c &&
                 (y < h && a()(O, eF().test) && (I.push(eF()), (y += 1)),
                 i && y < h && a()(O, eV().test) && (I.push(eV()), (y += 1)));
-            let T = b.N.getCurrentConfig(
+            let S = b.N.getCurrentConfig(
                 {
                     guildId: n.guild_id,
                     location: "mention autocomplete",
@@ -953,7 +953,7 @@ let te = (0, ee.oH)((e, t, n) => {
             ).enabled;
             return (
                 r &&
-                    T &&
+                    S &&
                     null != eH &&
                     (y < h || 0 === O.length) &&
                     a()(O, eH().test) &&
@@ -1183,7 +1183,7 @@ let te = (0, ee.oH)((e, t, n) => {
                                       ? (o = eI * a)
                                       : (r === P.MO.GUILD_NAME || r === P.MO.PACK_NAME || r === P.MO.STICKER_NAME) &&
                                         u.test(i) &&
-                                        (o = eT * a)
+                                        (o = eS * a)
                                 : i === e && ((o = eO * a), (f = i)),
                                 o > d && ((d = o), (f = i));
                         }
@@ -1211,8 +1211,8 @@ let te = (0, ee.oH)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = Q.default.getCurrentUser();
-            S.Z.isFetching() || S.Z.hasFetchedAllSounds() || (0, T.w)(), x.DZ.loadIfNecessary();
-            let r = Array.from(S.Z.getSounds().values()).reduce(
+            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, S.w)(), x.DZ.loadIfNecessary();
+            let r = Array.from(T.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {
                         (0, I.Z)(n, null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id) && e.push(n);
@@ -1294,21 +1294,22 @@ let te = (0, ee.oH)((e, t, n) => {
                 var p, h, m, g;
                 let t, o;
                 if (_.length >= r) break;
-                e instanceof j.Z
-                    ? ((o = e), (t = null == (m = F.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
-                    : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId]));
+                if (
+                    (e instanceof j.Z
+                        ? ((o = e), (t = null == (m = F.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
+                        : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId])),
+                    null == o || o.id === s || o.bot)
+                )
+                    continue;
                 let f = null == (p = z.Z.getNickname(o.id)) ? void 0 : p.toLocaleLowerCase(),
                     E = null == (h = el.ZP.getGlobalName(o)) ? void 0 : h.toLocaleLowerCase();
                 if (
-                    null == o ||
-                    o.id === s ||
-                    o.bot ||
-                    (!ei.BT({
+                    !ei.BT({
                         permission: ec.Plq.VIEW_CHANNEL,
                         user: o,
                         context: n,
                     }) &&
-                        !n.isPrivate())
+                    !n.isPrivate()
                 )
                     continue;
                 let b = (e, n, r) => {
@@ -1324,8 +1325,8 @@ let te = (0, ee.oH)((e, t, n) => {
                     y = o.username.toLocaleLowerCase(),
                     O = (0, es._I)(y),
                     v = (0, es.Fv)(O),
-                    [I, T] = e$(t),
-                    [S, A] = e$(f),
+                    [I, S] = e$(t),
+                    [T, A] = e$(f),
                     [C, N] = e$(E),
                     R = [
                         [y, y],
@@ -1333,7 +1334,7 @@ let te = (0, ee.oH)((e, t, n) => {
                         [t, t],
                         [I, t],
                         [f, f],
-                        [S, f],
+                        [T, f],
                         [E, E],
                         [C, E],
                     ].filter((e) => null != e[0] && null != e[1]);
@@ -1356,7 +1357,7 @@ let te = (0, ee.oH)((e, t, n) => {
                         }
                     for (let [e, n] of [
                         [v, y],
-                        [T, t],
+                        [S, t],
                         [A, f],
                         [N, E],
                     ])
