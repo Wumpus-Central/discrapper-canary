@@ -64,7 +64,7 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function T(e, t) {
         e
     );
 }
-let S = new d.Z("AuthenticationActionCreators"),
+let T = new d.Z("AuthenticationActionCreators"),
     A = 5000,
     C = null;
 var N = (function (e) {
@@ -85,7 +85,7 @@ function R(e) {
     let t = v({ type: "LOGOUT" }, e);
     l.Z.dispatch(t).catch((e) => {
         var t;
-        throw (S.error("Error while dispatching LOGOUT", e), null == (t = window.DiscordErrors) || t.softCrash(e), e);
+        throw (T.error("Error while dispatching LOGOUT", e), null == (t = window.DiscordErrors) || t.softCrash(e), e);
     });
 }
 function P(e) {
@@ -116,7 +116,7 @@ let w = {
                 isPasswordAttempt: !0,
             }),
             g.Z.post(
-                T(
+                S(
                     v(
                         {
                             url: b.ANM.LOGIN,
@@ -351,10 +351,11 @@ let w = {
     async oneTimeLogin(e) {
         l.Z.dispatch({ type: "LOGIN" });
         let t = (
-            await o.tn.post({
+            await g.Z.post({
                 url: b.ANM.ONE_TIME_LOGIN,
                 body: { ticket: e },
                 oldFormErrors: !0,
+                trackedActionData: { event: i.NetworkActionNames.USER_ONE_TIME_LOGIN },
                 rejectWithError: !0,
             })
         ).body.token;
@@ -378,7 +379,7 @@ let w = {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.Z5c.DEFAULT_LOGGED_OUT,
             r = arguments.length > 2 ? arguments[2] : void 0;
         return g.Z.post(
-            T(
+            S(
                 v(
                     {
                         url: b.ANM.LOGOUT,
@@ -406,7 +407,7 @@ let w = {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = h.default.getToken();
         return (
-            S.log("Switching accounts", {
+            T.log("Switching accounts", {
                 wasLoggedIn: null != n,
                 tokenHasChanged: e !== n,
             }),
@@ -416,7 +417,7 @@ let w = {
             }),
             this.loginToken(e, !0).then(() => {
                 let t = e === h.default.getToken();
-                return S.log("Switched accounts finished", { isCorrectToken: t }), t;
+                return T.log("Switched accounts finished", { isCorrectToken: t }), t;
             })
         );
     },

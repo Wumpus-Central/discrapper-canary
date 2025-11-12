@@ -299,6 +299,7 @@ var r = (function (e) {
             (e.USER_LOGIN_MFA_SMS = "network_action_user_login_mfa_sms"),
             (e.USER_LOGIN_PASSWORDLESS = "network_action_user_login_passwordless"),
             (e.USER_LOGOUT = "network_action_user_logout"),
+            (e.USER_ONE_TIME_LOGIN = "network_action_user_one_time_login"),
             (e.USER_PASSWORDLESS_INFO_FETCH = "network_action_user_passwordless_info_fetch"),
             (e.USER_PASSWORDLESS_LOGIN_CODE = "network_action_user_passwordless_login_code"),
             (e.USER_REGISTER = "network_action_user_register"),
