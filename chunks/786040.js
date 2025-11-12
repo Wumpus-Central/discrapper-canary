@@ -31,6 +31,7 @@ var E = (function (e) {
             (e.NEW = "new"),
             (e.ORBS_EXCLUSIVE = "orbs_exclusive"),
             (e.LIMITED_TIME = "limited_time"),
+            (e.NITRO_EXCLUSIVE = "nitro_exclusive"),
             e
         );
     })({}),
