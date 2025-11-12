@@ -104,12 +104,11 @@ let k = l.memo(function (e) {
                             ],
                         }),
                         es &&
-                            (0, r.jsxs)("div", {
-                                className: j.footerContainer,
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", { className: j.footerGradient }),
                                     (0, r.jsxs)("div", {
-                                        className: j.footerContent,
+                                        className: j.footerContainer,
                                         children: [
                                             ei &&
                                                 (0, r.jsxs)("div", {
@@ -122,7 +121,7 @@ let k = l.memo(function (e) {
                                                                     !i &&
                                                                         (0, r.jsx)(h.Z, {
                                                                             skuId: t.skuId,
-                                                                            className: W,
+                                                                            className: s()(W, j.productName),
                                                                         }),
                                                                     !I &&
                                                                         (0, r.jsx)("div", {
