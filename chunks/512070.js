@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var l = n(951288);
 n(647438);
 var o = n(120356),
@@ -7,27 +7,25 @@ var o = n(120356),
     a = n(793030),
     s = n(28664),
     c = n(481060),
-    d = n(594928),
-    u = n(131016),
-    p = n(7284),
-    m = n(660662),
-    f = n(352609),
-    g = n(388032),
-    h = n(959389),
-    x = n(204469);
-function b(e) {
-    let { selectedFontId: t, setSelectedFontId: n, displayName: o, className: b } = e,
-        _ = t !== i.C.DEFAULT,
-        S = (0, u.mR)(o),
-        { enabled: j } = d.wL.useConfig({ location: "DisplayNameStylesFontSelection" });
+    d = n(131016),
+    u = n(7284),
+    p = n(660662),
+    m = n(352609),
+    f = n(388032),
+    g = n(959389),
+    h = n(204469);
+function x(e) {
+    let { selectedFontId: t, setSelectedFontId: n, displayName: o, className: x } = e,
+        b = t !== i.C.DEFAULT,
+        _ = (0, d.mR)(o);
     return (0, l.jsxs)("div", {
-        className: b,
+        className: x,
         children: [
             (0, l.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
-                className: h.selectorHeading,
+                className: g.selectorHeading,
                 children: [
-                    g.intl.string(f.default.nP0ngb),
+                    f.intl.string(m.default.nP0ngb),
                     (0, l.jsx)(c.SrA, {
                         size: "xs",
                         color: c.TVs.colors.TEXT_DEFAULT,
@@ -38,22 +36,22 @@ function b(e) {
                 direction: "horizontal",
                 align: "center",
                 wrap: !0,
-                children: m.P$.map((e) => {
-                    let o = (0, p.U)(e),
+                children: p.P$.map((e) => {
+                    let o = (0, u.U)(e),
                         i = e === t;
                     return (0, l.jsx)(
                         s.u,
                         {
-                            text: g.intl.string(o.name),
+                            text: f.intl.string(o.name),
                             asContainer: !0,
                             children: (0, l.jsx)(c.P3F, {
-                                className: r()(x.fontButton, { [x.selected]: i }),
+                                className: r()(h.fontButton, { [h.selected]: i }),
                                 onClick: () => n(e),
-                                "aria-label": g.intl.string(o.name),
+                                "aria-label": f.intl.string(o.name),
                                 children: (0, l.jsx)(a.xvT, {
                                     variant: "text-lg/semibold",
                                     color: i ? "text-primary" : "text-default",
-                                    className: r()(x.fontText, o.className),
+                                    className: r()(h.fontText, o.className),
                                     children: "Gg",
                                 }),
                             }),
@@ -62,17 +60,16 @@ function b(e) {
                     );
                 }),
             }),
-            _ &&
-                S &&
-                j &&
+            b &&
+                _ &&
                 (0, l.jsxs)("div", {
-                    className: x.nonLatinDisclaimer,
+                    className: h.nonLatinDisclaimer,
                     children: [
                         (0, l.jsx)(a.d3s, { size: "lg" }),
                         (0, l.jsx)(a.xvT, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
-                            children: g.intl.string(f.default["+O1xL2"]),
+                            children: f.intl.string(m.default["+O1xL2"]),
                         }),
                     ],
                 }),

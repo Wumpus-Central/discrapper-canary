@@ -21,8 +21,8 @@ var i = n(512722),
     O = n(906364),
     v = n(643879),
     I = n(621853),
-    T = n(271383),
-    S = n(594174),
+    S = n(271383),
+    T = n(594174),
     A = n(74538),
     C = n(51144),
     N = n(18438),
@@ -36,8 +36,8 @@ var i = n(512722),
 function j(e) {
     var t, n, i, j;
     let { guild: k } = e,
-        U = (0, o.e7)([S.default], () => {
-            let e = S.default.getCurrentUser();
+        U = (0, o.e7)([T.default], () => {
+            let e = T.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
         G = (0, d.m)(x.PremiumTypes.TIER_2),
@@ -77,9 +77,9 @@ function j(e) {
         q = null != k ? k : K;
     a()(null != q, "guild should not be null");
     let X = (0, u.gS)(q.id),
-        Q = (0, o.e7)([T.ZP], () => (null == q.id ? null : T.ZP.getMember(q.id, U.id))),
+        Q = (0, o.e7)([S.ZP], () => (null == q.id ? null : S.ZP.getMember(q.id, U.id))),
         J = (0, o.e7)([I.Z], () => I.Z.getGuildMemberProfile(U.id, q.id)),
-        $ = (0, c.cL)({ location: "GuildIdentityCustomizationSections" }),
+        $ = c.JH.useExperiment({ location: "GuildIdentityCustomizationSections" }).enabled,
         ee = A.ZP.canUsePremiumProfileCustomization(U),
         et = (0, f.gd)(B, null == Q ? void 0 : Q.avatar),
         en = (0, f.f$)(F, null == J ? void 0 : J.banner),

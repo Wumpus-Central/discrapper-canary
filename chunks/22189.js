@@ -123,7 +123,7 @@ let ey = () => {
         { isFractionalPremiumActive: eA } = (0, u.Z)(),
         eC = null != eb && eb.hasPremiumAtLeast(L.PremiumTypes.TIER_2),
         eN = (0, _.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
-        eR = (0, p.cL)({ location: "usePremiumPerksCards" }),
+        eR = p.JH.useExperiment({ location: "usePremiumPerksCards" }).enabled,
         eP = (0, m.Z)({
             scrollPosition: U.Y_.TRY_IT_OUT,
             analyticsLocations: e,

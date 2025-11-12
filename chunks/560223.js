@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -97,16 +97,16 @@ let I = (e) => {
                     }),
                 });
     },
-    T = (e) => {
+    S = (e) => {
         let {
                 className: t,
                 variant: n,
                 noBackground: a = !1,
                 leftAlignHeaders: b = !1,
                 showAllPerksButton: O,
-                headerClassname: T,
+                headerClassname: S,
             } = e,
-            S = i.useRef(null),
+            T = i.useRef(null),
             A = n === h.gM.WHATS_NEW,
             C = (0, _.x)();
         i.useEffect(() => {
@@ -118,7 +118,7 @@ let I = (e) => {
             { fractionalState: w } = (0, l.Z)(),
             D = (0, d.W)(),
             x = (0, u.bg)({ location: "PremiumPerks" }),
-            L = (0, c.cL)({ location: "PremiumPerks" }),
+            L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
             j = (0, m.ZM)({
                 perksCards: R,
@@ -133,7 +133,7 @@ let I = (e) => {
             }),
             k = j.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
-            ref: S,
+            ref: T,
             className: o()(
                 E.section,
                 {
@@ -147,7 +147,7 @@ let I = (e) => {
                     showAllPerksButton: O,
                     leftAlignHeaders: b,
                     title: N.title,
-                    headerClassname: T,
+                    headerClassname: S,
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",

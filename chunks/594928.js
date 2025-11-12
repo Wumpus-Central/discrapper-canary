@@ -1,8 +1,6 @@
 n.d(t, {
     JH: () => s,
-    cL: () => c,
     fN: () => o,
-    wL: () => l,
 });
 var r = n(818083),
     i = n(427164);
@@ -57,18 +55,7 @@ let o = (0, r.B)({
                 config: { enabled: !0 },
             },
         ],
-    }),
-    l = (0, i.le)({
-        name: "2025-09-display-name-styles-ga",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
     });
-function c(e) {
-    let { location: t } = e,
-        n = s.useExperiment({ location: t }).enabled;
-    return l.useConfig({ location: t }).enabled && n;
-}
 (0, i.le)({
     name: "2025-10-display-name-styles-mobile",
     kind: "user",

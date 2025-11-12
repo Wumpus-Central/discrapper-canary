@@ -1,5 +1,5 @@
 n.d(t, {
-    Jw: () => S,
+    Jw: () => T,
     PO: () => A,
     UK: () => C,
     Wh: () => N,
@@ -13,7 +13,7 @@ n.d(t, {
     nh: () => O,
     sY: () => I,
     wE: () => v,
-    xQ: () => T,
+    xQ: () => S,
 }),
     n(539854);
 var r = n(647438),
@@ -62,7 +62,7 @@ function E(e, t) {
     };
 }
 function b(e, t) {
-    (0, c.cL)({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }) || (t = void 0);
+    c.JH.useExperiment({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }).enabled || (t = void 0);
     let n = (0, s.e7)([p.ZP], () => (void 0 === t || null == e ? null : p.ZP.getMember(t, e.id))),
         { pendingUserDisplayNameStyles: r, userErrors: i } = (0, s.cj)([h.Z], () => ({
             pendingUserDisplayNameStyles: h.Z.getPendingDisplayNameStyles(),
@@ -129,10 +129,10 @@ function I(e) {
                 },
     );
 }
-function T(e, t) {
+function S(e, t) {
     (0, f.Cf)(e === t ? void 0 : e);
 }
-function S(e, t) {
+function T(e, t) {
     (0, l.I5)((null == e ? void 0 : e.imageUri) === t ? void 0 : e);
 }
 function A(e, t) {

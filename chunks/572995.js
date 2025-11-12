@@ -180,7 +180,7 @@ let ef = (e, t) =>
                 scrollPosition: E.Y_.TRY_IT_OUT,
                 analyticsLocations: e,
             }),
-            v = (0, s.cL)({ location: "useBentoBoxes" }),
+            v = s.JH.useExperiment({ location: "useBentoBoxes" }).enabled,
             I = h.Z.useExperiment({ location: "useBentoBoxes" }),
             S = (0, r.useCallback)(() => {
                 (0, d.openUserSettings)(

@@ -8,7 +8,7 @@ var r = n(594928),
     c = n(388032),
     u = n(352609);
 let d = () => {
-    let e = (0, r.cL)({ location: "useGetPlanComparisonTableRowsApplicationHome" }),
+    let e = r.JH.useExperiment({ location: "useGetPlanComparisonTableRowsApplicationHome" }).enabled,
         t = [
             {
                 id: 10,
