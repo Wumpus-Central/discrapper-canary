@@ -649,7 +649,7 @@ function e1(e) {
         ex(),
         i && eT();
 }
-function e2(e) {
+function e3(e) {
     let t = eA(e.game);
     delete eo.gameOverrides[t],
         delete eo.enableOverlay[t],
@@ -664,7 +664,7 @@ function e2(e) {
         ek(),
         ex();
 }
-function e3(e) {
+function e2(e) {
     var t;
     if (__OVERLAY__ || !w.isPlatformEmbedded) return;
     let n = D.ZP.getDiscordUtils().notifyGameLaunched;
@@ -936,6 +936,9 @@ class e5 extends (i = c.ZP.Store) {
     getCandidateGames() {
         return ee.filter((e) => e.hidden || null == e.id).filter((e) => void 0 === eo.gameOverrides[eA(e)]);
     }
+    isGamesSeenLoaded() {
+        return 0 === K.length;
+    }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = eB();
@@ -1007,9 +1010,9 @@ let e6 = new e5(d.Z, {
         RUNNING_GAME_TOGGLE_OVERLAY: e$,
         RUNNING_GAME_TOGGLE_DETECTION: e0,
         RUNNING_GAME_EDIT_NAME: e1,
-        RUNNING_GAME_DELETE_ENTRY: e2,
+        RUNNING_GAME_DELETE_ENTRY: e3,
         GAMES_DATABASE_UPDATE: es,
-        GAME_LAUNCH_SUCCESS: e3,
+        GAME_LAUNCH_SUCCESS: e2,
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: eq,
         GAME_DETECTION_DEBUGGING_START: eX,
         GAME_DETECTION_DEBUGGING_STOP: eQ,

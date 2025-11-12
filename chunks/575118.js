@@ -1,4 +1,8 @@
-n.d(t, { x: () => T }), n(388685);
+n.d(t, {
+    o: () => y,
+    x: () => S,
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -145,7 +149,7 @@ function I(e) {
         })
     );
 }
-function T(e) {
+function S(e) {
     let {
             gradientColor: t,
             graphic: n,
@@ -158,7 +162,7 @@ function T(e) {
             trailing: E,
         } = e,
         { headingId: y } = (0, m.v)(),
-        T = null != t,
+        S = null != t,
         C = (0, f.MW)(n),
         N = c ? (C ? v : I) : O,
         R =
@@ -188,20 +192,20 @@ function T(e) {
                         children: (0, r.jsx)(N, {
                             leading: h,
                             trailing: E,
-                            hasGradient: T,
+                            hasGradient: S,
                             children: (0, r.jsx)("div", {
                                 className: g.headerMain,
                                 children: w,
                             }),
                         }),
                     }),
-                    (0, r.jsx)(S, { badge: i }),
+                    (0, r.jsx)(T, { badge: i }),
                     null != n && null != a && P,
                     null != l && (0, r.jsx)(A, { subtitle: l }),
                 ],
             }),
         });
-    return T
+    return S
         ? (0, r.jsx)(u.$, {
               color: t,
               className: g.headerGradient,
@@ -209,7 +213,7 @@ function T(e) {
           })
         : D;
 }
-function S(e) {
+function T(e) {
     let { badge: t } = e;
     if (null == t) return null;
     let n = (0, l.R)(t);

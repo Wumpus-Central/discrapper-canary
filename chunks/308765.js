@@ -851,5 +851,11 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
+    SocialLayerStorefrontAnnouncementManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(696011).Z,
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
+    },
 };
 (0, r.j)(i);

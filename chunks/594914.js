@@ -1,4 +1,7 @@
-n.d(t, { P: () => s });
+n.d(t, {
+    P: () => s,
+    b: () => l,
+});
 var r = n(951288),
     i = n(481060);
 function a(e, t, n) {
@@ -52,5 +55,14 @@ function s(e, t) {
                 );
         },
         { modalKey: "slayers-payment-modal" },
+    );
+}
+function l() {
+    (0, i.ZDy)(
+        async () => {
+            let { default: e } = await Promise.all([n.e("92275"), n.e("21854")]).then(n.bind(n, 211912));
+            return (t) => (0, r.jsx)(e, o({}, t));
+        },
+        { modalKey: "slayer-storefront-announcement-modal" },
     );
 }

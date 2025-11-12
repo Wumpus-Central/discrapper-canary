@@ -208,7 +208,7 @@ let L = (0, h.Un)({
         name: "ViewsWithOAuth2",
     }),
     W = (0, h.Un)({
-        createPromise: () => n.e("57047").then(n.bind(n, 549652)),
+        createPromise: () => Promise.all([n.e("92275"), n.e("57047")]).then(n.bind(n, 549652)),
         webpackId: 549652,
         name: "BrowserHandoff",
     }),

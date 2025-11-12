@@ -20,17 +20,20 @@ let O = i.memo(function (e) {
     let { guild: t, selected: O } = e,
         v = i.useRef(null),
         j = (0, a.f9)(),
-        C = (0, l.e7)([g.Z], () => g.Z.hasLayers()),
-        [E, x] = (0, d.ZT)([o.z.GAME_SHOP_NEW_BADGE], t.id),
-        S = i.useCallback(() => {
+        x = (0, l.e7)([g.Z], () => g.Z.hasLayers()),
+        [C, E] = (0, d.ZT)([o.z.GAME_SHOP_NEW_BADGE], t.id);
+    i.useEffect(() => {
+        O && C === o.z.GAME_SHOP_NEW_BADGE && E(_.L.INDIRECT_ACTION);
+    }, [E, O, C]);
+    let S = i.useCallback(() => {
             var e, n;
-            x(_.L.USER_DISMISS);
+            E(_.L.USER_DISMISS);
             let r = null != (n = null == (e = h.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
             (0, p.uL)(b.Z5c.CHANNELS_GAME_SHOP(t.id, r));
-        }, [t, x]),
+        }, [t, E]),
         I = i.useCallback(() => {
-            x(_.L.USER_DISMISS);
-        }, [x]),
+            E(_.L.USER_DISMISS);
+        }, [E]),
         P = i.useCallback(
             (e) => {
                 null != t &&
@@ -103,14 +106,14 @@ let O = i.memo(function (e) {
                 onClick: S,
                 onContextMenu: P,
                 trailing:
-                    E === o.z.GAME_SHOP_NEW_BADGE
+                    C === o.z.GAME_SHOP_NEW_BADGE
                         ? (0, r.jsx)(s.IGR, {
                               text: y.intl.string(y.t.y2b7CA),
                               color: u.Z.BG_BRAND,
                           })
                         : null,
             }),
-            j || C || E !== o.z.GAME_SHOP_NEW_BADGE
+            j || x || C !== o.z.GAME_SHOP_NEW_BADGE
                 ? null
                 : (0, r.jsx)(f.Z, {
                       onActionClick: S,

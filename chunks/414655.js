@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(481060),
     u = n(100527),
     d = n(906732),
-    g = n(335131),
-    f = n(699955),
+    f = n(335131),
+    g = n(699955),
     p = n(705338),
     m = n(277511),
     b = n(602733),
@@ -21,7 +21,7 @@ var r = n(951288),
     x = n(654544),
     _ = n(778567),
     P = n(228168),
-    I = n(132724),
+    I = n(582113),
     w = n(388032),
     S = n(10094);
 function E(e) {
@@ -31,7 +31,7 @@ function E(e) {
               title: w.intl.string(w.t["i/yzHs"]),
               handleOpenCollectiblesShop: n,
               handleOpenGameShop: i,
-              socialLayerStorefrontApplicationId: I.s,
+              socialLayerStorefrontApplicationId: I.t9,
           })
         : (0, r.jsx)(s.Button, {
               variant: "secondary",
@@ -57,7 +57,7 @@ function T(e) {
                       title: w.intl.string(w.t.SDUwM0),
                       handleOpenCollectiblesShop: i,
                       handleOpenGameShop: a,
-                      socialLayerStorefrontApplicationId: I.s,
+                      socialLayerStorefrontApplicationId: I.t9,
                   })
                 : (0, r.jsx)(s.Button, {
                       variant: "secondary",
@@ -88,7 +88,7 @@ function C(e) {
                 wishlistSettings: null != e ? v.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
-        C = (0, f.c)({ location: "user-profile-modal-v2-wishlist" }),
+        C = (0, g.c)({ location: "user-profile-modal-v2-wishlist" }),
         { analyticsLocations: D } = (0, d.ZP)(),
         k = (null == x ? void 0 : x.id) === t.id,
         N = !1 === t.nsfwAllowed,
@@ -110,13 +110,13 @@ function C(e) {
         }, [n, A, D]),
         B = i.useCallback(() => {
             (0, o.pT)(),
-                (0, g.mK)({
+                (0, f.mK)({
                     analyticsLocations: D,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });
         }, [D]),
         M = i.useCallback(() => {
-            (0, o.pT)(), (0, p.Z)({ guildId: I.A });
+            (0, o.pT)(), (0, p.Z)({ guildId: I.ON });
         }, []);
     return null != G
         ? null
