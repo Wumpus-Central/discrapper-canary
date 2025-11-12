@@ -1,32 +1,44 @@
-r.d(t, { Z: () => o });
-var n = r(951288),
-    e = r(793030),
-    a = r(442837),
-    s = r(5888),
-    l = r(198358),
-    d = r(506945),
-    c = r(388032);
+e.d(r, { Z: () => o });
+var i = e(951288),
+    n = e(793030),
+    l = e(442837),
+    a = e(5888),
+    s = e(198358),
+    d = e(506945),
+    c = e(388032);
 function o() {
     let {
-        voice: { totalVoiceMinutes: i, totalVoiceMinutesPercentile: t },
-    } = (0, a.e7)([s.Z], () => s.Z.getCheckpointData());
-    return (0, n.jsxs)(l.Z, {
+        voice: { totalVoiceMinutes: t, totalVoiceMinutesPercentile: r },
+    } = (0, l.e7)([a.Z], () => a.Z.getCheckpointData());
+    return (0, i.jsxs)(s.Z, {
         children: [
-            i >= 1000
-                ? (0, n.jsx)(e.xvT, {
+            t >= 1000
+                ? (0, i.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.Xu0QsX, { numHours: Math.floor(i / 60) }),
+                      children: c.intl.format(d.default.Xu0QsX, { numHours: Math.floor(t / 60) }),
                   })
-                : (0, n.jsx)(e.xvT, {
+                : (0, i.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.UZbUtl, { numMinutes: Math.floor(i) }),
+                      children: c.intl.format(d.default.UZbUtl, { numMinutes: Math.floor(t) }),
                   }),
-            (0, n.jsx)(e.xvT, {
+            (0, i.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default["36PZwu"], { percent: 100 - t }),
+                children: c.intl.format(d.default["36PZwu"], {
+                    percent: 100 - r,
+                    percentHook: (t, r) =>
+                        (0, i.jsx)(
+                            n.xvT,
+                            {
+                                variant: "display-sm",
+                                color: "text-primary",
+                                children: t,
+                            },
+                            r,
+                        ),
+                }),
             }),
         ],
     });
