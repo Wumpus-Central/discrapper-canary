@@ -22,7 +22,7 @@ var r = n(951288),
     O = n(361110),
     S = n(29121),
     y = n(215023),
-    j = n(374874);
+    j = n(213301);
 let k = l.memo(function (e) {
         let {
                 product: t,
@@ -59,8 +59,9 @@ let k = l.memo(function (e) {
             en = (0, b.J7)(t, u.Z.COLLECTIBLES_SHOP_CARD, G),
             er = t.type === a.Z.VARIANTS_GROUP && !k,
             el = !T || !L,
-            ei = !I || er,
-            es = el || er;
+            ei = !(I && i) || er,
+            es = ei || el,
+            ea = el || er;
         return (0, r.jsx)(o.$, {
             innerRef: $,
             onChange: et,
@@ -78,7 +79,7 @@ let k = l.memo(function (e) {
                     className: j.productCardContentContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: s()(j.productPreviewContainer, { [j.hasBottomContent]: !i || ei || es }),
+                            className: s()(j.productPreviewContainer, { [j.hasBottomContent]: !i || ei || ea }),
                             children: (0, r.jsx)(v.Z, {
                                 skuId: t.skuId,
                                 isCardHovered: ee,
@@ -102,74 +103,80 @@ let k = l.memo(function (e) {
                                     }),
                             ],
                         }),
-                        (0, r.jsxs)("div", {
-                            className: j.footerContainer,
-                            children: [
-                                (0, r.jsx)("div", { className: j.footerGradient }),
-                                (0, r.jsxs)("div", {
-                                    className: j.footerContent,
-                                    children: [
-                                        !i &&
-                                            (0, r.jsx)(h.Z, {
-                                                skuId: t.skuId,
-                                                className: s()({ [j.shadowOnHover]: es }, W),
-                                            }),
-                                        ei &&
-                                            (0, r.jsxs)("div", {
-                                                className: s()(j.footerInfoContainer, {
-                                                    [j.removePaddingOnHover]: !er,
-                                                }),
-                                                children: [
-                                                    !I &&
-                                                        (0, r.jsx)("div", {
-                                                            className: j.priceContainer,
-                                                            "aria-hidden": !0,
-                                                            children: (0, r.jsx)(C.Z, {
-                                                                skuId: t.skuId,
-                                                                prioritizedCurrency: z,
-                                                            }),
-                                                        }),
-                                                    er &&
-                                                        (0, r.jsx)(E.Z, {
-                                                            skuId: t.skuId,
-                                                            isCollapsed: !ee,
-                                                            onVariantEnter: Y,
-                                                            onVariantExit: q,
-                                                        }),
-                                                ],
-                                            }),
-                                        el &&
-                                            (0, r.jsx)("div", {
-                                                className: j.footerButtonContainer,
-                                                children: (0, r.jsxs)(c.ButtonGroup, {
-                                                    wrap: !1,
-                                                    fullWidth: !0,
+                        es &&
+                            (0, r.jsxs)("div", {
+                                className: j.footerContainer,
+                                children: [
+                                    (0, r.jsx)("div", { className: j.footerGradient }),
+                                    (0, r.jsxs)("div", {
+                                        className: j.footerContent,
+                                        children: [
+                                            ei &&
+                                                (0, r.jsxs)("div", {
+                                                    className: j.footerInfoContainer,
                                                     children: [
-                                                        !T &&
-                                                            (0, r.jsx)(m.Z, {
-                                                                skuId: t.skuId,
-                                                                cardRef: $,
-                                                                onClick: N,
-                                                                text: M,
-                                                                prioritizedCurrency: z,
-                                                                onClickAnalytics: G,
+                                                        !(i && I) &&
+                                                            (0, r.jsxs)("div", {
+                                                                className: j.footerInfoLeft,
+                                                                children: [
+                                                                    !i &&
+                                                                        (0, r.jsx)(h.Z, {
+                                                                            skuId: t.skuId,
+                                                                            className: W,
+                                                                        }),
+                                                                    !I &&
+                                                                        (0, r.jsx)("div", {
+                                                                            className: j.priceContainer,
+                                                                            "aria-hidden": !0,
+                                                                            children: (0, r.jsx)(C.Z, {
+                                                                                skuId: t.skuId,
+                                                                                prioritizedCurrency: z,
+                                                                            }),
+                                                                        }),
+                                                                ],
                                                             }),
-                                                        !L &&
-                                                            (0, r.jsx)(_.Z, {
+                                                        er &&
+                                                            (0, r.jsx)(E.Z, {
                                                                 skuId: t.skuId,
-                                                                cardRef: $,
-                                                                onClick: R,
-                                                                icon: F,
-                                                                prioritizedCurrency: z,
-                                                                onClickAnalytics: G,
+                                                                isCollapsed: !ee,
+                                                                onVariantEnter: Y,
+                                                                onVariantExit: q,
                                                             }),
                                                     ],
                                                 }),
-                                            }),
-                                    ],
-                                }),
-                            ],
-                        }),
+                                            el &&
+                                                (0, r.jsx)("div", {
+                                                    className: j.footerButtonContainer,
+                                                    children: (0, r.jsxs)(c.ButtonGroup, {
+                                                        wrap: !1,
+                                                        className: j.footerButtonGroup,
+                                                        fullWidth: !0,
+                                                        children: [
+                                                            !T &&
+                                                                (0, r.jsx)(m.Z, {
+                                                                    skuId: t.skuId,
+                                                                    cardRef: $,
+                                                                    onClick: N,
+                                                                    text: M,
+                                                                    prioritizedCurrency: z,
+                                                                    onClickAnalytics: G,
+                                                                }),
+                                                            !L &&
+                                                                (0, r.jsx)(_.Z, {
+                                                                    skuId: t.skuId,
+                                                                    cardRef: $,
+                                                                    onClick: R,
+                                                                    icon: F,
+                                                                    prioritizedCurrency: z,
+                                                                    onClickAnalytics: G,
+                                                                }),
+                                                        ],
+                                                    }),
+                                                }),
+                                        ],
+                                    }),
+                                ],
+                            }),
                     ],
                 }),
             }),
