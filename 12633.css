@@ -36324,7 +36324,7 @@ div.mobilePushContainer__3d3b0 {
     color: GrayText
 }
 
-.theme-dark.custom-theme-background.client-theme-color-picker .placeholder__1b31f {
+.theme-dark.custom-theme-background.custom-client-theme .placeholder__1b31f {
     color: color-mix(in oklab, var(--text-default) 40%, transparent)
 }
 
@@ -78644,7 +78644,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     contain: layout size
 }
 
-.client-theme-color-picker .mainPageScroller_ca1a02 {
+.custom-client-theme .mainPageScroller_ca1a02 {
     background: var(--background-base-low)
 }
 
@@ -101262,7 +101262,7 @@ code {
     --custom-background-gradient-opacity-app-frame: var(--custom-background-gradient-higher-opacity)
 }
 
-.theme-dark.custom-theme-background.client-theme-color-picker {
+.theme-dark.custom-theme-background.custom-client-theme {
     --custom-background-gradient-lowest-opacity: calc(0.54 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.9);
     --custom-background-gradient-lower-opacity: calc(0.51 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.85);
     --custom-background-gradient-low-opacity: calc(0.48 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.8);
@@ -101291,7 +101291,7 @@ code {
     --custom-background-gradient-opacity-app-frame: var(--custom-background-gradient-higher-opacity)
 }
 
-.theme-light.custom-theme-background.client-theme-color-picker {
+.theme-light.custom-theme-background.custom-client-theme {
     --custom-background-gradient-lowest-opacity: calc(0.51 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.85);
     --custom-background-gradient-lower-opacity: calc(0.48 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.8);
     --custom-background-gradient-low-opacity: calc(0.45 + var(--custom-background-gradient-opacity-mix-amount, 1)*0.4*0.75);
@@ -101340,7 +101340,7 @@ code {
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
-    .custom-theme-background:not(.client-theme-color-picker) {
+    .custom-theme-background:not(.custom-client-theme) {
         --custom-app-border-frame-base: color-mix(in oklab, var(--custom-theme-primary-color) 50%, var(--custom-theme-secondary-color) 50%);
         --app-border-frame: color-mix(in oklab, var(--custom-app-border-frame-base) 24%, var(--border-subtle) 100%)
     }
