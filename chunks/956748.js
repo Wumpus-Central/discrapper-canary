@@ -1,24 +1,27 @@
-n.d(t, { G: () => s });
+n.d(t, { G: () => c });
 var a = n(951288),
-    i = n(481060),
-    l = n(981631),
-    r = n(492938);
-let s = (e) => {
-    let { showStatus: t, width: n, opacity: s } = e;
+    i = n(120356),
+    r = n.n(i),
+    l = n(481060),
+    s = n(981631),
+    o = n(492938);
+let c = (e) => {
+    let { showStatus: t, width: n, opacity: i, size: c = "default" } = e,
+        d = "small" === c ? l.EFr.SIZE_24 : l.EFr.SIZE_32;
     return (0, a.jsxs)("div", {
-        className: r.nameplatePlaceholderUserRow,
-        style: { opacity: s },
+        className: r()(o.nameplatePlaceholderUserRow, { [o.smallRow]: "small" === c }),
+        style: { opacity: i },
         children: [
-            (0, a.jsx)(i.qEK, {
+            (0, a.jsx)(l.qEK, {
                 src: null,
-                size: i.EFr.SIZE_32,
-                status: t ? l.Skl.ONLINE : void 0,
+                size: d,
+                status: t ? s.Skl.ONLINE : void 0,
                 statusColor: "var(--border-subtle)",
                 "aria-hidden": !0,
-                imageClassName: r.nameplatePlaceholderAvatar,
+                imageClassName: o.nameplatePlaceholderAvatar,
             }),
             (0, a.jsx)("div", {
-                className: r.nameplatePlaceholderBar,
+                className: r()(o.nameplatePlaceholderBar, { [o.smallBar]: "small" === c }),
                 style: { maxWidth: null != n ? n : "100px" },
             }),
         ],

@@ -8,6 +8,7 @@ var r = (function (e) {
         (e[(e.SHELF = 4)] = "SHELF"),
         (e[(e.COUNTDOWN_TIMER = 5)] = "COUNTDOWN_TIMER"),
         (e[(e.IMMERSIVE_BANNER = 6)] = "IMMERSIVE_BANNER"),
+        (e[(e.REWARD_HERO = 7)] = "REWARD_HERO"),
         e
     );
 })({});

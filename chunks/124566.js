@@ -24,6 +24,7 @@ let g = {
         skuId: i.d.SEASONAL_GIFTING_2025_STARFALL_TIDES_SKU_ID,
         assetId: "nameplates/nameplates_v2/starfall_tides/",
         type: r.Z.NAMEPLATE,
+        palette: "sky",
         name: () => c.intl.string(c.t.OzB7sI),
         a11yLabel: () => c.intl.string(c.t.WX49A3),
     },

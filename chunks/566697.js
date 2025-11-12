@@ -27,6 +27,7 @@ var r = n(951288),
 let N = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
+        small: c.EFr.SIZE_24,
         default: c.EFr.SIZE_32,
     },
     R = i.memo(function (e) {
@@ -94,6 +95,7 @@ let N = {
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(P, T.nameplatePreview, {
                     [T.nameplatePurchased]: B && !D,
+                    [T.small]: "small" === G,
                     [T.large]: "large" === G,
                     [T.xlarge]: "xlarge" === G,
                     [T.inheritWidth]: null != F,
