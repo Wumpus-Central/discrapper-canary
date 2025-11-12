@@ -168,6 +168,13 @@ class O extends a.Z {
             (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.FRACTIONAL_NITRO
         );
     }
+    isPremiumWithPremiumGroup() {
+        var e;
+        return (
+            (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
+            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.SUBSCRIPTION_GROUP
+        );
+    }
     hasUrgentMessages() {
         return this.hasFlag(h.xW$.HAS_UNREAD_URGENT_MESSAGES);
     }
@@ -201,6 +208,12 @@ class O extends a.Z {
     get nameplate() {
         var e;
         return (0, c.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
+    }
+    get premiumGroupRole() {
+        var e, t;
+        return null != (t = null == (e = this.premiumState) ? void 0 : e.premiumSubscriptionGroupRole)
+            ? t
+            : i.bF.UNSPECIFIED;
     }
     constructor(e) {
         var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, S, T, A, C, N, R, P, w, D, x, L, M, j, k, U, G, B;
