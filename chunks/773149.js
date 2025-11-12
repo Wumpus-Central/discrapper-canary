@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(953529);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(793030),
     s = n(442837),
     c = n(481060),
@@ -21,7 +21,7 @@ var r = n(951288),
     C = n(611087);
 function w(e) {
     let { guildId: t } = e,
-        { state: n, lowestGameServerCost: o } = (0, s.cj)([f.Z], () => ({
+        { state: n, lowestGameServerCost: l } = (0, s.cj)([f.Z], () => ({
             state: f.Z.getStateForGuild(t),
             lowestGameServerCost: f.Z.getLowestGameCostForGuild(t),
         })),
@@ -57,18 +57,18 @@ function w(e) {
                       className: j.imageContainer,
                       children: [
                           (0, r.jsx)("img", {
-                              className: l()(h.background, b.image, j.image),
+                              className: o()(h.background, b.image, j.image),
                               src: C.Z,
                               alt: "",
                           }),
-                          (0, r.jsx)("div", { className: l()(b.image, j.gradient) }),
+                          (0, r.jsx)("div", { className: o()(b.image, j.gradient) }),
                       ],
                   }),
                   (0, r.jsx)(d.Q9, {
                       title: _.intl.string(x.default["B3OfL/"]),
                       textColor: E,
                       footer: (0, r.jsx)(d.uf, {
-                          cost: null != o ? o : 0,
+                          cost: null != l ? l : 0,
                           costDecorator: "+",
                           status: I,
                       }),
@@ -83,7 +83,10 @@ function w(e) {
                       children: (0, r.jsx)(c.Button, {
                           variant: "primary",
                           fullWidth: !0,
-                          text: _.intl.string(x.default.PuvU5b),
+                          text:
+                              Object.values(n.entitlements).length > 0
+                                  ? _.intl.string(x.default.PuvU5b)
+                                  : _.intl.string(x.default.b62EHM),
                           onClick: (e) => {
                               e.stopPropagation(),
                                   (0, g.Z)({
