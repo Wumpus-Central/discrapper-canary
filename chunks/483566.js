@@ -126,10 +126,10 @@ function g(e) {
             badge: O,
             icon: v = null,
             interactiveLabel: I = !1,
-            ref: T,
+            ref: S,
         } = e,
-        S = h(e),
-        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: w } = S,
+        T = h(e),
+        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: w } = T,
         D = "group" === b || "radiogroup" === b,
         x = D ? "span" : "label",
         L = D ? "fieldset" : "div",
@@ -178,10 +178,10 @@ function g(e) {
               })
             : null;
     return (0, r.jsx)(d.z.Provider, {
-        value: S,
+        value: T,
         children: (0, r.jsxs)(L, {
             role: b,
-            ref: T,
+            ref: S,
             className: f.container,
             "data-layout": y,
             "data-disabled": a,
@@ -189,11 +189,12 @@ function g(e) {
             disabled: D ? a : void 0,
             children: [
                 M,
-                j || k
+                j && n ? (0, r.jsx)(s.n, { children: U }) : null,
+                (j && !n) || k
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? (0, r.jsx)(s.n, { children: U }) : U,
+                              n ? null : U,
                               k &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
@@ -208,7 +209,7 @@ function g(e) {
                 (0, r.jsxs)("div", {
                     className: f.control,
                     children: [
-                        "function" == typeof _ ? _(S) : _,
+                        "function" == typeof _ ? _(T) : _,
                         (0, r.jsx)(E, {
                             successMessage: m,
                             errorMessage: p,
