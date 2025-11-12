@@ -1,24 +1,27 @@
 n.d(t, {
-    E_: () => C,
-    Ti: () => y,
-    Yw: () => S,
+    E_: () => P,
+    Ti: () => w,
+    Yw: () => O,
 }),
     n(415506),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(268146),
-    o = n(442837),
-    s = n(579806),
-    a = n(751571),
-    c = n(695346),
-    d = n(361291),
-    u = n(131951),
-    f = n(580991),
-    p = n(451467),
-    h = n(37113),
-    m = n(761274);
-function _(e) {
+    l = n(392711),
+    o = n.n(l),
+    s = n(856901),
+    a = n(268146),
+    c = n(442837),
+    d = n(579806),
+    u = n(751571),
+    f = n(695346),
+    p = n(361291),
+    h = n(131951),
+    m = n(580991),
+    _ = n(451467),
+    g = n(37113),
+    x = n(761274);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +46,7 @@ function _(e) {
     }
     return e;
 }
-function g(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +64,7 @@ function g(e, t) {
         e
     );
 }
-let x = {
+let b = {
         screenSources: [],
         windowSources: [],
         deviceSources: [],
@@ -69,10 +72,10 @@ let x = {
         muteStreamAudio: !1,
         notifyFriends: !1,
         hidePreview: !1,
-        preset: h.ApplicationStreamPresets.PRESET_CUSTOM,
-        resolution: h.ApplicationStreamResolutions.RESOLUTION_720,
-        fps: h.ApplicationStreamFPS.FPS_30,
-        sourceType: l.vA.WINDOW,
+        preset: g.ApplicationStreamPresets.PRESET_CUSTOM,
+        resolution: g.ApplicationStreamResolutions.RESOLUTION_720,
+        fps: g.ApplicationStreamFPS.FPS_30,
+        sourceType: a.vA.WINDOW,
         fetchingSources: !0,
         selectedSource: void 0,
         audioSourceId: void 0,
@@ -80,91 +83,100 @@ let x = {
         nativeSourceType: "",
         discordSourceId: "",
     },
-    v = i.createContext(x),
-    j = i.createContext(() => {
+    S = i.createContext(b),
+    y = i.createContext(() => {
         throw Error("Using uninitialized GoLiveModalContextDispatch");
     });
-function b(e, t) {
+function C(e, t) {
+    var n, r, i;
     switch (t.type) {
         case "set_mute_audio":
-            return g(_({}, e), { muteStreamAudio: t.value });
+            return j(v({}, e), { muteStreamAudio: t.value });
         case "set_notify_friends":
-            return g(_({}, e), { notifyFriends: t.value });
+            return j(v({}, e), { notifyFriends: t.value });
         case "set_has_permission":
-            return g(_({}, e), { hasPermission: t.value });
+            return j(v({}, e), { hasPermission: t.value });
         case "set_source_candidates":
-            return g(_({}, e), {
+            return j(v({}, e), {
                 screenSources: t.screenSources,
                 windowSources: t.windowSources,
                 deviceSources: t.deviceSources,
                 fetchingSources: !1,
             });
         case "set_preset":
-            return g(_({}, e), { preset: t.preset });
+            return j(v({}, e), { preset: t.preset });
         case "set_source_type":
-            let n = {
+            let l = {
                 sourceType: t.sourceType,
                 selectedSource: void 0,
             };
             return (
-                t.sourceType === l.vA.CAMERA &&
-                    ((e.preset === h.ApplicationStreamPresets.PRESET_DOCUMENTS ||
-                        e.preset === h.ApplicationStreamPresets.PRESET_AUTO) &&
-                        (n.preset = h.ApplicationStreamPresets.PRESET_VIDEO),
-                    e.resolution === h.ApplicationStreamResolutions.RESOLUTION_SOURCE &&
-                        (n.resolution = h.ApplicationStreamResolutions.RESOLUTION_720)),
-                _({}, e, n)
+                t.sourceType === a.vA.CAMERA
+                    ? ((e.preset === g.ApplicationStreamPresets.PRESET_DOCUMENTS ||
+                          e.preset === g.ApplicationStreamPresets.PRESET_AUTO) &&
+                          (l.preset = g.ApplicationStreamPresets.PRESET_VIDEO),
+                      e.resolution === g.ApplicationStreamResolutions.RESOLUTION_SOURCE &&
+                          (l.resolution = g.ApplicationStreamResolutions.RESOLUTION_720))
+                    : (l.selectedSource = null),
+                v({}, e, l)
             );
         case "set_native_source_type":
-            return g(_({}, e), { nativeSourceType: t.sourceType });
+            return j(v({}, e), { nativeSourceType: t.sourceType });
         case "set_resolution":
-            return g(_({}, e), { resolution: t.resolution });
+            return j(v({}, e), { resolution: t.resolution });
         case "set_fps":
-            return g(_({}, e), { fps: t.fps });
+            return j(v({}, e), { fps: t.fps });
         case "set_hide_preview":
-            return g(_({}, e), { hidePreview: t.hidePreview });
-        case "set_selected_source":
-            return g(_({}, e), { selectedSource: t.source });
+            return j(v({}, e), { hidePreview: t.hidePreview });
+        case "set_selected_source": {
+            let i = t.source,
+                l = j(v({}, e), { selectedSource: i }),
+                c = null == i ? void 0 : i.name;
+            if (null != i && (null == (n = i.id) ? void 0 : n.startsWith(a.vA.CAMERA)) && null != c) {
+                let e = o().maxBy(Object.values(h.Z.getInputDevices()), (e) => (0, s.default)(c, e.name));
+                l.audioSourceId = null != (r = null == e ? void 0 : e.id) ? r : h.Z.getInputDeviceId();
+            }
+            return l;
+        }
         case "set_audio_source":
-            var r;
-            return g(_({}, e), { audioSourceId: null != (r = t.audioSourceId) ? r : u.Z.getInputDeviceId() });
+            return j(v({}, e), { audioSourceId: null != (i = t.audioSourceId) ? i : h.Z.getInputDeviceId() });
         case "set_selected_channel":
-            return g(_({}, e), { selectedChannel: t.channelId });
+            return j(v({}, e), { selectedChannel: t.channelId });
         case "set_discord_source_id":
-            return g(_({}, e), { discordSourceId: t.sourceId });
+            return j(v({}, e), { discordSourceId: t.sourceId });
         default:
             return e;
     }
 }
-function S(e) {
+function O(e) {
     let { dispatch: t, state: n, children: i } = e;
-    return (0, r.jsx)(j.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: t,
-        children: (0, r.jsx)(v.Provider, {
+        children: (0, r.jsx)(S.Provider, {
             value: n,
             children: i,
         }),
     });
 }
-function y(e, t, n) {
+function w(e, t, n) {
     var r, l;
-    let { defaultAutoQuality: v, allowAutoQuality: j } = (0, f._I)({ location: "useCreateGoLiveModalState" }),
-        { preset: S, resolution: y, fps: C, soundshareEnabled: O } = (0, o.cj)([d.Z], () => d.Z.getState());
-    v && (S = h.ApplicationStreamPresets.PRESET_AUTO);
-    let w = (0, o.e7)([u.Z], () => u.Z.getInputDeviceId()),
-        P = null != (r = c.I0.useSetting()) && r,
-        T = null != (l = c.eo.useSetting()) && l;
-    (S in h.ApplicationStreamPresets && (S !== h.ApplicationStreamPresets.PRESET_AUTO || j)) ||
-        (S = h.ApplicationStreamPresets.PRESET_VIDEO),
-        (0, p.Z)(h.ApplicationStreamPresets.PRESET_CUSTOM, y, C, t, n) ||
-            ((y = h.ApplicationStreamResolutions.RESOLUTION_720), (C = h.ApplicationStreamFPS.FPS_30));
+    let { defaultAutoQuality: o, allowAutoQuality: s } = (0, m._I)({ location: "useCreateGoLiveModalState" }),
+        { preset: a, resolution: S, fps: y, soundshareEnabled: O } = (0, c.cj)([p.Z], () => p.Z.getState());
+    o && (a = g.ApplicationStreamPresets.PRESET_AUTO);
+    let w = (0, c.e7)([h.Z], () => h.Z.getInputDeviceId()),
+        P = null != (r = f.I0.useSetting()) && r,
+        T = null != (l = f.eo.useSetting()) && l;
+    (a in g.ApplicationStreamPresets && (a !== g.ApplicationStreamPresets.PRESET_AUTO || s)) ||
+        (a = g.ApplicationStreamPresets.PRESET_VIDEO),
+        (0, _.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, S, y, t, n) ||
+            ((S = g.ApplicationStreamResolutions.RESOLUTION_720), (y = g.ApplicationStreamFPS.FPS_30));
     let [Z, I] = i.useReducer(
-        b,
-        g(_({}, x), {
+        C,
+        j(v({}, b), {
             muteStreamAudio: !O,
-            preset: S,
-            resolution: y,
-            fps: C,
+            preset: a,
+            resolution: S,
+            fps: y,
             hidePreview: P,
             notifyFriends: T,
             selectedSource: e,
@@ -174,13 +186,13 @@ function y(e, t, n) {
     return (
         i.useEffect(() => {
             var e, t;
-            a.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
+            u.Z.hasPermission(x.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
                 I({
                     type: "set_has_permission",
                     value: e,
                 }),
             ),
-                null == (e = (t = s.Z.window).getMediaSourceId) ||
+                null == (e = (t = d.Z.window).getMediaSourceId) ||
                     e.call(t).then((e) => {
                         I({
                             type: "set_discord_source_id",
@@ -194,6 +206,6 @@ function y(e, t, n) {
         }
     );
 }
-function C() {
-    return [i.useContext(v), i.useContext(j)];
+function P() {
+    return [i.useContext(S), i.useContext(y)];
 }

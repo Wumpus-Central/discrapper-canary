@@ -29,8 +29,8 @@ var r = n(951288),
     I = n(989941),
     E = n(562224),
     N = n(544753),
-    R = n(853030),
-    A = n(560749),
+    A = n(853030),
+    R = n(560749),
     M = n(485299),
     k = n(615161),
     D = n(289989),
@@ -65,8 +65,9 @@ function X(e) {
         el = !(0, w.isLinux)(),
         eo = "confirm" === er,
         es = !K && null != s && !eo,
-        ea = q && et.sourceType !== u.vA.CAMERA,
-        ec = i.useMemo(() => {
+        ea = eo || et.sourceType === u.vA.CAMERA,
+        ec = q && et.sourceType !== u.vA.CAMERA,
+        ed = i.useMemo(() => {
             let e = [
                 {
                     name: V.intl.string(V.t.tHoi7u),
@@ -89,8 +90,8 @@ function X(e) {
                 e
             );
         }, [q]),
-        { sourceType: ed } = et,
-        eu = i.useCallback(
+        { sourceType: eu } = et,
+        ef = i.useCallback(
             async (e) => {
                 b.eo.updateSetting(et.notifyFriends), b.I0.updateSetting(et.hidePreview);
                 let [t, r] = await (0, E.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
@@ -113,17 +114,17 @@ function X(e) {
             },
             [n, et, Q],
         );
-    async function ef(e) {
-        (await (0, g.Z)({ channelId: e })) && null != s && eu(s);
+    async function ep(e) {
+        (await (0, g.Z)({ channelId: e })) && null != s && ef(s);
     }
-    let ep = i.useCallback(() => {
+    let eh = i.useCallback(() => {
         var e;
-        eu({
+        ef({
             id: "prepicked:" + et.nativeSourceType,
             name: null != (e = Z.ZP.getLastPickedContentTitle()) ? e : V.intl.string(V.t.KKcy95),
             url: "",
         });
-    }, [eu, et.nativeSourceType]);
+    }, [ef, et.nativeSourceType]);
     return (0, r.jsx)(k.Yw, {
         state: et,
         dispatch: en,
@@ -146,9 +147,9 @@ function X(e) {
             parentComponent: "GoLiveModalV2",
             children: [
                 es
-                    ? (0, r.jsx)(A.Z, {
+                    ? (0, r.jsx)(R.Z, {
                           className: o()(J.channelSelectorComponent, J.withFooter),
-                          onSelectChannel: ef,
+                          onSelectChannel: ep,
                       })
                     : eo
                       ? (0, r.jsx)(M.Z, {})
@@ -159,7 +160,7 @@ function X(e) {
                                     className: J.header,
                                     children: (0, r.jsx)(p.sY7, {
                                         className: J.segmentedControl,
-                                        value: ed,
+                                        value: eu,
                                         look: "pill",
                                         optionClassName: J.segmentedControlOption,
                                         onChange: (e) => {
@@ -169,17 +170,23 @@ function X(e) {
                                                 sourceType: t,
                                             });
                                         },
-                                        options: ec,
+                                        options: ed,
                                     }),
                                 }),
                                 (0, r.jsx)(p.hzk, {
                                     className: J.content,
                                     children:
-                                        q && ed !== u.vA.CAMERA
-                                            ? (0, r.jsx)(D.Z, { onSourceSelect: ep })
+                                        q && eu !== u.vA.CAMERA
+                                            ? (0, r.jsx)(D.Z, { onSourceSelect: eh })
                                             : (0, r.jsx)(B.Z, {
                                                   onClick: function (e) {
-                                                      return eu(e);
+                                                      var t;
+                                                      (null == (t = e.id) ? void 0 : t.startsWith(u.vA.CAMERA))
+                                                          ? en({
+                                                                type: "set_selected_source",
+                                                                source: e,
+                                                            })
+                                                          : ef(e);
                                                   },
                                               }),
                                 }),
@@ -198,9 +205,9 @@ function X(e) {
                                     className: J.rightButtonGroup,
                                     children: [
                                         ei && (0, r.jsx)(G.Z, { onClose: n }),
-                                        ea &&
-                                            !eo &&
-                                            (0, r.jsx)(R.Z, {
+                                        ec &&
+                                            !ea &&
+                                            (0, r.jsx)(A.Z, {
                                                 mainCTADisabled: !el && "" === et.nativeSourceType,
                                                 mainCTAOnClick: () => {
                                                     (0, T.t)(), (0, T.T)(et.nativeSourceType);
@@ -209,20 +216,20 @@ function X(e) {
                                                 ctaText: V.intl.string(V.t.FiBjwU),
                                                 hideOptionsButton: !ei,
                                             }),
-                                        eo &&
-                                            !ea &&
-                                            (0, r.jsx)(R.Z, {
+                                        ea &&
+                                            !ec &&
+                                            (0, r.jsx)(A.Z, {
                                                 mainCTADisabled: null == et.selectedSource,
                                                 mainCTAOnClick: () => {
                                                     null != et.selectedChannel
-                                                        ? ef(et.selectedChannel)
-                                                        : null != et.selectedSource && eu(et.selectedSource);
+                                                        ? ep(et.selectedChannel)
+                                                        : null != et.selectedSource && ef(et.selectedSource);
                                                 },
                                                 align: "right",
                                                 hideOptionsButton: !ei,
                                                 ctaText: V.intl.string(z.default["5AyH/p"]),
                                             }),
-                                        (!ei || !(eo || ea)) && (0, r.jsx)(L.Z, { align: "right" }),
+                                        (!ei || !(ea || ec)) && (0, r.jsx)(L.Z, { align: "right" }),
                                     ],
                                 }),
                             ],

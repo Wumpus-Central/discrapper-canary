@@ -20,4 +20,4 @@ var n;
         }
         return (2 * s) / (e.length + t.length - (n - 1) * 2);
     }),
-    t.stringSimilarity;
+    (t.default = t.stringSimilarity);
