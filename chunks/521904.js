@@ -3075,6 +3075,880 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
             },
+            CHECKPOINT_EMOJIS_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_EMOJIS_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_EMOJIS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_EMOJIS_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_EMOJIS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_EMOJIS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_EMOJIS_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_EMOJIS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_EMOJIS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_EMOJIS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_END_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_END_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_END_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_END_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_END_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_END_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_END_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_END_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_END_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_END_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_END_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_END_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_END_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_END_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_END_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_END_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_END_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_END_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_END_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_END_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_FRIENDS_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_FRIENDS_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_FRIENDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_FRIENDS_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_FRIENDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_FRIENDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_FRIENDS_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_FRIENDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_FRIENDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_FRIENDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GAMING_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GAMING_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GAMING_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GAMING_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GAMING_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GAMING_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GAMING_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GAMING_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GAMING_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GAMING_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GAMING_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GAMING_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GAMING_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GUILDS_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GUILDS_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GUILDS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GUILDS_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GUILDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GUILDS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_GUILDS_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_GUILDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_GUILDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_GUILDS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_MESSAGES_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_MESSAGES_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_MESSAGES_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_MESSAGES_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_MESSAGES_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_MESSAGES_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_MESSAGES_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_MESSAGES_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_MESSAGES_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_MESSAGES_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_EIGHT_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_EIGHT_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_EIGHT_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_EIGHT_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_EIGHT_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_FIVE_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_FIVE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_FIVE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_FIVE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_FIVE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_FOUR_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_FOUR_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_FOUR_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_FOUR_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_FOUR_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_NINE_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_NINE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_NINE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_NINE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_NINE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_ONE_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_ONE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_ONE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_ONE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_ONE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_SEVEN_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_SEVEN_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_SEVEN_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_SEVEN_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_SEVEN_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_SIX_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_SIX_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_SIX_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_SIX_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_SIX_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_THREE_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_THREE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_THREE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_THREE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_THREE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_TWO_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_TWO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_TWO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_TWO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_TWO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_PERSONA_ZERO_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_PERSONA_ZERO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_ZERO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_PERSONA_ZERO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_PERSONA_ZERO_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_QUESTS_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_QUESTS_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_QUESTS_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_QUESTS_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_QUESTS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_QUESTS_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_QUESTS_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_QUESTS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_QUESTS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_QUESTS_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_VOICE_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_VOICE_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_VOICE_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_VOICE_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_VOICE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_VOICE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_VOICE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_VOICE_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_VOICE_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_VOICE_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_VOICE_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_VOICE_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_VOICE_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_WELCOME_GRADIENT_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_END_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_WELCOME_GRADIENT_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_WELCOME_GRADIENT_START_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_WELCOME_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_WELCOME_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_PRIMARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_WELCOME_PRIMARY_RAW",
+                    opacity: 1,
+                },
+            },
+            CHECKPOINT_WELCOME_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "CHECKPOINT_WELCOME_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "CHECKPOINT_WELCOME_SECONDARY_RAW",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "CHECKPOINT_WELCOME_SECONDARY_RAW",
+                    opacity: 1,
+                },
+            },
             CONTENT_INVENTORY_MEDIA_SEEKBAR_CONTAINER: {
                 category: "generic",
                 [r.DARK]: {
