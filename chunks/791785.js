@@ -249,10 +249,7 @@ function $(e) {
                     payment_source_type: null == e1 ? void 0 : e1.type,
                 }),
             );
-            let { enabled: n } = b.w.getCurrentConfig(
-                { location: "PaymentModal emitPaymentFlowSuccess" },
-                { autoTrackExposure: !1 },
-            );
+            let { enabled: n } = b.w.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
             eY && null != eW && null != a && n && (0, O.n)(a) && (0, y.Ni)(eW.id);
         }, [e$, ez, eK, eW, eY, eq, eD.startTime, e1, a]),
         e4 = i.useMemo(() => () => (null == Z ? void 0 : Z(eO === M.A.COMPLETED, eI)), [Z, eO, eI]),

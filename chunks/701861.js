@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(239091),
     p = n(443589),
     f = n(703656),
-    m = n(592125),
-    h = n(131951),
-    g = n(699516),
+    h = n(592125),
+    g = n(131951),
+    m = n(699516),
     _ = n(51144),
     b = n(298213),
     E = n(321488),
     O = n(417183),
-    I = n(825682),
-    y = n(170245),
-    v = n(981631),
+    y = n(825682),
+    v = n(170245),
+    I = n(981631),
     C = n(65154),
     S = n(388032),
     T = n(934422);
@@ -51,14 +51,14 @@ function j(e) {
                 joinCallVideo: !0,
             });
         }, [t.id]),
-        m = i.useCallback(() => {
+        h = i.useCallback(() => {
             b.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
                 location: "Friends",
             });
         }, [n, l, t.id]),
-        g = i.useCallback(() => {
+        m = i.useCallback(() => {
             let e = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
             c.Z.show({
                 title: S.intl.formatToPlainString(S.t.fPLvZd, { name: _.ZP.getName(t) }),
@@ -66,12 +66,12 @@ function j(e) {
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: S.intl.string(S.t["ETE/oC"]),
-                onConfirm: m,
+                onConfirm: h,
             });
-        }, [m, l, t]),
-        E = (0, s.e7)([h.Z], () => h.Z.supports(C.AN.VIDEO)),
+        }, [h, l, t]),
+        E = (0, s.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
         O = t.isProvisional,
-        I = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
+        y = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
     return (0, r.jsxs)(o.v2r, {
         navId: "friend-row",
         "aria-label": S.intl.string(S.t.liqwPJ),
@@ -93,8 +93,8 @@ function j(e) {
                 }),
             (0, r.jsx)(o.sNh, {
                 id: "remove-friend",
-                label: I,
-                action: g,
+                label: y,
+                action: m,
                 color: "danger",
             }),
         ],
@@ -130,17 +130,17 @@ class P extends i.PureComponent {
                 (0, r.jsxs)("div", {
                     className: T.listItemContents,
                     children: [
-                        (0, r.jsx)(y.Z, {
+                        (0, r.jsx)(v.Z, {
                             user: e,
                             status: l,
                             isMobile: a,
-                            subText: (0, r.jsx)(I.Z, {
+                            subText: (0, r.jsx)(y.Z, {
                                 hovered: t,
                                 activities: n,
                                 applicationStream: i,
                                 status: l,
                                 user: e,
-                                userIgnored: g.Z.isIgnored(e.id),
+                                userIgnored: m.Z.isIgnored(e.id),
                             }),
                             hovered: t,
                             showAccountIdentifier: !s && !e.isProvisional,
@@ -152,8 +152,7 @@ class P extends i.PureComponent {
                                     (0, r.jsx)(p.Z, {
                                         recipientUser: e,
                                         giftIntentType: c,
-                                        analyticsPage: v.ZY5.FRIENDS_LIST,
-                                        shouldHighlight: t,
+                                        analyticsPage: I.ZY5.FRIENDS_LIST,
                                     }),
                                 (0, r.jsx)(E.Z, {
                                     icon: o.kBi,
@@ -181,10 +180,10 @@ class P extends i.PureComponent {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(
-                    m.Z.getMutablePrivateChannels(),
-                    (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id,
+                    h.Z.getMutablePrivateChannels(),
+                    (e) => e.type === I.d4z.DM && e.getRecipientId() === t.id,
                 );
-                null != n ? (0, f.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
+                null != n ? (0, f.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
             N(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;

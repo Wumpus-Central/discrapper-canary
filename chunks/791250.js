@@ -172,7 +172,7 @@ let eb = (e) => {
             a = (0, G.If)(),
             s = (0, p.e7)([V.Z], () => V.Z.canShowFriendsTabBadge()),
             o = (0, p.e7)([v.Z], () => v.Z.useReducedMotion),
-            { enabled: d } = B.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
+            { enabled: d } = B.w.getConfig({ location: "Friends Tab" }),
             f = s && d;
         i.useEffect(() => {
             f &&

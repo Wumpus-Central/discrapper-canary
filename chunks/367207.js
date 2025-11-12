@@ -141,7 +141,7 @@ class O extends o.Z {
                 null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
             }),
             b(this, "_maybeFetchUserAffinities", () => {
-                let { enabled: e } = m.w.getCurrentConfig({ location: "PremiumManager" }, { autoTrackExposure: !1 });
+                let { enabled: e } = m.w.getConfig({ location: "PremiumManager" });
                 e && (0, c._)();
             }),
             b(this, "_handlePremiumPaymentModalOpen", (e) => {
