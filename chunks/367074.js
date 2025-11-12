@@ -18,33 +18,33 @@ var r = n(913527),
     h = n(617799),
     m = n(84053),
     g = n(61196),
-    E = n(104494),
+    E = n(622909),
     b = n(639119),
     y = n(921022),
     O = n(748770),
     v = n(725727),
     I = n(1844),
-    T = n(474936),
-    S = n(981631);
+    S = n(474936),
+    T = n(981631);
 let A = 10;
 function C(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r, previousPremiumSubscription: o } = e;
     if (!t) return !1;
-    if (null != r && r.status === S.O0b.ENDED) {
+    if (null != r && r.status === T.O0b.ENDED) {
         let e = r.endedAt,
-            t = r.hasPremiumAtLeast(T.PremiumTypes.TIER_2);
+            t = r.hasPremiumAtLeast(S.PremiumTypes.TIER_2);
         if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
     }
-    if (null != o && o.status === S.O0b.ENDED) {
+    if (null != o && o.status === T.O0b.ENDED) {
         let e = o.endedAt,
-            t = o.hasPremiumAtLeast(T.PremiumTypes.TIER_2);
+            t = o.hasPremiumAtLeast(S.PremiumTypes.TIER_2);
         if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
     }
     if (null != n) {
-        let e = n.hasPremiumAtLeast(T.PremiumTypes.TIER_2),
+        let e = n.hasPremiumAtLeast(S.PremiumTypes.TIER_2),
             t = c.default.getCurrentUser(),
-            r = !!(null == n ? void 0 : n.hasActiveTrial) && p.ZP.isPremiumExactly(t, T.PremiumTypes.TIER_0),
-            i = (0, _.isAndroid)() && n.paymentGateway !== S.gg$.GOOGLE;
+            r = !!(null == n ? void 0 : n.hasActiveTrial) && p.ZP.isPremiumExactly(t, S.PremiumTypes.TIER_0),
+            i = (0, _.isAndroid)() && n.paymentGateway !== T.gg$.GOOGLE;
         if (e || r || i) return !1;
     }
     return !(a.tq && f.Z.isFractionalPremiumActive());
@@ -66,11 +66,11 @@ function N() {
             previousPremiumSubscription: u.Z.getPreviousPremiumTypeSubscription(),
         })),
         p = (0, b.N)(),
-        O = (0, E.Ng)(),
+        O = (0, E.N)(),
         I = new Date(null != (e = null == r ? void 0 : r.endDate) ? e : 0).valueOf(),
-        T = Date.now(),
-        S = T > I;
-    (0, y.Z)({ delay: S ? -1 : I - T });
+        S = Date.now(),
+        T = S > I;
+    (0, y.Z)({ delay: T ? -1 : I - S });
     let A = !a.tq || ((0, _.isAndroid)() && s),
         N = C({
             experimentEnabled: i,
@@ -86,7 +86,7 @@ function N() {
                 disable: !R,
             },
         );
-    return !S && (t ? P : R);
+    return !T && (t ? P : R);
 }
 async function R() {
     var e;
@@ -108,7 +108,7 @@ async function R() {
     )
         return !1;
     !u.Z.hasFetchedMostRecentPremiumTypeSubscription() &&
-        (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(T.in.PREMIUM_TIER_2)) &&
+        (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(S.in.PREMIUM_TIER_2)) &&
         (await (0, s.ou)()),
         u.Z.hasFetchedSubscriptions() || (await (0, s.jg)());
     let E = u.Z.getMostRecentPremiumTypeSubscription();

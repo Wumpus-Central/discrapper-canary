@@ -2,7 +2,7 @@ n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(937579),
-    o = n(104494),
+    o = n(622909),
     s = n(639119),
     l = n(93237),
     c = n(702328),
@@ -11,7 +11,7 @@ var r = n(951288),
 let f = (e) => {
     let { entrypoint: t } = e,
         n = (0, s.N)(),
-        f = (0, o.Ng)(),
+        f = (0, o.N)(),
         _ = (0, l.HI)({ trialOffer: n }),
         p = (0, l.eW)();
     return (i.useEffect(() => {

@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(330726),
     c = n(711459),
     u = n(717401),
-    d = n(104494),
+    d = n(622909),
     f = n(639119),
     _ = n(716534),
     p = n(664891),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(698708),
     v = n(844068),
     I = n(709113),
-    T = n(614223),
-    S = n(481595),
+    S = n(614223),
+    T = n(481595),
     A = n(435020),
     C = n(51499),
     N = n(678334),
@@ -79,7 +79,7 @@ function M(e) {
             enablePremiumBrandRefresh: ey,
             disablePurchasesForStorybook: eO,
         } = (0, g.JL)(),
-        { isGift: ev, giftMessage: eI, giftRecipient: eT, claimableRewards: eS } = (0, m.wD)(),
+        { isGift: ev, giftMessage: eI, giftRecipient: eS, claimableRewards: eT } = (0, m.wD)(),
         { paymentModalBanner: eA } = (0, b.zb)();
     o()(null != eu, "Step should be set");
     let eC = i.useRef(null),
@@ -87,7 +87,7 @@ function M(e) {
         eP = null != (n = null != j ? j : V) ? n : null,
         ew = null != eP && (!ef || P.nG[eP].skus.includes(ei)) ? eP : null,
         eD = (0, f.N)(V),
-        ex = (0, d.Ng)(),
+        ex = (0, d.N)(),
         eL = { user_trial_offer_id: null == eD ? void 0 : eD.id };
     i.useEffect(() => {
         null != ee && null != eC.current && eC.current.scrollIntoView({ behavior: "smooth" });
@@ -113,9 +113,9 @@ function M(e) {
         eZ = !ev && null != eD && null != ei && P.nG[eD.trial_id].skus.includes(ei),
         eF = null == ex || null == (t = ex.discount) ? void 0 : t.plan_ids,
         eV = !ev && null != ex && null != eF && null != er && eF.includes(er.id),
-        eH = ev && (0, h.pO)(eT),
+        eH = ev && (0, h.pO)(eS),
         eY = null == H && null == Y && ep === w.GZ.SUBSCRIPTION,
-        eW = (0, T.Kp)({
+        eW = (0, S.Kp)({
             isTrial: eZ,
             isGift: ev,
             selectedSkuId: ei,
@@ -123,7 +123,7 @@ function M(e) {
         }),
         eK = ev && ep === w.GZ.ONE_TIME,
         ez = eK || (eW ? eY && ef : ef),
-        eq = (0, u.id)(er, ev, eS),
+        eq = (0, u.id)(er, ev, eT),
         eX = i.useCallback(
             () =>
                 eW
@@ -142,7 +142,7 @@ function M(e) {
     return (
         ep === w.GZ.ONE_TIME
             ? ((eQ = (null == ea && null != Q) || null != et),
-              (a = (0, r.jsx)(S.Z, {
+              (a = (0, r.jsx)(T.Z, {
                   hasLegalTermsFlash: eN,
                   legalTermsNodeRef: eU,
                   onPaymentSourceChange: (e) => es(null != e ? e.id : null),

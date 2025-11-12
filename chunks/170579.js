@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(27693),
     f = n(74538),
     _ = n(937615),
-    p = n(104494),
+    p = n(622909),
     h = n(639119),
     m = n(474936),
     g = n(388032),
@@ -59,13 +59,13 @@ let y = (e) => {
                 onClose: O,
                 isGift: v,
                 upgradeToPremiumType: I,
-                className: T,
-                showTrialBadge: S = !1,
+                className: S,
+                showTrialBadge: T = !1,
                 showDiscountBadge: A = !1,
             } = e,
             C = I === m.PremiumTypes.TIER_2;
         n = I === m.PremiumTypes.TIER_0 ? c.Z : I === m.PremiumTypes.TIER_1 ? u.Z : l.Z;
-        let N = (0, p.Ng)(),
+        let N = (0, p.N)(),
             R = null == N || null == (t = N.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
             "aria-hidden": !0,
@@ -74,10 +74,10 @@ let y = (e) => {
                     [E.headerBackground]: !C,
                     [E.tier2HeaderBackground]: C,
                 },
-                T,
+                S,
             ),
             children: [
-                (S || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
+                (T || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
                 g(),
                 (0, r.jsxs)(s.Z, {
                     align: s.Z.Align.START,
@@ -87,7 +87,7 @@ let y = (e) => {
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !C }) }),
-                                (S || A) &&
+                                (T || A) &&
                                     (0, r.jsx)(y, {
                                         isTier0: I === m.PremiumTypes.TIER_0,
                                         discountAmount: A ? R : void 0,

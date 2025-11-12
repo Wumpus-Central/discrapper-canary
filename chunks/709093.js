@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(361932), n(187205);
+n.d(t, { Z: () => S }), n(361932), n(187205);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(409813),
     c = n(614223),
     u = n(493572),
-    d = n(104494),
+    d = n(622909),
     f = n(573702),
     _ = n(474936),
     p = n(388032),
@@ -69,7 +69,7 @@ function I(e) {
         ],
     });
 }
-let T = function (e) {
+let S = function (e) {
     var t, n, i;
     let {
             hideCloseButton: u = !1,
@@ -77,12 +77,12 @@ let T = function (e) {
             onClose: g,
             upgradeToPremiumType: E,
             isEligibleForTrial: b = !1,
-            showTrialBadge: T = !1,
-            showDiscountBadge: S = !1,
+            showTrialBadge: S = !1,
+            showDiscountBadge: T = !1,
         } = e,
         A = E === _.PremiumTypes.TIER_2,
         C = (0, c.Fv)(b),
-        N = (0, d.Ng)(),
+        N = (0, d.N)(),
         R = null == N || null == (t = N.discount) ? void 0 : t.amount,
         P = A ? O : y,
         {
@@ -158,7 +158,7 @@ let T = function (e) {
                           }),
                       ],
                   }),
-                  (T || S) && (0, r.jsx)(f.Z, { discountAmount: R }),
+                  (S || T) && (0, r.jsx)(f.Z, { discountAmount: R }),
                   U &&
                       (0, r.jsx)(v, {
                           isOneStepCheckout: C,

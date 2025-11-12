@@ -7,7 +7,7 @@ var i = n(481060),
     s = n(906732),
     l = n(963249),
     c = n(931118),
-    u = n(104494),
+    u = n(622909),
     d = n(959052),
     f = n(533246),
     _ = n(474936),
@@ -18,7 +18,7 @@ let g = function (e) {
     var t;
     let { dismissCurrentNotice: n, subscriptionTier: g } = e,
         { analyticsLocations: E } = (0, s.ZP)(o.Z.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        b = (0, u.Ng)(),
+        b = (0, u.N)(),
         y = (0, a.Z)(null != b && null != b.expires_at ? Date.parse(b.expires_at) : 0),
         { variant: O, showNagbar: v } = (0, c.ZP)("PremiumDiscountEndingNotice");
     if (

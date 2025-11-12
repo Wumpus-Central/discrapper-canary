@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(481060),
     c = n(100527),
     u = n(906732),
-    d = n(104494),
+    d = n(622909),
     f = n(639119),
     _ = n(165583),
     p = n(626135),
@@ -20,10 +20,10 @@ var r = n(951288),
     O = n(474936),
     v = n(388032),
     I = n(107293);
-let T = 80;
-function S(e) {
+let S = 80;
+function T(e) {
     var t, n, a;
-    let { className: S, onClose: A } = e;
+    let { className: T, onClose: A } = e;
     (0, h.fP)();
     let { analyticsLocations: C } = (0, u.ZP)(c.Z.EMPTY_STATE),
         N = (0, s.Wu)([m.Z], () => b.Wt.map((e) => m.Z.getStickerById(e)));
@@ -35,11 +35,11 @@ function S(e) {
         });
     }, [C]);
     let R = (0, f.N)(),
-        P = (0, d.Ng)(),
+        P = (0, d.N)(),
         w = null != R || null != P,
         D = (null == R || null == (t = R.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
     return (0, r.jsxs)("div", {
-        className: o()(I.emptyState, S, { [I.unifyTrialUpsell]: w }),
+        className: o()(I.emptyState, T, { [I.unifyTrialUpsell]: w }),
         children: [
             w
                 ? (0, r.jsx)(_.ZP, {
@@ -74,7 +74,7 @@ function S(e) {
                                       {
                                           sticker: e,
                                           className: I.sticker,
-                                          size: T,
+                                          size: S,
                                       },
                                       null == e ? void 0 : e.id,
                                   ),

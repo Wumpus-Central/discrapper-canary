@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(481060),
     l = n(100527),
     c = n(906732),
-    u = n(104494),
+    u = n(622909),
     d = n(639119),
     f = n(165583),
     _ = n(626135),
@@ -30,21 +30,21 @@ let v = () => (0, h.f)(!1),
                 location_stack: I,
             });
         }, [I]);
-        let T = (0, d.N)(),
-            S = (0, u.Ng)(),
-            A = (null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id) === E.Si.TIER_0,
-            C = null != T || null != S;
+        let S = (0, d.N)(),
+            T = (0, u.N)(),
+            A = (null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id) === E.Si.TIER_0,
+            C = null != S || null != T;
         return (0, r.jsxs)("div", {
             className: o()(y.upsellWrapper, { [y.unifyTrialUpsell]: C }),
             children: [
                 C
                     ? (0, r.jsx)(f.ZP, {
-                          trialOffer: T,
-                          discountOffer: S,
+                          trialOffer: S,
+                          discountOffer: T,
                           onClose: v,
                           type: E.cd.STICKER_PICKER_UPSELL,
                           subscriptionTier:
-                              null != (a = null == T || null == (n = T.subscription_trial) ? void 0 : n.sku_id)
+                              null != (a = null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id)
                                   ? a
                                   : E.Si.TIER_2,
                           children: A

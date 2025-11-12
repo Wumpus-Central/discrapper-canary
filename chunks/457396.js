@@ -15,16 +15,16 @@ var r = n(951288),
     d = n(515753),
     p = n(927359),
     f = n(975298),
-    m = n(866419),
-    h = n(211644),
-    g = n(266454),
+    h = n(866419),
+    g = n(211644),
+    m = n(266454),
     _ = n(243778),
     b = n(172416),
     E = n(594174),
     O = n(78839),
-    I = n(431),
-    y = n(626135),
-    v = n(74538),
+    y = n(431),
+    v = n(626135),
+    I = n(74538),
     C = n(502087),
     S = n(367074),
     T = n(695349),
@@ -32,7 +32,7 @@ var r = n(951288),
     j = n(963590),
     P = n(767870),
     x = n(331972),
-    A = n(104494),
+    A = n(622909),
     Z = n(639119),
     w = n(1844),
     L = n(655525),
@@ -57,10 +57,10 @@ let J = (e) => {
             n = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
             r = (0, s.e7)([O.Z], () => O.Z.getPremiumTypeSubscription()),
             i = (0, Z.N)(),
-            l = (0, A.Ng)(),
+            l = (0, A.N)(),
             a = (0, S.Vi)(),
             o = (0, F.V)(),
-            c = (0, v.Qo)(n, r),
+            c = (0, I.Qo)(n, r),
             u = (0, s.e7)([C.Z], () => C.Z.getCreatedAtOverride()),
             d = t || null != i || null != l || a || null != o || c,
             p = null != u ? u : null == n ? void 0 : n.createdAt;
@@ -96,24 +96,24 @@ let J = (e) => {
         let ea = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
             es = (0, s.e7)([O.Z], () => O.Z.getPremiumTypeSubscription()),
             { variant: eo, hasNitroTabBadgeOfferReminder: ec } = (0, N.ZP)("PremiumDiscountEndingNotice"),
-            eu = (0, v.Qo)(ea, es),
-            ed = (0, v.M5)(ea, W.PremiumTypes.TIER_2),
+            eu = (0, I.Qo)(ea, es),
+            ed = (0, I.M5)(ea, W.PremiumTypes.TIER_2),
             ep = (0, l.JA)("nitro"),
             ef = (0, Z.N)(),
-            em = (0, A.Ng)(),
-            eh = (0, x.$)(),
-            eg = (0, T.W)(),
+            eh = (0, A.N)(),
+            eg = (0, x.$)(),
+            em = (0, T.W)(),
             e_ = (0, S.Vi)(),
             eb = (0, M.HI)({ trialOffer: ef }),
             eE = (0, F.V)(),
             eO = (0, M.eW)(),
-            eI = (0, D._h)(),
-            ey = (0, z.Kn)(),
-            ev = I.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
-            eC = ec && ev.length > 0 && null != ef && null != ef.expires_at,
-            eS = I.Z.getAlmostExpiringDiscountOffers([W.Si.TIER_2]),
-            eT = ec && eS.length > 0 && null != em && null != em.expires_at,
-            eN = null != eh && null != es && es.status === q.O0b.CANCELED,
+            ey = (0, D._h)(),
+            ev = (0, z.Kn)(),
+            eI = y.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
+            eC = ec && eI.length > 0 && null != ef && null != ef.expires_at,
+            eS = y.Z.getAlmostExpiringDiscountOffers([W.Si.TIER_2]),
+            eT = ec && eS.length > 0 && null != eh && null != eh.expires_at,
+            eN = null != eg && null != es && es.status === q.O0b.CANCELED,
             { fractionalState: ej, startsAt: eP, endsAt: ex } = (0, f.Z)({ forceFetch: !0 }),
             [eA, eZ] = (0, _.bf)(ej !== W.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: eP.valueOf(),
@@ -121,16 +121,16 @@ let J = (e) => {
             }),
             ew = (0, j.Z)({ location: "NitroTabButton" }),
             eL = (null == ef ? void 0 : ef.trial_id) === W.a7,
-            eR = (0, m.YZ)("NitroTabButton"),
+            eR = (0, h.YZ)("NitroTabButton"),
             eD = (0, b.bg)({ location: "NitroTabButton" }),
             eM = [],
             ek = [];
-        (0, h.Kl)() &&
+        (0, g.Kl)() &&
             ((eT || (eC && !eL)) && eM.push(o.z.NITRO_TAB_BADGE_OFFER_REMINDER),
-            eI && eM.push(o.z.RECURRING_3P_PROMOTION_POPOVER),
+            ey && eM.push(o.z.RECURRING_3P_PROMOTION_POPOVER),
             e_ && eM.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             ew && eM.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
-            eg && eM.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
+            em && eM.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
             eR && eM.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE),
             eD && eM.push(o.z.GAME_WIDGETS_PREMIUM_TAB_BADGE));
         let [eU, eG] = (0, _.US)(eM, void 0, !0);
@@ -156,7 +156,7 @@ let J = (e) => {
             return null;
         let eY = () => {
             eA === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eZ(K.L.TAKE_ACTION),
-                y.default.track(q.rMx.NITRO_TAB_VISITED, {
+                v.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -165,7 +165,7 @@ let J = (e) => {
         };
         if (
             (ej === W.a$.NONE ||
-                eg ||
+                em ||
                 ((C = 7),
                 (n = (0, r.jsx)(P.Z, {
                     className: "",
@@ -200,7 +200,7 @@ let J = (e) => {
                   })),
                   (C = 4),
                   (eY = () => {
-                      y.default.track(q.rMx.NITRO_TAB_VISITED, {
+                      v.default.track(q.rMx.NITRO_TAB_VISITED, {
                           badge_decorator: C,
                           has_premium: eu,
                       }),
@@ -215,7 +215,7 @@ let J = (e) => {
                         offerExpiresAt: null,
                     })),
                     (C = 2))
-                  : eg
+                  : em
                     ? ((n = (0, r.jsx)(V.S, { expiresAt: ex })), (C = 4))
                     : null != eE
                       ? ((n = (0, r.jsx)(Y.Z, {
@@ -223,23 +223,23 @@ let J = (e) => {
                             showStars: !1,
                         })),
                         (C = 1))
-                      : null != em
+                      : null != eh
                         ? ((n =
                               eo === N.tE.OFFER_COUNTDOWN && eT
-                                  ? (0, r.jsx)(B.a, { discountOffer: em })
+                                  ? (0, r.jsx)(B.a, { discountOffer: eh })
                                   : (0, r.jsx)(G.GN, {
-                                        userDiscount: em,
+                                        userDiscount: eh,
                                         isTabSelected: et,
                                         includesAmountOff: !1,
                                         shouldShowOfferReminder: eT,
                                     })),
                           (C = 3))
                         : null == ef || eL
-                          ? ey
+                          ? ev
                               ? ((n = (0, r.jsx)(H.l, {
                                     isSelected: et,
                                     onSelect: () =>
-                                        (0, g.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
+                                        (0, m.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
                                             dismissAction: K.L.TAKE_ACTION,
                                         }),
                                 })),
@@ -247,7 +247,7 @@ let J = (e) => {
                               : eN &&
                                 ((n = (0, r.jsx)(U.Z, {
                                     isSelected: et,
-                                    discountOffer: eh,
+                                    discountOffer: eg,
                                 })),
                                 (C = 8))
                           : ((n =
@@ -267,7 +267,7 @@ let J = (e) => {
             })),
             (C = 4),
             (eY = () => {
-                y.default.track(q.rMx.NITRO_TAB_VISITED, {
+                v.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -331,12 +331,12 @@ let J = (e) => {
                   }),
             X),
         );
-        return ey
+        return ev
             ? (0, r.jsx)(H.C, { children: eW })
             : eN && eB === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === C
               ? (0, r.jsx)(k.Z, {
                     targetElementRef: en,
-                    discountOffer: eh,
+                    discountOffer: eg,
                     premiumSubscription: es,
                     dismissCoachmark: eH,
                     children: eW,

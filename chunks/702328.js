@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(367074),
     v = n(931118),
     I = n(283066),
-    T = n(104494),
-    S = n(639119),
+    S = n(622909),
+    T = n(639119),
     A = n(8647),
     C = n(744129),
     N = n(823188),
@@ -74,11 +74,11 @@ let z = () => {
     }, []);
     let eE = [B.h.HOME, B.h.WHATS_NEW, B.h.BEST_OF_NITRO, B.h.PLANS, B.h.COMPARE],
         { navBarSections: eb, activeSectionId: ey } = (0, G.O)(eE),
-        { home: eO, whatsNew: ev, bestOfNitro: eI, plans: eT, compare: eS } = eb,
+        { home: eO, whatsNew: ev, bestOfNitro: eI, plans: eS, compare: eT } = eb,
         eA = em ? Y : W,
         { variant: eC } = (0, v.ZP)("PremiumBrandRefreshMarketingHeroHeading"),
-        eN = (0, S.N)(),
-        eR = (0, T.Ng)(),
+        eN = (0, T.N)(),
+        eR = (0, S.N)(),
         eP =
             E.Z.getAlmostExpiringTrialOffers([F.Si.TIER_2]).length > 0 &&
             null != eN &&
@@ -169,7 +169,7 @@ let z = () => {
                         }),
                         (0, r.jsx)("div", {
                             className: eA.premiumTierCardsContainer,
-                            ref: eT.ref,
+                            ref: eS.ref,
                             children: (0, r.jsx)(l.$, {
                                 innerRef: n,
                                 onChange: (e) => ei(e),
@@ -185,7 +185,7 @@ let z = () => {
                         }),
                         (0, r.jsx)("div", {
                             className: eA.planComparisonTableContainer,
-                            ref: eS.ref,
+                            ref: eT.ref,
                             children: em ? (0, r.jsx)(j.Z, {}) : (0, r.jsx)(D.Z, {}),
                         }),
                     ],

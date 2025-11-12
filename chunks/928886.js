@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(481060),
     l = n(479446),
-    c = n(104494),
+    c = n(622909),
     u = n(639119),
     d = n(981632),
     f = n(798769),
@@ -43,7 +43,7 @@ function I(e) {
         B = null != T && !G.includes(T) && null != S,
         Z = (0, u.N)(a),
         F = !D && null != Z && null != S && b.nG[Z.trial_id].skus.includes(S),
-        V = (0, c.Ng)(),
+        V = (0, c.N)(),
         H = null == V || null == (t = V.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === S),
         Y = !D && null != V && null != S && H;
     return i.useMemo(() => {
