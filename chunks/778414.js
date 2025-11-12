@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => W,
-    Z: () => L,
+    Z: () => B,
 }),
     n(388685);
 var r = n(951288),
@@ -17,8 +17,8 @@ var r = n(951288),
     p = n(929677),
     m = n(314897),
     b = n(351402),
-    y = n(931847),
-    h = n(836197),
+    h = n(931847),
+    y = n(836197),
     v = n(880421),
     O = n(206599),
     j = n(50130),
@@ -62,7 +62,7 @@ function G(e) {
     }
     return e;
 }
-function B(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,12 +82,12 @@ function B(e, t) {
     }
     return i;
 }
-function L(e) {
+function B(e) {
     var { widget: t } = e,
-        n = B(e, ["widget"]);
-    return t instanceof y.q
+        n = L(e, ["widget"]);
+    return t instanceof h.q
         ? (0, r.jsx)(I.Z, G({ widget: t }, n))
-        : t instanceof h.zy
+        : t instanceof y.zy
           ? (0, r.jsx)(C.Z, G({ widget: t }, n))
           : null;
 }
@@ -105,13 +105,13 @@ function M() {
         ],
     });
 }
-function F(e) {
+function U(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
         a = (0, P.Z)(t.id),
         l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
-        o = a.some((e) => e instanceof y.q && e.applicationId === (null == n ? void 0 : n.id));
+        o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
         ? null
         : (0, r.jsx)(f.ZP, {
@@ -128,7 +128,7 @@ function F(e) {
               },
           });
 }
-function U(e) {
+function F(e) {
     let { user: t, guildId: n, channelId: a } = e,
         l = (0, P.Z)(t.id),
         c = (0, o.e7)([m.default], () => m.default.getId() === t.id),
@@ -144,8 +144,8 @@ function U(e) {
         })(),
         d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
         f = 0 === l.length && c,
-        j = i.useMemo(() => l.filter(h.Wc), [l]),
-        x = i.useMemo(() => l.filter((e) => e instanceof y.q), [l]);
+        j = i.useMemo(() => l.filter(y.Wc), [l]),
+        x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
     (0, O.J)(c, j);
     var I = t.id;
     (0, _.s)(x);
@@ -159,10 +159,10 @@ function U(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 c && s && (0, r.jsx)(M, {}),
-                c && (0, r.jsx)(F, { user: t }),
+                c && (0, r.jsx)(U, { user: t }),
                 l.map((e, i) =>
                     (0, r.jsx)(
-                        L,
+                        B,
                         {
                             widget: e,
                             user: t,
@@ -170,7 +170,7 @@ function U(e) {
                             channelId: a,
                             index: i,
                         },
-                        e.type,
+                        e instanceof h.q ? "".concat(e.type, "-").concat(e.applicationId) : "".concat(e.type),
                     ),
                 ),
                 c && (0, r.jsx)(S.Z, {}),
@@ -183,7 +183,7 @@ function U(e) {
 }
 function W(e) {
     var { user: t } = e,
-        n = B(e, ["user"]);
+        n = L(e, ["user"]);
     let a = i.useRef(null);
     (0, x.r)({ container: a.current });
     let o = (0, k.h)(t.id);
@@ -192,6 +192,6 @@ function W(e) {
         scrollerRef: a,
         className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
+        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(F, G({ user: t }, n))],
     });
 }
