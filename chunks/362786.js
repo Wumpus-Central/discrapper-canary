@@ -11,6 +11,7 @@ var r = (function (e) {
         (e[(e.USER = 2)] = "USER"),
         (e[(e.FRACTIONAL_PREMIUM = 3)] = "FRACTIONAL_PREMIUM"),
         (e[(e.DEFERRED_START = 4)] = "DEFERRED_START"),
+        (e[(e.USER_TEMPORARY_BAN = 5)] = "USER_TEMPORARY_BAN"),
         e
     );
 })({});
