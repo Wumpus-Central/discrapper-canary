@@ -47,28 +47,30 @@ let x = (e) => {
                 [h.shopCardSelected]: g === t,
             }),
             children: [
-                (0, r.jsx)("div", {
+                (0, r.jsxs)("div", {
                     className: a()(h.preview, {
                         [h.previewTrick]: b === u.KN.Trick,
                         [h.previewTreat]: b === u.KN.Treat,
                         [h.shopCardClaimed]: x,
                     }),
-                    children: (0, r.jsx)(p.R, {
-                        item: E,
-                        user: l,
-                        isHighlighted: v,
-                        avatarSize: C.EFr.SIZE_96,
-                        isPurchased: x,
-                    }),
+                    children: [
+                        (0, r.jsx)(p.R, {
+                            item: E,
+                            user: l,
+                            isHighlighted: v,
+                            avatarSize: C.EFr.SIZE_96,
+                            isPurchased: x,
+                        }),
+                        x &&
+                            (0, r.jsx)(C.dz2, {
+                                size: "custom",
+                                width: 48,
+                                height: 48,
+                                color: C.TVs.colors.WHITE,
+                                className: h.claimedIcon,
+                            }),
+                    ],
                 }),
-                x &&
-                    (0, r.jsx)(C.dz2, {
-                        size: "custom",
-                        width: 48,
-                        height: 48,
-                        color: C.TVs.colors.WHITE,
-                        className: h.claimedIcon,
-                    }),
                 (0, r.jsxs)("div", {
                     className: h.productName,
                     children: [
