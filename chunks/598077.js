@@ -175,6 +175,14 @@ class O extends a.Z {
             (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.SUBSCRIPTION_GROUP
         );
     }
+    isFractionalPremiumWithNoSubscription() {
+        var e;
+        return (
+            (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
+            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.FRACTIONAL_NITRO &&
+            this.premiumState.premiumSubscriptionType !== i.W$.TIER_2
+        );
+    }
     hasUrgentMessages() {
         return this.hasFlag(h.xW$.HAS_UNREAD_URGENT_MESSAGES);
     }

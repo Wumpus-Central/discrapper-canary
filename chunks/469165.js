@@ -10,16 +10,16 @@ var r = n(951288),
     i = n(647438),
     a = n(793030),
     o = n(442837),
-    s = n(813820),
-    l = n(481060),
-    c = n(210887),
-    u = n(594174),
-    d = n(626135),
-    f = n(63063),
-    _ = n(74538),
-    p = n(960048),
-    h = n(638212),
-    m = n(518638),
+    s = n(481060),
+    l = n(210887),
+    c = n(594174),
+    u = n(626135),
+    d = n(63063),
+    f = n(74538),
+    _ = n(960048),
+    p = n(638212),
+    h = n(518638),
+    m = n(748770),
     g = n(725727),
     E = n(1844),
     b = n(397047),
@@ -107,10 +107,10 @@ let D = {
             asset: A.Z,
         },
     },
-    x = (e) => ((0, o.e7)([c.Z], () => (0, a.wjy)(c.Z.theme)) ? D[e].logos.dark : D[e].logos.light),
+    x = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? D[e].logos.dark : D[e].logos.light),
     L = (e) => {
         let { recurrence: t } = e,
-            n = (0, r.jsx)(a.sV5, { color: l.TVs.colors.BUTTON_POSITIVE_BACKGROUND }),
+            n = (0, r.jsx)(a.sV5, { color: s.TVs.colors.BUTTON_POSITIVE_BACKGROUND }),
             o = (0, r.jsx)(a.hU, {
                 icon: a.TIy,
                 size: "sm",
@@ -121,7 +121,7 @@ let D = {
                     navigator.clipboard.writeText(t.code), c(n);
                 },
             }),
-            [s, c] = i.useState(() => o);
+            [l, c] = i.useState(() => o);
         if (null != t.code)
             return (0, r.jsx)("div", {
                 className: T.claimedFooterContainer,
@@ -136,14 +136,14 @@ let D = {
                                 children: t.code,
                             }),
                         }),
-                        s,
+                        l,
                         (0, r.jsx)(a.zxk, {
                             variant: "overlay-primary",
                             size: "sm",
                             text: S.intl.formatToPlainString(S.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    d.default.track(I.rMx.RECURRING_PROMOTION_CLAIMED);
+                                    u.default.track(I.rMx.RECURRING_PROMOTION_CLAIMED);
                             },
                         }),
                     ],
@@ -186,7 +186,7 @@ let D = {
                             }),
                             (0, r.jsx)("div", {
                                 className: T.promoCardAssetContainer,
-                                children: (0, r.jsx)(l.Eep, {
+                                children: (0, r.jsx)(s.Eep, {
                                     src: n.asset,
                                     className: T.promoCardAsset,
                                     width: 100,
@@ -203,12 +203,13 @@ let D = {
     j = (e) => {
         let { promotionRecurrences: t } = e,
             [n, o] = i.useState(t.length > 1),
-            [s, c] = i.useState([]);
+            [l, c] = i.useState([]),
+            [u, f] = i.useState(new Set());
         i.useEffect(() => {
             c([t.sort((e, t) => (t.startDate > e.startDate ? 1 : -1))[0]]);
         }, [t]);
-        let u = x(t[0].partnerId),
-            d = (0, r.jsx)(l.Eep, {
+        let p = x(t[0].partnerId),
+            m = (0, r.jsx)(s.Eep, {
                 src: t[0].asset,
                 className: T.promoCardAsset,
                 width: 100,
@@ -217,8 +218,10 @@ let D = {
             });
         return (0, r.jsxs)("div", {
             children: [
-                s.map((e, t) =>
-                    (0, r.jsxs)(
+                l.map((e, t) => {
+                    let n = u.has(e.id),
+                        i = null == e.code;
+                    return (0, r.jsxs)(
                         "div",
                         {
                             className: T.promoCardContainer,
@@ -229,7 +232,7 @@ let D = {
                                         (0, r.jsxs)("div", {
                                             className: T.promoCardContent,
                                             children: [
-                                                u,
+                                                p,
                                                 (0, r.jsxs)("div", {
                                                     className: T.promoCardContentText,
                                                     children: [
@@ -241,38 +244,54 @@ let D = {
                                                         (0, r.jsx)(a.X6q, {
                                                             variant: "heading-sm/medium",
                                                             color: "text-secondary",
-                                                            children:
-                                                                null != e.code
-                                                                    ? S.intl.format(e.bodyWithExpiration, {
-                                                                          date: e.endDate,
-                                                                      })
-                                                                    : S.intl.string(e.body),
+                                                            children: n
+                                                                ? S.intl.format(S.t.i2EuFO, {
+                                                                      helpdeskArticle: d.Z.getArticleURL(
+                                                                          I.BhN.RECURRING_PROMOTION,
+                                                                      ),
+                                                                  })
+                                                                : i
+                                                                  ? S.intl.string(e.body)
+                                                                  : S.intl.format(e.bodyWithExpiration, {
+                                                                        date: e.endDate,
+                                                                    }),
                                                         }),
                                                     ],
                                                 }),
-                                                null == e.code &&
-                                                    (0, r.jsx)(a.zxk, {
-                                                        icon: a.mBM,
-                                                        variant: "overlay-primary",
-                                                        size: "sm",
-                                                        text: S.intl.string(S.t.vwASIl),
-                                                        onClick: () => {
-                                                            (0, m.A2)(e.id)
-                                                                .then((n) => {
-                                                                    c([
-                                                                        ...s.slice(0, t),
-                                                                        w(R({}, e), { code: n.code }),
-                                                                        ...s.slice(t + 1),
-                                                                    ]);
-                                                                })
-                                                                .catch((e) => p.Z.captureException(e));
-                                                        },
-                                                    }),
+                                                i &&
+                                                    (n
+                                                        ? (0, r.jsx)(a.zxk, {
+                                                              icon: a.Mgn,
+                                                              variant: "critical-secondary",
+                                                              size: "sm",
+                                                              disabled: !0,
+                                                              text: S.intl.string(S.t["8LKchl"]),
+                                                          })
+                                                        : (0, r.jsx)(a.zxk, {
+                                                              icon: a.mBM,
+                                                              variant: "overlay-primary",
+                                                              size: "sm",
+                                                              text: S.intl.string(S.t.vwASIl),
+                                                              onClick: () => {
+                                                                  (0, h.A2)(e.id)
+                                                                      .then((n) => {
+                                                                          c([
+                                                                              ...l.slice(0, t),
+                                                                              w(R({}, e), { code: n.code }),
+                                                                              ...l.slice(t + 1),
+                                                                          ]);
+                                                                      })
+                                                                      .catch((t) => {
+                                                                          f((t) => new Set([...t, e.id])),
+                                                                              _.Z.captureException(t);
+                                                                      });
+                                                              },
+                                                          })),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
                                             className: T.promoCardAssetContainer,
-                                            children: d,
+                                            children: m,
                                         }),
                                     ],
                                 }),
@@ -280,13 +299,13 @@ let D = {
                             ],
                         },
                         e.id,
-                    ),
-                ),
+                    );
+                }),
                 n &&
                     (0, r.jsx)(a.P3F, {
                         className: T.extraCodeButton,
                         onClick: () => {
-                            o(!1), c([...s, ...t.slice(1)]);
+                            o(!1), c([...l, ...t.slice(1)]);
                         },
                         children: (0, r.jsx)(a.xvT, {
                             variant: "text-sm/medium",
@@ -328,7 +347,7 @@ let D = {
             r = {};
         return (
             t
-                .filter((e) => !0 === (0, m.pD)({ promotionPartner: e.outboundTitle }))
+                .filter((e) => !0 === (0, h.pD)({ promotionPartner: e.outboundTitle }))
                 .map((e) => {
                     var t;
                     let i = e.outboundTitle.toLowerCase(),
@@ -350,33 +369,36 @@ let D = {
         );
     },
     B = (e) => {
-        var t;
-        let { onClose: n } = e,
-            { promotionsLoaded: i, claimedOutboundPromotionCodeMap: l } = (0, g.lG)(),
-            c = (0, o.Wu)([E.Z], () => E.Z.outboundRecurringPromotions),
-            d = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-            p = !1 === _.ZP.isPremiumExactly(d, v.PremiumTypes.TIER_2),
-            m =
-                (null == d || null == (t = d.premiumState) ? void 0 : t.premiumSource) === s.d3.FRACTIONAL_NITRO &&
-                (null == d ? void 0 : d.premiumState.premiumSubscriptionType) !== s.W$.TIER_2,
-            b = null == d || p || m;
-        if (!1 === i) return (0, r.jsx)(a.$jN, {});
-        let y = G({
-                promotions: c,
-                codesByPromotion: l,
+        let { onClose: t } = e,
+            { promotionsLoaded: n, claimedOutboundPromotionCodeMap: i } = (0, g.lG)(),
+            s = (0, o.Wu)([E.Z], () => E.Z.outboundRecurringPromotions),
+            l = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+            u = !1 === f.ZP.isPremiumExactly(l, v.PremiumTypes.TIER_2),
+            _ = null == l ? void 0 : l.isFractionalPremiumWithNoSubscription(),
+            h = null == l || u || _;
+        if (!1 === n) return (0, r.jsx)(a.$jN, {});
+        let b = G({
+                promotions: s,
+                codesByPromotion: i,
             }),
-            O = () => {
-                if (!0 === b)
-                    return (0, r.jsx)(h.Z, {
+            y = () => {
+                if (!0 === h)
+                    return (0, r.jsx)(p.Z, {
                         subscriptionTier: v.Si.TIER_2,
                         fullWidth: !0,
+                        onClick: () => {
+                            t();
+                        },
+                        onSubscribeModalClose: (e) => {
+                            if (e) return m.ZP.fetchActivePromotions();
+                        },
                     });
             },
-            A = () => {
+            O = () => {
                 let e = new Date(),
                     t = new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate(),
                     n = (e.getDate() / t) * 100;
-                return b
+                return h
                     ? (0, r.jsx)(M, {})
                     : (0, r.jsxs)("div", {
                           className: T.container,
@@ -392,7 +414,7 @@ let D = {
                               (0, r.jsx)(k, { percentage: n }),
                               (0, r.jsx)("div", {
                                   className: T.cards,
-                                  children: Object.entries(y)
+                                  children: Object.entries(b)
                                       .sort((e, t) => {
                                           let [n] = e,
                                               [r] = t;
@@ -408,18 +430,18 @@ let D = {
             };
         return (0, r.jsx)(a.Modal, {
             title: S.intl.string(S.t["7ioAjs"]),
-            subtitle: S.intl.format(S.t.LOYRxB, { helpCenterLink: f.Z.getArticleURL(I.BhN.RECURRING_PROMOTION) }),
+            subtitle: S.intl.format(S.t.LOYRxB, { helpCenterLink: d.Z.getArticleURL(I.BhN.RECURRING_PROMOTION) }),
             actions: [],
-            preview: O(),
+            preview: y(),
             transitionState: a.Dvm.ENTERED,
-            onClose: n,
-            children: A(),
+            onClose: t,
+            children: O(),
         });
     },
     Z = (e) => {
         let { analyticsLocations: t } = e;
-        d.default.track(I.rMx.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
-            (0, l.ZDy)(async () => {
+        u.default.track(I.rMx.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
+            (0, s.ZDy)(async () => {
                 let { Recurring3PModal: e } = await Promise.resolve().then(n.bind(n, 469165));
                 return (t) => (0, r.jsx)(e, R({}, t));
             });
