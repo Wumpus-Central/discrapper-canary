@@ -15,7 +15,7 @@ var r = n(951288),
     C = n(445794),
     m = n(956472),
     _ = n(388032),
-    b = n(189084);
+    b = n(997033);
 let v = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
             c = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
@@ -41,28 +41,33 @@ let v = (e) => {
             ? (0, r.jsx)(s.Text, {
                   variant: "text-md/medium",
                   color: "text-tertiary",
+                  lineClamp: 1,
                   children: _.intl.string(_.t.wu4gyV),
               })
             : E
               ? (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",
                     color: "text-tertiary",
+                    lineClamp: 1,
                     children: _.intl.string(_.t.BEjTij),
                 })
               : v && !T
                 ? (0, r.jsx)(s.Text, {
                       variant: "text-md/medium",
                       color: "text-tertiary",
+                      lineClamp: 1,
                       children: _.intl.string(_.t["6cfuDj"]),
                   })
                 : O
                   ? (0, r.jsx)(s.Text, {
                         variant: "text-md/bold",
+                        lineClamp: 1,
                         children: _.intl.string(_.t.nBtvYB),
                     })
                   : x
                     ? (0, r.jsx)(s.Text, {
                           variant: "text-md/bold",
+                          lineClamp: 1,
                           children: _.intl.string(_.t.rt69oo),
                       })
                     : 0 === j.length
