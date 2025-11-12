@@ -31,7 +31,7 @@ function f() {
                       className: d.textSection,
                       children: [
                           (0, r.jsx)(a.Text, {
-                              variant: "text-md/medium",
+                              variant: "text-md/bold",
                               color: "always-white",
                               children: _.heading(),
                           }),
