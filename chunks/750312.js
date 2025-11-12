@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -8,111 +8,110 @@ var r = n(951288),
     s = n(313201),
     u = n(314897),
     d = n(785717),
-    f = n(403239),
+    f = n(86419),
     g = n(982072),
-    p = n(781040),
-    m = n(840367),
-    b = n(34335),
+    p = n(780899),
+    m = n(939974),
+    b = n(840367),
+    h = n(34335),
     y = n(388032),
-    h = n(415734);
-function v(e) {
-    let {
-            userId: t,
-            widget: n,
-            children: a,
-            disableInteraction: y,
-            className: v,
-            index: j,
-            trailingContent: x,
-            headerTitle: _,
-            headerSubtitle: P,
-            headerActionButtons: I,
-            dragHandleAdditionalMenuItems: w,
-        } = e,
-        S = (0, s.Dt)(),
-        E = (0, c.e7)([u.default], () => u.default.getId() === t),
-        T = i.useRef(null),
-        { registerManageWidgetButtonRef: C, manageFocusOnReorder: D } = (0, b.j)(),
-        k = i.useRef(null);
+    v = n(415734);
+function O(e) {
+    let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: o } = e,
+        c = i.useRef(null),
+        u = i.useRef(null),
+        { registerManageWidgetButtonRef: d, manageFocusOnReorder: g } = (0, h.j)();
     i.useLayoutEffect(() => {
-        let e = C(n.type);
-        return e(k.current), () => e(null);
-    }, [C, n.type]);
-    let { trackUserProfileAction: N } = (0, d.KZ)(),
-        A = (0, g.Z)({
-            widgetType: n.type,
-            onAction: N,
+        let e = d(n.type);
+        return e(c.current), () => e(null);
+    }, [d, n.type]);
+    let b = i.useMemo(() => {
+            var e;
+            return null != (e = n.id) ? e : (0, s.hQ)();
+        }, [n.id]),
+        { isDragging: O, dragSourcePosition: j } = (0, p.Y9)({
+            dragRef: c,
+            dropRef: u,
+            index: t,
+            listType: "WIDGETS",
+            itemType: "WIDGET",
+            itemId: b,
+            itemPreviewProps: { widget: n },
+            onReorder: f.IM,
+            onEnd: () => g(n.type),
         }),
-        Z = E && null != j && !y,
-        { isDragging: R, dragSourcePosition: G } = (0, f.q)({
-            dropRef: T,
-            dragRef: k,
-            userId: t,
-            widget: n,
-            index: j,
-            disableInteraction: !Z,
-            onReorder: () => D(n.type),
+        x = null != j,
+        _ = x && t < j,
+        P = x && t > j;
+    return (0, r.jsxs)("div", {
+        ref: u,
+        className: l()(v.dragAndDropTarget, {
+            [v.dropIndicatorBefore]: _,
+            [v.dropIndicatorAfter]: P,
+            [v.isDragging]: O,
         }),
-        [B, L] = i.useState(!1);
-    return (0, r.jsx)(O, {
-        ref: T,
-        disableInteraction: !Z,
-        onMouseEnter: () => L(!0),
-        onMouseLeave: () => L(!1),
-        dragSourcePosition: G,
-        index: null != j ? j : 0,
-        children: (0, r.jsxs)("section", {
-            ref: A,
-            className: l()(h.container, v, { [h.isDragging]: R }),
-            "aria-labelledby": S,
-            children: [
-                Z &&
-                    (0, r.jsx)(p.Z, {
-                        buttonRef: k,
-                        widget: n,
-                        className: l()(h.dragHandleButton, { [h.opacity]: B || R }),
-                        additionalMenuItems: w,
-                    }),
-                (0, r.jsx)(m.Z, {
-                    userId: t,
-                    headingId: S,
-                    title: _,
-                    subtitle: P,
-                    actionButtons: I,
-                    widget: n,
-                    disableInteraction: y,
-                }),
-                (0, r.jsxs)(o.y5t, {
-                    children: [a, x],
-                }),
-            ],
-        }),
+        "aria-label": y.intl.formatToPlainString(y.t.YLczh4, { positionNumber: t + 1 }),
+        children: [
+            (0, r.jsx)(m.Z, {
+                buttonRef: c,
+                widget: n,
+                className: v.dragHandleButton,
+                additionalMenuItems: a,
+            }),
+            o,
+        ],
     });
 }
-let O = (e) => {
+function j(e) {
     let {
-            ref: t,
-            children: n,
-            disableInteraction: i,
-            onMouseEnter: a,
-            onMouseLeave: o,
-            dragSourcePosition: c,
-            index: s,
+            userId: t,
+            widget: n,
+            children: i,
+            disableInteraction: a,
+            className: f,
+            index: p,
+            trailingContent: m,
+            headerTitle: h,
+            headerSubtitle: y,
+            headerActionButtons: j,
+            additionalManageWidgetMenuItems: x,
         } = e,
-        u = null != c,
-        d = u && s < c,
-        f = u && s > c;
-    return i
-        ? n
-        : (0, r.jsx)("div", {
-              ref: t,
-              className: l()(h.dragAndDropHitbox, {
-                  [h.dropIndicatorBefore]: d,
-                  [h.dropIndicatorAfter]: f,
-              }),
-              onMouseEnter: a,
-              onMouseLeave: o,
-              "aria-label": y.intl.formatToPlainString(y.t.YLczh4, { positionNumber: s + 1 }),
-              children: n,
-          });
-};
+        _ = (0, s.Dt)(),
+        P = (0, c.e7)([u.default], () => u.default.getId() === t),
+        { trackUserProfileAction: I } = (0, d.KZ)(),
+        w = (0, g.Z)({
+            widgetType: n.type,
+            onAction: I,
+        }),
+        S = P && null != p && !a,
+        E = () =>
+            (0, r.jsxs)("div", {
+                className: l()(v.container, f),
+                children: [
+                    (0, r.jsx)(b.Z, {
+                        userId: t,
+                        headingId: _,
+                        title: h,
+                        subtitle: y,
+                        actionButtons: j,
+                        widget: n,
+                        disableInteraction: a,
+                    }),
+                    (0, r.jsxs)(o.y5t, {
+                        children: [i, m],
+                    }),
+                ],
+            });
+    return (0, r.jsx)("section", {
+        ref: w,
+        "aria-labelledby": _,
+        children: S
+            ? (0, r.jsx)(O, {
+                  index: null != p ? p : 0,
+                  widget: n,
+                  additionalManageWidgetMenuItems: x,
+                  children: E(),
+              })
+            : E(),
+    });
+}

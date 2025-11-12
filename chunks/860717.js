@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(467055), n(388685), n(35282), n(415506);
+n.d(t, { Z: () => J }), n(467055), n(388685), n(35282), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(481060),
     u = n(911969),
     d = n(535139),
-    g = n(812206),
-    f = n(810568),
+    f = n(812206),
+    g = n(810568),
     p = n(168524),
     m = n(970184),
     b = n(197653),
@@ -227,9 +227,9 @@ function R(e) {
         case "TEXT":
             return (0, r.jsx)(F, D({}, t));
         case "TEXT_WITH_IMAGE":
-            return (0, r.jsx)(H, D({}, t));
-        case "SEPARATOR":
             return (0, r.jsx)(W, D({}, t));
+        case "SEPARATOR":
+            return (0, r.jsx)(H, D({}, t));
         case "SOCIAL_PROOF":
             return (0, r.jsx)(z, {});
     }
@@ -310,7 +310,7 @@ function F(e) {
           })
         : (0, r.jsx)("div", { className: l()(C.textPlaceholder, a.className) });
 }
-function H(e) {
+function W(e) {
     let { content: t, image: n, imagePosition: i } = e,
         a = (0, h._)(),
         o = Z(n)
@@ -345,7 +345,7 @@ function H(e) {
         ],
     });
 }
-function W(e) {
+function H(e) {
     let { size: t = "small", divider: n = !1 } = e,
         a = i.useId();
     return (0, r.jsx)(y.Z, {
@@ -357,11 +357,11 @@ function W(e) {
 }
 function z() {
     let e = (function () {
-            let e = i.useContext(q);
+            let e = i.useContext(Y);
             if (null == e) throw Error("ApplicationWidgetContext provider not found");
             return e;
         })(),
-        { game: t } = Y(e.widget);
+        { game: t } = q(e.widget);
     return null == t
         ? null
         : (0, r.jsx)(E.Z, {
@@ -402,10 +402,10 @@ function V(e, t) {
     let a = t.variables[i];
     return null == a || "unfurled_media" !== a.type ? null : a.media;
 }
-let q = i.createContext(null);
-function Y(e) {
-    return (0, o.cj)([g.Z, w.Z, P.Z], () => {
-        let t = g.Z.getApplication(e.applicationId);
+let Y = i.createContext(null);
+function q(e) {
+    return (0, o.cj)([f.Z, w.Z, P.Z], () => {
+        let t = f.Z.getApplication(e.applicationId);
         return {
             application: t,
             game: null != t ? P.Z.getGameByApplication(t) : null,
@@ -430,7 +430,7 @@ function X(e) {
         }),
     });
 }
-function J(e) {
+function Q(e) {
     return (0, r.jsxs)(s.Kqy, {
         direction: "horizontal",
         gap: 24,
@@ -469,21 +469,21 @@ function J(e) {
         ],
     });
 }
-let Q = Object.assign(
+let J = Object.assign(
     function (e) {
         let { user: t, widget: n, cta: a, subtle: u = !1 } = e,
-            { application: g, game: m, config: b } = Y(n),
-            h = null == g ? void 0 : g.getIconURL(16),
+            { application: f, game: m, config: b } = q(n),
+            h = null == f ? void 0 : f.getIconURL(16),
             y = (0, x.O)(t.id).data,
             v = null == y ? void 0 : y.find((e) => e.application_id === n.applicationId),
             j = (0, p.Z)({
                 location: "UserProfileApplicationWidget",
                 applicationId: null == m ? void 0 : m.id,
-                source: f.m1.UserProfile,
+                source: g.m1.UserProfile,
                 sourceUserId: t.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: P, hasAlreadyLinked: w, canStartAuthorization: E, startAuthorization: N } = (0, d.F)(g),
+            { fetched: P, hasAlreadyLinked: w, canStartAuthorization: E, startAuthorization: N } = (0, d.F)(f),
             Z = null == a && P && !w && E,
             G = (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -499,8 +499,8 @@ let Q = Object.assign(
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         children:
-                            (null == g ? void 0 : g.name) != null
-                                ? g.name
+                            (null == f ? void 0 : f.name) != null
+                                ? f.name
                                 : (0, r.jsx)("div", { className: C.textPlaceholder }),
                     }),
                 ],
@@ -628,7 +628,7 @@ let Q = Object.assign(
                 widget: n,
                 className: l()(C.widgetContainer, u && C.subtle),
                 headerTitle: L,
-                dragHandleAdditionalMenuItems:
+                additionalManageWidgetMenuItems:
                     null != m
                         ? (0, r.jsx)(s.sNh, {
                               id: "view-game-profile",
@@ -638,7 +638,7 @@ let Q = Object.assign(
                           })
                         : null,
                 children: [
-                    (0, r.jsx)(q.Provider, {
+                    (0, r.jsx)(Y.Provider, {
                         value: e,
                         children: (0, r.jsx)(X, {
                             widget: n,
@@ -662,7 +662,7 @@ let Q = Object.assign(
                                       ],
                                   }),
                             Z
-                                ? (0, r.jsx)(J, {
+                                ? (0, r.jsx)(Q, {
                                       heading: T.intl.string(T.t.UDPRLO),
                                       content: T.intl.string(T.t["OW/2al"]),
                                       buttons: (0, r.jsx)(s.Button, {
@@ -677,5 +677,5 @@ let Q = Object.assign(
             }),
         );
     },
-    { Cta: J },
+    { Cta: Q },
 );

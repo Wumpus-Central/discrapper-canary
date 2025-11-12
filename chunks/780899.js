@@ -1,6 +1,7 @@
 n.d(t, {
-    e_: () => m,
-    yW: () => p,
+    Y9: () => p,
+    e_: () => b,
+    yW: () => m,
 }),
     n(388685);
 var r = n(951288),
@@ -58,16 +59,84 @@ function g(e, t) {
     return i;
 }
 function p(e) {
+    let {
+            dragRef: t,
+            dropRef: n,
+            index: r,
+            listType: a,
+            itemId: l,
+            itemType: u,
+            itemPreviewProps: d,
+            onReorder: f,
+            onEnd: g,
+            disableDefaultPreview: p = !0,
+        } = e,
+        m = "".concat(u, "_").concat(a),
+        b = i.useCallback(
+            (e, t) => {
+                null == f || f(e, t);
+            },
+            [f],
+        ),
+        h = i.useMemo(
+            () => ({
+                id: l,
+                index: r,
+                itemType: u,
+                itemPreviewProps: d,
+            }),
+            [l, r, u, d],
+        ),
+        [{ isDragging: y }, v, O] = (0, o.c)({
+            type: m,
+            item: h,
+            collect: (e) => ({
+                handlerId: e.getHandlerId(),
+                isDragging: e.isDragging(),
+            }),
+            end: g,
+        });
+    i.useEffect(() => {
+        p && O((0, s.r)(), { captureDraggingState: !0 });
+    }, [O, p]);
+    let [{ dragSourcePosition: j }, x] = (0, c.L)({
+        accept: m,
+        drop: (e) => {
+            let t = e.index;
+            t !== r && (b(t, r), (e.index = r));
+        },
+        collect: (e) => {
+            let t = e.getItem(),
+                n = null;
+            return (
+                null != t && e.isOver() && e.canDrop() && (n = t.index),
+                {
+                    handlerId: e.getHandlerId(),
+                    dragSourcePosition: n,
+                }
+            );
+        },
+    });
+    return (
+        v(t),
+        x(n),
+        {
+            isDragging: y,
+            dragSourcePosition: j,
+        }
+    );
+}
+function m(e) {
     var {
             index: t,
             className: n,
             draggingClassName: a,
-            dropBeforeClassName: u,
-            dropAfterClassName: d,
-            "aria-label": p,
-            children: m,
+            dropBeforeClassName: o,
+            dropAfterClassName: c,
+            "aria-label": s,
+            children: u,
         } = e,
-        b = g(e, [
+        d = g(e, [
             "index",
             "className",
             "draggingClassName",
@@ -76,95 +145,28 @@ function p(e) {
             "aria-label",
             "children",
         ]);
-    let y = i.useRef(null),
-        { isDragging: h, dragSourcePosition: v } = (function (e) {
-            let {
-                    dragRef: t,
-                    dropRef: n,
-                    index: r,
-                    listType: a,
-                    itemId: l,
-                    itemType: u,
-                    itemPreviewProps: d,
-                    onReorder: f,
-                    onEnd: g,
-                    disableDefaultPreview: p = !0,
-                } = e,
-                m = "".concat(u, "_").concat(a),
-                b = i.useCallback(
-                    (e, t) => {
-                        null == f || f(e, t);
-                    },
-                    [f],
-                ),
-                y = i.useMemo(
-                    () => ({
-                        id: l,
-                        index: r,
-                        itemType: u,
-                        itemPreviewProps: d,
-                    }),
-                    [l, r, u, d],
-                ),
-                [{ isDragging: h }, v, O] = (0, o.c)({
-                    type: m,
-                    item: y,
-                    collect: (e) => ({
-                        handlerId: e.getHandlerId(),
-                        isDragging: e.isDragging(),
-                    }),
-                    end: g,
-                });
-            i.useEffect(() => {
-                p && O((0, s.r)(), { captureDraggingState: !0 });
-            }, [O, p]);
-            let [{ dragSourcePosition: j }, x] = (0, c.L)({
-                accept: m,
-                drop: (e) => {
-                    let t = e.index;
-                    t !== r && (b(t, r), (e.index = r));
-                },
-                collect: (e) => {
-                    let t = e.getItem(),
-                        n = null;
-                    return (
-                        null != t && e.isOver() && e.canDrop() && (n = t.index),
-                        {
-                            handlerId: e.getHandlerId(),
-                            dragSourcePosition: n,
-                        }
-                    );
-                },
-            });
-            return (
-                v(t),
-                x(n),
-                {
-                    isDragging: h,
-                    dragSourcePosition: j,
-                }
-            );
-        })(
+    let m = i.useRef(null),
+        { isDragging: b, dragSourcePosition: h } = p(
             f(
                 {
-                    dragRef: y,
-                    dropRef: y,
+                    dragRef: m,
+                    dropRef: m,
                     index: t,
                 },
-                b,
+                d,
             ),
         ),
-        O = null != v,
-        j = O && t < v,
-        x = O && t > v;
+        y = null != h,
+        v = y && t < h,
+        O = y && t > h;
     return (0, r.jsx)("div", {
-        ref: y,
-        className: l()(n, h && a, j && u, x && d),
-        "aria-label": p,
-        children: m,
+        ref: m,
+        className: l()(n, b && a, v && o, O && c),
+        "aria-label": s,
+        children: u,
     });
 }
-function m(e) {
+function b(e) {
     var t,
         n,
         { buttonRef: i, "aria-label": a, iconSize: l = "sm" } = e,
