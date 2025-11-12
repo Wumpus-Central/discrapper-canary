@@ -1,8 +1,21 @@
-n.d(t, { v: () => d }), n(388685);
+n.d(t, { v: () => d }),
+    n(388685),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733);
 var r = n(951288),
     i = n(647438),
-    a = n(943239),
-    o = n(995803),
+    a = n(902778),
+    o = n(948890),
     s = n(150677),
     l = n(213305),
     c = n(402453),
@@ -22,8 +35,8 @@ function d(e) {
             ref: O,
             artboardProperties: v,
             dataBinding: I,
-            touchScrollEnabled: T = !0,
-            dynamicDataBinding: S,
+            touchScrollEnabled: S = !0,
+            dynamicDataBinding: T,
             listenOnDocumentBody: A,
             eventCapture: C,
         } = e,
@@ -43,7 +56,7 @@ function d(e) {
                 fit: null != h ? u.M[h] : o.Fit.Cover,
                 alignment: null != m ? u.Y[m] : o.Alignment.Center,
             }),
-            isTouchScrollEnabled: T,
+            isTouchScrollEnabled: S,
             listenOnDocumentBody: A,
             eventCapture: C,
         });
@@ -61,7 +74,7 @@ function d(e) {
             artboard: b,
             artboardProperties: v,
             dataBinding: I,
-            dynamicDataBinding: S,
+            dynamicDataBinding: T,
         }),
         i.useEffect(() => {
             if (null != L && "short-loop" === y && N.reducedMotion.enabled) {
@@ -147,52 +160,83 @@ function f(e) {
         u = null != s ? s : a,
         d = (0, o.useViewModel)(t);
     (0, o.useViewModelInstance)(d);
-    let { theme: f, saturation: _ } = (0, c.ZF)(),
-        { highContrastModeEnabled: p } = i.useContext(l.S),
-        h = i.useRef(null);
+    let { theme: f, saturation: p } = (0, c.ZF)(),
+        { highContrastModeEnabled: h } = i.useContext(l.S),
+        m = i.useRef(null),
+        g = _();
     i.useEffect(() => {
-        if (null == t || null == t.viewModelInstance || null == u) return;
-        let e = r[null != n ? n : ""];
-        Object.entries(u).forEach((n) => {
-            var r, i, a, o, s, l, c, u;
-            let [d, m] = n,
-                g = "object" == typeof m && "type" in m,
-                E = g ? m.type : e[d],
-                b = g ? m.value : m;
-            switch (E) {
-                case "color":
-                    let [y, O, v, I] = b
-                        .resolve({
-                            theme: f,
-                            saturation: _,
-                            highContrastModeEnabled: p,
-                        })
-                        .rgba();
-                    null == (i = t.viewModelInstance) || null == (r = i.color(d)) || r.rgba(y, O, v, 255 * I);
-                    break;
-                case "number":
-                    let T = null == (a = t.viewModelInstance) ? void 0 : a.number(d);
-                    null != T && (T.value = b);
-                    break;
-                case "boolean":
-                    let S = null == (o = t.viewModelInstance) ? void 0 : o.boolean(d);
-                    null != S && (S.value = b);
-                    break;
-                case "trigger":
-                    null != b &&
-                        ("boolean" == typeof b ? b : 0 !== b) &&
-                        (null == (s = h.current) ? void 0 : s[d]) !== b &&
-                        (null == (c = t.viewModelInstance) || null == (l = c.trigger(d)) || l.trigger());
-                    break;
-                case "string":
-                    let A = null == (u = t.viewModelInstance) ? void 0 : u.string(d);
-                    null != A && (A.value = b);
-                    break;
-                default:
-                    console.warn("Unknown property type: ".concat(E));
+        let e = new AbortController();
+        return (
+            (async function () {
+                if (null == t || null == t.viewModelInstance || null == u) return;
+                let i = r[null != n ? n : ""];
+                for (let n of Object.entries(u)) {
+                    var a, o, s, l, c, d, _, E, b;
+                    if (e.signal.aborted) return;
+                    let r = n[0],
+                        u = n[1],
+                        y = null != u && "object" == typeof u && "type" in u,
+                        O = y ? u.type : i[r],
+                        v = y ? u.value : u;
+                    switch (O) {
+                        case "color":
+                            let [I, S, T, A] = v
+                                .resolve({
+                                    theme: f,
+                                    saturation: p,
+                                    highContrastModeEnabled: h,
+                                })
+                                .rgba();
+                            null == (o = t.viewModelInstance) || null == (a = o.color(r)) || a.rgba(I, S, T, 255 * A);
+                            break;
+                        case "number":
+                            let C = null == (s = t.viewModelInstance) ? void 0 : s.number(r);
+                            null != C && (C.value = v);
+                            break;
+                        case "boolean":
+                            let N = null == (l = t.viewModelInstance) ? void 0 : l.boolean(r);
+                            null != N && (N.value = v);
+                            break;
+                        case "trigger":
+                            null != v &&
+                                ("boolean" == typeof v ? v : 0 !== v) &&
+                                (null == (c = m.current) ? void 0 : c[r]) !== v &&
+                                (null == (_ = t.viewModelInstance) || null == (d = _.trigger(r)) || d.trigger());
+                            break;
+                        case "string":
+                            let R = null == (E = t.viewModelInstance) ? void 0 : E.string(r);
+                            null != R && (R.value = v);
+                            break;
+                        case "image":
+                            if (null != v) {
+                                let n = await g(v, e.signal);
+                                if (e.signal.aborted) return;
+                                let i = null == (b = t.viewModelInstance) ? void 0 : b.image(r);
+                                null != i && (i.value = n);
+                            }
+                            break;
+                        default:
+                            console.warn("Unknown property type: ".concat(O));
+                    }
+                }
+            })(),
+            () => {
+                e.abort(), (m.current = u);
             }
-        }),
-            (h.current = u);
-    }, [u, t, n, r, f, null == t ? void 0 : t.viewModelInstance, _, p]);
+        );
+    }, [u, t, n, r, f, null == t ? void 0 : t.viewModelInstance, p, h, g]);
+}
+function _() {
+    let e = i.useRef({});
+    return i.useCallback(async (t, n) => {
+        if ("string" != typeof t) return Promise.resolve(t);
+        {
+            if (null != e.current[t]) return Promise.resolve(e.current[t]);
+            let r = await fetch(t, { signal: n }),
+                i = await r.arrayBuffer(),
+                a = await (0, o.decodeImage)(new Uint8Array(i));
+            return (e.current[t] = a), a;
+        }
+    }, []);
 }
 o.RuntimeLoader.setWasmUrl(a);
