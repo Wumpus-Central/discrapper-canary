@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685);
+n.d(t, { default: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -14,92 +14,95 @@ var r = n(951288),
     h = n(267642),
     m = n(395199),
     g = n(719228),
-    E = n(4434),
-    b = n(981631),
-    y = n(388032),
-    O = n(252633);
-let v = (e) => {
-    let { guildBoostSlots: t, selectedGuild: n, locationSection: a, transitionState: v, onClose: I } = e,
-        T = (0, h.vx)(_.Z.boostSlots);
+    E = n(343649),
+    b = n(4434),
+    y = n(981631),
+    O = n(388032),
+    v = n(252633);
+let I = (e) => {
+    let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: I, transitionState: S, onClose: T } = e,
+        A = (0, h.vx)(_.Z.boostSlots);
     o()(null != t || null != n, "Must either provide slots or an initial selected guild"),
         o()(
             !(null == t ? void 0 : t.some((e) => e.isOnCooldown())),
             "If slots are provided, they must not be on cooldown",
         );
-    let S = [
+    let C = [
             null == t ? "UNUSED_QUANTITY_SELECT" : null,
             null == n ? "GUILD_SELECT" : null,
             "CONFIRM",
             "SUCCESS",
         ].filter((e) => null != e),
-        [A, C] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [N, R] = i.useState(S[0]),
-        [P, w] = i.useState(!1),
-        [D, x] = i.useState(n),
-        [L, M] = i.useState(null != t ? t : T.slice(0, 1)),
-        j = i.useMemo(
+        [N, R] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
+        [P, w] = i.useState(C[0]),
+        [D, x] = i.useState(!1),
+        [L, M] = i.useState(n),
+        [j, k] = i.useState(null != t ? t : A.slice(0, 1)),
+        U = i.useMemo(
             () =>
-                null == L
+                null == j
                     ? []
-                    : L.map((e) => {
-                          let { premiumGuildSubscription: t } = e;
-                          return f.Z.getGuild(null == t ? void 0 : t.guildId);
-                      }).filter((e) => null != e),
-            [L],
+                    : j
+                          .map((e) => {
+                              let { premiumGuildSubscription: t } = e;
+                              return f.Z.getGuild(null == t ? void 0 : t.guildId);
+                          })
+                          .filter((e) => null != e),
+            [j],
         ),
-        k = i.useMemo(() => {
+        G = i.useMemo(() => {
             var e;
-            return (null == L || null == (e = L[0]) ? void 0 : e.premiumGuildSubscription) != null;
-        }, [L]),
-        U = () => (
-            I("SUCCESS" === N),
-            p.default.track(b.rMx.MODAL_DISMISSED, {
-                type: b.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+            return (null == j || null == (e = j[0]) ? void 0 : e.premiumGuildSubscription) != null;
+        }, [j]),
+        B = () => (
+            T("SUCCESS" === P),
+            p.default.track(y.rMx.MODAL_DISMISSED, {
+                type: y.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                 location_section: a,
             }),
             Promise.resolve()
         ),
-        G = {
+        Z = {
             UNUSED_QUANTITY_SELECT: () => (
-                o()(null != t || 0 !== T.length, "Cannot provide no slots if there are no other available slots"),
+                o()(null != t || 0 !== A.length, "Cannot provide no slots if there are no other available slots"),
                 (0, r.jsx)(s.Modal, {
-                    transitionState: v,
-                    onClose: U,
+                    transitionState: S,
+                    onClose: B,
                     size: "md",
-                    title: y.intl.string(y.t["9FFrrT"]),
+                    title: O.intl.string(O.t["9FFrrT"]),
                     actions: [
                         {
                             variant: "secondary",
-                            text: y.intl.string(y.t["1BPTsK"]),
-                            onClick: U,
+                            text: O.intl.string(O.t["1BPTsK"]),
+                            onClick: B,
                         },
                         {
                             variant: "primary",
-                            text: y.intl.string(y.t["/uwYda"]),
-                            onClick: () => R("CONFIRM"),
+                            text: O.intl.string(O.t["/uwYda"]),
+                            onClick: () => w("CONFIRM"),
                         },
                     ],
                     children: (0, r.jsxs)("div", {
-                        className: O.quantitySelectorBody,
+                        className: v.quantitySelectorBody,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/normal",
-                                className: O.quantitySelectorDescription,
-                                children: y.intl.string(y.t.x5qw5U),
+                                className: v.quantitySelectorDescription,
+                                children: O.intl.string(O.t.x5qw5U),
                             }),
                             (0, r.jsxs)("div", {
-                                className: O.quantitySelectorWrapper,
+                                className: v.quantitySelectorWrapper,
                                 children: [
                                     (0, r.jsx)(c.FiK, {
-                                        value: L.length,
-                                        onChange: (e) => M(T.slice(0, e)),
+                                        value: j.length,
+                                        onChange: (e) => k(A.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: T.length,
+                                        maxValue: A.length,
                                     }),
                                     (0, r.jsx)(c.Text, {
-                                        className: O.quantitySelectorLabel,
+                                        className: v.quantitySelectorLabel,
                                         variant: "text-md/normal",
-                                        children: y.intl.string(y.t["Vl8TC+"]),
+                                        children: O.intl.string(O.t["Vl8TC+"]),
                                     }),
                                 ],
                             }),
@@ -109,119 +112,120 @@ let v = (e) => {
             ),
             GUILD_SELECT: () =>
                 (0, r.jsx)(g.default, {
-                    onClose: U,
+                    onClose: B,
                     onSelectGuild: (e) => {
-                        x(e), R("CONFIRM");
+                        M(e), w("CONFIRM");
                     },
-                    transitionState: v,
-                    isTransfer: k,
-                    selectedSlotGuilds: j,
+                    transitionState: S,
+                    isTransfer: G,
+                    selectedSlotGuilds: U,
                 }),
             CONFIRM() {
-                if (null == D) return null;
-                let e = L.filter((e) => (0, h.tl)(e)).length,
-                    t = L.length,
-                    n = j.length,
-                    i = "CONFIRM" === S[0] ? U : () => R(S[S.indexOf(N) - 1]),
+                if (null == L) return null;
+                let e = j.filter((e) => (0, h.tl)(e)).length,
+                    t = j.length,
+                    n = U.length,
+                    i = "CONFIRM" === C[0] ? B : () => w(C[C.indexOf(P) - 1]),
                     a = async () => {
-                        if ((w(!1), null != D && (null == L ? void 0 : L.length) !== 0)) {
+                        if ((x(!1), null != L && (null == j ? void 0 : j.length) !== 0)) {
                             o()(
-                                !L.some((e) => e.isOnCooldown()),
+                                !j.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
                             );
                             try {
                                 await Promise.all(
-                                    L.map((e) => {
+                                    j.map((e) => {
                                         let { premiumGuildSubscription: t } = e;
                                         return null != t ? (0, u.dG)(t.guildId, t.id) : Promise.resolve();
                                     }),
                                 ),
                                     await (0, u.W3)(
-                                        D.id,
-                                        L.map((e) => {
+                                        L.id,
+                                        j.map((e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
+                                        I === E.P.PERK,
                                     ),
-                                    R("SUCCESS");
+                                    w("SUCCESS");
                             } catch (e) {
-                                w(!0);
+                                x(!0);
                             }
                         }
                     },
-                    l = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
+                    l = G ? O.intl.string(O.t["PR0n//"]) : O.intl.string(O.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
-                    transitionState: v,
-                    onClose: U,
+                    transitionState: S,
+                    onClose: B,
                     size: "md",
                     title: l,
                     actions: [
                         {
                             variant: "secondary",
-                            text: y.intl.string(y.t["ETE/oC"]),
+                            text: O.intl.string(O.t["ETE/oC"]),
                             onClick: i,
                         },
                         {
                             variant: "primary",
-                            text: k
-                                ? y.intl.formatToPlainString(y.t.Oh6mxU, { slotCount: t })
-                                : y.intl.formatToPlainString(y.t.ZU5x5w, { slotCount: t }),
+                            text: G
+                                ? O.intl.formatToPlainString(O.t.Oh6mxU, { slotCount: t })
+                                : O.intl.formatToPlainString(O.t.ZU5x5w, { slotCount: t }),
                             onClick: a,
-                            loading: A,
-                            disabled: A,
+                            loading: N,
+                            disabled: N,
                         },
                     ],
-                    children: k
+                    children: G
                         ? (0, r.jsx)(m.Z.TransferBody, {
-                              fromGuilds: j,
-                              toGuild: D,
-                              blurb: y.intl.formatToPlainString(y.t.SSA2lu, {
+                              fromGuilds: U,
+                              toGuild: L,
+                              blurb: O.intl.formatToPlainString(O.t.SSA2lu, {
                                   slotCount: t,
                                   guildCount: n,
                               }),
-                              imageClass: O.transferConfirmImage,
-                              error: P ? C : null,
+                              imageClass: v.transferConfirmImage,
+                              error: D ? R : null,
                               slotCount: t,
                               canceledCount: e,
                           })
                         : (0, r.jsx)(m.Z.ApplyBody, {
-                              guild: D,
-                              blurb: y.intl.string(y.t.yTlZV0),
-                              warning: y.intl.formatToPlainString(y.t.KPnDlu, {
-                                  days: b.o3l,
+                              guild: L,
+                              blurb: O.intl.string(O.t.yTlZV0),
+                              warning: O.intl.formatToPlainString(O.t.KPnDlu, {
+                                  days: y.o3l,
                                   slotCount: t,
                               }),
-                              imageClass: O.confirmImage,
-                              error: P ? C : null,
+                              imageClass: v.confirmImage,
+                              error: D ? R : null,
                               slotCount: t,
                               canceledCount: e,
                           }),
                 });
             },
             SUCCESS() {
-                let e = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
+                let e = G ? O.intl.string(O.t["PR0n//"]) : O.intl.string(O.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
-                    transitionState: v,
-                    onClose: U,
+                    transitionState: S,
+                    onClose: B,
                     size: "md",
                     title: e,
                     actions: [],
-                    children: (0, r.jsx)(E.R7, {
-                        guild: D,
-                        isTransfer: k,
-                        guildBoostQuantity: L.length,
-                        onClose: U,
+                    children: (0, r.jsx)(b.R7, {
+                        guild: L,
+                        isTransfer: G,
+                        guildBoostQuantity: j.length,
+                        onClose: B,
                         didPurchaseOnFractionalPremium: !1,
                     }),
                 });
             },
         };
     i.useEffect(() => {
-        p.default.track(b.rMx.OPEN_MODAL, {
-            type: b.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+        p.default.track(y.rMx.OPEN_MODAL, {
+            type: y.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
             location_section: a,
         });
     }, [a]);
-    let B = G[N];
-    return null == B ? null : B();
+    let F = Z[P];
+    return null == F ? null : F();
 };

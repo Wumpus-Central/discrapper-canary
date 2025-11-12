@@ -24,8 +24,8 @@ async function p(e) {
             onSubscribeComplete: O,
             onSubscriptionConfirmation: v,
             inPopout: I,
-            applicationId: T,
-            intent: S,
+            applicationId: S,
+            intent: T,
         } = e,
         A = I ? i.u1M : i.z1l,
         C = l.Z.getPremiumTypeSubscription();
@@ -49,7 +49,7 @@ async function p(e) {
     };
     await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("24920"), n.e("26539")]).then(n.bind(n, 343649));
+            let { default: e } = await Promise.resolve().then(n.bind(n, 343649));
             return (n) => {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {
@@ -66,8 +66,8 @@ async function p(e) {
                     disablePremiumUpsell: y,
                     onSubscriptionConfirmation: v,
                     onSubscribeComplete: O,
-                    applicationId: T,
-                    intent: S,
+                    applicationId: S,
+                    intent: T,
                 });
             };
         },

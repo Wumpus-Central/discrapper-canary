@@ -94,8 +94,8 @@ async function v(e) {
             numberOfBoostsToAdd: y,
             onClose: v,
             onLoading: I,
-            closeLayer: T,
-            onSubscriptionConfirmation: S,
+            closeLayer: S,
+            onSubscriptionConfirmation: T,
             onSubscribeComplete: A,
             guild: C,
             handleSubscribeModalClose: N,
@@ -130,7 +130,7 @@ async function v(e) {
         },
         G = () => {
             null == v || v(),
-                null == T || T(),
+                null == S || S(),
                 d.default.track(p.rMx.MODAL_DISMISSED, {
                     type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: h.section,
@@ -154,6 +154,7 @@ async function v(e) {
                                 selectedGuild: C,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                                 guildBoostSlots: e,
+                                intent: D,
                             }),
                         );
                     };
@@ -176,7 +177,7 @@ async function v(e) {
             totalNumberOfSlotsToAssign: null != y ? y : 1,
             onCloseModal: U,
             disablePremiumUpsell: R,
-            onSubscriptionConfirmation: S,
+            onSubscriptionConfirmation: T,
             onSubscribeComplete: A,
             inPopout: P,
             applicationId: w,
