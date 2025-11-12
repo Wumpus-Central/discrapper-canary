@@ -94,14 +94,15 @@ function y(e) {
             tag: O = "span",
             position: v = "top",
             align: I = "center",
-            spacing: T,
-            layerContext: S,
+            spacing: S,
+            layerContext: T,
             targetElementRef: A,
             anchorRef: C,
             caretConfig: N,
             positionKey: R,
+            ariaHidden: P = !1,
         } = e,
-        P = E(e, [
+        w = E(e, [
             "children",
             "text",
             "keyboardShortcut",
@@ -116,13 +117,15 @@ function y(e) {
             "anchorRef",
             "caretConfig",
             "positionKey",
+            "ariaHidden",
         ]);
-    let w = (0, f.c)(A),
-        D = i.useId(),
-        { isVisible: x, triggerProps: L } = (0, u.l)(h({ targetElementRef: w.targetElementRef }, P)),
-        M = (0, d.Q)({ shouldShow: x }),
-        { defaultLayerContext: j } = (0, o.ZFG)(),
-        k = i.useMemo(
+    let D = (0, f.c)(A),
+        x = i.useId(),
+        { isVisible: L, triggerProps: M } = (0, u.l)(h({ targetElementRef: D.targetElementRef }, w)),
+        j = P ? void 0 : x,
+        k = (0, d.Q)({ shouldShow: L }),
+        { defaultLayerContext: U } = (0, o.ZFG)(),
+        G = i.useMemo(
             () =>
                 null != b
                     ? b
@@ -142,70 +145,72 @@ function y(e) {
                         : p,
             [p, m, b],
         );
-    if (null == k || ("string" == typeof k && "" === k)) return n;
-    let U = null != R ? R : (0, c.Sw)(p);
+    if (null == G || ("string" == typeof G && "" === G)) return n;
+    let B = null != R ? R : (0, c.Sw)(p);
     if (y) {
-        let e = g(h({}, L), {
-            onFocus: (0, c.tS)(L.onFocus, (e) => {
-                let t = e.target;
-                if (null != t) {
-                    var n;
-                    let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, D);
-                    t.setAttribute("aria-describedby", e);
-                }
-            }),
-            onBlur: (0, c.tS)(L.onBlur, (e) => {
-                let t = e.target;
-                if (null != t) {
-                    let e = t.getAttribute("aria-describedby");
-                    if (null != e) {
-                        let n = e.split(" ").filter((e) => e !== D);
-                        n.length > 0
-                            ? t.setAttribute("aria-describedby", n.join(" "))
-                            : t.removeAttribute("aria-describedby");
-                    }
-                }
-            }),
-        });
+        let e = P
+            ? M
+            : g(h({}, M), {
+                  onFocus: (0, c.tS)(M.onFocus, (e) => {
+                      let t = e.target;
+                      if (null != t) {
+                          var n;
+                          let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, x);
+                          t.setAttribute("aria-describedby", e);
+                      }
+                  }),
+                  onBlur: (0, c.tS)(M.onBlur, (e) => {
+                      let t = e.target;
+                      if (null != t) {
+                          let e = t.getAttribute("aria-describedby");
+                          if (null != e) {
+                              let n = e.split(" ").filter((e) => e !== x);
+                              n.length > 0
+                                  ? t.setAttribute("aria-describedby", n.join(" "))
+                                  : t.removeAttribute("aria-describedby");
+                          }
+                      }
+                  }),
+              });
         t = (0, c.FX)({
             tag: O,
             children: n,
             triggerHandlers: e,
-            triggerRef: w.triggerRef,
+            triggerRef: D.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, c.C9)(n, L, D, w.triggerRef);
+        t = (0, c.C9)(n, M, j, D.triggerRef);
     }
-    let G = M((e, t) =>
+    let Z = k((e, t) =>
         t
             ? (0, r.jsx)(l.N, {
-                  isVisible: x,
+                  isVisible: L,
                   isRendered: !0,
-                  targetElementRef: w.targetElementRef,
+                  targetElementRef: D.targetElementRef,
                   anchorRef: C,
-                  id: D,
-                  content: k,
+                  id: x,
+                  content: G,
                   position: v,
                   align: I,
-                  spacing: T,
+                  spacing: S,
                   caretConfig: N,
-                  layerContext: null != S ? S : j,
+                  layerContext: null != T ? T : U,
                   animationStyle: e,
-                  positionKey: U,
+                  positionKey: B,
               })
             : null,
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != k && "" !== k
-                ? (0, r.jsx)(a.n, {
-                      id: D,
-                      children: k,
-                  })
-                : null,
-            G,
+            P || null == G || "" === G
+                ? null
+                : (0, r.jsx)(a.n, {
+                      id: x,
+                      children: G,
+                  }),
+            Z,
         ],
     });
 }

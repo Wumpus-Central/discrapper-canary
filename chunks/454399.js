@@ -94,15 +94,16 @@ function O(e) {
             asContainer: O = !1,
             element: v = "span",
             position: I = "top",
-            align: T = "center",
-            spacing: S,
+            align: S = "center",
+            spacing: T,
             caretConfig: A,
             layerContext: C,
             targetElementRef: N,
             anchorRef: R,
             positionKey: P,
+            ariaHidden: w = !1,
         } = e,
-        w = b(e, [
+        D = b(e, [
             "children",
             "title",
             "body",
@@ -117,11 +118,13 @@ function O(e) {
             "targetElementRef",
             "anchorRef",
             "positionKey",
+            "ariaHidden",
         ]);
-    let D = (0, _.c)(N),
-        x = i.useId(),
-        L = null != h && ("string" != typeof h || "" !== h),
-        M = i.useMemo(
+    let x = (0, _.c)(N),
+        L = i.useId(),
+        M = w ? void 0 : L,
+        j = null != h && ("string" != typeof h || "" !== h),
+        k = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: p.richTooltipContent,
@@ -134,76 +137,78 @@ function O(e) {
                         (0, r.jsxs)("div", {
                             className: p.textContent,
                             children: [
-                                L &&
+                                j &&
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/bold",
                                         children: h,
                                     }),
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/medium",
-                                    color: L ? "text-secondary" : "text-primary",
+                                    color: j ? "text-secondary" : "text-primary",
                                     children: g,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [y, h, g, L],
+            [y, h, g, j],
         ),
-        { isVisible: j, triggerProps: k } = (0, d.l)(m({ targetElementRef: D.targetElementRef }, w)),
-        U = null != P ? P : "".concat((0, u.Sw)(null != h ? h : ""), "|").concat((0, u.Sw)(g)),
-        G = (0, f.Q)({ shouldShow: j });
+        { isVisible: U, triggerProps: G } = (0, d.l)(m({ targetElementRef: x.targetElementRef }, D)),
+        B = null != P ? P : "".concat((0, u.Sw)(null != h ? h : ""), "|").concat((0, u.Sw)(g)),
+        Z = (0, f.Q)({ shouldShow: U });
     if (O) {
-        let e = E(m({}, k), {
-            onFocus: (0, u.tS)(k.onFocus, (e) => {
-                let t = e.target;
-                if (null != t) {
-                    var n;
-                    let e = (0, u.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, x);
-                    t.setAttribute("aria-describedby", e);
-                }
-            }),
-            onBlur: (0, u.tS)(k.onBlur, (e) => {
-                let t = e.target;
-                if (null != t) {
-                    let e = t.getAttribute("aria-describedby");
-                    if (null != e) {
-                        let n = e.split(" ").filter((e) => e !== x);
-                        n.length > 0
-                            ? t.setAttribute("aria-describedby", n.join(" "))
-                            : t.removeAttribute("aria-describedby");
-                    }
-                }
-            }),
-        });
+        let e = w
+            ? G
+            : E(m({}, G), {
+                  onFocus: (0, u.tS)(G.onFocus, (e) => {
+                      let t = e.target;
+                      if (null != t) {
+                          var n;
+                          let e = (0, u.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, L);
+                          t.setAttribute("aria-describedby", e);
+                      }
+                  }),
+                  onBlur: (0, u.tS)(G.onBlur, (e) => {
+                      let t = e.target;
+                      if (null != t) {
+                          let e = t.getAttribute("aria-describedby");
+                          if (null != e) {
+                              let n = e.split(" ").filter((e) => e !== L);
+                              n.length > 0
+                                  ? t.setAttribute("aria-describedby", n.join(" "))
+                                  : t.removeAttribute("aria-describedby");
+                          }
+                      }
+                  }),
+              });
         t = (0, u.FX)({
             tag: v,
             children: n,
             triggerHandlers: e,
-            triggerRef: D.triggerRef,
+            triggerRef: x.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, u.C9)(n, k, x, D.triggerRef);
+        t = (0, u.C9)(n, G, M, x.triggerRef);
     }
-    let B = G((e, t) =>
+    let F = Z((e, t) =>
         t
             ? (0, r.jsx)(c.pn, {
                   isRichTooltip: !0,
                   children: (0, r.jsx)(l.N, {
-                      isVisible: j,
+                      isVisible: U,
                       isRendered: !0,
-                      targetElementRef: D.targetElementRef,
+                      targetElementRef: x.targetElementRef,
                       anchorRef: R,
-                      id: x,
-                      content: M,
+                      id: L,
+                      content: k,
                       position: I,
-                      align: T,
-                      spacing: S,
+                      align: S,
+                      spacing: T,
                       caretConfig: A,
                       layerContext: null != C ? C : s.nz,
                       animationStyle: e,
-                      positionKey: U,
+                      positionKey: B,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
@@ -212,13 +217,13 @@ function O(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != M
-                ? (0, r.jsx)(a.n, {
-                      id: x,
-                      children: M,
-                  })
-                : null,
-            B,
+            w || null == k
+                ? null
+                : (0, r.jsx)(a.n, {
+                      id: L,
+                      children: k,
+                  }),
+            F,
         ],
     });
 }

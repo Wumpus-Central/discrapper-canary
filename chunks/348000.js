@@ -86,9 +86,27 @@ let h = {
             id: "tooltip",
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
-                var { text: t, position: n, align: o, caretAlign: l, customOffset: c, delay: d, spacing: p } = e,
-                    h = _(e, ["text", "position", "align", "caretAlign", "customOffset", "delay", "spacing"]);
-                let m = i.useMemo(() => {
+                var {
+                        text: t,
+                        position: n,
+                        align: o,
+                        caretAlign: l,
+                        customOffset: c,
+                        delay: d,
+                        spacing: p,
+                        ariaHidden: h,
+                    } = e,
+                    m = _(e, [
+                        "text",
+                        "position",
+                        "align",
+                        "caretAlign",
+                        "customOffset",
+                        "delay",
+                        "spacing",
+                        "ariaHidden",
+                    ]);
+                let g = i.useMemo(() => {
                     if ("center" !== l && null != l)
                         return "custom" === l
                             ? {
@@ -107,9 +125,10 @@ let h = {
                                 align: o,
                                 delay: d,
                                 spacing: p,
-                                caretConfig: m,
+                                caretConfig: g,
+                                ariaHidden: h,
                             },
-                            h,
+                            m,
                         ),
                         {
                             children: (0, r.jsx)(a.Button, {
@@ -218,6 +237,11 @@ let h = {
                     label: "Keyboard Shortcut",
                     type: "text",
                     defaultValue: "mod+k",
+                },
+                ariaHidden: {
+                    label: "Aria Hidden",
+                    type: "boolean",
+                    defaultValue: !1,
                 },
             },
         },

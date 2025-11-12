@@ -91,9 +91,9 @@ function c(e, t, n, i) {
             onBlur: s(a.onBlur, t.onBlur),
             onContextMenu: s(a.onContextMenu, t.onContextMenu),
             onClick: s(a.onClick, t.onClick),
-            "aria-describedby": o(a["aria-describedby"], n),
         };
-    if ("string" == typeof e.type) d.ref = u;
+    if ((null != n && "" !== n && (d["aria-describedby"] = o(a["aria-describedby"], n)), "string" == typeof e.type))
+        d.ref = u;
     else if ("buttonRef" in e.props) {
         let t = e.props.buttonRef;
         (d.buttonRef = (e) => {
