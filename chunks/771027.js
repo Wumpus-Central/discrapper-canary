@@ -1,7 +1,7 @@
 n.d(t, {
-    Lb: () => f,
-    Tu: () => m,
-    j1: () => h,
+    Tu: () => g,
+    UM: () => m,
+    j1: () => f,
 }),
     n(388685),
     n(387201),
@@ -12,30 +12,31 @@ var i = n(647438),
     a = n(71133),
     o = n(752048),
     s = n(271383),
-    c = n(19780),
-    u = n(594174),
-    d = n(938475),
-    p = n(823379);
-function h(e) {
+    c = n(594174),
+    u = n(938475),
+    d = n(823379),
+    p = n(406463),
+    h = n(78332);
+function f(e) {
     let { channel: t } = e,
         n = (0, r.e7)([o.Z], () => o.Z.getUserAffinitiesMap(), []),
         l = null == t ? void 0 : t.guild_id,
         a = new Set(
-            (0, r.e7)([d.ZP], () => (null == t ? [] : d.ZP.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
+            (0, r.e7)([u.ZP], () => (null == t ? [] : u.ZP.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        c = (0, r.e7)(
-            [s.ZP, u.default],
+        p = (0, r.e7)(
+            [s.ZP, c.default],
             () =>
                 s.ZP.getMembers(l)
-                    .map((e) => u.default.getUser(e.userId))
-                    .filter(p.lm)
+                    .map((e) => c.default.getUser(e.userId))
+                    .filter(d.lm)
                     .filter((e) => !a.has(e.id)),
             [l, a],
         );
     return i
         .useMemo(
             () =>
-                c.toSorted((e, t) => {
+                p.toSorted((e, t) => {
                     var i, r, l, a;
                     let { id: o } = e,
                         { id: s } = t;
@@ -44,35 +45,25 @@ function h(e) {
                         (null != (a = null == (r = n.get(o)) ? void 0 : r.vcProbability) ? a : 0)
                     );
                 }),
-            [c, n],
+            [p, n],
         )
         .slice(0, 5);
 }
-function f(e) {
-    let [t, n] = i.useState(!1),
-        { enabled: l } = (0, a.o)({
+function m(e) {
+    let { enabled: t } = (0, a.o)({
             autoTrackExposure: !1,
             guildId: e.guild_id,
-            location: "VoiceUsers",
+            location: "VoiceInviteSuggestionsUtils",
         }),
-        o = (0, r.e7)([c.Z], () => {
-            let t = c.Z.getChannelId();
-            return c.Z.isConnected() && t === e.id;
-        }, [e.id]),
-        s = i.useCallback(() => {
-            n(!0);
-        }, []);
-    return (
-        i.useEffect(() => {
-            o || n(!1);
-        }, [o]),
-        {
-            shouldShow: l && o && !t,
-            dismiss: s,
-        }
-    );
+        n = (0, r.e7)([h.Z], () => h.Z.getShouldShowPopover(e.id), [e.id]);
+    return {
+        shouldShow: t && n,
+        dismiss: i.useCallback(() => {
+            (0, p.o)(e.id);
+        }, [e]),
+    };
 }
-function m(e) {
+function g(e) {
     let [t, n] = i.useState(!1),
         [a, o] = i.useState(!1),
         s = (0, r.e7)([l.Z], () => l.Z.keyboardModeEnabled);
