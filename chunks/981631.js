@@ -3480,6 +3480,7 @@ var tV = (function (e) {
             (e.VOICE_CHANNEL = "Voice Channel"),
             (e.STREAM = "Stream"),
             (e.SERVER_PROFILE = "Server Profile"),
+            (e.VOICE_INVITE_SUGGESTIONS = "Voice Invite Suggestions"),
             e
         );
     })({}),
