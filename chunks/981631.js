@@ -3687,6 +3687,7 @@ var t$ = (function (e) {
             (e.EMBEDDED = "embedded"),
             (e.PS4 = "ps4"),
             (e.PS5 = "ps5"),
+            (e.META_QUEST = "meta_quest"),
             e
         );
     })({}),

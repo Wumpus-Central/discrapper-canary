@@ -17,7 +17,15 @@ var r = n(647438),
             e
         );
     })({});
-i.M7m.DESKTOP, i.M7m.ANDROID, i.M7m.IOS, i.M7m.XBOX, i.M7m.PS4, i.M7m.PS5, i.M7m.SAMSUNG, i.M7m.EMBEDDED;
+i.M7m.DESKTOP,
+    i.M7m.ANDROID,
+    i.M7m.IOS,
+    i.M7m.XBOX,
+    i.M7m.PS4,
+    i.M7m.PS5,
+    i.M7m.SAMSUNG,
+    i.M7m.EMBEDDED,
+    i.M7m.META_QUEST;
 let o = [];
 function s(e) {
     let { platforms: t, currentPlatform: n } = e,
@@ -33,6 +41,7 @@ function s(e) {
           (r.has(i.M7m.PS4) || r.has(i.M7m.PS5)) && a.push("playstation"),
           r.has(i.M7m.XBOX) && a.push("xbox"),
           r.has(i.M7m.DESKTOP) && a.push("desktop"),
+          r.has(i.M7m.META_QUEST) && a.push("mobile"),
           a);
 }
 function l(e) {
