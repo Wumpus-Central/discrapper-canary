@@ -11,6 +11,7 @@ e.exports = {
     username: "username__2af41",
     inviteButton: "inviteButton__2af41",
     inviteButtonWrapper: "inviteButtonWrapper__2af41",
+    inviteButtonSubtle: "inviteButtonSubtle__2af41",
     inviteButtonInner: "inviteButtonInner__2af41",
     liveIndicator: "liveIndicator__2af41",
     badgesContainer: "badgesContainer__2af41",

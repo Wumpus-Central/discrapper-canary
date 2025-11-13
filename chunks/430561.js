@@ -85,7 +85,7 @@ function R(e) {
         i = (0, s.e7)([p.Z], () => p.Z.getWidget(n), [n]),
         a = C(i, N),
         o = () =>
-            (0, E.Q)((0, b.P)(), O.t["1XA04X"], O.intl.string(O.t.uZZGzf), {
+            (0, E.QR)((0, b.Pb)(), O.t["1XA04X"], O.intl.string(O.t.uZZGzf), {
                 useFlexboxLayout: !0,
                 highlightAdminWarningIfElevated: !1,
                 keybindClassName: v.keybind,

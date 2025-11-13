@@ -10,26 +10,26 @@ var r = n(481060),
     o = n(522474),
     a = n(556296),
     s = n(13140),
-    u = n(44359),
-    c = n(624864),
+    c = n(44359),
+    u = n(624864),
     d = n(620954),
-    p = n(987650),
-    h = n(981631),
+    h = n(987650),
+    p = n(981631),
     f = n(388032);
 function m() {
-    if (c.Z.isNotificationDisabled(p.n0.ClipsReminderNotification) || o.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT))
+    if (u.Z.isNotificationDisabled(h.n0.ClipsReminderNotification) || o.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT))
         return null;
-    let { trackView: e, trackClick: t } = (0, d.R)(p.n0.ClipsReminderNotification, {
-            notif_type: p.n0.ClipsReminderNotification,
+    let { trackView: e, trackClick: t } = (0, d.Rg)(h.n0.ClipsReminderNotification, {
+            notif_type: h.n0.ClipsReminderNotification,
         }),
-        n = a.ZP.getKeybindForAction(h.kg4.SAVE_CLIP),
+        n = a.ZP.getKeybindForAction(p.kg4.SAVE_CLIP),
         m = l.Z.getSettings().clipsEnabled;
     if (null == n || !m) return null;
     let g = s.BB(n.shortcut, !0);
     return {
         title: f.intl.format(f.t.S5uhCN, {
             keybind: g,
-            keybindHook: (e, t) => (0, i.jsx)(u.t, { keybind: g.split("+") }, t),
+            keybindHook: (e, t) => (0, i.jsx)(c.t, { keybind: g.split("+") }, t),
         }),
         icon: (0, i.jsx)(r.AlX, {
             size: "lg",
@@ -44,7 +44,7 @@ function m() {
     };
 }
 function g(e) {
-    let { trackView: t, trackClick: n } = (0, d.R)(p.n0.ClipsNotification, { notif_type: p.n0.ClipsNotification });
+    let { trackView: t, trackClick: n } = (0, d.Rg)(h.n0.ClipsNotification, { notif_type: h.n0.ClipsNotification });
     return {
         title: e,
         icon: (0, i.jsx)(r.AlX, {

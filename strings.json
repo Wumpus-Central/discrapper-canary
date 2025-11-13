@@ -14039,6 +14039,7 @@
   "PIeSHF": "Keybinds disabled — requires admin privileges",
   "MVS9pV": "Keybinds are disabled. Visit [Overlay Settings](Overlay Settings).",
   "uFcReq": "!!{nick}!! joined voice",
+  "mRbUco": "$[!!{keybind}!!]({{keybindHook}}) to customize",
   "gnKWdS": "Notifications",
   "O1Nbjq": "Any notifications you receive while in game will go here.",
   "q7/rgv": "**!!{username}!!** started playing $[]({{gameIcon}}) **!!{gameName}!!**",

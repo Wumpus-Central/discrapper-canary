@@ -1,6 +1,7 @@
 n.d(t, {
-    P: () => m,
-    R: () => h,
+    Pb: () => g,
+    Rg: () => h,
+    wq: () => m,
 }),
     n(35282);
 var r = n(13245),
@@ -86,5 +87,8 @@ function h(e, t) {
 }
 function m() {
     let e = i.ZP.getOverlayKeybind();
-    return null != e ? (0, o.BB)(e.shortcut, !0).split(" + ") : ["???"];
+    return null != e ? (0, o.BB)(e.shortcut, !0) : "???";
+}
+function g() {
+    return m().split(" + ");
 }

@@ -1,5 +1,6 @@
 n.d(t, {
-    F3: () => D,
+    F3: () => x,
+    KK: () => w,
     NW: () => d,
     OV: () => l,
     RD: () => y,
@@ -346,6 +347,23 @@ function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function D() {
-    v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), P("OVERLAY_INITIALIZED");
+let D = (0, a.B)({
+    id: "2025-11_overlay_welcome_notification",
+    label: "Overlay Welcome Notification",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: "Modular Experience",
+            config: { enabled: !0 },
+        },
+    ],
+});
+function w(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return D.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+}
+function x() {
+    v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), P("OVERLAY_INITIALIZED"), w("OVERLAY_INITIALIZED");
 }

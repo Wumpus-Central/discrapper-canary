@@ -1,4 +1,7 @@
-n.d(t, { Q: () => m });
+n.d(t, {
+    Ae: () => g,
+    QR: () => m,
+});
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -19,7 +22,7 @@ function m(e, t, n) {
         useFlexboxLayout: a,
         keybindClassName: o,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    return (0, r.jsx)(g, {
+    return (0, r.jsx)(E, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
@@ -28,7 +31,23 @@ function m(e, t, n) {
         keybindClassName: o,
     });
 }
-function g(e) {
+let g = (e, t) =>
+    (0, r.jsx)(r.Fragment, {
+        children: p.intl.format(t, {
+            keybind: e,
+            keybindHook: (t, n) =>
+                (0, r.jsx)(
+                    a.M2$,
+                    {
+                        shortcut: e,
+                        className: h.keyCombo,
+                        keyClassName: h.keyComboKey,
+                    },
+                    n,
+                ),
+        }),
+    });
+function E(e) {
     let {
             keybind: t,
             message: n,

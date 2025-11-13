@@ -85443,6 +85443,15 @@ span.clanTag__07f91.isOverlay__07f91 {
     width: fit-content
 }
 
+.keyCombo_cbf20c {
+    vertical-align: middle
+}
+
+.keyCombo_cbf20c,
+.keyComboKey_cbf20c {
+    display: inline-block
+}
+
 .bgShade__6d791 {
     background-color: rgba(19, 19, 24, .9);
     border: 1px solid hsla(0, 0%, 100%, .08);
