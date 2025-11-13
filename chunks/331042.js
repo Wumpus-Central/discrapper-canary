@@ -3,8 +3,8 @@ var o = n(951288);
 n(647438);
 var s = n(238651),
     a = n(979554),
-    r = n(793030),
-    l = n(481060),
+    l = n(793030),
+    r = n(481060),
     i = n(100527),
     c = n(906732),
     u = n(347896),
@@ -33,11 +33,12 @@ let O = (t) => {
             overrideDescription: k,
             shouldShowPromotionalExperience: y,
             purchaseType: w = m.o8.FIAT,
+            overrideGraphic: P,
         } = t,
-        P = (0, p.o)(n),
-        S = (0, Z.W)(n, P),
-        { analyticsLocations: b } = (0, c.ZP)([...R, i.Z.COLLECTIBLES_COLLECTED_MODAL]),
-        { hasRequiredProductItems: g } = ((t) => {
+        S = (0, p.o)(n),
+        b = (0, Z.W)(n, S),
+        { analyticsLocations: g } = (0, c.ZP)([...R, i.Z.COLLECTIBLES_COLLECTED_MODAL]),
+        { hasRequiredProductItems: N } = ((t) => {
             let { firstProfileEffect: e, firstAvatarDecoration: n, firstNameplate: o } = (0, f.Rj)(t),
                 s = (0, C.x6)(t);
             return {
@@ -47,8 +48,8 @@ let O = (t) => {
                 isBundle: s,
                 hasRequiredProductItems: s ? (0, L.N)(t) : null != n || null != e || null != o,
             };
-        })(S),
-        { promotionalRewardCollectedText: N, openProfileSettings: D } = ((t) => {
+        })(b),
+        { promotionalRewardCollectedText: D, openProfileSettings: F } = ((t) => {
             var e;
             let n = (0, u.Z)(),
                 o = (0, d.Z)({ analyticsLocations: t });
@@ -58,89 +59,93 @@ let O = (t) => {
                     null == n || null == (e = n.giftPurchaseConfirmation) ? void 0 : e.rewardCollectedText(),
                 openProfileSettings: o,
             };
-        })(b),
+        })(g),
         {
-            environment: F,
-            modalRef: M,
-            confettiCanvas: B,
-            setConfettiCanvas: V,
-            customConfettiDisplayOptions: W,
-        } = (0, A.$0)(S, w),
-        G = (0, _.kd)(S);
-    (0, A.f1)(S, b);
-    let { handleUseNow: X, isApplying: $ } = (0, E.W)({
-            product: S,
+            environment: M,
+            modalRef: B,
+            confettiCanvas: V,
+            setConfettiCanvas: W,
+            customConfettiDisplayOptions: G,
+        } = (0, A.$0)(b, w),
+        X = (0, _.kd)(b);
+    (0, A.f1)(b, g);
+    let { handleUseNow: $, isApplying: q } = (0, E.W)({
+            product: b,
             onSuccess: O,
             onError: O,
         }),
-        q = (0, A.Xw)({
-            product: S,
+        H = (0, A.Xw)({
+            product: b,
             overrideTitle: j,
             isVariantsGroupEnabled: !0,
             shouldShowPromotionalExperience: y,
-            productName: G,
+            productName: X,
         }),
-        H = (0, A.ys)({
-            product: S,
+        K = (0, A.ys)({
+            product: b,
             overrideDescription: k,
-            productName: G,
+            productName: X,
             shouldShowPromotionalExperience: y,
-            promotionalRewardCollectedText: N,
+            promotionalRewardCollectedText: D,
         }),
-        K = (0, A.cf)({
-            product: S,
+        U = (0, A.cf)({
+            product: b,
             onClose: O,
-            analyticsLocations: b,
-            hasRequiredProductItems: g,
-            handleUseNow: X,
-            isApplying: $,
-            openProfileSettings: D,
+            analyticsLocations: g,
+            hasRequiredProductItems: N,
+            handleUseNow: $,
+            isApplying: q,
+            openProfileSettings: F,
         }),
-        U = "6/4";
-    switch (S.type) {
+        z = "6/4";
+    switch (b.type) {
         case a.Z.NAMEPLATE:
         case a.Z.AVATAR_DECORATION:
-            U = "16/9";
+            z = "16/9";
             break;
         case a.Z.BUNDLE:
         case a.Z.PROFILE_EFFECT:
         default:
-            U = "6/4";
+            z = "6/4";
     }
-    let { confettiColors: z } = (0, v.Z)(S.styles);
+    let { confettiColors: J } = (0, v.Z)(b.styles),
+        Q =
+            null != P
+                ? P
+                : {
+                      type: "dynamic",
+                      component: r.AX$.COLLECTIBLES_PREVIEW,
+                      aspectRatio: z,
+                      props: {
+                          product: b,
+                          forCollectedModal: !0,
+                      },
+                  };
     return (0, o.jsx)(c.Gt, {
-        value: b,
+        value: g,
         children: (0, o.jsxs)("div", {
-            ref: M,
+            ref: B,
             children: [
                 (0, o.jsx)(s.O_, {
-                    ref: V,
+                    ref: W,
                     className: I.confettiCanvas,
-                    environment: F,
+                    environment: M,
                 }),
-                (0, o.jsx)(r.ExpressiveModal, {
-                    graphic: {
-                        type: "dynamic",
-                        component: l.AX$.COLLECTIBLES_PREVIEW,
-                        aspectRatio: U,
-                        props: {
-                            product: S,
-                            forCollectedModal: !0,
-                        },
-                    },
-                    title: q,
-                    subtitle: null != H ? H : void 0,
+                (0, o.jsx)(l.ExpressiveModal, {
+                    graphic: Q,
+                    title: H,
+                    subtitle: null != K ? K : void 0,
                     onClose: O,
                     transitionState: e,
-                    actions: K,
+                    actions: U,
                 }),
-                null != W
-                    ? (0, o.jsx)(T.i, { options: W })
+                null != G
+                    ? (0, o.jsx)(T.i, { options: G })
                     : (0, o.jsx)(x.Z, {
-                          confettiTarget: M.current,
-                          confettiCanvas: B,
-                          sprites: (0, h.vK)(S.categorySkuId),
-                          colors: null == z ? void 0 : z.map((t) => t.toHexString()),
+                          confettiTarget: B.current,
+                          confettiCanvas: V,
+                          sprites: (0, h.vK)(b.categorySkuId),
+                          colors: null == J ? void 0 : J.map((t) => t.toHexString()),
                       }),
             ],
         }),

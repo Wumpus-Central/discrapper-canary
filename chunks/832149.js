@@ -42,6 +42,7 @@ let l = (e) => {
         onCloseCallback: d,
         itemConsumed: f,
         purchaseType: _ = a.o8.FIAT,
+        overrideGraphic: p,
     } = e;
     (0, i.ZDy)(
         async () => {
@@ -75,6 +76,7 @@ let l = (e) => {
                             overrideDescription: c,
                             shouldShowPromotionalExperience: u,
                             purchaseType: _,
+                            overrideGraphic: p,
                         },
                         n,
                     ),
