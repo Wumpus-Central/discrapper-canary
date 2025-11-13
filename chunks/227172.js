@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(31074),
     R = n(206295),
     P = n(91140),
-    w = n(297781),
-    D = n(591853),
+    D = n(297781),
+    w = n(591853),
     x = n(410441),
     L = n(797342),
     M = n(981631),
@@ -68,7 +68,7 @@ let k = {
             eo = ei === a.z.XBOX ? M.ABu.XBOX : ei === a.z.PLAYSTATION ? M.ABu.PLAYSTATION : void 0,
             es = (0, N.Z)(eo),
             { data: el } = (0, m.IX)(y.extra.application_id),
-            ec = (0, d.q)(el, "MemberListGamingContentPopout"),
+            ec = (0, d.q)(el),
             eu = (0, g.L)(
                 null !=
                     (n = null != (t = null == K ? void 0 : K.application_id) ? t : null == z ? void 0 : z.applicationId)
@@ -102,13 +102,13 @@ let k = {
                 [null == V ? void 0 : V.src, b, ee, y, Q, er, et, en, q, X, H],
             );
         if (null == H) return null;
-        let ef = (0, r.jsx)(w.Gk, {
-                location: null == J ? w.Gt.POPOUT : w.Gt.STREAMING_POPOUT,
+        let ef = (0, r.jsx)(D.Gk, {
+                location: null == J ? D.Gt.POPOUT : D.Gt.STREAMING_POPOUT,
                 children: P.W.map((e, t) => (0, r.jsx)(e, { entry: y }, t)),
             }),
             e_ =
                 null == $
-                    ? (0, r.jsx)(D.wG, {
+                    ? (0, r.jsx)(w.wG, {
                           channel: b,
                           headerIcons:
                               null == ea
@@ -127,7 +127,7 @@ let k = {
                           onUserPopoutClosed: Z,
                           trackRankingItemInteraction: F,
                       })
-                    : (0, r.jsx)(D.jL, {
+                    : (0, r.jsx)(w.jL, {
                           channel: b,
                           title: y.extra.game_name,
                           subtitle: Y,
@@ -177,11 +177,11 @@ let k = {
                     : null,
                 ep,
             ].filter(O.lm);
-        return (0, r.jsxs)(D.yR, {
+        return (0, r.jsxs)(w.yR, {
             children: [
                 e_,
-                (0, r.jsx)(D.St, {
-                    children: (0, r.jsx)(D.WT, {
+                (0, r.jsx)(w.St, {
+                    children: (0, r.jsx)(w.WT, {
                         onReaction: G,
                         onVoiceChannelPreview: B,
                         user: H,

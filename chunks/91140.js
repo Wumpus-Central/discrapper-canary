@@ -27,7 +27,7 @@ let E = [_.OV, _.EE, _.Af, _.U9, _.wO, _.f, _.n8, _.v1, _.pQ],
                 showCoverImage: !1,
             }),
             { data: I } = (0, l.IX)(n.extra.application_id),
-            T = (0, s.q)(I, "MemberListGamingContent") && O,
+            T = (0, s.q)(I) && O,
             S = T ? [a.z.CLOUD_PLAY_NEW_BADGE] : [],
             [A] = (0, u.US)(S),
             C = T;
