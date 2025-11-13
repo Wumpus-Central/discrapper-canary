@@ -506,18 +506,16 @@ function z(e) {
             }
             return null;
         }),
-        M = (0, N.nP)({ location: "Search" }),
-        U = (0, N.KS)({ location: "Search" }),
-        F = M || U,
-        V = (0, C.UX)({ location: "Search" }),
-        H = i.useMemo(
+        M = (0, N.k)({ location: "Search" }),
+        U = (0, C.UX)({ location: "Search" }),
+        F = i.useMemo(
             () =>
                 t.type === B.aib.DMS
                     ? Z.intl.string(Z.t.m7OrlR)
-                    : (t.type === B.aib.CHANNEL && V) || F
+                    : (t.type === B.aib.CHANNEL && U) || M
                       ? Z.intl.formatToPlainString(Z.t.LDZtFO, { name: L })
                       : Z.intl.string(Z.t["5h0QOP"]),
-            [t.type, V, F, L],
+            [t.type, U, M, L],
         );
     return (0, r.jsx)(K, {
         className: n,
@@ -528,8 +526,8 @@ function z(e) {
         keyboardModeEnabled: o,
         onSearch: D,
         isSearchActive: I,
-        placeholder: H,
-        isSearchFiltersRedesignEnabled: F,
+        placeholder: F,
+        isSearchFiltersRedesignEnabled: M,
     });
 }
 function q(e) {
