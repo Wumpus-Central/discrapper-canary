@@ -1,4 +1,4 @@
-n.d(t, { W: () => a });
+n.d(t, { W: () => a }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(561779);
@@ -17,15 +17,20 @@ let a = {
                         stickToMarkers: s,
                         disabled: l,
                         equidistant: c,
+                        label: u,
+                        description: d,
                     } = e,
-                    u = o > 0 ? Array.from({ length: o }, (e, r) => Math.floor(t + (r / (o - 1)) * (n - t))) : void 0;
+                    f = o > 0 ? Array.from({ length: o }, (e, r) => Math.floor(t + (r / (o - 1)) * (n - t))) : void 0;
                 return (0, r.jsx)(
                     i.i,
                     {
+                        label: u,
+                        description: d,
+                        layout: "horizontal-responsive",
                         minValue: t,
                         maxValue: n,
                         initialValue: a,
-                        markers: u,
+                        markers: f,
                         stickToMarkers: s,
                         disabled: l,
                         equidistant: c,
@@ -34,6 +39,16 @@ let a = {
                 );
             },
             controls: {
+                label: {
+                    type: "text",
+                    label: "Label",
+                    defaultValue: "This is a slider",
+                },
+                description: {
+                    type: "text",
+                    label: "Description",
+                    defaultValue: "This is a description of the slider",
+                },
                 minValue: {
                     type: "number",
                     label: "Min Value",

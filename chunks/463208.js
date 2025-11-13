@@ -281,7 +281,7 @@ function T(e) {
         s.gNt,
         E(m({}, k), {
             errorMessage: U.hasError && null != (t = U.errorMessage) ? t : void 0,
-            trailingContent: X,
+            trailingAuxiliaryContent: X,
             children: (0, r.jsxs)(s.UPk, {
                 ref: W,
                 disabled: n,

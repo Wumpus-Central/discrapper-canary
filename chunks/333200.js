@@ -1,11 +1,12 @@
-n.d(t, { V: () => p }), n(953529);
+n.d(t, { V: () => h });
 var r = n(951288);
 n(647438);
-var i = n(496600),
-    a = n(713072),
-    o = n(345729),
-    s = n(680765);
-function l(e, t, n) {
+var i = n(793030),
+    a = n(496600),
+    o = n(713072),
+    s = n(345729),
+    l = n(680765);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,22 +47,22 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +70,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,89 +79,63 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
-    var {
-            label: t,
-            hideLabel: n,
-            hideTags: l,
-            placeholder: u,
-            description: _,
-            helperText: p,
-            errorMessage: h,
-            successMessage: m,
-            wrapTags: g,
-            maxOptionsVisible: E = 5,
-        } = e,
-        b = f(e, [
-            "label",
-            "hideLabel",
-            "hideTags",
-            "placeholder",
-            "description",
-            "helperText",
-            "errorMessage",
-            "successMessage",
-            "wrapTags",
-            "maxOptionsVisible",
-        ]);
-    let { disabled: y, required: O, onQueryChange: v, onKeyDown: I, onFocus: T, onBlur: S } = b,
+function h(e) {
+    var { hideTags: t, wrapTags: n, maxOptionsVisible: c = 5 } = e,
+        d = _(e, ["hideTags", "wrapTags", "maxOptionsVisible"]);
+    let { fieldProps: p } = (0, i.XF_)(d),
+        { disabled: h, required: m, onQueryChange: g, onKeyDown: E, onFocus: b, onBlur: y, placeholder: O } = d,
         {
-            isOpen: A,
-            setIsOpen: C,
-            refs: N,
-            floatingStyles: R,
-            getFloatingProps: P,
-            getReferenceProps: D,
-            transitionStyles: w,
-        } = (0, o.C)();
+            isOpen: v,
+            setIsOpen: I,
+            refs: T,
+            floatingStyles: S,
+            getFloatingProps: A,
+            getReferenceProps: C,
+            transitionStyles: N,
+        } = (0, s.C)();
     return (0, r.jsxs)(
-        i.uz,
-        d(c({}, b), {
+        a.uz,
+        f(u({}, d), {
             isCollapsible: !0,
-            isOpen: A,
-            setIsOpen: C,
+            isOpen: v,
+            setIsOpen: I,
             children: [
                 (0, r.jsx)(
-                    i.Ct,
-                    c(
+                    a.Ct,
+                    u(
                         {
-                            label: t,
-                            hideLabel: n,
-                            hideTags: l,
-                            placeholder: u,
-                            required: O,
-                            disabled: y,
-                            description: _,
-                            helperText: p,
-                            errorMessage: h,
-                            successMessage: m,
-                            wrapTags: g,
-                            onBlur: S,
-                            onQueryChange: v,
-                            onFocus: T,
-                            onKeyDown: I,
+                            hideTags: t,
+                            required: m,
+                            disabled: h,
+                            wrapTags: n,
+                            onBlur: y,
+                            onQueryChange: g,
+                            onFocus: b,
+                            onKeyDown: E,
                             showChevronButton: !0,
-                            ref: N.setReference,
+                            ref: T.setReference,
+                            placeholder: O,
                         },
-                        D(),
+                        p,
+                        C(),
                     ),
                 ),
-                A &&
+                v &&
                     (0, r.jsx)(
                         "div",
-                        d(
-                            c(
+                        f(
+                            u(
                                 {
-                                    ref: N.setFloating,
-                                    className: s.selectDropdown,
-                                    style: c({}, R, w),
+                                    ref: T.setFloating,
+                                    className: l.selectDropdown,
+                                    style: u({}, S, N),
                                 },
-                                P(),
+                                A(),
                             ),
                             {
-                                children: (0, r.jsx)(i.px, {
-                                    renderListItem: (e) => (0, r.jsx)(a.W, c({}, e)),
-                                    maxVisibleItems: E,
+                                children: (0, r.jsx)(a.px, {
+                                    renderListItem: (e) => (0, r.jsx)(o.W, u({}, e)),
+                                    maxVisibleItems: c,
                                 }),
                             },
                         ),

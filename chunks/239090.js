@@ -9,26 +9,17 @@ let o = {
             id: "baseSwitch",
             name: "BaseSwitch",
             component: function (e) {
-                let {
-                        disabled: t,
-                        hasIcon: n,
-                        label: o,
-                        description: s,
-                        helperText: l,
-                        required: c,
-                        errorMessage: u,
-                    } = e,
-                    [d, f] = i.useState(!1);
+                let { disabled: t, hasIcon: n, label: o, description: s, required: l, errorMessage: c } = e,
+                    [u, d] = i.useState(!1);
                 return (0, r.jsx)(a.kcT, {
                     label: o,
                     description: s,
-                    helperText: l,
-                    required: c,
-                    errorMessage: u,
+                    required: l,
+                    errorMessage: c,
                     hasIcon: n,
-                    onChange: f,
+                    onChange: d,
                     disabled: t,
-                    checked: d,
+                    checked: u,
                 });
             },
             controls: {
@@ -47,11 +38,6 @@ let o = {
                     label: "Description",
                     defaultValue:
                         "Make links to websites, help articles, and other pages stand out more by underlining them.",
-                },
-                helperText: {
-                    type: "text",
-                    label: "Helper Text",
-                    defaultValue: "",
                 },
                 required: {
                     type: "boolean",

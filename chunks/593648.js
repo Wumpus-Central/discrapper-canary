@@ -385,9 +385,8 @@ class Q extends i.PureComponent {
                         setting: U.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                         children: (0, r.jsx)(u.rsf, {
                             label: F.intl.string(F.t["/0WCll"]),
-                            description: F.intl.string(F.t.wF9ih3),
                             checked: e !== G.qrD.NEVER && !c,
-                            helperText: c ? F.intl.string(F.t.cIRG0s) : void 0,
+                            description: c ? F.intl.string(F.t.cIRG0s) : F.intl.string(F.t.wF9ih3),
                             onChange: this.handleDesktopChange,
                             disabled: c,
                         }),

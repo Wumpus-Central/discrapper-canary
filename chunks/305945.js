@@ -151,6 +151,8 @@ function R(e) {
         E(m({}, y), {
             disabled: a,
             layout: "horizontal",
+            layoutConfig: { horizontalControlColumnWidth: "auto" },
+            auxiliaryContentPosition: "under-label",
             children: (e) =>
                 (0, r.jsx)(
                     f.tE,

@@ -276,16 +276,15 @@ let g = [
                         label: "Hide Label",
                         defaultValue: !1,
                     },
+                    placeholder: {
+                        type: "text",
+                        label: "Placeholder",
+                        defaultValue: void 0,
+                    },
                     description: {
                         type: "text",
                         label: "Description",
                         defaultValue: "This is an example description",
-                    },
-                    helperText: {
-                        type: "text",
-                        label: "Helper Text",
-                        defaultValue:
-                            "This is an example of helper text, which can be used to provide additional information about the field.",
                     },
                     errorMessage: {
                         type: "text",
@@ -296,6 +295,25 @@ let g = [
                         type: "text",
                         label: "Success Message",
                         defaultValue: "",
+                    },
+                    layout: {
+                        type: "select",
+                        label: "Layout",
+                        defaultValue: "vertical",
+                        options: [
+                            {
+                                label: "Vertical",
+                                value: "vertical",
+                            },
+                            {
+                                label: "Horizontal",
+                                value: "horizontal",
+                            },
+                            {
+                                label: "Horizontal (Responsive)",
+                                value: "horizontal-responsive",
+                            },
+                        ],
                     },
                 },
             },
@@ -399,6 +417,11 @@ let g = [
                         label: "Hide Label",
                         defaultValue: !1,
                     },
+                    placeholder: {
+                        type: "text",
+                        label: "Placeholder",
+                        defaultValue: void 0,
+                    },
                     description: {
                         type: "text",
                         label: "Description",
@@ -436,8 +459,9 @@ let g = [
                             successMessage: u,
                             wrapTags: d,
                             withLeadingAndTrailing: _,
+                            placeholder: m,
                         } = e,
-                        m = h(e, [
+                        g = h(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -447,29 +471,31 @@ let g = [
                             "successMessage",
                             "wrapTags",
                             "withLeadingAndTrailing",
+                            "placeholder",
                         ]);
-                    let { required: g, disabled: E } = m,
-                        b = y(_, m.asyncOptions),
-                        [O, v] = i.useState(null);
+                    let { required: E, disabled: b } = g,
+                        O = y(_, g.asyncOptions),
+                        [v, I] = i.useState(null);
                     return (0, r.jsxs)(
                         s.uz,
                         p(
                             f(
                                 {
                                     selectionMode: t,
-                                    onSelectionChange: v,
-                                    options: b,
-                                    value: O,
+                                    onSelectionChange: I,
+                                    options: O,
+                                    value: v,
                                 },
-                                m,
+                                g,
                             ),
                             {
                                 children: [
                                     (0, r.jsx)(s.Ct, {
                                         label: n,
                                         hideLabel: a,
-                                        required: g,
-                                        disabled: E,
+                                        placeholder: m,
+                                        required: E,
+                                        disabled: b,
                                         description: o,
                                         helperText: l,
                                         errorMessage: c,
@@ -547,6 +573,11 @@ let g = [
                         type: "boolean",
                         label: "Hide Label",
                         defaultValue: !1,
+                    },
+                    placeholder: {
+                        type: "text",
+                        label: "Placeholder",
+                        defaultValue: void 0,
                     },
                     description: {
                         type: "text",

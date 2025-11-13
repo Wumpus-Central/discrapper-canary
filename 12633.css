@@ -3223,6 +3223,7 @@
 }
 
 .container__5a838 {
+    --custom-description-max-width: 70ch;
     flex-grow: 1;
     interpolate-size: allow-keywords;
     display: grid;
@@ -3232,36 +3233,44 @@
 .container__5a838 .labelContainer__5a838 {
     display: flex;
     flex-direction: column;
-    gap: var(--space-8);
+    gap: 0;
     grid-area: labels;
     margin-bottom: var(--space-8);
     min-width: 0
 }
 
+.container__5a838[data-layout=horizontal-responsive],
 .container__5a838[data-layout=horizontal] {
     -moz-column-gap: var(--space-24);
     column-gap: var(--space-24);
     display: grid;
     grid-template-areas: "labels control" "empty helper-text";
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto var(--custom-field-horizontal-control-width, auto);
     grid-template-rows: auto auto
 }
 
-.container__5a838[data-layout=horizontal] .labelContainer__5a838 {
-    gap: var(--space-12)
-}
-
+.container__5a838[data-layout=horizontal-responsive] .control__5a838,
 .container__5a838[data-layout=horizontal] .control__5a838 {
     align-items: end
 }
 
-.container__5a838[data-layout=horizontal] .helperTextContainer__5a838 {
-    align-self: flex-end;
-    padding-top: var(--space-4)
+.container__5a838[data-layout=horizontal-responsive] .labelContainer__5a838,
+.container__5a838[data-layout=horizontal] .labelContainer__5a838 {
+    gap: var(--space-4)
 }
 
+.container__5a838[data-layout=horizontal-responsive] .helperTextContainer__5a838,
+.container__5a838[data-layout=horizontal] .helperTextContainer__5a838 {
+    align-self: flex-end;
+    contain: inline-size;
+    gap: 0;
+    padding-top: var(--space-4);
+    width: 100%
+}
+
+.container__5a838[data-layout=horizontal-responsive] .description__5a838,
 .container__5a838[data-layout=horizontal] .description__5a838 {
-    max-width: 70ch
+    max-width: var(--custom-description-max-width)
 }
 
 .container__5a838[data-disabled=true] {
@@ -3287,10 +3296,6 @@
 
 .label__5a838[data-interactive=true] {
     cursor: pointer
-}
-
-.label__5a838~.description__5a838 {
-    margin-top: -8px
 }
 
 .required__5a838 {
@@ -3334,6 +3339,35 @@
 
 .badgeContainer__5a838 {
     margin-left: var(--space-4)
+}
+
+@container (max-width: 480px) {
+    .container__5a838[data-layout=horizontal-responsive] {
+        grid-template-areas: "labels" "control" "helper-text";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+    }
+
+    .container__5a838[data-layout=horizontal-responsive] .labelContainer__5a838 {
+        gap: 0;
+        margin-bottom: var(--space-8)
+    }
+
+    .container__5a838[data-layout=horizontal-responsive] .control__5a838 {
+        align-items: unset
+    }
+
+    .container__5a838[data-layout=horizontal-responsive] .helperTextContainer__5a838 {
+        align-self: unset;
+        contain: unset;
+        gap: var(--space-12);
+        padding-top: 0;
+        width: unset
+    }
+
+    .container__5a838[data-layout=horizontal-responsive] .description__5a838 {
+        max-width: none
+    }
 }
 
 .group__0a16d {
@@ -52287,7 +52321,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -53748,6 +53782,8 @@ svg.radioIcon_c1e9c4 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
+    contain: layout;
+    container-type: inline-size;
     padding: var(--space-24)
 }
 
@@ -55687,7 +55723,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -55698,7 +55734,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -55709,7 +55745,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -55720,7 +55756,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -55731,7 +55767,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -55742,7 +55778,7 @@ screen and (max-width:485px) {
 
 .heading-md\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -55753,7 +55789,7 @@ screen and (max-width:485px) {
 
 .heading-md\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -55764,7 +55800,7 @@ screen and (max-width:485px) {
 
 .heading-md\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -55775,7 +55811,7 @@ screen and (max-width:485px) {
 
 .heading-md\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -55786,7 +55822,7 @@ screen and (max-width:485px) {
 
 .heading-md\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -55797,7 +55833,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -55808,7 +55844,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -55819,7 +55855,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -55830,7 +55866,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -55841,7 +55877,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     line-height: 1.2
 }
@@ -55852,7 +55888,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -55863,7 +55899,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -55874,7 +55910,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -55885,7 +55921,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -55896,7 +55932,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -55907,7 +55943,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -55918,7 +55954,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -55929,7 +55965,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -55940,7 +55976,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -55951,7 +55987,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -55962,20 +55998,20 @@ screen and (max-width:485px) {
 
 .eyebrow__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
+.eyebrow__2b1f5,
 .eyebrow__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -55986,7 +56022,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -55997,7 +56033,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -56008,7 +56044,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -56019,7 +56055,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -56030,7 +56066,7 @@ screen and (max-width:485px) {
 
 .redesign\/heading-18\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -56041,7 +56077,7 @@ screen and (max-width:485px) {
 
 .text-xxs\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -56052,7 +56088,7 @@ screen and (max-width:485px) {
 
 .text-xxs\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -56063,18 +56099,18 @@ screen and (max-width:485px) {
 
 .text-xxs\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 600;
     line-height: 1.2
 }
 
+.text-xxs\/bold__2b1f5,
 .text-xxs\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -56085,7 +56121,7 @@ screen and (max-width:485px) {
 
 .text-xs\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -56096,7 +56132,7 @@ screen and (max-width:485px) {
 
 .text-xs\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -56107,18 +56143,18 @@ screen and (max-width:485px) {
 
 .text-xs\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
+.text-xs\/bold__2b1f5,
 .text-xs\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
 
 .text-xs\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -56129,18 +56165,18 @@ screen and (max-width:485px) {
 
 .text-sm\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
+.text-sm\/medium__2b1f5,
+.text-sm\/normal__2b1f5,
 .text-sm\/normal__2b1f5.fontScaling__2b1f5 {
     font-size: .875rem
 }
 
 .text-sm\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -56151,18 +56187,18 @@ screen and (max-width:485px) {
 
 .text-sm\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
+.text-sm\/bold__2b1f5,
 .text-sm\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .875rem
 }
 
 .text-sm\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -56173,7 +56209,7 @@ screen and (max-width:485px) {
 
 .text-md\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -56184,7 +56220,7 @@ screen and (max-width:485px) {
 
 .text-md\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -56195,7 +56231,7 @@ screen and (max-width:485px) {
 
 .text-md\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -56206,7 +56242,7 @@ screen and (max-width:485px) {
 
 .text-md\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -56217,18 +56253,18 @@ screen and (max-width:485px) {
 
 .text-lg\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
+.text-lg\/medium__2b1f5,
+.text-lg\/normal__2b1f5,
 .text-lg\/normal__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -56239,18 +56275,18 @@ screen and (max-width:485px) {
 
 .text-lg\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
 
+.text-lg\/bold__2b1f5,
 .text-lg\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -56261,7 +56297,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -56272,7 +56308,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -56283,7 +56319,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -56294,7 +56330,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -56305,7 +56341,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.375
 }
@@ -56316,7 +56352,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.375
 }
@@ -56327,7 +56363,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.375
 }
@@ -56338,7 +56374,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.375
 }
@@ -56349,44 +56385,44 @@ screen and (max-width:485px) {
 
 .display-sm__2b1f5 {
     font-family: var(--font-headline);
-    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
+.display-sm__2b1f5,
 .display-sm__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .display-md__2b1f5 {
     font-family: var(--font-headline);
-    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
+.display-md__2b1f5,
 .display-md__2b1f5.fontScaling__2b1f5 {
     font-size: 2.125rem
 }
 
 .display-lg__2b1f5 {
     font-family: var(--font-headline);
-    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
+.display-lg__2b1f5,
 .display-lg__2b1f5.fontScaling__2b1f5 {
     font-size: 2.75rem
 }
 
 .code__2b1f5 {
     font-family: var(--font-code);
-    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
+.code__2b1f5,
 .code__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
@@ -59620,9 +59656,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -100781,6 +100817,7 @@ html.disable-forced-colors * {
     --modal-width-large: 800px;
     --modal-width-medium: 602px;
     --modal-width-small: 442px;
+    --select-max-width: 248px;
     --select-option-height: 40px
 }
 

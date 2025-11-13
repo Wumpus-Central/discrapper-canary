@@ -77,6 +77,7 @@ function m(e) {
         errorMessage: u,
         successMessage: d,
         layout: f,
+        layoutConfig: p,
     } = e;
     return {
         fieldProps: {
@@ -92,6 +93,7 @@ function m(e) {
             errorMessage: u,
             successMessage: d,
             layout: f,
+            layoutConfig: p,
         },
         props: _(e, [
             "label",
@@ -106,6 +108,7 @@ function m(e) {
             "errorMessage",
             "successMessage",
             "layout",
+            "layoutConfig",
         ]),
     };
 }
@@ -120,36 +123,39 @@ function g(e) {
             children: _,
             errorMessage: p,
             successMessage: m,
-            trailingContent: g,
-            role: b,
-            layout: y = "vertical",
+            role: g,
+            layout: b = "vertical",
+            layoutConfig: y,
             badge: O,
             icon: v = null,
             interactiveLabel: I = !1,
-            ref: T,
+            auxiliaryContentPosition: T = "under-control",
+            trailingAuxiliaryContent: S,
+            ref: A,
         } = e,
-        S = h(e),
-        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: D } = S,
-        w = "group" === b || "radiogroup" === b,
-        x = w ? "span" : "label",
-        L = w ? "fieldset" : "div",
-        M = w
+        C = h(e),
+        { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: x } = C,
+        L = null == y ? void 0 : y.horizontalControlColumnWidth,
+        M = "group" === g || "radiogroup" === g,
+        j = M ? "span" : "label",
+        k = M ? "fieldset" : "div",
+        U = M
             ? (0, r.jsx)("legend", {
-                  id: A,
+                  id: N,
                   children: (0, r.jsx)(s.n, { children: t }),
               })
             : null,
-        j = null != t && "" !== t,
-        k = null != l && "" !== l,
-        U = j
+        G = null != t && "" !== t,
+        B = null != l && "" !== l,
+        Z = G
             ? (0, r.jsxs)(u.x, {
-                  "aria-hidden": w,
+                  "aria-hidden": M,
                   "data-interactive": I,
-                  id: A,
-                  tag: x,
+                  id: N,
+                  tag: j,
                   variant: "text-md/medium",
                   color: "text-primary",
-                  htmlFor: C,
+                  htmlFor: R,
                   className: f.label,
                   children: [
                       null != v
@@ -176,96 +182,89 @@ function g(e) {
                           : null,
                   ],
               })
-            : null;
+            : null,
+        F = (0, r.jsx)(E, {
+            successMessage: m,
+            errorMessage: p,
+            helperText: c,
+            trailing: S,
+            helperTextId: w,
+            errorMessageId: P,
+        });
     return (0, r.jsx)(d.z.Provider, {
-        value: S,
-        children: (0, r.jsxs)(L, {
-            role: b,
-            ref: T,
+        value: C,
+        children: (0, r.jsxs)(k, {
+            role: g,
+            ref: A,
             className: f.container,
-            "data-layout": y,
+            "data-layout": b,
+            style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
             "data-disabled": a,
-            "aria-describedby": w ? R : void 0,
-            disabled: w ? a : void 0,
+            "aria-describedby": M ? D : void 0,
+            disabled: M ? a : void 0,
             children: [
-                M,
-                j && n ? (0, r.jsx)(s.n, { children: U }) : null,
-                (j && !n) || k
+                U,
+                G && n ? (0, r.jsx)(s.n, { children: Z }) : null,
+                (G && !n) || B
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? null : U,
-                              k &&
+                              n ? null : Z,
+                              B &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: D,
+                                      id: x,
                                       children: l,
                                   }),
+                              "under-label" === T ? F : null,
                           ],
                       })
                     : null,
                 (0, r.jsxs)("div", {
                     className: f.control,
-                    children: [
-                        "function" == typeof _ ? _(S) : _,
-                        (0, r.jsx)(E, {
-                            successMessage: m,
-                            errorMessage: p,
-                            helperText: c,
-                            trailingContent: g,
-                            helperTextId: P,
-                            errorMessageId: N,
-                        }),
-                    ],
+                    children: ["function" == typeof _ ? _(C) : _, "under-control" === T ? F : null],
                 }),
             ],
         }),
     });
 }
 function E(e) {
-    let {
-            successMessage: t,
-            errorMessage: n,
-            helperText: i,
-            trailingContent: o,
-            helperTextId: s,
-            errorMessageId: d,
-        } = e,
+    let { successMessage: t, errorMessage: n, helperText: i, trailing: o, helperTextId: s, errorMessageId: d } = e,
         _ = (0, r.jsx)("div", {}),
         p = null != o;
-    return (null != t && "" !== t
+    return (null != n && "" !== n
         ? ((p = !0),
           (_ = (0, r.jsxs)("div", {
               className: f.statusMessageContainer,
               children: [
-                  (0, r.jsx)(l.o, {
+                  (0, r.jsx)(c.M, {
                       size: "xs",
-                      color: a.Z.colors.TEXT_FEEDBACK_POSITIVE,
+                      color: a.Z.colors.TEXT_FEEDBACK_CRITICAL,
                   }),
                   (0, r.jsx)(u.x, {
                       variant: "text-xs/normal",
-                      color: "text-feedback-positive",
-                      id: s,
-                      children: t,
+                      color: "text-feedback-critical",
+                      id: d,
+                      children: n,
                   }),
               ],
           })))
-        : null != n && "" !== n
+        : null != t && "" !== t
           ? ((p = !0),
             (_ = (0, r.jsxs)("div", {
                 className: f.statusMessageContainer,
                 children: [
-                    (0, r.jsx)(c.M, {
+                    (0, r.jsx)(l.o, {
                         size: "xs",
-                        color: a.Z.colors.TEXT_FEEDBACK_CRITICAL,
+                        color: a.Z.colors.TEXT_FEEDBACK_POSITIVE,
                     }),
                     (0, r.jsx)(u.x, {
                         variant: "text-xs/normal",
-                        color: "text-feedback-critical",
-                        id: d,
-                        children: n,
+                        color: "text-feedback-positive",
+                        id: s,
+                        children: t,
                     }),
                 ],
             })))

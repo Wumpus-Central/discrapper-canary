@@ -147,7 +147,7 @@ function I(e) {
     return (0, r.jsx)(
         s.gNt,
         E(m({}, w), {
-            trailingContent: G,
+            trailingAuxiliaryContent: G,
             errorMessage: j.hasError && null != (t = j.errorMessage) ? t : void 0,
             children: (0, r.jsxs)(s.UPk, {
                 validation: j,

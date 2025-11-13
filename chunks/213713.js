@@ -223,7 +223,7 @@ function A() {
                                 R.length > 0 && null == L
                                     ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
                                     : void 0,
-                            successMessage: null != L ? "Game profile found" : void 0,
+                            helperText: null != L ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
                             children: U.map((e) =>
