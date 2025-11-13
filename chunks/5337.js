@@ -61,18 +61,19 @@ function g(e, t) {
     );
 }
 function m(e, t) {
-    let { profileOwner: n, analyticsLocations: l, wishlistId: s } = t,
-        o = g(e, {
+    let { profileOwner: n, analyticsLocations: l, wishlistId: s, onViewWishlist: o } = t,
+        c = g(e, {
             profileOwner: n,
             analyticsLocations: l,
-            onViewWishlist: () => {},
+            onViewWishlist: o,
             isSingleCard: !0,
             wishlistId: s,
+            index: 0,
         });
     return (0, r.jsxs)("div", {
         className: h.singleItemContainer,
         children: [
-            o,
+            c,
             (0, r.jsxs)("div", {
                 className: h.singleItemInfo,
                 children: [

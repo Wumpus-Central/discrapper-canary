@@ -1,54 +1,56 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => c });
 var r = n(951288),
-    i = n(681715),
-    l = n(481060),
-    a = n(221292),
-    s = n(239990);
-function o(e) {
+    i = n(647438),
+    l = n(681715),
+    a = n(481060),
+    s = n(221292),
+    o = n(239990);
+let c = i.forwardRef(function (e, t) {
     let {
-            onCardClick: t,
-            tooltipText: n,
-            shouldScalePreview: o = !0,
-            renderPreview: c,
-            moreCount: d,
-            isSingleCard: u = !1,
-            skuId: p,
-            analyticsLocations: h,
-            wishlistId: f,
+            onCardClick: n,
+            tooltipText: i,
+            shouldScalePreview: c = !0,
+            renderPreview: d,
+            moreCount: u,
+            isSingleCard: p = !1,
+            skuId: h,
+            analyticsLocations: f,
+            wishlistId: g,
         } = e,
-        g = o ? s.cardPreview : s.cardPreviewNoScale,
-        m = u ? s.cardSingle : s.card,
-        b = null != d && d > 0;
-    return (0, r.jsx)(i.u, {
-        text: n,
+        m = c ? o.cardPreview : o.cardPreviewNoScale,
+        b = p ? o.cardSingle : o.card,
+        _ = null != u && u > 0;
+    return (0, r.jsx)(l.u, {
+        text: i,
         position: "top",
-        children: (0, r.jsxs)(l.P3F, {
+        children: (0, r.jsxs)(a.P3F, {
             onClick: () => {
-                t(),
-                    (0, a.Er)({
-                        action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        analyticsLocations: h,
-                        skuId: b ? null : p,
-                        wishlistId: f,
+                n(),
+                    (0, s.Er)({
+                        action: _ ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        analyticsLocations: f,
+                        skuId: _ ? null : h,
+                        wishlistId: g,
                     });
             },
-            className: m,
-            "aria-label": n,
+            className: b,
+            "aria-label": i,
+            innerRef: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: g,
-                    children: c(),
+                    className: m,
+                    children: d(),
                 }),
-                b &&
+                _ &&
                     (0, r.jsx)("div", {
-                        className: s.moreOverlay,
-                        children: (0, r.jsxs)(l.Text, {
+                        className: o.moreOverlay,
+                        children: (0, r.jsxs)(a.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", d],
+                            children: ["+", u],
                         }),
                     }),
             ],
         }),
     });
-}
+});

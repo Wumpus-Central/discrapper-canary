@@ -19,28 +19,31 @@ function f(e) {
             for (let i = 0; i < t.length && e.length < 4; i++) {
                 let l = t[i],
                     a = 3 === e.length && t.length > 4;
-                l.isOwned ||
-                    ((0, o.Q)(l)
-                        ? e.push(
-                              (0, u.c)(l, {
-                                  moreCount: a ? t.length - 4 + 1 : void 0,
-                                  profileOwner: n,
-                                  analyticsLocations: m,
-                                  onViewWishlist: f,
-                                  wishlistId: g,
-                              }),
-                          )
-                        : (0, c.F)(l) &&
-                          e.push(
-                              (0, s.J)(l, {
-                                  moreCount: a ? t.length - 4 + 1 : void 0,
-                                  profileOwner: n,
-                                  analyticsLocations: m,
-                                  onViewWishlist: f,
-                                  wishlistId: g,
-                              }),
-                          ),
-                    1 === e.length && null == r && (r = l));
+                if (l.isOwned) continue;
+                let d = e.length;
+                (0, o.Q)(l)
+                    ? e.push(
+                          (0, u.c)(l, {
+                              index: d,
+                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              profileOwner: n,
+                              analyticsLocations: m,
+                              onViewWishlist: f,
+                              wishlistId: g,
+                          }),
+                      )
+                    : (0, c.F)(l) &&
+                      e.push(
+                          (0, s.J)(l, {
+                              index: d,
+                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              profileOwner: n,
+                              analyticsLocations: m,
+                              onViewWishlist: f,
+                              wishlistId: g,
+                          }),
+                      ),
+                    1 === e.length && null == r && (r = l);
             }
             return {
                 cards: e,
@@ -49,20 +52,22 @@ function f(e) {
         }, [t, n, m, f, g]);
     if (0 === b.length) return null;
     let y = 1 === b.length && null != _,
-        x = b;
+        O = b;
     return (
         y &&
             ((0, o.Q)(_)
-                ? (x = (0, u.g)(_, {
+                ? (O = (0, u.g)(_, {
                       profileOwner: n,
                       analyticsLocations: m,
                       wishlistId: g,
+                      onViewWishlist: f,
                   }))
                 : (0, c.F)(_) &&
-                  (x = (0, s.B)(_, {
+                  (O = (0, s.B)(_, {
                       profileOwner: n,
                       analyticsLocations: m,
                       wishlistId: g,
+                      onViewWishlist: f,
                   }))),
         (0, r.jsxs)(d.Z.Overlay, {
             className: h.container,
@@ -76,7 +81,7 @@ function f(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: h.cardsContainer,
-                    children: x,
+                    children: O,
                 }),
             ],
         })

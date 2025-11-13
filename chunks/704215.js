@@ -503,6 +503,7 @@ var r = (function (e) {
                 "GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION"),
             (e[(e.GAME_SHOP_ANNOUNCEMENT_MODAL = 643)] = "GAME_SHOP_ANNOUNCEMENT_MODAL"),
             (e[(e.CHECKPOINT_2025_BOTTOM_SHEET = 644)] = "CHECKPOINT_2025_BOTTOM_SHEET"),
+            (e[(e.GAME_SHOP_WISHLIST_POPOVER = 645)] = "GAME_SHOP_WISHLIST_POPOVER"),
             e
         );
     })({}),
