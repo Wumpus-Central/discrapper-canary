@@ -9,7 +9,7 @@ var r = n(594174),
     i = n(5192),
     a = n(981631),
     o = n(388032),
-    s = n(978967);
+    s = n(621844);
 function l(e, t, n) {
     switch (t) {
         case a.mFx.LISTEN:
@@ -38,25 +38,25 @@ function u(e, t, n, i, a) {
                 return a
                     ? o.intl.formatToPlainString(o.t.JddpN2, {
                           username: e.globalName,
-                          appName: t.name,
+                          appName: t,
                       })
                     : o.intl.formatToPlainString(o.t.gYVkSW, {
                           username: e.globalName,
-                          appName: t.name,
+                          appName: t,
                       });
         }
         return a
-            ? o.intl.formatToPlainString(o.t["2N1kNS"], { appName: t.name })
-            : o.intl.formatToPlainString(o.t.IA6uDV, { appName: t.name });
+            ? o.intl.formatToPlainString(o.t["2N1kNS"], { appName: t })
+            : o.intl.formatToPlainString(o.t.IA6uDV, { appName: t });
     }
     return a
         ? o.intl.formatToPlainString(o.t.XE8axA, {
               username: e.author.globalName,
-              appName: t.name,
+              appName: t,
           })
         : o.intl.formatToPlainString(o.t.hgcjOn, {
               username: e.author.globalName,
-              appName: t.name,
+              appName: t,
           });
 }
 function d(e, t, n, r, i) {
