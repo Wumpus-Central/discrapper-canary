@@ -18,7 +18,7 @@ var r = n(951288),
 function b(e) {
     let { setSearchQuery: t, searchContext: n, mode: b } = e,
         y = (0, l.N)(n),
-        O = (0, s.g)({ location: "usePopularAutocompleteFilters" }),
+        O = (0, s.g_)({ location: "usePopularAutocompleteFilters" }),
         v = i.useMemo(
             () => ({
                 type: m.dCx.FILTER_MENTIONS,

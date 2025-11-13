@@ -249,7 +249,7 @@ function v(e) {
         M = P.has(E.dCx.FILTER_IN),
         D = P.has(E.dCx.FILTER_AUTHOR_TYPE),
         Q = r.useMemo(() => (0, p.nI)(O), [O]),
-        H = (0, C.g)({ location: "SearchFiltersModal" }),
+        H = (0, C.g_)({ location: "SearchFiltersModal" }),
         {
             options: q,
             query: Y,

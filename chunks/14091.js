@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(171900),
     _ = n(607802),
     y = n(375123),
-    x = n(56522),
-    O = n(759209),
+    O = n(28964),
+    x = n(759209),
     j = n(532428),
     v = n(406326),
     C = n(994463),
@@ -137,8 +137,8 @@ function H(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         } = e,
-        { totalResults: _, isSearching: y, isIndexing: x, hasError: O } = l;
-    if (O)
+        { totalResults: _, isSearching: y, isIndexing: O, hasError: x } = l;
+    if (x)
         return (0, r.jsxs)(U, {
             children: [
                 (0, r.jsx)("div", { className: M.errorImage }),
@@ -148,7 +148,7 @@ function H(e) {
                 }),
             ],
         });
-    if (x) {
+    if (O) {
         let e = s.type === A.aib.GUILD ? L.intl.string(L.t.AXPbZr) : L.intl.string(L.t.Q0JJjv);
         return (0, r.jsxs)(U, {
             children: [
@@ -201,8 +201,8 @@ let F = [],
                 blockCount: h,
                 ignoreCount: f,
                 isFeedbackVisible: b,
-                dismissFeedbackEntrypoint: x,
-                onSearchModeChange: O,
+                dismissFeedbackEntrypoint: O,
+                onSearchModeChange: x,
                 onPageChange: C,
                 searchMode: I,
                 onBlockedResultsClick: E,
@@ -273,9 +273,9 @@ let F = [],
                             searchRequestAnalyticsId: a,
                             mode: e,
                         }),
-                        O(e));
+                        x(e));
                 },
-                [O, n.isSearching, t, I, a],
+                [x, n.isSearching, t, I, a],
             ),
             K = i.useCallback(
                 (e, r) => {
@@ -394,40 +394,39 @@ let F = [],
                 (0, r.jsx)(G, {
                     searchContext: t,
                     isFeedbackVisible: b,
-                    dismissFeedbackEntrypoint: x,
+                    dismissFeedbackEntrypoint: O,
                 }),
             ],
         });
     });
 function V(e) {
     let { searchContext: t, selectedChannelId: n } = e,
-        { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function (e) {
-            let [t, n] = i.useState(!1),
-                r = (0, x.M)({ location: "SearchResults" }),
-                { enabled: l, force: a } = (0, O.f)({ location: "SearchResults" }),
-                s = e.type === A.aib.DMS || e.type === A.aib.CHANNEL,
-                o = (r && s) || l;
+        { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function () {
+            let [e, t] = i.useState(!1),
+                n = (0, O.M_)({ location: "SearchResults" }),
+                { enabled: r, force: l } = (0, x.f)({ location: "SearchResults" }),
+                a = n && r;
             return (
                 i.useEffect(() => {
-                    o && a && n(!0);
-                }, [a, o, l]),
+                    a && l && t(!0);
+                }, [l, a, r]),
                 (0, u.ZP)(() => {
-                    o &&
-                        (a ||
+                    a &&
+                        (l ||
                             h.Z.possiblyShowFeedbackModal(
                                 D.nw.SEARCH_RESULTS,
-                                () => n(!0),
-                                () => n(!1),
+                                () => t(!0),
+                                () => t(!1),
                             ));
                 }),
                 {
                     dismissFeedbackEntrypoint: i.useCallback(() => {
-                        n(!1);
+                        t(!1);
                     }, []),
-                    isFeedbackVisible: t,
+                    isFeedbackVisible: e,
                 }
             );
-        })(t),
+        })(),
         o = (0, _.Tm)(t),
         c = (0, s.cj)([b.Z, R.Z], () => {
             var e, t, n, r, i;

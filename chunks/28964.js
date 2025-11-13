@@ -1,10 +1,13 @@
 n.d(t, {
-    g: () => l,
-    k: () => s,
+    M_: () => l,
+    g_: () => u,
+    kU: () => c,
+    rY: () => s,
 });
 var r = n(818083),
     i = n(154579);
 let a = {
+        isInExperiment: !1,
         isEnabled: !1,
         isHasFilterElevated: !1,
     },
@@ -15,9 +18,19 @@ let a = {
         defaultConfig: a,
         treatments: [
             {
+                id: 0,
+                label: "Control",
+                config: {
+                    isInExperiment: !0,
+                    isEnabled: !1,
+                    isHasFilterElevated: !1,
+                },
+            },
+            {
                 id: 1,
                 label: "Top Filters",
                 config: {
+                    isInExperiment: !0,
                     isEnabled: !0,
                     isHasFilterElevated: !1,
                 },
@@ -26,6 +39,7 @@ let a = {
                 id: 2,
                 label: "Top Filters (has: before mentions:)",
                 config: {
+                    isInExperiment: !0,
                     isEnabled: !0,
                     isHasFilterElevated: !0,
                 },
@@ -33,6 +47,36 @@ let a = {
         ],
     });
 function s(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { isInExperiment: a } = o.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
+}
+function l(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { isInExperiment: a } = o.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
+}
+function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.nd)({
             location: t,
@@ -47,7 +91,7 @@ function s(e) {
         );
     return a;
 }
-function l(e) {
+function u(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.nd)({
             location: t,

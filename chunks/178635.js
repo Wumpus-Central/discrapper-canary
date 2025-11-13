@@ -8,7 +8,7 @@ var r = n(392711),
     a = n(147913),
     o = n(536442),
     s = n(810788),
-    l = n(56522),
+    l = n(28964),
     c = n(759209),
     u = n(695346),
     d = n(19780),
@@ -202,8 +202,8 @@ function C(e) {
 }
 function N(e) {
     let t = (0, c.j)({ location: "FeedbackManager" }),
-        n = (0, l.K)({ location: "FeedbackManager" });
-    return t || n;
+        n = (0, l.rY)({ location: "FeedbackManager" });
+    return t && n;
 }
 function R(e) {
     u.A2.updateSetting((t) => E(m({}, t), { [e]: E(m({}, t[e]), { lastImpressionTime: Date.now() }) }));

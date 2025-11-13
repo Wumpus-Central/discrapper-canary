@@ -506,7 +506,7 @@ function z(e) {
             }
             return null;
         }),
-        M = (0, N.k)({ location: "Search" }),
+        M = (0, N.kU)({ location: "Search" }),
         U = (0, C.UX)({ location: "Search" }),
         F = i.useMemo(
             () =>
