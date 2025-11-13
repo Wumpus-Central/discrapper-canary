@@ -9,7 +9,7 @@ function l(e) {
         {
             key: "NOT_INTERESTED",
             text: (0, a.q8)(e)
-                ? o.intl.string(o.t["tgi+nm"])
+                ? o.intl.string(o.t.wHRWkE)
                 : o.intl.formatToPlainString(o.t.AZRWVY, { entityName: e.config.messages.gameTitle }),
         },
         {
