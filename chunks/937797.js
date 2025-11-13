@@ -2,6 +2,7 @@ n.d(t, {
     CD: () => o,
     DL: () => i,
     EO: () => l,
+    eC: () => u,
     m_: () => s,
 });
 var r = n(427164);
@@ -41,20 +42,59 @@ var s = (function (e) {
     );
 })({});
 let l = (0, r.le)({
-    name: "2025-10-desktop-video-quest-cta-relocation",
-    kind: "user",
-    defaultConfig: {
-        enabled: !1,
-        variant: null,
-    },
-    variations: {
-        1: {
-            enabled: !0,
-            variant: 0,
+        name: "2025-10-desktop-video-quest-cta-relocation",
+        kind: "user",
+        defaultConfig: {
+            enabled: !1,
+            variant: null,
         },
-        2: {
-            enabled: !0,
-            variant: 1,
+        variations: {
+            1: {
+                enabled: !0,
+                variant: 0,
+            },
+            2: {
+                enabled: !0,
+                variant: 1,
+            },
         },
-    },
-});
+    }),
+    c = (0, r.le)({
+        name: "2025-11-quest-home-suggested-sort-rotation",
+        kind: "user",
+        defaultConfig: {
+            enabled: !1,
+            variant: null,
+        },
+        variations: {
+            0: {
+                enabled: !1,
+                variant: null,
+            },
+            1: {
+                enabled: !0,
+                variant: 0,
+            },
+            2: {
+                enabled: !0,
+                variant: 1,
+            },
+        },
+    }),
+    u = (e) => {
+        let { enabled: t, variant: n } = c.getConfig({ location: e });
+        return 0 === n
+            ? {
+                  enabled: t,
+                  minutes: 20,
+              }
+            : 1 === n
+              ? {
+                    enabled: t,
+                    minutes: 75,
+                }
+              : {
+                    enabled: t,
+                    minutes: 0,
+                };
+    };
