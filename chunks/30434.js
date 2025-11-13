@@ -1,25 +1,27 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(951288),
     l = n(647438),
-    o = n(59662);
-function i(e) {
+    o = n(925477),
+    i = n(59662);
+function a(e) {
     let { node: t, children: n } = e,
-        { navTransition: i } = (0, o.t)(),
-        a = l.useRef(null);
+        { navTransition: a } = (0, i.t)(),
+        c = l.useRef(null),
+        s = l.useContext(o.Sf).reducedMotion.enabled;
     return (
         l.useEffect(() => {
-            if ((null == i ? void 0 : i.target) === t.key) {
+            if ((null == a ? void 0 : a.target) === t.key) {
                 var e;
-                null == (e = a.current) ||
+                null == (e = c.current) ||
                     e.scrollIntoView({
-                        behavior: i.animateScroll ? "smooth" : "auto",
+                        behavior: a.animateScroll && !s ? "smooth" : "auto",
                         block: "center",
                     }),
-                    i.complete();
+                    a.complete();
             }
-        }, [i, t.key]),
+        }, [a, t.key, s]),
         (0, r.jsx)("div", {
-            ref: a,
+            ref: c,
             "data-debug-key": t.key,
             children: n,
         })
