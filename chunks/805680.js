@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(907040),
     v = n(556019),
     I = n(455708),
-    S = n(314910),
-    T = n(728285),
+    T = n(314910),
+    S = n(728285),
     A = n(125900),
     C = n(603074),
     N = n(453070),
     R = n(926491),
     P = n(457040),
-    w = n(740492),
-    D = n(574254),
+    D = n(740492),
+    w = n(574254),
     x = n(585483),
     L = n(28546),
     M = n(957825),
@@ -38,7 +38,7 @@ var r = n(951288),
     G = n(185923),
     B = n(611480),
     Z = n(388032),
-    F = n(364744);
+    F = n(887648);
 function V(e, t, n) {
     return (
         t in e
@@ -143,7 +143,7 @@ let q = M.Om + U.Su.MEDIUM,
     }),
     Q = (e) => {
         let { positionContainerRef: t, drawerRef: n, orientation: r } = e,
-            a = (0, d.e7)([w.ZP], () => w.ZP.expressionPickerWidth),
+            a = (0, d.e7)([D.ZP], () => D.ZP.expressionPickerWidth),
             [o, s] = i.useState(window.innerWidth),
             [c, u] = i.useState(null != a ? a : M._j.MIN),
             f = i.useMemo(() => {
@@ -204,7 +204,7 @@ function J(e) {
     let {
             positionTargetRef: l,
             hideGifFavorites: h,
-            includeCreateEmojiButton: w,
+            includeCreateEmojiButton: D,
             onSelectGIF: V,
             onSelectEmoji: H,
             onSelectSticker: Y,
@@ -228,13 +228,13 @@ function J(e) {
         }),
         ec = (0, L.Iu)((e) => e.activeView),
         eu = (0, N.fQ)(K),
-        { renderWindow: ed, windowDispatch: ef } = i.useContext(T.ZP),
+        { renderWindow: ed, windowDispatch: ef } = i.useContext(S.ZP),
         e_ = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
         ep = (0, A.V2)({ location: "expression_picker" }),
-        eh = (0, d.e7)([D.Z], () => D.Z.isOpen()),
+        eh = (0, d.e7)([w.Z], () => w.Z.isOpen()),
         em = null != en,
         eg = (0, _.Jw)(null != en ? en : ""),
-        { expressionsCombinedIntoEmojiButton: eE } = b.n.useConfig({ location: "expression_picker" }),
+        { reorderExpressionPickerTabs: eE } = b.n.useConfig({ location: "expression_picker" }),
         eb = (null == (t = z.gifs) ? void 0 : t.allowSending) && !c.tq && null != V,
         ey = (null == (n = z.stickers) ? void 0 : n.allowSending) && null != Y,
         eO = !(null == (a = z.expressionPicker) ? void 0 : a.onlyEmojis) && (eb || ey),
@@ -265,7 +265,7 @@ function J(e) {
             },
             [et, eg, em, eh],
         ),
-        eS = i.useCallback(() => {
+        eT = i.useCallback(() => {
             (0, L._Q)();
         }, []);
     i.useLayoutEffect(() => {
@@ -275,18 +275,18 @@ function J(e) {
         return (
             ed.addEventListener("mousedown", eI),
             ed.addEventListener("contextmenu", eI),
-            ef.subscribe(j.CkL.POPOUT_CLOSE, eS),
+            ef.subscribe(j.CkL.POPOUT_CLOSE, eT),
             x.S.subscribe(j.CkL.CLOSE_GIF_PICKER, e),
             () => {
                 ed.removeEventListener("mousedown", eI),
                     ed.removeEventListener("contextmenu", eI),
-                    ef.unsubscribe(j.CkL.POPOUT_CLOSE, eS),
+                    ef.unsubscribe(j.CkL.POPOUT_CLOSE, eT),
                     x.S.unsubscribe(j.CkL.CLOSE_GIF_PICKER, e);
             }
         );
-    }, [ec, eS, eI, ed, ef]),
+    }, [ec, eT, eI, ed, ef]),
         (0, p.Tbt)(er);
-    let [eT, eA] = (0, y.US)(ep ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
+    let [eS, eA] = (0, y.US)(ep ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
         [eC, eN] = i.useState(!1);
     i.useEffect(() => {
         ec === M.X1.SOUNDBOARD && eN(!0);
@@ -323,8 +323,8 @@ function J(e) {
         });
     let eR = i.useCallback((e, t) => (null == W ? void 0 : W(e, "emoji_picker", t)), [W]),
         eP = i.useCallback((e, t) => (null == W ? void 0 : W(e, "soundboard_picker", t)), [W]),
-        ew = (null == (s = z.soundmoji) ? void 0 : s.allowSending) === !0 && null != W,
-        eD = "left" === $ ? "right" : "left",
+        eD = (null == (s = z.soundmoji) ? void 0 : s.allowSending) === !0 && null != W,
+        ew = "left" === $ ? "right" : "left",
         ex = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
         eL = eb
             ? (0, r.jsx)(X, {
@@ -360,7 +360,7 @@ function J(e) {
         });
     return (0, r.jsx)(m.Z, {
         section: j.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(S.W5, {
+        children: (0, r.jsx)(T.W5, {
             className: o()(F.positionLayer, ex),
             targetRef: l,
             position: J,
@@ -388,7 +388,7 @@ function J(e) {
                                   (0, r.jsx)("div", {
                                       className: F.resizeHandle,
                                       onMouseDown: el,
-                                      style: { [eD]: -2 },
+                                      style: { [ew]: -2 },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: F.contentWrapper,
@@ -409,7 +409,7 @@ function J(e) {
                                                                       children: [eL, eM, ej],
                                                                   }),
                                                             ep &&
-                                                                ew &&
+                                                                eD &&
                                                                 (0, r.jsx)(X, {
                                                                     id: U.Hr,
                                                                     "aria-controls": U.gV,
@@ -420,7 +420,7 @@ function J(e) {
                                                                         className: F.soundmojiLabelContainer,
                                                                         children: [
                                                                             Z.intl.string(Z.t.EHlAMc),
-                                                                            null != eT &&
+                                                                            null != eS &&
                                                                                 (0, r.jsx)(p.IGR, {
                                                                                     text: Z.intl.string(Z.t.y2b7CA),
                                                                                 }),
@@ -437,7 +437,7 @@ function J(e) {
                                                     channel: K,
                                                     containerWidth: es,
                                                     onSelectSticker: Y,
-                                                    closePopout: eS,
+                                                    closePopout: eT,
                                                     ref: (e) => {
                                                         ea.current = e;
                                                     },
@@ -459,10 +459,10 @@ function J(e) {
                                                     persistSearch: !0,
                                                     channel: K,
                                                     containerWidth: es,
-                                                    includeCreateEmojiButton: w,
+                                                    includeCreateEmojiButton: D,
                                                     emojiSize: null != es && es < q ? U.Su.MEDIUM : U.Su.LARGE,
                                                     pickerIntention: G.Hz.CHAT,
-                                                    closePopout: eS,
+                                                    closePopout: eT,
                                                     onSelectEmoji: H,
                                                     onSelectSoundmoji: eR,
                                                     ref: (e) => {
@@ -480,7 +480,7 @@ function J(e) {
                                                         guildId: K.guild_id,
                                                         channel: K,
                                                         containerWidth: es,
-                                                        onClose: eS,
+                                                        onClose: eT,
                                                         onSelect: eP,
                                                         analyticsSource: "expression-picker",
                                                         renderHeader: (e) =>

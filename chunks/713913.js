@@ -10,6 +10,7 @@ let r = (0, n(427164).le)({
         moveAppsEntrypointToOverflow: !1,
         expressionsCombinedIntoEmojiButton: !1,
         renameAppsToAppCommandsInOverflow: !1,
+        reorderExpressionPickerTabs: !1,
         reducedGap: !1,
         iconOrder: {
             upload: null,
@@ -29,6 +30,7 @@ let r = (0, n(427164).le)({
             moveAppsEntrypointToOverflow: !1,
             expressionsCombinedIntoEmojiButton: !1,
             renameAppsToAppCommandsInOverflow: !0,
+            reorderExpressionPickerTabs: !0,
             reducedGap: !0,
             iconOrder: {
                 upload: null,
@@ -47,6 +49,7 @@ let r = (0, n(427164).le)({
             moveAppsEntrypointToOverflow: !1,
             expressionsCombinedIntoEmojiButton: !0,
             renameAppsToAppCommandsInOverflow: !0,
+            reorderExpressionPickerTabs: !1,
             reducedGap: !0,
             iconOrder: {
                 emoji: 1,
@@ -65,6 +68,7 @@ let r = (0, n(427164).le)({
             moveAppsEntrypointToOverflow: !0,
             expressionsCombinedIntoEmojiButton: !0,
             renameAppsToAppCommandsInOverflow: !1,
+            reorderExpressionPickerTabs: !1,
             reducedGap: !0,
             iconOrder: {
                 appLauncher: null,
@@ -83,6 +87,7 @@ let r = (0, n(427164).le)({
             moveAppsEntrypointToOverflow: !0,
             expressionsCombinedIntoEmojiButton: !1,
             renameAppsToAppCommandsInOverflow: !1,
+            reorderExpressionPickerTabs: !0,
             reducedGap: !0,
             iconOrder: {
                 appLauncher: null,
@@ -101,6 +106,7 @@ let r = (0, n(427164).le)({
             moveAppsEntrypointToOverflow: !1,
             expressionsCombinedIntoEmojiButton: !1,
             renameAppsToAppCommandsInOverflow: !1,
+            reorderExpressionPickerTabs: !1,
             reducedGap: !1,
             iconOrder: {
                 upload: null,
