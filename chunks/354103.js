@@ -19,14 +19,14 @@ function j(e) {
     let { guild: t } = e,
         n = i.useRef(null),
         j = (0, o.g1)(t.id, "GuildSettingsBoostPerks"),
-        v = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites);
+        _ = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites);
     (0, u.Z)(n, h.KsC.BOOST_PERKS_VANITY_URL);
     let {
-            vanityURLCode: _,
-            vanityURLUses: C,
-            originalVanityURLCode: O,
+            vanityURLCode: v,
+            vanityURLUses: O,
+            originalVanityURLCode: C,
             errorDetails: y,
-            fetched: E,
+            fetched: N,
         } = (0, l.cj)([m.Z], () => ({
             vanityURLCode: m.Z.vanityURLCode,
             vanityURLUses: m.Z.vanityURLUses,
@@ -34,18 +34,20 @@ function j(e) {
             errorDetails: m.Z.errorDetails,
             fetched: m.Z.fetchedVanityURL,
         })),
-        N = null == t ? void 0 : t.id;
+        E = null == t ? void 0 : t.id;
     return (i.useEffect(() => {
-        null == N || E || (0, g.U5)(N);
-    }, [E, N]),
+        null == E || N || (0, g.U5)(E);
+    }, [N, E]),
     null == t)
         ? null
-        : v
+        : _
           ? (0, r.jsx)(s.Z, {})
           : (0, r.jsxs)("div", {
                 ref: n,
                 children: [
-                    (0, r.jsxs)(a.vwX, {
+                    (0, r.jsxs)(a.Heading, {
+                        variant: "heading-md/medium",
+                        color: "header-primary",
                         className: x.title,
                         children: [b.intl.string(b.t["5XZKy/"]), (0, r.jsx)(p.xl, { guild: t })],
                     }),
@@ -63,9 +65,9 @@ function j(e) {
                     }),
                     (0, r.jsx)(f.z, {
                         guild: t,
-                        vanityURLCode: _,
-                        vanityURLUses: C,
-                        originalVanityURLCode: O,
+                        vanityURLCode: v,
+                        vanityURLUses: O,
+                        originalVanityURLCode: C,
                         errorDetails: y,
                     }),
                 ],

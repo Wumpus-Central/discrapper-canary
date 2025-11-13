@@ -16,7 +16,9 @@ function g(e) {
             (0, r.jsxs)("div", {
                 className: u.column,
                 children: [
-                    (0, r.jsxs)(i.vwX, {
+                    (0, r.jsxs)(i.Heading, {
+                        variant: "heading-md/medium",
+                        color: "header-primary",
                         className: u.title,
                         children: [d.intl.string(d.t["0r0AzF"]), (0, r.jsx)(o.zA, { guild: t })],
                     }),
