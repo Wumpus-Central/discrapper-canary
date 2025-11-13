@@ -75,6 +75,9 @@ class v extends (o = l.ZP.Store) {
     getPurchase(e) {
         return null != e ? f.get(e) : void 0;
     }
+    getPurchases(e) {
+        return null != e ? e.map((e) => f.get(e)).filter((e) => null != e) : void 0;
+    }
 }
 u(v, "displayName", "CollectiblesPurchaseStore");
 let I = new v(c.Z, {

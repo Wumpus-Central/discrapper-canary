@@ -1,4 +1,4 @@
-n.d(t, { Y: () => p });
+n.d(t, { Y: () => h });
 var r = n(685816),
     i = n(549616),
     a = n(863611),
@@ -7,9 +7,10 @@ var r = n(685816),
     l = n(885577),
     c = n(198647),
     u = n(820200),
-    d = n(690913),
-    f = n(608413);
-function _(e, t, n) {
+    d = n(930877),
+    f = n(690913),
+    _ = n(608413);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,15 +23,15 @@ function _(e, t, n) {
         e
     );
 }
-class p {
+class h {
     static fromServer(e) {
-        return new p(e);
+        return new h(e);
     }
     constructor(e) {
         var t;
-        _(this, "shopBlocks", void 0),
-            _(this, "categories", void 0),
-            _(this, "userDiscounts", void 0),
+        p(this, "shopBlocks", void 0),
+            p(this, "categories", void 0),
+            p(this, "userDiscounts", void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
@@ -41,13 +42,15 @@ class p {
                         case r.z.FEED:
                             return l.K.fromServer(e);
                         case r.z.WIDE_BANNER:
-                            return f.j.fromServer(e);
+                            return _.j.fromServer(e);
                         case r.z.SHELF:
-                            return d.O.fromServer(e);
+                            return f.O.fromServer(e);
                         case r.z.COUNTDOWN_TIMER:
                             return o.G.fromServer(e);
                         case r.z.IMMERSIVE_BANNER:
                             return u.k.fromServer(e);
+                        case r.z.REWARD_HERO:
+                            return d.r.fromServer(e);
                         default:
                             return;
                     }
