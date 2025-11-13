@@ -25,8 +25,8 @@ var r = n(951288),
     O = n(314897),
     v = n(626135),
     I = n(361207),
-    S = n(690032),
-    T = n(358085),
+    T = n(690032),
+    S = n(358085),
     A = n(998502),
     C = n(981631),
     N = n(188785),
@@ -44,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function w(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,7 +95,7 @@ let L = (0, h.Un)({
         name: "DownloadApps",
     }),
     j = (0, h.Un)({
-        createPromise: () => n.e("97337").then(n.bind(n, 484097)),
+        createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
     }),
@@ -125,7 +125,7 @@ let L = (0, h.Un)({
         name: "LinkAuthorize",
     }),
     F = (0, h.Un)({
-        createPromise: () => Promise.all([n.e("2892"), n.e("69773")]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e("16828"), n.e("69773")]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: "ActivateDevice",
     }),
@@ -165,7 +165,7 @@ let L = (0, h.Un)({
                 n.e("22516"),
                 n.e("37220"),
                 n.e("22173"),
-                n.e("14323"),
+                n.e("18295"),
                 n.e("30634"),
                 n.e("95546"),
                 n.e("57336"),
@@ -191,7 +191,7 @@ let L = (0, h.Un)({
     H = (0, h.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("2892"),
+                n.e("16828"),
                 n.e("52030"),
                 n.e("10778"),
                 n.e("12581"),
@@ -246,7 +246,7 @@ let L = (0, h.Un)({
                 n.e("46931"),
                 n.e("37220"),
                 n.e("22173"),
-                n.e("14323"),
+                n.e("18295"),
                 n.e("95546"),
                 n.e("57336"),
                 n.e("60831"),
@@ -313,7 +313,7 @@ class ei extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : R.KO
-                      ? T.isPlatformEmbedded
+                      ? S.isPlatformEmbedded
                           ? (0, r.jsxs)(o.rs, {
                                 children: [
                                     t
@@ -508,7 +508,7 @@ class ei extends i.Component {
                                         render: () => {
                                             var e, t;
                                             let n = null == (e = v.default.getSuperProperties()) ? void 0 : e.os,
-                                                i = (0, S.o)(null != (t = window.location.search) ? t : "");
+                                                i = (0, T.o)(null != (t = window.location.search) ? t : "");
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, r.jsx)(o.l_, {
                                                     to:
@@ -532,7 +532,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(o.l_, {
                                         from: C.Z5c.CONNECT_AUTHORIZE,
-                                        to: x(w({}, location), { pathname: C.Z5c.OAUTH2_AUTHORIZE }),
+                                        to: x(D({}, location), { pathname: C.Z5c.OAUTH2_AUTHORIZE }),
                                     }),
                                     (0, r.jsx)(o.AW, {
                                         path: [
@@ -573,7 +573,7 @@ class ei extends i.Component {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,
-                    T.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
+                    S.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
                         ? (0, r.jsx)(E.Z, {})
                         : null,
                 ],
@@ -587,7 +587,7 @@ function ea() {
 }
 function eo(e) {
     let t = ea();
-    return (0, r.jsx)(ei, x(w({}, e), { skipsSettingDefaultPageTitle: t }));
+    return (0, r.jsx)(ei, x(D({}, e), { skipsSettingDefaultPageTitle: t }));
 }
 let es = d.ZP.connectStores(
     [O.default, g.Z],

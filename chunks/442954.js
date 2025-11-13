@@ -1283,7 +1283,7 @@ let j = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("2892"), n.e("90688")]).then(n.bind(n, 978305));
+        let { default: e } = await Promise.all([n.e("16828"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, b({}, t));
     },
 };

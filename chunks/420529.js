@@ -1,7 +1,7 @@
-n.d(t, { Z: () => _ });
-var r = n(951288);
+n.d(t, { Z: () => y });
+var i = n(951288);
 n(647438);
-var i = n(399606),
+var r = n(399606),
     l = n(481060),
     a = n(231757),
     o = n(397639),
@@ -10,30 +10,30 @@ var i = n(399606),
     u = n(951206),
     d = n(446226),
     p = n(937393),
-    f = n(721351),
-    h = n(981631),
+    h = n(721351),
+    f = n(981631),
     m = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -46,8 +46,8 @@ function b(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -56,43 +56,43 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.getChannelId() === e.id),
-        _ = (0, d.Z)(),
-        y = (null == _ ? void 0 : _.channelId) === e.id,
-        C = (0, o.V)(e) && !e.isPrivate(),
-        v = (0, o.Z)(e),
-        O = (!(0, i.e7)([c.Z], () => c.Z.isInChannel(e.id)) && v) || C,
-        x = (0, p.Z)();
-    return y || 0 !== x.length
-        ? y
-            ? (0, r.jsx)(l.sNh, {
+function y(e) {
+    let t = (0, r.e7)([s.Z], () => s.Z.getChannelId() === e.id),
+        y = (0, d.Z)(),
+        C = (null == y ? void 0 : y.channelId) === e.id,
+        v = (0, o.V)(e) && !e.isPrivate(),
+        _ = (0, o.Z)(e),
+        x = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && _) || v,
+        j = (0, p.Z)();
+    return C || 0 !== j.length
+        ? C
+            ? (0, i.jsx)(l.sNh, {
                   label: m.intl.string(m.t.PlwgdU),
                   id: "handoff",
                   action: () => {
-                      (0, u.F)(_);
+                      (0, u.F)(y);
                   },
-                  icon: (0, f.Z)(void 0),
-                  disabled: O,
+                  icon: (0, h.Z)(void 0),
+                  disabled: x,
               })
-            : x.map((i) => {
+            : j.map((r) => {
                   var o, s;
-                  return (0, r.jsx)(
+                  return (0, i.jsx)(
                       l.sNh,
                       {
-                          id: "transfer-".concat(i.type, "-").concat(i.id),
+                          id: "transfer-".concat(r.type, "-").concat(r.id),
                           label:
-                              ((o = i.type),
+                              ((o = r.type),
                               (s = t),
-                              o === h.ABu.XBOX
+                              o === f.ABu.XBOX
                                   ? s
                                       ? m.intl.string(m.t["qVE/VF"])
                                       : m.intl.string(m.t.E8euSk)
-                                  : o === h.ABu.PLAYSTATION
+                                  : o === f.ABu.PLAYSTATION
                                     ? s
                                         ? m.intl.string(m.t.vzfxmY)
                                         : m.intl.string(m.t.QxEYDj)
-                                    : o === h.ABu.PLAYSTATION_STAGING
+                                    : o === f.ABu.PLAYSTATION_STAGING
                                       ? s
                                           ? m.intl.string(m.t.BDiXtV)
                                           : m.intl.string(m.t["bhdB9+"])
@@ -104,30 +104,30 @@ function _(e) {
                                           platformType: t.type,
                                           location: "Console Transfer Item",
                                       });
-                                  t.type === h.ABu.XBOX
+                                  t.type === f.ABu.XBOX
                                       ? (0, l.ZDy)(async () => {
-                                            let { default: t } = await Promise.all([n.e("2892"), n.e("45929")]).then(
+                                            let { default: t } = await Promise.all([n.e("16828"), n.e("45929")]).then(
                                                 n.bind(n, 200623),
                                             );
-                                            return (n) => (0, r.jsx)(t, b(g({}, n), { channel: e }));
+                                            return (n) => (0, i.jsx)(t, b(g({}, n), { channel: e }));
                                         })
-                                      : (t.type === h.ABu.PLAYSTATION || t.type === h.ABu.PLAYSTATION_STAGING) &&
+                                      : (t.type === f.ABu.PLAYSTATION || t.type === f.ABu.PLAYSTATION_STAGING) &&
                                         (0, l.ZDy)(async () => {
-                                            let { default: i } = await n.e("638").then(n.bind(n, 543974));
+                                            let { default: r } = await n.e("638").then(n.bind(n, 543974));
                                             return (n) =>
-                                                (0, r.jsx)(
-                                                    i,
+                                                (0, i.jsx)(
+                                                    r,
                                                     b(g({}, n), {
                                                         platform: t.type,
                                                         channel: e,
                                                     }),
                                                 );
                                         });
-                              })(i),
-                          icon: (0, f.Z)(i.type),
-                          disabled: O,
+                              })(r),
+                          icon: (0, h.Z)(r.type),
+                          disabled: x,
                       },
-                      i.id,
+                      r.id,
                   );
               })
         : null;
