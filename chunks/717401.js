@@ -79,16 +79,15 @@ function h(e) {
             backgroundRepeat: "no-repeat",
         };
 }
-function m(e, t, n) {
+function m(e, t) {
     if (null != e && null != t) {
-        var r, i;
-        let a = t.background,
-            o = e.backgroundImage;
+        let n = t.background,
+            r = e.backgroundImage;
         return {
-            backgroundImage: "".concat(o, ", ").concat(a),
+            backgroundImage: "".concat(r, ", ").concat(n),
             backgroundColor: "lightgray",
-            backgroundSize: null != (r = null == n ? void 0 : n.backgroundSize) ? r : "auto 110%, auto",
-            backgroundPosition: null != (i = null == n ? void 0 : n.backgroundPosition) ? i : "right 90% center, 0% 0%",
+            backgroundSize: "cover, auto",
+            backgroundPosition: "right center, 0% 0%",
             backgroundRepeat: "no-repeat, no-repeat",
         };
     }

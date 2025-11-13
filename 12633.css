@@ -61688,10 +61688,16 @@ screen and (max-width:485px) {
 }
 
 .giftImagePromotion_a45ed3 {
-    inset-inline-start: -65px;
+    inset-inline-start: 32px;
     position: absolute;
-    top: -21px;
-    width: 400px
+    top: 21px;
+    width: 220px
+}
+
+.full-motion .giftImagePromotion_a45ed3 {
+    inset-inline-start: 24px;
+    top: 10px;
+    width: 235px
 }
 
 .giftImageAnimatedPromotion_a45ed3 {
@@ -74410,10 +74416,15 @@ html .progress__61462 {
 .avatar__72cd3 {
     align-items: center;
     display: flex;
-    inset-inline-end: 0;
+    inset-inline-end: 10px;
     position: absolute;
-    top: -50px;
+    top: -40px;
     z-index: 1
+}
+
+.full-motion .avatar__72cd3 {
+    inset-inline-end: 0;
+    top: -50px
 }
 
 .bannerImage__72cd3 {

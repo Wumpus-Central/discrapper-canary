@@ -263,50 +263,49 @@ function ef() {
     });
 }
 function e_(e) {
-    var t, n;
-    let { className: i, config: a } = e,
-        s = (0, c.e7)([y.Z], () => y.Z.useReducedMotion),
-        l = a.getImageUrl(s),
-        u = null == (t = a.getBackgroundImageUrl) ? void 0 : t.call(a),
-        d = (0, F.Yr)(u),
-        f = (0, F.Tl)(a.gradientConfig),
-        _ = (0, F.$q)(d, f),
-        h = { color: null != (n = a.textColor) ? n : "var(--always-white)" };
+    var t, n, i;
+    let { className: a, config: s } = e,
+        l = (0, c.e7)([y.Z], () => y.Z.useReducedMotion),
+        u = s.getImageUrl(l),
+        d = (0, F.Yr)(null == (t = s.getBackgroundImageUrl) ? void 0 : t.call(s)),
+        f = (0, F.Tl)(null != (n = s.gradientConfig) ? n : void 0),
+        _ = { color: null != (i = s.textColor) ? i : "var(--always-white)" };
     return (0, r.jsxs)("div", {
-        className: o()(en.giftCardPromotion, i),
-        style: _,
+        className: o()(en.giftCardPromotion, a),
+        style: null != d ? d : f,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 className: en.giftImagePromotion,
                 "aria-hidden": !0,
-                src: l,
+                src: u,
             }),
             (0, r.jsxs)("div", {
                 className: en.giftInfoPromotion,
                 children: [
                     (0, r.jsx)(p.Heading, {
                         className: en.giftInfoTitlePromotion,
-                        style: h,
-                        variant: "heading-lg/extrabold",
-                        children: a.title(),
+                        style: _,
+                        variant: "text-lg/bold",
+                        children: s.title(),
                     }),
                     (0, r.jsx)(p.Text, {
                         className: en.giftText,
-                        style: h,
-                        variant: "text-xs/medium",
-                        children: a.body(),
+                        style: _,
+                        variant: "text-sm/medium",
+                        children: s.body(),
                     }),
-                    null != a.additionalTerm &&
+                    null != s.additionalTerm &&
                         (0, r.jsx)(p.Text, {
                             className: en.giftAdditionalTerm,
-                            style: h,
+                            style: _,
                             variant: "text-xxs/normal",
-                            children: a.additionalTerm(),
+                            children: s.additionalTerm(),
                         }),
                     (0, r.jsx)(W.Z, {
                         variant: "primary",
                         size: "md",
+                        fullWidth: !0,
                         onClick: () => {
                             M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: ec,

@@ -1,4 +1,4 @@
-n.d(t, { D9: () => O });
+n.d(t, { D: () => y });
 var r = n(979554),
     i = n(242433),
     a = n(100527),
@@ -38,9 +38,6 @@ let m = {
         gradient: ["rgba(177, 186, 253, 1)", "rgba(91, 108, 242, 1)", "rgba(21, 18, 99, 1)"],
     },
     y = {
-        gradient: ["rgba(74, 87, 192, 1)", "rgba(8, 5, 67, 1)"],
-    },
-    O = {
         rewards: [m, g, E],
         rewardAssetIdMap: (0, o.YV)([m, g, E]),
         chatGiftIcon: {
@@ -88,7 +85,6 @@ let m = {
             title: () => l.intl.string(l.t.Eeqjcv),
             body: () => l.intl.string(l.t.IuMZS3),
             getBackgroundImageUrl: () => _.Z,
-            gradientConfig: y,
         },
         giftPurchaseConfirmation: {
             yearGiftText: l.t["0Z0G7m"],

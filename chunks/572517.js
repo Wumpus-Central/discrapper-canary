@@ -1,7 +1,7 @@
 n.d(t, { c: () => h });
 var r = n(951288),
-    a = n(442837),
-    l = n(780384),
+    l = n(442837),
+    a = n(780384),
     i = n(481060),
     o = n(410030),
     s = n(607070),
@@ -12,29 +12,26 @@ var r = n(951288),
     m = n(432483);
 function h() {
     var e, t;
-    let n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+    let n = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         h = (0, o.ZP)(),
-        f = (0, l.wj)(h),
+        f = (0, a.wj)(h),
         b = (0, c.Z)(),
         g = null == b ? void 0 : b.planSelectionBanner,
         { claimableRewards: v } = (0, d.wD)();
     if (null == g || null == v) return null;
     let x = null == (e = g.getBackgroundImageUrl) ? void 0 : e.call(g, f),
-        P = (0, u.Yr)(x),
-        j =
+        j = (0, u.Yr)(x),
+        y =
             null == (t = g.gradientConfig)
                 ? void 0
                 : t.call(g, {
                       isDarkMode: f,
                       isAndroid: !1,
                   }),
-        y = (0, u.Tl)(j, {
+        P = (0, u.Tl)(y, {
             colorStops: [0, 12, 100],
         }),
-        S = (0, u.$q)(P, y, {
-            backgroundSize: "cover, auto",
-            backgroundPosition: "right center, 0% 0%",
-        });
+        S = (0, u.$q)(j, P);
     return (0, r.jsxs)("div", {
         className: m.promotionalFooterBanner,
         style: S,
