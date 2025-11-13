@@ -66,128 +66,124 @@ function I(e, t) {
 function S(e) {
     let {
             searchContext: t,
-            searchMode: l,
-            onSearchModeChange: o,
-            totalResults: c,
-            isIndexing: p,
-            isSearching: h,
-            documentsIndexed: _,
-            selectedChannelId: S,
+            searchMode: n,
+            onSearchModeChange: l,
+            totalResults: o,
+            isIndexing: c,
+            isSearching: p,
+            documentsIndexed: h,
+            selectedChannelId: C,
         } = e,
-        Z = (0, m.nP)({ location: "SearchHeader" }),
-        P = (0, m.KS)({ location: "SearchHeader" }),
-        T = Z || P,
-        N = (0, y.I)(t),
-        { totalFilters: A } = (0, b.p4)(N, t),
-        D = i.useMemo(() => {
+        I = (0, m.nP)({ location: "SearchHeader" }),
+        S = (0, m.KS)({ location: "SearchHeader" }),
+        Z = I || S,
+        P = (0, y.I)(t),
+        { totalFilters: T } = (0, b.p4)(P, t),
+        N = i.useMemo(() => {
             if (t.type === x.aib.DMS) {
                 var e, n;
-                let t = null != (n = null == (e = (0, f.$G)(N).channel_id) ? void 0 : e.length) ? n : 0;
+                let t = null != (n = null == (e = (0, f.$G)(P).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? j.intl.format(j.t.A2dqWG, { filterCount: t }) : j.intl.string(j.t.tc619d);
             }
             return null;
-        }, [t.type, N]),
-        [L, M] = i.useState(null),
-        k = i.useMemo(() => (h ? [] : [s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [h]),
-        [U, G] = (0, u.US)(k),
-        H = U === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
-        F = i.useCallback(
+        }, [t.type, P]),
+        [A, D] = i.useState(null),
+        L = i.useMemo(() => (p ? [] : [s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [p]),
+        [M, k] = (0, u.US)(L),
+        U = M === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
+        G = i.useCallback(
             (e) => {
-                null != e && H && G(O.L.USER_DISMISS), M(e);
+                null != e && U && k(O.L.USER_DISMISS), D(e);
             },
-            [G, H],
+            [k, U],
         ),
-        B = i.useCallback(
+        H = i.useCallback(
             (e) => {
-                G("user:explicit" === e ? O.L.USER_DISMISS : O.L.AUTO_DISMISS);
+                k("user:explicit" === e ? O.L.USER_DISMISS : O.L.AUTO_DISMISS);
             },
-            [G],
+            [k],
         ),
-        V = i.useCallback(() => {
-            F(null),
-                (0, d.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("37979"), n.e("57390")]).then(n.bind(n, 238088));
-                    return (n) => (0, r.jsx)(e, I(C({}, n), { searchContext: t }));
-                });
-        }, [t, F]),
-        z = i.useMemo(() => (A > 0 ? j.intl.format(j.t.uaR4sI, { filterCount: A }) : j.intl.string(j.t.UdhTtk)), [A]),
-        W = (0, g.UX)({ location: "SearchHeader" }),
-        Y = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
-        q = i.useMemo(
+        F = i.useCallback(() => {
+            G(null), _.Z.openSearchFiltersModal(t);
+        }, [t, G]),
+        B = i.useMemo(() => (T > 0 ? j.intl.format(j.t.uaR4sI, { filterCount: T }) : j.intl.string(j.t.UdhTtk)), [T]),
+        V = (0, g.UX)({ location: "SearchHeader" }),
+        z = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
+        W = i.useMemo(
             () =>
-                T && W
+                Z && V
                     ? (0, r.jsxs)("div", {
                           className: v.searchModeAndFiltersContainer,
                           children: [
                               (0, r.jsx)(d.Button, {
                                   variant: "secondary",
-                                  onClick: V,
-                                  text: z,
+                                  onClick: F,
+                                  text: B,
                                   icon: d.gXV,
                                   size: "sm",
                               }),
                               (0, r.jsx)(w, {
-                                  searchMode: l,
-                                  onSearchModeChange: o,
-                                  isPopoutOpen: "sort" === L,
-                                  setOpenPopout: F,
+                                  searchMode: n,
+                                  onSearchModeChange: l,
+                                  isPopoutOpen: "sort" === A,
+                                  setOpenPopout: G,
                               }),
-                              Y &&
+                              z &&
                                   (0, r.jsx)(R, {
                                       searchContext: t,
-                                      selectedChannelId: S,
-                                      isPopoutOpen: "settings" === L,
-                                      setOpenPopout: F,
-                                      isPopoverVisible: H,
-                                      onPopoverRequestClose: B,
+                                      selectedChannelId: C,
+                                      isPopoutOpen: "settings" === A,
+                                      setOpenPopout: G,
+                                      isPopoverVisible: U,
+                                      onPopoverRequestClose: H,
                                   }),
                           ],
                       })
-                    : T
+                    : Z
                       ? (0, r.jsxs)("div", {
                             className: v.searchModeAndFiltersContainer,
                             children: [
                                 (0, r.jsx)(d.Button, {
                                     variant: "secondary",
-                                    onClick: V,
-                                    text: z,
+                                    onClick: F,
+                                    text: B,
                                     icon: d.gXV,
                                     size: "sm",
                                 }),
                                 (0, r.jsx)(w, {
-                                    searchMode: l,
-                                    onSearchModeChange: o,
-                                    isPopoutOpen: "sort" === L,
-                                    setOpenPopout: F,
+                                    searchMode: n,
+                                    onSearchModeChange: l,
+                                    isPopoutOpen: "sort" === A,
+                                    setOpenPopout: G,
                                 }),
                             ],
                         })
-                      : W
+                      : V
                         ? (0, r.jsxs)("div", {
                               className: v.searchModeAndFiltersContainer,
                               children: [
                                   (0, r.jsx)(w, {
-                                      searchMode: l,
-                                      onSearchModeChange: o,
-                                      isPopoutOpen: "sort" === L,
-                                      setOpenPopout: F,
+                                      searchMode: n,
+                                      onSearchModeChange: l,
+                                      isPopoutOpen: "sort" === A,
+                                      setOpenPopout: G,
                                   }),
-                                  Y &&
+                                  z &&
                                       (0, r.jsx)(R, {
                                           searchContext: t,
-                                          selectedChannelId: S,
-                                          isPopoutOpen: "settings" === L,
-                                          setOpenPopout: F,
-                                          isPopoverVisible: H,
-                                          onPopoverRequestClose: B,
+                                          selectedChannelId: C,
+                                          isPopoutOpen: "settings" === A,
+                                          setOpenPopout: G,
+                                          isPopoverVisible: U,
+                                          onPopoverRequestClose: H,
                                       }),
                               ],
                           })
                         : (0, r.jsxs)(d.njP, {
                               orientation: "horizontal",
                               className: v.searchHeaderTabList,
-                              selectedItem: l,
-                              onItemSelect: o,
+                              selectedItem: n,
+                              onItemSelect: l,
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: v.searchHeaderTab,
@@ -206,23 +202,23 @@ function S(e) {
                                   }),
                               ],
                           }),
-            [z, V, T, L, W, Y, o, t, l, S, H, F, B],
+            [B, F, Z, A, V, z, l, t, n, C, U, G, H],
         );
     return (0, r.jsxs)("header", {
-        className: a()(v.searchHeader, { [v.searchHeaderWithSubtitle]: null != D }),
+        className: a()(v.searchHeader, { [v.searchHeaderWithSubtitle]: null != N }),
         children: [
             (0, r.jsx)("div", {
                 className: v.totalResults,
                 role: "status",
                 children: (0, r.jsx)(E, {
-                    totalResults: c,
-                    subtitle: D,
-                    isIndexing: p,
-                    isSearching: h,
-                    documentsIndexed: _,
+                    totalResults: o,
+                    subtitle: N,
+                    isIndexing: c,
+                    isSearching: p,
+                    documentsIndexed: h,
                 }),
             }),
-            q,
+            W,
         ],
     });
 }
