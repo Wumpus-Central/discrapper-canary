@@ -97,25 +97,24 @@ function I(e) {
             applicationId: T,
             giftMessage: S,
             confirmationFooter: A,
-            paymentModalBanner: C,
-            isGift: N,
-            children: R,
+            isGift: C,
+            children: N,
         } = e,
-        P = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        w = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
+        R = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        P = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         { analyticsLocations: D } = (0, o.ZP)(),
-        x = (0, p.N)(),
-        L = !N && null != x && null != g && h.nG[x.trial_id].skus.includes(g);
-    return R({
+        w = (0, p.N)(),
+        x = !C && null != w && null != g && h.nG[w.trial_id].skus.includes(g);
+    return N({
         onClick: (e) => {
             var i;
-            if ((e.preventDefault(), null == P))
+            if ((e.preventDefault(), null == R))
                 return void (0, c.uL)(m.Z5c.LOGIN, { source: "premium_subscribe_button" });
-            if ((null == t || t(e), (null == w ? void 0 : w.status) === m.O0b.ACCOUNT_HOLD)) {
+            if ((null == t || t(e), (null == P ? void 0 : P.status) === m.O0b.ACCOUNT_HOLD)) {
                 (0, s.A3)(), (0, d.openUserSettings)(u.n.NITRO_PANEL, { section: m.oAB.PREMIUM }), null == v || v(!1);
                 return;
             }
-            if (!P.isClaimed())
+            if (!R.isClaimed())
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("77927"), n.e("69417")]).then(
                         n.bind(n, 918995),
@@ -126,7 +125,7 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            if (!P.verified)
+            if (!R.verified)
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
                     return (t) => {
@@ -135,11 +134,11 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            let o = L ? (null == (i = x.subscription_trial) ? void 0 : i.id) : null,
+            let o = x ? (null == (i = w.subscription_trial) ? void 0 : i.id) : null,
                 f = m.AnalyticsObjectTypes.BUY;
-            null != o ? (f = m.AnalyticsObjectTypes.TRIAL) : N && (f = m.AnalyticsObjectTypes.GIFT),
+            null != o ? (f = m.AnalyticsObjectTypes.TRIAL) : C && (f = m.AnalyticsObjectTypes.GIFT),
                 (0, l.Z)({
-                    isGift: N,
+                    isGift: C,
                     initialPlanId: null,
                     subscriptionTier: g,
                     analyticsLocations: D,
@@ -156,7 +155,6 @@ function I(e) {
                     applicationId: T,
                     giftMessage: S,
                     confirmationFooter: A,
-                    paymentModalBanner: C,
                 });
         },
     });
