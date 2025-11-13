@@ -5,5 +5,5 @@ var r = n(647438),
     o = n(124566);
 function s() {
     let { enabled: e } = a.ZP.useConfig({ location: "useGiftingPromotionConfig" });
-    return r.useMemo(() => (i.tq || i.Em ? null : e ? o.D : null), [e]);
+    return r.useMemo(() => (i.tq || i.Em ? null : e ? o.D9 : null), [e]);
 }
