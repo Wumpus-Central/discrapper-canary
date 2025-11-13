@@ -1,76 +1,74 @@
-n.d(t, { Z: () => f }), n(35282);
+n.d(t, { Z: () => d }), n(35282);
 var r = n(734959),
-    i = n(835834),
-    a = n(657305),
-    o = n(394821),
-    s = n(841784),
-    l = n(503438),
-    c = n(750154),
-    u = n(981631),
-    d = n(388032);
-function f(e) {
+    i = n(657305),
+    a = n(394821),
+    o = n(841784),
+    s = n(503438),
+    l = n(750154),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name,
-        f = (null == e ? void 0 : e.details) === "" ? null : null == e ? void 0 : e.details,
-        _ = (null == e ? void 0 : e.state) === "" ? null : null == e ? void 0 : e.state,
-        p = (0, i.R)("getActivityStatusText"),
-        h = (null == e ? void 0 : e.type) === u.IIU.STREAMING && null != f ? f : n;
+        d = (null == e ? void 0 : e.details) === "" ? null : null == e ? void 0 : e.details,
+        f = (null == e ? void 0 : e.state) === "" ? null : null == e ? void 0 : e.state,
+        _ = (null == e ? void 0 : e.type) === c.IIU.STREAMING && null != d ? d : n;
     if (
         ((null == e ? void 0 : e.status_display_type) === r.D.NAME && null != n
-            ? (h = n)
-            : (null == e ? void 0 : e.status_display_type) === r.D.STATE && null != _
-              ? (h = _)
-              : (null == e ? void 0 : e.status_display_type) === r.D.DETAILS && null != f && (h = f),
-        (0, s.Z)(e))
+            ? (_ = n)
+            : (null == e ? void 0 : e.status_display_type) === r.D.STATE && null != f
+              ? (_ = f)
+              : (null == e ? void 0 : e.status_display_type) === r.D.DETAILS && null != d && (_ = d),
+        (0, o.Z)(e))
     ) {
-        let e = (0, a.Z)(n);
+        let e = (0, i.Z)(n);
         return {
             text: e,
             tooltip: e,
         };
     }
-    if ((null == e ? void 0 : e.type) === u.IIU.PLAYING && null != h)
+    if ((null == e ? void 0 : e.type) === c.IIU.PLAYING && null != _)
         return {
-            text: p ? h : d.intl.format(d.t.lFApmz, { game: h }),
-            tooltip: d.intl.formatToPlainString(d.t.lFApmz, { game: h }),
+            text: _,
+            tooltip: u.intl.formatToPlainString(u.t.lFApmz, { game: _ }),
         };
-    if ((0, l.Z)(e) && t && null != _) {
-        var m;
-        let e = null == (m = _.split("; ")) ? void 0 : m.join(", ");
+    if ((0, s.Z)(e) && t && null != f) {
+        var p;
+        let e = null == (p = f.split("; ")) ? void 0 : p.join(", ");
         return {
-            text: p ? e : d.intl.format(d.t.Vnuxue, { name: e }),
-            tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: e }),
+            text: e,
+            tooltip: u.intl.formatToPlainString(u.t.Vnuxue, { name: e }),
         };
     }
-    return (0, c.dS)(e) && null != n
+    return (0, l.dS)(e) && null != n
         ? {
-              text: p ? n : d.intl.format(d.t.pW3Ip3, { name: n }),
-              tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: n }),
+              text: n,
+              tooltip: u.intl.formatToPlainString(u.t.pW3Ip3, { name: n }),
           }
-        : (null == e ? void 0 : e.type) === u.IIU.LISTENING && null != h
+        : (null == e ? void 0 : e.type) === c.IIU.LISTENING && null != _
           ? {
-                text: p ? h : d.intl.format(d.t.Vnuxue, { name: h }),
-                tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: h }),
+                text: _,
+                tooltip: u.intl.formatToPlainString(u.t.Vnuxue, { name: _ }),
             }
-          : (0, o.Z)(e) && t && null != f
+          : (0, a.Z)(e) && t && null != d
             ? {
-                  text: p ? f : d.intl.format(d.t.pW3Ip3, { name: f }),
-                  tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: f }),
+                  text: d,
+                  tooltip: u.intl.formatToPlainString(u.t.pW3Ip3, { name: d }),
               }
-            : (null == e ? void 0 : e.type) === u.IIU.WATCHING && null != h
+            : (null == e ? void 0 : e.type) === c.IIU.WATCHING && null != _
               ? {
-                    text: p ? h : d.intl.format(d.t.pW3Ip3, { name: h }),
-                    tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: h }),
+                    text: _,
+                    tooltip: u.intl.formatToPlainString(u.t.pW3Ip3, { name: _ }),
                 }
-              : (null == e ? void 0 : e.type) === u.IIU.COMPETING && null != h
+              : (null == e ? void 0 : e.type) === c.IIU.COMPETING && null != _
                 ? {
-                      text: p ? h : d.intl.format(d.t.QQ2wVE, { name: h }),
-                      tooltip: d.intl.formatToPlainString(d.t.QQ2wVE, { name: h }),
+                      text: _,
+                      tooltip: u.intl.formatToPlainString(u.t.QQ2wVE, { name: _ }),
                   }
-                : (null == e ? void 0 : e.type) === u.IIU.STREAMING && null != h
+                : (null == e ? void 0 : e.type) === c.IIU.STREAMING && null != _
                   ? {
-                        text: p ? h : d.intl.format(d.t["0wJXSh"], { name: h }),
-                        tooltip: d.intl.formatToPlainString(d.t["0wJXSh"], { name: h }),
+                        text: _,
+                        tooltip: u.intl.formatToPlainString(u.t["0wJXSh"], { name: _ }),
                     }
                   : {};
 }
