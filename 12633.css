@@ -52225,7 +52225,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59558,9 +59558,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -75340,8 +75340,9 @@ html .progress__61462 {
     border-radius: 20px;
     flex-direction: row;
     gap: 24px;
-    max-width: 800px;
-    padding: 12px 24px
+    margin-top: 40px;
+    max-width: 700px;
+    padding: 16px 24px
 }
 
 .asset__7137c,
@@ -75353,8 +75354,7 @@ html .progress__61462 {
 .asset__7137c {
     flex-direction: column;
     flex-shrink: 0;
-    justify-content: center;
-    padding: 8px
+    justify-content: center
 }
 
 .bannerContent__7137c {
