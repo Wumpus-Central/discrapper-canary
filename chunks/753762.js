@@ -10,24 +10,27 @@ let l = (0, r.B)({
         enabled: !1,
         backButtonBadge: !1,
         animateBetweenServers: !1,
+        profileButton: !1,
     },
     treatments: [
         {
             id: 1,
-            label: "You Bar",
-            config: {
-                enabled: !0,
-                backButtonBadge: !1,
-                animateBetweenServers: !1,
-            },
-        },
-        {
-            id: 2,
-            label: "You Bar with badged back button",
+            label: "You Bar no profile button",
             config: {
                 enabled: !0,
                 backButtonBadge: !0,
                 animateBetweenServers: !1,
+                profileButton: !1,
+            },
+        },
+        {
+            id: 2,
+            label: "You Bar profile button",
+            config: {
+                enabled: !0,
+                backButtonBadge: !0,
+                animateBetweenServers: !1,
+                profileButton: !0,
             },
         },
         {
@@ -37,6 +40,7 @@ let l = (0, r.B)({
                 enabled: !0,
                 backButtonBadge: !0,
                 animateBetweenServers: !0,
+                profileButton: !1,
             },
         },
     ],
