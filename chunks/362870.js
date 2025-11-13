@@ -1,49 +1,51 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(689628),
-    s = n(91192),
+    s = n(509442),
+    o = n(91192),
     c = n(704215),
-    u = n(481060),
-    d = n(515753),
-    p = n(393903),
-    f = n(266454),
-    h = n(426032),
-    g = n(626135),
-    m = n(150560),
-    _ = n(551913),
-    b = n(981631),
-    E = n(921944),
-    O = n(388032),
-    y = n(228624);
-let v = Math.ceil(Math.sqrt(115200)),
-    I = (v - 240) / 2,
-    C = function (e) {
+    u = n(952265),
+    d = n(481060),
+    p = n(515753),
+    f = n(393903),
+    h = n(266454),
+    g = n(426032),
+    m = n(626135),
+    _ = n(150560),
+    b = n(551913),
+    E = n(981631),
+    O = n(921944),
+    y = n(388032),
+    v = n(228624);
+let I = Math.ceil(Math.sqrt(115200)),
+    C = (I - 240) / 2,
+    S = function (e) {
         var t, n;
         let { selected: l } = e,
-            C = (0, s.JA)("quests"),
-            S = i.useRef(null),
+            S = (0, o.JA)("quests"),
+            T = i.useRef(null),
             {
-                shouldShowPopover: T,
-                shouldShowGradientAndBadge: N,
-                dismissContent: j,
+                shouldShowPopover: N,
+                shouldShowGradientAndBadge: j,
+                dismissContent: P,
             } = (function () {
-                let [e, t] = (0, h.US)([c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING], E.R.PRIVATE_CHANNELS_LIST, !0),
-                    n = i.useCallback(() => {
-                        t(E.L.TAKE_ACTION);
-                    }, [t]);
+                let e = (0, u.f9)(),
+                    [t, n] = (0, g.US)(e ? [] : [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING], O.R.PRIVATE_CHANNELS_LIST, !0),
+                    r = i.useCallback(() => {
+                        n(O.L.TAKE_ACTION);
+                    }, [n]);
                 return {
-                    shouldShowPopover: e === c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING,
-                    shouldShowGradientAndBadge: !(0, f.Nj)(c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING),
-                    dismissContent: n,
+                    shouldShowPopover: t === c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING,
+                    shouldShowGradientAndBadge: !(0, h.Nj)(c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING),
+                    dismissContent: r,
                 };
             })(),
-            P = i.useCallback(() => {
-                m.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
+            x = i.useCallback(() => {
+                _.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
             }, []),
-            [{ glowSpring: x }, A] = (0, u.q_F)(() => ({
+            [{ glowSpring: A }, Z] = (0, d.q_F)(() => ({
                 from: { glowSpring: 0 },
                 config: {
                     clamp: !0,
@@ -52,7 +54,7 @@ let v = Math.ceil(Math.sqrt(115200)),
                     friction: 12,
                 },
             })),
-            [{ shineSpring: Z }, w] = (0, u.q_F)(() => ({
+            [{ shineSpring: w }, L] = (0, d.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
                     clamp: !0,
@@ -61,54 +63,54 @@ let v = Math.ceil(Math.sqrt(115200)),
                     friction: 38,
                 },
             })),
-            L = i.useCallback(() => {
-                w({ shineSpring: 1 }),
-                    A({
+            R = i.useCallback(() => {
+                L({ shineSpring: 1 }),
+                    Z({
                         glowSpring: 1,
                         delay: 200,
                     });
-            }, [w, A]),
-            R = i.useCallback(() => {
-                w({
+            }, [L, Z]),
+            D = i.useCallback(() => {
+                L({
                     shineSpring: 0,
                     immediate: !0,
                 }),
-                    A({
+                    Z({
                         glowSpring: 0,
                         delay: 0,
                     });
-            }, [w, A]),
-            D = i.useCallback(() => {
-                w({
+            }, [L, Z]),
+            M = i.useCallback(() => {
+                L({
                     shineSpring: 1,
                     delay: 500,
                 }),
-                    A({
+                    Z({
                         glowSpring: 1,
                         delay: 700,
                     }),
-                    g.default.track(b.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
-            }, [w, A]),
-            [M, k] = i.useState(-1),
-            U = i.useCallback((e) => {
-                k(e.contentRect.width);
+                    m.default.track(E.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            }, [L, Z]),
+            [k, U] = i.useState(-1),
+            G = i.useCallback((e) => {
+                U(e.contentRect.width);
             }, []),
-            G = (0, p.y)(U, [], { fireOnMount: !0 });
+            B = (0, f.y)(G, [], { fireOnMount: !0 });
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: y.wrapper,
-                    onMouseEnter: L,
-                    onMouseLeave: R,
-                    onFocus: L,
-                    onBlur: R,
-                    ref: G,
+                    className: v.wrapper,
+                    onMouseEnter: R,
+                    onMouseLeave: D,
+                    onFocus: R,
+                    onBlur: D,
+                    ref: B,
                     style: {
                         "--custom-shine-dimensions": "".concat(240, "px"),
-                        "--custom-shine-rotated-dimensions-delta": "".concat(I, "px"),
+                        "--custom-shine-rotated-dimensions-delta": "".concat(C, "px"),
                     },
                     children: (0, r.jsx)(
-                        d.Qj,
+                        p.Qj,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -135,45 +137,45 @@ let v = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [y.withGradientAndBadge]: N }),
-                                icon: u.qDn,
-                                listItemRef: S,
-                                onClick: P,
-                                route: b.Z5c.QUEST_HOME_V2,
+                                className: a()({ [v.withGradientAndBadge]: j }),
+                                icon: d.qDn,
+                                listItemRef: T,
+                                onClick: x,
+                                route: E.Z5c.QUEST_HOME_V2,
                                 selected: l,
-                                text: O.intl.string(O.t.JALI2K),
+                                text: y.intl.string(y.t.JALI2K),
                             },
-                            C,
+                            S,
                         )),
                         (n = n =
                             {
                                 children:
-                                    N &&
+                                    j &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(o.animated.div, {
-                                                className: y.shine,
+                                            (0, r.jsx)(s.animated.div, {
+                                                className: v.shine,
                                                 style: {
-                                                    transform: Z.to((e) =>
+                                                    transform: w.to((e) =>
                                                         "translateX(calc("
-                                                            .concat(e * M, "px + ")
-                                                            .concat(e * v, "px)) translateY(-50%) rotate(45deg)"),
+                                                            .concat(e * k, "px + ")
+                                                            .concat(e * I, "px)) translateY(-50%) rotate(45deg)"),
                                                     ),
                                                 },
                                             }),
-                                            (0, r.jsx)(o.animated.div, {
-                                                className: y.glow,
+                                            (0, r.jsx)(s.animated.div, {
+                                                className: v.glow,
                                                 style: {
-                                                    opacity: x.to({
+                                                    opacity: A.to({
                                                         range: [0, 1],
                                                         output: [0, 0.5],
                                                     }),
                                                 },
                                             }),
-                                            (0, r.jsx)(u.IGR, {
-                                                className: y.badge,
-                                                text: O.intl.string(O.t.y2b7CA),
-                                                color: u.TVs.colors.BG_BRAND.css,
+                                            (0, r.jsx)(d.IGR, {
+                                                className: v.badge,
+                                                text: y.intl.string(y.t.y2b7CA),
+                                                color: d.TVs.colors.BG_BRAND.css,
                                             }),
                                         ],
                                     }),
@@ -193,12 +195,12 @@ let v = Math.ceil(Math.sqrt(115200)),
                         t),
                     ),
                 }),
-                T &&
-                    (0, r.jsx)(_.Z, {
-                        targetElementRef: S,
-                        onNavigateToQuestHome: P,
-                        onRender: D,
-                        onRequestClose: j,
+                N &&
+                    (0, r.jsx)(b.Z, {
+                        targetElementRef: T,
+                        onNavigateToQuestHome: x,
+                        onRender: M,
+                        onRequestClose: P,
                     }),
             ],
         });
