@@ -502,6 +502,7 @@ var r = (function (e) {
             (e[(e.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION = 642)] =
                 "GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION"),
             (e[(e.GAME_SHOP_ANNOUNCEMENT_MODAL = 643)] = "GAME_SHOP_ANNOUNCEMENT_MODAL"),
+            (e[(e.CHECKPOINT_2025_BOTTOM_SHEET = 644)] = "CHECKPOINT_2025_BOTTOM_SHEET"),
             e
         );
     })({}),
