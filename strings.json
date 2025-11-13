@@ -2545,6 +2545,7 @@
   "Ss6tlb": "How'd the call go?",
   "IdKo2z": "You need to be friends with **!!{username}!!** to start a call",
   "aUT3+M": "!!{callState}!! — Tap to return to call",
+  "A+bT9O": "{users, plural, =1 {!!{user1}!!} =2 {!!{user1}!! and !!{user2}!!} other {!!{commaSeparatedUsers}!!, and !!{lastUser}!!} }",
   "/yA6Qd": "Set as Global Entrance Sound",
   "p2hUt7": "Set as Server Entrance Sound",
   "nzUc3B": "Entrance Sounds",
