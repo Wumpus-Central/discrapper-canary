@@ -356,7 +356,15 @@ let v = (e) => {
             );
     },
     M = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, action: a, wishlistId: o, skuId: s } = e;
+        let {
+            guildId: t,
+            channelId: n,
+            analyticsLocations: i,
+            action: a,
+            wishlistId: o,
+            skuId: s,
+            hasThirdPartySku: l,
+        } = e;
         C(O(b({}, e), { action: a })),
             u.default.track(
                 m.rMx.USER_PROFILE_WISHLIST_ACTION,
@@ -365,6 +373,7 @@ let v = (e) => {
                     action_type: a,
                     wishlist_id: o,
                     sku_id: s,
+                    has_3p_sku: l,
                 }),
             );
     };
