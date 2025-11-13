@@ -45,7 +45,7 @@ function o(t) {
                               (l = l =
                                   {
                                       mediaEngineContext: t.id,
-                                      title: t.name,
+                                      subtitle: t.name,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

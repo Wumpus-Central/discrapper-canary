@@ -126,10 +126,10 @@ let E = new u.Z("RPCCommandsOverlay"),
                         async () => {
                             let { default: e } = await n.e("51749").then(n.bind(n, 800740));
                             return (t) => {
-                                var n, i;
+                                var n, i, s;
                                 return (0, r.jsx)(
                                     e,
-                                    ((n = (function (e) {
+                                    ((i = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
@@ -154,16 +154,13 @@ let E = new u.Z("RPCCommandsOverlay"),
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i =
+                                    (s = s =
                                         {
                                             mediaEngineContext: a,
-                                            title: l.application.name,
-                                            onClose: () => {
-                                                t.onClose();
-                                            },
+                                            subtitle: null != (n = l.application.name) ? n : void 0,
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -171,10 +168,10 @@ let E = new u.Z("RPCCommandsOverlay"),
                                                   n.push.apply(n, r);
                                               }
                                               return n;
-                                          })(Object(i)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                          })(Object(s)).forEach(function (e) {
+                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                                           }),
-                                    n),
+                                    i),
                                 );
                             };
                         },
