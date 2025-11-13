@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => E,
+    ZP: () => S,
     eH: () => Z,
     wY: () => P,
 });
@@ -22,8 +22,8 @@ var i = n(442837),
     h = n(970257),
     m = n(921944),
     v = n(388032),
-    j = n(43617);
-function E(e) {
+    j = n(797013);
+function S(e) {
     let t = (0, i.e7)([y.Z], () => y.Z.getGuildId()),
         n = (0, p.Q_)(t);
     return (0, h.a4)(e)
@@ -36,7 +36,7 @@ function E(e) {
           })
         : null;
 }
-function S() {
+function E() {
     return (0, r.jsx)(d.ZP, {
         contentTypes: [l.z.REPORT_TO_MOD_NEW_TAG],
         children: (e) => {
@@ -66,7 +66,7 @@ function P(e) {
               action: () => {
                   (0, u.Q3)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: m.L.USER_DISMISS }), (0, f.tV)(e);
               },
-              icon: (0, r.jsx)(S, {}),
+              icon: (0, r.jsx)(E, {}),
               disabled: t,
           })
         : null;

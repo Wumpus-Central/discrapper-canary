@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    o = n(442837),
-    l = n(755721),
+    l = n(442837),
+    o = n(755721),
     a = n(481060),
     s = n(678558),
     c = n(343649),
@@ -13,12 +13,12 @@ var i = n(793030),
     f = n(639660),
     m = n(767218),
     g = n(981631),
-    v = n(459196),
+    v = n(18853),
     x = n(388032),
     _ = n(741872);
 function b(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
+        n = (0, l.e7)([u.Z], () => u.Z.getGuild(t)),
         { available: b, spent: h, total: j } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)("div", {
@@ -65,8 +65,8 @@ function b(e) {
                         page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
                         section: g.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: l.Tt.CUSTOM,
-                    size: l.Ph.LARGE,
+                    color: o.Tt.CUSTOM,
+                    size: o.Ph.LARGE,
                     intent: c.P.NONE,
                     icon: (0, r.jsx)(a.Ucv, {
                         className: _.boostButtonIcon,

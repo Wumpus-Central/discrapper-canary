@@ -10,13 +10,13 @@ var r = n(951288),
     d = n(973772),
     p = n(279604),
     h = n(535396),
-    f = n(459196),
+    f = n(18853),
     g = n(388032),
     m = n(362320);
 function b(e) {
     var t, n;
-    let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: C } = e,
-        { onActivate: x, isLoading: E, error: S, onShowDeactivate: I } = (0, p.ZP)(l, b),
+    let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: x } = e,
+        { onActivate: C, isLoading: E, error: S, onShowDeactivate: I } = (0, p.ZP)(l, b),
         P = (0, d.ZP)(l, b),
         N = P.type !== h.A3.INACTIVE,
         { disabled: Z, reason: w } = (0, u.Z)(l, b, N),
@@ -48,8 +48,8 @@ function b(e) {
                   })(P, b);
     return (
         i.useEffect(() => {
-            null == C || C(S);
-        }, [S, C]),
+            null == x || x(S);
+        }, [S, x]),
         (0, r.jsx)(a.i_, {
             body: null != (t = null == T ? void 0 : T.body) ? t : "",
             title: null != (n = null == T ? void 0 : T.title) ? n : void 0,
@@ -128,7 +128,7 @@ function b(e) {
                                 variant: N ? "secondary" : "primary",
                                 "aria-label": g.intl.string(N ? f.default.TZsu1U : f.default.gSxlHf),
                                 disabled: Z,
-                                onClick: N ? I : x,
+                                onClick: N ? I : C,
                                 loading: E,
                                 fullWidth: v,
                                 size: null != O ? O : _ ? "md" : void 0,

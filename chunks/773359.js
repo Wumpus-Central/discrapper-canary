@@ -1,26 +1,26 @@
 n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(481060),
     a = n(545594),
     o = n(501517),
-    s = n(43617),
+    s = n(797013),
     c = n(388032),
     u = n(541170);
 let d = (e) => {
     let { channelId: t } = e,
-        n = i.useCallback(() => {
+        n = r.useCallback(() => {
             o.Z.reopenModReport(t);
         }, [t]);
-    return (0, r.jsx)(a.i, {
-        bannerHeader: (0, r.jsx)(l.Text, {
+    return (0, i.jsx)(a.i, {
+        bannerHeader: (0, i.jsx)(l.Text, {
             variant: "text-md/medium",
             color: "text-muted",
             children: c.intl.string(s.default["0eUUeF"]),
         }),
         headerStyles: u.bannerHeader,
         containerStyles: u.bannerContainer,
-        children: (0, r.jsx)(l.Button, {
+        children: (0, i.jsx)(l.Button, {
             variant: "secondary",
             size: "sm",
             text: c.intl.string(s.default["6quCi9"]),

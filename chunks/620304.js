@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(358458),
+    a = n(509442),
     s = n(793030),
     c = n(442837),
     u = n(481060),
@@ -15,14 +15,14 @@ var r = n(951288),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    y = n(459196),
+    y = n(18853),
     O = n(388032),
     v = n(931942);
 function j(e) {
     let { guild: t, withMargin: l } = e,
         j = (0, b.Z)(t),
-        C = (0, m.Z)(t.id),
-        x = i.useCallback(() => {
+        x = (0, m.Z)(t.id),
+        C = i.useCallback(() => {
             (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
         E = (0, c.e7)([f.Z], () => {
@@ -59,11 +59,11 @@ function j(e) {
             },
         },
         onClick: () => {
-            x();
+            C();
         },
         className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
-            C &&
+            x &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e("8570").then(n.bind(n, 651138));
                     return (n) => {
@@ -167,7 +167,7 @@ function j(e) {
         }),
     });
 }
-function C(e) {
+function x(e) {
     let { guild: t, withMargin: n } = e;
     return (0, r.jsx)(j, {
         guild: t,

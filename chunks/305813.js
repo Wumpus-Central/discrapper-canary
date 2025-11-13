@@ -22,9 +22,9 @@ var l = n(951288),
     v = n(25990),
     P = n(626135),
     N = n(63063),
-    y = n(981631),
-    k = n(671955),
-    O = n(352609),
+    k = n(981631),
+    y = n(671955),
+    O = n(88406),
     T = n(388032),
     E = n(270816);
 function D(e) {
@@ -96,12 +96,12 @@ function A(e) {
         }),
         { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
         V = null != K ? (0, g.Pb)(K) : void 0;
-    G && !M ? (Z = y.BRd.DARK) : !G && M && (Z = y.BRd.LIGHT);
+    G && !M ? (Z = k.BRd.DARK) : !G && M && (Z = k.BRd.LIGHT);
     let W = (0, o.useCallback)(() => {
-            P.default.track(y.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
+            P.default.track(k.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
         }, [B]),
         $ = (0, o.useCallback)((e) => {
-            Y(e === y.BRd.DARK), P.default.track(y.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === y.BRd.DARK });
+            Y(e === k.BRd.DARK), P.default.track(k.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === k.BRd.DARK });
         }, []),
         J = (0, o.useMemo)(
             () =>
@@ -132,7 +132,7 @@ function A(e) {
                 (0, l.jsx)(C.Z, {
                     user: t,
                     displayProfile: H,
-                    themeType: k.l.MODAL_V2,
+                    themeType: y.l.MODAL_V2,
                     className: E.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, l.jsx)("div", {
@@ -183,7 +183,7 @@ function A(e) {
                                             }),
                                         ),
                                         {
-                                            state: y.yb.SENT,
+                                            state: k.yb.SENT,
                                             id: "0",
                                         },
                                     ),
@@ -214,7 +214,7 @@ function A(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: T.intl.format(O.default.prQba8, {
-                            helpArticleLink: N.Z.getArticleURL(y.BhN.DISPLAY_NAME_STYLES),
+                            helpArticleLink: N.Z.getArticleURL(k.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
                     (0, l.jsx)(I, {
@@ -228,7 +228,7 @@ function A(e) {
 }
 function I(e) {
     let { darkPreview: t, onToggleTheme: n } = e,
-        o = t ? y.BRd.DARK : y.BRd.LIGHT;
+        o = t ? k.BRd.DARK : k.BRd.LIGHT;
     return (0, l.jsx)(s.sY7, {
         className: E.themeToggleControl,
         optionClassName: E.themeToggleOption,
@@ -236,16 +236,16 @@ function I(e) {
             {
                 name: "",
                 tooltip: T.intl.string(T.t.b8Cei3),
-                value: y.BRd.DARK,
+                value: k.BRd.DARK,
                 icon: s.Z6G,
-                className: o === y.BRd.DARK ? E.themeToggleOptionSelected : void 0,
+                className: o === k.BRd.DARK ? E.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
                 tooltip: T.intl.string(T.t.K2sFfo),
-                value: y.BRd.LIGHT,
+                value: k.BRd.LIGHT,
                 icon: s.chG,
-                className: o === y.BRd.LIGHT ? E.themeToggleOptionSelected : void 0,
+                className: o === k.BRd.LIGHT ? E.themeToggleOptionSelected : void 0,
             },
         ],
         value: o,

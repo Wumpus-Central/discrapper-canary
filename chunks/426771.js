@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
-    o = n(442837),
-    l = n(28664),
+    l = n(442837),
+    o = n(28664),
     a = n(481060),
     s = n(607070),
     c = n(973772),
@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(857666),
     p = n(279475),
     f = n(535396),
-    m = n(459196),
+    m = n(18853),
     g = n(388032),
     v = n(639560);
 function x(e) {
@@ -19,7 +19,7 @@ function x(e) {
         { guildId: b, group: h, powerups: j } = e,
         [C, w] = i.useState(!1),
         I = (0, c.Gv)(b, j),
-        E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        E = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         Z = (0, d.Z)(h, b);
     if (void 0 === Z || j.length <= 0) return null;
     let P = I.some((e) => e.type !== f.A3.INACTIVE),
@@ -100,7 +100,7 @@ function x(e) {
             (0, r.jsx)(u.N4, {
                 children:
                     null != U
-                        ? (0, r.jsx)(l.u, {
+                        ? (0, r.jsx)(o.u, {
                               asContainer: !0,
                               text: U,
                               delay: 100,

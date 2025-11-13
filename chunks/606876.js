@@ -1,10 +1,10 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(951288),
     a = n(647438),
-    o = n(481060),
-    s = n(790359),
+    s = n(481060),
+    o = n(790359),
     l = n(203377),
-    i = n(459196),
+    i = n(18853),
     c = n(388032),
     d = n(421405);
 function u() {
@@ -20,7 +20,7 @@ function u() {
                         children: [
                             (0, r.jsx)("div", {
                                 className: d.avatar,
-                                children: (0, r.jsx)(o.gw7, {
+                                children: (0, r.jsx)(s.gw7, {
                                     size: "custom",
                                     width: 24,
                                     height: 24,
@@ -39,13 +39,13 @@ function u() {
                                     (0, r.jsxs)("div", {
                                         className: d.previewCardUrl,
                                         children: [
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-tertiary",
                                                 className: d.baseUrl,
                                                 children: "".concat(l.mf, "/"),
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-link",
                                                 className: d.vanityCode,
@@ -83,14 +83,14 @@ function u() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(o.Z, {
                         autoFocus: !0,
                         value: e,
                         onChange: t,
                     }),
                 ],
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 color: "text-tertiary",
                 className: d.disclaimer,

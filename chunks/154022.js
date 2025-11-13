@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(196051),
     R = n(441729),
     P = n(626135),
-    w = n(63063),
-    D = n(695346),
+    D = n(63063),
+    w = n(695346),
     x = n(313789),
     L = n(263937),
     M = n(996073),
@@ -40,7 +40,7 @@ var r = n(951288),
     Z = n(611480),
     F = n(653477),
     V = n(388032),
-    H = n(352609),
+    H = n(88406),
     Y = n(953752),
     W = n(328756);
 function K(e, t, n) {
@@ -185,7 +185,7 @@ function en(e) {
     });
 }
 function er() {
-    let e = D.jU.useSetting(),
+    let e = w.jU.useSetting(),
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, v.e5)(
@@ -416,7 +416,7 @@ function ef() {
         null != a.current && (clearTimeout(a.current), (a.current = null)),
             t !== e && (a.current = setTimeout(() => (0, d.qz)(t), 150));
     }, [t, e]);
-    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: w.Z.getArticleURL(B.BhN.FORCED_COLORS) });
+    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: D.Z.getArticleURL(B.BhN.FORCED_COLORS) });
     return (0, r.jsxs)(c.C3N, {
         label: V.intl.string(V.t["TYyfO/"]),
         children: [
@@ -439,8 +439,8 @@ function ef() {
     });
 }
 function e_() {
-    let e = D.QK.useSetting(),
-        t = D.Yk.useSetting(),
+    let e = w.QK.useSetting(),
+        t = w.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: a,
@@ -472,7 +472,7 @@ function e_() {
         className: Y.reducedMotion,
         children: (0, r.jsxs)(c.C3N, {
             label: V.intl.string(V.t.e3TR1b),
-            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: w.Z.getArticleURL(B.BhN.REDUCED_MOTION) }),
+            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: D.Z.getArticleURL(B.BhN.REDUCED_MOTION) }),
             children: [
                 (0, r.jsx)(c.Checkbox, {
                     checked: _,
@@ -493,7 +493,7 @@ function e_() {
                         label: V.intl.string(V.t.Iayoh5),
                         description: null != l ? (0, A.Z)(l) : void 0,
                         checked: e,
-                        onChange: D.QK.updateSetting,
+                        onChange: w.QK.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(C.F, {
@@ -502,7 +502,7 @@ function e_() {
                         label: V.intl.string(V.t.iIaOlc),
                         description: null != u ? (0, A.Z)(u) : void 0,
                         checked: t,
-                        onChange: D.Yk.updateSetting,
+                        onChange: w.Yk.updateSetting,
                     }),
                 }),
             ],
@@ -510,10 +510,10 @@ function e_() {
     });
 }
 function ep() {
-    let e = D.Wp.useSetting(),
+    let e = w.Wp.useSetting(),
         t = (0, s.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
-            D.Wp.updateSetting(e);
+            w.Wp.updateSetting(e);
         }, []);
     return (0, r.jsx)(c.FXm, {
         label: V.intl.string(V.t["6NtAuJ"]),
@@ -539,7 +539,7 @@ function ep() {
 }
 function eh() {
     let e = (0, s.e7)([f.Z], () => f.Z.isSubmitButtonEnabled),
-        t = D.dN.useSetting(),
+        t = w.dN.useSetting(),
         n = i.useRef(null);
     return (
         (0, M.Z)(n, U.rP.LEGACY_CHAT_INPUT),
@@ -567,7 +567,7 @@ function eh() {
                                     enabled: e,
                                     location: { section: B.jXE.SETTINGS_ACCESSIBILITY },
                                 }),
-                                    D.dN.updateSetting(e);
+                                    w.dN.updateSetting(e);
                             },
                         }),
                     }),
@@ -577,7 +577,7 @@ function eh() {
     );
 }
 function em() {
-    let e = D.OW.useSetting(),
+    let e = w.OW.useSetting(),
         t = (0, s.e7)([R.Z], () => R.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!u.Zh) return null;
@@ -600,7 +600,7 @@ function em() {
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.qvTIwX),
                         checked: e,
-                        onChange: D.OW.updateSetting,
+                        onChange: w.OW.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(C.F, {

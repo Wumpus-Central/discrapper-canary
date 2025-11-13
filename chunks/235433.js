@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(352609),
+    y = n(88406),
     O = n(147164);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,
@@ -31,16 +31,16 @@ function v(e) {
         } = (0, h.mD)(t, n),
         P = [];
     I && P.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
-    let [w, D] = (0, c.US)(P),
-        x = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+    let [D, w] = (0, c.US)(P),
+        x = D === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
         L = (0, i.useCallback)(() => {
-            D(E.L.TAKE_ACTION),
+            w(E.L.TAKE_ACTION),
                 _.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
                 (0, d.I)({
                     analyticsLocations: S,
                     guildId: n,
                 });
-        }, [S, D, n]),
+        }, [S, w, n]),
         M = (0, i.useCallback)(() => {
             (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),

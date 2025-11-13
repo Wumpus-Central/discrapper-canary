@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(494497),
-    l = n(442837),
+    l = n(494497),
+    o = n(442837),
     a = n(481060),
     s = n(434404),
     c = n(905128),
@@ -14,18 +14,18 @@ var r = n(951288),
     d = n(169010),
     p = n(279604),
     f = n(981631),
-    m = n(459196),
+    m = n(18853),
     g = n(388032),
     v = n(46310),
     x = n(175435);
 function _(e, t) {
     var _;
     let b = null != (_ = (0, u.Z)(t)) && _,
-        h = (0, l.e7)([c.Z], () => {
+        h = (0, o.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
         }),
-        j = (0, l.e7)([c.Z], () => {
+        j = (0, o.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
         });
@@ -33,11 +33,11 @@ function _(e, t) {
         let i = (e) =>
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
-                          let { guildId: t, canUseBoosts: i, allPowerups: l, unlockedPowerups: c, skuIds: u } = e,
+                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: c, skuIds: u } = e,
                               d = g.intl.string(m.default.KC9HRW),
                               _ = g.intl.string(m.default.GJiSmP),
-                              b = null == l ? void 0 : l[o.IN],
-                              h = (null == c ? void 0 : c[o.IN]) != null,
+                              b = null == o ? void 0 : o[l.IN],
+                              h = (null == c ? void 0 : c[l.IN]) != null,
                               j = g.intl.string(m.default["/egwJA"]),
                               C = h ? void 0 : g.intl.string(m.default.W6Vwn3),
                               w = h ? void 0 : g.intl.string(m.default.lvk1Gc),
@@ -55,13 +55,13 @@ function _(e, t) {
                               title: d,
                               description: _,
                               openModal: function (e) {
-                                  let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                                  let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, a.ZDy)(
                                       async () => {
-                                          let { default: o } = await n.e("64767").then(n.bind(n, 754887));
+                                          let { default: l } = await n.e("64767").then(n.bind(n, 754887));
                                           return (n) =>
                                               (0, r.jsx)(
-                                                  o,
+                                                  l,
                                                   (function (e) {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -108,7 +108,7 @@ function _(e, t) {
                                                   ),
                                               );
                                       },
-                                      { onCloseCallback: null == o ? void 0 : o.onModalClose },
+                                      { onCloseCallback: null == l ? void 0 : l.onModalClose },
                                   );
                               },
                               viewCta: j,
@@ -127,12 +127,12 @@ function _(e, t) {
                           skuIds: d.z[e],
                       })
                     : void 0,
-            l = {};
+            o = {};
         for (let t of e) {
             let e = i(t);
-            null != e && (l[t] = e);
+            null != e && (o[t] = e);
         }
-        return l;
+        return o;
     }, [e, t, b, h, j]);
 }
 function b(e, t) {

@@ -13,8 +13,8 @@ n.d(t, { Z: () => L }),
     n(953529);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
     s = n(704215),
     c = n(481060),
@@ -40,12 +40,12 @@ var r = n(951288),
     y = n(857666),
     N = n(535396),
     O = n(921944),
-    S = n(459196),
+    S = n(18853),
     A = n(388032),
     k = n(823441);
 let R = [N.Us.LEVEL, N.Us.PERK];
 function L(e) {
-    let { guildId: t, powerupListingId: o } = e,
+    let { guildId: t, powerupListingId: l } = e,
         L = (0, m.BU)(t, "GuildPowerupsOverview");
     i.useEffect(() => {
         L && (0, f.ce)(t);
@@ -55,10 +55,10 @@ function L(e) {
         }, [t]),
         (0, T.Wj)(t);
     let U = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
-        M = (0, _.Z)(t),
-        D = i.useRef(!1),
+        D = (0, _.Z)(t),
+        M = i.useRef(!1),
         { shouldShow: G, modalConfig: V } = (0, P.K)(t, "GuildPowerupsOverview"),
-        B = null == o && null != V,
+        B = null == l && null != V,
         W = [];
     G && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [z, F] = (0, u.US)(W),
@@ -83,15 +83,15 @@ function L(e) {
             .map((e) => e.group),
         H = (0, y.f)(X, t);
     return (i.useEffect(() => {
-        if (null != o && !D.current)
+        if (null != l && !M.current)
             for (let e of K)
                 for (let n of e.listings) {
-                    if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === o) {
-                        (0, Z.KE)(t, n.powerup), (D.current = !0);
+                    if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === l) {
+                        (0, Z.KE)(t, n.powerup), (M.current = !0);
                         return;
                     }
-                    if ("multiPerk" === n.type && (n.group === o || n.powerups.some((e) => e.skuId === o))) {
-                        D.current = !0;
+                    if ("multiPerk" === n.type && (n.group === l || n.powerups.some((e) => e.skuId === l))) {
+                        M.current = !0;
                         let e = H[n.group];
                         if (null == e) return;
                         e.openModal(n.powerups, {
@@ -99,13 +99,13 @@ function L(e) {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(N.am);
                                 let t = e.pathname + e.search + e.hash;
-                                (0, p.dL)(t), (D.current = !1);
+                                (0, p.dL)(t), (M.current = !1);
                             },
                         });
                         return;
                     }
                 }
-    }, [t, o, K, H]),
+    }, [t, l, K, H]),
     i.useEffect(() => {
         null != z &&
             null != V &&
@@ -180,7 +180,7 @@ function L(e) {
                               className: k.powerupsContainer,
                               children: K.map((e) => {
                                   let { type: n, listings: i } = e,
-                                      { title: o, description: a } = (function (e) {
+                                      { title: l, description: a } = (function (e) {
                                           switch (e) {
                                               case N.Us.LEVEL:
                                                   return {
@@ -206,7 +206,7 @@ function L(e) {
                                                       (0, r.jsx)(c.Heading, {
                                                           color: "header-primary",
                                                           variant: "heading-lg/semibold",
-                                                          children: o,
+                                                          children: l,
                                                       }),
                                                       (0, r.jsx)(c.Text, {
                                                           color: "text-muted",
@@ -217,14 +217,14 @@ function L(e) {
                                               }),
                                               (0, r.jsx)(s, {
                                                   orientation: "horizontal",
-                                                  className: l()(k.powerupContainer, k.powerupHorizontalPadding, {
+                                                  className: o()(k.powerupContainer, k.powerupHorizontalPadding, {
                                                       [k.powerupsLevelContainer]: n === N.Us.LEVEL,
                                                   }),
                                                   fade: !0,
                                                   children: i.map((e, n) => {
                                                       switch (e.type) {
                                                           case "singleLevel":
-                                                              var o;
+                                                              var l;
                                                               return (0, r.jsx)(
                                                                   h.ZP,
                                                                   {
@@ -232,7 +232,7 @@ function L(e) {
                                                                       index: n,
                                                                       powerup: e.powerup,
                                                                       nextPowerup:
-                                                                          null == (o = i[n + 1]) ? void 0 : o.powerup,
+                                                                          null == (l = i[n + 1]) ? void 0 : l.powerup,
                                                                   },
                                                                   "powerup-".concat(e.powerup.skuId),
                                                               );
@@ -273,7 +273,7 @@ function L(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  M ? (0, r.jsx)(w.Z, { guildId: t }) : (0, r.jsx)(I.Z, { guildId: t }),
+                                  D ? (0, r.jsx)(w.Z, { guildId: t }) : (0, r.jsx)(I.Z, { guildId: t }),
                                   (0, r.jsx)(E.Z, { guildId: t }),
                               ],
                           }),

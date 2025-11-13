@@ -22,15 +22,15 @@ var l = n(951288),
     v = n(131016),
     P = n(489511),
     N = n(768446),
-    y = n(579346),
-    k = n(438759),
+    k = n(579346),
+    y = n(438759),
     O = n(512070),
     T = n(299939),
     E = n(305813),
     D = n(981631),
-    R = n(593082),
+    R = n(88406),
     A = n(388032),
-    I = n(845378);
+    I = n(300119);
 function L(e) {
     var t, n, L, w;
     let { transitionState: B, analyticsLocations: Z, guildId: M, onClose: G } = e,
@@ -134,12 +134,12 @@ function L(e) {
                                               displayName: z,
                                               className: I.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(k.Z, {
+                                          (0, l.jsx)(y.Z, {
                                               selectedEffectId: $,
                                               setSelectedEffectId: eu,
                                               className: I.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(y.Z, {
+                                          (0, l.jsx)(k.Z, {
                                               selectedColors: ea,
                                               setSelectedColors: ep,
                                               selectedEffectId: $,

@@ -20,19 +20,19 @@ var r = n(647438),
     g = n(981631),
     E = n(526761),
     b = n(388032),
-    y = n(531421),
-    O = n(352609),
+    y = n(422129),
+    O = n(88406),
     v = n(509614),
     I = n(880511),
-    S = n(985443),
-    T = n(612253),
+    T = n(985443),
+    S = n(612253),
     A = n(872532),
     C = n(398300),
     N = n(184071),
     R = n(368243),
     P = n(119121),
-    w = n(404583),
-    D = n(295349),
+    D = n(404583),
+    w = n(295349),
     x = n(631572),
     L = n(999675),
     M = n(238027),
@@ -143,8 +143,8 @@ let ef = (e, t) =>
                           assetUrl: e ? V.Z : Y.Z,
                       },
                       emojis: {
-                          thumbnail: D.Z,
-                          assetUrl: e ? w.Z : x.Z,
+                          thumbnail: w.Z,
+                          assetUrl: e ? D.Z : x.Z,
                       },
                       noLimits: {
                           thumbnail: M.Z,
@@ -157,11 +157,11 @@ let ef = (e, t) =>
                           assetUrl: e ? $.ZP : et.ZP,
                       },
                       showYourStyle: {
-                          thumbnail: T,
+                          thumbnail: S,
                           assetUrl: e ? ei.Z : ea.Z,
                       },
                       yourSpace: {
-                          thumbnail: S,
+                          thumbnail: T,
                           assetUrl: e ? eo.Z : es.Z,
                       },
                       emojis: {
@@ -182,7 +182,7 @@ let ef = (e, t) =>
             }),
             v = s.JH.useExperiment({ location: "useBentoBoxes" }).enabled,
             I = h.Z.useExperiment({ location: "useBentoBoxes" }),
-            S = (0, r.useCallback)(() => {
+            T = (0, r.useCallback)(() => {
                 (0, d.openUserSettings)(
                     u.n.PROFILE_PANEL,
                     {
@@ -192,7 +192,7 @@ let ef = (e, t) =>
                     () => (0, l.I)({ analyticsLocations: e }),
                 );
             }, [e]),
-            T = () => {
+            S = () => {
                 {
                     let { openUserSettings: t } = n(518596);
                     t(u.n.APPEARANCE_PANEL, {
@@ -220,7 +220,7 @@ let ef = (e, t) =>
                 previewImage: N.referralProgram.thumbnail,
                 videoUrl: N.referralProgram.assetUrl,
             },
-            w = {
+            D = {
                 name: "customThemes",
                 title: b.intl.string(y.default.XokIHM),
                 description: b.intl.string(y.default["7esQMC"]),
@@ -231,13 +231,13 @@ let ef = (e, t) =>
                 },
                 videoUrl: N.customThemes.assetUrl,
             },
-            D = {
+            w = {
                 name: "displayNameStyles",
                 title: b.intl.string(O.default.ABtBDQ),
                 description: b.intl.string(O.default.MFNXZh),
                 descriptionCta: b.intl.string(b.t.jVcuVY),
                 previewImage: N.displayNameStyles.thumbnail,
-                onClick: S,
+                onClick: T,
                 badgeText: b.intl.string(b.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: N.displayNameStyles.assetUrl,
             },
@@ -268,7 +268,7 @@ let ef = (e, t) =>
                 description: b.intl.string(b.t["/aAIqV"]),
                 descriptionCta: b.intl.string(b.t.jVcuVY),
                 previewImage: N.yourSpace.thumbnail,
-                onClick: T,
+                onClick: S,
                 videoUrl: N.yourSpace.assetUrl,
             },
             j = {
@@ -286,7 +286,7 @@ let ef = (e, t) =>
                 videoUrl: N.noLimits.assetUrl,
             };
         return {
-            whatsNewBoxes: v ? [[D], [w, P]] : I.enabled ? [[x], [R, P]] : [[w], [R, P]],
+            whatsNewBoxes: v ? [[w], [D, P]] : I.enabled ? [[x], [R, P]] : [[D], [R, P]],
             bestOfBoxes: [[L], [M], [j, k]],
         };
     };

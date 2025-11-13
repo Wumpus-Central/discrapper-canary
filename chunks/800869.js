@@ -1,10 +1,10 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(793030),
-    o = n(159691),
-    l = n(481060),
+    l = n(159691),
+    o = n(481060),
     a = n(921944),
-    s = n(459196),
+    s = n(18853),
     c = n(388032),
     u = n(176179),
     d = n(719119);
@@ -30,14 +30,14 @@ function p(e) {
             }),
             (0, r.jsx)("div", {
                 className: u.close,
-                children: (0, r.jsx)(o.hU, {
+                children: (0, r.jsx)(l.hU, {
                     variant: "icon-only",
                     size: "md",
                     "aria-label": c.intl.string(c.t.cpT0Cq),
                     onClick: () => {
                         t(a.L.USER_DISMISS);
                     },
-                    icon: l.Dio,
+                    icon: o.Dio,
                 }),
             }),
         ],

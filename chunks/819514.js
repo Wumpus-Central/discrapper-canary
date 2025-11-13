@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(294218),
     v = n(981631),
     j = n(388032),
-    C = n(43617),
-    x = n(625221);
+    x = n(797013),
+    C = n(625221);
 function E(e, t, n) {
     return (
         t in e
@@ -99,12 +99,12 @@ class P extends i.PureComponent {
             g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(c.flags, v.iLy.CROSSPOSTED);
         u &&
             (e = (0, r.jsx)(p.Z, {
-                className: x.spacingTop,
+                className: C.spacingTop,
                 children: j.intl.format(j.t.IxY7E6, {}),
             })),
             (0, y.vc)(c) &&
                 (t = (0, r.jsx)("div", {
-                    className: x.spacingTop,
+                    className: C.spacingTop,
                     children: (0, r.jsx)(s.rsf, {
                         label: j.intl.string(j.t.x0jzo9),
                         checked: n,
@@ -115,7 +115,7 @@ class P extends i.PureComponent {
             b = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: x.message,
+                        className: C.message,
                         children: (0, r.jsx)(O.Z, {
                             channel: o,
                             message: c,
@@ -148,7 +148,7 @@ class P extends i.PureComponent {
                                     ? void 0
                                     : (0, r.jsx)(s.Checkbox, {
                                           checked: i,
-                                          label: j.intl.string(C.default["8yIKem"]),
+                                          label: j.intl.string(x.default["8yIKem"]),
                                           onChange: (e) => this.handleToggleResolveFlag(e),
                                       }),
                             },
@@ -257,7 +257,7 @@ let N = {
                             ),
                             {
                                 children: (0, r.jsx)("div", {
-                                    className: x.message,
+                                    className: C.message,
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -303,7 +303,7 @@ let N = {
                         {
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: o()(x.message, x.spacing),
+                                    className: o()(C.message, C.spacing),
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -364,7 +364,7 @@ let N = {
                     {
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: x.spacing,
+                            className: C.spacing,
                             children: j.intl.string(j.t.grBcM8),
                         }),
                     },

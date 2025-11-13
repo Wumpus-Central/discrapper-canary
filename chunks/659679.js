@@ -2,16 +2,16 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    o = n(442837),
-    l = n(681715),
+    l = n(442837),
+    o = n(681715),
     a = n(481060),
     s = n(318713),
     c = n(271383),
     u = n(709054),
     d = n(884902),
-    p = n(789142),
+    p = n(18853),
     f = n(388032),
-    m = n(503142);
+    m = n(238937);
 function g(e) {
     let { boost: t } = e,
         n = new Date(u.default.extractTimestamp(t.id)),
@@ -19,14 +19,14 @@ function g(e) {
             username: g,
             roleColor: v,
             roleColorStrings: x,
-        } = (0, o.cj)([c.ZP], () => {
+        } = (0, l.cj)([c.ZP], () => {
             var e, n, r, i;
-            let o = c.ZP.getMember(t.guildId, t.userId);
+            let l = c.ZP.getMember(t.guildId, t.userId);
             return {
                 username:
                     null != (n = c.ZP.getNick(t.guildId, t.userId)) ? n : null == (e = t.user) ? void 0 : e.username,
-                roleColor: null != (r = null == o ? void 0 : o.colorString) ? r : null,
-                roleColorStrings: null != (i = null == o ? void 0 : o.colorStrings) ? i : null,
+                roleColor: null != (r = null == l ? void 0 : l.colorString) ? r : null,
+                roleColorStrings: null != (i = null == l ? void 0 : l.colorStrings) ? i : null,
             };
         }, [t]),
         _ = (0, d.X7)(t.guildId, t.userId, null != x ? x : null);
@@ -45,7 +45,7 @@ function g(e) {
                     variant: "text-md/medium",
                     lineClamp: 1,
                     children: [
-                        (0, r.jsx)(l.u, {
+                        (0, r.jsx)(o.u, {
                             text: g,
                             shouldShow: !0,
                             asContainer: !0,
