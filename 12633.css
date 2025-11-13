@@ -8338,6 +8338,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     padding: var(--space-12)
 }
 
+.richTooltipContent_a89985.noAsset_a89985 {
+    padding: var(--space-8) var(--space-12)
+}
+
 .assetContainer_a89985 {
     align-items: center;
     display: flex;
@@ -8356,6 +8360,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     flex: 1;
     flex-direction: column;
     min-width: 0
+}
+
+.noAsset_a89985 .textContent_a89985 {
+    text-align: center
 }
 
 .heading-sm\/normal__0f084 {
