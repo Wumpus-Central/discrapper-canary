@@ -2923,6 +2923,9 @@ class eh extends o.C {
                 case 30:
                     a.quests3PDataOptedOut = s.D5.internalBinaryRead(e, e.uint32(), n, a.quests3PDataOptedOut);
                     break;
+                case 31:
+                    a.showLocalTime = s.D5.internalBinaryRead(e, e.uint32(), n, a.showLocalTime);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -3025,7 +3028,9 @@ class eh extends o.C {
             0 !== e.defaultGuildsActivityRestrictedV2 &&
                 t.tag(29, r.TD.Varint).int32(e.defaultGuildsActivityRestrictedV2),
             e.quests3PDataOptedOut &&
-                s.D5.internalBinaryWrite(e.quests3PDataOptedOut, t.tag(30, r.TD.LengthDelimited).fork(), n).join();
+                s.D5.internalBinaryWrite(e.quests3PDataOptedOut, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
+            e.showLocalTime &&
+                s.D5.internalBinaryWrite(e.showLocalTime, t.tag(31, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3202,6 +3207,12 @@ class eh extends o.C {
                 name: "quests_3p_data_opted_out",
                 kind: "message",
                 jsonName: "quests3pDataOptedOut",
+                T: () => s.D5,
+            },
+            {
+                no: 31,
+                name: "show_local_time",
+                kind: "message",
                 T: () => s.D5,
             },
         ]);
@@ -3552,6 +3563,9 @@ class eS extends o.C {
                 case 2:
                     a.timezoneOffset = s.T4.internalBinaryRead(e, e.uint32(), n, a.timezoneOffset);
                     break;
+                case 3:
+                    a.timezoneName = s.Gm.internalBinaryRead(e, e.uint32(), n, a.timezoneName);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -3567,7 +3581,8 @@ class eS extends o.C {
     internalBinaryWrite(e, t, n) {
         e.locale && s.Gm.internalBinaryWrite(e.locale, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             e.timezoneOffset &&
-                s.T4.internalBinaryWrite(e.timezoneOffset, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+                s.T4.internalBinaryWrite(e.timezoneOffset, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.timezoneName && s.Gm.internalBinaryWrite(e.timezoneName, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3584,6 +3599,12 @@ class eS extends o.C {
                 name: "timezone_offset",
                 kind: "message",
                 T: () => s.T4,
+            },
+            {
+                no: 3,
+                name: "timezone_name",
+                kind: "message",
+                T: () => s.Gm,
             },
         ]);
     }
