@@ -47,5 +47,5 @@ function c(e, t) {
               }
             : null;
     }
-    return o(e, t, disableFormatting);
+    return o(e, t);
 }
