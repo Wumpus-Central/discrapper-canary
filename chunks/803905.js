@@ -8,7 +8,7 @@ n.d(t, {
     O1: () => O,
     O8: () => P,
     Pl: () => v,
-    Uw: () => D,
+    Uw: () => w,
     ZE: () => L,
     _G: () => y,
     _O: () => T,
@@ -84,8 +84,8 @@ let _ = new f(r.q.ANIMATED_EMOJIS),
     N = new f("freeBoosts"),
     R = new f(r.q.STREAM_MID_QUALITY),
     P = new f(r.q.STREAM_HIGH_QUALITY),
-    w = new f(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    D = new f("fancyVoiceChannelReactions"),
+    D = new f(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    w = new f("fancyVoiceChannelReactions"),
     x = new f("installPremiumApplications"),
     L = new f("redeemPremiumPerks"),
     M = new f(r.q.VIDEO_FILTER_ASSETS);
@@ -96,7 +96,7 @@ let j = new f(r.q.INCREASED_GUILD_LIMIT),
     G = new f("uploadLargeFiles"),
     B = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [_, p, h, v, M, U, G, S]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [_, p, b, y, v, C, R, D, U, G, S]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [_, p, b, y, v, C, R, w, U, G, S]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
             _,
             p,
@@ -113,7 +113,7 @@ let j = new f(r.q.INCREASED_GUILD_LIMIT),
             N,
             R,
             P,
-            D,
+            w,
             x,
             L,
             M,
@@ -123,11 +123,14 @@ let j = new f(r.q.INCREASED_GUILD_LIMIT),
             G,
             S,
             T,
-            w,
+            D,
             E,
         ]),
     }),
     Z = [C, N];
-function F(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
+function F(e, t) {
+    return (
+        !((0, s.U)("canUserUse", t) || (null != t && t.isPremiumWithFractionalPremiumOnly() && Z.includes(e))) &&
+        e.getFeatureValue(t)
+    );
 }

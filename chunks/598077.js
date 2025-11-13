@@ -161,18 +161,20 @@ class O extends a.Z {
     hasFreePremium() {
         return this.isStaff() || this.hasFlag(h.xW$.PARTNER) || this.isStaffPersonal();
     }
-    isPremiumWithFractionalPremium() {
-        var e;
-        return (
-            (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
-            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.FRACTIONAL_NITRO
-        );
-    }
     isPremiumWithPremiumGroup() {
         var e;
         return (
             (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
             (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.SUBSCRIPTION_GROUP
+        );
+    }
+    isPremiumWithFractionalPremiumOnly() {
+        var e, t, n;
+        return (
+            (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
+            ((null == (e = this.premiumState) ? void 0 : e.premiumSubscriptionType) === i.W$.NONE_UNSPECIFIED ||
+                (null == (t = this.premiumState) ? void 0 : t.premiumSubscriptionType) === i.W$.BOOST_ONLY) &&
+            (null == (n = this.premiumState) ? void 0 : n.premiumSource) === i.d3.FRACTIONAL_NITRO
         );
     }
     isFractionalPremiumWithNoSubscription() {
@@ -224,7 +226,7 @@ class O extends a.Z {
             : i.bF.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, S, T, A, C, N, R, P, w, D, x, L, M, j, k, U, G, B;
+        var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, x, L, M, j, k, U, G, B;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -275,14 +277,14 @@ class O extends a.Z {
             (this.premiumType = Z === h.WND ? null : Z),
             (this.flags = null != (O = e.flags) ? O : 0),
             (this.publicFlags = null != (I = null != (v = e.public_flags) ? v : e.publicFlags) ? I : 0),
-            (this.purchasedFlags = null != (T = null != (S = e.purchased_flags) ? S : e.purchasedFlags) ? T : 0),
+            (this.purchasedFlags = null != (S = null != (T = e.purchased_flags) ? T : e.purchasedFlags) ? S : 0),
             (this.premiumUsageFlags =
                 null != (C = null != (A = e.premium_usage_flags) ? A : e.premiumUsageFlags) ? C : 0),
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (R = e.nsfw_allowed) ? R : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (P = e.age_verification_status) ? P : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (w = e.guildMemberAvatars) ? w : {}),
-            (this.hasBouncedEmail = null != (x = null != (D = e.has_bounced_email) ? D : e.hasBouncedEmail) && x),
+            (this.guildMemberAvatars = null != (D = e.guildMemberAvatars) ? D : {}),
+            (this.hasBouncedEmail = null != (x = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && x),
             (this.personalConnectionId =
                 null != (M = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? M : null),
             (this.globalName = null != (j = e.global_name) ? j : e.globalName),
