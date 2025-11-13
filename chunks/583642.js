@@ -227,6 +227,7 @@ let C = i.forwardRef(function (e, t) {
                     onSelect: f,
                     maxDate: l()().local(),
                     minDate: S,
+                    calendarClassName: T.calendar,
                 }),
             })
         );

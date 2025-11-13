@@ -73422,8 +73422,13 @@ html .progress__61462 {
 }
 
 .datePickerContainer_f1c5c9 {
+    padding: 0
+}
+
+.calendar_f1c5c9 {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    width: 314px
 }
 
 .container__55c99 {
