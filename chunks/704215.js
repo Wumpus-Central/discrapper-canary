@@ -504,6 +504,7 @@ var r = (function (e) {
             (e[(e.GAME_SHOP_ANNOUNCEMENT_MODAL = 643)] = "GAME_SHOP_ANNOUNCEMENT_MODAL"),
             (e[(e.CHECKPOINT_2025_BOTTOM_SHEET = 644)] = "CHECKPOINT_2025_BOTTOM_SHEET"),
             (e[(e.GAME_SHOP_WISHLIST_POPOVER = 645)] = "GAME_SHOP_WISHLIST_POPOVER"),
+            (e[(e.DISCOUNT_OFFER_ACTION_SHEET = 646)] = "DISCOUNT_OFFER_ACTION_SHEET"),
             e
         );
     })({}),

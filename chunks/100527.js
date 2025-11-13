@@ -399,6 +399,7 @@ var r = (function (e) {
         (e.CLIPS_SHARE_MODAL = "clips share modal"),
         (e.CHANNEL_ATTACH_BUTTON = "channel attach button"),
         (e.PREMIUM_TRIAL_OFFER_ACTION_SHEET = "premium trial offer action sheet"),
+        (e.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET = "premium discount offer action sheet"),
         (e.PREMIUM_SUBSCRIBER_NITRO_HOME = "premium subscriber nitro home"),
         (e.CLYDE_PROFILE_SHARE_MODAL = "clyde profile share modal"),
         (e.GUILD_EVENT_MODAL = "guild event modal"),
