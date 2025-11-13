@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    s = n(399606),
+    s = n(442837),
     a = n(481060),
     o = n(594174),
     c = n(74538),
-    u = n(429368),
-    d = n(884697),
-    p = n(318028),
+    u = n(597688),
+    d = n(429368),
+    p = n(884697),
     g = n(724994),
     f = n(786040),
     h = n(58201),
@@ -18,62 +18,62 @@ var l = n(120356),
     _ = n(388032),
     b = n(944525);
 let v = (e) => {
-        let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: u, prioritizedCurrency: h } = e,
+        let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: d, prioritizedCurrency: h } = e,
             { isPurchased: v, isPartiallyOwnedBundle: E } = (0, g.L)(t),
-            x = (0, d.G1)(t),
-            { isFetching: O, category: S } = (0, p.l)(t.skuId),
-            y = (null == S ? void 0 : S.unpublishedAt) != null ? (0, d.OT)(S.unpublishedAt) : null,
-            j = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-            k = c.ZP.canUseCollectibles(j),
-            I = (0, C.Iw)(t),
-            { isOrbExclusive: T } = (0, m.Ip)({
+            x = (0, p.G1)(t),
+            O = (0, s.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
+            S = (null == O ? void 0 : O.unpublishedAt) != null ? (0, p.OT)(O.unpublishedAt) : null,
+            y = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+            j = c.ZP.canUseCollectibles(y),
+            k = (0, C.Iw)(t),
+            { isOrbExclusive: I } = (0, m.Ip)({
                 product: t,
-                isPremiumUser: k,
+                isPremiumUser: j,
                 prioritizedCurrency: h,
-                hasDiscountOffer: null != I,
+                hasDiscountOffer: null != k,
             }),
-            L = n;
+            T = n;
         if (
-            (null == L &&
-                (null == y || l
-                    ? !E && !v && (0, d.Yq)(t.skuId)
-                        ? (L = f.Zh.NEW)
-                        : T
-                          ? (L = f.Zh.ORBS_EXCLUSIVE)
-                          : x && (L = f.Zh.NITRO_EXCLUSIVE)
-                    : (L = f.Zh.LIMITED_TIME)),
-            null == L || L === f.Zh.NONE || O)
+            (null == T &&
+                (null == S || l
+                    ? !E && !v && (0, p.Yq)(t.skuId)
+                        ? (T = f.Zh.NEW)
+                        : I
+                          ? (T = f.Zh.ORBS_EXCLUSIVE)
+                          : x && (T = f.Zh.NITRO_EXCLUSIVE)
+                    : (T = f.Zh.LIMITED_TIME)),
+            null == T || T === f.Zh.NONE)
         )
             return null;
-        let B = null;
-        switch (L) {
+        let L = null;
+        switch (T) {
             case f.Zh.LIMITED_TIME:
-                B =
-                    null != y
-                        ? y > 1
-                            ? _.intl.formatToPlainString(_.t.Io7ozn, { days: y })
+                L =
+                    null != S
+                        ? S > 1
+                            ? _.intl.formatToPlainString(_.t.Io7ozn, { days: S })
                             : _.intl.string(_.t.Bc13HF)
                         : _.intl.string(_.t["h/uBCR"]);
                 break;
             case f.Zh.NEW:
-                B = _.intl.string(_.t.y2b7CA);
+                L = _.intl.string(_.t.y2b7CA);
                 break;
             case f.Zh.NITRO_EXCLUSIVE:
-                B = _.intl.string(_.t.X3Ekj8);
+                L = _.intl.string(_.t.X3Ekj8);
                 break;
             case f.Zh.ORBS_EXCLUSIVE:
-                B = _.intl.string(_.t["0TmQRG"]);
+                L = _.intl.string(_.t["0TmQRG"]);
         }
         return (0, r.jsx)(a.IGR, {
-            text: B,
+            text: L,
             disableColor: !0,
-            className: i()(u, b.productCardBadge),
+            className: i()(d, b.productCardBadge),
         });
     },
     E = (e) => {
         let { skuId: t, badgeOverride: n, className: l, prioritizedCurrency: i, skipLimitedTimeCheck: s } = e,
             a = (0, f.LJ)(t),
-            o = (0, u.o)(a);
+            o = (0, d.o)(a);
         if (null == a) return null;
         let c = (0, h.W)(a, o);
         return (0, r.jsx)(v, {
