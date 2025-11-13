@@ -27,6 +27,7 @@ let _ = new Set(),
     m = null;
 function g(e) {
     var t;
+    if (u.y3) return !0;
     if (null == h) return !1;
     let n = null != (t = null == h ? void 0 : h.isCrashedDisabled) && t;
     return !!e || !n;
@@ -87,10 +88,10 @@ function P(e) {
     let { lastAssociatedPID: t } = e;
     return null != t && y(!0, t), !0;
 }
-function w() {
+function D() {
     I(), null == h || h.setInteractionEnabled(!1);
 }
-class D extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -98,18 +99,18 @@ class D extends (r = i.ZP.Store) {
         return !_.has(e);
     }
 }
-f(D, "displayName", "Overlay-v3-Native-Input-Lock-Store");
-let x = new D(
+f(w, "displayName", "Overlay-v3-Native-Input-Lock-Store");
+let x = new w(
         a.Z,
         __OVERLAY__ || !u.iP
-            ? {}
+            ? { OVERLAY_SET_INPUT_LOCKED: A }
             : {
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: T,
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: S,
                   OVERLAY_SET_INPUT_LOCKED: A,
                   OVERLAY_ACTIVATE_REGION: C,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: N,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: w,
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: D,
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: R,
                   OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: P,
               },
