@@ -1,14 +1,12 @@
-n.d(e, { default: () => x }), n(388685);
+n.d(e, { default: () => h }), n(388685);
 var i = n(951288),
-    s = n(647438),
-    l = n(481060),
-    r = n(923928),
-    a = n(600164),
+    l = n(647438),
+    s = n(159691),
+    a = n(923928),
     o = n(594190),
-    d = n(626135),
+    r = n(626135),
     u = n(981631),
-    h = n(388032),
-    c = n(197571);
+    d = n(388032);
 function p(t, e, n) {
     return (
         e in t
@@ -22,11 +20,11 @@ function p(t, e, n) {
         t
     );
 }
-class m extends s.Component {
+class c extends l.Component {
     componentDidMount() {
         let { pid: t } = this.props,
             e = null != t ? o.ZP.getGameForPID(t) : null;
-        d.default.track(u.rMx.OPEN_MODAL, {
+        r.default.track(u.rMx.OPEN_MODAL, {
             type: "Elevated Permissions Sound",
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,
@@ -34,64 +32,36 @@ class m extends s.Component {
         });
     }
     render() {
-        return (0, i.jsxs)(l.Y0X, {
-            transitionState: this.props.transitionState,
-            "aria-label": h.intl.string(h.t["4xSkEB"]),
-            parentComponent: "ElevatedPermissionsSound",
-            children: [
-                (0, i.jsxs)(l.xBx, {
-                    justify: a.Z.Justify.BETWEEN,
-                    separator: !1,
-                    children: [
-                        (0, i.jsx)(l.Heading, {
-                            variant: "heading-lg/semibold",
-                            children: h.intl.string(h.t["4xSkEB"]),
-                        }),
-                        (0, i.jsx)(l.olH, { onClick: this.handleClose }),
-                    ],
-                }),
-                (0, i.jsx)(l.hzk, {
-                    children: (0, i.jsx)(l.Text, {
-                        tag: "strong",
-                        variant: "text-md/normal",
-                        className: c.marginBottom20,
-                        children: h.intl.string(h.t.UCEXPq),
-                    }),
-                }),
-                (0, i.jsx)(l.mzw, {
-                    children: (0, i.jsxs)(l.ButtonGroup, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, i.jsx)(l.Button, {
-                                variant: "primary",
-                                text: h.intl.string(h.t.taPRcJ),
-                                onClick: this.handleRequestElevated,
-                            }),
-                            (0, i.jsx)(l.Button, {
-                                variant: "secondary",
-                                text: h.intl.string(h.t.of0VoB),
-                                onClick: this.handleStreamWithoutSound,
-                            }),
-                        ],
-                    }),
-                }),
+        return (0, i.jsx)(s.u_l, {
+            size: "md",
+            title: d.intl.string(d.t["4xSkEB"]),
+            subtitle: d.intl.string(d.t.UCEXPq),
+            actions: [
+                {
+                    variant: "secondary",
+                    text: d.intl.string(d.t.of0VoB),
+                    onClick: this.handleStreamWithoutSound,
+                },
+                {
+                    variant: "primary",
+                    text: d.intl.string(d.t.taPRcJ),
+                    onClick: this.handleRequestElevated,
+                },
             ],
+            onClose: this.props.onClose,
+            transitionState: this.props.transitionState,
         });
     }
     constructor(...t) {
         super(...t),
-            p(this, "handleClose", () => {
-                let { onClose: t } = this.props;
-                null == t || t();
-            }),
             p(this, "handleStreamWithoutSound", () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                r.Z.continueNonelevatedProcess(n), t(), e();
+                a.Z.continueNonelevatedProcess(n), t(), e();
             }),
             p(this, "handleRequestElevated", () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                r.Z.requestElevatedProcess(n), t(), e();
+                a.Z.requestElevatedProcess(n), t(), e();
             });
     }
 }
-let x = m;
+let h = c;
