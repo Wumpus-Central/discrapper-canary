@@ -1,6 +1,6 @@
 n.d(t, {
     $7l: () => b.$7,
-    $92: () => e3,
+    $92: () => e2,
     $Ab: () => x,
     $R1: () => E.$R,
     $VG: () => E.$V,
@@ -18,7 +18,7 @@ n.d(t, {
     AzA: () => rm,
     B1h: () => E.B1,
     B9o: () => tf,
-    BFP: () => t2,
+    BFP: () => t3,
     BRd: () => E.BR,
     BVn: () => rV,
     BZL: () => E.BZ,
@@ -32,12 +32,12 @@ n.d(t, {
     Cyb: () => E.Cy,
     DJE: () => re,
     DJj: () => eM,
-    DZw: () => ew,
-    E07: () => tT,
+    DZw: () => eD,
+    E07: () => tS,
     EKQ: () => E.EK,
     EOG: () => n1,
     ETv: () => E.ET,
-    EYA: () => tS,
+    EYA: () => tT,
     EkH: () => v,
     Etm: () => E.Et,
     Eu4: () => ns,
@@ -57,7 +57,7 @@ n.d(t, {
     HGf: () => n5,
     HN8: () => eF,
     HeQ: () => E.He,
-    Hqc: () => nT,
+    Hqc: () => nS,
     IE4: () => F,
     IIU: () => e6,
     IWh: () => rN,
@@ -90,8 +90,8 @@ n.d(t, {
     McO: () => rY,
     NYc: () => E.NY,
     NYg: () => nV,
-    N_j: () => n3,
-    NgX: () => S,
+    N_j: () => n2,
+    NgX: () => T,
     O0b: () => n_,
     O0n: () => es,
     O42: () => b.O4,
@@ -104,7 +104,7 @@ n.d(t, {
     OYC: () => $,
     OcF: () => e9,
     Odu: () => ee,
-    PEY: () => e2,
+    PEY: () => e3,
     PNu: () => ej,
     POd: () => rf,
     PRK: () => e0,
@@ -116,7 +116,7 @@ n.d(t, {
     PsQ: () => tW,
     PyE: () => E.Py,
     QCD: () => n$,
-    QIO: () => tD,
+    QIO: () => tw,
     QKv: () => V,
     QL: () => E.QL,
     QR$: () => r_,
@@ -132,7 +132,7 @@ n.d(t, {
     S7T: () => E.S7,
     S9g: () => nN,
     SOq: () => n8,
-    SRg: () => nS,
+    SRg: () => nT,
     STv: () => eE,
     SaU: () => tZ,
     Sap: () => ni,
@@ -148,10 +148,10 @@ n.d(t, {
     TzF: () => nJ,
     U66: () => E.U6,
     ULH: () => P,
-    UWR: () => t3,
+    UWR: () => t2,
     Ucd: () => rU,
     Uk1: () => E.Uk,
-    UkZ: () => rw,
+    UkZ: () => rD,
     Usc: () => Y,
     Uvt: () => l.U,
     V$x: () => c.V,
@@ -168,8 +168,8 @@ n.d(t, {
     X5t: () => E.X5,
     X6Q: () => E.X6,
     X7u: () => E.X7,
-    XAJ: () => eS,
-    XKF: () => n2,
+    XAJ: () => eT,
+    XKF: () => n3,
     XmY: () => e1,
     Xyh: () => e4,
     YeM: () => ec,
@@ -183,14 +183,14 @@ n.d(t, {
     Zuq: () => E.Zu,
     _1z: () => er,
     _8R: () => rj,
-    _s_: () => T,
+    _s_: () => S,
     _vf: () => ei,
     a5g: () => tz,
     aIL: () => ev,
     aIt: () => rc,
     aO5: () => E.aO,
     aZC: () => tJ,
-    aib: () => tw,
+    aib: () => tD,
     ane: () => nk,
     apO: () => rr,
     b2L: () => na,
@@ -211,7 +211,7 @@ n.d(t, {
     eHb: () => nQ,
     eRX: () => nt,
     eWB: () => ta,
-    ecB: () => nD,
+    ecB: () => nw,
     eez: () => t_,
     en1: () => eB,
     epS: () => ru,
@@ -240,8 +240,8 @@ n.d(t, {
     j3N: () => ek,
     j8d: () => E.j8,
     jXE: () => tU,
-    jm8: () => rS,
-    jwA: () => nw,
+    jm8: () => rT,
+    jwA: () => nD,
     kEZ: () => U,
     kGb: () => rd,
     kNB: () => rl,
@@ -266,7 +266,7 @@ n.d(t, {
     p3w: () => tm,
     p6O: () => t5,
     pAY: () => th,
-    pJs: () => w,
+    pJs: () => D,
     pKx: () => E.pK,
     pM4: () => M,
     pNK: () => A,
@@ -279,7 +279,7 @@ n.d(t, {
     qWG: () => rL,
     qc2: () => rs,
     qhL: () => tn,
-    qrD: () => D,
+    qrD: () => w,
     r2o: () => k,
     rMx: () => nb,
     rnv: () => tA,
@@ -290,10 +290,10 @@ n.d(t, {
     sFg: () => el,
     sHY: () => ra,
     scU: () => tv,
-    si2: () => rT,
+    si2: () => rS,
     t4x: () => tY,
     tG9: () => eZ,
-    tHP: () => eD,
+    tHP: () => ew,
     tPV: () => eK,
     tPk: () => E.tP,
     t_t: () => et,
@@ -328,7 +328,7 @@ n.d(t, {
     yXt: () => E.yX,
     yYS: () => E.yY,
     yb: () => W,
-    ylB: () => rD,
+    ylB: () => rw,
     yqN: () => ng,
     ys_: () => e8,
     z7k: () => tI,
@@ -473,10 +473,10 @@ var o = n(106351),
             e
         );
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -612,7 +612,7 @@ var o = n(106351),
             e
         );
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (
             (e.ADD_FRIEND = "ADD_FRIEND"),
             (e.ALL = "ALL"),
@@ -624,7 +624,7 @@ var o = n(106351),
             e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
     x = (function (e) {
@@ -1069,8 +1069,8 @@ let em = "@me",
     eO = "null",
     ev = "0",
     eI = "null",
-    eS = "1096190356233670716",
-    eT = Object.freeze({
+    eT = "1096190356233670716",
+    eS = Object.freeze({
         USER: (e) => "/users/".concat(e),
         USER_RELATIONSHIPS: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : em;
@@ -2137,7 +2137,7 @@ let em = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => "/quest-home?tab=preview_tool&quest_id=".concat(e),
         ICYMI: "/icymi",
     }),
-    eC = (0, f.Ft)(eT),
+    eC = (0, f.Ft)(eS),
     eN = (0, f.Ft)(eA, [":", "?", "@"]);
 var eR = (function (e) {
         return (
@@ -2162,8 +2162,8 @@ var eR = (function (e) {
             e
         );
     })({});
-let ew = 100,
-    eD = 200,
+let eD = 100,
+    ew = 200,
     ex = 50,
     eL = 50,
     eM = 25,
@@ -2202,8 +2202,8 @@ let ew = 100,
     e$ = 10485760,
     e0 = 524288000,
     e1 = (e) => "||".concat(e, "||"),
-    e3 = /^\|\|([\s\S]+?)\|\|/,
-    e2 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e2 = /^\|\|([\s\S]+?)\|\|/,
+    e3 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e4 = /^\d{17,19}$/;
 var e8 = (function (e) {
         return (
@@ -2266,7 +2266,7 @@ let te = 128,
     tO = "DEVICE_TOKEN",
     tv = "DEVICE_VOIP_TOKEN",
     tI = "first_run_date_key",
-    tS = Object.freeze({
+    tT = Object.freeze({
         API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
             window.GLOBAL_ENV.MARKETING_ENDPOINT,
@@ -2322,7 +2322,7 @@ let te = 128,
         SAFETY_CENTER: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safetycenter"),
         VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
-    tT = Object.freeze({
+    tS = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => "/developers/servers/".concat(e),
         DEVELOPER_PORTAL_TEAMS: "/developers/teams",
@@ -2333,7 +2333,7 @@ let te = 128,
     tN = /^FILTER_/,
     tR = /^ANSWER_/,
     tP = 32;
-var tw = (function (e) {
+var tD = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2356,7 +2356,7 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tw = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
     tx = (function (e) {
@@ -3431,6 +3431,7 @@ var tV = (function (e) {
             (e.DIRECTORY_EVENTS = "Directory Channel Events"),
             (e.POLL_ALERT = "Poll Alert"),
             (e.ICYMI = "ICYMI"),
+            (e.GUILD_EVENT_EMBED = "Guild Event Embed"),
             e
         );
     })({}),
@@ -3691,8 +3692,8 @@ var t$ = (function (e) {
     t1 = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let t3 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
-    t2 = new Set(["facebook", "contacts"]),
+let t2 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
+    t3 = new Set(["facebook", "contacts"]),
     t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t8 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
@@ -5413,7 +5414,7 @@ var nE = (function (e) {
             e
         );
     })({});
-let nS = Object.freeze({
+let nT = Object.freeze({
         STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
         INSTALL_DIR: (e) => "".concat(e, "/content"),
         ROOT_PATTERN: ["**/*"],
@@ -5425,7 +5426,7 @@ let nS = Object.freeze({
             linux: "linux",
         },
     }),
-    nT = 86400000;
+    nS = 86400000;
 var nA = (function (e) {
         return (
             (e.NORMAL = "normal"), (e.MINIMUM = "minimum"), (e.NO_CHAT = "no-chat"), (e.FULL_SCREEN = "full-screen"), e
@@ -5540,10 +5541,10 @@ let nR = Object.freeze({
 var nP = (function (e) {
         return (e.ALL = "ALL"), (e.CREATE = "CREATE"), (e.UPDATE = "UPDATE"), (e.DELETE = "DELETE"), e;
     })({}),
-    nw = (function (e) {
+    nD = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nD = (function (e) {
+    nw = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
     nx = (function (e) {
@@ -6079,8 +6080,8 @@ let n1 = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    n3 = 6016,
-    n2 = 3384;
+    n2 = 6016,
+    n3 = 3384;
 var n4 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
@@ -6283,7 +6284,7 @@ var rv = (function (e) {
     rI = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rS = (function (e) {
+    rT = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6294,7 +6295,7 @@ var rv = (function (e) {
             e
         );
     })({}),
-    rT = (function (e) {
+    rS = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6334,10 +6335,10 @@ var rv = (function (e) {
         );
     })({});
 let rP = "discodoEasterEgg";
-var rw = (function (e) {
+var rD = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rD = (function (e) {
+    rw = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
     rx = (function (e) {
