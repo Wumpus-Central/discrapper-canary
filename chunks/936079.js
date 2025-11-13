@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(35282), n(388685);
+n.d(t, { Z: () => T }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(525654),
@@ -39,7 +39,7 @@ function v() {
         (g.ZP.close = () => e.close());
 }
 let I = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(f.Z);
-class S extends i.PureComponent {
+class T extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null == (e = o().os) ? void 0 : e.family;

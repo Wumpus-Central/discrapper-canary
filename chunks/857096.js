@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -21,14 +21,14 @@ var i = n(120356),
     O = n(505386),
     v = n(186880),
     I = n(315091);
-function S(e) {
+function T(e) {
     let { isLoading: t } = e,
         n = (0, o.e7)([g.Z], () => g.Z.getConnectedFrame()),
         i = (0, o.e7)([g.Z], () => g.Z.getFrameLayoutMode()),
         u = (0, f.q)(null == n ? void 0 : n.applicationId),
         d = (0, o.e7)([h.Z], () => h.Z.isFrameHidden()),
-        S = i === b.U.PIP && !d,
-        T = S && null != h.Z.pipVideoWindow && null != h.Z.pipFrameWindow;
+        T = i === b.U.PIP && !d,
+        S = T && null != h.Z.pipVideoWindow && null != h.Z.pipFrameWindow;
     if (null == n || null == u) return null;
     let A = {
         instance_id: "example-cl-instance",
@@ -36,7 +36,7 @@ function S(e) {
     };
     function C(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
-        return S && null != n
+        return T && null != n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("div", {
@@ -70,14 +70,14 @@ function S(e) {
                 let { idle: i, onActive: o, onForceIdle: f } = e;
                 return (0, r.jsxs)(_.Z, {
                     className: a()(O.root, {
-                        [O.pipMode]: S,
-                        [I.elevationHigh]: S,
+                        [O.pipMode]: T,
+                        [I.elevationHigh]: T,
                         [v.idle]: i,
-                        [O.pipModeShort]: S,
+                        [O.pipModeShort]: T,
                         [O.hidden]: d,
-                        [O.multiPIPMode]: T,
+                        [O.multiPIPMode]: S,
                     }),
-                    noBorder: !S,
+                    noBorder: !T,
                     children: [
                         (0, r.jsx)("div", {
                             className: "theme-dark",
@@ -88,17 +88,17 @@ function S(e) {
                             }),
                         }),
                         t
-                            ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: S }) })
+                            ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: T }) })
                             : (0, r.jsx)(c.J, {
                                   allowPopups: (0, l.h)(u),
                                   referrerPolicy: "origin",
                                   url: n.url,
                                   queryParams: A,
                                   className: a()(O.iframe, {
-                                      [O.pipModeShort]: S,
-                                      [O.pipNonInteractive]: S,
+                                      [O.pipModeShort]: T,
+                                      [O.pipNonInteractive]: T,
                                   }),
-                                  shouldRefocus: !S,
+                                  shouldRefocus: !T,
                               }),
                     ],
                 });
@@ -106,11 +106,11 @@ function S(e) {
         })
     );
 }
-let T = () => {
+let S = () => {
     let { analyticsLocations: e } = (0, d.ZP)(u.Z.FRAME_PIP),
         t = (0, o.e7)([g.Z], () => g.Z.isFrameActive());
     return (0, r.jsx)(d.Gt, {
         value: e,
-        children: (0, r.jsx)(S, { isLoading: !t }),
+        children: (0, r.jsx)(T, { isLoading: !t }),
     });
 };

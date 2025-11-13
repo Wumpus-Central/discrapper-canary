@@ -382,8 +382,8 @@ let N = { replay: null },
         let e = [];
         return N.replay && e.push("replay"), e.join(",");
     },
-    w = 10,
-    D = !1,
+    D = 10,
+    w = !1,
     x = "",
     L = !1,
     M = !1,
@@ -403,7 +403,7 @@ let N = { replay: null },
             ((M = !0), console.warn(`[Sprig] ${e.blockedURI} is blocked by Content-Security-Policy`));
     },
     G = (e = "") => {
-        (D = !0), (x = e);
+        (w = !0), (x = e);
     };
 function B(e = {}) {
     let t = {
@@ -445,13 +445,13 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
             ok: !1,
             reportError: !1,
         };
-        if (D) return console.info(`UserLeap - ${x}`), s;
+        if (w) return console.info(`UserLeap - ${x}`), s;
         try {
             let t = await fetch(e, a);
             if (429 === t.status) {
                 if ((!L && !r) || i) {
                     L = !0;
-                    let n = t.headers.has("ratelimit-reset") ? Number(t.headers.get("ratelimit-reset")) : w;
+                    let n = t.headers.has("ratelimit-reset") ? Number(t.headers.get("ratelimit-reset")) : D;
                     return (
                         await v(1000 * n),
                         F(e, {

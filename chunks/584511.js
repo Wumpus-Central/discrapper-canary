@@ -57,12 +57,12 @@ function p(e) {
             style: O,
             onClick: v,
             onContextMenu: I,
-            className: S,
+            className: T,
         } = e,
-        T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
+        S = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
         A = () => {
-            let e = T ? s.v0G : p ? s.wE8 : s.nRN;
-            return _ || p || T
+            let e = S ? s.v0G : p ? s.wE8 : s.nRN;
+            return _ || p || S
                 ? (0, r.jsx)("div", {
                       className: u.statusContainer,
                       children: (0, r.jsx)(
@@ -92,7 +92,7 @@ function p(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [C(), A()],
                   })
-                : _ || p || T
+                : _ || p || S
                   ? (0, r.jsx)(r.Fragment, { children: A() })
                   : (0, r.jsx)(r.Fragment, { children: C() }),
         R = () => {
@@ -107,7 +107,7 @@ function p(e) {
             return (
                 null != y
                     ? (i = n === s.EFr.SIZE_32 ? l.QS.AVATAR_CALL_ICON_32 : l.QS.AVATAR_CALL_ICON)
-                    : (_ || p || T) && (i = l.QS.AVATAR_VOICE_CALL_80),
+                    : (_ || p || S) && (i = l.QS.AVATAR_VOICE_CALL_80),
                 (0, r.jsxs)("div", {
                     className: u.callAvatarMaskContainer,
                     children: [
@@ -130,18 +130,18 @@ function p(e) {
                 [u.ringingOutgoing]: g && 0 === E,
                 [u.ringingIncoming]: g && 1 === E,
             },
-            S,
+            T,
         ),
-        w = (0, s.pxk)(n),
-        D = f(
+        D = (0, s.pxk)(n),
+        w = f(
             {
-                height: w,
-                width: w,
+                height: D,
+                width: D,
             },
             O,
         );
     return (0, r.jsx)("div", {
-        style: D,
+        style: w,
         onContextMenu: I,
         className: P,
         children: R(),

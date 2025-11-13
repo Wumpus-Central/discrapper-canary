@@ -29,9 +29,9 @@ function g(e) {
                 ? E
                 : void 0,
         P = S.type === h.epS.DURABLE && A,
-        w = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mm) : m.intl.string(m.t["6gprwf"])) : void 0,
-        { price: D } = S;
-    return null == D
+        D = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mm) : m.intl.string(m.t["6gprwf"])) : void 0,
+        { price: w } = S;
+    return null == w
         ? null
         : (0, r.jsx)(f.A, {
               appId: v,
@@ -49,7 +49,7 @@ function g(e) {
                   title: C,
                   description: N,
                   imgSrc: R,
-                  tag: null != w ? (0, r.jsx)(i.V, { text: w }) : void 0,
+                  tag: null != D ? (0, r.jsx)(i.V, { text: D }) : void 0,
                   FallbackIcon: o.Prq,
               }),
           });

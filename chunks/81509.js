@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => O });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -91,7 +91,7 @@ function j(e) {
         ],
     });
 }
-function v(e) {
+function _(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: i } = e,
         c = null != t && t.length > 0,
         d = () => {
@@ -163,7 +163,7 @@ function v(e) {
               }),
     });
 }
-function _(e) {
+function v(e) {
     let { highlightedCreatorGuild: t } = e,
         { guild_id: n, quote: i, quote_attribution: l, quote_attribution_title: s } = t,
         o = (0, g.Z)(n, 4, 60),
@@ -180,8 +180,8 @@ function _(e) {
         guildAvatarUrl: p,
         subscriberCount: f,
         emojisToShow: b,
-        notShownEmojiCount: _,
-        storePageUrl: C,
+        notShownEmojiCount: v,
+        storePageUrl: O,
     } = o.details;
     return (0, r.jsxs)("div", {
         className: h.guildCard,
@@ -197,15 +197,15 @@ function _(e) {
                 quoteAttribution: l,
                 quoteAttributionTitle: s,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 emojisToShow: b,
-                notShownEmojiCount: _,
-                storePageUrl: C,
+                notShownEmojiCount: v,
+                storePageUrl: O,
             }),
         ],
     });
 }
-function C(e) {
+function O(e) {
     let { highlightedCreators: t } = e;
     return (0, r.jsxs)("div", {
         children: [
@@ -218,7 +218,7 @@ function C(e) {
             (0, r.jsx)(m.Z, {
                 carouselClassName: h.creatorGuildCarousel,
                 items: t,
-                renderItem: (e) => (0, r.jsx)(_, { highlightedCreatorGuild: e }),
+                renderItem: (e) => (0, r.jsx)(v, { highlightedCreatorGuild: e }),
                 intervalBetweenAutomaticItemRotations: 7000,
             }),
         ],

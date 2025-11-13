@@ -1,7 +1,7 @@
 n.d(t, {
     Eg: () => i,
     SK: () => r,
-    tl: () => s,
+    tl: () => l,
 });
 let r = {
         primary_color: 11127295,
@@ -13,7 +13,7 @@ let r = {
         secondary_color: 10469887,
         tertiary_color: null,
     },
-    s = [
+    l = [
         {
             start: 11156283,
             end: 16730184,

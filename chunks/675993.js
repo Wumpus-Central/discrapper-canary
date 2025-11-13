@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(695676),
     v = n(520315),
     I = n(29380),
-    S = n(783685),
-    T = n(981631),
+    T = n(783685),
+    S = n(981631),
     A = n(388032),
     C = n(208733),
     N = n(430864);
@@ -54,8 +54,8 @@ function P(e) {
     }
     return e;
 }
-let w = 2,
-    D = 2000;
+let D = 2,
+    w = 2000;
 function x(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         _ = i.useMemo(() => {
@@ -261,13 +261,13 @@ function U(e) {
         if (!(0, y.BQ)(a) || !(0, y.ye)(a)) return;
         let e = setTimeout(() => {
             (null == u || null == m) &&
-                b.default.track(T.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                b.default.track(S.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
                     application_id: a.id,
                     is_primary_entry_point_command_non_null: null != u,
                     is_bot_user_id_non_null: null != m,
                     show_try_it_out_button: g,
                 });
-        }, D);
+        }, w);
         return () => clearTimeout(e);
     }, [a, u, m, g]),
     (0, y.BQ)(a) && (0, y.ye)(a))
@@ -282,7 +282,7 @@ function U(e) {
                           primaryEntryPointCommand: u,
                       }),
                       g && null != m
-                          ? (0, r.jsx)(S.Z, {
+                          ? (0, r.jsx)(T.Z, {
                                 botUserId: m,
                                 applicationId: a.id,
                                 analyticsLocations: E,
@@ -310,7 +310,7 @@ function G(e) {
             let e = c * u;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, w * c),
+                minHeightOverride: Math.min(e, D * c),
                 maxHeightOverride: e,
             };
         }, [u, c]),
@@ -327,12 +327,12 @@ function G(e) {
                     ref: s,
                     className: N.markup,
                     variant: "text-sm/medium",
-                    lineClamp: h ? void 0 : w,
+                    lineClamp: h ? void 0 : D,
                     style: { maxHeight: h ? void 0 : d.minHeightOverride },
                     children: o,
                 }),
             }),
-            null != u && u > w
+            null != u && u > D
                 ? (0, r.jsxs)(l.P3F, {
                       className: C.expandableDescriptionClickable,
                       onClick: () => a((e) => !e),

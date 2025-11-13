@@ -78,16 +78,16 @@ class d extends (r = l.PureComponent) {
                 if (i.length < 2) return;
                 let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
                     f = r.getContext("2d"),
-                    m = this.maxValue;
+                    h = this.maxValue;
                 (f.strokeStyle = a), (f.lineWidth = c);
-                let h = r.height - f.lineWidth,
-                    g = f.createLinearGradient(0, 0, 0, h);
-                if (null != d) g.addColorStop(0, d);
+                let g = r.height - f.lineWidth,
+                    m = f.createLinearGradient(0, 0, 0, g);
+                if (null != d) m.addColorStop(0, d);
                 else {
                     let { r: e, g: t, b: n } = o.oo(a);
-                    g.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"));
+                    m.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"));
                 }
-                g.addColorStop(1, this.fillColor), (f.fillStyle = g);
+                m.addColorStop(1, this.fillColor), (f.fillStyle = m);
                 let _ = i.length >= s ? s : i.length;
                 f.setTransform(1, 0, 0, -1, 0, r.height),
                     f.clearRect(0, 0, r.width, r.height),
@@ -99,7 +99,7 @@ class d extends (r = l.PureComponent) {
                 i.forEach((e, r) => {
                     (t = {
                         x: O,
-                        y: (h * e) / m,
+                        y: (g * e) / h,
                     }),
                         0 === r ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),

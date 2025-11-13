@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(443603),
     p = n(957825),
     h = n(388032),
-    m = n(744114);
+    m = n(564355);
 function g(e, t, n) {
     return (
         t in e
@@ -71,10 +71,10 @@ function O(e, t) {
         O = !1,
         v = g === p.X1.STICKER,
         I = !1,
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, d.RO)(p.X1.STICKER, a);
         }, [a]),
-        { Component: T, events: A, play: C } = (0, l.z)(),
+        { Component: S, events: A, play: C } = (0, l.z)(),
         N = (0, f.v)(u.U);
     return n
         ? null
@@ -89,7 +89,7 @@ function O(e, t) {
                       _.Z,
                       y(E({ className: o()(m.button, m.stickerButton) }, A), {
                           onClick: () => {
-                              S(), C();
+                              T(), C();
                           },
                           isActive: v,
                           "aria-label": h.intl.string(h.t.rZpidU),
@@ -98,7 +98,7 @@ function O(e, t) {
                           "aria-controls": b,
                           sparkle: O,
                           notification: I ? _.j.UPDATE : null,
-                          children: (0, r.jsx)(T, {
+                          children: (0, r.jsx)(S, {
                               size: "refresh_sm",
                               color: "currentColor",
                           }),

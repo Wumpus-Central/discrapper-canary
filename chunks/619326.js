@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -63,19 +63,19 @@ function j(e) {
     let t = (0, s.Bd)(e) > 0.25;
     return (0, u.Lq)(t ? m.Ilk.WHITE_500 : m.Ilk.PRIMARY_530);
 }
-function v(e) {
+function _(e) {
     let { value: t, onChange: n, disabled: l = !1 } = e,
         d = i.useRef(null),
         [u, g] = i.useState(t);
     function x() {
         n(u);
     }
-    function v(e) {
+    function _(e) {
         n(e), g(e);
     }
-    let _ = t === m.p6O,
-        C = _ ? u : t,
-        O = (0, r.jsx)(c.dz2, {
+    let v = t === m.p6O,
+        O = v ? u : t,
+        C = (0, r.jsx)(c.dz2, {
             size: "custom",
             width: 32,
             height: 24,
@@ -85,8 +85,8 @@ function v(e) {
             orientation: "horizontal",
             isDisabled: l,
         }),
-        { ref: E } = y,
-        N = (function (e, t) {
+        { ref: N } = y,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -108,11 +108,11 @@ function v(e) {
             return i;
         })(y, ["ref"]),
         I = (0, o.jm)({
-            isSelected: _,
+            isSelected: v,
             label: p.intl.formatToPlainString(p.t.ZC69mL, { colorHex: m.Pbq }),
         }),
         S = (0, o.jm)({
-            isSelected: !_,
+            isSelected: !v,
             label: p.intl.formatToPlainString(p.t["3kiLZZ"], { colorHex: (0, s.Rf)(t) }),
         });
     return (0, r.jsxs)(
@@ -122,9 +122,9 @@ function v(e) {
                 {
                     className: f.buttonsContainer,
                     "aria-label": p.intl.string(p.t["FJjrI/"]),
-                    ref: E,
+                    ref: N,
                 },
-                N,
+                E,
             ),
             {
                 children: [
@@ -149,7 +149,7 @@ function v(e) {
                                         (0, r.jsx)("div", {
                                             className: f.swatch,
                                             style: { backgroundColor: m.Pbq },
-                                            children: _ ? O : null,
+                                            children: v ? C : null,
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             className: f.swatchDescription,
@@ -179,9 +179,9 @@ function v(e) {
                                     {
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: a()(f.customSwatch, { [f.defaultSwatch]: C === m.p6O }),
-                                                style: { "--custom-color": (0, s.Rf)(C) },
-                                                children: _ ? null : O,
+                                                className: a()(f.customSwatch, { [f.defaultSwatch]: O === m.p6O }),
+                                                style: { "--custom-color": (0, s.Rf)(O) },
+                                                children: v ? null : C,
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 className: f.swatchDescription,
@@ -203,7 +203,7 @@ function v(e) {
                                             c.Z$W,
                                             b(h({}, e), {
                                                 value: t,
-                                                onChange: v,
+                                                onChange: _,
                                             }),
                                         ),
                                     children: (e) =>
@@ -218,7 +218,7 @@ function v(e) {
                                                     className: f.dropperIcon,
                                                     width: 14,
                                                     height: 14,
-                                                    color: j(C),
+                                                    color: j(O),
                                                 }),
                                             }),
                                         ),
@@ -230,14 +230,14 @@ function v(e) {
         ),
     );
 }
-function _(e) {
+function v(e) {
     let t,
         { value: n, onChange: i, disabled: l = !1 } = e,
         { ref: a, width: s } = (0, d.ZP)();
     return (
         (t =
             null == s || s < 440
-                ? (0, r.jsx)(v, {
+                ? (0, r.jsx)(_, {
                       value: n,
                       onChange: i,
                       disabled: l,

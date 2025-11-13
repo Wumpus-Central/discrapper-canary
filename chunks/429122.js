@@ -70,27 +70,27 @@ let _ = i.memo(function (e) {
         } = e,
         { hasDivider: O, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, y, t), [n, y, t, p]),
         j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
-        C = (0, a.DM)(m),
-        x = (0, l.Wu)([s.ZP], () => {
+        x = (0, a.DM)(m),
+        C = (0, l.Wu)([s.ZP], () => {
             if (null == j || !j.isCollapsed || !v) return [];
             let e = j.getChannelRecords(),
                 t = [];
             for (let n of e) {
                 if (!n.isGuildVocal()) continue;
                 let e = s.ZP.isChannelOrParentOptedIn(m, n.id);
-                (!C || e) && t.push(n);
+                (!x || e) && t.push(n);
             }
             return t;
-        }, [j, v, m, C]),
+        }, [j, v, m, x]),
         E = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: x,
+                    channels: C,
                     selectedChannelId: b,
                     selectedVoiceChannelId: _,
                     voiceStates: h,
                 }),
-            [x, b, _, h],
+            [C, b, _, h],
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {

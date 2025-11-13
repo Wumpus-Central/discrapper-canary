@@ -21,15 +21,15 @@ function h(e) {
             let t = s.default.getCurrentUser();
             return null != e && (0, a.eM)(e, t);
         }),
-        { error: j, loading: v, createEnableRequest: _, submittedRequest: C } = (0, d.Z)(null == e ? void 0 : e.id),
-        { loading: O, error: y, refresh: E, eligibility: N } = (0, u.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: I, requestCooldownDuration: S } = (0, g.Z)(N),
+        { error: j, loading: _, createEnableRequest: v, submittedRequest: O } = (0, d.Z)(null == e ? void 0 : e.id),
+        { loading: C, error: y, refresh: N, eligibility: E } = (0, u.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: I, requestCooldownDuration: S } = (0, g.Z)(E),
         T =
             (null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
             (null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
-        w = C || (null == N ? void 0 : N.isApplicationPending) === !0,
-        Z = (null == N ? void 0 : N.canApply) === !0,
+        w = O || (null == E ? void 0 : E.isApplicationPending) === !0,
+        Z = (null == E ? void 0 : E.canApply) === !0,
         R = f.intl.format(f.t.aJUdOi, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
     I && P
         ? (t =
@@ -48,18 +48,18 @@ function h(e) {
         k = I && Z && x ? f.intl.format(f.t.wbVIUB, {}) : void 0;
     return (
         r.useEffect(() => {
-            D && E();
-        }, [E, D]),
+            D && N();
+        }, [N, D]),
         {
-            resubmittingEnableRequest: v,
+            resubmittingEnableRequest: _,
             resubmissionError: j,
             isGuildOwner: x,
-            createEnableRequest: _,
-            resubmittedRequest: C,
-            eligibilityLoading: O,
+            createEnableRequest: v,
+            resubmittedRequest: O,
+            eligibilityLoading: C,
             eligibilityError: y,
-            refreshEligibility: E,
-            eligibility: N,
+            refreshEligibility: N,
+            eligibility: E,
             eligibleForMonetization: Z,
             isApplicationPending: w,
             hasPreviousApplicationRejection: I,

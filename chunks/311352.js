@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -52,7 +52,7 @@ function j(e) {
             );
     });
 }
-let C = (e) => {
+let x = (e) => {
         let { keybindString: t, children: n, targetElementRef: i } = e;
         return (0, r.jsx)(a.yRy, {
             targetElementRef: i,
@@ -103,7 +103,7 @@ let C = (e) => {
             children: () => n,
         });
     },
-    x = () => {
+    C = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
             n = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
@@ -114,9 +114,9 @@ let C = (e) => {
             })),
             v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
         if (!(o && s) || null == v || n) return null;
-        let x = g.BB(v.shortcut, !0);
-        return (0, r.jsx)(C, {
-            keybindString: x,
+        let C = g.BB(v.shortcut, !0);
+        return (0, r.jsx)(x, {
+            keybindString: C,
             targetElementRef: e,
             children: (0, r.jsx)(p.Z, {
                 ref: e,

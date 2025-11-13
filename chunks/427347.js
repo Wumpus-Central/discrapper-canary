@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(100527),
-    r = n(906732),
+    r = n(100527),
+    l = n(906732),
     s = n(266454),
     o = n(314910),
     c = n(313789),
@@ -20,7 +20,7 @@ function v(e) {
     let { dismissibleContent: t } = e,
         n = p.Z.useIsEligible(),
         m = (0, s.Nj)(t),
-        { analyticsLocations: v } = (0, r.ZP)(l.Z.HOLIDAY_COACHMARK),
+        { analyticsLocations: v } = (0, l.ZP)(r.Z.HOLIDAY_COACHMARK),
         j = (e) => {
             (0, s.Q3)(t, { dismissAction: e });
         },

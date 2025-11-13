@@ -1,4 +1,4 @@
-e.d(n, { Z: () => m });
+e.d(n, { Z: () => Z });
 var i = e(951288),
     a = e(647438),
     l = e(392711),
@@ -12,20 +12,20 @@ var i = e(951288),
     f = e(979651),
     g = e(557135),
     v = e(388032);
-function m(t) {
+function Z(t) {
     let n = (0, h.Y)(t),
         e = (0, s.e7)([f.Z], () => f.Z.isInChannel(t.id)),
         l = (0, s.e7)([f.Z], () => !r().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        { needSubscriptionToAccess: m } = (0, c.Z)(t.id),
-        Z = (0, s.e7)([u.Z], () => u.Z.getChatOpen(t.id)),
+        { needSubscriptionToAccess: Z } = (0, c.Z)(t.id),
+        m = (0, s.e7)([u.Z], () => u.Z.getChatOpen(t.id)),
         b = a.useCallback(() => {
             g.Z.handleVoiceConnect({
                 channel: t,
                 connected: e,
-                needSubscriptionToAccess: m,
+                needSubscriptionToAccess: Z,
                 locked: !1,
             });
-        }, [t, e, m]);
+        }, [t, e, Z]);
     return e || !n
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -36,7 +36,7 @@ function m(t) {
                       action: b,
                   }),
                   l &&
-                      !Z &&
+                      !m &&
                       (0, i.jsx)(o.sNh, {
                           id: "open-chat",
                           label: v.intl.string(v.t.ZXxLQg),

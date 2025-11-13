@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -61,7 +61,7 @@ function j(e) {
             ),
     });
 }
-let C = (e) => {
+let x = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: a } = e,
         s = null != l,
         h = s ? Array.from(l.embeddedActivity.userIds) : [],

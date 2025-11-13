@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(630388),
     v = n(135431),
     I = n(541099),
-    S = n(783097),
-    T = n(570949),
+    T = n(783097),
+    S = n(570949),
     A = n(314734),
     C = n(981631),
     N = n(388032),
@@ -39,7 +39,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function w(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,10 +80,10 @@ function x(e, t) {
 }
 function L(e) {
     var t;
-    let { application: a, context: P, className: D, sectionName: L } = e,
+    let { application: a, context: P, className: w, sectionName: L } = e,
         M = i.useRef(null),
         j = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
-        k = (0, S.L1)(a),
+        k = (0, T.L1)(a),
         U = (0, _.Eb)(k),
         G = (0, d.R)(a.id),
         B = (0, s.e7)([g.Z], () => {
@@ -101,7 +101,7 @@ function L(e) {
             id: a.id,
             label: N.intl.string(N.t["+NP/b2"]),
         }),
-        H = (0, T.P)({ application: a }),
+        H = (0, S.P)({ application: a }),
         Y = (0, O.yE)(null != (t = a.flags) ? t : 0, C.udG.EMBEDDED),
         W = "channel" === P.type ? P.channel : void 0;
     return (0, r.jsxs)("div", {
@@ -114,7 +114,7 @@ function L(e) {
                               applicationId: a.id,
                               referrerId: null == F ? void 0 : F.id,
                           })
-                        : (0, f.J)(w({ id: a.id }, k));
+                        : (0, f.J)(D({ id: a.id }, k));
                     (0, y.JG)(e, () =>
                         (0, l.showToast)((0, l.createToast)(N.intl.string(N.t["L/PwZf"]), l.ToastType.SUCCESS)),
                     ),
@@ -123,7 +123,7 @@ function L(e) {
                             source: j,
                         });
                 },
-                className: o()(R.clickable, D),
+                className: o()(R.clickable, w),
                 "aria-label": N.intl.string(N.t.WqhZss),
                 children: (0, r.jsx)(l.xPt, {
                     size: "sm",
@@ -171,7 +171,7 @@ function L(e) {
                                                   null == k.customInstallUrl &&
                                                       (0, c.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
                                                       (0, v.L)(
-                                                          x(w({}, k), {
+                                                          x(D({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
@@ -217,9 +217,9 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         l.P3F,
-                        x(w({ innerRef: M }, e), {
+                        x(D({ innerRef: M }, e), {
                             onClick: e.onClick,
-                            className: o()(R.clickable, D),
+                            className: o()(R.clickable, w),
                             "aria-label": N.intl.string(N.t["UKOtz+"]),
                             children: (0, r.jsx)(l.xhG, {
                                 size: "sm",

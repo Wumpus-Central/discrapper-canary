@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-var D = (function (e) {
+var w = (function (e) {
     return (
         (e.PLAY = "play"),
         (e.NOW_PLAYING = "now_playing"),
@@ -92,7 +92,7 @@ var D = (function (e) {
         (e.PREORDER_WAIT = "preorder_wait"),
         e
     );
-})(D || {});
+})(w || {});
 let x = Object.freeze({
         [S.apO.PLAY]: "play",
         [S.apO.INSTALL]: "install",
@@ -119,7 +119,7 @@ function M(e) {
 }
 class j extends (r = a.Component) {
     get analyticsLocation() {
-        return w(R({}, this.props.analyticsContext.location), { object: S.qAy.BUTTON_CTA });
+        return D(R({}, this.props.analyticsContext.location), { object: S.qAy.BUTTON_CTA });
     }
     getText(e) {
         switch (("uninstalling" !== e && (this._uninstallStringIndex = null), e)) {
@@ -290,7 +290,7 @@ function k(e) {
         l = (0, o.e7)([h.Z], () => h.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
         j,
-        w(R({}, e), {
+        D(R({}, e), {
             analyticsContext: n,
             actionState: r,
             dispatchState: a,
@@ -306,4 +306,4 @@ N(j, "defaultProps", {
     isPlayShiny: !1,
     tooltipPosition: "top",
 }),
-    N(j, "ButtonStates", D);
+    N(j, "ButtonStates", w);

@@ -77,7 +77,7 @@ function S(e) {
             commandOrigin: d,
             source: f,
         }),
-        w = A(_, t.activity);
+        D = A(_, t.activity);
     return {
         imageBackground: v,
         videoUrl: I,
@@ -85,7 +85,7 @@ function S(e) {
         activityAction: R,
         onActivityItemSelected: P,
         labelType: O ? E.label_type : i.ww.NONE,
-        staffReleasePhase: w,
+        staffReleasePhase: D,
     };
 }
 function A(e, t) {

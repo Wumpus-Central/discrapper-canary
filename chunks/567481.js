@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(293273),
     p = n(885110),
     f = n(996106),
-    m = n(914946),
-    h = n(452426),
-    g = n(852926),
+    h = n(914946),
+    g = n(452426),
+    m = n(852926),
     _ = n(186901),
     b = n(981631);
 let E = new u.Z("RPCCommandsOverlay"),
@@ -21,7 +21,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.SET_OVERLAY_LOCKED]: {
             scope: _.lH,
             validation: (e) =>
-                (0, h.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         locked: e.boolean().required(),
@@ -46,7 +46,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
             scope: _.lH,
             validation: (e) =>
-                (0, h.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         type: e.number().required().valid([b.mFx.JOIN]),
@@ -60,12 +60,12 @@ let E = new u.Z("RPCCommandsOverlay"),
                     i = t.application.id;
                 if (null == i) throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, "No application.");
                 let l = d.Z.getApplicationActivity(i);
-                if (null == l || null == l.secrets || !(0, m.t9)(n, l.party, l.secrets))
+                if (null == l || null == l.secrets || !(0, h.t9)(n, l.party, l.secrets))
                     throw new f.Z(
                         { errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY },
                         "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
                     );
-                let { lock: s, context: o } = (0, g.jU)(r),
+                let { lock: s, context: o } = (0, m.jU)(r),
                     u = (0, c.Z)(l, p.Z);
                 return (0, a.h7)(l, u, o).then(() => {
                     if ((s(), u))
@@ -79,7 +79,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
             scope: _.lH,
             validation: (e) =>
-                (0, h.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         code: e.string().required(),
@@ -94,7 +94,7 @@ let E = new u.Z("RPCCommandsOverlay"),
                 return s.ZP.resolveInvite(t, "Game SDK").then((e) => {
                     let { invite: t, code: r } = e;
                     if (null == t) throw new f.Z({ errorCode: b.lTL.INVALID_INVITE }, "Invalid invite id: ".concat(r));
-                    let { context: i, lock: a } = (0, g.jU)(n);
+                    let { context: i, lock: a } = (0, m.jU)(n);
                     return new Promise((e) => {
                         l.Z.dispatch({
                             type: "INVITE_MODAL_OPEN",
@@ -110,7 +110,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
             scope: _.lH,
             validation: (e) =>
-                (0, h.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({ pid: e.number().min(0).required() }),
             handler(e) {
@@ -120,7 +120,7 @@ let E = new u.Z("RPCCommandsOverlay"),
                     } = e,
                     a = l.application.id;
                 if (null == a) throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, "No application.");
-                let { lock: s, context: o } = (0, g.jU)(t);
+                let { lock: s, context: o } = (0, m.jU)(t);
                 return new Promise((e) => {
                     (0, i.ZDy)(
                         async () => {

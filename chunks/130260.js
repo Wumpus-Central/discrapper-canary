@@ -1,22 +1,22 @@
-a.d(e, { x: () => E });
+a.d(e, { x: () => c });
 var r = a(696486),
     _ = a(151122),
     n = a(622916),
     o = a(454463),
     i = a(243309),
-    c = a(748688);
-let E = (0, _._I)(() => ({
+    E = a(748688);
+let c = (0, _._I)(() => ({
     name: "BrowserProfiling",
     setup(t) {
         let e = (0, r.HN)(),
             a = e && (0, r.Gx)(e);
-        a && (0, c.x5)(a) && (0, c.$X)(a) && (0, i.v)(a),
+        a && (0, E.x5)(a) && (0, E.$X)(a) && (0, i.v)(a),
             t.on("spanStart", (t) => {
-                t === (0, r.Gx)(t) && (0, c.$X)(t) && (0, i.v)(t);
+                t === (0, r.Gx)(t) && (0, E.$X)(t) && (0, i.v)(t);
             }),
             t.on("beforeEnvelope", (t) => {
-                if (!(0, c.ph)()) return;
-                let e = (0, c.AJ)(t);
+                if (!(0, E.ph)()) return;
+                let e = (0, E.AJ)(t);
                 if (!e.length) return;
                 let a = [];
                 for (let t of e) {
@@ -28,15 +28,15 @@ let E = (0, _._I)(() => ({
                         continue;
                     }
                     e && e.profile && delete e.profile;
-                    let i = (0, c.GC)(r);
+                    let i = (0, E.GC)(r);
                     if (!i) {
                         o.X && n.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
                         continue;
                     }
-                    let E = (0, c.nm)(r, _, i, t);
-                    E && a.push(E);
+                    let c = (0, E.nm)(r, _, i, t);
+                    c && a.push(c);
                 }
-                (0, c.db)(t, a);
+                (0, E.db)(t, a);
             });
     },
 }));

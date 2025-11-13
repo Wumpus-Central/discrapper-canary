@@ -109,8 +109,8 @@ let N = Object.freeze({
     }),
     R = null,
     P = {},
-    w = null,
-    D = new Set(),
+    D = null,
+    w = new Set(),
     x = !1,
     L = !1,
     M = !1,
@@ -294,7 +294,7 @@ function Y(e) {
     e.userId in P && delete P[e.userId];
 }
 function W() {
-    D.clear();
+    w.clear();
 }
 function K(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
@@ -327,13 +327,13 @@ function z() {
 function q() {
     if (!__OVERLAY__) return !1;
     let e = R === (0, E.getPID)(),
-        t = D.has((0, E.getPID)()) || j.size > 0;
+        t = w.has((0, E.getPID)()) || j.size > 0;
     e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
 }
 function X() {}
 function Q(e) {
     let { locked: t, pid: n } = e;
-    t ? D.delete(n) : D.add(n), $(), q(), (k = !1);
+    t ? w.delete(n) : w.add(n), $(), q(), (k = !1);
 }
 function J(e) {
     let { region: t } = e;
@@ -354,10 +354,10 @@ function et(e) {
 }
 function en(e) {
     let { callId: t } = e;
-    w = t;
+    D = t;
 }
 function er() {
-    w = null;
+    D = null;
 }
 function ei() {
     if (__OVERLAY__) {
@@ -485,7 +485,7 @@ function ev(e) {
         });
 }
 function eI(e) {
-    D.delete(e.previousAssociatedGamePID);
+    w.delete(e.previousAssociatedGamePID);
 }
 class eT extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -495,7 +495,7 @@ class eT extends (r = i.ZP.PersistedStore) {
                 let e = _.default.getId();
                 G = null != e ? U(e) : I({}, N);
             }),
-            __OVERLAY__ && D.delete((0, E.getPID)()),
+            __OVERLAY__ && w.delete((0, E.getPID)()),
             null != e)
         ) {
             P = e;
@@ -510,10 +510,10 @@ class eT extends (r = i.ZP.PersistedStore) {
         return P;
     }
     isLocked(e) {
-        return !D.has(e);
+        return !w.has(e);
     }
     isInstanceLocked() {
-        return !D.has((0, E.getPID)());
+        return !w.has((0, E.getPID)());
     }
     isInstanceFocused() {
         return R === (0, E.getPID)();
@@ -539,7 +539,7 @@ class eT extends (r = i.ZP.PersistedStore) {
         return G.selectedChannelId;
     }
     getSelectedCallId() {
-        return w;
+        return D;
     }
     getDisplayUserMode() {
         return G.displayUserMode;

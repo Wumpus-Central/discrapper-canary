@@ -1,46 +1,46 @@
-n.d(t, { Z: () => m });
-var i = n(442837),
-    l = n(595519),
-    r = n(374065),
-    a = n(761122),
-    o = n(542094),
-    s = n(973616),
+n.d(t, { Z: () => _ });
+var r = n(442837),
+    i = n(595519),
+    a = n(374065),
+    o = n(761122),
+    s = n(542094),
+    l = n(973616),
     c = n(496675),
     u = n(358085),
     d = n(231338),
-    p = n(388032);
-function m(e) {
+    f = n(388032);
+function _(e) {
     let t,
-        { context: n, application: m, activityAction: f } = e,
+        { context: n, application: _, activityAction: p } = e,
         h = "channel" === n.type ? n.channel : void 0,
-        v = (0, i.e7)([c.Z], () => c.Z.can(d.Pl.USE_EMBEDDED_ACTIVITIES, h)),
-        y = (0, r.KF)(null == h ? void 0 : h.id),
-        g = !1;
-    switch (f) {
-        case o.JS.LEAVE:
-            g = !1;
+        m = (0, r.e7)([c.Z], () => c.Z.can(d.Pl.USE_EMBEDDED_ACTIVITIES, h)),
+        g = (0, a.KF)(null == h ? void 0 : h.id),
+        E = !1;
+    switch (p) {
+        case s.JS.LEAVE:
+            E = !1;
             break;
-        case o.JS.START:
+        case s.JS.START:
             null == h
-                ? (g = !1)
+                ? (E = !1)
                 : (null == h ? void 0 : h.isGuildVoice())
-                  ? y !== r.jy.CAN_LAUNCH && (g = !0)
-                  : (0, l.WS)(h) || (g = !0);
+                  ? g !== a.jy.CAN_LAUNCH && (E = !0)
+                  : (0, i.WS)(h) || (E = !0);
             break;
-        case o.JS.JOIN:
-            (null == h ? void 0 : h.isGuildVoice()) ? (g = !v) : (0, l.WS)(h) || (g = !0);
+        case s.JS.JOIN:
+            (null == h ? void 0 : h.isGuildVoice()) ? (E = !m) : (0, i.WS)(h) || (E = !0);
     }
-    if (f !== o.JS.LEAVE) {
-        let e = m instanceof s.ZP ? m.embeddedActivityConfig : m.embedded_activity_config,
-            n = (0, a.Z)((0, u.getOS)());
+    if (p !== s.JS.LEAVE) {
+        let e = _ instanceof l.ZP ? _.embeddedActivityConfig : _.embedded_activity_config,
+            n = (0, o.Z)((0, u.getOS)());
         null == e || e.supported_platforms.includes(n)
-            ? (null == h ? void 0 : h.isThread()) && ((g = !0), (t = p.intl.string(p.t.ddSR3v)))
-            : ((g = !1), (t = p.intl.string(p.t.z2YTgJ)));
+            ? (null == h ? void 0 : h.isThread()) && ((E = !0), (t = f.intl.string(f.t.ddSR3v)))
+            : ((E = !1), (t = f.intl.string(f.t.z2YTgJ)));
     }
     return (
-        g && null == t && (t = p.intl.string(p.t.f41E1g)),
+        E && null == t && (t = f.intl.string(f.t.f41E1g)),
         {
-            disabled: g,
+            disabled: E,
             reason: t,
         }
     );

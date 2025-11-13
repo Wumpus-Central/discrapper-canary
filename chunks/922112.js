@@ -14,12 +14,12 @@ var r = n(951288),
     f = n(388032),
     h = n(197530);
 let b = function (e) {
-    let { guildId: t, resourceChannel: l, index: b, onDragComplete: x, onDragStart: j, onDragReset: v } = e,
-        { title: _, channelId: C, description: O } = l,
-        y = u.Z.getChannel(C),
-        E = null;
-    (null != y && (0, d.k3)(y)) || (E = f.intl.string(f.t.kTdL8X));
-    let N = null == O || 0 === O.length,
+    let { guildId: t, resourceChannel: l, index: b, onDragComplete: x, onDragStart: j, onDragReset: _ } = e,
+        { title: v, channelId: O, description: C } = l,
+        y = u.Z.getChannel(O),
+        N = null;
+    (null != y && (0, d.k3)(y)) || (N = f.intl.string(f.t.kTdL8X));
+    let E = null == C || 0 === C.length,
         I = g.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon,
@@ -35,7 +35,7 @@ let b = function (e) {
             index: b,
             onDragStart: j,
             onDragComplete: x,
-            onDragReset: v,
+            onDragReset: _,
         }),
         Z = i.useCallback(
             (e) => {
@@ -122,7 +122,7 @@ let b = function (e) {
                       className: a()(h.resourceChannel, {
                           [h.dropIndicatorBefore]: null != T && b < T,
                           [h.dropIndicatorAfter]: null != T && b > T,
-                          [h.resourceChannelError]: null != E,
+                          [h.resourceChannelError]: null != N,
                       }),
                       ref: (e) => {
                           S(P(e));
@@ -157,15 +157,15 @@ let b = function (e) {
                                       className: h.resourceChannelTitle,
                                       variant: "text-md/semibold",
                                       color: "header-primary",
-                                      children: _,
+                                      children: v,
                                   }),
-                                  !N &&
+                                  !E &&
                                       (0, r.jsx)(o.Text, {
                                           className: h.resourceChannelDescription,
                                           variant: "text-xs/medium",
                                           color: "text-muted",
                                           lineClamp: 1,
-                                          children: O,
+                                          children: C,
                                       }),
                               ],
                           }),
@@ -181,11 +181,11 @@ let b = function (e) {
                           }),
                       ],
                   }),
-                  null != E &&
+                  null != N &&
                       (0, r.jsx)(o.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: E,
+                          children: N,
                       }),
               ],
           });

@@ -46,8 +46,8 @@ var r = n(512722),
     N = n(496675),
     R = n(306680),
     P = n(944486),
-    w = n(9156),
-    D = n(979651),
+    D = n(9156),
+    w = n(979651),
     x = n(938475),
     L = n(823379),
     M = n(709054),
@@ -147,7 +147,7 @@ class en {
                 2 === t.renderLevel &&
                 t.record.isGuildVocal() &&
                 null == n.channels[t.id] &&
-                o().some(D.Z.getVoiceStatesForChannel(t.id)) &&
+                o().some(w.Z.getVoiceStatesForChannel(t.id)) &&
                 R.ZP.getMentionCount(t.id) > 0
             )
                 return !0;
@@ -512,15 +512,15 @@ class er {
             (this.firstVoiceChannel = void 0),
             (this.allChannelsById = null),
             (this.version = 0),
-            (this.hideMutedChannels = w.ZP.isGuildCollapsed(this.id)),
-            (this.mutedChannelIds = w.ZP.getMutedChannels(this.id)),
+            (this.hideMutedChannels = D.ZP.isGuildCollapsed(this.id)),
+            (this.mutedChannelIds = D.ZP.getMutedChannels(this.id)),
             (this.optedInChannels =
-                null != (r = w.ZP.getOptedInChannelsWithPendingUpdates(this.id))
+                null != (r = D.ZP.getOptedInChannelsWithPendingUpdates(this.id))
                     ? r
-                    : w.ZP.getOptedInChannels(this.id)),
+                    : D.ZP.getOptedInChannels(this.id)),
             (this.optInEnabled = (0, g.r1)(this.id)),
             (this.hideResourceChannels = (0, d.s)(this.id)),
-            (this.favoriteChannelIds = new Set(null != (a = w.ZP.getGuildFavorites(this.id)) ? a : [])),
+            (this.favoriteChannelIds = new Set(null != (a = D.ZP.getGuildFavorites(this.id)) ? a : [])),
             (this.suggestedFavoriteChannelId = h.Z.getSuggestedChannelId(this.id)),
             (this.collapsedCategoryIds = T.Z.getCollapsedCategories());
         let s = S.Z.getMutableGuildChannelsForGuild(this.id),
@@ -666,7 +666,7 @@ class eo extends ei {
 }
 class es extends ei {
     updateChannel(e, t) {
-        let n = e.id in this.channels && w.ZP.isFavorite(e.guild_id, e.id),
+        let n = e.id in this.channels && D.ZP.isFavorite(e.guild_id, e.id),
             r = h.Z.getSuggestedChannelId(e.guild_id);
         return (e.id !== r ||
             n ||
@@ -684,7 +684,7 @@ class es extends ei {
     constructor(e, t) {
         var n;
         if ((super(e), !e.optInEnabled && !ev())) return;
-        this.channels = o()(null != (n = w.ZP.getGuildFavorites(e.id)) ? n : [])
+        this.channels = o()(null != (n = D.ZP.getGuildFavorites(e.id)) ? n : [])
             .map((e) => S.Z.getChannel(e))
             .filter(L.lm)
             .map((e) => new em(this, e, t))
@@ -1143,7 +1143,7 @@ class eb extends eh {
         return !N.Z.can(F.Pl.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || eI(t, this.record)
             ? 1
             : this.category.isCollapsed
-              ? o().some(D.Z.getVoiceStatesForChannel(this.record.id))
+              ? o().some(w.Z.getVoiceStatesForChannel(this.record.id))
                   ? 4
                   : 3
               : 4;
@@ -1256,7 +1256,7 @@ function eS(e, t, n) {
         if (!(0, U.K)("should_show_in_recents")) return !1;
         let n = k.Z.isVoiceCategoryCollapsed(e.id);
         if (!n) return !1;
-        let r = o().some(D.Z.getVoiceStatesForChannel(t.id));
+        let r = o().some(w.Z.getVoiceStatesForChannel(t.id));
         if (n && r) return !1;
     }
     if ((null != r && (r.id === t.id || (r.isThread() && r.parent_id === t.id))) || R.ZP.getMentionCount(t.id) > 0)

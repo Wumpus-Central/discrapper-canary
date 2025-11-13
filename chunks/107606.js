@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var a = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(524437),
-    r = n(481060),
+    r = n(524437),
+    l = n(481060),
     s = n(607070),
     o = n(597688),
     c = n(1870),
@@ -22,15 +22,15 @@ function b() {
         S = p.L1.useSetting(),
         E = (0, i.e7)([m.Z], () => m.Z.theme),
         T = S.backgroundGradientPresetId,
-        N = (0, i.e7)([c.Z], () => c.Z.purchases),
-        O = (0, d.Ad)(N),
-        P = (0, d.jT)(N),
-        w = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
-        I = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-        k = null != w && null != (v = O.find((e) => e.skuId === w)) ? v : null,
-        A = null != I && null != (j = P.find((e) => e.skuId === I)) ? j : null,
-        R = (0, i.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
-        Z = (0, i.e7)([o.Z], () => o.Z.getProduct(null == A ? void 0 : A.skuId)),
+        O = (0, i.e7)([c.Z], () => c.Z.purchases),
+        N = (0, d.Ad)(O),
+        P = (0, d.jT)(O),
+        I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
+        w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+        k = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        A = (0, i.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
+        Z = (0, i.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, i.e7)([s.Z], () => s.Z.fontSize),
         L = (0, i.e7)([s.Z], () => s.Z.messageGroupSpacing),
         M = p.YC.useSetting();
@@ -41,28 +41,28 @@ function b() {
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(r.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Randomize customization settings",
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children:
                                 "Randomly sets appearance-related settings. Leaving this tab or closing devtools will reset to your initial state.",
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Theme",
                             onClick: x.aB,
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Collectibles",
                             onClick: x.th,
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Appearance Settings",
@@ -72,15 +72,15 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(r.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Current Settings",
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: ["Theme: ", E],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "Client Theme ID:",
@@ -88,23 +88,23 @@ function b() {
                                 null != T ? (null == (b = g.qt[T]) ? void 0 : b.getName()) : "None",
                             ],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Avatar Decoration: ", null != (_ = null == R ? void 0 : R.name) ? _ : "None"],
+                            children: ["Avatar Decoration: ", null != (_ = null == A ? void 0 : A.name) ? _ : "None"],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: ["Nameplate: ", null != (y = null == Z ? void 0 : Z.name) ? y : "None"],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: ["Font Size: ", D, "px"],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: ["Message Spacing: ", L],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "UI Density: ",
@@ -112,13 +112,13 @@ function b() {
                                 " (",
                                 (function (e) {
                                     switch (e) {
-                                        case l.Pi.COMPACT:
+                                        case r.Pi.COMPACT:
                                             return "Compact";
-                                        case l.Pi.COZY:
+                                        case r.Pi.COZY:
                                             return "Cozy";
-                                        case l.Pi.DEFAULT:
+                                        case r.Pi.DEFAULT:
                                             return "Default";
-                                        case l.Pi.RESPONSIVE:
+                                        case r.Pi.RESPONSIVE:
                                             return "Responsive";
                                         default:
                                             return "Unknown";

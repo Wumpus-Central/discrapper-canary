@@ -34,7 +34,7 @@ var r = n(951288),
     N = n(268010),
     R = n(797342),
     P = n(206583);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -117,17 +117,17 @@ let B = (e) => {
             n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(E.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(E.Z, L(w({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(C.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(S.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, L(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(I.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(I.ZP, L(w({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(O.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(O.ZP, L(w({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(m.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(m.Z, L(w({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -149,7 +149,7 @@ let B = (e) => {
             n = M(e, ["closePopout"]);
         return (0, r.jsx)(
             V,
-            D(
+            w(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -175,17 +175,17 @@ let B = (e) => {
             n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(b.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(b.Z, L(w({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(N.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(N.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(A.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(T.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(T.Z, L(w({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(v.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(v.Z, L(w({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(g.ZP, L(w({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -213,7 +213,7 @@ let B = (e) => {
             ),
             A = i.useRef(!1),
             [C, N] = i.useState(!1),
-            [w, x] = i.useState(!1),
+            [D, x] = i.useState(!1),
             j = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
             C && j && x(!0);
@@ -241,7 +241,7 @@ let B = (e) => {
             V = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, h.L)(e, D({}, S, t));
+                    (0, h.L)(e, w({}, S, t));
                 },
                 [S],
             ),
@@ -267,7 +267,7 @@ let B = (e) => {
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(Z, L(D({}, _), { targetElementRef: m })),
+                b && (0, r.jsx)(Z, L(w({}, _), { targetElementRef: m })),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
@@ -285,7 +285,7 @@ let B = (e) => {
                                 value: W,
                                 children: (0, r.jsx)(
                                     F,
-                                    D(
+                                    w(
                                         {
                                             closePopout: t,
                                             updatePopoutPosition: G,
@@ -301,14 +301,14 @@ let B = (e) => {
                         positionKey: g,
                         onRequestOpen: () => Y(S),
                         onRequestClose: () => {
-                            w && W();
+                            D && W();
                         },
                         spacing: 8,
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, r.jsx)(
                                 u.P3F,
-                                L(D({}, e, O), {
+                                L(w({}, e, O), {
                                     innerRef: m,
                                     focusProps: {
                                         offset: {
@@ -324,7 +324,7 @@ let B = (e) => {
                                     onContextMenu: k,
                                     children: (0, r.jsx)(
                                         B,
-                                        L(D({}, _), {
+                                        L(w({}, _), {
                                             selected: n,
                                             hovered: A.current,
                                         }),

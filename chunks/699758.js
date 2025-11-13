@@ -1,38 +1,38 @@
 n.d(t, {
-    KN: () => l,
-    ZP: () => s,
-    mo: () => a,
+    KN: () => a,
+    ZP: () => o,
+    mo: () => i,
 }),
     n(388685),
     n(539854);
 var r,
-    i = n(647438),
-    l = (((r = {})[(r.Trick = 0)] = "Trick"), (r[(r.Treat = 1)] = "Treat"), r);
-let a = 2;
-function s(e, t, n) {
-    let r = i.useRef(Math.random());
-    return i.useMemo(() => {
+    l = n(647438),
+    a = (((r = {})[(r.Trick = 0)] = "Trick"), (r[(r.Treat = 1)] = "Treat"), r);
+let i = 2;
+function o(e, t, n) {
+    let r = l.useRef(Math.random());
+    return l.useMemo(() => {
         if (null == e || 0 === e.length) return null;
         if (null == t || 0 === t.length) {
             let t = null != n && e.some((e) => e.skuId === n.skuId) ? n : e[0];
             return {
-                defaultCategory: Math.floor(r.current * a),
+                defaultCategory: Math.floor(r.current * i),
                 defaultHighlightedReward: t,
             };
         }
-        let i = [],
-            l = new Map(),
-            s = new Map();
+        let l = [],
+            a = new Map(),
+            o = new Map();
         for (let n of t)
-            if (n.variants.length >= a)
-                for (let t = 0; t < a; t++) {
+            if (n.variants.length >= i)
+                for (let t = 0; t < i; t++) {
                     let r = t,
-                        a = n.variants[t];
-                    e.some((e) => e.skuId === a.skuId) &&
-                        (s.set(a.skuId, r),
-                        l.has(r) ||
-                            (i.push(r),
-                            l.set(
+                        i = n.variants[t];
+                    e.some((e) => e.skuId === i.skuId) &&
+                        (o.set(i.skuId, r),
+                        a.has(r) ||
+                            (l.push(r),
+                            a.set(
                                 r,
                                 (function (e, t) {
                                     return (
@@ -76,24 +76,24 @@ function s(e, t, n) {
                                                 });
                                         }
                                         return e;
-                                    })({}, a),
+                                    })({}, i),
                                     { name: n.name },
                                 ),
                             )));
                 }
-        if (0 === i.length) return null;
+        if (0 === l.length) return null;
         if (null != n) {
-            let e = s.get(n.skuId);
+            let e = o.get(n.skuId);
             if (null != e)
                 return {
                     defaultCategory: e,
                     defaultHighlightedReward: n,
                 };
         }
-        let o = i[Math.floor(r.current * i.length)];
+        let s = l[Math.floor(r.current * l.length)];
         return {
-            defaultCategory: o,
-            defaultHighlightedReward: l.get(o),
+            defaultCategory: s,
+            defaultHighlightedReward: a.get(s),
         };
     }, [e, t, n]);
 }

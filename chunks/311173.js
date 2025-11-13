@@ -39,15 +39,15 @@ function b(e) {
             valueError: b,
             errors: x,
             validatePatternsChanged: j,
-            validateEditingValueChanged: v,
+            validateEditingValueChanged: _,
         } = (0, d.Z)(l, s),
-        [_] = i.useState(() => ({
+        [v] = i.useState(() => ({
             tags: g,
             value: "",
             selections: [],
             isSelecting: !1,
         })),
-        C = i.useMemo(
+        O = i.useMemo(
             () =>
                 x.reduce((e, t) => {
                     let {
@@ -70,7 +70,7 @@ function b(e) {
                 }, {}),
             [x, g],
         ),
-        O = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 j(e, g);
             },
@@ -78,19 +78,19 @@ function b(e) {
         ),
         y = i.useCallback(
             (e) => {
-                v(e);
+                _(e);
             },
-            [v],
+            [_],
         );
     return (0, r.jsxs)("div", {
         className: a()(p.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
                 placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-                initialValue: _,
-                onChangeTags: O,
+                initialValue: v,
+                onChangeTags: C,
                 onChangeNewTagValue: y,
-                tagErrors: C,
+                tagErrors: O,
                 maxTags: u.VW,
             }),
             (0, r.jsx)(h, {

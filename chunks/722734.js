@@ -14,8 +14,8 @@ function s(t, e, i) {
 function n(t, e) {
     return Math.max(Math.min((t - e) / 30, 1), -1);
 }
-i.d(e, { Z: () => a });
-let a = class {
+i.d(e, { Z: () => r });
+let r = class {
     initialize() {
         window.addEventListener("mousemove", this.handleMouseMove);
     }

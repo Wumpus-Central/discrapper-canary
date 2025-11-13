@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(415506), n(388685), n(49124);
+n.d(t, { Z: () => m }), n(415506), n(388685), n(49124);
 var r = n(72924),
     i = n(100527),
     l = n(367207),
@@ -10,11 +10,11 @@ var r = n(72924),
     d = n(186901),
     p = n(981631),
     f = n(474936);
-let m = [i.Z.RPC];
-function h(e, t) {
+let h = [i.Z.RPC];
+function g(e, t) {
     let n = {
         subscriptionTier: f.Si.TIER_2,
-        analyticsLocations: m,
+        analyticsLocations: h,
         analyticsObject: t,
     };
     switch (e) {
@@ -26,7 +26,7 @@ function h(e, t) {
             throw Error("Unexpected app context: ".concat(e));
     }
 }
-let g = {
+let m = {
     [p.Etm.START_PURCHASE]: {
         [d.Gp.ANY]: [d.wE, d.lH],
         validation: (e) =>
@@ -46,15 +46,15 @@ let g = {
             if (null == l) throw new a.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
             let { lock: s, context: f } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? i : null);
             if (null == (0, o.Z)()) throw new a.Z({ errorCode: p.lTL.INVALID_CHANNEL }, "Invalid channel");
-            let g = { page: p.ZY5.IN_APP };
+            let m = { page: p.ZY5.IN_APP };
             return (async () => {
                 try {
                     let e = await (0, r.S)({
                         applicationId: l,
                         skuId: n,
-                        openPremiumPaymentModal: () => h(f, g),
-                        analyticsLocations: m,
-                        analyticsLocationObject: g,
+                        openPremiumPaymentModal: () => g(f, m),
+                        analyticsLocations: h,
+                        analyticsLocationObject: m,
                         context: f,
                     });
                     return s(), e;
@@ -87,7 +87,7 @@ let g = {
             if (((0, c.f)(t.transport), null == t.application.id))
                 throw new a.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
             let { lock: r, context: i } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? n : null);
-            return h(i, { page: p.ZY5.IN_APP }).then(
+            return g(i, { page: p.ZY5.IN_APP }).then(
                 () => {
                     r();
                 },

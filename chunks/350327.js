@@ -7,11 +7,11 @@ n.d(t, {
     Xz: () => R,
     Z: () => b,
     c_: () => N,
-    f4: () => w,
+    f4: () => D,
     g_: () => I,
     ho: () => v,
     pG: () => O,
-    rf: () => D,
+    rf: () => w,
     uV: () => M,
     x3: () => x,
     z5: () => C,
@@ -184,14 +184,14 @@ function P(e) {
     }),
         E(h.QP.PROFILE_EFFECT);
 }
-function w(e) {
+function D(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
         banner: e,
     }),
         E(h.QP.PROFILE_BANNER);
 }
-function D(e) {
+function w(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
         themeColors: e,

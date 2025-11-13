@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -47,7 +47,7 @@ class f extends i.PureComponent {
             });
     }
 }
-let m = l.ZP.connectStores([o.Z], (e) => {
+let h = l.ZP.connectStores([o.Z], (e) => {
     let { guild: t } = e;
     return { memberCount: o.Z.getMemberCount(t.id) };
 })(f);

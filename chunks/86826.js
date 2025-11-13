@@ -11,11 +11,11 @@ var i = n(120356),
     d = n(496034);
 let p = function (e) {
     var t;
-    let { title: n, className: i, color: p, animate: f, gradientStopColor: m, getHistoricalTotalBytes: h } = e,
-        g = (0, a.Sl)(p).hex,
-        _ = null == (t = (0, a.Sl)(m)) ? void 0 : t.hex;
+    let { title: n, className: i, color: p, animate: f, gradientStopColor: h, getHistoricalTotalBytes: g } = e,
+        m = (0, a.Sl)(p).hex,
+        _ = null == (t = (0, a.Sl)(h)) ? void 0 : t.hex;
     return (0, r.jsx)(c.Z, {
-        getHistoricalTotalBytes: h,
+        getHistoricalTotalBytes: g,
         children: (e, t, a) => {
             var c;
             return (0, r.jsx)("div", {
@@ -47,7 +47,7 @@ let p = function (e) {
                                 maxValue: Math.max(Math.max.apply(null, e), 1000),
                                 className: d.sparkChart,
                                 updateInterval: t,
-                                color: g,
+                                color: m,
                                 gradientStopColor: _,
                                 numUpdatesToShow: a,
                                 animate: f,

@@ -23,15 +23,15 @@ var r = n(951288),
     O = n(606318),
     v = n(402235),
     I = n(477734),
-    T = n(670188),
+    T = n(456077),
     S = n(485386),
     A = n(768581),
     C = n(463396),
     N = n(935910),
     R = n(392819),
     P = n(131085),
-    w = n(724913);
-function D(e, t, n) {
+    D = n(724913);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -110,7 +110,7 @@ var U = (function (e) {
 function G(e) {
     let { compact: t } = e;
     return (0, r.jsx)(h.Z, {
-        className: t ? w.botTagCompact : w.botTagCozy,
+        className: t ? D.botTagCompact : D.botTagCozy,
         type: h.Z.Types.REMIX,
         useRemSizes: !0,
     });
@@ -121,7 +121,7 @@ function B(e) {
             author: n,
             message: a,
             channel: h,
-            userOverride: D,
+            userOverride: w,
             compact: L = !1,
             withMentionPrefix: k = !1,
             showPopout: U = !1,
@@ -182,9 +182,9 @@ function B(e) {
         },
         eI = (0, u.EJ)(et + en),
         eT = {
-            className: o()(w.username, ed, {
+            className: o()(D.username, ed, {
                 [eO]: eE,
-                [w.usernameColorOnName]: "username" === es && null != er,
+                [D.usernameColorOnName]: "username" === es && null != er,
             }),
             style: ev(),
             onClick: V,
@@ -207,13 +207,13 @@ function B(e) {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
                           contextGuildId: $,
-                          className: w.clanTagChiplet,
+                          className: D.clanTagChiplet,
                           badgeSize: P.Gg.SIZE_12,
                       })
                     : null,
             [L, n.primaryGuild, $, a.author.id, B],
         ),
-        eA = null != D ? D : a.author,
+        eA = null != w ? w : a.author,
         eC =
             null != W && null != U
                 ? (0, r.jsx)(T.Z, {
@@ -250,7 +250,7 @@ function B(e) {
                                               n,
                                               eT,
                                           ),
-                                          { className: o()(eT.className, w.clickable, F) },
+                                          { className: o()(eT.className, D.clickable, F) },
                                       ),
                                   ),
                                   eS,
@@ -276,7 +276,7 @@ function B(e) {
                       color: er,
                       colors: eg ? ei : null,
                       name: ea,
-                      className: w.roleDot,
+                      className: D.roleDot,
                       hoverOverride: em,
                   })
                 : null,
@@ -287,7 +287,7 @@ function B(e) {
                     primaryGuild: n.primaryGuild,
                     userId: a.author.id,
                     contextGuildId: $,
-                    className: w.clanTagChiplet,
+                    className: D.clanTagChiplet,
                 }),
             null != eR ? eR : null,
             null == eN || Z || L ? null : eN,

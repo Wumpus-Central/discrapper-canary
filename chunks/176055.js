@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(749210),
     p = n(558381),
     f = n(666743),
-    m = n(770146),
-    h = n(600164),
-    g = n(565138),
+    h = n(770146),
+    g = n(600164),
+    m = n(565138),
     _ = n(41776),
     b = n(703656),
     E = n(769654),
     O = n(430824),
-    I = n(411198),
-    y = n(843445),
-    v = n(981631),
+    y = n(411198),
+    v = n(843445),
+    I = n(981631),
     C = n(388032),
     S = n(295265);
 function T(e, t, n) {
@@ -40,9 +40,9 @@ class N extends i.PureComponent {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
             ? null
-            : (0, r.jsxs)(h.Z, {
+            : (0, r.jsxs)(g.Z, {
                   className: S.memberInfo,
-                  align: h.Z.Align.CENTER,
+                  align: g.Z.Align.CENTER,
                   children: [
                       (0, r.jsx)("div", { className: S.dotOnline }),
                       (0, r.jsx)("span", {
@@ -68,7 +68,7 @@ class N extends i.PureComponent {
             pageSize: o,
         } = this.props;
         if (t && n) return null;
-        let d = (0, I.B3)(e),
+        let d = (0, y.B3)(e),
             p = C.intl.string(C.t.pxwdrA),
             f = this.handleJoinOrView,
             _ = c.zx.Looks.FILLED,
@@ -78,8 +78,8 @@ class N extends i.PureComponent {
                 ? n
                     ? ((_ = c.zx.Looks.OUTLINED),
                       (b = S.buttonColorInGuild),
-                      (p = (0, r.jsxs)(h.Z, {
-                          align: h.Z.Align.CENTER,
+                      (p = (0, r.jsxs)(g.Z, {
+                          align: g.Z.Align.CENTER,
                           children: [
                               (0, r.jsx)("div", { children: C.intl.string(C.t.cEnaWx) }),
                               (0, r.jsx)(u.dz2, {
@@ -92,19 +92,19 @@ class N extends i.PureComponent {
                     : i && t && (p = C.intl.string(C.t.XpeFYr))
                 : ((p = C.intl.string(C.t.dKhVQN)), (f = this.handleLogin)),
             (0, r.jsxs)("div", {
-                className: a()(s, o === y.b.SMALL ? S.inviteSmall : S.inviteLarge),
+                className: a()(s, o === v.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
-                    (0, r.jsx)(m.Z, { children: C.intl.string(C.t.s1KcLo) }),
+                    (0, r.jsx)(h.Z, { children: C.intl.string(C.t.s1KcLo) }),
                     (0, r.jsxs)("div", {
                         className: S.content,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: S.info,
                                 children: [
-                                    (0, r.jsx)(g.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         guild: d,
                                         active: !0,
-                                        size: g.Z.Sizes.LARGE,
+                                        size: m.Z.Sizes.LARGE,
                                         className: S.guildIcon,
                                     }),
                                     (0, r.jsxs)("div", {
@@ -145,14 +145,14 @@ class N extends i.PureComponent {
                     try {
                         await d.Z.joinGuild(e.id, {
                             lurker: !0,
-                            source: v.vtS.APPLICATION_STORE,
+                            source: I.vtS.APPLICATION_STORE,
                         }),
                             i();
                     } catch (e) {}
             }),
             T(this, "handleLogin", () => {
-                let e = { redirect_to: v.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, b.uL)(v.Z5c.LOGIN, {
+                let e = { redirect_to: I.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                (0, b.uL)(I.Z5c.LOGIN, {
                     search: (0, s.stringify)(e),
                     source: "verified_guild_invite",
                 });

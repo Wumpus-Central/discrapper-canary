@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(136015),
     R = n(426563),
     P = n(444295),
-    w = n(804570),
-    D = n(610394),
+    D = n(804570),
+    w = n(610394),
     x = n(388627),
     L = n(532658),
     M = n(501787),
@@ -185,13 +185,13 @@ let K = i.memo(function (e) {
     let N = () =>
             d || !p
                 ? null
-                : (0, r.jsx)(w.E, {
+                : (0, r.jsx)(D.E, {
                       emptyText: U.intl.string(U.t.hEh0l1),
                       icon: l.gj8,
                   }),
         R = y !== M.Og ? I.slice(0, y) : I,
-        D = y !== M.Og ? I.slice(y) : [],
-        x = v.get(D[0]),
+        w = y !== M.Og ? I.slice(y) : [],
+        x = v.get(w[0]),
         B = u === j.OYC.ALWAYS && y !== M.Og;
     return T
         ? (0, r.jsxs)("div", {
@@ -220,7 +220,7 @@ let K = i.memo(function (e) {
                             );
                   }),
                   B &&
-                      1 === D.length &&
+                      1 === w.length &&
                       null != x &&
                       (0, r.jsx)(
                           L.ZP,
@@ -237,12 +237,12 @@ let K = i.memo(function (e) {
                               displayUserMode: u,
                               locked: d,
                           },
-                          D[0],
+                          w[0],
                       ),
                   B &&
-                      D.length > 1 &&
+                      w.length > 1 &&
                       (0, r.jsx)(Y, {
-                          hiddenVoiceStates: D,
+                          hiddenVoiceStates: w,
                           voiceStateMap: v,
                           size: (0, L.px)(b),
                           locked: d,
@@ -327,13 +327,13 @@ function q(e) {
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
         c = (0, x.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
-        p = (0, s.cj)([E.Z, A.default, D.Z], () => {
+        p = (0, s.cj)([E.Z, A.default, w.Z], () => {
             let e = E.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: A.default.getDisplayUserMode(),
                 displayNameMode: A.default.getDisplayNameMode(),
                 avatarSizeMode: A.default.getAvatarSizeMode(),
-                streamApplication: (null == l ? void 0 : l.pid) === D.Z.getTargetPID() ? (0, _.Z)(c) : null,
+                streamApplication: (null == l ? void 0 : l.pid) === w.Z.getTargetPID() ? (0, _.Z)(c) : null,
                 stream: e,
             };
         });

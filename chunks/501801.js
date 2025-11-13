@@ -1,6 +1,6 @@
 n.d(t, {
-    mp: () => b,
-    tP: () => x,
+    mp: () => x,
+    tP: () => b,
     xO: () => D,
 }),
     n(539854),
@@ -58,7 +58,7 @@ function M(e, t) {
         e,
     );
 }
-class b extends l.PureComponent {
+class x extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
             i = null != l ? C["themeOverride".concat((0, O.De)(l))] : null,
@@ -104,7 +104,7 @@ class b extends l.PureComponent {
         return (0, r.jsx)("div", { className: a });
     }
 }
-function x(e) {
+function b(e) {
     let { log: t, guild: n, onContentClick: i, className: a } = e,
         u = l.useCallback(
             (e) => {
@@ -271,7 +271,7 @@ function x(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, r.jsx)(b, {
+                                                                                    (0, r.jsx)(x, {
                                                                                         actionType: S.vB8.CREATE,
                                                                                         targetType: t.targetType,
                                                                                         action: t.action,
@@ -322,7 +322,7 @@ function x(e) {
                                                                         children: (0, r.jsxs)("div", {
                                                                             className: C.onboardingChangeLogItemTitle,
                                                                             children: [
-                                                                                (0, r.jsx)(b, {
+                                                                                (0, r.jsx)(x, {
                                                                                     actionType: S.vB8.DELETE,
                                                                                     targetType: t.targetType,
                                                                                     action: t.action,
@@ -370,7 +370,7 @@ function x(e) {
                                                                                           className:
                                                                                               C.onboardingChangeLogItemTitle,
                                                                                           children: [
-                                                                                              (0, r.jsx)(b, {
+                                                                                              (0, r.jsx)(x, {
                                                                                                   actionType:
                                                                                                       S.vB8.UPDATE,
                                                                                                   targetType:
@@ -602,7 +602,7 @@ function x(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(b, {
+                                                                                        (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.CREATE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -628,7 +628,7 @@ function x(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(b, {
+                                                                                        (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.DELETE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -667,7 +667,7 @@ function x(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(b, {
+                                                                                        (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.CREATE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -693,7 +693,7 @@ function x(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(b, {
+                                                                                        (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.DELETE,
                                                                                             targetType: s,
                                                                                             action: a,

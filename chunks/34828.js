@@ -14,7 +14,7 @@ var r,
     d = n(358085),
     p = n(533583),
     f = n(65154);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,24 +27,24 @@ function m(e, t, n) {
         e
     );
 }
-let h = { ignoredDevices: {} },
-    g = h,
+let g = { ignoredDevices: {} },
+    m = g,
     _ = !1,
     b = {},
     E = {},
     O = {},
-    I = {
-        id: null,
-        justChanged: !1,
-    },
     y = {
         id: null,
         justChanged: !1,
     },
-    v = /\(([^)]+)\)/;
+    v = {
+        id: null,
+        justChanged: !1,
+    },
+    I = /\(([^)]+)\)/;
 function C(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(v);
+        let t = e.name.match(I);
         if (null != t) return t[1];
     }
     return e.name;
@@ -64,10 +64,10 @@ function S(e, t, n) {
 }
 class T extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (g = null != e ? e : h);
+        this.waitFor(u.Z, c.Z), (m = null != e ? e : g);
     }
     getUserAgnosticState() {
-        return g;
+        return m;
     }
     get initialized() {
         return _;
@@ -79,18 +79,18 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return b;
     }
     get lastInputSystemDevice() {
-        return I;
+        return y;
     }
     get outputDevices() {
         return E;
     }
     get lastOutputSystemDevice() {
-        return y;
+        return v;
     }
 }
-m(T, "displayName", "ConnectedDeviceStore"),
-    m(T, "persistKey", "ConnectedDeviceStore"),
-    m(T, "migrations", [
+h(T, "displayName", "ConnectedDeviceStore"),
+    h(T, "persistKey", "ConnectedDeviceStore"),
+    h(T, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -106,7 +106,7 @@ m(T, "displayName", "ConnectedDeviceStore"),
                                     }),
                                 )),
                                 r.forEach(function (t) {
-                                    m(e, t, n[t]);
+                                    h(e, t, n[t]);
                                 });
                         }
                         return e;
@@ -134,22 +134,22 @@ let N = new T(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             r = {};
-        (I.justChanged = !1),
+        (y.justChanged = !1),
             t.forEach((e) => {
                 if (((r[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== I.id && (I.justChanged = !0), (I.id = n);
+                    n !== y.id && (y.justChanged = !0), (y.id = n);
                 }
             });
         let i = {};
         if (
-            ((y.justChanged = !1),
+            ((v.justChanged = !1),
             n.forEach((e) => {
                 if (((i[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== y.id && (y.justChanged = !0), (y.id = n);
+                    n !== v.id && (v.justChanged = !0), (v.id = n);
                 }
             }),
             !_)
@@ -197,9 +197,9 @@ let N = new T(s.Z, {
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        (g.ignoredDevices[t] = !0), delete O[t];
+        (m.ignoredDevices[t] = !0), delete O[t];
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-        (O = {}), (g.neverShowModal = !0);
+        (O = {}), (m.neverShowModal = !0);
     },
 });

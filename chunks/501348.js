@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(990924),
     v = n(313201),
     I = n(266454),
-    S = n(786761),
-    T = n(3148),
+    T = n(786761),
+    S = n(3148),
     A = n(739566),
     C = n(753206),
     N = n(921801),
     R = n(984802),
     P = n(594174),
-    w = n(358085),
-    D = n(210887),
+    D = n(358085),
+    w = n(210887),
     x = n(740492),
     L = n(695346),
     M = n(313789),
@@ -103,11 +103,11 @@ let Q = "cozy",
     en = (e) => {
         let t = 0;
         return [
-            (0, S.e5)(
+            (0, T.e5)(
                 X(
                     z(
                         {},
-                        (0, T.ZP)({
+                        (0, S.ZP)({
                             channelId: et,
                             content: H.intl.string(H.t.oZxkEq),
                         }),
@@ -118,11 +118,11 @@ let Q = "cozy",
                     },
                 ),
             ),
-            (0, S.e5)(
+            (0, T.e5)(
                 X(
                     z(
                         {},
-                        (0, T.ZP)({
+                        (0, S.ZP)({
                             channelId: et,
                             content: (0, u.wj)(e) ? H.intl.string(H.t["WGb/v7"]) : H.intl.string(H.t["62m4mz"]),
                         }),
@@ -133,11 +133,11 @@ let Q = "cozy",
                     },
                 ),
             ),
-            (0, S.e5)(
+            (0, T.e5)(
                 X(
                     z(
                         {},
-                        (0, T.ZP)({
+                        (0, S.ZP)({
                             channelId: et,
                             content: H.intl.string(H.t.a0Byo5),
                         }),
@@ -148,11 +148,11 @@ let Q = "cozy",
                     },
                 ),
             ),
-            (0, S.e5)(
+            (0, T.e5)(
                 X(
                     z(
                         {},
-                        (0, T.ZP)({
+                        (0, S.ZP)({
                             channelId: et,
                             content: H.intl.string(H.t.bmwEWJ),
                         }),
@@ -163,11 +163,11 @@ let Q = "cozy",
                     },
                 ),
             ),
-            (0, S.e5)(
+            (0, T.e5)(
                 X(
                     z(
                         {},
-                        (0, T.ZP)({
+                        (0, S.ZP)({
                             channelId: et,
                             content: H.intl.string(H.t["hK9QW/"]),
                         }),
@@ -210,7 +210,7 @@ let Q = "cozy",
 class ea extends i.Component {
     renderZoomSlider() {
         return (
-            !w.isPlatformEmbedded,
+            !D.isPlatformEmbedded,
             (0, r.jsx)(d.iRW, {
                 label: H.intl.string(H.t.i19n5L),
                 description: H.intl.string(H.t.ip0uSf),
@@ -493,10 +493,10 @@ function es() {
             d && eo(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [d]);
     let f = (0, R.A6)(),
-        p = (0, s.cj)([D.Z, x.ZP, m.Z, P.default, b.Z], () => {
+        p = (0, s.cj)([w.Z, x.ZP, m.Z, P.default, b.Z], () => {
             var e, t;
             return {
-                theme: D.Z.theme,
+                theme: w.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
                 useSystemTheme: x.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,

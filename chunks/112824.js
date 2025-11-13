@@ -71,7 +71,7 @@ function j(e) {
                     n),
             });
         }),
-        v = (0, r.jsxs)(r.Fragment, {
+        _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: h.itemContent,
@@ -113,7 +113,7 @@ function j(e) {
                   text: f.intl.string(f.t["E5v/a/"]),
                   children: (0, r.jsx)("div", {
                       className: l()(h.simpleItemWrapper, h.disabled),
-                      children: v,
+                      children: _,
                   }),
               })
             : (0, r.jsx)(c.P3F, {
@@ -124,10 +124,10 @@ function j(e) {
                       });
                   },
                   className: l()(h.simpleItemWrapper, h.clickable),
-                  children: v,
+                  children: _,
               })
         : (0, r.jsx)("div", {
               className: h.simpleItemWrapper,
-              children: v,
+              children: _,
           });
 }

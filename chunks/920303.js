@@ -56,10 +56,10 @@ function P() {
         (C = []),
         (R = s.z.MATCH_SOME);
 }
-function w(e, t) {
+function D(e, t) {
     return t === l.z.LATEST_ACTIVITY ? m.ZP.lastMessageId(e.id) : e.id;
 }
-function D(e) {
+function w(e) {
     (e.channelId === S && e.sortOrder === A && (0, c.O)(e.tagFilter, r) && e.tagSetting === R) || P(),
         (S = e.channelId),
         (A = e.sortOrder),
@@ -96,7 +96,7 @@ function M() {
     if (null == S) return !1;
     let e = !I,
         t = h.Z.getChannel(C[C.length - 1]),
-        n = null == t ? null : w(t, A);
+        n = null == t ? null : D(t, A);
     C = o()(h.Z.getAllThreadsForParent(S))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
@@ -111,11 +111,11 @@ function M() {
             }
             if (e || null == n) return !0;
             {
-                let e = null == t ? null : w(t, A);
+                let e = null == t ? null : D(t, A);
                 return null != e && g.default.compare(e, n) >= 0;
             }
         })
-        .sort((e, t) => g.default.compare(w(e, A), w(t, A)))
+        .sort((e, t) => g.default.compare(D(e, A), D(t, A)))
         .map((e) => e.id)
         .reverse()
         .value();
@@ -167,7 +167,7 @@ let V = new F(d.Z, {
     THREAD_DELETE: G,
     THREAD_UPDATE: B,
     CHANNEL_DELETE: k,
-    LOAD_ARCHIVED_THREADS: D,
+    LOAD_ARCHIVED_THREADS: w,
     LOAD_ARCHIVED_THREADS_SUCCESS: x,
     LOAD_ARCHIVED_THREADS_FAIL: j,
     RESORT_THREADS: L,

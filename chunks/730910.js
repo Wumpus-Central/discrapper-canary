@@ -1,7 +1,7 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(358458),
+    l = n(509442),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(983135),
     x = n(8426),
     j = n(969632),
-    v = n(570961),
-    _ = n(208665),
+    _ = n(570961),
+    v = n(208665),
     O = n(359191),
     C = n(84658),
     y = n(142961),
@@ -96,14 +96,14 @@ function L(e) {
         }),
         B = (0, u.ZP)(),
         F = i.useRef(null),
-        [{ spring: H }, z] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
+        [{ spring: H }, W] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
     i.useEffect(() => {
         function e() {
-            z({
+            W({
                 spring: 1,
                 config: l.config.gentle,
             }),
-                z({
+                W({
                     spring: 0,
                     config: l.config.gentle,
                     delay: 1000,
@@ -115,10 +115,10 @@ function L(e) {
                 p.S.unsubscribe(P.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [z]);
-    let W = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+    }, [W]);
+    let z = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
         V = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, c.wj)(B) ? W : V,
+        K = (0, c.wj)(B) ? z : V,
         Y = H.to({
             range: [0, 1],
             output: [K, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
@@ -132,14 +132,14 @@ function L(e) {
     }
     let q = A === C.xh[C.xh.length - 1],
         X = async () => {
-            let e = _.Z.advancedMode;
+            let e = v.Z.advancedMode;
             if (k)
                 try {
                     if (A === C.PG.DEFAULT_CHANNELS)
                         await (0, h.DO)(t).then(() =>
-                            e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                            e ? (0, _.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (A === C.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (A === C.PG.CUSTOMIZATION_QUESTIONS) await (0, _.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (A === C.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
                         await (0, x.oo)(t.id, e);

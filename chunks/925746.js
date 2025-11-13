@@ -29,8 +29,8 @@ let i = (0, n._I)((t) => ({
                         .map((t) =>
                             t.module_metadata
                                 ? Object.keys(t.module_metadata)
-                                      .filter((t) => t.startsWith(c))
-                                      .map((t) => t.slice(c.length))
+                                      .filter((t) => t.startsWith(E))
+                                      .map((t) => t.slice(E.length))
                                 : [],
                         );
             })(e);
@@ -56,4 +56,4 @@ let i = (0, n._I)((t) => ({
             return e;
         },
     })),
-    c = "_sentryBundlerPluginAppKey:";
+    E = "_sentryBundlerPluginAppKey:";

@@ -1,9 +1,9 @@
 n.d(t, {
     GC: () => _,
-    _X: () => g,
+    _X: () => m,
     br: () => f,
-    em: () => h,
-    jU: () => m,
+    em: () => g,
+    jU: () => h,
 });
 var r = n(13245),
     i = n(371651),
@@ -18,7 +18,7 @@ let p = ["207646673902501888"];
 function f(e) {
     return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && l.Z.isReady(e);
 }
-function m(e) {
+function h(e) {
     return null == e
         ? {
               lock: d.VqG,
@@ -40,7 +40,7 @@ function m(e) {
                 context: d.IlC.APP,
             });
 }
-let h = async (e, t, n) => {
+let g = async (e, t, n) => {
         if (((0, c.YK)(e, t), (null == n || "" === n) && (0, c.s9)(t)))
             return (e.authorization.scopes = [u.cE, u.CN]), Promise.resolve();
         if (null == n || "" === n)
@@ -48,7 +48,7 @@ let h = async (e, t, n) => {
         let r = a.ZP.releaseChannel !== d.R5N.CANARY && !p.includes(n) && e.transport !== u.He.POST_MESSAGE;
         return await (0, c.vv)(n, r), (0, c.YS)(e, n, t);
     },
-    g = () =>
+    m = () =>
         (0, c.tr)((e) => {
             let t = [];
             return (

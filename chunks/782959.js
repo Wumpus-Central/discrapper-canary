@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(907862),
@@ -34,13 +34,13 @@ function f(e) {
     }
     return e;
 }
-function m(e) {
-    let { guildId: t, markAsDismissed: m, renderTargetElement: h } = e,
-        g = {
+function h(e) {
+    let { guildId: t, markAsDismissed: h, renderTargetElement: g } = e,
+        m = {
             text: p.intl.string(p.t.JzJpg4),
             onClick: () => {
                 o.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, s.hH)(t))),
-                    m(d.L.PRIMARY),
+                    h(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
                         return (n) => {
@@ -77,7 +77,7 @@ function m(e) {
         children: [
             (0, r.jsx)("div", {
                 ref: _,
-                children: h(),
+                children: g(),
             }),
             (0, r.jsx)(l.Mb, {
                 title: p.intl.string(p.t.fW7UqM),
@@ -87,13 +87,13 @@ function m(e) {
                     align: "center",
                 },
                 assetUrl: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
-                action: g,
+                action: m,
                 textLink: {
                     link: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL),
                     text: p.intl.string(p.t.w4DutA),
                 },
                 targetElementRef: _,
-                onRequestClose: () => m(d.L.DISMISS),
+                onRequestClose: () => h(d.L.DISMISS),
             }),
         ],
     });

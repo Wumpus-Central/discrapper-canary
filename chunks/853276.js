@@ -96,15 +96,15 @@ function f(e) {
             error: x,
             forceShowErrorTooltip: j,
         } = e,
-        v = i.useRef(null),
         _ = i.useRef(null),
-        [C, O] = i.useState(!1),
-        { ref: y, width: E = 0 } = (0, d.ZP)(C),
-        { ref: N, width: I = 0 } = (0, d.ZP)(C),
+        v = i.useRef(null),
+        [O, C] = i.useState(!1),
+        { ref: y, width: N = 0 } = (0, d.ZP)(O),
+        { ref: E, width: I = 0 } = (0, d.ZP)(O),
         S = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
-        Z = E > I ? E : I;
+        Z = N > I ? N : I;
     i.useEffect(() => {
         j
             ? (P(!0),
@@ -128,15 +128,15 @@ function f(e) {
         D = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && f(), null != v.current && null != y.current && null != _.current)) {
+                if ((t.trim().length <= 0 && f(), null != _.current && null != y.current && null != v.current)) {
                     var n;
-                    v.current.scrollTo(0, 0),
-                        v.current.setSelectionRange(0, 0),
-                        (v.current.scrollLeft = 0),
+                    _.current.scrollTo(0, 0),
+                        _.current.setSelectionRange(0, 0),
+                        (_.current.scrollLeft = 0),
                         (y.current.scrollLeft = 0),
-                        (null == (n = _.current) ? void 0 : n.ref) != null && (_.current.ref.scrollLeft = 0);
+                        (null == (n = v.current) ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
                 }
-                O(!1), l(e);
+                C(!1), l(e);
             },
             [t, y, l, f],
         ),
@@ -152,7 +152,7 @@ function f(e) {
         L = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                o(t), t ? e.preventDefault() : O(!0), e.stopPropagation();
+                o(t), t ? e.preventDefault() : C(!0), e.stopPropagation();
             },
             [o],
         ),
@@ -165,13 +165,13 @@ function f(e) {
     return (0, r.jsx)("div", {
         className: m.chipletFlexContainer,
         children: (0, r.jsxs)("div", {
-            ref: N,
+            ref: E,
             className: a()(m.chipletContainer, {
-                [m.isEditing]: C,
-                [m.smallBlink]: !C && !S,
+                [m.isEditing]: O,
+                [m.smallBlink]: !O && !S,
                 [m.isSelected]: h,
                 [m.isSelecting]: b,
-                [m.isError]: null != x && !C,
+                [m.isError]: null != x && !O,
             }),
             children: [
                 (0, r.jsxs)(c.P3F, {
@@ -183,16 +183,16 @@ function f(e) {
                     onMouseLeave: () => P(!1),
                     className: a()(m.chipletContainerInner, {
                         [m.isSelecting]: b,
-                        [m.isEditing]: C,
+                        [m.isEditing]: O,
                     }),
-                    ref: _,
+                    ref: v,
                     children: [
                         (0, r.jsx)("input", {
                             className: a()(m.chipletInput, {
-                                [m.isEditing]: C,
+                                [m.isEditing]: O,
                                 [m.isSelecting]: b,
                             }),
-                            ref: v,
+                            ref: _,
                             onChange: R,
                             onKeyDownCapture: A,
                             value: t,
@@ -201,14 +201,14 @@ function f(e) {
                         (0, r.jsx)(p, {
                             ref: y,
                             value: t,
-                            isEditing: C,
+                            isEditing: O,
                             isSelected: h,
                             error: x,
-                            forceShowErrorTooltip: T || C,
+                            forceShowErrorTooltip: T || O,
                         }),
                     ],
                 }),
-                !C &&
+                !O &&
                     (0, r.jsx)(c.P3F, {
                         className: m.closeIconContainer,
                         onClick: k,

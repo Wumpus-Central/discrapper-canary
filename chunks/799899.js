@@ -138,13 +138,13 @@ void 0 === b && (b = E),
                       })
                     : null,
                 P = !!(m ? m(R, n) : R),
-                w = P ? y(p, u) : p,
-                D = P ? (0, s.Z)({}, T, {}, _) : T,
+                D = P ? y(p, u) : p,
+                w = P ? (0, s.Z)({}, T, {}, _) : T,
                 x = (0, s.Z)(
                     {
                         "aria-current": (P && i) || null,
-                        className: w,
-                        style: D,
+                        className: D,
+                        style: w,
                         to: o,
                     },
                     C,

@@ -35,8 +35,8 @@ var c = n(442837),
     N = n(168524),
     R = n(102172),
     P = n(871118),
-    w = n(565138),
-    D = n(66999),
+    D = n(565138),
+    w = n(66999),
     x = n(359110),
     L = n(12168),
     M = n(237583),
@@ -189,8 +189,8 @@ function ey(e) {
             entry: o,
             onVoiceChannelPreview: m,
         }),
-        { embeddedActivity: w } = (0, $.Z)(o),
-        D = eA(w),
+        { embeddedActivity: D } = (0, $.Z)(o),
+        w = eA(D),
         x = null != P && 0 === s.length ? [P] : s,
         L = x.length > 0,
         M = x.length >= 2,
@@ -270,7 +270,7 @@ function ey(e) {
                 }),
                 null == r || r(i, n);
         },
-        z = null != f ? f : null != R ? R : null != D ? D : void 0,
+        z = null != f ? f : null != R ? R : null != w ? w : void 0,
         q = () => {
             E((e) => !e), j && (null == b || b.focus());
         },
@@ -667,8 +667,8 @@ function eS(e) {
             { onOpened: () => (null == _ ? void 0 : _(eo.xP.OPENED_GAME_PROFILE)) },
         ),
         T = O ? I : void 0,
-        { activity: S, activityApplication: w, fallbackApplication: D } = (0, $.Z)(y),
-        { largeImage: x, smallImage: L } = (0, z.YC)(S, null != w ? w : D),
+        { activity: S, activityApplication: D, fallbackApplication: w } = (0, $.Z)(y),
+        { largeImage: x, smallImage: L } = (0, z.YC)(S, null != D ? D : w),
         { largeImage: M } = (0, z.rv)({ entry: y });
     return (0, r.jsxs)("div", {
         className: eu.popoutContentWrapper,
@@ -770,9 +770,9 @@ function eA(e) {
                               onClick: () => (0, x.Kh)(n.id),
                               className: eu.voiceChannelPopoutReactorChannel,
                               children: [
-                                  (0, r.jsx)(w.Z, {
+                                  (0, r.jsx)(D.Z, {
                                       guild: t,
-                                      size: w.Z.Sizes.SMOL,
+                                      size: D.Z.Sizes.SMOL,
                                       className: eu.voiceChannelGuildIcon,
                                       active: !0,
                                   }),
@@ -823,7 +823,7 @@ function eA(e) {
 function eC(e) {
     let { channel: t, entry: n, onVoiceChannelPreview: a } = e,
         { streamPreviewUrl: o, channel: s } = (0, et.Z)(n),
-        { needSubscriptionToAccess: l } = (0, D.Z)(null == t ? void 0 : t.id),
+        { needSubscriptionToAccess: l } = (0, w.Z)(null == t ? void 0 : t.id),
         u = (0, c.e7)([U.Z], () => (null != s ? U.Z.getGuild(s.guild_id) : void 0)),
         f = (0, c.Wu)([H.ZP], () => (null != s ? H.ZP.getVoiceStatesForChannel(s) : []), [s]),
         h = (0, c.e7)([V.Z], () => V.Z.isInChannel(null == s ? void 0 : s.id)),
@@ -894,9 +894,9 @@ function eC(e) {
                                 onClick: b,
                                 className: eu.voiceChannelPopoutReactorChannel,
                                 children: [
-                                    (0, r.jsx)(w.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         guild: u,
-                                        size: w.Z.Sizes.SMOL,
+                                        size: D.Z.Sizes.SMOL,
                                         className: eu.voiceChannelGuildIcon,
                                         active: !0,
                                     }),

@@ -102,7 +102,7 @@ let x = i.forwardRef(function (e, t) {
                 setYear: u,
             };
         })(n),
-        A = i.useMemo(
+        T = i.useMemo(
             () =>
                 null != I && null != S && null != O
                     ? o()("".concat(I, "/").concat(S, "/").concat(O), "DD/MM/YYYY")
@@ -110,10 +110,10 @@ let x = i.forwardRef(function (e, t) {
             [I, S, O],
         );
     i.useEffect(() => {
-        a((null == A ? void 0 : A.isValid()) ? A : null);
-    }, [A, a]);
-    let T = p;
-    null == A || A.isValid() || (T = u.intl.string(u.t.udnqh6));
+        a((null == T ? void 0 : T.isValid()) ? T : null);
+    }, [T, a]);
+    let A = p;
+    null == T || T.isValid() || (A = u.intl.string(u.t.udnqh6));
     let Z = (function () {
             let e = new Date().getFullYear(),
                 t = i.useRef(
@@ -228,7 +228,7 @@ let x = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(c.gNt, {
             label: u.intl.string(u.t.xNpFJ6),
             required: E,
-            errorMessage: null != T ? T : void 0,
+            errorMessage: null != A ? A : void 0,
             children: (0, r.jsx)("div", {
                 className: d.inputs,
                 children: k.map((e, t) => {

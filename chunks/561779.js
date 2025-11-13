@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(358458),
+    u = n(509442),
     d = n(374470),
     f = n(793030),
     _ = n(506802),
@@ -156,8 +156,8 @@ class I extends (r = a.PureComponent) {
                 defaultValue: N,
                 orientation: R,
                 onValueRender: P,
-                renderMarker: w,
-                getAriaValueText: D,
+                renderMarker: D,
+                getAriaValueText: w,
                 barClassName: x,
                 grabberClassName: L,
                 grabberStyles: M = {},
@@ -187,8 +187,8 @@ class I extends (r = a.PureComponent) {
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
-                                      null != w
-                                          ? w(n)
+                                      null != D
+                                          ? D(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("div", {
@@ -206,7 +206,7 @@ class I extends (r = a.PureComponent) {
                       })
                     : null,
             Y = null != P ? P(t) : "".concat(F.toFixed(0), "%"),
-            W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
+            W = null != (e = null == w ? void 0 : w(t)) ? e : void 0;
         return (0, i.jsx)(
             f.gNt,
             b(g({}, Z), {

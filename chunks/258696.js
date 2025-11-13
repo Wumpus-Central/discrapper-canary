@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(594174),
     v = n(74538),
     I = n(713913),
-    S = n(541716),
-    T = n(94161),
+    T = n(541716),
+    S = n(94161),
     A = n(9277),
     C = n(655678),
     N = n(897291),
     R = n(466711),
     P = n(319417),
-    w = n(728386),
-    D = n(763679),
+    D = n(728386),
+    w = n(763679),
     x = n(957825),
     L = n(564355);
 function M(e) {
@@ -123,7 +123,7 @@ function j(e) {
                 X.push({
                     key: "sticker",
                     node: (0, r.jsx)(
-                        w.Z,
+                        D.Z,
                         {
                             disabled: R,
                             type: N,
@@ -134,7 +134,7 @@ function j(e) {
             X.push({
                 key: "upload",
                 node: (0, r.jsx)(
-                    D.z,
+                    w.z,
                     {
                         disabled: R,
                         inputType: N,
@@ -143,7 +143,7 @@ function j(e) {
                     "upload",
                 ),
             }),
-            N !== S.Ie.NORMAL ||
+            N !== T.Ie.NORMAL ||
                 et ||
                 X.push({
                     key: "spacer",
@@ -156,7 +156,7 @@ function j(e) {
         X.push({
             key: "emoji",
             node: (0, r.jsx)(
-                T.Z,
+                S.Z,
                 {
                     disabled: R,
                     type: N,

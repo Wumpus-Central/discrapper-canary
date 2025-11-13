@@ -1,10 +1,10 @@
 let r;
-a.d(e, { C: () => c });
+a.d(e, { C: () => E });
 var _ = a(370336),
     n = a(263449),
     o = a(151122);
 let i = new WeakMap(),
-    c = (0, o._I)(() => ({
+    E = (0, o._I)(() => ({
         name: "FunctionToString",
         setupOnce() {
             r = Function.prototype.toString;

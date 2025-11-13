@@ -37,20 +37,20 @@ function I(e) {
             () => (null != a && null != a.target_user ? p.Z.getActiveStreamForUser(a.target_user.id, N) : null),
             [a, N],
         ),
-        w = (0, l.e7)(
+        D = (0, l.e7)(
             [p.Z],
             () => (null != a && null != a.target_user ? p.Z.getStreamForUser(a.target_user.id, N) : null),
             [a, N],
         ),
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.INVITE_EMBED),
+        { analyticsLocations: w } = (0, d.ZP)(u.Z.INVITE_EMBED),
         x = null != a && a.target_type === y.Iq.STREAM && null != a.target_user && null != P,
         L =
             null != a &&
-            null != w &&
+            null != D &&
             null != a.channel &&
             null != a.guild &&
-            w.channelId === a.channel.id &&
-            w.guildId === a.guild.id;
+            D.channelId === a.channel.id &&
+            D.guildId === a.guild.id;
     o()(null != a, "Invite cannot be null");
     let { target_type: M, target_user: j } = a;
     o()(M === y.Iq.STREAM && null != j, "invalid streaming invite");
@@ -66,9 +66,9 @@ function I(e) {
                         inviter_id: S.author.id,
                         invite_message_id: S.id,
                     },
-                    D,
+                    w,
                 );
-        }, [a, S, D, x, A, C]),
+        }, [a, S, w, x, A, C]),
         B = null != T;
     if (null == T) {
         if (null == a.guild) return (0, r.jsx)(E.Z, {});

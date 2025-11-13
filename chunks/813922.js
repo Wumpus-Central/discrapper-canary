@@ -55,19 +55,19 @@ function h(e, t) {
     );
 }
 function b(e) {
-    var t, n, b, x, j, v;
-    let { rule: _, onChangeRule: C } = e,
-        O = i.useCallback(
+    var t, n, b, x, j, _;
+    let { rule: v, onChangeRule: O } = e,
+        C = i.useCallback(
             (e) => {
-                C(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { keywordFilter: e }) }));
+                O(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { keywordFilter: e }) }));
             },
-            [C, _],
+            [O, v],
         ),
         y = i.useCallback(
             (e) => {
-                C(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { allowList: e }) }));
+                O(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { allowList: e }) }));
             },
-            [C, _],
+            [O, v],
         );
     return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
@@ -77,24 +77,24 @@ function b(e) {
                 header: m.intl.string(m.t["ue+tnb"]),
                 children: [
                     (0, r.jsx)(o.Z, {
-                        onChangeText: O,
+                        onChangeText: C,
                         maxWordCount: g.RH,
-                        initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter,
+                        initialValue: null == (t = v.triggerMetadata) ? void 0 : t.keywordFilter,
                     }),
                     (0, r.jsx)(s.Z, {
-                        rule: _,
-                        onChangeRule: C,
+                        rule: v,
+                        onChangeRule: O,
                         collapsed:
-                            (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
-                            (null == _ || null == (b = _.triggerMetadata) ? void 0 : b.regexPatterns.length) === 0,
+                            (null == v || null == (n = v.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
+                            (null == v || null == (b = v.triggerMetadata) ? void 0 : b.regexPatterns.length) === 0,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: y,
-                        initialValue: null == (x = _.triggerMetadata) ? void 0 : x.allowList,
+                        initialValue: null == (x = v.triggerMetadata) ? void 0 : x.allowList,
                         maxWordCount: g.n4,
                         collapsed:
-                            (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null ||
-                            (null == (v = _.triggerMetadata) ? void 0 : v.allowList.length) === 0,
+                            (null == (j = v.triggerMetadata) ? void 0 : j.allowList) == null ||
+                            (null == (_ = v.triggerMetadata) ? void 0 : _.allowList.length) === 0,
                     }),
                 ],
             }),
@@ -103,8 +103,8 @@ function b(e) {
                 step: 2,
                 header: m.intl.string(m.t["18TOiQ"]),
                 children: (0, r.jsx)(a.Z, {
-                    rule: _,
-                    onChangeRule: C,
+                    rule: v,
+                    onChangeRule: O,
                 }),
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
@@ -112,8 +112,8 @@ function b(e) {
                 step: 3,
                 header: m.intl.string(m.t.u5xPPW),
                 children: (0, r.jsx)(c.Z, {
-                    rule: _,
-                    onChangeRule: C,
+                    rule: v,
+                    onChangeRule: O,
                     onlyRoles: !0,
                 }),
             }),

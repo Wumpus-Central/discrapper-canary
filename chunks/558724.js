@@ -96,12 +96,12 @@ var P = (function (e) {
         e
     );
 })(P || {});
-let w = new Set(Object.values(P));
-function D() {
+let D = new Set(Object.values(P));
+function w() {
     return null == v.lastFetched || Date.now() - v.lastFetched >= N;
 }
 function x() {
-    !C && (D() || null != v.surveyOverride) && ((C = !0), (0, u.wk)(v.surveyOverride, !0));
+    !C && (w() || null != v.surveyOverride) && ((C = !0), (0, u.wk)(v.surveyOverride, !0));
 }
 function L(e) {
     return j(e) && M(e);
@@ -109,7 +109,7 @@ function L(e) {
 function M(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
-    for (let e of t) if (!w.has(e)) return !1;
+    for (let e of t) if (!D.has(e)) return !1;
     let i = t.includes("guild_size_all"),
         a = !0;
     for (let s of f.Z.getGuildsArray()) {
@@ -210,7 +210,7 @@ class z extends (r = s.ZP.PersistedStore) {
         return v;
     }
     getCurrentSurvey() {
-        return D() ? null : A;
+        return w() ? null : A;
     }
     getSurveyOverride() {
         return v.surveyOverride;

@@ -27,20 +27,20 @@ function m(e) {
             hideEmoji: v = !1,
             hideTooltip: I = !1,
         } = e,
-        S = (0, d.E)("ActivityStatus", g),
-        { defaultStatusVariant: T } = (0, l.bN)({
+        T = (0, d.E)("ActivityStatus", g),
+        { defaultStatusVariant: S } = (0, l.bN)({
             guildId: null == g ? void 0 : g.guild_id,
             location: "CustomStatusActivityStatus",
         });
     if (null == t && null == E) return null;
-    let A = null != E && S,
-        C = A && null != b ? (0, c.O8)(b, E, T) : null,
+    let A = null != E && T,
+        C = A && null != b ? (0, c.O8)(b, E, S) : null,
         N = null == t ? void 0 : t.emoji,
         R = null != C ? C : null == t ? void 0 : t.state,
         P = null != R && "" !== R,
-        w = null;
+        D = null;
     A && null != b
-        ? (w = (0, r.jsx)(u.Z, {
+        ? (D = (0, r.jsx)(u.Z, {
               userId: b,
               size: h,
               className: a()(i, p.hangStatusIcon),
@@ -48,23 +48,23 @@ function m(e) {
           }))
         : null == N ||
           v ||
-          (w = (0, r.jsx)(f.Z, {
+          (D = (0, r.jsx)(f.Z, {
               emoji: N,
               animate: O,
               className: i,
               hideTooltip: I || P,
           }));
-    let D = P && (null != w ? " ".concat(R) : R),
+    let w = P && (null != D ? " ".concat(R) : R),
         x = () => {
             let e = null != N && !v && !P;
             return I || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [w, D],
+                      children: [D, w],
                   })
                 : (0, r.jsxs)(o.Z, {
                       delay: _.X,
                       tooltipClassName: m,
-                      children: [w, D],
+                      children: [D, w],
                   });
         };
     return (0, r.jsx)(s.Text, {

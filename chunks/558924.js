@@ -1,134 +1,134 @@
-n.d(t, {
-    O: () => N,
-    Z: () => E,
+t.d(n, {
+    O: () => j,
+    Z: () => A,
 }),
-    n(388685),
-    n(539854);
-var l = n(951288);
-n(647438);
-var i = n(120356),
-    r = n.n(i),
-    a = n(990547),
-    o = n(831209),
-    s = n(442837),
-    u = n(704215),
-    d = n(481060),
-    c = n(26151),
-    g = n(906732),
-    f = n(213609),
-    b = n(358221),
-    Z = n(985588),
-    m = n(933557),
-    v = n(243778),
-    p = n(359110),
-    O = n(163612),
-    h = n(592125),
-    j = n(944486),
-    x = n(354459),
-    _ = n(921944),
-    y = n(388032),
-    I = n(604570);
-function N(e, t) {
-    let n = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
-        l = (0, s.e7)([h.Z], () => {
-            var e, t;
-            return null != (t = null == (e = h.Z.getChannel(n)) ? void 0 : e.getGuildId()) ? t : void 0;
+    t(388685),
+    t(539854);
+var i = t(951288);
+t(647438);
+var l = t(120356),
+    r = t.n(l),
+    a = t(990547),
+    o = t(831209),
+    u = t(442837),
+    s = t(704215),
+    d = t(481060),
+    c = t(26151),
+    f = t(906732),
+    g = t(213609),
+    h = t(358221),
+    v = t(985588),
+    _ = t(933557),
+    b = t(243778),
+    p = t(359110),
+    O = t(163612),
+    Z = t(592125),
+    m = t(944486),
+    E = t(354459),
+    N = t(921944),
+    C = t(388032),
+    y = t(604570);
+function j(e, n) {
+    let t = (0, u.e7)([m.Z], () => m.Z.getVoiceChannelId()),
+        i = (0, u.e7)([Z.Z], () => {
+            var e, n;
+            return null != (n = null == (e = Z.Z.getChannel(t)) ? void 0 : e.getGuildId()) ? n : void 0;
         }),
-        { enabled: i } = O.Z.useExperiment({
-            guildId: l,
-            location: t,
+        { enabled: l } = O.Z.useExperiment({
+            guildId: i,
+            location: n,
         });
-    return i ? n : e;
+    return l ? t : e;
 }
-function E(e, t) {
-    let [n, i] = (0, s.Wu)(
-            [b.Z],
-            () => [null != t ? b.Z.getParticipants(t) : null, null != t ? b.Z.getParticipant(t, e.id) : null],
-            [t, e.id],
+function A(e, n) {
+    let [t, l] = (0, u.Wu)(
+            [h.Z],
+            () => [null != n ? h.Z.getParticipants(n) : null, null != n ? h.Z.getParticipant(n, e.id) : null],
+            [n, e.id],
         ),
-        o = (0, s.e7)([h.Z], () => h.Z.getChannel(t)),
-        m = (0, Z.s)(e, "context_menu", t),
-        { enabled: j } = O.Z.useExperiment({
+        o = (0, u.e7)([Z.Z], () => Z.Z.getChannel(n)),
+        _ = (0, v.s)(e, "context_menu", n),
+        { enabled: m } = O.Z.useExperiment({
             guildId: null == o ? void 0 : o.guild_id,
             location: "useRingHangupItem",
         }),
-        N = !m || (null == n ? void 0 : n.length) === 0 || null == t,
-        E = j && (null == o ? void 0 : o.guild_id) != null,
-        S = null == i,
-        A = null != i && i.type === x.fO.USER && i.ringing,
-        U = [];
-    E && !N && (S || A) && U.push(u.z.RING_USER_TO_VC_NEW_BADGE);
-    let [D, L] = (0, v.US)(U),
-        T = D === u.z.RING_USER_TO_VC_NEW_BADGE,
-        { analyticsLocations: w } = (0, g.ZP)();
-    return ((0, f.Z)(
+        j = !_ || (null == t ? void 0 : t.length) === 0 || null == n,
+        A = m && (null == o ? void 0 : o.guild_id) != null,
+        P = null == l,
+        U = null != l && l.type === E.fO.USER && l.ringing,
+        T = [];
+    A && !j && (P || U) && T.push(s.z.RING_USER_TO_VC_NEW_BADGE);
+    let [R, S] = (0, b.US)(T),
+        D = R === s.z.RING_USER_TO_VC_NEW_BADGE,
+        { analyticsLocations: M } = (0, f.ZP)();
+    return ((0, g.Z)(
         {
             type: a.ImpressionTypes.MENU,
             name: a.ImpressionNames.RING_TO_GUILD_VC_MENU_ITEM_SHOWN,
             properties: {
-                voice_channel_id: t,
+                voice_channel_id: n,
                 voice_guild_id: null == o ? void 0 : o.guild_id,
-                location_stack: w,
+                location_stack: M,
             },
         },
-        { disableTrack: N || !E },
+        { disableTrack: j || !A },
         [e.id],
     ),
-    N)
+    j)
         ? null
-        : S
-          ? (0, l.jsx)(d.sNh, {
+        : P
+          ? (0, i.jsx)(d.sNh, {
                 id: "ring",
-                label: E
-                    ? (0, l.jsxs)("div", {
-                          className: I.label,
-                          children: [y.intl.string(y.t["3Hv9qQ"]), T && (0, l.jsx)(C, {})],
+                label: A
+                    ? (0, i.jsxs)("div", {
+                          className: y.label,
+                          children: [C.intl.string(C.t["3Hv9qQ"]), D && (0, i.jsx)(x, {})],
                       })
-                    : y.intl.string(y.t.bHa9kN),
-                subtext: E ? (0, l.jsx)(P, { channel: o }) : null,
+                    : C.intl.string(C.t.bHa9kN),
+                subtext: A ? (0, i.jsx)(I, { channel: o }) : null,
                 action: () => {
-                    T && L(_.L.TAKE_ACTION), c.Z.ring(t, [e.id], "user_context_menu"), E && null != t && (0, p.Kh)(t);
+                    D && S(N.L.TAKE_ACTION), c.Z.ring(n, [e.id], "user_context_menu"), A && null != n && (0, p.Kh)(n);
                 },
-                className: I.menuItem,
+                className: y.menuItem,
             })
-          : A
-            ? (0, l.jsx)(d.sNh, {
+          : U
+            ? (0, i.jsx)(d.sNh, {
                   id: "stop-ringing",
-                  label: (0, l.jsxs)("div", {
-                      className: I.label,
-                      children: [y.intl.string(y.t.ygslb0), T && (0, l.jsx)(C, {})],
+                  label: (0, i.jsxs)("div", {
+                      className: y.label,
+                      children: [C.intl.string(C.t.ygslb0), D && (0, i.jsx)(x, {})],
                   }),
-                  subtext: E
-                      ? (0, l.jsx)(d.Text, {
+                  subtext: A
+                      ? (0, i.jsx)(d.Text, {
                             variant: "text-xs/medium",
-                            className: r()(I.subtext, I.ringing),
-                            children: y.intl.format(y.t.dwfzZi, { channelName: (0, l.jsx)(P, { channel: o }) }),
+                            className: r()(y.subtext, y.ringing),
+                            children: C.intl.format(C.t.dwfzZi, { channelName: (0, i.jsx)(I, { channel: o }) }),
                         })
                       : null,
                   action: () => {
-                      T && L(_.L.TAKE_ACTION), c.Z.stopRinging(t, [e.id]);
+                      D && S(N.L.TAKE_ACTION), c.Z.stopRinging(n, [e.id]);
                   },
-                  className: I.menuItem,
+                  className: y.menuItem,
               })
             : null;
 }
-let P = (e) => {
-        let { channel: t } = e,
-            n = (0, m.ZP)(t);
-        return (0, l.jsxs)("div", {
-            className: I.subtext,
+let I = (e) => {
+        let { channel: n } = e,
+            t = (0, _.ZP)(n);
+        return (0, i.jsxs)("div", {
+            className: y.subtext,
             children: [
-                (0, l.jsx)(d.gj8, { size: "xs" }),
-                (0, l.jsx)(d.Text, {
+                (0, i.jsx)(d.gj8, { size: "xs" }),
+                (0, i.jsx)(d.Text, {
                     variant: "text-xs/medium",
-                    className: I.channelName,
-                    children: n,
+                    className: y.channelName,
+                    children: t,
                 }),
             ],
         });
     },
-    C = () =>
-        (0, l.jsx)(d.IGR, {
+    x = () =>
+        (0, i.jsx)(d.IGR, {
             color: o.Z.BG_BRAND,
-            text: y.intl.string(y.t.y2b7CA),
+            text: C.intl.string(C.t.y2b7CA),
         });

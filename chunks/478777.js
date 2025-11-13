@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => j,
-    u: () => v,
+    u: () => _,
 });
 var r = n(951288),
     i = n(647438),
@@ -46,13 +46,13 @@ function j(e) {
     let { saveOnClose: t } = e,
         a = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         j = (0, l.e7)([g.Z], () => g.Z.getEditedConnections()),
-        v = (0, l.e7)([g.Z], () => g.Z.isSubmitting()),
-        _ = i.useRef(a);
+        _ = (0, l.e7)([g.Z], () => g.Z.isSubmitting()),
+        v = i.useRef(a);
     i.useEffect(() => {
-        _.current = a;
+        v.current = a;
     }, [a]),
         i.useEffect(() => {
-            let { current: e } = _;
+            let { current: e } = v;
             return () => {
                 t && null != e && (0, u.ss)(e);
             };
@@ -162,7 +162,7 @@ function j(e) {
                 (0, r.jsxs)("button", {
                     className: b.addConnectionButton,
                     onClick: O,
-                    disabled: !T || v,
+                    disabled: !T || _,
                     type: "button",
                     children: [
                         (0, r.jsx)(s.oFk, {
@@ -188,7 +188,7 @@ function j(e) {
         }),
     });
 }
-function v() {
+function _() {
     let e = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         t = (0, l.e7)([g.Z], () => g.Z.isSubmitting()),
         n = (0, l.e7)([g.Z], () => g.Z.getErrors());

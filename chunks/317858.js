@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(647438),
     i = n(166516),
     l = n.n(i),
@@ -10,25 +10,25 @@ var r = n(647438),
     d = n(888369),
     p = n(292959),
     f = n(699516),
-    m = n(340895),
-    h = n(358085),
-    g = n(998502),
+    h = n(340895),
+    g = n(358085),
+    m = n(998502),
     _ = n(252618),
     b = n(981631),
     E = n(388032);
 let O = new Set(["Blink", "Gecko", "WebKit"]),
-    I = b.dG4;
-if (h.isPlatformEmbedded) I = (e) => g.ZP.setBadge(e);
+    y = b.dG4;
+if (g.isPlatformEmbedded) y = (e) => m.ZP.setBadge(e);
 else if (O.has(s().layout)) {
     let e = new (l())({ animation: "none" });
-    I = (t) => {
+    y = (t) => {
         try {
             (0, _.PR)(t), e.badge(-1 === t ? "\u2022" : t);
         } catch (e) {}
     };
 }
-function y() {
-    let e = (0, o.e7)([m.Z], () => m.Z.hasIncomingCalls()),
+function v() {
+    let e = (0, o.e7)([h.Z], () => h.Z.hasIncomingCalls()),
         t = (0, o.e7)([d.default, f.Z, p.Z, c.Z], () => {
             let e = d.default.getTotalMentionCount(),
                 t = (0, u.m$)([f.Z, c.Z]),
@@ -39,7 +39,7 @@ function y() {
         });
     r.useEffect(() => {
         if (!e) return;
-        let t = g.ZP.bounceDock("critical"),
+        let t = m.ZP.bounceDock("critical"),
             n = (0, _.EM)({
                 messages: [E.intl.string(E.t["fk1/bX"])],
                 count: 50,
@@ -49,7 +49,7 @@ function y() {
         };
     }, [e]),
         r.useEffect(() => {
-            I(t);
+            y(t);
         }, [t]),
-        r.useEffect(() => () => I(0), []);
+        r.useEffect(() => () => y(0), []);
 }

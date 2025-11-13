@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529);
+n.d(t, { Z: () => O }), n(388685), n(472816), n(794429), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -16,20 +16,20 @@ var r = n(951288),
     b = n(572456),
     x = n(273504),
     j = n(981631),
-    v = n(388032),
-    _ = n(894780);
-function C(e) {
+    _ = n(388032),
+    v = n(894780);
+function O(e) {
     var t, n;
-    let { guildId: C, setPreventNavigation: O = () => {} } = e,
-        { editingRule: y, setEditingRule: E } = (0, p.V)(),
-        { guild: N, subsection: I } = (0, l.cj)([s.Z], () => s.Z.getProps()),
-        S = null != (n = null != (t = null == N ? void 0 : N.id) ? t : C) ? n : j.lds,
+    let { guildId: O, setPreventNavigation: C = () => {} } = e,
+        { editingRule: y, setEditingRule: N } = (0, p.V)(),
+        { guild: E, subsection: I } = (0, l.cj)([s.Z], () => s.Z.getProps()),
+        S = null != (n = null != (t = null == E ? void 0 : E.id) ? t : O) ? n : j.lds,
         T = null != y,
         [P] = (0, u.RD)(S),
         { rulesByTriggerType: w } = (0, u.pH)(S),
         Z = {
-            [g.vh.MEMBERS]: v.intl.string(v.t.sx4E5v),
-            [g.vh.CONTENT]: v.intl.string(v.t.fphZb0),
+            [g.vh.MEMBERS]: _.intl.string(_.t.sx4E5v),
+            [g.vh.CONTENT]: _.intl.string(_.t.fphZb0),
         },
         R = i.useMemo(
             () =>
@@ -40,7 +40,7 @@ function C(e) {
         ),
         D = {
             isInEditMode: T,
-            setEditingRule: E,
+            setEditingRule: N,
         },
         A = i.useRef(D);
     i.useEffect(() => {
@@ -78,30 +78,30 @@ function C(e) {
             );
         }, [L, y]);
     i.useEffect(() => {
-        O(T, (0, b.af)(k));
-    }, [O, T, k]);
+        C(T, (0, b.af)(k));
+    }, [C, T, k]);
     let G = (0, g.Z6)(S);
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: v.intl.string(v.t.uRelgx),
+                children: _.intl.string(_.t.uRelgx),
             }),
             (0, r.jsx)("div", {
-                className: _.descriptionContainer,
+                className: v.descriptionContainer,
                 children: (0, r.jsxs)("div", {
-                    className: _.description,
+                    className: v.description,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            children: v.intl.string(v.t.EwuSCR),
+                            children: _.intl.string(_.t.EwuSCR),
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
-                            className: _.helpUrl,
-                            children: v.intl.format(v.t["B+sgGt"], {
+                            className: v.helpUrl,
+                            children: _.intl.format(_.t["B+sgGt"], {
                                 helpUrl: d.Z.getArticleURL(j.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
@@ -116,7 +116,7 @@ function C(e) {
                       let l =
                           null != Z[t]
                               ? (0, r.jsx)("div", {
-                                    className: _.categoryHeader,
+                                    className: v.categoryHeader,
                                     children: (0, r.jsx)(a.Text, {
                                         variant: "text-lg/normal",
                                         color: "header-primary",
@@ -127,7 +127,7 @@ function C(e) {
                       return (0, r.jsxs)(
                           "div",
                           {
-                              className: _.categoryContainer,
+                              className: v.categoryContainer,
                               children: [
                                   l,
                                   (0, r.jsx)(r.Fragment, {
@@ -151,17 +151,17 @@ function C(e) {
                           t,
                       );
                   }),
-            null != N &&
+            null != E &&
                 (0, r.jsx)(o.k0, {
-                    guild: N,
+                    guild: E,
                     withDivider: !1,
-                    className: _.explicitContentFilterSection,
+                    className: v.explicitContentFilterSection,
                 }),
             (0, r.jsx)(f.Z, {
                 guildId: S,
                 existingRules: R,
             }),
-            T && (0, r.jsx)("div", { className: _.endSpacer }),
+            T && (0, r.jsx)("div", { className: v.endSpacer }),
         ],
     });
 }

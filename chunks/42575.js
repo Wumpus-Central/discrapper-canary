@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(170245),
     p = n(981631),
     f = n(388032),
-    m = n(475823);
-function h(e) {
-    let { user: t, nickname: n, status: h, isFocused: g } = e,
+    h = n(475823);
+function g(e) {
+    let { user: t, nickname: n, status: g, isFocused: m } = e,
         { analyticsLocations: _ } = (0, a.ZP)(),
         b = (e) => {
             null == e || e.stopPropagation(),
@@ -27,9 +27,9 @@ function h(e) {
         E = (e) => {
             null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        O = h === p.Skl.OFFLINE ? p.Skl.UNKNOWN : h;
+        O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
     return (0, r.jsx)(u.Z, {
-        isFocused: g,
+        isFocused: m,
         user: t,
         onClick: () =>
             (0, o.openUserProfileModal)({
@@ -56,17 +56,17 @@ function h(e) {
                 ],
             });
             return (0, r.jsxs)("div", {
-                className: m.listItemContents,
+                className: h.listItemContents,
                 children: [
                     (0, r.jsx)(d.Z, {
                         user: t,
                         hovered: e,
                         status: O,
                         subText: n,
-                        className: m.__invalid_userInfo,
+                        className: h.__invalid_userInfo,
                     }),
                     (0, r.jsx)("div", {
-                        className: m.actions,
+                        className: h.actions,
                         children: l,
                     }),
                 ],

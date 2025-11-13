@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(785717),
     m = n(86419),
     b = n(780899),
-    y = n(733231),
-    h = n(817053),
+    h = n(733231),
+    y = n(817053),
     v = n(248554),
     O = n(879877),
     j = n(533815),
@@ -68,7 +68,7 @@ function E(e, t) {
 }
 function T(e) {
     let { index: t, widgetType: n, game: i, children: a } = e,
-        { manageFocusOnReorder: l } = (0, y.C)();
+        { manageFocusOnReorder: l } = (0, h.C)();
     return (0, r.jsx)(b.yW, {
         index: t,
         itemId: i.applicationId,
@@ -175,46 +175,46 @@ function A(e) {
     let { text: t, user: n, guildId: a, channelId: u, widgetType: d, applicationId: f } = e,
         g = (0, s.Dt)(),
         b = (0, s.Dt)(),
-        { trackUserProfileEditAction: y } = (0, p.KZ)(),
-        [h, v] = i.useState("idle"),
+        { trackUserProfileEditAction: h } = (0, p.KZ)(),
+        [y, v] = i.useState("idle"),
         [O, j] = i.useState(null != t ? t : ""),
         x = i.useRef(null),
         _ = i.useRef(null),
         I = P.intl.string(P.t.xKSfBT),
         S = null != t && "" !== t.trim(),
         E = i.useCallback(() => {
-            y({
+            h({
                 action: "PRESS_ADD_COMMENTARY",
                 widgetEdited: d,
             }),
                 v("editing");
-        }, [d, y]),
+        }, [d, h]),
         T = i.useCallback(() => {
             let e = O.trim(),
                 n = e !== (null != t ? t : "").trim();
             (0, m.Bu)(d, f, "" !== e ? e : void 0),
                 v("completed"),
                 n &&
-                    y({
+                    h({
                         action: "COMMENTARY_EDITED",
                         widgetEdited: d,
                         gameId: f,
                     });
-        }, [d, f, O, t, y]),
+        }, [d, f, O, t, h]),
         C = i.useCallback((e) => {
             j(e);
         }, []);
     return (
         i.useEffect(() => {
-            "editing" === h && j(null != t ? t : "");
-        }, [t, h]),
+            "editing" === y && j(null != t ? t : "");
+        }, [t, y]),
         i.useEffect(() => {
-            if ("completed" === h) {
+            if ("completed" === y) {
                 var e;
                 null == (e = x.current) || e.focus();
             }
-        }, [h]),
-        "editing" === h
+        }, [y]),
+        "editing" === y
             ? (0, r.jsxs)("div", {
                   className: w.textAreaContainer,
                   children: [
@@ -230,7 +230,7 @@ function A(e) {
                           onChange: C,
                           onBlur: T,
                           rows: 3,
-                          autoFocus: "editing" === h,
+                          autoFocus: "editing" === y,
                           onKeyDown: (e) => {
                               "Enter" !== e.key || e.shiftKey || (e.preventDefault(), T());
                           },
@@ -286,22 +286,22 @@ function Z(e) {
             className: P,
         } = e,
         { applicationId: D, comment: k, tags: Z } = o,
-        { coverImageUrl: R, gameName: G, isLoading: B } = (0, _.Z)(D),
-        L = {
+        { coverImageUrl: R, gameName: G, isLoading: L } = (0, _.Z)(D),
+        B = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
         M = f.default.getCurrentUser(),
-        F = (null == M ? void 0 : M.id) === t.id,
-        U = 1 === (0, m.Gv)(s),
-        W = !u && F,
+        U = (null == M ? void 0 : M.id) === t.id,
+        F = 1 === (0, m.Gv)(s),
+        W = !u && U,
         H = W && (0, m.vI)(s),
-        z = W && !U,
-        { registerDragHandleRef: K } = (0, y.C)(),
+        z = W && !F,
+        { registerDragHandleRef: K } = (0, h.C)(),
         V = i.useRef(null);
-    if (B) return (0, r.jsx)(v.i, {});
+    if (L) return (0, r.jsx)(v.i, {});
     let Y = () =>
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(y.Z, {
                 coverRef: p,
                 className: null == R || u ? void 0 : I.hoverActiveEffect,
                 imageSrc: R,
@@ -333,7 +333,7 @@ function Z(e) {
                         className: w.details,
                         children: [
                             u
-                                ? (0, r.jsx)(c.Heading, E(S({}, L), { children: G }))
+                                ? (0, r.jsx)(c.Heading, E(S({}, B), { children: G }))
                                 : (0, r.jsx)(
                                       C,
                                       S(
@@ -342,7 +342,7 @@ function Z(e) {
                                               userId: t.id,
                                               gameName: G,
                                           },
-                                          L,
+                                          B,
                                       ),
                                   ),
                             H
@@ -362,7 +362,7 @@ function Z(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 tags: Z,
-                                isCurrentUser: F,
+                                isCurrentUser: U,
                                 widgetType: s,
                                 applicationId: D,
                                 disableInteraction: u,
@@ -378,7 +378,7 @@ function Z(e) {
                         ],
                     }),
                     !u &&
-                        F &&
+                        U &&
                         (0, r.jsx)(j.Z, {
                             game: o,
                             widgetType: s,

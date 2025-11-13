@@ -1,6 +1,6 @@
 n.d(t, {
-    L: () => f,
-    Z: () => h,
+    L: () => p,
+    Z: () => m,
 }),
     n(388685);
 var r,
@@ -8,77 +8,77 @@ var r,
     l = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    c = n(885524),
+    c = n(481060),
+    s = n(885524),
     u = n(38755),
     d = n(153066),
-    p = n(412418),
-    f = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
-let h = l.memo(function (e) {
+    f = n(412418),
+    p = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
+let m = l.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
             wrapperClassName: r,
             videoComponent: a,
-            className: f,
-            fit: h = "contain",
-            mirror: m = !1,
+            className: p,
+            fit: m = "contain",
+            mirror: _ = !1,
             paused: g = !1,
-            streamPreviewURL: b,
-            videoSpinnerContext: _,
-            userId: y,
-            streamKey: C,
+            streamPreviewURL: v,
+            videoSpinnerContext: b,
+            userId: E,
+            streamKey: h,
         } = e,
-        [v, O] = l.useState(!0);
+        [y, S] = l.useState(!0);
     (0, u.Z)({
         location: "VideoStream",
-        videoSpinnerContext: _,
-        userId: y,
+        videoSpinnerContext: b,
+        userId: E,
         streamId: t,
-        loading: v,
+        loading: y,
         paused: g,
     });
-    let { onReady: x } = (0, c.Z)({
+    let { onReady: O } = (0, s.Z)({
             streamId: t,
-            userId: y,
-            loading: v,
-            videoSpinnerContext: _,
-            streamKey: C,
+            userId: E,
+            loading: y,
+            videoSpinnerContext: b,
+            streamKey: h,
             paused: g,
         }),
-        E = l.useCallback(() => {
-            O(!1), x();
-        }, [x]);
+        C = l.useCallback(() => {
+            S(!1), O();
+        }, [O]);
     return (0, i.jsxs)("div", {
-        className: o()(p.wrapper, r),
+        className: o()(f.wrapper, r),
         children: [
             null != t &&
                 (0, i.jsx)(a, {
-                    className: o()(p.video, (0, d.l)(p, "video", h), { [p.mirror]: m }, f),
+                    className: o()(f.video, (0, d.l)(f, "video", m), { [f.mirror]: _ }, p),
                     streamId: t,
                     onResize: n,
-                    onReady: E,
+                    onReady: C,
                     paused: g,
                 }),
             g
                 ? null
                 : (0, i.jsx)("div", {
-                      className: o()(p.previewWrapper, { [p.loading]: v }),
+                      className: o()(f.previewWrapper, { [f.loading]: y }),
                       children:
-                          v &&
+                          y &&
                           (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  null != b
+                                  null != v
                                       ? (0, i.jsx)("img", {
-                                            src: b,
+                                            src: v,
                                             alt: "",
-                                            className: p.previewImage,
+                                            className: f.previewImage,
                                         })
                                       : (0, i.jsx)("div", {
-                                            className: p.emptyPreviewWrapper,
-                                            children: (0, i.jsx)("div", { className: p.emptyPreview }),
+                                            className: f.emptyPreviewWrapper,
+                                            children: (0, i.jsx)("div", { className: f.emptyPreview }),
                                         }),
-                                  (0, i.jsx)(s.$jN, { className: p.spinner }),
+                                  (0, i.jsx)(c.$jN, { className: f.spinner }),
                               ],
                           }),
                   }),

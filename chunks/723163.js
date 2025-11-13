@@ -1,32 +1,32 @@
 n.d(t, { Z: () => d }), n(388685);
-var i = n(647438),
-    l = n(392711),
-    r = n.n(l),
-    a = n(442837),
-    o = n(567409),
-    s = n(699516),
+var r = n(647438),
+    i = n(392711),
+    a = n.n(i),
+    o = n(442837),
+    s = n(567409),
+    l = n(699516),
     c = n(594174),
     u = n(709054);
 function d(e) {
-    let t = (0, o.N)(e.id),
-        n = (0, a.cj)([c.default, s.Z], () => {
+    let t = (0, s.N)(e.id),
+        n = (0, o.cj)([c.default, l.Z], () => {
             let e = {};
             for (let n of t.values()) {
                 let t = c.default.getUser(n.author_id),
-                    i = s.Z.isFriend(n.author_id);
-                null != t && i && (e[t.id] = n.id);
+                    r = l.Z.isFriend(n.author_id);
+                null != t && r && (e[t.id] = n.id);
             }
             return e;
         }),
-        [l, d] = i.useState([]);
+        [i, d] = r.useState([]);
     return (
-        i.useEffect(() => {
-            let e = r().sortBy(Object.entries(n), (e) => {
+        r.useEffect(() => {
+            let e = a().sortBy(Object.entries(n), (e) => {
                 let [t, n] = e;
                 return -u.default.extractTimestamp(n);
             });
             d(
-                r()
+                a()
                     .map(e, (e) => {
                         let [t, n] = e;
                         return c.default.getUser(t);
@@ -35,7 +35,7 @@ function d(e) {
             );
         }, [n]),
         {
-            friends: l,
+            friends: i,
             friendsLastPlayed: n,
         }
     );

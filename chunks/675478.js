@@ -1,8 +1,8 @@
 n.d(t, {
-    BU: () => D,
+    BU: () => w,
     Cd: () => j,
     DZ: () => R,
-    PS: () => w,
+    PS: () => D,
     T6: () => A,
     Z1: () => G,
     aj: () => P,
@@ -337,11 +337,11 @@ let N = new C(l.o8, b.yP.PRELOADED_USER_SETTINGS),
         [b.yP.PRELOADED_USER_SETTINGS]: N,
         [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R,
     };
-function w(e, t, n) {
+function D(e, t, n) {
     return N.updateAsync("guilds", (n) => (0, E.u0)(n, e, t), n);
 }
-function D(e, t, n, r) {
-    return w(e, (e) => (0, E.uL)(e, t, n), r);
+function w(e, t, n, r) {
+    return D(e, (e) => (0, E.uL)(e, t, n), r);
 }
 function x(e) {
     return (
@@ -375,7 +375,7 @@ async function j(e, t) {
     );
 }
 async function k(e, t, n) {
-    return await w(
+    return await D(
         t,
         (t) => {
             t.guildDismissibleContentStates[e] = v({}, t.guildDismissibleContentStates[e], n);

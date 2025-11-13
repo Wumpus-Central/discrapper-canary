@@ -46,8 +46,8 @@ var r = n(990547),
     N = n(48854),
     R = n(522474),
     P = n(788983),
-    w = n(835873),
-    D = n(973616),
+    D = n(835873),
+    w = n(973616),
     x = n(314897),
     L = n(592125),
     M = n(430824),
@@ -411,7 +411,7 @@ async function ed(e) {
         let e = 4;
         return (
             p === z.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? ((e = 5), (0, w.w)())
+                ? ((e = 5), (0, D.w)())
                 : p === z.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   l.Z.show({
@@ -532,7 +532,7 @@ async function e_() {
                 rejectWithError: !0,
             }),
             t = e.body.applications,
-            n = t.map((e) => D.ZP.createFromServer(e));
+            n = t.map((e) => w.ZP.createFromServer(e));
         s.Z.dispatch({
             type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
             applications: n,
@@ -635,7 +635,7 @@ async function em(e) {
                 }),
             {
                 activityConfigs: l,
-                applications: c.map((e) => D.ZP.createFromServer(e)),
+                applications: c.map((e) => w.ZP.createFromServer(e)),
             }
         );
     } catch (e) {

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(979038),
     R = n(448980),
     P = n(576759),
-    w = n(336383),
-    D = n(194811),
+    D = n(336383),
+    w = n(194811),
     x = n(373826),
     L = n(668700),
     M = n(262210),
@@ -377,7 +377,7 @@ function K(e) {
                   });
     return (0, r.jsx)(_.Gt, {
         value: $,
-        children: (0, r.jsxs)(w.Z, {
+        children: (0, r.jsxs)(D.Z, {
             ref: er,
             className: a()(F.card, z),
             onAction: en,
@@ -385,7 +385,7 @@ function K(e) {
             "aria-labelledby": ea ? "".concat(J, " ").concat(Q) : Q,
             children: [
                 (0, r.jsx)(
-                    D.Z,
+                    w.Z,
                     W(
                         H(
                             {

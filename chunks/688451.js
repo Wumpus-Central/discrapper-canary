@@ -206,11 +206,11 @@ function R(e, t, n, r, o, s, c) {
 function P(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && m(t, n);
 }
-function w(e, t) {
+function D(e, t) {
     var n = e[W];
     return (n ? p(n) : e)[t];
 }
-function D(e, t) {
+function w(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
             var r = Object.getOwnPropertyDescriptor(n, t);
@@ -330,11 +330,11 @@ var U,
             if (!l(n, t))
                 return (function (e, t, n) {
                     var r,
-                        i = D(t, n);
+                        i = w(t, n);
                     return i ? ("value" in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === w(e.t, t) ? (L(e), (e.o[t] = M(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === D(e.t, t) ? (L(e), (e.o[t] = M(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in p(e);
@@ -343,10 +343,10 @@ var U,
             return Reflect.ownKeys(p(e));
         },
         set: function (e, t, n) {
-            var r = D(p(e), t);
+            var r = w(p(e), t);
             if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
             if (!e.P) {
-                var i = w(p(e), t),
+                var i = D(p(e), t),
                     a = null == i ? void 0 : i[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
@@ -361,7 +361,7 @@ var U,
         },
         deleteProperty: function (e, t) {
             return (
-                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                void 0 !== D(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
             );
         },
         getOwnPropertyDescriptor: function (e, t) {

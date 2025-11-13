@@ -1,4 +1,4 @@
-a.d(e, { O1: () => E });
+a.d(e, { O1: () => c });
 var r = a(349812),
     _ = a(617726),
     n = a(387486);
@@ -10,7 +10,7 @@ function o(t) {
 function i(t) {
     return o(t.getAllKeys());
 }
-function c(t) {
+function E(t) {
     let e;
     function a() {
         return (
@@ -28,12 +28,12 @@ function c(t) {
         push: async (e) => {
             try {
                 var r, n;
-                let c = await (0, _.V$)(e);
+                let E = await (0, _.V$)(e);
                 await ((r = a()),
                 (n = t.maxQueueSize || 30),
                 r((t) =>
                     i(t).then((e) => {
-                        if (!(e.length >= n)) return t.put(c, Math.max(...e, 0) + 1), o(t.transaction);
+                        if (!(e.length >= n)) return t.put(E, Math.max(...e, 0) + 1), o(t.transaction);
                     }),
                 ));
             } catch (t) {}
@@ -41,12 +41,12 @@ function c(t) {
         unshift: async (e) => {
             try {
                 var r, n;
-                let c = await (0, _.V$)(e);
+                let E = await (0, _.V$)(e);
                 await ((r = a()),
                 (n = t.maxQueueSize || 30),
                 r((t) =>
                     i(t).then((e) => {
-                        if (!(e.length >= n)) return t.put(c, Math.min(...e, 0) - 1), o(t.transaction);
+                        if (!(e.length >= n)) return t.put(E, Math.min(...e, 0) - 1), o(t.transaction);
                     }),
                 ));
             } catch (t) {}
@@ -64,14 +64,14 @@ function c(t) {
         },
     };
 }
-function E(t = n.f) {
+function c(t = n.f) {
     var e;
     return (
         (e = (0, r.Pd)(t)),
         (t) =>
             e({
                 ...t,
-                createStore: c,
+                createStore: E,
             })
     );
 }

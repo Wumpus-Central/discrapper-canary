@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(841784),
     p = n(802856),
     f = n(594190),
-    m = n(592745),
-    h = n(313789),
-    g = n(518596),
+    h = n(592745),
+    g = n(313789),
+    m = n(518596),
     _ = n(553795),
     b = n(757266),
     E = n(283595),
     O = n(417363),
-    I = n(626135),
-    y = n(804739),
-    v = n(346329),
+    y = n(626135),
+    v = n(804739),
+    I = n(346329),
     C = n(981631),
     S = n(388032);
 function T(e) {
@@ -80,15 +80,15 @@ function P(e) {
                 ? null
                 : (0, r.jsx)(a.sNh, {
                       id: "xbox-connect",
-                      action: () => (0, g.openUserSettings)(h.n.CONNECTIONS_PANEL, { section: C.oAB.CONNECTIONS }),
+                      action: () => (0, m.openUserSettings)(g.n.CONNECTIONS_PANEL, { section: C.oAB.CONNECTIONS }),
                       label: S.intl.formatToPlainString(S.t.XWSHTb, { platform: j }),
                   });
         })(e),
         x = (function (e) {
             let { currentActivities: t } = e,
-                n = i.useContext(I.AnalyticsContext);
+                n = i.useContext(y.AnalyticsContext);
             return (0, l.Wu)(
-                [f.ZP, E.Z, m.Z, O.Z, b.Z],
+                [f.ZP, E.Z, h.Z, O.Z, b.Z],
                 () =>
                     t
                         .filter((e) => !(0, d.Z)(e.activity))
@@ -98,15 +98,15 @@ function P(e) {
                             return N(T({}, e), {
                                 libraryApplication: i,
                                 canJoin: null != t && (0, u.Z)(t, C.xjy.JOIN) && t.type === C.IIU.PLAYING,
-                                canPlay: (0, y.t)({
+                                canPlay: (0, v.t)({
                                     LibraryApplicationStore: E.Z,
-                                    LaunchableGameStore: m.Z,
+                                    LaunchableGameStore: h.Z,
                                     DispatchApplicationStore: O.Z,
                                     ConnectedAppsStore: b.Z,
                                     applicationId: r.id,
                                     branchId: null != i ? i.branchId : null,
                                 }),
-                                isLaunching: m.Z.launchingGames.has(r.id),
+                                isLaunching: h.Z.launchingGames.has(r.id),
                                 isRunning: f.ZP.getRunningVerifiedApplicationIds().includes(r.id),
                                 location: n.location,
                             });
@@ -160,7 +160,7 @@ function P(e) {
                     return (0, r.jsx)(a.sNh, {
                         id: "play-".concat(n.session_id),
                         action: function () {
-                            (0, v.playApplication)(i.id, l, {
+                            (0, I.playApplication)(i.id, l, {
                                 analyticsParams: { location: N(T({}, s), { object: C.qAy.LIST_ITEM }) },
                             });
                         },

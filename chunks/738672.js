@@ -1,6 +1,6 @@
 n.d(t, { h: () => d }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(909820),
@@ -13,50 +13,50 @@ function d(e) {
             dismissed: n,
             onDismiss: d,
             renderComponent: p,
-            nudgeAlignIntoViewport: f = !1,
-            skipForceHide: h = !1,
+            nudgeAlignIntoViewport: h = !1,
+            skipForceHide: f = !1,
         } = e,
-        m = i.useContext(c.h9),
-        [g, b] = i.useState(""),
-        [_, y] = i.useState(!1),
-        C = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
-        v = i.useRef(null),
-        O = i.useRef(0);
-    i.useEffect(() => {
+        m = r.useContext(c.h9),
+        [g, b] = r.useState(""),
+        [y, C] = r.useState(!1),
+        v = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
+        _ = r.useRef(null),
+        x = r.useRef(0);
+    r.useEffect(() => {
         let e = t.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
-        i.useEffect(() => {
-            if (!h) {
+        r.useEffect(() => {
+            if (!f) {
                 var e, t;
-                b(String(O.current)),
-                    y(
-                        void 0 !== C &&
-                            C < (null != (t = null == (e = v.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
+                b(String(x.current)),
+                    C(
+                        void 0 !== v &&
+                            v < (null != (t = null == (e = _.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
                     ),
-                    (O.current += 1);
+                    (x.current += 1);
             }
-        }, [C, v, h]);
-    let { preventIdle: x, allowIdle: E } = (0, u.Y)("popup");
+        }, [v, _, f]);
+    let { preventIdle: j, allowIdle: O } = (0, u.Y)("popup");
     return (null == t ? void 0 : t.current) == null
         ? null
-        : (0, r.jsx)(o.ZP, {
-              children: (0, r.jsx)(a.jRF, {
+        : (0, i.jsx)(o.ZP, {
+              children: (0, i.jsx)(a.jRF, {
                   targetRef: t,
                   position: "top",
                   align: "center",
                   spacing: 0,
                   positionKey: g,
-                  nudgeAlignIntoViewport: f,
+                  nudgeAlignIntoViewport: h,
                   children: () =>
-                      (0, r.jsx)("div", {
-                          ref: v,
-                          onMouseOver: x,
-                          onFocus: x,
-                          onBlur: E,
-                          onMouseLeave: E,
+                      (0, i.jsx)("div", {
+                          ref: _,
+                          onMouseOver: j,
+                          onFocus: j,
+                          onBlur: O,
+                          onMouseLeave: O,
                           children: p({
-                              hidden: _ || m || n,
+                              hidden: y || m || n,
                               onDismiss: d,
                           }),
                       }),

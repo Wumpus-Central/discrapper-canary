@@ -5,8 +5,8 @@ n.d(t, {
     c7: () => O,
 });
 var r = n(442837),
-    l = n(704215),
-    i = n(675478),
+    i = n(704215),
+    l = n(675478),
     a = n(581883),
     o = n(626135),
     s = n(915486),
@@ -21,18 +21,18 @@ function f(e, t) {
     return (0, r.e7)([a.Z], () => p(e, t));
 }
 function m(e, t, n, r, a) {
-    (0, i.PS)(
+    (0, l.PS)(
         n,
         (r) => {
-            let l = p(t, n);
-            if ((e && l) || (!e && !l)) return !1;
+            let i = p(t, n);
+            if ((e && i) || (!e && !i)) return !1;
             r.dismissedGuildContent = (e ? s.GV : s.jx)(r.dismissedGuildContent, t);
         },
         e ? d.fy.INFREQUENT_USER_ACTION : d.fy.FREQUENT_USER_ACTION,
     ),
         r &&
             o.default.track(c.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
-                type: l.C[t],
+                type: i.C[t],
                 guild_id: n,
                 action: null != a ? a : u.L.UNKNOWN,
             });

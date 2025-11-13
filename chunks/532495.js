@@ -28,8 +28,8 @@ var i = n(512722),
     N = n(687158),
     R = n(477448),
     P = n(25990),
-    w = n(594174),
-    D = n(74538),
+    D = n(594174),
+    w = n(74538),
     x = n(388032),
     L = n(436360);
 function M(e, t, n) {
@@ -86,8 +86,8 @@ function U(e, t) {
 }
 function G() {
     var e, t, n, i, M, k, G, B, Z;
-    let F = (0, o.e7)([w.default], () => {
-            let e = w.default.getCurrentUser();
+    let F = (0, o.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
         V = (0, o.e7)([C.Z], () => C.Z.getUserProfile(F.id)),
@@ -112,7 +112,7 @@ function G() {
             image: H,
         }),
         et = (0, l.gS)(),
-        en = D.ZP.canUsePremiumProfileCustomization(F),
+        en = w.ZP.canUsePremiumProfileCustomization(F),
         er = (0, d.gd)(H, F.avatar),
         ei = (0, d.f$)(W, null == V ? void 0 : V.banner),
         ea = (0, N.ZP)(F.id),

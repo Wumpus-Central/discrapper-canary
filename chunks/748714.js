@@ -2,7 +2,7 @@ n.d(t, {
     A3: () => L,
     f4: () => x,
     f9: () => M,
-    gY: () => D,
+    gY: () => w,
 });
 var r = n(951288),
     i = n(28664),
@@ -52,7 +52,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -126,17 +126,17 @@ let N = (e) => {
             ? (0, r.jsx)(i.u, {
                   text: y.intl.string(y.t["c/rcUu"]),
                   asContainer: !0,
-                  children: (0, r.jsx)(a.zxk, T(I({}, c), { disabled: !0 })),
+                  children: (0, r.jsx)(a.zxk, S(I({}, c), { disabled: !0 })),
               })
             : null === t || n > t
               ? (0, r.jsx)(i.u, {
                     text: y.intl.string(y.t.keFvXM),
                     asContainer: !0,
-                    children: (0, r.jsx)(a.zxk, T(I({}, c), { disabled: !0 })),
+                    children: (0, r.jsx)(a.zxk, S(I({}, c), { disabled: !0 })),
                 })
               : (0, r.jsx)(
                     a.zxk,
-                    T(I({}, c), {
+                    S(I({}, c), {
                         loading: o,
                         onClick: s,
                     }),
@@ -164,7 +164,7 @@ let N = (e) => {
                   value: (0, r.jsx)(N, { orbAmount: t }),
               });
     },
-    w = (e) => {
+    D = (e) => {
         let { orbBalance: t } = e;
         return (0, r.jsx)(o.gNt, {
             label: y.intl.string(y.t["mmDvV+"]),
@@ -185,7 +185,7 @@ let N = (e) => {
             }),
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { error: t } = e;
         if (null == t) return;
         let n = "";
@@ -223,7 +223,7 @@ let N = (e) => {
                         orbPriceAmount: n,
                     }),
                 }),
-                (0, r.jsx)(w, { orbBalance: i }),
+                (0, r.jsx)(D, { orbBalance: i }),
                 (0, r.jsx)(l.Z, {
                     forceShow: !0,
                     onChange: b.dG4,

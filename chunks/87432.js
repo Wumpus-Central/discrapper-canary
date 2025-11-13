@@ -1,35 +1,35 @@
 n.d(e, {
     Z: () =>
-        function t(e, n, u) {
-            var s, a, o, c, d, E;
-            let O = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        function t(e, n, r) {
+            var s, a, o, c, E, S;
+            let d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (!n.has(e.key)) return null;
             if (!(0, i.Lk)(e))
                 return (
-                    u.register(
+                    r.register(
                         e,
-                        null == (c = O.panel) ? void 0 : c.key,
-                        null == (d = O.category) ? void 0 : d.key,
-                        null == (E = O.accordion) ? void 0 : E.key,
+                        null == (c = d.panel) ? void 0 : c.key,
+                        null == (E = d.category) ? void 0 : E.key,
+                        null == (S = d.accordion) ? void 0 : S.key,
                     ),
                     e
                 );
-            let T = O;
-            e.type === i.Jq.SIDEBAR_ITEM && (T = r(l({}, O), { panel: e.layout[0] })),
-                e.type === i.Jq.PANEL && (T = r(l({}, O), { panel: e })),
-                e.type === i.Jq.CATEGORY && (T = r(l({}, O), { category: e })),
-                e.type === i.Jq.ACCORDION && (T = r(l({}, O), { accordion: e }));
-            let S = e.layout.map((e) => t(e, n, u, T)).filter((t) => null != t);
-            if (0 === S.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
-            let g = r(l({}, e), { layout: S });
+            let T = d;
+            e.type === i.Jq.SIDEBAR_ITEM && (T = u(l({}, d), { panel: e.layout[0] })),
+                e.type === i.Jq.PANEL && (T = u(l({}, d), { panel: e })),
+                e.type === i.Jq.CATEGORY && (T = u(l({}, d), { category: e })),
+                e.type === i.Jq.ACCORDION && (T = u(l({}, d), { accordion: e }));
+            let I = e.layout.map((e) => t(e, n, r, T)).filter((t) => null != t);
+            if (0 === I.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
+            let O = u(l({}, e), { layout: I });
             return (
-                u.register(
-                    g,
+                r.register(
+                    O,
                     null == (s = T.panel) ? void 0 : s.key,
                     null == (a = T.category) ? void 0 : a.key,
                     null == (o = T.accordion) ? void 0 : o.key,
                 ),
-                g
+                O
             );
         },
 });
@@ -59,7 +59,7 @@ function l(t) {
     }
     return t;
 }
-function r(t, e) {
+function u(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors

@@ -104,28 +104,28 @@ function I(e) {
         iconComponent: b,
         themeable: v = !1,
         disabled: I = !1,
-        isActive: S = !1,
-        tooltipPosition: T = "top",
+        isActive: T = !1,
+        tooltipPosition: S = "top",
         shouldShowTooltip: A = !0,
         forceTooltipOpen: C = !1,
         buttonRef: N,
         grow: R,
         "aria-label": P,
-        look: w,
-        buttonText: D,
+        look: D,
+        buttonText: w,
         size: x,
         color: L,
     } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
-            position: T,
+            position: S,
             text: t,
             "aria-label": P,
             shouldShow: A,
             forceOpen: C,
             children: (e) => {
-                var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: T } = e,
+                var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: S } = e,
                     A = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
                 return (0, r.jsxs)(
                     l.zx,
@@ -133,7 +133,7 @@ function I(e) {
                         E(
                             {
                                 "data-migration-pending": !0,
-                                look: null != w ? w : l.zx.Looks.BLANK,
+                                look: null != D ? D : l.zx.Looks.BLANK,
                                 size: null != x ? x : l.zx.Sizes.NONE,
                                 color: L,
                                 onKeyDown: (e) => {
@@ -149,7 +149,7 @@ function I(e) {
                                     null == _ || _(), null == a || a(e);
                                 },
                                 onMouseLeave: (e) => {
-                                    null == T || T(), null == u || u(e);
+                                    null == S || S(), null == u || u(e);
                                 },
                                 onContextMenu: (e) => {
                                     null == c || c(), null == d || d(e);
@@ -158,11 +158,11 @@ function I(e) {
                                     null == _ || _(), null == a || a(e);
                                 },
                                 onBlur: (e) => {
-                                    null == T || T(), null == u || u(e);
+                                    null == S || S(), null == u || u(e);
                                 },
                                 disabled: I,
-                                innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != D }),
-                                className: o()({ [m.active]: S }, f),
+                                innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != w }),
+                                className: o()({ [m.active]: T }, f),
                                 wrapperClassName: p,
                                 buttonRef: N,
                                 grow: R,
@@ -175,13 +175,13 @@ function I(e) {
                                 (0, r.jsx)(b, {
                                     size: s.Z.md,
                                     className: o()(h, {
-                                        [m.controlIcon]: null == D,
+                                        [m.controlIcon]: null == w,
                                         [m.themeable]: v,
-                                        [m.active]: S,
+                                        [m.active]: T,
                                     }),
                                     color: g,
                                 }),
-                                D,
+                                w,
                             ],
                         },
                     ),
@@ -190,7 +190,7 @@ function I(e) {
         }),
     });
 }
-let S = {
+let T = {
         disconnect: m.disconnect,
         join: m.join,
         red: m.red,
@@ -202,7 +202,7 @@ let S = {
         activeLight: m.activeLight,
         premiumGradient: m.premiumGradient,
     },
-    T = {
+    S = {
         disconnect: m.disconnect,
         join: m.join,
         red: m.redGlow,
@@ -242,8 +242,8 @@ function A(e) {
             "isTrayButton",
             "applyStyles",
         ]);
-    let w = (0, p.Z)(a, l),
-        D = null != s ? s : w,
+    let D = (0, p.Z)(a, l),
+        w = null != s ? s : D,
         x = (0, u.Z)("(max-width: 456px)"),
         L = i.useRef(null),
         M = i.useContext(f.h9);
@@ -264,7 +264,7 @@ function A(e) {
                     x || R ? g : null,
                     l && m.active,
                     m.centerButton,
-                    T[w],
+                    S[D],
                     k && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
@@ -278,7 +278,7 @@ function A(e) {
                   m.attachedCaretButtonContainer,
                   A && m.popoutOpen,
                   g,
-                  U && [m.fullRegionDropdownButton, S[w]],
+                  U && [m.fullRegionDropdownButton, T[D]],
               ),
               children: [
                   B,
@@ -290,7 +290,7 @@ function A(e) {
                                 className: o()(
                                     m.contextMenuNub,
                                     N && m.attachedCaret,
-                                    T[D],
+                                    S[w],
                                     A && [m.popoutOpen, m.active],
                                     C && m.disabled,
                                 ),

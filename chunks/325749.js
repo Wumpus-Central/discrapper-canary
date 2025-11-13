@@ -7,13 +7,13 @@ var o = t(951288),
     l = t(194983),
     u = t(28664),
     _ = t(755721),
-    d = t(481060),
-    s = t(13245),
+    s = t(481060),
+    d = t(13245),
     p = t(367907),
     f = t(753972),
     m = t(812206),
-    b = t(322155),
-    h = t(522474),
+    h = t(322155),
+    b = t(522474),
     v = t(788983),
     g = t(695346),
     C = t(390322),
@@ -22,14 +22,14 @@ var o = t(951288),
     y = t(268353),
     P = t(786915),
     w = t(800965),
-    N = t(107169),
-    O = t(592125),
+    O = t(107169),
+    N = t(592125),
     j = t(271383),
     k = t(594174),
     Z = t(358085),
-    T = t(51144),
-    B = t(998502),
-    S = t(228488),
+    S = t(51144),
+    T = t(998502),
+    B = t(228488),
     A = t(145597),
     W = t(317381),
     E = t(426419),
@@ -47,7 +47,7 @@ function Y(e) {
     let { applicationId: n, channelId: t } = e,
         a = (0, c.e7)([m.Z], () => m.Z.getApplication(n)),
         Y = (0, c.e7)([W.ZP], () => W.ZP.getSelfEmbeddedActivities().get(n)),
-        J = (0, c.e7)([O.Z], () => O.Z.getChannel(t)),
+        J = (0, c.e7)([N.Z], () => N.Z.getChannel(t)),
         V = g.Sb.useSetting(),
         q = (0, c.Wu)([j.ZP], () => {
             var e;
@@ -69,7 +69,7 @@ function Y(e) {
                 var t;
                 if (null == e || e === L.ag) return null;
                 let r = X.get(e.id),
-                    a = null != (t = null == r ? void 0 : r.nick) ? t : T.ZP.getName(e);
+                    a = null != (t = null == r ? void 0 : r.nick) ? t : S.ZP.getName(e);
                 return (0, o.jsx)(
                     u.u,
                     {
@@ -102,7 +102,7 @@ function Y(e) {
         ),
         en = r.useCallback(() => {
             let e = (0, A.getPID)();
-            s.Z.setInputLocked(!b.Z.isInputLocked(e), e);
+            d.Z.setInputLocked(!h.Z.isInputLocked(e), e);
         }, []),
         et = (0, E.P)(),
         {
@@ -110,12 +110,12 @@ function Y(e) {
             popoutWindowAlwaysOnTop: er,
             handleStayOnTop: ea,
         } = (function () {
-            let e = (0, c.e7)([h.Z], () => h.Z.getIsAlwaysOnTop(F.KJ3.ACTIVITY_POPOUT)),
+            let e = (0, c.e7)([b.Z], () => b.Z.getIsAlwaysOnTop(F.KJ3.ACTIVITY_POPOUT)),
                 n = r.useCallback((e) => {
                     v.hY(F.KJ3.ACTIVITY_POPOUT, e);
                 }, []);
             return {
-                canStayOnTop: Z.isPlatformEmbedded && B.ZP.supportsFeature(F.eRX.POPOUT_WINDOWS),
+                canStayOnTop: Z.isPlatformEmbedded && T.ZP.supportsFeature(F.eRX.POPOUT_WINDOWS),
                 popoutWindowAlwaysOnTop: e,
                 handleStayOnTop: n,
             };
@@ -129,20 +129,20 @@ function Y(e) {
             let { popoutWindow: e, currentDocument: n, rootNode: t } = (0, R.Z)(),
                 [o, a] = r.useState(!1),
                 i = r.useCallback(() => {
-                    null != t && o && (a(!1), (0, S.Pr)(t, n));
+                    null != t && o && (a(!1), (0, B.Pr)(t, n));
                 }, [t, n, o]),
                 c = r.useCallback(() => {
-                    null != t && (o ? i() : (a(!0), (0, S.Dj)(t)));
+                    null != t && (o ? i() : (a(!0), (0, B.Dj)(t)));
                 }, [t, o, i]),
                 l = r.useCallback(() => {
-                    null != t && !(0, S.rB)(t, n) && o && c();
+                    null != t && !(0, B.rB)(t, n) && o && c();
                 }, [t, n, o, c]);
             return (
                 r.useEffect(
                     () => (
-                        null == n || n.addEventListener(S.NO, l),
+                        null == n || n.addEventListener(B.NO, l),
                         () => {
-                            null == n || n.removeEventListener(S.NO, l);
+                            null == n || n.removeEventListener(B.NO, l);
                         }
                     ),
                     [n, l],
@@ -156,20 +156,20 @@ function Y(e) {
         })(),
         e_ = r.useRef(null);
     if (null == a || null == Y) return null;
-    let ed = (0, o.jsx)(f.Z, {
+    let es = (0, o.jsx)(f.Z, {
         application: a,
         size: 24,
         className: G.appIcon,
     });
     return (
         V &&
-            (ed = (0, o.jsx)(u.u, {
+            (es = (0, o.jsx)(u.u, {
                 asContainer: !0,
                 text: Y.compositeInstanceId,
                 position: "bottom",
-                children: ed,
+                children: es,
             })),
-        (0, o.jsx)(d.f6W, {
+        (0, o.jsx)(s.f6W, {
             theme: F.BRd.DARK,
             children: (e) =>
                 (0, o.jsxs)("div", {
@@ -178,8 +178,8 @@ function Y(e) {
                         (0, o.jsxs)("div", {
                             className: i()(G.headerSection, G.headerSectionLeft),
                             children: [
-                                ed,
-                                (0, o.jsx)(d.Text, {
+                                es,
+                                (0, o.jsx)(s.Text, {
                                     variant: "text-md/normal",
                                     color: "header-primary",
                                     className: G.applicationName,
@@ -187,7 +187,7 @@ function Y(e) {
                                 }),
                                 (0, o.jsx)("div", {
                                     className: G.dotSpacer,
-                                    children: (0, o.jsx)(d.Text, {
+                                    children: (0, o.jsx)(s.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
                                         children: ".",
@@ -223,12 +223,12 @@ function Y(e) {
                                         et
                                             ? (0, o.jsx)(I.Z, {
                                                   onClick: en,
-                                                  iconComponent: d.epB,
+                                                  iconComponent: s.epB,
                                                   label: H.intl.string(H.t.mseZsD),
                                               })
                                             : null,
                                         eo
-                                            ? (0, o.jsx)(N.Z, {
+                                            ? (0, o.jsx)(O.Z, {
                                                   popoutWindowAlwaysOnTop: er,
                                                   onToggleStayOnTop: ea,
                                               })
@@ -253,7 +253,7 @@ function Y(e) {
                                             onClick: eu,
                                         }),
                                         (0, o.jsx)(
-                                            d.yRy,
+                                            s.yRy,
                                             {
                                                 targetElementRef: e_,
                                                 position: "bottom",

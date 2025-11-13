@@ -22,12 +22,12 @@ function j(e) {
             guildId: l,
             widgetEnabled: f,
             widgetChannelId: j,
-            className: v,
-            enableLocalUpdate: _,
+            className: _,
+            enableLocalUpdate: v,
         } = e,
-        C = (0, a.e7)([c.ZP], () => c.ZP.getChannels(l)),
-        O = i.useMemo(() => {
-            let e = [...C[c.sH], ...C[c.Zb]]
+        O = (0, a.e7)([c.ZP], () => c.ZP.getChannels(l)),
+        C = i.useMemo(() => {
+            let e = [...O[c.sH], ...O[c.Zb]]
                 .filter((e) => {
                     let { channel: t } = e;
                     return t.guild_id === l;
@@ -50,19 +50,19 @@ function j(e) {
                 }),
                 e
             );
-        }, [C, l, j]),
+        }, [O, l, j]),
         y = i.useCallback(
             (e) => {
-                _ ? (0, p.c)(l, f, e !== b ? e : null) : m.Z.updateEmbed(l, f, e !== b ? e : null);
+                v ? (0, p.c)(l, f, e !== b ? e : null) : m.Z.updateEmbed(l, f, e !== b ? e : null);
             },
-            [l, f, _],
+            [l, f, v],
         );
     return (0, r.jsx)(s.q4e, {
         label: t,
         description: n,
-        options: O,
+        options: C,
         value: j,
         onChange: y,
-        className: v,
+        className: _,
     });
 }

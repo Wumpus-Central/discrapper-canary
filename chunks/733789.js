@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(953529), n(388685);
+n.d(t, { Z: () => y }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -7,12 +7,12 @@ var r = n(951288),
     o = n(481060),
     c = n(100527),
     u = n(707409),
-    d = n(670188),
+    d = n(456077),
     p = n(237583),
     f = n(51144),
-    m = n(981631),
-    h = n(388032),
-    g = n(157684);
+    h = n(981631),
+    g = n(388032),
+    m = n(157684);
 function _(e, t, n) {
     return (
         t in e
@@ -43,50 +43,50 @@ function b(e) {
     return e;
 }
 let E = {
-    [m.AzA.NOW_PLAYING]: {
+    [h.AzA.NOW_PLAYING]: {
         single: (e, t) =>
-            h.intl.format(h.t.NEckza, {
+            g.intl.format(g.t.NEckza, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            h.intl.format(h.t["6uWulc"], {
+            g.intl.format(g.t["6uWulc"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => h.intl.format(h.t["8fMgRU"], { count: e }),
+        other: (e) => g.intl.format(g.t["8fMgRU"], { count: e }),
     },
-    [m.AzA.RECENTLY_PLAYED]: {
+    [h.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
-            h.intl.format(h.t["nB/JNB"], {
+            g.intl.format(g.t["nB/JNB"], {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            h.intl.format(h.t.AZCcHU, {
+            g.intl.format(g.t.AZCcHU, {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => h.intl.format(h.t.yNuaTU, { count: e }),
+        other: (e) => g.intl.format(g.t.yNuaTU, { count: e }),
     },
-    [m.AzA.EVER_PLAYED]: {
+    [h.AzA.EVER_PLAYED]: {
         single: (e, t) =>
-            h.intl.format(h.t.Fecf3N, {
+            g.intl.format(g.t.Fecf3N, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            h.intl.format(h.t["0LiGbJ"], {
+            g.intl.format(g.t["0LiGbJ"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => h.intl.format(h.t.Yx1rjU, { count: e }),
+        other: (e) => g.intl.format(g.t.Yx1rjU, { count: e }),
     },
 };
 class O extends i.PureComponent {
@@ -113,7 +113,7 @@ class O extends i.PureComponent {
                         ((n = b(
                             {
                                 ref: this.activityDiscordTagRef,
-                                className: g.username,
+                                className: m.username,
                             },
                             t,
                         )),
@@ -143,10 +143,10 @@ class O extends i.PureComponent {
         return 0 === i.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: a()(g.recommendationActivity, t),
+                  className: a()(m.recommendationActivity, t),
                   children: [
                       (0, r.jsx)(p.Z, {
-                          className: g.players,
+                          className: m.players,
                           users: i.map((e) => {
                               let { user: t } = e;
                               return t;
@@ -156,7 +156,7 @@ class O extends i.PureComponent {
                           renderMoreUsers: this.renderPlayerOverflow,
                       }),
                       (0, r.jsx)("div", {
-                          className: g.description,
+                          className: m.description,
                           children: this.renderDescription(n, i),
                       }),
                   ],
@@ -168,11 +168,11 @@ class O extends i.PureComponent {
             _(this, "playerAvatarRef", i.createRef()),
             _(this, "renderUserTooltip", (e, t, n) =>
                 (0, r.jsxs)("div", {
-                    className: g.tooltip,
+                    className: m.tooltip,
                     children: [
                         (0, r.jsx)("div", { children: f.ZP.getUserTag(e) }),
                         (0, r.jsx)(u.ZP, {
-                            className: g.tooltipTimestamp,
+                            className: m.tooltipTimestamp,
                             start: t,
                             end: n,
                             location: u.ZP.Locations.ACTIVITY_FEED,
@@ -201,7 +201,7 @@ class O extends i.PureComponent {
                                           b(
                                               {
                                                   ref: this.playerAvatarRef,
-                                                  className: a()(g.playerAvatar, { [g.avatarMasked]: !i }),
+                                                  className: a()(m.playerAvatar, { [m.avatarMasked]: !i }),
                                                   src: e.getAvatarURL(void 0, 32),
                                                   "aria-label": e.username,
                                                   size: o.EFr.SIZE_32,
@@ -218,7 +218,7 @@ class O extends i.PureComponent {
                 (0, r.jsx)(
                     "div",
                     {
-                        className: g.playerOverflow,
+                        className: m.playerOverflow,
                         children: e,
                     },
                     n,
@@ -226,4 +226,4 @@ class O extends i.PureComponent {
             );
     }
 }
-let I = O;
+let y = O;

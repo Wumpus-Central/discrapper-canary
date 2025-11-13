@@ -14,8 +14,8 @@ var i = n(442837),
     p = n(29899),
     m = n(151545),
     b = n(527790),
-    y = n(769140),
-    h = n(864141),
+    h = n(769140),
+    y = n(864141),
     v = n(264481),
     O = n(693408),
     j = n(661462),
@@ -32,17 +32,17 @@ function w(e) {
             userId: t.id,
             guildId: S,
         }),
-        B = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
-        L = t.id === n.id,
+        L = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
+        B = t.id === n.id,
         M = (0, i.e7)([u.Z, s.Z], () => {
-            let e = L ? u.Z.getStatus() : s.Z.getStatus(t.id);
+            let e = B ? u.Z.getStatus() : s.Z.getStatus(t.id);
             return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
         }),
         U = N.length > 0 || null != Z,
         F = D && null == Z && null == G && null != R,
         W = !M && (U || F),
         H = A.length > 0;
-    if (!W && !H && B)
+    if (!W && !H && L)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -65,9 +65,9 @@ function w(e) {
                 ),
             ),
         });
-    if (!W && !H && !B) {
+    if (!W && !H && !L) {
         var z;
-        return L
+        return B
             ? (0, r.jsx)(v.Uf, { onClose: C })
             : (0, r.jsx)(v.P9, {
                   user: t,
@@ -89,7 +89,7 @@ function w(e) {
                               !k &&
                                   F &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(h.Z, {
+                                      children: (0, r.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: R,
@@ -98,7 +98,7 @@ function w(e) {
                                   }),
                               null != Z &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           stream: Z,
@@ -122,7 +122,7 @@ function w(e) {
                               k &&
                                   F &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(h.Z, {
+                                      children: (0, r.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: R,
@@ -136,7 +136,7 @@ function w(e) {
             H
                 ? (0, r.jsx)(O.Z, {
                       heading: P.intl.string(P.t.jzgEoL),
-                      introText: L
+                      introText: B
                           ? P.intl.format(P.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(

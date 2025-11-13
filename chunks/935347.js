@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(481060),
     p = n(205355),
     f = n(607070),
-    m = n(38618),
-    h = n(197344),
-    g = n(460181),
+    h = n(38618),
+    g = n(197344),
+    m = n(460181),
     _ = n(474873),
     b = n(706454),
     E = n(215427),
     O = n(820254),
-    I = n(358085),
-    y = n(998502),
-    v = n(905656),
+    y = n(358085),
+    v = n(998502),
+    I = n(905656),
     C = n(981631),
     S = n(388032),
     T = n(744749);
@@ -39,7 +39,7 @@ function N(e, t, n) {
 class j extends i.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
-            t = (0, g.uk)("discodo", e);
+            t = (0, m.uk)("discodo", e);
         return (t.volume = 1), t;
     }
     componentDidMount() {
@@ -86,7 +86,7 @@ class j extends i.PureComponent {
                         (0, r.jsxs)("div", {
                             className: T.content,
                             children: [
-                                (0, r.jsx)(v.Z, {
+                                (0, r.jsx)(I.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
@@ -352,15 +352,15 @@ class j extends i.PureComponent {
                 this,
                 "_eventLoadingText",
                 (function () {
-                    let e = h.Z.getLoadingTips();
+                    let e = g.Z.getLoadingTips();
                     if (null != e && e.length > 0) return e[o().random(e.length - 1)];
                 })(),
             ),
             N(this, "handleReady", () => {
                 this.setState({ ready: !0 }),
-                    (0, I.isDesktop)() &&
-                        (y.ZP.send("UPDATED_QUOTES", ["Hold Tight \u2014 Loading Discord"]),
-                        y.ZP.send("UPDATE_OPEN_ON_STARTUP"));
+                    (0, y.isDesktop)() &&
+                        (v.ZP.send("UPDATED_QUOTES", ["Hold Tight \u2014 Loading Discord"]),
+                        v.ZP.send("UPDATE_OPEN_ON_STARTUP"));
             }),
             N(this, "setVideoRef", (e) => {
                 this.videoRef = e;
@@ -382,9 +382,9 @@ class j extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let P = c.ZP.connectStores([m.Z, E.Z, _.Z, f.Z], () => ({
-    isTryingToConnect: m.Z.isTryingToConnect(),
-    connected: m.Z.isConnected(),
+let P = c.ZP.connectStores([h.Z, E.Z, _.Z, f.Z], () => ({
+    isTryingToConnect: h.Z.isTryingToConnect(),
+    connected: h.Z.isConnected(),
     incident: E.Z.getIncident(),
     soundpack: _.Z.getSoundpack(),
     reducedMotion: f.Z.useReducedMotion,

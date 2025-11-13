@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(642613);
+n.d(t, { Z: () => D }), n(388685), n(642613);
 var r = n(108131),
     i = n.n(r),
     a = n(442837),
@@ -128,4 +128,4 @@ function P(e, t) {
             stickers: i,
         });
 }
-let w = new y();
+let D = new y();

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
-var r = n(951288);
-n(647438);
-var i = n(835255),
-    l = n(688192);
+t.d(i, { Z: () => a });
+var n = t(951288);
+t(647438);
+var r = t(835255),
+    s = t(688192);
 function a(e) {
-    let { surface: t = l.Y.PROFILE_MODAL } = e;
-    return (0, r.jsx)(i.w_, { surface: t });
+    let { surface: i = s.Y.PROFILE_MODAL } = e;
+    return (0, n.jsx)(r.w_, { surface: i });
 }

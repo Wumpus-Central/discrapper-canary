@@ -111,7 +111,7 @@ let E = (e) => {
                 onPrimary: v,
             } = e,
             { premiumBrandRefreshBackgroundClassName: I } = (0, c.JL)(),
-            S = () => {
+            T = () => {
                 if (null == _ || null == g) return null;
                 let e = {
                     primaryIcon: f,
@@ -130,7 +130,7 @@ let E = (e) => {
                       })
                     : (0, r.jsx)(E, m(p({}, e), { onPrimary: v }));
             },
-            T = () =>
+            S = () =>
                 null == t
                     ? null
                     : (0, r.jsx)(o.Avr, {
@@ -149,9 +149,9 @@ let E = (e) => {
                     align: "center",
                     gap: 0,
                     padding: 0,
-                    children: [S(), (0, r.jsx)(u.Z, {})],
+                    children: [T(), (0, r.jsx)(u.Z, {})],
                 }),
-                T(),
+                S(),
             ],
         });
     };

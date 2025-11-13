@@ -21,15 +21,15 @@ var a = n(442837),
     O = n(598077),
     v = n(592125),
     I = n(271383),
-    S = n(819640),
-    T = n(594174),
+    T = n(819640),
+    S = n(594174),
     A = n(979651),
     C = n(509545),
     N = n(78839),
     R = n(936101),
     P = n(868158),
-    w = n(483012),
-    D = n(955132);
+    D = n(483012),
+    w = n(955132);
 function x(e, t, n) {
     return (
         t in e
@@ -104,8 +104,8 @@ function U(e, t) {
     return i;
 }
 let G = new d.Z("ConnectionStore"),
-    B = new w.Z(
-        D.Wb,
+    B = new D.Z(
+        w.Wb,
         (e, t) => {
             var n;
             e =
@@ -130,8 +130,8 @@ let G = new d.Z("ConnectionStore"),
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    Z = new w.Z(
-        D.Wb,
+    Z = new D.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -156,8 +156,8 @@ let G = new d.Z("ConnectionStore"),
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    F = new w.Z(
-        D.Wb,
+    F = new D.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null != e
@@ -170,8 +170,8 @@ let G = new d.Z("ConnectionStore"),
         ),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    V = new w.Z(
-        D.Wb,
+    V = new D.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -231,7 +231,7 @@ function z(e) {
 }
 function q(e) {
     o.Z.dispatch(e).catch((t) =>
-        D.Wb.resetSocketOnDispatchError({
+        w.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type,
         }),
@@ -254,7 +254,7 @@ function X(e, t, n) {
             display_name_styles: O,
         } = n,
         v = I.ZP.getMember(e, t.id),
-        S = (0, f.bN)(O);
+        T = (0, f.bN)(O);
     (null != v &&
         v.nick === c &&
         v.avatar === d &&
@@ -267,7 +267,7 @@ function X(e, t, n) {
         v.flags === p &&
         (null != (a = v.unusualDMActivityUntil) ? a : null) === (null != b ? b : null) &&
         i().isEqual(null != (o = v.collectibles) ? o : null, null != y ? y : null) &&
-        i().isEqual(null != (s = v.displayNameStyles) ? s : null, null != S ? S : null)) ||
+        i().isEqual(null != (s = v.displayNameStyles) ? s : null, null != T ? T : null)) ||
         q({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -283,7 +283,7 @@ function X(e, t, n) {
             unusualDMActivityUntil: b,
             flags: p,
             collectibles: y,
-            displayNameStyles: S,
+            displayNameStyles: T,
         });
 }
 function Q(e) {
@@ -337,8 +337,8 @@ W(
     (e) => {
         g.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
-                let t = P.Fx(e, D.Wb.identifyStartTime);
-                null != T.default.getCurrentUser() &&
+                let t = P.Fx(e, w.Wb.identifyStartTime);
+                null != S.default.getCurrentUser() &&
                     (q({
                         type: "GUILD_CREATE",
                         guild: t,
@@ -373,7 +373,7 @@ W(
         g.Z.readySupplemental.measure(() => {
             a.ZP.Emitter.batched(() => {
                 var t, n;
-                e = g.Z.hydrateReadySupplemental.measure(() => P.r$(e, D.Wb.identifyStartTime));
+                e = g.Z.hydrateReadySupplemental.measure(() => P.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -427,7 +427,7 @@ W(
                         voiceStates: l,
                         initial: !0,
                     }),
-                    D.GC.update();
+                    w.GC.update();
             });
         }),
             setTimeout(() => q({ type: "POST_CONNECTION_OPEN" }), 2000);
@@ -459,7 +459,7 @@ W(
             g.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
                     let t = (e = g.Z.hydrateReady.measure(() =>
-                            P.IM(e, D.Wb.identifyStartTime, n),
+                            P.IM(e, w.Wb.identifyStartTime, n),
                         )).private_channels.map((e) => (0, b.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
@@ -514,8 +514,8 @@ W(
                                 token: e.auth_token,
                                 userId: e.user.id,
                             }),
-                        D.RR.update(),
-                        D.GC.update();
+                        w.RR.update(),
+                        w.GC.update();
                 });
             });
         },
@@ -529,7 +529,7 @@ W(
         });
     }),
     Y(["RESUMED"], () => {
-        D.RR.forceUpdate(), D.GC.forceUpdate(), q({ type: "CONNECTION_RESUMED" });
+        w.RR.forceUpdate(), w.GC.forceUpdate(), q({ type: "CONNECTION_RESUMED" });
     }),
     Y(["TYPING_START"], (e) => {
         null != e.member && X(e.guild_id, e.member.user, e.member),
@@ -917,7 +917,7 @@ W(
                             processedAtTimestamp: s,
                         });
                     }),
-                w.Z.flush("GUILD_MEMBERS_CHUNK");
+                D.Z.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
     Y(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
@@ -948,7 +948,7 @@ W(
                             processedAtTimestamp: s,
                         });
                     }),
-                w.Z.flush();
+                D.Z.flush();
         });
     }),
     Y(
@@ -1357,10 +1357,10 @@ W(
         });
     }),
     Y(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        S.Z.hasLayers() && (n(355467).tZ(), l.Gn(C.Z.getFetchedSKUIDs()));
+        T.Z.hasLayers() && (n(355467).tZ(), l.Gn(C.Z.getFetchedSKUIDs()));
     }),
     Y(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        c.k(), S.Z.hasLayers() && n(355467).jg();
+        c.k(), T.Z.hasLayers() && n(355467).jg();
     }),
     Y(["WISHLIST_ITEM_PURCHASED"], (e) => {
         q({
@@ -1437,7 +1437,7 @@ W(
                         t(i);
                 }
             }),
-                w.Z.flush(),
+                D.Z.flush(),
                 q({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,

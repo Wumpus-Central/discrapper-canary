@@ -1,26 +1,26 @@
-n.d(e, { Z: () => y });
+n.d(e, { Z: () => _ });
 var i = n(951288),
     l = n(647438),
-    r = n(512722),
-    u = n.n(r),
+    u = n(512722),
+    r = n.n(u),
     s = n(442837),
     a = n(481060),
     o = n(660216),
     c = n(825209),
-    d = n(924557),
-    E = n(509613),
-    O = n(556296),
+    E = n(924557),
+    S = n(509613),
+    d = n(556296),
     T = n(313789),
-    S = n(981631),
-    g = n(388032),
-    I = n(431220);
-let y = (0, E.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
-    useSearchTerms: () => [g.intl.string(g.t["0U/hj7"]), g.intl.string(g.t["5zxkdo"])],
-    usePredicate: d.PP,
+    I = n(981631),
+    O = n(388032),
+    g = n(431220);
+let _ = (0, S.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
+    useSearchTerms: () => [O.intl.string(O.t["0U/hj7"]), O.intl.string(O.t["5zxkdo"])],
+    usePredicate: E.PP,
     render: () => {
-        let t = (0, s.e7)([O.ZP], () => O.ZP.getKeybindForAction(S.kg4.SAVE_CLIP, !0)),
-            e = (0, s.e7)([O.ZP], () => O.ZP.getKeybindForAction(S.kg4.SAVE_SCREENSHOT, !0));
-        u()(null != t, "Save clip keybind unset"), u()(null != e, "Save screenshot keybind unset");
+        let t = (0, s.e7)([d.ZP], () => d.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
+            e = (0, s.e7)([d.ZP], () => d.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0));
+        r()(null != t, "Save clip keybind unset"), r()(null != e, "Save screenshot keybind unset");
         let n = l.useCallback(
             (t) => {
                 var n, i;
@@ -69,11 +69,11 @@ let y = (0, E.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
             [e],
         );
         return (0, i.jsx)(a.gNt, {
-            label: g.intl.string(g.t["0U/hj7"]),
-            description: g.intl.string(g.t["5zxkdo"]),
+            label: O.intl.string(O.t["0U/hj7"]),
+            description: O.intl.string(O.t["5zxkdo"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
-                className: I.keyRecorder,
+                className: g.keyRecorder,
                 children: (0, i.jsx)(c.Z, {
                     defaultValue: e.shortcut,
                     onChange: n,

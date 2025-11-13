@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(914010),
     p = n(622822),
     f = n(165540),
-    m = n(920644),
-    h = n(723359),
-    g = n(981631),
+    h = n(920644),
+    g = n(723359),
+    m = n(981631),
     _ = n(484710);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,21 +76,21 @@ class E extends a.Z {
                 return (n) => (0, r.jsx)(e, b({ source: t }, n));
             },
             {
-                modalKey: h.dG,
-                onCloseRequest: g.dG4,
+                modalKey: g.dG,
+                onCloseRequest: m.dG4,
                 backdropStyle: (0, s.bj)(t) ? i.fCB.LIGHTBOX : void 0,
             },
         );
     }
     handleAgeGateSuccess() {
-        o.Z.showSuccessToast(_.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(h.dG);
+        o.Z.showSuccessToast(_.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(g.dG);
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.oav)(h.dG, (e) => (0, r.jsx)(m.default, b({ underageMessage: t }, e)));
+        (0, i.oav)(g.dG, (e) => (0, r.jsx)(h.default, b({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
-        (0, i.Mr3)(h.dG);
+        (0, i.Mr3)(g.dG);
     }
     handleGuildUpdate(e) {
         let { guild: t } = e,
@@ -98,7 +98,7 @@ class E extends a.Z {
         if (
             null != n &&
             t.id === n &&
-            (t.owner_configured_content_level === g.V_K.AGE_RESTRICTED ||
+            (t.owner_configured_content_level === m.V_K.AGE_RESTRICTED ||
                 ((0, f.X)("age_gate_manager") && c.Ov.has(t.nsfw_level)))
         )
             return void (0, p.I8)(t.id, null);

@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -90,7 +90,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,8 +115,8 @@ let C = { location: {} },
     N = r.createContext(C),
     R = {},
     P = 1000,
-    w = 10000,
-    D = 60000,
+    D = 10000,
+    w = 60000,
     x = 120000,
     L = 300000,
     M = 900000,
@@ -171,7 +171,7 @@ let V = {
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0,
     },
@@ -212,7 +212,7 @@ let V = {
         },
     },
     [g.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: () => [],
     },
     [g.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
@@ -262,11 +262,11 @@ let V = {
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -274,11 +274,11 @@ let V = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.user_id],
     },
     [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: () => [],
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -306,7 +306,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -350,12 +350,12 @@ let V = {
     [g.rMx.OPEN_MODAL]: (e) =>
         e.type === g.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: D,
+                  throttlePeriod: w,
                   throttleKeys: (e) => [e.type],
               }
             : void 0,
     [g.rMx.MODERATOR_QUEUE_ACTION]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.NOTIFICATION_PERMISSION_STATUS]: {
@@ -431,11 +431,11 @@ function X(e) {
     let a = null != e ? e : {};
     if (null != a.location) {
         let { location: e } = a;
-        a = v({}, T(a, ["location"]), H(e));
+        a = v({}, S(a, ["location"]), H(e));
     }
     if (null != a.source) {
         let { source: e } = a;
-        a = v({}, T(a, ["source"]), Y(e));
+        a = v({}, S(a, ["source"]), Y(e));
     }
     (a.client_performance_cpu = h.Z.getCurrentCPUUsagePercent()),
         (a.client_performance_memory = h.Z.getCurrentMemoryUsageKB()),
@@ -517,7 +517,7 @@ function el(e, t) {
 function ec() {
     return (0, i.Z)();
 }
-let eu = S(v({}, a), {
+let eu = T(v({}, a), {
     getCampaignParams: a.getCampaignParams,
     setSystemAccessibilityFeatures: K,
     expandEventProperties: X,

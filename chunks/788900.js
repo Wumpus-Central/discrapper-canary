@@ -38,7 +38,7 @@ function r(e) {
             I = c(T > 1 ? 32 / T : 32),
             E = new Uint8Array(Z * I * 4),
             N = [],
-            R = [];
+            A = [];
         for (let e = 0, t = 0; e < I; e++)
             for (let n = 0; n < Z; n++, t += 4) {
                 let r = f,
@@ -46,17 +46,17 @@ function r(e) {
                     c = h,
                     d = v;
                 for (let e = 0, t = s(g, m ? 5 : 3); e < t; e++) N[e] = a((l / Z) * (n + 0.5) * e);
-                for (let t = 0, n = s(x, m ? 5 : 3); t < n; t++) R[t] = a((l / I) * (e + 0.5) * t);
+                for (let t = 0, n = s(x, m ? 5 : 3); t < n; t++) A[t] = a((l / I) * (e + 0.5) * t);
                 for (let e = 0, t = 0; e < x; e++)
-                    for (let n = +!e, i = 2 * R[e]; n * x < g * (x - e); n++, t++) r += C[t] * N[n] * i;
+                    for (let n = +!e, i = 2 * A[e]; n * x < g * (x - e); n++, t++) r += C[t] * N[n] * i;
                 for (let e = 0, t = 0; e < 3; e++)
-                    for (let n = +!e, r = 2 * R[e]; n < 3 - e; n++, t++) {
+                    for (let n = +!e, r = 2 * A[e]; n < 3 - e; n++, t++) {
                         let e = N[n] * r;
                         (i += O[t] * e), (c += w[t] * e);
                     }
                 if (m)
                     for (let e = 0, t = 0; e < 5; e++)
-                        for (let n = +!e, r = 2 * R[e]; n < 5 - e; n++, t++) d += P[t] * N[n] * r;
+                        for (let n = +!e, r = 2 * A[e]; n < 5 - e; n++, t++) d += P[t] * N[n] * r;
                 let u = r - (2 / 3) * i,
                     _ = (3 * r - u + c) / 2,
                     j = _ - c;

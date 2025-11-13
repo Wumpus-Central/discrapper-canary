@@ -77,10 +77,10 @@ function P(e) {
     }
     (b = null), (T = p.QZA.OPEN), (S = {}), (A = !1);
 }
-function w() {
+function D() {
     (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (T = p.QZA.CLOSED), (A = !1);
 }
-let D = s().debounce(() => {
+let w = s().debounce(() => {
     A &&
         (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1),
         A || X.emitChange());
@@ -98,7 +98,7 @@ function x(e) {
         null != t.expireGracePeriod &&
             y.expire_grace_period !== t.expireGracePeriod &&
             ((y.expire_grace_period = t.expireGracePeriod), (A = !0)),
-        A && D();
+        A && w();
 }
 function L(e) {
     let { settings: t } = e;
@@ -107,7 +107,7 @@ function L(e) {
         null != t.name && O.name !== t.name && ((O.name = t.name), (A = !0)),
         void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (A = !0)),
         null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (A = !0)),
-        A && D();
+        A && w();
 }
 function M() {
     (T = p.QZA.SUBMITTING), (S = {});
@@ -145,7 +145,7 @@ function k(e) {
             (null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : A || (y = n)), (g[e] = n);
         } else (null == y ? void 0 : y.id) === t.id && (y = null), g.splice(e, 1);
     }
-    (g = [...g]), D();
+    (g = [...g]), w();
 }
 function U(e) {
     let { guildId: t, channelId: n, webhooks: i } = e;
@@ -168,7 +168,7 @@ function U(e) {
                     let { id: n } = t;
                     if (n === e.id) return !0;
                 }) && E.push(e);
-        (E = [...E]), D();
+        (E = [...E]), w();
     }
 }
 function G(e) {
@@ -295,7 +295,7 @@ let X = new q(
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: L,
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: V,
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: H,
-                  GUILD_SETTINGS_CLOSE: w,
+                  GUILD_SETTINGS_CLOSE: D,
                   GUILD_SETTINGS_LOADED_INTEGRATIONS: k,
                   WEBHOOKS_UPDATE: U,
                   INTEGRATION_SETTINGS_SUBMITTING: M,

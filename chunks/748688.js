@@ -1,12 +1,12 @@
 a.d(e, {
-    $X: () => m,
-    AJ: () => O,
-    Ei: () => C,
+    $X: () => S,
+    AJ: () => h,
+    Ei: () => g,
     GC: () => U,
-    WU: () => g,
-    db: () => h,
-    dz: () => b,
-    nm: () => v,
+    WU: () => D,
+    db: () => O,
+    dz: () => G,
+    nm: () => m,
     ph: () => y,
     x5: () => p,
 });
@@ -15,17 +15,17 @@ var r = a(559508),
     n = a(263449),
     o = a(622916),
     i = a(101284),
-    c = a(394798),
-    E = a(617726),
+    E = a(394798),
+    c = a(617726),
     s = a(899517),
     l = a(454463),
     I = a(163162);
-let u = String(0),
-    R = "",
-    d = "",
+let R = String(0),
+    u = "",
+    A = "",
     N = "",
-    A = (I.m9.navigator && I.m9.navigator.userAgent) || "",
-    T = "",
+    T = (I.m9.navigator && I.m9.navigator.userAgent) || "",
+    d = "",
     f =
         (I.m9.navigator && I.m9.navigator.language) ||
         (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages["0"]) ||
@@ -34,15 +34,15 @@ let u = String(0),
 function p(t) {
     return "pageload" === (0, _.XU)(t).op;
 }
-function h(t, e) {
+function O(t, e) {
     if (!e.length) return t;
     for (let a of e) t[1].push([{ type: "profile" }, a]);
     return t;
 }
-function O(t) {
+function h(t) {
     let e = [];
     return (
-        (0, E.gv)(t, (t, a) => {
+        (0, c.gv)(t, (t, a) => {
             if ("transaction" === a)
                 for (let a = 1; a < t.length; a++) {
                     let r = t[a];
@@ -58,21 +58,21 @@ function O(t) {
     L.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
         .then((t) => {
             if (
-                ((R = t.platform || ""),
+                ((u = t.platform || ""),
                 (N = t.architecture || ""),
-                (T = t.model || ""),
-                (d = t.platformVersion || ""),
+                (d = t.model || ""),
+                (A = t.platformVersion || ""),
                 t.fullVersionList && t.fullVersionList.length > 0)
             ) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
-                A = `${e.brand} ${e.version}`;
+                T = `${e.brand} ${e.version}`;
             }
         })
         .catch((t) => void 0);
 let P = new WeakMap(),
-    D = !1,
-    g = 30000;
-function C() {
+    C = !1,
+    D = 30000;
+function g() {
     let t = I.m9.Profiler;
     if ("function" != typeof t) {
         l.X &&
@@ -81,7 +81,7 @@ function C() {
             );
         return;
     }
-    let e = Math.floor(g / 10);
+    let e = Math.floor(D / 10);
     try {
         return new t({
             sampleInterval: 10,
@@ -93,11 +93,11 @@ function C() {
                 "[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header.",
             ),
             o.kg.log("[Profiling] Disabling profiling for current user session.")),
-            (D = !0);
+            (C = !0);
     }
 }
-function m(t) {
-    if (D)
+function S(t) {
+    if (C)
         return (
             l.X && o.kg.log("[Profiling] Profiling has been disabled for the duration of the current user session."), !1
         );
@@ -133,8 +133,8 @@ function m(t) {
                 ),
             !1);
 }
-function v(t, e, a, _) {
-    var E;
+function m(t, e, a, _) {
+    var c;
     if (
         !(a.samples.length < 2
             ? (l.X && o.kg.log("[Profiling] Discarding profile because it contains less than 2 samples"), !1)
@@ -157,8 +157,8 @@ function v(t, e, a, _) {
                 : e;
         })(_),
         p =
-            "thread_metadata" in (E = a)
-                ? E
+            "thread_metadata" in (c = a)
+                ? c
                 : (function (t) {
                       let e,
                           a = 0,
@@ -166,28 +166,28 @@ function v(t, e, a, _) {
                               samples: [],
                               stacks: [],
                               frames: [],
-                              thread_metadata: { [u]: { name: "main" } },
+                              thread_metadata: { [R]: { name: "main" } },
                           },
                           _ = t.samples[0];
                       if (!_) return r;
                       let n = _.timestamp,
                           o = "number" == typeof performance.timeOrigin ? performance.timeOrigin : i.Z1 || 0,
-                          c = o - (i.Z1 || o);
+                          E = o - (i.Z1 || o);
                       return (
                           t.samples.forEach((_, o) => {
                               if (void 0 === _.stackId) {
                                   void 0 === e && ((e = a), (r.stacks[e] = []), a++),
                                       (r.samples[o] = {
-                                          elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
+                                          elapsed_since_start_ns: ((_.timestamp + E - n) * 1000000).toFixed(0),
                                           stack_id: e,
-                                          thread_id: u,
+                                          thread_id: R,
                                       });
                                   return;
                               }
                               let i = t.stacks[_.stackId],
-                                  E = [];
+                                  c = [];
                               for (; i; ) {
-                                  E.push(i.frameId);
+                                  c.push(i.frameId);
                                   let e = t.frames[i.frameId];
                                   e &&
                                       void 0 === r.frames[i.frameId] &&
@@ -201,20 +201,20 @@ function v(t, e, a, _) {
                                       (i = void 0 === i.parentId ? void 0 : t.stacks[i.parentId]);
                               }
                               let s = {
-                                  elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
+                                  elapsed_since_start_ns: ((_.timestamp + E - n) * 1000000).toFixed(0),
                                   stack_id: a,
-                                  thread_id: u,
+                                  thread_id: R,
                               };
-                              (r.stacks[a] = E), (r.samples[o] = s), a++;
+                              (r.stacks[a] = c), (r.samples[o] = s), a++;
                           }),
                           r
                       );
-                  })(E),
-        h = e || ("number" == typeof _.start_timestamp ? 1000 * _.start_timestamp : 1000 * (0, i.ph)()),
-        O = "number" == typeof _.timestamp ? 1000 * _.timestamp : 1000 * (0, i.ph)();
+                  })(c),
+        O = e || ("number" == typeof _.start_timestamp ? 1000 * _.start_timestamp : 1000 * (0, i.ph)()),
+        h = "number" == typeof _.timestamp ? 1000 * _.timestamp : 1000 * (0, i.ph)();
     return {
         event_id: t,
-        timestamp: new Date(h).toISOString(),
+        timestamp: new Date(O).toISOString(),
         platform: "javascript",
         version: "1",
         release: _.release || "",
@@ -224,14 +224,14 @@ function v(t, e, a, _) {
             version: I.m9.navigator.userAgent,
         },
         os: {
-            name: R,
-            version: d,
-            build_number: A,
+            name: u,
+            version: A,
+            build_number: T,
         },
         device: {
             locale: f,
-            model: T,
-            manufacturer: A,
+            model: d,
+            manufacturer: T,
             architecture: N,
             is_emulator: !1,
         },
@@ -246,7 +246,7 @@ function v(t, e, a, _) {
                 if (!o) return [];
                 let i = P.get(o);
                 i ? (e = i) : ((e = new Map()), P.set(o, e));
-                let c = Object.keys(a).reduce((t, r) => {
+                let E = Object.keys(a).reduce((t, r) => {
                         let _,
                             n = e.get(r);
                         n ? (_ = n) : ((_ = o(r)), e.set(r, _));
@@ -260,42 +260,42 @@ function v(t, e, a, _) {
                         }
                         return t;
                     }, {}),
-                    E = [];
+                    c = [];
                 for (let e of t)
                     e &&
-                        c[e] &&
-                        E.push({
+                        E[e] &&
+                        c.push({
                             type: "sourcemap",
                             code_file: e,
-                            debug_id: c[e],
+                            debug_id: E[e],
                         });
-                return E;
+                return c;
             })(a.resources),
         },
         profile: p,
         transactions: [
             {
                 name: _.transaction || "",
-                id: _.event_id || (0, c.DM)(),
+                id: _.event_id || (0, E.DM)(),
                 trace_id: L,
-                active_thread_id: u,
+                active_thread_id: R,
                 relative_start_ns: "0",
-                relative_end_ns: ((O - h) * 1000000).toFixed(0),
+                relative_end_ns: ((h - O) * 1000000).toFixed(0),
             },
         ],
     };
 }
-let S = new Map();
+let v = new Map();
 function y() {
-    return S.size;
+    return v.size;
 }
 function U(t) {
-    let e = S.get(t);
-    return e && S.delete(t), e;
+    let e = v.get(t);
+    return e && v.delete(t), e;
 }
-function b(t, e) {
-    if ((S.set(t, e), S.size > 30)) {
-        let t = S.keys().next().value;
-        S.delete(t);
+function G(t, e) {
+    if ((v.set(t, e), v.size > 30)) {
+        let t = v.keys().next().value;
+        v.delete(t);
     }
 }

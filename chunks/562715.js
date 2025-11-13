@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f }), n(953529);
 var l = n(951288),
-    r = n(647438),
-    i = n(780384),
+    i = n(647438),
+    r = n(780384),
     o = n(481060),
     a = n(410030),
     c = n(726542),
@@ -20,7 +20,7 @@ function f(e) {
                 ? n
                 : h.intl.string(h.t.NzCoRx),
         { hasConnection: y, canConnect: b, startConnection: C, loading: O } = (0, u.B)(f.provider_id),
-        w = r.useCallback(async () => {
+        Z = i.useCallback(async () => {
             var e, t, n;
             d.default.track(
                 p.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
@@ -71,12 +71,12 @@ function f(e) {
             ),
                 await C(j);
         }, [C, g, f.provider_id, j]),
-        Z = r.useMemo(() => {
+        w = i.useMemo(() => {
             if (null != f.provider_id) {
                 let e = c.Z.get(f.provider_id),
                     t =
                         (null == e ? void 0 : e.icon) != null
-                            ? (0, i.wj)(v)
+                            ? (0, r.wj)(v)
                                 ? e.icon.darkPNG
                                 : e.icon.lightPNG
                             : null;
@@ -98,10 +98,10 @@ function f(e) {
     return (0, l.jsx)(m.Z, {
         displayName: x,
         description: f.description,
-        icon: Z,
+        icon: w,
         isLoading: O,
         isConnected: y,
         canConnect: b,
-        onConnect: w,
+        onConnect: Z,
     });
 }

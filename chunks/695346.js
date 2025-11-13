@@ -1,5 +1,5 @@
 n.d(t, {
-    A2: () => e2,
+    A2: () => e3,
     AY: () => ea,
     CM: () => ec,
     CW: () => ek,
@@ -16,17 +16,17 @@ n.d(t, {
     JN: () => eo,
     JT: () => el,
     JY: () => N,
-    L1: () => ew,
-    NA: () => eT,
+    L1: () => eD,
+    NA: () => eS,
     OW: () => e_,
     Ok: () => eO,
     Ou: () => W,
     P4: () => ey,
     Pe: () => H,
-    QK: () => eD,
+    QK: () => ew,
     QZ: () => P,
     R$: () => O,
-    RS: () => eS,
+    RS: () => eT,
     R_: () => eF,
     Rt: () => e1,
     SE: () => ej,
@@ -39,13 +39,13 @@ n.d(t, {
     Xc: () => V,
     Xk: () => k,
     Xr: () => eh,
-    YC: () => e3,
+    YC: () => e2,
     Yk: () => ex,
     _O: () => L,
     _j: () => eV,
     bh: () => es,
     bm: () => ef,
-    cC: () => S,
+    cC: () => T,
     cP: () => Y,
     co: () => eE,
     d$: () => F,
@@ -56,7 +56,7 @@ n.d(t, {
     eo: () => B,
     ev: () => en,
     fq: () => v,
-    fv: () => w,
+    fv: () => D,
     fz: () => A,
     gR: () => J,
     gw: () => eJ,
@@ -80,7 +80,7 @@ n.d(t, {
     tU: () => ev,
     uL: () => Z,
     uh: () => eX,
-    vF: () => T,
+    vF: () => S,
     x4: () => eI,
     xM: () => ed,
     xq: () => ee,
@@ -141,7 +141,7 @@ let y = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    S = (0, _.Zc)(
+    T = (0, _.Zc)(
         "textAndImages",
         "renderSpoilers",
         (e) => {
@@ -150,7 +150,7 @@ let y = (0, _.Zc)(
         },
         (e) => o.Gm.create({ value: e }),
     ),
-    T = (0, _.Zc)(
+    S = (0, _.Zc)(
         "textAndImages",
         "useThreadSidebar",
         (e) => {
@@ -216,29 +216,29 @@ let C = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: !!e }),
     ),
-    w = (0, _.Zc)(
+    D = (0, _.Zc)(
         "notifications",
         "focusModeExpiresAtMs",
         (e) => (null != e ? e : "0"),
         (e) => e,
     ),
-    D = [],
+    w = [],
     x = (0, _.Zc)(
         "textAndImages",
         "emojiPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     L = (0, _.Zc)(
         "textAndImages",
         "stickerPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     M = (0, _.Zc)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     j = (0, _.Zc)(
@@ -626,7 +626,7 @@ let eg = new Set(Object.values(g.Skl)),
         "text",
         "inlineAttachmentMedia",
     ),
-    eS = (0, _.KM)(
+    eT = (0, _.KM)(
         (0, _.Zc)(
             "textAndImages",
             "inlineEmbedMedia",
@@ -639,7 +639,7 @@ let eg = new Set(Object.values(g.Skl)),
         "text",
         "inlineEmbedMedia",
     ),
-    eT = (0, _.KM)(
+    eS = (0, _.KM)(
         (0, _.Zc)(
             "textAndImages",
             "renderEmbeds",
@@ -723,7 +723,7 @@ let eP = (0, _.KM)(
         "appearance",
         "developerMode",
     ),
-    ew = (0, _.Zc)(
+    eD = (0, _.Zc)(
         "appearance",
         "clientThemeSettings",
         (e) => {
@@ -756,7 +756,7 @@ let eP = (0, _.KM)(
         }),
         { comparator: r.isEqual },
     ),
-    eD = (0, _.R2)(
+    ew = (0, _.R2)(
         (0, _.KM)(
             (0, _.Zc)(
                 "textAndImages",
@@ -1026,13 +1026,13 @@ let e0 = (0, _.Zc)(
         (e) => null != e && e,
         (e) => e,
     ),
-    e3 = (0, _.Zc)(
+    e2 = (0, _.Zc)(
         "appearance",
         "uiDensity",
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e2 = (0, _.Zc)(
+    e3 = (0, _.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>

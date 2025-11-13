@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -103,7 +103,7 @@ function S(e) {
             scrollBehavior: N = "sticky",
         } = e,
         [R, P] = i.useState(p),
-        [w, D] = i.useState(E),
+        [D, w] = i.useState(E),
         x = i.useRef(E),
         L = (0, c.e7)([d.Z], () => d.Z.getLayers()),
         M = null != (t = L[L.length - 1]) ? t : "base",
@@ -124,14 +124,14 @@ function S(e) {
         },
         U = (0, _.i)({
             shouldShow: p,
-            caretPosition: (0, f.z)(w),
+            caretPosition: (0, f.z)(D),
             onExitComplete: k,
         }),
         G = (e) => {
             var { setPopoutRef: t, position: i } = e,
                 a = y(e, ["setPopoutRef", "position"]);
             return (
-                null != i && i !== x.current && ((x.current = i), D(i), null == C || C(i)),
+                null != i && i !== x.current && ((x.current = i), w(i), null == C || C(i)),
                 U((e, i) => {
                     if (!i) return null;
                     let c = (0, r.jsx)(
@@ -166,7 +166,7 @@ function S(e) {
         targetElementRef: a,
         shouldShow: R,
         onRequestClose: m,
-        position: w,
+        position: D,
         align: O,
         spacing: v + I,
         layerContext: void 0,
@@ -174,7 +174,7 @@ function S(e) {
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === w || "bottom" === w,
+        nudgeAlignIntoViewport: "top" === D || "bottom" === D,
         closeOnClickOutside: !1,
         ignoreModalClicks: !0,
         scrollBehavior: N,

@@ -20,8 +20,8 @@ let m = function (e) {
         f = i.useMemo(() => new s.Xp(), []),
         [h, b] = i.useState(d.n.LEFT),
         [x, j] = i.useState(0),
-        [v, _] = i.useState(!1),
-        [C, O] = i.useState(!1),
+        [_, v] = i.useState(!1),
+        [O, C] = i.useState(!1),
         y = i.useCallback(
             (e, t) => {
                 j((n) => {
@@ -31,26 +31,26 @@ let m = function (e) {
             },
             [j],
         ),
-        E = i.useCallback(() => {
-            C || y(t, 1);
-        }, [y, t, C]),
         N = i.useCallback(() => {
-            C || y(t, -1);
-        }, [y, t, C]);
+            O || y(t, 1);
+        }, [y, t, O]),
+        E = i.useCallback(() => {
+            O || y(t, -1);
+        }, [y, t, O]);
     return (
         i.useEffect(() => {
-            null != m && (v ? v && f.stop() : f.start(m, E));
-        }, [v, f, m, E]),
+            null != m && (_ ? _ && f.stop() : f.start(m, N));
+        }, [_, f, m, N]),
         (0, r.jsxs)("div", {
             className: g.root,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
+            onMouseEnter: () => v(!0),
+            onMouseLeave: () => v(!1),
             children: [
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: N,
+                    onClick: E,
                     onMouseEnter: () => b(d.n.RIGHT),
-                    ignoreKeyPress: C,
+                    ignoreKeyPress: O,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.LEFT,
                         height: 48,
@@ -61,16 +61,16 @@ let m = function (e) {
                 (0, r.jsx)(d.Z, {
                     step: x,
                     direction: h,
-                    onAnimationStart: () => O(!0),
-                    onAnimationEnd: () => O(!1),
+                    onAnimationStart: () => C(!0),
+                    onAnimationEnd: () => C(!1),
                     className: a()(g.carousel, n),
                     children: p(t[x]),
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: E,
+                    onClick: N,
                     onMouseEnter: () => b(d.n.LEFT),
-                    ignoreKeyPress: C,
+                    ignoreKeyPress: O,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.RIGHT,
                         height: 48,

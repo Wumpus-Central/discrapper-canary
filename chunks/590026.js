@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(647438),
     i = n(876215),
     l = n(442837),
@@ -15,7 +15,7 @@ let u = new Set([
     i.s.LISTENED_SESSION,
     i.s.LAUNCHED_ACTIVITY,
 ]);
-function h(e) {
+function p(e) {
     let t = (0, c.Z)({ id: d.YN.GLOBAL_FEED });
     (t = (0, s.Z)({
         entries: t,

@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => v,
+    B: () => _,
     Z: () => j,
 }),
     n(953529),
@@ -66,42 +66,42 @@ function j(e) {
     var t, i, a, c;
     let {
             guild: j,
-            prompt: v,
-            singleColumn: _,
-            promptIndex: C,
-            option: O,
+            prompt: _,
+            singleColumn: v,
+            promptIndex: O,
+            option: C,
             hasError: y,
-            onDragStart: E,
-            onDragComplete: N,
+            onDragStart: N,
+            onDragComplete: E,
             onDragReset: I,
         } = e,
         S = null,
-        T = s().findIndex(v.options, (e) => e.id === O.id),
+        T = s().findIndex(_.options, (e) => e.id === C.id),
         {
             drag: P,
             dragSourcePosition: w,
             drop: Z,
             setIsDraggable: R,
         } = (0, d.Z)({
-            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(v.id),
+            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(_.id),
             index: T,
-            optionId: O.id,
-            onDragStart: E,
-            onDragComplete: N,
+            optionId: C.id,
+            onDragStart: N,
+            onDragComplete: E,
             onDragReset: I,
         }),
         { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(
-            null == (t = O.emoji) ? void 0 : t.id,
-            null == (i = O.emoji) ? void 0 : i.name,
+            null == (t = C.emoji) ? void 0 : t.id,
+            null == (i = C.emoji) ? void 0 : i.name,
         );
     return (
-        (0, p.Oq)(O.emoji) || null != D || null != A || (S = f.intl.string(f.t["61wfmh"])),
+        (0, p.Oq)(C.emoji) || null != D || null != A || (S = f.intl.string(f.t["61wfmh"])),
         (0, r.jsxs)(o.P3F, {
             className: l()(h.optionCard, {
                 [h.hasError]: y || null != S,
                 [h.dropIndicatorBefore]: null != w && T < w,
                 [h.dropIndicatorAfter]: null != w && T > w,
-                [h.singleColumn]: _,
+                [h.singleColumn]: v,
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -111,14 +111,14 @@ function j(e) {
                             e,
                             x(b({}, t), {
                                 guild: j,
-                                prompt: v,
-                                option: O,
-                                index: C,
+                                prompt: _,
+                                option: C,
+                                index: O,
                                 onSave: (e) => {
-                                    (0, m.Kk)(j, v.id, { options: v.options.map((t) => (t.id === O.id ? e : t)) });
+                                    (0, m.Kk)(j, _.id, { options: _.options.map((t) => (t.id === C.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, m.Kk)(j, v.id, { options: v.options.filter((e) => e.id !== O.id) });
+                                    (0, m.Kk)(j, _.id, { options: _.options.filter((e) => e.id !== C.id) });
                                 },
                             }),
                         );
@@ -143,8 +143,8 @@ function j(e) {
                         (0, r.jsx)("div", {
                             className: h.emoji,
                             children: (0, r.jsx)(g.Z, {
-                                emojiId: null == (a = O.emoji) ? void 0 : a.id,
-                                emojiName: null == (c = O.emoji) ? void 0 : c.name,
+                                emojiId: null == (a = C.emoji) ? void 0 : a.id,
+                                emojiName: null == (c = C.emoji) ? void 0 : c.name,
                                 defaultComponent: null,
                             }),
                         }),
@@ -155,14 +155,14 @@ function j(e) {
                                     variant: "text-md/medium",
                                     color: "header-primary",
                                     lineClamp: 1,
-                                    children: O.title,
+                                    children: C.title,
                                 }),
-                                "" !== O.description &&
+                                "" !== C.description &&
                                     (0, r.jsx)(o.Text, {
                                         className: h.description,
                                         variant: "text-xs/normal",
                                         color: "header-secondary",
-                                        children: O.description,
+                                        children: C.description,
                                     }),
                             ],
                         }),
@@ -178,7 +178,7 @@ function j(e) {
         })
     );
 }
-function v(e) {
+function _(e) {
     let { guild: t, prompt: i, promptIndex: a, singleColumn: s } = e,
         d = () => {
             (0, o.ZDy)(async () => {

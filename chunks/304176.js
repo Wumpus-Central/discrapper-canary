@@ -97,16 +97,16 @@ let C = 40,
                 src: null == t.src ? t.src : (0, c.o)(t.src, C),
                 size: C,
             }),
-            w = () => {
+            D = () => {
                 (0, u.f)({
                     guildId: n.id,
                     location: { section: b.jXE.ROLE_ICON_POPOUT },
                 });
             },
-            D = () => {
+            w = () => {
                 (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            x = N ? D : w;
+            x = N ? w : D;
         return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)("div", {

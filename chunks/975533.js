@@ -3,8 +3,8 @@ var r = n(570140),
     i = n(846027),
     l = n(13245),
     a = n(287734),
-    o = n(872810),
-    s = n(223245),
+    s = n(872810),
+    o = n(223245),
     c = n(479837),
     u = n(317770),
     d = n(100527),
@@ -39,17 +39,17 @@ function k(e, t, n, r) {
     let l = performance.now();
     if (!S.Z.isConnected()) return;
     let a = null != (i = r.context) ? i : R.Yn.DEFAULT,
-        o = M.get(a);
-    null == o &&
-        ((o = {
+        s = M.get(a);
+    null == s &&
+        ((s = {
             held: new Set(),
             latched: new Set(),
             vadPriorityLatched: new Set(),
             priorityHeldOrLatched: new Set(),
         }),
-        M.set(a, o)),
-        n || (e ? o.held.add(r.id) : o.held.delete(r.id));
-    let s = !1;
+        M.set(a, s)),
+        n || (e ? s.held.add(r.id) : s.held.delete(r.id));
+    let o = !1;
     if (e) r.pressedTime = l;
     else if (
         null != r.pressedTime &&
@@ -60,16 +60,16 @@ function k(e, t, n, r) {
     ) {
         let e = L._M,
             { pttLatchingEnabled: t = !1 } = C.Z.getModeOptions(a),
-            i = n ? o.vadPriorityLatched : o.latched;
-        (s = i.has(r.id)) || !0 !== t || !(l < r.pressedTime + e) || !D
-            ? (i.delete(r.id), (s = !1))
-            : (i.add(r.id), (s = !0));
+            i = n ? s.vadPriorityLatched : s.latched;
+        (o = i.has(r.id)) || !0 !== t || !(l < r.pressedTime + e) || !D
+            ? (i.delete(r.id), (o = !1))
+            : (i.add(r.id), (o = !0));
     }
-    t && (e || s ? o.priorityHeldOrLatched.add(r.id) : o.priorityHeldOrLatched.delete(r.id));
-    let c = o.held.size > 0,
-        u = o.latched.size > 0,
+    t && (e || o ? s.priorityHeldOrLatched.add(r.id) : s.priorityHeldOrLatched.delete(r.id));
+    let c = s.held.size > 0,
+        u = s.latched.size > 0,
         d = c || u,
-        p = o.priorityHeldOrLatched.size > 0;
+        p = s.priorityHeldOrLatched.size > 0;
     (0, b.I)(c, p, d);
 }
 let U = {
@@ -202,7 +202,7 @@ let U = {
         [w.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
                 let e = I.Z.getCurrentUserActiveStream();
-                if (null != e) return (0, o.g)((0, m.V9)(e));
+                if (null != e) return (0, s.g)((0, m.V9)(e));
                 (0, _.Z)(!0, [d.Z.GO_LIVE_KEYBIND]);
             },
             keyEvents: {
@@ -212,7 +212,7 @@ let U = {
         },
         [w.kg4.TOGGLE_STREAMER_MODE]: {
             onTrigger() {
-                s.Z.setEnabled(!T.Z.enabled);
+                o.Z.setEnabled(!T.Z.enabled);
             },
             keyEvents: {
                 keyup: !0,

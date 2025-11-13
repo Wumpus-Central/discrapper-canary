@@ -84,11 +84,11 @@ function P(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -96,7 +96,7 @@ function w(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -209,8 +209,8 @@ function U(e) {
             renderVisualPlaceholderComponent: N,
             className: R,
             imgContainerClassName: P,
-            imgClassName: w,
-            focusable: D,
+            imgClassName: D,
+            focusable: w,
             hiddenSpoilers: x,
             mediaLayoutType: L,
             maxWidth: M,
@@ -307,8 +307,8 @@ function U(e) {
                         renderAdjacentContent: ei,
                         containerClassName: R,
                         className: P,
-                        imageClassName: w,
-                        shouldLink: D,
+                        imageClassName: D,
+                        shouldLink: w,
                         hiddenSpoilers: x,
                         responsive: !0,
                         mediaLayoutType: L,
@@ -332,7 +332,7 @@ function U(e) {
                 naturalWidth: H,
                 naturalHeight: Y,
                 className: o()(R, { [S.hasFooter]: U }),
-                playable: D,
+                playable: w,
                 responsive: !0,
                 mediaLayoutType: L,
                 maxWidth: M,
@@ -350,7 +350,7 @@ function U(e) {
                 item: n,
                 message: t,
                 className: P,
-                imageClassName: w,
+                imageClassName: D,
                 maxWidth: M,
                 maxHeight: j,
                 mediaLayoutType: L,
@@ -361,7 +361,7 @@ function U(e) {
                 item: n,
                 message: t,
                 className: R,
-                playable: D,
+                playable: w,
                 mimeType: ee,
                 renderAdjacentContent: ei,
                 onVolumeShow: () => X(!0),
@@ -420,7 +420,7 @@ let B = function (e) {
             footer: p,
             displayGridItem: h,
         } = e,
-        g = w(e, [
+        g = D(e, [
             "className",
             "item",
             "message",
@@ -436,7 +436,7 @@ let B = function (e) {
         [T, A] = i.useState(null != I),
         C = (0, d.JO)(I),
         R = c === v.hV.MOSAIC,
-        D = !R && ((null != E && E < x) || (null != b && b < L)),
+        w = !R && ((null != E && E < x) || (null != b && b < L)),
         j = M(y),
         k = (0, O.R_)(y),
         B = u && null != I && (0, d.yf)(E, b),
@@ -457,11 +457,11 @@ let B = function (e) {
                     getObscureReason: s,
                     hiddenSpoilers: e,
                     className: o()(t, S.mosaicItemContent, {
-                        [S.obscured]: T && !D,
+                        [S.obscured]: T && !w,
                         [S.hiddenSpoiler]: T && I === f.wk.SPOILER,
                         [S.hiddenExplicit]: T && null != I && f.Xh.has(I),
                         [S.hiddenMosaicItem]: T && e,
-                        [S.inline]: T && D,
+                        [S.inline]: T && w,
                     }),
                     focusable: !e,
                     mediaLayoutType: c,
@@ -492,7 +492,7 @@ let B = function (e) {
             null != I
                 ? (0, r.jsx)(m.ZP, {
                       type: m.ZP.Types.ATTACHMENT,
-                      inline: D,
+                      inline: w,
                       reason: I,
                       isSingleMosaicItem: u,
                       obscured: T,

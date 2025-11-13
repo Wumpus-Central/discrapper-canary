@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(661462),
     m = n(443680);
 function b(e) {
-    let { user: t, guildId: n, channelId: b, onClose: y } = e,
-        { analyticsLocations: h } = (0, l.ZP)(),
+    let { user: t, guildId: n, channelId: b, onClose: h } = e,
+        { analyticsLocations: y } = (0, l.ZP)(),
         { context: v, trackUserProfileAction: O } = (0, c.KZ)(),
         { mutualFriends: j, mutualFriendsCount: x } = (0, s.Z)(t),
         _ = (0, a.Z)();
@@ -58,7 +58,7 @@ function b(e) {
                                     channelId: b,
                                     onSelect: () => {
                                         var e, t;
-                                        null == y || y(),
+                                        null == h || h(),
                                             O({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, d.openUserProfileModal)(
                                                 ((e = (function (e) {
@@ -90,7 +90,7 @@ function b(e) {
                                                 (t = t =
                                                     {
                                                         userId: i.id,
-                                                        sourceAnalyticsLocations: h,
+                                                        sourceAnalyticsLocations: y,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

@@ -206,10 +206,10 @@ class P {
             this._config.initializeAllDefaultWidgetConfigs();
     }
 }
-function w() {
+function D() {
     return Object.values(u.i);
 }
-let D = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]),
+let w = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]),
     x = "overlay-negative-widget-experiment-bucket";
 class L extends s.Z {
     constructor() {
@@ -269,11 +269,11 @@ class L extends s.Z {
                     ),
                     i = new Set(),
                     a = new Set();
-                for (let e of w())
+                for (let e of D())
                     r
                         ? i.add(e)
                         : n
-                          ? D.has(e)
+                          ? w.has(e)
                               ? i.add(e)
                               : a.add(e)
                           : t && e !== u.i.WELCOME_GENERAL
@@ -288,7 +288,7 @@ class L extends s.Z {
                 if (__OVERLAY__) return;
                 let { notificationsToOverride: t, notificationsToRestore: n } =
                     this.getNotificationExperimentSettings(e);
-                for (let e of w()) this._settings.initializeNotification(e);
+                for (let e of D()) this._settings.initializeNotification(e);
                 for (let e of n) await this._settings.restoreNotification(e);
                 for (let e of t) await this._settings.disableNotification(e);
                 t.size > 0 &&

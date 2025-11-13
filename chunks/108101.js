@@ -26,8 +26,8 @@ var r = n(687249),
     N = "[object Array]",
     R = "[object Boolean]",
     P = "[object Date]",
-    w = "[object Error]",
-    D = "[object Function]",
+    D = "[object Error]",
+    w = "[object Function]",
     x = "[object GeneratorFunction]",
     L = "[object Map]",
     M = "[object Number]",
@@ -50,45 +50,45 @@ var r = n(687249),
     J = "[object Uint32Array]",
     $ = {};
 function ee(e, t, n, N, R, P) {
-    var w,
+    var D,
         L = t & T,
         M = t & S,
         k = t & A;
-    if ((n && (w = R ? n(e, N, R, P) : n(e)), void 0 !== w)) return w;
+    if ((n && (D = R ? n(e, N, R, P) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var U = E(e);
     if (U) {
-        if (((w = h(e)), !L)) return c(e, w);
+        if (((D = h(e)), !L)) return c(e, D);
     } else {
         var G = p(e),
-            B = G == D || G == x;
+            B = G == w || G == x;
         if (b(e)) return l(e, L);
         if (G == j || G == C || (B && !R)) {
-            if (((w = M || B ? {} : g(e)), !L)) return M ? d(e, s(w, e)) : u(e, o(w, e));
+            if (((D = M || B ? {} : g(e)), !L)) return M ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!$[G]) return R ? e : {};
-            w = m(e, G, L);
+            D = m(e, G, L);
         }
     }
     P || (P = new r());
     var Z = P.get(e);
     if (Z) return Z;
-    P.set(e, w),
+    P.set(e, D),
         v(e)
             ? e.forEach(function (r) {
-                  w.add(ee(r, t, n, r, e, P));
+                  D.add(ee(r, t, n, r, e, P));
               })
             : y(e) &&
               e.forEach(function (r, i) {
-                  w.set(i, ee(r, t, n, i, e, P));
+                  D.set(i, ee(r, t, n, i, e, P));
               });
     var F = k ? (M ? _ : f) : M ? keysIn : I,
         V = U ? void 0 : F(e);
     return (
         i(V || e, function (r, i) {
-            V && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
+            V && (r = e[(i = r)]), a(D, i, ee(r, t, n, i, e, P));
         }),
-        w
+        D
     );
 }
 ($[C] =
@@ -114,5 +114,5 @@ function ee(e, t, n, N, R, P) {
     $[Q] =
     $[J] =
         !0),
-    ($[w] = $[D] = $[Z] = !1),
+    ($[D] = $[w] = $[Z] = !1),
     (e.exports = ee);

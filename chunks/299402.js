@@ -28,7 +28,7 @@ function O(e) {
         h = (0, c.Z)(b),
         [g, x] = o.useState(null),
         [w, L] = o.useState(null),
-        [v, y] = o.useState(null),
+        [y, v] = o.useState(null),
         [D, j] = o.useState(!1);
     o.useEffect(() => {
         C(n);
@@ -54,13 +54,13 @@ function O(e) {
         }, [b]),
         M = o.useCallback(
             (e) => {
-                y(e), l(e);
+                v(e), l(e);
             },
-            [l, y],
+            [l, v],
         ),
         k = o.useCallback(() => {
-            i()(null != v, "handleSuccess called before onGuildCreated"), l(v);
-        }, [l, v]),
+            i()(null != y, "handleSuccess called before onGuildCreated"), l(y);
+        }, [l, y]),
         R = { impression_group: a.ImpressionGroups.GUILD_ADD_FLOW },
         Z = (0, s.dQu)(s.TVs.modules.modal.WIDTH_SMALL);
     return (0, r.jsx)("div", {
@@ -114,7 +114,7 @@ function O(e) {
                             impressionName: a.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                             impressionProperties: R,
                             children: (0, r.jsx)(_.Z, {
-                                createdGuildId: v,
+                                createdGuildId: y,
                                 onClose: O,
                                 onChannelPromptCompleted: k,
                                 isSlideReady: g === I._m.CHANNEL_PROMPT,

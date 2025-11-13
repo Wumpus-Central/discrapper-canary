@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(481060),
     a = n(906732),
     o = n(628581),
@@ -13,31 +13,31 @@ function d(e) {
             serverMute: n,
             suppress: d,
             centerButton: p = !1,
-            awaitingRemote: f,
-            onMouseEnter: h,
+            awaitingRemote: h,
+            onMouseEnter: f,
             onMouseLeave: m,
             onClick: g,
         } = e,
         b = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "selfMute",
             "serverMute",
@@ -48,55 +48,55 @@ function d(e) {
             "onMouseLeave",
             "onClick",
         ]);
-    let { parentAnalyticsLocation: _ } = (0, a.ZP)(),
-        y = t || n || d,
-        C = p ? u.d : u.Z,
-        v = (0, o.Z)(t, n, d, f),
-        { events: O, play: x, Component: E } = (0, c.b)(y),
-        j = n || d ? l.v0G : E;
+    let { parentAnalyticsLocation: y } = (0, a.ZP)(),
+        C = t || n || d,
+        v = p ? u.d : u.Z,
+        _ = (0, o.Z)(t, n, d, h),
+        { events: x, play: j, Component: O } = (0, c.b)(C),
+        E = n || d ? l.v0G : O;
     return (
-        i.useEffect(() => () => x(), [x, y]),
-        (0, r.jsx)(
-            C,
+        r.useEffect(() => () => j(), [j, C]),
+        (0, i.jsx)(
+            v,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
             })(
                 {
-                    iconComponent: j,
+                    iconComponent: E,
                     isTrayButton: !0,
-                    caretColor: y ? "red" : "primaryDark",
-                    color: y ? "red" : void 0,
-                    label: v,
+                    caretColor: C ? "red" : "primaryDark",
+                    color: C ? "red" : void 0,
+                    label: _,
                     onMouseEnter: (e) => {
-                        null == h || h(e), O.onMouseEnter();
+                        null == f || f(e), x.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == m || m(e), O.onMouseLeave();
+                        null == m || m(e), x.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == g || g(e), (0, s.v)(_, s.d.MIC, t);
+                        null == g || g(e), (0, s.v)(y, s.d.MIC, t);
                     },
                 },
                 b,

@@ -1,6 +1,6 @@
 n.d(t, {
     Tk: () => P,
-    ZP: () => w,
+    ZP: () => D,
     ef: () => A,
     r8: () => R,
 }),
@@ -138,15 +138,15 @@ function P(e, t) {
         C = O.some((e) => !0 === e.me_vote),
         N = !b && C,
         P = N || h || y,
-        w = _ && T && (!C || b || P),
-        D = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
-        x = null != D ? d.ZP.getSelfMember(D) : null,
+        D = _ && T && (!C || b || P),
+        w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
+        x = null != w ? d.ZP.getSelfMember(w) : null,
         L = (0, l.EY)(x),
         M = (0, c.b)(x),
         j = !E && A && !N && _ && !L && !M;
     return {
         poll: s,
-        canTapAnswers: w,
+        canTapAnswers: D,
         canRemoveVote: N && _ && !h,
         canShowVoteCounts: P,
         canSubmitVote: j,
@@ -165,7 +165,7 @@ function P(e, t) {
         showResults: y,
     };
 }
-function w(e, t) {
+function D(e, t) {
     var n, o;
     let {
             animateEmoji: s = !1,
@@ -185,8 +185,8 @@ function w(e, t) {
     if (null == S) return;
     let {
             canTapAnswers: R,
-            canRemoveVote: w,
-            canShowVoteCounts: D,
+            canRemoveVote: D,
+            canShowVoteCounts: w,
             canSubmitVote: x,
             expirationLabel: L = T.intl.string(T.t["e+J3JZ"]),
             hasSelectedAnswer: M,
@@ -250,7 +250,7 @@ function w(e, t) {
             canSubmitVote: x,
             hasVoted: j,
             isEditingVote: k,
-            canRemoveVote: w,
+            canRemoveVote: D,
             isInteractive: G,
             showResults: H,
         })
@@ -362,7 +362,7 @@ function w(e, t) {
         canTapAnswers: R,
         canSelectMultipleAnswers: $,
         hasSelectedAnswer: M,
-        canShowVoteCounts: D,
+        canShowVoteCounts: w,
         hasVoted: j,
         isExpired: U,
         myAvatarUrl: g,

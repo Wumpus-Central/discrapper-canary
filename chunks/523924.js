@@ -14,17 +14,17 @@ let p = (e) => {
             reapplyText: n,
             onReapply: p,
             confirmText: f,
-            onWithdrawApplication: m,
-            rejectionReason: h = null,
-            guild: g = null,
+            onWithdrawApplication: h,
+            rejectionReason: g = null,
+            guild: m = null,
         } = e,
         _ = (0, l.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null != (e = null == g ? void 0 : g.id) ? e : "0");
+            return c.Z.getCooldown(null != (e = null == m ? void 0 : m.id) ? e : "0");
         });
     i.useEffect(() => {
-        null == _ && null != g && o.Z.fetchJoinRequestCooldown(g.id);
-    }, [_, g]);
+        null == _ && null != m && o.Z.fetchJoinRequestCooldown(m.id);
+    }, [_, m]);
     let b = (null != _ ? _ : 0) > 0,
         E = b && null != _ ? Math.ceil((1000 * _ - Date.now()) / 86400000) : 0;
     return (0, r.jsxs)("div", {
@@ -45,11 +45,11 @@ let p = (e) => {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children:
-                            (null == g ? void 0 : g.name) != null
-                                ? u.intl.formatToPlainString(u.t["P+/gzA"], { guildName: g.name })
+                            (null == m ? void 0 : m.name) != null
+                                ? u.intl.formatToPlainString(u.t["P+/gzA"], { guildName: m.name })
                                 : u.intl.string(u.t.gBPcuP),
                     }),
-                    null != h && "" !== h
+                    null != g && "" !== g
                         ? (0, r.jsxs)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-secondary",
@@ -58,7 +58,7 @@ let p = (e) => {
                                       className: d.rejectionReasonLabel,
                                       children: u.intl.string(u.t.cf1psW),
                                   }),
-                                  (0, r.jsx)("span", { children: h }),
+                                  (0, r.jsx)("span", { children: g }),
                               ],
                           })
                         : null,
@@ -82,7 +82,7 @@ let p = (e) => {
                         }),
                     }),
                     (0, r.jsx)(s.Button, {
-                        onClick: m,
+                        onClick: h,
                         variant: "critical-primary",
                         size: "md",
                         text: f,

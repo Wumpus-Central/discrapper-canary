@@ -33,8 +33,8 @@ var r = n(951288),
     N = n(960048),
     R = n(735521),
     P = n(325100),
-    w = n(659848),
-    D = n(583046),
+    D = n(659848),
+    w = n(583046),
     x = n(897829),
     L = n(74179),
     M = n(896246),
@@ -144,7 +144,7 @@ function ee(e) {
             setCurrency: eI,
             currencyLoading: eT,
             currencies: eS,
-        } = (0, D.Z)({
+        } = (0, w.Z)({
             activeSubscription: K,
             skuIDs: $,
             paymentSourceId: eg,
@@ -156,8 +156,8 @@ function ee(e) {
         {
             step: eR,
             setStep: eP,
-            steps: ew,
-            breadcrumbsData: eD,
+            steps: eD,
+            breadcrumbsData: ew,
             previousStepRef: ex,
         } = (0, B.Z)({
             stepConfigs: q,
@@ -187,7 +187,7 @@ function ee(e) {
         [ez, eq] = (0, c.Wu)([O.Z], () => [O.Z.purchaseTokenAuthState, O.Z.purchaseTokenHash]),
         [eX, eQ, eJ, e$] = (0, c.Wu)([F.Z], () => [F.Z.browserCheckoutState, F.Z.loadId, F.Z.skuId, F.Z.planId]),
         [e0, e1] = i.useState(null),
-        [e3, e2] = i.useState(null),
+        [e2, e3] = i.useState(null),
         [e4, e8] = i.useState(null),
         [e5, e6] = i.useState(null),
         [e7, e9] = i.useState(null),
@@ -207,7 +207,7 @@ function ee(e) {
     i.useEffect(() => {
         null != tc.current || tl.isSame(s()(0)) || (tc.current = tl);
     }, [tl]),
-        (0, w.m)(ef, eg);
+        (0, D.m)(ef, eg);
     let {
             skusById: tu,
             hasFetchedSkus: td,
@@ -251,8 +251,8 @@ function ee(e) {
         { isDisplayingWowMomentConfirmation: tP } = (0, c.cj)([E.Z], () => ({
             isDisplayingWowMomentConfirmation: E.Z.isDisplayingWowMomentConfirmation,
         })),
-        tw = tR ? W.premiumBrandRefreshBackground : void 0,
-        { enabled: tD } = (0, g.l)({ location: "PaymentContext" }),
+        tD = tR ? W.premiumBrandRefreshBackground : void 0,
+        { enabled: tw } = (0, g.l)({ location: "PaymentContext" }),
         tx = (0, P.uH)({ location: "PaymentModal" }),
         tL = i.useMemo(() => {
             if (tx) return V.cL.APPLE_PAYMENT_LINK;
@@ -262,7 +262,7 @@ function ee(e) {
             z(
                 {
                     stripe: ec,
-                    paymentElementsEnabled: tD,
+                    paymentElementsEnabled: tw,
                     contextMetadata: eZ,
                     blockedPayments: eu,
                     activeSubscription: K,
@@ -289,9 +289,9 @@ function ee(e) {
                 setHasAcceptedTerms: eN,
                 step: eR,
                 setStep: eP,
-                steps: ew,
+                steps: eD,
                 stepConfigs: q,
-                breadcrumbs: eD,
+                breadcrumbs: ew,
                 previousStepRef: ex,
                 purchaseState: eL,
                 setPurchaseState: eM,
@@ -310,8 +310,8 @@ function ee(e) {
                 browserCheckoutStatePlanId: e$,
                 bodyNode: e0,
                 setBodyNode: e1,
-                footerNode: e3,
-                setFooterNode: e2,
+                footerNode: e2,
+                setFooterNode: e3,
                 modalOverlayNode: e4,
                 setModalOverlayNode: e8,
                 selectedSkuId: eF,
@@ -349,7 +349,7 @@ function ee(e) {
                 inReverseTrial: tN,
                 enablePremiumBrandRefresh: tR,
                 isDisplayingWowMomentConfirmation: tP,
-                premiumBrandRefreshBackgroundClassName: tw,
+                premiumBrandRefreshBackgroundClassName: tD,
                 wasTier2PremiumBeforePurchase: el,
                 customCheckoutFlow: tL,
             },

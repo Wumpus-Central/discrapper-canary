@@ -188,8 +188,8 @@ function v(e, t, n, a) {
                 rowHeight: N,
                 footerHeight: R = 0,
                 sidebarHeight: P,
-                listHeaderHeight: w = 0,
-                renderSection: D,
+                listHeaderHeight: D = 0,
+                renderSection: w,
                 renderRow: x,
                 renderFooter: L,
                 renderSidebar: M,
@@ -270,7 +270,7 @@ function v(e, t, n, a) {
                 rowHeight: N,
                 footerHeight: R,
                 sidebarHeight: P,
-                listHeaderHeight: w,
+                listHeaderHeight: D,
                 paddingTop: B,
                 paddingBottom: Z,
                 chunkSize: H,
@@ -342,7 +342,7 @@ function v(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== ea.current.dirty && (ea.current.dirty = 2);
-            }, [ec, D, x, L, U, el, es, ea]),
+            }, [ec, w, x, L, U, el, es, ea]),
             (0, u.rS)({
                 scrollerRef: ei,
                 anchor: e_,
@@ -387,7 +387,7 @@ function v(e, t, n, a) {
                                                 items: ec,
                                                 renderListHeader: j,
                                                 stickyListHeader: k,
-                                                renderSection: D,
+                                                renderSection: w,
                                                 renderRow: x,
                                                 renderFooter: L,
                                                 wrapSection: U,
@@ -395,7 +395,7 @@ function v(e, t, n, a) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, j, k, D, x, L, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, j, k, w, x, L, U, es],
                             ),
                             i.useMemo(
                                 () =>

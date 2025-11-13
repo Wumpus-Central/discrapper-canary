@@ -34,8 +34,8 @@ var r,
     N = n(585483),
     R = n(55935),
     P = n(408433),
-    w = n(956664),
-    D = n(624138),
+    D = n(956664),
+    w = n(624138),
     x = n(591759),
     L = n(468846),
     M = n(401419),
@@ -138,7 +138,7 @@ function et(e) {
             onControlsHide: C,
             onControlsShow: R,
             onVolumeChange: P,
-            onMute: D,
+            onMute: w,
             href: x,
             placeholder: M,
             placeholderVersion: j,
@@ -164,7 +164,7 @@ function et(e) {
     );
     let { width: Y, height: W } = u;
     null != d && ((Y = d.width), (W = d.height));
-    let K = (0, w.Tj)({
+    let K = (0, D.Tj)({
         width: Y,
         height: W,
         maxWidth: l,
@@ -193,7 +193,7 @@ function et(e) {
                 volume: v,
                 onPlay: I,
                 onPause: T,
-                onMute: D,
+                onMute: w,
                 onControlsHide: C,
                 onControlsShow: R,
                 sourceMetadata: U,
@@ -847,7 +847,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: r, maxMediaHeight: a } = this.state,
             o = null != (e = n.image) ? e : n.video;
         if (null == o) return null;
-        let { width: s, height: c } = (0, w.Tj)({
+        let { width: s, height: c } = (0, D.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: r,
@@ -940,7 +940,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: o, maxMediaHeight: s } = this.state,
             l = null != t ? t : r;
         if (null == l) return;
-        let { width: c } = (0, w.Tj)({
+        let { width: c } = (0, D.Tj)({
             width: l.width,
             height: l.height,
             maxWidth: o,
@@ -950,7 +950,7 @@ class er extends (r = a.PureComponent) {
         if (i === k.hBH.RICH && void 0 !== n) return X;
         if (i === k.hBH.GIFV) {
             var u, d, f, _;
-            let { width: e } = (0, w.Tj)({
+            let { width: e } = (0, D.Tj)({
                 width:
                     null != (d = null != (u = null == r ? void 0 : r.width) ? u : null == a ? void 0 : a.width) ? d : 0,
                 height:
@@ -1013,7 +1013,7 @@ class er extends (r = a.PureComponent) {
             let e = null != r ? r : a;
             if (void 0 !== e) {
                 let { minWidth: n, minHeight: r } = null != (t = this.getMinSize()) ? t : {},
-                    { width: i } = (0, w.Tj)({
+                    { width: i } = (0, D.Tj)({
                         width: e.width,
                         height: e.height,
                         maxWidth: l,
@@ -1025,7 +1025,7 @@ class er extends (r = a.PureComponent) {
             }
         }
         let f = J / (c.Z.fontScale / 100),
-            _ = (null != s ? (0, D.TZ)(s) : 0) >= f,
+            _ = (null != s ? (0, w.TZ)(s) : 0) >= f,
             p = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= Q,
             h = _ || p;
         return {

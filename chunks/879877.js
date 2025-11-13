@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(481060),
     u = n(259580),
     d = n(785717),
-    g = n(86419),
-    f = n(978369),
+    f = n(86419),
+    g = n(978369),
     p = n(286957),
     m = n(388032),
     b = n(44258);
@@ -19,7 +19,7 @@ function h(e) {
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
         P = o.qH,
-        I = a && !h && (0, g.M8)(c) && x.length < P,
+        I = a && !h && (0, f.M8)(c) && x.length < P,
         { trackUserProfileAction: w } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
@@ -86,7 +86,7 @@ function h(e) {
                     ],
                 }),
             I &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(g.Z, {
                     tags: n,
                     widgetType: c,
                     applicationId: s,
@@ -98,9 +98,9 @@ function h(e) {
 let y = (e) => {
         let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: l, ref: o } = e,
             { trackUserProfileEditAction: u } = (0, d.KZ)(),
-            f = (0, p.zK)(t);
-        if (null == f) return null;
-        let { getText: h, icon: y } = f;
+            g = (0, p.zK)(t);
+        if (null == g) return null;
+        let { getText: h, icon: y } = g;
         return (0, r.jsxs)("li", {
             className: b.tag,
             ref: o,
@@ -117,7 +117,7 @@ let y = (e) => {
                         text: m.intl.string(m.t.Otv9fP),
                         children: (0, r.jsx)(s.P3F, {
                             onClick: () => {
-                                (0, g.RZ)(a, i, t),
+                                (0, f.RZ)(a, i, t),
                                     u({
                                         action: "TAG_REMOVED",
                                         widgetEdited: a,
@@ -187,23 +187,23 @@ let y = (e) => {
             let s = null != (o = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? o : 0,
                 u = null != (c = null == (l = t.current) ? void 0 : l.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
-                g = 0,
                 f = 0,
+                g = 0,
                 p = r.current;
             for (let e = 0; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((f += t.offsetWidth + 4) > 296) break;
-                    g++;
+                    if ((g += t.offsetWidth + 4) > 296) break;
+                    f++;
                 }
             }
-            f = 0;
-            for (let e = g; e < n.length; e++) {
+            g = 0;
+            for (let e = f; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((f += t.offsetWidth + 4) > 296 - s - u - d) break;
-                    g++;
+                    if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
+                    f++;
                 }
             }
-            a(n.length - g);
+            a(n.length - f);
         }, [e, t, null == n ? void 0 : n.join(""), r, a]);

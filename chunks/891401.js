@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var a = n(951288),
     i = n(647438),
-    l = n(793030),
-    r = n(704215),
+    r = n(793030),
+    l = n(704215),
     s = n(481060),
     o = n(605236),
     c = n(675478),
@@ -15,13 +15,13 @@ function u() {
 }
 function m() {
     let e = i.useCallback(() => {
-            (0, c.Z1)(r.z.NITRO_TENURE_BADGE_LEVEL_UP);
+            (0, c.Z1)(l.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, o.Fo)(r.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, o.Fo)(l.z.NITRO_TENURE_BADGE_LEVEL_UP),
         n = null != t ? new Date(t) : null;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, a.jsx)(r.X6q, {
                 className: d.header,
                 variant: "heading-lg/semibold",
                 children: "Tenure Badges",

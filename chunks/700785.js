@@ -111,8 +111,8 @@ let A = a.vB(0),
         I.Plq.USE_SOUNDBOARD,
         I.Plq.USE_VAD,
     ),
-    w = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY),
-    D = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY, I.Plq.CHANGE_NICKNAME),
+    D = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY),
+    w = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY, I.Plq.CHANGE_NICKNAME),
     x = a.$e(
         I.Plq.MANAGE_GUILD,
         I.Plq.MANAGE_ROLES,
@@ -145,7 +145,7 @@ function M(e, t, n, r) {
         let o = r[t.userId];
         null != o && ((n = a.Od(n, o.deny)), (n = a.IH(n, o.allow)));
         let c = a.e$(n, I.Plq.ADMINISTRATOR);
-        (0, s.EY)(t) && !c && (n = a.hX(n, D)), (0, l.b)(t) && !c && (n = a.hX(n, w));
+        (0, s.EY)(t) && !c && (n = a.hX(n, w)), (0, l.b)(t) && !c && (n = a.hX(n, D));
     }
     return n;
 }

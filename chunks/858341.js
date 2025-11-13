@@ -1,62 +1,62 @@
-t.d(n, { default: () => k });
-var l = t(951288);
-t(647438);
-var s = t(374470),
-    i = t(481060),
-    c = t(239091),
-    r = t(299206),
-    a = t(26737),
-    d = t(905041),
-    o = t(89013),
-    u = t(449751),
-    h = t(601184),
-    p = t(168405),
-    f = t(536639),
-    g = t(388032);
-function k(e) {
-    var n;
-    let t,
-        k,
-        Z,
-        { channel: m, message: x, target: S, attachment: _, onSelect: j } = e,
-        v = S;
-    if (null != _) k = t = _.url;
+n.d(e, { default: () => m });
+var i = n(951288);
+n(647438);
+var r = n(374470),
+    l = n(481060),
+    s = n(239091),
+    a = n(299206),
+    o = n(26737),
+    c = n(905041),
+    d = n(89013),
+    h = n(449751),
+    g = n(601184),
+    u = n(168405),
+    p = n(536639),
+    f = n(388032);
+function m(t) {
+    var e;
+    let n,
+        m,
+        v,
+        { channel: j, message: x, target: y, attachment: b, onSelect: C } = t,
+        E = y;
+    if (null != b) m = n = b.url;
     else
-        for (; (0, s.kK)(v); )
-            (0, s.kK)(v, HTMLImageElement) && null != v.src && (k = v.src),
-                (0, s.kK)(v, HTMLAnchorElement) && null != v.href && ((t = v.href), (Z = v.textContent)),
-                (v = v.parentNode);
-    let b = null == (n = document.getSelection()) ? void 0 : n.toString(),
-        C = (0, a.Z)(b),
-        Q = (0, o.Z)(b),
-        w = (0, f.Z)(x, m),
-        T = (0, p.Z)(x, m),
-        B = (0, u.Z)(x, m),
-        H = (0, h.Z)(x, m),
-        I = (0, d.Z)(null != t ? t : k, Z),
-        K = (0, r.Z)({
+        for (; (0, r.kK)(E); )
+            (0, r.kK)(E, HTMLImageElement) && null != E.src && (m = E.src),
+                (0, r.kK)(E, HTMLAnchorElement) && null != E.href && ((n = E.href), (v = E.textContent)),
+                (E = E.parentNode);
+    let S = null == (e = document.getSelection()) ? void 0 : e.toString(),
+        O = (0, o.Z)(S),
+        M = (0, d.Z)(S),
+        P = (0, p.Z)(x, j),
+        Z = (0, u.Z)(x, j),
+        N = (0, h.Z)(x, j),
+        I = (0, g.Z)(x, j),
+        k = (0, c.Z)(null != n ? n : m, v),
+        T = (0, a.Z)({
             id: x.id,
-            label: g.intl.string(g.t.zBoHlf),
+            label: f.intl.string(f.t.zBoHlf),
             shiftId: "".concat(x.channel_id, "-").concat(x.id),
         }),
-        M = (0, r.Z)({
+        D = (0, a.Z)({
             id: x.author.id,
-            label: g.intl.string(g.t.Muw4wm),
+            label: f.intl.string(f.t.Muw4wm),
         });
-    return (0, l.jsxs)(i.v2r, {
+    return (0, i.jsxs)(l.v2r, {
         navId: "message",
-        onClose: c.Zy,
-        "aria-label": g.intl.string(g.t.ChPNkN),
-        onSelect: j,
+        onClose: s.Zy,
+        "aria-label": f.intl.string(f.t.ChPNkN),
+        onSelect: C,
         children: [
-            (0, l.jsx)(i.kSQ, { children: C }),
-            (0, l.jsx)(i.kSQ, { children: Q }),
-            (0, l.jsxs)(i.kSQ, {
-                children: [w, T, B, H],
+            (0, i.jsx)(l.kSQ, { children: O }),
+            (0, i.jsx)(l.kSQ, { children: M }),
+            (0, i.jsxs)(l.kSQ, {
+                children: [P, Z, N, I],
             }),
-            (0, l.jsx)(i.kSQ, { children: I }),
-            (0, l.jsxs)(i.kSQ, {
-                children: [K, M],
+            (0, i.jsx)(l.kSQ, { children: k }),
+            (0, i.jsxs)(l.kSQ, {
+                children: [T, D],
             }),
         ],
     });

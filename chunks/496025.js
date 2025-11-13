@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(388685), n(35282);
+n.d(t, { Z: () => O }), n(388685), n(35282);
 var a = n(951288),
     i = n(647438),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     s = n(602715),
     o = n(442837),
     c = n(481060),
@@ -24,8 +24,8 @@ var a = n(951288),
 function E() {
     var e;
     let t = (0, o.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
-        [n, l] = i.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: r, options: d } = (0, o.cj)([h.Z, g.default, x.Z], () => ({
+        [n, r] = i.useState(t.length > 0 ? t[0].channelId : void 0),
+        { selectedChannel: l, options: d } = (0, o.cj)([h.Z, g.default, x.Z], () => ({
             selectedChannel: h.Z.getChannel(n),
             options: t.map((e) => {
                 let t = h.Z.getChannel(e.channelId);
@@ -37,14 +37,14 @@ function E() {
         })),
         v = i.useCallback(() => {
             var e;
-            if (null == r || !r.isPrivate()) return;
-            let t = (0, b.x9)(null != (e = r.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            p.Z.updatePrivateChannelRecipientFlags(r.id, t);
-        }, [r]),
+            if (null == l || !l.isPrivate()) return;
+            let t = (0, b.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            p.Z.updatePrivateChannelRecipientFlags(l.id, t);
+        }, [l]),
         j =
-            null != r &&
-            !!r.isPrivate() &&
-            (0, b.yE)(null != (e = r.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            null != l &&
+            !!l.isPrivate() &&
+            (0, b.yE)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -59,7 +59,7 @@ function E() {
                         options: d,
                         placeholder: "Select DM",
                         value: n,
-                        onChange: l,
+                        onChange: r,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
                             let t = h.Z.getChannel(e.value);
@@ -96,7 +96,7 @@ function T() {
         onClick: e,
     });
 }
-function N() {
+function O() {
     let e = (0, o.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], o.pF).map((e) => {
         let [t, n, { label: i }] = e;
         return (0, a.jsx)(
@@ -111,7 +111,7 @@ function N() {
         );
     });
     return (0, a.jsxs)("div", {
-        className: r()(S.panel, C.panel),
+        className: l()(S.panel, C.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: C.divider }),

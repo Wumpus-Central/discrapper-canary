@@ -108,9 +108,9 @@ let v = i.memo(function (e) {
         N = A === f.O.BURST,
         R = (0, _.y4)(E, b, A),
         P = (0, d.v)(N && null != O ? O : []),
-        w = i ? h : p,
-        D = N ? y : g,
-        x = (0, u.y)(D, _.aO),
+        D = i ? h : p,
+        w = N ? y : g,
+        x = (0, u.y)(w, _.aO),
         L = {};
     if (N && null != P) {
         var M;
@@ -124,23 +124,23 @@ let v = i.memo(function (e) {
         borderColor: n,
     };
     return (0, r.jsxs)("div", {
-        className: o()(w.reaction, w.reactionInner, m, {
-            [w.reactionMe]: R,
-            [w.reactionReadOnly]: v && !I && !S && !T,
+        className: o()(D.reaction, D.reactionInner, m, {
+            [D.reactionMe]: R,
+            [D.reactionReadOnly]: v && !I && !S && !T,
         }),
         style: L,
         children: [
             (0, r.jsx)(c.Z, {
-                className: o()({ [w.hideEmoji]: a }),
+                className: o()({ [D.hideEmoji]: a }),
                 emojiId: s.id,
                 emojiName: s.name,
                 size: C,
                 animated: N && s.animated,
             }),
             (0, r.jsx)("div", {
-                className: w.reactionCount,
+                className: D.reactionCount,
                 style: j,
-                children: D,
+                children: w,
             }),
         ],
     });

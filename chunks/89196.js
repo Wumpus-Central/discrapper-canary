@@ -15,39 +15,39 @@ function s(e, t, r) {
         e
     );
 }
-let a = { sentGifts: {} };
-function o(e, t) {
+let o = { sentGifts: {} };
+function a(e, t) {
     return "".concat(e, ":").concat(t);
 }
 class c extends (n = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((a = e), this.cleanupExpiredGifts());
+        null != e && ((o = e), this.cleanupExpiredGifts());
     }
     getState() {
-        return a;
+        return o;
     }
     hasSentGift(e, t) {
-        let r = o(e, t),
-            n = a.sentGifts[r];
+        let r = a(e, t),
+            n = o.sentGifts[r];
         return !(null == n || new Date(n.expiresAt) < new Date());
     }
     getSentGift(e, t) {
-        let r = o(e, t),
-            n = a.sentGifts[r];
+        let r = a(e, t),
+            n = o.sentGifts[r];
         return null == n || new Date(n.expiresAt) < new Date() ? null : n;
     }
     cleanupExpiredGifts() {
         let e = new Date();
-        for (let [t, r] of Object.entries(a.sentGifts)) new Date(r.expiresAt) < e && delete a.sentGifts[t];
+        for (let [t, r] of Object.entries(o.sentGifts)) new Date(r.expiresAt) < e && delete o.sentGifts[t];
     }
 }
 s(c, "displayName", "SentGiftsStore"), s(c, "persistKey", "SentGiftsStore");
 let u = new c(l.Z, {
     WISHLIST_GIFT_SENT: function (e) {
-        let t = o(e.skuId, e.recipientId),
+        let t = a(e.skuId, e.recipientId),
             r = new Date(),
             n = new Date(r.getTime() + 172800000);
-        a.sentGifts[t] = {
+        o.sentGifts[t] = {
             skuId: e.skuId,
             recipientId: e.recipientId,
             sentAt: r.toISOString(),

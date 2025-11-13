@@ -67,13 +67,13 @@ let _ = i.memo(function (e) {
             null != _ && r.includes(_) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t);
         }, [n.id, _, m, b]),
         { density: j } = (0, l.TCT)(),
-        C = "compact" === j ? 8 : p.$k;
+        x = "compact" === j ? 8 : p.$k;
     switch (t) {
         case u.wZ:
-            return (0, r.jsx)("div", { style: { height: C } });
+            return (0, r.jsx)("div", { style: { height: x } });
         case u.wd:
             if (n.features.has(h.GuildFeatures.HUB)) return null;
-            return (0, r.jsx)("div", { style: { height: C } });
+            return (0, r.jsx)("div", { style: { height: x } });
         case u.p2:
             return (0, r.jsx)(d.P, { name: O ? f.intl.string(f.t.mlPMCy) : f.intl.string(f.t.k8fFjp) });
         case m.recentsSectionNumber:
@@ -82,10 +82,10 @@ let _ = i.memo(function (e) {
                 onDismiss: v,
             });
         case m.voiceChannelsSectionNumber: {
-            var x;
+            var C;
             let e = m.getCategoryFromSection(m.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null == (x = m.getChannelFromSectionRow(t, 0)) ? void 0 : x.channel;
+            let n = null == (C = m.getChannelFromSectionRow(t, 0)) ? void 0 : C.channel;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)("div", { className: g.sectionDivider }),

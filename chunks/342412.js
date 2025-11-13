@@ -1,7 +1,7 @@
-i.d(e, { Z: () => r });
+i.d(e, { Z: () => h });
 var s = i(684827),
     n = i(898625);
-function a(t, e, i) {
+function r(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -14,8 +14,8 @@ function a(t, e, i) {
         t
     );
 }
-let h = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"],
-    r = class {
+let a = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"],
+    h = class {
         checkBounds() {
             this.x > this.offscreenX
                 ? (this.x = -this.size)
@@ -37,13 +37,13 @@ let h = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"],
                 (t.globalAlpha = 1);
         }
         constructor() {
-            a(this, "size", (0, s.M)(2, 3)),
-                a(this, "depth", (0, s.M)(1, 4)),
-                a(this, "positionMultiplier", this.depth / 4),
-                a(this, "color", h[4 - this.depth]),
-                a(this, "offscreenX", n.pg + this.size),
-                a(this, "offscreenY", n.pg + this.size),
-                a(this, "x", (0, s.M)(-this.size, this.offscreenX)),
-                a(this, "y", (0, s.M)(-this.size, this.offscreenY));
+            r(this, "size", (0, s.M)(2, 3)),
+                r(this, "depth", (0, s.M)(1, 4)),
+                r(this, "positionMultiplier", this.depth / 4),
+                r(this, "color", a[4 - this.depth]),
+                r(this, "offscreenX", n.pg + this.size),
+                r(this, "offscreenY", n.pg + this.size),
+                r(this, "x", (0, s.M)(-this.size, this.offscreenX)),
+                r(this, "y", (0, s.M)(-this.size, this.offscreenY));
         }
     };

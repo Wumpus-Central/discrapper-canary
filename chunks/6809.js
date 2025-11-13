@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,28 +10,28 @@ var r = n(951288),
     d = n(210887),
     p = n(981631),
     f = n(388032),
-    m = n(932720);
-let h = function () {
+    h = n(932720);
+let g = function () {
     let { analyticsLocations: e } = (0, c.ZP)(),
         t = (0, l.e7)([d.Z], () => d.Z.theme),
         n = i.useRef(null);
     i.useEffect(() => {
         null == n.current && (n.current = t);
     }, [t]);
-    let h = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
-        g = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
+    let g = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
+        m = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
         _ = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.MIDNIGHT),
         b = i.useMemo(
             () => [
                 {
                     theme: p.BRd.LIGHT,
                     label: f.t.K2sFfo,
-                    color: h.hex(),
+                    color: g.hex(),
                 },
                 {
                     theme: p.BRd.DARKER,
                     label: f.t.b8Cei3,
-                    color: g.hex(),
+                    color: m.hex(),
                 },
                 {
                     theme: p.BRd.MIDNIGHT,
@@ -39,7 +39,7 @@ let h = function () {
                     color: _.hex(),
                 },
             ],
-            [h, g, _],
+            [g, m, _],
         ),
         E = i.useCallback(
             (t) => {
@@ -56,27 +56,27 @@ let h = function () {
             null != n.current && E(n.current);
         }, [E]);
     return (0, r.jsx)("div", {
-        className: m.themeSection,
+        className: h.themeSection,
         children: (0, r.jsxs)("div", {
-            className: m.themeSelector,
+            className: h.themeSelector,
             children: [
                 b.map((e) =>
                     (0, r.jsxs)(
                         "button",
                         {
                             type: "button",
-                            className: m.themeOption,
+                            className: h.themeOption,
                             onClick: () => E(e.theme),
                             "aria-label": f.intl.string(e.label),
                             children: [
                                 (0, r.jsx)("div", {
                                     className: ""
-                                        .concat(m.themeCircle, " ")
-                                        .concat(t === e.theme ? m.themeCircleSelected : ""),
+                                        .concat(h.themeCircle, " ")
+                                        .concat(t === e.theme ? h.themeCircleSelected : ""),
                                     style: { backgroundColor: e.color },
                                 }),
                                 (0, r.jsx)("span", {
-                                    className: m.themeLabel,
+                                    className: h.themeLabel,
                                     children: f.intl.string(e.label),
                                 }),
                             ],

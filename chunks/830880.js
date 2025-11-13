@@ -10,23 +10,23 @@ var r = n(951288),
     d = n(921944),
     p = n(484710),
     f = n(526761),
-    m = n(726985),
-    h = n(388032),
-    g = n(252319);
+    h = n(726985),
+    g = n(388032),
+    m = n(252319);
 function _() {
     let [e, t] = (0, a.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return i.useMemo(() => e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
         ? (0, r.jsx)(s.f, {
-              label: h.t.zqv4nV,
+              label: g.t.zqv4nV,
               labelHook: () => {
                   (0, c.openUserSettings)(o.n.CONTENT_AND_SOCIAL_PANEL, {
                       section: u.oAB.CONTENT_AND_SOCIAL,
-                      subsection: m.s6.RESTRICTED_USERS,
+                      subsection: h.s6.RESTRICTED_USERS,
                       scrollPosition: f.FY.RESTRICTED_ACCOUNTS,
                   });
               },
               dismissNotice: () => t(d.L.USER_DISMISS),
-              className: g.blockedIgnoredSettingsNotice,
+              className: m.blockedIgnoredSettingsNotice,
               noticeType: p.nq.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
           })
         : null;

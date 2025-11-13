@@ -1,22 +1,22 @@
 n.d(t, {
-    lW: () => s,
-    tK: () => a,
+    lW: () => a,
+    tK: () => s,
 });
 var i,
-    r = n(367907),
-    c = n(626135),
-    l = n(63063),
+    c = n(367907),
+    l = n(626135),
+    r = n(63063),
     o = n(981631),
-    a =
+    s =
         (((i = {}).DESCRIPTION = "description"),
         (i.CATEGORIES = "categories"),
         (i.TAGS = "tags"),
         (i.AGREE_TO_RULES = "agree_to_rules"),
         i);
-let s = (e) => {
-    let { articleId: t, guildId: n, modalStep: i = null, pageView: a = null } = e;
-    open(l.Z.getArticleURL(t)),
-        c.default.track(
+let a = (e) => {
+    let { articleId: t, guildId: n, modalStep: i = null, pageView: s = null } = e;
+    open(r.Z.getArticleURL(t)),
+        l.default.track(
             o.rMx.DISCOVERY_SETUP_CTA_CLICKED,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -45,11 +45,11 @@ let s = (e) => {
             })(
                 {
                     cta_name: o.b8q,
-                    discovery_settings_view: a,
+                    discovery_settings_view: s,
                     help_center_article_id: t,
                     modal_step: i,
                 },
-                (0, r.hH)(n),
+                (0, c.hH)(n),
             ),
         );
 };

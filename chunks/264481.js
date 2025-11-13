@@ -19,14 +19,14 @@ var r = n(951288),
     p = n(981631),
     m = n(388032),
     b = n(839468);
-let y = [
+let h = [
         () => m.intl.string(m.t.madJdE),
         () => m.intl.string(m.t.NYmfoP),
         () => m.intl.string(m.t.R2PaCg),
         () => m.intl.string(m.t.laSR8h),
         () => m.intl.string(m.t.DnsJE8),
     ],
-    h = [
+    y = [
         () => m.intl.string(m.t.nFSbeE),
         () => m.intl.string(m.t.gTcxOz),
         () => m.intl.string(m.t["8T0wYj"]),
@@ -94,7 +94,7 @@ function x() {
     let e = m.intl.string(m.t.RnD2yZ),
         [t] = i.useState(() => {
             var e;
-            return (null != (e = (0, a.sample)(y)) ? e : y[0])();
+            return (null != (e = (0, a.sample)(h)) ? e : h[0])();
         });
     return (0, r.jsx)(j, {
         heading: e,
@@ -105,7 +105,7 @@ function _() {
     let e = m.intl.string(m.t.bFgqYJ),
         [t] = i.useState(() => {
             var e;
-            return (null != (e = (0, a.sample)(h)) ? e : h[0])();
+            return (null != (e = (0, a.sample)(y)) ? e : y[0])();
         });
     return (0, r.jsx)(j, {
         heading: e,
@@ -120,7 +120,7 @@ function P(e) {
             var e;
             return (null != (e = (0, a.sample)(v)) ? e : v[0])(u);
         }),
-        y = i.useCallback(() => {
+        h = i.useCallback(() => {
             o.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
     return (0, r.jsx)(j, {
@@ -131,7 +131,7 @@ function P(e) {
             children: (0, r.jsx)(g.O1, {
                 icon: l.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
-                onClick: y,
+                onClick: h,
             }),
         }),
     });

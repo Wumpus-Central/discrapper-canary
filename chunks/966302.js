@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(932724),
     v = n(672339),
     I = n(898531),
-    S = n(923973),
-    T = n(189771),
+    T = n(923973),
+    S = n(189771),
     A = n(560688),
     C = n(88479),
     N = n(136995),
     R = n(25827),
     P = n(163612),
-    w = n(601964),
-    D = n(430824),
+    D = n(601964),
+    w = n(430824),
     x = n(131951),
     L = n(594174),
     M = n(451478),
@@ -147,8 +147,8 @@ function eo(e) {
 function es(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
-        { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
-        _ = (0, T.Z)(n),
+        { cameraUnavailable: l, enabled: d } = (0, T.Z)(),
+        _ = (0, S.Z)(n),
         p = i.useRef(null),
         g = a > 1;
     return (0, r.jsxs)("div", {
@@ -246,8 +246,8 @@ function el(e) {
     let { animatedStyle: n, y: a, x: f, channel: h } = e,
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
-        I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
-        S =
+        I = (0, l.e7)([w.Z], () => w.Z.getGuild(h.guild_id)),
+        T =
             null != I
                 ? k.ZP.getGuildIconURL({
                       id: I.id,
@@ -255,7 +255,7 @@ function el(e) {
                       size: ea,
                   })
                 : null,
-        T = null != (t = (0, g.x)(h, ea, !0)) ? t : S,
+        S = null != (t = (0, g.x)(h, ea, !0)) ? t : T,
         A = (0, E.ZP)(h),
         [C, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         R = null != I ? "".concat(A, ", ").concat(I.name) : A,
@@ -288,7 +288,7 @@ function el(e) {
                 : K.intl.string(K.t.KcnWCO),
         $ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != I && null == S
+                null != I && null == T
                     ? (0, r.jsx)("div", {
                           className: o()(q.icon, z.wrapper, z.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
@@ -300,7 +300,7 @@ function el(e) {
                                   className: o()(q.guildIcon, q.guildIconWithoutImage),
                                   children: (0, r.jsx)("div", {
                                       className: q.guildAcronym,
-                                      children: (0, w.gM)(I),
+                                      children: (0, D.gM)(I),
                                   }),
                               }),
                           }),
@@ -308,7 +308,7 @@ function el(e) {
                     : (0, r.jsx)(G.Z, {
                           className: q.icon,
                           ringing: L,
-                          src: null != T ? T : "",
+                          src: null != S ? S : "",
                           ringingType: G.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80,
                       }),

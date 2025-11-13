@@ -1,5 +1,5 @@
 n.d(t, {
-    j: () => D,
+    j: () => w,
     t: () => I,
 }),
     n(388685),
@@ -86,8 +86,8 @@ function I(e, t) {
     }
     return !1;
 }
-let S = 12;
-function T(e) {
+let T = 12;
+function S(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : "".concat(n, ":").concat(r);
 }
@@ -155,12 +155,12 @@ function P(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (c()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-function w(e, t) {
+function D(e, t) {
     let n = P(e),
         r = P(t);
     return n.top === r.top && n.left === r.left;
 }
-class D extends (r = a.Component) {
+class w extends (r = a.Component) {
     formatDimension(e) {
         return this.props.useRawTargetDimensions ? e : Math.ceil(e);
     }
@@ -168,14 +168,14 @@ class D extends (r = a.Component) {
         let { nudgeAlignIntoViewport: r } = this.props;
         if (!r) return e;
         let i = n.offsetWidth,
-            a = e + t.offsetWidth - i + S;
-        return a > 0 ? Math.max(S, e - a) : Math.max(S, e);
+            a = e + t.offsetWidth - i + T;
+        return a > 0 ? Math.max(T, e - a) : Math.max(T, e);
     }
     nudgeRightAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: r } = this.props;
         if (!r) return 0;
         let i = t.offsetWidth;
-        return Math.min(n.offsetWidth - e - i - S, 0);
+        return Math.min(n.offsetWidth - e - i - T, 0);
     }
     getHorizontalAlignmentStyle(e, t, n, r) {
         let { align: i } = this.props;
@@ -214,16 +214,16 @@ class D extends (r = a.Component) {
         if (!r) return e;
         if (e < 0) return 0;
         let i = t.getBoundingClientRect().height,
-            a = e + i - n.offsetHeight + S;
-        return a > 0 ? Math.max(S, e - a) : e;
+            a = e + i - n.offsetHeight + T;
+        return a > 0 ? Math.max(T, e - a) : e;
     }
     nudgeBottomAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: r } = this.props,
             i = n.offsetHeight,
             a = i - e;
         if (!r) return a;
-        let o = a + t.offsetHeight - i + S;
-        return o > 0 ? Math.max(S, a - o) : a;
+        let o = a + t.offsetHeight - i + T;
+        return o > 0 ? Math.max(T, a - o) : a;
     }
     getVerticalAlignmentStyle(e, t, n, r) {
         let { align: i } = this.props;
@@ -274,7 +274,7 @@ class D extends (r = a.Component) {
             case "overlap_vertical":
                 return this.getHorizontalAlignmentStyle(s, t, n, { [r]: 0 });
             case "overlap_horizontal":
-                return this.getVerticalAlignmentStyle(s, t, n, { [r]: S });
+                return this.getVerticalAlignmentStyle(s, t, n, { [r]: T });
             case "center":
                 return this.getVerticalAlignmentStyle(s, t, n, { left: s.left + s.width / 2 - t.offsetWidth / 2 + i });
             case "window_center":
@@ -351,7 +351,7 @@ class D extends (r = a.Component) {
     }
     componentDidUpdate(e, t) {
         if (
-            ((T(e) === T(this.props) && w(e, this.props)) || this.updatePosition(), t.position !== this.state.position)
+            ((S(e) === S(this.props) && D(e, this.props)) || this.updatePosition(), t.position !== this.state.position)
         ) {
             var n, r;
             null == (n = (r = this.props).onPositionChange) || n.call(r, this.state.position);
@@ -432,7 +432,7 @@ class D extends (r = a.Component) {
             });
     }
 }
-g(D, "defaultProps", {
+g(w, "defaultProps", {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     autoInvert: !1,

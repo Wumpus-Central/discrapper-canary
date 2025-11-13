@@ -10,21 +10,21 @@ var r = n(951288),
     d = n(100527),
     p = n(471445),
     f = n(15274),
-    m = n(924301),
-    h = n(504160),
-    g = n(151864),
+    h = n(924301),
+    g = n(504160),
+    m = n(151864),
     _ = n(725436),
     b = n(497656),
     E = n(554747),
     O = n(230900),
-    I = n(954313),
-    y = n(703656),
-    v = n(922482),
+    y = n(954313),
+    v = n(703656),
+    I = n(922482),
     C = n(565799),
     S = n(501655),
     T = n(427679),
     N = n(448206),
-    j = n(670188),
+    j = n(456077),
     P = n(496675),
     x = n(594174),
     A = n(662868),
@@ -38,10 +38,10 @@ function D(e) {
         d = (0, E.k5)(t.id),
         j = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: k } = (0, s.cj)(
-            [g.Z],
+            [m.Z],
             () => ({
-                isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({ stageId: null == j ? void 0 : j.id }),
-                isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
+                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == j ? void 0 : j.id }),
+                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
             }),
             [j, d],
         ),
@@ -79,11 +79,11 @@ function D(e) {
                         listenerCount: u,
                         isEventNoticeHidden: d,
                         isStageNoticeHidden: f,
-                        isStudyRoomNotice: g,
+                        isStudyRoomNotice: m,
                     } = e,
                     b = null != n && null != i && !f,
-                    E = null != t ? (0, I.DK)(t) : null;
-                if (g && null != i) {
+                    E = null != t ? (0, y.DK)(t) : null;
+                if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
                         noticeType: 3,
@@ -123,7 +123,7 @@ function D(e) {
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, h.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     u < 1
@@ -168,7 +168,7 @@ function D(e) {
                             }),
                             canListenIn: l,
                             buttonText: e,
-                            onClose: () => (0, h.ji)({ stageId: null == n ? void 0 : n.id }),
+                            onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                             users: o.length > 5 ? o.slice(0, 5) : o,
                             overflowUsers:
                                 u < 1
@@ -196,7 +196,7 @@ function D(e) {
                 } else if (t.entity_type === w.WX.EXTERNAL) {
                     let e = (0, O.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = m.ZP.getUserCount(t.id, E);
+                    let n = h.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -210,7 +210,7 @@ function D(e) {
                         }),
                         canListenIn: !1,
                         buttonText: L.intl.string(L.t.iW6Xuo),
-                        onClose: () => (0, h.ji)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
@@ -236,7 +236,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = m.ZP.getUserCount(t.id, E);
+                        n = h.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -251,7 +251,7 @@ function D(e) {
                                 : null,
                         canListenIn: l,
                         buttonText: L.intl.string(L.t.nxUtoQ),
-                        onClose: () => (0, h.ji)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
@@ -371,7 +371,7 @@ function D(e) {
                                     if (Q)
                                         null != l &&
                                             null != l.getGuildId() &&
-                                            ((0, v.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
+                                            ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
                                         (0, f.bO)({ eventId: d.id });

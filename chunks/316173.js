@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(865427),
     p = n(820254),
     f = n(388032),
-    m = n(36398);
-let h = "isHideDevBanner",
-    g = () => {
+    h = n(36398);
+let g = "isHideDevBanner",
+    m = () => {
         var e;
-        let [t, n] = (0, i.useState)((null == (e = o.K.get(h, "false")) ? void 0 : e.toString()) === "true"),
+        let [t, n] = (0, i.useState)((null == (e = o.K.get(g, "false")) ? void 0 : e.toString()) === "true"),
             l = (0, s.e7)([u.C], () => {
                 var e;
                 return (0, d.fD)()
@@ -24,31 +24,31 @@ let h = "isHideDevBanner",
                     : null;
             });
         if (t) return null;
-        let g = () => {
-                o.K.set(h, !0), n(!0);
+        let m = () => {
+                o.K.set(g, !0), n(!0);
             },
             _ = () =>
                 (0, r.jsx)(c.P3F, {
-                    onClick: g,
-                    className: m.closeButton,
+                    onClick: m,
+                    className: h.closeButton,
                     "aria-label": f.intl.string(f.t.WAI6xu),
                     children: (0, r.jsx)(c.Dio, {
                         size: "md",
                         color: "currentColor",
-                        className: m.closeIcon,
+                        className: h.closeIcon,
                     }),
                 });
         return null != l
             ? (0, r.jsxs)("div", {
-                  className: a()(m.devBanner, m.buildOverride),
-                  children: [(0, r.jsx)(p.Z, { className: m.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(_, {})],
+                  className: a()(h.devBanner, h.buildOverride),
+                  children: [(0, r.jsx)(p.Z, { className: h.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(_, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)("div", {
-                    className: a()(m.devBanner, m.staging),
+                    className: a()(h.devBanner, h.staging),
                     children: [
-                        (0, r.jsx)(p.Z, { className: m.icon }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "464151" }),
+                        (0, r.jsx)(p.Z, { className: h.icon }),
+                        f.intl.format(f.t.uyrfYF, { buildNumber: "467765" }),
                         (0, r.jsx)(_, {}),
                     ],
                 })

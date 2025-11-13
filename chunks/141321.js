@@ -10,22 +10,22 @@ var r = n(951288),
     d = n(686546),
     p = n(719961),
     f = n(388035),
-    m = n(306680),
-    h = n(594174),
-    g = n(178088),
+    h = n(306680),
+    g = n(594174),
+    m = n(178088),
     _ = n(490897),
     b = n(388032),
     E = n(741047);
 function O(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        O = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        I = i.useRef(null),
-        y = (0, s.e7)(
-            [m.ZP],
-            () => (null == O ? void 0 : O.id) != null && m.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
+        O = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        y = i.useRef(null),
+        v = (0, s.e7)(
+            [h.ZP],
+            () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: v, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
-        S = "sm" === v ? "refresh_sm" : "md",
+        { titlebarIconSize: I, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
+        S = "sm" === I ? "refresh_sm" : "md",
         T = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
@@ -34,11 +34,11 @@ function O(e) {
                 }),
             [S],
         );
-    return (0, r.jsx)(g.k, {
-        targetElementRef: I,
+    return (0, r.jsx)(m.k, {
+        targetElementRef: y,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: y },
+        badgeState: { badgeForYou: v },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
@@ -46,7 +46,7 @@ function O(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.u, {
-                        targetElementRef: I,
+                        targetElementRef: y,
                         shouldShow: !t,
                         text: b.intl.string(b.t.GSmTKJ),
                         children: (0, r.jsx)(
@@ -79,13 +79,13 @@ function O(e) {
                             (p = p =
                                 {
                                     tag: "div",
-                                    innerRef: I,
+                                    innerRef: y,
                                     onClick: e,
                                     "data-jump-section": l,
                                     "aria-label": b.intl.string(b.t.GSmTKJ),
                                     className: a()(E.clickable, { [E.withHighlight]: C }),
                                     children:
-                                        y || i
+                                        v || i
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(d.ZP, {
@@ -118,7 +118,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(f.U, {
                         location: "inbox-button",
-                        targetElementRef: I,
+                        targetElementRef: y,
                     }),
                 ],
             });

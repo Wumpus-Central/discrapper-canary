@@ -1,4 +1,4 @@
-e.d(n, { Z: () => Z }), e(388685);
+e.d(n, { Z: () => m }), e(388685);
 var i = e(951288);
 e(647438);
 var a = e(442837),
@@ -13,7 +13,7 @@ var a = e(442837),
     f = e(710352),
     g = e(388032),
     v = e(433307);
-function m(t) {
+function Z(t) {
     let { tag: n } = t,
         { name: e, emojiId: l, emojiName: r } = n,
         d = (0, a.e7)([o.ZP], () => (null != l ? o.ZP.getUsableCustomEmojiById(l) : null));
@@ -31,13 +31,13 @@ function m(t) {
         ],
     });
 }
-function Z(t) {
+function m(t) {
     let n = (0, a.e7)([h.Z], () => h.Z.getChannel(t), [t]),
         e = (0, c.C7)(n),
         s = (0, a.e7)([h.Z], () => h.Z.getChannel(null == n ? void 0 : n.parent_id), [n]),
         o = (0, u.Vm)(s),
         v = (0, u.eV)(n),
-        Z = v.length >= f.Cn,
+        m = v.length >= f.Cn,
         b = (0, c.$R)(n);
     if (null == n) return (0, r.Zy)(), null;
     if (
@@ -58,14 +58,14 @@ function Z(t) {
                       l.S89,
                       {
                           id: t.id,
-                          label: (0, i.jsx)(m, { tag: t }),
-                          disabled: Z && !e,
+                          label: (0, i.jsx)(Z, { tag: t }),
+                          disabled: m && !e,
                           action: () =>
                               ((t) => {
                                   let e = new Set(v);
                                   if (e.has(t)) e.delete(t);
                                   else {
-                                      if (Z) return;
+                                      if (m) return;
                                       e.add(t);
                                   }
                                   let i = Array.from(e).map((t) => t.id);

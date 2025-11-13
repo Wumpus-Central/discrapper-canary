@@ -1,6 +1,6 @@
 n.d(t, { Z: () => c }), n(388685);
-var r = n(314897),
-    i = n(496675),
+var i = n(314897),
+    r = n(496675),
     l = n(938475),
     a = n(700785),
     o = n(924301),
@@ -9,17 +9,17 @@ function c(e) {
     if (
         !e.isGuildVoice() ||
         o.ZP.getGuildScheduledEventsByIndex(o.bN.CHANNEL_EVENT_ACTIVE(e.id)).length < 1 ||
-        !i.Z.can(s.AN, e)
+        !r.Z.can(s.AN, e)
     )
         return !1;
     let t = new Set(l.ZP.getVoiceStatesForChannel(e).map((e) => e.user.id)),
-        n = r.default.getId();
-    for (let r of t)
+        n = i.default.getId();
+    for (let i of t)
         if (
-            r !== n &&
+            i !== n &&
             a.BT({
                 permission: s.AN,
-                user: r,
+                user: i,
                 context: e,
             })
         )

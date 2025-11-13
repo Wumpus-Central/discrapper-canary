@@ -1,10 +1,10 @@
 n.d(t, { Z: () => L }), n(388685), n(358797);
 var i = n(951288),
     r = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    s = n(392711),
-    a = n.n(s),
+    s = n(120356),
+    o = n.n(s),
+    l = n(392711),
+    a = n.n(l),
     c = n(818405),
     d = n(587158),
     u = n(286379),
@@ -14,13 +14,13 @@ var i = n(951288),
     g = n(490029),
     m = n(797614),
     y = n(593481),
-    O = n(703656),
-    _ = n(254761),
-    v = n(70956),
-    b = n(145597),
+    b = n(703656),
+    v = n(254761),
+    _ = n(70956),
+    O = n(145597),
     E = n(41534),
-    S = n(837268),
-    x = n(692546),
+    x = n(837268),
+    S = n(692546),
     Z = n(518084),
     j = n(987650),
     C = n(981631),
@@ -39,11 +39,11 @@ function w(e, t, n) {
         e
     );
 }
-let N = 10 * v.Z.Millis.SECOND,
-    T = new h.Yd("LegacyOverlayErrorBoundary");
+let T = 10 * _.Z.Millis.SECOND,
+    N = new h.Yd("LegacyOverlayErrorBoundary");
 function D() {
-    let e = (0, b.getPID)(),
-        t = (0, b.getRPCAuthToken)();
+    let e = (0, O.getPID)(),
+        t = (0, O.getRPCAuthToken)();
     (0, g.lW)({
         type: C.BmY.DISPATCH,
         pid: e,
@@ -59,7 +59,7 @@ function D() {
 }
 class k extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, N)),
+        (this.notificationTimer = setTimeout(this.hideNotification, T)),
             f.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: j.n0.OverlayCrashed });
     }
     componentWillUnmount() {
@@ -72,7 +72,7 @@ class k extends r.PureComponent {
             { notificationTimer: r } = this;
         return null == r
             ? null
-            : (0, i.jsx)(x.Z, {
+            : (0, i.jsx)(S.Z, {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
                   children: (0, i.jsx)(p.f6W, {
@@ -85,7 +85,7 @@ class k extends r.PureComponent {
                               children: [
                                   (0, i.jsx)(y.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(_.Z, {
+                                      icon: (0, i.jsx)(v.Z, {
                                           width: 40,
                                           height: 40,
                                           className: P.notificationIcon,
@@ -166,20 +166,20 @@ let R = a().throttle(
 );
 class A extends r.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, O.s1)().location;
+        let n = (0, b.s1)().location;
         this.setState({
             error: e,
             info: t,
         }),
-            T.error("ErrorBoundary caught error: ".concat(e.message), {
+            N.error("ErrorBoundary caught error: ".concat(e.message), {
                 error: e,
                 info: t,
             });
-        let i = (0, b.getPID)(),
-            r = (0, b.getRPCAuthToken)();
+        let i = (0, O.getPID)(),
+            r = (0, O.getRPCAuthToken)();
         (0, g.lW)({
             type: C.BmY.DISPATCH,
-            pid: (0, b.getPID)(),
+            pid: (0, O.getPID)(),
             token: r,
             payloads: [
                 {
@@ -195,13 +195,13 @@ class A extends r.PureComponent {
             ],
         }),
             setImmediate(() => window.addEventListener("click", D));
-        let l = (0, E.V6)(e, S.gl.Hook, { extra: t });
+        let s = (0, E.V6)(e, x.gl.Hook, { extra: t });
         f.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: l,
+            sentry_issue_id: s,
             error_level: "fatal",
         }),
             R();

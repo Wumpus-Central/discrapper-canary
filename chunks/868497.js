@@ -1,20 +1,20 @@
-a.d(e, { m: () => d });
+a.d(e, { m: () => A });
 var r = a(873567),
     _ = a(370541),
     n = a(285883),
     o = a(573736),
     i = a(263449),
-    c = a(988097),
-    E = a(73453),
+    E = a(988097),
+    c = a(73453),
     s = a(696486),
     l = a(789112),
     I = a(793373),
-    u = a(152228),
-    R = a(305625);
-function d(t, e, a, N, A = "auto.http.browser") {
+    R = a(152228),
+    u = a(305625);
+function A(t, e, a, N, T = "auto.http.browser") {
     if (!t.fetchData) return;
-    let T = (0, E.z)() && e(t.fetchData.url);
-    if (t.endTimestamp && T) {
+    let d = (0, c.z)() && e(t.fetchData.url);
+    if (t.endTimestamp && d) {
         let e = t.fetchData.__span;
         if (!e) return;
         let a = N[e];
@@ -40,75 +40,75 @@ function d(t, e, a, N, A = "auto.http.browser") {
     }
     let f = (0, i.nZ)(),
         L = (0, i.s3)(),
-        { method: p, url: h } = t.fetchData,
-        O = (function (t) {
+        { method: p, url: O } = t.fetchData,
+        h = (function (t) {
             try {
                 return new URL(t).href;
             } catch (t) {
                 return;
             }
-        })(h),
-        P = O ? (0, r.en)(O).host : void 0,
-        D = !!(0, s.HN)(),
-        g =
-            T && D
-                ? (0, u.qp)({
-                      name: `${p} ${h}`,
+        })(O),
+        P = h ? (0, r.en)(h).host : void 0,
+        C = !!(0, s.HN)(),
+        D =
+            d && C
+                ? (0, R.qp)({
+                      name: `${p} ${O}`,
                       attributes: {
-                          url: h,
+                          url: O,
                           type: "fetch",
                           "http.method": p,
-                          "http.url": O,
+                          "http.url": h,
                           "server.address": P,
-                          [c.S3]: A,
-                          [c.$J]: "http.client",
+                          [E.S3]: T,
+                          [E.$J]: "http.client",
                       },
                   })
                 : new l.b();
-    if (((t.fetchData.__span = g.spanContext().spanId), (N[g.spanContext().spanId] = g), a(t.fetchData.url) && L)) {
+    if (((t.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), a(t.fetchData.url) && L)) {
         let e = t.args[0];
         t.args[1] = t.args[1] || {};
         let a = t.args[1];
-        a.headers = (function (t, e, a, r, c) {
+        a.headers = (function (t, e, a, r, E) {
             let {
-                    traceId: E,
+                    traceId: c,
                     spanId: l,
                     sampled: I,
-                    dsc: u,
+                    dsc: R,
                 } = {
                     ...(0, i.aF)().getPropagationContext(),
                     ...a.getPropagationContext(),
                 },
-                d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, I),
-                N = (0, n.IQ)(u || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
-                A = r.headers || ("undefined" != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
-            if (!A)
+                A = E ? (0, s.Hb)(E) : (0, _.$p)(c, l, I),
+                N = (0, n.IQ)(R || (E ? (0, u.jC)(E) : (0, u._l)(c, e))),
+                T = r.headers || ("undefined" != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
+            if (!T)
                 return {
-                    "sentry-trace": d,
+                    "sentry-trace": A,
                     baggage: N,
                 };
-            if ("undefined" != typeof Headers && (0, o.V9)(A, Headers)) {
-                let t = new Headers(A);
-                return t.append("sentry-trace", d), N && t.append(n.bU, N), t;
+            if ("undefined" != typeof Headers && (0, o.V9)(T, Headers)) {
+                let t = new Headers(T);
+                return t.append("sentry-trace", A), N && t.append(n.bU, N), t;
             }
-            if (Array.isArray(A)) {
-                let t = [...A, ["sentry-trace", d]];
+            if (Array.isArray(T)) {
+                let t = [...T, ["sentry-trace", A]];
                 return N && t.push([n.bU, N]), t;
             }
             {
-                let t = "baggage" in A ? A.baggage : void 0,
+                let t = "baggage" in T ? T.baggage : void 0,
                     e = [];
                 return (
                     Array.isArray(t) ? e.push(...t) : t && e.push(t),
                     N && e.push(N),
                     {
-                        ...A,
-                        "sentry-trace": d,
+                        ...T,
+                        "sentry-trace": A,
                         baggage: e.length > 0 ? e.join(",") : void 0,
                     }
                 );
             }
-        })(e, L, f, a, (0, E.z)() && D ? g : void 0);
+        })(e, L, f, a, (0, c.z)() && C ? D : void 0);
     }
-    return g;
+    return D;
 }

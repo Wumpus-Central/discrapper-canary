@@ -3,17 +3,17 @@ n.d(t, {
     e$: () => c,
     zg: () => d,
 });
-var r = n(951288),
-    i = n(481060),
-    l = n(598117),
+var l = n(951288),
+    r = n(481060),
+    i = n(598117),
     a = n(981631),
-    s = n(185923),
-    o = n(388032);
+    o = n(185923),
+    s = n(388032);
 let u = (e) => {
-        let { error: t, variant: n, color: l } = e;
-        return (0, r.jsx)(i.Text, {
+        let { error: t, variant: n, color: i } = e;
+        return (0, l.jsx)(r.Text, {
             variant: n,
-            color: l,
+            color: i,
             children: c(t),
         });
     },
@@ -21,28 +21,28 @@ let u = (e) => {
         switch (e) {
             case a.evJ.TOO_MANY_EMOJI:
             case a.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return o.intl.string(o.t.FtKH49);
-            case l.ze.TOO_BIG:
+                return s.intl.string(s.t.FtKH49);
+            case i.ze.TOO_BIG:
             case a.evJ.INVALID_FILE_ASSET_SIZE:
             case a.evJ.INVALID_FORM_BODY:
-                return o.intl.formatToPlainString(o.t.kIO9jy, { maxSize: s.xG });
+                return s.intl.formatToPlainString(s.t.kIO9jy, { maxSize: o.xG });
             case a.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
-                return o.intl.string(o.t.sp16MU);
-            case l.ze.MISSING_IMAGE_DATA:
-                return o.intl.string(o.t["41/Kbh"]);
-            case l.ze.MISSING_GUILD:
-                return o.intl.string(o.t["8RCtpD"]);
-            case l.ze.GIF_CROPPING:
-                return o.intl.string(o.t.X6rtiO);
-            case l.ze.IMAGE_LOAD:
-                return o.intl.format(o.t.xZLPcF, {});
-            case l.ze.NO_PERMISSIONS:
-                return o.intl.string(o.t.QY7ZFZ);
+                return s.intl.string(s.t.sp16MU);
+            case i.ze.MISSING_IMAGE_DATA:
+                return s.intl.string(s.t["41/Kbh"]);
+            case i.ze.MISSING_GUILD:
+                return s.intl.string(s.t["8RCtpD"]);
+            case i.ze.GIF_CROPPING:
+                return s.intl.string(s.t.X6rtiO);
+            case i.ze.IMAGE_LOAD:
+                return s.intl.format(s.t.xZLPcF, {});
+            case i.ze.NO_PERMISSIONS:
+                return s.intl.string(s.t.QY7ZFZ);
             case 429:
-                return o.intl.string(o.t["4rjikl"]);
-            case l.ze.UNKNOWN:
+                return s.intl.string(s.t["4rjikl"]);
+            case i.ze.UNKNOWN:
             default:
-                return o.intl.string(o.t.iufib1);
+                return s.intl.string(s.t.iufib1);
         }
     },
     d = (e) => {
@@ -59,5 +59,5 @@ let u = (e) => {
                     if (!Number.isNaN(e)) return e;
                 }
             } catch (e) {}
-        return l.ze.UNKNOWN;
+        return i.ze.UNKNOWN;
     };

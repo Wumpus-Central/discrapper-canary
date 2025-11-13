@@ -21,15 +21,15 @@ var i = n(120356),
     O = n(775412),
     v = n(695349),
     I = n(622909),
-    S = n(639119),
-    T = n(715130),
+    T = n(639119),
+    S = n(715130),
     A = n(179918),
     C = n(8647),
     N = n(533525),
     R = n(647277),
     P = n(736519),
-    w = n(784238),
-    D = n(117791),
+    D = n(784238),
+    w = n(117791),
     x = n(638212),
     L = n(230916),
     M = n(403503),
@@ -125,12 +125,12 @@ let ee = (e, t, i) => {
                 buttonVisibilityRef: N,
             } = eo(),
             { analyticsLocations: P } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_HERO_CTA),
-            w = (0, T.H)(o.I.MARKETING_PAGE_BANNER),
+            D = (0, S.H)(o.I.MARKETING_PAGE_BANNER),
             j = null;
-        null != w && "marketingPageBanner" === w.properties.properties.oneofKind
+        null != D && "marketingPageBanner" === D.properties.properties.oneofKind
             ? (j = (0, r.jsx)(A.u, {
-                  componentId: w.id,
-                  promotionBannerMarketingComponentFields: w.properties.properties.marketingPageBanner,
+                  componentId: D.id,
+                  promotionBannerMarketingComponentFields: D.properties.properties.marketingPageBanner,
               }))
             : l
               ? (j = (0, r.jsx)(C.Z, { variant: C.C.SUBSCRIBER_HOME }))
@@ -139,7 +139,7 @@ let ee = (e, t, i) => {
                 : p && (j = (0, r.jsx)(R._, {}));
         let B = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             z = null != B && B.status === H.O0b.CANCELED && null != O,
-            q = (0, S.N)(),
+            q = (0, T.N)(),
             X = (0, I.N)(),
             Q = (0, L.Wp)(X, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
             J = null != B && B.status !== H.O0b.ACCOUNT_HOLD && B.hasAnyPremiumNitro,
@@ -203,7 +203,7 @@ let ee = (e, t, i) => {
                                     text: Y.intl.string(Y.t.zrCzVB),
                                     onClick: () => ee(P, B, k.R.CONFIRM_DISCOUNT),
                                 }),
-                            (0, r.jsx)(D.Z, {
+                            (0, r.jsx)(w.Z, {
                                 variant: $ || z ? "secondary" : "expressive",
                                 size: "md",
                                 buttonTextOverride: Y.intl.string(Y.t["3KomGa"]),
@@ -222,9 +222,9 @@ let ee = (e, t, i) => {
             { analyticsLocations: E } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_HERO_CTA),
             y = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             O = null != y && y.status === H.O0b.CANCELED && null != d,
-            v = (0, S.N)(),
-            T = (0, I.N)(),
-            A = (0, L.Wp)(T, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
+            v = (0, T.N)(),
+            S = (0, I.N)(),
+            A = (0, L.Wp)(S, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
             C = null != y && y.status !== H.O0b.ACCOUNT_HOLD && y.hasAnyPremiumNitro,
             N = (0, h.Z)().isFractionalPremiumActive && !C && !O;
         return (0, r.jsxs)("div", {
@@ -269,7 +269,7 @@ let ee = (e, t, i) => {
                             className: W.heroHeadingOriginalButtonContainer,
                             children: [
                                 N &&
-                                    (0, r.jsx)(w.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         color: c.Tt.BRAND,
                                         className: a()(W.button, W.subscribeButton),
                                         subscriptionTier:
@@ -290,7 +290,7 @@ let ee = (e, t, i) => {
                                                 onClick: () => ee(E, y, k.R.CONFIRM_DISCOUNT),
                                                 fullWidth: !0,
                                             }),
-                                            (0, r.jsx)(D.Z, {
+                                            (0, r.jsx)(w.Z, {
                                                 variant: "overlay-secondary",
                                                 size: "md",
                                                 buttonTextOverride: Y.intl.string(Y.t.Ve9Ge6),
@@ -410,13 +410,13 @@ let ee = (e, t, i) => {
             g = (0, O._O)(),
             b = Y.intl.string(Y.t.qYKftX),
             I = (0, N.b)(),
-            S = (0, r.jsx)(en, { className: t }),
-            T = Y.intl.string(Y.t.ifwQZb),
+            T = (0, r.jsx)(en, { className: t }),
+            S = Y.intl.string(Y.t.ifwQZb),
             { fractionalState: A, endsAt: C } = (0, h.Z)(),
             R = (0, p.ZP)(C, p.aj.CREDITS_ENDS_IN);
         d || m
-            ? (S = (0, r.jsx)(ei, { isEligibleForBogoPromotion: m }))
-            : I && ((b = Y.intl.string(Y.t.qYKftX)), (S = (0, r.jsx)(er, {})));
+            ? (T = (0, r.jsx)(ei, { isEligibleForBogoPromotion: m }))
+            : I && ((b = Y.intl.string(Y.t.qYKftX)), (T = (0, r.jsx)(er, {})));
         let P = null;
         if (A === V.a$.NONE || d)
             P = n
@@ -472,7 +472,7 @@ let ee = (e, t, i) => {
             value: c,
             children: (0, r.jsx)(ea.Provider, {
                 value: {
-                    headingText: T,
+                    headingText: S,
                     headingTop: P,
                     showPill: g,
                     userDiscountOffer: o,
@@ -486,7 +486,7 @@ let ee = (e, t, i) => {
                           isInReverseTrial: d,
                           shouldShowReferralProgressBar: I,
                       })
-                    : S,
+                    : T,
             }),
         });
     };

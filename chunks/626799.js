@@ -25,8 +25,8 @@ var r,
     O = n(551428),
     v = n(73346),
     I = n(981631),
-    S = n(388032),
-    T = n(350003);
+    T = n(388032),
+    S = n(550125);
 function A(e, t, n) {
     return (
         t in e
@@ -97,10 +97,10 @@ class P extends (r = a.Component) {
     renderViewInStoreButton() {
         return (0, i.jsx)(l.zx.Link, {
             to: this.getStoreListingLocation(),
-            className: T.actionButton,
+            className: S.actionButton,
             color: l.zx.Colors.GREEN,
             size: l.zx.Sizes.SMALL,
-            children: S.intl.string(S.t["W+NB90"]),
+            children: T.intl.string(T.t["W+NB90"]),
         });
     }
     render() {
@@ -190,14 +190,14 @@ class P extends (r = a.Component) {
                 } = this.props;
                 if (null != o)
                     return (0, i.jsx)("div", {
-                        className: T.tileActions,
+                        className: S.tileActions,
                         children: o(),
                     });
                 if (null == n) return null;
                 let s = null != n && n.primarySkuId === r,
                     c = null != a && a.hasFlag(I.eHb.HIDDEN);
                 return (0, i.jsxs)("div", {
-                    className: T.tileActions,
+                    className: S.tileActions,
                     children: [
                         !s || c
                             ? this.renderViewInStoreButton()
@@ -205,7 +205,7 @@ class P extends (r = a.Component) {
                                   application: n,
                                   customDisabledColor: l.zx.Colors.PRIMARY,
                                   size: l.zx.Sizes.SMALL,
-                                  className: T.actionButton,
+                                  className: S.actionButton,
                                   source: I.Sbl.MESSAGE_EMBED,
                                   onClick: this.handleActionButtonClick,
                               }),
@@ -222,8 +222,8 @@ class P extends (r = a.Component) {
     }
 }
 A(P, "defaultProps", { renderFallback: I.dG4 });
-let w = [y.Z, b.Z, E.Z, O.Z];
-function D(e) {
+let D = [y.Z, b.Z, E.Z, O.Z];
+function w(e) {
     let { skuId: t } = e,
         n = y.Z.get(t),
         r = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -237,5 +237,5 @@ function D(e) {
     };
 }
 let x = (0, m.Z)((0, h.Z)(P)),
-    L = s.ZP.connectStores(w, D)(x),
-    M = (0, h.Z)(s.ZP.connectStores(w, D)(P));
+    L = s.ZP.connectStores(D, w)(x),
+    M = (0, h.Z)(s.ZP.connectStores(D, w)(P));

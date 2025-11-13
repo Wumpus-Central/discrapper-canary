@@ -1,6 +1,6 @@
-n.d(t, { d: () => f });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { d: () => h });
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(728345),
     o = n(925329),
@@ -9,28 +9,28 @@ var r = n(951288),
     u = n(906605),
     d = n(748855),
     p = n(972526);
-function f(e) {
+function h(e) {
     var t;
-    let { guildId: n, onSetActivityStatus: f } = e,
-        h = (0, l.e7)([c.default], () => c.default.getId()),
-        m = (0, s.Z)(h, n)[0],
+    let { guildId: n, onSetActivityStatus: h } = e,
+        f = (0, l.e7)([c.default], () => c.default.getId()),
+        m = (0, s.Z)(f, n)[0],
         g = null != (t = (0, a.IX)(null == m ? void 0 : m.application_id).data) ? t : void 0,
-        b = i.useCallback(() => {
-            null != g && ((0, u.XE)(g.id, !0), f());
-        }, [g, f]);
+        b = r.useCallback(() => {
+            null != g && ((0, u.XE)(g.id, !0), h());
+        }, [g, h]);
     return null == g
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(d.L, {
+                  (0, i.jsx)(d.L, {
                       label: g.name,
-                      icon: (0, r.jsx)(o.Z, {
+                      icon: (0, i.jsx)(o.Z, {
                           game: g,
                           className: p.icon,
                       }),
                       setStatus: b,
                   }),
-                  (0, r.jsx)("div", {
+                  (0, i.jsx)("div", {
                       role: "separator",
                       className: p.separator,
                   }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r,
     i = n(951288),
     a = n(647438),
@@ -164,7 +164,7 @@ class R extends a.PureComponent {
                 lossless: R,
                 iconSize: P,
             } = n,
-            w = T(n, [
+            D = T(n, [
                 "guild",
                 "className",
                 "showBadge",
@@ -184,7 +184,7 @@ class R extends a.PureComponent {
                 "lossless",
                 "iconSize",
             ]),
-            D = N[c],
+            w = N[c],
             x = null != m ? d.P3F : "div",
             L = (0, h.gM)(r);
         return (0, i.jsxs)(
@@ -200,12 +200,12 @@ class R extends a.PureComponent {
                         "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? O({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * f }, u)
+                                ? O({ fontSize: (null != (t = w[L.length]) ? t : w[w.length - 1]) * f }, u)
                                 : u,
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S,
                     },
-                    w,
+                    D,
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()],
@@ -251,13 +251,13 @@ let P = c.ZP.connectStores([m.Z], (e) => {
         { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) }
     );
 })((0, f.N)((e) => (0, i.jsx)(R, O({}, e))));
-class w extends (r = a.PureComponent) {
+class D extends (r = a.PureComponent) {
     render() {
         return (0, i.jsx)(P, O({}, this.props));
     }
 }
-y(w, "Sizes", A),
-    y(w, "defaultProps", {
+y(D, "Sizes", A),
+    y(D, "defaultProps", {
         size: A.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -267,4 +267,4 @@ y(w, "Sizes", A),
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1,
     });
-let D = w;
+let w = D;

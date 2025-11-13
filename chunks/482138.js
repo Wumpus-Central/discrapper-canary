@@ -20,15 +20,15 @@ var r,
     O = n(338045),
     v = n(294684),
     I = n(199838),
-    S = I.set,
-    T = I.getterFor("URL"),
+    T = I.set,
+    S = I.getterFor("URL"),
     A = v.URLSearchParams,
     C = v.getState,
     N = s.URL,
     R = s.TypeError,
     P = s.parseInt,
-    w = Math.floor,
-    D = Math.pow,
+    D = Math.floor,
+    w = Math.pow,
     x = c("".charAt),
     L = c(/./.exec),
     M = c([].join),
@@ -83,9 +83,9 @@ var r,
         }
         for (r = 0; r < t; r++)
             if (((o = n[r]), r === t - 1)) {
-                if (o >= D(256, 5 - t)) return null;
+                if (o >= w(256, 5 - t)) return null;
             } else if (o > 255) return null;
-        for (r = 0, s = k(n); r < n.length; r++) s += n[r] * D(256, 3 - r);
+        for (r = 0, s = k(n); r < n.length; r++) s += n[r] * w(256, 3 - r);
         return s;
     },
     el = function (e) {
@@ -154,7 +154,7 @@ var r,
     eu = function (e) {
         var t, n, r, i;
         if ("number" == typeof e) {
-            for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = w(e / 256));
+            for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = D(e / 256));
             return M(t, ".");
         }
         if ("object" == typeof e) {
@@ -225,15 +225,15 @@ var r,
     eO = {},
     ev = {},
     eI = {},
-    eS = {},
     eT = {},
+    eS = {},
     eA = {},
     eC = {},
     eN = {},
     eR = {},
     eP = {},
-    ew = {},
     eD = {},
+    ew = {},
     ex = {},
     eL = {},
     eM = {},
@@ -314,11 +314,11 @@ eF.prototype = {
                             "file" === l.scheme
                                 ? (c = eL)
                                 : l.isSpecial() && n && n.scheme === l.scheme
-                                  ? (c = eS)
+                                  ? (c = eT)
                                   : l.isSpecial()
                                     ? (c = eN)
                                     : "/" === i[u + 1]
-                                      ? ((c = eT), u++)
+                                      ? ((c = eS), u++)
                                       : ((l.cannotBeABaseURL = !0), U(l.path, ""), (c = eG));
                     } else {
                         if (t) return W;
@@ -339,14 +339,14 @@ eF.prototype = {
                     }
                     c = "file" === n.scheme ? eL : eA;
                     continue;
-                case eS:
+                case eT:
                     if ("/" === a && "/" === i[u + 1]) (c = eR), u++;
                     else {
                         c = eA;
                         continue;
                     }
                     break;
-                case eT:
+                case eS:
                     if ("/" === a) {
                         c = eP;
                         break;
@@ -427,11 +427,11 @@ eF.prototype = {
                         d = "";
                     } else if (a === r || "/" === a || "?" === a || "#" === a || ("\\" === a && l.isSpecial())) {
                         if (f && "" === d) return Y;
-                        (u -= h(d).length + 1), (d = ""), (c = ew);
+                        (u -= h(d).length + 1), (d = ""), (c = eD);
                     } else d += a;
                     break;
-                case ew:
                 case eD:
+                case ew:
                     if (t && "file" === l.scheme) {
                         c = ej;
                         continue;
@@ -447,7 +447,7 @@ eF.prototype = {
                     else {
                         if ("" === d) return K;
                         if ((s = l.parseHost(d))) return s;
-                        if (((d = ""), (c = ex), t === eD)) return;
+                        if (((d = ""), (c = ex), t === ew)) return;
                     }
                     break;
                 case ex:
@@ -669,14 +669,14 @@ eF.prototype = {
         return null === e ? "" : null === t ? eu(e) : eu(e) + ":" + t;
     },
     setHost: function (e) {
-        this.cannotBeABaseURL || this.parse(e, ew);
+        this.cannotBeABaseURL || this.parse(e, eD);
     },
     getHostname: function () {
         var e = this.host;
         return null === e ? "" : eu(e);
     },
     setHostname: function (e) {
-        this.cannotBeABaseURL || this.parse(e, eD);
+        this.cannotBeABaseURL || this.parse(e, ew);
     },
     getPort: function () {
         var e = this.port;
@@ -723,7 +723,7 @@ eF.prototype = {
 var eV = function (e) {
         var t = f(this, eH),
             n = O(arguments.length, 1) > 1 ? arguments[1] : void 0,
-            r = S(t, new eF(e, !1, n));
+            r = T(t, new eF(e, !1, n));
         a ||
             ((t.href = r.serialize()),
             (t.origin = r.getOrigin()),
@@ -742,12 +742,12 @@ var eV = function (e) {
     eY = function (e, t) {
         return {
             get: function () {
-                return T(this)[e]();
+                return S(this)[e]();
             },
             set:
                 t &&
                 function (e) {
-                    return T(this)[t](e);
+                    return S(this)[t](e);
                 },
             configurable: !0,
             enumerable: !0,
@@ -771,7 +771,7 @@ if (
         eH,
         "toJSON",
         function () {
-            return T(this).serialize();
+            return S(this).serialize();
         },
         { enumerable: !0 },
     ),
@@ -779,7 +779,7 @@ if (
         eH,
         "toString",
         function () {
-            return T(this).serialize();
+            return S(this).serialize();
         },
         { enumerable: !0 },
     ),

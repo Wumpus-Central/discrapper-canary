@@ -1,11 +1,11 @@
-n.d(t, { t: () => o });
+n.d(t, { t: () => a });
 var i = n(163400),
     r = n(995532),
     s = n(496675),
     l = n(896007);
-function o(e) {
+function a(e) {
     var t, n;
-    let o = s.Z.getGuildPermissionProps(e),
+    let a = s.Z.getGuildPermissionProps(e),
         c = (0, i.p)(e.id).length > 0;
     return l.ZP.generateSections(
         ((t = (function (e) {
@@ -32,7 +32,7 @@ function o(e) {
                     });
             }
             return e;
-        })({ showDirtyGuildTemplateIndicator: !1 }, o)),
+        })({ showDirtyGuildTemplateIndicator: !1 }, a)),
         (n = n =
             {
                 canUnlinkChannels: c,

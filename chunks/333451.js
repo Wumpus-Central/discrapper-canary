@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(74538),
     v = n(937615),
     I = n(981631),
-    S = n(474936),
-    T = n(388032),
+    T = n(474936),
+    S = n(388032),
     A = n(22706);
 function C(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function P(e, t) {
         e
     );
 }
-function w(e) {
+function D(e) {
     let { shouldUpsellFromNoneTier: t } = e,
         n = (0, s.e7)([E.default], () => E.default.locale);
     return (0, r.jsxs)("div", {
@@ -84,36 +84,36 @@ function w(e) {
             (0, r.jsx)(g.Z, {
                 icon: u.Ucv,
                 iconClassName: A.perkIconGuild,
-                description: T.intl.formatToPlainString(T.t.sQBgs2, { numFreeGuildSubscriptions: S.cb }),
+                description: S.intl.formatToPlainString(S.t.sQBgs2, { numFreeGuildSubscriptions: T.cb }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, r.jsx)(g.Z, {
                 icon: u.Ucv,
                 iconClassName: A.perkIconGuild,
-                description: T.intl.formatToPlainString(T.t["1A6vXi"], { percent: (0, y.T3)(n, S.Rr / 100) }),
+                description: S.intl.formatToPlainString(S.t["1A6vXi"], { percent: (0, y.T3)(n, T.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             t
                 ? (0, r.jsx)(g.Z, {
                       icon: u.EO4,
                       iconClassName: A.perkIconChatPerks,
-                      description: T.intl.string(T.t.Z9b2x2),
+                      description: S.intl.string(S.t.Z9b2x2),
                   })
                 : null,
             (0, r.jsx)(g.Z, {
                 icon: u.hGI,
                 iconClassName: A.perkIconStream,
-                description: T.intl.string(T.t["8dqG5E"]),
+                description: S.intl.string(S.t["8dqG5E"]),
             }),
             (0, r.jsx)(g.Z, {
                 icon: u.rG2,
                 iconClassName: A.perkIconUpload,
-                description: T.intl.string(T.t.cBorIy),
+                description: S.intl.string(S.t.cBorIy),
             }),
         ],
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let {
             premiumSubscriptionPlan: n,
@@ -125,19 +125,19 @@ function D(e) {
             analyticsSourceLocation: C,
             priceOptions: R,
         } = e,
-        { analyticsLocations: D, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { analyticsLocations: w, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: L } = (0, u.TCT)(),
         M = (0, l.ap)(L) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         j = null == n || null == n.premiumSubscriptionType,
-        k = O.ZP.getPrice(S.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
+        k = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
         U = (0, v.T4)(k.amount, k.currency),
         G = (0, h.N)(),
         B = null == G ? void 0 : G.trial_id,
-        Z = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === S.Si.TIER_2;
+        Z = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === T.Si.TIER_2;
     return (
         i.useEffect(() => {
             b.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: S.cd.GUILD_PREMIUM_UPSELL_MODAL,
+                type: T.cd.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: x,
             });
         }, [x]),
@@ -158,10 +158,10 @@ function D(e) {
                             className: A.bodyText,
                             children:
                                 null != B
-                                    ? T.intl.string(T.t.AoSzEr)
-                                    : T.intl.format(T.t["7vePZb"], { monthlyPrice: U }),
+                                    ? S.intl.string(S.t.AoSzEr)
+                                    : S.intl.format(S.t["7vePZb"], { monthlyPrice: U }),
                         }),
-                        (0, r.jsx)(w, { shouldUpsellFromNoneTier: j }),
+                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: j }),
                     ],
                 }),
                 (0, r.jsxs)(u.mzw, {
@@ -177,18 +177,18 @@ function D(e) {
                                     look: c.zx.Looks.LINK,
                                     color: M,
                                     onClick: g,
-                                    children: T.intl.string(T.t["SI/adm"]),
+                                    children: S.intl.string(S.t["SI/adm"]),
                                 }),
                                 (0, r.jsx)(u.Button, {
                                     variant: "active",
-                                    text: null != B ? T.intl.string(T.t["Gd/XHF"]) : T.intl.string(T.t.p2moip),
+                                    text: null != B ? S.intl.string(S.t["Gd/XHF"]) : S.intl.string(S.t.p2moip),
                                     type: "submit",
                                     onClick: () => {
                                         a(),
                                             (0, p.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: S.Si.TIER_2,
-                                                analyticsLocations: D,
+                                                subscriptionTier: T.Si.TIER_2,
+                                                analyticsLocations: w,
                                                 analyticsObject: P(N({}, y), {
                                                     section: I.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
                                                 }),
@@ -208,7 +208,7 @@ function D(e) {
                                 look: c.zx.Looks.LINK,
                                 size: c.zx.Sizes.NONE,
                                 onClick: () => s(),
-                                children: T.intl.string(T.t["13/7kX"]),
+                                children: S.intl.string(S.t["13/7kX"]),
                             }),
                         }),
                     ],

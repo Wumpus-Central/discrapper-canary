@@ -29,8 +29,8 @@ var r = n(951288),
     I = n(430824),
     E = n(131951),
     N = n(944486),
-    R = n(594174),
-    A = n(449224),
+    A = n(594174),
+    R = n(449224),
     M = n(626135),
     k = n(63063),
     D = n(358085),
@@ -127,9 +127,9 @@ function es(e) {
         eh = i.useRef(null),
         em = i.useRef(Date.now()),
         e_ = (0, f.e7)([N.Z, Z.Z], () => Z.Z.getChannel(N.Z.getVoiceChannelId())),
-        eg = (0, f.e7)([C.ZP, A.Z], () => ((0, D.isWindows)() ? (0, W.Z)(C.ZP, A.Z) : null)),
-        ex = (0, f.e7)([R.default], () => {
-            let e = R.default.getCurrentUser();
+        eg = (0, f.e7)([C.ZP, R.Z], () => ((0, D.isWindows)() ? (0, W.Z)(C.ZP, R.Z) : null)),
+        ex = (0, f.e7)([A.default], () => {
+            let e = A.default.getCurrentUser();
             return a()(null != e, "GoLiveModal: user cannot be undefined"), e;
         }),
         ev = null != (t = null == e_ ? void 0 : e_.getGuildId()) ? t : K,
@@ -152,8 +152,8 @@ function es(e) {
         (0, G.Z)(ed, eu, ef, ex, ej) || ((eu = eb), (ef = eS));
     let eZ = (0, S.Dt)(),
         [eI, eE] = i.useState(((w = L && !eO), k ? 0 : w ? 2 : 3)),
-        [eN, eR] = i.useState(eO),
-        [eA, eM] = i.useState(null),
+        [eN, eA] = i.useState(eO),
+        [eR, eM] = i.useState(null),
         [ek, eD] = i.useState(
             eO
                 ? {
@@ -170,12 +170,12 @@ function es(e) {
         [eV, eJ] = i.useState(ep),
         [eX, eK] = i.useState(null != (s = P.I0.getSetting()) && s),
         [eY, eq] = i.useState(null != K ? K : null),
-        eQ = null != (d = null == e_ ? void 0 : e_.id) ? d : eA,
+        eQ = null != (d = null == e_ ? void 0 : e_.id) ? d : eR,
         [e$, e1] = i.useState(eO ? "" : void 0);
     async function e0() {
         var e, t;
         a()(null != eg || null != ek, "got nothing to stream");
-        let n = null != (e = null == e_ ? void 0 : e_.id) ? e : eA;
+        let n = null != (e = null == e_ ? void 0 : e_.id) ? e : eR;
         a()(null != n, "Received null target channel ID");
         let r = Z.Z.getChannel(n),
             i = null != (t = null == r ? void 0 : r.getGuildId()) ? t : K;
@@ -226,7 +226,7 @@ function es(e) {
         e0(), ea();
     }
     i.useEffect(() => {
-        let e = (0, D.isWindows)() ? (0, W.Z)(C.ZP, A.Z) : null,
+        let e = (0, D.isWindows)() ? (0, W.Z)(C.ZP, R.Z) : null,
             t = (null == e ? void 0 : e.id) != null ? j.Z.getApplication(e.id) : null;
         M.default.track(Q.rMx.OPEN_MODAL, {
             type: "Go Live Modal",
@@ -242,7 +242,7 @@ function es(e) {
                 let i = (0, U.Z)(e, ex, ej),
                     [l, o] = null != i ? i : [t, n];
                 e !== eG && ((t = l), (n = o));
-                let s = null != (r = null == e_ ? void 0 : e_.id) ? r : eA;
+                let s = null != (r = null == e_ ? void 0 : e_.id) ? r : eR;
                 a()(null != s, "Received null target channel ID");
                 let c = Z.Z.getChannel(s);
                 if (!(0, G.Z)(e, t, n, ex, ej, c)) {
@@ -253,7 +253,7 @@ function es(e) {
                     t !== eF && eH(t),
                     l !== t || o !== n ? eU(q.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eG && eU(e);
             },
-            [e_, eA, ex, ej, eW, eF, eG],
+            [e_, eR, ex, ej, eW, eF, eG],
         ),
         e3 = i.useCallback(
             (e) => {
@@ -261,7 +261,7 @@ function es(e) {
             },
             [e$],
         );
-    function e8(e) {
+    function e4(e) {
         if ((e.preventDefault(), 1 === eI)) return e3();
         if (2 === eI) return eE(3);
         if (null != e$) return eE(1);
@@ -282,7 +282,7 @@ function es(e) {
             });
         } else e2();
     }
-    let e4 = i.useCallback(
+    let e8 = i.useCallback(
             (e) => {
                 eD(e),
                     null != e &&
@@ -290,7 +290,7 @@ function es(e) {
                             ? e1(e.id.split(":")[1])
                             : e1(void 0),
                         eE(3),
-                        eR(!0));
+                        eA(!0));
             },
             [eC],
         ),
@@ -447,7 +447,7 @@ function es(e) {
                     children: () => {
                         var e;
                         return (0, r.jsxs)("form", {
-                            onSubmit: e8,
+                            onSubmit: e4,
                             ref: eh,
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
@@ -468,12 +468,12 @@ function es(e) {
                                                 className: en.modalSize,
                                                 children: eC
                                                     ? (0, r.jsx)(J.se, {
-                                                          onSourceSelect: e4,
+                                                          onSourceSelect: e8,
                                                           selectedSource: ek,
                                                       })
                                                     : (0, r.jsx)(J.oA, {
                                                           selectedSource: ek,
-                                                          onChangeSelectedSource: e4,
+                                                          onChangeSelectedSource: e8,
                                                       }),
                                             }),
                                         }),
@@ -483,7 +483,7 @@ function es(e) {
                                                 className: en.modalSize,
                                                 children: (0, r.jsx)(z.default, {
                                                     selectedChannelId:
-                                                        null != (e = null == e_ ? void 0 : e_.id) ? e : eA,
+                                                        null != (e = null == e_ ? void 0 : e_.id) ? e : eR,
                                                     selectedPreset: eG,
                                                     selectedResolution: eF,
                                                     selectedSource: ek,
@@ -496,7 +496,7 @@ function es(e) {
                                                     onChangeSelectedResolution: (e) => e5(eG, e, eW),
                                                     onChangeSelectedPreset: (e) => e5(e, eF, eW),
                                                     onChangeSelectedChannelId: eM,
-                                                    onChangeSelectedSource: e4,
+                                                    onChangeSelectedSource: e8,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eL(e),
                                                     onChangeGuild: () => eE(0),

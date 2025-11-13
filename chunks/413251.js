@@ -1,25 +1,25 @@
 n.d(t, { Z: () => c });
-var r = n(647438),
-    i = n(442837),
+var i = n(647438),
+    r = n(442837),
     l = n(384275),
     a = n(728345),
     o = n(812206),
     s = n(881998);
 function c(e) {
     let t = (null == e ? void 0 : e.require_application_authorization) ? e.application_id : null,
-        { authorizationsFetchState: n, applicationOAuth2Token: c } = (0, i.cj)([s.default], () => ({
+        { authorizationsFetchState: n, applicationOAuth2Token: c } = (0, r.cj)([s.default], () => ({
             authorizationsFetchState: s.default.getFetchState(),
             applicationOAuth2Token: s.default.getNewestTokenForApplication(t),
         })),
-        u = (0, i.e7)([o.Z], () => o.Z.getApplication(t)),
-        d = (0, i.e7)([o.Z], () => o.Z.getApplication(null == u ? void 0 : u.parentId));
-    (0, r.useEffect)(() => {
+        u = (0, r.e7)([o.Z], () => o.Z.getApplication(t)),
+        d = (0, r.e7)([o.Z], () => o.Z.getApplication(null == u ? void 0 : u.parentId));
+    (0, i.useEffect)(() => {
         null != t && n === s.FetchState.NOT_FETCHED && l.Z.fetch();
     }, [n, t]),
-        (0, r.useEffect)(() => {
+        (0, i.useEffect)(() => {
             null != t && null == u && n === s.FetchState.FETCHED && a.ZP.fetchApplications([t], !1);
         }, [t, c, n, u]),
-        (0, r.useEffect)(() => {
+        (0, i.useEffect)(() => {
             null != u &&
                 null != u.parentId &&
                 null == d &&

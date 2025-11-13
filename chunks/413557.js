@@ -26,7 +26,7 @@ function p(e) {
         [s, o] = i.useState(!1),
         [c, p] = i.useState(0),
         f = i.useRef(null),
-        m = (e) => {
+        h = (e) => {
             clearTimeout(c),
                 p(
                     setTimeout(() => {
@@ -35,8 +35,8 @@ function p(e) {
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => m(!0),
-        onMouseLeave: () => m(!1),
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
         children: (0, r.jsx)(l.yRy, {
             targetElementRef: f,
             shouldShow: s,

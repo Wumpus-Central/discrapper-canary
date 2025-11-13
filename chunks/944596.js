@@ -3,8 +3,8 @@ var r = n(876215),
     i = n(626135),
     l = n(144725),
     a = n(797394),
-    o = n(981631);
-function s(e) {
+    s = n(981631);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ let c = (e) => {
             case "loading":
                 return "loading";
             case "message":
-                if (e.channelType === o.d4z.GUILD_ANNOUNCEMENT) return "announcement";
+                if (e.channelType === s.d4z.GUILD_ANNOUNCEMENT) return "announcement";
                 return "message";
             case "channelSummary":
                 return "summary";
@@ -60,7 +60,7 @@ let c = (e) => {
     u = (e) => {
         switch (e.type) {
             case a.Ni.MESSAGE:
-                if (e.data.channel_type === o.d4z.GUILD_ANNOUNCEMENT) return "announcement";
+                if (e.data.channel_type === s.d4z.GUILD_ANNOUNCEMENT) return "announcement";
                 return "message";
             case a.Ni.SUMMARY:
                 return "summary";
@@ -78,7 +78,7 @@ let c = (e) => {
     },
     d = {
         trackItemInteraction(e) {
-            i.default.track(o.rMx.FEED_ITEM_INTERACTED, {
+            i.default.track(s.rMx.FEED_ITEM_INTERACTED, {
                 load_id: l.Z.getLoadId(),
                 feed_item_type: e.type,
                 feed_item_id: e.id,
@@ -92,7 +92,7 @@ let c = (e) => {
             });
         },
         trackItemShortImpression(e, t, n) {
-            i.default.track(o.rMx.FEED_ITEM_SEEN_BATCH, {
+            i.default.track(s.rMx.FEED_ITEM_SEEN_BATCH, {
                 load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
                 feed_item_ids: e.map((e) => e.item.id),
@@ -107,7 +107,7 @@ let c = (e) => {
             });
         },
         trackItemLongImpression(e, t, n) {
-            i.default.track(o.rMx.FEED_ITEM_SEEN_LONG, {
+            i.default.track(s.rMx.FEED_ITEM_SEEN_LONG, {
                 load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
                 feed_item_ids: e.map((e) => e.item.id),
@@ -134,8 +134,8 @@ let c = (e) => {
                     l.push(e.id), c.push(u(e));
                 }),
                 i.default.track(
-                    o.rMx.FEED_LOADED,
-                    ((t = s({}, e.newTrackingProps)),
+                    s.rMx.FEED_LOADED,
+                    ((t = o({}, e.newTrackingProps)),
                     (n = n =
                         {
                             home_session_id: e.homeSessionId,
@@ -161,25 +161,25 @@ let c = (e) => {
                 );
         },
         trackFeedShown(e) {
-            i.default.track(o.rMx.FEED_SHOWN, {
+            i.default.track(s.rMx.FEED_SHOWN, {
                 load_id: l.Z.getLoadId(),
                 home_session_id: e.homeSessionId,
                 variant: e.variant,
             });
         },
         trackFeedFirstScrollStarted() {
-            i.default.track(o.rMx.HOME_FIRST_SCROLL_STARTED, {
+            i.default.track(s.rMx.HOME_FIRST_SCROLL_STARTED, {
                 load_id: l.Z.getLoadId(),
                 home_session_id: "gravity",
             });
         },
         trackFeedFeedbackPromptViewed() {
-            i.default.track(o.rMx.HOME_FEEDBACK_PROMPT_VIEWED);
+            i.default.track(s.rMx.HOME_FEEDBACK_PROMPT_VIEWED);
         },
         trackFeedFeedbackSubmitted(e) {
             i.default.track(
-                o.rMx.HOME_FEEDBACK_SUBMITTED,
-                s(
+                s.rMx.HOME_FEEDBACK_SUBMITTED,
+                o(
                     {
                         load_id: l.Z.getLoadId(),
                         home_session_id: "gravity",
@@ -190,7 +190,7 @@ let c = (e) => {
         },
         trackGeneratedCandidateFeedback(e) {
             var t, n, r, a;
-            i.default.track(o.rMx.FEED_ITEM_CONTENT_GEN_FEEDBACK, {
+            i.default.track(s.rMx.FEED_ITEM_CONTENT_GEN_FEEDBACK, {
                 feedback_type: e.isPositive ? "thumbs_up" : "thumbs_down",
                 content_id: parseInt(e.item.content_id),
                 channel_id: parseInt(e.item.channel_id),
@@ -207,42 +207,42 @@ let c = (e) => {
             });
         },
         trackFeedOnboardingScreenSkipped(e) {
-            i.default.track(o.rMx.ICYMI_ONBOARDING_SCREEN_SKIPPED, { location: e.location });
+            i.default.track(s.rMx.ICYMI_ONBOARDING_SCREEN_SKIPPED, { location: e.location });
         },
         trackFeedOnboardingGuildToggled(e) {
-            i.default.track(o.rMx.ICYMI_ONBOARDING_GUILD_TOGGLED, {
+            i.default.track(s.rMx.ICYMI_ONBOARDING_GUILD_TOGGLED, {
                 guild_id: e.guildId,
                 toggled: e.toggled,
             });
         },
         trackFeedOnboardingCategoryToggled(e) {
-            i.default.track(o.rMx.ICYMI_ONBOARDING_CATEGORY_TOGGLED, {
+            i.default.track(s.rMx.ICYMI_ONBOARDING_CATEGORY_TOGGLED, {
                 category_id: e.categoryId,
                 toggled: e.toggled,
             });
         },
         trackFeedEmptyLoadingSeen() {
-            i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_SEEN, {
+            i.default.track(s.rMx.ICYMI_FEED_EMPTY_LOADING_SEEN, {
                 load_id: l.Z.getLoadId(),
                 version: l.Z.getVersion(),
             });
         },
         trackFeedEmptyLoadingComplete(e) {
-            i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_COMPLETE, {
+            i.default.track(s.rMx.ICYMI_FEED_EMPTY_LOADING_COMPLETE, {
                 load_id: l.Z.getLoadId(),
                 dwell_time_ms: e.dwellTimeMs,
                 version: l.Z.getVersion(),
             });
         },
         trackFeedEmptyLoadingAbandoned(e) {
-            i.default.track(o.rMx.ICYMI_FEED_EMPTY_LOADING_ABANDONED, {
+            i.default.track(s.rMx.ICYMI_FEED_EMPTY_LOADING_ABANDONED, {
                 load_id: l.Z.getLoadId(),
                 dwell_time_ms: e.dwellTimeMs,
                 version: l.Z.getVersion(),
             });
         },
         trackFeedSessionStarted(e) {
-            i.default.track(o.rMx.FEED_SESSION_STARTED, {
+            i.default.track(s.rMx.FEED_SESSION_STARTED, {
                 load_id: l.Z.getLoadId(),
                 version: l.Z.getVersion(),
                 session_start_time_ms: e.sessionStartTimeMs,
@@ -252,7 +252,7 @@ let c = (e) => {
             });
         },
         trackFeedSessionCompleted(e) {
-            i.default.track(o.rMx.FEED_SESSION_COMPLETED, {
+            i.default.track(s.rMx.FEED_SESSION_COMPLETED, {
                 load_id: l.Z.getLoadId(),
                 version: l.Z.getVersion(),
                 session_duration_ms: e.sessionDurationMs,
@@ -275,7 +275,7 @@ let c = (e) => {
         },
         trackFeedItemDwell1s(e) {
             var t;
-            i.default.track(o.rMx.FEED_ITEM_1S_DWELLED, {
+            i.default.track(s.rMx.FEED_ITEM_1S_DWELLED, {
                 load_id: l.Z.getLoadId(),
                 version: l.Z.getVersion(),
                 impression_id: e.impressionId,
@@ -299,7 +299,7 @@ let c = (e) => {
         },
         trackFeedItemDwelled(e) {
             var t;
-            i.default.track(o.rMx.FEED_ITEM_DWELLED, {
+            i.default.track(s.rMx.FEED_ITEM_DWELLED, {
                 load_id: l.Z.getLoadId(),
                 version: l.Z.getVersion(),
                 impression_id: e.impressionId,

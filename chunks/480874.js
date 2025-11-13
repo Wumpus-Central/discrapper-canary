@@ -10,24 +10,24 @@ var r = n(951288),
     d = n(493773),
     p = n(209613),
     f = n(82295),
-    m = n(797614),
-    h = n(626135),
-    g = n(26373),
+    h = n(797614),
+    g = n(626135),
+    m = n(26373),
     _ = n(486622),
     b = n(488634),
     E = n(727813),
     O = n(355350),
-    I = n(307947),
-    y = n(125855),
-    v = n(687683),
+    y = n(307947),
+    v = n(125855),
+    I = n(687683),
     C = n(981631),
     S = n(388032),
-    T = n(393272);
+    T = n(797303);
 function N() {
     let e = i.useRef(null),
         t = (0, E.Z)(),
         n = (0, O.w)(),
-        l = (0, g.V)(),
+        l = (0, m.V)(),
         N = (0, u.N)(),
         j = (0, p.Z)("message-requests-spam-list"),
         { channelId: P } = (0, b._)(),
@@ -39,8 +39,8 @@ function N() {
             A(t.map((e) => e.channel.id));
         }, [t, A]);
     (0, d.ZP)(() => {
-        h.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-            m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
+            h.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
             (e) => {
@@ -50,7 +50,7 @@ function N() {
                     c = null == (i = t[s + 1]) || null == (n = i.channel) ? void 0 : n.id,
                     u = o.channel.id;
                 return (0, r.jsx)(
-                    y.Z,
+                    v.Z,
                     {
                         index: s,
                         className: a()({
@@ -100,7 +100,7 @@ function N() {
             [n, Z, N],
         );
     return 0 === t.length
-        ? (0, r.jsx)(I.Z, { section: v.pS.SPAM })
+        ? (0, r.jsx)(y.Z, { section: I.pS.SPAM })
         : (0, r.jsx)(s.bG, {
               navigator: j,
               children: (0, r.jsx)(s.SJ, {
@@ -168,8 +168,8 @@ function N() {
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,
-                                  sectionHeight: v.oi,
-                                  rowHeight: v.WN,
+                                  sectionHeight: I.oi,
+                                  rowHeight: I.WN,
                                   renderSection: L,
                                   renderRow: w,
                                   sections: [t.length],

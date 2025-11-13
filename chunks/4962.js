@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(415506);
+n.d(t, { Z: () => m }), n(415506);
 var r,
     i = n(951288);
 n(647438);
@@ -11,7 +11,7 @@ var l = n(120356),
     d = n(388032),
     p = n(113520),
     f = (((r = f || {})[(r.STAFF_NOTES = 1)] = "STAFF_NOTES"), r);
-let m = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
+let h = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: r } = e;
         return (0, i.jsxs)("div", {
             className: a()(p.staffReviewHeader, n),
@@ -37,7 +37,7 @@ let m = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
             ],
         });
     }),
-    h = (e) => {
+    g = (e) => {
         let { data: t, className: n } = e;
         if (1 === t.type) {
             if (null == t.staffNotes) return null;
@@ -47,7 +47,7 @@ let m = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
                 : (0, i.jsxs)("div", {
                       className: n,
                       children: [
-                          (0, i.jsx)(m, {
+                          (0, i.jsx)(h, {
                               user: e,
                               className: p.header,
                           }),
@@ -60,5 +60,5 @@ let m = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         }
         throw Error("Unknown type");
     };
-h.Types = f;
-let g = h;
+g.Types = f;
+let m = g;

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         Playground: () => M,
-        PlaygroundStore: () => D,
+        PlaygroundStore: () => w,
     }),
     n(361932),
     n(187205);
@@ -71,7 +71,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function w(e, t) {
         e
     );
 }
-let D = (0, m.H)(() => ({
+let w = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
@@ -126,7 +126,7 @@ function L() {
         children: (t) =>
             (0, r.jsx)(
                 h.hU,
-                w(
+                D(
                     R(
                         {
                             size: "sm",
@@ -144,8 +144,8 @@ function L() {
 function M(e) {
     var t;
     let { configs: n } = e,
-        c = D.useField("selectedCollection"),
-        u = D.useField("selectedStory"),
+        c = w.useField("selectedCollection"),
+        u = w.useField("selectedStory"),
         f = i.useMemo(() => n.flatMap((e) => e.collections), [n]),
         {
             collection: m,
@@ -169,13 +169,13 @@ function M(e) {
             };
         }, [c, u, f]),
         y = (e) => {
-            D.setState({
+            w.setState({
                 selectedCollection: e,
                 selectedStory: null,
             });
         },
         S = (e) => {
-            D.setState({ selectedStory: e });
+            w.setState({ selectedStory: e });
         },
         A = null != (t = null == m ? void 0 : m.name) ? t : "Design System",
         N = null == b ? void 0 : b.name,

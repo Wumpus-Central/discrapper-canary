@@ -3,18 +3,18 @@ n.d(t, {
     z: () => s,
 }),
     n(953529);
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(120356),
-    o = n.n(i),
-    l = n(481060),
-    a = n(262441);
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(262441);
 function s(e) {
     let { children: t } = e;
-    return (0, r.jsx)("div", {
-        className: a.cellGroup,
-        children: (0, r.jsx)("div", {
-            className: a.content,
+    return (0, i.jsx)("div", {
+        className: o.cellGroup,
+        children: (0, i.jsx)("div", {
+            className: o.content,
             children: t,
         }),
     });
@@ -23,57 +23,57 @@ function c(e) {
     let {
         icon: t,
         title: n,
-        description: i,
+        description: r,
         iconClassName: s,
         color: c,
         listType: u = "icon",
         completed: d = !1,
         index: p,
     } = e;
-    return (0, r.jsxs)("div", {
-        className: a.cell,
+    return (0, i.jsxs)("div", {
+        className: o.cell,
         children: [
             (() => {
                 if ("numbered" === u && null != p)
                     if (d)
-                        return (0, r.jsx)("div", {
-                            className: a.number,
-                            children: (0, r.jsx)(l.sV5, {
+                        return (0, i.jsx)("div", {
+                            className: o.number,
+                            children: (0, i.jsx)(a.sV5, {
                                 color: "green",
-                                className: o()(a.icon, s),
+                                className: l()(o.icon, s),
                             }),
                         });
                     else
-                        return (0, r.jsx)(l.Heading, {
+                        return (0, i.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-brand",
-                            className: a.number,
+                            className: o.number,
                             children: p + 1,
                         });
                 if (null != t)
-                    return (0, r.jsx)("div", {
-                        className: a.iconContainer,
-                        children: (0, r.jsx)(t, {
+                    return (0, i.jsx)("div", {
+                        className: o.iconContainer,
+                        children: (0, i.jsx)(t, {
                             color: null != c ? c : "currentColor",
-                            className: o()(a.icon, s),
+                            className: l()(o.icon, s),
                         }),
                     });
             })(),
-            (0, r.jsxs)("div", {
-                className: a.textContainer,
+            (0, i.jsxs)("div", {
+                className: o.textContainer,
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        className: o()({ [a.completedText]: d }),
+                        className: l()({ [o.completedText]: d }),
                         children: n,
                     }),
-                    null != i &&
-                        (0, r.jsx)(l.Text, {
+                    null != r &&
+                        (0, i.jsx)(a.Text, {
                             variant: "text-xs/medium",
                             color: "text-secondary",
-                            className: o()({ [a.completedText]: d }),
-                            children: i,
+                            className: l()({ [o.completedText]: d }),
+                            children: r,
                         }),
                 ],
             }),

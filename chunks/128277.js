@@ -54,7 +54,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,19 +66,19 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function x(e) {
-    let { user: t, currentUser: n, activity: a, className: R, onClose: w } = e,
+    let { user: t, currentUser: n, activity: a, className: R, onClose: D } = e,
         x = (0, p.Dt)(),
         L = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
@@ -164,18 +164,18 @@ function x(e) {
             ref: F,
             className: o()(N.card, R),
             onAction: Z,
-            onClose: w,
+            onClose: D,
             "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(P({ textId: L }, k), {
+                    w(P({ textId: L }, k), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
                             activity: a,
                             entry: j,
-                            onClose: w,
+                            onClose: D,
                         }),
                     }),
                 ),

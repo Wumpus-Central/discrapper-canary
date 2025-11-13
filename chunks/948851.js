@@ -19,12 +19,12 @@ function c(e) {
             onGenerateNewLink: p,
             onToggleTemporary: I,
             onSelectMaxAge: m,
-            onSelectMaxUses: S,
-            isGuestInviteCreationToggleEnabled: x,
+            onSelectMaxUses: x,
+            isGuestInviteCreationToggleEnabled: S,
             inviteFlags: f,
-            onSetInviteFlags: E,
+            onSetInviteFlags: y,
         } = e,
-        y = a.ZP.getMaxAgeOptionByValue(g),
+        E = a.ZP.getMaxAgeOptionByValue(g),
         C = d.find((e) => e.value === h);
     return (0, i.jsx)("div", {
         className: u.settingsContent,
@@ -35,14 +35,14 @@ function c(e) {
                 (0, i.jsx)(s.VcW, {
                     label: o.intl.string(o.t["60qw2x"]),
                     options: c,
-                    value: null != (t = null == y ? void 0 : y.value) ? t : c[0].value,
+                    value: null != (t = null == E ? void 0 : E.value) ? t : c[0].value,
                     onChange: m,
                 }),
                 (0, i.jsx)(s.VcW, {
                     label: o.intl.string(o.t.jDqWHW),
                     options: d,
                     value: null == C ? void 0 : C.value,
-                    onChange: S,
+                    onChange: x,
                 }),
                 !n &&
                     (0, i.jsx)(s.rsf, {
@@ -51,10 +51,10 @@ function c(e) {
                         description: o.intl.string(o.t.UN5IRX),
                         label: o.intl.string(o.t["wE+9dr"]),
                     }),
-                x &&
+                S &&
                     (0, i.jsx)(s.rsf, {
                         checked: (0, r.yE)(f, l.$.IS_GUEST_INVITE),
-                        onChange: (e) => E((0, r.mB)(f, l.$.IS_GUEST_INVITE, e)),
+                        onChange: (e) => y((0, r.mB)(f, l.$.IS_GUEST_INVITE, e)),
                         description: o.intl.string(o.t["/FeTK6"]),
                         label: o.intl.string(o.t.siexRS),
                     }),

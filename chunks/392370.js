@@ -73,7 +73,7 @@ function I(e) {
         }
     );
 }
-function S(e) {
+function T(e) {
     var t, n;
     let { context: i, includeBuiltIn: a = !0, allowFetch: o = !0 } = e,
         s = (0, f.em)(i, !0, o),
@@ -108,7 +108,7 @@ function S(e) {
         null == (n = l.result) ? void 0 : n.sections,
     ]);
 }
-function T(e) {
+function S(e) {
     let t = (0, _.k)("channel" === e.type ? e.channel : void 0, [c.yU.CHAT, c.yU.PRIMARY_ENTRY_POINT]);
     return (n) => {
         let { context: r, userId: i, roleIds: a, isImpersonating: o } = t,
@@ -160,11 +160,11 @@ function P(e) {
         return null != (r = null == i ? void 0 : i.includes(e.toLocaleLowerCase())) && r;
     };
 }
-function w(e, t) {
+function D(e, t) {
     let n = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function D(e, t) {
+function w(e, t) {
     let n = (0, y.$d)(e),
         r = (0, y.$d)(t);
     return (0, f.un)(n, r);
@@ -294,7 +294,7 @@ function V(e) {
             commands: d,
             commandSectionMap: f,
             loading: _,
-        } = S({
+        } = T({
             context: t,
             includeBuiltIn: !0,
         }),
@@ -361,9 +361,9 @@ function V(e) {
             } else l && (e = p);
             return (0, E.N)(e, {
                 limit: o,
-                filterPredicates: [T(t)],
+                filterPredicates: [S(t)],
                 bucketPredicates: A(n),
-                sortComparers: [w, D],
+                sortComparers: [D, w],
             });
         }, [l, c, o, t, n, p, h]),
         y = g.length > 0,

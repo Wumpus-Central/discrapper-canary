@@ -190,8 +190,8 @@ function A(e) {
                 label: e.label,
             };
         }),
-        w = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
-        D = S(
+        D = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
+        w = S(
             h,
             i.useMemo(() => a.find((e) => e.id === n), [a, n]),
         );
@@ -214,18 +214,18 @@ function A(e) {
                       label: t,
                       onChange: R,
                       isDisabled: E,
-                      className: o()({ [g.paymentSourceHasWarning]: null != D }, b),
+                      className: o()({ [g.paymentSourceHasWarning]: null != w }, b),
                       optionClassName: y,
                       placeholder: m.intl.string(m.t["8lqkf8"]),
                       renderOptionValue: (e) => {
                           let [t] = e;
                           return A
                               ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE })
-                              : T(null == t.value ? void 0 : w.get(t.value), t, d);
+                              : T(null == t.value ? void 0 : D.get(t.value), t, d);
                       },
-                      renderOptionLabel: (e) => T(null == e.value ? void 0 : w.get(e.value), e, d),
+                      renderOptionLabel: (e) => T(null == e.value ? void 0 : D.get(e.value), e, d),
                   }),
-            null != D
+            null != w
                 ? (0, r.jsxs)("div", {
                       className: g.paymentSourceWarning,
                       children: [
@@ -238,7 +238,7 @@ function A(e) {
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
-                              children: D,
+                              children: w,
                           }),
                       ],
                   })

@@ -16,16 +16,16 @@ var r,
     d = n(471445),
     p = n(986332),
     f = n(662842),
-    m = n(703656),
-    h = n(922482),
-    g = n(565799),
+    h = n(703656),
+    g = n(922482),
+    m = n(565799),
     _ = n(501655),
     b = n(192079),
     E = n(427679),
     O = n(448206),
-    I = n(496675),
-    y = n(938475),
-    v = n(626135),
+    y = n(496675),
+    v = n(938475),
+    I = n(626135),
     C = n(823379),
     S = n(15274),
     T = n(924301),
@@ -123,9 +123,9 @@ let B = l.memo(function (e) {
 function H(e) {
     let { guildEvent: t, channel: n } = e,
         r = (0, o.Wu)(
-            [y.ZP],
+            [v.ZP],
             () =>
-                y.ZP.getVoiceStatesForChannel(n).map((e) => {
+                v.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -162,7 +162,7 @@ function V(e) {
         (0, i.jsx)(c.Button, {
             onClick: function () {
                 (0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, N.L_)(t.id), 1000)),
-                    v.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                    I.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n,
                     });
@@ -182,20 +182,20 @@ function F(e) {
         o = null != a ? (0, x.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: f, endTime: m } = (0, Z.ZP)(n),
+        { startTime: f, endTime: h } = (0, Z.ZP)(n),
         {
-            startDateTimeString: h,
-            upcomingEvent: g,
+            startDateTimeString: g,
+            upcomingEvent: m,
             diffMinutes: _,
-        } = (0, R.ub)(f.toISOString(), null == m ? void 0 : m.toISOString()),
-        b = g
+        } = (0, R.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
+        b = m
             ? _ > 0
                 ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: _ })
                 : U.intl.string(U.t.WINqKV)
-            : U.intl.formatToPlainString(U.t.DC6h3G, { date: h });
+            : U.intl.formatToPlainString(U.t.DC6h3G, { date: g });
     return (
         l.useEffect(() => {
-            v.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
+            I.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: r,
                 guild_id: n.guild_id,
             });
@@ -218,7 +218,7 @@ function F(e) {
                         }),
                         (0, i.jsx)(c.P3F, {
                             onClick: () => {
-                                v.default.track(k.rMx.CHANNEL_NOTICE_CLOSED, {
+                                I.default.track(k.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: r,
                                     guild_id: n.guild_id,
                                 }),
@@ -331,17 +331,17 @@ function W(e) {
             text: n,
             fullWidth: !0,
             onClick: () => {
-                null != t && null != t.getGuildId() && ((0, h.Cq)(t), (0, m.XU)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, g.Cq)(t), (0, h.XU)(t.getGuildId(), t.id));
             },
         }),
     });
 }
 function q(e) {
     let { stageInstance: t, channel: n } = e,
-        r = (0, o.Wu)([g.Z], () => [...new Set(g.Z.getMutableParticipants(n.id, _.pV.SPEAKER).map((e) => e.user))], [
+        r = (0, o.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, _.pV.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
-        l = (0, o.e7)([g.Z], () => g.Z.getParticipantCount(n.id, _.pV.AUDIENCE), [n.id]),
+        l = (0, o.e7)([m.Z], () => m.Z.getParticipantCount(n.id, _.pV.AUDIENCE), [n.id]),
         a = U.intl.formatToPlainString(U.t["+v2pN2"], { count: "".concat(l) });
     return (0, i.jsx)(B, {
         onClickCloseIcon: () => (0, N.ji)({ stageId: null == t ? void 0 : t.id }),
@@ -375,21 +375,21 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
-        p = (0, o.e7)([I.Z], () => I.Z.can(k.Plq.CONNECT, t)),
+        p = (0, o.e7)([y.Z], () => y.Z.can(k.Plq.CONNECT, t)),
         f = (0, O.Z)(t.id),
-        m = U.intl.string(U.t.VJlc0S);
+        h = U.intl.string(U.t.VJlc0S);
     switch (r) {
         case 1:
-            m = U.intl.string(U.t.VJlc0S);
+            h = U.intl.string(U.t.VJlc0S);
             break;
         case 2:
-            (m = U.intl.string(U.t.ZYO5OK)),
+            (h = U.intl.string(U.t.ZYO5OK)),
                 (null == f ? void 0 : f.speaker)
-                    ? (m = U.intl.string(U.t["/cnSFc"]))
-                    : null != f && (m = U.intl.string(U.t.btSGOj));
+                    ? (h = U.intl.string(U.t["/cnSFc"]))
+                    : null != f && (h = U.intl.string(U.t.btSGOj));
             break;
         case 3:
-            m = U.intl.string(U.t.wBoE6L);
+            h = U.intl.string(U.t.wBoE6L);
             break;
         default:
             (0, C.vE)(r);
@@ -421,7 +421,7 @@ function Q(e) {
                       null == f &&
                       (0, i.jsx)(W, {
                           channel: t,
-                          label: m,
+                          label: h,
                       }),
               ],
           });
@@ -442,15 +442,15 @@ let J = l.memo(function (e) {
             [s, l],
         ),
         d = null,
-        m = null != s && null != r && !c;
+        h = null != s && null != r && !c;
     if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
-        ? m &&
+        ? h &&
           (d = (0, i.jsx)(q, {
               stageInstance: s,
               channel: r,
           }))
-        : l.entity_type === M.WX.STAGE_INSTANCE && m
+        : l.entity_type === M.WX.STAGE_INSTANCE && h
           ? (d = (0, i.jsx)(q, {
                 stageInstance: s,
                 channel: r,
@@ -463,8 +463,8 @@ let J = l.memo(function (e) {
                   guildEvent: l,
                   channel: r,
               }));
-    let h = t.features.has(k.GuildFeatures.COMMUNITY);
-    if (null == d && null != a && !h) {
+    let g = t.features.has(k.GuildFeatures.COMMUNITY);
+    if (null == d && null != a && !g) {
         let { upcomingEvent: e, noticeType: t } = a;
         d = (0, i.jsx)(F, {
             guildEvent: e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(518596),
     v = n(726985),
     I = n(981631),
-    S = n(388032),
-    T = n(61365);
+    T = n(388032),
+    S = n(61365);
 function A(e, t, n) {
     return (
         t in e
@@ -74,10 +74,10 @@ function R(e, t) {
 }
 let P = () =>
     (0, r.jsx)("div", {
-        className: T.syncing,
+        className: S.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class w extends i.PureComponent {
+class D extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
@@ -118,13 +118,13 @@ class w extends i.PureComponent {
                       (0, r.jsx)(_.F, {
                           setting: v.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)("div", {
-                              className: T.paymentHistory,
+                              className: S.paymentHistory,
                               children: (0, r.jsxs)(o.Kqy, {
                                   gap: 16,
                                   children: [
                                       (0, r.jsx)(o.Heading, {
                                           variant: "heading-lg/semibold",
-                                          children: S.intl.string(S.t.obLrcK),
+                                          children: T.intl.string(T.t.obLrcK),
                                       }),
                                       (0, r.jsx)(f.oQ, {}),
                                       (0, r.jsx)(u.Z, { locale: a }),
@@ -134,14 +134,14 @@ class w extends i.PureComponent {
                       }),
                       (0, r.jsx)(o.Wn, {
                           messageType: o.QYI.INFO,
-                          className: T.codeRedemptionRedirect,
-                          children: S.intl.format(S.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
+                          className: S.codeRedemptionRedirect,
+                          children: T.intl.format(T.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
                       }),
                   ],
               });
     }
 }
-function D() {
+function w() {
     let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
         let e = E.Z.getPremiumTypeSubscription(),
             t = h.default.getCurrentUser();
@@ -164,5 +164,5 @@ function D() {
     if (!e.shouldRenderBillingSettings) return (0, r.jsx)(P, {});
     let { shouldRenderBillingSettings: t } = e,
         n = N(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(w, C({}, n));
+    return (0, r.jsx)(D, C({}, n));
 }

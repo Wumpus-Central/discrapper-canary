@@ -94,8 +94,8 @@ function w(e) {
                                         onClick: () => {
                                             (0, o.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    t.e("36599"),
                                                     t.e("49049"),
+                                                    t.e("36599"),
                                                     t.e("61"),
                                                     t.e("55324"),
                                                 ]).then(t.bind(t, 779250));

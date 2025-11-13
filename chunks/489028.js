@@ -16,20 +16,20 @@ var r = n(951288),
     b = n(451478),
     x = n(626135),
     j = n(584825),
-    v = n(723047),
-    _ = n(416867),
-    C = n(215124),
-    O = n(981631),
+    _ = n(723047),
+    v = n(416867),
+    O = n(215124),
+    C = n(981631),
     y = n(674563),
-    E = n(829857),
-    N = n(388032),
+    N = n(829857),
+    E = n(388032),
     I = n(489838);
 function S(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, r.jsx)("div", {
         className: I.selectTeamContainer,
         children: (0, r.jsx)(a.zxk, {
-            text: N.intl.string(N.t["5k6FfR"]),
+            text: E.intl.string(E.t["5k6FfR"]),
             disabled: !n,
             onClick: t,
             fullWidth: !0,
@@ -41,7 +41,7 @@ function T(e) {
         [o, c] = i.useState(),
         { enableGuildMonetizationForTeam: u, submitting: g, error: m } = (0, d.Z)(),
         { fetchSubscriptionsSettings: p } = (0, j.JH)(),
-        f = (0, v.mY)(),
+        f = (0, _.mY)(),
         h = i.useMemo(
             () =>
                 n.map((e) => ({
@@ -53,9 +53,9 @@ function T(e) {
         b = async () => {
             (await u(t, o, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (p(t.id),
-                (0, _.B)({
-                    title: N.intl.string(N.t["AP/2qe"]),
-                    body: N.intl.string(N.t.kHMgaK),
+                (0, v.B)({
+                    title: E.intl.string(E.t["AP/2qe"]),
+                    body: E.intl.string(E.t.kHMgaK),
                 }));
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -66,14 +66,14 @@ function T(e) {
                     (0, r.jsx)(s.q4e, {
                         className: I.teamSelect,
                         options: h,
-                        placeholder: N.intl.string(N.t.QXf93A),
+                        placeholder: E.intl.string(E.t.QXf93A),
                         value: o,
                         isDisabled: 0 === h.length || f || !l,
                         onChange: (e) => c(e),
-                        "aria-label": N.intl.string(N.t.QXf93A),
+                        "aria-label": E.intl.string(E.t.QXf93A),
                     }),
                     (0, r.jsx)(a.zxk, {
-                        text: N.intl.string(N.t["9HU3ZV"]),
+                        text: E.intl.string(E.t["9HU3ZV"]),
                         onClick: b,
                         loading: g,
                         disabled: null == o || f || !l,
@@ -95,27 +95,27 @@ let P = (e) => {
         a = (0, f.eM)(t, n),
         d = (0, c.Ob)(t),
         j = (0, l.e7)([b.Z], () => b.Z.isFocused()),
-        { teams: v, loading: _ } = (0, p.Z)({ refreshOnDepChange: j }),
+        { teams: _, loading: v } = (0, p.Z)({ refreshOnDepChange: j }),
         y = i.useMemo(
             () =>
-                v.filter((e) => {
+                _.filter((e) => {
                     var t;
                     return (
-                        e.payout_account_status !== E.C.BLOCKED &&
-                        (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : O.lds, e)
+                        e.payout_account_status !== N.C.BLOCKED &&
+                        (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : C.lds, e)
                     );
                 }),
-            [v, n],
+            [_, n],
         ),
         P = y.length > 0,
         w = i.useCallback(async () => {
-            x.default.track(O.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+            x.default.track(C.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: d,
                 has_eligible_team: P,
                 guild_id: t.id,
                 is_owner: a,
             });
-            let e = await (0, u.$)(O.E07.DEVELOPER_PORTAL_TEAMS);
+            let e = await (0, u.$)(C.E07.DEVELOPER_PORTAL_TEAMS);
             (0, o.Z)(e);
         }, [t, a, d, P]),
         Z = i.useCallback(
@@ -128,7 +128,7 @@ let P = (e) => {
                     : e,
             [w, a],
         );
-    return _
+    return v
         ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsxs)(s.Kqy, {
               gap: 32,
@@ -138,13 +138,13 @@ let P = (e) => {
                           className: I.nonOwnerNotice,
                           children: (0, r.jsx)(s.M14, {
                               type: "warning",
-                              children: N.intl.string(N.t.t56qWO),
+                              children: E.intl.string(E.t.t56qWO),
                           }),
                       }),
                   (0, r.jsx)(s.gNt, {
-                      label: N.intl.string(N.t["sYLCY/"]),
+                      label: E.intl.string(E.t["sYLCY/"]),
                       disabled: !a,
-                      description: N.intl.format(N.t["5mfqpW"], { onCreateTeamHook: Z }),
+                      description: E.intl.format(E.t["5mfqpW"], { onCreateTeamHook: Z }),
                       children: P
                           ? (0, r.jsx)(T, {
                                 guild: t,
@@ -157,8 +157,8 @@ let P = (e) => {
                             }),
                   }),
                   (0, r.jsx)(s.gNt, {
-                      label: N.intl.string(N.t["0n7R2X"]),
-                      children: (0, r.jsx)(C.Z, {
+                      label: E.intl.string(E.t["0n7R2X"]),
+                      children: (0, r.jsx)(O.Z, {
                           guildId: t.id,
                           allPeriods: [],
                       }),

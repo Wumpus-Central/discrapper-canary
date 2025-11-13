@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(174604),
     x = n(399829),
     j = n(428862),
-    v = n(899667),
-    _ = n(626135),
-    C = n(267642),
-    O = n(63063),
+    _ = n(899667),
+    v = n(626135),
+    O = n(267642),
+    C = n(63063),
     y = n(999382),
-    E = n(981631),
-    N = n(388032),
+    N = n(981631),
+    E = n(388032),
     I = n(424359);
 function S(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -30,11 +30,11 @@ function S(e) {
     return n <= 0
         ? null
         : 0 === i && 0 === l
-          ? N.intl.format(N.t.kF0HEa, {
+          ? E.intl.format(E.t.kF0HEa, {
                 tierName: r,
                 numPremiumSubscriptions: n,
             })
-          : N.intl.format(N.t.neDJhq, {
+          : E.intl.format(E.t.neDJhq, {
                 days: i,
                 hours: l,
                 tierName: r,
@@ -43,16 +43,16 @@ function S(e) {
 }
 function T(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
-        i = (0, C.gZ)(t, n),
-        l = (0, C.nW)((0, C.Jh)(n));
+        i = (0, O.gZ)(t, n),
+        l = (0, O.nW)((0, O.Jh)(n));
     if (null == i || null == l) return null;
-    let s = (0, C._k)(t, n);
+    let s = (0, O._k)(t, n);
     return (0, r.jsxs)(a.Wn, {
         messageType: a.QYI.WARNING,
         children: [
             (0, r.jsx)("div", {
                 className: I.guildBoostingGracePeriodTitle,
-                children: N.intl.format(N.t.LG7vvg, {}),
+                children: E.intl.format(E.t.LG7vvg, {}),
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
@@ -84,7 +84,7 @@ function w() {
         });
     }, []);
     let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),
-        t = (0, l.e7)([v.Z], () => (null != e ? v.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
+        t = (0, l.e7)([_.Z], () => (null != e ? _.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, m.V)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -92,7 +92,7 @@ function w() {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
-                        children: N.intl.string(N.t.nLovSZ),
+                        children: E.intl.string(E.t.nLovSZ),
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(T, {
@@ -103,8 +103,8 @@ function w() {
                     (0, r.jsx)(a.Text, {
                         className: I.titleBlurb,
                         variant: "text-sm/normal",
-                        children: N.intl.format(N.t.hLOkp9, {
-                            helpdeskArticle: O.Z.getArticleURL(E.BhN.GUILD_SUBSCRIPTIONS),
+                        children: E.intl.format(E.t.hLOkp9, {
+                            helpdeskArticle: C.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
                         }),
                     }),
                 ],
@@ -117,8 +117,8 @@ function w() {
                     },
                 }),
             (0, r.jsx)(x.Z, {
-                tiers: (0, C.cP)(
-                    null != e && e.features.has(E.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= E.B9o,
+                tiers: (0, O.cP)(
+                    null != e && e.features.has(N.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o,
                 ),
                 renderTier: P,
             }),
@@ -127,11 +127,11 @@ function w() {
             n
                 ? (0, r.jsx)(p.Z, {
                       onOpenPremiumClick: () =>
-                          void _.default.track(E.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void v.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: E.ZY5.GUILD_SETTINGS,
-                                  section: E.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: E.qAy.BUTTON_CTA,
+                                  page: N.ZY5.GUILD_SETTINGS,
+                                  section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: N.qAy.BUTTON_CTA,
                               },
                           }),
                   })

@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(585483),
     v = n(153209),
     j = n(903672),
-    C = n(791914),
-    x = n(711165),
+    x = n(791914),
+    C = n(711165),
     E = n(946443),
     S = n(264233),
     I = n(981631),
@@ -112,7 +112,7 @@ function Z(e) {
                     children: (0, r.jsx)("div", {
                         className: o()(N.container, { [N.widerInbox]: X }),
                         children: (0, r.jsx)(u.y5t, {
-                            component: (0, r.jsx)(C.Z, {
+                            component: (0, r.jsx)(x.Z, {
                                 tab: G,
                                 setTab: U,
                                 badgeState: Z,
@@ -128,7 +128,7 @@ function Z(e) {
                                         : z && W && G === c.X.BOOKMARKS
                                           ? (0, r.jsx)(m.K, { closePopout: V })
                                           : G === c.X.SCHEDULED
-                                            ? (0, r.jsx)(x._, {})
+                                            ? (0, r.jsx)(C._, {})
                                             : (0, r.jsx)(a.SV, {
                                                   fallback: (0, r.jsx)(E.h6, {}),
                                                   children: (0, r.jsx)(E.ZP, {

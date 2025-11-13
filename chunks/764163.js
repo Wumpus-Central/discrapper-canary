@@ -1,6 +1,6 @@
 n.d(t, {
-    DI: () => N,
-    x3: () => E,
+    DI: () => E,
+    x3: () => N,
 }),
     n(388685),
     n(953529),
@@ -22,8 +22,8 @@ var r = n(951288),
     b = n(691886),
     x = n(185923),
     j = n(388032),
-    v = n(803931);
-function _(e) {
+    _ = n(803931);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function _(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function C(e, t) {
         e
     );
 }
-function O(e) {
+function C(e) {
     let { guildId: t, emojiData: n, onSelectEmoji: l } = e,
         a = i.useRef(null),
         s = (0, o.e7)([p.ZP], () => (null != n.id ? p.ZP.getCustomEmojiById(n.id) : void 0)),
@@ -105,7 +105,7 @@ function O(e) {
                     ? null
                     : function () {
                           return (0, r.jsx)(d.Z, {
-                              className: v.emoji,
+                              className: _.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: null == s ? void 0 : s.animated,
@@ -113,9 +113,9 @@ function O(e) {
                       },
             [n, s],
         ),
-        O = "";
+        C = "";
     return (
-        null != s ? (O = ":".concat(s.name, ":")) : null != n.name && (O = f.ZP.convertSurrogateToName(n.name)),
+        null != s ? (C = ":".concat(s.name, ":")) : null != n.name && (C = f.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(c.yRy, {
             targetElementRef: a,
             animation: c.yRy.Animation.NONE,
@@ -125,26 +125,26 @@ function O(e) {
                 let { isShown: n } = t;
                 return (0, r.jsxs)(
                     "div",
-                    C(
-                        _(
+                    O(
+                        v(
                             {
                                 ref: a,
-                                className: v.emojiInputContainer,
+                                className: _.emojiInputContainer,
                             },
                             e,
                         ),
                         {
                             children: [
                                 (0, r.jsx)(g.Z, {
-                                    className: v.emojiButton,
+                                    className: _.emojiButton,
                                     active: n,
                                     tabIndex: 0,
                                     renderButtonContents: j,
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    className: v.emojiText,
-                                    children: O,
+                                    className: _.emojiText,
+                                    children: C,
                                 }),
                             ],
                         },
@@ -169,22 +169,22 @@ function y(e) {
         } = e,
         h = (0, u.Dt)(),
         [b, x] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ""),
-        [v, _] = i.useState(() => ({
+        [_, v] = i.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name,
         })),
-        C = d && "" !== b && (null != v.id || null != v.name);
+        O = d && "" !== b && (null != _.id || null != _.name);
     function y(e) {
         e.preventDefault(),
-            C &&
+            O &&
                 (g({
                     description: b,
-                    emojiId: v.id,
-                    emojiName: v.name,
+                    emojiId: _.id,
+                    emojiName: _.name,
                 }),
                 f());
     }
-    let E = [
+    let N = [
         {
             text: j.intl.string(j.t["ETE/oC"]),
             variant: "secondary",
@@ -193,7 +193,7 @@ function y(e) {
     ];
     return (
         null != m &&
-            E.push({
+            N.push({
                 text: j.intl.string(j.t.oyYWHE),
                 variant: "critical-secondary",
                 onClick: () => {
@@ -201,11 +201,11 @@ function y(e) {
                 },
                 icon: c.XHJ,
             }),
-        E.push({
+        N.push({
             text: null == l ? j.intl.string(j.t.OYkgVk) : j.intl.string(j.t["R3BPH+"]),
             variant: "primary",
             onClick: y,
-            disabled: !C,
+            disabled: !O,
         }),
         (0, r.jsx)("form", {
             onSubmit: y,
@@ -213,7 +213,7 @@ function y(e) {
                 transitionState: p,
                 onClose: f,
                 title: j.intl.string(j.t["2qf9EI"]),
-                actions: E,
+                actions: N,
                 children: (0, r.jsxs)(c.Kqy, {
                     gap: "md",
                     children: [
@@ -229,10 +229,10 @@ function y(e) {
                         }),
                         (0, r.jsx)(s.gNt, {
                             label: j.intl.string(j.t.sMOuuS),
-                            children: (0, r.jsx)(O, {
+                            children: (0, r.jsx)(C, {
                                 guildId: n,
-                                emojiData: v,
-                                onSelectEmoji: _,
+                                emojiData: _,
+                                onSelectEmoji: v,
                             }),
                         }),
                     ],
@@ -241,7 +241,7 @@ function y(e) {
         })
     );
 }
-function E(e) {
+function N(e) {
     let { guildId: t, omitChannelIds: n, initialData: l, onSave: s, onDelete: o, transitionState: d, onClose: g } = e,
         [m, p] = i.useState(null == l ? void 0 : l.ref_id),
         f = (0, u.Dt)(),
@@ -272,14 +272,14 @@ function E(e) {
         descriptionPlaceholder: j.intl.string(j.t.J8O1Lp),
         canSubmit: null != m,
         onSave: function (e) {
-            a()(null != m, "Cannot submit null channel"), s(C(_({}, e), { channelId: m }));
+            a()(null != m, "Cannot submit null channel"), s(O(v({}, e), { channelId: m }));
         },
         transitionState: d,
         onClose: g,
         onDelete: o,
     });
 }
-function N(e) {
+function E(e) {
     var t;
     let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: d, guildId: g } = e,
         [m, p] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ""),
@@ -301,7 +301,7 @@ function N(e) {
         descriptionPlaceholder: j.intl.string(j.t.ucP4Tt),
         canSubmit: "" !== m,
         onSave: function (e) {
-            a()("" !== m, "Cannot submit empty name"), l(C(_({}, e), { name: m }));
+            a()("" !== m, "Cannot submit empty name"), l(O(v({}, e), { name: m }));
         },
         transitionState: s,
         onClose: o,

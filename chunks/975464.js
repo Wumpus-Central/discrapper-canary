@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => j,
-    Z: () => v,
+    Z: () => _,
 });
 var r = n(951288),
     i = n(647438),
@@ -49,12 +49,12 @@ function j(e) {
               }),
           });
 }
-function v(e) {
+function _(e) {
     let { guild: t } = e,
         n = (0, u.Z)(t),
         { eligibilityLoading: m, eligibilityError: p, eligibility: f } = n,
         b = (0, c.j)(f),
-        { isLoading: v, error: _, creatorMonetizationOnboardingMarketing: C } = (0, d.Z)(t.id);
+        { isLoading: _, error: v, creatorMonetizationOnboardingMarketing: O } = (0, d.Z)(t.id);
     return (i.useEffect(() => {
         (0, o.k)(t.id);
     }, [t.id]),
@@ -71,7 +71,7 @@ function v(e) {
         },
         { disableTrack: null == t.id || null == f },
     ),
-    m || null == f || v)
+    m || null == f || _)
         ? (0, r.jsx)(a.$jN, {})
         : f.actionRequired
           ? (0, r.jsx)(h.Z, { guild: t })
@@ -88,8 +88,8 @@ function v(e) {
                           monetizationEligibility: n,
                       }),
                       (0, r.jsx)(j, {
-                          onboardingMarketing: C,
-                          onboardingMarketingError: _,
+                          onboardingMarketing: O,
+                          onboardingMarketingError: v,
                       }),
                   ],
               });

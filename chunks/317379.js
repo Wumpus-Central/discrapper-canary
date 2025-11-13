@@ -1,11 +1,11 @@
 n.d(e, { f: () => o });
 var i = n(524437),
     l = n(995774),
-    r = n(509613),
-    u = n(695346),
+    u = n(509613),
+    r = n(695346),
     s = n(313789),
     a = n(388032);
-let o = (0, r.Em)(s.n.REACTION_NOTIFICATIONS, {
+let o = (0, u.Em)(s.n.REACTION_NOTIFICATIONS, {
     useTitle: () => a.intl.string(a.t.Wxj9Hp),
     useOptions: () => [
         {
@@ -21,6 +21,6 @@ let o = (0, r.Em)(s.n.REACTION_NOTIFICATIONS, {
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],
-    useValue: u.fz.useSetting,
-    setValue: (t) => (0, l.MR)(t, u.fz.getSetting()),
+    useValue: r.fz.useSetting,
+    setValue: (t) => (0, l.MR)(t, r.fz.getSetting()),
 });

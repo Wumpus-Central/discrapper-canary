@@ -28,8 +28,8 @@ var i = n(442837),
     N = n(981631),
     R = n(474936),
     P = n(388032),
-    w = n(359739),
-    D = n(611344);
+    D = n(359739),
+    w = n(611344);
 function x(e, t, n) {
     return (
         t in e
@@ -143,7 +143,7 @@ function k(e) {
                     price: a,
                     isSelected: e === B,
                     onSelect: (e) => J(e),
-                    className: w.recommendedGiftPreview,
+                    className: D.recommendedGiftPreview,
                 },
                 e,
             );
@@ -155,18 +155,18 @@ function k(e) {
                 pendingText: s,
                 currentText: s,
                 disableThemedBackground: !0,
-                className: w.customGiftMessageWrapper,
-                innerClassName: w.customGiftMessage,
+                className: D.customGiftMessageWrapper,
+                innerClassName: D.customGiftMessage,
             }),
         et = () =>
             q
                 ? (0, r.jsxs)("div", {
-                      className: w.bodyColumnLeft,
+                      className: D.bodyColumnLeft,
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-xs/bold",
                               color: "header-secondary",
-                              className: w.selectGiftTitle,
+                              className: D.selectGiftTitle,
                               children: X.toLocaleUpperCase(),
                           }),
                           L.map((e) => $(e)),
@@ -174,19 +174,19 @@ function k(e) {
                       ],
                   })
                 : (0, r.jsx)("div", {
-                      className: w.bodyColumnMiddle,
+                      className: D.bodyColumnMiddle,
                       children: (0, r.jsx)(m.q, { isShopGift: !0 }),
                   }),
         en = () => {
             if (q)
                 return (0, r.jsxs)("div", {
-                    className: w.bodyColumnRight,
+                    className: D.bodyColumnRight,
                     children: [
                         (0, r.jsx)(E.s, { giftRecipient: x }),
                         (0, r.jsx)(m.q, {
                             isShopGift: !0,
-                            className: D.adjustedGiftMainAnimation,
-                            optionsContainerClassName: D.adjustedGiftBoxOptionContainer,
+                            className: w.adjustedGiftMainAnimation,
+                            optionsContainerClassName: w.adjustedGiftBoxOptionContainer,
                         }),
                         ee(),
                     ],
@@ -201,7 +201,7 @@ function k(e) {
             });
             return M === R.Wt.USER_PROFILE_WISHLIST || M === R.Wt.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
-                      className: w.bodyColumnRight,
+                      className: D.bodyColumnRight,
                       children: [
                           (0, r.jsx)(E.s, { giftRecipient: x }),
                           ee(),
@@ -210,14 +210,14 @@ function k(e) {
                               (0, r.jsx)(d.Z, {
                                   skuId: B,
                                   price: e,
-                                  className: w.wishlistGiftPreview,
-                                  previewHeaderClassName: w.wishlistGiftPreviewHeader,
+                                  className: D.wishlistGiftPreview,
+                                  previewHeaderClassName: D.wishlistGiftPreviewHeader,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                                   hideProfilePreview: !0,
                               }),
                           (0, r.jsx)("div", {
-                              className: w.wishlistGiftPreviewFooter,
+                              className: D.wishlistGiftPreviewFooter,
                               children: (0, r.jsx)(G, {
                                   handleClose: n,
                                   selectedSkuId: B,
@@ -226,11 +226,11 @@ function k(e) {
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: w.bodyColumnRight,
+                      className: D.bodyColumnRight,
                       children: [
                           (0, r.jsx)(f.Z, {
                               selectedSkuId: B,
-                              className: w.sendTo,
+                              className: D.sendTo,
                               validateSelectedGift: Q,
                           }),
                           ee(),
@@ -238,7 +238,7 @@ function k(e) {
                               (0, r.jsx)(d.Z, {
                                   skuId: B,
                                   price: e,
-                                  className: w.giftPreview,
+                                  className: D.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                               }),
@@ -249,7 +249,7 @@ function k(e) {
         children: [
             (0, r.jsx)(C.C3, {
                 children: (0, r.jsxs)("div", {
-                    className: w.stepBody,
+                    className: D.stepBody,
                     children: [et(), en()],
                 }),
             }),
@@ -283,13 +283,13 @@ function U(e) {
     return (0, r.jsx)(a.P3F, {
         onClick: i,
         children: (0, r.jsxs)("div", {
-            className: w.navigateToShopButton,
+            className: D.navigateToShopButton,
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.navigateToShopBody,
+                    className: D.navigateToShopBody,
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.shopIcon,
+                            className: D.shopIcon,
                             children: (0, r.jsx)(a.EOn, {
                                 size: "custom",
                                 width: 18,
@@ -298,7 +298,7 @@ function U(e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: w.navigateToShopTextWrapper,
+                            className: D.navigateToShopTextWrapper,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",

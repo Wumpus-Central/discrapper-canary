@@ -59,21 +59,21 @@ function C(e) {
         [C, N] = i.useState(),
         R = (0, b.V2)({ location: "SoundmojiGuildInfo" }),
         P = E || v || null != C || !R,
-        [w, D] = i.useState(!P);
+        [D, w] = i.useState(!P);
     i.useEffect(() => {
         P ||
-            (D(!0),
+            (w(!0),
             (0, p.xU)(t.soundId, t.guildId)
                 .then((e) => {
                     N(e);
                 })
                 .finally(() => {
-                    D(!1), u();
+                    w(!1), u();
                 }));
     }, [u, P, t.guildId, t.soundId]);
     let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
         M = x === y.y.JOIN_GUILD,
-        j = !E && w,
+        j = !E && D,
         k = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
             [O, v, C],

@@ -1,88 +1,88 @@
-let n;
-r.d(t, { Z: () => B }), r(388685), r(35282);
-var i = r(951288),
-    l = r(647438),
-    s = r(843611),
-    o = r(873546),
-    c = r(442837),
-    a = r(481060),
-    u = r(980591),
-    d = r(605782),
-    h = r(133853),
-    f = r(568154),
-    p = r(353926),
-    x = r(703656),
-    g = r(546247),
-    j = r(981631),
-    E = r(816282);
-let I = r(575703),
-    O = r(2984),
-    m = [
-        j.Z5c.LOGIN,
-        j.Z5c.LOGIN_HANDOFF,
-        j.Z5c.LOGIN_ONE_TIME,
-        j.Z5c.REGISTER,
-        j.Z5c.INVITE(""),
-        j.Z5c.GIFT_CODE(""),
-        j.Z5c.GUILD_TEMPLATE_LOGIN(""),
-        j.Z5c.GUILD_TEMPLATE(""),
-        j.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-        j.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-        j.Z5c.BILLING_PREMIUM_SUBSCRIBE,
-        j.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
-        j.Z5c.BILLING_PAYMENTS,
-        j.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
-        j.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
-        j.Z5c.VERIFY,
-        j.Z5c.VERIFY_HUB_EMAIL,
-        j.Z5c.REJECT_IP,
-        j.Z5c.REJECT_MFA,
-        j.Z5c.AUTHORIZE_IP,
-        j.Z5c.AUTHORIZE_PAYMENT,
-        j.Z5c.RESET,
-        j.Z5c.HANDOFF,
-        j.Z5c.REPORT,
-        j.Z5c.REPORT_SECOND_LOOK,
-        j.Z5c.ACCOUNT_REVERT(""),
+let s;
+i.d(e, { Z: () => P }), i(388685), i(35282);
+var n = i(951288),
+    r = i(647438),
+    a = i(843611),
+    h = i(873546),
+    l = i(442837),
+    o = i(481060),
+    c = i(980591),
+    d = i(605782),
+    u = i(133853),
+    p = i(568154),
+    f = i(353926),
+    m = i(703656),
+    g = i(546247),
+    v = i(981631),
+    w = i(816282);
+let b = i(575703),
+    y = i(2984),
+    x = [
+        v.Z5c.LOGIN,
+        v.Z5c.LOGIN_HANDOFF,
+        v.Z5c.LOGIN_ONE_TIME,
+        v.Z5c.REGISTER,
+        v.Z5c.INVITE(""),
+        v.Z5c.GIFT_CODE(""),
+        v.Z5c.GUILD_TEMPLATE_LOGIN(""),
+        v.Z5c.GUILD_TEMPLATE(""),
+        v.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
+        v.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+        v.Z5c.BILLING_PREMIUM_SUBSCRIBE,
+        v.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
+        v.Z5c.BILLING_PAYMENTS,
+        v.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
+        v.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
+        v.Z5c.VERIFY,
+        v.Z5c.VERIFY_HUB_EMAIL,
+        v.Z5c.REJECT_IP,
+        v.Z5c.REJECT_MFA,
+        v.Z5c.AUTHORIZE_IP,
+        v.Z5c.AUTHORIZE_PAYMENT,
+        v.Z5c.RESET,
+        v.Z5c.HANDOFF,
+        v.Z5c.REPORT,
+        v.Z5c.REPORT_SECOND_LOOK,
+        v.Z5c.ACCOUNT_REVERT(""),
     ];
-function b(e) {
-    return m.some((t) => e.startsWith(t));
+function E(t) {
+    return x.some((e) => t.startsWith(e));
 }
-let _ = (e) => ((n = e), e),
-    Z = [j.Z5c.VERIFY, j.Z5c.VERIFY_HUB_EMAIL];
-function w(e) {
-    let { children: t } = e,
-        r = (function () {
-            let [e, t] = l.useState(!1),
-                [r, i] = l.useState(!0),
-                s = (0, c.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, u.Z)(() => {}, 300), void 0 !== n)
-                ? n
-                : !r && s
-                  ? (e || t(!0), _("default"))
-                  : r
-                    ? _("default")
+let O = (t) => ((s = t), t),
+    j = [v.Z5c.VERIFY, v.Z5c.VERIFY_HUB_EMAIL];
+function I(t) {
+    let { children: e } = t,
+        i = (function () {
+            let [t, e] = r.useState(!1),
+                [i, n] = r.useState(!0),
+                a = (0, l.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+            return ((0, c.Z)(() => {}, 300), void 0 !== s)
+                ? s
+                : !i && a
+                  ? (t || e(!0), O("default"))
+                  : i
+                    ? O("default")
                     : "loading";
         })(),
-        o = (0, s.TH)(),
-        a = Z.includes(o.pathname);
-    switch (r) {
+        h = (0, a.TH)(),
+        o = j.includes(h.pathname);
+    switch (i) {
         case "default":
-            return (0, i.jsxs)(i.Fragment, {
+            return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    a
-                        ? (0, i.jsx)(g.Z, {})
-                        : (0, i.jsx)("img", {
-                              className: E.artwork,
-                              src: I,
+                    o
+                        ? (0, n.jsx)(g.Z, {})
+                        : (0, n.jsx)("img", {
+                              className: w.artwork,
+                              src: b,
                               alt: "",
                           }),
-                    (0, i.jsx)("img", {
-                        className: E.logoWithText,
-                        src: O,
+                    (0, n.jsx)("img", {
+                        className: w.logoWithText,
+                        src: y,
                         alt: "",
                     }),
-                    t,
+                    e,
                 ],
             });
         case "experimental":
@@ -90,61 +90,61 @@ function w(e) {
             return null;
     }
 }
-class y extends l.Component {
+class S extends r.Component {
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.handleResize);
     }
-    mobileTransitionTo(e, t) {
-        if (b(e)) (0, x.uL)(e, t);
+    mobileTransitionTo(t, e) {
+        if (E(t)) (0, m.uL)(t, e);
         else {
-            let r = null != t && null != t.search ? t.search : null;
-            window.location = null == r ? e : "".concat(e, "?").concat(r);
+            let i = null != e && null != e.search ? e.search : null;
+            window.location = null == i ? t : "".concat(t, "?").concat(i);
         }
     }
-    mobileReplaceWith(e) {
-        b(e) ? (0, x.dL)(e) : (window.location = e);
+    mobileReplaceWith(t) {
+        E(t) ? (0, m.dL)(t) : (window.location = t);
     }
     renderDefault() {
-        let { splash: e } = this.props,
-            t = (0, i.jsx)(d.Z, {
-                component: l.Fragment,
-                children: l.Children.map(this.props.children, (e) =>
-                    l.cloneElement(e, {
-                        transitionTo: x.uL,
-                        replaceWith: x.dL,
+        let { splash: t } = this.props,
+            e = (0, n.jsx)(d.Z, {
+                component: r.Fragment,
+                children: r.Children.map(this.props.children, (t) =>
+                    r.cloneElement(t, {
+                        transitionTo: m.uL,
+                        replaceWith: m.dL,
                     }),
                 ),
             });
-        return (0, i.jsx)("div", {
-            className: E.characterBackground,
-            children: (0, i.jsx)(a.y5t, {
+        return (0, n.jsx)("div", {
+            className: w.characterBackground,
+            children: (0, n.jsx)(o.y5t, {
                 forceLevel: 1,
                 children:
-                    null != e
-                        ? (0, i.jsxs)(i.Fragment, {
+                    null != t
+                        ? (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, i.jsx)(h.Z, {
+                                  (0, n.jsx)(u.Z, {
                                       show: !0,
-                                      className: E.logo,
+                                      className: w.logo,
                                   }),
-                                  (0, i.jsx)(f.h, {
-                                      splash: e,
-                                      children: t,
+                                  (0, n.jsx)(p.h, {
+                                      splash: t,
+                                      children: e,
                                   }),
                               ],
                           })
-                        : (0, i.jsx)(w, { children: t }),
+                        : (0, n.jsx)(I, { children: e }),
             }),
         });
     }
     renderMobile() {
-        return (0, i.jsx)(d.Z, {
-            component: l.Fragment,
-            children: l.Children.map(this.props.children, (e) =>
-                l.cloneElement(e, {
+        return (0, n.jsx)(d.Z, {
+            component: r.Fragment,
+            children: r.Children.map(this.props.children, (t) =>
+                r.cloneElement(t, {
                     transitionTo: this.mobileTransitionTo,
                     replaceWith: this.mobileReplaceWith,
                 }),
@@ -152,25 +152,25 @@ class y extends l.Component {
         });
     }
     render() {
-        let { isMobileWidth: e } = this.state,
-            t = navigator.userAgent.includes("GameLauncher");
-        return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
+        let { isMobileWidth: t } = this.state,
+            e = navigator.userAgent.includes("GameLauncher");
+        return t || h.tq || h.Em || e ? this.renderMobile() : this.renderDefault();
     }
-    constructor(e) {
-        super(e),
-            (function (e, t, r) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: r,
+    constructor(t) {
+        super(t),
+            (function (t, e, i) {
+                e in t
+                    ? Object.defineProperty(t, e, {
+                          value: i,
                           enumerable: !0,
                           configurable: !0,
                           writable: !0,
                       })
-                    : (e[t] = r);
+                    : (t[e] = i);
             })(this, "handleResize", () => {
                 this.setState({ isMobileWidth: window.innerWidth <= 485 });
             }),
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let B = y;
+let P = S;

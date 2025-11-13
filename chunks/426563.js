@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => w,
+    Z: () => D,
     j: () => P,
 });
 var r = n(526167),
@@ -33,7 +33,7 @@ function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e ? R : i;
 }
-let w = {
+let D = {
     DEFAULT_AVATARS: [o, s, l, c, u, d],
     DEFAULT_PROVISIONAL_AVATARS: [I, T, S, A, C, N],
     DEFAULT_GROUP_DM_AVATARS: [f, _, p, h, m, g, E, b],

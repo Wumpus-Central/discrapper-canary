@@ -4,10 +4,10 @@ n.d(t, {
     Ev: () => s,
     Fu: () => h,
     GM: () => x,
-    Gu: () => w,
+    Gu: () => D,
     JT: () => p,
     K8: () => O,
-    OF: () => D,
+    OF: () => w,
     P9: () => b,
     Pc: () => S,
     S4: () => I,
@@ -115,8 +115,8 @@ let N = {
         supported_locales: [],
     },
     P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
-    w = [...P, i.d4z.GUILD_VOICE],
-    D = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+    D = [...P, i.d4z.GUILD_VOICE],
+    w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var x = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});

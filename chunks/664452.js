@@ -64,15 +64,15 @@ function O(e) {
         C = !!(null == _ ? void 0 : _.features.has(f.GuildFeatures.INVITES_DISABLED)),
         [N] = r.useState(!1),
         [S, E] = r.useState(g.Fl),
-        I = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
-        P = (0, u.BT)(_),
-        w = (0, p.SG)(I) || C,
-        T = (0, p.sN)(I),
-        [Z, k] = r.useState(w),
-        [A, D] = r.useState(T),
+        w = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
+        I = (0, u.BT)(_),
+        P = (0, p.SG)(w) || C,
+        T = (0, p.sN)(w),
+        [Z, k] = r.useState(P),
+        [D, A] = r.useState(T),
         [R, L] = r.useState(!1),
-        M = Z !== w || A !== T || R,
-        U = C && !P;
+        M = Z !== P || D !== T || R,
+        U = C && !I;
     if (null == _) return O(), null;
     function B() {
         k((e) => !e);
@@ -90,18 +90,18 @@ function O(e) {
             {
                 text: h.intl.string(h.t["pwm/z0"]),
                 onClick: () => {
-                    (w || T) && !Z && !A
+                    (P || T) && !Z && !D
                         ? ((0, d.n)(_.id, !1, !1),
                           (0, o.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(b.default, v(j({}, e), { guildId: t })))))
-                        : (0, d.n)(_.id, Z, A, S);
+                        : (0, d.n)(_.id, Z, D, S);
                     let { source: e, alertType: n, messageId: r } = y;
                     c.default.track(f.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: t,
                         source: e,
                         raid_alert_id: r,
                         raid_alert_type: n,
-                        intervention_type_enabled: (0, p.sO)(Z, A),
-                        intervention_type_disabled: (0, p.lk)(Z, A),
+                        intervention_type_enabled: (0, p.sO)(Z, D),
+                        intervention_type_disabled: (0, p.lk)(Z, D),
                         duration: 60 * S,
                     }),
                         O();
@@ -182,9 +182,9 @@ function O(e) {
                             className: x.toggle,
                             children: (0, i.jsx)(o.rsf, {
                                 onChange: function () {
-                                    D((e) => !e);
+                                    A((e) => !e);
                                 },
-                                checked: A,
+                                checked: D,
                             }),
                         }),
                     ],

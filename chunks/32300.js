@@ -1,5 +1,5 @@
 n.d(t, {
-    F3: () => w,
+    F3: () => D,
     NW: () => d,
     OV: () => l,
     RD: () => y,
@@ -18,7 +18,7 @@ n.d(t, {
     lj: () => v,
     mB: () => E,
     o4: () => c,
-    tU: () => T,
+    tU: () => S,
     td: () => h,
 });
 var r = n(348327),
@@ -209,7 +209,7 @@ function v(e) {
 function I(e) {
     return O.useConfig({ location: e });
 }
-let S = (0, a.B)({
+let T = (0, a.B)({
     kind: "user",
     id: "2025-10_overlay_v3_one_click_go_live",
     label: "Overlay V3 One Click Go Live",
@@ -236,9 +236,9 @@ let S = (0, a.B)({
         },
     ],
 });
-function T(e) {
+function S(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return S.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 let A = (0, a.B)({
     id: "2025-10_overlay_default_keybind",
@@ -346,6 +346,6 @@ function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function w() {
-    v("OVERLAY_INITIALIZED"), T("OVERLAY_INITIALIZED"), P("OVERLAY_INITIALIZED");
+function D() {
+    v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), P("OVERLAY_INITIALIZED");
 }

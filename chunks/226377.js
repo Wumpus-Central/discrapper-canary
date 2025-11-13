@@ -1,11 +1,11 @@
-a.d(e, { q: () => d });
+a.d(e, { q: () => A });
 var r = a(899517),
     _ = a(622916),
     n = a(101284),
     o = a(263449),
     i = a(255768),
-    c = a(696486),
-    E = a(152228),
+    E = a(696486),
+    c = a(152228),
     s = a(366569),
     l = a(147498);
 function I(t, e) {
@@ -15,49 +15,49 @@ function I(t, e) {
     let n = new e(t);
     return t.on("flush", () => n.flush()), t.on("close", () => n.close()), a.set(t, n), n;
 }
-function u(t, e, a, r, n = {}) {
-    let E = n.client || (0, o.s3)();
-    if (!E) return;
-    let s = (0, c.HN)(),
-        l = s ? (0, c.Gx)(s) : void 0,
-        R = l && (0, c.XU)(l).description,
-        { unit: d, tags: N, timestamp: A } = n,
-        { release: T, environment: f } = E.getOptions(),
+function R(t, e, a, r, n = {}) {
+    let c = n.client || (0, o.s3)();
+    if (!c) return;
+    let s = (0, E.HN)(),
+        l = s ? (0, E.Gx)(s) : void 0,
+        u = l && (0, E.XU)(l).description,
+        { unit: A, tags: N, timestamp: T } = n,
+        { release: d, environment: f } = c.getOptions(),
         L = {};
-    T && (L.release = T),
+    d && (L.release = d),
         f && (L.environment = f),
-        R && (L.transaction = R),
+        u && (L.transaction = u),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
-        I(E, t).add(
+        I(c, t).add(
             e,
             a,
             r,
-            d,
+            A,
             {
                 ...L,
                 ...N,
             },
-            A,
+            T,
         );
 }
-function R(t, e, a, r) {
-    u(t, l.g_, e, N(a), r);
+function u(t, e, a, r) {
+    R(t, l.g_, e, N(a), r);
 }
-let d = {
+let A = {
     increment: function (t, e, a = 1, r) {
-        u(t, l.JM, e, N(a), r);
+        R(t, l.JM, e, N(a), r);
     },
-    distribution: R,
+    distribution: u,
     set: function (t, e, a, r) {
-        u(t, l.is, e, a, r);
+        R(t, l.is, e, a, r);
     },
     gauge: function (t, e, a, r) {
-        u(t, l.uG, e, N(a), r);
+        R(t, l.uG, e, N(a), r);
     },
     timing: function (t, e, a, r = "second", _) {
         if ("function" == typeof a) {
             let r = (0, n.ph)();
-            return (0, E.V0)(
+            return (0, c.V0)(
                 {
                     op: "metrics.timing",
                     name: e,
@@ -70,7 +70,7 @@ let d = {
                         () => {},
                         () => {
                             let a = (0, n.ph)();
-                            R(t, e, a - r, {
+                            u(t, e, a - r, {
                                 ..._,
                                 unit: "second",
                             }),
@@ -79,7 +79,7 @@ let d = {
                     ),
             );
         }
-        R(t, e, a, {
+        u(t, e, a, {
             ..._,
             unit: r,
         });

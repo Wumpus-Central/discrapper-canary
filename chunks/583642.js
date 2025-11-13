@@ -125,11 +125,31 @@ let C = i.forwardRef(function (e, t) {
             },
             O = (e) => {
                 y(c + e);
-            };
+            },
+            v = i.useRef({
+                itemsData: [],
+                selectedIndex: -1,
+                modeType: o.mode.type,
+            });
         return (
             i.useEffect(() => {
-                o.mode.type === I.Sap.FILTER ? _(0) : _(-1);
-            }, [o.mode.type, _]),
+                let { itemsData: e, selectedIndex: t, modeType: n } = v.current,
+                    r = o.mode.type;
+                if (r !== n) r === I.Sap.FILTER ? _(0) : _(-1);
+                else if (t >= 0 && (t === c || e.length !== m.length)) {
+                    let n = e[t],
+                        r = null == n ? void 0 : n.data.resultText;
+                    if (null != r) {
+                        let e = m.findIndex((e) => e.data.resultText === r);
+                        -1 !== e ? _(e) : t >= m.length && _(Math.max(0, m.length - 1));
+                    } else t >= m.length && _(Math.max(0, m.length - 1));
+                }
+                v.current = {
+                    itemsData: m,
+                    selectedIndex: c,
+                    modeType: r,
+                };
+            }, [m, c, o.mode.type, _]),
             i.useImperativeHandle(t, () => ({
                 selectedIndex: c,
                 focusNextOption: () => {

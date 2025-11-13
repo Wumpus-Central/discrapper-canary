@@ -147,7 +147,7 @@ function y(e) {
             },
         ],
         [S, Z] = i.useState(!1),
-        N =
+        D =
             7 !== s
                 ? null
                 : null != t && null != n
@@ -157,7 +157,7 @@ function y(e) {
                     : null != n
                       ? b.intl.formatToPlainString(b.t.YvNhsd, { date: n })
                       : null,
-        D = i.useCallback(() => {
+        N = i.useCallback(() => {
             Z(!0), O();
         }, [O]),
         R = i.useCallback(
@@ -269,7 +269,7 @@ function y(e) {
                           (0, l.jsx)(d.Clw, {}),
                           (0, l.jsx)(d.sNh, {
                               id: "guild-member-".concat(g, "-custom-option}"),
-                              action: D,
+                              action: N,
                               render: (e) =>
                                   (0, l.jsxs)("div", {
                                       className: a()(p.otherDatesContainer, { [p.focused]: e.isFocused }),
@@ -282,14 +282,14 @@ function y(e) {
                                                       variant: "text-sm/medium",
                                                       children: b.intl.string(b.t.BTfN6g),
                                                   }),
-                                                  null != N &&
+                                                  null != D &&
                                                       (0, l.jsx)(d.Text, {
                                                           className: a()(p.otherDateLabel, {
                                                               [p.focused]: e.isFocused,
                                                           }),
                                                           color: "text-muted",
                                                           variant: "text-xxs/medium",
-                                                          children: N,
+                                                          children: D,
                                                       }),
                                               ],
                                           }),

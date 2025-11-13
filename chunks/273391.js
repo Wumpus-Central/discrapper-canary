@@ -1,4 +1,4 @@
-n.d(t, { v: () => _ }), n(388685);
+n.d(t, { v: () => E }), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -41,12 +41,12 @@ function x(e) {
     return e;
 }
 let j = new m.Z("ImageEditor"),
-    E = {
+    _ = {
         width: 288,
         height: 288,
     },
-    _ = r.forwardRef(function (e, t) {
-        let { file: n, imageUri: i, onUpdate: m, onThrottledEdit: _ } = e,
+    E = r.forwardRef(function (e, t) {
+        let { file: n, imageUri: i, onUpdate: m, onThrottledEdit: E } = e,
             N = r.useRef({
                 x: 0,
                 y: 0,
@@ -75,7 +75,7 @@ let j = new m.Z("ImageEditor"),
             V = (0, s.v)(n.type),
             W = V && !H,
             [Y, q] = r.useState(null),
-            K = (0, d.h)(null != _ ? _ : b.dG, 500),
+            K = (0, d.h)(null != E ? E : b.dG, 500),
             X = r.useRef(null),
             Q = r.useRef(0);
         r.useEffect(() => {
@@ -203,7 +203,7 @@ let j = new m.Z("ImageEditor"),
                                 {
                                     file: n,
                                     image: l,
-                                    cropDimensions: E,
+                                    cropDimensions: _,
                                     cropOriginCoordinates: N.current,
                                     maxDimensions: r,
                                     imageRotation: z,
@@ -226,7 +226,7 @@ let j = new m.Z("ImageEditor"),
                         ? i
                         : (0, o.PT)({
                               image: l,
-                              cropDimensions: E,
+                              cropDimensions: _,
                               cropOriginCoordinates: N.current,
                               maxDimensions: r,
                               imageRotation: z,
@@ -320,8 +320,8 @@ let j = new m.Z("ImageEditor"),
                                     className: p.overlay,
                                     style: {
                                         opacity: +(null != T),
-                                        width: E.width,
-                                        height: E.height,
+                                        width: _.width,
+                                        height: _.height,
                                     },
                                     children: (0, l.jsx)(c.Text, {
                                         className: p.panHint,

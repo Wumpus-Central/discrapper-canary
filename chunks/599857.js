@@ -5,23 +5,23 @@ n.d(t, {
     n(388685);
 var a = n(951288),
     i = n(647438),
-    l = n(240666),
-    r = n(780384),
+    r = n(240666),
+    l = n(780384),
     s = n(481060),
     o = n(626135),
     c = n(756148),
     d = n(981631);
 function u(e) {
-    let { sitekey: t, action: n, onVerify: l } = e,
-        [r, u] = i.useState("uninitialized"),
+    let { sitekey: t, action: n, onVerify: r } = e,
+        [l, u] = i.useState("uninitialized"),
         m = i.useCallback((e) => {
             o.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
         p = i.useCallback(
             (e) => {
-                m("handle-verify"), l(e);
+                m("handle-verify"), r(e);
             },
-            [l, m],
+            [r, m],
         ),
         h = i.useCallback(() => {
             var e, a, i;
@@ -45,8 +45,8 @@ function u(e) {
         }, [t, h, m]);
     return (
         i.useEffect(() => {
-            "uninitialized" === r && x();
-        }, [x, r]),
+            "uninitialized" === l && x();
+        }, [x, l]),
         i.useEffect(
             () => () => {
                 m("recaptcha-unloading"),
@@ -76,21 +76,21 @@ let m = (e) => {
                     var n,
                         a,
                         i = {},
-                        l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        r = Object.keys(e);
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < l.length; a++)
-                    (n = l[a]),
+                var r = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < r.length; a++)
+                    (n = r[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["theme"]);
-    let o = (0, r.wj)(i) ? "dark" : "light";
+    let o = (0, l.wj)(i) ? "dark" : "light";
     return (0, a.jsx)(
-        l.Z,
+        r.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

@@ -1,5 +1,5 @@
 n.d(t, {
-    FZ: () => D,
+    FZ: () => w,
     Hl: () => B,
     NJ: () => M,
     R8: () => k,
@@ -10,7 +10,7 @@ n.d(t, {
     eE: () => j,
     iE: () => Z,
     iK: () => L,
-    l8: () => w,
+    l8: () => D,
     lv: () => R,
     m1: () => G,
     nR: () => P,
@@ -159,10 +159,10 @@ function R(e, t) {
 function P(e) {
     return r.EditorState.createEmpty(new r.CompositeDecorator(e));
 }
-function w(e, t) {
+function D(e, t) {
     return r.EditorState.createWithContent(t, new r.CompositeDecorator(e));
 }
-function D(e) {
+function w(e) {
     let t = r.EditorState.push(e, r.ContentState.createFromText("")),
         n = e.getSelection();
     return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t;

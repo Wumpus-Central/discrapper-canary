@@ -11,16 +11,16 @@ var l = n(481060),
     d = n(983736),
     p = n(341298),
     f = n(390885),
-    m = n(524329),
-    h = n(995532),
-    g = n(486472),
+    h = n(524329),
+    g = n(995532),
+    m = n(486472),
     _ = n(430824),
     b = n(914010),
     E = n(594174),
     O = n(823379),
-    I = n(358085),
-    y = n(929809),
-    v = n(179645),
+    y = n(358085),
+    v = n(929809),
+    I = n(179645),
     C = n(701476),
     S = n(785997),
     T = n(981631),
@@ -82,7 +82,7 @@ class Z extends s.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = v.Z.getType();
+            a = I.Z.getType();
         if (null == a) return;
         switch (a) {
             case C.M5.INVITE_UNCLAIMED:
@@ -98,9 +98,9 @@ class Z extends s.Z {
             A = b.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
             let e = _.Z.getGuild(A);
-            null != e && (0, d.Dc)(e) && ((s = !0), (0, m.RM)(e.id));
+            null != e && (0, d.Dc)(e) && ((s = !0), (0, h.RM)(e.id));
         }
-        let Z = () => 0 === g.Z.totalGuilds && !I.isPlatformEmbedded,
+        let Z = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
             w = o.bN();
         (e = [
             {
@@ -158,7 +158,7 @@ class Z extends s.Z {
             },
             {
                 key: "Claim Account Modal",
-                open: (e) => c.j(I.isPlatformEmbedded, e),
+                open: (e) => c.j(y.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return (
@@ -188,11 +188,11 @@ class Z extends s.Z {
                         },
                         { onCloseCallback: e },
                     ),
-                predicate: () => null != A && null != h.Z.get(A) && h.Z.get(A) !== h.a,
+                predicate: () => null != A && null != g.Z.get(A) && g.Z.get(A) !== g.a,
             },
         ]),
             (t = () => {
-                y.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
+                v.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

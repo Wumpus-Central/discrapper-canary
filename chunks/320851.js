@@ -1,8 +1,8 @@
 n.d(e, { Z: () => o });
 var i = n(509613),
     l = n(313789),
-    r = n(299426),
-    u = n(407458),
+    u = n(299426),
+    r = n(407458),
     s = n(388032);
 let a = [
         {
@@ -100,6 +100,6 @@ let a = [
             t
                 ? s.intl.formatToPlainString(s.t["0JYT98"], { count: e })
                 : s.intl.formatToPlainString(s.t.ji1uNt, { count: e }),
-        ContextProvider: r.u,
-        buildLayout: () => a.map((t) => (0, u.j)(t)),
+        ContextProvider: u.u,
+        buildLayout: () => a.map((t) => (0, r.j)(t)),
     });

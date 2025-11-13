@@ -2,7 +2,7 @@ n.d(t, {
     Ct: () => a,
     Fp: () => s,
     GW: () => c,
-    Go: () => S,
+    Go: () => T,
     I4: () => E,
     JB: () => L,
     KX: () => P,
@@ -17,7 +17,7 @@ n.d(t, {
     k3: () => h,
     ku: () => p,
     mA: () => r,
-    pw: () => w,
+    pw: () => D,
     uZ: () => _,
     yd: () => x,
     ze: () => u,
@@ -74,16 +74,16 @@ function v(e, t, n) {
         i = O(e),
         a = E(i),
         o = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
-    return t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)];
+    return t.reference[a] > t.floating[a] && (o = D(o)), [o, D(o)];
 }
 function I(e) {
-    let t = w(e);
-    return [S(e), t, S(t)];
+    let t = D(e);
+    return [T(e), t, T(t)];
 }
-function S(e) {
+function T(e) {
     return e.replace(/start|end/g, (e) => f[e]);
 }
-let T = ["left", "right"],
+let S = ["left", "right"],
     A = ["right", "left"],
     C = ["top", "bottom"],
     N = ["bottom", "top"];
@@ -91,8 +91,8 @@ function R(e, t, n) {
     switch (e) {
         case "top":
         case "bottom":
-            if (n) return t ? A : T;
-            return t ? T : A;
+            if (n) return t ? A : S;
+            return t ? S : A;
         case "left":
         case "right":
             return t ? C : N;
@@ -103,12 +103,12 @@ function R(e, t, n) {
 function P(e, t, n, r) {
     let i = m(e),
         a = R(h(e), "start" === n, r);
-    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(S)))), a;
-}
-function w(e) {
-    return e.replace(/left|right|bottom|top/g, (e) => d[e]);
+    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(T)))), a;
 }
 function D(e) {
+    return e.replace(/left|right|bottom|top/g, (e) => d[e]);
+}
+function w(e) {
     return {
         top: 0,
         right: 0,
@@ -119,7 +119,7 @@ function D(e) {
 }
 function x(e) {
     return "number" != typeof e
-        ? D(e)
+        ? w(e)
         : {
               top: e,
               right: e,

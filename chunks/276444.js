@@ -58,7 +58,7 @@ function P(e) {
     let {} = e;
     (C = null), (m = !0);
 }
-function w(e) {
+function D(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
     (S = !0 === c.Z.getCurrentConfig({ location: "handleReferralsRemainingFetchSuccess" }).enabled || (null == r && a)),
         (A = a),
@@ -68,7 +68,7 @@ function w(e) {
         (C = r),
         (h = i);
 }
-function D(e) {
+function w(e) {
     let {} = e;
     (S = !1), (A = !1), (C = null), (m = !1), (y += 1), (O = Date.now() + 1000 * Math.pow(2, y));
 }
@@ -169,8 +169,8 @@ d(Y, "displayName", "ReferralTrialStore");
 let W = new Y(o.Z, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: B,
     BILLING_REFERRALS_REMAINING_FETCH_START: P,
-    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: w,
-    BILLING_REFERRALS_REMAINING_FETCH_FAIL: D,
+    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: D,
+    BILLING_REFERRALS_REMAINING_FETCH_FAIL: w,
     BILLING_CREATE_REFERRAL_SUCCESS: x,
     CREATE_REFERRALS_SUCCESS: L,
     BILLING_REFERRAL_RESOLVE_SUCCESS: j,

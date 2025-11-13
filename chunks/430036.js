@@ -8,27 +8,27 @@ var i = n(951288),
     c = n(442837),
     d = n(481060),
     u = n(239091),
-    p = n(430742),
-    h = n(904245),
+    h = n(430742),
+    p = n(904245),
     f = n(13245),
     g = n(144144),
     m = n(738619),
     y = n(655687),
-    O = n(823748),
-    _ = n(25007),
-    b = n(199649),
-    v = n(1397),
+    b = n(823748),
+    v = n(25007),
+    _ = n(199649),
+    O = n(1397),
     E = n(541716),
     x = n(752305),
     S = n(974251),
     Z = n(893718),
-    C = n(249458),
-    j = n(552062),
+    j = n(249458),
+    C = n(552062),
     I = n(957730),
     P = n(105457),
     w = n(400023),
-    N = n(623292),
-    T = n(807092),
+    T = n(623292),
+    N = n(807092),
     D = n(340501),
     k = n(592125),
     R = n(703558),
@@ -41,8 +41,8 @@ var i = n(951288),
     W = n(556296),
     G = n(237997),
     B = n(585483),
-    F = n(838440),
-    H = n(13140),
+    H = n(838440),
+    F = n(13140),
     Y = n(519591),
     K = n(906037),
     X = n(786906),
@@ -51,7 +51,7 @@ var i = n(951288),
     Q = n(981631),
     $ = n(959517),
     ee = n(388032),
-    et = n(970980);
+    et = n(442010);
 function en(e, t, n) {
     return (
         t in e
@@ -176,7 +176,7 @@ class el extends r.Component {
             });
         return t.isPrivate()
             ? (0, i.jsx)(
-                  b.Z,
+                  _.Z,
                   {
                       channel: t,
                       children: u,
@@ -184,7 +184,7 @@ class el extends r.Component {
                   t.id,
               )
             : (0, i.jsx)(
-                  v.Z,
+                  O.Z,
                   {
                       channel: t,
                       children: u,
@@ -215,14 +215,14 @@ class el extends r.Component {
                     e.preventDefault();
                     let { channel: t } = this.props,
                         n = M.Z.getLastEditableMessage(t.id);
-                    null != n && h.Z.startEditMessageRecord(t.id, n);
+                    null != n && p.Z.startEditMessageRecord(t.id, n);
                 }
             }),
             en(this, "handleTextareaChange", (e, t, n) => {
                 let {
                     channel: { id: i },
                 } = this.props;
-                p.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
+                h.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
                     "" !== t ? g.Z.startTyping(i) : g.Z.stopTyping(i),
                     this.setState({
                         textValue: t,
@@ -237,7 +237,7 @@ class el extends r.Component {
                           shouldClear: !1,
                           shouldRefocus: !0,
                       })
-                    : (0, F.v)({
+                    : (0, H.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: E.Ie.OVERLAY,
                           content: t,
@@ -255,15 +255,15 @@ class el extends r.Component {
                                         shouldClear: !1,
                                         shouldRefocus: !1,
                                     };
-                          let l = h.Z.getSendMessageOptionsForReply(i);
-                          return (h.Z.sendMessage(
+                          let l = p.Z.getSendMessageOptionsForReply(i);
+                          return (p.Z.sendMessage(
                               n.id,
                               I.ZP.parse(n, t),
                               !0,
                               er(ei({}, l), { location: $.dy.OVERLAY }),
                           ),
                           this.setState((0, x.H2)()),
-                          (0, N.A6)(n.id),
+                          (0, T.A6)(n.id),
                           r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
@@ -334,14 +334,14 @@ class ea extends r.PureComponent {
                 activated: c,
                 chatKeybind: d,
                 pinned: u,
-                isPreviewingInGame: p,
-                dragging: h,
+                isPreviewingInGame: h,
+                dragging: p,
                 pendingReply: f,
             } = this.props;
         if (null == t) return null;
-        let g = a || p,
+        let g = a || h,
             y = !s && null != t && t.isNSFW(),
-            O = !g || c;
+            b = !g || c;
         return (
             (e =
                 y && null != l
@@ -361,7 +361,7 @@ class ea extends r.PureComponent {
                           },
                           t.id,
                       )),
-            (0, i.jsx)(C.G.Provider, {
+            (0, i.jsx)(j.G.Provider, {
                 value: {
                     disableInteractions: u && a && !c,
                     disableAnimations: u && g && !c,
@@ -369,16 +369,16 @@ class ea extends r.PureComponent {
                 children: (0, i.jsxs)(r.Fragment, {
                     children: [
                         !a &&
-                            !p &&
-                            (0, i.jsx)(_.Z, {
+                            !h &&
+                            (0, i.jsx)(v.Z, {
                                 channel: t,
                                 guild: l,
                             }),
                         (0, i.jsx)(q.ZP.Background, {
-                            opacityOverride: a || p ? null : eo,
+                            opacityOverride: a || h ? null : eo,
                             children: (0, i.jsx)("div", {
                                 className: o()(et.messagesContainer, {
-                                    [et.isDragging]: h,
+                                    [et.isDragging]: p,
                                     [et.disableHoverStates]: u && a && !c,
                                 }),
                                 children: e,
@@ -387,9 +387,9 @@ class ea extends r.PureComponent {
                         y
                             ? null
                             : (0, i.jsx)("div", {
-                                  children: O
+                                  children: b
                                       ? (0, i.jsx)(q.ZP.Background, {
-                                            opacityOverride: a || p ? null : eo,
+                                            opacityOverride: a || h ? null : eo,
                                             children: (0, i.jsxs)("div", {
                                                 className: et.footerContent,
                                                 children: [
@@ -445,8 +445,8 @@ class ea extends r.PureComponent {
         r ? (c = Q.t_t.IN_GAME_ACTIVE) : (n && t) || s ? (c = Q.t_t.IN_GAME_TEXT) : n && (c = Q.t_t.PINNED);
         let d = (t && !r) || s,
             u = n && (d || r),
-            p = n && r,
-            h = n && d && !r,
+            h = n && r,
+            p = n && d && !r,
             f = (0, Y.Z)(l);
         return (0, i.jsx)(q.ZP, {
             className: o()(
@@ -454,9 +454,9 @@ class ea extends r.PureComponent {
                 {
                     [et.widgetWrapper]: !n,
                     [et.widgetWrapperPinned]: n,
-                    [et.locked]: h,
+                    [et.locked]: p,
                     [et.inGame]: u,
-                    [et.inGameActive]: p,
+                    [et.inGameActive]: h,
                     [et.pinned]: n,
                     "overlay-unlocked": !t,
                 },
@@ -528,7 +528,7 @@ class ea extends r.PureComponent {
                             n.e("79695"),
                             n.e("66165"),
                             n.e("56826"),
-                            n.e("55599"),
+                            n.e("31899"),
                         ]).then(n.bind(n, 131404));
                         return (n) =>
                             (0, i.jsx)(
@@ -543,11 +543,11 @@ class ea extends r.PureComponent {
             }),
             en(this, "moveDragStart", (e) => {
                 let { dragStart: t } = this.props;
-                t(j.B.MOVE, e.clientX, e.clientY);
+                t(C.B.MOVE, e.clientX, e.clientY);
             }),
             en(this, "resizeDragStart", (e) => {
                 let { dragStart: t } = this.props;
-                t(j.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+                t(C.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
             });
     }
 }
@@ -558,35 +558,35 @@ function ec(e) {
         s = (0, c.e7)([z.Z], () => z.Z.getChannelId(r)),
         o = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
         l = (0, c.e7)([W.ZP], () => W.ZP.getOverlayChatKeybind()),
-        a = null != l ? (0, H.BB)(l.shortcut, !0) : "]",
-        [d, u, p] = (0, c.Wu)([G.default], () => [
+        a = null != l ? (0, F.BB)(l.shortcut, !0) : "]",
+        [d, u, h] = (0, c.Wu)([G.default], () => [
             G.default.getTextWidgetOpacity(),
             G.default.getActiveRegions(),
             !t && G.default.isPreviewingInGame(),
         ]),
-        h = (0, c.e7)([L.Z], () => L.Z.getGuild(r)),
+        p = (0, c.e7)([L.Z], () => L.Z.getGuild(r)),
         f = (0, c.e7)([A.Z], () => null != r && A.Z.didAgree(r)),
         g = null != o && o.isPrivate() ? o.getRecipientId() : null,
-        m = (0, c.e7)([T.Z], () => (null != s ? T.Z.getPendingReply(s) : void 0)),
-        _ = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),
-        { placeholder: b } = (0, y.Z)({ channel: o });
-    return null != o && null != h && Q.TPd.GUILD_THREADS_ONLY.has(o.type)
-        ? (0, i.jsx)(O.Z, {})
+        m = (0, c.e7)([N.Z], () => (null != s ? N.Z.getPendingReply(s) : void 0)),
+        v = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),
+        { placeholder: _ } = (0, y.Z)({ channel: o });
+    return null != o && null != p && Q.TPd.GUILD_THREADS_ONLY.has(o.type)
+        ? (0, i.jsx)(b.Z, {})
         : (0, i.jsx)(
               ea,
               ei(
                   {
-                      guild: h,
+                      guild: p,
                       channel: o,
-                      user: _,
+                      user: v,
                       opacity: d,
                       nsfwAgree: f,
                       chatKeybind: a,
                       activated: u.has(Q.O0n.TEXT_WIDGET),
-                      isPreviewingInGame: p,
+                      isPreviewingInGame: h,
                       pendingReply: m,
                       contained: t,
-                      placeholder: b,
+                      placeholder: _,
                       widget: Q.Odu.TEXT,
                   },
                   n,

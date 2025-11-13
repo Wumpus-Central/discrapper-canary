@@ -33,8 +33,8 @@ var r = n(951288),
     N = n(867176),
     R = n(502762),
     P = n(652853),
-    w = n(313789),
-    D = n(518596),
+    D = n(313789),
+    w = n(518596),
     x = n(430824),
     L = n(594174),
     M = n(314884),
@@ -204,7 +204,7 @@ function eO(e) {
         l = i === K.PremiumTypes.TIER_1,
         c = () => {
             a(),
-                (0, D.openUserSettings)(w.n.PROFILE_PANEL, { section: z.oAB.PROFILE_CUSTOMIZATION }),
+                (0, w.openUserSettings)(D.n.PROFILE_PANEL, { section: z.oAB.PROFILE_CUSTOMIZATION }),
                 j.default.track(z.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "user_profile_customization" });
         };
     return (
@@ -428,7 +428,7 @@ function eT(e) {
         f = eE().boostItemVisual,
         m = () => {
             n(),
-                (0, D.openUserSettings)(w.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: z.oAB.GUILD_BOOSTING }),
+                (0, w.openUserSettings)(D.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: z.oAB.GUILD_BOOSTING }),
                 j.default.track(z.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
         };
     return (0, r.jsx)(eb, {

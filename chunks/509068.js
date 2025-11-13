@@ -1,46 +1,46 @@
 a.d(e, {
-    Eg: () => m,
-    Jd: () => S,
-    S1: () => g,
-    jp: () => C,
-    lA: () => v,
-    nV: () => D,
+    Eg: () => S,
+    Jd: () => v,
+    S1: () => D,
+    jp: () => g,
+    lA: () => m,
+    nV: () => C,
 });
 var r = a(636361),
     _ = a(502990),
     n = a(907765),
     o = a(151122),
     i = a(511906),
-    c = a(263449),
-    E = a(233517),
+    E = a(263449),
+    c = a(233517),
     s = a(510529),
     l = a(622916),
     I = a(694043),
-    u = a(688838),
-    R = a(393523),
-    d = a(833772),
+    R = a(688838),
+    u = a(393523),
+    A = a(833772),
     N = a(454463),
-    A = a(163162),
-    T = a(408720),
+    T = a(163162),
+    d = a(408720),
     f = a(515737),
     L = a(804410),
     p = a(376457),
-    h = a(42367),
-    O = a(297117),
+    O = a(42367),
+    h = a(297117),
     P = a(387486);
-function D(t) {
-    return [(0, r.S)(), (0, _.C)(), (0, f.t)(), (0, T.f)(), (0, L.k)(), (0, h.O)(), (0, n.R)(), (0, p.s)()];
+function C(t) {
+    return [(0, r.S)(), (0, _.C)(), (0, f.t)(), (0, d.f)(), (0, L.k)(), (0, O.O)(), (0, n.R)(), (0, p.s)()];
 }
-function g(t = {}) {
+function D(t = {}) {
     let e = (function (t = {}) {
         return {
             ...{
-                defaultIntegrations: D(),
+                defaultIntegrations: C(),
                 release:
                     "string" == typeof __SENTRY_RELEASE__
                         ? __SENTRY_RELEASE__
-                        : A.m9.SENTRY_RELEASE && A.m9.SENTRY_RELEASE.id
-                          ? A.m9.SENTRY_RELEASE.id
+                        : T.m9.SENTRY_RELEASE && T.m9.SENTRY_RELEASE.id
+                          ? T.m9.SENTRY_RELEASE.id
                           : void 0,
                 autoSessionTracking: !0,
                 sendClientReports: !0,
@@ -50,14 +50,14 @@ function g(t = {}) {
     })(t);
     if (
         (function () {
-            let t = A.m9,
+            let t = T.m9,
                 e = t.chrome ? "chrome" : "browser",
                 a = t[e],
                 r = a && a.runtime && a.runtime.id,
-                _ = (A.m9.location && A.m9.location.href) || "",
+                _ = (T.m9.location && T.m9.location.href) || "",
                 n =
                     !!r &&
-                    A.m9 === A.m9.top &&
+                    T.m9 === T.m9.top &&
                     ["chrome-extension:", "moz-extension:", "ms-browser-extension:"].some((t) =>
                         _.startsWith(`${t}//`),
                     ),
@@ -77,34 +77,34 @@ function g(t = {}) {
         );
     let a = {
             ...e,
-            stackParser: (0, u.Sq)(e.stackParser || O.Dt),
+            stackParser: (0, R.Sq)(e.stackParser || h.Dt),
             integrations: (0, o.m8)(e),
             transport: e.transport || P.f,
         },
-        r = (0, i.M)(d.R, a);
+        r = (0, i.M)(A.R, a);
     return (
         e.autoSessionTracking &&
             (function () {
-                if (void 0 === A.m9.document) {
+                if (void 0 === T.m9.document) {
                     N.X &&
                         l.kg.warn("Session tracking in non-browser environment with @sentry/browser is not supported.");
                     return;
                 }
-                (0, E.yj)({ ignoreDuration: !0 }),
-                    (0, E.cg)(),
-                    (0, R.a)(({ from: t, to: e }) => {
-                        void 0 !== t && t !== e && ((0, E.yj)({ ignoreDuration: !0 }), (0, E.cg)());
+                (0, c.yj)({ ignoreDuration: !0 }),
+                    (0, c.cg)(),
+                    (0, u.a)(({ from: t, to: e }) => {
+                        void 0 !== t && t !== e && ((0, c.yj)({ ignoreDuration: !0 }), (0, c.cg)());
                     });
             })(),
         r
     );
 }
-function C(t = {}) {
-    if (!A.m9.document) {
+function g(t = {}) {
+    if (!T.m9.document) {
         N.X && l.kg.error("Global document not defined in showReportDialog call");
         return;
     }
-    let e = (0, c.nZ)(),
+    let e = (0, E.nZ)(),
         a = e.getClient(),
         r = a && a.getDsn();
     if (!r) {
@@ -119,10 +119,10 @@ function C(t = {}) {
             }),
         !t.eventId)
     ) {
-        let e = (0, E.eW)();
+        let e = (0, c.eW)();
         e && (t.eventId = e);
     }
-    let _ = A.m9.document.createElement("script");
+    let _ = T.m9.document.createElement("script");
     (_.async = !0), (_.crossOrigin = "anonymous"), (_.src = (0, s.h)(r, t)), t.onLoad && (_.onload = t.onLoad);
     let { onClose: n } = t;
     if (n) {
@@ -131,19 +131,19 @@ function C(t = {}) {
                 try {
                     n();
                 } finally {
-                    A.m9.removeEventListener("message", t);
+                    T.m9.removeEventListener("message", t);
                 }
         };
-        A.m9.addEventListener("message", t);
+        T.m9.addEventListener("message", t);
     }
-    let o = A.m9.document.head || A.m9.document.body;
+    let o = T.m9.document.head || T.m9.document.body;
     o ? o.appendChild(_) : N.X && l.kg.error("Not injecting report dialog. No injection point found in HTML");
 }
-function m() {}
-function v(t) {
+function S() {}
+function m(t) {
     t();
 }
-function S(t) {
-    let e = (0, c.s3)();
+function v(t) {
+    let e = (0, E.s3)();
     e && e.captureUserFeedback(t);
 }

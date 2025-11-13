@@ -1,18 +1,18 @@
 n.d(t, {
     Hr: () => x,
-    Hz: () => O,
+    Hz: () => C,
     To: () => I,
-    XG: () => C,
+    XG: () => O,
     _N: () => f,
-    ad: () => v,
+    ad: () => _,
     bj: () => P,
     el: () => b,
     hS: () => j,
     lq: () => y,
-    mM: () => E,
-    oo: () => N,
+    mM: () => N,
+    oo: () => E,
     q6: () => T,
-    r2: () => _,
+    r2: () => v,
     vR: () => h,
 }),
     n(361932),
@@ -60,7 +60,7 @@ function j(e) {
         actions: e,
     });
 }
-async function v(e, t, n, r) {
+async function _(e, t, n, r) {
     if (!r) return Promise.resolve();
     try {
         let r = await l.tn.patch({
@@ -91,20 +91,20 @@ async function v(e, t, n, r) {
         );
     }
 }
-function _(e) {
+function v(e) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL",
         resourceChannel: e,
     });
 }
-function C(e, t) {
+function O(e, t) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL",
         channelId: e,
         resourceChannel: t,
     });
 }
-function O(e) {
+function C(e) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL",
         resourceChannelId: e,
@@ -116,7 +116,7 @@ function y(e) {
         resourceChannels: e,
     });
 }
-async function E(e, t, n) {
+async function N(e, t, n) {
     try {
         let r = await l.tn.put({
                 url: m.ANM.RESOURCE_CHANNEL(e, t),
@@ -142,7 +142,7 @@ async function E(e, t, n) {
         });
     }
 }
-function N(e, t) {
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return n || g.Z.hasChanges()
         ? o.Z.getEnabled(e) && !(0, c.uo)(t)

@@ -70,20 +70,20 @@ let I = (e) => {
         let [A, C] = i.useState(0),
             [N, R] = i.useState(0),
             { accessibilityLabel: P } = E,
-            [w, D] = i.useState(-v),
+            [D, w] = i.useState(-v),
             {
                 stop: x,
                 reset: L,
                 ticking: M,
             } = (0, p.Z)((e) => {
-                D((t) => t + e);
+                w((t) => t + e);
             }),
             j = i.useRef(v);
         i.useEffect(() => {
             j.current = v;
         }),
             i.useEffect(() => {
-                D(-j.current), S((0, m.H)(E.effects));
+                w(-j.current), S((0, m.H)(E.effects));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
@@ -98,13 +98,13 @@ let I = (e) => {
         let [k, U] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === u || l || (x(), D(0)),
-                    !l && k && M.current && (x(), D(0)),
+                !0 === u || l || (x(), w(0)),
+                    !l && k && M.current && (x(), w(0)),
                     a &&
                         l &&
                         !M.current &&
                         (L(),
-                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? D(d === _.Q.FromStart ? 0 : A) : D(0));
+                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? w(d === _.Q.FromStart ? 0 : A) : w(0));
             }, [l, k, A, a, x, L, M, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
@@ -144,7 +144,7 @@ let I = (e) => {
                                 layerConfig: e,
                                 animationType: E.animationType,
                                 ticking: M.current,
-                                time: w,
+                                time: D,
                                 hasPlayedThrough: k,
                                 setHasPlayedThrough: U,
                                 urlQueryString: h,

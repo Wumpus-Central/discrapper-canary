@@ -35,23 +35,23 @@ function E(e) {
         })),
         [y, O] = i.useState(null != u ? u : ""),
         [v, I] = i.useState("8080"),
-        [S, T] = i.useState("localhost"),
+        [T, S] = i.useState("localhost"),
         A = m.test(y);
     async function C() {
         c.q$();
-        let e = g(S, v, y);
+        let e = g(T, v, y);
         null != (await c.Wt(y, e)) && t();
     }
     function N() {
-        c.mc(), O(""), T(null);
+        c.mc(), O(""), S(null);
     }
     function R(e) {
         O(e);
     }
     function P(e) {
-        T(e);
+        S(e);
     }
-    function w() {
+    function D() {
         return null == E
             ? null
             : (0, r.jsx)("div", {
@@ -62,8 +62,8 @@ function E(e) {
                   }),
               });
     }
-    function D() {
-        return "localhost" !== S
+    function w() {
+        return "localhost" !== T
             ? null
             : (0, r.jsx)("div", {
                   className: p.inputWrapper,
@@ -84,13 +84,13 @@ function E(e) {
             () => [
                 {
                     loading: b,
-                    disabled: !A || 0 === y.length || ("localhost" === S && 0 === v.length),
+                    disabled: !A || 0 === y.length || ("localhost" === T && 0 === v.length),
                     variant: x ? "critical-primary" : "active",
                     text: x ? _.intl.string(_.t.d6TR3I) : _.intl.string(_.t.qwuK5I),
                     onClick: L,
                 },
             ],
-            [y.length, b, x, A, v.length, L, S],
+            [y.length, b, x, A, v.length, L, T],
         );
     return (0, r.jsxs)(a.Modal, {
         title: _.intl.string(_.t.f8fzky),
@@ -99,7 +99,7 @@ function E(e) {
         onClose: t,
         transitionState: n,
         children: [
-            w(),
+            D(),
             (0, r.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.START,
@@ -121,7 +121,7 @@ function E(e) {
                         children: (0, r.jsx)(s.q4e, {
                             label: _.intl.string(_.t["/GTqXG"]),
                             isDisabled: !A || "" === y,
-                            value: S,
+                            value: T,
                             options: [
                                 {
                                     value: "localhost",
@@ -138,7 +138,7 @@ function E(e) {
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    D(),
+                    w(),
                 ],
             }),
         ],

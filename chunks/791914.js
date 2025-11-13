@@ -22,8 +22,8 @@ function v(e) {
     let { tab: t, setTab: n, badgeState: f, closePopout: m } = e,
         { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),
         v = (0, h.Us)({ location: "RecentsHeader" }),
-        { enabled: C } = c.Z.useExperiment({ location: "RecentsHeader" }),
-        x = (0, i.e7)([s.Z], () => s.Z.getUnseenInviteCount()),
+        { enabled: x } = c.Z.useExperiment({ location: "RecentsHeader" }),
+        C = (0, i.e7)([s.Z], () => s.Z.getUnseenInviteCount()),
         E = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
     return (0, r.jsxs)(u.h4, {
         className: O.header,
@@ -85,14 +85,14 @@ function v(e) {
                             className: O.tab,
                             children: y.intl.string(y.t.GRZF96),
                         }),
-                        C
+                        x
                             ? (0, r.jsxs)(o.njP.Item, {
                                   "aria-label": "game_invites",
                                   id: l.X.GAME_INVITES,
                                   className: O.tab,
                                   children: [
                                       y.intl.string(y.t.apq3cU),
-                                      x > 0
+                                      C > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: a.Z.STATUS_DANGER,
                                                 className: O.iconBadge,

@@ -1,38 +1,38 @@
-n.d(t, { Z: () => u }), n(539854);
-var r = n(951288),
-    i = n(647438),
-    s = n(580685),
-    l = n(481060),
+n.d(t, { Z: () => h }), n(539854);
+var i = n(951288),
+    r = n(647438),
+    l = n(580685),
+    s = n(481060),
     a = n(314852),
     o = n(65361),
     c = n(63063),
-    d = n(981631),
-    h = n(388032);
-function u(e) {
-    let { guildId: t, channelType: n, className: u } = e,
+    u = n(981631),
+    d = n(388032);
+function h(e) {
+    let { guildId: t, channelType: n, className: h } = e,
         { guildProfile: p, fetchGuildProfile: g, fetchStatus: m } = (0, o.u)(t),
         C = m !== a.a.FETCHED,
-        b = null != p && s.Y.VISIBLE.has(p.visibility);
-    i.useEffect(() => {
+        f = null != p && l.Y.VISIBLE.has(p.visibility);
+    r.useEffect(() => {
         g();
     }, [t, g]);
-    let N = [];
+    let O = [];
     if (
-        n === d.d4z.GUILD_ANNOUNCEMENT &&
-        (N.push(h.intl.format(h.t.tI7KNX, { documentationLink: c.Z.getArticleURL(d.BhN.ANNOUNCEMENT_CHANNELS) })),
-        !C && !b)
+        n === u.d4z.GUILD_ANNOUNCEMENT &&
+        (O.push(d.intl.format(d.t.tI7KNX, { documentationLink: c.Z.getArticleURL(u.BhN.ANNOUNCEMENT_CHANNELS) })),
+        !C && !f)
     ) {
-        let e = h.intl.string(h.t["2Ab4Id"]);
-        N.push(e);
+        let e = d.intl.string(d.t["2Ab4Id"]);
+        O.push(e);
     }
-    return 0 === N.length
+    return 0 === O.length
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: N.map((e, t) =>
-                  (0, r.jsx)(
-                      l.Text,
+        : (0, i.jsx)(i.Fragment, {
+              children: O.map((e, t) =>
+                  (0, i.jsx)(
+                      s.Text,
                       {
-                          className: u,
+                          className: h,
                           variant: "text-sm/normal",
                           children: e,
                       },

@@ -84,8 +84,8 @@ function R() {
         C = (0, s.e7)([m.Z], () => m.Z.getHardwareClassification()),
         R = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         P = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(O.kg4.SAVE_SCREENSHOT, !0)),
-        w = m.Z.isDecoupledGameClippingEnabled(),
-        D = (0, E.Z)(_.Z),
+        D = m.Z.isDecoupledGameClippingEnabled(),
+        w = (0, E.Z)(_.Z),
         { showClipsHeaderEntrypoint: x } = h.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
@@ -191,8 +191,8 @@ function R() {
                         trackAnalytics: !0,
                     }),
             }),
-            w &&
-                D &&
+            D &&
+                w &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(l.rsf, {
                         label: I.intl.string(I.t.yXvykv),

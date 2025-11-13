@@ -23,8 +23,8 @@ let b = i.forwardRef(function (e, t) {
             tryItText: O,
             dismissText: v,
             onTryFeature: j,
-            onClose: C,
-            className: x,
+            onClose: x,
+            className: C,
             inlineArt: E = !1,
             isPremiumFeature: S = !1,
             shouldUseHorizontalButtons: I = !1,
@@ -59,7 +59,7 @@ let b = i.forwardRef(function (e, t) {
             (0, p.kk)(N);
         }, [N]),
         (0, r.jsx)("div", {
-            className: x,
+            className: C,
             ref: t,
             children: (0, r.jsxs)("div", {
                 className: o()(m.content, y, {
@@ -135,7 +135,7 @@ let b = i.forwardRef(function (e, t) {
                                               className: m.button,
                                               size: B,
                                               onClick: (e) => {
-                                                  null == C || C(e), j(e), W(f.L.PRIMARY);
+                                                  null == x || x(e), j(e), W(f.L.PRIMARY);
                                               },
                                               color:
                                                   null != U
@@ -150,7 +150,7 @@ let b = i.forwardRef(function (e, t) {
                                                   className: m.button,
                                                   size: B,
                                                   onClick: (e) => {
-                                                      null == C || C(e), W(f.L.DISMISS);
+                                                      null == x || x(e), W(f.L.DISMISS);
                                                   },
                                                   color: S || A ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
                                                   look: S || A ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
@@ -162,7 +162,7 @@ let b = i.forwardRef(function (e, t) {
                                       className: m.button,
                                       size: a.zx.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == C || C(e), W(f.L.PRIMARY);
+                                          null == x || x(e), W(f.L.PRIMARY);
                                       },
                                       color: a.zx.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR5),

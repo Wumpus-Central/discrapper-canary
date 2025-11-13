@@ -50,11 +50,11 @@ function v(e) {
 function I() {
     !__OVERLAY__ && f.iP && (p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
 }
-function S(e) {
+function T(e) {
     let { oopEnabled: t } = e;
     v(t);
 }
-function T() {
+function S() {
     return O(), !1;
 }
 function A(e) {
@@ -95,8 +95,8 @@ let R = new N(
             : {
                   CONNECTION_OPEN: C,
                   EXPERIMENT_OVERRIDE_BUCKET: I,
-                  OVERLAY_SET_ENABLED: S,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE: T,
+                  OVERLAY_SET_ENABLED: T,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE: S,
                   OVERLAY_CRASHED: A,
               },
     ),

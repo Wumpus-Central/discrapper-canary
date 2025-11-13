@@ -1,11 +1,11 @@
 n.d(t, {
     ND: () => p,
-    P5: () => f,
-    g6: () => h,
+    P5: () => h,
+    g6: () => f,
 });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(347715),
+var r = n(347715),
     l = n(481060),
     a = n(668781),
     o = n(493683),
@@ -15,31 +15,31 @@ var i = n(347715),
     d = n(388032);
 let p = (e, t) =>
         (0, l.ZDy)(async () => {
-            let { default: i } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(n.bind(n, 28130));
+            let { default: r } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(n.bind(n, 28130));
             return (n) =>
-                (0, r.jsx)(
-                    i,
+                (0, i.jsx)(
+                    r,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -58,22 +58,22 @@ let p = (e, t) =>
                     ),
                 );
         }),
-    f = (e, t) => {
+    h = (e, t) => {
         p(
             (n) => {
-                o.Z.setIcon(e, n.imageUri, t).catch(h);
+                o.Z.setIcon(e, n.imageUri, t).catch(f);
             },
             [t],
         );
     },
-    h = (e) => {
+    f = (e) => {
         var t;
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
-            let t = (0, i.Z)(new Date(), e.body.retry_after);
+            let t = (0, r.Z)(new Date(), e.body.retry_after);
             a.Z.show({
                 title: d.intl.string(d.t.Whhv4w),
                 body: d.intl.format(d.t.VIJkAy, {
-                    duration: (0, r.jsx)(c.Z, {
+                    duration: (0, i.jsx)(c.Z, {
                         showUnits: !0,
                         deadline: t,
                     }),

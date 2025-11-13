@@ -32,8 +32,8 @@ var r = n(392711),
     N = n(756315),
     R = n(569545),
     P = n(502286),
-    w = n(297733),
-    D = n(981631),
+    D = n(297733),
+    w = n(981631),
     x = n(65154);
 function L(e, t, n) {
     return (
@@ -270,7 +270,7 @@ class V extends c.Z {
                         { streamKey: this.streamKey },
                     ),
                 ),
-                e === D.hes.RTC_CONNECTED)
+                e === w.hes.RTC_CONNECTED)
             ) {
                 var r, i, s, c, u, d, f, _;
                 null == (r = this._connection) ||
@@ -307,7 +307,7 @@ class V extends c.Z {
                                         : null,
                                 { gameName: C, gameId: N, exe: R, distributor: P } = (0, p.G8)(A);
                             S.default.track(
-                                D.rMx.SCREENSHARE_FINISHED,
+                                w.rMx.SCREENSHARE_FINISHED,
                                 M(
                                     {
                                         screenshare_frames: e,
@@ -354,7 +354,7 @@ class V extends c.Z {
                             let e = this.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 S.default.track(
-                                    D.rMx.SOUNDSHARE_ATTACHED,
+                                    w.rMx.SOUNDSHARE_ATTACHED,
                                     M(
                                         {},
                                         (0, P.Z)(null == e ? void 0 : e.desktopSource),
@@ -373,14 +373,14 @@ class V extends c.Z {
                             let e = this.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 (S.default.track(
-                                    D.rMx.SOUNDSHARE_TRANSMITTING,
+                                    w.rMx.SOUNDSHARE_TRANSMITTING,
                                     M(
                                         {},
                                         (0, P.Z)(null == e ? void 0 : e.desktopSource),
                                         this.getSoundshareAnalyticsProperties(),
                                     ),
                                 ),
-                                null != b.Z.getHookError(D.K3D.SOUND) &&
+                                null != b.Z.getHookError(w.K3D.SOUND) &&
                                     l.Z.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                         }),
                     null == (u = this._connection) ||
@@ -420,7 +420,7 @@ class V extends c.Z {
                             if (this._firstFrameDelivered) return;
                             this._firstFrameDelivered = !0;
                             let t = this.getStreamAnalyticsProperties();
-                            S.default.track(D.rMx.RECEIVER_FIRST_FRAME_DELIVERED, {
+                            S.default.track(w.rMx.RECEIVER_FIRST_FRAME_DELIVERED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.channel_id,
                                 rtc_connection_id: t.rtc_connection_id,
@@ -472,7 +472,7 @@ class V extends c.Z {
                     null == (f = this._connection) ||
                         f.on(a.Sh.FirstFrameEncryptedStats, (e) => {
                             let t = this.getStreamAnalyticsProperties();
-                            S.default.track(D.rMx.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                            S.default.track(w.rMx.STREAMER_FIRST_FRAME_ENCRYPTED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.channel_id,
                                 rtc_connection_id: t.rtc_connection_id,
@@ -551,7 +551,7 @@ class V extends c.Z {
         o && this.soundshareFailuresReported[a].add(t),
             (null == t || o) &&
                 S.default.track(
-                    D.rMx.SOUNDSHARE_FAILED,
+                    w.rMx.SOUNDSHARE_FAILED,
                     M(
                         {
                             soundshare_failure_code: t,
@@ -599,9 +599,9 @@ class V extends c.Z {
         };
     }
     trackVideoStartStats() {
-        let e = this.isOwner ? (0, w.Z)() : null;
+        let e = this.isOwner ? (0, D.Z)() : null;
         S.default.track(
-            D.rMx.VIDEO_STREAM_STARTED,
+            w.rMx.VIDEO_STREAM_STARTED,
             k(M({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: O.Z.getType(),
                 effective_connection_speed: O.Z.getEffectiveConnectionSpeed(),
@@ -635,7 +635,7 @@ class V extends c.Z {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 S.default.track(
-                    D.rMx.VIDEO_STREAM_ENDED,
+                    w.rMx.VIDEO_STREAM_ENDED,
                     k(
                         M(
                             {},
@@ -668,7 +668,7 @@ class V extends c.Z {
                 let l = o.getInboundStats(t);
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     S.default.track(
-                        D.rMx.VIDEO_STREAM_ENDED,
+                        w.rMx.VIDEO_STREAM_ENDED,
                         k(
                             M(
                                 {},

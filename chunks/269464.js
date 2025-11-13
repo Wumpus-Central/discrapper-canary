@@ -18,13 +18,13 @@ function h(e) {
         b = t.features.has(d.GuildFeatures.ANIMATED_BANNER),
         x = h && n,
         { analyticsLocations: j } = (0, a.ZP)(),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t],
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function h(e) {
             },
             [j, t],
         ),
-        C = (0, r.jsx)(s.Z, {
+        O = (0, r.jsx)(s.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -51,7 +51,7 @@ function h(e) {
                       )
                     : null,
             disabled: !x,
-            onChange: v,
+            onChange: _,
             hint: p.intl.string(p.t.uPvxqJ),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
@@ -59,7 +59,7 @@ function h(e) {
                     maxFileSizeBytes: m.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return v(t, n);
+                        return _(t, n);
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
@@ -70,12 +70,12 @@ function h(e) {
             enabled: x,
         });
     return h
-        ? C
+        ? O
         : (0, r.jsx)(l.P3F, {
               "aria-hidden": !0,
               tabIndex: -1,
               className: f.upsell,
-              onClick: _,
-              children: C,
+              onClick: v,
+              children: O,
           });
 }

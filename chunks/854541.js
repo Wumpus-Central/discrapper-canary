@@ -1,6 +1,6 @@
 n.d(t, {
     AG: () => R,
-    Z$: () => D,
+    Z$: () => w,
     jH: () => P,
     zH: () => x,
 }),
@@ -93,8 +93,8 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
-    T = 7,
+let T = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
+    S = 7,
     A = () => Promise.resolve();
 function C(e) {
     return null == e ? null : "string" == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
@@ -114,13 +114,13 @@ function N(e) {
             gradientEnd: v,
             gradientDegrees: I = 180,
         } = e,
-        S = (0, s.JA)("color-".concat(t)),
-        T = {};
+        T = (0, s.JA)("color-".concat(t)),
+        S = {};
     if (m && null != y && null != v) {
         let e = (0, c.Rf)(y),
             t = (0, c.Rf)(v);
-        T = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
-    } else T = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
+        S = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
+    } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
     let A = m ? y : t,
         C = !1;
     function N() {
@@ -163,10 +163,10 @@ function N(e) {
                                                 }
                                               : t,
                                       ),
-                            style: b({}, d, T),
-                            "aria-label": null != E ? E : m ? "Gradient ".concat(y, "-").concat(v) : T.backgroundColor,
+                            style: b({}, d, S),
+                            "aria-label": null != E ? E : m ? "Gradient ".concat(y, "-").concat(v) : S.backgroundColor,
                         },
-                        S,
+                        T,
                     ),
                     {
                         children: [
@@ -211,7 +211,7 @@ class P extends i.PureComponent {
         });
     }
 }
-function w(e) {
+function D(e) {
     let {
             value: t,
             eagerUpdate: n = !1,
@@ -229,7 +229,7 @@ function w(e) {
         N = null != A ? A : 0,
         R = (0, c.Rf)(N),
         P = (0, c.O)(N),
-        [w, D] = i.useState({
+        [D, w] = i.useState({
             current: N,
             pending: {
                 hex: R,
@@ -238,10 +238,10 @@ function w(e) {
             input: R,
         });
     i.useEffect(() => {
-        if (null == A || A === w.current) return;
+        if (null == A || A === D.current) return;
         let e = (0, c.Rf)(A),
             t = (0, c.O)(A);
-        D({
+        w({
             current: A,
             pending: {
                 hex: e,
@@ -249,14 +249,14 @@ function w(e) {
             },
             input: e,
         });
-    }, [A, w]),
+    }, [A, D]),
         i.useEffect(() => s, [s]);
     let x = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
-            if (!(0, c.FX)(t)) return void D((e) => O(b({}, e), { input: t }));
+            if (!(0, c.FX)(t)) return void w((e) => O(b({}, e), { input: t }));
             let n = (0, c._i)(t),
                 r = (0, c.O)(n);
-            D({
+            w({
                 current: n,
                 pending: {
                     hex: t,
@@ -275,7 +275,7 @@ function w(e) {
         },
         M = i.useCallback(
             (e) => {
-                D((t) =>
+                w((t) =>
                     O(b({}, t), {
                         pending: e,
                         input: e.hex,
@@ -292,20 +292,20 @@ function w(e) {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
-                    children: (0, r.jsx)(S, {
+                    children: (0, r.jsx)(T, {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
                             return j(t);
                         },
-                        color: w.pending.hsl,
+                        color: D.pending.hsl,
                     }),
                 }),
                 p,
                 (0, r.jsx)(f.oil, {
-                    value: w.input.slice(1),
+                    value: D.input.slice(1),
                     onChange: x,
-                    maxLength: T - 1,
+                    maxLength: S - 1,
                     leading: "#",
                     trailing:
                         E && null != I
@@ -343,7 +343,7 @@ function w(e) {
         children: k,
     });
 }
-let D = i.memo(w);
+let w = i.memo(D);
 function x(e) {
     let {
             className: t,
@@ -362,7 +362,7 @@ function x(e) {
             gradientDegrees: y,
             allowBlackCustomColor: I,
         } = e,
-        S = (e) =>
+        T = (e) =>
             (0, r.jsx)("div", {
                 className: g.colorPickerRow,
                 children: m
@@ -397,7 +397,7 @@ function x(e) {
                           ),
                       ),
             }),
-        T = a.slice(0, a.length / 2),
+        S = a.slice(0, a.length / 2),
         C = a.slice(a.length / 2, a.length),
         R = (0, l.ZP)({
             id: "color-picker",
@@ -458,7 +458,7 @@ function x(e) {
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {
-                                    children: [S(T), S(C)],
+                                    children: [T(S), T(C)],
                                 }),
                             ],
                         },

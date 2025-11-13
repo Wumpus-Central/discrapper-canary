@@ -21,24 +21,24 @@ function R(e, t, n) {
     );
 }
 let P = N.QZA.CLOSED,
-    w = {};
-function D() {
-    (P = N.QZA.OPEN), (w = {});
+    D = {};
+function w() {
+    (P = N.QZA.OPEN), (D = {});
 }
 function x() {
-    (P = N.QZA.CLOSED), (w = {});
+    (P = N.QZA.CLOSED), (D = {});
 }
 function L() {
-    (P = N.QZA.SUBMITTING), (w = {});
+    (P = N.QZA.SUBMITTING), (D = {});
 }
 function M(e) {
     var t;
     if (P !== N.QZA.SUBMITTING) return !1;
-    (P = N.QZA.OPEN), (w = null != (t = e.errors) ? t : {});
+    (P = N.QZA.OPEN), (D = null != (t = e.errors) ? t : {});
 }
 function j(e) {
     let { section: t } = e;
-    return t === N.oAB.ACCOUNT && D();
+    return t === N.oAB.ACCOUNT && w();
 }
 function k(e) {
     let { avatar: t } = e;
@@ -120,10 +120,10 @@ function et() {
     r = void 0;
 }
 function en() {
-    w = {};
+    D = {};
 }
 function er() {
-    ei(), ea(), es(), el(), (w = {});
+    ei(), ea(), es(), el(), (D = {});
 }
 function ei() {
     (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0), (h = void 0);
@@ -148,7 +148,7 @@ class eu extends (v = T.ZP.Store) {
         return P;
     }
     getErrors() {
-        return w;
+        return D;
     }
     showNotice() {
         return (
@@ -248,9 +248,9 @@ class eu extends (v = T.ZP.Store) {
 }
 R(eu, "displayName", "UserSettingsAccountStore");
 let ed = new eu(S.Z, {
-    USER_SETTINGS_ACCOUNT_INIT: D,
-    USER_SETTINGS_MODAL_INIT: D,
-    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
+    USER_SETTINGS_ACCOUNT_INIT: w,
+    USER_SETTINGS_MODAL_INIT: w,
+    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: w,
     USER_SETTINGS_MODAL_SET_SECTION: j,
     USER_SETTINGS_ACCOUNT_CLOSE: x,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ec,

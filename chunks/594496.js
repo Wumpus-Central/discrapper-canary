@@ -21,23 +21,23 @@ var i = n(512722),
     O = n(906364),
     v = n(643879),
     I = n(621853),
-    S = n(271383),
-    T = n(594174),
+    T = n(271383),
+    S = n(594174),
     A = n(74538),
     C = n(51144),
     N = n(18438),
     R = n(778825),
     P = n(52597),
-    w = n(430131),
-    D = n(291334),
+    D = n(430131),
+    w = n(291334),
     x = n(474936),
     L = n(388032),
     M = n(737788);
 function j(e) {
     var t, n, i, j;
     let { guild: k } = e,
-        U = (0, o.e7)([T.default], () => {
-            let e = T.default.getCurrentUser();
+        U = (0, o.e7)([S.default], () => {
+            let e = S.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
         G = (0, d.m)(x.PremiumTypes.TIER_2),
@@ -77,7 +77,7 @@ function j(e) {
         q = null != k ? k : K;
     a()(null != q, "guild should not be null");
     let X = (0, u.gS)(q.id),
-        Q = (0, o.e7)([S.ZP], () => (null == q.id ? null : S.ZP.getMember(q.id, U.id))),
+        Q = (0, o.e7)([T.ZP], () => (null == q.id ? null : T.ZP.getMember(q.id, U.id))),
         J = (0, o.e7)([I.Z], () => I.Z.getGuildMemberProfile(U.id, q.id)),
         $ = c.JH.useExperiment({ location: "GuildIdentityCustomizationSections" }).enabled,
         ee = A.ZP.canUsePremiumProfileCustomization(U),
@@ -96,7 +96,7 @@ function j(e) {
         className: M.sectionsContainer,
         children: [
             (0, r.jsx)(
-                w.Z,
+                D.Z,
                 {
                     errors: null != (i = null == W ? void 0 : W.nick) ? i : null == X ? void 0 : X.nick,
                     username: C.ZP.getName(U),
@@ -120,7 +120,7 @@ function j(e) {
                 },
                 "pronouns",
             ),
-            (0, r.jsxs)(D.Z, {
+            (0, r.jsxs)(w.Z, {
                 user: U,
                 showOverlay: !ee,
                 children: [

@@ -1,38 +1,38 @@
-n.d(t, { d: () => x });
+n.d(t, { d: () => C });
 var i = n(951288),
-    r = n(647438),
+    l = n(647438),
     a = n(512722),
-    l = n.n(a),
+    r = n.n(a),
     s = n(159691),
     o = n(481060),
-    c = n(987209),
-    d = n(563132),
+    d = n(987209),
+    c = n(563132),
     u = n(614277),
     f = n(698708),
     g = n(844068),
     m = n(517730),
     p = n(436585),
-    b = n(848118),
+    x = n(848118),
     v = n(388032),
     h = n(216215);
-function x(e) {
+function C(e) {
     var t;
     let { handleClose: n } = e,
-        { skusById: a, selectedSkuId: x, application: j } = (0, d.JL)(),
-        { isGift: C, giftRecipient: y } = (0, c.wD)();
-    l()(null != x, "Expected selectedSkuId"), l()(null != j, "Expected application");
-    let _ = a[x];
-    return (l()(null != _, "Expected sku"),
-    r.useEffect(() => {
-        C ||
+        { skusById: a, selectedSkuId: C, application: j } = (0, c.JL)(),
+        { isGift: b, giftRecipient: _ } = (0, d.wD)();
+    r()(null != C, "Expected selectedSkuId"), r()(null != j, "Expected application");
+    let I = a[C];
+    return (r()(null != I, "Expected sku"),
+    l.useEffect(() => {
+        b ||
             ((0, p.U)(),
             n(),
             (0, m.I)({
-                sku: _,
+                sku: I,
                 application: j,
             }));
-    }, [C, _, j, n]),
-    C)
+    }, [b, I, j, n]),
+    b)
         ? (0, i.jsxs)(u.C3, {
               children: [
                   (0, i.jsx)(g.Z, {}),
@@ -40,8 +40,8 @@ function x(e) {
                   (0, i.jsxs)("div", {
                       className: h.confirmation,
                       children: [
-                          (0, i.jsx)(b.A, {
-                              sku: _,
+                          (0, i.jsx)(x.A, {
+                              sku: I,
                               shape: "square",
                               containerClassName: h.skuImage,
                           }),
@@ -53,8 +53,8 @@ function x(e) {
                           (0, i.jsx)(o.Text, {
                               variant: "text-md/normal",
                               children: v.intl.formatToPlainString(v.t["2VjPTw"], {
-                                  itemName: _.name,
-                                  giftRecipient: null != (t = null == y ? void 0 : y.username) ? t : "your recipient",
+                                  itemName: I.name,
+                                  giftRecipient: null != (t = null == _ ? void 0 : _.username) ? t : "your recipient",
                               }),
                           }),
                           (0, i.jsx)("div", { className: h.divider }),

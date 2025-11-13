@@ -10,18 +10,18 @@ var r = n(951288),
     d = n(719961),
     p = n(916069),
     f = n(591472),
-    m = n(565138),
-    h = n(370774),
-    g = n(51596),
+    h = n(565138),
+    g = n(370774),
+    m = n(51596),
     _ = n(592125),
     b = n(430824),
     E = n(944486),
     O = n(914010),
-    I = n(768581),
-    y = n(981631),
-    v = n(408491),
+    y = n(768581),
+    v = n(981631),
+    I = n(408491),
     C = n(388032),
-    S = n(602698),
+    S = n(597754),
     T = n(713724);
 function N(e) {
     let t,
@@ -33,18 +33,18 @@ function N(e) {
         A = null != j ? j : null == x ? void 0 : x.guild_id,
         Z = (0, o.e7)([b.Z], () => b.Z.getGuild(A), [A]),
         w = (0, p.Z)(),
-        L = (0, h.D)(),
+        L = (0, g.D)(),
         { guildTitleIconSize: R, guildIconSize: D } = (0, d.T)({ location: "GuildTitle" }),
         { application: M, isFrameInFocusedMode: k } = (0, o.cj)([u.Z, f.Z], () => {
             let e = f.Z.getConnectedFrame();
             return {
                 application: u.Z.getApplication(null == e ? void 0 : e.applicationId),
-                isFrameInFocusedMode: f.Z.getFrameLayoutMode() === v.U.FOCUSED,
+                isFrameInFocusedMode: f.Z.getFrameLayoutMode() === I.U.FOCUSED,
             };
         }),
         U =
             null != M
-                ? I.ZP.getApplicationIconURL({
+                ? y.ZP.getApplicationIconURL({
                       id: M.id,
                       icon: M.icon,
                       bot: M.bot,
@@ -65,7 +65,7 @@ function N(e) {
           : null != Z
             ? ((G = w
                   ? (0, r.jsx)(c.r7p, { size: R })
-                  : (0, r.jsx)(m.Z, {
+                  : (0, r.jsx)(h.Z, {
                         guild: Z,
                         size: D,
                         active: !0,
@@ -74,26 +74,26 @@ function N(e) {
               (t = Z.name))
             : null != x && (x.isDM() || x.isGroupDM())
               ? ((t = C.intl.string(C.t.YUU0RF)), (G = (0, r.jsx)(c.gw7, { size: R })))
-              : N.pathname.startsWith(y.Z5c.ICYMI)
+              : N.pathname.startsWith(v.Z5c.ICYMI)
                 ? ((t = C.intl.string(C.t["jnXV/V"])), (G = (0, r.jsx)(c.qOE, { size: R })))
-                : N.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
+                : N.pathname.startsWith(v.Z5c.GLOBAL_DISCOVERY)
                   ? ((t = C.intl.string(C.t["4nEZLk"])), (G = (0, r.jsx)(c.Jmo, { size: R })))
-                  : N.pathname.startsWith(y.Z5c.NITRO_HOME)
+                  : N.pathname.startsWith(v.Z5c.NITRO_HOME)
                     ? ((t = C.intl.string(C.t.Ipxkog)), (G = (0, r.jsx)(c.SrA, { size: R })))
-                    : N.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
+                    : N.pathname.startsWith(v.Z5c.COLLECTIBLES_SHOP)
                       ? ((t = C.intl.string(C.t.pWG4ze)), (G = (0, r.jsx)(c.EOn, { size: R })))
-                      : N.pathname.startsWith(y.Z5c.ME_ACTIVITY)
+                      : N.pathname.startsWith(v.Z5c.ME_ACTIVITY)
                         ? ((t = C.intl.string(C.t.IC5Ann)), (G = (0, r.jsx)(c.g8d, { size: R })))
-                        : N.pathname.startsWith(y.Z5c.ME_DMS)
+                        : N.pathname.startsWith(v.Z5c.ME_DMS)
                           ? ((t = C.intl.string(C.t.YUU0RF)), (G = (0, r.jsx)(c.gw7, { size: R })))
-                          : N.pathname.startsWith(y.Z5c.FRIENDS)
+                          : N.pathname.startsWith(v.Z5c.FRIENDS)
                             ? ((t = C.intl.string(C.t.TdEu5X)), (G = (0, r.jsx)(c.iFz, { size: R })))
-                            : N.pathname.startsWith(y.Z5c.FAMILY_CENTER)
+                            : N.pathname.startsWith(v.Z5c.FAMILY_CENTER)
                               ? ((t = C.intl.string(S.default.RZqaJn)), (G = (0, r.jsx)(c.BFJ, { size: R })))
-                              : N.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
+                              : N.pathname.startsWith(v.Z5c.QUEST_HOME_V2) &&
                                 ((t = C.intl.string(C.t.JALI2K)), (G = (0, r.jsx)(c.qDn, { size: R })));
     let B = i.useCallback((e) => {
-            (0, g.ZN)("fast-travel");
+            (0, m.ZN)("fast-travel");
         }, []),
         H = (null == t || "" === t) && n ? C.intl.string(C.t.ZvKwYa) : t;
     return null == H || "" === H

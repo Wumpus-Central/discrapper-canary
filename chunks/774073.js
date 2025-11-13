@@ -10,7 +10,7 @@ var r = n(647438),
     o = n(683076),
     s = n(442837),
     l = n(812206),
-    c = n(835473),
+    c = n(565183),
     u = n(669764),
     d = n(210753),
     f = n(626135),
@@ -51,7 +51,7 @@ let m = function (e, t) {
             _ = (0, p.xG)(t, i);
         (0, d.M)(_ && "" !== n ? n : null);
         let h = (0, s.e7)([u.Z], () => u.Z.getGame(n)),
-            b = (0, c.q)(n),
+            b = (0, c.Z)(n),
             y = r.useMemo(() => (null != h && null != b ? E(h, b) : null), [b, h]);
         return (
             r.useEffect(() => {

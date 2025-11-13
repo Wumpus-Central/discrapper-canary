@@ -94,15 +94,15 @@ async function v(e) {
             numberOfBoostsToAdd: y,
             onClose: v,
             onLoading: I,
-            closeLayer: S,
-            onSubscriptionConfirmation: T,
+            closeLayer: T,
+            onSubscriptionConfirmation: S,
             onSubscribeComplete: A,
             guild: C,
             handleSubscribeModalClose: N,
             disablePremiumUpsell: R,
             inPopout: P,
-            applicationId: w,
-            intent: D,
+            applicationId: D,
+            intent: w,
         } = e,
         x = P ? i.u1M : i.z1l,
         L = l.default.getCurrentUser();
@@ -130,7 +130,7 @@ async function v(e) {
         },
         G = () => {
             null == v || v(),
-                null == S || S(),
+                null == T || T(),
                 d.default.track(p.rMx.MODAL_DISMISSED, {
                     type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: h.section,
@@ -154,7 +154,7 @@ async function v(e) {
                                 selectedGuild: C,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                                 guildBoostSlots: e,
-                                intent: D,
+                                intent: w,
                             }),
                         );
                     };
@@ -177,10 +177,10 @@ async function v(e) {
             totalNumberOfSlotsToAssign: null != y ? y : 1,
             onCloseModal: U,
             disablePremiumUpsell: R,
-            onSubscriptionConfirmation: T,
+            onSubscriptionConfirmation: S,
             onSubscribeComplete: A,
             inPopout: P,
-            applicationId: w,
-            intent: D,
+            applicationId: D,
+            intent: w,
         });
 }

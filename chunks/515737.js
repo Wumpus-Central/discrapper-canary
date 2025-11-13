@@ -1,4 +1,4 @@
-a.d(e, { t: () => c });
+a.d(e, { t: () => E });
 var r = a(151122),
     _ = a(370336),
     n = a(688838),
@@ -36,7 +36,7 @@ let i = [
         "XMLHttpRequestEventTarget",
         "XMLHttpRequestUpload",
     ],
-    c = (0, r._I)((t = {}) => {
+    E = (0, r._I)((t = {}) => {
         let e = {
             XMLHttpRequest: !0,
             eventTarget: !0,
@@ -48,8 +48,8 @@ let i = [
         return {
             name: "BrowserApiErrors",
             setupOnce() {
-                e.setTimeout && (0, _.hl)(o.m9, "setTimeout", E),
-                    e.setInterval && (0, _.hl)(o.m9, "setInterval", E),
+                e.setTimeout && (0, _.hl)(o.m9, "setTimeout", c),
+                    e.setInterval && (0, _.hl)(o.m9, "setInterval", c),
                     e.requestAnimationFrame && (0, _.hl)(o.m9, "requestAnimationFrame", s),
                     e.XMLHttpRequest && "XMLHttpRequest" in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, "send", l);
                 let t = e.eventTarget;
@@ -57,7 +57,7 @@ let i = [
             },
         };
     });
-function E(t) {
+function c(t) {
     return function (...e) {
         let a = e[0];
         return (

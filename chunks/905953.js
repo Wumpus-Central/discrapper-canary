@@ -20,10 +20,10 @@ function b(e) {
         [v, j] = i.useState(!1),
         _ = (0, r.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: N } = (0, o.F)(C),
-        O = (0, m.ZP)(_),
+        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, o.F)(C),
+        N = (0, m.ZP)(_),
         P =
-            null == O || null == (t = O.widgets)
+            null == N || null == (t = N.widgets)
                 ? void 0
                 : t.some((e) => e instanceof d.q && e.applicationId === (null == C ? void 0 : C.id));
     return null != y && null != y.edit_profile_upsell_image && null != C && S
@@ -73,7 +73,7 @@ function b(e) {
                               : {
                                     text: f.intl.string(f.t["DSJi3+"]),
                                     onClick: () => {
-                                        N(),
+                                        O(),
                                             j(!0),
                                             (0, p.openUserProfileModal)({
                                                 userId: _,

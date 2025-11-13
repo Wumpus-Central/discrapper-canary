@@ -1,4 +1,4 @@
-n.d(t, { b: () => D }), n(388685);
+n.d(t, { b: () => w }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(674466),
@@ -79,7 +79,7 @@ function P(e) {
     let r = h.Z.getVoiceChannelId();
     return null != (n = null != (t = "channelId" in e ? e.channelId : void 0) ? t : r) ? n : null;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     var r, i, a, o;
     return e
         ? null != (i = null == (r = T(t)) ? void 0 : r.frameRateEncode)
@@ -89,8 +89,8 @@ function w(e, t, n) {
           ? o
           : null;
 }
-function D(e, t) {
-    var n, r, c, h, D;
+function w(e, t) {
+    var n, r, c, h, w;
     let x,
         L = (0, O.hp)(e),
         M = P(t),
@@ -131,8 +131,8 @@ function D(e, t) {
                   : $.getInboundStats(Q.ownerId)
             : es
               ? null !=
-                (D = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames))
-                  ? D
+                (w = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames))
+                  ? w
                   : null
               : null != ec
                 ? null == $
@@ -153,7 +153,7 @@ function D(e, t) {
                 g,
                 O,
                 P,
-                D,
+                w,
                 k,
                 X,
                 ee,
@@ -176,8 +176,8 @@ function D(e, t) {
                 eN,
                 eR,
                 eP,
-                ew,
                 eD,
+                ew,
                 ex,
                 eL,
                 eM,
@@ -196,7 +196,7 @@ function D(e, t) {
                 error_category: L.category,
                 underlying_error: null != G ? G : null,
                 error_message: null != B ? B : null,
-                guild_id: null != (D = null == j ? void 0 : j.guild_id) ? D : null,
+                guild_id: null != (w = null == j ? void 0 : j.guild_id) ? w : null,
                 channel_id: null != M ? M : null,
                 channel_type: null != (k = null == j ? void 0 : j.type) ? k : null,
                 rtc_connection_id: null != F ? F : null,
@@ -232,7 +232,7 @@ function D(e, t) {
                 incoming_video_stopped_for_occlusion: !o.w.isIncomingVideoEnabled(),
                 bitrate: null != (eT = null == (u = A(es, ed, ec)) ? void 0 : u.bitrate) ? eT : null,
                 target_bitrate: es && null != (eS = null == (d = T(ed)) ? void 0 : d.bitrateTarget) ? eS : null,
-                fps: null != (eA = w(es, el, ec)) ? eA : null,
+                fps: null != (eA = D(es, el, ec)) ? eA : null,
                 target_fps: el === I.Yn.STREAM && es ? en : null,
                 sender_user_id: null != (eC = null == Q ? void 0 : Q.ownerId) ? eC : null,
                 stream_region: null != (eN = null == J ? void 0 : J.getRegion()) ? eN : null,
@@ -249,8 +249,8 @@ function D(e, t) {
                 share_application_id: null != ei ? ei : null,
                 share_application_executable: null != ea ? ea : null,
                 share_application_distributor: null != eo ? eo : null,
-                cpu_brand: null != (ew = null == t ? void 0 : t.cpu_brand) ? ew : null,
-                cpu_vendor: null != (eD = null == t ? void 0 : t.cpu_vendor) ? eD : null,
+                cpu_brand: null != (eD = null == t ? void 0 : t.cpu_brand) ? eD : null,
+                cpu_vendor: null != (ew = null == t ? void 0 : t.cpu_vendor) ? ew : null,
                 cpu_memory: null != (ex = null == t ? void 0 : t.cpu_memory) ? ex : null,
                 gpu_brand: null != (eL = null == t ? void 0 : t.gpu_brand) ? eL : null,
                 gpu_count: null != (eM = null == t ? void 0 : t.gpu_count) ? eM : null,

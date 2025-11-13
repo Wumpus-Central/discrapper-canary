@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(386506),
     v = n(865427),
     I = n(802098),
-    S = n(600164),
-    T = n(482215),
+    T = n(600164),
+    S = n(482215),
     A = n(581612),
     C = n(580747),
     N = n(38618),
     R = n(375657),
     P = n(171393),
-    w = n(837268),
-    D = n(32300),
+    D = n(837268),
+    w = n(32300),
     x = n(371651),
     L = n(398269),
     M = n(921801),
@@ -120,18 +120,18 @@ class es extends i.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: i, error: a } = this.props,
             s = "branch" === t ? "Branch Name" : "Commit SHA";
-        return (0, r.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(T.Z, {
+            direction: T.Z.Direction.VERTICAL,
             className: o()(Q.buildOverrideGroup, $.marginBottom20, J.card, Q.row),
             children: [
                 (0, r.jsx)(b.Z, {
                     className: o()(Q.removeBuildOverride, { [Q.removeBuildOverrideDisabled]: i }),
                     onClick: i ? void 0 : this.handleRemoveBuildOverride,
                 }),
-                (0, r.jsxs)(S.Z, {
+                (0, r.jsxs)(T.Z, {
                     className: $.marginBottom8,
                     children: [
-                        (0, r.jsx)(S.Z.Child, {
+                        (0, r.jsx)(T.Z.Child, {
                             basis: "50%",
                             children: (0, r.jsx)(p.q4e, {
                                 label: "Override Type",
@@ -142,7 +142,7 @@ class es extends i.Component {
                                 isDisabled: i,
                             }),
                         }),
-                        (0, r.jsx)(S.Z.Child, {
+                        (0, r.jsx)(T.Z.Child, {
                             wrap: !0,
                             basis: "50%",
                             children: (0, r.jsx)(p.oil, {
@@ -154,7 +154,7 @@ class es extends i.Component {
                         }),
                     ],
                 }),
-                (0, r.jsxs)(S.Z.Child, {
+                (0, r.jsxs)(T.Z.Child, {
                     children: [
                         null != a &&
                             "" !== a &&
@@ -660,7 +660,7 @@ class ec extends i.Component {
     }
 }
 function eu() {
-    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, T.i)(),
+    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, S.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
         { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([j.default], () => ({
@@ -705,7 +705,7 @@ function eu() {
                         minValue: 0,
                         maxValue: n,
                         markers: o,
-                        onValueChange: (e) => T.i.getState().setHorizontalSpacing(e),
+                        onValueChange: (e) => S.i.getState().setHorizontalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
@@ -718,7 +718,7 @@ function eu() {
                         minValue: 0,
                         maxValue: a,
                         markers: s,
-                        onValueChange: (e) => T.i.getState().setVerticalSpacing(e),
+                        onValueChange: (e) => S.i.getState().setVerticalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
@@ -951,11 +951,11 @@ function ep(e) {
     Z.ZP.triggerJSException(e);
 }
 function eh() {
-    let e = (0, D.XE)("developer_settings"),
+    let e = (0, w.XE)("developer_settings"),
         t = (0, d.e7)([x.default], () => x.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
-        l = e || t === w.R5.OUT_OF_PROCESS_V3 || t === w.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
+        l = e || t === D.R5.OUT_OF_PROCESS_V3 || t === D.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (i.useEffect(() => {
         (async () => {
             s(await (0, U.getOverlayURL)());

@@ -25,8 +25,8 @@ var r = n(951288),
     N = n(896797),
     O = n(701190),
     C = n(626135),
-    A = n(630388),
-    T = n(63063),
+    T = n(630388),
+    A = n(63063),
     Z = n(782605),
     P = n(954824),
     R = n(588705),
@@ -70,8 +70,8 @@ function W(e) {
 }
 c.ZP.initialize();
 let H = "Accept Invite Page",
-    z = "register",
-    K = "login",
+    K = "register",
+    z = "login",
     q = (e) => {
         var { className: t } = e,
             n = (function (e, t) {
@@ -134,7 +134,7 @@ class J extends i.PureComponent {
             s = this.getInviteKey();
         if (s !== this.getInviteKey(e)) Y(s);
         else if (t.state === D.r2o.APP_NOT_OPENED) this.handleContinue();
-        else if (this.getMode() === K && r !== e.authenticated && r) {
+        else if (this.getMode() === z && r !== e.authenticated && r) {
             let e = S.default.getFingerprint();
             if (null != e) {
                 let t = (0, o.s)(e);
@@ -149,13 +149,13 @@ class J extends i.PureComponent {
         }
         if (
             (n !== e.nativeAppState && n === D.kEZ.OPEN && this.track(D.rMx.INVITE_APP_INVOKED, !1),
-            this.getMode() === z && r && !e.authenticated)
+            this.getMode() === K && r && !e.authenticated)
         ) {
             let { channel: e } = t;
             if (null != e)
                 if (((0, b.c)(M.M5.INVITE_UNCLAIMED), null != t.guild)) {
                     var l, c, u;
-                    let e = (0, A.yE)(null != (u = t.flags) ? u : 0, a.$.IS_APPLICATION_BYPASS),
+                    let e = (0, T.yE)(null != (u = t.flags) ? u : 0, a.$.IS_APPLICATION_BYPASS),
                         n =
                             (null == (l = t.guild.features)
                                 ? void 0
@@ -177,7 +177,7 @@ class J extends i.PureComponent {
     }
     getMode() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-        return k.a ? z : e.login ? K : z;
+        return k.a ? K : e.login ? z : K;
     }
     track(e, t, n) {
         let { invite: r } = this.props,
@@ -213,7 +213,7 @@ class J extends i.PureComponent {
                 (0, r.jsx)(f.DK, { children: e ? U.intl.string(U.t["5AkWAd"]) : U.intl.string(U.t["+qUJAj"]) }),
                 this.renderButton(U.intl.string(U.t.fIv16B)),
                 (0, r.jsx)(q, {
-                    onClick: () => window.open(T.Z.getArticleURL(D.BhN.INVALID_INVITES), "_blank"),
+                    onClick: () => window.open(A.Z.getArticleURL(D.BhN.INVALID_INVITES), "_blank"),
                     look: q.Looks.LINK,
                     color: q.Colors.LINK,
                     className: F.marginTop8,
@@ -313,10 +313,10 @@ class J extends i.PureComponent {
                 return this.renderSpinner(U.intl.string(U.t["Z+hCVU"]));
             case D.r2o.RESOLVED:
                 var l;
-                if (n && (0, A.yE)(null != (l = e.flags) ? l : 0, a.$.IS_GUEST_INVITE))
+                if (n && (0, T.yE)(null != (l = e.flags) ? l : 0, a.$.IS_GUEST_INVITE))
                     return h.ZP.openApp(e.code), u.x.set(v.J, e.code), this.renderAppOpened(() => i(D.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
-                if (this.getMode() === K)
+                if (this.getMode() === z)
                     return (0, r.jsx)(L.Z, {
                         invite: e,
                         transitionTo: i,

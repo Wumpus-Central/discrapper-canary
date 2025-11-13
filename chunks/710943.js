@@ -44,8 +44,8 @@ function E(e, t, n) {
                 : t.value && (0, a.KC)(t.value, b));
     R && (S = !0), (b = (0, o.v)(b, a.N9));
     let P = (0, m.useMemo)(() => b.toDate(t.timeZone), [b, t.timeZone]),
-        w = (0, a.zk)(b, t.timeZone),
-        D = (0, m.useMemo)(() => {
+        D = (0, a.zk)(b, t.timeZone),
+        w = (0, m.useMemo)(() => {
             let e = "";
             return (
                 "highlightedRange" in t &&
@@ -54,7 +54,7 @@ function E(e, t, n) {
                     ((0, a.KC)(b, t.value.start) || (0, a.KC)(b, t.value.end)) &&
                     (e = v + ", "),
                 (e += T.format(P)),
-                w
+                D
                     ? (e = I.format(S ? "todayDateSelected" : "todayDate", { date: e }))
                     : S && (e = I.format("dateSelected", { date: e })),
                 t.minValue && (0, a.KC)(b, t.minValue)
@@ -62,7 +62,7 @@ function E(e, t, n) {
                     : t.maxValue && (0, a.KC)(b, t.maxValue) && (e += ", " + I.format("maximumDate")),
                 e
             );
-        }, [T, P, I, S, w, b, t, v]),
+        }, [T, P, I, S, D, b, t, v]),
         x = "";
     "anchorDate" in t &&
         A &&
@@ -156,7 +156,7 @@ function E(e, t, n) {
             tabIndex: E,
             role: "button",
             "aria-disabled": !N || void 0,
-            "aria-label": D,
+            "aria-label": w,
             "aria-invalid": R || void 0,
             "aria-describedby": [R ? O : void 0, L["aria-describedby"]].filter(Boolean).join(" ") || void 0,
             onPointerEnter(e) {

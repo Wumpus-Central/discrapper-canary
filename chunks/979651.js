@@ -83,7 +83,7 @@ function P(e) {
             : e;
     }, !1);
 }
-function w(e) {
+function D(e) {
     let t = !1;
     for (let n of e.voiceStates) {
         let [r] = x(e.guildId, n);
@@ -92,7 +92,7 @@ function w(e) {
     for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
     return t && h++, t;
 }
-function D(e) {
+function w(e) {
     let { userId: t, channelId: n, platform: r } = e;
     v[I(t, n)] = r;
 }
@@ -235,6 +235,6 @@ let F = new Z(c.Z, {
     GUILD_CREATE: U,
     CHANNEL_DELETE: G,
     CALL_DELETE: B,
-    PASSIVE_UPDATE_V2: w,
-    RTC_CONNECTION_PLATFORM: D,
+    PASSIVE_UPDATE_V2: D,
+    RTC_CONNECTION_PLATFORM: w,
 });

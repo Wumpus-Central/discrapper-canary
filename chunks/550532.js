@@ -1,11 +1,11 @@
 n.d(t, { Z: () => u });
 var r,
-    l,
-    i = n(442837),
+    i,
+    l = n(442837),
     a = n(570140),
     o = n(780106);
 let s = "None";
-class c extends (l = i.ZP.Store) {
+class c extends (i = l.ZP.Store) {
     getFakeGameToShow() {
         return s;
     }

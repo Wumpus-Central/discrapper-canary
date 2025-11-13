@@ -1,7 +1,7 @@
 n.d(t, {
     QR: () => y,
-    Yj: () => O,
-    ZP: () => b,
+    Yj: () => b,
+    ZP: () => _,
 });
 var i,
     r = n(951288),
@@ -12,8 +12,8 @@ var i,
     c = n(294033),
     d = n(388032),
     u = n(866497),
-    p = n(197571);
-function h(e, t, n) {
+    h = n(197571);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,12 +51,12 @@ let f = (e) => e.stopPropagation(),
                     ),
             }),
         }),
-    O = (e, t) =>
+    b = (e, t) =>
         (0, r.jsx)("div", {
             className: u.hintSubtleText,
             children: t,
         });
-class _ extends (i = s.PureComponent) {
+class v extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -202,7 +202,7 @@ class _ extends (i = s.PureComponent) {
                         }),
                         null != e
                             ? (0, r.jsx)("div", {
-                                  className: l()(u.body, p.marginTop4),
+                                  className: l()(u.body, h.marginTop4),
                                   style: {
                                       WebkitLineClamp: n,
                                       lineClamp: n,
@@ -239,31 +239,31 @@ class _ extends (i = s.PureComponent) {
     }
     constructor(e) {
         super(e),
-            h(this, "handleDismiss", (e) => {
+            p(this, "handleDismiss", (e) => {
                 e.stopPropagation();
                 let { onDismissClick: t } = this.props;
                 null == t || t(e);
             }),
-            h(this, "handleConfirmClick", (e) => {
+            p(this, "handleConfirmClick", (e) => {
                 e.stopPropagation();
                 let { onConfirmClick: t } = this.props;
                 null == t || t(e);
             }),
-            h(this, "handleCancelClick", (e) => {
+            p(this, "handleCancelClick", (e) => {
                 e.stopPropagation();
                 let { onCancelClick: t } = this.props;
                 null == t || t(e);
             }),
-            h(this, "handleMouseEnter", () => {
+            p(this, "handleMouseEnter", () => {
                 this.props.disabled || this.setState({ expanded: !0 });
             });
         let { expand: t } = e;
         this.state = { expanded: t };
     }
 }
-h(_, "defaultProps", {
+p(v, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let b = _;
+let _ = v;

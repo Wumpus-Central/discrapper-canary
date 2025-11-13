@@ -34,8 +34,8 @@ var r = n(188366),
     N = n(960313),
     R = n(593277),
     P = n(483022),
-    w = n(735437),
-    D = n(592632),
+    D = n(735437),
+    w = n(592632),
     x = n(747767),
     L = n(647438);
 n(603113);
@@ -199,7 +199,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
             UNSAFE_selectionState: n,
         }),
         S = (0, h.w)(T, O),
-        { isVirtualized: A, layoutDelegate: C, dropTargetDelegate: N, CollectionRoot: D } = (0, L.useContext)(a.Qk),
+        { isVirtualized: A, layoutDelegate: C, dropTargetDelegate: N, CollectionRoot: w } = (0, L.useContext)(a.Qk),
         { dragAndDropHooks: x } = e,
         { gridProps: M } = (0, m.x)(
             {
@@ -274,7 +274,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 width: "fit-content",
             }));
     let $ = F("table"),
-        ee = (0, w.z)(e, { global: !0 });
+        ee = (0, D.z)(e, { global: !0 });
     return L.createElement(
         o.zt,
         {
@@ -313,7 +313,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 L.createElement(
                     c.y,
                     null,
-                    L.createElement(D, {
+                    L.createElement(w, {
                         collection: S.collection,
                         scrollRef: null != (l = null == I ? void 0 : I.scrollRef) ? l : t,
                         persistedKeys: (0, s.y)(k, x, d),
@@ -358,7 +358,7 @@ let Y = (0, d.IW)(
         return L.createElement(
             i,
             {
-                ...(0, y.d)((0, w.z)(e, { global: !0 }), a, s),
+                ...(0, y.d)((0, D.z)(e, { global: !0 }), a, s),
                 ...c,
                 ref: t,
                 "data-hovered": l || void 0,
@@ -459,7 +459,7 @@ let z = (0, d.G5)(K, (e, t, n) => {
                 width: p.getColumnWidth(n.key),
             });
         let I = F("th"),
-            T = (0, w.z)(e, { global: !0 });
+            T = (0, D.z)(e, { global: !0 });
         return (
             delete T.id,
             L.createElement(
@@ -551,7 +551,7 @@ let Q = (0, d.IW)(X, (e, t) => {
     }
     let { rowGroupProps: I } = (0, O.LA)(),
         T = F("tbody"),
-        S = (0, w.z)(e, { global: !0 });
+        S = (0, D.z)(e, { global: !0 });
     return L.createElement(
         T,
         {
@@ -598,7 +598,7 @@ let $ = (0, d.IW)(
                 d,
             ),
             { isFocused: I, isFocusVisible: S, focusProps: N } = (0, E.F)(),
-            { isFocusVisible: P, focusProps: D } = (0, E.F)({ within: !0 }),
+            { isFocusVisible: P, focusProps: w } = (0, E.F)({ within: !0 }),
             { hoverProps: x, isHovered: M } = (0, v.X)({
                 isDisabled: !O.allowsSelection && !O.hasAction,
                 onHoverStart: e.onHoverStart,
@@ -655,7 +655,7 @@ let $ = (0, d.IW)(
             }),
             W = F("tr"),
             K = F("td"),
-            z = (0, w.z)(e, { global: !0 });
+            z = (0, D.z)(e, { global: !0 });
         return (
             delete z.id,
             delete z.onClick,
@@ -688,7 +688,7 @@ let $ = (0, d.IW)(
                 L.createElement(
                     W,
                     {
-                        ...(0, y.d)(z, Y, b, N, x, null == c ? void 0 : c.dragProps, D),
+                        ...(0, y.d)(z, Y, b, N, x, null == c ? void 0 : c.dragProps, w),
                         ref: d,
                         "data-disabled": O.isDisabled || void 0,
                         "data-selected": O.isSelected || void 0,
@@ -789,7 +789,7 @@ let et = (0, d.G5)(ee, (e, t, n) => {
             },
         }),
         b = F("td"),
-        O = (0, w.z)(e, { global: !0 });
+        O = (0, D.z)(e, { global: !0 });
     return (
         delete O.id,
         L.createElement(
@@ -834,7 +834,7 @@ function er(e, t) {
     return L.createElement(
         u,
         {
-            ...(0, w.z)(e, { global: !0 }),
+            ...(0, D.z)(e, { global: !0 }),
             ...c,
             role: "row",
             ref: t,
@@ -907,7 +907,7 @@ function ea() {
             }),
             [l, c, null == r ? void 0 : r.collection],
         );
-    (0, D.B)(_, f);
+    (0, w.B)(_, f);
     let p = (0, o.aX)({
             ...u,
             id: void 0,
@@ -955,7 +955,7 @@ function ea() {
                 L.createElement(
                     h,
                     {
-                        ...(0, y.d)((0, w.z)(e, { global: !0 }), g),
+                        ...(0, y.d)((0, D.z)(e, { global: !0 }), g),
                         ...p,
                         role: "row",
                         ref: t,

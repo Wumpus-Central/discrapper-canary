@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -97,16 +97,16 @@ let I = (e) => {
                     }),
                 });
     },
-    S = (e) => {
+    T = (e) => {
         let {
                 className: t,
                 variant: n,
                 noBackground: a = !1,
                 leftAlignHeaders: b = !1,
                 showAllPerksButton: O,
-                headerClassname: S,
+                headerClassname: T,
             } = e,
-            T = i.useRef(null),
+            S = i.useRef(null),
             A = n === h.gM.WHATS_NEW,
             C = (0, _.x)();
         i.useEffect(() => {
@@ -115,8 +115,8 @@ let I = (e) => {
         let N = (0, m.re)(A),
             R = (0, p.Z)(),
             P = (0, m.mN)(),
-            { fractionalState: w } = (0, l.Z)(),
-            D = (0, d.W)(),
+            { fractionalState: D } = (0, l.Z)(),
+            w = (0, d.W)(),
             x = (0, u.bg)({ location: "PremiumPerks" }),
             L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
@@ -125,15 +125,15 @@ let I = (e) => {
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
                 isPremiumSubscriber: P,
-                fractionalState: w,
-                isInReverseTrial: D,
+                fractionalState: D,
+                isInReverseTrial: w,
                 showProfileWidgets: x,
                 showDisplayNameStyles: L,
                 recurring3PPromotionExperiment: M,
             }),
             k = j.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
-            ref: T,
+            ref: S,
             className: o()(
                 E.section,
                 {
@@ -147,7 +147,7 @@ let I = (e) => {
                     showAllPerksButton: O,
                     leftAlignHeaders: b,
                     title: N.title,
-                    headerClassname: S,
+                    headerClassname: T,
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",

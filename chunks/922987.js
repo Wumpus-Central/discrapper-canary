@@ -1,5 +1,5 @@
 n.d(t, {
-    _Y: () => D,
+    _Y: () => w,
     default: () => G,
 });
 var r = n(951288),
@@ -97,13 +97,13 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = {
+let D = {
         payment_type: v.Zuq[v.GZQ.ONE_TIME],
         is_gift: !1,
         eligible_for_trial: !1,
         payment_modal_version: p.PaymentModal.CURRENT_VERSION,
     },
-    D = (e, t) => {
+    w = (e, t) => {
         let { loadId: n, skuId: r, analyticsLocations: i, analyticsSourceLocation: a } = t;
         e === v.rMx.PAYMENT_FLOW_CANCELED &&
             g.default.track(
@@ -119,7 +119,7 @@ let w = {
                         currency: v.pKx.DISCORD_ORB,
                     },
                     null != a && { source: a },
-                    w,
+                    D,
                 ),
             );
     },
@@ -149,7 +149,7 @@ let w = {
                         { currency: v.pKx.DISCORD_ORB },
                     ),
                     null != c && { source: c },
-                    w,
+                    D,
                 );
             }, [r, e, o, l, c, s]);
         return {

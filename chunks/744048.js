@@ -31,14 +31,14 @@ let O = function (e) {
         R = C === a.z.CLIENT_THEMES_COACHMARK,
         P = C === a.z.CUSTOM_THEME_COACHMARK;
     if (((0, u.HA)(I, C), n)) return null;
-    let w = T === g.wh.CLIENT_THEMES || R,
-        D = T === g.wh.APP_ICON,
+    let D = T === g.wh.CLIENT_THEMES || R,
+        w = T === g.wh.APP_ICON,
         x = T === g.wh.CUSTOM_THEME || P;
-    if (!(w || D || x)) return null;
+    if (!(D || w || x)) return null;
     let L = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                w &&
+                D &&
                     (0, r.jsx)(c.Z, {
                         markAsDismissed: R
                             ? N
@@ -50,7 +50,7 @@ let O = function (e) {
                               },
                         showClientThemesCoachmark: R,
                     }),
-                D &&
+                w &&
                     (0, r.jsx)(o.Z, {
                         isCoachmark: !1,
                         markAsDismissed: N,

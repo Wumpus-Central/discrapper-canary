@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(539854);
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(496929),
     i = n(16084),
     l = n(558381),
@@ -45,7 +45,7 @@ async function f(e, t) {
         i
     );
 }
-async function m(e) {
+async function h(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
@@ -67,28 +67,28 @@ async function m(e) {
         )),
     ];
 }
-function h(e) {
+function g(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
     if (null == n) throw new c.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
     return r.yD(n);
 }
-let g = {
+let m = {
     [p.Etm.GET_SKUS]: {
-        [d.Gp.ANY]: [d.wE, d.lH],
-        handler: m,
-    },
-    [p.Etm.GET_ENTITLEMENTS]: {
         [d.Gp.ANY]: [d.wE, d.lH],
         handler: h,
     },
+    [p.Etm.GET_ENTITLEMENTS]: {
+        [d.Gp.ANY]: [d.wE, d.lH],
+        handler: g,
+    },
     [p.Etm.GET_SKUS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ skus: await m(e) }),
+        handler: async (e) => ({ skus: await h(e) }),
     },
     [p.Etm.GET_ENTITLEMENTS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ entitlements: await h(e) }),
+        handler: async (e) => ({ entitlements: await g(e) }),
     },
 };

@@ -16,12 +16,12 @@ let m = (e) => {
         i,
         { guildFeature: m, guild: p, className: f, hideTooltip: h = !1, tooltipPosition: b = "left", onClick: x } = e,
         j = p.features.has(m),
-        v = (0, o.AR)(p.id, "GuildSettingsBoostPerks"),
-        _ = (0, c._p)(m);
-    return !j && m === d.GuildFeatures.VANITY_URL && v
+        _ = (0, o.AR)(p.id, "GuildSettingsBoostPerks"),
+        v = (0, c._p)(m);
+    return !j && m === d.GuildFeatures.VANITY_URL && _
         ? null
         : (j
-                ? (null != _ && (i = u.intl.string(u.t.hUgjyP)),
+                ? (null != v && (i = u.intl.string(u.t.hUgjyP)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Ucv, {
@@ -35,7 +35,7 @@ let m = (e) => {
                           }),
                       ],
                   })))
-                : (null != _ && (i = u.intl.string(u.t.L2wYYj)),
+                : (null != v && (i = u.intl.string(u.t.L2wYYj)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Ucv, {
@@ -45,7 +45,7 @@ let m = (e) => {
                           (0, r.jsx)(s.Heading, {
                               variant: "eyebrow",
                               className: g.description,
-                              children: null != _ && (0, c.e9)(_),
+                              children: null != v && (0, c.e9)(v),
                           }),
                       ],
                   }))),

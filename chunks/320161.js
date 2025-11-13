@@ -115,16 +115,16 @@ function I(e) {
         !c.wS)
     )
         return (0, r.jsx)(r.Fragment, { children: u({}) });
-    let w = I >= v.length - 1,
-        D = w ? s.r6K.RED : s.r6K.GREEN,
-        x = S ? D : s.r6K.PRIMARY,
+    let D = I >= v.length - 1,
+        w = D ? s.r6K.RED : s.r6K.GREEN,
+        x = S ? w : s.r6K.PRIMARY,
         L = () => {
             var e;
             if (!S) return t;
             let n = (0, a.clamp)(I - 1, 0, v.length - 1),
                 i = null != (e = v[n]) ? e : v[0];
             return (0, r.jsx)(s.UkV, {
-                isShaking: w,
+                isShaking: D,
                 children: i(),
             });
         },

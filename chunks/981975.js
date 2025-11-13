@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(95242),
     x = n(530198),
     j = n(420966),
-    v = n(203377),
-    _ = n(981631),
-    C = n(856651),
-    O = n(388032),
+    _ = n(203377),
+    v = n(981631),
+    O = n(856651),
+    C = n(388032),
     y = n(144563),
-    E = n(21321);
-function N(e) {
+    N = n(21321);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,20 +62,20 @@ function S(e) {
             (0, r.jsx)(d.Heading, {
                 className: y.headerHeading,
                 variant: "eyebrow",
-                children: O.intl.string(O.t.nMir27),
+                children: C.intl.string(C.t.nMir27),
             }),
             (0, r.jsx)(d.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 className: y.headerNoConfigSubtitle,
-                children: O.intl.format(O.t.q5f7tK, {
-                    helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
+                children: C.intl.format(C.t.q5f7tK, {
+                    helpdeskArticleUrl: m.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
             (0, r.jsx)(d.Button, {
                 disabled: n,
                 onClick: t,
-                text: O.intl.string(O.t["OSvW5+"]),
+                text: C.intl.string(C.t["OSvW5+"]),
                 fullWidth: !0,
                 variant: "primary",
             }),
@@ -115,7 +115,7 @@ function T(e) {
             onComplete: (e) => G(e),
             excludedPlatformTypes: k,
             integrations: o,
-            onCompleteApplication: (e) => G(C.Kt, e),
+            onCompleteApplication: (e) => G(O.Kt, e),
         });
     }
     let U = null;
@@ -131,7 +131,7 @@ function T(e) {
             (e = (0, r.jsx)(d.Button, {
                 disabled: l,
                 onClick: M,
-                text: O.intl.string(O.t["OSvW5+"]),
+                text: C.intl.string(C.t["OSvW5+"]),
                 icon: d.oFk,
                 fullWidth: !0,
                 variant: "secondary",
@@ -148,22 +148,22 @@ function T(e) {
                                         className: y.headerTitleTextContainer,
                                         children: (0, r.jsx)(d.Heading, {
                                             variant: "eyebrow",
-                                            children: O.intl.string(O.t.nMir27),
+                                            children: C.intl.string(C.t.nMir27),
                                         }),
                                     }),
                                     (0, r.jsx)(d.Avr, {
                                         variant: "critical",
                                         onClick: B,
                                         disabled: l,
-                                        text: O.intl.string(O.t.ntW1cc),
+                                        text: C.intl.string(C.t.ntW1cc),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: O.intl.format(O.t.q5f7tK, {
-                                    helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
+                                children: C.intl.format(C.t.q5f7tK, {
+                                    helpdeskArticleUrl: m.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
                         ],
@@ -171,14 +171,14 @@ function T(e) {
                     (function (e, t, n, i, l) {
                         let a = I(i, g.O1.OR);
                         return (0, r.jsx)(d.FXm, {
-                            label: O.intl.string(O.t.Xs7PHX),
+                            label: C.intl.string(C.t.Xs7PHX),
                             options: [
                                 {
-                                    name: O.intl.string(O.t.W3iY58),
+                                    name: C.intl.string(C.t.W3iY58),
                                     value: g.O1.OR,
                                 },
                                 {
-                                    name: O.intl.string(O.t.gHXS9A),
+                                    name: C.intl.string(C.t.gHXS9A),
                                     value: g.O1.AND,
                                 },
                             ],
@@ -190,7 +190,7 @@ function T(e) {
                     (function (e, t, n, i, l) {
                         function a(n, r) {
                             let i = [];
-                            for (let t of e) i.push(N({}, t));
+                            for (let t of e) i.push(E({}, t));
                             if (null == n) {
                                 let t = e[r];
                                 null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value
@@ -247,7 +247,7 @@ function T(e) {
                                               }),
                                         e
                                     );
-                                })(N({}, t[0].configuration), {
+                                })(E({}, t[0].configuration), {
                                     connectionMetadataField: void 0,
                                     operator: void 0,
                                     value: void 0,
@@ -283,15 +283,15 @@ function T(e) {
         style: { scrollPaddingTop: T },
         onScroll: Z,
         children: (0, r.jsxs)("div", {
-            className: E.contentWidth,
+            className: N.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !w }),
+                    className: a()(N.header, N.stickyHeader, { [N.stickyHeaderElevated]: !w }),
                     ref: P,
                     children: (0, r.jsx)(j.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: v.ZI.VERIFICATIONS,
+                        selectedSection: _.ZI.VERIFICATIONS,
                         setSelectedSection: s,
                     }),
                 }),
@@ -309,7 +309,7 @@ function T(e) {
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: O.intl.string(O.t["2aFeef"]),
+                                  children: C.intl.string(C.t["2aFeef"]),
                               }),
                           ],
                       })

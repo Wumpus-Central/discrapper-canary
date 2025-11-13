@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(325476),
     x = n(884902),
     j = n(345162),
-    v = n(496675),
-    _ = n(671533),
-    C = n(103576),
-    O = n(970129),
+    _ = n(496675),
+    v = n(671533),
+    O = n(103576),
+    C = n(970129),
     y = n(712181),
-    E = n(420966),
-    N = n(203377),
+    N = n(420966),
+    E = n(203377),
     I = n(981631),
     S = n(388032),
     T = n(612894);
@@ -37,20 +37,20 @@ function w(e) {
             selectedItem: p,
             onClick: f,
             currentPosition: b,
-            onDragStart: v,
-            onDragReset: _,
-            onDragComplete: C,
+            onDragStart: _,
+            onDragReset: v,
+            onDragComplete: O,
             roleStyle: y,
         } = e,
-        E = (0, O.T)(c, m, d),
-        N = (0, j.fI)(d),
-        S = null == E && !N,
+        N = (0, C.T)(c, m, d),
+        E = (0, j.fI)(d),
+        S = null == N && !E,
         w = (null == (t = d.tags) ? void 0 : t.guild_connections) !== void 0,
         Z = (0, x._f)(c.id, d, d.colorStrings),
         [, R] = (0, s.c)({
             type: P,
             item: () => (
-                v(d.id),
+                _(d.id),
                 {
                     id: d.id,
                     position: b,
@@ -59,8 +59,8 @@ function w(e) {
             canDrag: () => S,
             end: (e, t) => {
                 let n = t.getDropResult();
-                if (null == n) return void _();
-                C(n.roleId);
+                if (null == n) return void v();
+                O(n.roleId);
             },
         }),
         [{ dragSourcePosition: D }, A] = (0, o.L)({
@@ -163,15 +163,15 @@ function w(e) {
             },
             children: [
                 l,
-                null != E
-                    ? (0, r.jsx)(O.Z, {
+                null != N
+                    ? (0, r.jsx)(C.Z, {
                           className: T.lock,
-                          tooltipText: E,
+                          tooltipText: N,
                       })
                     : null,
                 (0, r.jsx)(u.Text, {
                     variant: "text-sm/medium",
-                    color: N ? "header-primary" : "interactive-active",
+                    color: E ? "header-primary" : "interactive-active",
                     lineClamp: 1,
                     children: d.name,
                 }),
@@ -181,11 +181,11 @@ function w(e) {
 }
 function Z(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: s } = e,
-        o = (0, c.e7)([C.Z], () => C.Z.roles),
-        g = (0, c.e7)([v.Z], () => v.Z.getHighestRole(t)),
+        o = (0, c.e7)([O.Z], () => O.Z.roles),
+        g = (0, c.e7)([_.Z], () => _.Z.getHighestRole(t)),
         h = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         [x, j] = i.useState(o.length),
-        { scrolledToTop: O, handleScroll: I } = (0, E.V)(),
+        { scrolledToTop: C, handleScroll: I } = (0, N.V)(),
         { handleDragStart: P, handleDragReset: Z, handleDragComplete: R } = (0, y.Z)(o),
         D = i.useRef(null),
         A = i.useCallback(
@@ -211,13 +211,13 @@ function Z(e) {
                 className: T.container,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(T.titleContainer, { [T.titleElevated]: !O }),
+                        className: a()(T.titleContainer, { [T.titleElevated]: !C }),
                         children: [
                             (0, r.jsxs)(u.P3F, {
                                 className: T.title,
                                 onClick: () => l(null),
                                 children: [
-                                    (0, r.jsx)(_.Z, { direction: _.Z.Directions.LEFT }),
+                                    (0, r.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
                                     (0, r.jsx)(u.Text, {
                                         className: T.titleText,
                                         variant: "text-md/semibold",
@@ -237,7 +237,7 @@ function Z(e) {
                                 children: (0, r.jsx)(u.P3F, {
                                     className: T.addRole,
                                     onClick: () => {
-                                        m.Z.createRole(t.id), s(N.ZI.DISPLAY);
+                                        m.Z.createRole(t.id), s(E.ZI.DISPLAY);
                                     },
                                     children: (0, r.jsx)(u.qJs, {
                                         size: "custom",

@@ -27,8 +27,8 @@ var r = n(278074),
     N = n(539573),
     R = n(926526),
     P = n(826581),
-    w = n(409059),
-    D = n(264229),
+    D = n(409059),
+    w = n(264229),
     x = n(413605),
     L = n(366980),
     M = n(467512),
@@ -111,7 +111,7 @@ function eP(e) {
     }
     return e;
 }
-function ew(e, t) {
+function eD(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -123,12 +123,12 @@ function ew(e, t) {
     }
     return n;
 }
-function eD(e, t) {
+function ew(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ew(Object(t)).forEach(function (n) {
+            : eD(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -168,7 +168,7 @@ function eU(e) {
                 overrideProperties: s,
             });
         else if (t === O.g.TEMPLATE) {
-            let e = w.Z.getGuildTemplate(c);
+            let e = D.Z.getGuildTemplate(c);
             if (null == e || e.state === eA.Rj.RESOLVING) return;
             d.ZP.trackWithMetadata(eT.rMx.GUILD_TEMPLATE_LINK_SENT, {
                 guild_template_code: c,
@@ -222,7 +222,7 @@ function eG(e) {
         } = e,
         c = es.default.getId(),
         u = ec.Z.getInvite(r),
-        f = (0, D.fU)(r),
+        f = (0, w.fU)(r),
         _ = null != u && (0, x.P1)(u),
         p = null == u || null == (t = u.target_application) ? void 0 : t.id;
     null != p && _ && (0, g.z$)(p, eS.U.ACTIVITY_INVITE, c);
@@ -254,7 +254,7 @@ function eG(e) {
                 (t.is_filtered = s.suggestionData.isFiltered)),
             (t.source = s.source)),
             (t = eP(
-                eD(eP({}, t), {
+                ew(eP({}, t), {
                     location: o,
                     invite_type: e,
                     invite_code: f.baseCode,
@@ -275,7 +275,7 @@ function eG(e) {
             ((e.invite_inviter_id = u.inviter.id),
             null != u.target_application && (e.application_id = u.target_application.id),
             (e = eP(
-                eD(eP({}, e), {
+                ew(eP({}, e), {
                     location: o,
                     invite_type: eT.dAT.FRIEND_INVITE,
                     invite_code: f.baseCode,
@@ -400,7 +400,7 @@ let eV = {
             });
             eH.receiveMessage(
                 e,
-                eD(eP({}, r), {
+                ew(eP({}, r), {
                     state: eT.yb.SENT,
                     channel_id: e,
                 }),
@@ -422,7 +422,7 @@ let eV = {
                 },
                 giftingPrompt: t,
             });
-            eH.receiveMessage(e, eD(eP({}, n), { state: eT.yb.SENT }), !0);
+            eH.receiveMessage(e, ew(eP({}, n), { state: eT.yb.SENT }), !0);
         },
         sendClydeError(e) {
             let t,
@@ -870,7 +870,7 @@ let eV = {
             let a = await (0, J.Z)(e);
             if (null != a) return eH.sendMessage(a, t, r, i);
             let o = null != (n = i.nonce) ? n : (0, Z.r)();
-            i = eD(eP({}, i), { nonce: o });
+            i = ew(eP({}, i), { nonce: o });
             let s = () => eH._sendMessage(e, t, i),
                 l = j.ZP.backgroundify(s, void 0);
             return (U.Z.recordMessageSendAttempt(e, o, i), eu.Z.isReady(e))
@@ -973,7 +973,7 @@ let eV = {
                     validNonShortcutEmojis: [],
                     tts: i,
                 },
-                eD(eP({}, r), { stickerIds: t }),
+                ew(eP({}, r), { stickerIds: t }),
             );
         },
         sendGreetMessage(e, t) {
@@ -1025,7 +1025,7 @@ let eV = {
                     validNonShortcutEmojis: [],
                     invalidEmojis: [],
                 },
-                eD(eP({}, n), {
+                ew(eP({}, n), {
                     poll: t,
                     location: eC.dy.POLL_CREATION,
                 }),
@@ -1063,8 +1063,8 @@ let eV = {
                     location: S,
                     inviteAnalyticsMetadata: A,
                     stickerIds: C,
-                    confettiPotionData: w,
-                    messageReference: D,
+                    confettiPotionData: D,
+                    messageReference: w,
                     allowedMentions: x,
                     poll: L,
                     sharedCustomTheme: j,
@@ -1094,7 +1094,7 @@ let eV = {
             )
                 if (null == $ || !($.length > 0)) return Promise.resolve();
                 else ec = !0;
-            let ed = null != D ? eT.uaV.REPLY : eT.uaV.DEFAULT,
+            let ed = null != w ? eT.uaV.REPLY : eT.uaV.DEFAULT,
                 ef = null != (a = n.nonce) ? a : (0, Z.r)(),
                 e_ = ef,
                 eE = (0, B.ZP)({
@@ -1102,7 +1102,7 @@ let eV = {
                     content: g,
                     tts: v,
                     type: ed,
-                    messageReference: D,
+                    messageReference: w,
                     allowedMentions: x,
                     flags: 0 !== ea ? ea : void 0,
                     nonce: ef,
@@ -1128,7 +1128,7 @@ let eV = {
                     content: g,
                     nonce: ef,
                     tts: v,
-                    message_reference: D,
+                    message_reference: w,
                     allowed_mentions: x,
                     flags: ea,
                     analyticsLocation: S,
@@ -1169,7 +1169,7 @@ let eV = {
                 H.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
                 ei && (eb.message.with_checkpoint = !0),
                 null != k && (eb.message.content_inventory_entry = k),
-                null != w && ((eb.message.confetti_potion = (0, q.vY)(w)), w.callback()),
+                null != D && ((eb.message.confetti_potion = (0, q.vY)(D)), D.callback()),
                 null != K && K.length > 0 && (eb.message.attachments = K),
                 null != $ && $.length > 0)
             )

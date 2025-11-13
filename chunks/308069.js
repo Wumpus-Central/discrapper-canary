@@ -1,9 +1,9 @@
 n.d(t, { Z: () => C });
 var r = n(951288),
     s = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    i = n(358458),
+    o = n(120356),
+    a = n.n(o),
+    i = n(509442),
     l = n(481060),
     c = n(617136),
     d = n(915750),
@@ -14,15 +14,15 @@ var r = n(951288),
     f = n(110560),
     h = n(670638),
     x = n(303385),
-    _ = n(46140),
-    b = n(388032),
+    b = n(46140),
+    _ = n(388032),
     j = n(579605);
 let v = (0, i.animated)(g.ZP),
     C = (e) => {
         let {
                 quest: t,
                 expansionSpring: n,
-                onCtxMenuSelect: a,
+                onCtxMenuSelect: o,
                 onCtxMenuOpen: g,
                 onCtxMenuClose: C,
                 useReducedMotion: y,
@@ -31,7 +31,7 @@ let v = (0, i.animated)(g.ZP),
             } = e,
             S = (0, d.aM)(),
             { status: T } = (0, m.n)({
-                location: _.dr.QUESTS_BAR,
+                location: b.dr.QUESTS_BAR,
                 questConfig: t.config,
             }),
             w = null == T ? void 0 : T.progressBlur,
@@ -50,10 +50,10 @@ let v = (0, i.animated)(g.ZP),
                     sourceQuestContent: p.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            R = E && O,
-            A = (0, r.jsx)(l.P3F, {
+            A = E && O,
+            R = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: o()(j.clickable, { [j.logo]: R }),
+                className: a()(j.clickable, { [j.logo]: A }),
                 children: (0, r.jsx)(v, {
                     quest: t,
                     withGameTile: !1,
@@ -74,7 +74,7 @@ let v = (0, i.animated)(g.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
+            className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: A }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -99,8 +99,8 @@ let v = (0, i.animated)(g.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: R,
-                    partnerBranding: A,
+                    isFullyExpanded: A,
+                    partnerBranding: R,
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {
@@ -119,7 +119,7 @@ let v = (0, i.animated)(g.ZP),
                                 (0, r.jsx)(l.Text, {
                                     color: "always-white",
                                     variant: "text-xs/normal",
-                                    children: b.intl.string(b.t.o6FLcF),
+                                    children: _.intl.string(_.t.o6FLcF),
                                 }),
                                 (0, r.jsx)(l.idN, {
                                     color: l.TVs.colors.WHITE,
@@ -130,7 +130,7 @@ let v = (0, i.animated)(g.ZP),
                         (0, r.jsx)(h.r, {
                             onOpen: g,
                             onClose: C,
-                            onSelect: a,
+                            onSelect: o,
                             questContent: p.jn.QUEST_BAR_V2,
                             quest: t,
                             shouldShowDisclosure: !0,
@@ -168,11 +168,11 @@ let v = (0, i.animated)(g.ZP),
                                     (n = n =
                                         {
                                             className: j.submenuWrapper,
-                                            "aria-label": b.intl.string(b.t.DEoVWZ),
+                                            "aria-label": _.intl.string(_.t.DEoVWZ),
                                             children: (0, r.jsx)(l.xhG, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: o()(j.submenuIcon, j.white),
+                                                className: a()(j.submenuIcon, j.white),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

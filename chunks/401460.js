@@ -68,16 +68,16 @@ function I(e, t) {
         e
     );
 }
-let S = () => [
+let T = () => [
         E.intl.string(E.t["EgWTY+"]),
         E.intl.string(E.t.umBn5f),
         E.intl.string(E.t.dG1wD1),
         E.intl.string(E.t.SesI4S),
         E.intl.string(E.t.RnMLvl),
     ],
-    T = () => {
+    S = () => {
         var e;
-        return null != (e = l().sample(S())) ? e : E.intl.string(E.t["EgWTY+"]);
+        return null != (e = l().sample(T())) ? e : E.intl.string(E.t["EgWTY+"]);
     },
     A = (e, t) => {
         let [n, r] = (0, _.US)([c.z.HALLOWEEN_APP_ICONS_TRICK_ICON_WEB_BADGE]),
@@ -93,7 +93,7 @@ function C(e) {
         [h, g] = i.useState((0, m.aW)(t).name),
         E = t === p.Ru.PIRATE,
         [y, v] = A(t, s),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             s || (y && v(), null == a || a(t));
         }, [s, y, v, a, t]),
         C = (0, u.jm)({
@@ -102,7 +102,7 @@ function C(e) {
         });
     return (0, r.jsx)(d.aML, {
         text: h,
-        onTooltipShow: () => E && g(T()),
+        onTooltipShow: () => E && g(S()),
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: b.appIconSelectionContainer,
@@ -112,7 +112,7 @@ function C(e) {
                         I(O({}, e, C), {
                             tabIndex: null != l ? l : C.tabIndex,
                             className: o()(b.appIconSelection, { [b.selected]: s }, n),
-                            onClick: S,
+                            onClick: T,
                             children: c,
                         }),
                     ),

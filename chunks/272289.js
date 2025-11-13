@@ -30,24 +30,24 @@ function u(e) {
             return i;
         })(e, ["widgetType"]);
     let { games: u, onAddGame: d } = (0, o.K)(t),
-        { setExpanded: g } = (0, c.g)(),
-        { trackUserProfileEditAction: f } = (0, a.KZ)(),
+        { setExpanded: f } = (0, c.g)(),
+        { trackUserProfileEditAction: g } = (0, a.KZ)(),
         p = i.useCallback(
             (e, n, r) => {
                 d(e),
-                    g(!0),
+                    f(!0),
                     (0, l.ES)(t, {
                         applicationId: e,
                         gameName: n,
                         imageSrc: r,
                     }),
-                    f({
+                    g({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: t,
                     });
             },
-            [d, t, f, g],
+            [d, t, g, f],
         );
     return (0, r.jsx)(
         s.Z,

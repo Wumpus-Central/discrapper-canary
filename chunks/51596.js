@@ -74,7 +74,7 @@ let P = Object.freeze({
         [u.xQ.GUILD]: u.h8.GUILD,
         [u.xQ.APPLICATION]: u.h8.APPLICATION,
     }),
-    w = new RegExp(
+    D = new RegExp(
         "^"
             .concat(u.xQ.USER, "|")
             .concat(u.xQ.TEXT_CHANNEL, "|")
@@ -82,13 +82,13 @@ let P = Object.freeze({
             .concat(u.xQ.GUILD, "|\\")
             .concat(u.xQ.APPLICATION),
     );
-function D(e) {
+function w(e) {
     var t;
     let n = null != (t = P[e.charAt(0)]) ? t : null;
-    return [e.replace(w, ""), n];
+    return [e.replace(D, ""), n];
 }
 function x(e) {
-    let [t, n] = D(e);
+    let [t, n] = w(e);
     return {
         query: t,
         queryMode: n,

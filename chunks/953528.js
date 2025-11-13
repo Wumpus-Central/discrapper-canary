@@ -1,5 +1,5 @@
 n.d(t, {
-    QH: () => a,
+    QH: () => o,
     pj: () => i,
 });
 var r,
@@ -10,7 +10,7 @@ var r,
         (r.RIGHT_BLOCK_ONLY = "right_block_only"),
         (r.BOTH_BLOCKS = "both_blocks"),
         r);
-let s = (0, l.le)({
+let a = (0, l.le)({
         name: "2025-10-collectibles-featured-block-new-badge",
         kind: "user",
         defaultConfig: { variant: "no_badge" },
@@ -21,4 +21,4 @@ let s = (0, l.le)({
             3: { variant: "both_blocks" },
         },
     }),
-    a = (e) => s.useConfig({ location: e }).variant;
+    o = (e) => a.useConfig({ location: e }).variant;

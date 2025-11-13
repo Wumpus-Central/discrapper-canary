@@ -61,8 +61,8 @@ let h = [],
                 return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
             x = i.useMemo(() => b.map((e) => f(p({}, e), { id: e.channelId })), [b]),
-            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, s.Z)(x, c.lq),
-            C = i.useCallback(
+            { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, s.Z)(x, c.lq),
+            O = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
                     null != r &&
@@ -73,7 +73,7 @@ let h = [],
                 },
                 [t],
             ),
-            O = i.useCallback(() => {
+            C = i.useCallback(() => {
                 if (null != t)
                     return (0, a.ZDy)(async () => {
                         let { default: e } = await n.e("84725").then(n.bind(n, 462499));
@@ -83,11 +83,11 @@ let h = [],
                                 f(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
-                                    onIconUpload: C,
+                                    onIconUpload: O,
                                 }),
                             );
                     });
-            }, [t, C]);
+            }, [t, O]);
         return (0, r.jsxs)("div", {
             className: m.editResources,
             children: [
@@ -99,8 +99,8 @@ let h = [],
                             resourceChannel: e,
                             index: n,
                             onDragStart: j,
-                            onDragReset: v,
-                            onDragComplete: _,
+                            onDragReset: _,
+                            onDragComplete: v,
                         },
                         e.channelId,
                     ),
@@ -108,7 +108,7 @@ let h = [],
                 b.length < o.x3 &&
                     (0, r.jsxs)(a.P3F, {
                         className: m.addActionItem,
-                        onClick: O,
+                        onClick: C,
                         children: [
                             (0, r.jsx)(a.oFk, {
                                 size: "xs",

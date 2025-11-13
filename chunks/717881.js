@@ -61,7 +61,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -117,7 +117,7 @@ function N(e) {
             hideHeader: y = !1,
             showChannelDetails: O = !1,
         } = e,
-        I = T(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
+        I = S(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
     let A = (0, a.e7)([m.Z, p.Z], () => {
             var e;
             return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
@@ -125,7 +125,7 @@ function N(e) {
         N = (0, d.E)("UserActivityContainer", A),
         R = (0, a.e7)([_.Z], () => (l ? _.Z.getAnyStreamForUser(n.id) : null)),
         P = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
-        w = (0, a.e7)([h.Z, m.Z, p.Z], () => {
+        D = (0, a.e7)([h.Z, m.Z, p.Z], () => {
             var e, r;
             return (0, o.Z)(t, b.xjy.EMBEDDED)
                 ? h.Z.getGuild(
@@ -142,7 +142,7 @@ function N(e) {
                   ? h.Z.getGuild(P.getGuildId())
                   : null;
         }),
-        D = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
+        w = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
         x = (0, a.e7)([c.Z], () => {
             if (null != t)
                 if (null != t.application_id) return c.Z.getApplication(t.application_id);
@@ -166,19 +166,19 @@ function N(e) {
     (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || N)
         ? (0, r.jsx)(
               s.Z,
-              S(v({}, I), {
+              T(v({}, I), {
                   activity: t,
                   user: n,
                   application: x,
                   hideHeader: y,
-                  activityGuild: null != w ? w : D,
+                  activityGuild: null != D ? D : w,
                   showChannelDetails: O,
                   channel: O ? A : void 0,
                   renderActions: E
                       ? () =>
                             (0, r.jsx)(
                                 C,
-                                S(v({}, I), {
+                                T(v({}, I), {
                                     applicationStream: R,
                                     activity: t,
                                     user: n,

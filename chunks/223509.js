@@ -26,8 +26,8 @@ var r,
     N = 5,
     R = 6,
     P = 7,
-    w = 8,
-    D = 9,
+    D = 8,
+    w = 9,
     x = 10,
     L = 11,
     M = 12,
@@ -326,8 +326,8 @@ function ep(e, t) {
                     while (eO && eu < er);
                     if ((512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), eO)) break i;
                 } else n.head && (n.head.name = null);
-                (n.length = 0), (n.mode = w);
-            case w:
+                (n.length = 0), (n.mode = D);
+            case D:
                 if (4096 & n.flags) {
                     if (0 === er) break i;
                     eu = 0;
@@ -337,8 +337,8 @@ function ep(e, t) {
                     while (eO && eu < er);
                     if ((512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), eO)) break i;
                 } else n.head && (n.head.comment = null);
-                n.mode = D;
-            case D:
+                n.mode = w;
+            case w:
                 if (512 & n.flags) {
                     for (; es < 16; ) {
                         if (0 === er) break i;

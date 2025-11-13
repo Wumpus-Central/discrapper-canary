@@ -26,8 +26,8 @@ function E(e) {
             pendingDisplayNameStyles: O,
             pronouns: v,
             className: I,
-            tagClassName: S,
-            isTryItOut: T,
+            tagClassName: T,
+            isTryItOut: S,
             onOpenProfile: A,
             onClose: C,
             nicknameVariant: N = "heading-lg/bold",
@@ -42,15 +42,15 @@ function E(e) {
                       children: e,
                   }),
         P = null != v && v.length > 0,
-        w = (0, c.D)(t),
-        D = (0, d.Z)({
+        D = (0, c.D)(t),
+        w = (0, d.Z)({
             userId: t.id,
             guildId: n,
             pendingDisplayNameStyles: O,
         }),
-        x = null != D;
+        x = null != w;
     return (0, r.jsxs)("div", {
-        className: a()(g.container, { [g.bot]: null != w }, I),
+        className: a()(g.container, { [g.bot]: null != D }, I),
         children: [
             (0, r.jsxs)("div", {
                 className: g.usernameRow,
@@ -61,7 +61,7 @@ function E(e) {
                                   variant: N,
                                   children: (0, r.jsx)(_.Z, {
                                       userName: b,
-                                      displayNameStyles: D,
+                                      displayNameStyles: w,
                                       effectDisplayType: f.F.ANIMATED,
                                       textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
@@ -76,9 +76,9 @@ function E(e) {
                                   children: b,
                               }),
                     ),
-                    null != w &&
+                    null != D &&
                         (0, r.jsx)(u.Z, {
-                            type: w,
+                            type: D,
                             verified: t.isVerifiedBot(),
                         }),
                     null != y &&
@@ -91,7 +91,7 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: a()(g.tags, {
                     [g.pronouns]: P,
-                    [g.bot]: null != w,
+                    [g.bot]: null != D,
                 }),
                 children: [
                     !t.isProvisional &&
@@ -100,8 +100,8 @@ function E(e) {
                                 user: t,
                                 usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: T,
-                                className: a()(g.userTag, S),
+                                forcePomelo: S,
+                                className: a()(g.userTag, T),
                                 usernameClass: g.userTagUsername,
                                 discriminatorClass: g.userTagDiscriminator,
                                 hideBotTag: !0,
@@ -119,7 +119,7 @@ function E(e) {
                                     text: m.intl.string(m.t.GI2A8C),
                                     delay: h.vB,
                                     children: (0, r.jsx)(s.Text, {
-                                        className: a()(g.pronounsText, S),
+                                        className: a()(g.pronounsText, T),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
                                         children: v,

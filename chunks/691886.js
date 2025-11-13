@@ -18,7 +18,7 @@ var r = n(951288),
 function j(e) {
     return String(e);
 }
-function v(e) {
+function _(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)("div", {
         className: a()(x.label, l),
@@ -46,8 +46,8 @@ function v(e) {
         ],
     });
 }
-function _() {
-    return (0, r.jsx)(v, {
+function v() {
+    return (0, r.jsx)(_, {
         icon: (0, r.jsx)(o.qJs, {
             size: "md",
             color: "currentColor",
@@ -57,7 +57,7 @@ function _() {
         className: x.createLabel,
     });
 }
-function C(e) {
+function O(e) {
     var t;
     let { channelId: n } = e,
         i = (0, f.m7)(n),
@@ -66,15 +66,15 @@ function C(e) {
     let a = (0, d.KS)(i),
         s = (0, c.F6)(i, p.default, m.Z),
         o = null != l ? (0, c.F6)(l, p.default, m.Z) : void 0;
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(_, {
         icon: null != a && (0, r.jsx)(a, { className: x.labelIcon }),
         title: s,
         subtitle: o,
     });
 }
-function O(e) {
+function C(e) {
     let { value: t } = e;
-    return null != t ? (0, r.jsx)(C, { channelId: t }) : (0, r.jsx)(_, {});
+    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(v, {});
 }
 function y(e) {
     let {
@@ -83,17 +83,17 @@ function y(e) {
             value: a,
             initialChannelId: d,
             omitChannelIds: x,
-            "aria-labelledby": v,
-            onChange: _,
+            "aria-labelledby": _,
+            onChange: v,
         } = e,
-        C = b.intl.string(b.t.d7YJMK),
+        O = b.intl.string(b.t.d7YJMK),
         y = (0, s.e7)([g.Z], () => g.Z.getCategories(l), [l]),
-        E = (0, f.m7)(null != a ? a : h.lds),
-        N = i.useMemo(() => {
+        N = (0, f.m7)(null != a ? a : h.lds),
+        E = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: C,
+                        label: O,
                     },
                 ],
                 t = !1;
@@ -109,18 +109,18 @@ function y(e) {
             return (
                 null == a ||
                     t ||
-                    null == E ||
+                    null == N ||
                     e.push({
                         value: a,
-                        label: E.name,
+                        label: N.name,
                     }),
                 e
             );
-        }, [C, a, E, y, x, d]);
+        }, [O, a, N, y, x, d]);
     return (0, r.jsx)(o.PhF, {
         label: t,
         placeholder: b.intl.string(b.t.r2ptsz),
-        options: N,
+        options: E,
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
@@ -159,7 +159,7 @@ function y(e) {
                               (i = i =
                                   {
                                       guildId: l,
-                                      onSubmit: _,
+                                      onSubmit: v,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -177,15 +177,15 @@ function y(e) {
                           );
                       };
                   })
-                : _(e);
+                : v(e);
         },
         isSelected: (e) => null != a && j(e) === j(a),
         serialize: j,
-        renderOptionLabel: O,
+        renderOptionLabel: C,
         renderOptionValue: (e) => {
             let [t] = e;
-            return O(t);
+            return C(t);
         },
-        "aria-labelledby": v,
+        "aria-labelledby": _,
     });
 }

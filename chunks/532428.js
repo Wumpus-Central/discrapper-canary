@@ -86,7 +86,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -97,7 +97,7 @@ function w(e, t) {
         e
     );
 }
-function D() {
+function w() {
     return new Set(
         l()
             .months()
@@ -175,7 +175,7 @@ function z(e, t) {
     return (
         null != a
             ? ([n, r] = a())
-            : D().has(i)
+            : w().has(i)
               ? ([n, r] = k(i, "MMMM", "month"))
               : x().has(i)
                 ? ([n, r] = k(i, "dddd", "day"))
@@ -264,14 +264,14 @@ function $(e) {
     return null != t && "" !== t && (e.setData("author_type", t), !0);
 }
 function ee() {
-    return [...Array.from(D()), ...Array.from(x()), ...Array.from(L()), ...Object.keys(U())];
+    return [...Array.from(w()), ...Array.from(x()), ...Array.from(L()), ...Object.keys(U())];
 }
 function et() {
     return o().sample(ee());
 }
 function en(e, t, n) {
     return er(e, t, ee()).map((e) =>
-        w(R({}, e), {
+        D(R({}, e), {
             group: n,
             key: "".concat(n, "-").concat(e.text),
         }),
@@ -349,10 +349,10 @@ function ea(e) {
                     e.slice(0, r)
                 );
             }
-            o = g.ZP.queryGuildUsers(w(R({}, a), { guildId: n.guildId }));
+            o = g.ZP.queryGuildUsers(D(R({}, a), { guildId: n.guildId }));
             break;
         case A.aib.CHANNEL:
-            o = g.ZP.queryChannelUsers(w(R({}, a), { channelId: n.channelId }));
+            o = g.ZP.queryChannelUsers(D(R({}, a), { channelId: n.channelId }));
             break;
         case A.aib.DMS:
             let s = ei(null != i ? i : []);
@@ -360,12 +360,12 @@ function ea(e) {
                 let e = m.default.getCurrentUser();
                 null != e && s.push(e),
                     (o = g.ZP.queryUsers(
-                        w(R({}, a), {
+                        D(R({}, a), {
                             users: s,
                             boosters: (0, g.Cq)(c.h8.USER),
                         }),
                     ));
-            } else o = g.ZP.queryAllUsers(w(R({}, a), { boosters: (0, g.Cq)(c.h8.USER) }));
+            } else o = g.ZP.queryAllUsers(D(R({}, a), { boosters: (0, g.Cq)(c.h8.USER) }));
             break;
         default:
             return [];

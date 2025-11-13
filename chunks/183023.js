@@ -35,8 +35,8 @@ var r = n(951288),
     N = n(687476),
     R = n(761966),
     P = n(563927),
-    w = n(98278),
-    D = n(767714),
+    D = n(98278),
+    w = n(767714),
     x = n(703656),
     L = n(944486),
     M = n(914010),
@@ -372,7 +372,7 @@ let J = 32,
                             location_page: $.page,
                             location_section: $.section,
                         }),
-                        (0, w.z)();
+                        (0, D.z)();
                 },
             }),
             eu = Q && er && !eo && ((q && et) || !q),
@@ -408,7 +408,7 @@ let J = 32,
                     n = !Q && J,
                     i = () =>
                         ep
-                            ? (0, r.jsx)(D.Z, {
+                            ? (0, r.jsx)(w.Z, {
                                   className: K.ctaButton,
                                   subscriptionTier: Y.Si.TIER_2,
                                   size: f.zx.Sizes.SMALL,
@@ -585,7 +585,7 @@ let J = 32,
                 f === Z.$.GET_PREMIUM
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(D.Z, {
+                              (0, r.jsx)(w.Z, {
                                   subscriptionTier: Y.Si.TIER_2,
                                   textOptions: { textOverride: o.text },
                                   className: K.ctaButton,

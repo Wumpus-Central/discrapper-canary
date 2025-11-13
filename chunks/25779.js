@@ -4,10 +4,10 @@ var r = a(509068),
     n = a(408720),
     o = a(233517),
     i = a(931327),
-    c = a(903772),
-    E = a(97145);
+    E = a(903772),
+    c = a(97145);
 let s = ["oppobrowser", "realmebrowser", "heytapbrowser"],
-    l = (0, E.f)({
+    l = (0, c.f)({
         maxBudgetMinute: 1,
         maxBudgetHour: 3,
     });
@@ -17,7 +17,7 @@ function I() {
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-dcb3ff805646482955644e9393961f693b39ac62",
+        release: "discord_web-31ae85216b6894fa391781fd12e7706186e80b53",
         beforeSend: function (t, e) {
             return !(
                 (null != t.exception &&
@@ -29,7 +29,7 @@ function I() {
                     "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
                 s.some((t) => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)
             ) &&
-                !(0, c.e)() &&
+                !(0, E.e)() &&
                 "Aborted" !== t.message &&
                 "cancel captcha" !== t.message &&
                 l()
@@ -81,8 +81,8 @@ function I() {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        o.YA("buildNumber", "464151"),
-        o.YA("builtAt", String("1761949144318"));
+        o.YA("buildNumber", "467765"),
+        o.YA("builtAt", String("1763061031998"));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && "object" == typeof t) for (let e in t) o.YA(e, t[e]);
     return i;

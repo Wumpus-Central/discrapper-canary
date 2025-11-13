@@ -15,10 +15,10 @@ var i = t(442837),
     b = t(699516),
     O = t(594174),
     m = t(979651),
-    p = t(934415),
-    h = t(700785),
-    j = t(981631),
-    P = t(388032);
+    h = t(934415),
+    p = t(700785),
+    P = t(981631),
+    j = t(388032);
 function v(e, n) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
         v = (0, i.e7)([m.Z, d.Z], () => {
@@ -26,30 +26,30 @@ function v(e, n) {
             return d.Z.getChannel(t);
         }, [n, e.id]);
     if ((0, i.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == v) return null;
-    let x = e.id === s.default.getId();
-    if (!x && !f.Z.can(j.Plq.MOVE_MEMBERS, v)) return null;
-    let y = t.filter((n) => {
+    let y = e.id === s.default.getId();
+    if (!y && !f.Z.can(P.Plq.MOVE_MEMBERS, v)) return null;
+    let N = t.filter((n) => {
         let { channel: t } = n;
         return (
             t.id !== v.id &&
-            (x
-                ? f.Z.can(j.Plq.CONNECT, t) && !(0, p.rY)(t, m.Z, Z.Z)
-                : f.Z.can(j.Plq.MOVE_MEMBERS, t) &&
-                  (f.Z.can(j.Plq.CONNECT, t) ||
-                      h.BT({
-                          permission: j.Plq.CONNECT,
+            (y
+                ? f.Z.can(P.Plq.CONNECT, t) && !(0, h.rY)(t, m.Z, Z.Z)
+                : f.Z.can(P.Plq.MOVE_MEMBERS, t) &&
+                  (f.Z.can(P.Plq.CONNECT, t) ||
+                      p.BT({
+                          permission: P.Plq.CONNECT,
                           user: e,
                           context: t,
                       })) &&
-                  !(0, p.rY)(t, m.Z, Z.Z))
+                  !(0, h.rY)(t, m.Z, Z.Z))
         );
     });
-    return 0 === y.length
+    return 0 === N.length
         ? null
         : (0, l.jsx)(r.sNh, {
               id: "voice-move",
-              label: P.intl.string(P.t.FAplms),
-              children: y.map((t) => {
+              label: j.intl.string(j.t.FAplms),
+              children: N.map((t) => {
                   let { channel: i } = t;
                   return (0, l.jsx)(
                       r.sNh,

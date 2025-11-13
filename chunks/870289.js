@@ -1,7 +1,7 @@
 n.d(t, {
-    FF: () => s,
+    FF: () => a,
     KS: () => i,
-    eN: () => a,
+    eN: () => o,
 });
 var r = n(818083),
     l = n(987338);
@@ -33,5 +33,5 @@ let i = (0, r.B)({
             },
         ],
     }),
-    s = (e) => i.useExperiment({ location: e }).filterEnabled,
-    a = (e) => i.useExperiment({ location: e }).searchEnabled;
+    a = (e) => i.useExperiment({ location: e }).filterEnabled,
+    o = (e) => i.useExperiment({ location: e }).searchEnabled;

@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(660189),
     v = n(372900),
     I = n(566006),
-    S = n(620652),
-    T = n(815605),
+    T = n(620652),
+    S = n(815605),
     A = n(665906),
     C = n(210887),
     N = n(314897),
     R = n(592125),
     P = n(271383),
-    w = n(542578),
-    D = n(375954),
+    D = n(542578),
+    w = n(375954),
     x = n(496675),
     L = n(699516),
     M = n(594174),
@@ -128,14 +128,14 @@ let er = (e) => {
             [c, u] = i.useState([]),
             d = i.useMemo(() => {
                 if (null == c || c.length < 1) return;
-                let e = (0, T.Zn)(t, c[0], n, {
-                    emojiSize: S.M.LARGE,
+                let e = (0, S.Zn)(t, c[0], n, {
+                    emojiSize: T.M.LARGE,
                     messageId: a,
                 });
-                return (0, r.jsx)(S.Z, {
+                return (0, r.jsx)(T.Z, {
                     className: Y.__invalid_effect,
                     effect: e,
-                    emojiSize: S.M.LARGE,
+                    emojiSize: T.M.LARGE,
                     onComplete: () => l(!1),
                 });
             }, [c, t, n, a]);
@@ -439,9 +439,9 @@ class eo extends i.PureComponent {
             });
     }
 }
-let es = u.ZP.connectStores([w.Z], (e) => {
+let es = u.ZP.connectStores([D.Z], (e) => {
     let { message: t, reaction: n, reactionType: r } = e,
-        i = w.Z.getReactions(t.getChannelId(), t.id, n.emoji, V.pTL, r);
+        i = D.Z.getReactions(t.getChannelId(), t.id, n.emoji, V.pTL, r);
     if (null == i)
         return {
             reactors: [],
@@ -499,10 +499,10 @@ function eu(e) {
         } = e,
         d = (0, u.e7)([R.Z], () => R.Z.getChannel(t.getChannelId())),
         p = null == d ? void 0 : d.getGuildId(),
-        h = (0, u.e7)([D.Z, O.Z], () => {
+        h = (0, u.e7)([w.Z, O.Z], () => {
             var e, n;
             let r =
-                null != (n = D.Z.getMessage(t.getChannelId(), t.id))
+                null != (n = w.Z.getMessage(t.getChannelId(), t.id))
                     ? n
                     : null == (e = O.Z.getMessage(G.default.castMessageIdAsChannelId(t.id)))
                       ? void 0
@@ -511,7 +511,7 @@ function eu(e) {
         }, [t]),
         m = el(h),
         E = m[0],
-        [b, S] = ec(
+        [b, T] = ec(
             n,
             null != E
                 ? {
@@ -521,7 +521,7 @@ function eu(e) {
                 : null,
             m,
         ),
-        T = i.useMemo(() => {
+        S = i.useMemo(() => {
             var e;
             return null == b ? null : null != (e = h.find((e) => (0, F.ir)(e.emoji, b.emoji))) ? e : null;
         }, [h, b]),
@@ -529,9 +529,9 @@ function eu(e) {
         N = (0, u.e7)([C.Z], () => (0, f.wj)(C.Z.theme));
     if (
         (i.useEffect(() => {
-            (0 === h.length || (null == b && null == T)) && setImmediate(s);
-        }, [s, h.length, T, b]),
-        null == b || null == T)
+            (0 === h.length || (null == b && null == S)) && setImmediate(s);
+        }, [s, h.length, S, b]),
+        null == b || null == S)
     )
         return (0, r.jsx)(_.$jN, {});
     if (null == d) throw Error("MessageReactions.render: Message does not have a channelId");
@@ -556,7 +556,7 @@ function eu(e) {
                                   ei,
                                   {
                                       isSelected: ed(b, e, n ? I.O.BURST : I.O.NORMAL),
-                                      setSelected: S,
+                                      setSelected: T,
                                       reactionType: n ? I.O.BURST : I.O.NORMAL,
                                       emoji: e.emoji,
                                       count: n ? e.burst_count : e.count,
@@ -571,7 +571,7 @@ function eu(e) {
                       }),
                 (0, r.jsx)(es, {
                     message: t,
-                    reaction: T,
+                    reaction: S,
                     guildId: p,
                     channel: d,
                     reactionType: b.reactionType,

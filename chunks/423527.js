@@ -25,8 +25,8 @@ var r,
     N = n(639946),
     O = n(616952),
     C = n(792766),
-    A = n(692483),
-    T = n(100159),
+    T = n(692483),
+    A = n(100159),
     Z = n(473855),
     P = n(726745),
     R = n(929809),
@@ -42,8 +42,8 @@ var r,
     V = n(480294),
     W = n(896797),
     H = n(626135),
-    z = n(585483),
-    K = n(70956),
+    K = n(585483),
+    z = n(70956),
     q = n(624138),
     Y = n(481153),
     J = n(588705),
@@ -121,7 +121,7 @@ class eu extends (r = s.PureComponent) {
                     location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
                     registration_source: this.registrationSource,
                 },
-                null != e ? (0, T.Z)(e, !1, !1) : {},
+                null != e ? (0, A.Z)(e, !1, !1) : {},
             ),
             { flush: !0 },
         ),
@@ -158,7 +158,7 @@ class eu extends (r = s.PureComponent) {
                         : this.hasError("retry_after") &&
                           "number" == typeof s.retry_after &&
                           (this.setState({ isRateLimited: !0 }),
-                          this._retryTimer.start(s.retry_after * K.Z.Millis.SECOND, () => {
+                          this._retryTimer.start(s.retry_after * z.Z.Millis.SECOND, () => {
                               this.setState({ isRateLimited: !1 });
                           }))),
             n && !e.authenticated && ((0, R.c)(et.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
@@ -182,9 +182,9 @@ class eu extends (r = s.PureComponent) {
             h = null != o ? o.skuId : null,
             g = j.MD.getState(),
             m = (0, q.Ew)(u) ? null : t === u,
-            p = ee.a ? await (0, A.K)(t) : t,
-            _ = ee.a ? await (0, A.K)(n) : n;
-        z.S.dispatch(X.CkL.WAVE_EMPHASIZE),
+            p = ee.a ? await (0, T.K)(t) : t,
+            _ = ee.a ? await (0, T.K)(n) : n;
+        K.S.dispatch(X.CkL.WAVE_EMPHASIZE),
             this.setState({
                 registering: !0,
                 apiErrors: {},
@@ -445,8 +445,8 @@ class eu extends (r = s.PureComponent) {
                 registering: x,
                 apiErrors: { email: v, username: j, global_name: b, password: I, date_of_birth: S } = {},
             } = this.state,
-            { consentRequired: N, authBoxClassName: C, hasLoggedInAccounts: A } = this.props,
-            T = this.renderErrorMessage(),
+            { consentRequired: N, authBoxClassName: C, hasLoggedInAccounts: T } = this.props,
+            A = this.renderErrorMessage(),
             Z = (0, i.jsx)(g.u, {
                 text: !c && N ? er.intl.string(er.t.AY4IVA) : null,
                 children: (0, i.jsx)("div", {
@@ -587,7 +587,7 @@ class eu extends (r = s.PureComponent) {
                     (0, i.jsx)(O.Z, {}),
                     this.renderConsentComponent(),
                     Z,
-                    T,
+                    A,
                     ee.a
                         ? null
                         : (0, i.jsx)("div", {
@@ -628,7 +628,7 @@ class eu extends (r = s.PureComponent) {
                   tag: "form",
                   className: C,
                   children: [
-                      A
+                      T
                           ? (0, i.jsx)("div", {
                                 className: ei.goBackButton,
                                 children: (0, i.jsx)(m.Button, {
@@ -705,7 +705,7 @@ class eu extends (r = s.PureComponent) {
                         source: "register",
                     }),
                     null == a || a(e),
-                    z.S.dispatch(X.CkL.WAVE_EMPHASIZE);
+                    K.S.dispatch(X.CkL.WAVE_EMPHASIZE);
             }),
             el(this, "handleSubmit", (e) => {
                 null == e || e.preventDefault();

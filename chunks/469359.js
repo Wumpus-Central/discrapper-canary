@@ -2,19 +2,19 @@ let r, _, n;
 a.d(e, { O: () => s });
 var o = a(578346),
     i = a(370336),
-    c = a(394798),
-    E = a(395848);
+    E = a(394798),
+    c = a(395848);
 function s(t) {
     (0, o.Hj)("dom", t), (0, o.D2)("dom", l);
 }
 function l() {
-    if (!E.m.document) return;
+    if (!c.m.document) return;
     let t = o.rK.bind(null, "dom"),
         e = I(t, !0);
-    E.m.document.addEventListener("click", e, !1),
-        E.m.document.addEventListener("keypress", e, !1),
+    c.m.document.addEventListener("click", e, !1),
+        c.m.document.addEventListener("keypress", e, !1),
         ["EventTarget", "Node"].forEach((e) => {
-            let a = E.m[e] && E.m[e].prototype;
+            let a = c.m[e] && c.m[e].prototype;
             a &&
                 a.hasOwnProperty &&
                 a.hasOwnProperty("addEventListener") &&
@@ -68,7 +68,7 @@ function I(t, e = !1) {
                 (!s || !s.tagName || ("INPUT" !== s.tagName && "TEXTAREA" !== s.tagName && !s.isContentEditable && 1)))
         )
             return;
-        (0, i.xp)(a, "_sentryCaptured", !0), s && !s._sentryId && (0, i.xp)(s, "_sentryId", (0, c.DM)());
+        (0, i.xp)(a, "_sentryCaptured", !0), s && !s._sentryId && (0, i.xp)(s, "_sentryId", (0, E.DM)());
         let l = "keypress" === a.type ? "input" : a.type;
         !(function (t) {
             if (t.type !== _) return !1;
@@ -85,7 +85,7 @@ function I(t, e = !1) {
             (_ = a.type),
             (n = s ? s._sentryId : void 0)),
             clearTimeout(r),
-            (r = E.m.setTimeout(() => {
+            (r = c.m.setTimeout(() => {
                 (n = void 0), (_ = void 0);
             }, 1000));
     };

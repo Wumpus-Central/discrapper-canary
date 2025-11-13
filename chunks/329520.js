@@ -70,16 +70,16 @@ function O(e) {
     let N = (0, s.R)("formatActivityString"),
         R = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
         P = null != R ? (N ? R : E.intl.format(E.t["0wJXSh"], { name: R })) : E.intl.string(E.t.eXan7B),
-        w = !v && null != T && null != S;
+        D = !v && null != T && null != S;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !y &&
                 (0, r.jsx)(p.Z, {
                     icon: o.ARS,
-                    tooltipText: w ? S : void 0,
-                    tooltipAriaLabel: w ? (0, c.ZP)({ channel: T }) : void 0,
+                    tooltipText: D ? S : void 0,
+                    tooltipAriaLabel: D ? (0, c.ZP)({ channel: T }) : void 0,
                     className: b,
-                    onTooltipShow: w ? C : void 0,
+                    onTooltipShow: D ? C : void 0,
                 }),
             !O &&
                 (0, r.jsx)(h.Z, {

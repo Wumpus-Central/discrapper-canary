@@ -1,11 +1,11 @@
 n.d(t, {
-    q: () => a,
-    z: () => s,
+    q: () => s,
+    z: () => a,
 });
 var r = n(951288);
 n(647438);
-var l = n(481060);
-function i(e) {
+var i = n(481060);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,18 +30,18 @@ function i(e) {
     }
     return e;
 }
-function s(e) {
-    let { guildId: t, userId: s, anaylticsLocations: a, modReportId: o } = e;
-    (0, l.ZDy)(async () => {
+function a(e) {
+    let { guildId: t, userId: a, anaylticsLocations: s, modReportId: o } = e;
+    (0, i.ZDy)(async () => {
         let { default: e } = await n.e("72920").then(n.bind(n, 109730));
         return (n) =>
             (0, r.jsx)(
                 e,
-                i(
+                l(
                     {
                         guildId: t,
-                        userId: s,
-                        anaylticsLocations: a,
+                        userId: a,
+                        anaylticsLocations: s,
                         modReportId: o,
                     },
                     n,
@@ -49,18 +49,18 @@ function s(e) {
             );
     });
 }
-function a(e) {
-    let { guildId: t, userId: s, anaylticsLocations: a } = e;
-    (0, l.ZDy)(async () => {
+function s(e) {
+    let { guildId: t, userId: a, anaylticsLocations: s } = e;
+    (0, i.ZDy)(async () => {
         let { default: e } = await n.e("76233").then(n.bind(n, 171494));
         return (n) =>
             (0, r.jsx)(
                 e,
-                i(
+                l(
                     {
                         guildId: t,
-                        userId: s,
-                        anaylticsLocations: a,
+                        userId: a,
+                        anaylticsLocations: s,
                     },
                     n,
                 ),

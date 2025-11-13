@@ -22,7 +22,7 @@ var r = n(951288),
     b = n(921944),
     y = n(185923),
     O = n(388032),
-    v = n(162600);
+    v = n(345857);
 function I(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,7 +69,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,7 +82,7 @@ let C = 20,
         tension: 800,
         friction: 24,
     },
-    w = () => {
+    D = () => {
         let e = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
         return (0, r.jsxs)("div", {
             className: v.premiumTooltipContainer,
@@ -102,7 +102,7 @@ let C = 20,
             ],
         });
     };
-function D(e) {
+function w(e) {
     return {
         "--custom-emoji-sprite-size": "".concat(N, "px"),
         "--custom-emoji-sprite-row": Math.floor(e / C),
@@ -115,7 +115,7 @@ let x = function (e) {
             className: n,
             renderButtonContents: a,
             active: I,
-            onClick: T,
+            onClick: S,
             "aria-controls": C,
             focusProps: N,
             ref: x,
@@ -125,7 +125,7 @@ let x = function (e) {
         [k, U] = i.useState(50),
         G = M || I,
         B = (0, E.l)(v, "emojiButton", G ? "Hovered" : "Normal"),
-        Z = D(k),
+        Z = w(k),
         F = i.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * R);
@@ -164,7 +164,7 @@ let x = function (e) {
                 onFocus: H,
                 onClick: (t) => {
                     var n;
-                    null == T || T(t), null == (n = e.onClick) || n.call(e);
+                    null == S || S(t), null == (n = e.onClick) || n.call(e);
                 },
                 "aria-label": O.intl.string(O.t["59QgaD"]),
                 "aria-controls": C,
@@ -182,7 +182,7 @@ let x = function (e) {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
                                       className: v.spriteContainer,
-                                      style: A(S({}, Z), {
+                                      style: A(T({}, Z), {
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                                       }),
                                       children: [
@@ -206,7 +206,7 @@ let x = function (e) {
         ? (0, r.jsx)(d.aML, {
               "data-migration-pending": !0,
               targetElementRef: J,
-              text: () => (0, r.jsx)(w, {}),
+              text: () => (0, r.jsx)(D, {}),
               "aria-label": O.intl.formatToMarkdownString(O.t["/7R4q4"], {}),
               position: "top",
               shouldShow: !0,

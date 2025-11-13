@@ -28,8 +28,8 @@ var i = n(120356),
     N = n(336383),
     R = n(194811),
     P = n(265386),
-    w = n(668700),
-    D = n(384298),
+    D = n(668700),
+    w = n(384298),
     x = n(670451),
     L = n(981631),
     M = n(671955),
@@ -165,7 +165,7 @@ function Z(e) {
                               users: K,
                               guildId: Y.id,
                               channelId: W.id,
-                              maxUsers: w.W,
+                              maxUsers: D.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
@@ -182,7 +182,7 @@ function Z(e) {
         el = () =>
             V === M.l.MODAL || V === M.l.MODAL_V2
                 ? null
-                : (0, r.jsx)(w.Z, {
+                : (0, r.jsx)(D.Z, {
                       user: t,
                       guild: Y,
                       channel: W,
@@ -194,7 +194,7 @@ function Z(e) {
                 ? null
                 : (0, r.jsx)("div", {
                       className: k.actions,
-                      children: (0, r.jsx)(D.Z, {
+                      children: (0, r.jsx)(w.Z, {
                           channel: W,
                           onAction: X,
                           onClose: F,

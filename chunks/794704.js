@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(593472),
     v = n(493773),
     I = n(812206),
-    S = n(835473),
-    T = n(243778),
+    T = n(835473),
+    S = n(243778),
     A = n(594190),
     C = n(137920),
     N = n(320724),
     R = n(925329),
     P = n(297700),
-    w = n(444295),
-    D = n(486016),
+    D = n(444295),
+    w = n(486016),
     x = n(837268),
     L = n(32300),
     M = n(809357),
@@ -141,17 +141,17 @@ function eI(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let eS = ew(null),
-    eT = 20,
+let eT = eD(null),
+    eS = 20,
     eA = 16,
     eC = 1,
     eN = 25,
     eR = [0, 5, 10, 15, 20, 25];
 function eP() {
-    let e = ew(eS);
-    f().isEqual(e, eS) || (ei.default.track(eu.rMx.OVERLAY_SETTINGS_UPDATED, e), (eS = e));
+    let e = eD(eT);
+    f().isEqual(e, eT) || (ei.default.track(eu.rMx.OVERLAY_SETTINGS_UPDATED, e), (eT = e));
 }
-function ew(e) {
+function eD(e) {
     var t;
     let n = er.default.getNotificationPositionMode(),
         r = n !== eu._vf.DISABLED,
@@ -168,7 +168,7 @@ function ew(e) {
         old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : en.default.enabled,
     };
 }
-function eD(e) {
+function ew(e) {
     let {
         header: t,
         icon: n,
@@ -255,7 +255,7 @@ function ex(e) {
         children: (e) => {
             let { onClick: t } = e;
             return (0, r.jsx)(
-                eD,
+                ew,
                 eO(eb({}, s), {
                     onClick: (e) => {
                         u(!l), null == t || t(e);
@@ -268,14 +268,14 @@ function ex(e) {
                             l
                                 ? (0, r.jsx)(h.CJ0, {
                                       size: "custom",
-                                      width: eT,
-                                      height: eT,
+                                      width: eS,
+                                      height: eS,
                                       color: "var(--interactive-active)",
                                   })
                                 : (0, r.jsx)(h.Fbu, {
                                       size: "custom",
-                                      width: eT,
-                                      height: eT,
+                                      width: eS,
+                                      height: eS,
                                       color: "var(--interactive-active)",
                                   }),
                         ],
@@ -327,45 +327,45 @@ function ej(e) {
         p = (0, _.e7)([A.ZP, Q.Z, $.Z], () => (null == o ? null : (0, A.FZ)(o, A.ZP, Q.Z, $.Z)), [o], l()),
         [g, E] = i.useState(f),
         [y, I] = i.useState(d),
-        [S, T] = i.useState(!1);
+        [T, S] = i.useState(!1);
     i.useEffect(() => {
         E(f), I(d);
     }, [f, d]);
     let C = !(0, el.supportsLegacy)(),
         N = !(0, el.supportsOutOfProcess)(),
-        { legacyEnabled: D, oopEnabled: L } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { legacyEnabled: w, oopEnabled: L } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
             let a = !1,
                 s = !1;
             switch (t) {
-                case w.OverlayToggledClientSettingType.LEGACY_GAME:
+                case D.OverlayToggledClientSettingType.LEGACY_GAME:
                     I(e), m.Z.toggleOverlay(o, e, g), (a = !e && y);
                     break;
-                case w.OverlayToggledClientSettingType.OOP_GAME:
+                case D.OverlayToggledClientSettingType.OOP_GAME:
                     E(e), m.Z.toggleOverlay(o, y, e), (s = !e && g);
                     break;
-                case w.OverlayToggledClientSettingType.LEGACY:
+                case D.OverlayToggledClientSettingType.LEGACY:
                     b.Z.setEnabled(e, L),
-                        (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
+                        (0, D.ou)(e, D.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
                     break;
-                case w.OverlayToggledClientSettingType.OOP:
-                    b.Z.setEnabled(D, e),
-                        (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
+                case D.OverlayToggledClientSettingType.OOP:
+                    b.Z.setEnabled(w, e),
+                        (0, D.ou)(e, D.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
             }
             (a || s) &&
                 (0, B.l)(
-                    a ? w.OverlayToggledClientSettingType.LEGACY_GAME : w.OverlayToggledClientSettingType.OOP_GAME,
+                    a ? D.OverlayToggledClientSettingType.LEGACY_GAME : D.OverlayToggledClientSettingType.OOP_GAME,
                     null != (i = o.id) ? i : null,
                 );
         },
         k = (e, t) => {
             let n = !t && e,
                 r = !L && g,
-                i = !D && y,
+                i = !w && y,
                 a = !g && L,
-                o = !y && D;
+                o = !y && w;
             switch (!0) {
                 case n && (r || i) && (a || o):
                     return "both";
@@ -384,14 +384,14 @@ function ej(e) {
                     m.Z.toggleOverlay(o, e, e), I(e), E(e), (n = !e && y), (r = !e && g);
                     break;
                 case "global":
-                    b.Z.setEnabled(e, e), (n = !e && D), (r = !e && L);
+                    b.Z.setEnabled(e, e), (n = !e && w), (r = !e && L);
                     break;
                 case "both":
                     b.Z.setEnabled(e, e),
                         m.Z.toggleOverlay(o, e, e),
                         I(e),
                         E(e),
-                        (n = (!e && D) || (!e && y)),
+                        (n = (!e && w) || (!e && y)),
                         (r = (!e && L) || (!e && g));
             }
             let i = null;
@@ -399,13 +399,13 @@ function ej(e) {
                 (n
                     ? (i =
                           "game" === t
-                              ? w.OverlayToggledClientSettingType.LEGACY_GAME
-                              : w.OverlayToggledClientSettingType.LEGACY)
+                              ? D.OverlayToggledClientSettingType.LEGACY_GAME
+                              : D.OverlayToggledClientSettingType.LEGACY)
                     : r &&
                       (i =
                           "game" === t
-                              ? w.OverlayToggledClientSettingType.OOP_GAME
-                              : w.OverlayToggledClientSettingType.OOP),
+                              ? D.OverlayToggledClientSettingType.OOP_GAME
+                              : D.OverlayToggledClientSettingType.OOP),
                 null != i)
             ) {
                 var a;
@@ -413,8 +413,8 @@ function ej(e) {
             }
         },
         G = C && N,
-        Z = !D && !L,
-        F = !g && !D && y && !C,
+        Z = !w && !L,
+        F = !g && !w && y && !C,
         V = !y && !L && g && !N,
         H = (null == u ? void 0 : u.overlayMethod) === x.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === x.mM.OVERLAY_RENDERING && !H,
@@ -553,8 +553,8 @@ function ej(e) {
     return null == o
         ? null
         : (0, r.jsxs)(ex, {
-              onExpand: T,
-              className: S ? eh.expandedContainer : void 0,
+              onExpand: S,
+              className: T ? eh.expandedContainer : void 0,
               title: (0, r.jsxs)(r.Fragment, {
                   children: [
                       null !=
@@ -621,10 +621,10 @@ function ej(e) {
               action: (0, r.jsx)(h.P3F, {
                   onClick: (e) => eM(e),
                   children: (0, r.jsx)(h.rsf, {
-                      checked: (g && L) || (y && D),
+                      checked: (g && L) || (y && w),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, k(e, (g && L) || (y && D)));
+                          U(e, k(e, (g && L) || (y && w)));
                       },
                   }),
               }),
@@ -633,7 +633,7 @@ function ej(e) {
                   game: o,
               }),
               children: [
-                  (0, r.jsx)(eD, {
+                  (0, r.jsx)(ew, {
                       title: ep.intl.string(ep.t["7BlVIs"]),
                       description: ep.intl.string(ep.t.ndgADE),
                       hint: L ? void 0 : ep.intl.string(ep.t.cAFVsL),
@@ -645,28 +645,28 @@ function ej(e) {
                                   disabled: N,
                                   onChange: (e) => {
                                       e && !L
-                                          ? M(e, w.OverlayToggledClientSettingType.OOP)
-                                          : M(e, w.OverlayToggledClientSettingType.OOP_GAME);
+                                          ? M(e, D.OverlayToggledClientSettingType.OOP)
+                                          : M(e, D.OverlayToggledClientSettingType.OOP_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: eh.emptySpacer }),
                           ],
                       }),
                   }),
-                  (0, r.jsx)(eD, {
+                  (0, r.jsx)(ew, {
                       title: ep.intl.string(ep.t.BfFpW1),
                       description: ep.intl.string(ep.t.OzInYk),
-                      hint: D ? void 0 : ep.intl.string(ep.t["3sYHXm"]),
+                      hint: w ? void 0 : ep.intl.string(ep.t["3sYHXm"]),
                       "aria-label": ep.intl.string(ep.t.BfFpW1),
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: y && D,
+                                  checked: y && w,
                                   disabled: C,
                                   onChange: (e) => {
-                                      e && !D
-                                          ? M(e, w.OverlayToggledClientSettingType.LEGACY)
-                                          : M(e, w.OverlayToggledClientSettingType.LEGACY_GAME);
+                                      e && !w
+                                          ? M(e, D.OverlayToggledClientSettingType.LEGACY)
+                                          : M(e, D.OverlayToggledClientSettingType.LEGACY_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: eh.emptySpacer }),
@@ -710,7 +710,7 @@ function eU(e) {
             (0, B.l)(l, null != (i = null != (r = u.id) ? r : null == t ? void 0 : t.id) ? i : null);
         }
     };
-    return (0, r.jsx)(eD, {
+    return (0, r.jsx)(ew, {
         title: t.name,
         icon: (0, r.jsx)(ek, {
             game: u,
@@ -733,14 +733,14 @@ function eG() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        s = (0, S.Z)(o.map((e) => e.id)),
+        s = (0, T.Z)(o.map((e) => e.id)),
         l = !(0, el.supportsLegacy)(),
         c = (e) => {
             var t, r;
             b.Z.setEnabled(e, a);
             let i = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, i),
-                !e && n && (0, B.l)(w.OverlayToggledClientSettingType.LEGACY, i);
+            (0, D.ou)(e, D.OverlayToggledClientSettingType.LEGACY, i),
+                !e && n && (0, B.l)(D.OverlayToggledClientSettingType.LEGACY, i);
         },
         u = (e, t, n) => {
             let { enabledOOP: r } = n;
@@ -756,7 +756,7 @@ function eG() {
             [l],
         );
     return 0 === o.length
-        ? (0, r.jsx)(eD, {
+        ? (0, r.jsx)(ew, {
               title: ep.intl.string(ep.t.BfFpW1),
               description: d,
               "aria-label": ep.intl.string(ep.t.BfFpW1),
@@ -802,7 +802,7 @@ function eG() {
                               eU,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.OverlayToggledClientSettingType.LEGACY_GAME,
+                                  clientSettingType: D.OverlayToggledClientSettingType.LEGACY_GAME,
                                   supportDisabled: l,
                                   gameApplication: s[t],
                                   getEnabledFromStatus: (e) => {
@@ -824,14 +824,14 @@ function eB() {
         { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = !(0, el.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        l = (0, S.Z)(s.map((e) => e.id)),
+        l = (0, T.Z)(s.map((e) => e.id)),
         c = (e) => {
             var t, r;
             let i = !e && n;
             b.Z.setEnabled(a, e);
             let o = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, o),
-                i && (0, B.l)(w.OverlayToggledClientSettingType.OOP, o);
+            (0, D.ou)(e, D.OverlayToggledClientSettingType.OOP, o),
+                i && (0, B.l)(D.OverlayToggledClientSettingType.OOP, o);
         },
         u = (e, t, n) => {
             let { enabledLegacy: r } = n;
@@ -843,7 +843,7 @@ function eB() {
             [o],
         );
     return 0 === s.length
-        ? (0, r.jsx)(eD, {
+        ? (0, r.jsx)(ew, {
               title: ep.intl.string(ep.t["7BlVIs"]),
               description: d,
               "aria-label": ep.intl.string(ep.t["7BlVIs"]),
@@ -889,7 +889,7 @@ function eB() {
                               eU,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.OverlayToggledClientSettingType.OOP_GAME,
+                                  clientSettingType: D.OverlayToggledClientSettingType.OOP_GAME,
                                   gameApplication: l[t],
                                   supportDisabled: o,
                                   getEnabledFromStatus: (e) => {
@@ -964,32 +964,32 @@ let eF = (e, t, n) =>
         {
             title: ep.t.eVE4LX,
             description: ep.t["72WNqk"],
-            disabledSetting: D.i.TEXT_CHAT,
+            disabledSetting: w.i.TEXT_CHAT,
         },
         {
             title: ep.t.oifnSh,
             description: ep.t.bgU5r0,
-            disabledSetting: D.i.WELCOME_GENERAL,
+            disabledSetting: w.i.WELCOME_GENERAL,
         },
         {
             title: ep.t.hqsZJW,
             description: ep.t.kHjdqc,
-            disabledSetting: D.i.GO_LIVE_NUDGE,
+            disabledSetting: w.i.GO_LIVE_NUDGE,
         },
         e && {
             title: ep.t.sop3rn,
             description: ep.t.pjgffc,
-            disabledSetting: D.i.GAME_ACTIVITY,
+            disabledSetting: w.i.GAME_ACTIVITY,
         },
         t && {
             title: ep.t["2QVhbb"],
             description: ep.t.wQ4ilB,
-            disabledSetting: D.i.NOW_PLAYING,
+            disabledSetting: w.i.NOW_PLAYING,
         },
         n && {
             title: ep.t["5/21FT"],
             description: ep.t.EIzwfA,
-            disabledSetting: D.i.FRIEND_STREAM_WATCH_NUDGE,
+            disabledSetting: w.i.FRIEND_STREAM_WATCH_NUDGE,
         },
     ]
         .filter((e) => !1 !== e)
@@ -1249,7 +1249,7 @@ function eK() {
     });
 }
 function ez() {
-    let [e, t] = (0, T.US)([p.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
+    let [e, t] = (0, S.US)([p.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
         n = () => {
             t(ed.L.DISMISS);
         };

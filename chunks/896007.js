@@ -24,15 +24,15 @@ function f(e) {
             canManageRoles: b,
             canManageBans: x,
             canAccessMembersPage: j,
-            canViewGuildAnalytics: v,
-            isOwner: _,
-            isGuildAdmin: C,
-            canManageGuildExpressions: O,
+            canViewGuildAnalytics: _,
+            isOwner: v,
+            isGuildAdmin: O,
+            canManageGuildExpressions: C,
         } = e,
         y = () =>
             (0, s.X$)({
                 guild: c,
-                isOwner: _,
+                isOwner: v,
                 canManageGuildRoleSubscriptions: (0, s.H2)(c),
                 isMonetizationWaitlistEnabledForGuild: (0, r.mG)(c.id),
                 isGuildEligibleForRoleSubscriptions: (0, a.kT)(c.id),
@@ -40,7 +40,7 @@ function f(e) {
                 isUserInCreatorMonetizationEligibleCountry: (0, r.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id),
             }),
-        E =
+        N =
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -80,71 +80,71 @@ function f(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
-        N = [];
-    N.push({
+        E = [];
+    E.push({
         section: m,
         label: "" !== c.name ? c.name : u.intl.string(u.t["154/bL"]),
     }),
-        N.push(g(d.pNK.PROFILE, E)),
-        N.push(g(d.pNK.TAG, E)),
-        N.push(g(d.pNK.ENGAGEMENT, E)),
-        N.push(g(d.pNK.BOOST_PERKS, E)),
-        O &&
-            (N.push({ section: p }),
-            N.push({
+        E.push(g(d.pNK.PROFILE, N)),
+        E.push(g(d.pNK.TAG, N)),
+        E.push(g(d.pNK.ENGAGEMENT, N)),
+        E.push(g(d.pNK.BOOST_PERKS, N)),
+        C &&
+            (E.push({ section: p }),
+            E.push({
                 section: m,
                 label: u.intl.string(u.t.m6lkGy),
             }),
-            N.push(g(d.pNK.EMOJI, E)),
-            N.push(g(d.pNK.STICKERS, E)),
-            N.push(g(d.pNK.SOUNDBOARD, E))),
-        (f || b || j || C) &&
-            (N.push({ section: p }),
-            N.push({
+            E.push(g(d.pNK.EMOJI, N)),
+            E.push(g(d.pNK.STICKERS, N)),
+            E.push(g(d.pNK.SOUNDBOARD, N))),
+        (f || b || j || O) &&
+            (E.push({ section: p }),
+            E.push({
                 section: m,
                 label: u.intl.string(u.t.bMAKMK),
             }),
-            N.push(g(d.pNK.MEMBERS, E)),
-            N.push(g(d.pNK.ROLES, E)),
-            N.push(g(d.pNK.INVITES, E)),
-            N.push(g(d.pNK.ACCESS, E))),
-        N.push({ section: p }),
-        N.push({
+            E.push(g(d.pNK.MEMBERS, N)),
+            E.push(g(d.pNK.ROLES, N)),
+            E.push(g(d.pNK.INVITES, N)),
+            E.push(g(d.pNK.ACCESS, N))),
+        E.push({ section: p }),
+        E.push({
             section: m,
             label: u.intl.string(u.t.wF3KJy),
         }),
-        N.push(g(d.pNK.INTEGRATIONS, E)),
-        N.push(g(d.pNK.APP_DIRECTORY, E));
+        E.push(g(d.pNK.INTEGRATIONS, N)),
+        E.push(g(d.pNK.APP_DIRECTORY, N));
     let I = !c.features.has(d.GuildFeatures.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (f || h || x || I) &&
-        (N.push({ section: p }),
-        N.push({
+        (E.push({ section: p }),
+        E.push({
             section: m,
             label: u.intl.string(u.t["5tbTdV"]),
         }),
-        N.push(g(d.pNK.SAFETY, E)),
-        N.push(g(d.pNK.MODERATION, E)),
-        N.push(g(d.pNK.AUDIT_LOG, E)),
-        N.push(g(d.pNK.BANS, E)),
-        N.push(g(d.pNK.GUILD_AUTOMOD, E)));
-    let S = c.features.has(d.GuildFeatures.COMMUNITY) && v,
+        E.push(g(d.pNK.SAFETY, N)),
+        E.push(g(d.pNK.MODERATION, N)),
+        E.push(g(d.pNK.AUDIT_LOG, N)),
+        E.push(g(d.pNK.BANS, N)),
+        E.push(g(d.pNK.GUILD_AUTOMOD, N)));
+    let S = c.features.has(d.GuildFeatures.COMMUNITY) && _,
         T = y();
     return (
         (f || S || T) &&
-            (N.push({ section: p }),
-            N.push(g(d.pNK.COMMUNITY, E)),
-            N.push(g(d.pNK.ONBOARDING, E)),
-            N.push(g(d.pNK.ANALYTICS, E)),
-            N.push(g(d.pNK.COMMUNITY_WELCOME, E)),
-            N.push(g(d.pNK.DISCOVERY_LANDING_PAGE, E)),
-            N.push(g(d.pNK.ROLE_SUBSCRIPTIONS, E)),
-            N.push(g(d.pNK.GUILD_PRODUCTS, E)),
-            N.push(g(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, E))),
-        N.push({ section: p }),
-        N.push(g(d.pNK.GUILD_PREMIUM, E)),
-        N.push(g(d.pNK.GUILD_TEMPLATES, E)),
-        N.push(g(d.pNK.DELETE, E)),
-        N.filter(o.lm)
+            (E.push({ section: p }),
+            E.push(g(d.pNK.COMMUNITY, N)),
+            E.push(g(d.pNK.ONBOARDING, N)),
+            E.push(g(d.pNK.ANALYTICS, N)),
+            E.push(g(d.pNK.COMMUNITY_WELCOME, N)),
+            E.push(g(d.pNK.DISCOVERY_LANDING_PAGE, N)),
+            E.push(g(d.pNK.ROLE_SUBSCRIPTIONS, N)),
+            E.push(g(d.pNK.GUILD_PRODUCTS, N)),
+            E.push(g(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
+        E.push({ section: p }),
+        E.push(g(d.pNK.GUILD_PREMIUM, N)),
+        E.push(g(d.pNK.GUILD_TEMPLATES, N)),
+        E.push(g(d.pNK.DELETE, N)),
+        E.filter(o.lm)
     );
 }
 let h = { generateSections: f };

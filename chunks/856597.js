@@ -2,12 +2,12 @@ n.d(t, { Z: () => h });
 var a = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(819557),
-    r = n(132392),
+    r = n(819557),
+    l = n(132392),
     s = n(118589),
     o = n(210825),
     c = n(345262),
-    d = n(213360),
+    d = n(641689),
     u = n(388032),
     m = n(133023);
 let p = {
@@ -16,7 +16,7 @@ let p = {
         [s.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/A"]),
     },
     h = function () {
-        let { task: e } = (0, r.T)(),
+        let { task: e } = (0, l.T)(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
         return (0, a.jsxs)(i.Kqy, {
             direction: "vertical",
@@ -40,7 +40,7 @@ let p = {
                             children: e.flow_context.tasks.map((e, n) => {
                                 var i;
                                 return (0, a.jsx)(
-                                    l.q,
+                                    r.q,
                                     {
                                         title: null != (i = p[e.task_type]) ? i : "",
                                         listType: "numbered",

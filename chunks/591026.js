@@ -57,8 +57,8 @@ function h(e, t) {
 function b(e) {
     var t, n;
     let { rule: b, onChangeRule: x } = e,
-        [j, v] = i.useState(null == (t = b.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        _ = (0, s.a)(b.guildId, !1);
+        [j, _] = i.useState(null == (t = b.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+        v = (0, s.a)(b.guildId, !1);
     return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
         children: [
@@ -97,7 +97,7 @@ function b(e) {
                                 children: (0, r.jsx)(a.FiK, {
                                     value: j,
                                     onChange: (e) => {
-                                        v(e),
+                                        _(e),
                                             x(
                                                 h(f({}, b), {
                                                     triggerMetadata: h(f({}, b.triggerMetadata), {
@@ -113,7 +113,7 @@ function b(e) {
                             }),
                         ],
                     }),
-                    _
+                    v
                         ? (0, r.jsxs)("div", {
                               className: p.mentionLimitContainer,
                               children: [

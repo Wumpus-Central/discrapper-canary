@@ -18,10 +18,10 @@ function b(e) {
         b = t.features.has(g.GuildFeatures.INVITE_SPLASH),
         x = n && b,
         { analyticsLocations: j } = (0, a.ZP)(),
-        v = i.useCallback((e) => {
+        _ = i.useCallback((e) => {
             d.Z.updateGuild({ splash: e });
         }, []),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -35,7 +35,7 @@ function b(e) {
             },
             [j, t],
         ),
-        C = (0, r.jsx)(o.Z, {
+        O = (0, r.jsx)(o.Z, {
             image: t.splash,
             makeURL: (e) =>
                 null != e
@@ -45,19 +45,19 @@ function b(e) {
                       })
                     : null,
             disabled: !x,
-            onChange: v,
+            onChange: _,
             hint: f.intl.string(f.t.uPvxqJ),
             enabled: x,
             maxFileSizeBytes: p.B,
             onFileSizeError: () => (0, s.Z)(p.B),
         });
     return b
-        ? C
+        ? O
         : (0, r.jsx)(l.P3F, {
               "aria-hidden": !0,
               tabIndex: -1,
               className: h.upsell,
-              onClick: _,
-              children: C,
+              onClick: v,
+              children: O,
           });
 }

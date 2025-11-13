@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(830253),
     R = n(286654),
     P = n(981631),
-    w = n(675654),
-    D = n(509571),
+    D = n(675654),
+    w = n(509571),
     x = n(388032),
     L = n(463063);
 function M(e, t, n) {
@@ -270,7 +270,7 @@ let X = i.forwardRef(function (e, t) {
             T,
             null != (u = null == S ? void 0 : S.id) ? u : null,
             null != (h = eo ? y.AY.getSetting() : null == (n = y.kU.getSetting()) ? void 0 : n.volume) ? h : 100,
-            !eo && (null == S ? void 0 : S.isVocal()) ? D.w.VOICE : D.w.DEFAULT,
+            !eo && (null == S ? void 0 : S.isVocal()) ? w.w.VOICE : w.w.DEFAULT,
         ),
         { createMultipleConfettiAt: eE } = i.useContext(m.h),
         eb = i.useRef(null),
@@ -285,11 +285,11 @@ let X = i.forwardRef(function (e, t) {
         eN = !(0, C.Nq)(e_, T, S) && !eo,
         eR = B || (X && !eN),
         eP = null != (O = g.Wq.useStore().bottomPosition) ? O : 0,
-        ew =
+        eD =
             (null != (I = null == (a = eb.current) ? void 0 : a.getBoundingClientRect().bottom) ? I : 0) + 50 > eP
                 ? "top"
                 : "bottom",
-        [eD, ex] = i.useState(!1),
+        [ew, ex] = i.useState(!1),
         eL = i.useCallback(() => {
             ex(!0);
         }, []),
@@ -305,7 +305,7 @@ let X = i.forwardRef(function (e, t) {
             (eT &&
                 !eO &&
                 ((ev.current = Math.min(ev.current + H, V)),
-                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: w.vv })),
+                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: D.vv })),
             null != $)
         )
             return void $(e);
@@ -434,8 +434,8 @@ let X = i.forwardRef(function (e, t) {
             (0, r.jsx)(d.u, {
                 "aria-label": null != el ? T.name : void 0,
                 __unsupportedReactNodeAsText: null != el ? el : T.name,
-                position: ew,
-                shouldShow: !eD,
+                position: eD,
+                shouldShow: !ew,
                 delay: 500,
                 children: (0, r.jsxs)(
                     f.kL8,

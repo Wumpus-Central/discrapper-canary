@@ -29,8 +29,8 @@ var r,
     N = n(726745),
     O = n(913583),
     C = n(144114),
-    A = n(541692),
-    T = n(952802),
+    T = n(541692),
+    A = n(952802),
     Z = n(703656),
     P = n(648358),
     R = n(108427),
@@ -46,8 +46,8 @@ var r,
     V = n(494526),
     W = n(163671),
     H = n(981631),
-    z = n(260539),
-    K = n(388032),
+    K = n(260539),
+    z = n(388032),
     q = n(132825),
     Y = n(197571);
 function J(e, t, n) {
@@ -199,17 +199,17 @@ class ee extends (r = s.PureComponent) {
                 (0, i.jsx)(E.Hh, {}),
                 (0, i.jsx)(E.Dx, {
                     className: Y.marginBottom8,
-                    children: K.intl.string(K.t.S6RMNA),
+                    children: z.intl.string(z.t.S6RMNA),
                 }),
-                (0, i.jsx)(E.DK, { children: K.intl.string(K.t.YZiJbh) }),
+                (0, i.jsx)(E.DK, { children: z.intl.string(z.t.YZiJbh) }),
             ],
         });
     }
     renderDisabledAccount() {
         let { authBoxClassName: e } = this.props,
             t = this.props.loginStatus === H.u34.ACCOUNT_DISABLED,
-            n = t ? K.intl.string(K.t["j3rC+U"]) : K.intl.string(K.t.ZFWofo),
-            r = t ? K.intl.string(K.t["6eNTWe"]) : K.intl.string(K.t["pCBti+"]);
+            n = t ? z.intl.string(z.t["j3rC+U"]) : z.intl.string(z.t.ZFWofo),
+            r = t ? z.intl.string(z.t["6eNTWe"]) : z.intl.string(z.t["pCBti+"]);
         return (0, i.jsx)(E.ZP, {
             tag: "form",
             onSubmit: this.handleReset,
@@ -227,13 +227,13 @@ class ee extends (r = s.PureComponent) {
                     (0, i.jsxs)(E.gO, {
                         children: [
                             (0, i.jsx)(g.Button, {
-                                text: K.intl.string(K.t.JhDw5o),
+                                text: z.intl.string(z.t.JhDw5o),
                                 fullWidth: !0,
                                 type: "submit",
                             }),
                             (0, i.jsx)("div", {
                                 className: a()(Y.marginTop8, q.needAccount),
-                                children: K.intl.format(K.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
+                                children: z.intl.format(z.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                             }),
                         ],
                     }),
@@ -250,11 +250,11 @@ class ee extends (r = s.PureComponent) {
                 (0, i.jsxs)(E.gO, {
                     className: Y.marginTop20,
                     children: [
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(A.Z, {
                             className: Y.marginBottom20,
                             alpha2: t.alpha2,
                             countryCode: t.code.split(" ")[0],
-                            label: K.intl.string(K.t.tUjnxr),
+                            label: z.intl.string(z.t.tUjnxr),
                             onChange: (e, t) =>
                                 this.setState({
                                     login: e,
@@ -271,7 +271,7 @@ class ee extends (r = s.PureComponent) {
                         }),
                         (0, i.jsx)(E.II, {
                             className: Y.marginBottom20,
-                            label: K.intl.string(K.t["CIGa+7"]),
+                            label: z.intl.string(z.t["CIGa+7"]),
                             onChange: (e) => this.setState({ password: e }),
                             type: "password",
                             setRef: this.setPasswordRef,
@@ -283,21 +283,21 @@ class ee extends (r = s.PureComponent) {
                         (0, i.jsx)("div", {
                             className: Y.marginBottom8,
                             children: (0, i.jsx)(g.Button, {
-                                text: K.intl.string(K.t.dKhVQN),
+                                text: z.intl.string(z.t.dKhVQN),
                                 fullWidth: !0,
                                 type: "submit",
                                 disabled: !0,
                             }),
                         }),
                         (0, i.jsx)(g.Avr, {
-                            text: K.intl.string(K.t.wWIufs),
+                            text: z.intl.string(z.t.wWIufs),
                             textVariant: "text-sm/normal",
                             disabled: !0,
                         }),
                         (0, i.jsx)("div", {
                             className: Y.marginTop4,
                             children: (0, i.jsx)(g.Avr, {
-                                text: K.intl.string(K.t.tmE73r),
+                                text: z.intl.string(z.t.tmE73r),
                                 textVariant: "text-sm/normal",
                                 disabled: !0,
                             }),
@@ -332,12 +332,12 @@ class ee extends (r = s.PureComponent) {
                                     E.Dx,
                                     {
                                         className: Y.marginBottom8,
-                                        children: K.intl.string(K.t["7fNJgA"]),
+                                        children: z.intl.string(z.t["7fNJgA"]),
                                     },
                                     "title",
                                 ),
                                 !1 === (0, U.isAndroidWeb)()
-                                    ? (0, i.jsx)(E.DK, { children: K.intl.string(K.t.euS7r4) }, "subtitle")
+                                    ? (0, i.jsx)(E.DK, { children: z.intl.string(z.t.euS7r4) }, "subtitle")
                                     : null,
                             ],
                         })),
@@ -359,7 +359,7 @@ class ee extends (r = s.PureComponent) {
                                                 this.setState((e) => X(Q({}, e), { dismissedChooseAccount: !1 }));
                                             },
                                             variant: "secondary",
-                                            text: K.intl.string(K.t["1MrpWO"]),
+                                            text: z.intl.string(z.t["1MrpWO"]),
                                             icon: g.V7D,
                                         }),
                                     }),
@@ -368,11 +368,11 @@ class ee extends (r = s.PureComponent) {
                                     children: (0, i.jsxs)(E.gO, {
                                         className: Y.marginTop20,
                                         children: [
-                                            (0, i.jsx)(T.Z, {
+                                            (0, i.jsx)(A.Z, {
                                                 alpha2: o.alpha2,
                                                 countryCode: o.code.split(" ")[0],
                                                 className: Y.marginBottom20,
-                                                label: K.intl.string(K.t.tUjnxr),
+                                                label: z.intl.string(z.t.tUjnxr),
                                                 error:
                                                     null != (t = this.renderError("login"))
                                                         ? t
@@ -392,7 +392,7 @@ class ee extends (r = s.PureComponent) {
                                                 required: !0,
                                             }),
                                             (0, i.jsx)(E.II, {
-                                                label: K.intl.string(K.t["CIGa+7"]),
+                                                label: z.intl.string(z.t["CIGa+7"]),
                                                 error: this.renderError("password"),
                                                 onChange: (e) => this.setState({ password: e }),
                                                 name: "password",
@@ -407,7 +407,7 @@ class ee extends (r = s.PureComponent) {
                                             (0, i.jsx)("div", {
                                                 className: a()(Y.marginBottom20, Y.marginTop4),
                                                 children: (0, i.jsx)(g.Avr, {
-                                                    text: K.intl.string(K.t.wWIufs),
+                                                    text: z.intl.string(z.t.wWIufs),
                                                     textVariant: "text-sm/normal",
                                                     onClick: this.handleForgotPassword,
                                                 }),
@@ -415,7 +415,7 @@ class ee extends (r = s.PureComponent) {
                                             (0, i.jsx)("div", {
                                                 className: Y.marginBottom8,
                                                 children: (0, i.jsx)(g.Button, {
-                                                    text: K.intl.string(K.t.dKhVQN),
+                                                    text: z.intl.string(z.t.dKhVQN),
                                                     fullWidth: !0,
                                                     type: "submit",
                                                     loading: l === H.u34.LOGGING_IN,
@@ -426,12 +426,12 @@ class ee extends (r = s.PureComponent) {
                                                 children: [
                                                     (0, i.jsx)("span", {
                                                         className: q.needAccount,
-                                                        children: K.intl.string(K.t.tmE73r),
+                                                        children: z.intl.string(z.t.tmE73r),
                                                     }),
                                                     (0, i.jsx)("span", {
                                                         className: q.smallRegisterLink,
                                                         children: (0, i.jsx)(g.Avr, {
-                                                            text: K.intl.string(K.t.pV8xeR),
+                                                            text: z.intl.string(z.t.pV8xeR),
                                                             textVariant: "text-sm/normal",
                                                             onClick: this.handleGotoRegister,
                                                         }),
@@ -506,8 +506,8 @@ class ee extends (r = s.PureComponent) {
             tag: "form",
             className: e,
             children: (0, i.jsx)(v.Z, {
-                title: K.intl.string(K.t.w55Oco),
-                subtitle: K.intl.format(K.t.CfRZBj, { onResendClick: this.handleResendCode }),
+                title: z.intl.string(z.t.w55Oco),
+                subtitle: z.intl.format(z.t.CfRZBj, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handleIPAuthorize,
                 onCancel: this.loginReset,
@@ -521,8 +521,8 @@ class ee extends (r = s.PureComponent) {
             tag: "form",
             className: e,
             children: (0, i.jsx)(v.Z, {
-                title: K.intl.string(K.t["+xqy3d"]),
-                subtitle: K.intl.format(K.t.ef4uZ7, { onResendClick: this.handleResendCode }),
+                title: z.intl.string(z.t["+xqy3d"]),
+                subtitle: z.intl.format(z.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
                 onCancel: this.loginReset,
@@ -558,7 +558,7 @@ class ee extends (r = s.PureComponent) {
             default:
                 if (null != e && e.state === H.r2o.RESOLVING) return this.renderResolving();
                 if (null != t)
-                    if (t.state === z.Rj.RESOLVING) return this.renderResolving();
+                    if (t.state === K.Rj.RESOLVING) return this.renderResolving();
                     else return this.renderGuildTemplate(t);
                 if (this.canShowChooseAccount && !this.state.dismissedChooseAccount) return this.renderChooseAccount();
                 return this.renderDefault();
@@ -679,7 +679,7 @@ class ee extends (r = s.PureComponent) {
                               let t = [
                                   {
                                       variant: "primary",
-                                      text: K.intl.string(K.t.BddRzS),
+                                      text: z.intl.string(z.t.BddRzS),
                                       onClick: e.onClose,
                                       fullWidth: !0,
                                   },
@@ -689,7 +689,7 @@ class ee extends (r = s.PureComponent) {
                                   X(
                                       Q(
                                           {
-                                              title: K.intl.string(K.t["6Ecyts"]),
+                                              title: z.intl.string(z.t["6Ecyts"]),
                                               actions: t,
                                           },
                                           e,
@@ -697,7 +697,7 @@ class ee extends (r = s.PureComponent) {
                                       {
                                           children: (0, i.jsx)(g.Text, {
                                               variant: "text-md/normal",
-                                              children: K.intl.string(K.t.iAcrqV),
+                                              children: z.intl.string(z.t.iAcrqV),
                                           }),
                                       },
                                   ),
@@ -709,8 +709,8 @@ class ee extends (r = s.PureComponent) {
                                   X(
                                       Q(
                                           {
-                                              header: K.intl.string(K.t.f5Pi7A),
-                                              confirmText: K.intl.string(K.t.BddRzS),
+                                              header: z.intl.string(z.t.f5Pi7A),
+                                              confirmText: z.intl.string(z.t.BddRzS),
                                               className: c.tq ? q.mobile : "",
                                           },
                                           e,
@@ -718,7 +718,7 @@ class ee extends (r = s.PureComponent) {
                                       {
                                           children: (0, i.jsx)(g.Text, {
                                               variant: "text-md/normal",
-                                              children: K.intl.format(K.t["6u5hQ9"], { email: t }),
+                                              children: z.intl.format(z.t["6u5hQ9"], { email: t }),
                                           }),
                                       },
                                   ),
@@ -796,7 +796,7 @@ class ee extends (r = s.PureComponent) {
 J(ee, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let et = function (e) {
     (0, P.M)();
-    let t = (0, h.cj)([D.Z, k.Z, w.default, N.Z, A.Z], () => ({
+    let t = (0, h.cj)([D.Z, k.Z, w.default, N.Z, T.Z], () => ({
         authenticated: w.default.isAuthenticated(),
         handoffAvailable: D.Z.isHandoffAvailable(),
         user: D.Z.user,
@@ -804,7 +804,7 @@ let et = function (e) {
         mfaTicket: w.default.getMFATicket(),
         mfaMethods: w.default.getMFAMethods(),
         defaultRoute: k.Z.defaultRoute,
-        country: A.Z.getCountryCode(),
+        country: T.Z.getCountryCode(),
         hasLoggedInAccounts: N.Z.getHasLoggedInAccounts(),
     }));
     return (0, i.jsx)(ee, Q({}, e, t));

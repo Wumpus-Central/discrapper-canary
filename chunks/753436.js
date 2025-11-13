@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(919498),
     m = n(394606),
     b = n(853072),
-    y = n(388032),
-    h = n(932366),
+    h = n(388032),
+    y = n(932366),
     v = n(133458);
 function O(e) {
     let { index: t, widgetType: n, game: a, coverImageUrl: l, gameName: o, children: c } = e,
@@ -29,7 +29,7 @@ function O(e) {
             imageSrc: l,
             gameName: o,
         },
-        "aria-label": y.intl.formatToPlainString(y.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": h.intl.formatToPlainString(h.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, s.Eq)(n, e, t),
         onEnd: () => g(a.applicationId),
         className: v.container,
@@ -59,7 +59,7 @@ function j(e) {
             channelId: s,
             disableInteraction: u = !1,
             index: d,
-            onRemoveGame: y,
+            onRemoveGame: h,
             coverRef: j,
         } = e,
         { coverImageUrl: x, gameName: _, isLoading: P } = (0, m.Z)(t.applicationId),
@@ -79,7 +79,7 @@ function j(e) {
                         disableInteraction: u,
                         className: l()(
                             I ? v.socialProofBackdrop : void 0,
-                            null == x || u ? void 0 : h.hoverActiveEffect,
+                            null == x || u ? void 0 : y.hoverActiveEffect,
                         ),
                         hideTooltip: T,
                         coverRef: j,
@@ -90,7 +90,7 @@ function j(e) {
                             widgetType: i,
                             className: v.removeGameButton,
                             iconSize: "xs",
-                            onRemove: () => (null == y ? void 0 : y(t.applicationId)),
+                            onRemove: () => (null == h ? void 0 : h(t.applicationId)),
                         }),
                     !u &&
                         (0, r.jsx)(p.Z, {
@@ -103,7 +103,7 @@ function j(e) {
                 ],
             });
     return P
-        ? (0, r.jsx)("div", { className: h.loadingCover })
+        ? (0, r.jsx)("div", { className: y.loadingCover })
         : E
           ? (0, r.jsx)(O, {
                 widgetType: i,

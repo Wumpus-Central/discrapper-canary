@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(388032),
     v = n(893296),
     I = n(102655),
-    S = n(768236),
-    T = n(314907),
+    T = n(768236),
+    S = n(314907),
     A = n(826701);
 function C(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function P(e, t) {
         e
     );
 }
-let w = () =>
+let D = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -84,7 +84,7 @@ let w = () =>
                 children: O.intl.string(O.t.TR2B4T),
             }),
         }),
-    D = () =>
+    w = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -189,7 +189,7 @@ let w = () =>
         let t,
             { premiumType: n } = e,
             i = (0, u.ZP)();
-        t = n === y.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? I : S) : (0, l.wj)(i) ? T : A;
+        t = n === y.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? I : T) : (0, l.wj)(i) ? S : A;
         let a = (0, h.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -264,9 +264,9 @@ let w = () =>
             } = e,
             { analyticsLocations: O } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             I = (0, s.e7)([p.Z], () => p.Z.hasFetchedSubscriptions()),
-            S = (0, _.V)(y.nS),
-            T = (0, g.N)(),
-            A = null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id,
+            T = (0, _.V)(y.nS),
+            S = (0, g.N)(),
+            A = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
             C = (0, m.N)(),
             R = null != C && (0, E.Wp)(C, y.Si.TIER_2),
             x = (0, E.Aq)(y.Xh.PREMIUM_MONTH_TIER_2),
@@ -274,8 +274,8 @@ let w = () =>
             M = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_0),
             k = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
             B = (0, b.e)();
-        if (!I || !S) return null;
-        n = l ? null : null != T ? (0, r.jsx)(D, {}) : (0, r.jsx)(w, {});
+        if (!I || !T) return null;
+        n = l ? null : null != S ? (0, r.jsx)(w, {}) : (0, r.jsx)(D, {});
         let Z = A === y.Si.TIER_0 || u === y.PremiumTypes.TIER_0;
         return (0, r.jsx)(f.Gt, {
             value: O,

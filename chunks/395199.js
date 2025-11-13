@@ -197,8 +197,8 @@ let v = (e) => {
             onCancel: v,
             error: I,
         } = e,
-        S = O(h, m, g, y, v),
-        T = () =>
+        T = O(h, m, g, y, v),
+        S = () =>
             f && null != p
                 ? (0, r.jsx)(b, {
                       imageClass: null != o ? o : "",
@@ -226,9 +226,9 @@ let v = (e) => {
         size: "sm",
         children: [
             (0, r.jsx)(s.xBx, { title: i }),
-            (0, r.jsx)(s.fef, { children: T() }),
+            (0, r.jsx)(s.fef, { children: S() }),
             (0, r.jsx)(s.Go$, {
-                actions: S,
+                actions: T,
                 actionsFullWidth: !1,
             }),
         ],

@@ -106,9 +106,9 @@ function S(e) {
         N = (0, f.s)(O),
         R = null != O && i === d.ZJ.PREMIUM,
         P = R && (null == N ? void 0 : N.disabled),
-        w = R ? (null == N ? void 0 : N.label) : n,
-        D = null != g,
-        x = null != w && w.length > 0,
+        D = R ? (null == N ? void 0 : N.label) : n,
+        w = null != g,
+        x = null != D && D.length > 0,
         L = i === d.ZJ.LINK && null != b && b.length > 0,
         M = A === m.gH.LOADING || (R && null == N);
     return (
@@ -151,7 +151,7 @@ function S(e) {
                                   }),
                               })
                             : null,
-                        D
+                        w
                             ? (0, r.jsx)(u.Z, {
                                   className: a()({ [E.textEmoji]: x }),
                                   src: g.src,
@@ -163,7 +163,7 @@ function S(e) {
                         x
                             ? (0, r.jsx)("div", {
                                   className: E.label,
-                                  children: w,
+                                  children: D,
                               })
                             : null,
                         L

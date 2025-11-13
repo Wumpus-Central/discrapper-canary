@@ -5,14 +5,14 @@ n.d(t, {
 var r = n(951288);
 n(647438);
 var s = n(120356),
-    a = n.n(s),
-    o = n(481060);
+    o = n.n(s),
+    a = n(481060);
 n(509212), n(373370), n(566078), n(388032);
 var i = n(879615);
 function l(e) {
     let { children: t, isComplete: n, hasNextStep: s } = e;
     return (0, r.jsxs)("li", {
-        className: a()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: s }),
+        className: o()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: s }),
         children: [
             (0, r.jsxs)("div", {
                 className: i.stepIndicator,
@@ -21,9 +21,9 @@ function l(e) {
                         className: i.stepIconWrapper,
                         children:
                             n &&
-                            (0, r.jsx)(o.sV5, {
+                            (0, r.jsx)(a.sV5, {
                                 className: i.stepIcon,
-                                color: o.TVs.colors.WHITE,
+                                color: a.TVs.colors.WHITE,
                             }),
                     }),
                     s && (0, r.jsx)("div", { className: i.stepConnector }),
@@ -38,7 +38,7 @@ function l(e) {
 }
 function c(e) {
     let { children: t } = e;
-    return (0, r.jsx)(o.Text, {
+    return (0, r.jsx)(a.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
         children: t,
@@ -51,7 +51,7 @@ let d = function (e) {
         children: [
             (0, r.jsx)("div", {
                 className: i.headingWrapper,
-                children: (0, r.jsx)(o.Heading, {
+                children: (0, r.jsx)(a.Heading, {
                     className: i.heading,
                     color: "header-primary",
                     variant: "text-xs/semibold",

@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(387667),
     x = n(598077),
     j = n(592125),
-    v = n(430824),
-    _ = n(246946),
-    C = n(594174),
-    O = n(823379),
+    _ = n(430824),
+    v = n(246946),
+    O = n(594174),
+    C = n(823379),
     y = n(51144),
-    E = n(999382),
-    N = n(909746),
+    N = n(999382),
+    E = n(909746),
     I = n(233857),
     S = n(501801),
     T = n(603784),
@@ -130,7 +130,7 @@ let G = i.forwardRef((e, t) => {
                   },
                   onChannelContextMenu: (e) => {
                       let { log: t } = s,
-                          i = v.Z.getGuild(l);
+                          i = _.Z.getGuild(l);
                       null != t.options.channel &&
                           "string" != typeof t.options.channel &&
                           null != i &&
@@ -148,7 +148,7 @@ let G = i.forwardRef((e, t) => {
                           case P.KFR.CHANNEL:
                           case P.KFR.CHANNEL_OVERWRITE:
                               let i = j.Z.getChannel(t.targetId),
-                                  a = v.Z.getGuild(l);
+                                  a = _.Z.getGuild(l);
                               if (null != i && null != a)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e("51529").then(n.bind(n, 228620));
@@ -166,7 +166,7 @@ let G = i.forwardRef((e, t) => {
                                       );
                               });
                           case P.KFR.USER:
-                              let o = C.default.getUser(t.targetId);
+                              let o = O.default.getUser(t.targetId);
                               if (null != o && null != l)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e("50929").then(n.bind(n, 595011));
@@ -448,7 +448,7 @@ class U extends i.PureComponent {
                 var e, t;
                 let { actionFilter: n, hide: i, userIdFilter: l, moderators: a } = this.props;
                 if (i) return null;
-                let s = N.Iv(),
+                let s = E.Iv(),
                     o =
                         null !=
                         (e = s.find((e) => {
@@ -578,24 +578,24 @@ class U extends i.PureComponent {
             });
     }
 }
-let B = c.ZP.connectStores([I.Z, E.Z, v.Z, h.Z, _.Z, C.default], () => {
-    let e = E.Z.getGuildId(),
-        t = v.Z.getGuild(e),
+let B = c.ZP.connectStores([I.Z, N.Z, _.Z, h.Z, v.Z, O.default], () => {
+    let e = N.Z.getGuildId(),
+        t = _.Z.getGuild(e),
         n = I.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: I.Z.userIds.map((e) => C.default.getUser(e)).filter(O.lm),
+        moderators: I.Z.userIds.map((e) => O.default.getUser(e)).filter(C.lm),
         isInitialLoading: I.Z.isInitialLoading,
         isLoading: I.Z.isLoading,
         isLoadingNextPage: I.Z.isLoadingNextPage,
         showLoadMore: I.Z.groupedFetchCount > 2,
         hasError: I.Z.hasError,
         hasOlderLogs: I.Z.hasOlderLogs,
-        logs: null != n && null != t ? N._$(n, t) : [],
+        logs: null != n && null != t ? E._$(n, t) : [],
         actionFilter: I.Z.actionFilter,
         userIdFilter: I.Z.userIdFilter,
         theme: h.Z.theme,
-        hide: _.Z.enabled,
+        hide: v.Z.enabled,
     };
 })(U);

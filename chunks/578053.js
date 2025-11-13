@@ -1,6 +1,6 @@
 n.d(t, {
-    g: () => v,
-    u: () => _,
+    g: () => _,
+    u: () => v,
 }),
     n(290780),
     n(953529);
@@ -38,7 +38,7 @@ function j(e) {
         subtitle: null != a ? u : null,
     });
 }
-function v(e) {
+function _(e) {
     let { canManageGuild: t, guildId: n, afkChannelId: s, label: c } = e,
         d = (0, a.e7)([g.Z], () => g.Z.getCategories(n)),
         u = i.useMemo(() => {
@@ -63,7 +63,7 @@ function v(e) {
             let t = e === b ? null : e;
             f.Z.updateGuild({ afkChannelId: t });
         }, []);
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(O, {
         label: c,
         value: null != s ? s : b,
         options: u,
@@ -71,7 +71,7 @@ function v(e) {
         onChange: m,
     });
 }
-function _(e) {
+function v(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: s, label: c, description: d, layout: u } = e,
         m = (0, a.e7)([g.Z], () => g.Z.getCategories(n)),
         p = i.useMemo(() => {
@@ -96,7 +96,7 @@ function _(e) {
             let t = e === b ? null : e;
             f.Z.updateGuild({ systemChannelId: t });
         }, []);
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(O, {
         label: c,
         description: d,
         layout: u,
@@ -106,7 +106,7 @@ function _(e) {
         onChange: j,
     });
 }
-function C(e) {
+function O(e) {
     let { value: t, options: n, canManageGuild: l, onChange: a, label: o, description: c, layout: d } = e,
         u = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(j, { option: e });

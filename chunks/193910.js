@@ -29,7 +29,7 @@ var i = n(951288),
     T = n(921944),
     N = n(489887),
     A = n(388032),
-    w = n(878066);
+    w = n(749723);
 let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function R() {
     let e = (0, a.e7)([x.Z], () => x.Z.hasCurrentUserSentMessageSinceAppStart()),

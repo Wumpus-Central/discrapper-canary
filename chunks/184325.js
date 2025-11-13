@@ -28,8 +28,8 @@ var i = n(120356),
     N = n(215023),
     R = n(474936),
     P = n(681642),
-    w = n(388032),
-    D = n(517793);
+    D = n(388032),
+    w = n(517793);
 function x(e, t, n) {
     return (
         t in e
@@ -111,8 +111,8 @@ function U(e) {
         H = (0, S.Of)(null != (t = null == F ? void 0 : F.id) ? t : null),
         Y = (0, T.Z)(H).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
-        className: a()(D.container, i),
-        "aria-label": w.intl.string(w.t.VWV0y5),
+        className: a()(w.container, i),
+        "aria-label": D.intl.string(D.t.VWV0y5),
         role: "group",
         children: n.map((e, t) => {
             var n;
@@ -211,7 +211,7 @@ function U(e) {
                             alt: " ",
                             "aria-hidden": !0,
                             src: null != (n = e.iconSrc) ? n : (0, A.Ej)(e.icon),
-                            className: a()(D.badge, d),
+                            className: a()(w.badge, d),
                         }),
                     }),
                 },

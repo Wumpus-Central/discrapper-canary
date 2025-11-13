@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(358458),
+    a = n(509442),
     s = n(893999),
     c = n(442837),
     u = n(28664),
@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(305248),
     v = n(520116),
     j = n(981631),
-    C = n(388032),
-    x = n(550116);
+    x = n(388032),
+    C = n(550116);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -122,7 +122,7 @@ let S = i.memo(function (e) {
             (0, g.uL)(j.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : i)), n(e);
         };
         return (0, r.jsx)("div", {
-            className: x.channel,
+            className: C.channel,
             children: (0, r.jsx)(d.y5t, {
                 component: (0, r.jsxs)(y.Z, {
                     channel: a,
@@ -158,8 +158,8 @@ function P(e) {
     let { channel: t, markChannelRead: n, markGuildRead: i, getNumUnreadChannels: l } = e,
         o = (0, s.Z)() && null != t.guildId;
     return (0, r.jsx)(d.M0o, {
-        className: x.markReadButton,
-        tooltip: o ? C.intl.string(C.t["5lLMhM"]) : C.intl.string(C.t.e6RscS),
+        className: C.markReadButton,
+        tooltip: o ? x.intl.string(x.t["5lLMhM"]) : x.intl.string(x.t.e6RscS),
         color: d.YX$.TERTIARY,
         icon: o
             ? (0, r.jsx)(d.W6s, {
@@ -184,9 +184,9 @@ function P(e) {
 function N(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: i } = e;
     return (0, r.jsx)(u.u, {
-        text: C.intl.string(C.t.iTcuma),
+        text: x.intl.string(x.t.iTcuma),
         children: (0, r.jsx)(d.P3F, {
-            className: o()(x.collapseButton, { [x.collapsed]: t.collapsed }),
+            className: o()(C.collapseButton, { [C.collapsed]: t.collapsed }),
             onClick: function () {
                 n(t),
                     (0, f.yw)(j.rMx.INBOX_CHANNEL_COLLAPSED, {

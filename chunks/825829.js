@@ -137,11 +137,11 @@ function P(e) {
     let t = C(e, s.G.QUARANTINE_USER);
     if (null != t) return t;
 }
-function w(e) {
+function D(e) {
     let t = C(e, s.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
-function D(e) {
+function w(e) {
     let t = C(e, s.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
@@ -207,8 +207,8 @@ function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = arguments.length > 4 ? arguments[4] : void 0,
-        l = D(e),
-        c = w(e),
+        l = w(e),
+        c = D(e),
         u = x(e),
         d = P(e),
         f = R(e),

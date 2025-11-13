@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(906732),
     x = n(623624),
     j = n(357156),
-    v = n(208049),
-    _ = n(763296),
-    C = n(22382),
-    O = n(747071),
+    _ = n(208049),
+    v = n(763296),
+    O = n(22382),
+    C = n(747071),
     y = n(286654),
-    E = n(892001),
-    N = n(430824),
+    N = n(892001),
+    E = n(430824),
     I = n(594174),
     S = n(15385),
     T = n(768581),
@@ -109,7 +109,7 @@ function H(e) {
 }
 function W(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
-        l = N.Z.getGuild(i),
+        l = E.Z.getGuild(i),
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
@@ -231,11 +231,11 @@ let z = (e) => {
     };
 function K(e) {
     let { guild: t } = e,
-        [l, a] = (0, c.Wu)([_.Z], () => {
+        [l, a] = (0, c.Wu)([v.Z], () => {
             var e;
             return [
-                null != (e = _.Z.getSoundsForGuild(t.id)) ? e : L.Hy,
-                _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds(),
+                null != (e = v.Z.getSoundsForGuild(t.id)) ? e : L.Hy,
+                v.Z.isFetchingSounds() || v.Z.isFetchingDefaultSounds(),
             ];
         }),
         { canCreateExpressions: s } = (0, j.XJ)(t),
@@ -244,15 +244,15 @@ function K(e) {
         u = t.premiumTier,
         m = (0, P.yw)(t, l, u);
     i.useEffect(() => {
-        (0, v.w)();
+        (0, _.w)();
     }, []);
-    let p = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, C.Z)(t.soundId))), e), {}), [l]),
+    let p = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, O.Z)(t.soundId))), e), {}), [l]),
         h = 0 === l.length && !a;
     function b(e) {
         var t;
         null == (t = o.current) || t.pause();
         let n = p[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, O.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, C.Z)(e.volume)), n.play());
     }
     if (
         (i.useEffect(
@@ -363,46 +363,46 @@ function K(e) {
 }
 function Y(e) {
     let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
-        { soundId: d, name: u, user: f, userId: h, emojiId: x, emojiName: _ } = t,
-        { analyticsLocations: C } = (0, b.ZP)(),
-        O = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(h)), [h, f]),
-        { canManageGuildExpression: N } = (0, j.XJ)(o),
-        S = i.useMemo(() => N(t), [t, N]),
-        P = null != x || null != _,
+        { soundId: d, name: u, user: f, userId: h, emojiId: x, emojiName: v } = t,
+        { analyticsLocations: O } = (0, b.ZP)(),
+        C = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(h)), [h, f]),
+        { canManageGuildExpression: E } = (0, j.XJ)(o),
+        S = i.useMemo(() => E(t), [t, E]),
+        P = null != x || null != v,
         [w, R] = i.useState(!1),
         D = (0, y.z)(t, o.id);
     async function A() {
         if (!w) {
             R(!0);
             try {
-                await (0, v.AA)(o.id, d);
+                await (0, _.AA)(o.id, d);
             } catch (e) {
                 R(!1);
             }
         }
     }
     i.useEffect(() => {
-        null == O && e();
+        null == C && e();
         async function e() {
             await (0, m.PR)(h);
         }
-    }, [O, h]);
+    }, [C, h]);
     let L = i.useCallback(() => {
-            null != O &&
-                (0, E.openUserProfileModal)({
-                    userId: O.id,
+            null != C &&
+                (0, N.openUserProfileModal)({
+                    userId: C.id,
                     guildId: o.id,
-                    sourceAnalyticsLocations: C,
+                    sourceAnalyticsLocations: O,
                 });
-        }, [O, o.id, C]),
-        B = Z.ZP.useUserTag(O);
+        }, [C, o.id, O]),
+        B = Z.ZP.useUserTag(C);
     return (0, r.jsxs)("div", {
         className: a()(G.row, { [G.active]: l }),
         children: [
             P
                 ? (0, r.jsx)(p.Z, {
                       emojiId: x,
-                      emojiName: _,
+                      emojiName: v,
                       className: G.emoji,
                   })
                 : (0, r.jsx)(g.XBm, {
@@ -430,7 +430,7 @@ function Y(e) {
                     ],
                 }),
             }),
-            null != O &&
+            null != C &&
                 (0, r.jsxs)(g.P3F, {
                     className: G.uploader,
                     onClick: L,
@@ -439,7 +439,7 @@ function Y(e) {
                             "aria-label": B,
                             size: g.EFr.SIZE_24,
                             className: G.uploaderAvatar,
-                            src: (0, T.ov)(O, !1, 24),
+                            src: (0, T.ov)(C, !1, 24),
                         }),
                         (0, r.jsx)(g.Text, {
                             variant: "text-sm/normal",

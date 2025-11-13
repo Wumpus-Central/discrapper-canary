@@ -34,8 +34,8 @@ var r = n(525654),
     N = n(82085),
     R = n(264229),
     P = n(652898),
-    w = n(895886),
-    D = n(143816),
+    D = n(895886),
+    w = n(143816),
     x = n(703656),
     L = n(922482),
     M = n(131704),
@@ -161,7 +161,7 @@ function ep(e, t) {
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
         o = n === $.d4z.GUILD_STAGE_VOICE,
         s = {
-            source: D.Z.INVITE_ACCEPT,
+            source: w.Z.INVITE_ACCEPT,
             navigationReplace: !0,
         };
     return (
@@ -477,7 +477,7 @@ let ev = {
             d = ef(i, s),
             _ = H.default.getCurrentUser();
         return null != (t = null == _ ? void 0 : _.hasFlag($.xW$.QUARANTINED)) && t
-            ? ((0, w.default)(), new Promise((e, t) => t(Error())))
+            ? ((0, D.default)(), new Promise((e, t) => t(Error())))
             : (0, E.hO)(i.location_guild_id)
               ? ((0, g.mN)(ee.L0.JOIN_LARGE_GUILD_UNDERAGE), new Promise((e, t) => t(Error())))
               : (f.Z.dispatch({

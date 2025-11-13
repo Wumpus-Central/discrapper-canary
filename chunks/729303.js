@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }),
+n.d(t, { Z: () => s }),
     n(388685),
     n(410992),
     n(227481),
@@ -17,7 +17,7 @@ var r,
     l = n(442837),
     a = n(570140);
 let o = new Map();
-class s extends (r = l.ZP.Store) {
+class c extends (r = l.ZP.Store) {
     getUsers() {
         return o;
     }
@@ -28,15 +28,15 @@ class s extends (r = l.ZP.Store) {
         return !0;
     }
 }
-(i = "displayName") in s
-    ? Object.defineProperty(s, i, {
+(i = "displayName") in c
+    ? Object.defineProperty(c, i, {
           value: "TransientKeyStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (s[i] = "TransientKeyStore");
-let c = new s(a.Z, {
+    : (c[i] = "TransientKeyStore");
+let s = new c(a.Z, {
     CONNECTION_OPEN: function () {
         o.clear();
     },

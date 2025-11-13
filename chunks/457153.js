@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     s = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    i = n(358458),
+    o = n(120356),
+    a = n.n(o),
+    i = n(509442),
     l = n(113434),
     c = n(497505),
     d = n(164495),
@@ -13,12 +13,12 @@ var r = n(951288),
     g = n(743294),
     f = n(557579);
 let h = s.forwardRef(function (e, t) {
-    var n, a;
+    var n, o;
     let {
             className: h,
             expansionSpring: x,
-            isExpanded: _,
-            isExpansionAnimationComplete: b,
+            isExpanded: b,
+            isExpansionAnimationComplete: _,
             quest: j,
             taskDetails: v,
             useReducedMotion: C,
@@ -30,9 +30,9 @@ let h = s.forwardRef(function (e, t) {
         T = (null == (n = j.userStatus) ? void 0 : n.completedAt) != null,
         w = (0, l.Jf)(j),
         P = s.useRef(null),
-        N = (null == (a = j.userStatus) ? void 0 : a.enrolledAt) != null,
-        R = null != w ? w.percentComplete : v.percentComplete,
-        [A, B] = s.useState(!1);
+        N = (null == (o = j.userStatus) ? void 0 : o.enrolledAt) != null,
+        A = null != w ? w.percentComplete : v.percentComplete,
+        [R, B] = s.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T &&
@@ -41,14 +41,14 @@ let h = s.forwardRef(function (e, t) {
                     overlayRef: S,
                     progressBarRef: P,
                     quest: j,
-                    isExpanded: _,
-                    isHovered: A,
+                    isExpanded: b,
+                    isHovered: R,
                 }),
             (0, r.jsx)(i.animated.div, {
                 ref: t,
-                "aria-hidden": _ && b,
-                className: o()(h, f.contentCollapsed, {
-                    [f.contentCollapsedExpanded]: _,
+                "aria-hidden": b && _,
+                className: a()(h, f.contentCollapsed, {
+                    [f.contentCollapsedExpanded]: b,
                     [f.contentCollapsedAccepted]: N,
                 }),
                 style: {
@@ -81,7 +81,7 @@ let h = s.forwardRef(function (e, t) {
                                   quest: j,
                                   progressBarRef: P,
                                   isExpanded: !1,
-                                  percentComplete: R,
+                                  percentComplete: A,
                               })
                             : null,
                         T &&

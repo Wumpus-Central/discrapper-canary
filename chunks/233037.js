@@ -15,10 +15,10 @@ var r = t(442837),
     h = t(376681);
 function j(e) {
     let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: j } = e,
-        p = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        v = (0, r.e7)([a.Z, s.ZP, c.Z], () => (0, d.h_)(s.ZP.getChannels(t), a.Z, c.Z)),
+        v = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        p = (0, r.e7)([a.Z, s.ZP, c.Z], () => (0, d.h_)(s.ZP.getChannels(t), a.Z, c.Z)),
         f = (0, r.e7)([u.ZP], () => u.ZP.getVoiceStates(t)),
-        Z = v.map((e) => {
+        Z = p.map((e) => {
             var t;
             return {
                 name: (0, l.jsx)(m.Z, {
@@ -29,7 +29,7 @@ function j(e) {
                             : t
                                   .filter((e) => {
                                       let { user: n } = e;
-                                      return n.id !== (null == p ? void 0 : p.id);
+                                      return n.id !== (null == v ? void 0 : v.id);
                                   })
                                   .map((e) => {
                                       let { user: n } = e;

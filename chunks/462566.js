@@ -74,7 +74,7 @@ let y = function (e) {
             country: "",
             postalCode: "",
         }),
-        [S, T] = i.useState({}),
+        [T, S] = i.useState({}),
         [A, C] = i.useState({}),
         { setFocusLockDisabled: N } = i.useContext(s.M);
     i.useEffect(() => () => {
@@ -86,21 +86,21 @@ let y = function (e) {
     function P(e, t) {
         !!y[e] !== t && O((n) => b(g({}, n), { [e]: t }));
     }
-    let w = i.useCallback(
+    let D = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || S.name) && "" === v.name && (t.name = _.intl.string(_.t.lIkVsi)), t;
+            return (e || T.name) && "" === v.name && (t.name = _.intl.string(_.t.lIkVsi)), t;
         },
-        [S, v],
+        [T, v],
     );
-    function D() {
-        C(w());
+    function w() {
+        C(D());
     }
     i.useEffect(() => {
-        let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(w(!0)).length;
+        let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(D(!0)).length;
         a.current({ name: v.name }, !!e);
-    }, [y, v, w]);
+    }, [y, v, D]);
     let x = [
         {
             fields: [
@@ -169,13 +169,13 @@ let y = function (e) {
     function L(e, t) {
         if ("name" !== t && "country" !== t && "postalCode" !== t) return;
         let n = g({}, v),
-            r = g({}, S),
+            r = g({}, T),
             i = { name: A.name };
-        S[t] || "" === e || (r[t] = !0),
+        T[t] || "" === e || (r[t] = !0),
             (n[t] = e),
             r[t] && "" === e ? "name" === t && (i.name = _.intl.string(_.t.lIkVsi)) : delete i[t],
             I(n),
-            T(r),
+            S(r),
             C(i);
     }
     function M() {
@@ -215,7 +215,7 @@ let y = function (e) {
                 formError: n,
                 values: v,
                 onFieldChange: L,
-                onFieldBlur: D,
+                onFieldBlur: w,
             }),
         ],
     });

@@ -202,7 +202,7 @@ let ei = [$.fO.ACTIVITY],
             ),
             e0 = null,
             e1 = null,
-            e4 = "";
+            e8 = "";
         switch (y.type) {
             case $.fO.STREAM:
                 (e0 = (0, r.jsx)(Y.Z, {
@@ -224,7 +224,7 @@ let ei = [$.fO.ACTIVITY],
                         idle: eO,
                         premiumIndicator: !1,
                     })),
-                    (e4 = en.intl.formatToPlainString(en.t.gHPz3Q, { streamerName: y.user.username }));
+                    (e8 = en.intl.formatToPlainString(en.t.gHPz3Q, { streamerName: y.user.username }));
                 break;
             case $.fO.USER:
                 (e0 = (0, r.jsx)(q.Z, {
@@ -246,7 +246,7 @@ let ei = [$.fO.ACTIVITY],
                         participant: y,
                         channelId: el.id,
                     })),
-                    (e4 = en.intl.formatToPlainString(en.t["iC/x/Q"], { username: y.user.username }));
+                    (e8 = en.intl.formatToPlainString(en.t["iC/x/Q"], { username: y.user.username }));
                 break;
             case $.fO.ACTIVITY:
                 (e0 = (0, r.jsx)(W.ZP, {
@@ -256,7 +256,7 @@ let ei = [$.fO.ACTIVITY],
                     channel: el,
                     width: eo,
                 })),
-                    (e4 = en.intl.formatToPlainString(en.t.YCvOsO, { activityName: null == eZ ? void 0 : eZ.name }));
+                    (e8 = en.intl.formatToPlainString(en.t.YCvOsO, { activityName: null == eZ ? void 0 : eZ.name }));
                 break;
             case $.fO.HIDDEN_STREAM:
                 e0 = (0, r.jsx)(Y.Z, {
@@ -271,7 +271,7 @@ let ei = [$.fO.ACTIVITY],
                     idle: eO,
                 });
         }
-        let e8 = i.useRef(null),
+        let e4 = i.useRef(null),
             e6 = y.type === $.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: J.jXE.VOICE_CHANNEL_TILE,
@@ -290,7 +290,7 @@ let ei = [$.fO.ACTIVITY],
                     className: er.tile,
                     children: [
                         (0, r.jsx)(K.Z, {
-                            ref: e8,
+                            ref: e4,
                             className: o()(er.tile, {
                                 [er.noBorder]: ed,
                                 [er.noInteraction]: null == G,
@@ -300,7 +300,7 @@ let ei = [$.fO.ACTIVITY],
                             style: V,
                             participantUserId: eN,
                             children: (0, r.jsxs)(u.kL8, {
-                                "aria-label": e4,
+                                "aria-label": e8,
                                 className: er.tileChild,
                                 onDoubleClick: eJ,
                                 onContextMenu: (e) => e$(e, y.type === $.fO.STREAM),
@@ -327,7 +327,7 @@ let ei = [$.fO.ACTIVITY],
                                                       width:
                                                           null !=
                                                           (s =
-                                                              null == e8 || null == (t = e8.current)
+                                                              null == e4 || null == (t = e4.current)
                                                                   ? void 0
                                                                   : t.clientWidth)
                                                               ? s
@@ -335,7 +335,7 @@ let ei = [$.fO.ACTIVITY],
                                                       height:
                                                           null !=
                                                           (c =
-                                                              null == e8 || null == (n = e8.current)
+                                                              null == e4 || null == (n = e4.current)
                                                                   ? void 0
                                                                   : n.clientHeight)
                                                               ? c
@@ -459,7 +459,7 @@ let ei = [$.fO.ACTIVITY],
                             }),
                         (0, r.jsx)(x.Z, {
                             isFiring: ev,
-                            callTileRef: e8.current,
+                            callTileRef: e4.current,
                         }),
                     ],
                 }),

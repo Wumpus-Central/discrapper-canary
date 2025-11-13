@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(457542);
+n.d(t, { Z: () => h }), n(388685), n(457542);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,32 +10,32 @@ var r = n(951288),
     d = n(589694),
     p = n(62001),
     f = n(869886);
-let m = function (e) {
+let h = function (e) {
     let { scrollContainerRef: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.notificationItem(), []),
-        { showDot: m } = (0, c.Z)(),
-        h = i.useRef(null),
-        [g, _] = i.useState(!1),
+        { showDot: h } = (0, c.Z)(),
+        g = i.useRef(null),
+        [m, _] = i.useState(!1),
         {
             data: b,
             loading: E,
             isRefreshing: O,
-            handleOnRefresh: I,
-            viewabilityConfigCallbackPairs: y,
+            handleOnRefresh: y,
+            viewabilityConfigCallbackPairs: v,
         } = (0, u.a)({
-            showDot: m,
+            showDot: h,
             notificationItem: n,
         }),
-        v = (0, o.G)();
+        I = (0, o.G)();
     i.useEffect(
         () => () => {
-            v();
+            I();
         },
-        [v],
+        [I],
     );
     let C = (0, l.e7)([a.Z], () => a.Z.hasNewContent(), []),
         S = (0, l.e7)([a.Z], () => a.Z.isHydrating(), []),
-        T = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
+        T = i.useMemo(() => v[0].onViewableItemsChanged, [v]),
         { registerItemRef: N } = (0, p.m)(b, T, t),
         j = i.useMemo(() => b.some((e) => "end" === e.data.kind), [b]),
         P = i.useCallback(() => {
@@ -44,7 +44,7 @@ let m = function (e) {
             if (null == e) return;
             let n = e.scrollHeight;
             !(n - e.scrollTop - e.clientHeight < 300) ||
-                g ||
+                m ||
                 E ||
                 S ||
                 (_(!0),
@@ -53,7 +53,7 @@ let m = function (e) {
                         _(!1);
                     }, 300);
                 }));
-        }, [E, g, S, j, t]);
+        }, [E, m, S, j, t]);
     i.useEffect(() => {
         let e = t.current;
         if (null != e)
@@ -73,8 +73,8 @@ let m = function (e) {
                 });
         }, [t]),
         A = i.useCallback(() => {
-            I(), x();
-        }, [I, x]),
+            y(), x();
+        }, [y, x]),
         Z = i.useCallback(
             (e) =>
                 "loading" === e.data.kind
@@ -162,12 +162,12 @@ let m = function (e) {
                           }),
                       }),
                   (0, r.jsxs)("div", {
-                      ref: h,
+                      ref: g,
                       className: f.scrollContainer,
                       children: [
                           b.map((e) => Z(e)),
                           !j &&
-                              (g || S) &&
+                              (m || S) &&
                               (0, r.jsx)("div", {
                                   style: {
                                       padding: "16px",

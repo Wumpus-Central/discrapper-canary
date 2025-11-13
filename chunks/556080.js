@@ -1,14 +1,14 @@
-n.d(e, { Z: () => S });
+n.d(e, { Z: () => d });
 var i = n(442837),
     l = n(846027),
-    r = n(100527),
-    u = n(509613),
+    u = n(100527),
+    r = n(509613),
     s = n(131951),
     a = n(313789),
     o = n(846071),
     c = n(345655),
     E = n(388032);
-let d = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
+let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => E.intl.string(E.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: t } = (0, o.P)({ location: "SettingsRendererConfig" });
@@ -22,7 +22,7 @@ let d = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
         setValue: function (t) {
-            let e = [r.Z.USER_SETTINGS_VOICE_AND_VIDEO];
+            let e = [u.Z.USER_SETTINGS_VOICE_AND_VIDEO];
             l.Z.setActiveInputProfile(t, { analyticsLocations: e });
         },
         useOptions: function () {
@@ -49,4 +49,4 @@ let d = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    S = (0, u.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, { buildLayout: () => [d] });
+    d = (0, r.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, { buildLayout: () => [S] });

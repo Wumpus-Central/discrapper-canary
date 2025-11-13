@@ -21,11 +21,11 @@ function g(e) {
         } = (0, c.w)(),
         { updateRule: x } = (0, o.pH)(t),
         j = null != f,
-        v = j && !(0, s.Vb)(f),
-        _ = j || p || v,
-        C = async () => {
-            if (!p && !v) return g();
-            null == f || v || x(f);
+        _ = j && !(0, s.Vb)(f),
+        v = j || p || _,
+        O = async () => {
+            if (!p && !_) return g();
+            null == f || _ || x(f);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == f ? void 0 : f.id);
@@ -37,7 +37,7 @@ function g(e) {
                 null != e && x(e);
             }
         },
-        O = d.intl.string(d.t["ETE/oC"]),
+        C = d.intl.string(d.t["ETE/oC"]),
         y = !p && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == f ? void 0 : f.name }) : void 0;
     return (
         null != h &&
@@ -51,14 +51,14 @@ function g(e) {
             component: "div",
             className: u.saveNoticeContainer,
             children:
-                _ &&
+                v &&
                 (0, r.jsx)(a.oXn, {
                     children: (0, r.jsx)(l.Z, {
                         submitting: m,
                         disabled: m,
-                        onSave: C,
+                        onSave: O,
                         onReset: g,
-                        onResetText: O,
+                        onResetText: C,
                         message: y,
                     }),
                 }),

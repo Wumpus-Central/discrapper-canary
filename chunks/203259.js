@@ -15,19 +15,19 @@ function p(e) {
             let t = null == (e = s.Z.getLastClipsSession()) ? void 0 : e.newClipIds;
             return null == t ? null : s.Z.getClips().filter((e) => t.includes(e.id))[0];
         }),
-        m = (0, u.l)(f),
-        h = i.useCallback(() => {
+        h = (0, u.l)(f),
+        g = i.useCallback(() => {
             (0, c.eL)();
         }, []);
     return null == f
         ? null
-        : f.type !== o.NJ.SCREENSHOT && f.type !== o.NJ.VOICE_CLIP && null != m
+        : f.type !== o.NJ.SCREENSHOT && f.type !== o.NJ.VOICE_CLIP && null != h
           ? (0, r.jsx)(a.Mb, {
                 targetElementRef: { current: n },
                 position: "bottom",
                 title: d.intl.string(d.t.JugHO7),
                 body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
-                assetUrl: m,
+                assetUrl: h,
                 disableMediaViewer: !0,
                 caretConfig: {
                     position: "top",
@@ -37,7 +37,7 @@ function p(e) {
                     text: d.intl.string(d.t.tQPBml),
                     onClick: t,
                 },
-                onRequestClose: h,
+                onRequestClose: g,
             })
           : (0, r.jsx)(a.J2, {
                 targetElementRef: { current: n },
@@ -58,6 +58,6 @@ function p(e) {
                         onClick: t,
                     },
                 ],
-                onRequestClose: h,
+                onRequestClose: g,
             });
 }

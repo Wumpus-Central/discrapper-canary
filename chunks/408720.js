@@ -4,17 +4,17 @@ var r = a(469359),
     n = a(393523),
     o = a(151122),
     i = a(263449),
-    c = a(572299),
-    E = a(910731),
+    E = a(572299),
+    c = a(910731),
     s = a(64685),
     l = a(394798),
     I = a(622916),
-    u = a(467510),
-    R = a(954211),
-    d = a(886115),
+    R = a(467510),
+    u = a(954211),
+    A = a(886115),
     N = a(873567),
-    A = a(454463),
-    T = a(163162);
+    T = a(454463),
+    d = a(163162);
 let f = (0, o._I)((t = {}) => {
     let e = {
         console: !0,
@@ -28,9 +28,9 @@ let f = (0, o._I)((t = {}) => {
     return {
         name: "Breadcrumbs",
         setup(t) {
-            var a, o, f, L, p, h, O;
+            var a, o, f, L, p, O, h;
             e.console &&
-                (0, E.e)(
+                (0, c.e)(
                     ((a = t),
                     function (t) {
                         if ((0, i.s3)() !== a) return;
@@ -40,15 +40,15 @@ let f = (0, o._I)((t = {}) => {
                                 arguments: t.args,
                                 logger: "console",
                             },
-                            level: (0, R.V)(t.level),
-                            message: (0, d.nK)(t.args, " "),
+                            level: (0, u.V)(t.level),
+                            message: (0, A.nK)(t.args, " "),
                         };
                         if ("assert" === t.level)
                             if (!1 !== t.args[0]) return;
                             else
-                                (e.message = `Assertion failed: ${((0, d.nK))(t.args.slice(1), " ") || "console.assert"}`),
+                                (e.message = `Assertion failed: ${((0, A.nK))(t.args.slice(1), " ") || "console.assert"}`),
                                     (e.data.arguments = t.args.slice(1));
-                        (0, c.n)(e, {
+                        (0, E.n)(e, {
                             input: t.args,
                             level: t.level,
                         });
@@ -68,7 +68,7 @@ let f = (0, o._I)((t = {}) => {
                                         : void 0;
                             _ &&
                                 _ > 1024 &&
-                                (A.X &&
+                                (T.X &&
                                     I.kg.warn(
                                         `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`,
                                     ),
@@ -78,21 +78,21 @@ let f = (0, o._I)((t = {}) => {
                                 var n;
                                 let o = t.event,
                                     i = (n = o) && n.target ? o.target : o;
-                                (e = (0, u.Rt)(i, {
+                                (e = (0, R.Rt)(i, {
                                     keyAttrs: r,
                                     maxStringLength: _,
                                 })),
-                                    (a = (0, u.iY)(i));
+                                    (a = (0, R.iY)(i));
                             } catch (t) {
                                 e = "<unknown>";
                             }
                             if (0 === e.length) return;
-                            let E = {
+                            let c = {
                                 category: `ui.${t.name}`,
                                 message: e,
                             };
-                            a && (E.data = { "ui.component_name": a }),
-                                (0, c.n)(E, {
+                            a && (c.data = { "ui.component_name": a }),
+                                (0, E.n)(c, {
                                     event: t.event,
                                     name: t.name,
                                     global: t.global,
@@ -107,20 +107,20 @@ let f = (0, o._I)((t = {}) => {
                             let { startTimestamp: e, endTimestamp: a } = t,
                                 r = t.xhr[_.xU];
                             if (!e || !a || !r) return;
-                            let { method: n, url: o, status_code: E, body: s } = r,
+                            let { method: n, url: o, status_code: c, body: s } = r,
                                 l = {
                                     xhr: t.xhr,
                                     input: s,
                                     startTimestamp: e,
                                     endTimestamp: a,
                                 };
-                            (0, c.n)(
+                            (0, E.n)(
                                 {
                                     category: "xhr",
                                     data: {
                                         method: n,
                                         url: o,
-                                        status_code: E,
+                                        status_code: c,
                                     },
                                     type: "http",
                                 },
@@ -143,7 +143,7 @@ let f = (0, o._I)((t = {}) => {
                                             startTimestamp: e,
                                             endTimestamp: a,
                                         };
-                                    (0, c.n)(
+                                    (0, E.n)(
                                         {
                                             category: "fetch",
                                             data: r,
@@ -164,7 +164,7 @@ let f = (0, o._I)((t = {}) => {
                                             startTimestamp: e,
                                             endTimestamp: a,
                                         };
-                                    (0, c.n)(
+                                    (0, E.n)(
                                         {
                                             category: "fetch",
                                             data: _,
@@ -177,18 +177,18 @@ let f = (0, o._I)((t = {}) => {
                     ),
                 e.history &&
                     (0, n.a)(
-                        ((h = t),
+                        ((O = t),
                         function (t) {
-                            if ((0, i.s3)() !== h) return;
+                            if ((0, i.s3)() !== O) return;
                             let e = t.from,
                                 a = t.to,
-                                r = (0, N.en)(T.m9.location.href),
+                                r = (0, N.en)(d.m9.location.href),
                                 _ = e ? (0, N.en)(e) : void 0,
                                 n = (0, N.en)(a);
                             (_ && _.path) || (_ = r),
                                 r.protocol === n.protocol && r.host === n.host && (a = n.relative),
                                 r.protocol === _.protocol && r.host === _.host && (e = _.relative),
-                                (0, c.n)({
+                                (0, E.n)({
                                     category: "navigation",
                                     data: {
                                         from: e,
@@ -200,10 +200,10 @@ let f = (0, o._I)((t = {}) => {
                 e.sentry &&
                     t.on(
                         "beforeSendEvent",
-                        ((O = t),
+                        ((h = t),
                         function (t) {
-                            (0, i.s3)() === O &&
-                                (0, c.n)(
+                            (0, i.s3)() === h &&
+                                (0, E.n)(
                                     {
                                         category: `sentry.${"transaction" === t.type ? "transaction" : "event"}`,
                                         event_id: t.event_id,

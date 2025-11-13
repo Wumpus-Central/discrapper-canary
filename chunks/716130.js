@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -40,7 +40,7 @@ function j(e) {
     }
     return e;
 }
-function v(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function v(e, t) {
         e
     );
 }
-function _(e) {
+function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
@@ -66,8 +66,8 @@ function _(e) {
         {
             drag: f,
             drop: j,
-            dragSourcePosition: v,
-            setIsDraggable: _,
+            dragSourcePosition: _,
+            setIsDraggable: v,
         } = (0, d.Z)({
             type: "ONBOARDING_PROMPT_CARD",
             index: g,
@@ -76,19 +76,19 @@ function _(e) {
             onDragComplete: () => {},
             onDragReset: () => {},
         }),
-        C = i.useRef(null);
+        O = i.useRef(null);
     return (
         i.useEffect(() => {
-            _(!1);
-        }, [_]),
+            v(!1);
+        }, [v]),
         i.useEffect(() => {
-            f(j(C));
-        }, [f, j, C]),
+            f(j(O));
+        }, [f, j, O]),
         (0, r.jsxs)("div", {
-            ref: C,
+            ref: O,
             className: a()(x.separatorSection, {
-                [x.dropIndicatorBefore]: null != v && g < v,
-                [x.dropIndicatorAfter]: null != v && g > v,
+                [x.dropIndicatorBefore]: null != _ && g < _,
+                [x.dropIndicatorAfter]: null != _ && g > _,
             }),
             children: [
                 !l && u.length < h.b3
@@ -132,14 +132,14 @@ function _(e) {
         })
     );
 }
-function C(e) {
+function O(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: a } = e,
         d = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
-        C = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
-        O = C.filter((e) => e.inOnboarding),
-        y = C.filter((e) => !0 !== e.inOnboarding),
-        E = [
-            ...O.map((e) => ({
+        O = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
+        C = O.filter((e) => e.inOnboarding),
+        y = O.filter((e) => !0 !== e.inOnboarding),
+        N = [
+            ...C.map((e) => ({
                 id: e.id,
                 data: e,
             })),
@@ -153,14 +153,14 @@ function C(e) {
             })),
         ],
         {
-            handleDragStart: N,
+            handleDragStart: E,
             handleDragReset: I,
             handleDragComplete: S,
-        } = (0, u.Z)(E, (e) => {
+        } = (0, u.Z)(N, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
-                n = e.slice(0, t).map((e) => v(j({}, e.data), { inOnboarding: !0 })),
+                n = e.slice(0, t).map((e) => _(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
-                    v(j({}, e.data), {
+                    _(j({}, e.data), {
                         inOnboarding: !1,
                         required: !1,
                     }),
@@ -196,7 +196,7 @@ function C(e) {
                                               }),
                                           ],
                                       }),
-                                O.map((e, t) =>
+                                C.map((e, t) =>
                                     (0, r.jsx)(
                                         f.Z,
                                         {
@@ -207,7 +207,7 @@ function C(e) {
                                             singleColumn: a,
                                             promptIndex: t,
                                             dragIndex: t,
-                                            onPromptDragStart: N,
+                                            onPromptDragStart: E,
                                             onPromptDragReset: I,
                                             onPromptDragComplete: S,
                                         },
@@ -216,7 +216,7 @@ function C(e) {
                                 ),
                             ],
                         }),
-                  (0, r.jsx)(_, {
+                  (0, r.jsx)(v, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: i,
@@ -231,19 +231,19 @@ function C(e) {
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + O.length,
-                                            dragIndex: t + O.length + 1,
-                                            onPromptDragStart: N,
+                                            promptIndex: t + C.length,
+                                            dragIndex: t + C.length + 1,
+                                            onPromptDragStart: E,
                                             onPromptDragReset: I,
                                             onPromptDragComplete: S,
                                         },
                                         e.id,
                                     ),
                                 ),
-                                C.length < h.YW
+                                O.length < h.YW
                                     ? (0, r.jsxs)(o.P3F, {
                                           className: x.addPrompt,
-                                          onClick: () => (0, m.tS)(d, [...C, (0, h.yZ)(!1)], !1),
+                                          onClick: () => (0, m.tS)(d, [...O, (0, h.yZ)(!1)], !1),
                                           children: [
                                               (0, r.jsx)(o.oFk, {
                                                   size: "custom",

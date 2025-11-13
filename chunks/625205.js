@@ -39,10 +39,10 @@ function h() {
                 h.containerId === (null == m ? void 0 : m.containerId)
             );
         }, [h, m]),
-        S = O[0],
-        T = v[0],
-        A = null != (e = null == S ? void 0 : S.disabled) ? e : !n,
-        C = null != (t = null == T ? void 0 : T.disabled) ? t : !c;
+        T = O[0],
+        S = v[0],
+        A = null != (e = null == T ? void 0 : T.disabled) ? e : !n,
+        C = null != (t = null == S ? void 0 : S.disabled) ? t : !c;
     return (0, r.jsxs)("div", {
         className: _.devices,
         children: [

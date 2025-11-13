@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -134,7 +134,7 @@ function P(e) {
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
 }
-class w extends (r = o.ZP.Store) {
+class D extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -150,8 +150,8 @@ class w extends (r = o.ZP.Store) {
         return f;
     }
 }
-u(w, "displayName", "ThreadMembersStore");
-let D = new w(s.Z, {
+u(D, "displayName", "ThreadMembersStore");
+let w = new D(s.Z, {
     CONNECTION_OPEN: E,
     OVERLAY_INITIALIZE: b,
     GUILD_CREATE: y,

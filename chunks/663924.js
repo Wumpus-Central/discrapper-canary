@@ -47,11 +47,11 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -59,7 +59,7 @@ function S(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,7 +71,7 @@ function T(e, t) {
 let A = { height: g.lv };
 function C(e) {
     var { positionTargetRef: t, align: n } = e,
-        i = S(e, ["positionTargetRef", "align"]);
+        i = T(e, ["positionTargetRef", "align"]);
     return (0, r.jsx)("span", {
         style: g.u$,
         children: (0, r.jsx)(c.W5, {
@@ -105,7 +105,7 @@ function R(e) {
         { renderWindow: y, windowDispatch: O } = i.useContext(u.ZP),
         v = null != c,
         I = (0, o.Jw)(null != c ? c : ""),
-        S = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 if ((!v && (0, o.$s)()) || (v && !(I && n)) || d.Z.isOpen() || e.defaultPrevented) return;
@@ -127,22 +127,22 @@ function R(e) {
         );
     i.useLayoutEffect(
         () => (
-            y.addEventListener("mousedown", S),
-            y.addEventListener("contextmenu", S),
+            y.addEventListener("mousedown", T),
+            y.addEventListener("contextmenu", T),
             O.subscribe(E.CkL.POPOUT_CLOSE, N),
             () => {
-                y.removeEventListener("mousedown", S),
-                    y.removeEventListener("contextmenu", S),
+                y.removeEventListener("mousedown", T),
+                    y.removeEventListener("contextmenu", T),
                     O.unsubscribe(E.CkL.POPOUT_CLOSE, N);
             }
         ),
-        [S, y, O],
+        [T, y, O],
     ),
         (0, s.Tbt)(_),
         i.useEffect(() => {
             ((!v && (0, o.$s)()) || (v && !I)) && N();
         }, [I, v]);
-    let T = (0, m.Z)();
+    let S = (0, m.Z)();
     return (0, r.jsx)(h.Z, {
         ref: _,
         context: {
@@ -150,7 +150,7 @@ function R(e) {
             type: "channel",
         },
         entrypoint: p._b.TEXT,
-        initHistory: T,
+        initHistory: S,
     });
 }
 let P = i.memo(C);

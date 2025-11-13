@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -32,8 +32,8 @@ let P = (e, t) => {
                 buttonClassName: i,
                 subscriptionTier: a,
                 isDarkMode: P,
-                isEligibleForBogoPromotion: w,
-                videoRef: D,
+                isEligibleForBogoPromotion: D,
+                videoRef: w,
             } = e,
             { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
             L = (0, g._O)(),
@@ -95,7 +95,7 @@ let P = (e, t) => {
                                           buttonClassName: i,
                                           isApplicationHome: !0,
                                           isDarkMode: P,
-                                          isEligibleForBogoPromotion: w,
+                                          isEligibleForBogoPromotion: D,
                                       }),
                                 (0, r.jsx)(v._O, {
                                     variant: "text-sm/normal",
@@ -114,7 +114,7 @@ let P = (e, t) => {
                             poster: N.Z,
                             loop: !0,
                             className: A.heroHeadingV2Art,
-                            ref: D,
+                            ref: w,
                             children: (0, r.jsx)("source", {
                                 src: F ? C.Z : R.Z,
                                 type: F ? T.m.MP4 : T.m.WEBM,
@@ -125,4 +125,4 @@ let P = (e, t) => {
             }),
         });
     },
-    w = i.forwardRef(P);
+    D = i.forwardRef(P);

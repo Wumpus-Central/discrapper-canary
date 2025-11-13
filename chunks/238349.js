@@ -44,8 +44,8 @@ let O = [],
     N = [],
     R = !1,
     P = [],
-    w = o().chain(O),
     D = o().chain(O),
+    w = o().chain(O),
     x = new Set(),
     L = new Set();
 function M(e) {
@@ -86,8 +86,8 @@ function G() {
         (A = s.z.MATCH_SOME),
         (C = 0),
         (P = []),
-        (w = o().chain(O)),
         (D = o().chain(O)),
+        (w = o().chain(O)),
         L.clear(),
         x.clear();
 }
@@ -121,8 +121,8 @@ function F(e) {
         0 !== x.size && ((P = P.filter((e) => !x.has(e))), x.clear()),
         0 !== L.size && ((P = Array.from(new Set([...P, ...L]))), L.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
-            ((D = o().chain(P).sort(k(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(k(l.z.CREATION_DATE))));
-    let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
+            ((w = o().chain(P).sort(k(l.z.LATEST_ACTIVITY))), (D = o().chain(P).sort(k(l.z.CREATION_DATE))));
+    let n = (S === l.z.LATEST_ACTIVITY ? w : D).value(),
         i = (N = 0 === T.size ? n : n.filter(U(T, A))).find((e) => j(e));
     r = null == i ? null : i;
 }

@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(852758),
     p = n(314897),
     f = n(594174),
-    m = n(374023),
-    h = n(886162),
-    g = n(981631),
+    h = n(374023),
+    g = n(886162),
+    m = n(981631),
     _ = n(815660),
     b = n(308569),
     E = n(231338);
@@ -26,15 +26,15 @@ let O = {
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !m.s.isDisallowPopupsSet() &&
+        !h.s.isDisallowPopupsSet() &&
             null != f.default.getCurrentUser() &&
-            (t === g.c2C.REQUIRE_CAPTCHA ||
-            t === g.c2C.REQUIRE_VERIFIED_EMAIL ||
-            t === g.c2C.REQUIRE_VERIFIED_PHONE ||
-            t === g.c2C.REQUIRE_REVERIFIED_PHONE ||
-            t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE ||
-            t === g.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-            t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+            (t === m.c2C.REQUIRE_CAPTCHA ||
+            t === m.c2C.REQUIRE_VERIFIED_EMAIL ||
+            t === m.c2C.REQUIRE_VERIFIED_PHONE ||
+            t === m.c2C.REQUIRE_REVERIFIED_PHONE ||
+            t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE ||
+            t === m.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+            t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             u.Z.isEmailReverification(t)
                 ? (0, o.bu)({ location: "verification-legacy" })
                     ? (0, a.q4)(
@@ -51,11 +51,11 @@ let O = {
                           layerKey: b.CV,
                           Layer: s.ZP,
                       })
-                : t === g.c2C.AGREEMENTS
+                : t === m.c2C.AGREEMENTS
                   ? (0, i.h7j)(
                         (e) =>
                             (0, r.jsx)(
-                                h.Z,
+                                g.Z,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,7 +87,7 @@ let O = {
                             onCloseRequest: E.Vq,
                         },
                     )
-                  : t === g.c2C.REQUIRE_SAFETY_FLOWS
+                  : t === m.c2C.REQUIRE_SAFETY_FLOWS
                     ? (0, a.q4)(
                           (e) => {
                               let { closeLayer: t } = e;

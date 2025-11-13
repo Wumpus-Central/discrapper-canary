@@ -8,9 +8,9 @@ var a,
     d = n(308063),
     p = n(388610),
     f = n(430824),
-    m = n(496675),
-    h = n(855674),
-    g = n(981631);
+    h = n(496675),
+    g = n(855674),
+    m = n(981631);
 function _(e, t, n) {
     return (
         t in e
@@ -42,21 +42,21 @@ function b(e) {
 }
 let E = [],
     O = null,
-    I = !1,
-    y = g.QZA.CLOSED,
-    v = {},
+    y = !1,
+    v = m.QZA.CLOSED,
+    I = {},
     C = !1,
     S = null;
 function T() {
     if (
         ((r = null != (i = p.Z.getChannel()) ? f.Z.getGuild(i.guild_id) : null),
-        (E = null != i && null != r && m.Z.can(g.Plq.MANAGE_WEBHOOKS, i) ? h.Z.getWebhooksForChannel(r.id, i.id) : []),
+        (E = null != i && null != r && h.Z.can(m.Plq.MANAGE_WEBHOOKS, i) ? g.Z.getWebhooksForChannel(r.id, i.id) : []),
         null != O)
     ) {
         let e = j(O.id);
         null != e && (O = e);
     }
-    (y = g.QZA.OPEN), (v = {}), (C = !1);
+    (v = m.QZA.OPEN), (I = {}), (C = !1);
 }
 let N = o().debounce(() => {
     C && ((null == O || o().isEqual(O, j(O.id))) && (C = !1), C || x.emitChange());
@@ -69,7 +69,7 @@ function j(e) {
 }
 class P extends (a = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, f.Z, h.Z, m.Z);
+        this.waitFor(p.Z, f.Z, g.Z, h.Z);
     }
     hasChanges() {
         return C;
@@ -81,7 +81,7 @@ class P extends (a = c.ZP.Store) {
         return O;
     }
     get formState() {
-        return y;
+        return v;
     }
     getWebhook(e) {
         return j(e);
@@ -91,14 +91,14 @@ class P extends (a = c.ZP.Store) {
     }
     getProps() {
         return {
-            submitting: y === g.QZA.SUBMITTING,
+            submitting: v === m.QZA.SUBMITTING,
             webhooks: E,
             editedWebhook: O,
             section: l,
             sectionId: S,
             hasChanges: this.hasChanges(),
-            isFetching: I,
-            errors: v,
+            isFetching: y,
+            errors: I,
         };
     }
 }
@@ -112,11 +112,11 @@ let x = new P(
                   INTEGRATION_SETTINGS_SAVE_SUCCESS: T,
                   CHANNEL_SETTINGS_SET_SECTION: function (e) {
                       let { section: t } = e;
-                      if (t !== g.CoT.INTEGRATIONS) return !1;
-                      if (((l = g.b4C.OVERVIEW), null == r)) {
+                      if (t !== m.CoT.INTEGRATIONS) return !1;
+                      if (((l = m.b4C.OVERVIEW), null == r)) {
                           let e = p.Z.getChannel(),
                               t = null == e ? void 0 : e.getGuildId();
-                          null != e && null != t && (d.Z.fetchForChannel(t, e.id), (I = !0)), T();
+                          null != e && null != t && (d.Z.fetchForChannel(t, e.id), (y = !0)), T();
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -127,10 +127,10 @@ let x = new P(
                       let { webhookId: t } = e,
                           n = j(t);
                       if (null == n) return !1;
-                      (O = n), (v = {}), (C = !1);
+                      (O = n), (I = {}), (C = !1);
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                      (O = null), (v = {}), (C = !1);
+                      (O = null), (I = {}), (C = !1);
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
@@ -144,13 +144,13 @@ let x = new P(
                           C && N();
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
-                      (i = null), (r = null), (E = []), (O = null), (y = g.QZA.CLOSED);
+                      (i = null), (r = null), (E = []), (O = null), (v = m.QZA.CLOSED);
                   },
                   WEBHOOKS_UPDATE: function (e) {
                       let { guildId: t, channelId: n, webhooks: l } = e;
                       if (
-                          ((I = !1),
-                          null != r && t === r.id && null != i && n === i.id && null != l && y !== g.QZA.SUBMITTING)
+                          ((y = !1),
+                          null != r && t === r.id && null != i && n === i.id && null != l && v !== m.QZA.SUBMITTING)
                       ) {
                           for (let e = E.length - 1; e >= 0; e--) {
                               let t = E[e];
@@ -174,12 +174,12 @@ let x = new P(
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
-                      (y = g.QZA.SUBMITTING), (v = {});
+                      (v = m.QZA.SUBMITTING), (I = {});
                   },
                   INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                       var t;
-                      if (y !== g.QZA.SUBMITTING) return !1;
-                      (y = g.QZA.OPEN), (v = null != (t = e.errors) ? t : {});
+                      if (v !== m.QZA.SUBMITTING) return !1;
+                      (v = m.QZA.OPEN), (I = null != (t = e.errors) ? t : {});
                   },
               },
     ),

@@ -1,48 +1,48 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(979554),
     l = n(481060),
-    a = n(616066),
-    s = n(566697),
-    o = n(876917),
+    o = n(616066),
+    a = n(566697),
+    s = n(876917),
     c = n(688192),
-    d = n(232644);
-function u(e) {
-    let { item: t, profileOwner: n, isHighlighted: u, surface: p = c.Y.PROFILE_MODAL } = e,
+    u = n(232644);
+function d(e) {
+    let { item: t, profileOwner: n, isHighlighted: d, surface: p = c.Y.PROFILE_MODAL } = e,
         h = t.collectiblesItem;
     switch (h.type) {
         case i.Z.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
-                className: d.profileEffectPreview,
-                children: (0, r.jsx)(o.Z, {
+                className: u.profileEffectPreview,
+                children: (0, r.jsx)(s.Z, {
                     skuId: h.skuId,
-                    isHighlighted: u,
+                    isHighlighted: d,
                     isPurchased: !1,
                     removeSetHeight: !0,
                 }),
             });
         case i.Z.AVATAR_DECORATION:
             return (0, r.jsx)("div", {
-                className: d.avatarDecorationPreview,
-                children: (0, r.jsx)(a.R, {
+                className: u.avatarDecorationPreview,
+                children: (0, r.jsx)(o.R, {
                     item: h,
                     user: n,
-                    isHighlighted: u,
+                    isHighlighted: d,
                     isPurchased: !1,
                     avatarSize: l.EFr.SIZE_80,
                 }),
             });
         case i.Z.NAMEPLATE:
             return (0, r.jsxs)("div", {
-                className: d.nameplatePreview,
+                className: u.nameplatePreview,
                 children: [
                     (0, r.jsx)("div", {
-                        className: d.nameplateTopLeft,
-                        children: (0, r.jsx)(s.Z, {
+                        className: u.nameplateTopLeft,
+                        children: (0, r.jsx)(a.Z, {
                             user: n,
                             nameplate: h,
-                            isHighlighted: u,
+                            isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
@@ -51,12 +51,12 @@ function u(e) {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: d.nameplateBottomRight,
+                        className: u.nameplateBottomRight,
                         "aria-hidden": !0,
-                        children: (0, r.jsx)(s.Z, {
+                        children: (0, r.jsx)(a.Z, {
                             user: n,
                             nameplate: h,
-                            isHighlighted: u,
+                            isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,

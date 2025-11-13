@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r = n(392711),
-    i = n.n(r),
+var i = n(392711),
+    r = n.n(i),
     l = n(442837),
     a = n(592125),
     o = n(271383),
@@ -11,17 +11,17 @@ var r = n(392711),
 function p(e, t) {
     return (0, l.e7)([c.Z, a.Z, o.ZP, s.Z], () => {
         var n;
-        let r = a.Z.getChannel(t);
-        if (null == r) return !1;
-        let l = c.Z.can(d.Plq.SEND_MESSAGES, r),
-            p = o.ZP.getMember(r.guild_id, e),
-            f = i().keyBy(s.Z.getManyRoles(r.guild_id, null != (n = null == p ? void 0 : p.roles) ? n : []), "id"),
-            h = u.BT({
+        let i = a.Z.getChannel(t);
+        if (null == i) return !1;
+        let l = c.Z.can(d.Plq.SEND_MESSAGES, i),
+            p = o.ZP.getMember(i.guild_id, e),
+            h = r().keyBy(s.Z.getManyRoles(i.guild_id, null != (n = null == p ? void 0 : p.roles) ? n : []), "id"),
+            f = u.BT({
                 permission: d.Plq.STREAM,
                 user: e,
-                context: r,
-                roles: f,
+                context: i,
+                roles: h,
             });
-        return l && h;
+        return l && f;
     });
 }

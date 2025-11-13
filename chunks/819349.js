@@ -79,10 +79,10 @@ function v(e) {
                 I(null != (i = null == r ? void 0 : r.code) ? i : null);
             })();
         }, [S, t.id]);
-    let k = r.useCallback(() => {
+    let D = r.useCallback(() => {
             _(!0);
         }, []),
-        D = r.useCallback(() => {
+        k = r.useCallback(() => {
             _(!1), A(!1);
         }, []);
     return null == P
@@ -130,8 +130,8 @@ function v(e) {
                           e,
                       ),
                   ),
-              onRequestOpen: k,
-              onRequestClose: D,
+              onRequestOpen: D,
+              onRequestClose: k,
               children: (e) =>
                   (0, i.jsx)(c.P3F, {
                       innerRef: l,

@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(892567),
     _ = n(7284),
     p = n(402235),
-    h = n(670188),
+    h = n(456077),
     m = n(592125),
     g = n(91047),
     E = n(392819);
@@ -115,8 +115,8 @@ function A(e) {
             guildId: m,
         }),
         P = (0, _.j)({ displayNameStyles: R }),
-        w = S(t, n),
-        D = i.useContext(o.d);
+        D = S(t, n),
+        w = i.useContext(o.d);
     return (
         (0, E.Z)({
             subscribeToGroupId: g,
@@ -134,7 +134,7 @@ function A(e) {
                                 s.rz2,
                                 v(y({}, null != t ? t : {}), {
                                     ref: A,
-                                    onContextMenu: w,
+                                    onContextMenu: D,
                                     name: null != (c = (0, s.qgQ)(i)) ? c : "",
                                     colorString: null != (_ = null == e ? void 0 : e.colorString) ? _ : null,
                                     roleName: null == e ? void 0 : e.colorRoleName,
@@ -145,14 +145,14 @@ function A(e) {
                             );
                         {
                             let e =
-                                (null == D ? void 0 : D.animate) || (null == n ? void 0 : n.isShown)
+                                (null == w ? void 0 : w.animate) || (null == n ? void 0 : n.isShown)
                                     ? d.F.ANIMATED
                                     : d.F.PLAIN;
                             return (0, r.jsx)(
                                 a.Anchor,
                                 v(y({}, null != t ? t : {}), {
                                     ref: A,
-                                    onContextMenu: w,
+                                    onContextMenu: D,
                                     "aria-label": O,
                                     children: (0, r.jsx)(f.Z, {
                                         userName: null != (o = (0, s.qgQ)(i)) ? o : "",
@@ -193,7 +193,7 @@ function A(e) {
                     o,
                 );
             },
-            [C, t, n, m, g, w, b, O, N, P, null == D ? void 0 : D.animate, R, T],
+            [C, t, n, m, g, D, b, O, N, P, null == w ? void 0 : w.animate, R, T],
         )
     );
 }

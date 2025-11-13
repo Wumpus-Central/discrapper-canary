@@ -10,21 +10,21 @@ var r = n(951288),
     d = n(983703);
 let p = function (e) {
     let { rows: t, renderRow: n, renderSection: p, footer: f } = e,
-        m = (e) => {
+        h = (e) => {
             let { section: r, row: i } = e,
                 l = t[r];
             if (null == l || null == i) return null;
             let a = l[i];
             return null == a ? null : n(a);
         },
-        h = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 let { section: t } = e;
                 return p(t);
             },
             [p],
         ),
-        g = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        m = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         _ = i.useRef(null),
         b = i.useCallback(
             () =>
@@ -55,16 +55,16 @@ let p = function (e) {
                     callback: () => (null == t ? void 0 : t.focus()),
                 });
         }, []),
-        I = (0, l.ZP)({
+        y = (0, l.ZP)({
             id: "people-list",
-            isEnabled: g,
+            isEnabled: m,
             scrollToStart: b,
             scrollToEnd: E,
             setFocus: O,
         }),
-        y = i.useMemo(() => t.map((e) => e.length), [t]);
+        v = i.useMemo(() => t.map((e) => e.length), [t]);
     return (0, r.jsx)(a.bG, {
-        navigator: I,
+        navigator: y,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var { ref: t } = e,
@@ -127,11 +127,11 @@ let p = function (e) {
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
-                                    renderRow: m,
+                                    renderRow: h,
                                     rowHeight: u.NV,
-                                    renderSection: h,
+                                    renderSection: g,
                                     sectionHeight: u.aS,
-                                    sections: y,
+                                    sections: v,
                                     className: d.peopleList,
                                 },
                                 n,

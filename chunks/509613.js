@@ -1,16 +1,16 @@
 n.d(e, {
-    $l: () => O,
+    $l: () => I,
     CB: () => T,
     Em: () => f,
-    IC: () => d,
-    J9: () => b,
+    IC: () => S,
+    J9: () => Z,
     ON: () => L,
     Ql: () =>
         function t(e, n) {
             if ("function" == typeof (null == e ? void 0 : e.buildLayout)) {
                 let n = e.buildLayout().map((e) => t(e)),
                     { buildLayout: i } = e,
-                    u = r(
+                    r = u(
                         l(
                             {},
                             (function (t, e) {
@@ -22,14 +22,14 @@ n.d(e, {
                                         var n,
                                             i,
                                             l = {},
-                                            r = Object.keys(t);
-                                        for (i = 0; i < r.length; i++) (n = r[i]), e.indexOf(n) >= 0 || (l[n] = t[n]);
+                                            u = Object.keys(t);
+                                        for (i = 0; i < u.length; i++) (n = u[i]), e.indexOf(n) >= 0 || (l[n] = t[n]);
                                         return l;
                                     })(t, e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(t);
-                                    for (i = 0; i < r.length; i++)
-                                        (n = r[i]),
+                                    var u = Object.getOwnPropertySymbols(t);
+                                    for (i = 0; i < u.length; i++)
+                                        (n = u[i]),
                                             !(e.indexOf(n) >= 0) &&
                                                 Object.prototype.propertyIsEnumerable.call(t, n) &&
                                                 (l[n] = t[n]);
@@ -39,16 +39,16 @@ n.d(e, {
                         ),
                         { layout: n },
                     );
-                return n.forEach((t) => (t.parent = u)), u;
+                return n.forEach((t) => (t.parent = r)), r;
             }
             return e;
         },
-    UO: () => N,
-    Uc: () => g,
+    UO: () => A,
+    Uc: () => O,
     ax: () => _,
-    k4: () => S,
+    k4: () => d,
     m7: () => o,
-    qs: () => A,
+    qs: () => N,
     so: () => s,
     vB: () => a,
     wf: () => c,
@@ -82,7 +82,7 @@ function l(t) {
     }
     return t;
 }
-function r(t, e) {
+function u(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -100,63 +100,63 @@ function r(t, e) {
         t
     );
 }
-function u(t, e, n) {
-    return r(l({}, n), {
+function r(t, e, n) {
+    return u(l({}, n), {
         key: t,
         type: e,
     });
 }
 function s(t) {
-    return u("$Root", i.Jq.ROOT, t);
+    return r("$Root", i.Jq.ROOT, t);
 }
 function a(t, e) {
-    return u(t, i.Jq.SECTION, e);
+    return r(t, i.Jq.SECTION, e);
 }
 function o(t, e) {
-    return u(t, i.Jq.SIDEBAR_ITEM, e);
+    return r(t, i.Jq.SIDEBAR_ITEM, e);
 }
 function c(t, e) {
-    return u(t, i.Jq.PANEL, e);
+    return r(t, i.Jq.PANEL, e);
 }
 function E(t, e) {
-    return u(t, i.Jq.PANE, e);
-}
-function d(t, e) {
-    return u(t, i.Jq.SPLIT, e);
+    return r(t, i.Jq.PANE, e);
 }
 function S(t, e) {
-    return u(t, i.Jq.CATEGORY, e);
+    return r(t, i.Jq.SPLIT, e);
+}
+function d(t, e) {
+    return r(t, i.Jq.CATEGORY, e);
 }
 function T(t, e) {
-    return u(t, i.Jq.ACCORDION, e);
+    return r(t, i.Jq.ACCORDION, e);
+}
+function I(t, e) {
+    return r(t, i.Jq.LIST, e);
 }
 function O(t, e) {
-    return u(t, i.Jq.LIST, e);
+    return r(t, i.Jq.FIELD_SET, e);
 }
-function g(t, e) {
-    return u(t, i.Jq.FIELD_SET, e);
-}
-function I(t, e, n) {
-    return r(l({}, n), {
+function g(t, e, n) {
+    return u(l({}, n), {
         key: t,
         type: e,
     });
 }
 function _(t, e) {
-    return I(t, i.Jq.BUTTON, e);
-}
-function A(t, e) {
-    return I(t, i.Jq.TOGGLE, e);
+    return g(t, i.Jq.BUTTON, e);
 }
 function N(t, e) {
-    return I(t, i.Jq.SLIDER, e);
+    return g(t, i.Jq.TOGGLE, e);
+}
+function A(t, e) {
+    return g(t, i.Jq.SLIDER, e);
 }
 function f(t, e) {
-    return I(t, i.Jq.SELECT, e);
+    return g(t, i.Jq.SELECT, e);
 }
-function b(t, e) {
-    return I(t, i.Jq.RADIO, e);
+function Z(t, e) {
+    return g(t, i.Jq.RADIO, e);
 }
 function L(t, e) {
-    return I(t, i.Jq.CUSTOM, e);
+    return g(t, i.Jq.CUSTOM, e);
 }

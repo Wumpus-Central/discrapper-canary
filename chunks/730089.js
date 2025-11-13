@@ -27,15 +27,15 @@ let f = (e, t, n, r) => (
                 uploadId: b,
                 roles: x,
                 image: j,
-                hideErrorModal: v,
-                analyticsLocation: _,
+                hideErrorModal: _,
+                analyticsLocation: v,
             } = e,
-            C = c.ZP.sanitizeEmojiName(n.name.split(".")[0]);
+            O = c.ZP.sanitizeEmojiName(n.name.split(".")[0]);
         if (c.ZP.isFileTooBig(n)) {
             if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
                 return f(n.name, n.size, h, b);
             else if (null != j) {
-                var O, y;
+                var C, y;
                 let e;
                 t = (0, r.Ae)(j, 128, 128);
                 try {
@@ -44,13 +44,13 @@ let f = (e, t, n, r) => (
                     return f(n.name, n.size, h, b);
                 }
                 if (
-                    ((O = t),
+                    ((C = t),
                     (y = e),
                     o.default.track(g.rMx.EMOJI_FILE_RESIZED, {
                         is_animated: !1,
                         file_type: n.type.split("/").pop(),
                         original_file_size_bytes: n.size,
-                        resized_file_size_bytes: (0, d.QB)(O),
+                        resized_file_size_bytes: (0, d.QB)(C),
                         resized_file_too_big: y,
                     }),
                     e)
@@ -62,9 +62,9 @@ let f = (e, t, n, r) => (
             let e = await (0, a.rS)({
                 guildId: h,
                 image: t,
-                name: C,
+                name: O,
                 roles: x,
-                analyticsLocation: _,
+                analyticsLocation: v,
             });
             return (
                 o.default.track(g.rMx.EMOJI_UPLOAD_COMPLETED, {
@@ -96,7 +96,7 @@ let f = (e, t, n, r) => (
                               (n = s.d.RESIZE_GIF)),
                 429 === i && ((e = m.intl.string(m.t.Whhv4w)), (n = s.d.RATE_LIMIT)),
                 null == e ||
-                    v ||
+                    _ ||
                     l.Z.show({
                         title: m.intl.string(m.t.iufib1),
                         body: e,

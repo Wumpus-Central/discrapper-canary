@@ -117,7 +117,7 @@ function R(e) {
             "hideDeviceTypeIcon",
             "label",
         ]);
-    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = N(t),
+    let { setDevice: P, Icon: D, getCanSetDevice: w, getWarningMessage: x, getLocation: L } = N(t),
         { analyticsLocations: M } = (0, d.ZP)(),
         j = (0, s.e7)([f.Z], () => f.Z.theme),
         [k, U] = i.useState(u),
@@ -125,7 +125,7 @@ function R(e) {
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
         V = null != _ ? _ : F,
-        H = (0, s.e7)([h.Z], () => D(h.Z)),
+        H = (0, s.e7)([h.Z], () => w(h.Z)),
         { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
         W = (0, r.jsx)(c.Wn, {
             messageType: c.QYI.WARNING,
@@ -181,7 +181,7 @@ function R(e) {
                 !I &&
                     (0, r.jsx)("div", {
                         className: v.deviceIcon,
-                        children: (0, r.jsx)(w, {
+                        children: (0, r.jsx)(D, {
                             size: "custom",
                             width: 20,
                             height: 20,

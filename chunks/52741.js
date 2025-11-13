@@ -39,29 +39,29 @@ function v(e) {
             showYearlyPrice: m,
             priceOptions: v,
             textVariant: I,
-            className: S,
-            isApplicationHome: T,
+            className: T,
+            isApplicationHome: S,
             enablePremiumBrandRefresh: A,
             headerClassName: C,
             headingVariant: N = "heading-md/normal",
             headingColor: R,
         } = e,
         P = (0, l.e7)([d.Z], () => d.Z.getPremiumTypeSubscription()),
-        w = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, _.t7)(),
+        D = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        w = (0, _.t7)(),
         x = (0, _.lr)(),
         L = n === E.PremiumTypes.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
         M = (null == P ? void 0 : P.hasActiveTrial)
-            ? null == w
+            ? null == D
                 ? void 0
-                : w.premiumType
-            : D
+                : D.premiumType
+            : w
               ? E.PremiumTypes.TIER_2
               : null,
         j = (0, h.N)(),
         k = (0, p.N)(),
         U = null == j ? void 0 : j.subscription_trial;
-    if (!T && !t && null != M && n === M && null != P && null != P.planIdFromItems) {
+    if (!S && !t && null != M && n === M && null != P && null != P.planIdFromItems) {
         let e = null != P.trialEndsAt ? s()(null == P ? void 0 : P.trialEndsAt).diff(s()(), "d") : 0,
             t = E.GP[P.planIdFromItems],
             n = f.ZP.formatPriceString(f.ZP.getDefaultPrice(t.id), t.interval),
@@ -90,7 +90,7 @@ function v(e) {
             children: i(),
         });
     }
-    if (!T && !t && i) {
+    if (!S && !t && i) {
         let e = f.ZP.formatPriceString(
             f.ZP.getDefaultPrice(n === E.PremiumTypes.TIER_0 ? E.Xh.PREMIUM_MONTH_TIER_0 : E.Xh.PREMIUM_MONTH_TIER_2),
             E.rV.MONTH,
@@ -133,21 +133,21 @@ function v(e) {
             (0, r.jsx)(g.Z, {
                 subscriptionTier: L,
                 isGift: t,
-                className: null != S ? S : y.price,
+                className: null != T ? T : y.price,
                 priceOptions: v,
                 variant: I,
-                isApplicationHome: T,
+                isApplicationHome: S,
                 enablePremiumBrandRefresh: A,
             }),
             m &&
                 (0, r.jsx)(g.Z, {
                     subscriptionTier: L,
                     interval: E.rV.YEAR,
-                    className: null != S ? S : y.price,
+                    className: null != T ? T : y.price,
                     isGift: t,
                     priceOptions: v,
                     variant: I,
-                    isApplicationHome: T,
+                    isApplicationHome: S,
                     enablePremiumBrandRefresh: A,
                 }),
         ],

@@ -38,10 +38,10 @@ let j = "mweb_handoff_nonce",
                     fingerprint: f,
                 });
         }, [f, e]);
-        let [C, A] = i.useState(null),
-            T = i.useCallback(
+        let [C, T] = i.useState(null),
+            A = i.useCallback(
                 (e) => {
-                    A(e),
+                    T(e),
                         p.default.track(
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
@@ -51,18 +51,18 @@ let j = "mweb_handoff_nonce",
                             { fingerprint: O },
                         );
                 },
-                [A, O],
+                [T, O],
             ),
             Z = c.K.get(j);
         if (
-            ("null" === n && null === C && T("deep_link_failed"),
-            null != n && "null" !== n && null == Z && null === C && T("nonce_missing"),
+            ("null" === n && null === C && A("deep_link_failed"),
+            null != n && "null" !== n && null == Z && null === C && A("nonce_missing"),
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(b);
-                    (null == e || Date.now() >= e) && (T("nonce_expired"), N());
+                    (null == e || Date.now() >= e) && (A("nonce_expired"), N());
                 }
-            }, [Z, T]),
+            }, [Z, A]),
             i.useEffect(() => {
                 null != n &&
                     "null" !== n &&
@@ -92,12 +92,12 @@ let j = "mweb_handoff_nonce",
                                 window.history.pushState(null, "", e);
                         })
                         .catch(() => {
-                            T("handoff_exchange");
+                            A("handoff_exchange");
                         })
                         .finally(() => {
                             N();
                         });
-            }, [n, Z, C, O, T]),
+            }, [n, Z, C, O, A]),
             null == O)
         )
             return null;

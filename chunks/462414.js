@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(243814),
     i = n(846027),
     l = n(837968),
@@ -14,7 +14,7 @@ function f(e) {
     if (null == t) throw new o.Z({ errorCode: d.lTL.INVALID_COMMAND }, "No application.");
     return t;
 }
-let m = {
+let h = {
     [d.Etm.SET_VOICE_SETTINGS_2]: {
         scope: u.lH,
         validation: (e) =>

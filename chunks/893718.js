@@ -1,16 +1,16 @@
 n.d(t, {
     O1: () => eA,
-    Sg: () => eS,
+    Sg: () => eT,
     TE: () => ex,
     ZP: () => eB,
     aT: () => ek,
-    ae: () => eT,
+    ae: () => eS,
     bL: () => eI,
     hJ: () => eN,
     iV: () => eL,
     jx: () => eP,
-    oR: () => eD,
-    qz: () => ew,
+    oR: () => ew,
+    qz: () => eD,
     vB: () => eU,
     x2: () => eR,
 }),
@@ -38,15 +38,15 @@ var r = n(951288),
     O = n(541099),
     v = n(663924),
     I = n(998698),
-    S = n(271668),
-    T = n(61356),
+    T = n(271668),
+    S = n(61356),
     A = n(326133),
     C = n(106824),
     N = n(570220),
     R = n(28546),
     P = n(805680),
-    w = n(368844),
-    D = n(41776),
+    D = n(368844),
+    w = n(41776),
     x = n(657871),
     L = n(849522),
     M = n(780291),
@@ -158,7 +158,7 @@ function eI(e, t, a, o, s) {
                             : [],
                     O = null != (b = W.Z.getUploads(s, t.drafts.type)) ? b : [],
                     v = (0, j.q5)(s);
-                if (null == d && !_ && !m && (0, w.CB)(O, s)) {
+                if (null == d && !_ && !m && (0, D.CB)(O, s)) {
                     c(!1),
                         (0, p.ZDy)(async () => {
                             let { default: e } = await Promise.all([
@@ -214,7 +214,7 @@ function eI(e, t, a, o, s) {
         ),
     };
 }
-function eS(e, t, n) {
+function eT(e, t, n) {
     return i.useCallback(
         (r) => {
             var i, a;
@@ -227,7 +227,7 @@ function eS(e, t, n) {
         [n, e, t],
     );
 }
-function eT(e) {
+function eS(e) {
     return i.useCallback(
         (t) => {
             let { emoji: n, willClose: r } = t,
@@ -344,12 +344,12 @@ function eP() {
         handleHideAutocomplete: n,
     };
 }
-function ew(e) {
+function eD(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function eD(e) {
+function ew(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -363,7 +363,7 @@ function eD(e) {
 }
 function ex(e, t, n, r) {
     let i = e.getGuildId(),
-        a = (0, _.e7)([D.Z], () => null != i && D.Z.isLurking(i), [i]),
+        a = (0, _.e7)([w.Z], () => null != i && w.Z.isLurking(i), [i]),
         o = (0, _.e7)([F.ZP, K.default], () => {
             var e, t;
             let n = K.default.getCurrentUser();
@@ -516,8 +516,8 @@ function eG(e, t) {
         className: O,
         innerClassName: C,
         editorClassName: R,
-        id: w,
-        required: D,
+        id: D,
+        required: w,
         disabled: x,
         placeholder: j,
         accessibilityLabel: k,
@@ -555,18 +555,18 @@ function eG(e, t) {
     } = e;
     c()(null != G, "chat input type must be set");
     let { analyticsLocations: eq } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eX = ew(t),
+        eX = eD(t),
         eQ = i.useRef(null),
         eJ = i.useRef(null),
         e$ = i.useRef(null),
         e0 = i.useRef(null),
         e1 = i.useRef(null);
     null == eZ || eZ(e$.current);
-    let e3 = (0, y.Z)(U),
-        [e2, e4] = i.useState(!e3);
+    let e2 = (0, y.Z)(U),
+        [e3, e4] = i.useState(!e2);
     (0, m.PM)(eX, (e) => {
         let { width: t } = e;
-        return e4(!e3 && (null == t || t > eb));
+        return e4(!e2 && (null == t || t > eb));
     });
     let { activeCommand: e8, activeCommandSection: e5 } = (0, _.cj)([I.Z], () => {
             var e, t;
@@ -608,8 +608,8 @@ function eG(e, t) {
         ),
         { submitting: t_, submit: tp, handleSubmit: th } = eI(ec, G, e$, e1, U.id),
         { autocompleteRef: tm, handleMaybeShowAutocomplete: tg, handleHideAutocomplete: tE } = eP(),
-        tb = eS(tp, G, e$),
-        ty = eT(e$),
+        tb = eT(tp, G, e$),
+        ty = eS(e$),
         tO = eA({
             editorRef: e$,
             disabled: e9,
@@ -623,14 +623,14 @@ function eG(e, t) {
             var e;
             return null == e1 || null == (e = e1.current) ? void 0 : e.hide();
         }, []),
-        { editorHeight: tS, handleResize: tT } = eD(z),
+        { editorHeight: tT, handleResize: tS } = ew(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = eM(tm, eQ, ta),
-        { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tw } = eL(G, e$),
-        tD = ej(tc, e$),
+        { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tD } = eL(G, e$),
+        tw = ej(tc, e$),
         tx = ek(f),
         { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tM } = eU(),
         { moveAppsEntrypointToOverflow: tj } = $.n.useConfig({ location: "ChannelAppLauncher" }),
-        tk = (0, T.Z)({ type: G });
+        tk = (0, S.Z)({ type: G });
     (0, J.S)(tc, U.guild_id, U.id);
     let tU = null != W,
         tG = (e9 && !((e6 || e7) && tn)) || (t_ && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
@@ -646,7 +646,7 @@ function eG(e, t) {
             activeCommand: e8,
             pendingReply: W,
             pendingScheduledMessage: eK,
-            selectedAutocompleteInputType: tD,
+            selectedAutocompleteInputType: tw,
         }),
         tH = 0 === f.trim().length,
         tY = G.layout === ee.gy.INLINE,
@@ -668,7 +668,7 @@ function eG(e, t) {
             channel: U,
             handleSubmit: th,
             isEmpty: tH,
-            showAllButtons: e2,
+            showAllButtons: e3,
         }),
         tX = tZ
             ? (0, r.jsx)(es.Z, {
@@ -741,7 +741,7 @@ function eG(e, t) {
                                             G === ee.Ie.CREATE_FORUM_POST || G === ee.Ie.FORWARD_MESSAGE_INPUT,
                                         [ep.sansAttachButtonUserProfileReply]: G === ee.Ie.USER_PROFILE_REPLY,
                                     }),
-                                    onMouseDown: tw,
+                                    onMouseDown: tD,
                                     children: [
                                         tz,
                                         tj && tK,
@@ -751,14 +751,14 @@ function eG(e, t) {
                                             ringClassName: ep.focusRing,
                                             children: (0, r.jsx)(et.Z, {
                                                 ref: e$,
-                                                id: w,
+                                                id: D,
                                                 focused: B,
                                                 useSlate: ti,
                                                 textValue: f,
                                                 richValue: h,
                                                 disabled: e9,
                                                 placeholder: j,
-                                                required: D,
+                                                required: w,
                                                 accessibilityLabel: k,
                                                 isPreviewing: (e6 || e7) && tn,
                                                 channel: U,
@@ -769,7 +769,7 @@ function eG(e, t) {
                                                 allowNewLines: eO,
                                                 "aria-describedby": eG,
                                                 onChange: tf,
-                                                onResize: tT,
+                                                onResize: tS,
                                                 onBlur: q,
                                                 onFocus: X,
                                                 onKeyDown: er,
@@ -806,7 +806,7 @@ function eG(e, t) {
                         }),
                         ta
                             ? null
-                            : (0, r.jsx)(S.Z, {
+                            : (0, r.jsx)(T.Z, {
                                   ref: eQ,
                                   channel: U,
                                   canOnlyUseTextCommands: tU,
@@ -831,14 +831,14 @@ function eG(e, t) {
                             onSendSticker: tO,
                             onVisibilityChange: tM,
                             editorScrollerRef: e0,
-                            editorHeight: tS,
+                            editorHeight: tT,
                             barsHeight: 40 * tV.floating.length,
                             setValue: (e, t) => (null == tf ? void 0 : tf(null, e, t)),
                             position: eF,
                         }),
                         (0, r.jsx)(M.Z, {
                             textValue: f,
-                            editorHeight: tS,
+                            editorHeight: tT,
                             channelId: U.id,
                         }),
                         tX,

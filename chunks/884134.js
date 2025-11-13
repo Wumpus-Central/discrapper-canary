@@ -20,22 +20,22 @@ var r = n(951288),
     O = n(781391),
     v = n(210887),
     I = n(313789),
-    S = n(518596),
-    T = n(626135),
+    T = n(518596),
+    S = n(626135),
     A = n(233398),
     C = n(263198),
     N = n(866419),
     R = n(36982),
     P = n(803038),
-    w = n(990924),
-    D = n(771934),
+    D = n(990924),
+    w = n(771934),
     x = n(857658),
     L = n(174278),
     M = n(714097),
     j = n(981631),
     k = n(921944),
     U = n(474936),
-    G = n(531421),
+    G = n(422129),
     B = n(388032),
     Z = n(882741);
 let F = 0,
@@ -144,7 +144,7 @@ function X(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(360, r));
-        c("".concat(i, "\xB0")), (0, D.Ac)(), n(i);
+        c("".concat(i, "\xB0")), (0, w.Ac)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: o()(Z.sliderContainer, Z.gradientDirectionSliderContainer),
@@ -186,7 +186,7 @@ function X(e) {
                             minValue: 0,
                             maxValue: 360,
                             onValueChange: (e) => {
-                                (0, D.fR)();
+                                (0, w.fR)();
                                 let t = q(e);
                                 t !== e || s(e), n(t);
                             },
@@ -213,7 +213,7 @@ function Q(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(100, r));
-        l("".concat(i, "%")), (0, D.PI)(), n(i);
+        l("".concat(i, "%")), (0, w.PI)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: Z.sliderContainer,
@@ -242,7 +242,7 @@ function Q(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, D.z3)(), o(e), n(e);
+                        (0, w.z3)(), o(e), n(e);
                     },
                     onValueRender: () => null,
                     keyboardStep: 1,
@@ -261,7 +261,7 @@ function J(e) {
         p = i.useRef(null),
         h = i.useCallback(() => {
             var e;
-            (0, D.Om)();
+            (0, w.Om)();
             let t = (0, C.C)();
             A.Ig.getState().setAll({
                 colors: t.colors,
@@ -343,7 +343,7 @@ function ee(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, y.m)(U.PremiumTypes.TIER_2);
     return (
-        (0, D.hf)(i, h.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
+        (0, w.hf)(i, h.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsx)("div", {
             className: Z.coachmarkFooterContainer,
             children: i
@@ -369,12 +369,12 @@ function et(e) {
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
         s = (0, y.m)(U.PremiumTypes.TIER_2),
         c = (null == (t = (0, g.oq)().metadata) ? void 0 : t.from) === g.tE.SHARE_MESSAGE;
-    (0, D.hf)(s, h.Z.CUSTOM_THEMES_EDITOR);
+    (0, w.hf)(s, h.Z.CUSTOM_THEMES_EDITOR);
     let u = () => {
-            (0, D.Vb)(),
+            (0, w.Vb)(),
                 (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
                 (null == a ? void 0 : a.from) === g.tE.SETTING
-                    ? ((0, S.openUserSettings)(I.n.APPEARANCE_PANEL, { section: j.oAB.APPEARANCE }), (0, g.Ll)())
+                    ? ((0, T.openUserSettings)(I.n.APPEARANCE_PANEL, { section: j.oAB.APPEARANCE }), (0, g.Ll)())
                     : (null == a ? void 0 : a.from) === g.tE.CLIENT_THEMES_EDITOR
                       ? (0, g.XO)(g.wh.CLIENT_THEMES)
                       : (0, g.Ll)();
@@ -394,7 +394,7 @@ function et(e) {
                       (0, r.jsx)($, {
                           disabled: !i,
                           onApply: () => {
-                              c && T.default.track(j.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
+                              c && S.default.track(j.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
                           },
                       }),
                   ],
@@ -424,54 +424,54 @@ function en(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: o, isMobile: c } = e,
         u = P.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        b = w.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
+        b = D.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
         y = (0, N.jJ)(),
         I = (0, N.SK)(),
-        S = i.useRef(!1),
+        T = i.useRef(!1),
         {
-            colors: T,
+            colors: S,
             chassisMixAmount: C,
             gradientAngle: L,
             setColors: j,
             setChassisMixAmount: U,
             setGradientAngle: F,
         } = (0, A.Ig)(),
-        [V, H] = i.useState(null != (t = T[0]) ? t : A.Dp),
+        [V, H] = i.useState(null != (t = S[0]) ? t : A.Dp),
         Y = (0, s.e7)([v.Z], () => v.Z.theme),
         W = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: z } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
         q = (0, s.e7)([R.Z], () => R.Z.getSavedCustomTheme()),
         $ = async () => {
-            (S.current = !0),
+            (T.current = !0),
                 await (0, _.ZI)({
                     theme: Y,
                     customUserThemeSettings: {
-                        colors: T,
+                        colors: S,
                         gradientColorStops: [],
                         gradientAngle: L,
                         baseMix: C,
                     },
                 }),
-                (0, D.u7)(T, C, L, Y, z),
+                (0, w.u7)(S, C, L, Y, z),
                 null == a || a(k.L.TAKE_ACTION),
                 W || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
         },
         en = () => {
-            y(N._m.RESET_BUTTON), (0, D.uf)();
+            y(N._m.RESET_BUTTON), (0, w.uf)();
         },
-        er = T.length > 0;
+        er = S.length > 0;
     return (i.useEffect(
         () => () => {
-            S.current || y(N._m.EDITOR_CLOSE);
+            T.current || y(N._m.EDITOR_CLOSE);
         },
         [y],
     ),
     (0, p.ZP)(() => {
         if (!o) {
             var e;
-            let t = (null != (e = null == T ? void 0 : T.length) ? e : 0) > 0,
+            let t = (null != (e = null == S ? void 0 : S.length) ? e : 0) > 0,
                 n = null != q;
             !t && n && b
                 ? (A.Ig.getState().setAll({
@@ -480,7 +480,7 @@ function en(e) {
                       chassisMixAmount: q.base_mix,
                   }),
                   (0, N.Bv)(q.base_theme))
-                : (0, N.lT)(T, V, j);
+                : (0, N.lT)(S, V, j);
         }
     }),
     u)
@@ -517,10 +517,10 @@ function en(e) {
                                       }),
                                       (0, r.jsx)(x.U, {
                                           onChange: (e) => {
-                                              H(e), 0 === T.length && (0, N.lT)(T, e, j);
+                                              H(e), 0 === S.length && (0, N.lT)(S, e, j);
                                           },
                                           value: V,
-                                          colors: T,
+                                          colors: S,
                                           setColors: j,
                                       }),
                                   ],
@@ -533,7 +533,7 @@ function en(e) {
                                           color: "text-secondary",
                                           children: B.intl.string(G.default.F1t0c8),
                                       }),
-                                      T.length > 1 &&
+                                      S.length > 1 &&
                                           (0, r.jsx)(X, {
                                               gradientAngle: L,
                                               setGradientAngle: F,
@@ -541,7 +541,7 @@ function en(e) {
                                       (0, r.jsx)(Q, {
                                           chassisMixAmount: C,
                                           setChassisMixAmount: (e) => {
-                                              U(e), 0 === T.length && (0, N.lT)(T, V, j);
+                                              U(e), 0 === S.length && (0, N.lT)(S, V, j);
                                           },
                                       }),
                                   ],

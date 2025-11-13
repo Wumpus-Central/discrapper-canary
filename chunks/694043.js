@@ -1,8 +1,8 @@
 a.d(e, {
     Ak: () => o,
     QC: () => i,
-    t$: () => c,
-    zb: () => E,
+    t$: () => E,
+    zb: () => c,
 });
 var r = a(176984),
     _ = a(622916);
@@ -18,7 +18,7 @@ function o() {
 function i(t) {
     return t && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(t.toString());
 }
-function c() {
+function E() {
     if ("string" == typeof EdgeRuntime) return !0;
     if (!o()) return !1;
     if (i(n.fetch)) return !0;
@@ -36,6 +36,6 @@ function c() {
         }
     return t;
 }
-function E() {
+function c() {
     return "ReportingObserver" in n;
 }

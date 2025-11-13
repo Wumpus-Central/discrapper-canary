@@ -30,8 +30,8 @@ function O() {
             autoThreshold: p.Z.getModeOptions().autoThreshold,
         })),
         I = (0, s.e7)([p.Z], () => p.Z.getMode()),
-        S = (0, s.e7)([p.Z], () => p.Z.isEnabled());
-    function T(e, t) {
+        T = (0, s.e7)([p.Z], () => p.Z.isEnabled());
+    function S(e, t) {
         n(e), _((t & h.Dg.VOICE) === h.Dg.VOICE);
     }
     function A(e, t) {
@@ -45,10 +45,10 @@ function O() {
             let e = new c.V7();
             return (
                 e.start(1000, () => {
-                    p.Z.getMediaEngine().on(l.aB.VoiceActivity, T), e.stop();
+                    p.Z.getMediaEngine().on(l.aB.VoiceActivity, S), e.stop();
                 }),
                 () => {
-                    p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, T), e.stop();
+                    p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, S), e.stop();
                 }
             );
         }, []),
@@ -93,7 +93,7 @@ function O() {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 e,
-                !S &&
+                !T &&
                     (0, r.jsx)(d.Wn, {
                         messageType: d.QYI.WARNING,
                         className: b.marginBottom8,

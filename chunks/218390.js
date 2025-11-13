@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(703656),
     R = n(313789),
     P = n(342386),
-    w = n(518596),
-    D = n(246946),
+    D = n(518596),
+    w = n(246946),
     x = n(78839),
     L = n(483444),
     M = n(626135),
@@ -229,7 +229,7 @@ function ef() {
                                       cta_type: ea,
                                       target: eo,
                                   }),
-                                      (0, w.openUserSettings)(R.n.SUBSCRIPTIONS_PANEL, {
+                                      (0, D.openUserSettings)(R.n.SUBSCRIPTIONS_PANEL, {
                                           section: ee.oAB.SUBSCRIPTIONS,
                                       });
                               },
@@ -369,7 +369,7 @@ let eh = function () {
         [l, d] = i.useState(!0),
         f = (0, T.Z)({ forceFetch: !0 }),
         _ = null == (e = (0, Z.Z)()) ? void 0 : e.billingSettingsMarketingBanner,
-        b = (0, c.e7)([D.Z], () => D.Z.enabled),
+        b = (0, c.e7)([w.Z], () => w.Z.enabled),
         y = i.useRef(null);
     (0, H.B)();
     let N = (0, V.b)();
@@ -381,14 +381,14 @@ let eh = function () {
     let [R, P] = i.useState(!1);
     if (b) return (0, r.jsx)(E.Z, {});
     if (t) return (0, r.jsx)(A.c8, {});
-    let w = o && null !== a && s,
+    let D = o && null !== a && s,
         L = f.fetched && f.isFractionalPremiumActive;
-    if (!w && !L && !l)
+    if (!D && !L && !l)
         return (0, r.jsx)(C.Z, {
             title: et.intl.string(et.t.dyq9TR),
             note: null,
         });
-    if ((!w && !L) || l) return (0, r.jsx)(p.$jN, {});
+    if ((!D && !L) || l) return (0, r.jsx)(p.$jN, {});
     let j = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(v.Gt, {
         value: n,

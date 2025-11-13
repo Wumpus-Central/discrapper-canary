@@ -39,7 +39,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function w(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,7 +108,7 @@ function K(e) {
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
-            x(w({}, p), {
+            x(D({}, p), {
                 "aria-label": (0, O.Nf)(l, E),
                 className: o()({
                     [R.categoryItemGuildCategory]: null != E,
@@ -181,8 +181,8 @@ let z = (e) => {
         A = i.useMemo(() => (g ? (0, O.ZF)() : I), [I, g]),
         C = i.useRef(null),
         P = (0, u.e7)([E.Z], () => E.Z.isFocused()),
-        w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
-        D = i.useMemo(
+        D = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
+        w = i.useMemo(
             () =>
                 l().memoize((e, t) => {
                     let n = A[t];
@@ -197,12 +197,12 @@ let z = (e) => {
                                 categoryIndex: t,
                                 handleCategorySelect: y,
                                 isWindowFocused: P,
-                                useReducedMotion: w,
+                                useReducedMotion: D,
                             },
                             t,
                         );
                 }),
-            [b, v, A, y, P, w],
+            [b, v, A, y, P, D],
         ),
         x = i.useMemo(() => [8, 8, 0, 8], []),
         L = i.useCallback(
@@ -291,7 +291,7 @@ let z = (e) => {
         categories: A,
         listPadding: x,
         onScroll: $,
-        renderCategoryListItem: D,
+        renderCategoryListItem: w,
         renderSection: en,
         rowCount: A.length,
         categoryHeight: L,

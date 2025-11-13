@@ -17,43 +17,43 @@ function f(e) {
         [f, b] = i.useState(c);
     i.useEffect(() => b(c), [c]);
     let x = null != (t = (0, s.A)({ guildId: n.id })) ? t : 0,
-        [j, v] = i.useState(null),
-        _ = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, a.J)(e))), [f]),
-        C = i.useMemo(() => f.length === g.nx, [f]),
-        O = i.useCallback(
+        [j, _] = i.useState(null),
+        v = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, a.J)(e))), [f]),
+        O = i.useMemo(() => f.length === g.nx, [f]),
+        C = i.useCallback(
             (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), b(e), null != j && v(null);
+                u.Z.setPendingMemberVerificationRules(n.id, e), b(e), null != j && _(null);
             },
             [j, n.id],
         ),
         y = i.useCallback(
             (e) => {
-                O([...f, e]);
+                C([...f, e]);
             },
-            [f, O],
-        ),
-        E = i.useCallback(
-            (e) => {
-                O([...f.slice(0, e), ...f.slice(e + 1)]);
-            },
-            [f, O],
+            [f, C],
         ),
         N = i.useCallback(
+            (e) => {
+                C([...f.slice(0, e), ...f.slice(e + 1)]);
+            },
+            [f, C],
+        ),
+        E = i.useCallback(
             (e, t) => {
                 if (f[e] === t) return;
                 let n = [...f];
-                (n[e] = t), O(n);
+                (n[e] = t), C(n);
             },
-            [f, O],
+            [f, C],
         ),
         I = i.useCallback(
             (e, t, n) => {
                 let r = f.indexOf(e),
                     i = [...f];
                 null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), b(i)),
-                    n ? (O(i), null !== j && v(null)) : j !== t && v(t);
+                    n ? (C(i), null !== j && _(null)) : j !== t && _(t);
             },
-            [j, f, O],
+            [j, f, C],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -74,24 +74,24 @@ function f(e) {
                     index: f.indexOf(e),
                     isDragEnabled: f.length > 1,
                     submittedGuildJoinRequestsCount: x,
-                    removeFormField: E,
-                    updateFormField: N,
+                    removeFormField: N,
+                    updateFormField: E,
                     updateFormFieldOrder: I,
                     canRemove: f.length > 1,
                     actionsLocation: "side",
                     fieldStyle: a.it.COMPACT,
                 }),
             ),
-            !C &&
+            !O &&
                 (0, r.jsx)("div", {
                     className: p.addQuestionsContainer,
                     children: (0, r.jsx)(o.Z, {
                         addFormField: y,
                         guild: n,
-                        allowTerms: !_,
+                        allowTerms: !v,
                     }),
                 }),
-            !C && (0, r.jsx)(h, { addFormField: y }),
+            !O && (0, r.jsx)(h, { addFormField: y }),
         ],
     });
 }

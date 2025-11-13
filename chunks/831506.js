@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -151,7 +151,7 @@ function P(e) {
         null != n && n.add(t.id);
     }
 }
-class w extends (r = o.ZP.Store) {
+class D extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([u.Z], N), this.waitFor(l.default, c.Z, u.Z);
     }
@@ -165,8 +165,8 @@ class w extends (r = o.ZP.Store) {
         return h;
     }
 }
-f(w, "displayName", "GamePartyStore");
-let D = new w(s.Z, {
+f(D, "displayName", "GamePartyStore");
+let w = new D(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: y,
     OVERLAY_INITIALIZE: O,
     GUILD_CREATE: v,

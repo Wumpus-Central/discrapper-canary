@@ -1,11 +1,11 @@
 n.d(t, {
     Oi: () => p,
-    UI: () => g,
+    UI: () => m,
     YG: () => d,
-    _M: () => h,
+    _M: () => g,
     hr: () => u,
     kc: () => f,
-    mB: () => m,
+    mB: () => h,
 });
 var r = n(647438),
     i = n(264181),
@@ -86,7 +86,7 @@ let u = (e) => {
                   format: "jpg",
               });
     },
-    m = (e) => {
+    h = (e) => {
         let t = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER),
             n = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_DARK),
             l = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
@@ -96,22 +96,22 @@ let u = (e) => {
             d = (0, s.zL)(o.jE.COACHTIP_AVATAR);
         return r.useMemo(() => {
             var r, s, o, p, f;
-            let m = [t, n, l, a, c, u, d].some((e) => null != e);
+            let h = [t, n, l, a, c, u, d].some((e) => null != e);
             if ((null == e ? void 0 : e.type) === i.Z.COACHMARK) return { hasPreviewAssets: !1 };
-            let h = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
-                g = null == h ? void 0 : h.resting,
-                _ = null == h ? void 0 : h.hovered;
+            let g = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
+                m = null == g ? void 0 : g.resting,
+                _ = null == g ? void 0 : g.hovered;
             return {
-                hasPreviewAssets: m,
+                hasPreviewAssets: h,
                 buttonBGHoverDark: null != (s = null != n ? n : t) ? s : null == _ ? void 0 : _.dark,
                 buttonBGHoverLight: null != (o = null != l ? l : t) ? o : null == _ ? void 0 : _.light,
-                buttonBGRestingDark: null != (p = null != c ? c : a) ? p : null == g ? void 0 : g.dark,
-                buttonBGRestingLight: null != (f = null != u ? u : a) ? f : null == g ? void 0 : g.light,
+                buttonBGRestingDark: null != (p = null != c ? c : a) ? p : null == m ? void 0 : m.dark,
+                buttonBGRestingLight: null != (f = null != u ? u : a) ? f : null == m ? void 0 : m.light,
                 coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar,
             };
         }, [t, n, l, a, c, u, d, e]);
     },
-    h = (e) => {
+    g = (e) => {
         var t, n;
         return (0, a.Y)("ImmersiveBanner")
             ? {
@@ -123,7 +123,7 @@ let u = (e) => {
                   bannerAnimatedUrl: null == (n = e.bannerAsset) ? void 0 : n.animated,
               };
     },
-    g = (e) =>
+    m = (e) =>
         (0, a.Y)("WideBanner")
             ? {
                   bannerURL: e.bannerURL,

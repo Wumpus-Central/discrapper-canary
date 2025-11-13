@@ -39,8 +39,8 @@ var r = n(951288),
     I = n(989941),
     E = n(39540),
     N = n(958707),
-    R = n(152165),
-    A = n(133179),
+    A = n(152165),
+    R = n(133179),
     M = n(70722),
     k = n(761274),
     D = n(46140),
@@ -116,7 +116,7 @@ function W(e) {
         w = null != y && y.length > 0,
         [P, T] = i.useState(c.vA.WINDOW),
         [I, E] = i.useState(!1),
-        R = i.useRef(null),
+        A = i.useRef(null),
         M = i.useRef(new u.Xp()),
         D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
         U = H(
@@ -160,7 +160,7 @@ function W(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((R.current = e), E(!e.isScrolledToTop()));
+            null !== e && ((A.current = e), E(!e.isScrolledToTop()));
         }, []),
         [V, J] = i.useState(void 0);
     i.useEffect(() => {
@@ -199,7 +199,7 @@ function W(e) {
                 className: o()(G.tile, { [G.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    A.Z,
+                    R.Z,
                     {
                         source: e,
                         selectedSource: t,
@@ -253,7 +253,7 @@ function W(e) {
                 ref: z,
                 className: G.sourceScroller,
                 onScroll: function () {
-                    let e = R.current;
+                    let e = A.current;
                     null != e && E(!e.isScrolledToTop());
                 },
                 children: [
@@ -287,7 +287,7 @@ function z(e) {
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(A.Z, { className: G.nativeSourceSingleTypeImage }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
@@ -489,7 +489,7 @@ function X(e) {
                   color: "text-danger",
                   children: null != s && s.length > 0 ? s : L.intl.string(L.t.CKsXk3),
               })
-            : (0, r.jsx)(R.Z, {
+            : (0, r.jsx)(A.Z, {
                   animated: !0,
                   className: G.nativePickerGuide,
               })

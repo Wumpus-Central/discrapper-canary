@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(42101);
 let v = 3,
     I = 3;
-function S(e) {
+function T(e) {
     let { applications: t } = e,
         n = i.useMemo(() => t.sort((e, t) => u.default.compare(t.id, e.id)), [t]),
         a = i.useMemo(() => {
@@ -134,7 +134,7 @@ function S(e) {
         ],
     });
 }
-function T() {
+function S() {
     let e = d._j.useSetting();
     return (0, r.jsx)(m.U, {
         setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
@@ -186,8 +186,8 @@ function C() {
             : t.length > 0
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(S, { applications: t }),
-                        (0, r.jsx)(T, {}),
+                        (0, r.jsx)(T, { applications: t }),
+                        (0, r.jsx)(S, {}),
                         (0, r.jsx)("div", { className: O.divider }),
                         (0, r.jsx)(A, {}),
                     ],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(907862),
@@ -10,14 +10,14 @@ var r = n(951288),
     d = n(335131),
     p = n(981631),
     f = n(388032);
-let m = (e) => {
-    let { displayOptions: t, targetElementRef: n, onRequestClose: m, onClick: h } = e,
-        { analyticsLocations: g } = (0, c.ZP)(o.Z.HOME_PAGE_SHOP_TAB),
+let h = (e) => {
+    let { displayOptions: t, targetElementRef: n, onRequestClose: h, onClick: g } = e,
+        { analyticsLocations: m } = (0, c.ZP)(o.Z.HOME_PAGE_SHOP_TAB),
         _ = (0, s.ZP)(),
         b = (0, a.wj)(_) ? t.assetDark : t.assetLight,
-        E = i.useRef(m);
+        E = i.useRef(h);
     return (
-        (E.current = m),
+        (E.current = h),
         i.useEffect(
             () => () => {
                 var e;
@@ -42,16 +42,16 @@ let m = (e) => {
                     text: f.intl.string(f.t.fYfGgK),
                     variant: "primary",
                     onClick: () => {
-                        null == h || h(),
+                        null == g || g(),
                             (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
                             (0, d.mK)({
-                                analyticsLocations: g,
+                                analyticsLocations: m,
                                 analyticsSource: o.Z.HOME_PAGE_SHOP_TAB,
                             });
                     },
                 },
             ],
-            onRequestClose: m,
+            onRequestClose: h,
         })
     );
 };

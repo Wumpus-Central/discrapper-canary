@@ -6,13 +6,13 @@ n.d(t, {
     hz: () => x,
     mz: () => L,
     ol: () => M,
-    xB: () => w,
+    xB: () => D,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(990547),
     c = n(748780),
     u = n(197723),
@@ -145,11 +145,11 @@ function P(e) {
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: C },
     });
-    let { reducedMotion: w } = i.useContext(d.Sfi),
-        D = (0, d.q_F)(
+    let { reducedMotion: D } = i.useContext(d.Sfi),
+        w = (0, d.q_F)(
             {
                 opacity: +!!P,
-                transform: P || w.enabled || "subtle" === A ? "scale(1)" : "scale(0.7)",
+                transform: P || D.enabled || "subtle" === A ? "scale(1)" : "scale(0.7)",
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -193,7 +193,7 @@ function P(e) {
                             [y.rootWithShadow]: !b,
                         }),
                         ref: x,
-                        style: D,
+                        style: w,
                         children: (0, r.jsx)(d.JcV, {
                             containerRef: x,
                             children: a,
@@ -204,7 +204,7 @@ function P(e) {
         ),
     });
 }
-function w(e) {
+function D(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(g.zM);
     return (0, r.jsx)(m.Z, {
@@ -219,7 +219,7 @@ function w(e) {
         children: e.children,
     });
 }
-function D(e) {
+function w(e) {
     switch (null != e ? e : "thin") {
         case "auto":
             return d.yWw;
@@ -232,7 +232,7 @@ function D(e) {
 function x(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = S(e, ["className", "children", "scrollerRef", "scrollbarType"]),
-        l = D(a);
+        l = w(a);
     return (0, r.jsx)(
         l,
         T(

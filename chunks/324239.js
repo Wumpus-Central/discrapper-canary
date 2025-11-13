@@ -17,22 +17,22 @@ function g(t) {
         [g, S] = l.useState(),
         [y, v] = l.useState(""),
         [N, b] = l.useState(""),
-        [C, j] = l.useState(!1);
+        [j, C] = l.useState(!1);
     l.useEffect(() => c.Z.flowStep(f.MK.ANY, f.mx.CLAIM_ACCOUNT), []);
     let O = async (t) => {
-        t.preventDefault(), j(!0), S(""), b("");
+        t.preventDefault(), C(!0), S(""), b("");
         try {
             await (0, s.S2)({
                 email: e,
                 password: y,
             }),
-                j(!1),
+                C(!1),
                 m();
         } catch (t) {
             var n, r;
             (null == t || null == (n = t.body) ? void 0 : n.email) && S(t.body.email),
                 (null == t || null == (r = t.body) ? void 0 : r.password) && b(t.body.password),
-                j(!1);
+                C(!1);
         }
     };
     return (0, r.jsxs)("div", {
@@ -86,7 +86,7 @@ function g(t) {
                                 variant: "primary",
                                 fullWidth: !0,
                                 type: "submit",
-                                loading: C,
+                                loading: j,
                                 disabled: 0 === e.length || 0 === y.length,
                             }),
                             u &&

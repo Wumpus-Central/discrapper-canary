@@ -1,8 +1,8 @@
 n.d(t, { E: () => m });
 var a = n(647438),
     i = n(442837),
-    l = n(626135),
-    r = n(74538),
+    r = n(626135),
+    l = n(74538),
     s = n(381585),
     o = n(597688),
     c = n(884697),
@@ -13,12 +13,12 @@ function m(e, t) {
         m = (0, s.sp)(),
         p = (0, i.e7)([o.Z], () => o.Z.getProduct(e)),
         h = (0, d.x)(),
-        x = r.ZP.canUseCollectibles(h),
+        x = l.ZP.canUseCollectibles(h),
         g = a.useRef(null),
         f = a.useCallback(() => {
             let a = null != p ? (0, c.Vw)(p, x, !1) : null,
                 i = null != p ? (0, c.eu)(p, x, !1) : void 0;
-            l.default.track(u.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+            r.default.track(u.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
                 sku_id: e,
                 display_price: null == a ? void 0 : a.amount,

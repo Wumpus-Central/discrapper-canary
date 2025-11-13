@@ -4,15 +4,15 @@ var r = a(573736),
     n = a(370336),
     o = a(886115),
     i = a(622916),
-    c = a(151122),
-    E = a(255768);
-let s = (0, c._I)((t = {}) => {
+    E = a(151122),
+    c = a(255768);
+let s = (0, E._I)((t = {}) => {
     let { depth: e = 3, captureErrorCause: a = !0 } = t;
     return {
         name: "ExtraErrorData",
-        processEvent(t, c, s) {
+        processEvent(t, E, s) {
             let { maxValueLength: l = 250 } = s.getOptions();
-            return (function (t, e = {}, a, c, s) {
+            return (function (t, e = {}, a, E, s) {
                 if (!e.originalException || !(0, r.VZ)(e.originalException)) return t;
                 let l = e.originalException.name || e.originalException.constructor.name,
                     I = (function (t, e, a) {
@@ -48,10 +48,10 @@ let s = (0, c._I)((t = {}) => {
                             }
                             return n;
                         } catch (t) {
-                            E.X && i.kg.error("Unable to extract extra data from the Error object:", t);
+                            c.X && i.kg.error("Unable to extract extra data from the Error object:", t);
                         }
                         return null;
-                    })(e.originalException, c, s);
+                    })(e.originalException, E, s);
                 if (I) {
                     let e = { ...t.contexts },
                         o = (0, _.Fv)(I, a);
@@ -64,7 +64,7 @@ let s = (0, c._I)((t = {}) => {
                     );
                 }
                 return t;
-            })(t, c, e, a, l);
+            })(t, E, e, a, l);
         },
     };
 });

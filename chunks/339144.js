@@ -23,9 +23,9 @@ var r = n(951288),
     O = n(48131),
     v = n(668519),
     j = n(803647),
-    C = n(746298),
-    E = n(705338),
-    x = n(445606),
+    x = n(746298),
+    C = n(705338),
+    E = n(445606),
     S = n(131704),
     I = n(944486),
     P = n(626135),
@@ -56,8 +56,8 @@ let L = i.memo(function (e) {
             h,
             y,
             {
-                stream: E,
-                canGoLive: x,
+                stream: C,
+                canGoLive: E,
                 guildId: T,
                 isStreaming: L,
                 channel: G,
@@ -76,7 +76,7 @@ let L = i.memo(function (e) {
                 autoTrackExposure: !1,
             }),
             { parentAnalyticsLocation: X } = (0, g.ZP)(),
-            Q = (0, C.Z)(z),
+            Q = (0, x.Z)(z),
             J = D(z, H, F),
             $ = i.useCallback(() => {
                 var e;
@@ -112,8 +112,8 @@ let L = i.memo(function (e) {
                 [X],
             ),
             en = i.useCallback(() => {
-                (0, j.Z)(E);
-            }, [E]),
+                (0, j.Z)(C);
+            }, [C]),
             er = i.useCallback(() => {
                 let e = null != G && (0, S.vd)(G.type) ? G : null,
                     t = null != e ? e.getGuildId() : T;
@@ -196,7 +196,7 @@ let L = i.memo(function (e) {
             }, [eo]);
         let ep = null == Q ? null : (0, r.jsx)(k, { guildId: Q }),
             eh =
-                (null != B || null == F || (0, p.R)()) && (L || x)
+                (null != B || null == F || (0, p.R)()) && (L || E)
                     ? (L
                           ? ((a = !1),
                             (s = () => {
@@ -258,7 +258,7 @@ let L = i.memo(function (e) {
                           onClick: et(V.applicationId),
                           icon: u.PBZ,
                       }),
-            eb = null == E ? null : (0, r.jsx)(_.Z, {}),
+            eb = null == C ? null : (0, r.jsx)(_.Z, {}),
             e_ =
                 es && ei && !eo
                     ? (0, r.jsx)(M, {
@@ -324,7 +324,7 @@ function k(e) {
         n = i.useRef(null),
         [l, o] = (0, y.US)([s.z.GAME_SHOP_RTC_POPOVER], T.R.ACCOUNT_NAME_ZONE, !0),
         a = i.useCallback(() => {
-            (0, E.Z)({ guildId: t }), o(T.L.USER_DISMISS);
+            (0, C.Z)({ guildId: t }), o(T.L.USER_DISMISS);
         }, [t, o]),
         c = i.useCallback(() => {
             o(T.L.USER_DISMISS);
@@ -338,7 +338,7 @@ function k(e) {
                 ref: n,
             }),
             l === s.z.GAME_SHOP_RTC_POPOVER
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(E.Z, {
                       onActionClick: a,
                       onRequestClose: c,
                       targetElementRef: n,

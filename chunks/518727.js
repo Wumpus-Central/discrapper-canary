@@ -43,12 +43,12 @@ let I = 1000,
                 }
             }, [I]),
             { isGift: R } = (0, h.wD)(),
-            { wasTier2PremiumBeforePurchase: P, selectedSkuId: w, purchaseState: D } = (0, m.JL)(),
+            { wasTier2PremiumBeforePurchase: P, selectedSkuId: D, purchaseState: w } = (0, m.JL)(),
             [x, L] = (0, i.useState)(!1);
         (0, i.useEffect)(() => {
-            D === g.A.PURCHASING && L(!0);
-        }, [D]);
-        let M = (0, f.P)(R, !!P, w),
+            w === g.A.PURCHASING && L(!0);
+        }, [w]);
+        let M = (0, f.P)(R, !!P, D),
             { mediaUrls: j, isSuccess: k } = (0, E.Z)(!a && M && x),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),

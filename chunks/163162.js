@@ -1,6 +1,6 @@
 a.d(e, {
     Wz: () => s,
-    m9: () => c,
+    m9: () => E,
     re: () =>
         function t(e, a = {}, n) {
             if ("function" != typeof e) return e;
@@ -11,7 +11,7 @@ a.d(e, {
             } catch (t) {
                 return e;
             }
-            let c = function () {
+            let E = function () {
                 let o = Array.prototype.slice.call(arguments);
                 try {
                     n && "function" == typeof n && n.apply(this, arguments);
@@ -19,9 +19,9 @@ a.d(e, {
                     return e.apply(this, r);
                 } catch (t) {
                     throw (
-                        (E++,
+                        (c++,
                         setTimeout(() => {
-                            E--;
+                            c--;
                         }),
                         (0, r.$e)((e) => {
                             e.addEventProcessor(
@@ -41,14 +41,14 @@ a.d(e, {
                 }
             };
             try {
-                for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (c[t] = e[t]);
+                for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (E[t] = e[t]);
             } catch (t) {}
-            (0, o.$Q)(c, e), (0, o.xp)(e, "__sentry_wrapped__", c);
+            (0, o.$Q)(E, e), (0, o.xp)(e, "__sentry_wrapped__", E);
             try {
-                Object.getOwnPropertyDescriptor(c, "name").configurable &&
-                    Object.defineProperty(c, "name", { get: () => e.name });
+                Object.getOwnPropertyDescriptor(E, "name").configurable &&
+                    Object.defineProperty(E, "name", { get: () => e.name });
             } catch (t) {}
-            return c;
+            return E;
         },
 });
 var r = a(263449),
@@ -56,8 +56,8 @@ var r = a(263449),
     n = a(899517),
     o = a(370336),
     i = a(394798);
-let c = n.n,
-    E = 0;
+let E = n.n,
+    c = 0;
 function s() {
-    return E > 0;
+    return c > 0;
 }

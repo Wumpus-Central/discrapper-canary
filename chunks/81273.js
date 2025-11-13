@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(265985),
     R = n(293810),
     P = n(981631),
-    w = n(388032);
-let D = "MMM DD, YYYY",
+    D = n(388032);
+let w = "MMM DD, YYYY",
     x = (e, t, n, a) => {
         let s,
             x = (0, c.e7)([E.Z], () => E.Z.isLurking(t)),
@@ -52,16 +52,16 @@ let D = "MMM DD, YYYY",
             $ = (null == F ? void 0 : F.paymentGateway) === P.gg$.APPLE_PARTNER,
             ee = !x && null != Z && H && !j && !K && !z && !$;
         j || (x && !L)
-            ? (s = w.intl.string(w.t.pQK5ho))
+            ? (s = D.intl.string(D.t.pQK5ho))
             : W === U
-              ? (s = w.intl.formatToPlainString(w.t.UlBRTl, {
-                    changeDate: null != F ? l()(F.currentPeriodEnd).format(D) : "",
+              ? (s = D.intl.formatToPlainString(D.t.UlBRTl, {
+                    changeDate: null != F ? l()(F.currentPeriodEnd).format(w) : "",
                 }))
               : K
-                ? (s = w.intl.string(w.t.ePFYOS))
+                ? (s = D.intl.string(D.t.ePFYOS))
                 : z
-                  ? (s = w.intl.string(w.t["0lPoT2"]))
-                  : $ && (s = w.intl.string(w.t.cEMaCt));
+                  ? (s = D.intl.string(D.t["0lPoT2"]))
+                  : $ && (s = D.intl.string(D.t.cEMaCt));
         let et = (0, f.Z)(R.iP);
         i.useEffect(() => {
             G &&
@@ -82,7 +82,7 @@ let D = "MMM DD, YYYY",
                     if ((null == r ? void 0 : r.is_eligible) === !0) {
                         var s;
                         n = null == Q || null == (s = Q.active_trial) ? void 0 : s.id;
-                    } else i = w.intl.string(w.t.vuvsK5);
+                    } else i = D.intl.string(D.t.vuvsK5);
                 }
                 (0, b.Z)({
                     activeSubscription: F,
@@ -90,8 +90,8 @@ let D = "MMM DD, YYYY",
                     trialId: n,
                     trialFooterMessageOverride:
                         (null == Q ? void 0 : Q.active_trial) != null
-                            ? w.intl.format(w.t.zyGyNk, {
-                                  buttonText: w.intl.string(w.t.BEeXib),
+                            ? D.intl.format(D.t.zyGyNk, {
+                                  buttonText: D.intl.string(D.t.BEeXib),
                                   interval: (0, v.iG)(k),
                                   days: 1,
                                   contactLink: P.EYA.CONTACT,

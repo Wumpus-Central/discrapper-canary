@@ -102,7 +102,7 @@ function I(e) {
             rows: R = 3,
             inputRef: P,
         } = e,
-        w = b(e, [
+        D = b(e, [
             "value",
             "placeholder",
             "autoFocus",
@@ -116,8 +116,8 @@ function I(e) {
             "rows",
             "inputRef",
         ]);
-    let { fieldProps: D, props: x } = (0, s.XF_)(w),
-        { disabled: L } = D,
+    let { fieldProps: w, props: x } = (0, s.XF_)(D),
+        { disabled: L } = w,
         M = (0, d.U)("UserSettingsDesignSystems"),
         j = (0, u.m)({
             validateOn: "change",
@@ -146,7 +146,7 @@ function I(e) {
                 : null;
     return (0, r.jsx)(
         s.gNt,
-        E(m({}, D), {
+        E(m({}, w), {
             trailingContent: G,
             errorMessage: j.hasError && null != (t = j.errorMessage) ? t : void 0,
             children: (0, r.jsxs)(s.UPk, {

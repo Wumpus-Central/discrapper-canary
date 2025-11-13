@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(706454),
     R = n(210887),
     P = n(418632),
-    w = n(10298),
-    D = n(526156),
+    D = n(10298),
+    w = n(526156),
     x = n(730820),
     L = n(888256),
     M = n(2719),
@@ -313,9 +313,9 @@ class K extends i.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, r.jsx)(w.N, {
+        return (0, r.jsx)(D.N, {
             header: B.intl.string(B.t["JAIM/m"]),
-            children: (0, r.jsx)(D.Z, {
+            children: (0, r.jsx)(w.Z, {
                 parentSetting: k.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: Z.tabPanel,

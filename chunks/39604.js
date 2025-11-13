@@ -58,8 +58,8 @@ var r = n(46973),
     N = n(61994),
     R = n(550351),
     P = n(659487),
-    w = n(711644),
-    D = n(259612),
+    D = n(711644),
+    w = n(259612),
     x = n(356659),
     L = n(981631),
     M = n(959517);
@@ -298,7 +298,7 @@ async function Q(e) {
             I.default.track(L.rMx.CLIP_SAVED, n);
         let r = "";
         try {
-            r = await (0, D.R)(s.Z.clips.getClipProtocolURLFromPath(c), 0);
+            r = await (0, w.R)(s.Z.clips.getClipProtocolURLFromPath(c), 0);
         } catch (e) {
             x.jF.warn("Failed to generate clip thumbnail:", e);
         }
@@ -365,7 +365,7 @@ async function J(e) {
                 try {
                     let e = (0, i.zS)(),
                         t = await e.getNextVideoOutputFrame(n);
-                    return (0, D.W)(t);
+                    return (0, w.W)(t);
                 } catch (e) {
                     return;
                 }
@@ -378,7 +378,7 @@ async function J(e) {
         clipMethod: n,
     });
     let P = "manual" === n ? (0, _.GN)("clip_save", 0.5) : null,
-        w = performance.now();
+        D = performance.now();
     try {
         if ("auto" === n) {
             let e = A.Z.getSettings().maxAutoClips,
@@ -418,7 +418,7 @@ async function J(e) {
     x.jF.info(
         ""
             .concat(A.Z.getSettings().clipsLength / 1000, "s clip save took ")
-            .concat(Math.round(performance.now() - w), "ms"),
+            .concat(Math.round(performance.now() - D), "ms"),
     );
 }
 async function $(e, t) {
@@ -554,7 +554,7 @@ async function es(e) {
                       soundboardAudio: !0,
                   },
         );
-    return e.type === C.NJ.SCREENSHOT ? r : (0, w.Z)(r);
+    return e.type === C.NJ.SCREENSHOT ? r : (0, D.Z)(r);
 }
 function el(e) {
     a.Z.dispatch({

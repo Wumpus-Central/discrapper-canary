@@ -31,7 +31,7 @@ let o = "1144058522808614923",
                 colors: [2949343],
             },
             getName: () => a.intl.string(a.t["4g+5bq"]),
-            getHeaderSrc: () => n(808236).Z,
+            getHeaderSrc: () => n(430597).Z,
             getBannerSrc: (e) => (e ? n(957901).Z : n(673497).Z),
         },
         shadow_realm: {

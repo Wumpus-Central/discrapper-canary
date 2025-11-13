@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(283029),
     v = n(357956),
     I = n(275909),
-    S = n(981631),
-    T = n(474936),
+    T = n(981631),
+    S = n(474936),
     A = n(388032),
     C = n(387473);
 function N(e, t, n) {
@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e) {
+function w(e) {
     let {
             guildBoostSlot: t,
             isCancellable: n,
@@ -88,7 +88,7 @@ function D(e) {
         } = e,
         _ = i.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
         p = (0, b.tl)(t),
-        h = (null == s ? void 0 : s.isPaused) === !0 && f === T.a$.NONE,
+        h = (null == s ? void 0 : s.isPaused) === !0 && f === S.a$.NONE,
         m = A.intl.string(A.t.mOWsF1);
     return (0, r.jsxs)(
         "li",
@@ -134,7 +134,7 @@ function D(e) {
                                         className: C.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             c.Avr,
-                                            w(R({}, e), {
+                                            D(R({}, e), {
                                                 variant: "primary",
                                                 text: A.intl.string(A.t.twFU3R),
                                                 onClick: () => a(t),
@@ -154,7 +154,7 @@ function D(e) {
                                         className: C.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             c.Avr,
-                                            w(R({}, e), {
+                                            D(R({}, e), {
                                                 variant: "primary",
                                                 text: A.intl.string(A.t["2glQNp"]),
                                                 onClick: () => o(t),
@@ -176,18 +176,18 @@ function x(e) {
         async () => (t) =>
             (0, r.jsx)(
                 _.default,
-                w(R({}, t), {
+                D(R({}, t), {
                     guildBoostSlots: [e],
-                    locationSection: S.jXE.SETTINGS_PREMIUM,
+                    locationSection: T.jXE.SETTINGS_PREMIUM,
                 }),
             ),
     );
 }
 function L(e) {
-    (0, u.ZDy)(async () => (t) => (0, r.jsx)(p.default, w(R({}, t), { guildBoostSlot: e })));
+    (0, u.ZDy)(async () => (t) => (0, r.jsx)(p.default, D(R({}, t), { guildBoostSlot: e })));
 }
 function M(e) {
-    (0, u.ZDy)(async () => (t) => (0, r.jsx)(h.default, w(R({}, t), { guildBoostSlotId: e.id })));
+    (0, u.ZDy)(async () => (t) => (0, r.jsx)(h.default, D(R({}, t), { guildBoostSlotId: e.id })));
 }
 let j = function (e) {
     let t,
@@ -199,8 +199,8 @@ let j = function (e) {
         { fractionalState: h } = (0, f.Z)(),
         v = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         I = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        S = h === T.a$.FP_SUB_PAUSED,
-        N = p && !S,
+        T = h === S.a$.FP_SUB_PAUSED,
+        N = p && !T,
         {
             appliedGuildBoostSlots: P,
             unappliedGuildBoostSlots: j,
@@ -281,7 +281,7 @@ let j = function (e) {
             ? A.intl.string(A.t["8pcUZi"])
             : A.intl.formatToPlainString(A.t.Kaw82o, { numUnappliedGuildBoostSlots: K });
     return (
-        (a = p && h === T.a$.NONE ? A.intl.string(A.t.mOWsF1) : A.intl.string(A.t.xr4m5B)),
+        (a = p && h === S.a$.NONE ? A.intl.string(A.t.mOWsF1) : A.intl.string(A.t.xr4m5B)),
         (0, r.jsx)("div", {
             className: C.wrapper,
             children: (0, r.jsxs)("div", {
@@ -324,7 +324,7 @@ let j = function (e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             u.Button,
-                                            w(
+                                            D(
                                                 R(
                                                     {
                                                         variant: "primary",
@@ -347,7 +347,7 @@ let j = function (e) {
                             className: C.unappliedBoostSlots,
                             children: j.map((e) =>
                                 (0, r.jsx)(
-                                    D,
+                                    w,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: F,

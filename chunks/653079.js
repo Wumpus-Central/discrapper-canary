@@ -10,9 +10,9 @@ var l = n(951288),
     d = n(778825),
     p = n(25990),
     m = n(74538),
-    x = n(956748),
+    h = n(956748),
     g = n(566697),
-    h = n(388032),
+    x = n(388032),
     v = n(763740);
 let _ = (e) => {
     var t, n;
@@ -31,16 +31,16 @@ let _ = (e) => {
             (0, l.jsx)("div", {
                 className: v.previewBox,
                 role: "img",
-                "aria-label": h.intl.string(h.t.SZeUdR),
+                "aria-label": x.intl.string(x.t.SZeUdR),
                 children: (0, l.jsxs)("div", {
                     className: v.previewContents,
                     "aria-hidden": !0,
                     children: [
-                        (0, l.jsx)(x.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, l.jsx)(x.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
@@ -92,11 +92,11 @@ let _ = (e) => {
                                   }),
                             t),
                         ),
-                        (0, l.jsx)(x.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, l.jsx)(x.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
@@ -115,12 +115,12 @@ let _ = (e) => {
                             (0, l.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 children: w
-                                    ? h.intl.string(h.t.nD78oa)
+                                    ? x.intl.string(x.t.nD78oa)
                                     : O && C
-                                      ? h.intl.string(h.t.hmyYK8)
+                                      ? x.intl.string(x.t.hmyYK8)
                                       : O
-                                        ? h.intl.string(h.t.JY1i0u)
-                                        : h.intl.string(h.t.fEGjVQ),
+                                        ? x.intl.string(x.t.JY1i0u)
+                                        : x.intl.string(x.t.fEGjVQ),
                             }),
                     ],
                 }),

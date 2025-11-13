@@ -24,15 +24,15 @@ var r,
     O = n(317381),
     v = n(100527),
     I = n(906732),
-    S = n(168551),
-    T = n(260035),
+    T = n(168551),
+    S = n(260035),
     A = n(686546),
     C = n(950796),
     N = n(587061),
     R = n(248687),
     P = n(280049),
-    w = n(314910),
-    D = n(728285),
+    D = n(314910),
+    w = n(728285),
     x = n(22205),
     L = n(984802),
     M = n(746106),
@@ -142,13 +142,13 @@ class X extends (r = a.Component) {
             r = !1,
             i = n.head;
         c()(null != i, "Window document ".concat(r ? "body" : "head", " was null"));
-        let a = i.querySelector("style[".concat(S.PQ, "]"));
+        let a = i.querySelector("style[".concat(T.PQ, "]"));
         if (null != a) {
             a.textContent = e;
             return;
         }
         let o = n.createElement("style");
-        o.setAttribute(S.PQ, "true"), (o.textContent = e), i.appendChild(o);
+        o.setAttribute(T.PQ, "true"), (o.textContent = e), i.appendChild(o);
     }
     registerPopoutGlobalKeybinds() {
         var e;
@@ -199,11 +199,11 @@ class X extends (r = a.Component) {
                                     children: (0, i.jsxs)(O, {
                                         children: [
                                             (0, i.jsx)(A.Co, {}),
-                                            (0, i.jsx)(D.Wu, {
+                                            (0, i.jsx)(w.Wu, {
                                                 appContext: null != E ? E : F.IlC.POPOUT,
                                                 renderWindow: o,
-                                                children: (0, i.jsx)(T.m, {
-                                                    children: (0, i.jsxs)(w.yP, {
+                                                children: (0, i.jsx)(S.m, {
+                                                    children: (0, i.jsxs)(D.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
                                                                 className: H.popout,
@@ -226,7 +226,7 @@ class X extends (r = a.Component) {
                                                             !g && (0, i.jsx)(h.nKe, {}),
                                                             (0, i.jsx)(m.Z, {}),
                                                             (0, i.jsx)(f.uZ, {}),
-                                                            (0, i.jsx)(w.Un, {}),
+                                                            (0, i.jsx)(D.Un, {}),
                                                         ],
                                                     }),
                                                 }),
@@ -301,7 +301,7 @@ let Q = a.forwardRef(function (e, t) {
         }));
         (0, N.Z)(r, !1);
         let { analyticsLocations: l } = (0, I.ZP)(v.Z.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: d } = (0, S.ZP)(),
+            { clientThemesClassName: u, clientThemesCSS: d } = (0, T.ZP)(),
             f = (0, L.Ll)(),
             _ = null != (n = e.themeOverride) ? n : f;
         return null == r

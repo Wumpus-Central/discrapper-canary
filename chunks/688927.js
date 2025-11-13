@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
     s = n(120356),
-    a = n.n(s),
-    o = n(481060),
+    o = n.n(s),
+    a = n(481060),
     i = n(113434),
     l = n(497505),
     c = n(670638),
@@ -14,9 +14,9 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: u.questAcceptedHeader,
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-xxs/medium",
-                className: a()(u.flex, u.headerText),
+                className: o()(u.flex, u.headerText),
                 children: d.intl.format(d.t["pX+fmn"], { expirationDate: m }),
             }),
             (0, r.jsx)(c.r, {
@@ -31,7 +31,7 @@ function p(e) {
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
-                        o.P3F,
+                        a.P3F,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -61,10 +61,10 @@ function p(e) {
                             {
                                 className: u.submenuWrapper,
                                 "aria-label": d.intl.string(d.t.DEoVWZ),
-                                children: (0, r.jsx)(o.xhG, {
+                                children: (0, r.jsx)(a.xhG, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: a()(u.submenuIcon, u.interactiveNormal),
+                                    className: o()(u.submenuIcon, u.interactiveNormal),
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors

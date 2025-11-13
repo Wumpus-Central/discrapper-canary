@@ -1,21 +1,21 @@
 n.d(t, {
-    AX: () => c,
+    AX: () => s,
     BR: () => d,
     Bo: () => g,
-    Df: () => p,
-    LT: () => b,
-    ZZ: () => f,
+    Df: () => f,
+    LT: () => v,
+    ZZ: () => p,
     cV: () => u,
-    fW: () => m,
-    gr: () => h,
-    oW: () => s,
+    fW: () => _,
+    gr: () => m,
+    oW: () => c,
 });
 var r = n(261470),
     i = n(544891),
     l = n(570140),
     a = n(984063),
     o = n(981631);
-function s(e, t, n, r, i) {
+function c(e, t, n, r, i) {
     l.Z.dispatch({
         type: "SHARED_CANVAS_DRAW_LINE_POINT",
         channelId: e,
@@ -25,7 +25,7 @@ function s(e, t, n, r, i) {
         point: i,
     });
 }
-function c(e, t, n, r) {
+function s(e, t, n, r) {
     return i.tn.post({
         url: o.ANM.SHARED_CANVAS_LINES(e, n),
         body: {
@@ -51,14 +51,14 @@ function d(e, t, n) {
         rejectWithError: !1,
     });
 }
-function p(e, t, n) {
+function f(e, t, n) {
     i.tn.del({
         url: o.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new r.Z(),
         rejectWithError: !0,
     });
 }
-function f(e, t) {
+function p(e, t) {
     (t.state = a.f.STOP),
         l.Z.dispatch({
             type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
@@ -67,7 +67,7 @@ function f(e, t) {
             streamerId: e,
         });
 }
-function h(e, t, n) {
+function m(e, t, n) {
     l.Z.dispatch({
         type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
         emojiHose: e,
@@ -75,7 +75,7 @@ function h(e, t, n) {
         streamerId: n,
     });
 }
-function m(e, t) {
+function _(e, t) {
     l.Z.dispatch({
         type: "SHARED_CANVAS_CLEAR_DRAWABLES",
         drawables: e,
@@ -88,6 +88,6 @@ function g(e) {
         drawMode: e,
     });
 }
-function b() {
+function v() {
     l.Z.dispatch({ type: "TOGGLE_OVERLAY_CANVAS" });
 }

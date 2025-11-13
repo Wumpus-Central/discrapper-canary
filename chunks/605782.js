@@ -1,98 +1,98 @@
-r.d(t, { Z: () => d }), r(35282);
-var n = r(951288),
-    i = r(647438),
-    l = r(843611),
-    s = r(215569);
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+i.d(e, { Z: () => d }), i(35282);
+var s = i(951288),
+    n = i(647438),
+    r = i(843611),
+    a = i(215569);
+function h(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var i = null != arguments[e] ? arguments[e] : {},
+            s = Object.keys(i);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (s = s.concat(
+                Object.getOwnPropertySymbols(i).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
+            s.forEach(function (e) {
+                var s;
+                (s = i[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
+                              value: s,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (t[e] = s);
             });
     }
-    return e;
+    return t;
 }
-function c(e, t) {
+function l(t, e) {
     return (
-        (t = null != t ? t : {}),
+        (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var i = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var s = Object.getOwnPropertySymbols(t);
+                      i.push.apply(i, s);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return i;
+              })(Object(e)).forEach(function (i) {
+                  Object.defineProperty(t, i, Object.getOwnPropertyDescriptor(e, i));
               }),
-        e
+        t
     );
 }
-function a(e, t) {
-    if (null == e) return {};
-    var r,
-        n,
-        i = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                i = {},
-                l = Object.keys(e);
-            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-            return i;
-        })(e, t);
+function o(t, e) {
+    if (null == t) return {};
+    var i,
+        s,
+        n = (function (t, e) {
+            if (null == t) return {};
+            var i,
+                s,
+                n = {},
+                r = Object.keys(t);
+            for (s = 0; s < r.length; s++) (i = r[s]), e.indexOf(i) >= 0 || (n[i] = t[i]);
+            return n;
+        })(t, e);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < l.length; n++)
-            (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        var r = Object.getOwnPropertySymbols(t);
+        for (s = 0; s < r.length; s++)
+            (i = r[s]), !(e.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(t, i) && (n[i] = t[i]);
     }
-    return i;
+    return n;
 }
-class u extends i.Component {
+class c extends n.Component {
     render() {
-        let e = this.props,
-            { children: t, location: r, history: u, staticContext: d, match: h } = e,
-            f = a(e, ["children", "location", "history", "staticContext", "match"]),
-            p = null,
-            x = null;
+        let t = this.props,
+            { children: e, location: i, history: c, staticContext: d, match: u } = t,
+            p = o(t, ["children", "location", "history", "staticContext", "match"]),
+            f = null,
+            m = null;
         return (
-            i.Children.forEach(t, (e) => {
-                if (null == p && i.isValidElement(e)) {
-                    let t = e.props,
-                        { component: n, render: s } = t,
-                        h = a(t, ["component", "render"]),
-                        f = h.path || h.from;
-                    null != (p = null != f ? (0, l.LX)(r.pathname, c(o({}, h), { path: f })) : null) &&
-                        ((h = c(o({}, h), {
-                            key: f,
-                            location: r,
-                            match: p,
-                            history: u,
+            n.Children.forEach(e, (t) => {
+                if (null == f && n.isValidElement(t)) {
+                    let e = t.props,
+                        { component: s, render: a } = e,
+                        u = o(e, ["component", "render"]),
+                        p = u.path || u.from;
+                    null != (f = null != p ? (0, r.LX)(i.pathname, l(h({}, u), { path: p })) : null) &&
+                        ((u = l(h({}, u), {
+                            key: p,
+                            location: i,
+                            match: f,
+                            history: c,
                             staticContext: d,
                         })),
-                        null != n ? (x = i.createElement(n, h)) : null != s && (x = s(h)));
+                        null != s ? (m = n.createElement(s, u)) : null != a && (m = a(u)));
                 }
             }),
-            (0, n.jsx)(s.W, c(o({}, f), { children: x }))
+            (0, s.jsx)(a.W, l(h({}, p), { children: m }))
         );
     }
 }
-let d = (0, l.EN)(u);
+let d = (0, r.EN)(c);

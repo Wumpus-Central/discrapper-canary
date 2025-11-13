@@ -1,33 +1,33 @@
 n.d(t, { Z: () => a });
-var r = n(951288),
-    i = n(499493),
-    l = n(810568);
+var i = n(951288),
+    l = n(499493),
+    r = n(810568);
 function a(e) {
     var t, n;
     let { entry: a, viewId: s, officialGuildId: o } = e;
-    return (0, r.jsx)(
-        i.Z,
+    return (0, i.jsx)(
+        l.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    i = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: i,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[t] = i);
                     });
             }
             return e;
@@ -35,8 +35,8 @@ function a(e) {
         (n = n =
             {
                 onReaction: () => {
-                    (0, l.UE)({
-                        action: l.as.SendMessageUser,
+                    (0, r.UE)({
+                        action: r.as.SendMessageUser,
                         applicationId: a.extra.application_id,
                         gameName: a.extra.game_name,
                         recipientUserId: a.author_id,
@@ -45,8 +45,8 @@ function a(e) {
                     });
                 },
                 onRequestOpen: () => {
-                    (0, l.UE)({
-                        action: l.as.ClickMessageUser,
+                    (0, r.UE)({
+                        action: r.as.ClickMessageUser,
                         applicationId: a.extra.application_id,
                         gameName: a.extra.game_name,
                         recipientUserId: a.author_id,
@@ -60,8 +60,8 @@ function a(e) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {

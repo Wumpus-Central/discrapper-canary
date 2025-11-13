@@ -35,8 +35,8 @@ var r = n(647438),
     N = n(199257),
     R = n(149203),
     P = n(185923),
-    w = n(388032);
-function D(e, t, n) {
+    D = n(388032);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -106,7 +106,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                 pickerIntention: l,
                 emojiSearchResults: f,
                 gridWidth: _,
-                emojiPaddingHorizontal: D,
+                emojiPaddingHorizontal: w,
                 emojiSpriteSize: L,
                 shouldShowSoundmojiInEmojiPicker: j,
                 showOnlyUnicode: U,
@@ -147,7 +147,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                 u = 0,
                 p = 0;
             if (null != V && null != _) {
-                let h = Math.floor(_ / (L + 2 * D)),
+                let h = Math.floor(_ / (L + 2 * w)),
                     m = 3 * h,
                     y = (o, d) => {
                         let f = new Map(),
@@ -166,9 +166,9 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                             C = d.sectionId === R.En.TOP_GUILD_EMOJI,
                             N = !C && null != O && T === O.id && y.length < (0, I.y4)(O),
                             P = C && y.length < h && !ei,
-                            D = null != O && C && ei && ea === S.B.WITH_TOP_LIST && er[O.id].length < (0, I.y4)(O),
-                            j = i && Q && null != O && (N || P || D);
-                        j && D && y.length === h && y.shift();
+                            w = null != O && C && ei && ea === S.B.WITH_TOP_LIST && er[O.id].length < (0, I.y4)(O),
+                            j = i && Q && null != O && (N || P || w);
+                        j && w && y.length === h && y.shift();
                         let k = y.length > m && null != O && d.isNitroLocked,
                             U = k && !X.has(O.id);
                         if (U) {
@@ -211,7 +211,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                         {
                                             type: 1,
                                             guildId: O.id,
-                                            name: w.intl.string(w.t["Z/r7IS"]),
+                                            name: D.intl.string(D.t["Z/r7IS"]),
                                             size: L,
                                             rowIndex: p,
                                             columnIndex: 0,
@@ -227,7 +227,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                     t.push({
                                         type: 1,
                                         guildId: O.id,
-                                        name: w.intl.string(w.t["Z/r7IS"]),
+                                        name: D.intl.string(D.t["Z/r7IS"]),
                                         size: L,
                                         rowIndex: e,
                                         columnIndex: t.length,
@@ -239,7 +239,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                     t.push({
                                         type: 2,
                                         guildId: O.id,
-                                        name: w.intl.string(w.t.NZI2Zk),
+                                        name: D.intl.string(D.t.NZI2Zk),
                                         size: L,
                                         rowIndex: e,
                                         columnIndex: t.length,
@@ -395,7 +395,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                 rowCountBySection: e,
                 sectionDescriptors: r,
             };
-        }, [V, _, L, D, f, n, ei, ea, er, i, Q, X, t, l, K, z, $, B, Z, q, W, Y, H, ee, eo, j]);
+        }, [V, _, L, w, f, n, ei, ea, er, i, Q, X, t, l, K, z, $, B, Z, q, W, Y, H, ee, eo, j]);
     };
 var G = (function (e) {
     return (e[(e.PREMIUM = 0)] = "PREMIUM"), (e[(e.ROLE_SUBSCRIPTION = 1)] = "ROLE_SUBSCRIPTION"), e;

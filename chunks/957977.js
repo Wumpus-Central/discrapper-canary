@@ -334,7 +334,7 @@ function C(e) {
         }),
         { ref: R } = N,
         P = b(N, ["ref"]),
-        w = y.some((e) => e.value === c);
+        D = y.some((e) => e.value === c);
     return (0, r.jsx)(
         "div",
         E(m({}, P), {
@@ -348,7 +348,7 @@ function C(e) {
                 (0, r.jsx)(
                     T,
                     {
-                        hasSelection: w,
+                        hasSelection: D,
                         disabled: g,
                         checked: c === e.value,
                         option: e,

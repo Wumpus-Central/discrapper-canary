@@ -1,4 +1,4 @@
 t.exports = {
-    TimelineDataSeries: i(888902),
-    TimelineGraphView: i(168188),
+    TimelineDataSeries: e(888902),
+    TimelineGraphView: e(168188),
 };

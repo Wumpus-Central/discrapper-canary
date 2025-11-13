@@ -70,7 +70,7 @@ function v(e) {
                 }
             );
         }, [T, S]);
-    let w = async (e) => {
+    let D = async (e) => {
         if (null == e) return;
         _ === h.n_.AVATAR
             ? I({ action: "SEND_REACT_AVATAR" })
@@ -102,7 +102,7 @@ function v(e) {
         closePopout: g.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            await w(t), n && (S(), null == T || T());
+            await D(t), n && (S(), null == T || T());
         },
         pickerIntention: m.Hz.PROFILE,
     });

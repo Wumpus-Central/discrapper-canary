@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var a = n(951288);
 n(647438);
-var r = n(722770),
-    i = n(481060),
+var i = n(722770),
+    r = n(481060),
     l = n(734934),
     s = n(158238),
     o = n(695346),
@@ -47,29 +47,29 @@ function f(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function b(e) {
-    let { status: t, currentStatus: n, description: r } = e,
+    let { status: t, currentStatus: n, description: i } = e,
         l = t !== m.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
             children: x.map((e) => {
-                let { duration: r, label: l } = e;
+                let { duration: i, label: l } = e;
                 return (0, a.jsx)(
-                    i.sNh,
+                    r.sNh,
                     {
-                        id: "".concat(t, "-").concat(r),
+                        id: "".concat(t, "-").concat(i),
                         label: l(),
                         action: () =>
                             (0, u.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
-                                durationMillis: r,
+                                durationMillis: i,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : g,
+                    null != i ? i : g,
                 );
             }),
         });
-    return (0, a.jsx)(i.sNh, {
+    return (0, a.jsx)(r.sNh, {
         id: t,
         className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
@@ -79,7 +79,7 @@ function b(e) {
             return (0, a.jsxs)("div", {
                 className: h.statusItem,
                 children: [
-                    (0, a.jsx)(i.qbd, {
+                    (0, a.jsx)(r.qbd, {
                         status: t,
                         className: h.icon,
                         size: 10,
@@ -89,10 +89,10 @@ function b(e) {
                         className: h.status,
                         children: (0, d.u5)(t),
                     }),
-                    null != r &&
+                    null != i &&
                         (0, a.jsx)("div", {
                             className: h.description,
-                            children: r,
+                            children: i,
                         }),
                 ],
             });
@@ -113,11 +113,11 @@ function v(e) {
         n = f(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = f(t, a);
+    let i = f(t, a);
     return n
         ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: p.intl.data.formatTime(t, { format: "short" }) })
         : p.intl.formatToPlainString(p.t["9OFjSe"], {
-              dateString: r
+              dateString: i
                   ? p.intl.data.formatRelativeTime(1, "day", { numeric: "auto" })
                   : p.intl.data.formatDate(t, { dateStyle: "short" }),
               timeString: p.intl.data.formatTime(t, { format: "short" }),
@@ -143,12 +143,12 @@ function j(e) {
         },
         j = (0, a.jsx)(a.Fragment, {
             children: x.map((t) => {
-                let { duration: n, label: r } = t;
+                let { duration: n, label: i } = t;
                 return (0, a.jsx)(
-                    i.sNh,
+                    r.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
-                        label: r(),
+                        label: i(),
                         action: () => {
                             (0, l.oW)(!0, n);
                         },
@@ -180,16 +180,16 @@ function j(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             _,
-            (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
+            (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
             y,
             C,
             S,
             c || n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
+                          (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
                           (0, a.jsx)(
-                              i.sNh,
+                              r.sNh,
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
@@ -200,7 +200,7 @@ function j(e) {
                                       (0, a.jsxs)("div", {
                                           className: h.statusItem,
                                           children: [
-                                              (0, a.jsx)(i.owu, {
+                                              (0, a.jsx)(r.owu, {
                                                   size: "xxs",
                                                   className: h.icon,
                                               }),
@@ -208,13 +208,13 @@ function j(e) {
                                                   className: h.focusModeTitle,
                                                   children: [
                                                       p.intl.string(p.t.gJRnwK),
-                                                      (0, a.jsx)(i.IGR, {
+                                                      (0, a.jsx)(r.IGR, {
                                                           text: n
                                                               ? p.intl.string(p.t.ApAu9f)
                                                               : u
                                                                 ? p.intl.string(p.t.gH3Frd)
                                                                 : p.intl.string(p.t["64pl82"]),
-                                                          color: n ? r.Z.BRAND_500 : u ? r.Z.RED_400 : r.Z.PRIMARY_500,
+                                                          color: n ? i.Z.BRAND_500 : u ? i.Z.RED_400 : i.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),

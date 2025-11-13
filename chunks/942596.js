@@ -32,8 +32,8 @@ var r,
     N = n(81063),
     R = n(768581),
     P = n(630388),
-    w = n(153066),
-    D = n(740265),
+    D = n(153066),
+    w = n(740265),
     x = n(122810),
     L = n(833664),
     M = n(503438),
@@ -153,7 +153,7 @@ class $ extends (r = a.PureComponent) {
             : e;
     }
     getTypeClass(e, t) {
-        return (0, w.l)(F, e, this.props.type, t);
+        return (0, D.l)(F, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
         return (0, k.Z)(this.activity) && "ActivityFeed" === this.props.type;
@@ -177,7 +177,7 @@ class $ extends (r = a.PureComponent) {
                 t = Z.intl.formatToPlainString(Z.t.Ge29Zy, { name: c });
                 break;
             case B.IIU.PLAYING:
-                t = (0, D.Z)(l);
+                t = (0, w.Z)(l);
                 break;
             case B.IIU.COMPETING:
                 t = Z.intl.formatToPlainString(Z.t.SQCo6D, { name: c });
@@ -196,7 +196,7 @@ class $ extends (r = a.PureComponent) {
                 className: F.headerContainer,
                 children: [
                     (0, i.jsx)(f.Heading, {
-                        className: s()((0, w.l)(F, "headerText", e ? "EmptyBody" : "Normal")),
+                        className: s()((0, D.l)(F, "headerText", e ? "EmptyBody" : "Normal")),
                         variant: a ? "text-xs/semibold" : "eyebrow",
                         children: (0, i.jsx)(u.Z, { children: t }),
                     }),
@@ -394,7 +394,7 @@ class $ extends (r = a.PureComponent) {
             : (0, i.jsx)(f.Text, {
                   title: c,
                   variant: "text-sm/semibold",
-                  className: s()((0, w.l)(F, "name", t.bot ? "wrap" : "normal")),
+                  className: s()((0, D.l)(F, "name", t.bot ? "wrap" : "normal")),
                   children: u,
               });
     }
@@ -616,7 +616,7 @@ class $ extends (r = a.PureComponent) {
                                 ? null
                                 : (0, i.jsxs)(m.Z.Child, {
                                       className: s()(
-                                          (0, w.l)(
+                                          (0, D.l)(
                                               F,
                                               "content",
                                               _ ? "GameImage" : null != e ? "Images" : "NoImages",

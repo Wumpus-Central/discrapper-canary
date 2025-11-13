@@ -24,8 +24,8 @@ async function p(e) {
             onSubscribeComplete: O,
             onSubscriptionConfirmation: v,
             inPopout: I,
-            applicationId: S,
-            intent: T,
+            applicationId: T,
+            intent: S,
         } = e,
         A = I ? i.u1M : i.z1l,
         C = l.Z.getPremiumTypeSubscription();
@@ -66,8 +66,8 @@ async function p(e) {
                     disablePremiumUpsell: y,
                     onSubscriptionConfirmation: v,
                     onSubscribeComplete: O,
-                    applicationId: S,
-                    intent: T,
+                    applicationId: T,
+                    intent: S,
                 });
             };
         },

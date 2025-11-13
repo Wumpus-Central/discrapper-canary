@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(415104),
     p = n(388032),
     f = n(334525);
-function m(e) {
-    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: m = !1, onClearFilters: h } = e,
-        g = i.useRef(!1),
+function h(e) {
+    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: h = !1, onClearFilters: g } = e,
+        m = i.useRef(!1),
         _ = (0, o.TH)(),
         b = i.useMemo(() => {
             if (_.hash.length > 0) {
@@ -22,23 +22,23 @@ function m(e) {
             return null;
         }, [t, _.hash]);
     i.useEffect(() => {
-        g.current = !1;
+        m.current = !1;
     }, [_.hash]),
         i.useEffect(() => {
-            if (null == b || g.current || n || !l) return;
+            if (null == b || m.current || n || !l) return;
             let e = document.getElementById("quest-tile-".concat(b));
             null == e ||
                 e.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                 }),
-                (g.current = !0);
+                (m.current = !0);
         }, [t, b, _, n, l]);
     let E = null != b,
-        [O, I] = i.useState(window.innerWidth);
+        [O, y] = i.useState(window.innerWidth);
     i.useEffect(() => {
         let e = (0, s.debounce)(() => {
-            I(window.innerWidth);
+            y(window.innerWidth);
         }, 250);
         return (
             window.addEventListener("resize", e),
@@ -47,7 +47,7 @@ function m(e) {
             }
         );
     }, []);
-    let y = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
+    let v = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
     return n && 0 === t.length
         ? (0, r.jsx)(c.$jN, { className: f.spinner })
         : 0 === t.length
@@ -56,12 +56,12 @@ function m(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
-                        children: p.intl.string(m ? p.t.PBfFnx : p.t.NqFP6z),
+                        children: p.intl.string(h ? p.t.PBfFnx : p.t.NqFP6z),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: m ? p.intl.format(p.t.LdYS1H, { onClick: h }) : p.intl.string(p.t.LhD4yH),
+                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: g }) : p.intl.string(p.t.LhD4yH),
                     }),
                 ],
             })
@@ -70,7 +70,7 @@ function m(e) {
                 {
                     className: f.container,
                     children: t.map((e, t) => {
-                        let n = Math.floor(t / y);
+                        let n = Math.floor(t / v);
                         return (0, r.jsx)(
                             d.Z,
                             {

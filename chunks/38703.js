@@ -99,7 +99,7 @@ function b() {
             });
             (0, c.l_)(t);
         }, []),
-        { handleDragStart: v, handleDragReset: _, handleDragComplete: O, draggingId: C } = (0, s.Z)(x, j),
+        { handleDragStart: _, handleDragReset: v, handleDragComplete: O, draggingId: C } = (0, s.Z)(x, j),
         y = e.length < m.yx;
     return (0, r.jsxs)("div", {
         className: f.connectionsSection,
@@ -135,8 +135,8 @@ function b() {
                             {
                                 connection: e,
                                 index: t,
-                                onDragStart: v,
-                                onDragReset: _,
+                                onDragStart: _,
+                                onDragReset: v,
                                 onDragComplete: O,
                                 draggingId: C,
                             },

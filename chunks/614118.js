@@ -19,56 +19,56 @@ var r = n(951288),
     y = n(388032),
     O = n(54602);
 function v(e) {
-    var t, n, v, I, S, T, A, C;
+    var t, n, v, I, T, S, A, C;
     let { guildId: N, skuId: R, channel: P } = e,
-        w = (0, o.e7)([d.Z], () => d.Z.isFetchingForSKU(R)),
-        D = (0, o.e7)([u.Z], () => u.Z.get(R)),
-        x = null == D ? void 0 : D.applicationId;
+        D = (0, o.e7)([d.Z], () => d.Z.isFetchingForSKU(R)),
+        w = (0, o.e7)([u.Z], () => u.Z.get(R)),
+        x = null == w ? void 0 : w.applicationId;
     (0, l.p2)();
     let L = (0, o.e7)([c.default], () =>
             P.isDM() && null != P.recipients && 0 !== P.recipients.length ? c.default.getUser(P.recipients[0]) : null,
         ),
-        { primaryIconAsset: M, primaryIconLabel: j } = i.useMemo(() => (0, _.FE)(D, x), [D, x]);
+        { primaryIconAsset: M, primaryIconLabel: j } = i.useMemo(() => (0, _.FE)(w, x), [w, x]);
     i.useEffect(() => {
         null == N || null == R || d.Z.isFetchingForSKU(R) || (0, p.y)(N, R);
     }, [N, R]);
     let k = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (null == D ? void 0 : D.applicationId) != null &&
+                    (null == w ? void 0 : w.applicationId) != null &&
                         null != N &&
                         (0, h.g)({
                             skuId: R,
-                            applicationId: D.applicationId,
+                            applicationId: w.applicationId,
                             guildId: N,
                             isStorefront: !1,
                         });
             },
-            [R, null == D ? void 0 : D.applicationId, N],
+            [R, null == w ? void 0 : w.applicationId, N],
         ),
         U = i.useCallback(() => {
-            null != D && (0, m.P)(D, { isGift: !1 });
-        }, [D]),
+            null != w && (0, m.P)(w, { isGift: !1 });
+        }, [w]),
         G = i.useCallback(() => {
-            null != D &&
-                (0, m.P)(D, {
+            null != w &&
+                (0, m.P)(w, {
                     isGift: !0,
                     giftRecipient: null != L ? L : void 0,
                 });
-        }, [D, L]);
-    return w && null == D
+        }, [w, L]);
+    return D && null == w
         ? (0, r.jsx)("div", {
               className: O.container,
               children: (0, r.jsx)(s.$jN, { className: O.spinner }),
           })
-        : null == D
+        : null == w
           ? null
           : (0, r.jsxs)("div", {
                 className: O.container,
                 children: [
                     (0, r.jsx)(E.C, {
                         className: O.card,
-                        applicationId: D.applicationId,
+                        applicationId: w.applicationId,
                         skuId: R,
                         variant: E.Z.EMBEDDED,
                         onClick: k,
@@ -82,7 +82,7 @@ function v(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-md/bold",
                                         lineClamp: 1,
-                                        children: D.name,
+                                        children: w.name,
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: O.detailsDescription,
@@ -97,9 +97,9 @@ function v(e) {
                                                 variant: "text-md/semibold",
                                                 lineClamp: 1,
                                                 children: (0, f.T4)(
-                                                    null != (S = null == (t = D.price) ? void 0 : t.amount) ? S : 0,
-                                                    null != (T = null == (n = D.price) ? void 0 : n.currency)
-                                                        ? T
+                                                    null != (T = null == (t = w.price) ? void 0 : t.amount) ? T : 0,
+                                                    null != (S = null == (n = w.price) ? void 0 : n.currency)
+                                                        ? S
                                                         : b.pK.USD,
                                                 ),
                                             }),
@@ -122,8 +122,8 @@ function v(e) {
                                         onClick: U,
                                         text: y.intl.format(y.t.Xp5WTn, {
                                             price: (0, f.T4)(
-                                                null != (A = null == (v = D.price) ? void 0 : v.amount) ? A : 0,
-                                                null != (C = null == (I = D.price) ? void 0 : I.currency)
+                                                null != (A = null == (v = w.price) ? void 0 : v.amount) ? A : 0,
+                                                null != (C = null == (I = w.price) ? void 0 : I.currency)
                                                     ? C
                                                     : b.pK.USD,
                                             ),

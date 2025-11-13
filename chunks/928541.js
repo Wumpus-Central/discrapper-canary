@@ -1,30 +1,30 @@
 a.d(e, {
     $2: () => i,
     WD: () => o,
-    cW: () => c,
+    cW: () => E,
 });
 var r,
     _,
     n = a(573736);
 function o(t) {
-    return new c((e) => {
+    return new E((e) => {
         e(t);
     });
 }
 function i(t) {
-    return new c((e, a) => {
+    return new E((e, a) => {
         a(t);
     });
 }
 ((r = _ || (_ = {}))[(r.PENDING = 0)] = "PENDING"),
     (r[(r.RESOLVED = 1)] = "RESOLVED"),
     (r[(r.REJECTED = 2)] = "REJECTED");
-class c {
+class E {
     constructor(t) {
-        c.prototype.__init.call(this),
-            c.prototype.__init2.call(this),
-            c.prototype.__init3.call(this),
-            c.prototype.__init4.call(this),
+        E.prototype.__init.call(this),
+            E.prototype.__init2.call(this),
+            E.prototype.__init3.call(this),
+            E.prototype.__init4.call(this),
             (this._state = _.PENDING),
             (this._handlers = []);
         try {
@@ -34,7 +34,7 @@ class c {
         }
     }
     then(t, e) {
-        return new c((a, r) => {
+        return new E((a, r) => {
             this._handlers.push([
                 !1,
                 (e) => {
@@ -63,7 +63,7 @@ class c {
         return this.then((t) => t, t);
     }
     finally(t) {
-        return new c((e, a) => {
+        return new E((e, a) => {
             let r, _;
             return this.then(
                 (e) => {

@@ -13,14 +13,14 @@ var l = n(951288),
     f = n(556296),
     y = n(13140),
     b = n(52436),
-    v = n(981631),
-    h = n(332325),
+    h = n(981631),
+    v = n(332325),
     g = n(388032),
     j = n(245725);
 let O = r.memo(function (e) {
         let { allClips: t } = e,
             { query: i, setQuery: a } = (0, b.f)(),
-            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(v.kg4.SAVE_CLIP)),
+            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(h.kg4.SAVE_CLIP)),
             p = (0, b.f)(
                 (e) =>
                     e.selectedUserIds.size > 0 ||
@@ -29,7 +29,7 @@ let O = r.memo(function (e) {
                     null != e.selectedYear,
             ),
             O = r.useCallback(() => {
-                (0, m.Z)(h.Z.CLIPS, { stackingBehavior: "stack" });
+                (0, m.Z)(v.Z.CLIPS, { stackingBehavior: "stack" });
             }, []),
             x = r.useCallback(
                 (e) => {
@@ -184,7 +184,7 @@ function C(e) {
         m = (0, d.Z)(u),
         f = r.useCallback(() => c(null), [c]),
         y = r.useCallback(() => c("favorites"), [c]),
-        v = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
+        h = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
     return (0, l.jsxs)("div", {
         className: j.sidebar,
         children: [
@@ -235,7 +235,7 @@ function C(e) {
                                                 name: t,
                                                 count: n,
                                                 icon: (0, l.jsx)(p.Z, {
-                                                    game: v.get(r),
+                                                    game: h.get(r),
                                                     size: p.A.XSMALL,
                                                 }),
                                                 isSelected: s === r,

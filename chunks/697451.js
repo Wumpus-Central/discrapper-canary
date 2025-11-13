@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(55935),
     R = n(739566),
     P = n(421399),
-    w = n(310423),
-    D = n(223021),
+    D = n(310423),
+    w = n(223021),
     x = n(981631),
     L = n(388032),
     M = n(724913);
@@ -329,7 +329,7 @@ function q(e) {
             () => (e) => (
                 l()(null != s, "ExecutedCommand: channel cannot be null"),
                 (0, r.jsx)(
-                    w.Z,
+                    D.Z,
                     G(k({}, e), {
                         channel: s,
                         messageId: a.id,
@@ -350,7 +350,7 @@ function q(e) {
             null != e.renderTargetMessage,
         Z = (0, R.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),
         F = (0, R.Sw)(U, s),
-        V = i.useMemo(() => (e.compact ? (0, D.Z)((0, N.vc)(u()(), "LT")) : null), [e.compact]),
+        V = i.useMemo(() => (e.compact ? (0, w.Z)((0, N.vc)(u()(), "LT")) : null), [e.compact]),
         z = (0, h.NX)(s.id),
         q = a.interaction;
     if (null == q || null == Z) return null;

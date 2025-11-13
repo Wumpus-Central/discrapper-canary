@@ -1,6 +1,6 @@
-n.d(t, { n: () => f });
-var r = n(951288),
-    i = n(442837),
+n.d(t, { n: () => h });
+var i = n(951288),
+    r = n(442837),
     l = n(159691),
     a = n(481060),
     o = n(384275),
@@ -9,55 +9,55 @@ var r = n(951288),
     u = n(626135),
     d = n(981631),
     p = n(388032);
-let f = (e) => {
-    let { channel: t, user: n, application: f, oauth2Token: h } = e,
-        m = (0, i.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities());
-    if (!n.bot || null == f) return null;
+let h = (e) => {
+    let { channel: t, user: n, application: h, oauth2Token: f } = e,
+        m = (0, r.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities());
+    if (!n.bot || null == h) return null;
     function g() {
-        o.Z.delete(h.id);
-        let e = m.get(f.id);
+        o.Z.delete(f.id);
+        let e = m.get(h.id);
         null != e &&
             c.Z.leaveActivity({
                 location: e.location,
-                applicationId: f.id,
+                applicationId: h.id,
             });
     }
-    return (0, r.jsx)(a.Button, {
+    return (0, i.jsx)(a.Button, {
         variant: "secondary",
         size: "sm",
         text: p.intl.string(p.t["5S3sQF"]),
         onClick: () => {
             (0, a.h7j)((e) =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     l.u_l,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
                     })(
                         {
                             title: p.intl.string(p.t["DT39A+"]),
-                            subtitle: p.intl.formatToPlainString(p.t.QWGvxA, { applicationName: f.name }),
+                            subtitle: p.intl.formatToPlainString(p.t.QWGvxA, { applicationName: h.name }),
                             actions: [
                                 {
                                     text: p.intl.string(p.t["ETE/oC"]),
@@ -78,7 +78,7 @@ let f = (e) => {
                 ),
             ),
                 u.default.track(d.rMx.APP_MANAGE_CTA_CLICKED, {
-                    application_id: f.id,
+                    application_id: h.id,
                     channel_id: t.id,
                     channel_type: t.type,
                 });

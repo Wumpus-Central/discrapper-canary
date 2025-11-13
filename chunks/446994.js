@@ -875,8 +875,8 @@
                                                                 N.push(r.float_array(m));
                                                         var R = r.float_array(I),
                                                             P = r.float_array(I),
-                                                            w = 0,
                                                             D = 0,
+                                                            w = 0,
                                                             x = [
                                                                 {
                                                                     in_time: 0,
@@ -908,16 +908,16 @@
                                                                     for (t = 0; t < u.length; t++) u[t] = 0;
                                                                     for (t = 0; t < d.length; t++) d[t] = 0;
                                                                     if (e) {
-                                                                        (D = Math.max(0, D - e)),
-                                                                            (w = Z.mapOutputToInputTime(D));
+                                                                        (w = Math.max(0, w - e)),
+                                                                            (D = Z.mapOutputToInputTime(w));
                                                                         for (
                                                                             var r = x.length - 1;
-                                                                            D <= x[r].out_time && r >= 0;
+                                                                            w <= x[r].out_time && r >= 0;
                                                                         )
                                                                             x.pop(), r--;
                                                                         x.push({
-                                                                            in_time: w,
-                                                                            out_time: D,
+                                                                            in_time: D,
+                                                                            out_time: w,
                                                                             tempo: a,
                                                                         });
                                                                     }
@@ -944,11 +944,11 @@
                                                                         })(p, _)),
                                                                         (a = e);
                                                                     var t = x[x.length - 1];
-                                                                    t.out_time == D
+                                                                    t.out_time == w
                                                                         ? (t.tempo = e)
                                                                         : x.push({
-                                                                              in_time: w,
-                                                                              out_time: D,
+                                                                              in_time: D,
+                                                                              out_time: w,
                                                                               tempo: e,
                                                                           });
                                                                 },
@@ -1032,16 +1032,16 @@
                                                                             Math.abs(f[v] - B) < I &&
                                                                             u[Math.round(f[v])] > 0.1 * h[Math.round(B)]
                                                                         ) {
-                                                                            var w = F(t, n, B),
-                                                                                D =
+                                                                            var D = F(t, n, B),
+                                                                                w =
                                                                                     _[v] +
                                                                                     p[v] +
-                                                                                    V(w, B, _[v], f[v], a) -
-                                                                                    w;
-                                                                            (b[G] = w),
-                                                                                (y[G] = D),
-                                                                                (R[G] = Math.cos(D)),
-                                                                                (P[G] = Math.sin(D));
+                                                                                    V(D, B, _[v], f[v], a) -
+                                                                                    D;
+                                                                            (b[G] = D),
+                                                                                (y[G] = w),
+                                                                                (R[G] = Math.cos(w)),
+                                                                                (P[G] = Math.sin(w));
                                                                         } else
                                                                             (b[G] = F(t, n, B)),
                                                                                 (y[G] = 0),
@@ -1127,7 +1127,7 @@
                                                                         }
                                                                         Z.flush(0), (n = p), (e = h);
                                                                     }
-                                                                    return (w += n / t), (D += n / t), e;
+                                                                    return (D += n / t), (w += n / t), e;
                                                                 }
                                                                 var g =
                                                                         2 *
@@ -1152,8 +1152,8 @@
                                                                           (y += T),
                                                                           (G = s - f)),
                                                                         (I = Y()),
-                                                                        (w += (2 * f) / t),
-                                                                        (D += I / t),
+                                                                        (D += (2 * f) / t),
+                                                                        (w += I / t),
                                                                         (v = O + I - E) < 0 && (v = 0),
                                                                         r.blit(d, 0, b, O, I - v),
                                                                         (O += I);
@@ -1994,8 +1994,8 @@
                         N = "LOADED",
                         R = "PRELOAD",
                         P = "READY",
-                        w = "PLAYING",
-                        D = "SEEKING",
+                        D = "PLAYING",
+                        w = "SEEKING",
                         x = "ERROR",
                         L = "NOT_SEEKING",
                         M = "BISECT_TO_TARGET",
@@ -2179,10 +2179,10 @@
                                     },
                                     currentTime: {
                                         get: function () {
-                                            return this._state == D
+                                            return this._state == w
                                                 ? this._seekTargetTime
                                                 : this._codec
-                                                  ? this._state != w || this._paused
+                                                  ? this._state != D || this._paused
                                                       ? this._initialPlaybackOffset
                                                       : this._getPlaybackTime()
                                                   : this._initialSeekTime;
@@ -2212,7 +2212,7 @@
                                     },
                                     seeking: {
                                         get: function () {
-                                            return this._state == D;
+                                            return this._state == w;
                                         },
                                     },
                                     muted: {
@@ -2752,7 +2752,7 @@
                                                     n._stopPlayback(),
                                                     (n._prebufferingAudio = !1),
                                                     n._audioFeeder && n._audioFeeder.flush(),
-                                                    (n._state = D),
+                                                    (n._state = w),
                                                     (n._seekTargetTime = e),
                                                     (n._seekMode = t),
                                                     n._codec ? n._codec.flush(r) : r();
@@ -2774,7 +2774,7 @@
                                             (this._streamEnded = !1),
                                                 (this._dataEnded = !1),
                                                 (this._ended = !1),
-                                                (this._state = D),
+                                                (this._state = w),
                                                 (this._seekTargetTime = e),
                                                 (this._lastSeekPosition = -1),
                                                 (this._decodedFrames = []),
@@ -3037,8 +3037,8 @@
                                             else if (this._state == N) this._doProcessLoaded();
                                             else if (this._state == R) this._doProcessPreload();
                                             else if (this._state == P) this._doProcessReady();
-                                            else if (this._state == D) this._doProcessSeeking();
-                                            else if (this._state == w) this._doProcessPlay();
+                                            else if (this._state == w) this._doProcessSeeking();
+                                            else if (this._state == D) this._doProcessPlay();
                                             else {
                                                 if (this._state != x)
                                                     throw Error("Unexpected OGVPlayer state " + this._state);
@@ -3166,7 +3166,7 @@
                                             else {
                                                 var n = function () {
                                                     e._log("finishStartPlaying"),
-                                                        (e._state = w),
+                                                        (e._state = D),
                                                         (e._lastFrameTimestamp = I()),
                                                         e._codec.hasAudio && e._audioFeeder
                                                             ? (e._prebufferingAudio = !0)
@@ -3739,7 +3739,7 @@
                                                 this._paused &&
                                                     ((this._startedPlaybackInDocument = document.body.contains(this)),
                                                     (this._paused = !1),
-                                                    this._state == D ||
+                                                    this._state == w ||
                                                         (this._started && this._codec && this._codec.loadedMetadata
                                                             ? (this._ended && this._stream && this._byteLength
                                                                   ? (this._log(".play() starting over after end"),
@@ -6275,11 +6275,11 @@
                                     N = 0,
                                     R = 0,
                                     P = 0,
-                                    w = 0;
+                                    D = 0;
                                 if (1 == a && 1 == o)
-                                    for (y = 0, O = _, w = 0, R = 0; R < i; R += 2) {
+                                    for (y = 0, O = _, D = 0, R = 0; R < i; R += 2) {
                                         for (
-                                            m = ((h = (R * u) | 0) + u) | 0, g = (w * d) | 0, E = (w * f) | 0, N = 0;
+                                            m = ((h = (R * u) | 0) + u) | 0, g = (D * d) | 0, E = (D * f) | 0, N = 0;
                                             N < r;
                                             N += 2
                                         )
@@ -6307,12 +6307,12 @@
                                                 (n[O + 1] = (T - A) >> 8),
                                                 (n[O + 2] = (T + C) >> 8),
                                                 (O += 4);
-                                        (y += _), (O += _), w++;
+                                        (y += _), (O += _), D++;
                                     }
                                 else
                                     for (b = 0, R = 0; R < i; R++)
                                         for (
-                                            P = 0, p = (R * u) | 0, g = ((w = R >> o) * d) | 0, E = (w * f) | 0, N = 0;
+                                            P = 0, p = (R * u) | 0, g = ((D = R >> o) * d) | 0, E = (D * f) | 0, N = 0;
                                             N < r;
                                             N++
                                         )

@@ -29,13 +29,13 @@ let v = (e) => {
                 disable: v,
             },
         ),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             p.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, f.openUserSettings)(d.n.GIFT_PANEL, { section: E.oAB.INVENTORY }),
                 u.ZP.dismissOutboundPromotionNotice();
         }, []);
     if (null == n) return null;
-    let T = (e) =>
+    let S = (e) =>
         (0, r.jsxs)(s.qXd, {
             color: s.DM8.PREMIUM_TIER_2,
             children: [
@@ -54,7 +54,7 @@ let v = (e) => {
                 (0, r.jsx)(s.NoS, {
                     noticeType: E.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        S(), null !== e && e(g.L.TAKE_ACTION);
+                        T(), null !== e && e(g.L.TAKE_ACTION);
                     },
                     children: y.intl.string(y.t.jVcuVY),
                 }),
@@ -68,7 +68,7 @@ let v = (e) => {
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
-            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return T(n);
+            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return S(n);
         },
     });
 };

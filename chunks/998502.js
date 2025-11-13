@@ -80,14 +80,14 @@ function v(e, t) {
     );
 }
 let I = window.DiscordNative,
-    S = new Set(["jpg", "jpeg", "jfif", "png"]),
-    T = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
+    T = new Set(["jpg", "jpeg", "jfif", "png"]),
+    S = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
     C = 5,
     N = null,
     R = null,
     P = null,
-    w = {};
+    D = {};
 null != I &&
     ((N = I.remoteApp
         .getVersion()
@@ -95,7 +95,7 @@ null != I &&
         .map((e) => parseInt(e))),
     (P = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
     (R = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
-let D = new Set([
+let w = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -153,7 +153,7 @@ var H = (function (e) {
 function W(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
-        id: w[null != (t = e.id) ? t : ""],
+        id: D[null != (t = e.id) ? t : ""],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : "", 10),
         name: null != (r = e.gameName) ? r : e.name,
         origGameName: e.origGameName,
@@ -197,7 +197,7 @@ let q = {
         requireModule: (e) => I.nativeModules.requireModule(e),
         ensureModule: (e) =>
             h.isPlatformEmbedded
-                ? __OVERLAY__ && D.has(e)
+                ? __OVERLAY__ && w.has(e)
                     ? Promise.resolve()
                     : I.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -244,14 +244,14 @@ let q = {
         },
         setObservedGamesCallback(e, t, n) {
             try {
-                w = {};
+                D = {};
                 let r = 0,
                     i = this.getDiscordUtils();
                 (t && null != i.setObservedGamesCallback2 ? i.setObservedGamesCallback2 : i.setObservedGamesCallback)(
                     e.map((e) => {
                         let t = ++r;
                         return (
-                            null != e.id && (w[t] = e.id),
+                            null != e.id && (D[t] = e.id),
                             v(y({}, e), {
                                 cmdline: e.cmdLine,
                                 id: t,
@@ -406,7 +406,7 @@ let q = {
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
             let n = await V(e),
                 r = K(e, t),
-                i = null != r && S.has(r) ? "image.".concat(r) : e;
+                i = null != r && T.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
         },
         async copyImageBlob(e, t) {
@@ -416,7 +416,7 @@ let q = {
         canSaveImage(e, t) {
             if (null == e || !h.isPlatformEmbedded) return !1;
             let n = K(e, t);
-            return null == n || T.has(n);
+            return null == n || S.has(n);
         },
         async saveImage(e, t, n) {
             var r, i, a;
@@ -497,7 +497,7 @@ let q = {
             if (!h.isPlatformEmbedded || "function" != typeof I.clipboard.copyImage) return !1;
             if (null != e) {
                 let t = K(e, void 0);
-                if (null != t && !S.has(t)) return !1;
+                if (null != t && !T.has(t)) return !1;
             }
             return !0;
         },

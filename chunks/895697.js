@@ -21,8 +21,8 @@ var i = n(442837),
     O = n(827313),
     v = n(420654),
     I = n(166584),
-    S = n(915014),
-    T = n(671955),
+    T = n(915014),
+    S = n(671955),
     A = n(388032),
     C = n(57842),
     N = n(116649);
@@ -32,8 +32,8 @@ function R(e) {
             currentUser: n,
             displayProfile: R,
             guild: P,
-            isHoveringOrFocusing: w,
-            onOpenProfile: D,
+            isHoveringOrFocusing: D,
+            onOpenProfile: w,
             channelId: x,
             onClose: L,
         } = e,
@@ -52,12 +52,12 @@ function R(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: null == P ? void 0 : P.id,
-                onOpenProfile: D,
+                onOpenProfile: w,
                 nickname: M,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
-                    themeType: T.l.POPOUT,
+                    themeType: S.l.POPOUT,
                     onClose: L,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -66,15 +66,15 @@ function R(e) {
                         !U &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
-                                isVisible: w,
-                                onOpenProfile: D,
+                                isVisible: D,
+                                onOpenProfile: w,
                             }),
                     ],
                 }),
             }),
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(T.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
+                onOpenProfile: (e) => (null == w ? void 0 : w({ section: e })),
             }),
             (0, r.jsxs)("div", {
                 className: C.buttons,
@@ -102,7 +102,7 @@ function R(e) {
                       user: t,
                       currentUser: n,
                       guildId: null == P ? void 0 : P.id,
-                      onOpenUserProfileModal: D,
+                      onOpenUserProfileModal: w,
                       onClose: L,
                   })
                 : (0, r.jsx)(p.Z, {

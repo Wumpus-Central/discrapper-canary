@@ -3,14 +3,14 @@ n.d(t, {
     F$: () => M,
     Ov: () => V,
     R2: () => F,
-    Sm: () => w,
+    Sm: () => D,
     _o: () => Z,
     fK: () => G,
     fi: () => H,
     jr: () => k,
     lW: () => U,
     mK: () => P,
-    oK: () => D,
+    oK: () => w,
     oc: () => L,
     p8: () => Y,
     qg: () => j,
@@ -99,13 +99,13 @@ let P = (e) => {
             r = N(e, ["tab"]);
         {
             let { default: e } = n(342386);
-            w(r), e(), (0, u.uL)(t ? S.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t) : S.Z5c.COLLECTIBLES_SHOP);
+            D(r), e(), (0, u.uL)(t ? S.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t) : S.Z5c.COLLECTIBLES_SHOP);
         }
     },
-    w = (e) => {
+    D = (e) => {
         s.Z.dispatch(C({ type: "COLLECTIBLES_SHOP_OPEN" }, e));
     },
-    D = (e) => {
+    w = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN",
             item: e,

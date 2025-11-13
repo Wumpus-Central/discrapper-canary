@@ -44,9 +44,9 @@ function o(t, e) {
             i = t;
             break;
         }
-    let c = [];
-    for (let t = i; t < a.length; t++) c.push("..");
-    return (c = c.concat(r.slice(i))).join("/");
+    let E = [];
+    for (let t = i; t < a.length; t++) E.push("..");
+    return (E = E.concat(r.slice(i))).join("/");
 }
 function i(t, e) {
     let a =

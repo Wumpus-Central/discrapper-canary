@@ -66,8 +66,8 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = 16;
-function T() {
+let T = 16;
+function S() {
     return (0, r.jsx)("svg", {
         width: "24",
         height: "24",
@@ -85,7 +85,7 @@ function T() {
 function A(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(T, {});
+    if (n) t = (0, r.jsx)(S, {});
     else if (null != i) {
         let e = "" !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -145,7 +145,7 @@ function N(e) {
                                 children: o,
                             }),
                             (0, r.jsx)(m.ZY, {
-                                size: S,
+                                size: T,
                                 className: b.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0,
@@ -221,7 +221,7 @@ function P(e) {
             messageId: n.id,
         }),
         I = n.messageReference,
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             null != I &&
                 c.Z.jumpToMessage({
                     channelId: I.channel_id,
@@ -242,13 +242,13 @@ function P(e) {
                           username: O.nick,
                           usernameHook: v(O),
                           title: y,
-                          titleOnClick: S,
+                          titleOnClick: T,
                       }),
                   }),
                   (0, r.jsx)(R, {
                       className: b.embed,
                       data: m,
-                      onClickPollLink: u ? void 0 : S,
+                      onClickPollLink: u ? void 0 : T,
                   }),
               ],
           });

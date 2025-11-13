@@ -16,9 +16,9 @@ var l = n(951288),
     g = n(430824),
     h = n(496675),
     f = n(186523),
-    I = n(768581),
-    p = n(630388),
-    N = n(526120),
+    N = n(768581),
+    I = n(630388),
+    p = n(526120),
     O = n(563534),
     E = n(846121),
     S = n(216701),
@@ -53,7 +53,7 @@ function v(e) {
         g = "static" === u.variant ? u.subtitle : u.channelName,
         h =
             null != m
-                ? I.ZP.getNewMemberActionIconURL({
+                ? N.ZP.getNewMemberActionIconURL({
                       channelId: m,
                       icon: i,
                   })
@@ -119,12 +119,12 @@ function b(e) {
     var t;
     let { action: n, completed: i } = e,
         { channelId: a, title: m, emoji: g, icon: f } = n,
-        { id: I, name: p } = null != g ? g : {},
+        { id: N, name: I } = null != g ? g : {},
         O = (0, s.e7)([u.Z], () => u.Z.getChannel(a)),
         E = (0, c.ZP)(O, !0),
         S = (0, s.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
         T = r.useMemo(() => {
-            if (null != O) return () => (0, N.gp)(O.guild_id, O.id);
+            if (null != O) return () => (0, p.gp)(O.guild_id, O.id);
         }, [O]);
     if (null == O || !S) return null;
     let _ = null != (t = (0, d.KS)(O)) ? t : o.VL1;
@@ -133,8 +133,8 @@ function b(e) {
         channelId: a,
         title: m,
         channelName: E,
-        emojiId: I,
-        emojiName: p,
+        emojiId: N,
+        emojiName: I,
         icon: f,
         completed: i,
         Icon: _,
@@ -151,11 +151,11 @@ function D(e) {
         var e;
         null == i &&
             (null == c ? void 0 : c.flags) != null &&
-            (0, p.yE)(null != (e = c.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
-            (0, N.Fg)(t);
+            (0, I.yE)(null != (e = c.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
+            (0, p.Fg)(t);
     }, [i, t, null == c ? void 0 : c.flags]);
     let u = r.useCallback(() => {
-        null != d && null != d.rulesChannelId && (0, N.gp)(d.id, d.rulesChannelId);
+        null != d && null != d.rulesChannelId && (0, p.gp)(d.id, d.rulesChannelId);
     }, [d]);
     return null == c || null == n || 0 === n.length
         ? null

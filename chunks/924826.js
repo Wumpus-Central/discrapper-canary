@@ -64,7 +64,7 @@ function u(e) {
             },
             [t, g, N],
         ),
-        w = r.useMemo(
+        D = r.useMemo(
             () =>
                 (0, i.E)({
                     getFocusableElements: () => c(t, T),
@@ -77,11 +77,11 @@ function u(e) {
                 }),
             [t, d, f],
         ),
-        [D, x] = r.useState(!1),
-        L = r.useRef(D);
+        [w, x] = r.useState(!1),
+        L = r.useRef(w);
     r.useLayoutEffect(() => {
-        L.current = D;
-    }, [D]),
+        L.current = w;
+    }, [w]),
         r.useLayoutEffect(() => {
             let e = T.current;
             if (null != e && u)
@@ -143,15 +143,15 @@ function u(e) {
             [E, b],
         ),
         j = r.useCallback(async () => {
-            let e = await w.getNextFocusableElement(M),
+            let e = await D.getNextFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? P(t) : null == e && null != p && p();
-        }, [w, M, p, P]),
+        }, [D, M, p, P]),
         k = r.useCallback(async () => {
-            let e = await w.getPreviousFocusableElement(M),
+            let e = await D.getPreviousFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? P(t) : null == e && null != _ && _();
-        }, [w, M, _, P]),
+        }, [D, M, _, P]),
         U = r.useCallback(
             (e) => {
                 if (!S.current || (!E && !L.current)) return;
@@ -211,7 +211,7 @@ function u(e) {
             containerProps: {
                 onKeyDown: U,
                 ref: T,
-                tabIndex: D && g ? -1 : 0,
+                tabIndex: w && g ? -1 : 0,
             },
             orientation: y,
             setFocus: G,
@@ -232,6 +232,6 @@ function u(e) {
                 return e ? (0, l.x3)(e) : null;
             },
         }),
-        [t, U, y, D, g, G, k, j, P],
+        [t, U, y, w, g, G, k, j, P],
     );
 }

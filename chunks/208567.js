@@ -99,14 +99,14 @@ class v extends (i = l.PureComponent) {
                 imageClassName: N,
                 iconClassName: S,
                 iconWrapperClassName: E,
-                icon: I,
-                hideSize: P,
-                imageStyle: w,
+                icon: w,
+                hideSize: I,
+                imageStyle: P,
                 showRemoveButton: T,
                 maxFileSizeBytes: Z,
                 onFileSizeError: k,
-                onOpenImageSelectModal: A,
-                "aria-label": D,
+                onOpenImageSelectModal: D,
+                "aria-label": A,
             } = this.props;
         if (
             (null != (t = null != a && /^data:/.test(a) ? a : f(a))
@@ -124,13 +124,13 @@ class v extends (i = l.PureComponent) {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, w), { backgroundImage: n }),
+                    style: x(h({}, P), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
                             (0, r.jsx)("div", {
                                 className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: I,
+                                children: w,
                             }),
                     ],
                 }),
@@ -141,12 +141,12 @@ class v extends (i = l.PureComponent) {
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcP),
               }))
-            : P ||
+            : I ||
               (l = (0, r.jsx)("small", {
                   className: g.sizeInfo,
                   children: b.intl.format(b.t.AH4c7Y, { size: m.IXf }),
               }));
-        let R = null != (e = null != D ? D : s) ? e : b.intl.string(b.t["Ge+941"]);
+        let R = null != (e = null != A ? A : s) ? e : b.intl.string(b.t["Ge+941"]);
         return (0, r.jsxs)("div", {
             className: o()(g.imageUploader, C),
             children: [
@@ -157,17 +157,17 @@ class v extends (i = l.PureComponent) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, w), { backgroundImage: n }),
+                                style: x(h({}, P), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,
                                         children: i,
                                     }),
-                                    null != A
+                                    null != D
                                         ? (0, r.jsx)(d.P3F, {
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
-                                              onClick: A,
+                                              onClick: D,
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
@@ -189,7 +189,7 @@ class v extends (i = l.PureComponent) {
                             y &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: I,
+                                    icon: w,
                                 }),
                         ],
                     }),

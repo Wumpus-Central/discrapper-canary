@@ -1,23 +1,23 @@
-n.d(e, { R: () => d });
+n.d(e, { R: () => S });
 var i = n(657707),
     l = n(509613),
-    r = n(358085),
-    u = n(313789),
+    u = n(358085),
+    r = n(313789),
     s = n(200645),
     a = n(726985),
     o = n(388032);
-let c = (0, l.x1)(u.n.WINDOWS_PANE, {
+let c = (0, l.x1)(r.n.WINDOWS_PANE, {
         buildLayout: () => [],
         render: s.Z,
     }),
-    E = (0, l.wf)(u.n.WINDOWS_PANEL, {
+    E = (0, l.wf)(r.n.WINDOWS_PANEL, {
         useTitle: () => o.intl.string(o.t.ZkDZov),
         buildLayout: () => [c],
     }),
-    d = (0, l.m7)(u.n.WINDOWS_SIDEBAR_ITEM, {
+    S = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
         icon: i.pzj,
         useTitle: () => o.intl.string(o.t.ZkDZov),
         getLegacySearchKey: () => a.s6.WINDOW_SETTINGS,
-        usePredicate: () => r.isPlatformEmbedded && (0, r.isWindows)(),
+        usePredicate: () => u.isPlatformEmbedded && (0, u.isWindows)(),
         buildLayout: () => [E],
     });

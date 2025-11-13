@@ -1,6 +1,6 @@
-n.d(t, { Z: () => E }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => O }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(704215),
     o = n(582019),
@@ -9,19 +9,19 @@ var r = n(951288),
     u = n(906732),
     d = n(522651),
     p = n(795318),
-    f = n(706140),
-    h = n(579185),
+    h = n(706140),
+    f = n(579185),
     m = n(242291),
     g = n(792165),
     b = n(603074),
-    _ = n(294629),
-    y = n(131951),
-    C = n(390322),
-    v = n(871499),
-    O = n(127379),
-    x = n(388032);
-function E(e) {
-    let { channel: t, themeable: E, whichPopoutIsOpen: j, setWhichPopoutIsOpen: S } = e,
+    y = n(294629),
+    C = n(131951),
+    v = n(390322),
+    _ = n(871499),
+    x = n(127379),
+    j = n(388032);
+function O(e) {
+    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
         { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
             Component: I,
@@ -29,42 +29,42 @@ function E(e) {
             events: { onMouseEnter: T, onMouseLeave: N },
         } = (0, o.j)(),
         A = t.getGuildId(),
-        { mute: w, suppress: M } = (0, _.Z)(t),
-        R = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        D = w || M || R,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: D }),
-        [k, U] = (0, f.cv)(L),
+        { mute: w, suppress: M } = (0, y.Z)(t),
+        R = (0, l.e7)([C.Z], () => C.Z.isDeaf()),
+        L = w || M || R,
+        D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
+        [k, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: F, setIsHovered: V, onMouseEnter: H, onMouseLeave: G } = (0, h.Z)(200, 300);
-    function W(e) {
+        { isHovered: H, setIsHovered: V, onMouseEnter: F, onMouseLeave: G } = (0, f.Z)(200, 300);
+    function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) => {
-                    var n, i;
-                    return (0, r.jsx)(
+                    var n, r;
+                    return (0, i.jsx)(
                         e,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
@@ -75,34 +75,34 @@ function E(e) {
                             },
                             t,
                         )),
-                        (i = i = { onInteraction: (0, p.u)("SoundboardContextMenu", P) }),
+                        (r = r = { onInteraction: (0, p.u)("SoundboardContextMenu", P) }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
                         n),
                     );
                 };
             });
     }
-    function z() {
+    function W() {
         (0, d.v)(P, d.d.SOUNDBOARD),
-            j === O.D.SOUNDBOARD
+            E === x.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != j ? (Z(), H()) : Z(), null == S || S(O.D.SOUNDBOARD));
+                : (null != E ? (Z(), F()) : Z(), null == S || S(x.D.SOUNDBOARD));
     }
-    let q = i.useRef(null);
-    return (0, r.jsx)(s.y, {
+    let q = r.useRef(null);
+    return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (F && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
+        shouldShow: (H && (E === x.D.SOUNDBOARD || null == E)) || E === x.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
@@ -113,19 +113,19 @@ function E(e) {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return D
+            return L
                 ? null
-                : (0, r.jsx)(C.Z, {
-                      children: (0, r.jsx)("div", {
-                          onMouseEnter: H,
+                : (0, i.jsx)(v.Z, {
+                      children: (0, i.jsx)("div", {
+                          onMouseEnter: F,
                           onMouseLeave: G,
-                          children: (0, r.jsx)(b.Z, {
+                          children: (0, i.jsx)(b.Z, {
                               guildId: A,
                               channel: t,
                               onClose: n,
                               gridNotice:
                                   k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                  (0, r.jsx)(g.o, {
+                                  (0, i.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U,
                                   }),
@@ -135,29 +135,29 @@ function E(e) {
                   });
         },
         children: () =>
-            (0, r.jsx)(v.d, {
+            (0, i.jsx)(_.d, {
                 ref: q,
                 isTrayButton: !0,
-                themeable: E,
+                themeable: O,
                 label: w
-                    ? x.intl.string(x.t["Ox4/zU"])
+                    ? j.intl.string(j.t["Ox4/zU"])
                     : M
-                      ? x.intl.string(x.t["+YBKYI"])
+                      ? j.intl.string(j.t["+YBKYI"])
                       : R
-                        ? x.intl.string(x.t.X1lQli)
+                        ? j.intl.string(j.t.X1lQli)
                         : void 0,
                 iconComponent: I,
-                disabled: D,
-                onContextMenu: W,
-                onClick: z,
+                disabled: L,
+                onContextMenu: z,
+                onClick: W,
                 onMouseEnter: () => {
-                    H(), T();
+                    F(), T();
                 },
                 onMouseLeave: () => {
-                    null == j && (G(), N());
+                    null == E && (G(), N());
                 },
-                isActive: F || j === O.D.SOUNDBOARD,
-                color: F || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: H || E === x.D.SOUNDBOARD,
+                color: H || E === x.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

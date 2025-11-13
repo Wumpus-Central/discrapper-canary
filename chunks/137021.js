@@ -2,8 +2,8 @@ n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(793030),
-    i = n(442837),
-    s = n(481060),
+    s = n(442837),
+    i = n(481060),
     u = n(904245),
     o = n(311819),
     c = n(835473),
@@ -32,7 +32,7 @@ function Z(e) {
             transitionState: L,
         } = e,
         [T] = (0, c.Z)([t]),
-        N = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
+        N = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
         [w, R] = l.useState(!1),
         [k, D] = l.useState(""),
         [M, A] = l.useState("");
@@ -94,10 +94,10 @@ function Z(e) {
                         null != n &&
                             (await u.Z.sendMessage(e, d.ZP.parse(n, t), !1, { location: v.dy.ACTIVITY_SHARE }));
                     }),
-                    (0, s.showToast)(
-                        (0, s.createToast)(
+                    (0, i.showToast)(
+                        (0, i.createToast)(
                             S.intl.formatToPlainString(S.t.jQULqL, { applicationName: T.name }),
-                            s.ToastType.SUCCESS,
+                            i.ToastType.SUCCESS,
                         ),
                     ),
                     C(!0),
@@ -107,7 +107,7 @@ function Z(e) {
         ),
         Y = l.useCallback(() => {
             (0, m.JG)(M, () => {
-                O(), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.t5VZ88), s.ToastType.SUCCESS));
+                O(), (0, i.showToast)((0, i.createToast)(S.intl.string(S.t.t5VZ88), i.ToastType.SUCCESS));
             });
         }, [M, O]),
         B =
@@ -128,7 +128,7 @@ function Z(e) {
                               src: j,
                               alt: "",
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(i.Text, {
                               variant: "text-md/normal",
                               color: "text-muted",
                               children: S.intl.string(S.t.V6nAfF),
@@ -141,7 +141,7 @@ function Z(e) {
         title: S.intl.string(S.t.r9qKow),
         subtitle: P,
         size: "md",
-        input: (0, r.jsx)(s.E1j, {
+        input: (0, r.jsx)(i.E1j, {
             ref: z,
             query: k,
             onChange: Q,

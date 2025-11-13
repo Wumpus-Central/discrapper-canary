@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n.n(l),
     s = n(481060),
     o = n(100527),
-    c = n(670188),
+    c = n(456077),
     u = n(463618),
     d = n(823379),
     p = n(550619);
@@ -83,11 +83,11 @@ let f = (e) => {
                     }),
                 });
     },
-    m = (e) => {
+    h = (e) => {
         let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: l = 2, guildId: s } = e,
             { unknownSize: o, totalSize: c, knownSize: u } = t;
         if (c < i) return null;
-        let m = a()(n)
+        let h = a()(n)
             .filter(d.lm)
             .take(l)
             .map((e) =>
@@ -101,10 +101,10 @@ let f = (e) => {
                 ),
             )
             .value();
-        for (let e = 0; e < o && m.length < l; e++) m.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
-        let h = c - u - o;
-        for (let e = 0; e < h && m.length < l; e++)
-            m.push(
+        for (let e = 0; e < o && h.length < l; e++) h.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
+        let g = c - u - o;
+        for (let e = 0; e < g && h.length < l; e++)
+            h.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -114,10 +114,10 @@ let f = (e) => {
                     "empty-member-".concat(e),
                 ),
             );
-        let g = Math.max(Math.min(c - m.length, 99), 0);
-        if (1 === g) {
+        let m = Math.max(Math.min(c - h.length, 99), 0);
+        if (1 === m) {
             let e = n[l];
-            m.push(
+            h.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -133,11 +133,11 @@ let f = (e) => {
             children: (0, r.jsxs)("div", {
                 className: p.partyMembers,
                 children: [
-                    m,
-                    g > 1
+                    h,
+                    m > 1
                         ? (0, r.jsxs)("div", {
                               className: p.partyMemberOverflow,
-                              children: ["+", g],
+                              children: ["+", m],
                           })
                         : null,
                 ],

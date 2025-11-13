@@ -33,7 +33,7 @@ var r = n(990547),
     N = n(981631),
     R = n(723359),
     P = n(388032);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -224,7 +224,7 @@ let F = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = L(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (a = L(w({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
             (0, d.Z)(N.Z5c.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
@@ -388,7 +388,7 @@ let F = {
             s = null === r || (null == r ? void 0 : r.startsWith("data:")) ? r : void 0,
             l = await a.tn.patch({
                 url: N.ANM.GUILD_ROLE(e, t),
-                body: L(D({}, o), {
+                body: L(w({}, o), {
                     icon: s,
                     unicode_emoji: i,
                 }),

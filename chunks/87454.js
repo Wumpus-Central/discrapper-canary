@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d }), n(388685), n(539854);
 var a = n(951288),
     i = n(647438),
-    l = n(704215),
-    r = n(481060),
+    r = n(704215),
+    l = n(481060),
     s = n(581883),
     o = n(428967),
     c = n(972118);
 let d = i.memo(function (e) {
     let { className: t, content: n, onChange: d } = e,
-        u = l.z[n],
+        u = r.z[n],
         { isDismissed: m, handleToggleDismissState: p } = (0, c.Z)(u),
         [h, x] = i.useState(!1),
         g = i.useCallback(() => {
@@ -22,20 +22,20 @@ let d = i.memo(function (e) {
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(r.Kqy, {
+            (0, a.jsxs)(l.Kqy, {
                 className: t,
                 direction: "horizontal",
                 align: "center",
                 children: [
-                    (0, a.jsx)(r.hU, {
+                    (0, a.jsx)(l.hU, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: h ? r.C2q : r.zTD,
+                        icon: h ? l.C2q : l.zTD,
                         onClick: f,
                         "aria-label": h ? "Copied" : "Copy",
                     }),
-                    (0, a.jsx)(r.rsf, {
-                        label: "".concat(n.toLowerCase(), " (").concat(l.z[n], ")"),
+                    (0, a.jsx)(l.rsf, {
+                        label: "".concat(n.toLowerCase(), " (").concat(r.z[n], ")"),
                         description: (0, o.qh)(u)
                             ? (function (e) {
                                   var t, n;
@@ -46,12 +46,12 @@ let d = i.memo(function (e) {
                                           : t[e];
                                   if (null == a) return null;
                                   let i = [],
-                                      { lastDismissedVersion: l, lastDismissedAtMs: r, lastDismissedObjectId: o } = a;
+                                      { lastDismissedVersion: r, lastDismissedAtMs: l, lastDismissedObjectId: o } = a;
                                   if (
-                                      (void 0 !== l && 0 !== l && i.push("last_dismissed_version: ".concat(l)),
-                                      void 0 !== r)
+                                      (void 0 !== r && 0 !== r && i.push("last_dismissed_version: ".concat(r)),
+                                      void 0 !== l)
                                   ) {
-                                      let e = Number(r),
+                                      let e = Number(l),
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
                                       i.push("last_dismissed_at: ".concat(t));
                                   }
@@ -66,7 +66,7 @@ let d = i.memo(function (e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(r.izJ, {}),
+            (0, a.jsx)(l.izJ, {}),
         ],
     });
 });

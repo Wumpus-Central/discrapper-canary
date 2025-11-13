@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(951288),
-    r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    i = n(647438),
+    r = n(120356),
+    l = n.n(r),
     s = n(793030),
     o = n(442837),
     c = n(678717),
@@ -88,7 +88,7 @@ let g = (e) => {
         });
     },
     f = () => {
-        let [e, t] = r.useState(0);
+        let [e, t] = i.useState(0);
         return (0, a.jsxs)(s.zJl, {
             className: x.wrapper,
             children: [

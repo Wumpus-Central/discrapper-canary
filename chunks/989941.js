@@ -1,10 +1,10 @@
 let r;
-n.d(t, { Z: () => i });
-var l = n(145597);
-function i(e, t) {
+n.d(t, { Z: () => l });
+var i = n(145597);
+function l(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, l.getPID)();
+            n = (0, i.getPID)();
         return null == e || null == n
             ? null
             : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === n

@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(275759),
     v = n(231757),
     I = n(888496),
-    S = n(266454),
-    T = n(565138),
+    T = n(266454),
+    S = n(565138),
     A = n(297700),
     C = n(553795),
     N = n(430824),
     R = n(246946),
     P = n(626135),
-    w = n(63063),
-    D = n(706454),
+    D = n(63063),
+    w = n(706454),
     x = n(526665),
     L = n(349728),
     M = n(494620),
@@ -128,8 +128,8 @@ let z = (e) => {
                 (0, r.jsxs)("div", {
                     className: V.integration,
                     children: [
-                        (0, r.jsx)(T.Z, {
-                            size: T.Z.Sizes.SMALL,
+                        (0, r.jsx)(S.Z, {
+                            size: S.Z.Sizes.SMALL,
                             guild: a.guild,
                             className: V.guildIcon,
                         }),
@@ -172,16 +172,16 @@ function q(e) {
     let { onDisconnect: t, account: n, theme: a, locale: l } = e,
         [c, p] = i.useState(n.friendSync),
         [m, g] = i.useState(n.visibility),
-        [E, S] = i.useState(n.metadataVisibility),
-        [T, C] = i.useState(n.showActivity),
+        [E, T] = i.useState(n.metadataVisibility),
+        [S, C] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
-        [P, D] = i.useState(null),
+        [P, w] = i.useState(null),
         [j, Z] = i.useState(!1),
         [H, W] = i.useState([]),
         q = (0, y.rR)(n.type),
         X = b.Z.get(q);
     i.useEffect(() => {
-        p(n.friendSync), g(n.visibility), S(n.metadataVisibility), C(n.showActivity);
+        p(n.friendSync), g(n.visibility), T(n.metadataVisibility), C(n.showActivity);
     }, [n]);
     let Q = {
             inProgressVisibility: N,
@@ -331,7 +331,7 @@ function q(e) {
                             variant: "text-xs/normal",
                             className: V.connectionMetadataUpsellDescription,
                             children: F.intl.format(F.t.Up2ni7, {
-                                helpdeskUrl: w.Z.getArticleURL(G.BhN.CONNECTION_DETAILS),
+                                helpdeskUrl: D.Z.getArticleURL(G.BhN.CONNECTION_DETAILS),
                             }),
                         },
                         "label",
@@ -386,7 +386,7 @@ function q(e) {
             G.vbS.has(n.type) &&
                 (a = (0, r.jsx)(_.rsf, {
                     label: F.intl.format(F.t["6u6J0q"], { platform: e.name }),
-                    checked: T,
+                    checked: S,
                     onChange: eu,
                 })),
             (null == (t = b.Z.get(n.type)) ? void 0 : t.hasMetadata) === !0 &&
@@ -486,14 +486,14 @@ function q(e) {
         let { verified: t } = n,
             r = +!!e;
         if (e && !t) {
-            D(r),
+            w(r),
                 (0, v.Z)({
                     platformType: n.type,
                     location: "User Settings",
                 });
             return;
         }
-        S(r), h.Z.setMetadataVisibility(n.type, n.id, r);
+        T(r), h.Z.setMetadataVisibility(n.type, n.id, r);
     }
     function ec(e) {
         p(e), h.Z.setFriendSync(n.type, n.id, e);
@@ -508,7 +508,7 @@ function q(e) {
             if (!1 === n.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
             null != e && (g(e), h.Z.setVisibility(n.type, n.id, e), R(null)),
-                null != t && (S(t), h.Z.setMetadataVisibility(n.type, n.id, t), D(null));
+                null != t && (T(t), h.Z.setMetadataVisibility(n.type, n.id, t), w(null));
         }, [n]);
     let ed = (0, x.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {
@@ -520,7 +520,7 @@ function X() {
     return (
         i.useEffect(
             () => () => {
-                (0, S.Q3)(c.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: Z.L.AUTO });
+                (0, T.Q3)(c.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: Z.L.AUTO });
             },
             [],
         ),
@@ -627,7 +627,7 @@ let ee = () => {
         t = (0, l.e7)([C.Z], () => C.Z.isFetching()),
         n = (0, l.e7)([C.Z], () => C.Z.getAccounts()),
         a = (0, E.ZP)(),
-        o = (0, l.e7)([D.default], () => D.default.locale);
+        o = (0, l.e7)([w.default], () => w.default.locale);
     return (i.useEffect(() => {
         h.Z.fetch();
     }, []),

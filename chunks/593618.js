@@ -26,15 +26,15 @@ var r = n(951288),
     O = n(160404),
     v = n(777861),
     I = n(565799),
-    S = n(501655),
-    T = n(517334),
+    T = n(501655),
+    S = n(517334),
     A = n(344185),
     C = n(752048),
     N = n(439944),
     R = n(199902),
     P = n(984933),
-    w = n(699516),
-    D = n(9156),
+    D = n(699516),
+    w = n(9156),
     x = n(594174),
     L = n(938475),
     M = n(981631),
@@ -109,10 +109,10 @@ function V(e) {
             ],
             [t],
         ),
-        r = (0, T.ZP)(t),
+        r = (0, S.ZP)(t),
         a = i.useMemo(() => r.map((e) => e.id), [r]),
         o = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
-        s = (0, c.Wu)([w.Z], () => w.Z.getBlockedOrIgnoredIDs()),
+        s = (0, c.Wu)([D.Z], () => D.Z.getBlockedOrIgnoredIDs()),
         u = l().flatMap(n, (t) => {
             var n;
             if (t === e.afkChannelId) return [];
@@ -125,8 +125,8 @@ function V(e) {
         d = (0, c.Wu)([I.Z], () =>
             l().flatMap(a, (t) => {
                 if (t === e.afkChannelId) return [];
-                let n = I.Z.getMutableParticipants(t, S.pV.SPEAKER)
-                    .filter((e) => e.type === S.Ui.VOICE)
+                let n = I.Z.getMutableParticipants(t, T.pV.SPEAKER)
+                    .filter((e) => e.type === T.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -136,7 +136,7 @@ function V(e) {
         ),
         _ = (0, c.e7)([I.Z], () => {
             let e = 0;
-            for (let t of a) e += I.Z.getParticipantCount(t, S.pV.AUDIENCE);
+            for (let t of a) e += I.Z.getParticipantCount(t, T.pV.AUDIENCE);
             return e;
         }),
         h = (0, c.Wu)([R.Z], () => {
@@ -158,11 +158,11 @@ function V(e) {
         y = (0, p.dq)(b),
         O = E.filter((e) => null != e && !m.includes(e.id)),
         v = (0, c.e7)([C.Z], () => C.Z.getUserAffinitiesMap(), []),
-        D = i.useMemo(() => (0, N.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
+        w = i.useMemo(() => (0, N.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
         j = i.useMemo(() => (0, N.C)(d, v, "GuildTooltip - stageSpeakers"), [d, v]),
         k = i.useMemo(() => (0, N.C)(O, v, "GuildTooltip - streamUsers"), [O, v]);
     return {
-        voiceUsersToShow: D,
+        voiceUsersToShow: w,
         stageSpeakers: j,
         numStageListeners: _,
         streamUsersToShow: k,
@@ -252,10 +252,10 @@ function K(e) {
         m = H(u.hGI, f, n),
         g = H(i ? u.iWm : u.nG3, _, n),
         { isMuted: E, muteConfig: b } = (0, c.cj)(
-            [D.ZP],
+            [w.ZP],
             () => ({
-                isMuted: D.ZP.isMuted(n),
-                muteConfig: D.ZP.getMuteConfig(n),
+                isMuted: w.ZP.isMuted(n),
+                muteConfig: w.ZP.getMuteConfig(n),
             }),
             [n],
         ),

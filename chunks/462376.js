@@ -1,6 +1,6 @@
 n.d(t, {
     d: () => f,
-    k: () => x,
+    k: () => S,
 }),
     n(388685);
 var i = n(951288),
@@ -18,7 +18,7 @@ var i = n(951288),
     p = n(51144),
     I = n(388032),
     m = n(451964);
-function S(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function S(e, t, n) {
         e
     );
 }
-let x = 44;
+let S = 44;
 class f extends l.Component {
     shouldComponentUpdate(e, t) {
         return (
@@ -110,18 +110,18 @@ class f extends l.Component {
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", {
+            x(this, "state", {
                 sending: !1,
                 invited: !1,
                 hovered: !1,
             }),
-            S(this, "handleMouseEnter", () => {
+            x(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            S(this, "handleMouseLeave", () => {
+            x(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            S(this, "getInviteAnalyticsMetadata", () => {
+            x(this, "getInviteAnalyticsMetadata", () => {
                 let { row: e, source: t } = this.props;
                 if (null != e)
                     return {
@@ -129,7 +129,7 @@ class f extends l.Component {
                         source: t,
                     };
             }),
-            S(this, "handleClickInvite", () => {
+            x(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: i } = this.props;
                 null != n &&
                     (null != t

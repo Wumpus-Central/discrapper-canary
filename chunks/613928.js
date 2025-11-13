@@ -6,7 +6,7 @@ n.d(t, {
     NV: () => x,
     Rm: () => R,
     _e: () => C,
-    aL: () => v,
+    aL: () => I,
     eO: () => M,
     em: () => T,
     es: () => N,
@@ -14,7 +14,7 @@ n.d(t, {
     mV: () => L,
     rK: () => w,
     wV: () => P,
-    y_: () => y,
+    y_: () => v,
     ye: () => U,
 }),
     n(539854),
@@ -34,19 +34,19 @@ var a = n(924301),
 n(375954);
 var p = n(306680),
     f = n(709054),
-    m = n(948053),
-    h = n(518929),
-    g = n(940893),
+    h = n(948053),
+    g = n(518929),
+    m = n(940893),
     _ = n(144725),
     b = n(797394),
     E = n(634773),
     O = n(981631),
-    I = n(764051);
-function y(e, t) {
+    y = n(764051);
+function v(e, t) {
     return "hydration-".concat(e, "-").concat(t);
 }
 n(388032);
-var v =
+var I =
     (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
     (r[(r.DEFAULT = 1)] = "DEFAULT"),
     (r[(r.MORE = 2)] = "MORE"),
@@ -68,7 +68,7 @@ async function T(e, t, n) {
     let r = _.Z.getHydratedItems(),
         i = e.slice(t, n);
     if (0 === i.length) return;
-    m.Z.loadHydratedAttempt(y(t, n));
+    h.Z.loadHydratedAttempt(v(t, n));
     let l = i.filter((e) => null == r[e.id]),
         a = l
             .filter((e) => e.type === b.Ni.MESSAGE)
@@ -124,7 +124,7 @@ async function T(e, t, n) {
                 guild_id: e.data.guild_id,
                 channel_id: e.data.channel_id,
             }));
-    await m.Z.fetchHydrated(t, n, {
+    await h.Z.fetchHydrated(t, n, {
         messageItems: [...a, ...s],
         summaryItems: o,
         activityItems: c,
@@ -224,8 +224,8 @@ function A(e, t) {
     var n, r;
     let i, l;
     return (
-        null != e.before_messages && (i = j(e.before_messages).slice(-I.h9)),
-        null != e.after_messages && (l = j(e.after_messages).slice(0, I.Ml)),
+        null != e.before_messages && (i = j(e.before_messages).slice(-y.h9)),
+        null != e.after_messages && (l = j(e.after_messages).slice(0, y.Ml)),
         (n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -278,7 +278,7 @@ function Z(e, t) {
     return null == n || f.default.extractTimestamp(t) > f.default.extractTimestamp(n);
 }
 function w(e) {
-    return (0, h.VZ)(e);
+    return (0, g.VZ)(e);
 }
 function L(e) {
     var t;
@@ -322,7 +322,7 @@ function D(e) {
         n = null;
     for (let t = e.length - 1; t >= 0; t--) {
         let r = e[t];
-        if (null != r && !g.X.has(r.item.data.kind)) {
+        if (null != r && !m.X.has(r.item.data.kind)) {
             n = r.item.id;
             break;
         }
@@ -412,12 +412,12 @@ async function U(e) {
                 f.default.atPreviousMillisecond(n.data.message_id),
             );
     }),
-        await m.Z.clearReadStates(),
-        await m.Z.fetchDehydrated({
+        await h.Z.clearReadStates(),
+        await h.Z.fetchDehydrated({
             isReloading: !0,
             forceRefresh: !0,
         }),
-        await m.Z.reloadICYMITab(),
-        await m.Z.getGuildChannelScores(),
-        m.Z.getRecommendedGuilds();
+        await h.Z.reloadICYMITab(),
+        await h.Z.getGuildChannelScores(),
+        h.Z.getRecommendedGuilds();
 }

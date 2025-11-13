@@ -1,6 +1,6 @@
-n.d(t, { Z: () => C }), n(388685);
-var r,
-    i = n(873546),
+n.d(t, { Z: () => v }), n(388685);
+var i,
+    r = n(873546),
     l = n(442837),
     a = n(570140),
     o = n(38618),
@@ -22,14 +22,14 @@ function u(e, t, n) {
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
+            i.forEach(function (t) {
                 u(e, t, n[t]);
             });
     }
@@ -43,8 +43,8 @@ function p(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -53,30 +53,30 @@ function p(e, t) {
         e
     );
 }
-let f = {},
-    h = {},
+let h = {},
+    f = {},
     m = !0,
     g = {},
     b = !1;
-function _() {
+function y() {
     if (((g = {}), !m))
         for (let [e, t] of Object.entries(s.Z)) {
-            let n = !1 !== f[e];
-            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== f[n] && (g[e] = !1);
+            let n = !1 !== h[e];
+            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (g[e] = !1);
         }
 }
-class y extends (r = l.ZP.Store) {
+class C extends (i = l.ZP.Store) {
     initialize() {
-        _(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(o.Z);
+        y(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(o.Z);
     }
     shouldShow(e) {
-        return !(!b || m || c.a || (i.tq && ["writing-messages", "organize-by-topic"].includes(e))) && (g[e] || !1);
+        return !(!b || m || c.a || (r.tq && ["writing-messages", "organize-by-topic"].includes(e))) && (g[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !m;
     }
     getIndicators() {
-        return h;
+        return f;
     }
     getData() {
         return s.Z;
@@ -86,27 +86,27 @@ class y extends (r = l.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-u(y, "displayName", "TutorialIndicatorStore");
-let C = new y(a.Z, {
+u(C, "displayName", "TutorialIndicatorStore");
+let v = new C(a.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         (b = !0),
             (m = !0),
-            (f = {}),
-            null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (f[e] = !1))),
-            _();
+            (h = {}),
+            null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))),
+            y();
     },
     CONNECTION_CLOSED: function () {
         b = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (f = p(d({}, f), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], _();
+        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], y();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
-        h = p(d({}, h), { [e.tutorialId]: e.renderData });
+        f = p(d({}, f), { [e.tutorialId]: e.renderData });
     },
     TUTORIAL_INDICATOR_HIDE: function (e) {
-        (h = d({}, h)), delete h[e.tutorialId];
+        (f = d({}, f)), delete f[e.tutorialId];
     },
     TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
         m = !0;

@@ -36,14 +36,14 @@ n.d(t, {
     UE: () => eL,
     Ub: () => v,
     Uj: () => eC,
-    V3: () => e2,
+    V3: () => e3,
     Vr: () => eO,
     Wl: () => tf,
     Wt: () => ez,
     XP: () => t_,
     YA: () => eG,
     Yc: () => e0,
-    Z5: () => e3,
+    Z5: () => e2,
     Zk: () => K,
     Zs: () => X,
     a9: () => eS,
@@ -84,7 +84,7 @@ n.d(t, {
     qJ: () => Y,
     qb: () => eg,
     qt: () => th,
-    r3: () => eD,
+    r3: () => ew,
     rs: () => T,
     sB: () => e6,
     uX: () => ec,
@@ -101,7 +101,7 @@ n.d(t, {
     yR: () => et,
     yg: () => ee,
     yu: () => ef,
-    z3: () => ew,
+    z3: () => eD,
     z9: () => e_,
     zF: () => eV,
     zr: () => td,
@@ -308,8 +308,8 @@ function R(e, t, n) {
 function P(e, t, n, i) {
     r.closure575_externref_shim(e, t, n, i);
 }
-let w = ["bytes"],
-    D = ["omit", "same-origin", "include"],
+let D = ["bytes"],
+    w = ["omit", "same-origin", "include"],
     x = ["same-origin", "no-cors", "cors", "navigate"],
     L =
         "undefined" == typeof FinalizationRegistry
@@ -385,7 +385,7 @@ class G {
         r.__wbg_intounderlyingbytesource_free(e, 0);
     }
     get type() {
-        return w[r.intounderlyingbytesource_type(this.__wbg_ptr)];
+        return D[r.intounderlyingbytesource_type(this.__wbg_ptr)];
     }
     get autoAllocateChunkSize() {
         return r.intounderlyingbytesource_autoAllocateChunkSize(this.__wbg_ptr) >>> 0;
@@ -660,12 +660,12 @@ function eR(e, t) {
 function eP(e, t, n) {
     return new Uint8Array(e, t >>> 0, n >>> 0);
 }
-function ew() {
+function eD() {
     return u(function (e, t) {
         return new Response(e, t);
     }, arguments);
 }
-function eD() {
+function ew() {
     return u(function (e, t, n) {
         return new Request(l(e, t), n);
     }, arguments);
@@ -726,7 +726,7 @@ function eK(e, t) {
     e.body = t;
 }
 function ez(e, t) {
-    e.credentials = D[t];
+    e.credentials = w[t];
 }
 function eq(e, t) {
     e.headers = t;
@@ -749,11 +749,11 @@ function e0(e, t) {
 function e1(e) {
     return e.signal;
 }
-function e3() {
+function e2() {
     let e = "undefined" == typeof global ? null : global;
     return d(e) ? 0 : c(e);
 }
-function e2() {
+function e3() {
     let e = "undefined" == typeof globalThis ? null : globalThis;
     return d(e) ? 0 : c(e);
 }

@@ -1,22 +1,22 @@
 n.d(t, { Z: () => s });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(793030),
-    l = n(388032),
+var l = n(793030),
+    r = n(388032),
     a = n(226788);
 function s(e) {
     let { detectedGame: t } = e;
     return 0 === t.publishers.length
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, r.jsx)(i.X6q, {
+                  (0, i.jsx)(l.X6q, {
                       className: a.sectionHeader,
                       variant: "text-xs/semibold",
                       color: "header-secondary",
-                      children: l.intl.string(l.t["4Byy/G"]),
+                      children: r.intl.string(r.t["4Byy/G"]),
                   }),
-                  (0, r.jsx)(i.xvT, {
+                  (0, i.jsx)(l.xvT, {
                       variant: "text-sm/normal",
                       children: t.publishers.join(", "),
                   }),

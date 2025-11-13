@@ -9,7 +9,7 @@ var i = n(442837),
     s = n(385153),
     u = n(753436),
     d = n(34335);
-function g(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function g(e) {
     }
     return e;
 }
-function f(e) {
+function g(e) {
     var { games: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -63,7 +63,7 @@ function f(e) {
         renderGame: (e, t) =>
             (0, r.jsx)(
                 u.S,
-                g(
+                f(
                     {
                         index: t,
                         game: e,
@@ -87,8 +87,8 @@ function p(e) {
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
-                    f,
-                    ((t = g({}, e)),
+                    g,
+                    ((t = f({}, e)),
                     (n = n = { games: j }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

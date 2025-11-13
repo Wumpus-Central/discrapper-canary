@@ -1,7 +1,7 @@
 n.d(t, {
     Qk: () => C,
     WG: () => P,
-    ZP: () => w,
+    ZP: () => D,
 }),
     n(388685);
 var r = n(951288),
@@ -91,7 +91,7 @@ function P(e, t) {
         });
     }
 }
-function w(e) {
+function D(e) {
     let {
             items: t,
             onIndexChange: n,
@@ -119,11 +119,11 @@ function w(e) {
             }
         );
     }, [P, C]);
-    let w = t[f],
-        D = (0, u.g4)(
+    let D = t[f],
+        w = (0, u.g4)(
             {
                 type: l.l.GenericMedia,
-                media: w,
+                media: D,
             },
             c,
         ),
@@ -165,11 +165,11 @@ function w(e) {
                 currentIndex: f,
                 children: (e, t) =>
                     (0, r.jsx)(R, {
-                        isObscured: !m && D,
-                        src: w.url,
+                        isObscured: !m && w,
+                        src: D.url,
                         children: (n) =>
                             (0, r.jsx)(I.ZP, {
-                                media: w,
+                                media: D,
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,

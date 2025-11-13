@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => S,
+    Z: () => N,
     c: () => Z,
 });
 var l = t(951288),
@@ -16,8 +16,8 @@ var l = t(951288),
     g = t(74538),
     h = t(981631),
     j = t(474936),
-    p = t(388032),
-    v = t(476215);
+    v = t(388032),
+    p = t(476215);
 function f(e) {
     var { location: n } = e,
         t = (function (e, n) {
@@ -45,9 +45,9 @@ function f(e) {
         a = r.useCallback(() => {
             if (null != i) {
                 var e;
-                return null != (e = (0, g.fr)(i, j.Si.TIER_2)) ? e : p.intl.string(p.t.Y2WKTl);
+                return null != (e = (0, g.fr)(i, j.Si.TIER_2)) ? e : v.intl.string(v.t.Y2WKTl);
             }
-            return p.intl.string(p.t.Y2WKTl);
+            return v.intl.string(v.t.Y2WKTl);
         }, [i]);
     return (0, l.jsx)(
         x.Z,
@@ -77,8 +77,8 @@ function f(e) {
             return e;
         })(
             {
-                className: s()(v.enhancedCTA, v.ctaGradientBackground),
-                iconClassName: v.premiumIcon,
+                className: s()(p.enhancedCTA, p.ctaGradientBackground),
+                iconClassName: p.premiumIcon,
                 subscriptionTier: j.Si.TIER_2,
                 textOptions: { textOverride: a() },
                 size: c.zx.Sizes.TINY,
@@ -91,10 +91,10 @@ function f(e) {
 function Z() {
     let e = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, l.jsxs)("div", {
-        className: s()(v.reverseTrialEducationBannerContainer, { [v.reducedMotion]: e }),
+        className: s()(p.reverseTrialEducationBannerContainer, { [p.reducedMotion]: e }),
         children: [
             (0, l.jsx)(o.Fmz, {
-                className: s()(v.unlockAnimation, { [v.reducedMotion]: e }),
+                className: s()(p.unlockAnimation, { [p.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
@@ -102,13 +102,13 @@ function Z() {
             }),
             (0, l.jsx)(o.Text, {
                 variant: "text-xs/medium",
-                className: v.reverseTrialEducationText,
-                children: p.intl.format(p.t.GimLpS, {}),
+                className: p.reverseTrialEducationText,
+                children: v.intl.format(v.t.GimLpS, {}),
             }),
         ],
     });
 }
-function S(e) {
+function N(e) {
     let { message: n, onClose: t, openStreamUpsellModal: r, glow: i = !1 } = e,
         a = {
             section: h.jXE.STREAM_SETTINGS,
@@ -116,10 +116,10 @@ function S(e) {
             objectType: h.AnalyticsObjectTypes.BUY,
         };
     return (0, l.jsxs)("div", {
-        className: s()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: i }),
+        className: s()(p.upsellBanner, p.enhancedBanner, { [p.gradientGlow]: i }),
         children: [
             (0, l.jsxs)("div", {
-                className: v.iconTextContainer,
+                className: p.iconTextContainer,
                 children: [
                     (0, l.jsx)(o.SrA, {
                         size: "md",
@@ -127,11 +127,11 @@ function S(e) {
                     }),
                     (0, l.jsx)(o.Text, {
                         variant: "text-sm/medium",
-                        className: s()(v.upsellText, v.enhancedUpsellText),
+                        className: s()(p.upsellText, p.enhancedUpsellText),
                         children:
                             null != n
                                 ? n
-                                : p.intl.format(p.t["L/zCto"], {
+                                : v.intl.format(v.t["L/zCto"], {
                                       onClick: () =>
                                           r({
                                               analyticsLocation: a,
@@ -142,7 +142,7 @@ function S(e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: v.enhancedCTAs,
+                className: p.enhancedCTAs,
                 children: (0, l.jsx)(f, { location: a }),
             }),
         ],

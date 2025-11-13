@@ -25,8 +25,8 @@ function y(e) {
         N = null != I ? I : C,
         R = null != (y = null != T ? T : I) ? y : C / 10,
         P = v.length,
-        w = null != O.upsellLongMessages && (null != P ? P : 0) > m.J6R && A,
-        D = null != O.upsellLongMessages && !A,
+        D = null != O.upsellLongMessages && (null != P ? P : 0) > m.J6R && A,
+        w = null != O.upsellLongMessages && !A,
         x = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
         L = N - P,
         M = L > R,
@@ -38,7 +38,7 @@ function y(e) {
                   ? E.intl.formatToPlainString(E.t.qH8uFW, { count: L })
                   : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(c.Z.CHARACTER_COUNT);
-    if (!((w && L >= 0) || !M || (D && !M))) return null;
+    if (!((D && L >= 0) || !M || (w && !M))) return null;
     let G = L >= 0;
     return (0, r.jsx)(u.Gt, {
         value: U,
@@ -48,7 +48,7 @@ function y(e) {
                 (0, r.jsxs)("div", {
                     className: b.flairContainer,
                     children: [
-                        w && G
+                        D && G
                             ? (0, r.jsx)(s.u, {
                                   text: E.intl.formatToPlainString(E.t.vcvHa0, { maxLength: N }),
                                   position: "top",
@@ -75,7 +75,7 @@ function y(e) {
                     ],
                 }),
                 (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: L }) }),
-                D && !M
+                w && !M
                     ? (0, r.jsx)(h.Z, {
                           className: b.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,

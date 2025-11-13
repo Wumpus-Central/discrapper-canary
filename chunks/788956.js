@@ -1,23 +1,23 @@
-t.d(n, { d: () => r });
-var l = t(647438),
-    i = t(442837),
-    a = t(457330),
-    o = t(553795);
-function r(e) {
-    let n = (0, i.e7)([o.Z], () => (null != e ? o.Z.getAccount(null, e) : null)),
-        t = (0, i.e7)([o.Z], () => o.Z.isFetching()),
-        r = null != n && !n.revoked;
+n.d(t, { d: () => a });
+var l = n(647438),
+    i = n(442837),
+    r = n(457330),
+    o = n(553795);
+function a(e) {
+    let t = (0, i.e7)([o.Z], () => (null != e ? o.Z.getAccount(null, e) : null)),
+        n = (0, i.e7)([o.Z], () => o.Z.isFetching()),
+        a = null != t && !t.revoked;
     return {
-        loading: t,
-        hasConnection: r,
+        loading: n,
+        hasConnection: a,
         canConnect: null != e,
         startConnection: l.useCallback(
-            async (n) => {
+            async (t) => {
                 if (null == e) return { success: !1 };
                 try {
-                    var t;
-                    let l = await a.Z.authorize(e, { location: null != n ? n : "Account Linking" });
-                    if (l.ok && (null == (t = l.body) ? void 0 : t.url) != null)
+                    var n;
+                    let l = await r.Z.authorize(e, { location: null != t ? t : "Account Linking" });
+                    if (l.ok && (null == (n = l.body) ? void 0 : n.url) != null)
                         return {
                             success: !0,
                             url: l.body.url,
@@ -29,6 +29,6 @@ function r(e) {
             },
             [e],
         ),
-        account: n,
+        account: t,
     };
 }

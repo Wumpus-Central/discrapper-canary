@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(767714),
     R = n(382791),
     P = n(474936),
-    w = n(981631),
-    D = n(388032),
+    D = n(981631),
+    w = n(388032),
     x = n(717582),
     L = n(867250);
 function M(e) {
@@ -42,11 +42,11 @@ function M(e) {
         n = t.diff(u()(), "h");
     if (n > 24) {
         let e = t.diff(u()(), "d");
-        return D.intl.formatToPlainString(D.t.xs9VPm, { numDays: e });
+        return w.intl.formatToPlainString(w.t.xs9VPm, { numDays: e });
     }
-    if (n > 1) return D.intl.formatToPlainString(D.t.p7KX59, { numHours: n });
+    if (n > 1) return w.intl.formatToPlainString(w.t.p7KX59, { numHours: n });
     let r = t.diff(u()(), "minutes");
-    return D.intl.formatToPlainString(D.t["XtQ+Ap"], { numMinutes: r });
+    return w.intl.formatToPlainString(w.t["XtQ+Ap"], { numMinutes: r });
 }
 function j(e) {
     var t, n, i;
@@ -82,8 +82,8 @@ function j(e) {
             (0, r.jsx)(R.Cy, {
                 text:
                     null != c
-                        ? D.intl.formatToPlainString(D.t.iiLbvu, { percent: c.discount.amount })
-                        : D.intl.string(D.t.IBYG5U),
+                        ? w.intl.formatToPlainString(w.t.iiLbvu, { percent: c.discount.amount })
+                        : w.intl.string(w.t.IBYG5U),
                 colorOptions: _ === P.Si.TIER_0 ? R.VE.PREMIUM_TIER_0_WHITE_FILL : R.VE.PREMIUM_TIER_2_WHITE_FILL,
             }),
             (0, r.jsx)(h.Text, {
@@ -107,7 +107,7 @@ function k(e) {
         [d, f] = i.useState(!1),
         _ =
             null != u
-                ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: u.discount.amount })
+                ? w.intl.formatToPlainString(w.t.bkQ4bH, { percent: u.discount.amount })
                 : (0, I.Rt)({
                       intervalType: null == c || null == (t = c.subscription_trial) ? void 0 : t.interval,
                       intervalCount: null == c || null == (n = c.subscription_trial) ? void 0 : n.interval_count,
@@ -156,7 +156,7 @@ function G(e) {
                 size: p.zx.Sizes.SMALL,
                 look: p.iL.BLANK,
                 className: x.cancelButton,
-                children: D.intl.string(D.t.cpT0Cq),
+                children: w.intl.string(w.t.cpT0Cq),
             }),
             (0, r.jsx)(k, {
                 className: x.subscribeButton,
@@ -177,13 +177,13 @@ function B(e) {
         children: [
             (0, r.jsx)(R.Cy, {
                 className: x.topRimPill,
-                text: D.intl.string(D.t["8CVUrV"]),
+                text: w.intl.string(w.t["8CVUrV"]),
                 colorOptions: R.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
             (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
                 color: "text-default",
-                children: D.intl.format(D.t["fF+cgd"], { onClick: () => (0, A.z)() }),
+                children: w.intl.format(w.t["fF+cgd"], { onClick: () => (0, A.z)() }),
             }),
             (0, r.jsx)(k, {
                 trialOffer: i,
@@ -256,19 +256,19 @@ function F(e) {
                             (0, r.jsx)("img", {
                                 className: x.upsellImage,
                                 src: L,
-                                alt: D.intl.string(D.t.do7AoM),
+                                alt: w.intl.string(w.t.do7AoM),
                             }),
                             (0, r.jsx)(h.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "header-primary",
-                                children: D.intl.string(D.t.HEm04J),
+                                children: w.intl.string(w.t.HEm04J),
                             }),
                             (0, r.jsx)(j, {
                                 trialOffer: y,
                                 discountOffer: O,
-                                children: D.intl.format(D.t["2HoFKF"], {
+                                children: w.intl.format(w.t["2HoFKF"], {
                                     planName: (0, I.jP)(u),
-                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                    onClick: () => (0, b.uL)(D.Z5c.APPLICATION_STORE),
                                 }),
                             }),
                         ],
@@ -277,8 +277,8 @@ function F(e) {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
-                            section: w.jXE.EXPRESSION_PICKER,
-                            object: w.qAy.BUTTON_CTA,
+                            section: D.jXE.EXPRESSION_PICKER,
+                            object: D.qAy.BUTTON_CTA,
                         },
                         trialOffer: y,
                         discountOffer: O,
@@ -296,19 +296,19 @@ function F(e) {
                                 (0, r.jsx)("img", {
                                     className: x.upsellImage,
                                     src: L,
-                                    alt: D.intl.string(D.t.do7AoM),
+                                    alt: w.intl.string(w.t.do7AoM),
                                 }),
                                 (0, r.jsx)(h.Heading, {
                                     variant: "heading-xl/bold",
                                     color: "header-primary",
-                                    children: D.intl.string(D.t.jJG1pl),
+                                    children: w.intl.string(w.t.jJG1pl),
                                 }),
                                 (0, r.jsx)(j, {
                                     trialOffer: y,
                                     discountOffer: O,
-                                    children: D.intl.format(D.t["2HoFKF"], {
+                                    children: w.intl.format(w.t["2HoFKF"], {
                                         planName: (0, I.jP)(u),
-                                        onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                        onClick: () => (0, b.uL)(D.Z5c.APPLICATION_STORE),
                                     }),
                                 }),
                             ],
@@ -317,8 +317,8 @@ function F(e) {
                             subscriptionTier: u,
                             onClose: s,
                             analyticsLocationObject: {
-                                section: w.jXE.EXPRESSION_PICKER,
-                                object: w.qAy.BUTTON_CTA,
+                                section: D.jXE.EXPRESSION_PICKER,
+                                object: D.qAy.BUTTON_CTA,
                             },
                             trialOffer: y,
                             discountOffer: O,
@@ -342,14 +342,14 @@ function F(e) {
                             (0, r.jsx)(h.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "header-primary",
-                                children: D.intl.string(D.t["1SsvhY"]),
+                                children: w.intl.string(w.t["1SsvhY"]),
                             }),
                             (0, r.jsx)(j, {
                                 trialOffer: y,
                                 discountOffer: O,
-                                children: D.intl.format(D.t.md4nP5, {
+                                children: w.intl.format(w.t.md4nP5, {
                                     planName: (0, I.jP)(u),
-                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                    onClick: () => (0, b.uL)(D.Z5c.APPLICATION_STORE),
                                 }),
                             }),
                         ],
@@ -358,8 +358,8 @@ function F(e) {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
-                            section: w.jXE.EMOJI_PICKER_POPOUT,
-                            object: w.qAy.BUTTON_CTA,
+                            section: D.jXE.EMOJI_PICKER_POPOUT,
+                            object: D.qAy.BUTTON_CTA,
                         },
                         trialOffer: y,
                         discountOffer: O,
@@ -373,34 +373,34 @@ function F(e) {
             let M;
             switch (c) {
                 case P.cd.UPLOAD_ERROR_UPSELL:
-                    M = D.intl.format(D.t.F4qoD7, {
+                    M = w.intl.format(w.t.F4qoD7, {
                         planName: (0, I.jP)(u),
-                        premiumMaxSize: u === P.Si.TIER_0 ? D.intl.string(D.t["C/Rhb9"]) : N,
+                        premiumMaxSize: u === P.Si.TIER_0 ? w.intl.string(w.t["C/Rhb9"]) : N,
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, b.uL)(D.Z5c.APPLICATION_STORE), null == s || s();
                         },
                     });
                     break;
                 case P.cd.BURST_REACTION_UPSELL:
-                    M = D.intl.format(D.t.poib9C, {
+                    M = w.intl.format(w.t.poib9C, {
                         planName: (0, I.jP)(u),
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, b.uL)(D.Z5c.APPLICATION_STORE), null == s || s();
                         },
                     });
                     break;
                 case P.cd.STREAM_QUALITY_UPSELL:
-                    M = D.intl.format(D.t.WspKp9, {
+                    M = w.intl.format(w.t.WspKp9, {
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
+                            (0, b.uL)(D.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
                         },
                     });
                     break;
                 case P.cd.MESSAGE_LENGTH_UPSELL:
-                    M = D.intl.format(D.t.GUHtE3, {
-                        premiumMaxMessageLength: w.en1,
+                    M = w.intl.format(w.t.GUHtE3, {
+                        premiumMaxMessageLength: D.en1,
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, b.uL)(D.Z5c.APPLICATION_STORE), null == s || s();
                         },
                     });
             }
@@ -442,9 +442,9 @@ function F(e) {
                     (0, r.jsx)(j, {
                         trialOffer: y,
                         discountOffer: O,
-                        children: D.intl.format(D.t.poib9C, {
+                        children: w.intl.format(w.t.poib9C, {
                             planName: (0, I.jP)(u),
-                            onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                            onClick: () => (0, b.uL)(D.Z5c.APPLICATION_STORE),
                         }),
                     }),
                     (0, r.jsx)(k, {
@@ -463,9 +463,9 @@ function F(e) {
                 (0, r.jsx)(j, {
                     trialOffer: y,
                     discountOffer: O,
-                    children: D.intl.format(D.t["5KMAnK"], {
+                    children: w.intl.format(w.t["5KMAnK"], {
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), (0, E.C)();
+                            (0, b.uL)(D.Z5c.APPLICATION_STORE), (0, E.C)();
                         },
                     }),
                 })
@@ -483,7 +483,7 @@ function F(e) {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
                         className: x.messageLengthUpsellHeader,
-                        children: D.intl.string(D.t.ZvHg3N),
+                        children: w.intl.string(w.t.ZvHg3N),
                     }),
                     (0, r.jsx)("div", { className: x.divider }),
                     (0, r.jsx)(j, {
@@ -491,10 +491,10 @@ function F(e) {
                         discountOffer: O,
                         className: x.messageLengthBrandedContainer,
                         subscriptionTier: u,
-                        children: D.intl.format(D.t.GUHtE3, {
-                            premiumMaxMessageLength: w.en1,
+                        children: w.intl.format(w.t.GUHtE3, {
+                            premiumMaxMessageLength: D.en1,
                             onClick: () => {
-                                (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                                (0, b.uL)(D.Z5c.APPLICATION_STORE), null == s || s();
                             },
                         }),
                     }),

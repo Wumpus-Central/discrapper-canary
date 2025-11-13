@@ -78,33 +78,33 @@ function v(e) {
             referrerPolicy: v = "origin",
         } = e,
         I = (0, f.sU)({}),
-        S = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
-        T = i.useRef(null),
-        A = (0, _.Z)(T, g, null == I ? window : I),
+        T = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
+        S = i.useRef(null),
+        A = (0, _.Z)(S, g, null == I ? window : I),
         C = O(b({}, E), {
-            frame_id: S,
+            frame_id: T,
             platform: h.S4.DESKTOP,
         }),
         [N, R] = i.useState(!1),
         P = u.Z.theme,
-        w = b({}, a);
-    function D(e) {
+        D = b({}, a);
+    function w(e) {
         var n;
         null == o || o(e.target),
-            (T.current = e.target),
+            (S.current = e.target),
             A(!0),
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
     }
     return (
-        P === m.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
+        P === m.BRd.LIGHT ? (D.colorScheme = "light") : (D.colorScheme = "dark"),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: S }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: S });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
                 }
             ),
-            [S],
+            [T],
         ),
         i.useEffect(() => {
             let e = (e) => {
@@ -118,13 +118,13 @@ function v(e) {
                 }
             );
         }, []),
-        N && (w.pointerEvents = "none"),
+        N && (D.pointerEvents = "none"),
         null != t
             ? (0, r.jsx)("iframe", {
-                  style: w,
+                  style: D,
                   allow: "autoplay; encrypted-media",
                   referrerPolicy: v,
-                  onLoad: D,
+                  onLoad: w,
                   sandbox: (0, p.Z)({ allowPopups: y }),
                   className: n,
                   src: "".concat(t, "?").concat(new URLSearchParams(C)),

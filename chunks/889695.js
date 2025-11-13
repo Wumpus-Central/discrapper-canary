@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(388032),
     I = n(124650);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -52,21 +52,21 @@ function T(e) {
 function A(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-        S = (0, o.e7)([p.Z], () => p.Z.getGuild(t)),
+        T = (0, o.e7)([p.Z], () => p.Z.getGuild(t)),
         A = (0, o.e7)([_.Z], () => _.Z.getRolesSnapshot(t)),
         N = (0, o.e7)([_.Z], () => _.Z.getSortedRoles(t)),
         { impersonateType: R, viewingRoles: P } = (0, o.cj)([b.Z], () => ({
             impersonateType: b.Z.getImpersonateType(t),
             viewingRoles: b.Z.getViewingRoles(t),
         })),
-        w = R === y.z.SERVER_SHOP,
-        D = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        x = null != S ? A[(0, u.lV)(S)] : null,
+        D = R === y.z.SERVER_SHOP,
+        w = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        x = null != T ? A[(0, u.lV)(T)] : null,
         [L, M] = i.useState(() => {
             let e = null == P ? [] : g.default.keys(P);
             return null != x && e.push(x.id), e;
         }),
-        j = i.useRef(S);
+        j = i.useRef(T);
     i.useEffect(() => {
         let e = {},
             t = j.current;
@@ -81,18 +81,18 @@ function A(e) {
             });
         }
     }, [L, R, A]);
-    let k = null != S && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
+    let k = null != T && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
-                null != S && null != n
+                null != T && null != n
                     ? N.filter((e) => !(0, d.fI)(e))
                           .filter((e) => {
                               var t;
-                              return !w || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
+                              return !D || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == k ? void 0 : k.id) === e.id || m.r6(S, n.id, k, e))
+                          .filter((e) => (null == k ? void 0 : k.id) === e.id || m.r6(T, n.id, k, e))
                     : [],
-            [S, n, w, k, N],
+            [T, n, D, k, N],
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({
@@ -103,7 +103,7 @@ function A(e) {
                 disabled: !1,
             }));
             return (
-                null != S &&
+                null != T &&
                     null != x &&
                     e.push({
                         leading: C(x),
@@ -114,20 +114,20 @@ function A(e) {
                     }),
                 e
             );
-        }, [U, S, x]);
-    if (null == n || null == S || null == D) return null;
+        }, [U, T, x]);
+    if (null == n || null == T || null == w) return null;
     let B = {};
-    return (D.roles.forEach((e) => {
+    return (w.roles.forEach((e) => {
         let t = A[e];
         null != t && (B[t.id] = t);
     }),
     a.e$(
         m.I0({
             forceRoles: B,
-            context: S,
+            context: T,
         }),
         a.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),
-    ) || (0, u.eM)(S, n))
+    ) || (0, u.eM)(T, n))
         ? (0, r.jsx)("div", {
               className: I.container,
               children: (0, r.jsxs)(s.uz, {
@@ -143,7 +143,7 @@ function A(e) {
                           autoFocus: !0,
                           placeholder: v.intl.string(v.t.Sojqsr),
                       }),
-                      (0, r.jsx)(s.px, { renderListItem: (e) => (0, r.jsx)(l.W, T({}, e)) }),
+                      (0, r.jsx)(s.px, { renderListItem: (e) => (0, r.jsx)(l.W, S({}, e)) }),
                   ],
               }),
           })

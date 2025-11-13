@@ -5,7 +5,7 @@ var r,
     a = n(647438),
     s = n(120356),
     o = n.n(s),
-    c = n(358458),
+    c = n(509442),
     d = n(442837),
     u = n(481060),
     g = n(205641),
@@ -16,11 +16,11 @@ var r,
     b = n(981631),
     x = n(388032),
     j = n(744834);
-let v = {
+let _ = {
         tension: 200,
         friction: 20,
     },
-    _ =
+    v =
         ((r = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ let v = {
                     });
             }
             return e;
-        })({}, v)),
+        })({}, _)),
         (i = i = { clamp: !0 }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -77,7 +77,7 @@ function O(e) {
     return (0, l.jsx)(u.AMe, {
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: _,
+        config: v,
         shouldAnimate: "animate-always",
         children: (e) =>
             (0, l.jsxs)(c.animated.div, {
@@ -130,7 +130,7 @@ function C(e) {
         (0, l.jsx)(u.AMe, {
             from: { unlockedTranslateY: 50 },
             to: { unlockedTranslateY: 50 * (0 === b) },
-            config: v,
+            config: _,
             children: (e) =>
                 (0, l.jsx)("div", {
                     className: o()(
@@ -186,14 +186,14 @@ function y(e) {
             headerButton: c = null,
             withCardBody: g = !0,
             guildId: h,
-            showHeaderLockStatus: v = !0,
+            showHeaderLockStatus: _ = !0,
         } = e,
-        _ = (0, d.e7)([f.Z], () => {
+        v = (0, d.e7)([f.Z], () => {
             var e, t;
             return null != (t = null == (e = f.Z.getGuild(h)) ? void 0 : e.premiumTier) ? t : b.Eu4.NONE;
         }),
         O = b.oCV[i.tier],
-        y = a && i.tier <= _,
+        y = a && i.tier <= v,
         N = i.tier !== b.Eu4.NONE && i.tier !== b.Eu4.TIER_1;
     return (0, l.jsxs)(
         "div",
@@ -204,7 +204,7 @@ function y(e) {
                     subscriptionCount: n,
                     tier: i,
                     headerButton: c,
-                    showHeaderLockStatus: v,
+                    showHeaderLockStatus: _,
                     onSetRef: (e) => {
                         null != r && r(e, i);
                     },

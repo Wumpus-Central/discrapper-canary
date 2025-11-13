@@ -1,11 +1,11 @@
 n.d(t, { Z: () => i });
 var r = n(951288),
     s = n(647438),
-    a = n(358458),
-    o = n(613087);
+    o = n(509442),
+    a = n(613087);
 function i(e) {
     let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = s.useContext(o.B$);
+        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = s.useContext(a.B$);
     return (
         s.useEffect(() => {
             l();
@@ -22,10 +22,10 @@ function i(e) {
                 zIndex: 5,
             },
             children: i.map((e) => {
-                let { id: n, collapsedLeft: s, expandedLeft: o, collapsedTop: i, expandedTop: l, width: d } = e,
+                let { id: n, collapsedLeft: s, expandedLeft: a, collapsedTop: i, expandedTop: l, width: d } = e,
                     u = c.get(n);
                 return (0, r.jsx)(
-                    a.animated.div,
+                    o.animated.div,
                     {
                         ref: u,
                         style: {
@@ -34,11 +34,11 @@ function i(e) {
                             top: 0,
                             left: 0,
                             width: d,
-                            transform: (0, a.to)(
+                            transform: (0, o.to)(
                                 [
                                     t.to({
                                         range: [0, 1],
-                                        output: [s, o],
+                                        output: [s, a],
                                     }),
                                     t.to({
                                         range: [0, 1],

@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(367907),
     v = n(10718),
     I = n(895924),
-    S = n(835473),
-    T = n(568100),
+    T = n(835473),
+    S = n(568100),
     A = n(471518),
     C = n(425986),
     N = n(216780),
     R = n(857192),
     P = n(630388),
-    w = n(823379),
-    D = n(541099),
+    D = n(823379),
+    w = n(541099),
     x = n(827498),
     L = n(87005),
     M = n(219066),
@@ -78,8 +78,8 @@ function ea(e) {
         [E, b] = ep(!0),
         [y, O] = ep(u),
         [v, I] = ep(d),
-        [S, T] = ep(f),
-        A = E && y && v && S,
+        [T, S] = ep(f),
+        A = E && y && v && T,
         C = (d || u) && !A,
         N = f && c;
     i.useEffect(() => {
@@ -136,7 +136,7 @@ function ea(e) {
                               f &&
                                   (0, r.jsx)(eu, {
                                       context: t,
-                                      onEmptyState: T,
+                                      onEmptyState: S,
                                   }),
                               A &&
                                   (0, r.jsx)(F.A, {
@@ -174,7 +174,7 @@ function es(e) {
                     (e) => {
                         (0, O.yw)(K.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
-                            source: D.Z.entrypoint(),
+                            source: w.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME,
                         });
                     },
@@ -190,7 +190,7 @@ function es(e) {
         f = i.useCallback(() => {
             c(!0),
                 (0, O.yw)(K.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-                    source: D.Z.entrypoint(),
+                    source: w.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME,
                 });
         }, []),
@@ -243,7 +243,7 @@ function el(e) {
                     : [],
             [t, n],
         );
-    (0, S.Z)(r);
+    (0, T.Z)(r);
 }
 function ec(e) {
     let { context: t, entrypoint: n, onEmptyState: a } = e,
@@ -524,7 +524,7 @@ function e_(e) {
                             installOnDemand: s(e.application),
                         };
                 })
-                .filter(w.lm);
+                .filter(D.lm);
             return (
                 (0, P.yE)(a.flags, l.b.APPENDS_REMAINING_ACTIVITIES) &&
                     e.push(
@@ -632,7 +632,7 @@ function ep(e) {
 }
 function eh() {
     let e = (0, _.e7)([R.default], () => R.default.onlyShowPreviewAppCollections),
-        t = T.Z.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
+        t = S.Z.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
     return e ? s.E.PREVIEW : t ? s.E.NON_STAFF_PREVIEW : s.E.ACTIVE;
 }
 function em(e) {
@@ -707,7 +707,7 @@ function eE(e) {
                       handleViewMore: () => {
                           (0, O.yw)(K.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: o,
-                              source: D.Z.entrypoint(),
+                              source: w.Z.entrypoint(),
                               num: r.length,
                           }),
                               l({

@@ -26,15 +26,15 @@ var i = n(120356),
     O = n(402113),
     v = n(800965),
     I = n(157813),
-    S = n(25827),
-    T = n(131951),
+    T = n(25827),
+    S = n(131951),
     A = n(636449),
     C = n(566620),
     N = n(884338),
     R = n(617552),
     P = n(981631),
-    w = n(231338),
-    D = n(388032),
+    D = n(231338),
+    w = n(388032),
     x = n(702952),
     L = n(186880);
 function M(e) {
@@ -43,7 +43,7 @@ function M(e) {
         iconClassName: a()(x.arrowIcon, { [x.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: s.CJ0,
-        label: n ? D.intl.string(D.t["2TiKgS"]) : D.intl.string(D.t.oN8bqe),
+        label: n ? w.intl.string(w.t["2TiKgS"]) : w.intl.string(w.t.oN8bqe),
     });
 }
 function j(e) {
@@ -54,14 +54,14 @@ function j(e) {
             onMouseDown: y,
             onMouseMove: I,
             onMouseLeave: N,
-            onJumpToChannel: D,
+            onJumpToChannel: w,
             idle: M,
             selectedParticipant: j,
             embeddedActivity: k,
         } = e,
         U = (0, p.bp)() === P.IlC.POPOUT,
-        G = (0, o.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        B = (0, o.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+        G = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
+        B = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         Z = !1 === (null == (t = null == B ? void 0 : B.disabled) || t),
         F = (0, u.Z)([s])[0],
         V = (0, m.Z)(a),
@@ -95,7 +95,7 @@ function j(e) {
                         null != (i = null != (n = null == F ? void 0 : F.name) ? n : null == a ? void 0 : a.name)
                             ? i
                             : "",
-                    onJumpToChannel: D,
+                    onJumpToChannel: w,
                     preventIdleComponent: E.Z,
                 }),
             }),
@@ -108,7 +108,7 @@ function j(e) {
                         basis: "50%",
                         align: _.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(S.C, {
+                            (0, r.jsx)(T.C, {
                                 className: x.leftPipIcon,
                                 enabled: G,
                                 cameraUnavailable: !Z,
@@ -141,7 +141,7 @@ function j(e) {
                                       className: x.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: K,
-                                      onClosePopout: w.Vq,
+                                      onClosePopout: D.Vq,
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,

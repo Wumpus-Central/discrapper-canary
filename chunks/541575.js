@@ -58,18 +58,18 @@ function b(e, t) {
 }
 let x = function (e) {
     let { guild: t, disabled: x, role: j } = e,
-        v = (0, o.oC)(t.id, j),
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        C = t.features.has(g.GuildFeatures.ROLE_ICONS),
-        O = (e) => {
-            C ||
+        _ = (0, o.oC)(t.id, j),
+        { analyticsLocations: v } = (0, a.ZP)(),
+        O = t.features.has(g.GuildFeatures.ROLE_ICONS),
+        C = (e) => {
+            O ||
                 ((0, l.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: b(h({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: _,
+                    location_stack: v,
                 }),
                 (0, c.Z)({
-                    analyticsLocations: _,
+                    analyticsLocations: v,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
                         section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
@@ -84,9 +84,9 @@ let x = function (e) {
             guild: t,
             guildFeature: g.GuildFeatures.ROLE_ICONS,
             tooltipPosition: "top",
-            hideTooltip: C,
+            hideTooltip: O,
             onClick: () =>
-                O({
+                C({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.AnalyticsObjectTypes.TIER_2,
                 }),
@@ -108,10 +108,10 @@ let x = function (e) {
                     (0, r.jsx)("div", {
                         className: f.previewContainer,
                         children:
-                            null != v
+                            null != _
                                 ? (0, r.jsx)(
                                       d.Z,
-                                      b(h({}, v), {
+                                      b(h({}, _), {
                                           className: f.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
@@ -139,12 +139,12 @@ let x = function (e) {
                                               }),
                                           );
                                   })
-                                : O({ object: g.qAy.UPLOAD_IMAGE }),
+                                : C({ object: g.qAy.UPLOAD_IMAGE }),
                         variant: "primary",
                         disabled: x,
                         text: p.intl.string(p.t.mD1oGB),
                     }),
-                    null != v
+                    null != _
                         ? (0, r.jsx)(i.Button, {
                               onClick: () => {
                                   (0, u._l)(j.id, null, null);

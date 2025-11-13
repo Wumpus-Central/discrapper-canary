@@ -86,11 +86,11 @@ var v = (function (e) {
 function I(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: a, renderOptionLabel: s, defaultValues: g } = e,
         { type: b, maxValues: v, disabled: I } = t,
-        S = (0, p.Wo)(t),
-        [T, A] = i.useState(!1),
+        T = (0, p.Wo)(t),
+        [S, A] = i.useState(!1),
         [C, N] = i.useState(!1),
         [R, P] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
-        [w, D] = i.useState(new Set(R.keys())),
+        [D, w] = i.useState(new Set(R.keys())),
         [x, L] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
         [M, j] = i.useState(0);
     i.useEffect(() => {
@@ -98,7 +98,7 @@ function I(e) {
         if (e.every((e) => x.includes(e)) && x.every((t) => e.includes(t))) return;
         L(e);
         let t = new Map(null == g ? void 0 : g.map((e) => [e.value, e]));
-        P(t), D(new Set(t.keys())), j((e) => e + 1);
+        P(t), w(new Set(t.keys())), j((e) => e + 1);
     }, [g, x]);
     let k = (0, f.CJ)();
     l()(null != k, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
@@ -128,20 +128,20 @@ function I(e) {
             (null == U ? void 0 : U.type) === u.re.CHANNEL_SELECT
         ) {
             let e = new Map(U.selectedOptions.map((e) => [e.value, e]));
-            P(e), D(new Set(e.keys()));
+            P(e), w(new Set(e.keys()));
         }
     }, [U]);
     let W = i.useCallback(() => {
         G({
             type: b,
             selectedOptions: Array.from(R.values()),
-        }) && D(new Set(R.keys()));
+        }) && w(new Set(R.keys()));
     }, [G, b, R]);
     i.useEffect(() => {
-        !T && !C && ((R.size === w.size && Array.from(R.keys()).every((e) => w.has(e))) || W());
-    }, [T, C, w, R, W]);
+        !S && !C && ((R.size === D.size && Array.from(R.keys()).every((e) => D.has(e))) || W());
+    }, [S, C, D, R, W]);
     let K = (e) => {
-            T || N(!0), P(new Map(e.map((e) => [e.value, e])));
+            S || N(!0), P(new Map(e.map((e) => [e.value, e])));
         },
         z = (e) => P(null != e ? new Map([[e.value, e]]) : new Map()),
         q = (e) =>
@@ -159,13 +159,13 @@ function I(e) {
                   })
                 : null;
         },
-        Q = 0 === R.size || T,
+        Q = 0 === R.size || S,
         J = {
             isProcessing: Y,
             isDisabled: I || B === _.gH.DISABLED || Z,
             wrapperClassName: o()(h.select, { [h.inModal]: V }),
             options: q,
-            placeholder: Q ? S : void 0,
+            placeholder: Q ? T : void 0,
             onClose: () => A(!1),
             onOpen: () => A(!0),
             onBlur: () => N(!1),

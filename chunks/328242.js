@@ -21,7 +21,7 @@ var r = n(951288),
     S = n(567126),
     y = n(615161),
     C = n(761274),
-    O = n(529822),
+    O = n(604415),
     w = n(388032),
     P = n(602804);
 function T(e) {
@@ -98,26 +98,26 @@ function I(e) {
             },
         ] = (0, y.E_)(),
         { smarterSourceOrdering: N } = (0, j.E)({ location: "GoLiveSourceGrid" }),
-        R = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
-        A = (0, d.cj)([p.ZP], () => {
+        A = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
+        R = (0, d.cj)([p.ZP], () => {
             let e = p.ZP.getCandidateGames(),
                 t = {};
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
         M = (0, d.e7)([_.Z], () => _.Z.quests),
-        k = (0, S.jx)(M, R, n);
+        k = (0, S.jx)(M, A, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
         () =>
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, S.ov)(t, null == k ? void 0 : k.source.id, T, A) -
-                          (0, S.ov)(e, null == k ? void 0 : k.source.id, T, A),
+                          (0, S.ov)(t, null == k ? void 0 : k.source.id, T, R) -
+                          (0, S.ov)(e, null == k ? void 0 : k.source.id, T, R),
                   )
                 : n,
-        [k, N, n, T, A],
+        [k, N, n, T, R],
     );
     if (g) {
         if (!1 === I) {

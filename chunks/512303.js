@@ -18,19 +18,19 @@ var r = n(951288),
     m = n(121271);
 function v(e) {
     var t, n, v, j;
-    let { analyticsLocations: E } = (0, u.ZP)(),
-        S = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
+    let { analyticsLocations: S } = (0, u.ZP)(),
+        E = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
         P = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
         Z = null == (v = e.interactionMetadata) ? void 0 : v.user.id,
-        _ = (0, a.e7)([O.default], () => O.default.getUser(S)),
+        _ = (0, a.e7)([O.default], () => O.default.getUser(E)),
         T = (0, a.e7)([y.Z], () => y.Z.getGuild(P)),
         I = p.Z.getChannel(e.channel_id),
         N = null == I ? void 0 : I.getGuildId(),
         w = (0, a.e7)([O.default], () => O.default.getUser(Z));
     if (
         (i.useEffect(() => {
-            null == _ && null != S && (0, s.PR)(S);
-        }, [_, S]),
+            null == _ && null != E && (0, s.PR)(E);
+        }, [_, E]),
         !(0, d.a)(e))
     )
         return null;
@@ -57,7 +57,7 @@ function v(e) {
                           userId: _.id,
                           guildId: N,
                           channelId: e.channel_id,
-                          sourceAnalyticsLocations: E,
+                          sourceAnalyticsLocations: S,
                       }),
                   className: m.interactionInfoMenuItem,
                   iconLeft: () =>
@@ -81,7 +81,7 @@ function v(e) {
                                   userId: w.id,
                                   guildId: N,
                                   channelId: e.channel_id,
-                                  sourceAnalyticsLocations: E,
+                                  sourceAnalyticsLocations: S,
                               }),
                           className: m.interactionInfoMenuItem,
                           iconLeft: () =>

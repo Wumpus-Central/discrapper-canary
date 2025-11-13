@@ -11,9 +11,9 @@ n.d(t, { Z: () => S }),
     n(490233),
     n(97749);
 var a = n(951288),
-    r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    i = n(647438),
+    r = n(120356),
+    l = n.n(r),
     s = n(480210),
     o = n(442837),
     c = n(481060),
@@ -79,17 +79,17 @@ let y = {
     S = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, h.n6)(),
-            i = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-            [S, E] = r.useState(!0),
-            T = r.useRef({}),
-            [N, O] = r.useState(!1),
-            [P, I] = r.useState(!1),
-            [w, k] = r.useState([]),
-            [R, A] = r.useState(y),
-            Z = r.useRef([]),
-            [D, L] = r.useState(t.name),
+            r = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+            [S, E] = i.useState(!0),
+            T = i.useRef({}),
+            [O, N] = i.useState(!1),
+            [P, I] = i.useState(!1),
+            [w, k] = i.useState([]),
+            [R, A] = i.useState(y),
+            Z = i.useRef([]),
+            [D, L] = i.useState(t.name),
             M = D.toLowerCase().replace(/\s+/g, "_"),
-            U = r.useMemo(
+            U = i.useMemo(
                 () => ({
                     id: C,
                     skuId: C,
@@ -114,7 +114,7 @@ let y = {
                         A((a) => _(j({}, a), { [e]: (0, x.z)(t, n) }));
                     });
             };
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
                 k(
@@ -127,7 +127,7 @@ let y = {
                     }),
                 );
         }, [t.config.effects]),
-            r.useEffect(() => {
+            i.useEffect(() => {
                 let e = t.config.stillFrames;
                 null != e &&
                     Object.entries(e).forEach((e) => {
@@ -142,11 +142,11 @@ let y = {
                 effect: t,
                 upsertConfig: n,
             },
-            z = r.useRef(G);
-        return (r.useEffect(() => {
+            z = i.useRef(G);
+        return (i.useEffect(() => {
             z.current = G;
         }),
-        r.useEffect(() => {
+        i.useEffect(() => {
             let { effect: e, upsertConfig: t } = z.current;
             e.readonly ||
                 t({
@@ -158,7 +158,7 @@ let y = {
                     },
                 });
         }, [w, R, D]),
-        r.useEffect(
+        i.useEffect(
             () => () => {
                 Z.current.forEach((e) => {
                     URL.revokeObjectURL(e);
@@ -167,7 +167,7 @@ let y = {
             },
             [],
         ),
-        null == i)
+        null == r)
             ? (0, a.jsx)("div", {})
             : (0, a.jsxs)("div", {
                   className: f.root,
@@ -219,7 +219,7 @@ let y = {
                                   className: l()(f.col, f.preview),
                                   children: [
                                       (0, a.jsx)("img", {
-                                          src: N ? b : v,
+                                          src: O ? b : v,
                                           alt: "",
                                           width: 450,
                                       }),
@@ -258,10 +258,10 @@ let y = {
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
-                                                          checked: N,
+                                                          checked: O,
                                                           className: f.checkBox,
                                                           onChange: () => {
-                                                              O(!N);
+                                                              N(!O);
                                                           },
                                                       }),
                                                   ],
@@ -482,7 +482,7 @@ let y = {
                                                   className: l()(f.userProfilePreview, f.preview),
                                                   children: [
                                                       (0, a.jsx)(m.Z, {
-                                                          user: i,
+                                                          user: r,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffect: null,
                                                           canUsePremiumCustomization: !0,
@@ -577,10 +577,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      r = n[t];
+                                                                                      i = n[t];
                                                                                   return (
-                                                                                      (r.start = +e.target.value),
-                                                                                      (a[t] = r),
+                                                                                      (i.start = +e.target.value),
+                                                                                      (a[t] = i),
                                                                                       a
                                                                                   );
                                                                               });
@@ -603,10 +603,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      r = n[t];
+                                                                                      i = n[t];
                                                                                   return (
-                                                                                      (r.duration = +e.target.value),
-                                                                                      (a[t] = r),
+                                                                                      (i.duration = +e.target.value),
+                                                                                      (a[t] = i),
                                                                                       a
                                                                                   );
                                                                               });
@@ -634,10 +634,10 @@ let y = {
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
-                                                                                      r = n[t];
+                                                                                      i = n[t];
                                                                                   return (
-                                                                                      (r.loop = e.target.checked),
-                                                                                      (a[t] = r),
+                                                                                      (i.loop = e.target.checked),
+                                                                                      (a[t] = i),
                                                                                       a
                                                                                   );
                                                                               });
@@ -662,11 +662,11 @@ let y = {
                                                                                   onChange: (e) => {
                                                                                       k((n) => {
                                                                                           let a = [...n],
-                                                                                              r = n[t];
+                                                                                              i = n[t];
                                                                                           return (
-                                                                                              (r.loopDelay =
+                                                                                              (i.loopDelay =
                                                                                                   +e.target.value),
-                                                                                              (a[t] = r),
+                                                                                              (a[t] = i),
                                                                                               a
                                                                                           );
                                                                                       });
@@ -690,10 +690,10 @@ let y = {
                                                                       null != n &&
                                                                           (0, x.i0)(n, (e) => {
                                                                               k((a) => {
-                                                                                  let r = [...a],
-                                                                                      i = a[t];
-                                                                                  if (null == i) return a;
-                                                                                  let l = j({}, i);
+                                                                                  let i = [...a],
+                                                                                      r = a[t];
+                                                                                  if (null == r) return a;
+                                                                                  let l = j({}, r);
                                                                                   return (
                                                                                       null == l.randomizedSources &&
                                                                                           (l.randomizedSources = []),
@@ -701,8 +701,8 @@ let y = {
                                                                                           src: e,
                                                                                           filename: n.name,
                                                                                       }),
-                                                                                      (r[t] = l),
-                                                                                      r
+                                                                                      (i[t] = l),
+                                                                                      i
                                                                                   );
                                                                               });
                                                                           });

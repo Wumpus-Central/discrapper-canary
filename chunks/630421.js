@@ -57,18 +57,18 @@ function _(e) {
         R = window;
     if (g) {
         var P = (0, i.Z)(l),
-            w = "clientHeight",
-            D = "clientWidth";
+            D = "clientHeight",
+            w = "clientWidth";
         P === (0, a.Z)(l) &&
             ((P = (0, o.Z)(l)),
-            "static" !== (0, s.Z)(P).position && "absolute" === h && ((w = "scrollHeight"), (D = "scrollWidth"))),
+            "static" !== (0, s.Z)(P).position && "absolute" === h && ((D = "scrollHeight"), (w = "scrollWidth"))),
             (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) &&
                 ((N = r.I),
-                (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height),
+                (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[D]) - c.height),
                 (I *= m ? 1 : -1)),
             (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) &&
                 ((C = r.F2),
-                (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width),
+                (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[w]) - c.width),
                 (O *= m ? 1 : -1));
     }
     var x = Object.assign({ position: h }, g && d),

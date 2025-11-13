@@ -195,10 +195,10 @@ function R() {
 function P(e) {
     return (i = e.sessionId), (b = null), (y = null), R(), !1;
 }
-function w() {
+function D() {
     (i = null), (b = null), (y = null), R();
 }
-function D(e) {
+function w(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, a, o;
@@ -407,7 +407,7 @@ let q = new z(
         ? {}
         : {
               CONNECTION_OPEN: P,
-              CONNECTION_CLOSED: w,
+              CONNECTION_CLOSED: D,
               RTC_CONNECTION_STATE: Z,
               RTC_CONNECTION_PING: V,
               RTC_CONNECTION_LOSS_RATE: V,
@@ -417,7 +417,7 @@ let q = new z(
               RTC_CONNECTION_CLIENT_DISCONNECT: V,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: H,
               VIDEO_SIZE_UPDATE: K,
-              VOICE_STATE_UPDATES: D,
+              VOICE_STATE_UPDATES: w,
               VOICE_CHANNEL_SELECT: G,
               AUDIO_SET_NOISE_CANCELLATION: F,
               VOICE_SERVER_UPDATE: x,

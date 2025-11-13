@@ -121,9 +121,9 @@ function O(e) {
             "caretConfig",
             "scrollBehavior",
         ]);
-    let [w, D] = i.useState(null != C ? C : "top"),
+    let [D, w] = i.useState(null != C ? C : "top"),
         [x, L] = i.useState({
-            position: (0, _.z)(w),
+            position: (0, _.z)(D),
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
         }),
@@ -137,12 +137,12 @@ function O(e) {
             null == S || S("user:explicit");
         }, [S]),
         k = i.useCallback((e) => {
-            D(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
+            w(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
         l.m,
         E(m({}, P), {
-            position: w,
+            position: D,
             onRequestClose: M,
             gradientColor: T,
             onPositionChange: k,

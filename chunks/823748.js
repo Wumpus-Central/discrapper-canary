@@ -112,8 +112,8 @@ var r = n(951288),
     e2 = n(921944),
     e7 = n(408491),
     e6 = n(440493),
-    e5 = n(157925),
-    e9 = n(388032),
+    e9 = n(157925),
+    e5 = n(388032),
     te = n(97009);
 function tt(e, t, n) {
     return (
@@ -643,7 +643,7 @@ class tl extends i.PureComponent {
                                     ea.Z,
                                     {
                                         channel: e,
-                                        tooltip: e9.intl.string(e9.t.Xjlbvs),
+                                        tooltip: e5.intl.string(e5.t.Xjlbvs),
                                         location: "ChannelHeaderToolbar-DM-AddFriendsButton",
                                     },
                                     "invite",
@@ -670,7 +670,7 @@ class tl extends i.PureComponent {
                             s.push((0, r.jsx)(ee.Z, { channel: e }, "pins")),
                             !e.isManaged())
                         ) {
-                            let t = e9.intl.string(e9.t.Xjlbvs);
+                            let t = e5.intl.string(e5.t.Xjlbvs);
                             s.push(
                                 (0, r.jsx)(
                                     ea.Z,
@@ -753,7 +753,7 @@ class tl extends i.PureComponent {
                           children: (0, r.jsx)(g.Button, {
                               variant: "secondary",
                               size: "sm",
-                              text: e9.intl.string(e9.t["3aOv+h"]),
+                              text: e5.intl.string(e5.t["3aOv+h"]),
                               onClick: () =>
                                   (0, g.ZDy)(async () => {
                                       let { default: e } = await n.e("30571").then(n.bind(n, 28180));
@@ -805,7 +805,7 @@ class tl extends i.PureComponent {
                                         className: a()(te.title, s, { [te.gdm]: e.type === e8.d4z.GROUP_DM }),
                                         transparent: _,
                                         hidden: d,
-                                        "aria-label": e9.intl.string(e9.t.BIYAqa),
+                                        "aria-label": e5.intl.string(e5.t.BIYAqa),
                                         children: [
                                             p &&
                                                 (0, r.jsx)(ei.TS, {
@@ -832,7 +832,7 @@ class tl extends i.PureComponent {
                                                           onClick: () => (0, em.XU)(e.guild_id, e.id),
                                                           variant: "secondary",
                                                           size: "sm",
-                                                          text: e9.intl.string(e9.t.k5WiPf),
+                                                          text: e5.intl.string(e5.t.k5WiPf),
                                                       }),
                                                   })
                                                 : (0, ei.v0)(e, i),
@@ -940,7 +940,7 @@ let ta = (0, O.Z)(tl),
             i.useEffect(() => {
                 var e, t, n;
                 let r = (0, em.s1)();
-                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e5.Df) {
+                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e9.Df) {
                     let { channelId: e } =
                         null != (n = (0, eu.Qj)(null == r || null == (t = r.location) ? void 0 : t.pathname)) ? n : {};
                     null != e && a(e);

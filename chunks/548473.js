@@ -1,8 +1,8 @@
 n.d(t, {
-    B0: () => A,
+    B0: () => P,
     ZP: () => L,
-    _I: () => C,
-    xm: () => P,
+    _I: () => A,
+    xm: () => C,
 }),
     n(49124);
 var l = n(951288),
@@ -18,9 +18,9 @@ var l = n(951288),
     g = n(367907),
     h = n(601964),
     f = n(626135),
-    I = n(768581),
-    p = n(956664),
-    N = n(45966),
+    N = n(768581),
+    I = n(956664),
+    p = n(45966),
     O = n(819553),
     E = n(487533),
     S = n(279876),
@@ -96,7 +96,7 @@ function G(e) {
         n
     );
 }
-function P() {
+function C() {
     let e = G(x);
     return (0, l.jsx)("div", {
         className: a()(b.leftArt, b.altFloat),
@@ -106,7 +106,7 @@ function P() {
         }),
     });
 }
-function A() {
+function P() {
     let e = G(_);
     return (0, l.jsx)("div", {
         className: a()(b.rightArt, b.altFloat),
@@ -116,12 +116,12 @@ function A() {
         }),
     });
 }
-function C(e) {
+function A(e) {
     let { guild: t, mainIslandClassName: n, balloonDogClassName: i } = e,
         s = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         d = r.useRef(null),
         u = G(S),
-        g = I.ZP.getGuildIconURL({
+        g = N.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 96,
@@ -131,7 +131,7 @@ function C(e) {
             let e;
             return (
                 null != d.current && null != g
-                    ? (0, p.OF)(g).then((t) => {
+                    ? (0, I.OF)(g).then((t) => {
                           let n = (0, E.Z)(JSON.parse(JSON.stringify(T)), g, t[0]);
                           e = o().loadAnimation({
                               container: d.current,
@@ -171,7 +171,7 @@ function C(e) {
 }
 function L(e) {
     let { guild: t, onStart: n, onboardingStatus: i, headerId: a, disableTracking: s } = e,
-        o = (0, c.e7)([N.Z], () => N.Z.isLoading()),
+        o = (0, c.e7)([p.Z], () => p.Z.isLoading()),
         m = r.useRef(!1);
     r.useEffect(() => {
         if (!s)
@@ -196,7 +196,7 @@ function L(e) {
                 }
             );
     }, [t.id, m, s]);
-    let I = r.useMemo(() => (0, h.EB)(t, 135, !1, !0), [t]);
+    let N = r.useMemo(() => (0, h.EB)(t, 135, !1, !0), [t]);
     return (
         (0, u.ZP)(() => {
             setTimeout(() => {
@@ -211,7 +211,7 @@ function L(e) {
                     (0, l.jsx)("div", {
                         children: (0, l.jsx)("img", {
                             className: b.guildImage,
-                            src: I,
+                            src: N,
                             alt: "",
                         }),
                     }),

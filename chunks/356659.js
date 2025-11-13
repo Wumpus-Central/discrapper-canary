@@ -5,7 +5,7 @@ n.d(t, {
     Fv: () => c,
     G$: () => d,
     Hp: () => g,
-    JO: () => S,
+    JO: () => T,
     Kw: () => A,
     MG: () => b,
     OT: () => a,
@@ -15,7 +15,7 @@ n.d(t, {
     WM: () => p,
     X9: () => s,
     XH: () => E,
-    b0: () => D,
+    b0: () => w,
     dJ: () => o,
     f_: () => v,
     i$: () => R,
@@ -23,10 +23,10 @@ n.d(t, {
     ji: () => N,
     jp: () => C,
     nU: () => h,
-    qb: () => w,
+    qb: () => D,
     rI: () => m,
     wD: () => I,
-    yl: () => T,
+    yl: () => S,
     zh: () => x,
 });
 var r = n(710845),
@@ -63,16 +63,16 @@ let c = "alt+c",
     O = "clips-gallery",
     v = 640,
     I = 360,
-    S = 100,
-    T = (e) => "Clip - ".concat(new Date(e).toLocaleString()),
+    T = 100,
+    S = (e) => "Clip - ".concat(new Date(e).toLocaleString()),
     A = 15,
     C = 30000,
     N = 30,
     R = 10;
 i.Z.Millis.DAY;
 let P = 20,
-    w = 1,
-    D = 50;
+    D = 1,
+    w = 50;
 var x = (function (e) {
     return (e.ALL = ":all"), (e.APPLICATION = ":application"), (e.VOICE = ":voice"), (e.SOUNDBOARD = ":soundboard"), e;
 })({});

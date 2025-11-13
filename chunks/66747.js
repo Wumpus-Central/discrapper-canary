@@ -25,8 +25,8 @@ var r = n(951288),
     w = n(430824),
     S = n(496675),
     Z = n(594174),
-    N = n(203893),
-    D = n(777288),
+    D = n(203893),
+    N = n(777288),
     R = n(5192),
     L = n(709054),
     P = n(51144),
@@ -44,7 +44,7 @@ var r = n(951288),
     G = n(50493),
     z = n(388032),
     Y = n(266631);
-let Q = l.memo(function (e) {
+let W = l.memo(function (e) {
         let { member: t } = e,
             n = l.useMemo(() => (0, j.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
             i = l.useMemo(
@@ -88,7 +88,7 @@ let Q = l.memo(function (e) {
                 (0, O.He)(t.userId) &&
                     (0, r.jsx)(C.u, {
                         text: z.intl.string(z.t.PK9FQ2),
-                        children: (0, r.jsx)(N.Z, {
+                        children: (0, r.jsx)(D.Z, {
                             width: 20,
                             height: 20,
                             color: d.Z.colors.TEXT_DANGER.css,
@@ -107,7 +107,7 @@ let Q = l.memo(function (e) {
             ],
         });
     }),
-    W = l.memo(function (e) {
+    Q = l.memo(function (e) {
         let { member: t, highestRole: n } = e,
             i = (0, u.e7)([w.Z], () => w.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
@@ -363,14 +363,14 @@ let $ = l.memo(function (e) {
                     }),
                 (0, r.jsx)("td", {
                     className: o()(Y.mediumCol, { [Y.compact]: b }),
-                    children: (0, r.jsx)(W, {
+                    children: (0, r.jsx)(Q, {
                         member: t,
                         highestRole: i,
                     }),
                 }),
                 (0, r.jsx)("td", {
                     className: o()(Y.smallCol, { [Y.compact]: b }),
-                    children: (0, r.jsx)(Q, { member: t }),
+                    children: (0, r.jsx)(W, { member: t }),
                 }),
                 (0, r.jsx)("td", {
                     className: o()(Y.smallCol, { [Y.compact]: b }),
@@ -384,7 +384,7 @@ let $ = l.memo(function (e) {
                                     onClick: d,
                                     className: Y.button,
                                     children: p
-                                        ? (0, r.jsx)(D.Z, {
+                                        ? (0, r.jsx)(N.Z, {
                                               width: et,
                                               height: et,
                                           })
@@ -448,7 +448,7 @@ let $ = l.memo(function (e) {
                 },
                 [g, b],
             ),
-            N = l.useCallback(
+            D = l.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
@@ -459,7 +459,7 @@ let $ = l.memo(function (e) {
                 },
                 [g, b, O],
             ),
-            D = l.useCallback((e, t) => c()((0, a.omit)(e, en), (0, a.omit)(t, en)), []);
+            N = l.useCallback((e, t) => c()((0, a.omit)(e, en), (0, a.omit)(t, en)), []);
         return null == g
             ? null
             : (0, r.jsx)(T.Z, {
@@ -473,7 +473,7 @@ let $ = l.memo(function (e) {
                       h && Y.memberSelected,
                       d && Y.loading,
                   ),
-                  equalityFn: D,
+                  equalityFn: N,
                   onClick: S,
                   onContextMenu: w,
                   children: (0, r.jsx)(ee, {
@@ -482,7 +482,7 @@ let $ = l.memo(function (e) {
                       highestRole: j,
                       isHoldingAdvancedInfoKey: C,
                       onOpenModerationMenu: w,
-                      onOpenMemberView: N,
+                      onOpenMemberView: D,
                       compact: m,
                       hasModViewPanelAccess: O,
                   }),

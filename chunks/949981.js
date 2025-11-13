@@ -59,9 +59,9 @@ function O(e) {
                       .map((e) => e.username)
                       .join(", ")
                 : b.intl.string(b.t.LJpTRF));
-    let w = b.intl.string(b.t.XpeFYr),
-        D = "active";
-    N && ((w = b.intl.string(b.t.cEnaWx)), (D = "secondary"));
+    let D = b.intl.string(b.t.XpeFYr),
+        w = "active";
+    N && ((D = b.intl.string(b.t.cEnaWx)), (w = "secondary"));
     let x = b.intl.string(b.t["3p3/BK"]);
     return (
         T && (x = b.intl.string(b.t.qmtuXE)),
@@ -88,8 +88,8 @@ function O(e) {
                             onClick: R,
                             loading: S,
                             disabled: N,
-                            variant: D,
-                            text: w,
+                            variant: w,
+                            text: D,
                             fullWidth: !0,
                         }),
                     ],

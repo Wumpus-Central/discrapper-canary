@@ -1,6 +1,6 @@
 n.d(t, {
     Wf: () => R,
-    ZP: () => w,
+    ZP: () => D,
     wz: () => P,
 });
 var r = n(951288),
@@ -212,7 +212,7 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     return {
         react: (e, t, n) =>
             (0, r.jsx)(R, {

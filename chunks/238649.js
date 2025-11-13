@@ -28,8 +28,8 @@ var r = n(951288),
 let R = (e, t) => {
         let { className: n, subscriptionTier: i, isEligibleForBogoPromotion: a, offerExpiresAt: R } = e,
             { analyticsLocations: P } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            w = (0, p.Nx)(),
-            D = (0, v.$)(),
+            D = (0, p.Nx)(),
+            w = (0, v.$)(),
             x = (0, h.Z)(),
             L = null != x,
             M = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -49,7 +49,7 @@ let R = (e, t) => {
                         className: N.contentContainer,
                         children: [
                             (0, r.jsx)(A.Z, { containerVisibilityPercentage: k }),
-                            w &&
+                            D &&
                                 (null != R
                                     ? (0, r.jsx)(y.Z, {
                                           expiresAt: R,
@@ -90,15 +90,15 @@ let R = (e, t) => {
                                             }),
                                         }),
                                     (0, r.jsxs)("div", {
-                                        className: w ? N.singleButtonContainer : N.twoButtonContainer,
+                                        className: D ? N.singleButtonContainer : N.twoButtonContainer,
                                         children: [
                                             (0, r.jsx)(b.Z, {
                                                 size: "md",
-                                                fullWidth: w,
+                                                fullWidth: D,
                                                 hasActivePromotion: !!a,
                                                 subscriptionTier: i,
                                             }),
-                                            !w &&
+                                            !D &&
                                                 (0, r.jsx)(E.Z, {
                                                     variant: "secondary",
                                                     size: "md",
@@ -110,7 +110,7 @@ let R = (e, t) => {
                                         children: (0, r.jsx)(c.Text, {
                                             color: "text-tertiary",
                                             variant: "text-xs/medium",
-                                            children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: D }),
+                                            children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: w }),
                                         }),
                                     }),
                                     null != B &&

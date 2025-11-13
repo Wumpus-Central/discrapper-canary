@@ -128,10 +128,10 @@ function S(e) {
             emptyStateHeader: R,
             onQueryChange: P,
         } = e,
-        [w, D] = i.useState(""),
+        [D, w] = i.useState(""),
         x = i.useCallback(
             (e) => {
-                D(e), null == P || P(e);
+                w(e), null == P || P(e);
             },
             [P],
         ),
@@ -149,7 +149,7 @@ function S(e) {
                 padding: 12,
             });
     }, [M]);
-    let G = n(w),
+    let G = n(D),
         B = 0 === G.length,
         Z = null != R ? R : d.intl.string(d.t["4o4z3e"]),
         F = i.useId(),
@@ -207,7 +207,7 @@ function S(e) {
                                 size: "sm",
                                 autoFocus: S,
                                 placeholder: t,
-                                query: w,
+                                query: D,
                                 onChange: x,
                                 onKeyDown: i,
                                 onBlur: () => j(null),

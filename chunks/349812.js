@@ -12,8 +12,8 @@ function i(t) {
             o = t(a);
         if (!a.createStore) throw Error("No `createStore` function was provided");
         let i = a.createStore(a),
-            c = 5000;
-        function E(t) {
+            E = 5000;
+        function c(t) {
             r && clearTimeout(r),
                 "number" !=
                     typeof (r = setTimeout(async () => {
@@ -30,10 +30,10 @@ function i(t) {
                     r.unref();
         }
         function s() {
-            r || (E(c), (c = Math.min(2 * c, 3600000)));
+            r || (c(E), (E = Math.min(2 * E, 3600000)));
         }
         async function l(t, r = !1) {
-            if (!r && (0, _.R)(t, ["replay_event", "replay_recording"])) return await i.push(t), E(100), {};
+            if (!r && (0, _.R)(t, ["replay_event", "replay_recording"])) return await i.push(t), c(100), {};
             try {
                 let e = await o.send(t),
                     a = 100;
@@ -42,10 +42,10 @@ function i(t) {
                     else if (e.headers && e.headers["x-sentry-rate-limits"]) a = 60000;
                     else if ((e.statusCode || 0) >= 400) return e;
                 }
-                return E(a), (c = 5000), e;
+                return c(a), (E = 5000), e;
             } catch (n) {
                 var I;
-                if (await ((I = c), !(0, _.R)(t, ["client_report"]) && (!a.shouldStore || a.shouldStore(t, n, I))))
+                if (await ((I = E), !(0, _.R)(t, ["client_report"]) && (!a.shouldStore || a.shouldStore(t, n, I))))
                     return r ? await i.unshift(t) : await i.push(t), s(), e("Error sending. Event queued.", n), {};
                 throw n;
             }

@@ -101,8 +101,8 @@ function p(e) {
                 { PaymentModal: i } = await Promise.resolve().then(n.bind(n, 791785)),
                 { STEPS: s } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
             return (n) => {
-                var { onClose: S } = n,
-                    T = f(n, ["onClose"]);
+                var { onClose: T } = n,
+                    S = f(n, ["onClose"]);
                 return (0, r.jsx)(e, {
                     activeSubscription: l,
                     stepConfigs: s,
@@ -111,10 +111,10 @@ function p(e) {
                         children: (0, r.jsx)(a.KB, {
                             children: (0, r.jsx)(
                                 i,
-                                d(c({}, T), {
+                                d(c({}, S), {
                                     initialPlanId: t,
                                     onClose: (e) => {
-                                        S(), null == p || p(e);
+                                        T(), null == p || p(e);
                                     },
                                     analyticsLocations: g,
                                     analyticsObject: h,

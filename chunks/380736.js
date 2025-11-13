@@ -1,13 +1,13 @@
 n.d(t, {
     Y: () => C,
-    Z: () => D,
+    Z: () => w,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(426322),
+    s = n(509442),
     l = n(442837),
     c = n(755721),
     u = n(481060),
@@ -114,8 +114,8 @@ let C = i.memo(function (e) {
             renderFooter: N,
             contentOpacity: R,
             status: P,
-            containerRef: w,
-            className: D,
+            containerRef: D,
+            className: w,
             wrapperClassName: x,
         } = e,
         [L, M] = i.useState(!1),
@@ -257,12 +257,12 @@ let C = i.memo(function (e) {
                 className: o()(b.overflowWrapper, x),
                 onScroll: A,
                 children: (0, r.jsx)(u.P3F, {
-                    innerRef: w,
+                    innerRef: D,
                     ignoreKeyPress: !0,
                     onMouseOver: Z,
                     onMouseLeave: F,
                     onClick: y,
-                    className: o()(b.container, { [b.clickable]: null != y }, D),
+                    className: o()(b.container, { [b.clickable]: null != y }, w),
                     children: K(),
                 }),
             }),
@@ -307,7 +307,7 @@ let P = {
     friction: 8,
     tension: 300,
 };
-function w() {
+function D() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState(!1),
         a = (0, u.q_F)({
@@ -327,7 +327,7 @@ function w() {
         }, []),
     };
 }
-function D(e) {
+function w(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -350,7 +350,7 @@ function D(e) {
             },
             [c, f],
         ),
-        { clickSpring: v, handleMouseClick: S } = w(),
+        { clickSpring: v, handleMouseClick: S } = D(),
         A = i.useCallback(
             (e) => {
                 null == _ || _(e, c), S();
@@ -363,7 +363,7 @@ function D(e) {
             },
             [p, c],
         ),
-        D = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 null == h || h(e, c);
             },
@@ -413,7 +413,7 @@ function D(e) {
                     onDismissClick: y,
                     onNotificationClick: A,
                     onConfirmClick: null != p ? P : void 0,
-                    onCancelClick: null != h ? D : void 0,
+                    onCancelClick: null != h ? w : void 0,
                     renderFooter: x,
                     expand: !1,
                     index: n,

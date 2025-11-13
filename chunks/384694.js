@@ -1,4 +1,4 @@
-n.d(t, { q: () => E }), n(467055), n(388685);
+n.d(t, { q: () => _ }), n(467055), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(442837),
@@ -20,13 +20,13 @@ let x = (e) => ({
         value: e.id,
     }),
     j = (e) => d.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, e),
-    E = (e) => {
+    _ = (e) => {
         let {
                 onChange: t,
                 selected: n,
                 onError: d,
-                labelledBy: E,
-                isEmojiAnimated: _,
+                labelledBy: _,
+                isEmojiAnimated: E,
                 label: O,
                 required: y,
                 errorMessage: C,
@@ -59,12 +59,12 @@ let x = (e) => ({
                                 })({
                                     guild: n,
                                     emojis: o.ZP.getGuildEmoji(t),
-                                    isEmojiAnimated: _,
+                                    isEmojiAnimated: E,
                                 }),
                             ];
                         }),
                     ),
-                [I, _],
+                [I, E],
             ),
             S = r.useMemo(() => Object.values(I).filter(j).map(x), [I]),
             w = r.useCallback(
@@ -151,7 +151,7 @@ let x = (e) => ({
                 renderOptionLabel: M,
                 renderOptionValue: w,
                 value: n,
-                "aria-labelledby": E,
+                "aria-labelledby": _,
                 placeholder: S.length < 1 ? v.intl.string(v.t.jHpxwo) : v.intl.string(v.t["4mqeQO"]),
                 isDisabled: S.length < 1,
             })

@@ -416,7 +416,7 @@ function S(e) {
         R = i.useRef([]);
     l()(R.current, N) || (R.current = N);
     let P = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
-        w = (0, c.Z)({
+        D = (0, c.Z)({
             navId: n,
             items: R.current,
             initialFocusPath: f.Z.keyboardModeEnabled && null != P ? [P] : [],
@@ -424,10 +424,10 @@ function S(e) {
             defaultIsUsingKeyboardNavigation: f.Z.keyboardModeEnabled,
         });
     i.useEffect(() => {
-        w.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
-    }, [w.isUsingKeyboardNavigation]);
-    let D = i.useRef(null);
-    (0, u.Tbt)(D);
+        D.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
+    }, [D.isUsingKeyboardNavigation]);
+    let w = i.useRef(null);
+    (0, u.Tbt)(w);
     let x = s ? u.u2D : u.zJl,
         L = i.useMemo(
             () => ({
@@ -440,8 +440,8 @@ function S(e) {
         value: L,
         children: (0, r.jsx)(
             "div",
-            y(E({ className: o()(m.menu, m[a], _) }, w.getContainerProps()), {
-                ref: D,
+            y(E({ className: o()(m.menu, m[a], _) }, D.getContainerProps()), {
+                ref: w,
                 "aria-label": e["aria-label"],
                 children: (0, r.jsxs)(x, {
                     className: m.scroller,
@@ -450,12 +450,12 @@ function S(e) {
                             (0, r.jsx)(h.ck, {
                                 disabled: !0,
                                 label: () => (0, r.jsx)(C, {}),
-                                menuItemProps: w.getItemProps({ path: ["empty"] }),
+                                menuItemProps: D.getItemProps({ path: ["empty"] }),
                                 isFocused: !1,
                                 onFocus: () => {},
                                 onClose: b,
                             }),
-                        A.length > 0 && T(A, w, [], b),
+                        A.length > 0 && T(A, D, [], b),
                     ],
                 }),
             }),

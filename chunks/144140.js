@@ -112,14 +112,14 @@ function P(e) {
             ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null));
     });
 }
-function w(e) {
+function D(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
         if (null != t) return P(t), !0;
     }
     return !1;
 }
-function D(e) {
+function w(e) {
     (I = {}), O.clear(), e.guilds.forEach(N);
 }
 function x(e) {
@@ -156,7 +156,7 @@ function k(e) {
 }
 function U(e) {
     let { threads: t } = e;
-    t.forEach(w);
+    t.forEach(D);
 }
 function G(e) {
     let { data: t } = e;
@@ -164,10 +164,10 @@ function G(e) {
         let { messages: t, threads: n } = e;
         t.forEach((e) => {
             e.forEach((e) => {
-                w(e.thread);
+                D(e.thread);
             });
         }),
-            n.forEach(w);
+            n.forEach(D);
     });
 }
 function B(e) {
@@ -238,7 +238,7 @@ function W(e) {
 }
 function K(e) {
     let t = !1;
-    for (let n of e.messages) t = w(n.thread) || t;
+    for (let n of e.messages) t = D(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
@@ -294,7 +294,7 @@ class q extends (r = o.ZP.Store) {
 }
 g(q, "displayName", "ThreadMessageStore");
 let X = new q(s.Z, {
-    CONNECTION_OPEN: D,
+    CONNECTION_OPEN: w,
     OVERLAY_INITIALIZE: x,
     GUILD_CREATE: L,
     GUILD_DELETE: M,

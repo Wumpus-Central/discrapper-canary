@@ -1,10 +1,10 @@
-r.d(t, { Z: () => s });
-var n = r(951288),
-    e = r(793030),
-    a = r(198358);
-function s() {
-    return (0, n.jsx)(a.Z, {
-        children: (0, n.jsx)(e.xvT, {
+e.d(r, { Z: () => a });
+var i = e(951288),
+    n = e(793030),
+    l = e(198358);
+function a() {
+    return (0, i.jsx)(l.Z, {
+        children: (0, i.jsx)(n.xvT, {
             variant: "display-lg",
             color: "text-primary",
             children: "TBD",

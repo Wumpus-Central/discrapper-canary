@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => O,
     q: () => T,
 }),
     n(804061),
@@ -29,8 +29,8 @@ n.d(t, {
     n(49124);
 var a = n(951288),
     i = n(647438),
-    l = n(688619),
-    r = n.n(l),
+    r = n(688619),
+    l = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(352206),
@@ -99,8 +99,8 @@ function T(e, t) {
     let n = new Blob([t], { type: "application/json" }),
         a = URL.createObjectURL(n),
         i = document.createElement("a"),
-        l = new TextEncoder().encode(t);
-    crypto.subtle.digest("SHA-256", l).then((t) => {
+        r = new TextEncoder().encode(t);
+    crypto.subtle.digest("SHA-256", r).then((t) => {
         let n = Array.from(new Uint8Array(t))
             .map((e) => e.toString(16).padStart(2, "0"))
             .join("");
@@ -110,20 +110,20 @@ function T(e, t) {
             URL.revokeObjectURL(a);
     });
 }
-function N() {
+function O() {
     let e = (0, h.Fg)(),
-        [t, n, l, s, d, u] = (0, v.zn)(),
-        { semanticColorOverrides: b, rawColorOverrides: C, tab: E, scales: N } = t,
+        [t, n, r, s, d, u] = (0, v.zn)(),
+        { semanticColorOverrides: b, rawColorOverrides: C, tab: E, scales: O } = t,
         P = i.useMemo(() => {
             let t = Object.entries(b).map((t) => {
                     let [n, a] = t,
-                        { colors: i, highlight: l } = a,
-                        r = i[e];
-                    if (null == r) return "";
+                        { colors: i, highlight: r } = a,
+                        l = i[e];
+                    if (null == l) return "";
                     let s = S(n);
-                    if (l) return "--".concat(s, ": magenta !important;");
-                    let o = S(r.color),
-                        c = r.opacity,
+                    if (r) return "--".concat(s, ": magenta !important;");
+                    let o = S(l.color),
+                        c = l.opacity,
                         d = c < 1 ? "hsl(var(--".concat(o, "-hsl) / ").concat(c, ")") : "var(--".concat(o, ")");
                     return "--"
                         .concat(s, ": color-mix(\n        in oklab,\n        ")
@@ -139,26 +139,26 @@ function N() {
                             s: a,
                             l: i,
                         } = (function (e) {
-                            let [t, n, a] = "transparent" === e ? [0, 0, 0] : r()(e).hsl(),
+                            let [t, n, a] = "transparent" === e ? [0, 0, 0] : l()(e).hsl(),
                                 i = isNaN(t) ? 0 : o().round(t, 1),
-                                l = o().round(100 * a, 1);
+                                r = o().round(100 * a, 1);
                             return {
                                 h: i,
                                 s: o().round(100 * n, 1),
-                                l: l,
+                                l: r,
                             };
                         })(t.highlight ? "#FF00FF" : t.color),
-                        l = o().kebabCase(e);
+                        r = o().kebabCase(e);
                     return [
                         "--"
-                            .concat(l, "-hsl: ")
+                            .concat(r, "-hsl: ")
                             .concat(n, " calc(var(--saturation-factor, 1) * ")
                             .concat(a, "%) ")
                             .concat(i, "% !important;"),
-                        "--".concat(l, ": hsl(var(--").concat(l, "-hsl)) !important;"),
+                        "--".concat(r, ": hsl(var(--").concat(r, "-hsl)) !important;"),
                     ];
                 }),
-                a = N.reduce((e, t) => {
+                a = O.reduce((e, t) => {
                     let { name: n } = t,
                         a = (0, v.XM)(t),
                         i = (0, v.W6)(a, n);
@@ -166,9 +166,9 @@ function N() {
                         e +
                         Object.keys(i).reduce((e, t) => {
                             let n = i[t],
-                                l = a[t],
-                                r = (0, v.HI)(l);
-                            return "".concat(e, "\n--").concat(n, ": ").concat(r, ";");
+                                r = a[t],
+                                l = (0, v.HI)(r);
+                            return "".concat(e, "\n--").concat(n, ": ").concat(l, ";");
                         }, "")
                     );
                 }, "");
@@ -177,7 +177,7 @@ function N() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(n.join("\n"), "\n      }\n    ");
-        }, [C, N, b, e]);
+        }, [C, O, b, e]);
     return (0, a.jsxs)("div", {
         className: j.panel,
         children: [
@@ -221,7 +221,7 @@ function N() {
                                 size: m.zx.Sizes.ICON,
                                 color: m.zx.Colors.TRANSPARENT,
                                 look: m.zx.Looks.BLANK,
-                                onClick: l,
+                                onClick: r,
                                 disabled: !d,
                                 children: (0, a.jsx)(p.UEU, {}),
                             }),
@@ -278,7 +278,7 @@ function N() {
             (0, a.jsx)("div", {
                 className: j.tab,
                 hidden: E !== v.H8.TOKENS,
-                children: (0, a.jsx)(O, {
+                children: (0, a.jsx)(N, {
                     state: t,
                     setState: n,
                 }),
@@ -300,10 +300,10 @@ function N() {
         ],
     });
 }
-function O(e) {
+function N(e) {
     let { state: t, setState: n } = e,
-        l = (0, h.Fg)(),
-        { semanticColorOverrides: r, rawColorOverrides: s } = t,
+        r = (0, h.Fg)(),
+        { semanticColorOverrides: l, rawColorOverrides: s } = t,
         o = i.useMemo(
             () =>
                 Object.keys(u.b).reduce(
@@ -392,7 +392,7 @@ function O(e) {
                     null == e
                         ? null
                         : (0, a.jsx)("div", {
-                              "data-theme": l,
+                              "data-theme": r,
                               className: j.colorPreview,
                               style: { "--custom-color": "var(--".concat(e.label, ")") },
                           }),
@@ -400,13 +400,13 @@ function O(e) {
             }),
             (0, a.jsx)("ul", {
                 className: j.overrides,
-                children: Object.entries(r).map((e) => {
+                children: Object.entries(l).map((e) => {
                     let [t, i] = e,
-                        r = i.colors[l];
-                    if (null == r) return null;
-                    let s = E(r.color),
-                        c = r.opacity,
-                        d = v.jC[t][l];
+                        l = i.colors[r];
+                    if (null == l) return null;
+                    let s = E(l.color),
+                        c = l.opacity,
+                        d = v.jC[t][r];
                     return (0, a.jsx)(
                         P,
                         {
@@ -435,9 +435,9 @@ function O(e) {
                                                 let { semanticColorOverrides: a } = n,
                                                     i = a[t];
                                                 if (null == i) return n;
-                                                let r = i.colors[l];
-                                                if (null == r) return n;
-                                                let s = (0, v.lT)(i, t, e, r.opacity, l);
+                                                let l = i.colors[r];
+                                                if (null == l) return n;
+                                                let s = (0, v.lT)(i, t, e, l.opacity, r);
                                                 return y(_({}, n), { semanticColorOverrides: y(_({}, a), { [t]: s }) });
                                             });
                                         },
@@ -445,7 +445,7 @@ function O(e) {
                                             if (null == e) return null;
                                             let t = e.label.replaceAll(".", "-");
                                             return (0, a.jsx)("div", {
-                                                "data-theme": l,
+                                                "data-theme": r,
                                                 className: j.colorPreview,
                                                 style: { "--custom-color": "var(--".concat(t, ")") },
                                             });
@@ -466,9 +466,9 @@ function O(e) {
                                                     let { semanticColorOverrides: n } = e,
                                                         i = n[t];
                                                     if (null == i) return e;
-                                                    let r = i.colors[l];
-                                                    if (null == r) return e;
-                                                    let s = (0, v.lT)(i, t, r.color, a, l);
+                                                    let l = i.colors[r];
+                                                    if (null == l) return e;
+                                                    let s = (0, v.lT)(i, t, l.color, a, r);
                                                     return y(_({}, e), {
                                                         semanticColorOverrides: y(_({}, n), { [t]: s }),
                                                     });
@@ -496,7 +496,7 @@ function O(e) {
                     if (null == e) return null;
                     let t = e.label.replaceAll(".", "-");
                     return (0, a.jsx)("div", {
-                        "data-theme": l,
+                        "data-theme": r,
                         className: j.colorPreview,
                         style: { "--custom-color": "var(--".concat(t, ")") },
                     });
@@ -580,7 +580,7 @@ function O(e) {
     });
 }
 function P(e) {
-    let { title: t, subtitle: n, highlight: i, onReset: l, onRemove: r, onHighlightToggle: s, children: o } = e;
+    let { title: t, subtitle: n, highlight: i, onReset: r, onRemove: l, onHighlightToggle: s, children: o } = e;
     return (0, a.jsxs)("li", {
         className: j.override,
         "data-highlight": i,
@@ -618,7 +618,7 @@ function P(e) {
                     }),
                     (0, a.jsx)(p.P3F, {
                         className: j.clickabeIcon,
-                        onClick: l,
+                        onClick: r,
                         children: (0, a.jsx)(p.DuK, {
                             size: "xs",
                             color: "currentColor",
@@ -626,7 +626,7 @@ function P(e) {
                     }),
                     (0, a.jsx)(p.P3F, {
                         className: j.removeOverride,
-                        onClick: r,
+                        onClick: l,
                         children: (0, a.jsx)(p.Dio, {
                             size: "xs",
                             color: "currentColor",

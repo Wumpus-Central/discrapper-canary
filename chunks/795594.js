@@ -29,15 +29,15 @@ var r = n(951288),
     O = n(497321),
     v = n(317381),
     I = n(513202),
-    S = n(367907),
-    T = n(162685),
+    T = n(367907),
+    S = n(162685),
     A = n(979200),
     C = n(870822),
     N = n(589414),
     R = n(600164),
     P = n(240991),
-    w = n(713938),
-    D = n(973616),
+    D = n(713938),
+    w = n(973616),
     x = n(881998),
     L = n(592125),
     M = n(944486),
@@ -290,7 +290,7 @@ let ef = (e) => {
                 id: h,
             } = e,
             E = a.id,
-            O = i.useMemo(() => D.ZP.createFromServer(a), [a]),
+            O = i.useMemo(() => w.ZP.createFromServer(a), [a]),
             v = (0, G.yE)(O.flags, ee.udG.EMBEDDED),
             I = (0, p.e7)([K.Z], () => {
                 var e, t, n, r;
@@ -301,7 +301,7 @@ let ef = (e) => {
                     ? void 0
                     : e.allowMobilePush;
             }, [E]),
-            C = T.w.useExperiment({ location: "oauth2_authorize" }),
+            C = S.w.useExperiment({ location: "oauth2_authorize" }),
             x = a.bot,
             M = (0, p.e7)([L.Z], () => L.Z.getDMFromUserId(null == x ? void 0 : x.id)),
             { appDMChannelMuteConfig: j, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
@@ -320,7 +320,7 @@ let ef = (e) => {
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
+                    e.push(...(0, D.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
                         className: er.appDetailsSection,
@@ -516,7 +516,7 @@ let ef = (e) => {
                     },
                     W.fy.INFREQUENT_USER_ACTION,
                 ),
-                    S.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+                    T.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: et.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
                         label: e ? Z.ZB.Unmuted : Z.ZB.Muted,
@@ -704,7 +704,7 @@ let ef = (e) => {
                       ? n.filter((t) => l()(e, t.application.name.toLowerCase()))
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
-            S = () =>
+            T = () =>
                 null == n || null == y || t !== x.FetchState.FETCHED
                     ? (0, r.jsx)(g.$jN, {
                           className: ea.marginTop20,
@@ -757,7 +757,7 @@ let ef = (e) => {
                               }),
                           ],
                       }),
-                      children: S(),
+                      children: T(),
                   }),
               });
     };

@@ -96,7 +96,7 @@ function E(e) {
                 if (L && !g) return void M(!1);
                 U(h(t, E), E);
             }, [E]);
-            let b = r.useCallback(
+            let x = r.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             n = null != A ? A(E) : E;
@@ -109,7 +109,7 @@ function E(e) {
                     },
                     [h, E, A, T, t, U],
                 ),
-                x = r.useCallback(
+                b = r.useCallback(
                     (e) => {
                         if (!S.current) return;
                         if (
@@ -117,7 +117,7 @@ function E(e) {
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            e.preventDefault(), e.stopPropagation(), b();
+                            e.preventDefault(), e.stopPropagation(), x();
                             return;
                         }
                         let n = (function (e) {
@@ -150,14 +150,14 @@ function E(e) {
                                 null == r || r.click();
                         }
                     },
-                    [h, t, T, E, b, d],
+                    [h, t, T, E, x, d],
                 ),
                 v = r.useCallback(() => {
                     p || C(!0);
                 }, [p]),
                 P = r.useCallback(() => {
-                    p || (I ? U(h(t, E), E) : b(!0));
-                }, [h, t, U, I, p, E, b]),
+                    p || (I ? U(h(t, E), E) : x(!0));
+                }, [h, t, U, I, p, E, x]),
                 j = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
@@ -188,10 +188,10 @@ function E(e) {
                         role: "list",
                         tabIndex: p && I ? -1 : 0,
                         id: t,
-                        onKeyDown: x,
+                        onKeyDown: b,
                         ref: y,
                     }),
-                    [t, p, x, I],
+                    [t, p, b, I],
                 ),
                 k = r.useCallback(
                     (e) => {

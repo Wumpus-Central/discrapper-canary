@@ -10,16 +10,16 @@ var r,
     d = n(28664),
     p = n(477690),
     f = n(755721),
-    m = n(481060),
-    h = n(570140),
-    g = n(239091),
+    h = n(481060),
+    g = n(570140),
+    m = n(239091),
     _ = n(287259),
     b = n(785547),
     E = n(600164),
     O = n(167533),
-    I = n(925329),
-    y = n(707409),
-    v = n(490983),
+    y = n(925329),
+    v = n(707409),
+    I = n(490983),
     C = n(799777),
     S = n(626135),
     T = n(780570),
@@ -101,9 +101,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 (0, i.jsxs)(E.Z, {
                     align: E.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(I.Z, {
+                        (0, i.jsx)(y.Z, {
                             game: e.application,
-                            size: I.A.SMALL,
+                            size: y.A.SMALL,
                             className: A.gameIcon,
                         }),
                         (0, i.jsxs)("div", {
@@ -118,7 +118,7 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           text: x.intl.string(x.t.tG2SzG),
                                           children: [
                                               "(",
-                                              (0, i.jsx)(m.SrA, {
+                                              (0, i.jsx)(h.SrA, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: A.nitroIcon,
@@ -160,9 +160,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         : e.isNew
                           ? x.intl.string(x.t["+F0Tho"])
                           : 0 !== e.lastPlayed
-                            ? (0, i.jsx)(y.ZP, {
+                            ? (0, i.jsx)(v.ZP, {
                                   end: e.lastPlayed,
-                                  location: y.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
+                                  location: v.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
                               })
                             : x.intl.string(x.t.EoWLru)),
                     (0, i.jsx)(E.Z, {
@@ -189,13 +189,13 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: m.kZF,
+                                    icon: h.kZF,
                                     tooltip: x.intl.string(x.t.NozAop),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: m.o8v,
+                                    icon: h.o8v,
                                     tooltip: x.intl.string(x.t.Az9eqn),
                                 }),
                                 (0, i.jsx)(j.Z, {
@@ -296,7 +296,7 @@ class B extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (h.Z.wait(g.Zy), this.props.scrollToRow(e, R));
+            null != e && (g.Z.wait(m.Zy), this.props.scrollToRow(e, R));
         }
     }
     handleHighlightedApplicationKey() {
@@ -456,7 +456,7 @@ class B extends (r = l.PureComponent) {
             Z(this, "handleApplicationContextMenu", (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: r } = this.props;
-                (0, g.jW)(
+                (0, m.jW)(
                     e,
                     async () => {
                         let { default: e } = await n.e("98335").then(n.bind(n, 485292));
@@ -482,10 +482,10 @@ function H(e) {
             applicationViewItems: r,
             filterQuery: a,
             fetched: s,
-        } = (0, c.cj)([v.Z], () => ({
-            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: v.Z.applicationFilterQuery,
-            fetched: v.Z.hasFetchedApplications,
+        } = (0, c.cj)([I.Z], () => ({
+            applicationViewItems: I.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: I.Z.applicationFilterQuery,
+            fetched: I.Z.hasFetchedApplications,
         })),
         {
             sortKey: u,

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(781800),
     R = n(474936),
     P = n(981631),
-    w = n(388032),
-    D = n(677599),
+    D = n(388032),
+    w = n(677599),
     x = n(865215);
 let L = (e) => {
     let { userId: t } = e;
@@ -58,18 +58,18 @@ let L = (e) => {
         X = (0, b.Z)({ location: "SubscriberNitroHome" });
     return null == q
         ? (0, r.jsx)("div", {
-              className: o()(D.container, D.loading),
+              className: o()(w.container, w.loading),
               children: (0, r.jsx)(c.$jN, {}),
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(c.yWw, {
-                      className: D.mainPageScroller,
+                      className: w.mainPageScroller,
                       ref: n,
                       children: [
                           (0, r.jsx)(c.$1m, {
                               color: "nitro-pink",
-                              className: o()(D.container, D.responsiveContainer, { [D.hiddenGradient]: !X }),
+                              className: o()(w.container, w.responsiveContainer, { [w.hiddenGradient]: !X }),
                               children: (0, r.jsxs)(f.Gt, {
                                   value: W,
                                   children: [
@@ -80,7 +80,7 @@ let L = (e) => {
                                           active: !0,
                                           children: (0, r.jsx)(S.Z, {
                                               buttonVisibilityRef: U,
-                                              className: D.heroHeading,
+                                              className: w.heroHeading,
                                               enablePremiumBrandRefresh: X,
                                               userDiscountOffer: k,
                                               discountedPrice: H,
@@ -88,12 +88,12 @@ let L = (e) => {
                                       }),
                                       (0, r.jsx)(I.Z, {
                                           variant: A.gM.WHATS_NEW,
-                                          className: D.whatsNew,
+                                          className: w.whatsNew,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
                                       }),
                                       (0, r.jsx)(I.Z, {
-                                          className: D.perksDiscoverability,
+                                          className: w.perksDiscoverability,
                                           variant: A.gM.PERKS_DISCOVERABILITY,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
@@ -103,14 +103,14 @@ let L = (e) => {
                                           }),
                                       }),
                                       (0, r.jsx)(T.Z, {
-                                          className: D.giftNitro,
+                                          className: w.giftNitro,
                                           location: d.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                           analyticsLocation: {
                                               page: P.ZY5.NITRO_HOME,
                                               section: P.jXE.GIFT_BANNER,
                                           },
                                       }),
-                                      (0, r.jsx)("div", { className: D.footerSpacing }),
+                                      (0, r.jsx)("div", { className: w.footerSpacing }),
                                       (0, r.jsx)(l.$, {
                                           innerRef: a,
                                           onChange: (e) => {
@@ -123,15 +123,15 @@ let L = (e) => {
                                           },
                                           children: (0, r.jsx)("div", {
                                               ref: a,
-                                              className: D.bottomOfPageVisibilitySensor,
+                                              className: w.bottomOfPageVisibilitySensor,
                                           }),
                                       }),
                                       (0, r.jsx)("img", {
                                           src: x,
-                                          className: D.bottomIllustration,
+                                          className: w.bottomIllustration,
                                           width: 112,
                                           height: 85,
-                                          alt: w.intl.string(w.t.X4IxWL),
+                                          alt: D.intl.string(D.t.X4IxWL),
                                       }),
                                   ],
                               }),

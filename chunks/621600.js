@@ -237,9 +237,9 @@ function I(e) {
         N = C(I),
         R = C(A(h, g), y),
         P = O(N, R, "RETURN_PREVIOUS_WHEN_CHANGED"),
-        w = a.Z.getChannel(g),
-        D = null != (n = P("channel_flags")) ? n : 0,
-        x = (null != (s = R.channel_flags) ? s : 0) ^ D,
+        D = a.Z.getChannel(g),
+        w = null != (n = P("channel_flags")) ? n : 0,
+        x = (null != (s = R.channel_flags) ? s : 0) ^ w,
         L = 0 === (0, l.M1)(x, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
         M = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
     r.ZP.trackWithMetadata(
@@ -250,7 +250,7 @@ function I(e) {
             channel_id: g,
             update_type: _,
             label: T,
-            parent_id: null != w ? w.parent_id : null,
+            parent_id: null != D ? D.parent_id : null,
             channel_flags_old: P("channel_flags"),
             channel_is_muted_old: P("channel_is_muted"),
             channel_muted_until_old: P("channel_muted_until"),

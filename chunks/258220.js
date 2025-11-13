@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => m,
+    default: () => h,
     r: () => f,
 }),
     n(388685);
@@ -14,10 +14,10 @@ var r = n(951288),
     d = n(981631),
     p = n(388032);
 let f = "Activity Encourages Hardware Acceleration";
-function m(e) {
+function h(e) {
     var t;
-    let { applicationId: n, transitionState: m, onClose: h } = e,
-        [g, _] = i.useState(!1),
+    let { applicationId: n, transitionState: h, onClose: g } = e,
+        [m, _] = i.useState(!1),
         [b] = (0, o.Z)([n]),
         E = null != (t = null == b ? void 0 : b.name) ? t : "This Activity";
     i.useEffect(() => {
@@ -25,27 +25,27 @@ function m(e) {
     }, []);
     let O = async () => {
             let e = "temporary";
-            g && ((e = "permanent"), s.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            m && ((e = "permanent"), s.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
                 c.default.track(d.rMx.MODAL_DISMISSED, {
                     type: f,
                     dismiss_type: e,
                 }),
-                await h();
+                await g();
         },
-        I = async () => {
+        y = async () => {
             c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
                 u.ZP.setEnableHardwareAcceleration(!0),
                 await O();
         };
     return (0, r.jsx)(l.Modal, {
         size: "md",
-        transitionState: m,
+        transitionState: h,
         onClose: O,
         "aria-label": p.intl.string(p.t.NQkK4l),
         title: p.intl.string(p.t.NQkK4l),
         actionBarInput: (0, r.jsx)(a.Checkbox, {
-            checked: g,
-            onChange: () => _(!g),
+            checked: m,
+            onChange: () => _(!m),
             label: p.intl.string(p.t["5E9SB9"]),
             labelType: "secondary",
         }),
@@ -58,7 +58,7 @@ function m(e) {
             {
                 variant: "primary",
                 text: p.intl.string(p.t["/wlDqi"]),
-                onClick: I,
+                onClick: y,
             },
         ],
         children: (0, r.jsx)(a.Text, {

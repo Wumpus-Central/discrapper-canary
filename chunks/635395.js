@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(647438),
     i = n(442837),
     l = n(846027),
@@ -10,12 +10,12 @@ var r = n(647438),
     d = n(131951),
     p = n(292959),
     f = n(19780),
-    m = n(699516),
-    h = n(606304),
-    g = n(358085),
+    h = n(699516),
+    g = n(606304),
+    m = n(358085),
     _ = n(998502),
     b = n(981631);
-let E = (0, g.isMac)() ? null : "DEFAULT";
+let E = (0, m.isMac)() ? null : "DEFAULT";
 class O extends r.PureComponent {
     componentDidMount() {
         _.ZP.setSystemTrayIcon(this.getIcon());
@@ -43,32 +43,32 @@ class O extends r.PureComponent {
             })(this, "getIcon", () => {
                 let { deafened: e, muted: t, speaking: n, connected: r, unread: i } = this.props,
                     l = E;
-                return (0, g.isMac)() && !r
+                return (0, m.isMac)() && !r
                     ? l
-                    : (0, g.isLinux)() || !r
+                    : (0, m.isLinux)() || !r
                       ? (i && (l = "UNREAD"), l)
                       : (l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED");
             });
     }
 }
-let I = () => null;
-g.isPlatformEmbedded &&
+let y = () => null;
+m.isPlatformEmbedded &&
     (_.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute({ location: "System Tray" })),
     _.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()),
     _.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         (0, c.openUserSettings)(o.n.VOICE_AND_VIDEO_PANEL, { section: b.oAB.VOICE });
     }),
-    (I = i.ZP.connectStores([f.Z, d.Z, h.Z, u.default, m.Z, p.Z, a.Z], () => {
+    (y = i.ZP.connectStores([f.Z, d.Z, g.Z, u.default, h.Z, p.Z, a.Z], () => {
         let e = u.default.getTotalMentionCount(),
             t = u.default.hasAnyUnread(),
-            n = (0, s.m$)([m.Z, a.Z]),
+            n = (0, s.m$)([h.Z, a.Z]),
             r = !p.Z.getDisableUnreadBadge() && !!(t || e + n > 0);
         return {
             connected: f.Z.isConnected(),
-            speaking: h.Z.isCurrentUserSpeaking(),
+            speaking: g.Z.isCurrentUserSpeaking(),
             muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
             deafened: d.Z.isSelfDeaf(),
             unread: r,
         };
     })(O)));
-let y = I;
+let v = y;

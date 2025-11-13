@@ -1,10 +1,10 @@
 n.d(t, {
-    GB: () => S,
+    GB: () => N,
     JI: () => y,
-    UM: () => A,
-    V6: () => N,
-    WT: () => b,
-    X7: () => j,
+    UM: () => T,
+    V6: () => O,
+    WT: () => j,
+    X7: () => b,
     jq: () => C,
     mx: () => x,
 }),
@@ -20,8 +20,8 @@ var r = n(951288),
     d = n(768581),
     h = n(51144),
     g = n(245335),
-    p = n(981631),
-    m = n(888592),
+    m = n(981631),
+    p = n(888592),
     f = n(388032),
     _ = n(215613);
 let x = 100,
@@ -34,19 +34,19 @@ let x = 100,
         return 0 === r.memberCount && 0 === r.memberCount ? null : r;
     },
     v = (e) => e.target_type === g.Iq.STREAM && null != e.target_user,
-    b = (e) => {
+    j = (e) => {
         var t;
-        return (null == (t = e.channel) ? void 0 : t.type) === p.d4z.GROUP_DM;
+        return (null == (t = e.channel) ? void 0 : t.type) === m.d4z.GROUP_DM;
     },
-    j = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    I = (e) => e.state === p.r2o.ACCEPTED,
+    b = (e) => null == e.channel && null == e.guild && null != e.inviter,
+    I = (e) => e.state === m.r2o.ACCEPTED,
     y = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    O = (e) =>
+    S = (e) =>
         !y(e) &&
-        (!!j(e) ||
+        (!!b(e) ||
             (null != e.inviter &&
                 !I(e) &&
                 !((e) => {
@@ -54,7 +54,7 @@ let x = 100,
                     let n = E(e);
                     return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
                 })(e))),
-    S = (e) => {
+    N = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -77,11 +77,11 @@ let x = 100,
                   })
                 : null;
     };
-function N(e) {
+function O(e) {
     var t;
     let { invite: n, textClassName: i, className: s } = e,
         a = E(n);
-    return null == a || O(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
+    return null == a || S(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === p.fQ
         ? null
         : (0, r.jsx)(o.EJ, {
               className: l()(_.activityCount, s),
@@ -99,13 +99,13 @@ function C(e) {
                     ? null
                     : v(t) && null != t.target_user
                       ? d.ZP.getUserAvatarURL(t.target_user)
-                      : O(t) && null != t.inviter
+                      : S(t) && null != t.inviter
                         ? d.ZP.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
         ),
         l = f.intl.string(f.t["3rE1P8"]);
-    if (b(t)) {
+    if (j(t)) {
         var c, u;
         l =
             (null == (c = t.channel) ? void 0 : c.name) != null &&
@@ -117,7 +117,7 @@ function C(e) {
             ? (l = f.intl.formatToPlainString(f.t.x2L32Q, { username: t.target_user.username }))
             : I(t)
               ? (l = f.intl.string(f.t["FDsl+J"]))
-              : O(t) &&
+              : S(t) &&
                 null != t.inviter &&
                 (l = f.intl.format(f.t.spU2mI, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {
@@ -138,7 +138,7 @@ function C(e) {
         ],
     });
 }
-function A(e) {
+function T(e) {
     let t,
         n,
         i,

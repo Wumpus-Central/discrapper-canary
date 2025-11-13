@@ -19,12 +19,12 @@ var r = n(951288),
     O = n(804932),
     v = n(389160),
     j = n(787879),
-    C = n(370774),
-    x = n(334426),
+    x = n(370774),
+    C = n(334426),
     E = n(862149),
     S = n(982183),
     I = n(981631),
-    P = n(400705),
+    P = n(133948),
     N = n(388032),
     Z = n(809946);
 function w(e) {
@@ -83,7 +83,7 @@ function R() {
                     ],
                 }),
                 (0, r.jsx)(d.zx, {
-                    onClick: () => (0, C.j4)(e),
+                    onClick: () => (0, x.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
                     children: N.intl.string(P.default.klSpfs),
@@ -187,7 +187,7 @@ function D(e) {
                               : (i[S.KZ.UNREAD][e.channelId] = [e]);
                     }),
                     s().each(t, (e) => {
-                        let t = (0, C.bl)(e);
+                        let t = (0, x.bl)(e);
                         e.kind === S.fL.MENTION
                             ? r[t].push(e)
                             : e.channelId in i[t]
@@ -243,7 +243,7 @@ function D(e) {
         }, [t, n, a, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
         $ = i.isValidElement(J) && J.type === T,
-        ee = (0, x.d)((e) => e.setInboxReadState);
+        ee = (0, C.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
         X || ee(0 === Y.UNREAD.length);
     }, [Y, X, ee]);

@@ -1,6 +1,6 @@
 n.d(t, {
     o: () => y,
-    x: () => S,
+    x: () => T,
 }),
     n(388685);
 var r = n(951288),
@@ -149,7 +149,7 @@ function I(e) {
         })
     );
 }
-function S(e) {
+function T(e) {
     let {
             gradientColor: t,
             graphic: n,
@@ -162,7 +162,7 @@ function S(e) {
             trailing: E,
         } = e,
         { headingId: y } = (0, m.v)(),
-        S = null != t,
+        T = null != t,
         C = (0, f.MW)(n),
         N = c ? (C ? v : I) : O,
         R =
@@ -181,8 +181,8 @@ function S(e) {
             color: "text-primary",
             children: a,
         }),
-        w = null != n ? R : P,
-        D = (0, r.jsx)("header", {
+        D = null != n ? R : P,
+        w = (0, r.jsx)("header", {
             className: o()(g.section, g.header, { [g.headerCentered]: c }),
             children: (0, r.jsxs)(p.K, {
                 gap: 8,
@@ -192,28 +192,28 @@ function S(e) {
                         children: (0, r.jsx)(N, {
                             leading: h,
                             trailing: E,
-                            hasGradient: S,
+                            hasGradient: T,
                             children: (0, r.jsx)("div", {
                                 className: g.headerMain,
-                                children: w,
+                                children: D,
                             }),
                         }),
                     }),
-                    (0, r.jsx)(T, { badge: i }),
+                    (0, r.jsx)(S, { badge: i }),
                     null != n && null != a && P,
                     null != l && (0, r.jsx)(A, { subtitle: l }),
                 ],
             }),
         });
-    return S
+    return T
         ? (0, r.jsx)(u.$, {
               color: t,
               className: g.headerGradient,
-              children: D,
+              children: w,
           })
-        : D;
+        : w;
 }
-function T(e) {
+function S(e) {
     let { badge: t } = e;
     if (null == t) return null;
     let n = (0, l.R)(t);

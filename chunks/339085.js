@@ -39,8 +39,8 @@ var r,
     N = n(430824),
     R = n(771845),
     P = n(594174),
-    w = n(70956),
-    D = n(176354),
+    D = n(70956),
+    w = n(176354),
     x = n(823379),
     L = n(226951),
     M = n(709054),
@@ -167,7 +167,7 @@ class J {
     }
 }
 let $ = 42,
-    ee = M.default.fromTimestamp(Date.now() - 60 * w.Z.Millis.DAY),
+    ee = M.default.fromTimestamp(Date.now() - 60 * D.Z.Millis.DAY),
     et = [],
     en = [],
     er = 3,
@@ -520,12 +520,12 @@ function eP(e) {
     let { guild: t } = e;
     ey(t.id), es.delete(t.id), eO();
 }
-function ew(e) {
+function eD(e) {
     var t;
     let { guildId: n, user: r } = e;
     r.id === (null == (t = P.default.getCurrentUser()) ? void 0 : t.id) && (ev(n), eO());
 }
-function eD(e) {
+function ew(e) {
     if (!e.optimistic) return !1;
     let t =
         null != e.emoji.id && "0" !== e.emoji.id
@@ -765,7 +765,7 @@ class eF extends (r = d.ZP.PersistedStore) {
             f = em.get(d),
             _ = f.nameMatchesChain(t).reduce(
                 (e, t) => {
-                    let r = D.ZP.getEmojiUnavailableReason({
+                    let r = w.ZP.getEmojiUnavailableReason({
                         emoji: t,
                         channel: n,
                         intention: a,
@@ -818,12 +818,12 @@ let eV = new eF(f.Z, {
     CONNECTION_OPEN: eI,
     OVERLAY_INITIALIZE: eT,
     CACHED_EMOJIS_LOADED: ef,
-    GUILD_MEMBER_UPDATE: ew,
+    GUILD_MEMBER_UPDATE: eD,
     GUILD_CREATE: eC,
     GUILD_UPDATE: eN,
     GUILD_EMOJIS_UPDATE: eR,
     GUILD_DELETE: eP,
-    MESSAGE_REACTION_ADD: eD,
+    MESSAGE_REACTION_ADD: ew,
     EMOJI_TRACK_USAGE: ej,
     USER_SETTINGS_PROTO_UPDATE: eM,
     GUILD_ROLE_CREATE: eG,

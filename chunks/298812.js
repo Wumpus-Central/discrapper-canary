@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var i = n(951288),
     s = n(647438),
     l = n(120356),
@@ -27,8 +27,8 @@ var i = n(951288),
     _ = n(569658),
     y = n(981631),
     M = n(388032),
-    w = n(960359);
-let A = s.forwardRef(function (e, t) {
+    A = n(960359);
+let P = s.forwardRef(function (e, t) {
     let { guildId: n } = e,
         [l, r] = s.useState(null),
         o = (0, a.Wu)([v.Z, N.ZP], () =>
@@ -45,10 +45,10 @@ let A = s.forwardRef(function (e, t) {
             (0, i.jsxs)(
                 "div",
                 {
-                    className: w.channelRow,
+                    className: A.channelRow,
                     children: [
                         (0, i.jsx)(
-                            P,
+                            w,
                             {
                                 channel: e,
                                 categories: d,
@@ -56,7 +56,7 @@ let A = s.forwardRef(function (e, t) {
                             },
                             e.id,
                         ),
-                        t < o.length - 1 && (0, i.jsx)("div", { className: w.separator }),
+                        t < o.length - 1 && (0, i.jsx)("div", { className: A.separator }),
                     ],
                 },
                 e.id,
@@ -89,46 +89,46 @@ let A = s.forwardRef(function (e, t) {
             }),
             u.length > 0 &&
                 (0, i.jsxs)("div", {
-                    className: w.table,
+                    className: A.table,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: w.row,
+                            className: A.row,
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: w.rowName,
+                                    className: A.rowName,
                                     children: M.intl.string(M.t.uShwWv),
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: w.rowOption,
+                                    className: A.rowOption,
                                     children: M.intl.string(M.t.hZrr6k),
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: w.rowOption,
+                                    className: A.rowOption,
                                     children: M.intl.string(M.t.y59NJm),
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: w.rowOption,
+                                    className: A.rowOption,
                                     children: M.intl.string(M.t["pGn/bJ"]),
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: w.rowOption,
+                                    className: A.rowOption,
                                     children: M.intl.string(M.t["32yow9"]),
                                 }),
                             ],
                         }),
                         u.length > 0 &&
                             (0, i.jsx)("div", {
-                                className: w.channels,
+                                className: A.channels,
                                 children: u,
                             }),
                     ],
@@ -136,7 +136,7 @@ let A = s.forwardRef(function (e, t) {
         ],
     });
 });
-function P(e) {
+function w(e) {
     let { channel: t, categories: n, autoFocus: l } = e,
         h = (0, c.dQu)(o.Z.unsafe_rawColors.GREEN_360).hex(),
         j = (0, a.e7)([v.Z], () => v.Z.getChannel(null == t ? void 0 : t.parent_id)),
@@ -158,14 +158,14 @@ function P(e) {
     t.type === y.d4z.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id
         ? (C = M.intl.formatToPlainString(M.t["2KzH89"], { num: null != n[t.id] ? n[t.id].length : 0 }))
         : null != j && (C = M.intl.formatToPlainString(M.t.L1zJgb, { categoryName: (0, m.F6)(j, b.default, f.Z) }));
-    let A = E ? L.s8.CUSTOM : N.preset;
+    let P = E ? L.s8.CUSTOM : N.preset;
     return (0, i.jsx)("div", {
         ref: S,
         children: (0, i.jsxs)("div", {
-            className: r()(w.row, w.channel),
+            className: r()(A.row, A.channel),
             children: [
                 (0, i.jsxs)("div", {
-                    className: r()(w.rowName, w.modColor),
+                    className: r()(A.rowName, A.modColor),
                     children: [
                         null != _
                             ? (0, i.jsx)(_, {
@@ -173,19 +173,19 @@ function P(e) {
                                   color: "currentColor",
                                   height: 20,
                                   width: 20,
-                                  className: w.icon,
+                                  className: A.icon,
                               })
                             : null,
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-md/semibold",
-                                    className: w.modColor,
+                                    className: A.modColor,
                                     children: (0, m.F6)(t, b.default, f.Z),
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-xs/medium",
-                                    className: w.modColor,
+                                    className: A.modColor,
                                     children: C,
                                 }),
                             ],
@@ -193,43 +193,43 @@ function P(e) {
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: w.rowOption,
+                    className: A.rowOption,
                     children: (0, i.jsx)("div", {
                         children: (0, i.jsx)(d.$q, {
                             color: h,
                             shape: d.zV.ROUND,
                             type: d.M0.INVERTED,
-                            value: A === L.s8.ALL_MESSAGES,
+                            value: P === L.s8.ALL_MESSAGES,
                             onChange: () => ((0, Z._m)(t.guild_id, t.id, L.s8.ALL_MESSAGES), O(!1)),
                         }),
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: w.rowOption,
+                    className: A.rowOption,
                     children: (0, i.jsx)("div", {
                         children: (0, i.jsx)(d.$q, {
                             color: h,
                             shape: d.zV.ROUND,
                             type: d.M0.INVERTED,
-                            value: A === L.s8.MENTIONS,
+                            value: P === L.s8.MENTIONS,
                             onChange: () => ((0, Z._m)(t.guild_id, t.id, L.s8.MENTIONS), O(!1)),
                         }),
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: w.rowOption,
+                    className: A.rowOption,
                     children: (0, i.jsx)("div", {
                         children: (0, i.jsx)(d.$q, {
                             color: h,
                             shape: d.zV.ROUND,
                             type: d.M0.INVERTED,
-                            value: A === L.s8.NOTHING,
+                            value: P === L.s8.NOTHING,
                             onChange: () => ((0, Z._m)(t.guild_id, t.id, L.s8.NOTHING), O(!1)),
                         }),
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: w.rowOption,
+                    className: A.rowOption,
                     children: (0, i.jsx)("div", {
                         children: (0, i.jsx)(d.$q, {
                             onClick: (e) => {
@@ -246,14 +246,14 @@ function P(e) {
                             color: h,
                             shape: d.zV.ROUND,
                             type: d.M0.INVERTED,
-                            value: A === L.s8.CUSTOM,
+                            value: P === L.s8.CUSTOM,
                             onChange: () => O(!0),
                         }),
                     }),
                 }),
                 (0, i.jsx)(g.Z, {
                     onClick: () => (0, Z.JK)(t.guild_id, t.id),
-                    className: w.removeButton,
+                    className: A.removeButton,
                 }),
             ],
         }),

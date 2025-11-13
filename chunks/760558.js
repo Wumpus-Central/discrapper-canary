@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(388032),
     v = n(252633);
 let I = (e) => {
-    let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: I, transitionState: S, onClose: T } = e,
+    let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: I, transitionState: T, onClose: S } = e,
         A = (0, h.vx)(_.Z.boostSlots);
     o()(null != t || null != n, "Must either provide slots or an initial selected guild"),
         o()(
@@ -34,8 +34,8 @@ let I = (e) => {
             "SUCCESS",
         ].filter((e) => null != e),
         [N, R] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [P, w] = i.useState(C[0]),
-        [D, x] = i.useState(!1),
+        [P, D] = i.useState(C[0]),
+        [w, x] = i.useState(!1),
         [L, M] = i.useState(n),
         [j, k] = i.useState(null != t ? t : A.slice(0, 1)),
         U = i.useMemo(
@@ -55,7 +55,7 @@ let I = (e) => {
             return (null == j || null == (e = j[0]) ? void 0 : e.premiumGuildSubscription) != null;
         }, [j]),
         B = () => (
-            T("SUCCESS" === P),
+            S("SUCCESS" === P),
             p.default.track(y.rMx.MODAL_DISMISSED, {
                 type: y.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                 location_section: a,
@@ -66,7 +66,7 @@ let I = (e) => {
             UNUSED_QUANTITY_SELECT: () => (
                 o()(null != t || 0 !== A.length, "Cannot provide no slots if there are no other available slots"),
                 (0, r.jsx)(s.Modal, {
-                    transitionState: S,
+                    transitionState: T,
                     onClose: B,
                     size: "md",
                     title: O.intl.string(O.t["9FFrrT"]),
@@ -79,7 +79,7 @@ let I = (e) => {
                         {
                             variant: "primary",
                             text: O.intl.string(O.t["/uwYda"]),
-                            onClick: () => w("CONFIRM"),
+                            onClick: () => D("CONFIRM"),
                         },
                     ],
                     children: (0, r.jsxs)("div", {
@@ -114,9 +114,9 @@ let I = (e) => {
                 (0, r.jsx)(g.default, {
                     onClose: B,
                     onSelectGuild: (e) => {
-                        M(e), w("CONFIRM");
+                        M(e), D("CONFIRM");
                     },
-                    transitionState: S,
+                    transitionState: T,
                     isTransfer: G,
                     selectedSlotGuilds: U,
                 }),
@@ -125,7 +125,7 @@ let I = (e) => {
                 let e = j.filter((e) => (0, h.tl)(e)).length,
                     t = j.length,
                     n = U.length,
-                    i = "CONFIRM" === C[0] ? B : () => w(C[C.indexOf(P) - 1]),
+                    i = "CONFIRM" === C[0] ? B : () => D(C[C.indexOf(P) - 1]),
                     a = async () => {
                         if ((x(!1), null != L && (null == j ? void 0 : j.length) !== 0)) {
                             o()(
@@ -147,7 +147,7 @@ let I = (e) => {
                                         }),
                                         I === E.P.PERK,
                                     ),
-                                    w("SUCCESS");
+                                    D("SUCCESS");
                             } catch (e) {
                                 x(!0);
                             }
@@ -155,7 +155,7 @@ let I = (e) => {
                     },
                     l = G ? O.intl.string(O.t["PR0n//"]) : O.intl.string(O.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
-                    transitionState: S,
+                    transitionState: T,
                     onClose: B,
                     size: "md",
                     title: l,
@@ -184,7 +184,7 @@ let I = (e) => {
                                   guildCount: n,
                               }),
                               imageClass: v.transferConfirmImage,
-                              error: D ? R : null,
+                              error: w ? R : null,
                               slotCount: t,
                               canceledCount: e,
                           })
@@ -196,7 +196,7 @@ let I = (e) => {
                                   slotCount: t,
                               }),
                               imageClass: v.confirmImage,
-                              error: D ? R : null,
+                              error: w ? R : null,
                               slotCount: t,
                               canceledCount: e,
                           }),
@@ -205,7 +205,7 @@ let I = (e) => {
             SUCCESS() {
                 let e = G ? O.intl.string(O.t["PR0n//"]) : O.intl.string(O.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
-                    transitionState: S,
+                    transitionState: T,
                     onClose: B,
                     size: "md",
                     title: e,

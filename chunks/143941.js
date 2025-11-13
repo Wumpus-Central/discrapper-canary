@@ -156,9 +156,9 @@ function R(e) {
         [A, N] = (0, _.US)([l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
         R = A === l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
         { analyticsLocations: P } = (0, d.ZP)(),
-        w = g.default.getCurrentUser(),
-        D = null != w ? p.Z.getFirstWishlistId(w.id) : null,
-        x = (0, m.ny)(D, t),
+        D = g.default.getCurrentUser(),
+        w = null != D ? p.Z.getFirstWishlistId(D.id) : null,
+        x = (0, m.ny)(w, t),
         L = i.useRef(null),
         [M, j] = i.useState(null);
     i.useEffect(() => {
@@ -170,10 +170,10 @@ function R(e) {
         B = k || U ? I.wishlistedOrHoveredIconColor : I.normalIconColor,
         Z = i.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), k && null != D)) {
+                if ((e.stopPropagation(), k && null != w)) {
                     j(!1);
                     try {
-                        await h.Z.removeSkuFromWishlist(D, t, P), j(null);
+                        await h.Z.removeSkuFromWishlist(w, t, P), j(null);
                     } catch (e) {
                         j(null),
                             (0, u.showToast)((0, u.createToast)(v.intl.string(v.t.F8FvUy), u.ToastType.FAILURE)),
@@ -198,10 +198,10 @@ function R(e) {
                     }
                 }
             },
-            [k, D, t, P, R, T, N],
+            [k, w, t, P, R, T, N],
         ),
         F = k ? v.intl.string(v.t.yr9TTf) : v.intl.string(v.t["8DkMEQ"]);
-    return (b || k) && null != w
+    return (b || k) && null != D
         ? E
             ? (0, r.jsx)(c.u, {
                   text: null != y ? y : F,

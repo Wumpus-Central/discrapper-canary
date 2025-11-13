@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(110560),
     v = n(667105),
     I = n(46140),
-    S = n(981631),
-    T = n(231338),
+    T = n(981631),
+    S = n(231338),
     A = n(388032);
 function C(e, t, n) {
     return (
@@ -75,11 +75,11 @@ function P(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -87,7 +87,7 @@ function w(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,9 +104,9 @@ function x(e) {
         N = (0, p.O5)(),
         R = (0, h.aM)(),
         P = (0, g.ly)(e.quest),
-        w = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
+        D = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
-            handleComplete: D,
+            handleComplete: w,
             handleProgress: x,
             handleResetDismissibilityClick: L,
             handleResetStatusClick: M,
@@ -116,7 +116,7 @@ function x(e) {
             x(0.9 * Math.random() + 0.03);
         },
         U = i.useCallback(() => {
-            if (e.quest.id === I.V6) return void window.open(f.Z.getArticleURL(S.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+            if (e.quest.id === I.V6) return void window.open(f.Z.getArticleURL(T.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             (0, m.nc)(e.quest, {
                 content: e.questContent,
                 ctaContent: p.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
@@ -125,7 +125,7 @@ function x(e) {
             });
         }, [R, e.quest, e.questContent, e.sourceQuestContent]),
         G = (0, v.yc)({
-            isShareable: w,
+            isShareable: D,
             questId: e.quest.id,
             trackingCtx: i.useMemo(
                 () => ({
@@ -192,7 +192,7 @@ function x(e) {
             [j, e.quest.id, null == n ? void 0 : n.id],
         ),
         X = i.useCallback(() => {
-            (0, c.uL)(S.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
+            (0, c.uL)(T.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
         Q = e.shouldShowDisclosure && e.quest.id !== I.V6;
     return (0, r.jsxs)(o.v2r, {
@@ -200,7 +200,7 @@ function x(e) {
         onSelect: F,
         navId: "quests-entry",
         "aria-label": A.intl.string(A.t.ogxXGq),
-        onClose: null != (t = null == e ? void 0 : e.onClose) ? t : T.dG,
+        onClose: null != (t = null == e ? void 0 : e.onClose) ? t : S.dG,
         children: [
             (0, r.jsxs)(
                 o.kSQ,
@@ -212,7 +212,7 @@ function x(e) {
                             action: U,
                             icon: o.zFc,
                         }),
-                        w &&
+                        D &&
                             (0, r.jsx)(o.sNh, {
                                 id: "share-link",
                                 label: A.intl.string(A.t.RDE0Sc),
@@ -276,7 +276,7 @@ function x(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
                                 label: A.intl.string(A.t.jQEfRT),
-                                action: D,
+                                action: w,
                             }),
                             (0, m.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
@@ -331,7 +331,7 @@ function L(e) {
             questContentPosition: d,
             sourceQuestContent: f,
         } = e,
-        _ = w(e, [
+        _ = D(e, [
             "children",
             "onOpen",
             "onClose",

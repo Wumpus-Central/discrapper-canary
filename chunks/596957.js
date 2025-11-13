@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(906732),
     p = n(835473),
     f = n(795448),
-    m = n(699516),
-    h = n(974042),
-    g = n(451478),
+    h = n(699516),
+    g = n(974042),
+    m = n(451478),
     _ = n(701861),
     b = n(437314),
     E = n(696577),
     O = n(163417),
-    I = n(830880),
-    y = n(492347),
-    v = n(42575),
+    y = n(830880),
+    v = n(492347),
+    I = n(42575),
     C = n(617015),
     S = n(981631),
     T = n(388032),
@@ -95,11 +95,11 @@ function w(e) {
 let L = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(u.Z.FRIENDS_LIST),
-        { rows: s, section: A } = (0, l.cj)([h.ZP], () => h.ZP.getState()),
-        L = (0, l.e7)([g.Z], () => g.Z.isFocused()),
-        { relationshipCount: R, hasBlockedOrIgnored: D } = (0, l.cj)([m.Z], () => ({
-            relationshipCount: m.Z.getRelationshipCount(),
-            hasBlockedOrIgnored: m.Z.getBlockedOrIgnoredIDs().length > 0,
+        { rows: s, section: A } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
+        L = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        { relationshipCount: R, hasBlockedOrIgnored: D } = (0, l.cj)([h.Z], () => ({
+            relationshipCount: h.Z.getRelationshipCount(),
+            hasBlockedOrIgnored: h.Z.getBlockedOrIgnoredIDs().length > 0,
         })),
         [M, k] = i.useState(() => {
             let e = {};
@@ -136,7 +136,7 @@ let L = function (e) {
                     case S.pJs.PENDING:
                         return (0, r.jsx)(E.Z, P(j({}, n), { isFocused: L }), t);
                     case S.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(v.Z, P(j({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(I.Z, P(j({}, n), { isFocused: L }), t);
                     case S.pJs.ONLINE:
                     case S.pJs.ALL:
                     default:
@@ -216,7 +216,7 @@ let L = function (e) {
                           {
                               className: N.sectionTitle,
                               children: [
-                                  (0, r.jsx)(y.Z, {
+                                  (0, r.jsx)(v.Z, {
                                       id: t,
                                       title: n,
                                   }),
@@ -238,7 +238,7 @@ let L = function (e) {
                           "div",
                           {
                               className: N.sectionTitle,
-                              children: (0, r.jsx)(y.Z, {
+                              children: (0, r.jsx)(v.Z, {
                                   id: t,
                                   title: n,
                               }),
@@ -265,7 +265,7 @@ let L = function (e) {
         children: (0, r.jsxs)(c.Z, {
             section: S.jXE.FRIENDS_LIST,
             children: [
-                D && (0, r.jsx)(I.R, {}),
+                D && (0, r.jsx)(y.R, {}),
                 (0, r.jsx)("div", {
                     className: N.searchBar,
                     children: (0, r.jsx)(a.E1j, {

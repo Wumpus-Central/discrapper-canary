@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(990547),
@@ -84,9 +84,9 @@ let I = (e) => {
         } = e,
         O = i.useRef(null),
         I = i.useMemo(() => ({ current: u }), [u]),
-        S = i.useRef(n);
+        T = i.useRef(n);
     i.useEffect(() => {
-        S.current = n;
+        T.current = n;
     }),
         i.useEffect(() => {
             var e, t, n;
@@ -96,7 +96,7 @@ let I = (e) => {
                 var t;
                 let n = e.target,
                     r = null == (t = O.current) ? void 0 : t.elementRef.current;
-                (null != r && (0, c.ty$)(r, n)) || (v(), S.current());
+                (null != r && (0, c.ty$)(r, n)) || (v(), T.current());
             };
             return (
                 null == (t = r.ownerDocument) || t.addEventListener("click", i, !0),
@@ -108,14 +108,14 @@ let I = (e) => {
                 }
             );
         }, []);
-    let T = i.useRef(s);
+    let S = i.useRef(s);
     i.useEffect(() => {
-        T.current = s;
+        S.current = s;
     }),
         i.useEffect(
             () => () => {
                 var e;
-                return null == (e = T.current) ? void 0 : e.call(T);
+                return null == (e = S.current) ? void 0 : e.call(S);
             },
             [],
         ),
@@ -139,7 +139,7 @@ let I = (e) => {
         ? (0, r.jsx)(o.pS, {
               open: !0,
               onOpenChange: (e) => {
-                  e ? C() : (N(), v(), S.current());
+                  e ? C() : (N(), v(), T.current());
               },
               overrideTargetRect: p,
               placement: (0, o.a_)(null != h ? h : "right", null != m ? m : "top"),
@@ -164,7 +164,7 @@ let I = (e) => {
               children: t,
           });
 };
-class S extends i.PureComponent {
+class T extends i.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
@@ -240,7 +240,7 @@ class S extends i.PureComponent {
             });
     }
 }
-function T() {
+function S() {
     let {
             contextMenu: e,
             version: t,
@@ -253,7 +253,7 @@ function T() {
         a = (0, s.e7)([p.Z], () => p.Z.theme),
         { appContext: o, renderWindow: l } = i.useContext(_.ZP);
     return (0, r.jsx)(
-        S,
+        T,
         O(
             b(
                 {

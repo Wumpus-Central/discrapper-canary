@@ -97,8 +97,8 @@
         N,
         R,
         P,
-        w,
         D,
+        w,
         x,
         L,
         M,
@@ -154,14 +154,14 @@
             eN = eu(v),
             eR = eu(I),
             eP = eu(T),
-            ew = eu(S),
-            eD = eu(A),
+            eD = eu(S),
+            ew = eu(A),
             ex = eu(C),
             eL = eu(N),
             eM = eu(R),
             ej = eu(P),
-            ek = eu(w),
-            eU = eu(D),
+            ek = eu(D),
+            eU = eu(w),
             eG = eu(x),
             eB = eu(L),
             eZ = eu(M),
@@ -179,8 +179,8 @@
             e$ = eu(X),
             e0 = eu(Q),
             e1 = eu(J),
-            e3 = eu($),
-            e2 = eu(ee),
+            e2 = eu($),
+            e3 = eu(ee),
             e4 = eu(et),
             e8 = eu(en),
             e5 = eu(er),
@@ -461,15 +461,15 @@
         }
         function tR(e, t) {
             var n = (t && tV(t)) || (tF() && tV(tF()));
-            return ew.default(e, n ? { locale: n } : null);
+            return eD.default(e, n ? { locale: n } : null);
         }
         function tP(e, t) {
             return tA(e, "ddd", t);
         }
-        function tw(e) {
+        function tD(e) {
             return eK.default(e);
         }
-        function tD(e, t, n) {
+        function tw(e, t, n) {
             var r = tV(t || tF());
             return ez.default(e, {
                 locale: r,
@@ -486,13 +486,13 @@
             return eX.default(e);
         }
         function tj(e, t) {
-            return e && t ? e3.default(e, t) : !e && !t;
+            return e && t ? e2.default(e, t) : !e && !t;
         }
         function tk(e, t) {
             return e && t ? e1.default(e, t) : !e && !t;
         }
         function tU(e, t) {
-            return e && t ? e2.default(e, t) : !e && !t;
+            return e && t ? e3.default(e, t) : !e && !t;
         }
         function tG(e, t) {
             return e && t ? e0.default(e, t) : !e && !t;
@@ -594,9 +594,9 @@
         }
         function tX(e, t, n, r) {
             var i = eL.default(e),
-                a = eD.default(e),
+                a = ew.default(e),
                 o = eL.default(t),
-                s = eD.default(t),
+                s = ew.default(t),
                 l = eL.default(r);
             return i === o && i === l
                 ? a <= n && n <= s
@@ -662,14 +662,14 @@
                 return eN.default(t) === eN.default(e) && eC.default(t) === eC.default(e);
             });
         }
-        function t3(e) {
+        function t2(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.excludeTimes,
                 r = t.includeTimes,
                 i = t.filterTime;
             return (n && t1(e, n)) || (r && !t1(e, r)) || (i && !i(e)) || !1;
         }
-        function t2(e, t) {
+        function t3(e, t) {
             var n = t.minTime,
                 r = t.maxTime;
             if (!n || !r) throw Error("Both minTime and maxTime props required");
@@ -1529,7 +1529,7 @@
                             return 0 === t || 6 === t;
                         }),
                         tl(t_(e), "isOutsideMonth", function () {
-                            return void 0 !== e.props.month && e.props.month !== eD.default(e.props.day);
+                            return void 0 !== e.props.month && e.props.month !== ew.default(e.props.day);
                         }),
                         tl(t_(e), "getClassNames", function (t) {
                             var n = e.props.dayClassName ? e.props.dayClassName(t) : void 0;
@@ -1696,7 +1696,7 @@
                             return e.props.formatWeekNumber ? e.props.formatWeekNumber(t) : tR(t);
                         }),
                         tl(t_(e), "renderDays", function () {
-                            var t = tD(e.props.day, e.props.locale, e.props.calendarStartDay),
+                            var t = tw(e.props.day, e.props.locale, e.props.calendarStartDay),
                                 n = [],
                                 r = e.formatWeekNumber(t);
                             if (e.props.showWeekNumber) {
@@ -1849,7 +1849,7 @@
                                     n = e.props.fixedHeight,
                                     r = 0,
                                     i = !1,
-                                    a = tD(tx(e.props.day), e.props.locale, e.props.calendarStartDay);
+                                    a = tw(tx(e.props.day), e.props.locale, e.props.calendarStartDay);
                                 t.push(
                                     ed.default.createElement(ng, {
                                         ariaLabelPrefix: e.props.weekAriaLabelPrefix,
@@ -1857,7 +1857,7 @@
                                         disabledDayAriaLabelPrefix: e.props.disabledDayAriaLabelPrefix,
                                         key: r,
                                         day: a,
-                                        month: eD.default(e.props.day),
+                                        month: ew.default(e.props.day),
                                         onDayClick: e.handleDayClick,
                                         onDayMouseEnter: e.handleDayMouseEnter,
                                         onWeekSelect: e.props.onWeekSelect,
@@ -1951,15 +1951,15 @@
                             return ef.default("react-datepicker__month-text", "react-datepicker__month-".concat(t), d, {
                                 "react-datepicker__month--disabled": (s || l) && tq(eG.default(r, t), e.props),
                                 "react-datepicker__month--selected":
-                                    eD.default(r) === t && eL.default(r) === eL.default(o),
-                                "react-datepicker__month-text--keyboard-selected": eD.default(c) === t,
+                                    ew.default(r) === t && eL.default(r) === eL.default(o),
+                                "react-datepicker__month-text--keyboard-selected": ew.default(c) === t,
                                 "react-datepicker__month--in-range": tX(i, a, t, r),
                                 "react-datepicker__month--range-start": e.isRangeStartMonth(t),
                                 "react-datepicker__month--range-end": e.isRangeEndMonth(t),
                             });
                         }),
                         tl(t_(e), "getTabIndex", function (t) {
-                            var n = eD.default(e.props.preSelection);
+                            var n = ew.default(e.props.preSelection);
                             return e.props.disabledKeyboardNavigation || t !== n ? "-1" : "0";
                         }),
                         tl(t_(e), "getAriaLabel", function (t) {
@@ -2125,9 +2125,9 @@
                     return (
                         tl(t_((e = t.call.apply(t, [this].concat(i)))), "state", { height: null }),
                         tl(t_(e), "handleClick", function (t) {
-                            ((e.props.minTime || e.props.maxTime) && t2(t, e.props)) ||
+                            ((e.props.minTime || e.props.maxTime) && t3(t, e.props)) ||
                                 ((e.props.excludeTimes || e.props.includeTimes || e.props.filterTime) &&
-                                    t3(t, e.props)) ||
+                                    t2(t, e.props)) ||
                                 e.props.onChange(t);
                         }),
                         tl(t_(e), "liClasses", function (t, n, r) {
@@ -2140,9 +2140,9 @@
                                     n === eN.default(t) &&
                                     r === eC.default(t) &&
                                     i.push("react-datepicker__time-list-item--selected"),
-                                (((e.props.minTime || e.props.maxTime) && t2(t, e.props)) ||
+                                (((e.props.minTime || e.props.maxTime) && t3(t, e.props)) ||
                                     ((e.props.excludeTimes || e.props.includeTimes || e.props.filterTime) &&
-                                        t3(t, e.props))) &&
+                                        t2(t, e.props))) &&
                                     i.push("react-datepicker__time-list-item--disabled"),
                                 e.props.injectTimes &&
                                     (60 * eN.default(t) + eC.default(t)) % e.props.intervals != 0 &&
@@ -2160,7 +2160,7 @@
                                 var t = [],
                                     n = e.props.format ? e.props.format : "p",
                                     r = e.props.intervals,
-                                    i = tw(tI(e.props.selected)),
+                                    i = tD(tI(e.props.selected)),
                                     a = 1440 / r,
                                     o =
                                         e.props.injectTimes &&
@@ -2589,7 +2589,7 @@
                             r.setState(
                                 function (t) {
                                     var n = t.date;
-                                    return { date: eZ.default(eG.default(n, eD.default(e)), eL.default(e)) };
+                                    return { date: eZ.default(eG.default(n, ew.default(e)), eL.default(e)) };
                                 },
                                 function () {
                                     return r.handleMonthYearChange(r.state.date);
@@ -2598,7 +2598,7 @@
                         }),
                         tl(t_(r), "header", function () {
                             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.state.date,
-                                t = tD(e, r.props.locale, r.props.calendarStartDay),
+                                t = tw(e, r.props.locale, r.props.calendarStartDay),
                                 n = [];
                             return (
                                 r.props.showWeekNumbers &&
@@ -2833,7 +2833,7 @@
                                     dropdownMode: r.props.dropdownMode,
                                     locale: r.props.locale,
                                     onChange: r.changeMonth,
-                                    month: eD.default(r.state.date),
+                                    month: ew.default(r.state.date),
                                     useShortMonthInDropdown: r.props.useShortMonthInDropdown,
                                 });
                         }),
@@ -3416,8 +3416,8 @@
             })(ed.default.Component),
             nR = "react-datepicker-ignore-onclickoutside",
             nP = te.default(nT),
-            nw = "Date input not valid.",
-            nD = (function (e) {
+            nD = "Date input not valid.",
+            nw = (function (e) {
                 tu(n, e);
                 var t = th(n);
                 function n(e) {
@@ -3650,7 +3650,7 @@
                                         r.inputOk() ||
                                             r.props.onInputError({
                                                 code: 1,
-                                                msg: nw,
+                                                msg: nD,
                                             });
                                 }
                             } else ("ArrowDown" !== t && "ArrowUp" !== t && "Enter" !== t) || r.onInputClick();
@@ -3670,7 +3670,7 @@
                                     r.inputOk() ||
                                         r.props.onInputError({
                                             code: 1,
-                                            msg: nw,
+                                            msg: nD,
                                         });
                             else if (!r.props.disabledKeyboardNavigation) {
                                 switch (n) {
@@ -3703,7 +3703,7 @@
                                         r.props.onInputError &&
                                         r.props.onInputError({
                                             code: 1,
-                                            msg: nw,
+                                            msg: nD,
                                         })
                                     );
                                 if (
@@ -3713,8 +3713,8 @@
                                     r.setPreSelection(t),
                                     r.props.inline)
                                 ) {
-                                    var a = eD.default(i),
-                                        o = eD.default(t),
+                                    var a = ew.default(i),
+                                        o = ew.default(t),
                                         s = eL.default(i),
                                         l = eL.default(t);
                                     a !== o || s !== l
@@ -3953,7 +3953,7 @@
                                         ((n = e.selected),
                                         (r = this.props.selected),
                                         n && r
-                                            ? eD.default(n) !== eD.default(r) || eL.default(n) !== eL.default(r)
+                                            ? ew.default(n) !== ew.default(r) || eL.default(n) !== eL.default(r)
                                             : n !== r) &&
                                         this.setPreSelection(this.props.selected),
                                         void 0 !== this.state.monthSelectedIn &&
@@ -4090,7 +4090,7 @@
             nx = "input",
             nL = "navigate";
         (e.CalendarContainer = nv),
-            (e.default = nD),
+            (e.default = nw),
             (e.getDefaultLocale = tF),
             (e.registerLocale = function (e, t) {
                 var r = "undefined" != typeof window ? window : n.g;

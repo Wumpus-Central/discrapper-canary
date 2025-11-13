@@ -1,17 +1,17 @@
-t.d(n, { B: () => a });
-var l = t(647438),
-    i = t(788956);
-function a(e) {
-    let { loading: n, hasConnection: t, canConnect: a, startConnection: o, account: r } = (0, i.d)(e);
+n.d(t, { B: () => r });
+var l = n(647438),
+    i = n(788956);
+function r(e) {
+    let { loading: t, hasConnection: n, canConnect: r, startConnection: o, account: a } = (0, i.d)(e);
     return {
-        loading: n,
-        hasConnection: t,
-        canConnect: a,
+        loading: t,
+        hasConnection: n,
+        canConnect: r,
         startConnection: l.useCallback(
             async (e) => {
-                let n = await o(e);
-                if (n.success && null != n.url) {
-                    let e = window.open(n.url, "_blank");
+                let t = await o(e);
+                if (t.success && null != t.url) {
+                    let e = window.open(t.url, "_blank");
                     return null == e
                         ? { success: !1 }
                         : {
@@ -23,6 +23,6 @@ function a(e) {
             },
             [o],
         ),
-        account: r,
+        account: a,
     };
 }

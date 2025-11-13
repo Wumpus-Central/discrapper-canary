@@ -2,9 +2,9 @@ n.d(t, { Z: () => y });
 var i = n(951288);
 n(647438);
 var r = n(481060),
-    l = n(13245),
+    s = n(13245),
     o = n(371651),
-    s = n(594174),
+    l = n(594174),
     a = n(145597),
     c = n(312839),
     d = n(981631),
@@ -69,7 +69,7 @@ function y(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: p } = e,
-                { trackView: y, trackClick: O } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: y, trackClick: b } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -83,11 +83,11 @@ function y(e) {
                     y();
                 },
                 onNotificationClick: (e, t) => {
-                    O("unlock");
+                    b("unlock");
                     let c = (0, a.getPID)();
-                    l.Z.updateNotificationStatus(t);
+                    s.Z.updateNotificationStatus(t);
                     let u = o.default.isOverlayOOPEnabledForPid(c);
-                    if ((u ? l.Z.setInputLocked(!1, c) : l.Z.setInstanceLocked(!1), null == s.default.getCurrentUser()))
+                    if ((u ? s.Z.setInputLocked(!1, c) : s.Z.setInstanceLocked(!1), null == l.default.getCurrentUser()))
                         return;
                     let h = u ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
@@ -107,13 +107,13 @@ function y(e) {
                     }, h);
                 },
                 onDismissClick: () => {
-                    O("dismiss");
+                    b("dismiss");
                 },
             };
         }
         case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: s, trackClick: p } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, {
+                { trackView: l, trackClick: p } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, {
                     notif_type: u.n0.GoLiveNonVoiceNudge,
                 });
             return {
@@ -123,14 +123,14 @@ function y(e) {
                 hint: () => (0, i.jsx)(m, {}),
                 renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {
-                    s();
+                    l();
                 },
                 onNotificationClick: (e, t) => {
                     p("unlock");
-                    let s = (0, a.getPID)();
-                    l.Z.updateNotificationStatus(t);
-                    let c = o.default.isOverlayOOPEnabledForPid(s);
-                    c ? l.Z.setInputLocked(!1, s) : l.Z.setInstanceLocked(!1);
+                    let l = (0, a.getPID)();
+                    s.Z.updateNotificationStatus(t);
+                    let c = o.default.isOverlayOOPEnabledForPid(l);
+                    c ? s.Z.setInputLocked(!1, l) : s.Z.setInstanceLocked(!1);
                     let u = c ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
@@ -140,7 +140,7 @@ function y(e) {
                             (0, i.jsx)(
                                 e,
                                 g(f({}, t), {
-                                    sourcePID: s,
+                                    sourcePID: l,
                                     selectSource: !1,
                                     selectGuild: !0,
                                     analyticsLocation: d.Sbl.OVERLAY_NUDGE,

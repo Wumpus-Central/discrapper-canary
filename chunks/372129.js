@@ -121,7 +121,7 @@ let h = (e) => {
             I = async (e) => {
                 null == g || g(!0), await p(e, l), O(!0), null == g || g(!1);
             },
-            S = async (e) => {
+            T = async (e) => {
                 var t, i, o;
                 if (
                     (e.stopPropagation(),
@@ -132,13 +132,13 @@ let h = (e) => {
                     return;
                 let s = e.currentTarget.files;
                 b.current = await (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e("16169").then(n.bind(n, 935333));
+                    let { default: e } = await n.e("43878").then(n.bind(n, 935333));
                     return (t) => (0, r.jsx)(e, d({ processFiles: () => I(s) }, t));
                 });
             };
         return (0, r.jsx)(o.Z, {
             ref: t,
-            onChange: S,
+            onChange: T,
             filters: null != m ? m : (0, s.Zj)(),
             multiple: c,
             disabled: u,

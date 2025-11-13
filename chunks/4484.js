@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(732659),
     R = n(86724),
     P = n(847302),
-    w = n(657198),
-    D = n(321127),
+    D = n(657198),
+    w = n(321127),
     x = n(645174),
     L = n(120481),
     M = n(981631),
@@ -157,7 +157,7 @@ let k = i.forwardRef(function (e, t) {
             },
             [k.guild_id, k.id, eR],
         ),
-        ew = i.useCallback(() => {
+        eD = i.useCallback(() => {
             let e,
                 t = b.bN.getNodesOfType(eR, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
@@ -204,8 +204,8 @@ let k = i.forwardRef(function (e, t) {
                     e,
                 );
         }, [k.id, eR, ee, eP, ea]);
-    (0, S.Z)(t, eR, k, ew), (0, N.Z)(eR, eO, K);
-    let { handleKeyDown: eD, handleKeyUp: ex } = (0, A.Z)({
+    (0, S.Z)(t, eR, k, eD), (0, N.Z)(eR, eO, K);
+    let { handleKeyDown: ew, handleKeyUp: ex } = (0, A.Z)({
             editor: eR,
             channel: k,
             disableEnterToSubmit: el,
@@ -214,7 +214,7 @@ let k = i.forwardRef(function (e, t) {
             onTab: J,
             onEnter: $,
             allowNewLines: ec,
-            submit: ew,
+            submit: eD,
             hideAutocomplete: en,
             moveSelection: er,
         }),
@@ -258,12 +258,12 @@ let k = i.forwardRef(function (e, t) {
         ),
         eG = i.useCallback(
             (e) => {
-                let t = (0, w.Z)(eR, e, k.id);
+                let t = (0, D.Z)(eR, e, k.id);
                 return null == t && (t = (0, x.Z)(eR, e)), null == t && (t = (0, L.Z)(eR, e)), t;
             },
             [k.id, eR],
         ),
-        eB = i.useCallback((e) => (0, D.Z)(e), []);
+        eB = i.useCallback((e) => (0, w.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.d9, {
@@ -289,7 +289,7 @@ let k = i.forwardRef(function (e, t) {
                     onBlur: q,
                     onClick: ej,
                     onPaste: eL,
-                    onKeyDown: eD,
+                    onKeyDown: ew,
                     onKeyUp: ex,
                     decorate: eU,
                     renderExtraElement: eG,

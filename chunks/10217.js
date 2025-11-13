@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685), n(539854);
+n.d(t, { Z: () => T }), n(388685), n(539854);
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -13,8 +13,8 @@ var l = n(951288),
     f = n(100527),
     y = n(906732),
     b = n(812206),
-    v = n(70097),
-    h = n(592125),
+    h = n(70097),
+    v = n(592125),
     g = n(430824),
     j = n(594174),
     O = n(962399),
@@ -31,48 +31,48 @@ var l = n(951288),
     Z = n(542055),
     D = n(981631),
     L = n(388032),
-    T = n(134351);
-let H = function (e) {
+    H = n(134351);
+let T = function (e) {
     var t, i, s, c, b;
-    let { clip: v, actionsDisabled: O, isNew: S, onClick: E } = e,
-        N = (0, u.Wu)([j.default], () => v.users.map((e) => j.default.getUser(e)).filter(w.lm)),
-        M = (0, u.e7)([h.Z], () => (null != v.channelId ? h.Z.getChannel(v.channelId) : null)),
-        H = (0, u.e7)([g.Z], () => (null != v.guildId ? g.Z.getGuild(v.guildId) : null)),
+    let { clip: h, actionsDisabled: O, isNew: S, onClick: E } = e,
+        N = (0, u.Wu)([j.default], () => h.users.map((e) => j.default.getUser(e)).filter(w.lm)),
+        M = (0, u.e7)([v.Z], () => (null != h.channelId ? v.Z.getChannel(h.channelId) : null)),
+        T = (0, u.e7)([g.Z], () => (null != h.guildId ? g.Z.getGuild(h.guildId) : null)),
         { analyticsLocations: V } = (0, y.ZP)(f.Z.CLIPS_GALLERY_ITEM),
         { selectedClipIds: U, toggleClipSelection: z, isMultiSelectMode: B } = r.useContext(Z.U),
         [G, F] = r.useState(!1),
         Y = r.useRef(null),
-        K = (0, o.Z)(null != (b = null == (t = v.editMetadata) ? void 0 : t.start) ? b : 0),
-        q = U.has(v.id),
-        X = v.type === I.NJ.SCREENSHOT,
+        K = (0, o.Z)(null != (b = null == (t = h.editMetadata) ? void 0 : t.start) ? b : 0),
+        q = U.has(h.id),
+        X = h.type === I.NJ.SCREENSHOT,
         W =
-            "" === v.applicationName && (null == M ? void 0 : M.name) != null && "" !== M.name
+            "" === h.applicationName && (null == M ? void 0 : M.name) != null && "" !== M.name
                 ? M.name
-                : v.applicationName,
-        J = (0, C.Xf)(new Date(P.default.extractTimestamp(v.id))),
+                : h.applicationName,
+        J = (0, C.Xf)(new Date(P.default.extractTimestamp(h.id))),
         Q = r.useMemo(() => {
             let e = [];
-            if (v.type === I.NJ.VOICE_CLIP)
-                (null == H ? void 0 : H.name) != null && e.push(H.name),
+            if (h.type === I.NJ.VOICE_CLIP)
+                (null == T ? void 0 : T.name) != null && e.push(T.name),
                     (null == M ? void 0 : M.name) != null && e.push(M.name);
             else {
                 var t, n;
                 "" !== W && null != W && e.push(W),
-                    (null == (t = v.activity) ? void 0 : t.state) != null &&
-                        "" !== v.activity.state &&
-                        e.push(v.activity.state),
-                    (null == (n = v.activity) ? void 0 : n.details) != null &&
-                        "" !== v.activity.details &&
-                        e.push(v.activity.details);
+                    (null == (t = h.activity) ? void 0 : t.state) != null &&
+                        "" !== h.activity.state &&
+                        e.push(h.activity.state),
+                    (null == (n = h.activity) ? void 0 : n.details) != null &&
+                        "" !== h.activity.details &&
+                        e.push(h.activity.details);
             }
             return e.join(" \u203A ");
         }, [
             W,
-            null == H ? void 0 : H.name,
+            null == T ? void 0 : T.name,
             null == M ? void 0 : M.name,
-            null == (i = v.activity) ? void 0 : i.state,
-            null == (s = v.activity) ? void 0 : s.details,
-            v.type,
+            null == (i = h.activity) ? void 0 : i.state,
+            null == (s = h.activity) ? void 0 : s.details,
+            h.type,
         ]),
         $ = r.useCallback(() => {
             let e = Y.current;
@@ -89,8 +89,8 @@ let H = function (e) {
             if (!0 === X) return;
             let n = Y.current;
             null != n &&
-                (n.pause(), (n.currentTime = null != (t = null == (e = v.editMetadata) ? void 0 : e.start) ? t : 0));
-        }, [X, null == (c = v.editMetadata) ? void 0 : c.start]),
+                (n.pause(), (n.currentTime = null != (t = null == (e = h.editMetadata) ? void 0 : e.start) ? t : 0));
+        }, [X, null == (c = h.editMetadata) ? void 0 : c.start]),
         en = r.useCallback(
             (e) => {
                 var t, n;
@@ -106,7 +106,7 @@ let H = function (e) {
             (e) => {
                 var t;
                 F(!0), null == (t = Y.current) || t.pause();
-                let r = B && U.size > 0 ? k.Z.getClips().filter((e) => U.has(e.id)) : [v];
+                let r = B && U.size > 0 ? k.Z.getClips().filter((e) => U.has(e.id)) : [h];
                 (0, m.jW)(
                     e,
                     async () => {
@@ -175,7 +175,7 @@ let H = function (e) {
                     { onClose: el },
                 );
             },
-            [v, B, U, O, $, el],
+            [h, B, U, O, $, el],
         ),
         ei = r.useCallback(
             (e) => {
@@ -186,10 +186,10 @@ let H = function (e) {
         ea = r.useCallback(
             (e) => {
                 O ||
-                    (e.shiftKey ? (e.preventDefault(), z(v.id)) : B ? z(v.id) : null != E && E(v),
+                    (e.shiftKey ? (e.preventDefault(), z(h.id)) : B ? z(h.id) : null != E && E(h),
                     x.default.track(D.rMx.CLIP_GALLERY_CARD_CLICKED));
             },
-            [O, B, z, v, E],
+            [O, B, z, h, E],
         );
     return (0, l.jsx)(y.Gt, {
         value: V,
@@ -198,10 +198,10 @@ let H = function (e) {
             "aria-label": L.intl.string(!0 === X ? L.t["HO/oXl"] : L.t.bt75uw),
             onClick: O ? void 0 : ea,
             onContextMenu: ei,
-            className: a()(T.clipItem, {
-                [T.disabled]: O,
-                [T.focused]: G,
-                [T.selected]: q,
+            className: a()(H.clipItem, {
+                [H.disabled]: O,
+                [H.focused]: G,
+                [H.selected]: q,
             }),
             onBlur: en,
             onFocus: ee,
@@ -209,28 +209,28 @@ let H = function (e) {
             onMouseLeave: et,
             children: [
                 (0, l.jsx)(A, {
-                    clip: v,
+                    clip: h,
                     isNew: S,
                     videoRef: Y,
                     onOpenContextMenu: er,
                     actionsDisabled: O,
                 }),
                 (0, l.jsxs)("div", {
-                    className: T.clipMetadata,
+                    className: H.clipMetadata,
                     children: [
-                        (0, l.jsx)(_, { clip: v }),
+                        (0, l.jsx)(_, { clip: h }),
                         (0, l.jsxs)("div", {
-                            className: T.clipTextInfo,
+                            className: H.clipTextInfo,
                             children: [
-                                (0, l.jsx)(R, { clip: v }),
+                                (0, l.jsx)(R, { clip: h }),
                                 (0, l.jsx)(p.Text, {
-                                    className: T.clipSubtitle,
+                                    className: H.clipSubtitle,
                                     color: "text-secondary",
                                     variant: "text-sm/medium",
                                     children: Q,
                                 }),
                                 (0, l.jsx)(p.Text, {
-                                    className: T.clipSubtitle,
+                                    className: H.clipSubtitle,
                                     color: "text-secondary",
                                     variant: "text-sm/normal",
                                     children: J,
@@ -238,7 +238,7 @@ let H = function (e) {
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: T.clipAvatars,
+                            className: H.clipAvatars,
                             children: (0, l.jsx)(d.Z, {
                                 maxUsers: 3,
                                 users: N,
@@ -335,19 +335,19 @@ function A(e) {
             },
             [t],
         ),
-        v = r.useCallback(
+        h = r.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), s || a(e);
             },
             [s, a],
         );
     return (0, l.jsxs)("div", {
-        className: T.clipThumbContainer,
+        className: H.clipThumbContainer,
         children: [
-            (0, l.jsx)("div", { className: T.clipThumbOverlay }),
+            (0, l.jsx)("div", { className: H.clipThumbOverlay }),
             !s &&
                 (0, l.jsxs)("div", {
-                    className: T.clipHoverButtons,
+                    className: H.clipHoverButtons,
                     children: [
                         (0, l.jsx)(p.hU, {
                             onClick: b,
@@ -357,7 +357,7 @@ function A(e) {
                             size: "sm",
                         }),
                         (0, l.jsx)(p.hU, {
-                            onClick: v,
+                            onClick: h,
                             icon: p.Huf,
                             "aria-label": L.intl.string(L.t["UKOtz+"]),
                             variant: "overlay-secondary",
@@ -372,15 +372,15 @@ function A(e) {
             !o &&
                 d > 0 &&
                 (0, l.jsx)("div", {
-                    className: T.clipProgressBar,
+                    className: H.clipProgressBar,
                     children: (0, l.jsx)("div", {
-                        className: T.clipProgressFill,
+                        className: H.clipProgressFill,
                         style: { width: "".concat(d, "%") },
                     }),
                 }),
             "auto" === t.clipMethod &&
                 (0, l.jsxs)("div", {
-                    className: T.clipTemporaryBadge,
+                    className: H.clipTemporaryBadge,
                     children: [
                         t.isTemporary &&
                             (0, l.jsx)(p.T39, {
@@ -396,7 +396,7 @@ function A(e) {
                 }),
             (n || !o) &&
                 (0, l.jsxs)("div", {
-                    className: T.clipBadge,
+                    className: H.clipBadge,
                     children: [
                         !u && n && (0, l.jsx)(p.IGR, { text: L.intl.string(L.t.y2b7CA) }),
                         !o &&
@@ -428,7 +428,7 @@ function R(e) {
         n = (0, M.q)(t),
         r = "" !== n;
     return (0, l.jsx)(p.Text, {
-        className: T.clipTitle,
+        className: H.clipTitle,
         variant: "text-md/normal",
         color: r ? "text-secondary" : "text-default",
         children: r ? n : t.name,
@@ -439,31 +439,31 @@ function V(e) {
         r = (0, N.l)(t),
         i = t.type === I.NJ.SCREENSHOT;
     return t.type === I.NJ.VOICE_CLIP
-        ? (0, l.jsx)(E.Z, { className: T.clipThumb })
+        ? (0, l.jsx)(E.Z, { className: H.clipThumb })
         : i
           ? (0, l.jsx)("img", {
                 alt: "",
                 src: t.thumbnail,
-                className: T.clipThumb,
+                className: H.clipThumb,
             })
           : null != r
-            ? (0, l.jsx)(v.Z, {
+            ? (0, l.jsx)(h.Z, {
                   preload: "metadata",
                   poster: t.thumbnail,
                   muted: !0,
                   src: r,
                   loop: !0,
-                  className: T.clipThumb,
+                  className: H.clipThumb,
                   ref: n,
               })
             : "" !== t.thumbnail
               ? (0, l.jsx)("img", {
                     alt: "",
                     src: t.thumbnail,
-                    className: T.clipThumb,
+                    className: H.clipThumb,
                 })
               : (0, l.jsx)("div", {
-                    className: a()(T.clipThumb, T.clipThumbEmpty),
+                    className: a()(H.clipThumb, H.clipThumbEmpty),
                     children: (0, l.jsx)(p.Roe, {
                         size: "custom",
                         width: 64,
@@ -476,14 +476,14 @@ function _(e) {
         n = (0, u.e7)([b.Z], () => (null != t.applicationId ? b.Z.getApplication(t.applicationId) : null)),
         r = null == n ? void 0 : n.getIconURL(32);
     return (0, l.jsx)("div", {
-        className: T.clipIcon,
+        className: H.clipIcon,
         "aria-hidden": "true",
         children:
             null != r
                 ? (0, l.jsx)("img", {
                       src: r,
                       alt: "",
-                      className: T.clipIconImage,
+                      className: H.clipIconImage,
                   })
                 : t.type === I.NJ.VOICE_CLIP
                   ? (0, l.jsx)(p.gj8, {

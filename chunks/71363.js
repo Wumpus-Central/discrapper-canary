@@ -28,11 +28,11 @@ let A = (e) => {
         { isAllPerksVisible: a, setIsAllPerksVisible: A, previousComponent: C, enablePremiumBrandRefresh: N } = e,
         R = i.useRef(null),
         P = i.useRef(null),
-        w = Object.entries((0, b.Z)()).reduce((e, t) => {
+        D = Object.entries((0, b.Z)()).reduce((e, t) => {
             let [n, r] = t;
             return !1 !== r.canReveal && "upcomingDropUntimed" !== r.name && (e[n] = r), e;
         }, {}),
-        { analyticsLocations: D } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        { analyticsLocations: w } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, L] = i.useState(!1),
         M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         j = (0, O.mN)(),
@@ -59,7 +59,7 @@ let A = (e) => {
             color: "nitro-pink",
             className: o()(T.container, T.responsiveContainer, { [T.hiddenGradient]: !N }),
             children: (0, r.jsxs)(f.Gt, {
-                value: D,
+                value: w,
                 children: [
                     N
                         ? (0, r.jsx)(g.Z, { onBackClick: G })
@@ -79,7 +79,7 @@ let A = (e) => {
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_FIRST_ROW,
                                     isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
@@ -97,7 +97,7 @@ let A = (e) => {
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_SECOND_ROW,
                                     isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
@@ -115,7 +115,7 @@ let A = (e) => {
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_THIRD_ROW,
                                     isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
@@ -132,7 +132,7 @@ let A = (e) => {
                         onChange: (e) => {
                             e &&
                                 !x &&
-                                (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
+                                (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: w }),
                                 L(!0));
                         },
                         children: (0, r.jsx)("div", {

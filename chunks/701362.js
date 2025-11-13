@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -186,7 +186,7 @@ class L extends i.PureComponent {
 }
 function M(e) {
     var { user: t, channel: n } = e,
-        a = D(e, ["user", "channel"]);
+        a = w(e, ["user", "channel"]);
     let [o, l] = (0, s.Wu)([b.Z, m.Z, g.Z, _.default], () => (0, O.p9)(n, b.Z, m.Z, g.Z, _.default)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
@@ -198,7 +198,7 @@ function M(e) {
         (0, u.$)(T, "StreamPreviewPopout"),
         (0, r.jsx)(
             L,
-            w(R({}, a), {
+            D(R({}, a), {
                 canWatch: o,
                 unavailableReason: l,
                 user: t,

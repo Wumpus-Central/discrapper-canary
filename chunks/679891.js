@@ -22,11 +22,11 @@ function p(e, t, n) {
     );
 }
 let f = new Set(),
-    m = new Set(),
-    h = null;
-function g() {
+    h = new Set(),
+    g = null;
+function m() {
     for (let e of f) i.Z.setDisableLocalVideo(e, u.ZUi.MANUAL_ENABLED, d.Yn.DEFAULT, !1);
-    m.clear(), f.clear();
+    h.clear(), f.clear();
 }
 class _ extends l.Z {
     _initialize() {
@@ -42,35 +42,35 @@ class _ extends l.Z {
             r.Z.unsubscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange),
             r.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
             s.Z.removeChangeListener(this.handlePopoutChange),
-            g(),
-            (h = null);
+            m(),
+            (g = null);
     }
     handleIncomingVideo(e) {
         let { userId: t, context: n, streamId: r } = e;
         if (n !== d.Yn.DEFAULT || null == r) return;
         let l = null != a.ZP.getVisibleGame(),
             p = c.Z.isVisible(),
-            h = s.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT),
-            g = o.Z.isLocalVideoDisabled(t, n),
-            _ = m.has(t);
-        !l || p || h || g || _ || (f.add(t), i.Z.setDisableLocalVideo(t, u.ZUi.DISABLED, n, !1));
+            g = s.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT),
+            m = o.Z.isLocalVideoDisabled(t, n),
+            _ = h.has(t);
+        !l || p || g || m || _ || (f.add(t), i.Z.setDisableLocalVideo(t, u.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let { userId: t, persist: n } = e;
-        n && (m.add(t), f.delete(t));
+        n && (h.add(t), f.delete(t));
     }
     constructor(...e) {
         super(...e),
             p(this, "handleWindowVisibilityChange", (e) => {
                 let { visible: t } = e;
-                t && g();
+                t && m();
             }),
             p(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t } = e;
-                t !== h && (g(), (h = t));
+                t !== g && (m(), (g = t));
             }),
             p(this, "handlePopoutChange", () => {
-                s.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT) && g();
+                s.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT) && m();
             });
     }
 }

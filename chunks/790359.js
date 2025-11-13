@@ -1,18 +1,18 @@
-n.d(t, { Z: () => l }), n(704826), n(35282);
+n.d(t, { Z: () => a }), n(704826), n(35282);
 var r = n(951288),
     i = n(481060),
-    s = n(203377);
-function l(e) {
-    let { value: t, onChange: n, error: l, disabled: a, autoFocus: c = !1 } = e;
+    l = n(203377);
+function a(e) {
+    let { value: t, onChange: n, error: a, disabled: s, autoFocus: o = !1 } = e;
     return (0, r.jsx)(i.oil, {
-        leading: "".concat(s.mf, "/"),
+        leading: "".concat(l.mf, "/"),
         value: t,
         onChange: (e) => {
             n(e.replace(/ /g, "-"));
         },
         maxLength: 25,
-        error: l,
-        disabled: a,
-        autoFocus: c,
+        error: a,
+        disabled: s,
+        autoFocus: o,
     });
 }

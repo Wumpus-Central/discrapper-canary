@@ -16,13 +16,13 @@ var r = n(951288),
     b = n(103576),
     x = n(130341),
     j = n(981975),
-    v = n(660962),
-    _ = n(442182),
-    C = n(322816),
-    O = n(266665),
+    _ = n(660962),
+    v = n(442182),
+    O = n(322816),
+    C = n(266665),
     y = n(203377),
-    E = n(981631),
-    N = n(760150);
+    N = n(981631),
+    E = n(760150);
 function I(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: I, setSelectedSection: S } = e,
@@ -58,7 +58,7 @@ function I(e) {
                 i = (0, x.UT)(I),
                 l = null != (t = null == (e = f.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             m.default.track(
-                E.rMx.ROLE_PAGE_VIEWED,
+                N.rMx.ROLE_PAGE_VIEWED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ function I(e) {
         return null;
     switch (I) {
         case y.ZI.DISPLAY:
-            t = (0, r.jsx)(v.ZP, {
+            t = (0, r.jsx)(_.ZP, {
                 guild: T,
                 role: P,
                 locked: R,
@@ -114,7 +114,7 @@ function I(e) {
             });
             break;
         case y.ZI.PERMISSIONS:
-            t = (0, r.jsx)(C.ZP, {
+            t = (0, r.jsx)(O.ZP, {
                 guild: T,
                 role: P,
                 locked: R,
@@ -132,7 +132,7 @@ function I(e) {
             });
             break;
         case y.ZI.MEMBERS:
-            t = (0, r.jsx)(_.ZP, {
+            t = (0, r.jsx)(v.ZP, {
                 guild: T,
                 role: P,
                 locked: R,
@@ -143,16 +143,16 @@ function I(e) {
             (0, p.vE)(I);
     }
     return (0, r.jsxs)("div", {
-        className: N.page,
+        className: E.page,
         children: [
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(C.Z, {
                 guild: T,
                 currentRoleId: n,
                 setCurrentRoleId: l,
                 setSelectedSection: S,
             }),
             (0, r.jsx)("div", {
-                className: N.contentContainer,
+                className: E.contentContainer,
                 ref: D,
                 children: (0, r.jsx)(o.JcV, {
                     containerRef: D,

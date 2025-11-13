@@ -17,28 +17,28 @@ function f(e) {
     let { embedId: t, className: n, style: a } = e,
         s = (0, l.e7)([c.Z], () => c.Z.getConnectedFrame()),
         f = ((0, l.e7)([c.Z], () => c.Z.getFrameLayoutMode()), null != s && u.U.FOCUSED, window),
-        m = i.useRef(null),
-        h = i.useCallback(() => {
-            null != m.current && p(t, m.current.getBoundingClientRect());
+        h = i.useRef(null),
+        g = i.useCallback(() => {
+            null != h.current && p(t, h.current.getBoundingClientRect());
         }, [t]);
     i.useLayoutEffect(() => {
-        h();
+        g();
     });
-    let g = i.useMemo(
+    let m = i.useMemo(
         () =>
             new ResizeObserver(() => {
-                h();
+                g();
             }),
-        [h],
+        [g],
     );
     return (
         i.useLayoutEffect(() => {
-            let e = m.current;
-            if (null != e) return g.observe(e), () => g.unobserve(e);
-        }, [g]),
+            let e = h.current;
+            if (null != e) return m.observe(e), () => m.unobserve(e);
+        }, [m]),
         i.useLayoutEffect(() => {
-            let e = () => h(),
-                t = () => h();
+            let e = () => g(),
+                t = () => g();
             return (
                 f.addEventListener("scroll", e, !0),
                 f.addEventListener("resize", t),
@@ -46,15 +46,15 @@ function f(e) {
                     f.removeEventListener("scroll", e, !0), f.removeEventListener("resize", t);
                 }
             );
-        }, [h, f]),
+        }, [g, f]),
         i.useLayoutEffect(
             () => (
-                o.S.subscribe(d.CkL.MANUAL_IFRAME_RESIZING, h),
+                o.S.subscribe(d.CkL.MANUAL_IFRAME_RESIZING, g),
                 () => {
-                    o.S.unsubscribe(d.CkL.MANUAL_IFRAME_RESIZING, h);
+                    o.S.unsubscribe(d.CkL.MANUAL_IFRAME_RESIZING, g);
                 }
             ),
-            [h],
+            [g],
         ),
         i.useLayoutEffect(
             () => () => {
@@ -63,7 +63,7 @@ function f(e) {
             [t],
         ),
         (0, r.jsx)("div", {
-            ref: m,
+            ref: h,
             className: n,
             style: a,
         })

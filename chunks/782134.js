@@ -8,11 +8,11 @@ var i = n(951288),
     o = n(269876),
     c = n(65154),
     E = n(388032);
-let d = (0, r.ON)(a.n.VOICE_INPUT_SENSITIVITY_SLIDER, {
+let S = (0, r.ON)(a.n.VOICE_INPUT_SENSITIVITY_SLIDER, {
         useSearchTerms: () => [E.intl.string(E.t["sqUm+k"]), E.intl.string(E.t.nuFtHH)],
         render: () => (0, i.jsx)(o.B, {}),
     }),
-    S = (0, r.qs)(a.n.VOICE_INPUT_AUTO_SENSITIVITY_SETTING, {
+    d = (0, r.qs)(a.n.VOICE_INPUT_AUTO_SENSITIVITY_SETTING, {
         useTitle: () => E.intl.string(E.t.I1Zuq0),
         useSearchTerms: () => [E.intl.string(E.t.I1Zuq0), E.intl.string(E.t.nuFtHH)],
         useValue: () =>
@@ -38,5 +38,5 @@ let d = (0, r.ON)(a.n.VOICE_INPUT_SENSITIVITY_SLIDER, {
                     e = s.Z.isInputProfileCustom();
                 return t === c.pM.VOICE_ACTIVITY && e;
             }),
-        buildLayout: () => [S, d],
+        buildLayout: () => [d, S],
     });

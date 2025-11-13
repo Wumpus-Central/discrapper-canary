@@ -51,18 +51,18 @@ let o = (e) => {
             "disabled",
             "placeholder",
         ]);
-    let [j, v] = i.useState(null != d ? d : ""),
-        _ = i.useCallback(() => {
+    let [j, _] = i.useState(null != d ? d : ""),
+        v = i.useCallback(() => {
             let e = j.trim();
             if (0 !== e.length) {
                 if (null != f && o.length >= f) {
                     null == m || m(s.intl.string(s.t.Xx7XeB));
                     return;
                 }
-                g(e), v("");
+                g(e), _("");
             }
         }, [j, f, g, m, o.length]),
-        C = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 switch (e.key) {
                     case a.vn.BACKSPACE:
@@ -73,10 +73,10 @@ let o = (e) => {
                     case a.vn.ENTER:
                     case a.vn.TAB:
                     case a.vn.COMMA:
-                        e.preventDefault(), e.stopPropagation(), _();
+                        e.preventDefault(), e.stopPropagation(), v();
                 }
             },
-            [_, j.length, u, o],
+            [v, j.length, u, o],
         );
     return (0, r.jsx)(
         l.oil,
@@ -118,11 +118,11 @@ let o = (e) => {
         (n = n =
             {
                 value: j,
-                onKeyDown: C,
-                onChange: v,
+                onKeyDown: O,
+                onChange: _,
                 maxLength: p,
                 disabled: h,
-                onBlur: _,
+                onBlur: v,
                 placeholder: b,
             }),
         Object.getOwnPropertyDescriptors

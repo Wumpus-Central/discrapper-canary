@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,10 +75,10 @@ let C = 50,
     N = 0.9,
     R = 0.1,
     P = 0;
-function w(e) {
+function D(e) {
     return (null != e ? e : v.Qx) / v.Qx;
 }
-function D(e) {
+function w(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
 class x extends _.Z {
@@ -260,8 +260,8 @@ class x extends _.Z {
                                         codecs: this.codecs,
                                     }),
                                     this.on(m.Sh.Stats, this.handleStats);
-                                let S = this.getUserOptions();
-                                for (let e of (S.forEach((e) => {
+                                let T = this.getUserOptions();
+                                for (let e of (T.forEach((e) => {
                                     var t, n;
                                     return this.logger.info(
                                         "Creating user: "
@@ -272,8 +272,8 @@ class x extends _.Z {
                                             ),
                                     );
                                 }),
-                                this.mergeUsers(S),
-                                this.emit(m.Sh.RemoteStreamsReady, S.length),
+                                this.mergeUsers(T),
+                                this.emit(m.Sh.RemoteStreamsReady, T.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                             });
@@ -414,7 +414,7 @@ class x extends _.Z {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: D(r),
+                    rtxSsrc: w(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e),
                 };
@@ -512,7 +512,7 @@ class x extends _.Z {
     }
     getLocalVolume(e) {
         let t = this.localVolumes[e];
-        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), w(t);
+        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), D(t);
     }
     setLocalVolume(e, t) {
         this.localVolumes[e] = t;
@@ -823,7 +823,7 @@ class x extends _.Z {
                     null,
                     this.audioSSRC,
                     this.videoStreamParameters[s].ssrc,
-                    D(this.videoStreamParameters[s].ssrc),
+                    w(this.videoStreamParameters[s].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -880,7 +880,7 @@ class x extends _.Z {
                 if (-1 === r) return void n(Error("Invalid rid"));
                 let i = [];
                 l()(this.videoStreamParameters[r], e[r]) ||
-                    ((this.videoStreamParameters[r] = S({}, e[r])), i.push(S({}, e[r]))),
+                    ((this.videoStreamParameters[r] = T({}, e[r])), i.push(T({}, e[r]))),
                     this.conn.setTransportOptions({ streamParameters: i });
             }
             t();
@@ -919,7 +919,7 @@ class x extends _.Z {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: D(t),
+                rtxSsrc: w(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e),
             };
@@ -1019,7 +1019,7 @@ class x extends _.Z {
             (n.params["hardware-h264"] = r),
                 c.push(n),
                 o.name === t &&
-                    ((u = A(S({}, n), { params: this.getCodecParams(o.name, !1) })),
+                    ((u = A(T({}, n), { params: this.getCodecParams(o.name, !1) })),
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(O.V8.LOW_LATENCY_RATE_CONTROL) &&
@@ -1040,7 +1040,7 @@ class x extends _.Z {
     }
     getConnectionTransportOptions() {
         let e = A(
-            S(
+            T(
                 {
                     selfMute: this.selfMute,
                     inputMode: v.GO[this.inputMode],
@@ -1265,7 +1265,7 @@ class x extends _.Z {
                               i.forEach((t, n) => {
                                   if (t.rid === e.rid) {
                                       let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
-                                      i[n] = A(S({}, t), {
+                                      i[n] = A(T({}, t), {
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
                                           active: r,
@@ -1274,7 +1274,7 @@ class x extends _.Z {
                               });
                           })
                         : t > 0
-                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = D(t)))
+                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = w(t)))
                           : (i[0].active = !1)
                     : t > 0 &&
                       (void 0 !== this.remoteVideoSSRCs[e]
@@ -1288,7 +1288,7 @@ class x extends _.Z {
                         null != n && "" !== n ? n : null,
                         e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e],
                         t,
-                        D(t),
+                        w(t),
                         this.videoStreamParameters,
                     );
             }),

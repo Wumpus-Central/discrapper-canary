@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(709054),
     y = n(915553),
     O = n(967249),
-    v = n(978967),
+    v = n(621844),
     I = n(388032);
 function T(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function C(e, t) {
 }
 function N(e) {
     let { currentUserId: t, message: T, application: A, channel: N, analyticsLocations: R, onView: P } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(A),
+        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: x } = (0, d.E)(A),
         L = g.ZP.getApplicationIconURL({
             id: A.id,
             icon: A.icon,
@@ -106,8 +106,8 @@ function N(e) {
         (0, r.jsx)(c.W, {
             header: I.intl.string(v.default.nAyuPp),
             title: A.name,
-            staticBannerSrc: w,
-            videoBannerSrc: D,
+            staticBannerSrc: D,
+            videoBannerSrc: w,
             bannerAspectRatio: x,
             iconSrc: null != L ? L : void 0,
             info: G,

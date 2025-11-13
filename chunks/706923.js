@@ -1,43 +1,43 @@
-t.d(n, { default: () => f }), t(388685);
-var s = t(951288);
-t(647438);
-var l = t(399606),
-    o = t(755721),
-    i = t(481060),
-    a = t(904245),
-    r = t(434404),
-    c = t(592125),
-    u = t(812545),
-    d = t(981631),
-    g = t(388032),
-    _ = t(625221);
+s.d(n, { default: () => f }), s(388685);
+var t = s(951288);
+s(647438);
+var l = s(399606),
+    i = s(755721),
+    o = s(481060),
+    a = s(904245),
+    r = s(434404),
+    c = s(592125),
+    u = s(812545),
+    d = s(981631),
+    g = s(388032),
+    _ = s(625221);
 function f(e) {
-    let { channelId: n, messageId: t, transitionState: f, onClose: S } = e,
+    let { channelId: n, messageId: s, transitionState: f, onClose: S } = e,
         h = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
         [C, F] = (0, u.Z)(n),
         m = null == h ? void 0 : h.guild_id;
-    return (0, s.jsx)(i.ConfirmModal, {
+    return (0, t.jsx)(o.ConfirmModal, {
         header: g.intl.string(g.t.aIz1oV),
         confirmText: g.intl.string(g.t["cY+Oob"]),
         cancelText: g.intl.string(g.t["ETE/oC"]),
-        confirmButtonColor: o.zx.Colors.BRAND,
-        onConfirm: () => a.Z.crosspostMessage(n, t),
+        confirmButtonColor: i.zx.Colors.BRAND,
+        onConfirm: () => a.Z.crosspostMessage(n, s),
         transitionState: f,
         onClose: S,
-        children: (0, s.jsx)(i.Text, {
+        children: (0, t.jsx)(o.Text, {
             variant: "text-md/normal",
             className: _.spacing,
             children: F
-                ? (0, s.jsx)(i.$jN, {})
+                ? (0, t.jsx)(o.$jN, {})
                 : null != C && null != C.guildsFollowing && C.guildsFollowing > 0
-                  ? (0, s.jsxs)(s.Fragment, {
+                  ? (0, t.jsxs)(t.Fragment, {
                         children: [
-                            (0, s.jsx)(i.Text, {
+                            (0, t.jsx)(o.Text, {
                                 className: _.spacing,
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.GCGrNP, { numGuildsFollowing: C.guildsFollowing }),
                             }),
-                            (0, s.jsx)(i.Text, {
+                            (0, t.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.IMhGZz, {
                                     onClick: () => {

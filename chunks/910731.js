@@ -5,9 +5,9 @@ var r = a(622916),
     o = a(578346);
 function i(t) {
     let e = "console";
-    (0, o.Hj)(e, t), (0, o.D2)(e, c);
+    (0, o.Hj)(e, t), (0, o.D2)(e, E);
 }
-function c() {
+function E() {
     "console" in n.n &&
         r.RU.forEach(function (t) {
             t in n.n.console &&

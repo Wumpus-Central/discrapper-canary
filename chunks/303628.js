@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(83120),
     I = n(154257);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -94,13 +94,13 @@ function R(e, t) {
     return i;
 }
 let P = [];
-function w(e) {
-    let { channelId: t, type: n, ignoreFile: a, smallAttachments: S = !1 } = e,
+function D(e) {
+    let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
-        w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+        D = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: D,
+            isApplicationCommand: w,
             commandOptions: x,
             commandOptionStates: L,
         } = (0, c.cj)([h.Z], () => {
@@ -152,7 +152,7 @@ function w(e) {
         handler: U,
     });
     let G = {
-            isApplicationCommand: D,
+            isApplicationCommand: w,
             previousUploadOptions: j,
             uploadOptions: M,
         },
@@ -173,8 +173,8 @@ function w(e) {
                     k(i);
             }
         }, [t, M.length, n]);
-    let Z = w.filter((e) => e.filename !== a);
-    return (!D && 0 === Z.length) || (D && 0 === M.length)
+    let Z = D.filter((e) => e.filename !== a);
+    return (!w && 0 === Z.length) || (w && 0 === M.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
@@ -184,9 +184,9 @@ function w(e) {
                           a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          C(T({ ref: i }, a), {
+                          C(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
-                              children: D
+                              children: w
                                   ? M.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
@@ -207,7 +207,7 @@ function w(e) {
                                                 upload: e,
                                                 keyboardModeEnabled: A,
                                                 clip: e.clip,
-                                                size: S ? E.q.SMALL : E.q.MEDIUM,
+                                                size: T ? E.q.SMALL : E.q.MEDIUM,
                                             },
                                             e.id,
                                         ),
@@ -218,10 +218,10 @@ function w(e) {
               }),
           });
 }
-function D(e) {
+function w(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(D, {
               channelId: t,
               type: n,
               ignoreFile: a,
@@ -229,4 +229,4 @@ function D(e) {
           })
         : null;
 }
-let x = i.memo(D);
+let x = i.memo(w);

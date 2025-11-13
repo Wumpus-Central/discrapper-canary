@@ -20,16 +20,16 @@ var r = n(98405),
     O = n(214027),
     v = n(179122),
     I = n(434431),
-    S = n(382698),
-    T = n(713411),
+    T = n(382698),
+    S = n(713411),
     A = n(530575),
     C = n(533610),
     N = n(800054),
     R = n(682564),
     P = n(338045),
-    w = n(751736),
-    D = n(992914),
-    x = w("iterator"),
+    D = n(751736),
+    w = n(992914),
+    x = D("iterator"),
     L = "URLSearchParams",
     M = L + "Iterator",
     j = m.set,
@@ -171,7 +171,7 @@ var r = n(98405),
             void 0 !== e &&
                 (I(e)
                     ? this.parseObject(e)
-                    : this.parseQuery("string" == typeof e ? ("?" === q(e, 0) ? en(e, 1) : e) : S(e)));
+                    : this.parseQuery("string" == typeof e ? ("?" === q(e, 0) ? en(e, 1) : e) : T(e)));
     };
 em.prototype = {
     type: L,
@@ -193,8 +193,8 @@ em.prototype = {
                 if ((o = s((a = (i = C(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
                     throw new H("Expected sequence with length 2");
                 Q(c, {
-                    key: S(o.value),
-                    value: S(l.value),
+                    key: T(o.value),
+                    value: T(l.value),
                 });
             }
         else
@@ -202,7 +202,7 @@ em.prototype = {
                 b(e, d) &&
                     Q(c, {
                         key: d,
-                        value: S(e[d]),
+                        value: T(e[d]),
                     });
     },
     parseQuery: function (e) {
@@ -240,8 +240,8 @@ if (
                 var n = k(this);
                 P(arguments.length, 2),
                     Q(n.entries, {
-                        key: S(e),
-                        value: S(t),
+                        key: T(e),
+                        value: T(t),
                     }),
                     !c && this.length++,
                     n.updateURL();
@@ -251,9 +251,9 @@ if (
                     var t = k(this),
                         n = P(arguments.length, 1),
                         r = t.entries,
-                        i = S(e),
+                        i = T(e),
                         a = n < 2 ? void 0 : arguments[1],
-                        o = void 0 === a ? a : S(a),
+                        o = void 0 === a ? a : T(a),
                         s = 0;
                     s < r.length;
                 ) {
@@ -267,22 +267,22 @@ if (
             get: function (e) {
                 var t = k(this).entries;
                 P(arguments.length, 1);
-                for (var n = S(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
+                for (var n = T(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
                 var t = k(this).entries;
                 P(arguments.length, 1);
-                for (var n = S(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
+                for (var n = T(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
                 return r;
             },
             has: function (e) {
                 for (
                     var t = k(this).entries,
                         n = P(arguments.length, 1),
-                        r = S(e),
+                        r = T(e),
                         i = n < 2 ? void 0 : arguments[1],
-                        a = void 0 === i ? i : S(i),
+                        a = void 0 === i ? i : T(i),
                         o = 0;
                     o < t.length;
                 ) {
@@ -295,7 +295,7 @@ if (
                 var n,
                     r = k(this);
                 P(arguments.length, 1);
-                for (var i = r.entries, a = !1, o = S(e), s = S(t), l = 0; l < i.length; l++)
+                for (var i = r.entries, a = !1, o = T(e), s = T(t), l = 0; l < i.length; l++)
                     (n = i[l]).key === o && (a ? ee(i, l--, 1) : ((a = !0), (n.value = s)));
                 a ||
                     Q(i, {
@@ -307,7 +307,7 @@ if (
             },
             sort: function () {
                 var e = k(this);
-                D(e.entries, function (e, t) {
+                w(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
                     e.updateURL();
@@ -369,8 +369,8 @@ if (
                     return (
                         eb((t = e.headers ? new Z(e.headers) : new Z()), "content-type") ||
                             ey(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"),
-                        T(e, {
-                            body: A(0, S(n)),
+                        S(e, {
+                            body: A(0, T(n)),
                             headers: A(0, t),
                         })
                     );

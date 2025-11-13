@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(997841);
+n.d(t, { Z: () => m }), n(388685), n(997841);
 var r = n(544891),
     i = n(115130),
     l = n(287545),
@@ -10,10 +10,10 @@ var r = n(544891),
     d = n(914946),
     p = n(452426),
     f = n(561205),
-    m = n(186901),
-    h = n(981631);
-let g = {
-    [h.Etm.SEND_ANALYTICS_EVENT]: {
+    h = n(186901),
+    g = n(981631);
+let m = {
+    [g.Etm.SEND_ANALYTICS_EVENT]: {
         validation: (e) =>
             (0, p.Z)(e)
                 .required()
@@ -30,15 +30,15 @@ let g = {
             (0, d.bu)(n.transport), (0, d._f)(n.application);
             let s = n.application.id,
                 p = (0, f.Z)(),
-                m = null == p ? void 0 : p.getGuildId(),
-                g = a.Z.getApplication(s);
-            if (!(0, c.yE)(null != (t = null == g ? void 0 : g.flags) ? t : 0, h.udG.EMBEDDED_FIRST_PARTY))
-                throw new u.Z({ errorCode: h.lTL.INVALID_COMMAND }, "This application cannot access this API");
+                h = null == p ? void 0 : p.getGuildId(),
+                m = a.Z.getApplication(s);
+            if (!(0, c.yE)(null != (t = null == m ? void 0 : m.flags) ? t : 0, g.udG.EMBEDDED_FIRST_PARTY))
+                throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let _ = (0, l.U)(s),
                 b = {
                     activity_application_id: s,
                     activity_channel_type: null == p ? void 0 : p.type,
-                    activity_guild_id: m,
+                    activity_guild_id: h,
                     activity_user_session_id: null == _ ? void 0 : _.activityUserSessionId,
                 };
             o.default.track(
@@ -71,15 +71,15 @@ let g = {
             );
         },
     },
-    [h.Etm.GET_APPLICATION_TICKET]: {
-        scope: m.lH,
+    [g.Etm.GET_APPLICATION_TICKET]: {
+        scope: h.lH,
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;
-            if (null == n) throw new u.Z({ errorCode: h.lTL.INVALID_COMMAND }, "No application.");
+            if (null == n) throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, "No application.");
             return r.tn
                 .post({
-                    url: h.ANM.APPLICATION_TICKET(n),
+                    url: g.ANM.APPLICATION_TICKET(n),
                     body: { test_mode: s.Z.inTestModeForApplication(n) || i.Z.inDevModeForApplication(n) },
                     retries: 3,
                     oldFormErrors: !0,

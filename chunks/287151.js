@@ -34,8 +34,8 @@ var r,
     N = n(33154),
     R = n(692147),
     P = n(767714),
-    w = n(659215),
-    D = n(222677),
+    D = n(659215),
+    w = n(222677),
     x = n(995774),
     L = n(6839),
     M = n(695346),
@@ -183,8 +183,8 @@ class em extends (r = a.PureComponent) {
                 emojiSize: S,
             } = this.props,
             { shouldShowTooltip: A, tooltipTextAria: C, reactionRef: N, tooltipPositionKey: P } = this.state,
-            w = y ? er : en,
-            D = {
+            D = y ? er : en,
+            w = {
                 transform: [{ scale: this.scale }],
                 opacity: this.opacity,
             },
@@ -193,7 +193,7 @@ class em extends (r = a.PureComponent) {
             var M;
             let { accentColor: n, backgroundColor: r, opacity: i } = a,
                 o = null != (M = (0, f.wK)(null != r ? r : "", i)) ? M : "";
-            this.isMe() && (D.borderColor = r), (D.background = o), (e = n), (t = n);
+            this.isMe() && (w.borderColor = r), (w.background = o), (e = n), (t = n);
         }
         let j = null == N ? void 0 : N.getBoundingClientRect(),
             k = null != T && null != j,
@@ -213,12 +213,12 @@ class em extends (r = a.PureComponent) {
                     onMouseLeave: this.handleLeave,
                     ref: this.handleSetReactionRef,
                     children: (0, i.jsx)(d.Z.div, {
-                        className: s()(w.reaction, b, {
-                            [w.reactionMe]: this.isMe(),
-                            [w.reactionReadOnly]: u && !_ && !g && !p,
-                            [w.shakeReaction]: I && null == T,
+                        className: s()(D.reaction, b, {
+                            [D.reactionMe]: this.isMe(),
+                            [D.reactionReadOnly]: u && !_ && !g && !p,
+                            [D.shakeReaction]: I && null == T,
                         }),
-                        style: D,
+                        style: w,
                         children: (0, i.jsx)(h.yRy, {
                             targetElementRef: this.upsellPopoutTargetRef,
                             renderPopout: this.renderLurkerModeUpsellPopout,
@@ -228,14 +228,14 @@ class em extends (r = a.PureComponent) {
                                     h.P3F,
                                     el(eo({}, n), {
                                         innerRef: this.upsellPopoutTargetRef,
-                                        className: w.reactionInner,
+                                        className: D.reactionInner,
                                         onClick: this.handleClick,
                                         "aria-disabled": u,
                                         "aria-label": (0, x.iD)(this.isMe(), L, c, o),
                                         "aria-pressed": this.isMe(),
                                         children: [
                                             (0, i.jsx)("div", {
-                                                className: s()({ [w.burstGlow]: o }),
+                                                className: s()({ [D.burstGlow]: o }),
                                                 style: { boxShadow: "0 0 16px ".concat(t) },
                                             }),
                                             (0, i.jsxs)("div", {
@@ -264,7 +264,7 @@ class em extends (r = a.PureComponent) {
                                                           })
                                                         : null,
                                                     (0, i.jsx)(m.Z, {
-                                                        className: s()({ [w.hideEmoji]: I }),
+                                                        className: s()({ [D.hideEmoji]: I }),
                                                         emojiId: c.id,
                                                         emojiName: c.name,
                                                         size: S,
@@ -275,7 +275,7 @@ class em extends (r = a.PureComponent) {
                                             l
                                                 ? null
                                                 : (0, i.jsx)(E.Z, {
-                                                      className: w.reactionCount,
+                                                      className: D.reactionCount,
                                                       value: L,
                                                       color: e,
                                                       digitWidth: ec,
@@ -337,9 +337,9 @@ class em extends (r = a.PureComponent) {
                     return;
                 }
                 let f = t.getChannelId(),
-                    _ = l ? D.TW.FORUM_TOOLBAR : D.TW.MESSAGE_INLINE_BUTTON;
+                    _ = l ? w.TW.FORUM_TOOLBAR : w.TW.MESSAGE_INLINE_BUTTON;
                 if (i && !this.userCanBurstReact())
-                    return void (0, w.m)({
+                    return void (0, D.m)({
                         analytics: {
                             type: $.cd.BURST_REACTION_UPSELL,
                             page:
@@ -352,14 +352,14 @@ class em extends (r = a.PureComponent) {
                     ? this.handleShowVerificationGate()
                     : r ||
                       (this.isMe()
-                          ? (0, D.WO)({
+                          ? (0, w.WO)({
                                 channelId: f,
                                 messageId: t.id,
                                 emoji: n,
                                 location: _,
                                 options: { burst: i },
                             })
-                          : (0, D.rU)(f, t.id, n, _, { burst: i }));
+                          : (0, w.rU)(f, t.id, n, _, { burst: i }));
             }),
             ea(this, "handleEnter", (e) => {
                 let {
@@ -375,7 +375,7 @@ class em extends (r = a.PureComponent) {
                     !this.isReactionEventActive &&
                     !i &&
                     a &&
-                    (0, D.T6)({
+                    (0, w.T6)({
                         channelId: n.getChannelId(),
                         messageId: n.id,
                         emoji: t,
@@ -737,11 +737,11 @@ let eg = a.memo((e) => {
             N = null != (t = null == u ? void 0 : u.isDiscoverable()) && t,
             R = G.Z.getGuildId(),
             P = null != R && (R === (null == u ? void 0 : u.id) || R === (null == c ? void 0 : c.id)),
-            w = B.default.getCurrentUser(),
-            D = (0, W.a)({
+            D = B.default.getCurrentUser(),
+            w = (0, W.a)({
                 sourceType: m,
                 expressionSourceApplication: null != f ? f : null,
-                isPremium: V.ZP.isPremium(w),
+                isPremium: V.ZP.isPremium(D),
                 hasJoinedEmojiSourceGuild: C,
                 isDiscoverable: N,
                 emojiComesFromCurrentGuild: P,
@@ -802,12 +802,12 @@ let eg = a.memo((e) => {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)("div", { className: et.reactionEmojiDetailsDivider }),
-                        null != D.emojiDescription &&
-                            D.type !== W.$.UNAVAILABLE &&
+                        null != w.emojiDescription &&
+                            w.type !== W.$.UNAVAILABLE &&
                             (0, i.jsx)(h.Text, {
                                 variant: "text-sm/normal",
-                                "aria-label": D.type,
-                                children: D.emojiDescription,
+                                "aria-label": w.type,
+                                children: w.emojiDescription,
                             }),
                     ],
                 });
@@ -822,7 +822,7 @@ let eg = a.memo((e) => {
                           expressionSourceGuild: u,
                           hasJoinedExpressionSourceGuild: C,
                           onClose: o,
-                          popoutData: D,
+                          popoutData: w,
                           currentGuildId: R,
                           nonce: l,
                       }),

@@ -31,8 +31,8 @@ var r = n(951288),
     O = n(569984),
     v = n(882198),
     I = n(5881),
-    S = n(981631);
-function T(e, t, n) {
+    T = n(981631);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -65,8 +65,8 @@ let C = 100,
     N = 60,
     R = 1,
     P = 0.5,
-    w = new Set();
-function D(e, t) {
+    D = new Set();
+function w(e, t) {
     return "".concat(e, "_").concat(t);
 }
 class x {
@@ -164,22 +164,22 @@ class x {
         sourceQuestContent: f,
     }) {
         var p = this;
-        T(this, "id", void 0),
-            T(this, "quests", void 0),
-            T(this, "questContent", void 0),
-            T(this, "triggeredByStatusChange", void 0),
-            T(this, "trackGuildAndChannelMetadata", void 0),
-            T(this, "questContentPosition", void 0),
-            T(this, "questContentRowIndex", void 0),
-            T(this, "sourceQuestContent", void 0),
-            T(this, "heartbeatTimeoutId", void 0),
-            T(this, "lastBeatTime", void 0),
-            T(this, "minViewTimeReachedTimeoutId", void 0),
-            T(this, "minViewTimeSeconds", void 0),
-            T(this, "minViewportPercentage", void 0),
-            T(this, "isQuestEnrollmentBlocked", void 0),
-            T(this, "isRunning", !1),
-            T(this, "onMinViewTimeReached", () => {
+        S(this, "id", void 0),
+            S(this, "quests", void 0),
+            S(this, "questContent", void 0),
+            S(this, "triggeredByStatusChange", void 0),
+            S(this, "trackGuildAndChannelMetadata", void 0),
+            S(this, "questContentPosition", void 0),
+            S(this, "questContentRowIndex", void 0),
+            S(this, "sourceQuestContent", void 0),
+            S(this, "heartbeatTimeoutId", void 0),
+            S(this, "lastBeatTime", void 0),
+            S(this, "minViewTimeReachedTimeoutId", void 0),
+            S(this, "minViewTimeSeconds", void 0),
+            S(this, "minViewportPercentage", void 0),
+            S(this, "isQuestEnrollmentBlocked", void 0),
+            S(this, "isRunning", !1),
+            S(this, "onMinViewTimeReached", () => {
                 this.quests.forEach((e) => {
                     (0, I.T)().info(
                         ""
@@ -191,14 +191,14 @@ class x {
                     let t = !1,
                         n = (0, y.Zp)(this.questContent);
                     if (null != n) {
-                        let r = D(e.id, n);
-                        (t = !w.has(r) && (0, y.VB)(this.questContent)) && w.add(r);
+                        let r = w(e.id, n);
+                        (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
-                            event: S.rMx.QUEST_CONTENT_VIEWED,
+                            event: T.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                             properties: A(
                                 {
@@ -219,7 +219,7 @@ class x {
                     });
                 });
             }),
-            T(this, "beat", function () {
+            S(this, "beat", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 p.quests.forEach((t) => {
                     if (null != p.lastBeatTime) {
@@ -233,7 +233,7 @@ class x {
                         ),
                             (0, b.dA)({
                                 questId: t.id,
-                                event: S.rMx.QUEST_CONTENT_VIEW_TIME,
+                                event: T.rMx.QUEST_CONTENT_VIEW_TIME,
                                 properties: A(
                                     {
                                         is_termination_beat: e,
@@ -249,7 +249,7 @@ class x {
                 }),
                     (p.lastBeatTime = Date.now());
             }),
-            T(this, "commonProperties", (e) =>
+            S(this, "commonProperties", (e) =>
                 A(
                     {
                         impression_id: this.id,
@@ -259,7 +259,7 @@ class x {
                     (0, b.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex),
                 ),
             ),
-            T(this, "clone", (e) => {
+            S(this, "clone", (e) => {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
@@ -275,7 +275,7 @@ class x {
                     })
                 );
             }),
-            T(this, "start", () => {
+            S(this, "start", () => {
                 this.stop(!1),
                     (this.lastBeatTime = Date.now()),
                     (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * N)),
@@ -293,7 +293,7 @@ class x {
                     ),
                         (0, b.dA)({
                             questId: t.id,
-                            event: S.rMx.QUEST_CONTENT_LOADED,
+                            event: T.rMx.QUEST_CONTENT_LOADED,
                             properties: A(
                                 {
                                     triggered_by_status_change: this.triggeredByStatusChange,
@@ -312,7 +312,7 @@ class x {
                         }),
                     (this.isRunning = !0);
             }),
-            T(this, "stop", function () {
+            S(this, "stop", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 e && p.beat(!0),
                     (p.lastBeatTime = void 0),

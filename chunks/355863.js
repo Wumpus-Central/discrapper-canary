@@ -438,9 +438,9 @@ function R(e) {
 }
 function P(e) {
     let { widgetId: t } = e;
-    return N(t, (e, t) => w(t, e.id));
+    return N(t, (e, t) => D(t, e.id));
 }
-function w(e, t) {
+function D(e, t) {
     let n = H(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
@@ -449,7 +449,7 @@ function w(e, t) {
     for (let e = 0; e < n.length; e++) F(n[e], e);
     return !0;
 }
-function D(e) {
+function w(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
         x(e, n);
@@ -830,7 +830,7 @@ let q = new z(d.Z, {
     LAYOUT_DELETE_WIDGET: U,
     LAYOUT_DELETE_ALL_WIDGETS: G,
     LAYOUT_CREATE_WIDGETS: B,
-    LAYOUT_SET_WIDGET_META: D,
+    LAYOUT_SET_WIDGET_META: w,
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: k,
     LAYOUT_SET_DEFAULT_CONFIG: Z,
 });

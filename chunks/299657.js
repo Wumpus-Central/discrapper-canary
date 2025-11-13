@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(246946),
     v = n(594174),
     I = n(853872),
-    S = n(78839),
-    T = n(626135),
+    T = n(78839),
+    S = n(626135),
     A = n(111361),
     C = n(357355),
     N = n(937579),
     R = n(283066),
     P = n(622909),
-    w = n(639119),
-    D = n(2359),
+    D = n(639119),
+    w = n(2359),
     x = n(132547),
     L = n(474936),
     M = n(981631),
@@ -38,11 +38,11 @@ let k = function (e) {
     (0, y.z)(b.X);
     let n = (0, m.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: k } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
-        U = (0, s.e7)([S.Z], () => S.Z.hasFetchedSubscriptions()),
+        U = (0, s.e7)([T.Z], () => T.Z.hasFetchedSubscriptions()),
         G = (0, s.e7)([I.Z], () => I.Z.hasFetchedPaymentSources),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         Z = null == B ? void 0 : B.id,
-        F = (0, w.N)(),
+        F = (0, D.N)(),
         V = (0, P.N)(),
         H = (0, g.V)(L.nS),
         [Y, W] = i.useState(!0),
@@ -63,7 +63,7 @@ let k = function (e) {
         }, []),
         i.useEffect(() => {
             Y ||
-                T.default.track(M.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                S.default.track(M.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: a,
                     load_duration_ms: K.current,
                 });
@@ -94,6 +94,6 @@ let k = function (e) {
           })
         : (0, r.jsxs)(h.Gt, {
               value: k,
-              children: [J && !q && (0, r.jsx)(_.Z, {}), (0, r.jsx)(D.Z, { entrypoint: t })],
+              children: [J && !q && (0, r.jsx)(_.Z, {}), (0, r.jsx)(w.Z, { entrypoint: t })],
           });
 };

@@ -31,15 +31,15 @@ var d = n(98278),
     O = n(497505),
     v = n(704161),
     I = n(200872),
-    S = n(977156),
-    T = n(323811),
+    T = n(977156),
+    S = n(323811),
     A = n(111131),
     C = n(725096),
     N = n(110560),
     R = n(669041),
     P = n(46140),
-    w = n(981631),
-    D = n(215023),
+    D = n(981631),
+    w = n(215023),
     x = n(388032);
 function L(e, t, n) {
     return (
@@ -227,18 +227,18 @@ function F(e) {
             sourceQuestContent: O,
         }),
         I = (0, b._s)({ quest: n }),
-        S = (0, b.Rf)(n),
+        T = (0, b.Rf)(n),
         C = i.useCallback(() => {
             (0, d.$)();
         }, []),
         R = i.useCallback(() => {
             (0, f.Y)({
-                pageType: w.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: w.jXE.QUEST_TILE_CTA,
-                ctaObject: w.qAy.CTA_TO_ORBS_SHOP,
+                pageType: D.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: D.jXE.QUEST_TILE_CTA,
+                ctaObject: D.qAy.CTA_TO_ORBS_SHOP,
             }),
                 (0, u.mK)({
-                    tab: D.AW.ORBS,
+                    tab: w.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: c.Z.QUEST_HOME_PAGE,
                 });
@@ -359,7 +359,7 @@ function F(e) {
                     };
                 if (p)
                     return {
-                        text: (0, E.F9)(S),
+                        text: (0, E.F9)(T),
                         tooltipText: x.intl.string(x.t.hsbwjv),
                         onClick: () =>
                             (0, N.openVideoQuestModal)({
@@ -395,7 +395,7 @@ function F(e) {
                     tooltipText: null,
                     onClick: v,
                 };
-                if ((0, T.i)("useCtaConfig"))
+                if ((0, S.i)("useCtaConfig"))
                     return {
                         tooltipText: null,
                         onClick: v,
@@ -417,7 +417,7 @@ function F(e) {
                     };
                 return k(M({}, i), { text: x.intl.string(x.t.bAGFz3) });
         }
-    }, [r, p, I, _, v, a, n, o, s, l, L, S, C, R, y, j, O, B, G]);
+    }, [r, p, I, _, v, a, n, o, s, l, L, T, C, R, y, j, O, B, G]);
 }
 function V() {
     let { enableNewRequestBehavior: e } = v.Z.useConfig({ location: "useQuestBarQuest" }),
@@ -437,7 +437,7 @@ function V() {
 function H(e) {
     var t;
     let { location: n, quest: r } = e,
-        i = (0, S.Z)({ location: n }),
+        i = (0, T.Z)({ location: n }),
         a = (0, b.tP)(r),
         s = (0, I.b)({ location: n }),
         { premiumSubscription: l, hasFetchedSubscriptions: c } = (0, o.cj)([p.Z], () => ({

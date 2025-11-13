@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(951288),
     i = n(647438),
-    l = n(544891),
-    r = n(755721),
+    r = n(544891),
+    l = n(755721),
     s = n(481060),
     o = n(317951),
     c = n(959546),
@@ -22,7 +22,7 @@ function p() {
             () => (
                 (async () => {
                     try {
-                        let e = (await l.tn.get(u)).body.entitlements.map((e) => c.Z.createFromServer(e));
+                        let e = (await r.tn.get(u)).body.entitlements.map((e) => c.Z.createFromServer(e));
                         n(e);
                     } catch (e) {
                         h("Failed to fetch entitlements");
@@ -49,13 +49,13 @@ function p() {
                                     variant: "text-lg/bold",
                                     children: "Create Entitlements",
                                 }),
-                                (0, a.jsx)(r.zx, {
+                                (0, a.jsx)(l.zx, {
                                     onClick:
                                         ((e = o.D1),
                                         async () => {
                                             g(!0);
                                             try {
-                                                let a = await l.tn.post({
+                                                let a = await r.tn.post({
                                                         url: u,
                                                         query: { sku_id: e },
                                                         rejectWithError: !0,
@@ -69,8 +69,8 @@ function p() {
                                             }
                                         }),
                                     className: d.button,
-                                    look: r.iL.OUTLINED,
-                                    color: r.Tt.PRIMARY,
+                                    look: l.iL.OUTLINED,
+                                    color: l.Tt.PRIMARY,
                                     children: "Create Confetti Entitlement",
                                 }),
                                 x && (0, a.jsx)(s.$jN, {}),

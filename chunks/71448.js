@@ -115,7 +115,7 @@ function I(e, t, n) {
     let r = e.current[t];
     return null == r || r.hasAttribute("disabled") || "true" === r.getAttribute("aria-disabled");
 }
-let S = () => ({
+let T = () => ({
     getShadowRoot: !0,
     displayCheck:
         "function" == typeof ResizeObserver && ResizeObserver.toString().includes("[native code]") ? "full" : "none",

@@ -68,7 +68,7 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function T(e) {
     let {
             channel: t,
             textVariant: n,
@@ -77,26 +77,26 @@ function S(e) {
             hideText: m = !1,
             hideTooltip: y = !1,
             canTruncate: v = !0,
-            showChannelName: S = !1,
+            showChannelName: T = !1,
         } = e,
-        T = (0, s.vjg)(s.Skl.ONLINE),
+        S = (0, s.vjg)(s.Skl.ONLINE),
         A = (0, u.ZP)(t),
         C = t.isDM() || t.isGroupDM(),
         { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
-        R = !N && S,
+        R = !N && T,
         { analyticsLocations: P } = (0, l.ZP)(),
-        w = i.useCallback(() => {
+        D = i.useCallback(() => {
             (0, p.A)({
                 analyticsLocations: P,
                 activityType: "VOICE",
                 voiceChannelId: t.id,
             });
         }, [P, t.id]),
-        D = () =>
+        w = () =>
             y || C
                 ? (0, r.jsx)(_.Z, {
                       size: "custom",
-                      color: T,
+                      color: S,
                       channel: t,
                       className: o()(b.icon, f),
                   })
@@ -105,13 +105,13 @@ function S(e) {
                       text: A,
                       "aria-label": (0, c.ZP)({ channel: t }),
                       delay: g.X,
-                      onTooltipShow: w,
+                      onTooltipShow: D,
                       children: (e) =>
                           (0, r.jsx)(
                               _.Z,
                               I(O({}, e), {
                                   size: "custom",
-                                  color: T,
+                                  color: S,
                                   channel: t,
                                   className: o()(b.icon, f),
                               }),
@@ -127,7 +127,7 @@ function S(e) {
                     : E.intl.string(E.t.msxteM);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            D(),
+            w(),
             !m &&
                 (0, r.jsxs)(h.Z, {
                     variant: n,
@@ -139,7 +139,7 @@ function S(e) {
         ],
     });
 }
-function T(e) {
+function S(e) {
     let {
             channel: t,
             textVariant: n,
@@ -163,7 +163,7 @@ function T(e) {
                     ? E.intl.string(E.t.QygGCN)
                     : E.intl.string(E.t.msxteM),
         I = null == g || O ? v : "".concat(v, " (").concat(g, ")"),
-        S = p ? I : v;
+        T = p ? I : v;
     return (0, r.jsx)(m.Z, {
         icon: (0, r.jsx)(_.Z, {
             size: "custom",
@@ -171,7 +171,7 @@ function T(e) {
             channel: t,
             className: o()(b.icon, a),
         }),
-        text: S,
+        text: T,
         tooltipText: c ? void 0 : I,
         textVariant: n,
         textClassName: i,
@@ -183,6 +183,6 @@ function T(e) {
 }
 function A(e) {
     return (0, f.b)({ location: "VoiceActivityStatusExperimentWrapper" })
-        ? (0, r.jsx)(T, O({}, e))
-        : (0, r.jsx)(S, O({}, e));
+        ? (0, r.jsx)(S, O({}, e))
+        : (0, r.jsx)(T, O({}, e));
 }

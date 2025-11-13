@@ -66,16 +66,16 @@ let R = (e) => {
 function P(e, t) {
     return R(t) - R(e);
 }
-let w = (e) => +!!(0, u.Z)(e);
-function D(e, t) {
-    return w(t) - w(e);
+let D = (e) => +!!(0, u.Z)(e);
+function w(e, t) {
+    return D(t) - D(e);
 }
 function x(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
 function L(e, t) {
-    return P(e, t) || D(e, t) || x(e, t);
+    return P(e, t) || w(e, t) || x(e, t);
 }
 function M(e) {
     if (0 === e.length) return e;

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: () => i,
-    a: () => o,
+    a: () => a,
 });
 var r,
     s = n(951288),
-    a = n(481060),
-    o =
+    o = n(481060),
+    a =
         (((r = {})[(r.UNENROLLED = 0)] = "UNENROLLED"),
         (r[(r.ENROLLED = 1)] = "ENROLLED"),
         (r[(r.COMPLETED_25 = 2)] = "COMPLETED_25"),
@@ -16,7 +16,7 @@ var r,
         r);
 let i = function (e) {
     let { onChange: t, value: n } = e;
-    return (0, s.jsx)(a.PhF, {
+    return (0, s.jsx)(o.PhF, {
         label: "User State",
         options: [
             {

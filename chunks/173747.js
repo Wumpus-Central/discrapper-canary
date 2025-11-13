@@ -39,12 +39,12 @@ let v = new Set(),
     N = 10 * E.Z.Millis.MINUTE,
     R = 6 * E.Z.Millis.HOUR,
     P = 10 * E.Z.Millis.MINUTE,
-    w = new s.V7();
-function D(e) {
-    w.start(e + Math.random() * N, c.o);
+    D = new s.V7();
+function w(e) {
+    D.start(e + Math.random() * N, c.o);
 }
 function x() {
-    return !_.bm.getSetting() && (D(R), L());
+    return !_.bm.getSetting() && (w(R), L());
 }
 function L() {
     if (!(0, y.Q)() || _.bm.getSetting()) return !1;
@@ -128,13 +128,13 @@ function V(e) {
         }
         C[t] = r;
     }
-    D(R);
+    w(R);
 }
 function H() {
-    D(P);
+    w(P);
 }
 function Y() {
-    w.stop();
+    D.stop();
 }
 function W(e) {
     let { entitlements: t } = e;

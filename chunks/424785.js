@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(359110),
     v = n(922482),
     j = n(431328),
-    C = n(501655),
-    x = n(427679),
+    x = n(501655),
+    C = n(427679),
     E = n(368442),
     S = n(201469),
     I = n(680089),
@@ -141,8 +141,8 @@ class Y extends L.ZP {
                 isFavoriteSuggestion: v,
             } = this.props,
             { shouldShowGuildVerificationPopout: j } = this.state,
-            C = this.getVoiceStatesCount(),
-            x = (0, r.jsxs)("li", {
+            x = this.getVoiceStatesCount(),
+            C = (0, r.jsxs)("li", {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
@@ -180,7 +180,7 @@ class Y extends L.ZP {
                                         channel: e,
                                         unread: _,
                                         mentionCount: O,
-                                        userCount: C,
+                                        userCount: x,
                                         isSubscriptionGated: m,
                                         needSubscriptionToAccess: b,
                                     }),
@@ -198,7 +198,7 @@ class Y extends L.ZP {
                     this.renderVoiceUsers(),
                 ],
             });
-        return h && (x = s(x)), p && (x = l(a(x))), x;
+        return h && (C = s(C)), p && (C = l(a(C))), C;
     }
     constructor(...e) {
         super(...e),
@@ -307,8 +307,8 @@ function X(e) {
         }),
         p = (0, a.e7)([I.Z], () => I.Z.isCollapsed(n.parent_id)),
         h = (0, S.ZP)(n.id),
-        f = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, j.Rk)(n.id, C.pV.AUDIENCE),
+        f = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
+        g = (0, j.Rk)(n.id, x.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: b } = (0, _.Z)(n.id),
         y = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         O = (0, E.xJ)(n.id),

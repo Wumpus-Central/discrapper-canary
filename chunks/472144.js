@@ -2,67 +2,67 @@ n.d(t, { Z: () => p });
 var r = n(951288),
     s = n(647438),
     o = n(120356),
-    l = n.n(o),
-    i = n(358458),
-    a = n(481060),
+    a = n.n(o),
+    i = n(509442),
+    l = n(481060),
     c = n(569379),
-    u = n(642145),
-    d = n(184128);
+    d = n(642145),
+    u = n(184128);
 let p = s.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: s,
             size: o = 42,
             strokeWidth: p = 3,
-            glowBlur: f = 0.4,
-            percentCompleteText: x,
-            percentCompleteTextVariant: g = "text-lg/medium",
-            children: j,
+            glowBlur: m = 0.4,
+            percentCompleteText: g,
+            percentCompleteTextVariant: f = "text-lg/medium",
+            children: h,
         } = e,
-        m = (0, c.E)(n, s > 0),
-        h = o / 2,
-        C = o / 2 - p / 2,
-        b = 2 * Math.PI * C,
-        y = b - s * b,
-        v = {
-            strokeDasharray: "".concat(b, " ").concat(b),
-            strokeDashoffset: y,
+        x = (0, c.E)(n, s > 0),
+        b = o / 2,
+        _ = o / 2 - p / 2,
+        j = 2 * Math.PI * _,
+        v = j - s * j,
+        C = {
+            strokeDasharray: "".concat(j, " ").concat(j),
+            strokeDashoffset: v,
         },
-        O = {
-            strokeDasharray: "".concat(b, " ").concat(b),
-            strokeDashoffset: -s * b,
+        y = {
+            strokeDasharray: "".concat(j, " ").concat(j),
+            strokeDashoffset: -s * j,
         },
-        k = { boxShadow: "0 0 30px 0px ".concat(m.glow) },
-        { progressTextAnimation: S } = (0, a.q_F)({
-            progressTextAnimation: +(null != x && 1 !== s),
-            config: u.Y,
+        E = { boxShadow: "0 0 30px 0px ".concat(x.glow) },
+        { progressTextAnimation: O } = (0, l.q_F)({
+            progressTextAnimation: +(null != g && 1 !== s),
+            config: d.Y,
         });
     return (0, r.jsxs)("div", {
-        className: d.outer,
+        className: u.outer,
         ref: t,
         children: [
             (0, r.jsxs)("div", {
-                className: d.inner,
-                style: k,
+                className: u.inner,
+                style: E,
                 children: [
-                    j,
+                    h,
                     (0, r.jsxs)(i.animated.div, {
-                        style: { opacity: S },
-                        className: l()(d.coverContent, d.progressTextWrapper),
+                        style: { opacity: O },
+                        className: a()(u.coverContent, u.progressTextWrapper),
                         children: [
-                            (0, r.jsx)("div", { className: l()(d.coverContent, d.progressTextOverlay) }),
-                            (0, r.jsx)(a.Text, {
-                                variant: g,
+                            (0, r.jsx)("div", { className: a()(u.coverContent, u.progressTextOverlay) }),
+                            (0, r.jsx)(l.Text, {
+                                variant: f,
                                 color: "text-primary",
-                                className: d.progressText,
-                                children: x,
+                                className: u.progressText,
+                                children: g,
                             }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsxs)("svg", {
-                className: d.progressBar,
+                className: u.progressBar,
                 height: o,
                 width: o,
                 children: [
@@ -73,7 +73,7 @@ let p = s.forwardRef((e, t) => {
                                 children: [
                                     (0, r.jsx)("feGaussianBlur", {
                                         result: "coloredBlur",
-                                        stdDeviation: f,
+                                        stdDeviation: m,
                                     }),
                                     (0, r.jsxs)("feMerge", {
                                         children: [
@@ -94,35 +94,35 @@ let p = s.forwardRef((e, t) => {
                                 children: [
                                     (0, r.jsx)("stop", {
                                         offset: "0%",
-                                        stopColor: m.backgroundTop,
+                                        stopColor: x.backgroundTop,
                                     }),
                                     (0, r.jsx)("stop", {
                                         offset: "100%",
-                                        stopColor: m.backgroundBottom,
+                                        stopColor: x.backgroundBottom,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                     (0, r.jsx)("circle", {
-                        className: d.progress,
+                        className: u.progress,
                         strokeWidth: p,
                         fill: "transparent",
-                        r: C,
-                        cx: h,
-                        cy: h,
+                        r: _,
+                        cx: b,
+                        cy: b,
                         stroke: "url(#linear)",
-                        style: O,
+                        style: y,
                     }),
                     (0, r.jsx)("circle", {
-                        className: d.progress,
+                        className: u.progress,
                         strokeWidth: p,
                         fill: "transparent",
-                        r: C,
-                        cx: h,
-                        cy: h,
-                        stroke: m.foreground,
-                        style: v,
+                        r: _,
+                        cx: b,
+                        cy: b,
+                        stroke: x.foreground,
+                        style: C,
                     }),
                 ],
             }),

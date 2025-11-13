@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(951288),
     i = n(647438),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(570140),
@@ -26,7 +26,7 @@ function p() {
             [],
             s.pF,
         ),
-        l = i.useMemo(
+        r = i.useMemo(
             () =>
                 0 === e.length
                     ? n
@@ -40,7 +40,7 @@ function p() {
             c.Z.dispatch({ type: "DEV_TOOLS_WORD_FREQUENCY_RESET" });
         }, []);
     return (0, a.jsxs)("div", {
-        className: r()(u.panel, m.panel),
+        className: l()(u.panel, m.panel),
         children: [
             n.length > 0 &&
                 (0, a.jsxs)(a.Fragment, {
@@ -48,7 +48,7 @@ function p() {
                         (0, a.jsxs)(o.Text, {
                             variant: "text-md/semibold",
                             className: m.sectionTitle,
-                            children: ["Word Frequencies (", l.length, " unique words)"],
+                            children: ["Word Frequencies (", r.length, " unique words)"],
                         }),
                         (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
@@ -81,7 +81,7 @@ function p() {
                                     className: m.resultsTable,
                                     children: [
                                         (0, a.jsxs)("div", {
-                                            className: r()(u.tableHeader, m.tableHeader),
+                                            className: l()(u.tableHeader, m.tableHeader),
                                             children: [
                                                 (0, a.jsx)("div", {
                                                     className: m.indexColumn,
@@ -97,12 +97,12 @@ function p() {
                                                 }),
                                             ],
                                         }),
-                                        l.map((e) => {
+                                        r.map((e) => {
                                             let { word: t, value: n, idx: i } = e;
                                             return (0, a.jsxs)(
                                                 "div",
                                                 {
-                                                    className: r()(u.tableRow, m.tableRow),
+                                                    className: l()(u.tableRow, m.tableRow),
                                                     children: [
                                                         (0, a.jsx)("div", {
                                                             className: m.indexColumn,
@@ -146,7 +146,7 @@ function p() {
                     }),
                 }),
             n.length > 0 &&
-                0 === l.length &&
+                0 === r.length &&
                 e.length > 0 &&
                 (0, a.jsx)("div", {
                     className: m.emptyState,

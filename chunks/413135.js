@@ -151,14 +151,14 @@ function O(e, t, n) {
                 return k(this, t, n);
             case "utf8":
             case "utf-8":
-                return D(this, t, n);
+                return w(this, t, n);
             case "ascii":
                 return M(this, t, n);
             case "latin1":
             case "binary":
                 return j(this, t, n);
             case "base64":
-                return w(this, t, n);
+                return D(this, t, n);
             case "ucs2":
             case "ucs-2":
             case "utf16le":
@@ -259,10 +259,10 @@ function R(e, t, n, r) {
 function P(e, t, n, r) {
     return X(z(t, e.length - n), e, n, r);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     return 0 === t && n === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(t, n));
 }
-function D(e, t, n) {
+function w(e, t, n) {
     n = Math.min(e.length, n);
     for (var r = [], i = t; i < n; ) {
         var a,
@@ -429,7 +429,7 @@ function D(e, t, n) {
     }),
     (c.prototype.toString = function () {
         var e = this.length;
-        return 0 === e ? "" : 0 == arguments.length ? D(this, 0, e) : O.apply(this, arguments);
+        return 0 === e ? "" : 0 == arguments.length ? w(this, 0, e) : O.apply(this, arguments);
     }),
     (c.prototype.toLocaleString = c.prototype.toString),
     (c.prototype.equals = function (e) {

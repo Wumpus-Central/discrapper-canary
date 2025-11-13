@@ -71,7 +71,7 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,7 +88,7 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = u.Z.modules.select.OPTION_HEIGHT.resolve();
+let S = u.Z.modules.select.OPTION_HEIGHT.resolve();
 function A(e) {
     let t,
         {
@@ -99,12 +99,12 @@ function A(e) {
             items: f,
             defaultSelectedItems: b,
             selectedItems: O,
-            onSelectionChange: S,
+            onSelectionChange: T,
             activeDescendantIndex: A,
             shouldFocusWrap: R = !1,
             renderListItem: P,
-            renderEmptyState: w,
-            maxVisibleItems: D = 5,
+            renderEmptyState: D,
+            maxVisibleItems: w = 5,
             loading: x = !1,
             onBlur: L,
             onFocus: M,
@@ -136,9 +136,9 @@ function A(e) {
             (e) => {
                 if (!0 === a && 1 === V.length && V.includes(e)) return;
                 let t = (0, g.cq)(d, V, e);
-                F || Z(t), null == S || S(t);
+                F || Z(t), null == T || T(t);
             },
-            [a, V, S, F, d],
+            [a, V, T, F, d],
         ),
         z = i.useCallback(
             (e) =>
@@ -165,9 +165,9 @@ function A(e) {
         });
     else if (G.length > 0)
         t = (0, r.jsx)(_._2, {
-            style: { height: null != D ? "".concat(Math.min(G.length, D) * T, "px") : "100%" },
+            style: { height: null != w ? "".concat(Math.min(G.length, w) * S, "px") : "100%" },
             role: void 0,
-            rowHeight: T,
+            rowHeight: S,
             sections: [G.length],
             sectionHeight: 0,
             renderSection: () => null,
@@ -196,7 +196,7 @@ function A(e) {
         });
     else {
         var q;
-        t = null != (q = null == w ? void 0 : w()) ? q : (0, r.jsx)(m.z, {});
+        t = null != (q = null == D ? void 0 : D()) ? q : (0, r.jsx)(m.z, {});
     }
     return (0, r.jsx)(c.bG, {
         navigator: H,
@@ -222,7 +222,7 @@ function A(e) {
                         {
                             role: "listbox",
                             "aria-multiselectable": "multiple" === d,
-                            className: o()(E.listBox, { [E.scrollable]: G.length > D }),
+                            className: o()(E.listBox, { [E.scrollable]: G.length > w }),
                             "data-mana-component": "listbox",
                             children: t,
                         },

@@ -1,11 +1,11 @@
-t.d(n, { Z: () => r }), t(953529);
-var l = t(951288);
-t(647438);
-var i = t(481060),
-    a = t(388032),
-    o = t(462097);
-function r(e) {
-    let { displayName: n, description: t, icon: r, isLoading: s, isConnected: u, canConnect: c, onConnect: d } = e;
+n.d(t, { Z: () => a }), n(953529);
+var l = n(951288);
+n(647438);
+var i = n(481060),
+    r = n(388032),
+    o = n(462097);
+function a(e) {
+    let { displayName: t, description: n, icon: a, isLoading: c, isConnected: s, canConnect: u, onConnect: d } = e;
     return (0, l.jsxs)("div", {
         className: o.card,
         children: [
@@ -14,7 +14,7 @@ function r(e) {
                 children: [
                     (0, l.jsx)("div", {
                         className: o.icon,
-                        children: r,
+                        children: a,
                     }),
                     (0, l.jsxs)("div", {
                         className: o.textContent,
@@ -22,29 +22,29 @@ function r(e) {
                             (0, l.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 color: "text-primary",
-                                children: n,
+                                children: t,
                             }),
-                            null != t &&
-                                t.length > 0 &&
+                            null != n &&
+                                n.length > 0 &&
                                 (0, l.jsx)(i.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-tertiary",
-                                    children: t,
+                                    children: n,
                                 }),
                         ],
                     }),
                 ],
             }),
-            s
+            c
                 ? (0, l.jsx)(i.$jN, {})
-                : u
+                : s
                   ? (0, l.jsxs)("div", {
                         className: o.connectedStatus,
                         children: [
                             (0, l.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 color: "text-feedback-positive",
-                                children: a.intl.string(a.t["LV+CXH"]),
+                                children: r.intl.string(r.t["LV+CXH"]),
                             }),
                             (0, l.jsx)(i.owK, {
                                 size: "custom",
@@ -58,8 +58,8 @@ function r(e) {
                         variant: "primary",
                         size: "sm",
                         onClick: d,
-                        text: a.intl.string(a.t.S0W8Z5),
-                        disabled: !c,
+                        text: r.intl.string(r.t.S0W8Z5),
+                        disabled: !u,
                     }),
         ],
     });

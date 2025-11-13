@@ -19,8 +19,8 @@ var i = n(951288),
     v = n(410575),
     _ = n(393238),
     x = n(110924),
-    O = n(636449),
-    j = n(115130),
+    j = n(636449),
+    O = n(115130),
     E = n(566620),
     S = n(317381),
     P = n(596040),
@@ -73,8 +73,8 @@ var i = n(951288),
     ev = n(228488),
     e_ = n(358221),
     ex = n(414910),
-    eO = n(887012),
-    ej = n(909820),
+    ej = n(887012),
+    eO = n(909820),
     eE = n(493010),
     eS = n(742603),
     eP = n(71127),
@@ -643,7 +643,7 @@ class ez extends r.PureComponent {
                         let n = e.getGuildId();
                         null != n && (0, V.uL)((0, eg.LY)(n)), B.hP(e);
                     };
-                null == t || (0, O.R)() ? n() : (0, I.Z)({ onConfirm: n });
+                null == t || (0, j.R)() ? n() : (0, I.Z)({ onConfirm: n });
             }),
             eB(this, "handleStayOnTop", (e) => {
                 (0, ew.v)(Z.Z.VOICE_CONTROL_TRAY, ew.d.STAY_ON_TOP, e), B.hY(eD.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -838,7 +838,7 @@ class ez extends r.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: r } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && r)
                     ? null
-                    : (0, i.jsx)(ej.ZP, {
+                    : (0, i.jsx)(eO.ZP, {
                           children: (0, i.jsx)(X.Z, {
                               className: eU.chatToasts,
                               channelId: n.id,
@@ -896,10 +896,10 @@ let eW = function (e) {
         { width: f = 0, height: m = 0, ref: g } = (0, _.ZP)(),
         { ref: b } = (0, _.ZP)(),
         y = (0, U.bp)(),
-        O = (0, L.Z)(),
+        j = (0, L.Z)(),
         E = (0, u.e7)([ep.Z], () => {
             var e;
-            return (null != (e = null == O ? void 0 : O.channelId) ? e : ep.Z.getVoiceChannelId()) === n.id;
+            return (null != (e = null == j ? void 0 : j.channelId) ? e : ep.Z.getVoiceChannelId()) === n.id;
         }),
         {
             participants: I,
@@ -954,11 +954,11 @@ let eW = function (e) {
         }, []),
         er = null != (t = null == q ? void 0 : q.id) ? t : null,
         eh = (0, P.Z)(er, n.id),
-        ef = (0, u.e7)([j.Z], () => j.Z.getFetchState(), []),
+        ef = (0, u.e7)([O.Z], () => O.Z.getFetchState(), []),
         em = (0, x.Z)(ef);
     r.useEffect(() => {
-        ef === j.O.ERROR &&
-            em !== j.O.ERROR &&
+        ef === O.O.ERROR &&
+            em !== O.O.ERROR &&
             (0, h.showToast)((0, h.createToast)(ek.intl.string(ek.t["AlJyI+"]), h.ToastType.FAILURE));
     }, [ef, em]);
     let eg = (0, u.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
@@ -976,7 +976,7 @@ let eW = function (e) {
             }
         );
     }, [E, w]);
-    let eb = (0, eO.Z)(n, !0),
+    let eb = (0, ej.Z)(n, !0),
         { hasParticipantsPanel: ey } = (0, eZ.Z)({ location: "ChannelCall" }),
         ev = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ex } = (0, N.ZP)(Z.Z.CHANNEL_CALL),
@@ -987,7 +987,7 @@ let eW = function (e) {
         value: ex,
         children: (0, i.jsx)(v.Z, {
             page: eD.ZY5.CHANNEL_CALL,
-            children: (0, i.jsx)(ej.B2, {
+            children: (0, i.jsx)(eO.B2, {
                 children: (0, i.jsxs)(eA._A, {
                     children: [
                         (0, i.jsx)(ez, {
@@ -1037,7 +1037,7 @@ let eW = function (e) {
                             popoutType: s,
                         }),
                         !n.isPrivate() && (0, i.jsx)(eA.YR, {}),
-                        (0, i.jsx)(ej.H_, {}),
+                        (0, i.jsx)(eO.H_, {}),
                     ],
                 }),
             }),

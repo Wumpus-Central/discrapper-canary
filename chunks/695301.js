@@ -20,8 +20,8 @@ let b = i.memo(function (e) {
         O = (0, l.e7)([p.Z], () => p.Z.getGuild(y)),
         v = (0, a.E)(O),
         j = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-        C = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
-        x = (0, c.Z)((e) => e.guildId),
+        x = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
+        C = (0, c.Z)((e) => e.guildId),
         E = (0, f.Z)(y),
         {
             badge: S,
@@ -81,9 +81,9 @@ let b = i.memo(function (e) {
         (n = n =
             {
                 guild: O,
-                unavailable: C,
+                unavailable: x,
                 animatable: j,
-                selected: x === y,
+                selected: C === y,
                 badge: S,
                 isMentionLowImportance: P,
                 lowerBadge: Z,

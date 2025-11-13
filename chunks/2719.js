@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(518950),
     R = n(184325),
     P = n(867176),
-    w = n(355497),
-    D = n(25990),
+    D = n(355497),
+    w = n(25990),
     x = n(594174),
     L = n(572004),
     M = n(51144),
@@ -385,7 +385,7 @@ function er(e) {
     function _() {
         (0, f.h7j)((e) =>
             (0, r.jsx)(
-                w.Z,
+                D.Z,
                 X(z({}, e), {
                     title: Y.intl.string(Y.t["3CTiKi"]),
                     children: a.hasFlag(F.xW$.MFA_SMS) ? Y.intl.string(Y.t.jrhJyo) : void 0,
@@ -553,7 +553,7 @@ function eo() {
         n = (0, C.ZP)(t.id),
         i = (0, A.Z)(n),
         a = k.co.useSetting(),
-        o = (0, c.e7)([D.Z], () => D.Z.getErrors()),
+        o = (0, c.e7)([w.Z], () => w.Z.getErrors()),
         s = null == o || null == (e = o.avatar) ? void 0 : e[0],
         { avatarSrc: u, avatarDecorationSrc: d } = (0, N.Z)({
             userId: null == t ? void 0 : t.id,

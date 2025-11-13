@@ -1,7 +1,7 @@
 n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(358458),
+    a = n(509442),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(481932),
     R = n(195387),
     P = n(664794),
-    w = n(4517),
-    D = n(978395),
+    D = n(4517),
+    w = n(978395),
     x = n(161572),
     L = n(671955),
     M = n(388032),
@@ -243,7 +243,7 @@ function Z(e) {
                                             themeType: L.l.POPOUT,
                                             onOpenProfile: K ? void 0 : ed,
                                         }),
-                                        (0, r.jsx)(w.Z, {
+                                        (0, r.jsx)(D.Z, {
                                             ref: es,
                                             user: n,
                                             guildId: G,
@@ -254,7 +254,7 @@ function Z(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(D.Z, {
+                                (0, r.jsx)(w.Z, {
                                     user: n,
                                     currentUser: k,
                                     displayProfile: en,

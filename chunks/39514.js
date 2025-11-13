@@ -25,8 +25,8 @@ var r = n(951288),
     N = n(481153),
     O = n(781428),
     C = n(423527),
-    A = n(981631),
-    T = n(388032),
+    T = n(981631),
+    A = n(388032),
     Z = n(197571);
 function P(e, t, n) {
     return (
@@ -76,16 +76,16 @@ class R extends i.PureComponent {
         let { libraryApplication: t, sku: n } = this.props,
             { error: r } = this.state,
             i = null != r ? r.code : null;
-        return i === A.evJ.INVALID_GIFT_SELF_REDEMPTION
-            ? T.intl.string(T.t.wa9h7F)
-            : i === A.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === A.POd.COLLECTIBLES
-              ? T.intl.string(T.t.mdLtb5)
-              : null != t || i === A.evJ.INVALID_GIFT_REDEMPTION_OWNED
-                ? T.intl.format(T.t.PIdmg3, { libraryLink: A.Z5c.APPLICATION_LIBRARY })
-                : e.isClaimed || i === A.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
-                  ? T.intl.string(T.t.ilcBeX)
-                  : i === A.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
-                    ? T.intl.string(T.t.ypuSd8)
+        return i === T.evJ.INVALID_GIFT_SELF_REDEMPTION
+            ? A.intl.string(A.t.wa9h7F)
+            : i === T.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === T.POd.COLLECTIBLES
+              ? A.intl.string(A.t.mdLtb5)
+              : null != t || i === T.evJ.INVALID_GIFT_REDEMPTION_OWNED
+                ? A.intl.format(A.t.PIdmg3, { libraryLink: T.Z5c.APPLICATION_LIBRARY })
+                : e.isClaimed || i === T.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
+                  ? A.intl.string(A.t.ilcBeX)
+                  : i === T.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
+                    ? A.intl.string(A.t.ypuSd8)
                     : void 0;
     }
     renderSpinner(e) {
@@ -103,21 +103,21 @@ class R extends i.PureComponent {
                 }),
                 (0, r.jsx)(m.Dx, {
                     className: l()(Z.marginTop8, Z.marginBottom8),
-                    children: T.intl.string(T.t.KPowgn),
+                    children: A.intl.string(A.t.KPowgn),
                 }),
-                (0, r.jsx)(m.DK, { children: T.intl.string(T.t.j8734b) }),
+                (0, r.jsx)(m.DK, { children: A.intl.string(A.t.j8734b) }),
                 (0, r.jsx)("div", {
                     className: l()(Z.marginTop40, Z.marginBottom8),
                     children: (0, r.jsx)(o.Button, {
-                        text: T.intl.string(T.t.fIv16B),
+                        text: A.intl.string(A.t.fIv16B),
                         fullWidth: !0,
                         onClick: () => t(e),
                     }),
                 }),
                 (0, r.jsx)(o.Avr, {
-                    text: T.intl.string(T.t["/CjuXF"]),
+                    text: A.intl.string(A.t["/CjuXF"]),
                     textVariant: "text-sm/normal",
-                    onClick: () => window.open(y.Z.getArticleURL(A.BhN.GIFTING), "_blank"),
+                    onClick: () => window.open(y.Z.getArticleURL(T.BhN.GIFTING), "_blank"),
                 }),
             ],
         });
@@ -127,13 +127,13 @@ class R extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Dx, {
                     className: Z.marginBottom8,
-                    children: T.intl.string(T.t.csrAMJ),
+                    children: A.intl.string(A.t.csrAMJ),
                 }),
-                (0, r.jsx)(m.DK, { children: T.intl.string(T.t["m1+IBn"]) }),
+                (0, r.jsx)(m.DK, { children: A.intl.string(A.t["m1+IBn"]) }),
                 (0, r.jsx)("div", {
                     className: Z.marginTop40,
                     children: (0, r.jsx)(o.Button, {
-                        text: T.intl.string(T.t["qsI+EH"]),
+                        text: A.intl.string(A.t["qsI+EH"]),
                         fullWidth: !0,
                         onClick: () => this.setState({ continueOnWeb: !0 }),
                     }),
@@ -149,15 +149,15 @@ class R extends i.PureComponent {
                     src: n(892235),
                     className: Z.marginBottom8,
                 }),
-                (0, r.jsx)(m.Dx, { children: T.intl.format(T.t["ivLUf/"], { username: e.username }) }),
+                (0, r.jsx)(m.Dx, { children: A.intl.format(A.t["ivLUf/"], { username: e.username }) }),
                 (0, r.jsx)(m.DK, {
                     className: Z.marginTop20,
-                    children: T.intl.string(T.t["8Su18+"]),
+                    children: A.intl.string(A.t["8Su18+"]),
                 }),
                 (0, r.jsx)("div", {
                     className: Z.marginTop40,
                     children: (0, r.jsx)(o.Button, {
-                        text: t ? T.intl.string(T.t.CMa9Rv) : T.intl.string(T.t.lm1UKt),
+                        text: t ? A.intl.string(A.t.CMa9Rv) : A.intl.string(A.t.lm1UKt),
                         fullWidth: !0,
                         disabled: t,
                         onClick: this.handleResendVerification,
@@ -166,7 +166,7 @@ class R extends i.PureComponent {
                 (0, r.jsx)("div", {
                     className: Z.marginTop8,
                     children: (0, r.jsx)(o.Avr, {
-                        text: T.intl.string(T.t.Po9eBQ),
+                        text: A.intl.string(A.t.Po9eBQ),
                         textVariant: "text-sm/normal",
                         onClick: this.refreshUser,
                     }),
@@ -187,7 +187,7 @@ class R extends i.PureComponent {
                     (0, r.jsx)("div", {
                         className: Z.marginTop40,
                         children: (0, r.jsx)(o.Button, {
-                            text: T.intl.string(T.t.n6I6k4),
+                            text: A.intl.string(A.t.n6I6k4),
                             fullWidth: !0,
                             disabled: null != s,
                             onClick: this.handleAccept,
@@ -200,7 +200,7 @@ class R extends i.PureComponent {
                           })
                         : (0, r.jsx)(m.i_, {
                               className: Z.marginTop20,
-                              children: T.intl.format(T.t.NYM08s, {
+                              children: A.intl.format(A.t.NYM08s, {
                                   userTag: S.ZP.getUserTag(t),
                                   onLogoutClick: this.handleLogout,
                               }),
@@ -221,15 +221,15 @@ class R extends i.PureComponent {
                 location: o,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
-        if (e === A.kEZ.OPEN && !u) return this.renderAppOpened();
-        if (e === A.kEZ.OPENING) return this.renderSpinner(T.intl.string(T.t["Z+hCVU"]));
-        if (l) return this.renderSpinner(T.intl.string(T.t.bhJseN));
-        if (null == i) return s ? this.renderExpiredInvite() : this.renderSpinner(T.intl.string(T.t.b3lf1c));
+        if (e === T.kEZ.OPEN && !u) return this.renderAppOpened();
+        if (e === T.kEZ.OPENING) return this.renderSpinner(A.intl.string(A.t["Z+hCVU"]));
+        if (l) return this.renderSpinner(A.intl.string(A.t.bhJseN));
+        if (null == i) return s ? this.renderExpiredInvite() : this.renderSpinner(A.intl.string(A.t.b3lf1c));
         if (s) {
             if (n) {
                 let e = this.state.currentUser;
                 return c || null == e
-                    ? this.renderSpinner(T.intl.string(T.t.bYb2nS))
+                    ? this.renderSpinner(A.intl.string(A.t.bYb2nS))
                     : this.requiresVerification && null != e
                       ? this.renderVerification(e)
                       : this.renderAuthenticated(i, e, t);
@@ -273,7 +273,7 @@ class R extends i.PureComponent {
             }),
             P(this, "handleLogout", () => {
                 let e = this.props.match.params.giftCode;
-                u.Z.logout("gift_code", A.Z5c.GIFT_CODE_LOGIN(e));
+                u.Z.logout("gift_code", T.Z5c.GIFT_CODE_LOGIN(e));
             }),
             P(this, "handleResendVerification", () => {
                 u.Z.verifyResend(), this.setState({ sentVerification: !0 });
@@ -283,7 +283,7 @@ class R extends i.PureComponent {
                 if (null == t) throw Error("Trying to accept gift before resolve");
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await d.Z.redeemGiftCode({ code: n }), e(A.Z5c.APP);
+                    this.setState({ error: null }), await d.Z.redeemGiftCode({ code: n }), e(T.Z5c.APP);
                 } catch (e) {
                     this.setState({ error: e });
                 }
@@ -292,7 +292,7 @@ class R extends i.PureComponent {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 d.Z.resolveGiftCode(t, !0, !0).then((n) => {
-                    null != n && null != n.giftCode.promotion && e(A.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+                    null != n && null != n.giftCode.promotion && e(T.Z5c.BILLING_PROMOTION_REDEMPTION(t));
                 });
             });
     }
@@ -320,11 +320,11 @@ let L = a.ZP.connectStores([v.Z, j.Z, x.default, b.Z, E.Z, p.Z], (e) => {
         let { sku: t, children: n, giftCodeCode: s, transitionTo: l } = e,
             a = (0, f.K$)(t);
         return (i.useEffect(() => {
-            null != s && a && l(A.Z5c.APP_WITH_GIFT_CODE(s));
+            null != s && a && l(T.Z5c.APP_WITH_GIFT_CODE(s));
         }, [a, s, l]),
         a)
             ? (0, r.jsxs)(m.ZP, {
-                  children: [(0, r.jsx)(m.Dx, { children: T.intl.string(T.t.b3lf1c) }), (0, r.jsx)(m.Hh, {})],
+                  children: [(0, r.jsx)(m.Dx, { children: A.intl.string(A.t.b3lf1c) }), (0, r.jsx)(m.Hh, {})],
               })
             : n;
     };

@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(986332),
     p = n(428695),
     f = n(981631),
-    m = n(388032),
-    h = n(449824);
-function g(e) {
+    h = n(388032),
+    g = n(449824);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,13 +46,13 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             image: a,
             type: d,
             imageMarginX: p,
-            imageMarginTop: g,
+            imageMarginTop: m,
             trackingSource: b,
             undismissable: E,
             onDismissed: O,
-            onClick: I,
-            cta: y,
-            ctaColor: v,
+            onClick: y,
+            cta: v,
+            ctaColor: I,
         } = e;
         i.useEffect(() => {
             _(f.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -61,11 +61,11 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             });
         }, [t.id, d]);
         let C = null;
-        "function" == typeof y
-            ? (C = y())
-            : null != y &&
+        "function" == typeof v
+            ? (C = v())
+            : null != v &&
               (C = (0, r.jsx)(s.zx, {
-                  className: h.btn,
+                  className: g.btn,
                   size: s.zx.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
@@ -74,15 +74,15 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: d,
                           }),
-                          null == I || I();
+                          null == y || y();
                   },
                   fullWidth: !0,
-                  color: v,
-                  children: y,
+                  color: I,
+                  children: v,
               }));
         let S = null != p ? "".concat(p, "px") : "16px";
         return (0, r.jsxs)("div", {
-            className: h.channelNotice,
+            className: g.channelNotice,
             children: [
                 !0 === E
                     ? null
@@ -90,34 +90,34 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
                           onClick: () => {
                               c.ZP.trackWithMetadata(f.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == O || O();
                           },
-                          className: h.close,
-                          "aria-label": m.intl.string(m.t.WAI6xu),
+                          className: g.close,
+                          "aria-label": h.intl.string(h.t.WAI6xu),
                           children: (0, r.jsx)(o.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: h.closeIcon,
+                              className: g.closeIcon,
                           }),
                       }),
                 (0, r.jsx)("div", {
-                    className: h.imageContainer,
+                    className: g.imageContainer,
                     style: {
-                        marginTop: "".concat(g, "px"),
+                        marginTop: "".concat(m, "px"),
                         marginLeft: S,
                         marginRight: S,
                     },
                     children: (0, r.jsx)("img", {
-                        className: h.image,
+                        className: g.image,
                         src: a,
                         alt: "",
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.message,
+                    className: g.message,
                     children: [
                         null != n
                             ? (0, r.jsx)(o.Heading, {
                                   variant: "heading-md/semibold",
-                                  className: h.title,
+                                  className: g.title,
                                   children: n,
                               })
                             : null,
@@ -133,5 +133,5 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
     },
     E = function (e) {
         let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
-        return t ? (0, r.jsx)(p.Z, g({}, e)) : (0, r.jsx)(b, g({}, e));
+        return t ? (0, r.jsx)(p.Z, m({}, e)) : (0, r.jsx)(b, m({}, e));
     };

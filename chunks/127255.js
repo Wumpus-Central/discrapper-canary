@@ -1,23 +1,23 @@
 n.d(t, { Z: () => c }), n(388685), n(539854);
-var i = n(647438),
-    l = n(442837),
-    r = n(115130),
-    a = n(694312),
-    o = n(405625),
-    s = n(664097);
+var r = n(647438),
+    i = n(442837),
+    a = n(115130),
+    o = n(694312),
+    s = n(405625),
+    l = n(664097);
 function c(e) {
     let { guildId: t, enableFilter: n = !1 } = e,
-        { filter: c } = (0, l.cj)([r.Z], () => ({ filter: r.Z.getFilter() })),
-        u = (0, a.E)(t),
-        d = (0, o.Z)(u),
-        p = (0, s.o)();
-    return i.useMemo(() => {
+        { filter: c } = (0, i.cj)([a.Z], () => ({ filter: a.Z.getFilter() })),
+        u = (0, o.E)(t),
+        d = (0, s.Z)(u),
+        f = (0, l.o)();
+    return r.useMemo(() => {
         function e(e) {
             return !!(!n || "" === c || e.application.name.toLowerCase().includes(c.toLowerCase()));
         }
-        let t = [...p].filter(e),
-            i = new Set(t.map((e) => e.application.id));
-        for (let n of d) !i.has(n.application.id) && e(n) && t.push(n);
+        let t = [...f].filter(e),
+            r = new Set(t.map((e) => e.application.id));
+        for (let n of d) !r.has(n.application.id) && e(n) && t.push(n);
         return t;
-    }, [p, n, c, d]);
+    }, [f, n, c, d]);
 }

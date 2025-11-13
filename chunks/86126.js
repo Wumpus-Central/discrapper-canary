@@ -17,20 +17,20 @@ function b(e) {
     var t;
     let { onDeleteEditState: l } = e,
         { editStateId: b, guildId: x, groupListingId: j } = (0, g.N)(),
-        v = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
-        _ = null == v ? void 0 : v.id,
-        C = (0, m.Z)(x),
-        O = i.useMemo(() => {
+        _ = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
+        v = null == _ ? void 0 : _.id,
+        O = (0, m.Z)(x),
+        C = i.useMemo(() => {
             var e;
-            return null != C && null != v && (null != (e = C[v.role_id]) ? e : 0);
-        }, [C, v]),
-        y = 0 === O,
-        E = null == _,
-        N = null != (t = null == v ? void 0 : v.archived) && t,
+            return null != O && null != _ && (null != (e = O[_.role_id]) ? e : 0);
+        }, [O, _]),
+        y = 0 === C,
+        N = null == v,
+        E = null != (t = null == _ ? void 0 : _.archived) && t,
         { error: I, deleteSubscriptionListing: S, submitting: T } = (0, d.r4)(),
         { error: P, archiveSubscriptionListing: w, submitting: Z } = (0, d._1)(),
         { allowSelfRemoveMonetization: R } = (0, c.gX)(x);
-    return null == v
+    return null == _
         ? null
         : (0, r.jsx)(p.Z, {
               title: f.intl.string(f.t["7Si8Ul"]),
@@ -47,7 +47,7 @@ function b(e) {
                               messageType: o.QYI.ERROR,
                               children: f.intl.string(f.t.up8gUr),
                           }),
-                      N
+                      E
                           ? (0, r.jsx)(o.gNt, {
                                 disabled: !R,
                                 label: f.intl.string(f.t["2D14T0"]),
@@ -60,17 +60,17 @@ function b(e) {
                                                 variant: "text-sm/normal",
                                                 className: h.warning,
                                                 children: f.intl.formatToPlainString(f.t.ABeonY, {
-                                                    listingMemberCount: O,
+                                                    listingMemberCount: C,
                                                 }),
                                             }),
                                         (0, r.jsx)(o.Button, {
                                             variant: "critical-primary",
                                             onClick: () => {
                                                 let e = async () => {
-                                                    (E ||
+                                                    (N ||
                                                         (a()(null != j, "group listing doesnt exist"),
-                                                        a()(null != _, "subscription listing doesnt exist"),
-                                                        await S(x, j, _))) &&
+                                                        a()(null != v, "subscription listing doesnt exist"),
+                                                        await S(x, j, v))) &&
                                                         (null == l || l());
                                                 };
                                                 (0, o.ZDy)(async () => {
@@ -116,7 +116,7 @@ function b(e) {
                                     variant: "critical-primary",
                                     onClick: () => {
                                         a()(null != j, "group listing doesnt exist"),
-                                            a()(null != _, "subscription listing doesnt exist"),
+                                            a()(null != v, "subscription listing doesnt exist"),
                                             (0, o.ZDy)(async () => {
                                                 let { Modal: e } = await Promise.resolve().then(n.bind(n, 793030));
                                                 return (t) =>
@@ -134,7 +134,7 @@ function b(e) {
                                                                 text: f.intl.string(f.t.RL0wjm),
                                                                 variant: "critical-primary",
                                                                 onClick: async () => {
-                                                                    await w(x, j, _), t.onClose();
+                                                                    await w(x, j, v), t.onClose();
                                                                 },
                                                             },
                                                         ],

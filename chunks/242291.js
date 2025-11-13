@@ -62,10 +62,10 @@ function R(e) {
 function P(e, t, n, r) {
     (0, E.XE)(t, e, y.YQ.SOUNDBOARD), (0, d.kq)(t, e, __OVERLAY__, n, r);
 }
-function w(e, t) {
+function D(e, t) {
     (0, E.XE)(t, e, y.YQ.JOINED_VOICE_CHANNEL), (0, d.vy)(t, e, __OVERLAY__);
 }
-function D() {
+function w() {
     var e, t;
     return Object.values(null != (t = null == (e = c.Z.settings.guilds) ? void 0 : e.guilds) ? t : {}).some(
         (e) => null != e.joinSound,
@@ -81,14 +81,14 @@ async function x(e) {
         a = b.Z.getSound(i, r.soundId);
     if (null != a) {
         if (!C(a, n) || !N(t, a, n, !0) || !R(n)) return null;
-        w(a, n.id);
+        D(a, n.id);
     }
 }
 function L(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
         a = [];
-    if (!t && !D()) {
+    if (!t && !w()) {
         let e = (0, g.Fc)(n);
         (m.ZP.canUseCustomCallSounds(n) || e) && a.push(i.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
     }

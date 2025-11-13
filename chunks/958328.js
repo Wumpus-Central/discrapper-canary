@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
-    r = n(149765),
+    r = n.n(i),
+    l = n(149765),
     s = n(442837),
     o = n(481060),
     c = n(933557),
@@ -19,14 +19,14 @@ var i = n(120356),
 function v(e) {
     let { title: t, can: n } = e,
         i = n ? o.dz2 : o.Dio,
-        r = (0, a.jsx)("div", {
-            className: l()(f.iconOuter, n ? f.iconCheck : f.iconCross),
+        l = (0, a.jsx)("div", {
+            className: r()(f.iconOuter, n ? f.iconCheck : f.iconCross),
             children: (0, a.jsx)(i, { className: f.icon }),
         });
     return (0, a.jsxs)("div", {
         className: f.scope,
         children: [
-            r,
+            l,
             (0, a.jsx)("div", {
                 className: f.scopeInner,
                 children: (0, a.jsx)(o.Text, {
@@ -49,7 +49,7 @@ function j() {
         S = null != i ? x.Z.getGuildPermissionSpecMap(i) : null,
         E = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: n } = e,
-                i = r.e$(j, n);
+                i = l.e$(j, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -61,7 +61,7 @@ function j() {
         }),
         T = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                i = r.e$(_, n);
+                i = l.e$(_, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -72,7 +72,7 @@ function j() {
             );
         });
     return (0, a.jsx)("div", {
-        className: l()(b.panel, f.panel),
+        className: r()(b.panel, f.panel),
         children: (0, a.jsxs)("div", {
             className: f.panelInner,
             children: [

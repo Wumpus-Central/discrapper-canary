@@ -1,11 +1,11 @@
-r.d(t, { d: () => l });
-var n = r(647438),
-    e = r(442837),
-    a = r(515970),
-    s = r(5888);
-function l() {
-    let i = (0, e.e7)([s.Z], () => s.Z.getFetchState());
-    (0, n.useEffect)(() => {
-        i !== s.p.FETCHING && i !== s.p.SUCCESS && (0, a.p)();
-    }, [i]);
+e.d(r, { d: () => s });
+var i = e(647438),
+    n = e(442837),
+    l = e(515970),
+    a = e(5888);
+function s() {
+    let t = (0, n.e7)([a.Z], () => a.Z.getFetchState());
+    (0, i.useEffect)(() => {
+        t !== a.p.FETCHING && t !== a.p.SUCCESS && (0, l.p)();
+    }, [t]);
 }

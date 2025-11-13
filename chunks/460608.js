@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(793030),
-    l = n(442837),
+    l = n(793030),
+    o = n(442837),
     a = n(179360),
     s = n(616780),
     c = n(899667),
@@ -15,7 +15,7 @@ var r = n(951288),
     v = n(240379);
 function x(e) {
     let { guildId: t } = e,
-        n = (0, l.Wu)([c.Z], () => {
+        n = (0, o.Wu)([c.Z], () => {
             var e;
             return null != (e = c.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
         }, [t]),
@@ -23,7 +23,7 @@ function x(e) {
             () => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)),
             [n],
         ),
-        _ = (0, l.Wu)([d.ZP], () => {
+        _ = (0, o.Wu)([d.ZP], () => {
             let e = new Set();
             return (
                 x.forEach((n) => {
@@ -37,7 +37,7 @@ function x(e) {
     }, [t, _]);
     let b = i.useMemo(() => (_.length > 0 ? { [t]: _ } : {}), [t, _]);
     (0, s.$)(b, "GuildPowerupsRecentActivity");
-    let h = (0, l.e7)([p.Z], () => {
+    let h = (0, o.e7)([p.Z], () => {
         var e;
         return null == (e = p.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
     });
@@ -48,13 +48,13 @@ function x(e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       className: v.header,
                       variant: "eyebrow",
                       color: "text-secondary",
                       children: g.intl.string(g.t.yM9Krm),
                   }),
-                  (0, r.jsx)(o.zJl, {
+                  (0, r.jsx)(l.zJl, {
                       className: v.container,
                       fade: !0,
                       children: x.map((e, t) => (0, r.jsx)(m.Z, { boost: e }, "boost-activity-".concat(t))),

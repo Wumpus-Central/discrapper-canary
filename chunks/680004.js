@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685);
 var a = n(951288),
-    r = n(647438),
-    i = n(442837),
+    i = n(647438),
+    r = n(442837),
     l = n(481060),
     s = n(435064),
     o = n(894694),
@@ -50,10 +50,10 @@ function u(e, t) {
     );
 }
 function m() {
-    let { mlPipelinesEnabled: e } = (0, i.cj)([s.Z], () => ({
+    let { mlPipelinesEnabled: e } = (0, r.cj)([s.Z], () => ({
             mlPipelinesEnabled: s.Z.getSettings().mlPipelinesEnabled,
         })),
-        [t, n] = r.useState(
+        [t, n] = i.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = {
@@ -70,11 +70,11 @@ function m() {
                 }
             ),
         ),
-        [m, p] = r.useState(o.x0.KILL),
-        [h, x] = r.useState(1),
-        [g, f] = r.useState(""),
-        [b, v] = r.useState(""),
-        j = r.useCallback(
+        [m, p] = i.useState(o.x0.KILL),
+        [h, x] = i.useState(1),
+        [g, f] = i.useState(""),
+        [b, v] = i.useState(""),
+        j = i.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&

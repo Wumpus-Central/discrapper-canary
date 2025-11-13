@@ -13,8 +13,8 @@ var r = n(704215),
     c = n(809357),
     d = n(987650),
     u = n(921944),
-    p = n(388032),
-    h = n(74912);
+    h = n(388032),
+    p = n(74912);
 function f() {
     let e = (0, c.Z)({
             location: "Overlay",
@@ -34,10 +34,10 @@ function g(e) {
     return {
         icon: null,
         body: (0, i.jsxs)("div", {
-            className: h.notificationBody,
+            className: p.notificationBody,
             children: [
                 (0, i.jsx)("div", {
-                    className: h.iconContainer,
+                    className: p.iconContainer,
                     children: (0, i.jsx)(s.S6n, {
                         size: "custom",
                         color: "currentColor",
@@ -47,7 +47,7 @@ function g(e) {
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: "text-sm/normal",
-                    children: p.intl.string(p.t.EFRNtK),
+                    children: h.intl.string(h.t.EFRNtK),
                 }),
             ],
         }),

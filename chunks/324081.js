@@ -20,8 +20,8 @@ var i = n(120356),
     O = n(592125),
     v = n(430824),
     j = n(158776),
-    C = n(306680),
-    x = n(594174),
+    x = n(306680),
+    C = n(594174),
     E = n(388032),
     S = n(888097);
 let I = {
@@ -116,7 +116,7 @@ function N(e) {
 }
 function Z(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([x.default], () => (t.isDM() ? x.default.getUser(t.getRecipientId()) : null)),
+        i = (0, a.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
         l = null == i ? (0, h.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(s.P3F, {
         onClick: n,
@@ -148,7 +148,7 @@ function T(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
         o = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
         c = (0, a.e7)([O.Z], () => O.Z.getChannel(t.parent_id)),
-        u = (0, a.e7)([C.ZP], () => C.ZP.getIsMentionLowImportance(t.id)),
+        u = (0, a.e7)([x.ZP], () => x.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
         p = (0, f.ZP)(t, !1),
         h =
@@ -217,8 +217,8 @@ function A(e) {
             status: i,
             activities: l,
             applicationStream: o,
-        } = (0, a.cj)([x.default, j.Z, y.Z], () => {
-            let e = x.default.getUser(t.getRecipientId());
+        } = (0, a.cj)([C.default, j.Z, y.Z], () => {
+            let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? j.Z.getStatus(e.id) : null,

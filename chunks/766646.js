@@ -41,9 +41,9 @@ let T = 300000,
     N = !1,
     R = window.document.createElement("canvas"),
     P = 512,
-    w = 288;
-(R.width = 512), (R.height = w);
-let D = R.getContext("2d");
+    D = 288;
+(R.width = 512), (R.height = D);
+let w = R.getContext("2d");
 function x() {
     C.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
 }
@@ -59,7 +59,7 @@ let L = s().debounce((e, t, n, r) => {
     );
 }, 500);
 function M(e) {
-    let t = Math.min(P / e.width, w / e.height),
+    let t = Math.min(P / e.width, D / e.height),
         n = e.width * t,
         r = e.height * t;
     (R.width = n), (R.height = r);
@@ -70,7 +70,7 @@ function M(e) {
     return (
         null == a || a.putImageData(o, 0, 0),
         new Promise((t) => {
-            null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t();
+            null == w || w.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t();
         })
     );
 }
@@ -128,7 +128,7 @@ function U(e, t) {
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
         a = document.createElement("video"),
         o = document.createElement("canvas");
-    (a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : w), (a.srcObject = n), a.play();
+    (a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : D), (a.srcObject = n), a.play();
     let s = o.getContext("2d");
     return new Promise((e, n) => {
         a.ontimeupdate = () => {

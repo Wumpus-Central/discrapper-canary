@@ -19,50 +19,50 @@ function b() {
         [n, l] = g.TT(t),
         [b, x] = g.F2(t),
         j = (0, c.oC)(t),
-        { options: v } = (0, p.Z)(null != (e = null == j ? void 0 : j.active_trial) ? e : null),
-        _ = (0, m.Z)(),
-        C = null != n,
-        O = i.useCallback(
+        { options: _ } = (0, p.Z)(null != (e = null == j ? void 0 : j.active_trial) ? e : null),
+        v = (0, m.Z)(),
+        O = null != n,
+        C = i.useCallback(
             (e) => {
-                let t = v.find((e) => e.isDefault);
+                let t = _.find((e) => e.isDefault);
                 a()(null != t, "Missing default trial duartion option"), l(e ? t.value : null);
             },
-            [l, v],
+            [l, _],
         ),
         y = (0, d.mY)(),
-        E = (0, o.Dt)(),
-        N = (0, o.Dt)();
+        N = (0, o.Dt)(),
+        E = (0, o.Dt)();
     return (0, r.jsxs)(f.Z, {
         title: h.intl.string(h.t["6anton"]),
         description: h.intl.string(h.t.urVijS),
         children: [
             (0, r.jsx)(s.rsf, {
                 label: h.intl.string(h.t["+hTmdb"]),
-                checked: C,
-                onChange: (e) => O(e),
+                checked: O,
+                onChange: (e) => C(e),
                 disabled: y,
             }),
             (0, r.jsx)(s.q4e, {
                 label: h.intl.string(h.t.m1KuWd),
                 description: h.intl.string(h.t.NB9NLF),
-                "aria-labelledby": E,
-                options: v,
+                "aria-labelledby": N,
+                options: _,
                 placeholder: h.intl.string(h.t.WZG1BU),
                 value: n,
                 onChange: l,
                 maxVisibleItems: 5,
-                isDisabled: !C || y,
+                isDisabled: !O || y,
             }),
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsx)(s.q4e, {
                 label: h.intl.string(h.t["/JD9oe"]),
                 description: h.intl.string(h.t.Cg5eBm),
-                "aria-labelledby": N,
-                options: _,
+                "aria-labelledby": E,
+                options: v,
                 value: b,
                 onChange: x,
                 maxVisibleItems: 5,
-                isDisabled: !C || y,
+                isDisabled: !O || y,
             }),
         ],
     });

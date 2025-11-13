@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { Z: () => S });
 var i = n(100527),
     l = n(509613),
     u = n(208049),
@@ -8,7 +8,7 @@ var i = n(100527),
     o = n(313789),
     c = n(981631),
     E = n(388032);
-let d = (0, l.UO)(o.n.SOUNDBOARD_VOLUME_SETTING, {
+let S = (0, l.UO)(o.n.SOUNDBOARD_VOLUME_SETTING, {
     useTitle: () => E.intl.string(E.t.kbFsAD),
     useSubtitle: () => E.intl.format(E.t.BPbGq7, { helpCenterArticle: s.Z.getArticleURL(c.BhN.SOUNDBOARD) }),
     minValue: 0,

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(769140),
     v = n(864141),
     I = n(228168),
-    S = n(231338),
-    T = n(388032),
+    T = n(231338),
+    S = n(388032),
     A = n(31948);
 function C(e, t, n) {
     return (
@@ -75,8 +75,8 @@ function P(e, t) {
         e
     );
 }
-let w = 250,
-    D = 24;
+let D = 250,
+    w = 24;
 function x(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
@@ -115,7 +115,7 @@ function M(e) {
         B = t.id === n.id,
         Z = (0, s.e7)([p.Z, _.Z], () => {
             let e = B ? p.Z.getStatus() : _.Z.getStatus(t.id, a);
-            return e === S.Sk.OFFLINE || e === S.Sk.INVISIBLE;
+            return e === T.Sk.OFFLINE || e === T.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, u.U)({ location: "UserProfileStackedActivity" }),
         V = F && null == k && null == G && null != U,
@@ -156,7 +156,7 @@ function M(e) {
                                   h({ section: I.oh.ACTIVITY });
                           },
                           variant: "secondary",
-                          text: T.intl.string(T.t.pD1L1u),
+                          text: S.intl.string(S.t.pD1L1u),
                           textVariant: "text-xs/medium",
                       }),
                   })
@@ -176,7 +176,7 @@ function M(e) {
                 requestAnimationFrame(() => {
                     Q({
                         type: "START_EXPAND_ANIMATION",
-                        height: e + t - D,
+                        height: e + t - w,
                     }),
                         (q.current = setTimeout(() => {
                             var e;
@@ -185,7 +185,7 @@ function M(e) {
                                 height: "auto",
                             }),
                                 null == (e = K.current) || e.focus();
-                        }, w));
+                        }, D));
                 });
         }, [P, M]);
     return ((0, c.zq)(() => {
@@ -199,7 +199,7 @@ function M(e) {
                   (0, r.jsx)(l.nn4, {
                       children: (0, r.jsx)(l.H, {
                           id: R,
-                          children: T.intl.string(T.t.J6STd9),
+                          children: S.intl.string(S.t.J6STd9),
                       }),
                   }),
                   (0, r.jsxs)("div", {
@@ -231,7 +231,7 @@ function M(e) {
                                                       children: (0, r.jsx)(l.Text, {
                                                           variant: "text-xs/medium",
                                                           color: "none",
-                                                          children: T.intl.format(T.t.wv8Q7k, {
+                                                          children: S.intl.format(S.t.wv8Q7k, {
                                                               activitiesCount: ea.length,
                                                           }),
                                                       }),

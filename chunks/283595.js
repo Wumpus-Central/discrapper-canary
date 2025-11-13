@@ -89,11 +89,11 @@ function R(e) {
 function P() {
     y = !1;
 }
-function w(e) {
+function D(e) {
     let { libraryApplications: t } = e;
     (O = {}), R(t), (y = !0);
 }
-function D(e) {
+function w(e) {
     let { libraryApplications: t } = e;
     R(t);
 }
@@ -213,8 +213,8 @@ class F extends (r = o.ZP.Store) {
 p(F, "displayName", "LibraryApplicationStore");
 let V = new F(l.Z, {
     LOGOUT: P,
-    LIBRARY_FETCH_SUCCESS: w,
-    SKU_PURCHASE_SUCCESS: D,
+    LIBRARY_FETCH_SUCCESS: D,
+    SKU_PURCHASE_SUCCESS: w,
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: x,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     LIBRARY_APPLICATION_UPDATE: L,

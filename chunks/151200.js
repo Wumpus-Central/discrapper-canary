@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -126,7 +126,7 @@ function I(e) {
         ],
     });
 }
-function S(e) {
+function T(e) {
     var { clickable: t } = e,
         n = O(e, ["clickable"]);
     return (0, r.jsx)(
@@ -137,7 +137,7 @@ function S(e) {
         }),
     );
 }
-function T(e) {
+function S(e) {
     let {
             entry: t,
             channel: n,
@@ -148,12 +148,12 @@ function T(e) {
             subtitleClickable: y,
             thumbnailClickable: O,
             providerIconProps: v,
-            style: T = {},
+            style: S = {},
         } = e,
         A = (0, f.Dt)(),
         { primaryColor: C, secondaryColor: N } = (0, u.Z)(g);
     return (
-        null != g && (T.background = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")")),
+        null != g && (S.background = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")")),
         (0, r.jsx)(o.f6W, {
             theme: _.BR.DARK,
             disableAdaptiveTheme: !0,
@@ -162,7 +162,7 @@ function T(e) {
                     "aria-roledescription": p.intl.string(p.t.zFfUhF),
                     "aria-labelledby": A,
                     className: a()(h.container, e),
-                    style: T,
+                    style: S,
                     children: [
                         (0, r.jsx)(I, {
                             className: h.thumbnailContainer,
@@ -184,7 +184,7 @@ function T(e) {
                                     className: h.users,
                                 }),
                                 (0, r.jsx)(o.LZC, { size: 2 }),
-                                (0, r.jsx)(S, {
+                                (0, r.jsx)(T, {
                                     clickable: b,
                                     className: h.clickableText,
                                     children: (0, r.jsx)(o.Heading, {
@@ -200,7 +200,7 @@ function T(e) {
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(o.LZC, { size: 2 }),
-                                              (0, r.jsx)(S, {
+                                              (0, r.jsx)(T, {
                                                   clickable: y,
                                                   className: h.clickableText,
                                                   children: (0, r.jsx)(o.Text, {

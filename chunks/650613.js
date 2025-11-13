@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685), n(361932), n(187205);
 var a = n(951288),
     i = n(442837),
-    l = n(481060),
-    r = n(100527),
+    r = n(481060),
+    l = n(100527),
     s = n(892001),
     o = n(594174),
     c = n(719247),
@@ -17,15 +17,15 @@ function g(e) {
         n = (0, i.e7)([o.default], () => o.default.getUser(t));
     return null == n
         ? null
-        : (0, a.jsx)(l.P3F, {
+        : (0, a.jsx)(r.P3F, {
               className: x.entryAuthor,
               onClick: function () {
                   (0, s.openUserProfileModal)({
-                      sourceAnalyticsLocations: [r.Z.DEV_TOOLS],
+                      sourceAnalyticsLocations: [l.Z.DEV_TOOLS],
                       userId: t,
                   });
               },
-              children: (0, a.jsx)(l.Text, {
+              children: (0, a.jsx)(r.Text, {
                   variant: "text-md/semibold",
                   children: n.username,
               }),
@@ -35,7 +35,7 @@ function f() {
     var e;
     let t = (0, i.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
         n = (0, i.e7)([u.Z], () => u.Z.getFilters()),
-        r = (0, i.cj)([c.Z], () => {
+        l = (0, i.cj)([c.Z], () => {
             var e;
             let n = {};
             for (let a of null != (e = null == t ? void 0 : t.entries) ? e : [])
@@ -50,7 +50,7 @@ function f() {
             : e.flatMap((e) => {
                   let { content: t } = e;
                   if (!(0, m.g)(n, t)) return [];
-                  let i = r[(0, c.T)(t)];
+                  let i = l[(0, c.T)(t)];
                   return (0, a.jsxs)(
                       "li",
                       {
@@ -61,17 +61,17 @@ function f() {
                                   id: t.author_id,
                               }),
                               !i &&
-                                  (0, a.jsx)(l.Text, {
+                                  (0, a.jsx)(r.Text, {
                                       variant: "text-md/normal",
                                       children: "Expired or no matching presence",
                                   }),
                               (0, p.n2)(t) &&
-                                  (0, a.jsxs)(l.Text, {
+                                  (0, a.jsxs)(r.Text, {
                                       variant: "text-md/normal",
                                       children: ["Expired at ", t.expires_at],
                                   }),
                               s.has(t.id) &&
-                                  (0, a.jsx)(l.Text, {
+                                  (0, a.jsx)(r.Text, {
                                       variant: "text-md/normal",
                                       children: "Impression capped",
                                   }),
@@ -82,7 +82,7 @@ function f() {
               });
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsx)(l.Heading, {
+            (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 children: "Selected Content",
             }),

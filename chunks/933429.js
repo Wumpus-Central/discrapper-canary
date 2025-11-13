@@ -35,8 +35,8 @@ var r,
     N = n(160404),
     R = n(41776),
     P = n(332473),
-    w = n(30684),
-    D = n(616106),
+    D = n(30684),
+    w = n(616106),
     x = n(2109),
     L = n(518638),
     M = n(1844),
@@ -89,7 +89,7 @@ var r,
     eN = n(46140),
     eR = n(231338),
     eP = n(65154);
-function ew(e, t, n) {
+function eD(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -102,7 +102,7 @@ function ew(e, t, n) {
         e
     );
 }
-function eD(e) {
+function ew(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -113,7 +113,7 @@ function eD(e) {
                 }),
             )),
             r.forEach(function (t) {
-                ew(e, t, n[t]);
+                eD(e, t, n[t]);
             });
     }
     return e;
@@ -669,7 +669,7 @@ let eQ = [
             },
         },
         [eS.kVF.PREMIUM_REACTIVATE]: {
-            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && D.Z.shouldShowReactivateNotice(),
+            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && w.Z.shouldShowReactivateNotice(),
         },
         [eS.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT]: {
             predicate: (e) => {
@@ -752,7 +752,7 @@ let eQ = [
                 var t;
                 let { currentUser: n } = e,
                     r = null != (t = eh.Z.paymentSources) ? t : {};
-                return w.Z.getIsTargeted() && !(0, eO.I5)(n) && 0 !== Object.keys(r).length;
+                return D.Z.getIsTargeted() && !(0, eO.I5)(n) && 0 !== Object.keys(r).length;
             },
         },
         [eS.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -816,7 +816,7 @@ function e0() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eH = eL(eD({}, eV), {
+            eH = eL(ew({}, eV), {
                 type: n,
                 metadata: o,
             });
@@ -883,7 +883,7 @@ class tn extends (r = o.ZP.Store) {
                 q.default,
                 X.Z,
                 Q.Z,
-                w.Z,
+                D.Z,
                 J.Z,
                 h.Z,
                 $.Z,
@@ -914,7 +914,7 @@ class tn extends (r = o.ZP.Store) {
                 F.Z,
                 ec.Z,
                 eu.Z,
-                D.Z,
+                w.Z,
                 em.Z,
                 ed.Z,
                 eb.Z,
@@ -936,7 +936,7 @@ class tn extends (r = o.ZP.Store) {
         return eX(e);
     }
 }
-ew(tn, "displayName", "NoticeStore");
+eD(tn, "displayName", "NoticeStore");
 let tr = new tn(u.Z, {
     CURRENT_USER_UPDATE: e0,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: e0,

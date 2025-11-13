@@ -1,10 +1,10 @@
-a.d(e, { j: () => c });
+a.d(e, { j: () => E });
 var r = a(696486),
     _ = a(793373),
     n = a(622916),
     o = a(454463),
     i = a(163162);
-function c() {
+function E() {
     i.m9 && i.m9.document
         ? i.m9.document.addEventListener("visibilitychange", () => {
               let t = (0, r.HN)();

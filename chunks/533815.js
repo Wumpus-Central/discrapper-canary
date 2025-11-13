@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -9,13 +9,13 @@ var i = n(120356),
     s = n(86419),
     u = n(388032),
     d = n(51708);
-function g(e) {
-    let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: g, buttonRef: f, onRemove: p } = e,
+function f(e) {
+    let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: f, buttonRef: g, onRemove: p } = e,
         { trackUserProfileEditAction: m } = (0, c.KZ)();
     return (0, r.jsx)(l.u, {
         text: u.intl.string(u.t.HUvyDc),
         children: (0, r.jsx)(o.P3F, {
-            innerRef: f,
+            innerRef: g,
             onClick: () => {
                 (0, s.$b)(n, t.applicationId),
                     o.uvj.announce(u.intl.string(u.t["08HmMj"])),
@@ -27,7 +27,7 @@ function g(e) {
                     null == p || p();
             },
             "aria-label": u.intl.string(u.t.HUvyDc),
-            className: a()(g, d.clickable),
+            className: a()(f, d.clickable),
             children: (0, r.jsx)(o.XHJ, {
                 size: i,
                 className: d.icon,

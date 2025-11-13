@@ -10,17 +10,17 @@ var r = n(951288),
     d = n(563593),
     p = n(981631),
     f = n(388032);
-let m = (0, o.GSL)(u.Z),
-    h = (0, o.GSL)(d.Z),
-    g = new Set([p.TzF.PUSHING, p.TzF.PULLING]),
+let h = (0, o.GSL)(u.Z),
+    g = (0, o.GSL)(d.Z),
+    m = new Set([p.TzF.PUSHING, p.TzF.PULLING]),
     _ = Object.freeze({
-        [p.TzF.DONE]: m,
-        [p.TzF.PLANNING]: m,
-        [p.TzF.PREPARING]: m,
+        [p.TzF.DONE]: h,
+        [p.TzF.PLANNING]: h,
+        [p.TzF.PREPARING]: h,
         [p.TzF.PUSHING]: o.rG2,
         [p.TzF.PULLING]: o._8t,
-        [p.TzF.CONFLICT]: m,
-        [p.TzF.ERROR]: m,
+        [p.TzF.CONFLICT]: h,
+        [p.TzF.ERROR]: h,
     });
 class b extends i.PureComponent {
     componentDidMount() {
@@ -79,8 +79,8 @@ class b extends i.PureComponent {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
             i = null == e ? { type: p.TzF.DONE } : e,
             l = this.getIsRecentlySynced();
-        (g.has(i.type) || l) && (t.id, this.getStop(i, l));
-        let a = l ? h : _[i.type];
+        (m.has(i.type) || l) && (t.id, this.getStop(i, l));
+        let a = l ? g : _[i.type];
         return (0, r.jsx)(s.u, {
             text: this.getTooltip(i, l),
             children: (0, r.jsx)(a, { className: n }),

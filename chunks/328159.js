@@ -23,15 +23,15 @@ let p = (e) => {
                 placeholder: x,
                 position: j,
             } = e,
-            v = i.useRef(null),
-            [_, C] = i.useState(!1),
-            O = (0, l.e7)([u.Z], () => u.Z.isGuildMetadataLoaded()),
+            _ = i.useRef(null),
+            [v, O] = i.useState(!1),
+            C = (0, l.e7)([u.Z], () => u.Z.isGuildMetadataLoaded()),
             y = (0, r.jsx)(a.yRy, {
-                targetElementRef: v,
+                targetElementRef: _,
                 onRequestClose: () => {
-                    C(!1);
+                    O(!1);
                 },
-                shouldShow: _,
+                shouldShow: v,
                 position: "right",
                 align: "top",
                 animation: a.yRy.Animation.NONE,
@@ -50,7 +50,7 @@ let p = (e) => {
                     (0, r.jsx)(o.Z, {
                         active: !1,
                         onClick: () => {
-                            C(!0);
+                            O(!0);
                         },
                         tabIndex: 0,
                         renderButtonContents:
@@ -61,7 +61,7 @@ let p = (e) => {
                                           animated: !1,
                                       })
                                 : null,
-                        ref: v,
+                        ref: _,
                     }),
             });
         return (0, r.jsx)(
@@ -82,7 +82,7 @@ let p = (e) => {
                 clearable: { show: (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d },
                 onClear: f,
             },
-            "text-input-".concat(j, "-").concat(O),
+            "text-input-".concat(j, "-").concat(C),
         );
     },
     f = (e) => {

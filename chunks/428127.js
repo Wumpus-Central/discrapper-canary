@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(358458),
+    a = n(509442),
     s = n(442837),
     c = n(481060),
     u = n(492162),
@@ -66,20 +66,20 @@ function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
         { bottomBar: h, topBar: y } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
         O = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? h : y,
-        x = v === f.x.HIDDEN,
+        { mode: v, mentionCount: j, targetChannelId: x } = "bottom" === t ? h : y,
+        C = v === f.x.HIDDEN,
         E = (0, c.q_F)(
             {
-                to: { transform: x ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
+                to: { transform: C ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: b,
             },
             O ? "respect-motion-settings" : "animate-never",
         ),
         S = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != C && d(C);
+                e.preventDefault(), e.stopPropagation(), null != x && d(x);
             },
-            [d, C],
+            [d, x],
         );
     return (0, r.jsx)("div", {
         className: o()(m.container, {
@@ -89,7 +89,7 @@ function y(e) {
         children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
             style: E,
-            "aria-hidden": x,
+            "aria-hidden": C,
             children:
                 v === f.x.HIDDEN
                     ? (0, r.jsx)("div", { className: o()(m.bar, m.emptyBar) })

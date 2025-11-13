@@ -45,8 +45,8 @@ var r,
     N = n(581364),
     R = n(807169),
     P = n(104793),
-    w = n(689079),
-    D = n(981631);
+    D = n(689079),
+    w = n(981631);
 function x(e, t, n) {
     return (
         t in e
@@ -242,7 +242,7 @@ function er(e) {
     }
     for (let e of ("guild" === i.type && u.size > 0 && c.Z.requestMembersById(i.guildId, [...u]),
     (0, N.nG)(
-        a.application_commands.map((e) => ew(e, o)),
+        a.application_commands.map((e) => eD(e, o)),
         !0,
     ))) {
         let t = s[e.applicationId];
@@ -450,7 +450,7 @@ class e_ extends (r = s.ZP.Store) {
                 c &&
                 null != r &&
                 eC(r) &&
-                (y.default.track(D.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                (y.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                     miss: null == i.result,
                     size: Object.keys(ep.indices).length,
                 }),
@@ -547,7 +547,7 @@ function em(e, t, n) {
                 n &&
                     t &&
                     eC(e.channel) &&
-                    (y.default.track(D.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (y.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == o.result,
                         size: Object.keys(ep.indices).length,
                     }),
@@ -578,7 +578,7 @@ function eg(e, t) {
             n &&
                 null != e &&
                 (t &&
-                    (y.default.track(D.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (y.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == a.result,
                         size: Object.keys(ep.indices).length,
                     }),
@@ -650,7 +650,7 @@ function ev(e, t, n, r) {
                 let n = T.ZP.getScoreWithoutLoadingLatest(c, e);
                 return T.ZP.getScoreWithoutLoadingLatest(c, t) - n;
             })
-            .splice(0, w.hz);
+            .splice(0, D.hz);
         return 0 === e.length
             ? {
                   descriptors: a,
@@ -659,11 +659,11 @@ function ev(e, t, n, r) {
                   loading: l,
               }
             : {
-                  descriptors: [v.Tm[w.bi.FRECENCY], ...a],
+                  descriptors: [v.Tm[D.bi.FRECENCY], ...a],
                   commands: e.concat(o),
                   sectionedCommands: [
                       {
-                          section: v.Tm[w.bi.FRECENCY],
+                          section: v.Tm[D.bi.FRECENCY],
                           data: e,
                       },
                       ...s,
@@ -747,7 +747,7 @@ function eS(e) {
         N = null == p ? void 0 : p.toLowerCase(),
         R = null == N ? void 0 : N.split(" "),
         P = m === A.D.ONLY_TEXT,
-        D = m !== A.D.DENY ? (0, v.Kh)(C, !0, P) : [],
+        w = m !== A.D.DENY ? (0, v.Kh)(C, !0, P) : [],
         x = [],
         M = {
             permissionContext: c,
@@ -822,9 +822,9 @@ function eS(e) {
             }
             return ek(e.section.name, t.section.name);
         }),
-        D.length > 0 || !0 === y)
+        w.length > 0 || !0 === y)
     ) {
-        let e = eA(v.Tm[w.bi.BUILT_IN], D, !0, !0, M);
+        let e = eA(v.Tm[D.bi.BUILT_IN], w, !0, !0, M);
         null != e && x.push(e);
     }
     let Z = x.flatMap((e) => e.data.map((t) => j(L({}, t), { section: e.section })));
@@ -898,7 +898,7 @@ function eC(e) {
     var t;
     return (
         (null == e ? void 0 : e.guild_id) != null ||
-        (e.type === D.d4z.DM && (null == (t = b.default.getUser(e.getRecipientId())) ? void 0 : t.bot) === !0)
+        (e.type === w.d4z.DM && (null == (t = b.default.getUser(e.getRecipientId())) ? void 0 : t.bot) === !0)
     );
 }
 function eN(e) {
@@ -920,13 +920,13 @@ function eP(e) {
         flags: e.flags,
     };
 }
-function ew(e, t) {
+function eD(e, t) {
     var n, r, i, a, o;
     let s = j(L({}, e), {
         description: null != (i = null != (r = e.description_default) ? r : e.description) ? i : "",
         dm_permission: e.dm_permission,
         name: null != (a = e.name_default) ? a : e.name,
-        options: null != (o = null == (n = e.options) ? void 0 : n.map(eD)) ? o : [],
+        options: null != (o = null == (n = e.options) ? void 0 : n.map(ew)) ? o : [],
         permissions: null != e.permissions ? eL(e.permissions, t) : void 0,
     });
     return (
@@ -935,13 +935,13 @@ function ew(e, t) {
         s
     );
 }
-function eD(e) {
+function ew(e) {
     var t, n, r, i;
     let a = j(L({}, e), {
         choices: null == (t = e.choices) ? void 0 : t.map(ex),
         description: null != (r = e.description_default) ? r : e.description,
         name: null != (i = e.name_default) ? i : e.name,
-        options: null == (n = e.options) ? void 0 : n.map(eD),
+        options: null == (n = e.options) ? void 0 : n.map(ew),
     });
     return (
         e.description !== e.description_default && (a.description_localized = e.description),
@@ -1042,9 +1042,9 @@ function eU(e, t) {
 function eG(e, t) {
     var n, r, i, a, o, s;
     let l, c;
-    if (t === w.bi.BUILT_IN)
+    if (t === D.bi.BUILT_IN)
         return {
-            descriptor: v.Tm[w.bi.BUILT_IN],
+            descriptor: v.Tm[D.bi.BUILT_IN],
             sectionCommands: (0, v.Kh)([u.yU.CHAT], !0, !1),
             isGuildInstalled: !0,
             isUserInstalled: !0,

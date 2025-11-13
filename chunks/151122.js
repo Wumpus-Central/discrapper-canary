@@ -1,9 +1,9 @@
 a.d(e, {
     M5: () => I,
-    _I: () => u,
+    _I: () => R,
     m7: () => l,
-    m8: () => c,
-    q4: () => E,
+    m8: () => E,
+    q4: () => c,
     uf: () => s,
 });
 var r = a(394798),
@@ -11,7 +11,7 @@ var r = a(394798),
     n = a(263449),
     o = a(255768);
 let i = [];
-function c(t) {
+function E(t) {
     let e = t.defaultIntegrations || [],
         a = t.integrations;
     e.forEach((t) => {
@@ -35,7 +35,7 @@ function c(t) {
     }
     return _;
 }
-function E(t, e) {
+function c(t, e) {
     let a = {};
     return (
         e.forEach((e) => {
@@ -76,6 +76,6 @@ function I(t) {
     }
     e.addIntegration(t);
 }
-function u(t) {
+function R(t) {
     return t;
 }

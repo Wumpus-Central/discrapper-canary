@@ -4,12 +4,12 @@ var r = a(263449),
     n = a(151122),
     o = a(899517),
     i = a(694043);
-let c = o.n,
-    E = new WeakMap(),
+let E = o.n,
+    c = new WeakMap(),
     s = (0, n._I)((t = {}) => {
         let e = t.types || ["crash", "deprecation", "intervention"];
         function a(t) {
-            if (E.has((0, r.s3)()))
+            if (c.has((0, r.s3)()))
                 for (let e of t)
                     (0, r.$e)((t) => {
                         t.setExtra("url", e.url);
@@ -30,13 +30,13 @@ let c = o.n,
             name: "ReportingObserver",
             setupOnce() {
                 (0, i.zb)() &&
-                    new c.ReportingObserver(a, {
+                    new E.ReportingObserver(a, {
                         buffered: !0,
                         types: e,
                     }).observe();
             },
             setup(t) {
-                E.set(t, !0);
+                c.set(t, !0);
             },
         };
     });

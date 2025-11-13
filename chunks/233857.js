@@ -41,8 +41,8 @@ let m = a.$e(
     U = !1,
     L = !1,
     M = !0,
-    b = !1,
-    x = null,
+    x = !1,
+    b = null,
     v = I.rsA.ALL,
     P = null,
     j = {},
@@ -194,13 +194,13 @@ class F extends (r = o.ZP.Store) {
         return M;
     }
     get hasError() {
-        return b;
+        return x;
     }
     get userIds() {
         return O;
     }
     get userIdFilter() {
-        return x;
+        return b;
     }
     get targetIdFilter() {
         return P;
@@ -233,7 +233,7 @@ let w = new F(u.Z, {
             (D = !1),
             (U = !1),
             (M = !0),
-            (b = !1),
+            (x = !1),
             (N = G(e.logs)),
             (h = e.integrations),
             (f = e.webhooks),
@@ -244,7 +244,7 @@ let w = new F(u.Z, {
             e.logs.length < I.Rg9 && (M = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
-        (U = !1), (b = !0), (N = []);
+        (U = !1), (x = !0), (N = []);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
@@ -284,7 +284,7 @@ let w = new F(u.Z, {
     },
     AUDIT_LOG_FILTER_BY_USER: function (e) {
         let { userId: t } = e;
-        x = t;
+        b = t;
     },
     AUDIT_LOG_FILTER_BY_TARGET: function (e) {
         let { targetId: t } = e;
@@ -299,7 +299,7 @@ let w = new F(u.Z, {
         (N = []),
             (O = []),
             (v = I.rsA.ALL),
-            (x = null),
+            (b = null),
             (P = null),
             (j = {}),
             (y = 0),

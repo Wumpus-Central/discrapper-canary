@@ -56,13 +56,13 @@ let a = [n(123353)],
     };
 function u(e) {
     let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = s, confettiConfig: f } = e,
-        [m, h] = i.useState(null),
-        [g, _] = i.useState(null),
-        b = (0, l.uR)(g, m),
+        [h, g] = i.useState(null),
+        [m, _] = i.useState(null),
+        b = (0, l.uR)(m, h),
         E = i.useMemo(() => new l.qA({ wind: u }), [u]),
         O = i.useCallback(() => {
             var e, t;
-            let n = null == g ? void 0 : g.getCanvas();
+            let n = null == m ? void 0 : m.getCanvas();
             if (null == n) return;
             let r = n.getBoundingClientRect();
             b.createConfetti(
@@ -119,7 +119,7 @@ function u(e) {
                       }),
                 e),
             );
-        }, [b, g, f]);
+        }, [b, m, f]);
     return (
         i.useEffect(() => {
             let e = n ? setInterval(O, o) : null;
@@ -133,7 +133,7 @@ function u(e) {
                     environment: E,
                 }),
                 (0, r.jsx)(l.Ji, {
-                    ref: h,
+                    ref: g,
                     colors: p,
                     sprites: d,
                     spriteWidth: 6,

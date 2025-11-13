@@ -26,8 +26,8 @@ var r = n(951288),
     O = n(726985),
     v = n(981631),
     I = n(65154),
-    S = n(388032),
-    T = n(197571);
+    T = n(388032),
+    S = n(197571);
 function A(e, t, n) {
     return (
         t in e
@@ -84,9 +84,9 @@ async function P() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
-function w() {
-    let e = S.intl.string(S.t["fKBB8+"]),
-        t = S.intl.string(S.t.BvyxE7);
+function D() {
+    let e = T.intl.string(T.t["fKBB8+"]),
+        t = T.intl.string(T.t.BvyxE7);
     (0, s.h7j)((n) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -95,7 +95,7 @@ function w() {
                     {
                         header: e,
                         confirmButtonColor: o.zx.Colors.BRAND,
-                        confirmText: S.intl.string(S.t.BddRzS),
+                        confirmText: T.intl.string(T.t.BddRzS),
                     },
                     n,
                 ),
@@ -109,12 +109,12 @@ function w() {
         ),
     );
 }
-function D(e) {
+function w(e) {
     var t;
-    let n = S.intl.string(S.t.QZg0J7),
-        i = null != e ? e : S.intl.string(S.t.VzHcSm),
+    let n = T.intl.string(T.t.QZg0J7),
+        i = null != e ? e : T.intl.string(T.t.VzHcSm),
         a = null == (t = (0, p.hp)(p.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
-        l = S.intl.formatToPlainString(S.t.ejOT95, { errorCode: a });
+        l = T.intl.formatToPlainString(T.t.ejOT95, { errorCode: a });
     (0, s.h7j)((e) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -123,7 +123,7 @@ function D(e) {
                     {
                         header: n,
                         confirmButtonColor: o.zx.Colors.BRAND,
-                        confirmText: S.intl.string(S.t.BddRzS),
+                        confirmText: T.intl.string(T.t.BddRzS),
                     },
                     e,
                 ),
@@ -159,9 +159,9 @@ function x(e) {
             R(
                 C(
                     {
-                        header: S.intl.string(S.t["7UXEF2"]),
-                        confirmText: S.intl.string(S.t.BddRzS),
-                        cancelText: S.intl.string(S.t["ETE/oC"]),
+                        header: T.intl.string(T.t["7UXEF2"]),
+                        confirmText: T.intl.string(T.t.BddRzS),
+                        cancelText: T.intl.string(T.t["ETE/oC"]),
                         onCancel: t.onClose,
                         onConfirm: () => l.Z.setDebugLogging(e),
                     },
@@ -170,7 +170,7 @@ function x(e) {
                 {
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
-                        children: S.intl.string(S.t.IYPrRl),
+                        children: T.intl.string(T.t.IYPrRl),
                     }),
                 },
             ),
@@ -184,9 +184,9 @@ async function L(e) {
         await g.Z.getMediaEngine().writeAudioDebugState(),
             await b.Z.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
             await (0, _.E)(v.GU0.RTC),
-            w();
+            D();
     } catch (e) {
-        D(e.displayMessage);
+        w(e.displayMessage);
     } finally {
         null == n || n();
     }
@@ -209,8 +209,8 @@ function M() {
             (0, r.jsx)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, r.jsx)(s.rsf, {
-                    label: S.intl.string(S.t["0CEP6e"]),
-                    description: S.intl.string(S.t["kBXuW+"]),
+                    label: T.intl.string(T.t["0CEP6e"]),
+                    description: T.intl.string(T.t["kBXuW+"]),
                     checked: d,
                     onChange: (e) => {
                         (0, y.Z)("stream_info_overlay_enabled", e, d), (0, c.y)({ isStreamInfoOverlayEnabled: e });
@@ -220,8 +220,8 @@ function M() {
             (0, r.jsx)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, r.jsx)(s.rsf, {
-                    label: S.intl.string(S.t["r6K+TL"]),
-                    description: S.intl.string(S.t["xl9+I6"]),
+                    label: T.intl.string(T.t["r6K+TL"]),
+                    description: T.intl.string(T.t["xl9+I6"]),
                     checked: o,
                     onChange: (e) => l.Z.setAecDump(e),
                 }),
@@ -230,20 +230,20 @@ function M() {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, r.jsx)(s.rsf, {
-                        label: S.intl.string(S.t.U4FgFK),
-                        description: S.intl.string(S.t.Lm72RU),
+                        label: T.intl.string(T.t.U4FgFK),
+                        description: T.intl.string(T.t.Lm72RU),
                         checked: _,
                         onChange: (e) => u.TC(e),
                     }),
                     (0, r.jsx)(f.Z, {
-                        className: T.marginBottom20,
+                        className: S.marginBottom20,
                         children: (0, r.jsx)(f.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: S.intl.string(S.t.nJnOHO),
+                                text: T.intl.string(T.t.nJnOHO),
                                 onClick: () => u.z4(),
                             }),
                         }),
@@ -255,8 +255,8 @@ function M() {
                 children: (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: S.intl.string(S.t["726JHL"]),
-                            description: S.intl.string(S.t["/7ak9Q"]),
+                            label: T.intl.string(T.t["726JHL"]),
+                            description: T.intl.string(T.t["/7ak9Q"]),
                             checked: n,
                             onChange: x,
                         }),
@@ -265,13 +265,13 @@ function M() {
                             children: [
                                 (0, r.jsx)(s.Button, {
                                     variant: "primary",
-                                    text: S.intl.string(S.t["3UB9ad"]),
+                                    text: T.intl.string(T.t["3UB9ad"]),
                                     disabled: e,
                                     onClick: p,
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     variant: "secondary",
-                                    text: S.intl.string(S.t.nuPtYi),
+                                    text: T.intl.string(T.t.nuPtYi),
                                     onClick: P,
                                 }),
                             ],

@@ -131,7 +131,7 @@ function b(e) {
                       }),
             [n, v, T, y],
         ),
-        w = i.useCallback(() => {
+        D = i.useCallback(() => {
             if (null == n || null == v) return;
             let e = (0, d.KZ)(n, {
                 blockId: v,
@@ -141,9 +141,9 @@ function b(e) {
             b(t, P), e.isComplete && l.ZP.submitSurveyResponse(t, y, {}), I(e.blockId), S(e.pageIndex), C(e.isComplete);
         }, [n, v, T, y, t, P, b]);
     i.useEffect(() => {
-        0 === P.length && w();
-    }, [P, w]);
-    let D = (e) =>
+        0 === P.length && D();
+    }, [P, D]);
+    let w = (e) =>
             0 === P.length
                 ? null
                 : (0, r.jsx)("div", {
@@ -212,13 +212,13 @@ function b(e) {
                   {
                       variant: "primary",
                       text: _.intl.string(_.t.PDTjLN),
-                      onClick: w,
+                      onClick: D,
                       disabled: !x,
                   },
               ],
               children: (0, r.jsx)("div", {
                   style: { width: "100%" },
-                  children: D(n),
+                  children: w(n),
               }),
           });
 }

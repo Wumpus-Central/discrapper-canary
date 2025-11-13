@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(100527),
     p = n(906732),
     f = n(316243),
-    m = n(720734),
-    h = n(840780),
-    g = n(235555),
+    h = n(720734),
+    g = n(840780),
+    m = n(235555),
     _ = n(746508),
     b = n(210724),
     E = n(905423),
     O = n(981631),
-    I = n(388032),
-    y = n(822338);
-function v(e) {
+    y = n(388032),
+    v = n(822338);
+function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, p.ZP)(d.Z.ACTIVITY_PANEL),
         l = (0, E.Z)((e) => {
@@ -29,7 +29,7 @@ function v(e) {
     return (0, r.jsx)(p.Gt, {
         value: i,
         children: (0, r.jsx)(
-            h.Z,
+            g.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -85,17 +85,17 @@ let C = i.memo(function () {
     let { isSorting: t } = (0, f.Z)();
     return (0, r.jsx)("section", {
         ref: e,
-        className: a()(y.panels, { [y.disablePointersWhileSorting]: t }),
-        "aria-label": I.intl.string(I.t.StREWK),
+        className: a()(v.panels, { [v.disablePointersWhileSorting]: t }),
+        "aria-label": y.intl.string(y.t.StREWK),
         children: (0, r.jsxs)(s.JcV, {
             containerRef: e,
             children: [
                 (0, r.jsx)(o.Z, {}),
                 (0, r.jsx)(b.Z, {}),
-                (0, r.jsx)(g.Z, {}),
+                (0, r.jsx)(m.Z, {}),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACTIVITY_PANEL,
-                    children: (0, r.jsx)(v, { className: y.activityPanel }),
+                    children: (0, r.jsx)(I, { className: v.activityPanel }),
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.RTC_CONNECTION_PANEL,
@@ -103,7 +103,7 @@ let C = i.memo(function () {
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACCOUNT_PANEL,
-                    children: (0, r.jsx)(m.Z, {}),
+                    children: (0, r.jsx)(h.Z, {}),
                 }),
             ],
         }),

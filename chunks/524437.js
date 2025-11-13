@@ -26,7 +26,7 @@ n.d(t, {
     l1: () => S,
     n9: () => A,
     nI: () => d,
-    o8: () => D,
+    o8: () => w,
     os: () => j,
     p5: () => H,
     sf: () => ep,
@@ -265,7 +265,7 @@ var r = n(230367),
             e
         );
     })({});
-class w extends o.C {
+class D extends o.C {
     create(e) {
         let t = {};
         return (
@@ -338,7 +338,7 @@ class w extends o.C {
                     a.broadcast = e0.internalBinaryRead(e, e.uint32(), n, a.broadcast);
                     break;
                 case 19:
-                    a.clips = e3.internalBinaryRead(e, e.uint32(), n, a.clips);
+                    a.clips = e2.internalBinaryRead(e, e.uint32(), n, a.clips);
                     break;
                 case 20:
                     a.forLater = e5.internalBinaryRead(e, e.uint32(), n, a.forLater);
@@ -390,7 +390,7 @@ class w extends o.C {
                 eW.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
             e.communities && ez.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             e.broadcast && e0.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
-            e.clips && e3.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
+            e.clips && e2.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
             e.forLater && e5.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
                 e4.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
@@ -517,7 +517,7 @@ class w extends o.C {
                 no: 19,
                 name: "clips",
                 kind: "message",
-                T: () => e3,
+                T: () => e2,
             },
             {
                 no: 20,
@@ -558,7 +558,7 @@ class w extends o.C {
         ]);
     }
 }
-let D = new w();
+let w = new D();
 class x extends o.C {
     create(e) {
         let t = {
@@ -3837,7 +3837,7 @@ class eR extends o.C {
     }
 }
 let eP = new eR();
-class ew extends o.C {
+class eD extends o.C {
     create(e) {
         let t = {
             colors: [],
@@ -3929,7 +3929,7 @@ class ew extends o.C {
         ]);
     }
 }
-let eD = new ew();
+let ew = new eD();
 class ex extends o.C {
     create(e) {
         let t = {};
@@ -3957,7 +3957,7 @@ class ex extends o.C {
                     );
                     break;
                 case 4:
-                    a.customUserThemeSettings = eD.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
+                    a.customUserThemeSettings = ew.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -3975,7 +3975,7 @@ class ex extends o.C {
         e.backgroundGradientPresetId &&
             s.yC.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                eD.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+                ew.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3991,7 +3991,7 @@ class ex extends o.C {
                 no: 4,
                 name: "custom_user_theme_settings",
                 kind: "message",
-                T: () => eD,
+                T: () => ew,
             },
         ]);
     }
@@ -4847,8 +4847,8 @@ class e1 extends o.C {
         ]);
     }
 }
-let e3 = new e1();
-class e2 extends o.C {
+let e2 = new e1();
+class e3 extends o.C {
     create(e) {
         let t = {
             safetySettingsPreset: 0,
@@ -4910,7 +4910,7 @@ class e2 extends o.C {
         ]);
     }
 }
-let e4 = new e2();
+let e4 = new e3();
 class e8 extends o.C {
     create(e) {
         let t = { currentTab: 0 };

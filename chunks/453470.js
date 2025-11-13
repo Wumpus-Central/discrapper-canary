@@ -1,6 +1,6 @@
-n.d(t, { M: () => C }), n(953529);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { M: () => v }), n(953529);
+var i = n(951288),
+    r = n(647438),
     l = n(286379),
     a = n(481060),
     o = n(87051),
@@ -9,67 +9,67 @@ var r = n(951288),
     u = n(819557),
     d = n(138201),
     p = n(378298),
-    f = n(359119),
-    h = n(473092),
+    h = n(359119),
+    f = n(473092),
     m = n(177342),
     g = n(621600),
     b = n(870991),
-    _ = n(981631),
-    y = n(388032);
-function C(e) {
-    let { channelId: t, warningId: C, senderId: v } = e,
-        O = (0, b.E4)(),
-        x = i.useCallback(() => {
-            (0, p.T)(t, [C]);
-        }, [t, C]),
-        E = (e) => {
+    y = n(981631),
+    C = n(388032);
+function v(e) {
+    let { channelId: t, warningId: v, senderId: _ } = e,
+        x = (0, b.E4)(),
+        j = r.useCallback(() => {
+            (0, p.T)(t, [v]);
+        }, [t, v]),
+        O = (e) => {
             o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
-                c.Z.showMuteSuccessToast(v, t),
-                (0, h.qc)({
+                c.Z.showMuteSuccessToast(_, t),
+                (0, f.qc)({
                     channelId: t,
-                    warningId: C,
-                    senderId: v,
-                    warningType: f.pj.LIKELY_ATO,
+                    warningId: v,
+                    senderId: _,
+                    warningType: h.pj.LIKELY_ATO,
                     cta: e,
                 }),
-                x();
+                j();
         };
     return (
-        i.useEffect(() => {
-            (0, h.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
+        r.useEffect(() => {
+            (0, f.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
-                warningId: C,
-                senderId: v,
-                warningType: f.pj.LIKELY_ATO,
+                warningId: v,
+                senderId: _,
+                warningType: h.pj.LIKELY_ATO,
             }),
                 s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-        }, [t, C, v]),
-        (0, r.jsx)(m.Q, {
+        }, [t, v, _]),
+        (0, i.jsx)(m.Q, {
             channelId: t,
-            warningId: C,
-            senderId: v,
-            warningType: f.pj.LIKELY_ATO,
-            header: y.intl.string(y.t.R8UsiI),
-            description: y.intl.string(y.t.lI8nQl),
-            onDismiss: x,
+            warningId: v,
+            senderId: _,
+            warningType: h.pj.LIKELY_ATO,
+            header: C.intl.string(C.t.R8UsiI),
+            description: C.intl.string(C.t.lI8nQl),
+            onDismiss: j,
             buttons: [
                 {
-                    text: y.intl.string(y.t.tC1pvL),
+                    text: C.intl.string(C.t.tC1pvL),
                     variant: "primary",
                     onClick: () => {
                         (0, a.ZDy)(async () => {
                             let { default: e } = await n.e("59385").then(n.bind(n, 480884));
                             return (n) => {
-                                let { transitionState: i, onClose: l } = n;
-                                return (0, r.jsx)(e, {
-                                    transitionState: i,
+                                let { transitionState: r, onClose: l } = n;
+                                return (0, i.jsx)(e, {
+                                    transitionState: r,
                                     onClose: l,
                                     channelId: t,
-                                    warningId: C,
-                                    senderId: v,
-                                    description: y.intl.string(y.t["/uid3p"]),
-                                    safetyTipRows: O.map((e, t) =>
-                                        (0, r.jsx)(
+                                    warningId: v,
+                                    senderId: _,
+                                    description: C.intl.string(C.t["/uid3p"]),
+                                    safetyTipRows: x.map((e, t) =>
+                                        (0, i.jsx)(
                                             u.q,
                                             {
                                                 listType: "numbered",
@@ -81,49 +81,49 @@ function C(e) {
                                         ),
                                     ),
                                     actionRows: [
-                                        (0, r.jsx)(
+                                        (0, i.jsx)(
                                             d.JZ,
                                             {
-                                                title: y.intl.string(y.t.ftIK2A),
-                                                description: y.intl.string(y.t.w2ve0t),
-                                                buttonText: y.intl.string(y.t.ftIK2A),
+                                                title: C.intl.string(C.t.ftIK2A),
+                                                description: C.intl.string(C.t.w2ve0t),
+                                                buttonText: C.intl.string(C.t.ftIK2A),
                                                 onButtonPress: () => {
-                                                    E(h.NM.USER_MODAL_MUTE), l();
+                                                    O(f.NM.USER_MODAL_MUTE), l();
                                                 },
                                             },
                                             "likely-ato-mute",
                                         ),
                                     ],
-                                    learnMore: (0, r.jsx)(a.P3F, {
+                                    learnMore: (0, i.jsx)(a.P3F, {
                                         onClick: () =>
-                                            (0, h.qc)({
+                                            (0, f.qc)({
                                                 channelId: t,
-                                                warningId: C,
-                                                senderId: v,
-                                                warningType: f.pj.LIKELY_ATO,
-                                                cta: h.NM.USER_MODAL_LEARN_MORE,
+                                                warningId: v,
+                                                senderId: _,
+                                                warningType: h.pj.LIKELY_ATO,
+                                                cta: f.NM.USER_MODAL_LEARN_MORE,
                                             }),
-                                        children: (0, r.jsx)(a.Heading, {
+                                        children: (0, i.jsx)(a.Heading, {
                                             variant: "heading-sm/medium",
                                             color: "text-link",
-                                            children: y.intl.format(y.t.UkH122, { learnMoreLink: b.D8 }),
+                                            children: C.intl.format(C.t.UkH122, { learnMoreLink: b.D8 }),
                                         }),
                                     }),
                                 });
                             };
                         }),
-                            (0, h.qc)({
+                            (0, f.qc)({
                                 channelId: t,
-                                warningId: C,
-                                senderId: v,
-                                warningType: f.pj.LIKELY_ATO,
-                                cta: h.NM.OPEN_MORE_TIPS,
+                                warningId: v,
+                                senderId: _,
+                                warningType: h.pj.LIKELY_ATO,
+                                cta: f.NM.OPEN_MORE_TIPS,
                             });
                     },
                 },
                 {
-                    text: y.intl.string(y.t.ftIK2A),
-                    onClick: () => E(h.NM.USER_BANNER_MUTE),
+                    text: C.intl.string(C.t.ftIK2A),
+                    onClick: () => O(f.NM.USER_BANNER_MUTE),
                 },
             ],
         })

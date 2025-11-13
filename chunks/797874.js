@@ -116,7 +116,7 @@ let S = function (e) {
                 return (t) => (0, r.jsx)(e, v({}, t));
             });
         }, []),
-        w = null != I ? "@game ".concat(I.name) : void 0;
+        D = null != I ? "@game ".concat(I.name) : void 0;
     return (0, r.jsx)(_.Z, {
         applicationId: t,
         targetElementRef: O,
@@ -126,8 +126,8 @@ let S = function (e) {
             return (0, r.jsx)(l.u, {
                 asContainer: !0,
                 tag: "span",
-                text: w,
-                "aria-label": w,
+                text: D,
+                "aria-label": D,
                 delay: 750,
                 children: (0, r.jsxs)(
                     g.Z,

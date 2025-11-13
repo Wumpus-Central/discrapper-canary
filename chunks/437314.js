@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => b,
-    j: () => m,
+    j: () => h,
 }),
     n(415506),
     n(388685);
@@ -27,8 +27,8 @@ function f(e, t, n) {
         e
     );
 }
-var m = (((r = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), r);
-let h = Object.freeze({
+var h = (((r = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), r);
+let g = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -99,7 +99,7 @@ let h = Object.freeze({
             renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["7sW4h1"]) }),
         },
     }),
-    g = (e) => {
+    m = (e) => {
         let { theme: t } = e,
             n = d.intl.string(d.t["oi+B4p"]);
         return (0, i.jsx)(o.ubH, {
@@ -115,15 +115,15 @@ class _ extends l.PureComponent {
                 switch (e) {
                     case u.pJs.ADD_FRIEND:
                     case u.pJs.ALL:
-                        return h.SECTION_ALL;
+                        return g.SECTION_ALL;
                     case u.pJs.ONLINE:
-                        return h.SECTION_ONLINE;
+                        return g.SECTION_ONLINE;
                     case u.pJs.PENDING:
-                        return h.SECTION_PENDING;
+                        return g.SECTION_PENDING;
                     case u.pJs.SUGGESTIONS:
-                        return h.SECTION_SUGGESTIONS;
+                        return g.SECTION_SUGGESTIONS;
                     case "SECTION_NO_RESULTS":
-                        return h.SECTION_NO_RESULTS;
+                        return g.SECTION_NO_RESULTS;
                     default:
                         throw Error("FriendsEmptyState: Invalid empty state");
                 }
@@ -132,7 +132,7 @@ class _ extends l.PureComponent {
             ? (0, i.jsx)(a.Z.div, {
                   className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsx)(g, { theme: n }),
+                  children: (0, i.jsx)(m, { theme: n }),
               })
             : (0, i.jsx)(a.Z.div, {
                   className: p.friendsEmpty,

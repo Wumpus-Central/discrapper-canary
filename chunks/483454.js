@@ -3,7 +3,7 @@ n.d(t, {
     Q5: () => R,
     hn: () => L,
     p7: () => x,
-    wk: () => w,
+    wk: () => D,
 }),
     n(467055),
     n(388685);
@@ -55,7 +55,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,12 +67,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -172,7 +172,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
             children: t,
         });
     },
-    w = i.memo(function (e) {
+    D = i.memo(function (e) {
         var { options: t, renderAsStandaloneElement: n, billingAddressInfo: o, internalKey: s } = e,
             l = A(e, ["options", "renderAsStandaloneElement", "billingAddressInfo", "internalKey"]);
         let c = i.useMemo(() => {
@@ -221,7 +221,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
               })
             : u;
     }),
-    D = (e) => {
+    w = (e) => {
         let {
                 step: t,
                 billingAddressInfo: n,
@@ -249,7 +249,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
                     }),
                     children: (0, r.jsx)(
                         R,
-                        T(I({}, o), {
+                        S(I({}, o), {
                             step: t,
                             analyticsContext: _,
                         }),
@@ -258,8 +258,8 @@ let N = [f.h8.PAYMENT_ELEMENT],
                 (0, r.jsx)("div", {
                     className: s()(O.addressElementContainer, m ? O.visible : [O.hidden, O.rightToLeftEntry]),
                     children: (0, r.jsx)(
-                        w,
-                        T(I({}, l), {
+                        D,
+                        S(I({}, l), {
                             internalKey: d,
                             renderAsStandaloneElement: u === y.He.PAYMENT_REQUEST,
                             billingAddressInfo: n,
@@ -284,7 +284,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
             : (0, r.jsx)(a.Elements, {
                   stripe: l,
                   options: I({}, i),
-                  children: (0, r.jsx)(D, I({}, n)),
+                  children: (0, r.jsx)(w, I({}, n)),
               });
     },
     M = ["applePay", "googlePay", "link"],
@@ -363,10 +363,10 @@ let N = [f.h8.PAYMENT_ELEMENT],
                 }
             );
         }, [I, r]);
-        let S = i.useCallback(() => {
+        let T = i.useCallback(() => {
                 m(null);
             }, []),
-            [T, A] = i.useState(void 0);
+            [S, A] = i.useState(void 0);
         return {
             shouldRenderPaymentElement: b,
             stripePaymentElementProps: O,
@@ -377,8 +377,8 @@ let N = [f.h8.PAYMENT_ELEMENT],
             paymentElementSelectedType: h,
             setPaymentElementSelectedType: m,
             handlePaymentElementStep: I,
-            onBackFromPaymentElement: S,
-            addressElementKey: T,
+            onBackFromPaymentElement: T,
+            addressElementKey: S,
             remountAddressElement: i.useCallback(() => {
                 A(Date.now().toString());
             }, []),

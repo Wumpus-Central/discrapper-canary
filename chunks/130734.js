@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i = n(442837),
     l = n(433517),
@@ -57,7 +57,7 @@ function f(e) {
     let { guildId: t } = e;
     d = c(o({}, d), { [t]: !1 });
 }
-class m extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     shouldShowGuildTemplateDirtyTooltip(e) {
         var t;
         return null != (t = d[e]) && t;
@@ -66,8 +66,8 @@ class m extends (r = i.ZP.Store) {
         return !p;
     }
 }
-s(m, "displayName", "GuildTemplateTooltipStore");
-let h = new m(a.Z, {
+s(h, "displayName", "GuildTemplateTooltipStore");
+let g = new h(a.Z, {
     GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function (e) {
         let { guildTemplate: t } = e;
         d = c(o({}, d), { [t.source_guild_id]: t.is_dirty || !1 });

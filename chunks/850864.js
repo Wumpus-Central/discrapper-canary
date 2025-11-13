@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -16,15 +16,15 @@ var r = n(951288),
     b = n(387960),
     x = n(806742),
     j = n(388032),
-    v = n(197530),
-    _ = n(91716),
-    C = n(470264),
-    O = n(710043),
+    _ = n(197530),
+    v = n(91716),
+    O = n(470264),
+    C = n(710043),
     y = n(847950);
-function E(e) {
+function N(e) {
     let { guild: t, saveOnClose: n } = e,
         [c, d] = i.useState("new"),
-        E = i.useMemo(
+        N = i.useMemo(
             () => [
                 {
                     value: "new",
@@ -37,7 +37,7 @@ function E(e) {
             ],
             [],
         ),
-        N = (0, l.e7)([o.Z], () => o.Z.theme);
+        E = (0, l.e7)([o.Z], () => o.Z.theme);
     i.useEffect(
         () => () => {
             let e = g.Z.getSettings();
@@ -45,20 +45,20 @@ function E(e) {
         },
         [n, t.id],
     );
-    let I = i.useMemo(() => ((0, a.ap)(N) ? ("existing" === c ? C : y) : "existing" === c ? _ : O), [c, N]);
+    let I = i.useMemo(() => ((0, a.ap)(E) ? ("existing" === c ? O : y) : "existing" === c ? v : C), [c, E]);
     return (0, r.jsxs)("div", {
-        className: v.page,
+        className: _.page,
         children: [
             (0, r.jsxs)("div", {
-                className: v.leftColumn,
+                className: _.leftColumn,
                 children: [
                     (0, r.jsx)(s.Heading, {
-                        className: v.header,
+                        className: _.header,
                         variant: "heading-lg/extrabold",
                         children: j.intl.string(j.t.tbUZVr),
                     }),
                     (0, r.jsx)("div", {
-                        className: v.descriptionSection,
+                        className: _.descriptionSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
@@ -66,17 +66,17 @@ function E(e) {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: v.section,
+                        className: _.section,
                         children: (0, r.jsx)(x.Z, { guildId: t.id }),
                     }),
-                    (0, r.jsx)("div", { className: v.sectionSeparator }),
+                    (0, r.jsx)("div", { className: _.sectionSeparator }),
                     (0, r.jsx)(s.Heading, {
-                        className: v.header,
+                        className: _.header,
                         variant: "heading-lg/extrabold",
                         children: j.intl.string(j.t["roY/wu"]),
                     }),
                     (0, r.jsx)("div", {
-                        className: v.descriptionSection,
+                        className: _.descriptionSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
@@ -84,18 +84,18 @@ function E(e) {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: v.section,
+                        className: _.section,
                         children: (0, r.jsx)(p.Z, {}),
                     }),
                     (0, r.jsx)(m.Z, { guildId: t.id }),
-                    (0, r.jsx)("div", { className: v.sectionSeparator }),
+                    (0, r.jsx)("div", { className: _.sectionSeparator }),
                     (0, r.jsx)(s.Heading, {
-                        className: v.header,
+                        className: _.header,
                         variant: "heading-lg/extrabold",
                         children: j.intl.string(j.t.hEjHyH),
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.descriptionSection,
+                        className: _.descriptionSection,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
@@ -103,7 +103,7 @@ function E(e) {
                                 children: j.intl.string(j.t.YnvKVE),
                             }),
                             (0, r.jsxs)("ul", {
-                                className: v.bulletList,
+                                className: _.bulletList,
                                 children: [
                                     (0, r.jsx)("li", {
                                         children: (0, r.jsx)(s.Text, {
@@ -134,18 +134,18 @@ function E(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.section,
+                        className: _.section,
                         children: [(0, r.jsx)(b.Z, { guildId: t.id }), (0, r.jsx)(h.Z, { guildId: t.id })],
                     }),
-                    (0, r.jsx)("div", { className: v.sectionSeparator }),
+                    (0, r.jsx)("div", { className: _.sectionSeparator }),
                     (0, r.jsx)(f.Z, { guild: t }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: v.rightColumn,
+                className: _.rightColumn,
                 children: [
                     (0, r.jsx)("div", {
-                        className: v.centeredSection,
+                        className: _.centeredSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
@@ -153,12 +153,12 @@ function E(e) {
                         }),
                     }),
                     (0, r.jsx)("img", {
-                        className: v.previewImage,
+                        className: _.previewImage,
                         src: I,
                         alt: j.intl.string(j.t.ST4UOy),
                     }),
                     (0, r.jsx)(s.sY7, {
-                        options: E,
+                        options: N,
                         value: c,
                         onChange: (e) => d(e.value),
                         look: "pill",
@@ -168,7 +168,7 @@ function E(e) {
         ],
     });
 }
-function N(e) {
+function E(e) {
     let { saveOnClose: t } = e,
         n = (0, l.e7)([d.Z, c.Z], () => {
             let e = d.Z.getGuildId();
@@ -176,7 +176,7 @@ function N(e) {
         });
     return null == n
         ? null
-        : (0, r.jsx)(E, {
+        : (0, r.jsx)(N, {
               guild: n,
               saveOnClose: t,
           });

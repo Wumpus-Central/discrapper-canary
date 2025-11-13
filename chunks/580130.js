@@ -63,11 +63,11 @@ function P(e) {
     let { applicationId: t } = e;
     I.add(t);
 }
-function w(e) {
+function D(e) {
     let { applicationId: t, entitlements: n } = e;
     for (let e of (I.delete(t), T.add(t), n)) !0 !== e.consumed && C(e);
 }
-function D(e) {
+function w(e) {
     let { entitlements: t } = e;
     (g = {}), t.forEach(N);
 }
@@ -215,9 +215,9 @@ class Z extends (r = s.yh) {
 h(Z, "displayName", "EntitlementStore");
 let F = new Z(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: P,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: D,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: x,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: D,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: k,
     VIRTUAL_CURRENCY_REDEEM_SUCCESS: k,
     LIBRARY_FETCH_SUCCESS: U,

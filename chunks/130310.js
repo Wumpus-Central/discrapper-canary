@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(546791),
     c = n(277537),
     u = n(785681),
-    d = n(602698),
+    d = n(597754),
     f = n(388032),
     _ = n(31704),
     p = n(197571);
@@ -59,8 +59,8 @@ let h = (e) => {
             ),
             v = (0, l.nE)(f.intl.string(d.default["Z3G+8h"]), f.intl.string(d.default["4SCALu"])),
             I = (0, l.nE)(f.intl.string(d.default.KBgArX), f.intl.string(d.default.oYf9P7)),
-            S = (0, u.o)(f.intl.string(d.default["dES/2r"]), f.intl.string(d.default.ep6mdN)),
-            T = (0, u.o)(f.intl.string(d.default["30+sih"]), f.intl.string(d.default["0cuLn1"])),
+            T = (0, u.o)(f.intl.string(d.default["dES/2r"]), f.intl.string(d.default.ep6mdN)),
+            S = (0, u.o)(f.intl.string(d.default["30+sih"]), f.intl.string(d.default["0cuLn1"])),
             A = (0, u.o)(f.intl.string(d.default.tHTyRh), f.intl.string(d.default.TeNlMb)),
             C = (0, u.o)(f.intl.string(d.default.wZejZr), f.intl.string(d.default.tdgcf1));
         return (0, r.jsxs)("div", {
@@ -111,12 +111,12 @@ let h = (e) => {
                             }),
                             (0, r.jsx)(h, {
                                 header: f.intl.string(d.default.PjM3r5),
-                                description: S,
+                                description: T,
                                 icon: (0, r.jsx)(s.ciH, { size: "md" }),
                                 inModal: t,
                             }),
                             (0, r.jsx)(h, {
-                                header: T,
+                                header: S,
                                 description: A,
                                 icon: (0, r.jsx)(o.U65, { size: "md" }),
                                 inModal: t,

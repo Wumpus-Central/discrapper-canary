@@ -1,8 +1,8 @@
 n.d(t, { Z: () => i }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(951288),
     s = n(647438),
-    a = n(481060),
-    o = n(763610);
+    o = n(481060),
+    a = n(763610);
 let i = function (e) {
     var t, n;
     let { assetKey: i, filters: l, initialValue: c, onFileChange: d, title: u } = e,
@@ -15,10 +15,10 @@ let i = function (e) {
             },
             [],
         ),
-        (0, r.jsx)(a.gNt, {
+        (0, r.jsx)(o.gNt, {
             label: u,
             description: "Supported asset formats: ".concat(l.join(", ")),
-            children: (0, r.jsx)(o.Z, {
+            children: (0, r.jsx)(a.Z, {
                 filename: null != (n = null != (t = null == p ? void 0 : p.name) ? t : c) ? n : "",
                 filters: [
                     {

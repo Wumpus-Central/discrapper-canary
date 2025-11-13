@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var a = n(951288);
 n(647438);
-var r = n(120356),
-    i = n.n(r),
+var i = n(120356),
+    r = n.n(i),
     l = n(668757),
     s = n(481060),
     o = n(168107),
@@ -47,11 +47,11 @@ function _() {
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, v.marginBottom20),
+                className: r()(b.buttonsContainer, v.marginBottom20),
                 children: (0, a.jsx)(g.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, v.marginBottom8),
+                className: r()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -60,7 +60,7 @@ function _() {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, v.marginBottom8),
+                className: r()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -72,7 +72,7 @@ function _() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -81,7 +81,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -90,7 +90,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -99,7 +99,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -111,7 +111,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -120,7 +120,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom8),
+                            className: r()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -129,7 +129,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, v.marginBottom20),
+                            className: r()(b.buttonsContainer, v.marginBottom20),
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: n,

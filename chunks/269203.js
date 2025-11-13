@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(565138),
     o = n(246364),
@@ -10,28 +10,28 @@ var i = n(442837),
     u = n(594174),
     d = n(967128),
     p = n(388032),
-    f = n(496363);
-function h(e) {
+    h = n(496363);
+function f(e) {
     var t;
     let { joinRequest: n, guild: s } = e,
-        c = (0, i.e7)([u.default], () => u.default.getUser(n.userId));
-    return (0, r.jsxs)("div", {
-        className: f.summaryContainer,
+        c = (0, r.e7)([u.default], () => u.default.getUser(n.userId));
+    return (0, i.jsxs)("div", {
+        className: h.summaryContainer,
         children: [
-            (0, r.jsxs)("div", {
-                className: f.summaryHeader,
+            (0, i.jsxs)("div", {
+                className: h.summaryHeader,
                 children: [
                     null != s &&
-                        (0, r.jsxs)("div", {
-                            className: f.summaryHeaderClanInfo,
+                        (0, i.jsxs)("div", {
+                            className: h.summaryHeaderClanInfo,
                             children: [
-                                (0, r.jsx)(a.Z, {
+                                (0, i.jsx)(a.Z, {
                                     guild: s,
                                     active: !0,
                                     size: a.Z.Sizes.SMOL,
-                                    className: f.guildIcon,
+                                    className: h.guildIcon,
                                 }),
-                                (0, r.jsx)(l.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
                                     children: s.name,
@@ -39,7 +39,7 @@ function h(e) {
                             ],
                         }),
                     null != c &&
-                        (0, r.jsx)(l.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: "heading-xl/semibold",
                             color: "header-primary",
                             children: p.intl.format(p.t.jDV3i6, { username: c.globalName }),
@@ -55,18 +55,18 @@ function h(e) {
                               e.field_type === o.QJ.MULTIPLE_CHOICE && null != e.response
                                   ? e.choices[e.response]
                                   : e.response;
-                          return (0, r.jsxs)(r.Fragment, {
+                          return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)("hr", { className: f.summarySeparator }),
-                                  (0, r.jsxs)("div", {
-                                      className: f.formResponseContainer,
+                                  (0, i.jsx)("hr", { className: h.summarySeparator }),
+                                  (0, i.jsxs)("div", {
+                                      className: h.formResponseContainer,
                                       children: [
-                                          (0, r.jsx)(l.Text, {
+                                          (0, i.jsx)(l.Text, {
                                               variant: "text-xs/semibold",
                                               color: "text-muted",
                                               children: e.label,
                                           }),
-                                          (0, r.jsx)(l.Text, {
+                                          (0, i.jsx)(l.Text, {
                                               variant: "text-md/medium",
                                               color: "text-primary",
                                               children: t,
@@ -81,29 +81,29 @@ function h(e) {
 }
 function m(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: i, joinRequestGuild: a } = (0, s.Z)(t.id);
-    return (0, r.jsx)(d.ZP, {
+        { loading: n, joinRequest: r, joinRequestGuild: a } = (0, s.Z)(t.id);
+    return (0, i.jsx)(d.ZP, {
         channelId: t.id,
-        className: f.container,
+        className: h.container,
         children:
-            null != i && null != i.formResponses
-                ? (0, r.jsxs)("div", {
-                      className: f.formContainer,
+            null != r && null != r.formResponses
+                ? (0, i.jsxs)("div", {
+                      className: h.formContainer,
                       children: [
-                          (0, r.jsx)("div", {
-                              children: (0, r.jsx)(h, {
+                          (0, i.jsx)("div", {
+                              children: (0, i.jsx)(f, {
                                   guild: a,
-                                  joinRequest: i,
+                                  joinRequest: r,
                               }),
                           }),
-                          (0, r.jsx)(c.Z, {
+                          (0, i.jsx)(c.Z, {
                               channelId: t.id,
                               showProfile: !0,
                           }),
                       ],
                   })
                 : n
-                  ? (0, r.jsx)(l.$jN, {})
+                  ? (0, i.jsx)(l.$jN, {})
                   : null,
     });
 }

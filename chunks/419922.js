@@ -10,7 +10,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(358458),
+    c = n(509442),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -80,7 +80,7 @@ let P = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let {
                 shouldAnimate: t,
                 size: a,
@@ -159,7 +159,7 @@ let P = (e) => {
                   }),
               });
     },
-    D = (e) => {
+    w = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -186,7 +186,7 @@ let P = (e) => {
             C = i.useCallback(() => {
                 g(!1);
             }, []),
-            w = i.useCallback(() => {
+            D = i.useCallback(() => {
                 y(!0);
             }, []);
         return (i.useEffect(() => {
@@ -221,7 +221,7 @@ let P = (e) => {
                                   alt: R(n),
                                   src: A,
                                   draggable: !1,
-                                  onError: w,
+                                  onError: D,
                                   onLoad: C,
                                   onContextMenu: v,
                                   ref: S,
@@ -333,7 +333,7 @@ let P = (e) => {
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
         if (null == u) return null;
-        let v = u.format_type === E.u3.LOTTIE ? w : D;
+        let v = u.format_type === E.u3.LOTTIE ? D : w;
         return (0, r.jsxs)(
             i.Fragment,
             {

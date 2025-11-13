@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(531421),
+    b = n(422129),
     y = n(388032),
     O = n(209289);
 function v() {
@@ -30,8 +30,8 @@ let I = (0, c.Un)({
         name: "CustomThemeColorPickerControlV2",
         renderLoader: v,
     }),
-    S = 5,
-    T = "#000000";
+    T = 5,
+    S = "#000000";
 function A(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
@@ -75,7 +75,7 @@ function C(e) {
 }
 function N(e) {
     let { color: t } = e,
-        n = i.useMemo(() => ({ backgroundColor: (0, u.FX)(t) ? t : T }), [t]);
+        n = i.useMemo(() => ({ backgroundColor: (0, u.FX)(t) ? t : S }), [t]);
     return (0, r.jsx)("div", {
         className: O.hexColorPreview,
         style: n,
@@ -90,21 +90,21 @@ function R(e) {
 function P(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
         c = (0, h.Z)(),
-        [v, T] = i.useState(0),
+        [v, S] = i.useState(0),
         [A, P] = i.useState(t);
     i.useEffect(() => {
         if (o.length > 0 && v < o.length) {
             let e = o[v];
             (0, u.FX)(e) && (P(e), n(e));
         }
-        v >= o.length && T(0);
+        v >= o.length && S(0);
     }, [v, o, n]);
-    let w = (e) => {
+    let D = (e) => {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
-        D = (e) => {
-            let t = w(e);
+        w = (e) => {
+            let t = D(e);
             if ((P(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
                 let e = [...o];
                 (e[v] = t), s(e);
@@ -123,26 +123,26 @@ function P(e) {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    (0, E.J4)(), D(e);
+                    (0, E.J4)(), w(e);
                 } catch (e) {}
         },
         j = () => {
-            if (o.length === S) return;
+            if (o.length === T) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
                 t = o.length > 0 ? R(e) : e,
                 n = [...o, t];
-            s(n), T(n.length - 1);
+            s(n), S(n.length - 1);
         },
         k = (e) => {
             if (o.length > 1) {
                 (0, E.JL)();
                 let t = o.filter((t, n) => n !== e);
-                s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1);
+                s(t), v >= t.length ? S(t.length - 1) : v > e && S(v - 1);
             }
         },
         U = (e) => {
-            T(e), (0, E.w8)();
+            S(e), (0, E.w8)();
         },
         G = o.length > 1;
     return (0, r.jsxs)("div", {
@@ -166,7 +166,7 @@ function P(e) {
                     (0, r.jsx)("input", {
                         className: O.hexInput,
                         value: A.toUpperCase(),
-                        onChange: (e) => D(e.target.value),
+                        onChange: (e) => w(e.target.value),
                         maxLength: 7,
                         placeholder: m.Dp,
                         type: "text",
@@ -200,7 +200,7 @@ function P(e) {
                     }),
                 ],
             }),
-            o.length < S &&
+            o.length < T &&
                 (0, r.jsx)(_.zxk, {
                     variant: "secondary",
                     size: "md",

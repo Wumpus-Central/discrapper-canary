@@ -36,12 +36,12 @@ function h(e) {
             var e;
             return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[f.id];
         }, [f.id, t.id]),
-        v = (0, c.fI)(f),
-        _ = (0, u.Z)(t.id, f);
+        _ = (0, c.fI)(f),
+        v = (0, u.Z)(t.id, f);
     i.useEffect(() => {
-        v && b(g.ZI.PERMISSIONS);
-    }, [v, b]);
-    let C = (0, o.e)(t, f);
+        _ && b(g.ZI.PERMISSIONS);
+    }, [_, b]);
+    let O = (0, o.e)(t, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -53,7 +53,7 @@ function h(e) {
                         variant: "text-md/semibold",
                         children: m.intl.format(m.t.BUdGkE, { roleName: f.name }),
                     }),
-                    C
+                    O
                         ? (0, r.jsx)(a.P3F, {
                               className: p.menu,
                               onClick: function (e) {
@@ -124,10 +124,10 @@ function h(e) {
                         : null,
                 ],
             }),
-            null != _
+            null != v
                 ? (0, r.jsx)(a.Wn, {
                       messageType: a.QYI.WARNING,
-                      children: _,
+                      children: v,
                   })
                 : null,
             (0, r.jsxs)(a.njP, {
@@ -141,7 +141,7 @@ function h(e) {
                     (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.DISPLAY,
-                        disabled: v,
+                        disabled: _,
                         children: m.intl.string(m.t.hmdomw),
                     }),
                     (0, r.jsx)(a.njP.Item, {
@@ -152,14 +152,14 @@ function h(e) {
                     (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.VERIFICATIONS,
-                        disabled: v,
+                        disabled: _,
                         children: m.intl.string(m.t["5//Muu"]),
                     }),
                     (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.MEMBERS,
-                        disabled: v,
-                        children: v
+                        disabled: _,
+                        children: _
                             ? m.intl.string(m.t["kg//+7"])
                             : m.intl.formatToPlainString(m.t.bHnZWW, { numMembers: String(j) }),
                     }),

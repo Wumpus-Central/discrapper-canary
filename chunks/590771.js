@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(962486),
     p = n(149788),
     f = n(128449);
-function m(e) {
+function h(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
         s = (0, l.e7)([c.Z], () => {
             var e;
@@ -34,14 +34,14 @@ function m(e) {
         })
     );
 }
-function h(e) {
+function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
         p = (0, u.lg)(t),
-        m = (0, l.e7)([c.Z], () => {
+        h = (0, l.e7)([c.Z], () => {
             var e;
             return null != (e = c.Z.getGuildIds({ categoryId: p })) ? e : f.q5;
         }),
-        h = (0, l.e7)([c.Z], () => {
+        g = (0, l.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getIsFetching({ categoryId: p })) || e;
         });
@@ -51,15 +51,15 @@ function h(e) {
         }, [p]),
         (0, r.jsx)(d.Z, {
             tab: t,
-            guildIds: m,
-            loading: h,
+            guildIds: h,
+            loading: g,
             onScroll: n,
             onGuildCardSeen: a,
             onGuildCardClick: s,
         })
     );
 }
-function g(e) {
+function m(e) {
     let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
     switch (
         (i.useEffect(() => {
@@ -69,7 +69,7 @@ function g(e) {
         t)
     ) {
         case f.vf.FEATURED:
-            return (0, r.jsx)(m, {
+            return (0, r.jsx)(h, {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: o,
@@ -81,7 +81,7 @@ function g(e) {
         case f.vf.TECH:
         case f.vf.EDUCATION:
             return (0, r.jsx)(
-                h,
+                g,
                 {
                     tab: t,
                     onScroll: n,

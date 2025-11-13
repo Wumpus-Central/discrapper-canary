@@ -60,10 +60,10 @@ function P(e) {
             });
     }
 }
-function w(e, t) {
+function D(e, t) {
     return null != t && e.config.application.id === c.eB && (0, u.le)(t);
 }
-function D(e) {
+function w(e) {
     return null != e && e.config.features.includes(i.S.MANUAL_HEARTBEAT_INITIALIZATION);
 }
 class x extends a.Z {
@@ -124,7 +124,7 @@ class x extends a.Z {
                 let s = [i.config.application];
                 a && null != n.applications && (s = n.applications);
                 let l = s.find((e) => e.id === t);
-                null != l ? e.set(i.id, { applicationId: l.id }) : w(i, o) && e.set(i.id, { applicationId: c.eB });
+                null != l ? e.set(i.id, { applicationId: l.id }) : D(i, o) && e.set(i.id, { applicationId: c.eB });
             }
         }
         return (
@@ -278,7 +278,7 @@ class x extends a.Z {
                     this.syncHeartbeats(
                         [r.X.PLAY_ON_DESKTOP, r.X.STREAM_ON_DESKTOP, r.X.PLAY_ACTIVITY],
                         "QUESTS_ENROLL_SUCCESS",
-                        (e) => !D(e),
+                        (e) => !w(e),
                     ),
                 QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
                 QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
@@ -298,13 +298,13 @@ class x extends a.Z {
                     P(t);
                 },
                 EMBEDDED_ACTIVITY_UPDATE_V2: () =>
-                    this.syncHeartbeats([r.X.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !D(e)),
+                    this.syncHeartbeats([r.X.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !w(e)),
                 QUEST_APPLICATION_START_TIMER: (e) => {
                     let { questId: t } = e;
                     this.syncHeartbeats(
                         [r.X.PLAY_ACTIVITY],
                         "QUEST_APPLICATION_START_TIMER",
-                        (e) => null != e && e.id === t && D(e),
+                        (e) => null != e && e.id === t && w(e),
                     );
                 },
             });

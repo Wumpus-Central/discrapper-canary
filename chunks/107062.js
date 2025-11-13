@@ -31,7 +31,7 @@ let P = (e, t) =>
             username: t.username,
             activity: e.extra.activity_name,
         }),
-    w = (e, t, n) => {
+    D = (e, t, n) => {
         let r = R.t["bES+y2"],
             i = b.ZP.getName(t.guild_id, t.id, n),
             a = e.extra.activity_name;
@@ -42,7 +42,7 @@ let P = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    D = (e) => {
+    w = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
             a = R.t["7j/5mg"];
         return R.intl
@@ -72,13 +72,13 @@ let P = (e, t) =>
                     if ((null == M ? void 0 : M.src) == null || null == t || null == j) return;
                     let r =
                         W > 0
-                            ? D({
+                            ? w({
                                   entry: n,
                                   channel: t,
                                   users: [H, Y],
                                   countOthers: W,
                               })
-                            : w(n, t, j);
+                            : D(n, t, j);
                     return (0, I.C4)({
                         entry: n,
                         applicationImageSrc: null == M ? void 0 : M.src,

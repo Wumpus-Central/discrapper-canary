@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o }), n(388685), n(361932), n(187205);
 var r = n(647438),
-    i = n(699758);
-function l(e) {
+    l = n(699758);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function l(e) {
     }
     return e;
 }
-function a(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -50,28 +50,28 @@ function o(e) {
             claimableVariants: n,
             defaultSelection: o,
             selectedGiftingPromotionReward: s,
-            setSelectedGiftingPromotionReward: C,
-            hasUserMadeSelection: d,
+            setSelectedGiftingPromotionReward: d,
+            hasUserMadeSelection: c,
         } = e,
-        c = null != n && n.length > 0,
-        [u, p] = r.useState(null != (t = null == o ? void 0 : o.defaultCategory) ? t : i.KN.Trick),
-        f = r.useRef(u),
-        h = r.useMemo(
+        u = null != n && n.length > 0,
+        [p, m] = r.useState(null != (t = null == o ? void 0 : o.defaultCategory) ? t : l.KN.Trick),
+        h = r.useRef(p),
+        f = r.useMemo(
             () =>
-                c ? n.flatMap((e) => (e.variants.length < i.mo ? [] : a(l({}, e.variants[u]), { name: e.name }))) : [],
-            [n, u, c],
+                u ? n.flatMap((e) => (e.variants.length < l.mo ? [] : i(a({}, e.variants[p]), { name: e.name }))) : [],
+            [n, p, u],
         ),
-        x = r.useMemo(() => null != s && h.some((e) => e.skuId === s.skuId), [h, s]);
+        b = r.useMemo(() => null != s && f.some((e) => e.skuId === s.skuId), [f, s]);
     if (
         (r.useEffect(() => {
-            c && ((null == o ? void 0 : o.defaultCategory) == null || d || p(o.defaultCategory));
-        }, [null == o ? void 0 : o.defaultCategory, d, c]),
+            u && ((null == o ? void 0 : o.defaultCategory) == null || c || m(o.defaultCategory));
+        }, [null == o ? void 0 : o.defaultCategory, c, u]),
         r.useEffect(() => {
-            c && (f.current === u || x || C(void 0), (f.current = u));
-        }, [u, x, C, c]),
-        !c)
+            u && (h.current === p || b || d(void 0), (h.current = p));
+        }, [p, b, d, u]),
+        !u)
     )
         return null;
-    let m = n.length > 1;
-    return a(l({}, m && { selectedCategory: u }, m && { setSelectedCategory: p }), { shouldRenderCategoryControl: m });
+    let g = n.length > 1;
+    return i(a({}, g && { selectedCategory: p }, g && { setSelectedCategory: m }), { shouldRenderCategoryControl: g });
 }

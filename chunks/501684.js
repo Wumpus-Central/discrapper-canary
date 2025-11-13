@@ -2,121 +2,121 @@ let r, _, n, o, i;
 a.d(e, {
     $A: () => L,
     PR: () => f,
-    YF: () => O,
-    _4: () => h,
+    YF: () => h,
+    _4: () => O,
     _j: () => P,
-    cN: () => G,
+    cN: () => W,
     to: () => p,
 });
-var c = a(622916),
-    E = a(688838),
+var E = a(622916),
+    c = a(688838),
     s = a(665909),
     l = a(795927),
     I = a(661129),
-    u = a(231550),
-    R = a(428983),
-    d = a(622574),
+    R = a(231550),
+    u = a(428983),
+    A = a(622574),
     N = a(288570);
-let A = {},
-    T = {};
+let T = {},
+    d = {};
 function f(t, e = !1) {
-    return y("cls", t, g, r, e);
+    return y("cls", t, D, r, e);
 }
 function L(t, e = !1) {
-    return y("lcp", t, m, n, e);
+    return y("lcp", t, S, n, e);
 }
 function p(t) {
-    return y("fid", t, C, _);
-}
-function h(t) {
-    return y("ttfb", t, v, o);
+    return y("fid", t, g, _);
 }
 function O(t) {
-    return y("inp", t, S, i);
+    return y("ttfb", t, m, o);
+}
+function h(t) {
+    return y("inp", t, v, i);
 }
 function P(t, e) {
     return (
         U(t, e),
-        T[t] ||
+        d[t] ||
             ((function (t) {
                 let e = {};
                 "event" === t && (e.durationThreshold = 0),
-                    (0, d.N)(
+                    (0, A.N)(
                         t,
                         (e) => {
-                            D(t, { entries: e });
+                            C(t, { entries: e });
                         },
                         e,
                     );
             })(t),
-            (T[t] = !0)),
-        b(t, e)
+            (d[t] = !0)),
+        G(t, e)
     );
 }
-function D(t, e) {
-    let a = A[t];
+function C(t, e) {
+    let a = T[t];
     if (a && a.length)
         for (let r of a)
             try {
                 r(e);
             } catch (e) {
                 s.X &&
-                    c.kg.error(
+                    E.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${t}
-Name: ${(0, E.$P)(r)}
+Name: ${(0, c.$P)(r)}
 Error:`,
                         e,
                     );
             }
 }
-function g() {
+function D() {
     return (0, l.m)(
         (t) => {
-            D("cls", { metric: t }), (r = t);
+            C("cls", { metric: t }), (r = t);
         },
         { reportAllChanges: !0 },
     );
 }
-function C() {
+function g() {
     return (0, I.F)((t) => {
-        D("fid", { metric: t }), (_ = t);
-    });
-}
-function m() {
-    return (0, R.N)(
-        (t) => {
-            D("lcp", { metric: t }), (n = t);
-        },
-        { reportAllChanges: !0 },
-    );
-}
-function v() {
-    return (0, N.m)((t) => {
-        D("ttfb", { metric: t }), (o = t);
+        C("fid", { metric: t }), (_ = t);
     });
 }
 function S() {
-    return (0, u.Y)((t) => {
-        D("inp", { metric: t }), (i = t);
+    return (0, u.N)(
+        (t) => {
+            C("lcp", { metric: t }), (n = t);
+        },
+        { reportAllChanges: !0 },
+    );
+}
+function m() {
+    return (0, N.m)((t) => {
+        C("ttfb", { metric: t }), (o = t);
+    });
+}
+function v() {
+    return (0, R.Y)((t) => {
+        C("inp", { metric: t }), (i = t);
     });
 }
 function y(t, e, a, r, _ = !1) {
     let n;
-    return U(t, e), T[t] || ((n = a()), (T[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0);
+    return U(t, e), d[t] || ((n = a()), (d[t] = !0)), r && e({ metric: r }), G(t, e, _ ? n : void 0);
 }
 function U(t, e) {
-    (A[t] = A[t] || []), A[t].push(e);
+    (T[t] = T[t] || []), T[t].push(e);
 }
-function b(t, e, a) {
+function G(t, e, a) {
     return () => {
         a && a();
-        let r = A[t];
+        let r = T[t];
         if (!r) return;
         let _ = r.indexOf(e);
         -1 !== _ && r.splice(_, 1);
     };
 }
-function G(t) {
+function W(t) {
     return "duration" in t;
 }

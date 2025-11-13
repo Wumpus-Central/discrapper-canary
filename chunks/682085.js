@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(491662),
     u = n(243778),
     d = n(594174),
-    g = n(785717),
-    f = n(931847),
+    f = n(785717),
+    g = n(931847),
     p = n(50130),
     m = n(28671),
     b = n(430790),
@@ -17,14 +17,14 @@ var r = n(951288),
     y = n(388032),
     v = n(66582);
 function O() {
-    let { trackUserProfileEditAction: e } = (0, g.KZ)(),
+    let { trackUserProfileEditAction: e } = (0, f.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         { application: O, config: j } = (0, p.G)(),
         { token: x, fetched: _ } = (0, s.o)(null == j ? void 0 : j.application_id),
         P = i.useMemo(
             () =>
                 (null == j ? void 0 : j.application_id) != null
-                    ? new f.q({
+                    ? new g.q({
                           type: a.l.APPLICATION,
                           applicationId: j.application_id,
                       })

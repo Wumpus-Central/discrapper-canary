@@ -135,8 +135,8 @@ b((e) => ({
 }));
 let R = ["continue", "continuePrimaryKey", "advance"],
     P = {},
-    w = new WeakMap(),
     D = new WeakMap(),
+    w = new WeakMap(),
     x = {
         get(e, t) {
             if (!R.includes(t)) return e[t];
@@ -145,7 +145,7 @@ let R = ["continue", "continuePrimaryKey", "advance"],
                 n ||
                     (n = P[t] =
                         function (...e) {
-                            w.set(this, D.get(this)[t](...e));
+                            D.set(this, w.get(this)[t](...e));
                         }),
                 n
             );
@@ -155,7 +155,7 @@ async function* L(...e) {
     let t = this;
     if ((t instanceof IDBCursor || (t = await t.openCursor(...e)), !t)) return;
     let n = new Proxy(t, x);
-    for (D.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (w.get(n) || t.continue())), w.delete(n);
+    for (w.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (D.get(n) || t.continue())), D.delete(n);
 }
 function M(e, t) {
     return (
@@ -674,20 +674,20 @@ let ev = new (class {
     eN,
     eR,
     eP = [],
-    ew = !1,
-    eD = 0,
+    eD = !1,
+    ew = 0,
     ex = !1,
     eL = !1,
     eM = [],
     ej = !1,
-    ek = () => ex && !ew && Date.now() <= eA,
+    ek = () => ex && !eD && Date.now() <= eA,
     eU = ({ apiUrl: e, config: t, triggerSnapshot: n, forceInit: r = !1 }) => {
         (ex && !r) ||
             (l.a.isStorageAvailable
                 ? ((eP = []),
                   eM.splice(0),
                   eI.splice(0),
-                  (eD = 0),
+                  (ew = 0),
                   (eN = n),
                   (eS = e),
                   (eT = {
@@ -700,7 +700,7 @@ let ev = new (class {
                   eH(),
                   ex || (eR = window.setInterval(eF, 500)),
                   (ex = !0))
-                : (ew = !0));
+                : (eD = !0));
     },
     eG = [_.Drag, _.Input, _.MediaInteraction, _.MouseInteraction, _.MouseMove, _.Scroll, _.Selection, _.TouchMove],
     eB = (e) => e.type === f.Custom || (e.type === f.IncrementalSnapshot && eG.includes(e.data.source)),
@@ -715,7 +715,7 @@ let ev = new (class {
         if (eP.length || ej) return;
         ej = !0;
         let e = await ez();
-        if (!e) return void (ew = !0);
+        if (!e) return void (eD = !0);
         eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ej = !1);
     },
     eH = () => {
@@ -723,10 +723,10 @@ let ev = new (class {
         if (e) {
             l.b.info("Read stored session state", e);
             let t = JSON.parse(e);
-            (ew = t.disabled),
+            (eD = t.disabled),
                 (eT = t.metadata),
                 (eP = t.uploadUrls),
-                (eD = t.currentIndex),
+                (ew = t.currentIndex),
                 (eA = t.expirationTimestamp),
                 t.pendingEventTimestamp &&
                     (l.b.info(`Uploading with pending timestamp: ${t.pendingEventTimestamp}`),
@@ -747,7 +747,7 @@ let ev = new (class {
             if (!n.ok) throw Error(`Error ${t}`);
             return n;
         } catch {
-            ew = !0;
+            eD = !0;
         }
     },
     eK = async (e, t) => {
@@ -775,7 +775,7 @@ let ev = new (class {
             n = {
                 responseGroupUuid: t,
                 surveyId: e,
-                index: eD + 1,
+                index: ew + 1,
             };
         l.b.info("Fetching always-on upload urls", n);
         let r = await eW(
@@ -807,11 +807,11 @@ let ev = new (class {
     eX = (e) => {
         var t, n, r;
         let i = e.length ? e[e.length - 1].timestamp : Date.now(),
-            a = eD,
+            a = ew,
             o =
                 (null == (n = null == (t = window.UserLeap) ? void 0 : t.config) ? void 0 : n.customMetadata) ??
                 (null == (r = window.__cfg) ? void 0 : r.customMetadata);
-        eD++,
+        ew++,
             e.push({
                 timestamp: i,
                 type: f.Custom,
@@ -850,10 +850,10 @@ window.addEventListener("beforeunload", async () => {
                 let e;
                 eI.length && (e = eI[0].timestamp);
                 let t = {
-                    disabled: ew,
+                    disabled: eD,
                     metadata: eT,
                     uploadUrls: eP,
-                    currentIndex: eD,
+                    currentIndex: ew,
                     pendingEventTimestamp: e,
                     expirationTimestamp: eA,
                 };
@@ -884,8 +884,8 @@ let eJ = async (e, t) => {
     },
     e0 = 5000,
     e1 = 60000,
-    e3 = 0,
-    e2,
+    e2 = 0,
+    e3,
     e4 = !1,
     e8 = [],
     e5 = (e) => {
@@ -952,7 +952,7 @@ let eJ = async (e, t) => {
         if (!te)
             try {
                 te = !0;
-                let t = parseInt(e2 ?? "0");
+                let t = parseInt(e3 ?? "0");
                 if (0 === t) return;
                 let n = await ev.getPendingCaptures({
                         beforePresent: !0,
@@ -962,8 +962,8 @@ let eJ = async (e, t) => {
                 await Promise.all(
                     n.map(async (e) => (await r.delete("pendingCaptures", e.uuid), tl(e.captureParams, e.canUpload))),
                 ),
-                    (e2 = (t - n.length).toString()),
-                    l.a.setItem("sprig.pendingCount", e2);
+                    (e3 = (t - n.length).toString()),
+                    l.a.setItem("sprig.pendingCount", e3);
             } finally {
                 te = !1;
             }
@@ -1192,7 +1192,7 @@ let eJ = async (e, t) => {
         }, "Error in scheduling/capturing replay");
     },
     tc = async () => {
-        parseInt(e2 ?? "0") || l.a.removeItem("sprig.isCapturingHeatmap"),
+        parseInt(e3 ?? "0") || l.a.removeItem("sprig.isCapturingHeatmap"),
             l.a.getItem("sprig.teardownAfterCapture") && (em(), tu(), l.a.removeItem("sprig.teardownAfterCapture"));
     },
     tu = async () =>
@@ -1212,11 +1212,11 @@ let eJ = async (e, t) => {
         t &&
             (eO(),
             l.a.setItem("sprig.isCapturingHeatmap", "true"),
-            (e3 = Date.now()),
+            (e2 = Date.now()),
             el.inactivityInterval ||
                 (el.inactivityInterval = window.setInterval(() => {
                     var e;
-                    (e = e3),
+                    (e = e2),
                         Date.now() - e >= 30000 &&
                             ey(() => ev.markPendingHeatmapsReady(), "Error in heatmap inactivity");
                 }, 1000)));
@@ -1228,8 +1228,8 @@ let eJ = async (e, t) => {
             (a.replayParams.replayDurationType = "before");
         let o = e.triggerTimestamp + 1000 * e.replayParams.replayDurationSeconds;
         (a.triggerTimestamp = o),
-            (e2 = (parseInt(e2 ?? "0") + 1).toString()),
-            l.a.setItem("sprig.pendingCount", e2),
+            (e3 = (parseInt(e3 ?? "0") + 1).toString()),
+            l.a.setItem("sprig.pendingCount", e3),
             await (await ev.openDB()).add("pendingCaptures", {
                 canUpload: !1,
                 captureParams: a,
@@ -1304,7 +1304,7 @@ let eJ = async (e, t) => {
                                     eO();
                                 },
                             }),
-                        (e2 = l.a.getItem("sprig.pendingCount")),
+                        (e3 = l.a.getItem("sprig.pendingCount")),
                         el.isRecording)
                     )
                         return;
@@ -1373,7 +1373,7 @@ let eJ = async (e, t) => {
                                 };
                             (el.stopRecording = s({
                                 emit: (e, t) => {
-                                    if ((e.type === f.Custom && (e3 = Date.now()), ef() || e_())) return;
+                                    if ((e.type === f.Custom && (e2 = Date.now()), ef() || e_())) return;
                                     if (t && e.type === f.Meta) u = performance.now();
                                     else if (t && u && e.type === f.FullSnapshot) {
                                         let e = performance.now() - u;

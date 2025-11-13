@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(635921),
     R = n(177839),
     P = n(349803),
-    w = n(179984),
-    D = n(474936),
+    D = n(179984),
+    w = n(474936),
     x = n(981631),
     L = n(388032),
     M = n(740150),
@@ -54,7 +54,7 @@ let U = (e) => {
             X = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             Q = null != X ? (0, E.Af)(X) : null,
             J = null != Q ? E.ZP.getSkuIdForPlan(Q.planId) : null,
-            $ = null !== J && J !== D.Si.TIER_2 ? D.Si.TIER_2 : null,
+            $ = null !== J && J !== w.Si.TIER_2 ? w.Si.TIER_2 : null,
             ee = (0, v.N)(),
             et = null == ee || null == (e = ee.subscription_trial) ? void 0 : e.sku_id,
             en = (0, y.Nx)(),
@@ -76,17 +76,17 @@ let U = (e) => {
                     innerRef: n,
                     tier0CTAButton: (0, r.jsx)(I.Z, {
                         showIcon: !1,
-                        subscriptionTier: D.Si.TIER_0,
+                        subscriptionTier: w.Si.TIER_0,
                         className: M.subButton,
                         look: u.iL.OUTLINED,
                         color: u.Tt.WHITE,
                         buttonShineClassName: M.buttonShine,
                     }),
                     tier2CTAButton:
-                        et === D.Si.TIER_0
+                        et === w.Si.TIER_0
                             ? (0, r.jsx)(I.Z, {
                                   showIcon: !1,
-                                  subscriptionTier: D.Si.TIER_2,
+                                  subscriptionTier: w.Si.TIER_2,
                                   className: M.subButton,
                                   look: u.iL.OUTLINED,
                                   color: u.Tt.WHITE,
@@ -95,7 +95,7 @@ let U = (e) => {
                             : (0, r.jsx)(I.Z, {
                                   color: u.Tt.BRAND_INVERTED,
                                   showIcon: !1,
-                                  subscriptionTier: D.Si.TIER_2,
+                                  subscriptionTier: w.Si.TIER_2,
                                   className: M.subButton,
                                   hasActivePromotion: ei,
                                   textOptions: { textClassName: M.subButtonText },
@@ -144,7 +144,7 @@ let U = (e) => {
                 (0, r.jsx)(R.Z, { className: j.perkCardsContainerSpacingSettings }),
                 (0, r.jsx)("div", {
                     className: j.planComparisonTableContainer,
-                    children: (0, r.jsx)(w.Z, {
+                    children: (0, r.jsx)(D.Z, {
                         className: j.planComparisonTable,
                         hideCTAs: !0,
                     }),

@@ -19,10 +19,10 @@ function b(e) {
             defaultTarget: j,
             onPanelChange: m,
             sidebarHeader: v,
-            sidebarFooter: g,
-            emptyState: h,
+            sidebarFooter: x,
+            emptyState: g,
         } = e,
-        x = (function (e, t) {
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -55,14 +55,14 @@ function b(e) {
     let [O, P] = l.useState(!1),
         [S, C] = l.useState(1.4),
         _ = l.useRef(null),
-        w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, o.e7)([s.Z], () => s.Z.isFocused());
+        N = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        w = (0, o.e7)([s.Z], () => s.Z.isFocused());
     return (
         l.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
-                !w &&
-                    E &&
+                !N &&
+                    w &&
                     (P(!0),
                     C(null != t ? t : 1.4),
                     clearTimeout(_.current),
@@ -74,7 +74,7 @@ function b(e) {
                     u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
-        }, [w, E]),
+        }, [N, w]),
         (0, r.jsx)(a.UkV, {
             isShaking: O,
             intensity: S,
@@ -104,19 +104,19 @@ function b(e) {
                             });
                     }
                     return e;
-                })({}, x)),
+                })({}, h)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: x.onClose,
+                            onClose: h.onClose,
                             root: b,
                             directory: p,
                             target: y,
                             defaultTarget: j,
                             onPanelChange: m,
                             sidebarHeader: v,
-                            emptyState: h,
-                            sidebarFooter: g,
+                            emptyState: g,
+                            sidebarFooter: x,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

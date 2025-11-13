@@ -8,8 +8,8 @@ var r = n(951288),
     s = n(556045),
     u = n(881410),
     d = n(141014),
-    g = n(985748),
-    f = n(566007),
+    f = n(985748),
+    g = n(566007),
     p = n(173951),
     m = n(455731),
     b = n(272289),
@@ -64,9 +64,9 @@ let O = (e) => {
             n = v(e, ["widget"]);
         switch (t.type) {
             case a.l.FAVORITE_GAMES:
-                return (0, r.jsx)(f.Z, y({ widget: t }, n));
-            case a.l.CURRENT_GAMES:
                 return (0, r.jsx)(g.Z, y({ widget: t }, n));
+            case a.l.CURRENT_GAMES:
+                return (0, r.jsx)(f.Z, y({ widget: t }, n));
             case a.l.WANT_TO_PLAY_GAMES:
                 return (0, r.jsx)(m.Z, y({ widget: t }, n));
             case a.l.PLAYED_GAMES:
@@ -77,10 +77,10 @@ let O = (e) => {
     },
     j = (e) => {
         var { widget: t, user: n, disableInteraction: a } = e,
-            g = v(e, ["widget", "user", "disableInteraction"]);
-        let { shouldShowSuggestions: f, handleDismissSuggestions: p } = (0, s.h)(t),
+            f = v(e, ["widget", "user", "disableInteraction"]);
+        let { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(t),
             m = (0, l.e7)([o.default], () => o.default.getId() === n.id),
-            j = m && !a && f,
+            j = m && !a && g,
             x = (0, c.mR)(t),
             _ = (0, c.Hy)(t, { isCurrentUser: m }),
             P = (0, c.kQ)(t),
@@ -124,7 +124,7 @@ let O = (e) => {
                                 className: h.suggestedGames,
                             }),
                     },
-                    g,
+                    f,
                 ),
             ),
         });

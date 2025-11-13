@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -20,21 +20,21 @@ var r = n(951288),
     O = n(30787),
     v = n(413097);
 let I = 2048,
-    S = 84;
-function T(e) {
+    T = 84;
+function S(e) {
     var t;
     let { context: n, application: l, sectionName: c } = e,
         I = "channel" === n.type ? n.channel : void 0,
-        T = (0, a.e7)([f.Z], () => f.Z.entrypoint()),
+        S = (0, a.e7)([f.Z], () => f.Z.entrypoint()),
         C = null != (t = (0, d.q)(l.id === b.bi.BUILT_IN ? null : l.id)) ? t : l,
         N = (0, p.ye)(C) ? A : E.Z,
         R = i.useRef(null),
-        [P, w] = i.useState(!1),
-        { iconURL: D, name: x } = i.useMemo(
+        [P, D] = i.useState(!1),
+        { iconURL: w, name: x } = i.useMemo(
             () =>
                 (0, p.sl)(C, {
                     fakeAppIconURL: v,
-                    size: S,
+                    size: T,
                 }),
             [C],
         ),
@@ -57,13 +57,13 @@ function T(e) {
                     application: C,
                     context: n,
                     name: x,
-                    iconURL: D,
+                    iconURL: w,
                     scrollerRef: R,
                     sectionName: c,
                 }),
-                null != D &&
+                null != w &&
                     (0, r.jsx)(h.Z, {
-                        src: D,
+                        src: w,
                         className: O.appIcon,
                     }),
                 (0, r.jsx)(o.Z, { size: 54 }),
@@ -73,13 +73,13 @@ function T(e) {
                     sectionName: c,
                     hasCommands: P,
                 }),
-                T === _._b.TEXT
+                S === _._b.TEXT
                     ? (0, r.jsx)(m.Z, {
                           context: n,
                           application: C,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: w,
+                          setHasCommands: D,
                       })
                     : null,
             ],

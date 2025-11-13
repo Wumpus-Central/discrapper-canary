@@ -176,8 +176,8 @@ let I = (e) => {
                     }),
                 );
             },
-            w = (0, s.Z)(),
-            D = (e) =>
+            D = (0, s.Z)(),
+            w = (e) =>
                 (0, r.jsx)(
                     l.aML,
                     v(
@@ -197,7 +197,7 @@ let I = (e) => {
                                         (S({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
-                                            nonce: w,
+                                            nonce: D,
                                         }),
                                         (0, d.x)(m.qR.CustomEmojiTooltipShown));
                             },
@@ -217,7 +217,7 @@ let I = (e) => {
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
+                                            T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: D }), A(!1));
                                         },
                                         tag: "span",
                                         className: o()(E.emojiContainer, {
@@ -230,21 +230,21 @@ let I = (e) => {
                         },
                     ),
                 );
-        if (!u) return D();
+        if (!u) return w();
         let x = (e) =>
             (0, r.jsx)(
                 _.vk,
                 v(y({}, e), {
                     node: t,
                     refreshPositionKey: () => I(String(Date.now())),
-                    nonce: w,
+                    nonce: D,
                 }),
             );
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.FADE,
             align: "center",
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), N(!1);
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: D }), A(!1), N(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
@@ -252,7 +252,7 @@ let I = (e) => {
             renderPopout: x,
             positionKey: O,
             targetElementRef: R,
-            children: D,
+            children: w,
         });
     },
     S = (e) => {

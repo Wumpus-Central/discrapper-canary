@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,7 +18,7 @@ var r = n(951288),
     m = n(185923),
     v = n(388032),
     j = n(576311);
-function E(e, t) {
+function S(e, t) {
     let { reducedMotion: n } = i.useContext(s.Sfi),
         l = (0, f.$R)(t),
         a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(h.Plq.ADD_REACTIONS, t)) && l, [t, l]),
@@ -45,7 +45,7 @@ function E(e, t) {
                     icon: (e) => {
                         var t, l;
                         return (0, r.jsx)(
-                            S,
+                            E,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -123,7 +123,7 @@ function E(e, t) {
         }),
     });
 }
-function S(e) {
+function E(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: o = !1 } = e;
     return (0, r.jsx)("img", {

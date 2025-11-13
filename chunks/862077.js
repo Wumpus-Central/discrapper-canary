@@ -60,8 +60,8 @@ function T(e) {
             newAnalyticsLocations: R = [],
             disableAutoFocus: P = !1,
         } = e,
-        w = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        { analyticsLocations: D } = (0, l.ZP)([...R, w ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
+        D = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        { analyticsLocations: w } = (0, l.ZP)([...R, D ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
         x = (0, d.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -75,10 +75,10 @@ function T(e) {
     i.useEffect(() => {
         null == v || v(null == L ? void 0 : L.current);
     }, [L, v]);
-    let j = w ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+    let j = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
         k = P ? "div" : o.VqE;
     return (0, r.jsx)(l.Gt, {
-        value: D,
+        value: w,
         children: (0, r.jsx)(d.Mt, {
             value: x,
             openedAt: C,
@@ -117,7 +117,7 @@ function T(e) {
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 variant: "text-sm/medium",
-                                                children: b.intl.format(w ? b.t["8F+WNz"] : b.t["/cZp5s"], {
+                                                children: b.intl.format(D ? b.t["8F+WNz"] : b.t["/cZp5s"], {
                                                     username: u.ZP.getName(n, T, t),
                                                 }),
                                             }),
@@ -127,14 +127,14 @@ function T(e) {
                                         align: "center",
                                         children: [
                                             (0, r.jsx)(g.Z, {
-                                                isBlocked: w,
+                                                isBlocked: D,
                                                 onClick: () => {
                                                     N(),
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
                                                                     action: j,
-                                                                    analyticsLocations: D,
+                                                                    analyticsLocations: w,
                                                                 },
                                                                 x,
                                                             ),
@@ -149,7 +149,7 @@ function T(e) {
                                                             I(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                                    analyticsLocations: D,
+                                                                    analyticsLocations: w,
                                                                 },
                                                                 x,
                                                             ),

@@ -3,7 +3,7 @@ n.d(t, {
     e5: () => R,
     gx: () => P,
     lp: () => k,
-    wi: () => w,
+    wi: () => D,
 }),
     n(997841),
     n(388685);
@@ -101,7 +101,7 @@ function N(e) {
         T(v({}, e), {
             timestamp: new Date(e.timestamp),
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
-            attachments: D(e),
+            attachments: w(e),
             embeds: L(e),
             components: (0, o.uZ)(null != (t = e.components) ? t : []),
             codedLinks: y.V$x.NON_PARSED.has(e.type) ? [] : (0, a.ZP)(e.content),
@@ -117,8 +117,8 @@ function R(e) {
         S = null != (a = e.mention_roles) ? a : [],
         R = null != (o = e.mention_channels) ? o : [],
         P = null != (l = e.mention_games) ? l : [],
-        w = e.message_reference,
-        D = A(e),
+        D = e.message_reference,
+        w = A(e),
         L = null,
         k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
@@ -138,12 +138,12 @@ function R(e) {
                   id: e.id,
                   channel_id: e.channel_id,
                   type: y.uaV.DEFAULT,
-                  author: D,
+                  author: w,
                   timestamp: O.timestamp,
                   isUnsupported: !0,
               })
             : T(v({}, e, L, O.toJS()), {
-                  author: D,
+                  author: w,
                   webhookId: e.webhook_id,
                   blocked: _.Z.isBlockedForMessage(e) || (null != B && _.Z.isBlocked(B)),
                   ignored: _.Z.isIgnoredForMessage(e) || (null != B && _.Z.isIgnored(B)),
@@ -152,7 +152,7 @@ function R(e) {
                   mentionRoles: S,
                   mentionChannels: R,
                   mentionGames: P,
-                  messageReference: w,
+                  messageReference: D,
                   mentioned: (0, E.Sz)({
                       userId: f.default.getId(),
                       channelId: e.channel_id,
@@ -188,7 +188,7 @@ function P(e, t) {
           })
         : v({}, e, t);
 }
-function w(e, t) {
+function D(e, t) {
     if (null != t.edited_timestamp)
         return R(t, {
             reactions: e.reactions,
@@ -198,7 +198,7 @@ function w(e, t) {
         r = !1;
     if (
         (null != t.call && (n = n.set("call", x(t.call, e.timestamp))),
-        null != t.attachments && (n = n.set("attachments", D(t))),
+        null != t.attachments && (n = n.set("attachments", w(t))),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
@@ -237,7 +237,7 @@ function w(e, t) {
         n
     );
 }
-function D(e) {
+function w(e) {
     return null == e.attachments ? [] : e.attachments.map((e) => T(v({}, e), { spoiler: e.filename.startsWith(b._j) }));
 }
 function x(e, t) {

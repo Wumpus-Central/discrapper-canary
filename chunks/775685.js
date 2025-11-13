@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(570220),
     g = n(314734),
     E = n(388032),
-    b = n(393620);
+    b = n(124886);
 function y(e, t, n) {
     return (
         t in e
@@ -68,15 +68,15 @@ function I(e, t) {
         e
     );
 }
-let S = i.forwardRef(function (e, t) {
+let T = i.forwardRef(function (e, t) {
     let { type: n } = e,
         { tooltipsWithKeybinds: a } = h.n.useConfig({ location: "ChannelAppLauncherButton" }),
         y = (0, l.e7)([f.Z], () => f.Z.shouldShowPopup() && f.Z.activeViewType() === n),
-        { Component: v, events: S, play: T } = (0, p.Z)("ChannelAppLauncherButton"),
+        { Component: v, events: T, play: S } = (0, p.Z)("ChannelAppLauncherButton"),
         A = i.useContext(m.ZP);
     i.useEffect(() => {
         let e = () => {
-            S.onMouseEnter();
+            T.onMouseEnter();
         };
         return (
             A.on("command-sentinel-typed", e),
@@ -84,10 +84,10 @@ let S = i.forwardRef(function (e, t) {
                 A.off("command-sentinel-typed", e);
             }
         );
-    }, [A, S]);
+    }, [A, T]);
     let C = i.useCallback(() => {
-            y ? d.y(_.ti.DISMISSED) : (d._(_._b.TEXT, n), u.ux()), T();
-        }, [y, n, T]),
+            y ? d.y(_.ti.DISMISSED) : (d._(_._b.TEXT, n), u.ux()), S();
+        }, [y, n, S]),
         N = (0, r.jsx)(v, {
             size: "refresh_sm",
             color: "currentColor",
@@ -118,7 +118,7 @@ let S = i.forwardRef(function (e, t) {
                                 },
                             },
                         },
-                        S,
+                        T,
                     ),
                     { children: N },
                 ),
@@ -126,8 +126,8 @@ let S = i.forwardRef(function (e, t) {
         }),
     });
 });
-function T(e) {
+function S(e) {
     let { type: t } = e;
-    return (0, r.jsx)(S, { type: t });
+    return (0, r.jsx)(T, { type: t });
 }
-let A = i.memo(T);
+let A = i.memo(S);

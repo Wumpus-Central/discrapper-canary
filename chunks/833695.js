@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(399606),
     l = n(481060),
@@ -20,51 +20,51 @@ function j(e) {
         n = (0, f.r)(t);
     return null == n ? null : (0, r.jsx)(s.bL, { children: n.name });
 }
-function v(e) {
+function _(e) {
     var t, n, s;
     let { guildId: f } = e,
-        v = (0, h.Z)(f),
-        _ = (0, a.f3)(),
-        C = (0, i.e7)([p.Z], () => p.Z.getGuild());
-    return v.loading || null == C
+        _ = (0, h.Z)(f),
+        v = (0, a.f3)(),
+        O = (0, i.e7)([p.Z], () => p.Z.getGuild());
+    return _.loading || null == O
         ? (0, r.jsx)(l.$jN, {})
-        : null == v.application
-          ? (0, r.jsx)(u.Z, { guild: C })
+        : null == _.application
+          ? (0, r.jsx)(u.Z, { guild: O })
           : (0, r.jsxs)(d.Z, {
                 children: [
                     (0, r.jsx)(c.Z, {
-                        revenue: v.metrics.revenue,
-                        revenueTrend: v.metrics.revenuePctChange,
+                        revenue: _.metrics.revenue,
+                        revenueTrend: _.metrics.revenuePctChange,
                         summaryMetricLabel: x.intl.string(x.t.R3PCmW),
-                        summaryMetricValue: null != (n = v.metrics.paymentsCount) ? n : "-",
-                        summaryMetricTrend: null != (s = v.metrics.paymentsCountChange) ? s : 0,
+                        summaryMetricValue: null != (n = _.metrics.paymentsCount) ? n : "-",
+                        summaryMetricTrend: null != (s = _.metrics.paymentsCountChange) ? s : 0,
                         summaryMetricTrendIsPercent: !1,
                         children: (0, r.jsx)(b.Z, {
                             guildId: f,
-                            earningsData: v,
+                            earningsData: _,
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
                         label: x.intl.string(x.t["+5Rmhl"]),
                         children: (0, r.jsx)(o.Z, {
                             ListingIdLabel: j,
-                            payoutsByPeriod: v.payoutsByPeriod,
-                            team: null == (t = v.application) ? void 0 : t.team,
+                            payoutsByPeriod: _.payoutsByPeriod,
+                            team: null == (t = _.application) ? void 0 : t.team,
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
                         label: x.intl.string(x.t.O8cDAJ),
-                        disabled: _,
+                        disabled: v,
                         children: (0, r.jsx)(g.Z, {
                             guildId: f,
-                            application: v.application,
+                            application: _.application,
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
                         label: x.intl.string(x.t["0n7R2X"]),
                         children: (0, r.jsx)(m.Z, {
                             guildId: f,
-                            allPeriods: v.payoutsByPeriod,
+                            allPeriods: _.payoutsByPeriod,
                         }),
                     }),
                 ],

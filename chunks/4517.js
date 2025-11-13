@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -122,7 +122,7 @@ let M = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                w(R({}, t), {
+                                D(R({}, t), {
                                     sourceAnalyticsLocations: s,
                                     prompt: a,
                                 }),
@@ -194,13 +194,13 @@ let M = i.forwardRef(function (e, t) {
             N = (0, y.yi)(),
             { trackUserProfileAction: R } = (0, b.KZ)(),
             P = (0, h.p)({ location: "CustomStatusBubble" }),
-            w = null != _ ? S.Hp : 0,
-            D = S.hT + w,
-            x = S.YF + w,
+            D = null != _ ? S.Hp : 0,
+            w = S.hT + D,
+            x = S.YF + D,
             M = i.useRef(null),
             j = i.useRef(null),
             k = i.useRef(null),
-            U = i.useRef(D),
+            U = i.useRef(w),
             G = i.useRef(x),
             B = null != _ && null == p,
             [Z, F] = i.useState(!1),
@@ -227,8 +227,8 @@ let M = i.forwardRef(function (e, t) {
             W(t > e),
                 (U.current = e),
                 (G.current = t),
-                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : x), "px") });
-        }, [K, p, _, Q, V, D, x]);
+                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? w : x), "px") });
+        }, [K, p, _, Q, V, w, x]);
         let J = (e) => {
                 Y &&
                     (e
@@ -241,7 +241,7 @@ let M = i.forwardRef(function (e, t) {
                               },
                           })
                         : Q({
-                              maxHeight: "".concat(Math.min(U.current, D), "px"),
+                              maxHeight: "".concat(Math.min(U.current, w), "px"),
                               delay: 0,
                           }),
                     z ? H(!e) : q.start(e ? S.zS : S.Sq, () => H(!e)));
@@ -365,11 +365,11 @@ let M = i.forwardRef(function (e, t) {
     }),
     k = i.forwardRef(function (e, t) {
         var { emoji: n, text: a, onCloseProfile: o } = e,
-            s = D(e, ["emoji", "text", "onCloseProfile"]);
+            s = w(e, ["emoji", "text", "onCloseProfile"]);
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
             j,
-            w(R({}, s), {
+            D(R({}, s), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -386,7 +386,7 @@ let M = i.forwardRef(function (e, t) {
     });
 function U(e) {
     var { emoji: t, text: n, user: a, guildId: o, channelId: s, themeType: l } = e,
-        c = D(e, ["emoji", "text", "user", "guildId", "channelId", "themeType"]);
+        c = w(e, ["emoji", "text", "user", "guildId", "channelId", "themeType"]);
     let { trackUserProfileAction: u } = (0, b.KZ)(),
         { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, y.Xo)(),
         p = f === T.n_.STATUS && d === T.P.REACT,
@@ -428,7 +428,7 @@ function U(e) {
         children: () =>
             (0, r.jsx)(
                 j,
-                w(R({}, c), {
+                D(R({}, c), {
                     ref: E,
                     emoji: t,
                     text: n,
@@ -459,7 +459,7 @@ let G = i.forwardRef(function (e, t) {
             prompt: d,
             disableToolbar: f = !1,
         } = e,
-        h = D(e, [
+        h = w(e, [
             "user",
             "onCloseProfile",
             "previewText",

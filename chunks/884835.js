@@ -1,21 +1,21 @@
-var r = n(311596);
-function i() {}
-function s() {}
-(s.resetWarningCache = i),
+var a = r(311596);
+function n() {}
+function o() {}
+(o.resetWarningCache = n),
     (e.exports = function () {
-        function e(e, t, n, i, s, l) {
-            if (l !== r) {
-                var a = Error(
+        function e(e, t, r, n, o, s) {
+            if (s !== a) {
+                var i = Error(
                     "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
                 );
-                throw ((a.name = "Invariant Violation"), a);
+                throw ((i.name = "Invariant Violation"), i);
             }
         }
         function t() {
             return e;
         }
         e.isRequired = e;
-        var n = {
+        var r = {
             array: e,
             bigint: e,
             bool: e,
@@ -35,8 +35,8 @@ function s() {}
             oneOfType: t,
             shape: t,
             exact: t,
-            checkPropTypes: s,
-            resetWarningCache: i,
+            checkPropTypes: o,
+            resetWarningCache: n,
         };
-        return (n.PropTypes = n), n;
+        return (r.PropTypes = r), r;
     });

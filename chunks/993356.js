@@ -4,9 +4,9 @@ n(647438);
 var r = n(442837),
     s = n(481060),
     l = n(87051),
-    o = n(778123),
+    a = n(778123),
     c = n(9156),
-    a = n(621600),
+    o = n(621600),
     u = n(981631),
     d = n(388032);
 function g() {
@@ -46,7 +46,7 @@ function b(e) {
                     [e.id],
                 ),
                 h = S === u.gLR.DISABLED,
-                f = (0, o.Z)(e.id);
+                f = (0, a.Z)(e.id);
             function E(t, n) {
                 l.Z.updateGuildNotificationSettings(e.id, t, n);
             }
@@ -61,7 +61,7 @@ function b(e) {
                                     group: "guild-notifications",
                                     id: "".concat(t),
                                     label: n,
-                                    action: () => E({ message_notifications: t }, a.UE.notifications(t)),
+                                    action: () => E({ message_notifications: t }, o.UE.notifications(t)),
                                     checked: t === p,
                                 },
                                 t,
@@ -73,20 +73,20 @@ function b(e) {
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-everyone",
                                 label: d.intl.format(d.t.OWiWAp, {}),
-                                action: () => E({ suppress_everyone: !t }, a.UE.suppressEveryone(!t)),
+                                action: () => E({ suppress_everyone: !t }, o.UE.suppressEveryone(!t)),
                                 checked: t,
                             }),
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-roles",
                                 label: d.intl.string(d.t["O/QdoD"]),
-                                action: () => E({ suppress_roles: !n }, a.UE.suppressRoles(!n)),
+                                action: () => E({ suppress_roles: !n }, o.UE.suppressRoles(!n)),
                                 checked: n,
                             }),
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-highlights",
                                 label: d.intl.string(d.t.gPuteJ),
                                 action: () => {
-                                    E({ notify_highlights: h ? u.gLR.ENABLED : u.gLR.DISABLED }, a.UE.highlights(h));
+                                    E({ notify_highlights: h ? u.gLR.ENABLED : u.gLR.DISABLED }, o.UE.highlights(h));
                                 },
                                 checked: h,
                             }),
@@ -97,7 +97,7 @@ function b(e) {
                         children: (0, i.jsx)(s.S89, {
                             id: "mobile-push",
                             label: d.intl.string(d.t.h1DL66),
-                            action: () => E({ mobile_push: !b }, a.UE.mobilePush(!b)),
+                            action: () => E({ mobile_push: !b }, o.UE.mobilePush(!b)),
                             checked: b,
                         }),
                     }),

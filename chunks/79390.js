@@ -3,12 +3,12 @@ n.d(t, {
     N4: () => j,
     UI: () => R,
     Uu: () => S,
-    cS: () => w,
+    cS: () => D,
     cZ: () => k,
     e1: () => B,
     eQ: () => N,
     fw: () => C,
-    uY: () => D,
+    uY: () => w,
     x9: () => L,
 }),
     n(704826),
@@ -114,14 +114,14 @@ function R(e) {
     );
 }
 function P(e, t) {
-    return 0 === e.length && null == t.find((e) => w(e));
+    return 0 === e.length && null == t.find((e) => D(e));
 }
-function w(e) {
+function D(e) {
     var t;
     let n = null == (t = e.text) ? void 0 : t.trim();
     return null != n && n.length > 0;
 }
-function D(e) {
+function w(e) {
     var t;
     let n = null == (t = e.text) ? void 0 : t.trim();
     return null != e.image && (null == n || 0 === n.length);

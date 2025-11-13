@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -11,14 +11,14 @@ var i = n(481060),
     d = n(556296),
     p = n(131468),
     f = n(208049),
-    m = n(763296),
-    h = n(641015),
-    g = n(22382),
+    h = n(763296),
+    g = n(641015),
+    m = n(22382),
     _ = n(747071),
     b = n(49230),
     E = n(981631),
     O = n(65154);
-function I(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function I(e, t, n) {
         e
     );
 }
-class y extends p.Z {
+class v extends p.Z {
     _initialize() {
         super._initialize(),
             __OVERLAY__ ||
@@ -52,8 +52,8 @@ class y extends p.Z {
         var t;
         super(...e),
             (t = this),
-            I(this, "playingSoundsWeb", new Map()),
-            I(this, "_stopAndClearSounds", () => {
+            y(this, "playingSoundsWeb", new Map()),
+            y(this, "_stopAndClearSounds", () => {
                 c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
@@ -63,16 +63,16 @@ class y extends p.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            I(this, "_playSound", async function (e) {
+            y(this, "_playSound", async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
                     l = null != i && u.Z.getVoiceChannelId() === i;
-                if ((null == i || l) && !c.Z.isDeaf() && !m.Z.isLocalSoundboardMuted(r))
+                if ((null == i || l) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(r))
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
-                            soundURL: (0, g.Z)(e),
+                            soundURL: (0, m.Z)(e),
                             soundVolume: (0, _.Z)(n),
                             reportSoundStartedPlaying: () => (0, f.xR)(e, r),
                         };
@@ -81,15 +81,15 @@ class y extends p.Z {
                         (0, f.R)(e, r);
                     }
             }),
-            I(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+            y(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
                 (0, f.w)();
             }),
-            I(this, "_handleOpenEducationModal", (e, t) => {
+            y(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
                 let l = o.Z.getChannel(t),
                     c = d.ZP.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
                 null != l &&
-                    (0, h.Z)(l) &&
+                    (0, g.Z)(l) &&
                     null != c &&
                     s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
@@ -126,7 +126,7 @@ class y extends p.Z {
                                                     }),
                                                 )),
                                                 r.forEach(function (t) {
-                                                    I(e, t, n[t]);
+                                                    y(e, t, n[t]);
                                                 });
                                         }
                                         return e;
@@ -142,4 +142,4 @@ class y extends p.Z {
             });
     }
 }
-let v = new y();
+let I = new v();

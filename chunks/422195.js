@@ -27,11 +27,11 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     N = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     R = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
     P = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    w = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    D = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    D = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    w = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     x = [C, C, C, C],
     L = (N + R) * 2 + C,
-    M = w + 2 * D,
+    M = D + 2 * w,
     j = 7,
     k = (e) => {
         let {
@@ -50,19 +50,19 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         E = (null == (u = n[0]) ? void 0 : u.type) === y.Ih.FAVORITE,
                         C = +!!E,
                         R = (null == (f = n[C]) ? void 0 : f.type) === y.Ih.RECENT,
-                        w = n.length > 0,
-                        D = n.length;
+                        D = n.length > 0,
+                        w = n.length;
                     if (0 === a && E)
                         return (0, r.jsx)(
                             "div",
                             {
                                 role: "listitem",
-                                "aria-setsize": D,
+                                "aria-setsize": w,
                                 "aria-posinset": a,
                                 children: (0, r.jsx)(c.P3F, {
                                     "aria-label": S.intl.string(S.t.y3LQCG),
                                     className: o()(A.stickerCategory, A.stickerCategoryGeneric, {
-                                        [A.stickerCategoryGenericDisabled]: w && !E,
+                                        [A.stickerCategoryGenericDisabled]: D && !E,
                                         [A.stickerCategoryGenericSelected]: !g && E && 0 === t,
                                         [A.stickerCategoryGenericLast]: !R,
                                     }),
@@ -83,7 +83,7 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             "div",
                             {
                                 role: "listitem",
-                                "aria-setsize": D,
+                                "aria-setsize": w,
                                 "aria-posinset": a,
                                 children: (0, r.jsx)(c.P3F, {
                                     "aria-label": S.intl.string(S.t.RxAmVC),
@@ -92,7 +92,7 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         A.stickerCategoryGeneric,
                                         A.stickerCategoryGenericLast,
                                         {
-                                            [A.stickerCategoryGenericDisabled]: w && !R,
+                                            [A.stickerCategoryGenericDisabled]: D && !R,
                                             [A.stickerCategoryGenericSelected]: !g && R && t === C,
                                         },
                                     ),
@@ -143,7 +143,7 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                     text: U,
                                     children: (0, r.jsx)("div", {
                                         role: "listitem",
-                                        "aria-setsize": D,
+                                        "aria-setsize": w,
                                         "aria-posinset": a,
                                         children: (0, r.jsx)(c.P3F, {
                                             "aria-label": U,
@@ -189,7 +189,7 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 (e) => {
                     var t;
                     let n = null == (t = a.current) ? void 0 : t.getListDimensions();
-                    null != n && f(e + n.height - w < l);
+                    null != n && f(e + n.height - D < l);
                 },
                 [l, a, f],
             ),

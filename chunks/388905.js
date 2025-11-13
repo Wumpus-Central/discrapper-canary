@@ -4,11 +4,11 @@ n.d(t, {
     EJ: () => N,
     Ee: () => y,
     Hh: () => C,
-    II: () => S,
+    II: () => T,
     MC: () => I,
     Vj: () => v,
-    ZP: () => w,
-    gO: () => T,
+    ZP: () => D,
+    gO: () => S,
     i_: () => A,
     jQ: () => R,
     qE: () => O,
@@ -91,7 +91,7 @@ let I = (e) => {
     });
 };
 I.Sizes = o.EFr;
-let S = (e) => {
+let T = (e) => {
         let {
                 label: t,
                 error: n,
@@ -139,7 +139,7 @@ let S = (e) => {
               })
             : v;
     },
-    T = (e) => {
+    S = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)("div", {
             className: a()(m.block, t),
@@ -235,7 +235,7 @@ let S = (e) => {
     },
     P = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(T, {
+        return (0, r.jsxs)(S, {
             className: t,
             children: [
                 (0, r.jsx)(o.Button, {
@@ -253,7 +253,7 @@ let S = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let {
             className: t,
             contentClassName: n,

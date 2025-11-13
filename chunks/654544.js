@@ -5,7 +5,7 @@ var r = n(951288),
     l = n(835473),
     o = n(768581),
     c = n(388032),
-    s = n(123304);
+    s = n(369929);
 function u(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: d } = e,
         f = i.useRef(null),

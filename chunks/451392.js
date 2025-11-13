@@ -40,7 +40,7 @@ function E(e) {
         R = (0, c.dQu)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
         P = (0, u.Cf)(N, R, !1);
     if (null == S || null == A) return null;
-    let w = (e) => {
+    let D = (e) => {
         o(s()(e, null == T ? void 0 : T.themeColors) ? void 0 : e);
     };
     return (0, r.jsx)(h.Z, {
@@ -55,7 +55,7 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => w([e, A]),
+                        onChange: (e) => D([e, A]),
                         color: S,
                         suggestedColors: P,
                         showEyeDropper: !0,
@@ -71,7 +71,7 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => w([S, e]),
+                        onChange: (e) => D([S, e]),
                         color: A,
                         suggestedColors: P,
                         showEyeDropper: !0,
@@ -93,7 +93,7 @@ function E(e) {
                             variant: "secondary",
                             size: "sm",
                             text: m.intl.string(m.t["L+GmoR"]),
-                            onClick: () => w([null, null]),
+                            onClick: () => D([null, null]),
                         }),
                     }),
             ],

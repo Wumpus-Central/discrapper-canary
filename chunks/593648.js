@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(9156),
     R = n(594174),
     P = n(626135),
-    w = n(912101),
-    D = n(709054),
+    D = n(912101),
+    w = n(709054),
     x = n(45640),
     L = n(695346),
     M = n(675478),
@@ -92,7 +92,7 @@ function W(e, t) {
     );
 }
 function K(e) {
-    w.Z.requestPermission((t) => {
+    D.Z.requestPermission((t) => {
         let n = t ? G.$Ab.ENABLED : G.$Ab.BLOCKED;
         d.default.setPermissionsState(n, e);
     });
@@ -281,7 +281,7 @@ function q(e) {
 function X() {
     let e = (0, s.e7)([m.Z], () => m.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
-        a = D.default.keys(e).map((t) => {
+        a = w.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var a = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(84615),
-    r = n(429142),
+    r = n(84615),
+    l = n(429142),
     s = n(918714),
     o = n(852758),
     c = n(308569),
@@ -28,9 +28,9 @@ function m() {
                                 variant: "primary",
                                 text: "Open Verification Layer",
                                 onClick: () => {
-                                    (0, l.q4)(() => (0, a.jsx)(o.Z, {}), {
+                                    (0, r.q4)(() => (0, a.jsx)(o.Z, {}), {
                                         layerKey: c.CV,
-                                        Layer: r.ZP,
+                                        Layer: l.ZP,
                                     });
                                 },
                             }),
@@ -50,14 +50,14 @@ function m() {
                                 variant: "primary",
                                 text: "Open Safety Flow",
                                 onClick: () => {
-                                    (0, l.q4)(
+                                    (0, r.q4)(
                                         (e) => {
                                             let { closeLayer: t } = e;
                                             return (0, a.jsx)(s.Z, { onClose: t });
                                         },
                                         {
                                             layerKey: c.CV,
-                                            Layer: r.ZP,
+                                            Layer: l.ZP,
                                         },
                                     );
                                 },
@@ -78,7 +78,7 @@ function m() {
                                 variant: "primary",
                                 text: "Close All Layers",
                                 onClick: () => {
-                                    l.QP.setState({ fullScreenLayers: [] });
+                                    r.QP.setState({ fullScreenLayers: [] });
                                 },
                             }),
                         }),

@@ -13,8 +13,8 @@ var r = n(951288),
     s = n(706454),
     u = n(785717),
     d = n(86419),
-    g = n(388032),
-    f = n(302627);
+    f = n(388032),
+    g = n(302627);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ function h(e) {
         S = i.useCallback(
             (e) => {
                 (0, d.ES)(t, { applicationId: e }),
-                    o.uvj.announce(g.intl.string(g.t.q0U3DE)),
+                    o.uvj.announce(f.intl.string(f.t.q0U3DE)),
                     I({
                         action: "GAME_ADDED",
                         gameId: e,
@@ -122,7 +122,7 @@ function h(e) {
         ),
         k = i.useMemo(
             () =>
-                "" !== j.trim() && w ? g.intl.format(g.t.jhiTsN, { searchTerm: j.trim() }) : g.intl.string(g.t.QwSXv8),
+                "" !== j.trim() && w ? f.intl.format(f.t.jhiTsN, { searchTerm: j.trim() }) : f.intl.string(f.t.QwSXv8),
             [j, w],
         );
     return (0, r.jsx)(
@@ -147,8 +147,8 @@ function h(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(o.DBG, {
-                    className: f.gameSearchCombobox,
-                    placeholder: g.intl.string(g.t["5h0QOP"]),
+                    className: g.gameSearchCombobox,
+                    placeholder: f.intl.string(f.t["5h0QOP"]),
                     autoFocus: !0,
                     value: O,
                     onChange: (e) => {
@@ -208,7 +208,7 @@ function y(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: o.qJs,
-                                text: g.intl.string(g.t.SgTOtX),
+                                text: f.intl.string(f.t.SgTOtX),
                                 disabled: t,
                             },
                             e,
@@ -239,8 +239,8 @@ function v(e) {
                             p(
                                 {
                                     innerRef: t,
-                                    className: f.coverButton,
-                                    "aria-label": g.intl.string(g.t.SgTOtX),
+                                    className: g.coverButton,
+                                    "aria-label": f.intl.string(f.t.SgTOtX),
                                 },
                                 e,
                             ),

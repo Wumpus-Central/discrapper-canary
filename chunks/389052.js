@@ -78,12 +78,12 @@ function m(e) {
             return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
         }, [O]),
         I = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
-        S = I ? "default" : "danger";
+        T = I ? "default" : "danger";
     return v
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "block",
-              color: null != S ? S : "default",
+              color: null != T ? T : "default",
               label: I ? d.intl.string(d.t.XyHpKH) : d.intl.string(d.t.l4Emac),
               action: I
                   ? () => {

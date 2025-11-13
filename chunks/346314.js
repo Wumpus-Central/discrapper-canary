@@ -104,10 +104,10 @@ function O(e) {
         } = e,
         O = i.useContext(u.d),
         [v, I] = i.useState(!1),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             I(!0);
         }, []),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             I(!1);
         }, []),
         A = "username" === t,
@@ -116,8 +116,8 @@ function O(e) {
         R = A && N,
         {
             gradientStyle: P,
-            gradientClassname: w,
-            gradientGlowClassname: D,
+            gradientClassname: D,
+            gradientGlowClassname: w,
         } = (0, f.Ic)({
             colorStrings: c,
             roleStyle: "username",
@@ -127,12 +127,12 @@ function O(e) {
         L = {
             className: o()(p.name, g, y, {
                 [p.username]: A,
-                [w]: R,
+                [D]: R,
             }),
             children: x,
         },
         M = {
-            className: o()(p.nameGlow, D, y),
+            className: o()(p.nameGlow, w, y),
             children: n,
         },
         j = C
@@ -146,8 +146,8 @@ function O(e) {
             : null;
     return (0, r.jsxs)("span", {
         className: o()(h, p.container),
-        onMouseEnter: S,
-        onMouseLeave: T,
+        onMouseEnter: T,
+        onMouseLeave: S,
         children: [
             "left" === d && j,
             (0, r.jsxs)("span", {

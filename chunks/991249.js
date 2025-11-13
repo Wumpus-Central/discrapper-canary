@@ -1,19 +1,19 @@
-r.d(e, { Z: () => l });
+r.d(t, { Z: () => a });
 var n = r(951288);
 r(647438);
 var o = r(481060),
     i = r(239091),
-    a = r(765250),
+    l = r(765250),
     c = r(388032);
-function l(t, e) {
+function a(e, t) {
     return (0, n.jsx)(
         o.S89,
         {
             label: c.intl.string(c.t.XQQQFE),
-            checked: e,
+            checked: t,
             id: "widget-layout-type",
             action: () => {
-                (0, a.zG)(t, { horizontal: !e }), (0, i.Zy)();
+                (0, l.zG)(e, { horizontal: !t }), (0, i.Zy)();
             },
         },
         "widget-layout-type",

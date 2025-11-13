@@ -1,25 +1,25 @@
-t.d(n, { Z: () => x });
+t.d(n, { Z: () => h });
 var r = t(951288),
     l = t(647438),
     i = t(979554),
     a = t(311570),
     o = t(28664),
     s = t(481060),
-    u = t(906732),
-    c = t(333867),
+    c = t(906732),
+    u = t(333867),
     d = t(626135),
     v = t(381585),
-    f = t(410127),
-    p = t(67409),
+    p = t(410127),
+    f = t(67409),
     b = t(981631),
     g = t(474936),
     m = t(388032);
-let x = (e) => {
-    let { product: n, primary: t, selectedVariantIndex: x, returnRef: h, onSuccess: j, tooltipDelay: y } = e,
-        { analyticsLocations: O } = (0, u.ZP)(),
+let h = (e) => {
+    let { product: n, primary: t, selectedVariantIndex: h, returnRef: x, onSuccess: j, tooltipDelay: y } = e,
+        { analyticsLocations: O } = (0, c.ZP)(),
         P = l.useRef(null),
-        S = (0, v.sp)(),
-        C = (0, f.Z)();
+        C = (0, v.sp)(),
+        S = (0, p.Z)();
     return (0, r.jsx)(o.u, {
         text: m.intl.string(m.t["JCFN/y"]),
         delay: y,
@@ -32,24 +32,24 @@ let x = (e) => {
             onClick: (e) => {
                 e.stopPropagation(),
                     d.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == S ? void 0 : S.sessionId,
+                        collectibles_shop_session_id: null == C ? void 0 : C.sessionId,
                         sku_id: n.skuId,
-                        page_section: null == S ? void 0 : S.pageSection,
-                        page_category: null == S ? void 0 : S.pageCategory,
+                        page_section: null == C ? void 0 : C.pageSection,
+                        page_category: null == C ? void 0 : C.pageCategory,
                         tile_type: i.Z[n.type],
-                        tile_position: String(null == S ? void 0 : S.tilePosition),
+                        tile_position: String(null == C ? void 0 : C.tilePosition),
                         cta_name: "gift button",
-                        page_type: C || "home",
+                        page_type: S || "home",
                     }),
-                    (0, c.Z)({
-                        skuId: (0, p.S)({
+                    (0, u.Z)({
+                        skuId: (0, f.S)({
                             product: n,
-                            selectedVariantIndex: x,
+                            selectedVariantIndex: h,
                         }),
                         isGift: !0,
                         giftingOrigin: g.Wt.SHOP_PAGE,
                         analyticsLocations: O,
-                        returnRef: h,
+                        returnRef: x,
                         variantsReturnStyle: a.v.VARIANTS_GROUP,
                         onClose:
                             null != j

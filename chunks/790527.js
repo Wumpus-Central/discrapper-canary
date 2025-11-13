@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(230916),
     v = n(165583),
     I = n(302945),
-    S = n(474936),
-    T = n(981631),
+    T = n(474936),
+    S = n(981631),
     A = n(388032),
     C = n(144867),
     N = n(769860);
@@ -46,27 +46,27 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function w(e) {
+function D(e) {
     switch (e) {
-        case S.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-        case S.cd.ANIMATED_BANNER_MODAL_UPSELL:
-        case S.cd.PROFILE_EFFECT_MODAL_UPSELL:
-        case S.cd.AVATAR_DECORATION_MODAL_UPSELL:
-        case S.cd.FOR_LATER_MODAL_UPSELL:
-        case S.cd.VOICE_FILTERS_UPSELL:
-        case S.cd.RECENT_AVATARS_ROADBLOCK_UPSELL:
+        case T.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case T.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case T.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case T.cd.AVATAR_DECORATION_MODAL_UPSELL:
+        case T.cd.FOR_LATER_MODAL_UPSELL:
+        case T.cd.VOICE_FILTERS_UPSELL:
+        case T.cd.RECENT_AVATARS_ROADBLOCK_UPSELL:
             return !0;
         default:
             return !1;
     }
 }
-function D(e) {
+function w(e) {
     var t,
         n,
         a,
         {
             title: P,
-            type: D,
+            type: w,
             guildBoostProps: x,
             analyticsSource: L,
             analyticsLocation: M,
@@ -90,7 +90,7 @@ function D(e) {
             showNewBadge: $ = !1,
             showBetaBadge: ee = !1,
             enableArtBoxShadow: et = !0,
-            subscriptionTier: en = S.Si.TIER_2,
+            subscriptionTier: en = T.Si.TIER_2,
             isLoading: er = !1,
             hideBackButton: ei,
             backButtonText: ea,
@@ -157,7 +157,7 @@ function D(e) {
             analyticsLocations: ey,
             analyticsSource: L,
             guildBoostProps: x,
-            type: D,
+            type: w,
         },
         ev = i.useRef(eO);
     i.useEffect(() => {
@@ -173,14 +173,14 @@ function D(e) {
                 type: i,
             } = ev.current;
             em
-                ? h.default.track(T.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? h.default.track(S.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: "".concat(i, " - Tier ").concat(null == r ? void 0 : r.boostedGuildTier),
                       guild_id: null == r ? void 0 : r.guild.id,
                       channel_id: null == r ? void 0 : r.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                : h.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: i,
                       source: n,
                       location: e,
@@ -189,11 +189,11 @@ function D(e) {
                   });
         }, [em, en, er]);
     let eI = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eS = eI.length > 1 && w(D),
-        eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
+        eT = eI.length > 1 && D(w),
+        eS = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
-        eT || u.MH();
-    }, [eT]);
+        eS || u.MH();
+    }, [eS]);
     let eA = () => {
             if (em)
                 return (0, r.jsx)(p.Z, {
@@ -264,11 +264,11 @@ function D(e) {
                         : eb
                           ? (0, r.jsx)(v.ZP, {
                                 onClose: W,
-                                type: D,
+                                type: w,
                                 subscriptionTier:
                                     null != (a = null == eg || null == (n = eg.subscription_trial) ? void 0 : n.sku_id)
                                         ? a
-                                        : S.Si.TIER_2,
+                                        : T.Si.TIER_2,
                                 headingText: P,
                                 context: k,
                                 analyticsLocationObject: M,
@@ -288,7 +288,7 @@ function D(e) {
                                                 variant: "heading-xl/bold",
                                                 children: [P, ee ? (0, r.jsx)(_.Z, { className: C.betaTag }) : null],
                                             }),
-                                            eS ? (0, r.jsx)(I.Z, { affinities: eI }) : void 0,
+                                            eT ? (0, r.jsx)(I.Z, { affinities: eI }) : void 0,
                                             eu,
                                             (0, r.jsx)(c.Text, {
                                                 variant: e_ ? "text-sm/normal" : "text-md/normal",

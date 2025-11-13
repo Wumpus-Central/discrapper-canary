@@ -29,15 +29,15 @@ var r = n(951288),
     O = n(556505),
     v = n(367907),
     I = n(220082),
-    S = n(70097),
-    T = n(591472),
+    T = n(70097),
+    S = n(591472),
     A = n(973616),
     C = n(594174),
     N = n(695103),
     R = n(880448),
     P = n(768581),
-    w = n(541099),
-    D = n(783097),
+    D = n(541099),
+    w = n(783097),
     x = n(695676),
     L = n(176412),
     M = n(226026),
@@ -193,21 +193,21 @@ function J(e) {
         } = e,
         m = i.useCallback(
             (e) => {
-                if ((0, D.BQ)(t)) {
+                if ((0, w.BQ)(t)) {
                     let n = t instanceof A.ZP ? t : A.ZP.createFromServer(t);
                     (0, u.vq)(e, (e) => (0, r.jsx)(j.Z, Y({ application: n }, e)));
                 }
             },
             [t],
         ),
-        { name: g, description: E } = i.useMemo(() => (0, D.sl)(t, { fakeAppIconURL: F }), [t]),
+        { name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: F }), [t]),
         { trackItemImpressionRef: b } = (0, M.Z)({
             applicationId: t.id,
-            applicationFlags: (0, D.BQ)(t) ? t.flags : void 0,
+            applicationFlags: (0, w.BQ)(t) ? t.flags : void 0,
             sectionName: s,
             sectionPosition: l,
             sectionOverallPosition: d,
-            promotionalLabel: (0, D.dF)(t),
+            promotionalLabel: (0, w.dF)(t),
         }),
         y = i.useMemo(() => {
             let e = _ ? Z.containerDisabled : Z.container;
@@ -241,7 +241,7 @@ function J(e) {
 }
 function $(e) {
     let { application: t, imageStyle: n, children: a } = e,
-        { name: s, iconURL: c } = i.useMemo(() => (0, D.sl)(t, { fakeAppIconURL: F }), [t]);
+        { name: s, iconURL: c } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: F }), [t]);
     return (0, r.jsx)(l.u, {
         __unsupportedReactNodeAsText: s,
         children: (0, r.jsxs)("div", {
@@ -269,26 +269,26 @@ function ee(e) {
             overrideImageUrl: _,
             showsPromoted: h,
         } = e,
-        { iconURL: m, name: g, description: E } = i.useMemo(() => (0, D.sl)(t, { fakeAppIconURL: F }), [t]),
+        { iconURL: m, name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: F }), [t]),
         b = i.useMemo(() => (null == E ? null : (0, L.ae)(E)), [E]),
         y = (0, I.ZP)(m, ""),
-        [v, S] = i.useState(!1),
-        T = i.useCallback(() => {
-            !0 === l && S(!0);
+        [v, T] = i.useState(!1),
+        S = i.useCallback(() => {
+            !0 === l && T(!0);
         }, [l]),
-        A = h || (0, D.lf)(t),
+        A = h || (0, w.lf)(t),
         C = "large_banner" === n || "medium_banner" === n,
-        R = i.useCallback(() => S(!1), []),
+        R = i.useCallback(() => T(!1), []),
         P = (0, s.e7)([p.Z, N.Z], () => p.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [
             t.id,
         ]),
-        w = (0, D.WA)(t);
+        D = (0, w.WA)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             C
                 ? (0, r.jsxs)("div", {
-                      onMouseEnter: T,
-                      onFocus: T,
+                      onMouseEnter: S,
+                      onFocus: S,
                       onMouseLeave: R,
                       onBlur: R,
                       className: o()(Z.bannerImageContainer, {
@@ -306,7 +306,7 @@ function ee(e) {
                                   overrideImageUrl: _,
                               }),
                           }),
-                          P || A || w !== d.ww.NONE
+                          P || A || D !== d.ww.NONE
                               ? (0, r.jsxs)("div", {
                                     className: Z.bannerUpperRightContainer,
                                     children: [
@@ -320,7 +320,7 @@ function ee(e) {
                                                 }),
                                             }),
                                         P && (0, r.jsx)(et, {}),
-                                        w !== d.ww.NONE && (0, r.jsx)(O.Z, { labelType: w }),
+                                        D !== d.ww.NONE && (0, r.jsx)(O.Z, { labelType: D }),
                                     ],
                                 })
                               : null,
@@ -392,8 +392,8 @@ function en(e) {
     let { application: t } = e,
         n = C.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
-    let i = (0, D.yJ)(t);
-    if (null == i || !(0, D.BQ)(t)) return null;
+    let i = (0, w.yJ)(t);
+    if (null == i || !(0, w.BQ)(t)) return null;
     let a = (0, E.fD)(t, i);
     return null == a
         ? null
@@ -411,11 +411,11 @@ function er(e) {
     if (null != s)
         return (0, r.jsx)("img", {
             src: s,
-            alt: (0, D.BQ)(t) ? t.name : "",
+            alt: (0, w.BQ)(t) ? t.name : "",
             className: o()(Z.bannerImage, { [Z.disableFadeIn]: a }),
         });
-    if ((0, D.BQ)(t)) {
-        if ((0, D.ye)(t))
+    if ((0, w.BQ)(t)) {
+        if ((0, w.ye)(t))
             return (0, r.jsx)(ei, {
                 application: t,
                 showVideo: i,
@@ -441,7 +441,7 @@ function ei(e) {
             names: ["embedded_cover"],
         }),
         l = i.useMemo(() => {
-            let e = (0, D.yJ)(t);
+            let e = (0, w.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id
                 ? (0, g.Z)(t.id, e.activity_preview_video_asset_id)
                 : null;
@@ -459,7 +459,7 @@ function ei(e) {
                       children: (0, r.jsx)("div", {
                           className: o()(Z.activityVideo, { [Z.videoFadeOut]: !n }),
                           onAnimationEnd: () => (n ? null : u(!1)),
-                          children: (0, r.jsx)(S.Z, {
+                          children: (0, r.jsx)(T.Z, {
                               src: l,
                               mediaLayoutType: G.hV.MOSAIC,
                               loop: !0,
@@ -517,8 +517,8 @@ function es(e) {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: r,
-                        source: w.Z.entrypoint(),
-                        promotional_label: (0, D.dF)(t),
+                        source: D.Z.entrypoint(),
+                        promotional_label: (0, w.dF)(t),
                         location: s,
                         query: a,
                         num_friends_who_play: c.length,
@@ -541,12 +541,12 @@ function el(e) {
 function ec(e) {
     var { context: t, application: n, location: a, sectionName: o, isOneClickCTA: l, fetchesApplication: u = !0 } = e,
         d = z(e, ["context", "application", "location", "sectionName", "isOneClickCTA", "fetchesApplication"]);
-    if (!(0, D.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
+    if (!(0, w.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
     let f = i.useId(),
-        [_, p, m] = (0, s.Wu)([h.ZP, T.Z], () => [
+        [_, p, m] = (0, s.Wu)([h.ZP, S.Z], () => [
             h.ZP.isLaunchingActivity(),
             h.ZP.getLaunchState(n.id, "channel" === t.type ? t.channel.id : void 0),
-            T.Z.isLaunchingFrame(n.id),
+            S.Z.isLaunchingFrame(n.id),
         ]),
         g = (null != p && p.isLaunching && p.componentId === f) || m,
         {

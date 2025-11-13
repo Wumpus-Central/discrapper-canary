@@ -25,8 +25,8 @@ function h(e) {
             isGift: O,
             giftRecipient: v,
             isEligibleForTrial: I,
-            enablePremiumBrandRefresh: S,
-            isDisplayingWowMomentConfirmation: T,
+            enablePremiumBrandRefresh: T,
+            isDisplayingWowMomentConfirmation: S,
         } = e,
         A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         C = () => {
@@ -59,7 +59,7 @@ function h(e) {
                   }),
               ],
           })
-        : S || T
+        : T || S
           ? (0, r.jsx)(c.Z, {
                 hideCloseOnFullScreen: !0,
                 hideCloseButton: E,

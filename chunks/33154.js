@@ -39,7 +39,7 @@ let m = (e) => {
             return (0, u.vE)(t);
     }
     if (null == v) return null;
-    let S = async () => {
+    let T = async () => {
         y(!0);
         try {
             await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m();
@@ -76,7 +76,7 @@ let m = (e) => {
                                 variant: "primary",
                                 text: _.intl.string(_.t["9VLmlZ"]),
                                 buttonRef: g,
-                                onClick: S,
+                                onClick: T,
                                 loading: b,
                             }),
                             (0, r.jsx)(o.zx, {

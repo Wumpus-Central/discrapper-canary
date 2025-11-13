@@ -1,4 +1,4 @@
-t.d(n, { U: () => c });
+t.d(n, { U: () => u });
 var r = t(951288);
 t(647438);
 var l = t(120356),
@@ -6,8 +6,8 @@ var l = t(120356),
     a = t(28664),
     o = t(481060),
     s = t(388032),
-    u = t(863577);
-let c = (e) => {
+    c = t(863577);
+let u = (e) => {
     let { className: n, isPartiallyPurchased: t } = e;
     return t
         ? (0, r.jsx)(a.u, {
@@ -15,14 +15,14 @@ let c = (e) => {
               align: "left",
               text: s.intl.string(s.t.y1VWkZ),
               children: (0, r.jsxs)("div", {
-                  className: i()(u.partialOwnStateContainer, n),
+                  className: i()(c.partialOwnStateContainer, n),
                   children: [
                       (0, r.jsx)("span", {
-                          className: u.iconWrapper,
+                          className: c.iconWrapper,
                           children: (0, r.jsx)(o.d3s, {
                               size: "md",
                               color: "currentColor",
-                              className: u.infoIcon,
+                              className: c.infoIcon,
                           }),
                       }),
                       (0, r.jsx)(o.Text, {

@@ -25,8 +25,8 @@ function O(e) {
             className: O,
             sectionTitle: v,
             forcedDivider: I = !1,
-            withTutorial: S = !1,
-            showBorder: T = !1,
+            withTutorial: T = !1,
+            showBorder: S = !1,
             isTryItOut: A = !1,
         } = e,
         { analyticsLocations: C } = (0, c.ZP)(),
@@ -35,11 +35,11 @@ function O(e) {
             user: t,
             guildId: null == n ? void 0 : n.id,
         }),
-        { pendingProfileEffect: P, errors: w } = (0, p.sY)({
+        { pendingProfileEffect: P, errors: D } = (0, p.sY)({
             guildId: null == n ? void 0 : n.id,
             isTryItOut: A,
         }),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             (0, u.H)({
                 analyticsLocations: C,
                 guild: n,
@@ -58,22 +58,22 @@ function O(e) {
     function L() {
         A ? (0, d.Ju)(null) : (0, p.UK)(null, null == n ? void 0 : n.id);
     }
-    let M = S ? l.gtL : s.zx;
+    let M = T ? l.gtL : s.zx;
     return (0, r.jsx)(h.Z, {
         forcedDivider: I,
         borderType: m.Y.PREMIUM,
         hasBackground: !0,
         title: v,
-        showBorder: T,
-        errors: w,
+        showBorder: S,
+        errors: D,
         className: O,
         children: (0, r.jsxs)("div", {
             className: y.buttonsContainer,
             children: [
                 (0, r.jsx)(M, {
                     size: s.zx.Sizes.SMALL,
-                    onClick: D,
-                    className: o()({ [y.buttonHighlighted]: S }),
+                    onClick: w,
+                    className: o()({ [y.buttonHighlighted]: T }),
                     children: b.intl.string(b.t["/dRfCf"]),
                 }),
                 x &&

@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(518950),
     R = n(624138),
     P = n(51144),
-    w = n(981631),
-    D = n(674563),
+    D = n(981631),
+    w = n(674563),
     x = n(524484),
     L = n(388032),
     M = n(894723);
@@ -144,7 +144,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     W = i.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
-        let n = D.Hb.BOT;
+        let n = w.Hb.BOT;
         return (0, r.jsx)(h.Z, {
             className: M.botTag,
             type: n,
@@ -236,9 +236,9 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 typingRef: p,
                 currentUser: h,
             } = e,
-            m = a === w.Skl.OFFLINE,
+            m = a === D.Skl.OFFLINE,
             g = n ? c.Xo$ : c.qEK,
-            E = (0, u.Z)(i) ? w.Skl.STREAMING : a;
+            E = (0, u.Z)(i) ? D.Skl.STREAMING : a;
         return (
             (E = m ? void 0 : E),
             (0, r.jsxs)(r.Fragment, {
@@ -297,7 +297,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                 ? void 0
                                 : a.find((e) => {
                                       let { type: t } = e;
-                                      return t === w.IIU.CUSTOM_STATUS;
+                                      return t === D.IIU.CUSTOM_STATUS;
                                   }),
                         user: c,
                         channel: u,
@@ -336,7 +336,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 status: I,
                 shouldAnimateStatus: T = !1,
                 isMobile: R,
-                premiumSince: D,
+                premiumSince: w,
                 channel: x,
                 guildId: L,
                 className: j,
@@ -390,8 +390,8 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             t && eR(!1);
         }, [t]);
         let eP = (0, A.fN)(O),
-            ew = (0, A.Wi)(eP, v, el) && t && !eN,
-            eD = i.useCallback(() => {
+            eD = (0, A.Wi)(eP, v, el) && t && !eN,
+            ew = i.useCallback(() => {
                 e_(!0);
             }, []),
             ex = i.useCallback(() => {
@@ -436,7 +436,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   targetElementRef: ed,
                   renderPopout: ek,
                   position: "bottom",
-                  shouldShow: ew,
+                  shouldShow: eD,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: c.yRy.Animation.NONE,
@@ -449,15 +449,15 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   ref: ed,
                                   selected: t,
                                   className: o()(M.member, j, {
-                                      [M.offline]: I === w.Skl.OFFLINE && !t,
-                                      [M.flatBottom]: ew,
+                                      [M.offline]: I === D.Skl.OFFLINE && !t,
+                                      [M.flatBottom]: eD,
                                   }),
                                   innerClassName: M.memberInner,
                                   onClick: Q,
                                   onKeyDown: W,
                                   onMouseDown: Y,
                                   onContextMenu: J,
-                                  onMouseEnter: eD,
+                                  onMouseEnter: ew,
                                   onMouseLeave: ex,
                                   onBlur: eM,
                                   hovered: ef,
@@ -524,7 +524,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       isOwner: u,
                                       lostPermissionTooltipText: p,
                                       ownerTooltipText: f,
-                                      premiumSince: D,
+                                      premiumSince: w,
                                       onClickPremiumGuildIcon: $,
                                   }),
                                   "aria-controls": ee,

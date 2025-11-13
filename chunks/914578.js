@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => x });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -42,7 +42,7 @@ function v(e) {
         }),
     });
 }
-function g() {
+function x() {
     let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {

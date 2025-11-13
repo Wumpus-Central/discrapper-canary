@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(990547),
@@ -10,21 +10,21 @@ var r = n(951288),
     d = n(23434),
     p = n(981631),
     f = n(388032),
-    m = n(734305);
-function h(e) {
+    h = n(734305);
+function g(e) {
     let { transitionState: t } = e,
-        h = (0, a.e7)([d.Z], () => d.Z.getAction()),
-        [g, _] = i.useState(!1),
+        g = (0, a.e7)([d.Z], () => d.Z.getAction()),
+        [m, _] = i.useState(!1),
         b = (0, u.Dt)();
     async function E() {
-        return _(!0), h === p.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
+        return _(!0), g === p.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
     }
     return (
         (0, c.Z)(
             {
                 type: l.ImpressionTypes.VIEW,
                 name: l.ImpressionNames.USER_AGREEMENTS,
-                properties: { required_action: h },
+                properties: { required_action: g },
             },
             {},
             [],
@@ -47,13 +47,13 @@ function h(e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             children:
-                                h === p.c2C.AGREEMENTS ? f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }) : null,
+                                g === p.c2C.AGREEMENTS ? f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }) : null,
                         }),
                         (0, r.jsxs)("div", {
-                            className: m.container,
+                            className: h.container,
                             children: [
                                 (0, r.jsxs)("ul", {
-                                    className: m.links,
+                                    className: h.links,
                                     children: [
                                         (0, r.jsx)("li", { children: f.intl.format(f.t.iw0hFi, { url: p.EYA.TERMS }) }),
                                         (0, r.jsx)("li", {
@@ -68,7 +68,7 @@ function h(e) {
                                     ],
                                 }),
                                 (0, r.jsx)("img", {
-                                    className: m.image,
+                                    className: h.image,
                                     alt: "",
                                     src: n(146714),
                                 }),
@@ -76,7 +76,7 @@ function h(e) {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: m.agreementDescription,
+                            className: h.agreementDescription,
                             children: f.intl.string(f.t["+USXQE"]),
                         }),
                     ],
@@ -85,7 +85,7 @@ function h(e) {
                     children: (0, r.jsx)(s.Button, {
                         variant: "active",
                         text: f.intl.string(f.t["+TBKL1"]),
-                        loading: g,
+                        loading: m,
                         onClick: E,
                     }),
                 }),

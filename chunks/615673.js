@@ -215,7 +215,7 @@ function I(e, t) {
     let n = (0, a.Ow)(e);
     return !(n === t || !(0, a.kK)(n) || (0, a.Py)(n)) && ("fixed" === (0, a.Dx)(n).position || I(n, t));
 }
-function S(e, t) {
+function T(e, t) {
     let n = t.get(e);
     if (n) return n;
     let r = (0, a.Kx)(e, [], !1).filter((e) => (0, a.kK)(e) && "body" !== (0, a.wk)(e)),
@@ -237,9 +237,9 @@ function S(e, t) {
     }
     return t.set(e, r), r;
 }
-function T(e) {
+function S(e) {
     let { element: t, boundary: n, rootBoundary: i, strategy: o } = e,
-        s = [...("clippingAncestors" === n ? ((0, a.tR)(t) ? [] : S(t, this._c)) : [].concat(n)), i],
+        s = [...("clippingAncestors" === n ? ((0, a.tR)(t) ? [] : T(t, this._c)) : [].concat(n)), i],
         l = s[0],
         c = s.reduce(
             (e, n) => {
@@ -319,7 +319,7 @@ function P(e, t) {
     for (; r && (0, a.Ze)(r) && N(r); ) r = R(r, t);
     return r && (0, a.Py)(r) && N(r) && !(0, a.hT)(r) ? n : r || (0, a.gQ)(e) || n;
 }
-let w = async function (e) {
+let D = async function (e) {
     let t = this.getOffsetParent || P,
         n = this.getDimensions,
         r = await n(e.floating);
@@ -333,20 +333,20 @@ let w = async function (e) {
         },
     };
 };
-function D(e) {
+function w(e) {
     return "rtl" === (0, a.Dx)(e).direction;
 }
 let x = {
     convertOffsetParentRelativeRectToViewportRelativeRect: h,
     getDocumentElement: a.tF,
-    getClippingRect: T,
+    getClippingRect: S,
     getOffsetParent: P,
-    getElementRects: w,
+    getElementRects: D,
     getClientRects: m,
     getDimensions: A,
     getScale: l,
     isElement: a.kK,
-    isRTL: D,
+    isRTL: w,
 };
 function L(e, t) {
     return e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height;

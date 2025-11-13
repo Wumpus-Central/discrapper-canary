@@ -15,9 +15,9 @@ var r = n(951288),
     j = n(996733),
     m = n(313789),
     v = n(914578),
-    g = n(920952),
-    h = n(518596),
-    x = n(388032),
+    x = n(920952),
+    g = n(518596),
+    h = n(388032),
     O = n(942408);
 function P(e) {
     let { destinationPanel: t, originPanel: n } = e;
@@ -53,7 +53,7 @@ function S(e) {
             return l;
         })(e, ["target"]);
     let i = j.Z.useField("query"),
-        { node: a, directory: s } = (0, f.Z)(g.Z, i),
+        { node: a, directory: s } = (0, f.Z)(x.Z, i),
         u = null != t && null != s.entry(t) ? t : void 0,
         y = l.useRef(null);
     return ((0, c.ZP)(() => {
@@ -100,7 +100,7 @@ function S(e) {
                       emptyState: _,
                       sidebarFooter: v.Z,
                       onPanelChange: (e) => {
-                          let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, g.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (P({
                                   destinationPanel: t,
@@ -122,8 +122,8 @@ function C() {
         [n, o] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         c = l.useMemo(
             () => ({
-                title: x.intl.string(x.t.Kv519a),
-                body: x.intl.string(x.t.cTGJBZ),
+                title: h.intl.string(h.t.Kv519a),
+                body: h.intl.string(h.t.cTGJBZ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -169,12 +169,12 @@ function _() {
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: x.intl.string(x.t.zihbmv),
+                children: h.intl.string(h.t.zihbmv),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: x.intl.string(x.t.XclvsB),
+                children: h.intl.string(h.t.XclvsB),
             }),
         ],
     });

@@ -23,15 +23,15 @@ var r = n(951288),
     O = n(230916),
     v = n(165583),
     I = n(984802),
-    S = n(626135),
-    T = n(210887),
+    T = n(626135),
+    S = n(210887),
     A = n(695346),
     C = n(342386),
     N = n(981631),
     R = n(921944),
     P = n(474936),
-    w = n(388032),
-    D = n(505575);
+    D = n(388032),
+    w = n(505575);
 let x = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: R.L.PRIMARY,
@@ -50,14 +50,14 @@ let x = () => {
             m = () => {
                 if (!o || s) return null;
                 let e = u
-                    ? w.intl.formatToPlainString(w.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
-                    : w.intl.string(w.t.mr4K7D);
+                    ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
+                    : D.intl.string(D.t.mr4K7D);
                 return (0, r.jsxs)("div", {
-                    className: D.tryItOutButtons,
+                    className: w.tryItOutButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
-                            text: w.intl.string(w.t["E+COuA"]),
+                            text: D.intl.string(D.t["E+COuA"]),
                             onClick: () => x(),
                         }),
                         (0, r.jsx)(y.Z, {
@@ -74,7 +74,7 @@ let x = () => {
             };
         i.useEffect(() => {
             o &&
-                S.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n,
                 });
@@ -85,15 +85,15 @@ let x = () => {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
-                            className: D.previewThemeButton,
+                            className: w.previewThemeButton,
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: w.intl.string(w.t["E+COuA"]),
+                                text: D.intl.string(D.t["E+COuA"]),
                                 onClick: () => x(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: D.premiumTier2Divider }),
+                        (0, r.jsx)("div", { className: w.premiumTier2Divider }),
                         (0, r.jsx)(v.ZP, {
                             type: P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                             subscriptionTier: P.Si.TIER_2,
@@ -113,7 +113,7 @@ let x = () => {
                 return (
                     o &&
                         (e = (0, r.jsx)("div", {
-                            className: D.colorThemesBackground,
+                            className: w.colorThemesBackground,
                             children: e,
                         })),
                     e
@@ -124,13 +124,13 @@ let x = () => {
                 (0, r.jsxs)(h.ZP, {
                     type: h.yH.SETTINGS,
                     children: [
-                        (0, r.jsx)(h.ZP.Basic, { className: D.basicThemeSelectors }),
+                        (0, r.jsx)(h.ZP.Basic, { className: w.basicThemeSelectors }),
                         (0, r.jsx)(M, {}),
                         (0, r.jsx)(p.Z, {}),
                         I,
                     ],
                 }),
-                (0, r.jsx)(l.izJ, { className: D.divider }),
+                (0, r.jsx)(l.izJ, { className: w.divider }),
             ],
         });
     };
@@ -140,8 +140,8 @@ function M() {
             theme: t,
             useForcedColors: n,
             gradientPreset: i,
-        } = (0, a.cj)([T.Z, u.Z, _.Z], () => ({
-            theme: T.Z.theme,
+        } = (0, a.cj)([S.Z, u.Z, _.Z], () => ({
+            theme: S.Z.theme,
             useForcedColors: u.Z.useForcedColors,
             gradientPreset: _.Z.gradientPreset,
         })),
@@ -152,7 +152,7 @@ function M() {
               children: [
                   (0, r.jsx)(l.izJ, { gap: 24 }),
                   (0, r.jsx)(l.rsf, {
-                      label: w.intl.string(w.t.yF54Ks),
+                      label: D.intl.string(D.t.yF54Ks),
                       checked: e && (0, s.ap)(t) && !n,
                       disabled: t !== N.BRd.LIGHT || n || null != i || o,
                       onChange: c.lq,
@@ -166,6 +166,6 @@ let j = () =>
         ? null
         : (0, r.jsx)(l.Button, {
               variant: "primary",
-              text: w.intl.string(w.t.qYXrkX),
+              text: D.intl.string(D.t.qYXrkX),
               onClick: x,
           });

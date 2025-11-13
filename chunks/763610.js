@@ -1,13 +1,13 @@
 n.d(t, { Z: () => d });
 var r = n(951288),
     s = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     i = n(481060),
     l = n(53281),
     c = n(557441);
 function d(e) {
-    let { filename: t, className: n, filters: a, buttonText: d, placeholder: u, onFileSelect: p } = e,
+    let { filename: t, className: n, filters: o, buttonText: d, placeholder: u, onFileSelect: p } = e,
         m = s.useRef(null),
         g = s.useRef(null);
     return (0, r.jsx)(i.tEY, {
@@ -15,7 +15,7 @@ function d(e) {
         within: !0,
         children: (0, r.jsxs)(i.UPk, {
             ref: m,
-            className: o()(n, c.fileUpload),
+            className: a()(n, c.fileUpload),
             children: [
                 (0, r.jsx)(i.rG2, { size: "sm" }),
                 (0, r.jsx)(i.Text, {
@@ -38,7 +38,7 @@ function d(e) {
                         p(null == (t = e.currentTarget.files) ? void 0 : t[0]);
                     },
                     multiple: !1,
-                    filters: a,
+                    filters: o,
                 }),
             ],
         }),

@@ -25,8 +25,8 @@ var r = n(951288),
     N = n(819286),
     O = n(197571);
 let C = n(515695),
-    A = new f.Z("LoginQRSocket");
-function T(e) {
+    T = new f.Z("LoginQRSocket");
+function A(e) {
     let { text: t = "" } = e,
         [n, s] = i.useState(!1);
     return (
@@ -86,7 +86,7 @@ function P(e) {
         case 1:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(T, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
+                    (0, r.jsx)(A, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
                     (0, r.jsx)(m.Dx, {
                         className: O.marginBottom8,
                         children: S.intl.string(S.t.UPiHaL),
@@ -173,13 +173,13 @@ function R(e) {
                     o({ step: 0 }),
                         d
                             ? n((e) => e + 1)
-                            : (A.info(
+                            : (T.info(
                                   "document is not visible, will defer reconnection when document becomes visible.",
                               ),
                               s(!0));
                 }),
                 f = i.useCallback(() => {
-                    A.error("Could not complete QR code login, trying to restart with a new QR code."),
+                    T.error("Could not complete QR code login, trying to restart with a new QR code."),
                         o({ step: 0 }),
                         m.pending || m.fail(p);
                 }, [p, m]);
@@ -188,15 +188,15 @@ function R(e) {
                     d &&
                         r &&
                         0 === a.step &&
-                        (A.info("reconnecting, now that document is visible"), s(!1), n((e) => e + 1));
+                        (T.info("reconnecting, now that document is visible"), s(!1), n((e) => e + 1));
                 }, [a, d, r, s]),
                 i.useEffect(() => {
                     let t = Date.now(),
                         n = "".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2");
                     n.startsWith("//") && (n = "wss:".concat(n));
                     let r = new WebSocket(n);
-                    A.info("[0ms] connecting to ".concat(n));
-                    let i = (e) => A.info("[".concat("".concat(Date.now() - t, "ms"), "] ").concat(e)),
+                    T.info("[0ms] connecting to ".concat(n));
+                    let i = (e) => T.info("[".concat("".concat(Date.now() - t, "ms"), "] ").concat(e)),
                         s = null,
                         l = null,
                         a = null,

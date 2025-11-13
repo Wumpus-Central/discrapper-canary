@@ -1,7 +1,7 @@
 n.d(t, {
     I2: () => j,
     RD: () => p,
-    mY: () => O,
+    mY: () => d,
     pH: () => A,
 }),
     n(539854),
@@ -58,8 +58,8 @@ function g(e, t) {
         e
     );
 }
-let d = {},
-    S = (0, i.F)((e, t) => ({
+let S = {},
+    O = (0, i.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
@@ -68,10 +68,10 @@ let d = {},
             let { guildId: i, id: u, triggerType: o } = n,
                 { rules: c } = t(),
                 f = null != (r = c[i]) ? r : {},
-                d = null != (l = f[o]) ? l : [],
-                S = d.some((e) => e.id === u),
-                O = d.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
-                j = S ? O.map((e) => (e.id === u ? n : e)) : [...O, n];
+                S = null != (l = f[o]) ? l : [],
+                O = S.some((e) => e.id === u),
+                d = S.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
+                j = O ? d.map((e) => (e.id === u ? n : e)) : [...d, n];
             (0, a.j)(() => {
                 e({
                     rules: g(E({}, c), { [i]: g(E({}, f), { [o]: j }) }),
@@ -100,10 +100,10 @@ let d = {},
                 (function (e) {
                     var t;
                     let n = Date.now();
-                    return n - (null != (t = d[e]) ? t : 0) > 20000;
+                    return n - (null != (t = S[e]) ? t : 0) > 20000;
                 })(n)
             ) {
-                d[n] = Date.now();
+                S[n] = Date.now();
                 try {
                     let r = await (0, o.$Y)(n),
                         l = ((e) => {
@@ -140,13 +140,13 @@ let d = {},
             }
         },
     })),
-    O = (e, t) => {
+    d = (e, t) => {
         var n, r;
-        return (null != (r = null == (n = S.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
+        return (null != (r = null == (n = O.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
     };
 function j(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = S((e) => [e.syncRules, e.fetching], l.X);
+        [i, a] = O((e) => [e.syncRules, e.fetching], l.X);
     return [
         t,
         r.useCallback(async () => {
@@ -171,7 +171,7 @@ function p(e) {
     );
 }
 function A(e) {
-    return S((t) => {
+    return O((t) => {
         var n;
         return {
             rulesByTriggerType: null != (n = t.rules[null != e ? e : f.lds]) ? n : {},

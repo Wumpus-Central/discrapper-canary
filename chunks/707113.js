@@ -3,7 +3,7 @@ var l = n(951288),
     r = n(647438),
     i = n(120356),
     a = n.n(i),
-    s = n(358458),
+    s = n(509442),
     o = n(399606),
     c = n(481060),
     d = n(201070),
@@ -33,39 +33,39 @@ function g(e) {
         g = t.id,
         p = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(g), [g]),
         v = (0, d.$j)(g),
-        _ = (0, d.M3)(g),
-        C = r.useCallback(
+        C = (0, d.M3)(g),
+        _ = r.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s],
         ),
-        E = (0, m.xb)(_, v, p),
-        S = r.useRef(null),
+        S = (0, m.xb)(C, v, p),
         T = r.useRef(null),
+        E = r.useRef(null),
         N = r.useCallback(() => {
             var e;
-            null == (e = S.current) || e.resetSearchText();
+            null == (e = T.current) || e.resetSearchText();
         }, []);
     return (0, l.jsx)("div", {
         className: a()(h.mainTableContainer, n),
         children: (0, l.jsxs)(c.Den, {
             className: h.horizatonalScroller,
-            ref: T,
+            ref: E,
             orientation: "horizontal",
             children: [
                 (0, l.jsx)(b.Z, {
                     guild: t,
-                    ref: S,
+                    ref: T,
                 }),
                 (0, l.jsx)(f, { guild: t }),
                 (0, l.jsx)(x.Z, {
                     guild: t,
-                    onSelectRow: C,
-                    searchState: E,
+                    onSelectRow: _,
+                    searchState: S,
                     onResetForNewMembers: N,
                 }),
-                E !== m.po.SUCCESS_STILL_INDEXING &&
+                S !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(j.Z, {
                         guildId: t.id,
                         onPageChange: i,

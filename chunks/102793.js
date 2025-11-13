@@ -1,4 +1,4 @@
-n.d(t, { H: () => s });
+n.d(t, { H: () => c });
 var r = n(442837),
     i = n(722733),
     l = n(633289),
@@ -9,7 +9,7 @@ let o = (0, i.Z)({
     defaultConfig: { allowGoLiveZoomPan: !1 },
     variations: { 1: { allowGoLiveZoomPan: !0 } },
 });
-function s(e) {
+function c(e) {
     let { location: t } = e;
     return (0, r.e7)([l.Z], () =>
         (function (e) {

@@ -17,7 +17,7 @@ var i = n(268146),
     g = n(396678),
     x = n(37113),
     v = n(65154),
-    j = n(529822),
+    j = n(604415),
     b = n(388032),
     S = n(355669);
 let y = [
@@ -81,8 +81,8 @@ function P(e) {
                 muteStreamAudio: I,
                 preset: E,
                 resolution: N,
-                fps: R,
-                sourceType: A,
+                fps: A,
+                sourceType: R,
                 selectedChannel: M,
             },
             k,
@@ -130,7 +130,7 @@ function P(e) {
                 children: y
                     .filter((e) => {
                         let { canUse: t } = e;
-                        return t(A);
+                        return t(R);
                     })
                     .map((e) => {
                         let { value: t } = e;
@@ -180,7 +180,7 @@ function P(e) {
                             label: b.intl.string(j.default.IG5n0X),
                             children: C.filter((e) => {
                                 let { canUse: t } = e;
-                                return t(A);
+                                return t(R);
                             }).map((e) => {
                                 let { value: t } = e;
                                 return (0, r.jsx)(
@@ -195,7 +195,7 @@ function P(e) {
                                                 : (0, p.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, e, R, a.default.getCurrentUser(), B))
+                                                if (!(0, u.Z)(E, e, A, a.default.getCurrentUser(), B))
                                                     return (
                                                         c(),
                                                         (0, _.E)({
@@ -221,7 +221,7 @@ function P(e) {
                                     {
                                         group: "frame-rate",
                                         id: "stream-option-frame-rate-".concat(e),
-                                        checked: R === e,
+                                        checked: A === e,
                                         label:
                                             e === x.ApplicationStreamFPS.FPS_60
                                                 ? (0, r.jsx)(w, { label: "".concat(e, "fps") })
@@ -258,7 +258,7 @@ function P(e) {
                         value: !I,
                     }),
             }),
-            A === i.vA.CAMERA && H,
+            R === i.vA.CAMERA && H,
             (0, r.jsxs)(l.sNh, {
                 id: "advanced-items",
                 label: b.intl.string(j.default.eYyK1v),

@@ -11,9 +11,9 @@ var i = n(704215),
     d = n(430824),
     p = n(496675),
     f = n(228392),
-    m = n(981631),
-    h = n(921944);
-class g extends s.Z {
+    h = n(981631),
+    g = n(921944);
+class m extends s.Z {
     _initialize() {
         a.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
@@ -27,8 +27,8 @@ class g extends s.Z {
             !((e) => {
                 var t;
                 let n = d.Z.getGuild(e),
-                    r = !!(null == n ? void 0 : n.features.has(m.GuildFeatures.COMMUNITY)),
-                    l = p.Z.can(m.Plq.MANAGE_CHANNELS, n),
+                    r = !!(null == n ? void 0 : n.features.has(h.GuildFeatures.COMMUNITY)),
+                    l = p.Z.can(h.Plq.MANAGE_CHANNELS, n),
                     a = (0, o.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
                     s = null != (t = u.Z.getMemberCount(e)) ? t : 0;
                 return r && l && !a && s >= 200;
@@ -37,7 +37,7 @@ class g extends s.Z {
             return;
         (0, f.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.L.DISMISS;
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
             (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
         (0, l.ZDy)(
@@ -97,10 +97,10 @@ class g extends s.Z {
                 };
             },
             {
-                onCloseCallback: () => (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: h.L.DISMISS }),
-                onCloseRequest: m.VqG,
+                onCloseCallback: () => (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: g.L.DISMISS }),
+                onCloseRequest: h.VqG,
             },
         );
     }
 }
-let _ = new g();
+let _ = new m();

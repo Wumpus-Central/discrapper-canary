@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r,
     i = n(442837),
     a = n(46973),
@@ -62,7 +62,7 @@ function I(e) {
         r = O.delete(e);
     return t || n || r;
 }
-function S() {
+function T() {
     var e;
     let t = f.Z.getChannelId();
     if (null == t) return !1;
@@ -77,16 +77,16 @@ function S() {
         r
     );
 }
-function T() {
+function S() {
     b.clear(), y.clear(), O.clear();
 }
 function A() {
-    T();
+    S();
 }
 function C(e) {
     let { state: t, context: n } = e;
     if (n !== a.Yn.DEFAULT || t !== m.hes.DISCONNECTED) return !1;
-    T();
+    S();
 }
 function N(e) {
     let { voiceStates: t } = e,
@@ -114,9 +114,9 @@ function P(e) {
     let { userId: t, context: n } = e;
     return n === a.Yn.DEFAULT && I(t);
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], S);
+        this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], T);
     }
     get desyncedVoiceStatesCount() {
         return b.size();
@@ -131,10 +131,10 @@ class w extends (r = i.ZP.Store) {
         return y.values();
     }
 }
-E(w, "displayName", "RTCConnectionDesyncStore");
-let D = new w(o.Z, {
+E(D, "displayName", "RTCConnectionDesyncStore");
+let w = new D(o.Z, {
     CONNECTION_OPEN: A,
-    VOICE_CHANNEL_SELECT: T,
+    VOICE_CHANNEL_SELECT: S,
     RTC_CONNECTION_STATE: C,
     VOICE_STATE_UPDATES: N,
     RTC_CONNECTION_CLIENT_CONNECT: R,

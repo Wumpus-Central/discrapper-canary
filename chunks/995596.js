@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -17,7 +17,7 @@ var l = n(951288),
     g = n(384433),
     p = n(388032),
     v = n(350013);
-let _ = (e) => {
+let C = (e) => {
     let { tabs: t, selectedTab: n, onTabSelect: r, onClose: i } = e;
     return (0, l.jsx)(d.v2r, {
         navId: "members-tabs-overflow-menu",
@@ -46,7 +46,7 @@ let _ = (e) => {
         ),
     });
 };
-function C(e) {
+function _(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = r.useRef(null),
         o = (0, x.ZP)(),
@@ -66,7 +66,7 @@ function C(e) {
         targetElementRef: s,
         renderPopout: (e) => {
             let { closePopout: r } = e;
-            return (0, l.jsx)(_, {
+            return (0, l.jsx)(C, {
                 selectedTab: i,
                 onClose: r,
                 tabs: n,
@@ -146,15 +146,15 @@ function C(e) {
         },
     });
 }
-function E(e) {
+function S(e) {
     let t,
         { guildId: n, currentTab: i, onTabSelect: a } = e,
         [c, x] = r.useState(0),
-        _ = r.useRef(null),
-        E = r.useRef(c),
-        S = (0, b.A)({ guildId: n }),
-        T =
-            ((t = null != S ? S : 0),
+        C = r.useRef(null),
+        S = r.useRef(c),
+        T = (0, b.A)({ guildId: n }),
+        E =
+            ((t = null != T ? T : 0),
             [
                 {
                     id: g.e.ALL_MEMBERS,
@@ -176,41 +176,41 @@ function E(e) {
             ]),
         {
             lastVisibleIndex: N,
-            onItemLayout: P,
-            overflowItemsRef: O,
+            onItemLayout: O,
+            overflowItemsRef: P,
         } = (0, o.zP)({
-            items: T,
+            items: E,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: c - 200,
         }),
-        I = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(n), [n]),
-        y = (0, j.L)({ guildId: n }),
-        R = r.useMemo(() => (i === g.e.ALL_MEMBERS ? I : null != y && null != y.user), [i, I, y]),
-        w = r.useMemo(() => T.slice(0, N + 1), [N, T]),
-        A = r.useMemo(() => T.slice(N + 1), [N, T]),
+        y = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(n), [n]),
+        I = (0, j.L)({ guildId: n }),
+        R = r.useMemo(() => (i === g.e.ALL_MEMBERS ? y : null != I && null != I.user), [i, y, I]),
+        w = r.useMemo(() => E.slice(0, N + 1), [N, E]),
+        A = r.useMemo(() => E.slice(N + 1), [N, E]),
         M = (0, m.Z)((e) => {
             let t = e.contentRect.width;
-            null != t && E.current !== t && (x(t), (E.current = t));
+            null != t && S.current !== t && (x(t), (S.current = t));
         });
     return (
-        (0, u.s)(_, M, [R]),
+        (0, u.s)(C, M, [R]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(h.Z.Divider, { className: v.divider }),
                 (0, l.jsxs)("div", {
                     className: v.tabsContainer,
-                    ref: _,
+                    ref: C,
                     children: [
                         (0, l.jsxs)("div", {
                             className: v.measurements,
                             children: [
-                                T.map((e, t) =>
+                                E.map((e, t) =>
                                     (0, l.jsx)(
                                         o.AJ,
                                         {
                                             index: t,
-                                            onItemLayout: P,
+                                            onItemLayout: O,
                                             children: (0, l.jsx)(d.njP.Item, {
                                                 id: e.id,
                                                 "aria-label": e.label,
@@ -221,8 +221,8 @@ function E(e) {
                                     ),
                                 ),
                                 (0, l.jsx)("div", {
-                                    ref: O,
-                                    children: (0, l.jsx)(C, {
+                                    ref: P,
+                                    children: (0, l.jsx)(_, {
                                         tabs: A,
                                         onTabSelect: a,
                                         selectedTab: i,
@@ -248,7 +248,7 @@ function E(e) {
                                     ),
                                 ),
                                 0 !== A.length
-                                    ? (0, l.jsx)(C, {
+                                    ? (0, l.jsx)(_, {
                                           tabs: A,
                                           onTabSelect: a,
                                           selectedTab: i,

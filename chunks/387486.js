@@ -8,7 +8,7 @@ function o(t, e = (0, r.L2)("fetch")) {
     return (0, _.q)(t, function (_) {
         let o = _.body.length;
         (a += o), i++;
-        let c = {
+        let E = {
             body: _.body,
             method: "POST",
             referrerPolicy: "origin",
@@ -18,7 +18,7 @@ function o(t, e = (0, r.L2)("fetch")) {
         };
         if (!e) return (0, r._6)("fetch"), (0, n.$2)("No fetch implementation available");
         try {
-            return e(t.url, c).then(
+            return e(t.url, E).then(
                 (t) => (
                     (a -= o),
                     i--,

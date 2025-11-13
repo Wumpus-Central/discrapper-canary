@@ -7,8 +7,8 @@ var r = t(873546),
 let s = (e, n) => {
     let t = (0, i.t)("collectibles-shop-gift-button"),
         s = (0, l.G1)(e),
-        u = (0, l.rN)(e),
-        c = (0, a.r1)(e),
+        c = (0, l.rN)(e),
+        u = (0, a.r1)(e),
         d = (0, l.x6)(e) && !t;
-    return !s && !u && !c && n !== o.tA.ORBS && !d && !r.tq;
+    return !s && !c && !u && n !== o.tA.ORBS && !d && !r.tq;
 };

@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ }), n(388685);
 var r,
     a = n(951288),
     i = n(647438),
-    o = n(392711),
-    l = n.n(o),
+    l = n(392711),
+    o = n.n(l),
     s = n(55935),
     c = n(388032);
 function d(e, t, n) {
@@ -32,7 +32,7 @@ class u extends (r = i.PureComponent) {
     defaultRender(e) {
         let { showDays: t, showUnits: n, className: r } = this.props,
             i = [e.days, e.hours, e.minutes, e.seconds],
-            o = [
+            l = [
                 c.intl.string(c.t["6m/6nM"]),
                 c.intl.string(c.t.n7dksO),
                 c.intl.string(c.t["1LyF1h"]),
@@ -43,14 +43,14 @@ class u extends (r = i.PureComponent) {
             let e = i.shift();
             i[0] += 24 * e;
         }
-        let s = l()(i)
+        let s = o()(i)
             .map((e) => (e < 10 ? "0".concat(e) : e))
             .map((e, t) => [
                 t > 0 && !n ? ":" : " ",
                 (0, a.jsxs)(
                     "span",
                     {
-                        children: [e, n ? o[i.length - t - 1] : null],
+                        children: [e, n ? l[i.length - t - 1] : null],
                     },
                     t,
                 ),

@@ -1,58 +1,58 @@
 n.d(t, { Z: () => h });
-var i = n(951288),
-    l = n(647438),
-    r = n(120356),
-    a = n.n(r),
-    o = n(481060),
-    s = n(895924),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(895924),
     c = n(827498),
     u = n(106066),
     d = n(98880),
-    p = n(772606),
-    m = n(388032),
-    f = n(493891);
+    f = n(772606),
+    _ = n(388032),
+    p = n(493891);
 function h(e) {
-    let { context: t, entrypoint: n, title: r, look: h, items: v, sectionName: y, sectionOverallPosition: g } = e,
-        x = (0, u.s)(),
-        b = l.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
-    return (0, i.jsxs)("section", {
-        className: f.container,
-        "aria-label": m.intl.formatToPlainString(m.t.iobNIB, { sectionTitle: r }),
+    let { context: t, entrypoint: n, title: a, look: h, items: m, sectionName: g, sectionOverallPosition: E } = e,
+        b = (0, u.s)(),
+        y = i.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
+    return (0, r.jsxs)("section", {
+        className: p.container,
+        "aria-label": _.intl.formatToPlainString(_.t.iobNIB, { sectionTitle: a }),
         children: [
-            (0, i.jsxs)("div", {
-                className: f.header,
+            (0, r.jsxs)("div", {
+                className: p.header,
                 children: [
-                    (0, i.jsx)(p.Z, { className: f.backButton }),
-                    (0, i.jsx)(o.Heading, {
+                    (0, r.jsx)(f.Z, { className: p.backButton }),
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: r,
+                        children: a,
                     }),
                 ],
             }),
-            (0, i.jsx)(o.Ttm, {
-                children: (0, i.jsx)("div", {
-                    className: a()({
-                        [f.appGrid]: h !== d.U4.ROW,
-                        [f.rows]: h === d.U4.ROW,
+            (0, r.jsx)(s.Ttm, {
+                children: (0, r.jsx)("div", {
+                    className: o()({
+                        [p.appGrid]: h !== d.U4.ROW,
+                        [p.rows]: h === d.U4.ROW,
                     }),
-                    children: v.map((e, n) => {
-                        let { application: l, installOnDemand: r, showsPromoted: a } = e;
-                        return (0, i.jsx)(
-                            b,
+                    children: m.map((e, n) => {
+                        let { application: i, installOnDemand: a, showsPromoted: o } = e;
+                        return (0, r.jsx)(
+                            y,
                             {
                                 context: t,
-                                application: l,
+                                application: i,
                                 look: h,
-                                sectionName: y,
+                                sectionName: g,
                                 resultsPosition: n,
-                                location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
-                                installOnDemand: r,
-                                isOneClickCTA: x,
-                                sectionOverallPosition: g,
-                                showsPromoted: a,
+                                location: l.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+                                installOnDemand: a,
+                                isOneClickCTA: b,
+                                sectionOverallPosition: E,
+                                showsPromoted: o,
                             },
-                            l.id,
+                            i.id,
                         );
                     }),
                 }),

@@ -29,13 +29,13 @@ function g(e, t) {
         C = (0, o.p)(),
         N = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
         R = (0, f.o)({ location: "useMessageRenderedContent" }),
-        [P, w] = i.useState(!1),
-        D = i.useCallback((e) => {
-            e && w(!0);
+        [P, D] = i.useState(!1),
+        w = i.useCallback((e) => {
+            e && D(!0);
         }, []);
     return (
         i.useEffect(() => {
-            w(!1);
+            D(!1);
         }, [e.content]),
         i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -62,7 +62,7 @@ function g(e, t) {
                                   channelId: e.channel_id,
                                   viewingChannelId: A,
                                   guildId: (0, l.k)(e),
-                                  setHasSpoilerEmbeds: D,
+                                  setHasSpoilerEmbeds: w,
                               },
                               children: (0, r.jsx)(m, { content: e.content }),
                           }),

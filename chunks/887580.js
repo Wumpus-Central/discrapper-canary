@@ -56,9 +56,9 @@ function b(e) {
     if (null == n || null == I) return null;
     let R = (0, u.ak)(I).find((e) => e.value === c),
         P = null != R ? m.su.EXPERIMENT_TREATMENT : m.su.EXPERIMENT,
-        w = null != T && null != R && T.variantId === R.value,
-        D = () => {
-            null != R && (w ? (0, d.rX)(I.system, n, null) : (0, d.rX)(I.system, n, R.value));
+        D = null != T && null != R && T.variantId === R.value,
+        w = () => {
+            null != R && (D ? (0, d.rX)(I.system, n, null) : (0, d.rX)(I.system, n, R.value));
         },
         x = (0, r.jsx)(E, { url: t }),
         L = null;
@@ -111,9 +111,9 @@ function b(e) {
                   null != R
                       ? (0, r.jsx)(o.Button, {
                             fullWidth: !0,
-                            variant: w ? "critical-primary" : "primary",
-                            text: w ? "Clear Treatment ".concat(R.value) : "Apply Treatment ".concat(R.value),
-                            onClick: D,
+                            variant: D ? "critical-primary" : "primary",
+                            text: D ? "Clear Treatment ".concat(R.value) : "Apply Treatment ".concat(R.value),
+                            onClick: w,
                         })
                       : (0, r.jsx)("div", {
                             className: g.experimentOverride,

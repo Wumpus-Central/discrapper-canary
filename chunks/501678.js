@@ -1,12 +1,12 @@
-n.d(t, { g6: () => s });
+n.d(t, { g6: () => a });
 var r = n(951288),
     l = n(647438);
 let i = l.createContext(null);
-function s(e) {
+function a(e) {
     let { blockType: t, children: n } = e,
-        s = l.useMemo(() => ({ blockType: t }), [t]);
+        a = l.useMemo(() => ({ blockType: t }), [t]);
     return (0, r.jsx)(i.Provider, {
-        value: s,
+        value: a,
         children: n,
     });
 }

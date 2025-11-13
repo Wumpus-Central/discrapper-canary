@@ -26,11 +26,11 @@ var r = "function" == typeof Map && Map.prototype,
     N = Object.getOwnPropertySymbols,
     R = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? Symbol.prototype.toString : null,
     P = "function" == typeof Symbol && "object" == typeof Symbol.iterator,
-    w =
+    D =
         "function" == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === P ? "object" : "symbol")
             ? Symbol.toStringTag
             : null,
-    D = Object.prototype.propertyIsEnumerable,
+    w = Object.prototype.propertyIsEnumerable,
     x =
         ("function" == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
         ([].__proto__ === Array.prototype
@@ -72,7 +72,7 @@ function Z(e) {
     return b.call(String(e), /"/g, "&quot;");
 }
 function F(e) {
-    return !w || !("object" == typeof e && (w in e || void 0 !== e[w]));
+    return !D || !("object" == typeof e && (D in e || void 0 !== e[D]));
 }
 function V(e) {
     return "[object Array]" === ee(e) && F(e);
@@ -186,7 +186,7 @@ e.exports = function e(t, r, i, s) {
     }
     if (W(t)) {
         var eu = eg(t, y);
-        return "cause" in Error.prototype || !("cause" in t) || D.call(t, "cause")
+        return "cause" in Error.prototype || !("cause" in t) || w.call(t, "cause")
             ? 0 === eu.length
                 ? "[" + String(t) + "]"
                 : "{ [" + String(t) + "] " + T.call(eu, ", ") + " }"
@@ -230,7 +230,7 @@ e.exports = function e(t, r, i, s) {
         var ey = eg(t, y),
             eO = x ? x(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             ev = t instanceof Object ? "" : "null prototype",
-            eI = !eO && w && Object(t) === t && w in t ? E.call(ee(t), 8, -1) : ev ? "Object" : "",
+            eI = !eO && D && Object(t) === t && D in t ? E.call(ee(t), 8, -1) : ev ? "Object" : "",
             eT =
                 (eO || "function" != typeof t.constructor ? "" : t.constructor.name ? t.constructor.name + " " : "") +
                 (eI || ev ? "[" + T.call(I.call([], eI || [], ev || []), ": ") + "] " : "");
@@ -394,6 +394,6 @@ function eg(e, t) {
             if (P && n["$" + l] instanceof Symbol) continue;
             else v.call(/[^\w$]/, l) ? i.push(t(l, e) + ": " + t(e[l], e)) : i.push(l + ": " + t(e[l], e));
     if ("function" == typeof N)
-        for (var c = 0; c < o.length; c++) D.call(e, o[c]) && i.push("[" + t(o[c]) + "]: " + t(e[o[c]], e));
+        for (var c = 0; c < o.length; c++) w.call(e, o[c]) && i.push("[" + t(o[c]) + "]: " + t(e[o[c]], e));
     return i;
 }

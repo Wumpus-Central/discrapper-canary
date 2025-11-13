@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => D,
+    Z: () => w,
     u: () => P,
 }),
     n(388685);
@@ -8,7 +8,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(358458),
+    l = n(509442),
     c = n(481060),
     u = n(596454),
     d = n(313201),
@@ -116,7 +116,7 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -135,7 +135,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let {
             channel: t,
             title: n,
@@ -149,7 +149,7 @@ function D(e) {
             analyticsOverride: T,
             ref: A,
         } = e,
-        D = (0, d.Dt)(),
+        w = (0, d.Dt)(),
         [x, L] = i.useState(!1),
         M = (0, _.wC)(t.guild_id),
         j = (0, s.uniqBy)([...M, ...R], "name")
@@ -175,14 +175,14 @@ function D(e) {
             null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? k(!0) : k(!x));
         };
     return (0, r.jsxs)(c.VqE, {
-        "aria-labelledby": D,
+        "aria-labelledby": w,
         ref: A,
         children: [
             (0, r.jsx)(c.y5t, {
                 forceLevel: 2,
                 children: (0, r.jsx)(c.nn4, {
                     children: (0, r.jsx)(c.H, {
-                        id: D,
+                        id: w,
                         children: n,
                     }),
                 }),
@@ -201,7 +201,7 @@ function D(e) {
                         wrapper: "div",
                         pickerIntention: N,
                         searchProps: C(S({}, m), {
-                            accessory: (0, r.jsx)(w, {
+                            accessory: (0, r.jsx)(D, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
                                 isEmojiPickerExpanded: x,
                                 onSetExpanded: k,

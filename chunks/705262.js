@@ -26,15 +26,15 @@ var r = n(951288),
     O = n(740492),
     v = n(695346),
     I = n(342386),
-    S = n(626135),
-    T = n(238302),
+    T = n(626135),
+    S = n(238302),
     A = n(514361),
     C = n(717953),
     N = n(583901),
     R = n(469115),
     P = n(981631),
-    w = n(474936),
-    D = n(874893),
+    D = n(474936),
+    w = n(874893),
     x = n(526761),
     L = n(231338),
     M = n(388032),
@@ -122,8 +122,8 @@ let H = Object.freeze({
     Y = i.createContext({}),
     W = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        S.default.track(P.rMx.CLIENT_THEME_UPDATED, {
-            feature_name: w.QP.CLIENT_THEME,
+        T.default.track(P.rMx.CLIENT_THEME_UPDATED, {
+            feature_name: D.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r,
@@ -168,7 +168,7 @@ let H = Object.freeze({
     z = (e) => {
         var t, n;
         let { type: i, isPreview: o, isCoachmark: s } = e;
-        if ((null == (n = (0, g.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === w.Si.TIER_2 && o)
+        if ((null == (n = (0, g.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === D.Si.TIER_2 && o)
             return null;
         let l = (0, a.EQ)({
             type: i,
@@ -209,11 +209,11 @@ let H = Object.freeze({
         let { renderCTAButtons: a, isCoachmark: s } = e,
             { type: l } = i.useContext(Y),
             [c] = (0, o.Wu)([A.Z], () => [A.Z.isPreview]),
-            u = (null == (n = (0, g.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === w.Si.TIER_2;
+            u = (null == (n = (0, g.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === D.Si.TIER_2;
         return "EDITOR" === l && c && u
             ? (0, r.jsx)(E.ZP, {
-                  type: w.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                  subscriptionTier: w.Si.TIER_2,
+                  type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                  subscriptionTier: D.Si.TIER_2,
                   children: M.intl.format(M.t.G8yQXi, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
@@ -252,9 +252,9 @@ let H = Object.freeze({
         i.useEffect(() => {
             ((y === R.XV.length - 2 && "EDITOR" === a) || g === s.Us.EASTER_EGG) && b(!0);
         }, [y, a, g]);
-        let S = (e, t) => {
+        let T = (e, t) => {
                 if (
-                    ((0, T.zO)(e.id),
+                    ((0, S.zO)(e.id),
                     W({
                         isPersisted: !m,
                         analyticsLocations: h,
@@ -266,7 +266,7 @@ let H = Object.freeze({
                               {
                                   backgroundGradientPresetId: e.id,
                                   theme: e.theme,
-                                  useSystemTheme: m ? D.KW.OFF : void 0,
+                                  useSystemTheme: m ? w.KW.OFF : void 0,
                               },
                               l,
                           ),
@@ -281,14 +281,14 @@ let H = Object.freeze({
                     {
                         backgroundGradientPresetId: e.id,
                         theme: e.theme,
-                        useSystemTheme: m ? D.KW.OFF : void 0,
+                        useSystemTheme: m ? w.KW.OFF : void 0,
                     },
                     x.fy.SLOW_USER_ACTION,
                 ),
                     (0, p.XO)(p.wh.CLIENT_THEMES),
                     (0, I.default)();
             },
-            w = () => {
+            D = () => {
                 if (!E) return null;
                 let e = R.qt[s.Us.EASTER_EGG];
                 if (null == e) return null;
@@ -302,7 +302,7 @@ let H = Object.freeze({
                         (0, r.jsx)(N.DR, {
                             preset: e,
                             isSelected: g === s.Us.EASTER_EGG,
-                            onSelect: () => S(e),
+                            onSelect: () => T(e),
                         }),
                         (0, r.jsx)(c.Fmz, {
                             importData: t,
@@ -332,7 +332,7 @@ let H = Object.freeze({
                         {
                             preset: e,
                             isSelected: g === e.id,
-                            onSelect: () => S(e, n),
+                            onSelect: () => T(e, n),
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
@@ -341,7 +341,7 @@ let H = Object.freeze({
                         e.id,
                     ),
                 ),
-                w(),
+                D(),
             ],
         });
     },
@@ -371,10 +371,10 @@ let H = Object.freeze({
             [l, c, d] = (0, o.Wu)([y.Z, O.ZP, A.Z], () => [
                 y.Z.theme,
                 null == A.Z.gradientPreset && null == v.L1.getSetting().customUserThemeSettings,
-                O.ZP.useSystemTheme === D.KW.ON,
+                O.ZP.useSystemTheme === w.KW.ON,
             ]),
             p = (e) => {
-                (0, T.xs)(),
+                (0, S.xs)(),
                     W({
                         isPersisted: !0,
                         analyticsLocations: s,

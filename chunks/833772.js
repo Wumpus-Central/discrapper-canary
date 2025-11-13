@@ -4,8 +4,8 @@ var r = a(448171),
     n = a(747677),
     o = a(622916),
     i = a(454463),
-    c = a(878719),
-    E = a(163162),
+    E = a(878719),
+    c = a(163162),
     s = a(463461);
 class l extends r.W {
     constructor(t) {
@@ -13,20 +13,20 @@ class l extends r.W {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...t,
             },
-            a = E.m9.SENTRY_SDK_SOURCE || (0, n.S)();
+            a = c.m9.SENTRY_SDK_SOURCE || (0, n.S)();
         (0, _.V)(e, "browser", ["browser"], a),
             super(e),
             e.sendClientReports &&
-                E.m9.document &&
-                E.m9.document.addEventListener("visibilitychange", () => {
-                    "hidden" === E.m9.document.visibilityState && this._flushOutcomes();
+                c.m9.document &&
+                c.m9.document.addEventListener("visibilitychange", () => {
+                    "hidden" === c.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
     eventFromException(t, e) {
-        return (0, c.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
+        return (0, E.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
     }
     eventFromMessage(t, e = "info", a) {
-        return (0, c.aB)(this._options.stackParser, t, e, a, this._options.attachStacktrace);
+        return (0, E.aB)(this._options.stackParser, t, e, a, this._options.attachStacktrace);
     }
     captureUserFeedback(t) {
         if (!this._isEnabled()) {

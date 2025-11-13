@@ -2,21 +2,21 @@ n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(442837),
-    s = n(481060),
-    a = n(706454),
-    o = n(626135),
+    a = n(481060),
+    o = n(706454),
+    s = n(626135),
     c = n(381585),
     u = n(501431),
     d = n(215023),
-    p = n(981631),
-    g = n(388032),
+    g = n(981631),
+    p = n(388032),
     f = n(535333);
 function h(e) {
     let { handleTransition: t, selectedTab: n } = e,
         { searchQuery: h, onSetSearchQuery: C } = (0, u.S)(),
         [m, _] = l.useState(""),
         b = (0, c.sp)(),
-        v = (0, i.e7)([a.default], () => a.default.locale);
+        v = (0, i.e7)([o.default], () => o.default.locale);
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -27,12 +27,12 @@ function h(e) {
         l.useEffect(() => {
             _(h);
         }, [h]),
-        (0, r.jsx)(s.P3F, {
+        (0, r.jsx)(a.P3F, {
             ignoreKeyPress: !0,
             className: f.searchBar,
             onClick: () => {
                 n !== d.AW.CATALOG && t(d.AW.CATALOG),
-                    o.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                         page_section: null == b ? void 0 : b.pageSection,
                         page_category: null == b ? void 0 : b.pageCategory,
@@ -42,7 +42,7 @@ function h(e) {
                         page_type: n,
                     });
             },
-            children: (0, r.jsx)(s.E1j, {
+            children: (0, r.jsx)(a.E1j, {
                 size: "sm",
                 onKeyDown: (e) => {
                     "Enter" === e.key && C(m);
@@ -51,7 +51,7 @@ function h(e) {
                 onChange: _,
                 onClear: () => {
                     _(""),
-                        o.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                             page_section: null == b ? void 0 : b.pageSection,
                             page_category: null == b ? void 0 : b.pageCategory,
@@ -61,7 +61,7 @@ function h(e) {
                             page_type: n,
                         });
                 },
-                placeholder: "en-US" === v ? g.intl.string(g.t.arz34K) : g.intl.string(g.t["hIt/Nm"]),
+                placeholder: "en-US" === v ? p.intl.string(p.t.arz34K) : p.intl.string(p.t["hIt/Nm"]),
             }),
         })
     );

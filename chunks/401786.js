@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(474936),
     R = n(231338),
     P = n(388032),
-    w = n(569319);
-function D(e) {
+    D = n(569319);
+function w(e) {
     let {
             premiumSubscription: t,
             fractionalPremiumInfo: n,
@@ -68,8 +68,8 @@ function D(e) {
         title: u,
         actions: d,
         children: (0, r.jsxs)("div", {
-            className: w.body,
-            children: [(0, r.jsx)("div", { className: w.cancelImage }), (0, r.jsx)("div", { children: c })],
+            className: D.body,
+            children: [(0, r.jsx)("div", { className: D.cancelImage }), (0, r.jsx)("div", { children: c })],
         }),
     });
 }
@@ -101,7 +101,7 @@ function M(e) {
     var t, n, a;
     let { premiumSubscription: o, guildBoostSlotId: s, fractionalPremiumInfo: u, onBack: d, onNext: p, onClose: O } = e,
         [I, T] = i.useState(!1),
-        [R, D] = i.useState(null),
+        [R, w] = i.useState(null),
         [x, M] = i.useMemo(() => {
             try {
                 return [(0, g.g)(o, -1), !1];
@@ -173,11 +173,11 @@ function M(e) {
                 }),
                 (0, r.jsxs)(c.hzk, {
                     "data-migration-pending": !0,
-                    className: w.body,
+                    className: D.body,
                     children: [
                         null !== R &&
                             (0, r.jsx)("div", {
-                                className: w.error,
+                                className: D.error,
                                 children: (0, r.jsx)(c.M14, {
                                     type: "critical",
                                     children: R,
@@ -185,13 +185,13 @@ function M(e) {
                             }),
                         (0, r.jsx)("div", { children: z }),
                         (0, r.jsxs)(E.aO, {
-                            className: w.invoiceTable,
+                            className: D.invoiceTable,
                             children: [
                                 (0, r.jsx)(E.Z9, { children: P.intl.string(P.t.iqhIp4) }),
                                 (0, r.jsx)(E.B1, {
                                     label: P.intl.format(P.t["Vg+LRr"], { subscriptionCount: 1 }),
                                     value: (0, A.og)((0, A.T4)(Y, o.currency), W, K),
-                                    className: w.invoiceCancelRow,
+                                    className: D.invoiceCancelRow,
                                 }),
                                 null != Z && Z.length > 0
                                     ? (0, r.jsxs)("div", {
@@ -220,9 +220,9 @@ function M(e) {
                             disabled: I,
                             onClick: async () => {
                                 try {
-                                    T(!0), D(null), await L(o, x, G, s), p();
+                                    T(!0), w(null), await L(o, x, G, s), p();
                                 } catch (e) {
-                                    D(P.intl.string(P.t["5mlOCW"])), T(!1);
+                                    w(P.intl.string(P.t["5mlOCW"])), T(!1);
                                 }
                             },
                         }),
@@ -251,9 +251,9 @@ function j(e) {
         title: P.intl.string(P.t["fZzV/B"]),
         actions: l,
         children: (0, r.jsxs)("div", {
-            className: w.body,
+            className: D.body,
             children: [
-                (0, r.jsx)("div", { className: w.cancelImage }),
+                (0, r.jsx)("div", { className: D.cancelImage }),
                 (0, r.jsx)("div", { children: P.intl.format(P.t["H+z0ns"], { endDate: o }) }),
             ],
         }),
@@ -277,7 +277,7 @@ function k(e) {
     else
         switch (h) {
             case 1:
-                t = (0, r.jsx)(D, {
+                t = (0, r.jsx)(w, {
                     premiumSubscription: s,
                     fractionalPremiumInfo: d,
                     isInventory: null == n.premiumGuildSubscription,

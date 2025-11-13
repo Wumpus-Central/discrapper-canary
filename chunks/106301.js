@@ -107,7 +107,7 @@ function P(e) {
         state: "".concat(r, ":").concat(l),
     };
 }
-function w(e) {
+function D(e) {
     let { status: t, emoji: n, saveAsDefault: s } = e;
     (r = b.tN.CUSTOM),
         (o = null),
@@ -133,7 +133,7 @@ function w(e) {
             emoji: n,
         });
 }
-function D(e) {
+function w(e) {
     let { applicationId: t, saveAsDefault: n } = e;
     (o = t),
         (r = null),
@@ -263,8 +263,8 @@ O(k, "displayName", "HangStatusStore"),
 let U = new k(h.Z, {
     LOGOUT: R,
     UPDATE_HANG_STATUS: P,
-    UPDATE_HANG_STATUS_CUSTOM: w,
-    UPDATE_HANG_STATUS_GAME_ACTIVITY: D,
+    UPDATE_HANG_STATUS_CUSTOM: D,
+    UPDATE_HANG_STATUS_GAME_ACTIVITY: w,
     DELETE_INVALID_HANG_STATUSES: j,
     CLEAR_HANG_STATUS: x,
     UPDATE_FAVORITE_HANG_STATUS: L,

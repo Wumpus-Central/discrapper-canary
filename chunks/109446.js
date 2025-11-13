@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(642613), n(583741);
+n.d(t, { Z: () => x }), n(388685), n(642613), n(583741);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -19,7 +19,7 @@ var r = n(951288),
     O = n(124368),
     v = n(388032),
     j = n(531198);
-function C(e) {
+function x(e) {
     let { channel: t } = e,
         l = (0, a.Wu)([d.Z, g.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
@@ -52,7 +52,7 @@ function C(e) {
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(x, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(C, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
@@ -103,7 +103,7 @@ function C(e) {
         })
     );
 }
-function x(e) {
+function C(e) {
     let { thread: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, p.Ok)(t);

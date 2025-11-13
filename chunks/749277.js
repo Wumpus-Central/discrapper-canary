@@ -55,7 +55,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,12 +67,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function D(e, t) {
 }
 let x = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
-        w = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
+        D = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
         x = (0, i.e7)([E.Z], () => E.Z.getGuildId());
     return (0, r.jsx)(v.ZP, {
         contentTypes: [t],
@@ -181,7 +181,7 @@ let x = (e) => {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     e,
-                                                    D(P({}, n), {
+                                                    w(P({}, n), {
                                                         ticket: t,
                                                         challenge: i,
                                                         showAccountSettingsButton: !0,
@@ -355,7 +355,7 @@ let x = (e) => {
                                 onClick: () => {
                                     window.open(
                                         "https://discord.sjc1.qualtrics.com/jfe/form/SV_9zz09xNJ3Qvyb78?user_id="
-                                            .concat(null == w ? void 0 : w.id, "&guild_id=")
+                                            .concat(null == D ? void 0 : D.id, "&guild_id=")
                                             .concat(x),
                                         "_blank",
                                     ),

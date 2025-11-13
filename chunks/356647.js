@@ -1,6 +1,6 @@
-n.d(t, { f: () => h }), n(388685), n(997841);
-var r = n(602715),
-    i = n(924557),
+n.d(t, { f: () => f }), n(388685), n(997841);
+var i = n(602715),
+    r = n(924557),
     l = n(435064),
     a = n(258732),
     o = n(314897),
@@ -9,7 +9,7 @@ var r = n(602715),
     u = n(3148),
     d = n(981631);
 let p = new Map();
-function f(e, t) {
+function h(e, t) {
     let n = (0, u.ZP)({
             channelId: t,
             type: d.uaV.IN_GAME_MESSAGE_NUX,
@@ -18,26 +18,26 @@ function f(e, t) {
             flags: d.iLy.EPHEMERAL,
             state: d.yb.SENT,
         }),
-        r = (0, c.e5)(n);
-    return (r.applicationId = e.applicationId), (r.timestamp = e.timestamp), r;
+        i = (0, c.e5)(n);
+    return (i.applicationId = e.applicationId), (i.timestamp = e.timestamp), i;
 }
-function h(e, t) {
+function f(e, t) {
     let n = (function (e, t) {
-        var n, i;
-        if (p.get(t.id) === e.id) return f(e, t.id);
+        var n, r;
+        if (p.get(t.id) === e.id) return h(e, t.id);
         if (
             null == e.applicationId ||
             !(0, s.yE)(e.flags, d.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ||
             !t.isDM() ||
             e.author.id === o.default.getId() ||
             null != e.activity ||
-            (0, s.yE)(null != (n = t.recipientFlags) ? n : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX) ||
+            (0, s.yE)(null != (n = t.recipientFlags) ? n : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX) ||
             p.has(t.id)
         )
             return null;
-        let l = f(e, t.id);
+        let l = h(e, t.id);
         p.set(t.id, e.id);
-        let c = (0, s.mB)(null != (i = t.recipientFlags) ? i : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+        let c = (0, s.mB)(null != (r = t.recipientFlags) ? r : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
         return a.Z.updatePrivateChannelRecipientFlags(t.id, c), l;
     })(e, t);
     if (null != n)
@@ -45,9 +45,9 @@ function h(e, t) {
             message: n,
             position: "before",
         };
-    let h = (function (e, t) {
+    let f = (function (e, t) {
         if (
-            !(0, i.NS)() ||
+            !(0, r.NS)() ||
             null ==
                 e.attachments.find((e) => {
                     var t;
@@ -56,14 +56,14 @@ function h(e, t) {
             e.author.id === o.default.getId()
         )
             return null;
-        let { clipId: n, remoteTriggerClipId: r } = (function (e) {
+        let { clipId: n, remoteTriggerClipId: i } = (function (e) {
             let t = "__CLIP_METADATA__",
                 n = e.indexOf(t);
             if (-1 === n) return {};
-            let r = n + t.length,
-                i = e.substring(r);
+            let i = n + t.length,
+                r = e.substring(i);
             try {
-                let e = JSON.parse(i);
+                let e = JSON.parse(r);
                 return {
                     clipId: e.id,
                     remoteTriggerClipId: e.remoteTriggerClipId,
@@ -72,30 +72,30 @@ function h(e, t) {
                 return {};
             }
         })(e.content);
-        if (null == n && null == r) return null;
-        let a = l.Z.getMatchingGroupClip(n, r);
+        if (null == n && null == i) return null;
+        let a = l.Z.getMatchingGroupClip(n, i);
         if (null == a || l.Z.wasClipSharedInChannel(a.id, t.id)) return null;
         var p = t.id;
-        let f = (0, u.ZP)({
+        let h = (0, u.ZP)({
                 channelId: p,
                 type: 65,
                 content: "",
                 author: e.author,
                 state: d.yb.SENT,
             }),
-            h = (0, c.e5)(f);
+            f = (0, c.e5)(h);
         return (
-            (h.timestamp = e.timestamp),
-            (h.messageReference = {
+            (f.timestamp = e.timestamp),
+            (f.messageReference = {
                 channel_id: p,
                 message_id: e.id,
             }),
-            h
+            f
         );
     })(e, t);
-    return null != h
+    return null != f
         ? {
-              message: h,
+              message: f,
               position: "after",
           }
         : null;

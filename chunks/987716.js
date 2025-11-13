@@ -100,8 +100,8 @@ let A = (e) => {
             setEmojiConfetti: N,
             setSoundEffect: R,
         } = (0, c.wD)(),
-        [P, w] = i.useState(!1),
-        D = i.useRef(null),
+        [P, D] = i.useState(!1),
+        w = i.useRef(null),
         x = (0, s.Jb)({ orientation: "horizontal" }),
         { ref: L } = x,
         M = T(x, ["ref"]),
@@ -152,7 +152,7 @@ let A = (e) => {
                             tabIndex: null != v || P ? void 0 : 0,
                             onFocus: (e) => {
                                 var t;
-                                e.target === e.currentTarget && (null == (t = D.current) || t.focus());
+                                e.target === e.currentTarget && (null == (t = w.current) || t.focus());
                             },
                             className: o()(b.giftBoxOptionContainer, a),
                             "aria-label": E.intl.string(E.t.v54NrN),
@@ -171,9 +171,9 @@ let A = (e) => {
                                         isSelected: v === e,
                                         giftStyle: e,
                                         setSelectedGiftStyle: S,
-                                        ref: 0 === t ? D : null,
-                                        onFocus: () => w(!0),
-                                        onBlur: () => w(!1),
+                                        ref: 0 === t ? w : null,
+                                        onFocus: () => D(!0),
+                                        onBlur: () => D(!1),
                                     },
                                     e,
                                 ),

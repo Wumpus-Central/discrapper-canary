@@ -98,7 +98,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -106,7 +106,7 @@ function P(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,7 +115,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = {
+let w = {
     [c.s.TOP_ARTIST]: [K],
     [c.s.PLAYED_GAME]: [G, B, U, q, F, Y, z, H, V],
     [c.s.TOP_GAME]: [W],
@@ -428,15 +428,15 @@ function J(e) {
 function $(e) {
     switch (e.content_type) {
         case c.s.TOP_ARTIST:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.PLAYED_GAME:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.TOP_GAME:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.WATCHED_MEDIA:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.LAUNCHED_ACTIVITY:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         default:
             return null;
     }

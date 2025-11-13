@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => w,
+    ZP: () => D,
     ag: () => T,
     u8: () => b,
 }),
@@ -12,7 +12,7 @@ var r,
     s = n.n(o),
     l = n(481060),
     c = n(686546),
-    u = n(670188),
+    u = n(456077),
     d = n(598077),
     f = n(594174),
     _ = n(426563),
@@ -300,4 +300,4 @@ h(P, "defaultProps", {
     showDefaultAvatarsForNullUsers: !1,
     size: b.SIZE_24,
 });
-let w = P;
+let D = P;

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(981631),
     v = n(388032),
     I = n(120472),
-    S = n(691766);
-function T(e, t, n) {
+    T = n(691766);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -120,7 +120,7 @@ let R = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let { userRecords: t } = e,
             n = t.length,
             i = n < 1 ? null : t[0],
@@ -152,7 +152,7 @@ let R = (e) => {
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { analyticsLocations: t } = e;
         p.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
@@ -173,7 +173,7 @@ let R = (e) => {
         n.forEach((e) => {
             e === m.Fe.REDEEMED && p.redeemed++, e === m.Fe.CONVERTED && (p.redeemed++, p.converted++);
         });
-        let T = p.sent === E.Q,
+        let S = p.sent === E.Q,
             A = h.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: C } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             N = i.useRef(null),
@@ -195,9 +195,9 @@ let R = (e) => {
                             (0, r.jsx)(c.Heading, {
                                 variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
                                 className: I.expandedProgressBarHeader,
-                                children: (0, y.$s)({ hasSentAll: T }),
+                                children: (0, y.$s)({ hasSentAll: S }),
                             }),
-                            (0, r.jsx)(w, { userRecords: f }),
+                            (0, r.jsx)(D, { userRecords: f }),
                             (0, r.jsx)(c.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, y.Hg)({
@@ -213,17 +213,17 @@ let R = (e) => {
                                     "data-migration-pending": !0,
                                     className: I.expandedProgressBarSelectFriendsCTA,
                                     color: l.Tt.CUSTOM,
-                                    onClick: () => D({ analyticsLocations: C }),
+                                    onClick: () => w({ analyticsLocations: C }),
                                     onlyShineOnHover: !0,
                                     children: (0, r.jsxs)("div", {
                                         className: I.expandedProgressBarSelectFriendsCTAInner,
                                         children: [
                                             (0, r.jsx)("img", {
-                                                src: S,
+                                                src: T,
                                                 alt: "",
                                                 className: I.expandedProgressBarSelectFriendsIcon,
                                             }),
-                                            T ? v.intl.string(v.t.SY9tyI) : v.intl.string(v.t.Lm2nFc),
+                                            S ? v.intl.string(v.t.SY9tyI) : v.intl.string(v.t.Lm2nFc),
                                         ],
                                     }),
                                 }),

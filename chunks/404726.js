@@ -35,28 +35,28 @@ function d(e) {
             ref: O,
             artboardProperties: v,
             dataBinding: I,
-            touchScrollEnabled: S = !0,
-            dynamicDataBinding: T,
+            touchScrollEnabled: T = !0,
+            dynamicDataBinding: S,
             listenOnDocumentBody: A,
             eventCapture: C,
         } = e,
         N = i.useContext(l.S),
         R = (0, s.C)(),
         P = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : R,
-        [w, D] = i.useState(void 0),
+        [D, w] = i.useState(void 0),
         x = i.useRef(null),
         { rive: L, RiveComponent: M } = (0, o.useRive)({
             eventTarget: null == E ? void 0 : E.current,
             buffer: d,
             autoplay: _,
-            stateMachines: w,
+            stateMachines: D,
             artboard: b,
             useOffscreenRenderer: !0,
             layout: new o.Layout({
                 fit: null != h ? u.M[h] : o.Fit.Cover,
                 alignment: null != m ? u.Y[m] : o.Alignment.Center,
             }),
-            isTouchScrollEnabled: S,
+            isTouchScrollEnabled: T,
             listenOnDocumentBody: A,
             eventCapture: C,
         });
@@ -74,7 +74,7 @@ function d(e) {
             artboard: b,
             artboardProperties: v,
             dataBinding: I,
-            dynamicDataBinding: T,
+            dynamicDataBinding: S,
         }),
         i.useEffect(() => {
             if (null != L && "short-loop" === y && N.reducedMotion.enabled) {
@@ -107,8 +107,8 @@ function d(e) {
         }, [L, h]),
         i.useEffect(() => {
             null != L &&
-                null == w &&
-                (D(L.stateMachineNames),
+                null == D &&
+                (w(L.stateMachineNames),
                 L.reset({
                     stateMachines: L.stateMachineNames,
                     autoplay: _,
@@ -116,7 +116,7 @@ function d(e) {
                     autoBind: !0,
                 }),
                 L.setupRiveListeners());
-        }, [L, _, w, b]);
+        }, [L, _, D, b]);
     let j = i.useRef(0);
     i.useEffect(() => {
         if (null == L) return;
@@ -180,14 +180,14 @@ function f(e) {
                         v = y ? u.value : u;
                     switch (O) {
                         case "color":
-                            let [I, S, T, A] = v
+                            let [I, T, S, A] = v
                                 .resolve({
                                     theme: f,
                                     saturation: p,
                                     highContrastModeEnabled: h,
                                 })
                                 .rgba();
-                            null == (o = t.viewModelInstance) || null == (a = o.color(r)) || a.rgba(I, S, T, 255 * A);
+                            null == (o = t.viewModelInstance) || null == (a = o.color(r)) || a.rgba(I, T, S, 255 * A);
                             break;
                         case "number":
                             let C = null == (s = t.viewModelInstance) ? void 0 : s.number(r);

@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(998502),
     m = n(981631),
     g = n(388032),
-    E = n(854835);
+    E = n(374450);
 function b(e, t, n) {
     return (
         t in e
@@ -68,8 +68,8 @@ function v(e, t) {
     );
 }
 let I = 104,
-    S = 16;
-function T(e) {
+    T = 16;
+function S(e) {
     var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
@@ -109,7 +109,7 @@ function T(e) {
                 });
         }, []);
     let m = (0, u.Z)(h),
-        g = Math.max(16, (S + I - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+        g = Math.max(16, (T + I - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)("img", {
         ref: h,
         src: l,
@@ -132,7 +132,7 @@ class A extends i.Component {
         return this.props.upload.item.platform !== d.ow.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, r.jsx)(T, { file: this.props.upload.item.file })
+              ? (0, r.jsx)(S, { file: this.props.upload.item.file })
               : (0, r.jsx)("div", {
                     className: o()(E.fileIcon, { [E[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
                 });

@@ -71,7 +71,7 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,7 +89,7 @@ function S(e, t) {
     return i;
 }
 n(54453);
-let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
+let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function A(e) {
     var t,
         n,
@@ -102,14 +102,14 @@ function A(e) {
             channelId: g,
             messageId: b,
             animated: O,
-            size: S = "default",
+            size: T = "default",
             isInteracting: A = !1,
             shouldAnimate: C,
             onMouseEnter: N,
             onMouseLeave: R,
             canSelect: P = !0,
-            autoplay: w,
-            registerInnerRef: D,
+            autoplay: D,
+            registerInnerRef: w,
             registerAnimatedElementRef: x,
             surrogate: L,
         } = e,
@@ -138,9 +138,9 @@ function A(e) {
         B = i.useRef(void 0),
         { triggerAnimation: Z, untriggerAnimation: F } = i.useContext(u.Rm),
         V = _.Yk.useSetting(),
-        H = T(),
-        Y = null == w ? V : w,
-        W = E.kV[S],
+        H = S(),
+        Y = null == D ? V : D,
+        W = E.kV[T],
         K = i.useRef(null),
         z = i.useMemo(() => {
             if (null != a) return a;
@@ -177,7 +177,7 @@ function A(e) {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": p };
             return y(
                 v(y({}, M), {
-                    className: o()("emoji", c, { jumboable: "jumbo" === S }),
+                    className: o()("emoji", c, { jumboable: "jumbo" === T }),
                     onError: q,
                     onMouseEnter: X,
                     onMouseLeave: Q,
@@ -185,7 +185,7 @@ function A(e) {
                 }),
                 e,
             );
-        }, [c, f, p, X, Q, q, M, S]);
+        }, [c, f, p, X, Q, q, M, T]);
     i.useEffect(
         () => () => {
             var e;
@@ -195,9 +195,9 @@ function A(e) {
     );
     let $ = i.useCallback(
             (e) => {
-                (K.current = e), null == D || D(e), null == x || x(e);
+                (K.current = e), null == w || w(e), null == x || x(e);
             },
-            [D, x],
+            [w, x],
         ),
         ee = (0, l.Z)(K);
     return null == z || "" === z

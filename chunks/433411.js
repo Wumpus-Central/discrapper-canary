@@ -48,7 +48,7 @@ function b(e) {
     function P() {
         v ? (0, p.Xz)(null) : (0, h.PO)(null, null == n ? void 0 : n.id);
     }
-    let w = y ? l.gtL : s.zx;
+    let D = y ? l.gtL : s.zx;
     return (0, r.jsxs)(m.Z, {
         className: a,
         forcedDivider: b,
@@ -59,7 +59,7 @@ function b(e) {
             (0, r.jsxs)("div", {
                 className: E.buttonsContainer,
                 children: [
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(D, {
                         size: s.zx.Sizes.SMALL,
                         onClick: N,
                         className: o()({ [E.buttonHighlighted]: y }),

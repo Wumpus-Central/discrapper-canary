@@ -144,7 +144,7 @@ function P(e) {
     let { applications: t } = e;
     for (let e of t) b(o.ZP.createFromServer(e));
 }
-function w(e) {
+function D(e) {
     let { userProfile: t } = e,
         { user: n, application: r } = t;
     n.bot &&
@@ -154,7 +154,7 @@ function w(e) {
             applicationId: r.id,
         });
 }
-function D(e) {
+function w(e) {
     let { botUserId: t } = e,
         n = g.botUserIdToAppUsage[t];
     null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
@@ -323,8 +323,8 @@ let K = new W(a.Z, {
     LIBRARY_FETCH_SUCCESS: R,
     STORE_LISTING_FETCH_SUCCESS: B,
     LOAD_MESSAGES_SUCCESS: Z,
-    USER_PROFILE_FETCH_SUCCESS: w,
-    APP_DM_OPEN: D,
+    USER_PROFILE_FETCH_SUCCESS: D,
+    APP_DM_OPEN: w,
     USER_AUTHORIZED_APPS_UPDATE: H,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y,
     OAUTH2_TOKEN_CREATE: V,

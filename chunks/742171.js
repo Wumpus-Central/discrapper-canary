@@ -14,19 +14,19 @@ function d(e) {
         d = null == n ? void 0 : n.extra,
         p = null == n ? void 0 : n.author_id,
         f = null == n ? void 0 : n.content_type,
-        m =
+        h =
             (null == d ? void 0 : d.type) === "played_game_extra" ||
             (null == d ? void 0 : d.type) === "launched_activity_extra"
                 ? d.application_id
                 : void 0,
-        h = (0, s.q)(m),
-        g = (0, l.e7)([o.default], () => (null != p ? o.default.getUser(p) : null), [p]),
+        g = (0, s.q)(h),
+        m = (0, l.e7)([o.default], () => (null != p ? o.default.getUser(p) : null), [p]),
         _ = f === i.s.TOP_GAME,
-        b = null == h ? void 0 : h.getIconURL(240);
+        b = null == g ? void 0 : g.getIconURL(240);
     return (null == d ? void 0 : d.type) !== "played_game_extra" ||
         "contentInventory" !== t.data.kind ||
-        null == h ||
         null == g ||
+        null == m ||
         null == b
         ? null
         : (0, r.jsx)("div", {
@@ -36,7 +36,7 @@ function d(e) {
                   children: [
                       (0, r.jsx)("img", {
                           src: b,
-                          alt: h.name,
+                          alt: g.name,
                           className: u.gameIcon,
                       }),
                       (0, r.jsxs)("div", {
@@ -45,7 +45,7 @@ function d(e) {
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-primary",
-                                  children: h.name,
+                                  children: g.name,
                               }),
                               _ &&
                                   (0, r.jsx)("div", {

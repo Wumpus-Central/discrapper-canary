@@ -84,8 +84,8 @@ function P(e) {
         })
     );
 }
-var w = /\/+/g;
-function D(e, t) {
+var D = /\/+/g;
+function w(e, t) {
     return "object" == typeof e && null !== e && null != e.key ? P("" + e.key) : t.toString(36);
 }
 function x() {}
@@ -143,10 +143,10 @@ function M(e, t, n, r, o) {
     if (l)
         return (
             (o = o(e)),
-            (l = "" === r ? "." + D(e, 0) : r),
+            (l = "" === r ? "." + w(e, 0) : r),
             T(o)
                 ? ((n = ""),
-                  null != l && (n = l.replace(w, "$&/") + "/"),
+                  null != l && (n = l.replace(D, "$&/") + "/"),
                   M(o, t, n, "", function (e) {
                       return e;
                   }))
@@ -154,16 +154,16 @@ function M(e, t, n, r, o) {
                   (R(o) &&
                       (o = N(
                           o,
-                          n + (null == o.key || (e && e.key === o.key) ? "" : ("" + o.key).replace(w, "$&/") + "/") + l,
+                          n + (null == o.key || (e && e.key === o.key) ? "" : ("" + o.key).replace(D, "$&/") + "/") + l,
                       )),
                   t.push(o)),
             1
         );
     l = 0;
     var c = "" === r ? "." : r + ":";
-    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += M(r, t, n, s, o));
+    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + w((r = e[u]), u)), (l += M(r, t, n, s, o));
     else if ("function" == typeof (u = m(e)))
-        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += M(r, t, n, s, o));
+        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + w((r = r.value), u++)), (l += M(r, t, n, s, o));
     else if ("object" === s) {
         if ("function" == typeof e.then) return M(L(e), t, n, r, o);
         throw Error(

@@ -1,47 +1,47 @@
 a.d(e, {
-    R: () => u,
-    U0: () => d,
+    R: () => R,
+    U0: () => A,
 });
 var r = a(394798),
     _ = a(101284),
     n = a(886115),
     o = a(899517),
     i = a(202811),
-    c = a(559508),
-    E = a(263449),
+    E = a(559508),
+    c = a(263449),
     s = a(574054),
     l = a(307854),
     I = a(396234);
-function u(t, e, a, u, d, N) {
-    var A, T;
+function R(t, e, a, R, A, N) {
+    var T, d;
     let { normalizeDepth: f = 3, normalizeMaxBreadth: L = 1000 } = t,
         p = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
             timestamp: e.timestamp || (0, _.yW)(),
         },
-        h = a.integrations || t.integrations.map((t) => t.name);
+        O = a.integrations || t.integrations.map((t) => t.name);
     (function (t, e) {
         let { environment: a, release: r, dist: _, maxValueLength: o = 250 } = e;
-        "environment" in t || (t.environment = "environment" in e ? a : c.J),
+        "environment" in t || (t.environment = "environment" in e ? a : E.J),
             void 0 === t.release && void 0 !== r && (t.release = r),
             void 0 === t.dist && void 0 !== _ && (t.dist = _),
             t.message && (t.message = (0, n.$G)(t.message, o));
         let i = t.exception && t.exception.values && t.exception.values[0];
         i && i.value && (i.value = (0, n.$G)(i.value, o));
-        let E = t.request;
-        E && E.url && (E.url = (0, n.$G)(E.url, o));
+        let c = t.request;
+        c && c.url && (c.url = (0, n.$G)(c.url, o));
     })(p, t),
-        (A = p),
-        (T = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...T])),
-        d && d.emit("applyFrameMetadata", e),
+        (T = p),
+        (d = O).length > 0 && ((T.sdk = T.sdk || {}), (T.sdk.integrations = [...(T.sdk.integrations || []), ...d])),
+        A && A.emit("applyFrameMetadata", e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
                     r = o.n._sentryDebugIds;
                 if (!r) return;
-                let _ = R.get(e);
-                _ ? (a = _) : ((a = new Map()), R.set(e, a));
+                let _ = u.get(e);
+                _ ? (a = _) : ((a = new Map()), u.set(e, a));
                 let n = Object.entries(r).reduce((t, [r, _]) => {
                     let n,
                         o = a.get(r);
@@ -63,26 +63,26 @@ function u(t, e, a, u, d, N) {
                     });
                 } catch (t) {}
             })(p, t.stackParser);
-    let O = (function (t, e) {
+    let h = (function (t, e) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
         return a.update(e), a;
-    })(u, a.captureContext);
+    })(R, a.captureContext);
     a.mechanism && (0, r.EG)(p, a.mechanism);
-    let P = d ? d.getEventProcessors() : [],
-        D = (0, E.lW)().getScopeData();
+    let P = A ? A.getEventProcessors() : [],
+        C = (0, c.lW)().getScopeData();
     if (N) {
         let t = N.getScopeData();
-        (0, I.yo)(D, t);
+        (0, I.yo)(C, t);
     }
-    if (O) {
-        let t = O.getScopeData();
-        (0, I.yo)(D, t);
+    if (h) {
+        let t = h.getScopeData();
+        (0, I.yo)(C, t);
     }
-    let g = [...(a.attachments || []), ...D.attachments];
-    g.length && (a.attachments = g), (0, I.gi)(p, D);
-    let C = [...P, ...D.eventProcessors];
-    return (0, s.R)(C, p, a).then((t) =>
+    let D = [...(a.attachments || []), ...C.attachments];
+    D.length && (a.attachments = D), (0, I.gi)(p, C);
+    let g = [...P, ...C.eventProcessors];
+    return (0, s.R)(g, p, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -138,8 +138,8 @@ function u(t, e, a, u, d, N) {
             : t,
     );
 }
-let R = new WeakMap();
-function d(t) {
+let u = new WeakMap();
+function A(t) {
     if (t) {
         var e;
         return (e = t) instanceof l.s || "function" == typeof e || Object.keys(t).some((t) => N.includes(t))

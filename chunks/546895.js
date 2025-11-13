@@ -21,8 +21,8 @@ n.d(t, { Z: () => d }),
     n(97749),
     n(35282);
 var a = n(951288),
-    r = n(647438),
-    i = n(108514),
+    i = n(647438),
+    r = n(108514),
     l = n(793030),
     s = n(481060);
 let o = {
@@ -284,7 +284,7 @@ let o = {
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/coachmark/seasonal-gifting-coachmark.lottiejson":
         () => n.e("57802").then(n.t.bind(n, 719225, 19)),
     "discord_common/js/shared/animations/app/playstation/playstation_connecting.lottiejson": () =>
-        n.e("87522").then(n.t.bind(n, 141923, 19)),
+        n.e("78698").then(n.t.bind(n, 141923, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/emoji.lottiejson": () =>
         n.e("75317").then(n.t.bind(n, 833862, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/interstitial_wheel_dark.lottiejson": () =>
@@ -318,10 +318,10 @@ function c(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    i.Ri(a, (e, a) => {
+                    r.Ri(a, (e, a) => {
                         null != e && n(e);
-                        let r = Object.keys(a).reduce((e, t) => {
-                                var n, r;
+                        let i = Object.keys(a).reduce((e, t) => {
+                                var n, i;
                                 return (
                                     (n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
@@ -348,9 +348,9 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (r = r = { [t]: JSON.parse(i.T8(a[t])) }),
+                                    (i = i = { [t]: JSON.parse(r.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -358,22 +358,22 @@ function c(e) {
                                                   n.push.apply(n, a);
                                               }
                                               return n;
-                                          })(Object(r)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                          })(Object(i)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                           }),
                                     n
                                 );
                             }, {}),
-                            l = r["manifest.json"];
-                        t(r["animations/".concat(l.animations[0].id, ".json")]);
+                            l = i["manifest.json"];
+                        t(i["animations/".concat(l.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function d() {
-    let [e, t] = r.useState(void 0),
-        [n, i] = r.useState(400),
-        [d, u] = r.useState(400);
+    let [e, t] = i.useState(void 0),
+        [n, r] = i.useState(400),
+        [d, u] = i.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
         children: (0, a.jsxs)(l.Kqy, {
@@ -393,7 +393,7 @@ function d() {
                     children: [
                         (0, a.jsx)(s.oil, {
                             value: n.toString(),
-                            onChange: (e) => i(Number(e)),
+                            onChange: (e) => r(Number(e)),
                             label: "Width",
                         }),
                         (0, a.jsx)(s.oil, {
@@ -413,12 +413,12 @@ function d() {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
-                            r = document.createElement("a");
-                        (r.href = a),
-                            (r.download = "".concat(e.split("/").pop(), ".json")),
-                            document.body.appendChild(r),
-                            r.click(),
-                            document.body.removeChild(r),
+                            i = document.createElement("a");
+                        (i.href = a),
+                            (i.download = "".concat(e.split("/").pop(), ".json")),
+                            document.body.appendChild(i),
+                            i.click(),
+                            document.body.removeChild(i),
                             URL.revokeObjectURL(a);
                     },
                     text: "Download",

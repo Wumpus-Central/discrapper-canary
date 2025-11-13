@@ -76,8 +76,8 @@ let O = "default",
     N = {},
     R = null,
     P = [],
-    w = null,
-    D = {},
+    D = null,
+    w = {},
     x = new Map(),
     L = {
         clipsEnabled: !1,
@@ -158,9 +158,9 @@ function B(e) {
     ) {
         var i;
         let e = Date.now();
-        (w = null != w ? w : e),
-            (D[n] = [
-                ...(null != (i = D[n]) ? i : []),
+        (D = null != D ? D : e),
+            (w[n] = [
+                ...(null != (i = w[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r,
@@ -170,7 +170,7 @@ function B(e) {
 }
 function Z(e) {
     let { streamKey: t, timestamp: n } = e;
-    w === n && (w = null), null == n ? (D[t] = []) : (D[t] = D[t].filter((e) => e.timestamp !== n));
+    D === n && (D = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
 }
 function F() {
     S = Math.max(S - 1, 0);
@@ -251,7 +251,7 @@ function X(e) {
 }
 function Q(e) {
     let { streamKey: t } = e;
-    if (((w = null), (D[t] = []), null == C || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    if (((D = null), (w[t] = []), null == C || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
     C = 0 === C.newClipIds.length ? null : y(E({}, C), { ended: !0 });
 }
 function J(e) {
@@ -350,14 +350,14 @@ class ec extends (r = i.ZP.DeviceSettingsStore) {
         return A === e;
     }
     getActiveAnimation() {
-        return w;
+        return D;
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = D[e]) ? t : v;
+        return null != (t = w[e]) ? t : v;
     }
     hasAnyClipAnimations() {
-        return Object.values(D).some((e) => e.length > 0);
+        return Object.values(w).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return M.hardwareClassification;

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(843611),
-    s = n(772848),
+    s = n(843611),
+    o = n(772848),
     c = n(990547),
     u = n(442837),
     d = n(704215),
@@ -57,8 +57,8 @@ var r = n(951288),
     ei = n(388032),
     el = n(728963),
     ea = n(13299),
-    eo = n(890631),
-    es = n(164792),
+    es = n(890631),
+    eo = n(164792),
     ec = n(524777),
     eu = n(913713),
     ed = n(431115);
@@ -66,22 +66,22 @@ function ep(e) {
     let { onLoadComplete: t } = e,
         { enabled: n } = (0, Z.WX)({ location: ee.dr.QUEST_HOME_DESKTOP }),
         l = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
-        o = (0, u.e7)([L.Z], () => L.Z.isFocused()),
-        { ref: s, inViewport: c } = (0, W.a)(),
+        s = (0, u.e7)([L.Z], () => L.Z.isFocused()),
+        { ref: o, inViewport: c } = (0, W.a)(),
         d = i.useRef(null);
     if (
         (i.useEffect(() => {
             (null == d ? void 0 : d.current) != null &&
-                (d.current.paused || (o && c && !l)
-                    ? d.current.paused && !l && c && o && d.current.play()
+                (d.current.paused || (s && c && !l)
+                    ? d.current.paused && !l && c && s && d.current.play()
                     : d.current.pause());
-        }, [l, c, o]),
+        }, [l, c, s]),
         n)
     ) {
         let e = (0, D.rO)();
         return (0, r.jsx)(y.Z, {
             ref: (e) => {
-                (d.current = e), (s.current = e);
+                (d.current = e), (o.current = e);
             },
             loop: !0,
             muted: !0,
@@ -91,7 +91,7 @@ function ep(e) {
             "data-mtctest-ignore": "true",
             controls: !1,
             children: (0, r.jsx)("source", {
-                src: e ? eo.Z : es.Z,
+                src: e ? es.Z : eo.Z,
                 type: e ? "video/mp4" : "video/webm",
             }),
         });
@@ -133,8 +133,8 @@ function eh(e) {
             header: i,
             scrollerRef: l,
             selectedTab: a,
-            onScroll: o,
-            onSelectTab: s,
+            onScroll: s,
+            onSelectTab: o,
             withQuestsGrid: c = !0,
         } = e,
         u = (0, G._)({ location: ee.dr.QUEST_HOME_DESKTOP }) ? K.Z : K.j;
@@ -143,7 +143,7 @@ function eh(e) {
         children: [
             i,
             (0, r.jsxs)(x.Z, {
-                onScroll: o,
+                onScroll: s,
                 ref: l,
                 children: [
                     t,
@@ -152,7 +152,7 @@ function eh(e) {
                             n,
                             c
                                 ? a === U.e5.CLAIMED
-                                    ? (0, r.jsx)(u, { onSelectTab: s })
+                                    ? (0, r.jsx)(u, { onSelectTab: o })
                                     : a === U.e5.PREVIEW_TOOL
                                       ? (0, r.jsx)(F.Z, {})
                                       : (0, r.jsx)(q.Z, {})
@@ -167,8 +167,8 @@ function eh(e) {
 let eg = function (e) {
     var t;
     let { topLevelRoute: n } = e,
-        l = (0, o.TH)(),
-        h = (null == (t = (0, o.LX)(l.pathname, et.Z5c.QUEST_HOME)) ? void 0 : t.isExact) === !0,
+        l = (0, s.TH)(),
+        h = (null == (t = (0, s.LX)(l.pathname, et.Z5c.QUEST_HOME)) ? void 0 : t.isExact) === !0,
         y = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
         { selectedTab: T, onSelectTab: x, tabs: L } = (0, $.z)({ withClaimedQuestsTab: !h });
     i.useLayoutEffect(() => {
@@ -202,8 +202,8 @@ let eg = function (e) {
         }, [K]);
     (0, O.Tt)({ location: ei.intl.string(ei.t.JALI2K) });
     let ea = K ? ei.intl.format(ei.t.BCBIlp, {}) : ei.intl.format(ei.t.lmMBfy, {}),
-        eo = K ? ei.intl.format(ei.t.U9FY0J, {}) : ei.intl.string(ei.t.oWCrBq),
-        es = i.useRef(null),
+        es = K ? ei.intl.format(ei.t.U9FY0J, {}) : ei.intl.string(ei.t.oWCrBq),
+        eo = i.useRef(null),
         ec = i.useCallback(() => {
             (0, A.Y)({
                 pageType: et.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -271,7 +271,7 @@ let eg = function (e) {
                 })(
                     {
                         cta_name: k.jZ.VIEW_QUESTS,
-                        click_id: (0, s.Z)(),
+                        click_id: (0, o.Z)(),
                         is_targeted: !1,
                     },
                     (0, k.mH)(B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
@@ -303,7 +303,7 @@ let eg = function (e) {
                       }),
                       onScroll: D,
                       onSelectTab: x,
-                      scrollerRef: es,
+                      scrollerRef: eo,
                       selectedTab: T,
                       withQuestsGrid: !1,
                       children: (0, r.jsxs)("div", {
@@ -333,7 +333,7 @@ let eg = function (e) {
                             T !== U.e5.PREVIEW_TOOL &&
                             (0, r.jsxs)(S.Z, {
                                 title: ea,
-                                description: eo,
+                                description: es,
                                 button: (0, r.jsxs)(p.ButtonGroup, {
                                     children: [
                                         (0, r.jsx)(p.Button, {
@@ -373,13 +373,13 @@ let eg = function (e) {
                         }),
                         onScroll: D,
                         onSelectTab: x,
-                        scrollerRef: es,
+                        scrollerRef: eo,
                         selectedTab: T,
                     })
                   : (0, r.jsx)(eh, {
                         banner: (0, r.jsxs)(S.Z, {
                             title: ea,
-                            description: eo,
+                            description: es,
                             button: (0, r.jsx)(p.Button, {
                                 variant: "overlay-primary",
                                 text: ei.intl.string(ei.t.hvVgAZ),
@@ -403,7 +403,7 @@ let eg = function (e) {
                         }),
                         onScroll: D,
                         onSelectTab: x,
-                        scrollerRef: es,
+                        scrollerRef: eo,
                         selectedTab: T,
                         children: (0, r.jsx)("div", {
                             className: el.tabs,

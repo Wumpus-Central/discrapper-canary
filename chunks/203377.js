@@ -1,33 +1,33 @@
 n.d(t, {
-    G7: () => l,
-    LG: () => o,
-    Pg: () => s,
-    ZI: () => c,
-    _0: () => a,
+    G7: () => a,
+    LG: () => d,
+    Pg: () => l,
+    ZI: () => o,
+    _0: () => s,
     mf: () => u,
 });
 var r,
     i = n(388032);
-let s = 5,
-    l = 10,
-    a = 30;
-var c =
+let l = 5,
+    a = 10,
+    s = 30;
+var o =
     (((r = {})[(r.DISPLAY = 0)] = "DISPLAY"),
     (r[(r.PERMISSIONS = 1)] = "PERMISSIONS"),
     (r[(r.MEMBERS = 2)] = "MEMBERS"),
     (r[(r.VERIFICATIONS = 3)] = "VERIFICATIONS"),
     r);
-let d = {
+let c = {
     afk_channel_id: () => i.intl.string(i.t.KuYcnU),
     public_updates_channel_id: () => i.intl.string(i.t.vAyDGU),
     safety_alerts_channel_id: () => i.intl.string(i.t.sMkYE8),
     system_channel_id: () => i.intl.string(i.t.NASFnq),
 };
-function o(e) {
+function d(e) {
     var t;
     if (0 === Object.keys(e).length) return null;
     let n = Object.keys(e)[0],
-        r = null == (t = d[n]) ? void 0 : t.call(d);
+        r = null == (t = c[n]) ? void 0 : t.call(c);
     return null != r ? "(".concat(r, ") ").concat(e[n]) : e[n];
 }
 let u = "https://discord.gg";

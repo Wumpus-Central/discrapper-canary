@@ -4,10 +4,10 @@ var r = a(824851),
     n = a(622916),
     o = a(255768),
     i = a(696486),
-    c = a(793373);
-let E = !1;
+    E = a(793373);
+let c = !1;
 function s() {
-    E || ((E = !0), (0, r.V)(l), (0, _.h)(l));
+    c || ((c = !0), (0, r.V)(l), (0, _.h)(l));
 }
 function l() {
     let t = (0, i.HN)(),
@@ -16,7 +16,7 @@ function l() {
         let t = "internal_error";
         o.X && n.kg.log(`[Tracing] Root span: ${t} -> Global error occured`),
             e.setStatus({
-                code: c.jt,
+                code: E.jt,
                 message: t,
             });
     }

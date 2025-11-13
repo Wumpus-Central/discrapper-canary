@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ });
 var r = n(647438),
-    i = n(835473),
+    i = n(565183),
     a = n(817788),
     o = n(509003),
     s = n(492423),
@@ -60,7 +60,7 @@ function f(e, t) {
 function _(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
-        c = (0, i.q)(n),
+        c = (0, i.Z)(n),
         d = r.useMemo(() => (null == c ? n : (0, o.bP)(c) ? a.eB : n), [c, n]),
         _ = (0, l.ZP)(f(u({}, e), { applicationId: d }));
     return _.shouldOpenGameProfile && null != d

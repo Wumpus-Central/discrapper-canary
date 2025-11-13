@@ -111,7 +111,7 @@ function R(e) {
         r = O[e.id],
         i = void 0 !== e.id && e.id === m.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = w((0, f.QI)(r), r.premiumType));
+        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = D((0, f.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = C(e);
@@ -126,16 +126,16 @@ function R(e) {
 function P(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = w((0, f.VR)(e), n);
+        r = D((0, f.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function w(e, t) {
+function D(e, t) {
     if (!e) return t;
     let n = u.Z.getPremiumTypeOverride(),
         r = u.Z.getPremiumTypeActual();
     return n === b.F_ ? r : n;
 }
-function D(e, t) {
+function w(e, t) {
     if ((null == e ? void 0 : e.users) == null) return !1;
     for (let n in e.users) {
         let r = e.users[n];
@@ -160,7 +160,7 @@ function x(e, t) {
                         N(e) && R(e, t);
                     });
             }),
-        D(e.resolved, t),
+        w(e.resolved, t),
         (null == (o = e.interaction_metadata) ? void 0 : o.user) != null &&
             N(e.interaction_metadata.user) &&
             R(e.interaction_metadata.user, t),
@@ -527,11 +527,11 @@ function eP(e) {
         null != e.message && x(e.message, !0);
     }, !1);
 }
-function ew(e) {
+function eD(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, a.Z)(t) && R(t.member.user)) || e, !1);
 }
-function eD(e) {
+function ew(e) {
     let {} = e,
         t = O[m.default.getId()];
     return null != t && ((O[m.default.getId()] = t.set("ageVerificationStatus", i.F$.CLIENT_ONLY_PENDING)), !0);
@@ -547,7 +547,7 @@ function ex(e) {
 }
 function eL(e) {
     let { resolved: t } = e;
-    return D(t, !0);
+    return w(t, !0);
 }
 function eM(e) {
     let { stickers: t } = e;
@@ -671,8 +671,8 @@ class ej extends g.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eR,
             LOAD_ICYMI_HYDRATED: eP,
-            EMBEDDED_ACTIVITY_UPDATE_V2: ew,
-            INITIATE_AGE_VERIFICATION: eD,
+            EMBEDDED_ACTIVITY_UPDATE_V2: eD,
+            INITIATE_AGE_VERIFICATION: ew,
             CLOSE_AGE_VERIFICATION_MODAL: ex,
             INTERACTION_MODAL_CREATE: eL,
         });

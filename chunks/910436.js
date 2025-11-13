@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(539854), n(388685);
+n.d(t, { Z: () => y }), n(539854), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(287734),
@@ -11,26 +11,26 @@ var i = n(287734),
     d = n(509212),
     p = n(113434),
     f = n(497505),
-    m = n(23404),
-    h = n(81063),
-    g = n(761282),
+    h = n(23404),
+    g = n(81063),
+    m = n(761282),
     _ = n(358924),
     b = n(868854),
     E = n(817915),
     O = n(981631);
-function I(e) {
-    let { party: t, onChannelContextMenu: n, quest: I } = e,
-        y = (0, b.L)(),
-        { voiceChannels: v, currentActivities: C, partiedMembers: S, applicationStreams: T, guildContext: N } = t,
-        j = (0, p.z1)(I),
+function y(e) {
+    let { party: t, onChannelContextMenu: n, quest: y } = e,
+        v = (0, b.L)(),
+        { voiceChannels: I, currentActivities: C, partiedMembers: S, applicationStreams: T, guildContext: N } = t,
+        j = (0, p.z1)(y),
         P = [],
         x = (e) => {
             let { length: t } = P;
             if (0 === t) return void P.push(e);
             P.push(e);
         };
-    for (let { activity: e } of (v.length > 0 &&
-        v.forEach((e) => {
+    for (let { activity: e } of (I.length > 0 &&
+        I.forEach((e) => {
             let { members: t, channel: i, guild: l } = e;
             x(
                 (0, r.jsx)(
@@ -55,7 +55,7 @@ function I(e) {
         }),
     t.currentActivities))
         if (null != e) {
-            let t = g.ct(e);
+            let t = m.ct(e);
             if (null != t) {
                 x(t);
                 break;
@@ -63,7 +63,7 @@ function I(e) {
         }
     return (
         T.length > 0 &&
-            y &&
+            v &&
             T.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
                 x(
@@ -83,7 +83,7 @@ function I(e) {
                 );
             }),
         C.forEach((e, t) => {
-            var n, i, l, p, g, b, y, T, P;
+            var n, i, l, p, m, b, v, T, P;
             let { activity: A, game: Z, playingMembers: w, activityUser: L } = e;
             if (null == A || null == A.type) return null;
             if (A.type === O.IIU.PLAYING)
@@ -109,7 +109,7 @@ function I(e) {
                     );
                 else if ((0, s.Z)(A)) {
                     let e = new Set(w.map((e) => e.id)),
-                        t = null == (l = v.find((e) => null != e)) ? void 0 : l.channel;
+                        t = null == (l = I.find((e) => null != e)) ? void 0 : l.channel;
                     null != t &&
                         x(
                             (0, r.jsx)(
@@ -137,14 +137,14 @@ function I(e) {
                                   _.Z.RichPresenceSection,
                                   {
                                       activity: A,
-                                      getAssetImage: h.xF,
+                                      getAssetImage: g.xF,
                                       user: L,
                                   },
-                                  "rich-presence-".concat(null != (g = A.session_id) ? g : t, "-").concat(L.id),
+                                  "rich-presence-".concat(null != (m = A.session_id) ? m : t, "-").concat(L.id),
                               ),
                           );
             else if ((0, u.Z)(A)) {
-                let e = v.length > 0 && v[0].members.length > 1,
+                let e = I.length > 0 && I[0].members.length > 1,
                     n = w.length > 1;
                 x(
                     (0, r.jsx)(
@@ -153,7 +153,7 @@ function I(e) {
                             guildId: null == N ? void 0 : N.id,
                             activity: A,
                             user: e || n ? L : null,
-                            getAssetImage: h.xF,
+                            getAssetImage: g.xF,
                         },
                         "streaming-".concat(null != (b = A.session_id) ? b : t),
                     ),
@@ -172,10 +172,10 @@ function I(e) {
                                           unknownSize: 0,
                                           totalSize: w.length,
                                       },
-                                      getAssetImage: h.xF,
+                                      getAssetImage: g.xF,
                                       members: w,
                                   },
-                                  "spotify-".concat(null != (y = A.session_id) ? y : t, "-").concat(L.id),
+                                  "spotify-".concat(null != (v = A.session_id) ? v : t, "-").concat(L.id),
                               ),
                           )
                         : (null != A.assets || (0, a.Z)(A)) &&
@@ -184,18 +184,18 @@ function I(e) {
                                   _.Z.RichPresenceSection,
                                   {
                                       activity: A,
-                                      getAssetImage: h.xF,
+                                      getAssetImage: g.xF,
                                       user: L,
                                   },
                                   "rich-presence-".concat(null != (T = A.session_id) ? T : t, "-").concat(L.id),
                               ),
                           ));
             j &&
-                null != I &&
+                null != y &&
                 null != Z &&
-                (0, d._D)(A, I) &&
-                (null == I.userStatus || !(0, d.zE)(I.userStatus, f.jn.ACTIVITY_PANEL)) &&
-                x((0, r.jsx)(m.Z, { quest: I }, "quest-".concat(I.id, "-").concat(null != (P = A.session_id) ? P : t)));
+                (0, d._D)(A, y) &&
+                (null == y.userStatus || !(0, d.zE)(y.userStatus, f.jn.ACTIVITY_PANEL)) &&
+                x((0, r.jsx)(h.Z, { quest: y }, "quest-".concat(y.id, "-").concat(null != (P = A.session_id) ? P : t)));
         }),
         P.length > 0 ? (0, r.jsx)(_.Z.Body, { children: P }) : null
     );

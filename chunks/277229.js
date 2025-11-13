@@ -40,7 +40,7 @@ function _() {
     return s.isPlatformEmbedded;
 }
 async function p() {
-    var e, t, n, r, a, o, s, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, w, D, x, L, M, j, k;
+    var e, t, n, r, a, o, s, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, x, L, M, j, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
     let G = [
@@ -59,10 +59,10 @@ async function p() {
                 null != (N = null == (u = U.renderer) ? void 0 : u.wss_kb) ? N : -1,
                 null != (R = null == (d = U.gpu) ? void 0 : d.wss_kb) ? R : -1,
                 null != (P = null == (f = U.crashpad) ? void 0 : f.wss_kb) ? P : -1,
-                null != (w = null == (_ = U.utility) ? void 0 : _.wss_kb) ? w : -1,
+                null != (D = null == (_ = U.utility) ? void 0 : _.wss_kb) ? D : -1,
             ],
             electron_process_type_count: [
-                null != (D = null == (p = U.unknown) ? void 0 : p.proc_count) ? D : 0,
+                null != (w = null == (p = U.unknown) ? void 0 : p.proc_count) ? w : 0,
                 null != (x = null == (h = U.main) ? void 0 : h.proc_count) ? x : 0,
                 null != (L = null == (m = U.renderer) ? void 0 : m.proc_count) ? L : 0,
                 null != (M = null == (g = U.gpu) ? void 0 : g.proc_count) ? M : 0,

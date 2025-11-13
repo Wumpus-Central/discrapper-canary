@@ -1,44 +1,44 @@
-let r, _, n, o, i, c;
+let r, _, n, o, i, E;
 a.d(e, {
     G: () => aY,
     T: () => ak,
 });
-var E,
+var c,
     s,
     l,
     I,
-    u,
     R,
-    d,
+    u,
+    A,
     N,
-    A = a(505676),
-    T = a(507690),
+    T = a(505676),
+    d = a(507690),
     f = a(572299),
     L = a(263449),
     p = a(946471),
-    h = a(233517),
-    O = a(822578),
+    O = a(233517),
+    h = a(822578),
     P = a(696486),
-    D = a(988097),
-    g = a(820754),
-    C = a(899517),
-    m = a(202811),
-    v = a(370336),
-    S = a(467510),
+    C = a(988097),
+    D = a(820754),
+    g = a(899517),
+    S = a(202811),
+    m = a(370336),
+    v = a(467510),
     y = a(101284),
     U = a(622916),
-    b = a(394798),
-    G = a(886115),
-    W = a(617726),
-    w = a(928541),
-    M = a(14588),
+    G = a(394798),
+    W = a(886115),
+    b = a(617726),
+    M = a(928541),
+    w = a(14588),
     B = a(26506),
     Y = a(650093),
     H = a(501684),
     K = a(157079),
     k = a(469359),
     x = a(393523);
-let F = C.n,
+let F = g.n,
     V = "sentryReplaySession",
     j = "Unable to send Replay";
 function X(t, e) {
@@ -70,7 +70,7 @@ function J(t) {
         var e;
         let a = t.rules || t.cssRules;
         return a
-            ? ((e = Array.from(a, Z).join("")).includes(" background-clip: text;") &&
+            ? ((e = Array.from(a, Q).join("")).includes(" background-clip: text;") &&
                   !e.includes(" -webkit-background-clip: text;") &&
                   (e = e.replace(" background-clip: text;", " -webkit-background-clip: text; background-clip: text;")),
               e)
@@ -79,7 +79,7 @@ function J(t) {
         return null;
     }
 }
-function Z(t) {
+function Q(t) {
     let e;
     if ("styleSheet" in t)
         try {
@@ -101,13 +101,13 @@ function Z(t) {
         return t.cssText.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2");
     return e || t.cssText;
 }
-((E = d || (d = {}))[(E.Document = 0)] = "Document"),
-    (E[(E.DocumentType = 1)] = "DocumentType"),
-    (E[(E.Element = 2)] = "Element"),
-    (E[(E.Text = 3)] = "Text"),
-    (E[(E.CDATA = 4)] = "CDATA"),
-    (E[(E.Comment = 5)] = "Comment");
-class Q {
+((c = A || (A = {}))[(c.Document = 0)] = "Document"),
+    (c[(c.DocumentType = 1)] = "DocumentType"),
+    (c[(c.Element = 2)] = "Element"),
+    (c[(c.Text = 3)] = "Text"),
+    (c[(c.CDATA = 4)] = "CDATA"),
+    (c[(c.Comment = 5)] = "Comment");
+class Z {
     constructor() {
         (this.idNodeMap = new Map()), (this.nodeMetaMap = new WeakMap());
     }
@@ -187,9 +187,9 @@ function ti(t, e) {
     }
     return X($([a.pathname.match(/\.([0-9a-z]+)(?:$)/i), "optionalAccess", (t) => t[1]]), () => null);
 }
-let tc = {};
-function tE(t) {
-    let e = tc[t];
+let tE = {};
+function tc(t) {
+    let e = tE[t];
     if (e) return e;
     let a = window.document,
         r = window[t];
@@ -200,55 +200,55 @@ function tE(t) {
             let _ = e.contentWindow;
             _ && _[t] && (r = _[t]), a.head.removeChild(e);
         } catch (t) {}
-    return (tc[t] = r.bind(window));
+    return (tE[t] = r.bind(window));
 }
 function ts(...t) {
-    return tE("setTimeout")(...t);
+    return tc("setTimeout")(...t);
 }
 function tl(...t) {
-    return tE("clearTimeout")(...t);
+    return tc("clearTimeout")(...t);
 }
 let tI = 1,
-    tu = RegExp("[^a-z0-9-_:]");
-function tR() {
+    tR = RegExp("[^a-z0-9-_:]");
+function tu() {
     return tI++;
 }
-let td = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+let tA = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
     tN = /^(?:[a-z+]+:)?\/\//i,
-    tA = /^www\..*/i,
-    tT = /^(data:)([^,]*),(.*)/i;
+    tT = /^www\..*/i,
+    td = /^(data:)([^,]*),(.*)/i;
 function tf(t, e) {
-    return (t || "").replace(td, (t, a, r, _, n, o) => {
+    return (t || "").replace(tA, (t, a, r, _, n, o) => {
         let i = r || n || o,
-            c = a || _ || "";
+            E = a || _ || "";
         if (!i) return t;
-        if (tN.test(i) || tA.test(i) || tT.test(i)) return `url(${c}${i}${c})`;
+        if (tN.test(i) || tT.test(i) || td.test(i)) return `url(${E}${i}${E})`;
         if ("/" === i[0])
-            return `url(${c}${(e.indexOf("//") > -1 ? e.split("/").slice(0, 3).join("/") : e.split("/")[0]).split("?")[0] + i}${c})`;
-        let E = e.split("/"),
+            return `url(${E}${(e.indexOf("//") > -1 ? e.split("/").slice(0, 3).join("/") : e.split("/")[0]).split("?")[0] + i}${E})`;
+        let c = e.split("/"),
             s = i.split("/");
-        for (let t of (E.pop(), s))
+        for (let t of (c.pop(), s))
             if ("." === t) continue;
-            else ".." === t ? E.pop() : E.push(t);
-        return `url(${c}${E.join("/")}${c})`;
+            else ".." === t ? c.pop() : c.push(t);
+        return `url(${E}${c.join("/")}${E})`;
     });
 }
 let tL = /^[^ \t\n\r\u000c]+/,
     tp = /^[, \t\n\r\u000c]+/;
-function th(t, e) {
+function tO(t, e) {
     if (!e || "" === e.trim()) return e;
     let a = t.createElement("a");
     return (a.href = e), a.href;
 }
-function tO() {
+function th() {
     let t = document.createElement("a");
     return (t.href = ""), t.href;
 }
 function tP(t, e, a, r, _, n) {
     if (!r) return r;
     if ("src" === a || ("href" === a && ("use" !== e || "#" !== r[0])) || ("xlink:href" === a && "#" !== r[0]))
-        return th(t, r);
-    if ("background" === a && ("table" === e || "td" === e || "th" === e)) return th(t, r);
+        return tO(t, r);
+    if ("background" === a && ("table" === e || "td" === e || "th" === e)) return tO(t, r);
     if ("srcset" === a)
         return (function (t, e) {
             if ("" === e.trim()) return e;
@@ -261,10 +261,10 @@ function tP(t, e, a, r, _, n) {
             let _ = [];
             for (; r(tp), !(a >= e.length); ) {
                 let n = r(tL);
-                if ("," === n.slice(-1)) (n = th(t, n.substring(0, n.length - 1))), _.push(n);
+                if ("," === n.slice(-1)) (n = tO(t, n.substring(0, n.length - 1))), _.push(n);
                 else {
                     let r = "";
-                    n = th(t, n);
+                    n = tO(t, n);
                     let o = !1;
                     for (;;) {
                         let t = e.charAt(a);
@@ -283,17 +283,17 @@ function tP(t, e, a, r, _, n) {
             }
             return _.join(", ");
         })(t, r);
-    if ("style" === a) return tf(r, tO());
-    else if ("object" === e && "data" === a) return th(t, r);
+    if ("style" === a) return tf(r, th());
+    else if ("object" === e && "data" === a) return tO(t, r);
     return "function" == typeof n ? n(a, r, _) : r;
 }
-function tD(t, e, a) {
+function tC(t, e, a) {
     return ("video" === t || "audio" === t) && "autoplay" === e;
 }
-function tg(t, e, a = 1 / 0, r = 0) {
-    return !t || t.nodeType !== t.ELEMENT_NODE || r > a ? -1 : e(t) ? r : tg(t.parentNode, e, a, r + 1);
+function tD(t, e, a = 1 / 0, r = 0) {
+    return !t || t.nodeType !== t.ELEMENT_NODE || r > a ? -1 : e(t) ? r : tD(t.parentNode, e, a, r + 1);
 }
-function tC(t, e) {
+function tg(t, e) {
     return (a) => {
         if (null === a) return !1;
         try {
@@ -318,7 +318,7 @@ function tC(t, e) {
         }
     };
 }
-function tm(t, e, a, r, _, n) {
+function tS(t, e, a, r, _, n) {
     try {
         let o = t.nodeType === t.ELEMENT_NODE ? t : t.parentElement;
         if (null === o) return !1;
@@ -338,77 +338,77 @@ function tm(t, e, a, r, _, n) {
                 return !0;
         }
         let i = -1,
-            c = -1;
+            E = -1;
         if (n) {
-            if ((c = tg(o, tC(r, _))) < 0) return !0;
-            i = tg(o, tC(e, a), c >= 0 ? c : 1 / 0);
+            if ((E = tD(o, tg(r, _))) < 0) return !0;
+            i = tD(o, tg(e, a), E >= 0 ? E : 1 / 0);
         } else {
-            if ((i = tg(o, tC(e, a))) < 0) return !1;
-            c = tg(o, tC(r, _), i >= 0 ? i : 1 / 0);
+            if ((i = tD(o, tg(e, a))) < 0) return !1;
+            E = tD(o, tg(r, _), i >= 0 ? i : 1 / 0);
         }
-        return i >= 0 ? !(c >= 0) || i <= c : !(c >= 0) && !!n;
+        return i >= 0 ? !(E >= 0) || i <= E : !(E >= 0) && !!n;
     } catch (t) {}
     return !!n;
 }
-function tv(t) {
+function tm(t) {
     return null == t ? "" : t.toLowerCase();
 }
-function tS(t, e) {
+function tv(t, e) {
     let a,
         {
             doc: n,
             mirror: o,
             blockClass: i,
-            blockSelector: c,
-            unblockSelector: E,
+            blockSelector: E,
+            unblockSelector: c,
             maskAllText: s,
             maskTextClass: l,
             unmaskTextClass: I,
-            maskTextSelector: u,
-            unmaskTextSelector: R,
+            maskTextSelector: R,
+            unmaskTextSelector: u,
             skipChild: N = !1,
-            inlineStylesheet: A = !0,
-            maskInputOptions: T = {},
+            inlineStylesheet: T = !0,
+            maskInputOptions: d = {},
             maskAttributeFn: f,
             maskTextFn: L,
             maskInputFn: p,
-            slimDOMOptions: h,
-            dataURLOptions: O = {},
+            slimDOMOptions: O,
+            dataURLOptions: h = {},
             inlineImages: P = !1,
-            recordCanvas: D = !1,
-            onSerialize: g,
-            onIframeLoad: C,
-            iframeLoadTimeout: m = 5000,
-            onStylesheetLoad: v,
-            stylesheetLoadTimeout: S = 5000,
+            recordCanvas: C = !1,
+            onSerialize: D,
+            onIframeLoad: g,
+            iframeLoadTimeout: S = 5000,
+            onStylesheetLoad: m,
+            stylesheetLoadTimeout: v = 5000,
             keepIframeSrcFn: y = () => !1,
             newlyAddedElement: U = !1,
         } = e,
-        { preserveWhiteSpace: b = !0 } = e,
-        G = (function (t, e) {
+        { preserveWhiteSpace: G = !0 } = e,
+        W = (function (t, e) {
             let {
                     doc: a,
                     mirror: n,
                     blockClass: o,
                     blockSelector: i,
-                    unblockSelector: c,
-                    maskAllText: E,
+                    unblockSelector: E,
+                    maskAllText: c,
                     maskAttributeFn: s,
                     maskTextClass: l,
                     unmaskTextClass: I,
-                    maskTextSelector: u,
-                    unmaskTextSelector: R,
+                    maskTextSelector: R,
+                    unmaskTextSelector: u,
                     inlineStylesheet: N,
-                    maskInputOptions: A = {},
-                    maskTextFn: T,
+                    maskInputOptions: T = {},
+                    maskTextFn: d,
                     maskInputFn: f,
                     dataURLOptions: L = {},
                     inlineImages: p,
-                    recordCanvas: h,
-                    keepIframeSrcFn: O,
+                    recordCanvas: O,
+                    keepIframeSrcFn: h,
                     newlyAddedElement: P = !1,
                 } = e,
-                D = (function (t, e) {
+                C = (function (t, e) {
                     if (!e.hasNode(t)) return;
                     let a = e.getId(t);
                     return 1 === a ? void 0 : a;
@@ -417,21 +417,21 @@ function tS(t, e) {
                 case t.DOCUMENT_NODE:
                     if ("CSS1Compat" !== t.compatMode)
                         return {
-                            type: d.Document,
+                            type: A.Document,
                             childNodes: [],
                             compatMode: t.compatMode,
                         };
                     return {
-                        type: d.Document,
+                        type: A.Document,
                         childNodes: [],
                     };
                 case t.DOCUMENT_TYPE_NODE:
                     return {
-                        type: d.DocumentType,
+                        type: A.DocumentType,
                         name: t.name,
                         publicId: t.publicId,
                         systemId: t.systemId,
-                        rootId: D,
+                        rootId: C,
                     };
                 case t.ELEMENT_NODE:
                     return (function (t, e) {
@@ -440,24 +440,24 @@ function tS(t, e) {
                                 doc: n,
                                 blockClass: o,
                                 blockSelector: i,
-                                unblockSelector: c,
-                                inlineStylesheet: E,
+                                unblockSelector: E,
+                                inlineStylesheet: c,
                                 maskInputOptions: s = {},
                                 maskAttributeFn: l,
                                 maskInputFn: I,
-                                dataURLOptions: u = {},
-                                inlineImages: R,
+                                dataURLOptions: R = {},
+                                inlineImages: u,
                                 recordCanvas: N,
-                                keepIframeSrcFn: A,
-                                newlyAddedElement: T = !1,
+                                keepIframeSrcFn: T,
+                                newlyAddedElement: d = !1,
                                 rootId: f,
                                 maskAllText: L,
                                 maskTextClass: p,
-                                unmaskTextClass: h,
-                                maskTextSelector: O,
+                                unmaskTextClass: O,
+                                maskTextSelector: h,
                                 unmaskTextSelector: P,
                             } = e,
-                            D = (function (t, e, a, r) {
+                            C = (function (t, e, a, r) {
                                 try {
                                     if (r && t.matches(r)) return !1;
                                     if ("string" == typeof e) {
@@ -470,56 +470,56 @@ function tS(t, e) {
                                     if (a) return t.matches(a);
                                 } catch (t) {}
                                 return !1;
-                            })(t, o, i, c),
-                            g = (function (t) {
+                            })(t, o, i, E),
+                            D = (function (t) {
                                 if (t instanceof HTMLFormElement) return "form";
                                 let e = ta(t.tagName);
-                                return tu.test(e) ? "div" : e;
+                                return tR.test(e) ? "div" : e;
                             })(t),
-                            C = {},
-                            m = t.attributes.length;
-                        for (let e = 0; e < m; e++) {
+                            g = {},
+                            S = t.attributes.length;
+                        for (let e = 0; e < S; e++) {
                             let a = t.attributes[e];
-                            a.name && !tD(g, a.name, a.value) && (C[a.name] = tP(n, g, ta(a.name), a.value, t, l));
+                            a.name && !tC(D, a.name, a.value) && (g[a.name] = tP(n, D, ta(a.name), a.value, t, l));
                         }
-                        if ("link" === g && E) {
+                        if ("link" === D && c) {
                             let e = Array.from(n.styleSheets).find((e) => e.href === t.href),
                                 a = null;
-                            e && (a = J(e)), a && (delete C.rel, delete C.href, (C._cssText = tf(a, e.href)));
+                            e && (a = J(e)), a && (delete g.rel, delete g.href, (g._cssText = tf(a, e.href)));
                         }
-                        if ("style" === g && t.sheet && !(t.innerText || t.textContent || "").trim().length) {
+                        if ("style" === D && t.sheet && !(t.innerText || t.textContent || "").trim().length) {
                             let e = J(t.sheet);
-                            e && (C._cssText = tf(e, tO()));
+                            e && (g._cssText = tf(e, th()));
                         }
-                        if ("input" === g || "textarea" === g || "select" === g || "option" === g) {
+                        if ("input" === D || "textarea" === D || "select" === D || "option" === D) {
                             let e = tn(t),
-                                a = to(t, tr(g), e),
+                                a = to(t, tr(D), e),
                                 r = t.checked;
                             if ("submit" !== e && "button" !== e && a) {
-                                let r = tm(
+                                let r = tS(
                                     t,
                                     p,
-                                    O,
                                     h,
+                                    O,
                                     P,
                                     tt({
                                         type: e,
-                                        tagName: tr(g),
+                                        tagName: tr(D),
                                         maskInputOptions: s,
                                     }),
                                 );
-                                C.value = te({
+                                g.value = te({
                                     isMasked: r,
                                     element: t,
                                     value: a,
                                     maskInputFn: I,
                                 });
                             }
-                            r && (C.checked = r);
+                            r && (g.checked = r);
                         }
                         if (
-                            ("option" === g && (t.selected && !s.select ? (C.selected = !0) : delete C.selected),
-                            "canvas" === g && N)
+                            ("option" === D && (t.selected && !s.select ? (g.selected = !0) : delete g.selected),
+                            "canvas" === D && N)
                         ) {
                             if ("2d" === t.__context)
                                 !(function (t) {
@@ -542,16 +542,16 @@ function tS(t, e) {
                                                 return !1;
                                         }
                                     return !0;
-                                })(t) && (C.rr_dataURL = t.toDataURL(u.type, u.quality));
+                                })(t) && (g.rr_dataURL = t.toDataURL(R.type, R.quality));
                             else if (!("__context" in t)) {
-                                let e = t.toDataURL(u.type, u.quality),
+                                let e = t.toDataURL(R.type, R.quality),
                                     a = document.createElement("canvas");
                                 (a.width = t.width),
                                     (a.height = t.height),
-                                    e !== a.toDataURL(u.type, u.quality) && (C.rr_dataURL = e);
+                                    e !== a.toDataURL(R.type, R.quality) && (g.rr_dataURL = e);
                             }
                         }
-                        if ("img" === g && R) {
+                        if ("img" === D && u) {
                             r || (_ = (r = n.createElement("canvas")).getContext("2d"));
                             let e = t.crossOrigin;
                             t.crossOrigin = "anonymous";
@@ -561,41 +561,41 @@ function tS(t, e) {
                                     (r.width = t.naturalWidth),
                                         (r.height = t.naturalHeight),
                                         _.drawImage(t, 0, 0),
-                                        (C.rr_dataURL = r.toDataURL(u.type, u.quality));
+                                        (g.rr_dataURL = r.toDataURL(R.type, R.quality));
                                 } catch (e) {
                                     console.warn(`Cannot inline img src=${t.currentSrc}! Error: ${e}`);
                                 }
-                                e ? (C.crossOrigin = e) : t.removeAttribute("crossorigin");
+                                e ? (g.crossOrigin = e) : t.removeAttribute("crossorigin");
                             };
                             t.complete && 0 !== t.naturalWidth ? a() : t.addEventListener("load", a);
                         }
                         if (
-                            (("audio" === g || "video" === g) &&
-                                ((C.rr_mediaState = t.paused ? "paused" : "played"),
-                                (C.rr_mediaCurrentTime = t.currentTime)),
-                            !T &&
-                                (t.scrollLeft && (C.rr_scrollLeft = t.scrollLeft),
-                                t.scrollTop && (C.rr_scrollTop = t.scrollTop)),
-                            D)
+                            (("audio" === D || "video" === D) &&
+                                ((g.rr_mediaState = t.paused ? "paused" : "played"),
+                                (g.rr_mediaCurrentTime = t.currentTime)),
+                            !d &&
+                                (t.scrollLeft && (g.rr_scrollLeft = t.scrollLeft),
+                                t.scrollTop && (g.rr_scrollTop = t.scrollTop)),
+                            C)
                         ) {
                             let { width: e, height: a } = t.getBoundingClientRect();
-                            C = {
-                                class: C.class,
+                            g = {
+                                class: g.class,
                                 rr_width: `${e}px`,
                                 rr_height: `${a}px`,
                             };
                         }
-                        "iframe" !== g || A(C.src) || (D || t.contentDocument || (C.rr_src = C.src), delete C.src);
+                        "iframe" !== D || T(g.src) || (C || t.contentDocument || (g.rr_src = g.src), delete g.src);
                         try {
-                            customElements.get(g) && (a = !0);
+                            customElements.get(D) && (a = !0);
                         } catch (t) {}
                         return {
-                            type: d.Element,
-                            tagName: g,
-                            attributes: C,
+                            type: A.Element,
+                            tagName: D,
+                            attributes: g,
                             childNodes: [],
                             isSVG: !!("svg" === t.tagName || t.ownerSVGElement) || void 0,
-                            needBlock: D,
+                            needBlock: C,
                             rootId: f,
                             isCustom: a,
                         };
@@ -603,22 +603,22 @@ function tS(t, e) {
                         doc: a,
                         blockClass: o,
                         blockSelector: i,
-                        unblockSelector: c,
+                        unblockSelector: E,
                         inlineStylesheet: N,
                         maskAttributeFn: s,
-                        maskInputOptions: A,
+                        maskInputOptions: T,
                         maskInputFn: f,
                         dataURLOptions: L,
                         inlineImages: p,
-                        recordCanvas: h,
-                        keepIframeSrcFn: O,
+                        recordCanvas: O,
+                        keepIframeSrcFn: h,
                         newlyAddedElement: P,
-                        rootId: D,
-                        maskAllText: E,
+                        rootId: C,
+                        maskAllText: c,
                         maskTextClass: l,
                         unmaskTextClass: I,
-                        maskTextSelector: u,
-                        unmaskTextSelector: R,
+                        maskTextSelector: R,
+                        unmaskTextSelector: u,
                     });
                 case t.TEXT_NODE:
                     return (function (t, e) {
@@ -629,16 +629,16 @@ function tS(t, e) {
                                 maskTextSelector: n,
                                 unmaskTextSelector: o,
                                 maskTextFn: i,
-                                maskInputOptions: c,
-                                maskInputFn: E,
+                                maskInputOptions: E,
+                                maskInputFn: c,
                                 rootId: s,
                             } = e,
                             l = t.parentNode && t.parentNode.tagName,
                             I = t.textContent,
-                            u = "STYLE" === l || void 0,
-                            R = "SCRIPT" === l || void 0,
+                            R = "STYLE" === l || void 0,
+                            u = "SCRIPT" === l || void 0,
                             N = "TEXTAREA" === l || void 0;
-                        if (u && I) {
+                        if (R && I) {
                             try {
                                 t.nextSibling ||
                                     t.previousSibling ||
@@ -655,17 +655,17 @@ function tS(t, e) {
                             } catch (e) {
                                 console.warn(`Cannot get CSS styles from text's parentNode. Error: ${e}`, t);
                             }
-                            I = tf(I, tO());
+                            I = tf(I, th());
                         }
-                        R && (I = "SCRIPT_PLACEHOLDER");
-                        let A = tm(t, r, n, _, o, a);
+                        u && (I = "SCRIPT_PLACEHOLDER");
+                        let T = tS(t, r, n, _, o, a);
                         return (
-                            u || R || N || !I || !A || (I = i ? i(I, t.parentElement) : I.replace(/[\S]/g, "*")),
-                            N && I && (c.textarea || A) && (I = E ? E(I, t.parentNode) : I.replace(/[\S]/g, "*")),
+                            R || u || N || !I || !T || (I = i ? i(I, t.parentElement) : I.replace(/[\S]/g, "*")),
+                            N && I && (E.textarea || T) && (I = c ? c(I, t.parentNode) : I.replace(/[\S]/g, "*")),
                             "OPTION" === l &&
                                 I &&
                                 (I = te({
-                                    isMasked: tm(
+                                    isMasked: tS(
                                         t,
                                         r,
                                         n,
@@ -674,42 +674,42 @@ function tS(t, e) {
                                         tt({
                                             type: null,
                                             tagName: l,
-                                            maskInputOptions: c,
+                                            maskInputOptions: E,
                                         }),
                                     ),
                                     element: t,
                                     value: I,
-                                    maskInputFn: E,
+                                    maskInputFn: c,
                                 })),
                             {
-                                type: d.Text,
+                                type: A.Text,
                                 textContent: I || "",
-                                isStyle: u,
+                                isStyle: R,
                                 rootId: s,
                             }
                         );
                     })(t, {
-                        maskAllText: E,
+                        maskAllText: c,
                         maskTextClass: l,
                         unmaskTextClass: I,
-                        maskTextSelector: u,
-                        unmaskTextSelector: R,
-                        maskTextFn: T,
-                        maskInputOptions: A,
+                        maskTextSelector: R,
+                        unmaskTextSelector: u,
+                        maskTextFn: d,
+                        maskInputOptions: T,
                         maskInputFn: f,
-                        rootId: D,
+                        rootId: C,
                     });
                 case t.CDATA_SECTION_NODE:
                     return {
-                        type: d.CDATA,
+                        type: A.CDATA,
                         textContent: "",
-                        rootId: D,
+                        rootId: C,
                     };
                 case t.COMMENT_NODE:
                     return {
-                        type: d.Comment,
+                        type: A.Comment,
                         textContent: t.textContent || "",
-                        rootId: D,
+                        rootId: C,
                     };
                 default:
                     return !1;
@@ -718,30 +718,30 @@ function tS(t, e) {
             doc: n,
             mirror: o,
             blockClass: i,
-            blockSelector: c,
+            blockSelector: E,
             maskAllText: s,
-            unblockSelector: E,
+            unblockSelector: c,
             maskTextClass: l,
             unmaskTextClass: I,
-            maskTextSelector: u,
-            unmaskTextSelector: R,
-            inlineStylesheet: A,
-            maskInputOptions: T,
+            maskTextSelector: R,
+            unmaskTextSelector: u,
+            inlineStylesheet: T,
+            maskInputOptions: d,
             maskAttributeFn: f,
             maskTextFn: L,
             maskInputFn: p,
-            dataURLOptions: O,
+            dataURLOptions: h,
             inlineImages: P,
-            recordCanvas: D,
+            recordCanvas: C,
             keepIframeSrcFn: y,
             newlyAddedElement: U,
         });
-    if (!G) return console.warn(t, "not serialized"), null;
+    if (!W) return console.warn(t, "not serialized"), null;
     a = o.hasNode(t)
         ? o.getId(t)
         : !(function (t, e) {
-                if (e.comment && t.type === d.Comment) return !0;
-                if (t.type === d.Element) {
+                if (e.comment && t.type === A.Comment) return !0;
+                if (t.type === A.Element) {
                     if (
                         e.script &&
                         ("script" === t.tagName ||
@@ -758,113 +758,113 @@ function tS(t, e) {
                         e.headFavicon &&
                         (("link" === t.tagName && "shortcut icon" === t.attributes.rel) ||
                             ("meta" === t.tagName &&
-                                (tv(t.attributes.name).match(/^msapplication-tile(image|color)$/) ||
-                                    "application-name" === tv(t.attributes.name) ||
-                                    "icon" === tv(t.attributes.rel) ||
-                                    "apple-touch-icon" === tv(t.attributes.rel) ||
-                                    "shortcut icon" === tv(t.attributes.rel))))
+                                (tm(t.attributes.name).match(/^msapplication-tile(image|color)$/) ||
+                                    "application-name" === tm(t.attributes.name) ||
+                                    "icon" === tm(t.attributes.rel) ||
+                                    "apple-touch-icon" === tm(t.attributes.rel) ||
+                                    "shortcut icon" === tm(t.attributes.rel))))
                     )
                         return !0;
                     else if ("meta" === t.tagName) {
-                        if (e.headMetaDescKeywords && tv(t.attributes.name).match(/^description|keywords$/)) return !0;
+                        if (e.headMetaDescKeywords && tm(t.attributes.name).match(/^description|keywords$/)) return !0;
                         else if (
                             e.headMetaSocial &&
-                            (tv(t.attributes.property).match(/^(og|twitter|fb):/) ||
-                                tv(t.attributes.name).match(/^(og|twitter):/) ||
-                                "pinterest" === tv(t.attributes.name))
+                            (tm(t.attributes.property).match(/^(og|twitter|fb):/) ||
+                                tm(t.attributes.name).match(/^(og|twitter):/) ||
+                                "pinterest" === tm(t.attributes.name))
                         )
                             return !0;
                         else if (
                             e.headMetaRobots &&
-                            ("robots" === tv(t.attributes.name) ||
-                                "googlebot" === tv(t.attributes.name) ||
-                                "bingbot" === tv(t.attributes.name))
+                            ("robots" === tm(t.attributes.name) ||
+                                "googlebot" === tm(t.attributes.name) ||
+                                "bingbot" === tm(t.attributes.name))
                         )
                             return !0;
                         else if (e.headMetaHttpEquiv && void 0 !== t.attributes["http-equiv"]) return !0;
                         else if (
                             e.headMetaAuthorship &&
-                            ("author" === tv(t.attributes.name) ||
-                                "generator" === tv(t.attributes.name) ||
-                                "framework" === tv(t.attributes.name) ||
-                                "publisher" === tv(t.attributes.name) ||
-                                "progid" === tv(t.attributes.name) ||
-                                tv(t.attributes.property).match(/^article:/) ||
-                                tv(t.attributes.property).match(/^product:/))
+                            ("author" === tm(t.attributes.name) ||
+                                "generator" === tm(t.attributes.name) ||
+                                "framework" === tm(t.attributes.name) ||
+                                "publisher" === tm(t.attributes.name) ||
+                                "progid" === tm(t.attributes.name) ||
+                                tm(t.attributes.property).match(/^article:/) ||
+                                tm(t.attributes.property).match(/^product:/))
                         )
                             return !0;
                         else if (
                             e.headMetaVerification &&
-                            ("google-site-verification" === tv(t.attributes.name) ||
-                                "yandex-verification" === tv(t.attributes.name) ||
-                                "csrf-token" === tv(t.attributes.name) ||
-                                "p:domain_verify" === tv(t.attributes.name) ||
-                                "verify-v1" === tv(t.attributes.name) ||
-                                "verification" === tv(t.attributes.name) ||
-                                "shopify-checkout-api-token" === tv(t.attributes.name))
+                            ("google-site-verification" === tm(t.attributes.name) ||
+                                "yandex-verification" === tm(t.attributes.name) ||
+                                "csrf-token" === tm(t.attributes.name) ||
+                                "p:domain_verify" === tm(t.attributes.name) ||
+                                "verify-v1" === tm(t.attributes.name) ||
+                                "verification" === tm(t.attributes.name) ||
+                                "shopify-checkout-api-token" === tm(t.attributes.name))
                         )
                             return !0;
                     }
                 }
                 return !1;
-            })(G, h) &&
-            (b || G.type !== d.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, "").length)
-          ? tR()
+            })(W, O) &&
+            (G || W.type !== A.Text || W.isStyle || W.textContent.replace(/^\s+|\s+$/gm, "").length)
+          ? tu()
           : -2;
-    let W = Object.assign(G, { id: a });
-    if ((o.add(t, W), -2 === a)) return null;
-    g && g(t);
-    let w = !N;
-    if (W.type === d.Element) {
-        (w = w && !W.needBlock), delete W.needBlock;
+    let b = Object.assign(W, { id: a });
+    if ((o.add(t, b), -2 === a)) return null;
+    D && D(t);
+    let M = !N;
+    if (b.type === A.Element) {
+        (M = M && !b.needBlock), delete b.needBlock;
         let e = t.shadowRoot;
-        e && z(e) && (W.isShadowHost = !0);
+        e && z(e) && (b.isShadowHost = !0);
     }
-    if ((W.type === d.Document || W.type === d.Element) && w) {
-        h.headWhitespace && W.type === d.Element && "head" === W.tagName && (b = !1);
+    if ((b.type === A.Document || b.type === A.Element) && M) {
+        O.headWhitespace && b.type === A.Element && "head" === b.tagName && (G = !1);
         let e = {
             doc: n,
             mirror: o,
             blockClass: i,
-            blockSelector: c,
+            blockSelector: E,
             maskAllText: s,
-            unblockSelector: E,
+            unblockSelector: c,
             maskTextClass: l,
             unmaskTextClass: I,
-            maskTextSelector: u,
-            unmaskTextSelector: R,
+            maskTextSelector: R,
+            unmaskTextSelector: u,
             skipChild: N,
-            inlineStylesheet: A,
-            maskInputOptions: T,
+            inlineStylesheet: T,
+            maskInputOptions: d,
             maskAttributeFn: f,
             maskTextFn: L,
             maskInputFn: p,
-            slimDOMOptions: h,
-            dataURLOptions: O,
+            slimDOMOptions: O,
+            dataURLOptions: h,
             inlineImages: P,
-            recordCanvas: D,
-            preserveWhiteSpace: b,
-            onSerialize: g,
-            onIframeLoad: C,
-            iframeLoadTimeout: m,
-            onStylesheetLoad: v,
-            stylesheetLoadTimeout: S,
+            recordCanvas: C,
+            preserveWhiteSpace: G,
+            onSerialize: D,
+            onIframeLoad: g,
+            iframeLoadTimeout: S,
+            onStylesheetLoad: m,
+            stylesheetLoadTimeout: v,
             keepIframeSrcFn: y,
         };
         for (let a of Array.from(t.childNodes)) {
-            let t = tS(a, e);
-            t && W.childNodes.push(t);
+            let t = tv(a, e);
+            t && b.childNodes.push(t);
         }
         if (t.nodeType === t.ELEMENT_NODE && t.shadowRoot)
             for (let a of Array.from(t.shadowRoot.childNodes)) {
-                let r = tS(a, e);
-                r && (z(t.shadowRoot) && (r.isShadow = !0), W.childNodes.push(r));
+                let r = tv(a, e);
+                r && (z(t.shadowRoot) && (r.isShadow = !0), b.childNodes.push(r));
             }
     }
     return (
-        t.parentNode && q(t.parentNode) && z(t.parentNode) && (W.isShadow = !0),
-        W.type === d.Element &&
-            "iframe" === W.tagName &&
+        t.parentNode && q(t.parentNode) && z(t.parentNode) && (b.isShadow = !0),
+        b.type === A.Element &&
+            "iframe" === b.tagName &&
             (function (t, e, a) {
                 let r,
                     _ = t.contentWindow;
@@ -892,48 +892,48 @@ function tS(t, e) {
                 t,
                 () => {
                     let e = t.contentDocument;
-                    if (e && C) {
-                        let a = tS(e, {
+                    if (e && g) {
+                        let a = tv(e, {
                             doc: e,
                             mirror: o,
                             blockClass: i,
-                            blockSelector: c,
-                            unblockSelector: E,
+                            blockSelector: E,
+                            unblockSelector: c,
                             maskAllText: s,
                             maskTextClass: l,
                             unmaskTextClass: I,
-                            maskTextSelector: u,
-                            unmaskTextSelector: R,
+                            maskTextSelector: R,
+                            unmaskTextSelector: u,
                             skipChild: !1,
-                            inlineStylesheet: A,
-                            maskInputOptions: T,
+                            inlineStylesheet: T,
+                            maskInputOptions: d,
                             maskAttributeFn: f,
                             maskTextFn: L,
                             maskInputFn: p,
-                            slimDOMOptions: h,
-                            dataURLOptions: O,
+                            slimDOMOptions: O,
+                            dataURLOptions: h,
                             inlineImages: P,
-                            recordCanvas: D,
-                            preserveWhiteSpace: b,
-                            onSerialize: g,
-                            onIframeLoad: C,
-                            iframeLoadTimeout: m,
-                            onStylesheetLoad: v,
-                            stylesheetLoadTimeout: S,
+                            recordCanvas: C,
+                            preserveWhiteSpace: G,
+                            onSerialize: D,
+                            onIframeLoad: g,
+                            iframeLoadTimeout: S,
+                            onStylesheetLoad: m,
+                            stylesheetLoadTimeout: v,
                             keepIframeSrcFn: y,
                         });
-                        a && C(t, a);
+                        a && g(t, a);
                     }
                 },
-                m,
+                S,
             ),
-        W.type === d.Element &&
-            "link" === W.tagName &&
-            "string" == typeof W.attributes.rel &&
-            ("stylesheet" === W.attributes.rel ||
-                ("preload" === W.attributes.rel &&
-                    "string" == typeof W.attributes.href &&
-                    "css" === ti(W.attributes.href))) &&
+        b.type === A.Element &&
+            "link" === b.tagName &&
+            "string" == typeof b.attributes.rel &&
+            ("stylesheet" === b.attributes.rel ||
+                ("preload" === b.attributes.rel &&
+                    "string" == typeof b.attributes.href &&
+                    "css" === ti(b.attributes.href))) &&
             (function (t, e, a) {
                 let r,
                     _ = !1;
@@ -952,42 +952,42 @@ function tS(t, e) {
             })(
                 t,
                 () => {
-                    if (v) {
-                        let e = tS(t, {
+                    if (m) {
+                        let e = tv(t, {
                             doc: n,
                             mirror: o,
                             blockClass: i,
-                            blockSelector: c,
-                            unblockSelector: E,
+                            blockSelector: E,
+                            unblockSelector: c,
                             maskAllText: s,
                             maskTextClass: l,
                             unmaskTextClass: I,
-                            maskTextSelector: u,
-                            unmaskTextSelector: R,
+                            maskTextSelector: R,
+                            unmaskTextSelector: u,
                             skipChild: !1,
-                            inlineStylesheet: A,
-                            maskInputOptions: T,
+                            inlineStylesheet: T,
+                            maskInputOptions: d,
                             maskAttributeFn: f,
                             maskTextFn: L,
                             maskInputFn: p,
-                            slimDOMOptions: h,
-                            dataURLOptions: O,
+                            slimDOMOptions: O,
+                            dataURLOptions: h,
                             inlineImages: P,
-                            recordCanvas: D,
-                            preserveWhiteSpace: b,
-                            onSerialize: g,
-                            onIframeLoad: C,
-                            iframeLoadTimeout: m,
-                            onStylesheetLoad: v,
-                            stylesheetLoadTimeout: S,
+                            recordCanvas: C,
+                            preserveWhiteSpace: G,
+                            onSerialize: D,
+                            onIframeLoad: g,
+                            iframeLoadTimeout: S,
+                            onStylesheetLoad: m,
+                            stylesheetLoadTimeout: v,
                             keepIframeSrcFn: y,
                         });
-                        e && v(t, e);
+                        e && m(t, e);
                     }
                 },
-                S,
+                v,
             ),
-        W
+        b
     );
 }
 function ty(t) {
@@ -1011,44 +1011,44 @@ function tU(t, e, a = document) {
     };
     return a.addEventListener(t, e, r), () => a.removeEventListener(t, e, r);
 }
-let tb =
+let tG =
         "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-    tG = {
+    tW = {
         map: {},
-        getId: () => (console.error(tb), -1),
-        getNode: () => (console.error(tb), null),
+        getId: () => (console.error(tG), -1),
+        getNode: () => (console.error(tG), null),
         removeNodeFromMap() {
-            console.error(tb);
+            console.error(tG);
         },
-        has: () => (console.error(tb), !1),
+        has: () => (console.error(tG), !1),
         reset() {
-            console.error(tb);
+            console.error(tG);
         },
     };
-function tW(t, e, a = {}) {
+function tb(t, e, a = {}) {
     let r = null,
         _ = 0;
     return function (...n) {
         let o = Date.now();
         _ || !1 !== a.leading || (_ = o);
         let i = e - (o - _),
-            c = this;
+            E = this;
         i <= 0 || i > e
             ? (r &&
                   ((function (...t) {
-                      tZ("clearTimeout")(...t);
+                      tQ("clearTimeout")(...t);
                   })(r),
                   (r = null)),
               (_ = o),
-              t.apply(c, n))
+              t.apply(E, n))
             : r ||
               !1 === a.trailing ||
-              (r = tQ(() => {
-                  (_ = !1 === a.leading ? 0 : Date.now()), (r = null), t.apply(c, n);
+              (r = tZ(() => {
+                  (_ = !1 === a.leading ? 0 : Date.now()), (r = null), t.apply(E, n);
               }, i));
     };
 }
-function tw(t, e, a) {
+function tM(t, e, a) {
     try {
         if (!(e in t)) return () => {};
         let r = t[e],
@@ -1074,8 +1074,8 @@ function tw(t, e, a) {
 "undefined" != typeof window &&
     window.Proxy &&
     window.Reflect &&
-    (tG = new Proxy(tG, { get: (t, e, a) => ("map" === e && console.error(tb), Reflect.get(t, e, a)) }));
-let tM = Date.now;
+    (tW = new Proxy(tW, { get: (t, e, a) => ("map" === e && console.error(tG), Reflect.get(t, e, a)) }));
+let tw = Date.now;
 function tB(t) {
     let e = t.document;
     return {
@@ -1134,14 +1134,14 @@ function tk(t, e, a, r, _) {
     if (!t) return !1;
     let n = tK(t);
     if (!n) return !1;
-    let o = tC(e, a);
+    let o = tg(e, a);
     if (!_) {
         let t = r && n.matches(r);
         return o(n) && !t;
     }
-    let i = tg(n, o),
-        c = -1;
-    return !(i < 0) && (r && (c = tg(n, tC(null, r))), (i > -1 && c < 0) || i < c);
+    let i = tD(n, o),
+        E = -1;
+    return !(i < 0) && (r && (E = tD(n, tg(null, r))), (i > -1 && E < 0) || i < E);
 }
 function tx(t, e) {
     return -2 === e.getId(t);
@@ -1164,13 +1164,13 @@ function tj(t, e) {
 function tX(t) {
     return !!ty([t, "optionalAccess", (t) => t.shadowRoot]);
 }
-/[1-9][0-9]{12}/.test(Date.now().toString()) || (tM = () => new Date().getTime());
+/[1-9][0-9]{12}/.test(Date.now().toString()) || (tw = () => new Date().getTime());
 class t$ {
     constructor() {
         (this.id = 1), (this.styleIDMap = new WeakMap()), (this.idStyleMap = new Map());
     }
     getId(t) {
-        return (0, A.h)(this.styleIDMap.get(t), () => -1);
+        return (0, T.h)(this.styleIDMap.get(t), () => -1);
     }
     has(t) {
         return this.styleIDMap.has(t);
@@ -1220,7 +1220,7 @@ function tz(t) {
     );
 }
 let tJ = {};
-function tZ(t) {
+function tQ(t) {
     let e = tJ[t];
     if (e) return e;
     let a = window.document,
@@ -1234,8 +1234,8 @@ function tZ(t) {
         } catch (t) {}
     return (tJ[t] = r.bind(window));
 }
-function tQ(...t) {
-    return tZ("setTimeout")(...t);
+function tZ(...t) {
+    return tQ("setTimeout")(...t);
 }
 var t0 =
         (((s = t0 || {})[(s.DomContentLoaded = 0)] = "DomContentLoaded"),
@@ -1278,7 +1278,7 @@ var t0 =
         (I[(I.TouchEnd = 9)] = "TouchEnd"),
         (I[(I.TouchCancel = 10)] = "TouchCancel"),
         I),
-    t3 = (((u = t3 || {})[(u.Mouse = 0)] = "Mouse"), (u[(u.Pen = 1)] = "Pen"), (u[(u.Touch = 2)] = "Touch"), u);
+    t3 = (((R = t3 || {})[(R.Mouse = 0)] = "Mouse"), (R[(R.Pen = 1)] = "Pen"), (R[(R.Touch = 2)] = "Touch"), R);
 class t6 {
     constructor() {
         (this.length = 0), (this.head = null), (this.tail = null);
@@ -1366,7 +1366,7 @@ class t5 {
                         let n = q(_.parentNode) ? this.mirror.getId(tq(_)) : this.mirror.getId(_.parentNode),
                             o = r(_);
                         if (-1 === n || -1 === o) return a.addNode(_);
-                        let i = tS(_, {
+                        let i = tv(_, {
                             doc: this.doc,
                             mirror: this.mirror,
                             blockClass: this.blockClass,
@@ -1505,7 +1505,7 @@ class t5 {
                                 e === t.oldValue ||
                                 this.texts.push({
                                     value:
-                                        tm(
+                                        tS(
                                             t.target,
                                             this.maskTextClass,
                                             this.maskTextSelector,
@@ -1535,7 +1535,7 @@ class t5 {
                                     type: a,
                                 });
                                 r = te({
-                                    isMasked: tm(
+                                    isMasked: tS(
                                         t.target,
                                         this.maskTextClass,
                                         this.maskTextSelector,
@@ -1571,7 +1571,7 @@ class t5 {
                                     "INPUT" === e.tagName &&
                                     "password" === (t.oldValue || "").toLowerCase() &&
                                     e.setAttribute("data-rr-is-password", "true"),
-                                !tD(e.tagName, a) &&
+                                !tC(e.tagName, a) &&
                                     ((_.attributes[a] = tP(this.doc, ta(e.tagName), ta(a), r, e, this.maskAttributeFn)),
                                     "style" === a))
                             ) {
@@ -1796,21 +1796,21 @@ function en({ scrollCb: t, doc: e, mirror: a, blockClass: r, blockSelector: _, u
     return tU(
         "scroll",
         et(
-            tW(
+            tb(
                 et((o) => {
                     let i = er(o);
                     if (!i || tk(i, r, _, n, !0)) return;
-                    let c = a.getId(i);
+                    let E = a.getId(i);
                     if (i === e && e.defaultView) {
                         let a = tB(e.defaultView);
                         t({
-                            id: c,
+                            id: E,
                             x: a.left,
                             y: a.top,
                         });
                     } else
                         t({
-                            id: c,
+                            id: E,
                             x: i.scrollLeft,
                             y: i.scrollTop,
                         });
@@ -1823,7 +1823,7 @@ function en({ scrollCb: t, doc: e, mirror: a, blockClass: r, blockSelector: _, u
 }
 let eo = ["INPUT", "TEXTAREA", "SELECT"],
     ei = new WeakMap();
-function ec(t) {
+function eE(t) {
     var e = [];
     if (
         (eI("CSSGroupingRule") && t.parentRule instanceof CSSGroupingRule) ||
@@ -1839,7 +1839,7 @@ function ec(t) {
     }
     return e;
 }
-function eE(t, e, a) {
+function ec(t, e, a) {
     let r, _;
     return t
         ? (t.ownerNode ? (r = e.getId(t.ownerNode)) : (_ = a.getId(t)),
@@ -1904,7 +1904,7 @@ function el(t, e = {}) {
             let n = "number" == typeof e.mousemove ? e.mousemove : 50,
                 o = "number" == typeof e.mousemoveCallback ? e.mousemoveCallback : 500,
                 i = [],
-                c = tW(
+                E = tb(
                     et((e) => {
                         let a = Date.now() - _;
                         t(
@@ -1916,19 +1916,19 @@ function el(t, e = {}) {
                     }),
                     o,
                 ),
-                E = et(
-                    tW(
+                c = et(
+                    tb(
                         et((t) => {
                             let e = er(t),
                                 { clientX: a, clientY: n } = tF(t) ? t.changedTouches[0] : t;
-                            _ || (_ = tM()),
+                            _ || (_ = tw()),
                                 i.push({
                                     x: a,
                                     y: n,
                                     id: r.getId(e),
-                                    timeOffset: tM() - _,
+                                    timeOffset: tw() - _,
                                 }),
-                                c(
+                                E(
                                     "undefined" != typeof DragEvent && t instanceof DragEvent
                                         ? t1.Drag
                                         : t instanceof MouseEvent
@@ -1940,7 +1940,7 @@ function el(t, e = {}) {
                         { trailing: !1 },
                     ),
                 ),
-                s = [tU("mousemove", E, a), tU("touchmove", E, a), tU("drag", E, a)];
+                s = [tU("mousemove", c, a), tU("touchmove", c, a), tU("drag", c, a)];
             return et(() => {
                 s.forEach((t) => t());
             });
@@ -1956,8 +1956,8 @@ function el(t, e = {}) {
         }) {
             if (!1 === o.mouseInteraction) return () => {};
             let i = !0 === o.mouseInteraction || void 0 === o.mouseInteraction ? {} : o.mouseInteraction,
-                c = [],
-                E = null;
+                E = [],
+                c = null;
             return (
                 Object.keys(t2)
                     .filter((t) => Number.isNaN(Number(t)) && !t.endsWith("_Departed") && !1 !== i[t])
@@ -1966,41 +1966,41 @@ function el(t, e = {}) {
                             s = (e) => {
                                 let i = er(e);
                                 if (tk(i, r, _, n, !0)) return;
-                                let c = null,
+                                let E = null,
                                     s = o;
                                 if ("pointerType" in e) {
                                     switch (e.pointerType) {
                                         case "mouse":
-                                            c = t3.Mouse;
+                                            E = t3.Mouse;
                                             break;
                                         case "touch":
-                                            c = t3.Touch;
+                                            E = t3.Touch;
                                             break;
                                         case "pen":
-                                            c = t3.Pen;
+                                            E = t3.Pen;
                                     }
-                                    c === t3.Touch
+                                    E === t3.Touch
                                         ? t2[o] === t2.MouseDown
                                             ? (s = "TouchStart")
                                             : t2[o] === t2.MouseUp && (s = "TouchEnd")
                                         : t3.Pen;
-                                } else tF(e) && (c = t3.Touch);
-                                null !== c
-                                    ? ((E = c),
-                                      ((s.startsWith("Touch") && c === t3.Touch) ||
-                                          (s.startsWith("Mouse") && c === t3.Mouse)) &&
-                                          (c = null))
-                                    : t2[o] === t2.Click && ((c = E), (E = null));
+                                } else tF(e) && (E = t3.Touch);
+                                null !== E
+                                    ? ((c = E),
+                                      ((s.startsWith("Touch") && E === t3.Touch) ||
+                                          (s.startsWith("Mouse") && E === t3.Mouse)) &&
+                                          (E = null))
+                                    : t2[o] === t2.Click && ((E = c), (c = null));
                                 let l = tF(e) ? e.changedTouches[0] : e;
                                 if (!l) return;
                                 let I = a.getId(i),
-                                    { clientX: u, clientY: R } = l;
+                                    { clientX: R, clientY: u } = l;
                                 et(t)({
                                     type: t2[s],
                                     id: I,
-                                    x: u,
-                                    y: R,
-                                    ...(null !== c && { pointerType: c }),
+                                    x: R,
+                                    y: u,
+                                    ...(null !== E && { pointerType: E }),
                                 });
                             };
                         if (window.PointerEvent)
@@ -2013,10 +2013,10 @@ function el(t, e = {}) {
                                 case t2.TouchEnd:
                                     return;
                             }
-                        c.push(tU(i, s, e));
+                        E.push(tU(i, s, e));
                     }),
                 et(() => {
-                    c.forEach((t) => t());
+                    E.forEach((t) => t());
                 })
             );
         })(t),
@@ -2027,7 +2027,7 @@ function el(t, e = {}) {
             return tU(
                 "resize",
                 et(
-                    tW(
+                    tb(
                         et(() => {
                             let e = tY(),
                                 _ = tH();
@@ -2045,7 +2045,7 @@ function el(t, e = {}) {
                 e,
             );
         })(t, { win: r }),
-        c = (function ({
+        E = (function ({
             inputCb: t,
             doc: e,
             mirror: a,
@@ -2054,14 +2054,14 @@ function el(t, e = {}) {
             unblockSelector: n,
             ignoreClass: o,
             ignoreSelector: i,
-            maskInputOptions: c,
-            maskInputFn: E,
+            maskInputOptions: E,
+            maskInputFn: c,
             sampling: s,
             userTriggeredOnInput: l,
             maskTextClass: I,
-            unmaskTextClass: u,
-            maskTextSelector: R,
-            unmaskTextSelector: d,
+            unmaskTextClass: R,
+            maskTextSelector: u,
+            unmaskTextSelector: A,
         }) {
             function N(t) {
                 let a = er(t),
@@ -2069,25 +2069,25 @@ function el(t, e = {}) {
                     N = a && tr(a.tagName);
                 if (("OPTION" === N && (a = a.parentElement), !a || !N || 0 > eo.indexOf(N) || tk(a, r, _, n, !0)))
                     return;
-                let T = a;
-                if (T.classList.contains(o) || (i && T.matches(i))) return;
+                let d = a;
+                if (d.classList.contains(o) || (i && d.matches(i))) return;
                 let f = tn(a),
-                    L = to(T, N, f),
+                    L = to(d, N, f),
                     p = !1,
-                    h = tt({
-                        maskInputOptions: c,
+                    O = tt({
+                        maskInputOptions: E,
                         tagName: N,
                         type: f,
                     }),
-                    O = tm(a, I, R, u, d, h);
+                    h = tS(a, I, u, R, A, O);
                 ("radio" === f || "checkbox" === f) && (p = a.checked),
                     (L = te({
-                        isMasked: O,
+                        isMasked: h,
                         element: a,
                         value: L,
-                        maskInputFn: E,
+                        maskInputFn: c,
                     })),
-                    A(
+                    T(
                         a,
                         l
                             ? {
@@ -2107,12 +2107,12 @@ function el(t, e = {}) {
                     e.querySelectorAll(`input[type="radio"][name="${P}"]`).forEach((t) => {
                         if (t !== a) {
                             let e = te({
-                                isMasked: O,
+                                isMasked: h,
                                 element: t,
                                 value: to(t, N, f),
-                                maskInputFn: E,
+                                maskInputFn: c,
                             });
-                            A(
+                            T(
                                 t,
                                 l
                                     ? {
@@ -2128,7 +2128,7 @@ function el(t, e = {}) {
                         }
                     });
             }
-            function A(e, r) {
+            function T(e, r) {
                 let _ = ei.get(e);
                 if (!_ || _.text !== r.text || _.isChecked !== r.isChecked) {
                     ei.set(e, r);
@@ -2139,11 +2139,11 @@ function el(t, e = {}) {
                     });
                 }
             }
-            let T = ("last" === s.input ? ["change"] : ["input", "change"]).map((t) => tU(t, et(N), e)),
+            let d = ("last" === s.input ? ["change"] : ["input", "change"]).map((t) => tU(t, et(N), e)),
                 f = e.defaultView;
             if (!f)
                 return () => {
-                    T.forEach((t) => t());
+                    d.forEach((t) => t());
                 };
             let L = f.Object.getOwnPropertyDescriptor(f.HTMLInputElement.prototype, "value"),
                 p = [
@@ -2157,7 +2157,7 @@ function el(t, e = {}) {
             return (
                 L &&
                     L.set &&
-                    T.push(
+                    d.push(
                         ...p.map((t) =>
                             (function t(e, a, r, _, n = window) {
                                 let o = n.Object.getOwnPropertyDescriptor(e, a);
@@ -2169,7 +2169,7 @@ function el(t, e = {}) {
                                             ? r
                                             : {
                                                   set(t) {
-                                                      tQ(() => {
+                                                      tZ(() => {
                                                           r.set.call(this, t);
                                                       }, 0),
                                                           o && o.set && o.set.call(this, t);
@@ -2195,11 +2195,11 @@ function el(t, e = {}) {
                         ),
                     ),
                 et(() => {
-                    T.forEach((t) => t());
+                    d.forEach((t) => t());
                 })
             );
         })(t),
-        E = (function ({
+        c = (function ({
             mediaInteractionCb: t,
             blockClass: e,
             blockSelector: a,
@@ -2209,16 +2209,16 @@ function el(t, e = {}) {
             doc: o,
         }) {
             let i = et((o) =>
-                    tW(
+                    tb(
                         et((n) => {
                             let i = er(n);
                             if (!i || tk(i, e, a, r, !0)) return;
-                            let { currentTime: c, volume: E, muted: s, playbackRate: l } = i;
+                            let { currentTime: E, volume: c, muted: s, playbackRate: l } = i;
                             t({
                                 type: o,
                                 id: _.getId(i),
-                                currentTime: c,
-                                volume: E,
+                                currentTime: E,
+                                volume: c,
                                 muted: s,
                                 playbackRate: l,
                             });
@@ -2226,7 +2226,7 @@ function el(t, e = {}) {
                         n.media || 500,
                     ),
                 ),
-                c = [
+                E = [
                     tU("play", i(0), o),
                     tU("pause", i(1), o),
                     tU("seeked", i(2), o),
@@ -2234,13 +2234,13 @@ function el(t, e = {}) {
                     tU("ratechange", i(4), o),
                 ];
             return et(() => {
-                c.forEach((t) => t());
+                E.forEach((t) => t());
             });
         })(t),
         s = () => {},
         l = () => {},
         I = () => {},
-        u = () => {};
+        R = () => {};
     t.recordDOM &&
         ((s = (function ({ styleSheetRuleCb: t, mirror: e, stylesheetManager: a }, { win: r }) {
             let _, n;
@@ -2249,12 +2249,12 @@ function el(t, e = {}) {
             r.CSSStyleSheet.prototype.insertRule = new Proxy(o, {
                 apply: et((r, _, n) => {
                     let [o, i] = n,
-                        { id: c, styleId: E } = eE(_, e, a.styleMirror);
+                        { id: E, styleId: c } = ec(_, e, a.styleMirror);
                     return (
-                        ((c && -1 !== c) || (E && -1 !== E)) &&
+                        ((E && -1 !== E) || (c && -1 !== c)) &&
                             t({
-                                id: c,
-                                styleId: E,
+                                id: E,
+                                styleId: c,
                                 adds: [
                                     {
                                         rule: o,
@@ -2270,12 +2270,12 @@ function el(t, e = {}) {
             (r.CSSStyleSheet.prototype.deleteRule = new Proxy(i, {
                 apply: et((r, _, n) => {
                     let [o] = n,
-                        { id: i, styleId: c } = eE(_, e, a.styleMirror);
+                        { id: i, styleId: E } = ec(_, e, a.styleMirror);
                     return (
-                        ((i && -1 !== i) || (c && -1 !== c)) &&
+                        ((i && -1 !== i) || (E && -1 !== E)) &&
                             t({
                                 id: i,
-                                styleId: c,
+                                styleId: E,
                                 removes: [{ index: o }],
                             }),
                         r.apply(_, n)
@@ -2287,12 +2287,12 @@ function el(t, e = {}) {
                     (r.CSSStyleSheet.prototype.replace = new Proxy(_, {
                         apply: et((r, _, n) => {
                             let [o] = n,
-                                { id: i, styleId: c } = eE(_, e, a.styleMirror);
+                                { id: i, styleId: E } = ec(_, e, a.styleMirror);
                             return (
-                                ((i && -1 !== i) || (c && -1 !== c)) &&
+                                ((i && -1 !== i) || (E && -1 !== E)) &&
                                     t({
                                         id: i,
-                                        styleId: c,
+                                        styleId: E,
                                         replace: o,
                                     }),
                                 r.apply(_, n)
@@ -2304,44 +2304,44 @@ function el(t, e = {}) {
                     (r.CSSStyleSheet.prototype.replaceSync = new Proxy(n, {
                         apply: et((r, _, n) => {
                             let [o] = n,
-                                { id: i, styleId: c } = eE(_, e, a.styleMirror);
+                                { id: i, styleId: E } = ec(_, e, a.styleMirror);
                             return (
-                                ((i && -1 !== i) || (c && -1 !== c)) &&
+                                ((i && -1 !== i) || (E && -1 !== E)) &&
                                     t({
                                         id: i,
-                                        styleId: c,
+                                        styleId: E,
                                         replaceSync: o,
                                     }),
                                 r.apply(_, n)
                             );
                         }),
                     })));
-            let c = {};
-            eu("CSSGroupingRule")
-                ? (c.CSSGroupingRule = r.CSSGroupingRule)
-                : (eu("CSSMediaRule") && (c.CSSMediaRule = r.CSSMediaRule),
-                  eu("CSSConditionRule") && (c.CSSConditionRule = r.CSSConditionRule),
-                  eu("CSSSupportsRule") && (c.CSSSupportsRule = r.CSSSupportsRule));
             let E = {};
+            eR("CSSGroupingRule")
+                ? (E.CSSGroupingRule = r.CSSGroupingRule)
+                : (eR("CSSMediaRule") && (E.CSSMediaRule = r.CSSMediaRule),
+                  eR("CSSConditionRule") && (E.CSSConditionRule = r.CSSConditionRule),
+                  eR("CSSSupportsRule") && (E.CSSSupportsRule = r.CSSSupportsRule));
+            let c = {};
             return (
-                Object.entries(c).forEach(([r, _]) => {
-                    (E[r] = {
+                Object.entries(E).forEach(([r, _]) => {
+                    (c[r] = {
                         insertRule: _.prototype.insertRule,
                         deleteRule: _.prototype.deleteRule,
                     }),
-                        (_.prototype.insertRule = new Proxy(E[r].insertRule, {
+                        (_.prototype.insertRule = new Proxy(c[r].insertRule, {
                             apply: et((r, _, n) => {
                                 let [o, i] = n,
-                                    { id: c, styleId: E } = eE(_.parentStyleSheet, e, a.styleMirror);
+                                    { id: E, styleId: c } = ec(_.parentStyleSheet, e, a.styleMirror);
                                 return (
-                                    ((c && -1 !== c) || (E && -1 !== E)) &&
+                                    ((E && -1 !== E) || (c && -1 !== c)) &&
                                         t({
-                                            id: c,
-                                            styleId: E,
+                                            id: E,
+                                            styleId: c,
                                             adds: [
                                                 {
                                                     rule: o,
-                                                    index: [...ec(_), i || 0],
+                                                    index: [...eE(_), i || 0],
                                                 },
                                             ],
                                         }),
@@ -2349,18 +2349,18 @@ function el(t, e = {}) {
                                 );
                             }),
                         })),
-                        (_.prototype.deleteRule = new Proxy(E[r].deleteRule, {
+                        (_.prototype.deleteRule = new Proxy(c[r].deleteRule, {
                             apply: et((r, _, n) => {
                                 let [o] = n,
-                                    { id: i, styleId: c } = eE(_.parentStyleSheet, e, a.styleMirror);
+                                    { id: i, styleId: E } = ec(_.parentStyleSheet, e, a.styleMirror);
                                 return (
-                                    ((i && -1 !== i) || (c && -1 !== c)) &&
+                                    ((i && -1 !== i) || (E && -1 !== E)) &&
                                         t({
                                             id: i,
-                                            styleId: c,
+                                            styleId: E,
                                             removes: [
                                                 {
-                                                    index: [...ec(_), o],
+                                                    index: [...eE(_), o],
                                                 },
                                             ],
                                         }),
@@ -2374,8 +2374,8 @@ function el(t, e = {}) {
                         (r.CSSStyleSheet.prototype.deleteRule = i),
                         _ && (r.CSSStyleSheet.prototype.replace = _),
                         n && (r.CSSStyleSheet.prototype.replaceSync = n),
-                        Object.entries(c).forEach(([t, e]) => {
-                            (e.prototype.insertRule = E[t].insertRule), (e.prototype.deleteRule = E[t].deleteRule);
+                        Object.entries(E).forEach(([t, e]) => {
+                            (e.prototype.insertRule = c[t].insertRule), (e.prototype.deleteRule = c[t].deleteRule);
                         });
                 })
             );
@@ -2388,9 +2388,9 @@ function el(t, e = {}) {
             let n = _.CSSStyleDeclaration.prototype.setProperty;
             _.CSSStyleDeclaration.prototype.setProperty = new Proxy(n, {
                 apply: et((_, o, i) => {
-                    let [c, E, s] = i;
-                    if (a.has(c)) return n.apply(o, [c, E, s]);
-                    let { id: l, styleId: I } = eE(
+                    let [E, c, s] = i;
+                    if (a.has(E)) return n.apply(o, [E, c, s]);
+                    let { id: l, styleId: I } = ec(
                         ee([o, "access", (t) => t.parentRule, "optionalAccess", (t) => t.parentStyleSheet]),
                         e,
                         r.styleMirror,
@@ -2401,11 +2401,11 @@ function el(t, e = {}) {
                                 id: l,
                                 styleId: I,
                                 set: {
-                                    property: c,
-                                    value: E,
+                                    property: E,
+                                    value: c,
                                     priority: s,
                                 },
-                                index: ec(o.parentRule),
+                                index: eE(o.parentRule),
                             }),
                         _.apply(o, i)
                     );
@@ -2415,20 +2415,20 @@ function el(t, e = {}) {
             return (
                 (_.CSSStyleDeclaration.prototype.removeProperty = new Proxy(o, {
                     apply: et((_, n, i) => {
-                        let [c] = i;
-                        if (a.has(c)) return o.apply(n, [c]);
-                        let { id: E, styleId: s } = eE(
+                        let [E] = i;
+                        if (a.has(E)) return o.apply(n, [E]);
+                        let { id: c, styleId: s } = ec(
                             ee([n, "access", (t) => t.parentRule, "optionalAccess", (t) => t.parentStyleSheet]),
                             e,
                             r.styleMirror,
                         );
                         return (
-                            ((E && -1 !== E) || (s && -1 !== s)) &&
+                            ((c && -1 !== c) || (s && -1 !== s)) &&
                                 t({
-                                    id: E,
+                                    id: c,
                                     styleId: s,
-                                    remove: { property: c },
-                                    index: ec(n.parentRule),
+                                    remove: { property: E },
+                                    index: eE(n.parentRule),
                                 }),
                             _.apply(n, i)
                         );
@@ -2441,7 +2441,7 @@ function el(t, e = {}) {
             );
         })(t, { win: r })),
         t.collectFonts &&
-            (u = (function ({ fontCb: t, doc: e }) {
+            (R = (function ({ fontCb: t, doc: e }) {
                 let a = e.defaultView;
                 if (!a) return () => {};
                 let r = [],
@@ -2459,10 +2459,10 @@ function el(t, e = {}) {
                         r
                     );
                 };
-                let o = tw(e.fonts, "add", function (e) {
+                let o = tM(e.fonts, "add", function (e) {
                     return function (a) {
                         return (
-                            tQ(
+                            tZ(
                                 et(() => {
                                     let e = _.get(a);
                                     e && (t(e), _.delete(a));
@@ -2483,34 +2483,34 @@ function el(t, e = {}) {
                     })
                 );
             })(t)));
-    let R = (function (t) {
+    let u = (function (t) {
             let { doc: e, mirror: a, blockClass: r, blockSelector: _, unblockSelector: n, selectionCb: o } = t,
                 i = !0,
-                c = et(() => {
+                E = et(() => {
                     let t = e.getSelection();
                     if (!t || (i && ee([t, "optionalAccess", (t) => t.isCollapsed]))) return;
                     i = t.isCollapsed || !1;
-                    let c = [],
-                        E = t.rangeCount || 0;
-                    for (let e = 0; e < E; e++) {
-                        let { startContainer: o, startOffset: i, endContainer: E, endOffset: s } = t.getRangeAt(e);
+                    let E = [],
+                        c = t.rangeCount || 0;
+                    for (let e = 0; e < c; e++) {
+                        let { startContainer: o, startOffset: i, endContainer: c, endOffset: s } = t.getRangeAt(e);
                         tk(o, r, _, n, !0) ||
-                            tk(E, r, _, n, !0) ||
-                            c.push({
+                            tk(c, r, _, n, !0) ||
+                            E.push({
                                 start: a.getId(o),
                                 startOffset: i,
-                                end: a.getId(E),
+                                end: a.getId(c),
                                 endOffset: s,
                             });
                     }
-                    o({ ranges: c });
+                    o({ ranges: E });
                 });
-            return c(), tU("selectionchange", c);
+            return E(), tU("selectionchange", E);
         })(t),
-        d = (function ({ doc: t, customElementCb: e }) {
+        A = (function ({ doc: t, customElementCb: e }) {
             let a = t.defaultView;
             return a && a.customElements
-                ? tw(a.customElements, "define", function (t) {
+                ? tM(a.customElements, "define", function (t) {
                       return function (a, r, _) {
                           try {
                               e({ define: { name: a } });
@@ -2529,21 +2529,21 @@ function el(t, e = {}) {
             n(),
             o(),
             i(),
-            c(),
             E(),
+            c(),
             s(),
             l(),
             I(),
-            u(),
             R(),
-            d(),
+            u(),
+            A(),
             N.forEach((t) => t());
     });
 }
 function eI(t) {
     return void 0 !== window[t];
 }
-function eu(t) {
+function eR(t) {
     return !!(
         void 0 !== window[t] &&
         window[t].prototype &&
@@ -2551,7 +2551,7 @@ function eu(t) {
         "deleteRule" in window[t].prototype
     );
 }
-class eR {
+class eu {
     constructor(t) {
         (this.generateIdFn = t),
             (this.iframeIdToRemoteIdMap = new WeakMap()),
@@ -2594,7 +2594,7 @@ class eR {
         return e || ((e = new Map()), this.iframeRemoteIdToIdMap.set(t, e)), e;
     }
 }
-function ed(t) {
+function eA(t) {
     let e,
         a = t[0],
         r = 1;
@@ -2610,23 +2610,23 @@ function ed(t) {
 }
 class eN {
     constructor() {
-        (this.crossOriginIframeMirror = new eR(tR)), (this.crossOriginIframeRootIdMap = new WeakMap());
+        (this.crossOriginIframeMirror = new eu(tu)), (this.crossOriginIframeRootIdMap = new WeakMap());
     }
     addIframe() {}
     addLoadListener() {}
     attachIframe() {}
 }
-class eA {
+class eT {
     constructor(t) {
         (this.iframes = new WeakMap()),
             (this.crossOriginIframeMap = new WeakMap()),
-            (this.crossOriginIframeMirror = new eR(tR)),
+            (this.crossOriginIframeMirror = new eu(tu)),
             (this.crossOriginIframeRootIdMap = new WeakMap()),
             (this.mutationCb = t.mutationCb),
             (this.wrappedEmit = t.wrappedEmit),
             (this.stylesheetManager = t.stylesheetManager),
             (this.recordCrossOriginIframes = t.recordCrossOriginIframes),
-            (this.crossOriginIframeStyleMirror = new eR(
+            (this.crossOriginIframeStyleMirror = new eu(
                 this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror),
             )),
             (this.mirror = t.mirror),
@@ -2652,7 +2652,7 @@ class eA {
             attributes: [],
             isAttachIframe: !0,
         }),
-            ed([this, "access", (t) => t.loadListener, "optionalCall", (e) => e(t)]),
+            eA([this, "access", (t) => t.loadListener, "optionalCall", (e) => e(t)]),
             t.contentDocument &&
                 t.contentDocument.adoptedStyleSheets &&
                 t.contentDocument.adoptedStyleSheets.length > 0 &&
@@ -2760,7 +2760,7 @@ class eA {
                         return (
                             this.replaceIds(e.data, t, ["id"]),
                             this.replaceStyleIds(e.data, t, ["styleIds"]),
-                            ed([
+                            eA([
                                 e,
                                 "access",
                                 (t) => t.data,
@@ -2800,14 +2800,14 @@ class eA {
                 });
     }
     patchRootIdOnNode(t, e) {
-        t.type === d.Document || t.rootId || (t.rootId = e),
+        t.type === A.Document || t.rootId || (t.rootId = e),
             "childNodes" in t &&
                 t.childNodes.forEach((t) => {
                     this.patchRootIdOnNode(t, e);
                 });
     }
 }
-class eT {
+class ed {
     init() {}
     addShadowRoot() {}
     observeAttachShadow() {}
@@ -2848,7 +2848,7 @@ class ef {
                     mirror: this.mirror,
                 }),
             ),
-            tQ(() => {
+            tZ(() => {
                 t.adoptedStyleSheets &&
                     t.adoptedStyleSheets.length > 0 &&
                     this.bypassOptions.stylesheetManager.adoptStyleSheets(
@@ -2872,7 +2872,7 @@ class ef {
     patchAttachShadow(t, e) {
         let a = this;
         this.restoreHandlers.push(
-            tw(t.prototype, "attachShadow", function (t) {
+            tM(t.prototype, "attachShadow", function (t) {
                 return function (r) {
                     let _ = t.call(this, r);
                     return this.shadowRoot && tz(this) && a.addShadowRoot(this.shadowRoot, e), _;
@@ -2942,7 +2942,7 @@ class ep {
                   r.push({
                       styleId: t,
                       rules: Array.from(e.rules || CSSRule, (t, e) => ({
-                          rule: Z(t),
+                          rule: Q(t),
                           index: e,
                       })),
                   })),
@@ -2955,13 +2955,13 @@ class ep {
     }
     trackStylesheetInLinkElement(t) {}
 }
-class eh {
+class eO {
     constructor() {
         (this.nodeMap = new WeakMap()), (this.loop = !0), this.periodicallyClear();
     }
     periodicallyClear() {
         !(function (...t) {
-            tZ("requestAnimationFrame")(...t);
+            tQ("requestAnimationFrame")(...t);
         })(() => {
             this.clear(), this.loop && this.periodicallyClear();
         });
@@ -2985,7 +2985,7 @@ try {
         let t = document.createElement("iframe");
         document.body.appendChild(t),
             (Array.from =
-                (0, T.x)([
+                (0, d.x)([
                     t,
                     "access",
                     (t) => t.contentWindow,
@@ -2999,42 +2999,42 @@ try {
 } catch (t) {
     console.debug("Unable to override Array.from", t);
 }
-let eO = new Q();
+let eh = new Z();
 function eP(t = {}) {
     let e,
         {
             emit: a,
             checkoutEveryNms: r,
             checkoutEveryNth: _,
-            blockClass: c = "rr-block",
-            blockSelector: E = null,
+            blockClass: E = "rr-block",
+            blockSelector: c = null,
             unblockSelector: s = null,
             ignoreClass: l = "rr-ignore",
             ignoreSelector: I = null,
-            maskAllText: u = !1,
-            maskTextClass: R = "rr-mask",
-            unmaskTextClass: d = null,
+            maskAllText: R = !1,
+            maskTextClass: u = "rr-mask",
+            unmaskTextClass: A = null,
             maskTextSelector: N = null,
-            unmaskTextSelector: A = null,
+            unmaskTextSelector: T = null,
             inlineStylesheet: f = !0,
             maskAllInputs: L,
             maskInputOptions: p,
-            slimDOMOptions: h,
-            maskAttributeFn: O,
+            slimDOMOptions: O,
+            maskAttributeFn: h,
             maskInputFn: P,
-            maskTextFn: D,
-            maxCanvasSize: g = null,
-            packFn: C,
-            sampling: m = {},
-            dataURLOptions: v = {},
-            mousemoveWait: S,
+            maskTextFn: C,
+            maxCanvasSize: D = null,
+            packFn: g,
+            sampling: S = {},
+            dataURLOptions: m = {},
+            mousemoveWait: v,
             recordDOM: y = !0,
             recordCanvas: U = !1,
-            recordCrossOriginIframes: b = !1,
-            recordAfter: G = "DOMContentLoaded" === t.recordAfter ? t.recordAfter : "load",
-            userTriggeredOnInput: W = !1,
-            collectFonts: w = !1,
-            inlineImages: M = !1,
+            recordCrossOriginIframes: G = !1,
+            recordAfter: W = "DOMContentLoaded" === t.recordAfter ? t.recordAfter : "load",
+            userTriggeredOnInput: b = !1,
+            collectFonts: M = !1,
+            inlineImages: w = !1,
             plugins: B,
             keepIframeSrcFn: Y = () => !1,
             ignoreCSSAttributes: H = new Set([]),
@@ -3043,7 +3043,7 @@ function eP(t = {}) {
             getCanvasManager: x,
         } = t;
     n = K;
-    let F = !b || window.parent === window,
+    let F = !G || window.parent === window,
         V = !1;
     if (!F)
         try {
@@ -3052,7 +3052,7 @@ function eP(t = {}) {
             V = !0;
         }
     if (F && !a) throw Error("emit function is required");
-    void 0 !== S && void 0 === m.mousemove && (m.mousemove = S), eO.reset();
+    void 0 !== v && void 0 === S.mousemove && (S.mousemove = v), eh.reset();
     let j =
             !0 === L
                 ? {
@@ -3078,7 +3078,7 @@ function eP(t = {}) {
                   ? p
                   : {},
         X =
-            !0 === h || "all" === h
+            !0 === O || "all" === O
                 ? {
                       script: !0,
                       comment: !0,
@@ -3088,10 +3088,10 @@ function eP(t = {}) {
                       headMetaRobots: !0,
                       headMetaHttpEquiv: !0,
                       headMetaVerification: !0,
-                      headMetaAuthorship: "all" === h,
-                      headMetaDescKeywords: "all" === h,
+                      headMetaAuthorship: "all" === O,
+                      headMetaDescKeywords: "all" === O,
                   }
-                : h || {};
+                : O || {};
     !(function (t = window) {
         "NodeList" in t && !t.NodeList.prototype.forEach && (t.NodeList.prototype.forEach = Array.prototype.forEach),
             "DOMTokenList" in t &&
@@ -3109,18 +3109,18 @@ function eP(t = {}) {
     let $ = 0,
         q = (t) => {
             for (let e of B || []) e.eventProcessor && (t = e.eventProcessor(t));
-            return C && !V && (t = C(t)), t;
+            return g && !V && (t = g(t)), t;
         };
     o = (t, n) => {
         if (
-            ((t.timestamp = tM()),
-            (0, T.x)([ea, "access", (t) => t[0], "optionalAccess", (t) => t.isFrozen, "call", (t) => t()]) &&
+            ((t.timestamp = tw()),
+            (0, d.x)([ea, "access", (t) => t[0], "optionalAccess", (t) => t.isFrozen, "call", (t) => t()]) &&
                 t.type !== t0.FullSnapshot &&
                 (t.type !== t0.IncrementalSnapshot || t.data.source !== t1.Mutation) &&
                 ea.forEach((t) => t.unfreeze()),
             F)
         )
-            (0, T.x)([a, "optionalCall", (e) => e(q(t), n)]);
+            (0, d.x)([a, "optionalCall", (e) => e(q(t), n)]);
         else if (V) {
             let e = {
                 type: "rrweb",
@@ -3156,7 +3156,7 @@ function eP(t = {}) {
                     ...t,
                 },
             }),
-        Z = (t) =>
+        Q = (t) =>
             o({
                 type: t0.IncrementalSnapshot,
                 data: {
@@ -3178,21 +3178,21 @@ function eP(t = {}) {
         te =
             "boolean" == typeof __RRWEB_EXCLUDE_IFRAME__ && __RRWEB_EXCLUDE_IFRAME__
                 ? new eN()
-                : new eA({
-                      mirror: eO,
+                : new eT({
+                      mirror: eh,
                       mutationCb: z,
                       stylesheetManager: tt,
-                      recordCrossOriginIframes: b,
+                      recordCrossOriginIframes: G,
                       wrappedEmit: o,
                   });
     for (let t of B || [])
         t.getMirror &&
             t.getMirror({
-                nodeMirror: eO,
+                nodeMirror: eh,
                 crossOriginIframeMirror: te.crossOriginIframeMirror,
                 crossOriginIframeStyleMirror: te.crossOriginIframeStyleMirror,
             });
-    let ta = new eh(),
+    let ta = new eO(),
         tr = (function (t, e) {
             try {
                 return t ? t(e) : new eL();
@@ -3200,7 +3200,7 @@ function eP(t = {}) {
                 return console.warn("Unable to initialize CanvasManager"), new eL();
             }
         })(x, {
-            mirror: eO,
+            mirror: eh,
             win: window,
             mutationCb: (t) =>
                 o({
@@ -3211,39 +3211,39 @@ function eP(t = {}) {
                     },
                 }),
             recordCanvas: U,
-            blockClass: c,
-            blockSelector: E,
+            blockClass: E,
+            blockSelector: c,
             unblockSelector: s,
-            maxCanvasSize: g,
-            sampling: m.canvas,
-            dataURLOptions: v,
+            maxCanvasSize: D,
+            sampling: S.canvas,
+            dataURLOptions: m,
             errorHandler: K,
         }),
         t_ =
             "boolean" == typeof __RRWEB_EXCLUDE_SHADOW_DOM__ && __RRWEB_EXCLUDE_SHADOW_DOM__
-                ? new eT()
+                ? new ed()
                 : new ef({
                       mutationCb: z,
                       scrollCb: J,
                       bypassOptions: {
                           onMutation: k,
-                          blockClass: c,
-                          blockSelector: E,
+                          blockClass: E,
+                          blockSelector: c,
                           unblockSelector: s,
-                          maskAllText: u,
-                          maskTextClass: R,
-                          unmaskTextClass: d,
+                          maskAllText: R,
+                          maskTextClass: u,
+                          unmaskTextClass: A,
                           maskTextSelector: N,
-                          unmaskTextSelector: A,
+                          unmaskTextSelector: T,
                           inlineStylesheet: f,
                           maskInputOptions: j,
-                          dataURLOptions: v,
-                          maskAttributeFn: O,
-                          maskTextFn: D,
+                          dataURLOptions: m,
+                          maskAttributeFn: h,
+                          maskTextFn: C,
                           maskInputFn: P,
                           recordCanvas: U,
-                          inlineImages: M,
-                          sampling: m,
+                          inlineImages: w,
+                          sampling: S,
                           slimDOMOptions: X,
                           iframeManager: te,
                           stylesheetManager: tt,
@@ -3251,7 +3251,7 @@ function eP(t = {}) {
                           keepIframeSrcFn: Y,
                           processedNodeManager: ta,
                       },
-                      mirror: eO,
+                      mirror: eh,
                   }),
         tn = (t = !1) => {
             if (!y) return;
@@ -3271,33 +3271,33 @@ function eP(t = {}) {
                 ea.forEach((t) => t.lock());
             let e = (function (t, e) {
                 let {
-                    mirror: a = new Q(),
+                    mirror: a = new Z(),
                     blockClass: r = "rr-block",
                     blockSelector: _ = null,
                     unblockSelector: n = null,
                     maskAllText: o = !1,
                     maskTextClass: i = "rr-mask",
-                    unmaskTextClass: c = null,
-                    maskTextSelector: E = null,
+                    unmaskTextClass: E = null,
+                    maskTextSelector: c = null,
                     unmaskTextSelector: s = null,
                     inlineStylesheet: l = !0,
                     inlineImages: I = !1,
-                    recordCanvas: u = !1,
-                    maskAllInputs: R = !1,
-                    maskAttributeFn: d,
+                    recordCanvas: R = !1,
+                    maskAllInputs: u = !1,
+                    maskAttributeFn: A,
                     maskTextFn: N,
-                    maskInputFn: A,
-                    slimDOM: T = !1,
+                    maskInputFn: T,
+                    slimDOM: d = !1,
                     dataURLOptions: f,
                     preserveWhiteSpace: L,
                     onSerialize: p,
-                    onIframeLoad: h,
-                    iframeLoadTimeout: O,
+                    onIframeLoad: O,
+                    iframeLoadTimeout: h,
                     onStylesheetLoad: P,
-                    stylesheetLoadTimeout: D,
-                    keepIframeSrcFn: g = () => !1,
+                    stylesheetLoadTimeout: C,
+                    keepIframeSrcFn: D = () => !1,
                 } = e || {};
-                return tS(t, {
+                return tv(t, {
                     doc: t,
                     mirror: a,
                     blockClass: r,
@@ -3305,13 +3305,13 @@ function eP(t = {}) {
                     unblockSelector: n,
                     maskAllText: o,
                     maskTextClass: i,
-                    unmaskTextClass: c,
-                    maskTextSelector: E,
+                    unmaskTextClass: E,
+                    maskTextSelector: c,
                     unmaskTextSelector: s,
                     skipChild: !1,
                     inlineStylesheet: l,
                     maskInputOptions:
-                        !0 === R
+                        !0 === u
                             ? {
                                   color: !0,
                                   date: !0,
@@ -3329,63 +3329,63 @@ function eP(t = {}) {
                                   textarea: !0,
                                   select: !0,
                               }
-                            : !1 === R
+                            : !1 === u
                               ? {}
-                              : R,
-                    maskAttributeFn: d,
+                              : u,
+                    maskAttributeFn: A,
                     maskTextFn: N,
-                    maskInputFn: A,
+                    maskInputFn: T,
                     slimDOMOptions:
-                        !0 === T || "all" === T
+                        !0 === d || "all" === d
                             ? {
                                   script: !0,
                                   comment: !0,
                                   headFavicon: !0,
                                   headWhitespace: !0,
-                                  headMetaDescKeywords: "all" === T,
+                                  headMetaDescKeywords: "all" === d,
                                   headMetaSocial: !0,
                                   headMetaRobots: !0,
                                   headMetaHttpEquiv: !0,
                                   headMetaAuthorship: !0,
                                   headMetaVerification: !0,
                               }
-                            : !1 === T
+                            : !1 === d
                               ? {}
-                              : T,
+                              : d,
                     dataURLOptions: f,
                     inlineImages: I,
-                    recordCanvas: u,
+                    recordCanvas: R,
                     preserveWhiteSpace: L,
                     onSerialize: p,
-                    onIframeLoad: h,
-                    iframeLoadTimeout: O,
+                    onIframeLoad: O,
+                    iframeLoadTimeout: h,
                     onStylesheetLoad: P,
-                    stylesheetLoadTimeout: D,
-                    keepIframeSrcFn: g,
+                    stylesheetLoadTimeout: C,
+                    keepIframeSrcFn: D,
                     newlyAddedElement: !1,
                 });
             })(document, {
-                mirror: eO,
-                blockClass: c,
-                blockSelector: E,
+                mirror: eh,
+                blockClass: E,
+                blockSelector: c,
                 unblockSelector: s,
-                maskAllText: u,
-                maskTextClass: R,
-                unmaskTextClass: d,
+                maskAllText: R,
+                maskTextClass: u,
+                unmaskTextClass: A,
                 maskTextSelector: N,
-                unmaskTextSelector: A,
+                unmaskTextSelector: T,
                 inlineStylesheet: f,
                 maskAllInputs: j,
-                maskAttributeFn: O,
+                maskAttributeFn: h,
                 maskInputFn: P,
-                maskTextFn: D,
+                maskTextFn: C,
                 slimDOM: X,
-                dataURLOptions: v,
+                dataURLOptions: m,
                 recordCanvas: U,
-                inlineImages: M,
+                inlineImages: w,
                 onSerialize: (t) => {
-                    tV(t, eO) && te.addIframe(t),
-                        tj(t, eO) && tt.trackLinkElement(t),
+                    tV(t, eh) && te.addIframe(t),
+                        tj(t, eh) && tt.trackLinkElement(t),
                         tX(t) && t_.addShadowRoot(t.shadowRoot, document);
                 },
                 onIframeLoad: (t, e) => {
@@ -3407,7 +3407,7 @@ function eP(t = {}) {
                 ea.forEach((t) => t.unlock()),
                 document.adoptedStyleSheets &&
                     document.adoptedStyleSheets.length > 0 &&
-                    tt.adoptStyleSheets(document.adoptedStyleSheets, eO.getId(document));
+                    tt.adoptStyleSheets(document.adoptedStyleSheets, eh.getId(document));
         };
     i = tn;
     try {
@@ -3474,7 +3474,7 @@ function eP(t = {}) {
                                     ...t,
                                 },
                             }),
-                        canvasMutationCb: Z,
+                        canvasMutationCb: Q,
                         fontCb: (t) =>
                             o({
                                 type: t0.IncrementalSnapshot,
@@ -3501,32 +3501,32 @@ function eP(t = {}) {
                                 },
                             });
                         },
-                        blockClass: c,
+                        blockClass: E,
                         ignoreClass: l,
                         ignoreSelector: I,
-                        maskAllText: u,
-                        maskTextClass: R,
-                        unmaskTextClass: d,
+                        maskAllText: R,
+                        maskTextClass: u,
+                        unmaskTextClass: A,
                         maskTextSelector: N,
-                        unmaskTextSelector: A,
+                        unmaskTextSelector: T,
                         maskInputOptions: j,
                         inlineStylesheet: f,
-                        sampling: m,
+                        sampling: S,
                         recordDOM: y,
                         recordCanvas: U,
-                        inlineImages: M,
-                        userTriggeredOnInput: W,
-                        collectFonts: w,
+                        inlineImages: w,
+                        userTriggeredOnInput: b,
+                        collectFonts: M,
                         doc: t,
-                        maskAttributeFn: O,
+                        maskAttributeFn: h,
                         maskInputFn: P,
-                        maskTextFn: D,
+                        maskTextFn: C,
                         keepIframeSrcFn: Y,
-                        blockSelector: E,
+                        blockSelector: c,
                         unblockSelector: s,
                         slimDOMOptions: X,
-                        dataURLOptions: v,
-                        mirror: eO,
+                        dataURLOptions: m,
+                        mirror: eh,
                         iframeManager: te,
                         stylesheetManager: tt,
                         shadowDomManager: t_,
@@ -3534,7 +3534,7 @@ function eP(t = {}) {
                         canvasManager: tr,
                         ignoreCSSAttributes: H,
                         plugins:
-                            (0, T.x)([
+                            (0, d.x)([
                                 B,
                                 "optionalAccess",
                                 (t) => t.filter,
@@ -3579,7 +3579,7 @@ function eP(t = {}) {
                               type: t0.DomContentLoaded,
                               data: {},
                           }),
-                              "DOMContentLoaded" === G && a();
+                              "DOMContentLoaded" === W && a();
                       }),
                   ),
                   t.push(
@@ -3590,7 +3590,7 @@ function eP(t = {}) {
                                   type: t0.Load,
                                   data: {},
                               }),
-                                  "load" === G && a();
+                                  "load" === W && a();
                           },
                           window,
                       ),
@@ -3603,13 +3603,13 @@ function eP(t = {}) {
         console.warn(t);
     }
 }
-function eD(t) {
+function eC(t) {
     return t > 9999999999 ? t : 1000 * t;
 }
-function eg(t) {
+function eD(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
-function eC(t, e) {
+function eg(t, e) {
     "sentry.transaction" !== e.category &&
         (["ui.click", "ui.input"].includes(e.category) ? t.triggerUserActivity() : t.checkAndHandleExpiredSession(),
         t.addUpdate(
@@ -3619,31 +3619,31 @@ function eC(t, e) {
                     timestamp: 1000 * (e.timestamp || 0),
                     data: {
                         tag: "breadcrumb",
-                        payload: (0, m.Fv)(e, 10, 1000),
+                        payload: (0, S.Fv)(e, 10, 1000),
                     },
                 }),
                 "console" === e.category
             ),
         ));
 }
-function em(t) {
+function eS(t) {
     return t.closest("button,a") || t;
 }
-function ev(t) {
-    let e = eS(t);
-    return e && e instanceof Element ? em(e) : e;
+function em(t) {
+    let e = ev(t);
+    return e && e instanceof Element ? eS(e) : e;
 }
-function eS(t) {
+function ev(t) {
     var e;
     return "object" == typeof (e = t) && e && "target" in e ? t.target : t;
 }
-(eP.mirror = eO),
+(eP.mirror = eh),
     (eP.takeFullSnapshot = function (t) {
         if (!i) throw Error("please take full snapshot after start recording");
         i(t);
     });
 class ey {
-    constructor(t, e, a = eC) {
+    constructor(t, e, a = eg) {
         (this._lastMutation = 0),
             (this._lastScroll = 0),
             (this._clicks = []),
@@ -3658,23 +3658,23 @@ class ey {
         var t;
         let e =
             ((t = () => {
-                this._lastMutation = eb();
+                this._lastMutation = eG();
             }),
-            c ||
-                ((c = []),
-                (0, v.hl)(F, "open", function (t) {
+            E ||
+                ((E = []),
+                (0, m.hl)(F, "open", function (t) {
                     return function (...e) {
-                        if (c)
+                        if (E)
                             try {
-                                c.forEach((t) => t());
+                                E.forEach((t) => t());
                             } catch (t) {}
                         return t.apply(F, e);
                     };
                 })),
-            c.push(t),
+            E.push(t),
             () => {
-                let e = c ? c.indexOf(t) : -1;
-                e > -1 && c.splice(e, 1);
+                let e = E ? E.indexOf(t) : -1;
+                e > -1 && E.splice(e, 1);
             });
         this._teardown = () => {
             e(), (this._clicks = []), (this._lastMutation = 0), (this._lastScroll = 0);
@@ -3698,7 +3698,7 @@ class ey {
         )
             return;
         let n = {
-            timestamp: eg(t.timestamp),
+            timestamp: eD(t.timestamp),
             clickBreadcrumb: t,
             clickCount: 0,
             node: e,
@@ -3707,13 +3707,13 @@ class ey {
             (this._clicks.push(n), 1 === this._clicks.length && this._scheduleCheckClicks());
     }
     registerMutation(t = Date.now()) {
-        this._lastMutation = eg(t);
+        this._lastMutation = eD(t);
     }
     registerScroll(t = Date.now()) {
-        this._lastScroll = eg(t);
+        this._lastScroll = eD(t);
     }
     registerClick(t) {
-        let e = em(t);
+        let e = eS(t);
         this._handleMultiClick(e);
     }
     _handleMultiClick(t) {
@@ -3726,7 +3726,7 @@ class ey {
     }
     _checkClicks() {
         let t = [],
-            e = eb();
+            e = eG();
         for (let a of (this._clicks.forEach((a) => {
             !a.mutationAfter &&
                 this._lastMutation &&
@@ -3790,23 +3790,23 @@ class ey {
     }
 }
 let eU = ["A", "BUTTON", "INPUT"];
-function eb() {
+function eG() {
     return Date.now() / 1000;
 }
-function eG(t) {
+function eW(t) {
     return {
         timestamp: Date.now() / 1000,
         type: "default",
         ...t,
     };
 }
-((R = N || (N = {}))[(R.Document = 0)] = "Document"),
-    (R[(R.DocumentType = 1)] = "DocumentType"),
-    (R[(R.Element = 2)] = "Element"),
-    (R[(R.Text = 3)] = "Text"),
-    (R[(R.CDATA = 4)] = "CDATA"),
-    (R[(R.Comment = 5)] = "Comment");
-let eW = new Set([
+((u = N || (N = {}))[(u.Document = 0)] = "Document"),
+    (u[(u.DocumentType = 1)] = "DocumentType"),
+    (u[(u.Element = 2)] = "Element"),
+    (u[(u.Text = 3)] = "Text"),
+    (u[(u.CDATA = 4)] = "CDATA"),
+    (u[(u.Comment = 5)] = "Comment");
+let eb = new Set([
     "id",
     "class",
     "aria-label",
@@ -3820,7 +3820,7 @@ let eW = new Set([
     "aria-disabled",
     "data-sentry-component",
 ]);
-function ew(t, e) {
+function eM(t, e) {
     let a = eP.mirror.getId(t),
         r = a && eP.mirror.getNode(a),
         _ = r && eP.mirror.getMeta(r),
@@ -3844,7 +3844,7 @@ function ew(t, e) {
                               t["data-sentry-element"] &&
                               (t["data-sentry-component"] = t["data-sentry-element"]),
                           t))
-                              if (eW.has(a)) {
+                              if (eb.has(a)) {
                                   let r = a;
                                   ("data-testid" === a || "data-test-id" === a) && (r = "testId"), (e[r] = t[a]);
                               }
@@ -3855,7 +3855,7 @@ function ew(t, e) {
             : {},
     };
 }
-let eM = {
+let ew = {
     resource: function (t) {
         let {
             entryType: e,
@@ -3865,8 +3865,8 @@ let eM = {
             startTime: n,
             decodedBodySize: o,
             encodedBodySize: i,
-            responseStatus: c,
-            transferSize: E,
+            responseStatus: E,
+            transferSize: c,
         } = t;
         return ["fetch", "xmlhttprequest"].includes(a)
             ? null
@@ -3876,8 +3876,8 @@ let eM = {
                   end: eH(_),
                   name: r,
                   data: {
-                      size: E,
-                      statusCode: c,
+                      size: c,
+                      statusCode: E,
                       decodedBodySize: o,
                       encodedBodySize: i,
                   },
@@ -3903,30 +3903,30 @@ let eM = {
             domComplete: n,
             encodedBodySize: o,
             domContentLoadedEventStart: i,
-            domContentLoadedEventEnd: c,
-            domInteractive: E,
+            domContentLoadedEventEnd: E,
+            domInteractive: c,
             loadEventStart: s,
             loadEventEnd: l,
             redirectCount: I,
-            startTime: u,
-            transferSize: R,
-            type: d,
+            startTime: R,
+            transferSize: u,
+            type: A,
         } = t;
         return 0 === _
             ? null
             : {
-                  type: `${e}.${d}`,
-                  start: eH(u),
+                  type: `${e}.${A}`,
+                  start: eH(R),
                   end: eH(n),
                   name: a,
                   data: {
-                      size: R,
+                      size: u,
                       decodedBodySize: r,
                       encodedBodySize: o,
                       duration: _,
-                      domInteractive: E,
+                      domInteractive: c,
                       domContentLoadedEventStart: i,
-                      domContentLoadedEventEnd: c,
+                      domContentLoadedEventEnd: E,
                       loadEventStart: s,
                       loadEventEnd: l,
                       domComplete: n,
@@ -3939,7 +3939,7 @@ function eB(t, e) {
     return ({ metric: a }) => void e.replayPerformanceEntries.push(t(a));
 }
 function eY(t) {
-    let e = eM[t.entryType];
+    let e = ew[t.entryType];
     return e ? e(t) : null;
 }
 function eH(t) {
@@ -4037,10 +4037,10 @@ class eJ {
     }
     getEarliestTimestamp() {
         let t = this.events.map((t) => t.timestamp).sort()[0];
-        return t ? eD(t) : null;
+        return t ? eC(t) : null;
     }
 }
-class eZ {
+class eQ {
     constructor(t) {
         (this._worker = t), (this._id = 0);
     }
@@ -4093,9 +4093,9 @@ class eZ {
         return this._id++;
     }
 }
-class eQ {
+class eZ {
     constructor(t) {
-        (this._worker = new eZ(t)), (this._earliestTimestamp = null), (this._totalSize = 0), (this.hasCheckout = !1);
+        (this._worker = new eQ(t)), (this._earliestTimestamp = null), (this._totalSize = 0), (this.hasCheckout = !1);
     }
     get hasEvents() {
         return !!this._earliestTimestamp;
@@ -4110,7 +4110,7 @@ class eQ {
         this._worker.destroy();
     }
     addEvent(t) {
-        let e = eD(t.timestamp);
+        let e = eC(t.timestamp);
         (!this._earliestTimestamp || e < this._earliestTimestamp) && (this._earliestTimestamp = e);
         let a = JSON.stringify(t);
         return ((this._totalSize += a.length), this._totalSize > 20000000)
@@ -4142,7 +4142,7 @@ class eQ {
 class e0 {
     constructor(t) {
         (this._fallback = new eJ()),
-            (this._compression = new eQ(t)),
+            (this._compression = new eZ(t)),
             (this._used = this._fallback),
             (this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded());
     }
@@ -4209,7 +4209,7 @@ function e2(t) {
 }
 function e3(t) {
     let e = Date.now(),
-        a = t.id || (0, b.DM)(),
+        a = t.id || (0, G.DM)(),
         r = t.started || e,
         _ = t.lastActivity || e,
         n = t.segmentId || 0;
@@ -4308,7 +4308,7 @@ async function ae(t, e, a) {
 }
 function aa(t, e) {
     if (!t.eventBuffer || t.isPaused() || !t.isEnabled()) return !1;
-    let a = eD(e.timestamp);
+    let a = eC(e.timestamp);
     return (
         !(a + t.timeouts.sessionIdlePause < Date.now()) &&
         (!(a > t.getContext().initialTimestamp + t.getOptions().maxReplayDuration) ||
@@ -4355,7 +4355,7 @@ function ai(t, e) {
         ((!ej || !t.getOptions()._experiments.traceInternals) && (0, p.W)(a, (0, L.s3)())) ||
             t.addUpdate(() => (ao(t, [e]), !0)));
 }
-function ac(t) {
+function aE(t) {
     if (!t) return;
     let e = new TextEncoder();
     try {
@@ -4369,7 +4369,7 @@ function ac(t) {
         if (t instanceof ArrayBuffer) return t.byteLength;
     } catch (t) {}
 }
-function aE(t) {
+function ac(t) {
     if (!t) return;
     let e = parseInt(t, 10);
     return isNaN(e) ? void 0 : e;
@@ -4398,28 +4398,28 @@ function al(t, e) {
 }
 function aI(t, e) {
     if (!e) return null;
-    let { startTimestamp: a, endTimestamp: r, url: _, method: n, statusCode: o, request: i, response: c } = e;
+    let { startTimestamp: a, endTimestamp: r, url: _, method: n, statusCode: o, request: i, response: E } = e;
     return {
         type: t,
         start: a / 1000,
         end: r / 1000,
         name: _,
-        data: (0, v.Jr)({
+        data: (0, m.Jr)({
             method: n,
             statusCode: o,
             request: i,
-            response: c,
+            response: E,
         }),
     };
 }
-function au(t) {
+function aR(t) {
     return {
         headers: {},
         size: t,
         _meta: { warnings: ["URL_SKIPPED"] },
     };
 }
-function aR(t, e, a) {
+function au(t, e, a) {
     if (!e && 0 === Object.keys(t).length) return;
     if (!e) return { headers: t };
     if (!a)
@@ -4459,7 +4459,7 @@ function aR(t, e, a) {
         })(a);
     return (r.body = _), n && n.length > 0 && (r._meta = { warnings: n }), r;
 }
-function ad(t, e) {
+function aA(t, e) {
     return Object.entries(t).reduce((a, [r, _]) => {
         let n = r.toLowerCase();
         return e.includes(n) && t[r] && (a[n] = _), a;
@@ -4468,7 +4468,7 @@ function ad(t, e) {
 function aN(t) {
     return new URLSearchParams(t).toString();
 }
-function aA(t, e) {
+function aT(t, e) {
     let a = (function (t, e = F.document.baseURI) {
         if (t.startsWith("http://") || t.startsWith("https://") || t.startsWith(F.location.origin)) return t;
         let a = new URL(t, e);
@@ -4476,9 +4476,9 @@ function aA(t, e) {
         let r = a.href;
         return !t.endsWith("/") && r.endsWith("/") ? r.slice(0, -1) : r;
     })(t);
-    return (0, G.U0)(a, e);
+    return (0, W.U0)(a, e);
 }
-async function aT(t, e, a) {
+async function ad(t, e, a) {
     try {
         let r = await af(t, e, a),
             _ = aI("resource.fetch", r);
@@ -4490,14 +4490,14 @@ async function aT(t, e, a) {
 async function af(t, e, a) {
     let r = Date.now(),
         { startTimestamp: _ = r, endTimestamp: n = r } = e,
-        { url: o, method: i, status_code: c = 0, request_body_size: E, response_body_size: s } = t.data,
-        l = aA(o, a.networkDetailAllowUrls) && !aA(o, a.networkDetailDenyUrls);
+        { url: o, method: i, status_code: E = 0, request_body_size: c, response_body_size: s } = t.data,
+        l = aT(o, a.networkDetailAllowUrls) && !aT(o, a.networkDetailDenyUrls);
     return {
         startTimestamp: _,
         endTimestamp: n,
         url: o,
         method: i,
-        statusCode: c,
+        statusCode: E,
         request: l
             ? (function ({ networkCaptureBodies: t, networkRequestHeaders: e }, a, r) {
                   var _, n;
@@ -4506,28 +4506,28 @@ async function af(t, e, a) {
                         (n = e),
                         1 === _.length && "string" != typeof _[0] ? aP(_[0], n) : 2 === _.length ? aP(_[1], n) : {})
                       : {};
-                  if (!t) return aR(o, r, void 0);
-                  let [i, c] = as(ah(a)),
-                      E = aR(o, r, i);
-                  return c ? al(E, c) : E;
-              })(a, e.input, E)
-            : au(E),
+                  if (!t) return au(o, r, void 0);
+                  let [i, E] = as(aO(a)),
+                      c = au(o, r, i);
+                  return E ? al(c, E) : c;
+              })(a, e.input, c)
+            : aR(c),
         response: await aL(l, a, e.response, s),
     };
 }
 async function aL(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, _) {
-    if (!t && void 0 !== _) return au(_);
-    let n = r ? aO(r.headers, a) : {};
-    if (!r || (!e && void 0 !== _)) return aR(n, _, void 0);
+    if (!t && void 0 !== _) return aR(_);
+    let n = r ? ah(r.headers, a) : {};
+    if (!r || (!e && void 0 !== _)) return au(n, _, void 0);
     let [o, i] = await ap(r),
-        c = (function (t, { networkCaptureBodies: e, responseBodySize: a, captureDetails: r, headers: _ }) {
+        E = (function (t, { networkCaptureBodies: e, responseBodySize: a, captureDetails: r, headers: _ }) {
             try {
-                let n = t && t.length && void 0 === a ? ac(t) : a;
-                if (!r) return au(n);
-                if (e) return aR(_, n, t);
-                return aR(_, n, void 0);
+                let n = t && t.length && void 0 === a ? aE(t) : a;
+                if (!r) return aR(n);
+                if (e) return au(_, n, t);
+                return au(_, n, void 0);
             } catch (t) {
-                return ej && U.kg.warn("[Replay] Failed to serialize response body", t), aR(_, a, void 0);
+                return ej && U.kg.warn("[Replay] Failed to serialize response body", t), au(_, a, void 0);
             }
         })(o, {
             networkCaptureBodies: e,
@@ -4535,7 +4535,7 @@ async function aL(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, 
             captureDetails: t,
             headers: n,
         });
-    return i ? al(c, i) : c;
+    return i ? al(E, i) : E;
 }
 async function ap(t) {
     let e = (function (t) {
@@ -4552,7 +4552,7 @@ async function ap(t) {
             await ((a = e),
             new Promise((t, e) => {
                 let r = (0, Y.iK)(() => e(Error("Timeout while trying to read response body")), 500);
-                aD(a)
+                aC(a)
                     .then(
                         (e) => t(e),
                         (t) => e(t),
@@ -4564,10 +4564,10 @@ async function ap(t) {
         return ej && U.kg.warn("[Replay] Failed to get text body from response", t), [void 0, "BODY_PARSE_ERROR"];
     }
 }
-function ah(t = []) {
+function aO(t = []) {
     if (2 === t.length && "object" == typeof t[1]) return t[1].body;
 }
-function aO(t, e) {
+function ah(t, e) {
     let a = {};
     return (
         e.forEach((e) => {
@@ -4579,33 +4579,33 @@ function aO(t, e) {
 function aP(t, e) {
     if (!t) return {};
     let a = t.headers;
-    return a ? (a instanceof Headers ? aO(a, e) : Array.isArray(a) ? {} : ad(a, e)) : {};
+    return a ? (a instanceof Headers ? ah(a, e) : Array.isArray(a) ? {} : aA(a, e)) : {};
 }
-async function aD(t) {
+async function aC(t) {
     return await t.text();
 }
-async function ag(t, e, a) {
+async function aD(t, e, a) {
     try {
         let r = (function (t, e, a) {
                 let r = Date.now(),
                     { startTimestamp: _ = r, endTimestamp: n = r, input: o, xhr: i } = e,
-                    { url: c, method: E, status_code: s = 0, request_body_size: l, response_body_size: I } = t.data;
-                if (!c) return null;
-                if (!i || !aA(c, a.networkDetailAllowUrls) || aA(c, a.networkDetailDenyUrls)) {
-                    let t = au(l);
+                    { url: E, method: c, status_code: s = 0, request_body_size: l, response_body_size: I } = t.data;
+                if (!E) return null;
+                if (!i || !aT(E, a.networkDetailAllowUrls) || aT(E, a.networkDetailDenyUrls)) {
+                    let t = aR(l);
                     return {
                         startTimestamp: _,
                         endTimestamp: n,
-                        url: c,
-                        method: E,
+                        url: E,
+                        method: c,
                         statusCode: s,
                         request: t,
-                        response: au(I),
+                        response: aR(I),
                     };
                 }
-                let u = i[K.xU],
-                    R = u ? ad(u.request_headers, a.networkRequestHeaders) : {},
-                    d = ad(
+                let R = i[K.xU],
+                    u = R ? aA(R.request_headers, a.networkRequestHeaders) : {},
+                    A = aA(
                         (function (t) {
                             let e = t.getAllResponseHeaders();
                             return e
@@ -4617,8 +4617,8 @@ async function ag(t, e, a) {
                         })(i),
                         a.networkResponseHeaders,
                     ),
-                    [N, A] = a.networkCaptureBodies ? as(o) : [void 0],
-                    [T, f] = a.networkCaptureBodies
+                    [N, T] = a.networkCaptureBodies ? as(o) : [void 0],
+                    [d, f] = a.networkCaptureBodies
                         ? (function (t) {
                               let e = [];
                               try {
@@ -4650,15 +4650,15 @@ async function ag(t, e, a) {
                               return ej && U.kg.warn("[Replay] Failed to get xhr response body", ...e), [void 0];
                           })(i)
                         : [void 0],
-                    L = aR(R, l, N),
-                    p = aR(d, I, T);
+                    L = au(u, l, N),
+                    p = au(A, I, d);
                 return {
                     startTimestamp: _,
                     endTimestamp: n,
-                    url: c,
-                    method: E,
+                    url: E,
+                    method: c,
                     statusCode: s,
-                    request: A ? al(L, A) : L,
+                    request: T ? al(L, T) : L,
                     response: f ? al(p, f) : p,
                 };
             })(t, e, a),
@@ -4668,7 +4668,7 @@ async function ag(t, e, a) {
         ej && U.kg.error("[Replay] Failed to capture xhr breadcrumb", t);
     }
 }
-async function aC(t) {
+async function ag(t) {
     try {
         return Promise.all(
             ao(t, [
@@ -4695,7 +4695,7 @@ async function aC(t) {
         return [];
     }
 }
-async function am({ client: t, scope: e, replayId: a, event: r }) {
+async function aS({ client: t, scope: e, replayId: a, event: r }) {
     let _ = {
         event_id: a,
         integrations:
@@ -4704,24 +4704,24 @@ async function am({ client: t, scope: e, replayId: a, event: r }) {
                 : Object.keys(t._integrations),
     };
     t.emit("preprocessEvent", r, _);
-    let n = await (0, O.R)(t.getOptions(), r, _, e, t, (0, L.aF)());
+    let n = await (0, h.R)(t.getOptions(), r, _, e, t, (0, L.aF)());
     if (!n) return null;
     n.platform = n.platform || "javascript";
     let o = t.getSdkMetadata(),
-        { name: i, version: c } = (o && o.sdk) || {};
+        { name: i, version: E } = (o && o.sdk) || {};
     return (
         (n.sdk = {
             ...n.sdk,
             name: i || "sentry.javascript.unknown",
-            version: c || "0.0.0",
+            version: E || "0.0.0",
         }),
         n
     );
 }
-async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r, timestamp: _, session: n }) {
+async function am({ recordingData: t, replayId: e, segmentId: a, eventContext: r, timestamp: _, session: n }) {
     var o;
     let i,
-        c = (function ({ recordingData: t, headers: e }) {
+        E = (function ({ recordingData: t, headers: e }) {
             let a,
                 r = `${JSON.stringify(e)}
 `;
@@ -4735,50 +4735,50 @@ async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r
             recordingData: t,
             headers: { segment_id: a },
         }),
-        { urls: E, errorIds: s, traceIds: l, initialTimestamp: I } = r,
-        u = (0, L.s3)(),
-        R = (0, L.nZ)(),
-        d = u && u.getTransport(),
-        N = u && u.getDsn();
-    if (!u || !d || !N || !n.sampled) return (0, w.WD)({});
-    let A = {
+        { urls: c, errorIds: s, traceIds: l, initialTimestamp: I } = r,
+        R = (0, L.s3)(),
+        u = (0, L.nZ)(),
+        A = R && R.getTransport(),
+        N = R && R.getDsn();
+    if (!R || !A || !N || !n.sampled) return (0, M.WD)({});
+    let T = {
             type: "replay_event",
             replay_start_timestamp: I / 1000,
             timestamp: _ / 1000,
             error_ids: s,
             trace_ids: l,
-            urls: E,
+            urls: c,
             replay_id: e,
             segment_id: a,
             replay_type: n.sampled,
         },
-        T = await am({
-            scope: R,
-            client: u,
+        d = await aS({
+            scope: u,
+            client: R,
             replayId: e,
-            event: A,
+            event: T,
         });
-    if (!T)
+    if (!d)
         return (
-            u.recordDroppedEvent("event_processor", "replay", A),
+            R.recordDroppedEvent("event_processor", "replay", T),
             eX("An event processor returned `null`, will not send event."),
-            (0, w.WD)({})
+            (0, M.WD)({})
         );
-    delete T.sdkProcessingMetadata;
+    delete d.sdkProcessingMetadata;
     let f =
-        ((o = u.getOptions().tunnel),
-        (0, W.Jd)((0, W.Cd)(T, (0, W.HY)(T), o, N), [
-            [{ type: "replay_event" }, T],
+        ((o = R.getOptions().tunnel),
+        (0, b.Jd)((0, b.Cd)(d, (0, b.HY)(d), o, N), [
+            [{ type: "replay_event" }, d],
             [
                 {
                     type: "replay_recording",
-                    length: "string" == typeof c ? new TextEncoder().encode(c).length : c.length,
+                    length: "string" == typeof E ? new TextEncoder().encode(E).length : E.length,
                 },
-                c,
+                E,
             ],
         ]));
     try {
-        i = await d.send(f);
+        i = await A.send(f);
     } catch (e) {
         let t = Error(j);
         try {
@@ -4786,12 +4786,12 @@ async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r
         } catch (t) {}
         throw t;
     }
-    if ("number" == typeof i.statusCode && (i.statusCode < 200 || i.statusCode >= 300)) throw new aS(i.statusCode);
-    let p = (0, M.WG)({}, i);
-    if ((0, M.Q)(p, "replay")) throw new ay(p);
+    if ("number" == typeof i.statusCode && (i.statusCode < 200 || i.statusCode >= 300)) throw new av(i.statusCode);
+    let p = (0, w.WG)({}, i);
+    if ((0, w.Q)(p, "replay")) throw new ay(p);
     return i;
 }
-class aS extends Error {
+class av extends Error {
     constructor(t) {
         super(`Transport returned status code ${t}`);
     }
@@ -4811,12 +4811,12 @@ async function aU(
     let { recordingData: a, options: r } = t;
     if (a.length)
         try {
-            return await av(t), !0;
+            return await am(t), !0;
         } catch (a) {
-            if (a instanceof aS || a instanceof ay) throw a;
+            if (a instanceof av || a instanceof ay) throw a;
             if (
-                ((0, h.v)("Replays", { _retryCount: e.count }),
-                ej && r._experiments && r._experiments.captureExceptions && (0, h.Tb)(a),
+                ((0, O.v)("Replays", { _retryCount: e.count }),
+                ej && r._experiments && r._experiments.captureExceptions && (0, O.Tb)(a),
                 e.count >= 3)
             ) {
                 let t = Error(`${j} - max retries exceeded`);
@@ -4839,15 +4839,15 @@ async function aU(
             );
         }
 }
-let ab = "__THROTTLED";
-class aG {
+let aG = "__THROTTLED";
+class aW {
     constructor({ options: t, recordingOptions: e }) {
-        aG.prototype.__init.call(this),
-            aG.prototype.__init2.call(this),
-            aG.prototype.__init3.call(this),
-            aG.prototype.__init4.call(this),
-            aG.prototype.__init5.call(this),
-            aG.prototype.__init6.call(this),
+        aW.prototype.__init.call(this),
+            aW.prototype.__init2.call(this),
+            aW.prototype.__init3.call(this),
+            aW.prototype.__init4.call(this),
+            aW.prototype.__init5.call(this),
+            aW.prototype.__init6.call(this),
             (this.eventBuffer = null),
             (this.performanceEntries = []),
             (this.replayPerformanceEntries = []),
@@ -4876,20 +4876,20 @@ class aG {
                     n,
                     o = a && a.maxWait ? Math.max(a.maxWait, e) : 0;
                 function i() {
-                    return c(), (r = t());
-                }
-                function c() {
-                    void 0 !== _ && clearTimeout(_), void 0 !== n && clearTimeout(n), (_ = n = void 0);
+                    return E(), (r = t());
                 }
                 function E() {
+                    void 0 !== _ && clearTimeout(_), void 0 !== n && clearTimeout(n), (_ = n = void 0);
+                }
+                function c() {
                     return _ && clearTimeout(_), (_ = (0, Y.iK)(i, e)), o && void 0 === n && (n = (0, Y.iK)(i, o)), r;
                 }
                 return (
-                    (E.cancel = c),
-                    (E.flush = function () {
+                    (c.cancel = E),
+                    (c.flush = function () {
                         return void 0 !== _ || void 0 !== n ? i() : r;
                     }),
-                    E
+                    c
                 );
             })(() => this._flush(), this._options.flushMinDelay, { maxWait: this._options.flushMaxDelay })),
             (this._throttledAddEvent = (function (t, e, a) {
@@ -4905,7 +4905,7 @@ class aG {
                         [...r.values()].reduce((t, e) => t + e, 0) >= 300)
                     ) {
                         let t = _;
-                        return (_ = !0), t ? "__SKIPPED" : ab;
+                        return (_ = !0), t ? "__SKIPPED" : aG;
                     }
                     _ = !1;
                     let o = r.get(a) || 0;
@@ -4947,7 +4947,7 @@ class aG {
     }
     handleException(t) {
         ej && U.kg.error("[Replay]", t),
-            ej && this._options._experiments && this._options._experiments.captureExceptions && (0, h.Tb)(t);
+            ej && this._options._experiments && this._options._experiments.captureExceptions && (0, O.Tb)(t);
     }
     initializeSampling(t) {
         let { errorSampleRate: e, sessionSampleRate: a } = this._options,
@@ -5221,8 +5221,8 @@ class aG {
     }
     throttledAddEvent(t, e) {
         let a = this._throttledAddEvent(t, e);
-        if (a === ab) {
-            let t = eG({ category: "replay.throttled" });
+        if (a === aG) {
+            let t = eW({ category: "replay.throttled" });
             this.addUpdate(
                 () =>
                     !at(this, {
@@ -5241,7 +5241,7 @@ class aG {
     getCurrentRoute() {
         let t = this.lastActiveSpan || (0, P.HN)(),
             e = t && (0, P.Gx)(t),
-            a = ((e && (0, P.XU)(e).data) || {})[D.Zj];
+            a = ((e && (0, P.XU)(e).data) || {})[C.Zj];
         if (e && a && ["route", "custom"].includes(a)) return (0, P.XU)(e).description;
     }
     _initializeRecording() {
@@ -5335,8 +5335,8 @@ class aG {
                                         a = "click" === t.name,
                                         r = null;
                                     try {
-                                        (r = a ? ev(t.event) : eS(t.event)),
-                                            (e = (0, S.Rt)(r, { maxStringLength: 200 }) || "<unknown>");
+                                        (r = a ? em(t.event) : ev(t.event)),
+                                            (e = (0, v.Rt)(r, { maxStringLength: 200 }) || "<unknown>");
                                     } catch (t) {
                                         e = "<unknown>";
                                     }
@@ -5345,9 +5345,9 @@ class aG {
                                         message: e,
                                     };
                                 })(t);
-                                return eG({
+                                return eW({
                                     category: `ui.${t.name}`,
-                                    ...ew(e, a),
+                                    ...eM(e, a),
                                 });
                             })(e);
                             if (!_) return;
@@ -5361,8 +5361,8 @@ class aG {
                                 !o.metaKey &&
                                 !o.ctrlKey &&
                                 !o.shiftKey &&
-                                ((a = t.clickDetector), (r = ev(e.event)), a.handleClick(_, r)),
-                                eC(t, _);
+                                ((a = t.clickDetector), (r = em(e.event)), a.handleClick(_, r)),
+                                eg(t, _);
                         }),
                             (0, x.a)((e) => {
                                 if (!t.isEnabled()) return;
@@ -5397,7 +5397,7 @@ class aG {
                                             : "console" === a.category
                                               ? (function (t) {
                                                     let e = t.data && t.data.arguments;
-                                                    if (!Array.isArray(e) || 0 === e.length) return eG(t);
+                                                    if (!Array.isArray(e) || 0 === e.length) return eW(t);
                                                     let a = !1,
                                                         r = e.map((t) => {
                                                             if (!t) return t;
@@ -5407,7 +5407,7 @@ class aG {
                                                                     : t;
                                                             if ("object" == typeof t)
                                                                 try {
-                                                                    let e = (0, m.Fv)(t, 7);
+                                                                    let e = (0, S.Fv)(t, 7);
                                                                     if (JSON.stringify(e).length > 5000)
                                                                         return (
                                                                             (a = !0),
@@ -5417,7 +5417,7 @@ class aG {
                                                                 } catch (t) {}
                                                             return t;
                                                         });
-                                                    return eG({
+                                                    return eW({
                                                         ...t,
                                                         data: {
                                                             ...t.data,
@@ -5428,8 +5428,8 @@ class aG {
                                                         },
                                                     });
                                                 })(a)
-                                              : eG(a));
-                                    r && eC(t, r);
+                                              : eW(a));
+                                    r && eg(t, r);
                                 })(t, e),
                             );
                         let r = (0, L.s3)();
@@ -5463,9 +5463,9 @@ class aG {
                                                         (!(function (t, e) {
                                                             let { xhr: a, input: r } = e;
                                                             if (!a) return;
-                                                            let _ = ac(r),
+                                                            let _ = aE(r),
                                                                 n = a.getResponseHeader("content-length")
-                                                                    ? aE(a.getResponseHeader("content-length"))
+                                                                    ? ac(a.getResponseHeader("content-length"))
                                                                     : (function (t, e) {
                                                                           try {
                                                                               let a =
@@ -5474,7 +5474,7 @@ class aG {
                                                                                   "object" == typeof t
                                                                                       ? JSON.stringify(t)
                                                                                       : t;
-                                                                              return ac(a);
+                                                                              return aE(a);
                                                                           } catch (t) {
                                                                               return;
                                                                           }
@@ -5482,16 +5482,16 @@ class aG {
                                                             void 0 !== _ && (t.data.request_body_size = _),
                                                                 void 0 !== n && (t.data.response_body_size = n);
                                                         })(e, a),
-                                                        ag(e, a, t)),
+                                                        aD(e, a, t)),
                                                     (n = e),
                                                     "fetch" === n.category && (o = a) && o.response)
                                                 ) {
                                                     let { input: r, response: _ } = a,
-                                                        n = ac(r ? ah(r) : void 0),
-                                                        o = _ ? aE(_.headers.get("content-length")) : void 0;
+                                                        n = aE(r ? aO(r) : void 0),
+                                                        o = _ ? ac(_.headers.get("content-length")) : void 0;
                                                     void 0 !== n && (e.data.request_body_size = n),
                                                         void 0 !== o && (e.data.response_body_size = o),
-                                                        aT(e, a, t);
+                                                        ad(e, a, t);
                                                 }
                                             } catch (t) {
                                                 ej && U.kg.warn("Error when enriching network breadcrumb");
@@ -5552,7 +5552,7 @@ class aG {
                                     : e,
                             { id: "Replay" },
                         );
-                        (0, h.Qy)(_),
+                        (0, O.Qy)(_),
                             e &&
                                 (e.on("beforeSendEvent", (e) => {
                                     t.isEnabled() &&
@@ -5570,11 +5570,11 @@ class aG {
                                                     a.match(
                                                         /(does not match server-rendered HTML|Hydration failed because)/i,
                                                     )) &&
-                                                eC(
+                                                eg(
                                                     t,
-                                                    eG({
+                                                    eW({
                                                         category: "replay.hydrate-error",
-                                                        data: { url: (0, S.l4)() },
+                                                        data: { url: (0, v.l4)() },
                                                     }),
                                                 );
                                         })(t, e);
@@ -5676,13 +5676,13 @@ class aG {
     }
     __init2() {
         this._handleWindowBlur = () => {
-            let t = eG({ category: "ui.blur" });
+            let t = eW({ category: "ui.blur" });
             this._doChangeToBackgroundTasks(t);
         };
     }
     __init3() {
         this._handleWindowFocus = () => {
-            let t = eG({ category: "ui.focus" });
+            let t = eW({ category: "ui.focus" });
             this._doChangeToForegroundTasks(t);
         };
     }
@@ -5696,12 +5696,12 @@ class aG {
                     let { metaKey: a, shiftKey: r, ctrlKey: _, altKey: n, key: o, target: i } = t;
                     if (!i || "INPUT" === (e = i).tagName || "TEXTAREA" === e.tagName || e.isContentEditable || !o)
                         return null;
-                    let c = a || _ || n,
-                        E = 1 === o.length;
-                    if (!c && E) return null;
-                    let s = (0, S.Rt)(i, { maxStringLength: 200 }) || "<unknown>",
-                        l = ew(i, s);
-                    return eG({
+                    let E = a || _ || n,
+                        c = 1 === o.length;
+                    if (!E && c) return null;
+                    let s = (0, v.Rt)(i, { maxStringLength: 200 }) || "<unknown>",
+                        l = eM(i, s);
+                    return eW({
                         category: "ui.keyDown",
                         message: s,
                         data: {
@@ -5714,7 +5714,7 @@ class aG {
                         },
                     });
                 })(e);
-                a && eC(t, a);
+                a && eg(t, a);
             })(this, t);
         };
     }
@@ -5781,7 +5781,7 @@ class aG {
             return;
         }
         if ((await this._addPerformanceEntries(), this.eventBuffer && this.eventBuffer.hasEvents)) {
-            if ((await aC(this), this.eventBuffer) && t === this.getSessionId())
+            if ((await ag(this), this.eventBuffer) && t === this.getSessionId())
                 try {
                     this._updateInitialTimestampFromEventBuffer();
                     let e = Date.now();
@@ -5861,7 +5861,7 @@ class aG {
                 r = this._options.mutationBreadcrumbLimit,
                 _ = a && e > a;
             if (e > r || _) {
-                let t = eG({
+                let t = eW({
                     category: "replay.mutations",
                     data: {
                         count: e,
@@ -5881,11 +5881,11 @@ class aG {
         };
     }
 }
-function aW(t, e) {
+function ab(t, e) {
     return [...t, ...e].join(",");
 }
-let aw = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
-    aM = ["content-length", "content-type", "accept"],
+let aM = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
+    aw = ["content-length", "content-type", "accept"],
     aB = !1,
     aY = (t) => new aH(t);
 class aH {
@@ -5901,51 +5901,51 @@ class aH {
         useCompression: n = !0,
         workerUrl: o,
         _experiments: i = {},
-        maskAllText: c = !0,
-        maskAllInputs: E = !0,
+        maskAllText: E = !0,
+        maskAllInputs: c = !0,
         blockAllMedia: s = !0,
         mutationBreadcrumbLimit: l = 750,
         mutationLimit: I = 10000,
-        slowClickTimeout: u = 7000,
-        slowClickIgnoreSelectors: R = [],
-        networkDetailAllowUrls: d = [],
+        slowClickTimeout: R = 7000,
+        slowClickIgnoreSelectors: u = [],
+        networkDetailAllowUrls: A = [],
         networkDetailDenyUrls: N = [],
-        networkCaptureBodies: A = !0,
-        networkRequestHeaders: T = [],
+        networkCaptureBodies: T = !0,
+        networkRequestHeaders: d = [],
         networkResponseHeaders: f = [],
         mask: L = [],
         maskAttributes: p = ["title", "placeholder"],
-        unmask: h = [],
-        block: O = [],
+        unmask: O = [],
+        block: h = [],
         unblock: P = [],
-        ignore: D = [],
-        maskFn: g,
-        beforeAddRecordingEvent: C,
-        beforeErrorSampling: m,
+        ignore: C = [],
+        maskFn: D,
+        beforeAddRecordingEvent: g,
+        beforeErrorSampling: S,
     } = {}) {
         this.name = aH.id;
-        let v = (function ({ mask: t, unmask: e, block: a, unblock: r, ignore: _ }) {
+        let m = (function ({ mask: t, unmask: e, block: a, unblock: r, ignore: _ }) {
             return {
-                maskTextSelector: aW(t, [".sentry-mask", "[data-sentry-mask]"]),
-                unmaskTextSelector: aW(e, []),
-                blockSelector: aW(a, [".sentry-block", "[data-sentry-block]", 'base[href="/"]']),
-                unblockSelector: aW(r, []),
-                ignoreSelector: aW(_, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]']),
+                maskTextSelector: ab(t, [".sentry-mask", "[data-sentry-mask]"]),
+                unmaskTextSelector: ab(e, []),
+                blockSelector: ab(a, [".sentry-block", "[data-sentry-block]", 'base[href="/"]']),
+                unblockSelector: ab(r, []),
+                ignoreSelector: ab(_, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]']),
             };
         })({
             mask: L,
-            unmask: h,
-            block: O,
+            unmask: O,
+            block: h,
             unblock: P,
-            ignore: D,
+            ignore: C,
         });
         if (
             ((this._recordingOptions = {
-                maskAllInputs: E,
-                maskAllText: c,
+                maskAllInputs: c,
+                maskAllText: E,
                 maskInputOptions: { password: !0 },
-                maskTextFn: g,
-                maskInputFn: g,
+                maskTextFn: D,
+                maskInputFn: D,
                 maskAttributeFn: (t, e, a) =>
                     (function ({ el: t, key: e, maskAttributes: a, maskAllText: r, privacyOptions: _, value: n }) {
                         return !r || (_.unmaskTextSelector && t.matches(_.unmaskTextSelector))
@@ -5958,13 +5958,13 @@ class aH {
                               : n;
                     })({
                         maskAttributes: p,
-                        maskAllText: c,
-                        privacyOptions: v,
+                        maskAllText: E,
+                        privacyOptions: m,
                         key: t,
                         value: e,
                         el: a,
                     }),
-                ...v,
+                ...m,
                 slimDOMOptions: "all",
                 inlineStylesheet: !0,
                 inlineImages: !1,
@@ -5984,25 +5984,25 @@ class aH {
                 useCompression: n,
                 workerUrl: o,
                 blockAllMedia: s,
-                maskAllInputs: E,
-                maskAllText: c,
+                maskAllInputs: c,
+                maskAllText: E,
                 mutationBreadcrumbLimit: l,
                 mutationLimit: I,
-                slowClickTimeout: u,
-                slowClickIgnoreSelectors: R,
-                networkDetailAllowUrls: d,
+                slowClickTimeout: R,
+                slowClickIgnoreSelectors: u,
+                networkDetailAllowUrls: A,
                 networkDetailDenyUrls: N,
-                networkCaptureBodies: A,
-                networkRequestHeaders: aK(T),
+                networkCaptureBodies: T,
+                networkRequestHeaders: aK(d),
                 networkResponseHeaders: aK(f),
-                beforeAddRecordingEvent: C,
-                beforeErrorSampling: m,
+                beforeAddRecordingEvent: g,
+                beforeErrorSampling: S,
                 _experiments: i,
             }),
             this._initialOptions.blockAllMedia &&
                 (this._recordingOptions.blockSelector = this._recordingOptions.blockSelector
-                    ? `${this._recordingOptions.blockSelector},${aw}`
-                    : aw),
+                    ? `${this._recordingOptions.blockSelector},${aM}`
+                    : aM),
             this._isInitialized && (0, B.j)())
         )
             throw Error("Multiple Sentry Session Replay instances are not supported");
@@ -6047,10 +6047,10 @@ class aH {
                 r = {
                     sessionSampleRate: 0,
                     errorSampleRate: 0,
-                    ...(0, v.Jr)(t),
+                    ...(0, m.Jr)(t),
                 },
-                _ = (0, g.o)(a.replaysSessionSampleRate),
-                n = (0, g.o)(a.replaysOnErrorSampleRate);
+                _ = (0, D.o)(a.replaysSessionSampleRate),
+                n = (0, D.o)(a.replaysOnErrorSampleRate);
             return (
                 null == _ &&
                     null == n &&
@@ -6064,7 +6064,7 @@ class aH {
                 r
             );
         })(this._initialOptions, t);
-        this._replay = new aG({
+        this._replay = new aW({
             options: e,
             recordingOptions: this._recordingOptions,
         });
@@ -6078,7 +6078,7 @@ class aH {
     }
 }
 function aK(t) {
-    return [...aM, ...t.map((t) => t.toLowerCase())];
+    return [...aw, ...t.map((t) => t.toLowerCase())];
 }
 function ak() {
     let t = (0, L.s3)();

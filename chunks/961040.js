@@ -32,13 +32,13 @@ function b(e) {
             () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, j)),
             [j],
         );
-    let { entrypoint: C } = (0, d.pN)({ location: "NotificationsInboxPopout" });
+    let { entrypoint: x } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(a.yRy, {
         targetElementRef: h,
         shouldShow: y,
         align: l,
-        animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
-        animationPosition: C === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
+        animation: x === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
+        animationPosition: x === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
         position: n,
         onRequestClose: v,
         spacing: b,
@@ -46,8 +46,8 @@ function b(e) {
             (0, r.jsx)(a.VqE, {
                 "aria-label": g.intl.string(g.t.GSmTKJ),
                 className: o()({
-                    [m.repositionLayerTitlebarPopout]: C === d.u3.TITLE_BAR_LEFT,
-                    [m.repositionLayerSidebarPopout]: C === d.u3.SERVER_RAIL_TOP,
+                    [m.repositionLayerTitlebarPopout]: x === d.u3.TITLE_BAR_LEFT,
+                    [m.repositionLayerSidebarPopout]: x === d.u3.SERVER_RAIL_TOP,
                 }),
                 children: (0, r.jsx)(_, {}),
             }),

@@ -1,7 +1,7 @@
 n.d(t, { S: () => c });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(113570),
+var r = n(113570),
     l = n(482641),
     a = n(613725),
     o = n(350707);
@@ -10,14 +10,14 @@ let s = Object.freeze({
             popoutPosition: "right",
             highPriority: !0,
             textAlign: o.iu.CENTER,
-            media: () => (0, r.jsx)(l.Z, {}),
+            media: () => (0, i.jsx)(l.Z, {}),
         },
         "writing-messages": {
             popoutPosition: "top",
             highPriority: !0,
             textAlign: o.iu.CENTER,
             spacing: 10,
-            media: () => (0, r.jsx)(a.Z, {}),
+            media: () => (0, i.jsx)(a.Z, {}),
         },
         "direct-messages": { popoutPosition: "right" },
         "create-first-server": {
@@ -28,7 +28,7 @@ let s = Object.freeze({
             popoutPosition: "right",
             textAlign: o.iu.CENTER,
             spacing: 8,
-            media: () => (0, r.jsx)(i.Z, {}),
+            media: () => (0, i.jsx)(r.Z, {}),
         },
         "instant-invite": {
             popoutPosition: "right",

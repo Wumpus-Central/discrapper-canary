@@ -68,11 +68,11 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -80,7 +80,7 @@ function S(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,7 +91,7 @@ function T(e, t) {
 }
 function A(e) {
     let { className: t, disabled: n, isEditor: y, renderCTAButtons: v } = e,
-        [T] = (0, a.Wu)([_.Z], () => [_.Z.getCurrentDesktopIcon()]),
+        [S] = (0, a.Wu)([_.Z], () => [_.Z.getCurrentDesktopIcon()]),
         A = (0, f.T)("app_icons_settings_web"),
         C = i.useRef(null);
     (0, d.Z)(C, m.h1.CUSTOM_APP_ICONS);
@@ -101,8 +101,8 @@ function A(e) {
             labelledBy: N,
         }),
         { ref: P } = R,
-        w = S(R, ["ref"]),
-        D = (e) => {
+        D = T(R, ["ref"]),
+        w = (e) => {
             l.Z.dispatch({
                 type: "APP_ICON_UPDATED",
                 id: e,
@@ -112,7 +112,7 @@ function A(e) {
         ref: C,
         children: (0, r.jsx)(
             "div",
-            I(O({}, w), {
+            I(O({}, D), {
                 ref: P,
                 className: E.__invalid_container,
                 children: (0, r.jsxs)("div", {
@@ -161,8 +161,8 @@ function A(e) {
                                         p.Z,
                                         {
                                             icon: e,
-                                            isSelected: T === e.id,
-                                            onSelect: (e) => D(e),
+                                            isSelected: S === e.id,
+                                            onSelect: (e) => w(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
                                             locked: !1,

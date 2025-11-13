@@ -1,11 +1,11 @@
 n.d(t, { Z: () => x }), n(388685);
 var a = n(951288),
-    r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    i = n(647438),
+    r = n(120356),
+    l = n.n(r),
     s = n(392711),
     o = n.n(s),
-    c = n(358458),
+    c = n(509442),
     d = n(442837),
     u = n(481060),
     m = n(607070),
@@ -17,30 +17,30 @@ let h = {
 };
 function x(e) {
     let { className: t, pageMultiplier: n } = e,
-        i = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
-        [s, x] = r.useState({
+        r = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        [s, x] = i.useState({
             x: 0,
             y: 0,
         }),
-        g = r.useMemo(
+        g = i.useMemo(
             () =>
                 o().throttle((e) => {
-                    if (!i)
+                    if (!r)
                         x({
                             x: (window.innerWidth - e.pageX * n) / 90,
                             y: (window.innerHeight - e.pageY * n) / 90,
                         });
                 }, 20),
-            [n, i],
+            [n, r],
         );
-    r.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
+    i.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
     let [f, b] = (0, u.q_F)(() => ({
         x: 0,
         y: 0,
         config: h,
     }));
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             b({
                 x: s.x,
                 y: s.y,

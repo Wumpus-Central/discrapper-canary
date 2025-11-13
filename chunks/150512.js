@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(35282);
+n.d(t, { Z: () => p }), n(35282);
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -12,14 +12,14 @@ var l = n(951288),
     g = n(430824),
     h = n(594174),
     f = n(5192),
-    I = n(51144),
-    p = n(180391);
-function N(e) {
+    N = n(51144),
+    I = n(180391);
+function p(e) {
     let { guildId: t, welcomeMessage: n, className: i } = e,
-        N = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
+        p = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
         O = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         E = (0, s.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
-        S = r.useMemo(() => (null != N && null != E && (0, u.Y)(N, E) ? E : null), [N, E]),
+        S = r.useMemo(() => (null != p && null != E && (0, u.Y)(p, E) ? E : null), [p, E]),
         x = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         T = r.useMemo(() => {
             var e;
@@ -32,32 +32,32 @@ function N(e) {
             null != S && (0, m.Z)(S.id, S.getAvatarURL(t, 48), { guildId: t });
         }, [S, t]);
     let _ = f.ZP.useName(t, null, S),
-        j = (0, I._T)(x);
+        j = (0, N._T)(x);
     if (null == S || null == x || null == n) return null;
-    let v = null != N && N.ownerId === S.id;
+    let v = null != p && p.ownerId === S.id;
     return (0, l.jsxs)(o.Zbd, {
-        className: a()(p.welcomeMessageContainer, i),
+        className: a()(I.welcomeMessageContainer, i),
         children: [
-            (0, l.jsx)("div", { className: p.avatarBackground }),
+            (0, l.jsx)("div", { className: I.avatarBackground }),
             O
                 ? (0, l.jsx)(o.qEK, {
                       src: S.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
-                      className: p.avatar,
+                      className: I.avatar,
                       "aria-label": S.username,
                   })
                 : (0, l.jsx)(o.Xo$, {
                       src: S.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
-                      className: p.avatar,
+                      className: I.avatar,
                       "aria-label": S.username,
                   }),
-            (0, l.jsx)("div", { className: p.avatarBorder }),
+            (0, l.jsx)("div", { className: I.avatarBorder }),
             (0, l.jsxs)("div", {
-                className: p.welcomeMessageContent,
+                className: I.welcomeMessageContent,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: p.adminUsernameContainer,
+                        className: I.adminUsernameContainer,
                         children: [
                             (0, l.jsx)(o.Text, {
                                 variant: "text-sm/semibold",
@@ -68,7 +68,7 @@ function N(e) {
                                 ? (0, l.jsx)(o.CEn, {
                                       size: "xxs",
                                       color: "currentColor",
-                                      className: p.ownerIcon,
+                                      className: I.ownerIcon,
                                   })
                                 : null,
                         ],

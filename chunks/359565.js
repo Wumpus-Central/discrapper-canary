@@ -1,9 +1,9 @@
 n.d(t, {
-    q: () => _,
+    q: () => y,
     s: () => b,
 });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
@@ -12,29 +12,29 @@ var r = n(951288),
     u = n(346479),
     d = n(665906),
     p = n(981631),
-    f = n(388032),
-    h = n(856426);
+    h = n(388032),
+    f = n(856426);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -47,8 +47,8 @@ function g(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -61,25 +61,25 @@ function b(e) {
     let { channel: t, narrow: n } = e,
         l = (0, d.tc)(t);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             c.default.track(
                 p.rMx.CHANNEL_BANNER_VIEWED,
                 g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "thread" }),
             );
         }, [t]),
-        (0, r.jsxs)("div", {
-            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
+        (0, i.jsxs)("div", {
+            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, r.jsx)(o.Text, {
-                    className: h.chatHeaderBarText,
+                (0, i.jsx)(o.Text, {
+                    className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: t.isForumPost() ? f.intl.string(f.t["833FDn"]) : f.intl.string(f.t.rEeodK),
+                    children: t.isForumPost() ? h.intl.string(h.t["833FDn"]) : h.intl.string(h.t.rEeodK),
                 }),
                 l
-                    ? (0, r.jsx)(o.Button, {
+                    ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: f.intl.string(f.t["0dvvEi"]),
+                          text: h.intl.string(h.t["0dvvEi"]),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,
@@ -97,29 +97,29 @@ function b(e) {
         })
     );
 }
-function _(e) {
+function y(e) {
     let { channel: t, narrow: n } = e,
         l = (0, d.Xb)(t);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             c.default.track(
                 p.rMx.CHANNEL_BANNER_VIEWED,
                 g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "thread" }),
             );
         }, [t]),
-        (0, r.jsxs)("div", {
-            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
+        (0, i.jsxs)("div", {
+            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, r.jsx)(o.Text, {
-                    className: h.chatHeaderBarText,
+                (0, i.jsx)(o.Text, {
+                    className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: t.isForumPost() ? f.intl.string(f.t.E7oO8u) : f.intl.string(f.t["V/JF2N"]),
+                    children: t.isForumPost() ? h.intl.string(h.t.E7oO8u) : h.intl.string(h.t["V/JF2N"]),
                 }),
                 l
-                    ? (0, r.jsx)(o.Button, {
+                    ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: f.intl.string(f.t.zA9d1J),
+                          text: h.intl.string(h.t.zA9d1J),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,

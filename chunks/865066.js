@@ -1,7 +1,7 @@
 n.d(t, {
     O9: () => y,
     OK: () => P,
-    Yz: () => T,
+    Yz: () => S,
     aL: () => E,
     hi: () => O,
     s2: () => v,
@@ -65,7 +65,7 @@ function I(e, t, n) {
                   modules: [e],
               }));
 }
-function S(e) {
+function T(e) {
     c.isPlatformEmbedded &&
         (d.ZP.InputEventServiceSetStatusCallback((t) => {
             I("input-service", t, e);
@@ -76,10 +76,10 @@ function S(e) {
         }),
         d.ZP.ToolServiceSetAllowed(!0));
 }
-async function T(e) {
+async function S(e) {
     if (c.isPlatformEmbedded && E())
         try {
-            (await d.ZP.DoesSystemServiceHaveUpdate()) && (await d.ZP.UpdateSystemService()), S(e);
+            (await d.ZP.DoesSystemServiceHaveUpdate()) && (await d.ZP.UpdateSystemService()), T(e);
         } catch (e) {
             throw (
                 (u.Z.captureMessage("Error during system service initialization", { extra: { error: e } }),
@@ -128,7 +128,7 @@ async function R(e) {
                     source: e,
                 }),
                 N((0, i.createToast)(h.intl.string(h.t.kQnWby), i.ToastType.SUCCESS), t),
-                S("after-install");
+                T("after-install");
         } catch (r) {
             let n = C(r);
             if (null == n && r instanceof Error) {

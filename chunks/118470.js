@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(539854);
+n.d(t, { Z: () => h }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,20 +10,20 @@ var r = n(951288),
     d = n(981631),
     p = n(388032),
     f = n(466389);
-function m(e) {
+function h(e) {
     let t,
         { guild: n } = e,
-        m = (0, u.h6)(n),
-        h = () => (0, c.sB)(n.id),
-        g = i.useMemo(() => new Set(m.map((e) => e.applicationId)), [m]),
+        h = (0, u.h6)(n),
+        g = () => (0, c.sB)(n.id),
+        m = i.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
         _ = (0, l.Wu)([a.Z], () => {
             let e = [];
-            for (let t of g) {
+            for (let t of m) {
                 let n = a.Z.getApplication(t);
                 null != n && e.push(n);
             }
             return e;
-        }, [g]);
+        }, [m]);
     return 0 === _.length
         ? null
         : ((t =
@@ -43,12 +43,12 @@ function m(e) {
                       : p.intl.string(p.t.MvfowF)),
           (0, r.jsx)(s.Z, {
               guild: n,
-              onDismissed: h,
+              onDismissed: g,
               message: t,
               type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: f,
               onClick: () => {
-                  h(), o.Z.open(n.id, d.pNK.INTEGRATIONS);
+                  g(), o.Z.open(n.id, d.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(458725),
     l = n(475674),
     a = n(42326),
     o = n(388032);
-function s(e) {
+function c(e) {
     let { participant: t, className: n } = e,
-        s = (0, l.Z)(t);
-    if (null == s) return null;
-    let c = (function (e) {
+        c = (0, l.Z)(t);
+    if (null == c) return null;
+    let s = (function (e) {
         switch (e) {
             case i.u.STREAM_SEND_LOW_FPS:
             case i.u.STREAM_SEND_HIGH_PACKET_LOSS:
@@ -24,12 +24,12 @@ function s(e) {
             default:
                 return;
         }
-    })(s);
-    return null != c
+    })(c);
+    return null != s
         ? (0, r.jsx)(a.Z, {
               className: n,
-              errorMessage: c,
-              avError: s,
+              errorMessage: s,
+              avError: c,
           })
         : null;
 }

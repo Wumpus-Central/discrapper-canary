@@ -24,7 +24,7 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ hideInstantInvites: t }),
     }),
-    d = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
+    S = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
         useTitle: () => o.intl.string(o.t.OrqYDP),
         useValue: () =>
             (0, i.e7)([s.Z], () => {
@@ -33,7 +33,7 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableSounds: t }),
     }),
-    S = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+    d = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
         useValue: () =>
             (0, i.e7)([s.Z], () => {
@@ -68,5 +68,5 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     I = (0, r.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),
         variant: "separators",
-        buildLayout: () => [c, E, d, S, T],
+        buildLayout: () => [c, E, S, d, T],
     });

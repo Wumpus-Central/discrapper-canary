@@ -126,14 +126,14 @@ function g(e) {
             badge: O,
             icon: v = null,
             interactiveLabel: I = !1,
-            ref: S,
+            ref: T,
         } = e,
-        T = h(e),
-        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: w } = T,
-        D = "group" === b || "radiogroup" === b,
-        x = D ? "span" : "label",
-        L = D ? "fieldset" : "div",
-        M = D
+        S = h(e),
+        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: D } = S,
+        w = "group" === b || "radiogroup" === b,
+        x = w ? "span" : "label",
+        L = w ? "fieldset" : "div",
+        M = w
             ? (0, r.jsx)("legend", {
                   id: A,
                   children: (0, r.jsx)(s.n, { children: t }),
@@ -143,7 +143,7 @@ function g(e) {
         k = null != l && "" !== l,
         U = j
             ? (0, r.jsxs)(u.x, {
-                  "aria-hidden": D,
+                  "aria-hidden": w,
                   "data-interactive": I,
                   id: A,
                   tag: x,
@@ -178,15 +178,15 @@ function g(e) {
               })
             : null;
     return (0, r.jsx)(d.z.Provider, {
-        value: T,
+        value: S,
         children: (0, r.jsxs)(L, {
             role: b,
-            ref: S,
+            ref: T,
             className: f.container,
             "data-layout": y,
             "data-disabled": a,
-            "aria-describedby": D ? R : void 0,
-            disabled: D ? a : void 0,
+            "aria-describedby": w ? R : void 0,
+            disabled: w ? a : void 0,
             children: [
                 M,
                 j && n ? (0, r.jsx)(s.n, { children: U }) : null,
@@ -200,7 +200,7 @@ function g(e) {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: w,
+                                      id: D,
                                       children: l,
                                   }),
                           ],
@@ -209,7 +209,7 @@ function g(e) {
                 (0, r.jsxs)("div", {
                     className: f.control,
                     children: [
-                        "function" == typeof _ ? _(T) : _,
+                        "function" == typeof _ ? _(S) : _,
                         (0, r.jsx)(E, {
                             successMessage: m,
                             errorMessage: p,

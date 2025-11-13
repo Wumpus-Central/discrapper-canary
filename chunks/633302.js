@@ -160,10 +160,10 @@ function R(e) {
 function P() {
     return c;
 }
-function w() {
+function D() {
     return Object.keys(b);
 }
-function D(e) {
+function w(e) {
     let t = T(e);
     return null != t ? C(t) : null;
 }
@@ -260,7 +260,7 @@ function Y(e) {
     return r ? ":".concat(a, ":") : a;
 }
 function W(e) {
-    return D(
+    return w(
         Y(
             d.reduce((e, t) => e.replace(t, ""), e),
             !1,
@@ -270,8 +270,8 @@ function W(e) {
 let K = {
     getDefaultDiversitySurrogate: P,
     setDefaultDiversitySurrogate: R,
-    getCategories: w,
-    getByName: D,
+    getCategories: D,
+    getByName: w,
     getByCategory: L,
     contentHasUnicodeOrEmoji: M,
     translateInlineEmojiToSurrogates: j,

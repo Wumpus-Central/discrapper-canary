@@ -112,14 +112,14 @@ function T() {
         [C, N] = i.useState(!1),
         R = (0, a.e7)([f.Z], () => f.Z.paymentSources),
         P = (0, a.e7)([f.Z], () => f.Z.hasFetchedPaymentSources),
-        w = (0, a.e7)([f.Z], () => f.Z.defaultPaymentSourceId);
+        D = (0, a.e7)([f.Z], () => f.Z.defaultPaymentSourceId);
     i.useEffect(() => {
         P || (0, c.tZ)();
     }, [P]),
         i.useEffect(() => {
-            null != w && null == S && A(w);
-        }, [w, S]);
-    let D = i.useMemo(
+            null != D && null == S && A(D);
+        }, [D, S]);
+    let w = i.useMemo(
             () =>
                 Object.values(R).map((e) => {
                     let t = String(e.type);
@@ -232,7 +232,7 @@ function T() {
                             (0, r.jsx)(
                                 l.PhF,
                                 O(b({}, x), {
-                                    options: D,
+                                    options: w,
                                     placeholder: "Select a payment source...",
                                     isDisabled: !P,
                                     label: "Payment Source",

@@ -126,11 +126,11 @@ let O = {
         20: "font-size-20",
         24: "font-size-24",
     };
-function S(e) {
+function T(e) {
     return f.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : f.yqN.FONT_SIZE_DEFAULT;
 }
-function T(e) {
-    let t = S(e.fontSize);
+function S(e) {
+    let t = T(e.fontSize);
     if (t > f.yqN.FONT_SIZE_MAX || t < f.yqN.FONT_SIZE_MIN || v.fontSize === t) return !1;
     (v = h({}, v)).fontSize = t;
 }
@@ -156,10 +156,10 @@ function R() {
 function P() {
     (v = h({}, v)).colorblindMode = !v.colorblindMode;
 }
-function w() {
+function D() {
     (v = h({}, v)).lowContrastMode = !v.lowContrastMode;
 }
-function D(e) {
+function w(e) {
     v.syncForcedColors = e.syncForcedColors;
 }
 function x(e) {
@@ -431,13 +431,13 @@ p(J, "displayName", "AccessibilityStore"),
         (e) => g(h({}, e), { enableCustomCursor: !0 }),
     ]);
 let $ = new J(s.Z, {
-    ACCESSIBILITY_SET_FONT_SIZE: T,
+    ACCESSIBILITY_SET_FONT_SIZE: S,
     ACCESSIBILITY_SET_ZOOM: A,
     ACCESSIBILITY_RESET_TO_DEFAULT: C,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: R,
     ACCESSIBILITY_COLORBLIND_TOGGLE: P,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: w,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: D,
     ACCESSIBILITY_SET_SATURATION: x,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: Y,
@@ -445,7 +445,7 @@ let $ = new J(s.Z, {
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: G,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: B,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: Z,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: D,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: V,
     ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: H,
     ACCESSIBILITY_SET_ROLE_STYLE: M,

@@ -1,4 +1,4 @@
-n.d(t, { R: () => m });
+n.d(t, { R: () => p });
 var r = n(951288),
     i = n(647438),
     s = n(481060),
@@ -10,38 +10,38 @@ var r = n(951288),
     d = n(978986),
     h = n(981631),
     g = n(388032),
-    p = n(181174);
-let m = () => {
+    m = n(181174);
+let p = () => {
     var e;
     let t = o.G6.useSetting(),
         {
             nickname: n,
-            dmsAllowed: m,
+            dmsAllowed: p,
             showActivity: f,
             setNickname: _,
             setDmsAllowed: x,
             setShowActivity: E,
             guildId: v,
-            inviteCode: b,
+            inviteCode: j,
         } = (0, d.XW)(),
-        j = null == (e = l.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        b = null == (e = l.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         I = i.useCallback(() => {
             u.default.track(h.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                 guild_id: v,
-                invite_code: b,
+                invite_code: j,
             });
-        }, [v, b]);
+        }, [v, j]);
     return (0, r.jsxs)(a.Z, {
-        className: p.accordion,
+        className: m.accordion,
         icon: (0, r.jsx)(s.ewm, { size: "md" }),
         title: g.intl.string(g.t["A5wHQ/"]),
         subtitle: g.intl.string(g.t.UKCSEd),
         onOpen: I,
-        maxHeight: j ? 220 : 130,
+        maxHeight: b ? 220 : 130,
         children: [
-            j &&
+            b &&
                 (0, r.jsxs)("div", {
-                    className: p.serverNickname,
+                    className: m.serverNickname,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "eyebrow",
@@ -58,7 +58,7 @@ let m = () => {
                 }),
             (0, r.jsx)(c.ZP, {
                 title: g.intl.string(g.t["/2ed37"]),
-                value: m,
+                value: p,
                 onChange: x,
             }),
             t &&

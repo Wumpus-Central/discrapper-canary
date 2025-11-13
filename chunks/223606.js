@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r,
     i = n(442837),
     a = n(570140),
@@ -130,7 +130,7 @@ class P extends (r = i.ZP.PersistedStore) {
     }
 }
 p(P, "displayName", "GuildAutomodMessageStore"), p(P, "persistKey", "GuildAutomodMessages");
-let w = new P(a.Z, {
+let D = new P(a.Z, {
     CONNECTION_OPEN: v,
     LOAD_MESSAGES_SUCCESS: R,
     LOCAL_MESSAGES_LOADED: R,

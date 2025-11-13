@@ -30,13 +30,13 @@ var r = n(951288),
     N = n(302463),
     R = n(293810),
     P = n(388032),
-    w = n(829675);
-function D(e) {
+    D = n(829675);
+function w(e) {
     let { className: t, onClick: n, children: i, buttonRef: a } = e;
     return (0, r.jsx)(u.zx, {
         buttonRef: a,
-        className: o()(w.button, t),
-        innerClassName: w.buttonInner,
+        className: o()(D.button, t),
+        innerClassName: D.buttonInner,
         look: u.zx.Looks.OUTLINED,
         color: u.zx.Colors.WHITE,
         size: u.zx.Sizes.NONE,
@@ -46,7 +46,7 @@ function D(e) {
 }
 function x(e) {
     let { onClick: t } = e;
-    return (0, r.jsx)(D, {
+    return (0, r.jsx)(w, {
         onClick: t,
         children: P.intl.string(P.t.R9GHya),
     });
@@ -96,34 +96,34 @@ function j() {
         };
     return (0, r.jsxs)(d.qXd, {
         color: d.DM8.BRAND,
-        className: w.notice,
+        className: D.notice,
         children: [
-            (0, r.jsxs)(D, {
+            (0, r.jsxs)(w, {
                 onClick: () => G({ backToSettings: !0 }),
-                className: w.backButton,
+                className: D.backButton,
                 children: [
                     (0, r.jsx)(y.Z, {
                         width: 16,
                         height: 16,
                         direction: y.Z.Directions.LEFT,
-                        className: w.backArrow,
+                        className: D.backArrow,
                     }),
                     j,
                 ],
             }),
             U && u
                 ? (0, r.jsx)("div", {
-                      className: w.noticeContents,
+                      className: D.noticeContents,
                       children: (0, r.jsx)("div", {
-                          className: w.noticeText,
+                          className: D.noticeText,
                           children: P.intl.string(P.t.PxbiAf),
                       }),
                   })
                 : (0, r.jsxs)("div", {
-                      className: w.noticeContents,
+                      className: D.noticeContents,
                       children: [
                           (0, r.jsx)("div", {
-                              className: w.noticeText,
+                              className: D.noticeText,
                               children: u
                                   ? P.intl.formatToPlainString(P.t["0PHahI"], { numRoles: Object.keys(a).length })
                                   : P.intl.formatToPlainString(P.t.vMlK8t, { numRoles: Object.keys(a).length }),
@@ -134,7 +134,7 @@ function j() {
                               renderPopout: () => (0, r.jsx)(S.Z, { guildId: t }),
                               children: (t) => {
                                   let { onClick: n } = t;
-                                  return (0, r.jsxs)(D, {
+                                  return (0, r.jsxs)(w, {
                                       onClick: n,
                                       buttonRef: e,
                                       children: [
@@ -143,7 +143,7 @@ function j() {
                                               width: 16,
                                               height: 16,
                                               direction: O.Z.Directions.DOWN,
-                                              className: w.selectCaret,
+                                              className: D.selectCaret,
                                           }),
                                       ],
                                   });
@@ -180,9 +180,9 @@ function k(e) {
     let { guildId: t } = e;
     return (0, s.e7)([T.Z], () => T.Z.isViewingRoles(t))
         ? (0, r.jsx)("div", {
-              className: o()(w.settingsWrapper, {
-                  [w.windows]: (0, v.isWindows)(),
-                  [w.osx]: (0, v.isMac)(),
+              className: o()(D.settingsWrapper, {
+                  [D.windows]: (0, v.isWindows)(),
+                  [D.osx]: (0, v.isMac)(),
               }),
               children: (0, r.jsx)(j, {}),
           })

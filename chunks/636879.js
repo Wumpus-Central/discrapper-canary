@@ -1,7 +1,7 @@
-i.d(e, { Z: () => h }), i(539854);
+i.d(e, { Z: () => a }), i(539854);
 var s = i(342412),
     n = i(722734);
-function a(t, e, i) {
+function r(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -14,7 +14,7 @@ function a(t, e, i) {
         t
     );
 }
-let h = class {
+let a = class {
     initialize() {
         (this.particles = []),
             this.wind.initialize(),
@@ -46,10 +46,10 @@ let h = class {
         this.isFilled = !0;
     }
     constructor() {
-        a(this, "particles", []),
-            a(this, "wind", new n.Z()),
-            a(this, "alpha", 0),
-            a(this, "isFilled", !1),
-            a(this, "loadInTimer", null);
+        r(this, "particles", []),
+            r(this, "wind", new n.Z()),
+            r(this, "alpha", 0),
+            r(this, "isFilled", !1),
+            r(this, "loadInTimer", null);
     }
 };

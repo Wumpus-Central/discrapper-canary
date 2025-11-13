@@ -37,23 +37,23 @@ let m = new Map(),
     N = !1,
     R = new Set(),
     P = new Map(),
-    w = new Map(),
-    D = {},
+    D = new Map(),
+    w = {},
     x = 0,
     L = (e) => {
         let { skuId: t } = e;
-        (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
+        (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (D = new Map(D)).delete(t);
     },
     M = (e) => {
         let { skuId: t, error: n } = e;
-        (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
+        (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (D = new Map(D)).set(t, Date.now());
     },
     j = (e) => {
         let { skuId: t, product: n } = e;
-        v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
+        v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (D = new Map(D)).delete(t);
     },
     k = (e) => {
-        (N = !0), (r = void 0), (a = void 0), (D = e.options);
+        (N = !0), (r = void 0), (a = void 0), (w = e.options);
     },
     U = (e) => {
         let { error: t } = e;
@@ -111,7 +111,7 @@ let m = new Map(),
             (R = new Set()),
             (r = void 0),
             (a = void 0),
-            (D = {}),
+            (w = {}),
             (x = 0);
     },
     Y = () => {
@@ -145,7 +145,7 @@ class K extends (o = l.ZP.Store) {
         return i;
     }
     get lastFetchOptions() {
-        return D;
+        return w;
     }
     get categories() {
         return O;
@@ -175,7 +175,7 @@ class K extends (o = l.ZP.Store) {
         return null != e ? P.get(e) : void 0;
     }
     getProductFetchErrorTimestamp(e) {
-        return null != e ? w.get(e) : void 0;
+        return null != e ? D.get(e) : void 0;
     }
     getProductByStoreListingId(e) {
         return null != e ? I.get(e) : void 0;

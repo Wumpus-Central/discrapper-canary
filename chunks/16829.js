@@ -79,7 +79,7 @@ let M = l.memo(function () {
             }),
         });
     }),
-    b = l.memo(function () {
+    x = l.memo(function () {
         return (0, r.jsx)(o.u, {
             text: C.intl.string(C.t.OrCp9h),
             children: (0, r.jsx)(u.Text, {
@@ -90,7 +90,7 @@ let M = l.memo(function () {
             }),
         });
     }),
-    x = {
+    b = {
         [p.gq.UNSPECIFIED]: {
             type: p.gq.UNSPECIFIED,
             getJoinTypeLabel: () => C.intl.string(C.t.DvMBkS),
@@ -328,7 +328,7 @@ function G(e) {
             "inviterUser",
             "onClickInviter",
         ]);
-    let N = null != n ? x[n] : null,
+    let N = null != n ? b[n] : null,
         h = n === p.gq.INTEGRATION && null != o,
         O = (0, d.q)(i),
         f = (0, a.e7)([m.Z], () => m.Z.getChannel(c)),
@@ -455,10 +455,10 @@ let k = l.memo(function (e) {
             joinSourceApplicationId: O,
             integrationType: f,
         } = E,
-        S = null != m ? x[m] : null,
+        S = null != m ? b[m] : null,
         C = null != (n = null == S ? void 0 : S.hasTooltip) && n;
     return (m === p.gq.INVITE || m === p.gq.VANITY_URL || (m === p.gq.MANUAL_MEMBER_VERIFICATION && null != T)) && A
-        ? (0, r.jsx)(b, {})
+        ? (0, r.jsx)(x, {})
         : (0, r.jsx)(j, {
               hasTooltip: C && !o,
               inviterUser: null != _ ? _ : null,

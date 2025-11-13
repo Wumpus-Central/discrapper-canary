@@ -1,7 +1,7 @@
 a.d(e, {
-    Mq: () => c,
+    Mq: () => E,
     Q3: () => i,
-    uE: () => E,
+    uE: () => c,
 });
 var r = a(617726),
     _ = a(967752),
@@ -14,10 +14,10 @@ function i(t, e, a, n) {
             ...(o && { sdk: o }),
             ...(!!n && e && { dsn: (0, _.RA)(e) }),
         },
-        c = "aggregates" in t ? [{ type: "sessions" }, t] : [{ type: "session" }, t.toJSON()];
-    return (0, r.Jd)(i, [c]);
+        E = "aggregates" in t ? [{ type: "sessions" }, t] : [{ type: "session" }, t.toJSON()];
+    return (0, r.Jd)(i, [E]);
 }
-function c(t, e, a, _) {
+function E(t, e, a, _) {
     var n;
     let o = (0, r.HY)(a),
         i = t.type && "replay_event" !== t.type ? t.type : "event";
@@ -27,19 +27,19 @@ function c(t, e, a, _) {
         (t.sdk.version = t.sdk.version || n.version),
         (t.sdk.integrations = [...(t.sdk.integrations || []), ...(n.integrations || [])]),
         (t.sdk.packages = [...(t.sdk.packages || []), ...(n.packages || [])]));
-    let c = (0, r.Cd)(t, o, _, e);
+    let E = (0, r.Cd)(t, o, _, e);
     delete t.sdkProcessingMetadata;
-    let E = [{ type: i }, t];
-    return (0, r.Jd)(c, [E]);
+    let c = [{ type: i }, t];
+    return (0, r.Jd)(E, [c]);
 }
-function E(t, e) {
+function c(t, e) {
     let a = (0, n.jC)(t[0]),
         i = e && e.getDsn(),
-        c = e && e.getOptions().tunnel,
-        E = {
+        E = e && e.getOptions().tunnel,
+        c = {
             sent_at: new Date().toISOString(),
             ...(!!a.trace_id && !!a.public_key && { trace: a }),
-            ...(!!c && i && { dsn: (0, _.RA)(i) }),
+            ...(!!E && i && { dsn: (0, _.RA)(i) }),
         },
         s = e && e.getOptions().beforeSendSpan,
         l = s ? (t) => s((0, o.XU)(t)) : (t) => (0, o.XU)(t),
@@ -48,5 +48,5 @@ function E(t, e) {
         let t = l(e);
         t && I.push((0, r.KQ)(t));
     }
-    return (0, r.Jd)(E, I);
+    return (0, r.Jd)(c, I);
 }

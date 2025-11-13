@@ -1,43 +1,43 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var l = n(399606),
     i = n(607070),
-    s = n(70097),
-    a = n(451478),
-    o = n(884697),
+    a = n(70097),
+    o = n(451478),
+    s = n(884697),
     c = n(813083),
     u = n(794324),
     d = n(388032),
-    p = n(638758);
-function g(e) {
+    g = n(638758);
+function p(e) {
     let { category: t } = e,
         n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
-        o = (0, l.e7)([a.Z], () => a.Z.isFocused()),
-        { catalogBannerStatic: g, catalogBannerAnimated: f } = (0, u.Oi)(t);
+        s = (0, l.e7)([o.Z], () => o.Z.isFocused()),
+        { catalogBannerStatic: p, catalogBannerAnimated: f } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
-        className: p.catalogBanner,
+        className: g.catalogBanner,
         children: [
             (0, r.jsx)("img", {
-                className: p.catalogBannerImage,
-                src: g,
+                className: g.catalogBannerImage,
+                src: p,
                 alt: t.name,
             }),
             null != f &&
                 !n &&
-                o &&
-                (0, r.jsx)(s.Z, {
+                s &&
+                (0, r.jsx)(a.Z, {
                     src: f,
-                    className: p.animationAsset,
+                    className: g.animationAsset,
                     autoPlay: !0,
                     loop: !0,
                 }),
             (0, r.jsx)(c.Z, {
                 category: t,
-                className: p.limitedTimeBadge,
+                className: g.limitedTimeBadge,
                 daysRemainingText: d.t["8gsP5M"],
             }),
         ],
     });
 }
-(0, o.IC)(90);
+(0, s.IC)(90);

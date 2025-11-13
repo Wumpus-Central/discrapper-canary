@@ -1,6 +1,6 @@
-n.d(t, { Z: () => f });
-var r,
-    i,
+n.d(t, { Z: () => h });
+var i,
+    r,
     l = n(392711),
     a = n.n(l),
     o = n(442837),
@@ -8,7 +8,7 @@ var r,
     c = n(430824);
 let u = null,
     d = {};
-class p extends (i = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -45,15 +45,15 @@ class p extends (i = o.ZP.Store) {
         return null != e ? d[e] : u;
     }
 }
-(r = "displayName") in p
-    ? Object.defineProperty(p, r, {
+(i = "displayName") in p
+    ? Object.defineProperty(p, i, {
           value: "RegionStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (p[r] = "RegionStore");
-let f = new p(s.Z, {
+    : (p[i] = "RegionStore");
+let h = new p(s.Z, {
     LOAD_REGIONS: function (e) {
         let t = a().sortBy(e.regions, (e) => e.name);
         null != e.guildId ? (d[e.guildId] = t) : (u = t);

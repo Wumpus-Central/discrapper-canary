@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(35282);
+n.d(t, { Z: () => O }), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -16,7 +16,7 @@ var r = n(951288),
     b = n(570911),
     x = n(388032),
     j = n(453921);
-function v(e) {
+function _(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         s = (0, d.nv)(),
         u = (0, d.qw)({
@@ -38,7 +38,7 @@ function v(e) {
         }),
     });
 }
-function _(e) {
+function v(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: l, canManageGuild: s } = e,
         o = null != n.customBanner,
         d = i.useMemo(() => {
@@ -92,20 +92,20 @@ function _(e) {
         }),
     });
 }
-function C(e) {
+function O(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
         m = (0, s.e7)([g.Z], () => g.Z.getGuild(n.id)),
         p = null != (t = null == m ? void 0 : m.features.has(h.GuildFeatures.DISCOVERABLE)) && t,
-        C = n.id,
-        O = i.useCallback(
+        O = n.id,
+        C = i.useCallback(
             (e) => () => {
-                f.Z.updateGuildProfile(C, {
+                f.Z.updateGuildProfile(O, {
                     brandColorPrimary: e,
                     customBanner: null,
                 });
             },
-            [C],
+            [O],
         ),
         y = i.useCallback((e) => (!p || null == n.customBanner) && e === n.brandColorPrimary, [n, p]);
     return (0, r.jsx)(c.gNt, {
@@ -113,10 +113,10 @@ function C(e) {
         children: (0, r.jsxs)("div", {
             className: j.grid,
             children: [
-                (0, r.jsx)(v, {
+                (0, r.jsx)(_, {
                     profile: n,
                     canManageGuild: u,
-                    handleClick: O(null),
+                    handleClick: C(null),
                     hasCustomBanner: p && null != n.customBanner,
                 }),
                 b.cb.map((e) => {
@@ -130,7 +130,7 @@ function C(e) {
                                 "aria-disabled": !u,
                                 tabIndex: u ? 0 : -1,
                                 "aria-label": t,
-                                onClick: u ? O(n) : void 0,
+                                onClick: u ? C(n) : void 0,
                                 style: { background: (0, d.dG)(n) },
                                 className: a()(j.itemContainer, { [j.disabled]: !u }),
                                 children: (0, r.jsx)("div", { className: a()({ [j.itemSelected]: y(n) }) }),
@@ -139,7 +139,7 @@ function C(e) {
                         t,
                     );
                 }),
-                (0, r.jsx)(_, {
+                (0, r.jsx)(v, {
                     canManageGuild: u,
                     isDiscoverable: p,
                     profile: n,

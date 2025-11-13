@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(366050),
     v = n(944486),
     I = n(594174),
-    S = n(566620),
-    T = n(317381),
+    T = n(566620),
+    S = n(317381),
     A = n(531826),
     C = n(175894),
     N = n(963614),
     R = n(917107),
     P = n(208156),
-    w = n(748492),
-    D = n(701488),
+    D = n(748492),
+    w = n(701488),
     x = n(918559),
     L = n(981631),
     M = n(354459),
@@ -89,10 +89,10 @@ function V(e) {
     var t, n, a;
     let { channel: _, isLoading: p } = e,
         [C, G] = i.useState(!1),
-        B = (0, s.e7)([T.ZP], () => T.ZP.getCurrentEmbeddedActivity()),
+        B = (0, s.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
         Z = null == B ? void 0 : B.applicationId,
-        F = (0, s.e7)([T.ZP], () => null != Z && T.ZP.isProxyTicketRefreshing(Z), [Z]),
-        V = (0, s.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        F = (0, s.e7)([S.ZP], () => null != Z && S.ZP.isProxyTicketRefreshing(Z), [Z]),
+        V = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
         H = (0, h.q)(Z),
         Y = null == B ? void 0 : B.launchId,
         W = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == _ ? void 0 : _.id)),
@@ -153,7 +153,7 @@ function V(e) {
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
         return ei && null != B && ((null == X ? void 0 : X.type) === M.fO.ACTIVITY || o)
             ? (null == (t = B.config) ? void 0 : t.useInteractivePIP)
-                ? (0, r.jsx)(w.of, {
+                ? (0, r.jsx)(D.of, {
                       onJumpToChannel: eo,
                       applicationId: B.applicationId,
                       channel: _,
@@ -167,13 +167,13 @@ function V(e) {
                       embeddedActivity: B,
                   })
                 : o
-                  ? (0, r.jsx)(w.q5, {
+                  ? (0, r.jsx)(D.q5, {
                         idle: a,
                         onMouseMove: n,
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            eo(), (0, S.tg)(x.Ez.PANEL);
+                            eo(), (0, T.tg)(x.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,
@@ -191,7 +191,7 @@ function V(e) {
                                   className: j.clickShield,
                                   onDoubleClick: eo,
                               }),
-                              (0, r.jsx)(w.YB, {
+                              (0, r.jsx)(D.YB, {
                                   idle: a,
                                   onMouseMove: n,
                                   onMouseDown: n,
@@ -209,7 +209,7 @@ function V(e) {
     if (
         (i.useEffect(() => {
             if (null != Z) {
-                let e = ei ? D.cE.PIP : D.cE.FOCUSED;
+                let e = ei ? w.cE.PIP : w.cE.FOCUSED;
                 c.Z.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
@@ -272,7 +272,7 @@ function V(e) {
                               })
                             : (0, r.jsx)(P.J, {
                                   allowPopups: (0, N.h)(H),
-                                  referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
+                                  referrerPolicy: w.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: eu,
                                   className: o()(j.iframe, {
@@ -285,7 +285,7 @@ function V(e) {
                               }),
                         !ei &&
                             null != _ &&
-                            (0, r.jsx)(w.Ds, {
+                            (0, r.jsx)(D.Ds, {
                                 participantsOpen: J,
                                 showToggleParticipants: !1,
                                 channelId: _.id,
@@ -299,7 +299,7 @@ function V(e) {
 let H = (e) => {
     var { channel: t } = e,
         n = Z(e, ["channel"]);
-    let i = T.ZP.getCurrentEmbeddedActivity();
+    let i = S.ZP.getCurrentEmbeddedActivity();
     (0, C.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
         o = null == i;

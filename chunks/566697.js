@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(158776),
     v = n(359135),
     I = n(516817),
-    S = n(388032),
-    T = n(63053),
+    T = n(388032),
+    S = n(63053),
     A = n(460400),
     C = n(943549);
 let N = {
@@ -37,8 +37,8 @@ let N = {
                 nameplate: a,
                 nameplateData: R,
                 className: P,
-                innerClassName: w,
-                isHighlighted: D,
+                innerClassName: D,
+                isHighlighted: w,
                 showStatus: x,
                 showPlaceholderUser: L,
                 pendingGlobalName: M,
@@ -81,8 +81,8 @@ let N = {
             ee = i.useMemo(
                 () =>
                     null != a
-                        ? S.intl.formatToPlainString(S.t.YJig7C, { a11y_text: a.label })
-                        : S.intl.string(S.t.SZeUdR),
+                        ? T.intl.formatToPlainString(T.t.YJig7C, { a11y_text: a.label })
+                        : T.intl.string(T.t.SZeUdR),
                 [a],
             );
         return (0, r.jsx)("div", {
@@ -93,12 +93,12 @@ let N = {
                 width: null != F ? "".concat(F, "px") : "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
-                className: o()(P, T.nameplatePreview, {
-                    [T.nameplatePurchased]: B && !D,
-                    [T.small]: "small" === G,
-                    [T.large]: "large" === G,
-                    [T.xlarge]: "xlarge" === G,
-                    [T.inheritWidth]: null != F,
+                className: o()(P, S.nameplatePreview, {
+                    [S.nameplatePurchased]: B && !w,
+                    [S.small]: "small" === G,
+                    [S.large]: "large" === G,
+                    [S.xlarge]: "xlarge" === G,
+                    [S.inheritWidth]: null != F,
                 }),
                 children: [
                     null != Y &&
@@ -106,18 +106,18 @@ let N = {
                             I.Z,
                             {
                                 nameplate: Y,
-                                hovered: D,
+                                hovered: w,
                                 placement: v.i.PREVIEW,
                                 content: L ? void 0 : z,
                             },
                             null == a ? void 0 : a.skuId,
                         ),
                     (0, r.jsxs)("div", {
-                        className: T.overlayContainer,
+                        className: S.overlayContainer,
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(T.avatarContainer, !L && T.avatarVisible),
+                                      className: o()(S.avatarContainer, !L && S.avatarVisible),
                                       children: (0, r.jsx)(d.Z, {
                                           ref: z,
                                           avatar: (0, r.jsx)(f.Z, {
@@ -131,7 +131,7 @@ let N = {
                                           decorators: (0, r.jsx)(g.ZP, {
                                               userId: t.id,
                                               contextGuildId: n,
-                                              className: T.tagChiplet,
+                                              className: S.tagChiplet,
                                           }),
                                           name: (0, r.jsx)(m.Z, {
                                               userName: X,
@@ -139,13 +139,13 @@ let N = {
                                               effectDisplayType: Z ? h.F.PLAIN : h.F.ANIMATED,
                                               loop: !0,
                                           }),
-                                          innerClassName: w,
+                                          innerClassName: D,
                                           withDisplayNameStyles: null != $,
                                       }),
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(T.avatarContainer, L && T.avatarVisible),
+                                className: o()(S.avatarContainer, L && S.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: H ? A : C,
@@ -153,9 +153,9 @@ let N = {
                                         "aria-hidden": !0,
                                         status: c.Skl.ONLINE,
                                         statusColor: K,
-                                        className: T.avatar,
+                                        className: S.avatar,
                                     }),
-                                    (0, r.jsx)("div", { className: T.placeholderUsername }),
+                                    (0, r.jsx)("div", { className: S.placeholderUsername }),
                                 ],
                             }),
                         ],

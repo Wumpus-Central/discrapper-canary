@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(317941),
     R = n(342386),
     P = n(518596),
-    w = n(981631),
-    D = n(474936),
+    D = n(981631),
+    w = n(474936),
     x = n(388032),
     L = n(666707);
 function M(e, t, n) {
@@ -193,7 +193,7 @@ let B = function () {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        a = (0, c.e7)([I.default], () => A.ZP.isPremiumExactly(I.default.getCurrentUser(), D.PremiumTypes.TIER_2)),
+        a = (0, c.e7)([I.default], () => A.ZP.isPremiumExactly(I.default.getCurrentUser(), w.PremiumTypes.TIER_2)),
         s = l().groupBy(t, (e) => (0, S.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [_, p] = i.useState(!1);
     i.useEffect(() => {
@@ -218,15 +218,15 @@ let B = function () {
                 },
             ).enabled && k;
     function B() {
-        (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
+        (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
     }
     function Z() {
         var e;
-        let t = n.find((e) => e.giftCodeBatchId === D.m8 && !e.consumed),
-            i = null != (e = n.filter((e) => e.giftCodeBatchId === D.rX && !e.consumed)) ? e : [],
+        let t = n.find((e) => e.giftCodeBatchId === w.m8 && !e.consumed),
+            i = null != (e = n.filter((e) => e.giftCodeBatchId === w.rX && !e.consumed)) ? e : [],
             [s, c] = l().partition(i, (e) => {
                 let { subscriptionPlanId: t } = e;
-                return t === D.Xh.PREMIUM_YEAR_TIER_2;
+                return t === w.Xh.PREMIUM_YEAR_TIER_2;
             }),
             d = (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
@@ -246,14 +246,14 @@ let B = function () {
                               className: L.promoDescription,
                               children: x.intl.format(x.t.G4fwxK, {
                                   onClick: () => {
-                                      (0, R.default)(), (0, v.uL)(w.Z5c.APPLICATION_STORE);
+                                      (0, R.default)(), (0, v.uL)(D.Z5c.APPLICATION_STORE);
                                   },
                               }),
                           }),
                           (0, r.jsx)(y.Z, {
                               showGradient: !0,
                               className: L.promoNitroButton,
-                              subscriptionTier: D.Si.TIER_2,
+                              subscriptionTier: w.Si.TIER_2,
                               textOptions: { textOverride: x.intl.string(x.t.mr4K7D) },
                           }),
                       ],
@@ -306,7 +306,7 @@ let B = function () {
                                           skuId: t.skuId,
                                           subscriptionPlanId: t.subscriptionPlanId,
                                           entitlements: [t],
-                                          giftCodeBatchId: D.m8,
+                                          giftCodeBatchId: w.m8,
                                       },
                                       (0, S.Bg)(t.skuId, t.subscriptionPlanId),
                                   )
@@ -319,7 +319,7 @@ let B = function () {
                                           skuId: s[0].skuId,
                                           subscriptionPlanId: s[0].subscriptionPlanId,
                                           entitlements: s,
-                                          giftCodeBatchId: D.rX,
+                                          giftCodeBatchId: w.rX,
                                       },
                                       (0, S.Bg)(s[0].skuId, s[0].subscriptionPlanId),
                                   )
@@ -332,7 +332,7 @@ let B = function () {
                                           skuId: c[0].skuId,
                                           subscriptionPlanId: c[0].subscriptionPlanId,
                                           entitlements: c,
-                                          giftCodeBatchId: D.rX,
+                                          giftCodeBatchId: w.rX,
                                       },
                                       (0, S.Bg)(c[0].skuId, c[0].subscriptionPlanId),
                                   )

@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(258609),
     y = n(74299),
     x = n(924301),
-    v = n(459502),
+    O = n(459502),
     j = n(856691),
-    O = n(728285),
+    v = n(728285),
     C = n(357156),
     I = n(923973),
     S = n(829750),
@@ -113,7 +113,7 @@ function ec(e) {
 }
 function ed(e) {
     let { channel: t, onSelect: n } = e,
-        o = (0, O.bp)(),
+        o = (0, v.bp)(),
         { canManageGuildEvent: c } = (0, C.XJ)(t),
         p = (0, l.e7)([Y.Z], () => Y.Z.getStageInstanceByChannel(t.id), [t.id]),
         h = (0, l.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
@@ -121,7 +121,7 @@ function ed(e) {
         g = M.default.getId(),
         [_] = (0, er.Z)(t),
         y = W.ZP.isModerator(g, t.id),
-        v = (0, V.B)(t.id),
+        O = (0, V.B)(t.id),
         j = c(h),
         { parentAnalyticsLocation: I } = (0, u.ZP)(),
         S = i.useRef(null),
@@ -172,7 +172,7 @@ function ed(e) {
                   });
               },
           })
-        : (f && !v) || _
+        : (f && !O) || _
           ? (0, r.jsx)(A.Z, {
                 label: el.intl.string(el.t.SMKyih),
                 onClick: E,
@@ -229,8 +229,8 @@ let eh = i.memo(function (e) {
         d = (0, V.B)(t.id),
         m = (0, ee.Z)(t.id),
         x = (0, l.e7)([_.default], () => null != _.default.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: v, enabled: j } = (0, I.Z)(),
-        O = (0, E.Z)(t),
+        { cameraUnavailable: O, enabled: j } = (0, I.Z)(),
+        v = (0, E.Z)(t),
         { limit: C, reachedLimit: w } = (0, S.Z)(t),
         A = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
         M = (0, l.e7)([k.Z], () => (0, y.Z)(k.Z)),
@@ -265,9 +265,9 @@ let eh = i.memo(function (e) {
             return (0, r.jsx)(L.C, {
                 ref: K,
                 centerButton: !0,
-                hasPermission: O,
+                hasPermission: v,
                 enabled: j,
-                cameraUnavailable: v,
+                cameraUnavailable: O,
                 onChange: P.r,
                 onCameraUnavailable: N.Z,
                 channelLimitReached: w,
@@ -335,7 +335,7 @@ let eh = i.memo(function (e) {
                               currentUser: A,
                               exitFullScreen: () => null,
                               canGoLive: M,
-                              hasPermission: O,
+                              hasPermission: v,
                               disabled: W,
                           })
                         : null,
@@ -381,7 +381,7 @@ let eg = i.memo(function (e) {
                     (0, r.jsxs)("div", {
                         className: ea.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(v.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, r.jsx)(O.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: ea.separator }),
                             u && s && !o
                                 ? (0, r.jsx)(j.Z, {

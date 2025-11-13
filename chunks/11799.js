@@ -25,8 +25,8 @@ let p = () => {
                 loading: O,
                 items: v,
                 hasMore: j,
-                cursor: C,
-                errored: x,
+                cursor: x,
+                errored: C,
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -46,9 +46,9 @@ let p = () => {
         let I = (0, o.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (x || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !I() && (C || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, v, p, I, x],
+            [n, v, p, I, C],
         ),
             r.useEffect(() => {
                 let e = g && t;
@@ -65,13 +65,13 @@ let p = () => {
                 !m.current &&
                     y &&
                     j &&
-                    null != C &&
-                    (e || !x) &&
+                    null != x &&
+                    (e || !C) &&
                     ((m.current = !0),
                     _(!0),
                     await (0, s.jk)(
                         {
-                            after: C,
+                            after: x,
                             with_mentions: h,
                             roles_filter: E,
                             everyone_filter: S,
@@ -83,7 +83,7 @@ let p = () => {
                     ),
                     _(!1));
             },
-            [y, j, C, x, h, E, S],
+            [y, j, x, C, h, E, S],
         );
         return {
             initialized: y,
@@ -95,7 +95,7 @@ let p = () => {
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: x,
+            errored: C,
         };
     })({
         isFocused: !0,

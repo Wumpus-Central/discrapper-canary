@@ -13,7 +13,7 @@ n.d(t, {
     gj: () => _,
     kN: () => A,
     lb: () => O,
-    o0: () => D,
+    o0: () => w,
     o8: () => R,
     xg: () => x,
     yf: () => h,
@@ -441,8 +441,8 @@ let P = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: f.a.PREMIUM_TIER_2_3_DAY,
     },
-    w = new Set(Object.values(P)),
-    D = (e) => w.has(e),
+    D = new Set(Object.values(P)),
+    w = (e) => D.has(e),
     x = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     L = [
         {

@@ -1,25 +1,25 @@
 n.d(t, { Z: () => d });
-var i = n(951288),
-    l = n(647438),
-    r = n(120356),
-    a = n.n(r),
-    o = n(481060),
-    s = n(695676),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(695676),
     c = n(388032),
     u = n(943509);
 function d(e) {
     let { className: t } = e,
-        { goBack: n } = (0, s.hH)(),
-        r = l.useCallback(() => {
+        { goBack: n } = (0, l.hH)(),
+        a = i.useCallback(() => {
             n();
         }, [n]);
-    return (0, i.jsx)(o.P3F, {
-        onClick: r,
-        className: a()(u.clickable, t),
+    return (0, r.jsx)(s.P3F, {
+        onClick: a,
+        className: o()(u.clickable, t),
         "aria-label": c.intl.string(c.t.ybUZql),
-        children: (0, i.jsx)(o.j9r, {
+        children: (0, r.jsx)(s.j9r, {
             size: "sm",
-            color: o.TVs.colors.INTERACTIVE_ACTIVE,
+            color: s.TVs.colors.INTERACTIVE_ACTIVE,
         }),
     });
 }

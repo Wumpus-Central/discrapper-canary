@@ -24,8 +24,8 @@ function E(e, t, n) {
     var E, y, O, v, I, T;
     let { node: S, isVirtualized: A } = e,
         { direction: C } = (0, h.j)(),
-        { onAction: N, linkBehavior: R, keyboardNavigationBehavior: P, shouldSelectOnPressUp: w } = r.Co.get(t),
-        D = (0, i.mp)(),
+        { onAction: N, linkBehavior: R, keyboardNavigationBehavior: P, shouldSelectOnPressUp: D } = r.Co.get(t),
+        w = (0, i.mp)(),
         x = (0, f.useRef)(null),
         L = () => {
             var e;
@@ -62,7 +62,7 @@ function E(e, t, n) {
             key: S.key,
             ref: n,
             isVirtualized: A,
-            shouldSelectOnPressUp: e.shouldSelectOnPressUp || w,
+            shouldSelectOnPressUp: e.shouldSelectOnPressUp || D,
             onAction:
                 N || (null == (E = S.props) ? void 0 : E.onAction)
                     ? (0, a.t)(null == (y = S.props) ? void 0 : y.onAction, N ? () => N(S.key) : void 0)
@@ -164,7 +164,7 @@ function E(e, t, n) {
             "aria-label": S.textValue || void 0,
             "aria-selected": t.selectionManager.canSelectItem(S.key) ? t.selectionManager.isSelected(S.key) : void 0,
             "aria-disabled": t.selectionManager.isDisabled(S.key) || void 0,
-            "aria-labelledby": D && S.textValue ? `${(0, r.XQ)(t, S.key)} ${D}` : void 0,
+            "aria-labelledby": w && S.textValue ? `${(0, r.XQ)(t, S.key)} ${w}` : void 0,
             id: (0, r.XQ)(t, S.key),
         });
     if (A) {
@@ -186,7 +186,7 @@ function E(e, t, n) {
     return {
         rowProps: { ...(0, c.d)(Y, M) },
         gridCellProps: W,
-        descriptionProps: { id: D },
+        descriptionProps: { id: w },
         ...G,
     };
 }

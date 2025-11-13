@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(979554),
-    s = n(887003),
+    s = n(979554),
+    o = n(887003),
     c = n(442837),
     u = n(780384),
     d = n(481060),
@@ -42,11 +42,11 @@ let j = (0, i.memo)(function (e) {
         }),
         Y = null != (P = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? P : 0,
         W = A.config.rewards[Y],
-        q = (null == W ? void 0 : W.type) === s.w.FRACTIONAL_PREMIUM,
-        K = (null == W ? void 0 : W.type) === s.w.COLLECTIBLE,
-        Q = (null == W ? void 0 : W.type) === s.w.VIRTUAL_CURRENCY,
+        q = (null == W ? void 0 : W.type) === o.w.FRACTIONAL_PREMIUM,
+        K = (null == W ? void 0 : W.type) === o.w.COLLECTIBLE,
+        Q = (null == W ? void 0 : W.type) === o.w.VIRTUAL_CURRENCY,
         J = null == W || null == (j = W.collectibleProduct) || null == (l = j.items) ? void 0 : l[0],
-        X = (null == J ? void 0 : J.type) === o.Z.AVATAR_DECORATION ? J : null;
+        X = (null == J ? void 0 : J.type) === s.Z.AVATAR_DECORATION ? J : null;
     (0, p.PM)(k, (e) => {
         let { height: t } = e;
         if (!K || null == t || null == U.current || null == k.current || null == G.current) return;
@@ -82,7 +82,7 @@ let j = (0, i.memo)(function (e) {
             }
             return i;
         })(er, ["content_position", "row_index"]),
-        eo = () => {
+        es = () => {
             w(!0),
                 _.default.track(
                     S.rMx.QUEST_HOVER,
@@ -113,7 +113,7 @@ let j = (0, i.memo)(function (e) {
                     })({ quest_id: A.id }, ea),
                 );
         },
-        es = () => {
+        eo = () => {
             w(!1);
         },
         ec = (e) => {
@@ -130,10 +130,10 @@ let j = (0, i.memo)(function (e) {
               children: (0, r.jsxs)("div", {
                   ref: k,
                   tabIndex: 0,
-                  onFocus: eo,
-                  onBlur: es,
-                  onMouseEnter: eo,
-                  onMouseLeave: es,
+                  onFocus: es,
+                  onBlur: eo,
+                  onMouseEnter: es,
+                  onMouseLeave: eo,
                   className: a()(N.container, { [N.hovered]: Z }),
                   children: [
                       null != B &&

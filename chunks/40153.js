@@ -1,5 +1,5 @@
 n.d(t, {
-    OG: () => C,
+    OG: () => x,
     ZP: () => v,
     Zu: () => j,
 }),
@@ -141,7 +141,7 @@ function j(e) {
         }),
     });
 }
-function C(e) {
+function x(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)("div", {

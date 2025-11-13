@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var a = n(951288),
-    r = n(647438),
-    i = n(371286),
+    i = n(647438),
+    r = n(371286),
     l = n(785717),
     s = n(836197),
     o = n(299560),
@@ -17,30 +17,30 @@ function p(e) {
             if (null == e) return {};
             var n,
                 a,
-                r = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         a,
-                        r = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                        i = {},
+                        r = Object.keys(e);
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++)
-                    (n = i[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < r.length; a++)
+                    (n = r[a]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
     let { trackUserProfileEditAction: g } = (0, l.KZ)(),
         f = c.rR.filter((e) => s.Ki.includes(e)),
-        b = r.useCallback(() => {
+        b = i.useCallback(() => {
             h(d.L.TAKE_ACTION), g({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, g]);
     return (0, a.jsx)(
-        i.Z,
+        r.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

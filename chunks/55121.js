@@ -1,71 +1,71 @@
 e.d(n, { M: () => x });
-var i = e(951288);
+var a = e(951288);
 e(647438);
-var a = e(120356),
-    s = e.n(a),
+var i = e(120356),
+    s = e.n(i),
     o = e(793030),
     r = e(481060),
-    l = e(22928),
-    c = e(438926),
-    u = e(388032),
-    d = e(475495);
+    c = e(22928),
+    l = e(438926),
+    d = e(388032),
+    u = e(475495);
 function x(t) {
     let {
         sku: n,
         application: e,
-        primaryCTAButtonProps: a,
+        primaryCTAButtonProps: i,
         transitionState: s,
-        onClose: l,
+        onClose: c,
         hasAlreadyLinked: x,
-        canStartAuthorization: p,
-        bodyText: m,
-        title: g,
+        canStartAuthorization: m,
+        bodyText: g,
+        title: p,
     } = t;
-    return (0, i.jsxs)(o.IX, {
+    return (0, a.jsxs)(o.IX, {
         transitionState: s,
-        onClose: l,
+        onClose: c,
         children: [
-            (0, i.jsx)(c.y, {
+            (0, a.jsx)(l.y, {
                 sku: n,
-                title: g,
+                title: p,
             }),
-            (0, i.jsxs)(o.fef, {
+            (0, a.jsxs)(o.fef, {
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: d.modalBody,
+                    (0, a.jsxs)("div", {
+                        className: u.modalBody,
                         children: [
-                            (0, i.jsx)(r.Text, {
+                            (0, a.jsx)(r.Text, {
                                 variant: "text-md/normal",
-                                className: d.modalBodyText,
-                                children: m,
+                                className: u.modalBodyText,
+                                children: g,
                             }),
-                            (0, i.jsx)(f, {
+                            (0, a.jsx)(f, {
                                 isConnected: x,
                                 application: e,
                             }),
                         ],
                     }),
-                    !p &&
+                    !m &&
                         !x &&
-                        (0, i.jsx)(r.Text, {
+                        (0, a.jsx)(r.Text, {
                             variant: "text-md/normal",
-                            className: d.cannotLinkAccountWarning,
+                            className: u.cannotLinkAccountWarning,
                             color: "text-feedback-warning",
-                            children: u.intl.string(u.t.GDL8wb),
+                            children: d.intl.string(d.t.GDL8wb),
                         }),
                     !x &&
-                        (0, i.jsx)("div", {
-                            className: d.expirationWarningContainer,
-                            children: (0, i.jsx)(r.Text, {
+                        (0, a.jsx)("div", {
+                            className: u.expirationWarningContainer,
+                            children: (0, a.jsx)(r.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-secondary",
-                                children: u.intl.formatToPlainString(u.t.TTj7ME, { numDays: 14 }),
+                                children: d.intl.formatToPlainString(d.t.TTj7ME, { numDays: 14 }),
                             }),
                         }),
                 ],
             }),
-            (0, i.jsx)(o.Go$, {
-                actions: [a],
+            (0, a.jsx)(o.Go$, {
+                actions: [i],
                 actionsFullWidth: !0,
             }),
         ],
@@ -73,40 +73,40 @@ function x(t) {
 }
 function f(t) {
     let { isConnected: n, application: e } = t;
-    return (0, i.jsx)("div", {
-        className: d.statusContainer,
-        children: (0, i.jsxs)("div", {
-            className: d.statusRow,
+    return (0, a.jsx)("div", {
+        className: u.statusContainer,
+        children: (0, a.jsxs)("div", {
+            className: u.statusRow,
             children: [
-                (0, i.jsxs)("div", {
-                    className: d.statusLeft,
+                (0, a.jsxs)("div", {
+                    className: u.statusLeft,
                     children: [
-                        (0, i.jsx)("div", {
-                            className: s()(d.statusIcon, {
-                                [d.statusIconConnected]: n,
-                                [d.statusIconDisconnected]: !n,
+                        (0, a.jsx)("div", {
+                            className: s()(u.statusIcon, {
+                                [u.statusIconConnected]: n,
+                                [u.statusIconDisconnected]: !n,
                             }),
                             children: n
-                                ? (0, i.jsx)(r.dz2, {
+                                ? (0, a.jsx)(r.dz2, {
                                       size: "sm",
                                       color: "currentColor",
                                   })
-                                : (0, i.jsx)(r.Dio, {
+                                : (0, a.jsx)(r.Dio, {
                                       size: "sm",
                                       color: "currentColor",
                                   }),
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, a.jsx)(r.Text, {
                             variant: "text-md/normal",
-                            className: d.statusText,
+                            className: u.statusText,
                             color: "text-secondary",
-                            children: n ? u.intl.string(u.t["LV+CXH"]) : u.intl.string(u.t.Plv1Xk),
+                            children: n ? d.intl.string(d.t["LV+CXH"]) : d.intl.string(d.t.Plv1Xk),
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", {
-                    className: d.statusRight,
-                    children: (0, i.jsx)(l.h, {
+                (0, a.jsx)("div", {
+                    className: u.statusRight,
+                    children: (0, a.jsx)(c.h, {
                         application: e,
                         iconSize: 20,
                     }),

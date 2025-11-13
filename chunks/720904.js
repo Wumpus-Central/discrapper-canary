@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(781311);
+n.d(t, { Z: () => E }), n(781311);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -19,7 +19,7 @@ var i = n(120356),
     m = n(388032),
     v = n(561782);
 let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
-function E(e) {
+function S(e) {
     let { emoji: t, isFocused: n } = e,
         { animated: i, src: a, surrogates: s } = t;
     return (
@@ -53,7 +53,7 @@ function E(e) {
         })
     );
 }
-function S(e, t) {
+function E(e, t) {
     let n = (0, c.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
@@ -80,7 +80,7 @@ function S(e, t) {
                           id: "quickreact-".concat(null != (l = n.id) ? l : i),
                           render: (e) => {
                               let { isFocused: t } = e;
-                              return (0, r.jsx)(E, {
+                              return (0, r.jsx)(S, {
                                   emoji: n,
                                   isFocused: t,
                               });

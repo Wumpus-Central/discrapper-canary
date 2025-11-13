@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => N,
-    _: () => E,
+    Z: () => E,
+    _: () => N,
 }),
     n(388685);
 var r = n(951288),
@@ -20,14 +20,14 @@ var r = n(951288),
     b = n(103576),
     x = n(130341),
     j = n(853813),
-    v = n(163249),
-    _ = n(150689),
-    C = n(203377),
-    O = n(981631);
+    _ = n(163249),
+    v = n(150689),
+    O = n(203377),
+    C = n(981631);
 function y(e) {
     p.Z.selectRole(e);
 }
-let E = () => {
+let N = () => {
     let { guild: e } = (0, s.cj)([f.Z], () => f.Z.getProps()),
         t = (0, s.e7)([b.Z], () => b.Z.formState),
         n = (0, s.e7)([b.Z], () => b.Z.errorMessage);
@@ -44,11 +44,11 @@ let E = () => {
                 ((l = b.Z.editedRoleIdsForConfigurations), (i = b.Z.getEditedRoleConnectionConfigurationsMap())),
                 (0, h.Gf)(t, n, r, l, i);
         },
-        submitting: t === O.QZA.SUBMITTING,
+        submitting: t === C.QZA.SUBMITTING,
         onReset: h.S1,
     });
 };
-function N(e) {
+function E(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, s.cj)(
             [b.Z],
@@ -63,35 +63,35 @@ function N(e) {
     a()(null != o, "Guild must have an everyone role");
     let m = i.useMemo(() => l.filter((e) => !(0, u.fI)(e)), [l]),
         p = (0, s.e7)([f.Z], () => f.Z.getSelectedRoleId()),
-        [h, O] = i.useState(m.length > 0);
+        [h, C] = i.useState(m.length > 0);
     i.useEffect(() => {
-        O(h || m.length > 0);
+        C(h || m.length > 0);
     }, [h, m.length]),
         (0, d.ZP)(() => {
             let e = g.Z.getMemberCount(n.id);
             null != e && e <= x.cm && c.Z.requestMembers(n.id, "", 0, !1);
         });
-    let [E, N] = i.useState(C.ZI.DISPLAY);
+    let [N, E] = i.useState(O.ZI.DISPLAY);
     return (i.useEffect(() => {
-        null == p && N(C.ZI.DISPLAY);
+        null == p && E(O.ZI.DISPLAY);
     }, [p]),
     null != p)
         ? (0, r.jsx)(j.Z, {
               editRoleId: p,
               setEditRoleId: y,
-              selectedSection: E,
-              setSelectedSection: N,
+              selectedSection: N,
+              setSelectedSection: E,
           })
         : h
-          ? (0, r.jsx)(_.Z, {
+          ? (0, r.jsx)(v.Z, {
                 setEditRoleId: y,
                 guild: n,
                 everyoneRole: o,
                 otherRoles: m,
-                setSelectedSection: N,
+                setSelectedSection: E,
                 refToScroller: t,
             })
-          : (0, r.jsx)(v.Z, {
+          : (0, r.jsx)(_.Z, {
                 guild: n,
                 everyoneRole: o,
                 setEditRoleId: y,

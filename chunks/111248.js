@@ -1,6 +1,6 @@
-n.d(t, { Z: () => y }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => C }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -9,83 +9,83 @@ var r = n(951288),
     u = n(598006),
     d = n(241915),
     p = n(366050),
-    f = n(27457),
-    h = n(981631),
+    h = n(27457),
+    f = n(981631),
     m = n(354459),
     g = n(330831),
     b = n(315091);
-let _ = "CameraPreviewPosition";
-function y(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: C, onSelectParticipant: v } = e,
-        [O, x] = (function () {
-            let [e, t] = i.useState(() => s.K.get(_, h.VD2.BOTTOM_RIGHT));
+let y = "CameraPreviewPosition";
+function C(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: C, participants: v, onSelectParticipant: _ } = e,
+        [x, j] = (function () {
+            let [e, t] = r.useState(() => s.K.get(y, f.VD2.BOTTOM_RIGHT));
             return [
                 e,
-                i.useCallback((e) => {
-                    s.K.set(_, e), t(e);
+                r.useCallback((e) => {
+                    s.K.set(y, e), t(e);
                 }, []),
             ];
         })(),
-        E = i.useRef(null),
-        j = null == y.getGuildId() ? 70 : 50,
+        O = r.useRef(null),
+        E = null == C.getGuildId() ? 70 : 50,
         S = (0, o.e7)([p.Z], () => p.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        P = C.length,
+        P = v.length,
         I = S * P + 8 * (P - 1),
-        Z = i.useMemo(
+        Z = r.useMemo(
             () => ({
                 minWidth: m.Rv[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
                 maxWidth: m.$i[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
             }),
             [P],
         );
-    i.useLayoutEffect(() => {
+    r.useLayoutEffect(() => {
         var e;
-        null == (e = E.current) || e.ensureIsInPosition();
-    }, [C.length]);
-    let T = i.useCallback(
+        null == (e = O.current) || e.ensureIsInPosition();
+    }, [v.length]);
+    let T = r.useCallback(
             (e) => {
                 let t = 0 === P ? e : (e - 8 * (P - 1)) / P;
                 c.d7(t, m.cL.CAMERA_PREVIEW);
             },
             [P],
         ),
-        N = i.useCallback(
+        N = r.useCallback(
             (e, t) => {
-                x(t);
+                j(t);
             },
-            [x],
+            [j],
         );
-    return (0, r.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: g.container,
-        children: (0, r.jsx)(d._, {
-            position: O,
+        children: (0, i.jsx)(d._, {
+            position: x,
             id: 0,
             width: I,
-            ref: E,
+            ref: O,
             onMove: N,
             onResize: T,
             maxX: t,
             maxY: l,
-            edgeOffsetTop: j,
+            edgeOffsetTop: E,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
             resizeConfig: Z,
-            children: (0, r.jsx)("div", {
+            children: (0, i.jsx)("div", {
                 className: g.tileContainer,
-                children: C.map((e) =>
-                    (0, r.jsx)(
-                        f.ZP,
+                children: v.map((e) =>
+                    (0, i.jsx)(
+                        h.ZP,
                         {
                             participant: e,
-                            channel: y,
+                            channel: C,
                             onContextMenu: n,
                             className: a()(g.tile, b.elevationHigh),
-                            fit: f.BP.COVER,
+                            fit: h.BP.COVER,
                             inCall: !0,
                             popoutType: u.P.NO_POPOUT,
                             width: 160,
-                            onClick: v,
+                            onClick: _,
                         },
                         e.id,
                     ),

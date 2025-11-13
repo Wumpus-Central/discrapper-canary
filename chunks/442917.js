@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(863908),
     R = n(803647),
     P = n(266910),
-    w = n(788983),
-    D = n(703656),
+    D = n(788983),
+    w = n(703656),
     x = n(937995),
     L = n(618158),
     M = n(922745),
@@ -279,7 +279,7 @@ class ef extends i.PureComponent {
                 let { channel: t } = this.props;
                 (0, h.Ou)();
                 let n = null != (e = t.getGuildId()) ? e : ei.ME;
-                (0, D.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
+                (0, w.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
                 null != r && _.Z.selectParticipant(r.channelId, (0, A.V9)(r));
             }),
@@ -295,7 +295,7 @@ class ef extends i.PureComponent {
             }),
             el(this, "handleOpenPopout", () => {
                 let { channel: e } = this.props;
-                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), w.hP(e);
+                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), D.hP(e);
             }),
             el(this, "renderBottomLeftControls", () => {
                 let { canSeeParticipantName: e } = this.viewProperties;

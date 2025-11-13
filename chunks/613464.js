@@ -26,7 +26,7 @@ function p(e) {
         U = (0, O.m)(n),
         L = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
         M = (0, a.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]),
-        [b, x] = l.useState(null == L || null == M),
+        [x, b] = l.useState(null == L || null == M),
         v = (0, c.Z)(M),
         P = l.useRef(null),
         { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
@@ -36,20 +36,20 @@ function p(e) {
         U || i();
     }, [U, i]),
     l.useEffect(() => {
-        null == v || null != M || b || i();
-    }, [b, M, i, v]),
+        null == v || null != M || x || i();
+    }, [x, M, i, v]),
     l.useEffect(() => {
-        null != L && null != M && x(!1);
+        null != L && null != M && b(!1);
     }, [L, M]),
     l.useEffect(() => {
         let e = null == M;
         return (
-            !b && e && (P.current = window.setTimeout(i, 500)),
+            !x && e && (P.current = window.setTimeout(i, 500)),
             () => {
                 null != P.current && window.clearTimeout(P.current);
             }
         );
-    }, [b, M, i]),
+    }, [x, M, i]),
     (0, d.$)({ [n]: [t] }, "GuildMemberModViewSidebar"),
     l.useEffect(() => {
         !(async function () {
@@ -61,17 +61,17 @@ function p(e) {
                     dispatchWait: !0,
                 }),
             ];
-            await Promise.all(e), x(!1);
+            await Promise.all(e), b(!1);
         })();
     }, [n, t]),
     U)
-        ? b || null == L || null == M
+        ? x || null == L || null == M
             ? (0, r.jsx)("div", {
                   className: s()(S.sidebarContainer, S.loadingContainer, p),
                   style: D,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
-                      type: b ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
+                      type: x ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
                   }),
               })
             : (0, r.jsx)(A.Gt, {

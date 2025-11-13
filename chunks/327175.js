@@ -1,12 +1,12 @@
 n.d(e, { Z: () => c });
 var i = n(818710),
     l = n(442837),
-    r = n(223245),
-    u = n(509613),
+    u = n(223245),
+    r = n(509613),
     s = n(246946),
     a = n(313789),
     o = n(388032);
-let c = (0, u.qs)(a.n.STREAMING_AUTO_STREAMER_MODE, {
+let c = (0, r.qs)(a.n.STREAMING_AUTO_STREAMER_MODE, {
     useTitle: () => o.intl.string(o.t.IxjaoF),
     usePredicate: function () {
         return i.FB;
@@ -18,6 +18,6 @@ let c = (0, u.qs)(a.n.STREAMING_AUTO_STREAMER_MODE, {
         });
     },
     setValue: function (t) {
-        r.Z.update({ autoToggle: t });
+        u.Z.update({ autoToggle: t });
     },
 });

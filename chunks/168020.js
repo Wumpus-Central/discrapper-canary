@@ -1,19 +1,19 @@
-n.d(t, { R: () => o }), n(35282);
+n.d(t, { R: () => s }), n(35282);
 var r = n(951288);
 n(647438);
 var l = n(481060),
     i = n(774078),
-    s = n(388032),
-    a = n(64092);
-let o = (e) => {
+    a = n(388032),
+    o = n(64092);
+let s = (e) => {
     let { endDate: t, size: n = "md" } = e,
-        { days: o, hours: c, minutes: u } = (0, i.Z)(t),
+        { days: s, hours: c, minutes: u } = (0, i.Z)(t),
         d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
-        })(o, c, u);
+        })(s, c, u);
     return (0, r.jsxs)("div", {
-        className: a.container,
+        className: o.container,
         role: "timer",
         children: [
             d.split("").map((e, t) =>
@@ -23,7 +23,7 @@ let o = (e) => {
                           {
                               color: "none",
                               variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
-                              className: a.delineator,
+                              className: o.delineator,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -35,7 +35,7 @@ let o = (e) => {
                           {
                               color: "always-white",
                               variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
-                              className: a.number,
+                              className: o.number,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -44,8 +44,8 @@ let o = (e) => {
                       ),
             ),
             (0, r.jsx)(l.nn4, {
-                children: s.intl.format(s.t.j6IyVe, {
-                    days: o,
+                children: a.intl.format(a.t.j6IyVe, {
+                    days: s,
                     hours: c,
                     minutes: u,
                 }),

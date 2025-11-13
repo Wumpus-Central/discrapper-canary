@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(28664),
     p = n(780384),
     f = n(755721),
-    m = n(481060),
-    h = n(570140),
-    g = n(239091),
+    h = n(481060),
+    g = n(570140),
+    m = n(239091),
     _ = n(51025),
     b = n(785547),
     E = n(730749),
     O = n(112724),
-    I = n(812206),
-    y = n(44315),
-    v = n(600164),
+    y = n(812206),
+    v = n(44315),
+    I = n(600164),
     C = n(167533),
     S = n(925329),
     T = n(707409),
@@ -237,14 +237,14 @@ class W extends i.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
-        return (0, r.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(I.Z, {
+            direction: I.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(m.Exd, {
+                (0, r.jsx)(h.Exd, {
                     percent: t,
-                    size: m.Exd.Sizes.SMALL,
-                    foregroundColor: (0, y.Lq)(n),
-                    foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
+                    size: h.Exd.Sizes.SMALL,
+                    foregroundColor: (0, v.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, v.Lq)(i[0]), (0, v.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
                 }),
                 (0, r.jsx)("div", {
@@ -256,12 +256,12 @@ class W extends i.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, r.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(I.Z, {
+            direction: I.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(m.yGy, {
+                (0, r.jsx)(h.yGy, {
                     percents: t,
-                    size: m.yGy.Sizes.SMALL,
+                    size: h.yGy.Sizes.SMALL,
                     foregroundColors: B,
                     animate: this.isFocused,
                 }),
@@ -416,20 +416,20 @@ class W extends i.PureComponent {
 }
 let q = () =>
         (0, r.jsx)(H, {
-            icon: m.o1U,
+            icon: h.o1U,
             tooltip: M.intl.string(M.t.YGm6SZ),
             onClick: () => _.v4(),
         }),
     K = () =>
         (0, r.jsx)(H, {
-            icon: m.fpf,
+            icon: h.fpf,
             tooltip: M.intl.string(M.t.TVAd5J),
             onClick: () => _.wO(),
         }),
     Q = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(H, {
-            icon: m.wj7,
+            icon: h.wj7,
             tooltip: M.intl.string(M.t["Eqb+LN"]),
             onClick: () => _.A1(t.applicationId, t.branchId),
         });
@@ -437,7 +437,7 @@ let q = () =>
     J = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(H, {
-            icon: m.Dio,
+            icon: h.Dio,
             tooltip: M.intl.string(M.t["0lFmC9"]),
             onClick: () => _.al(t.applicationId, t.branchId),
         });
@@ -447,8 +447,8 @@ let q = () =>
             key: "name",
             cellClassName: k.nameCell,
             render: (e) =>
-                (0, r.jsxs)(v.Z, {
-                    align: v.Z.Align.CENTER,
+                (0, r.jsxs)(I.Z, {
+                    align: I.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)(S.Z, {
                             game: e.application,
@@ -499,8 +499,8 @@ let q = () =>
                                       : (0, r.jsx)(K, { item: e })),
                             (i = (0, r.jsx)(J, { item: e })))
                           : (i = (0, r.jsx)(J, { item: e })),
-                    (0, r.jsxs)(v.Z, {
-                        justify: v.Z.Justify.END,
+                    (0, r.jsxs)(I.Z, {
+                        justify: I.Z.Justify.END,
                         children: [n, i],
                     })
                 );
@@ -518,7 +518,7 @@ class $ extends i.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                h.Z.wait(() => {
+                g.Z.wait(() => {
                     _.wi(e.applicationId, e.branchId);
                 });
         }),
@@ -565,7 +565,7 @@ class $ extends i.PureComponent {
                           },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  g.jW(e, async () => {
+                                  m.jW(e, async () => {
                                       let { default: e } = await n.e("98335").then(n.bind(n, 485292));
                                       return (n) => {
                                           var i, l;
@@ -659,8 +659,8 @@ function ee(e, t, n, r) {
     }, []);
 }
 let et = (0, O.Z)(
-    c.ZP.connectStores([I.Z, P.Z, x.Z, N.Z, A.Z], () => ({
-        applications: [...ee(x.Z.activeItems, !1, I.Z, P.Z), ...ee(x.Z.finishedItems, !0, I.Z, P.Z)],
+    c.ZP.connectStores([y.Z, P.Z, x.Z, N.Z, A.Z], () => ({
+        applications: [...ee(x.Z.activeItems, !1, y.Z, P.Z), ...ee(x.Z.finishedItems, !0, y.Z, P.Z)],
         paused: x.Z.paused,
         isFocused: A.Z.isFocused(),
         theme: N.Z.theme,

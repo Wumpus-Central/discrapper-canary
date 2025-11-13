@@ -1,6 +1,6 @@
 n.d(t, {
     Go: () => R,
-    LZ: () => D,
+    LZ: () => w,
     Pq: () => v,
     RJ: () => P,
     Sd: () => M,
@@ -195,7 +195,7 @@ function P() {
         [e],
     );
 }
-function w() {
+function D() {
     var e, t;
     let n = (0, s.D)(),
         r = N;
@@ -205,8 +205,8 @@ function w() {
         r
     );
 }
-function D() {
-    let e = w();
+function w() {
+    let e = D();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let x = (e) => {

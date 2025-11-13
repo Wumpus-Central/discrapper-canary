@@ -15,7 +15,7 @@ var r = n(951288),
     h = n(388032),
     b = n(784547);
 function x(e) {
-    let { connection: t, index: l, onDragStart: x, onDragReset: j, onDragComplete: v, draggingId: _ } = e,
+    let { connection: t, index: l, onDragStart: x, onDragReset: j, onDragComplete: _, draggingId: v } = e,
         O = (0, d.ZP)(),
         {
             drag: C,
@@ -27,7 +27,7 @@ function x(e) {
             index: l,
             optionId: t.id,
             onDragStart: () => x(t.id),
-            onDragComplete: (e) => v(e),
+            onDragComplete: (e) => _(e),
             onDragReset: () => j(),
         }),
         I = i.useCallback(() => {

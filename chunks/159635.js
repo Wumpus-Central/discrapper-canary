@@ -199,8 +199,8 @@
         N = /^ (?= *`)|(` *) $/g,
         R = C,
         P = / *\n+$/,
-        w = RegExp("^( *)(" + I + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + I + " )\\n*|\\s*\n*$)"),
-        D = /(?:^|\n)( *)$/,
+        D = RegExp("^( *)(" + I + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + I + " )\\n*|\\s*\n*$)"),
+        w = /(?:^|\n)( *)$/,
         x = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
@@ -418,9 +418,9 @@
                 order: G++,
                 match: function (e, t) {
                     var n = null == t.prevCapture ? "" : t.prevCapture[0],
-                        r = D.exec(n),
+                        r = w.exec(n),
                         i = t._list || !t.inline;
-                    return r && i ? ((e = r[1] + e), w.exec(e)) : null;
+                    return r && i ? ((e = r[1] + e), D.exec(e)) : null;
                 },
                 parse: function (e, t, n) {
                     var r = e[2],

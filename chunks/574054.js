@@ -1,17 +1,17 @@
 a.d(e, {
     R: () =>
-        function t(e, a, i, c = 0) {
-            return new r.cW((r, E) => {
-                let s = e[c];
+        function t(e, a, i, E = 0) {
+            return new r.cW((r, c) => {
+                let s = e[E];
                 if (null === a || "function" != typeof s) r(a);
                 else {
                     let l = s({ ...a }, i);
                     o.X && s.id && null === l && _.kg.log(`Event processor "${s.id}" dropped event`),
                         (0, n.J8)(l)
-                            ? l.then((a) => t(e, a, i, c + 1).then(r)).then(null, E)
-                            : t(e, l, i, c + 1)
+                            ? l.then((a) => t(e, a, i, E + 1).then(r)).then(null, c)
+                            : t(e, l, i, E + 1)
                                   .then(r)
-                                  .then(null, E);
+                                  .then(null, c);
                 }
             });
         },

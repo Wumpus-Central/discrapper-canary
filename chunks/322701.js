@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(981631),
     p = n(983703);
 let f = function (e) {
-    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: m, sectionFilter: h, footer: g } = e,
+    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: g, footer: m } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         E = (0, l.ZP)({
@@ -19,14 +19,14 @@ let f = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        O = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
-        I = b || m || O,
-        y = i.useMemo(
+        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        y = b || h || O,
+        v = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : I
+                        : y
                           ? (0, r.jsxs)(
                                 "div",
                                 {
@@ -44,7 +44,7 @@ let f = function (e) {
                                 t,
                             ),
                 ),
-            [n, f, t, I],
+            [n, f, t, y],
         );
     return (0, r.jsx)(a.bG, {
         navigator: E,
@@ -111,7 +111,7 @@ let f = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [y, g],
+                            children: [v, m],
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

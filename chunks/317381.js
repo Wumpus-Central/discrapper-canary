@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    ZP: () => ew,
+    ZP: () => eD,
     i6: () => R,
 }),
     n(388685),
@@ -86,8 +86,8 @@ let N = {
     },
     R = [],
     P = [],
-    w = "0",
-    D = new Map(),
+    D = "0",
+    w = new Map(),
     x = new Map(),
     L = new Map(),
     M = new Map(),
@@ -109,7 +109,7 @@ let U = new Map(),
     q = v.MI.RESIZABLE,
     X = O.GM.NORMAL;
 function Q(e) {
-    return null != e ? e : w;
+    return null != e ? e : D;
 }
 function J(e) {
     var t, n, r, i, a, o, s, l;
@@ -124,9 +124,9 @@ function J(e) {
         A = p.map((e) => e.userId),
         N = c.default.getId(),
         P = A.some((e) => e === N),
-        w = null == (t = p.find((e) => e.userId === N)) ? void 0 : t.sessionId,
+        D = null == (t = p.find((e) => e.userId === N)) ? void 0 : t.sessionId,
         M = p.some((e) => (0, g.J)(e)),
-        G = D.get(d),
+        G = w.get(d),
         B = U.get(k(null != y ? y : null, d)),
         Z = null == B ? void 0 : B.launchParams,
         F = {
@@ -143,7 +143,7 @@ function J(e) {
         };
     P &&
         null != G &&
-        D.set(G.applicationId, C(S({}, G, F), { proxyTicket: null != (o = F.proxyTicket) ? o : G.proxyTicket }));
+        w.set(G.applicationId, C(S({}, G, F), { proxyTicket: null != (o = F.proxyTicket) ? o : G.proxyTicket }));
     let V = !M;
     null != G &&
     u.id === G.location.id &&
@@ -152,7 +152,7 @@ function J(e) {
         ? ee(G)
         : P &&
           (null == G || G.applicationId !== d || G.location.id !== u.id) &&
-          (w === c.default.getSessionId() &&
+          (D === c.default.getSessionId() &&
               ea({
                   applicationId: d,
                   launchId: f,
@@ -197,13 +197,13 @@ function $(e) {
         });
 }
 function ee(e) {
-    D.delete(e.applicationId), _.S.dispatch(I.CkL.RELEASE_ACTIVITY_WEB_VIEW);
+    w.delete(e.applicationId), _.S.dispatch(I.CkL.RELEASE_ACTIVITY_WEB_VIEW);
 }
 function et(e) {
     let { guilds: t } = e;
     L.clear(), x.clear(), j.clear(), M.clear(), t.forEach((e) => $(e));
     let n = c.default.getId();
-    for (let e of Array.from(D.values()))
+    for (let e of Array.from(w.values()))
         eP
             .getEmbeddedActivitiesForLocation(e.location)
             .some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) || ee(e);
@@ -259,11 +259,11 @@ function ea(e) {
         } = e,
         C = (0, m.ZP)(i),
         N = c.default.getSessionId();
-    if (null == C || null == N || (null == (t = D.get(i)) ? void 0 : t.location.id) === l.id) return !1;
+    if (null == C || null == N || (null == (t = w.get(i)) ? void 0 : t.location.id) === l.id) return !1;
     let R = (0, E.p)(l),
         P = u.Z.getChannel(R),
-        w = null == P ? void 0 : P.getGuildId();
-    if (null == f.default.getCurrentUser() || (null == w && !(null != (n = null == P ? void 0 : P.isPrivate()) && n)))
+        D = null == P ? void 0 : P.getGuildId();
+    if (null == f.default.getCurrentUser() || (null == D && !(null != (n = null == P ? void 0 : P.isPrivate()) && n)))
         return !1;
     r = l;
     let x = {
@@ -279,7 +279,7 @@ function ea(e) {
         customId: T,
         proxyTicket: A,
     };
-    D.set(i, x),
+    w.set(i, x),
         _.S.dispatch(I.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: i,
@@ -299,8 +299,8 @@ function ea(e) {
 }
 function eo(e) {
     let { applicationId: t } = e,
-        n = D.get(t);
-    D.delete(t), (null == n ? void 0 : n.location.id) === (null == r ? void 0 : r.id) && (r = void 0);
+        n = w.get(t);
+    w.delete(t), (null == n ? void 0 : n.location.id) === (null == r ? void 0 : r.id) && (r = void 0);
 }
 function es(e) {
     let { layout: t } = e;
@@ -310,14 +310,14 @@ function el(e) {
     var t;
     let { activity: n } = e;
     if (null == n) return !1;
-    let r = D.get(null != (t = n.application_id) ? t : "");
+    let r = w.get(null != (t = n.application_id) ? t : "");
     if (null == r) return !1;
-    D.set(r.applicationId, S({}, r));
+    w.set(r.applicationId, S({}, r));
 }
 function ec(e) {
     let { applicationId: t, config: n } = e,
-        r = D.get(t);
-    null != r && D.set(r.applicationId, C(S({}, r), { config: n }));
+        r = w.get(t);
+    null != r && w.set(r.applicationId, C(S({}, r), { config: n }));
 }
 function eu(e) {
     let { guildId: t } = e,
@@ -396,9 +396,9 @@ function eh(e) {
 }
 function em(e) {
     let { applicationId: t, proxyTicket: n } = e,
-        r = D.get(t);
+        r = w.get(t);
     if (null == r) return !1;
-    D.set(t, C(S({}, r), { proxyTicket: n }));
+    w.set(t, C(S({}, r), { proxyTicket: n }));
 }
 function eg(e) {
     let { applicationId: t, refreshing: n } = e;
@@ -473,16 +473,16 @@ class eR extends (i = a.ZP.PersistedStore) {
         var t;
         return null == e
             ? null
-            : null != (t = Array.from(D.values()).find((t) => (0, E.p)(t.location) === e))
+            : null != (t = Array.from(w.values()).find((t) => (0, E.p)(t.location) === e))
               ? t
               : null;
     }
     getSelfEmbeddedActivityForLocation(e) {
         var t;
-        return null == e ? null : null != (t = Array.from(D.values()).find((t) => t.location.id === e.id)) ? t : null;
+        return null == e ? null : null != (t = Array.from(w.values()).find((t) => t.location.id === e.id)) ? t : null;
     }
     getSelfEmbeddedActivities() {
-        return D;
+        return w;
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
@@ -648,4 +648,4 @@ let eP = new eR(o.Z, {
         CHANNEL_SELECT: eA,
         POPOUT_WINDOW_CLOSE: eN,
     }),
-    ew = eP;
+    eD = eP;

@@ -10,7 +10,7 @@ var r = n(836560),
     d = n(452426),
     p = n(186901),
     f = n(981631);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,8 +23,8 @@ function m(e, t, n) {
         e
     );
 }
-let h = 10 * o.Z.Millis.SECOND,
-    g = new Map(),
+let g = 10 * o.Z.Millis.SECOND,
+    m = new Map(),
     _ = new Set(),
     b = (e, t, n) => {
         n([u.Z.CLOSE, t], e);
@@ -52,26 +52,26 @@ class E extends r.EventEmitter {
         var u;
         super(),
             (u = this),
-            m(this, "validateSocketClient", void 0),
-            m(this, "logger", void 0),
-            m(this, "createPostMessageProxySocket", void 0),
-            m(this, "onFrameHandled", void 0),
-            m(this, "handshakeFailureTimeoutId", void 0),
-            m(this, "disconnectSocket", function (e, t) {
+            h(this, "validateSocketClient", void 0),
+            h(this, "logger", void 0),
+            h(this, "createPostMessageProxySocket", void 0),
+            h(this, "onFrameHandled", void 0),
+            h(this, "handshakeFailureTimeoutId", void 0),
+            h(this, "disconnectSocket", function (e, t) {
                 var n, r;
                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 u.emit("disconnect", e, i ? void 0 : t), e.close(t.code, null != (n = t.message) ? n : "Unknown");
                 let [l] =
                     null !=
-                    (r = Array.from(g.entries()).find((t) => {
+                    (r = Array.from(m.entries()).find((t) => {
                         let [n, r] = t;
                         return r === e;
                     }))
                         ? r
                         : [null, null];
-                null != l && g.delete(l);
+                null != l && m.delete(l);
             }),
-            m(this, "handleIFrameMount", (e) => {
+            h(this, "handleIFrameMount", (e) => {
                 let { id: t } = e;
                 _.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
@@ -81,18 +81,18 @@ class E extends r.EventEmitter {
                                 application_id: t,
                                 channel_id: (0, l.p)(n.location),
                                 guild_id: (0, l.j)(n.location),
-                                timeout_ms: h,
+                                timeout_ms: g,
                             });
                         });
-                    }, h));
+                    }, g));
             }),
-            m(this, "handleIFrameUnmount", (e) => {
+            h(this, "handleIFrameUnmount", (e) => {
                 var t;
                 let { id: n } = e;
                 _.delete(n);
                 let [r, i] =
                     null !=
-                    (t = Array.from(g.entries()).find((e) => {
+                    (t = Array.from(m.entries()).find((e) => {
                         let [t, r] = e;
                         return r.frameId === n;
                     }))
@@ -108,10 +108,10 @@ class E extends r.EventEmitter {
                         },
                         !0,
                     ),
-                    g.delete(r));
+                    m.delete(r));
             }),
-            m(this, "handleMessage", (e, t, n) => {
-                let r = g.get(t);
+            h(this, "handleMessage", (e, t, n) => {
+                let r = m.get(t);
                 try {
                     this.routeEvent(r, t, e, n);
                 } catch (e) {
@@ -135,7 +135,7 @@ class E extends r.EventEmitter {
                           );
                 }
             }),
-            m(this, "handleFrame", (e, t, n) => {
+            h(this, "handleFrame", (e, t, n) => {
                 var r;
                 let i;
                 if (e !== t.origin) throw new c.Z({ closeCode: f.$VG.INVALID_ORIGIN }, "Origin has changed");
@@ -146,7 +146,7 @@ class E extends r.EventEmitter {
                 }
                 null == (r = this.onFrameHandled) || r.call(this, i, this.logger, t), this.emit("request", t, i);
             }),
-            m(this, "handleHandshake", async (e, t, r) => {
+            h(this, "handleHandshake", async (e, t, r) => {
                 let i;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
                 let l = (await n.e("85441").then(n.t.bind(n, 826753, 23))).default;
@@ -198,7 +198,7 @@ class E extends r.EventEmitter {
                             (this.logger.error("Frame ID ".concat(s, " no longer exists")),
                             new c.Z({ closeCode: f.$VG.CLOSE_UNSUPPORTED }, "Unrecognized frame ID ".concat(s)))
                         );
-                    g.set(e, i),
+                    m.set(e, i),
                         _.delete(s),
                         i.authorization.scopes.push(p.b_),
                         this.emit("connect", i),
@@ -207,7 +207,7 @@ class E extends r.EventEmitter {
                     throw (this.logger.info("Socket Closed: ".concat(i.id, ", ").concat(e.message)), e);
                 }
             }),
-            m(this, "handleClose", async (e, t) => {
+            h(this, "handleClose", async (e, t) => {
                 let r = (await n.e("85441").then(n.t.bind(n, 826753, 23))).default;
                 try {
                     r.assert(

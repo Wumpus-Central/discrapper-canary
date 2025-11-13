@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(388032),
     p = n(394843),
     f = n(882008);
-let m = function (e) {
+let h = function (e) {
     let { loadId: t } = e,
         n = o.Z.useField("categoryId"),
-        m = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
-        h = i.useCallback(() => {
+        h = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
+        g = i.useCallback(() => {
             o.Z.setState({ categoryId: u.Hk }),
                 s.Z.loadCategoryResults({
                     loadId: t,
@@ -23,8 +23,8 @@ let m = function (e) {
                     languageCode: o.Z.getField("languageCode"),
                 });
         }, [t]),
-        g = n === u.Hk ? d.intl.string(d.t.Ivw1Is) : d.intl.formatToPlainString(d.t["+1WAFb"], { categoryName: m }),
-        _ = n === u.Hk ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: h });
+        m = n === u.Hk ? d.intl.string(d.t.Ivw1Is) : d.intl.formatToPlainString(d.t["+1WAFb"], { categoryName: h }),
+        _ = n === u.Hk ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: g });
     return (0, r.jsxs)("div", {
         className: p.container,
         children: [
@@ -36,7 +36,7 @@ let m = function (e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-xl/semibold",
                 className: p.header,
-                children: g,
+                children: m,
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",

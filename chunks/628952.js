@@ -83,8 +83,8 @@ let C = (e) => {
             hideProfilePreview: N = !1,
         } = e,
         { product: R } = (0, m.T)(t, !0),
-        { giftRecipient: P, giftRecipientError: w } = (0, f.wD)(),
-        D = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+        { giftRecipient: P, giftRecipientError: D } = (0, f.wD)(),
+        w = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
         x = (0, y.kd)(R),
         L = i.useRef(null);
     if (null == R) return null;
@@ -105,7 +105,7 @@ let C = (e) => {
         },
         k =
             null != P &&
-            P.id !== (null == D ? void 0 : D.id) &&
+            P.id !== (null == w ? void 0 : w.id) &&
             R.type !== c.Z.BUNDLE &&
             M.type !== c.Z.NAMEPLATE &&
             !N,
@@ -164,8 +164,8 @@ let C = (e) => {
                 tag: "div",
                 onClick: U,
                 className: o()(v.previewContainer, {
-                    [v.previewContainerSelected]: n && null == w,
-                    [v.previewContainerError]: n && null != w,
+                    [v.previewContainerSelected]: n && null == D,
+                    [v.previewContainerError]: n && null != D,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
@@ -196,13 +196,13 @@ let C = (e) => {
                         ],
                     }),
                     n &&
-                        null != w &&
+                        null != D &&
                         (0, r.jsx)("div", {
                             className: v.recipientError,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "status-danger",
-                                children: w,
+                                children: D,
                             }),
                         }),
                 ],

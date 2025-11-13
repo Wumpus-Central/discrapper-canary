@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -39,7 +39,7 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
@@ -96,7 +96,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, _.Dt)(),
         { themeType: d } = (0, O.z)(),
@@ -130,7 +130,7 @@ function D(e) {
                 });
             },
         }),
-        I = (0, r.jsx)(w, {
+        I = (0, r.jsx)(D, {
             isPremiumUser: t,
             onInteraction: n,
             tiny: f,

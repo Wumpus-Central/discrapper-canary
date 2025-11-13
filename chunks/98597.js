@@ -25,8 +25,8 @@ var r,
     O = n(430824),
     v = n(496675),
     j = n(914010),
-    C = n(281029),
-    x = n(981631),
+    x = n(281029),
+    C = n(981631),
     E = n(388032),
     S = n(55940);
 function I(e, t, n) {
@@ -59,7 +59,7 @@ function P(e) {
     return e;
 }
 function N(e, t, n) {
-    return null != t && !!t && !(0, C.ig)(n, e.type);
+    return null != t && !!t && !(0, x.ig)(n, e.type);
 }
 function Z(e, t) {
     return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
@@ -70,12 +70,12 @@ function w(e) {
         [v.Z, j.Z],
         () =>
             n ||
-            j.Z.getGuildId() === x.I_8 ||
-            (!v.Z.can(x.Plq.MANAGE_CHANNELS, t) &&
-                !v.Z.can(x.Plq.MANAGE_ROLES, t) &&
-                !v.Z.can(x.Plq.MANAGE_WEBHOOKS, t)) ||
-            ((0, _.r8)(t.type) && !v.Z.can(x.Plq.VIEW_CHANNEL, t)) ||
-            (t.isGuildVocal() && !v.Z.can(x.Plq.CONNECT, t)) ||
+            j.Z.getGuildId() === C.I_8 ||
+            (!v.Z.can(C.Plq.MANAGE_CHANNELS, t) &&
+                !v.Z.can(C.Plq.MANAGE_ROLES, t) &&
+                !v.Z.can(C.Plq.MANAGE_WEBHOOKS, t)) ||
+            ((0, _.r8)(t.type) && !v.Z.can(C.Plq.VIEW_CHANNEL, t)) ||
+            (t.isGuildVocal() && !v.Z.can(C.Plq.CONNECT, t)) ||
             !_.dF.has(t.type) ||
             t.isModeratorReportChannel(),
     )
@@ -112,16 +112,16 @@ function T(e) {
             hasChannelInfo: _ = !1,
         } = e,
         j = (0, h._k)({ location: "channel_base" }),
-        C = (0, s.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
+        x = (0, s.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
         I = (0, s.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, s.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(t.id), [t.id]),
-        Z = (0, s.e7)([v.Z], () => (0, f.b)(v.Z, C, t, I)),
+        Z = (0, s.e7)([v.Z], () => (0, f.b)(v.Z, x, t, I)),
         w = (0, s.e7)([v.Z], () =>
-            (null == t ? void 0 : t.type) === x.d4z.GUILD_VOICE && j.isVoiceChannelEntrypointEnabled
+            (null == t ? void 0 : t.type) === C.d4z.GUILD_VOICE && j.isVoiceChannelEntrypointEnabled
                 ? E.intl.string(E.t["EE+P0H"])
                 : j.isTextChannelEntrypointEnabled
                   ? E.intl.string(E.t["0jeAXt"])
-                  : v.Z.can(x.Plq.CREATE_INSTANT_INVITE, t)
+                  : v.Z.can(C.Plq.CREATE_INSTANT_INVITE, t)
                     ? E.intl.string(E.t.zJrgTG)
                     : E.intl.string(E.t.Sd8Ixw),
         ),
@@ -151,9 +151,9 @@ function T(e) {
             children: (0, i.jsx)(u.P3F, {
                 className: a()(S.iconItem, g ? S.alwaysShown : void 0, _ ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: function () {
-                    if (null != C) {
+                    if (null != x) {
                         let e = y.Z.getAllActiveStreams().filter(
-                            (e) => e.state !== x.jm8.ENDED && e.channelId === t.id,
+                            (e) => e.state !== C.jm8.ENDED && e.channelId === t.id,
                         );
                         (0, u.ZDy)(async () => {
                             let { default: r } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
@@ -164,10 +164,10 @@ function T(e) {
                                     ((l = P({}, n)),
                                     (o = o =
                                         {
-                                            guild: C,
+                                            guild: x,
                                             channel: t,
                                             streamUserId: 1 === e.length ? e[0].ownerId : null,
-                                            source: x.t4x.GUILD_CHANNELS,
+                                            source: C.t4x.GUILD_CHANNELS,
                                             guildScheduledEvent: N,
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -222,7 +222,7 @@ function R(e) {
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
-                (0, g.dM)(t.guild_id, t.id, !0, { section: x.jXE.CHANNEL_LIST });
+                (0, g.dM)(t.guild_id, t.id, !0, { section: C.jXE.CHANNEL_LIST });
             },
             "aria-label": E.intl.string(E.t["N2c/Un"]),
             children: (0, i.jsx)(u.dz2, {

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -62,8 +62,8 @@ function v(e) {
         [S, A] = (0, f.US)(T),
         [C, N] = i.useState(!1),
         [R, P] = (0, u.q_F)(() => ({})),
-        w = (0, s.animated)(u.Pt5);
-    function D() {
+        D = (0, s.animated)(u.Pt5);
+    function w() {
         P({
             from: { rotate: t ? "360deg" : "0deg" },
             to: { rotate: t ? "0deg" : "360deg" },
@@ -93,7 +93,7 @@ function v(e) {
             (0, r.jsx)("input", {
                 className: g.visuallyHidden,
                 checked: t,
-                onChange: D,
+                onChange: w,
                 id: a,
                 type: "checkbox",
             }),
@@ -101,7 +101,7 @@ function v(e) {
                 htmlFor: a,
                 className: o()(g.label, { [g.labelChecked]: t }),
                 children: [
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(D, {
                         style: v ? void 0 : R,
                         size: "custom",
                         width: b,

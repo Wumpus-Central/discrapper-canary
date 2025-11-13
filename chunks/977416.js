@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(388032),
     m = n(932366),
     b = n(845859);
-function y(e) {
+function h(e) {
     var t,
         n,
         { gameName: i, onClick: a } = e,
@@ -40,12 +40,12 @@ function y(e) {
             return i;
         })(e, ["gameName", "onClick"]);
     let g = null != i ? i : p.intl.string(p.t.GIWFlF),
-        y = p.intl.formatToPlainString(p.t["3mb1s5"], { game: g }),
-        h = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
-    return (0, d.kO)(s.applicationId) || h
+        h = p.intl.formatToPlainString(p.t["3mb1s5"], { game: g }),
+        y = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
+    return (0, d.kO)(s.applicationId) || y
         ? (0, r.jsx)("div", { className: m.loadingCover })
         : (0, r.jsx)(o.u, {
-              text: y,
+              text: h,
               children: (0, r.jsxs)(c.P3F, {
                   className: b.addButton,
                   onClick: a,
@@ -107,7 +107,7 @@ function y(e) {
               }),
           });
 }
-function h(e) {
+function y(e) {
     let { userId: t, games: n, onDismiss: i, onClick: l, className: o } = e,
         u = (0, s.Dt)();
     return (0, r.jsxs)("aside", {
@@ -138,7 +138,7 @@ function h(e) {
                 games: n,
                 renderGame: (e) => {
                     let { applicationId: n, gameName: i, imageSrc: a } = e;
-                    return (0, r.jsx)(y, {
+                    return (0, r.jsx)(h, {
                         onClick: () => l(n, i, a),
                         userId: t,
                         applicationId: n,

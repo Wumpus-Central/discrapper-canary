@@ -80,7 +80,7 @@ let v = (0, l.hQ)(),
                 },
                 [S],
             ),
-            w = i.useCallback(
+            D = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
@@ -100,7 +100,7 @@ let v = (0, l.hQ)(),
                 },
                 [S],
             ),
-            D = i.useCallback(
+            w = i.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, r.jsx)(r.Fragment, { children: R(t) });
@@ -144,8 +144,8 @@ let v = (0, l.hQ)(),
                         options: N,
                         select: x,
                         renderLeading: P,
-                        renderTrailing: w,
-                        renderOptionValue: D,
+                        renderTrailing: D,
+                        renderOptionValue: w,
                         serialize: M,
                         clear: j,
                         clearable: null != C,

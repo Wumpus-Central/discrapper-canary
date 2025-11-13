@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(644646),
     v = n(670638),
     I = n(87894),
-    S = n(46140),
-    T = n(231338),
+    T = n(46140),
+    S = n(231338),
     A = n(388032),
     C = n(310696);
 function N(e, t, n) {
@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-let D = (0, s.animated)(u.CJ0),
+let w = (0, s.animated)(u.CJ0),
     x = (e) => {
         var t;
         let {
@@ -102,7 +102,7 @@ let D = (0, s.animated)(u.CJ0),
             K = (0, f.y)(W),
             z = (0, I.uq)(N),
             q = N === m.jn.QUESTS_EMBED,
-            X = (0, h.t5)(a, S.dr.QUESTS_CARD, N, G),
+            X = (0, h.t5)(a, T.dr.QUESTS_CARD, N, G),
             Q = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
             J = (0, p.O5)(),
             $ = (0, h.B6)(a.config.expiresAt),
@@ -127,7 +127,7 @@ let D = (0, s.animated)(u.CJ0),
                 gameTileSize: b.fF.MEDIUM,
                 quest: a,
                 separatorSpacing: b.US.MEDIUM,
-                theme: T.BR.DARK,
+                theme: S.BR.DARK,
                 withGameTile: !q || null == a.config.cosponsorMetadata,
             });
         return (0, r.jsxs)("div", {
@@ -186,7 +186,7 @@ let D = (0, s.animated)(u.CJ0),
                                                         quest: a,
                                                         questContent: N,
                                                         className: C.headerCollapsedRewardTile,
-                                                        location: S.dr.QUESTS_CARD,
+                                                        location: T.dr.QUESTS_CARD,
                                                         sourceQuestContent: G,
                                                     }),
                                                 }),
@@ -300,7 +300,7 @@ let D = (0, s.animated)(u.CJ0),
                                             "aria-hidden": !L && !M,
                                             children: (0, r.jsx)(
                                                 u.P3F,
-                                                w(R({}, e), {
+                                                D(R({}, e), {
                                                     className: C.iconWrapper,
                                                     "aria-label": A.intl.string(A.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {
@@ -316,7 +316,7 @@ let D = (0, s.animated)(u.CJ0),
                                         onClick: en,
                                         className: C.iconWrapper,
                                         "aria-label": M ? A.intl.string(A.t.iTcuma) : A.intl.string(A.t.dcl9MQ),
-                                        children: (0, r.jsx)(D, {
+                                        children: (0, r.jsx)(w, {
                                             style: {
                                                 rotate: x.to({
                                                     range: [0, 1],

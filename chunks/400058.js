@@ -39,7 +39,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function w(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,18 +108,18 @@ let M = {
                     [n, E] = i.useState(null),
                     b = (0, s.Wu)([S.Z], () => S.Z.getGuildsArray()),
                     [P] = (0, s.Wu)([A.Z], () => [A.Z.getPremiumSubscription()]),
-                    D = b.map((e) => ({
+                    w = b.map((e) => ({
                         value: e,
                         label: e.name,
                     })),
-                    [M, j] = i.useState(D.length > 0 ? D[0].value : null),
+                    [M, j] = i.useState(w.length > 0 ? w[0].value : null),
                     [k, U] = i.useState(""),
                     [G, B] = i.useState({
                         plan_id: N.Xh.PREMIUM_MONTH_TIER_2,
                         gift: "true",
                     }),
                     Z = "true" !== G.gift && null != P,
-                    [F, V] = i.useState(D.length > 0 ? D[0].value : null),
+                    [F, V] = i.useState(w.length > 0 ? w[0].value : null),
                     { analyticsLocations: H } = (0, p.ZP)(_.Z.PAYMENT_FLOW_TEST_PAGE),
                     [Y, W] = i.useState(""),
                     [K, z] = i.useState(C.lds),
@@ -220,7 +220,7 @@ let M = {
                                         (0, r.jsx)(c.q4e, {
                                             label: "Boost",
                                             value: M,
-                                            options: D,
+                                            options: w,
                                             onChange: (e) => j(e),
                                         }),
                                         null != M
@@ -259,7 +259,7 @@ let M = {
                                                         (0, r.jsx)(
                                                             c.Button,
                                                             x(
-                                                                w(
+                                                                D(
                                                                     {
                                                                         variant: "primary",
                                                                         text: "Open Link",
@@ -302,7 +302,7 @@ let M = {
                                                     label: "Nitro Basic",
                                                 },
                                             ],
-                                            onChange: (e) => B((t) => x(w({}, t), { plan_id: e })),
+                                            onChange: (e) => B((t) => x(D({}, t), { plan_id: e })),
                                         }),
                                         (0, r.jsx)(c.q4e, {
                                             label: "Type",
@@ -317,7 +317,7 @@ let M = {
                                                     label: "Not Gift",
                                                 },
                                             ],
-                                            onChange: (e) => B((t) => x(w({}, t), { gift: e })),
+                                            onChange: (e) => B((t) => x(D({}, t), { gift: e })),
                                         }),
                                     ],
                                 }),
@@ -329,7 +329,7 @@ let M = {
                                         (0, r.jsx)(
                                             c.Button,
                                             x(
-                                                w(
+                                                D(
                                                     {
                                                         variant: "primary",
                                                         text: "Open Link",
@@ -342,7 +342,7 @@ let M = {
                                                         window.open(
                                                             C.Z5c.BILLING_PREMIUM_SUBSCRIBE +
                                                                 "?" +
-                                                                a.stringify(w({}, G)),
+                                                                a.stringify(D({}, G)),
                                                         );
                                                     },
                                                 },
@@ -412,7 +412,7 @@ let M = {
                                         (0, r.jsx)(c.q4e, {
                                             label: "Premium Server Subscription For",
                                             value: F,
-                                            options: D,
+                                            options: w,
                                             onChange: (e) => V(e),
                                         }),
                                         (0, r.jsx)(c.Text, {

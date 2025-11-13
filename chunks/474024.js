@@ -19,24 +19,24 @@ function x(e) {
     let { profile: n, canManageGuild: l } = e,
         x = n.id,
         j = s.Y.VISIBLE.has(n.visibility),
-        v = (0, o.e7)([d.Z], () => {
+        _ = (0, o.e7)([d.Z], () => {
             var e;
             return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
         }, [x]),
-        _ = i.useRef(null);
-    (0, p.Z)(_, f.KsC.PROFILE_VISIBILITY);
-    let C = i.useCallback(() => {
+        v = i.useRef(null);
+    (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
+    let O = i.useCallback(() => {
             j
                 ? m.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED })
-                : m.Z.updateGuildProfile(x, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [x, v, j]),
-        O = i.useCallback(() => {
+                : m.Z.updateGuildProfile(x, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [x, _, j]),
+        C = i.useCallback(() => {
             m.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
         }, []),
         y = null == (t = n.features) ? void 0 : t.includes(f.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
         className: b.twoColumnContainer,
-        ref: _,
+        ref: v,
         children: [
             (0, r.jsxs)("div", {
                 className: b.column,
@@ -45,7 +45,7 @@ function x(e) {
                         label: h.intl.string(h.t.fjHWen),
                         description: h.intl.string(h.t.J1YOV6),
                         checked: !j,
-                        onChange: C,
+                        onChange: O,
                         disabled: y || !l,
                     }),
                     y &&
@@ -57,7 +57,7 @@ function x(e) {
                                     (0, r.jsx)(
                                         c.Anchor,
                                         {
-                                            onClick: O,
+                                            onClick: C,
                                             children: e,
                                         },
                                         t,

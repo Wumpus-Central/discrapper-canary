@@ -2,7 +2,7 @@ n.d(t, {
     DT: () => A,
     Ef: () => P,
     HO: () => R,
-    NZ: () => w,
+    NZ: () => D,
     Pq: () => N,
     Q1: () => v,
     RK: () => T,
@@ -199,6 +199,6 @@ async function R(e, t, n, r) {
 async function P(e, t, n) {
     if ("" !== t) return await (0, m.Dk)(e.id, t, n);
 }
-async function w(e) {
+async function D(e) {
     await (0, m.Ix)(e.id);
 }

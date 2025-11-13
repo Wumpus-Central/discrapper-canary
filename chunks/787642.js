@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -10,44 +10,44 @@ var r = n(951288),
     d = n(125631),
     p = n(981631),
     f = n(388032),
-    m = n(184904);
-function h(e, t, n) {
+    h = n(184904);
+function g(e, t, n) {
     return (0, r.jsxs)(
         "button",
         {
-            className: m.container,
+            className: h.container,
             onClick: n,
             children: [
                 "function" == typeof e
                     ? (0, r.jsx)("div", {
-                          className: m.icon,
+                          className: h.icon,
                           children: (0, r.jsx)(e, {
-                              className: m.__invalid_iconInner,
+                              className: h.__invalid_iconInner,
                               color: l.TVs.colors.WHITE.css,
                           }),
                       })
                     : (0, r.jsx)("img", {
-                          className: m.icon,
+                          className: h.icon,
                           alt: "",
                           src: e,
                       }),
                 (0, r.jsx)(l.Text, {
-                    className: m.text,
+                    className: h.text,
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(d.Z, { className: m.arrow }),
+                (0, r.jsx)(d.Z, { className: h.arrow }),
             ],
         },
         t,
     );
 }
-function g() {
+function m() {
     let e = o.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
-                className: m.header,
+                className: h.header,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
@@ -62,10 +62,10 @@ function g() {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: m.grid,
+                className: h.grid,
                 children: [
                     e.map((e) =>
-                        h(
+                        g(
                             u.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
@@ -80,7 +80,7 @@ function g() {
                             },
                         ),
                     ),
-                    h(l.Jmo, f.intl.string(f.t.AhKnz4), () => {
+                    g(l.Jmo, f.intl.string(f.t.AhKnz4), () => {
                         c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
                             (0, a.uL)(p.Z5c.GUILD_DISCOVERY);
                     }),

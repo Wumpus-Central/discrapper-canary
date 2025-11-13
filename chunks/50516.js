@@ -1,7 +1,7 @@
-i.d(e, { Z: () => h });
+i.d(e, { Z: () => a });
 var s = i(684827),
     n = i(898625);
-function a(t, e, i) {
+function r(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -14,7 +14,7 @@ function a(t, e, i) {
         t
     );
 }
-let h = class {
+let a = class {
     updateStatic() {
         (this.targetX = this.targetX + 30 * Math.cos(this.angle) * Math.sin(this.count)),
             (this.targetY = this.targetY + 30 * Math.sin(this.angle) * Math.sin(this.count)),
@@ -35,9 +35,9 @@ let h = class {
             this.oscillate)
         ) {
             let n = this.targetX + this.waveRange * Math.cos(this.angle) * Math.sin(this.count),
-                a = this.targetY + this.waveRange * Math.sin(this.angle) * Math.sin(this.count);
+                r = this.targetY + this.waveRange * Math.sin(this.angle) * Math.sin(this.count);
             (e = (0, s.B)(n, this.x, this.velX, this.spring)),
-                (i = (0, s.B)(a, this.y, this.velY, this.spring)),
+                (i = (0, s.B)(r, this.y, this.velY, this.spring)),
                 (this.velX += e * t),
                 (this.velY += i * t);
         }
@@ -47,19 +47,19 @@ let h = class {
         (t.fillStyle = "#fff"), t.fillRect(this.x, this.y, 4, 4);
     }
     constructor(t) {
-        a(this, "x", -40),
-            a(this, "y", -40),
-            a(this, "targetX", 0),
-            a(this, "targetY", 0),
-            a(this, "oscillate", !0),
-            a(this, "velX", 0),
-            a(this, "velY", 0),
-            a(this, "angle", 0),
-            a(this, "speedUp", 1.5),
-            a(this, "waveRange", 60),
-            a(this, "count", void 0),
-            a(this, "index", void 0),
-            a(this, "spring", {
+        r(this, "x", -40),
+            r(this, "y", -40),
+            r(this, "targetX", 0),
+            r(this, "targetY", 0),
+            r(this, "oscillate", !0),
+            r(this, "velX", 0),
+            r(this, "velY", 0),
+            r(this, "angle", 0),
+            r(this, "speedUp", 1.5),
+            r(this, "waveRange", 60),
+            r(this, "count", void 0),
+            r(this, "index", void 0),
+            r(this, "spring", {
                 friction: 15,
                 tension: n.O1,
             }),

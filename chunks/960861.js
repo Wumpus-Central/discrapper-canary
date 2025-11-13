@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    UB: () => D,
+    UB: () => w,
     Uc: () => I,
     ZP: () => H,
     kE: () => x,
@@ -56,7 +56,7 @@ function R() {
 function P() {
     return f.Z.getUseSystemScreensharePicker();
 }
-function w() {
+function D() {
     let e = P() && (A > 0 || (T && 0 === S));
     if (e !== C) {
         var t, n;
@@ -66,13 +66,13 @@ function w() {
                 t.call(n, C);
     }
 }
-function D() {
+function w() {
     return (0, a.useEffect)(
         () => (
             S++,
-            w(),
+            D(),
             () => {
-                0 == --S && w();
+                0 == --S && D();
             }
         ),
         [],
@@ -82,9 +82,9 @@ function x() {
     return (0, a.useEffect)(
         () => (
             A++,
-            w(),
+            D(),
             () => {
-                --A, w();
+                --A, D();
             }
         ),
         [],
@@ -92,7 +92,7 @@ function x() {
 }
 function L() {
     let e = u.Z.getChannel(p.Z.getVoiceChannelId());
-    return (T = null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1)), w(), !1;
+    return (T = null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1)), D(), !1;
 }
 function M() {
     return null != r ? (0, E.Z)(r) : null;

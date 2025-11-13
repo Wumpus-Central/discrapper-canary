@@ -23,14 +23,14 @@ let x = () => {
         [S, N] = i.useState(null),
         O = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
         C = O.code.split(" ")[0],
-        A = async () => {
+        T = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
                 N(e.body.message);
             }
         },
-        T = async () => {
+        A = async () => {
             v(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, s);
@@ -90,14 +90,14 @@ let x = () => {
                           }),
                           (0, r.jsx)(o.Avr, {
                               text: p.intl.string(p.t["5b60gi"]),
-                              onClick: A,
+                              onClick: T,
                           }),
                           (0, r.jsx)("div", {
                               className: _.marginTop20,
                               children: (0, r.jsx)(o.Button, {
                                   text: p.intl.string(p.t.i4jeWR),
                                   fullWidth: !0,
-                                  onClick: T,
+                                  onClick: A,
                                   loading: E,
                               }),
                           }),

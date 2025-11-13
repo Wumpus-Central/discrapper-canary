@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     s = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     i = n(793030),
     l = n(442837),
     c = n(28664),
@@ -18,8 +18,8 @@ var r = n(951288),
     f = n(915750),
     h = n(509212),
     x = n(113434),
-    _ = n(497505),
-    b = n(475595),
+    b = n(497505),
+    _ = n(475595),
     j = n(602667),
     v = n(667105),
     C = n(981631),
@@ -27,11 +27,11 @@ var r = n(951288),
     E = n(301889);
 function O(e) {
     var t;
-    let { quest: n, errorHints: a, transitionState: j, onClose: O, sourceQuestContent: T } = e,
-        [w, P] = (0, s.useState)(a),
+    let { quest: n, errorHints: o, transitionState: j, onClose: O, sourceQuestContent: T } = e,
+        [w, P] = (0, s.useState)(o),
         N = (0, x.KX)(),
-        R = (0, g.O5)(),
-        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        A = (0, g.O5)(),
+        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         k = (0, v.g2)({
             useReducedMotion: B,
@@ -45,9 +45,9 @@ function O(e) {
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
-                    R({
+                    A({
                         questId: n.id,
-                        questContent: _.jn.CONNECTIONS_MODAL,
+                        questContent: b.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
                         sourceQuestContent: T,
                     });
@@ -69,9 +69,9 @@ function O(e) {
                     (0, h.V$)(
                         { quest: n },
                         {
-                            content: _.jn.CONNECTIONS_MODAL,
+                            content: b.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: A,
+                            impressionId: R,
                             sourceQuestContent: T,
                         },
                     )),
@@ -94,7 +94,7 @@ function O(e) {
                             children: y.intl.string(y.t["+/hZM/"]),
                         }),
                         (0, r.jsxs)(u.P3F, {
-                            className: o()(E.refreshWrapper, { [E.disabled]: V }),
+                            className: a()(E.refreshWrapper, { [E.disabled]: V }),
                             onClick: Q,
                             children: [
                                 k.render(),
@@ -139,7 +139,7 @@ function O(e) {
                                       children: (0, r.jsx)("img", {
                                           className: E.gameTile,
                                           alt: n.config.messages.gameTitle,
-                                          src: (0, b.fh)(n, b.eC.GAME_TILE, L).url,
+                                          src: (0, _.fh)(n, _.eC.GAME_TILE, L).url,
                                       }),
                                   })
                                 : null,
@@ -151,14 +151,14 @@ function O(e) {
     });
 }
 function S(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: a } = e,
+    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
         i = s.length > 0,
         l = i ? u._3e : u.B_b;
     return (0, r.jsxs)("div", {
         className: E.connectionRow,
         children: [
             (0, r.jsxs)("div", {
-                className: o()(E.connectionRowHeader, { [E.connectionRowHeaderError]: i }),
+                className: a()(E.connectionRowHeader, { [E.connectionRowHeaderError]: i }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
@@ -174,11 +174,11 @@ function S(e) {
                     (0, r.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
                         children: [
-                            a,
+                            o,
                             (0, r.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: o()({
+                                className: a()({
                                     [E.success]: !i,
                                     [E.error]: i,
                                 }),
@@ -221,7 +221,7 @@ function T(e) {
             return (0, r.jsx)(j.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
-                questContent: _.jn.CONNECTIONS_MODAL,
+                questContent: b.jn.CONNECTIONS_MODAL,
                 sourceQuestContent: e.sourceQuestContent,
                 children: () =>
                     (0, r.jsx)(

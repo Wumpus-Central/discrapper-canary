@@ -10,7 +10,7 @@ var r,
     a = n(647438),
     o = n(120356),
     s = n.n(o),
-    l = n(358458),
+    l = n(509442),
     c = n(608863),
     u = n(873546),
     d = n(215569),
@@ -225,7 +225,7 @@ let P = function (e) {
         mobileSidebarOpen: b,
         closeAction: p,
     });
-    function w() {
+    function D() {
         return null == r
             ? null
             : (0, i.jsx)(
@@ -237,7 +237,7 @@ let P = function (e) {
                   o,
               );
     }
-    function D() {
+    function w() {
         let e = null != y && null != p && b,
             t =
                 u.tq &&
@@ -249,7 +249,7 @@ let P = function (e) {
             return (0, i.jsxs)(d.W, {
                 component: "div",
                 className: m.contentRegion,
-                children: [t, n, !u.tq && P, w()],
+                children: [t, n, !u.tq && P, D()],
             });
         if ("scrollableCustom" === g)
             return (0, i.jsxs)(d.W, {
@@ -278,7 +278,7 @@ let P = function (e) {
                             !u.tq && P,
                         ],
                     }),
-                    w(),
+                    D(),
                 ],
             });
         let r = N[null != g ? g : "default"];
@@ -317,7 +317,7 @@ let P = function (e) {
                         }),
                     ],
                 }),
-                w(),
+                D(),
             ],
         });
     }
@@ -355,7 +355,7 @@ let P = function (e) {
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: m.standardSidebarView,
-                children: [!t && x(), D()],
+                children: [!t && x(), w()],
             }),
         ),
     });

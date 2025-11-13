@@ -7,8 +7,8 @@ n.d(t, {
     Vq: () => M,
     Wf: () => U,
     cB: () => L,
-    dy: () => w,
-    wP: () => D,
+    dy: () => D,
+    wP: () => w,
 });
 var r = n(951288);
 n(647438);
@@ -40,7 +40,7 @@ var b = n(592125),
     N = n(388032),
     R = n(399289),
     P = n(430864);
-function w(e) {
+function D(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(s.u, {
         text: t.name,
@@ -54,7 +54,7 @@ function w(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(s.u, {
         text: t.name,

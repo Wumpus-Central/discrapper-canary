@@ -3,8 +3,8 @@ n.d(t, {
     k: () => u,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(793030),
     a = n(481060),
     o = n(45251),
@@ -13,8 +13,8 @@ var r = n(951288),
 let u = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
 function d(e) {
     let { channel: t, transitionState: n, onClose: d, defaultValue: p } = e,
-        [f, h] = i.useState(p);
-    return (0, r.jsx)(l.Modal, {
+        [h, f] = r.useState(p);
+    return (0, i.jsx)(l.Modal, {
         transitionState: n,
         size: "md",
         title: c.intl.string(c.t["3+ii4F"]),
@@ -31,15 +31,15 @@ function d(e) {
                 onClick: () => {
                     (0, o._e)({
                         channelId: t.id,
-                        scheduledTimestamp: f.toISOString(),
+                        scheduledTimestamp: h.toISOString(),
                     }),
                         (0, a.Mr3)(u);
                 },
             },
         ],
-        children: (0, r.jsx)(s.Z, {
+        children: (0, i.jsx)(s.Z, {
             defaultValue: p,
-            onChange: h,
+            onChange: f,
         }),
     });
 }

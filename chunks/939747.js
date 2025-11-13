@@ -3,7 +3,7 @@ a.d(e, {
     Ic: () => _,
     M: () => n,
     OC: () => i,
-    s3: () => c,
+    s3: () => E,
     uv: () => o,
 });
 var r = a(370336);
@@ -29,10 +29,10 @@ function o(t) {
 function i(t) {
     return t.replace(/[^\w]+/gi, "_");
 }
-function c(t) {
+function E(t) {
     return t.replace(/[^\w\-.]+/gi, "_");
 }
-let E = [
+let c = [
     ["\n", "\\n"],
     ["\r", "\\r"],
     ["\t", "\\t"],
@@ -48,7 +48,7 @@ function s(t) {
                 (t, e) =>
                     t +
                     (function (t) {
-                        for (let [e, a] of E) if (t === e) return a;
+                        for (let [e, a] of c) if (t === e) return a;
                         return t;
                     })(e),
                 "",

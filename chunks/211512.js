@@ -15,18 +15,18 @@ function a(e) {
         j = null == c ? void 0 : c(),
         m = n(),
         v = null == s ? void 0 : s(),
-        g = null == u ? void 0 : u();
+        x = null == u ? void 0 : u();
     return (0, r.jsx)(i.X, {
         children: (0, r.jsx)(o.gNt, {
             label: y,
             description: j,
-            disabled: g,
+            disabled: x,
             layout: "horizontal",
             children: (0, r.jsx)(o.Button, {
                 onClick: p,
                 text: m,
                 variant: v,
-                disabled: g,
+                disabled: x,
                 loading: f,
             }),
         }),

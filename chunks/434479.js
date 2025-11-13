@@ -98,19 +98,19 @@ function f(e) {
             "showUnread",
             "ref",
         ]);
-    let C = (0, o.JA)(n),
-        x = null != (t = (0, a.q)(m)) ? t : "";
+    let x = (0, o.JA)(n),
+        C = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
         ref: v,
         children: (0, r.jsxs)(
             s.kL8,
             h(p({}, j), {
-                buttonProps: h(p({}, C), {
+                buttonProps: h(p({}, x), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": x,
+                "aria-label": C,
                 focusProps: {
                     offset: {
                         top: 1,

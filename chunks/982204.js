@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => w,
+    B: () => D,
     E: () => P,
 }),
     n(953529);
@@ -111,7 +111,7 @@ let v = (e, t) => {
             }),
         });
     };
-function w(e) {
+function D(e) {
     let { sku: t, skuPricePreview: n, application: i } = e;
     s()(null != n.amount, "SKU must have a price set."),
         s()(null != n.invoice_items && 1 === n.invoice_items.length, "SKU preview must have single line item");

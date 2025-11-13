@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => O,
-    Z: () => N,
+    W: () => S,
+    Z: () => O,
 }),
     n(457542);
 var r,
@@ -14,49 +14,49 @@ var r,
     d = n(239091),
     h = n(623602),
     g = n(598077),
-    p = n(314897),
-    m = n(246946),
+    m = n(314897),
+    p = n(246946),
     f = n(594174),
     _ = n(626135),
     x = n(51144),
     E = n(480387),
     v = n(726745),
-    b = n(251423),
-    j = n(981631),
+    j = n(251423),
+    b = n(981631),
     I = n(388032),
     y = n(878709),
-    O =
+    S =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
         (r[(r.REMOVED = 2)] = "REMOVED"),
         r);
-function S(e) {
+function N(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: s,
             hidePrivateData: l,
-            isAuthenticated: b,
-        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
+            isAuthenticated: j,
+        } = (0, o.cj)([f.default, p.Z, m.default], () => ({
             currentUser: f.default.getCurrentUser(),
-            hidePrivateData: m.Z.hidePersonalInformation,
-            isAuthenticated: p.default.isAuthenticated(),
+            hidePrivateData: p.Z.hidePersonalInformation,
+            isAuthenticated: m.default.isAuthenticated(),
         })),
-        O = new g.Z(n),
-        S = b && (null == s ? void 0 : s.id) === O.id,
-        N = n.tokenStatus === v.q.INVALID,
-        C = l || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
-        A = null;
+        S = new g.Z(n),
+        N = j && (null == s ? void 0 : s.id) === S.id,
+        O = n.tokenStatus === v.q.INVALID,
+        C = l || S.hasUniqueUsername() ? null : "#".concat(S.discriminator),
+        T = null;
     return (
         h.Z.useConfig({ location: "Account card load" }),
-        S
-            ? (A = (0, i.jsx)(c.Text, {
+        N
+            ? (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: y.hintText,
                   color: "text-feedback-positive",
                   children: I.intl.string(I.t.seV8yt),
               }))
-            : N &&
-              (A = (0, i.jsx)(c.Text, {
+            : O &&
+              (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: y.hintText,
                   color: "text-danger",
@@ -68,12 +68,12 @@ function S(e) {
                 className: y.userDetails,
                 children: [
                     (0, i.jsx)(c.qEK, {
-                        src: O.getAvatarURL(void 0, 40),
+                        src: S.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: a()(y.usernameSection, { [y.hasActionMaxWidth]: !S }),
+                        className: a()(y.usernameSection, { [y.hasActionMaxWidth]: !N }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: y.username,
@@ -82,7 +82,7 @@ function S(e) {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         lineClamp: 1,
-                                        children: x.ZP.getUserTag(O, {
+                                        children: x.ZP.getUserTag(S, {
                                             mode: "username",
                                             identifiable: l ? "never" : "always",
                                         }),
@@ -94,20 +94,20 @@ function S(e) {
                                     }),
                                 ],
                             }),
-                            A,
+                            T,
                         ],
                     }),
                     (0, i.jsxs)("div", {
                         className: y.userActions,
                         children: [
-                            !S &&
+                            !N &&
                                 (0, i.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: N ? I.intl.string(I.t["DSN+hw"]) : t,
+                                    text: O ? I.intl.string(I.t["DSN+hw"]) : t,
                                     onClick: function () {
-                                        if (N) return void r(0, n.id);
-                                        _.default.track(j.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                            location: { section: j.jXE.MANAGE_ACCOUNTS_MODAL },
+                                        if (O) return void r(0, n.id);
+                                        _.default.track(b.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                            location: { section: b.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
                                             E.yD(n.id),
                                             r(1, n.id);
@@ -132,9 +132,9 @@ function S(e) {
                                                     });
                                                     let e = {};
                                                     null != s
-                                                        ? (e.section = j.jXE.MANAGE_ACCOUNTS_MODAL)
-                                                        : (e.page = j.Usc.LOGIN),
-                                                        _.default.track(j.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        ? (e.section = b.jXE.MANAGE_ACCOUNTS_MODAL)
+                                                        : (e.page = b.Usc.LOGIN),
+                                                        _.default.track(b.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         r(2, n.id),
@@ -155,9 +155,9 @@ function S(e) {
         })
     );
 }
-function N(e) {
+function O(e) {
     let { actionText: t, onAction: n } = e,
-        { isLoading: r, multiAccountUsers: l } = (0, b.L)();
+        { isLoading: r, multiAccountUsers: l } = (0, j.L)();
     return (0, i.jsx)("div", {
         className: y.list,
         children: r
@@ -168,7 +168,7 @@ function N(e) {
                       {
                           children: [
                               (0, i.jsx)(
-                                  S,
+                                  N,
                                   {
                                       user: e,
                                       actionText: t,

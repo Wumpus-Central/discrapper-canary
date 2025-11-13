@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     o = n(647438),
     l = n(681715),
@@ -12,63 +12,63 @@ var r = n(951288),
     p = n(604162),
     f = n(46140),
     v = n(388032);
-function E(e) {
+function g(e) {
     let { floatRight: t } = e,
-        { quest: n, sourceQuestContent: E, isPortrait: g } = o.useContext(m.VideoQuestModalContext),
+        { quest: n, sourceQuestContent: g, isPortrait: E } = o.useContext(m.VideoQuestModalContext),
         O = (0, s.aM)(),
-        { enabled: h, variant: b } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
-        S = b === d.m_.OVERLAY_SHARE_ON_VIDEO,
-        [y, C] = (0, p.G6)(v.intl.string(v.t.RDE0Sc), v.intl.string(v.t["+5kSoW"]), 1700),
+        { enabled: b, variant: h } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
+        S = h === d.m_.OVERLAY_SHARE_ON_VIDEO,
+        [C, y] = (0, p.G6)(v.intl.string(v.t.RDE0Sc), v.intl.string(v.t["+5kSoW"]), 1700),
         [_, x] = o.useState(!1),
         j = o.useRef(null),
-        T = (0, c.vB)(n.config),
-        D = o.useCallback(() => {
-            T &&
+        D = (0, c.vB)(n.config),
+        T = o.useCallback(() => {
+            D &&
                 ((0, c.f2)(n.id, {
                     content: u.jn.VIDEO_MODAL,
                     ctaContent: a.jZ.COPY_QUEST_URL,
                     impressionId: O,
-                    sourceQuestContent: E,
+                    sourceQuestContent: g,
                 }),
-                (h || g) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["+5kSoW"]), i.ToastType.SUCCESS)),
-                C(),
+                (b || E) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["+5kSoW"]), i.ToastType.SUCCESS)),
+                y(),
                 x(!0),
                 null != j.current && clearTimeout(j.current),
                 (j.current = setTimeout(() => {
                     x(!1);
                 }, 1700)));
-        }, [O, T, n.id, E, C, h, g]);
+        }, [O, D, n.id, g, y, b, E]);
     return (o.useEffect(
         () => () => {
             null != j.current && clearTimeout(j.current);
         },
         [],
     ),
-    T)
-        ? h || g
+    D)
+        ? b || E
             ? (0, r.jsx)("div", {
                   style: { marginLeft: t ? "auto" : void 0 },
                   children: _
                       ? (0, r.jsx)(i.hU, {
                             variant: "active",
                             icon: i.owK,
-                            onClick: D,
+                            onClick: T,
                             "aria-label": v.intl.string(v.t.RDE0Sc),
                         })
                       : (0, r.jsx)(l.u, {
-                            text: S || !h ? void 0 : v.intl.string(v.t.WqhZss),
+                            text: S || !b ? void 0 : v.intl.string(v.t.WqhZss),
                             children: (0, r.jsx)(i.hU, {
                                 variant: S ? "overlay-secondary" : "secondary",
-                                icon: h ? i.aAc : i.TIy,
+                                icon: b ? i.aAc : i.TIy,
                                 "aria-label": v.intl.string(v.t.RDE0Sc),
-                                onClick: D,
+                                onClick: T,
                             }),
                         }),
               })
             : (0, r.jsx)(i.Button, {
                   variant: "secondary",
-                  text: y,
-                  onClick: D,
+                  text: C,
+                  onClick: T,
               })
         : null;
 }

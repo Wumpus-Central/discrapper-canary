@@ -1,69 +1,69 @@
-n.d(e, { z: () => b });
+n.d(e, { z: () => Z });
 var i = n(951288),
     l = n(657707),
-    r = n(442837),
-    u = n(481060),
+    u = n(442837),
+    r = n(481060),
     s = n(778825),
     a = n(398140),
     o = n(564344),
     c = n(509613),
     E = n(28682),
-    d = n(518950),
-    S = n(25990),
+    S = n(518950),
+    d = n(25990),
     T = n(594174),
-    O = n(313789),
-    g = n(620163),
-    I = n(726985),
+    I = n(313789),
+    O = n(620163),
+    g = n(726985),
     _ = n(388032),
-    A = n(88651);
-let f = (0, c.x1)(O.n.PROFILE_PANE, {
+    N = n(88651);
+let A = (0, c.x1)(I.n.PROFILE_PANE, {
         buildLayout: () => [],
         render: o.Z,
     }),
-    N = (0, c.wf)(O.n.PROFILE_PANEL, {
+    f = (0, c.wf)(I.n.PROFILE_PANEL, {
         useTitle: () => _.intl.string(_.t["vi7f+q"]),
-        buildLayout: () => [f],
+        buildLayout: () => [A],
         notice: {
-            stores: [s.Z, S.Z],
+            stores: [s.Z, d.Z],
             element: a.Z,
         },
     }),
-    b = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
+    Z = (0, c.m7)(I.n.PROFILE_SIDEBAR_ITEM, {
         icon: l.tBG,
         useTitle: () => _.intl.string(_.t["vi7f+q"]),
-        getLegacySearchKey: () => I.s6.PROFILE_CUSTOMIZATION,
-        buildLayout: () => [N],
+        getLegacySearchKey: () => g.s6.PROFILE_CUSTOMIZATION,
+        buildLayout: () => [f],
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, r.e7)([T.default], () => T.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: s } = (0, d.Z)({
+            let e = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: s } = (0, S.Z)({
                     userId: null == e ? void 0 : e.id,
-                    size: u.EFr.SIZE_48,
+                    size: r.EFr.SIZE_48,
                 });
             return null == e
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: A.profileCustomizationTab,
+                      className: N.profileCustomizationTab,
                       children: [
-                          (0, i.jsx)(u.qEK, {
+                          (0, i.jsx)(r.qEK, {
                               src: n,
                               avatarDecoration: s,
-                              size: u.EFr.SIZE_48,
+                              size: r.EFr.SIZE_48,
                               "aria-label": _.intl.string(_.t.lqaIxI),
                           }),
                           (0, i.jsxs)("div", {
-                              className: A.textContainer,
+                              className: N.textContainer,
                               children: [
-                                  (0, i.jsx)(u.Text, {
+                                  (0, i.jsx)(r.Text, {
                                       color: "header-primary",
                                       variant: "text-md/medium",
                                       lineClamp: 1,
                                       children: null != (t = e.globalName) ? t : e.username,
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: A.editProfilesRow,
+                                      className: N.editProfilesRow,
                                       children: [
-                                          (0, i.jsx)(u.Text, {
+                                          (0, i.jsx)(r.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,
@@ -82,7 +82,7 @@ let f = (0, c.x1)(O.n.PROFILE_PANE, {
         },
         trailing: {
             type: E.PU.BADGE_NEW,
-            getDismissibleContentTypes: g.OF,
-            badgeComponent: g.W8,
+            getDismissibleContentTypes: O.OF,
+            badgeComponent: O.W8,
         },
     });

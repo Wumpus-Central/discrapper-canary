@@ -19,8 +19,8 @@ var r,
     O = n(453542),
     v = n(702321),
     j = n(82295),
-    C = n(313201),
-    x = n(860144),
+    x = n(313201),
+    C = n(860144),
     E = n(214852),
     S = n(518311),
     I = n(355298),
@@ -505,7 +505,7 @@ let V = (e) => {
                 t = (0, P.tU)(e, [I.Z, N.Z]);
             return h ? [] : t;
         }, [h]);
-    (0, E.z)(x.R);
+    (0, E.z)(C.R);
     let { analyticsLocations: j } = (0, y.ZP)(b.Z.CONTACTS_LIST),
         S = (0, Z.Ll)(),
         { keyboardModeEnabled: T, version: R } = (0, p.cj)([m.Z, w.Z], () => ({
@@ -557,7 +557,7 @@ let V = (e) => {
                 }),
             [L],
         ),
-        V = (0, C.Dt)(),
+        V = (0, x.Dt)(),
         H = (0, d.ZP)({
             id: "private-channels-".concat(V),
             isEnabled: T,

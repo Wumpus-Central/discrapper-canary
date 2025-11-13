@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(325067),
     v = n(594174),
     I = n(572004),
-    S = n(287880),
-    T = n(714565),
+    T = n(287880),
+    S = n(714565),
     A = n(202858),
     C = n(726985),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(343396),
-    D = n(197571);
+    D = n(343396),
+    w = n(197571);
 function x(e, t, n) {
     return (
         t in e
@@ -100,18 +100,18 @@ function k(e) {
             [a],
         );
     return (0, r.jsx)("li", {
-        className: D.marginBottom20,
+        className: w.marginBottom20,
         children: (0, r.jsx)(c.P3F, {
             innerRef: o,
-            className: w.backupCode,
+            className: D.backupCode,
             onKeyDown: s,
             children: (0, r.jsx)(l.$q, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: w.codeCheckbox,
+                className: D.codeCheckbox,
                 value: n,
                 children: (0, r.jsx)("span", {
-                    className: w.code,
+                    className: D.code,
                     children: a,
                 }),
             }),
@@ -138,7 +138,7 @@ class U extends i.PureComponent {
                         P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
                         (0, r.jsx)(c.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
-                            className: w.phoneRevealer,
+                            className: D.phoneRevealer,
                             children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
                         }),
                     ],
@@ -153,7 +153,7 @@ class U extends i.PureComponent {
                     onClick: this.handleDisableSMS,
                 });
             else {
-                let t = (0, T.c)(i);
+                let t = (0, S.c)(i);
                 e = (0, r.jsxs)(c.ButtonGroup, {
                     size: "sm",
                     children: [
@@ -221,13 +221,13 @@ class U extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(_.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: w.checkboxGroup,
+                                            className: D.checkboxGroup,
                                             children: i(t.slice(0, t.length / 2)),
                                         }),
                                     }),
                                     (0, r.jsx)(_.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: w.checkboxGroup,
+                                            className: D.checkboxGroup,
                                             children: i(t.slice(t.length / 2)),
                                         }),
                                     }),
@@ -302,7 +302,7 @@ class U extends i.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return S.uZ
+        return T.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()

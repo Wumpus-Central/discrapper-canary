@@ -1,19 +1,19 @@
 i.d(e, { Z: () => O });
 var s,
     n = i(951288),
-    a = i(647438),
-    h = i(120356),
-    r = i.n(h),
-    o = i(692547),
-    l = i(477690),
-    d = i(481060),
-    c = i(585483),
+    r = i(647438),
+    a = i(120356),
+    h = i.n(a),
+    l = i(692547),
+    o = i(477690),
+    c = i(481060),
+    d = i(585483),
     u = i(624138),
     p = i(890056),
     f = i(636879),
     m = i(810847),
-    v = i(898625),
-    g = i(981631),
+    g = i(898625),
+    v = i(981631),
     w = i(935742);
 function b(t, e, i) {
     return (
@@ -28,15 +28,15 @@ function b(t, e, i) {
         t
     );
 }
-let y = (0, u.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+let y = (0, u.Mg)(o.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     x = 1 / 120;
-class E extends (s = a.Component) {
+class E extends (s = r.Component) {
     componentDidMount() {
         this.initialize();
     }
     componentDidUpdate(t) {
         let { waveState: e } = this.props;
-        e === v.hO.FILLING && e !== t.waveState && this.waveFill();
+        e === g.hO.FILLING && e !== t.waveState && this.waveFill();
     }
     componentWillUnmount() {
         this.terminate();
@@ -55,21 +55,21 @@ class E extends (s = a.Component) {
             window.addEventListener("blur", this.delayedPause, !1),
             window.addEventListener("focus", this.play, !1),
             document.addEventListener("visibilitychange", this.handleVisibilityChange, !1),
-            c.S.subscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+            d.S.subscribe(v.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
     unbindEvents() {
         window.removeEventListener("resize", this.resizeCanvas, !1),
             window.removeEventListener("blur", this.delayedPause, !1),
             window.removeEventListener("focus", this.play, !1),
             document.removeEventListener("visibilitychange", this.handleVisibilityChange, !1),
-            c.S.unsubscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+            d.S.unsubscribe(v.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
     advanceTransitionalState() {
         let { waveState: t } = this.props;
-        (t === v.hO.INITIAL || t === v.hO.FILLING) && this.updateWaveState(t + 1);
+        (t === g.hO.INITIAL || t === g.hO.FILLING) && this.updateWaveState(t + 1);
     }
     waveFill() {
-        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(v.hO.FILLED);
+        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(g.hO.FILLED);
     }
     updateAnimation(t) {
         this.children.forEach((e) => e.update(t));
@@ -82,18 +82,18 @@ class E extends (s = a.Component) {
     }
     render() {
         let { waveState: t, hideFallback: e, embedded: i } = this.props;
-        return (0, n.jsx)(d.Sfi.Consumer, {
+        return (0, n.jsx)(c.Sfi.Consumer, {
             children: (s) => {
-                let { reducedMotion: a } = s;
-                return a.enabled
+                let { reducedMotion: r } = s;
+                return r.enabled
                     ? (0, n.jsx)("div", {
-                          className: r()(w.fallbackImage, {
+                          className: h()(w.fallbackImage, {
                               [w.embedded]: i,
-                              [w.visible]: !e && t >= v.hO.ENTERED,
+                              [w.visible]: !e && t >= g.hO.ENTERED,
                           }),
                       })
                     : (0, n.jsx)("canvas", {
-                          className: r()(w.canvas, { [w.embedded]: i }),
+                          className: h()(w.canvas, { [w.embedded]: i }),
                           ref: this.setCanvas,
                       });
             },
@@ -183,7 +183,7 @@ class E extends (s = a.Component) {
 }
 b(E, "defaultProps", { embedded: !1 });
 let O = (t) => {
-    let e = (0, d.dQu)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
+    let e = (0, c.dQu)(l.Z.unsafe_rawColors.PRIMARY_630).hex();
     return (0, n.jsx)(
         E,
         (function (t) {

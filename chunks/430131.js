@@ -18,7 +18,7 @@ function m(e) {
         O = (0, i.e7)([u.Z], () => u.Z.can(f.Plq.CHANGE_NICKNAME, b) || u.Z.can(f.Plq.MANAGE_NICKNAMES, b)),
         v = (0, s.m)(_.PremiumTypes.TIER_2),
         I = o.JH.useExperiment({ location: "NicknameSection" }).enabled;
-    function S(e) {
+    function T(e) {
         (0, d.wi)(e, m);
     }
     return (0, r.jsxs)(l.Z, {
@@ -29,7 +29,7 @@ function m(e) {
                 value: null != y ? y : "",
                 placeholder: g,
                 maxLength: f.l$U,
-                onChange: S,
+                onChange: T,
                 disabled: !O,
                 helperText: O ? void 0 : p.intl.string(p.t.gzjxQi),
             }),

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(987209),
     R = n(563132),
     P = n(45572),
-    w = n(435020),
-    D = n(119226),
+    D = n(435020),
+    w = n(119226),
     x = n(982204),
     L = n(981631),
     M = n(388032),
@@ -86,7 +86,7 @@ function U(e) {
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, w.m)(B, Z),
+        ef = (0, D.m)(B, Z),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
@@ -139,7 +139,7 @@ function U(e) {
                 sku: er,
                 isEmbeddedIAP: W,
             }),
-            em && (0, r.jsx)(D.Z, { sku: er }),
+            em && (0, r.jsx)(w.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
             (0, r.jsx)(c.gNt, {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),

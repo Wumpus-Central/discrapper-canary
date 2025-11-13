@@ -129,7 +129,7 @@ function P(e, t) {
         s = null == r ? {} : { load_duration_ms: Date.now() - r };
     c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_VIEWED, v({}, o, s));
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = Date.now();
     R(t),
         o.tn
@@ -165,7 +165,7 @@ function w(e, t, n) {
                     }),
             );
 }
-let D = i().debounce(w, C);
+let w = i().debounce(D, C);
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
@@ -175,7 +175,7 @@ function x(e, t) {
               type: "GIF_PICKER_QUERY",
               query: e,
           }),
-          n ? w(e, t, r) : D(e, t, r));
+          n ? D(e, t, r) : w(e, t, r));
 }
 function L(e) {
     "" !== e &&

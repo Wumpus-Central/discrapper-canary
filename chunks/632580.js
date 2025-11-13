@@ -82,8 +82,8 @@ async function y(e) {
         trialId: N,
         priceOptions: R,
         paymentSource: P,
-        isPrepaidPaymentPastDue: w,
-        openInvoiceId: D,
+        isPrepaidPaymentPastDue: D,
+        openInvoiceId: w,
         premiumSubscription: x,
         onNext: L,
         metadata: M,
@@ -149,9 +149,9 @@ async function y(e) {
                     giftInfoOptions: Z,
                     orderId: V,
                 });
-            } else if (w && null != D && null != P && null != x)
+            } else if (D && null != w && null != P && null != x)
                 e = p.Uk1.has(P.type)
-                    ? await (0, o.G)(x, D, P, R.currency)
+                    ? await (0, o.G)(x, w, P, R.currency)
                     : await (0, o.Mg)(
                           x,
                           {

@@ -1,6 +1,6 @@
 n.d(t, { F: () => u });
-var r = n(512722),
-    i = n.n(r),
+var i = n(512722),
+    r = n.n(i),
     l = n(846027),
     a = n(287734),
     o = n(131951),
@@ -8,12 +8,12 @@ var r = n(512722),
     c = n(893387);
 function u(e, t) {
     var n;
-    let r = null != (n = e.sessionId) ? n : "";
-    (0, s._)(r), (0, s.s6)();
+    let i = null != (n = e.sessionId) ? n : "";
+    (0, s._)(i), (0, s.s6)();
     let u = null != t ? t : e.channelId;
-    i()(null != u, "attempted to transfer to unknown channel"),
+    r()(null != u, "attempted to transfer to unknown channel"),
         e.selfMute !== o.Z.isSelfMute() && l.Z.toggleSelfMute(),
         e.selfDeaf !== o.Z.isSelfDeaf() && l.Z.toggleSelfDeaf(),
-        (0, c.Z)(u, "discord_client", r),
+        (0, c.Z)(u, "discord_client", i),
         a.default.selectVoiceChannel(u, !1);
 }

@@ -26,7 +26,7 @@ let m = () => {
             version: y,
         });
     }, [t, y]);
-    let S = () => {
+    let T = () => {
         I(() =>
             (0, u.mK)({
                 analyticsLocations: t,
@@ -66,7 +66,7 @@ let m = () => {
                 ],
             }),
             (0, r.jsx)(a.Button, {
-                onClick: S,
+                onClick: T,
                 variant: "overlay-primary",
                 text: p.intl.string(p.t.fYfGgK),
             }),

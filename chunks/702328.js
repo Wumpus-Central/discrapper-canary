@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(367074),
     v = n(931118),
     I = n(283066),
-    S = n(622909),
-    T = n(639119),
+    T = n(622909),
+    S = n(639119),
     A = n(8647),
     C = n(744129),
     N = n(823188),
     R = n(611116),
     P = n(306066),
-    w = n(349803),
-    D = n(8231),
+    D = n(349803),
+    w = n(8231),
     x = n(864879),
     L = n(238649),
     M = n(47840),
@@ -74,19 +74,19 @@ let z = () => {
     }, []);
     let eE = [B.h.HOME, B.h.WHATS_NEW, B.h.BEST_OF_NITRO, B.h.PLANS, B.h.COMPARE],
         { navBarSections: eb, activeSectionId: ey } = (0, G.O)(eE),
-        { home: eO, whatsNew: ev, bestOfNitro: eI, plans: eS, compare: eT } = eb,
+        { home: eO, whatsNew: ev, bestOfNitro: eI, plans: eT, compare: eS } = eb,
         eA = em ? Y : W,
         { variant: eC } = (0, v.ZP)("PremiumBrandRefreshMarketingHeroHeading"),
-        eN = (0, T.N)(),
-        eR = (0, S.N)(),
+        eN = (0, S.N)(),
+        eR = (0, T.N)(),
         eP =
             E.Z.getAlmostExpiringTrialOffers([F.Si.TIER_2]).length > 0 &&
             null != eN &&
             null != eN.expires_at &&
             eN.trial_id !== F.a7,
-        ew = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eR && null != eR.expires_at,
-        eD = eP ? eN.expires_at : ew ? eR.expires_at : null,
-        ex = eC === v.tE.HERO_COUNTDOWN && (eP || ew) && null != eD,
+        eD = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eR && null != eR.expires_at,
+        ew = eP ? eN.expires_at : eD ? eR.expires_at : null,
+        ex = eC === v.tE.HERO_COUNTDOWN && (eP || eD) && null != ew,
         eL = (0, r.jsxs)("div", {
             className: o()(eA.container, eA.responsiveContainer, {
                 [eA.containerBackground]: em || J,
@@ -133,7 +133,7 @@ let z = () => {
                                           ref: a,
                                           subscriptionTier: ef,
                                           isEligibleForBogoPromotion: e_,
-                                          offerExpiresAt: ex ? eD : null,
+                                          offerExpiresAt: ex ? ew : null,
                                       })
                                     : (0, r.jsx)(U.Z, {
                                           ref: a,
@@ -169,7 +169,7 @@ let z = () => {
                         }),
                         (0, r.jsx)("div", {
                             className: eA.premiumTierCardsContainer,
-                            ref: eS.ref,
+                            ref: eT.ref,
                             children: (0, r.jsx)(l.$, {
                                 innerRef: n,
                                 onChange: (e) => ei(e),
@@ -185,13 +185,13 @@ let z = () => {
                         }),
                         (0, r.jsx)("div", {
                             className: eA.planComparisonTableContainer,
-                            ref: eT.ref,
-                            children: em ? (0, r.jsx)(j.Z, {}) : (0, r.jsx)(D.Z, {}),
+                            ref: eS.ref,
+                            children: em ? (0, r.jsx)(j.Z, {}) : (0, r.jsx)(w.Z, {}),
                         }),
                     ],
                 }),
                 !em &&
-                    (0, r.jsx)(w.Z, {
+                    (0, r.jsx)(D.Z, {
                         isVisible: eg && es,
                         subscriptionTier: ef,
                         isApplicationHome: !0,

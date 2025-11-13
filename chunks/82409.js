@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(358458),
+    a = n(509442),
     s = n(442837);
 n(28664);
 var c = n(481060),
@@ -21,8 +21,8 @@ var h = n(377171),
     O = n(306680),
     v = n(709054),
     j = n(821020),
-    C = n(948154),
-    x = n(804932),
+    x = n(948154),
+    C = n(804932),
     E = n(725739),
     S = n(787879),
     I = n(370774),
@@ -77,7 +77,7 @@ let k = [],
 function U(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        a = (0, x.fJ)(),
+        a = (0, C.fJ)(),
         { selectedFilter: h } = (0, E.Z)(),
         P = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
@@ -108,7 +108,7 @@ function U(e) {
         U = i.useCallback(
             (e) => {
                 h !== A.V5.BOOKMARKS &&
-                    C.Z.loadMoreInbox({
+                    x.Z.loadMoreInbox({
                         viewId: a,
                         loadingTrigger: e,
                     });
@@ -208,7 +208,7 @@ function U(e) {
                   };
         })(q, X);
         null != r &&
-            C.Z.inboxItemClick({
+            x.Z.inboxItemClick({
                 message: r,
                 channel: { id: r.channel_id },
                 isUnread: i,
@@ -278,7 +278,7 @@ function U(e) {
     });
 }
 function B(e) {
-    return (0, r.jsx)(x.HP, { children: (0, r.jsx)(U, M({}, e)) });
+    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, M({}, e)) });
 }
 function F(e, t, n) {
     return i.useMemo(

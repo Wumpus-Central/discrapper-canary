@@ -1,31 +1,31 @@
 t.d(n, { Z: () => a }), t(539854);
-var l = t(647438),
-    r = t(399606),
+var r = t(647438),
+    l = t(399606),
     i = t(45966);
 function a(e) {
-    let n = (0, r.Wu)([i.Z], () => i.Z.getEnabledOnboardingPrompts(e));
-    return l.useMemo(() => {
+    let n = (0, l.Wu)([i.Z], () => i.Z.getEnabledOnboardingPrompts(e));
+    return r.useMemo(() => {
         let e = 0,
             t = [],
-            l = [],
             r = [],
+            l = [],
             i = [];
         for (var a = 0; a < n.length; a++) {
             let o = n[a];
             o.isNew
                 ? t.push(o)
                 : o.hasNewAnswers
-                  ? (l.push(o), (e += o.options.filter((e) => e.isUnseen).length))
+                  ? (r.push(o), (e += o.options.filter((e) => e.isUnseen).length))
                   : o.inOnboarding
                     ? i.push(o)
-                    : r.push(o);
+                    : l.push(o);
         }
         return {
             onboardingPromptsRaw: n,
             newOnboardingPrompts: t,
-            onboardingPromptsWithNewAnswers: l,
+            onboardingPromptsWithNewAnswers: r,
             newAnswersCount: e,
-            onboardingPrompts: r.concat(i),
+            onboardingPrompts: l.concat(i),
         };
     }, [n]);
 }

@@ -4,18 +4,18 @@ var l = n(951288),
     i = n(954654),
     a = n(937889),
     s = n(930282),
-    o = n(524444),
-    u = n(695346),
+    u = n(524444),
+    o = n(695346),
     c = n(315934);
 function d(e) {
     let { previewMessage: t } = e,
-        n = u.jU.useSetting(),
+        n = o.jU.useSetting(),
         { content: d } = (0, a.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0,
         }),
         f = t.attachments.map((e, t) => {
-            let n = (0, o.Yi)({
+            let n = (0, u.Yi)({
                 src: e.url,
                 containerClassName: c.previewImage,
                 imageContainerClassName: c.previewImage,

@@ -86,18 +86,18 @@ function g(e) {
         y = i.useRef(null),
         O = i.useRef(null),
         v = i.useRef(null),
-        { isUsingKeyboardNavigation: I, focusIndex: S } = d,
-        T = h(d, ["isUsingKeyboardNavigation", "focusIndex"]);
+        { isUsingKeyboardNavigation: I, focusIndex: T } = d,
+        S = h(d, ["isUsingKeyboardNavigation", "focusIndex"]);
     i.useLayoutEffect(() => {
         var e;
         n && ((0, s.F)(b), null == (e = O.current) || e.focus());
     }, [n]),
         i.useEffect(() => {
-            if (n && S >= 0 && I) {
+            if (n && T >= 0 && I) {
                 var e;
-                null == (e = v.current) || e.scrollRowIntoView(S);
+                null == (e = v.current) || e.scrollRowIntoView(T);
             }
-        }, [n, I, S]);
+        }, [n, I, T]);
     let A = i.useCallback((e) => _[e], [_]),
         C = (0, o.E)("MenuSubmenuListItem"),
         N = () =>
@@ -106,7 +106,7 @@ function g(e) {
                 className: u.submenuPaddingContainer,
                 children: (0, r.jsx)(
                     "div",
-                    p(f({ className: u.submenu }, T), {
+                    p(f({ className: u.submenu }, S), {
                         ref: O,
                         children: (0, r.jsx)(c.Z, {
                             ref: v,

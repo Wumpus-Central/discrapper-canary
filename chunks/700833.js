@@ -63,21 +63,21 @@ function p(e) {
             index: b,
             isDragEnabled: x,
             submittedGuildJoinRequestsCount: j,
-            removeFormField: v,
-            updateFormField: _,
-            updateFormFieldOrder: C,
-            canRemove: O,
+            removeFormField: _,
+            updateFormField: v,
+            updateFormFieldOrder: O,
+            canRemove: C,
             actionsLocation: y,
-            fieldStyle: E,
+            fieldStyle: N,
         } = e,
-        N = async () => {
-            await v(b);
+        E = async () => {
+            await _(b);
         },
         I = async (e) => {
-            await _(b, e);
+            await v(b, e);
         },
         S = async (e, t, n) => {
-            await C(e, t, n);
+            await O(e, t, n);
         },
         T = (0, i.uniqueId)(),
         P = t === b,
@@ -102,11 +102,11 @@ function p(e) {
                               );
                       });
             },
-            onRemove: N,
+            onRemove: E,
             onDrop: S,
-            canRemove: O,
+            canRemove: C,
             actionsLocation: y,
-            fieldStyle: E,
+            fieldStyle: N,
         };
     switch (p.field_type) {
         case a.QJ.TERMS:
@@ -115,7 +115,7 @@ function p(e) {
                 g(
                     {
                         channelId: f.rulesChannelId,
-                        title: E === a.it.COMPACT ? u.intl.string(u.t["55+gic"]) : u.intl.string(u.t["53vNcB"]),
+                        title: N === a.it.COMPACT ? u.intl.string(u.t["55+gic"]) : u.intl.string(u.t["53vNcB"]),
                         formField: p,
                     },
                     w,

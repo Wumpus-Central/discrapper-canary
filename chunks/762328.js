@@ -81,20 +81,20 @@ function b(e) {
             placement: O = "bottom",
             spacing: v = 8,
             autoFlip: I = !0,
-            autoShift: S = !0,
-            strategy: T = "fixed",
+            autoShift: T = !0,
+            strategy: S = "fixed",
             portal: A = !0,
             blockPointerEvents: C = !1,
             children: N,
             renderLayer: R,
             trigger: P = "click",
         } = e,
-        w = i.useRef(null),
-        D = i.useMemo(() => {
+        D = i.useRef(null),
+        w = i.useMemo(() => {
             let e = [(0, a.cv)(v)];
             return (
                 I && e.push((0, a.RR)({ padding: g })),
-                S &&
+                T &&
                     e.push(
                         (0, a.uY)({
                             padding: g,
@@ -104,7 +104,7 @@ function b(e) {
                 e.push((0, a.Cp)({ strategy: "referenceHidden" })),
                 e
             );
-        }, [v, I, S]);
+        }, [v, I, T]);
     null != y && (n = { reference: { getBoundingClientRect: () => y } });
     let {
             refs: x,
@@ -117,8 +117,8 @@ function b(e) {
             placement: O,
             open: l,
             onOpenChange: _,
-            strategy: T,
-            middleware: D,
+            strategy: S,
+            middleware: w,
             whileElementsMounted: s.Me,
             elements: n,
         }),
@@ -155,7 +155,7 @@ function b(e) {
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: w,
+                                        containerRef: D,
                                         children: R({
                                             placement: M,
                                             update: k,

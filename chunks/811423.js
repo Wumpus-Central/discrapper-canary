@@ -1,18 +1,18 @@
 n.d(t, { Z: () => c });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(726521),
     o = n(592125),
     s = n(388032);
 function c(e, t) {
-    let n = (0, i.e7)([o.Z], () => o.Z.getChannel(t)),
+    let n = (0, r.e7)([o.Z], () => o.Z.getChannel(t)),
         c = null == n ? void 0 : n.getGuildId();
     return null == e
         ? null
-        : (0, r.jsx)(l.kSQ, {
-              children: (0, r.jsx)(l.sNh, {
+        : (0, i.jsx)(l.kSQ, {
+              children: (0, i.jsx)(l.sNh, {
                   id: "report-app",
                   color: "danger",
                   label: s.intl.string(s.t.NgA5vp),

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => v });
+n.r(t), n.d(t, { default: () => O });
 var i = n(951288),
     r = n(647438),
     s = n(966044),
@@ -8,17 +8,17 @@ var i = n(951288),
     c = n(735246),
     d = n(503737),
     u = n(823453),
-    p = n(436774),
-    h = n(686546),
+    h = n(436774),
+    p = n(686546),
     f = n(314910),
     g = n(728285),
     m = n(367207),
     y = n(241890),
-    O = n(649561),
-    _ = n(631553),
-    b = n(981631);
+    b = n(649561),
+    v = n(631553),
+    _ = n(981631);
 n(635324), n(29973), n(308765), n(913487), n(606206), o.ZP.initialize();
-let v = function () {
+let O = function () {
     return (
         r.useEffect(
             () => (
@@ -35,16 +35,16 @@ let v = function () {
             children: [
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(c.T, {
-                    children: (0, i.jsxs)(O.Z, {
+                    children: (0, i.jsxs)(b.Z, {
                         children: [
-                            (0, i.jsx)(h.Co, {}),
-                            (0, i.jsx)(p.ZP, {}),
+                            (0, i.jsx)(p.Co, {}),
+                            (0, i.jsx)(h.ZP, {}),
                             (0, i.jsx)(g.Wu, {
-                                appContext: b.IlC.OVERLAY,
+                                appContext: _.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {
                                     children: [
-                                        (0, i.jsx)(_.Z, {}),
+                                        (0, i.jsx)(v.Z, {}),
                                         (0, i.jsx)(l.nKe, {}),
                                         (0, i.jsx)(a.Z, {}),
                                         (0, i.jsx)(s.uZ, {}),

@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(39377),
     p = n(981631),
     f = n(388032),
-    m = n(126373);
-let h = [
+    h = n(126373);
+let g = [
         {
             feature: p.Qa3.SINGLE_PLAYER,
             getText: () => f.intl.string(f.t["V+/FjO"]),
@@ -91,23 +91,23 @@ let h = [
             IconComponent: d.Z,
         },
     ],
-    g = (e) => {
+    m = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)("div", {
-            className: m.row,
+            className: h.row,
             children: [
                 (0, r.jsx)(l.u, {
                     text: i,
-                    children: (0, r.jsx)(t, { className: m.featureIcon }),
+                    children: (0, r.jsx)(t, { className: h.featureIcon }),
                 }),
                 (0, r.jsx)("span", {
-                    className: m.featureText,
+                    className: h.featureText,
                     children: n,
                 }),
                 (0, r.jsx)(a.dz2, {
                     size: "md",
                     color: "currentColor",
-                    className: m.checkmarkIcon,
+                    className: h.checkmarkIcon,
                 }),
             ],
         });
@@ -115,7 +115,7 @@ let h = [
 class _ extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = h
+            t = g
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
@@ -123,7 +123,7 @@ class _ extends i.PureComponent {
                 .map((e) => {
                     let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
                     return (0, r.jsx)(
-                        g,
+                        m,
                         {
                             IconComponent: n,
                             text: i(),
@@ -135,7 +135,7 @@ class _ extends i.PureComponent {
         return 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: m.features,
+                  className: h.features,
                   children: [(0, r.jsx)(s.Z, { children: f.intl.string(f.t.XXENra) }), t],
               });
     }

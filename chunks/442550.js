@@ -24,8 +24,8 @@ function _(e) {
         b = "".concat(n, "px"),
         [y, O] = i.useState(!1),
         [v, I] = i.useState(!1),
-        S = null == h || v;
-    if (null == t || (y && S))
+        T = null == h || v;
+    if (null == t || (y && T))
         return (0, r.jsx)(c.IMN, {
             size: "custom",
             width: "100%",
@@ -34,7 +34,7 @@ function _(e) {
             style: { maxWidth: b },
             className: o()(f.contentImage, _),
         });
-    let T =
+    let S =
         "height" === a
             ? {
                   maxWidth: b,
@@ -51,7 +51,7 @@ function _(e) {
             __unsupportedReactNodeAsText: p,
             shouldShow: g,
             children: (0, r.jsx)("img", {
-                style: T,
+                style: S,
                 className: o()(f.contentImage, _),
                 src: y && null != h ? h : t,
                 "aria-hidden": m,

@@ -20,9 +20,9 @@ n.d(t, { Z: () => y }),
     n(146733),
     n(539854);
 var a = n(951288),
-    r = n(647438),
-    i = n(345959),
-    l = n.n(i),
+    i = n(647438),
+    r = n(345959),
+    l = n.n(r),
     s = n(442837),
     o = n(755721),
     c = n(481060),
@@ -68,7 +68,7 @@ function j(e) {
     });
 }
 function _(e) {
-    let { recording: t, playing: n, onPlay: r, onStop: i } = e;
+    let { recording: t, playing: n, onPlay: i, onStop: r } = e;
     return (0, a.jsx)(c.zF9, {
         collapsibleContent: (0, a.jsx)(j, { recording: t }),
         children: (e) => {
@@ -84,7 +84,7 @@ function _(e) {
                     (0, a.jsx)(c.P3F, {
                         tag: "span",
                         onClick: (e) => {
-                            e.stopPropagation(), n ? i() : r(t);
+                            e.stopPropagation(), n ? r() : i(t);
                         },
                         children: n ? (0, a.jsx)(c.fpf, { size: "xxs" }) : (0, a.jsx)(c.o1U, { size: "xxs" }),
                     }),
@@ -94,12 +94,12 @@ function _(e) {
                             e.stopPropagation();
                             let n = new Blob([l()(t.audioBuffer)], { type: "audio/wav" }),
                                 a = URL.createObjectURL(n),
-                                r = document.createElement("a");
-                            (r.href = a),
-                                (r.download = ""
+                                i = document.createElement("a");
+                            (i.href = a),
+                                (i.download = ""
                                     .concat(t.inputName, "-")
                                     .concat(new Date(t.createdAt).toLocaleString(), ".wav")),
-                                r.click(),
+                                i.click(),
                                 URL.revokeObjectURL(a);
                         },
                         children: (0, a.jsx)(c._8t, { size: "xxs" }),
@@ -111,13 +111,13 @@ function _(e) {
 }
 function y() {
     let { name: e } = (0, h.p6)(f.h7.AUDIO_INPUT),
-        [t, n] = r.useState(!1),
-        [i, l] = r.useState([]),
+        [t, n] = i.useState(!1),
+        [r, l] = i.useState([]),
         j = (0, s.e7)([x.Z], () => x.Z.getKrispSuppressionLevel()),
-        [y, C] = r.useState(null),
-        S = r.useRef(null),
-        E = r.useRef(null),
-        [T, O] = r.useState(0.5),
+        [y, C] = i.useState(null),
+        S = i.useRef(null),
+        E = i.useRef(null),
+        [T, O] = i.useState(0.5),
         {
             krispModels: N,
             krispModelOverride: P,
@@ -149,7 +149,7 @@ function y() {
         })),
         B = Z ? "KRISP" : D ? "STANDARD" : "NONE",
         G = (0, m.N)(),
-        z = r.useCallback(() => {
+        z = i.useCallback(() => {
             var e;
             null == (e = S.current) || e.stop(), (S.current = null), C(null);
         }, []);
@@ -169,7 +169,7 @@ function y() {
             (S.current = n),
             C(e);
     }
-    r.useEffect(() => {
+    i.useEffect(() => {
         z();
     }, [z]),
         (0, u.zq)(() => {
@@ -307,24 +307,24 @@ function y() {
                                           z(),
                                               n(!0),
                                               d.Z.setLoopback("krisp_test", !0),
-                                              x.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
+                                              x.Z.getMediaEngine().startRecordingRawSamples((t, a, i) => {
                                                   n(!1), d.Z.setLoopback("krisp_test", !1);
-                                                  let i = new AudioBuffer({
+                                                  let r = new AudioBuffer({
                                                       length: t.length,
-                                                      sampleRate: r,
+                                                      sampleRate: i,
                                                       numberOfChannels: a,
                                                   });
                                                   for (let e = 0; e < a; e++) {
                                                       let n = new Float32Array(t.length / a);
-                                                      for (let r = 0; r < t.length / a; r++)
-                                                          n[r] = t[r * a + e] / 32768;
-                                                      i.copyToChannel(n, e);
+                                                      for (let i = 0; i < t.length / a; i++)
+                                                          n[i] = t[i * a + e] / 32768;
+                                                      r.copyToChannel(n, e);
                                                   }
                                                   l((t) => [
                                                       ...t,
                                                       {
                                                           inputName: e,
-                                                          audioBuffer: i,
+                                                          audioBuffer: r,
                                                           createdAt: Date.now(),
                                                           suppression: B,
                                                           echoCancellation: w,
@@ -353,7 +353,7 @@ function y() {
                                 variant: "text-sm/semibold",
                                 children: "Recordings",
                             }),
-                            i.map((e, t) =>
+                            r.map((e, t) =>
                                 (0, a.jsx)(
                                     _,
                                     {

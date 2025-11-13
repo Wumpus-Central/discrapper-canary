@@ -1,14 +1,14 @@
 let r;
-a.d(e, { a: () => c });
+a.d(e, { a: () => E });
 var _ = a(578346),
     n = a(987886),
     o = a(370336),
     i = a(395848);
-function c(t) {
+function E(t) {
     let e = "history";
-    (0, _.Hj)(e, t), (0, _.D2)(e, E);
+    (0, _.Hj)(e, t), (0, _.D2)(e, c);
 }
-function E() {
+function c() {
     if (!(0, n.B)()) return;
     let t = i.m.onpopstate;
     function e(t) {

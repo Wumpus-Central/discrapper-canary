@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(854218),
     v = n(682947),
     I = n(981631),
-    S = n(388032),
-    T = n(73704);
+    T = n(388032),
+    S = n(73704);
 function A(e, t, n) {
     return (
         t in e
@@ -78,7 +78,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -86,7 +86,7 @@ function P(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = {
+let w = {
     [y.Q.STAFF]: {
         IconComponent: u.Ymb,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -149,15 +149,15 @@ let D = {
 function x(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
-        className: T.tooltipPremiumFooterContainer,
+        className: S.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: o()(T.tooltipPremiumFooterSegment, T.tooltipPremiumFooterTierSegment),
+                className: o()(S.tooltipPremiumFooterSegment, S.tooltipPremiumFooterTierSegment),
                 children: [
                     (0, r.jsx)(E.Z, {
                         width: 18,
                         height: 18,
-                        className: T.gemIcon,
+                        className: S.gemIcon,
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-xs/semibold",
@@ -167,11 +167,11 @@ function x(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: T.tooltipPremiumFooterSegment,
+                className: S.tooltipPremiumFooterSegment,
                 children: (0, r.jsx)(u.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: S.intl.format(S.t["dR/SVH"], { count: t.premiumSubscriberCount }),
+                    children: T.intl.format(T.t["dR/SVH"], { count: t.premiumSubscriberCount }),
                 }),
             }),
         ],
@@ -183,7 +183,7 @@ function L(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: T.tooltipBodyContainer,
+                className: S.tooltipBodyContainer,
                 children: [
                     (0, r.jsx)(u.Text, {
                         color: "interactive-active",
@@ -221,11 +221,11 @@ function M(e) {
             flowerStarClassName: E,
             iconClassName: b,
             badgeStrokeColor: v,
-            badgeColor: S,
+            badgeColor: T,
             disableBoostClick: A,
             "aria-label": N = !1,
         } = e;
-    let w =
+    let D =
             null !=
             (a = P(e, [
                 "guild",
@@ -274,13 +274,13 @@ function M(e) {
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = D[k];
+    } = w[k];
     if (null == B) return null;
     j.premium && ((t = W), (n = Y));
     let z = (0, c.wj)(M) ? V : H,
         q = (0, c.wj)(M) ? Z : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
-    let X = Math.floor(0.75 * w) - (null != K ? K : 0);
+    let X = Math.floor(0.75 * D) - (null != K ? K : 0);
     return (0, r.jsx)(u.aML, {
         color: l,
         position: d,
@@ -289,7 +289,7 @@ function M(e) {
             badgeType: k,
             guildTraits: j,
         }),
-        tooltipContentClassName: T.tooltipRemovePadding,
+        tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>
             (0, r.jsx)(u.P3F, {
                 onClick: G,
@@ -300,9 +300,9 @@ function M(e) {
                         className: g,
                         flowerStarClassName: E,
                         allowFullSizedIcon: !0,
-                        color: null != n ? n : S,
+                        color: null != n ? n : T,
                         stroke: v,
-                        size: w,
+                        size: D,
                         children: (0, r.jsx)(B, {
                             size: "custom",
                             width: X,

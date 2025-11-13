@@ -10,7 +10,7 @@ function _(t, e, a = Date.now()) {
 function n(t, { statusCode: e, headers: a }, _ = Date.now()) {
     let o = { ...t },
         i = a && a["x-sentry-rate-limits"],
-        c = a && a["retry-after"];
+        E = a && a["retry-after"];
     if (i)
         for (let t of i.trim().split(",")) {
             let [e, a, , , r] = t.split(":", 5),
@@ -21,7 +21,7 @@ function n(t, { statusCode: e, headers: a }, _ = Date.now()) {
                     "metric_bucket" === t ? (!r || r.split(";").includes("custom")) && (o[t] = _ + i) : (o[t] = _ + i);
             else o.all = _ + i;
         }
-    else c ? (o.all = _ + r(c, _)) : 429 === e && (o.all = _ + 60000);
+    else E ? (o.all = _ + r(E, _)) : 429 === e && (o.all = _ + 60000);
     return o;
 }
 a.d(e, {

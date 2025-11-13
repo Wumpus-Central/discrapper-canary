@@ -6,7 +6,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(990547),
     c = n(872175),
     u = n(873546),
@@ -135,8 +135,8 @@ function N(e) {
     });
     let R = I.activeSlide,
         P = (0, p.Z)(I.activeSlide),
-        w = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
-        { reducedMotion: D } = i.useContext(d.Sfi),
+        D = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
+        { reducedMotion: w } = i.useContext(d.Sfi),
         x = i.useContext(h.Z),
         L = C[R].impressionName,
         M = O(b({}, C[R].impressionProperties), { location_stack: N });
@@ -147,7 +147,7 @@ function N(e) {
         _stackContext: { isSlide: !0 },
     });
     let { ref: j, width: k = 0, height: U = 0 } = (0, _.ZP)(R),
-        G = b({}, T, I.springConfig, D.enabled ? { clamp: !0 } : null),
+        G = b({}, T, I.springConfig, w.enabled ? { clamp: !0 } : null),
         B = (0, f.q_F)(
             {
                 width: null != (n = I.width) ? n : k,
@@ -171,7 +171,7 @@ function N(e) {
             },
             null == P ? "animate-never" : "respect-motion-settings",
         ),
-        F = (0, c.Z)(w),
+        F = (0, c.Z)(D),
         { width: V, centered: H = !0 } = I,
         Y =
             u.tq && !I.shouldUseMediaQueriesForSizing
@@ -217,7 +217,7 @@ function N(e) {
                         },
                         q,
                         K,
-                        D.enabled
+                        w.enabled
                             ? a
                             : b(
                                   {

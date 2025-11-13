@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(594174),
     v = n(100604),
     I = n(694784),
-    S = n(39154),
-    T = n(245216),
+    T = n(39154),
+    S = n(245216),
     A = n(388032),
-    C = n(761053);
+    C = n(823914);
 function N() {
     return (0, r.jsxs)("div", {
         className: C.headerContainer,
         children: [
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(S.Z, {
                 size: "xs",
                 className: C.headerIcon,
                 color: l.Z.colors.TEXT_LOW_CONTRAST,
@@ -84,7 +84,7 @@ function R(e) {
 function P(e) {
     var t;
     let { message: n, snapshot: a, index: s } = e,
-        l = i.useMemo(() => (0, S.Z)(n, a), [n, a]),
+        l = i.useMemo(() => (0, T.Z)(n, a), [n, a]),
         c = h.RS.useSetting(),
         u = h.NA.useSetting(),
         E = c && u,
@@ -101,7 +101,7 @@ function P(e) {
             previewLinkTarget: !0,
         }),
         I = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id)),
-        T = h.jU.useSetting();
+        S = h.jU.useSetting();
     return null == I
         ? null
         : (0, r.jsxs)(
@@ -117,13 +117,13 @@ function P(e) {
                               (0, r.jsx)(f.ZP, {
                                   message: l,
                                   content: O,
-                                  compact: T,
+                                  compact: S,
                               }),
                               (0, p.Z)({
                                   channelMessageProps: {
                                       message: l,
                                       channel: I,
-                                      compact: T,
+                                      compact: S,
                                   },
                                   hasSpoilerEmbeds: v,
                                   isInteracting: !1,
@@ -142,7 +142,7 @@ function P(e) {
               s,
           );
 }
-function w(e) {
+function D(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

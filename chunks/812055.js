@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var a = n(951288),
     i = n(647438),
-    l = n(442837),
-    r = n(704215),
+    r = n(442837),
+    l = n(704215),
     s = n(907862),
     o = n(243778),
     c = n(246133),
@@ -24,8 +24,8 @@ let v = p.Z.Millis.HOUR,
     _ = 4 * p.Z.Millis.DAY;
 function y() {
     let [e, t] = i.useState(Date.now()),
-        n = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
-        a = (0, l.e7)([m.Z], () => m.Z.getStatus()),
+        n = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
+        a = (0, r.e7)([m.Z], () => m.Z.getStatus()),
         s = d.P4.useSetting(),
         c = (null == s ? void 0 : s.value) != null ? Number(s.value) : null,
         p = d.Cr.useSetting(),
@@ -44,7 +44,7 @@ function y() {
             }
         }, [a]),
         (0, o.bf)(
-            b && !n ? r.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
+            b && !n ? l.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
             {
                 cooldownDurationMs: _,
                 numTimesToRecur: 2,
@@ -57,20 +57,20 @@ function y() {
 function C(e) {
     let { targetElementRef: t, onDismiss: n, children: i } = e,
         {
-            enabled: l,
-            titleText: r,
+            enabled: r,
+            titleText: l,
             bodyText: o,
         } = (0, h.a)({
             location: "popover",
             autoTrackExposure: !1,
         });
-    return null != t.current && l
+    return null != t.current && r
         ? (0, a.jsxs)(a.Fragment, {
               children: [
                   i,
                   (0, a.jsx)(s.J2, {
                       targetElementRef: t,
-                      title: f.intl.string(r),
+                      title: f.intl.string(l),
                       body: f.intl.string(o),
                       caretConfig: { align: "start" },
                       gradientColor: "purple",

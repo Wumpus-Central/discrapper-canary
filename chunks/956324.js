@@ -7,9 +7,9 @@ function l(e) {
         canManageGuild: t,
         canManageRoles: n,
         canBanMembers: l,
-        canManageNicknames: o,
+        canManageNicknames: a,
         canCreateEmojisAndStickers: c,
-        canManageEmojisAndStickers: a,
+        canManageEmojisAndStickers: o,
         canManageWebhooks: u,
         canViewAuditLog: d,
     } = (0, i.cj)(
@@ -26,5 +26,5 @@ function l(e) {
         }),
         [e],
     );
-    return t || n || l || o || c || a || u || d;
+    return t || n || l || a || c || o || u || d;
 }

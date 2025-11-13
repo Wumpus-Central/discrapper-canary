@@ -72,8 +72,8 @@ function R(e, t) {
     );
 }
 let P = {},
-    w = {},
     D = {},
+    w = {},
     x = [],
     L = {},
     M = {
@@ -130,20 +130,20 @@ class Z extends (s = u.ZP.PersistedStore) {
             : null;
     }
     summaryFeedback(e) {
-        return null == e ? null : D[e.id];
+        return null == e ? null : w[e.id];
     }
     isFetching(e, t) {
         var n, r;
         return null != t
-            ? (null == (r = w[e]) ? void 0 : r.summaryId) === t
-            : (null == (n = w[e]) ? void 0 : n.fetching) === !0;
+            ? (null == (r = D[e]) ? void 0 : r.summaryId) === t
+            : (null == (n = D[e]) ? void 0 : n.fetching) === !0;
     }
     status(e) {
-        return w[e];
+        return D[e];
     }
     shouldFetch(e, t) {
         var n, r;
-        let i = w[e],
+        let i = D[e],
             a = m.Z.getChannel(e);
         if (!(0, f.Lp)(a)) return !1;
         if (null != t) {
@@ -213,17 +213,17 @@ let V = new Z(d.Z, {
                 a = n.findIndex((t) => t.id === (null == e ? void 0 : e.id));
             a > -1 ? (n[a] = e) : n.push(e), (P[i] = n);
         }
-        let s = R(C({}, null != (n = w[i]) ? n : { fetching: !1 }), {
+        let s = R(C({}, null != (n = D[i]) ? n : { fetching: !1 }), {
             summaryId: void 0,
             summaryIdLastReceivedAt: o,
             summaryIdError: a,
         });
-        w[i] = s;
+        D[i] = s;
     },
     REQUEST_CHANNEL_SUMMARY(e) {
         var t;
         let { channelId: n, summaryId: r, requestedAt: i } = e;
-        w[n] = R(C({}, null != (t = w[n]) ? t : { fetching: !1 }), {
+        D[n] = R(C({}, null != (t = D[n]) ? t : { fetching: !1 }), {
             summaryId: r,
             summaryIdLastRequestedAt: i,
         });
@@ -237,16 +237,16 @@ let V = new Z(d.Z, {
             null != e && a.push(e);
         }
         P[n] = (0, l.sortBy)(a, (e) => I.default.extractTimestamp(e.startId)).reverse();
-        let c = R(C({}, w[n]), {
+        let c = R(C({}, D[n]), {
             fetching: !1,
             error: void 0,
             lastReceivedAt: i,
         });
-        null != r && (c.error = r), (w[n] = c);
+        null != r && (c.error = r), (D[n] = c);
     },
     REQUEST_CHANNEL_SUMMARIES(e) {
         var t;
-        w[e.channelId] = R(C({}, null != (t = w[e.channelId]) ? t : {}), {
+        D[e.channelId] = R(C({}, null != (t = D[e.channelId]) ? t : {}), {
             fetching: !0,
             lastRequestedAt: e.requestedAt,
         });
@@ -301,7 +301,7 @@ let V = new Z(d.Z, {
     },
     SET_SUMMARY_FEEDBACK(e) {
         let { summary: t, rating: n } = e;
-        null != n ? (D[t.id] = n) : delete D[t.id];
+        null != n ? (w[t.id] = n) : delete w[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
         M = R(C({}, M), {
@@ -335,7 +335,7 @@ let V = new Z(d.Z, {
         let { channelIds: t, requestedAt: n } = e,
             r = t.reduce((e, t) => {
                 var r;
-                let i = null != (r = w[t]) ? r : {};
+                let i = null != (r = D[t]) ? r : {};
                 return (
                     (e[t] = R(C({}, i), {
                         fetching: !0,
@@ -345,7 +345,7 @@ let V = new Z(d.Z, {
                     e
                 );
             }, {});
-        w = C({}, w, r);
+        D = C({}, D, r);
     },
     RECEIVE_CHANNEL_SUMMARIES_BULK(e) {
         let {
@@ -370,7 +370,7 @@ let V = new Z(d.Z, {
             o = i.reduce(
                 (e, t) => {
                     var i;
-                    let o = null != (i = w[t]) ? i : {},
+                    let o = null != (i = D[t]) ? i : {},
                         s = a[t];
                     return (
                         null != s && (e.summariesByChannel[t] = s),
@@ -387,7 +387,7 @@ let V = new Z(d.Z, {
                     summaryFetchStatusByChannel: {},
                 },
             );
-        (P = C({}, P, o.summariesByChannel)), (w = C({}, w, o.summaryFetchStatusByChannel));
+        (P = C({}, P, o.summariesByChannel)), (D = C({}, D, o.summaryFetchStatusByChannel));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         var t, n, r;
@@ -410,14 +410,14 @@ let V = new Z(d.Z, {
                 .reverse()
                 .value();
         (P[i] = d),
-            (w[i] = R(C({}, w[i]), {
+            (D[i] = R(C({}, D[i]), {
                 error: void 0,
-                fetching: null != (r = null == (t = w[i]) ? void 0 : t.fetching) && r,
+                fetching: null != (r = null == (t = D[i]) ? void 0 : t.fetching) && r,
                 lastReceivedAt: s,
             }));
     },
     CLEAR_CONVERSATION_SUMMARIES() {
-        (P = {}), (w = {});
+        (P = {}), (D = {});
     },
     DELETE_SUMMARY(e) {
         var t;

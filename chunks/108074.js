@@ -9,15 +9,15 @@ function o(t, e) {
 function i(t, e) {
     return (a) => {
         let i = t(a),
-            c = new Map();
-        function E(e, r) {
+            E = new Map();
+        function c(e, r) {
             let i = r ? `${e}:${r}` : e,
-                E = c.get(i);
-            if (!E) {
+                c = E.get(i);
+            if (!c) {
                 let s = (0, _.U4)(e);
                 if (!s) return;
                 let l = (0, n.U)(s, a.tunnel);
-                (E = r
+                (c = r
                     ? ((e) => {
                           let a = t(e);
                           return {
@@ -35,9 +35,9 @@ function i(t, e) {
                           ...a,
                           url: l,
                       })),
-                    c.set(i, E);
+                    E.set(i, c);
             }
-            return [e, E];
+            return [e, c];
         }
         return {
             send: async function (t) {
@@ -47,7 +47,7 @@ function i(t, e) {
                             return o(t, e && e.length ? e : ["event"]);
                         },
                     })
-                        .map((t) => ("string" == typeof t ? E(t, void 0) : E(t.dsn, t.release)))
+                        .map((t) => ("string" == typeof t ? c(t, void 0) : c(t.dsn, t.release)))
                         .filter((t) => !!t),
                     _ = a.length ? a : [["", i]];
                 return (
@@ -69,7 +69,7 @@ function i(t, e) {
                 )[0];
             },
             flush: async function (t) {
-                let e = [...c.values(), i];
+                let e = [...E.values(), i];
                 return (await Promise.all(e.map((e) => e.flush(t)))).every((t) => t);
             },
         };

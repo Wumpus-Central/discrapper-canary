@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(358458),
+    s = n(509442),
     o = n(481060),
     c = n(393238),
     d = n(388032),
@@ -20,7 +20,7 @@ let g = i.memo(function (e) {
             disableBackground: b,
         } = e,
         [x, j] = i.useState(!0),
-        [v, _] = i.useState(!1),
+        [_, v] = i.useState(!1),
         { ref: O, height: C = 0 } = (0, c.ZP)(),
         { ref: y, height: N = 0 } = (0, c.ZP)(),
         [E, I] = i.useState(m),
@@ -68,17 +68,17 @@ let g = i.memo(function (e) {
                           }),
                     t),
                 onStart: () => {
-                    _(!1);
+                    v(!1);
                 },
                 onRest: () => {
-                    _(!0);
+                    v(!0);
                 },
             },
             x || h ? "animate-never" : "respect-motion-settings",
         );
     return (
         i.useLayoutEffect(() => {
-            _(!1), I(m);
+            v(!1), I(m);
         }, [m]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -92,7 +92,7 @@ let g = i.memo(function (e) {
                 [u.noBackground]: b,
             }),
             children: (0, r.jsxs)(s.animated.div, {
-                className: a()(u.contentExpandContainer, { [u.showOverflow]: m && v }),
+                className: a()(u.contentExpandContainer, { [u.showOverflow]: m && _ }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {

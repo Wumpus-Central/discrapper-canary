@@ -141,11 +141,11 @@ let j = function (e) {
             },
             [n],
         ),
-        v = n.map((e) => f(p({}, e), { id: e.channelId })),
-        _ = i.useCallback((e) => {
+        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
+        v = i.useCallback((e) => {
             (0, c.hS)(e);
         }, []),
-        { handleDragStart: C, handleDragReset: O, handleDragComplete: y } = (0, s.Z)(v, _);
+        { handleDragStart: O, handleDragReset: C, handleDragComplete: y } = (0, s.Z)(_, v);
     return (0, r.jsxs)("div", {
         className: m.section,
         children: [
@@ -158,8 +158,8 @@ let j = function (e) {
                         actionIndex: n,
                         onChange: g,
                         onDelete: j,
-                        onDragStart: C,
-                        onDragReset: O,
+                        onDragStart: O,
+                        onDragReset: C,
                         onDragComplete: y,
                     },
                     e.channelId,

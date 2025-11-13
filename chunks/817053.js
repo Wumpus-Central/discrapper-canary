@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => g,
-    o: () => m,
+    Z: () => m,
+    o: () => h,
 }),
     n(388685);
 var r = n(951288),
@@ -38,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function m(e) {
+function h(e) {
     let { imageSrc: t, gameName: n } = e,
         [l, a] = i.useState(!1),
         s = null != n ? n : d.intl.string(d.t.GIWFlF);
@@ -62,8 +62,8 @@ function m(e) {
               onLoad: () => a(!1),
           });
 }
-function h(e) {
-    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: f, hideTooltip: h = !1, coverRef: g } = e,
+function g(e) {
+    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: f, hideTooltip: g = !1, coverRef: m } = e,
         _ = (0, u.Z)({
             location: "GameCover",
             applicationId: i,
@@ -74,7 +74,7 @@ function h(e) {
         b = null != n ? n : d.intl.string(d.t.GIWFlF),
         E = d.intl.formatToPlainString(d.t["8QLQB+"], { gameName: b }),
         O = (e) =>
-            h
+            g
                 ? e
                 : (0, r.jsx)(s.u, {
                       text: b,
@@ -84,28 +84,28 @@ function h(e) {
         null == _
             ? (0, r.jsx)(o.tEY, {
                   children: (0, r.jsx)("div", {
-                      ref: g,
+                      ref: m,
                       className: f,
                       tabIndex: -1,
-                      children: (0, r.jsx)(m, {
+                      children: (0, r.jsx)(h, {
                           imageSrc: t,
                           gameName: n,
                       }),
                   }),
               })
             : (0, r.jsx)(o.P3F, {
-                  innerRef: g,
+                  innerRef: m,
                   onClick: _,
                   "aria-label": E,
                   className: a()(p.clickable, f),
-                  children: (0, r.jsx)(m, {
+                  children: (0, r.jsx)(h, {
                       imageSrc: t,
                       gameName: n,
                   }),
               }),
     );
 }
-function g(e) {
+function m(e) {
     var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: s, coverRef: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -135,11 +135,11 @@ function g(e) {
                   ref: c,
                   className: d,
                   tabIndex: -1,
-                  children: (0, r.jsx)(m, f({}, u)),
+                  children: (0, r.jsx)(h, f({}, u)),
               }),
           })
         : (0, r.jsx)(
-              h,
+              g,
               f(
                   {
                       className: d,

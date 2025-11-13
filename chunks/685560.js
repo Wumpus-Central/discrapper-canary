@@ -1,7 +1,7 @@
 n.d(t, { Z: () => I }), n(388685);
 var a = n(951288),
-    r = n(913527),
-    i = n.n(r),
+    i = n(913527),
+    r = n.n(i),
     l = n(442837),
     s = n(544891),
     o = n(704215),
@@ -39,7 +39,7 @@ let C = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function N(e) {
+function O(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -55,12 +55,12 @@ function N(e) {
             return "ADOPT_CLAN_IDENTITY_NOTICE";
     }
 }
-async function O(e, t, n) {
+async function N(e, t, n) {
     await s.tn.patch({
         url: _.ANM.APPLIED_BOOST_MODIFY_END_DATE,
         body: {
             applied_boost_ids: t.map((e) => e.id),
-            ends_at: n ? null : i()().add(1, "day"),
+            ends_at: n ? null : r()().add(1, "day"),
         },
         rejectWithError: !0,
     }),
@@ -80,7 +80,7 @@ function I() {
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
         n = (0, l.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
-        r = (0, l.Wu)([b.Z], () => {
+        i = (0, l.Wu)([b.Z], () => {
             var t;
             return null != e && null != (t = b.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
         });
@@ -140,14 +140,14 @@ function I() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        O(e, r.slice(Math.floor(r.length / 2)), !1);
+                                        N(e, i.slice(Math.floor(i.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        O(e, r, !0);
+                                        N(e, i, !0);
                                     },
                                 }),
                             ],
@@ -185,7 +185,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: N(t),
+                                    label: O(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -206,7 +206,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: N(t),
+                                    label: O(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n

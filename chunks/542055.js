@@ -17,8 +17,8 @@ var l = n(951288),
     f = n(870731),
     y = n(52436),
     b = n(965762),
-    v = n(388032),
-    h = n(862220);
+    h = n(388032),
+    v = n(862220);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -97,7 +97,7 @@ function x(e) {
         { onShareClick: Z } = (0, p.Z)(t),
         D = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
         L = (0, y.f)((e) => e.selectedGameId),
-        T = r.useMemo(() => {
+        H = r.useMemo(() => {
             var e;
             return null == L || "favorites" === L
                 ? null
@@ -105,18 +105,18 @@ function x(e) {
                   ? e
                   : null;
         }, [L, S]),
-        H = r.useMemo(() => {
+        T = r.useMemo(() => {
             var e;
-            return "favorites" === L ? N : null != (e = null == T ? void 0 : T.filteredClips) ? e : E;
-        }, [L, T, E, N]),
+            return "favorites" === L ? N : null != (e = null == H ? void 0 : H.filteredClips) ? e : E;
+        }, [L, H, E, N]),
         A = r.useMemo(() => {
             var e;
             return "favorites" === L
-                ? v.intl.string(v.t["9rlCk1"])
-                : null != (e = null == T ? void 0 : T.name)
+                ? h.intl.string(h.t["9rlCk1"])
+                : null != (e = null == H ? void 0 : H.name)
                   ? e
-                  : v.intl.string(v.t.dPVrEv);
-        }, [L, T]),
+                  : h.intl.string(h.t.dPVrEv);
+        }, [L, H]),
         R = r.useCallback((e) => {
             I((t) => {
                 let n = new Set(t);
@@ -167,7 +167,7 @@ function x(e) {
                 s.A,
                 j(g({ onClose: x }, w), {
                     children: (0, l.jsxs)("div", {
-                        className: h.modalContainer,
+                        className: v.modalContainer,
                         children: [
                             (0, l.jsx)(f.Z, {
                                 clipsByGame: S,
@@ -176,10 +176,10 @@ function x(e) {
                                 allClips: M,
                             }),
                             (0, l.jsxs)("div", {
-                                className: h.content,
+                                className: v.content,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: h.contentHeader,
+                                        className: v.contentHeader,
                                         children: [
                                             (0, l.jsx)(c.Heading, {
                                                 variant: "heading-md/medium",
@@ -187,30 +187,30 @@ function x(e) {
                                                 children: A,
                                             }),
                                             (0, l.jsxs)("div", {
-                                                className: h.headerActions,
+                                                className: v.headerActions,
                                                 children: [
                                                     _ &&
                                                         (0, l.jsxs)(l.Fragment, {
                                                             children: [
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: v.intl.string(v.t.RDE0Sc),
+                                                                    text: h.intl.string(h.t.RDE0Sc),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: z,
                                                                         icon: c.aAc,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.RDE0Sc),
+                                                                        "aria-label": h.intl.string(h.t.RDE0Sc),
                                                                         loading: D,
                                                                     }),
                                                                 }),
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: v.intl.string(v.t.oyYWHE),
+                                                                    text: h.intl.string(h.t.oyYWHE),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: U,
                                                                         icon: c.XHJ,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.oyYWHE),
+                                                                        "aria-label": h.intl.string(h.t.oyYWHE),
                                                                     }),
                                                                 }),
                                                             ],
@@ -220,7 +220,7 @@ function x(e) {
                                                         icon: c.Uz9,
                                                         size: "sm",
                                                         variant: "icon-only",
-                                                        "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                        "aria-label": h.intl.string(h.t.cpT0Cq),
                                                     }),
                                                 ],
                                             }),
@@ -228,7 +228,7 @@ function x(e) {
                                     }),
                                     (0, l.jsx)(m.Z, {
                                         channelId: t,
-                                        filteredClips: H,
+                                        filteredClips: T,
                                         totalClipCount: M.length,
                                         onClipClick: C,
                                     }),

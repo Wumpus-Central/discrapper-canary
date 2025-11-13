@@ -87,7 +87,7 @@ function A(e) {
 }
 function C(e, t) {
     let n,
-        r = D((0, m.aF)(e.name, 32));
+        r = w((0, m.aF)(e.name, 32));
     return {
         type: "channel",
         content: [
@@ -106,7 +106,7 @@ function C(e, t) {
 function N(e, t) {
     let n = {
         type: "channel",
-        content: [D(e.roleSubscriptionGated ? e.name : y.intl.string(y.t["/YzI63"]))],
+        content: [w(e.roleSubscriptionGated ? e.name : y.intl.string(y.t["/YzI63"]))],
         channelType: e.roleSubscriptionGated ? e.type : b.d4z.UNKNOWN,
         iconType: "locked",
     };
@@ -122,7 +122,7 @@ function N(e, t) {
 function R(e) {
     return {
         type: "channel",
-        content: [D("")],
+        content: [w("")],
         iconType: e ? "post" : "message",
     };
 }
@@ -164,7 +164,7 @@ function P(e, t) {
           }
         : null;
 }
-function w(e) {
+function D(e) {
     return {
         type: "link",
         content: [
@@ -177,14 +177,14 @@ function w(e) {
         title: void 0,
     };
 }
-function D(e) {
+function w(e) {
     return {
         type: "text",
         content: e,
     };
 }
 function x(e) {
-    return null != e ? w(e) : D("#".concat(y.intl.string(y.t.J90oLW)));
+    return null != e ? D(e) : w("#".concat(y.intl.string(y.t.J90oLW)));
 }
 function L() {
     return C(
@@ -254,7 +254,7 @@ function j(e, t, n, r) {
 }
 function k(e, t, n, r) {
     if (!e.canViewChannel) return N(e, t);
-    if (!e.isMentionable) return D("#".concat(e.name));
+    if (!e.isMentionable) return w("#".concat(e.name));
     let i = {
             type: "channelMention",
             channelId: e.id,
@@ -303,7 +303,7 @@ let U = {
                     i = e[1],
                     a = e[2],
                     o = e[3];
-                if (null == a) return w(r);
+                if (null == a) return D(r);
                 let s = P(a, null);
                 return null == s ? M(i, a, o, S(n.channelId), r) : k(s, o, S(n.channelId), r);
             },
@@ -318,7 +318,7 @@ let U = {
                     a = e[2],
                     o = e[3],
                     s = e[4];
-                if (null == a || null == o) return w(r);
+                if (null == a || null == o) return D(r);
                 let l = P(o, null);
                 if (null != l) return k(l, s, S(n.channelId), r);
                 let c = P(a, null);

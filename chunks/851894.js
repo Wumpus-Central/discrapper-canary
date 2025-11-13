@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(594496),
     R = n(856768),
     P = n(981631),
-    w = n(388032),
-    D = n(813709);
+    D = n(388032),
+    w = n(813709);
 function x(e, t, n) {
     return (
         t in e
@@ -150,7 +150,7 @@ function B(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: w.intl.format(w.t["/PTB2E"], {
+                        children: D.intl.format(D.t["/PTB2E"], {
                             helpCenterLink: I.Z.getArticleURL(P.BhN.GUILD_PROFILES),
                         }),
                     }),
@@ -166,8 +166,8 @@ function B(e) {
                                   (0, r.jsx)(m.Z, {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
-                                          className: D.profilePreviewTitle,
-                                          children: w.intl.formatToPlainString(w.t.Tc0slG, {
+                                          className: w.profilePreviewTitle,
+                                          children: D.intl.formatToPlainString(D.t.Tc0slG, {
                                               guildName: null == a ? void 0 : a.name,
                                           }),
                                       }),
@@ -189,7 +189,7 @@ function B(e) {
                                               user: M,
                                               guildId: null == a ? void 0 : a.id,
                                               nameplate: z,
-                                              className: null == z ? D.nameplatePreviewPlaceholder : void 0,
+                                              className: null == z ? w.nameplatePreviewPlaceholder : void 0,
                                               isHighlighted: !0,
                                           }),
                                       ),

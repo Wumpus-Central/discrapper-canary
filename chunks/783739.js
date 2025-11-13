@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -20,20 +20,20 @@ var r = n(951288),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    S = n(28616);
-function T(e) {
+    T = n(28616);
+function S(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),
-        T = i.useMemo(() => Object.values(n), [n]),
+        S = i.useMemo(() => Object.values(n), [n]),
         A = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
         C = m.ZP.isPremium(A, I.PremiumTypes.TIER_2),
         N = (0, a.e7)([f.Z], () => f.Z.affinities),
         R = (0, a.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()),
         P = N.length > 0 || R.length > 0,
-        w = T.length > 0,
-        D = i.useMemo(() => T.filter((e) => null != e.premiumGuildSubscription), [T]),
-        x = D.length > 0,
-        L = T.length > D.length,
+        D = S.length > 0,
+        w = i.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
+        x = w.length > 0,
+        L = S.length > w.length,
         M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
         k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
@@ -41,9 +41,9 @@ function T(e) {
         G = C && j === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.oQ, { className: S.blockedPaymentsWarning }),
+            (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
             (0, r.jsx)(E.Z, {
-                hasGuildBoostSlots: w,
+                hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: x,
                 hasBoostPerk: G,
                 canAddBoosts: U,
@@ -66,7 +66,7 @@ function T(e) {
                       premiumSubscription: t,
                   }),
             (0, r.jsx)(v.Z, {
-                guildBoostSlots: T,
+                guildBoostSlots: S,
                 fractionalPremiumState: j,
             }),
             (0, r.jsx)(y.Z, {
@@ -74,12 +74,12 @@ function T(e) {
                 canApplyBoosts: L,
             }),
             (0, r.jsx)(u.Z, {
-                className: S.tierComparisonTable,
+                className: T.tierComparisonTable,
                 hideHeading: !0,
                 hideTier0: !0,
             }),
-            (0, r.jsx)(l.Z, { cardClassName: S.boosterRecognitionCard }),
-            (0, r.jsx)(c.Z, { className: S.faq }),
+            (0, r.jsx)(l.Z, { cardClassName: T.boosterRecognitionCard }),
+            (0, r.jsx)(c.Z, { className: T.faq }),
         ],
     });
 }

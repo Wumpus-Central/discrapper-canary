@@ -23,7 +23,7 @@ var r = n(951288),
     b = n(626921),
     y = n(415540),
     O = n(483753),
-    v = n(982519),
+    v = n(681287),
     I = n(388032),
     T = n(680765),
     S = n(430490);
@@ -83,7 +83,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -91,7 +91,7 @@ function P(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,7 +100,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = { keys: ["label"] };
+let w = { keys: ["label"] };
 function x(e) {
     var { children: t, isCollapsible: n = !1, maxOptionsVisible: a = 5, isOpen: o, setIsOpen: l, options: c } = e,
         u = P(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]);
@@ -119,7 +119,7 @@ function x(e) {
         I = i.useRef(null),
         [T, S] = i.useState(null),
         [A, N] = i.useState(!1),
-        [R, w] = i.useState(""),
+        [R, D] = i.useState(""),
         [x, L] = i.useState(""),
         {
             options: M,
@@ -131,7 +131,7 @@ function x(e) {
             renderOption: h,
         }),
         U = i.useCallback((e, t) => {
-            L(e), w(null != t ? t : e);
+            L(e), D(null != t ? t : e);
         }, []);
     i.useEffect(() => {
         k(R);
@@ -139,7 +139,7 @@ function x(e) {
         i.useEffect(() => {
             o || S(null);
         }, [o, S]);
-    let G = i.useMemo(() => ("" === R ? M : (0, s.Lu)(M, R, null != b ? b : D)), [M, R, b]),
+    let G = i.useMemo(() => ("" === R ? M : (0, s.Lu)(M, R, null != b ? b : w)), [M, R, b]),
         B = i.useRef(void 0),
         Z = i.useMemo(
             () =>
@@ -228,9 +228,9 @@ function M(e) {
             onBlur: A,
             onKeyDown: N,
             wrapTags: P,
-            ref: w,
+            ref: D,
         } = e,
-        D = i.useRef(null),
+        w = i.useRef(null),
         x = i.useRef(null),
         L = i.useRef(null),
         M = i.useContext(u.z),
@@ -367,9 +367,9 @@ function M(e) {
                         X("single" === U ? [r] : (0, O.cq)(U, et, r));
                         break;
                     case "Backspace":
-                        if ("multiple" === U && "" === er && et.length > 0 && null != D.current) {
+                        if ("multiple" === U && "" === er && et.length > 0 && null != w.current) {
                             var i;
-                            e.preventDefault(), e.stopPropagation(), null == (i = D.current.lastChild) || i.focus();
+                            e.preventDefault(), e.stopPropagation(), null == (i = w.current.lastChild) || i.focus();
                         }
                         break;
                     case "Escape":
@@ -425,14 +425,14 @@ function M(e) {
                 );
             });
             return (0, r.jsx)(_.QSK, {
-                listRef: D,
+                listRef: w,
                 label: I.intl.string(v.default.VMNfsY),
                 items: e,
                 layout: "inline",
                 onRemove: em,
             });
         }, [U, G, eh, em, ea, et, s]),
-        ey = (0, l.Z)(Y, w);
+        ey = (0, l.Z)(Y, D);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(b.q, {

@@ -26,8 +26,8 @@ var r,
     N = C && C.prototype,
     R = S && E(S),
     P = A && E(A),
-    w = Object.prototype,
-    D = l.TypeError,
+    D = Object.prototype,
+    w = l.TypeError,
     x = y("toStringTag"),
     L = O("TYPED_ARRAY_TAG"),
     M = "TypedArrayConstructor",
@@ -67,11 +67,11 @@ var r,
     },
     V = function (e) {
         if (F(e)) return e;
-        throw new D("Target is not a typed array");
+        throw new w("Target is not a typed array");
     },
     H = function (e) {
         if (c(e) && (!b || g(R, e))) return e;
-        throw new D(_(e) + " is not a typed array constructor");
+        throw new w(_(e) + " is not a typed array constructor");
     },
     Y = function (e, t, n, r) {
         if (s) {
@@ -114,12 +114,12 @@ for (r in G) (a = (i = l[r]) && i.prototype) && (I(a)[M] = i);
 if (
     (!j || !c(R) || R === Function.prototype) &&
     ((R = function () {
-        throw new D("Incorrect invocation");
+        throw new w("Incorrect invocation");
     }),
     j)
 )
     for (r in U) l[r] && b(l[r], R);
-if ((!j || !P || P === w) && ((P = R.prototype), j)) for (r in U) l[r] && b(l[r].prototype, P);
+if ((!j || !P || P === D) && ((P = R.prototype), j)) for (r in U) l[r] && b(l[r].prototype, P);
 if ((j && E(N) !== P && b(N, P), s && !d(P, x)))
     for (r in ((k = !0),
     m(P, x, {

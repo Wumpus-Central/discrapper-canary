@@ -38,7 +38,7 @@ function R(e, t, n) {
     );
 }
 let P = new p.Z("MessageManager");
-function w(e) {
+function D(e) {
     let {
         guildId: t,
         channelId: n,
@@ -130,7 +130,7 @@ function w(e) {
             );
         }
 }
-let D = 90 * T.Z.Millis.DAY,
+let w = 90 * T.Z.Millis.DAY,
     x = "viewedThreadIds";
 function L(e) {
     if (O.ZP.hasOpenedThread(e)) return !1;
@@ -140,7 +140,7 @@ function L(e) {
     }
     if (e in i) return !1;
     i[e] = Date.now();
-    let n = Date.now() - D;
+    let n = Date.now() - w;
     for (let e in i) i[e] < n && delete i[e];
     return o.K.set(x, i), !0;
 }
@@ -163,7 +163,7 @@ function j() {
     if (null == t) return;
     let n = M(t.id);
     (r = void 0),
-        w({
+        D({
             guildId: t.getGuildId(),
             channelId: t.id,
             messageId: n.messageId,
@@ -180,7 +180,7 @@ function k() {
     if (!(0, g.Qm)(t.type)) return void Z(t.getGuildId(), t.id);
     let n = f.Z.getOrCreate(e);
     if (n.ready && n.hasFetched) return void Z(t.getGuildId(), t.id);
-    w({
+    D({
         guildId: t.getGuildId(),
         channelId: t.id,
     }),
@@ -198,7 +198,7 @@ function U(e) {
                 }),
             !1
         );
-    w({
+    D({
         guildId: t,
         channelId: n,
         messageId: i,
@@ -208,14 +208,14 @@ function U(e) {
 }
 function G(e) {
     let { guildId: t, channelId: n } = e;
-    w({
+    D({
         guildId: t,
         channelId: n,
     });
 }
 function B(e) {
     let { guildId: t, channelId: n, messageId: r, jumpType: i } = e;
-    w({
+    D({
         guildId: t,
         channelId: n,
         messageId: r,
@@ -225,7 +225,7 @@ function B(e) {
 function Z(e, t) {
     let n = E.ZP.getCurrentSidebarChannelId(t);
     null != n &&
-        w({
+        D({
             guildId: e,
             channelId: n,
             messageId: E.ZP.getCurrentSidebarMessageId(t),
@@ -241,7 +241,7 @@ function F() {
 function V(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === A.e3s &&
-        (w({
+        (D({
             guildId: t,
             channelId: n,
         }),
@@ -252,7 +252,7 @@ function H(e) {
         r = t.guild_id;
     null != r &&
         v.Z.getChannelId(r) === t.id &&
-        w({
+        D({
             guildId: r,
             channelId: t.id,
             messageId: n,
@@ -318,7 +318,7 @@ class X extends d.Z {
     }
     constructor(...e) {
         super(...e),
-            R(this, "fetchMessages", w),
+            R(this, "fetchMessages", D),
             R(this, "loadSelectedChannelIfNecessary", k),
             R(this, "stores", new Map().set(E.ZP, F)),
             R(this, "actions", {

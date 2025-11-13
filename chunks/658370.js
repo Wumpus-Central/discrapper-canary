@@ -27,12 +27,12 @@ let g = (e) => {
             onCtaClick: v,
             cardVariant: I,
         } = e,
-        S = (0, u.N)(),
-        T = null == S ? void 0 : S.subscription_trial,
+        T = (0, u.N)(),
+        S = null == T ? void 0 : T.subscription_trial,
         A = (0, c.N)(),
         C = (0, s.Rt)({
-            intervalType: null == T ? void 0 : T.interval,
-            intervalCount: null == T ? void 0 : T.interval_count,
+            intervalType: null == S ? void 0 : S.interval,
+            intervalCount: null == S ? void 0 : S.interval_count,
         }),
         N = (0, l._)({
             defaultResponse: h.intl.string(h.t["8x0jKT"]),

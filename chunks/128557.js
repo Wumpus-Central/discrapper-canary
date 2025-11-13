@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(388685),
     n(539854);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(748780),
@@ -14,19 +14,19 @@ var r = n(951288),
     u = n(481060),
     d = n(211266),
     p = n(699682),
-    f = n(367907),
-    h = n(644914),
+    h = n(367907),
+    f = n(644914),
     m = n(434404),
     g = n(330010),
     b = n(978946),
-    _ = n(314897),
-    y = n(430824),
-    C = n(594174),
-    v = n(259580),
-    O = n(585483),
-    x = n(63063),
-    E = n(358085),
-    j = n(709054),
+    y = n(314897),
+    C = n(430824),
+    v = n(594174),
+    _ = n(259580),
+    x = n(585483),
+    j = n(63063),
+    O = n(358085),
+    E = n(709054),
     S = n(967128),
     P = n(981631),
     I = n(231873),
@@ -35,24 +35,24 @@ var r = n(951288),
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -65,8 +65,8 @@ function A(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -77,38 +77,38 @@ function A(e, t) {
 }
 function w(e) {
     let { className: t, iconUrl: n, icon: l, header: o, completed: s, onClick: c } = e,
-        [d, f] = i.useState(!1),
-        h = (0, p.Z)(s);
+        [d, h] = r.useState(!1),
+        f = (0, p.Z)(s);
     return (
-        i.useEffect(() => {
-            null != h && s !== h && (f(!0), setTimeout(() => f(!1), 1000));
-        }, [s, h]),
-        (0, r.jsxs)(u.P3F, {
+        r.useEffect(() => {
+            null != f && s !== f && (h(!0), setTimeout(() => h(!1), 1000));
+        }, [s, f]),
+        (0, i.jsxs)(u.P3F, {
             className: a()(t, T.card, { [T.completed]: s }),
             onClick: c,
             children: [
                 null != l
                     ? l
-                    : (0, r.jsx)("img", {
+                    : (0, i.jsx)("img", {
                           className: T.icon,
                           src: n,
                           alt: "",
                       }),
-                (0, r.jsx)(u.Text, {
+                (0, i.jsx)(u.Text, {
                     color: "header-primary",
                     className: a()(T.cardTextContainer, T.cardHeader),
                     variant: "text-sm/normal",
                     children: o,
                 }),
                 s
-                    ? (0, r.jsx)(u.dz2, {
+                    ? (0, i.jsx)(u.dz2, {
                           size: "md",
                           color: "currentColor",
                           className: a()(T.checkmark, { [T.animate]: d }),
                       })
-                    : (0, r.jsx)(v.Z, {
+                    : (0, i.jsx)(_.Z, {
                           className: T.arrow,
-                          direction: v.Z.Directions.RIGHT,
+                          direction: _.Z.Directions.RIGHT,
                       }),
             ],
         })
@@ -116,27 +116,27 @@ function w(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
-        p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        v = (0, s.e7)([_.default], () => (null == l ? void 0 : l.ownerId) === _.default.getId(), [l]),
-        { canInvite: M, canManageGuild: R, canMessage: D } = (0, h.TE)(t, l),
-        L = (0, s.e7)([C.default], () => {
+        l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
+        p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
+        _ = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
+        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
+        D = (0, s.e7)([v.default], () => {
             var e, t;
             return (
-                (null == (e = C.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
-                (null == (t = C.default.getCurrentUser()) ? void 0 : t.mobile) === !0
+                (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
+                (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, h.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
-            handleInvite: F,
+            handleInvite: H,
             handleMessage: V,
-            handlePersonalize: H,
+            handlePersonalize: F,
             handleDownload: G,
-            handleAddApplication: W,
+            handleAddApplication: z,
         } = (function (e) {
-            let t = i.useCallback(() => {
-                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+            let t = r.useCallback(() => {
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.INVITE,
                     }),
@@ -146,7 +146,7 @@ function M(e) {
                                     n.bind(n, 560114),
                                 );
                                 return (n) =>
-                                    (0, r.jsx)(
+                                    (0, i.jsx)(
                                         t,
                                         A(N({}, n), {
                                             guild: e,
@@ -156,18 +156,18 @@ function M(e) {
                                     );
                             });
                 }, [e]),
-                l = i.useCallback(() => {
-                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                l = r.useCallback(() => {
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.SEND_MESSAGE,
                     }),
-                        O.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
+                        x.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
                             channelId: P.lds,
                         });
                 }, []),
-                a = i.useCallback(() => {
-                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                a = r.useCallback(() => {
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.PERSONALIZE_SERVER,
                     }),
@@ -177,8 +177,8 @@ function M(e) {
                 handleInvite: t,
                 handleMessage: l,
                 handlePersonalize: a,
-                handleDownload: i.useCallback(() => {
-                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                handleDownload: r.useCallback(() => {
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.DOWNLOAD,
                     }),
@@ -186,22 +186,22 @@ function M(e) {
                             let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
                                 n.bind(n, 431583),
                             );
-                            return (t) => (0, r.jsx)(e, N({ source: P.jXE.CHANNEL_WELCOME_CTA }, t));
+                            return (t) => (0, i.jsx)(e, N({ source: P.jXE.CHANNEL_WELCOME_CTA }, t));
                         });
                 }, []),
-                handleAddApplication: i.useCallback(() => {
+                handleAddApplication: r.useCallback(() => {
                     null != e &&
-                        (f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: I.Ft.CHANNEL_WELCOME,
                             action: I.j7.ADD_APP,
                         }),
                         (0, u.ZDy)(async () => {
                             let { default: t } = await n.e("77046").then(n.bind(n, 272509));
                             return (n) => {
-                                var i;
-                                return (0, r.jsx)(
+                                var r;
+                                return (0, i.jsx)(
                                     t,
-                                    A(N({ guildId: null != (i = e.id) ? i : "" }, n), {
+                                    A(N({ guildId: null != (r = e.id) ? r : "" }, n), {
                                         analyticsType: c.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL,
                                     }),
                                 );
@@ -210,13 +210,13 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        z = !(L || k || U || B),
-        { titleAnimatedStyle: q, opacities: Y } = (function (e) {
+        W = !(D || k || U || B),
+        { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
-                r = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
+                i = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
             return (
-                i.useEffect(() => {
+                r.useEffect(() => {
                     o.Z.stagger(300, [
                         o.Z.parallel([
                             o.Z.timing(n, {
@@ -229,25 +229,25 @@ function M(e) {
                             }),
                         ]),
                         o.Z.stagger(100, [
-                            o.Z.timing(r[0], {
+                            o.Z.timing(i[0], {
                                 toValue: 1,
                                 duration: 300,
                             }),
-                            o.Z.timing(r[1], {
+                            o.Z.timing(i[1], {
                                 toValue: 1,
                                 duration: 300,
                             }),
-                            o.Z.timing(r[2], {
+                            o.Z.timing(i[2], {
                                 toValue: 1,
                                 duration: 300,
                             }),
-                            o.Z.timing(r[3], {
+                            o.Z.timing(i[3], {
                                 toValue: 1,
                                 duration: 300,
                             }),
                         ]),
                     ]).start();
-                }, [n, t, r]),
+                }, [n, t, i]),
                 {
                     titleAnimatedStyle: e
                         ? {
@@ -262,14 +262,14 @@ function M(e) {
                               opacity: n,
                           }
                         : {},
-                    opacities: r,
+                    opacities: i,
                 }
             );
-        })(z),
-        [K, X] = i.useState([]),
-        J = K.length > 0;
+        })(W),
+        [Y, X] = r.useState([]),
+        J = Y.length > 0;
     if (
-        (i.useEffect(() => {
+        (r.useEffect(() => {
             (async () => {
                 try {
                     var e;
@@ -285,16 +285,16 @@ function M(e) {
     p ||
         (M &&
             Q.push(
-                (0, r.jsx)(
+                (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: z ? { opacity: Y[Q.length] } : {},
-                        children: (0, r.jsx)(w, {
+                        style: W ? { opacity: K[Q.length] } : {},
+                        children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
                             completed: k,
-                            onClick: F,
+                            onClick: H,
                         }),
                     },
                     "invite",
@@ -302,29 +302,29 @@ function M(e) {
             ),
         R &&
             Q.push(
-                (0, r.jsx)(
+                (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: z ? { opacity: Y[Q.length] } : {},
-                        children: (0, r.jsx)(w, {
+                        style: W ? { opacity: K[Q.length] } : {},
+                        children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
                             completed: B,
-                            onClick: H,
+                            onClick: F,
                         }),
                     },
                     "customize",
                 ),
             ),
-        D &&
+        L &&
             Q.push(
-                (0, r.jsx)(
+                (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: z ? { opacity: Y[Q.length] } : {},
-                        children: (0, r.jsx)(w, {
+                        style: W ? { opacity: K[Q.length] } : {},
+                        children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
@@ -334,17 +334,17 @@ function M(e) {
                     "message",
                 ),
             ),
-        (0, E.isWeb)() &&
+        (0, O.isWeb)() &&
             Q.push(
-                (0, r.jsx)(
+                (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: z ? { opacity: Y[Q.length] } : {},
-                        children: (0, r.jsx)(w, {
+                        style: W ? { opacity: K[Q.length] } : {},
+                        children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
-                            completed: L,
+                            completed: D,
                             onClick: G,
                         }),
                     },
@@ -352,43 +352,43 @@ function M(e) {
                 ),
             ),
         Q.push(
-            (0, r.jsx)(
+            (0, i.jsx)(
                 o.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: z ? { opacity: Y[Q.length] } : {},
-                    children: (0, r.jsx)(w, {
+                    style: W ? { opacity: K[Q.length] } : {},
+                    children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEO),
                         completed: J,
-                        onClick: W,
+                        onClick: z,
                     }),
                 },
                 "addapp",
             ),
         ));
-    let $ = v ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
+    let $ = _ ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
     p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
-        x.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
+        j.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
         "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm",
     );
-    return (0, r.jsx)(S.ZP, {
+    return (0, i.jsx)(S.ZP, {
         channelId: t.id,
-        children: (0, r.jsx)("div", {
+        children: (0, i.jsx)("div", {
             className: T.container,
-            children: (0, r.jsxs)("div", {
+            children: (0, i.jsxs)("div", {
                 className: T.inner,
                 children: [
-                    (0, r.jsxs)(o.Z.div, {
+                    (0, i.jsxs)(o.Z.div, {
                         style: q,
                         children: [
-                            (0, r.jsx)(u.Heading, {
+                            (0, i.jsx)(u.Heading, {
                                 className: T.titleName,
                                 variant: "heading-xxl/medium",
                                 children: Z.intl.format(Z.t.rkHVKf, { guildName: l.name }),
                             }),
-                            (0, r.jsxs)(u.Text, {
+                            (0, i.jsxs)(u.Text, {
                                 color: "header-secondary",
                                 className: a()({
                                     [T.subtitle]: !0,

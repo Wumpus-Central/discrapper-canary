@@ -1,13 +1,13 @@
-n.d(t, {
+A.d(t, {
     J6: () => a,
-    bd: () => i,
-    pA: () => o,
+    bd: () => r,
+    pA: () => i,
 });
-var r = n(374450);
-let i = {
-        0: r.image,
-        1: r.document,
-        2: r.code,
+var n = A(374450);
+let r = {
+        0: n.image,
+        1: n.document,
+        2: n.code,
     },
     a = [1, 0, 2],
-    o = [0, 0, 0];
+    i = [0, 0, 0];

@@ -80,12 +80,12 @@ function P(e) {
     let { guildId: t } = e;
     for (let e of ((E[t] = 1), S(t))) for (let t of (m.delete(e.id), e.subscription_listings_ids)) g.delete(t);
 }
-function w(e) {
+function D(e) {
     let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
     for (let e of ((E[t] = 2), n)) A(e);
     for (let e of ((y[t] = r), i)) O[e.id] = e;
 }
-function D(e) {
+function w(e) {
     let { guildId: t } = e;
     E[t] = 2;
 }
@@ -190,8 +190,8 @@ let K = new W(l.Z, {
     CONNECTION_OPEN: N,
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: R,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: P,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: w,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: D,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: D,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: w,
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: x,
     GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: M,

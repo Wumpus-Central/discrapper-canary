@@ -29,12 +29,12 @@ function T(e) {
         { themeType: C } = (0, g.z)(),
         N = (0, h.Z)(T),
         R = (0, u.ZP)(T),
-        { canViewChannel: P, canConnect: w } = (0, i.cj)([p.Z], () => ({
+        { canViewChannel: P, canConnect: D } = (0, i.cj)([p.Z], () => ({
             canViewChannel: p.Z.can(b.Plq.VIEW_CHANNEL, T),
             canConnect: T.isPrivate() || p.Z.can(b.Plq.CONNECT, T),
         }));
     if (!P) return null;
-    let D = () => {
+    let w = () => {
             let e = (e) => {
                 e.stopPropagation(), (0, _.X)(n.id), null == S || S({ action: "OPEN_VOICE_GUILD" }), null == A || A();
             };
@@ -51,7 +51,7 @@ function T(e) {
             });
         },
         x = () => {
-            if (!w)
+            if (!D)
                 return (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
                     color: "text-secondary",
@@ -83,7 +83,7 @@ function T(e) {
             (0, r.jsxs)("div", {
                 className: v.voiceChannel,
                 children: [
-                    D(),
+                    w(),
                     (0, r.jsx)(l.Fbu, {
                         size: "xxs",
                         color: l.TVs.colors.TEXT_SECONDARY,

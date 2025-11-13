@@ -10,33 +10,33 @@ var r = n(392711),
     d = n(626135),
     p = n(81063),
     f = n(70956),
-    m = n(996106),
-    h = n(452426),
-    g = n(186901),
+    h = n(996106),
+    g = n(452426),
+    m = n(186901),
     _ = n(981631);
 let b = ["1402418171662569542"],
     E = {
         [_.Etm.SET_ACTIVITY]: {
             scope: {
-                [g.Gp.ANY]: [l.x.RPC, l.x.RPC_ACTIVITIES_WRITE, g.lH],
+                [m.Gp.ANY]: [l.x.RPC, l.x.RPC_ACTIVITIES_WRITE, m.lH],
             },
             validation: (e) =>
-                (0, h.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         pid: e.number().min(0),
-                        activity: (0, h.Z)(e)
+                        activity: (0, g.Z)(e)
                             .keys({
                                 name: e.string().min(1).max(128),
                                 state: e.string().min(2).max(128),
                                 state_url: e.string().uri().min(1).max(256),
                                 details: e.string().min(2).max(128),
                                 details_url: e.string().uri().min(1).max(256),
-                                timestamps: (0, h.Z)(e).keys({
+                                timestamps: (0, g.Z)(e).keys({
                                     start: e.number().min(1),
                                     end: e.number().min(1),
                                 }),
-                                assets: (0, h.Z)(e).keys({
+                                assets: (0, g.Z)(e).keys({
                                     large_image: e.string().min(1).max(300),
                                     large_text: e.string().min(2).max(128),
                                     large_url: e.string().uri().min(1).max(256),
@@ -45,12 +45,12 @@ let b = ["1402418171662569542"],
                                     small_url: e.string().uri().min(1).max(256),
                                     invite_cover_image: e.string().min(1).max(300),
                                 }),
-                                party: (0, h.Z)(e).keys({
+                                party: (0, g.Z)(e).keys({
                                     id: e.string().min(2).max(128),
                                     size: e.array().items(e.number().min(0)).length(2),
                                     privacy: e.number().default(_.RYY.PRIVATE).valid([_.RYY.PRIVATE, _.RYY.PUBLIC]),
                                 }),
-                                secrets: (0, h.Z)(e).keys({
+                                secrets: (0, g.Z)(e).keys({
                                     match: e.string().min(2).max(128),
                                     join: e.string().min(2).max(128),
                                     spectate: e.string().min(2).max(128),
@@ -58,7 +58,7 @@ let b = ["1402418171662569542"],
                                 buttons: e
                                     .array()
                                     .items(
-                                        (0, h.Z)(e).keys({
+                                        (0, g.Z)(e).keys({
                                             label: e.string().min(1).max(32).required(),
                                             url: e.string().uri().min(1).max(512).required(),
                                         }),
@@ -80,37 +80,37 @@ let b = ["1402418171662569542"],
                 let l,
                     {
                         socket: a,
-                        args: { pid: h, activity: E },
+                        args: { pid: g, activity: E },
                         isSocketConnected: O,
                     } = e;
-                if (![g.He.IPC, g.He.WEBSOCKET, g.He.POST_MESSAGE].includes(a.transport))
-                    throw new m.Z(
+                if (![m.He.IPC, m.He.WEBSOCKET, m.He.POST_MESSAGE].includes(a.transport))
+                    throw new h.Z(
                         { errorCode: _.lTL.INVALID_COMMAND },
                         'command not available from "'.concat(a.transport, '" transport'),
                     );
-                if (null == h && g.He.IPC === a.transport)
-                    throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, "nonzero pid required");
+                if (null == g && m.He.IPC === a.transport)
+                    throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, "nonzero pid required");
                 if (null == E)
                     return (
                         s.Z.dispatch({
                             type: "LOCAL_ACTIVITY_UPDATE",
                             socketId: a.id,
-                            pid: h,
+                            pid: g,
                             activity: E,
                         }),
                         Promise.resolve(E)
                     );
-                let I = {};
+                let y = {};
                 E.name || (E.name = a.application.name);
-                let y = a.application.id;
-                E.application_id = y;
-                let v = a.transport === g.He.POST_MESSAGE;
-                E.platform = v ? _.M7m.EMBEDDED : _.M7m.DESKTOP;
-                let C = c.Z.getApplication(null != y ? y : void 0),
+                let v = a.application.id;
+                E.application_id = v;
+                let I = a.transport === m.He.POST_MESSAGE;
+                E.platform = I ? _.M7m.EMBEDDED : _.M7m.DESKTOP;
+                let C = c.Z.getApplication(null != v ? v : void 0),
                     S = null != (r = E.instance) && r,
                     T = null == (t = E.party) ? void 0 : t.privacy;
                 delete E.instance, null == (n = E.party) || delete n.privacy;
-                let N = (0, o.S)(E, S, v, null != C && (0, u.g)(C) && v, T);
+                let N = (0, o.S)(E, S, I, null != C && (0, u.g)(C) && I, T);
                 N > 0 && (E.flags = N);
                 let { assets: j, party: P, secrets: x, timestamps: A, buttons: Z, type: w } = E;
                 if ((null == w && (E.type = _.IIU.PLAYING), null != x)) {
@@ -118,21 +118,21 @@ let b = ["1402418171662569542"],
                         .values(x)
                         .filter((e) => !!e);
                     if (null != P && i().intersection(e, [P.id]).length > 0 && !b.includes(a.application.id))
-                        throw new m.Z(
+                        throw new h.Z(
                             { errorCode: _.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
                         );
                     if (i().uniq(e).length < e.length)
-                        throw new m.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
+                        throw new h.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
                     if (null != Z)
-                        throw new m.Z(
+                        throw new h.Z(
                             { errorCode: _.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot currently be sent with buttons",
                         );
                 }
                 if (
-                    (null != Z && ((I.button_urls = Z.map((e) => e.url)), (E.buttons = Z.map((e) => e.label))),
-                    (E.metadata = I),
+                    (null != Z && ((y.button_urls = Z.map((e) => e.url)), (E.buttons = Z.map((e) => e.label))),
+                    (E.metadata = y),
                     null != A)
                 )
                     for (let e of Object.keys(A))
@@ -157,7 +157,7 @@ let b = ["1402418171662569542"],
                     s.Z.dispatch({
                         type: "LOCAL_ACTIVITY_UPDATE",
                         socketId: a.id,
-                        pid: h,
+                        pid: g,
                         activity: E,
                         partyPrivacy: T,
                     });

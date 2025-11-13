@@ -188,7 +188,7 @@ function S(t) {
                     return;
                 }
                 (0, r.ZDy)(async () => {
-                    let { default: t } = await Promise.all([e.e("49049"), e.e("7654"), e.e("68971")]).then(
+                    let { default: t } = await Promise.all([e.e("49049"), e.e("7654"), e.e("27267")]).then(
                         e.bind(e, 560114),
                     );
                     return (e) =>

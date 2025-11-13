@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(891304),
     p = n(388032),
     f = n(861265);
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function h(e, t) {
         e
     );
 }
-let g = o.Nx.binds["0"],
+let m = o.Nx.binds["0"],
     _ = o.On.binds["0"],
     b = (e) => {
         let { firstElementFocusJumpSectionProps: t = {} } = e,
@@ -72,14 +72,14 @@ let g = o.Nx.binds["0"],
                     tooltipContentClassName: f.navigationTooltip,
                     shouldShow: i,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [p.intl.string(p.t.B9vzIP), (0, r.jsx)(s.M2$, { shortcut: g })],
+                        children: [p.intl.string(p.t.B9vzIP), (0, r.jsx)(s.M2$, { shortcut: m })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
                             s.P3F,
-                            h(
-                                m(
-                                    h(m({}, e), {
+                            g(
+                                h(
+                                    g(h({}, e), {
                                         "aria-disabled": !i,
                                         className: l()(f.button, f.back, { [f.disabled]: !i }),
                                         onClick: () => (0, d.Hm)("nav_button"),
@@ -106,7 +106,7 @@ let g = o.Nx.binds["0"],
                     children: (e) =>
                         (0, r.jsx)(
                             s.P3F,
-                            h(m({}, e), {
+                            g(h({}, e), {
                                 "aria-disabled": !o,
                                 className: l()(f.button, f.forward, { [f.disabled]: !o }),
                                 onClick: () => (0, d.TL)("nav_button"),

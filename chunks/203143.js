@@ -35,8 +35,8 @@ var r = n(512722),
     N = n(798628),
     R = n(918088),
     P = n(981631),
-    w = n(388032);
-function D(e, t, n) {
+    D = n(388032);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -147,8 +147,8 @@ function B(e) {
     d.Z.show({
         title: n,
         body: r,
-        confirmText: w.intl.string(w.t["9VLmlZ"]),
-        cancelText: w.intl.string(w.t["2m+Sqk"]),
+        confirmText: D.intl.string(D.t["9VLmlZ"]),
+        cancelText: D.intl.string(D.t["2m+Sqk"]),
         onConfirm: () => {
             f.Z.joinGuild(t, { source: P.vtS.POLL_ALERT });
         },
@@ -161,8 +161,8 @@ function Z(e) {
     if (m.Z.isLurking(i.guild_id))
         return void B({
             guildId: i.guild_id,
-            title: w.intl.string(w.t["7LpysO"]),
-            body: w.intl.string(w.t["5sHHoy"]),
+            title: D.intl.string(D.t["7LpysO"]),
+            body: D.intl.string(D.t["5sHHoy"]),
         });
     let a = T.Z.getMessage(t, n);
     if (null == a || null == a.poll || 0 === a.poll.answers.length) return;
@@ -235,13 +235,13 @@ async function Y(e) {
     if (m.Z.isLurking(r.guild_id))
         return void B({
             guildId: r.guild_id,
-            title: w.intl.string(w.t.Qic1FD),
-            body: w.intl.string(w.t["5sHHoy"]),
+            title: D.intl.string(D.t.Qic1FD),
+            body: D.intl.string(D.t["5sHHoy"]),
         });
     if (!I.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
-            title: w.intl.string(w.t.p245wu),
-            body: w.intl.string(w.t["U/uodt"]),
+            title: D.intl.string(D.t.p245wu),
+            body: D.intl.string(D.t["U/uodt"]),
         });
     let a = (0, N.fU)(t, n);
     i()(null != a, "Must not be able to vote without existing state!");
@@ -273,15 +273,15 @@ async function Y(e) {
                 answerIds: e,
             }),
             (0, N.eu)(t, n, () => void 0),
-            c.uv.announce(0 === e.length ? w.intl.string(w.t["xcvy+3"]) : w.intl.string(w.t.o20GSo));
+            c.uv.announce(0 === e.length ? D.intl.string(D.t["xcvy+3"]) : D.intl.string(D.t.o20GSo));
     } catch (e) {
         var s, l, u;
         d.Z.show({
-            title: w.intl.string(w.t.iufib1),
+            title: D.intl.string(D.t.iufib1),
             body:
                 null != (u = null != (l = null == (s = e.getAnyErrorMessage) ? void 0 : s.call(e)) ? l : e.message)
                     ? u
-                    : w.intl.string(w.t.eAn6z2),
+                    : D.intl.string(D.t.eAn6z2),
         }),
             await H({
                 channelId: t,
@@ -304,8 +304,8 @@ async function W(e) {
         return m.Z.isLurking(r.guild_id)
             ? void B({
                   guildId: r.guild_id,
-                  title: w.intl.string(w.t.B9QnBp),
-                  body: w.intl.string(w.t.BVZCTn),
+                  title: D.intl.string(D.t.B9QnBp),
+                  body: D.intl.string(D.t.BVZCTn),
               })
             : ((0, N.eu)(t, n, (e) => {
                   var n;
@@ -507,8 +507,8 @@ let q = {
     endPollEarly: async function (e) {
         let { channelId: t, messageId: n } = e;
         (await d.Z.confirm({
-            title: w.intl.string(w.t["+rfkTK"]),
-            body: w.intl.string(w.t.H2I1gL),
+            title: D.intl.string(D.t["+rfkTK"]),
+            body: D.intl.string(D.t.H2I1gL),
         })) &&
             (await C.W({
                 channelId: t,

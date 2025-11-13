@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(19780),
     p = n(665149),
     f = n(388032),
-    m = n(979905);
-function h(e, t, n) {
+    h = n(979905);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-class g extends i.PureComponent {
+class m extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode
             ? {
@@ -48,7 +48,7 @@ class g extends i.PureComponent {
                                 }),
                             )),
                             r.forEach(function (t) {
-                                h(e, t, n[t]);
+                                g(e, t, n[t]);
                             });
                     }
                     return e;
@@ -62,8 +62,8 @@ class g extends i.PureComponent {
                 return (0, r.jsx)(p.JO, {
                     hideOnClick: !1,
                     tooltip: f.intl.string(f.t["zp9d/4"]),
-                    foreground: m.downloadArrow,
-                    background: m.cloud,
+                    foreground: h.downloadArrow,
+                    background: h.cloud,
                     icon: a._8t,
                     className: this.props.className,
                 });
@@ -71,7 +71,7 @@ class g extends i.PureComponent {
             case "UPDATE_DOWNLOADED":
                 return (0, r.jsx)(p.JO, {
                     tooltip: f.intl.string(f.t.u18OXF),
-                    foreground: m.updateIconForeground,
+                    foreground: h.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: a._8t,
                     className: this.props.className,
@@ -82,11 +82,11 @@ class g extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", {
+            g(this, "state", {
                 memoizedMode: this.props.mode,
                 clicked: !1,
             }),
-            h(this, "handleInstallDownload", () => {
+            g(this, "handleInstallDownload", () => {
                 d.Z.isConnected()
                     ? s.Z.show({
                           title: f.intl.string(f.t.tiu1ly),
@@ -98,9 +98,9 @@ class g extends i.PureComponent {
                       })
                     : this.doUpdate();
             }),
-            h(this, "doUpdate", () => {
+            g(this, "doUpdate", () => {
                 this.state.clicked || (this.setState({ clicked: !0 }), (0, o.Q)());
             });
     }
 }
-let _ = l.ZP.connectStores([u.Z], () => ({ mode: u.Z.getState() }))(g);
+let _ = l.ZP.connectStores([u.Z], () => ({ mode: u.Z.getState() }))(m);

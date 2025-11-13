@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(768943),
     R = n(686478),
     P = n(664559),
-    w = n(767893),
-    D = n(206697),
+    D = n(767893),
+    w = n(206697),
     x = n(74551),
     L = n(981631),
     M = n(388032),
@@ -148,7 +148,7 @@ function Y(e) {
         [n.length],
     ),
     0 === n.length)
-        ? (0, r.jsx)(D.w, {})
+        ? (0, r.jsx)(w.w, {})
         : (0, r.jsx)(K, {
               savedMessageKeys: n,
               closePopout: t,
@@ -280,7 +280,7 @@ function z(e) {
                             throttledNow: a,
                         })
                       : null,
-                  (0, r.jsx)(w.Z, { channel: s }),
+                  (0, r.jsx)(D.Z, { channel: s }),
                   (0, r.jsx)(
                       E.Z,
                       {

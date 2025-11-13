@@ -74,10 +74,10 @@ let N = new l.h(I, T),
 function P(e) {
     return N.set(e.id, e);
 }
-function w() {
+function D() {
     return R;
 }
-function D(e, t, n) {
+function w(e, t, n) {
     let r = v(e);
     if (null == r) throw Error("Native breadcrumb has no native id");
     return !(N.size(r) > 0) && ((R = Math.max(R, Number(e.id))), P(A(e, t, n)));
@@ -108,9 +108,9 @@ function M() {
             var e;
             let t = null != (e = null == m ? void 0 : m.getLastAssociatedPID()) ? e : null;
             null == m ||
-                m.getNativeBreadcrumbs({ minBreadcrumbId: w() }, (e) => {
+                m.getNativeBreadcrumbs({ minBreadcrumbId: D() }, (e) => {
                     let { breadcrumbs: n } = e;
-                    for (let e of n) D(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
+                    for (let e of n) w(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
                     X.emitChange();
                 });
         }, y));

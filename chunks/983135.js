@@ -20,9 +20,9 @@ var l = n(570140),
     g = n(592125),
     h = n(430824),
     f = n(823379),
-    I = n(434404),
-    p = n(889369),
-    N = n(570961),
+    N = n(434404),
+    I = n(889369),
+    p = n(570961),
     O = n(84658),
     E = n(176505),
     S = n(290511),
@@ -42,7 +42,7 @@ function _(e) {
 }
 async function j(e, t) {
     let n = s.Z.getEnabled(e),
-        a = Array.from(p.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
+        a = Array.from(I.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
         [o, d] = (0, c.d9)(e, [...a]);
     if (n && t === S.Un.ONBOARDING_DEFAULT && (d.length < S.md || o.length < S.X))
         return void r.Z.show({
@@ -50,7 +50,7 @@ async function j(e, t) {
             body: x.intl.string(x.t.JOT74c),
         });
     try {
-        await (0, N.n_)(e, { mode: t });
+        await (0, p.n_)(e, { mode: t });
     } catch (n) {
         var u;
         let { fieldName: e, error: t } = null != (u = new i.Z(n).getAnyErrorMessageAndField()) ? u : {};
@@ -76,7 +76,7 @@ function b(e, t) {
 async function D(e) {
     let t = h.Z.getGuild(e);
     null != t &&
-        (I.Z.close(),
+        (N.Z.close(),
         (0, u.iD)(t.id, {
             type: m.z.NEW_MEMBER,
             roles: {},

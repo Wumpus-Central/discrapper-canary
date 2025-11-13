@@ -1,5 +1,5 @@
 let i, l, s, r, a, o;
-n.d(t, { Z: () => Z }), n(388685), n(642613);
+n.d(t, { Z: () => M }), n(388685), n(642613);
 var u,
     d,
     c = n(442837),
@@ -9,11 +9,11 @@ var u,
     p = n(752048),
     I = n(823379),
     m = n(971130),
-    S = n(592125),
-    x = n(496675),
+    x = n(592125),
+    S = n(496675),
     f = n(699516),
-    E = n(981631),
-    y = n(245335);
+    y = n(981631),
+    E = n(245335);
 let C = new Set(),
     _ = [],
     b = new Map(),
@@ -30,20 +30,20 @@ function N(e) {
             autoTrackExposure: !1,
         }),
         n = new Set(),
-        i = (null == r ? void 0 : r.type) === E.d4z.GUILD_VOICE,
+        i = (null == r ? void 0 : r.type) === y.d4z.GUILD_VOICE,
         l = null;
-    null == s || o === y.Iq.EMBEDDED_APPLICATION || (t && i) || (l = s.id);
+    null == s || o === E.Iq.EMBEDDED_APPLICATION || (t && i) || (l = s.id);
     let a = (0, m.rh)(C, l);
     for (let e of (null == a || f.Z.isBlockedOrIgnored(a.id) || n.add(a.id), p.Z.getUserAffinities()))
         n.add(e.otherUserId);
     let u = new Set();
     return (
-        o === y.Iq.EMBEDDED_APPLICATION &&
+        o === E.Iq.EMBEDDED_APPLICATION &&
             v.Z.getChannelHistory()
-                .map((e) => S.Z.getChannel(e))
+                .map((e) => x.Z.getChannel(e))
                 .filter(I.lm)
-                .filter((e) => e.type === E.d4z.GUILD_TEXT)
-                .filter((e) => x.Z.can(E.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === y.d4z.GUILD_TEXT)
+                .filter((e) => S.Z.can(y.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => u.add(e.id)),
         (0, m.an)({
@@ -66,7 +66,7 @@ function A(e) {
 }
 class P extends (u = c.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, x.Z, v.Z, f.Z, p.Z);
+        this.waitFor(x.Z, S.Z, v.Z, f.Z, p.Z);
     }
     getInviteSuggestionRows() {
         return _;
@@ -98,7 +98,7 @@ class P extends (u = c.ZP.Store) {
           writable: !0,
       })
     : (P[d] = "InviteSuggestionsStore");
-let Z = new P(g.Z, {
+let M = new P(g.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
         (s = null != u ? n : null),

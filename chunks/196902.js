@@ -11,13 +11,13 @@ var r = n(951288),
     g = n(434404),
     m = n(999382),
     p = n(981631),
-    f = n(562915),
+    f = n(766310),
     h = n(388032),
     b = n(764009);
 let x = function (e) {
-    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
-        C = (0, a.e7)([m.Z], () => m.Z.getProps().originalProfile),
-        O = null != C && C.tag !== i;
+    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: _, isDisabled: v = !1 } = e,
+        O = (0, a.e7)([m.Z], () => m.Z.getProps().originalProfile),
+        C = null != O && O.tag !== i;
     function y(e) {
         g.Z.updateGuildProfile(n, { tag: e });
     }
@@ -44,9 +44,9 @@ let x = function (e) {
                                         width: 40,
                                         height: 40,
                                         primaryTintColor: j,
-                                        secondaryTintColor: v,
+                                        secondaryTintColor: _,
                                     }),
-                                    disabled: _,
+                                    disabled: v,
                                     value: null != i ? i : "",
                                     onChange: y,
                                 }),
@@ -62,7 +62,7 @@ let x = function (e) {
                         ],
                     }),
             }),
-            O &&
+            C &&
                 (0, r.jsx)(d.Z, {
                     className: b.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {

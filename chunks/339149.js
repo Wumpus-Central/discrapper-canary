@@ -24,8 +24,8 @@ var r,
     O = n(353042),
     v = n(981631),
     j = n(388032),
-    C = n(820093);
-function x(e, t, n) {
+    x = n(820093);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -130,7 +130,7 @@ class I extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "renderProgressBody", (e, t) => {
+            C(this, "renderProgressBody", (e, t) => {
                 let { state: n, application: r } = this.props,
                     { stage: i, progress: l, total: o, type: a } = n;
                 if (null == l || null == o || null == i) return null;
@@ -177,7 +177,7 @@ class P extends (r = l.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, i.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: a()(n, C.progressContainer),
+            className: a()(n, x.progressContainer),
             onClick: this.handleOnClick,
             children: (0, i.jsx)(p.u, {
                 __unsupportedReactNodeAsText: this.getTooltipText(),
@@ -190,7 +190,7 @@ class P extends (r = l.PureComponent) {
                         children: (0, i.jsx)(h._8t, {
                             size: "md",
                             color: "currentColor",
-                            className: C.downloadIcon,
+                            className: x.downloadIcon,
                         }),
                     }),
                 }),
@@ -199,8 +199,8 @@ class P extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", { animationScale: new s.Z.Value(0) }),
-            x(this, "handleOnClick", (e) => {
+            C(this, "state", { animationScale: new s.Z.Value(0) }),
+            C(this, "handleOnClick", (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(v.Z5c.APPLICATION_LIBRARY);
             });
@@ -213,7 +213,7 @@ function N(e, t) {
         return null != l && e.push(l), e;
     }, []);
 }
-x(P, "defaultProps", { strokeSize: h._3P.StrokeSizes.MEDIUM });
+C(P, "defaultProps", { strokeSize: h._3P.StrokeSizes.MEDIUM });
 let Z = c.ZP.connectStores([_.Z, b.Z, f.Z], () => {
     let e = _.Z.activeItems,
         t = N(e, b.Z),

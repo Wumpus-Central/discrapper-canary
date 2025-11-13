@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(481060),
     a = n(287734),
     o = n(598006),
@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(584729),
     d = n(27457),
     p = n(546247),
-    f = n(354459),
-    h = n(388032),
+    h = n(354459),
+    f = n(388032),
     m = n(427538);
 let g = function (e) {
     let { participants: t, channel: n, hasConnectPermission: g } = e,
-        b = t.filter(f.Io),
-        _ = (0, c.J)(n.guild_id),
-        y = i.useCallback(() => {
-            _ ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, _]),
-        C = 4 === b.length ? 2 : 3;
-    return (0, r.jsxs)("div", {
+        b = t.filter(h.Io),
+        y = (0, c.J)(n.guild_id),
+        C = r.useCallback(() => {
+            y ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, y]),
+        v = 4 === b.length ? 2 : 3;
+    return (0, i.jsxs)("div", {
         className: m.container,
         children: [
-            (0, r.jsx)(p.Z, {}),
-            (0, r.jsx)("div", {
+            (0, i.jsx)(p.Z, {}),
+            (0, i.jsx)("div", {
                 className: m.tiles,
-                style: { maxWidth: 168 * C },
+                style: { maxWidth: 168 * v },
                 children: b.slice(0, 5).map((e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         d.ZP,
                         {
                             participant: e,
@@ -43,28 +43,28 @@ let g = function (e) {
                     ),
                 ),
             }),
-            (0, r.jsx)(l.Heading, {
+            (0, i.jsx)(l.Heading, {
                 className: m.channelName,
                 variant: "heading-xxl/semibold",
                 children: n.name,
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: m.participantsRow,
-                children: (0, r.jsx)(l.Text, {
+                children: (0, i.jsx)(l.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
                     children:
                         0 === b.length
-                            ? h.intl.string(h.t.zSqdrS)
+                            ? f.intl.string(f.t.zSqdrS)
                             : 1 === b.length
-                              ? h.intl.formatToPlainString(h.t.BUyJIG, { a: (0, u.Z)(n, b[0]) })
+                              ? f.intl.formatToPlainString(f.t.BUyJIG, { a: (0, u.Z)(n, b[0]) })
                               : 2 === b.length
-                                ? h.intl.formatToPlainString(h.t["dcyZf/"], {
+                                ? f.intl.formatToPlainString(f.t["dcyZf/"], {
                                       a: (0, u.Z)(n, b[0]),
                                       b: (0, u.Z)(n, b[1]),
                                   })
                                 : b.length > 2
-                                  ? h.intl.formatToPlainString(h.t["44/Obu"], {
+                                  ? f.intl.formatToPlainString(f.t["44/Obu"], {
                                         a: (0, u.Z)(n, b[0]),
                                         b: (0, u.Z)(n, b[1]),
                                         n: b.length - 2,
@@ -72,12 +72,12 @@ let g = function (e) {
                                   : void 0,
                 }),
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: m.joinButton,
-                children: (0, r.jsx)(l.Button, {
+                children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
-                    text: g ? h.intl.string(h.t["96ANUN"]) : h.intl.string(h.t.TVBCKZ),
-                    onClick: y,
+                    text: g ? f.intl.string(f.t["96ANUN"]) : f.intl.string(f.t.TVBCKZ),
+                    onClick: C,
                     disabled: !g,
                 }),
             }),

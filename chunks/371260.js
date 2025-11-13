@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(647438),
-    l = n(358458),
+    l = n(509442),
     a = n(442837),
     s = n(481060),
     o = n(607070),
@@ -15,7 +15,7 @@ let u = {
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
             f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-            m = i.useMemo(
+            h = i.useMemo(
                 () =>
                     !1 === t || f
                         ? { opacity: 1 }
@@ -35,9 +35,9 @@ let u = {
                             },
                 [t, d, f, n],
             ),
-            h = (0, s.q_F)(m);
+            g = (0, s.q_F)(h);
         return (0, r.jsx)(l.animated.div, {
-            style: h,
+            style: g,
             className: c.transitionItem,
             children: p,
         });

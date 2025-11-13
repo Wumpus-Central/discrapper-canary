@@ -17,8 +17,8 @@ var l = n(951288),
     p = n(914010),
     x = n(626135),
     j = n(176354),
-    E = n(539266),
-    _ = n(598117),
+    _ = n(539266),
+    E = n(598117),
     O = n(390620),
     y = n(983205),
     C = n(457574),
@@ -65,9 +65,9 @@ let A = new h.Z("EmojiStudio"),
             el = r.useRef(null);
         r.useEffect(
             () => (
-                (0, E.g)(!1),
+                (0, _.g)(!1),
                 () => {
-                    (0, E.g)(!1);
+                    (0, _.g)(!1);
                 }
             ),
             [],
@@ -85,7 +85,7 @@ let A = new h.Z("EmojiStudio"),
                             k(e), q(e.data), W(h.name), Z(!1);
                         })
                         .catch((e) => {
-                            A.error("Failed to fetch emoji image", e), F(_.ze.MISSING_IMAGE_DATA), Z(!1);
+                            A.error("Failed to fetch emoji image", e), F(E.ze.MISSING_IMAGE_DATA), Z(!1);
                         });
             }, [h]);
         let er = r.useCallback(
@@ -108,9 +108,9 @@ let A = new h.Z("EmojiStudio"),
             $.current || er({ reason: "closed" });
         });
         let ei = r.useCallback(async () => {
-                if ((F(null), null == L)) return void F(_.ze.MISSING_GUILD);
+                if ((F(null), null == L)) return void F(E.ze.MISSING_GUILD);
                 if (null == D || (null == D ? void 0 : D.file) == null || null == Y)
-                    return void F(_.ze.MISSING_IMAGE_DATA);
+                    return void F(E.ze.MISSING_IMAGE_DATA);
                 let e = null;
                 try {
                     (e = await (0, d.rS)({
@@ -165,8 +165,8 @@ let A = new h.Z("EmojiStudio"),
                             return;
                         }
                     }
-                (0, E.g)(!1),
-                    (0, u.Mr3)(_.Hj),
+                (0, _.g)(!1),
+                    (0, u.Mr3)(E.Hj),
                     er({ reason: "uploaded" }),
                     ($.current = !0),
                     (0, O.y)({
@@ -176,7 +176,7 @@ let A = new h.Z("EmojiStudio"),
             }, [L, D, h, Y, er, V]),
             ea = r.useCallback(() => {
                 var e;
-                F(null), null != D && q(D.data), (Q.current = 0), (0, E.g)(!1), null == (e = ee.current) || e.reset();
+                F(null), null != D && q(D.data), (Q.current = 0), (0, _.g)(!1), null == (e = ee.current) || e.reset();
             }, [ee, D]),
             eo = r.useCallback(() => {
                 (0, C.E)({ onClose: ea });
@@ -184,12 +184,12 @@ let A = new h.Z("EmojiStudio"),
             es = r.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: l } = e,
                     r = null;
-                null != t && j.ZP.isDataTooBig(t) && (r = _.ze.TOO_BIG),
+                null != t && j.ZP.isDataTooBig(t) && (r = E.ze.TOO_BIG),
                     F(null != l ? l : r),
                     n < X.current || (null != t && (q(t), (X.current = n)));
             }, []),
             eu = r.useCallback(() => {
-                Q.current++, (0, E.g)(!0);
+                Q.current++, (0, _.g)(!0);
             }, []),
             ec = T ? M.intl.string(M.t.FOYn8U) : M.intl.string(M.t.iMJO37);
         return G || null == D

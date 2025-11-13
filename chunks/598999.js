@@ -60,7 +60,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,12 +72,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -220,7 +220,7 @@ function H(e) {
             listName: S,
         } = e,
         R = i.useRef(null),
-        w = (0, p.Z)(S, R),
+        D = (0, p.Z)(S, R),
         L = (0, u.e7)([y.ZP], () => y.ZP.hasNotice()),
         B = (0, u.e7)([O.Z], () => O.Z.windowSize());
     i.useEffect(() => {
@@ -329,12 +329,12 @@ function H(e) {
                     ref: R,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: w,
+                            navigator: D,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
                                         n = x(e, ["ref"]);
-                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: F }));
+                                    return (0, r.jsx)("div", w(P({ ref: t }, n), { children: F }));
                                 },
                             }),
                         }),
@@ -377,7 +377,7 @@ function Y(e) {
             null != a && (_.Z.trackJump(i, r, t), (0, m.uL)(A.Z5c.CHANNEL(a.getGuildId(), i, r))), null == d || d(n);
         }
     }
-    function w(e) {
+    function D(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];
         if (null != b) return b(t, (e) => P(t, e));
@@ -413,7 +413,7 @@ function Y(e) {
     i.useEffect(() => {
         n(a);
     }, [a, n]);
-    let D = i.useMemo(
+    let w = i.useMemo(
         () =>
             null == o
                 ? void 0
@@ -426,7 +426,7 @@ function Y(e) {
     return (0, r.jsx)(H, {
         className: v,
         scrollerClassName: O,
-        items: D,
+        items: w,
         loading: l,
         analyticsName: t,
         renderEmptyState: h,
@@ -434,7 +434,7 @@ function Y(e) {
         hasMore: s,
         loadMore: c,
         getProTip: y,
-        renderItem: w,
+        renderItem: D,
         listName: C,
         "aria-label": e["aria-label"],
     });

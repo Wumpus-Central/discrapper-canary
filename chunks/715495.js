@@ -1,7 +1,7 @@
 n.d(t, { Z: () => _ }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var a = n(951288),
-    r = n(647438),
-    i = n(442837),
+    i = n(647438),
+    r = n(442837),
     l = n(481060),
     s = n(276264),
     o = n(205822),
@@ -60,13 +60,13 @@ function j(e, t) {
 }
 function _() {
     var e, t;
-    let [n, i] = (0, r.useState)(!1),
-        [s, d] = (0, r.useState)(!1),
-        [h, g] = (0, r.useState)(null),
+    let [n, r] = (0, i.useState)(!1),
+        [s, d] = (0, i.useState)(!1),
+        [h, g] = (0, i.useState)(null),
         _ = (0, u.ZP)((e) => e.toolsCache),
         { setToolsCache: T, removeToolsCache: O } = (0, u.L3)(),
         { setImgCache: N } = (0, u.W_)(),
-        P = (0, r.useCallback)(
+        P = (0, i.useCallback)(
             (e) => {
                 let t = _[e];
                 null != t &&
@@ -90,7 +90,7 @@ function _() {
             },
             [_],
         ),
-        I = (0, r.useCallback)((e) => {
+        I = (0, i.useCallback)((e) => {
             g((t) =>
                 null == t
                     ? null
@@ -100,7 +100,7 @@ function _() {
                       }),
             );
         }, []),
-        w = (0, r.useCallback)(
+        w = (0, i.useCallback)(
             (e) => {
                 O(e);
             },
@@ -117,7 +117,7 @@ function _() {
                             (0, a.jsx)(l.Button, {
                                 size: "sm",
                                 onClick: () => {
-                                    d(!1), i((e) => !e);
+                                    d(!1), r((e) => !e);
                                 },
                                 variant: "secondary",
                                 text: "Toggle Themes",
@@ -125,7 +125,7 @@ function _() {
                             (0, a.jsx)(l.Button, {
                                 size: "sm",
                                 onClick: () => {
-                                    i(!1), d((e) => !e);
+                                    r(!1), d((e) => !e);
                                 },
                                 variant: "secondary",
                                 text: "Toggle Gradients",
@@ -206,18 +206,18 @@ function _() {
 }
 function y(e) {
     let { nameplate: t } = e,
-        [n, i] = (0, r.useState)(320),
-        s = (0, r.useRef)(null),
-        o = (0, r.useRef)(null),
-        c = (0, r.useRef)(null),
-        d = (0, r.useRef)(document),
-        u = (0, r.useCallback)((e) => {
+        [n, r] = (0, i.useState)(320),
+        s = (0, i.useRef)(null),
+        o = (0, i.useRef)(null),
+        c = (0, i.useRef)(null),
+        d = (0, i.useRef)(document),
+        u = (0, i.useCallback)((e) => {
             if (null != s.current) {
                 let t = s.current.getBoundingClientRect();
-                i(Math.max(264, Math.min(432, e.clientX - t.left)));
+                r(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
-        m = (0, r.useCallback)(
+        m = (0, i.useCallback)(
             (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let t = e.currentTarget.ownerDocument;
@@ -234,7 +234,7 @@ function y(e) {
             [u],
         );
     return (
-        (0, r.useEffect)(
+        (0, i.useEffect)(
             () => () => {
                 null != o.current && (d.current.removeEventListener("mousemove", o.current), (o.current = null)),
                     null != c.current && (d.current.removeEventListener("mouseup", c.current), (c.current = null));
@@ -274,12 +274,12 @@ function y(e) {
     );
 }
 function C(e) {
-    let { src: t, onSetStatic: n, removeAsset: r } = e;
+    let { src: t, onSetStatic: n, removeAsset: i } = e;
     return (0, a.jsxs)("div", {
         className: b.uploaded,
         children: [
             (0, a.jsx)(l.P3F, {
-                onClick: () => r(t),
+                onClick: () => i(t),
                 className: b.xicon,
                 children: (0, a.jsx)(l.Dio, {
                     size: "custom",
@@ -345,7 +345,7 @@ function E(e) {
 }
 function T(e) {
     let { nameplate: t } = e,
-        n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+        n = (0, r.e7)([d.default], () => d.default.getCurrentUser());
     return (0, a.jsx)("div", {
         className: b.preview,
         children: (0, a.jsxs)("div", {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,12 +10,12 @@ var r = n(951288),
     d = n(726115),
     p = n(128449),
     f = n(388032);
-function m(e) {
+function h(e) {
     let { loadId: t } = e,
         n = (0, l.e7)([s.default], () => (0, d.Xp)([s.default])),
-        m = u.Z.useField("languageCode"),
-        h = null != m ? m : n,
-        g = i.useCallback(
+        h = u.Z.useField("languageCode"),
+        g = null != h ? h : n,
+        m = i.useCallback(
             (e) => {
                 u.Z.setState({ languageCode: e });
                 let n = u.Z.getField("fetchedQuery");
@@ -39,14 +39,14 @@ function m(e) {
         ),
         b = i.useMemo(() => {
             var e;
-            let t = (0, p.Cf)().find((e) => e.code === h);
+            let t = (0, p.Cf)().find((e) => e.code === g);
             return null != (e = null == t ? void 0 : t.name) ? e : f.intl.string(f.t.LQLMGP);
-        }, [h]);
+        }, [g]);
     return (0, r.jsx)(a.ZP, {
         items: _,
         title: b,
-        onSelect: g,
-        selected: h,
+        onSelect: m,
+        selected: g,
         "aria-label": f.intl.string(f.t.Ng5cTK),
     });
 }

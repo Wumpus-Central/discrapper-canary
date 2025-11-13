@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(120356),
-    l = n.n(i),
+var r = n(120356),
+    l = n.n(r),
     a = n(442837),
     o = n(846027),
     s = n(522651),
@@ -10,36 +10,36 @@ var i = n(120356),
     u = n(131951),
     d = n(36703),
     p = n(358085),
-    f = n(618158),
-    h = n(119421);
+    h = n(618158),
+    f = n(119421);
 function m(e) {
     let {
             className: t,
             iconClassName: n,
-            sliderClassName: i,
+            sliderClassName: r,
             userId: m,
             context: g,
             currentWindow: b = window,
-            location: _,
+            location: y,
         } = e,
-        { currentVolume: y, muted: C } = (0, a.cj)([u.Z], () => ({
+        { currentVolume: C, muted: v } = (0, a.cj)([u.Z], () => ({
             currentVolume: u.Z.getLocalVolume(m, g),
             muted: u.Z.isLocalMute(m, g),
         }));
-    return (0, r.jsx)(f.Z, {
-        children: (0, r.jsx)(c.Z, {
+    return (0, i.jsx)(h.Z, {
+        children: (0, i.jsx)(c.Z, {
             currentWindow: b,
-            iconClassName: l()(n, h.controlIcon),
-            sliderClassName: i,
+            iconClassName: l()(n, f.controlIcon),
+            sliderClassName: r,
             className: t,
-            value: (0, d.P)(y),
-            muted: C,
+            value: (0, d.P)(C),
+            muted: v,
             maxValue: p.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && C && o.Z.toggleLocalMute(m, g), o.Z.setLocalVolume(m, (0, d.A)(e), g);
+                e > 0 && v && o.Z.toggleLocalMute(m, g), o.Z.setLocalVolume(m, (0, d.A)(e), g);
             },
             onToggleMute: () => {
-                null != _ && (0, s.v)(_, s.d.VOLUME, C), o.Z.toggleLocalMute(m, g);
+                null != y && (0, s.v)(y, s.d.VOLUME, v), o.Z.toggleLocalMute(m, g);
             },
         }),
     });

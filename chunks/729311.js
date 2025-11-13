@@ -20,13 +20,13 @@ var r = n(951288),
     b = n(259580),
     x = n(999382),
     j = n(743475),
-    v = n(889369),
-    _ = n(570961),
-    C = n(208665),
-    O = n(868814),
+    _ = n(889369),
+    v = n(570961),
+    O = n(208665),
+    C = n(868814),
     y = n(974513),
-    E = n(2348),
-    N = n(353890),
+    N = n(2348),
+    E = n(353890),
     I = n(716130),
     S = n(388032),
     T = n(868893),
@@ -35,14 +35,14 @@ function w(e) {
     let { guild: t } = e,
         a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        h = (0, O.Z)(t),
-        b = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
+        h = (0, C.Z)(t),
+        b = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
         x = h.filter((e) => !b.has(e.id)),
-        [_, C] = i.useState(!1);
+        [v, O] = i.useState(!1);
     return (i.useEffect(() => {
         f || a || (0, m.S)(t.id);
     }, [t.id, f, a]),
-    _ || 0 === x.length)
+    v || 0 === x.length)
         ? null
         : (0, r.jsxs)("div", {
               className: T.recommendations,
@@ -62,7 +62,7 @@ function w(e) {
                           }),
                           (0, r.jsxs)(o.P3F, {
                               className: T.dismissAll,
-                              onClick: () => C(!0),
+                              onClick: () => O(!0),
                               children: [
                                   (0, r.jsx)(o.dz2, {
                                       size: "xxs",
@@ -246,21 +246,21 @@ function Z(e) {
         a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
         s = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
         c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, l.e7)([C.Z], () => C.Z.advancedMode),
+        u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         g = i.useRef(null),
         [m, p] = i.useState(!1),
-        v = i.useRef(n);
+        _ = i.useRef(n);
     return (i.useEffect(() => {
-        v.current = n;
+        _.current = n;
     }),
     i.useEffect(() => {
         if (t) {
-            let { current: e } = v;
+            let { current: e } = _;
             return () => {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -304,7 +304,7 @@ function Z(e) {
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(w, { guild: n }),
-                                          (0, r.jsx)(E.Z, {
+                                          (0, r.jsx)(N.Z, {
                                               className: T.channelBrowserOuter,
                                               guild: n,
                                               categories: c,
@@ -342,7 +342,7 @@ function Z(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(E.Z, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != g.current && g.current.scrollIntoView({ behavior: "smooth" });
@@ -353,15 +353,15 @@ function Z(e) {
 }
 function R() {
     let e = (0, l.e7)([x.Z], () => x.Z.getProps().guild),
-        t = (0, l.e7)([v.Z], () => v.Z.submitting),
-        n = (0, l.e7)([C.Z], () => C.Z.advancedMode);
+        t = (0, l.e7)([_.Z], () => _.Z.submitting),
+        n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
     return null == e
         ? null
         : (0, r.jsx)(a.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },

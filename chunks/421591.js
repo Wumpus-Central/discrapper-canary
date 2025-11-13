@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(482853);
+n.d(t, { Z: () => T }), n(388685), n(482853);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
@@ -98,7 +98,7 @@ function I(e, t) {
                 className: m.contentWrapper,
                 children: (0, r.jsx)(l.Gt, {
                     value: d,
-                    children: (0, r.jsx)(T, {
+                    children: (0, r.jsx)(S, {
                         initHistory: u,
                         children: (0, r.jsx)(A, {
                             context: n,
@@ -110,8 +110,8 @@ function I(e, t) {
         })
     );
 }
-let S = i.memo(i.forwardRef(I));
-function T(e) {
+let T = i.memo(i.forwardRef(I));
+function S(e) {
     let { initHistory: t, children: n } = e,
         [a, o] = i.useState(null != t ? t : [{ type: u.gc.HOME }]),
         [s, l] = i.useState({}),

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(406128),
     v = n(981631),
     I = n(388032),
-    S = n(365861);
-function T(e, t, n) {
+    T = n(365861);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -143,18 +143,18 @@ class N extends i.PureComponent {
                 title: I.intl.string(I.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
-                className: S.errorPage,
+                className: T.errorPage,
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            T(this, "state", {
+            S(this, "state", {
                 error: null,
                 info: null,
             }),
-            T(this, "discordErrorsSet", !1);
+            S(this, "discordErrorsSet", !1);
     }
 }
 let R = N;

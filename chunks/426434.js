@@ -20,12 +20,12 @@ function x(e) {
         { guild: n } = e,
         x = n.mfaLevel,
         j = (0, l.e7)([u.Z], () => null != n && u.Z.can(f.Plq.MANAGE_GUILD, n), [n]),
-        v = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        _ = (0, d.eM)(n, v),
-        C = null == v ? void 0 : v.mfaEnabled,
-        O = x === f.BpS.ELEVATED,
-        y = _ && C,
-        E = (0, i.throttle)(async (e) => {
+        _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        v = (0, d.eM)(n, _),
+        O = null == _ ? void 0 : _.mfaEnabled,
+        C = x === f.BpS.ELEVATED,
+        y = v && O,
+        N = (0, i.throttle)(async (e) => {
             y &&
                 (await m.Z.updateMFALevel({
                     guildId: n.id,
@@ -35,12 +35,12 @@ function x(e) {
         }, 1000);
     if (!j) return null;
     y ||
-        (t = _
+        (t = v
             ? h.intl.format(h.t.nFwNyR, {
                   settingsHook: () => (0, c.openUserSettings)(o.n.ACCOUNT_PANEL, { section: f.oAB.ACCOUNT }),
               })
             : h.intl.string(h.t["9Ghu40"]));
-    let N = n.features.has(f.GuildFeatures.DISCOVERABLE);
+    let E = n.features.has(f.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
         className: b.simpleItemWrapper,
         children: [
@@ -59,23 +59,23 @@ function x(e) {
                     }),
                 ],
             }),
-            !y || (O && N)
+            !y || (C && E)
                 ? (0, r.jsx)(a.u, {
-                      text: N
+                      text: E
                           ? h.intl.string(h.t["KG1V/E"])
-                          : _
+                          : v
                             ? h.intl.string(h.t.NmsheT)
                             : h.intl.string(h.t.LieBta),
                       children: (0, r.jsx)(p.Z, {
-                          checked: O,
+                          checked: C,
                           disabled: !0,
-                          onChange: E,
+                          onChange: N,
                           className: b.bringToFront,
                       }),
                   })
                 : (0, r.jsx)(p.Z, {
-                      checked: O,
-                      onChange: E,
+                      checked: C,
+                      onChange: N,
                       className: b.bringToFront,
                   }),
         ],

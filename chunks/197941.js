@@ -11,9 +11,9 @@ var i = n(243814),
     d = n(199902),
     p = n(131951),
     f = n(449224),
-    m = n(358085),
-    h = n(452426),
-    g = n(736045),
+    h = n(358085),
+    g = n(452426),
+    m = n(736045),
     _ = n(186901),
     b = n(981631);
 let E = {
@@ -23,7 +23,7 @@ let E = {
         },
         handler() {
             let e = p.Z.isVideoEnabled();
-            null != (0, g.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), b.IlC.APP));
+            null != (0, m.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), b.IlC.APP));
         },
     },
     [b.Etm.TOGGLE_SCREENSHARE]: {
@@ -31,7 +31,7 @@ let E = {
             [_.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE],
         },
         validation: (e) =>
-            (0, h.Z)(e)
+            (0, g.Z)(e)
                 .optional()
                 .keys({ pid: e.number().optional().min(0) }),
         handler(e) {
@@ -41,13 +41,13 @@ let E = {
                 i = d.Z.getCurrentUserActiveStream(),
                 a = d.Z.getStreamerActiveStreamMetadata(),
                 u = (0, c.Z)(o.ZP, f.Z),
-                p = (0, g.Z)();
+                p = (0, m.Z)();
             null != p &&
-                (null != t && null != a && a.pid !== t && (0, m.isWindows)()
+                (null != t && null != a && a.pid !== t && (0, h.isWindows)()
                     ? (0, s.WH)(p.guild_id, p.id, { pid: t })
                     : null != i
                       ? (0, s.L6)(!1)
-                      : null != t && (0, m.isWindows)()
+                      : null != t && (0, h.isWindows)()
                         ? (0, s.WH)(p.guild_id, p.id, { pid: t })
                         : null != u
                           ? (0, s.WH)(p.guild_id, p.id, { pid: u.pid })

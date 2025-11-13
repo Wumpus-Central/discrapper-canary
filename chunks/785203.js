@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => g,
+    R: () => m,
     Z: () => _,
 });
 var r,
@@ -13,9 +13,9 @@ var r,
     d = n(270144),
     p = n(400271),
     f = n(192513),
-    m = n(255791),
-    h = n(981631),
-    g =
+    h = n(255791),
+    g = n(981631),
+    m =
         (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = "ENABLE_PUBLIC_GUILD"),
         (r[(r.MAX_MEMBER_COUNT = 1)] = "MAX_MEMBER_COUNT"),
         (r[(r.GUILD_LIVE_CHANNEL = 2)] = "GUILD_LIVE_CHANNEL"),
@@ -27,16 +27,16 @@ var r,
         r);
 function _(e) {
     var t;
-    let n = null != (t = null == e ? void 0 : e.id) ? t : h.lds,
+    let n = null != (t = null == e ? void 0 : e.id) ? t : g.lds,
         r = (0, l.e7)([p.Z], () => p.Z.isVisible(e)),
-        g = (0, l.e7)([m.Z], () => m.Z.isVisible(e)),
+        m = (0, l.e7)([h.Z], () => h.Z.isVisible(e)),
         _ = (0, s.m)(n),
         b = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
         E = u.Z.useShouldShowChannelNotice(n),
         O = (0, d.h6)(e),
-        { enableStudyGroup: I } = (0, c.s)(e),
-        y = O.length > 0,
-        v = I && !(null == e ? void 0 : e.features.has(h.GuildFeatures.HUB)),
+        { enableStudyGroup: y } = (0, c.s)(e),
+        v = O.length > 0,
+        I = y && !(null == e ? void 0 : e.features.has(g.GuildFeatures.HUB)),
         C = (0, o.Vm)(n);
     if (
         (i.useEffect(() => {
@@ -45,11 +45,11 @@ function _(e) {
         r)
     )
         return 0;
-    if (g) return 1;
+    if (m) return 1;
     if (_ || null != C) return 2;
     if (b) return 3;
     if (E) return 4;
-    else if (y) return 5;
-    else if (v) return 6;
+    else if (v) return 5;
+    else if (I) return 6;
     return null;
 }

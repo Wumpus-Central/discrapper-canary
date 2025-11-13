@@ -25,8 +25,8 @@ var r = n(951288),
     O = n(905128),
     v = n(326660),
     j = n(158638),
-    C = n(10765),
-    x = n(317169),
+    x = n(10765),
+    C = n(317169),
     E = n(19394),
     S = n(385902),
     I = n(535396),
@@ -36,7 +36,7 @@ function Z(e) {
     let t = (0, o.e7)([y.Z], () => y.Z.getNotificationStateForGuild(e), [e]),
         n = (0, o.e7)([O.Z], () => O.Z.getStateForGuild(e)),
         { trailing: _, showUnread: N } = (function (e, t, n) {
-            let l = (0, x.Z)(e).available,
+            let l = (0, C.Z)(e).available,
                 { shouldShow: d } = (0, S._)(e, "useGuildPowerupsChannelListIndicators"),
                 p = (0, u.OA)(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
                 h = d && !p,
@@ -88,7 +88,7 @@ function Z(e) {
         Z = (function (e, t) {
             let [n, r] = (0, d.US)(null != t ? [a.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 s = n === a.z.GUILD_POWERUP_PERKS_COACHMARK,
-                { available: c } = (0, x.Z)(e),
+                { available: c } = (0, C.Z)(e),
                 u = (0, o.e7)([h.Z], () => {
                     var t, n;
                     return (
@@ -171,7 +171,7 @@ function Z(e) {
                                               let i = t.allPowerups[r];
                                               return null == i ||
                                                   n < i.cost ||
-                                                  (0, C.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  (0, x.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
                                                   ? null
                                                   : i;
                                           }),

@@ -2,15 +2,15 @@ n.d(t, { s: () => h }), n(388685), n(35282);
 var r = n(647438),
     l = n(442837),
     a = n(38618),
-    i = n(51596),
-    s = n(516373),
+    s = n(51596),
+    i = n(516373),
     u = n(314897),
     o = n(580005),
     c = n(987509),
     d = n(601565),
     f = n(41837);
 function b(e) {
-    let { query: t, queryMode: n } = (0, i.F_)(e),
+    let { query: t, queryMode: n } = (0, s.F_)(e),
         r = f.M,
         l = null;
     return (
@@ -23,7 +23,7 @@ function b(e) {
     );
 }
 function h(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: i, includeMissingDMs: f = !1 } = e,
+    let { targetDestination: t, selectedDestinations: n, originDestination: s, includeMissingDMs: f = !1 } = e,
         h = (0, l.e7)([u.default], () => u.default.getId()),
         p = r.useMemo(
             () => ({
@@ -52,7 +52,7 @@ function h(e) {
                 resultTypes: t,
             });
         }, [m, x]),
-        (0, s.D)();
+        (0, i.D)();
     let _ = (0, l.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
         O = (0, l.e7)([a.Z], () => a.Z.isConnected()),
         C = "" !== g;
@@ -67,11 +67,11 @@ function h(e) {
                     frequentChannels: _,
                     selectedDestinations: n,
                     pinnedDestinations: P,
-                    originDestination: i,
+                    originDestination: s,
                     includeMissingDMs: f,
                     isConnected: O,
                 }),
-            [y, C, E, t, _, n, P, i, f, O],
+            [y, C, E, t, _, n, P, s, f, O],
         ),
         updateSearchText: S,
     };

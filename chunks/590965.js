@@ -46,8 +46,8 @@ function O(e) {
 }
 let v = b.IlC.APP,
     j = !1,
-    C = !1,
-    x = [];
+    x = !1,
+    C = [];
 function E() {
     j = !0;
 }
@@ -57,13 +57,13 @@ class S extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(j && x.length > 0 && v === e);
+        return !!(j && C.length > 0 && v === e);
     }
     getProps() {
         return {
-            invite: x.length > 0 ? x[0][0] : null,
+            invite: C.length > 0 ? C[0][0] : null,
             error: null != r && "" !== r ? r : null,
-            submitting: C,
+            submitting: x,
         };
     }
 }
@@ -99,13 +99,13 @@ let I = new S(o.Z, {
             }
         }
         if (
-            x.some((e) => {
+            C.some((e) => {
                 let [n] = e;
                 return n.code === t.code;
             })
         )
             return !1;
-        (v = e.context), (C = !1);
+        (v = e.context), (x = !1);
         let n = (function (e) {
             let {
                     approximate_member_count: t,
@@ -138,19 +138,19 @@ let I = new S(o.Z, {
                 p
             );
         })(t);
-        x.push([n, e.resolve]);
+        C.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (C = !1), x.length > 0)) {
-            let [, e] = x.shift();
+        if (((r = null), (x = !1), C.length > 0)) {
+            let [, e] = C.shift();
             null != e && e();
         }
     },
     INVITE_ACCEPT: function () {
-        C = !0;
+        x = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        (r = t), (C = !1);
+        (r = t), (x = !1);
     },
 });

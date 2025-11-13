@@ -110,8 +110,8 @@ function T(e) {
         ]);
     let { i18n: C } = (0, m.ZF)(),
         { fieldProps: N } = (0, _.X)(A),
-        { disabled: R, errorMessage: P, required: w = !1 } = N,
-        D = { hasError: null != P && "" !== P },
+        { disabled: R, errorMessage: P, required: D = !1 } = N,
+        w = { hasError: null != P && "" !== P },
         {
             refs: x,
             floatingStyles: L,
@@ -148,7 +148,7 @@ function T(e) {
                         b(
                             {
                                 className: g.inputField,
-                                validation: D,
+                                validation: w,
                                 ref: x.setReference,
                             },
                             G(),
@@ -163,7 +163,7 @@ function T(e) {
                                 value: t,
                                 onChange: F,
                                 isDisabled: R,
-                                isRequired: w,
+                                isRequired: D,
                                 minValue: i,
                                 maxValue: E,
                                 placeholderValue: y,

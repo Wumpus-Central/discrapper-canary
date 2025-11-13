@@ -1,9 +1,9 @@
 n.d(t, { Z: () => y }), n(388685);
 var i = n(951288),
     r = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    s = n(392711),
+    s = n(120356),
+    o = n.n(s),
+    l = n(392711),
     a = n(442837),
     c = n(261435),
     d = n(237997),
@@ -15,29 +15,29 @@ var i = n(951288),
     m = n(991168);
 function y(e) {
     let { locked: t, keybind: n } = e,
-        l = r.useRef(null),
+        s = r.useRef(null),
         h = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
         y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
     if ((0, a.e7)([p.Z], () => p.Z.isNotificationDisabled(f.n0.TextChat)) || y === g._vf.DISABLED) return null;
-    let _ = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        v = (0, s.groupBy)(_, (e) => e.type);
+    let v = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
+        _ = (0, l.groupBy)(v, (e) => e.type);
     return (0, i.jsx)(u.Z, {
-        contentDomRef: l,
+        contentDomRef: s,
         observeInterval: 200,
         children: (0, i.jsx)("div", {
-            ref: l,
+            ref: s,
             className: o()(m.container, m[y]),
-            children: Object.entries(v).map((e) => {
-                let [r, l] = e;
-                return 0 === l.length
+            children: Object.entries(_).map((e) => {
+                let [r, s] = e;
+                return 0 === s.length
                     ? null
                     : (0, i.jsx)(
-                          O,
+                          b,
                           {
                               locked: t,
                               keybind: n,
                               position: y,
-                              notification: l[0],
+                              notification: s[0],
                           },
                           r,
                       );
@@ -45,8 +45,8 @@ function y(e) {
         }),
     });
 }
-function O(e) {
-    let { notification: t, position: n, keybind: r, locked: l } = e;
+function b(e) {
+    let { notification: t, position: n, keybind: r, locked: s } = e;
     return (0, i.jsx)("div", {
         className: m.notificationGroup,
         children: (0, i.jsx)(
@@ -56,7 +56,7 @@ function O(e) {
                 position: n,
                 notification: t,
                 keybind: r,
-                locked: l,
+                locked: s,
             },
             t.id,
         ),

@@ -15,19 +15,19 @@ var r = n(951288),
 let h = (e) => {
     let { className: t, isDisabled: l, sticker: h, canManageSticker: b } = e,
         [x, j] = i.useState(!1),
-        [v, _] = (0, d.Z)(null, 4000),
-        C = async () => {
-            _(null), j(!0);
+        [_, v] = (0, d.Z)(null, 4000),
+        O = async () => {
+            v(null), j(!0);
             try {
                 await (0, g.Um)(h);
             } catch (e) {
-                _(e.body.message), j(!1);
+                v(e.body.message), j(!1);
             }
         },
-        O = u.ZP.useUserTag(h.user);
+        C = u.ZP.useUserTag(h.user);
     return (0, r.jsx)(s.u, {
-        forceOpen: null != v,
-        text: v,
+        forceOpen: null != _,
+        text: _,
         asContainer: !0,
         children: (0, r.jsxs)("div", {
             className: a()(f.wrapper, t, { [f.wrapperDisabled]: l }),
@@ -60,7 +60,7 @@ let h = (e) => {
                                             (0, r.jsx)(o.Text, {
                                                 color: "header-secondary",
                                                 variant: "text-xs/normal",
-                                                children: O,
+                                                children: C,
                                             }),
                                         ],
                                     }),
@@ -129,7 +129,7 @@ let h = (e) => {
                                       }),
                                       (0, r.jsx)(o.P3F, {
                                           className: a()(f.action, f.actionRemove),
-                                          onClick: C,
+                                          onClick: O,
                                           "aria-label": p.intl.string(p.t.N86XcP),
                                           children: (0, r.jsx)(o.Dio, {
                                               size: "md",

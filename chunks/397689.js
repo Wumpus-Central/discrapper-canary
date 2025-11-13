@@ -76,31 +76,31 @@ function v(e) {
             previewAvatarDecorationSrc: b,
             previewTheme: v,
             previewPrimaryColor: I,
-            className: S,
-            disabledInputs: T,
+            className: T,
+            disabledInputs: S,
             isTryItOut: A,
             onUpsellClick: C,
         } = e,
         N = i.useRef(null),
         { analyticsLocations: R, newestAnalyticsLocation: P } = (0, c.ZP)(),
-        w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
+        D = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
+        w = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
         x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: o()(S, { [m.overlay]: !T }),
+            imageClassName: o()(T, { [m.overlay]: !S }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
-            status: w,
+            status: D,
             statusTooltip: !1,
             statusBackdropColor: null != I ? (0, l.QFD)(v) : void 0,
         });
-    return T
+    return S
         ? (0, r.jsx)("div", {
               className: m.avatar,
               children: x,
           })
-        : D
+        : w
           ? (0, r.jsx)(l.yRy, {
                 targetElementRef: N,
                 renderPopout: (e) => {

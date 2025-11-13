@@ -112,8 +112,8 @@ let O = [c.Cm.User],
     N = new Set(),
     R = "apexTrackedExposures",
     P = 2,
-    w = 604800000,
-    D = {},
+    D = 604800000,
+    w = {},
     x = {};
 function L(e) {
     let t = x[e];
@@ -132,7 +132,7 @@ class M extends (r = o.ZP.PersistedStore) {
                 isOverride: !0,
             };
         }
-        D = this.loadTrackedExposures();
+        w = this.loadTrackedExposures();
     }
     getState() {
         return {
@@ -239,8 +239,8 @@ class M extends (r = o.ZP.PersistedStore) {
                 },
                 { flush: !0 },
             ),
-            (D[o] = Date.now()),
-            this.saveTrackedExposures(D));
+            (w[o] = Date.now()),
+            this.saveTrackedExposures(w));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds("user")) {
@@ -255,8 +255,8 @@ class M extends (r = o.ZP.PersistedStore) {
                     },
                     { flush: !0 },
                 ),
-                (D[n] = Date.now()),
-                this.saveTrackedExposures(D));
+                (w[n] = Date.now()),
+                this.saveTrackedExposures(w));
         }
     }
     trackExposureSuppression(e, t) {
@@ -279,8 +279,8 @@ class M extends (r = o.ZP.PersistedStore) {
             .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
-        let t = D[e];
-        return null == t || Date.now() - t > w;
+        let t = w[e];
+        return null == t || Date.now() - t > D;
     }
     loadTrackedExposures() {
         let e = l.K.get(R);
@@ -288,7 +288,7 @@ class M extends (r = o.ZP.PersistedStore) {
         let t = e.exposures,
             n = Date.now(),
             r = !1;
-        for (let e in t) n - t[e] > w && (delete t[e], (r = !0));
+        for (let e in t) n - t[e] > D && (delete t[e], (r = !0));
         return r && this.saveTrackedExposures(t), t;
     }
     saveTrackedExposures(e) {
@@ -326,7 +326,7 @@ class M extends (r = o.ZP.PersistedStore) {
         (T = {}), (S = {});
     }
     clearAllTrackedExposures() {
-        D = {};
+        w = {};
     }
     getHash(e) {
         return L(e);

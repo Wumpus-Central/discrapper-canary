@@ -103,14 +103,14 @@ function P(e) {
     for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-function w(e) {
+function D(e) {
     return a().mapValues(e, (e) => v(y({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
 }
-function D() {
+function w() {
     var e;
     if (!M()) return;
     let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
-    S.overwriteHistory(w(null != t ? t : {}), I);
+    S.overwriteHistory(D(null != t ? t : {}), I);
 }
 function x(e) {
     let {
@@ -133,7 +133,7 @@ class j extends (r = l.ZP.PersistedStore) {
         this.waitFor(p.Z, d.Z, f.default),
             (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache),
             (null == e ? void 0 : e.playedEventsPendingFlush) != null && (I = e.playedEventsPendingFlush),
-            this.syncWith([d.Z], D);
+            this.syncWith([d.Z], w);
     }
     getState() {
         return {

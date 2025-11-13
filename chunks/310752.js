@@ -1,26 +1,26 @@
-n.d(t, { Z: () => l });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(731994),
-    s = n(374450);
-let l = function (e) {
-    let { icons: t, className: n } = e;
-    return (0, r.jsxs)("div", {
-        className: a()(s.icons, n),
+A.d(t, { Z: () => o });
+var n = A(951288);
+A(647438);
+var r = A(120356),
+    a = A.n(r),
+    i = A(731994),
+    l = A(374450);
+let o = function (e) {
+    let { icons: t, className: A } = e;
+    return (0, n.jsxs)("div", {
+        className: a()(l.icons, A),
         children: [
-            (0, r.jsx)("div", {
-                className: s.wrapOne,
-                children: (0, r.jsx)("div", { className: a()(s.icon, s.one, o.bd[t[0]]) }),
+            (0, n.jsx)("div", {
+                className: l.wrapOne,
+                children: (0, n.jsx)("div", { className: a()(l.icon, l.one, i.bd[t[0]]) }),
             }),
-            (0, r.jsx)("div", {
-                className: s.wrapThree,
-                children: (0, r.jsx)("div", { className: a()(s.icon, s.three, o.bd[t[2]]) }),
+            (0, n.jsx)("div", {
+                className: l.wrapThree,
+                children: (0, n.jsx)("div", { className: a()(l.icon, l.three, i.bd[t[2]]) }),
             }),
-            (0, r.jsx)("div", {
-                className: s.wrapTwo,
-                children: (0, r.jsx)("div", { className: a()(s.icon, s.two, o.bd[t[1]]) }),
+            (0, n.jsx)("div", {
+                className: l.wrapTwo,
+                children: (0, n.jsx)("div", { className: a()(l.icon, l.two, i.bd[t[1]]) }),
             }),
         ],
     });

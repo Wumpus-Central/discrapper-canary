@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(358458),
+    c = n(509442),
     u = n(91192),
     d = n(336317),
     f = n(477690),
@@ -94,8 +94,8 @@ function R(e, t) {
     return i;
 }
 let P = 20,
-    w = 125,
-    D = (0, g.hQ)(),
+    D = 125,
+    w = (0, g.hQ)(),
     x = d.Z.convert.fromCodePoint("1f44f"),
     L = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     M = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
@@ -148,7 +148,7 @@ let k = (e) => {
             s = (0, _.q_F)({
                 height: (M + 2 * L) * (E.gw.length + 1),
                 from: { height: M },
-                config: { duration: w },
+                config: { duration: D },
             });
         i.useEffect(() => {
             o.focusFirstVisibleItem();
@@ -218,7 +218,7 @@ let k = (e) => {
                     "aria-label": v.intl.string(v.t.pAVHxa),
                     "aria-haspopup": !0,
                     "aria-expanded": l,
-                    "aria-controls": D,
+                    "aria-controls": w,
                     tabIndex: l ? -1 : 0,
                     children: (0, r.jsx)("div", {
                         className: I.diversityEmojiItemImage,
@@ -229,7 +229,7 @@ let k = (e) => {
                     ? (0, r.jsx)("div", {
                           onKeyDown: m,
                           children: (0, r.jsx)(U, {
-                              id: D,
+                              id: w,
                               selectedSurrogate: n,
                               onClick: g,
                           }),

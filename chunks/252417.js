@@ -18,9 +18,9 @@ var r = n(951288),
 let y = o.EFr.SIZE_40,
     O = (0, o.pxk)(y);
 function v(e) {
-    let { user: t, status: v, guildId: j, channelId: C, onSelect: x } = e,
+    let { user: t, status: v, guildId: j, channelId: x, onSelect: C } = e,
         { theme: E, themeType: S } = (0, g.z)(),
-        I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, C), [t, C]),
+        I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, x), [t, x]),
         { activities: P, isMobileOnline: N } = (0, l.cj)([f.Z], () => ({
             activities: f.Z.getActivities(t.id),
             isMobileOnline: f.Z.isMobileOnline(t.id),
@@ -43,7 +43,7 @@ function v(e) {
                   }
                 : { offset: { right: 8 } },
         className: _.row,
-        onClick: x,
+        onClick: C,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));

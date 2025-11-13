@@ -4,8 +4,8 @@ r(647438);
 var i = r(851397),
     l = r(541699),
     s = r(321947),
-    a = r(835255);
-function o(e) {
+    o = r(835255);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -53,5 +53,5 @@ function c(e) {
             }
             return i;
         })(e, ["item"]);
-    return (0, l.Q)(t) ? (0, n.jsx)(a.ZP, o({ item: t }, r)) : (0, s.F)(t) ? (0, n.jsx)(i.Z, o({ item: t }, r)) : null;
+    return (0, l.Q)(t) ? (0, n.jsx)(o.ZP, a({ item: t }, r)) : (0, s.F)(t) ? (0, n.jsx)(i.Z, a({ item: t }, r)) : null;
 }

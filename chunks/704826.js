@@ -19,8 +19,8 @@ var r = n(636881),
     O = Math.min,
     v = a([].concat),
     I = a([].push),
-    S = a("".indexOf),
-    T = a("".slice),
+    T = a("".indexOf),
+    S = a("".slice),
     A = function (e) {
         return void 0 === e ? e : String(e);
     },
@@ -43,7 +43,7 @@ o(
             function (e, i) {
                 var o = l(this),
                     s = _(e);
-                if ("string" == typeof i && -1 === S(i, a) && -1 === S(i, "$<")) {
+                if ("string" == typeof i && -1 === T(i, a) && -1 === T(i, "$<")) {
                     var u = n(t, o, s, i);
                     if (u.done) return u.value;
                 }
@@ -51,24 +51,24 @@ o(
                 p || (i = _(i));
                 var m = o.global;
                 m && ((P = o.unicode), (o.lastIndex = 0));
-                for (var b = []; null !== (D = E(o, s)) && (I(b, D), m); ) {
-                    "" === _(D[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
+                for (var b = []; null !== (w = E(o, s)) && (I(b, w), m); ) {
+                    "" === _(w[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
                 }
                 for (var C = "", N = 0, R = 0; R < b.length; R++) {
                     for (
-                        var P, w, D = b[R], x = _(D[0]), L = y(O(d(D.index), s.length), 0), M = [], j = 1;
-                        j < D.length;
+                        var P, D, w = b[R], x = _(w[0]), L = y(O(d(w.index), s.length), 0), M = [], j = 1;
+                        j < w.length;
                         j++
                     )
-                        I(M, A(D[j]));
-                    var k = D.groups;
+                        I(M, A(w[j]));
+                    var k = w.groups;
                     if (p) {
                         var U = v([x], M, L, s);
-                        void 0 !== k && I(U, k), (w = _(r(i, void 0, U)));
-                    } else w = g(x, s, L, M, k, i);
-                    L >= N && ((C += T(s, N, L) + w), (N = L + x.length));
+                        void 0 !== k && I(U, k), (D = _(r(i, void 0, U)));
+                    } else D = g(x, s, L, M, k, i);
+                    L >= N && ((C += S(s, N, L) + D), (N = L + x.length));
                 }
-                return C + T(s, N);
+                return C + S(s, N);
             },
         ];
     },

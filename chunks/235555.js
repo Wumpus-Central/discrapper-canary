@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(831506),
     p = n(699516),
     f = n(594174),
-    m = n(823379),
-    h = n(824138),
-    g = n(658244),
+    h = n(823379),
+    g = n(824138),
+    m = n(658244),
     _ = n(388032);
 function b(e, t, n) {
     return (
@@ -37,7 +37,7 @@ class E extends i.PureComponent {
     render() {
         let { currentUser: e, host: t, party: n } = this.props;
         return this.hasParty(n) && null != e
-            ? (0, r.jsx)(h.Z, {
+            ? (0, r.jsx)(g.Z, {
                   currentUser: e,
                   host: t,
                   party: n,
@@ -96,7 +96,7 @@ class E extends i.PureComponent {
             }),
             b(this, "renderOverflowPopout", () => {
                 let { party: e } = this.props;
-                return (0, r.jsx)(g.Z, {
+                return (0, r.jsx)(m.Z, {
                     party: e,
                     header: _.intl.formatToPlainString(_.t.I9et1z, { count: e.length }),
                 });
@@ -119,7 +119,7 @@ let O = s.ZP.connectStores([u.Z, f.default, p.Z, d.Z], () => {
         var s;
         l = a()(Array.from(null != (s = d.Z.getParty(t)) ? s : []))
             .map((e) => f.default.getUser(e))
-            .filter(m.lm)
+            .filter(h.lm)
             .orderBy([(t) => null == e || e.id === t.id, (e) => p.Z.isFriend(e.id)], ["desc", "desc"])
             .value();
     }

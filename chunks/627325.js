@@ -12,8 +12,8 @@ var r = n(951288),
     m = n(111361),
     f = n(778033),
     b = n(709706),
-    v = n(358820),
-    g = n(990525),
+    g = n(358820),
+    v = n(990525),
     y = n(388032),
     j = n(335189);
 let O = [51],
@@ -22,18 +22,18 @@ function x(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: o = !1, query: l } = e,
         a = P(),
         x = (0, s.e7)([p.default], () => (0, m.I5)(p.default.getCurrentUser())),
-        w = _(l, x),
-        C = Math.ceil(w.length / t),
+        C = w(l, x),
+        E = Math.ceil(C.length / t),
         {
-            isNativeModuleLoaded: S,
-            isNativeModuleLoading: I,
-            catalogLastFetchTime: N,
+            isNativeModuleLoaded: I,
+            isNativeModuleLoading: T,
+            catalogLastFetchTime: S,
         } = (0, s.cj)([b.Z], () => ({
             isNativeModuleLoaded: b.Z.isNativeModuleLoaded(),
             isNativeModuleLoading: b.Z.isNativeModuleLoading(),
             catalogLastFetchTime: b.Z.getCatalogLastFetchTime(),
         }));
-    return l && 0 === w.length
+    return l && 0 === C.length
         ? (0, r.jsxs)("div", {
               className: j.iconMessage,
               children: [
@@ -68,11 +68,11 @@ function x(e) {
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "header-muted",
-                        children: y.intl.format(y.t["5afO9U"], { onClick: S ? v.wV : v.r5 }),
+                        children: y.intl.format(y.t["5afO9U"], { onClick: I ? g.wV : g.r5 }),
                     }),
                 ],
             })
-          : I || null == N
+          : T || null == S
             ? (0, r.jsx)("div", {
                   className: j.loading,
                   children: (0, r.jsx)(u.$jN, {
@@ -85,19 +85,19 @@ function x(e) {
                   className: j.container,
                   renderRow: (e) => {
                       let n = e * t,
-                          i = w.slice(n, n + t);
+                          i = C.slice(n, n + t);
                       return (0, r.jsx)(
-                          E,
+                          _,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
-                                      g.J,
+                                      v.J,
                                       {
                                           voiceFilter: n,
                                           hasNitro: x,
                                           analyticsContext: {
                                               reason: f.W.USER_SELECTION,
-                                              gridRows: C,
+                                              gridRows: E,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: i,
@@ -121,14 +121,14 @@ function x(e) {
                                     children: y.intl.string(h[e]),
                                 }),
                   sectionHeaderHeight: !1 === o ? void 0 : (e) => O[e],
-                  rowCount: C,
+                  rowCount: E,
                   rowHeight: 130,
                   onScroll: n,
                   ref: i,
                   sectionFooterHeight: 40 * !x,
               });
 }
-function E(e) {
+function _(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)("div", {
@@ -148,7 +148,7 @@ let P = () =>
                 (b.Z.getCatalogFetchFailed() || b.Z.hasNativeModuleFailed())
             );
         }),
-    _ = (e, t) =>
+    w = (e, t) =>
         (0, s.Wu)([b.Z], () => {
             let n = b.Z.getVoiceFilters(),
                 r = b.Z.getSortedVoiceFilters();

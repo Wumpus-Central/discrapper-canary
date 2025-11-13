@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(613413),
     v = n(559407),
     I = n(556766),
-    S = n(195302),
-    T = n(260035),
+    T = n(195302),
+    S = n(260035),
     A = n(482215),
     C = n(366841),
     N = n(947519),
     R = n(248687),
     P = n(859678),
-    w = n(314910),
-    D = n(84615),
+    D = n(314910),
+    w = n(84615),
     x = n(429142),
     L = n(728285),
     M = n(813744),
@@ -112,7 +112,7 @@ let X = (0, F.Un)({
                                             (0, r.jsx)(L.Wu, {
                                                 appContext: z.IlC.APP,
                                                 renderWindow: window,
-                                                children: (0, r.jsxs)(w.yP, {
+                                                children: (0, r.jsxs)(D.yP, {
                                                     children: [
                                                         null != a ? (0, r.jsx)(J, {}) : null,
                                                         (0, r.jsxs)("div", {
@@ -125,11 +125,11 @@ let X = (0, F.Un)({
                                                                 (0, r.jsx)("div", {
                                                                     className: q.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
-                                                                    children: (0, r.jsx)(T.m, {
+                                                                    children: (0, r.jsx)(S.m, {
                                                                         children: (0, r.jsx)(x.OR, {
                                                                             children: (0, r.jsx)(b.Z.Provider, {
                                                                                 value: y.Z,
-                                                                                children: (0, r.jsxs)(S.p, {
+                                                                                children: (0, r.jsxs)(T.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: o()(
@@ -142,9 +142,9 @@ let X = (0, F.Un)({
                                                                                         (0, r.jsx)(p.Z, {}),
                                                                                         (0, r.jsx)(f.nKe, {}),
                                                                                         (0, r.jsx)(U.Z, {}),
-                                                                                        (0, r.jsx)(D.Ox, {}),
+                                                                                        (0, r.jsx)(w.Ox, {}),
                                                                                         (0, r.jsx)(l.uZ, {}),
-                                                                                        (0, r.jsx)(w.Un, {}),
+                                                                                        (0, r.jsx)(D.Un, {}),
                                                                                         (0, r.jsx)(x.ot, {}),
                                                                                         (0, r.jsx)(f.Ixi, {
                                                                                             appContext: z.IlC.APP,

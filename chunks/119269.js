@@ -53,10 +53,10 @@ let m = (e) => {
                 ellipseOpacity: O,
                 customAnimationClassName: v,
                 circleColor: I,
-                circleStroke: S,
+                circleStroke: T,
             } = e,
-            T = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            A = t && !T,
+            S = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            A = t && !S,
             C = () => {
                 switch (E) {
                     case 0:
@@ -88,7 +88,7 @@ let m = (e) => {
                     [p.activeProgressCircleAnimation]: A,
                     [null != v ? v : ""]: A,
                 }),
-                progressCircleStroke: S,
+                progressCircleStroke: T,
                 progressCircleStrokeSize: l,
                 percentage: null != i ? i : h,
                 initialPercentage: null != i ? i : g,

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
 var i = n(278323),
     r = n(13245),
-    l = n(45114),
+    s = n(45114),
     o = n(593481),
-    s = n(237997),
+    l = n(237997),
     a = n(312839),
     c = n(981631),
     d = n(987650),
@@ -36,13 +36,13 @@ function h(e, t, n, h) {
                 channelId: e.id,
                 type: c.mFx.JOIN,
                 activity: h,
-                location: s.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY,
+                location: l.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY,
             }),
                 y("join"),
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, l.ack)(
+            (0, s.ack)(
                 e.id,
                 {
                     section: c.jXE.OVERLAY,

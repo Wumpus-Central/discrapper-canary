@@ -16,10 +16,10 @@ var r = n(951288),
     b = n(388032),
     x = n(275657),
     j = n(438825),
-    v = n(236140),
-    _ = n(37069),
-    C = n(518513),
-    O = n(40271);
+    _ = n(236140),
+    v = n(37069),
+    O = n(518513),
+    C = n(40271);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-let E = [
+let N = [
         {
             iconSrc: n(348986),
             name: "Pokemon GO Paris",
@@ -59,13 +59,13 @@ let E = [
             rightAlign: !0,
         },
         {
-            iconSrc: C,
+            iconSrc: O,
             name: "Learn Latin",
             position: [-280, -30],
             faded: !0,
         },
         {
-            iconSrc: O,
+            iconSrc: C,
             name: "r/leagueoflegends",
             position: [-320, -30],
             rightAlign: !0,
@@ -76,14 +76,14 @@ let E = [
             position: [-250, 40],
         },
         {
-            iconSrc: _,
+            iconSrc: v,
             name: "Hogwarts School",
             position: [-270, 40],
             faded: !0,
             rightAlign: !0,
         },
     ],
-    N = (e) => {
+    E = (e) => {
         let { icon: t, color: n, size: i = 24, header: l, body: a } = e;
         return (0, r.jsxs)("div", {
             className: x.featureCard,
@@ -139,15 +139,15 @@ let E = [
     S = (e) => {
         let { guild: t } = e,
             [n, l] = i.useState(0),
-            [a, _] = i.useState(0),
-            [C, O] = i.useState(),
+            [a, v] = i.useState(0),
+            [O, C] = i.useState(),
             S = (0, s.e7)([m.Z], () => m.Z.can(f.Plq.ADMINISTRATOR, t)),
-            T = null == C ? void 0 : C.offsetWidth,
-            P = null == C ? void 0 : C.offsetHeight;
+            T = null == O ? void 0 : O.offsetWidth,
+            P = null == O ? void 0 : O.offsetHeight;
         return (
             i.useEffect(() => {
-                null != T && l(T / 2), null != P && _(P / 2);
-            }, [T, P, l, _]),
+                null != T && l(T / 2), null != P && v(P / 2);
+            }, [T, P, l, v]),
             i.useEffect(() => {
                 (0, u.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []),
@@ -156,9 +156,9 @@ let E = [
                 children: [
                     (0, r.jsxs)("div", {
                         className: x.banner,
-                        ref: (e) => O(e),
+                        ref: (e) => C(e),
                         children: [
-                            E.map((e) => {
+                            N.map((e) => {
                                 var t, i;
                                 return (0, r.jsx)(
                                     I,
@@ -191,7 +191,7 @@ let E = [
                             }),
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: v,
+                                src: _,
                                 className: x.sparkles,
                             }),
                         ],
@@ -289,7 +289,7 @@ let E = [
                                 header: b.intl.string(b.t.W2kLJC),
                                 body: b.intl.string(b.t.hyNkHz),
                             },
-                        ].map((e, t) => (0, r.jsx)(N, y({}, e), t)),
+                        ].map((e, t) => (0, r.jsx)(E, y({}, e), t)),
                     }),
                 ],
             })

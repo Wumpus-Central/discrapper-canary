@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -17,28 +17,28 @@ function f() {
         i = o.Z.getOutputDeviceId();
     if (c.Z.getState().neverShowModal || l().isEmpty(c.Z.lastDeviceConnected)) return;
     let f = (0, c.X)(o.Z.getInputDevices()[t]),
-        m = (0, c.X)(o.Z.getOutputDevices()[i]);
-    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === f || e.displayName === m))
+        h = (0, c.X)(o.Z.getOutputDevices()[i]);
+    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === f || e.displayName === h))
         return;
-    let h = l().some(
+    let g = l().some(
         c.Z.lastDeviceConnected,
         (e) => s.Z.isCertified(c.Z.inputDevices[e.displayName]) || s.Z.isCertified(c.Z.outputDevices[e.displayName]),
     );
     if (
         ((t === u.w5 && c.Z.lastInputSystemDevice.justChanged) ||
             (i === u.w5 && c.Z.lastOutputSystemDevice.justChanged)) &&
-        !h
+        !g
     )
         return;
-    let g = l().first(Object.keys(c.Z.lastDeviceConnected)),
-        _ = null != g && "" !== g ? c.Z.lastDeviceConnected[g] : null;
+    let m = l().first(Object.keys(c.Z.lastDeviceConnected)),
+        _ = null != m && "" !== m ? c.Z.lastDeviceConnected[m] : null;
     null != _ &&
         (c.Z.getState().ignoredDevices[_.displayName] ||
             (c.Z.initialized &&
-                null != g &&
-                (s.Z.isCertified(c.Z.inputDevices[g])
-                    ? (e = s.Z.getCertifiedDevice(c.Z.inputDevices[g]))
-                    : s.Z.isCertified(c.Z.outputDevices[g]) && (e = s.Z.getCertifiedDevice(c.Z.outputDevices[g]))),
+                null != m &&
+                (s.Z.isCertified(c.Z.inputDevices[m])
+                    ? (e = s.Z.getCertifiedDevice(c.Z.inputDevices[m]))
+                    : s.Z.isCertified(c.Z.outputDevices[m]) && (e = s.Z.getCertifiedDevice(c.Z.outputDevices[m]))),
             (0, a.ZDy)(
                 async () => {
                     let { default: t } = await n.e("30042").then(n.bind(n, 30575));
@@ -55,7 +55,7 @@ function f() {
                 { modalKey: p },
             )));
 }
-let m = {
+let h = {
     init() {
         c.Z.addChangeListener(f);
     },

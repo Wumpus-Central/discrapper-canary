@@ -396,8 +396,8 @@ let C = (e) => {
             P = a.useCallback(() => {
                 C(!1);
             }, []),
-            w = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
-            D = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
+            D = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
+            w = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
         return null == t
             ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)("div", { className: p.pictureInPicture }) })
             : (0, i.jsx)(d.ZP, {
@@ -422,7 +422,7 @@ let C = (e) => {
                           edgeOffsetLeft: O,
                           edgeOffsetRight: b,
                           roundCorners: E,
-                          resizeConfig: w || D ? void 0 : v,
+                          resizeConfig: D || w ? void 0 : v,
                           children: N,
                       }),
                   }),

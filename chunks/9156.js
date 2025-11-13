@@ -81,8 +81,8 @@ let S = {},
     N = !1,
     R = { flags: 0 },
     P = new l.ZP(),
-    w = new l.ZP(),
-    D = {
+    D = new l.ZP(),
+    w = {
         suppress_everyone: !1,
         suppress_roles: !1,
         mute_scheduled_events: !1,
@@ -97,8 +97,8 @@ let S = {},
         mute_config: null,
     },
     x = {
-        [g.bL.ALL_MESSAGES]: T(v({}, D), { message_notifications: g.bL.ALL_MESSAGES }),
-        [g.bL.ONLY_MENTIONS]: T(v({}, D), { message_notifications: g.bL.ONLY_MENTIONS }),
+        [g.bL.ALL_MESSAGES]: T(v({}, w), { message_notifications: g.bL.ALL_MESSAGES }),
+        [g.bL.ONLY_MENTIONS]: T(v({}, w), { message_notifications: g.bL.ONLY_MENTIONS }),
     },
     L = {},
     M = {},
@@ -115,7 +115,7 @@ function Z(e, t) {
         s = T(v({}, q(e), r, t), { channel_overrides: o });
     P.clearTimer(e),
         a().forEach(i, (e) => {
-            w.clearTimer(e.channel_id);
+            D.clearTimer(e.channel_id);
         }),
         F(e, s),
         (S[e] = s),
@@ -138,7 +138,7 @@ function F(e, t) {
         (t.muted = !1),
         a().forEach(t.channel_overrides, (t) => {
             !0 === t.muted &&
-                w.setTimer(t.channel_id, t.mute_config, () => {
+                D.setTimer(t.channel_id, t.mute_config, () => {
                     Y(e, t.channel_id, { muted: !1 }),
                         s.Z.dispatch({
                             type: "CHANNEL_MUTE_EXPIRED",
@@ -232,7 +232,7 @@ function J(e) {
         }));
 }
 function $(e) {
-    en(e.notificationSettings), P.reset(), w.reset(), e.userGuildSettings.partial || ((S = {}), (L = {}), (M = {}));
+    en(e.notificationSettings), P.reset(), D.reset(), e.userGuildSettings.partial || ((S = {}), (L = {}), (M = {}));
     let t = new Set();
     for (let n in (e.userGuildSettings.entries.forEach((e) => {
         let n = e;

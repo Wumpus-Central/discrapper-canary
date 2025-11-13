@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(834743),
     p = n(862099),
     f = n(704631),
-    m = n(819792),
-    h = n(919285),
-    g = n(118470),
+    h = n(819792),
+    g = n(919285),
+    m = n(118470),
     _ = n(413307),
     b = n(374023),
     E = n(661599),
     O = n(617899),
-    I = n(8521),
-    y = n(760326),
-    v = n(785203),
+    y = n(8521),
+    v = n(760326),
+    I = n(785203),
     C = n(652785),
     S = n(921944);
 let T = new Set([a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.z.CHANNEL_NOTICE_GUILD_BANNER]);
@@ -29,8 +29,8 @@ function N(e) {
 function j(e) {
     var t;
     let { guild: n } = e,
-        [p, m] = i.useState(null != (t = s.K.get(C.Iv)) ? t : 0),
-        h = (0, l.Wu)(
+        [p, h] = i.useState(null != (t = s.K.get(C.Iv)) ? t : 0),
+        g = (0, l.Wu)(
             C.HG,
             () =>
                 C.XN.filter((e) => {
@@ -40,13 +40,13 @@ function j(e) {
             [n, p],
         );
     return (0, r.jsx)(c.ZP, {
-        contentTypes: h,
+        contentTypes: g,
         groupName: S.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
                     var e;
-                    (e = Date.now()), s.K.set(C.Iv, e), m(e), i(S.L.UNKNOWN);
+                    (e = Date.now()), s.K.set(C.Iv, e), h(e), i(S.L.UNKNOWN);
                 },
                 c = (() => {
                     switch (t) {
@@ -66,7 +66,7 @@ function j(e) {
                                 markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, r.jsx)(y.Z, {
+                            return (0, r.jsx)(v.Z, {
                                 guild: n,
                                 markAsDismissed: l,
                             });
@@ -95,21 +95,21 @@ function j(e) {
 }
 let P = (e) => {
     let { guild: t } = e;
-    switch ((0, v.Z)(t)) {
-        case v.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, I.Z)(t)) {
+        case I.R.ENABLE_PUBLIC_GUILD:
             return (0, r.jsx)(_.Z, { guild: t });
-        case v.R.MAX_MEMBER_COUNT:
-            return (0, r.jsx)(I.Z, { guild: t });
-        case v.R.GUILD_LIVE_CHANNEL:
+        case I.R.MAX_MEMBER_COUNT:
+            return (0, r.jsx)(y.Z, { guild: t });
+        case I.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(p.ZP, { guild: t });
-        case v.R.GUILD_MFA_WARNING:
+        case I.R.GUILD_MFA_WARNING:
             return (0, r.jsx)(E.Z, { guild: t });
-        case v.R.COMMANDS_MIGRATION:
-            return (0, r.jsx)(h.Z, { guild: t });
-        case v.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case I.R.COMMANDS_MIGRATION:
             return (0, r.jsx)(g.Z, { guild: t });
-        case v.R.HUB_STUDY_ROOM:
+        case I.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, r.jsx)(m.Z, { guild: t });
+        case I.R.HUB_STUDY_ROOM:
+            return (0, r.jsx)(h.Z, { guild: t });
     }
     return b.s.isDisallowPopupsSet() ? null : (0, r.jsx)(j, { guild: e.guild });
 };

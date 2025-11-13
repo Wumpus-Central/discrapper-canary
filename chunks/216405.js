@@ -51,34 +51,34 @@ class S extends o.Z {
         if (null == A || A.numDatapoints < C) return;
         let N = _.default.getCurrentUser(),
             R = u.Z.getGuild(o.guildId),
-            [P, w] =
+            [P, D] =
                 null !=
                 (n = (0, g.Z)(E.ApplicationStreamPresets.PRESET_DOCUMENTS, N, null == R ? void 0 : R.premiumTier))
                     ? n
                     : [E.ApplicationStreamResolutions.RESOLUTION_SOURCE, E.ApplicationStreamFPS.FPS_5],
-            [D, x] =
+            [w, x] =
                 null != (r = (0, g.Z)(E.ApplicationStreamPresets.PRESET_VIDEO, N, null == R ? void 0 : R.premiumTier))
                     ? r
                     : [E.ApplicationStreamResolutions.RESOLUTION_720, E.ApplicationStreamFPS.FPS_30],
             L = null;
         if (
-            (A.entropy < y && (S.resolution !== P || S.fps !== w)
+            (A.entropy < y && (S.resolution !== P || S.fps !== D)
                 ? (I.info("Low entropy average, switching to screenshare preset."),
                   (L = {
                       qualityOptions: {
                           preset: E.ApplicationStreamPresets.PRESET_AUTO,
                           resolution: P,
-                          frameRate: w,
+                          frameRate: D,
                       },
                       context: i.Yn.STREAM,
                   }))
                 : A.entropy > O &&
-                  (S.resolution !== D || S.fps !== x) &&
+                  (S.resolution !== w || S.fps !== x) &&
                   (I.info("High entropy average, switching to video preset."),
                   (L = {
                       qualityOptions: {
                           preset: E.ApplicationStreamPresets.PRESET_AUTO,
-                          resolution: D,
+                          resolution: w,
                           frameRate: x,
                       },
                       context: i.Yn.STREAM,

@@ -20,11 +20,11 @@ var r = n(951288),
     O = n(295907),
     v = n(388032),
     I = n(36190);
-let S = (0, f.createChannelRecord)({
+let T = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,
     }),
-    T = (e) => {
+    S = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
@@ -71,8 +71,8 @@ function C(e) {
             onClose: N,
             entry: R,
         } = e,
-        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
-        { primaryColor: D } = (0, b.z)(),
+        { resetInteraction: P, setInteractionToast: D } = (0, g.Xo)(),
+        { primaryColor: w } = (0, b.z)(),
         [x, L] = i.useState(""),
         [M, j] = i.useState((0, u.JM)(x)),
         k = i.useRef(!1),
@@ -93,13 +93,13 @@ function C(e) {
                 : s === y.n_.STATUS
                   ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
                   : C({ action: "SEND_REPLY_ACTIVITY" });
-            let n = T({
+            let n = S({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: s,
                 sourceDetails: f,
             });
-            w(null);
+            D(null);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -110,7 +110,7 @@ function C(e) {
                     entry: R,
                 });
             } catch (e) {}
-            w(y.P.REPLY);
+            D(y.P.REPLY);
         },
         Z = {
             [I.status]: s === y.n_.STATUS,
@@ -121,7 +121,7 @@ function C(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: o()(I.container, Z, { [I.customProfileTheme]: null != D }),
+            className: o()(I.container, Z, { [I.customProfileTheme]: null != w }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -130,7 +130,7 @@ function C(e) {
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
-                channel: S,
+                channel: T,
                 textValue: x,
                 richValue: M,
                 onChange: (e, t, n) => {

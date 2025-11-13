@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var r = n(951288),
     o = n(647438),
     l = n(120356),
@@ -12,26 +12,26 @@ var r = n(951288),
     p = n(113434),
     f = n(497505),
     v = n(536687),
-    E = n(431130),
-    g = n(388032),
+    g = n(431130),
+    E = n(388032),
     O = n(430799);
-function h() {
+function b() {
     var e;
-    let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: h } = o.useContext(v.VideoQuestModalContext),
-        b = (0, m.aM)(),
+    let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: b } = o.useContext(v.VideoQuestModalContext),
+        h = (0, m.aM)(),
         S = (0, p.tP)(t),
-        y = o.useRef(null),
-        { isHoveringOrFocusing: C } = (0, c.Z)(y),
-        _ = (0, E.p)({
+        C = o.useRef(null),
+        { isHoveringOrFocusing: y } = (0, c.Z)(C),
+        _ = (0, g.p)({
             quest: t,
-            onClose: h,
+            onClose: b,
             sourceQuestContent: n,
-            impressionId: b,
+            impressionId: h,
         }),
         x = null == (e = t.config.videoMetadata) ? void 0 : e.messages.videoEndCtaSubtitle,
         j = void 0 !== x && !(0, u.Ew)(x);
     return (0, r.jsx)(a.u, {
-        text: g.intl.string(g.t.EuHF34),
+        text: E.intl.string(E.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
             onClick: () => _(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
@@ -39,7 +39,7 @@ function h() {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {
                     [O.contentHeaderGameInfoHoverableExpired]: S,
                 }),
-                ref: y,
+                ref: C,
                 children: [
                     (0, r.jsx)("div", {
                         className: O.contentFooterAdDetailedInfo,
@@ -48,7 +48,7 @@ function h() {
                             color: "header-primary",
                             className: i()(O.adDetailsTextSecondary, { [O.adDetailsTextSecondaryPortrait]: l }),
                             lineClamp: l ? void 0 : 1,
-                            children: g.intl.format(g.t.EQa7os, { questName: t.config.messages.questName }),
+                            children: E.intl.format(E.t.EQa7os, { questName: t.config.messages.questName }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
@@ -61,7 +61,7 @@ function h() {
                                 }),
                                 children: (0, r.jsx)(s.owK, {
                                     size: "xs",
-                                    color: C ? s.TVs.colors.ICON_PRIMARY.css : s.TVs.colors.ICON_TERTIARY.css,
+                                    color: y ? s.TVs.colors.ICON_PRIMARY.css : s.TVs.colors.ICON_TERTIARY.css,
                                 }),
                             }),
                             (0, r.jsx)(s.Heading, {
@@ -70,7 +70,7 @@ function h() {
                                     [O.adDetailsTextPrimaryPortrait]: l,
                                     [O.addFourPxMarginRight]: l,
                                 }),
-                                color: C ? "text-primary" : "text-secondary",
+                                color: y ? "text-primary" : "text-secondary",
                                 lineClamp: 1,
                                 children: t.config.messages.gamePublisher,
                             }),
@@ -87,7 +87,7 @@ function h() {
                                               }),
                                               variant: "heading-sm/medium",
                                               lineClamp: l ? void 0 : 1,
-                                              color: C ? "text-primary" : "text-secondary",
+                                              color: y ? "text-primary" : "text-secondary",
                                               children: x,
                                           }),
                                       ],

@@ -7,7 +7,7 @@ n.d(t, {
     R9: () => k,
     RN: () => F,
     Wl: () => x,
-    XO: () => D,
+    XO: () => w,
     Xn: () => z,
     bb: () => W,
     qo: () => B,
@@ -39,8 +39,8 @@ var r = n(951288),
     O = n(51144),
     v = n(91047),
     I = n(50284),
-    S = n(804063),
-    T = n(981631);
+    T = n(804063),
+    S = n(981631);
 function A(e, t, n) {
     return (
         t in e
@@ -98,7 +98,7 @@ function P(e, t, n) {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = g.default.getUser(e);
@@ -106,7 +106,7 @@ function w(e, t, n) {
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
             let a = "@".concat(O.ZP.getUserTag(i, { decoration: "never" })),
                 o = "<@".concat(e, ">");
-            E.S.dispatchToLastSubscribed(T.CkL.INSERT_TEXT, {
+            E.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
                 plainText: a,
                 rawText: o,
             }),
@@ -115,21 +115,21 @@ function w(e, t, n) {
         [e, t, n],
     );
 }
-function D(e, t, n, r) {
+function w(e, t, n, r) {
     let i = P("usernameProfile", n, r);
-    return w(e.author.id, t.id, i);
+    return D(e.author.id, t.id, i);
 }
 function x(e, t, n, r) {
     let i = P("referencedUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.author.id, t.id, i);
+    return D(null == e ? void 0 : e.author.id, t.id, i);
 }
 function L(e, t, n, r) {
     let i = P("interactionUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.user.id, t.id, i);
+    return D(null == e ? void 0 : e.user.id, t.id, i);
 }
 function M(e, t, n, r) {
     let i = P("referencedUsernameProfile", n, r);
-    return w(e, t.id, i);
+    return D(e, t.id, i);
 }
 function j(e) {
     return i.useCallback(
@@ -151,7 +151,7 @@ function G(e, t) {
 function B(e, t, a, s) {
     let { id: l } = t,
         { id: u, flags: d } = e,
-        f = (0, b.yE)(d, T.iLy.EPHEMERAL),
+        f = (0, b.yE)(d, S.iLy.EPHEMERAL),
         _ = (0, c.bp)();
     return i.useCallback(
         (e, t) => {
@@ -255,12 +255,12 @@ function Y(e) {
     l.current = u || l.current;
     let f = i.useCallback(
             (e) => {
-                (0, _.T6)(), u || (E.S.dispatchKeyed(T.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
+                (0, _.T6)(), u || (E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
             },
             [u, s, c],
         ),
         p = i.useCallback(() => {
-            E.S.dispatchKeyed(T.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
+            E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
         }, [s]);
     return {
         hasHovered: l.current,
@@ -296,7 +296,7 @@ function W(e, t) {
 function K(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e;
-        (null == t || (0, S.Z)(t)) &&
+        (null == t || (0, T.Z)(t)) &&
             s.Z.jumpToMessage({
                 channelId: n.channel_id,
                 messageId: n.message_id,

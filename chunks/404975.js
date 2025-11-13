@@ -16,8 +16,8 @@ var r = n(951288),
     m = n(845435);
 function v(e) {
     let { root: t, header: n, footer: o, onClose: y, emptyState: v } = e,
-        h = p.Z.useField("showNavigationMobile"),
-        x = l.useRef(null),
+        g = p.Z.useField("showNavigationMobile"),
+        h = l.useRef(null),
         O = l.useMemo(() => {
             let e = [];
             return (
@@ -51,7 +51,7 @@ function v(e) {
             );
         }, [t.layout]),
         C = (0, f.Ll)(),
-        _ = (0, u.Z)("settings-sidebar", x);
+        _ = (0, u.Z)("settings-sidebar", h);
     return (0, r.jsx)(s.f6W, {
         theme: C,
         children: (e) =>
@@ -62,7 +62,7 @@ function v(e) {
                     return (0, r.jsxs)("div", {
                         className: i()(m.sidebar, e, {
                             [m.mobile]: c.tq,
-                            [m.mobileNavigationOpen]: h,
+                            [m.mobileNavigationOpen]: g,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -82,7 +82,7 @@ function v(e) {
                                     (0, r.jsx)("div", {
                                         children: P.map((e) =>
                                             (0, r.jsx)(
-                                                g,
+                                                x,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -157,7 +157,7 @@ function v(e) {
                                                 {
                                                     ref: (e) => {
                                                         var t;
-                                                        (x.current = e),
+                                                        (h.current = e),
                                                             (i.current =
                                                                 null != (t = null == e ? void 0 : e.getScrollerNode())
                                                                     ? t
@@ -175,7 +175,7 @@ function v(e) {
                                                             className: m.nav,
                                                             children: S.map((e) =>
                                                                 (0, r.jsx)(
-                                                                    g,
+                                                                    x,
                                                                     {
                                                                         section: e,
                                                                         visibleContent: l,
@@ -214,7 +214,7 @@ function v(e) {
             }),
     });
 }
-function g(e) {
+function x(e) {
     var t;
     let { section: n, visibleContent: l, hoisted: o = !1 } = e,
         i = null == (t = n.useLabel) ? void 0 : t.call(n);

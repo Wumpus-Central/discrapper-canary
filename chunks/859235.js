@@ -117,8 +117,8 @@ function T(e, t) {
         C = (0, s.JA)(n),
         { onFocus: N } = C,
         R = y(C, ["onFocus"]),
-        { handleFocus: P, handleBlur: w } = (0, f.b)(N),
-        D = 0 === A,
+        { handleFocus: P, handleBlur: D } = (0, f.b)(N),
+        w = 0 === A,
         x = null != E,
         L = (e) => {
             if (v) {
@@ -147,7 +147,7 @@ function T(e, t) {
             "li",
             b(g({}, R), {
                 onFocus: P,
-                onBlur: w,
+                onBlur: D,
                 onKeyDown: L,
                 className: o()(h.upload, a, { [h.sizeClip]: 2 === A }),
                 ref: t,
@@ -159,11 +159,11 @@ function T(e, t) {
                             ? (0, r.jsx)("div", {
                                   className: h.actionBarContainer,
                                   children: (0, r.jsx)("div", {
-                                      className: o()(h.actionBar, { [h.smallActionBar]: D }),
+                                      className: o()(h.actionBar, { [h.smallActionBar]: w }),
                                       onContextMenu: I,
                                       "aria-label": p.intl.string(p.t["8Lu3Du"]),
                                       children: (0, r.jsx)(u.ZP, {
-                                          className: o()({ [h.miniPopover]: D }),
+                                          className: o()({ [h.miniPopover]: w }),
                                           children: E,
                                       }),
                                   }),

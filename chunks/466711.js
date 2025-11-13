@@ -20,14 +20,14 @@ var r = n(951288),
     O = n(709054),
     v = n(51144),
     I = n(713913),
-    S = n(897291),
-    T = n(443603),
+    T = n(897291),
+    S = n(443603),
     A = n(981631),
     C = n(921944),
     N = n(388032),
     R = n(30989),
     P = n(564355);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -84,7 +84,7 @@ function M(e) {
     return (0, r.jsx)(l.u, {
         shouldShow: t,
         text: N.intl.string(N.t.Ve9Ge6),
-        children: (0, r.jsx)(T.Z, {
+        children: (0, r.jsx)(S.Z, {
             className: P.button,
             "aria-label": N.intl.string(N.t.Z1RnTk),
             isActive: !1,
@@ -113,9 +113,9 @@ function j(e) {
         shouldShow: a,
         text: N.intl.string(N.t.Ve9Ge6),
         children: (0, r.jsx)(
-            T.Z,
+            S.Z,
             L(
-                D(
+                w(
                     {
                         className: P.button,
                         "aria-label": N.intl.string(N.t.Z1RnTk),
@@ -159,11 +159,11 @@ function U(e) {
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
         { analyticsLocations: c } = (0, d.ZP)(u.Z.GIFT_BUTTON),
         [y, I] = i.useState(!1),
-        T = (0, a.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
+        S = (0, a.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         N = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         P = null != N ? O.default.age(N.id) : 0,
-        { giftBoxAnimation: w, trinketsAnimation: D } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        x = null != n.firstTimeNotice && !s && T && P >= k,
+        { giftBoxAnimation: D, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        x = null != n.firstTimeNotice && !s && S && P >= k,
         [L, U] = (0, _.XR)(
             x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, f.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -203,19 +203,19 @@ function U(e) {
             I(!1), U(C.L.TAKE_ACTION), H();
         },
         W =
-            void 0 !== w
+            void 0 !== D
                 ? (0, r.jsx)(M, {
-                      config: w,
+                      config: D,
                       hovered: B,
                       onClick: Y,
                   })
-                : void 0 !== D
+                : void 0 !== w
                   ? (0, r.jsx)(j, {
-                        config: D,
+                        config: w,
                         hovered: B,
                         onClick: Y,
                     })
-                  : (0, r.jsx)(S.Z, {
+                  : (0, r.jsx)(T.Z, {
                         disabled: s,
                         channel: l,
                     });

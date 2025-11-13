@@ -20,8 +20,8 @@ var r = n(951288),
     b = n(208665),
     x = n(974513),
     j = n(38703),
-    v = n(716130),
-    _ = n(981631),
+    _ = n(716130),
+    v = n(981631),
     O = n(290511),
     C = n(388032),
     y = n(314160);
@@ -199,7 +199,7 @@ function I(e) {
                 children: [
                     (0, r.jsx)(s.Anchor, {
                         target: "_blank",
-                        href: _.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        href: v.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
@@ -228,7 +228,7 @@ function I(e) {
                 className: y.prompts,
                 children: a
                     ? (0, r.jsx)(s.$jN, {})
-                    : (0, r.jsx)(v.Z, {
+                    : (0, r.jsx)(_.Z, {
                           postjoinOnly: d,
                           guildId: t.id,
                       }),

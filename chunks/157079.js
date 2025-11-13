@@ -1,14 +1,14 @@
 a.d(e, {
-    UK: () => E,
-    xU: () => c,
+    UK: () => c,
+    xU: () => E,
 });
 var r = a(578346),
     _ = a(370336),
     n = a(101284),
     o = a(573736),
     i = a(395848);
-let c = "__sentry_xhr_v3__";
-function E(t) {
+let E = "__sentry_xhr_v3__";
+function c(t) {
     (0, r.Hj)("xhr", t), (0, r.D2)("xhr", s);
 }
 function s() {
@@ -18,21 +18,21 @@ function s() {
         return function (...e) {
             let a = 1000 * (0, n.ph)(),
                 i = (0, o.HD)(e[0]) ? e[0].toUpperCase() : void 0,
-                E = (function (t) {
+                c = (function (t) {
                     if ((0, o.HD)(t)) return t;
                     try {
                         return t.toString();
                     } catch (t) {}
                 })(e[1]);
-            if (!i || !E) return t.apply(this, e);
-            (this[c] = {
+            if (!i || !c) return t.apply(this, e);
+            (this[E] = {
                 method: i,
-                url: E,
+                url: c,
                 request_headers: {},
             }),
-                "POST" === i && E.match(/sentry_key/) && (this.__sentry_own_request__ = !0);
+                "POST" === i && c.match(/sentry_key/) && (this.__sentry_own_request__ = !0);
             let s = () => {
-                let t = this[c];
+                let t = this[E];
                 if (t && 4 === this.readyState) {
                     try {
                         t.status_code = this.status;
@@ -56,7 +56,7 @@ function s() {
                 (0, _.hl)(this, "setRequestHeader", function (t) {
                     return function (...e) {
                         let [a, r] = e,
-                            _ = this[c];
+                            _ = this[E];
                         return (
                             _ && (0, o.HD)(a) && (0, o.HD)(r) && (_.request_headers[a.toLowerCase()] = r),
                             t.apply(this, e)
@@ -69,7 +69,7 @@ function s() {
     }),
         (0, _.hl)(t, "send", function (t) {
             return function (...e) {
-                let a = this[c];
+                let a = this[E];
                 if (!a) return t.apply(this, e);
                 void 0 !== e[0] && (a.body = e[0]);
                 let _ = {

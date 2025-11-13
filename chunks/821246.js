@@ -1,13 +1,13 @@
-n.d(e, { Z: () => d });
+n.d(e, { Z: () => E });
 var i = n(509613),
     l = n(313789),
-    r = n(380217),
-    u = n(419477),
+    u = n(380217),
+    r = n(419477),
     s = n(466802),
     a = n(597679),
     o = n(367889),
     c = n(388032);
-let d = (0, i.vB)(l.n.BILLING_SECTION, {
+let E = (0, i.vB)(l.n.BILLING_SECTION, {
     useLabel: () => c.intl.string(c.t["4uOdGr"]),
-    buildLayout: () => [s.J, a.w, o.F, u.z, r.o],
+    buildLayout: () => [s.J, a.w, o.F, r.z, u.o],
 });

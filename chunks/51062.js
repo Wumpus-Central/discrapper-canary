@@ -68,7 +68,7 @@ function O(e, t) {
 }
 function v(e, t, n) {
     var E, y, v, I, T, S, A, C, N, R, P;
-    let { channel: w, type: D } = e,
+    let { channel: D, type: w } = e,
         [x, L] = r.useState(() => (0, p.PA)()),
         M = (0, i.Z)(),
         j = (0, a.e7)([u.ZP, _.default], () => {
@@ -77,8 +77,8 @@ function v(e, t, n) {
             return (
                 null !=
                     (t =
-                        null != w.guild_id && null != n
-                            ? null == (e = u.ZP.getMember(w.guild_id, n.id))
+                        null != D.guild_id && null != n
+                            ? null == (e = u.ZP.getMember(D.guild_id, n.id))
                                 ? void 0
                                 : e.isPending
                             : null) && t
@@ -87,14 +87,14 @@ function v(e, t, n) {
         { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: w.isPrivate() || j || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
+                canMentionEveryone: D.isPrivate() || j || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, D),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [w, D, j],
+            [D, w, j],
         ),
         { activeCommand: G, activeCommandOption: B } = (0, a.cj)([s.Z], () => ({
-            activeCommand: s.Z.getActiveCommand(w.id),
-            activeCommandOption: s.Z.getActiveOption(w.id),
+            activeCommand: s.Z.getActiveCommand(D.id),
+            activeCommandOption: s.Z.getActiveOption(D.id),
         })),
         Z = (0, h.Z)({
             navId: "channel-autocomplete",
@@ -111,11 +111,11 @@ function v(e, t, n) {
             activeCommand: G,
             activeCommandOption: B,
             activeInlineAutocompleteInput: H,
-            canMentionUsers: null != (C = null == (v = D.users) ? void 0 : v.allowMentioning) && C,
+            canMentionUsers: null != (C = null == (v = w.users) ? void 0 : v.allowMentioning) && C,
             canMentionEveryone: k,
             hidePersonalInformation: U,
-            hideMentionDescription: D === l.Ie.RULES_INPUT,
-            emojiIntention: D === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
+            hideMentionDescription: w === l.Ie.RULES_INPUT,
+            emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
             currentWord: null != (N = null == F ? void 0 : F.word) ? N : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             currentFullWord: null != (R = null == F ? void 0 : F.fullWord) ? R : "",

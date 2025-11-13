@@ -37,7 +37,7 @@ function r(e) {
         h = (t.height / 2 - p - s.y) * a,
         b = o ? d : c,
         x = o ? c : d,
-        { x: j, y: v } = (function (e, t, n) {
+        { x: j, y: _ } = (function (e, t, n) {
             switch (n) {
                 case 0:
                     return {
@@ -63,14 +63,14 @@ function r(e) {
         })(c, d, l);
     return (
         i.width < c && (j *= i.width / c),
-        i.height < d && (v *= i.height / d),
+        i.height < d && (_ *= i.height / d),
         {
             sourceX: f,
             sourceY: h,
             sourceWidth: b,
             sourceHeight: x,
             destinationX: j,
-            destinationY: v,
+            destinationY: _,
             destinationWidth: o ? g : u,
             destinationHeight: o ? u : g,
             canvasWidth: u,

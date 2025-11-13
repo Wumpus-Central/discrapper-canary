@@ -31,21 +31,21 @@ function y(e) {
 }
 function O(e) {
     let { application: t, context: n, name: a, iconURL: O, scrollerRef: v, sectionName: I } = e,
-        S = (0, l.ap)((0, u.ZP)()),
-        T = i.useRef(null),
+        T = (0, l.ap)((0, u.ZP)()),
+        S = i.useRef(null),
         A = i.useRef(null),
         C = i.useRef(null),
         N = i.useRef(null),
         R = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
         P = (0, d.ZP)("number" == typeof O ? "" : O, null != R ? R : ""),
-        w = i.useMemo(() => {
+        D = i.useMemo(() => {
             var e, t;
             return null !=
                 (t =
                     null ==
                     (e = (0, f.wh)({
                         foreground: o()(P),
-                        background: o()(S ? "#000000" : "#ffffff"),
+                        background: o()(T ? "#000000" : "#ffffff"),
                         ratio: 5,
                         saturationFactor: 0.6,
                     }))
@@ -53,16 +53,16 @@ function O(e) {
                         : e.hex())
                 ? t
                 : P;
-        }, [P, S]),
-        D = y(T),
+        }, [P, T]),
+        w = y(S),
         x = y(A),
         L = i.useCallback(() => {
             var e, t, n;
             let r = v.current,
-                i = T.current,
+                i = S.current,
                 a = C.current,
                 o = null == N ? void 0 : N.current,
-                l = parseInt(null != (e = null == D ? void 0 : D.height) ? e : ""),
+                l = parseInt(null != (e = null == w ? void 0 : w.height) ? e : ""),
                 c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
             if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
@@ -71,20 +71,20 @@ function O(e) {
                     d = c - l,
                     f = (0, s.clamp)(t - u, d + 1, c + g),
                     _ = E(e, d, f);
-                (i.style.filter = "brightness(".concat(b(1, S ? 1.4 : 0.6, _), ")")),
+                (i.style.filter = "brightness(".concat(b(1, T ? 1.4 : 0.6, _), ")")),
                     (i.style.backgroundColor = "color-mix(in oklab,"
                         .concat(P, " ")
                         .concat((1 - _) * 100, "%, ")
-                        .concat(w, ")")),
+                        .concat(D, ")")),
                     (a.style.opacity = "".concat(b(0, 1, _))),
                     (a.style.transform = "translateY(".concat(b(l / 4, 0, _), "px)")),
                     null != o && (o.style.opacity = "".concat(b(1, 0, _)));
             }
-        }, [w, P, null == x ? void 0 : x.height, S, v, null == D ? void 0 : D.height]);
+        }, [D, P, null == x ? void 0 : x.height, T, v, null == w ? void 0 : w.height]);
     return (
         i.useEffect(() => {
             L();
-        }, [L, S]),
+        }, [L, T]),
         i.useEffect(() => {
             let e = v.current,
                 t = () => {
@@ -106,7 +106,7 @@ function O(e) {
                             className: m.stickyBannerContainer,
                             children: (0, r.jsx)("div", {
                                 className: m.stickyBanner,
-                                ref: T,
+                                ref: S,
                             }),
                         }),
                         (0, r.jsx)("div", {

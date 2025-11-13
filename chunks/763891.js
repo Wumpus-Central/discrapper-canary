@@ -2,14 +2,14 @@ n.d(t, { Z: () => R }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(979554),
-    s = n(399606),
-    a = n(780384),
-    o = n(481060),
+    a = n(399606),
+    o = n(780384),
+    s = n(481060),
     c = n(410030),
     u = n(594174),
     d = n(626135),
-    p = n(381585),
-    g = n(597688),
+    g = n(381585),
+    p = n(597688),
     f = n(128922),
     h = n(370039),
     C = n(937510),
@@ -17,10 +17,10 @@ var r = n(951288),
     _ = n(38900),
     b = n(709999),
     v = n(653126),
-    E = n(786040),
-    x = n(81136),
-    O = n(215023),
-    S = n(981631),
+    x = n(786040),
+    E = n(81136),
+    S = n(215023),
+    O = n(981631),
     y = n(388032),
     j = n(887353),
     k = n(558513),
@@ -34,23 +34,23 @@ var r = n(951288),
 function R(e) {
     var t;
     let { isFetchingCategories: n, scrollerRef: R, tab: Z } = e,
-        w = (0, p.sp)(),
+        w = (0, g.sp)(),
         H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: D, includeUnpublished: M } = (0, x.Z)(),
-        F = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, s.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
+        { noCache: D, includeUnpublished: M } = (0, E.Z)(),
+        F = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [V, U] = l.useState(1),
         z = (0, c.Fg)(),
-        G = (0, a.ap)(z),
+        G = (0, o.ap)(z),
         [K, Y, q] = l.useMemo(() => {
             switch (Z) {
-                case O.AW.AVATAR_DECORATIONS:
+                case S.AW.AVATAR_DECORATIONS:
                     return [y.intl.string(y.t.dRZYNE), G ? L.Z : T.Z, i.Z.AVATAR_DECORATION];
-                case O.AW.PROFILE_EFFECTS:
+                case S.AW.PROFILE_EFFECTS:
                     return [y.intl.string(y.t["1cNjtx"]), G ? N.Z : A.Z, i.Z.PROFILE_EFFECT];
-                case O.AW.NAMEPLATES:
+                case S.AW.NAMEPLATES:
                     return [y.intl.string(y.t.V68Fqz), G ? P.Z : B.Z, i.Z.NAMEPLATE];
-                case O.AW.BUNDLES:
+                case S.AW.BUNDLES:
                     return [y.intl.string(y.t.FYFpps), G ? I.Z : k.Z, i.Z.BUNDLE];
             }
         }, [Z, G]),
@@ -97,7 +97,7 @@ function R(e) {
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(Y, ")") },
                       className: j.bannerContainer,
-                      children: (0, r.jsx)(o.Heading, {
+                      children: (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: K,
                       }),
@@ -105,11 +105,11 @@ function R(e) {
                   (0, r.jsx)("div", {
                       className: j.products,
                       children: X.slice(40 * (V - 1), 40 * V).map((e, t) => {
-                          let n = g.Z.getCategory(e.categorySkuId);
+                          let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(
-                                    p.k0,
+                                    g.k0,
                                     {
                                         newValue: { tilePosition: t },
                                         children: $
@@ -117,7 +117,7 @@ function R(e) {
                                                   v.Z,
                                                   {
                                                       skuId: e.skuId,
-                                                      onClickAnalytics: (0, E.wO)(e, Z, w),
+                                                      onClickAnalytics: (0, x.wO)(e, Z, w),
                                                   },
                                                   e.skuId,
                                               )
@@ -140,13 +140,13 @@ function R(e) {
                       (0, r.jsx)("div", {
                           className: j.paginationContainer,
                           children: (0, r.jsx)("div", {
-                              children: (0, r.jsx)(o.DsT, {
+                              children: (0, r.jsx)(s.DsT, {
                                   currentPage: V,
                                   totalCount: X.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
                                       var t;
-                                      d.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == w ? void 0 : w.sessionId,
                                           page_section: null == w ? void 0 : w.pageSection,
                                           page_category: null == w ? void 0 : w.pageCategory,

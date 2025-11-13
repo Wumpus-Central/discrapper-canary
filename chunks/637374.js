@@ -20,15 +20,15 @@ var r = n(951288),
     O = n(703656),
     v = n(164670),
     I = n(436585),
-    S = n(313789),
-    T = n(518596),
+    T = n(313789),
+    S = n(518596),
     A = n(314897),
     C = n(82142),
     N = n(283595),
     R = n(594174),
     P = n(55563),
-    w = n(199480),
-    D = n(626135),
+    D = n(199480),
+    w = n(626135),
     x = n(669079),
     L = n(74538),
     M = n(296848),
@@ -37,7 +37,7 @@ var r = n(951288),
     U = n(981631),
     G = n(474936),
     B = n(388032),
-    Z = n(584645);
+    Z = n(494452);
 function F(e, t, n) {
     return (
         t in e
@@ -111,7 +111,7 @@ class K extends i.PureComponent {
         return e >= f.aL;
     }
     handleViewInventory() {
-        (0, T.openUserSettings)(S.n.GIFT_PANEL, { section: U.oAB.INVENTORY });
+        (0, S.openUserSettings)(T.n.GIFT_PANEL, { section: U.oAB.INVENTORY });
     }
     render() {
         return (0, r.jsx)(f.$G, {
@@ -373,13 +373,13 @@ class z extends i.Component {
             F(this, "handleVerificationClick", (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
-                    (0, T.openUserSettings)(S.n.ACCOUNT_PANEL, { section: U.oAB.ACCOUNT });
+                    (0, S.openUserSettings)(T.n.ACCOUNT_PANEL, { section: U.oAB.ACCOUNT });
             }),
             F(this, "handleAccept", (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: a } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    D.default.track(U.rMx.OPEN_MODAL, {
+                    w.default.track(U.rMx.OPEN_MODAL, {
                         type: "gift_accept",
                         location: Y(V({}, this.analyticsLocation), { object: U.qAy.BUTTON_CTA }),
                     });
@@ -403,7 +403,7 @@ class z extends i.Component {
                       }))
                     : null != t &&
                       t.isSubscription &&
-                      (e.preventDefault(), (0, T.openUserSettings)(S.n.NITRO_PANEL, { section: U.oAB.PREMIUM }));
+                      (e.preventDefault(), (0, S.openUserSettings)(T.n.NITRO_PANEL, { section: U.oAB.PREMIUM }));
             }),
             F(this, "handleClaimPromotion", (e) => {
                 var t;
@@ -428,7 +428,7 @@ class z extends i.Component {
                 return (0, r.jsxs)("div", {
                     className: i,
                     children: [
-                        n && (0, r.jsx)(w.Z, { className: Z.headerIcon }),
+                        n && (0, r.jsx)(D.Z, { className: Z.headerIcon }),
                         null != e.giftStyle &&
                             (0, r.jsx)(y.Z, {
                                 defaultAnimationState: e.redeemed ? E.SR.LOOP : E.SR.IDLE,

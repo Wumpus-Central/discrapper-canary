@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(642613);
+n.d(t, { Z: () => I }), n(388685), n(642613);
 var l,
     r,
     i = n(392711),
@@ -18,7 +18,7 @@ function f() {
             d.Z.getSection() === u.pNK.ONBOARDING &&
             (h = new Set(c.Z.getDefaultChannelIds(g)));
 }
-class I extends (l = s.ZP.Store) {
+class N extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z);
     }
@@ -38,15 +38,15 @@ class I extends (l = s.ZP.Store) {
         return h;
     }
 }
-(r = "displayName") in I
-    ? Object.defineProperty(I, r, {
+(r = "displayName") in N
+    ? Object.defineProperty(N, r, {
           value: "GuildSettingsDefaultChannelsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (I[r] = "GuildSettingsDefaultChannelsStore");
-let p = new I(o.Z, {
+    : (N[r] = "GuildSettingsDefaultChannelsStore");
+let I = new N(o.Z, {
     GUILD_SETTINGS_INIT: f,
     GUILD_SETTINGS_SET_SECTION: f,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: f,

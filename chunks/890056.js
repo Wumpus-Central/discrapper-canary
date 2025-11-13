@@ -1,7 +1,7 @@
-i.d(e, { Z: () => h });
+i.d(e, { Z: () => a });
 var s = i(684827),
     n = i(482682);
-function a(t, e, i) {
+function r(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -14,7 +14,7 @@ function a(t, e, i) {
         t
     );
 }
-let h = class {
+let a = class {
     initialize() {
         (this.img = new Image()),
             (this.img.onload = () => {
@@ -56,23 +56,23 @@ let h = class {
         this.isFilled = !0;
     }
     constructor() {
-        a(this, "img", null),
-            a(this, "loaded", !1),
-            a(this, "isFilled", !1),
-            a(this, "alpha", 0),
-            a(this, "mx", 0),
-            a(this, "my", 0),
-            a(this, "x", 0),
-            a(this, "y", 0),
-            a(this, "velX", 0),
-            a(this, "velY", 0),
-            a(this, "targetX", 40),
-            a(this, "targetY", 40),
-            a(this, "spring", {
+        r(this, "img", null),
+            r(this, "loaded", !1),
+            r(this, "isFilled", !1),
+            r(this, "alpha", 0),
+            r(this, "mx", 0),
+            r(this, "my", 0),
+            r(this, "x", 0),
+            r(this, "y", 0),
+            r(this, "velX", 0),
+            r(this, "velY", 0),
+            r(this, "targetX", 40),
+            r(this, "targetY", 40),
+            r(this, "spring", {
                 friction: 60,
                 tension: 100,
             }),
-            a(this, "handleMouseMove", (t) => {
+            r(this, "handleMouseMove", (t) => {
                 let { clientX: e, clientY: i } = t;
                 (this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20);
             });

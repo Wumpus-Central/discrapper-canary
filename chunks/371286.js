@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var a = n(951288),
-    r = n(647438),
-    i = n(358458),
+    i = n(647438),
+    r = n(509442),
     l = n(481060),
     s = n(313201),
     o = n(921944),
@@ -10,7 +10,7 @@ var a = n(951288),
 function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, s.Dt)(),
-        x = r.useRef(null),
+        x = i.useRef(null),
         g = (0, l.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
@@ -29,7 +29,7 @@ function u(e) {
                 null != x.current && x.current.focus();
             },
         });
-    return (0, a.jsx)(i.animated.div, {
+    return (0, a.jsx)(r.animated.div, {
         className: d.container,
         style: g,
         children: (0, a.jsxs)("aside", {

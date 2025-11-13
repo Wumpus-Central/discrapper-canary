@@ -84,10 +84,10 @@ function _(t) {
         }, [i, t.parent_id]),
         S = (0, l.e7)([d.ZP], () => d.ZP.getNewForumThreadsCreated(t)),
         L = (0, l.e7)([d.ZP], () => d.ZP.getChannelOverrides(i)[e], [i, e]),
-        E = null == L ? c.bL.NULL : L.message_notifications,
-        N = (0, r.p2)(t),
-        h = g(t, N);
-    return null == h
+        N = null == L ? c.bL.NULL : L.message_notifications,
+        E = (0, r.p2)(t),
+        f = g(t, E);
+    return null == f
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
@@ -104,7 +104,7 @@ function _(t) {
                             ],
                         })
                       : null,
-                  h.map((l) => {
+                  f.map((l) => {
                       let { setting: r, label: d } = l;
                       return (0, n.jsx)(
                           s.k5B,
@@ -129,7 +129,7 @@ function _(t) {
                                                 default:
                                                     return;
                                             }
-                                        })(_, t, N)
+                                        })(_, t, E)
                                       : void 0,
                               action: () => {
                                   null != i &&
@@ -140,7 +140,7 @@ function _(t) {
                                           o.UE.notifications(r),
                                       );
                               },
-                              checked: r === E,
+                              checked: r === N,
                           },
                           r,
                       );
@@ -154,11 +154,11 @@ function S(t) {
         o = (0, l.e7)([d.ZP], () => d.ZP.resolvedMessageNotifications(t), [t]),
         S = (0, l.e7)([d.ZP], () => d.ZP.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
         L = null == S ? c.bL.NULL : S.message_notifications,
-        E = (0, r.p2)(t),
-        N =
+        N = (0, r.p2)(t),
+        E =
             L === c.bL.NULL && t.isGuildStageVoice()
                 ? u.intl.format(u.t.L2hmYy, {})
-                : null == (e = g(t, E)) ||
+                : null == (e = g(t, N)) ||
                     null ==
                         (i = e.find((t) => {
                             let { setting: i } = t;
@@ -170,7 +170,7 @@ function S(t) {
         ? (0, n.jsx)(s.sNh, {
               id: "channel-notifications",
               label: u.intl.string(u.t.h850Ss),
-              subtext: N,
+              subtext: E,
               children: a,
           })
         : null;

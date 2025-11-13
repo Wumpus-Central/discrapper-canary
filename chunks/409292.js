@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(410575),
     p = n(613311),
     f = n(601564),
-    m = n(981631),
-    h = n(430355);
-function g(e, t, n) {
+    h = n(981631),
+    g = n(430355);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,10 +32,10 @@ class _ extends i.Component {
     render() {
         return null != this.props.skuId
             ? (0, r.jsx)(d.Z, {
-                  page: m.ZY5.CHANNEL_STORE_LISTING,
+                  page: h.ZY5.CHANNEL_STORE_LISTING,
                   root: !0,
                   children: (0, r.jsx)("div", {
-                      className: h.applicationStore,
+                      className: g.applicationStore,
                       children: (0, r.jsx)(l.AW, {
                           path: "*",
                           render: this.renderApplicationListing,
@@ -46,7 +46,7 @@ class _ extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            g(this, "fetchStoreListing", (e) => {
+            m(this, "fetchStoreListing", (e) => {
                 let { channel: t, inputSkuId: n } = this.props;
                 return null != e
                     ? s.Z.fetchChannelStoreListing(t.id, e)
@@ -54,7 +54,7 @@ class _ extends i.Component {
                       ? s.Z.fetchChannelStoreListing(t.id, n)
                       : s.Z.fetchChannelStoreListing(t.id);
             }),
-            g(this, "renderApplicationListing", (e) => {
+            m(this, "renderApplicationListing", (e) => {
                 let { location: t } = e,
                     { channel: n, skuId: i, width: l } = this.props;
                 return (0, r.jsx)(p.Z, {

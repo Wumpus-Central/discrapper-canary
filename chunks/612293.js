@@ -66,8 +66,8 @@ function O(e) {
             guildId: N,
         }),
         { product: B, purchase: L } = (0, d.Z)(null == S ? void 0 : S.skuId),
-        M = j.ZP.canUseCollectibles(v),
-        R =
+        R = j.ZP.canUseCollectibles(v),
+        M =
             void 0 === k
                 ? (null == S ? void 0 : S.skuId) === (null == A ? void 0 : A.skuId)
                 : (null == S ? void 0 : S.skuId) === (null == k ? void 0 : k.skuId),
@@ -123,16 +123,16 @@ function O(e) {
                 "data-migration-pending": !0,
                 className: E.modalFooter,
                 children: [
-                    (null != L && (!(0, u.qS)(L) || M)) || null === S
+                    (null != L && (!(0, u.qS)(L) || R)) || null === S
                         ? (0, l.jsx)(s.Button, {
                               variant: "primary",
                               text: C.intl.string(C.t.Jh8fJz),
                               onClick: () => {
                                   (0, g.Wh)(S, N), w();
                               },
-                              disabled: R,
+                              disabled: M,
                           })
-                        : null == L && (M || !(0, u.G1)(B))
+                        : null == L && (R || !(0, u.G1)(B))
                           ? (0, l.jsx)(s.Button, {
                                 variant: "primary",
                                 onClick: () => D(null == B ? void 0 : B.skuId),
@@ -140,16 +140,16 @@ function O(e) {
                             })
                           : (0, l.jsx)(h.Z, {
                                 subscriptionTier: f.Si.TIER_2,
-                                showGradient: !M,
+                                showGradient: !R,
                                 textOptions: {
                                     textOverride: j.ZP.isPremium(v)
                                         ? C.intl.string(C.t.KXLX7l)
-                                        : M
+                                        : R
                                           ? C.intl.string(C.t.mr4K7D)
                                           : C.intl.string(C.t.pj0XBN),
                                 },
                             }),
-                    !M && (0, u.G1)(B)
+                    !R && (0, u.G1)(B)
                         ? (0, l.jsx)(m.Z, {
                               product: B,
                               onClose: w,

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => S });
+n.d(e, { Z: () => d });
 var i = n(442837),
     l = n(846027),
     u = n(509613),
@@ -19,14 +19,14 @@ let c = (0, u.UO)(s.n.VOICE_GLOBAL_ATTENUATION_SLIDER, {
         useValue: () => (0, i.e7)([r.Z], () => r.Z.getAttenuateWhileSpeakingSelf()),
         setValue: (t) => l.Z.setAttenuation(r.Z.getAttenuation(), t, r.Z.getAttenuateWhileSpeakingOthers()),
     }),
-    d = (0, u.qs)(s.n.VOICE_GLOBAL_ATTENUATION_FOR_OTHERS_SETTING, {
+    S = (0, u.qs)(s.n.VOICE_GLOBAL_ATTENUATION_FOR_OTHERS_SETTING, {
         useTitle: () => o.intl.string(o.t.SMt0Gr),
         useValue: () => (0, i.e7)([r.Z], () => r.Z.getAttenuateWhileSpeakingOthers()),
         setValue: (t) => l.Z.setAttenuation(r.Z.getAttenuation(), r.Z.getAttenuateWhileSpeakingSelf(), t),
     }),
-    S = (0, u.Uc)(s.n.VOICE_GLOBAL_ATTENUATION_FIELD_SET, {
+    d = (0, u.Uc)(s.n.VOICE_GLOBAL_ATTENUATION_FIELD_SET, {
         useTitle: () => o.intl.string(o.t.oSdBvW),
         useSubtitle: () => o.intl.string(o.t["0A/8Rt"]),
         usePredicate: () => (0, i.e7)([r.Z], () => r.Z.supports(a.AN.ATTENUATION)),
-        buildLayout: () => [c, E, d],
+        buildLayout: () => [c, E, S],
     });

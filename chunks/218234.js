@@ -15,7 +15,7 @@ function i(t, e) {
                     version: a.sdk.version,
                 }),
                 r && e && (i.dsn = (0, _.RA)(e));
-            let c = (function (t) {
+            let E = (function (t) {
                 let e = (0, o.uv)(t);
                 return [
                     {
@@ -25,7 +25,7 @@ function i(t, e) {
                     e,
                 ];
             })(t);
-            return (0, n.Jd)(i, [c]);
+            return (0, n.Jd)(i, [E]);
         })(e, a, t.getSdkMetadata(), t.getOptions().tunnel);
     t.sendEnvelope(i);
 }

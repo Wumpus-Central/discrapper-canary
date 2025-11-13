@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => N,
-    Z: () => D,
+    Z: () => w,
 }),
     n(35282);
 var r = n(951288);
@@ -125,8 +125,8 @@ function R(e) {
             "aria-labelledby": C,
             scrollable: R,
             role: P,
-            hideSearch: w,
-            showDivider: D,
+            hideSearch: D,
+            showDivider: w,
             disableDoubleClick: x,
         } = e,
         L = null == s || (0, y.AB)(s) ? null : s,
@@ -136,7 +136,7 @@ function R(e) {
         { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
     function B() {
         if (null == T) return null;
-        let e = null != s && !w;
+        let e = null != s && !D;
         return i.tq
             ? S
             : (0, r.jsxs)(r.Fragment, {
@@ -153,7 +153,7 @@ function R(e) {
                                 null != m ? m : s,
                             )
                           : null,
-                      D && (0, r.jsx)(E.ZP.Divider, {}),
+                      w && (0, r.jsx)(E.ZP.Divider, {}),
                       k && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
                           M &&
@@ -195,7 +195,7 @@ function P(e) {
         children: t,
     });
 }
-function w(e) {
+function D(e) {
     var { isAuthenticated: t = !0 } = e,
         n = A(e, ["isAuthenticated"]);
     let { analyticsLocations: i } = (0, l.ZP)(s.Z.HEADER_BAR);
@@ -206,9 +206,9 @@ function w(e) {
             : (0, r.jsx)(P, S(I({}, n), { className: n.className })),
     });
 }
-(w.Title = E.ZP.Title),
-    (w.Icon = E.ZP.Icon),
-    (w.ChannelIcon = E.ZP.ChannelIcon),
-    (w.Divider = E.ZP.Divider),
-    (w.Caret = E.ZP.Caret);
-let D = w;
+(D.Title = E.ZP.Title),
+    (D.Icon = E.ZP.Icon),
+    (D.ChannelIcon = E.ZP.ChannelIcon),
+    (D.Divider = E.ZP.Divider),
+    (D.Caret = E.ZP.Caret);
+let w = D;

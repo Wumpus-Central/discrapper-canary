@@ -60,15 +60,15 @@ function E(e) {
             isDisplayingWowMomentConfirmation: R,
             isGift: P,
         } = (0, d.JL)(),
-        w = null != N && N in _.y7,
-        D = v.find((e) => e.key === O);
+        D = null != N && N in _.y7,
+        w = v.find((e) => e.key === O);
     i.useEffect(() => {
         S(null);
     }, [O, S]),
-        l()(null != D, "Unknown step for current payment flow.");
-    let x = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
-        L = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
-        M = null == D || null == (a = D.options) ? void 0 : a.sliderBodyClassName;
+        l()(null != w, "Unknown step for current payment flow.");
+    let x = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
+        L = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
+        M = null == w || null == (a = w.options) ? void 0 : a.sliderBodyClassName;
     switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
         case f.h8.ADD_PAYMENT_STEPS:
             m = 408;
@@ -77,12 +77,12 @@ function E(e) {
             m = 392;
             break;
         case f.h8.PLAN_SELECT:
-            w && !P && (m = "100%");
+            D && !P && (m = "100%");
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null == (h = null == D || null == (s = D.options) ? void 0 : s.renderHeader) || h ? E : null,
-            D.renderStep(y),
+            null == (h = null == w || null == (s = w.options) ? void 0 : s.renderHeader) || h ? E : null,
+            w.renderStep(y),
             null == O || x
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -91,7 +91,7 @@ function E(e) {
                               "data-migration-pending": !0,
                               className: o()(L, p.body, C, {
                                   [p.reviewStep]: O === f.h8.REVIEW,
-                                  [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && w,
+                                  [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && D,
                               }),
                               children: (0, r.jsx)(u.MyZ, {
                                   activeSlide: O,

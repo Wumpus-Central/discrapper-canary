@@ -181,7 +181,7 @@ class E extends o.C {
                     a.safetyState = et.internalBinaryRead(e, e.uint32(), n, a.safetyState);
                     break;
                 case 13:
-                    a.displayNameStyles = T.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
+                    a.displayNameStyles = S.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -209,7 +209,7 @@ class E extends o.C {
             e.collectibles && C.internalBinaryWrite(e.collectibles, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
-                T.internalBinaryWrite(e.displayNameStyles, t.tag(13, r.TD.LengthDelimited).fork(), n).join();
+                S.internalBinaryWrite(e.displayNameStyles, t.tag(13, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -285,7 +285,7 @@ class E extends o.C {
                 no: 13,
                 name: "display_name_styles",
                 kind: "message",
-                T: () => T,
+                T: () => S,
             },
         ]);
     }
@@ -581,7 +581,7 @@ class v extends o.C {
     }
 }
 let I = new v();
-class S extends o.C {
+class T extends o.C {
     create(e) {
         let t = {
             fontId: 0,
@@ -663,7 +663,7 @@ class S extends o.C {
         ]);
     }
 }
-let T = new S();
+let S = new T();
 class A extends o.C {
     create(e) {
         let t = {};
@@ -853,8 +853,8 @@ class P extends o.C {
         ]);
     }
 }
-let w = new P();
-class D extends o.C {
+let D = new P();
+class w extends o.C {
     create(e) {
         let t = {
             linkedUsers: {},
@@ -892,7 +892,7 @@ class D extends o.C {
                     a.primaryGuild = R.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 6:
-                    a.crossPlatformRestriction = w.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
+                    a.crossPlatformRestriction = D.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
                     break;
                 case 7:
                     a.collectibles = C.internalBinaryRead(e, e.uint32(), n, a.collectibles);
@@ -904,7 +904,7 @@ class D extends o.C {
                     a.premiumState = er.internalBinaryRead(e, e.uint32(), n, a.premiumState);
                     break;
                 case 10:
-                    a.displayNameStyles = T.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
+                    a.displayNameStyles = S.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -1003,12 +1003,12 @@ class D extends o.C {
         e.quest && V.internalBinaryWrite(e.quest, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.primaryGuild && R.internalBinaryWrite(e.primaryGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
-                w.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
+                D.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
             e.collectibles && C.internalBinaryWrite(e.collectibles, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             e.premiumState && er.internalBinaryWrite(e.premiumState, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
-                T.internalBinaryWrite(e.displayNameStyles, t.tag(10, r.TD.LengthDelimited).fork(), n).join();
+                S.internalBinaryWrite(e.displayNameStyles, t.tag(10, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -1060,7 +1060,7 @@ class D extends o.C {
                 no: 6,
                 name: "cross_platform_restriction",
                 kind: "message",
-                T: () => w,
+                T: () => D,
             },
             {
                 no: 7,
@@ -1084,12 +1084,12 @@ class D extends o.C {
                 no: 10,
                 name: "display_name_styles",
                 kind: "message",
-                T: () => T,
+                T: () => S,
             },
         ]);
     }
 }
-new D();
+new w();
 class x extends o.C {
     create(e) {
         let t = {

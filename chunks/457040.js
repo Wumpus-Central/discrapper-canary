@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(373228),
     R = n(462109),
     P = n(422195),
-    w = n(657795),
-    D = n(489762),
+    D = n(657795),
+    w = n(489762),
     x = n(31543),
     L = n(15350),
     M = n(151189),
@@ -179,8 +179,8 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             {
                 getItemProps: eR,
                 getRowProps: eP,
-                gridContainerProps: ew,
-                handleGridContainerKeyDown: eD,
+                gridContainerProps: eD,
+                handleGridContainerKeyDown: ew,
                 isUsingKeyboardNavigation: ex,
             } = (0, R.t)({
                 columnCounts: eC,
@@ -235,13 +235,13 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         className: U.header,
                         children: (0, r.jsx)(x.Z, {
                             ref: er,
-                            onKeyDown: eD,
+                            onKeyDown: ew,
                             stickersListRef: ee,
                             channel: c,
                         }),
                     }),
                 ec
-                    ? (0, r.jsx)(w.Z, {
+                    ? (0, r.jsx)(D.Z, {
                           className: U.emptyState,
                           onClose: G,
                       })
@@ -256,12 +256,12 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                               className: U.listWrapper,
                                               id: j.Vr,
                                           },
-                                          ew,
+                                          eD,
                                       ),
                                       {
                                           children:
                                               null != eu
-                                                  ? (0, r.jsx)(D.Z, {
+                                                  ? (0, r.jsx)(w.Z, {
                                                         ref: ee,
                                                         collapsedStickersCategories: ef,
                                                         filteredStickers: ep,

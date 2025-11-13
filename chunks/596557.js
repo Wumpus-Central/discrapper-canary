@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(704215),
@@ -10,17 +10,17 @@ var r = n(951288),
     d = n(981631),
     p = n(921944),
     f = n(647086),
-    m = n(135899);
-function h(e) {
+    h = n(135899);
+function g(e) {
     var t;
-    let h = (0, s.SE)(e),
-        g = m.$X.some((t) => (null == e ? void 0 : e.id) !== f._ && c.oz(t, e)),
+    let g = (0, s.SE)(e),
+        m = h.$X.some((t) => (null == e ? void 0 : e.id) !== f._ && c.oz(t, e)),
         _ = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
         b = (0, u.FT)(
             l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
             null != (t = null == e ? void 0 : e.id) ? t : d.lds,
         ),
-        E = h && (g || _) && !b,
+        E = g && (m || _) && !b,
         O = i.useCallback(() => {
             var t;
             (0, u.Qd)(
@@ -30,9 +30,9 @@ function h(e) {
                 p.L.DISMISS,
             );
         }, [e]),
-        I = i.useRef(!1);
+        y = i.useRef(!1);
     i.useEffect(() => {
-        if (E && !I.current) {
+        if (E && !y.current) {
             var t;
             (0, a.ZDy)(
                 async () => {
@@ -67,7 +67,7 @@ function h(e) {
                             })(
                                 {
                                     guild: e,
-                                    canEveryoneModerate: g,
+                                    canEveryoneModerate: m,
                                     isDefaultNotificationsAllMessages: _,
                                 },
                                 n,
@@ -80,7 +80,7 @@ function h(e) {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds,
                 }),
-                (I.current = !0);
+                (y.current = !0);
         }
-    }, [g, e, O, _, E]);
+    }, [m, e, O, _, E]);
 }

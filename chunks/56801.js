@@ -33,7 +33,7 @@ function E(e) {
             },
             [a],
         ),
-        S = i.useCallback(
+        T = i.useCallback(
             (e, t) => {
                 var n;
                 return t
@@ -46,7 +46,7 @@ function E(e) {
             },
             [a],
         ),
-        T = i.useCallback(
+        S = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -98,11 +98,11 @@ function E(e) {
                   store: c.Xn,
                   categories: a,
                   className: _.list,
-                  renderCategoryListItem: T,
+                  renderCategoryListItem: S,
                   rowCount: a.length,
                   categoryHeight: I,
                   listPadding: p,
-                  getScrollOffsetForIndex: S,
+                  getScrollOffsetForIndex: T,
               }),
           });
 }

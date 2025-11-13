@@ -1,4 +1,4 @@
-n.d(t, { r: () => v });
+n.d(t, { r: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(580685),
@@ -34,32 +34,32 @@ let j = {
     badgeColorPrimary: null,
     badgeColorSecondary: null,
 };
-function v(e) {
+function _(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: v } = (0, s.cj)([m.Z], () => ({
+        { guild: n, guildProfile: _ } = (0, s.cj)([m.Z], () => ({
             guild: m.Z.getGuild(),
             guildProfile: m.Z.getGuildProfile(),
         })),
-        _ = null == n ? void 0 : n.id,
-        C = (0, s.e7)([c.Z], () => c.Z.get(_)),
-        { fetchGuildProfile: O } = (0, d.u)(_),
-        y = (null == v ? void 0 : v.visibility) == null || !l.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
-        E = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        v = null == n ? void 0 : n.id,
+        O = (0, s.e7)([c.Z], () => c.Z.get(v)),
+        { fetchGuildProfile: C } = (0, d.u)(v),
+        y = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
+        N = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
-        null != _ && O();
-    }, [_, O]);
-    let N = i.useMemo(() => (null == n || null == v ? j : v), [n, v]),
+        null != v && C();
+    }, [v, C]);
+    let E = i.useMemo(() => (null == n || null == _ ? j : _), [n, _]),
         I = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
-                (E
+                (N
                     ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
                     : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
-        }, [null == n ? void 0 : n.id, E]),
+        }, [null == n ? void 0 : n.id, N]),
         S = i.useCallback(() => {
             g.Z.setSection(h.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let T = null != t ? t : null == C ? void 0 : C.formFields;
+    let T = null != t ? t : null == O ? void 0 : O.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
@@ -94,7 +94,7 @@ function v(e) {
                         children: [
                             (0, r.jsx)(o.rsf, {
                                 label: b.intl.string(b.t["N/0232"]),
-                                checked: E,
+                                checked: N,
                                 onChange: I,
                                 disabled: y,
                             }),
@@ -129,7 +129,7 @@ function v(e) {
                                 (0, r.jsx)("div", { className: x.gradient }),
                                 (0, r.jsx)(u.ZP, {
                                     className: x.preview,
-                                    profile: N,
+                                    profile: E,
                                     CTAOverride: (0, r.jsx)(a.zxk, {
                                         variant: "active",
                                         size: "sm",

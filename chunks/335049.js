@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => I });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -48,7 +48,7 @@ function E(e) {
     }
     return e;
 }
-function I(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -77,7 +77,7 @@ function P(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        I(E({}, t), {
+                        w(E({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Muw),
                         }),
@@ -88,7 +88,7 @@ function P(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(w, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function P(e) {
             });
     }
 }
-function w(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -188,7 +188,7 @@ function T(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                I(E({}, t), {
+                                w(E({}, t), {
                                     guild: l,
                                     role: m,
                                 }),

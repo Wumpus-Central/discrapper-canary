@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(951288),
-    r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    i = n(647438),
+    r = n(120356),
+    l = n.n(r),
     s = n(481060),
     o = n(259580),
     c = n(422665);
@@ -10,7 +10,7 @@ function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: i,
+            subtitle: r,
             children: d,
             className: u,
             isExpanded: m,
@@ -19,19 +19,19 @@ function d(e) {
             onOpen: x,
             maxHeight: g,
         } = e,
-        [f, b] = r.useState(h),
-        v = r.useRef(null),
-        [j, _] = r.useState(null),
+        [f, b] = i.useState(h),
+        v = i.useRef(null),
+        [j, _] = i.useState(null),
         y = void 0 !== m,
         C = y ? m : f;
-    r.useEffect(() => {
+    i.useEffect(() => {
         C && null != v.current && _(v.current.scrollHeight);
     }, [C, d]);
-    let S = r.useCallback(() => {
+    let S = i.useCallback(() => {
             let e = !C;
             y || b(e), null == p || p(e), e && null != x && x();
         }, [C, y, p, x]),
-        E = r.useMemo(() => {
+        E = i.useMemo(() => {
             if (C) {
                 if (null != g) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
                 if (null != j) return { maxHeight: "".concat(j, "px") };
@@ -57,12 +57,12 @@ function d(e) {
                                 color: "header-secondary",
                                 children: n,
                             }),
-                            null != i &&
-                                "" !== i &&
+                            null != r &&
+                                "" !== r &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "interactive-normal",
-                                    children: i,
+                                    children: r,
                                 }),
                         ],
                     }),

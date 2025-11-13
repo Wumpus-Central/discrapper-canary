@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(703656),
     p = n(55563),
     f = n(981631),
-    m = n(883307);
-function h(e, t, n) {
+    h = n(883307);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-class g extends i.PureComponent {
+class m extends i.PureComponent {
     componentDidMount() {
         let { sku: e, primarySkuId: t, isFetchingPrimarySku: n } = this.props;
         null == t || n || null == e || (0, s.$N)(e.applicationId, t);
@@ -55,7 +55,7 @@ class g extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, "handleClick", (e) => {
+            g(this, "handleClick", (e) => {
                 let { sku: t } = this.props;
                 (0, d.uL)(e.id, {
                     state: {
@@ -67,9 +67,9 @@ class g extends i.PureComponent {
                     },
                 });
             }),
-            h(this, "renderCustomBreadcrumb", (e, t) =>
+            g(this, "renderCustomBreadcrumb", (e, t) =>
                 (0, r.jsx)(u.Z.Title, {
-                    className: t ? null : m.breadcrumb,
+                    className: t ? null : h.breadcrumb,
                     muted: !t,
                     children: e.label,
                 }),
@@ -86,5 +86,5 @@ let _ = (0, o.Z)(
             isFetchingPrimarySku: null != r && p.Z.isFetching(r),
             primarySku: null != r ? p.Z.get(r) : null,
         };
-    })(g),
+    })(m),
 );

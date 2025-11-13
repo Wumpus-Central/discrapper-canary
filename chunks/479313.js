@@ -4,7 +4,7 @@ n.d(t, {
     G1: () => O,
     JR: () => S,
     U$: () => A,
-    ZP: () => w,
+    ZP: () => D,
     e7: () => I,
     wv: () => T,
     yK: () => v,
@@ -229,7 +229,7 @@ async function P(e) {
         throw new c.Hx(e);
     }
 }
-let w = {
+let D = {
     setSummaryFeedback: A,
     updateVisibleMessages: S,
     setSelectedSummary: T,

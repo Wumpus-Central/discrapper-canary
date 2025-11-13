@@ -1,23 +1,23 @@
-n.d(e, { Z: () => E });
+n.d(e, { Z: () => S });
 var i = n(951288),
     l = n(442837),
-    r = n(924557),
-    u = n(435064),
+    u = n(924557),
+    r = n(435064),
     s = n(894694),
     a = n(509613),
     o = n(313789),
     c = n(494620),
-    d = n(388032);
-let E = (0, a.ON)(o.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
-    useSearchTerms: () => [d.intl.string(d.t.SIxrIF)],
+    E = n(388032);
+let S = (0, a.ON)(o.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
+    useSearchTerms: () => [E.intl.string(E.t.SIxrIF)],
     usePredicate: () => {
-        let t = (0, r.Go)(),
-            e = (0, l.e7)([u.Z], () => u.Z.getHardwareClassification());
+        let t = (0, u.Go)(),
+            e = (0, l.e7)([r.Z], () => r.Z.getHardwareClassification());
         return t && e === s.xH.BELOW_MINIMUM;
     },
     render: () =>
         (0, i.jsx)(c.Z, {
             look: c.z.WARNING,
-            children: d.intl.string(d.t.SIxrIF),
+            children: E.intl.string(E.t.SIxrIF),
         }),
 });

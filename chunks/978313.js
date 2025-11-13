@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    a = n.n(l),
+var i = n(951288),
+    l = n(647438),
+    r = n(120356),
+    a = n.n(r),
     s = n(657707),
     o = n(793030),
     c = n(692547),
@@ -10,60 +10,60 @@ var r = n(951288),
     u = n(885006),
     m = n(810568),
     f = n(221370),
-    p = n(388032),
-    g = n(226788),
+    g = n(388032),
+    p = n(226788),
     x = n(802318);
 function h(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [l, h] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [j, v] = i.useState(!0),
-        [O, y] = i.useState(!1),
-        I = i.useRef(null),
+        [r, h] = l.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [v, j] = l.useState(!0),
+        [O, y] = l.useState(!1),
+        I = l.useRef(null),
         { width: b, height: E } = (0, u.Z)();
-    return (i.useEffect(() => {
+    return (l.useEffect(() => {
         let e = I.current;
-        null != e && y(e.scrollHeight - e.clientHeight > 1 || !j);
-    }, [I, b, E, j]),
+        null != e && y(e.scrollHeight - e.clientHeight > 1 || !v);
+    }, [I, b, E, v]),
     null == t.summary)
         ? null
-        : (0, r.jsxs)("div", {
-              className: a()(g.column, g.gapMd),
+        : (0, i.jsxs)("div", {
+              className: a()(p.column, p.gapMd),
               children: [
                   null != t.summaryLocalized &&
-                      (0, r.jsxs)("div", {
-                          className: a()(g.row, g.gapSm),
+                      (0, i.jsxs)("div", {
+                          className: a()(p.row, p.gapSm),
                           children: [
-                              (0, r.jsx)(s.SxY, {
+                              (0, i.jsx)(s.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: "xs",
                               }),
-                              (0, r.jsx)(o.xvT, {
+                              (0, i.jsx)(o.xvT, {
                                   variant: "text-xs/medium",
                                   color: "header-secondary",
-                                  children: l
-                                      ? p.intl.format(p.t.aZ2iIp, { onShowOriginal: () => h(!1) })
-                                      : p.intl.format(p.t["/2ylF4"], { onShowTranslated: () => h(!0) }),
+                                  children: r
+                                      ? g.intl.format(g.t.aZ2iIp, { onShowOriginal: () => h(!1) })
+                                      : g.intl.format(g.t["/2ylF4"], { onShowTranslated: () => h(!0) }),
                               }),
                           ],
                       }),
-                  (0, r.jsx)(o.xvT, {
+                  (0, i.jsx)(o.xvT, {
                       ref: I,
-                      lineClamp: j ? 8 : void 0,
+                      lineClamp: v ? 8 : void 0,
                       variant: "text-sm/normal",
-                      children: l ? t.summaryLocalized : t.summary,
+                      children: r ? t.summaryLocalized : t.summary,
                   }),
                   O &&
-                      (0, r.jsx)(d.P3F, {
-                          className: g.clickable,
+                      (0, i.jsx)(d.P3F, {
+                          className: p.clickable,
                           onClick: () => {
-                              n(j ? m.as.ShowMore : m.as.ShowLess), v(!j);
+                              n(v ? m.as.ShowMore : m.as.ShowLess), j(!v);
                           },
-                          children: (0, r.jsx)(o.xvT, {
+                          children: (0, i.jsx)(o.xvT, {
                               variant: "text-sm/semibold",
-                              children: j ? p.intl.string(p.t.lBeKY2) : p.intl.string(p.t["6MwJo/"]),
+                              children: v ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
                           }),
                       }),
-                  (0, r.jsx)(f.Z, {
+                  (0, i.jsx)(f.Z, {
                       className: x.platforms,
                       detectedGame: t,
                   }),

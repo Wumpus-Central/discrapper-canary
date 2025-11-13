@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -35,8 +35,8 @@ function p(e) {
     return e;
 }
 let f = "premium_tier_gradient",
-    m = "smaller_sparkle_gradient";
-function h(e) {
+    h = "smaller_sparkle_gradient";
+function g(e) {
     var t,
         n,
         { width: i = 14, height: l = 15, color: a = "white", foreground: s } = e,
@@ -97,7 +97,7 @@ function h(e) {
                         }),
                     }),
                     (0, r.jsxs)("linearGradient", {
-                        id: m,
+                        id: h,
                         x1: "-4.95474",
                         y1: "5.44067",
                         x2: "11.2384",
@@ -136,8 +136,8 @@ function h(e) {
         t),
     );
 }
-function g(e) {
-    let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: g } = e,
+function m(e) {
+    let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: m } = e,
         [_] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
             cooldownDurationMs: 0,
@@ -149,14 +149,14 @@ function g(e) {
           (0, r.jsxs)("div", {
               className: l()(t, d.countDown),
               children: [
-                  g
+                  m
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(h, {
+                                (0, r.jsx)(g, {
                                     foreground: d.sparkleStar1,
-                                    color: "url(#".concat(m, ")"),
+                                    color: "url(#".concat(h, ")"),
                                 }),
-                                (0, r.jsx)(h, {
+                                (0, r.jsx)(g, {
                                     foreground: d.sparkleStar2,
                                     color: "url(#".concat(f, ")"),
                                 }),

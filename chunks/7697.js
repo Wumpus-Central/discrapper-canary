@@ -1,46 +1,46 @@
-t.d(n, { Z: () => p }), t(388685);
+t.d(n, { Z: () => h }), t(388685);
 var i = t(647438),
-    r = t(392711),
-    a = t.n(r),
-    l = t(442837),
-    o = t(699682),
-    c = t(70956),
-    s = t(709054),
-    d = t(897285),
-    u = t(924301),
+    l = t(392711),
+    r = t.n(l),
+    a = t(442837),
+    c = t(699682),
+    s = t(70956),
+    o = t(709054),
+    u = t(897285),
+    d = t(924301),
     _ = t(954313);
-function p(e, n, t) {
-    let r = (0, l.e7)([u.ZP], () => u.ZP.getGuildScheduledEvent(e)),
-        p = (0, o.Z)(t),
-        [f, m] = i.useState(null != t && null != r ? (0, _.PJ)(4, (0, _.Ho)(t), new Date(r.scheduled_start_time)) : []);
+function h(e, n, t) {
+    let l = (0, a.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(e)),
+        h = (0, c.Z)(t),
+        [g, v] = i.useState(null != t && null != l ? (0, _.PJ)(4, (0, _.Ho)(t), new Date(l.scheduled_start_time)) : []);
     i.useEffect(() => {
-        if (null == p || null == t || null == r || a().isEqual(p, t)) return;
+        if (null == h || null == t || null == l || r().isEqual(h, t)) return;
         let e = (0, _.Ho)(t);
-        m((0, _.PJ)(f.length, e, new Date(r.scheduled_start_time)));
-    }, [t, f.length, r, p]),
+        v((0, _.PJ)(g.length, e, new Date(l.scheduled_start_time)));
+    }, [t, g.length, l, h]),
         i.useEffect(() => {
             if (null == n) return;
-            let t = f.map((e) =>
-                s.default.fromTimestamp(Math.floor(e.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND),
+            let t = g.map((e) =>
+                o.default.fromTimestamp(Math.floor(e.getTime() / s.Z.Millis.SECOND) * s.Z.Millis.SECOND),
             );
-            d.Z.getGuildEventUserCounts(n, e, t);
-        }, [e, n, f]);
-    let v = i.useMemo(() => {
-        if (null == t || 0 === f.length || (null == r ? void 0 : r.scheduled_start_time) == null) return !1;
+            u.Z.getGuildEventUserCounts(n, e, t);
+        }, [e, n, g]);
+    let f = i.useMemo(() => {
+        if (null == t || 0 === g.length || (null == l ? void 0 : l.scheduled_start_time) == null) return !1;
         let e = new Date();
         e.setFullYear(e.getFullYear() + _.hn);
-        let n = f[f.length - 1],
+        let n = g[g.length - 1],
             i = (0, _.Ho)(t).after(n);
         return null != i && i <= e;
-    }, [t, f, null == r ? void 0 : r.scheduled_start_time]);
+    }, [t, g, null == l ? void 0 : l.scheduled_start_time]);
     return {
-        recurrenceStartTimes: f,
-        canViewMoreRecurrences: v,
+        recurrenceStartTimes: g,
+        canViewMoreRecurrences: f,
         updateRecurrenceStartTimes: () => {
-            if (null == t || null == r) return;
+            if (null == t || null == l) return;
             let e = (0, _.Ho)(t),
-                n = f[f.length - 1];
-            m([...f, ...(0, _.PJ)(4, e, n, !0)]);
+                n = g[g.length - 1];
+            v([...g, ...(0, _.PJ)(4, e, n, !0)]);
         },
     };
 }

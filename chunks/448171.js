@@ -1,24 +1,24 @@
-a.d(e, { W: () => h });
+a.d(e, { W: () => O });
 var r = a(967752),
     _ = a(622916),
     n = a(394798),
     o = a(573736),
     i = a(928541),
-    c = a(617726),
-    E = a(370336),
+    E = a(617726),
+    c = a(370336),
     s = a(116698),
     l = a(538022),
     I = a(510529),
-    u = a(263449),
-    R = a(255768),
-    d = a(380132),
+    R = a(263449),
+    u = a(255768),
+    A = a(380132),
     N = a(151122),
-    A = a(112797),
-    T = a(305625),
+    T = a(112797),
+    d = a(305625),
     f = a(820754),
     L = a(822578);
 let p = "Not capturing exception because it's already been captured.";
-class h {
+class O {
     constructor(t) {
         if (
             ((this._options = t),
@@ -27,7 +27,7 @@ class h {
             (this._outcomes = {}),
             (this._hooks = {}),
             (this._eventProcessors = []),
-            t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : R.X && _.kg.warn("No DSN provided, client will not send events."),
+            t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : u.X && _.kg.warn("No DSN provided, client will not send events."),
             this._dsn)
         ) {
             let e = (0, I.U)(this._dsn, t.tunnel, t._metadata ? t._metadata.sdk : void 0);
@@ -41,7 +41,7 @@ class h {
     }
     captureException(t, e, a) {
         let r = (0, n.DM)();
-        if ((0, n.YO)(t)) return R.X && _.kg.log(p), r;
+        if ((0, n.YO)(t)) return u.X && _.kg.log(p), r;
         let o = {
             event_id: r,
             ...e,
@@ -54,12 +54,12 @@ class h {
                 ...a,
             },
             i = (0, o.Le)(t) ? t : String(t),
-            c = (0, o.pt)(t) ? this.eventFromMessage(i, e, _) : this.eventFromException(t, _);
-        return this._process(c.then((t) => this._captureEvent(t, _, r))), _.event_id;
+            E = (0, o.pt)(t) ? this.eventFromMessage(i, e, _) : this.eventFromException(t, _);
+        return this._process(E.then((t) => this._captureEvent(t, _, r))), _.event_id;
     }
     captureEvent(t, e, a) {
         let r = (0, n.DM)();
-        if (e && e.originalException && (0, n.YO)(e.originalException)) return R.X && _.kg.log(p), r;
+        if (e && e.originalException && (0, n.YO)(e.originalException)) return u.X && _.kg.log(p), r;
         let o = {
                 event_id: r,
                 ...e,
@@ -69,8 +69,8 @@ class h {
     }
     captureSession(t) {
         "string" != typeof t.release
-            ? R.X && _.kg.warn("Discarded session because of missing or non-string release")
-            : (this.sendSession(t), (0, A.CT)(t, { init: !1 }));
+            ? u.X && _.kg.warn("Discarded session because of missing or non-string release")
+            : (this.sendSession(t), (0, T.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -111,20 +111,20 @@ class h {
     }
     sendEvent(t, e = {}) {
         this.emit("beforeSendEvent", t, e);
-        let a = (0, d.Mq)(t, this._dsn, this._options._metadata, this._options.tunnel);
-        for (let t of e.attachments || []) a = (0, c.BO)(a, (0, c.zQ)(t));
+        let a = (0, A.Mq)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        for (let t of e.attachments || []) a = (0, E.BO)(a, (0, E.zQ)(t));
         let r = this.sendEnvelope(a);
         r && r.then((e) => this.emit("afterSendEvent", t, e), null);
     }
     sendSession(t) {
-        let e = (0, d.Q3)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        let e = (0, A.Q3)(t, this._dsn, this._options._metadata, this._options.tunnel);
         this.sendEnvelope(e);
     }
     recordDroppedEvent(t, e, a) {
         if (this._options.sendClientReports) {
             let r = "number" == typeof a ? a : 1,
                 n = `${t}:${e}`;
-            R.X && _.kg.log(`Recording outcome: "${n}"${r > 1 ? ` (${r} times)` : ""}`),
+            u.X && _.kg.log(`Recording outcome: "${n}"${r > 1 ? ` (${r} times)` : ""}`),
                 (this._outcomes[n] = (this._outcomes[n] || 0) + r);
         }
     }
@@ -144,8 +144,8 @@ class h {
     }
     sendEnvelope(t) {
         return (this.emit("beforeEnvelope", t), this._isEnabled() && this._transport)
-            ? this._transport.send(t).then(null, (t) => (R.X && _.kg.error("Error while sending event:", t), t))
-            : (R.X && _.kg.error("Transport disabled"), (0, i.WD)({}));
+            ? this._transport.send(t).then(null, (t) => (u.X && _.kg.error("Error while sending event:", t), t))
+            : (u.X && _.kg.error("Transport disabled"), (0, i.WD)({}));
     }
     _setupIntegrations() {
         let { integrations: t } = this._options;
@@ -165,7 +165,7 @@ class h {
             }
         let n = "ok" === t.status;
         ((n && 0 === t.errors) || (n && a)) &&
-            ((0, A.CT)(t, {
+            ((0, T.CT)(t, {
                 ...(a && { status: "crashed" }),
                 errors: t.errors || Number(r || a),
             }),
@@ -184,7 +184,7 @@ class h {
     _isEnabled() {
         return !1 !== this.getOptions().enabled && void 0 !== this._transport;
     }
-    _prepareEvent(t, e, a, r = (0, u.aF)()) {
+    _prepareEvent(t, e, a, r = (0, R.aF)()) {
         let _ = this.getOptions(),
             n = Object.keys(this._integrations);
         return (
@@ -200,7 +200,7 @@ class h {
                 if (!(t.contexts && t.contexts.trace) && e) {
                     let { traceId: a, spanId: r, parentSpanId: _, dsc: n } = e;
                     (t.contexts = {
-                        trace: (0, E.Jr)({
+                        trace: (0, c.Jr)({
                             trace_id: a,
                             span_id: r,
                             parent_span_id: _,
@@ -208,7 +208,7 @@ class h {
                         ...t.contexts,
                     }),
                         (t.sdkProcessingMetadata = {
-                            dynamicSamplingContext: n || (0, T._l)(a, this),
+                            dynamicSamplingContext: n || (0, d._l)(a, this),
                             ...t.sdkProcessingMetadata,
                         });
                 }
@@ -220,7 +220,7 @@ class h {
         return this._processEvent(t, e, a).then(
             (t) => t.event_id,
             (t) => {
-                R.X && ("log" === t.logLevel ? _.kg.log(t.message) : _.kg.warn(t));
+                u.X && ("log" === t.logLevel ? _.kg.log(t.message) : _.kg.warn(t));
             },
         );
     }
@@ -228,11 +228,11 @@ class h {
         let r = this.getOptions(),
             { sampleRate: _ } = r,
             n = P(t),
-            c = O(t),
-            E = t.type || "error",
-            l = `before send for type \`${E}\``,
+            E = h(t),
+            c = t.type || "error",
+            l = `before send for type \`${c}\``,
             I = void 0 === _ ? void 0 : (0, f.o)(_);
-        if (c && "number" == typeof I && Math.random() > I)
+        if (E && "number" == typeof I && Math.random() > I)
             return (
                 this.recordDroppedEvent("sample_rate", "error", t),
                 (0, i.$2)(
@@ -242,13 +242,13 @@ class h {
                     ),
                 )
             );
-        let u = "replay_event" === E ? "replay" : E,
-            R = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
-        return this._prepareEvent(t, e, a, R)
+        let R = "replay_event" === c ? "replay" : c,
+            u = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
+        return this._prepareEvent(t, e, a, u)
             .then((a) => {
                 if (null === a)
                     throw (
-                        (this.recordDroppedEvent("event_processor", u, t),
+                        (this.recordDroppedEvent("event_processor", R, t),
                         new s.b("An event processor returned `null`, will not send event.", "log"))
                     );
                 return e.data && !0 === e.data.__sentry__
@@ -270,7 +270,7 @@ class h {
                       })(
                           (function (t, e, a, r) {
                               let { beforeSend: _, beforeSendTransaction: n, beforeSendSpan: o } = e;
-                              if (O(a) && _) return _(a, r);
+                              if (h(a) && _) return _(a, r);
                               if (P(a)) {
                                   if (a.spans && o) {
                                       let e = [];
@@ -298,7 +298,7 @@ class h {
             })
             .then((r) => {
                 if (null === r) {
-                    if ((this.recordDroppedEvent("before_send", u, t), n)) {
+                    if ((this.recordDroppedEvent("before_send", R, t), n)) {
                         let e = 1 + (t.spans || []).length;
                         this.recordDroppedEvent("before_send", "span", e);
                     }
@@ -358,22 +358,22 @@ Reason: ${t}`))
         );
     }
     _flushOutcomes() {
-        R.X && _.kg.log("Flushing outcomes...");
+        u.X && _.kg.log("Flushing outcomes...");
         let t = this._clearOutcomes();
         if (0 === t.length) {
-            R.X && _.kg.log("No outcomes to send");
+            u.X && _.kg.log("No outcomes to send");
             return;
         }
         if (!this._dsn) {
-            R.X && _.kg.log("No dsn provided, will not send outcomes");
+            u.X && _.kg.log("No dsn provided, will not send outcomes");
             return;
         }
-        R.X && _.kg.log("Sending outcomes:", t);
+        u.X && _.kg.log("Sending outcomes:", t);
         let e = (0, l.y)(t, this._options.tunnel && (0, r.RA)(this._dsn));
         this.sendEnvelope(e);
     }
 }
-function O(t) {
+function h(t) {
     return void 0 === t.type;
 }
 function P(t) {

@@ -14,9 +14,9 @@ var r = n(951288),
     f = n(979232),
     h = n(373370),
     x = n(110560),
-    j = n(667105),
-    b = n(35215),
-    _ = n(46140),
+    b = n(667105),
+    _ = n(35215),
+    j = n(46140),
     v = n(215023),
     C = n(388032),
     y = n(165016);
@@ -90,7 +90,7 @@ let T = (e) => {
                 let n = null == (e = t.config.ctaConfig) ? void 0 : e.buttonLabel;
                 return null != n
                     ? n
-                    : (0, p.pO)(t) || t.config.features.includes(_.S7.NON_GAMING_PLAY_QUEST)
+                    : (0, p.pO)(t) || t.config.features.includes(j.S7.NON_GAMING_PLAY_QUEST)
                       ? C.intl.string(C.t.hvVgAZ)
                       : C.intl.string(C.t.lwQdjB);
             })();
@@ -152,7 +152,7 @@ let T = (e) => {
                 onGameSheetClosed: l,
             } = e,
             { applications: c } = s;
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(_.Z, {
             quest: t,
             sourceQuestContent: n,
             applications: null != c ? c : [],
@@ -182,8 +182,8 @@ let T = (e) => {
                 useReducedMotion: m,
                 isExpanded: h,
                 className: x,
-                ctaLabel: b,
-                onClick: _,
+                ctaLabel: _,
+                onClick: j,
                 questContent: S = g.jn.QUEST_BAR_V2,
                 sourceQuestContent: T,
             } = e,
@@ -218,7 +218,7 @@ let T = (e) => {
                 "sourceQuestContent",
             ]);
         let P = (null == (t = u.userStatus) ? void 0 : t.completedAt) != null,
-            N = (0, j.hf)({
+            N = (0, b.hf)({
                 quest: u,
                 questContent: S,
                 sourceQuestContent: T,
@@ -226,7 +226,7 @@ let T = (e) => {
             A = s.useCallback(
                 (e) => {
                     var t;
-                    null == _ || _(e),
+                    null == j || j(e),
                         (0, p.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   tab: v.AW.ORBS,
@@ -235,7 +235,7 @@ let T = (e) => {
                               })
                             : N();
                 },
-                [_, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
+                [j, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
             ),
             { shouldUseShinyButton: R } = f.Z.useConfig({ location: (0, d._b)(T) + "- CtaButton" });
         return R
@@ -254,7 +254,7 @@ let T = (e) => {
                           },
                           w,
                       ),
-                      { children: null != b ? b : C.intl.string(C.t.cfY4PE) },
+                      { children: null != _ ? _ : C.intl.string(C.t.cfY4PE) },
                   ),
               )
             : (0, r.jsx)(
@@ -264,7 +264,7 @@ let T = (e) => {
                           {
                               fullWidth: !0,
                               onClick: A,
-                              text: null != b ? b : C.intl.string(C.t.cfY4PE),
+                              text: null != _ ? _ : C.intl.string(C.t.cfY4PE),
                           },
                           w,
                       ),
@@ -289,32 +289,32 @@ let T = (e) => {
                 onGameSheetClosed: h,
             } = e,
             x = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            j = (0, p.q8)(n),
-            b = d !== g.LI.SELECT && !l && !c,
-            _ = null;
+            b = (0, p.q8)(n),
+            _ = d !== g.LI.SELECT && !l && !c,
+            j = null;
         return (
             x
-                ? (_ = (0, r.jsx)(A, {
+                ? (j = (0, r.jsx)(A, {
                       quest: n,
                       sourceQuestContent: s,
                       useReducedMotion: o,
                       isExpanded: a,
                   }))
-                : j
-                  ? (_ = (0, r.jsx)(S, {
+                : b
+                  ? (j = (0, r.jsx)(S, {
                         quest: n,
                         sourceQuestContent: s,
                         taskDetails: u,
                     }))
                   : (0, p.Rt)(n)
-                    ? (_ = (0, r.jsx)(P, { quest: n }))
+                    ? (j = (0, r.jsx)(P, { quest: n }))
                     : d === g.LI.CONSOLE && i
-                      ? (_ = (0, r.jsx)(w, {
+                      ? (j = (0, r.jsx)(w, {
                             quest: n,
                             sourceQuestContent: s,
                         }))
-                      : b && (0, p.Pb)(n)
-                        ? (_ = (0, r.jsx)(N, {
+                      : _ && (0, p.Pb)(n)
+                        ? (j = (0, r.jsx)(N, {
                               quest: n,
                               sourceQuestContent: s,
                               taskDetails: u,
@@ -322,16 +322,16 @@ let T = (e) => {
                               onGameSheetOpened: f,
                               onGameSheetClosed: h,
                           }))
-                        : b &&
-                          (_ = (0, r.jsx)(T, {
+                        : _ &&
+                          (j = (0, r.jsx)(T, {
                               quest: n,
                               sourceQuestContent: s,
                           })),
-            null == _
+            null == j
                 ? null
                 : (0, r.jsx)("div", {
                       className: y.cta,
-                      children: _,
+                      children: j,
                   })
         );
     };

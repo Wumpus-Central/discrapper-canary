@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => v }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(793030),
@@ -17,19 +17,19 @@ var i = n(793030),
     b = n(166805),
     x = n(981631),
     j = n(388032),
-    v = n(566945);
-let _ = function () {
+    _ = n(566945);
+let v = function () {
     let { analyticsLocations: e } = (0, o.ZP)(s.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
         t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = (0, l.e7)([d.Z], () => null != t && d.Z.can(x.Plq.MANAGE_GUILD, t)),
-        _ = (0, c.E)(t),
-        C = (0, a.l9)(null != t ? t : void 0);
+        v = (0, c.E)(t),
+        O = (0, a.l9)(null != t ? t : void 0);
     return null == t
         ? null
         : (0, r.jsx)(o.Gt, {
               value: e,
               children: (0, r.jsxs)("main", {
-                  className: v.container,
+                  className: _.container,
                   children: [
                       (0, r.jsxs)("div", {
                           children: [
@@ -42,43 +42,43 @@ let _ = function () {
                                   variant: "text-sm/medium",
                                   color: "header-secondary",
                                   tag: "p",
-                                  className: v.description,
+                                  className: _.description,
                                   children: j.intl.string(j.t.XCGZFk),
                               }),
                           ],
                       }),
-                      !0 === C &&
+                      !0 === O &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(f.P, {
                                       canManageGuild: n,
                                       features: t.features,
                                   }),
-                                  (0, r.jsx)("div", { className: v.divider }),
+                                  (0, r.jsx)("div", { className: _.divider }),
                               ],
                           }),
                       (0, r.jsx)(h.l, {
                           canManageGuild: n,
                           guild: t,
                       }),
-                      void 0 !== _ &&
+                      void 0 !== v &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)("div", { className: v.divider }),
+                                  (0, r.jsx)("div", { className: _.divider }),
                                   (0, r.jsx)(g.q, {
-                                      isInventoryFeedEnabled: _,
+                                      isInventoryFeedEnabled: v,
                                       canManageGuild: n,
                                       features: t.features,
                                   }),
                               ],
                           }),
-                      (0, r.jsx)("div", { className: v.divider }),
+                      (0, r.jsx)("div", { className: _.divider }),
                       (0, r.jsx)(m.z, {
                           guildId: t.id,
                           defaultSettings: t.defaultMessageNotifications,
                           canManageGuild: n,
                       }),
-                      (0, r.jsx)("div", { className: v.divider }),
+                      (0, r.jsx)("div", { className: _.divider }),
                       (0, r.jsx)(p.L, {
                           canManageGuild: n,
                           guild: t,
@@ -86,7 +86,7 @@ let _ = function () {
                       !0 === n &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)("div", { className: v.divider }),
+                                  (0, r.jsx)("div", { className: _.divider }),
                                   (0, r.jsx)(b.P, { guildId: t.id }),
                               ],
                           }),

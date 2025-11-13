@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(944486),
     v = n(455199),
     j = n(655354),
-    C = n(324081),
-    x = n(240126),
+    x = n(324081),
+    C = n(240126),
     E = n(981631),
     S = n(388032),
     I = n(889833);
@@ -63,13 +63,13 @@ function Z(e) {
             everyoneFilter: v.ZP.everyoneFilter,
         })),
         j = (0, m.Us)({ location: "RecentMentions" }),
-        C = (0, d.Z)(f),
-        x = (0, d.Z)(b),
+        x = (0, d.Z)(f),
+        C = (0, d.Z)(b),
         P = (0, d.Z)(y);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != C && f !== C) || (null != x && b !== x) || (null != P && y !== P)) && N(n, !0);
-    }, [C, f, x, b, P, y, n, !0]),
+        ((null != x && f !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
+    }, [x, f, C, b, P, y, n, !0]),
         (0, u.ZP)(() => {
             (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
@@ -127,7 +127,7 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 channel: l,
                 gotoChannel: n,
                 children:
@@ -171,7 +171,7 @@ function T(e) {
     });
 }
 function A() {
-    return (0, r.jsx)(x.Z, {
+    return (0, r.jsx)(C.Z, {
         Icon: s.lOy,
         header: S.intl.string(S.t.bgDz74),
         tip: S.intl.string(S.t.NS15vk),

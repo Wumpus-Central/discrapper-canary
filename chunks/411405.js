@@ -80,7 +80,7 @@ let I = (e) => {
             children: m.intl.string(m.t["F+x38C"]),
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
         return (0, r.jsx)("div", {
             className: o()(g.explicitContentWarning, t),
@@ -103,7 +103,7 @@ let I = (e) => {
                   }),
         });
     },
-    T = (e) => {
+    S = (e) => {
         let { reason: t = p.wk.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
         switch (t) {
             case p.wk.SPOILER:
@@ -111,12 +111,12 @@ let I = (e) => {
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
             case p.wk.SELF_HARM_CONTENT:
-                return (0, r.jsx)(S, {
+                return (0, r.jsx)(T, {
                     isSingleMosaicItem: i,
                     className: n,
                 });
             case p.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return (0, r.jsx)(S, {
+                return (0, r.jsx)(T, {
                     isSingleMosaicItem: i,
                     className: n,
                     obscureOnly: !0,
@@ -195,7 +195,7 @@ class N extends i.PureComponent {
                               children: [
                                   E || t
                                       ? null
-                                      : (0, r.jsx)(T, {
+                                      : (0, r.jsx)(S, {
                                             reason: s,
                                             isSingleMosaicItem: c,
                                         }),
@@ -228,7 +228,7 @@ class N extends i.PureComponent {
                               children: [
                                   E || t
                                       ? null
-                                      : (0, r.jsx)(T, {
+                                      : (0, r.jsx)(S, {
                                             reason: s,
                                             isSingleMosaicItem: c,
                                         }),
@@ -273,7 +273,7 @@ class N extends i.PureComponent {
                           children: [
                               h
                                   ? null
-                                  : (0, r.jsx)(T, {
+                                  : (0, r.jsx)(S, {
                                         reason: s,
                                         isSingleMosaicItem: i,
                                     }),
@@ -303,7 +303,7 @@ class N extends i.PureComponent {
                           children: [
                               h
                                   ? null
-                                  : (0, r.jsx)(T, {
+                                  : (0, r.jsx)(S, {
                                         reason: s,
                                         className: g.embed,
                                     }),

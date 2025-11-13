@@ -19,24 +19,24 @@ function j() {
     let e,
         t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, b.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        v = i.useRef(null),
-        _ = (0, u.Z)(null != t ? t : void 0);
+        _ = i.useRef(null),
+        v = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
         null != t && (0, g.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let C =
+    let O =
         (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE)) === !1 &&
         (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j
                 ? (0, r.jsx)(s.$jN, {})
-                : null != _
+                : null != v
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
-                        config: _,
+                        config: v,
                     })
-                  : C
+                  : O
                     ? (0, r.jsx)(f.Z, { guild: t })
                     : (0, r.jsx)(m.Z, {
                           guild: t,
@@ -49,10 +49,10 @@ function j() {
                 children: (0, r.jsx)(s.w0Z, {
                     className: x.settingsScroller,
                     children: (0, r.jsx)("main", {
-                        ref: v,
+                        ref: _,
                         className: x.settingsContent,
                         children: (0, r.jsx)(s.JcV, {
-                            containerRef: v,
+                            containerRef: _,
                             children: e,
                         }),
                     }),

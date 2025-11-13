@@ -11,9 +11,9 @@ var i = n(657707),
     d = n(626135),
     p = n(63063),
     f = n(382791),
-    m = n(474936),
-    h = n(981631),
-    g = n(388032),
+    h = n(474936),
+    g = n(981631),
+    m = n(388032),
     _ = n(605548);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -59,10 +59,10 @@ function E(e, t) {
     );
 }
 function O(e) {
-    var t, n, O, I;
-    let y,
+    var t, n, O, y;
+    let v,
         {
-            componentId: v,
+            componentId: I,
             content: C,
             renderModalProps: S,
             analyticsLocations: T,
@@ -71,25 +71,25 @@ function O(e) {
         } = e,
         P = "AnnouncementModalVariant1_".concat(l.z[Number(C.dismissKey)]),
         { onClose: x } = S,
-        A = null != (I = null == (t = C.button) ? void 0 : t.copy) ? I : g.intl.string(g.t.YScQSF),
+        A = null != (y = null == (t = C.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSF),
         Z =
             (null == (n = C.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
     switch (null == (O = C.button) ? void 0 : O.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
-            y = () => {
-                (0, u.uL)(h.Z5c.APPLICATION_STORE), x();
+            v = () => {
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), x();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
-            y = () =>
+            v = () =>
                 (0, c.Z)({
-                    subscriptionTier: m.Si.TIER_1,
+                    subscriptionTier: h.Si.TIER_1,
                     analyticsLocations: T,
                     analyticsObject: E(b({}, N), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.AnalyticsObjectTypes.TIER_1,
+                        object: g.qAy.BUTTON_CTA,
+                        objectType: g.AnalyticsObjectTypes.TIER_1,
                     }),
                     onClose: (e) => {
                         e && x();
@@ -99,13 +99,13 @@ function O(e) {
         case a.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         case a.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:
-            y = () =>
+            v = () =>
                 (0, c.Z)({
-                    subscriptionTier: m.Si.TIER_2,
+                    subscriptionTier: h.Si.TIER_2,
                     analyticsLocations: T,
                     analyticsObject: E(b({}, N), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.AnalyticsObjectTypes.TIER_2,
+                        object: g.qAy.BUTTON_CTA,
+                        objectType: g.AnalyticsObjectTypes.TIER_2,
                     }),
                     onClose: (e) => {
                         e && x();
@@ -121,7 +121,7 @@ function O(e) {
                               (0, r.jsx)(o.Anchor, {
                                   className: _.termsApplyAnchor,
                                   href: p.Z.getArticleURL(C.helpArticleId),
-                                  children: g.intl.string(g.t["sBp+u0"]),
+                                  children: m.intl.string(m.t["sBp+u0"]),
                               }),
                           ],
                       })
@@ -150,7 +150,7 @@ function O(e) {
                   })
             : void 0;
     return {
-        componentId: v,
+        componentId: I,
         renderModalProps: S,
         header: C.header,
         modalTopExtra: R,
@@ -171,13 +171,13 @@ function O(e) {
                 variant: "expressive",
                 size: "md",
                 onClick: () => {
-                    d.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
                         cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: P,
                     }),
-                        y();
+                        v();
                 },
                 text: A,
                 icon: i.SrA,

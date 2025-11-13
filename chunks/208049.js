@@ -1,10 +1,10 @@
 n.d(t, {
     $d: () => P,
-    AA: () => w,
+    AA: () => D,
     Db: () => G,
     Dx: () => R,
     R: () => k,
-    TB: () => D,
+    TB: () => w,
     XE: () => M,
     hs: () => x,
     w: () => N,
@@ -157,14 +157,14 @@ async function P(e) {
         });
     return (0, _.o3)(l.body, t);
 }
-async function w(e, t) {
+async function D(e, t) {
     await a.tn.del({
         url: g.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
         oldFormErrors: !0,
         rejectWithError: !1,
     });
 }
-function D(e) {
+function w(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>

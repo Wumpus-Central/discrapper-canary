@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(264418),
@@ -11,26 +11,26 @@ var i = n(264418),
     d = n(474936),
     p = n(921944),
     f = n(388032),
-    m = n(288541);
-let h = (e) => {
-    let { targetElementRef: t, discountOffer: h, premiumSubscription: g, dismissCoachmark: _, children: b } = e,
+    h = n(288541);
+let g = (e) => {
+    let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: _, children: b } = e,
         { analyticsLocations: E } = (0, s.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
-        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, h, g),
-        I = (0, r.jsx)(i.Z, {
+        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
+        y = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }).toString(),
+            title: f.intl.format(f.t["3yZP0G"], { percent: g.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: O,
-                billingPeriod: (0, o.JP)(h.discount.user_usage_limit_interval),
-                numMonths: h.discount.user_usage_limit,
+                billingPeriod: (0, o.JP)(g.discount.user_usage_limit_interval),
+                numMonths: g.discount.user_usage_limit,
             }),
             graphic: {
                 type: "image",
-                src: m.Z,
+                src: h.Z,
             },
             gradientColor: "nitro-pink",
             actions: [
@@ -74,7 +74,7 @@ let h = (e) => {
                                         })({}, t)),
                                         (i = i =
                                             {
-                                                premiumSubscription: g,
+                                                premiumSubscription: m,
                                                 analyticsLocations: E,
                                                 initialStep: u.R.CONFIRM_DISCOUNT,
                                             }),
@@ -103,6 +103,6 @@ let h = (e) => {
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: b }), I],
+        children: [(0, r.jsx)("div", { children: b }), y],
     });
 };

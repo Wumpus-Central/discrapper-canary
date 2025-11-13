@@ -5,7 +5,7 @@ n.d(t, {
     ZP: () => H,
     bn: () => G,
     cI: () => U,
-    cv: () => D,
+    cv: () => w,
     f0: () => L,
     gE: () => M,
     og: () => j,
@@ -144,7 +144,7 @@ let m = new (n(499303).I)(),
         null != e.prevFatigableCandidate &&
         e.candidates.has(e.prevFatigableCandidate.content) &&
         null == e.shownFatigableCandidate,
-    w = (e) => {
+    D = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > g;
         return P(e) && !t
@@ -162,7 +162,7 @@ let m = new (n(499303).I)(),
                   }, 250),
               e);
     },
-    D = () => x(y.getState()),
+    w = () => x(y.getState()),
     x = (e) => {
         let t = new Date().getTime();
         return null == e.shownFatigableCandidate && t - e.lastWinnerTime < E;
@@ -172,7 +172,7 @@ let m = new (n(499303).I)(),
         (0, a.j)(() => {
             y.setState((n) => {
                 let r = v(n);
-                return O ? r : t ? T(r, e) : w(S(r, e));
+                return O ? r : t ? T(r, e) : D(S(r, e));
             });
         });
     },
@@ -180,7 +180,7 @@ let m = new (n(499303).I)(),
         (0, a.j)(() => {
             y.setState((n) => {
                 let r = v(n);
-                return t ? w(I(A(r, e), e)) : I(A(r, e), e);
+                return t ? D(I(A(r, e), e)) : I(A(r, e), e);
             });
         });
     },

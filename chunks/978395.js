@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(166584),
     R = n(915014),
     P = n(228168),
-    w = n(981631),
-    D = n(671955),
+    D = n(981631),
+    w = n(671955),
     x = n(388032),
     L = n(116649);
 function M(e) {
@@ -74,7 +74,7 @@ function M(e) {
                 pronouns: null == M ? void 0 : M.pronouns,
                 tags: (0, r.jsx)(p.Z, {
                     displayProfile: M,
-                    themeType: D.l.POPOUT,
+                    themeType: w.l.POPOUT,
                     onClose: B,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -89,7 +89,7 @@ function M(e) {
                     ],
                 }),
             }),
-            F === w.OGo.PENDING_INCOMING &&
+            F === D.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(v.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,

@@ -22,8 +22,8 @@ var r = n(442837),
     d = n(915486),
     p = n(48481),
     f = n(981631),
-    m = n(71509);
-function h(e, t) {
+    h = n(71509);
+function g(e, t) {
     let n = !1;
     return (
         null == e.userContent &&
@@ -38,8 +38,8 @@ function h(e, t) {
         n
     );
 }
-function g(e, t, n) {
-    return !!c.qc.hasHiddenHotspot(t) && h(e, n);
+function m(e, t, n) {
+    return !!c.qc.hasHiddenHotspot(t) && g(e, n);
 }
 let _ = [
     {
@@ -97,7 +97,7 @@ let _ = [
             return (
                 (!0 === s.K.get("HAS_SEEN_HUB_UPSELL") ||
                     c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) &&
-                    (t = h(e, i.z.HUB_WAITLIST_UPSELL)),
+                    (t = g(e, i.z.HUB_WAITLIST_UPSELL)),
                 t
             );
         },
@@ -167,19 +167,19 @@ let _ = [
     },
     {
         version: 7,
-        run: (e) => g(e, c.v6.APPLICATION_COMMAND_TOOLTIP, i.z.APPLICATION_COMMAND_TOOLTIP),
+        run: (e) => m(e, c.v6.APPLICATION_COMMAND_TOOLTIP, i.z.APPLICATION_COMMAND_TOOLTIP),
         cleanup() {},
     },
     {
         version: 8,
-        run: (e) => g(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, i.z.CHANNELINFO_CHANNELBANNER_NOTICE),
+        run: (e) => m(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, i.z.CHANNELINFO_CHANNELBANNER_NOTICE),
         cleanup() {},
     },
     {
         version: 9,
         run: (e) => (
-            c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(m.Ip, "true"),
-            g(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)
+            c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(h.Ip, "true"),
+            m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)
         ),
         cleanup() {},
     },
@@ -187,12 +187,12 @@ let _ = [
         version: 10,
         run(e) {
             var t;
-            let n = g(e, c.v6.HUB_LINK_CHANNEL_NOTICE, i.z.CHANNEL_NOTICE_HUBLINK),
+            let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, i.z.CHANNEL_NOTICE_HUBLINK),
                 r = null != (t = s.K.get("channelNotices")) ? t : {};
             return (
-                !1 === r[f.vID.INVITE] && h(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0),
-                !1 === r[f.vID.QUICKSWITCHER] && h(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0),
-                !1 === r[f.vID.GUILD_BOOSTING] && h(e, i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0),
+                !1 === r[f.vID.INVITE] && g(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0),
+                !1 === r[f.vID.QUICKSWITCHER] && g(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0),
+                !1 === r[f.vID.GUILD_BOOSTING] && g(e, i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0),
                 n
             );
         },
@@ -205,8 +205,8 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                g(e, c.v6.GUILD_EVENT_UPSELL, i.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0),
-                g(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) &&
+                m(e, c.v6.GUILD_EVENT_UPSELL, i.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0),
+                m(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) &&
                     (t = !0),
                 t
             );
@@ -218,9 +218,9 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                s.K.get("hideNag") && h(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
-                s.K.get("hideConnectSpotify") && h(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
-                s.K.get("hideConnectPlayStation") && h(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
+                s.K.get("hideNag") && g(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
+                s.K.get("hideConnectSpotify") && g(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
+                s.K.get("hideConnectPlayStation") && g(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
                 t
             );
         },
@@ -233,11 +233,11 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                s.K.get("hidePremiumPromo") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
+                s.K.get("hidePremiumPromo") && g(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
                 s.K.get("hidePremiumTier2TrialEnding") &&
-                    h(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
+                    g(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
                     (t = !0),
-                s.K.get("hidePremiumReactivateNotice") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
+                s.K.get("hidePremiumReactivateNotice") && g(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
                 t
             );
         },
@@ -249,12 +249,12 @@ let _ = [
     },
     {
         version: 14,
-        run: (e) => g(e, c.v6.ACTIVITY_BEB_TUTORIAL, i.z.ACTIVITIES_TUTORIAL_COACH_MARK),
+        run: (e) => m(e, c.v6.ACTIVITY_BEB_TUTORIAL, i.z.ACTIVITIES_TUTORIAL_COACH_MARK),
         cleanup() {},
     },
     {
         version: 15,
-        run: (e) => g(e, c.v6.NOW_PLAYING_CONSENT_CARD, i.z.NOW_PLAYING_CONSENT_CARD),
+        run: (e) => m(e, c.v6.NOW_PLAYING_CONSENT_CARD, i.z.NOW_PLAYING_CONSENT_CARD),
         cleanup() {},
     },
     {
@@ -297,8 +297,8 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                g(e, c.v6.GUILD_DELETE_FEEDBACK, i.z.GUILD_DELETE_FEEDBACK) && (t = !0),
-                g(e, c.v6.GUILD_LEAVE_FEEDBACK, i.z.GUILD_LEAVE_FEEDBACK) && (t = !0),
+                m(e, c.v6.GUILD_DELETE_FEEDBACK, i.z.GUILD_DELETE_FEEDBACK) && (t = !0),
+                m(e, c.v6.GUILD_LEAVE_FEEDBACK, i.z.GUILD_LEAVE_FEEDBACK) && (t = !0),
                 t
             );
         },
@@ -310,7 +310,7 @@ let _ = [
             var t;
             let n = !1;
             return (
-                null != (t = s.K.get("forumHelperCardStorageKey")) && t && (n = h(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n
+                null != (t = s.K.get("forumHelperCardStorageKey")) && t && (n = g(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n
             );
         },
         cleanup() {

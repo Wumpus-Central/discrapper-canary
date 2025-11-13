@@ -76,12 +76,12 @@ function E(e) {
             preview: v,
             author: I,
         } = e,
-        S = null != O ? O : (0, l.k)(n),
-        T = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        T = null != O ? O : (0, l.k)(n),
+        S = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: A } = (0, u.Z)(n, {
             hideSimpleEmbedContent: b,
-            allowList: T,
-            allowHeading: T,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -90,10 +90,10 @@ function E(e) {
                 (0, f.Z)(
                     g(h({}, e), {
                         channel: a,
-                        guildId: S,
+                        guildId: T,
                     }),
                 ),
-            [e, a, S],
+            [e, a, T],
         );
     return (0, r.jsx)(c.Z, {
         compact: p,

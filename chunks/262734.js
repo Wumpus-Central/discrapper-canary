@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(350810),
     p = n(988980),
     f = n(835473),
-    m = n(358221),
-    h = n(740492),
-    g = n(871499),
+    h = n(358221),
+    g = n(740492),
+    m = n(871499),
     _ = n(786915),
     b = n(944486),
     E = n(48131),
     O = n(214143),
-    I = n(610278),
-    y = n(408491),
-    v = n(981631),
+    y = n(610278),
+    v = n(408491),
+    I = n(981631),
     C = n(918559),
     S = n(388032),
     T = n(909357);
@@ -35,8 +35,8 @@ function j(e) {
             selectedChannelId: b.Z.getChannelId(),
             selectedVoiceChannelId: b.Z.getVoiceChannelId(),
         })),
-        x = (0, s.e7)([m.Z], () => null != P && j === P && m.Z.getChatOpen(P), [j, P]),
-        A = (0, s.e7)([h.ZP], () => h.ZP.callChatSidebarWidth),
+        x = (0, s.e7)([h.Z], () => null != P && j === P && h.Z.getChatOpen(P), [j, P]),
+        A = (0, s.e7)([g.ZP], () => g.ZP.callChatSidebarWidth),
         Z = (0, u.dQu)(o.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
         L = i.useRef(null),
@@ -47,7 +47,7 @@ function j(e) {
         M = i.useCallback(() => {
             E.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
-                layoutMode: y.U.PIP,
+                layoutMode: v.U.PIP,
             });
         }, [t.applicationId]),
         k = i.useCallback(() => {
@@ -71,7 +71,7 @@ function j(e) {
                     l ||
                     E.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
-                        layoutMode: y.U.PIP,
+                        layoutMode: v.U.PIP,
                     });
             };
             return (
@@ -94,10 +94,10 @@ function j(e) {
     }
     let V = C.MI.NO_CHAT;
     if (null == n) return null;
-    let F = (null != A ? A : v.$Y6) + Z,
-        z = (0, I.ro)(t);
+    let F = (null != A ? A : I.$Y6) + Z,
+        z = (0, y.ro)(t);
     return (0, r.jsx)(u.f6W, {
-        theme: v.BRd.DARK,
+        theme: I.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: a()(T.wrapper, N[V], e),
@@ -125,7 +125,7 @@ function j(e) {
                         className: T.footer,
                         children: [
                             (0, r.jsx)(_.Z, {
-                                appContext: v.IlC.APP,
+                                appContext: I.IlC.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,
                                 isRichPresenceInvite: !0,
@@ -140,7 +140,7 @@ function j(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: T.buttonSection,
-                                        children: (0, r.jsx)(g.d, {
+                                        children: (0, r.jsx)(m.d, {
                                             isTrayButton: !0,
                                             label: S.intl.string(S.t.brPQ5U),
                                             onClick: M,
@@ -148,7 +148,7 @@ function j(e) {
                                             themeable: !0,
                                         }),
                                     }),
-                                    (0, r.jsx)(g.d, {
+                                    (0, r.jsx)(m.d, {
                                         isTrayButton: !1,
                                         label: S.intl.string(S.t["R/FK4A"]),
                                         onClick: k,

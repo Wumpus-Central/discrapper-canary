@@ -1,36 +1,36 @@
 n.d(t, { Z: () => d }), n(388685);
-var i = n(951288),
-    l = n(647438),
-    r = n(481060),
-    a = n(626135),
-    o = n(827498),
-    s = n(915346),
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(626135),
+    s = n(827498),
+    l = n(915346),
     c = n(981631),
     u = n(388032);
 function d(e) {
     let { botUserId: t, applicationId: n, analyticsLocations: d } = e,
-        [p, m] = l.useState(!1),
-        f = l.useRef(null),
-        h = l.useCallback(async () => {
-            a.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+        [f, _] = i.useState(!1),
+        p = i.useRef(null),
+        h = i.useCallback(async () => {
+            o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
-                button_action: o._y.OPEN_APP_DM,
+                button_action: s._y.OPEN_APP_DM,
             }),
-                m(!0);
+                _(!0);
             try {
-                await (0, s.W)({
+                await (0, l.W)({
                     appId: n,
                     botId: t,
                     analyticsLocations: d,
                 });
             } catch (e) {}
-            clearTimeout(f.current), m(!1);
+            clearTimeout(p.current), _(!1);
         }, [t, n, d]);
-    return (0, i.jsx)(r.Button, {
+    return (0, r.jsx)(a.Button, {
         type: "submit",
         size: "md",
         variant: "secondary",
-        loading: p,
+        loading: f,
         onClick: h,
         "aria-label": u.intl.string(u.t.AUM8hY),
         text: u.intl.string(u.t.AUM8hY),

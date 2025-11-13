@@ -1,102 +1,102 @@
-t.d(n, { Z: () => u }), t(388685), t(539854);
-var l = t(951288),
-    r = t(647438),
-    i = t(692547),
-    a = t(481060),
-    o = t(596454),
-    s = t(388032),
-    c = t(870269);
-function d(e) {
+n.d(t, { Z: () => d }), n(388685), n(539854);
+var l = n(951288),
+    i = n(647438),
+    r = n(692547),
+    o = n(481060),
+    a = n(596454),
+    c = n(388032),
+    s = n(870269);
+function u(e) {
     return null != e && (null != e.id || null != e.name);
 }
-function u(e) {
-    let { options: n, value: t, onChange: u, canBeNew: m, memberCounts: h } = e,
-        p = r.useMemo(() => {
+function d(e) {
+    let { options: t, value: n, onChange: d, canBeNew: m, memberCounts: p } = e,
+        h = i.useMemo(() => {
             let e = new Map();
             return (
-                n.forEach((n) => {
-                    e.set(n.id, n);
+                t.forEach((t) => {
+                    e.set(t.id, t);
                 }),
                 e
             );
-        }, [n]),
-        f = r.useMemo(() => {
+        }, [t]),
+        f = i.useMemo(() => {
             let e = [];
             return (
-                n.forEach((n) => {
+                t.forEach((t) => {
                     e.push({
-                        value: n.id,
-                        label: n.title,
-                        key: n.id,
+                        value: t.id,
+                        label: t.title,
+                        key: t.id,
                     });
                 }),
                 e
             );
-        }, [n]),
-        g = r.useCallback(
+        }, [t]),
+        g = i.useCallback(
             (e) => {
-                var n, t, r, i;
+                var t, n, i, r;
                 if (null == e) return;
-                let a = p.get(e.value);
-                if (null != a && d(a.emoji))
-                    return (0, l.jsx)(o.Z, {
-                        emojiId: null == (n = a.emoji) ? void 0 : n.id,
-                        emojiName: null == (t = a.emoji) ? void 0 : t.name,
-                        animated: null != (i = null == (r = a.emoji) ? void 0 : r.animated) && i,
+                let o = h.get(e.value);
+                if (null != o && u(o.emoji))
+                    return (0, l.jsx)(a.Z, {
+                        emojiId: null == (t = o.emoji) ? void 0 : t.id,
+                        emojiName: null == (n = o.emoji) ? void 0 : n.name,
+                        animated: null != (r = null == (i = o.emoji) ? void 0 : i.animated) && r,
                     });
             },
-            [p],
+            [h],
         ),
-        x = r.useCallback(
-            (e, n) => {
-                if (null == e || n.inPill) return;
-                let t = p.get(e.value);
-                if (null == t || !d(t.emoji)) return;
-                let r = null == h || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => h[e])),
-                    o = null != h && r > 0;
+        j = i.useCallback(
+            (e, t) => {
+                if (null == e || t.inPill) return;
+                let n = h.get(e.value);
+                if (null == n || !u(n.emoji)) return;
+                let i = null == p || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => p[e])),
+                    a = null != p && i > 0;
                 return (0, l.jsxs)("div", {
-                    className: c.suffix,
+                    className: s.suffix,
                     children: [
                         m &&
-                            t.isUnseen &&
-                            (0, l.jsx)(a.IGR, {
-                                color: i.Z.unsafe_rawColors.BRAND_260.css,
-                                text: s.intl.string(s.t.y2b7CA),
-                                className: c.newBadge,
+                            n.isUnseen &&
+                            (0, l.jsx)(o.IGR, {
+                                color: r.Z.unsafe_rawColors.BRAND_260.css,
+                                text: c.intl.string(c.t.y2b7CA),
+                                className: s.newBadge,
                             }),
-                        o &&
+                        a &&
                             (0, l.jsx)("div", {
-                                className: c.memberCount,
+                                className: s.memberCount,
                                 "data-hover": !0,
-                                children: (0, l.jsx)(a.Text, {
+                                children: (0, l.jsx)(o.Text, {
                                     variant: "text-xs/normal",
                                     color: "always-white",
-                                    children: s.intl.format(s.t.EgKsZA, { memberCount: r }),
+                                    children: c.intl.format(c.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),
                     ],
                 });
             },
-            [m, h, p],
+            [m, p, h],
         ),
-        _ = r.useCallback(
+        v = i.useCallback(
             (e) => {
-                let n = [];
+                let t = [];
                 e.forEach((e) => {
-                    let t = p.get(e);
-                    null != t && n.push(t);
+                    let n = h.get(e);
+                    null != n && t.push(n);
                 }),
-                    u(n);
+                    d(t);
             },
-            [u, p],
+            [d, h],
         );
-    return (0, l.jsx)(a.VcW, {
+    return (0, l.jsx)(o.VcW, {
         multi: !0,
         options: f,
-        onChange: _,
-        value: t,
+        onChange: v,
+        value: n,
         closeOnSelect: !1,
-        renderOptionSuffix: x,
+        renderOptionSuffix: j,
         renderOptionPrefix: g,
     });
 }

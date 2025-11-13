@@ -1,4 +1,4 @@
-r.d(t, { Z: () => P }), r(314940);
+r.d(t, { Z: () => S }), r(314940);
 var n = r(951288),
     i = r(647438),
     l = r(120356),
@@ -35,7 +35,7 @@ let f = [
             showStatus: !0,
         },
     ],
-    S = (e) => {
+    P = (e) => {
         let { purchase: t } = e,
             r = (0, o.e7)([h.default], () => h.default.locale),
             i = (0, u.qS)(t),
@@ -90,28 +90,28 @@ let f = [
             ],
         });
     },
-    P = (e) => {
+    S = (e) => {
         let { user: t, guildId: r, avatarDecoration: l, className: h } = e,
             g = (0, o.e7)([x.Z], () => x.Z.getStatus(t.id)),
-            { product: P, purchase: b } = (0, d.Z)(null == l ? void 0 : l.skuId),
-            E = v.ZP.canUseCollectibles(t),
-            I = (0, u.qS)(b),
-            C = (0, u.G1)(P),
-            A = !E && I,
-            w = (0, p.M)(!C || E),
-            T = (0, m.kd)(P),
+            { product: S, purchase: b } = (0, d.Z)(null == l ? void 0 : l.skuId),
+            I = v.ZP.canUseCollectibles(t),
+            E = (0, u.qS)(b),
+            C = (0, u.G1)(S),
+            A = !I && E,
+            T = (0, p.M)(!C || I),
+            w = (0, m.kd)(S),
             Z = i.useMemo(
                 () =>
                     A
                         ? y.intl.string(y.t["7vkeu5"])
-                        : (0, a.EQ)([C, E, w])
+                        : (0, a.EQ)([C, I, T])
                               .with([!0, !0, !1], () => y.intl.string(y.t.hmyYK8))
                               .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFn))
                               .with([!0, !1, !1], () => y.intl.string(y.t["0xs2sA"]))
                               .otherwise(() => y.intl.string(y.t.fEGjVQ)),
-                [A, C, E, w],
+                [A, C, I, T],
             );
-        return null != P && (null == b || A)
+        return null != S && (null == b || A)
             ? (0, n.jsxs)("div", {
                   className: s()(O.modalPreview, O.shopPreviewContainer, h),
                   children: [
@@ -128,7 +128,7 @@ let f = [
                           children: [
                               (0, n.jsx)(c.Text, {
                                   variant: "text-sm/semibold",
-                                  children: T,
+                                  children: w,
                               }),
                               (0, n.jsx)(c.Text, {
                                   variant: "text-sm/normal",
@@ -175,7 +175,7 @@ let f = [
                               }),
                           ],
                       }),
-                      null != b && (0, n.jsx)(S, { purchase: b }),
+                      null != b && (0, n.jsx)(P, { purchase: b }),
                   ],
               });
     };

@@ -89,9 +89,9 @@ function b(e) {
         O = i.useRef(null),
         v = i.useRef(null),
         I = i.useRef(null),
-        [S, T] = i.useState(!1);
+        [T, S] = i.useState(!1);
     i.useLayoutEffect(() => {
-        T(!0);
+        S(!0);
     }, []),
         i.useLayoutEffect(() => {
             var e;
@@ -138,6 +138,6 @@ function b(e) {
     });
     return (0, r.jsxs)("div", {
         ref: O,
-        children: [(0, r.jsx)("div", { ref: v }), n, a && S ? P : null],
+        children: [(0, r.jsx)("div", { ref: v }), n, a && T ? P : null],
     });
 }

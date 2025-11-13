@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => w,
+    ZP: () => D,
     fD: () => R,
 }),
     n(388685),
@@ -90,7 +90,7 @@ function P(e) {
         ? (o.K.set(N, e), h.ZP.setEnableHardwareAcceleration(!0))
         : h.ZP.setEnableHardwareAcceleration(e);
 }
-function w() {
+function D() {
     let [e] = i.useState(() => R()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
@@ -131,8 +131,8 @@ function w() {
             });
         }, []),
         {
-            warpEnabled: w,
-            warpConnecting: D,
+            warpEnabled: D,
+            warpConnecting: w,
             warpLog: x,
         } = (0, a.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
@@ -223,10 +223,10 @@ function w() {
                             (0, r.jsx)(s.rsf, {
                                 label: "Enable WARP",
                                 description: "Enable WARP Proxy Connection",
-                                checked: w,
+                                checked: D,
                                 onChange: L,
                             }),
-                            D ? (0, r.jsx)(s.$jN, {}) : null,
+                            w ? (0, r.jsx)(s.$jN, {}) : null,
                             (0, r.jsx)(s.Text, {
                                 variant: "code",
                                 children: x.map((e, t) => (0, r.jsx)("div", { children: JSON.stringify(e) }, t)),

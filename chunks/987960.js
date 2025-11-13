@@ -35,9 +35,9 @@ function h(e, t, n) {
         N = (0, o.P)(C),
         R = h.key === t.selectionManager.focusedKey,
         P = null != t.selectionManager.focusedKey,
-        w = -1;
-    T || (!R && P) || (w = 0);
-    let D = (0, s.z)(h.props),
+        D = -1;
+    T || (!R && P) || (D = 0);
+    let w = (0, s.z)(h.props),
         x = (0, l.fU)(h.props),
         { focusableProps: L } = (0, d.kc)({ isDisabled: T }, n);
     return {
@@ -48,8 +48,8 @@ function h(e, t, n) {
             id: g,
             onPress: () => (E ? E(new Set([h.key])) : null),
         },
-        rowProps: (0, c.d)(L, b, D, x, {
-            tabIndex: w,
+        rowProps: (0, c.d)(L, b, w, x, {
+            tabIndex: D,
             onKeyDown: E ? S : void 0,
             "aria-describedby": N["aria-describedby"],
         }),

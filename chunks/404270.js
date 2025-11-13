@@ -21,11 +21,11 @@ let x = (e) => {
         i = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         x = (0, a.e7)([o.default], () => o.default.locale),
         j = (0, a.e7)([u.Z], () => u.Z.getPremiumTypeSubscription()),
-        v = (0, a.e7)([d.Z], () => (null != j ? d.Z.get(j.planId) : void 0)),
-        _ =
+        _ = (0, a.e7)([d.Z], () => (null != j ? d.Z.get(j.planId) : void 0)),
+        v =
             null !=
             (t = (0, a.e7)([d.Z], () =>
-                null != v ? d.Z.getForSkuAndInterval((0, m.Wz)(f.Si.GUILD), v.interval, v.intervalCount) : void 0,
+                null != _ ? d.Z.getForSkuAndInterval((0, m.Wz)(f.Si.GUILD), _.interval, _.intervalCount) : void 0,
             ))
                 ? t
                 : f.GP[f.Xh.PREMIUM_MONTH_GUILD];
@@ -80,9 +80,9 @@ let x = (e) => {
                 })({
                     currentUser: i,
                     locale: x,
-                    guildBoostingPlanId: _.id,
-                    interval: _.interval,
-                    intervalCount: _.intervalCount,
+                    guildBoostingPlanId: v.id,
+                    interval: v.interval,
+                    intervalCount: v.intervalCount,
                 }),
             }),
         ],

@@ -1,7 +1,7 @@
 n.d(t, { default: () => T }), n(388685), n(953529);
 var a = n(951288),
-    r = n(647438),
-    i = n(772848),
+    i = n(647438),
+    r = n(772848),
     l = n(793030),
     s = n(704215),
     o = n(481060),
@@ -17,7 +17,7 @@ var a = n(951288),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(153177),
+    _ = n(760902),
     y = n(388032),
     C = n(70402),
     S = n(736056);
@@ -46,13 +46,13 @@ function E(e) {
 }
 let T = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: O } = e,
-        [N, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = r.useRef(N),
+        [N, P] = i.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        I = i.useRef(N),
         [w, k] = (0, c.US)([N], void 0, !0),
-        R = r.useMemo(() => (0, i.Z)(), []),
-        A = r.useRef(!1),
+        R = i.useMemo(() => (0, r.Z)(), []),
+        A = i.useRef(!1),
         Z = (0, m.GE)();
-    r.useEffect(() => {
+    i.useEffect(() => {
         I.current = w;
     }, [w]);
     let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
@@ -65,7 +65,7 @@ let T = function (e) {
         classificationId: O,
     });
     return (
-        r.useLayoutEffect(
+        i.useLayoutEffect(
             () => () => {
                 if (A.current) return;
                 let e = I.current;
@@ -78,7 +78,7 @@ let T = function (e) {
             },
             [],
         ),
-        r.useEffect(() => {
+        i.useEffect(() => {
             (0, g.lA)(R, g.d_.EXPRESSIVE_PRIMARY, n);
         }, [R, n]),
         (0, a.jsx)(l.ExpressiveModal, {
@@ -156,7 +156,7 @@ let T = function (e) {
                               direction: "vertical",
                               gap: 8,
                               children: L.map((e) => {
-                                  let { title: t, description: n, onClick: r } = e;
+                                  let { title: t, description: n, onClick: i } = e;
                                   return (0, a.jsx)(
                                       d.JZ,
                                       {
@@ -164,7 +164,7 @@ let T = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: D,
-                                          onButtonPress: () => r(R),
+                                          onButtonPress: () => i(R),
                                       },
                                       t,
                                   );

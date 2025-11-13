@@ -9,7 +9,7 @@ var i = n(442837),
     s = n(623132),
     u = n(34335),
     d = n(112794);
-function g(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function g(e) {
     }
     return e;
 }
-function f(e) {
+function g(e) {
     var { games: t, user: n, widgetType: i } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -66,7 +66,7 @@ function f(e) {
                 {
                     children: (0, r.jsx)(
                         s.Z,
-                        g(
+                        f(
                             {
                                 index: t,
                                 user: n,
@@ -96,8 +96,8 @@ function p(e) {
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
-                    f,
-                    ((t = g({}, e)),
+                    g,
+                    ((t = f({}, e)),
                     (n = n = { games: j }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

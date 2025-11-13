@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -11,13 +11,13 @@ var i = n(442837),
     d = n(51144),
     p = n(665149),
     f = n(981631),
-    m = n(388032);
-let h = new Set(["ko", "ja"]);
-function g(e) {
+    h = n(388032);
+let g = new Set(["ko", "ja"]);
+function m(e) {
     let { className: t, focusSectionProps: n } = e,
-        g = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        m = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
         _ = (0, i.e7)([s.default], () => s.default.locale),
-        b = (0, d.EO)(g);
+        b = (0, d.EO)(m);
     return (0, r.jsx)(a.Anchor, {
         href: u.w,
         target: "_blank",
@@ -54,8 +54,8 @@ function g(e) {
                     className: t,
                     onClick: () => c.default.track(f.rMx.HELP_CLICKED, { highlighted: b }),
                     icon: a.idN,
-                    tooltipPosition: h.has(_) ? "left" : void 0,
-                    tooltip: m.intl.string(m.t["cqEoj/"]),
+                    tooltipPosition: g.has(_) ? "left" : void 0,
+                    tooltip: h.intl.string(h.t["cqEoj/"]),
                 },
                 n,
             ),

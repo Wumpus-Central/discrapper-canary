@@ -39,7 +39,7 @@ let C = {},
     N = {},
     R = {},
     P = 0;
-function w(e) {
+function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = C[e];
     if (null != n) return n;
@@ -54,7 +54,7 @@ function w(e) {
               checkElevated: t,
           }));
 }
-function D(e) {
+function w(e) {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = I.default.getCurrentUser();
@@ -64,7 +64,7 @@ function D(e) {
     let o = i.getGuildId(),
         s = null != o && (u.Z.isLurking(o) || (null == (t = O.ZP.getMember(o, r.id)) ? void 0 : t.isPending));
     return !i.isScheduledForDeletion() && !s && a().isEmpty(i.permissionOverwrites) && null != o
-        ? w(o)
+        ? D(o)
         : b.uB({
               user: r,
               context: i,
@@ -74,7 +74,7 @@ function D(e) {
 function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = N[e];
-    return null != n ? n : (N[e] = D(e, t));
+    return null != n ? n : (N[e] = w(e, t));
 }
 function L(e) {
     if (null != e) {
@@ -195,7 +195,7 @@ function Q(e, t, n, r) {
             return null == i ? b.Hn : b.Og(e, Q(i, t, n, r), f.Z.hasJoined(e.id));
         }
         i = x(e.id);
-    } else (0, E.lM)(e) && (i = w(e.id));
+    } else (0, E.lM)(e) && (i = D(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? b.uB({
               user: I.default.getCurrentUser(),
@@ -212,10 +212,10 @@ class J extends (r = s.ZP.Store) {
         this.waitFor(y.Z, O.ZP, v.Z, c.Z, f.Z, u.Z, d.Z, I.default);
     }
     getChannelPermissions(e) {
-        return p.Ec.has(e.type) ? D(e.id) : x(e.id);
+        return p.Ec.has(e.type) ? w(e.id) : x(e.id);
     }
     getGuildPermissions(e) {
-        return w(e.id);
+        return D(e.id);
     }
     getGuildPermissionProps(e) {
         let t = I.default.getCurrentUser();
@@ -239,10 +239,10 @@ class J extends (r = s.ZP.Store) {
         };
     }
     canAccessMemberSafetyPage(e) {
-        return o.Db(w(e.id), S.N);
+        return o.Db(D(e.id), S.N);
     }
     canAccessGuildSettings(e) {
-        return o.Db(w(e.id), b.ym);
+        return o.Db(D(e.id), b.ym);
     }
     canWithPartialContext(e, t) {
         return "channelId" in t && "string" == typeof t.channelId

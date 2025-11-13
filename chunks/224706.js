@@ -27,8 +27,8 @@ var r = n(664751),
     N = n(58642),
     R = n(254854),
     P = n(981631),
-    w = n(701488),
-    D = n(388032);
+    D = n(701488),
+    w = n(388032);
 let x = 3,
     L = 20,
     M = new f.Z("GamesActionCreators");
@@ -37,7 +37,7 @@ function j(e) {
         applicationId: t,
         secret: n,
         channelId: r,
-        intent: i = w.Ws.PLAY,
+        intent: i = D.Ws.PLAY,
         embedded: a = !1,
         source: o,
         locationObject: s,
@@ -197,7 +197,7 @@ async function G(e) {
                   });
               })
               .catch((e) => {
-                  R.Z.show(P.kVF.LAUNCH_GAME_FAILURE, D.intl.string(D.t.YZEBdj)),
+                  R.Z.show(P.kVF.LAUNCH_GAME_FAILURE, w.intl.string(w.t.YZEBdj)),
                       l.Z.dispatch({
                           type: "GAME_LAUNCH_FAIL",
                           applicationId: t,
@@ -424,7 +424,7 @@ let B = {
             applicationId: r,
             channelId: i,
             messageId: a,
-            intent: o = w.Ws.PLAY,
+            intent: o = D.Ws.PLAY,
             embedded: s = !1,
             source: c,
             locationObject: u,

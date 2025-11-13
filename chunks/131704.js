@@ -6,7 +6,7 @@ n.d(t, {
     Em: () => K,
     Gz: () => ef,
     Km: () => R,
-    Lr: () => D,
+    Lr: () => w,
     Q5: () => Y,
     Qm: () => U,
     Sf: () => em,
@@ -17,14 +17,14 @@ n.d(t, {
     Y0: () => X,
     _H: () => eG,
     bc: () => j,
-    bw: () => w,
+    bw: () => D,
     createChannelRecord: () => eB,
     dF: () => q,
     dy: () => eL,
     hv: () => L,
     iR: () => ei,
     jD: () => ek,
-    mn: () => ew,
+    mn: () => eD,
     nl: () => eg,
     oj: () => N,
     ov: () => J,
@@ -179,10 +179,10 @@ function R(e) {
 }
 m.d4z.GUILD_TEXT, m.d4z.GUILD_ANNOUNCEMENT, m.d4z.GUILD_FORUM, m.d4z.GUILD_MEDIA;
 let P = new Set([m.d4z.GUILD_VOICE, m.d4z.GUILD_STAGE_VOICE]);
-function w(e) {
+function D(e) {
     return "SELECTABLE" !== e && P.has(e);
 }
-let D = new Set([m.d4z.GUILD_STAGE_VOICE]),
+let w = new Set([m.d4z.GUILD_STAGE_VOICE]),
     x = new Set([m.d4z.DM, m.d4z.GROUP_DM]);
 function L(e) {
     return x.has(e);
@@ -347,10 +347,10 @@ function el(e) {
 let ec = u.$e(m.Plq.CONNECT, m.Plq.VIEW_CHANNEL),
     eu = m.S7T.CONNECT | m.S7T.VIEW_CHANNEL;
 function ed(e) {
-    return w(e) ? ec : m.Plq.VIEW_CHANNEL;
+    return D(e) ? ec : m.Plq.VIEW_CHANNEL;
 }
 function ef(e) {
-    return w(e) ? eu : m.S7T.VIEW_CHANNEL;
+    return D(e) ? eu : m.S7T.VIEW_CHANNEL;
 }
 class e_ {
     constructor(e) {
@@ -535,7 +535,7 @@ class em extends e_ {
         return B(this.type);
     }
     isGuildVocal() {
-        return w(this.type);
+        return D(this.type);
     }
     isGuildVocalOrThread() {
         return this.isGuildVocal() || this.isVocalThread();
@@ -952,14 +952,14 @@ class eN {
 }
 let eR = new eN(),
     eP = new eN();
-class ew extends em {
+class eD extends em {
     static sortRecipients(e, t) {
         let n = eR.getOrCompute(t);
         return [...(null != e ? e : [])].sort((e, t) => (eP.getOrCompute(e.id) ^ n) - (eP.getOrCompute(t.id) ^ n));
     }
     static fromServer(e) {
         var t, n;
-        let r = ew.sortRecipients(e.recipients, e.id),
+        let r = eD.sortRecipients(e.recipients, e.id),
             i = {
                 application_id: e.application_id,
                 flags_: e.flags,
@@ -981,7 +981,7 @@ class ew extends em {
                 blockedUserWarningDismissed: e.blocked_user_warning_dismissed,
                 type: null != e.type ? e.type : m.d4z.DM,
             };
-        return (0, d.gh)(i, ew);
+        return (0, d.gh)(i, eD);
     }
     isSystemDM() {
         let e = this.rawRecipients[0];
@@ -1019,15 +1019,15 @@ class ew extends em {
             (this.lastPinTimestamp = e.lastPinTimestamp),
             (this.nicks = e.nicks),
             (this.ownerId = e.ownerId),
-            (this.rawRecipients = ew.sortRecipients(e.rawRecipients, this.id)),
+            (this.rawRecipients = eD.sortRecipients(e.rawRecipients, this.id)),
             (this.recipients = [...(null != (t = e.recipients) ? t : [])].sort(h.default.compare)),
             (this.recipientFlags = e.recipientFlags),
             (this.safetyWarnings = null != (n = e.safetyWarnings) ? n : []),
             (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
     }
 }
-class eD extends ew {}
-class ex extends ew {}
+class ew extends eD {}
+class ex extends eD {}
 class eL extends em {
     static fromServer(e, t) {
         var n, r, i, a, o;
@@ -1100,8 +1100,8 @@ class eL extends em {
     }
 }
 let eM = {
-    [m.d4z.DM]: ew.fromServer,
-    [m.d4z.GROUP_DM]: ew.fromServer,
+    [m.d4z.DM]: eD.fromServer,
+    [m.d4z.GROUP_DM]: eD.fromServer,
     [m.d4z.GUILD_TEXT]: eb.fromServer,
     [m.d4z.GUILD_VOICE]: eE.fromServer,
     [m.d4z.GUILD_STAGE_VOICE]: eE.fromServer,
@@ -1123,7 +1123,7 @@ function ek(e) {
     return eB(e);
 }
 let eU = {
-    [m.d4z.DM]: eD,
+    [m.d4z.DM]: ew,
     [m.d4z.GROUP_DM]: ex,
     [m.d4z.GUILD_TEXT]: eS,
     [m.d4z.GUILD_VOICE]: eA,

@@ -79,16 +79,16 @@ function b() {
                     }),
                 ],
             }),
-        S = () => {
+        T = () => {
             if (c.isPlatformEmbedded)
                 return (0, r.jsx)(a.rsf, {
                     label: h.intl.string(h.t["PKDAJ/"]),
                     description: h.intl.string(h.t.ZPi4lM),
                     checked: t,
-                    onChange: (e) => T("autoToggle", e),
+                    onChange: (e) => S("autoToggle", e),
                 });
         },
-        T = (e, t) => {
+        S = (e, t) => {
             o.Z.update({ [e]: t });
         },
         A = () => {
@@ -112,9 +112,9 @@ function b() {
                                 label: h.intl.string(h.t.p9ZAJZ),
                                 description: h.intl.format(h.t.MLVL2M, { onClick: A }),
                                 checked: e,
-                                onChange: (e) => T("enabled", e),
+                                onChange: (e) => S("enabled", e),
                             }),
-                            S(),
+                            T(),
                             (0, r.jsx)(a.izJ, {}),
                         ],
                     }),
@@ -129,7 +129,7 @@ function b() {
                                 label: h.intl.string(h.t.UpQziA),
                                 description: h.intl.string(h.t["+9Lra7"]),
                                 checked: b,
-                                onChange: (e) => T("hidePersonalInformation", e),
+                                onChange: (e) => S("hidePersonalInformation", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -138,7 +138,7 @@ function b() {
                                 label: h.intl.string(h.t.q7WNGv),
                                 description: h.intl.string(h.t.m7mS2U),
                                 checked: g,
-                                onChange: (e) => T("hideInstantInvites", e),
+                                onChange: (e) => S("hideInstantInvites", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -147,7 +147,7 @@ function b() {
                                 label: h.intl.string(h.t.o56OZu),
                                 description: h.intl.string(h.t.eAkaik),
                                 checked: y,
-                                onChange: (e) => T("disableSounds", e),
+                                onChange: (e) => S("disableSounds", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -156,7 +156,7 @@ function b() {
                                 label: h.intl.string(h.t.qmYiYd),
                                 description: h.intl.string(h.t["ZAmpQ/"]),
                                 checked: O,
-                                onChange: (e) => T("disableNotifications", e),
+                                onChange: (e) => S("disableNotifications", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -165,7 +165,7 @@ function b() {
                                 label: h.intl.string(h.t["iA81+a"]),
                                 description: h.intl.string(h.t.P4vj0h),
                                 checked: v,
-                                onChange: (e) => T("enableContentProtection", e),
+                                onChange: (e) => S("enableContentProtection", e),
                             }),
                         }),
                     ],

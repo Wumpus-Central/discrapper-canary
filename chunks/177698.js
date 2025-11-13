@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(998502),
     p = n(996106),
     f = n(703912),
-    m = n(852926),
-    h = n(981631),
-    g = n(388032);
+    h = n(852926),
+    g = n(981631),
+    m = n(388032);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,9 +67,9 @@ let E = (0, f.Z)(
                 parsedPermissions: f,
                 responseType: E,
                 redirectUri: O,
-                codeChallenge: I,
-                codeChallengeMethod: y,
-                state: v,
+                codeChallenge: y,
+                codeChallengeMethod: v,
+                state: I,
                 guildId: C,
                 channelId: S,
                 prompt: T,
@@ -83,7 +83,7 @@ let E = (0, f.Z)(
             w = null != P ? (null == u ? void 0 : u.get(P)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let a = (0, m.jU)(x),
+            let a = (0, h.jU)(x),
                 w = i.z1l;
             null != L &&
             null !=
@@ -92,13 +92,13 @@ let E = (0, f.Z)(
                     channelId: S,
                 })
                 ? (w = i.u1M)
-                : a.context === h.IlC.POPOUT && (w = i.u1M);
+                : a.context === g.IlC.POPOUT && (w = i.u1M);
             let R = !1,
                 D = (l) => {
                     let { clientId: s, location: o } = l;
                     if (null == s || s === n) {
                         if (((R = !0), null == o)) {
-                            t(new p.Z({ errorCode: h.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                            t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 a.lock();
                             return;
                         }
@@ -131,11 +131,11 @@ let E = (0, f.Z)(
                                 (0, r.jsx)(
                                     o.j,
                                     b(_({}, e), {
-                                        title: g.intl.string(g.t.j2d6Km),
-                                        subtitle: g.intl.string(g.t["4LKmN5"]),
+                                        title: m.intl.string(m.t.j2d6Km),
+                                        subtitle: m.intl.string(m.t["4LKmN5"]),
                                         actions: [
                                             {
-                                                text: g.intl.string(g.t.cpT0Cq),
+                                                text: m.intl.string(m.t.cpT0Cq),
                                                 onClick: e.onClose,
                                             },
                                         ],
@@ -164,9 +164,9 @@ let E = (0, f.Z)(
                             callback: D,
                             responseType: E,
                             redirectUri: O,
-                            codeChallenge: I,
-                            codeChallengeMethod: y,
-                            state: v,
+                            codeChallenge: y,
+                            codeChallengeMethod: v,
+                            state: I,
                             permissions: f,
                             guildId: C,
                             channelId: S,
@@ -181,7 +181,7 @@ let E = (0, f.Z)(
                     onCloseCallback: () => {
                         M(),
                             R ||
-                                (t(new p.Z({ errorCode: h.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
+                                (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
                                 a.lock());
                     },
                 },
@@ -190,7 +190,7 @@ let E = (0, f.Z)(
         });
     },
     function (e, t, n) {
-        if ((0, m.br)(n) || !u.isPlatformEmbedded) return;
+        if ((0, h.br)(n) || !u.isPlatformEmbedded) return;
         let r = (0, l.ZP)({
             application: e,
             channelId: t,

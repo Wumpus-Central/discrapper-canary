@@ -68,18 +68,18 @@ function O(e, t) {
 }
 function v() {}
 let I = [h.h8.VOICE_CHANNEL];
-function S(e) {
+function T(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function T(e) {
+function S(e) {
     let { height: t } = e;
     return (0, r.jsx)("div", { style: { height: t } });
 }
 function A() {
-    return (0, r.jsx)(T, { height: 16 }, "footer");
+    return (0, r.jsx)(S, { height: 16 }, "footer");
 }
 function C() {
-    return (0, r.jsx)(T, { height: 8 }, "header");
+    return (0, r.jsx)(S, { height: 8 }, "header");
 }
 function N() {
     return (0, r.jsx)("div", {
@@ -152,7 +152,7 @@ function P(e) {
         }),
     });
 }
-function w() {
+function D() {
     let e = i.useRef(!1),
         t = i.useCallback(() => {
             e.current = !0;
@@ -166,7 +166,7 @@ function w() {
         disableMouseFocus: n,
     };
 }
-function D(e) {
+function w(e) {
     let [t, n] = i.useState(0),
         r = i.useRef(e);
     return (
@@ -184,7 +184,7 @@ function x(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         s = i.useId(),
         c = i.useRef(null),
-        { mouseFocusEnabled: f, enableMouseFocus: p, disableMouseFocus: E } = w(),
+        { mouseFocusEnabled: f, enableMouseFocus: p, disableMouseFocus: E } = D(),
         {
             query: b,
             updateQuery: y,
@@ -192,19 +192,19 @@ function x(e) {
         } = (0, l.Z)({
             visible: !0,
             autocompleterResultTypes: I,
-            autocompleterBeforeCreateSearchContext: S,
+            autocompleterBeforeCreateSearchContext: T,
         }),
         v = R(b),
-        { focusedIndex: T, setFocusedIndex: P } = D(b);
+        { focusedIndex: S, setFocusedIndex: P } = w(b);
     i.useEffect(() => {
         let { current: e } = c;
         null == e ||
-            e.isItemVisible(0, T, !0) ||
+            e.isItemVisible(0, S, !0) ||
             e.scrollToIndex({
                 section: 0,
-                row: T,
+                row: S,
             });
-    }, [T]);
+    }, [S]);
     let x = null != v ? v.length : O.length;
     function L(e) {
         let { row: t } = e,
@@ -222,7 +222,7 @@ function x(e) {
                 id: i.id,
                 channel: i,
                 category: o,
-                focused: T === t,
+                focused: S === t,
                 onMouseEnter: () => f.current && P(t),
                 onClick: () => {
                     a(i.id), n();
@@ -249,26 +249,26 @@ function x(e) {
                     break;
                 case "enter": {
                     let e = (() => {
-                        if (null != v) return v[T];
-                        let e = O[T];
+                        if (null != v) return v[S];
+                        let e = O[S];
                         if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
                     })();
                     null == e ? a(void 0) : a(e.id), n();
                     break;
                 }
                 case "arrowup":
-                    0 === T ? P(x - 1) : P(T - 1);
+                    0 === S ? P(x - 1) : P(S - 1);
                     break;
                 case "arrowdown":
-                    T >= x - 1 ? P(0) : P(T + 1);
+                    S >= x - 1 ? P(0) : P(S + 1);
             }
     }
     let j = (() => {
         if (null != v) {
             var e;
-            return null == (e = v[T]) ? void 0 : e.id;
+            return null == (e = v[S]) ? void 0 : e.id;
         }
-        let t = O[T];
+        let t = O[S];
         if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
     })();
     return (0, r.jsx)(o.IX, {

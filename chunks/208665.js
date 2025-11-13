@@ -12,16 +12,16 @@ var l,
 let g = !1,
     h = null,
     f = [],
-    I = !1,
-    p = [];
-function N() {
+    N = !1,
+    I = [];
+function p() {
     (g = !1),
         (h = null),
-        (p = []),
-        (I = !1),
+        (I = []),
+        (N = !1),
         null != (h = d.Z.getGuildId()) &&
             d.Z.getSection() === u.pNK.ONBOARDING &&
-            ((f = c.Z.getOnboardingPrompts(h)), (I = c.Z.isAdvancedMode(h)));
+            ((f = c.Z.getOnboardingPrompts(h)), (N = c.Z.isAdvancedMode(h)));
 }
 class O extends (r = s.ZP.Store) {
     initialize() {
@@ -45,13 +45,13 @@ class O extends (r = s.ZP.Store) {
         return g;
     }
     get errors() {
-        return p;
+        return I;
     }
     get editedOnboardingPrompts() {
         return f;
     }
     get advancedMode() {
-        return I;
+        return N;
     }
 }
 (l = "displayName") in O
@@ -63,29 +63,29 @@ class O extends (r = s.ZP.Store) {
       })
     : (O[l] = "GuildSettingsOnboardingPromptsStore");
 let E = new O(o.Z, {
-    GUILD_SETTINGS_INIT: N,
-    GUILD_SETTINGS_SET_SECTION: N,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: N,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: N,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: N,
+    GUILD_SETTINGS_INIT: p,
+    GUILD_SETTINGS_SET_SECTION: p,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: p,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: p,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: p,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var t;
-        (p = null != (t = e.errors) ? t : []), (g = !1);
+        (I = null != (t = e.errors) ? t : []), (g = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
         f = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (g = !0), (p = []);
+        (g = !0), (I = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
         var t;
-        p = null != (t = e.errors) ? t : [];
+        I = null != (t = e.errors) ? t : [];
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
         let { mode: t } = e;
-        I = t === m.Un.ONBOARDING_ADVANCED;
+        N = t === m.Un.ONBOARDING_ADVANCED;
     },
 });

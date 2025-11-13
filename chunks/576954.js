@@ -1,6 +1,6 @@
-n.d(t, { M: () => v }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { M: () => _ }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(286379),
     a = n(442837),
     o = n(481060),
@@ -9,88 +9,88 @@ var r = n(951288),
     u = n(819557),
     d = n(138201),
     p = n(699516),
-    f = n(378298),
-    h = n(359119),
+    h = n(378298),
+    f = n(359119),
     m = n(473092),
     g = n(177342),
     b = n(134612),
-    _ = n(981631),
-    y = n(388032);
-function C(e) {
+    y = n(981631),
+    C = n(388032);
+function v(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: o } = (0, a.cj)([p.Z], () => ({ isIgnored: p.Z.isIgnored(t) }), [t]),
-        c = i.useCallback(() => {
+        c = r.useCallback(() => {
             (0, m.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
-                warningType: h.pj.STRANGER_DANGER,
+                warningType: f.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_IGNORE,
             }),
                 s.Z.ignoreUser(t, "web_stranger_danger_more", n);
         }, [n, l, t]),
-        u = i.useCallback(() => {
+        u = r.useCallback(() => {
             (0, m.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
-                warningType: h.pj.STRANGER_DANGER,
+                warningType: f.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_UNIGNORE,
             }),
                 s.Z.unignoreUser(t, "web_stranger_danger_more", n);
         }, [n, l, t]);
-    return (0, r.jsx)(d.JZ, {
-        title: y.intl.string(y.t.avyV7P),
-        description: y.intl.string(y.t.naWE6W),
-        buttonText: o ? y.intl.string(y.t["3SrzRT"]) : y.intl.string(y.t.avyV7P),
+    return (0, i.jsx)(d.JZ, {
+        title: C.intl.string(C.t.avyV7P),
+        description: C.intl.string(C.t.naWE6W),
+        buttonText: o ? C.intl.string(C.t["3SrzRT"]) : C.intl.string(C.t.avyV7P),
         onButtonPress: o ? u : c,
     });
 }
-function v(e) {
-    let { channelId: t, warningId: v, senderId: O } = e,
-        { isBlocked: x } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(O) }), [O]),
-        E = i.useCallback(() => {
-            (0, f.T)(t, [v]);
-        }, [t, v]),
-        j = (0, b.C2)(),
-        S = i.useCallback(
+function _(e) {
+    let { channelId: t, warningId: _, senderId: x } = e,
+        { isBlocked: j } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(x) }), [x]),
+        O = r.useCallback(() => {
+            (0, h.T)(t, [_]);
+        }, [t, _]),
+        E = (0, b.C2)(),
+        S = r.useCallback(
             (e) => () => {
-                s.Z.blockUser(O, { location: b.zr }).then(() => {
-                    E();
+                s.Z.blockUser(x, { location: b.zr }).then(() => {
+                    O();
                 }),
                     (0, m.qc)({
                         channelId: t,
-                        warningId: v,
-                        senderId: O,
-                        warningType: h.pj.STRANGER_DANGER,
+                        warningId: _,
+                        senderId: x,
+                        warningType: f.pj.STRANGER_DANGER,
                         cta: e,
                     });
             },
-            [E, t, v, O],
+            [O, t, _, x],
         );
-    i.useEffect(() => {
-        (0, m.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
+    r.useEffect(() => {
+        (0, m.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
-            warningId: v,
-            senderId: O,
-            warningType: h.pj.STRANGER_DANGER,
+            warningId: _,
+            senderId: x,
+            warningType: f.pj.STRANGER_DANGER,
         }),
             c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [t, v, O]);
+    }, [t, _, x]);
     let P = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("59385").then(n.bind(n, 480884));
                 return (n) => {
-                    let { transitionState: i, onClose: l } = n;
-                    return (0, r.jsx)(e, {
-                        transitionState: i,
+                    let { transitionState: r, onClose: l } = n;
+                    return (0, i.jsx)(e, {
+                        transitionState: r,
                         onClose: l,
                         channelId: t,
-                        warningId: v,
-                        senderId: O,
-                        description: y.intl.string(y.t.DJMZX6),
-                        safetyTipRows: j.map((e, t) =>
-                            (0, r.jsx)(
+                        warningId: _,
+                        senderId: x,
+                        description: C.intl.string(C.t.DJMZX6),
+                        safetyTipRows: E.map((e, t) =>
+                            (0, i.jsx)(
                                 u.q,
                                 {
                                     index: t,
@@ -100,23 +100,23 @@ function v(e) {
                                 t,
                             ),
                         ),
-                        actionRows: (0, r.jsxs)(r.Fragment, {
+                        actionRows: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(
-                                    C,
+                                (0, i.jsx)(
+                                    v,
                                     {
-                                        senderId: O,
+                                        senderId: x,
                                         channelId: t,
-                                        warningId: v,
+                                        warningId: _,
                                     },
                                     "more-tips-button",
                                 ),
-                                (0, r.jsx)(
+                                (0, i.jsx)(
                                     d.JZ,
                                     {
-                                        title: y.intl.string(y.t["5QYPO2"]),
-                                        description: y.intl.string(y.t.G08MKu),
-                                        buttonText: y.intl.string(y.t["5QYPO2"]),
+                                        title: C.intl.string(C.t["5QYPO2"]),
+                                        description: C.intl.string(C.t.G08MKu),
+                                        buttonText: C.intl.string(C.t["5QYPO2"]),
                                         buttonVariant: "critical-primary",
                                         onButtonPress: () => {
                                             l(), I(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P);
@@ -130,50 +130,50 @@ function v(e) {
                 };
             });
         },
-        I = (e, i, l) => {
+        I = (e, r, l) => {
             (0, o.ZDy)(async () => {
                 let { default: a } = await Promise.all([n.e("97652"), n.e("72442")]).then(n.bind(n, 744373));
                 return (n) => {
                     var o, s;
-                    return (0, r.jsx)(
+                    return (0, i.jsx)(
                         a,
                         ((o = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })({}, n)),
                         (s = s =
                             {
-                                userId: O,
+                                userId: x,
                                 confirmBlock: S(e),
                                 onCancel: () => {
                                     null == l || l(),
                                         (0, m.qc)({
                                             channelId: t,
-                                            warningId: v,
-                                            senderId: O,
-                                            warningType: h.pj.STRANGER_DANGER,
-                                            cta: i,
+                                            warningId: _,
+                                            senderId: x,
+                                            warningType: f.pj.STRANGER_DANGER,
+                                            cta: r,
                                         });
                                 },
                             }),
@@ -182,8 +182,8 @@ function v(e) {
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
                                   }
                                   return n;
                               })(Object(s)).forEach(function (e) {
@@ -194,34 +194,34 @@ function v(e) {
                 };
             });
         };
-    return (0, r.jsx)(g.Q, {
+    return (0, i.jsx)(g.Q, {
         channelId: t,
-        warningId: v,
-        senderId: O,
-        warningType: h.pj.STRANGER_DANGER,
-        header: y.intl.string(y.t.iOkDpM),
-        description: y.intl.string(y.t.ISUbcM),
-        onDismiss: E,
+        warningId: _,
+        senderId: x,
+        warningType: f.pj.STRANGER_DANGER,
+        header: C.intl.string(C.t.iOkDpM),
+        description: C.intl.string(C.t.ISUbcM),
+        onDismiss: O,
         buttons: [
             {
-                text: y.intl.string(y.t["Qk/c48"]),
+                text: C.intl.string(C.t["Qk/c48"]),
                 variant: "primary",
                 onClick: () => {
                     P(),
                         (0, m.qc)({
                             channelId: t,
-                            warningId: v,
-                            senderId: O,
-                            warningType: h.pj.STRANGER_DANGER,
+                            warningId: _,
+                            senderId: x,
+                            warningType: f.pj.STRANGER_DANGER,
                             cta: m.NM.OPEN_MORE_TIPS,
                         });
                 },
             },
-            ...(x
+            ...(j
                 ? []
                 : [
                       {
-                          text: y.intl.string(y.t.ie0QdN),
+                          text: C.intl.string(C.t.ie0QdN),
                           variant: "critical-primary",
                           onClick: () => I(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL),
                       },

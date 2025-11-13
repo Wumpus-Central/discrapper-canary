@@ -146,9 +146,9 @@ function T(e) {
         } = e,
         R = (0, d.dQu)(c.Z.colors.TEXT_BRAND).hex(),
         P = (0, d.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        w = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
+        D = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjH) : m.intl.string(m.t["X2K3/4"]));
-    let D = (0, f.Z)(N, C),
+    let w = (0, f.Z)(N, C),
         [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: M, upcomingEvent: j, diffMinutes: k }, U] =
             i.useState((0, _.ub)(t, u));
     i.useEffect(() => {
@@ -167,7 +167,7 @@ function T(e) {
         }));
     let B = i.useMemo(
             () =>
-                n === h.p1.CANCELED || (null == D ? void 0 : D.is_canceled)
+                n === h.p1.CANCELED || (null == w ? void 0 : w.is_canceled)
                     ? 5
                     : n === h.p1.ACTIVE
                       ? 3
@@ -176,7 +176,7 @@ function T(e) {
                         : M
                           ? 2
                           : +!!j,
-            [n, null == D ? void 0 : D.is_canceled, M, j],
+            [n, null == w ? void 0 : w.is_canceled, M, j],
         ),
         Z = y(B, G, p, L, k),
         {
@@ -190,11 +190,11 @@ function T(e) {
                     timeStatus: B,
                     textBrand: R,
                     textPositive: P,
-                    textDanger: w,
+                    textDanger: D,
                     endDateTimeString: L,
                     startDateTimeString: x,
                 }),
-            [B, R, P, w, L, x],
+            [B, R, P, D, L, x],
         ),
         W = null;
     if (null != A) {

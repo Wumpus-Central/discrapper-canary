@@ -14,28 +14,28 @@ var r = n(951288),
 function f(e) {
     var t, n, l;
     let { changeTitle: f, value: h, options: b, className: x, onChange: j } = e,
-        [v, _] = i.useState(h),
-        [C, O] = i.useState(!1),
-        [y, E] = i.useState(!1),
-        N = i.useRef(null);
+        [_, v] = i.useState(h),
+        [O, C] = i.useState(!1),
+        [y, N] = i.useState(!1),
+        E = i.useRef(null);
     i.useEffect(() => {
-        _(h);
+        v(h);
     }, [h]),
         i.useEffect(
             () => () => {
-                clearTimeout(N.current);
+                clearTimeout(E.current);
             },
             [],
         );
-    let I = b.find((e) => e.value === v);
+    let I = b.find((e) => e.value === _);
     return (0, r.jsx)(u.Z, {
-        title: C ? f : null != (t = null == I ? void 0 : I.title) ? t : f,
-        description: C
+        title: O ? f : null != (t = null == I ? void 0 : I.title) ? t : f,
+        description: O
             ? "(".concat(null != (n = null == I ? void 0 : I.title) ? n : m.intl.string(m.t.PoWNfe), ")")
             : null != (l = null == I ? void 0 : I.description)
               ? l
               : "",
-        highlightColor: C ? d.q.NONE : null == I ? void 0 : I.highlightColor,
+        highlightColor: O ? d.q.NONE : null == I ? void 0 : I.highlightColor,
         action: (0, r.jsx)(s.zx, {
             look: s.zx.Looks.LINK,
             size: s.zx.Sizes.MIN,
@@ -51,20 +51,20 @@ function f(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: a()(p.groupCollapsedRow, v === e.value && p.selected),
-                    selected: v === e.value,
+                    className: a()(p.groupCollapsedRow, _ === e.value && p.selected),
+                    selected: _ === e.value,
                     action:
-                        v === e.value
+                        _ === e.value
                             ? (0, r.jsx)(c.Z, { className: p.radioItem })
                             : (0, r.jsx)(o.Z, { className: p.radioItem }),
                     onClick: () => {
                         e.disabled ||
-                            e.value === v ||
-                            (E(!0),
+                            e.value === _ ||
+                            (N(!0),
                             null == j || j(e),
-                            _(e.value),
-                            (N.current = setTimeout(() => {
-                                E(!1), O(!1);
+                            v(e.value),
+                            (E.current = setTimeout(() => {
+                                N(!1), C(!1);
                             }, 1000)));
                     },
                     disabled: e.disabled,
