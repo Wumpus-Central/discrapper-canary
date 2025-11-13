@@ -1,6 +1,8 @@
 e.exports = {
     sectionContainer: "sectionContainer__61424",
     sectionContainerNitroLocked: "sectionContainerNitroLocked__61424",
+    sectionContainerNitroLockedBackground: "sectionContainerNitroLockedBackground__61424",
+    brandRefresh: "brandRefresh__61424",
     sectionHeader: "sectionHeader__61424",
     sectionTitle: "sectionTitle__61424",
     sectionHeaderContent: "sectionHeaderContent__61424",

@@ -1,15 +1,17 @@
-n.d(t, { p: () => p });
+n.d(t, { p: () => m });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(358458),
+    o = n(509442),
     s = n(481060),
     l = n(436774),
-    c = n(767714),
-    u = n(474936),
-    d = n(414239);
-function f(e, t, n) {
+    c = n(597276),
+    u = n(740594),
+    d = n(767714),
+    f = n(474936),
+    _ = n(414239);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +24,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,76 +35,87 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e) {
+function m(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
-            button: f,
-            buttonAnalyticsObject: p,
-            className: h,
-            buttonStyles: m,
-            onSubscribeModalClose: g,
-            showShadow: E = !0,
-            position: b = "floating",
-            buttonSize: y = "md",
-            useLockIcon: O = !1,
+            button: p,
+            buttonAnalyticsObject: m,
+            className: g,
+            buttonStyles: E,
+            onSubscribeModalClose: b,
+            showShadow: y = !0,
+            position: O = "floating",
+            buttonSize: v = "md",
+            useLockIcon: I = !1,
         } = e,
-        v = (0, s.q_F)({
+        T = (0, c.Z)({ location: "PremiumFloatingPickerUpsell" }),
+        S = (0, s.q_F)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: {
                 tension: 120,
                 friction: 14,
             },
-        });
+        }),
+        A = I
+            ? (0, r.jsx)(s.d$P, {
+                  size: "custom",
+                  height: 20,
+                  width: 20,
+                  color: "currentColor",
+                  className: _.lockIcon,
+              })
+            : (0, r.jsx)(s.SrA, {
+                  size: "md",
+                  color: l.JX.PREMIUM_TIER_2,
+              });
     return (0, r.jsxs)(o.animated.div, {
-        style: _({}, v),
+        style: h({}, S),
         className: a()(
-            d.upsellContainer,
+            _.upsellContainer,
             {
-                [d.upsellContainerShadow]: E,
-                [d.upsellContainerFloating]: "floating" === b,
-                [d.upsellContainerInline]: "inline" === b,
+                [_.upsellContainerShadow]: !T && y,
+                [_.upsellContainerFloating]: "floating" === O,
+                [_.upsellContainerInline]: "inline" === O,
             },
-            h,
+            g,
         ),
         children: [
-            O
-                ? (0, r.jsx)(s.d$P, {
-                      size: "custom",
-                      height: 20,
-                      width: 20,
-                      color: "currentColor",
-                      className: d.lockIcon,
-                  })
-                : (0, r.jsx)(s.SrA, {
-                      size: "md",
-                      color: l.JX.PREMIUM_TIER_2,
-                  }),
+            !T && A,
             (0, r.jsx)(s.Text, {
                 variant: null != i ? i : "text-sm/medium",
                 color: "header-primary",
-                className: d.upsellText,
+                className: _.upsellText,
                 children: n,
             }),
-            "string" == typeof f
-                ? (0, r.jsx)(c.Z, {
-                      size: y,
-                      className: d.upsellButton,
-                      shinyButtonClassName: null != m ? m : d.upsellButton,
-                      subscriptionTier: u.Si.TIER_2,
-                      textOptions: { textOverride: f },
-                      premiumModalAnalyticsLocation: p,
-                      tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: g,
-                  })
-                : f,
+            "string" == typeof p
+                ? T
+                    ? (0, r.jsx)(u.Z, {
+                          size: "sm",
+                          subscriptionTier: f.Si.TIER_2,
+                          buttonTextOverride: p,
+                          premiumModalAnalyticsLocation: m,
+                          tabIndex: t ? 0 : -1,
+                          onSubscribeModalClose: b,
+                      })
+                    : (0, r.jsx)(d.Z, {
+                          size: v,
+                          className: _.upsellButton,
+                          shinyButtonClassName: null != E ? E : _.upsellButton,
+                          subscriptionTier: f.Si.TIER_2,
+                          textOptions: { textOverride: p },
+                          premiumModalAnalyticsLocation: m,
+                          tabIndex: t ? 0 : -1,
+                          onSubscribeModalClose: b,
+                      })
+                : p,
         ],
     });
 }

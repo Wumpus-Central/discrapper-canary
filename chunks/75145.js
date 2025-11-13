@@ -69,32 +69,32 @@ function g() {
     );
 }
 let E = function (e) {
-    let { glowOpacity: t, className: n, colorOpacity: i = h } = e;
+    let { glowOpacity: t, className: n, colorOpacity: i = h, enableBrandRefresh: a = !1 } = e;
     return (0, r.jsxs)("div", {
         className: o()(p.nitroTopDividerContainer, n),
         children: [
             (0, r.jsx)("div", { className: p.nitroTopDividerUpper }),
             (0, r.jsx)("div", {
-                style: { opacity: t },
+                style: { opacity: a ? 0 : t },
                 className: p.nitroTopDividerShadow,
             }),
             (0, r.jsxs)("div", {
                 className: p.nitroTopDividerLockContainer,
                 children: [
-                    (0, r.jsx)("div", { className: p.nitroTopDividerLockBorder }),
+                    (0, r.jsx)("div", { className: o()(p.nitroTopDividerLockBorder, { [p.brandRefresh]: a }) }),
                     (0, r.jsx)("div", {
-                        className: p.nitroTopDividerLockCircle,
+                        className: o()(p.nitroTopDividerLockCircle, { [p.brandRefresh]: a }),
                         children: (0, r.jsx)(c.mBM, {
                             size: "xs",
                             color: "white",
                         }),
                     }),
-                    (0, r.jsx)("div", { className: p.nitroTopDividerLockBorderReversed }),
+                    (0, r.jsx)("div", { className: o()(p.nitroTopDividerLockBorderReversed, { [p.brandRefresh]: a }) }),
                 ],
             }),
             (0, r.jsx)("div", {
-                style: { opacity: i },
-                className: p.nitroTopDividerLower,
+                style: { opacity: a ? 1 : i },
+                className: o()(p.nitroTopDividerLower, { [p.brandRefresh]: a }),
             }),
         ],
     });
