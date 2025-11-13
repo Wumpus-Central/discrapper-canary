@@ -1,5 +1,5 @@
 n.d(t, {
-    Vq: () => D,
+    Vq: () => w,
     Xo: () => z,
     qE: () => V,
     qe: () => F,
@@ -10,7 +10,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(358458),
+    s = n(509442),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -156,6 +156,8 @@ function P(e, t, n, r) {
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_48;
             case g.EF.SIZE_56:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_56;
+            case g.EF.SIZE_72:
+                return _.QS.AVATAR_DECORATION_STATUS_TYPING_72;
             case g.EF.SIZE_80:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_80;
             case g.EF.SIZE_96:
@@ -181,6 +183,8 @@ function P(e, t, n, r) {
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_48;
             case g.EF.SIZE_56:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_56;
+            case g.EF.SIZE_72:
+                return _.QS.AVATAR_DECORATION_STATUS_MOBILE_72;
             case g.EF.SIZE_80:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_80;
             case g.EF.SIZE_96:
@@ -205,6 +209,8 @@ function P(e, t, n, r) {
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_48;
         case g.EF.SIZE_56:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_56;
+        case g.EF.SIZE_72:
+            return _.QS.AVATAR_DECORATION_STATUS_ROUND_72;
         case g.EF.SIZE_80:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_80;
         case g.EF.SIZE_96:
@@ -214,7 +220,7 @@ function P(e, t, n, r) {
     }
     return null;
 }
-function w(e, t, n, r) {
+function D(e, t, n, r) {
     if (null == e) return _.QS.AVATAR_DEFAULT;
     if (r)
         switch (t) {
@@ -234,6 +240,8 @@ function w(e, t, n, r) {
                 return _.QS.AVATAR_STATUS_TYPING_48;
             case g.EF.SIZE_56:
                 return _.QS.AVATAR_STATUS_TYPING_56;
+            case g.EF.SIZE_72:
+                return _.QS.AVATAR_STATUS_TYPING_72;
             case g.EF.SIZE_80:
                 return _.QS.AVATAR_STATUS_TYPING_80;
             case g.EF.SIZE_96:
@@ -259,6 +267,8 @@ function w(e, t, n, r) {
                 return _.QS.AVATAR_STATUS_MOBILE_48;
             case g.EF.SIZE_56:
                 return _.QS.AVATAR_STATUS_MOBILE_56;
+            case g.EF.SIZE_72:
+                return _.QS.AVATAR_STATUS_MOBILE_72;
             case g.EF.SIZE_80:
                 return _.QS.AVATAR_STATUS_MOBILE_80;
             case g.EF.SIZE_96:
@@ -283,6 +293,8 @@ function w(e, t, n, r) {
             return _.QS.AVATAR_STATUS_ROUND_48;
         case g.EF.SIZE_56:
             return _.QS.AVATAR_STATUS_ROUND_56;
+        case g.EF.SIZE_72:
+            return _.QS.AVATAR_STATUS_ROUND_72;
         case g.EF.SIZE_80:
             return _.QS.AVATAR_STATUS_ROUND_80;
         case g.EF.SIZE_96:
@@ -297,7 +309,7 @@ function w(e, t, n, r) {
             .concat(n ? "true" : "false"),
     );
 }
-function D(e, t, n) {
+function w(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, u.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
@@ -320,7 +332,7 @@ function x(e, t, n) {
     };
 }
 function L(e, t, n, i) {
-    let a = D(n, i, t, !1),
+    let a = w(n, i, t, !1),
         o = (0, u.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
@@ -531,7 +543,7 @@ function Z(e) {
         A = null == p || h ? void 0 : R(p, E, y),
         C = T.size * m.hs,
         N = P(E, n, y, O),
-        w =
+        D =
             null != v &&
             (0, r.jsx)("svg", {
                 width: C + I,
@@ -569,7 +581,7 @@ function Z(e) {
               onMouseLeave: null != d ? d : void 0,
               "aria-label": A,
               "aria-hidden": h,
-              children: [t, w],
+              children: [t, D],
           })
         : (0, r.jsxs)("div", {
               className: o()(b.wrapper, f),
@@ -580,7 +592,7 @@ function Z(e) {
               role: "img",
               "aria-label": A,
               "aria-hidden": h,
-              children: [t, w],
+              children: [t, D],
           });
 }
 let F = i.forwardRef((e, t) => {
@@ -665,7 +677,7 @@ function V(e) {
                         y: 0,
                         width: V.size,
                         height: V.size,
-                        mask: null != x ? "url(#".concat(K, ")") : "url(#".concat(w(B, a, l, f), ")"),
+                        mask: null != x ? "url(#".concat(K, ")") : "url(#".concat(D(B, a, l, f), ")"),
                         children: (0, r.jsx)(F, {
                             ref: m,
                             src: t,
@@ -688,7 +700,7 @@ function V(e) {
                                       children: [
                                           (0, r.jsx)(
                                               "rect",
-                                              I(O({}, e, D(V, B, l, f)), {
+                                              I(O({}, e, w(V, B, l, f)), {
                                                   fill: W,
                                                   mask: "url(#".concat((0, u.rs)(B, l, f), ")"),
                                                   className: b.pointerEvents,
@@ -752,8 +764,8 @@ function W(e) {
             status: S,
             statusColor: R,
             statusTooltip: P = !1,
-            statusTooltipDelay: w,
-            statusBackdropColor: D,
+            statusTooltipDelay: D,
+            statusBackdropColor: w,
             "aria-hidden": x = !1,
             "aria-label": M,
             imageClassName: k,
@@ -884,14 +896,14 @@ function W(e) {
                             className: k,
                         }),
                     }),
-                    null != D && L(D, f, eu, S),
+                    null != w && L(w, f, eu, S),
                     (0, r.jsx)(d.aM, {
                         "data-migration-pending": !0,
                         text: P ? (0, p.u5)(S) : null,
                         "aria-label": !1,
                         position: "top",
                         spacing: H(eu.status, eu.stroke, f, _),
-                        delay: w,
+                        delay: D,
                         children: (e) =>
                             (0, r.jsxs)(s.animated.g, {
                                 transform: eh.scale.to((e) => "scale(".concat(e, ") ").concat(Y(eu, e, S))),

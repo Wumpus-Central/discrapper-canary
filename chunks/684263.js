@@ -20,7 +20,8 @@ let _ = l.memo(function (e) {
         E = (0, g.O1)(b),
         x = (0, c.ZP)(),
         O = (0, a.ap)(x),
-        S = null != v && null != b && null != _;
+        S = null != v && null != b && null != _,
+        y = S ? o.EFr.SIZE_72 : o.EFr.SIZE_80;
     return (0, r.jsxs)("div", {
         className: s()(h.container, {
             [h.twoItemBundle]: !S,
@@ -55,7 +56,7 @@ let _ = l.memo(function (e) {
                     children: (0, r.jsx)(f.R, {
                         item: E,
                         user: i,
-                        avatarSize: o.EFr.SIZE_80,
+                        avatarSize: y,
                         isPurchased: n,
                         isHighlighted: l,
                         avatarPlaceholderSrc: O ? m : C,

@@ -25,6 +25,7 @@ var s = (function (e) {
             (e.SIZE_44 = "SIZE_44"),
             (e.SIZE_48 = "SIZE_48"),
             (e.SIZE_56 = "SIZE_56"),
+            (e.SIZE_72 = "SIZE_72"),
             (e.SIZE_80 = "SIZE_80"),
             (e.SIZE_96 = "SIZE_96"),
             (e.SIZE_120 = "SIZE_120"),
@@ -89,6 +90,12 @@ let u = Object.freeze({
         status: 14,
         stroke: 4,
         offset: 2,
+    }),
+    SIZE_72: Object.freeze({
+        size: 72,
+        status: 16,
+        stroke: 6,
+        offset: 4,
     }),
     SIZE_80: Object.freeze({
         size: 80,
