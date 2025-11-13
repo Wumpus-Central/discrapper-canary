@@ -1,7 +1,7 @@
 n.d(t, {
-    Kn: () => m,
-    ZP: () => E,
-    fi: () => g,
+    Kn: () => g,
+    ZP: () => b,
+    fi: () => E,
 }),
     n(388685);
 var r = n(951288),
@@ -11,42 +11,43 @@ var r = n(951288),
     s = n(442837),
     l = n(704215),
     c = n(481060),
-    u = n(607070),
-    d = n(243778),
-    f = n(921944),
-    _ = n(388032),
-    p = n(788457);
-let h = 0.2,
-    m = 41;
-function g() {
-    let e = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        [t, a] = (0, d.US)([l.z.TRIAL_NUX_EMOJI_PICKER]),
-        h = t === l.z.TRIAL_NUX_EMOJI_PICKER;
+    u = n(410030),
+    d = n(607070),
+    f = n(243778),
+    _ = n(921944),
+    p = n(388032),
+    h = n(788457);
+let m = 0.2,
+    g = 41;
+function E() {
+    let e = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        [t, a] = (0, f.US)([l.z.TRIAL_NUX_EMOJI_PICKER]),
+        u = t === l.z.TRIAL_NUX_EMOJI_PICKER;
     return (
         i.useEffect(
             () => () => {
-                h && a(f.L.TAKE_ACTION);
+                u && a(_.L.TAKE_ACTION);
             },
-            [h, a],
+            [u, a],
         ),
         (0, r.jsxs)("div", {
-            className: p.nitroTopDividerContainer,
+            className: h.nitroTopDividerContainer,
             children: [
-                (0, r.jsx)("div", { className: p.nitroTopDividerUpper }),
-                (0, r.jsx)("div", { className: o()(p.nitroTopDividerShadow, p.glow, { [p.reducedMotion]: e || !h }) }),
+                (0, r.jsx)("div", { className: h.nitroTopDividerUpper }),
+                (0, r.jsx)("div", { className: o()(h.nitroTopDividerShadow, h.glow, { [h.reducedMotion]: e || !u }) }),
                 (0, r.jsxs)("div", {
-                    className: p.nitroTopDividerLockContainer,
+                    className: h.nitroTopDividerLockContainer,
                     children: [
-                        (0, r.jsx)("div", { className: p.nitroTopDividerLockBorder }),
+                        (0, r.jsx)("div", { className: h.nitroTopDividerLockBorder }),
                         !e &&
-                            h &&
+                            u &&
                             (0, r.jsx)(c.Fmz, {
-                                className: p.premiumUnlockAnimation,
+                                className: h.premiumUnlockAnimation,
                                 loop: !1,
                                 importData: () => n.e("21812").then(n.t.bind(n, 741855, 19)),
                             }),
                         (0, r.jsxs)("div", {
-                            className: o()(p.premiumUnlockedWithNitroPillContainer, { [p.reducedMotion]: e || !h }),
+                            className: o()(h.premiumUnlockedWithNitroPillContainer, { [h.reducedMotion]: e || !u }),
                             children: [
                                 (0, r.jsx)(c.SrA, {
                                     size: "xs",
@@ -56,45 +57,47 @@ function g() {
                                     variant: "text-xs/medium",
                                     color: "always-white",
                                     lineClamp: 1,
-                                    children: _.intl.string(_.t["BMw+7I"]),
+                                    children: p.intl.string(p.t["BMw+7I"]),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)("div", { className: p.nitroTopDividerLockBorderReversed }),
+                        (0, r.jsx)("div", { className: h.nitroTopDividerLockBorderReversed }),
                     ],
                 }),
-                (0, r.jsx)("div", { className: p.reverseTrialTopDividerLower }),
+                (0, r.jsx)("div", { className: h.reverseTrialTopDividerLower }),
             ],
         })
     );
 }
-let E = function (e) {
-    let { glowOpacity: t, className: n, colorOpacity: i = h, enableBrandRefresh: a = !1 } = e;
+let b = function (e) {
+    let { glowOpacity: t, className: n, colorOpacity: i = m, enableBrandRefresh: a = !1 } = e,
+        s = (0, u.ZP)(),
+        l = (0, c.apv)(s);
     return (0, r.jsxs)("div", {
-        className: o()(p.nitroTopDividerContainer, n),
+        className: o()(h.nitroTopDividerContainer, n),
         children: [
-            (0, r.jsx)("div", { className: p.nitroTopDividerUpper }),
+            (0, r.jsx)("div", { className: h.nitroTopDividerUpper }),
             (0, r.jsx)("div", {
                 style: { opacity: a ? 0 : t },
-                className: p.nitroTopDividerShadow,
+                className: h.nitroTopDividerShadow,
             }),
             (0, r.jsxs)("div", {
-                className: p.nitroTopDividerLockContainer,
+                className: h.nitroTopDividerLockContainer,
                 children: [
-                    (0, r.jsx)("div", { className: o()(p.nitroTopDividerLockBorder, { [p.brandRefresh]: a }) }),
+                    (0, r.jsx)("div", { className: o()(h.nitroTopDividerLockBorder, { [h.brandRefresh]: a }) }),
                     (0, r.jsx)("div", {
-                        className: o()(p.nitroTopDividerLockCircle, { [p.brandRefresh]: a }),
+                        className: o()(h.nitroTopDividerLockCircle, { [h.brandRefresh]: a }),
                         children: (0, r.jsx)(c.mBM, {
                             size: "xs",
-                            color: "white",
+                            color: a && l ? "black" : "white",
                         }),
                     }),
-                    (0, r.jsx)("div", { className: o()(p.nitroTopDividerLockBorderReversed, { [p.brandRefresh]: a }) }),
+                    (0, r.jsx)("div", { className: o()(h.nitroTopDividerLockBorderReversed, { [h.brandRefresh]: a }) }),
                 ],
             }),
             (0, r.jsx)("div", {
                 style: { opacity: a ? 1 : i },
-                className: o()(p.nitroTopDividerLower, { [p.brandRefresh]: a }),
+                className: o()(h.nitroTopDividerLower, { [h.brandRefresh]: a }),
             }),
         ],
     });
