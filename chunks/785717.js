@@ -136,5 +136,11 @@ let u = i.createContext(null),
                 },
                 [e, t],
             ),
+            trackUserProfileWishlistAction: i.useCallback(
+                (n) => {
+                    null != e && (0, s.Er)(c({ analyticsLocations: t }, e, n));
+                },
+                [e, t],
+            ),
         };
     };
