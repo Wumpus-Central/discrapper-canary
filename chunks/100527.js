@@ -506,6 +506,18 @@ var r = (function (e) {
         (e.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION = "now playing item rich presence section"),
         (e.NOW_PLAYING_ITEM_GAME_SECTION = "now playing item game section"),
         (e.FREQUENT_FRIENDS_ROW = "frequent friends row"),
+        (e.SLAYER_STOREFRONT_PAYMENT_MODAL = "slayer storefront payment modal"),
+        (e.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON = "slayer storefront card purchase button"),
+        (e.SLAYER_STOREFRONT_CARD_GIFT_BUTTON = "slayer storefront card gift button"),
+        (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON =
+            "slayer storefront product details modal purchase button"),
+        (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON = "slayer storefront product details modal gift button"),
+        (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON =
+            "slayer storefront product details embed purchase button"),
+        (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON = "slayer storefront product details embed gift button"),
+        (e.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON = "slayer storefront wishlist item card gift button"),
+        (e.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON =
+            "slayer storefront breadcrumb wishlist item card gift button"),
         e
     );
 })(r || {});

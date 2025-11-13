@@ -81,7 +81,7 @@ function C(e) {
             giftRecipient: C,
             giftingOrigin: j,
         } = e,
-        { analyticsLocations: b } = (0, a.ZP)(g, l.Z.PREMIUM_PAYMENT_MODAL);
+        { analyticsLocations: b } = (0, a.ZP)(g, l.Z.SLAYER_STOREFRONT_PAYMENT_MODAL);
     return (0, i.jsx)(a.Gt, {
         value: b,
         children: (0, i.jsx)(s.PaymentContextProvider, {

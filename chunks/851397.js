@@ -1,25 +1,26 @@
-r.d(t, { Z: () => y }), r(388685);
+r.d(t, { Z: () => j }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(442837),
     s = r(681715),
     o = r(481060),
-    a = r(835473),
-    c = r(892001),
-    u = r(688192),
-    f = r(89196),
-    d = r(51144),
-    O = r(436585),
-    p = r(594914),
-    b = r(848118),
-    m = r(474936),
-    g = r(388032),
-    I = r(63602);
-function y(e) {
+    a = r(100527),
+    c = r(835473),
+    u = r(892001),
+    f = r(688192),
+    d = r(89196),
+    O = r(51144),
+    p = r(436585),
+    b = r(594914),
+    m = r(848118),
+    g = r(474936),
+    I = r(388032),
+    y = r(63602);
+function j(e) {
     var t,
         r,
-        { profileOwner: y, showIcons: j = !1 } = e,
-        h = (function (e, t) {
+        { profileOwner: j, showIcons: h = !1 } = e,
+        P = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -40,66 +41,70 @@ function y(e) {
             }
             return i;
         })(e, ["profileOwner", "showIcons"]);
-    let { item: P, isOwner: S, giftingOrigin: v = m.Wt.USER_PROFILE_WISHLIST } = h,
-        w = P.sku,
-        k = w.applicationId,
-        x = (0, a.q)(k),
-        C = i.useRef(null),
-        [E] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(P.skuId, y.id)], [P.skuId, y.id]),
-        N = P.skuName,
-        T = S ? g.intl.string(g.t.FdGl5A) : g.intl.string(g.t.ilhtIa),
-        Z = S ? void 0 : o.OgN,
+    let { item: S, isOwner: v, giftingOrigin: w = g.Wt.USER_PROFILE_WISHLIST } = P,
+        k = S.sku,
+        x = k.applicationId,
+        C = (0, c.q)(x),
+        T = i.useRef(null),
+        [E] = (0, l.Wu)([d.Z], () => [d.Z.hasSentGift(S.skuId, j.id)], [S.skuId, j.id]),
+        N = S.skuName,
+        R = v ? I.intl.string(I.t.FdGl5A) : I.intl.string(I.t.ilhtIa),
+        Z = v ? void 0 : o.OgN,
         L = i.useCallback(() => {
-            if (S && (null == x ? void 0 : x.guildId) != null)
-                (0, c.closeUserProfileModal)(),
-                    (0, O.g)({
-                        skuId: w.id,
-                        applicationId: x.id,
-                        guildId: x.guildId,
+            if (v && (null == C ? void 0 : C.guildId) != null)
+                (0, u.closeUserProfileModal)(),
+                    (0, p.g)({
+                        skuId: k.id,
+                        applicationId: C.id,
+                        guildId: C.guildId,
                         isStorefront: !1,
                     });
             else {
                 if (E) return;
-                (0, p.P)(w, {
-                    isGift: !0,
-                    giftRecipient: y,
-                    giftingOrigin: v,
-                });
+                (0, b.P)(
+                    k,
+                    {
+                        isGift: !0,
+                        giftRecipient: j,
+                        giftingOrigin: w,
+                    },
+                    { analyticsLocations: [a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                );
             }
-        }, [S, x, E, w, y, v]),
-        R = i.useCallback(
+        }, [v, C, E, k, j, w]),
+        _ = i.useCallback(
             () =>
-                j
+                h
                     ? (0, n.jsx)("div", {
-                          className: I.itemIcon,
+                          className: y.itemIcon,
                           children: (0, n.jsx)(s.u, {
-                              text: g.intl.formatToPlainString(g.t.p3RmJF, { username: d.ZP.getName(y) }),
+                              text: I.intl.formatToPlainString(I.t.p3RmJF, { username: O.ZP.getName(j) }),
                               position: "top",
                               children: (0, n.jsx)(o.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: I.itemIconHeart,
+                                  colorClass: y.itemIconHeart,
                               }),
                           }),
                       })
                     : null,
-            [j, y],
+            [h, j],
         ),
-        _ = i.useCallback(
+        A = i.useCallback(
             () =>
-                (0, n.jsx)(b.A, {
+                (0, n.jsx)(m.A, {
                     shape: "custom",
-                    containerClassName: I.card,
-                    backgroundImageClassName: I.cardBackgroundImage,
-                    foregroundImageClassName: I.cardImage,
-                    sku: w,
+                    containerClassName: y.card,
+                    backgroundImageClassName: y.cardBackgroundImage,
+                    foregroundImageClassName: y.cardImage,
+                    sku: k,
                 }),
-            [w],
+            [k],
         );
     return (0, n.jsx)(
-        u.Z,
+        f.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -124,17 +129,17 @@ function y(e) {
                     });
             }
             return e;
-        })({}, h)),
+        })({}, P)),
         (r = r =
             {
-                cardRef: C,
+                cardRef: T,
                 accessibleLabel: N,
                 onCardClick: L,
-                buttonCTALabel: T,
+                buttonCTALabel: R,
                 buttonIcon: Z,
                 isOwned: E,
-                renderItemPreview: _,
-                renderSourceIcon: R,
+                renderItemPreview: A,
+                renderSourceIcon: _,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
