@@ -28148,6 +28148,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
+.theme-light .nitroTopDividerLower_b3fb5f.brandRefresh_b3fb5f {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
+}
+
 .reverseTrialTopDividerLower_b3fb5f {
     background-color: var(--premium-tier-2-purple);
     height: 25px;
@@ -28531,6 +28535,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
+.theme-light .categorySectionNitroLocked_c656ac.brandRefresh_c656ac {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
+}
+
 .header_c656ac {
     position: -webkit-sticky;
     position: sticky;
@@ -28568,6 +28576,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     height: 1px;
     margin: var(--custom-emoji-picker-constants-emoji-premium-upsell-margin-top) 0;
     width: 100%
+}
+
+.nitroBottomDivider_c656ac.brandRefresh_c656ac {
+    background: var(--border-normal)
 }
 
 .upsellContainer_c656ac {
@@ -35256,10 +35268,6 @@ div.mobilePushContainer__3d3b0 {
     pointer-events: none
 }
 
-:root {
-    --custom-brand-refresh-gradient: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0%, var(--expressive-gradient-nitro-pink-end) 100%)
-}
-
 .sectionContainer__61424 {
     align-items: center;
     background-color: var(--background-base-low);
@@ -35282,7 +35290,11 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .sectionContainerNitroLockedBackground__61424.brandRefresh__61424 {
-    background: var(--custom-brand-refresh-gradient)
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
+.theme-light .sectionContainerNitroLockedBackground__61424.brandRefresh__61424 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
 .sectionHeader__61424 {
@@ -35320,7 +35332,12 @@ div.mobilePushContainer__3d3b0 {
 
 .lastSectionFooter__61424.nitroLocked__61424.brandRefresh__61424,
 .smallPaddingFooter__61424.nitroLocked__61424.brandRefresh__61424 {
-    background: var(--custom-brand-refresh-gradient)
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
+.theme-light .lastSectionFooter__61424.nitroLocked__61424.brandRefresh__61424,
+.theme-light .smallPaddingFooter__61424.nitroLocked__61424.brandRefresh__61424 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
 .sectionTitle__61424 {
@@ -35345,7 +35362,11 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .soundRowNitroLocked__61424.brandRefresh__61424 {
-    background: var(--custom-brand-refresh-gradient)
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
+.theme-light .soundRowNitroLocked__61424.brandRefresh__61424 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
 .settingsClickArea__61424 {
@@ -52321,7 +52342,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59656,9 +59677,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

@@ -271,7 +271,7 @@ let z = 0,
                                   enableBrandRefresh: eu,
                               })
                         : ed(e)
-                          ? (0, r.jsx)("div", { className: K.nitroBottomDivider })
+                          ? (0, r.jsx)("div", { className: o()(K.nitroBottomDivider, { [K.brandRefresh]: eu }) })
                           : null,
                 [er, ef, ed, eE, eu],
             ),
