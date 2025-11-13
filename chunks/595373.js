@@ -1,29 +1,64 @@
 n.d(e, {
-    Z: () => T,
-    p: () => S,
+    Z: () => f,
+    p: () => N,
 });
-var i = n(818710),
-    l = n(442837),
-    r = n(100527),
-    u = n(509613),
-    s = n(131951),
-    a = n(313789),
-    o = n(325808),
-    c = n(345655),
-    E = n(65154),
-    d = n(388032);
-function S() {
-    return (0, l.e7)([s.Z], () => s.Z.getActiveInputProfile() !== c._.STUDIO);
+var i = n(951288),
+    l = n(647438),
+    u = n(818710),
+    r = n(793030),
+    s = n(442837),
+    a = n(100527),
+    o = n(509613),
+    c = n(131951),
+    E = n(313789),
+    S = n(325808),
+    d = n(962100),
+    T = n(518596),
+    I = n(345655),
+    O = n(981631),
+    g = n(65154),
+    _ = n(388032);
+function N() {
+    return (0, s.e7)([c.Z], () => c.Z.getActiveInputProfile() !== I._.STUDIO);
 }
-let T = (0, u.qs)(a.n.VOICE_PUSH_TO_TALK_SETTING, {
-    useTitle: () => (i.FB ? d.intl.string(d.t.tG4Np5) : d.intl.string(d.t.JMyQin)),
-    useSubtitle: () => d.intl.string(d.t.yept4k),
-    usePredicate: S,
-    useValue: function () {
-        return (0, l.e7)([s.Z], () => s.Z.getMode() === E.pM.PUSH_TO_TALK);
-    },
-    setValue: function (t) {
-        (0, o.XH)(t ? E.pM.PUSH_TO_TALK : E.pM.VOICE_ACTIVITY, [r.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
-    },
-    useSearchTerms: () => [d.intl.string(d.t["pS+K2L"]), d.intl.string(d.t.nuFtHH)],
+function A() {
+    let t = (0, s.e7)([c.Z], () => c.Z.getMode() === g.pM.PUSH_TO_TALK),
+        e = l.useCallback((t) => {
+            (0, S.XH)(t ? g.pM.PUSH_TO_TALK : g.pM.VOICE_ACTIVITY, [a.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
+        }, []),
+        n = u.FB ? _.intl.string(_.t.tG4Np5) : _.intl.string(_.t.JMyQin),
+        o = (0, s.e7)([c.Z], () => c.Z.getMode()),
+        I = l.useMemo(
+            () =>
+                u.FB || o !== g.pM.PUSH_TO_TALK
+                    ? _.intl.format(_.t.HVvn5T, {
+                          onClick: () => (0, T.openUserSettings)(E.n.KEYBINDS_PANEL, { section: O.oAB.KEYBINDS }),
+                      })
+                    : _.intl.format(_.t.zvMPOc, { onDownloadClick: () => (0, d.y)("Help Text PTT") }),
+            [o],
+        );
+    return (0, i.jsxs)(r.Kqy, {
+        gap: 16,
+        children: [
+            (0, i.jsx)(r.M14, {
+                type: "info",
+                children: I,
+            }),
+            (0, i.jsx)(r.rsf, {
+                label: n,
+                description: _.intl.string(_.t.yept4k),
+                checked: t,
+                onChange: (t) => e(t),
+            }),
+        ],
+    });
+}
+let f = (0, o.ON)(E.n.VOICE_PUSH_TO_TALK_SETTING, {
+    usePredicate: N,
+    render: () => (0, i.jsx)(A, {}),
+    useSearchTerms: () => [
+        u.FB ? _.intl.string(_.t.tG4Np5) : _.intl.string(_.t.JMyQin),
+        _.intl.string(_.t["pS+K2L"]),
+        _.intl.string(_.t.nuFtHH),
+    ],
 });
