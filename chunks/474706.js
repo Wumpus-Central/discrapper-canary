@@ -49,7 +49,7 @@ function f() {
                           maxRewardImageSrc: _.getImageUrl(!0, t),
                           claimableRewards: n,
                           size: a.EFr.SIZE_48,
-                          imageScaling: 2.4,
+                          imageScaling: t ? 1.9 : 2.4,
                       }),
                   }),
               ],
