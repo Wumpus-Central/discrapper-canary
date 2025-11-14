@@ -1,57 +1,82 @@
-r.d(t, { Z: () => c });
-var n = r(951288);
-r(647438);
-var i = r(851397),
-    l = r(541699),
-    s = r(321947),
-    o = r(835255);
-function a(e) {
+n.d(t, { Z: () => u });
+var r = n(951288);
+n(647438);
+var i = n(851397),
+    a = n(541699),
+    l = n(321947),
+    o = n(835255),
+    c = n(688192);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function c(e) {
-    var { item: t } = e,
-        r = (function (e, t) {
+function u(e) {
+    var { item: t, cardSize: n = c.U.MEDIUM, showOverlayButton: u = !0 } = e,
+        d = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["item"]);
-    return (0, l.Q)(t) ? (0, n.jsx)(o.ZP, a({ item: t }, r)) : (0, s.F)(t) ? (0, n.jsx)(i.Z, a({ item: t }, r)) : null;
+        })(e, ["item", "cardSize", "showOverlayButton"]);
+    return (0, a.Q)(t)
+        ? (0, r.jsx)(
+              o.ZP,
+              s(
+                  {
+                      item: t,
+                      cardSize: n,
+                      showOverlayButton: u,
+                  },
+                  d,
+              ),
+          )
+        : (0, l.F)(t)
+          ? (0, r.jsx)(
+                i.Z,
+                s(
+                    {
+                        item: t,
+                        cardSize: n,
+                        showOverlayButton: u,
+                    },
+                    d,
+                ),
+            )
+          : null;
 }

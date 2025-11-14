@@ -62,6 +62,7 @@ function f(e) {
         storefront: null,
         loading: !0,
         error: !1,
+        fetchedAt: null,
     }),
         (d = s({}, d));
 }
@@ -71,6 +72,7 @@ function _(e) {
         storefront: n,
         loading: !1,
         error: !1,
+        fetchedAt: Date.now(),
     }),
         (d = s({}, d));
 }
@@ -83,6 +85,7 @@ function p(e) {
               storefront: n,
               loading: !1,
               error: !1,
+              fetchedAt: Date.now(),
           }),
         (d = s({}, d));
 }
@@ -92,6 +95,7 @@ function h(e) {
         storefront: null,
         loading: !1,
         error: !0,
+        fetchedAt: null,
     }),
         (d = s({}, d));
 }

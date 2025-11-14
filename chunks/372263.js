@@ -1,9 +1,9 @@
-t.d(i, { Z: () => a });
-var n = t(951288);
-t(647438);
-var r = t(835255),
-    s = t(688192);
-function a(e) {
-    let { surface: i = s.Y.PROFILE_MODAL } = e;
-    return (0, n.jsx)(r.w_, { surface: i });
+i.d(t, { Z: () => l });
+var r = i(951288);
+i(647438);
+var n = i(835255),
+    a = i(688192);
+function l(e) {
+    let { cardSize: t = a.U.MEDIUM } = e;
+    return (0, r.jsx)(n.w_, { cardSize: t });
 }

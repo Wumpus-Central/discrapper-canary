@@ -9,14 +9,14 @@ var i = n(979554),
     c = n(688192),
     u = n(232644);
 function d(e) {
-    let { item: t, profileOwner: n, isHighlighted: d, surface: p = c.Y.PROFILE_MODAL } = e,
-        h = t.collectiblesItem;
-    switch (h.type) {
+    let { item: t, profileOwner: n, isHighlighted: d, cardSize: p = c.U.MEDIUM } = e,
+        f = t.collectiblesItem;
+    switch (f.type) {
         case i.Z.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
                 className: u.profileEffectPreview,
                 children: (0, r.jsx)(s.Z, {
-                    skuId: h.skuId,
+                    skuId: f.skuId,
                     isHighlighted: d,
                     isPurchased: !1,
                     removeSetHeight: !0,
@@ -26,7 +26,7 @@ function d(e) {
             return (0, r.jsx)("div", {
                 className: u.avatarDecorationPreview,
                 children: (0, r.jsx)(o.R, {
-                    item: h,
+                    item: f,
                     user: n,
                     isHighlighted: d,
                     isPurchased: !1,
@@ -41,13 +41,13 @@ function d(e) {
                         className: u.nameplateTopLeft,
                         children: (0, r.jsx)(a.Z, {
                             user: n,
-                            nameplate: h,
+                            nameplate: f,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: p === c.Y.GIFTING_FLOW ? 136 : 200,
+                            width: p === c.U.SMALL ? 136 : 200,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -55,13 +55,13 @@ function d(e) {
                         "aria-hidden": !0,
                         children: (0, r.jsx)(a.Z, {
                             user: n,
-                            nameplate: h,
+                            nameplate: f,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: p === c.Y.GIFTING_FLOW ? 136 : 200,
+                            width: p === c.U.SMALL ? 136 : 200,
                         }),
                     }),
                 ],

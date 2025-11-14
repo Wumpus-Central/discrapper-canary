@@ -1,157 +1,184 @@
-r.d(t, { Z: () => j }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    l = r(442837),
-    s = r(681715),
-    o = r(481060),
-    a = r(100527),
-    c = r(835473),
-    u = r(892001),
-    f = r(688192),
-    d = r(89196),
-    O = r(51144),
-    p = r(436585),
-    b = r(594914),
-    m = r(848118),
-    g = r(474936),
-    I = r(388032),
-    y = r(63602);
+n.d(t, { Z: () => j });
+var r = n(951288),
+    i = n(647438),
+    l = n(442837),
+    o = n(681715),
+    a = n(481060),
+    s = n(100527),
+    c = n(835473),
+    u = n(892001),
+    d = n(688192),
+    p = n(89196),
+    f = n(937615),
+    h = n(51144),
+    g = n(436585),
+    m = n(594914),
+    b = n(848118),
+    _ = n(474936),
+    y = n(231338),
+    O = n(388032),
+    v = n(63602);
 function j(e) {
     var t,
-        r,
-        { profileOwner: j, showIcons: h = !1 } = e,
-        P = (function (e, t) {
+        n,
+        { profileOwner: j, hideButtonIcon: x = !1, showPrice: C = !1, showIcons: E = !1 } = e,
+        S = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["profileOwner", "showIcons"]);
-    let { item: S, isOwner: v, giftingOrigin: w = g.Wt.USER_PROFILE_WISHLIST } = P,
-        k = S.sku,
-        x = k.applicationId,
-        C = (0, c.q)(x),
-        T = i.useRef(null),
-        [E] = (0, l.Wu)([d.Z], () => [d.Z.hasSentGift(S.skuId, j.id)], [S.skuId, j.id]),
-        N = S.skuName,
-        R = v ? I.intl.string(I.t.FdGl5A) : I.intl.string(I.t.ilhtIa),
-        Z = v ? void 0 : o.OgN,
-        L = i.useCallback(() => {
-            if (v && (null == C ? void 0 : C.guildId) != null)
-                (0, u.closeUserProfileModal)(),
-                    (0, p.g)({
-                        skuId: k.id,
-                        applicationId: C.id,
-                        guildId: C.guildId,
-                        isStorefront: !1,
-                    });
-            else {
-                if (E) return;
-                (0, b.P)(
-                    k,
-                    {
-                        isGift: !0,
-                        giftRecipient: j,
-                        giftingOrigin: w,
-                    },
-                    { analyticsLocations: [a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
-                );
-            }
-        }, [v, C, E, k, j, w]),
-        _ = i.useCallback(
+        })(e, ["profileOwner", "hideButtonIcon", "showPrice", "showIcons"]);
+    let { item: I, isOwner: P, giftingOrigin: N = _.Wt.USER_PROFILE_WISHLIST } = S,
+        Z = I.sku,
+        w = Z.applicationId,
+        T = (0, c.q)(w),
+        A = i.useRef(null),
+        R = (0, l.e7)([p.Z], () => null != j && p.Z.hasSentGift(I.skuId, j.id), [I.skuId, j]),
+        D = I.skuName,
+        {
+            buttonCTALabel: L,
+            buttonIcon: M,
+            handleCardClick: k,
+        } = i.useMemo(() => {
+            var e, t, n, r, i, l, o, c;
+            return P
+                ? {
+                      buttonCTALabel: C
+                          ? (0, f.T4)(
+                                null != (i = null == (n = Z.price) ? void 0 : n.amount) ? i : 0,
+                                null != (l = null == (r = Z.price) ? void 0 : r.currency) ? l : y.pK.USD,
+                            )
+                          : O.intl.string(O.t.FdGl5A),
+                      buttonIcon: void 0,
+                      handleCardClick: () => {
+                          (null == T ? void 0 : T.guildId) != null &&
+                              ((0, u.closeUserProfileModal)(),
+                              (0, g.g)({
+                                  skuId: Z.id,
+                                  applicationId: T.id,
+                                  guildId: T.guildId,
+                                  isStorefront: !1,
+                              }));
+                      },
+                  }
+                : {
+                      buttonCTALabel: C
+                          ? (0, f.T4)(
+                                null != (o = null == (e = Z.price) ? void 0 : e.amount) ? o : 0,
+                                null != (c = null == (t = Z.price) ? void 0 : t.currency) ? c : y.pK.USD,
+                            )
+                          : O.intl.string(O.t.ilhtIa),
+                      buttonIcon: x ? void 0 : a.OgN,
+                      handleCardClick: () => {
+                          R ||
+                              ((0, u.closeUserProfileModal)(),
+                              (0, m.P)(
+                                  Z,
+                                  {
+                                      isGift: !0,
+                                      giftRecipient: j,
+                                      giftingOrigin: N,
+                                  },
+                                  { analyticsLocations: [s.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                              ));
+                      },
+                  };
+        }, [C, Z, j, R, N, T, x, P]),
+        G = i.useCallback(
             () =>
-                h
-                    ? (0, n.jsx)("div", {
-                          className: y.itemIcon,
-                          children: (0, n.jsx)(s.u, {
-                              text: I.intl.formatToPlainString(I.t.p3RmJF, { username: O.ZP.getName(j) }),
+                E
+                    ? (0, r.jsx)("div", {
+                          className: v.itemIcon,
+                          children: (0, r.jsx)(o.u, {
+                              text: O.intl.formatToPlainString(O.t.p3RmJF, { username: h.ZP.getName(j) }),
                               position: "top",
-                              children: (0, n.jsx)(o.h_8, {
+                              children: (0, r.jsx)(a.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: y.itemIconHeart,
+                                  colorClass: v.itemIconHeart,
                               }),
                           }),
                       })
                     : null,
-            [h, j],
+            [E, j],
         ),
-        A = i.useCallback(
+        U = i.useCallback(
             () =>
-                (0, n.jsx)(m.A, {
+                (0, r.jsx)(b.A, {
                     shape: "custom",
-                    containerClassName: y.card,
-                    backgroundImageClassName: y.cardBackgroundImage,
-                    foregroundImageClassName: y.cardImage,
-                    sku: k,
+                    containerClassName: v.card,
+                    backgroundImageClassName: v.cardBackgroundImage,
+                    foregroundImageClassName: v.cardImage,
+                    sku: Z,
                 }),
-            [k],
+            [Z],
         );
-    return (0, n.jsx)(
-        f.Z,
+    return (0, r.jsx)(
+        d.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: n,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = n);
+                                : (e[t] = r);
                     });
             }
             return e;
-        })({}, P)),
-        (r = r =
+        })({}, S)),
+        (n = n =
             {
-                cardRef: T,
-                accessibleLabel: N,
-                onCardClick: L,
-                buttonCTALabel: R,
-                buttonIcon: Z,
-                isOwned: E,
-                renderItemPreview: A,
-                renderSourceIcon: _,
+                cardRef: A,
+                accessibleLabel: D,
+                onCardClick: k,
+                buttonCTALabel: L,
+                buttonIcon: M,
+                isOwned: R,
+                renderItemPreview: U,
+                renderSourceIcon: G,
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
         t),
     );

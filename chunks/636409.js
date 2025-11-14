@@ -8,12 +8,12 @@ var l = t(951288),
     s = t(602733),
     c = t(55563),
     u = t(411935),
-    p = t(210218),
+    p = t(417317),
     g = t(705338),
     I = t(436585),
     x = t(720983),
-    v = t(323540),
-    m = t(171524),
+    m = t(323540),
+    v = t(171524),
     f = t(140594);
 function h(e) {
     var n, t;
@@ -54,14 +54,14 @@ function h(e) {
                             storefront: a,
                             selectedPageIndex: d,
                         }),
-                        (0, l.jsx)(v.$, {
+                        (0, l.jsx)(m.$, {
                             applicationId: a.applicationId,
                             guildId: r,
                             page: a.pages[d],
                         }),
                     ],
                 }),
-                (0, l.jsx)(m.n, {
+                (0, l.jsx)(v.n, {
                     applicationId: a.applicationId,
                     backgroundImageAssetId:
                         null == (t = a.pages[d]) || null == (n = t.leaderboard) ? void 0 : n.backgroundImageAssetId,
@@ -73,21 +73,17 @@ function h(e) {
 function j(e) {
     let { match: n } = e,
         { guildId: t, gameShopPageIndex: a, gameShopSkuId: g } = n.params,
-        I = (0, d.e7)([p.Z], () => (null != t ? p.Z.getStorefrontData(t) : void 0)),
+        I = (0, p.Z)({ guildId: t }),
         x = (0, d.e7)([c.Z], () => c.Z.get(g), [g]);
     (0, s.p2)();
-    let v = i.useMemo(() => {
+    let m = i.useMemo(() => {
         if (null == a) return 0;
         let e = parseInt(a, 10);
         return isNaN(e) || (null != I && null != I.storefront && e >= I.storefront.pages.length) ? 0 : e;
     }, [a, I]);
     return (i.useEffect(() => {
-        null != t && (0, u.m0)(t, v, null != g ? g : null);
-    }, [t, v, g]),
-    i.useEffect(() => {
-        var e;
-        null != t && (null == (e = p.Z.getStorefrontData(t)) ? void 0 : e.loading) !== !0 && (0, u.YL)(t);
-    }, [t]),
+        null != t && (0, u.m0)(t, m, null != g ? g : null);
+    }, [t, m, g]),
     ((null == I ? void 0 : I.storefront) != null || (null == I ? void 0 : I.error)) &&
         !(null == I ? void 0 : I.loading) &&
         null != t &&
@@ -95,7 +91,7 @@ function j(e) {
         ? (0, l.jsx)(h, {
               storefront: I.storefront,
               guildId: t,
-              selectedPageIndex: v,
+              selectedPageIndex: m,
               selectedSku: x,
           })
         : (0, l.jsx)("div", {

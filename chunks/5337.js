@@ -1,6 +1,6 @@
 n.d(t, {
-    c: () => g,
-    g: () => m,
+    c: () => f,
+    g: () => g,
 });
 var r = n(951288),
     i = n(979554),
@@ -8,61 +8,59 @@ var r = n(951288),
     a = n(481060),
     s = n(333867),
     o = n(221300),
-    c = n(688192),
-    d = n(766717),
-    u = n(474936),
-    p = n(388032),
-    h = n(976218);
-function f(e, t, n) {
+    c = n(766717),
+    d = n(474936),
+    u = n(388032),
+    p = n(976218);
+function h(e, t, n) {
     (0, s.Z)({
         skuId: e.skuId,
         isGift: !0,
-        giftingOrigin: u.Wt.USER_PROFILE_WISHLIST,
+        giftingOrigin: d.Wt.USER_PROFILE_WISHLIST,
         analyticsLocations: n,
         giftRecipient: t,
         variantsReturnStyle: l.v.VARIANTS_GROUP,
     });
 }
-function g(e, t) {
+function f(e, t) {
     let {
             moreCount: n,
             profileOwner: l,
             analyticsLocations: a,
             onViewWishlist: s,
-            isSingleCard: u = !1,
-            wishlistId: h,
+            isSingleCard: d = !1,
+            wishlistId: p,
         } = t,
-        g = null != n && n > 0,
-        m = g ? p.intl.string(p.t.TxBQzD) : p.intl.string(p.t.ilhtIa),
-        b = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
+        f = null != n && n > 0,
+        g = f ? u.intl.string(u.t.TxBQzD) : u.intl.string(u.t.ilhtIa),
+        m = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
     return (0, r.jsx)(
-        d.Z,
+        c.Z,
         {
             onCardClick: () => {
-                if (g) return void s();
-                f(e, l, a);
+                if (f) return void s();
+                h(e, l, a);
             },
-            tooltipText: m,
-            shouldScalePreview: !b,
+            tooltipText: g,
+            shouldScalePreview: !m,
             renderPreview: () =>
                 (0, r.jsx)(o.Z, {
                     item: e,
                     profileOwner: l,
                     isHighlighted: !1,
-                    surface: c.Y.PROFILE_SIDEBAR,
                 }),
             moreCount: n,
-            isSingleCard: u,
+            isSingleCard: d,
             skuId: e.skuId,
             analyticsLocations: a,
-            wishlistId: h,
+            wishlistId: p,
         },
         e.skuId,
     );
 }
-function m(e, t) {
+function g(e, t) {
     let { profileOwner: n, analyticsLocations: l, wishlistId: s, onViewWishlist: o } = t,
-        c = g(e, {
+        c = f(e, {
             profileOwner: n,
             analyticsLocations: l,
             onViewWishlist: o,
@@ -71,18 +69,18 @@ function m(e, t) {
             index: 0,
         });
     return (0, r.jsxs)("div", {
-        className: h.singleItemContainer,
+        className: p.singleItemContainer,
         children: [
             c,
             (0, r.jsxs)("div", {
-                className: h.singleItemInfo,
+                className: p.singleItemInfo,
                 children: [
                     (0, r.jsx)(a.P3F, {
                         onClick: () => {
-                            f(e, n, l);
+                            h(e, n, l);
                         },
-                        className: h.singleItemName,
-                        "aria-label": p.intl.string(p.t.ilhtIa),
+                        className: p.singleItemName,
+                        "aria-label": u.intl.string(u.t.ilhtIa),
                         children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
@@ -96,11 +94,11 @@ function m(e, t) {
                         children: (function (e) {
                             switch (e.collectiblesItem.type) {
                                 case i.Z.AVATAR_DECORATION:
-                                    return p.intl.string(p.t["7v0T9P"]);
+                                    return u.intl.string(u.t["7v0T9P"]);
                                 case i.Z.PROFILE_EFFECT:
-                                    return p.intl.string(p.t.wR5wOo);
+                                    return u.intl.string(u.t.wR5wOo);
                                 case i.Z.NAMEPLATE:
-                                    return p.intl.string(p.t.x5CoXR);
+                                    return u.intl.string(u.t.x5CoXR);
                                 default:
                                     return "";
                             }
