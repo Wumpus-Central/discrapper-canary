@@ -15,6 +15,7 @@ function s(e) {
         ? l
         : (0, r.jsx)(i.u, {
               __unsupportedReactNodeAsText: t.full,
+              ariaHidden: !0,
               children: l,
           });
 }
