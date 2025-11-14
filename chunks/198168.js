@@ -13,7 +13,7 @@ var r = n(647438),
             (e[(e.APPLICATION_IMAGE_HEADER = 5)] = "APPLICATION_IMAGE_HEADER"),
             (e[(e.SOCIAL_LAYER_SKU_PREVIEW = 6)] = "SOCIAL_LAYER_SKU_PREVIEW"),
             (e[(e.GUILD_POWERUPS_COACHMARK_ASSET = 7)] = "GUILD_POWERUPS_COACHMARK_ASSET"),
-            (e[(e.BADGE_IMAGE_WITH_COUNTDOWN_TIMER = 8)] = "BADGE_IMAGE_WITH_COUNTDOWN_TIMER"),
+            (e[(e.BADGE_IMAGE_WITH_PROGRESS_CIRCLE = 8)] = "BADGE_IMAGE_WITH_PROGRESS_CIRCLE"),
             e
         );
     })({});
@@ -26,7 +26,7 @@ let a = {
         5: () => n.e("11909").then(n.bind(n, 255111)),
         6: () => n.e("68500").then(n.bind(n, 995348)),
         7: () => n.e("21844").then(n.bind(n, 492391)),
-        8: () => n.e("34567").then(n.bind(n, 48198)),
+        8: () => n.e("84735").then(n.bind(n, 558592)),
     },
     o = {
         0: r.lazy(a[0]),

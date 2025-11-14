@@ -206,6 +206,7 @@ var r = (function (e) {
         (e.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER = "premium marketing reverse trial banner"),
         (e.PREMIUM_MARKETING_REWARD_SELECTION_MODAL = "premium marketing reward selection modal"),
         (e.TIERED_TENURE_BADGES_MODAL = "tiered tenure badges modal"),
+        (e.TIERED_TENURE_BADGE_CHURN_REMINDER = "tiered tenure badge churn reminder"),
         (e.CHANNEL_CALL_ACTION_BAR = "channel call action bar"),
         (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = "aggregate premium upsell modal emoji"),
         (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION =

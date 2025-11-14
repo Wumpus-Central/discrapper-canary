@@ -1,65 +1,83 @@
-n.d(t, { Z: () => p });
-var a = n(951288),
-    r = n(647438),
-    i = n(198168),
-    l = n(848572),
-    o = n(863504),
-    s = n(787528),
-    c = n(714167),
-    d = n(474936),
-    u = n(921944),
-    m = n(388032);
-let p = (e) => {
-    var t, n;
-    let { markAsDismissed: p, targetElementRef: h, children: x } = e,
-        g = (0, l.Rw)(),
-        f = null != (t = null == g ? void 0 : g.id) ? t : d.VU.PREMIUM_TENURE_1_MONTH,
-        b =
-            null != (n = null == g ? void 0 : g.nameUnformatted)
-                ? n
-                : d.vK[d.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
-        v = (m.intl.string(m.t.lG6a5x) + " " + m.intl.string(b)).toLocaleUpperCase(),
-        j = (0, o.Z)(f),
-        _ = (0, s.J)(f),
-        y = (0, r.useCallback)(() => {
-            p(u.L.TAKE_ACTION);
-        }, [p]),
-        C = (0, r.useCallback)(() => {
-            p(u.L.USER_DISMISS);
-        }, [p]),
-        S = m.intl.format(m.t.GSynLW, { time: 5 });
-    return (0, a.jsxs)(a.Fragment, {
-        children: [
-            x,
-            (0, a.jsx)(c.Z, {
-                targetElementRef: h,
-                shouldShow: !0,
-                onRequestClose: C,
-                align: "right",
-                position: "top",
-                caretConfig: { align: "center" },
-                gradientColor: j,
-                size: "lg",
-                graphic: {
-                    type: "dynamic",
-                    component: i.DynamicGraphicComponent.BADGE_IMAGE_WITH_COUNTDOWN_TIMER,
-                    aspectRatio: "6/4",
-                    props: {
-                        src: _,
-                        alt: v,
-                        size: "large",
-                    },
-                },
-                title: v,
-                body: S,
-                actions: [
-                    {
-                        text: "Reactivate",
-                        variant: "expressive",
-                        onClick: y,
-                    },
-                ],
-            }),
+n.d(t, {
+    Z: () => S,
+    c: () => T,
+});
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(100527),
+    s = n(906732),
+    l = n(963249),
+    c = n(78839),
+    u = n(626135),
+    d = n(74538),
+    f = n(660000),
+    _ = n(848572),
+    p = n(654939),
+    h = n(981631),
+    m = n(921944),
+    g = n(388032);
+let E = 1,
+    b = 15;
+function y() {
+    let e = I();
+    return 1 === e ? g.intl.string(g.t.NBae0i) : g.intl.format(g.t.GSynLW, { time: e });
+}
+function O() {
+    let e = (0, a.e7)([c.Z], () => c.Z.getPremiumSubscription());
+    return null != e && e.status === h.O0b.CANCELED ? e : null;
+}
+function v() {
+    let e = O(),
+        t = I();
+    return null != e && t >= E && t <= b;
+}
+function I() {
+    let e = O();
+    return null != e ? (0, d.YN)(e) : 0;
+}
+function T(e, t) {
+    let n = (0, _.Rw)(),
+        r = v(),
+        i = (0, f.S)(e, t);
+    return (null == n ? void 0 : n.status) === _.Vq.EARNED && r && i;
+}
+let S = (e) => {
+    let { markAsDismissed: t, children: n, mode: a = "popover", tooltipDelay: c = 300, targetElementRef: d } = e,
+        { analyticsLocations: f } = (0, s.ZP)(o.Z.TIERED_TENURE_BADGE_CHURN_REMINDER),
+        _ = y(),
+        O = I(),
+        v = (0, i.useCallback)(() => {
+            u.default.track(h.rMx.TOOLTIP_VIEWED, { type: "tiered_tenure_badge_churn_reminder" });
+        }, []),
+        T = (0, i.useCallback)(() => {
+            null == t || t(m.L.TAKE_ACTION),
+                (0, l.Z)({
+                    initialPlanId: null,
+                    subscriptionTier: null,
+                    analyticsLocations: f,
+                });
+        }, [t, f]),
+        S = [
+            {
+                text: g.intl.string(g.t.iIvF2z),
+                variant: "expressive",
+                onClick: T,
+            },
         ],
+        A = O >= E && O <= b ? Math.max(1, Math.min(100, ((b - O) / b) * 100)) : 1,
+        C = O <= 10 ? "critical" : "warning";
+    return (0, r.jsx)(p.Z, {
+        targetElementRef: d,
+        body: _,
+        mode: a,
+        tooltipDelay: c,
+        markAsDismissed: t,
+        progressCircleText: "" + O,
+        progressCirclePercent: A,
+        progressCircleUrgency: C,
+        actions: S,
+        onShow: "tooltip" === a ? v : void 0,
+        children: n,
     });
 };

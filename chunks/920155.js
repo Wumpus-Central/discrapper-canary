@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(509442),
+    s = n(203463),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -100,49 +100,65 @@ function S(e) {
             hasVideo: S = !1,
             gradientColor: A,
             onPositionChange: C,
-            scrollBehavior: N = "sticky",
+            onNudgeChange: N,
+            scrollBehavior: R = "sticky",
+            modal: P = !1,
+            returnRef: D,
         } = e,
-        [R, P] = i.useState(p),
-        [D, w] = i.useState(E),
-        x = i.useRef(E),
-        L = (0, c.e7)([d.Z], () => d.Z.getLayers()),
-        M = null != (t = L[L.length - 1]) ? t : "base",
-        j = i.useMemo(() => {
+        [w, x] = i.useState(p),
+        [L, M] = i.useState(E),
+        k = i.useRef(E),
+        j = i.useRef(0),
+        U = (0, c.e7)([d.Z], () => d.Z.getLayers()),
+        G = null != (t = U[U.length - 1]) ? t : "base",
+        B = i.useRef(C);
+    i.useEffect(() => {
+        B.current = C;
+    }, [C]);
+    let Z = i.useCallback((e) => {
+            var t;
+            null != e && e !== k.current && ((k.current = e), M(e), null == (t = B.current) || t.call(B, e));
+        }, []),
+        F = i.useMemo(() => {
             var e, t;
             return (
                 null == a.current ||
                 (null != (t = null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer"))
                     ? t
-                    : "base") === M
+                    : "base") === G
             );
-        }, [a, M]);
+        }, [a, G]);
     i.useEffect(() => {
-        j && p ? P(!0) : j || P(!1);
-    }, [j, p]);
-    let k = () => {
-            P(!1);
+        F && p ? x(!0) : F || x(!1);
+    }, [F, p]),
+        i.useEffect(() => {
+            Z(E);
+        }, [E, Z]);
+    let V = () => {
+            x(!1);
         },
-        U = (0, _.i)({
+        H = (0, _.i)({
             shouldShow: p,
-            caretPosition: (0, f.z)(D),
-            onExitComplete: k,
+            caretPosition: (0, f.z)(L),
+            onExitComplete: V,
         }),
-        G = (e) => {
-            var { setPopoutRef: t, position: i } = e,
-                a = y(e, ["setPopoutRef", "position"]);
+        Y = (e) => {
+            var { setPopoutRef: t, position: i, nudge: a } = e,
+                c = y(e, ["setPopoutRef", "position", "nudge"]);
             return (
-                null != i && i !== x.current && ((x.current = i), w(i), null == C || C(i)),
-                U((e, i) => {
+                Z(i),
+                a !== j.current && ((j.current = a), null == N || N(a)),
+                H((e, i) => {
                     if (!i) return null;
-                    let c = (0, r.jsx)(
+                    let a = (0, r.jsx)(
                         l.VqE,
-                        b(g({}, a), {
+                        b(g({}, c), {
                             setDialogRef: t,
-                            modal: !1,
+                            modal: P,
                             className: o()(null != A ? h.popoverContentWithGradient : h.popover, {
                                 [h["popover--video"]]: S,
                             }),
-                            returnRef: void 0,
+                            returnRef: D,
                             children: n,
                         }),
                     );
@@ -155,18 +171,18 @@ function S(e) {
                                       offsetBottom: 0.4,
                                       color: A,
                                       className: h.popoverGradientWrapper,
-                                      children: c,
+                                      children: a,
                                   })
-                                : c,
+                                : a,
                     });
                 })
             );
         };
     return (0, r.jsx)(u.H, {
         targetElementRef: a,
-        shouldShow: R,
+        shouldShow: w,
         onRequestClose: m,
-        position: D,
+        position: L,
         align: O,
         spacing: v + I,
         layerContext: void 0,
@@ -174,11 +190,11 @@ function S(e) {
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === D || "bottom" === D,
+        nudgeAlignIntoViewport: "top" === L || "bottom" === L,
         closeOnClickOutside: !1,
         ignoreModalClicks: !0,
-        scrollBehavior: N,
-        renderPopout: G,
+        scrollBehavior: R,
+        renderPopout: Y,
         children: T,
     });
 }
