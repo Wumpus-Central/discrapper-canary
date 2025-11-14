@@ -1,6 +1,6 @@
 n.d(t, {
     X9: () => M,
-    b8: () => j,
+    b8: () => k,
     hz: () => x,
 }),
     n(388685),
@@ -63,10 +63,11 @@ function L(e) {
                 icon: e.icon,
                 botIconFirst: !0,
                 bot: null != n ? e.bot : void 0,
+                guildMember: n,
             });
         return {
             applicationIconURL: r,
-            applicationName: null != n && null != e.bot ? e.bot.username : e.name,
+            applicationName: (null == n ? void 0 : n.nick) != null ? n.nick : null != e.bot ? e.bot.username : e.name,
             applicationBaseUrl: (0, p.ZP)(e.id),
         };
     }, [e.id, e.icon, e.name, e.bot]);
@@ -112,7 +113,7 @@ function M(e, t) {
         onSubmit: O,
     };
 }
-function j(e) {
+function k(e) {
     let { application: t, customId: n } = e,
         { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = L(t),
         s = g.Z.getChannel(e.channelId);
@@ -135,13 +136,13 @@ function j(e) {
         }
     );
 }
-let k = (e, t, n) =>
+let j = (e, t, n) =>
     t.map((t) => {
         switch (t.type) {
             case u.re.ACTION_ROW:
                 return {
                     type: t.type,
-                    components: k(e, t.components, n),
+                    components: j(e, t.components, n),
                 };
             case u.re.TEXT_INPUT: {
                 let n = R.Z.getInteractionComponentState(e, t.id);
@@ -188,7 +189,7 @@ let k = (e, t, n) =>
             case u.re.LABEL:
                 return {
                     type: t.type,
-                    component: k(e, [t.component], n)[0],
+                    component: j(e, [t.component], n)[0],
                 };
             default:
                 a()(!1, "unreachable");
@@ -215,7 +216,7 @@ async function G(e, t, n) {
     }),
         await l;
     let c = o.map((e, t) => (0, S.B)(e, t)),
-        d = k(e.customId, e.components, { uploads: o }),
+        d = j(e.customId, e.components, { uploads: o }),
         f = () => {
             (null != t && t.aborted) ||
                 s.tn

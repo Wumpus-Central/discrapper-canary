@@ -1,14 +1,16 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(686546),
-    l = n(768581),
-    c = n(895924),
-    u = n(557545),
-    d = n(970952);
-function f(e, t, n) {
+    s = n(442837),
+    l = n(686546),
+    c = n(271383),
+    u = n(768581),
+    d = n(895924),
+    f = n(557545),
+    _ = n(970952);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +34,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,22 +51,22 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -72,7 +74,7 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,22 +83,24 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
+function y(e) {
     var {
             section: t,
-            isSelected: n,
-            width: a,
-            height: f,
-            className: p,
-            selectable: g = !1,
-            isSquircle: E,
-            onFocus: b,
-            onBlur: y,
-            onMouseOver: O,
-            onMouseLeave: v,
+            channel: { guild_id: n },
+            isSelected: a,
+            width: p,
+            height: m,
+            className: b,
+            selectable: y = !1,
+            isSquircle: O,
+            onFocus: v,
+            onBlur: I,
+            onMouseOver: T,
+            onMouseLeave: S,
         } = e,
-        I = m(e, [
+        A = E(e, [
             "section",
+            "channel",
             "isSelected",
             "width",
             "height",
@@ -108,55 +112,62 @@ function E(e) {
             "onMouseOver",
             "onMouseLeave",
         ]);
-    let [T, S] = i.useState(!1),
-        A = i.useCallback(() => {
-            S(!0), null == b || b();
-        }, [b]),
-        C = i.useCallback(() => {
-            S(!1), null == y || y();
-        }, [y]),
-        N = i.useCallback(() => {
-            S(!0), null == O || O();
-        }, [O]),
+    let [C, N] = i.useState(!1),
         R = i.useCallback(() => {
-            S(!1), null == v || v();
+            N(!0), null == v || v();
         }, [v]),
-        P = i.useMemo(() => {
+        P = i.useCallback(() => {
+            N(!1), null == I || I();
+        }, [I]),
+        D = i.useCallback(() => {
+            N(!0), null == T || T();
+        }, [T]),
+        w = i.useCallback(() => {
+            N(!1), null == S || S();
+        }, [S]),
+        x = (0, s.e7)([c.ZP], () => {
+            var e, r, i, a;
+            return (null == (r = t.application) || null == (e = r.bot) ? void 0 : e.id) != null
+                ? c.ZP.getMember(n, null == (a = t.application) || null == (i = a.bot) ? void 0 : i.id)
+                : null;
+        }),
+        L = i.useMemo(() => {
             var e;
-            return t.type !== c.Qi.APPLICATION
-                ? d
-                : l.ZP.getApplicationIconURL({
+            return t.type !== d.Qi.APPLICATION
+                ? _
+                : u.ZP.getApplicationIconURL({
                       id: t.id,
                       icon: t.icon,
                       bot: null == (e = t.application) ? void 0 : e.bot,
                       botIconFirst: !0,
-                      size: a,
+                      guildMember: x,
+                      size: p,
                   });
-        }, [t, a]);
+        }, [t, p, x]);
     return (0, r.jsx)(
         "div",
-        h(_({}, I), {
-            className: o()(u.wrapper, p, {
-                [u.selectable]: g,
-                [u.selected]: g && n,
+        g(h({}, A), {
+            className: o()(f.wrapper, b, {
+                [f.selectable]: y,
+                [f.selected]: y && a,
             }),
-            onFocus: A,
-            onBlur: C,
-            onMouseOver: N,
-            onMouseLeave: R,
-            children: (0, r.jsx)(s.ZP, {
-                className: u.mask,
-                mask: E || (g && (n || T)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
-                width: a,
-                height: f,
+            onFocus: R,
+            onBlur: P,
+            onMouseOver: D,
+            onMouseLeave: w,
+            children: (0, r.jsx)(l.ZP, {
+                className: f.mask,
+                mask: O || (y && (a || C)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                width: p,
+                height: m,
                 children: (0, r.jsx)("img", {
                     alt: "",
-                    className: u.icon,
+                    className: f.icon,
                     style: {
-                        width: a,
-                        height: f,
+                        width: p,
+                        height: m,
                     },
-                    src: P,
+                    src: L,
                 }),
             }),
         }),

@@ -14,7 +14,7 @@ n.d(t, {
     pK: () => b,
     pU: () => en,
     rI: () => K,
-    tp: () => j,
+    tp: () => k,
     xR: () => X,
 }),
     n(35282),
@@ -238,7 +238,7 @@ function M(e) {
         u.toString()
     );
 }
-function j(e) {
+function k(e) {
     let t,
         { id: n, guildId: r, banner: i, canAnimate: a, size: s } = e;
     if (null == i || null == r) return;
@@ -249,7 +249,7 @@ function j(e) {
     let _ = { size: (0, l.oO)(s * (0, l.x_)()) };
     return "webp" === u && a && X(i) && (_.animated = !0), (t += "?".concat(o.stringify(_)));
 }
-function k(e) {
+function j(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -262,7 +262,7 @@ function k(e) {
     );
 }
 function U(e) {
-    return ee(k(e));
+    return ee(j(e));
 }
 function G(e) {
     let t,
@@ -338,7 +338,26 @@ function H(e) {
     });
 }
 function Y(e) {
-    let { id: t, icon: n, size: r = f.IXf, bot: i, botIconFirst: a, fallbackAvatar: o = !0, keepAspectRatio: s } = e;
+    let {
+        id: t,
+        icon: n,
+        size: r = f.IXf,
+        bot: i,
+        botIconFirst: a,
+        fallbackAvatar: o = !0,
+        keepAspectRatio: s,
+        guildMember: l,
+    } = e;
+    if ((null == i ? void 0 : i.id) != null && null != l && null != l.avatar) {
+        let e = D({
+            userId: i.id,
+            guildId: l.guildId,
+            avatar: l.avatar,
+            canAnimate: !1,
+            size: r,
+        });
+        if (null != e) return e;
+    }
     if (null != i && a) {
         let e = R(i, !1, r);
         if (null != e) return e;
@@ -440,7 +459,7 @@ let et = {
     getGuildMemberAvatarURL: w,
     getGuildMemberAvatarURLSimple: D,
     getGuildMemberAvatarSource: x,
-    getGuildMemberBannerURL: j,
+    getGuildMemberBannerURL: k,
     getUserBannerURL: L,
     getAvatarDecorationURL: M,
     hasAnimatedGuildIcon: function e(e) {
@@ -449,7 +468,7 @@ let et = {
     isAnimatedIconHash: X,
     getUserAvatarSource: (e, t, n) => ee(P(e, t, n)),
     getGuildIconURL: V,
-    getGuildSplashURL: k,
+    getGuildSplashURL: j,
     getGuildSplashSource: U,
     getGuildDiscoverySplashURL: Z,
     getGuildDiscoverySplashSource: F,

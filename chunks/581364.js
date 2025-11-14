@@ -6,8 +6,8 @@ n.d(t, {
     Dd: () => N,
     Ft: () => w,
     TK: () => B,
-    X0: () => j,
-    XA: () => k,
+    X0: () => k,
+    XA: () => j,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
@@ -348,18 +348,18 @@ function M(e) {
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function j(e, t) {
-    var n, r;
+function k(e, t, n) {
+    var r, i;
     return {
         type: p.Qi.APPLICATION,
         id: e.id,
-        name: null != (r = null == e || null == (n = e.bot) ? void 0 : n.username) ? r : e.name,
+        name: null != (i = null != n ? n : null == e || null == (r = e.bot) ? void 0 : r.username) ? i : e.name,
         icon: e.icon,
         application: e,
         isUserApp: null != t && t,
     };
 }
-function k(e) {
+function j(e) {
     let t = e.id,
         n = e.options,
         r = null == n ? void 0 : n.find((e) => e.type === u.jw.SUB_COMMAND_GROUP);

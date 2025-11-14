@@ -107,30 +107,29 @@ function N(e) {
     );
 }
 function S(e) {
-    var t;
     let {
-            guild: n,
-            applicationIntegration: s,
-            selectableWebhookChannels: d,
-            editedWebhook: S,
-            errors: E,
-            canNavigate: w,
+            guild: t,
+            applicationIntegration: n,
+            selectableWebhookChannels: s,
+            editedWebhook: d,
+            errors: S,
+            canNavigate: E,
         } = e,
-        { application: I, integration: P, webhooks: T } = s,
-        [Z, k] = (0, a.Wu)(
+        { application: I, integration: P, webhooks: w } = n,
+        [T, Z] = (0, a.Wu)(
             [m.Z],
-            () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, I.bot.id, n)],
-            [I.bot, n],
+            () => [m.Z.can(O.Plq.MANAGE_ROLES, t), null == I.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, I.bot.id, t)],
+            [I.bot, t],
         ),
-        D = (0, a.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
+        k = (0, a.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, t), [t]),
         A = r.useCallback(() => {
-            w() &&
+            E() &&
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
                         N,
                         C(
                             {
-                                guild: n,
+                                guild: t,
                                 application: I,
                                 integration: P,
                             },
@@ -138,8 +137,8 @@ function S(e) {
                         ),
                     ),
                 );
-        }, [I, w, n, P]),
-        R = r.useMemo(() => {
+        }, [I, E, t, P]),
+        D = r.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
@@ -155,12 +154,12 @@ function S(e) {
                 e
             );
         }, [P.id, P.user]),
-        L = r.useMemo(() => {
+        R = r.useMemo(() => {
             var e;
             return null != I.bot && (null == (e = P.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
-                      guild: n,
-                      applicationIntegration: s,
+                      guild: t,
+                      applicationIntegration: n,
                   })
                 : (0, i.jsx)(o.Zbd, {
                       className: _.emptyCard,
@@ -171,13 +170,17 @@ function S(e) {
                           children: y.intl.string(y.t.pfLnza),
                       }),
                   });
-        }, [I.bot, s, n, P.scopes]);
+        }, [I.bot, n, t, P.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
                 name: I.name,
-                imageSrc: null != (t = I.getIconURL(32)) ? t : b.pK["0"],
-                details: R,
+                imageSrc: b.ZP.getApplicationIconURL({
+                    id: I.id,
+                    icon: I.icon,
+                    size: 32,
+                }),
+                details: D,
                 isHeader: !0,
             }),
             (null == I ? void 0 : I.description) != null
@@ -186,11 +189,11 @@ function S(e) {
                       className: _.headerDescription,
                   })
                 : null,
-            Z
+            T
                 ? (0, i.jsx)(u.Z, {
                       application: I,
-                      canNavigate: w,
-                      guildId: n.id,
+                      canNavigate: E,
+                      guildId: t.id,
                   })
                 : null,
             (0, i.jsx)(o.izJ, { className: _.headerDivider }),
@@ -205,7 +208,7 @@ function S(e) {
                               }),
                               title: y.intl.string(y.t.AOdOYr),
                           }),
-                          L,
+                          R,
                       ],
                   })
                 : null,
@@ -219,13 +222,13 @@ function S(e) {
                         }),
                         title: y.intl.string(y.t["t9ZX/I"]),
                     }),
-                    T.length > 0
+                    w.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: T,
-                              editedWebhook: S,
-                              selectableWebhookChannels: d,
-                              errors: E,
-                              canNavigate: w,
+                              webhooks: w,
+                              editedWebhook: d,
+                              selectableWebhookChannels: s,
+                              errors: S,
+                              canNavigate: E,
                           })
                         : (0, i.jsx)(o.Zbd, {
                               className: _.emptyCard,
@@ -233,7 +236,7 @@ function S(e) {
                               children: (0, i.jsx)(o.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: D ? y.intl.string(y.t.ahPd2Y) : y.intl.string(y.t.axqYMl),
+                                  children: k ? y.intl.string(y.t.ahPd2Y) : y.intl.string(y.t.axqYMl),
                               }),
                           }),
                 ],
@@ -247,7 +250,7 @@ function S(e) {
                     (0, i.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: k ? y.intl.string(y.t.hdneL4) : y.intl.string(y.t.xRCMqx),
+                        children: Z ? y.intl.string(y.t.hdneL4) : y.intl.string(y.t.xRCMqx),
                     }),
                     (0, i.jsx)(c.Z.Child, {
                         grow: 0,
@@ -256,7 +259,7 @@ function S(e) {
                             variant: "critical-primary",
                             size: "sm",
                             text: y.intl.string(y.t.ebGf4m),
-                            disabled: !k,
+                            disabled: !Z,
                             onClick: A,
                         }),
                     }),
