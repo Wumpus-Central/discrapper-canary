@@ -204,7 +204,11 @@ async function ex(e) {
                 return Promise.reject(Error("User changed."));
         }
 }
-function eL(e, t) {}
+function eL(e, t) {
+    var n;
+    (null == (n = J.default.getCurrentUser()) ? void 0 : n.hasAnyStaffLevel()) &&
+        es.log("STAFF-ACK-LOG:", t, e.channelId);
+}
 function eM(e) {
     if ((eL(e, "shouldAutomaticallyAck called"), e.type !== ei.W.CHANNEL)) return eL(e, "not channel read state"), !1;
     let t = F.Z.getChannel(e.channelId),
