@@ -3,6 +3,7 @@ n.d(t, {
     y: () => _,
 }),
     n(539854),
+    n(704826),
     n(35282);
 var r = n(593473),
     i = n(243814),
@@ -34,7 +35,10 @@ function _(e) {
         );
     return {
         clientId: null != (c = d.client_id) ? c : "",
-        scopes: (null != (u = d.scope) ? u : "").split(" ").filter((e) => e.length > 0),
+        scopes: (null != (u = d.scope) ? u : "")
+            .replace(/\+/g, " ")
+            .split(" ")
+            .filter((e) => e.length > 0),
         responseType: d.response_type,
         redirectUri: d.redirect_uri,
         codeChallenge: d.code_challenge,
