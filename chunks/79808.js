@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     l = n(647438),
-    o = n(493773),
-    i = n(996733),
+    i = n(493773),
+    o = n(996733),
     a = n(636298),
     c = n(404975),
     s = n(924052),
@@ -59,14 +59,14 @@ function y(e) {
             directory: j,
             target: m,
             defaultTarget: v,
-            onClose: x,
-            sidebarHeader: g,
+            onClose: g,
+            sidebarHeader: x,
             sidebarFooter: h,
             onPanelChange: O,
             emptyState: P,
         } = e,
         S = null != m && (null == (t = j.entry(m)) ? void 0 : t.targetPanelKey) != null ? m : v;
-    (0, o.ZP)(() => {
+    (0, i.ZP)(() => {
         let e = j.entry(S).targetPanelKey;
         return (
             d.Z.setState({
@@ -79,8 +79,8 @@ function y(e) {
     });
     let C = d.Z.useField("currentPanelKey"),
         _ = d.Z.useField("targetKey"),
-        [N, w] = l.useState(j),
-        E = l.useMemo(() => N.get(null != C ? C : S), [N, C, S]),
+        [N, E] = l.useState(j),
+        w = l.useMemo(() => N.get(null != C ? C : S), [N, C, S]),
         T = l.useCallback(() => Z(void 0), []),
         [k, Z] = l.useState({
             target: S,
@@ -92,7 +92,7 @@ function y(e) {
     l.useEffect(() => {
         if (null == _) return;
         let e = j.entry(_);
-        if (null == e) return void i.Z.setState({ query: "" });
+        if (null == e) return void o.Z.setState({ query: "" });
         if (null == e.targetPanelKey) return void d.Z.setState({ targetKey: void 0 });
         let t = {
             target: _,
@@ -112,8 +112,14 @@ function y(e) {
             });
         } else Z(p(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
     }, [C, _, T, j, I, O]);
-    let D = l.useMemo(() => ({ navTransition: k }), [k]),
-        R = () => I(x),
+    let D = l.useMemo(
+            () => ({
+                navTransition: k,
+                directory: j,
+            }),
+            [k, j],
+        ),
+        R = () => I(g),
         A = null != C ? j.get(C) : void 0;
     return (0, r.jsx)(u.j.Provider, {
         value: D,
@@ -122,14 +128,14 @@ function y(e) {
             children: [
                 (0, r.jsx)(c.P, {
                     root: y,
-                    header: g,
+                    header: x,
                     footer: h,
                     onClose: R,
                     emptyState: P,
                 }),
                 (0, r.jsx)(a.Z, {
                     onClose: R,
-                    setting: null != A ? A : E,
+                    setting: null != A ? A : w,
                 }),
             ],
         }),

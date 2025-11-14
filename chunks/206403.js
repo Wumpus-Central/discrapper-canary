@@ -1,8 +1,8 @@
 n.d(t, { x: () => s }), n(953529);
 var r = n(951288),
     l = n(120356),
-    o = n.n(l),
-    i = n(793030),
+    i = n.n(l),
+    o = n(793030),
     a = n(481060),
     c = n(845442);
 function s(e) {
@@ -17,7 +17,10 @@ function s(e) {
         onClick: b,
     } = e;
     return (0, r.jsxs)(a.P3F, {
-        className: o()(c.baseControlItem, { [c.compact]: f }),
+        className: i()(c.baseControlItem, {
+            [c.compact]: f,
+            [c.clickable]: null != b,
+        }),
         onClick: b,
         children: [
             null != t &&
@@ -31,13 +34,13 @@ function s(e) {
                     (0, r.jsxs)("div", {
                         className: c.baseControlItemTitle,
                         children: [
-                            (0, r.jsx)(i.X6q, {
-                                variant: "heading-md/semibold",
+                            (0, r.jsx)(o.X6q, {
+                                variant: "heading-md/medium",
                                 color: "text-primary",
                                 children: s,
                             }),
                             null != u &&
-                                (0, r.jsx)(i.X6q, {
+                                (0, r.jsx)(o.X6q, {
                                     variant: "heading-md/semibold",
                                     color: "text-secondary",
                                     className: c.secondaryTitle,
@@ -46,9 +49,10 @@ function s(e) {
                         ],
                     }),
                     null != d &&
-                        (0, r.jsx)(i.xvT, {
-                            variant: "text-md/normal",
+                        (0, r.jsx)(o.xvT, {
+                            variant: "text-sm/normal",
                             color: "text-secondary",
+                            className: c.baseControlItemDescription,
                             children: d,
                         }),
                 ],
