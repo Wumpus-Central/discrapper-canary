@@ -3,6 +3,7 @@ e.exports = {
     icon: "icon_f2170c",
     label: "label_f2170c",
     content: "content_f2170c",
+    close: "close_f2170c",
     leading: "leading_f2170c",
     timer: "timer_f2170c",
     userIcon: "userIcon_f2170c",
