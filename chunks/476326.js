@@ -58,7 +58,6 @@ class _ extends r.EventEmitter {
             c(this, "durationSecs", void 0),
             c(this, "waveform", void 0),
             c(this, "isThumbnail", void 0),
-            c(this, "isRemix", void 0),
             c(this, "clip", void 0),
             (this.item = e),
             0 === e.platform)
@@ -75,8 +74,7 @@ class _ extends r.EventEmitter {
                 (this.mimeType = t.type),
                 (this.origin = e.origin),
                 (this.durationSecs = e.durationSecs),
-                (this.waveform = e.waveform),
-                (this.isRemix = e.isRemix);
+                (this.waveform = e.waveform);
         } else
             (this.id = null != (r = e.id) ? r : a().uniqueId("upload")),
                 (this.classification = s.f3(e.file)),

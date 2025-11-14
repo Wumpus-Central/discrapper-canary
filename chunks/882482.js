@@ -18,7 +18,4 @@ e.exports = {
     topLeftPointer: "topLeftPointer_b00844",
     bottomLeftPointer: "bottomLeftPointer_b00844",
     gifTag: "gifTag_b00844",
-    earlyAccessText: "earlyAccessText_b00844",
-    earlyAccessIcon: "earlyAccessIcon_b00844",
-    earlyAccessBadgeContainer: "earlyAccessBadgeContainer_b00844",
 };

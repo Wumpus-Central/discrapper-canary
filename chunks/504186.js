@@ -18,7 +18,6 @@ var r = {
     badgeImage: "badgeImage_b62c4e",
     longerMessagesImage: "longerMessagesImage_b62c4e",
     moreGuildsImage: "moreGuildsImage_b62c4e",
-    remixingImage: "remixingImage_b62c4e",
     soundboardImage: "soundboardImage_b62c4e",
     superReactionsImage: "superReactionsImage_b62c4e",
     uploadImage: "uploadImage_b62c4e",

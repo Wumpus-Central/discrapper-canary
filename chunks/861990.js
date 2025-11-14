@@ -95,7 +95,6 @@ function c(e) {
         "durationSecs" in e && null != e.durationSecs && (o.duration_secs = e.durationSecs),
         "waveform" in e && null != e.waveform && (o.waveform = e.waveform),
         "isThumbnail" in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail),
-        "isRemix" in e && !0 === e.isRemix && (o.is_remix = e.isRemix),
         "clip" in e &&
             null != e.clip &&
             ((o.is_clip = !0),

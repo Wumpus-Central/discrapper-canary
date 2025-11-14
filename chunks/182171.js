@@ -6,7 +6,6 @@ e.exports = {
     botTagRegular: "botTagRegular__82f07 botTag__82f07",
     botTagInvert: "botTagInvert__82f07 botTag__82f07",
     botTagNotStaffWarning: "botTagNotStaffWarning__82f07 botTag__82f07",
-    botTagRemix: "botTagRemix__82f07",
     botTagVerified: "botTagVerified__82f07",
     botText: "botText__82f07",
 };

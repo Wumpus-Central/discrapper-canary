@@ -20213,10 +20213,6 @@ screen and (max-width:485px) {
     color: var(--notice-text-warning)
 }
 
-.botTag__82f07.botTagRemix__82f07 {
-    top: .3em
-}
-
 .botTagVerified__82f07 {
     display: inline-block
 }
@@ -52381,7 +52377,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59716,9 +59712,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -76839,7 +76835,6 @@ html .progress__61462 {
     width: 116px
 }
 
-.remixingImage_b62c4e,
 .soundboardImage_b62c4e,
 .superReactionsImage_b62c4e {
     height: 132px

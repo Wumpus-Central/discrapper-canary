@@ -38,18 +38,14 @@ let d = (e) => {
         case l.Hb.NOT_STAFF_WARNING:
             (h = c.intl.string(c.t.UWhXbK)), (g = u.botTagNotStaffWarning);
             break;
-        case l.Hb.REMIX:
-            (d = !1), (h = c.intl.string(c.t.uXDG34));
-            break;
         case l.Hb.BOT:
         default:
             h = c.intl.string(c.t["9RNkeF"]);
     }
     let E = n === l.Hb.ORIGINAL_POSTER,
-        b = n === l.Hb.REMIX,
-        y = null;
+        b = null;
     d &&
-        (y = (0, r.jsx)(o.u, {
+        (b = (0, r.jsx)(o.u, {
             text: m,
             align: "center",
             position: "top",
@@ -58,14 +54,11 @@ let d = (e) => {
                 color: s.TVs.colors.WHITE,
             }),
         }));
-    let O = () =>
+    let y = () =>
         (0, r.jsxs)("span", {
-            className: a()(i, g, _ ? u.rem : u.px, {
-                [u.botTagOP]: E,
-                [u.botTagRemix]: b,
-            }),
+            className: a()(i, g, _ ? u.rem : u.px, { [u.botTagOP]: E }),
             children: [
-                f ? null : y,
+                f ? null : b,
                 p,
                 (0, r.jsx)("span", {
                     className: u.botText,
@@ -73,24 +66,14 @@ let d = (e) => {
                 }),
             ],
         });
-    switch (n) {
-        case l.Hb.REMIX:
-            return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.xb0sts),
-                position: "top",
-                asContainer: !0,
-                children: O(),
-            });
-        case l.Hb.ORIGINAL_POSTER:
-            return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.uN6Emt),
-                position: "top",
-                asContainer: !0,
-                children: O(),
-            });
-        default:
-            return O();
-    }
+    return n === l.Hb.ORIGINAL_POSTER
+        ? (0, r.jsx)(o.u, {
+              text: c.intl.string(c.t.uN6Emt),
+              position: "top",
+              asContainer: !0,
+              children: y(),
+          })
+        : y();
 };
 d.Types = l.Hb;
 let f = d;

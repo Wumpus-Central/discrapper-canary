@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(428967),
     d = n(266454),
     p = n(605236),
-    h = n(279745),
-    f = n(921944),
+    f = n(279745),
+    h = n(921944),
     g = n(388032),
     m = n(882482);
 let b = i.forwardRef(function (e, t) {
@@ -33,28 +33,27 @@ let b = i.forwardRef(function (e, t) {
             position: Z = "top",
             align: w = "center",
             art: T,
-            isPremiumEarlyAccess: A = !1,
-            maxWidth: R = 280,
-            hideDismissButton: D = !1,
-            pointerClassName: L,
-            dismissIconClassName: M,
-            dismissIcon: k,
-            onDismissIconClick: G,
-            tryItButtonColor: U,
+            maxWidth: A = 280,
+            hideDismissButton: R = !1,
+            pointerClassName: D,
+            dismissIconClassName: L,
+            dismissIcon: M,
+            onDismissIconClick: k,
+            tryItButtonColor: G,
         } = e,
-        B = I ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
-        [F, V] = i.useState(!1),
-        { ref: H, width: z } = (0, c.ZP)();
-    function W(e) {
+        U = I ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
+        [B, F] = i.useState(!1),
+        { ref: V, width: H } = (0, c.ZP)();
+    function z(e) {
         if ((0, u.lg)(N)) return void (0, p.bj)(N, { dismissAction: e });
         (0, d.Q3)(N, { dismissAction: e });
     }
     return (
         i.useEffect(() => {
             var e, t;
-            let n = (null != (t = null == (e = H.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-            !F && n > R && V(!0);
-        }, [F, z, H, R]),
+            let n = (null != (t = null == (e = V.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
+            !B && n > A && F(!0);
+        }, [B, H, V, A]),
         i.useEffect(() => {
             (0, p.kk)(N);
         }, [N]),
@@ -64,18 +63,18 @@ let b = i.forwardRef(function (e, t) {
             children: (0, r.jsxs)("div", {
                 className: o()(m.content, y, {
                     [m.contentNoArt]: null == b || E,
-                    [m.contentPremium]: S || A,
+                    [m.contentPremium]: S,
                 }),
                 children: [
-                    null != k &&
+                    null != M &&
                         (0, r.jsx)(s.P3F, {
-                            onClick: G,
-                            className: M,
-                            children: k,
+                            onClick: k,
+                            className: L,
+                            children: M,
                         }),
                     (0, r.jsxs)("div", {
                         className: o()(b, E ? m.artInline : m.artAbsolute),
-                        children: [P && (0, r.jsx)(h.Z, { className: m.gifTag }), T],
+                        children: [P && (0, r.jsx)(f.Z, { className: m.gifTag }), T],
                     }),
                     (0, r.jsxs)("div", {
                         className: m.body,
@@ -85,29 +84,11 @@ let b = i.forwardRef(function (e, t) {
                                 variant: "heading-md/bold",
                                 color: "always-white",
                                 children: [
-                                    S && !A
+                                    S
                                         ? (0, r.jsx)(s.SrA, {
                                               size: "md",
                                               color: "currentColor",
                                               className: m.premiumIcon,
-                                          })
-                                        : null,
-                                    A
-                                        ? (0, r.jsxs)(s.Text, {
-                                              color: "always-white",
-                                              variant: "eyebrow",
-                                              className: m.earlyAccessBadgeContainer,
-                                              children: [
-                                                  (0, r.jsx)(s.SrA, {
-                                                      size: "md",
-                                                      color: "currentColor",
-                                                      className: m.earlyAccessIcon,
-                                                  }),
-                                                  (0, r.jsx)("span", {
-                                                      className: m.earlyAccessText,
-                                                      children: g.intl.string(g.t.phHyIY),
-                                                  }),
-                                              ],
                                           })
                                         : null,
                                     l,
@@ -125,35 +106,30 @@ let b = i.forwardRef(function (e, t) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        ref: H,
-                        className: F || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
+                        ref: V,
+                        className: B || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
                         children:
                             null != j
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(a.zx, {
                                               className: m.button,
-                                              size: B,
+                                              size: U,
                                               onClick: (e) => {
-                                                  null == x || x(e), j(e), W(f.L.PRIMARY);
+                                                  null == x || x(e), j(e), z(h.L.PRIMARY);
                                               },
-                                              color:
-                                                  null != U
-                                                      ? U
-                                                      : S || A
-                                                        ? a.zx.Colors.BRAND_INVERTED
-                                                        : a.zx.Colors.WHITE,
+                                              color: null != G ? G : S ? a.zx.Colors.BRAND_INVERTED : a.zx.Colors.WHITE,
                                               children: null != O ? O : g.intl.string(g.t.IHf1RN),
                                           }),
-                                          !D &&
+                                          !R &&
                                               (0, r.jsx)(a.zx, {
                                                   className: m.button,
-                                                  size: B,
+                                                  size: U,
                                                   onClick: (e) => {
-                                                      null == x || x(e), W(f.L.DISMISS);
+                                                      null == x || x(e), z(h.L.DISMISS);
                                                   },
-                                                  color: S || A ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
-                                                  look: S || A ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
+                                                  color: S ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
+                                                  look: S ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
                                                   children: null != v ? v : g.intl.string(g.t.om7Ovn),
                                               }),
                                       ],
@@ -162,14 +138,14 @@ let b = i.forwardRef(function (e, t) {
                                       className: m.button,
                                       size: a.zx.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == x || x(e), W(f.L.PRIMARY);
+                                          null == x || x(e), z(h.L.PRIMARY);
                                       },
                                       color: a.zx.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR5),
                                   }),
                     }),
                     (0, r.jsx)("div", {
-                        className: o()(m.pointer, L, {
+                        className: o()(m.pointer, D, {
                             [m.bottomPointer]: "top" === Z,
                             [m.centerLeftPointer]: "right" === Z && "center" === w,
                             [m.topLeftPointer]: "right" === Z && "top" === w,

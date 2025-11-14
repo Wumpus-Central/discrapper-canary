@@ -27,7 +27,6 @@ var r = (function (e) {
             (e[(e.NOT_STAFF_WARNING = 5)] = "NOT_STAFF_WARNING"),
             (e[(e.ORIGINAL_POSTER = 6)] = "ORIGINAL_POSTER"),
             (e[(e.AI = 7)] = "AI"),
-            (e[(e.REMIX = 8)] = "REMIX"),
             e
         );
     })({});

@@ -78,7 +78,6 @@ var E = (function (e) {
         (e.CHANNEL_PROMPT = "channel_prompt"),
         (e.GIF_REPLY = "gif_reply"),
         (e.STICKER_REPLY = "sticker_reply"),
-        (e.REMIXING = "remixing"),
         (e.SEND_WAVE = "send_wave"),
         (e.GIFTING = "gifting"),
         (e.CONTENT_INVENTORY_MEMBERLIST = "content_inventory_memberlist"),
