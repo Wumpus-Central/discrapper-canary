@@ -28748,10 +28748,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-radius: var(--radius-md);
     cursor: pointer;
     gap: 8px;
-    height: 64px;
     justify-content: space-between;
     margin-inline-start: 8px;
     margin-top: 8px;
+    max-height: 80px;
     max-width: calc(var(--custom-member-list-width) - 16px);
     padding: 8px
 }
@@ -28770,10 +28770,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .container__0f2e8:hover .additionalParticipantBadge__0f2e8 {
     background: var(--background-gradient-high, var(--background-accent))
-}
-
-.isAutoHeight__0f2e8 {
-    height: auto
 }
 
 .usesCardRows__0f2e8 {
@@ -52369,7 +52365,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59704,9 +59700,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
