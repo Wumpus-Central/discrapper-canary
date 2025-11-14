@@ -9,61 +9,53 @@ var r = n(647438),
 function o(e) {
     let [t, n] = r.useState(!1),
         [o, s] = r.useState(!1),
-        l = r.useRef(e.current),
-        c = (0, i.e7)([a.Z], () => a.Z.keyboardModeEnabled);
+        l = (0, i.e7)([a.Z], () => a.Z.keyboardModeEnabled);
     r.useEffect(() => {
-        l.current = e.current;
-    }, [e]),
-        r.useEffect(() => {
-            let e = l.current;
-            if (null == e) return;
-            n(!1), s(!1);
-            let t = () => n(!0),
-                r = () => n(!1),
-                i = () => s(!0),
-                a = (t) => {
-                    e.contains(t.relatedTarget) || s(!1);
-                };
-            return (
-                e.addEventListener("mouseenter", t),
-                e.addEventListener("mouseleave", r),
-                e.addEventListener("focusin", i),
-                e.addEventListener("focusout", a),
-                () => {
-                    e.removeEventListener("mouseenter", t),
-                        e.removeEventListener("mouseleave", r),
-                        e.removeEventListener("focusin", i),
-                        e.removeEventListener("focusout", a);
-                }
-            );
-        }, [l]);
-    let u = c && o;
+        let t = e.current;
+        if (null == t) return;
+        n(!1), s(!1);
+        let r = () => n(!0),
+            i = () => n(!1),
+            a = () => s(!0),
+            o = (e) => {
+                t.contains(e.relatedTarget) || s(!1);
+            };
+        return (
+            t.addEventListener("mouseenter", r),
+            t.addEventListener("mouseleave", i),
+            t.addEventListener("focusin", a),
+            t.addEventListener("focusout", o),
+            () => {
+                t.removeEventListener("mouseenter", r),
+                    t.removeEventListener("mouseleave", i),
+                    t.removeEventListener("focusin", a),
+                    t.removeEventListener("focusout", o);
+            }
+        );
+    }, [e]);
+    let c = l && o;
     return {
         isHovering: t,
-        isFocusing: u,
-        isHoveringOrFocusing: t || u,
+        isFocusing: c,
+        isHoveringOrFocusing: t || c,
     };
 }
 function s(e) {
-    let [t, n] = r.useState(!1),
-        i = r.useRef(e.current);
+    let [t, n] = r.useState(!1);
     return (
         r.useEffect(() => {
-            i.current = e.current;
-        }, [e]),
-        r.useEffect(() => {
-            let e = i.current;
-            if (null == e) return;
-            let t = () => n(!0),
-                r = () => n(!1);
+            let t = e.current;
+            if (null == t) return;
+            let r = () => n(!0),
+                i = () => n(!1);
             return (
-                e.addEventListener("mouseenter", t),
-                e.addEventListener("mouseleave", r),
+                t.addEventListener("mouseenter", r),
+                t.addEventListener("mouseleave", i),
                 () => {
-                    e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", r);
+                    t.removeEventListener("mouseenter", r), t.removeEventListener("mouseleave", i);
                 }
             );
-        }, [i]),
+        }, [e]),
         t
     );
 }
