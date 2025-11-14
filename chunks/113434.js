@@ -6,7 +6,7 @@ n.d(t, {
     Fy: () => eN,
     GI: () => ew,
     Gd: () => eW,
-    I: () => ek,
+    I: () => ej,
     J2: () => W,
     Jf: () => eT,
     KX: () => eL,
@@ -17,7 +17,7 @@ n.d(t, {
     Rf: () => eI,
     SU: () => e1,
     Wi: () => eh,
-    _Q: () => ej,
+    _Q: () => ek,
     _s: () => ex,
     aV: () => eX,
     bA: () => ed,
@@ -83,8 +83,8 @@ var h = n(703656),
     x = n(704161),
     L = n(36243),
     M = n(977156),
-    j = n(373370),
-    k = n(475595),
+    k = n(373370),
+    j = n(475595),
     U = n(566078),
     G = n(46140),
     B = n(981631),
@@ -664,7 +664,7 @@ var eM = (function (e) {
         e
     );
 })({});
-function ej(e) {
+function ek(e) {
     var t, n, r;
     let i = (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null,
         a = (null == (n = e.userStatus) ? void 0 : n.completedAt) != null,
@@ -672,7 +672,7 @@ function ej(e) {
         s = eI(e).percentComplete > 0;
     return o ? 4 : a ? 3 : s && i ? 2 : 1 * !!i;
 }
-function ek(e) {
+function ej(e) {
     let t = (0, c.e7)([m.default], () => m.default.locale),
         { percentComplete: n } = eI(e),
         r = eT(e),
@@ -692,7 +692,7 @@ function eU(e, t, n) {
     var r, i;
     let a = eI(e),
         o = (0, R.b7)(e),
-        s = (0, j.DD)({
+        s = (0, k.DD)({
             quest: e,
             taskDetails: a,
             location: G.dr.QUEST_HOME_DESKTOP,
@@ -879,7 +879,7 @@ function eY(e) {
         h = (null == (n = i.userStatus) ? void 0 : n.enrolledAt) != null,
         m = f.percentComplete > 0,
         g = eO(i),
-        E = (0, j.DD)({
+        E = (0, k.DD)({
             quest: i,
             location: G.dr.QUESTS_BAR,
             questContent: D.jn.QUEST_BAR_V2,
@@ -918,7 +918,7 @@ function eW(e, t) {
     return r.useMemo(() => {
         if (null == n) return null;
         let e = null != t ? t : (0, l.wj)(i) ? B.BRd.DARK : B.BRd.LIGHT;
-        return (0, k.fh)(n, k.eC.COSPONSOR_LOGO_TYPE, e);
+        return (0, j.fh)(n, j.eC.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
 function eK(e) {
@@ -954,13 +954,15 @@ function eK(e) {
           });
 }
 function ez(e) {
-    let t = (0, c.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity());
+    let t = (0, c.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
+        n = (0, R.Mo)(e);
     return {
         launchInGameActivity: r.useCallback(() => {
-            null != t && t.applicationId === e.config.application.id
-                ? (0, f.Z)("guild_id" in t.location ? t.location.guild_id : null, t.location)
-                : (0, h.uL)(B.Z5c.ACTIVITY_DETAILS(e.config.application.id));
-        }, [t, e.config.application.id]),
+            null != n &&
+                (null != t && t.applicationId === n
+                    ? (0, f.Z)("guild_id" in t.location ? t.location.guild_id : null, t.location)
+                    : (0, h.uL)(B.Z5c.ACTIVITY_DETAILS(n)));
+        }, [t, n]),
     };
 }
 let eq = () => (0, c.Wu)([P.Z], () => [...P.Z.quests.values()]).some((e) => e.preview),

@@ -75521,7 +75521,7 @@ html .progress__61462 {
 }
 
 .bannerContent__7137c {
-    flex: 1 0 0;
+    flex: 1;
     flex-direction: column;
     gap: 2px;
     justify-content: flex;
@@ -75536,6 +75536,23 @@ html .progress__61462 {
 
 .bannerDescription__7137c {
     text-align: start
+}
+
+@media (max-width:900px) {
+    .container__7137c {
+        flex-direction: column
+    }
+
+    .bannerContent__7137c,
+    .container__7137c {
+        align-items: center;
+        text-align: center
+    }
+
+    .bannerDescription__7137c {
+        justify-content: center;
+        text-align: center
+    }
 }
 
 .timerContainer_d0d75b {
