@@ -5,6 +5,8 @@ e.exports = {
     searchContainer: "searchContainer_e73f2a",
     list: "list_e73f2a",
     section: "section_e73f2a",
+    dropping: "dropping_e73f2a",
+    dragging: "dragging_e73f2a",
     chevronIcon: "chevronIcon_e73f2a",
     sectionCollapsible: "sectionCollapsible_e73f2a",
     row: "row_e73f2a",

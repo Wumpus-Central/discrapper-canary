@@ -108,14 +108,14 @@ function I(e) {
             onUserPopoutRequestClose: x,
             "aria-label": L,
             "aria-labelledby": M,
-            "aria-hidden": j,
+            "aria-hidden": k,
         } = e,
-        [k, U] = i.useState(!1),
+        [j, U] = i.useState(!1),
         G = O(I),
         B = i.useRef(null),
         Z = t.length - a,
         F = Z + 1,
-        V = Z > 0 && !C && !j,
+        V = Z > 0 && !C && !k,
         H = () =>
             (0, r.jsx)(u.VqE, {
                 className: m.popoutWrapper,
@@ -140,9 +140,11 @@ function I(e) {
                                     (0, d.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
-                                                n.bind(n, 881351),
-                                            );
+                                            let { default: t } = await Promise.all([
+                                                n.e("79695"),
+                                                n.e("69220"),
+                                                n.e("77635"),
+                                            ]).then(n.bind(n, 881351));
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
@@ -213,7 +215,7 @@ function I(e) {
                 {
                     targetElementRef: B,
                     renderPopout: H,
-                    shouldShow: k,
+                    shouldShow: j,
                     position: "bottom",
                     onRequestClose: () => U(!1),
                     children: (t) =>
@@ -245,7 +247,7 @@ function I(e) {
               "aria-label": L,
               "aria-labelledby": M,
               className: o()(b, m.avatars),
-              "aria-hidden": j,
+              "aria-hidden": k,
               children: [Y(), W()],
           });
 }

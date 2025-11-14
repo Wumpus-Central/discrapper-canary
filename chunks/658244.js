@@ -9,7 +9,7 @@ var r = n(951288),
 class u extends i.PureComponent {
     handleContextMenu(e, t) {
         (0, a.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
+            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(n.bind(n, 881351));
             return (n) => {
                 var i, l;
                 return (0, r.jsx)(

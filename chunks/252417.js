@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(956221),
     d = n(747017),
     p = n(140701),
-    h = n(545957),
-    f = n(158776),
+    f = n(545957),
+    h = n(158776),
     g = n(652853),
     m = n(981631),
     b = n(671955),
@@ -21,11 +21,11 @@ function v(e) {
     let { user: t, status: v, guildId: j, channelId: x, onSelect: C } = e,
         { theme: E, themeType: S } = (0, g.z)(),
         I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, x), [t, x]),
-        { activities: P, isMobileOnline: N } = (0, l.cj)([f.Z], () => ({
-            activities: f.Z.getActivities(t.id),
-            isMobileOnline: f.Z.isMobileOnline(t.id),
+        { activities: P, isMobileOnline: N } = (0, l.cj)([h.Z], () => ({
+            activities: h.Z.getActivities(t.id),
+            isMobileOnline: h.Z.isMobileOnline(t.id),
         })),
-        Z = (0, h.Z)(t.id),
+        Z = (0, f.Z)(t.id),
         { voiceActivityStatusEnabled: w } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
         { voiceChannel: T } = (0, u.Z)({
             userId: w ? t.id : void 0,
@@ -46,7 +46,9 @@ function v(e) {
         onClick: C,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
+                let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
+                    n.bind(n, 881351),
+                );
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(

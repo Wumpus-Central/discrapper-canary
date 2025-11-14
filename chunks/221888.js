@@ -169,7 +169,7 @@ function L(e) {
         C = (0, h.Z)(),
         [P, L] = i.useState(!1),
         M = i.useRef(new u.sW(R, () => L(!1))),
-        j = (0, c.Wu)([g.Z, E.default], () => {
+        k = (0, c.Wu)([g.Z, E.default], () => {
             if (s.type === O.fO.STREAM) {
                 let e = g.Z.getViewerIds(s.id);
                 return e.length > 0 ? e.map((e) => E.default.getUser(e)).filter(b.lm) : x;
@@ -183,7 +183,7 @@ function L(e) {
     i.useEffect(() => {
         C && (M.current.cancel(), L(!1));
     }, [C]);
-    let k = i.useCallback(() => {
+    let j = i.useCallback(() => {
             M.current.cancel(), L(!0);
         }, []),
         U = i.useCallback(() => {
@@ -191,11 +191,11 @@ function L(e) {
         }, []),
         G = i.useCallback(
             (e, t) => {
-                k(),
+                j(),
                     (0, _.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) => (0, r.jsx)(e, N(A({}, n), { user: t }));
@@ -203,19 +203,19 @@ function L(e) {
                         { onClose: U },
                     );
             },
-            [U, k],
+            [U, j],
         );
-    if (0 === j.length) return null;
+    if (0 === k.length) return null;
     if (m)
         return (0, r.jsx)(w, {
             maxVisibleUsers: I,
-            users: j,
+            users: k,
             guildId: a,
             channelId: t,
             className: d,
             participantType: s.type,
         });
-    let B = l()(j)
+    let B = l()(k)
         .take(I)
         .map((e) =>
             (0, r.jsx)(
@@ -231,19 +231,19 @@ function L(e) {
         )
         .value();
     return (
-        j.length > I &&
+        k.length > I &&
             (B[B.length - 1] = (0, r.jsxs)(
                 "div",
                 {
                     className: T.overflow,
-                    children: ["+", j.length - I + 1],
+                    children: ["+", k.length - I + 1],
                 },
                 "overflow",
             )),
         (0, r.jsx)(p.Z, {
             section: v.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)("div", {
-                onMouseEnter: k,
+                onMouseEnter: j,
                 onMouseLeave: U,
                 children: (0, r.jsx)(f.yRy, {
                     targetElementRef: S,
@@ -253,7 +253,7 @@ function L(e) {
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: j,
+                            users: k,
                             disableInteraction: y,
                         }),
                     shouldShow: P && !C,
