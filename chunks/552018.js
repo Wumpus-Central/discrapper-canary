@@ -209,7 +209,7 @@ class _ extends o.C {
                 case 9:
                     a.filter = {
                         oneofKind: "clientIp",
-                        clientIp: j.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
+                        clientIp: k.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
                     };
                     break;
                 case 10:
@@ -278,6 +278,17 @@ class _ extends o.C {
                         userPremiumType: eT.internalBinaryRead(e, e.uint32(), n, a.filter.userPremiumType),
                     };
                     break;
+                case 21:
+                    a.filter = {
+                        oneofKind: "unitIdMatchesFilterSnapshot",
+                        unitIdMatchesFilterSnapshot: eA.internalBinaryRead(
+                            e,
+                            e.uint32(),
+                            n,
+                            a.filter.unitIdMatchesFilterSnapshot,
+                        ),
+                    };
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -306,7 +317,7 @@ class _ extends o.C {
             "clientLocation" === e.filter.oneofKind &&
                 N.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
-                j.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
+                k.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
                 v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             "bot" === e.filter.oneofKind &&
@@ -328,7 +339,15 @@ class _ extends o.C {
             "unitIdInExperiment" === e.filter.oneofKind &&
                 ev.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
-                eT.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, r.TD.LengthDelimited).fork(), n).join();
+                eT.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, r.TD.LengthDelimited).fork(), n).join(),
+            "unitIdMatchesFilterSnapshot" === e.filter.oneofKind &&
+                eA
+                    .internalBinaryWrite(
+                        e.filter.unitIdMatchesFilterSnapshot,
+                        t.tag(21, r.TD.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -388,7 +407,7 @@ class _ extends o.C {
                 name: "client_ip",
                 kind: "message",
                 oneof: "filter",
-                T: () => j,
+                T: () => k,
             },
             {
                 no: 10,
@@ -466,6 +485,13 @@ class _ extends o.C {
                 kind: "message",
                 oneof: "filter",
                 T: () => eT,
+            },
+            {
+                no: 21,
+                name: "unit_id_matches_filter_snapshot",
+                kind: "message",
+                oneof: "filter",
+                T: () => eA,
             },
         ]);
     }
@@ -1105,8 +1131,8 @@ class M extends o.C {
         ]);
     }
 }
-let j = new M();
-class k extends o.C {
+let k = new M();
+class j extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1218,7 +1244,7 @@ class k extends o.C {
         ]);
     }
 }
-let U = new k();
+let U = new j();
 class G extends o.C {
     create(e) {
         let t = {
@@ -2422,3 +2448,75 @@ class eI extends o.C {
     }
 }
 let eT = new eI();
+class eS extends o.C {
+    create(e) {
+        let t = {
+            filterSnapshotName: "",
+            targetFilterValues: [],
+        };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.filterSnapshotName = e.string();
+                    break;
+                case 2:
+                    if (i === r.TD.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t; ) a.targetFilterValues.push(e.fixed64().toString());
+                    else a.targetFilterValues.push(e.fixed64().toString());
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let s = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (
+            ("" !== e.filterSnapshotName && t.tag(1, r.TD.LengthDelimited).string(e.filterSnapshotName),
+            e.targetFilterValues.length)
+        ) {
+            t.tag(2, r.TD.LengthDelimited).fork();
+            for (let n = 0; n < e.targetFilterValues.length; n++) t.fixed64(e.targetFilterValues[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.UnitIdMatchesFilterSnapshot", [
+            {
+                no: 1,
+                name: "filter_snapshot_name",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 2,
+                name: "target_filter_values",
+                kind: "scalar",
+                repeat: 1,
+                T: 6,
+            },
+        ]);
+    }
+}
+let eA = new eS();
