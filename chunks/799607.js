@@ -171,8 +171,14 @@ let d = function (e) {
                     customOffset: N,
                 },
                 onNudgeChange: j,
-                onRequestClose: () => {
-                    w(!0);
+                onRequestClose: (e) => {
+                    w(
+                        null != e &&
+                            "object" == typeof e &&
+                            "nativeEvent" in e &&
+                            0 === e.nativeEvent.clientX &&
+                            0 === e.nativeEvent.clientY,
+                    );
                 },
             }),
         ],

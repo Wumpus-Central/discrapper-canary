@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => S,
-    c: () => T,
+    Z: () => A,
+    c: () => S,
 });
 var r = n(951288),
     i = n(647438),
@@ -14,70 +14,74 @@ var r = n(951288),
     f = n(660000),
     _ = n(848572),
     p = n(654939),
-    h = n(981631),
-    m = n(921944),
-    g = n(388032);
-let E = 1,
-    b = 15;
-function y() {
-    let e = I();
-    return 1 === e ? g.intl.string(g.t.NBae0i) : g.intl.format(g.t.GSynLW, { time: e });
-}
+    h = n(474936),
+    m = n(981631),
+    g = n(921944),
+    E = n(388032);
+let b = 1,
+    y = 15;
 function O() {
-    let e = (0, a.e7)([c.Z], () => c.Z.getPremiumSubscription());
-    return null != e && e.status === h.O0b.CANCELED ? e : null;
+    let e = T();
+    return 1 === e ? E.intl.string(E.t.NBae0i) : E.intl.format(E.t.GSynLW, { time: e });
 }
 function v() {
-    let e = O(),
-        t = I();
-    return null != e && t >= E && t <= b;
+    let e = (0, a.e7)([c.Z], () => c.Z.getPremiumSubscription());
+    return null != e && e.status === m.O0b.CANCELED ? e : null;
 }
 function I() {
-    let e = O();
+    let e = v(),
+        t = T();
+    return null != e && t >= b && t <= y;
+}
+function T() {
+    let e = v();
     return null != e ? (0, d.YN)(e) : 0;
 }
-function T(e, t) {
-    let n = (0, _.Rw)(),
-        r = v(),
+function S(e, t) {
+    let n = (0, _.kG)(),
+        r = I(),
         i = (0, f.S)(e, t);
-    return (null == n ? void 0 : n.status) === _.Vq.EARNED && r && i;
+    return null != n && r && i;
 }
-let S = (e) => {
-    let { markAsDismissed: t, children: n, mode: a = "popover", tooltipDelay: c = 300, targetElementRef: d } = e,
-        { analyticsLocations: f } = (0, s.ZP)(o.Z.TIERED_TENURE_BADGE_CHURN_REMINDER),
-        _ = y(),
-        O = I(),
-        v = (0, i.useCallback)(() => {
-            u.default.track(h.rMx.TOOLTIP_VIEWED, { type: "tiered_tenure_badge_churn_reminder" });
+let A = (e) => {
+    var t;
+    let { markAsDismissed: n, children: a, mode: c = "popover", tooltipDelay: d = 300, targetElementRef: f } = e,
+        { analyticsLocations: v } = (0, s.ZP)(o.Z.TIERED_TENURE_BADGE_CHURN_REMINDER),
+        I = O(),
+        S = T(),
+        A = null != (t = (0, _.kG)()) ? t : h.VU.PREMIUM_TENURE_1_MONTH,
+        C = (0, i.useCallback)(() => {
+            u.default.track(m.rMx.TOOLTIP_VIEWED, { type: "tiered_tenure_badge_churn_reminder" });
         }, []),
-        T = (0, i.useCallback)(() => {
-            null == t || t(m.L.TAKE_ACTION),
+        N = (0, i.useCallback)(() => {
+            null == n || n(g.L.TAKE_ACTION),
                 (0, l.Z)({
                     initialPlanId: null,
                     subscriptionTier: null,
-                    analyticsLocations: f,
+                    analyticsLocations: v,
                 });
-        }, [t, f]),
-        S = [
+        }, [n, v]),
+        R = [
             {
-                text: g.intl.string(g.t.iIvF2z),
+                text: E.intl.string(E.t.iIvF2z),
                 variant: "expressive",
-                onClick: T,
+                onClick: N,
             },
         ],
-        A = O >= E && O <= b ? Math.max(1, Math.min(100, ((b - O) / b) * 100)) : 1,
-        C = O <= 10 ? "critical" : "warning";
+        P = S >= b && S <= y ? Math.max(1, Math.min(100, ((y - S) / y) * 100)) : 1,
+        D = S <= 10 ? "critical" : "warning";
     return (0, r.jsx)(p.Z, {
-        targetElementRef: d,
-        body: _,
-        mode: a,
-        tooltipDelay: c,
-        markAsDismissed: t,
-        progressCircleText: "" + O,
-        progressCirclePercent: A,
-        progressCircleUrgency: C,
-        actions: S,
-        onShow: "tooltip" === a ? v : void 0,
-        children: n,
+        badgeId: A,
+        targetElementRef: f,
+        body: I,
+        mode: c,
+        tooltipDelay: d,
+        markAsDismissed: n,
+        progressCircleText: "" + S,
+        progressCirclePercent: P,
+        progressCircleUrgency: D,
+        actions: R,
+        onShow: "tooltip" === c ? C : void 0,
+        children: a,
     });
 };
