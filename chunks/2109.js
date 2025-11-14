@@ -16,8 +16,8 @@ let o = (0, i.le)({
         },
     }),
     s = (0, r.B)({
-        id: "2024-11_seasonal_gifting_reminder",
-        label: "Seasonal Gifting Reminder 2024",
+        id: "2025-11_seasonal_gifting_2025_reminder",
+        label: "Seasonal Gifting 2025 Reminder",
         kind: "user",
         defaultConfig: { enabled: !1 },
         commonTriggerPoint: a.$P.CONNECTION_OPEN,
