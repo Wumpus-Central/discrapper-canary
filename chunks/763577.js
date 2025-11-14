@@ -1,31 +1,274 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u }),
+    n(388685),
+    n(853839),
+    n(570086),
+    n(479048),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733);
 var a = n(951288),
-    i = n(647438),
+    l = n(647438),
     r = n(164617),
-    l = n(793030),
-    s = n(159691),
-    o = n(481060);
-function c() {
-    let e = Object.keys(r).map((e) => (0, a.jsx)(d, { riveName: e }, e));
-    return (0, a.jsx)(l.Kqy, {
-        gap: 24,
-        padding: 8,
-        style: { boxSizing: "border-box" },
-        children: e,
+    i = n(793030),
+    s = n(692547),
+    o = n(333200),
+    c = n(159691),
+    d = n(481060);
+function u() {
+    let e = Object.keys(r).map((e) => (0, a.jsx)(h, { riveName: e }, e));
+    return (0, a.jsx)(i.w0Z, {
+        style: { maxHeight: "100%" },
+        children: (0, a.jsxs)(i.Kqy, {
+            gap: 24,
+            padding: 8,
+            style: { boxSizing: "border-box" },
+            children: [
+                (0, a.jsx)(i.X6q, {
+                    variant: "heading-lg/medium",
+                    children: "Rive Inspector",
+                }),
+                (0, a.jsx)(i.xvT, {
+                    variant: "text-md/normal",
+                    children:
+                        "Upload a .riv file to view the animation and interact with its data binding configuration.",
+                }),
+                (0, a.jsx)(m, {}),
+                (0, a.jsx)(i.X6q, {
+                    variant: "heading-lg/medium",
+                    children: "Rive Overrides",
+                }),
+                (0, a.jsx)(i.xvT, {
+                    variant: "text-md/normal",
+                    children:
+                        "Upload a .riv file to replace an existing Rive animation in the app with the new one. Useful for previewing updated versions of existing animations before uploading them via the Rive pipeline.",
+                }),
+                e,
+            ],
+        }),
     });
 }
-function d(e) {
-    let { riveName: t } = e,
-        n = r[t].riveSrc,
-        c = i.useRef(null),
-        d = (0, o.o8M)(n);
+function m() {
+    let [e, t] = l.useState(null),
+        [n, r] = l.useState(null),
+        [s, o] = l.useState(null),
+        c = l.useRef(null),
+        [u, m] = l.useState(400),
+        [x, g] = l.useState(400),
+        f = l.useCallback(() => {
+            setTimeout(() => {
+                var e, t;
+                o(null != (t = null == (e = c.current) ? void 0 : e.getProperties()) ? t : {}), r({});
+            }, 1000);
+        }, []),
+        b = l.useCallback(
+            (e, t) => {
+                null != n &&
+                    r((n) => {
+                        var a, l, r;
+                        return (
+                            (l = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        a = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (a = a.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        a.forEach(function (t) {
+                                            var a;
+                                            (a = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: a,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = a);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (r = r =
+                                {
+                                    [e]: {
+                                        type: null == s || null == (a = s[e]) ? void 0 : a.type,
+                                        value: t,
+                                    },
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var a = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, a);
+                                      }
+                                      return n;
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
+                                  }),
+                            l
+                        );
+                    });
+            },
+            [s, n],
+        ),
+        v = l.useCallback((e) => {
+            o(null), r(null), t(e);
+        }, []);
+    return (0, a.jsxs)(i.Kqy, {
+        gap: 16,
+        children: [
+            (0, a.jsx)(h, {
+                riveName: "Rive inspector",
+                onRiveLoad: v,
+            }),
+            null != e &&
+                (0, a.jsx)("div", {
+                    style: {
+                        width: u,
+                        height: x,
+                    },
+                    children: (0, a.jsx)(d.BmE, {
+                        src: e,
+                        ref: c,
+                        onLoad: f,
+                        dynamicDataBinding: null != n ? n : {},
+                    }),
+                }),
+            null != e && null == n ? (0, a.jsx)(i.$jN, {}) : null,
+            null != n &&
+                (0, a.jsxs)(i.Kqy, {
+                    children: [
+                        (0, a.jsxs)(i.Kqy, {
+                            gap: 8,
+                            children: [
+                                (0, a.jsx)(i.X6q, {
+                                    variant: "heading-lg/medium",
+                                    children: "Dimensions",
+                                }),
+                                (0, a.jsx)(d.oil, {
+                                    type: "number",
+                                    label: "width",
+                                    value: u.toString(),
+                                    onChange: (e) => m(parseInt(e)),
+                                }),
+                                (0, a.jsx)(d.oil, {
+                                    type: "number",
+                                    label: "height",
+                                    value: x.toString(),
+                                    onChange: (e) => g(parseInt(e)),
+                                }),
+                            ],
+                        }),
+                        (0, a.jsxs)(i.Kqy, {
+                            gap: 8,
+                            children: [
+                                (0, a.jsx)(i.X6q, {
+                                    variant: "heading-lg/medium",
+                                    children: "Data Binding",
+                                }),
+                                Object.keys(null != s ? s : {}).map((e) => {
+                                    var t, l, r, i;
+                                    return (0, a.jsx)(
+                                        p,
+                                        {
+                                            property: e,
+                                            type: null == s || null == (t = s[e]) ? void 0 : t.type,
+                                            value:
+                                                null != (i = null == n || null == (l = n[e]) ? void 0 : l.value)
+                                                    ? i
+                                                    : null == s || null == (r = s[e])
+                                                      ? void 0
+                                                      : r.value,
+                                            onChange: (t) => b(e, t),
+                                        },
+                                        e,
+                                    );
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+        ],
+    });
+}
+function p(e) {
+    let { property: t, type: n, value: l, onChange: r } = e;
+    return "string" === n
+        ? (0, a.jsx)(d.oil, {
+              label: t,
+              value: l,
+              onChange: (e) => r(e),
+          })
+        : "number" === n
+          ? (0, a.jsx)(d.oil, {
+                type: "number",
+                label: t,
+                value: l,
+                onChange: (e) => r(parseInt(e)),
+            })
+          : "boolean" === n
+            ? (0, a.jsx)(i.rsf, {
+                  label: t,
+                  checked: l,
+                  onChange: (e) => r(e),
+              })
+            : "trigger" === n
+              ? (0, a.jsx)(i.zxk, {
+                    text: "Trigger ".concat(t),
+                    onClick: () => r(Number.isSafeInteger(l) ? l + 1 : 1),
+                })
+              : "image" === n
+                ? (0, a.jsx)(d.oil, {
+                      label: t,
+                      value: l,
+                      onChange: (e) => r(e),
+                  })
+                : "color" === n
+                  ? (0, a.jsx)(o.V, {
+                        selectionMode: "single",
+                        label: t,
+                        value: l,
+                        onSelectionChange: (e) => r(e),
+                        closeOnSelect: !0,
+                        options: Object.entries(s.Z.colors).map((e) => {
+                            let [t, n] = e;
+                            return {
+                                label: t,
+                                value: n,
+                                id: t,
+                            };
+                        }),
+                    })
+                  : null;
+}
+function h(e) {
+    var t;
+    let { riveName: n, onRiveLoad: s } = e,
+        o = null == (t = r[n]) ? void 0 : t.riveSrc,
+        u = null == o,
+        m = l.useRef(null),
+        p = (0, d.o8M)(o);
     return (0, a.jsxs)(
-        l.Kqy,
+        i.Kqy,
         {
             gap: 8,
             children: [
-                (0, a.jsx)("label", { children: t }),
-                (0, a.jsxs)(l.Kqy, {
+                (0, a.jsx)("label", { children: n }),
+                (0, a.jsxs)(i.Kqy, {
                     justify: "space-between",
                     direction: "horizontal",
                     align: "center",
@@ -35,32 +278,45 @@ function d(e) {
                             accept: ".riv",
                             onChange: (e) => {
                                 var t;
-                                let a = null == (t = e.target.files) ? void 0 : t[0];
-                                if (null == a) return;
-                                let i = new FileReader();
-                                (i.onload = (e) => {
+                                let n = null == (t = e.target.files) ? void 0 : t[0];
+                                if (null == n) return;
+                                let a = new FileReader();
+                                (a.onload = (e) => {
                                     var t;
-                                    let a = null == (t = e.target) ? void 0 : t.result;
-                                    (0, o.JGI)(n, a);
+                                    let n = null == (t = e.target) ? void 0 : t.result;
+                                    null != o && (0, d.JGI)(o, n),
+                                        null == s ||
+                                            s(
+                                                "data:application/octet-stream;base64,".concat(
+                                                    btoa(
+                                                        new Uint8Array(n).reduce(
+                                                            (e, t) => e + String.fromCharCode(t),
+                                                            "",
+                                                        ),
+                                                    ),
+                                                ),
+                                            );
                                 }),
-                                    i.readAsArrayBuffer(a);
+                                    a.readAsArrayBuffer(n);
                             },
-                            ref: c,
+                            ref: m,
                         }),
-                        (0, a.jsx)(s.hU, {
-                            "aria-label": "Clear override for ".concat(t),
+                        (0, a.jsx)(c.hU, {
+                            "aria-label": "Clear override for ".concat(n),
                             onClick: () => {
-                                null != c.current && (c.current.value = ""), (0, o.JGI)(n, null);
+                                null != m.current && (m.current.value = ""),
+                                    null != o && (0, d.JGI)(o, null),
+                                    null == s || s(null);
                             },
-                            icon: o.XHJ,
+                            icon: d.XHJ,
                             variant: "critical-primary",
                             size: "sm",
-                            disabled: null == d,
+                            disabled: null == p && !u,
                         }),
                     ],
                 }),
             ],
         },
-        t,
+        n,
     );
 }
