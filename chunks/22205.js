@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(392711),
     o = n.n(a),
-    s = n(509442),
+    s = n(203463),
     l = n(818405),
     c = n(587158),
     u = n(286379),
@@ -108,7 +108,7 @@ function x(e) {
             [c, o],
         ),
         M = (0, d.e7)([T.Z], () => T.Z.getFocusedRunningGame()),
-        j = g
+        k = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -137,14 +137,14 @@ function x(e) {
                   ],
               })
             : null,
-        k = g ? null : N.intl.string(N.t.oEJEFq),
+        j = g ? null : N.intl.string(N.t.oEJEFq),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(S.Y, {
         title: N.intl.string(N.t.U38qZj),
-        body: j,
-        hint: U ? k : void 0,
+        body: k,
+        hint: U ? j : void 0,
         confirmText: N.intl.string(N.t.a3HlgJ),
         cancelText: null != M ? N.intl.string(N.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(b.Z, {
@@ -214,7 +214,7 @@ class L extends i.PureComponent {
                           onCrashDisabled: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : T.Z.getTargetPID();
-                              p.Z.updateOverlayState(t, v.mM.OVERLAY_CRASHED_DISABLED),
+                              p.Z.updateOverlayState(t, v.mM.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
                                   this.setState({ showError: !1 });
                           },
                           onReload: () => {

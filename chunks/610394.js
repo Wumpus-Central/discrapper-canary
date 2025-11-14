@@ -80,8 +80,8 @@ let N = new s.Z("OverlayV3Store"),
     x = null,
     L = null,
     M = null,
-    j = null,
     k = null,
+    j = null,
     U = null,
     G = {},
     B = {},
@@ -96,7 +96,7 @@ function V(e, t) {
             if ((D.trackGame(e), R.has(e))) return;
             R.add(e),
                 (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
-                o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN);
+                o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN, "OverlayStore.maybeTrackGame");
         } catch (t) {
             N.error("Error tracking game:", t), (0, _.PV)(e, t, { crashType: "renderer" });
         }
@@ -118,7 +118,7 @@ function H(e) {
         if (null == D) return;
         D.untrackGame(e), N.verbose("Removing tracked game ".concat(e));
         let t = R.values().next().value;
-        k === e && (k = null != t ? t : null);
+        j === e && (j = null != t ? t : null);
     } catch (t) {
         N.error("Error removing tracked game:", t), (0, _.PV)(e, t, { crashType: "native" });
     }
@@ -149,17 +149,17 @@ async function W() {
 }
 function K(e) {
     let t = l.ZP.getGameOrTransformedSubgameForPID(e);
-    o.Z.setAssociatedGame(null != k ? k : d.UNSET_PID, e, t);
+    o.Z.setAssociatedGame(null != j ? j : d.UNSET_PID, e, t);
 }
 function z() {
     var e;
-    null != j &&
-        M === j &&
+    null != k &&
+        M === k &&
         null != D &&
-        ((j = null),
+        ((k = null),
         (0, _.PY)(M, "renderer_window_refreshing_finished"),
         null == (e = D.readyToShow) || e.call(D, M),
-        o.Z.updateOverlayState(M, f.mM.OVERLAY_RENDERING),
+        o.Z.updateOverlayState(M, f.mM.OVERLAY_RENDERING, "checkPopoutRefresh"),
         N.verbose("Showing overlay v3 for pid ".concat(M)));
 }
 function q(e, t) {
@@ -189,7 +189,8 @@ function X() {
 }
 function Q(e) {
     if (Z.allDone) {
-        if (!P.has(e)) return void o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW);
+        if (!P.has(e))
+            return void o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
         o.Z.successfullyShown(e);
     }
 }
@@ -202,8 +203,12 @@ function $(e) {
     if (((Z = C(S({}, Z), { windowHandleSentToNative: t })), t)) {
         let e = null != L ? L : d.UNSET_PID;
         Z.reactInitializationStarted
-            ? o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW)
-            : o.Z.updateOverlayState(e, f.mM.WAITING_FOR_REACT_INITIALIZATION),
+            ? o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW, "handleOverlayV3WindowHandleInitialized")
+            : o.Z.updateOverlayState(
+                  e,
+                  f.mM.WAITING_FOR_REACT_INITIALIZATION,
+                  "handleOverlayV3WindowHandleInitialized",
+              ),
             (0, _.bs)(e, "window_handle_initialized");
     }
 }
@@ -221,15 +226,15 @@ function en() {
 }
 function er(e) {
     let { createWindowTriggeringPID: t } = e;
-    (Z = C(S({}, Z), { popoutOpened: !0 })), K(t), (k = t), (L = t), (0, d.setPID)(t);
+    (Z = C(S({}, Z), { popoutOpened: !0 })), K(t), (j = t), (L = t), (0, d.setPID)(t);
 }
 function ei(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
-    o.Z.updateOverlayState(t, f.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE);
+    o.Z.updateOverlayState(t, f.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE, "handleOverlayCreateWindowHandleSuccess");
 }
 function ea(e) {
     let { createWindowTriggeringPID: t, error: n, nativeWindowHandle: r } = e;
-    o.Z.updateOverlayState(t, f.mM.OVERLAY_CRASHED_DISABLED),
+    o.Z.updateOverlayState(t, f.mM.OVERLAY_CRASHED_DISABLED, "handleOverlayWindowCreationFailure"),
         (Z = C(S({}, Z), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + n })),
         (0, _.bs)(t, "renderer_window_mounting_failed", {
             error: n,
@@ -237,14 +242,14 @@ function ea(e) {
         });
 }
 function eo() {
-    X(), (k = null), (L = null), (0, d.setPID)(d.UNSET_PID), F();
+    X(), (j = null), (L = null), (0, d.setPID)(d.UNSET_PID), F();
 }
 function es(e) {
     let { refreshingPID: t } = e;
     return (
         N.verbose("Refreshing OOP host window for pid ".concat(t)),
-        (j = t),
         (k = t),
+        (j = t),
         (L = t),
         (0, d.setPID)(t),
         K(t),

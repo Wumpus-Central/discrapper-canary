@@ -240,6 +240,7 @@ class en extends i.PureComponent {
                     enabledLegacy: null != (n = null == _ ? void 0 : _.legacyEnabled) ? n : I.enabledLegacy,
                     overlayMethod: null != (r = null == _ ? void 0 : _.overlayMethod) ? r : I.overlayMethod,
                     source: null != (i = null == _ ? void 0 : _.source) ? i : I.source,
+                    reason: "ChatAutoAnalytics",
                 },
                 S = null != (l = P.default.getOverlayMethod(y.pid)) ? l : C.overlayMethod;
             if (

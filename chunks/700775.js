@@ -28,6 +28,7 @@ class d extends i.Z {
                 old_state: e.oldState,
                 pid: e.pid,
                 init_session_id: u.get(e.pid),
+                reason: e.reason,
             }),
             (e.newState === o.mM.OVERLAY_RENDERING ||
                 e.newState === o.mM.OVERLAY_DISABLED ||

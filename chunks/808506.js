@@ -60,8 +60,8 @@ var i,
     x = n(355863),
     L = n(626135),
     M = n(866119),
-    j = n(671999),
-    k = n(998502),
+    k = n(671999),
+    j = n(998502),
     U = n(145597),
     G = n(372679),
     B = n(981631),
@@ -439,7 +439,7 @@ function eg(e, t) {
 }
 async function eE(e) {
     try {
-        if (k.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
+        if (j.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
             if (q.size > 0) {
                 e_ = "reconcile.getOverlayURL";
                 let t = await eT();
@@ -465,7 +465,7 @@ async function eb(e) {
     ed(e, { mounting_started_at: n });
     let r = q.get(e);
     if (null != r) return void el.warn("Trying to attach to pid=".concat(e, ", that is already in status: ").concat(r));
-    await f.Z.updateOverlayState(e, I.mM.WAITING_FOR_OVERLAY_OPEN), (e_ = "attach.getOverlayModule");
+    await f.Z.updateOverlayState(e, I.mM.WAITING_FOR_OVERLAY_OPEN, "attachPID"), (e_ = "attach.getOverlayModule");
     let i = await (0, G.K)();
     if (null == i) return void el.error("Trying to attach to pid=".concat(e, ", but overlay module failed loaded"));
     (e_ = "attach.transitionOverlayPIDStatus"), eg(e, "ATTACHING"), (e_ = "attach.attachToProcess");
@@ -625,8 +625,9 @@ function eC(e, t, n) {
     L.default.track(B.rMx.OVERLAY_HOOK_RESULT, s),
         el.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), s),
         t
-            ? (f.Z.updateOverlayState(e, I.mM.OVERLAY_RENDERING), eg(e, "CONNECTED", "CONNECTING"))
-            : (f.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED), eg(e, "CONNECT_FAILED", "CONNECTING"));
+            ? (f.Z.updateOverlayState(e, I.mM.OVERLAY_RENDERING, "onConnectComplete"), eg(e, "CONNECTED", "CONNECTING"))
+            : (f.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED, "onConnectComplete"),
+              eg(e, "CONNECT_FAILED", "CONNECTING"));
 }
 function eN() {
     let e = D.default.getToken(),
@@ -726,14 +727,14 @@ function eM(e) {
     let { region: t } = e;
     eo.add(t), ew(!1, $);
 }
-function ej() {
+function ek() {
     eo.clear(), ew(!0, $);
 }
-function ek(e) {
+function ej(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "31ae85216b6894fa391781fd12e7706186e80b53"),
+    n.append("build_id", "0edd54b00ea5697fdf73613df029ab6060c375e1"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -793,8 +794,8 @@ function eW(e) {
     setTimeout(() => {
         let e = Math.ceil(t * window.innerWidth),
             r = Math.ceil(n * window.innerHeight),
-            i = (0, j.B)("click", e, r);
-        (0, j.J)(i, e, r);
+            i = (0, k.B)("click", e, r);
+        (0, k.J)(i, e, r);
     }, 50);
 }
 function eK(e) {
@@ -911,8 +912,8 @@ let e0 = new e$(
                   OVERLAY_FOCUSED: eG,
                   OVERLAY_SET_INPUT_LOCKED: eL,
                   OVERLAY_ACTIVATE_REGION: eM,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: ej,
-                  RPC_SERVER_READY: ek,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: ek,
+                  RPC_SERVER_READY: ej,
                   OVERLAY_CALL_PRIVATE_CHANNEL: eU,
                   OVERLAY_JOIN_GAME: eY,
                   OVERLAY_CRASHED: eB,
