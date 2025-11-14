@@ -30,7 +30,7 @@ function E() {
     });
 }
 function b(e) {
-    let { children: t, selected: n, className: i, usesCardRows: o = !1, isAutoHeight: s = !1 } = e;
+    let { children: t, selected: n, className: i, usesCardRows: o = !1 } = e;
     return (0, r.jsx)("div", {
         className: a()(
             g.container,
@@ -38,7 +38,6 @@ function b(e) {
             {
                 [g.selected]: n,
                 [g.usesCardRows]: o,
-                [g.isAutoHeight]: s,
             },
             i,
         ),
