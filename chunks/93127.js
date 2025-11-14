@@ -1,26 +1,29 @@
-n.d(t, { _: () => l });
+n.d(t, { _: () => c });
 var r = n(544891),
     i = n(570140),
     a = n(480294),
-    o = n(752048),
-    s = n(981631);
-function l() {
+    o = n(286715),
+    s = n(752048),
+    l = n(981631);
+function c() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return o.Z.shouldFetch() && a.Z.hasConsented(s.pjP.PERSONALIZATION)
+    return s.Z.shouldFetch() && a.Z.hasConsented(l.pjP.PERSONALIZATION)
         ? (i.Z.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
           r.tn
               .get({
-                  url: s.ANM.USER_AFFINITIES_V2,
+                  url: l.ANM.USER_AFFINITIES_V2,
                   retries: 3 * !!e,
                   oldFormErrors: !0,
                   rejectWithError: !1,
+                  query: { user_flags: o.r.RECENTLY_RETURNED },
               })
               .then(
                   (e) => {
-                      let { body: t } = e;
+                      var t;
+                      let { body: n } = e;
                       i.Z.dispatch({
                           type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
-                          affineUsers: t.user_affinities.map((e) => {
+                          affineUsers: n.user_affinities.map((e) => {
                               var t, n, r, i, a, o, s, l;
                               return {
                                   otherUserId: e.other_user_id,
@@ -37,6 +40,7 @@ function l() {
                                   communicationRank: null != (l = e.communication_rank) ? l : 0,
                               };
                           }),
+                          userFlags: null != (t = n.user_flags) ? t : {},
                       });
                   },
                   () => {

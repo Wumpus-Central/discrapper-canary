@@ -235,6 +235,7 @@ var r = (function (e) {
             (e.USER_REGISTER_ACCOUNT_INFORMATION = "impression_user_register_account_information"),
             (e.USER_REGISTER_IDENTITY = "impression_user_register_identity"),
             (e.USER_REGISTRATION = "impression_user_registration"),
+            (e.USER_RETURNED_HAPPENING_NOW = "impression_user_returned_happening_now"),
             (e.USER_SETTINGS_CONNECTIONS = "impression_user_settings_connections"),
             (e.USER_SETTINGS_SESSIONS = "impression_user_settings_sessions"),
             (e.USER_VERIFICATION_MODAL = "impression_user_verification_modal"),
