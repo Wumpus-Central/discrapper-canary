@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(951288);
 n(647438);
 var r = n(481060),
-    l = n(435064),
+    l = n(341569),
     o = n(522474),
     a = n(556296),
     s = n(13140),
@@ -23,7 +23,7 @@ function m() {
             notif_type: h.n0.ClipsReminderNotification,
         }),
         n = a.ZP.getKeybindForAction(p.kg4.SAVE_CLIP),
-        m = l.Z.getSettings().clipsEnabled;
+        m = (0, l.LI)();
     if (null == n || !m) return null;
     let g = s.BB(n.shortcut, !0);
     return {

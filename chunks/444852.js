@@ -12,8 +12,8 @@ var r = n(392711),
     l = n(570140),
     c = n(861687),
     u = n(437263),
-    d = n(924557),
-    f = n(435064),
+    d = n(435064),
+    f = n(341569),
     _ = n(631053),
     p = n(581567),
     h = n(594190),
@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -258,7 +258,7 @@ class V extends c.Z {
         this.on(u.z.State, (e, t, n) => {
             if (
                 (l.Z.dispatch(
-                    k(
+                    j(
                         M(
                             {
                                 type: "RTC_CONNECTION_STATE",
@@ -602,7 +602,7 @@ class V extends c.Z {
         let e = this.isOwner ? (0, D.Z)() : null;
         S.default.track(
             w.rMx.VIDEO_STREAM_STARTED,
-            k(M({}, this.getStreamAnalyticsProperties(), e), {
+            j(M({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: O.Z.getType(),
                 effective_connection_speed: O.Z.getEffectiveConnectionSpeed(),
                 service_provider: O.Z.getServiceProvider(),
@@ -622,21 +622,20 @@ class V extends c.Z {
         (i = o.getNetworkStats()),
             (a = this.isOwner ? o.getCodecUsageStats("streamer", this.userId) : o.getCodecUsageStats("receiver", r));
         let s = null,
-            l = (0, d.ln)(),
-            c = f.Z.getSettings(),
-            u = this.isOwner
+            l = d.Z.getSettings(),
+            c = this.isOwner
                 ? {
-                      clips_enabled: c.clipsEnabled && l,
-                      clips_buffer_length: c.clipsLength,
+                      clips_enabled: (0, f.LI)(),
+                      clips_buffer_length: l.clipsLength,
                   }
                 : {},
-            p = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
+            u = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
         o.getOutboundStats().forEach((t) => {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 S.default.track(
                     w.rMx.VIDEO_STREAM_ENDED,
-                    k(
+                    j(
                         M(
                             {},
                             a,
@@ -646,8 +645,8 @@ class V extends c.Z {
                             t,
                             this._soundshareStats.getStats(),
                             this.getStreamAnalyticsProperties(),
+                            c,
                             u,
-                            p,
                         ),
                         {
                             app_hardware_acceleration_enabled: A.Z.getAppHardwareAccelerationEnabled(),
@@ -669,7 +668,7 @@ class V extends c.Z {
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     S.default.track(
                         w.rMx.VIDEO_STREAM_ENDED,
-                        k(
+                        j(
                             M(
                                 {},
                                 a,
@@ -679,8 +678,8 @@ class V extends c.Z {
                                 l,
                                 this._soundshareStats.getStats(),
                                 this.getStreamAnalyticsProperties(),
+                                c,
                                 u,
-                                p,
                             ),
                             {
                                 app_hardware_acceleration_enabled: A.Z.getAppHardwareAccelerationEnabled(),

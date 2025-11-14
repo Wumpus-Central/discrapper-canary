@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(997841);
 var r = n(928801),
-    i = n(924557),
-    a = n(435064),
-    o = n(779618),
+    i = n(435064),
+    a = n(779618),
+    o = n(341569),
     s = n(594190),
     l = n(441167),
     c = n(695346),
@@ -37,25 +37,19 @@ class g extends r.Z {
         let r = 0,
             d = c.tU.getSetting();
         r = (0, p.mB)(r, h.BVn.ALLOW_VOICE_RECORDING, d);
-        let _ = (0, o.Z)(f.Z),
+        let _ = (0, a.Z)(f.Z),
             m =
-                (0, i.ln)() &&
-                a.Z.getSettings().clipsEnabled &&
+                (0, o.LI)() &&
                 ((null == (e = u.Z.getCurrentUserActiveStream()) ? void 0 : e.state) === h.jm8.ACTIVE ||
                     (null == (t = u.Z.getCurrentUserActiveStream()) ? void 0 : t.state) === h.jm8.PAUSED),
-            g = a.Z.isDecoupledGameClippingEnabled(),
-            E =
-                _ &&
-                a.Z.getSettings().decoupledClipsEnabled &&
-                (null == (n = s.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null &&
-                g;
-        r = (0, p.mB)(r, h.BVn.CLIPS_ENABLED, m || E);
-        let { enableViewerClipping: b } = l.Z.getCurrentConfig(
+            g = (0, o.CY)() && (null == (n = s.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null;
+        r = (0, p.mB)(r, h.BVn.CLIPS_ENABLED, m || g);
+        let { enableViewerClipping: E } = l.Z.getCurrentConfig(
                 { location: "computeVoiceFlags" },
                 { autoTrackExposure: !1 },
             ),
-            y = b && _ && a.Z.getSettings().viewerClipsEnabled;
-        return (0, p.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, y);
+            b = E && _ && i.Z.getSettings().viewerClipsEnabled;
+        return (0, p.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, b);
     }
     getInitialState() {
         return {

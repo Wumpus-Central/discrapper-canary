@@ -3,7 +3,7 @@ var r = n(147913),
     i = n(594190),
     a = n(594174),
     o = n(979651),
-    s = n(435064),
+    s = n(341569),
     l = n(39604),
     c = n(626968);
 function u(e, t, n) {
@@ -53,7 +53,7 @@ class d extends r.Z {
     }
     async updateActiveHandlers() {
         this.ensureInitialized();
-        let e = s.Z.getSettings().clipsEnabled,
+        let e = (0, s.LI)(),
             t = i.ZP.getRunningGames(),
             n = this.isUserInVoiceChannel();
         if (!e) return void (await this.stopAllHandlers());

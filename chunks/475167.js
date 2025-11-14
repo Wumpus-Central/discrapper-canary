@@ -1,18 +1,17 @@
-n.d(e, { Z: () => c });
-var i = n(442837),
-    l = n(924557),
-    u = n(435064),
-    r = n(39604),
-    s = n(509613),
-    a = n(313789),
-    o = n(388032);
-let c = (0, s.qs)(a.n.CLIPS_ENABLE, {
-    useTitle: () => o.intl.string(o.t.h8rgrK),
-    useSubtitle: () => o.intl.string(o.t["4Qw3NO"]),
-    useValue: () => (0, i.e7)([u.Z], () => u.Z.getSettings().clipsEnabled),
-    usePredicate: l.Go,
+n.d(e, { Z: () => o });
+var i = n(924557),
+    l = n(341569),
+    u = n(39604),
+    r = n(509613),
+    s = n(313789),
+    a = n(388032);
+let o = (0, r.qs)(s.n.CLIPS_ENABLE, {
+    useTitle: () => a.intl.string(a.t.h8rgrK),
+    useSubtitle: () => a.intl.string(a.t["4Qw3NO"]),
+    useValue: () => (0, l.z8)(),
+    usePredicate: i.w9,
     setValue: (t) =>
-        r.em({
+        u.em({
             clipsEnabled: t,
             trackAnalytics: !0,
         }),

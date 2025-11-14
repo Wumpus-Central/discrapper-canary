@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(46973),
     i = n(147913),
     a = n(714424),
@@ -7,8 +7,9 @@ var r = n(46973),
     l = n(435064),
     c = n(519159),
     u = n(894694),
-    d = n(39604);
-function f(e, t, n) {
+    d = n(341569),
+    f = n(39604);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,14 +22,14 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 10000,
-    p = 10000;
-class h extends i.Z {
+let p = 10000,
+    h = 10000;
+class m extends i.Z {
     handleClipsSignalCreated(e, t) {
         this.isSignalEnabled(e.type) && this.process(e, t);
     }
     handleSpeaking(e) {
-        if (!l.Z.getSettings().clipsEnabled || e.context !== r.Yn.DEFAULT) return;
+        if (!(0, d.LI)() || e.context !== r.Yn.DEFAULT) return;
         let t = l.Z.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === s.default.getId() || t) &&
             this.process({
@@ -39,6 +40,7 @@ class h extends i.Z {
     }
     handleSoundboardPlayStart(e) {
         var t, n, r;
+        if (!(0, d.LI)()) return;
         let i = o.Z.getSoundById(e.soundId);
         if (null == i) return;
         let s = null == (t = a.Z.getGuildEmojis(i.guildId)) ? void 0 : t[null != (n = i.emojiId) ? n : ""];
@@ -55,6 +57,7 @@ class h extends i.Z {
     }
     handleSoundboardPlayEnd(e) {
         var t, n;
+        if (!(0, d.LI)()) return;
         let r = o.Z.getSoundById(e.soundId);
         if (null == r) return;
         let i = null == (t = a.Z.getGuildEmojis(r.guildId)) ? void 0 : t[null != (n = r.emojiId) ? n : ""];
@@ -95,13 +98,13 @@ class h extends i.Z {
                 this.scheduleClip(e);
                 break;
             case u.Bs.GAME_EVENT:
-                1 === e.importance && this.scheduleClip(e, _);
+                1 === e.importance && this.scheduleClip(e, p);
                 break;
             case u.Bs.PHRASE:
                 var n;
                 if (
                     (null == (n = this.scheduledClipSignal) ? void 0 : n.type) === u.Bs.GAME_EVENT ||
-                    performance.now() - this.lastClipTimestamp < p
+                    performance.now() - this.lastClipTimestamp < h
                 )
                     return;
                 this.scheduleClip(e);
@@ -111,7 +114,7 @@ class h extends i.Z {
         return {
             timeline: this.timeline.read(),
             scheduledClipSignal: this.scheduledClipSignal,
-            phraseCooldown: Math.max(0, p - (performance.now() - this.lastClipTimestamp)),
+            phraseCooldown: Math.max(0, h - (performance.now() - this.lastClipTimestamp)),
         };
     }
     clear() {
@@ -129,7 +132,7 @@ class h extends i.Z {
             (this.lastClipTimestamp = performance.now() + t),
             (this.scheduledClipTimeout = setTimeout(() => {
                 (this.scheduledClipSignal = null),
-                    (0, d.C1)(void 0, e.type === u.Bs.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
+                    (0, f.C1)(void 0, e.type === u.Bs.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
                         signal: e,
                         timestamp: Date.now(),
                         emotionHistory: [],
@@ -141,11 +144,11 @@ class h extends i.Z {
     }
     constructor() {
         super(),
-            f(this, "timeline", void 0),
-            f(this, "scheduledClipTimeout", null),
-            f(this, "scheduledClipSignal", null),
-            f(this, "lastClipTimestamp", 0),
-            f(this, "actions", {
+            _(this, "timeline", void 0),
+            _(this, "scheduledClipTimeout", null),
+            _(this, "scheduledClipSignal", null),
+            _(this, "lastClipTimestamp", 0),
+            _(this, "actions", {
                 CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
                 SPEAKING: (e) => this.handleSpeaking(e),
                 GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
@@ -156,4 +159,4 @@ class h extends i.Z {
             (this.timeline = new c.m(l.Z.getSettings().clipsLength));
     }
 }
-let m = new h();
+let g = new m();

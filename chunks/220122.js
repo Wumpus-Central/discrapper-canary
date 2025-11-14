@@ -4,16 +4,16 @@ var r = n(481060),
     a = n(594190),
     o = n(199902),
     s = n(131951),
-    l = n(924557),
-    c = n(474639),
-    u = n(435064),
-    d = n(779618),
+    l = n(474639),
+    c = n(435064),
+    u = n(779618),
+    d = n(341569),
     f = n(39604);
 n(460779);
 var _ = n(356659),
     p = n(388032);
 let h = "CLIPS_IN_CALL_WARNING";
-class m extends c.Z {
+class m extends l.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: h,
@@ -23,20 +23,19 @@ class m extends c.Z {
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, d.Z)(s.Z)) return;
-        let t = (0, l.ln)(),
-            n = u.Z.getSettings(),
-            r = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
-            i = s.Z.getMediaEngine();
+        if (!(0, u.Z)(s.Z)) return;
+        let t = c.Z.getSettings(),
+            n = (0, d.LI)(),
+            r = s.Z.getMediaEngine();
         if (
-            (i.setClipBufferLength(r ? n.clipsLength / 1000 : 0),
+            (r.setClipBufferLength(n ? t.clipsLength / 1000 : 0),
             (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(),
             null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
         ) {
-            let { frameRate: t, resolution: r } = n.clipsQuality,
-                a = r <= 480 ? (r / 3) * 4 : (r / 9) * 16,
-                o = r;
-            i.setClipsQualitySettings(a, o, t) || null == e || this.fireClipsInitEvent();
+            let { frameRate: n, resolution: i } = t.clipsQuality,
+                a = i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
+                o = i;
+            r.setClipsQualitySettings(a, o, n) || null == e || this.fireClipsInitEvent();
         }
     }
     handleClipsInitOnToggleDetection(e) {
@@ -51,30 +50,25 @@ class m extends c.Z {
                 : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
-        if (!(0, d.Z)(s.Z)) return;
-        let e = (0, l.ln)(),
-            t = u.Z.getSettings();
-        if (!(t.clipsEnabled && e) || null != o.Z.getCurrentUserActiveStream()) return;
-        let n = a.ZP.getVisibleGame();
-        (null == n ? void 0 : n.pid) != null &&
-            (null == n ? void 0 : n.windowHandle) != null &&
-            null != n.name &&
-            "" !== n.name &&
-            i.Z.dispatch({
-                type: "CLIPS_INIT",
-                sourceId: "window:".concat(null == n ? void 0 : n.windowHandle),
-                applicationName: n.name,
-                quality: t.clipsQuality,
-            });
-    }
-    disableClips() {
-        f.em({
-            clipsEnabled: !1,
-            trackAnalytics: !1,
+        if (!(0, d.LI)() || null != o.Z.getCurrentUserActiveStream()) return;
+        let e = a.ZP.getVisibleGame();
+        if (
+            (null == e ? void 0 : e.pid) == null ||
+            (null == e ? void 0 : e.windowHandle) == null ||
+            null == e.name ||
+            "" === e.name
+        )
+            return;
+        let t = c.Z.getSettings();
+        i.Z.dispatch({
+            type: "CLIPS_INIT",
+            sourceId: "window:".concat(null == e ? void 0 : e.windowHandle),
+            applicationName: e.name,
+            quality: t.clipsQuality,
         });
     }
     loadClipsFromStorage() {
-        let e = u.Z.getSettings().storageLocation;
+        let e = c.Z.getSettings().storageLocation;
         "" !== e &&
             f.jv(e).catch((e) => {
                 _.jF.error("Failed to load clips directory on connection open", e);

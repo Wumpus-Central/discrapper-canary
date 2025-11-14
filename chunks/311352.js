@@ -9,11 +9,11 @@ var r = n(951288),
     u = n(522651),
     d = n(765585),
     p = n(870569),
-    h = n(819640),
-    f = n(556296),
+    f = n(819640),
+    h = n(556296),
     g = n(13140),
-    m = n(924557),
-    b = n(435064),
+    m = n(435064),
+    b = n(341569),
     _ = n(39604),
     y = n(981631),
     O = n(388032),
@@ -106,24 +106,21 @@ let x = (e) => {
     C = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
-            n = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
-            o = (0, m.Go)(),
-            { clipsEnabled: s, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
-                clipsEnabled: b.Z.getSettings().clipsEnabled,
-                isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
-            })),
-            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
-        if (!(o && s) || null == v || n) return null;
-        let C = g.BB(v.shortcut, !0);
+            n = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+            o = (0, b.z8)(),
+            s = (0, l.e7)([m.Z], () => m.Z.getIsAtMaxSaveClipOperations()),
+            d = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
+        if (!o || null == d || n) return null;
+        let v = g.BB(d.shortcut, !0);
         return (0, r.jsx)(x, {
-            keybindString: C,
+            keybindString: v,
             targetElementRef: e,
             children: (0, r.jsx)(p.Z, {
                 ref: e,
-                disabled: d,
+                disabled: s,
                 tooltipText:
-                    null != v
-                        ? O.intl.formatToPlainString(O.t.HIMcv1, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
+                    null != d
+                        ? O.intl.formatToPlainString(O.t.HIMcv1, { hotkey: g.BB(null == d ? void 0 : d.shortcut, !0) })
                         : O.intl.string(O.t.s52pju),
                 onClick: () => {
                     (0, _.br)(), (0, u.v)(t, u.d.CLIP);

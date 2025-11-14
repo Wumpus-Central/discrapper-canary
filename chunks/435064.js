@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ed }), n(388685), n(997841);
+n.d(t, { Z: () => eu }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
@@ -8,13 +8,12 @@ var r,
     c = n(314897),
     u = n(630388);
 n(137058);
-var d = n(358085),
-    f = n(924557),
-    _ = n(894694),
-    p = n(356659),
-    h = n(981631),
-    m = n(37113);
-function g(e, t, n) {
+var d = n(924557),
+    f = n(894694),
+    _ = n(356659),
+    p = n(981631),
+    h = n(37113);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +37,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,43 +54,43 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = "default",
+let y = "default",
+    O = [],
     v = [],
     I = [],
-    T = [],
-    S = 0,
+    T = 0,
+    S = null,
     A = null,
-    C = null,
-    N = {},
-    R = null,
-    P = [],
-    D = null,
-    w = {},
-    x = new Map(),
-    L = {
+    C = {},
+    N = null,
+    R = [],
+    P = null,
+    D = {},
+    w = new Map(),
+    x = {
         clipsEnabled: !1,
-        storageLocation: O,
+        storageLocation: y,
         clipsQuality: {
-            resolution: m.ApplicationStreamResolutions.RESOLUTION_1080,
-            frameRate: m.ApplicationStreamFPS.FPS_30,
+            resolution: h.ApplicationStreamResolutions.RESOLUTION_1080,
+            frameRate: h.ApplicationStreamFPS.FPS_30,
         },
-        clipsLength: p.OT.SECONDS_30,
+        clipsLength: _.OT.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
         viewerClipsEnabled: !0,
-        viewerConnectivity: p.dJ.ALL,
-        maxAutoClips: p.SU,
+        viewerConnectivity: _.dJ.ALL,
+        maxAutoClips: _.SU,
         clipSignals: {
             enableDistributedSignals: !0,
             enablePhraseSignals: !0,
@@ -105,8 +104,8 @@ let O = "default",
         },
         autoClipPhrases: ["clip that", "clip it", "clip clip"],
     },
-    M = {
-        clipsSettings: L,
+    L = {
+        clipsSettings: x,
         hardwareClassification: null,
         hardwareClassificationForDecoupled: null,
         hardwareClassificationVersion: 0,
@@ -119,48 +118,48 @@ let O = "default",
             numberOfTimesDismissed: 0,
         },
     };
-async function j() {
-    if (M.clipsSettings.storageLocation !== O || null == o.Z || null == o.Z.remoteApp) return;
+async function M() {
+    if (L.clipsSettings.storageLocation !== y || null == o.Z || null == o.Z.remoteApp) return;
     let e = await o.Z.remoteApp.getPath("documents");
-    (M.clipsSettings.storageLocation = e), eu.emitChange();
+    (L.clipsSettings.storageLocation = e), ec.emitChange();
 }
 function k(e) {
     let { classification: t } = e,
-        n = M.hardwareClassification;
-    (M.hardwareClassificationVersion = p.WM),
-        (M.hardwareClassification = t),
-        M.hardwareClassification === _.xH.MEETS_AUTO_ENABLE &&
-            n !== _.xH.MEETS_AUTO_ENABLE &&
-            (M.clipsSettings.clipsEnabled = !0);
-    let r = M.hardwareClassificationForDecoupled;
-    (M.hardwareClassificationForDecoupled = t),
-        M.hardwareClassificationForDecoupled === _.xH.MEETS_AUTO_ENABLE &&
-            r !== _.xH.MEETS_AUTO_ENABLE &&
-            M.clipsSettings.clipsEnabled &&
-            (M.clipsSettings.decoupledClipsEnabled = !0);
+        n = L.hardwareClassification;
+    (L.hardwareClassificationVersion = _.WM),
+        (L.hardwareClassification = t),
+        L.hardwareClassification === f.xH.MEETS_AUTO_ENABLE &&
+            n !== f.xH.MEETS_AUTO_ENABLE &&
+            (L.clipsSettings.clipsEnabled = !0);
+    let r = L.hardwareClassificationForDecoupled;
+    (L.hardwareClassificationForDecoupled = t),
+        L.hardwareClassificationForDecoupled === f.xH.MEETS_AUTO_ENABLE &&
+            r !== f.xH.MEETS_AUTO_ENABLE &&
+            L.clipsSettings.clipsEnabled &&
+            (L.clipsSettings.decoupledClipsEnabled = !0);
 }
-function U(e) {
+function j(e) {
     let { clip: t } = e;
-    for (let [e, n] of I.entries())
+    for (let [e, n] of v.entries())
         if (n.id === t.id) {
-            (I[e] = t), (I = [...I]);
+            (v[e] = t), (v = [...v]);
             return;
         }
 }
-function G(e) {
+function U(e) {
     let { settings: t } = e;
-    M = y(E({}, M), { clipsSettings: E({}, M.clipsSettings, t) });
+    L = b(g({}, L), { clipsSettings: g({}, L.clipsSettings, t) });
 }
-function B(e) {
+function G(e) {
     let { clipType: t, streamKey: n, thumbnail: r } = e;
     if (
-        ((S += 1), (M.hasTakenDecoupledClip = M.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)
+        ((T += 1), (L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)
     ) {
         var i;
         let e = Date.now();
-        (D = null != D ? D : e),
-            (w[n] = [
-                ...(null != (i = w[n]) ? i : []),
+        (P = null != P ? P : e),
+            (D[n] = [
+                ...(null != (i = D[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r,
@@ -168,74 +167,74 @@ function B(e) {
             ]);
     }
 }
-function Z(e) {
+function B(e) {
     let { streamKey: t, timestamp: n } = e;
-    D === n && (D = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
+    P === n && (P = null), null == n ? (D[t] = []) : (D[t] = D[t].filter((e) => e.timestamp !== n));
 }
-function F() {
-    S = Math.max(S - 1, 0);
+function Z() {
+    T = Math.max(T - 1, 0);
 }
-function V(e) {
+function F(e) {
     var t, n;
     let { clip: r } = e;
-    (S = Math.max(S - 1, 0)),
-        (C = y(
-            E(
+    (T = Math.max(T - 1, 0)),
+        (A = b(
+            g(
                 {
                     applicationName: r.applicationName,
                     ended: !1,
                 },
-                C,
+                A,
             ),
             {
-                newClipIds: [...(null != (t = null == C ? void 0 : C.newClipIds) ? t : []), r.id],
+                newClipIds: [...(null != (t = null == A ? void 0 : A.newClipIds) ? t : []), r.id],
             },
         )),
-        (M = y(E({}, M), {
-            newClipIds: [...(null != (n = M.newClipIds) ? n : []), r.id],
+        (L = b(g({}, L), {
+            newClipIds: [...(null != (n = L.newClipIds) ? n : []), r.id],
         })),
-        (T = T.filter((e) => {
+        (I = I.filter((e) => {
             let { id: t } = e;
             return t !== r.id;
         })),
-        (I = [r, ...I]),
-        (M.hasClips = !0);
+        (v = [r, ...v]),
+        (L.hasClips = !0);
+}
+function V(e) {
+    let { clip: t } = e;
+    I = [t, ...I];
 }
 function H(e) {
-    let { clip: t } = e;
-    T = [t, ...T];
-}
-function Y(e) {
     let { clipId: t } = e;
-    T = T.filter((e) => {
+    I = I.filter((e) => {
         let { id: n } = e;
         return n !== t;
     });
 }
+function Y(e) {
+    let { channelId: t } = e;
+    S = t;
+}
 function W(e) {
     let { channelId: t } = e;
-    A = t;
+    t !== S && (S = null);
 }
 function K(e) {
-    let { channelId: t } = e;
-    t !== A && (A = null);
-}
-function z(e) {
     let { applicationName: t } = e;
-    if (((R = null), !M.clipsSettings.clipsEnabled)) return !1;
-    C = {
+    if (((N = null), !L.clipsSettings.clipsEnabled)) return !1;
+    A = {
         applicationName: t,
         newClipIds: [],
         ended: !1,
     };
 }
-function q(e) {
+function z(e) {
     let { errMsg: t } = e;
-    R = t;
+    N = t;
 }
-function X(e) {
+function q(e) {
     let { sourceName: t, pid: n } = e;
-    if (!M.clipsSettings.clipsEnabled) return !1;
+    if (!L.clipsSettings.clipsEnabled) return !1;
     let r = t;
     if (null != n) {
         var i;
@@ -243,64 +242,64 @@ function X(e) {
         r = null != (i = null == e ? void 0 : e.name) ? i : r;
     }
     if (null == r || "" === r) return !1;
-    C = {
+    A = {
         applicationName: r,
         newClipIds: [],
         ended: !1,
     };
 }
-function Q(e) {
+function X(e) {
     let { streamKey: t } = e;
-    if (((D = null), (w[t] = []), null == C || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
-    C = 0 === C.newClipIds.length ? null : y(E({}, C), { ended: !0 });
+    if (((P = null), (D[t] = []), null == A || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    A = 0 === A.newClipIds.length ? null : b(g({}, A), { ended: !0 });
+}
+function Q(e) {
+    (L.hasClips = e.clips.length > 0), (v = e.clips);
 }
 function J(e) {
-    (M.hasClips = e.clips.length > 0), (I = e.clips);
-}
-function $(e) {
     0 ===
-        (I = I.filter((t) => {
+        (v = v.filter((t) => {
             let { filepath: n } = t;
             return n !== e.filepath;
-        })).length && (M.hasClips = !1);
+        })).length && (L.hasClips = !1);
+}
+function $() {
+    if (null == A) return !1;
+    A = null;
 }
 function ee() {
-    if (null == C) return !1;
-    C = null;
+    L.newClipIds = [];
 }
-function et() {
-    M.newClipIds = [];
-}
-function en(e) {
-    N[e.userId] = {
-        clipsEnabled: (0, u.yE)(e.flags, h.BVn.CLIPS_ENABLED),
-        allowVoiceRecording: (0, u.yE)(e.flags, h.BVn.ALLOW_VOICE_RECORDING),
-        allowAnyViewerClips: (0, u.yE)(e.flags, h.BVn.ALLOW_ANY_VIEWER_CLIPS),
+function et(e) {
+    C[e.userId] = {
+        clipsEnabled: (0, u.yE)(e.flags, p.BVn.CLIPS_ENABLED),
+        allowVoiceRecording: (0, u.yE)(e.flags, p.BVn.ALLOW_VOICE_RECORDING),
+        allowAnyViewerClips: (0, u.yE)(e.flags, p.BVn.ALLOW_ANY_VIEWER_CLIPS),
     };
 }
-function er(e) {
+function en(e) {
     let { added: t } = e;
-    t.length > 0 && (M.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1);
+    t.length > 0 && (L.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1);
 }
-function ei(e) {
+function er(e) {
     let { educationType: t } = e;
     switch (t) {
-        case p.D5.Error:
-            R = null;
+        case _.D5.Error:
+            N = null;
             break;
-        case p.D5.Disabled:
-        case p.D5.Enabled:
-            (M.clipsEducationState.dismissedAt = Date.now()),
-                (M.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0),
-                (M.clipsEducationState.numberOfTimesDismissed += 1);
+        case _.D5.Disabled:
+        case _.D5.Enabled:
+            (L.clipsEducationState.dismissedAt = Date.now()),
+                (L.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0),
+                (L.clipsEducationState.numberOfTimesDismissed += 1);
     }
 }
-function ea(e) {
+function ei(e) {
     let { clipIds: t } = e;
-    P = null != t ? t : [];
+    R = null != t ? t : [];
 }
-function eo(e, t, n) {
-    if (!(0, f.NS)() || n !== c.default.getId() || null == t) return !1;
+function ea(e, t, n) {
+    if (!(0, d.NS)() || n !== c.default.getId() || null == t) return !1;
     let r = "__CLIP_METADATA__",
         i = t.indexOf(r);
     if (-1 === i) return !1;
@@ -309,109 +308,106 @@ function eo(e, t, n) {
             a = t.substring(n),
             o = JSON.parse(a);
         if (null == o.id) return !1;
-        let s = x.get(e);
-        return null == s && ((s = new Set()), x.set(e, s)), s.add(o.id), !0;
+        let s = w.get(e);
+        return null == s && ((s = new Set()), w.set(e, s)), s.add(o.id), !0;
     } catch (e) {
         return !1;
     }
 }
-function es(e) {
+function eo(e) {
     var t;
-    return eo(e.channelId, e.message.content, null == (t = e.message.author) ? void 0 : t.id);
+    return ea(e.channelId, e.message.content, null == (t = e.message.author) ? void 0 : t.id);
 }
-function el(e) {
+function es(e) {
     let t = !1;
     for (let r of e.messages) {
         var n;
-        t = t || eo(e.channelId, r.content, null == (n = r.author) ? void 0 : n.id);
+        t = t || ea(e.channelId, r.content, null == (n = r.author) ? void 0 : n.id);
     }
     return t;
 }
-class ec extends (r = i.ZP.DeviceSettingsStore) {
+class el extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (M = e), j(), this.waitFor(s.ZP);
+        null != e && (L = e), M(), this.waitFor(s.ZP);
     }
     getClips() {
-        return I;
+        return v;
     }
     getPendingClips() {
-        return T;
+        return I;
     }
     getUserAgnosticState() {
-        return M;
+        return L;
     }
     getSettings() {
-        return M.clipsSettings;
+        return L.clipsSettings;
     }
     getLastClipsSession() {
-        return C;
+        return A;
     }
     getClipsWarningShown(e) {
-        return A === e;
+        return S === e;
     }
     getActiveAnimation() {
-        return D;
+        return P;
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = w[e]) ? t : v;
+        return null != (t = D[e]) ? t : O;
     }
     hasAnyClipAnimations() {
-        return Object.values(w).some((e) => e.length > 0);
+        return Object.values(D).some((e) => e.length > 0);
     }
     getHardwareClassification() {
-        return M.hardwareClassification;
+        return L.hardwareClassification;
     }
     getHardwareClassificationForDecoupled() {
-        return M.hardwareClassificationForDecoupled;
+        return L.hardwareClassificationForDecoupled;
     }
     getHardwareClassificationVersion() {
-        return M.hardwareClassificationVersion;
+        return L.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return S >= p.Kw;
+        return T >= _.Kw;
     }
     getLastClipsError() {
-        return R;
+        return N;
     }
     isClipsEnabledForUser(e) {
         var t, n;
-        return null != (n = null == (t = N[e]) ? void 0 : t.clipsEnabled) && n;
+        return null != (n = null == (t = C[e]) ? void 0 : t.clipsEnabled) && n;
     }
     isVoiceRecordingAllowedForUser(e) {
         var t, n;
-        return null != (n = null == (t = N[e]) ? void 0 : t.allowVoiceRecording) && n;
+        return null != (n = null == (t = C[e]) ? void 0 : t.allowVoiceRecording) && n;
     }
     isViewerClippingAllowedForUser(e) {
         var t, n;
-        return null != (n = null == (t = N[e]) ? void 0 : t.allowAnyViewerClips) && n;
-    }
-    isDecoupledGameClippingEnabled() {
-        return (0, d.isWindows)();
+        return null != (n = null == (t = C[e]) ? void 0 : t.allowAnyViewerClips) && n;
     }
     hasClips() {
-        return M.hasClips;
+        return L.hasClips;
     }
     hasTakenDecoupledClip() {
-        return M.hasTakenDecoupledClip;
+        return L.hasTakenDecoupledClip;
     }
     getNewClipIds() {
-        return M.newClipIds;
+        return L.newClipIds;
     }
     isClipExporting(e) {
-        return P.includes(e);
+        return R.includes(e);
     }
     getExportingClipIds() {
-        return P;
+        return R;
     }
     getMatchingGroupClip(e, t) {
         if (null == e && null == t) return null;
-        for (let o of I) {
+        for (let o of v) {
             var n, r, i, a;
             if (
                 (null != t && o.id === t) ||
                 (null != e &&
-                    (null == (r = o.decision) || null == (n = r.signal) ? void 0 : n.type) === _.Bs.DISTRIBUTED &&
+                    (null == (r = o.decision) || null == (n = r.signal) ? void 0 : n.type) === f.Bs.DISTRIBUTED &&
                     (null == (a = o.decision) || null == (i = a.signal) ? void 0 : i.remoteTriggerClipId) === e)
             )
                 return o;
@@ -420,51 +416,51 @@ class ec extends (r = i.ZP.DeviceSettingsStore) {
     }
     wasClipSharedInChannel(e, t) {
         var n;
-        let r = x.get(t);
+        let r = w.get(t);
         return null != (n = null == r ? void 0 : r.has(e)) && n;
     }
 }
-g(ec, "displayName", "ClipsStore"),
-    g(ec, "persistKey", "ClipsStore"),
-    g(ec, "migrations", [
+m(el, "displayName", "ClipsStore"),
+    m(el, "persistKey", "ClipsStore"),
+    m(el, "migrations", [
         (e) => ({
-            clipsSettings: null != e ? e : L,
+            clipsSettings: null != e ? e : x,
             newClipsCount: 0,
         }),
         (e) => {
-            let t = E({}, L, e.clipsSettings);
-            return y(E({}, e), { clipsSettings: t });
+            let t = g({}, x, e.clipsSettings);
+            return b(g({}, e), { clipsSettings: t });
         },
         (e) => {
             var t;
-            return y(E({}, e), { newClipIds: null != (t = e.newClipIds) ? t : [] });
+            return b(g({}, e), { newClipIds: null != (t = e.newClipIds) ? t : [] });
         },
         (e) => {
             var t, n;
-            return y(E({}, e), {
+            return b(g({}, e), {
                 hardwareClassification: null != (t = e.hardwareClassification) ? t : null,
                 hardwareClassificationVersion: null != (n = e.hardwareClassificationVersion) ? n : 0,
             });
         },
         (e) => {
             var t;
-            return y(E({}, e), { hasClips: null != (t = e.hasClips) && t });
+            return b(g({}, e), { hasClips: null != (t = e.hasClips) && t });
         },
         (e) =>
-            y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), { decoupledClipsEnabled: L.decoupledClipsEnabled }),
+            b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), { decoupledClipsEnabled: x.decoupledClipsEnabled }),
             }),
         (e) => {
             var t;
-            return y(E({}, e), {
+            return b(g({}, e), {
                 hardwareClassificationForDecoupled: null != (t = e.hardwareClassificationForDecoupled) ? t : null,
             });
         },
         (e) => {
             var t;
             let r = null == (t = n(131951).Z) ? void 0 : t.getHardwareEncoding();
-            return y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), {
+            return b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), {
                     clipsEnabled: !!r && e.clipsSettings.clipsEnabled,
                     decoupledClipsEnabled: !!r && e.clipsSettings.decoupledClipsEnabled,
                 }),
@@ -472,30 +468,30 @@ g(ec, "displayName", "ClipsStore"),
         },
         (e) => {
             var t;
-            return y(E({}, e), {
+            return b(g({}, e), {
                 newClipIds: null != (t = e.newClipIds) ? t : [],
                 newClipIDs: void 0,
             });
         },
         (e) =>
-            y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), {
+            b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), {
                     clipsQuality:
                         "number" == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality
-                            ? L.clipsQuality
+                            ? x.clipsQuality
                             : e.clipsSettings.clipsQuality,
                 }),
             }),
         (e) => {
             var t;
-            return y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), {
-                    remindersEnabled: null != (t = e.clipsSettings.remindersEnabled) ? t : L.remindersEnabled,
+            return b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), {
+                    remindersEnabled: null != (t = e.clipsSettings.remindersEnabled) ? t : x.remindersEnabled,
                 }),
             });
         },
         (e) =>
-            y(E({}, e), {
+            b(g({}, e), {
                 hasTakenDecoupledClip: !1,
                 clipsEducationState: {
                     dismissedAt: null,
@@ -505,50 +501,50 @@ g(ec, "displayName", "ClipsStore"),
             }),
         (e) => {
             var t, n, r, i;
-            return y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), {
-                    maxAutoClips: null != (t = e.clipsSettings.maxAutoClips) ? t : L.maxAutoClips,
-                    clipSignals: null != (n = e.clipsSettings.clipSignals) ? n : L.clipSignals,
-                    mlPipelinesEnabled: null != (r = e.clipsSettings.mlPipelinesEnabled) ? r : L.mlPipelinesEnabled,
-                    autoClipPhrases: null != (i = e.clipsSettings.autoClipPhrases) ? i : L.autoClipPhrases,
+            return b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), {
+                    maxAutoClips: null != (t = e.clipsSettings.maxAutoClips) ? t : x.maxAutoClips,
+                    clipSignals: null != (n = e.clipsSettings.clipSignals) ? n : x.clipSignals,
+                    mlPipelinesEnabled: null != (r = e.clipsSettings.mlPipelinesEnabled) ? r : x.mlPipelinesEnabled,
+                    autoClipPhrases: null != (i = e.clipsSettings.autoClipPhrases) ? i : x.autoClipPhrases,
                 }),
             });
         },
         (e) =>
-            y(E({}, e), {
-                clipsSettings: y(E({}, e.clipsSettings), {
+            b(g({}, e), {
+                clipsSettings: b(g({}, e.clipsSettings), {
                     autoClipPhrases:
                         0 === e.clipsSettings.autoClipPhrases.length
-                            ? L.autoClipPhrases
+                            ? x.autoClipPhrases
                             : e.clipsSettings.autoClipPhrases,
                 }),
             }),
     ]);
-let eu = new ec(a.Z, {
-        CLIPS_SETTINGS_UPDATE: G,
-        CLIPS_SAVE_CLIP: V,
-        CLIPS_SAVE_CLIP_PLACEHOLDER: H,
-        CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: Y,
-        CLIPS_SAVE_CLIP_START: B,
-        CLIPS_SAVE_CLIP_ERROR: F,
-        CLIPS_SAVE_ANIMATION_END: Z,
-        STREAM_START: X,
-        STREAM_STOP: Q,
-        CLIPS_CLEAR_CLIPS_SESSION: ee,
-        CLIPS_CLEAR_NEW_CLIP_IDS: et,
-        CLIPS_LOAD_DIRECTORY_SUCCESS: J,
-        CLIPS_DELETE_CLIP: $,
-        CLIPS_UPDATE_METADATA: U,
-        RTC_CONNECTION_FLAGS: en,
-        CLIPS_SHOW_CALL_WARNING: W,
-        VOICE_CHANNEL_SELECT: K,
+let ec = new el(a.Z, {
+        CLIPS_SETTINGS_UPDATE: U,
+        CLIPS_SAVE_CLIP: F,
+        CLIPS_SAVE_CLIP_PLACEHOLDER: V,
+        CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: H,
+        CLIPS_SAVE_CLIP_START: G,
+        CLIPS_SAVE_CLIP_ERROR: Z,
+        CLIPS_SAVE_ANIMATION_END: B,
+        STREAM_START: q,
+        STREAM_STOP: X,
+        CLIPS_CLEAR_CLIPS_SESSION: $,
+        CLIPS_CLEAR_NEW_CLIP_IDS: ee,
+        CLIPS_LOAD_DIRECTORY_SUCCESS: Q,
+        CLIPS_DELETE_CLIP: J,
+        CLIPS_UPDATE_METADATA: j,
+        RTC_CONNECTION_FLAGS: et,
+        CLIPS_SHOW_CALL_WARNING: Y,
+        VOICE_CHANNEL_SELECT: W,
         CLIPS_CLASSIFY_HARDWARE: k,
-        CLIPS_INIT: z,
-        CLIPS_INIT_FAILURE: q,
-        CLIPS_DISMISS_EDUCATION: ei,
-        RUNNING_GAMES_CHANGE: er,
-        CLIPS_SET_EXPORTING: ea,
-        MESSAGE_CREATE: es,
-        LOAD_MESSAGES_SUCCESS: el,
+        CLIPS_INIT: K,
+        CLIPS_INIT_FAILURE: z,
+        CLIPS_DISMISS_EDUCATION: er,
+        RUNNING_GAMES_CHANGE: en,
+        CLIPS_SET_EXPORTING: ei,
+        MESSAGE_CREATE: eo,
+        LOAD_MESSAGES_SUCCESS: es,
     }),
-    ed = eu;
+    eu = ec;

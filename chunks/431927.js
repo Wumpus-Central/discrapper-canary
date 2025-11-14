@@ -1,55 +1,56 @@
-a.d(t, { Z: () => h }), a(388685), a(539854), a(415506), a(457542);
-var o = a(710845),
-    i = a(131951),
-    l = a(358085),
-    n = a(998502),
-    s = a(435064),
-    r = a(868010),
-    d = a(323678);
-function c(e, t, a) {
+o.d(t, { Z: () => p }), o(388685), o(539854), o(415506), o(457542);
+var a = o(710845),
+    i = o(131951),
+    l = o(358085),
+    n = o(998502),
+    s = o(435064),
+    r = o(341569),
+    d = o(868010),
+    c = o(323678);
+function u(e, t, o) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: a,
+                  value: o,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = a),
+            : (e[t] = o),
         e
     );
 }
-function u(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            o = Object.keys(a);
+        var o = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(o);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (o = o.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(o).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(o, e).enumerable;
                 }),
             )),
-            o.forEach(function (t) {
-                c(e, t, a[t]);
+            a.forEach(function (t) {
+                u(e, t, o[t]);
             });
     }
     return e;
 }
-let f = new o.Z("MLNativeModuleManager"),
-    h = new (class {
+let h = new a.Z("MLNativeModuleManager"),
+    p = new (class {
         start(e, t) {
             (this.onMLResult = e),
                 (this.onMLModuleLoaded = t),
-                f.info("ML signal manager started"),
-                s.Z.getSettings().clipsEnabled &&
-                    (f.info("Clips enabled on startup, initializing ML module"),
+                h.info("ML signal manager started"),
+                (0, r.LI)() &&
+                    (h.info("Clips enabled on startup, initializing ML module"),
                     this.maybeSetupMLModulePrefetchModels());
         }
         stop() {
             (this.onMLResult = null),
                 (this.onMLModuleLoaded = null),
                 this.activeDownloads.clear(),
-                f.info("ML signal manager stopped");
+                h.info("ML signal manager stopped");
         }
         getNativeModuleState() {
             return this.state.nativeMLModuleState;
@@ -61,40 +62,40 @@ let f = new o.Z("MLNativeModuleManager"),
             return this.state.models;
         }
         isNativeModuleLoaded() {
-            return this.state.nativeMLModuleState === r.C.LOADED;
+            return this.state.nativeMLModuleState === d.C.LOADED;
         }
         isNativeModuleLoading() {
-            return this.state.nativeMLModuleState === r.C.LOADING;
+            return this.state.nativeMLModuleState === d.C.LOADING;
         }
         async maybeSetupMLModulePrefetchModels() {
             if (!(this.isNativeModuleLoaded() || this.isNativeModuleLoading()) && !__OVERLAY__) {
                 if (!((0, l.isWindows)() || (0, l.isMac)())) {
-                    this.state.nativeMLModuleState = r.C.UNSUPPORTED;
+                    this.state.nativeMLModuleState = d.C.UNSUPPORTED;
                     return;
                 }
                 try {
-                    (this.state.nativeMLModuleState = r.C.LOADING),
+                    (this.state.nativeMLModuleState = d.C.LOADING),
                         await this.refreshMLCatalog(),
                         await this.prefetchMLModels(),
                         await this.loadMLNativeModule();
                 } catch (e) {
-                    f.warn("Failed to load Clips ML module: ".concat(e.message)),
-                        (this.state.nativeMLModuleState = r.C.FAILED);
+                    h.warn("Failed to load Clips ML module: ".concat(e.message)),
+                        (this.state.nativeMLModuleState = d.C.FAILED);
                 }
             }
         }
         async loadMLNativeModule() {
             try {
-                var e, t, a;
+                var e, t, o;
                 await n.ZP.ensureModule("discord_ml");
-                let o = n.ZP.requireModule("discord_ml");
-                await o.setupResources(),
-                    await o.setMLResultCallback((e) => {
+                let a = n.ZP.requireModule("discord_ml");
+                await a.setupResources(),
+                    await a.setMLResultCallback((e) => {
                         let t;
                         try {
                             t = JSON.parse(e);
                         } catch (e) {
-                            f.warn("Failed to parse ML result: ".concat(e.message));
+                            h.warn("Failed to parse ML result: ".concat(e.message));
                             return;
                         }
                         "string" == typeof t.type &&
@@ -106,26 +107,26 @@ let f = new o.Z("MLNativeModuleManager"),
                             });
                     }),
                     null == (e = this.onMLModuleLoaded) || e.call(this),
-                    (this.state.nativeMLModuleState = r.C.LOADED);
+                    (this.state.nativeMLModuleState = d.C.LOADED);
                 let l = i.Z.getMediaEngine();
                 l.setClipsMLPipelineEnabled(!0);
-                let d =
-                    null != (a = null == (t = s.Z.getSettings()) ? void 0 : t.mlPipelinesEnabled)
-                        ? a
+                let r =
+                    null != (o = null == (t = s.Z.getSettings()) ? void 0 : t.mlPipelinesEnabled)
+                        ? o
                         : {
                               emotionClassifier: !0,
                               wakeWordDetector: !0,
                               yellDetector: !0,
                               whisperTranscription: !0,
                           };
-                l.setClipsMLPipelineTypeEnabled("emotion_classifier", d.emotionClassifier),
-                    l.setClipsMLPipelineTypeEnabled("wake_word_detector", d.wakeWordDetector),
-                    l.setClipsMLPipelineTypeEnabled("yell_detector", d.yellDetector),
-                    l.setClipsMLPipelineTypeEnabled("whisper_transcription", d.whisperTranscription),
-                    f.info("ML native module loaded successfully");
+                l.setClipsMLPipelineTypeEnabled("emotion_classifier", r.emotionClassifier),
+                    l.setClipsMLPipelineTypeEnabled("wake_word_detector", r.wakeWordDetector),
+                    l.setClipsMLPipelineTypeEnabled("yell_detector", r.yellDetector),
+                    l.setClipsMLPipelineTypeEnabled("whisper_transcription", r.whisperTranscription),
+                    h.info("ML native module loaded successfully");
             } catch (e) {
-                f.warn("Failed to load Clips ML module: ".concat(e.message)),
-                    (this.state.nativeMLModuleState = r.C.FAILED);
+                h.warn("Failed to load Clips ML module: ".concat(e.message)),
+                    (this.state.nativeMLModuleState = d.C.FAILED);
             }
         }
         async refreshMLCatalog() {
@@ -137,9 +138,9 @@ let f = new o.Z("MLNativeModuleManager"),
                         (this.state.models = e.models),
                         (this.state.catalogLastFetchTime = new Date()),
                         (this.state.catalogFetchFailed = !1),
-                        f.info("ML catalog refreshed successfully");
+                        h.info("ML catalog refreshed successfully");
                 } catch (e) {
-                    f.warn("Failed to refresh Clips ML catalog: ".concat(e.message)),
+                    h.warn("Failed to refresh Clips ML catalog: ".concat(e.message)),
                         (this.state.catalogFetchFailed = !0);
                 } finally {
                     this.mlCatalogRefreshing = !1;
@@ -150,12 +151,12 @@ let f = new o.Z("MLNativeModuleManager"),
                 version: "1.0.0",
                 models: {},
             };
-            for (let [t, a] of d.lc)
+            for (let [t, o] of c.lc)
                 e.models[t] = {
-                    url: "https://cdn.discordapp.com/assets/content/".concat(a, ".onnx"),
+                    url: "https://cdn.discordapp.com/assets/content/".concat(o, ".onnx"),
                     version: "1.0.0",
                 };
-            return f.info("Loaded mock ML catalog with models:", Object.keys(e.models)), Promise.resolve(e);
+            return h.info("Loaded mock ML catalog with models:", Object.keys(e.models)), Promise.resolve(e);
         }
         async scanModelState(e) {
             if (!n.ZP.canCheckMLModelFilesExist()) return;
@@ -163,94 +164,94 @@ let f = new o.Z("MLNativeModuleManager"),
                 id: e,
                 fileName: e,
             }));
-            for (let { id: e, exists: a } of await n.ZP.checkMLModelFilesExist(t))
-                this.state.modelState[e] = { status: a ? r.l.DOWNLOADED : r.l.MISSING };
+            for (let { id: e, exists: o } of await n.ZP.checkMLModelFilesExist(t))
+                this.state.modelState[e] = { status: o ? d.l.DOWNLOADED : d.l.MISSING };
         }
         async prefetchMLModels() {
             if (__OVERLAY__) return;
             let e = this.state.models,
                 t = [];
-            for (let [a, o] of Object.entries(e)) {
-                let e = this.state.modelState[a];
-                (null == e ? void 0 : e.status) !== r.l.DOWNLOADED &&
-                    (null == e ? void 0 : e.status) !== r.l.DOWNLOADING &&
+            for (let [o, a] of Object.entries(e)) {
+                let e = this.state.modelState[o];
+                (null == e ? void 0 : e.status) !== d.l.DOWNLOADED &&
+                    (null == e ? void 0 : e.status) !== d.l.DOWNLOADING &&
                     t.push(
                         this.downloadMLModel({
-                            modelId: a,
-                            url: o.url,
-                            fileName: a,
+                            modelId: o,
+                            url: a.url,
+                            fileName: o,
                         }),
                     );
             }
-            f.info("Waiting for ML model downloads", t),
+            h.info("Waiting for ML model downloads", t),
                 await Promise.all(t),
-                f.info("Finished downloading all ML models");
+                h.info("Finished downloading all ML models");
         }
         downloadMLModel(e) {
-            let { url: t, modelId: a, fileName: o } = e,
-                i = this.state.modelState[a],
-                l = this.activeDownloads.get(a);
+            let { url: t, modelId: o, fileName: a } = e,
+                i = this.state.modelState[o],
+                l = this.activeDownloads.get(o);
             if (null != l) return l;
-            if ((null == i ? void 0 : i.status) === r.l.DOWNLOADED) return Promise.resolve();
-            if ((null == i ? void 0 : i.status) === r.l.DOWNLOADING)
+            if ((null == i ? void 0 : i.status) === d.l.DOWNLOADED) return Promise.resolve();
+            if ((null == i ? void 0 : i.status) === d.l.DOWNLOADING)
                 return Promise.reject(Error("ML model is downloading but not in active downloads map"));
-            this.state.modelState[a] = {
-                status: r.l.DOWNLOADING,
+            this.state.modelState[o] = {
+                status: d.l.DOWNLOADING,
                 downloadedBytes: 0,
             };
-            let s = n.ZP.downloadMLModelFile(t, o, (e) => {
-                var t, o;
+            let s = n.ZP.downloadMLModelFile(t, a, (e) => {
+                var t, a;
                 let { downloadedBytes: i, totalBytes: l } = e;
-                this.state.modelState[a] =
-                    ((t = u({}, this.state.modelState[a])),
-                    (o = o =
+                this.state.modelState[o] =
+                    ((t = f({}, this.state.modelState[o])),
+                    (a = a =
                         {
                             downloadedBytes: i,
                             totalBytes: l,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
-                              var a = Object.keys(e);
+                              var o = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var o = Object.getOwnPropertySymbols(e);
-                                  a.push.apply(a, o);
+                                  var a = Object.getOwnPropertySymbols(e);
+                                  o.push.apply(o, a);
                               }
-                              return a;
-                          })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
+                              return o;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     t);
             })
                 .then((e) => {
-                    e.fetchedFromNetwork && f.info("Downloaded ML model from network:", a),
-                        (this.state.modelState[a] = {
-                            status: r.l.DOWNLOADED,
+                    e.fetchedFromNetwork && h.info("Downloaded ML model from network:", o),
+                        (this.state.modelState[o] = {
+                            status: d.l.DOWNLOADED,
                             downloadedBytes: void 0,
                         });
                 })
                 .catch((t) => {
                     (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
-                        ? f.info("User canceled the download for ML model", e)
-                        : f.error("Failed to download ML model", u({ reason: t }, e)),
-                        (this.state.modelState[a] = { status: r.l.MISSING });
+                        ? h.info("User canceled the download for ML model", e)
+                        : h.error("Failed to download ML model", f({ reason: t }, e)),
+                        (this.state.modelState[o] = { status: d.l.MISSING });
                 })
                 .finally(() => {
-                    this.activeDownloads.delete(a);
+                    this.activeDownloads.delete(o);
                 });
-            return this.activeDownloads.set(a, s), s;
+            return this.activeDownloads.set(o, s), s;
         }
         constructor() {
-            c(this, "state", {
-                nativeMLModuleState: r.C.UNINITIALIZED,
+            u(this, "state", {
+                nativeMLModuleState: d.C.UNINITIALIZED,
                 models: {},
                 modelState: {},
                 catalogLastFetchTime: void 0,
                 catalogFetchFailed: !1,
             }),
-                c(this, "activeDownloads", new Map()),
-                c(this, "mlCatalogRefreshing", !1),
-                c(this, "onMLResult", null),
-                c(this, "onMLModuleLoaded", null);
+                u(this, "activeDownloads", new Map()),
+                u(this, "mlCatalogRefreshing", !1),
+                u(this, "onMLResult", null),
+                u(this, "onMLModuleLoaded", null);
         }
     })();

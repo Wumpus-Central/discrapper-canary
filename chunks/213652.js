@@ -1,38 +1,39 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => v });
 var i = n(951288),
     r = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(906732),
     s = n(435064),
-    c = n(39604),
-    u = n(441167),
-    d = n(871499),
-    p = n(199902),
-    h = n(314897),
-    f = n(358221),
-    m = n(522651),
-    g = n(354459),
-    b = n(388032),
-    y = n(591868);
-function C(e) {
+    c = n(341569),
+    u = n(39604),
+    d = n(441167),
+    p = n(871499),
+    h = n(199902),
+    f = n(314897),
+    m = n(358221),
+    g = n(522651),
+    b = n(354459),
+    y = n(388032),
+    C = n(591868);
+function v(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
-        C = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
-        v = (null == C ? void 0 : C.type) === g.fO.STREAM,
-        _ = (0, l.e7)([p.Z], () => (v ? p.Z.getActiveStreamForStreamKey(C.id) : null)),
-        { ignoreSenderPreference: x } = u.Z.useExperiment(
+        v = (0, l.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
+        _ = (null == v ? void 0 : v.type) === b.fO.STREAM,
+        x = (0, l.e7)([h.Z], () => (_ ? h.Z.getActiveStreamForStreamKey(v.id) : null)),
+        { ignoreSenderPreference: j } = d.Z.useExperiment(
             { location: "ActionBarClipsButton" },
             { autoTrackExposure: !1 },
         ),
-        { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != _ && (s.Z.isViewerClippingAllowedForUser(_.ownerId) || x),
+        { viewerClippingAllowed: O, isAtMaxSavingClipOperations: E } = (0, l.cj)([s.Z], () => ({
+            viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || j),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations(),
         })),
-        E = s.Z.getSettings().clipsEnabled,
-        S = (null == _ ? void 0 : _.ownerId) === h.default.getId(),
-        P = !E || !(S || j) || O || null == C,
-        I = r.useCallback((e) => {
+        S = (0, c.z8)(),
+        P = (null == x ? void 0 : x.ownerId) === f.default.getId(),
+        I = !S || !(P || O) || E || null == v,
+        Z = r.useCallback((e) => {
             var t, n;
             return (0, i.jsx)(
                 a.xmR,
@@ -77,23 +78,23 @@ function C(e) {
                 t),
             );
         }, []);
-    return (0, i.jsx)(d.Z, {
-        className: y.actionBarButton,
+    return (0, i.jsx)(p.Z, {
+        className: C.actionBarButton,
         onClick: () => {
-            P || ((0, m.v)(n, m.d.CLIP), S ? (0, c.br)() : (0, c.C1)(C.id));
+            I || ((0, g.v)(n, g.d.CLIP), P ? (0, u.br)() : (0, u.C1)(v.id));
         },
-        disabled: P,
-        iconComponent: I,
+        disabled: I,
+        iconComponent: Z,
         label:
-            null == _
-                ? b.intl.string(b.t.eg5qtV)
-                : S || j
-                  ? E
-                      ? O
+            null == x
+                ? y.intl.string(y.t.eg5qtV)
+                : P || O
+                  ? S
+                      ? E
                           ? void 0
-                          : b.intl.string(b.t.U4URzP)
-                      : b.intl.string(b.t.wSS1yN)
-                  : b.intl.string(b.t.aRifJX),
+                          : y.intl.string(y.t.U4URzP)
+                      : y.intl.string(y.t.wSS1yN)
+                  : y.intl.string(y.t.aRifJX),
         grow: !1,
     });
 }

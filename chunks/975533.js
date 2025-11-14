@@ -9,7 +9,7 @@ var r = n(570140),
     u = n(317770),
     d = n(100527),
     p = n(924557),
-    f = n(435064),
+    f = n(341569),
     h = n(39604),
     g = n(891304),
     m = n(569545),
@@ -270,9 +270,7 @@ let U = {
         },
         [w.kg4.SAVE_CLIP]: {
             onTrigger: () => {
-                let e = (0, p.ln)(),
-                    t = f.Z.getSettings().clipsEnabled;
-                e && t && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.br)());
+                (0, f.LI)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.br)());
             },
             keyEvents: {
                 keyup: !1,
@@ -281,9 +279,7 @@ let U = {
         },
         [w.kg4.SAVE_SCREENSHOT]: {
             onTrigger: () => {
-                let e = (0, p.ln)(),
-                    t = f.Z.getSettings().clipsEnabled;
-                e && t && (0, p.iL)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.ZW)());
+                (0, f.LI)() && (0, p.iL)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.ZW)());
             },
             keyEvents: {
                 keyup: !1,

@@ -7,24 +7,21 @@ var i = n(951288),
     s = n(358221),
     c = n(594190),
     u = n(199902),
-    d = n(924557),
-    p = n(435064),
+    d = n(435064),
+    p = n(341569),
     h = n(354459),
     f = n(388032),
     m = n(363862);
 let g = (e) => {
-    let { channelId: t } = e,
-        n = (0, d.Go)(),
-        g = p.Z.isDecoupledGameClippingEnabled();
-    return (0, r.e7)([u.Z, s.Z, p.Z, c.ZP], () => {
+    let { channelId: t } = e;
+    return (0, r.e7)([u.Z, s.Z, d.Z, c.ZP], () => {
         var e;
         if (null == t) return !1;
-        let i = u.Z.getCurrentUserActiveStream(),
-            r = null == (e = c.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
+        let n = u.Z.getCurrentUserActiveStream(),
+            i = null == (e = c.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
         return (
-            (null != i && !!p.Z.getSettings().clipsEnabled && !!n) ||
-            (null != r && !!p.Z.getSettings().decoupledClipsEnabled && !!g) ||
-            s.Z.getParticipants(t).some((e) => e.type === h.fO.USER && p.Z.isClipsEnabledForUser(e.user.id))
+            !!((null != n && (0, p.LI)()) || (null != i && (0, p.CY)())) ||
+            s.Z.getParticipants(t).some((e) => e.type === h.fO.USER && d.Z.isClipsEnabledForUser(e.user.id))
         );
     })
         ? (0, i.jsx)(a.u, {

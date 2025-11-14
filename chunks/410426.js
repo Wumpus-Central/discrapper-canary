@@ -8,7 +8,7 @@ var l = n(951288),
     o = n(547972),
     u = n(556296),
     d = n(13140),
-    p = n(435064),
+    p = n(341569),
     m = n(981631),
     f = n(332325),
     y = n(388032),
@@ -16,12 +16,12 @@ var l = n(951288),
 function h(e) {
     let { isEmptyBecauseQuery: t } = e,
         n = (0, s.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
-        i = (0, s.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
+        i = (0, p.z8)(),
         h = t ? b.noSearchResultsImage : b.noClipsImage,
         v = r.useCallback(() => {
             (0, o.Z)(f.Z.CLIPS, { stackingBehavior: "stack" });
         }, []),
-        g = (() => {
+        j = (() => {
             if (!i) return y.intl.format(y.t["3iveao"], { onClick: v });
             if (t) return y.intl.string(y.t["xrEs6/"]);
             if (null == n) return y.intl.format(y.t.jpKk7e, { onClick: v });
@@ -49,7 +49,7 @@ function h(e) {
                 (0, l.jsx)(c.Text, {
                     variant: "text-md/medium",
                     className: a()(b.noClipsText, { [b.noSearchResultsText]: t }),
-                    children: g,
+                    children: j,
                 }),
             ],
         }),
