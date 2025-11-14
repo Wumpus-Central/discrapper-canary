@@ -44,8 +44,8 @@ let D = "seenQSTutorial",
     x = 7,
     L = 3,
     M = 100,
-    j = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
-    k = 0,
+    k = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
+    j = 0,
     U = !1,
     G = !1,
     B = null,
@@ -154,7 +154,7 @@ function X() {
         Object.values(_.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
             for (let n in t) {
                 let t = q(n);
-                null == t || a.has(t.record.id) || e.push(t);
+                null == t || a.has(t.record.id) || Y.includes(n) || e.push(t);
             }
         }),
             e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhD))), (i = i.concat(e)));
@@ -197,10 +197,10 @@ function Q(e, t) {
         default:
             Z = e;
     }
-    if (t !== F) (F = t), (V = Math.max(t.length, V)), (k = (0, u.gJ)(u.a8.DOWN, -1, Z));
+    if (t !== F) (F = t), (V = Math.max(t.length, V)), (j = (0, u.gJ)(u.a8.DOWN, -1, Z));
     else {
-        let e = Z[k];
-        null != e && e.type === u.h8.HEADER && (k = (0, u.gJ)(u.a8.DOWN, k, Z));
+        let e = Z[j];
+        null != e && e.type === u.h8.HEADER && (j = (0, u.gJ)(u.a8.DOWN, j, Z));
     }
     es.emitChange();
 }
@@ -217,7 +217,7 @@ function J(e) {
                 ? r
                 : new u.ZP(
                       et,
-                      j,
+                      k,
                       null != i ? M : w,
                       {
                           frecencyBoosters: !0,
@@ -257,7 +257,7 @@ function er(e) {
         o = i.trim();
     if (null == r) return !1;
     if (B !== a) {
-        r.setResultTypes(null != a ? [a] : j), r.setLimit(null != a ? M : w);
+        r.setResultTypes(null != a ? [a] : k), r.setLimit(null != a ? M : w);
         let e = null != (t = T.Z.getGuildId()) ? t : void 0;
         a === u.h8.USER && null != e
             ? r.setOptions(
@@ -285,7 +285,7 @@ function er(e) {
     } else r.search(o, void 0);
 }
 function ei(e) {
-    k = e.selectedIndex;
+    j = e.selectedIndex;
 }
 function ea() {
     if (U) return !1;
@@ -334,7 +334,7 @@ class eo extends (i = s.ZP.PersistedStore) {
             query: null != r ? r.query : "",
             queryMode: B,
             results: Z,
-            selectedIndex: k,
+            selectedIndex: j,
             seenTutorial: U,
             maxQueryLength: V,
         };
