@@ -19,5 +19,5 @@ var r,
         r);
 let o = 73,
     s = 26,
-    c = 100;
+    c = 50;
 var u = 12633 == n.j ? (((l = {}).REQUESTS = "REQUESTS"), (l.SPAM = "SPAM"), l) : null;
