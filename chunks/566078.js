@@ -84,12 +84,6 @@ class d {
     get application() {
         return u(l({}, this.quest.application), { ids: [this.quest.application.id] });
     }
-    get applications() {
-        var e, t;
-        return null != (t = null == (e = this.quest.taskConfigV2.tasks[r.X.PLAY_ON_DESKTOP]) ? void 0 : e.applications)
-            ? t
-            : null;
-    }
     get ctaLink() {
         var e, t;
         return null != (t = null == (e = this.quest.ctaConfig) ? void 0 : e.link) ? t : this.application.link;

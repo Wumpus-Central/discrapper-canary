@@ -1,8 +1,8 @@
 n.d(t, {
-    Ic: () => k,
+    Ic: () => j,
     O5: () => G,
     Zk: () => B,
-    _3: () => j,
+    _3: () => k,
     _F: () => U,
     _b: () => R,
     dA: () => L,
@@ -108,18 +108,18 @@ function D(e) {
           : null;
 }
 function w(e, t, n) {
-    var r, i;
-    let a = y.r.build(e.config),
-        s = (0, o.Gy)(n).uuid;
+    var r;
+    let i = y.r.build(e.config),
+        a = (0, o.Gy)(n).uuid;
     return T(
         {
             quest_id: e.id,
-            quest_type: a.questType,
-            game_id: a.application.id,
-            game_name: a.application.name,
-            application_ids: null != (i = null == (r = a.applications) ? void 0 : r.map((e) => e.id)) ? i : [],
-            client_ad_session_id: s,
-            billing_session_id: D(s),
+            quest_type: i.questType,
+            game_id: i.application.id,
+            game_name: i.application.name,
+            application_ids: null != (r = (0, h.MC)(e)) ? r : [],
+            client_ad_session_id: a,
+            billing_session_id: D(a),
         },
         (0, h.qe)(e.id, t),
     );
@@ -209,7 +209,7 @@ var M = (function (e) {
         e
     );
 })({});
-async function j(e) {
+async function k(e) {
     let {
             questId: t,
             questContent: n,
@@ -240,7 +240,7 @@ async function j(e) {
         sourceQuestContent: d,
     });
 }
-function k(e) {
+function j(e) {
     let { questContent: t, sourceQuestContent: n, questId: r, mode: i, prevMode: a } = e,
         o = x(t);
     L({
