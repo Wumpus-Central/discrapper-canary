@@ -1,6 +1,8 @@
 n.d(t, {
+    Gc: () => u,
     UX: () => s,
     ad: () => l,
+    wn: () => d,
     xy: () => c,
 });
 var r = n(818083),
@@ -79,4 +81,34 @@ function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isGlobalSettingDefaultEnabled: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
     return r;
+}
+function u(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { inExperiment: a } = o.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
+}
+function d(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { inExperiment: a } = o.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
 }

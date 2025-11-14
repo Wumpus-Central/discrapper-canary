@@ -270,6 +270,9 @@ class Q extends (r = a.ZP.PersistedStore) {
                   : t.initialMessageId
               : null;
     }
+    getCurrentSearchContextId() {
+        return w;
+    }
 }
 O(Q, "displayName", "ChannelSectionStore"), O(Q, "persistKey", "ChannelSectionStore2");
 let J = new Q(o.Z, {

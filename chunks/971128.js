@@ -74,6 +74,12 @@ class c {
         let t = (0, a.Tm)(e);
         this.sessions.delete(t);
     }
+    transitionSessionAnalytics(e, t) {
+        var n;
+        let r = (0, a.Tm)(e),
+            i = (0, a.Tm)(t);
+        this.sessions.set(i, null != (n = this.sessions.get(r)) ? n : l()), this.sessions.delete(r);
+    }
     constructor() {
         o(this, "sessions", new Map());
     }

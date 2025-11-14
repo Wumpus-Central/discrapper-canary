@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => O,
-    Z: () => P,
+    R: () => v,
+    Z: () => D,
 }),
     n(388685);
 var r = n(392711),
@@ -8,14 +8,15 @@ var r = n(392711),
     a = n(147913),
     o = n(536442),
     s = n(810788),
-    l = n(28964),
-    c = n(759209),
-    u = n(695346),
-    d = n(19780),
-    f = n(115470),
-    _ = n(102824),
-    p = n(531578);
-function h(e, t, n) {
+    l = n(945577),
+    c = n(28964),
+    u = n(759209),
+    d = n(695346),
+    f = n(19780),
+    _ = n(115470),
+    p = n(102824),
+    h = n(531578);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +40,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,161 +57,161 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = 200,
-    y = {
+let y = 200,
+    O = {
         chance: 0.2,
         cooldown: 86400000,
     },
-    O = {
-        [p.nw.VOICE]: E(m({}, y), {
-            group: p.FB.AV,
+    v = {
+        [h.nw.VOICE]: b(g({}, O), {
+            group: h.FB.AV,
             hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
-            feedbackType: p.nw.VOICE,
-            eligibilityChecks: [C],
-        }),
-        [p.nw.STREAM]: E(m({}, y), {
-            group: p.FB.AV,
-            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
-            storageKey: "lastStreamFeedback",
-            feedbackType: p.nw.STREAM,
-        }),
-        [p.nw.VIDEO_BACKGROUND]: E(m({}, y), {
-            group: p.FB.AV,
-            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
-            storageKey: "lastVideoBackgroundFeedback",
-            feedbackType: p.nw.VIDEO_BACKGROUND,
-        }),
-        [p.nw.ACTIVITY]: {
-            cooldown: 0,
-            chance: 0.5,
-            group: p.FB.AV,
-            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
-            storageKey: "lastActivityFeedback",
-            feedbackType: p.nw.ACTIVITY,
-        },
-        [p.nw.IN_APP_REPORTS]: {
-            cooldown: 172800000,
-            chance: 0.5,
-            group: p.FB.SAFETY,
-            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
-            storageKey: "inAppReportsFeedback",
-            feedbackType: p.nw.IN_APP_REPORTS,
-        },
-        [p.nw.USER_DM_MUTE]: {
-            cooldown: 604800000,
-            chance: 1,
-            group: p.FB.SAFETY,
-            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
-            storageKey: "userDmMute",
-            feedbackType: p.nw.USER_DM_MUTE,
-        },
-        [p.nw.BLOCK_USER]: {
-            cooldown: 0,
-            chance: 1,
-            group: p.FB.SAFETY,
-            hotspot: o.v6.BLOCK_USER_FEEDBACK,
-            storageKey: "blockUser",
-            feedbackType: p.nw.BLOCK_USER,
-        },
-        [p.nw.VOICE_FILTER]: E(m({}, y), {
-            group: p.FB.AV,
-            hotspot: o.v6.VOICE_FILTER_FEEDBACK,
-            storageKey: "lastVoiceFilterFeedback",
-            feedbackType: p.nw.VOICE_FILTER,
-            eligibilityChecks: [C],
-        }),
-        [p.nw.SEARCH_RESULTS]: E(m({}, y), {
-            group: p.FB.SEARCH,
-            hotspot: o.v6.SEARCH_RESULTS_FEEDBACK,
-            storageKey: "searchResultsFeedback",
-            feedbackType: p.nw.SEARCH_RESULTS,
+            feedbackType: h.nw.VOICE,
             eligibilityChecks: [N],
         }),
-        [p.nw.AGE_VERIFICATION]: {
+        [h.nw.STREAM]: b(g({}, O), {
+            group: h.FB.AV,
+            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
+            storageKey: "lastStreamFeedback",
+            feedbackType: h.nw.STREAM,
+        }),
+        [h.nw.VIDEO_BACKGROUND]: b(g({}, O), {
+            group: h.FB.AV,
+            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
+            storageKey: "lastVideoBackgroundFeedback",
+            feedbackType: h.nw.VIDEO_BACKGROUND,
+        }),
+        [h.nw.ACTIVITY]: {
+            cooldown: 0,
+            chance: 0.5,
+            group: h.FB.AV,
+            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
+            storageKey: "lastActivityFeedback",
+            feedbackType: h.nw.ACTIVITY,
+        },
+        [h.nw.IN_APP_REPORTS]: {
+            cooldown: 172800000,
+            chance: 0.5,
+            group: h.FB.SAFETY,
+            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
+            storageKey: "inAppReportsFeedback",
+            feedbackType: h.nw.IN_APP_REPORTS,
+        },
+        [h.nw.USER_DM_MUTE]: {
+            cooldown: 604800000,
+            chance: 1,
+            group: h.FB.SAFETY,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
+            storageKey: "userDmMute",
+            feedbackType: h.nw.USER_DM_MUTE,
+        },
+        [h.nw.BLOCK_USER]: {
             cooldown: 0,
             chance: 1,
-            group: p.FB.SAFETY,
+            group: h.FB.SAFETY,
+            hotspot: o.v6.BLOCK_USER_FEEDBACK,
+            storageKey: "blockUser",
+            feedbackType: h.nw.BLOCK_USER,
+        },
+        [h.nw.VOICE_FILTER]: b(g({}, O), {
+            group: h.FB.AV,
+            hotspot: o.v6.VOICE_FILTER_FEEDBACK,
+            storageKey: "lastVoiceFilterFeedback",
+            feedbackType: h.nw.VOICE_FILTER,
+            eligibilityChecks: [N],
+        }),
+        [h.nw.SEARCH_RESULTS]: b(g({}, O), {
+            group: h.FB.SEARCH,
+            hotspot: o.v6.SEARCH_RESULTS_FEEDBACK,
+            storageKey: "searchResultsFeedback",
+            feedbackType: h.nw.SEARCH_RESULTS,
+            eligibilityChecks: [R],
+        }),
+        [h.nw.AGE_VERIFICATION]: {
+            cooldown: 0,
+            chance: 1,
+            group: h.FB.SAFETY,
             hotspot: o.v6.AGE_VERIFICATION_FEEDBACK,
             storageKey: "ageVerificationFeedback",
-            feedbackType: p.nw.AGE_VERIFICATION,
+            feedbackType: h.nw.AGE_VERIFICATION,
         },
     };
-function v(e) {
+function I(e) {
     var t, n;
     if (__OVERLAY__) return !1;
-    let { overrideEligibility: r } = (0, _.j)({ location: "FeedbackManager" });
+    let { overrideEligibility: r } = (0, p.j)({ location: "FeedbackManager" });
     if (r) return !0;
-    let i = null != (t = f.Z.getFeedbackConfig(e)) ? t : O[e],
-        a = [T, I, A],
+    let i = null != (t = _.Z.getFeedbackConfig(e)) ? t : v[e],
+        a = [S, T, C],
         o = null != (n = i.eligibilityChecks) ? n : [];
     return a.every((e) => e(i)) && o.every((e) => e(i));
 }
-function I(e) {
+function T(e) {
     var t;
-    let n = null == (t = u.A2.getSetting()[e.feedbackType]) ? void 0 : t.optOutExpiryTime,
+    let n = null == (t = d.A2.getSetting()[e.feedbackType]) ? void 0 : t.optOutExpiryTime,
         r = null != n && !Number.isNaN(n) && Date.now() < n,
         i = !s.Z.hasHotspot(e.hotspot);
     return (
         i &&
             !r &&
-            u.A2.updateSetting((t) =>
-                E(m({}, t), { [e.feedbackType]: E(m({}, t[e.feedbackType]), { optOutExpiryTime: p.uf }) }),
+            d.A2.updateSetting((t) =>
+                b(g({}, t), { [e.feedbackType]: b(g({}, t[e.feedbackType]), { optOutExpiryTime: h.uf }) }),
             ),
         !r && !i
     );
 }
-function T(e) {
+function S(e) {
     return Math.random() < e.chance;
 }
-function S(e, t) {
+function A(e, t) {
     var n, a, o;
     let s,
-        l = null == (n = u.A2.getSetting()[t.feedbackType]) ? void 0 : n.lastImpressionTime;
+        l = null == (n = d.A2.getSetting()[t.feedbackType]) ? void 0 : n.lastImpressionTime;
     return (
         (null == l || Number.isNaN(l)) &&
             null != t.storageKey &&
             (null == (s = null != (a = i.K.get(t.storageKey)) ? a : void 0) ||
                 Number.isNaN(s) ||
-                u.A2.updateSetting((e) =>
-                    E(m({}, e), { [t.feedbackType]: E(m({}, e[t.feedbackType]), { lastImpressionTime: s }) }),
+                d.A2.updateSetting((e) =>
+                    b(g({}, e), { [t.feedbackType]: b(g({}, e[t.feedbackType]), { lastImpressionTime: s }) }),
                 )),
         (null != (o = (0, r.max)([l, s])) ? o : 0) + e.cooldown < Date.now()
     );
 }
-function A(e) {
-    for (let t of Object.values(O).filter((t) => {
+function C(e) {
+    for (let t of Object.values(v).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
-        if (!S(e, t)) return !1;
+        if (!A(e, t)) return !1;
     return !0;
 }
-function C(e) {
-    return !d.Z.getWasEverRtcConnected() || d.Z.getWasEverMultiParticipant();
-}
 function N(e) {
-    let t = (0, c.j)({ location: "FeedbackManager" }),
-        n = (0, l.rY)({ location: "FeedbackManager" });
-    return t && n;
+    return !f.Z.getWasEverRtcConnected() || f.Z.getWasEverMultiParticipant();
 }
 function R(e) {
-    u.A2.updateSetting((t) => E(m({}, t), { [e]: E(m({}, t[e]), { lastImpressionTime: Date.now() }) }));
+    if (!(0, u.j)({ location: "FeedbackManager" })) return !1;
+    let t = (0, c.rY)({ location: "FeedbackManager" });
+    return (0, l.wn)({ location: "FeedbackManager" }) || t;
 }
-class P extends a.Z {
+function P(e) {
+    d.A2.updateSetting((t) => b(g({}, t), { [e]: b(g({}, t[e]), { lastImpressionTime: Date.now() }) }));
+}
+class D extends a.Z {
     possiblyShowFeedbackModal(e, t, n) {
-        if (!v(e) || (null != this.feedbackTypeToShow && p.b5[this.feedbackTypeToShow] < p.b5[e])) {
+        if (!I(e) || (null != this.feedbackTypeToShow && h.b5[this.feedbackTypeToShow] < h.b5[e])) {
             null == n || n();
             return;
         }
@@ -218,15 +219,15 @@ class P extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            h(this, "feedbackTypeToShow", null),
-            h(
+            m(this, "feedbackTypeToShow", null),
+            m(
                 this,
                 "showFeedbackModalDebounced",
                 (0, r.debounce)((e, t) => {
                     null != this.feedbackTypeToShow
-                        ? (R(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e())
+                        ? (P(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e())
                         : null == t || t();
-                }, b),
+                }, y),
             );
     }
 }

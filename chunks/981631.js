@@ -4366,6 +4366,7 @@ var nE = (function (e) {
             (e.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED = "search_messages_selected_channel_filter_clicked"),
             (e.SEARCH_HISTORY_CLICKED = "search_history_clicked"),
             (e.SEARCH_BAR_VIEWED = "search_bar_viewed"),
+            (e.SEARCH_CROSS_DM_SETTING_UPDATE = "search_cross_dm_setting_update"),
             (e.MESSAGES_SEARCH_STARTED = "messages_search_started"),
             (e.SEARCH_V2_OPENED = "search_v2_opened"),
             (e.SEARCH_V2_CLOSED = "search_v2_closed"),
