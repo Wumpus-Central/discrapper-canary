@@ -75,7 +75,7 @@ function h(e) {
 function m(e) {
     let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
         u = (0, o.c_)("useFriendRequestActions"),
-        d = (0, s.q)(r),
+        d = (0, s.q)("maybeConfirmFriendRequestAccept"),
         f = u || d,
         _ = l.Z.isStranger(t);
     return null == n && f && !1 !== _
