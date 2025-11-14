@@ -1,23 +1,24 @@
 n.d(t, {
-    AW: () => g,
-    Cm: () => v,
-    HU: () => N,
-    IV: () => T,
-    J0: () => S,
-    K8: () => C,
-    RE: () => b,
-    Vt: () => P,
-    aK: () => y,
-    aP: () => L,
-    f7: () => m,
-    gj: () => _,
-    kN: () => A,
-    lb: () => O,
-    o0: () => w,
-    o8: () => R,
-    xg: () => x,
-    yf: () => h,
-    yo: () => I,
+    AW: () => E,
+    Cm: () => I,
+    HU: () => R,
+    IV: () => S,
+    J0: () => A,
+    K8: () => N,
+    RE: () => y,
+    Vt: () => D,
+    aK: () => O,
+    aP: () => M,
+    f7: () => g,
+    fH: () => k,
+    gj: () => p,
+    kN: () => C,
+    lb: () => v,
+    o0: () => x,
+    o8: () => P,
+    xg: () => L,
+    yf: () => m,
+    yo: () => T,
 }),
     n(388685);
 var r = n(463570),
@@ -29,8 +30,9 @@ var r = n(463570),
     c = n(335818),
     u = n(497598),
     d = n(792091),
-    f = n(314794);
-let _ = [
+    f = n(314794),
+    _ = n(685816);
+let p = [
         "1417311919643299840",
         "1144308439720394944",
         "1333866045236314327",
@@ -57,9 +59,9 @@ let _ = [
         "1420045363049398282",
         "1365410896196669480",
     ],
-    p = ["1385035256058482798", "1385035256083648542", "1385035256104620154"],
-    h = o()([...l()(p, i()(Array(p.length), new Date("2025-07-02").getTime()))]);
-var m = (function (e) {
+    h = ["1385035256058482798", "1385035256083648542", "1385035256104620154"],
+    m = o()([...l()(h, i()(Array(h.length), new Date("2025-07-02").getTime()))]);
+var g = (function (e) {
         return (
             (e[(e.VISIBLE = 0)] = "VISIBLE"),
             (e[(e.HIDDEN = 1)] = "HIDDEN"),
@@ -68,7 +70,7 @@ var m = (function (e) {
             e
         );
     })({}),
-    g = (function (e) {
+    E = (function (e) {
         return (
             (e.HOME = "home"),
             (e.CATALOG = "catalog"),
@@ -80,12 +82,12 @@ var m = (function (e) {
             e
         );
     })({});
-let E = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
-    b = (e) => E.includes(e),
-    y = (e) => null != e && "home" !== e && "catalog" !== e,
-    O = 800,
-    v = 604800000,
-    I = [
+let b = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
+    y = (e) => b.includes(e),
+    O = (e) => null != e && "home" !== e && "catalog" !== e,
+    v = 800,
+    I = 604800000,
+    T = [
         "1212569433839636530",
         "1144308439720394944",
         "1314020996201713685",
@@ -421,12 +423,12 @@ let E = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
         "1285465421167988758",
         "1277733174797008931",
     ],
-    T = 12,
-    S = 518,
-    A = 5,
-    C = 3,
-    N = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
-var R = (function (e) {
+    S = 12,
+    A = 518,
+    C = 5,
+    N = 3,
+    R = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
+var P = (function (e) {
     return (
         (e[(e.FIAT = 0)] = "FIAT"),
         (e[(e.ORB = 1)] = "ORB"),
@@ -437,14 +439,14 @@ var R = (function (e) {
         e
     );
 })({});
-let P = {
+let D = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: f.a.PREMIUM_TIER_2_3_DAY,
     },
-    D = new Set(Object.values(P)),
-    w = (e) => D.has(e),
-    x = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    L = [
+    w = new Set(Object.values(D)),
+    x = (e) => w.has(e),
+    L = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
+    M = [
         {
             sortType: d.E.RELEVANCE,
             sortDirection: u.F.DESC,
@@ -465,4 +467,43 @@ let P = {
             sortType: d.E.POPULARITY,
             sortDirection: u.F.DESC,
         },
-    ];
+    ],
+    k = {
+        categorySkuId: "1428539043993358497",
+        categoryStoreListingId: "1438783661058031686",
+        rankedSkuIds: [
+            "1144308439720394944",
+            "1333866045236314327",
+            "1212569433839636530",
+            "1343751617328975954",
+            "1271174640026255380",
+            "1212570343567261736",
+            "1366494385583165630",
+            "1354894010522800158",
+            "1333866045303423026",
+            "1357589632581374042",
+            "1271175049168031815",
+            "1232073608168472638",
+            "1139323093991575696",
+            "1343751617421381773",
+            "1366494385671245826",
+            "1385050947956248696",
+            "1343751621204512829",
+            "1314020996776329279",
+            "1271175120437641261",
+            "1409898408042303629",
+            "1349849614198505602",
+            "1349849614257225760",
+            "1349849614102036581",
+            "1349849614286585866",
+            "1377377712028516443",
+            "1382845914225442886",
+            "1349849614227865711",
+            "1349849614311751731",
+            "1349849614173339688",
+            "1349849614143979540",
+        ],
+        type: _.z.HERO,
+        name: "Try Before You Buy!",
+        summary: "Use Orbs to Try Before You Buy!",
+    };

@@ -1,0 +1,23 @@
+n.d(t, { Z: () => r });
+let r = (0, n(427164).le)({
+    name: "2025-10-orb-rental",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+        rentalDuration: 0,
+    },
+    variations: {
+        0: {
+            enabled: !1,
+            rentalDuration: 0,
+        },
+        1: {
+            enabled: !0,
+            rentalDuration: 3,
+        },
+        2: {
+            enabled: !0,
+            rentalDuration: 1,
+        },
+    },
+});

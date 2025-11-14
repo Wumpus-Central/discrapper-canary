@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Ek: () => w,
-    I1: () => k,
+    I1: () => j,
     ZP: () => ev,
     vN: () => B,
 }),
@@ -100,7 +100,7 @@ function x() {
 }
 let L = "1001",
     M = 10,
-    j = function (e) {
+    k = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return {
             id: L,
@@ -111,7 +111,7 @@ let L = "1001",
             params: {},
         };
     },
-    k = (e) => {
+    j = (e) => {
         let t = (0, y.UR)("shift");
         return null != t && (1 !== e.length || e[0][1] !== t);
     },
@@ -145,7 +145,7 @@ function G(e) {
     let n = (0, y.Kd)(e),
         r = (0, b.T_)("`"),
         i = null != (t = null == r ? void 0 : r.keyCode) ? t : (0, y.UR)("`");
-    return k(n)
+    return j(n)
         ? n
         : null == i
           ? (U("Unable to get backtick code for overlay default keybind", e, n, { rawBacktickShape: r }), null)
@@ -156,8 +156,8 @@ let B = () => {
         let e = x();
         "shift" === e && (U("Default overlay keybind is only shift", e, null), (e = "shift+`"));
         let t = G(e);
-        if (null == t) return j([], !1);
-        if (k(t)) return j(t, !0);
+        if (null == t) return k([], !1);
+        if (j(t)) return k(t, !0);
         let n = (0, y.UR)("shift"),
             r = (0, b.T_)("`");
         return (
@@ -166,7 +166,7 @@ let B = () => {
                 : null == n
                   ? U("Unable to get shift code", e, t, { shiftCode: n })
                   : null == r && U("Unable to get backtick code", e, t),
-            j(t, !1)
+            k(t, !1)
         );
     },
     Z = {},
@@ -263,7 +263,7 @@ function ei(e) {
 function ea(e, t, n, r) {
     if (g.isPlatformEmbedded)
         try {
-            E.ZP.inputEventRegister(parseInt(e), t, n, r);
+            E.ZP.inputEventRegister(e, t, n, r);
         } catch (n) {
             throw (
                 (D.error(
@@ -278,7 +278,7 @@ function ea(e, t, n, r) {
             );
         }
     else {
-        eo(e);
+        eo(e.toString());
         let i = (0, _.r)(document);
         r.keyup && i.bindGlobal((0, y.BB)(t), () => n(!1), "keyup"),
             r.keydown && i.bindGlobal((0, y.BB)(t), () => n(!0), "keydown"),
@@ -311,11 +311,16 @@ function es(e) {
             ),
         );
     let i = e.id,
-        a = Y[n].keyEvents;
+        a = parseInt(i, 10);
+    if (isNaN(a))
+        return void D.error("[kb store] KeybindStore: Keybind id is not a number. Skipping registration.", {
+            keybind: e,
+        });
+    let o = Y[n].keyEvents;
     e.action === v.kg4.TOGGLE_MUTE && er(),
         e.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK && et(),
         ea(
-            i,
+            a,
             t,
             (e) => $(i, e),
             N(
@@ -325,7 +330,7 @@ function es(e) {
                     keydown: !1,
                     keyup: !1,
                 },
-                a,
+                o,
             ),
         ),
         d.Z.validateKeybind((0, y.BB)(t));

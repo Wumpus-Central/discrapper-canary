@@ -12,7 +12,7 @@ function d() {
             [e.applications],
         );
     (0, r.useEffect)(() => {
-        t !== s.p.FETCHING && t !== s.p.SUCCESS && (0, a.p)();
+        t === s.p.INIT && (0, a.p)();
     }, [t]),
         (0, r.useEffect)(() => {
             l.Z.getDetectableGamesSupplemental(i);
