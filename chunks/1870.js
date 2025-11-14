@@ -76,7 +76,7 @@ class v extends (o = l.ZP.Store) {
         return null != e ? f.get(e) : void 0;
     }
     getPurchases(e) {
-        return null != e ? e.map((e) => f.get(e)).filter((e) => null != e) : void 0;
+        return e.map((e) => f.get(e)).filter((e) => null != e);
     }
 }
 u(v, "displayName", "CollectiblesPurchaseStore");

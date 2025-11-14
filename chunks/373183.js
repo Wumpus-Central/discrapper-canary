@@ -1,100 +1,130 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
     o = n(793030),
     s = n(442837),
-    c = (n(481060), n(104505)),
-    u = n(597688),
-    d = n(1870),
-    p = n(832149),
-    g = n(388032),
-    f = n(290181),
-    h = n(250967),
-    C = n(182975),
-    m = n(655603);
-let _ = l.memo(function (e) {
-    var t;
-    let { category: n, rewardSkuId: i } = e,
-        _ = l.useRef(null),
-        { isHoveringOrFocusing: b } = (0, c.Z)(_),
-        v = l.useMemo(() => n.products.filter((e) => e.skuId !== i).map((e) => e.skuId), [n.products, i]),
-        x = (0, s.e7)([d.Z], () => d.Z.getPurchases(v)),
-        E = (e) => {
+    c = n(28664),
+    u = n(481060),
+    d = n(104505),
+    g = n(597688),
+    p = n(1870),
+    f = n(832149),
+    h = n(388032),
+    C = n(290181),
+    m = n(250967),
+    _ = n(182975),
+    b = n(655603);
+let v = l.memo(function (e) {
+    let { category: t, rewardSkuId: n } = e,
+        i = l.useRef(null),
+        { isHoveringOrFocusing: v } = (0, d.Z)(i),
+        x = l.useMemo(() => t.products.filter((e) => e.skuId !== n).map((e) => e.skuId), [t.products, n]),
+        E = (0, s.e7)([p.Z], () => p.Z.getPurchases(x)),
+        S = (e) => {
             e.stopPropagation();
             {
-                let e = u.Z.getProduct(i);
+                let e = g.Z.getProduct(n);
                 null != e &&
-                    (0, p.Z)({
+                    (0, f.Z)({
                         product: e,
                         analyticsLocations: [],
                         overrideGraphic: {
                             type: "video",
-                            src: C.Z,
-                            fallbackImageSrc: h.Z,
+                            src: _.Z,
+                            fallbackImageSrc: m.Z,
                             loop: !1,
                             aspectRatio: "16/9",
                         },
                     });
             }
-        };
+        },
+        O = l.useMemo(() => E.length === x.length, [E, x]);
     return (0, r.jsx)(o.kL8, {
-        ref: _,
-        className: a()(f.productCardContainer, { [f.hovered]: b }),
-        "aria-label": g.intl.formatToPlainString(g.t.Ez6aHE, { category: n.name }),
+        ref: i,
+        className: a()(C.productCardContainer, { [C.hovered]: v }),
+        "aria-label": h.intl.formatToPlainString(h.t.Ez6aHE, { category: t.name }),
         onClick: (e) => {
-            E(e);
+            S(e);
         },
         children: (0, r.jsxs)("div", {
-            className: f.productCardContentContainer,
+            className: C.productCardContentContainer,
             children: [
                 (0, r.jsx)("div", {
-                    className: f.productPreviewContainer,
+                    className: C.productPreviewContainer,
                     children: (0, r.jsx)("img", {
                         alt: "Reward Bow",
-                        src: m.Z,
+                        src: b.Z,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: f.footerContainer,
+                    className: C.headerContainer,
+                    children: (0, r.jsx)(u.IGR, {
+                        text: h.intl.string(h.t.rykAJ9),
+                        disableColor: !0,
+                        className: C.unlockRewardBadge,
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: C.footerContainer,
                     children: (0, r.jsxs)("div", {
-                        className: f.footerContent,
+                        className: C.footerContent,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: f.footerInfoContainer,
+                                className: C.footerInfoContainer,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: f.footerInfoLeft,
-                                        children: (0, r.jsx)(o.xvT, {
-                                            variant: "text-lg/bold",
-                                            color: "text-primary",
-                                            children: g.intl.string(g.t["0mDmg/"]),
-                                        }),
+                                    (0, r.jsxs)("div", {
+                                        className: C.footerInfo,
+                                        children: [
+                                            (0, r.jsx)(o.xvT, {
+                                                variant: "text-lg/bold",
+                                                color: "text-primary",
+                                                children: h.intl.string(h.t["0mDmg/"]),
+                                            }),
+                                            (0, r.jsx)(c.u, {
+                                                text: O
+                                                    ? h.intl.string(h.t.cKH3tk)
+                                                    : h.intl.formatToPlainString(h.t["8aMDPc"], {
+                                                          totalCount: x.length,
+                                                      }),
+                                                align: "right",
+                                                caretConfig: {
+                                                    position: "bottom",
+                                                    align: "end",
+                                                },
+                                                position: "top",
+                                                children: (0, r.jsx)("span", {
+                                                    className: C.questionIconContainer,
+                                                    children: (0, r.jsx)(o.idN, { size: "xs" }),
+                                                }),
+                                            }),
+                                        ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: f.progressContainer,
+                                        className: C.progressContainer,
                                         children: (0, r.jsx)(o.xvT, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
-                                            children: g.intl.formatToPlainString(g.t["5TwASM"], {
-                                                collectedCount: null != (t = null == x ? void 0 : x.length) ? t : 0,
-                                                totalCount: v.length,
+                                            children: h.intl.formatToPlainString(h.t["5TwASM"], {
+                                                collectedCount: E.length,
+                                                totalCount: x.length,
                                             }),
                                         }),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: f.footerButtonContainer,
+                                className: C.footerButtonContainer,
                                 children: (0, r.jsx)(o.hE2, {
                                     wrap: !1,
                                     fullWidth: !0,
                                     children: (0, r.jsx)(o.zxk, {
                                         variant: "primary",
-                                        onClick: E,
-                                        text: g.intl.string(g.t.VnVTNc),
+                                        onClick: S,
+                                        text: h.intl.string(h.t.VnVTNc),
                                         fullWidth: !0,
+                                        disabled: !O,
                                     }),
                                 }),
                             }),
