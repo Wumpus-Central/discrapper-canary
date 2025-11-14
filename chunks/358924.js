@@ -484,41 +484,41 @@ let eO = (e) => {
         });
     }),
     (eO.RichPresenceSection = (e) => {
-        var t, r, l, a;
-        let { activity: o, getAssetImage: c, user: u } = e,
-            { analyticsLocations: d } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
-            { data: p } = (0, P.IX)(o.application_id),
-            { assets: f, details: h, state: g, application_id: m } = o,
-            { hasButton: _ } = eh({
-                activity: o,
-                user: u,
+        var t, r, l, a, o;
+        let { activity: c, getAssetImage: u, user: d } = e,
+            { analyticsLocations: p } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
+            { data: f } = (0, P.IX)(c.application_id),
+            { assets: h, details: g, state: m, application_id: _ } = c,
+            { hasButton: b } = eh({
+                activity: c,
+                user: d,
             }),
-            b = null != (r = null == (t = (0, L.T7)(p)) ? void 0 : t.src) ? r : n(211827),
-            E = (0, S.Z)({
-                application: p,
-                analyticsLocations: d,
+            E = null != (r = null == (t = (0, L.T7)(f)) ? void 0 : t.src) ? r : n(211827),
+            I = (0, S.Z)({
+                application: f,
+                analyticsLocations: p,
             });
-        return null != o.assets || (0, O.Z)(o) || null != E
+        return null != c.assets || (0, O.Z)(c) || null != I
             ? (0, i.jsxs)(ed, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: s()(ea.activitySection, { [ea.activitySectionWithButtons]: _ }),
+                          className: s()(ea.activitySection, { [ea.activitySectionWithButtons]: b }),
                           children: [
-                              null != f && 0 !== Object.keys(f).length
+                              null != h && 0 !== Object.keys(h).length
                                   ? (0, i.jsxs)("div", {
                                         className: ea.activitySectionAssets,
                                         children: [
                                             (0, i.jsx)("img", {
-                                                alt: null != (l = f.large_text) ? l : "",
-                                                src: c(m, f.large_image, [160, 160]),
+                                                alt: null != (l = h.large_text) ? l : "",
+                                                src: null != (a = u(_, h.large_image, [160, 160])) ? a : E,
                                                 className: s()(ea.largeImage, {
-                                                    [ea.largeImageMask]: null != f.small_image,
+                                                    [ea.largeImageMask]: null != h.small_image,
                                                 }),
                                             }),
-                                            null != f.small_image
+                                            null != h.small_image
                                                 ? (0, i.jsx)("img", {
-                                                      alt: null != (a = f.small_text) ? a : "",
-                                                      src: c(m, f.small_image, [64, 64]),
+                                                      alt: null != (o = h.small_text) ? o : "",
+                                                      src: u(_, h.small_image, [64, 64]),
                                                       className: ea.smallImage,
                                                   })
                                                 : null,
@@ -528,21 +528,21 @@ let eO = (e) => {
                                         className: ea.activitySectionAssets,
                                         children: (0, i.jsx)("img", {
                                             alt: "",
-                                            src: b,
+                                            src: E,
                                             className: ea.largeImage,
                                         }),
                                     }),
                               (0, i.jsxs)("div", {
                                   className: ea.activitySectionDetails,
                                   children: [
-                                      eo(null != h && "" !== h ? h : o.name),
-                                      null != g ? ec(g) : null,
+                                      eo(null != g && "" !== g ? g : c.name),
+                                      null != m ? ec(m) : null,
                                       (() => {
-                                          let { timestamps: e } = o;
-                                          return null == e || !(0, y.Z)(o) || (0, v.Z)(o)
+                                          let { timestamps: e } = c;
+                                          return null == e || !(0, y.Z)(c) || (0, v.Z)(c)
                                               ? null
                                               : ec(
-                                                    (0, O.Z)(o)
+                                                    (0, O.Z)(c)
                                                         ? (0, i.jsx)(eu, { timestamps: e })
                                                         : (0, i.jsx)(B.ZP, {
                                                               start: e.start,
@@ -555,14 +555,14 @@ let eO = (e) => {
                                   ],
                               }),
                               (0, i.jsx)(eg, {
-                                  activity: o,
-                                  user: u,
+                                  activity: c,
+                                  user: d,
                               }),
                           ],
                       }),
                       (0, i.jsx)(em, {
-                          activity: o,
-                          analyticsLocations: d,
+                          activity: c,
+                          analyticsLocations: p,
                       }),
                   ],
               })
