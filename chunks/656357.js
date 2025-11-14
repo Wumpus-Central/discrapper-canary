@@ -12,8 +12,8 @@ var r = n(951288),
     p = n(481060),
     f = n(493773),
     v = n(607070),
-    g = n(70097),
-    E = n(210887),
+    E = n(70097),
+    g = n(210887),
     O = n(707903),
     b = n(866960),
     h = n(228488),
@@ -24,13 +24,13 @@ var r = n(951288),
     x = n(184299),
     j = n(937797),
     D = n(347382),
-    T = n(5881),
-    P = n(117242),
+    P = n(5881),
+    T = n(117242),
     R = n(720293),
     I = n(602667),
     N = n(922826),
-    w = n(215113),
-    A = n(449788),
+    A = n(215113),
+    w = n(449788),
     k = n(508067),
     M = n(890193),
     L = n(325916),
@@ -51,7 +51,7 @@ let W = new Set([q.IyS.FIVE_G, q.IyS.FOUR_G, q.IyS.UNKNOWN]),
         clamp: !0,
     };
 function z() {
-    let e = (0, d.e7)([E.Z], () => E.Z.getState().theme);
+    let e = (0, d.e7)([g.Z], () => g.Z.getState().theme);
     return (0, r.jsx)("div", {
         className: Q.pauseText,
         style: { background: (0, m.wj)(e) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
@@ -127,7 +127,7 @@ function J(e) {
     });
 }
 function $(e) {
-    var t, n, l, m, E, I, Z, q, $, ee;
+    var t, n, l, m, g, I, Z, q, $, ee;
     let {
             videoTask: et,
             onOptimisticProgressUpdate: en,
@@ -136,24 +136,24 @@ function $(e) {
             performanceClockStartTime: el,
             orientation: ei,
         } = e,
-        { sourceQuestContent: ea, quest: es, videoSessionId: ec, onClose: eu } = o.useContext(w.VideoQuestModalContext),
+        { sourceQuestContent: ea, quest: es, videoSessionId: ec, onClose: eu } = o.useContext(A.VideoQuestModalContext),
         ed = (0, x.km)((e) => e.transcriptEnabled),
         em = (0, x.km)((e) => e.setTranscriptEnabled),
         ep = (0, x.km)((e) => e.captionEnabled),
         ef = (0, x.km)((e) => e.setCaptionEnabled),
         ev = (0, x.km)((e) => e.fullScreenEnabled),
-        eg = (0, x.km)((e) => e.setFullScreenEnabled),
-        { enabled: eE, variant: eO } = j.EO.useConfig({ location: U.dr.VIDEO_MODAL }),
+        eE = (0, x.km)((e) => e.setFullScreenEnabled),
+        { enabled: eg, variant: eO } = j.EO.useConfig({ location: U.dr.VIDEO_MODAL }),
         eb = eO === j.m_.OVERLAY_SHARE_ON_VIDEO,
         { focused: eh, focusedChanged: eS } = (0, F.xU)(),
         { visible: eC, visibleChanged: ey, targetRef: e_ } = (0, F.Yy)(),
         [ex, ej] = o.useState(!0 === er ? L.rq.PLAYING : L.rq.PAUSED),
-        [eD, eT] = o.useState(!1),
-        [eP, eR] = o.useState(!1),
+        [eD, eP] = o.useState(!1),
+        [eT, eR] = o.useState(!1),
         eI = (0, y.il)(es),
-        [eN, ew] = o.useState(eI.percentComplete),
-        eA = o.useCallback((e) => {
-            e0(null), ew(e);
+        [eN, eA] = o.useState(eI.percentComplete),
+        ew = o.useCallback((e) => {
+            e0(null), eA(e);
         }, []),
         [ek, eM] = o.useState(!1),
         [eL, eV] = o.useState(!0),
@@ -196,7 +196,7 @@ function $(e) {
             : Math.max(e4.maxTimestampSec, eI.progressSeconds),
         tm = o.useMemo(
             () =>
-                (0, T.T)({
+                (0, P.T)({
                     quest: es,
                     location: U.dr.VIDEO_MODAL,
                 }),
@@ -224,7 +224,7 @@ function $(e) {
                 ? 0
                 : e4.timestampSec
             : Math.max(e4.timestampSec, eI.progressSeconds),
-        [tg, tE] = o.useState(L._H.MD),
+        [tE, tg] = o.useState(L._H.MD),
         tO = {
             [L._H.MD]: 50,
             [L._H.LG]: 58,
@@ -295,13 +295,13 @@ function $(e) {
             trackQuestVideoProgressed: tx,
             trackQuestVideoResumed: tj,
             trackQuestVideoPaused: tD,
-            trackQuestVideoFocusChange: tT,
-            trackQuestContentClick: tP,
+            trackQuestVideoFocusChange: tP,
+            trackQuestContentClick: tT,
             trackQuestVideoBufferingStarted: tR,
             trackQuestVideoBufferingEnded: tI,
             trackWatchTimeAnalytics: tN,
-            trackQuestVideoTimeToFirstFrame: tw,
-            trackQuestVideoFullscreenChanged: tA,
+            trackQuestVideoTimeToFirstFrame: tA,
+            trackQuestVideoFullscreenChanged: tw,
             trackQuestVideoError: tk,
             trackQuestVideoVolumeChanged: tM,
         } = (0, B.Z)({
@@ -356,7 +356,7 @@ function $(e) {
             var e, t;
             return null != (t = null == (e = e5.current) ? void 0 : e.currentTime) ? t : null;
         }, []),
-        { forceSendCurrentSegment: tq } = (0, P.Z)({
+        { forceSendCurrentSegment: tq } = (0, T.Z)({
             getCurrentVideoTime: tU,
             isPlaying: ex === L.rq.PLAYING,
             isMetadataLoaded: tl,
@@ -385,8 +385,8 @@ function $(e) {
         tD(tr);
     }, [tr, tD]),
         o.useEffect(() => {
-            eS && tT(eh, ex);
-        }, [eh, eS, ex, tT]);
+            eS && tP(eh, ex);
+        }, [eh, eS, ex, tP]);
     let tG = o.useCallback(
         (e) => {
             var t;
@@ -444,20 +444,20 @@ function $(e) {
             }
         );
     }, [ex, tX]);
-    let t$ = !tQ && (eP || eD || ex === L.rq.ENDED),
+    let t$ = !tQ && (eT || eD || ex === L.rq.ENDED),
         t0 = o.useCallback(() => {
             var e;
             tm.info("[QV] | handleFullScreenExit");
             let t = (0, h.fn)(null == (e = e5.current) ? void 0 : e.parentNode, e5.current);
-            null == t || (0, h.rB)(t) || (t.removeEventListener(h.NO, t0), eg(!1), tA(!1), tE(L._H.MD));
-        }, [eg, tm, tA]),
+            null == t || (0, h.rB)(t) || (t.removeEventListener(h.NO, t0), eE(!1), tw(!1), tg(L._H.MD));
+        }, [eE, tm, tw]),
         t1 = () => {
             if (null == e5.current) return;
             let e = Math.max(e5.current.currentTime - 10, 0);
             tm.info("[QV] | handleSeekBackIncrement | newTime: ".concat(e)),
                 t8(e),
                 ex === L.rq.ENDED && tY(L.rq.PAUSED),
-                tP(_.jn.VIDEO_MODAL, C.jZ.SEEK_BACKWARD);
+                tT(_.jn.VIDEO_MODAL, C.jZ.SEEK_BACKWARD);
         },
         t2 = () => {
             if (null == e5.current || !nu) return;
@@ -465,7 +465,7 @@ function $(e) {
             tm.info("[QV] | handleSeekForwardIncrement | newTime: ".concat(e)),
                 t8(e),
                 ex !== L.rq.ENDED && e >= e5.current.duration && tY(L.rq.ENDED),
-                tP(_.jn.VIDEO_MODAL, C.jZ.SEEK_FORWARD);
+                tT(_.jn.VIDEO_MODAL, C.jZ.SEEK_FORWARD);
         };
     o.useEffect(() => {
         let e = e5.current;
@@ -616,17 +616,17 @@ function $(e) {
                 if (ev) {
                     var n;
                     let e = (0, h.fn)(null == (n = e5.current) ? void 0 : n.parentNode, e5.current);
-                    null != e && (e.removeEventListener(h.NO, t0), (0, h.Pr)(e), eg(!1), tA(!1));
+                    null != e && (e.removeEventListener(h.NO, t0), (0, h.Pr)(e), eE(!1), tw(!1));
                 }
-                tP(e, C.jZ.LEARN_MORE), ni(e, t);
+                tT(e, C.jZ.LEARN_MORE), ni(e, t);
             },
-            [ni, ev, tP, t0, eg, tA],
+            [ni, ev, tT, t0, eE, tw],
         ),
         ns = o.useMemo(() => (0, R.z0)(es, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.THUMBNAIL), [es]),
         nc = o.useMemo(() => (0, R.z0)(es, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.CAPTION), [es]),
         nu = tn || e4.maxTimestampSec >= (null != (Z = null == (m = e5.current) ? void 0 : m.currentTime) ? Z : 0) + 1,
         nd = o.useMemo(() => null === (0, R.z0)(es, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.TRANSCRIPT), [es]),
-        nm = eE
+        nm = eg
             ? {}
             : {
                   paddingLeft: (0, s.to)(
@@ -649,14 +649,14 @@ function $(e) {
                   ),
               };
     return (0, r.jsx)(p.P3F, {
-        className: i()(Q.videoCont, { [Q.videoContRoundedCorners]: eE }),
+        className: i()(Q.videoCont, { [Q.videoContRoundedCorners]: eg }),
         "data-fullscreen": ev,
         tabIndex: -1,
         onMouseEnter: () => {
-            eT(!0), tW(!1), (tz.current = performance.now()), null != tK.current && clearTimeout(tK.current);
+            eP(!0), tW(!1), (tz.current = performance.now()), null != tK.current && clearTimeout(tK.current);
         },
         onMouseLeave: () => {
-            eT(!1), tW(!1);
+            eP(!1), tW(!1);
         },
         onMouseMove: tJ,
         onKeyDown: tJ,
@@ -684,7 +684,7 @@ function $(e) {
                             }),
                         ],
                     }),
-                (0, r.jsxs)(g.Z, {
+                (0, r.jsxs)(E.Z, {
                     ref: (e) => {
                         (e5.current = e), (e_.current = e);
                     },
@@ -713,7 +713,7 @@ function $(e) {
                                 (0, S.qm)(es.id, eI.taskType, e5.current.currentTime),
                                 en(e5.current.currentTime)),
                             e3(es.id, e5.current.currentTime, e5.current.duration),
-                            eA((e5.current.currentTime / e5.current.duration) * 100));
+                            ew((e5.current.currentTime / e5.current.duration) * 100));
                     },
                     onEnded: (e) => {
                         null != e5.current &&
@@ -745,7 +745,7 @@ function $(e) {
                     onPlaying: () => {
                         if (!e1.current) return;
                         let e = performance.now() - el;
-                        tm.info("[QV] | \u23F0 Video FCP: ".concat(e, "ms")), tw(e), (e1.current = !1);
+                        tm.info("[QV] | \u23F0 Video FCP: ".concat(e, "ms")), tA(e), (e1.current = !1);
                     },
                     onWaiting: (e) => {
                         (e8.current = performance.now()),
@@ -823,26 +823,28 @@ function $(e) {
                                 (e) => "".concat(e),
                             ),
                         },
-                        children: (0, r.jsx)(A.Z, {}),
+                        children: (0, r.jsx)(w.Z, {}),
                     }),
                 ed &&
                     ex !== L.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(p.P3F, {
-                                onClick: () => em(!1),
+                                onClick: () => {
+                                    ex === L.rq.PAUSED && tY(L.rq.PLAYING), em(!1);
+                                },
                                 tabIndex: -1,
                                 children: (0, r.jsx)("div", { className: Q.transcriptOverlay }),
                             }),
                             (0, r.jsx)(s.animated.div, {
                                 className: i()(Q.transcriptCont, { [Q.transcriptContPortrait]: "portrait" === ei }),
                                 style: {
-                                    marginBottom: (0, s.to)([ne, nr], (e, t) => "".concat(e * tO[tg] + t, "px")),
+                                    marginBottom: (0, s.to)([ne, nr], (e, t) => "".concat(e * tO[tE] + t, "px")),
                                 },
                                 children: (0, r.jsx)(M.E, {
                                     quest: es,
                                     onClose: () => {
-                                        em(!1), tP(_.jn.VIDEO_MODAL, C.jZ.TRANSCRIPT_DISABLE);
+                                        em(!1), tT(_.jn.VIDEO_MODAL, C.jZ.TRANSCRIPT_DISABLE);
                                     },
                                 }),
                             }),
@@ -887,7 +889,7 @@ function $(e) {
                                 [
                                     ne.to({
                                         range: [0, 1],
-                                        output: [0, -tO[tg]],
+                                        output: [0, -tO[tE]],
                                     }),
                                 ],
                                 (e) => "".concat(e, "px"),
@@ -930,12 +932,12 @@ function $(e) {
                         })({}, nm)),
                         (ee = ee =
                             {
-                                paddingInline: 16 * !!eE,
+                                paddingInline: 16 * !!eg,
                                 height: (0, s.to)(
                                     [
                                         ne.to({
                                             range: [0, 1],
-                                            output: [0, tO[tg]],
+                                            output: [0, tO[tE]],
                                         }),
                                     ],
                                     (e) => "".concat(e, "px"),
@@ -961,7 +963,7 @@ function $(e) {
                             interactionEnabled: tn && eX,
                             backgroundColor: t$ ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: t$ ? eB : void 0,
-                            duration: null != (q = null == (E = e5.current) ? void 0 : E.duration) ? q : 1,
+                            duration: null != (q = null == (g = e5.current) ? void 0 : g.duration) ? q : 1,
                             maxSeekableTime: t$ && eX ? td : void 0,
                             onClick: (e) => {
                                 t8(e), ex === L.rq.ENDED && tY(L.rq.PLAYING);
@@ -969,7 +971,7 @@ function $(e) {
                             onScrubBack: () => {
                                 t1();
                             },
-                            rounded: eE,
+                            rounded: eg,
                             onScrubForward: () => {
                                 t2();
                             },
@@ -1016,15 +1018,15 @@ function $(e) {
                                 seekForwardEnabled: nu,
                                 hideCaptionBtn: null == nc,
                                 hideTranscriptBtn: nd,
-                                size: tg,
+                                size: tE,
                                 handlePlaybackBtnClick: t4,
                                 handleTranscriptBtnClick: () => {
                                     em(!ed),
-                                        tP(_.jn.VIDEO_MODAL, ed ? C.jZ.TRANSCRIPT_DISABLE : C.jZ.TRANSCRIPT_ENABLE);
+                                        tT(_.jn.VIDEO_MODAL, ed ? C.jZ.TRANSCRIPT_DISABLE : C.jZ.TRANSCRIPT_ENABLE);
                                 },
                                 handleCaptionBtnClick: () => {
                                     ef(!ep),
-                                        tP(
+                                        tT(
                                             _.jn.VIDEO_MODAL,
                                             ep ? C.jZ.CLOSED_CAPTIONING_DISABLE : C.jZ.CLOSED_CAPTIONING_ENABLE,
                                         );
@@ -1035,11 +1037,11 @@ function $(e) {
                                     tm.info("[QV] | handleFullScreenButtonClick | shouldBeEnabled: ".concat(t));
                                     let n = (0, h.fn)(null == (e = e5.current) ? void 0 : e.parentNode, e5.current);
                                     t && null != n
-                                        ? ((0, h.Dj)(n), n.addEventListener(h.NO, t0), tA(!0), tE(L._H.LG))
+                                        ? ((0, h.Dj)(n), n.addEventListener(h.NO, t0), tw(!0), tg(L._H.LG))
                                         : t ||
                                           null == n ||
-                                          (n.removeEventListener(h.NO, t0), tA(!1), (0, h.Pr)(n), tE(L._H.MD)),
-                                        eg(t);
+                                          (n.removeEventListener(h.NO, t0), tw(!1), (0, h.Pr)(n), tg(L._H.MD)),
+                                        eE(t);
                                 },
                                 handleSeekBackBtnClick: t1,
                                 handleSeekForwardBtnClick: t2,
