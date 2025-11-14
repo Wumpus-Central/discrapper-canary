@@ -32,57 +32,58 @@ function m(e) {
             wishlistId: null != b ? b : null,
             onAction: y,
         }),
-        { cards: x, singleItem: j } = (0, i.useMemo)(() => {
+        { cards: j, singleItem: x } = (0, i.useMemo)(() => {
             let e = [],
                 r = null;
             for (let i = 0; i < t.length && e.length < 4; i++) {
                 let l = t[i],
-                    a = 3 === e.length && t.length > 4;
-                if (l.isOwned) continue;
-                let d = e.length;
-                (0, o.Q)(l)
-                    ? e.push(
-                          (0, h.c)(l, {
-                              index: d,
-                              moreCount: a ? t.length - 4 + 1 : void 0,
-                              profileOwner: n,
-                              analyticsLocations: _,
-                              onViewWishlist: m,
-                              wishlistId: b,
-                          }),
-                      )
-                    : (0, c.F)(l) &&
-                      e.push(
-                          (0, s.J)(l, {
-                              index: d,
-                              moreCount: a ? t.length - 4 + 1 : void 0,
-                              profileOwner: n,
-                              analyticsLocations: _,
-                              onViewWishlist: m,
-                              wishlistId: b,
-                          }),
-                      ),
-                    1 === e.length && null == r && (r = l);
+                    a = 3 === e.length && t.length > 4,
+                    d = e.length;
+                if ((0, o.Q)(l)) {
+                    if (l.isOwned) continue;
+                    e.push(
+                        (0, h.c)(l, {
+                            index: d,
+                            moreCount: a ? t.length - 4 + 1 : void 0,
+                            profileOwner: n,
+                            analyticsLocations: _,
+                            onViewWishlist: m,
+                            wishlistId: b,
+                        }),
+                    );
+                } else
+                    (0, c.F)(l) &&
+                        e.push(
+                            (0, s.J)(l, {
+                                index: d,
+                                moreCount: a ? t.length - 4 + 1 : void 0,
+                                profileOwner: n,
+                                analyticsLocations: _,
+                                onViewWishlist: m,
+                                wishlistId: b,
+                            }),
+                        );
+                1 === e.length && null == r && (r = l);
             }
             return {
                 cards: e,
                 singleItem: r,
             };
         }, [t, n, _, m, b]);
-    if (0 === x.length) return null;
-    let v = 1 === x.length && null != j,
-        C = x;
+    if (0 === j.length) return null;
+    let v = 1 === j.length && null != x,
+        C = j;
     return (
         v &&
-            ((0, o.Q)(j)
-                ? (C = (0, h.g)(j, {
+            ((0, o.Q)(x)
+                ? (C = (0, h.g)(x, {
                       profileOwner: n,
                       analyticsLocations: _,
                       wishlistId: b,
                       onViewWishlist: m,
                   }))
-                : (0, c.F)(j) &&
-                  (C = (0, s.B)(j, {
+                : (0, c.F)(x) &&
+                  (C = (0, s.B)(x, {
                       profileOwner: n,
                       analyticsLocations: _,
                       wishlistId: b,

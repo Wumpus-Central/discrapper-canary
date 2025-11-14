@@ -2,12 +2,12 @@ n.d(t, { Y: () => O }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(793030),
-    o = n(442837),
-    s = n(481060),
-    l = n(893776),
-    c = n(388905),
-    u = n(703656),
-    d = n(314897),
+    o = n(481060),
+    s = n(893776),
+    l = n(388905),
+    c = n(703656),
+    u = n(314897),
+    d = n(594174),
     f = n(626135),
     _ = n(981631),
     p = n(388032);
@@ -65,15 +65,14 @@ function E(e, t) {
 }
 function b(e) {
     let { token: t, onClose: n } = e,
-        [a, s] = i.useState("loading"),
-        h = (0, o.e7)([d.default], () => d.default.isAuthenticated());
+        [a, o] = i.useState("loading");
     i.useEffect(() => {
         f.default.track(_.rMx.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != t });
     }, [t]);
-    let m = i.useCallback(async () => {
+    let h = i.useCallback(async () => {
         try {
             if (null == t) {
-                s("error"),
+                o("error"),
                     f.default.track(_.rMx.ONE_TIME_LOGIN_ERROR, {
                         source: "web_modal",
                         error_reason: "missing_token",
@@ -81,16 +80,16 @@ function b(e) {
                     });
                 return;
             }
-            s("loading"),
+            o("loading"),
                 f.default.track(_.rMx.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_modal" }),
-                await l.Z.oneTimeLogin(t),
-                s("success"),
+                await s.Z.oneTimeLogin(t),
+                o("success"),
                 f.default.track(_.rMx.LOGIN_SUCCESSFUL, {
                     source: "web_modal",
                     login_method: "one_time_login",
                 });
         } catch (t) {
-            s("error");
+            o("error");
             let e = t instanceof Error ? t.message : "Login failed";
             f.default.track(_.rMx.ONE_TIME_LOGIN_ERROR, {
                 source: "web_modal",
@@ -100,23 +99,40 @@ function b(e) {
         }
     }, [t]);
     i.useEffect(() => {
-        if (h) return void s("success");
-        m();
-    }, [m, h]);
-    let g = i.useCallback(() => {
+        if (u.default.isAuthenticated()) return void o("already_logged_in");
+        h();
+    }, [h]);
+    let m = i.useCallback(() => {
         f.default.track(_.rMx.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: a }), null == n || n();
     }, [n, a]);
     switch (
         (i.useEffect(() => {
-            "success" === a && (null == n || n(), (0, u.uL)(_.Z5c.ME));
+            "success" === a && (null == n || n(), (0, c.uL)(_.Z5c.ME));
         }, [a, n]),
         a)
     ) {
+        case "already_logged_in":
+            var g, E;
+            return {
+                title: p.intl.string(p.t.MKW8z2),
+                subtitle: p.intl.formatToPlainString(p.t.YOeM7B, {
+                    username:
+                        null != (E = null == (g = d.default.getCurrentUser()) ? void 0 : g.username)
+                            ? E
+                            : "current user",
+                }),
+                actions: [
+                    {
+                        onClick: m,
+                        text: p.intl.string(p.t["3PatSz"]),
+                    },
+                ],
+            };
         case "loading":
         case "success":
             return {
                 title: p.intl.string(p.t.W9uNdG),
-                body: (0, r.jsx)(c.Hh, {}),
+                body: (0, r.jsx)(l.Hh, {}),
             };
         case "error":
             return {
@@ -124,7 +140,7 @@ function b(e) {
                 subtitle: p.intl.string(p.t["S+YjYJ"]),
                 actions: [
                     {
-                        onClick: g,
+                        onClick: m,
                         text: p.intl.string(p.t["ETE/oC"]),
                     },
                 ],
@@ -158,5 +174,5 @@ function y(e) {
     );
 }
 function O(e) {
-    (0, s.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(y, m({}, t, e))));
+    (0, o.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(y, m({}, t, e))));
 }
