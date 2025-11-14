@@ -93,7 +93,7 @@ let m = {
         giftPurchaseConfirmation: {
             yearGiftText: l.t["0Z0G7m"],
             monthGiftText: l.t.qyhlUP,
-            collectRewardButtonText: () => l.intl.string(l.t["3d0Nmb"]),
+            collectRewardButtonText: () => l.intl.string(l.t.kMYVwv),
             rewardCollectedText: () => l.intl.string(l.t.eZrmtq),
         },
     };

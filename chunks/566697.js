@@ -1,4 +1,7 @@
-n.d(t, { Z: () => R });
+n.d(t, {
+    R: () => R,
+    Z: () => P,
+});
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -28,6 +31,7 @@ let N = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
         small: c.EFr.SIZE_24,
+        xsmall: c.EFr.SIZE_20,
         default: c.EFr.SIZE_32,
     },
     R = i.memo(function (e) {
@@ -42,8 +46,8 @@ let N = {
                 showStatus: x,
                 showPlaceholderUser: L,
                 pendingGlobalName: M,
-                pendingNickname: j,
-                pendingAvatarDecoration: k,
+                pendingNickname: k,
+                pendingAvatarDecoration: j,
                 pendingDisplayNameStyles: U,
                 nameplatePreviewSize: G = "default",
                 isPurchased: B = !1,
@@ -60,14 +64,14 @@ let N = {
             X =
                 null != t
                     ? (0, b.Ly)({
-                          pendingNickname: j,
+                          pendingNickname: k,
                           pendingGlobalName: M,
                           user: t,
                           guildMember: q,
                       })
                     : void 0,
             Q = (0, E.Ys)({
-                pendingValue: k,
+                pendingValue: j,
                 userValue: null == t ? void 0 : t.avatarDecoration,
                 guildValue: null == q ? void 0 : q.avatarDecoration,
                 guildId: n,
@@ -95,6 +99,7 @@ let N = {
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(P, S.nameplatePreview, {
                     [S.nameplatePurchased]: B && !w,
+                    [S.xsmall]: "xsmall" === G,
                     [S.small]: "small" === G,
                     [S.large]: "large" === G,
                     [S.xlarge]: "xlarge" === G,
@@ -163,4 +168,5 @@ let N = {
                 ],
             }),
         });
-    });
+    }),
+    P = R;
