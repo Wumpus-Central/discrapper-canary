@@ -6,7 +6,7 @@ var r = n(951288),
     a = n(206403),
     c = n(481446);
 function s(e) {
-    let { title: t, subtitle: n, isOpen: l, setIsOpen: s, compact: u = !1, children: d } = e;
+    let { title: t, subtitle: n, isOpen: l, setIsOpen: s, children: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.x, {
@@ -14,9 +14,8 @@ function s(e) {
                 description: l ? void 0 : n,
                 secondaryTrailingElement: (0, r.jsx)(i.sXD, { className: o()(c.icon, { [c.iconClosed]: !l }) }),
                 onClick: () => s(!l),
-                compact: u,
             }),
-            l && d,
+            l && u,
         ],
     });
 }

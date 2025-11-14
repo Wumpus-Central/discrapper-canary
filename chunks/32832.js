@@ -9,7 +9,7 @@ var l = n(292556),
     o = n(299426),
     c = n(407458),
     E = n(388032);
-n(649926);
+n(732213);
 let S = {
         useLabel: () => E.intl.string(E.t.jD1qzM),
         sound: "message1",
@@ -27,16 +27,13 @@ let S = {
     }),
     I = (0, r.qs)(a.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
         useTitle: () => E.intl.string(E.t["2ZhCOd"]),
-        useSubtitle: () => E.intl.string(E.t["+B0XLE"]),
+        useSubtitle: () => E.intl.string(E.t.EAKdPr),
         useValue: () => (0, i.e7)([s.Z], () => s.Z.getDisableAllSounds()),
         setValue: (t) => l.default.toggleDisableAllSounds(t),
     }),
-    O = (0, r.$l)(a.n.NOTIFICATION_SOUNDS_LIST, {
-        collapseAfter: 4,
-        useCollapsibleTitle: (t, e) =>
-            t
-                ? E.intl.formatToPlainString(E.t["0JYT98"], { count: e })
-                : E.intl.formatToPlainString(E.t.ji1uNt, { count: e }),
+    O = (0, r.Uc)(a.n.NOTIFICATION_SOUNDS_FIELD_SET, {
+        useTitle: () => E.intl.string(E.t.ONU22R),
+        variant: "separators",
         ContextProvider: o.u,
         buildLayout: () => [(0, c.j)(S), T, (0, c.j)(d), I],
     });

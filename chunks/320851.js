@@ -100,6 +100,7 @@ let a = [
             t
                 ? s.intl.formatToPlainString(s.t["0JYT98"], { count: e })
                 : s.intl.formatToPlainString(s.t.ji1uNt, { count: e }),
+        useCollapsibleSubtitle: () => s.intl.string(s.t.LYO7bT),
         ContextProvider: u.u,
         buildLayout: () => a.map((t) => (0, r.j)(t)),
     });

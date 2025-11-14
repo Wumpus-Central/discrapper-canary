@@ -11,56 +11,58 @@ function u(e) {
     let n,
         { node: u } = e,
         [d, f] = l.useState(!1),
-        { layout: b, collapseAfter: p, ContextProvider: y, useCollapsibleTitle: j } = u,
-        m = b.filter((e) => {
+        { layout: b, collapseAfter: p, ContextProvider: y, useCollapsibleTitle: j, useCollapsibleSubtitle: m } = u,
+        v = b.filter((e) => {
             var t, n;
             return null == (n = null == (t = e.usePredicate) ? void 0 : t.call(e)) || n;
         }),
-        v = null != p ? m.slice(0, p) : m,
-        x = null != p ? m.slice(p) : [],
-        g = null != y ? y : l.Fragment,
-        h =
-            null != (t = null == j ? void 0 : j(d, x.length))
+        x = null != p ? v.slice(0, p) : v,
+        g = null != p ? v.slice(p) : [],
+        h = null != y ? y : l.Fragment,
+        O =
+            null != (t = null == j ? void 0 : j(d, g.length))
                 ? t
-                : ((n = x.length),
+                : ((n = g.length),
                   d
                       ? c.intl.formatToPlainString(c.t["3SHL+d"], { count: n })
-                      : c.intl.formatToPlainString(c.t["8JRFyZ"], { count: n }));
-    return (0, r.jsx)(g, {
+                      : c.intl.formatToPlainString(c.t["8JRFyZ"], { count: n })),
+        P = null == m ? void 0 : m();
+    return (0, r.jsx)(h, {
         children: (0, r.jsxs)(o.Kqy, {
             gap: 8,
             children: [
-                v.map((e, t) =>
+                x.map((e, t) =>
                     (0, r.jsxs)(
                         l.Fragment,
                         {
                             children: [
                                 (0, r.jsx)(i.Z, { node: e }),
-                                x.length > 0 && t !== v.length - 1 && (0, r.jsx)(o.izJ, {}),
+                                g.length > 0 && t !== x.length - 1 && (0, r.jsx)(o.izJ, {}),
                             ],
                         },
                         e.key,
                     ),
                 ),
-                x.length > 0 &&
+                g.length > 0 &&
                     (0, r.jsxs)("div", {
                         className: s.collapsibleContainer,
                         children: [
                             (0, r.jsx)(o.izJ, { className: s.hoverDivider }),
                             (0, r.jsx)(a.I, {
-                                title: h,
+                                title: O,
+                                subtitle: P,
                                 isOpen: d,
                                 setIsOpen: f,
-                                compact: !0,
                                 children: (0, r.jsx)(o.Kqy, {
                                     gap: 8,
-                                    children: x.map((e, t) =>
+                                    padding: { top: 8 },
+                                    children: g.map((e, t) =>
                                         (0, r.jsxs)(
                                             l.Fragment,
                                             {
                                                 children: [
                                                     (0, r.jsx)(i.Z, { node: e }),
-                                                    t !== x.length - 1 && (0, r.jsx)(o.izJ, {}),
+                                                    t !== g.length - 1 && (0, r.jsx)(o.izJ, {}),
                                                 ],
                                             },
                                             e.key,
