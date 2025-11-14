@@ -18,15 +18,16 @@ function u(e) {
         u = (0, i.t)(null == c ? void 0 : c.id, "AUTHORIZE_REQUEST"),
         d = n.includes("rpc") && u,
         f = n.includes("web") && (null == c ? void 0 : c.connectionEntrypointUrl) != null,
-        _ = d || f,
-        { token: p, fetched: h } = (0, s.o)(
+        _ = d ? "rpc" : f ? "web" : null,
+        p = d || f,
+        { token: h, fetched: m } = (0, s.o)(
             null != (t = null == c ? void 0 : c.parentId) ? t : null == c ? void 0 : c.id,
         ),
-        m = h && null != p;
+        g = m && null != h;
     return {
-        fetched: h,
-        hasAlreadyLinked: m,
-        canStartAuthorization: _,
+        fetched: m,
+        hasAlreadyLinked: g,
+        canStartAuthorization: p,
         startAuthorization: r.useCallback(
             () =>
                 null == c
@@ -40,5 +41,6 @@ function u(e) {
             [d, f, c],
         ),
         connectionApp: c,
+        preferredFlow: _,
     };
 }

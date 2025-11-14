@@ -13,8 +13,8 @@ var r = n(951288),
     u = n(481060),
     d = n(24124),
     p = n(636449),
-    h = n(620662),
-    f = n(513202),
+    f = n(620662),
+    h = n(513202),
     g = n(906732),
     m = n(535139),
     b = n(522651),
@@ -44,7 +44,7 @@ function D(e, t, n) {
             (t.application_id === e.id ||
                 (null == (r = e.linkedGames) ? void 0 : r.some((e) => e.id === t.application_id))) &&
             t.type === w.IIU.PLAYING &&
-            (0, h.Z)(t, w.xjy.JOIN)
+            (0, f.Z)(t, w.xjy.JOIN)
         );
     }
     return !1;
@@ -53,7 +53,7 @@ let L = i.memo(function (e) {
         var t, l;
         let a,
             s,
-            h,
+            f,
             y,
             {
                 stream: C,
@@ -97,7 +97,7 @@ let L = i.memo(function (e) {
             ee = i.useCallback(
                 (e, t) => () => {
                     (0, b.v)(X, b.d.LEAVE_ACTIVITY),
-                        f.Z.leaveActivity({
+                        h.Z.leaveActivity({
                             location: t,
                             applicationId: e,
                             showFeedback: !0,
@@ -179,22 +179,23 @@ let L = i.memo(function (e) {
                 startAuthorization: el,
                 hasAlreadyLinked: eo,
                 connectionApp: ea,
+                preferredFlow: es,
             } = (0, m.F)(z, {
                 allowedFlows: [m.r.RPC, m.r.WEB],
             }),
-            es = N.Z.useConfig({ location: "ActivityActions" }).enabled,
-            ec = i.useRef(null),
-            [eu, ed] = i.useState(!1);
+            ec = N.Z.useConfig({ location: "ActivityActions" }).enabled,
+            eu = i.useRef(null),
+            [ed, ep] = i.useState(!1);
         i.useEffect(
             () => () => {
-                null != ec.current && clearTimeout(ec.current);
+                null != eu.current && clearTimeout(eu.current);
             },
             [],
         ),
             i.useEffect(() => {
-                eo && (ed(!1), null != ec.current && (clearTimeout(ec.current), (ec.current = null)));
+                eo && (ep(!1), null != eu.current && (clearTimeout(eu.current), (eu.current = null)));
             }, [eo]);
-        let ep = null == Q ? null : (0, r.jsx)(k, { guildId: Q }),
+        let ef = null == Q ? null : (0, r.jsx)(k, { guildId: Q }),
             eh =
                 (null != B || null == F || (0, p.R)()) && (L || E)
                     ? (L
@@ -202,21 +203,21 @@ let L = i.memo(function (e) {
                             (s = () => {
                                 en(), (0, b.v)(X, b.d.STREAM, !1);
                             }),
-                            (h = u.g5r),
+                            (f = u.g5r),
                             (y = A.intl.string(A.t.S5anIc)))
                           : U
                             ? ((a = !1),
                               (s = () => {
                                   er(), (0, b.v)(X, b.d.STREAM, !0);
                               }),
-                              (h = u.hGI),
+                              (f = u.hGI),
                               (y =
                                   null != B
                                       ? A.intl.formatToPlainString(A.t.AB5gTy, { game: B.name })
                                       : A.intl.string(A.t.FeUKeA)))
                             : ((a = !0),
                               (s = null),
-                              (h = u.hGI),
+                              (f = u.hGI),
                               (y =
                                   null != G && (0, S.vd)(G.type)
                                       ? A.intl.string(A.t.uQn9B8)
@@ -229,11 +230,11 @@ let L = i.memo(function (e) {
                               tooltipText: y,
                               disabled: a,
                               onClick: s,
-                              icon: h,
+                              icon: f,
                           }),
                       }))
                     : null,
-            ef =
+            eg =
                 J && null == F
                     ? (0, r.jsx)(Z.Z, {
                           ref: K,
@@ -242,7 +243,7 @@ let L = i.memo(function (e) {
                           icon: u.ejJ,
                       })
                     : null,
-            eg =
+            em =
                 null == F
                     ? null
                     : (0, r.jsx)(Z.Z, {
@@ -250,7 +251,7 @@ let L = i.memo(function (e) {
                           onClick: ee(F.applicationId, F.location),
                           icon: u.PBZ,
                       }),
-            em =
+            eb =
                 null == V
                     ? null
                     : (0, r.jsx)(Z.Z, {
@@ -258,25 +259,26 @@ let L = i.memo(function (e) {
                           onClick: et(V.applicationId),
                           icon: u.PBZ,
                       }),
-            eb = null == C ? null : (0, r.jsx)(_.Z, {}),
-            e_ =
-                es && ei && !eo
+            e_ = null == C ? null : (0, r.jsx)(_.Z, {}),
+            ey =
+                ec && ei && !eo
                     ? (0, r.jsx)(M, {
                           runningGame: B,
                           startAuthorization: () => {
-                              ed(!0),
-                                  null != ec.current && clearTimeout(ec.current),
-                                  (ec.current = setTimeout(() => {
-                                      ed(!1);
-                                  }, 90000)),
+                              es !== m.r.WEB &&
+                                  (ep(!0),
+                                  null != eu.current && clearTimeout(eu.current),
+                                  (eu.current = setTimeout(() => {
+                                      ep(!1);
+                                  }, 90000))),
                                   el();
                           },
                           connectionApp: ea,
                           ref: Y,
                       })
                     : null,
-            ey =
-                es && ei && !eo
+            eO =
+                ec && ei && !eo
                     ? (0, r.jsx)(c.J2, {
                           title: A.intl.string(A.t.ULvRFd),
                           body: A.intl.string(A.t["HJJDr+"]),
@@ -284,21 +286,21 @@ let L = i.memo(function (e) {
                           position: "top",
                           align: "center",
                           caretConfig: { align: "center" },
-                          shouldShow: eu,
+                          shouldShow: ed,
                           onRequestClose: () => {
-                              ed(!1), null != ec.current && (clearTimeout(ec.current), (ec.current = null));
+                              ep(!1), null != eu.current && (clearTimeout(eu.current), (eu.current = null));
                           },
                       })
                     : null;
-        return null == eh && null == ef && null == eg && null == em && null == e_ && null == ep
+        return null == eh && null == eg && null == em && null == eb && null == ey && null == ef
             ? null
             : (0, r.jsxs)("div", {
                   className: R.actions,
                   children: [
-                      null != (t = null != ep ? ep : e_) ? t : ef,
+                      null != (t = null != ef ? ef : ey) ? t : eg,
                       eh,
-                      null != (l = null != eg ? eg : em) ? l : eb,
-                      ey,
+                      null != (l = null != em ? em : eb) ? l : e_,
+                      eO,
                   ],
               });
     }),
