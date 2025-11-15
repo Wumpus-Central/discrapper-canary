@@ -74,7 +74,7 @@ function R(e, t) {
         e
     );
 }
-let P = 5,
+let P = 6,
     D = !1,
     w = new c.Z("OverlayUsageStatsManager");
 D || (w.verbose = () => {});
@@ -210,7 +210,7 @@ class M {
         });
     }
 }
-class j {
+class k {
     update() {
         let e = this.game,
             t = b.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
@@ -291,7 +291,7 @@ class j {
             (this.updateScreenInterval = setInterval(() => this.update(), 10000));
     }
 }
-function k() {
+function j() {
     try {
         return crypto.randomUUID();
     } catch (e) {
@@ -392,7 +392,10 @@ class U {
             });
     }
     setOverlayState(e) {
-        this.overlayState = e;
+        (this.overlayState = e), (this.overlayStateRaw = e);
+    }
+    setOverlayStateRawOnly(e) {
+        this.overlayStateRaw = e;
     }
     getSettingMethod() {
         return null == this.overlayMethod ? f.gl[f.gl.Disabled] : f.gl[this.overlayMethod];
@@ -475,6 +478,7 @@ class U {
                     any_other_method: O,
                     current_method: v,
                     last_overlay_state: this.overlayState,
+                    last_overlay_state_raw: this.overlayStateRaw,
                 },
             ),
             notifications: this.notificationAnalytics.getCounterAnalytics(this.uuid),
@@ -525,6 +529,7 @@ class U {
             A(this, "overlayMethod", void 0),
             A(this, "overlayMethodStats", void 0),
             A(this, "overlayState", void 0),
+            A(this, "overlayStateRaw", void 0),
             A(this, "notificationAnalytics", void 0),
             A(this, "widgetAnalytics", void 0),
             A(this, "screenAnalytics", void 0),
@@ -548,10 +553,11 @@ class U {
             A(this, "muteToggledCount", void 0),
             A(this, "_successfullyShown", void 0),
             (this.game = e),
-            (this.uuid = k()),
+            (this.uuid = j()),
             (this.overlayMethod = null),
             (this.overlayMethodStats = null),
             (this.overlayState = null),
+            (this.overlayStateRaw = null),
             (this.notificationAnalytics = new L()),
             (this.widgetAnalytics = new M()),
             (this.uiUnlockedCount = 0),
@@ -573,7 +579,7 @@ class U {
             (this.soundboardKeepOpenCount = 0),
             (this.muteToggledCount = 0),
             (this._successfullyShown = !1),
-            (this.screenAnalytics = new j(e)),
+            (this.screenAnalytics = new k(e)),
             (this.overlayStatus = (0, d.b6)(e)),
             (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),
@@ -716,7 +722,10 @@ function J(e) {
 function $(e) {
     let t = U.getByPid(e.pid);
     if (null == t) return void w.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, U.debug);
-    e.newState !== f.mM.OVERLAY_TEARING_DOWN && t.setOverlayState(e.newState);
+    if (e.newState !== f.mM.OVERLAY_TEARING_DOWN) {
+        if (e.reason.includes("Unknown fullscreen type")) return void t.setOverlayStateRawOnly(e.newState);
+        t.setOverlayState(e.newState);
+    }
 }
 A(U, "gamesByPid", {}), A(U, "gamesByName", {}), A(U, "desktopMainWindowHasFocus", document.hasFocus());
 class ee {
