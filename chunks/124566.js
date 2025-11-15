@@ -65,6 +65,20 @@ let m = {
             analyticsLocation: a.Z.GIFTING_PROMOTION_COACHMARK,
             analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
+        reminderNagbar: {
+            description: () => l.intl.string(l.t.veQg0t),
+            cta: () => l.intl.string(l.t.RzWDqY),
+            analyticsLocation: a.Z.SEASONAL_GIFTING_REMINDER_NAGBAR,
+            analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
+        },
+        reminderNotice: {
+            getImageUrl: (e, t) => (t ? u.Z : c.Z),
+            title: () => l.intl.string(l.t.bLOiLM),
+            description: () => l.intl.string(l.t["cE/UX7"]),
+            cta: () => l.intl.string(l.t.RzWDqY),
+            analyticsLocation: a.Z.GIFTING_PROMOTION_COACHMARK,
+            analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
+        },
         planSelection: {
             heading: () => l.intl.string(l.t.OEtqpm),
             subheading: function () {

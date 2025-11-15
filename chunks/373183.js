@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => E });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -8,85 +8,65 @@ var r = n(951288),
     c = n(28664),
     u = n(481060),
     d = n(104505),
+    p = n(335131),
     g = n(597688),
-    p = n(1870),
-    f = n(832149),
-    h = n(388032),
-    C = n(290181),
-    m = n(250967),
-    _ = n(182975),
-    b = n(655603);
-let v = l.memo(function (e) {
+    f = n(1870),
+    h = n(832149),
+    C = n(911390),
+    m = n(388032),
+    _ = n(290181),
+    b = n(250967),
+    v = n(182975),
+    x = n(655603);
+let E = l.memo(function (e) {
     let { category: t, rewardSkuId: n } = e,
         i = l.useRef(null),
-        { isHoveringOrFocusing: v } = (0, d.Z)(i),
-        x = l.useMemo(() => t.products.filter((e) => e.skuId !== n).map((e) => e.skuId), [t.products, n]),
-        E = (0, s.e7)([p.Z], () => p.Z.getPurchases(x)),
-        S = (e) => {
-            e.stopPropagation();
-            {
-                let e = g.Z.getProduct(n);
-                null != e &&
-                    (0, f.Z)({
-                        product: e,
-                        analyticsLocations: [],
-                        overrideGraphic: {
-                            type: "video",
-                            src: _.Z,
-                            fallbackImageSrc: m.Z,
-                            loop: !1,
-                            aspectRatio: "16/9",
-                        },
-                    });
-            }
-        },
-        O = l.useMemo(() => E.length === x.length, [E, x]);
-    return (0, r.jsx)(o.kL8, {
+        { isHoveringOrFocusing: E } = (0, d.Z)(i),
+        { readyToClaim: O, collectibleProductSkuIds: S, collectedSkuIds: y } = (0, C.q)(t, n),
+        j = (0, s.e7)([f.Z], () => f.Z.isClaiming === n);
+    return (0, r.jsx)("div", {
         ref: i,
-        className: a()(C.productCardContainer, { [C.hovered]: v }),
-        "aria-label": h.intl.formatToPlainString(h.t.Ez6aHE, { category: t.name }),
-        onClick: (e) => {
-            S(e);
-        },
+        className: a()(_.productCardContainer, { [_.hovered]: E }),
+        "aria-label": m.intl.formatToPlainString(m.t.Ez6aHE, { category: t.name }),
         children: (0, r.jsxs)("div", {
-            className: C.productCardContentContainer,
+            className: _.productCardContentContainer,
             children: [
                 (0, r.jsx)("div", {
-                    className: C.productPreviewContainer,
+                    className: _.productPreviewContainer,
                     children: (0, r.jsx)("img", {
                         alt: "Reward Bow",
-                        src: b.Z,
+                        src: x.Z,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: C.headerContainer,
+                    className: _.headerContainer,
                     children: (0, r.jsx)(u.IGR, {
-                        text: h.intl.string(h.t.rykAJ9),
+                        text: m.intl.string(m.t.rykAJ9),
                         disableColor: !0,
-                        className: C.unlockRewardBadge,
+                        className: _.unlockRewardBadge,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: C.footerContainer,
+                    className: _.footerContainer,
                     children: (0, r.jsxs)("div", {
-                        className: C.footerContent,
+                        className: _.footerContent,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: C.footerInfoContainer,
+                                className: _.footerInfoContainer,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: C.footerInfo,
+                                        className: _.footerInfo,
                                         children: [
                                             (0, r.jsx)(o.xvT, {
                                                 variant: "text-lg/bold",
                                                 color: "text-primary",
-                                                children: h.intl.string(h.t["0mDmg/"]),
+                                                children: m.intl.string(m.t["0mDmg/"]),
                                             }),
                                             (0, r.jsx)(c.u, {
                                                 text: O
-                                                    ? h.intl.string(h.t.cKH3tk)
-                                                    : h.intl.formatToPlainString(h.t["8aMDPc"], {
-                                                          totalCount: x.length,
+                                                    ? m.intl.string(m.t.cKH3tk)
+                                                    : m.intl.formatToPlainString(m.t["8aMDPc"], {
+                                                          totalCount: S.length,
                                                       }),
                                                 align: "right",
                                                 caretConfig: {
@@ -95,36 +75,78 @@ let v = l.memo(function (e) {
                                                 },
                                                 position: "top",
                                                 children: (0, r.jsx)("span", {
-                                                    className: C.questionIconContainer,
+                                                    className: _.questionIconContainer,
                                                     children: (0, r.jsx)(o.idN, { size: "xs" }),
                                                 }),
                                             }),
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: C.progressContainer,
+                                        className: _.progressContainer,
                                         children: (0, r.jsx)(o.xvT, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
-                                            children: h.intl.formatToPlainString(h.t["5TwASM"], {
-                                                collectedCount: E.length,
-                                                totalCount: x.length,
+                                            children: m.intl.formatToPlainString(m.t["5TwASM"], {
+                                                collectedCount: y.length,
+                                                totalCount: S.length,
                                             }),
                                         }),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: C.footerButtonContainer,
+                                className: _.footerButtonContainer,
                                 children: (0, r.jsx)(o.hE2, {
                                     wrap: !1,
                                     fullWidth: !0,
                                     children: (0, r.jsx)(o.zxk, {
                                         variant: "primary",
-                                        onClick: S,
-                                        text: h.intl.string(h.t.VnVTNc),
+                                        onClick: (e) => {
+                                            e.stopPropagation(),
+                                                O &&
+                                                    (0, p.wW)(t.skuId, n)
+                                                        .then(() => {
+                                                            let e = g.Z.getProduct(n);
+                                                            null != e &&
+                                                                (0, h.Z)({
+                                                                    product: e,
+                                                                    analyticsLocations: [],
+                                                                    overrideGraphic: {
+                                                                        type: "video",
+                                                                        src: v.Z,
+                                                                        fallbackImageSrc: b.Z,
+                                                                        loop: !1,
+                                                                        aspectRatio: "16/9",
+                                                                    },
+                                                                });
+                                                        })
+                                                        .catch(() => {
+                                                            (0, u.ZDy)(() =>
+                                                                Promise.resolve((e) =>
+                                                                    (0, r.jsx)(o.Modal, {
+                                                                        transitionState: e.transitionState,
+                                                                        onClose: e.onClose,
+                                                                        size: "sm",
+                                                                        title: m.intl.string(m.t.SRTlyA),
+                                                                        actions: [
+                                                                            {
+                                                                                text: m.intl.string(m.t.TyCVIq),
+                                                                                onClick: e.onClose,
+                                                                                variant: "primary",
+                                                                            },
+                                                                        ],
+                                                                        children: (0, r.jsx)("div", {
+                                                                            children: m.intl.string(m.t["0YpIF/"]),
+                                                                        }),
+                                                                    }),
+                                                                ),
+                                                            );
+                                                        });
+                                        },
+                                        text: m.intl.string(m.t.VnVTNc),
                                         fullWidth: !0,
                                         disabled: !O,
+                                        loading: j,
                                     }),
                                 }),
                             }),
