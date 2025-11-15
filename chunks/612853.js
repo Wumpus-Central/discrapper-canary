@@ -7,19 +7,18 @@ var i = n(120356),
     s = n(388032),
     l = n(796914),
     c = n(149715);
-function u(e) {
-    let { iconClassName: t, textClassName: n } = e;
+function u() {
     return (0, r.jsxs)("div", {
         className: a()(l.paymentModalLockIcon, c.flex, c.alignCenter),
         children: [
             (0, r.jsx)(o.mBM, {
                 size: "sm",
                 color: "currentColor",
-                className: a()(l.lockIcon, t),
+                className: l.lockIcon,
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
-                className: a()(l.lockIconText, null != n ? n : void 0),
+                className: l.lockIconText,
                 children: s.intl.string(s.t.Kv6Z4I),
             }),
         ],
