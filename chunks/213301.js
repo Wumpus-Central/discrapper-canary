@@ -7,7 +7,7 @@ e.exports = {
     footerContainer: "footerContainer_fcbddd",
     footerInfoContainer: "footerInfoContainer_fcbddd",
     footerInfoLeft: "footerInfoLeft_fcbddd",
-    priceContainer: "priceContainer_fcbddd",
+    footerInfoShrinkOnHover: "footerInfoShrinkOnHover_fcbddd",
     footerButtonContainer: "footerButtonContainer_fcbddd",
     footerButtonGroup: "footerButtonGroup_fcbddd",
     hovered: "hovered_fcbddd",

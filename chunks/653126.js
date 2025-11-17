@@ -12,8 +12,8 @@ var r = n(54381),
     g = n(297651),
     f = n(993222),
     h = n(932083),
-    C = n(719075),
-    m = n(558261),
+    m = n(719075),
+    C = n(558261),
     _ = n(311583),
     b = n(786040),
     v = n(659755),
@@ -125,9 +125,9 @@ let k = l.memo(function (e) {
                                                                         }),
                                                                     !I &&
                                                                         (0, r.jsx)("div", {
-                                                                            className: j.priceContainer,
+                                                                            className: j.footerInfoShrinkOnHover,
                                                                             "aria-hidden": !0,
-                                                                            children: (0, r.jsx)(C.Z, {
+                                                                            children: (0, r.jsx)(m.Z, {
                                                                                 skuId: t.skuId,
                                                                                 prioritizedCurrency: z,
                                                                             }),
@@ -152,7 +152,7 @@ let k = l.memo(function (e) {
                                                         fullWidth: !0,
                                                         children: [
                                                             !T &&
-                                                                (0, r.jsx)(m.Z, {
+                                                                (0, r.jsx)(C.Z, {
                                                                     skuId: t.skuId,
                                                                     cardRef: $,
                                                                     onClick: A,
