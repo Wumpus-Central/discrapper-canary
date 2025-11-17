@@ -350,17 +350,27 @@ let D = {
     },
     async oneTimeLogin(e) {
         l.Z.dispatch({ type: "LOGIN" });
-        let t = (
-            await g.Z.post({
-                url: b.ANM.ONE_TIME_LOGIN,
-                body: { ticket: e },
-                oldFormErrors: !0,
-                trackedActionData: { event: i.NetworkActionNames.USER_ONE_TIME_LOGIN },
-                rejectWithError: !0,
-            })
-        ).body.token;
-        if (!t) throw Error("No token in response");
-        return await this.loginToken(t, !1), t;
+        try {
+            let t = (
+                await g.Z.post({
+                    url: b.ANM.ONE_TIME_LOGIN,
+                    body: { ticket: e },
+                    oldFormErrors: !0,
+                    trackedActionData: { event: i.NetworkActionNames.USER_ONE_TIME_LOGIN },
+                    rejectWithError: !0,
+                })
+            ).body.token;
+            if (!t) throw Error("No token in response");
+            return await this.loginToken(t, !1), t;
+        } catch (e) {
+            throw (
+                (l.Z.dispatch({
+                    type: "LOGIN_FAILURE",
+                    error: new c.yZ(e),
+                }),
+                e)
+            );
+        }
     },
     loginReset(e) {
         l.Z.dispatch({
