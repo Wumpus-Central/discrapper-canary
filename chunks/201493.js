@@ -89,65 +89,70 @@ let v = (e) => {
                 primary_category_id: C,
             });
         }, [t.id, v.id, C]);
-    let k = (0, f.G)(t)
-            ? () => {
-                  (0, a.ZDy)(async () => {
-                      let { default: e } = await n.e("79764").then(n.bind(n, 533202));
-                      return (n) => {
-                          var i, l;
-                          return (0, r.jsx)(
-                              e,
-                              ((i = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })({}, n)),
-                              (l = l =
-                                  {
-                                      directoryGuildName: v.name,
-                                      directoryGuildId: v.id,
-                                      directoryChannelId: t.id,
-                                      currentCategoryId: C === y.AR.ALL ? null : C,
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                    }),
-                              i),
-                          );
-                      };
-                  });
-              }
-            : void 0,
-        U = (e) => {
+    let k = (0, f.G)(t),
+        U = i.useMemo(
+            () =>
+                k
+                    ? () => {
+                          (0, a.ZDy)(async () => {
+                              let { default: e } = await n.e("79764").then(n.bind(n, 533202));
+                              return (n) => {
+                                  var i, l;
+                                  return (0, r.jsx)(
+                                      e,
+                                      ((i = (function (e) {
+                                          for (var t = 1; t < arguments.length; t++) {
+                                              var n = null != arguments[t] ? arguments[t] : {},
+                                                  r = Object.keys(n);
+                                              "function" == typeof Object.getOwnPropertySymbols &&
+                                                  (r = r.concat(
+                                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                      }),
+                                                  )),
+                                                  r.forEach(function (t) {
+                                                      var r;
+                                                      (r = n[t]),
+                                                          t in e
+                                                              ? Object.defineProperty(e, t, {
+                                                                    value: r,
+                                                                    enumerable: !0,
+                                                                    configurable: !0,
+                                                                    writable: !0,
+                                                                })
+                                                              : (e[t] = r);
+                                                  });
+                                          }
+                                          return e;
+                                      })({}, n)),
+                                      (l = l =
+                                          {
+                                              directoryGuildName: v.name,
+                                              directoryGuildId: v.id,
+                                              directoryChannelId: t.id,
+                                              currentCategoryId: C === y.AR.ALL ? null : C,
+                                          }),
+                                      Object.getOwnPropertyDescriptors
+                                          ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                          : (function (e, t) {
+                                                var n = Object.keys(e);
+                                                if (Object.getOwnPropertySymbols) {
+                                                    var r = Object.getOwnPropertySymbols(e);
+                                                    n.push.apply(n, r);
+                                                }
+                                                return n;
+                                            })(Object(l)).forEach(function (e) {
+                                                Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                            }),
+                                      i),
+                                  );
+                              };
+                          });
+                      }
+                    : void 0,
+            [k, v.name, v.id, t.id, C],
+        ),
+        G = (e) => {
             0 !== w.trim().length &&
                 e.key === j.vn.ENTER &&
                 (u.Rq(t.id, w),
@@ -156,7 +161,7 @@ let v = (e) => {
                     directory_guild_id: v.id,
                 }));
         },
-        G = () => {
+        H = () => {
             A(""), u.So(t.id);
         };
     return D
@@ -164,9 +169,9 @@ let v = (e) => {
               searchQuery: w,
               setSearchQuery: A,
               mostRecentQuery: T,
-              handleSearchKeyPress: U,
-              handleClearSearch: G,
-              handleCreateOrAddGuild: k,
+              handleSearchKeyPress: G,
+              handleClearSearch: H,
+              handleCreateOrAddGuild: U,
               searchResults: R,
               searchFetching: N,
           })
@@ -180,16 +185,16 @@ let v = (e) => {
                   className: x.pageContainer,
                   children: (0, r.jsx)(g.Z, {
                       guild: v,
-                      onAddGuild: k,
+                      onAddGuild: U,
                   }),
               })
             : (0, r.jsx)(m.Z, {
                   channel: t,
                   searchQuery: w,
                   setSearchQuery: A,
-                  handleSearchKeyPress: U,
-                  handleClearSearch: G,
-                  handleCreateOrAddGuild: k,
+                  handleSearchKeyPress: G,
+                  handleClearSearch: H,
+                  handleCreateOrAddGuild: U,
                   currentCategoryId: C,
                   handleSelectCategory: (e) => {
                       u.Su(t.id, e);

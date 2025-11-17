@@ -71,7 +71,7 @@ function Z(e, t) {
         e
     );
 }
-let P = (e) => {
+let P = i.memo(function (e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
@@ -89,7 +89,7 @@ let P = (e) => {
             }),
         ],
     });
-};
+});
 function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
@@ -173,7 +173,7 @@ function T(e) {
         }),
     });
 }
-let N = (e) => {
+let N = i.memo(function (e) {
     var t;
     let { entry: l } = e,
         [a, o] = i.useState(!1),
@@ -318,4 +318,4 @@ let N = (e) => {
             ],
         })
     );
-};
+});
