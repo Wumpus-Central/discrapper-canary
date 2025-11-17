@@ -11,5 +11,11 @@ let a = {
             id: "cancellation-flow",
             controls: {},
         },
+        {
+            name: "Expressive Progress",
+            component: n(427730).Z,
+            id: "expressive-progress",
+            controls: {},
+        },
     ],
 };
