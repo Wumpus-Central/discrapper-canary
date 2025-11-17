@@ -5,7 +5,6 @@ e.exports = {
     slotsWide: "slotsWide__0800c",
     slot: "slot__0800c",
     emoji: "emoji__0800c",
-    tooltipContainer: "tooltipContainer__0800c",
     emojiItemDisabled: "emojiItemDisabled__0800c",
     animatedPicker: "animatedPicker__0800c",
     animatedPickerTall: "animatedPickerTall__0800c",

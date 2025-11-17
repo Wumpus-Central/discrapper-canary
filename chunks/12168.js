@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => w,
-    u: () => P,
+    Z: () => x,
+    u: () => D,
 }),
     n(388685);
 var r = n(951288),
@@ -8,23 +8,24 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(509442),
-    c = n(481060),
-    u = n(596454),
-    d = n(313201),
-    f = n(104505),
-    _ = n(543241),
-    p = n(318766),
-    h = n(907040),
-    m = n(633302),
-    g = n(806966),
-    E = n(176354),
-    b = n(823379),
-    y = n(354459),
-    O = n(185923),
-    v = n(295907),
-    I = n(339051);
-function T(e, t, n) {
+    l = n(442748),
+    c = n(681715),
+    u = n(481060),
+    d = n(596454),
+    f = n(313201),
+    _ = n(104505),
+    p = n(543241),
+    h = n(318766),
+    m = n(907040),
+    g = n(633302),
+    E = n(806966),
+    b = n(176354),
+    y = n(823379),
+    O = n(354459),
+    v = n(185923),
+    I = n(295907),
+    T = n(339051);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +38,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +49,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,47 +66,47 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let N = O.Hz.CHAT,
-    R = [
-        m.ZP.getByName("thumbsup"),
-        m.ZP.getByName("eyes"),
-        m.ZP.getByName("laughing"),
-        m.ZP.getByName("watermelon"),
-        m.ZP.getByName("fork_and_knife"),
-        m.ZP.getByName("yum"),
-    ].filter(b.lm);
-function P(e) {
+let R = v.Hz.CHAT,
+    P = [
+        g.ZP.getByName("thumbsup"),
+        g.ZP.getByName("eyes"),
+        g.ZP.getByName("laughing"),
+        g.ZP.getByName("watermelon"),
+        g.ZP.getByName("fork_and_knife"),
+        g.ZP.getByName("yum"),
+    ].filter(y.lm);
+function D(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
-        d = i.useRef(null),
-        _ = (0, f.X)(d);
+        c = i.useRef(null),
+        f = (0, _.X)(c);
     return (0, r.jsx)("span", {
-        ref: d,
-        children: (0, r.jsx)(c.P3F, {
+        ref: c,
+        children: (0, r.jsx)(u.P3F, {
             onClick: a,
             focusProps: { enabled: !n },
-            children: (0, r.jsx)(c.AMe, {
-                config: p.u,
+            children: (0, r.jsx)(u.AMe, {
+                config: h.u,
                 from: { value: 0 },
-                to: { value: +!!_ },
+                to: { value: +!!f },
                 children: (e) => {
                     let { value: i } = e;
                     return (0, r.jsx)(l.animated.div, {
                         style: {
                             transform: i.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                         },
-                        children: (0, r.jsx)(u.Z, {
-                            className: o()(I.emoji, s, { [I.emojiItemDisabled]: n }),
+                        children: (0, r.jsx)(d.Z, {
+                            className: o()(T.emoji, s, { [T.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated,
@@ -116,127 +117,125 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            (0, r.jsx)(c.P3F, {
-                className: I.dropDownContainer,
+            (0, r.jsx)(u.P3F, {
+                className: T.dropDownContainer,
                 onClick: () => {
                     i(!n), a();
                 },
-                children: (0, r.jsx)(c.CJ0, {
+                children: (0, r.jsx)(u.CJ0, {
                     size: "md",
                     color: "currentColor",
-                    className: o()(I.dropDown, { [I.dropDownOpen]: n }),
+                    className: o()(T.dropDown, { [T.dropDownOpen]: n }),
                 }),
             }),
         ],
     });
 }
-function w(e) {
+function x(e) {
     let {
             channel: t,
             title: n,
             closePopout: a,
             onFocus: l,
-            onSelectEmoji: u,
-            onSelectDisabledEmoji: f,
-            onExpandedToggle: p,
-            emojiSearchProps: m,
-            recentlyUsedEmojis: b,
-            analyticsOverride: T,
-            ref: A,
+            onSelectEmoji: d,
+            onSelectDisabledEmoji: _,
+            onExpandedToggle: h,
+            emojiSearchProps: g,
+            recentlyUsedEmojis: y,
+            analyticsOverride: S,
+            ref: C,
         } = e,
-        w = (0, d.Dt)(),
-        [x, L] = i.useState(!1),
-        M = (0, _.wC)(t.guild_id),
-        j = (0, s.uniqBy)([...M, ...R], "name")
+        x = (0, f.Dt)(),
+        [L, M] = i.useState(!1),
+        k = (0, p.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...k, ...P], "name")
             .filter(
                 (e) =>
-                    !E.ZP.isEmojiFilteredOrLocked({
+                    !b.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
-                        intention: N,
+                        intention: R,
                     }),
             )
-            .slice(0, y.e5);
-    null != b && b.length > 0 && j.splice(j.length - 1, 1, b[0]);
-    let k = (e) => {
-            L(e), null == p || p(e);
-        },
-        U = (e) => {
-            let { emoji: t, willClose: n } = e;
-            if (null == t && n) return void a();
-            null != t && u(t), k(!n), n && g.kJ.setSearchPlaceholder(null);
+            .slice(0, O.e5);
+    null != y && y.length > 0 && j.splice(j.length - 1, 1, y[0]);
+    let U = (e) => {
+            M(e), null == h || h(e);
         },
         G = (e) => {
-            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? k(!0) : k(!x));
+            let { emoji: t, willClose: n } = e;
+            if (null == t && n) return void a();
+            null != t && d(t), U(!n), n && E.kJ.setSearchPlaceholder(null);
+        },
+        B = (e) => {
+            null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? U(!0) : U(!L));
         };
-    return (0, r.jsxs)(c.VqE, {
-        "aria-labelledby": w,
-        ref: A,
+    return (0, r.jsxs)(u.VqE, {
+        "aria-labelledby": x,
+        ref: C,
         children: [
-            (0, r.jsx)(c.y5t, {
+            (0, r.jsx)(u.y5t, {
                 forceLevel: 2,
-                children: (0, r.jsx)(c.nn4, {
-                    children: (0, r.jsx)(c.H, {
-                        id: w,
+                children: (0, r.jsx)(u.nn4, {
+                    children: (0, r.jsx)(u.H, {
+                        id: x,
                         children: n,
                     }),
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: I.container,
+                className: T.container,
                 children: [
-                    (0, r.jsx)(h.Z, {
-                        analyticsOverride: T,
+                    (0, r.jsx)(m.Z, {
+                        analyticsOverride: S,
                         channel: t,
-                        className: o()(I.animatedPicker, { [I.animatedPickerTall]: x }),
-                        headerClassName: o()(I.emojiPickerHeader, { [I.emojiPickerHeaderExpanded]: x }),
+                        className: o()(T.animatedPicker, { [T.animatedPickerTall]: L }),
+                        headerClassName: o()(T.emojiPickerHeader, { [T.emojiPickerHeaderExpanded]: L }),
                         closePopout: a,
-                        onSelectEmoji: x ? U : () => {},
-                        shouldHidePickerActions: !x,
+                        onSelectEmoji: L ? G : () => {},
+                        shouldHidePickerActions: !L,
                         wrapper: "div",
-                        pickerIntention: N,
-                        searchProps: C(S({}, m), {
-                            accessory: (0, r.jsx)(D, {
-                                otherAccessories: null == m ? void 0 : m.accessory,
-                                isEmojiPickerExpanded: x,
-                                onSetExpanded: k,
+                        pickerIntention: R,
+                        searchProps: N(A({}, g), {
+                            accessory: (0, r.jsx)(w, {
+                                otherAccessories: null == g ? void 0 : g.accessory,
+                                isEmojiPickerExpanded: L,
+                                onSetExpanded: U,
                                 onFocus: l,
                             }),
-                            onKeyDown: G,
+                            onKeyDown: B,
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: I.slotsContainer,
+                        className: T.slotsContainer,
                         children: (0, r.jsx)("div", {
-                            className: o()(I.slots, I.slotsWide),
+                            className: o()(T.slots, T.slotsWide),
                             children: j.map((e) => {
-                                let n = E.ZP.isEmojiDisabled({
+                                let n = b.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
-                                    intention: O.Hz.CHAT,
+                                    intention: v.Hz.CHAT,
                                 });
                                 return (0, r.jsx)(
                                     "div",
                                     {
-                                        className: I.slot,
-                                        children: (0, r.jsx)(c.jSM, {
+                                        className: T.slot,
+                                        children: (0, r.jsx)(c.u, {
                                             text: e.name,
                                             position: "top",
-                                            "aria-label": e.name,
-                                            tooltipClassName: I.tooltipContainer,
-                                            color: c.aML.Colors.BRAND,
-                                            children: (0, r.jsx)(P, {
+                                            asContainer: !0,
+                                            children: (0, r.jsx)(D, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
                                                     n
-                                                        ? null == f || f(e)
-                                                        : U({
+                                                        ? null == _ || _(e)
+                                                        : G({
                                                               emoji: e,
                                                               willClose: !0,
                                                           });

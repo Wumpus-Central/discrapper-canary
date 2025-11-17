@@ -10,8 +10,8 @@ var i = n(399606),
     u = n(699516),
     d = n(594174),
     p = n(51144),
-    h = n(984370),
-    f = n(388032),
+    f = n(984370),
+    h = n(388032),
     g = n(97009);
 function m(e) {
     let t = e.channel.getRecipientId(),
@@ -25,7 +25,7 @@ function m(e) {
         j = (0, s.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.nn4, { children: f.intl.string(f.t.EJRzg7) }),
+            (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.EJRzg7) }),
             null != m &&
                 !n &&
                 (0, r.jsx)("div", {
@@ -38,25 +38,27 @@ function m(e) {
                         src: m.getAvatarURL(void 0, 20),
                     }),
                 }),
-            (0, r.jsx)(h.Z.Title, {
+            (0, r.jsx)(f.Z.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
                 className: null != e.handleClick ? g.cursorPointer : null,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(o.jSM, {
+                        (0, r.jsx)(l.u, {
                             text: O,
                             position: "bottom",
-                            className: v,
-                            children: null != y ? y : p.ZP.getName(m),
+                            children: (0, r.jsx)("span", {
+                                className: v,
+                                children: null != y ? y : p.ZP.getName(m),
+                            }),
                         }),
                         j &&
                             (0, r.jsx)(l.u, {
-                                text: f.intl.string(f.t.QyZ4Td),
+                                text: h.intl.string(h.t.QyZ4Td),
                                 children: (0, r.jsx)(o.tQf, {
                                     size: "xs",
-                                    "aria-label": f.intl.string(f.t.VHXh8a),
+                                    "aria-label": h.intl.string(h.t.VHXh8a),
                                     color: o.TVs.colors.INTERACTIVE_NORMAL,
                                     className: g.secureFramesIcon,
                                 }),

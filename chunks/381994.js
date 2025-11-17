@@ -8,9 +8,4 @@ e.exports = {
     selectorNitroText: "selectorNitroText_c6d3dc",
     enhancedSelectorNitroText: "enhancedSelectorNitroText_c6d3dc",
     qualitySettingsContainer: "qualitySettingsContainer_c6d3dc",
-    toolTipTextContainer: "toolTipTextContainer_c6d3dc",
-    upsellText: "upsellText_c6d3dc",
-    tooltip: "tooltip_c6d3dc",
-    logoPrimary: "logoPrimary_c6d3dc",
-    premiumIcon: "premiumIcon_c6d3dc logoPrimary_c6d3dc",
 };
