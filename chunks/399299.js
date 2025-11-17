@@ -9,16 +9,16 @@ var l = t(54381),
     u = t(605436),
     d = t(600164),
     m = t(594190),
-    x = t(925329),
-    g = t(565138),
+    g = t(925329),
+    x = t(565138),
     h = t(695346),
     j = t(592125),
     v = t(650774),
     p = t(430824),
     f = t(131951),
     Z = t(944486),
-    S = t(594174),
-    N = t(449224),
+    N = t(594174),
+    S = t(449224),
     b = t(626135),
     C = t(823379),
     P = t(63063),
@@ -39,15 +39,15 @@ var l = t(54381),
     B = t(542257);
 function G(e) {
     let { selectedSource: n, selectSource: t, sourceChanged: r, onChangeSource: i } = e,
-        s = (0, a.e7)([m.ZP, N.Z], () => ((0, T.isWindows)() ? (0, O.Z)(m.ZP, N.Z) : null)),
+        s = (0, a.e7)([m.ZP, S.Z], () => ((0, T.isWindows)() ? (0, O.Z)(m.ZP, S.Z) : null)),
         u = (0, a.e7)([o.Z], () => ((null == s ? void 0 : s.id) != null ? o.Z.getApplication(s.id) : null)),
         d = (0, a.e7)([m.ZP], () => m.ZP.getRunningGames()),
-        g = (0, a.Wu)([o.Z], () => d.map((e) => (null != e.id ? o.Z.getApplication(e.id) : null)).filter(C.lm), [d]),
+        x = (0, a.Wu)([o.Z], () => d.map((e) => (null != e.id ? o.Z.getApplication(e.id) : null)).filter(C.lm), [d]),
         h = null;
     if ((null != n ? (h = n.name) : null != s && (h = s.name), null == h)) return null;
     let j = (0, U.Z)(s, n, d),
         v = r
-            ? g.find((e) => {
+            ? x.find((e) => {
                   let { id: n } = e;
                   return n === (null == j ? void 0 : j.id);
               })
@@ -60,9 +60,9 @@ function G(e) {
             children: (0, l.jsxs)(R.Z, {
                 children: [
                     null != v
-                        ? (0, l.jsx)(x.Z, {
+                        ? (0, l.jsx)(g.Z, {
                               game: v,
-                              size: x.A.XSMALL,
+                              size: g.A.XSMALL,
                               className: L.selectedIcon,
                           })
                         : (0, l.jsx)(p, { className: L.selectedIcon }),
@@ -97,9 +97,9 @@ function z(e) {
                   label: M.intl.string(M.t.WC3u3n),
                   children: (0, l.jsxs)(R.Z, {
                       children: [
-                          (0, l.jsx)(g.Z, {
+                          (0, l.jsx)(x.Z, {
                               guild: r,
-                              size: g.Z.Sizes.SMALLER,
+                              size: x.Z.Sizes.SMALLER,
                               className: L.selectedIcon,
                           }),
                           (0, l.jsx)("span", {
@@ -207,12 +207,12 @@ function X(e) {
             sourceChanged: o,
             selectedGuildId: d,
             targetGuildPremiumTier: m,
-            selectSource: x,
-            selectGuild: g,
+            selectSource: g,
+            selectGuild: x,
             sound: h,
             previewDisabled: v,
             onClose: p,
-            onChangeSelectedFPS: N,
+            onChangeSelectedFPS: S,
             onChangeSelectedResolution: b,
             onChangeSelectedPreset: C,
             onChangeSelectedChannelId: T,
@@ -222,19 +222,19 @@ function X(e) {
             onChangeSound: _,
             onChangePreviewDisabled: L,
         } = e,
-        B = (0, a.e7)([Z.Z, j.Z], () => j.Z.getChannel(Z.Z.getVoiceChannelId())),
-        X = (0, a.e7)([y.Z], () => y.Z.GPUDriversOutdated),
-        Y = (0, a.e7)([y.Z], () => y.Z.problematicGPUDriver),
-        q = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
-        K = (0, E.Z)();
-    null != n && n.id.startsWith("screen") && !f.Z.supportsScreenSoundshare() && (K = M.intl.string(M.t["1b0Gm7"]));
-    let J = !!(null == n ? void 0 : n.id.startsWith("camera")),
-        Q = null != q && q.verified && !q.bot,
-        $ = null != B && !(0, u.Yk)(B);
+        X = (0, a.e7)([Z.Z, j.Z], () => j.Z.getChannel(Z.Z.getVoiceChannelId())),
+        Y = (0, a.e7)([y.Z], () => y.Z.GPUDriversOutdated),
+        q = (0, a.e7)([y.Z], () => y.Z.problematicGPUDriver),
+        K = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
+        J = (0, E.Z)();
+    null != n && n.id.startsWith("screen") && !f.Z.supportsScreenSoundshare() && (J = M.intl.string(M.t["1b0Gm7"]));
+    let Q = !!(null == n ? void 0 : n.id.startsWith("camera")),
+        $ = null != K && K.verified && !K.bot,
+        ee = null != X && !(0, u.Yk)(X);
     return (0, l.jsxs)(r.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                children: J
+                children: Q
                     ? (0, l.jsx)(I.Z, {
                           selectedSource: n,
                           onChangeVideoDeviceSource: O,
@@ -243,13 +243,13 @@ function X(e) {
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(G, {
-                                  selectSource: x,
+                                  selectSource: g,
                                   sourceChanged: o,
                                   onChangeSource: O,
                                   selectedSource: n,
                               }),
-                              null != K ? (0, l.jsx)(F, { text: K }) : null,
-                              null != n && null == K
+                              null != J ? (0, l.jsx)(F, { text: J }) : null,
+                              null != n && null == J
                                   ? (0, l.jsx)(V, {
                                         enabled: h,
                                         onChange: _,
@@ -259,7 +259,7 @@ function X(e) {
                           ],
                       }),
             }),
-            g && null != d
+            x && null != d
                 ? (0, l.jsx)("div", {
                       children: (0, l.jsx)(z, {
                           guildId: d,
@@ -269,16 +269,19 @@ function X(e) {
                 : null,
             (0, l.jsxs)("div", {
                 children: [
-                    null != B
-                        ? (0, l.jsx)(A.Z, { channel: B })
-                        : (0, l.jsx)(k.Z, {
-                              guildId: d,
-                              selectedChannelId: i,
-                              onChangeSelectedChannelId: T,
+                    null != X
+                        ? (0, l.jsx)(A.Z, { channel: X })
+                        : (0, l.jsx)("div", {
+                              className: B.modalContent,
+                              children: (0, l.jsx)(k.Z, {
+                                  guildId: d,
+                                  selectedChannelId: i,
+                                  onChangeSelectedChannelId: T,
+                              }),
                           }),
-                    null != d && Q && $ ? (0, l.jsx)(W, { guildId: d }) : null,
-                    X ? (0, l.jsx)(F, { text: M.intl.string(M.t.q65tSw) }) : null,
-                    Y
+                    null != d && $ && ee ? (0, l.jsx)(W, { guildId: d }) : null,
+                    Y ? (0, l.jsx)(F, { text: M.intl.string(M.t.q65tSw) }) : null,
+                    q
                         ? (0, l.jsx)(F, {
                               text: M.intl.format(M.t.RrLvuT, {
                                   helpCenterLink: P.Z.getArticleURL(w.BhN.NVIDIA_DRIVER_ISSUES),
@@ -293,10 +296,10 @@ function X(e) {
                 selectedResolution: c,
                 targetGuildPremiumTier: m,
                 onClose: p,
-                onFPSChange: N,
+                onFPSChange: S,
                 onResolutionChange: b,
                 onPresetChange: C,
-                captureDeviceSelected: J,
+                captureDeviceSelected: Q,
             }),
             (0, l.jsx)(H, {
                 enabled: v,

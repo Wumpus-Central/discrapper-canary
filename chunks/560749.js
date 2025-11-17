@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(35282), n(539854), n(388685), n(387201), n(642613);
+n.d(t, { Z: () => T }), n(35282), n(539854), n(388685), n(387201), n(642613);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -17,39 +17,39 @@ var r = n(54381),
     x = n(984933),
     v = n(430824),
     j = n(496675),
-    b = n(914010),
-    S = n(594174),
+    S = n(914010),
+    b = n(594174),
     y = n(938475),
     C = n(823379),
     O = n(102172),
     w = n(981631),
     P = n(604415),
-    T = n(388032),
-    Z = n(603410);
-function I(e) {
+    Z = n(388032),
+    I = n(603410);
+function E(e) {
     let { result: t, onSelectChannel: n } = e,
         i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, o.Wu)([y.ZP, S.default], () =>
+        l = (0, o.Wu)([y.ZP, b.default], () =>
             y.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => S.default.getUser(e.user.id))
+                .map((e) => b.default.getUser(e.user.id))
                 .filter(C.lm),
         );
     return (0, r.jsxs)(c.P3F, {
-        className: Z.channelResult,
+        className: I.channelResult,
         onClick: () => n(t.record.id),
         children: [
             (0, r.jsxs)("div", {
-                className: Z.channelResultInfo,
+                className: I.channelResultInfo,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
                         src: null != i ? (0, m.EB)(i, 32) : void 0,
-                        className: Z.guildIcon,
+                        className: I.guildIcon,
                     }),
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(c.Text, {
-                                className: Z.channelName,
+                                className: I.channelName,
                                 variant: "text-md/medium",
                                 color: "interactive-normal",
                                 children: [
@@ -78,12 +78,12 @@ function I(e) {
         ],
     });
 }
-function E(e) {
+function T(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: a, results: m } = (0, p.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        S = (0, o.Wu)([b.Z, x.ZP, _.Z, v.Z, j.Z], () => {
+        b = (0, o.Wu)([S.Z, x.ZP, _.Z, v.Z, j.Z], () => {
             let e = [],
-                t = b.Z.getGuildId();
+                t = S.Z.getGuildId();
             if (null == t) return e;
             for (let n of x.ZP.getVocalChannelIds(t)) {
                 let t = _.Z.getChannel(n);
@@ -108,11 +108,12 @@ function E(e) {
                     (t.add(n.id), e.push(n));
             return e;
         }),
-        E = i.useMemo(() => {
+        T = i.useMemo(() => {
             let e = new Set(y.map((e) => e.id)),
-                t = new Set(S.map((e) => e.id));
+                t = new Set(b.map((e) => e.id));
             return [
-                ...S.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
+                ...b
+                    .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, u.Z)(e.id))
                     .filter(C.lm),
                 ...y
@@ -120,15 +121,15 @@ function E(e) {
                     .map((e) => (0, u.Z)(e.id))
                     .filter(C.lm),
             ];
-        }, [y, S]),
-        R = "" !== a ? m : E;
+        }, [y, b]),
+        A = "" !== a ? m : T;
     return (0, r.jsxs)("div", {
-        className: s()(Z.root, n),
+        className: s()(I.root, n),
         children: [
             (0, r.jsx)("div", {
-                className: Z.searchBar,
+                className: I.searchBar,
                 children: (0, r.jsx)(c.E1j, {
-                    placeholder: T.intl.string(T.t["3jvv+6"]),
+                    placeholder: Z.intl.string(Z.t["3jvv+6"]),
                     query: a,
                     onChange: (e) =>
                         l({
@@ -143,23 +144,23 @@ function E(e) {
                     autoFocus: !0,
                 }),
             }),
-            R.length > 0
+            A.length > 0
                 ? (0, r.jsx)(c.aVo, {
                       renderListHeader: function () {
                           return (0, r.jsx)(c.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: T.intl.string(P.default.FZ9Fl7),
+                              children: Z.intl.string(P.default.FZ9Fl7),
                           });
                       },
-                      sections: [R.length],
+                      sections: [A.length],
                       sectionHeight: 0,
                       rowHeight: 48,
                       renderRow: function (e) {
                           let { rowIndex: n } = e,
-                              i = R[n];
+                              i = A[n];
                           return (0, r.jsx)(
-                              I,
+                              E,
                               {
                                   result: i,
                                   onSelectChannel: t,
@@ -174,23 +175,23 @@ function E(e) {
 }
 function N() {
     return (0, r.jsxs)("div", {
-        className: Z.emptyState,
+        className: I.emptyState,
         children: [
             (0, r.jsx)(c._Ve, {
-                className: Z.emptyIcon,
+                className: I.emptyIcon,
                 size: "md",
                 color: c.TVs.colors.ICON_MUTED,
             }),
             (0, r.jsx)(c.Text, {
-                className: Z.emptyHeader,
+                className: I.emptyHeader,
                 variant: "text-lg/medium",
                 color: "header-primary",
-                children: T.intl.string(P.default.sWGfr9),
+                children: Z.intl.string(P.default.sWGfr9),
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                children: T.intl.string(P.default["nBRtt/"]),
+                children: Z.intl.string(P.default["nBRtt/"]),
             }),
         ],
     });

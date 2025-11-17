@@ -10,8 +10,8 @@ var r = t(442837),
     u = t(938475),
     d = t(102172),
     m = t(499596),
-    x = t(148381),
-    g = t(388032),
+    g = t(148381),
+    x = t(388032),
     h = t(376681);
 function j(e) {
     let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: j } = e,
@@ -40,10 +40,11 @@ function j(e) {
                 value: e.id,
             };
         });
-    return (0, l.jsx)(x.Z, {
-        title: g.intl.string(g.t["eg7R/k"]),
+    return (0, l.jsx)(g.Z, {
+        title: x.intl.string(x.t["eg7R/k"]),
         scrollerInnerClassName: h.channelSelectScrollerInner,
         children: (0, l.jsx)(i.Gu, {
+            "data-migration-pending": !0,
             options: Z,
             value: n,
             itemInfoClassName: h.channelInfoWrapper,
