@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(100527),
@@ -13,18 +13,17 @@ var i = n(100527),
     _ = n(186934),
     p = n(520384),
     h = n(154784),
-    m = n(267006),
-    g = n(726985),
-    E = n(65154),
-    b = n(388032);
-function y() {
-    let e = o.Z.supports(E.AN.SIDECHAIN_COMPRESSION),
+    m = n(726985),
+    g = n(65154),
+    E = n(388032);
+function b() {
+    let e = o.Z.supports(g.AN.SIDECHAIN_COMPRESSION),
         { analyticsLocations: t } = (0, a.ZP)([i.Z.USER_SETTINGS_VIDEO_TAB]);
     return (0, r.jsxs)(a.Gt, {
         value: t,
         children: [
             (0, r.jsxs)(s.Z, {
-                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO,
+                webSetting: m.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
                     (0, r.jsxs)(l.Z, {
                         children: [(0, r.jsx)(c.Z, {}), (0, r.jsx)(u.Z, {}), (0, r.jsx)(d.Z, {})],
@@ -33,16 +32,11 @@ function y() {
                 ],
             }),
             (0, r.jsx)(s.Z, {
-                title: b.intl.string(b.t.KDdjou),
-                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+                title: E.intl.string(E.t.KDdjou),
+                webSetting: m.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, r.jsxs)(l.Z, {
                     children: [(0, r.jsx)(p.Z, {}), e && (0, r.jsx)(_.Z, {}), (0, r.jsx)(f.Z, {})],
                 }),
-            }),
-            (0, r.jsx)(s.Z, {
-                title: b.intl.string(b.t["8/udY0"]),
-                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
-                children: (0, r.jsx)(l.Z, { children: (0, r.jsx)(m.Z, {}) }),
             }),
         ],
     });

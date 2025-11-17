@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(600164),
     L = n(266454),
     M = n(749277),
-    j = n(196068),
-    k = n(132144),
+    k = n(196068),
+    j = n(132144),
     U = n(131130),
     G = n(458725),
     B = n(492435),
@@ -159,7 +159,7 @@ let eM = (e) => {
               })
             : s;
     },
-    ej = () =>
+    ek = () =>
         (0, r.jsxs)(f.qXd, {
             color: f.DM8.DANGER,
             children: [
@@ -176,10 +176,10 @@ let eM = (e) => {
                 }),
             ],
         }),
-    ek = "ms-settings:sound-properties";
+    ej = "ms-settings:sound-properties";
 function eU(e) {
     return (0, eI.isWindows)() && c().satisfies(null === C.Z || void 0 === C.Z ? void 0 : C.Z.os.release, eS.lb)
-        ? "".concat(ek, "?endpointId=").concat(e)
+        ? "".concat(ej, "?endpointId=").concat(e)
         : "ms-settings:sound";
 }
 let eG = (e) => {
@@ -296,7 +296,7 @@ let eW = i.memo(function () {
     let ef = (0, $.p6)(eN.h7.AUDIO_INPUT),
         [eO, eS] = i.useState(""),
         [eD, ex] = i.useState(null),
-        [eM, ek] = i.useState(null);
+        [eM, ej] = i.useState(null);
     i.useEffect(() => {
         if ((0, eI.isWindows)() && G) {
             let i = (0, d.zS)();
@@ -304,7 +304,7 @@ let eW = i.memo(function () {
                 var e, t, n, r;
                 eS(ef.guid),
                     null == (t = i.getDeviceOSMuted) || null == (e = t.call(i, ef.guid)) || e.then((e) => ex(e)),
-                    null == (r = i.getDeviceOSVolume) || null == (n = r.call(i, ef.guid)) || n.then((e) => ek(e));
+                    null == (r = i.getDeviceOSVolume) || null == (n = r.call(i, ef.guid)) || n.then((e) => ej(e));
             }
         }
     }, [G, ef.guid]);
@@ -314,7 +314,7 @@ let eW = i.memo(function () {
         ez = eY(C);
     if (null == c) return null;
     if (null != eU)
-        return (0, r.jsx)(k.W, {
+        return (0, r.jsx)(j.W, {
             dismissibleContent: eU,
             noticeType: c.type,
         });
@@ -323,7 +323,7 @@ let eW = i.memo(function () {
             dismissibleContent: eW,
             noticeType: c.type,
         });
-    if (null != eK) return (0, r.jsx)(j.c, { dismissibleContent: eK });
+    if (null != eK) return (0, r.jsx)(k.c, { dismissibleContent: eK });
     if (null != ez)
         return (0, r.jsx)(M.A, {
             dismissibleContent: ez,
@@ -538,7 +538,7 @@ let eW = i.memo(function () {
             if (!ep.Z.supports(eN.AN.LOOPBACK)) return (0, r.jsx)(eZ, {});
             return (0, r.jsx)(eF, {});
         case eT.kVF.NO_INPUT_DEVICES_DETECTED:
-            return (0, r.jsx)(ej, {});
+            return (0, r.jsx)(ek, {});
         case eT.kVF.HARDWARE_MUTE:
             if (null == c.metadata) return null;
             let { vendor: e1, model: e2 } = c.metadata;
@@ -575,24 +575,6 @@ let eW = i.memo(function () {
                         onClick: () => v.Z.setEnabled(!1),
                         noticeType: eT.kVF.STREAMER_MODE,
                         children: eR.intl.string(eR.t.R9GHya),
-                    }),
-                ],
-            });
-        case eT.kVF.H264_DISABLED:
-            return (0, r.jsxs)(f.qXd, {
-                color: f.DM8.DANGER,
-                children: [
-                    (0, r.jsx)(f.RyX, {
-                        onClick: () => {
-                            eH();
-                        },
-                    }),
-                    eR.intl.string(eR.t.HcErZT),
-                    (0, r.jsx)(f.EyT, {
-                        onClick: () => {
-                            (0, ed.openUserSettings)(eu.n.VOICE_AND_VIDEO_PANEL, { section: eT.oAB.VOICE });
-                        },
-                        children: eR.intl.string(eR.t["51hI/g"]),
                     }),
                 ],
             });

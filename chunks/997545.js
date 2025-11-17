@@ -607,16 +607,6 @@ class x extends _.Z {
             this.emit(m.Sh.VoiceFilterChanged, e),
             (0, b.zS)().setTransportOptions({ voiceFilters: null != this.voiceFilterId });
     }
-    setExperimentalEncoders(e) {
-        (this.experimentalEncoders = e),
-            this.conn.setTransportOptions({ experimentalEncoders: this.experimentalEncoders });
-    }
-    setHardwareH264(e) {
-        (this.hardwareH264 = e), this.conn.setTransportOptions({ hardwareH264: this.hardwareH264 });
-    }
-    setSoftwareH264(e) {
-        (this.softwareH264 = e), this.conn.setTransportOptions({ softwareH264: this.softwareH264 });
-    }
     setQoS(e) {
         (this.qos = e), this.conn.setTransportOptions({ qos: this.qos });
     }
@@ -966,7 +956,6 @@ class x extends _.Z {
                 "level-asymmetry-allowed": "1",
                 "packetization-mode": "1",
                 "profile-level-id": "android" === (0, b.zS)().platform ? t : e,
-                "software-h264": this.softwareH264 ? "1" : "0",
             };
         }
     }
@@ -1014,17 +1003,15 @@ class x extends _.Z {
                 this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params["fallback-after-errors"] = "3"),
                 this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) &&
                     (n.params["fallback-on-consecutive-errors"] = "1"),
-                this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params["hardware-av1-decode"] = "1");
-            let r = this.hardwareH264 && this.useElectronVideo ? "1" : "0";
-            (n.params["hardware-h264"] = r),
+                this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params["hardware-av1-decode"] = "1"),
+                (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
                 c.push(n),
                 o.name === t &&
                     ((u = A(T({}, n), { params: this.getCodecParams(o.name, !1) })),
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(O.V8.LOW_LATENCY_RATE_CONTROL) &&
-                        (u.params["low-latency-rate-control"] = "1"),
-                    (u.params["hardware-h264"] = r));
+                        (u.params["low-latency-rate-control"] = "1"));
         }
         return {
             videoEncoder: u,
@@ -1060,9 +1047,6 @@ class x extends _.Z {
                 callMinBitRate: v.mN,
                 callMaxBitRate: v.mC,
                 encodingVideoDegradationPreference: this.videoDegradationPreference,
-                experimentalEncoders: this.experimentalEncoders,
-                hardwareH264: this.hardwareH264,
-                softwareH264: this.softwareH264,
                 reconnectInterval: this.reconnectInterval,
             },
         );
@@ -1173,9 +1157,6 @@ class x extends _.Z {
             I(this, "noiseCancellationAfterProcessing", !1),
             I(this, "vadAfterWebrtc", !1),
             I(this, "voiceFilterId", null),
-            I(this, "experimentalEncoders", !1),
-            I(this, "hardwareH264", !0),
-            I(this, "softwareH264", !0),
             I(this, "attenuationFactor", 0.5),
             I(this, "attenuateWhileSpeakingSelf", !1),
             I(this, "attenuateWhileSpeakingOthers", !0),

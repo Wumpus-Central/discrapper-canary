@@ -50,7 +50,6 @@ var o = (function (e) {
             (e.LOOPBACK = "loopback"),
             (e.WUMPUS_VIDEO = "wumpus_video"),
             (e.HYBRID_VIDEO = "hybrid_video"),
-            (e.EXPERIMENTAL_ENCODERS = "experimental_encoders"),
             (e.EXPERIMENT_CONFIG = "experiment_config"),
             (e.REMOTE_LOCUS_NETWORK_CONTROL = "remote_locus_network_control"),
             (e.SCREEN_PREVIEWS = "screen_previews"),

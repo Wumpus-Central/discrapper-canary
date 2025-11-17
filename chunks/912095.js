@@ -259,9 +259,6 @@ class E extends s.Z {
         this.silenceThreshold = e;
     }
     setLocalPan(e, t, n) {}
-    setExperimentalEncoders(e) {}
-    setHardwareH264(e) {}
-    setSoftwareH264(e) {}
     setQoS(e) {}
     setSoundshareDiscardRearChannels(e) {}
     isAttenuating() {

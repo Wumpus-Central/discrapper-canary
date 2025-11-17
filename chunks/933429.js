@@ -2,8 +2,8 @@ n.d(t, {
     ZP: () => tr,
     m9: () => eM,
     nA: () => eU,
-    o: () => ej,
-    zD: () => ek,
+    o: () => ek,
+    zD: () => ej,
 }),
     n(388685),
     n(35282);
@@ -40,8 +40,8 @@ var r,
     x = n(2109),
     L = n(518638),
     M = n(1844),
-    j = n(621615),
-    k = n(417626),
+    k = n(621615),
+    j = n(417626),
     U = n(569984),
     G = n(338247),
     B = n(523255),
@@ -155,8 +155,8 @@ let eM = {
         [eS.kVF.CHECKOUT_RECOVERY_NAGBAR]: l.z.CHECKOUT_RECOVERY_NAGBAR,
         [eS.kVF.REPORT_TO_MOD_EXIT_SURVEY]: l.z.REPORT_TO_MOD_EXIT_SURVEY_NOTICE,
     },
-    ej = { [eS.kVF.GIFTING_PROMOTION_REMINDER]: l.z.GIFTING_PROMOTION_REMINDER },
-    ek = {
+    ek = { [eS.kVF.GIFTING_PROMOTION_REMINDER]: l.z.GIFTING_PROMOTION_REMINDER },
+    ej = {
         [eS.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: l.z.NAGBAR_NOTICE_OFFER_EXPIRING,
         [eS.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING]: l.z.NAGBAR_NOTICE_OFFER_EXPIRING,
     },
@@ -218,8 +218,8 @@ function eq(e, t, n) {
     null == r || t || c.K.set(r, !0), eB.has(e) && (eZ[e] = !0), null != n && null != r ? eK(e, n) : ez(e);
 }
 function eX(e) {
-    if (null == e || null != ek[e]) return !1;
-    let t = ej[e];
+    if (null == e || null != ej[e]) return !1;
+    let t = ek[e];
     if (null != t) return (0, g.H4)(t).isDismissed;
     let n = eM[e];
     if (null != n) return (0, m.zu)(n);
@@ -241,7 +241,6 @@ let eQ = [
         eS.kVF.NO_INPUT_DEVICES_DETECTED,
         eS.kVF.NO_INPUT_DETECTED,
         eS.kVF.HARDWARE_MUTE,
-        eS.kVF.H264_DISABLED,
         eS.kVF.DISPATCH_ERROR,
         eS.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS,
         eS.kVF.SPOTIFY_AUTO_PAUSED,
@@ -298,7 +297,6 @@ let eQ = [
         eS.kVF.VOICE_DISABLED,
         eS.kVF.NO_INPUT_DETECTED,
         eS.kVF.HARDWARE_MUTE,
-        eS.kVF.H264_DISABLED,
         eS.kVF.DISPATCH_ERROR,
         eS.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS,
         eS.kVF.SPOTIFY_AUTO_PAUSED,
@@ -361,13 +359,6 @@ let eQ = [
         [eS.kVF.VOICE_CONNECTED_LAST_SESSION]: { predicate: () => null != eo.Z.getLastSessionVoiceChannelId() },
         [eS.kVF.NO_INPUT_DETECTED]: { predicate: () => b.Z.hasActiveErrorOfType(E.u.NO_AUDIO_INPUT_DETECTED) },
         [eS.kVF.NO_INPUT_DEVICES_DETECTED]: { predicate: () => b.Z.hasActiveErrorOfType(E.u.NO_INPUT_DEVICES) },
-        [eS.kVF.H264_DISABLED]: {
-            predicate: (e) => {
-                let { voiceChannelId: t } = e,
-                    n = Q.Z.getChannel(t);
-                return !en.Z.getOpenH264() && null != t && ep.Z.hasVideo(t) && null != n && n.isGuildStageVoice();
-            },
-        },
         [eS.kVF.HARDWARE_MUTE]: {
             predicate: () => eo.Z.isConnected() && en.Z.isHardwareMute() && en.Z.isEnableHardwareMuteNotice(),
             metadata: () => {
@@ -393,8 +384,8 @@ let eQ = [
         [eS.kVF.BLOCKED_BY_PROXY]: {
             predicate: () =>
                 !eX(eS.kVF.BLOCKED_BY_PROXY) &&
-                k.Z.blockedByProxy &&
-                j.Z.getCurrentConfig({ location: "notice_store" }).eligibleForNotice,
+                j.Z.blockedByProxy &&
+                k.Z.getCurrentConfig({ location: "notice_store" }).eligibleForNotice,
         },
         [eS.kVF.UNCLAIMED_ACCOUNT]: {
             predicate: (e) => {
@@ -905,7 +896,7 @@ class tn extends (r = o.ZP.Store) {
                 ei.Z,
                 ea.Z,
                 M.Z,
-                k.Z,
+                j.Z,
                 U.Z,
                 eo.Z,
                 O.ZP,
