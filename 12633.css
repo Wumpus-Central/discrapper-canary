@@ -9986,8 +9986,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 8px 0 var(--opacity-black-16);
     box-sizing: border-box;
-    max-height: 100%;
-    overflow: auto !important;
     z-index: 10
 }
 
@@ -52446,7 +52444,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59781,9 +59779,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
