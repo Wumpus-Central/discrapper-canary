@@ -105,13 +105,10 @@ let O = i.memo(function (e) {
                 selected: O,
                 onClick: S,
                 onContextMenu: P,
-                trailing:
-                    C === o.z.GAME_SHOP_NEW_BADGE
-                        ? (0, r.jsx)(s.IGR, {
-                              text: y.intl.string(y.t.y2b7CA),
-                              color: u.Z.BG_BRAND,
-                          })
-                        : null,
+                trailing: (0, r.jsx)(s.IGR, {
+                    text: y.intl.string(y.t.y2b7CA),
+                    color: u.Z.BG_BRAND,
+                }),
             }),
             j || x || C !== o.z.GAME_SHOP_NEW_BADGE
                 ? null

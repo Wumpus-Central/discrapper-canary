@@ -36,7 +36,7 @@ function v(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: h.closeButton,
-                            children: (0, r.jsx)(l.olH, {}),
+                            children: (0, r.jsx)(d.olH, { onClick: i }),
                         }),
                         (0, r.jsx)("div", { className: h.artwork }),
                         (0, r.jsx)(l.X6q, {
