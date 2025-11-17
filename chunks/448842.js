@@ -298,7 +298,10 @@ function O(e) {
                                 result: n,
                                 group: i,
                             }),
-                            o = (0, u.uB)(n),
+                            o = (0, u.uB)({
+                                result: n,
+                                group: i,
+                            }),
                             { label: s, ariaLabel: l } = (0, u.V4)(n),
                             c = (t) => {
                                 let { selectedIndex: r, searchAutocompleteSelectAction: o } = t;

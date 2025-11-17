@@ -1,7 +1,8 @@
 n.d(t, {
     M_: () => l,
-    g_: () => u,
+    g_: () => d,
     kU: () => c,
+    q$: () => u,
     rY: () => s,
 });
 var r = n(818083),
@@ -92,6 +93,21 @@ function c(e) {
     return a;
 }
 function u(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { isHasFilterElevated: a } = o.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
+}
+function d(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.nd)({
             location: t,
