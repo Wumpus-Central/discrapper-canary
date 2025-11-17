@@ -6,7 +6,7 @@ n.d(t, {
     JM: () => D,
     NZ: () => M,
     ZP: () => et,
-    aN: () => L,
+    aN: () => x,
     ay: () => Q,
     ff: () => E,
     gT: () => C,
@@ -132,16 +132,27 @@ function A(e) {
     );
 }
 function C(e) {
-    let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
-        a = O ? "webp" : "png",
-        o = O ? "webp" : "gif",
-        s = i ? "png" : n ? o : a,
-        c = O && n ? "&animated=true" : "",
-        u = "size=".concat((0, l.oO)(r * (0, l.x_)(), S));
-    return null != window.GLOBAL_ENV.CDN_HOST
-        ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(s) +
-              "?".concat(u).concat(c)
-        : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, s);
+    let { id: t, animated: r, size: i, forcePNG: a = !1 } = e,
+        o = O ? "webp" : "png",
+        s = O ? "webp" : "gif",
+        c = a ? "png" : r ? s : o,
+        u = O && r ? "&animated=true" : "",
+        d = "size=".concat((0, l.oO)(i * (0, l.x_)(), S)),
+        _ = !1;
+    try {
+        let { getForceSdrEmojisStickersConfig: e } = n(586132);
+        _ = e({ location: "getEmojiURL" }).enabled;
+    } catch (e) {}
+    let p = _ ? "&force_sdr=true" : "";
+    if (null != window.GLOBAL_ENV.CDN_HOST)
+        return (
+            "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(c) +
+            "?".concat(d).concat(u).concat(p)
+        );
+    {
+        let e = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, c);
+        return _ ? "".concat(e, "?force_sdr=true") : e;
+    }
 }
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -204,12 +215,12 @@ function w(e) {
               canAnimate: i,
           });
 }
-function x(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = w(e, n);
     return null != r ? ee(r) : t.getAvatarSource(e.guildId, n);
 }
-function L(e) {
+function x(e) {
     let t,
         { id: n, banner: r, canAnimate: i, size: a } = e;
     if (null == r) return;
@@ -458,9 +469,9 @@ let et = {
     getDefaultAvatarURL: N,
     getGuildMemberAvatarURL: w,
     getGuildMemberAvatarURLSimple: D,
-    getGuildMemberAvatarSource: x,
+    getGuildMemberAvatarSource: L,
     getGuildMemberBannerURL: k,
-    getUserBannerURL: L,
+    getUserBannerURL: x,
     getAvatarDecorationURL: M,
     hasAnimatedGuildIcon: function e(e) {
         return X(null == e ? void 0 : e.icon);
