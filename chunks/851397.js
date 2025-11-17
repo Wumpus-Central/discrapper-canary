@@ -49,14 +49,15 @@ function j(e) {
         T = (0, c.q)(w),
         A = i.useRef(null),
         R = (0, l.e7)([p.Z], () => null != j && p.Z.hasSentGift(I.skuId, j.id), [I.skuId, j]),
-        D = I.skuName,
+        D = R || !0 === I.isOwned,
+        L = I.skuName,
         {
-            buttonCTALabel: L,
-            buttonIcon: M,
-            handleCardClick: k,
+            buttonCTALabel: M,
+            buttonIcon: k,
+            handleCardClick: G,
         } = i.useMemo(() => {
             var e, t, n, r, i, l, o, c;
-            return P
+            return P || D
                 ? {
                       buttonCTALabel: C
                           ? (0, f.T4)(
@@ -98,8 +99,8 @@ function j(e) {
                               ));
                       },
                   };
-        }, [C, Z, j, R, N, T, x, P]),
-        G = i.useCallback(
+        }, [P, D, C, Z, x, T, R, j, N]),
+        U = i.useCallback(
             () =>
                 E
                     ? (0, r.jsx)("div", {
@@ -119,7 +120,7 @@ function j(e) {
                     : null,
             [E, j],
         ),
-        U = i.useCallback(
+        B = i.useCallback(
             () =>
                 (0, r.jsx)(b.A, {
                     shape: "custom",
@@ -160,13 +161,13 @@ function j(e) {
         (n = n =
             {
                 cardRef: A,
-                accessibleLabel: D,
-                onCardClick: k,
-                buttonCTALabel: L,
-                buttonIcon: M,
-                isOwned: R,
-                renderItemPreview: U,
-                renderSourceIcon: G,
+                accessibleLabel: L,
+                onCardClick: G,
+                buttonCTALabel: M,
+                buttonIcon: k,
+                isOwned: D,
+                renderItemPreview: B,
+                renderSourceIcon: U,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -37,33 +37,32 @@ function m(e) {
                 r = null;
             for (let i = 0; i < t.length && e.length < 4; i++) {
                 let l = t[i],
-                    a = 3 === e.length && t.length > 4,
-                    d = e.length;
-                if ((0, o.Q)(l)) {
-                    if (l.isOwned) continue;
-                    e.push(
-                        (0, h.c)(l, {
-                            index: d,
-                            moreCount: a ? t.length - 4 + 1 : void 0,
-                            profileOwner: n,
-                            analyticsLocations: _,
-                            onViewWishlist: m,
-                            wishlistId: b,
-                        }),
-                    );
-                } else
-                    (0, c.F)(l) &&
-                        e.push(
-                            (0, s.J)(l, {
-                                index: d,
-                                moreCount: a ? t.length - 4 + 1 : void 0,
-                                profileOwner: n,
-                                analyticsLocations: _,
-                                onViewWishlist: m,
-                                wishlistId: b,
-                            }),
-                        );
-                1 === e.length && null == r && (r = l);
+                    a = 3 === e.length && t.length > 4;
+                if (l.isOwned) continue;
+                let d = e.length;
+                (0, o.Q)(l)
+                    ? e.push(
+                          (0, h.c)(l, {
+                              index: d,
+                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              profileOwner: n,
+                              analyticsLocations: _,
+                              onViewWishlist: m,
+                              wishlistId: b,
+                          }),
+                      )
+                    : (0, c.F)(l) &&
+                      e.push(
+                          (0, s.J)(l, {
+                              index: d,
+                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              profileOwner: n,
+                              analyticsLocations: _,
+                              onViewWishlist: m,
+                              wishlistId: b,
+                          }),
+                      ),
+                    1 === e.length && null == r && (r = l);
             }
             return {
                 cards: e,
