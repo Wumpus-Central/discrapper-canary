@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(442837),
-    l = n(481060),
+    i = n(481060),
     s = n(435064),
     o = n(894694),
     c = n(39604);
@@ -53,7 +53,7 @@ function m() {
     let { mlPipelinesEnabled: e } = (0, r.cj)([s.Z], () => ({
             mlPipelinesEnabled: s.Z.getSettings().mlPipelinesEnabled,
         })),
-        [t, n] = i.useState(
+        [t, n] = l.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = {
@@ -70,11 +70,11 @@ function m() {
                 }
             ),
         ),
-        [m, p] = i.useState(o.x0.KILL),
-        [h, x] = i.useState(1),
-        [g, f] = i.useState(""),
-        [b, v] = i.useState(""),
-        j = i.useCallback(
+        [m, p] = l.useState(o.x0.KILL),
+        [h, x] = l.useState(1),
+        [g, f] = l.useState(""),
+        [b, v] = l.useState(""),
+        j = l.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -89,18 +89,18 @@ function m() {
             },
             [t],
         );
-    return (0, a.jsx)(l.Ttm, {
-        children: (0, a.jsxs)(l.l09, {
+    return (0, a.jsx)(i.Ttm, {
+        children: (0, a.jsxs)(i.l09, {
             children: [
-                (0, a.jsx)(l.C3N, {
+                (0, a.jsx)(i.C3N, {
                     label: "Send Test Signals",
-                    children: (0, a.jsxs)(l.NIo, {
+                    children: (0, a.jsxs)(i.NIo, {
                         children: [
-                            (0, a.jsx)(l.Button, {
+                            (0, a.jsx)(i.Button, {
                                 text: "Manual",
                                 onClick: () => c.XK({ type: o.Bs.MANUAL }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, a.jsx)(i.Button, {
                                 text: "Distributed",
                                 onClick: () =>
                                     c.XK({
@@ -109,7 +109,7 @@ function m() {
                                         remoteTriggerClipId: "456",
                                     }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, a.jsx)(i.Button, {
                                 text: "Phrase: Clip",
                                 onClick: () =>
                                     c.XK({
@@ -117,7 +117,7 @@ function m() {
                                         text: "clip",
                                     }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, a.jsx)(i.Button, {
                                 text: "Yelling",
                                 onClick: () =>
                                     c.XK({
@@ -128,12 +128,12 @@ function m() {
                         ],
                     }),
                 }),
-                (0, a.jsxs)(l.C3N, {
+                (0, a.jsxs)(i.C3N, {
                     label: "Game Event Creator",
                     children: [
-                        (0, a.jsxs)(l.NIo, {
+                        (0, a.jsxs)(i.NIo, {
                             children: [
-                                (0, a.jsx)(l.q4e, {
+                                (0, a.jsx)(i.q4e, {
                                     label: "Event Type",
                                     value: m,
                                     onChange: (e) => p(e),
@@ -180,7 +180,7 @@ function m() {
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(l.q4e, {
+                                (0, a.jsx)(i.q4e, {
                                     label: "Importance",
                                     value: h,
                                     onChange: x,
@@ -201,19 +201,19 @@ function m() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(l.oil, {
+                        (0, a.jsx)(i.oil, {
                             label: "Title (optional)",
                             value: g,
                             onChange: f,
                             placeholder: "e.g., First Blood",
                         }),
-                        (0, a.jsx)(l.oil, {
+                        (0, a.jsx)(i.oil, {
                             label: "Description (optional)",
                             value: b,
                             onChange: v,
                             placeholder: "e.g., Killed enemy ADC in bot lane",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             text: "Create Game Event",
                             onClick: () => {
                                 c.XK({
@@ -227,54 +227,54 @@ function m() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(l.izJ, {}),
-                (0, a.jsxs)(l.C3N, {
+                (0, a.jsx)(i.izJ, {}),
+                (0, a.jsxs)(i.C3N, {
                     label: "ML Pipelines Enabled",
                     children: [
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Emotion Classifier",
                             checked: e.emotionClassifier,
                             onChange: (t) => c.So(u(d({}, e), { emotionClassifier: t })),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Wake Word Detector",
                             checked: e.wakeWordDetector,
                             onChange: (t) => c.So(u(d({}, e), { wakeWordDetector: t })),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Yell Detector",
                             checked: e.yellDetector,
                             onChange: (t) => c.So(u(d({}, e), { yellDetector: t })),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
                             onChange: (t) => c.So(u(d({}, e), { whisperTranscription: t })),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(l.C3N, {
+                (0, a.jsxs)(i.C3N, {
                     label: "ML Debug Logging (window.__CLIPS_DEBUG__)",
                     children: [
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Wake Word Debug",
                             description: "Log wake word detection events to console",
                             checked: t.wakeWord,
                             onChange: () => j("wakeWord"),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Emotion Debug",
                             description: "Log emotion classification events to console",
                             checked: t.emotion,
                             onChange: () => j("emotion"),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Yell Debug",
                             description: "Show yell classification events to console",
                             checked: t.yell,
                             onChange: () => j("yell"),
                         }),
-                        (0, a.jsx)(l.rsf, {
+                        (0, a.jsx)(i.rsf, {
                             label: "Whisper Debug",
                             description: "Log whisper transcription events to console",
                             checked: t.whisper,

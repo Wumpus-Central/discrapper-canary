@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(660815),
-    l = n(442837),
+    i = n(442837),
     s = n(481060),
     o = n(570140),
     c = n(905551),
@@ -54,17 +54,17 @@ function x(e, t) {
     );
 }
 function g() {
-    let e = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, l.e7)([u.Z], () => {
+    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, i.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.e7)([d.Z], () => {
+        n = (0, i.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
-        g = i.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        f = i.useCallback(
+        g = l.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
+        f = l.useCallback(
             (t) => {
                 null != g &&
                     null != e &&
@@ -76,7 +76,7 @@ function g() {
             },
             [g, e],
         ),
-        b = i.useMemo(
+        b = l.useMemo(
             () =>
                 Object.values(r.V).map((e) =>
                     (0, a.jsx)(
@@ -93,7 +93,7 @@ function g() {
                 ),
             [f],
         ),
-        v = i.useCallback(() => {
+        v = l.useCallback(() => {
             null != g &&
                 null != e &&
                 o.Z.dispatch({

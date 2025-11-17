@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(594174),
     u = n(381585),
     d = n(597688),
-    g = n(128922),
-    p = n(937510),
+    p = n(128922),
+    g = n(937510),
     f = n(709999),
     h = n(653126),
     C = n(786040),
@@ -20,10 +20,10 @@ let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
         v = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         x = (0, o.e7)([d.Z], () => d.Z.getCategory(t.categorySkuId)),
-        E = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
-        S = (0, u.sp)(),
-        O = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
-        y = (0, p.l)(O).slice(0, 4);
+        E = p.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        O = (0, u.sp)(),
+        S = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
+        y = (0, g.l)(S).slice(0, 4);
     return null == v
         ? null
         : (0, r.jsxs)("div", {
@@ -71,7 +71,7 @@ let v = (e) => {
                                                 {
                                                     skuId: a,
                                                     prioritizedCurrency: i === m.AW.ORBS ? C.tA.ORBS : void 0,
-                                                    onClickAnalytics: (0, C.wO)(e, i, S),
+                                                    onClickAnalytics: (0, C.wO)(e, i, O),
                                                 },
                                                 a,
                                             )

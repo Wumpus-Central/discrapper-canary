@@ -1,6 +1,6 @@
 n.d(t, { Z: () => h }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     l = n.n(a),
     o = n(624238),
@@ -70,12 +70,12 @@ function h(e) {
                         }),
                         C > 0 &&
                             (k
-                                ? (0, r.jsx)(O, {
+                                ? (0, r.jsx)(v, {
                                       onClick: () => {
                                           N(!1), w({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
-                                : (0, r.jsx)(v, {
+                                : (0, r.jsx)(O, {
                                       numHidden: C,
                                       onClick: () => {
                                           N(!0), w({ action: "EXPAND_GAME_TAGS" });
@@ -135,7 +135,7 @@ let y = (e) => {
             ],
         });
     },
-    v = (e) => {
+    O = (e) => {
         let { numHidden: t, onClick: n, disableInteraction: i, ref: a } = e;
         return i
             ? (0, r.jsx)("div", {
@@ -162,7 +162,7 @@ let y = (e) => {
                   }),
               });
     },
-    O = (e) => {
+    v = (e) => {
         let { onClick: t } = e;
         return (0, r.jsx)(c.u, {
             asContainer: !0,

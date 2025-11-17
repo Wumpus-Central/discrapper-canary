@@ -1,6 +1,6 @@
 n.d(t, { Z: () => w }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -40,7 +40,7 @@ function w(e) {
             return O.default.getUser(null == (e = x.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
         L = r.useMemo(() => (null != M ? M.filter((e) => !(0, v.fI)(e)) : []), [M]),
-        D = r.useMemo(
+        k = r.useMemo(
             () =>
                 s()(L)
                     .filter((e) => {
@@ -54,7 +54,7 @@ function w(e) {
                     .value(),
             [t, w, L],
         ),
-        k = (0, u.Wu)([O.default], () => {
+        D = (0, u.Wu)([O.default], () => {
             let e = {};
             for (let n of (null != R && (e[R.id] = R), Object.values(t.permissionOverwrites))) {
                 if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
@@ -119,14 +119,14 @@ function w(e) {
                 className: N.members,
                 children: [
                     (function () {
-                        if (1 !== k.length || D.length > 0)
+                        if (1 !== D.length || k.length > 0)
                             return (0, i.jsx)(d.Z, {
                                 guildId: t.guild_id,
                                 className: N.avatars,
                                 maxUsers: 5,
-                                users: k,
+                                users: D,
                             });
-                        let e = k[0],
+                        let e = D[0],
                             n = S.ZP.getName(e);
                         return (0, i.jsxs)("div", {
                             className: N.avatars,
@@ -152,7 +152,7 @@ function w(e) {
                             ],
                         });
                     })(),
-                    D.map((e, n) => {
+                    k.map((e, n) => {
                         var r, l;
                         let o = null != (l = e.colorString) ? l : Z.Pbq,
                             s = (null == (r = e.tags) ? void 0 : r.guild_connections) !== void 0;
@@ -160,7 +160,7 @@ function w(e) {
                             ? (0, i.jsx)(
                                   I.Z,
                                   {
-                                      className: a()(N.role, { [N.last]: n === D.length - 1 }),
+                                      className: a()(N.role, { [N.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       disabled: !U,
@@ -174,7 +174,7 @@ function w(e) {
                             : (0, i.jsx)(
                                   b.Z,
                                   {
-                                      className: a()(N.role, { [N.last]: n === D.length - 1 }),
+                                      className: a()(N.role, { [N.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       verified: s,

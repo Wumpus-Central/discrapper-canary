@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(913527),
     o = n.n(l),
     a = n(91192),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(135938),
     d = n(554838),
     p = n(493892),
-    h = n(661824),
-    f = n(37772),
+    f = n(661824),
+    h = n(37772),
     g = n(695346),
     m = n(314897),
     b = n(594174),
@@ -26,7 +26,7 @@ let C = {
 };
 function E(e) {
     var t, n, l;
-    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: h } = e,
+    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
         g = (0, a.JA)(null != (t = s.id) ? t : ""),
         m = i.useCallback(
             (e) => {
@@ -77,9 +77,9 @@ function E(e) {
                     children: [
                         (0, r.jsx)(y.Z, {
                             className: x.jumpButton,
-                            onJump: (e) => h(e, s.id),
+                            onJump: (e) => f(e, s.id),
                         }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(h.Z, {
                             id: s.id,
                             message: s,
                             channel: o,
@@ -112,7 +112,7 @@ function E(e) {
 function S(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
-        { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         y = g.jU.useSetting(),
         C = (0, p.P1)(l),
         S = !1,
@@ -128,7 +128,7 @@ function S(e) {
                 let t = (0, _.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
-                        h.Z,
+                        f.Z,
                         {
                             className: x.divider,
                             children: t,
@@ -149,7 +149,7 @@ function S(e) {
                             message: n,
                             compact: y,
                             isGroupStart: i,
-                            treatSpam: !P && f && (0, p.DQ)(n) && C,
+                            treatSpam: !P && h && (0, p.DQ)(n) && C,
                             gotoChannel: a,
                         },
                         n.id,

@@ -1,6 +1,6 @@
 n.d(t, { default: () => j }), n(388685), n(953529), n(539854);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(793030),
     a = n(442837),
     o = n(481060),
@@ -98,8 +98,8 @@ function O(e) {
             roles: w,
             members: M,
         }),
-        D = h && 0 === Object.keys(S).length;
-    async function k() {
+        k = h && 0 === Object.keys(S).length;
+    async function D() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -187,7 +187,7 @@ function O(e) {
                         renderRow: m.Z.renderRow,
                         sections: L,
                     },
-                    actions: D
+                    actions: k
                         ? [
                               {
                                   variant: "secondary",
@@ -204,7 +204,7 @@ function O(e) {
                               {
                                   variant: "primary",
                                   text: C.intl.string(C.t.i4jeWR),
-                                  onClick: k,
+                                  onClick: D,
                                   loading: I,
                               },
                           ],

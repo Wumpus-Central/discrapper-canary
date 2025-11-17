@@ -1,6 +1,6 @@
 n.d(t, { Z: () => to }), n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(239091),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(911560),
     L = n(488131),
     M = n(814820),
-    j = n(314897),
-    k = n(523746),
+    k = n(314897),
+    j = n(523746),
     U = n(592125),
     G = n(430824),
     B = n(496675),
@@ -136,12 +136,12 @@ function eL(e, t) {
 function eM(e) {
     K.Z.captureException(e), new p.Z("SystemMessage").error("", e);
 }
-function ej(e) {
+function ek(e) {
     let { message: t, compact: n, channel: o } = e,
         { id: s, author: l } = t,
-        u = j.default.getId(),
+        u = k.default.getId(),
         d = t.getChannelId(),
-        f = (0, a.e7)([k.Z], () => k.Z.isCallActive(d, s), [d, s]),
+        f = (0, a.e7)([j.Z], () => j.Z.isCallActive(d, s), [d, s]),
         _ = (0, a.e7)([H.Z], () => H.Z.getVoiceState(eN.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
@@ -162,7 +162,7 @@ function ej(e) {
         onClickJoinCall: m,
     });
 }
-function ek(e) {
+function ej(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -585,7 +585,7 @@ function e1(e) {
         usernameHook: a,
     });
 }
-function e2(e) {
+function e3(e) {
     var t, n;
     let { message: i, channel: s, compact: c } = e,
         u = (0, ee.l)({
@@ -623,7 +623,7 @@ function e2(e) {
         ],
     });
 }
-function e3(e) {
+function e2(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(_.Z, {
         message: t,
@@ -639,7 +639,7 @@ function e4(e) {
         compact: i,
     });
 }
-function e8(e) {
+function e5(e) {
     var t;
     let { message: n, channel: i, compact: a } = e;
     return (null == (t = n.purchaseNotification) ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
@@ -650,7 +650,7 @@ function e8(e) {
           })
         : null;
 }
-function e5(e) {
+function e8(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(Q.Z, {
         message: t,
@@ -732,8 +732,8 @@ let ti = Object.freeze({
     [eN.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eN.uaV.RECIPIENT_ADD]: eB,
     [eN.uaV.RECIPIENT_REMOVE]: eF,
-    [eN.uaV.CALL]: ej,
-    [eN.uaV.CHANNEL_NAME_CHANGE]: ek,
+    [eN.uaV.CALL]: ek,
+    [eN.uaV.CHANNEL_NAME_CHANGE]: ej,
     [eN.uaV.CHANNEL_ICON_CHANGE]: eU,
     [eN.uaV.CHANNEL_PINNED_MESSAGE]: eG,
     [eN.uaV.USER_JOIN]: eV,
@@ -756,18 +756,18 @@ let ti = Object.freeze({
     [eN.uaV.GUILD_INCIDENT_REPORT_RAID]: eX,
     [eN.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: eQ,
     [eN.uaV.ROLE_SUBSCRIPTION_PURCHASE]: y.Z,
-    [eN.uaV.PURCHASE_NOTIFICATION]: e8,
+    [eN.uaV.PURCHASE_NOTIFICATION]: e5,
     [eN.uaV.INTERACTION_PREMIUM_UPSELL]: void 0,
     [eN.uaV.STAGE_START]: eJ,
     [eN.uaV.STAGE_END]: e$,
     [eN.uaV.STAGE_SPEAKER]: e1,
-    [eN.uaV.STAGE_RAISE_HAND]: e2,
+    [eN.uaV.STAGE_RAISE_HAND]: e3,
     [eN.uaV.STAGE_TOPIC]: e0,
     [eN.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.Z,
     [eN.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: C.P,
     [eN.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: C.e,
     [eN.uaV.PREMIUM_REFERRAL]: tt,
-    [eN.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e3,
+    [eN.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e2,
     [eN.uaV.CUSTOM_GIFT]: void 0,
     [eN.uaV.GUILD_GAMING_STATS_PROMPT]: e4,
     [eN.uaV.VOICE_HANGOUT_INVITE]: void 0,
@@ -780,7 +780,7 @@ let ti = Object.freeze({
     [eN.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: E.Cn,
     [eN.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: E.Ue,
     [eN.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: E.R6,
-    [eN.uaV.HD_STREAMING_UPGRADED]: e5,
+    [eN.uaV.HD_STREAMING_UPGRADED]: e8,
     [eN.uaV.EMOJI_ADDED]: tn,
     [eN.uaV.CHAT_WALLPAPER_SET]: void 0,
     [eN.uaV.CHAT_WALLPAPER_REMOVED]: void 0,

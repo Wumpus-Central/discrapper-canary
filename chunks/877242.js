@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    o = n(647438),
+var r = n(54381),
+    o = n(473749),
     l = n(120356),
     i = n.n(l),
     a = n(681715),
@@ -12,8 +12,8 @@ var r = n(951288),
     p = n(113434),
     f = n(497505),
     v = n(215113),
-    g = n(684245),
-    E = n(388032),
+    E = n(684245),
+    g = n(388032),
     O = n(273339);
 function b() {
     var e;
@@ -22,7 +22,7 @@ function b() {
         S = (0, p.tP)(t),
         C = o.useRef(null),
         { isHoveringOrFocusing: y } = (0, c.Z)(C),
-        _ = (0, g.e)({
+        _ = (0, E.e)({
             quest: t,
             onClose: b,
             sourceQuestContent: n,
@@ -31,7 +31,7 @@ function b() {
         x = null == (e = t.config.videoMetadata) ? void 0 : e.messages.videoEndCtaSubtitle,
         j = void 0 !== x && !(0, u.Ew)(x);
     return (0, r.jsx)(a.u, {
-        text: E.intl.string(E.t.EuHF34),
+        text: g.intl.string(g.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
             onClick: () => _(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
@@ -48,7 +48,7 @@ function b() {
                             color: "header-primary",
                             className: i()(O.adDetailsTextSecondary, { [O.adDetailsTextSecondaryPortrait]: l }),
                             lineClamp: l ? void 0 : 1,
-                            children: E.intl.format(E.t.EQa7os, { questName: t.config.messages.questName }),
+                            children: g.intl.format(g.t.EQa7os, { questName: t.config.messages.questName }),
                         }),
                     }),
                     (0, r.jsxs)("div", {

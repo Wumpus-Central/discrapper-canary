@@ -1,6 +1,6 @@
 n.d(t, { Z: () => w });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(793030),
     a = n(481060),
     s = n(410030),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(892001),
     _ = n(899007),
     y = n(648052),
-    x = n(867176),
-    O = n(280885),
-    j = n(900927),
+    O = n(867176),
+    j = n(280885),
+    x = n(900927),
     v = n(678738),
     C = n(502762),
     I = n(530),
@@ -101,7 +101,7 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         user: n,
                                         displayProfile: D,
                                         themeType: Z.l.SIDEBAR,
@@ -136,7 +136,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(O.Z, {
+                                                children: (0, r.jsx)(j.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
@@ -146,7 +146,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["A//N4k"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(j.Z, { userId: n.id }),
+                                                children: (0, r.jsx)(x.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),

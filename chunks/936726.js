@@ -1,6 +1,6 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => I }), n(35282), n(388685), n(539854);
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(544891),
@@ -73,21 +73,21 @@ function E(e, t) {
               discriminator: y.fo$,
           });
 }
-function w(e) {
+function I(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
             channelOptions: h,
-            isExpanded: w,
-            isNew: I,
-            errors: P,
+            isExpanded: I,
+            isNew: P,
+            errors: w,
             onToggleExpand: T,
         } = e,
         [Z, k] = r.useState(!1),
-        [D] = r.useState(new s.V7());
-    r.useEffect(() => () => D.stop(), [D]);
-    let A = r.useMemo(() => E(n, n.avatar), [n]),
+        [A] = r.useState(new s.V7());
+    r.useEffect(() => () => A.stop(), [A]);
+    let D = r.useMemo(() => E(n, n.avatar), [n]),
         R = r.useCallback(() => {
             let e = "".concat((0, o.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -141,7 +141,7 @@ function w(e) {
           });
     let U = null;
     return (
-        w &&
+        I &&
             null != l &&
             (U = (0, i.jsxs)("div", {
                 className: C.body,
@@ -165,11 +165,11 @@ function w(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != P.avatar && "" !== P.avatar
+                                        null != w.avatar && "" !== w.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: P.avatar,
+                                                  children: w.avatar,
                                               })
                                             : null,
                                     ],
@@ -190,7 +190,7 @@ function w(e) {
                                                         u.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: P.name,
+                                                    error: w.name,
                                                 }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
@@ -279,7 +279,7 @@ function w(e) {
                                                                         null == t || t(),
                                                                             k(!0),
                                                                             c.uvj.announce(_.intl.string(_.t.wwdb3g)),
-                                                                            D.start(1000, () => k(!1)),
+                                                                            A.start(1000, () => k(!1)),
                                                                             R();
                                                                     },
                                                                     disabled: null == n.token || "" === n.token,
@@ -306,25 +306,25 @@ function w(e) {
         (0, i.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, I ? C.pulse : null),
+            className: a()(C.card, P ? C.pulse : null),
             children: (0, i.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
-                        "aria-expanded": w,
+                        "aria-expanded": I,
                         onClick: T,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(O.Z, {
                                     name: n.name,
-                                    imageSrc: A,
+                                    imageSrc: D,
                                     details: M,
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     className: C.expandIcon,
-                                    expanded: w,
+                                    expanded: I,
                                     "aria-hidden": !0,
                                 }),
                             ],

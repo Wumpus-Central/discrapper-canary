@@ -1,12 +1,12 @@
-function r() {
-    if (
-        "undefined" != typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ &&
-        "function" == typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE
-    )
-        try {
-            __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
-        } catch (e) {
-            console.error(e);
-        }
+n.d(t, { Z: () => a });
+var r = n(802856),
+    i = n(981631);
+function a(e) {
+    return null == e || null == e.type || e.type !== i.IIU.PLAYING
+        ? null
+        : (0, r.Z)(e)
+          ? i.M7m.XBOX
+          : null != e.platform
+            ? e.platform
+            : i.M7m.DESKTOP;
 }
-r(), (e.exports = n(18065));

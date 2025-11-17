@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(481060),
     s = n(594174),
@@ -43,7 +43,7 @@ function b(e) {
         b = (0, l.e7)([s.default], () => s.default.getUser(n)),
         _ = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         y = (0, d.Z)(),
-        [x, O] = (0, c.Z)(n);
+        [O, j] = (0, c.Z)(n);
     if (
         (i.useEffect(() => {
             (0, u.Z)(null != b ? b : n, {
@@ -57,25 +57,25 @@ function b(e) {
         null == b || null == _ || !y)
     )
         return null;
-    let j = "user-profile-sidebar-heading-".concat(b.id),
+    let x = "user-profile-sidebar-heading-".concat(b.id),
         v = o.ZP.getName(null, t.id, b);
     return (0, r.jsx)("aside", {
-        "aria-labelledby": j,
+        "aria-labelledby": x,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
-                    id: j,
+                    id: x,
                     children: g.intl.format(g.t.KRe1Fk, { name: v }),
                 }),
             }),
-            children: x
+            children: O
                 ? (0, r.jsx)(
                       h.Z,
                       m(
                           {
                               user: b,
                               currentUser: _,
-                              onHide: O,
+                              onHide: j,
                           },
                           e,
                       ),

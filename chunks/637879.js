@@ -13,8 +13,8 @@ n.d(t, {
 }),
     n(781311),
     n(35282);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -262,7 +262,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { size: t, user: n, className: i } = e,
         a = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
         s = (0, O.px)(t);
@@ -273,7 +273,7 @@ function j(e) {
         className: i,
     });
 }
-function k(e) {
+function j(e) {
     let { user: t } = e,
         { selectedGuildId: n, selectedChannelId: i } = (0, o.cj)([d.Z, u.Z], () => {
             let e = d.Z.getGuildId(),
@@ -356,7 +356,7 @@ function B(e) {
         : (0, r.jsxs)("div", {
               className: I.answerPill,
               children: [
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(k, {
                       size: l.EFr.SIZE_16,
                       user: a,
                   }),
@@ -448,11 +448,11 @@ function V(e) {
               label: (0, r.jsxs)("div", {
                   className: I.labelWithElements,
                   children: [
-                      (0, r.jsx)(j, {
+                      (0, r.jsx)(k, {
                           size: l.EFr.SIZE_16,
                           user: n,
                       }),
-                      (0, r.jsx)(k, { user: n }),
+                      (0, r.jsx)(j, { user: n }),
                   ],
               }),
               ariaLabel: n.username,
@@ -470,7 +470,7 @@ function H(e) {
               className: I.itemIcon,
           })
         : null != n
-          ? (0, r.jsx)(j, {
+          ? (0, r.jsx)(k, {
                 size: l.EFr.SIZE_20,
                 user: n,
                 className: I.itemIcon,
@@ -495,7 +495,7 @@ function Y(e) {
               label: (0, r.jsxs)("div", {
                   className: I.labelWithElements,
                   children: [
-                      (0, r.jsx)(k, { user: n }),
+                      (0, r.jsx)(j, { user: n }),
                       (0, r.jsx)(l.Text, {
                           variant: "text-sm/medium",
                           color: "text-secondary",

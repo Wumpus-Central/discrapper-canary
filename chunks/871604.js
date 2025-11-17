@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(989573),
@@ -100,8 +100,8 @@ function R(e) {
         L = D ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
     if (null == R || !(0, d.Eb)(R)) return null;
     let { customInstallUrl: M } = R,
-        j = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
-        k = D ? void 0 : j;
+        k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
+        j = D ? void 0 : k;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: N,
@@ -131,7 +131,7 @@ function R(e) {
                               buttonRef: N,
                               action: "PRESS_ADD_APP",
                               text: L,
-                              icon: k,
+                              icon: j,
                               onContextMenu: t,
                               onClick: x,
                           },
@@ -147,7 +147,7 @@ function R(e) {
                   {
                       action: "PRESS_ADD_APP",
                       text: L,
-                      icon: k,
+                      icon: j,
                       onClick: x,
                       variant: "primary",
                   },

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => j });
-var a = n(951288);
-n(647438);
-var i = n(481060),
+var a = n(54381);
+n(473749);
+var l = n(481060),
     r = n(100527),
-    l = n(906732),
+    i = n(906732),
     s = n(266454),
     o = n(314910),
     c = n(313789),
@@ -20,7 +20,7 @@ function v(e) {
     let { dismissibleContent: t } = e,
         n = p.Z.useIsEligible(),
         m = (0, s.Nj)(t),
-        { analyticsLocations: v } = (0, l.ZP)(r.Z.HOLIDAY_COACHMARK),
+        { analyticsLocations: v } = (0, i.ZP)(r.Z.HOLIDAY_COACHMARK),
         j = (e) => {
             (0, s.Q3)(t, { dismissAction: e });
         },
@@ -53,19 +53,19 @@ function v(e) {
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
-                                      (0, a.jsx)(i.Heading, {
+                                      (0, a.jsx)(l.Heading, {
                                           variant: "heading-md/bold",
                                           color: void 0,
                                           className: b.specialText,
                                           children: f.intl.string(f.t.zUhr3D),
                                       }),
-                                      (0, a.jsx)(i.Text, {
+                                      (0, a.jsx)(l.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
                                           children: f.intl.format(f.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
-                                                      i.P3F,
+                                                      l.P3F,
                                                       {
                                                           tag: "span",
                                                           className: b.specialTextLink,
@@ -78,10 +78,10 @@ function v(e) {
                                       }),
                                   ],
                               }),
-                              (0, a.jsx)(i.P3F, {
+                              (0, a.jsx)(l.P3F, {
                                   className: b.closeClickable,
                                   onClick: () => j(g.L.USER_DISMISS),
-                                  children: (0, a.jsx)(i.Dio, {
+                                  children: (0, a.jsx)(l.Dio, {
                                       color: "currentColor",
                                       size: "xs",
                                   }),

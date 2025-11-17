@@ -5,8 +5,8 @@ n.d(t, {
     n(388685),
     n(642613),
     n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(512722),
@@ -38,8 +38,8 @@ var r = n(951288),
     x = n(594174),
     L = n(700785),
     M = n(981631),
-    j = n(388032),
-    k = n(85703);
+    k = n(388032),
+    j = n(85703);
 function U(e, t, n) {
     return (
         t in e
@@ -121,29 +121,29 @@ function K(e) {
         i = F(e, ["userRoleIds", "position"]),
         a = (0, v.Dt)();
     return (0, r.jsxs)(h.VqE, {
-        className: o()(k.overflowRolesPopout, {
-            [k.popoutBottom]: "bottom" === n,
-            [k.popoutTop]: "top" === n,
+        className: o()(j.overflowRolesPopout, {
+            [j.popoutBottom]: "bottom" === n,
+            [j.popoutTop]: "top" === n,
         }),
         "aria-labelledby": a,
         children: [
             (0, r.jsx)("div", {
-                className: k.overflowRolesPopoutArrowWrapper,
-                children: (0, r.jsx)("div", { className: k.overflowRolesPopoutArrow }),
+                className: j.overflowRolesPopoutArrowWrapper,
+                children: (0, r.jsx)("div", { className: j.overflowRolesPopoutArrow }),
             }),
             (0, r.jsxs)(O.Z, {
-                className: k.overflowRolesPopoutHeader,
+                className: j.overflowRolesPopoutHeader,
                 align: O.Z.Align.CENTER,
                 children: [
                     (0, r.jsx)(h.U65, {
                         size: "xs",
                         color: p.Z.unsafe_rawColors.PRIMARY_400.css,
-                        className: k.overflowRolesPopoutHeaderIcon,
+                        className: j.overflowRolesPopoutHeaderIcon,
                     }),
                     (0, r.jsx)("div", {
-                        className: k.overflowRolesPopoutHeaderText,
+                        className: j.overflowRolesPopoutHeaderText,
                         id: a,
-                        children: j.intl.format(j.t.PCs0oo, { numRoles: t.length }),
+                        children: k.intl.format(k.t.PCs0oo, { numRoles: t.length }),
                     }),
                 ],
             }),
@@ -181,7 +181,7 @@ let z = i.forwardRef(function (e, t) {
                             e,
                             Z(G({}, t), {
                                 id: E.id,
-                                label: j.intl.string(j.t.sMsaLg),
+                                label: k.intl.string(k.t.sMsaLg),
                             }),
                         );
                 });
@@ -196,14 +196,14 @@ let z = i.forwardRef(function (e, t) {
     null != Y && 0.3 > (0, f.Bd)(Y) && (H = p.Z.unsafe_rawColors.PRIMARY_630.css),
         (c = L
             ? (0, r.jsx)(y.Z, {
-                  className: k.roleFlowerStar,
-                  iconClassName: d ? k.roleVerifiedIcon : void 0,
+                  className: j.roleFlowerStar,
+                  iconClassName: d ? j.roleVerifiedIcon : void 0,
                   color: B,
                   size: 14,
               })
             : "dot" === w
               ? (0, r.jsx)(h.FhE, {
-                    className: k.roleDot,
+                    className: j.roleDot,
                     color: B,
                     colors: x,
                     background: !1,
@@ -224,7 +224,7 @@ let z = i.forwardRef(function (e, t) {
                 G(
                     {
                         ref: t,
-                        className: o()(k.role, g),
+                        className: o()(j.role, g),
                         style: W,
                         onContextMenu: M,
                         onMouseDown: C,
@@ -236,31 +236,31 @@ let z = i.forwardRef(function (e, t) {
                 {
                     children: [
                         (0, r.jsxs)(h.P3F, {
-                            className: o()(d && k.roleRemoveButtonCanRemove, k.roleRemoveButton),
+                            className: o()(d && j.roleRemoveButtonCanRemove, j.roleRemoveButton),
                             onClick: d ? O : void 0,
                             tabIndex: d ? R : -1,
-                            focusProps: { focusClassName: k.roleRemoveIconFocused },
+                            focusProps: { focusClassName: j.roleRemoveIconFocused },
                             "aria-hidden": !d,
-                            "aria-label": j.intl.formatToPlainString(j.t.QrxwhY, { roleName: E.name }),
+                            "aria-label": k.intl.formatToPlainString(k.t.QrxwhY, { roleName: E.name }),
                             children: [
                                 c,
                                 d
                                     ? (0, r.jsx)(h.Dio, {
                                           size: "md",
                                           color: H,
-                                          className: k.roleRemoveIcon,
+                                          className: j.roleRemoveIcon,
                                           "aria-hidden": !0,
                                       })
                                     : null,
                             ],
                         }),
-                        null != D ? (0, r.jsx)(A.Z, Z(G({ className: k.roleIcon }, D), { enableTooltip: !1 })) : null,
+                        null != D ? (0, r.jsx)(A.Z, Z(G({ className: j.roleIcon }, D), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
-                            className: k.roleName,
+                            className: j.roleName,
                             children: (0, r.jsx)(h.Text, {
                                 variant: "text-xs/medium",
-                                className: k.roleNameOverflow,
+                                className: j.roleNameOverflow,
                                 children: E.name,
                             }),
                         }),
@@ -286,7 +286,7 @@ function q(e) {
             (0, r.jsx)(h.tEY, {
                 children: (0, r.jsx)(
                     "button",
-                    Z(G(Z(G({ ref: l }, e), { className: o()(k.overflowButton, a) }), s), { children: "+".concat(n) }),
+                    Z(G(Z(G({ ref: l }, e), { className: o()(j.overflowButton, a) }), s), { children: "+".concat(n) }),
                 ),
             }),
     });
@@ -321,8 +321,8 @@ function X(e) {
                     Z(
                         G(
                             Z(G({ ref: t }, e), {
-                                className: o()(k.addButton, l, c),
-                                "aria-label": j.intl.string(j.t.e3Wlyw),
+                                className: o()(j.addButton, l, c),
+                                "aria-label": k.intl.string(k.t.e3Wlyw),
                                 type: "button",
                             }),
                             f,
@@ -331,7 +331,7 @@ function X(e) {
                             children: (0, r.jsx)(h.qJs, {
                                 size: "md",
                                 color: "currentColor",
-                                className: o()(k.addButtonIcon, d),
+                                className: o()(j.addButtonIcon, d),
                                 "aria-hidden": !0,
                             }),
                         },
@@ -440,8 +440,8 @@ function Q(e) {
                         Z(
                             G(
                                 {
-                                    className: o()(k.root, h),
-                                    "aria-label": j.intl.formatToPlainString(j.t.PCs0oo, { numRoles: s.length }),
+                                    className: o()(j.root, h),
+                                    "aria-label": k.intl.formatToPlainString(k.t.PCs0oo, { numRoles: s.length }),
                                     ref: n,
                                 },
                                 i,

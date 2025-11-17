@@ -1,6 +1,6 @@
 n.d(t, { u: () => v }), n(539854), n(993155), n(388685);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(481060),
     a = n(355467),
     o = n(179360),
@@ -123,8 +123,8 @@ async function v(e) {
     u.Z.isLoadedForPremiumSKUs() || M.push((0, s.Y2)()),
         c.Z.hasFetched || (M.push(a.jg()), M.push((0, o.X8)())),
         M.length > 0 && (null == I || I(!0), await Promise.allSettled(M), null == I || I(!1));
-    let j = (0, f.vx)(c.Z.boostSlots),
-        k = j.length,
+    let k = (0, f.vx)(c.Z.boostSlots),
+        j = k.length,
         U = (e) => {
             null == v || v(), null == N || N(e);
         },
@@ -136,9 +136,9 @@ async function v(e) {
                     location_section: h.section,
                 });
         };
-    if (k > 0 && (null == y || k >= y)) {
+    if (j > 0 && (null == y || j >= y)) {
         let e;
-        1 === k ? (e = j.slice(0, 1)) : null != y && (e = j.slice(0, y)),
+        1 === j ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.resolve().then(n.bind(n, 760558));

@@ -1,6 +1,6 @@
 n.d(t, { U: () => h }), n(388685), n(781311);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(544891),
     a = n(28664),
     s = n(481060),
@@ -52,7 +52,7 @@ function h(e) {
         i.useEffect(() => {
             (null == d.name || "" === d.name.trim()) && !m && _ && null != n && (b(!0), y());
         }, [t.id, n, l, d.name, m, _, y]);
-    let x = i.useCallback(
+    let O = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (_)
@@ -67,7 +67,7 @@ function h(e) {
             },
             [_, y, f, n, h.textValue],
         ),
-        O = i.useCallback(
+        j = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return _
@@ -92,7 +92,7 @@ function h(e) {
         isGeneratingAI: f,
         generateAIName: y,
         enableAIFeatures: _,
-        renderAiGenerateButton: O,
-        getThreadNameInputAccessory: x,
+        renderAiGenerateButton: j,
+        getThreadNameInputAccessory: O,
     };
 }

@@ -3,8 +3,8 @@ n.d(t, {
     n: () => I,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(480210),
@@ -78,12 +78,12 @@ let I = (e) => {
             } = (0, p.Z)((e) => {
                 w((t) => t + e);
             }),
-            j = i.useRef(v);
+            k = i.useRef(v);
         i.useEffect(() => {
-            j.current = v;
+            k.current = v;
         }),
             i.useEffect(() => {
-                w(-j.current), S((0, m.H)(E.effects));
+                w(-k.current), S((0, m.H)(E.effects));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
@@ -95,17 +95,17 @@ let I = (e) => {
                     C(t),
                     R(e);
             }, [R, T]);
-        let [k, U] = i.useState(!1);
+        let [j, U] = i.useState(!1);
         return (
             i.useEffect(() => {
                 !0 === u || l || (x(), w(0)),
-                    !l && k && M.current && (x(), w(0)),
+                    !l && j && M.current && (x(), w(0)),
                     a &&
                         l &&
                         !M.current &&
                         (L(),
                         E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? w(d === _.Q.FromStart ? 0 : A) : w(0));
-            }, [l, k, A, a, x, L, M, E.animationType, u, d]),
+            }, [l, j, A, a, x, L, M, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),
@@ -145,7 +145,7 @@ let I = (e) => {
                                 animationType: E.animationType,
                                 ticking: M.current,
                                 time: D,
-                                hasPlayedThrough: k,
+                                hasPlayedThrough: j,
                                 setHasPlayedThrough: U,
                                 urlQueryString: h,
                                 maxLoops: n,

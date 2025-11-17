@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(399606),
     a = n(481060),
     o = n(594174),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(429368),
     u = n(884697),
     d = n(290175),
-    g = n(724994),
-    p = n(409116),
+    p = n(724994),
+    g = n(409116),
     f = n(786040),
     h = n(58201),
     C = n(445794),
@@ -21,10 +21,10 @@ let v = (e) => {
             c = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
             f = s.ZP.canUseCollectibles(c),
             { isDisabled: h } = (0, d.G)(t.skuId),
-            { isPurchased: v, isPartiallyOwnedBundle: x } = (0, g.L)(t),
+            { isPurchased: v, isPartiallyOwnedBundle: x } = (0, p.L)(t),
             E = (0, u.G1)(t),
-            S = (0, u.rN)(t),
-            O = l.useMemo(() => (0, u.BH)(t, f), [t, f]),
+            O = (0, u.rN)(t),
+            S = l.useMemo(() => (0, u.BH)(t, f), [t, f]),
             y = (0, C.Iw)(t),
             {
                 checkoutEligiblePrices: j,
@@ -58,7 +58,7 @@ let v = (e) => {
                       lineClamp: 1,
                       children: _.intl.string(_.t["6cfuDj"]),
                   })
-                : S
+                : O
                   ? (0, r.jsx)(a.Text, {
                         variant: "text-md/bold",
                         lineClamp: 1,
@@ -72,9 +72,9 @@ let v = (e) => {
                       })
                     : 0 === j.length
                       ? null
-                      : (0, r.jsx)(p.F, {
+                      : (0, r.jsx)(g.F, {
                             price: j[0],
-                            discount: O,
+                            discount: S,
                             nitroIconType: f ? "default" : void 0,
                             nitroIconSize: "sm",
                             discountOfferAmount: y,

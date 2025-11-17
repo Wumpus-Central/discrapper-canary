@@ -1,5 +1,5 @@
 n.d(e, { z: () => Z });
-var i = n(951288),
+var i = n(54381),
     l = n(657707),
     u = n(442837),
     r = n(481060),
@@ -9,8 +9,8 @@ var i = n(951288),
     c = n(509613),
     E = n(28682),
     S = n(518950),
-    d = n(25990),
-    T = n(594174),
+    T = n(25990),
+    d = n(594174),
     I = n(313789),
     O = n(620163),
     g = n(726985),
@@ -24,7 +24,7 @@ let A = (0, c.x1)(I.n.PROFILE_PANE, {
         useTitle: () => _.intl.string(_.t["vi7f+q"]),
         buildLayout: () => [A],
         notice: {
-            stores: [s.Z, d.Z],
+            stores: [s.Z, T.Z],
             element: a.Z,
         },
     }),
@@ -35,7 +35,7 @@ let A = (0, c.x1)(I.n.PROFILE_PANE, {
         buildLayout: () => [f],
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
+            let e = (0, u.e7)([d.default], () => d.default.getCurrentUser()),
                 { avatarSrc: n, avatarDecorationSrc: s } = (0, S.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: r.EFr.SIZE_48,

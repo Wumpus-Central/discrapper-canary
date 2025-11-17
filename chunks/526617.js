@@ -6,8 +6,8 @@ n.d(t, {
     n(856094),
     n(472816),
     n(794429);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(990547),
@@ -39,8 +39,8 @@ var r = n(951288),
     x = n(887766),
     L = n(763296),
     M = n(697426),
-    j = n(242291),
-    k = n(22382),
+    k = n(242291),
+    j = n(22382),
     U = n(747071),
     G = n(421673),
     B = n(663215),
@@ -270,11 +270,11 @@ function eu(e) {
         eP = (0, m.Dt)(),
         eD = x.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
         { categories: ew, allSounds: ex, soundCounts: eL } = (0, B.ZP)(a, {}, e_),
-        [eM, ej] = i.useState([]),
-        ek = (0, B.FS)(ew, eM, eN),
+        [eM, ek] = i.useState([]),
+        ej = (0, B.FS)(ew, eM, eN),
         eU = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         [eG, eB] = i.useState(!1),
-        eZ = i.useMemo(() => ek.filter((e) => e.items.length > 0), [ek]),
+        eZ = i.useMemo(() => ej.filter((e) => e.items.length > 0), [ej]),
         eF = i.useMemo(
             () => eZ.findLastIndex((e) => !!(0, w._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eZ],
@@ -294,11 +294,11 @@ function eu(e) {
         eX = i.useCallback(
             (e, t, n, r) => {
                 if (null != I && !P) return I(e, n);
-                let i = (0, j.Nq)(eT, e, a, !1);
+                let i = (0, k.Nq)(eT, e, a, !1);
                 if (null != I && P && i) I(e, n);
-                else if (!X && i && (0, j.C0)(a)) {
+                else if (!X && i && (0, k.C0)(a)) {
                     var o;
-                    (0, j.GN)(e, null != (o = null == a ? void 0 : a.id) ? o : Y.lds, t, r),
+                    (0, k.GN)(e, null != (o = null == a ? void 0 : a.id) ? o : Y.lds, t, r),
                         eR &&
                             D.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
@@ -307,7 +307,7 @@ function eu(e) {
                                 location_stack: t,
                             });
                 } else {
-                    if ((0, j.Nq)(eT, e, a)) return;
+                    if ((0, k.Nq)(eT, e, a)) return;
                     J && eI(e);
                 }
             },
@@ -397,8 +397,8 @@ function eu(e) {
                 onClick: e0,
             });
         }, [e0]),
-        e2 = i.useCallback((e) => (e$(e, t) ? er : en), [t, e$]),
-        e3 = i.useCallback(
+        e3 = i.useCallback((e) => (e$(e, t) ? er : en), [t, e$]),
+        e2 = i.useCallback(
             (e) => {
                 let t = e === eZ.length - 1;
                 return eV && t ? 50 : eV && e === eF ? 20 : 0;
@@ -406,7 +406,7 @@ function eu(e) {
             [eZ.length, eV, eF],
         ),
         e4 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
-        e8 = i.useCallback(
+        e5 = i.useCallback(
             (e, n) => {
                 let i = "".concat(e.key),
                     a = J && es(e.categoryInfo, eS, t),
@@ -438,7 +438,7 @@ function eu(e) {
             },
             [eW, eq, t, e$, J, eS, eV, em],
         ),
-        e5 = i.useCallback(
+        e8 = i.useCallback(
             (e, t) => {
                 let n = t === eZ.length - 1,
                     i = t === eF;
@@ -460,7 +460,7 @@ function eu(e) {
             },
             [eF, eV, eZ.length, em],
         ),
-        e6 = i.useCallback((e) => ej((0, G.cK)(e, Array.from(ex.values()).flat(), eT, a, eE)), [a, eT, ex, eE]),
+        e6 = i.useCallback((e) => ek((0, G.cK)(e, Array.from(ex.values()).flat(), eT, a, eE)), [a, eT, ex, eE]),
         e7 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
@@ -550,7 +550,7 @@ function eu(e) {
         ta = i.useCallback(() => {
             var e;
             let t = L.Z.getSoundById(ea),
-                n = new Audio((0, k.Z)(ea));
+                n = new Audio((0, j.Z)(ea));
             null != eg.current && eg.current.pause(),
                 (eg.current = n),
                 (n.currentTime = 0),
@@ -607,14 +607,14 @@ function eu(e) {
                     hasSearchResults: eM.length > 0,
                     defaultSearchPlaceholder: z.intl.string(z.t.sKt3xS),
                     renderRow: eJ,
-                    renderSectionHeader: e8,
-                    renderSectionFooter: e5,
+                    renderSectionHeader: e5,
+                    renderSectionFooter: e8,
                     renderSection: e4,
                     renderCategoryList: te,
                     renderHeaderAccessories: e9,
                     rowHeight: et,
-                    sectionHeaderHeight: e2,
-                    sectionFooterHeight: e3,
+                    sectionHeaderHeight: e3,
+                    sectionFooterHeight: e2,
                     listPadding: eH,
                     itemNodeWidth: ei,
                     gridNavigatorId: eP,

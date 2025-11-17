@@ -1,6 +1,6 @@
 n.d(t, { Dd: () => M });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(442837),
     a = n(481060),
     o = n(493773),
@@ -61,13 +61,13 @@ function L(e) {
 }
 let M = {
     key: A.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(k, L({}, e)),
+    renderStep: (e) => (0, r.jsx)(j, L({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => P.intl.string(P.t["W685+b"]),
     },
 };
-function j(e) {
+function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, S.JL)(),
         c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
@@ -83,7 +83,7 @@ function j(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: s = "",
@@ -94,7 +94,7 @@ function k(e) {
             giftRecipient: x,
             recommendedGiftSkuIds: L,
             giftingOrigin: M,
-            setValidatingGiftRecipient: k,
+            setValidatingGiftRecipient: j,
         } = (0, T.wD)(),
         {
             selectedSkuId: B,
@@ -112,7 +112,7 @@ function k(e) {
         q = K && M === R.Wt.DM_CHANNEL,
         X = z === p.u.POPULAR ? P.intl.string(P.t.Kwgrrr) : P.intl.string(P.t.r1huYR),
         Q = async (e, t) => {
-            k(!0), null != g && b(), (await (0, c.B1)(e.id, t)) || b(P.intl.string(P.t["4kgVqQ"])), k(!1);
+            j(!0), null != g && b(), (await (0, c.B1)(e.id, t)) || b(P.intl.string(P.t["4kgVqQ"])), j(!1);
         };
     (0, o.ZP)(() => {
         null != B &&
@@ -258,7 +258,7 @@ function k(e) {
                     "data-migration-pending": !0,
                     justify: _.Z.Justify.BETWEEN,
                     align: _.Z.Align.CENTER,
-                    children: (0, r.jsx)(j, {
+                    children: (0, r.jsx)(k, {
                         onStepChange: t,
                         onBackClick: n,
                         disabled: null != g || null == x || x.id === (null == W ? void 0 : W.id) || s.length > R.$n,

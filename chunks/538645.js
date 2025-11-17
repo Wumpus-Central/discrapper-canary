@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -16,20 +16,20 @@ var a = n(951288),
     f = n(558270);
 let b = "Make sure you're only uploading text files!",
     v = (e) => {
-        var t, n, i;
-        let { effect: r, onClick: l } = e,
+        var t, n, l;
+        let { effect: r, onClick: i } = e,
             { deleteConfig: s } = (0, x.n6)();
         return (0, a.jsxs)(c.P3F, {
             className: f.previewCard,
             onClick: () => {
-                l(r);
+                i(r);
             },
             children: [
                 (0, a.jsx)("div", {
                     className: f.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
-                            null == (i = r.config) || null == (n = i.effects) || null == (t = n[0]) ? void 0 : t.base64,
+                            null == (l = r.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
                             ")",
                         ),
                     },
@@ -55,44 +55,44 @@ let b = "Make sure you're only uploading text files!",
     };
 function j() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
-        [r, j] = i.useState(),
-        _ = i.useRef(null),
+        [r, j] = l.useState(),
+        _ = l.useRef(null),
         y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects()),
-        [C, S] = i.useState("");
-    i.useEffect(() => {
+        [C, S] = l.useState("");
+    l.useEffect(() => {
         (0, p.t)(!0);
     }, []);
-    let E = i.useMemo(
+    let E = l.useMemo(
             () =>
                 "" === C
                     ? y
                     : y.filter((e) => {
-                          var t, n, a, i;
+                          var t, n, a, l;
                           let r = C.toLowerCase(),
-                              l = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
-                              s = null != (i = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? i : "";
-                          return l.includes(r) || s.includes(r);
+                              i = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
+                              s = null != (l = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? l : "";
+                          return i.includes(r) || s.includes(r);
                       }),
             [C, y],
         ),
-        T = i.useCallback(
+        O = l.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, m.Eo)(b);
-                let [a, i] = n.split(",");
+                let [a, l] = n.split(",");
                 if (!a.includes("text/plain")) return (0, m.Eo)(b);
-                let r = JSON.parse(atob(i));
+                let r = JSON.parse(atob(l));
                 (r.skuId = (0, s.Z)()), t(r), (0, m.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        O = i.useCallback(
+        T = l.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, m.Eo)("Error uploading file. Try again!");
-                (0, m.Kr)(e.currentTarget.files, T, m.Eo);
+                (0, m.Kr)(e.currentTarget.files, O, m.Eo);
             },
-            [T],
+            [O],
         );
     return (0, a.jsxs)("div", {
         className: f.root,
@@ -104,7 +104,7 @@ function j() {
                             className: f.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: l()(f.section, f.row),
+                                    className: i()(f.section, f.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -142,7 +142,7 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(f.row, f.end, f.section),
+                            className: i()(f.row, f.end, f.section),
                             children: [
                                 (0, a.jsxs)("div", {
                                     className: f.uploadButton,
@@ -154,7 +154,7 @@ function j() {
                                         }),
                                         (0, a.jsx)(u.Z, {
                                             ref: _,
-                                            onChange: O,
+                                            onChange: T,
                                             multiple: !1,
                                         }),
                                     ],

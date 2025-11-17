@@ -1,6 +1,6 @@
 n.d(t, { Z: () => X }), n(388685), n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(481060),
     d = n(475179),
     p = n(239091),
-    h = n(146773),
-    f = n(888651),
+    f = n(146773),
+    h = n(888651),
     g = n(201895),
     m = n(305325),
     b = n(281956),
@@ -131,8 +131,8 @@ class Y extends L.ZP {
                 connectUserDropTarget: s,
                 connectDragPreview: d,
                 canReorderChannel: p,
-                canMoveMembers: h,
-                stageInstance: f,
+                canMoveMembers: f,
+                stageInstance: h,
                 isSubscriptionGated: m,
                 needSubscriptionToAccess: b,
                 unread: _,
@@ -159,7 +159,7 @@ class Y extends L.ZP {
                                 children: (0, r.jsxs)(k.ZP, {
                                     ref: this.channelItemRef,
                                     className: V.iconVisibility,
-                                    iconClassName: o()({ [H.iconLive]: null != f }),
+                                    iconClassName: o()({ [H.iconLive]: null != h }),
                                     channel: e,
                                     selected: !v && t,
                                     connected: n,
@@ -198,7 +198,7 @@ class Y extends L.ZP {
                     this.renderVoiceUsers(),
                 ],
             });
-        return h && (C = s(C)), p && (C = l(a(C))), C;
+        return f && (C = s(C)), p && (C = l(a(C))), C;
     }
     constructor(...e) {
         super(...e),
@@ -282,7 +282,7 @@ class Y extends L.ZP {
             });
     }
 }
-let q = (0, h.B)((0, f.Q)(Y));
+let q = (0, f.B)((0, h.Q)(Y));
 function X(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: o, voiceStates: s } = e,
         c = (0, a.cj)([T.ZP], () => ({
@@ -306,8 +306,8 @@ function X(e) {
             };
         }),
         p = (0, a.e7)([I.Z], () => I.Z.isCollapsed(n.parent_id)),
-        h = (0, S.ZP)(n.id),
-        f = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
+        f = (0, S.ZP)(n.id),
+        h = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, j.Rk)(n.id, x.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: b } = (0, _.Z)(n.id),
         y = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
@@ -328,9 +328,9 @@ function X(e) {
             W(
                 {
                     categoryCollapsed: p,
-                    connectAction: h,
+                    connectAction: f,
                     numAudience: g,
-                    stageInstance: f,
+                    stageInstance: h,
                     isSubscriptionGated: m,
                     needSubscriptionToAccess: b,
                 },

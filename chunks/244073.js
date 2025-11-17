@@ -1,9 +1,9 @@
 n.d(t, { Z: () => k }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    o = n.n(s),
-    l = n(799899),
+var i = n(54381),
+    r = n(473749),
+    o = n(120356),
+    l = n.n(o),
+    s = n(319498),
     a = n(442837),
     c = n(481060),
     d = n(846027),
@@ -15,13 +15,13 @@ var i = n(951288),
     m = n(345243),
     y = n(873596),
     b = n(917405),
-    v = n(430824),
-    _ = n(131951),
+    _ = n(430824),
+    v = n(131951),
     O = n(699516),
     E = n(594174),
-    x = n(979651),
-    S = n(362446),
-    Z = n(518084),
+    S = n(979651),
+    Z = n(362446),
+    x = n(518084),
     j = n(981631),
     C = n(388032),
     I = n(361979),
@@ -81,11 +81,11 @@ class D extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, E.default, O.Z),
             r = null != t ? "".concat(n, " / ").concat(t.name) : n,
-            s = null != t ? t.id : j.ME;
-        return (0, i.jsx)(l.rU, {
-            to: j.Z5c.CHANNEL(s),
+            o = null != t ? t.id : j.ME;
+        return (0, i.jsx)(s.rU, {
+            to: j.Z5c.CHANNEL(o),
             onClick: (t) => {
-                t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
+                t.stopPropagation(), u.Z.channelListScrollTo(o, e.id);
             },
             children: (0, i.jsx)(m.Z, {
                 className: P.channel,
@@ -99,27 +99,27 @@ class D extends r.PureComponent {
             contentClassName: t,
             pinned: n,
             lobbyId: r,
-            channel: s,
-            quality: l,
+            channel: o,
+            quality: s,
             lastPing: a,
             hasVideo: d,
             connectionState: u,
             deaf: h,
             mute: p,
         } = this.props;
-        return null == s
+        return null == o
             ? null
-            : (0, i.jsx)(Z.ZP.Bar, {
-                  className: o()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(Z.ZP.Content, {
-                      className: o()(t, I.content),
+            : (0, i.jsx)(x.ZP.Bar, {
+                  className: l()(e, I.controls, { [I.unpinned]: !n }),
+                  children: (0, i.jsxs)(x.ZP.Content, {
+                      className: l()(t, I.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)("div", {
                               className: P.inner,
                               children: (0, i.jsx)(c.yRy, {
                                   targetElementRef: this.rtcConnectionStatusRef,
-                                  renderPopout: () => this.renderPopout(s.id),
+                                  renderPopout: () => this.renderPopout(o.id),
                                   position: "top",
                                   children: (e) =>
                                       (0, i.jsx)(
@@ -127,12 +127,12 @@ class D extends r.PureComponent {
                                           N(T({}, e), {
                                               innerRef: this.rtcConnectionStatusRef,
                                               children: (0, i.jsx)(b.Z, {
-                                                  channelId: s.id,
-                                                  quality: l,
+                                                  channelId: o.id,
+                                                  quality: s,
                                                   lastPing: a,
                                                   hasVideo: d,
                                                   state: u,
-                                                  children: this.renderChannelLink(s),
+                                                  children: this.renderChannelLink(o),
                                               }),
                                           }),
                                       ),
@@ -194,7 +194,7 @@ class D extends r.PureComponent {
 }
 function k(e) {
     var { context: t, lobbyId: n, channel: r } = e,
-        s = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -203,30 +203,30 @@ function k(e) {
                     var n,
                         i,
                         r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        o = Object.keys(e);
+                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++)
-                    (n = s[i]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < o.length; i++)
+                    (n = o[i]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ["context", "lobbyId", "channel"]);
-    let o = (0, a.e7)([v.Z], () => v.Z.getGuild(null == r ? void 0 : r.getGuildId())),
-        l = (0, a.e7)([x.Z], () => null != r && x.Z.hasVideo(r.id)),
-        [c, d] = (0, a.Wu)([_.Z], () => [_.Z.isSelfMute(t) || _.Z.isSelfMutedTemporarily(t), _.Z.isSelfDeaf(t)]),
-        [u, h, p] = (0, a.Wu)([S.Z], () => [S.Z.getConnectionState(n), S.Z.getLastPing(n), S.Z.getQuality(n)]);
+    let l = (0, a.e7)([_.Z], () => _.Z.getGuild(null == r ? void 0 : r.getGuildId())),
+        s = (0, a.e7)([S.Z], () => null != r && S.Z.hasVideo(r.id)),
+        [c, d] = (0, a.Wu)([v.Z], () => [v.Z.isSelfMute(t) || v.Z.isSelfMutedTemporarily(t), v.Z.isSelfDeaf(t)]),
+        [u, h, p] = (0, a.Wu)([Z.Z], () => [Z.Z.getConnectionState(n), Z.Z.getLastPing(n), Z.Z.getQuality(n)]);
     return (0, i.jsx)(
         D,
-        N(T({}, s), {
+        N(T({}, o), {
             context: t,
             lobbyId: n,
             channel: r,
-            guild: o,
-            hasVideo: l,
+            guild: l,
+            hasVideo: s,
             mute: c,
             deaf: d,
             connectionState: u,

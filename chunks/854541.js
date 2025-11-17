@@ -5,8 +5,8 @@ n.d(t, {
     zH: () => x,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(91192),
@@ -19,7 +19,7 @@ var r = n(951288),
     p = n(44315),
     h = n(981631),
     m = n(388032),
-    g = n(164688);
+    g = n(701224);
 function E(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
+let T = i.lazy(() => Promise.all([n.e("66382"), n.e("28102")]).then(n.bind(n, 534828))),
     S = 7,
     A = () => Promise.resolve();
 function C(e) {
@@ -285,10 +285,10 @@ function D(e) {
             },
             [n, a],
         ),
-        j = (e) => {
+        k = (e) => {
             a((0, c._i)(e));
         },
-        k = (0, r.jsxs)(r.Fragment, {
+        j = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -296,7 +296,7 @@ function D(e) {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return j(t);
+                            return k(t);
                         },
                         color: D.pending.hsl,
                     }),
@@ -340,7 +340,7 @@ function D(e) {
     return (0, r.jsx)(U, {
         "aria-label": m.intl.string(m.t.WTqQ5e),
         className: o()(g.customColorPicker, v),
-        children: k,
+        children: j,
     });
 }
 let w = i.memo(D);

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => f });
-var r = n(951288);
-n(647438);
+n.d(t, { Z: () => h });
+var r = n(54381);
+n(473749);
 var i = n(28664),
     l = n(481060),
     o = n(529103),
@@ -10,8 +10,8 @@ var i = n(28664),
     u = n(626135),
     d = n(981631),
     p = n(388032),
-    h = n(658235);
-function f(e) {
+    f = n(658235);
+function h(e) {
     let { closePopout: t } = e,
         n = (0, c.If)();
     return (0, r.jsx)(i.u, {
@@ -19,7 +19,7 @@ function f(e) {
         text: p.intl.string(p.t["lMR96+"]),
         children: (0, r.jsxs)(l.P3F, {
             "aria-label": "".concat(p.intl.string(p.t["lMR96+"]), ", ").concat(n),
-            className: h.friendRequestsButton,
+            className: f.friendRequestsButton,
             onClick: () => {
                 u.default.track(d.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }),
                     o.Z.transitionToSection(d.pJs.PENDING, { explicit: !0 }),

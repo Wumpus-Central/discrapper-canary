@@ -3,30 +3,30 @@ n.d(t, {
     _: () => u,
 }),
     n(388685);
-var a = n(951288),
-    i = n(647438),
-    r = n(240666),
-    l = n(780384),
+var a = n(54381),
+    l = n(473749),
+    r = n(462654),
+    i = n(780384),
     s = n(481060),
     o = n(626135),
     c = n(756148),
     d = n(981631);
 function u(e) {
     let { sitekey: t, action: n, onVerify: r } = e,
-        [l, u] = i.useState("uninitialized"),
-        m = i.useCallback((e) => {
+        [i, u] = l.useState("uninitialized"),
+        m = l.useCallback((e) => {
             o.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
-        p = i.useCallback(
+        p = l.useCallback(
             (e) => {
                 m("handle-verify"), r(e);
             },
             [r, m],
         ),
-        h = i.useCallback(() => {
-            var e, a, i;
-            null == (i = window) ||
-                null == (a = i.grecaptcha) ||
+        h = l.useCallback(() => {
+            var e, a, l;
+            null == (l = window) ||
+                null == (a = l.grecaptcha) ||
                 null == (e = a.enterprise) ||
                 e.ready(async () => {
                     var e;
@@ -40,14 +40,14 @@ function u(e) {
                         u("loaded");
                 });
         }, [t, n, p, m]),
-        x = i.useCallback(() => {
+        x = l.useCallback(() => {
             u("running"), m("recaptcha-loading"), c.I.loadRecaptchaScript(t, h, m);
         }, [t, h, m]);
     return (
-        i.useEffect(() => {
-            "uninitialized" === l && x();
-        }, [x, l]),
-        i.useEffect(
+        l.useEffect(() => {
+            "uninitialized" === i && x();
+        }, [x, i]),
+        l.useEffect(
             () => () => {
                 m("recaptcha-unloading"),
                     document
@@ -66,29 +66,29 @@ function u(e) {
 let m = (e) => {
     var t,
         n,
-        { theme: i } = e,
+        { theme: l } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         a,
-                        i = {},
+                        l = {},
                         r = Object.keys(e);
-                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(e);
                 for (a = 0; a < r.length; a++)
                     (n = r[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ["theme"]);
-    let o = (0, l.wj)(i) ? "dark" : "light";
+    let o = (0, i.wj)(l) ? "dark" : "light";
     return (0, a.jsx)(
         r.Z,
         ((t = (function (e) {

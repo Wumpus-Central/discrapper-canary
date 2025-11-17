@@ -1,9 +1,9 @@
 t.d(n, {
-    Z: () => N,
+    Z: () => S,
     c: () => Z,
 });
-var l = t(951288),
-    r = t(647438),
+var l = t(54381),
+    r = t(473749),
     i = t(120356),
     s = t.n(i),
     a = t(442837),
@@ -108,7 +108,7 @@ function Z() {
         ],
     });
 }
-function N(e) {
+function S(e) {
     let { message: n, onClose: t, openStreamUpsellModal: r, glow: i = !1 } = e,
         a = {
             section: h.jXE.STREAM_SETTINGS,

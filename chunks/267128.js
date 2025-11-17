@@ -3,8 +3,8 @@ n.d(t, {
     f: () => U,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(913527),
@@ -142,7 +142,7 @@ function M(e, t, n) {
               children: y(),
           });
 }
-function j(e, t) {
+function k(e, t) {
     let {
             baseMessage: n,
             channel: i,
@@ -174,7 +174,7 @@ function j(e, t) {
               isRepliedMessage: !0,
           });
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let { content: i, referencedMessage: a, isReplyAuthorBlocked: s, isReplyAuthorIgnored: l, onClickReply: u } = e,
         d = a.state !== g.Y.DELETED ? u : void 0;
     switch (a.state) {
@@ -355,8 +355,8 @@ function G(e) {
         m = i.useMemo(() => (null != d && u.state === g.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
         E = i.useCallback(() => h((e) => !e), []),
         b = M(e, m, s.type),
-        y = j(e, m),
-        v = k(e, p, E),
+        y = k(e, m),
+        v = j(e, p, E),
         T = i.useMemo(() => (e.compact ? (0, A.Z)((0, O.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&
         null != a &&

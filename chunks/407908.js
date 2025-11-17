@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(481060),
     a = n(109590),
     s = n(189432),
@@ -18,10 +18,10 @@ function b(e) {
     let { channel: b } = e,
         _ = i.useContext(p.AnalyticsContext),
         y = (0, c.Aq)(),
-        x = g.intl.string(m.default["Beo/7v"]),
-        { firstMessage: O } = (0, a.cl)(b),
-        j = null == O || null == (t = O.messageSnapshots) ? void 0 : t[0],
-        v = null == j || null == (n = j.moderatorReport) ? void 0 : n.reported_user_id;
+        O = g.intl.string(m.default["Beo/7v"]),
+        { firstMessage: j } = (0, a.cl)(b),
+        x = null == j || null == (t = j.messageSnapshots) ? void 0 : t[0],
+        v = null == x || null == (n = x.moderatorReport) ? void 0 : n.reported_user_id;
     return b.isModeratorReportChannel() && null != v
         ? (0, r.jsx)(o.ZP.Icon, {
               onClick: () => {
@@ -33,9 +33,9 @@ function b(e) {
                       }),
                       y.dispatch(h.CkL.POPOUT_CLOSE);
               },
-              tooltip: x,
+              tooltip: O,
               icon: l.HI3,
-              "aria-label": x,
+              "aria-label": O,
           })
         : null;
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(570140),
+    i = n(570140),
     s = n(750180),
     o = n(358820),
     c = n(585483),
@@ -10,9 +10,9 @@ var a = n(951288),
     u = n(451429),
     m = n(877600);
 function p() {
-    let [e, t] = i.useState(30),
-        n = i.useCallback(() => {
-            l.Z.dispatch({
+    let [e, t] = l.useState(30),
+        n = l.useCallback(() => {
+            i.Z.dispatch({
                 type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
                 state: s.O.LOADING,
             });
@@ -45,7 +45,7 @@ function p() {
                             size: "sm",
                             text: "Set",
                             onClick: () =>
-                                void l.Z.dispatch({
+                                void i.Z.dispatch({
                                     type: "VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME",
                                     timeInSeconds: e,
                                 }),

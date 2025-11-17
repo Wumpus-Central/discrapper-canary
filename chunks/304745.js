@@ -1,6 +1,6 @@
 n.d(t, { M: () => P }), n(539854);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     a = n(704215),
     o = n(28664),
@@ -30,8 +30,8 @@ function P(e) {
         N = (0, p.g5)(T),
         A = T !== p.jy.CAN_LAUNCH || Z,
         { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, _.Z)(200, 300),
-        D = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
-        k = (0, l.e7)(
+        k = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
+        D = (0, l.e7)(
             [u.ZP],
             () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation()),
         ),
@@ -43,9 +43,9 @@ function P(e) {
             [R],
         ),
         H = (0, v.bp)() === O.IlC.POPOUT,
-        { parentAnalyticsLocation: V, newestAnalyticsLocation: F } = (0, g.ZP)(),
+        { parentAnalyticsLocation: F, newestAnalyticsLocation: V } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, y.v)(V, y.d.ACTIVITY),
+            (0, y.v)(F, y.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -55,9 +55,9 @@ function P(e) {
                               }
                             : { type: "contextless" },
                     openInPopout: H,
-                    analyticsLocation: F,
+                    analyticsLocation: V,
                 });
-        }, [t, H, F, V]),
+        }, [t, H, V, F]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
@@ -103,7 +103,7 @@ function P(e) {
                     children: () =>
                         (0, i.jsx)(C.Xf, {
                             contentType: a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE,
-                            latestVersion: D,
+                            latestVersion: k,
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
                                 return (0, i.jsxs)(i.Fragment, {
@@ -118,7 +118,7 @@ function P(e) {
                                                     disabled: A,
                                                     "aria-label": N,
                                                     label: U ? void 0 : N,
-                                                    isActivityActive: k,
+                                                    isActivityActive: D,
                                                     onClick: () => {
                                                         G(),
                                                             (r === a.z.ACTIVITIES_MINI_SHELF_SPARKLES ||

@@ -1,6 +1,6 @@
 n.d(t, { w: () => A }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(924826),
@@ -108,10 +108,10 @@ function A(e) {
             loading: x = !1,
             onBlur: L,
             onFocus: M,
-            typeahead: j = !1,
+            typeahead: k = !1,
         } = e,
-        k = i.useId(),
-        U = null != n ? n : k,
+        j = i.useId(),
+        U = null != n ? n : j,
         G = i.useMemo(() => f.map((e, t) => v(y({}, e), { index: t })), [f]),
         [B, Z] = i.useState(null != b ? b : []),
         F = null != O,
@@ -124,14 +124,14 @@ function A(e) {
             wrap: R,
             preserveFocusPosition: !0,
         }),
-        { activeIndex: Y, handleKeyDown: W } = N(j, G);
+        { activeIndex: Y, handleKeyDown: W } = N(k, G);
     i.useEffect(() => {
-        if (null != Y && j) {
+        if (null != Y && k) {
             let e = (0, l.jb)(U, (0, g.cA)(U, Y)),
                 t = document.querySelector((0, l.P1)(e));
             null == t || t.focus();
         }
-    }, [Y, G, j, U]);
+    }, [Y, G, k, U]);
     let K = i.useCallback(
             (e) => {
                 if (!0 === a && 1 === V.length && V.includes(e)) return;

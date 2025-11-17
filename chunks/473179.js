@@ -1,17 +1,17 @@
-t.d(n, { Z: () => l });
-var o = t(951288),
-    r = t(481060),
-    a = t(870745),
-    i = t(981631),
-    c = t(388032);
-function l(e) {
-    let { onClose: n, onSelect: t, application: l, channelId: u } = e,
-        _ = (0, a.Z)(l, u, i.IlC.POPOUT);
-    return (0, o.jsx)(r.v2r, {
+t.d(n, { Z: () => c });
+var r = t(54381),
+    o = t(481060),
+    i = t(870745),
+    l = t(981631),
+    a = t(388032);
+function c(e) {
+    let { onClose: n, onSelect: t, application: c, channelId: u } = e,
+        s = (0, i.Z)(c, u, l.IlC.POPOUT);
+    return (0, r.jsx)(o.v2r, {
         navId: "activity-popout-overflow-popout",
         onClose: n,
         onSelect: t,
-        "aria-label": c.intl.string(c.t.SS9Y6P),
-        children: _,
+        "aria-label": a.intl.string(a.t.SS9Y6P),
+        children: s,
     });
 }

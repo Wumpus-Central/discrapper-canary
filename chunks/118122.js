@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(481060),
     a = n(239091),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(451603),
     d = n(885714),
     p = n(155409),
-    h = n(601964),
-    f = n(430824),
+    f = n(601964),
+    h = n(430824),
     g = n(594174),
     m = n(40153),
     b = n(603592),
@@ -66,9 +66,9 @@ function x(e) {
 }
 function C(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        a = (0, l.Wu)([f.Z], () => f.Z.getGuildsArray()),
+        a = (0, l.Wu)([h.Z], () => h.Z.getGuildsArray()),
         C = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        E = i.useMemo(() => a.some((e) => (0, h.eM)(e, C)), [a, C]),
+        E = i.useMemo(() => a.some((e) => (0, f.eM)(e, C)), [a, C]),
         S = (0, o.s9z)((e) => (0, o.DEQ)(e, y.PU)),
         { analyticsLocations: I } = (0, s.ZP)(),
         P = (0, r.jsx)(b.Z, {

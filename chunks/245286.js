@@ -1,8 +1,8 @@
 n.d(t, { default: () => S }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(442837),
-    i = n(704215),
+var r = n(54381),
+    l = n(473749),
+    i = n(442837),
+    o = n(704215),
     a = n(481060),
     c = n(493773),
     s = n(243778),
@@ -15,8 +15,8 @@ var r = n(951288),
     j = n(996733),
     m = n(313789),
     v = n(914578),
-    x = n(920952),
-    g = n(518596),
+    g = n(920952),
+    x = n(518596),
     h = n(388032),
     O = n(942408);
 function P(e) {
@@ -40,20 +40,20 @@ function S(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["target"]);
-    let i = j.Z.useField("query"),
-        { node: a, directory: s } = (0, f.Z)(x.Z, i),
+    let o = j.Z.useField("query"),
+        { node: a, directory: s } = (0, f.Z)(g.Z, o),
         u = null != t && null != s.entry(t) ? t : void 0,
         y = l.useRef(null);
     return ((0, c.ZP)(() => {
@@ -65,7 +65,7 @@ function S(e) {
             }),
             (y.current = e));
     }),
-    (0, o.e7)([p.default], () => null != p.default.getCurrentUser()))
+    (0, i.e7)([p.default], () => null != p.default.getCurrentUser()))
         ? (0, r.jsx)(
               d.Z,
               (function (e) {
@@ -100,7 +100,7 @@ function S(e) {
                       emptyState: _,
                       sidebarFooter: v.Z,
                       onPanelChange: (e) => {
-                          let t = (0, g.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, x.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (P({
                                   destinationPanel: t,
@@ -119,7 +119,7 @@ function S(e) {
 function C() {
     let e = j.Z.useField("query"),
         t = l.useRef(null),
-        [n, o] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        [n, i] = (0, s.US)([o.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         c = l.useMemo(
             () => ({
                 title: h.intl.string(h.t.Kv519a),
@@ -152,10 +152,10 @@ function C() {
                     ref: t,
                 }),
                 (0, r.jsx)(u.Z, {
-                    dismissibleContentType: i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                    dismissibleContentType: o.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
                     targetElementRef: t,
                     visibleContent: n,
-                    markAsDismissed: o,
+                    markAsDismissed: i,
                     props: c,
                 }),
             ],

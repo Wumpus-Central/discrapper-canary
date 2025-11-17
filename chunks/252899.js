@@ -1,8 +1,8 @@
 n.d(t, { F: () => d }), n(388685), n(539854), n(781311), n(642613);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(93582),
-    l = n(481060),
+    i = n(481060),
     s = n(621060),
     o = n(716768);
 function c(e) {
@@ -13,29 +13,29 @@ function c(e) {
     });
 }
 function d(e, t) {
-    let [n, o] = i.useState(""),
-        d = i.useMemo(() => {
+    let [n, o] = l.useState(""),
+        d = l.useMemo(() => {
             if ("" === n.trim()) return e;
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
                 var n, a;
-                let i = (null != (n = (0, r.q)(e.name)) ? n : "").toLowerCase(),
-                    l = (null != (a = e.group) ? a : "").toLowerCase();
-                return i.includes(t) || e.id.toLowerCase().includes(t) || l.includes(t);
+                let l = (null != (n = (0, r.q)(e.name)) ? n : "").toLowerCase(),
+                    i = (null != (a = e.group) ? a : "").toLowerCase();
+                return l.includes(t) || e.id.toLowerCase().includes(t) || i.includes(t);
             });
         }, [e, n]);
     return [
-        i.useMemo(
+        l.useMemo(
             () =>
                 (0, a.jsx)(
-                    l.II_,
+                    i.II_,
                     {
                         id: "devtools-search",
                         control: (e, t) => {
-                            var i, r;
+                            var l, r;
                             return (0, a.jsx)(
-                                l.ne,
-                                ((i = (function (e) {
+                                i.ne,
+                                ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             a = Object.keys(n);
@@ -68,7 +68,7 @@ function d(e, t) {
                                         ref: t,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -77,9 +77,9 @@ function d(e, t) {
                                           }
                                           return n;
                                       })(Object(r)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
-                                i),
+                                l),
                             );
                         },
                     },
@@ -87,12 +87,12 @@ function d(e, t) {
                 ),
             [n],
         ),
-        ...i.useMemo(() => {
+        ...l.useMemo(() => {
             let e = [];
             if ("" !== n.trim() && 0 === d.length)
                 e.push(
                     (0, a.jsx)(
-                        l.sNh,
+                        i.sNh,
                         {
                             id: "devtools-no-results",
                             label: 'No DevTools found for "'.concat(n, '"'),
@@ -102,7 +102,7 @@ function d(e, t) {
                     ),
                 );
             else {
-                let i = d.filter((e) => e.group === s.v0.NONE),
+                let l = d.filter((e) => e.group === s.v0.NONE),
                     o = (function (e) {
                         let t = new Map();
                         for (let a of e) {
@@ -112,22 +112,22 @@ function d(e, t) {
                         }
                         return t;
                     })(d.filter((e) => e.group !== s.v0.NONE));
-                i.forEach((n) => {
-                    let { id: i, name: r } = n;
+                l.forEach((n) => {
+                    let { id: l, name: r } = n;
                     return e.push(
                         (0, a.jsx)(
-                            l.sNh,
+                            i.sNh,
                             {
-                                id: i,
+                                id: l,
                                 label: (0, a.jsx)(c, { label: r }),
-                                action: () => t(i),
+                                action: () => t(l),
                             },
-                            i,
+                            l,
                         ),
                     );
                 }),
-                    s.Zj.forEach((i) => {
-                        let s = o.get(i);
+                    s.Zj.forEach((l) => {
+                        let s = o.get(l);
                         if (null != s && s.length > 0) {
                             let o = s.sort((e, t) => {
                                 var n, a;
@@ -138,14 +138,14 @@ function d(e, t) {
                             "" === n.trim()
                                 ? e.push(
                                       (0, a.jsx)(
-                                          l.sNh,
+                                          i.sNh,
                                           {
-                                              id: "devtools-".concat(i),
-                                              label: (0, a.jsx)(c, { label: i }),
-                                              children: (0, a.jsx)(l.kSQ, {
+                                              id: "devtools-".concat(l),
+                                              label: (0, a.jsx)(c, { label: l }),
+                                              children: (0, a.jsx)(i.kSQ, {
                                                   children: o.map((e) =>
                                                       (0, a.jsx)(
-                                                          l.sNh,
+                                                          i.sNh,
                                                           {
                                                               id: "devtools-".concat(e.id),
                                                               label: (0, a.jsx)(c, { label: e.name }),
@@ -156,17 +156,17 @@ function d(e, t) {
                                                   ),
                                               }),
                                           },
-                                          "devtools-".concat(i),
+                                          "devtools-".concat(l),
                                       ),
                                   )
                                 : e.push(
                                       (0, a.jsx)(
-                                          l.kSQ,
+                                          i.kSQ,
                                           {
-                                              label: i,
+                                              label: l,
                                               children: o.map((e) =>
                                                   (0, a.jsx)(
-                                                      l.sNh,
+                                                      i.sNh,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
                                                           label: (0, a.jsx)(c, { label: e.name }),
@@ -176,7 +176,7 @@ function d(e, t) {
                                                   ),
                                               ),
                                           },
-                                          "devtools-filtered-".concat(i),
+                                          "devtools-filtered-".concat(l),
                                       ),
                                   );
                         }

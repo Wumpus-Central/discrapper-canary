@@ -4,8 +4,8 @@ n.r(t),
         default: () => B,
     }),
     n(388685);
-var r = n(951288),
-    o = n(647438),
+var r = n(54381),
+    o = n(473749),
     l = n(120356),
     i = n.n(l),
     a = n(512722),
@@ -17,8 +17,8 @@ var r = n(951288),
     p = n(448986),
     f = n(210887),
     v = n(617136),
-    g = n(915750),
-    E = n(509212),
+    E = n(915750),
+    g = n(509212),
     O = n(113434),
     b = n(569984),
     h = n(497505),
@@ -29,13 +29,13 @@ var r = n(951288),
     x = n(589313),
     j = n(877242),
     D = n(165317),
-    T = n(449788),
-    P = n(874010),
+    P = n(449788),
+    T = n(874010),
     R = n(656357),
     I = n(267322),
     N = n(684245),
-    w = n(46140),
-    A = n(231338),
+    A = n(46140),
+    w = n(231338),
     k = n(388032),
     M = n(273339);
 function L(e) {
@@ -100,15 +100,15 @@ function F(e) {
             parentModalOpenStartClockTime: B,
             sourceQuestContent: H,
         } = e,
-        U = (0, E.il)(b),
+        U = (0, g.il)(b),
         q = (0, O.tP)(b),
-        Y = (0, g.aM)(),
+        Y = (0, E.aM)(),
         [G, Q] = o.useState(U.progressSeconds),
         [W, K] = o.useState(142),
-        { variant: z, enabled: X } = S.EO.useConfig({ location: w.dr.VIDEO_MODAL }),
+        { variant: z, enabled: X } = S.EO.useConfig({ location: A.dr.VIDEO_MODAL }),
         J = null == (n = b.config.taskConfigV2) || null == (t = n.tasks) ? void 0 : t[c.X.WATCH_VIDEO];
     s()(null != J, "VideoQuestModal: videoTask must not be null");
-    let $ = (0, E.ZS)(J),
+    let $ = (0, g.ZS)(J),
         ee = "portrait" === $,
         et = (0, p.Z)((e) => {
             K(e.target.offsetHeight);
@@ -122,7 +122,7 @@ function F(e) {
             impressionId: Y,
         }),
         el = (0, u.e7)([f.Z], () => f.Z.getState().theme),
-        ei = (0, d.wjy)(el) ? A.BR.DARK : A.BR.LIGHT,
+        ei = (0, d.wjy)(el) ? w.BR.DARK : w.BR.LIGHT,
         ea = o.useMemo(
             () => ({
                 quest: b,
@@ -190,7 +190,7 @@ function F(e) {
                                                           className: i()(M.contentHeaderLogotype, M.accentOnHover),
                                                           src: (0, C.fh)(b, C.eC.LOGO_TYPE, ei).url,
                                                       }),
-                                                      (0, r.jsx)(P.Z, {}),
+                                                      (0, r.jsx)(T.Z, {}),
                                                       (0, r.jsxs)("div", {
                                                           className: M.questHeading,
                                                           children: [
@@ -232,7 +232,7 @@ function F(e) {
                                                         children: [
                                                             q ? null : (0, r.jsx)(D.Z, { tooltipPosition: "top" }),
                                                             (0, r.jsx)(j.Z, {}),
-                                                            !er && (0, r.jsx)(T.Z, { floatRight: !0 }),
+                                                            !er && (0, r.jsx)(P.Z, { floatRight: !0 }),
                                                         ],
                                                     })
                                                   : null,
@@ -251,7 +251,7 @@ function F(e) {
                                                       }),
                                                       X
                                                           ? (0, r.jsx)(_.Z, { handlePrimaryCtaClick: eo })
-                                                          : (0, r.jsx)(T.Z, {}),
+                                                          : (0, r.jsx)(P.Z, {}),
                                                   ],
                                               }),
                                           ],
@@ -277,7 +277,7 @@ function F(e) {
                                                       [M.contentFooterButtonContV2]: X,
                                                   }),
                                                   children: [
-                                                      !er && (0, r.jsx)(T.Z, {}),
+                                                      !er && (0, r.jsx)(P.Z, {}),
                                                       (0, r.jsx)(x.Z, {}),
                                                       X ? (0, r.jsx)(_.Z, { handlePrimaryCtaClick: eo }) : null,
                                                   ],

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v }), n(388685);
 var a,
-    i = n(951288),
-    r = n(647438),
-    l = n(120356),
-    s = n.n(l),
+    l = n(54381),
+    r = n(473749),
+    i = n(120356),
+    s = n.n(i),
     o = n(873546),
     c = n(481060),
     d = n(599857),
@@ -29,10 +29,10 @@ let f = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
 class b extends (a = r.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
-        return (0, i.jsx)(i.Fragment, {
+        return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
                 e === p.PUi.CAPTCHA
-                    ? (0, i.jsx)(
+                    ? (0, l.jsx)(
                           d.Z,
                           {
                               onVerify: a,
@@ -40,7 +40,7 @@ class b extends (a = r.PureComponent) {
                           },
                           t,
                       )
-                    : (0, i.jsx)(
+                    : (0, l.jsx)(
                           c.Button,
                           {
                               onClick: () => this.handleClick(e),
@@ -52,14 +52,14 @@ class b extends (a = r.PureComponent) {
         });
     }
     render() {
-        return (0, i.jsxs)(c.Kqy, {
+        return (0, l.jsxs)(c.Kqy, {
             gap: 16,
             className: x.verification,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(c.Kqy, {
+                (0, l.jsxs)(c.Kqy, {
                     gap: 16,
                     fullWidth: !1,
                     className: s()(x.container, { [x.isMobile]: o.tq }),
@@ -67,25 +67,25 @@ class b extends (a = r.PureComponent) {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(c.Kqy, {
+                        (0, l.jsxs)(c.Kqy, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: x.image }),
-                                (0, i.jsxs)(c.Kqy, {
+                                (0, l.jsx)("div", { className: x.image }),
+                                (0, l.jsxs)(c.Kqy, {
                                     className: x.textContainer,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(c.Heading, {
+                                        (0, l.jsx)(c.Heading, {
                                             variant: "heading-xl/normal",
                                             children: h.intl.string(h.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(c.Text, {
+                                        (0, l.jsx)(c.Text, {
                                             variant: "text-md/normal",
                                             children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: f }),
                                         }),
@@ -93,7 +93,7 @@ class b extends (a = r.PureComponent) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(c.Kqy, {
+                        (0, l.jsx)(c.Kqy, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -102,33 +102,33 @@ class b extends (a = r.PureComponent) {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(c.Kqy, {
+                (0, l.jsxs)(c.Kqy, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(c.Text, {
+                        (0, l.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             className: x.footer,
                             children: h.intl.string(h.t.qqYun3),
                         }),
-                        (0, i.jsxs)(c.Kqy, {
+                        (0, l.jsxs)(c.Kqy, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, l.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: x.footer,
                                     children: h.intl.format(h.t.WL51ZR, { supportURL: u.Z.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", {
+                                (0, l.jsx)("div", {
                                     className: s()(x.footer, x.footerBullet),
                                     children: "\u2022",
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, l.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: x.footer,
                                     children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),

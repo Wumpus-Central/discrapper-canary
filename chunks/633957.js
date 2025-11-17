@@ -1,6 +1,6 @@
 n.d(t, { Z: () => F }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(506071),
     L = n(226378),
     M = n(981631),
-    j = n(701488),
-    k = n(967249),
+    k = n(701488),
+    j = n(967249),
     U = n(388032),
     G = n(853392);
 function B(e) {
@@ -80,7 +80,7 @@ function B(e) {
         J = null == Q ? void 0 : Q.details,
         $ = i.useMemo(() => {
             let e = new T.ZP(d);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = j.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e;
         }, [d]),
         ee = (0, h.s5)({
             userId: Y,
@@ -225,7 +225,7 @@ function B(e) {
         onClickContent: es,
         trackingConfig: {
             id: d.id,
-            linkType: k.U.ACTIVITY_INSTANCE,
+            linkType: j.U.ACTIVITY_INSTANCE,
             guildId: D,
             channelId: I,
             messageId: x.id,

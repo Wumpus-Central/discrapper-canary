@@ -1,6 +1,6 @@
 n.d(t, { Z: () => j });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(907331),
@@ -20,8 +20,8 @@ var l = n(120356),
     v = n(497788),
     x = n(215023),
     E = n(981631),
-    S = n(388032),
-    O = n(310582);
+    O = n(388032),
+    S = n(310582);
 (0, C.IC)(90);
 let y = {
         rankedSkuIds: [],
@@ -56,15 +56,15 @@ let y = {
             } = (0, _.hr)(s),
             R = null != (t = null == L ? void 0 : L.responsive) && t,
             Z = null == L ? void 0 : L.backgroundStyle,
-            w = C === x.AW.ORBS ? S.intl.string(S.t["1CdL8d"]) : S.intl.string(S.t.xYKa1T),
+            w = C === x.AW.ORBS ? O.intl.string(O.t["1CdL8d"]) : O.intl.string(O.t.xYKa1T),
             H = (0, m.FF)("CollectiblesContent");
         return null != I && (n || s !== y)
             ? (0, r.jsxs)("div", {
                   ref: k,
-                  className: O.heroBlock,
+                  className: S.heroBlock,
                   children: [
                       (0, r.jsx)("div", {
-                          className: O.banner,
+                          className: S.banner,
                           style: null != Z ? { background: Z } : void 0,
                           children:
                               null != N &&
@@ -75,28 +75,28 @@ let y = {
                               }),
                       }),
                       (0, r.jsxs)("div", {
-                          className: O.heroBlockContent,
+                          className: S.heroBlockContent,
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: i()(O.heroHeaderContainer, { [O.responsive]: R }),
+                                  className: i()(S.heroHeaderContainer, { [S.responsive]: R }),
                                   children: [
                                       n
-                                          ? (0, r.jsx)("div", { className: O.heroHeaderBadgeLogoSummaryContainer })
+                                          ? (0, r.jsx)("div", { className: S.heroHeaderBadgeLogoSummaryContainer })
                                           : (0, r.jsxs)("div", {
-                                                className: O.heroHeaderBadgeLogoSummaryContainer,
+                                                className: S.heroHeaderBadgeLogoSummaryContainer,
                                                 children: [
                                                     null != s.unpublishedAt &&
                                                         (0, r.jsx)(u.IGR, {
                                                             disableColor: !0,
-                                                            text: S.intl.string(S.t["h/uBCR"]),
-                                                            className: O.limitedTimeBadge,
+                                                            text: O.intl.string(O.t["h/uBCR"]),
+                                                            className: S.limitedTimeBadge,
                                                         }),
                                                     (0, r.jsxs)("div", {
-                                                        className: O.heroLogoNameContainer,
+                                                        className: S.heroLogoNameContainer,
                                                         children: [
                                                             null != P &&
                                                                 (0, r.jsx)("img", {
-                                                                    className: O.heroHeaderLogo,
+                                                                    className: S.heroHeaderLogo,
                                                                     src: P,
                                                                     alt: s.name,
                                                                     style: null == B ? void 0 : B.toDesktopStyles(),
@@ -104,14 +104,14 @@ let y = {
                                                             null != s.title &&
                                                                 (0, r.jsx)(u.Heading, {
                                                                     variant: "heading-xxl/bold",
-                                                                    className: O.title,
+                                                                    className: S.title,
                                                                     color: "header-primary",
                                                                     children: s.title,
                                                                 }),
                                                             "" !== s.summary &&
                                                                 (0, r.jsx)(u.Text, {
                                                                     variant: "text-md/normal",
-                                                                    className: O.subHeaderText,
+                                                                    className: S.subHeaderText,
                                                                     style:
                                                                         null != s.bannerTextColor
                                                                             ? { color: s.bannerTextColor }
@@ -124,7 +124,7 @@ let y = {
                                             }),
                                       !n &&
                                           (0, r.jsx)("div", {
-                                              className: O.heroHeaderButtonContainer,
+                                              className: S.heroHeaderButtonContainer,
                                               children: (0, r.jsx)(u.Button, {
                                                   variant: "overlay-primary",
                                                   onClick: () => {

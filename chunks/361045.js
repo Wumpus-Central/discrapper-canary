@@ -1,9 +1,9 @@
 n.d(t, { n: () => c });
-var a = n(951288);
-n(647438);
-var i = n(481060),
+var a = n(54381);
+n(473749);
+var l = n(481060),
     r = n(688465),
-    l = n(921944),
+    i = n(921944),
     s = n(388032),
     o = n(941246);
 function c(e) {
@@ -22,10 +22,10 @@ function c(e) {
             (0, a.jsxs)("div", {
                 className: o.content,
                 children: [
-                    (0, a.jsx)(i.P3F, {
+                    (0, a.jsx)(l.P3F, {
                         className: o.closeIcon,
-                        onClick: () => t(l.L.USER_DISMISS),
-                        children: (0, a.jsx)(i.Dio, {}),
+                        onClick: () => t(i.L.USER_DISMISS),
+                        children: (0, a.jsx)(l.Dio, {}),
                     }),
                     (0, a.jsx)("img", {
                         src: n(414190),
@@ -34,25 +34,25 @@ function c(e) {
                     }),
                     (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsxs)(i.Heading, {
+                            (0, a.jsxs)(l.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: o.heading,
                                 children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(r.Z, { className: o.betaTag })],
                             }),
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(l.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: s.intl.string(s.t["l+lSLp"]),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(i.Button, {
+                    (0, a.jsx)(l.Button, {
                         variant: "primary",
                         text: s.intl.string(s.t["9WdoB+"]),
                         fullWidth: !0,
                         onClick: () => {
-                            t(l.L.TAKE_ACTION), c();
+                            t(i.L.TAKE_ACTION), c();
                         },
                     }),
                 ],

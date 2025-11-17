@@ -1,6 +1,6 @@
 n.d(t, { ApplicationCommandShareModal: () => _ }), n(388685);
-var l = n(951288),
-    r = n(647438),
+var l = n(54381),
+    r = n(473749),
     i = n(793030),
     a = n(481060),
     s = n(911969),

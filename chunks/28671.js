@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(296009),
     l = n(28664),
     o = n(481060),
@@ -23,7 +23,7 @@ function b(e) {
                 }),
             [n.id],
         ),
-        v = i.useCallback(() => {
+        O = i.useCallback(() => {
             null != y &&
                 ((0, u.qH)(y.type, y, !0),
                 h({
@@ -61,7 +61,7 @@ function b(e) {
                             icon: o.kmB,
                             "aria-label": m.intl.formatToPlainString(m.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                b(p.L.TAKE_ACTION), v();
+                                b(p.L.TAKE_ACTION), O();
                             },
                         }),
                     }),

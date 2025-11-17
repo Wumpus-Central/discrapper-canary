@@ -17,8 +17,8 @@ n.r(t),
         openQuestsRewardCodeModal: () => B,
         openVideoQuestModal: () => Q,
     });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(772848),
     a = n(271579),
     o = n(756647),
@@ -78,7 +78,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -90,12 +90,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -120,7 +120,7 @@ function B(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    k(M({}, n), {
+                    j(M({}, n), {
                         initialQuest: t,
                         preview: o,
                         sourceQuestContent: c,
@@ -132,7 +132,7 @@ function B(e) {
         return (e) =>
             (0, r.jsx)(
                 u,
-                k(M({}, e), {
+                j(M({}, e), {
                     questId: t.id,
                     questContentPosition: a,
                     questContent: i,
@@ -151,7 +151,7 @@ function Z(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      k(M({}, n), {
+                      j(M({}, n), {
                           quest: e,
                           location: t,
                       }),
@@ -166,7 +166,7 @@ function F(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    k(M({}, n), {
+                    j(M({}, n), {
                         initialQuest: e,
                         location: t,
                         sourceQuestContent: i,
@@ -177,7 +177,7 @@ function F(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(M({}, n), {
+                j(M({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -192,7 +192,7 @@ function V(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    k(M({}, n), {
+                    j(M({}, n), {
                         initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -203,7 +203,7 @@ function V(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(M({}, n), {
+                j(M({}, n), {
                     quest: e,
                     location: t,
                 }),
@@ -217,7 +217,7 @@ function H(e, t, i, a) {
             return (n) =>
                 (0, r.jsx)(
                     o,
-                    k(M({}, n), {
+                    j(M({}, n), {
                         initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -229,7 +229,7 @@ function H(e, t, i, a) {
         return (n) =>
             (0, r.jsx)(
                 o,
-                k(M({}, n), {
+                j(M({}, n), {
                     quest: e,
                     location: t,
                     preview: a,
@@ -243,7 +243,7 @@ function Y(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(M({}, n), {
+                j(M({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -265,7 +265,7 @@ function W(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    k(M({}, n), {
+                    j(M({}, n), {
                         questContent: t.content,
                         quest: e,
                     }),
@@ -302,7 +302,7 @@ function q(e) {
         });
 }
 function X() {
-    return Promise.all([n.e("13193"), n.e("32249"), n.e("24875")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("13193"), n.e("75909"), n.e("38746")]).then(n.bind(n, 215113));
 }
 function Q(e) {
     var t;
@@ -345,7 +345,7 @@ function Q(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    k(M({}, t), {
+                    j(M({}, t), {
                         openStartClockTime: performance.now(),
                         questId: n.id,
                         autoplay: c,
@@ -358,7 +358,7 @@ function Q(e) {
             modalKey: (0, E.u7)(n.id),
             backdropStyle: s.fCB.IMMERSIVE,
             onCloseCallback: () =>
-                (0, E.Mo)({
+                (0, E.Th)({
                     questId: n.id,
                     sourceQuestContent: o,
                     videoSessionId: d,
@@ -437,11 +437,11 @@ function et(e) {
 }
 function en(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("74990"), n.e("16794")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("69611"), n.e("53145")]).then(n.bind(n, 627080));
         return (n) =>
             (0, r.jsx)(
                 t,
-                k(M({}, n), {
+                j(M({}, n), {
                     questId: e.id,
                     questName: e.config.messages.questName,
                 }),

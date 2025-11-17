@@ -1,6 +1,6 @@
 n.d(t, { Z: () => B });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -162,7 +162,7 @@ let D = () =>
             ],
         });
     },
-    j = (e) => {
+    k = (e) => {
         let { title: t, rows: n } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -185,7 +185,7 @@ let D = () =>
             ],
         });
     },
-    k = (e) => {
+    j = (e) => {
         let t,
             { premiumType: n } = e,
             i = (0, u.ZP)();
@@ -214,12 +214,12 @@ let D = () =>
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: v.headerCell,
-                        children: (0, r.jsx)(k, { premiumType: y.PremiumTypes.TIER_0 }),
+                        children: (0, r.jsx)(j, { premiumType: y.PremiumTypes.TIER_0 }),
                     }),
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: o()(v.headerCell, v.topBorderRadius),
-                        children: (0, r.jsx)(k, { premiumType: y.PremiumTypes.TIER_2 }),
+                        children: (0, r.jsx)(j, { premiumType: y.PremiumTypes.TIER_2 }),
                     }),
                 ],
             }),
@@ -272,7 +272,7 @@ let D = () =>
             x = (0, E.Aq)(y.Xh.PREMIUM_MONTH_TIER_2),
             L = "".concat(x, "/").concat((0, h.eP)(y.rV.MONTH)),
             M = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_0),
-            k = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
+            j = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
             B = (0, b.e)();
         if (!I || !T) return null;
         n = l ? null : null != S ? (0, r.jsx)(w, {}) : (0, r.jsx)(D, {});
@@ -308,11 +308,11 @@ let D = () =>
                                     children: [
                                         (0, r.jsx)(G, {
                                             tier0MonthlyPrice: M,
-                                            tier2MonthlyPrice: k,
+                                            tier2MonthlyPrice: j,
                                             shouldUseDiscountPrice: R,
                                             tier2DiscountedPriceString: L,
                                         }),
-                                        B.map((e) => (0, i.createElement)(j, P(N({}, e), { key: e.id }))),
+                                        B.map((e) => (0, i.createElement)(k, P(N({}, e), { key: e.id }))),
                                     ],
                                 }),
                             ],

@@ -1,5 +1,5 @@
 n.d(t, {
-    $e: () => k,
+    $e: () => j,
     $w: () => F,
     Og: () => H,
     ZY: () => V,
@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(314940),
     n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(278074),
@@ -155,7 +155,7 @@ function M(e) {
         children: s,
     });
 }
-function j(e) {
+function k(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: s, hasSelectedAnyAnswer: l, isFirstAnswer: u } = e;
     t = l ? (s ? 0 : -1) : u ? 0 : -1;
@@ -170,7 +170,7 @@ function j(e) {
         children: i,
     });
 }
-function k(e) {
+function j(e) {
     let {
             answers: t,
             answersInteraction: n,
@@ -246,7 +246,7 @@ function U(e) {
                 children: a,
             });
         case 1:
-            return (0, r.jsx)(j, {
+            return (0, r.jsx)(k, {
                 className: o()(t, f),
                 onClick: p,
                 isSelected: _,

@@ -1,6 +1,6 @@
 n.d(t, { k: () => w });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(780384),
     s = n(481060),
@@ -38,7 +38,7 @@ let D = (e) => {
         let t,
             w,
             x,
-            { className: L, emojiGrid: M, guildId: j, pickerIntention: k, channel: U } = e,
+            { className: L, emojiGrid: M, guildId: k, pickerIntention: j, channel: U } = e,
             { enabled: G } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
@@ -72,9 +72,9 @@ let D = (e) => {
             V = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
-            W = (0, v.C1)(j, P(t) ? t : null),
+            W = (0, v.C1)(k, P(t) ? t : null),
             K = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: z } = (0, I.Z)(j, k),
+            { newlyAddedEmojis: z } = (0, I.Z)(k, j),
             q = (null == Z ? void 0 : Z.type) === S.ld.EMOJI ? Z.subCategory : A.t0.NONE;
         if (
             (i.useEffect(() => {
@@ -92,7 +92,7 @@ let D = (e) => {
                                 emoji: t,
                                 subCategory: q,
                                 position: Z.columnIndex + 1,
-                                newlyAddedHighlight: q === A.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(j, t.id),
+                                newlyAddedHighlight: q === A.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(k, t.id),
                             }));
                 };
             }),
@@ -168,8 +168,8 @@ let D = (e) => {
                 : D({
                       inspectedEmoji: t,
                       channel: U,
-                      guildId: j,
-                      intention: k,
+                      guildId: k,
+                      intention: j,
                       guild: F,
                   });
         return (0, r.jsx)(p.Z, {

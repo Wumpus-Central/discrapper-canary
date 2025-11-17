@@ -1,8 +1,8 @@
 n.d(t, { P: () => v }), n(388685), n(35282), n(49124);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(394900),
-    l = n(661105),
+    i = n(661105),
     s = n(609067),
     o = n(94367),
     c = n(407146),
@@ -72,7 +72,7 @@ let f = Object.keys(p.jQ).map((e) => ({
 function v(e) {
     let { state: t, setState: n } = e,
         { scales: r } = t,
-        [l, s] = i.useState(null),
+        [i, s] = l.useState(null),
         o = (0, a.jsxs)("div", {
             className: h.section,
             children: [
@@ -125,7 +125,7 @@ function v(e) {
                 }),
             ],
         }),
-        u = r.find((e) => e.name === l),
+        u = r.find((e) => e.name === i),
         f =
             null != u
                 ? (0, a.jsx)(j, {
@@ -137,7 +137,7 @@ function v(e) {
     return (0, a.jsx)("div", { children: f });
 }
 function j(e) {
-    let { scale: t, setState: n, onClose: i } = e,
+    let { scale: t, setState: n, onClose: l } = e,
         {
             name: c,
             base: x,
@@ -157,7 +157,7 @@ function j(e) {
                 className: h.titleWithIcon,
                 children: [
                     (0, a.jsx)(d.P3F, {
-                        onClick: i,
+                        onClick: l,
                         style: { maxWidth: 80 },
                         children: (0, a.jsx)(d.whL, { size: "sm" }),
                     }),
@@ -171,7 +171,7 @@ function j(e) {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
-                                        value: (0, r.Z)((0, l.Z)(a, p.HW.sRGB), { format: "hex" }),
+                                        value: (0, r.Z)((0, i.Z)(a, p.HW.sRGB), { format: "hex" }),
                                         type: "color",
                                     }),
                                     e
@@ -274,10 +274,10 @@ function j(e) {
                         className: h.paletteOverrides,
                         "data-columnar": b,
                         children: Object.entries(S).map((e, n) => {
-                            let [i, c] = e,
+                            let [l, c] = e,
                                 u = (0, p.HI)(c),
                                 m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                h = E[i];
+                                h = E[l];
                             return (0, a.jsxs)(
                                 "div",
                                 {
@@ -303,14 +303,14 @@ function j(e) {
                                                     color: m,
                                                 },
                                                 children: [
-                                                    (0, r.Z)((0, l.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
+                                                    (0, r.Z)((0, i.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
                                                     " - ",
                                                     u,
                                                 ],
                                             }),
                                     ],
                                 },
-                                i,
+                                l,
                             );
                         }),
                     }),
@@ -321,8 +321,8 @@ function j(e) {
 }
 function _(e) {
     let { scale: t, onRemove: n } = e,
-        s = i.useMemo(
-            () => Object.values((0, p.XM)(t)).map((e) => (0, r.Z)((0, l.Z)(e, p.HW.sRGB), { format: "hex" })),
+        s = l.useMemo(
+            () => Object.values((0, p.XM)(t)).map((e) => (0, r.Z)((0, i.Z)(e, p.HW.sRGB), { format: "hex" })),
             [t],
         );
     return (0, a.jsxs)("li", {

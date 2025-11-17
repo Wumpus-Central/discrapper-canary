@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(704215),
     a = n(952265),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(434479),
     d = n(703656),
     p = n(819640),
-    h = n(933104),
-    f = n(981631),
+    f = n(933104),
+    h = n(981631),
     g = n(176505),
     m = n(921944),
     b = n(732031),
@@ -30,13 +30,13 @@ let O = i.memo(function (e) {
             [x, S],
         ),
         P = i.useCallback(() => {
-            I(m.L.USER_DISMISS), (0, d.uL)(f.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
+            I(m.L.USER_DISMISS), (0, d.uL)(h.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
         }, [t, I]),
         N = i.useRef(null),
         Z = E === o.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
         w = i.useCallback(
             () =>
-                (0, r.jsx)(h.En, {
+                (0, r.jsx)(f.En, {
                     channelRowRef: N,
                     guildId: t,
                     markAsDismissed: I,

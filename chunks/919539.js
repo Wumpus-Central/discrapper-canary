@@ -1,6 +1,6 @@
 n.d(t, { Z: () => N });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(755721),
     o = n(168107),
     s = n(480916),
@@ -53,9 +53,9 @@ function C(e) {
     function M(e, t) {
         if (!e && (0, _.S)())
             return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
-        t ? x(e) : j(!e);
+        t ? x(e) : k(!e);
     }
-    function j(e) {
+    function k(e) {
         let t = () => {
                 h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), L(e, !0);
             },

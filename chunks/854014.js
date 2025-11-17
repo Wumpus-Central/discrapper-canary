@@ -1,8 +1,8 @@
 n.d(t, { y: () => p }), n(361932), n(187205);
-var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    o = n.n(i),
     a = n(91192),
     c = n(481060),
     s = n(996435),
@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(873395);
 function b(e) {
     var t, n;
-    let { onClick: l, active: o, node: a, visibleContent: s, itemProps: d } = e,
+    let { onClick: l, active: i, node: a, visibleContent: s, itemProps: d } = e,
         { icon: b, stronglyDiscouragedCustomComponent: p, trailing: y, useTitle: j } = a,
         m = null == j ? void 0 : j();
     return (0, r.jsxs)(
@@ -42,7 +42,7 @@ function b(e) {
             return e;
         })(
             {
-                className: i()(f.item, { [f.active]: o }),
+                className: o()(f.item, { [f.active]: i }),
                 onClick: l,
             },
             d,
@@ -73,7 +73,7 @@ function b(e) {
                             children: (0, r.jsx)(u.W, {
                                 trailing: y,
                                 visibleContent: s,
-                                isSelected: o,
+                                isSelected: i,
                             }),
                         }),
                 ],
@@ -94,27 +94,27 @@ function b(e) {
     );
 }
 function p(e) {
-    let { node: t, visibleContent: n, hoisted: o = !1 } = e,
-        i = l.useMemo(() => t.layout[0], [t]),
+    let { node: t, visibleContent: n, hoisted: i = !1 } = e,
+        o = l.useMemo(() => t.layout[0], [t]),
         c = s.Z.useField("currentPanelKey"),
-        u = null != c && c === (null == i ? void 0 : i.key),
+        u = null != c && c === (null == o ? void 0 : o.key),
         f =
-            null != i
+            null != o
                 ? () =>
                       s.Z.setState({
-                          targetKey: i.key,
+                          targetKey: o.key,
                           showNavigationMobile: !1,
                       })
                 : t.onClick,
         p = l.useMemo(() => {
             var e;
-            return (null != (e = null == i ? void 0 : i.layout.flatMap((e) => e.layout)) ? e : []).filter(
+            return (null != (e = null == o ? void 0 : o.layout.flatMap((e) => e.layout)) ? e : []).filter(
                 (e) => null != e.useTitle || null != e.useNavigationTitle,
             );
-        }, [i]);
+        }, [o]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            o
+            i
                 ? (0, r.jsx)("li", {
                       children: (0, r.jsx)(b, {
                           onClick: f,

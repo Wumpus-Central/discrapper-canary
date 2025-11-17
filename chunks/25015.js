@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(627050),
     o = n(905405),
     s = n(626135),
@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(981631),
     p = n(388032),
     h = n(491068);
-let m = i.lazy(() => Promise.all([n.e("51889"), n.e("85831")]).then(n.bind(n, 120314)));
+let m = i.lazy(() => Promise.all([n.e("64098"), n.e("85831")]).then(n.bind(n, 120314)));
 function g(e, t) {
     let {
             hideSimpleEmbedContent: g,

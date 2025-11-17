@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(481060),
@@ -71,7 +71,7 @@ function m(e) {
         y = i.useCallback(() => {
             c.Z.showAgeVerificationGetStartedModal({ entryPoint: d.cU.NSFW_GUILD });
         }, []),
-        x =
+        O =
             ((t = g({}, m)),
             (n = n =
                 {
@@ -103,7 +103,7 @@ function m(e) {
                         onDisagree: b,
                         modalType: f,
                     },
-                    x,
+                    O,
                 ),
             );
         default:
@@ -115,7 +115,7 @@ function m(e) {
                         onDisagree: b,
                         modalType: f,
                     },
-                    x,
+                    O,
                 ),
             );
     }

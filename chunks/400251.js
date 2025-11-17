@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(388685),
     n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
@@ -21,9 +21,9 @@ var r = n(951288),
     b = n(769654),
     _ = n(430824),
     y = n(768581),
-    x = n(411198),
-    O = n(683818),
-    j = n(16853),
+    O = n(411198),
+    j = n(683818),
+    x = n(16853),
     v = n(981631),
     C = n(388032),
     I = n(706800),
@@ -94,7 +94,7 @@ function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
-        { canEdit: u } = (0, O.Z)(t);
+        { canEdit: u } = (0, j.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(I.actionButtonsContainer, { [I.forceButtonsShow]: l }),
         children: (0, r.jsxs)(h.ZP, {
@@ -118,7 +118,7 @@ function T(e) {
                           }),
                       })
                     : null,
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(x.Z, {
                     targetElementRef: d,
                     onRequestOpen: () => s(!0),
                     onRequestClose: () => s(!1),
@@ -178,7 +178,7 @@ let N = (e) => {
     let { entry: l } = e,
         [a, o] = i.useState(!1),
         h = null != (0, s.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        O = async () => {
+        j = async () => {
             o(!0);
             try {
                 h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
@@ -186,7 +186,7 @@ let N = (e) => {
                 o(!1);
             }
         },
-        j = y.ZP.getGuildSplashURL({
+        x = y.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, m.x_)(),
@@ -218,9 +218,9 @@ let N = (e) => {
                         (0, r.jsx)("div", {
                             className: I.splash,
                             children:
-                                null != j &&
+                                null != x &&
                                 (0, r.jsx)("img", {
-                                    src: j,
+                                    src: x,
                                     alt: "",
                                     className: I.splashImage,
                                 }),
@@ -236,7 +236,7 @@ let N = (e) => {
                                     children: (0, r.jsx)(f.Z, {
                                         className: I.icon,
                                         iconSrc: S,
-                                        guild: (0, x.e)(l),
+                                        guild: (0, O.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
@@ -307,7 +307,7 @@ let N = (e) => {
                             children: (0, r.jsx)(c.Button, {
                                 loading: a,
                                 variant: h ? "secondary" : "active",
-                                onClick: O,
+                                onClick: j,
                                 text: P,
                                 fullWidth: !0,
                             }),

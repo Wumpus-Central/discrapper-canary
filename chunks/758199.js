@@ -9,8 +9,8 @@ n.d(t, {
     n(490233),
     n(97749),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(92951),
@@ -97,10 +97,10 @@ function O(e) {
         x = null != h,
         L = null != E && !1 === P,
         M = x || L,
-        j = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
-        k = i.useRef(null),
+        k = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        j = i.useRef(null),
         U = i.useCallback(() => {
-            let e = k.current;
+            let e = j.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
         G = i.useMemo(() => !!L && new URL(E).pathname.endsWith(".gif"), [L, E]),
@@ -139,7 +139,7 @@ function O(e) {
             M &&
                 (0, r.jsxs)(y, {
                     onClick: Z,
-                    className: o()(g.bannerWrapper, j, { [g.showVideoOnFocus]: L }),
+                    className: o()(g.bannerWrapper, k, { [g.showVideoOnFocus]: L }),
                     children: [
                         L &&
                             (G
@@ -148,7 +148,7 @@ function O(e) {
                                       style: { backgroundImage: "url(".concat(E, ")") },
                                   })
                                 : (0, r.jsx)(s.Z, {
-                                      ref: k,
+                                      ref: j,
                                       src: E,
                                       mediaLayoutType: m.hV.MOSAIC,
                                       loop: !0,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(843611),
+var r = n(54381),
+    i = n(473749),
+    l = n(828700),
     o = n(91192),
     a = n(442837),
     s = n(481060),
@@ -9,18 +9,18 @@ var r = n(951288),
     u = n(55589),
     d = n(276952),
     p = n(682662),
-    h = n(662146),
-    f = n(981631),
+    f = n(662146),
+    h = n(981631),
     g = n(388032),
     m = n(815141);
 function b() {
     var e, t;
     let { pathname: n } = (0, l.TH)(),
-        b = n.startsWith(f.Z5c.CHANNEL(f.ME)) && n !== f.Z5c.CHANNEL(f.ME) && n !== f.Z5c.ME_ACTIVITY,
+        b = n.startsWith(h.Z5c.CHANNEL(h.ME)) && n !== h.Z5c.CHANNEL(h.ME) && n !== h.Z5c.ME_ACTIVITY,
         _ = (0, a.e7)([u.Z], () => u.Z.getPrivateChannelIds()[0]),
         y = (0, a.e7)([c.Z], () => {
             var e;
-            return null != (e = c.Z.getChannelId(f.ME)) ? e : _;
+            return null != (e = c.Z.getChannelId(h.ME)) ? e : _;
         }),
         [O, v] = i.useState(!1),
         j = (0, o.Ie)("dms");
@@ -31,7 +31,7 @@ function b() {
                 hovered: O,
                 className: m.pill,
             }),
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(f.Z, {
                 color: s.aML.Colors.PRIMARY,
                 hideOnClick: !0,
                 text: g.intl.string(g.t.YUU0RF),
@@ -70,7 +70,7 @@ function b() {
                             {
                                 onMouseEnter: () => v(!0),
                                 onMouseLeave: () => v(!1),
-                                onClick: f.dG4,
+                                onClick: h.dG4,
                                 selected: b || O,
                                 ariaLabel: g.intl.string(g.t.YUU0RF),
                                 "aria-owns": "guild-list-dms",
@@ -81,11 +81,11 @@ function b() {
                         (t = t =
                             {
                                 to: {
-                                    pathname: null != y ? f.Z5c.CHANNEL(f.ME, y) : f.Z5c.ME_DMS,
+                                    pathname: null != y ? h.Z5c.CHANNEL(h.ME, y) : h.Z5c.ME_DMS,
                                     state: {
                                         analyticsSource: {
-                                            page: f.ZY5.GUILD_CHANNEL,
-                                            section: f.jXE.NAVIGATION,
+                                            page: h.ZY5.GUILD_CHANNEL,
+                                            section: h.jXE.NAVIGATION,
                                             object: "DMS_BUTTON",
                                         },
                                     },

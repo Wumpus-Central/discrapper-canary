@@ -1,6 +1,6 @@
 n.d(t, { Z: () => q });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(512722),
@@ -32,7 +32,7 @@ var r = n(951288),
     x = n(981631),
     L = n(388032),
     M = n(724913);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -232,7 +232,7 @@ function W(e, t, n) {
             if (a.type === x.uaV.CHAT_INPUT_COMMAND || a.type === x.uaV.INTERACTION_PREMIUM_UPSELL)
                 return (0, r.jsx)(
                     f.P3F,
-                    G(k({}, i), {
+                    G(j({}, i), {
                         tag: "span",
                         onClick: s,
                         innerRef: n,
@@ -264,7 +264,7 @@ function W(e, t, n) {
                     t = (0, b.XZ)(c);
                 return (0, r.jsx)(
                     f.P3F,
-                    G(k({}, i), {
+                    G(j({}, i), {
                         tag: "span",
                         onClick: e,
                         innerRef: n,
@@ -296,7 +296,7 @@ let K = () =>
 function z(e) {
     let { enabled: t } = p.c.useExperiment({ location: "ExecutedCommand" }, { autoTrackExposure: !0 }),
         n = t ? f.iWm : f.jje;
-    return (0, r.jsx)(n, k({}, e));
+    return (0, r.jsx)(n, j({}, e));
 }
 function q(e) {
     var t;
@@ -313,7 +313,7 @@ function q(e) {
                 l()(null != s, "ExecutedCommand: channel cannot be undefined"),
                 (0, r.jsx)(
                     I.Z,
-                    G(k({}, e), {
+                    G(j({}, e), {
                         user: t,
                         currentUser: b,
                         guildId: s.guild_id,
@@ -330,7 +330,7 @@ function q(e) {
                 l()(null != s, "ExecutedCommand: channel cannot be null"),
                 (0, r.jsx)(
                     D.Z,
-                    G(k({}, e), {
+                    G(j({}, e), {
                         channel: s,
                         messageId: a.id,
                         interactionData: a.interactionData,
@@ -339,13 +339,13 @@ function q(e) {
             ),
             [s, a.id, a.interactionData],
         ),
-        j = (0, O.t0)(a),
+        k = (0, O.t0)(a),
         U =
-            (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND && null != j.target_user
-                ? new T.Z(j.target_user)
+            (null == k ? void 0 : k.type) === _.B8.APPLICATION_COMMAND && null != k.target_user
+                ? new T.Z(k.target_user)
                 : null,
         B =
-            (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND &&
+            (null == k ? void 0 : k.type) === _.B8.APPLICATION_COMMAND &&
             null != a.messageReference &&
             null != e.renderTargetMessage,
         Z = (0, R.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),

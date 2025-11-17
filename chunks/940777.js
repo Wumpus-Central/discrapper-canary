@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(91192),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(317381),
-    h = n(16609),
-    f = n(276952),
+    f = n(16609),
+    h = n(276952),
     g = n(682662),
     m = n(674552),
     b = n(593364),
@@ -89,21 +89,21 @@ function R() {
                 a = (0, s.e7)([p.ZP], () =>
                     Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            r = (0, h.p)(n);
+                            r = (0, f.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
                 c = o.length > 0,
                 u = !1,
                 d = !1,
-                f = !1,
+                h = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
+                n ? ((u = !l), (d = l), (h = r), (g = a)) : ((h = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
-                    screenshare: f,
+                    screenshare: h,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g,
@@ -116,7 +116,7 @@ function R() {
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
-            (0, r.jsx)(f.Z, {
+            (0, r.jsx)(h.Z, {
                 selected: F,
                 hovered: L,
                 unread: H && !k,

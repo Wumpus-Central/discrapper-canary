@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(388685), n(539854);
-var l = n(951288),
-    r = n(647438),
+var l = n(54381),
+    r = n(473749),
     i = n(120356),
     a = n.n(i),
     s = n(913527),
@@ -15,8 +15,8 @@ var l = n(951288),
     b = n(812206),
     h = n(70097),
     v = n(592125),
-    g = n(430824),
-    j = n(594174),
+    j = n(430824),
+    g = n(594174),
     O = n(962399),
     x = n(626135),
     C = n(55935),
@@ -28,18 +28,18 @@ var l = n(951288),
     E = n(367825),
     N = n(572720),
     M = n(930311),
-    Z = n(542055),
-    D = n(981631),
+    D = n(542055),
+    Z = n(981631),
     L = n(388032),
     H = n(134351);
 let T = function (e) {
     var t, i, s, c, b;
     let { clip: h, actionsDisabled: O, isNew: S, onClick: E } = e,
-        N = (0, u.Wu)([j.default], () => h.users.map((e) => j.default.getUser(e)).filter(w.lm)),
+        N = (0, u.Wu)([g.default], () => h.users.map((e) => g.default.getUser(e)).filter(w.lm)),
         M = (0, u.e7)([v.Z], () => (null != h.channelId ? v.Z.getChannel(h.channelId) : null)),
-        T = (0, u.e7)([g.Z], () => (null != h.guildId ? g.Z.getGuild(h.guildId) : null)),
+        T = (0, u.e7)([j.Z], () => (null != h.guildId ? j.Z.getGuild(h.guildId) : null)),
         { analyticsLocations: V } = (0, y.ZP)(f.Z.CLIPS_GALLERY_ITEM),
-        { selectedClipIds: U, toggleClipSelection: z, isMultiSelectMode: B } = r.useContext(Z.U),
+        { selectedClipIds: U, toggleClipSelection: z, isMultiSelectMode: B } = r.useContext(D.U),
         [G, F] = r.useState(!1),
         Y = r.useRef(null),
         K = (0, o.Z)(null != (b = null == (t = h.editMetadata) ? void 0 : t.start) ? b : 0),
@@ -146,14 +146,14 @@ let T = function (e) {
                                         actionsDisabled: O,
                                         showShareAndEdit: !0,
                                         onShare: () => {
-                                            x.default.track(D.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
+                                            x.default.track(Z.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
                                         },
                                         onEdit: () => {
-                                            x.default.track(D.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                                            x.default.track(Z.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
                                         },
                                         onBeforeDelete: $,
                                         onAfterDelete: () => {
-                                            x.default.track(D.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
+                                            x.default.track(Z.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
                                         },
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -187,7 +187,7 @@ let T = function (e) {
             (e) => {
                 O ||
                     (e.shiftKey ? (e.preventDefault(), z(h.id)) : B ? z(h.id) : null != E && E(h),
-                    x.default.track(D.rMx.CLIP_GALLERY_CARD_CLICKED));
+                    x.default.track(Z.rMx.CLIP_GALLERY_CARD_CLICKED));
             },
             [O, B, z, h, E],
         );

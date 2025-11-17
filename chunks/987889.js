@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(28664),
     a = n(481060),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(110255),
     d = n(268623),
     p = n(324701),
-    h = n(768943),
-    f = n(64247),
+    f = n(768943),
+    h = n(64247),
     g = n(804932),
     m = n(370774),
     b = n(993609),
@@ -100,7 +100,7 @@ function E(e) {
 function S(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: c, interactionType: u, actionType: d } = e,
         p = (0, g.fJ)(),
-        [h, f] = (0, i.useState)(!1),
+        [f, h] = (0, i.useState)(!1),
         [m, _] = (0, i.useState)(!1),
         y = (0, i.useRef)(null),
         { openMenu: O, closeMenu: C } = (0, b.z)();
@@ -130,8 +130,8 @@ function S(e) {
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
-                onTooltipShow: () => f(!0),
-                onTooltipHide: () => f(!1),
+                onTooltipShow: () => h(!0),
+                onTooltipHide: () => h(!1),
                 children: (0, r.jsx)(a.P3F, {
                     innerRef: y,
                     className: v.action,
@@ -151,7 +151,7 @@ function S(e) {
                             message: n,
                             "aria-label": l,
                             className: v.actionIcon,
-                            size: h ? "sm" : "xs",
+                            size: f ? "sm" : "xs",
                         }),
                     ),
                 }),
@@ -186,13 +186,13 @@ let I = {
         type: "menu",
         label: O.intl.string(O.t["9p3D9p"]),
         Icon: (e) =>
-            null != h.Z.getSavedMessage(e.message.channel_id, e.message.id)
+            null != f.Z.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, r.jsx)(a.plf, j({}, e))
                 : (0, r.jsx)(a.gt9, j({}, e)),
         interactionType: g.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
-                i = (0, l.e7)([h.Z], () => h.Z.getSavedMessage(t.channel_id, t.id)),
+                i = (0, l.e7)([f.Z], () => f.Z.getSavedMessage(t.channel_id, t.id)),
                 o = (0, d.x)({
                     message: t,
                     savedMessage: i,
@@ -245,7 +245,7 @@ let I = {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, r.jsx)(
-                      f.Z,
+                      h.Z,
                       x(j({}, n), {
                           channel: t,
                           navId: "thread-context",

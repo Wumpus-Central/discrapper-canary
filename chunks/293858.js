@@ -1,6 +1,6 @@
 n.d(t, { b: () => S });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     a = n(512722),
     i = n.n(a),
     o = n(704215),
@@ -15,10 +15,10 @@ var r = n(951288),
     b = n(563132),
     g = n(107998),
     v = n(614277),
-    x = n(400981),
-    j = n(435020),
+    P = n(400981),
+    x = n(435020),
     y = n(698708),
-    P = n(921944);
+    j = n(921944);
 function S(e) {
     let t,
         {
@@ -27,8 +27,8 @@ function S(e) {
             onSubscriptionConfirmation: S,
             renderPurchaseConfirmation: _,
             postSuccessGuild: O,
-            followupSKUInfo: C,
-            continueSessionToInitialStep: w,
+            followupSKUInfo: w,
+            continueSessionToInitialStep: C,
         } = e,
         {
             activeSubscription: k,
@@ -42,22 +42,22 @@ function S(e) {
             startingFractionalPremiumEndsAtRef: Z,
         } = (0, b.JL)(),
         {
-            isGift: B,
-            giftRecipient: L,
+            isGift: L,
+            giftRecipient: B,
             giftCode: D,
             hasSentMessage: F,
             isSendingMessage: H,
             sendGiftMessage: G,
             claimableRewards: U,
-            selectedGiftingPromotionReward: K,
+            selectedGiftingPromotionReward: z,
         } = (0, f.wD)(),
-        { confirmationFooter: z } = (0, g.zb)(),
-        W = (0, c.id)(T, B, U),
+        { confirmationFooter: K } = (0, g.zb)(),
+        W = (0, c.id)(T, L, U),
         Y = (0, d.Z)(),
         V = (0, c.a5)(T),
-        q = (0, c.tK)(null == K ? void 0 : K.skuId),
-        J = (0, j.$)(E, I),
-        Q = B && null != K && V;
+        q = (0, c.tK)(null == z ? void 0 : z.skuId),
+        J = (0, x.$)(E, I),
+        Q = L && null != z && V;
     i()(null != T, "Expected plan to selected"),
         i()(null != N, "Expected selectedSkuId"),
         i()(null != R, "Step should be set");
@@ -65,17 +65,17 @@ function S(e) {
         n(), null == S || S();
     }, [n, S]);
     l.useEffect(() => {
-        !B || null == L || null == D || F || H || (0, m.pO)(L) || G({ onSubscriptionConfirmation: S });
-    }, [G, B, L, D, F, H, S]),
+        !L || null == B || null == D || F || H || (0, m.pO)(B) || G({ onSubscriptionConfirmation: S });
+    }, [G, L, B, D, F, H, S]),
         l.useEffect(() => {
             null != Y &&
                 null != Y.reminderNotice &&
                 W &&
-                (0, s.wH)(o.z.GIFTING_PROMOTION_REMINDER, (0, u.m)(), { dismissAction: P.L.INDIRECT_ACTION });
+                (0, s.wH)(o.z.GIFTING_PROMOTION_REMINDER, (0, u.m)(), { dismissAction: j.L.INDIRECT_ACTION });
         }, [Y, W]);
-    let $ = null != w ? p.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
+    let $ = null != C ? p.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != _) t = _(T, X, M);
-    else if (B)
+    else if (L)
         t = (0, r.jsx)(p.TB, {
             planId: T.id,
             onClose: X,
@@ -85,7 +85,7 @@ function S(e) {
             A.current === T.id
                 ? { postSuccessGuild: O }
                 : {
-                      followupSKUInfo: C,
+                      followupSKUInfo: w,
                       startingPremiumSubscriptionPlanId: A.current,
                       isDowngrade: null != k && (0, h.GY)(k, T.id, a),
                   };
@@ -120,7 +120,7 @@ function S(e) {
                     planId: T.id,
                     onClose: X,
                     paymentSourceType: J,
-                    hideClose: null != z,
+                    hideClose: null != K,
                     startingFractionalPremiumEndsAt: Z.current,
                     customCTAType: $,
                 },
@@ -133,13 +133,13 @@ function S(e) {
             (0, r.jsxs)(v.C3, {
                 children: [(0, r.jsx)(y.Z, {}), t],
             }),
-            null != z && z,
+            null != K && K,
             Q &&
                 null != q &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(P.Z, {
                     onClose: X,
                     selectedPromotionalDecoPurchaseRecord: q,
-                    selectedGiftingPromotionReward: K,
+                    selectedGiftingPromotionReward: z,
                 }),
         ],
     });

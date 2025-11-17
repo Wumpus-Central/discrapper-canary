@@ -1,15 +1,15 @@
 n.d(t, { Z: () => o });
-var a = n(951288);
-n(647438);
-var i = n(120356),
-    r = n.n(i),
-    l = n(584973),
+var a = n(54381);
+n(473749);
+var l = n(120356),
+    r = n.n(l),
+    i = n(584973),
     s = n(608007);
 function o(e) {
     let {
         activity: t,
         className: n,
-        emojiClassName: i,
+        emojiClassName: l,
         textClassName: o,
         placeholderText: c,
         soloEmojiClassName: d,
@@ -26,9 +26,9 @@ function o(e) {
         children: [
             p || null == x
                 ? null
-                : (0, a.jsx)(l.Z, {
+                : (0, a.jsx)(i.Z, {
                       emoji: x,
-                      className: r()(s.emoji, i, null != d ? { [d]: null == g || "" === g } : null),
+                      className: r()(s.emoji, l, null != d ? { [d]: null == g || "" === g } : null),
                       animate: u,
                       hideTooltip: m,
                   }),

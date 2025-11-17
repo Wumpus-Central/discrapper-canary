@@ -1,6 +1,6 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => v });
+var r = n(54381),
+    i = n(473749),
     a = n(296009),
     l = n(442837),
     o = n(704215),
@@ -15,11 +15,11 @@ var r = n(951288),
     b = n(430790),
     h = n(795990),
     y = n(388032),
-    v = n(66582);
-function O() {
+    O = n(66582);
+function v() {
     let { trackUserProfileEditAction: e } = (0, f.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: O, config: j } = (0, p.G)(),
+        { application: v, config: j } = (0, p.G)(),
         { token: x, fetched: _ } = (0, s.o)(null == j ? void 0 : j.application_id),
         P = i.useMemo(
             () =>
@@ -85,15 +85,15 @@ function O() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    if (null == t || null == O || null == P || !_)
+    if (null == t || null == v || null == P || !_)
         return (0, r.jsx)("div", {
-            className: v.loading,
+            className: O.loading,
             children: (0, r.jsx)(c.$jN, {}),
         });
     if (null == x) return (0, r.jsx)(h.Z, {});
     let w = (0, r.jsxs)(c.Kqy, {
         gap: 4,
-        className: v.header,
+        className: O.header,
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
@@ -103,7 +103,7 @@ function O() {
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: y.intl.format(y.t.YnNFWa, { applicationName: O.name }),
+                children: y.intl.format(y.t.YnNFWa, { applicationName: v.name }),
             }),
         ],
     });
@@ -122,7 +122,7 @@ function O() {
                             w,
                             (0, r.jsx)(m.Z, {
                                 user: t,
-                                application: O,
+                                application: v,
                                 onDismiss: i,
                             }),
                             (0, r.jsx)(b.Z, {}),

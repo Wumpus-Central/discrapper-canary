@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(493773),
+    i = n(493773),
     s = n(480916),
     o = n(17597),
     c = n(624138),
@@ -19,16 +19,16 @@ var a = n(951288),
 let j = n(575703);
 function _(e) {
     let { task: t, handleSubmit: n, disabled: r } = e,
-        [l, s] = i.useState(t),
-        o = i.useMemo(
+        [i, s] = l.useState(t),
+        o = l.useMemo(
             () => ({
-                task: l,
+                task: i,
                 setTask: s,
             }),
-            [l, s],
+            [i, s],
         );
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             s(t);
         }, [t]),
         (0, a.jsxs)(u.y.Provider, {
@@ -45,11 +45,11 @@ function _(e) {
 }
 let y = function (e) {
     let { onClose: t } = e,
-        [n, u] = i.useState(null),
-        [h, x] = i.useState(!0),
-        [y, C] = i.useState(null),
-        [S, E] = i.useState(!1),
-        T = i.useCallback(async () => {
+        [n, u] = l.useState(null),
+        [h, x] = l.useState(!0),
+        [y, C] = l.useState(null),
+        [S, E] = l.useState(!1),
+        O = l.useCallback(async () => {
             x(!0), C(null);
             try {
                 var e;
@@ -79,7 +79,7 @@ let y = function (e) {
                 x(!1);
             }
         }, [t]),
-        O = i.useCallback(
+        T = l.useCallback(
             async (e) => {
                 if (null !== n) {
                     E(!0);
@@ -89,7 +89,7 @@ let y = function (e) {
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, d.Wl)(t), T();
+                        await (0, d.Wl)(t), O();
                     } catch (e) {
                         C(b.intl.string(f.default["+QRSxc"]));
                     } finally {
@@ -97,12 +97,12 @@ let y = function (e) {
                     }
                 }
             },
-            [n, T],
+            [n, O],
         );
-    (0, l.ZP)(() => {
-        T();
+    (0, i.ZP)(() => {
+        O();
     });
-    let N = i.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
+    let N = l.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
     return (0, a.jsxs)("div", {
         className: v.background,
         children: [
@@ -117,7 +117,7 @@ let y = function (e) {
                       entryPoint: s.cU.SAFETY_FLOWS,
                       onClose: g.dG,
                       onComplete: async () => {
-                          await O({ type: m.rY.Empty });
+                          await T({ type: m.rY.Empty });
                       },
                       dismissable: !1,
                   })
@@ -172,7 +172,7 @@ let y = function (e) {
                                                                 fullWidth: !0,
                                                                 text: b.intl.string(b.t["7NqTJn"]),
                                                                 onClick: () => {
-                                                                    T();
+                                                                    O();
                                                                 },
                                                             }),
                                                         ],
@@ -183,7 +183,7 @@ let y = function (e) {
                                             null != n &&
                                             (0, a.jsx)(_, {
                                                 task: n,
-                                                handleSubmit: O,
+                                                handleSubmit: T,
                                                 disabled: S,
                                             }),
                                     ],

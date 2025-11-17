@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -95,8 +95,8 @@ function C(e) {
         x = S(i, a),
         L = (0, m.NE)(i, a),
         M = n.showThreadPromptOnReply && x >= I && L,
-        j = () => (0, h.uL)(y.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function k(e) {
+        k = () => (0, h.uL)(y.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function j(e) {
         e.stopPropagation(), (0, p.qx)(i.id, !s);
     }
     function U(e) {
@@ -111,7 +111,7 @@ function C(e) {
                     className: v.replyBar,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: j,
+                            onClick: k,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -153,7 +153,7 @@ function C(e) {
                                                 children: (0, r.jsx)(c.P3F, {
                                                     role: "switch",
                                                     "aria-checked": s,
-                                                    onClick: k,
+                                                    onClick: j,
                                                     children: (0, r.jsxs)(c.Text, {
                                                         variant: "text-sm/bold",
                                                         color: s ? "text-link" : "text-muted",

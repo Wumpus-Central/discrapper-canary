@@ -1,17 +1,17 @@
 n.d(t, { Z: () => u });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(481060),
     o = n(90641),
     c = n(55989),
     d = n(451429);
 function u() {
-    let e = i.useRef(null);
+    let e = l.useRef(null);
     return (0, a.jsx)("div", {
         ref: e,
-        className: l()(d.panel, c.panel),
+        className: i()(d.panel, c.panel),
         children: (0, a.jsx)(s.Button, {
             variant: "primary",
             size: "sm",

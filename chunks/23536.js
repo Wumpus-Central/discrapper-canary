@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ }), n(784620), n(973216);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(780384),
     s = n(481060),
@@ -16,7 +16,7 @@ var r = n(951288),
 let b = [];
 function _(e) {
     let { channel: t, onJump: _ } = e,
-        { items: y, state: x } = (0, l.cj)([f.Z], () => {
+        { items: y, state: O } = (0, l.cj)([f.Z], () => {
             var e, n;
             let r = f.Z.getPins(t.id);
             return {
@@ -24,13 +24,13 @@ function _(e) {
                 state: null != (n = null == r ? void 0 : r.state) ? n : f.M.LOADING,
             };
         }),
-        O = i.useMemo(() => y.map((e) => e.message), [y]),
-        j = (0, l.e7)([g.ZP], () => g.ZP.hasUnreadPins(t.id));
+        j = i.useMemo(() => y.map((e) => e.message), [y]),
+        x = (0, l.e7)([g.ZP], () => g.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
-        j && o.Z.ackPins(t.id);
-    }, [j, t.id]),
+        x && o.Z.ackPins(t.id);
+    }, [x, t.id]),
         (0, c.ZP)(() => {
-            O.some(d.k5) && o.Z.fetchPins(t.id, { reset: !0 });
+            j.some(d.k5) && o.Z.fetchPins(t.id, { reset: !0 });
         });
     let v = i.useCallback(() => {
             o.Z.fetchPins(t.id);
@@ -45,9 +45,9 @@ function _(e) {
         children: (0, r.jsx)(p.ZP, {
             channel: t,
             onFetch: v,
-            messages: O,
-            loading: x === f.M.LOADING,
-            hasMore: x === f.M.LOADED_HAS_MORE,
+            messages: j,
+            loading: O === f.M.LOADING,
+            hasMore: O === f.M.LOADED_HAS_MORE,
             analyticsName: "Channel Pins",
             renderEmptyState: function () {
                 if (y.length > 0) return;

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C }), n(388685), n(781311);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(106351),
@@ -74,8 +74,8 @@ function C(e) {
         { resetInteraction: P, setInteractionToast: D } = (0, g.Xo)(),
         { primaryColor: w } = (0, b.z)(),
         [x, L] = i.useState(""),
-        [M, j] = i.useState((0, u.JM)(x)),
-        k = i.useRef(!1),
+        [M, k] = i.useState((0, u.JM)(x)),
+        j = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
@@ -134,11 +134,11 @@ function C(e) {
                 textValue: x,
                 richValue: M,
                 onChange: (e, t, n) => {
-                    t !== x && (L(t), j(n));
+                    t !== x && (L(t), k(n));
                 },
-                focused: k.current,
+                focused: j.current,
                 onFocus: () => {
-                    k.current = !0;
+                    j.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,

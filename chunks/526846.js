@@ -1,6 +1,6 @@
-n.d(t, { m: () => k }), n(997841), n(953529);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { m: () => D }), n(997841), n(953529);
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(772848),
@@ -33,7 +33,7 @@ var i = n(951288),
     M = n(201512);
 let R = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
     L = "vc-activities-".concat((0, o.Z)());
-function D(e) {
+function k(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -109,7 +109,7 @@ function D(e) {
               ],
           }));
 }
-let k = r.forwardRef(function (e, t) {
+let D = r.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: g, className: b } = e,
         v = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -124,7 +124,7 @@ let k = r.forwardRef(function (e, t) {
             o || s();
         }, [s, o]);
     let E = (0, j.bp)(),
-        { analyticsLocations: R, newestAnalyticsLocation: k } = (0, m.ZP)(f.Z.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: R, newestAnalyticsLocation: D } = (0, m.ZP)(f.Z.ACTIVITIES_MINI_SHELF),
         U = E === A.IlC.POPOUT,
         B = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     r.useEffect(() => {
@@ -132,7 +132,7 @@ let k = r.forwardRef(function (e, t) {
         return () => clearTimeout(e);
     }, []);
     let { enabled: H } = P.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        V = r.useCallback(() => {
+        F = r.useCallback(() => {
             (0, y.Z)({
                 context:
                     null != l
@@ -142,12 +142,12 @@ let k = r.forwardRef(function (e, t) {
                           }
                         : { type: "contextless" },
                 openInPopout: U,
-                analyticsLocation: k,
+                analyticsLocation: D,
             }),
                 u(),
                 g();
-        }, [l, k, g, u, U]),
-        F = r.useCallback(
+        }, [l, D, g, u, U]),
+        V = r.useCallback(
             (e) => {
                 c(),
                     S.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -177,7 +177,7 @@ let k = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsxs)("div", {
                         className: M.container,
-                        onMouseEnter: F,
+                        onMouseEnter: V,
                         onMouseLeave: u,
                         children: [
                             (0, i.jsxs)("div", {
@@ -199,7 +199,7 @@ let k = r.forwardRef(function (e, t) {
                                     }),
                                     (0, i.jsxs)(p.P3F, {
                                         className: M.titleRight,
-                                        onClick: V,
+                                        onClick: F,
                                         children: [
                                             (0, i.jsx)(p.Text, {
                                                 variant: "eyebrow",
@@ -216,7 +216,7 @@ let k = r.forwardRef(function (e, t) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(D, {
+                            (0, i.jsx)(k, {
                                 openInPopout: U,
                                 channel: l,
                                 onClick: () => {

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => j });
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(481060),
     s = n(287734),
@@ -16,15 +16,15 @@ var r = n(951288),
     b = n(504185),
     _ = n(388032),
     y = n(427538);
-let x = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
-    O = function (e) {
+let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
+    j = function (e) {
         let { participants: t, channel: n, hasConnectPermission: g } = e,
-            O = (0, u.J)(n.guild_id),
-            j = i.useCallback(() => {
-                O
+            j = (0, u.J)(n.guild_id),
+            x = i.useCallback(() => {
+                j
                     ? (0, d.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id))
                     : s.default.selectVoiceChannel(n.id);
-            }, [n.id, n.guild_id, O]),
+            }, [n.id, n.guild_id, j]),
             v = t.filter((e) => e.type === m.Ui.VOICE),
             C = 4 === v.length ? 2 : 3,
             I = (0, l.Wu)([o.Z], () => v.map((e) => o.Z.getParticipant(n.id, e.id)).filter(f.lm), [n.id, v]);
@@ -66,16 +66,16 @@ let x = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                             0 === v.length
                                 ? _.intl.string(_.t.FUVhyC)
                                 : 1 === v.length
-                                  ? _.intl.formatToPlainString(_.t.EQwZlN, { a: x(n, v[0]) })
+                                  ? _.intl.formatToPlainString(_.t.EQwZlN, { a: O(n, v[0]) })
                                   : 2 === v.length
                                     ? _.intl.formatToPlainString(_.t.zBcKoA, {
-                                          a: x(n, v[0]),
-                                          b: x(n, v[1]),
+                                          a: O(n, v[0]),
+                                          b: O(n, v[1]),
                                       })
                                     : v.length > 2
                                       ? _.intl.formatToPlainString(_.t["3AqFaG"], {
-                                            a: x(n, v[0]),
-                                            b: x(n, v[1]),
+                                            a: O(n, v[0]),
+                                            b: O(n, v[1]),
                                             n: v.length - 2,
                                         })
                                       : void 0,
@@ -89,7 +89,7 @@ let x = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                             children: (0, r.jsx)(a.Button, {
                                 variant: "overlay-primary",
                                 text: g ? _.intl.string(_.t["7vb2cc"]) : _.intl.string(_.t.TVBCKZ),
-                                onClick: j,
+                                onClick: x,
                                 disabled: !g,
                             }),
                         }),

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => R }), n(415506), n(388685);
 var r,
-    i = n(951288),
-    l = n(647438),
-    o = n(509442),
+    i = n(54381),
+    l = n(473749),
+    o = n(636606),
     a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
     p = n(43267),
-    h = n(933557),
-    f = n(266076),
+    f = n(933557),
+    h = n(266076),
     g = n(199902),
     m = n(19780),
     b = n(306680),
@@ -159,7 +159,7 @@ class A extends (r = l.PureComponent) {
                 unread: d,
                 treeItemProps: p,
             } = this.props,
-            { hovered: h, animating: g } = this.state,
+            { hovered: f, animating: g } = this.state,
             m = e.isMultiUserDM() && null == e.icon,
             b = () =>
                 (0, i.jsx)(
@@ -169,7 +169,7 @@ class A extends (r = l.PureComponent) {
                             to: E.Z5c.CHANNEL(E.ME, e.id),
                             onMouseEnter: () => this.setState({ hovered: !0 }),
                             onMouseLeave: () => this.setState({ hovered: !1 }),
-                            selected: n || h,
+                            selected: n || f,
                             ariaLabel:
                                 null != t
                                     ? S.intl.formatToPlainString(S.t.hKarnZ, {
@@ -181,7 +181,7 @@ class A extends (r = l.PureComponent) {
                             icon: m ? void 0 : this.getChannelIcon(),
                             backgroundStyle: m ? "on-hover" : "always",
                             children: m
-                                ? (0, i.jsx)(f.Z, {
+                                ? (0, i.jsx)(h.Z, {
                                       channel: e,
                                       size: c.EFr.SIZE_40,
                                       facepileSizeOverride: c.EFr.SIZE_32,
@@ -197,7 +197,7 @@ class A extends (r = l.PureComponent) {
             children: (0, i.jsxs)(j.H, {
                 children: [
                     (0, i.jsx)(v.Z, {
-                        hovered: !g && h,
+                        hovered: !g && f,
                         selected: !g && n,
                         unread: !g && d,
                         className: I.pill,
@@ -277,12 +277,12 @@ P(A, "defaultProps", {
 });
 let R = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, h.ZP)(e.channel),
+        r = (0, f.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([m.Z], () => m.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : E.WtW.VOICE), [o]),
         p = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        f = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
+        h = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, s.e7)([b.ZP], () => b.ZP.getMentionCount(n), [n]),
         O = o === n,
         v = !1,
@@ -295,7 +295,7 @@ let R = l.forwardRef(function (e, t) {
             ref: t,
             channelName: r,
             unread: y > 0,
-            selected: f === n,
+            selected: h === n,
             badge: y,
             audio: v,
             video: j,

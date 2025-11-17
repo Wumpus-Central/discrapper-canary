@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v }), n(415506), n(388685);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(594174),
     d = n(431),
     p = n(74538),
-    h = n(970645),
-    f = n(30684),
+    f = n(970645),
+    h = n(30684),
     g = n(937579),
     m = n(522558);
 function b(e, t, n) {
@@ -138,7 +138,7 @@ class O extends o.Z {
             }),
             b(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
+                null != e && e.verified && !(0, p.I5)(e) && h.Z.shouldFetchCheckoutRecovery() && (await (0, f.o)());
             }),
             b(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getConfig({ location: "PremiumManager" });

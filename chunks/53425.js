@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(938475),
     d = n(823379),
     p = n(734190),
-    h = n(388032),
-    f = n(113914);
+    f = n(388032),
+    h = n(113914);
 let g = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: g } = e,
         { density: m } = (0, s.TCT)(),
@@ -22,13 +22,13 @@ let g = i.memo(function (e) {
             return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, r.jsx)("li", {
-        className: f.container,
+        className: h.container,
         children: (0, r.jsxs)("ul", {
             role: "group",
-            "aria-label": h.intl.formatToPlainString(h.t.EiyIi6, { channelName: t.name }),
+            "aria-label": f.intl.formatToPlainString(f.t.EiyIi6, { channelName: t.name }),
             children: [
                 (0, r.jsx)("div", {
-                    className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
+                    className: o()(h.spineBorder, { [h.spineBorderWithGuildIcon]: g }),
                     style: { bottom: ("cozy" === m ? 28 : 24) + _ },
                 }),
                 b.map((e, t) =>

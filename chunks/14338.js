@@ -1,6 +1,6 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => j });
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(28664),
@@ -57,11 +57,11 @@ function y(e, t) {
         e
     );
 }
-function x(e) {
+function O(e) {
     let { channel: t, speaker: l, className: g } = e,
-        x = i.useRef(null),
-        { newestAnalyticsLocation: O } = (0, u.ZP)(),
-        j = (0, h.bp)(),
+        O = i.useRef(null),
+        { newestAnalyticsLocation: j } = (0, u.ZP)(),
+        x = (0, h.bp)(),
         { reducedMotion: v } = i.useContext(o.Sfi),
         C = (0, d.Z)({ userId: l.id }),
         I = null != l.member ? (0, m.CA)(l.member) : null,
@@ -86,28 +86,28 @@ function x(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", O),
+                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", j),
                             }),
                         );
                 },
-                { context: j },
+                { context: x },
             );
         };
     return (0, r.jsx)(f.Z, {
-        targetElementRef: x,
+        targetElementRef: O,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.u, {
-                targetElementRef: x,
+                targetElementRef: O,
                 __unsupportedReactNodeAsText: l.userNick,
                 position: "bottom",
                 children: (0, r.jsx)(
                     o.P3F,
                     y(_({}, e), {
-                        innerRef: x,
+                        innerRef: O,
                         onClick: (t) => {
                             t.stopPropagation(), e.onClick(t);
                         },
@@ -124,7 +124,7 @@ function x(e) {
             }),
     });
 }
-function O(e) {
+function j(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(g.Z, {
         className: b.summary,
@@ -133,7 +133,7 @@ function O(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                x,
+                O,
                 {
                     channel: n,
                     speaker: e,

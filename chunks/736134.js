@@ -1,6 +1,6 @@
 n.d(t, { N: () => o });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(481060);
 function o(e) {
     let { groups: t, selectedStory: n, onStorySelect: o } = e;

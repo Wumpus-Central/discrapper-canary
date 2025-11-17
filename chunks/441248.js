@@ -1,6 +1,6 @@
 n.d(t, { k: () => b });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
@@ -10,8 +10,8 @@ var i = n(120356),
     u = n(925329),
     d = n(810568),
     p = n(168524),
-    h = n(115530),
-    f = n(388032),
+    f = n(115530),
+    h = n(388032),
     g = n(48733);
 function m(e) {
     let { name: t, applicationId: n } = e,
@@ -24,7 +24,7 @@ function m(e) {
     return (0, r.jsx)(o.P3F, {
         onClick: i,
         className: l()(null != i && g.clickableGameName),
-        children: (0, r.jsx)(h.Z, {
+        children: (0, r.jsx)(f.Z, {
             className: g.gameName,
             children: t,
         }),
@@ -38,10 +38,10 @@ function b(e) {
             onClickNotSharing: l,
             isForceShowSharingPopout: d,
             setIsForceShowSharingPopout: p,
-            ref: h,
+            ref: f,
             popoutTargetRef: b,
         } = e,
-        _ = null != n ? n.name : null != i ? i.name : f.intl.string(f.t["UQMV/E"]);
+        _ = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/E"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -54,7 +54,7 @@ function b(e) {
                             className: g.gameIcon,
                             game: n,
                             pid: null == i ? void 0 : i.pid,
-                            ref: h,
+                            ref: f,
                         }),
                         t
                             ? (0, r.jsx)(o.Odl, {

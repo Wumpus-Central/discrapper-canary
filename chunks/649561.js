@@ -1,10 +1,10 @@
 n.d(t, { Z: () => L }), n(388685), n(358797);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    o = n.n(s),
-    l = n(392711),
-    a = n.n(l),
+var i = n(54381),
+    r = n(473749),
+    o = n(120356),
+    l = n.n(o),
+    s = n(392711),
+    a = n.n(s),
     c = n(818405),
     d = n(587158),
     u = n(286379),
@@ -15,13 +15,13 @@ var i = n(951288),
     m = n(797614),
     y = n(593481),
     b = n(703656),
-    v = n(254761),
-    _ = n(70956),
+    _ = n(254761),
+    v = n(70956),
     O = n(145597),
     E = n(41534),
-    x = n(837268),
-    S = n(692546),
-    Z = n(518084),
+    S = n(837268),
+    Z = n(692546),
+    x = n(518084),
     j = n(987650),
     C = n(981631),
     I = n(388032),
@@ -39,7 +39,7 @@ function w(e, t, n) {
         e
     );
 }
-let T = 10 * _.Z.Millis.SECOND,
+let T = 10 * v.Z.Millis.SECOND,
     N = new h.Yd("LegacyOverlayErrorBoundary");
 function D() {
     let e = (0, O.getPID)(),
@@ -72,7 +72,7 @@ class k extends r.PureComponent {
             { notificationTimer: r } = this;
         return null == r
             ? null
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(Z.Z, {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
                   children: (0, i.jsx)(p.f6W, {
@@ -80,12 +80,12 @@ class k extends r.PureComponent {
                       children: (r) =>
                           (0, i.jsxs)(p.P3F, {
                               innerRef: this.contentDomRef,
-                              className: o()(r, P.container),
+                              className: l()(r, P.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(y.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(v.Z, {
+                                      icon: (0, i.jsx)(_.Z, {
                                           width: 40,
                                           height: 40,
                                           className: P.notificationIcon,
@@ -98,11 +98,11 @@ class k extends r.PureComponent {
                                       locked: !1,
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(Z.ZP, {
+                                      ? (0, i.jsxs)(x.ZP, {
                                             className: P.stackTrace,
                                             children: [
-                                                (0, i.jsx)(Z.ZP.Bar, { children: "Error Details" }),
-                                                (0, i.jsx)(Z.ZP.Content, {
+                                                (0, i.jsx)(x.ZP.Bar, { children: "Error Details" }),
+                                                (0, i.jsx)(x.ZP.Content, {
                                                     className: P.stackTraceCode,
                                                     children: (0, i.jsx)("code", {
                                                         className: P.code,
@@ -195,13 +195,13 @@ class A extends r.PureComponent {
             ],
         }),
             setImmediate(() => window.addEventListener("click", D));
-        let s = (0, E.V6)(e, x.gl.Hook, { extra: t });
+        let o = (0, E.V6)(e, S.gl.Hook, { extra: t });
         f.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: s,
+            sentry_issue_id: o,
             error_level: "fatal",
         }),
             R();

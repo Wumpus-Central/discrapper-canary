@@ -1,6 +1,6 @@
 n.d(t, { default: () => f });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(481060),
     a = n(239091),
     s = n(299206),
@@ -54,23 +54,23 @@ function h(e, t) {
 function f(e) {
     let { entry: t, onSelect: f, closePopout: g, hideEditButton: m = !1 } = e,
         { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, d.Z)(t),
-        x = (0, s.Z)({
+        O = (0, s.Z)({
             id: t.guildId,
             label: u.intl.string(u.t["94lLD7"]),
             onSuccess: g,
         });
     i.useEffect(() => {
-        _ || y || null != x || (0, a.Zy)();
+        _ || y || null != O || (0, a.Zy)();
     });
-    let O = () => {
+    let j = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function j() {
+    function x() {
         (0, a.Zy)(), null == g || g();
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "guild-entry-context",
-        onClose: j,
+        onClose: x,
         "aria-label": u.intl.string(u.t.HpQykc),
         onSelect: f,
         children: [
@@ -85,7 +85,7 @@ function f(e) {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
                                       return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
-                                      j();
+                                      x();
                               },
                           })
                         : null,
@@ -103,7 +103,7 @@ function f(e) {
                                                       header: u.intl.string(u.t.KUxYWH),
                                                       confirmText: u.intl.string(u.t.N86XcP),
                                                       cancelText: u.intl.string(u.t["ETE/oC"]),
-                                                      onConfirm: O,
+                                                      onConfirm: j,
                                                   },
                                                   e,
                                               ),
@@ -116,7 +116,7 @@ function f(e) {
                                           ),
                                       ),
                                   ),
-                                      j();
+                                      x();
                               },
                               color: "danger",
                           })
@@ -127,14 +127,14 @@ function f(e) {
                               id: "report-server-listing",
                               label: u.intl.string(u.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, o.sq)(t), j());
+                                  null != t && ((0, o.sq)(t), x());
                               },
                               icon: l.U65,
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(l.kSQ, { children: x }),
+            (0, r.jsx)(l.kSQ, { children: O }),
         ],
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
-var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    o = n.n(i),
     a = n(873546),
     c = n(159691),
     s = n(481060),
@@ -23,12 +23,12 @@ function y(e) {
 }
 function j(e) {
     let { title: t, badge: n, onClose: l } = e,
-        o = (0, u.Ll)();
+        i = (0, u.Ll)();
     return (0, r.jsx)(s.f6W, {
-        theme: o,
+        theme: i,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: i()(p.contentHeader, e),
+                className: o()(p.contentHeader, e),
                 children: [
                     (0, r.jsxs)("div", {
                         className: p.contentHeaderLeft,
@@ -58,12 +58,12 @@ function j(e) {
 }
 let m = l.memo(function (e) {
     var t, n;
-    let { onClose: l, setting: o } = e,
-        c = null != (n = null == o ? void 0 : o.useTitle()) ? n : "",
-        s = null == o || null == (t = o.useBadge) ? void 0 : t.call(o),
+    let { onClose: l, setting: i } = e,
+        c = null != (n = null == i ? void 0 : i.useTitle()) ? n : "",
+        s = null == i || null == (t = i.useBadge) ? void 0 : t.call(i),
         u = d.Z.useField("showNavigationMobile");
     return (0, r.jsxs)("div", {
-        className: i()(p.content, {
+        className: o()(p.content, {
             [p.mobile]: a.tq,
             [p.mobileNavigationOpen]: u,
         }),
@@ -75,7 +75,7 @@ let m = l.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: p.contentBody,
-                children: null != o && (0, r.jsx)(f.Z, { node: o }),
+                children: null != i && (0, r.jsx)(f.Z, { node: i }),
             }),
         ],
     });

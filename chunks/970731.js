@@ -4,10 +4,10 @@ n.d(t, {
 });
 var r,
     i,
-    l = n(951288);
-n(647438);
-var o = n(120356),
-    s = n.n(o),
+    l = n(54381);
+n(473749);
+var s = n(120356),
+    o = n.n(s),
     a = n(755721),
     c = n(481060),
     d = n(493773),
@@ -87,7 +87,7 @@ function j(e) {
         className: n,
         header: r,
         headerClassName: i,
-        content: o,
+        content: s,
         contentClassName: m,
         buttonCTA: _,
         secondaryButtonCTA: j,
@@ -109,26 +109,26 @@ function j(e) {
     });
     let I = null != j;
     return (0, l.jsxs)("div", {
-        className: s()(n, g[t], f.upsellTooltipWrapper, f[T]),
+        className: o()(n, g[t], f.upsellTooltipWrapper, f[T]),
         children: [
             w,
             null == r
                 ? null
                 : (0, l.jsx)(c.Heading, {
                       color: x[t],
-                      className: s()(i, f.upsellTooltipHeader),
+                      className: o()(i, f.upsellTooltipHeader),
                       variant: "heading-md/semibold",
                       children: r,
                   }),
             (0, l.jsx)(c.Text, {
                 color: v[t],
-                className: s()(m, f.content),
+                className: o()(m, f.content),
                 variant: "text-sm/normal",
-                children: o,
+                children: s,
             }),
             null != _ || I
                 ? (0, l.jsxs)("div", {
-                      className: s()(f.upsellButtonsContainer, {
+                      className: o()(f.upsellButtonsContainer, {
                           [f.upsellButtonsAdjacent]: 0 === Z,
                           [f.upsellButtonsStacked]: 1 === Z,
                       }),

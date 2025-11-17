@@ -1,6 +1,6 @@
 n.d(t, { Z: () => G }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(704215),
     s = n(996146),
@@ -102,7 +102,7 @@ function M(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         { tooltipsWithKeybinds: a } = I.n.useConfig({ location: "TrinketsAnimationButton" }),
         o = () => {
@@ -153,7 +153,7 @@ function j(e) {
         ),
     });
 }
-let k = y.Z.Millis.DAYS_30;
+let j = y.Z.Millis.DAYS_30;
 function U(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
@@ -163,7 +163,7 @@ function U(e) {
         N = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         P = null != N ? O.default.age(N.id) : 0,
         { giftBoxAnimation: D, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        x = null != n.firstTimeNotice && !s && S && P >= k,
+        x = null != n.firstTimeNotice && !s && S && P >= j,
         [L, U] = (0, _.XR)(
             x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, f.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -210,7 +210,7 @@ function U(e) {
                       onClick: Y,
                   })
                 : void 0 !== w
-                  ? (0, r.jsx)(j, {
+                  ? (0, r.jsx)(k, {
                         config: w,
                         hovered: B,
                         onClick: Y,

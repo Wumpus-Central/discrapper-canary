@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685), n(457542);
-var a = n(951288),
-    r = n(647438),
-    i = n(296009),
-    l = n(442837),
+var a = n(54381),
+    l = n(473749),
+    r = n(296009),
+    i = n(442837),
     s = n(704215),
     o = n(907862),
     c = n(535139),
@@ -21,66 +21,66 @@ var a = n(951288),
 function y(e) {
     var t;
     let { targetElementRef: n, onClose: y } = e,
-        [C, S] = r.useState(!1),
+        [C, S] = l.useState(!1),
         { trackUserProfileEditAction: E } = (0, u.KZ)(),
-        T = (0, l.e7)([b.default], () => b.default.getId()),
-        { config: O, application: N } = (0, h.G)(),
-        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: w, startAuthorization: k } = (0, c.F)(N),
-        R = (0, x.ZP)(T),
+        O = (0, i.e7)([b.default], () => b.default.getId()),
+        { config: T, application: N } = (0, h.G)(),
+        { fetched: P, hasAlreadyLinked: w, canStartAuthorization: I, startAuthorization: k } = (0, c.F)(N),
+        R = (0, x.ZP)(O),
         A =
             null == R || null == (t = R.widgets)
                 ? void 0
                 : t.some((e) => e instanceof m.q && e.applicationId === (null == N ? void 0 : N.id));
-    return null != O && null != O.edit_profile_upsell_image && null != N && P
+    return null != T && null != T.edit_profile_upsell_image && null != N && P
         ? (0, a.jsx)(d.ZP, {
               bypassAutoDismiss: !0,
-              contentTypes: I
+              contentTypes: w
                   ? A
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : w
+                  : I
                     ? [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
-                  let { visibleContent: t, markAsDismissed: r } = e;
+                  let { visibleContent: t, markAsDismissed: l } = e;
                   if (null == t) return null;
-                  let l = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let i = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
                       gradientColor: "blue",
                       graphic: {
                           type: "image",
-                          src: O.edit_profile_upsell_image,
+                          src: T.edit_profile_upsell_image,
                       },
                       title: _.intl.format(_.t.TXDztH, { applicationName: N.name }),
-                      body: l ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
+                      body: i ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
                       onRequestClose: () => {
-                          r(v.L.USER_DISMISS);
+                          l(v.L.USER_DISMISS);
                       },
                       actions: [
-                          l
+                          i
                               ? {
                                     text: _.intl.string(_.t.VSLDly),
                                     onClick: () => {
                                         S(!0),
                                             (0, g.openUserProfileModal)({
-                                                userId: T,
+                                                userId: O,
                                                 section: j.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(v.L.TAKE_ACTION),
+                                                    l(v.L.TAKE_ACTION),
                                                         y(),
                                                         (0, p.qH)(
-                                                            i.l.APPLICATION,
+                                                            r.l.APPLICATION,
                                                             new m.q({
                                                                 applicationId: N.id,
-                                                                type: i.l.APPLICATION,
+                                                                type: r.l.APPLICATION,
                                                             }),
                                                         ),
                                                         E({
                                                             action: "WIDGET_ADDED",
-                                                            widgetEdited: i.l.APPLICATION,
+                                                            widgetEdited: r.l.APPLICATION,
                                                         }),
                                                         (0, f.L$)(j.qb.WIDGET_ADDED);
                                                 })
@@ -94,11 +94,11 @@ function y(e) {
                                         k(),
                                             S(!0),
                                             (0, g.openUserProfileModal)({
-                                                userId: T,
+                                                userId: O,
                                                 section: j.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(v.L.TAKE_ACTION), y();
+                                                    l(v.L.TAKE_ACTION), y();
                                                 })
                                                 .finally(() => S(!1));
                                     },

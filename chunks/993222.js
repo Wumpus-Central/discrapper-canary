@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var l = n(120356),
     c = n(74538),
     u = n(597688),
     d = n(429368),
-    g = n(884697),
-    p = n(724994),
+    p = n(884697),
+    g = n(724994),
     f = n(786040),
     h = n(58201),
     C = n(445794),
@@ -19,10 +19,10 @@ var l = n(120356),
     b = n(944525);
 let v = (e) => {
         let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: d, prioritizedCurrency: h } = e,
-            { isPurchased: v, isPartiallyOwnedBundle: x } = (0, p.L)(t),
-            E = (0, g.G1)(t),
-            S = (0, a.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
-            O = (null == S ? void 0 : S.unpublishedAt) != null ? (0, g.OT)(S.unpublishedAt) : null,
+            { isPurchased: v, isPartiallyOwnedBundle: x } = (0, g.L)(t),
+            E = (0, p.G1)(t),
+            O = (0, a.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
+            S = (null == O ? void 0 : O.unpublishedAt) != null ? (0, p.OT)(O.unpublishedAt) : null,
             y = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
             j = c.ZP.canUseCollectibles(y),
             k = (0, C.Iw)(t),
@@ -35,8 +35,8 @@ let v = (e) => {
             T = n;
         if (
             (null == T &&
-                (null == O || l
-                    ? !x && !v && (0, g.Yq)(t.skuId)
+                (null == S || l
+                    ? !x && !v && (0, p.Yq)(t.skuId)
                         ? (T = f.Zh.NEW)
                         : I
                           ? (T = f.Zh.ORBS_EXCLUSIVE)
@@ -49,9 +49,9 @@ let v = (e) => {
         switch (T) {
             case f.Zh.LIMITED_TIME:
                 L =
-                    null != O
-                        ? O > 1
-                            ? _.intl.formatToPlainString(_.t.Io7ozn, { days: O })
+                    null != S
+                        ? S > 1
+                            ? _.intl.formatToPlainString(_.t.Io7ozn, { days: S })
                             : _.intl.string(_.t.Bc13HF)
                         : _.intl.string(_.t["h/uBCR"]);
                 break;

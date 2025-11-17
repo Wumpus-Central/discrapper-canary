@@ -1,70 +1,70 @@
 n.d(t, { Z: () => C }), n(388685), n(642613);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     o = n(481060),
     a = n(13245),
     s = n(493773),
-    u = n(358221),
-    c = n(569545),
+    c = n(358221),
+    u = n(569545),
     d = n(522474),
-    p = n(199902),
-    h = n(314897),
+    h = n(199902),
+    p = n(314897),
     f = n(592125),
     m = n(355863),
     g = n(944486),
     y = n(837268),
     O = n(804570),
-    E = n(350663),
-    v = n(752802),
-    S = n(68286),
-    b = n(340101),
-    x = n(501787),
-    j = n(388032),
+    v = n(350663),
+    E = n(752802),
+    b = n(68286),
+    _ = n(340101),
+    S = n(501787),
+    x = n(388032),
     I = n(965365);
 function C(e) {
     var t, n;
     let {
             id: C,
-            widget: Z,
+            widget: j,
             size: N,
-            locked: w,
-            padding: T,
-            borderWidth: _,
+            locked: Z,
+            padding: w,
+            borderWidth: T,
             opacity: P,
             horizontal: A,
             pinned: D,
-            anchorTop: R,
-            anchorLeft: k,
+            anchorTop: k,
+            anchorLeft: R,
             showEmpty: L = !0,
         } = e,
-        M = A ? b.C5.HORIZONTAL : b.C5.VERTICAL,
-        V = M === b.C5.VERTICAL,
-        z = (0, l.e7)([m.Z], () => {
+        M = A ? _.C5.HORIZONTAL : _.C5.VERTICAL,
+        z = M === _.C5.VERTICAL,
+        V = (0, l.e7)([m.Z], () => {
             var e;
             let t = m.Z.getWidget(C);
-            return !!(0, b.ZL)(t) && !w && (null == (e = t.meta.showAllStreams) || e);
-        }, [C, w]),
+            return !!(0, _.ZL)(t) && !Z && (null == (e = t.meta.showAllStreams) || e);
+        }, [C, Z]),
         U = (0, l.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         W = (0, l.e7)([f.Z], () => f.Z.getChannel(U)),
         {
             streamParticipants: G,
             activeStreams: F,
-            participantsVersion: H,
+            participantsVersion: B,
         } = (function (e, t, n, i, o) {
-            let a = (0, l.Wu)([p.Z], () => (null == e ? [] : p.Z.getAllActiveStreamsForChannel(e))),
-                s = r.useMemo(() => new Set(a.map((e) => (0, c.V9)(e))), [a]),
-                d = (0, l.e7)([u.Z], () => (null == e ? -1 : u.Z.getParticipantsVersion(e)));
+            let a = (0, l.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e))),
+                s = r.useMemo(() => new Set(a.map((e) => (0, u.V9)(e))), [a]),
+                d = (0, l.e7)([c.Z], () => (null == e ? -1 : c.Z.getParticipantsVersion(e)));
             return {
-                streamParticipants: (0, l.Wu)([u.Z, p.Z], () => {
+                streamParticipants: (0, l.Wu)([c.Z, h.Z], () => {
                     if (null == e) return [];
                     function r(e) {
-                        return s.has((0, c.V9)(e.stream));
+                        return s.has((0, u.V9)(e.stream));
                     }
-                    let l = u.Z.getStreamParticipants(e).filter((e) => {
+                    let l = c.Z.getStreamParticipants(e).filter((e) => {
                         if (e.user.id === t) return !1;
-                        let i = p.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
-                        return !(null != i && v.q.has(i.state)) && (!!n || r(e));
+                        let i = h.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
+                        return !(null != i && E.q.has(i.state)) && (!!n || r(e));
                     });
                     return (
                         l.sort((e, t) => {
@@ -85,13 +85,13 @@ function C(e) {
             };
         })(
             U,
-            (0, l.e7)([h.default], () => h.default.getId()),
-            z,
-            (R && V) || (k && A),
-            (!R && V) || (!k && A),
+            (0, l.e7)([p.default], () => p.default.getId()),
+            V,
+            (k && z) || (R && A),
+            (!k && z) || (!R && A),
         ),
-        B = G.length,
-        Y = (0, l.e7)([d.Z], () => d.Z.getWindowState(x.$J), []),
+        H = G.length,
+        Y = (0, l.e7)([d.Z], () => d.Z.getWindowState(S.$J), []),
         {
             tileWidth: Q,
             tileHeight: K,
@@ -99,20 +99,20 @@ function C(e) {
             widgetHeight: J,
             containerRef: q,
             containerMinMaxSizes: $,
-        } = (0, S.Bz)({
-            tileCount: B,
-            padding: T,
-            borderWidth: _,
-            isVertical: V,
+        } = (0, b.Bz)({
+            tileCount: H,
+            padding: w,
+            borderWidth: T,
+            isVertical: z,
             widgetSize: N,
         }),
         ee = {
             id: C,
-            widget: Z,
+            widget: j,
             layout: M,
             participants: G.length,
-            padding: T,
-            borderWidth: _,
+            padding: w,
+            borderWidth: T,
             widgetMinMaxSizes: $,
             containerSize: {
                 width: X,
@@ -124,29 +124,29 @@ function C(e) {
                 bottom: null != (t = null == Y ? void 0 : Y.height) ? t : J,
                 right: null != (n = null == Y ? void 0 : Y.width) ? n : X,
             },
-            locked: w,
+            locked: Z,
         };
-    (0, S.Dl)({
+    (0, b.Dl)({
         id: C,
         streamParticipants: G,
         layout: M,
         widgetLayoutSpecs: ee,
     });
-    let et = null == W || (0 === F.size && w) || (0 === B && !w);
+    let et = null == W || (0 === F.size && Z) || (0 === H && !Z);
     return (r.useEffect(() => {
         a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
     }, [et]),
     (0, s.ZP)(() => () => {
         a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
-    (et || !D) && w)
+    (et || !D) && Z)
         ? null
-        : et && !w
+        : et && !Z
           ? L
-              ? w
+              ? Z
                   ? null
                   : (0, i.jsx)(O.E, {
-                        emptyText: j.intl.string(j.t["T6+rXy"]),
+                        emptyText: x.intl.string(x.t["T6+rXy"]),
                         icon: o.hGI,
                         absolute: !0,
                     })
@@ -155,17 +155,17 @@ function C(e) {
                 className: I.goLiveGridContainer,
                 style: { opacity: P },
                 ref: q,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(v.Z, {
                     widgetId: C,
                     tileWidth: Q,
                     tileHeight: K,
-                    locked: w,
+                    locked: Z,
                     layout: M,
                     activeStreams: F,
                     streamParticipants: G,
-                    participantsVersion: H,
+                    participantsVersion: B,
                     pinned: D,
-                    padding: T,
+                    padding: w,
                 }),
             });
 }

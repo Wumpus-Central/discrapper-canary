@@ -1,6 +1,6 @@
 n.d(t, { Z: () => k });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(91192),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(28664),
     d = n(481060),
     p = n(493683),
-    h = n(239091),
-    f = n(99690),
+    f = n(239091),
+    h = n(99690),
     g = n(471445),
     m = n(569471),
     b = n(488131),
@@ -197,7 +197,7 @@ let k = i.memo(function (e) {
             (e) => {
                 let i = _.Z.getChannel(t.id);
                 null != i &&
-                    (0, h.jW)(e, async () => {
+                    (0, f.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                         return (t) => (0, r.jsx)(e, D(R({}, t), { channel: i }));
                     });
@@ -290,7 +290,7 @@ let k = i.memo(function (e) {
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(f.Z, {
+                                                          : (0, r.jsx)(h.Z, {
                                                                 user: z,
                                                                 size: d.EFr.SIZE_16,
                                                             }),

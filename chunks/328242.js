@@ -1,10 +1,10 @@
 n.d(t, { Z: () => I }), n(388685), n(642613);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    s = n(209739),
-    a = n.n(s),
+    s = n.n(l),
+    o = n(209739),
+    a = n.n(o),
     c = n(268146),
     d = n(442837),
     u = n(481060),
@@ -40,10 +40,10 @@ function T(e) {
 }
 function Z(e) {
     let { source: t, selected: n, onClick: i } = e,
-        { url: l, name: s } = t;
+        { url: l, name: o } = t;
     return (0, r.jsxs)(u.P3F, {
         onClick: () => i(t),
-        className: o()(P.source, { [P.selectedSource]: n }),
+        className: s()(P.source, { [P.selectedSource]: n }),
         children: [
             (0, r.jsx)("div", {
                 className: P.sourcePreviewContainer,
@@ -76,7 +76,7 @@ function Z(e) {
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/medium",
                         className: P.sourceName,
-                        children: s,
+                        children: o,
                     }),
                 ],
             }),
@@ -89,8 +89,8 @@ function I(e) {
             {
                 windowSources: n,
                 deviceSources: l,
-                screenSources: o,
-                sourceType: s,
+                screenSources: s,
+                sourceType: o,
                 fetchingSources: g,
                 selectedSource: O,
                 discordSourceId: T,
@@ -98,26 +98,26 @@ function I(e) {
             },
         ] = (0, y.E_)(),
         { smarterSourceOrdering: N } = (0, j.E)({ location: "GoLiveSourceGrid" }),
-        A = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
-        R = (0, d.cj)([p.ZP], () => {
+        R = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
+        A = (0, d.cj)([p.ZP], () => {
             let e = p.ZP.getCandidateGames(),
                 t = {};
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
         M = (0, d.e7)([_.Z], () => _.Z.quests),
-        k = (0, S.jx)(M, A, n);
+        k = (0, S.jx)(M, R, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
         () =>
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, S.ov)(t, null == k ? void 0 : k.source.id, T, R) -
-                          (0, S.ov)(e, null == k ? void 0 : k.source.id, T, R),
+                          (0, S.ov)(t, null == k ? void 0 : k.source.id, T, A) -
+                          (0, S.ov)(e, null == k ? void 0 : k.source.id, T, A),
                   )
                 : n,
-        [k, N, n, T, R],
+        [k, N, n, T, A],
     );
     if (g) {
         if (!1 === I) {
@@ -155,7 +155,7 @@ function I(e) {
         });
     }
     let G = [];
-    return ((G = s === c.vA.WINDOW ? D : s === c.vA.SCREEN ? o : l), s === c.vA.CAMERA && 0 === G.length)
+    return ((G = o === c.vA.WINDOW ? D : o === c.vA.SCREEN ? s : l), o === c.vA.CAMERA && 0 === G.length)
         ? (0, r.jsx)(E, {})
         : (0, r.jsx)("div", {
               className: P.root,

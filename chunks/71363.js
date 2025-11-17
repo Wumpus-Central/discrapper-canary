@@ -1,6 +1,6 @@
 n.d(t, { Z: () => A }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -35,10 +35,10 @@ let A = (e) => {
         { analyticsLocations: w } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, L] = i.useState(!1),
         M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, O.mN)(),
-        { fractionalState: k } = (0, _.Z)(),
+        k = (0, O.mN)(),
+        { fractionalState: j } = (0, _.Z)(),
         U = (0, h.W)();
-    j
+    k
         ? ((t = I.intl.string(I.t["+vt7w9"])), (n = I.intl.string(I.t.LgHbnL)))
         : ((t = I.intl.string(I.t.LgHbnL)), (n = I.intl.string(I.t["+vt7w9"])));
     let G = () => {
@@ -81,9 +81,9 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_FIRST_ROW,
-                                    isPremiumSubscriber: j,
+                                    isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
-                                    fractionalState: k,
+                                    fractionalState: j,
                                     isInReverseTrial: U,
                                 }),
                                 cardType: y.gM.CARD_CAROUSEL_FIRST_ROW,
@@ -99,9 +99,9 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_SECOND_ROW,
-                                    isPremiumSubscriber: j,
+                                    isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
-                                    fractionalState: k,
+                                    fractionalState: j,
                                     isInReverseTrial: U,
                                 }),
                                 cardType: y.gM.CARD_CAROUSEL_SECOND_ROW,
@@ -117,9 +117,9 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_THIRD_ROW,
-                                    isPremiumSubscriber: j,
+                                    isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
-                                    fractionalState: k,
+                                    fractionalState: j,
                                     isInReverseTrial: U,
                                 }),
                                 cardType: y.gM.CARD_CAROUSEL_THIRD_ROW,

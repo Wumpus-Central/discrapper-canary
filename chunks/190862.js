@@ -1,6 +1,6 @@
 n.d(t, { Z: () => j }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(296009),
     l = n(442837),
     o = n(314897),
@@ -39,7 +39,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,9 +59,9 @@ function v(e, t) {
     }
     return i;
 }
-let O = (e) => {
+let v = (e) => {
         var { widget: t } = e,
-            n = v(e, ["widget"]);
+            n = O(e, ["widget"]);
         switch (t.type) {
             case a.l.FAVORITE_GAMES:
                 return (0, r.jsx)(g.Z, y({ widget: t }, n));
@@ -77,7 +77,7 @@ let O = (e) => {
     },
     j = (e) => {
         var { widget: t, user: n, disableInteraction: a } = e,
-            f = v(e, ["widget", "user", "disableInteraction"]);
+            f = O(e, ["widget", "user", "disableInteraction"]);
         let { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(t),
             m = (0, l.e7)([o.default], () => o.default.getId() === n.id),
             j = m && !a && g,
@@ -92,7 +92,7 @@ let O = (e) => {
                 setExpanded: S,
             },
             children: (0, r.jsx)(
-                O,
+                v,
                 y(
                     {
                         widget: t,

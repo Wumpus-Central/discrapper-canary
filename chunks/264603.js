@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(442837),
     o = n(524437),
     c = n(481060),
@@ -38,9 +38,9 @@ let C = [
     },
 ];
 function S() {
-    let e = i.useRef(null),
+    let e = l.useRef(null),
         t = f.JG.useSetting(),
-        [n, r] = i.useState(""),
+        [n, r] = l.useState(""),
         o = (0, s.e7)([x.ZP, v.Z], () => (0, g.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
         E = (0, s.Wu)([p.Z], () => {
@@ -53,12 +53,12 @@ function S() {
                 ? t
                 : [];
         }),
-        T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
-        O = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
+        O = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
+        T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         N = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: I } = (function (e) {
+        { canDeauthorize: P, deauthorize: w } = (function (e) {
             let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
-                n = i.useCallback(() => {
+                n = l.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
             return {
@@ -68,7 +68,7 @@ function S() {
         })(null == S ? void 0 : S.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(_.panel, y.panel),
+        className: i()(_.panel, y.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: y.container,
@@ -147,20 +147,20 @@ function S() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: T.startAuthorization,
+                        disabled: !O.canStartAuthorization,
+                        onClick: O.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !O.canStartAuthorization,
-                        onClick: O.startAuthorization,
+                        disabled: !T.canStartAuthorization,
+                        onClick: T.startAuthorization,
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P,
-                        onClick: I,
+                        onClick: w,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

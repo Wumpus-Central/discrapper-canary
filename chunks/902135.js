@@ -1,5 +1,5 @@
 n.d(t, { G: () => i });
-var r = n(951288);
+var r = n(54381);
 let i = () =>
     (0, r.jsx)("svg", {
         xmlns: "http://www.w3.org/2000/svg",

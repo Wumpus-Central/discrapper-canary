@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(100527),
@@ -75,8 +75,8 @@ function T(e) {
     i.useEffect(() => {
         null == v || v(null == L ? void 0 : L.current);
     }, [L, v]);
-    let j = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        k = P ? "div" : o.VqE;
+    let k = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        j = P ? "div" : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: w,
         children: (0, r.jsx)(d.Mt, {
@@ -85,7 +85,7 @@ function T(e) {
             fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
             fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
             isLoaded: null == M ? void 0 : M.isLoaded,
-            children: (0, r.jsx)(k, {
+            children: (0, r.jsx)(j, {
                 ref: L,
                 "aria-label": t.username,
                 children: (0, r.jsx)(h.Z, {
@@ -133,7 +133,7 @@ function T(e) {
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
-                                                                    action: j,
+                                                                    action: k,
                                                                     analyticsLocations: w,
                                                                 },
                                                                 x,

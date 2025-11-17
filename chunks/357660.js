@@ -1,8 +1,8 @@
 n.d(t, { T: () => f }), n(415506);
-var r = n(951288),
-    l = n(647438),
-    o = n(442837),
-    i = n(215569),
+var r = n(54381),
+    l = n(473749),
+    i = n(442837),
+    o = n(215569),
     a = n(481060),
     c = n(924052),
     s = n(670304),
@@ -13,7 +13,7 @@ function d(e) {
         f = null == t ? void 0 : t.stores;
     l.useEffect(() => {
         if (null != f) {
-            let e = new o.Fh(f, () => {
+            let e = new i.Fh(f, () => {
                 d(f);
             });
             return (
@@ -36,7 +36,7 @@ function d(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n,
-            (0, r.jsx)(i.W, {
+            (0, r.jsx)(o.W, {
                 component: "div",
                 children: b,
             }),

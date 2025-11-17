@@ -1,9 +1,9 @@
 n.d(t, { Z: () => I }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(574583),
+    s = n(55160),
     l = n(442837),
     c = n(114101),
     u = n(28664),
@@ -52,7 +52,7 @@ function v(e, t) {
         L = (0, h.v)(d.O),
         M = a === m.Ie.NORMAL ? L : void 0;
     if (n) return null;
-    let j = S === b.X1.GIF && A === a;
+    let k = S === b.X1.GIF && A === a;
     return (0, r.jsx)(u.u, {
         keyboardShortcut: T ? void 0 : M,
         text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),
@@ -68,10 +68,10 @@ function v(e, t) {
                 onClick: () => {
                     P(), x();
                 },
-                isActive: j,
+                isActive: k,
                 pulse: v,
                 "aria-label": y.intl.string(y.t.PtVpk2),
-                "aria-expanded": j,
+                "aria-expanded": k,
                 "aria-haspopup": "dialog",
                 "aria-controls": C,
                 children: (0, r.jsx)(D, {

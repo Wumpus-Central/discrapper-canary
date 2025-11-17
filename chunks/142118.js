@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
-var r = n(951288),
-    l = n(647438),
-    o = n(481060),
-    i = n(36361),
+var r = n(54381),
+    l = n(473749),
+    i = n(481060),
+    o = n(36361),
     a = n(598612),
     c = n(175993),
     s = n(476804);
@@ -15,7 +15,7 @@ let u = l.memo(function (e) {
         l.useEffect(() => {
             null == d || d();
         }, [d]),
-        (0, r.jsxs)(o.Kqy, {
+        (0, r.jsxs)(i.Kqy, {
             gap: 16,
             children: [
                 (0, r.jsx)(a.Y, {
@@ -27,7 +27,7 @@ let u = l.memo(function (e) {
                         className: s.notice,
                         children: (0, r.jsx)(c.Z, { notice: b }),
                     }),
-                u.map((e) => (0, r.jsx)(i.Z, { node: e }, e.key)),
+                u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
             ],
         })
     );

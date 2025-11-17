@@ -1,6 +1,6 @@
 n.d(t, { Z: () => A }), n(953529), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(512722),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n.n(c),
     d = n(748780),
     p = n(442837),
-    h = n(215569),
-    f = n(481060),
+    f = n(215569),
+    h = n(481060),
     g = n(612226),
     m = n(951483),
     b = n(714338),
@@ -80,12 +80,12 @@ function Z() {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(f.Heading, {
+                                (0, r.jsx)(h.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: i,
                                 }),
                                 null != l &&
-                                    (0, r.jsx)(f.Text, {
+                                    (0, r.jsx)(h.Text, {
                                         className: C.keybindGroupDescription,
                                         variant: "text-sm/normal",
                                         children: l,
@@ -105,7 +105,7 @@ function Z() {
                                               {
                                                   className: C.keybindGroup,
                                                   children: [
-                                                      (0, r.jsx)(f.Text, {
+                                                      (0, r.jsx)(h.Text, {
                                                           variant: "text-sm/normal",
                                                           children: e.description,
                                                       }),
@@ -113,7 +113,7 @@ function Z() {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
                                                               (0, r.jsx)(
-                                                                  f.M2$,
+                                                                  h.M2$,
                                                                   {
                                                                       className: C.keybindKey,
                                                                       shortcut: e,
@@ -157,14 +157,14 @@ class w extends i.PureComponent {
             className: C.keyboardShortcutsModal,
             style: this.getStyles(),
             children: [
-                (0, r.jsxs)(f.H, {
+                (0, r.jsxs)(h.H, {
                     className: C.modalTitle,
                     children: [
                         (0, r.jsx)("div", {
                             className: C.content,
                             children: x.intl.string(x.t["1BdUtx"]),
                         }),
-                        (0, r.jsx)(f.M2$, { shortcut: "mod+/" }),
+                        (0, r.jsx)(h.M2$, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, r.jsx)("div", {
@@ -200,10 +200,10 @@ class w extends i.PureComponent {
                         }),
                     ],
                 }),
-                (0, r.jsx)(f.yWw, {
+                (0, r.jsx)(h.yWw, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(f.y5t, { children: (0, r.jsx)(Z, {}) }),
+                    children: (0, r.jsx)(h.y5t, { children: (0, r.jsx)(Z, {}) }),
                 }),
             ],
         });
@@ -313,7 +313,7 @@ function T(e) {
                 return () => clearTimeout(e);
             }
         }, [s]),
-        (0, r.jsx)(f.P3F, {
+        (0, r.jsx)(h.P3F, {
             onClick: u,
             className: o()(C.arrow, l, { [C.active]: t || s }),
             children: a,
@@ -332,13 +332,13 @@ function A(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(N, { showBackdrop: s }),
-            (0, r.jsx)(f.Y0X, {
+            (0, r.jsx)(h.Y0X, {
                 className: o()(C.noBackground, { [C.noShadow]: l }),
-                size: f.CgR.DYNAMIC,
+                size: h.CgR.DYNAMIC,
                 "aria-label": x.intl.string(x.t.T9DA2K),
                 transitionState: t,
                 parentComponent: "KeyboardShortcutsModal",
-                children: (0, r.jsx)(h.W, {
+                children: (0, r.jsx)(f.W, {
                     component: "div",
                     children: l
                         ? (0, r.jsx)(

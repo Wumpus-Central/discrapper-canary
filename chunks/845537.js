@@ -1,8 +1,8 @@
 n.d(t, {
     EK: () => G,
-    Io: () => j,
+    Io: () => k,
     N1: () => B,
-    NY: () => k,
+    NY: () => j,
     Ox: () => x,
     Vq: () => M,
     Wf: () => U,
@@ -10,8 +10,8 @@ n.d(t, {
     dy: () => D,
     wP: () => w,
 });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -139,7 +139,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { id: t } = e,
         n = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         i = N.intl.string(N.t.zLZPmk).toLowerCase(),
@@ -158,7 +158,7 @@ function j(e) {
           })
         : (0, r.jsx)("span", { children: "#" + i });
 }
-function k(e) {
+function j(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, p.l)(t),
         o = (0, p.W)(t, n, i);

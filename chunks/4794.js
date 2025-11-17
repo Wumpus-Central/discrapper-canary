@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(59662),
-    i = n(36361),
+var r = n(54381),
+    l = n(473749),
+    i = n(59662),
+    o = n(36361),
     a = n(530171),
     c = n(175993),
     s = n(445642);
@@ -10,7 +10,7 @@ let u = l.memo(function (e) {
     let { node: t } = e,
         { useTitle: n, layout: u, useSubtitle: d, notice: f } = t,
         [b, p] = l.useState(!1),
-        { navTransition: y } = (0, o.t)();
+        { navTransition: y } = (0, i.t)();
     l.useEffect(() => {
         (null == y ? void 0 : y.targetAccordionKey) === t.key && p(!0);
     }, [null == y ? void 0 : y.targetAccordionKey, t.key]);
@@ -29,7 +29,7 @@ let u = l.memo(function (e) {
                         className: s.notice,
                         children: (0, r.jsx)(c.Z, { notice: f }),
                     }),
-                u.map((e) => (0, r.jsx)(i.Z, { node: e }, e.key)),
+                u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
             ],
         }),
     });

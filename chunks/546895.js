@@ -20,10 +20,10 @@ n.d(t, { Z: () => d }),
     n(490233),
     n(97749),
     n(35282);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(108514),
-    l = n(793030),
+    i = n(793030),
     s = n(481060);
 let o = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
@@ -320,8 +320,8 @@ function c(e) {
                     let a = new Uint8Array(e);
                     r.Ri(a, (e, a) => {
                         null != e && n(e);
-                        let i = Object.keys(a).reduce((e, t) => {
-                                var n, i;
+                        let l = Object.keys(a).reduce((e, t) => {
+                                var n, l;
                                 return (
                                     (n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
@@ -348,9 +348,9 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (i = i = { [t]: JSON.parse(r.T8(a[t])) }),
+                                    (l = l = { [t]: JSON.parse(r.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -358,25 +358,25 @@ function c(e) {
                                                   n.push.apply(n, a);
                                               }
                                               return n;
-                                          })(Object(i)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                          })(Object(l)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                           }),
                                     n
                                 );
                             }, {}),
-                            l = i["manifest.json"];
-                        t(i["animations/".concat(l.animations[0].id, ".json")]);
+                            i = l["manifest.json"];
+                        t(l["animations/".concat(i.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function d() {
-    let [e, t] = i.useState(void 0),
-        [n, r] = i.useState(400),
-        [d, u] = i.useState(400);
+    let [e, t] = l.useState(void 0),
+        [n, r] = l.useState(400),
+        [d, u] = l.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(l.Kqy, {
+        children: (0, a.jsxs)(i.Kqy, {
             gap: 24,
             children: [
                 (0, a.jsx)(s.VcW, {
@@ -387,7 +387,7 @@ function d() {
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(l.Kqy, {
+                (0, a.jsxs)(i.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
@@ -413,12 +413,12 @@ function d() {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
-                            i = document.createElement("a");
-                        (i.href = a),
-                            (i.download = "".concat(e.split("/").pop(), ".json")),
-                            document.body.appendChild(i),
-                            i.click(),
-                            document.body.removeChild(i),
+                            l = document.createElement("a");
+                        (l.href = a),
+                            (l.download = "".concat(e.split("/").pop(), ".json")),
+                            document.body.appendChild(l),
+                            l.click(),
+                            document.body.removeChild(l),
                             URL.revokeObjectURL(a);
                     },
                     text: "Download",

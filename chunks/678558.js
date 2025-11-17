@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -107,8 +107,8 @@ let P = (e) => {
             handleSubscribeModalClose: x,
             withHighlight: L = !1,
             icon: M,
-            intent: j,
-            useExpressiveButton: k = !1,
+            intent: k,
+            useExpressiveButton: j = !1,
         } = e,
         U = N(e, [
             "analyticsLocation",
@@ -150,7 +150,7 @@ let P = (e) => {
                     inPopout: B,
                     applicationId: w,
                     handleSubscribeModalClose: x,
-                    intent: j,
+                    intent: k,
                 }),
                 F(!1);
         },
@@ -174,7 +174,7 @@ let P = (e) => {
         })),
         (U.disabled = !0)),
     null != K)
-        ? k
+        ? j
             ? (0, r.jsx)(c.u, {
                   text: K,
                   children: (0, r.jsx)(d.Button, {
@@ -204,7 +204,7 @@ let P = (e) => {
                           ),
                       ),
               })
-        : k
+        : j
           ? (0, r.jsx)(d.Button, {
                 variant: "expressive",
                 disabled: Q,

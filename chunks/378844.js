@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => O,
 });
 var r,
-    i = n(951288);
-n(647438);
+    i = n(54381);
+n(473749);
 var l = n(442837),
     o = n(755721),
     a = n(481060),
@@ -13,8 +13,8 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    h = n(594174),
-    f = n(981631),
+    f = n(594174),
+    h = n(981631),
     g = n(815660),
     m = n(388032),
     b = n(36973);
@@ -65,10 +65,10 @@ let O = (e) => {
               : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: h.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: h.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
@@ -142,7 +142,7 @@ let O = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPy, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = h.default.getCurrentUser())
+                                                                                        (t = f.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),

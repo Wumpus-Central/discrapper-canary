@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(442837),
     a = n(314897),
     l = n(733231),
@@ -81,8 +81,8 @@ function p(e) {
         b = (0, i.e7)([a.default], () => a.default.getId() === o),
         { getManageButtonForWidget: h } = (0, d.j)(),
         y = h(u),
-        { expanded: v, setExpanded: O } = (0, c.g)(),
-        j = v ? m : m.slice(0, 8),
+        { expanded: O, setExpanded: v } = (0, c.g)(),
+        j = O ? m : m.slice(0, 8),
         x = m.length > 8,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -106,8 +106,8 @@ function p(e) {
                 ),
                 x &&
                     (0, r.jsx)(s.Z, {
-                        expanded: v,
-                        onClick: () => O((e) => !e),
+                        expanded: O,
+                        onClick: () => v((e) => !e),
                     }),
             ],
         });

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => N }), n(388685);
-var r = n(951288),
-    l = n(647438),
+n.d(t, { Z: () => A }), n(388685);
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     u = n(782568),
     d = n(607070),
-    g = n(594174),
-    p = n(451478),
+    p = n(594174),
+    g = n(451478),
     f = n(626135),
     h = n(63063),
     C = n(74538),
@@ -19,8 +19,8 @@ var r = n(951288),
     v = n(38900),
     x = n(709999),
     E = n(653126),
-    S = n(786040),
-    O = n(401975),
+    O = n(786040),
+    S = n(401975),
     y = n(328626),
     j = n(849275),
     k = n(619899),
@@ -29,20 +29,20 @@ var r = n(951288),
     L = n(981631),
     B = n(388032),
     P = n(219588),
-    A = n(310582);
-let N = (e) => {
+    N = n(310582);
+let A = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: N,
+            sortedSkuIds: A,
             numVisibleItems: R,
             prioritizeUserDiscounts: Z,
             tab: w,
             buttonContainerClassName: H,
             orbsSupportedOnly: D,
         } = e,
-        M = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        M = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         F = C.ZP.canUseCollectibles(M),
         W = (0, I.B)("FeedBlock"),
         {
@@ -53,14 +53,14 @@ let N = (e) => {
             shuffleProducts: K,
             showRecommendationOption: Y,
         } = (0, j.Z)({
-            sortedSkuIds: N,
+            sortedSkuIds: A,
             isPremiumUser: F,
             prioritizeUserDiscounts: Z,
             orbsSupportedOnly: D,
         }),
         q = (0, k.St)(z),
         J = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Q = (0, o.e7)([p.Z], () => p.Z.isFocused()),
+        Q = (0, o.e7)([g.Z], () => g.Z.isFocused()),
         X = !J && Q,
         { animationPhase: $, startAnimation: ee } = (0, y.y)(),
         et = (0, m.sp)(),
@@ -83,13 +83,13 @@ let N = (e) => {
     return null == M
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(A.popularPicksSection, A.centeredSection),
+              className: a()(N.popularPicksSection, N.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: A.blockHeader,
+                      className: N.blockHeader,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: A.headerLeft,
+                              className: N.headerLeft,
                               children: [
                                   (0, r.jsx)(c.Heading, {
                                       variant: "heading-lg/semibold",
@@ -103,14 +103,14 @@ let N = (e) => {
                                           children: (0, r.jsx)(c.P3F, {
                                               onClick: () =>
                                                   (0, u.Z)(h.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                              className: A.informationIcon,
+                                              className: N.informationIcon,
                                               children: (0, r.jsx)(c.d3s, { size: "sm" }),
                                           }),
                                       }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: a()(A.headerRight, { [P.customCursors]: W }),
+                              className: a()(N.headerRight, { [P.customCursors]: W }),
                               children: [
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -121,7 +121,7 @@ let N = (e) => {
                                       children: (0, r.jsx)(c.PhF, {
                                           options: G,
                                           select: el,
-                                          className: A.sortSelect,
+                                          className: N.sortSelect,
                                           popoutClassName: a()({ [P.customCursors]: W }),
                                           isSelected: (e) => e === V,
                                           serialize: (e) => e,
@@ -151,11 +151,11 @@ let N = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: A.feed,
+                      className: N.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) =>
-                                    ei ? (0, r.jsx)(O.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
+                                    ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
                                 ),
                             })
                           : q.slice(0, R).map((e, t) => {
@@ -168,25 +168,25 @@ let N = (e) => {
                                             ? (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: A.shuffleOutro,
-                                                      children: (0, r.jsx)(O.Z, { skipPulseAnimation: !0 }),
+                                                      className: N.shuffleOutro,
+                                                      children: (0, r.jsx)(S.Z, { skipPulseAnimation: !0 }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               )
                                             : (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: A.shuffleOutro,
-                                                      children: (0, r.jsx)("div", { className: A.placeholderCard }),
+                                                      className: N.shuffleOutro,
+                                                      children: (0, r.jsx)("div", { className: N.placeholderCard }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               );
                                     else
                                         $ === y.g.SORT_OUT
-                                            ? (n = A.sortChangedOutro)
+                                            ? (n = N.sortChangedOutro)
                                             : $ === y.g.SHUFFLE_IN
-                                              ? (n = A.shuffleIntro)
-                                              : $ === y.g.SORT_IN && (n = A.sortChangedIntro);
+                                              ? (n = N.shuffleIntro)
+                                              : $ === y.g.SORT_IN && (n = N.sortChangedIntro);
                                 return (0, r.jsx)(
                                     m.k0,
                                     {
@@ -201,8 +201,8 @@ let N = (e) => {
                                                       className: n,
                                                       children: (0, r.jsx)(E.Z, {
                                                           skuId: null == e ? void 0 : e.skuId,
-                                                          prioritizedCurrency: w === T.AW.ORBS ? S.tA.ORBS : void 0,
-                                                          onClickAnalytics: (0, S.wO)(e, w, et),
+                                                          prioritizedCurrency: w === T.AW.ORBS ? O.tA.ORBS : void 0,
+                                                          onClickAnalytics: (0, O.wO)(e, w, et),
                                                       }),
                                                   })
                                                 : (0, r.jsx)(x.Z, {

@@ -3,7 +3,7 @@ n.d(t, {
     Sg: () => eT,
     TE: () => ex,
     ZP: () => eB,
-    aT: () => ek,
+    aT: () => ej,
     ae: () => eS,
     bL: () => eI,
     hJ: () => eN,
@@ -17,14 +17,14 @@ n.d(t, {
     n(388685),
     n(415506),
     n(781311);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(836560),
     l = n(512722),
     c = n.n(l),
-    u = n(574583),
+    u = n(55160),
     d = n(873546),
     f = n(149765),
     _ = n(442837),
@@ -50,8 +50,8 @@ var r = n(951288),
     x = n(657871),
     L = n(849522),
     M = n(780291),
-    j = n(328908),
-    k = n(913663),
+    k = n(328908),
+    j = n(913663),
     U = n(268350),
     G = n(378233),
     B = n(665906),
@@ -153,11 +153,11 @@ function eI(e, t, a, o, s) {
                 c(!0);
                 let y =
                         null !=
-                        (E = null == (g = k.Z.getStickerPreview(s, t.drafts.type)) ? void 0 : g.map((e) => e.id))
+                        (E = null == (g = j.Z.getStickerPreview(s, t.drafts.type)) ? void 0 : g.map((e) => e.id))
                             ? E
                             : [],
                     O = null != (b = W.Z.getUploads(s, t.drafts.type)) ? b : [],
-                    v = (0, j.q5)(s);
+                    v = (0, k.q5)(s);
                 if (null == d && !_ && !m && (0, D.CB)(O, s)) {
                     c(!1),
                         (0, p.ZDy)(async () => {
@@ -254,7 +254,7 @@ function eA(e) {
                     ? ((0, er._H)({
                           sticker: e,
                           stickerSelectLocation: i,
-                          isReplacement: null != k.Z.getStickerPreview(a, o.drafts.type),
+                          isReplacement: null != j.Z.getStickerPreview(a, o.drafts.type),
                           analyticsLocations: l,
                       }),
                       (0, U.eu)(a, e, o.drafts.type))
@@ -455,7 +455,7 @@ function eM(e, t, n) {
         ),
     };
 }
-function ej(e, t) {
+function ek(e, t) {
     let [n, r] = i.useState(null),
         a = i.useCallback(() => {
             var e, n;
@@ -478,7 +478,7 @@ function ej(e, t) {
         n
     );
 }
-let ek = (e) => {
+let ej = (e) => {
         let { enabled: t, onlyExactMatch: n } = (0, x.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [r, a] = i.useState(!0),
             o = i.useRef(null);
@@ -519,8 +519,8 @@ function eG(e, t) {
         id: D,
         required: w,
         disabled: x,
-        placeholder: j,
-        accessibilityLabel: k,
+        placeholder: k,
+        accessibilityLabel: j,
         channel: U,
         type: G,
         focused: B,
@@ -562,13 +562,13 @@ function eG(e, t) {
         e0 = i.useRef(null),
         e1 = i.useRef(null);
     null == eZ || eZ(e$.current);
-    let e2 = (0, y.Z)(U),
-        [e3, e4] = i.useState(!e2);
+    let e3 = (0, y.Z)(U),
+        [e2, e4] = i.useState(!e3);
     (0, m.PM)(eX, (e) => {
         let { width: t } = e;
-        return e4(!e2 && (null == t || t > eb));
+        return e4(!e3 && (null == t || t > eb));
     });
-    let { activeCommand: e8, activeCommandSection: e5 } = (0, _.cj)([I.Z], () => {
+    let { activeCommand: e5, activeCommandSection: e8 } = (0, _.cj)([I.Z], () => {
             var e, t;
             return {
                 activeCommand: (null == (e = G.commands) ? void 0 : e.enabled) ? I.Z.getActiveCommand(U.id) : null,
@@ -584,7 +584,7 @@ function eG(e, t) {
             canAttachFiles: te,
             canCreateThreads: tt,
             canEveryoneSendMessages: tn,
-        } = ex(U, G, e8, x),
+        } = ex(U, G, e5, x),
         tr = G.toolbarType === ee.OW.STATIC,
         ti = !Z.dN.useSetting() && !(0, Q.isAndroidWeb)() && null != window.ResizeObserver,
         ta = !ti || !(null == (n = G.commands) ? void 0 : n.enabled) || !B || f !== ef.GI,
@@ -626,24 +626,24 @@ function eG(e, t) {
         { editorHeight: tT, handleResize: tS } = ew(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = eM(tm, eQ, ta),
         { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tD } = eL(G, e$),
-        tw = ej(tc, e$),
-        tx = ek(f),
+        tw = ek(tc, e$),
+        tx = ej(f),
         { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tM } = eU(),
-        { moveAppsEntrypointToOverflow: tj } = $.n.useConfig({ location: "ChannelAppLauncher" }),
-        tk = (0, S.Z)({ type: G });
+        { moveAppsEntrypointToOverflow: tk } = $.n.useConfig({ location: "ChannelAppLauncher" }),
+        tj = (0, S.Z)({ type: G });
     (0, J.S)(tc, U.guild_id, U.id);
     let tU = null != W,
         tG = (e9 && !((e6 || e7) && tn)) || (t_ && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tB = null;
-    null != e8
-        ? (tB = null == H ? void 0 : H(e8, e5, ep.attachButton))
+    null != e5
+        ? (tB = null == H ? void 0 : H(e5, e8, ep.attachButton))
         : (!e9 || tt) && (tB = null == V ? void 0 : V(tU, ep.attachButton));
-    let tZ = ti && null != h && !e9 && G.showCharacterCount && null == e8,
-        tF = ti && !__OVERLAY__ && null != h && null == e8 && G.toolbarType !== ee.OW.NONE && !e9,
+    let tZ = ti && null != h && !e9 && G.showCharacterCount && null == e5,
+        tF = ti && !__OVERLAY__ && null != h && null == e5 && G.toolbarType !== ee.OW.NONE && !e9,
         tV = (0, ei.c)({
             channel: U,
             type: G,
-            activeCommand: e8,
+            activeCommand: e5,
             pendingReply: W,
             pendingScheduledMessage: eK,
             selectedAutocompleteInputType: tw,
@@ -655,9 +655,9 @@ function eG(e, t) {
             ref: eJ,
             className: ep.hiddenAppLauncherAnchor,
         }),
-        tz = tk
+        tz = tj
             ? (0, r.jsx)(v.Z, {
-                  align: tj && G !== ee.Ie.SIDEBAR ? "left" : "right",
+                  align: tk && G !== ee.Ie.SIDEBAR ? "left" : "right",
                   positionTargetRef: eJ,
                   channel: U,
               })
@@ -668,7 +668,7 @@ function eG(e, t) {
             channel: U,
             handleSubmit: th,
             isEmpty: tH,
-            showAllButtons: e3,
+            showAllButtons: e2,
         }),
         tX = tZ
             ? (0, r.jsx)(es.Z, {
@@ -744,7 +744,7 @@ function eG(e, t) {
                                     onMouseDown: tD,
                                     children: [
                                         tz,
-                                        tj && tK,
+                                        tk && tK,
                                         tB,
                                         (0, r.jsx)(p.tEY, {
                                             ringTarget: eX,
@@ -757,9 +757,9 @@ function eG(e, t) {
                                                 textValue: f,
                                                 richValue: h,
                                                 disabled: e9,
-                                                placeholder: j,
+                                                placeholder: k,
                                                 required: w,
-                                                accessibilityLabel: k,
+                                                accessibilityLabel: j,
                                                 isPreviewing: (e6 || e7) && tn,
                                                 channel: U,
                                                 type: G,
@@ -799,7 +799,7 @@ function eG(e, t) {
                                             }),
                                         }),
                                         tq,
-                                        !tj && tK,
+                                        !tk && tK,
                                     ],
                                 }),
                             ],

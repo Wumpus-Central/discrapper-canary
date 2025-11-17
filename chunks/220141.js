@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(371286),
-    l = n(785717),
+    i = n(785717),
     s = n(836197),
     o = n(299560),
     c = n(247397),
@@ -17,26 +17,26 @@ function p(e) {
             if (null == e) return {};
             var n,
                 a,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         a,
-                        i = {},
+                        l = {},
                         r = Object.keys(e);
-                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(e);
                 for (a = 0; a < r.length; a++)
                     (n = r[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: g } = (0, l.KZ)(),
+    let { trackUserProfileEditAction: g } = (0, i.KZ)(),
         f = c.rR.filter((e) => s.Ki.includes(e)),
-        b = i.useCallback(() => {
+        b = l.useCallback(() => {
             h(d.L.TAKE_ACTION), g({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, g]);
     return (0, a.jsx)(

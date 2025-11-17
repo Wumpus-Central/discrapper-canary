@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x }), n(35282);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(481060),
@@ -82,19 +82,19 @@ function x(e) {
         x = (0, p.Dt)(),
         L = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
-        j = (0, _.Z)({
+        k = (0, _.Z)({
             activity: a,
             user: t,
         }),
-        k = (0, E.Z)(a),
-        U = null != k.text && "" !== k.text,
+        j = (0, E.Z)(a),
+        U = null != j.text && "" !== j.text,
         { largeImage: G } = (0, d.FO)(a),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, m.Z)({
             display: "live",
             user: t,
             activity: a,
-            entry: j,
+            entry: k,
             analyticsLocations: B,
         }),
         F = (0, g.Z)({
@@ -169,12 +169,12 @@ function x(e) {
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    w(P({ textId: L }, k), {
+                    w(P({ textId: L }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
                             activity: a,
-                            entry: j,
+                            entry: k,
                             onClose: D,
                         }),
                     }),

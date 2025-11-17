@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(388685),
     n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -105,8 +105,8 @@ function L(e, t) {
     return i;
 }
 let M = 43,
-    j = 25,
-    k = 40,
+    k = 25,
+    j = 40,
     U = 250;
 function G(e) {
     e.stopPropagation();
@@ -311,8 +311,8 @@ function H(e) {
                       }),
                   })
                 : null,
-        K = { maxHeight: B.height - M - j - 48 };
-    L && (K.maxHeight -= k);
+        K = { maxHeight: B.height - M - k - 48 };
+    L && (K.maxHeight -= j);
     let z = null != d && a;
     return (0, r.jsx)("div", {
         className: o()(T, N.messagesPopoutWrap),

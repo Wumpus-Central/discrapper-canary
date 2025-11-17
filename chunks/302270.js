@@ -1,6 +1,6 @@
 n.d(t, { Z: () => k });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(236091),
     _ = n(623624),
     y = n(665149),
-    x = n(984370),
-    O = n(616286),
-    j = n(975146),
+    O = n(984370),
+    j = n(616286),
+    x = n(975146),
     v = n(430824),
     C = n(496675),
     I = n(626135),
@@ -46,8 +46,8 @@ function M(e) {
         ),
         _ = (0, Z.B)(t.id),
         y = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: x } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        v = x && m;
+        { hasParticipantsPanel: O } = (0, f.Z)({ location: "StageChannelCallHeader" }),
+        v = O && m;
     return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
@@ -68,9 +68,9 @@ function M(e) {
                   })
                 : null,
             !m &&
-                x &&
+                O &&
                 (0, r.jsx)(
-                    j.Z,
+                    x.Z,
                     {
                         className: a()(L.button, { [L.sidebarOpen]: c }),
                         onClick: () => {
@@ -82,7 +82,7 @@ function M(e) {
             !c &&
                 (0, r.jsx)("div", {
                     className: a()(L.button, { [L.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(O.T, {
+                    children: (0, r.jsx)(j.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -100,11 +100,11 @@ function k(e) {
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
         b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        O = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        j =
+        j = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        x =
             null != b && b.features.has(w.GuildFeatures.COMMUNITY)
-                ? O < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && O <= w.eez,
+                ? j < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && j <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {
@@ -146,7 +146,7 @@ function k(e) {
                     showRequestToSpeakSidebar: u,
                     channel: n,
                 }),
-                onDoubleClick: x.O,
+                onDoubleClick: O.O,
                 transparent: !0,
                 className: a()(e, L.participants),
                 children: [
@@ -206,18 +206,18 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       color: "header-primary",
-                                      children: j ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
+                                      children: x ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: j ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
+                                      children: x ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
                                   }),
                               ],
                           }),
                           (0, r.jsx)("div", {
                               className: L.buttons,
-                              children: j
+                              children: x
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.Button, {

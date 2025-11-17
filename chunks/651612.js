@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y }), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
     a = n(442837),
     s = n(481060),
@@ -38,12 +38,12 @@ function y(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let x = i.useRef(null),
-        O = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
-        j = i.useCallback(() => {
-            let e = O ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+    let O = i.useRef(null),
+        j = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+        x = i.useCallback(() => {
+            let e = j ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, h.gC)(e);
-        }, [O]),
+        }, [j]),
         { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
@@ -62,13 +62,13 @@ function y(e) {
         })(t),
         I = i.useCallback(() => {
             var e;
-            null == (e = x.current) || e.focus();
+            null == (e = O.current) || e.focus();
         }, []);
     (0, p.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
-    let S = O ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
+    let S = j ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
         E = [S];
     C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOx"], { mentionCount: C })),
         v > 0 && E.push(b.intl.string(b.t.x5zAGZ));
@@ -107,8 +107,8 @@ function y(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: x,
-                        onClick: j,
+                        buttonRef: O,
+                        onClick: x,
                         label: S,
                         "aria-label": E.join(", "),
                         tooltipPosition: "top",

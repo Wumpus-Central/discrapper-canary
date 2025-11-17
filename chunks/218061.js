@@ -2,7 +2,7 @@ n.d(t, {
     L: () => i,
     Z: () => a,
 });
-var r = n(951288);
+var r = n(54381);
 function i(e) {
     let { size: t, horizontal: n = !1 } = e,
         i = n ? t : 1,
@@ -17,5 +17,5 @@ function i(e) {
         },
     });
 }
-n(647438);
+n(473749);
 let a = i;

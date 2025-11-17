@@ -1,6 +1,6 @@
 n.d(t, { Z: () => w });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -70,8 +70,8 @@ function w(e) {
             guildBoostProps: x,
             analyticsSource: L,
             analyticsLocation: M,
-            body: j,
-            context: k,
+            body: k,
+            context: j,
             glowUp: U,
             modalClassName: G,
             modalContentClassName: B,
@@ -270,7 +270,7 @@ function w(e) {
                                         ? a
                                         : T.Si.TIER_2,
                                 headingText: P,
-                                context: k,
+                                context: j,
                                 analyticsLocationObject: M,
                                 discountOffer: eE,
                                 trialOffer: eg,
@@ -293,7 +293,7 @@ function w(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: e_ ? "text-sm/normal" : "text-md/normal",
                                                 className: o()(H, C.subHeader),
-                                                children: j,
+                                                children: k,
                                             }),
                                         ],
                                     }),

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => E }), n(35282), n(539854), n(388685), n(387201), n(642613);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    o = n(442837),
     a = n(36563),
     c = n(481060),
     d = n(212819),
@@ -28,8 +28,8 @@ var r = n(951288),
     Z = n(603410);
 function I(e) {
     let { result: t, onSelectChannel: n } = e,
-        i = (0, s.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, s.Wu)([y.ZP, S.default], () =>
+        i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
+        l = (0, o.Wu)([y.ZP, S.default], () =>
             y.ZP.getVoiceStatesForChannel(t.record)
                 .map((e) => S.default.getUser(e.user.id))
                 .filter(C.lm),
@@ -81,7 +81,7 @@ function I(e) {
 function E(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: a, results: m } = (0, p.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        S = (0, s.Wu)([b.Z, x.ZP, _.Z, v.Z, j.Z], () => {
+        S = (0, o.Wu)([b.Z, x.ZP, _.Z, v.Z, j.Z], () => {
             let e = [],
                 t = b.Z.getGuildId();
             if (null == t) return e;
@@ -91,7 +91,7 @@ function E(e) {
             }
             return e;
         }),
-        y = (0, s.Wu)([f.Z, _.Z, g.Z, v.Z, j.Z], () => {
+        y = (0, o.Wu)([f.Z, _.Z, g.Z, v.Z, j.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
@@ -121,9 +121,9 @@ function E(e) {
                     .filter(C.lm),
             ];
         }, [y, S]),
-        A = "" !== a ? m : E;
+        R = "" !== a ? m : E;
     return (0, r.jsxs)("div", {
-        className: o()(Z.root, n),
+        className: s()(Z.root, n),
         children: [
             (0, r.jsx)("div", {
                 className: Z.searchBar,
@@ -143,7 +143,7 @@ function E(e) {
                     autoFocus: !0,
                 }),
             }),
-            A.length > 0
+            R.length > 0
                 ? (0, r.jsx)(c.aVo, {
                       renderListHeader: function () {
                           return (0, r.jsx)(c.Text, {
@@ -152,12 +152,12 @@ function E(e) {
                               children: T.intl.string(P.default.FZ9Fl7),
                           });
                       },
-                      sections: [A.length],
+                      sections: [R.length],
                       sectionHeight: 0,
                       rowHeight: 48,
                       renderRow: function (e) {
                           let { rowIndex: n } = e,
-                              i = A[n];
+                              i = R[n];
                           return (0, r.jsx)(
                               I,
                               {

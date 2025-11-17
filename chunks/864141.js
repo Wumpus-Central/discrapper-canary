@@ -1,6 +1,6 @@
 n.d(t, { Z: () => N });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -42,8 +42,8 @@ function N(e) {
         }),
         L = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
         M = (0, p.Z)(i),
-        j = (0, d.ZP)(i),
-        { channelStatusEnabled: k } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
+        k = (0, d.ZP)(i),
+        { channelStatusEnabled: j } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbX"]) : A.intl.string(A.t.xOVEjc);
@@ -74,7 +74,7 @@ function N(e) {
             className: a()(C.card, N),
             onAction: w,
             onClose: R,
-            "aria-label": "".concat(B, ", ").concat(j),
+            "aria-label": "".concat(B, ", ").concat(k),
             children: [
                 (0, r.jsx)(b.Z, {
                     text: B,
@@ -103,7 +103,7 @@ function N(e) {
                                         onAction: w,
                                         onClose: R,
                                     }),
-                                    k &&
+                                    j &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(v.Z, {
                                             voiceChannel: i,

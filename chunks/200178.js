@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(570140),
@@ -10,7 +10,7 @@ var a = n(951288),
     u = n(451429),
     m = n(603473);
 function p() {
-    let [e, t] = i.useState(""),
+    let [e, t] = l.useState(""),
         n = (0, s.e7)(
             [d.Z],
             () =>
@@ -26,7 +26,7 @@ function p() {
             [],
             s.pF,
         ),
-        r = i.useMemo(
+        r = l.useMemo(
             () =>
                 0 === e.length
                     ? n
@@ -36,11 +36,11 @@ function p() {
                       }),
             [n, e],
         ),
-        p = i.useCallback(() => {
+        p = l.useCallback(() => {
             c.Z.dispatch({ type: "DEV_TOOLS_WORD_FREQUENCY_RESET" });
         }, []);
     return (0, a.jsxs)("div", {
-        className: l()(u.panel, m.panel),
+        className: i()(u.panel, m.panel),
         children: [
             n.length > 0 &&
                 (0, a.jsxs)(a.Fragment, {
@@ -81,7 +81,7 @@ function p() {
                                     className: m.resultsTable,
                                     children: [
                                         (0, a.jsxs)("div", {
-                                            className: l()(u.tableHeader, m.tableHeader),
+                                            className: i()(u.tableHeader, m.tableHeader),
                                             children: [
                                                 (0, a.jsx)("div", {
                                                     className: m.indexColumn,
@@ -98,17 +98,17 @@ function p() {
                                             ],
                                         }),
                                         r.map((e) => {
-                                            let { word: t, value: n, idx: i } = e;
+                                            let { word: t, value: n, idx: l } = e;
                                             return (0, a.jsxs)(
                                                 "div",
                                                 {
-                                                    className: l()(u.tableRow, m.tableRow),
+                                                    className: i()(u.tableRow, m.tableRow),
                                                     children: [
                                                         (0, a.jsx)("div", {
                                                             className: m.indexColumn,
                                                             children: (0, a.jsx)(o.Text, {
                                                                 variant: "text-sm/normal",
-                                                                children: i + 1,
+                                                                children: l + 1,
                                                             }),
                                                         }),
                                                         (0, a.jsx)("div", {
@@ -127,7 +127,7 @@ function p() {
                                                         }),
                                                     ],
                                                 },
-                                                "".concat(t, "-").concat(i),
+                                                "".concat(t, "-").concat(l),
                                             );
                                         }),
                                     ],

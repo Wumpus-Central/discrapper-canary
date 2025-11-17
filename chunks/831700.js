@@ -1,6 +1,6 @@
 n.d(t, { Z: () => ei }), n(388685), n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(481060),
     d = n(475179),
     p = n(239091),
-    h = n(146773),
-    f = n(888651),
+    f = n(146773),
+    h = n(888651),
     g = n(619915),
     m = n(117358),
     b = n(973285),
@@ -164,8 +164,8 @@ class en extends V.ZP {
                 locked: s,
                 sorting: d,
                 isUserOver: p,
-                connectChannelDropTarget: h,
-                connectChannelDragSource: f,
+                connectChannelDropTarget: f,
+                connectChannelDragSource: h,
                 connectUserDropTarget: g,
                 connectDragPreview: m,
                 canReorderChannel: b,
@@ -259,7 +259,7 @@ class en extends V.ZP {
             });
         return (
             _ && (w = g(w)),
-            b && (w = h(f(w))),
+            b && (w = f(h(w))),
             v &&
                 (w = (0, r.jsx)(A.Z, {
                     childRef: this.ref,
@@ -401,7 +401,7 @@ class en extends V.ZP {
             });
     }
 }
-let er = (0, h.B)((0, f.Q)(en));
+let er = (0, f.B)((0, h.Q)(en));
 function ei(e) {
     let {
             guild: t,
@@ -432,8 +432,8 @@ function ei(e) {
                 unverifiedAccount: !r.canChat,
             };
         }),
-        h = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
-        f = (0, g.ZP)(n),
+        f = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
+        h = (0, g.ZP)(n),
         m = (0, v.ZP)(n),
         y = (0, P.qY)(n.id),
         { enabled: O } = b.W.useExperiment({
@@ -473,9 +473,9 @@ function ei(e) {
             ee(
                 {
                     channelName: m,
-                    embeddedApps: f,
+                    embeddedApps: h,
                     embeddedActivityType: q.IIU.PLAYING,
-                    video: h,
+                    video: f,
                     hasActiveEvent: null != y,
                     isSubscriptionGated: x,
                     needSubscriptionToAccess: E,

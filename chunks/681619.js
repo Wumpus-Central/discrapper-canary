@@ -1,13 +1,13 @@
 n.d(t, { Z: () => c });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(481060),
     o = n(451429);
 function c(e) {
     let { columns: t, data: n, className: r, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        p = i.useMemo(
+        p = l.useMemo(
             () =>
                 t.map((e) =>
                     (function (e) {
@@ -57,14 +57,14 @@ function c(e) {
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    i = o.tableHeader;
+                    l = o.tableHeader;
                 return (0, a.jsx)(
                     "div",
                     {
-                        className: i,
+                        className: l,
                         children: p.map((e) => {
-                            var i, r;
-                            let l = e.cellClassName,
+                            var l, r;
+                            let i = e.cellClassName,
                                 s = {
                                     width: "calc("
                                         .concat(null != (r = e.cellWidth) ? r : "1fr", " - ")
@@ -73,9 +73,9 @@ function c(e) {
                             return (0, a.jsx)(
                                 "div",
                                 {
-                                    className: l,
+                                    className: i,
                                     style: s,
-                                    children: null == (i = e.renderHeader) ? void 0 : i.call(e, e, n),
+                                    children: null == (l = e.renderHeader) ? void 0 : l.call(e, e, n),
                                 },
                                 "dev-tools-th-".concat(t, "-").concat(e.key),
                             );
@@ -87,10 +87,10 @@ function c(e) {
             rowHeight: m,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
-                    i = n[t];
-                if (null == i) return null;
-                let r = i.key,
-                    h = l()(o.tableRow, {
+                    l = n[t];
+                if (null == l) return null;
+                let r = l.key,
+                    h = i()(o.tableRow, {
                         [o.selectedTableRow]: r === u,
                         rowClassName: c,
                     });
@@ -98,10 +98,10 @@ function c(e) {
                     s.P3F,
                     {
                         className: h,
-                        onClick: () => (null == d ? void 0 : d(i)),
+                        onClick: () => (null == d ? void 0 : d(l)),
                         children: p.map((e) => {
                             var n, r;
-                            let l = e.cellClassName,
+                            let i = e.cellClassName,
                                 s = {
                                     width: "calc("
                                         .concat(null != (r = e.cellWidth) ? r : "1fr", " - ")
@@ -111,9 +111,9 @@ function c(e) {
                             return (0, a.jsx)(
                                 "div",
                                 {
-                                    className: l,
+                                    className: i,
                                     style: s,
-                                    children: null == (n = e.render) ? void 0 : n.call(e, i, void 0, t),
+                                    children: null == (n = e.render) ? void 0 : n.call(e, l, void 0, t),
                                 },
                                 "dev-tools-td-".concat(t, "-").concat(e.key),
                             );

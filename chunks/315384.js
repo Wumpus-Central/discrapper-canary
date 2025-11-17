@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(544891),
-    l = n(755721),
+    i = n(755721),
     s = n(481060),
     o = n(317951),
     c = n(959546),
@@ -14,11 +14,11 @@ let u = "/users/@me/debug/consumables/",
     };
 function p() {
     let e,
-        [t, n] = (0, i.useState)([]),
-        [p, h] = (0, i.useState)(null),
-        [x, g] = (0, i.useState)(!1);
+        [t, n] = (0, l.useState)([]),
+        [p, h] = (0, l.useState)(null),
+        [x, g] = (0, l.useState)(!1);
     return (
-        (0, i.useEffect)(
+        (0, l.useEffect)(
             () => (
                 (async () => {
                     try {
@@ -49,7 +49,7 @@ function p() {
                                     variant: "text-lg/bold",
                                     children: "Create Entitlements",
                                 }),
-                                (0, a.jsx)(l.zx, {
+                                (0, a.jsx)(i.zx, {
                                     onClick:
                                         ((e = o.D1),
                                         async () => {
@@ -60,8 +60,8 @@ function p() {
                                                         query: { sku_id: e },
                                                         rejectWithError: !0,
                                                     }),
-                                                    i = new c.Z(a.body.entitlement);
-                                                n([...t, i]);
+                                                    l = new c.Z(a.body.entitlement);
+                                                n([...t, l]);
                                             } catch (e) {
                                                 h("Failed to create entitlement");
                                             } finally {
@@ -69,8 +69,8 @@ function p() {
                                             }
                                         }),
                                     className: d.button,
-                                    look: l.iL.OUTLINED,
-                                    color: l.Tt.PRIMARY,
+                                    look: i.iL.OUTLINED,
+                                    color: i.Tt.PRIMARY,
                                     children: "Create Confetti Entitlement",
                                 }),
                                 x && (0, a.jsx)(s.$jN, {}),

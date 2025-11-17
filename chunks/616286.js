@@ -1,6 +1,6 @@
 n.d(t, { T: () => O }), n(388685), n(539854);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -137,12 +137,12 @@ function O(e) {
         handler: S ? null : M,
     });
     let [R, L] = r.useState(!1),
-        D = r.useCallback(() => {
+        k = r.useCallback(() => {
             f && L(!0);
         }, [f]);
     (0, g.yp)({
         event: v.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: D,
+        handler: k,
     }),
         r.useEffect(() => {
             let e;
@@ -156,10 +156,10 @@ function O(e) {
                 }
             );
         }, [R]);
-    let k = [(t = f && S ? _.intl.string(_.t.DPgc5h) : I ? _.intl.string(_.t.nthdxB) : _.intl.string(_.t["5KxXrK"]))];
+    let D = [(t = f && S ? _.intl.string(_.t.DPgc5h) : I ? _.intl.string(_.t.nthdxB) : _.intl.string(_.t["5KxXrK"]))];
     return (
-        N > 0 && k.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
-        T > 0 && k.push(_.intl.string(_.t.x5zAGZ)),
+        N > 0 && D.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
+        T > 0 && D.push(_.intl.string(_.t.x5zAGZ)),
         (0, i.jsx)(
             C.Z,
             (function (e) {
@@ -191,7 +191,7 @@ function O(e) {
                     buttonRef: P,
                     onClick: A,
                     label: t,
-                    "aria-label": k.join(", "),
+                    "aria-label": D.join(", "),
                     iconComponent: w,
                     tooltipPosition: "bottom",
                     wrapperClassName: a()(l, null != o && { [o]: Z }),

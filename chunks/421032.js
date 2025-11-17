@@ -1,44 +1,44 @@
 t.d(n, { Z: () => b });
-var i = t(951288);
-t(647438);
-var l = t(120356),
-    r = t.n(l),
-    a = t(442837),
-    c = t(28664),
-    s = t(481060),
-    o = t(239091),
-    u = t(592125),
-    d = t(430824),
+var i = t(54381);
+t(473749);
+var r = t(120356),
+    a = t.n(r),
+    l = t(442837),
+    o = t(28664),
+    c = t(481060),
+    s = t(239091),
+    d = t(592125),
+    u = t(430824),
     _ = t(924301),
-    h = t(894017),
-    g = t(954313),
-    v = t(390966),
-    f = t(765305),
-    p = t(388032),
-    m = t(709380);
+    p = t(894017),
+    f = t(854698),
+    m = t(390966),
+    v = t(765305),
+    g = t(388032),
+    h = t(709380);
 function b(e) {
-    let { recurrenceId: n, originalScheduledStartTime: l, guildEventId: b, onClick: x, isActive: C } = e,
-        E = (0, a.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(b)),
-        Z = (0, h.Z)(n, null == E ? void 0 : E.id),
-        S = (0, a.e7)([d.Z], () => d.Z.getGuild(null == E ? void 0 : E.guild_id)),
-        j = (0, a.e7)([u.Z], () => u.Z.getChannel(null == E ? void 0 : E.channel_id));
-    if (null == E) return null;
-    let { is_canceled: k = !1 } = null != Z ? Z : {},
-        y =
-            (null == Z ? void 0 : Z.scheduled_start_time) != null
-                ? new Date(null == Z ? void 0 : Z.scheduled_start_time)
-                : l,
-        P = (0, g.DK)(E),
-        w = k ? f.p1.CANCELED : f.p1.SCHEDULED;
-    P === n && (w = E.status);
-    let D =
-            (null == E ? void 0 : E.scheduled_start_time) != null
-                ? (0, g.lh)(Z, y, new Date(null == E ? void 0 : E.scheduled_start_time))
+    let { recurrenceId: n, originalScheduledStartTime: r, guildEventId: b, onClick: x, isActive: C } = e,
+        I = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(b)),
+        j = (0, p.Z)(n, null == I ? void 0 : I.id),
+        k = (0, l.e7)([u.Z], () => u.Z.getGuild(null == I ? void 0 : I.guild_id)),
+        y = (0, l.e7)([d.Z], () => d.Z.getChannel(null == I ? void 0 : I.channel_id));
+    if (null == I) return null;
+    let { is_canceled: N = !1 } = null != j ? j : {},
+        w =
+            (null == j ? void 0 : j.scheduled_start_time) != null
+                ? new Date(null == j ? void 0 : j.scheduled_start_time)
+                : r,
+        Z = (0, f.DK)(I),
+        E = N ? v.p1.CANCELED : v.p1.SCHEDULED;
+    Z === n && (E = I.status);
+    let P =
+            (null == I ? void 0 : I.scheduled_start_time) != null
+                ? (0, f.lh)(j, w, new Date(null == I ? void 0 : I.scheduled_start_time))
                 : null,
-        I = (e) => {
+        S = (e) => {
             e.stopPropagation(),
-                null != S &&
-                    (0, o.jW)(e, async () => {
+                null != k &&
+                    (0, s.jW)(e, async () => {
                         let { default: e } = await Promise.all([t.e("91973"), t.e("470")]).then(t.bind(t, 215269));
                         return (t) =>
                             (0, i.jsx)(
@@ -69,10 +69,10 @@ function b(e) {
                                     return e;
                                 })(
                                     {
-                                        guildEventId: E.id,
+                                        guildEventId: I.id,
                                         recurrenceId: n,
-                                        channel: j,
-                                        guild: S,
+                                        channel: y,
+                                        guild: k,
                                         isRecurrenceItem: !0,
                                     },
                                     t,
@@ -80,46 +80,46 @@ function b(e) {
                             );
                     });
         };
-    return (0, i.jsxs)(s.kL8, {
-        className: r()(m.container, {
-            [m.canceled]: k,
-            [m.clickable]: null != x,
-            [m.active]: C,
+    return (0, i.jsxs)(c.kL8, {
+        className: a()(h.container, {
+            [h.canceled]: N,
+            [h.clickable]: null != x,
+            [h.active]: C,
         }),
         onClick: (e) => {
-            e.stopPropagation(), k || null == x || x(n);
+            e.stopPropagation(), N || null == x || x(n);
         },
-        onContextMenu: I,
+        onContextMenu: S,
         "aria-label": "",
         children: [
-            (0, i.jsx)(v.z, {
-                startTime: y.toISOString(),
-                status: null != D ? D : w,
-                eventType: E.entity_type,
-                guildEventId: E.id,
+            (0, i.jsx)(m.z, {
+                startTime: w.toISOString(),
+                status: null != P ? P : E,
+                eventType: I.entity_type,
+                guildEventId: I.id,
                 recurrenceId: n,
-                className: m.timeStatus,
+                className: h.timeStatus,
             }),
-            k &&
-                (0, i.jsx)(s.Text, {
+            N &&
+                (0, i.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "text-danger",
-                    className: m.canceledStatus,
-                    children: p.intl.string(p.t.fyBVRm),
+                    className: h.canceledStatus,
+                    children: g.intl.string(g.t.fyBVRm),
                 }),
-            (0, i.jsx)(c.u, {
-                text: p.intl.string(p.t["UKOtz+"]),
+            (0, i.jsx)(o.u, {
+                text: g.intl.string(g.t["UKOtz+"]),
                 position: "top",
-                "aria-label": p.intl.string(p.t.bt75uw),
-                children: (0, i.jsx)(s.P3F, {
-                    onClick: I,
-                    className: m.iconButton,
-                    children: (0, i.jsx)(s.xhG, {
+                "aria-label": g.intl.string(g.t.bt75uw),
+                children: (0, i.jsx)(c.P3F, {
+                    onClick: S,
+                    className: h.iconButton,
+                    children: (0, i.jsx)(c.xhG, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: m.icon,
+                        className: h.icon,
                     }),
                 }),
             }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    MM: () => j,
+    MM: () => k,
     Q5: () => R,
     hn: () => L,
     p7: () => x,
@@ -7,9 +7,9 @@ n.d(t, {
 }),
     n(467055),
     n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(289008),
+var r = n(54381),
+    i = n(473749),
+    a = n(575053),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
@@ -288,7 +288,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
               });
     },
     M = ["applePay", "googlePay", "link"],
-    j = (e) => {
+    k = (e) => {
         let {
                 step: t,
                 handleStepChange: n,

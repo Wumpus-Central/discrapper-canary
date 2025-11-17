@@ -1,10 +1,10 @@
 n.d(t, { Z: () => w }), n(388685);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(268146),
-    s = n(442837),
+    s = n(268146),
+    o = n(442837),
     a = n(481060),
     c = n(728345),
     d = n(925329),
@@ -59,12 +59,12 @@ function w() {
             (0, g.E_)(),
         [I, E] = (0, u.Ls)(j.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
         N = I.concat(E),
-        [A, R] = null != (n = (0, x.Z)(c)) ? n : [d, _],
+        [R, A] = null != (n = (0, x.Z)(c)) ? n : [d, _],
         M = (0, h.L)(c),
-        k = (0, m.M)(A),
-        D = T === o.vA.CAMERA,
+        k = (0, m.M)(R),
+        D = T === s.vA.CAMERA,
         B = null != P,
-        L = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(o.vA.CAMERA)) : D,
+        L = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
         G = c === v.ApplicationStreamPresets.PRESET_AUTO,
         U = B
             ? void 0
@@ -75,7 +75,7 @@ function w() {
                 : c === v.ApplicationStreamPresets.PRESET_AUTO
                   ? S.intl.string(b.default.m4jtlc)
                   : void 0,
-        F = (0, s.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
+        F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
     return (0, r.jsxs)("div", {
         className: y.root,
         children: [
@@ -122,7 +122,7 @@ function w() {
                                         (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: k }),
                                         (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: "".concat(R, "fps") }),
+                                        (0, r.jsx)("span", { children: "".concat(A, "fps") }),
                                     ],
                                 }),
                             w &&

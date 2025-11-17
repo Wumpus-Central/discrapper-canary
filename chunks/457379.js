@@ -1,5 +1,5 @@
 n.d(e, { Z: () => S });
-var i = n(951288),
+var i = n(54381),
     l = n(442837),
     u = n(924557),
     r = n(435064),
@@ -11,7 +11,7 @@ var i = n(951288),
 let S = (0, a.ON)(o.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
     useSearchTerms: () => [E.intl.string(E.t.SIxrIF)],
     usePredicate: () => {
-        let t = (0, u.Go)(),
+        let t = (0, u.w9)(),
             e = (0, l.e7)([r.Z], () => r.Z.getHardwareClassification());
         return t && e === s.xH.BELOW_MINIMUM;
     },

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => c }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(755721),
     o = n(298213),
     a = n(388032),
@@ -9,7 +9,7 @@ function c(e) {
     let { userId: t, applicationId: n } = e,
         [c, u] = i.useState(!1),
         [d, p] = i.useState(!1),
-        h = i.useCallback(
+        f = i.useCallback(
             async (e) => {
                 e.stopPropagation(), p(!0);
                 try {
@@ -24,7 +24,7 @@ function c(e) {
             },
             [n, t],
         ),
-        f = i.useCallback(
+        h = i.useCallback(
             async (e) => {
                 e.stopPropagation(), u(!0);
                 try {
@@ -49,7 +49,7 @@ function c(e) {
                 size: l.zx.Sizes.NONE,
                 submitting: c,
                 disabled: d,
-                onClick: f,
+                onClick: h,
                 children: a.intl.string(a.t.Zcibdf),
             }),
             (0, r.jsx)(l.zx, {
@@ -59,7 +59,7 @@ function c(e) {
                 size: l.zx.Sizes.NONE,
                 submitting: d,
                 disabled: c,
-                onClick: h,
+                onClick: f,
                 children: a.intl.string(a.t.xuio0C),
             }),
         ],

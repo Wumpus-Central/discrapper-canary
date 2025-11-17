@@ -1,8 +1,8 @@
 n.d(t, { e: () => v });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(442837),
-    l = n(264418),
+    i = n(264418),
     s = n(906732),
     o = n(710845),
     c = n(313789),
@@ -18,9 +18,9 @@ let b = new o.Z("DisplayNameStylesCoachmark");
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.ZP)(),
-        j = (0, i.useRef)(null),
+        j = (0, l.useRef)(null),
         _ = (0, r.e7)([u.Z], () => u.Z.isFocused()),
-        y = (0, i.useCallback)(() => {
+        y = (0, l.useCallback)(() => {
             t(h.L.TAKE_ACTION),
                 (0, d.openUserSettings)(
                     c.n.PROFILE_PANEL,
@@ -33,11 +33,11 @@ function v(e) {
                     },
                 );
         }, [t, v]),
-        C = (0, i.useCallback)(() => {
+        C = (0, l.useCallback)(() => {
             t(h.L.USER_DISMISS);
         }, [t]);
     return (
-        (0, i.useEffect)(() => {
+        (0, l.useEffect)(() => {
             var e, t, n;
             _ && (null == (e = j.current) ? void 0 : e.paused)
                 ? null == (t = j.current) || t.play().catch(b.error)
@@ -46,7 +46,7 @@ function v(e) {
         (0, a.jsxs)(a.Fragment, {
             children: [
                 o,
-                (0, a.jsx)(l.J, {
+                (0, a.jsx)(i.J, {
                     targetElementRef: n,
                     shouldShow: !0,
                     onRequestClose: C,

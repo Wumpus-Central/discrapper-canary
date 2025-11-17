@@ -1,6 +1,6 @@
 n.d(t, { Z: () => U }), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -45,14 +45,14 @@ function M(e) {
               channel: n,
           });
 }
-function j(e) {
+function k(e) {
     var t, n, i, a, E, b, y;
-    let { type: N, disabled: R, channel: j, handleSubmit: U, isEmpty: G, showAllButtons: B } = e,
+    let { type: N, disabled: R, channel: k, handleSubmit: U, isEmpty: G, showAllButtons: B } = e,
         Z = (0, c.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
-        F = k(j.id, N, G),
+        F = j(k.id, N, G),
         { activeCommand: V, activeCommandOption: H } = (0, c.cj)([_.Z], () => ({
-            activeCommand: _.Z.getActiveCommand(j.id),
-            activeCommandOption: _.Z.getActiveOption(j.id),
+            activeCommand: _.Z.getActiveCommand(k.id),
+            activeCommandOption: _.Z.getActiveOption(k.id),
         })),
         { paymentsBlocked: Y } = p.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         {
@@ -62,10 +62,10 @@ function j(e) {
         } = I.n.useConfig({ location: "ChannelTextAreaButtons" }),
         q = (0, m.Iu)((e) => e.lastActiveView),
         X = [],
-        Q = !j.isDM() || void 0 === j.recipients || j.recipients.length > 1,
-        J = (0, c.e7)([O.default], () => (Q ? null : O.default.getUser(j.recipients[0]))),
+        Q = !k.isDM() || void 0 === k.recipients || k.recipients.length > 1,
+        J = (0, c.e7)([O.default], () => (Q ? null : O.default.getUser(k.recipients[0]))),
         $ = (0, f.R)({
-            channel: j,
+            channel: k,
             chatInputType: N,
         }),
         ee = (0, g.Nt)() && (null == (t = N.confetti) ? void 0 : t.button) != null,
@@ -84,7 +84,7 @@ function j(e) {
                         M,
                         {
                             disabled: R,
-                            channel: j,
+                            channel: k,
                         },
                         "gift",
                     ),
@@ -111,7 +111,7 @@ function j(e) {
                         C.Z,
                         {
                             disabled: R,
-                            channel: j,
+                            channel: k,
                         },
                         "confetti",
                     ),
@@ -138,7 +138,7 @@ function j(e) {
                     {
                         disabled: R,
                         inputType: N,
-                        channel: j,
+                        channel: k,
                     },
                     "upload",
                 ),
@@ -172,7 +172,7 @@ function j(e) {
             node: (0, r.jsx)(
                 h.Z,
                 {
-                    channel: j,
+                    channel: k,
                     type: N,
                 },
                 "appLauncher",
@@ -202,11 +202,11 @@ function j(e) {
               children: en,
           });
 }
-function k(e, t, n) {
+function j(e, t, n) {
     return (0, c.e7)([b.Z, y.Z], () => {
         let r = b.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === y.Z.getUploads(e, t.drafts.type).length && n && !i;
     });
 }
-let U = i.memo(j);
+let U = i.memo(k);

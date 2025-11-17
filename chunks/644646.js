@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(374470),
@@ -50,8 +50,8 @@ let S = function (e) {
         x = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         L = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
-        j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
-        k = i.useCallback(
+        k = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
+        j = i.useCallback(
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -99,9 +99,9 @@ let S = function (e) {
               ? (0, r.jsx)(E.K, {
                     showVideo: h,
                     imageAsset:
-                        null != j
+                        null != k
                             ? {
-                                  asset: j,
+                                  asset: k,
                                   assetId: "QuestRewardTile_rewardTileStatic",
                                   className: I.imageVideoOverlay,
                                   alt: v.intl.string(v.t.UMclVN),
@@ -156,7 +156,7 @@ let S = function (e) {
               })
             : (0, r.jsxs)(c.P3F, {
                   className: o()(I.questRewardTileInteractive, I.questRewardTile, I.rewardHighlight, n),
-                  onClick: k,
+                  onClick: j,
                   style: R,
                   children: [
                       t,

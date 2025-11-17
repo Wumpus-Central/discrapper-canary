@@ -1,13 +1,13 @@
 n.d(t, { Z: () => a });
-var r = n(951288),
-    l = n(647438),
-    o = n(925477),
-    i = n(59662);
+var r = n(54381),
+    l = n(473749),
+    i = n(925477),
+    o = n(59662);
 function a(e) {
     let { node: t, children: n } = e,
-        { navTransition: a } = (0, i.t)(),
+        { navTransition: a } = (0, o.t)(),
         c = l.useRef(null),
-        s = l.useContext(o.Sf).reducedMotion.enabled;
+        s = l.useContext(i.Sf).reducedMotion.enabled;
     return (
         l.useEffect(() => {
             if ((null == a ? void 0 : a.target) === t.key) {

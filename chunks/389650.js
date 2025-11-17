@@ -1,6 +1,6 @@
 n.d(t, { Z: () => W }), n(953529), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(295907),
     L = n(388032),
     M = n(894462),
-    j = n(620842),
-    k = n(197571);
+    k = n(620842),
+    j = n(197571);
 function U(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ class H extends i.PureComponent {
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)("div", {
-            className: o()(M.keybindGroup, { [j.card]: !this.props.isUserSettingsRedesignEnabled }),
+            className: o()(M.keybindGroup, { [k.card]: !this.props.isUserSettingsRedesignEnabled }),
             children: [
                 !e &&
                     !this.props.isUserSettingsRedesignEnabled &&
@@ -460,7 +460,7 @@ class Y extends i.PureComponent {
                               children: L.intl.format(L.t.mPi3F3, { downloadLink: w.EYA.DOWNLOAD }),
                           }),
                 }),
-                (0, r.jsx)(d.izJ, { className: k.marginBottom60 }),
+                (0, r.jsx)(d.izJ, { className: j.marginBottom60 }),
                 (0, r.jsxs)(d.Kqy, {
                     gap: 48,
                     children: [
@@ -551,7 +551,7 @@ function W() {
     let e = (0, c.e7)([S.ZP], () => S.ZP.getState()),
         t = (0, c.e7)([T.Z], () => (0, b.Z)(T.Z)),
         n = (0, c.e7)([v.Z], () => v.Z.isSupported),
-        i = (0, E.Go)(),
+        i = (0, E.w9)(),
         a = (0, E.PP)(),
         o = (0, R.wy)("UserSettingsKeybindsConnected");
     return (0, r.jsx)(Y, {

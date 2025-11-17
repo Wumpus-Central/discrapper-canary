@@ -1,6 +1,6 @@
 n.d(t, { default: () => I }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(512722),
     o = n.n(a),
     s = n(793030),
@@ -37,23 +37,23 @@ let I = (e) => {
         [P, D] = i.useState(C[0]),
         [w, x] = i.useState(!1),
         [L, M] = i.useState(n),
-        [j, k] = i.useState(null != t ? t : A.slice(0, 1)),
+        [k, j] = i.useState(null != t ? t : A.slice(0, 1)),
         U = i.useMemo(
             () =>
-                null == j
+                null == k
                     ? []
-                    : j
+                    : k
                           .map((e) => {
                               let { premiumGuildSubscription: t } = e;
                               return f.Z.getGuild(null == t ? void 0 : t.guildId);
                           })
                           .filter((e) => null != e),
-            [j],
+            [k],
         ),
         G = i.useMemo(() => {
             var e;
-            return (null == j || null == (e = j[0]) ? void 0 : e.premiumGuildSubscription) != null;
-        }, [j]),
+            return (null == k || null == (e = k[0]) ? void 0 : e.premiumGuildSubscription) != null;
+        }, [k]),
         B = () => (
             S("SUCCESS" === P),
             p.default.track(y.rMx.MODAL_DISMISSED, {
@@ -94,8 +94,8 @@ let I = (e) => {
                                 className: v.quantitySelectorWrapper,
                                 children: [
                                     (0, r.jsx)(c.FiK, {
-                                        value: j.length,
-                                        onChange: (e) => k(A.slice(0, e)),
+                                        value: k.length,
+                                        onChange: (e) => j(A.slice(0, e)),
                                         minValue: 1,
                                         maxValue: A.length,
                                     }),
@@ -122,26 +122,26 @@ let I = (e) => {
                 }),
             CONFIRM() {
                 if (null == L) return null;
-                let e = j.filter((e) => (0, h.tl)(e)).length,
-                    t = j.length,
+                let e = k.filter((e) => (0, h.tl)(e)).length,
+                    t = k.length,
                     n = U.length,
                     i = "CONFIRM" === C[0] ? B : () => D(C[C.indexOf(P) - 1]),
                     a = async () => {
-                        if ((x(!1), null != L && (null == j ? void 0 : j.length) !== 0)) {
+                        if ((x(!1), null != L && (null == k ? void 0 : k.length) !== 0)) {
                             o()(
-                                !j.some((e) => e.isOnCooldown()),
+                                !k.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
                             );
                             try {
                                 await Promise.all(
-                                    j.map((e) => {
+                                    k.map((e) => {
                                         let { premiumGuildSubscription: t } = e;
                                         return null != t ? (0, u.dG)(t.guildId, t.id) : Promise.resolve();
                                     }),
                                 ),
                                     await (0, u.W3)(
                                         L.id,
-                                        j.map((e) => {
+                                        k.map((e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
@@ -213,7 +213,7 @@ let I = (e) => {
                     children: (0, r.jsx)(b.R7, {
                         guild: L,
                         isTransfer: G,
-                        guildBoostQuantity: j.length,
+                        guildBoostQuantity: k.length,
                         onClose: B,
                         didPurchaseOnFractionalPremium: !1,
                     }),

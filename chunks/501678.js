@@ -1,6 +1,6 @@
 n.d(t, { g6: () => a });
-var r = n(951288),
-    l = n(647438);
+var r = n(54381),
+    l = n(473749);
 let i = l.createContext(null);
 function a(e) {
     let { blockType: t, children: n } = e,

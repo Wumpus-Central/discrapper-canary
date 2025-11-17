@@ -1,6 +1,6 @@
 n.d(t, { Z: () => k });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(91192),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(979554),
     u = n(866442),
     d = n(793030),
-    g = n(28664),
-    p = n(209613),
+    p = n(28664),
+    g = n(209613),
     f = n(44315),
     h = n(429368),
     C = n(724994),
@@ -60,7 +60,7 @@ function E(e, t) {
         e
     );
 }
-function S(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,10 +80,10 @@ function S(e, t) {
     }
     return l;
 }
-let O = (e) => {
+let S = (e) => {
         var t, n;
         let { product: i, onVariantEnter: c, onVariantExit: u, isCollapsed: d } = e,
-            g = (0, h.o)(i),
+            p = (0, h.o)(i),
             f = null != (n = null == (t = i.variants) ? void 0 : t.length) ? n : 0,
             C = l.useCallback(
                 (e, t) => {
@@ -91,7 +91,7 @@ let O = (e) => {
                 },
                 [i],
             ),
-            m = (0, p.Z)("shop-variants-group-".concat(i.storeListingId), s.hy.HORIZONTAL);
+            m = (0, g.Z)("shop-variants-group-".concat(i.storeListingId), s.hy.HORIZONTAL);
         return 0 === f
             ? null
             : (0, r.jsx)(o.bG, {
@@ -100,7 +100,7 @@ let O = (e) => {
                       children: (e) => {
                           var t,
                               { ref: n } = e,
-                              l = S(e, ["ref"]);
+                              l = O(e, ["ref"]);
                           return (0, r.jsx)(
                               "div",
                               E(
@@ -126,10 +126,10 @@ let O = (e) => {
                                                         y,
                                                         {
                                                             variant: e,
-                                                            isSelected: t === g,
+                                                            isSelected: t === p,
                                                             onVariantEnter: () => c(t),
                                                             onVariantExit: u,
-                                                            zIndex: f - Math.abs(g - t),
+                                                            zIndex: f - Math.abs(p - t),
                                                             onClick: (e) => C(e, t),
                                                         },
                                                         e.variantValue,
@@ -145,10 +145,10 @@ let O = (e) => {
     y = (e) => {
         let { variant: t, isSelected: n, onClick: l, onVariantEnter: i, onVariantExit: s, zIndex: c } = e,
             u = (0, o.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(t.variantLabel)),
-            { onFocus: p } = u,
-            f = S(u, ["onFocus"]),
+            { onFocus: g } = u,
+            f = O(u, ["onFocus"]),
             { isPurchased: h } = (0, C.L)(t);
-        return (0, r.jsx)(g.u, {
+        return (0, r.jsx)(p.u, {
             text: b.intl.string(b.t["6cfuDj"]),
             shouldShow: h,
             children: (0, r.jsx)(
@@ -158,7 +158,7 @@ let O = (e) => {
                         {
                             "aria-label": t.variantLabel,
                             onClick: (e) => {
-                                l(e), p();
+                                l(e), g();
                             },
                             onMouseEnter: i,
                             onMouseLeave: s,
@@ -191,13 +191,13 @@ let O = (e) => {
     k = (e) => {
         let { skuId: t, isCollapsed: n = !1, showLabel: l = !1, onVariantEnter: i, onVariantExit: o, className: s } = e,
             u = (0, m.LJ)(t),
-            g = (0, h.o)(u);
+            p = (0, h.o)(u);
         return null == u || u.type !== c.Z.VARIANTS_GROUP || null == u.variants || 0 === u.variants.length
             ? null
             : (0, r.jsxs)("div", {
                   className: a()(v.productVariantsOuterContainer, s),
                   children: [
-                      (0, r.jsx)(O, {
+                      (0, r.jsx)(S, {
                           product: u,
                           onVariantEnter: i,
                           onVariantExit: o,
@@ -207,7 +207,7 @@ let O = (e) => {
                           (0, r.jsx)(d.xvT, {
                               variant: "text-xs/medium",
                               color: "text-secondary",
-                              children: u.variants[g].variantLabel,
+                              children: u.variants[p].variantLabel,
                           }),
                   ],
               });

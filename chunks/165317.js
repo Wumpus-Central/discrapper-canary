@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(388685);
-var r = n(951288),
-    o = n(647438),
+var r = n(54381),
+    o = n(473749),
     l = n(442837),
     i = n(28664),
     a = n(481060),
@@ -12,28 +12,28 @@ var r = n(951288),
     p = n(472144),
     f = n(644646),
     v = n(969227),
-    g = n(215113),
-    E = n(46140),
+    E = n(215113),
+    g = n(46140),
     O = n(388032),
     b = n(559072);
 let h = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
 function S(e) {
     var t, n, S, C;
     let { tooltipPosition: y } = e,
-        { quest: _, sourceQuestContent: x, onClose: j } = o.useContext(g.VideoQuestModalContext),
-        { enabled: D } = d.EO.useConfig({ location: E.dr.VIDEO_MODAL }),
-        [T, P] = o.useState(!1),
+        { quest: _, sourceQuestContent: x, onClose: j } = o.useContext(E.VideoQuestModalContext),
+        { enabled: D } = d.EO.useConfig({ location: g.dr.VIDEO_MODAL }),
+        [P, T] = o.useState(!1),
         R = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         I = o.useRef(null == (t = _.userStatus) ? void 0 : t.completedAt),
-        [N, w] = o.useState(!1),
-        { completedRatio: A, completedRatioDisplay: k } = (0, c.I)(_),
+        [N, A] = o.useState(!1),
+        { completedRatio: w, completedRatioDisplay: k } = (0, c.I)(_),
         M = o.useMemo(() => m.r.build(_.config).defaultRewardName, [_]),
         L = (null == (n = _.userStatus) ? void 0 : n.completedAt) != null,
         V = (null == (S = _.userStatus) ? void 0 : S.claimedAt) != null,
         Z = O.intl.formatToPlainString(L && !V && D ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: M });
     o.useEffect(() => {
         var e, t;
-        null == I.current && (null == (e = _.userStatus) ? void 0 : e.completedAt) != null && D && w(!0),
+        null == I.current && (null == (e = _.userStatus) ? void 0 : e.completedAt) != null && D && A(!0),
             (I.current = null == (t = _.userStatus) ? void 0 : t.completedAt);
     }, [null == (C = _.userStatus) ? void 0 : C.completedAt, D]);
     let F = (0, v.D)({
@@ -59,10 +59,10 @@ function S(e) {
                 position: y,
                 text: Z,
                 onTooltipShow: () => {
-                    P(!0);
+                    T(!0);
                 },
                 onTooltipHide: () => {
-                    P(!1);
+                    T(!1);
                 },
                 children: (0, r.jsx)(a.P3F, {
                     className: b.progressCont,
@@ -73,15 +73,15 @@ function S(e) {
                     children: (0, r.jsx)(p.Z, {
                         quest: _,
                         size: 48,
-                        percentComplete: A,
-                        percentCompleteText: T ? k : void 0,
+                        percentComplete: w,
+                        percentCompleteText: P ? k : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
                         children: (0, r.jsx)(f.Z, {
                             className: b.questProgressRewardTile,
                             quest: _,
                             questContent: u.jn.VIDEO_MODAL,
                             autoplay: !1,
-                            location: E.dr.VIDEO_MODAL,
+                            location: g.dr.VIDEO_MODAL,
                             sourceQuestContent: x,
                         }),
                     }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(238651),
-    o = n(509442),
+var r = n(54381),
+    i = n(473749),
+    a = n(921254),
+    o = n(636606),
     s = n(748780),
     l = n(481060),
     c = n(596454),
@@ -105,7 +105,7 @@ function T(e) {
                 C(t);
             },
         }),
-        j = (0, l.q_F)({
+        k = (0, l.q_F)({
             from: {
                 x: g.x,
                 scale: 1,
@@ -158,7 +158,7 @@ function T(e) {
                         style: E({}, M),
                         className: m.emojiContainer,
                         children: (0, r.jsx)(o.animated.div, {
-                            style: y(E({}, j), { opacity: j.opacity }),
+                            style: y(E({}, k), { opacity: k.opacity }),
                             children: (0, r.jsx)(c.Z, {
                                 className: m.emoji,
                                 emojiId: n.id,

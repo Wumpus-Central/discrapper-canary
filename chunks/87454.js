@@ -1,20 +1,20 @@
 n.d(t, { Z: () => d }), n(388685), n(539854);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(704215),
-    l = n(481060),
+    i = n(481060),
     s = n(581883),
     o = n(428967),
     c = n(972118);
-let d = i.memo(function (e) {
+let d = l.memo(function (e) {
     let { className: t, content: n, onChange: d } = e,
         u = r.z[n],
         { isDismissed: m, handleToggleDismissState: p } = (0, c.Z)(u),
-        [h, x] = i.useState(!1),
-        g = i.useCallback(() => {
+        [h, x] = l.useState(!1),
+        g = l.useCallback(() => {
             null == d || d(n), p();
         }, [d, p, n]),
-        f = i.useCallback(
+        f = l.useCallback(
             (e) => {
                 e.preventDefault(), x(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
@@ -22,19 +22,19 @@ let d = i.memo(function (e) {
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(l.Kqy, {
+            (0, a.jsxs)(i.Kqy, {
                 className: t,
                 direction: "horizontal",
                 align: "center",
                 children: [
-                    (0, a.jsx)(l.hU, {
+                    (0, a.jsx)(i.hU, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: h ? l.C2q : l.zTD,
+                        icon: h ? i.C2q : i.zTD,
                         onClick: f,
                         "aria-label": h ? "Copied" : "Copy",
                     }),
-                    (0, a.jsx)(l.rsf, {
+                    (0, a.jsx)(i.rsf, {
                         label: "".concat(n.toLowerCase(), " (").concat(r.z[n], ")"),
                         description: (0, o.qh)(u)
                             ? (function (e) {
@@ -45,20 +45,20 @@ let d = i.memo(function (e) {
                                           ? void 0
                                           : t[e];
                                   if (null == a) return null;
-                                  let i = [],
-                                      { lastDismissedVersion: r, lastDismissedAtMs: l, lastDismissedObjectId: o } = a;
+                                  let l = [],
+                                      { lastDismissedVersion: r, lastDismissedAtMs: i, lastDismissedObjectId: o } = a;
                                   if (
-                                      (void 0 !== r && 0 !== r && i.push("last_dismissed_version: ".concat(r)),
-                                      void 0 !== l)
+                                      (void 0 !== r && 0 !== r && l.push("last_dismissed_version: ".concat(r)),
+                                      void 0 !== i)
                                   ) {
-                                      let e = Number(l),
+                                      let e = Number(i),
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
-                                      i.push("last_dismissed_at: ".concat(t));
+                                      l.push("last_dismissed_at: ".concat(t));
                                   }
-                                  return (void 0 !== o && "0" !== o && i.push("last_dismissed_object_id: ".concat(o)),
-                                  0 === i.length)
+                                  return (void 0 !== o && "0" !== o && l.push("last_dismissed_object_id: ".concat(o)),
+                                  0 === l.length)
                                       ? null
-                                      : i.join(", ");
+                                      : l.join(", ");
                               })(u)
                             : null,
                         checked: m,
@@ -66,7 +66,7 @@ let d = i.memo(function (e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(l.izJ, {}),
+            (0, a.jsx)(i.izJ, {}),
         ],
     });
 });

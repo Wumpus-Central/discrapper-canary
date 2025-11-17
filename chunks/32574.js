@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m });
-var a = n(951288);
-n(647438);
-var i = n(442837),
+var a = n(54381);
+n(473749);
+var l = n(442837),
     r = n(481060),
-    l = n(911969),
+    i = n(911969),
     s = n(168107),
     o = n(480916),
     c = n(594174),
@@ -11,7 +11,7 @@ var i = n(442837),
     u = n(62272);
 let m = function (e) {
     let { onSubmit: t } = e,
-        n = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+        n = (0, l.e7)([c.default], () => c.default.getCurrentUser());
     return (0, a.jsx)(u.Q, {
         title: "Lorem ipsum dolor",
         actions: [
@@ -19,7 +19,7 @@ let m = function (e) {
                 text: "Consectetur adipiscing",
                 variant: "primary",
                 onClick: () => {
-                    (null == n ? void 0 : n.ageVerificationStatus) === l.F$.UNVERIFIED
+                    (null == n ? void 0 : n.ageVerificationStatus) === i.F$.UNVERIFIED
                         ? s.Z.showAgeVerificationGetStartedModal({
                               entryPoint: o.cU.SAFETY_FLOWS,
                               onClose: () => t({ type: d.rY.Empty }),

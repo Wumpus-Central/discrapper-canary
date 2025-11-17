@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(91192),
     o = n(442837),
     a = n(481060),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(682662),
     d = n(178088),
     p = n(306680),
-    h = n(944486),
-    f = n(594174),
+    f = n(944486),
+    h = n(594174),
     g = n(821020),
     m = n(370774),
     b = n(128008),
@@ -21,7 +21,7 @@ var r = n(951288),
     j = n(490897),
     x = n(888158);
 function C() {
-    let e = (0, o.e7)([f.default], () => f.default.getCurrentUser());
+    let e = (0, o.e7)([h.default], () => h.default.getCurrentUser());
     return (0, o.e7)(
         [p.ZP],
         () => (null == e ? void 0 : e.id) != null && p.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0,
@@ -29,7 +29,7 @@ function C() {
 }
 function E(e) {
     var t, n;
-    let { onClick: d, selectedOverride: p = !1, popoutProps: f, ref: _ } = e,
+    let { onClick: d, selectedOverride: p = !1, popoutProps: h, ref: _ } = e,
         j = (0, l.Ie)("notifications-inbox"),
         [E, S] = i.useState(!1),
         I = (0, m.D)(),
@@ -69,7 +69,7 @@ function E(e) {
                   };
         })(P),
         A = N === g.jP.LEGACY ? a.xx7 : a.Dkj,
-        R = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
+        R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         D = i.useMemo(() => {
             if (N === g.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, R);
         }, [N, R]);
@@ -114,7 +114,7 @@ function E(e) {
                                     });
                             }
                             return e;
-                        })({}, j, f)),
+                        })({}, j, h)),
                         (n = n =
                             {
                                 onClick: d,

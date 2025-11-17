@@ -1,9 +1,9 @@
 n.d(t, { Q: () => c });
-var a = n(951288);
-n(647438);
-var i = n(793030),
+var a = n(54381);
+n(473749);
+var l = n(793030),
     r = n(481060),
-    l = n(697674),
+    i = n(697674),
     s = n(345262),
     o = n(393201);
 let c = (e) => {
@@ -19,9 +19,9 @@ let c = (e) => {
                 className: o.heading,
                 children: d,
             }),
-            (0, a.jsx)(i.fef, { children: t }),
+            (0, a.jsx)(l.fef, { children: t }),
             (0, a.jsx)("div", { className: o.footerSpacer }),
-            (0, a.jsx)(l.A, {
+            (0, a.jsx)(i.A, {
                 actions: n,
                 footerInput: c,
             }),

@@ -1,6 +1,6 @@
 n.d(t, { U: () => p });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(686546),
     a = n(598077),
@@ -25,8 +25,8 @@ let d = (e) => {
         var t, n;
         let { item: i } = e,
             p = null,
-            h = !1,
-            f = (0, l.e7)([s.Z], () => s.Z.getGuild(i.guild_id));
+            f = !1,
+            h = (0, l.e7)([s.Z], () => s.Z.getGuild(i.guild_id));
         if (null != i.icon_name)
             p = (0, r.jsx)("img", {
                 alt: "",
@@ -40,12 +40,12 @@ let d = (e) => {
                 className: u.image,
                 src: e.getAvatarURL(void 0, 40),
             })),
-                (h = !0);
+                (f = !0);
         } else
             p =
                 null != i.icon_url
                     ? (0, r.jsx)("img", {
-                          alt: null != (n = null == f ? void 0 : f.name) ? n : "",
+                          alt: null != (n = null == h ? void 0 : h.name) ? n : "",
                           className: u.image,
                           src: i.icon_url,
                       })
@@ -66,7 +66,7 @@ let d = (e) => {
                     className: u.mask,
                     children: (0, r.jsx)("div", {
                         className: u.imageContainer,
-                        style: h ? void 0 : { backgroundColor: (0, c.Vu)(i) },
+                        style: f ? void 0 : { backgroundColor: (0, c.Vu)(i) },
                         children: p,
                     }),
                 }),

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => B }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -175,7 +175,7 @@ function G(e) {
                     renderModal: (e) =>
                         (0, r.jsx)(
                             b.Z,
-                            U(j({}, e), {
+                            U(k({}, e), {
                                 onClose: S,
                                 onClaim: s,
                                 code: a,
@@ -206,9 +206,9 @@ let B = function () {
             activeOutboundPromotions: g,
             claimedEndedOutboundPromotions: b,
             claimedOutboundPromotionCodeMap: M,
-            addClaimedOutboundPromotionCode: j,
+            addClaimedOutboundPromotionCode: k,
         } = (0, E.lG)(),
-        k = g.length + b.length > 0,
+        j = g.length + b.length > 0,
         U =
             h.g.useExperiment(
                 { location: "EntitlementGifts" },
@@ -216,7 +216,7 @@ let B = function () {
                     autoTrackExposure: !1,
                     disable: a,
                 },
-            ).enabled && k;
+            ).enabled && j;
     function B() {
         (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
     }
@@ -230,7 +230,7 @@ let B = function () {
             }),
             d = (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
-                children: k ? x.intl.string(x.t.wFsj3B) : void 0,
+                children: j ? x.intl.string(x.t.wFsj3B) : void 0,
             }),
             f = U
                 ? (0, r.jsxs)("div", {
@@ -263,7 +263,7 @@ let B = function () {
             className: L.marginContainer,
             children: [
                 d,
-                k ? (0, r.jsx)(u.izJ, { className: L.divider }) : null,
+                j ? (0, r.jsx)(u.izJ, { className: L.divider }) : null,
                 (0, r.jsx)(O.Z, {
                     className: L.gradientContainer,
                     isShown: U,
@@ -280,7 +280,7 @@ let B = function () {
                                     {
                                         outboundPromotion: n,
                                         code: t,
-                                        addClaimedOutboundPromotionCode: j,
+                                        addClaimedOutboundPromotionCode: k,
                                         disabled: !a,
                                     },
                                     n.id,
@@ -292,7 +292,7 @@ let B = function () {
                                     {
                                         outboundPromotion: e,
                                         code: M[e.id],
-                                        addClaimedOutboundPromotionCode: j,
+                                        addClaimedOutboundPromotionCode: k,
                                         disabled: !a,
                                     },
                                     e.id,

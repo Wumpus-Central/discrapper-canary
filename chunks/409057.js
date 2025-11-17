@@ -1,5 +1,5 @@
 n.d(t, { Z: () => K });
-var r = n(951288),
+var r = n(54381),
     i = n(120356),
     a = n.n(i),
     o = n(28664),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(373826),
     L = n(668700),
     M = n(262210),
-    j = n(670451),
-    k = n(881530),
+    k = n(670451),
+    j = n(881530),
     U = n(981631),
     G = n(701488),
     B = n(671955),
@@ -125,7 +125,7 @@ function K(e) {
         ei = (0, S.Z)(i),
         ea = null != ei.text && "" !== ei.text,
         { largeImage: eo, smallImage: es } = (0, p.FO)(i, V),
-        el = (0, k.Z)({
+        el = (0, j.Z)({
             location: "UserProfileActivityCard",
             user: t,
             currentUser: n,
@@ -395,7 +395,7 @@ function K(e) {
                             ei,
                         ),
                         {
-                            contextMenu: (0, r.jsx)(j.Z, {
+                            contextMenu: (0, r.jsx)(k.Z, {
                                 display: "live",
                                 user: t,
                                 activity: i,

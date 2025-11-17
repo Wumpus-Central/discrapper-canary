@@ -1,13 +1,13 @@
 n.d(t, {
     ZP: () => U,
-    eJ: () => j,
-    nm: () => k,
+    eJ: () => k,
+    nm: () => j,
 }),
     n(539854),
     n(997841),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(907331),
@@ -130,7 +130,7 @@ let L = 16,
                   }),
               });
     },
-    j = (e) => {
+    k = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, r.jsx)("div", {
             className: o()(i, C.list, n ? C.listCollapse : C.listDefault),
@@ -138,7 +138,7 @@ let L = 16,
             children: t,
         });
     };
-function k(e) {
+function j(e) {
     let {
             className: t,
             mute: n,
@@ -159,8 +159,8 @@ function k(e) {
             application: w,
             guildId: x,
             channelId: L,
-            user: j,
-            disconnected: k,
+            user: k,
+            disconnected: j,
             hangStatusActivity: U,
             showHangStatus: Z,
             isSelf: F,
@@ -210,7 +210,7 @@ function k(e) {
                       "video",
                   ),
               )),
-        k &&
+        j &&
             K.push(
                 (0, r.jsx)(
                     l.u,
@@ -285,12 +285,12 @@ function k(e) {
                                           iconClassName: N,
                                           guildId: x,
                                           channelId: L,
-                                          userId: j.id,
+                                          userId: k.id,
                                       },
-                                      "".concat(j.id, "-game"),
+                                      "".concat(k.id, "-game"),
                                   )
                                 : (0, r.jsx)(M, {
-                                      userId: j.id,
+                                      userId: k.id,
                                       hangStatusActivity: U,
                                       iconClassName: N,
                                       isSelf: F,
@@ -327,7 +327,7 @@ let U = function (e) {
             collapsed: x,
             mute: L,
             serverMute: M,
-            guildId: j,
+            guildId: k,
             nick: U,
             isGuest: G,
             flipped: B,
@@ -339,7 +339,7 @@ let U = function (e) {
         } = _,
         W = (0, p.Z)({
             userId: Y.id,
-            guildId: j,
+            guildId: k,
         }),
         K = (0, h.j)({ displayNameStyles: W }),
         z = (e) => {
@@ -375,7 +375,7 @@ let U = function (e) {
                 [C.avatarSpeaking]: N,
                 [C.avatarLatched]: P && !N,
             }),
-            style: { backgroundImage: "url(".concat(Y.getAvatarURL(j, a === I.ipw.LARGE ? 38 : 24), ")") },
+            style: { backgroundImage: "url(".concat(Y.getAvatarURL(k, a === I.ipw.LARGE ? 38 : 24), ")") },
         });
     }
     function et() {
@@ -394,7 +394,7 @@ let U = function (e) {
             t = {
                 primaryGuild: Y.primaryGuild,
                 userId: Y.id,
-                contextGuildId: j,
+                contextGuildId: k,
                 isOverlay: d,
                 disableTooltip: !0,
                 className: o()(C.clanTag, d && C.isOverlay),
@@ -403,7 +403,7 @@ let U = function (e) {
         return !x || d ? (0, r.jsx)(g.Z, D(R({}, t), { children: e })) : null;
     }
     function en() {
-        return (0, r.jsx)(k, R({ disabled: u }, _));
+        return (0, r.jsx)(j, R({ disabled: u }, _));
     }
     return (0, r.jsx)(c.kL8, {
         ref: f,

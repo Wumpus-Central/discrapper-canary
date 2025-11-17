@@ -1,10 +1,10 @@
 n.d(t, { ZP: () => P }), n(388685), n(415506);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(268146),
     l = n(481060),
-    o = n(100527),
-    s = n(650958),
+    s = n(100527),
+    o = n(650958),
     a = n(594174),
     c = n(580991),
     d = n(992817),
@@ -81,8 +81,8 @@ function P(e) {
                 muteStreamAudio: I,
                 preset: E,
                 resolution: N,
-                fps: A,
-                sourceType: R,
+                fps: R,
+                sourceType: A,
                 selectedChannel: M,
             },
             k,
@@ -97,10 +97,10 @@ function P(e) {
             null != (n = (0, g.Z)(x.ApplicationStreamPresets.PRESET_DOCUMENTS))
                 ? n
                 : [x.ApplicationStreamResolutions.RESOLUTION_SOURCE, x.ApplicationStreamFPS.FPS_15],
-        H = (0, s.M)({
+        H = (0, o.M)({
             deviceType: v.h7.AUDIO_INPUT,
             selectedDeviceId: P,
-            analyticsLocations: [o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION],
+            analyticsLocations: [s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
             onDeviceSelect: (e) => (
                 k({
@@ -130,7 +130,7 @@ function P(e) {
                 children: y
                     .filter((e) => {
                         let { canUse: t } = e;
-                        return t(R);
+                        return t(A);
                     })
                     .map((e) => {
                         let { value: t } = e;
@@ -180,7 +180,7 @@ function P(e) {
                             label: b.intl.string(j.default.IG5n0X),
                             children: C.filter((e) => {
                                 let { canUse: t } = e;
-                                return t(R);
+                                return t(A);
                             }).map((e) => {
                                 let { value: t } = e;
                                 return (0, r.jsx)(
@@ -195,11 +195,11 @@ function P(e) {
                                                 : (0, p.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, e, A, a.default.getCurrentUser(), B))
+                                                if (!(0, u.Z)(E, e, R, a.default.getCurrentUser(), B))
                                                     return (
                                                         c(),
                                                         (0, _.E)({
-                                                            analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                            analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                         })
                                                     );
                                                 k({
@@ -221,7 +221,7 @@ function P(e) {
                                     {
                                         group: "frame-rate",
                                         id: "stream-option-frame-rate-".concat(e),
-                                        checked: A === e,
+                                        checked: R === e,
                                         label:
                                             e === x.ApplicationStreamFPS.FPS_60
                                                 ? (0, r.jsx)(w, { label: "".concat(e, "fps") })
@@ -232,7 +232,7 @@ function P(e) {
                                                     return (
                                                         c(),
                                                         (0, _.E)({
-                                                            analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                            analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                         })
                                                     );
                                                 k({
@@ -258,7 +258,7 @@ function P(e) {
                         value: !I,
                     }),
             }),
-            R === i.vA.CAMERA && H,
+            A === i.vA.CAMERA && H,
             (0, r.jsxs)(l.sNh, {
                 id: "advanced-items",
                 label: b.intl.string(j.default.eYyK1v),

@@ -1,6 +1,6 @@
-n.d(t, { m: () => f });
-var r = n(951288);
-n(647438);
+n.d(t, { m: () => h });
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(91192),
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,12 +52,12 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: f,
+            innerClassName: h,
             renderIcon: g,
             text: m,
             selected: b,
@@ -104,8 +104,8 @@ function f(e) {
         ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            h(p({}, j), {
-                buttonProps: h(p({}, x), {
+            f(p({}, j), {
+                buttonProps: f(p({}, x), {
                     id: n,
                     role: "button",
                 }),
@@ -129,7 +129,7 @@ function f(e) {
                     y,
                     O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, f]),
+                        className: l()([d.link, d.basicChannelRowLink, h]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

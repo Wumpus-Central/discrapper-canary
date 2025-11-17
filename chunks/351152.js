@@ -1,10 +1,10 @@
 n.d(t, { Z: () => S }), n(361932), n(187205);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    s = n(392711),
+    o = n.n(s),
     a = n(442837),
     c = n(481060),
     d = n(565138),
@@ -56,7 +56,7 @@ function S(e) {
     return (0, r.jsx)(g.Z, {
         title: x.intl.string(x.t.JsqeEk),
         scrollerClassName: l()(j.guildScroller, v.marginBottom),
-        children: s().flatMap(n, (e) => {
+        children: o().flatMap(n, (e) => {
             let { guildIds: n } = e;
             return n.map((e) =>
                 (0, r.jsx)(

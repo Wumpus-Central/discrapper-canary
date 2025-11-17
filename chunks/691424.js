@@ -1,6 +1,6 @@
 n.d(t, { Z: () => z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(159635),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(532901),
     L = n(311739),
     M = n(981631),
-    j = n(176505),
-    k = n(430864),
+    k = n(176505),
+    j = n(430864),
     U = n(154257);
 function G(e, t, n) {
     return (
@@ -142,13 +142,13 @@ function Y(e, t, n) {
     switch (t) {
         case "home":
         case "guide":
-            i(j.oC.GUILD_HOME);
+            i(k.oC.GUILD_HOME);
             break;
         case "browse":
-            i(j.oC.CHANNEL_BROWSER);
+            i(k.oC.CHANNEL_BROWSER);
             break;
         case "customize":
-            i(j.oC.CUSTOMIZE_COMMUNITY);
+            i(k.oC.CUSTOMIZE_COMMUNITY);
             break;
         case "linked-roles":
             if (null != n) {
@@ -202,9 +202,9 @@ let K = {
             (0, r.jsxs)(
                 "div",
                 {
-                    className: k.blockquoteContainer,
+                    className: j.blockquoteContainer,
                     children: [
-                        (0, r.jsx)("div", { className: k.blockquoteDivider }),
+                        (0, r.jsx)("div", { className: j.blockquoteDivider }),
                         (0, r.jsx)("blockquote", { children: t(e.content, n) }),
                     ],
                 },
@@ -246,11 +246,11 @@ let K = {
                 "pre",
                 {
                     children: (0, r.jsxs)("div", {
-                        className: k.codeContainer,
+                        className: j.codeContainer,
                         children: [
                             S.wS
                                 ? (0, r.jsx)("div", {
-                                      className: k.codeActions,
+                                      className: j.codeActions,
                                       children: (0, r.jsx)(W, { text: e.content }),
                                   })
                                 : null,
@@ -339,7 +339,7 @@ let K = {
                 a = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, s.reactElement)(i, "".concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? j.inlineFormat : null,
                 style: { "--totalCharacters": a },
                 children: e.items.map((e, i) => {
                     let a = (0, s.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
@@ -357,7 +357,7 @@ let K = {
             let i = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
             return (0, s.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: [i, (0, r.jsx)(l.nn4, { children: "," }, "screen-reader-pause")],
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? j.inlineFormat : null,
             });
         },
     },
@@ -391,7 +391,7 @@ let K = {
             let r = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
             return (0, s.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? j.inlineFormat : null,
             });
         },
     },

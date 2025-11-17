@@ -1,11 +1,11 @@
 n.d(t, {
     Ds: () => U,
-    YB: () => j,
+    YB: () => k,
     of: () => G,
-    q5: () => k,
+    q5: () => j,
 });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -46,7 +46,7 @@ function M(e) {
         label: n ? w.intl.string(w.t["2TiKgS"]) : w.intl.string(w.t.oN8bqe),
     });
 }
-function j(e) {
+function k(e) {
     var t, n, i;
     let {
             channel: a,
@@ -56,8 +56,8 @@ function j(e) {
             onMouseLeave: N,
             onJumpToChannel: w,
             idle: M,
-            selectedParticipant: j,
-            embeddedActivity: k,
+            selectedParticipant: k,
+            embeddedActivity: j,
         } = e,
         U = (0, p.bp)() === P.IlC.POPOUT,
         G = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
@@ -122,7 +122,7 @@ function j(e) {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
-                                        participant: j,
+                                        participant: k,
                                         compact: !0,
                                     }),
                                 }),
@@ -145,7 +145,7 @@ function j(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: k.location,
+                                location: j.location,
                                 className: x.rightPipIcon,
                             }),
                         ],
@@ -155,7 +155,7 @@ function j(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     var t, n;
     let {
             channel: i,

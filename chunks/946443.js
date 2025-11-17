@@ -4,8 +4,8 @@ n.d(t, {
     h6: () => P,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(525654),
@@ -14,8 +14,8 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    h = n(493773),
-    f = n(607070),
+    f = n(493773),
+    h = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
@@ -34,7 +34,7 @@ function S(e) {
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        G = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
+        G = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -93,7 +93,7 @@ function S(e) {
             ),
             [T],
         ),
-        (0, h.ZP)(
+        (0, f.ZP)(
             () => (
                 b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {

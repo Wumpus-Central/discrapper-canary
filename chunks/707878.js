@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    o = n(481060),
-    l = n(13245),
+var i = n(54381),
+    r = n(473749),
+    o = n(442837),
+    l = n(481060),
+    s = n(13245),
     a = n(313201),
     c = n(237997),
     d = n(766032),
@@ -15,18 +15,18 @@ let g = Object.values(u.wF).map((e) => 100 * e),
     m = (0, a.hQ)();
 class y extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
-            l.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        s.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
+            s.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
+        s.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
         return (0, i.jsx)("div", {
             className: f.container,
             children: (0, i.jsx)("div", {
                 className: f.sliderContainer,
-                children: (0, i.jsx)(o.iRW, {
+                children: (0, i.jsx)(l.iRW, {
                     label: p.intl.string(p.t.OVovCb),
                     mini: !0,
                     initialValue: this.initialValue,
@@ -59,4 +59,4 @@ class y extends r.PureComponent {
             })(this, "initialValue", 100 * this.props.opacity);
     }
 }
-let b = s.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);
+let b = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

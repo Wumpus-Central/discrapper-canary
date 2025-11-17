@@ -1,7 +1,7 @@
 n.d(t, {
     B5: () => L,
     PI: () => P,
-    WD: () => k,
+    WD: () => j,
     aM: () => U,
     ui: () => G,
 }),
@@ -10,8 +10,8 @@ n.d(t, {
     n(49124),
     n(642613),
     n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(772848),
     o = n(286379),
     s = n(442837),
@@ -347,14 +347,14 @@ let L = (e, t) => {
             n = (0, c.Z)(t);
         return t !== n;
     },
-    j = i.createContext(void 0);
-function k() {
-    let e = i.useContext(j);
+    k = i.createContext(void 0);
+function j() {
+    let e = i.useContext(k);
     return null == e ? void 0 : e.current;
 }
 function U() {
     var e;
-    return null == (e = k()) ? void 0 : e.getId();
+    return null == (e = j()) ? void 0 : e.getId();
 }
 function G(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
@@ -398,7 +398,7 @@ function G(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(j.Provider, {
+        (0, r.jsx)(k.Provider, {
             value: f,
             children: e.children(o, f),
         })

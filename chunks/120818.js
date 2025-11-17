@@ -1,6 +1,6 @@
 n.d(t, { T: () => _ });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(91192),
     o = n(442837),
     a = n(481060),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(846121),
     d = n(703656),
     p = n(259580),
-    h = n(981631),
-    f = n(176505),
+    f = n(981631),
+    h = n(176505),
     g = n(388032),
     m = n(46674);
 function b(e, t) {
@@ -76,7 +76,7 @@ let _ = i.memo(function (e) {
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(h.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
+                            (0, d.uL)(f.Z5c.CHANNEL(_.id, h.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)("div", {
@@ -111,7 +111,7 @@ let _ = i.memo(function (e) {
                             }),
                             (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, s.Lq)(h.Ilk.GREEN_300), (0, s.Lq)(h.Ilk.GREEN_230)],
+                                foregroundGradientColor: [(0, s.Lq)(f.Ilk.GREEN_300), (0, s.Lq)(f.Ilk.GREEN_230)],
                                 percent: (v / j) * 100 + 3,
                                 animate: !0,
                             }),

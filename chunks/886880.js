@@ -1,14 +1,14 @@
 n.d(t, { Z: () => c }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(264418),
-    i = n(493773),
+var r = n(54381),
+    l = n(473749),
+    i = n(264418),
+    o = n(493773),
     a = n(921944);
 function c(e) {
     let { dismissibleContentType: t, targetElementRef: n, visibleContent: c, markAsDismissed: s, props: u } = e,
         [d, f] = l.useState(!1),
         b = l.useRef(null);
-    (0, i.ZP)(
+    (0, o.ZP)(
         () => (
             (b.current = setTimeout(() => f(!0), 250)),
             () => {
@@ -23,7 +23,7 @@ function c(e) {
         [s],
     );
     return (0, r.jsx)(
-        o.Z,
+        i.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

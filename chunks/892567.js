@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(688619),
     o = n.n(a),
     s = n(120356),
@@ -43,31 +43,31 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
             })),
             { includeNonProfile: L } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
             M = (0, E.Y)({ location: "UserNameWithEffects" }),
-            j = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            k = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
-            U = (0, g.R)(k),
+            k = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            j = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
+            U = (0, g.R)(j),
             G = (0, _.qgQ)(n),
-            B = (0, f.EJ)(G, k === c.m.TOON ? v.emoji : void 0),
+            B = (0, f.EJ)(G, j === c.m.TOON ? v.emoji : void 0),
             Z = i.useMemo(
                 () =>
                     null != a && M
                         ? a.colors.map((e) =>
                               (0, h.wh)({
                                   foreground: o()(e),
-                                  background: k === c.m.TOON ? o()("#333") : o()(j),
+                                  background: j === c.m.TOON ? o()("#333") : o()(k),
                                   ratio: U.minContrastRatio,
                                   saturationFactor: x,
                               }).hex(),
                           )
                         : [],
-                [a, M, k, U.minContrastRatio, x, j],
+                [a, M, j, U.minContrastRatio, x, k],
             );
         if (!M || (!T && !L) || null == a) return n;
-        let F = (0, y.K)(k, Z, {
+        let F = (0, y.K)(j, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,
             }),
-            V = S(k);
+            V = S(j);
         return (0, r.jsxs)("div", {
             className: l()(v.container, D, A, {
                 [v.showEffect]: s !== b.F.PLAIN,

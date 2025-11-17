@@ -4,8 +4,8 @@ n.d(t, {
     ul: () => B,
 }),
     n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(28664),
@@ -38,7 +38,7 @@ var i = n(951288),
     M = n(70722),
     R = n(388032),
     L = n(92024);
-function D(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -63,7 +63,7 @@ function D(e) {
     }
     return e;
 }
-function k(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -122,8 +122,8 @@ let H = (0, h.$)(function (e) {
             channel: U,
             mute: B,
             localMute: H,
-            localVideoDisabled: V,
-            deaf: F,
+            localVideoDisabled: F,
+            deaf: V,
             video: G,
             embeddedApplication: z,
             serverMute: W,
@@ -174,7 +174,7 @@ let H = (0, h.$)(function (e) {
         eL = () => {
             (et || ey || ew) && (null == ea || ea(h.id));
         },
-        eD = (e) => {
+        ek = (e) => {
             e
                 ? (ex.current = setTimeout(() => {
                       eO(!0);
@@ -182,7 +182,7 @@ let H = (0, h.$)(function (e) {
                 : clearTimeout(ex.current);
         };
     r.useEffect(() => () => clearTimeout(ex.current), []);
-    let ek = (e) => {
+    let eD = (e) => {
             e && eO(!1);
         },
         eU = () => {
@@ -209,7 +209,7 @@ let H = (0, h.$)(function (e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        k(D({}, t), {
+                        D(k({}, t), {
                             user: h,
                             guildId: U.guild_id,
                             channel: U,
@@ -226,7 +226,7 @@ let H = (0, h.$)(function (e) {
             ef
                 ? (0, i.jsx)(
                       j.$,
-                      k(D({}, e), {
+                      D(k({}, e), {
                           channel: U,
                           setIsHangStatusInputFocused: eS,
                           setIsEmojiPickerOpen: eT,
@@ -235,19 +235,19 @@ let H = (0, h.$)(function (e) {
                 : null != eg
                   ? (0, i.jsx)(
                         O.I,
-                        k(D({}, e), {
+                        D(k({}, e), {
                             hangStatusActivity: eg,
                             channel: U,
                             userId: h.id,
                         }),
                     )
                   : null,
-        eV = () =>
+        eF = () =>
             (0, i.jsx)(E.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        eF = () =>
+        eV = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(x.Z, {
@@ -286,13 +286,13 @@ let H = (0, h.$)(function (e) {
                                 disconnected: Q,
                                 mute: B,
                                 localMute: H,
-                                localVideoDisabled: V,
+                                localVideoDisabled: F,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
                                 priority: er,
                                 ringing: Y,
-                                deaf: F,
+                                deaf: V,
                                 nick: K,
                                 collapsed: l,
                                 overlap: l,
@@ -319,7 +319,7 @@ let H = (0, h.$)(function (e) {
                             var r;
                             return (0, i.jsx)(o.u, {
                                 text: null != (r = (0, y.Z)(ec)) ? r : R.intl.string(R.t.IyYqqY),
-                                children: (0, i.jsx)(P.ZP, D({ ref: eC }, n)),
+                                children: (0, i.jsx)(P.ZP, k({ ref: eC }, n)),
                             });
                         }
                         let c = () => null;
@@ -327,9 +327,9 @@ let H = (0, h.$)(function (e) {
                             ey && eA
                                 ? (c = eH)
                                 : et
-                                  ? (c = eF)
+                                  ? (c = eV)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eV)
+                                    ? (c = eF)
                                     : ey && (c = eH),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,
@@ -342,12 +342,12 @@ let H = (0, h.$)(function (e) {
                                 children: () =>
                                     (0, i.jsx)(
                                         P.ZP,
-                                        k(D({}, n), {
+                                        D(k({}, n), {
                                             ref: eC,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
-                                            handleHoverHangStatus: eD,
-                                            handleHoverIcons: ek,
+                                            handleHoverHangStatus: ek,
+                                            handleHoverIcons: eD,
                                             onAddHangStatusClicked: () => eI(!0),
                                         }),
                                     ),

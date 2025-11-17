@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(388685), n(314940);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(278074),
@@ -32,14 +32,14 @@ var r = n(951288),
     x = n(921944),
     L = n(474936),
     M = n(388032),
-    j = n(204089);
-let k = () =>
+    k = n(204089);
+let j = () =>
         (0, r.jsx)("div", {
-            className: j.editorHeader,
+            className: k.editorHeader,
             children: (0, r.jsxs)("div", {
-                className: j.bannerUpsell,
+                className: k.bannerUpsell,
                 children: [
-                    (0, r.jsx)(O.Z, { className: j.premiumIcon }),
+                    (0, r.jsx)(O.Z, { className: k.premiumIcon }),
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
@@ -55,15 +55,15 @@ let k = () =>
                 null != t && t(x.L.DISMISS), n(w.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.C)();
             };
         return (0, r.jsxs)("div", {
-            className: j.editorHeader,
+            className: k.editorHeader,
             children: [
                 (0, r.jsx)(d.P3F, {
-                    className: j.closeCircleButton,
+                    className: k.closeCircleButton,
                     onClick: i,
                     children: (0, r.jsx)(d.k$p, {
                         size: "md",
                         color: "currentColor",
-                        className: j.closeCircle,
+                        className: k.closeCircle,
                     }),
                 }),
                 (0, r.jsx)(d.Heading, {
@@ -146,7 +146,7 @@ let k = () =>
                 .with({ isPreview: !0 }, () => _)
                 .otherwise(() => M.intl.string(M.t.Olc2K3));
         return (0, r.jsxs)("div", {
-            className: j.editorFooter,
+            className: k.editorFooter,
             children: [
                 a &&
                     (0, r.jsx)(G, {
@@ -192,19 +192,19 @@ function Z(e) {
             children: (0, r.jsx)("div", {
                 ref: b,
                 "data-app-right-panel": !0,
-                className: o()(j.themeEditor, c ? j.editorAnimate : null),
+                className: o()(k.themeEditor, c ? k.editorAnimate : null),
                 children: (0, r.jsxs)(d.y5t, {
                     children: [
-                        n ? (0, r.jsx)(k, {}) : (0, r.jsx)(U, { markAsDismissed: t }),
+                        n ? (0, r.jsx)(j, {}) : (0, r.jsx)(U, { markAsDismissed: t }),
                         (0, r.jsx)(P.Z, {}),
                         (0, r.jsx)(d.Ttm, {
-                            className: j.editorBody,
+                            className: k.editorBody,
                             children: (0, r.jsxs)(D.ZP, {
                                 type: D.yH.EDITOR,
                                 children: [
-                                    !s && (0, r.jsx)(D.ZP.Basic, { className: j.selectionGroup }),
+                                    !s && (0, r.jsx)(D.ZP.Basic, { className: k.selectionGroup }),
                                     (0, r.jsx)(D.ZP.Gradient, {
-                                        className: j.selectionGroup,
+                                        className: k.selectionGroup,
                                         isCoachmark: n,
                                     }),
                                 ],

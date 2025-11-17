@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(399606),
     l = n(28664),
     a = n(481060),
@@ -17,13 +17,13 @@ function g(e) {
         b = (0, i.e7)([c.default], () => c.default.locale),
         _ = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         y = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
-        x = (0, s.FI)(p.default.extractTimestamp(t), b),
-        O = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
+        O = (0, s.FI)(p.default.extractTimestamp(t), b),
+        j = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
     return null == _ || null == y
         ? (0, r.jsx)(a.Text, {
               variant: "text-sm/normal",
               className: g,
-              children: x,
+              children: O,
           })
         : (0, r.jsxs)("div", {
               className: f.memberSinceWrapper,
@@ -45,7 +45,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: x,
+                              children: O,
                           }),
                       ],
                   }),
@@ -65,7 +65,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: O,
+                              children: j,
                           }),
                       ],
                   }),

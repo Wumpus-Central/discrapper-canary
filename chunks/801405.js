@@ -1,6 +1,6 @@
-n.d(t, { Z: () => x });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => O });
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(570140),
     s = n(475179),
@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(358085),
     _ = n(228488),
     y = n(981631);
-function x(e) {
-    let { channel: t, appContext: n, popoutOpen: x, popoutWindow: O, currentWindow: j } = e,
+function O(e) {
+    let { channel: t, appContext: n, popoutOpen: O, popoutWindow: j, currentWindow: x } = e,
         { parentAnalyticsLocation: v } = (0, c.ZP)(),
         C = n === y.IlC.POPOUT,
         I = i.useRef(null),
@@ -40,15 +40,15 @@ function x(e) {
     });
     let P = i.useRef(S),
         { currentDocument: T, rootNode: N } = i.useMemo(() => {
-            let e = null != O && C ? O.document : document,
-                t = j.document.getElementById("app-mount");
+            let e = null != j && C ? j.document : document,
+                t = x.document.getElementById("app-mount");
             return {
-                currentWindow: j,
+                currentWindow: x,
                 currentDocument: e,
                 rootNode: t,
             };
-        }, [O, C, j]),
-        R = x && !C,
+        }, [j, C, x]),
+        R = O && !C,
         w = E === y.WtW.VIDEO && Z && !R,
         A = i.useCallback(
             (e, r) => {
@@ -142,7 +142,7 @@ function x(e) {
         ? (0, r.jsx)(h.Z, {
               themeable: !1,
               node: N,
-              guestWindow: O,
+              guestWindow: j,
               onClick: L(S),
           })
         : null;

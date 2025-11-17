@@ -1,6 +1,6 @@
 n.d(t, { Z: () => U }), n(388685), n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(913527),
@@ -44,7 +44,7 @@ function x(e, t, n) {
 }
 let L = 512,
     M = 1000;
-class j extends i.PureComponent {
+class k extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
@@ -118,7 +118,7 @@ class j extends i.PureComponent {
             });
     }
 }
-class k extends i.PureComponent {
+class j extends i.PureComponent {
     componentDidMount() {
         this._loadedAt = Date.now();
     }
@@ -263,7 +263,7 @@ class k extends i.PureComponent {
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
                                         n.map((e) =>
                                             (0, r.jsx)(
-                                                j,
+                                                k,
                                                 {
                                                     giftCode: e,
                                                     sku: o,
@@ -321,4 +321,4 @@ let U = c.ZP.connectStores([S.Z, I.Z, v.Z, h.Z, T.Z, O.default], (e) => {
         subscriptionPlan: null != n ? (0, R.oE)(n) : null,
         giftCodes: a,
     };
-})(k);
+})(j);

@@ -1,14 +1,14 @@
-e.d(r, { Z: () => l });
-var i = e(951288),
-    n = e(481060);
+i.d(e, { Z: () => l });
+var r = i(54381),
+    n = i(481060);
 function l(t) {
-    let { activeSlide: r, totalSlides: e, className: l } = t;
-    return (0, i.jsx)("div", {
+    let { activeSlide: e, totalSlides: i, className: l } = t;
+    return (0, r.jsx)("div", {
         className: l,
-        children: (0, i.jsxs)(n.Text, {
+        children: (0, r.jsxs)(n.Text, {
             variant: "display-sm",
             color: "text-primary",
-            children: [Number.parseInt(r, 10) + 1, "/", e],
+            children: [Number.parseInt(e, 10) + 1, "/", i],
         }),
     });
 }

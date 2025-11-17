@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y }), n(388685);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -19,8 +19,8 @@ var r = n(951288),
     v = n(373183),
     x = n(934760),
     E = n(619899),
-    S = n(215023),
-    O = n(310582);
+    O = n(215023),
+    S = n(310582);
 (0, f.IC)(90);
 let y = (e) => {
     let { isBlockLoading: t = !1, heroBlock: n, tab: i } = e,
@@ -48,7 +48,7 @@ let y = (e) => {
                 ),
                 totalCards: e ? t : void 0,
             };
-        })(i !== S.AW.ORBS),
+        })(i !== O.AW.ORBS),
         { products: T } = ((e, t, n, r) => {
             let i = (0, x.Z)(),
                 a = (0, o.e7)([p.Z], () => p.Z.products),
@@ -79,8 +79,8 @@ let y = (e) => {
         B = t || L;
     return (0, r.jsx)("div", {
         className: a()({
-            [O.row]: i === S.AW.HOME,
-            [O.feed]: i === S.AW.ORBS,
+            [S.row]: i === O.AW.HOME,
+            [S.feed]: i === O.AW.ORBS,
         }),
         ref: k,
         children: B
@@ -121,7 +121,7 @@ let y = (e) => {
                                             m.Z,
                                             {
                                                 skuId: null == e ? void 0 : e.skuId,
-                                                prioritizedCurrency: i === S.AW.ORBS ? _.tA.ORBS : void 0,
+                                                prioritizedCurrency: i === O.AW.ORBS ? _.tA.ORBS : void 0,
                                                 onClickAnalytics: (0, _.wO)(e, i, f),
                                             },
                                             e.skuId,

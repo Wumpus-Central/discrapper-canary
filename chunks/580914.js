@@ -1,6 +1,6 @@
 n.d(t, { Z: () => W }), n(388685);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(907331),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(685816),
     u = n(442837),
     d = n(481060),
-    g = n(393903),
-    p = n(448986),
+    p = n(393903),
+    g = n(448986),
     f = n(110560),
     h = n(507808),
     C = n(594174),
@@ -19,8 +19,8 @@ var r = n(951288),
     v = n(884697),
     x = n(128922),
     E = n(870289),
-    S = n(370039),
-    O = n(937510),
+    O = n(370039),
+    S = n(937510),
     y = n(38900),
     j = n(709999),
     k = n(653126),
@@ -29,8 +29,8 @@ var r = n(951288),
     L = n(794324),
     B = n(934760),
     P = n(619899),
-    A = n(190157),
-    N = n(811847),
+    N = n(190157),
+    A = n(811847),
     R = n(859788),
     Z = n(215023),
     w = n(981631),
@@ -59,7 +59,7 @@ let M = (0, v.IC)(90),
                 null != z,
             ),
             K = l.useRef(null),
-            Y = (0, N.B)("HeroBlock"),
+            Y = (0, A.B)("HeroBlock"),
             q = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
             J = (0, B.Z)(),
             Q = (0, _.sp)(),
@@ -110,14 +110,14 @@ let M = (0, v.IC)(90),
                     }),
                 [n, X.rankedSkuIds, ec.length],
             ),
-            { cardContainerRef: ed, totalCards: eg } = ((e) => {
+            { cardContainerRef: ed, totalCards: ep } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
-                    i = (0, p.Z)(() => {
+                    i = (0, g.Z)(() => {
                         (null == a ? void 0 : a.current) != null &&
                             n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
                     }),
-                    a = (0, g.y)(i, [r, e], {
+                    a = (0, p.y)(i, [r, e], {
                         fireOnMount: !0,
                         fireOnDepsChange: !0,
                         enabled: e,
@@ -132,8 +132,8 @@ let M = (0, v.IC)(90),
                     totalCards: e ? t : void 0,
                 };
             })(U !== Z.AW.ORBS),
-            ep = (0, S.a)()(ec),
-            ef = (0, O.l)(ep).slice(0, eg),
+            eg = (0, O.a)()(ec),
+            ef = (0, S.l)(eg).slice(0, ep),
             eh = (0, P.St)(ef),
             eC = U === Z.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
             em = (0, E.FF)("CollectiblesContent"),
@@ -168,7 +168,7 @@ let M = (0, v.IC)(90),
                   className: D.heroBlock,
                   children: [
                       eo
-                          ? (0, A.gT)({
+                          ? (0, N.gT)({
                                 isCustomCursorEnabled: Y,
                                 className: D.riveEventOverlay,
                                 riveEventTargetRef: K,
@@ -278,7 +278,7 @@ let M = (0, v.IC)(90),
                                   children:
                                       n || eu
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: [...Array(null != eg ? eg : 4)].map((e, t) =>
+                                                children: [...Array(null != ep ? ep : 4)].map((e, t) =>
                                                     eb ? (0, r.jsx)(T.Z, {}, t) : (0, r.jsx)(y.K, {}, t),
                                                 ),
                                             })

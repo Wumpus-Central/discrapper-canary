@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
-var a = n(951288),
-    i = n(442837),
+var a = n(54381),
+    l = n(442837),
     r = n(681715),
-    l = n(481060),
+    i = n(481060),
     s = n(885110),
     o = n(51144),
     c = n(231338),
@@ -10,13 +10,13 @@ var a = n(951288),
     u = n(61952);
 function m() {
     var e;
-    let t = (0, i.e7)([s.Z], () => s.Z.getStatus()),
+    let t = (0, l.e7)([s.Z], () => s.Z.getStatus()),
         n = null != (e = (0, o.u5)(t)) ? e : "",
         m = t === c.Sk.INVISIBLE || t === c.Sk.OFFLINE;
     return (0, a.jsxs)("div", {
         className: u.container,
         children: [
-            (0, a.jsxs)(l.nn4, {
+            (0, a.jsxs)(i.nn4, {
                 tag: "div",
                 children: [d.intl.string(d.t.AHoLf4), ":"],
             }),
@@ -25,9 +25,9 @@ function m() {
                 m &&
                 (0, a.jsx)(r.u, {
                     text: d.intl.string(d.t.L99HQm),
-                    children: (0, a.jsx)(l.Mgn, {
+                    children: (0, a.jsx)(i.Mgn, {
                         size: "xs",
-                        color: l.TVs.colors.STATUS_WARNING,
+                        color: i.TVs.colors.STATUS_WARNING,
                         "aria-label": d.intl.string(d.t.L99HQm),
                     }),
                 }),

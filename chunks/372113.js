@@ -1,6 +1,6 @@
-n.d(t, { Z: () => j });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => k });
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -186,7 +186,7 @@ function M(e) {
               text: i.text,
           });
 }
-let j = (e) => {
+let k = (e) => {
     var t;
     let {
             quest: n,
@@ -205,8 +205,8 @@ let j = (e) => {
             month: "long",
             day: "numeric",
         }),
-        j = N >= g.OH.ACCEPTED,
-        k = N >= g.OH.COMPLETED,
+        k = N >= g.OH.ACCEPTED,
+        j = N >= g.OH.COMPLETED,
         U = (0, m.Xv)(n.config),
         G = p || y,
         B = (0, g.t5)(n, C.dr.QUESTS_CARD, a, A),
@@ -235,7 +235,7 @@ let j = (e) => {
                 });
         },
         K = (0, s.e7)([f.default], () => f.default.locale),
-        z = _ && !k;
+        z = _ && !j;
     return (0, r.jsx)("div", {
         className: P.root,
         children: (0, r.jsxs)("div", {
@@ -278,7 +278,7 @@ let j = (e) => {
                     className: P.taskDetails,
                     children: [
                         (0, r.jsx)(u.Text, {
-                            variant: D(a, c, j),
+                            variant: D(a, c, k),
                             className: P.taskInstructions,
                             children: _
                                 ? R.intl.formatToPlainString(R.t["ge+AJp"], { questName: n.config.messages.questName })

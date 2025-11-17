@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(539854),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(884338),
     a = n(398758),
@@ -15,8 +15,8 @@ var r = n(951288),
     u = n(540126),
     d = n(700026),
     p = n(301342),
-    h = n(327530),
-    f = n(776677);
+    f = n(327530),
+    h = n(776677);
 let g = i.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         l = i.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
@@ -35,19 +35,19 @@ function m(e) {
     } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
     let { hasDivider: c, canHaveVoiceSummary: p } = (0, d.ie)(n, o, t),
-        f = c ? (a ? 9 : h.QP) : 0;
-    if (!p || t === u.wZ) return f;
+        h = c ? (a ? 9 : f.QP) : 0;
+    if (!p || t === u.wZ) return h;
     let g = n.getNamedCategoryFromSection(t);
     return null == g
-        ? f
+        ? h
         : (0, d.V5)({
                 category: g,
                 selectedChannelId: i,
                 selectedVoiceChannelId: l,
                 voiceStates: r,
             })
-          ? (a ? ("cozy" === s ? 42 : 34) : h.Vf) + f
-          : f;
+          ? (a ? ("cozy" === s ? 42 : 34) : f.Vf) + h
+          : h;
 }
 function b(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
@@ -62,7 +62,7 @@ let _ = i.memo(function (e) {
             sectionIndex: t,
             guildChannels: n,
             guildChannelsVersion: p,
-            voiceStates: h,
+            voiceStates: f,
             guildId: m,
             selectedChannelId: b,
             selectedVoiceChannelId: _,
@@ -88,21 +88,21 @@ let _ = i.memo(function (e) {
                     channels: C,
                     selectedChannelId: b,
                     selectedVoiceChannelId: _,
-                    voiceStates: h,
+                    voiceStates: f,
                 }),
-            [C, b, _, h],
+            [C, b, _, f],
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {
             guildChannels: n,
             guildChannelsVersion: p,
         });
-    let S = O ? (0, r.jsx)("div", { className: f.sectionDivider }) : null;
+    let S = O ? (0, r.jsx)("div", { className: h.sectionDivider }) : null;
     return v && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
-                      className: f.voiceUserSummary,
+                      className: h.voiceUserSummary,
                       children: (0, r.jsx)(o.ZP, {
                           renderIcon: !0,
                           users: E,

@@ -1,9 +1,9 @@
 n.d(t, { g: () => _ }), n(539854);
-var a = n(951288);
-n(647438);
-var i = n(442837),
+var a = n(54381);
+n(473749);
+var l = n(442837),
     r = n(780384),
-    l = n(481060),
+    i = n(481060),
     s = n(44315),
     o = n(210887),
     c = n(598077),
@@ -19,17 +19,17 @@ var i = n(442837),
     v = n(388032),
     j = n(681285);
 function _(e) {
-    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        n = (0, i.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        _ = (0, i.e7)([o.Z], () => (0, r.wj)(o.Z.theme)),
+    let t = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        _ = (0, l.e7)([o.Z], () => (0, r.wj)(o.Z.theme)),
         { multiAccountUsers: y } = (0, g.L)(),
-        C = y.map((i) => {
-            let r = new c.Z(i),
+        C = y.map((l) => {
+            let r = new c.Z(l),
                 o = r.id === (null == t ? void 0 : t.id),
-                d = i.tokenStatus === x.q.INVALID,
+                d = l.tokenStatus === x.q.INVALID,
                 u = n ? null : "#".concat(r.discriminator);
             return (0, a.jsx)(
-                l.sNh,
+                i.sNh,
                 {
                     id: r.id,
                     focusedClassName: j.focused,
@@ -38,15 +38,15 @@ function _(e) {
                         return (0, a.jsxs)("div", {
                             className: j.userMenuItem,
                             children: [
-                                (0, a.jsx)(l.qEK, {
+                                (0, a.jsx)(i.qEK, {
                                     src: r.getAvatarURL(void 0, 40),
-                                    size: l.EFr.SIZE_24,
-                                    "aria-label": i.username,
+                                    size: i.EFr.SIZE_24,
+                                    "aria-label": l.username,
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: j.userMenuUsername,
                                     children: [
-                                        (0, a.jsx)(l.Text, {
+                                        (0, a.jsx)(i.Text, {
                                             className: j.userMenuText,
                                             variant: "text-sm/normal",
                                             children: p.ZP.getUserTag(r, {
@@ -55,7 +55,7 @@ function _(e) {
                                             }),
                                         }),
                                         !r.hasUniqueUsername() &&
-                                            (0, a.jsx)(l.Text, {
+                                            (0, a.jsx)(i.Text, {
                                                 className: j.userMenuDiscriminator,
                                                 variant: "text-sm/normal",
                                                 children: u,
@@ -63,7 +63,7 @@ function _(e) {
                                     ],
                                 }),
                                 o &&
-                                    (0, a.jsx)(l.owK, {
+                                    (0, a.jsx)(i.owK, {
                                         size: "sm",
                                         color: (0, s.Lq)(t ? b.Ilk.WHITE_500 : b.Ilk.BRAND_500),
                                         secondaryColor: (0, s.Lq)(
@@ -72,7 +72,7 @@ function _(e) {
                                         className: j.activeIcon,
                                     }),
                                 d &&
-                                    (0, a.jsx)(l.Mgn, {
+                                    (0, a.jsx)(i.Mgn, {
                                         color: (0, s.Lq)(b.Ilk.RED_400),
                                         secondaryColor: (0, s.Lq)(
                                             (t && _) || (t && !_) ? b.Ilk.BRAND_500 : b.Ilk.WHITE_500,
@@ -102,8 +102,8 @@ function _(e) {
         C.push(
             (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(l.Clw, {}),
-                    (0, a.jsx)(l.sNh, {
+                    (0, a.jsx)(i.Clw, {}),
+                    (0, a.jsx)(i.sNh, {
                         id: "manage-accounts",
                         label: v.intl.string(v.t.WbFpq4),
                         action: () => {

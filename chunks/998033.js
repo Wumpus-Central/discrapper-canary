@@ -1,10 +1,10 @@
 n.d(t, { Z: () => b });
-var i = n(951288);
-n(647438);
+var i = n(54381);
+n(473749);
 var r = n(13245),
-    s = n(864060),
-    o = n(371651),
-    l = n(703656),
+    o = n(864060),
+    l = n(371651),
+    s = n(703656),
     a = n(460181),
     c = n(974180),
     d = n(237997),
@@ -16,11 +16,11 @@ var r = n(13245),
     m = n(987650),
     y = n(388032);
 function b(e, t, n, b) {
-    var v;
-    let { icon: _, title: O, body: E } = (0, s.Xi)(e, t, n),
-        { trackView: x, trackClick: S } = (0, f.R)(m.n0.TextChat, {
+    var _;
+    let { icon: v, title: O, body: E } = (0, o.Xi)(e, t, n),
+        { trackView: S, trackClick: Z } = (0, f.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
-            notif_user_id: null == (v = t.author) ? void 0 : v.id,
+            notif_user_id: null == (_ = t.author) ? void 0 : _.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -28,7 +28,7 @@ function b(e, t, n, b) {
             channel_type: e.type,
         });
     return {
-        icon: _,
+        icon: v,
         title: O,
         body: E,
         renderFooter: (e) =>
@@ -40,23 +40,23 @@ function b(e, t, n, b) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            b && (0, a.GN)(c.Ay, c.yk), x();
+            b && (0, a.GN)(c.Ay, c.yk), S();
         },
         onNotificationClick: () => {
-            if (o.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
+            if (l.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
                 let n = (0, p.getPID)();
                 d.default.isInstanceLocked()
-                    ? (S("unlock"), r.Z.setInputLocked(!1, n))
-                    : (S("jump"),
-                      (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)),
+                    ? (Z("unlock"), r.Z.setInputLocked(!1, n))
+                    : (Z("jump"),
+                      (0, s.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)),
                       u.isPlatformEmbedded && h.ZP.focus());
             } else
-                (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)),
-                    S("jump"),
+                (0, s.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)),
+                    Z("jump"),
                     d.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            S("dismiss");
+            Z("dismiss");
         },
     };
 }

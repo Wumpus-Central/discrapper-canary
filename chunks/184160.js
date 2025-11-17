@@ -1,6 +1,6 @@
 n.d(t, { x: () => h });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var l = n(512722),
     a = n.n(l),
     i = n(481060),
@@ -21,8 +21,8 @@ function h(e) {
         } = (0, c.JL)(),
         { isGift: g } = (0, d.wD)(),
         v = null != l ? (0, s.Af)(l) : null,
-        x = null != v ? (0, s.gq)(v.planId) : null,
-        j = null != v ? (0, s.Rd)(v.planId) : null,
+        P = null != v ? (0, s.gq)(v.planId) : null,
+        x = null != v ? (0, s.Rd)(v.planId) : null,
         y = (0, p.Kp)({
             isTrial: !1,
             isGift: g,
@@ -30,11 +30,11 @@ function h(e) {
             startedPaymentFlowWithPaymentSources: b.current,
         });
     return (
-        a()(null != j, "Expected premium type"),
+        a()(null != x, "Expected premium type"),
         (0, r.jsx)(o.Z, {
-            premiumType: j,
+            premiumType: x,
             titleText: m.intl.string(m.t["7VcWW0"]),
-            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: x }),
+            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: P }),
             footer: (0, r.jsxs)(i.ButtonGroup, {
                 direction: "horizontal-reverse",
                 align: "center",

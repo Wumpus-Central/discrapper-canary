@@ -1,16 +1,16 @@
 n.d(t, { Z: () => Z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(100568),
-    s = n(509442),
+    a = n(891371),
+    s = n(636606),
     c = n(91192),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    h = n(153867),
-    f = n(591146),
+    f = n(153867),
+    h = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
@@ -53,7 +53,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, f.Ml)("FolderItem");
+            J = (0, h.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),

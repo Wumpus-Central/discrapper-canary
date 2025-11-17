@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(79766),
@@ -33,7 +33,7 @@ let R = (e, t) => {
             x = (0, h.Z)(),
             L = null != x,
             M = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-            { visibilityPercentageRef: j, visibilityPercentage: k } = (0, T.E)(!M),
+            { visibilityPercentageRef: k, visibilityPercentage: j } = (0, T.E)(!M),
             U = (0, l.e7)([_.Z], () => _.Z.affinities),
             G = !L && U.length > 0,
             B = (0, m.H)(s.I.MARKETING_PAGE_BANNER);
@@ -44,11 +44,11 @@ let R = (e, t) => {
                 className: o()(N.container, null != R && N.containerWithOfferCountdown, n),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, r.jsx)("div", {
-                    ref: j,
+                    ref: k,
                     children: (0, r.jsxs)("div", {
                         className: N.contentContainer,
                         children: [
-                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: k }),
+                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: j }),
                             D &&
                                 (null != R
                                     ? (0, r.jsx)(y.Z, {

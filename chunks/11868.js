@@ -1,10 +1,10 @@
 n.d(t, {
     Qt: () => x,
-    ZP: () => k,
+    ZP: () => j,
 }),
     n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -22,7 +22,7 @@ var r = n(951288),
     b = n(725436),
     y = n(978227),
     O = n(236373),
-    v = n(954313),
+    v = n(854698),
     I = n(405613),
     T = n(95291),
     S = n(742593),
@@ -132,7 +132,7 @@ let D = (e, t) => (n) => {
             ],
         });
     }),
-    j = i.memo(function (e) {
+    k = i.memo(function (e) {
         let {
                 guildId: t,
                 guildScheduledEventId: n,
@@ -188,7 +188,7 @@ let D = (e, t) => (n) => {
                   variant: "active",
               });
     }),
-    k = i.memo(function (e) {
+    j = i.memo(function (e) {
         var t;
         let {
                 guildScheduledEvent: n,
@@ -246,7 +246,7 @@ let D = (e, t) => (n) => {
                                 guildScheduledEvent: n,
                                 isMember: c,
                             }),
-                            (0, r.jsx)(j, {
+                            (0, r.jsx)(k, {
                                 isActive: A,
                                 isEnded: C,
                                 isMember: c,

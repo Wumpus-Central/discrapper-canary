@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(975298),
     s = n(89057),
@@ -35,10 +35,10 @@ function S(e) {
         x = w.length > 0,
         L = S.length > w.length,
         M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
-        k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && j === I.a$.NONE,
-        G = C && j === I.a$.FP_SUB_PAUSED;
+        { fractionalState: k } = (0, o.Z)({ forceFetch: !0 }),
+        j = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === I.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === I.a$.NONE,
+        G = C && k === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
@@ -48,15 +48,15 @@ function S(e) {
                 hasBoostPerk: G,
                 canAddBoosts: U,
             }),
-            j === I.a$.NONE &&
+            k === I.a$.NONE &&
                 (0, r.jsx)(O.Z, {
                     hasAppliedGuildBoosts: x,
                     hasBoostPerk: G,
                     hasGuildAffinitiesOrInGuild: P,
-                    subscriptionIsPausedOrPausePending: k,
+                    subscriptionIsPausedOrPausePending: j,
                 }),
             !P && (0, r.jsx)(b.Z, {}),
-            (null == t ? void 0 : t.isPaused) && j !== I.a$.FP_SUB_PAUSED
+            (null == t ? void 0 : t.isPaused) && k !== I.a$.FP_SUB_PAUSED
                 ? (0, r.jsx)(g.r, {
                       appliedGuildBoosts: M,
                       premiumSubscription: t,
@@ -67,7 +67,7 @@ function S(e) {
                   }),
             (0, r.jsx)(v.Z, {
                 guildBoostSlots: S,
-                fractionalPremiumState: j,
+                fractionalPremiumState: k,
             }),
             (0, r.jsx)(y.Z, {
                 canAddBoosts: x && U,

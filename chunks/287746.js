@@ -1,6 +1,6 @@
-n.d(t, { Z: () => e8 }), n(388685), n(35282), n(781311), n(997841);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => e4 }), n(388685), n(35282), n(781311), n(997841);
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(512722),
@@ -33,13 +33,13 @@ var i = n(951288),
     M = n(752305),
     R = n(190210),
     L = n(516887),
-    D = n(974251),
-    k = n(893718),
+    k = n(974251),
+    D = n(893718),
     U = n(436660),
     B = n(680835),
     H = n(28546),
-    V = n(295474),
-    F = n(521476),
+    F = n(295474),
+    V = n(521476),
     G = n(69882),
     z = n(71619),
     W = n(185145),
@@ -87,13 +87,13 @@ var i = n(951288),
     eM = n(838440),
     eR = n(127654),
     eL = n(979956),
-    eD = n(413251),
-    ek = n(655687),
+    ek = n(413251),
+    eD = n(655687),
     eU = n(583027),
     eB = n(25007),
     eH = n(685722),
-    eV = n(199649),
-    eF = n(1397),
+    eF = n(199649),
+    eV = n(1397),
     eG = n(641861),
     ez = n(981631),
     eW = n(959517),
@@ -278,7 +278,7 @@ class e2 extends r.PureComponent {
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
-                    : (0, i.jsx)(k.ZP, {
+                    : (0, i.jsx)(D.ZP, {
                           ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
@@ -645,7 +645,7 @@ class e2 extends r.PureComponent {
                 null != i && (U.Q.select(i, []), i.insertText(e), null == (n = this.editorRef) || n.focus());
             }),
             eY(this, "renderAttachButton", (e, t) =>
-                (0, i.jsx)(D.Z, {
+                (0, i.jsx)(k.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: ev.d.ChannelMessage,
@@ -762,7 +762,7 @@ class e3 extends r.PureComponent {
                 guildId: null == E ? void 0 : E.guild_id,
                 location: "ChannelChat",
             }),
-            D = L && null != O && null != E && null != E.guild_id;
+            k = L && null != O && null != E && null != E.guild_id;
         return (0, i.jsx)(
             y.Z,
             {
@@ -796,7 +796,7 @@ class e3 extends r.PureComponent {
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
                                     children: [
-                                        D &&
+                                        k &&
                                             (0, i.jsx)(eG.Z, {
                                                 recipientUser: O,
                                                 voiceChannel: E,
@@ -840,11 +840,11 @@ class e3 extends r.PureComponent {
                                                             children: [
                                                                 v && (0, i.jsx)(el.Z, { channelId: n.id }),
                                                                 n.isPrivate()
-                                                                    ? (0, i.jsx)(eV.Z, {
+                                                                    ? (0, i.jsx)(eF.Z, {
                                                                           channel: n,
                                                                           children: R,
                                                                       })
-                                                                    : (0, i.jsx)(eF.Z, {
+                                                                    : (0, i.jsx)(eV.Z, {
                                                                           channel: n,
                                                                           children: R,
                                                                       }),
@@ -955,17 +955,17 @@ class e3 extends r.PureComponent {
                               disabledUntil: l,
                           })
                         : a
-                          ? (0, i.jsx)(F.h, { guild: r })
+                          ? (0, i.jsx)(V.h, { guild: r })
                           : null;
             });
     }
 }
-let e8 = r.memo(function (e) {
+let e4 = r.memo(function (e) {
     let { channel: t, guild: n, chatInputType: r, filterAfterTimestamp: l } = e,
-        { placeholder: a, accessibilityLabel: o } = (0, ek.Z)({ channel: t }),
+        { placeholder: a, accessibilityLabel: o } = (0, eD.Z)({ channel: t }),
         s = (0, eo.S)(eP.default.getCurrentUser(), t),
         [c] = (0, z.AB)(null == n ? void 0 : n.id),
-        u = (0, V.Ux)(null == n ? void 0 : n.id),
+        u = (0, F.Ux)(null == n ? void 0 : n.id),
         h = (0, d.e7)([eP.default], () => eP.default.getCurrentUser()),
         f = (0, d.e7)([ex.ZP], () => {
             var e, t, i;
@@ -994,7 +994,7 @@ let e8 = r.memo(function (e) {
         E = (0, b.iD)(t),
         S = (0, b.d7)(t),
         P = E.length > 0 || t.rateLimitPerUser > 0 || null != O || null != S,
-        { showLinkedLobbyApplicationLoadingIndicator: I } = (0, eD.Z)(t.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: I } = (0, ek.Z)(t.linkedLobby),
         Z = (0, B.Z)("ChannelChat");
     return (0, i.jsx)(e3, {
         channel: t,

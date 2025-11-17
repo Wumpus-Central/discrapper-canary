@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(362721),
     d = n(12498),
     p = n(454585),
-    h = n(626135),
-    f = n(981631),
+    f = n(626135),
+    h = n(981631),
     g = n(388032),
     m = n(158871),
     b = n(430864);
@@ -32,7 +32,7 @@ function _(e) {
     if (
         (i.useEffect(() => {
             x &&
-                h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+                f.default.track(h.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id,
                 });

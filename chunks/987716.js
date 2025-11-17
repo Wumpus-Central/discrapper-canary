@@ -1,6 +1,6 @@
 n.d(t, { q: () => A }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(755721),
@@ -105,9 +105,9 @@ let A = (e) => {
         x = (0, s.Jb)({ orientation: "horizontal" }),
         { ref: L } = x,
         M = T(x, ["ref"]),
-        j = (0, d.MY)(y, t),
-        k = j === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        U = j !== d.xr.DEFAULT,
+        k = (0, d.MY)(y, t),
+        j = k === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        U = k !== d.xr.DEFAULT,
         G = (0, p.m)(),
         B = (0, _.Z)({ location: "GiftAnimationOptions" }),
         Z = (e) => {
@@ -128,7 +128,7 @@ let A = (e) => {
                                   className: b.animation,
                               })
                             : (0, r.jsx)(l.$jN, { className: b.spinner }),
-                        k &&
+                        j &&
                             (0, r.jsxs)("div", {
                                 className: o()(b.soundEmojiContainer, B && b.refresh),
                                 children: [

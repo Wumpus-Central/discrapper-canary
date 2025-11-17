@@ -1,9 +1,9 @@
 n.d(t, { ZP: () => en }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(238651),
+    s = n(921254),
     l = n(772848),
     c = n(468194),
     u = n(477690),
@@ -115,8 +115,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
         },
         leafRotationDirection: 1,
     },
-    j = 10,
-    k = 80,
+    k = 10,
+    j = 80,
     U = 80,
     G = 180,
     B = 8,
@@ -283,11 +283,11 @@ function et(e) {
                     velocity: {
                         type: "static-random",
                         minValue: {
-                            x: j * e.x,
+                            x: k * e.x,
                             y: U * e.y,
                         },
                         maxValue: {
-                            x: k * e.x,
+                            x: j * e.x,
                             y: G * e.y,
                         },
                     },
@@ -418,18 +418,18 @@ function en(e) {
         M = i.useCallback(() => {
             C(!1);
         }, []),
-        j = i.useCallback(() => {
+        k = i.useCallback(() => {
             (0, p.AI)({ settingsVisible: !0 }),
                 (0, g.openUserSettings)(m.n.POGGERMODE_PANEL, { section: O.oAB.POGGERMODE }),
                 C(!1);
         }, []),
-        k = i.useCallback(
+        j = i.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(V)) && j();
+                (null == t ? void 0 : t.id.startsWith(V)) && k();
             },
-            [j],
+            [k],
         );
-    i.useEffect(() => S(k));
+    i.useEffect(() => S(j));
     let U = (0, r.jsx)(d.P3F, {
         className: I.iconWrapper,
         innerRef: R,
@@ -456,7 +456,7 @@ function en(e) {
                           className: I.cannonWrapper,
                           children: (0, r.jsx)(et, {
                               onAnimationComplete: M,
-                              onClick: j,
+                              onClick: k,
                           }),
                       }),
                   })

@@ -1,154 +1,77 @@
-n.d(t, { Z: () => i }), n(388685);
-var r = n(647438);
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
+function r(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+}
+var i = n(50153),
+    a = n(257469),
+    o = n(65183),
+    s = o.List,
+    l = o.Map,
+    c = o.OrderedSet,
+    u = o.Record,
+    d = o.Repeat,
+    f = c(),
+    _ = u({
+        key: "",
+        type: "unstyled",
+        text: "",
+        characterList: s(),
+        depth: 0,
+        data: l(),
+    }),
+    p = function (e) {
+        if (!e) return e;
+        var t = e.characterList,
+            n = e.text;
+        return n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e;
+    };
+function h(e, t) {
+    return e.getStyle() === t.getStyle();
+}
+function m(e, t) {
+    return e.getEntity() === t.getEntity();
+}
+e.exports = (function (e) {
+    function t(t) {
+        return e.call(this, p(t)) || this;
     }
-    return e;
-}
-function l(e, t) {
+    r(t, e);
+    var n = t.prototype;
     return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
+        (n.getKey = function () {
+            return this.get("key");
+        }),
+        (n.getType = function () {
+            return this.get("type");
+        }),
+        (n.getText = function () {
+            return this.get("text");
+        }),
+        (n.getCharacterList = function () {
+            return this.get("characterList");
+        }),
+        (n.getLength = function () {
+            return this.getText().length;
+        }),
+        (n.getDepth = function () {
+            return this.get("depth");
+        }),
+        (n.getData = function () {
+            return this.get("data");
+        }),
+        (n.getInlineStyleAt = function (e) {
+            var t = this.getCharacterList().get(e);
+            return t ? t.getStyle() : f;
+        }),
+        (n.getEntityAt = function (e) {
+            var t = this.getCharacterList().get(e);
+            return t ? t.getEntity() : null;
+        }),
+        (n.findStyleRanges = function (e, t) {
+            a(this.getCharacterList(), h, e, t);
+        }),
+        (n.findEntityRanges = function (e, t) {
+            a(this.getCharacterList(), m, e, t);
+        }),
+        t
     );
-}
-function i(e) {
-    let {
-            getCurrentVideoTime: t,
-            isPlaying: n,
-            isMetadataLoaded: i,
-            isInitialSeekComplete: a,
-            onAnalytics: s,
-            emitIntervalMs: c,
-            minSegmentDurationMs: u,
-        } = e,
-        [d, m] = r.useState(null),
-        p = (0, r.useRef)(null),
-        f = (0, r.useRef)(Date.now()),
-        v = (0, r.useRef)(!1),
-        g = (0, r.useCallback)(
-            (e) => {
-                e.segmentEndSec < e.segmentStartSec ||
-                    s({
-                        start_time: e.startTime,
-                        end_time: e.endTime,
-                        duration: e.endTime - e.startTime,
-                        segment_start_sec: e.segmentStartSec,
-                        segment_end_sec: e.segmentEndSec,
-                        segment_duration_sec: e.segmentEndSec - e.segmentStartSec,
-                    });
-            },
-            [s],
-        ),
-        E = (0, r.useCallback)(() => {
-            let e = t();
-            if (null != e && i && a) {
-                let t = Date.now();
-                m({
-                    startTime: t,
-                    endTime: t,
-                    segmentStartSec: e,
-                    segmentEndSec: e,
-                }),
-                    (v.current = !0);
-            }
-        }, [t, i, a]),
-        O = (0, r.useCallback)(() => {
-            let e = t();
-            if (null == e || null == d) return;
-            let n = Date.now();
-            !(n - f.current < c) &&
-                (e - d.segmentStartSec < u / 1000 ||
-                    (g(
-                        l(o({}, d), {
-                            endTime: n,
-                            segmentEndSec: e,
-                        }),
-                    ),
-                    m({
-                        startTime: n,
-                        endTime: n,
-                        segmentStartSec: e,
-                        segmentEndSec: e,
-                    }),
-                    (f.current = n)));
-        }, [d, g, c, u, t]);
-    return (
-        (0, r.useEffect)(() => {
-            (i && a) || (m(null), (v.current = !1));
-        }, [i, a]),
-        (0, r.useEffect)(() => {
-            if (n && i && a)
-                v.current || E(),
-                    (p.current = window.setInterval(() => {
-                        O();
-                    }, 200));
-            else {
-                let e = t();
-                if (null != d && null != e) {
-                    let t = Date.now();
-                    e - d.segmentStartSec > 0.2 &&
-                        g(
-                            l(o({}, d), {
-                                endTime: t,
-                                segmentEndSec: e,
-                            }),
-                        );
-                }
-                m(null), (v.current = !1), null != p.current && (clearInterval(p.current), (p.current = null));
-            }
-            return () => {
-                null != p.current && (clearInterval(p.current), (p.current = null));
-            };
-        }, [n, i, a, d, O, g, E, t]),
-        {
-            forceSendCurrentSegment: (0, r.useCallback)(() => {
-                let e = t();
-                if (null != d && null != e) {
-                    let t = Date.now();
-                    e - d.segmentStartSec > 0.2 &&
-                        g(
-                            l(o({}, d), {
-                                endTime: t,
-                                segmentEndSec: e,
-                            }),
-                        ),
-                        m(null),
-                        (v.current = !1);
-                }
-            }, [d, g, t]),
-            isInitialized: v.current,
-        }
-    );
-}
+})(_);

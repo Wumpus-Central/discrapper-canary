@@ -1,6 +1,6 @@
 n.d(t, { Z: () => M }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -107,7 +107,7 @@ function M(e) {
         R = (0, f.Dt)(),
         { analyticsLocations: P } = (0, d.ZP)(),
         { trackUserProfileAction: M } = (0, m.KZ)(),
-        { live: j, stream: k } = (0, g.Z)(t.id),
+        { live: k, stream: j } = (0, g.Z)(t.id),
         { voiceChannel: U, voiceActivity: G } = (0, E.Z)({
             userId: t.id,
             guildId: a,
@@ -118,7 +118,7 @@ function M(e) {
             return e === T.Sk.OFFLINE || e === T.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, u.U)({ location: "UserProfileStackedActivity" }),
-        V = F && null == k && null == G && null != U,
+        V = F && null == j && null == G && null != U,
         H = (0, b.yi)(),
         Y = (null == H ? void 0 : H.interactionSource) === I.n_.ACTIVITY,
         W = i.useRef(null),
@@ -136,8 +136,8 @@ function M(e) {
             className: A.card,
             onClose: C,
         };
-    null != k && en.push((0, r.jsx)(O.Z, N({ stream: k }, er), "stream")),
-        j.forEach((e, t) => {
+    null != j && en.push((0, r.jsx)(O.Z, N({ stream: j }, er), "stream")),
+        k.forEach((e, t) => {
             en.push((0, r.jsx)(y.Z, N({ activity: e }, er), "live-".concat(t)));
         }),
         V && en.push((0, r.jsx)(v.Z, N({ voiceChannel: U }, er), "voice"));

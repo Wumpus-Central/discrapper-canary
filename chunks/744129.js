@@ -3,8 +3,8 @@ n.d(t, {
     UQ: () => Z,
     rz: () => H,
 });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(409794),
@@ -37,8 +37,8 @@ var i = n(120356),
     x = n(1721),
     L = n(895601),
     M = n(381126),
-    j = n(234286);
-function k(e, t, n) {
+    k = n(234286);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -166,10 +166,10 @@ function F(e) {
             isApplicationHome: T = !1,
         } = e,
         S = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-        k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        j = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         U = (0, I.N)(),
         G = null == U || null == (t = U.subscription_trial) ? void 0 : t.sku_id,
-        B = (null == S ? void 0 : S.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
+        B = (null == S ? void 0 : S.hasActiveTrial) ? (null == j ? void 0 : j.premiumType) : null,
         Z = (0, v.N)(),
         F = (0, b.t7)(),
         V = null != G || null != B ? D.C.PREMIUM_TRIAL : null != Z || F ? D.C.PREMIUM_DISCOUNT : null,
@@ -189,7 +189,7 @@ function F(e) {
                         className: a()(x.smallCloud, x[y]),
                     }),
                     (0, r.jsx)("img", {
-                        src: j,
+                        src: k,
                         alt: "",
                         className: a()(x.wumpus, x[y]),
                     }),

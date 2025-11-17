@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d }), n(361932), n(187205), n(539854);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(392711),
     l = n.n(i),
     o = n(661824),
@@ -9,7 +9,7 @@ var i = n(392711),
     c = n(388032),
     u = n(803205);
 function d(e, t, n) {
-    let { markChannelRead: i, markGuildRead: d, deleteChannel: p, toggle: h, getNumUnreadChannels: f } = t,
+    let { markChannelRead: i, markGuildRead: d, deleteChannel: p, toggle: f, getNumUnreadChannels: h } = t,
         g = null;
     return l().flatMap(e, (e) => {
         let t = e.sortOrder !== g;
@@ -49,10 +49,10 @@ function d(e, t, n) {
                         channel: e,
                         markChannelRead: i,
                         markGuildRead: d,
-                        toggle: h,
+                        toggle: f,
                         deleteChannel: p,
                         onJump: n,
-                        getNumUnreadChannels: f,
+                        getNumUnreadChannels: h,
                     },
                     e.channelId,
                 ),

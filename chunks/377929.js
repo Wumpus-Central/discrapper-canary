@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
     a = n.n(l),
     s = n(442837),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(13736),
     _ = n(732393),
     y = n(137591),
-    x = n(299206),
-    O = n(665149),
-    j = n(695346),
+    O = n(299206),
+    j = n(665149),
+    x = n(695346),
     v = n(979651),
     C = n(488131),
     I = n(388032);
@@ -87,7 +87,7 @@ function Z(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                O.ZP.Icon,
+                j.ZP.Icon,
                 E(S({}, e), {
                     ref: a,
                     onClick: s,
@@ -103,10 +103,10 @@ function Z(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        O = (0, f.Z)(t),
+        j = (0, f.Z)(t),
         S = (0, _.Z)(t.id),
         E = (0, b.Z)(t),
-        Z = (0, x.Z)({
+        Z = (0, O.Z)({
             id: t.id,
             label: I.intl.string(I.t.DQ797g),
         }),
@@ -117,7 +117,7 @@ function P(e) {
         w = (0, h.Z)(t),
         A = (0, y.Z)(t),
         D = (0, m.Z)(t),
-        L = j.vF.useSetting(),
+        L = x.vF.useSetting(),
         M = (0, s.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
@@ -146,7 +146,7 @@ function P(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [A, l, O, T],
+                children: [A, l, j, T],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [P, Z],

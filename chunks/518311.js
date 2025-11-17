@@ -9,8 +9,8 @@ n.d(t, {
     n(35282),
     n(49124);
 var i,
-    r = n(951288),
-    l = n(647438),
+    r = n(54381),
+    l = n(473749),
     a = n(392711),
     o = n(913527),
     s = n.n(o),
@@ -42,13 +42,13 @@ var i,
     M = n(93127),
     R = n(752048),
     L = n(131704),
-    D = n(592125),
-    k = n(341165),
+    k = n(592125),
+    D = n(341165),
     U = n(544610),
     B = n(19780),
     H = n(306680),
-    V = n(699516),
-    F = n(246946),
+    F = n(699516),
+    V = n(246946),
     G = n(594174),
     z = n(626135),
     W = n(572004),
@@ -166,7 +166,7 @@ let eo = (0, I.hQ)(),
     eu = (e) => {
         var { onConfirm: t, channelIds: n } = e,
             i = ea(e, ["onConfirm", "channelIds"]);
-        let l = (0, u.Wu)([D.Z], () => Array.from(n).map(D.Z.getChannel), [n]);
+        let l = (0, u.Wu)([k.Z], () => Array.from(n).map(k.Z.getChannel), [n]);
         return (0, r.jsx)(
             c.Modal,
             el(
@@ -268,7 +268,7 @@ class ed extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !V.Z.isFriend(t);
+        return !F.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -501,7 +501,7 @@ class ed extends (i = l.PureComponent) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
             let n = G.default.getUser(e),
-                i = null != n && V.Z.getRelationshipType(n.id) === ee.OGo.PENDING_OUTGOING;
+                i = null != n && F.Z.getRelationshipType(n.id) === ee.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -881,7 +881,7 @@ function ep(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, E.ZP)(j.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, Z.a)(j.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, P.pT)(Array.from(t), G.default, V.Z);
+    let c = (0, P.pT)(Array.from(t), G.default, F.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -914,14 +914,14 @@ function ep(e) {
 function eh(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([U.Z, k.Z, F.Z], () => {
+    let i = (0, u.cj)([U.Z, D.Z, V.Z], () => {
         let e;
         return (
-            null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             el(er({}, U.Z.getState()), {
                 invite: e,
-                hideDiscriminator: F.Z.hidePersonalInformation,
-                hideInstantInvites: F.Z.hideInstantInvites,
+                hideDiscriminator: V.Z.hidePersonalInformation,
+                hideInstantInvites: V.Z.hideInstantInvites,
             })
         );
     });
@@ -1119,7 +1119,7 @@ function eg(e) {
 function eb(e) {
     let t = ey(e);
     return new Set(
-        (0, a.chain)(D.Z.getMutablePrivateChannels())
+        (0, a.chain)(k.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, L.bc)(e.type))
             .filter((e) => ey(e.recipients) === t)

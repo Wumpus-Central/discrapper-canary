@@ -1,11 +1,11 @@
 n.d(t, {
-    wl: () => v,
+    wl: () => O,
     yX: () => y,
 }),
     n(388685),
     n(781311);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(423802),
     l = n(442837),
     o = n(481060),
@@ -80,8 +80,8 @@ function b(e, t) {
 }
 function h(e) {
     var { widgetType: t, widget: n, onAddGame: h, children: y } = e,
-        v = b(e, ["widgetType", "widget", "onAddGame", "children"]);
-    let [O] = (0, o.ynZ)(),
+        O = b(e, ["widgetType", "widget", "onAddGame", "children"]);
+    let [v] = (0, o.ynZ)(),
         [j, x] = i.useState(""),
         _ = i.useRef(""),
         P = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
@@ -127,7 +127,7 @@ function h(e) {
         );
     return (0, r.jsx)(
         o.yRy,
-        m(p({}, v), {
+        m(p({}, O), {
             onRequestOpen: () => {
                 I({
                     action: "PRESS_ADD_GAME",
@@ -150,7 +150,7 @@ function h(e) {
                     className: g.gameSearchCombobox,
                     placeholder: f.intl.string(f.t["5h0QOP"]),
                     autoFocus: !0,
-                    value: O,
+                    value: v,
                     onChange: (e) => {
                         S(e), t();
                     },
@@ -218,7 +218,7 @@ function y(e) {
         ),
     );
 }
-function v(e) {
+function O(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         h,

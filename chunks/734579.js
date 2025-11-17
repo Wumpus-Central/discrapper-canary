@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(704215),
     a = n(952265),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(377171),
     d = n(243778),
     p = n(703656),
-    h = n(210218),
-    f = n(445606),
+    f = n(210218),
+    h = n(445606),
     g = n(819640),
     m = n(434479),
     b = n(981631),
@@ -28,7 +28,7 @@ let O = i.memo(function (e) {
     let S = i.useCallback(() => {
             var e, n;
             E(_.L.USER_DISMISS);
-            let r = null != (n = null == (e = h.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
+            let r = null != (n = null == (e = f.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
             (0, p.uL)(b.Z5c.CHANNELS_GAME_SHOP(t.id, r));
         }, [t, E]),
         I = i.useCallback(() => {
@@ -115,7 +115,7 @@ let O = i.memo(function (e) {
             }),
             j || x || C !== o.z.GAME_SHOP_NEW_BADGE
                 ? null
-                : (0, r.jsx)(f.Z, {
+                : (0, r.jsx)(h.Z, {
                       onActionClick: S,
                       onRequestClose: I,
                       targetElementRef: v,

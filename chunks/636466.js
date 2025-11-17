@@ -3,8 +3,8 @@ n.d(t, {
     J: () => I,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(704215),
     s = n(952265),
@@ -21,8 +21,8 @@ var r = n(951288),
     _ = n(921944),
     y = n(474936),
     O = n(388032),
-    x = n(758650),
-    j = n(976218);
+    j = n(758650),
+    x = n(976218);
 function v(e) {
     let { targetElementRef: t, onRequestClose: n, onActionClick: i } = e;
     return (0, r.jsx)(o.J2, {
@@ -75,10 +75,10 @@ function C(e) {
         m = (0, s.f9)(),
         b = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         [y, O] = (0, p.US)([a.z.GAME_SHOP_WISHLIST_POPOVER], _.R.SIDEBAR, !0),
-        x = i.useCallback(() => {
+        j = i.useCallback(() => {
             O(_.L.USER_DISMISS), d();
         }, [d, O]),
-        j = i.useCallback(() => {
+        x = i.useCallback(() => {
             O(_.L.USER_DISMISS);
         }, [O]),
         C = i.useCallback(() => {
@@ -115,7 +115,7 @@ function C(e) {
                 })({}, u)),
                 (n = n =
                     {
-                        onCardClick: x,
+                        onCardClick: j,
                         ref: g,
                     }),
                 Object.getOwnPropertyDescriptors
@@ -138,7 +138,7 @@ function C(e) {
                 !b &&
                 (0, r.jsx)(v, {
                     targetElementRef: g,
-                    onRequestClose: j,
+                    onRequestClose: x,
                     onActionClick: C,
                 }),
         ],
@@ -175,9 +175,9 @@ function I(e, t) {
             shouldScalePreview: !1,
             renderPreview: () =>
                 (0, r.jsx)(m.A, {
-                    containerClassName: x.card,
-                    backgroundImageClassName: x.cardBackgroundImage,
-                    foregroundImageClassName: x.cardImage,
+                    containerClassName: j.card,
+                    backgroundImageClassName: j.cardBackgroundImage,
+                    foregroundImageClassName: j.cardImage,
                     sku: e.sku,
                     shape: "custom",
                 }),
@@ -196,11 +196,11 @@ function S(e) {
     let { item: t, card: n, profileOwner: i } = e,
         { data: l } = (0, u.IX)(t.sku.applicationId);
     return (0, r.jsxs)("div", {
-        className: j.singleItemContainer,
+        className: x.singleItemContainer,
         children: [
             n,
             (0, r.jsx)("div", {
-                className: j.singleItemInfo,
+                className: x.singleItemInfo,
                 children: (0, r.jsxs)(c.P3F, {
                     onClick: () => {
                         (0, g.P)(
@@ -213,7 +213,7 @@ function S(e) {
                             { analyticsLocations: [d.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
                         );
                     },
-                    className: j.singleItemName,
+                    className: x.singleItemName,
                     "aria-label": O.intl.string(O.t.ilhtIa),
                     children: [
                         (0, r.jsx)(c.Text, {

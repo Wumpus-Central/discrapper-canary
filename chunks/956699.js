@@ -1,6 +1,6 @@
 n.d(t, { Z: () => ey }), n(388685), n(35282), n(781311), n(49124), n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(371651),
     L = n(398269),
     M = n(921801),
-    j = n(857192),
-    k = n(558724),
+    k = n(857192),
+    j = n(558724),
     U = n(808506),
     G = n(626135),
     B = n(709054),
@@ -663,9 +663,9 @@ function eu() {
     let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, S.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
-        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([j.default], () => ({
-            cssDebuggingEnabled: j.default.cssDebuggingEnabled,
-            layoutDebuggingEnabled: j.default.layoutDebuggingEnabled,
+        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([k.default], () => ({
+            cssDebuggingEnabled: k.default.cssDebuggingEnabled,
+            layoutDebuggingEnabled: k.default.layoutDebuggingEnabled,
         })),
         u = (0, C.Z)("highlight_void_toggleables"),
         f = (0, C.Z)("highlight_mana_components");
@@ -758,16 +758,16 @@ function ed() {
             disableAppCollectionsCache: s,
             preventPopoutClose: l,
             logKeyboardMismatches: c,
-        } = (0, d.cj)([j.default], () => ({
-            isTracingRequests: j.default.isTracingRequests,
-            isForcedCanary: j.default.isForcedCanary,
-            isAxeEnabled: j.default.isAxeEnabled,
-            isSourceMapsEnabled: j.default.sourceMapsEnabled,
-            isIdleStatusIndicatorEnabled: j.default.isIdleStatusIndicatorEnabled,
-            onlyShowPreviewAppCollections: j.default.onlyShowPreviewAppCollections,
-            disableAppCollectionsCache: j.default.disableAppCollectionsCache,
-            preventPopoutClose: j.default.preventPopoutClose,
-            logKeyboardMismatches: j.default.logKeyboardMismatches,
+        } = (0, d.cj)([k.default], () => ({
+            isTracingRequests: k.default.isTracingRequests,
+            isForcedCanary: k.default.isForcedCanary,
+            isAxeEnabled: k.default.isAxeEnabled,
+            isSourceMapsEnabled: k.default.sourceMapsEnabled,
+            isIdleStatusIndicatorEnabled: k.default.isIdleStatusIndicatorEnabled,
+            onlyShowPreviewAppCollections: k.default.onlyShowPreviewAppCollections,
+            disableAppCollectionsCache: k.default.disableAppCollectionsCache,
+            preventPopoutClose: k.default.preventPopoutClose,
+            logKeyboardMismatches: k.default.logKeyboardMismatches,
         })),
         u = (0, P.Z)("go_back_to_regular_input"),
         f = V.zY.useSetting();
@@ -892,11 +892,11 @@ function ef() {
         isLoggingOverlayEvents: t,
         isLoggingAnalyticsEvents: n,
         isAnalyticsDebuggerEnabled: i,
-    } = (0, d.cj)([j.default], () => ({
-        isLoggingGatewayEvents: j.default.isLoggingGatewayEvents,
-        isLoggingOverlayEvents: j.default.isLoggingOverlayEvents,
-        isLoggingAnalyticsEvents: j.default.isLoggingAnalyticsEvents,
-        isAnalyticsDebuggerEnabled: j.default.isAnalyticsDebuggerEnabled,
+    } = (0, d.cj)([k.default], () => ({
+        isLoggingGatewayEvents: k.default.isLoggingGatewayEvents,
+        isLoggingOverlayEvents: k.default.isLoggingOverlayEvents,
+        isLoggingAnalyticsEvents: k.default.isLoggingAnalyticsEvents,
+        isAnalyticsDebuggerEnabled: k.default.isAnalyticsDebuggerEnabled,
     }));
     return (0, r.jsx)(M.F, {
         setting: z.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
@@ -1095,7 +1095,7 @@ function eh() {
           });
 }
 function em() {
-    let e = (0, d.e7)([k.Z], () => k.Z.getSurveyOverride()),
+    let e = (0, d.e7)([j.Z], () => j.Z.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
         a = (e) => {
             e.preventDefault(), t.length > 0 ? E.Xq(t) : E.Xq(null);

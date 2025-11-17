@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(642613), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(131051),
+    i = n(131051),
     s = n(28682),
     o = n(920952),
     c = n(544651),
@@ -10,8 +10,8 @@ var a = n(951288),
     u = n(547481);
 function m(e) {
     var t;
-    let { setting: n, depth: r, highlight: l } = e,
-        s = null == (t = i.useContext(h)) ? void 0 : t.get(n),
+    let { setting: n, depth: r, highlight: i } = e,
+        s = null == (t = l.useContext(h)) ? void 0 : t.get(n),
         o = null;
     return (
         null != s &&
@@ -24,7 +24,7 @@ function m(e) {
                         {
                             setting: e,
                             depth: r + 1,
-                            highlight: l,
+                            highlight: i,
                         },
                         e,
                     ),
@@ -32,14 +32,14 @@ function m(e) {
         (0, a.jsx)(c.r, {
             title: n,
             initExpanded: r <= 2,
-            highlight: l,
+            highlight: i,
             children: o,
         })
     );
 }
 function p(e) {
     let { setting: t, depth: n } = e,
-        i =
+        l =
             (0, s.Lk)(t) &&
             ((t.type === s.Jq.SIDEBAR_ITEM &&
                 t.layout.some((e) => (null == e ? void 0 : e.layout.some((e) => null != e.render)))) ||
@@ -47,9 +47,9 @@ function p(e) {
                 (t.type === s.Jq.PANE && null != t.render)),
         r = null;
     if ((0, s.Lk)(t)) {
-        var l, o, d;
+        var i, o, d;
         let e =
-            null == (d = t.parent) || null == (o = d.parent) || null == (l = o.getLegacySearchKey) ? void 0 : l.call(o);
+            null == (d = t.parent) || null == (o = d.parent) || null == (i = o.getLegacySearchKey) ? void 0 : i.call(o);
         0 === t.layout.length && null != e
             ? (r = (0, a.jsx)(m, {
                   setting: e,
@@ -71,15 +71,15 @@ function p(e) {
     return (0, a.jsx)(c.r, {
         title: t.key,
         initExpanded: n <= 2,
-        highlight: i,
+        highlight: l,
         children: r,
     });
 }
-let h = i.createContext(null);
+let h = l.createContext(null);
 function x() {
-    let [e, t] = i.useState(!1),
+    let [e, t] = l.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
-        { node: s } = (0, l.Z)(o.Z, "");
+        { node: s } = (0, i.Z)(o.Z, "");
     return (0, a.jsxs)(r.zJl, {
         className: u.root,
         children: [

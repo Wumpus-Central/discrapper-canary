@@ -1,8 +1,8 @@
-n.d(t, { Z: () => I }), n(388685);
-var a = n(951288),
-    i = n(913527),
-    r = n.n(i),
-    l = n(442837),
+n.d(t, { Z: () => w }), n(388685);
+var a = n(54381),
+    l = n(913527),
+    r = n.n(l),
+    i = n(442837),
     s = n(544891),
     o = n(704215),
     c = n(481060),
@@ -34,12 +34,12 @@ let C = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     E = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    T = [
+    O = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function O(e) {
+function T(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -73,14 +73,14 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function I() {
-    let e = (0, l.e7)([j.Z], () => j.Z.getGuildId()),
-        t = (0, l.e7)([v.Z], () => {
+function w() {
+    let e = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
+        t = (0, i.e7)([v.Z], () => {
             var t;
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
-        i = (0, l.Wu)([b.Z], () => {
+        n = (0, i.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
+        l = (0, i.Wu)([b.Z], () => {
             var t;
             return null != e && null != (t = b.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
         });
@@ -140,14 +140,14 @@ function I() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        N(e, i.slice(Math.floor(i.length / 2)), !1);
+                                        N(e, l.slice(Math.floor(l.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        N(e, i, !0);
+                                        N(e, l, !0);
                                     },
                                 }),
                             ],
@@ -185,7 +185,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: O(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -206,7 +206,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: O(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -227,7 +227,7 @@ function I() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        T.map((e) =>
+                        O.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

@@ -1,6 +1,6 @@
 n.d(t, { S: () => O }), n(388685), n(361932), n(187205);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     a = n(512722),
     i = n.n(a),
     o = n(442837),
@@ -15,16 +15,16 @@ var r = n(951288),
     b = n(594174),
     g = n(626135),
     v = n(987209),
-    x = n(563132),
-    j = n(409813),
+    P = n(563132),
+    x = n(409813),
     y = n(614277),
-    P = n(981631),
+    j = n(981631),
     S = n(388032),
     _ = n(950174);
 function O(e) {
     var t;
     let { handleStepChange: n, handleClose: a } = e,
-        { selectedPlan: O, selectedSkuId: C, step: w } = (0, x.JL)(),
+        { selectedPlan: O, selectedSkuId: w, step: C } = (0, P.JL)(),
         {
             setSelectedGiftingPromotionReward: k,
             selectedGiftingPromotionReward: E,
@@ -35,14 +35,14 @@ function O(e) {
         R = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         M = (0, p.ZP)(I, T, E),
         [A, Z] = l.useState(null == M || null == (t = M.defaultHighlightedReward) ? void 0 : t.skuId),
-        [B, L] = l.useState(!1),
+        [L, B] = l.useState(!1),
         D = (0, m.Z)({
             claimableVariants: T,
             claimableRewards: I,
             defaultSelection: M,
             selectedGiftingPromotionReward: E,
             setSelectedGiftingPromotionReward: k,
-            hasUserMadeSelection: B,
+            hasUserMadeSelection: L,
         }),
         F = l.useMemo(() => {
             var e, t;
@@ -95,11 +95,11 @@ function O(e) {
         }, [T, null == N ? void 0 : N.rewards, null == D ? void 0 : D.selectedCategory]);
     l.useEffect(() => {
         let e = null == M ? void 0 : M.defaultHighlightedReward;
-        !B && null == E && null != e && null != e && F.some((t) => t.skuId === e.skuId) && (k(e), Z(e.skuId));
-    }, [M, B, E, F, k]),
+        !L && null == E && null != e && null != e && F.some((t) => t.skuId === e.skuId) && (k(e), Z(e.skuId));
+    }, [M, L, E, F, k]),
         i()(null != O, "Expected plan to selected"),
-        i()(null != C, "Expected selectedSkuId"),
-        i()(null != w, "Step should be set");
+        i()(null != w, "Expected selectedSkuId"),
+        i()(null != C, "Step should be set");
     let H = l.useMemo(() => null != A && (null != I ? I : []).some((e) => e.skuId === A), [A, I]),
         G = l.useMemo(() => null != E && F.some((e) => e.skuId === E.skuId), [F, E]),
         U = l.useMemo(() => 0 === F.length || null == A || !G || !H, [F, A, H, G]);
@@ -110,10 +110,10 @@ function O(e) {
         }
         (H && F.some((e) => e.skuId === A)) || null == A || (Z(void 0), k(void 0));
     }, [F, H, A, k]);
-    let K = (e) => {
-            k(F.find((t) => t.skuId === e)), Z(e), L(!0);
+    let z = (e) => {
+            k(F.find((t) => t.skuId === e)), Z(e), B(!0);
         },
-        z = F.map((e) => {
+        K = F.map((e) => {
             var t, n;
             return (0, r.jsx)(
                 d.c,
@@ -124,7 +124,7 @@ function O(e) {
                     a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
                     claimed: null != I && I.every((t) => t.skuId !== e.skuId),
                     user: R,
-                    onSelect: K,
+                    onSelect: z,
                     selectedSkuId: A,
                     category: null == D ? void 0 : D.selectedCategory,
                     type: e.type,
@@ -141,13 +141,13 @@ function O(e) {
                     onStepChange: (e) => {
                         null != R &&
                             null != E &&
-                            g.default.track(P.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            g.default.track(j.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: R.id,
                                 reward_sku_id: E.skuId,
                             }),
                             n(e);
                     },
-                    onBackClick: () => n(j.h8.PLAN_SELECT),
+                    onBackClick: () => n(x.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [O.id],
@@ -197,7 +197,7 @@ function O(e) {
                             }),
                         (0, r.jsx)("div", {
                             className: _.giftRewardShopCardsGrid,
-                            children: z,
+                            children: K,
                         }),
                     ],
                 }),

@@ -5,10 +5,10 @@ n.d(t, {
 }),
     n(539854),
     n(35282);
-var r = n(951288),
-    i = n(647438),
-    a = n(863785),
-    o = n(9787),
+var r = n(54381),
+    i = n(473749),
+    a = n(998976),
+    o = n(980824),
     s = n(615673),
     l = n(120356),
     c = n.n(l),
@@ -110,8 +110,8 @@ function b(e) {
             refs: x,
             floatingStyles: L,
             placement: M,
-            middlewareData: j,
-            update: k,
+            middlewareData: k,
+            update: j,
             context: U,
         } = (0, o.YF)({
             placement: O,
@@ -128,7 +128,7 @@ function b(e) {
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
         { getReferenceProps: Z, getFloatingProps: F } = (0, o.NI)([G, B]),
-        V = (null == (t = j.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
+        V = (null == (t = k.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
         H = A ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -158,7 +158,7 @@ function b(e) {
                                         containerRef: D,
                                         children: R({
                                             placement: M,
-                                            update: k,
+                                            update: j,
                                             hidden: "hidden" === V,
                                         }),
                                     }),

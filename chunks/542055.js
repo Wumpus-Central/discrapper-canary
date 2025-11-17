@@ -3,8 +3,8 @@ n.d(t, {
     default: () => x,
 }),
     n(388685);
-var l = n(951288),
-    r = n(647438),
+var l = n(54381),
+    r = n(473749),
     i = n(442837),
     a = n(28664),
     s = n(352065),
@@ -19,7 +19,7 @@ var l = n(951288),
     b = n(965762),
     h = n(388032),
     v = n(862220);
-function g(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -44,7 +44,7 @@ function g(e) {
     }
     return e;
 }
-function j(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -94,8 +94,8 @@ function x(e) {
     let { analyticsLocations: P } = (0, u.ZP)(o.Z.CLIPS_GALLERY),
         [k, I] = r.useState(new Set()),
         { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, b.n)(),
-        { onShareClick: Z } = (0, p.Z)(t),
-        D = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
+        { onShareClick: D } = (0, p.Z)(t),
+        Z = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
         L = (0, y.f)((e) => e.selectedGameId),
         H = r.useMemo(() => {
             var e;
@@ -135,7 +135,7 @@ function x(e) {
                     return (n) =>
                         (0, l.jsx)(
                             t,
-                            j(g({}, n), {
+                            g(j({}, n), {
                                 clips: e,
                                 onAfterDelete: () => {
                                     V(), n.onClose();
@@ -148,8 +148,8 @@ function x(e) {
         }, [M, k, V]),
         z = r.useCallback(async () => {
             let e = M.filter((e) => k.has(e.id));
-            await Z({ clips: e }), V();
-        }, [M, k, Z, V]),
+            await D({ clips: e }), V();
+        }, [M, k, D, V]),
         B = r.useMemo(
             () => ({
                 selectedClipIds: k,
@@ -165,7 +165,7 @@ function x(e) {
             value: B,
             children: (0, l.jsx)(
                 s.A,
-                j(g({ onClose: x }, w), {
+                g(j({ onClose: x }, w), {
                     children: (0, l.jsxs)("div", {
                         className: v.modalContainer,
                         children: [
@@ -200,7 +200,7 @@ function x(e) {
                                                                         size: "sm",
                                                                         variant: "icon-only",
                                                                         "aria-label": h.intl.string(h.t.RDE0Sc),
-                                                                        loading: D,
+                                                                        loading: Z,
                                                                     }),
                                                                 }),
                                                                 (0, l.jsx)(a.u, {

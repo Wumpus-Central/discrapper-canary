@@ -1,6 +1,6 @@
 n.d(t, { Z: () => L }), n(997841);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -82,9 +82,9 @@ function L(e) {
     var t;
     let { application: a, context: P, className: w, sectionName: L } = e,
         M = i.useRef(null),
-        j = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
-        k = (0, T.L1)(a),
-        U = (0, _.Eb)(k),
+        k = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
+        j = (0, T.L1)(a),
+        U = (0, _.Eb)(j),
         G = (0, d.R)(a.id),
         B = (0, s.e7)([g.Z], () => {
             var e;
@@ -114,13 +114,13 @@ function L(e) {
                               applicationId: a.id,
                               referrerId: null == F ? void 0 : F.id,
                           })
-                        : (0, f.J)(D({ id: a.id }, k));
+                        : (0, f.J)(D({ id: a.id }, j));
                     (0, y.JG)(e, () =>
                         (0, l.showToast)((0, l.createToast)(N.intl.string(N.t["L/PwZf"]), l.ToastType.SUCCESS)),
                     ),
                         b.default.track(C.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: a.id,
-                            source: j,
+                            source: k,
                         });
                 },
                 className: o()(R.clickable, w),
@@ -168,10 +168,10 @@ function L(e) {
                                               id: "add-app",
                                               label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
-                                                  null == k.customInstallUrl &&
+                                                  null == j.customInstallUrl &&
                                                       (0, c.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
                                                       (0, v.L)(
-                                                          x(D({}, k), {
+                                                          x(D({}, j), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&

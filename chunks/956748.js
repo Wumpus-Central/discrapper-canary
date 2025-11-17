@@ -1,18 +1,18 @@
 n.d(t, { G: () => c });
-var a = n(951288),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var a = n(54381),
+    l = n(120356),
+    r = n.n(l),
+    i = n(481060),
     s = n(981631),
     o = n(492938);
 let c = (e) => {
-    let { showStatus: t, width: n, opacity: i, size: c = "default" } = e,
-        d = "small" === c ? l.EFr.SIZE_24 : l.EFr.SIZE_32;
+    let { showStatus: t, width: n, opacity: l, size: c = "default" } = e,
+        d = "small" === c ? i.EFr.SIZE_24 : i.EFr.SIZE_32;
     return (0, a.jsxs)("div", {
         className: r()(o.nameplatePlaceholderUserRow, { [o.smallRow]: "small" === c }),
-        style: { opacity: i },
+        style: { opacity: l },
         children: [
-            (0, a.jsx)(l.qEK, {
+            (0, a.jsx)(i.qEK, {
                 src: null,
                 size: d,
                 status: t ? s.Skl.ONLINE : void 0,

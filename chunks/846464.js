@@ -1,5 +1,5 @@
-n.d(t, { q: () => j });
-var r = n(951288),
+n.d(t, { q: () => x });
+var r = n(54381),
     l = n(120356),
     a = n.n(l),
     i = n(481060),
@@ -15,22 +15,22 @@ var r = n(951288),
     b = n(48175),
     g = n(474936),
     v = n(388032),
-    x = n(360026);
-function j(e) {
+    P = n(360026);
+function x(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
         {
             setSelectedSkuId: a,
             activeSubscription: i,
             startedPaymentFlowWithPaymentSourcesRef: c,
             setSelectedPlanId: v,
-            priceOptions: x,
-            defaultPlanId: j,
+            priceOptions: P,
+            defaultPlanId: x,
         } = (0, m.JL)(),
-        { isGift: P, claimableRewards: S } = (0, p.wD)(),
-        _ = P && null != S && S.length > 0,
+        { isGift: j, claimableRewards: S } = (0, p.wD)(),
+        _ = j && null != S && S.length > 0,
         O = (0, d.N)(l),
-        C = (0, o.Nx)(),
-        w = (0, s.Z)({ location: "PremiumPaymentSelect" });
+        w = (0, o.Nx)(),
+        C = (0, s.Z)({ location: "PremiumPaymentSelect" });
     return (0, r.jsx)(y, {
         selectSku: (e) =>
             (function (e) {
@@ -67,18 +67,18 @@ function j(e) {
                 newSkuId: e,
                 setSelectedSkuId: a,
                 handleStepChange: t,
-                isGift: P,
+                isGift: j,
                 userTrialOffer: O,
                 startedPaymentFlowWithPaymentSources: c.current,
                 setSelectedPlanId: v,
-                defaultPlanId: j,
+                defaultPlanId: x,
             }),
         onClose: n,
-        isGift: P,
-        inOfferExperience: C,
-        priceOptions: x,
+        isGift: j,
+        inOfferExperience: w,
+        priceOptions: P,
         showPromotionalGiftBanner: _,
-        enablePremiumBrandRefresh: w,
+        enablePremiumBrandRefresh: C,
     });
 }
 function y(e) {
@@ -104,7 +104,7 @@ function y(e) {
         children: [
             (0, r.jsx)(i.xBx, {
                 "data-migration-pending": !0,
-                className: a()(x.skuSelectModalHeader, { [x.premiumBrandRefreshHeader]: p }),
+                className: a()(P.skuSelectModalHeader, { [P.premiumBrandRefreshHeader]: p }),
                 separator: !1,
                 children: (0, r.jsxs)(i.Kqy, {
                     direction: "horizontal",
@@ -113,8 +113,8 @@ function y(e) {
                         m,
                         (0, r.jsx)(i.olH, {
                             "data-migration-pending": !0,
-                            className: x.close,
-                            innerClassName: x.closeInner,
+                            className: P.close,
+                            innerClassName: P.closeInner,
                             onClick: n,
                         }),
                     ],
@@ -122,10 +122,10 @@ function y(e) {
             }),
             (0, r.jsx)(i.hzk, {
                 "data-migration-pending": !0,
-                className: a()(x.skuSelectModalContent, {
-                    [x.modalSize]: !p,
-                    [x.modalPadding]: o && !p,
-                    [x.premiumBrandRefreshContent]: p,
+                className: a()(P.skuSelectModalContent, {
+                    [P.modalSize]: !p,
+                    [P.modalPadding]: o && !p,
+                    [P.premiumBrandRefreshContent]: p,
                 }),
                 children: (0, r.jsx)(c.ZP, {
                     onSelectSku: (e) => t((0, u.Wz)(e)),

@@ -4,8 +4,8 @@ n.d(t, {
     yn: () => v,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(924826),
@@ -136,8 +136,8 @@ function S(e) {
             [P],
         ),
         [L] = i.useState(!0),
-        [M, j] = i.useState(null),
-        k = i.useId(),
+        [M, k] = i.useState(null),
+        j = i.useId(),
         U = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = document.querySelector("[".concat(b, '="').concat(M, '"]')),
@@ -172,7 +172,7 @@ function S(e) {
             [],
         ),
         Y = i.useCallback((e, t) => {
-            j(t);
+            k(t);
             let n = document.querySelector(e),
                 r = U.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -196,8 +196,8 @@ function S(e) {
                     role: "combobox",
                     "aria-label": O,
                     "aria-expanded": L,
-                    "aria-controls": L ? k : void 0,
-                    "aria-owns": k,
+                    "aria-controls": L ? j : void 0,
+                    "aria-owns": j,
                     "aria-haspopup": "listbox",
                     className: o()(f.combobox, h),
                     children: [
@@ -210,7 +210,7 @@ function S(e) {
                                 query: D,
                                 onChange: x,
                                 onKeyDown: i,
-                                onBlur: () => j(null),
+                                onBlur: () => k(null),
                                 onClear: () => x(""),
                                 inputProps: {
                                     "aria-multiline": !1,
@@ -248,7 +248,7 @@ function S(e) {
                                               m(p({}, s), {
                                                   style: { maxHeight: A * (y + 6) },
                                                   "aria-multiselectable": v,
-                                                  id: k,
+                                                  id: j,
                                                   ref: U,
                                                   className: o()(f.list, f.scroller, E),
                                                   sections: [G.length],

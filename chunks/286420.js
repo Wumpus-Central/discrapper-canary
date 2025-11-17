@@ -1,14 +1,14 @@
 n.d(t, { Z: () => c });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(481060),
     l = n(100527),
-    o = n(906732),
-    s = n(156582),
+    s = n(906732),
+    o = n(156582),
     a = n(656943);
 function c(e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, o.ZP)(l.Z.GO_LIVE_MODAL_V2);
+        { analyticsLocations: n } = (0, s.ZP)(l.Z.GO_LIVE_MODAL_V2);
     return (0, r.jsx)(i.sY7, {
         options: [
             {
@@ -26,7 +26,7 @@ function c(e) {
         look: "pill",
         onChange: function (e) {
             "hd" === e.value &&
-                (0, s.E)({
+                (0, o.E)({
                     analyticsLocation: null == n ? void 0 : n[0],
                     onClose: t,
                 });

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(905423),
     a = n(430824),
@@ -12,8 +12,8 @@ function p(e) {
     let { guildId: t } = e,
         n = i.useMemo(() => (0, c.Mg)(t), [t]),
         p = (0, l.e7)([a.Z], () => a.Z.getGuild(t)),
-        h = (0, l.e7)([s.Z], () => s.Z.isFocused()),
-        f =
+        f = (0, l.e7)([s.Z], () => s.Z.isFocused()),
+        h =
             t ===
             (0, o.Z)((e) => {
                 let { guildId: t } = e;
@@ -25,8 +25,8 @@ function p(e) {
         : (0, r.jsx)(d.Z, {
               guildNode: n,
               guild: p,
-              animatable: h,
-              selected: f,
+              animatable: f,
+              selected: h,
               draggable: !1,
               mediaState: g,
           });

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(91192),
@@ -10,8 +10,8 @@ var i = n(120356),
     u = n(326255),
     d = n(956221),
     p = n(771173),
-    h = n(43267),
-    f = n(933557),
+    f = n(43267),
+    h = n(933557),
     g = n(471445),
     m = n(377171),
     b = n(313201),
@@ -117,7 +117,7 @@ function N(e) {
 function Z(e) {
     let { channel: t, gotoChannel: n } = e,
         i = (0, a.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
-        l = null == i ? (0, h.x)(t) : i.getAvatarURL(void 0, 40);
+        l = null == i ? (0, f.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(s.P3F, {
         onClick: n,
         tabIndex: -1,
@@ -150,8 +150,8 @@ function T(e) {
         c = (0, a.e7)([O.Z], () => O.Z.getChannel(t.parent_id)),
         u = (0, a.e7)([x.ZP], () => x.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
-        p = (0, f.ZP)(t, !1),
-        h =
+        p = (0, h.ZP)(t, !1),
+        f =
             null == c
                 ? null == o
                     ? void 0
@@ -164,7 +164,7 @@ function T(e) {
               : (0, r.jsx)(s.P3F, {
                     className: l()(S.subtext, S.guildName),
                     onClick: n,
-                    children: h,
+                    children: f,
                 });
     return (0, r.jsxs)("div", {
         className: S.channelNameSection,
@@ -227,20 +227,20 @@ function A(e) {
             };
         }),
         { voiceActivityStatusEnabled: s } = (0, c.U)({ location: "RecentsChannelHeader" }),
-        { voiceChannel: h } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
-        f = s ? h : void 0;
+        { voiceChannel: f } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
+        h = s ? f : void 0;
     return (0, u.Z)({
         activities: l,
         status: i,
         applicationStream: o,
-        voiceChannel: f,
+        voiceChannel: h,
     })
         ? (0, r.jsx)(p.Z, {
               location: "RecentsChannelHeader",
               user: n,
               activities: l,
               applicationStream: o,
-              voiceChannel: f,
+              voiceChannel: h,
               hideTooltip: !0,
           })
         : null;

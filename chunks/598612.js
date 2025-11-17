@@ -1,9 +1,9 @@
-n.d(t, { Y: () => i });
-var r = n(951288),
+n.d(t, { Y: () => o });
+var r = n(54381),
     l = n(793030),
-    o = n(836519);
-function i(e) {
-    let { title: t, subtitle: n, badge: i, type: a = "primary" } = e;
+    i = n(836519);
+function o(e) {
+    let { title: t, subtitle: n, badge: o, type: a = "primary" } = e;
     return "secondary" === a
         ? (0, r.jsx)(l.Kqy, {
               gap: 8,
@@ -25,14 +25,14 @@ function i(e) {
               },
               children: [
                   (0, r.jsxs)("div", {
-                      className: o.headerTitle,
+                      className: i.headerTitle,
                       children: [
                           (0, r.jsx)(l.X6q, {
                               variant: "heading-lg/semibold",
                               color: "header-primary",
                               children: t,
                           }),
-                          null != i && i,
+                          null != o && o,
                       ],
                   }),
                   null != n &&

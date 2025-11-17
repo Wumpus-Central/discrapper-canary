@@ -1,6 +1,6 @@
 n.d(t, { Z: () => j });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     l = n.n(a),
     o = n(793030),
@@ -15,8 +15,8 @@ var r = n(951288),
     b = n(840367),
     h = n(34335),
     y = n(388032),
-    v = n(415734);
-function O(e) {
+    O = n(415734);
+function v(e) {
     let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: o } = e,
         c = i.useRef(null),
         u = i.useRef(null),
@@ -29,7 +29,7 @@ function O(e) {
             var e;
             return null != (e = n.id) ? e : (0, s.hQ)();
         }, [n.id]),
-        { isDragging: O, dragSourcePosition: j } = (0, p.Y9)({
+        { isDragging: v, dragSourcePosition: j } = (0, p.Y9)({
             dragRef: c,
             dropRef: u,
             index: t,
@@ -45,17 +45,17 @@ function O(e) {
         P = x && t > j;
     return (0, r.jsxs)("div", {
         ref: u,
-        className: l()(v.dragAndDropTarget, {
-            [v.dropIndicatorBefore]: _,
-            [v.dropIndicatorAfter]: P,
-            [v.isDragging]: O,
+        className: l()(O.dragAndDropTarget, {
+            [O.dropIndicatorBefore]: _,
+            [O.dropIndicatorAfter]: P,
+            [O.isDragging]: v,
         }),
         "aria-label": y.intl.formatToPlainString(y.t.YLczh4, { positionNumber: t + 1 }),
         children: [
             (0, r.jsx)(m.Z, {
                 buttonRef: c,
                 widget: n,
-                className: v.dragHandleButton,
+                className: O.dragHandleButton,
                 additionalMenuItems: a,
             }),
             o,
@@ -86,7 +86,7 @@ function j(e) {
         S = P && null != p && !a,
         E = () =>
             (0, r.jsxs)("div", {
-                className: l()(v.container, f),
+                className: l()(O.container, f),
                 children: [
                     (0, r.jsx)(b.Z, {
                         userId: t,
@@ -106,7 +106,7 @@ function j(e) {
         ref: w,
         "aria-labelledby": _,
         children: S
-            ? (0, r.jsx)(O, {
+            ? (0, r.jsx)(v, {
                   index: null != p ? p : 0,
                   widget: n,
                   additionalManageWidgetMenuItems: x,

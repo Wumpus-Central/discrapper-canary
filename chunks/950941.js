@@ -1,8 +1,8 @@
 n.d(t, { W: () => f });
-var r = n(951288),
+var r = n(54381),
     l = n(481060),
-    o = n(28682),
-    i = n(388032);
+    i = n(28682),
+    o = n(388032);
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,10 +52,10 @@ function s(e) {
     return 0 === n ? null : (0, r.jsx)(l.mAB, { count: n });
 }
 function u(e) {
-    let { getDismissibleContentTypes: t, badgeComponent: n, visibleContent: o, isSelected: a } = e,
+    let { getDismissibleContentTypes: t, badgeComponent: n, visibleContent: i, isSelected: a } = e,
         c = null == t ? void 0 : t(),
-        s = null != o && c.includes(o) && !a,
-        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(l.IGR, { text: i.intl.string(i.t.y2b7CA) });
+        s = null != i && c.includes(i) && !a,
+        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(l.IGR, { text: o.intl.string(o.t.y2b7CA) });
     return s ? u : null;
 }
 function d(e) {
@@ -66,9 +66,9 @@ function f(e) {
     let { trailing: t, visibleContent: n, isSelected: l } = e;
     if (null == t) return null;
     switch (t.type) {
-        case o.PU.BADGE_COUNT:
+        case i.PU.BADGE_COUNT:
             return (0, r.jsx)(s, a({}, t));
-        case o.PU.BADGE_NEW:
+        case i.PU.BADGE_NEW:
             return (0, r.jsx)(
                 u,
                 c(a({}, t), {
@@ -76,7 +76,7 @@ function f(e) {
                     isSelected: l,
                 }),
             );
-        case o.PU.STRONGLY_DISCOURAGED_CUSTOM:
+        case i.PU.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(
                 d,
                 c(a({}, t), {

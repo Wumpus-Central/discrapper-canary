@@ -1,6 +1,6 @@
 n.d(t, { Z: () => V }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(871499),
     _ = n(402113),
     y = n(800965),
-    x = n(592125),
-    O = n(271383),
-    j = n(944486),
+    O = n(592125),
+    j = n(271383),
+    x = n(944486),
     v = n(594174),
     C = n(585483),
     I = n(51144),
@@ -49,7 +49,7 @@ function V(e) {
         Y = (0, N.Z)(),
         q = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(z), [z]),
         K = (0, T.p)(z),
-        Q = (0, s.e7)([x.Z], () => x.Z.getChannel(K)),
+        Q = (0, s.e7)([O.Z], () => O.Z.getChannel(K)),
         X = (0, Z.gb)(q),
         J = (0, Z.uF)(X),
         $ = i.useCallback(() => {
@@ -90,13 +90,13 @@ function V(e) {
             : ((e = Math.min(es.height * k.I0)) > es.width && (t = (e = es.width) / k.I0), (ed = (es.width - e) / 2));
     }
     let eh = J.get(null != (l = null == Y ? void 0 : Y.id) ? l : ""),
-        ef = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
-        eg = (0, s.Wu)([O.ZP], () => {
+        ef = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
+        eg = (0, s.Wu)([j.ZP], () => {
             var e;
             return null == Q
                 ? []
                 : Array.from(null != (e = null == eh ? void 0 : eh.embeddedActivity.userIds) ? e : []).map((e) =>
-                      O.ZP.getMember(Q.guild_id, e),
+                      j.ZP.getMember(Q.guild_id, e),
                   );
         }, [eh, Q]),
         em = i.useMemo(() => {
@@ -182,7 +182,7 @@ function V(e) {
         (ey = Array.from(eh.embeddedActivity.userIds)
             .map((e) => v.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let ex = (e) => {
+    let eO = (e) => {
         var t;
         if (null == e || void 0 === e || e === w.ag) return null;
         let n = em.get(e.id),
@@ -252,7 +252,7 @@ function V(e) {
                                               users: ey,
                                               size: F,
                                               max: 6,
-                                              renderUser: ex,
+                                              renderUser: eO,
                                           }),
                                           (0, r.jsxs)("div", {
                                               className: H.footerButtons,

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -37,8 +37,8 @@ function T(e) {
             pendingNickname: x,
             pendingGlobalName: L,
             pendingThemeColors: M,
-            pendingProfileEffect: j,
-            pendingLegacyUsernameDisabled: k,
+            pendingProfileEffect: k,
+            pendingLegacyUsernameDisabled: j,
             pendingDisplayNameStyles: U,
             avatarClassName: G,
             containerClassName: B,
@@ -69,7 +69,7 @@ function T(e) {
             showPending: !0,
         }),
         et = (0, h.Ys)({
-            pendingValue: j,
+            pendingValue: k,
             userValue: null == X || null == (t = X._userProfile) ? void 0 : t.profileEffect,
             guildValue: null == X || null == (n = X._guildMemberProfile) ? void 0 : n.profileEffect,
             guildId: null == T ? void 0 : T.id,
@@ -133,7 +133,7 @@ function T(e) {
                     pendingGlobalName: L,
                     pendingBio: R,
                     pendingPronouns: P,
-                    pendingLegacyUsernameDisabled: k,
+                    pendingLegacyUsernameDisabled: j,
                     pendingDisplayNameStyles: U,
                     isTryItOut: Z,
                     hideBioSection: H,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => eh }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(574583),
+var r = n(54381),
+    i = n(473749),
+    a = n(55160),
     o = n(442837),
     s = n(477690),
     l = n(481060),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(1450),
     L = n(491173),
     M = n(515005),
-    j = n(981631),
-    k = n(957825),
+    k = n(981631),
+    j = n(957825),
     U = n(388032),
     G = n(473049),
     B = n(239840);
@@ -148,7 +148,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { sticker: s } = e;
                     if (null == s) return;
                     let l = H(F({}, a.location), {
-                        object: "" === o ? j.qAy.STICKER_PICKER_VIEW_ALL : j.qAy.STICKER_SEARCH_VIEW_ALL,
+                        object: "" === o ? k.qAy.STICKER_PICKER_VIEW_ALL : k.qAy.STICKER_SEARCH_VIEW_ALL,
                     });
                     if (null != s && !(0, A.kl)(s, r, n)) {
                         let e = (0, D.J8)(s);
@@ -161,7 +161,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             ? (0, C.hW)(s.id)
                             : ((0, N.cQ)({
                                   sticker: s,
-                                  location: H(F({}, l), { object: j.qAy.STICKER }),
+                                  location: H(F({}, l), { object: k.qAy.STICKER }),
                               }),
                               (0, C.SA)(s.id)));
                     t(e);
@@ -236,9 +236,9 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         r = new Set(t),
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
-                        I.default.track(j.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        I.default.track(k.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == A ? void 0 : A.location,
-                            tab: k.X1.STICKER,
+                            tab: j.X1.STICKER,
                             collapsed: !i,
                             sticker_pack_id: n ? e : null,
                         }),
@@ -420,8 +420,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             x = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
             {
                 renderRow: M,
-                renderSection: j,
-                renderSectionFooter: k,
+                renderSection: k,
+                renderSectionFooter: j,
                 sectionFooterHeight: Z,
                 renderSectionHeader: F,
                 sectionHeaderHeight: V,
@@ -515,9 +515,9 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   listPadding: null != l ? el : es,
                                   onScroll: H,
                                   renderRow: M,
-                                  renderSection: null == l ? j : void 0,
+                                  renderSection: null == l ? k : void 0,
                                   renderSectionHeader: F,
-                                  renderSectionFooter: k,
+                                  renderSectionFooter: j,
                                   rowCount: O,
                                   rowCountBySection: v,
                                   rowHeight: s > Y ? ei : ea,

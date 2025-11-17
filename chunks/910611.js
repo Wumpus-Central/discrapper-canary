@@ -1,11 +1,11 @@
 n.d(t, {
     TS: () => H,
-    ud: () => D,
+    ud: () => k,
     v0: () => U,
 }),
     n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -115,7 +115,7 @@ function L(e) {
         a,
     );
 }
-function D(e) {
+function k(e) {
     let {
             channel: t,
             channelName: n,
@@ -331,7 +331,7 @@ function D(e) {
             return null;
     }
 }
-let k = (e) => {
+let D = (e) => {
     var t, n, l;
     let { channel: a } = e,
         s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
@@ -361,7 +361,7 @@ function U(e, t) {
     switch (e.type) {
         case A.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(k, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
+                children: [(0, i.jsx)(D, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
             });
         case A.d4z.GUILD_ANNOUNCEMENT:
         case A.d4z.GUILD_TEXT:

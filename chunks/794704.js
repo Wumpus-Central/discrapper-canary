@@ -1,6 +1,6 @@
 n.d(t, { Z: () => eX }), n(953529), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(348327),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(837268),
     L = n(32300),
     M = n(809357),
-    j = n(371651),
-    k = n(829907),
+    k = n(371651),
+    j = n(829907),
     U = n(624864),
     G = n(610394),
     B = n(957148),
@@ -299,13 +299,13 @@ let eL = new Set([
     eM = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
-function ej(e) {
+function ek(e) {
     var t, n, a;
     let { runningGame: o, runningGameApplication: s } = e,
         c = null == o ? void 0 : o.pid,
         u = (0, _.e7)(
-            [j.default],
-            () => (null == o || null == c ? null : j.default.getTrackedGameByPid(c)),
+            [k.default],
+            () => (null == o || null == c ? null : k.default.getTrackedGameByPid(c)),
             [o, c],
             l(),
         ),
@@ -333,7 +333,7 @@ function ej(e) {
     }, [f, d]);
     let C = !(0, el.supportsLegacy)(),
         N = !(0, el.supportsOutOfProcess)(),
-        { legacyEnabled: w, oopEnabled: L } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { legacyEnabled: w, oopEnabled: L } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
@@ -360,7 +360,7 @@ function ej(e) {
                     null != (i = o.id) ? i : null,
                 );
         },
-        k = (e, t) => {
+        j = (e, t) => {
             let n = !t && e,
                 r = !L && g,
                 i = !w && y,
@@ -624,7 +624,7 @@ function ej(e) {
                       checked: (g && L) || (y && w),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, k(e, (g && L) || (y && w)));
+                          U(e, j(e, (g && L) || (y && w)));
                       },
                   }),
               }),
@@ -676,7 +676,7 @@ function ej(e) {
               ],
           });
 }
-function ek(e) {
+function ej(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, _.e7)([I.Z], () => (null != n ? n : I.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
@@ -712,7 +712,7 @@ function eU(e) {
     };
     return (0, r.jsx)(ew, {
         title: t.name,
-        icon: (0, r.jsx)(ek, {
+        icon: (0, r.jsx)(ej, {
             game: u,
             gameApplication: n,
         }),
@@ -731,7 +731,7 @@ function eU(e) {
 }
 function eG() {
     let [e, t] = i.useState(!1),
-        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
         s = (0, T.Z)(o.map((e) => e.id)),
         l = !(0, el.supportsLegacy)(),
@@ -821,7 +821,7 @@ function eG() {
 }
 function eB() {
     let [e, t] = i.useState(!1),
-        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = !(0, el.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
         l = (0, T.Z)(s.map((e) => e.id)),
@@ -1309,7 +1309,7 @@ function eq(e) {
     let { runningGame: t, runningGameApplication: n } = e,
         a = null == n ? void 0 : n.id,
         o = (0, _.e7)([U.Z], () => U.Z.isLimitedInteractionOverrideEnabled(a), [a]),
-        s = i.useMemo(() => null != t && (0, k.H8)(t.pid), [t]),
+        s = i.useMemo(() => null != t && (0, j.H8)(t.pid), [t]),
         l = (0, M.Z)({ location: "overlay_user_settings" }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, _.cj)([er.default], () => ({
             disableClickableRegions: er.default.disableClickableRegions,
@@ -1402,7 +1402,7 @@ function eX(e) {
                           (0, r.jsxs)("div", {
                               className: eh.overlayEnabledSettingsContainer,
                               children: [
-                                  (0, r.jsx)(ej, {
+                                  (0, r.jsx)(ek, {
                                       runningGame: i,
                                       runningGameApplication: a,
                                   }),

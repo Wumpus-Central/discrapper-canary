@@ -1,8 +1,8 @@
 n.d(t, { P: () => v }), n(539854), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    o = n.n(i),
     a = n(91192),
     c = n(873546),
     s = n(481060),
@@ -15,8 +15,8 @@ var r = n(951288),
     j = n(388032),
     m = n(845435);
 function v(e) {
-    let { root: t, header: n, footer: o, onClose: y, emptyState: v } = e,
-        g = p.Z.useField("showNavigationMobile"),
+    let { root: t, header: n, footer: i, onClose: y, emptyState: v } = e,
+        x = p.Z.useField("showNavigationMobile"),
         h = l.useRef(null),
         O = l.useMemo(() => {
             let e = [];
@@ -60,9 +60,9 @@ function v(e) {
                 children: (t) => {
                     let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
-                        className: i()(m.sidebar, e, {
+                        className: o()(m.sidebar, e, {
                             [m.mobile]: c.tq,
-                            [m.mobileNavigationOpen]: g,
+                            [m.mobileNavigationOpen]: x,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -82,7 +82,7 @@ function v(e) {
                                     (0, r.jsx)("div", {
                                         children: P.map((e) =>
                                             (0, r.jsx)(
-                                                x,
+                                                g,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -102,7 +102,7 @@ function v(e) {
                                     children: (e) => {
                                         var t,
                                             n,
-                                            { ref: i } = e,
+                                            { ref: o } = e,
                                             a = (function (e, t) {
                                                 if (null == e) return {};
                                                 var n,
@@ -112,15 +112,15 @@ function v(e) {
                                                         var n,
                                                             r,
                                                             l = {},
-                                                            o = Object.keys(e);
-                                                        for (r = 0; r < o.length; r++)
-                                                            (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                                            i = Object.keys(e);
+                                                        for (r = 0; r < i.length; r++)
+                                                            (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                                                         return l;
                                                     })(e, t);
                                                 if (Object.getOwnPropertySymbols) {
-                                                    var o = Object.getOwnPropertySymbols(e);
-                                                    for (r = 0; r < o.length; r++)
-                                                        (n = o[r]),
+                                                    var i = Object.getOwnPropertySymbols(e);
+                                                    for (r = 0; r < i.length; r++)
+                                                        (n = i[r]),
                                                             !(t.indexOf(n) >= 0) &&
                                                                 Object.prototype.propertyIsEnumerable.call(e, n) &&
                                                                 (l[n] = e[n]);
@@ -158,7 +158,7 @@ function v(e) {
                                                     ref: (e) => {
                                                         var t;
                                                         (h.current = e),
-                                                            (i.current =
+                                                            (o.current =
                                                                 null != (t = null == e ? void 0 : e.getScrollerNode())
                                                                     ? t
                                                                     : null);
@@ -175,7 +175,7 @@ function v(e) {
                                                             className: m.nav,
                                                             children: S.map((e) =>
                                                                 (0, r.jsx)(
-                                                                    x,
+                                                                    g,
                                                                     {
                                                                         section: e,
                                                                         visibleContent: l,
@@ -184,7 +184,7 @@ function v(e) {
                                                                 ),
                                                             ),
                                                         }),
-                                                        null != o && (0, r.jsx)(o, {}),
+                                                        null != i && (0, r.jsx)(i, {}),
                                                     ],
                                                 }),
                                             Object.getOwnPropertyDescriptors
@@ -214,22 +214,22 @@ function v(e) {
             }),
     });
 }
-function x(e) {
+function g(e) {
     var t;
-    let { section: n, visibleContent: l, hoisted: o = !1 } = e,
-        i = null == (t = n.useLabel) ? void 0 : t.call(n);
+    let { section: n, visibleContent: l, hoisted: i = !1 } = e,
+        o = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
         className: m.section,
-        "aria-label": i,
+        "aria-label": o,
         children: [
-            null != i &&
+            null != o &&
                 (0, r.jsx)("div", {
                     className: m.sectionLabel,
                     children: (0, r.jsx)(s.Heading, {
                         className: m.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",
-                        children: i,
+                        children: o,
                     }),
                 }),
             n.layout.map((e) =>
@@ -238,7 +238,7 @@ function x(e) {
                     {
                         node: e,
                         visibleContent: l,
-                        hoisted: o,
+                        hoisted: i,
                     },
                     e.key,
                 ),

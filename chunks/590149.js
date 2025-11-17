@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(481060),
     o = n(259580),
     c = n(422665);
@@ -19,26 +19,26 @@ function d(e) {
             onOpen: x,
             maxHeight: g,
         } = e,
-        [f, b] = i.useState(h),
-        v = i.useRef(null),
-        [j, _] = i.useState(null),
+        [f, b] = l.useState(h),
+        v = l.useRef(null),
+        [j, _] = l.useState(null),
         y = void 0 !== m,
         C = y ? m : f;
-    i.useEffect(() => {
+    l.useEffect(() => {
         C && null != v.current && _(v.current.scrollHeight);
     }, [C, d]);
-    let S = i.useCallback(() => {
+    let S = l.useCallback(() => {
             let e = !C;
             y || b(e), null == p || p(e), e && null != x && x();
         }, [C, y, p, x]),
-        E = i.useMemo(() => {
+        E = l.useMemo(() => {
             if (C) {
                 if (null != g) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
                 if (null != j) return { maxHeight: "".concat(j, "px") };
             }
         }, [g, C, j]);
     return (0, a.jsxs)("div", {
-        className: l()(c.accordionContainer, u, { [c.opened]: C }),
+        className: i()(c.accordionContainer, u, { [c.opened]: C }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -67,7 +67,7 @@ function d(e) {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: l()(c.caret, { [c.opened]: C }),
+                        className: i()(c.caret, { [c.opened]: C }),
                         children: (0, a.jsx)(o.Z, {
                             width: 18,
                             height: 18,
@@ -78,7 +78,7 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: l()(c.content, { [c.opened]: C }),
+                className: i()(c.content, { [c.opened]: C }),
                 style: E,
                 children: d,
             }),

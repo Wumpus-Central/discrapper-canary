@@ -1,21 +1,21 @@
-e.d(n, { Z: () => d });
-var i = e(951288);
-e(647438);
-var a = e(442837),
-    l = e(481060),
-    r = e(569471),
-    s = e(346479),
-    o = e(388032);
-function d(t, n) {
-    return (0, a.e7)([r.Z], () => r.Z.hasJoined(t.id))
-        ? (0, i.jsx)(l.sNh, {
+n.d(t, { Z: () => _ });
+var i = n(54381);
+n(473749);
+var l = n(442837),
+    r = n(481060),
+    a = n(569471),
+    o = n(346479),
+    u = n(388032);
+function _(e, t) {
+    return (0, l.e7)([a.Z], () => a.Z.hasJoined(e.id))
+        ? (0, i.jsx)(r.sNh, {
               id: "leave-thread",
-              label: t.isForumPost() ? o.intl.string(o.t["2LsZdT"]) : o.intl.string(o.t["fa/84m"]),
-              action: () => s.Z.leaveThread(t, n),
+              label: e.isForumPost() ? u.intl.string(u.t["2LsZdT"]) : u.intl.string(u.t["fa/84m"]),
+              action: () => o.Z.leaveThread(e, t),
           })
-        : (0, i.jsx)(l.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: "join-thread",
-              label: t.isForumPost() ? o.intl.string(o.t.ihLPiO) : o.intl.string(o.t["10kukS"]),
-              action: () => s.Z.joinThread(t, n),
+              label: e.isForumPost() ? u.intl.string(u.t.ihLPiO) : u.intl.string(u.t["10kukS"]),
+              action: () => o.Z.joinThread(e, t),
           });
 }

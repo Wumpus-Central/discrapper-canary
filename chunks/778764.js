@@ -5,8 +5,8 @@ n.d(t, {
     n(388685),
     n(49124),
     n(457542);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(849055),
     o = n(442837),
     s = n(755721),
@@ -95,7 +95,7 @@ function P(e) {
         [P, D] = i.useState(m),
         [w, x] = i.useState(""),
         [L, M] = i.useState(null),
-        j = async () => {
+        k = async () => {
             let e;
             D(v.x.REGISTER);
             let t =
@@ -173,7 +173,7 @@ function P(e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: T.intl.string(T.t.oibaQa),
-                                    onClick: j,
+                                    onClick: k,
                                 }),
                             }),
                         ],

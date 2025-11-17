@@ -1,6 +1,6 @@
 n.d(e, { Z: () => _ });
-var i = n(951288),
-    l = n(647438),
+var i = n(54381),
+    l = n(473749),
     u = n(512722),
     r = n.n(u),
     s = n(442837),
@@ -9,16 +9,16 @@ var i = n(951288),
     c = n(825209),
     E = n(924557),
     S = n(509613),
-    d = n(556296),
-    T = n(313789),
+    T = n(556296),
+    d = n(313789),
     I = n(981631),
     O = n(388032),
     g = n(431220);
-let _ = (0, S.ON)(T.n.CLIPS_KEYBIND, {
+let _ = (0, S.ON)(d.n.CLIPS_KEYBIND, {
     useSearchTerms: () => [O.intl.string(O.t.pf54EU), O.intl.string(O.t["QyB/jK"])],
-    usePredicate: E.Go,
+    usePredicate: E.w9,
     render: () => {
-        let t = (0, s.e7)([d.ZP], () => d.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0));
+        let t = (0, s.e7)([T.ZP], () => T.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0));
         r()(null != t, "Save clip keybind unset");
         let e = l.useCallback(
             (e) => {

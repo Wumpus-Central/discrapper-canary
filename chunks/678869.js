@@ -1,6 +1,6 @@
 n.d(t, { Z: () => L }), n(804061), n(704826), n(35282), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(423875),
     o = n(442837),
     s = n(902704),
@@ -89,7 +89,7 @@ function L(e) {
     let n,
         m,
         T,
-        { channel: R, entry: L, closePopout: M, onReaction: j, onVoiceChannelPreview: k } = e,
+        { channel: R, entry: L, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: L }),
         { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(L),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -194,8 +194,8 @@ function L(e) {
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: j,
-                    onVoiceChannelPreview: k,
+                    onReaction: k,
+                    onVoiceChannelPreview: j,
                     user: V,
                     channel: R,
                     generateReactionImage: z,

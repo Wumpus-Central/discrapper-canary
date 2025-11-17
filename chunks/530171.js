@@ -1,8 +1,8 @@
 n.d(t, { I: () => s });
-var r = n(951288),
+var r = n(54381),
     l = n(120356),
-    o = n.n(l),
-    i = n(657707),
+    i = n.n(l),
+    o = n(657707),
     a = n(206403),
     c = n(481446);
 function s(e) {
@@ -12,7 +12,7 @@ function s(e) {
             (0, r.jsx)(a.x, {
                 title: t,
                 description: l ? void 0 : n,
-                secondaryTrailingElement: (0, r.jsx)(i.sXD, { className: o()(c.icon, { [c.iconClosed]: !l }) }),
+                secondaryTrailingElement: (0, r.jsx)(o.sXD, { className: i()(c.icon, { [c.iconClosed]: !l }) }),
                 onClick: () => s(!l),
             }),
             l && u,

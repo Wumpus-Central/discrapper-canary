@@ -1,6 +1,6 @@
 n.d(t, { Z: () => et }), n(539854), n(388685), n(290780);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     a = n(481060),
     o = n(904245),
@@ -33,13 +33,13 @@ var i = n(951288),
     M = n(709054),
     R = n(534091),
     L = n(554838),
-    D = n(481369),
-    k = n(186877),
+    k = n(481369),
+    D = n(186877),
     U = n(294218),
     B = n(534469),
     H = n(993397),
-    V = n(511010),
-    F = n(524444),
+    F = n(511010),
+    V = n(524444),
     G = n(977391),
     z = n(921235),
     W = n(97352),
@@ -119,14 +119,14 @@ function et(e) {
         } = e,
         eh = N.default.getCurrentUser(),
         ef = () => eo.isInitialized() || et.ready,
-        em = (0, k.$)(U),
+        em = (0, D.$)(U),
         eg = et.length > 0 && (null == (t = et.first()) ? void 0 : t.isFirstMessageInForumPost(U)),
         eb = (0, s.ts)(U),
         ey = (0, l.e7)([E.Z], () => E.Z.shouldShowTopicsBar() && !ed),
         eC = (0, j.P)(U.id),
         ev = (0, _.z)(U.id, X.zr),
         e_ = (0, d.k)(U.id),
-        ex = (0, D.Z)(),
+        ex = (0, k.Z)(),
         ej = (function (e, t) {
             if (e.isDM() && null != t)
                 if (t.type === v.pj.STRANGER_DANGER)
@@ -169,7 +169,7 @@ function et(e) {
                             isBeforeGroup: null == e.content && $(el[t + 1]),
                         })
                       : (0, i.jsx)(
-                            V.Z,
+                            F.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && $(el[t + 1]),
@@ -358,7 +358,7 @@ function et(e) {
                                   color: "currentColor",
                                   children: n,
                               });
-                    r = (0, i.jsx)(F.G5, {
+                    r = (0, i.jsx)(V.G5, {
                         scrollManager: eo,
                         content: e,
                         channel: U,
@@ -400,7 +400,7 @@ function et(e) {
                                       children: n,
                                   }),
                     });
-                    r = (0, i.jsx)(F.LE, {
+                    r = (0, i.jsx)(V.LE, {
                         content: e,
                         channelId: U.id,
                     });
@@ -408,7 +408,7 @@ function et(e) {
             }
         } else
             ex.includes(q.E.NEW_MESSAGES) &&
-                (r = (0, i.jsx)(F.LE, {
+                (r = (0, i.jsx)(V.LE, {
                     content: J.intl.format(e, {
                         count: en,
                         timestamp: l,
@@ -421,13 +421,13 @@ function et(e) {
             (0, s.Lp)(U) &&
             ey &&
             ex.includes(q.E.SUMMARIES) &&
-            (r = (0, i.jsx)(F.BO, {
+            (r = (0, i.jsx)(V.BO, {
                 channel: U,
                 scrollManager: eo,
             })),
         et.error)
     )
-        h = (0, i.jsx)(F.Rp, {
+        h = (0, i.jsx)(V.Rp, {
             loading: et.loadingMore,
             onClick: () => {
                 var e;
@@ -446,10 +446,10 @@ function et(e) {
         let { jumpReturnTargetId: e } = et;
         h =
             et.loadingMore && et.jumpedToPresent
-                ? (0, i.jsx)(F.DR, { className: ep })
+                ? (0, i.jsx)(V.DR, { className: ep })
                 : null != e
-                  ? (0, i.jsx)(F.DR, {
-                        type: F.A7.REPLY,
+                  ? (0, i.jsx)(V.DR, {
+                        type: V.A7.REPLY,
                         onClick: () => {
                             o.Z.jumpToMessage({
                                 channelId: U.id,
@@ -459,7 +459,7 @@ function et(e) {
                         },
                         className: ep,
                     })
-                  : (0, i.jsx)(F.DR, {
+                  : (0, i.jsx)(V.DR, {
                         onClick: () =>
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, Y.AQB);

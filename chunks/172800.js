@@ -1,6 +1,6 @@
 n.d(t, { Z: () => L }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(780384),
@@ -106,8 +106,8 @@ let L = (e) => {
             onInspect: x,
             surrogateCodePoint: L,
             getEmojiItemProps: M,
-            getEmojiRowProps: j,
-            isScrolling: k,
+            getEmojiRowProps: k,
+            isScrolling: j,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
             allowAnimatedEmoji: B,
@@ -170,7 +170,7 @@ let L = (e) => {
                         b = w(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            k.current || U.current || x(e);
+                            j.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -203,7 +203,7 @@ let L = (e) => {
                         a = el.rowIndex === t && el.columnIndex === i,
                         o = (t) => {
                             t.stopPropagation(),
-                                k.current ||
+                                j.current ||
                                     U.current ||
                                     (N(e, {
                                         isFinalSelection: !0,
@@ -247,7 +247,7 @@ let L = (e) => {
                     if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
-                            k.current ||
+                            j.current ||
                                 U.current ||
                                 (N(e, {
                                     isFinalSelection: !0,
@@ -278,7 +278,7 @@ let L = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: o,
-                            isScrolling: k,
+                            isScrolling: j,
                             isUsingKeyboardNavigation: U,
                             surrogateCodePoint: L,
                             allowAnimatedEmoji: B,
@@ -307,7 +307,7 @@ let L = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                D(R({}, j(G)), {
+                D(R({}, k(G)), {
                     className: o()(C.emojiListRow, {
                         [C.emojiListRowLargeSize]: e_,
                         [C.emojiListRowMediumSize]: ep,

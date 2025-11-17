@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(619915),
     d = n(620662),
     p = n(841784),
-    h = n(471445),
-    f = n(430824),
+    f = n(471445),
+    h = n(430824),
     g = n(496675),
     m = n(158776),
     b = n(979651),
@@ -26,7 +26,7 @@ var r = n(951288),
     I = n(21265);
 function P(e) {
     var t, l;
-    let { channel: o, guild: h, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
+    let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
         v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -100,7 +100,7 @@ function P(e) {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
                               channel: o,
-                              onAction: f,
+                              onAction: h,
                           },
                           t,
                       );
@@ -113,7 +113,7 @@ function P(e) {
                               presenceActivity: i,
                               channel: o,
                               members: n,
-                              onAction: f,
+                              onAction: h,
                           },
                           t,
                       );
@@ -165,7 +165,7 @@ function P(e) {
                                                               }
                                                               return e;
                                                           })({}, t)),
-                                                          (i = i = { guild: h }),
+                                                          (i = i = { guild: f }),
                                                           Object.getOwnPropertyDescriptors
                                                               ? Object.defineProperties(
                                                                     n,
@@ -208,8 +208,8 @@ function N(e) {
             video: s,
             selected: n,
         }),
-        u = (0, a.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
-    return null == (0, h.KS)(t, u)
+        u = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
+    return null == (0, f.KS)(t, u)
         ? null
         : (0, r.jsxs)("div", {
               className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),

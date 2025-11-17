@@ -1,7 +1,7 @@
 n.d(t, { Z: () => ev }), n(953529), n(388685), n(539854), n(997841);
 var r,
-    i = n(951288),
-    a = n(647438),
+    i = n(54381),
+    a = n(473749),
     o = n(120356),
     s = n.n(o),
     l = n(913527),
@@ -32,8 +32,8 @@ var r,
     x = n(313789),
     L = n(342386),
     M = n(518596),
-    j = n(46141),
-    k = n(485386),
+    k = n(46141),
+    j = n(485386),
     U = n(430824),
     G = n(594174),
     B = n(853872),
@@ -227,7 +227,7 @@ function ey(e) {
         o = (0, O.hO)(r, a, { requireCurrentGuild: !1 }),
         s = (0, f.e7)([v.Z], () => v.Z.getGuildProductFetchState(a) === v.M.FETCHING),
         l = null == o ? void 0 : o.role_id,
-        c = (0, f.e7)([k.Z], () => (null != l ? k.Z.getRole(r, l) : void 0), [r, l]),
+        c = (0, f.e7)([j.Z], () => (null != l ? j.Z.getRole(r, l) : void 0), [r, l]),
         u = (0, S.Z)({
             guildId: r,
             productId: a,
@@ -406,7 +406,7 @@ class eO extends (r = a.PureComponent) {
                       })
                     : e.paymentGateway === $.gg.APPLE_PARTNER
                       ? (0, i.jsx)(X.Z, {
-                            paymentSource: new j.$z({}),
+                            paymentSource: new k.$z({}),
                             locale: t,
                             descriptionClassName: et.paymentText,
                             showLabels: !0,

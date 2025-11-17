@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(881052),
+    i = n(881052),
     s = n(972959),
     o = n(933557),
     c = n(305347),
@@ -70,8 +70,8 @@ function f(e) {
 function b(e) {
     var t;
     let { userState: n } = e,
-        { user: l, searchWorkerUser: s, guildMembers: d, guildMemberRequests: g } = n,
-        b = i.useCallback((e) => {
+        { user: i, searchWorkerUser: s, guildMembers: d, guildMemberRequests: g } = n,
+        b = l.useCallback((e) => {
             let { ok: t } = e;
             return t
                 ? (0, a.jsx)(r.owK, {
@@ -89,21 +89,21 @@ function b(e) {
             (0, a.jsxs)("div", {
                 className: x.detailsRow,
                 children: [
-                    b({ ok: null != l }),
+                    b({ ok: null != i }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/normal",
-                        children: null != l ? "User exists in UserStore" : "User does not exist in UserStore",
+                        children: null != i ? "User exists in UserStore" : "User does not exist in UserStore",
                     }),
                 ],
             }),
-            null != l &&
+            null != i &&
                 (0, a.jsx)("div", {
                     className: x.nestedDetailsList,
                     children: (0, a.jsx)("div", {
                         className: x.detailsRow,
                         children: (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
-                            children: "username: ".concat(l.username),
+                            children: "username: ".concat(i.username),
                         }),
                     }),
                 }),
@@ -158,28 +158,28 @@ function b(e) {
                                     }),
                                 Object.entries(s.nicknames).map((e) => {
                                     let [t, n] = e,
-                                        i = m.Z.getGuild(t),
-                                        l = u.Z.getChannel(t);
+                                        l = m.Z.getGuild(t),
+                                        i = u.Z.getChannel(t);
                                     return (0, a.jsxs)(
                                         "div",
                                         {
                                             className: x.detailsRow,
                                             children: [
-                                                null != i &&
+                                                null != l &&
                                                     (0, a.jsx)(c.ZP, {
-                                                        guild: i,
+                                                        guild: l,
                                                         iconSize: 16,
                                                     }),
-                                                null != i &&
+                                                null != l &&
                                                     (0, a.jsx)(r.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: i.name,
+                                                        children: l.name,
                                                     }),
-                                                null == i &&
-                                                    null != l &&
+                                                null == l &&
+                                                    null != i &&
                                                     (0, a.jsx)(r.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: (0, o.F6)(l, h.default, p.Z),
+                                                        children: (0, o.F6)(i, h.default, p.Z),
                                                     }),
                                                 (0, a.jsx)(r.Text, {
                                                     variant: "text-sm/normal",
@@ -217,7 +217,7 @@ function b(e) {
                         var t;
                         let n = m.Z.getGuild(e.guildId);
                         if (null == n) return null;
-                        let i = null != (t = e.nick) ? t : "";
+                        let l = null != (t = e.nick) ? t : "";
                         return (0, a.jsxs)(
                             "div",
                             {
@@ -229,7 +229,7 @@ function b(e) {
                                     }),
                                     (0, a.jsxs)(r.Text, {
                                         variant: "text-sm/normal",
-                                        children: [n.name, "" !== i ? " - ".concat(i) : ""],
+                                        children: [n.name, "" !== l ? " - ".concat(l) : ""],
                                     }),
                                 ],
                             },
@@ -269,13 +269,13 @@ function b(e) {
     });
 }
 function v() {
-    let e = i.useCallback((e) => {
+    let e = l.useCallback((e) => {
             g.setState({
                 userId: e,
                 state: null,
             });
         }, []),
-        t = i.useCallback(async () => {
+        t = l.useCallback(async () => {
             let { userId: e, loading: t } = g.getState();
             if (!t && null != e) {
                 g.setState({
@@ -289,7 +289,7 @@ function v() {
                         loading: !1,
                     });
                 } catch (t) {
-                    let e = new l.Hx(t);
+                    let e = new i.Hx(t);
                     g.setState({
                         error: e.getAnyErrorMessage(),
                         loading: !1,

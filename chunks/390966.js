@@ -1,6 +1,6 @@
 n.d(t, { z: () => T }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(913527),
@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(28664),
     d = n(481060),
     f = n(894017),
-    _ = n(954313),
+    _ = n(854698),
     p = n(849464),
     h = n(765305),
     m = n(388032),
@@ -149,7 +149,7 @@ function T(e) {
         D = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjH) : m.intl.string(m.t["X2K3/4"]));
     let w = (0, f.Z)(N, C),
-        [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: M, upcomingEvent: j, diffMinutes: k }, U] =
+        [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
             i.useState((0, _.ub)(t, u));
     i.useEffect(() => {
         U((0, _.ub)(t, u));
@@ -175,10 +175,10 @@ function T(e) {
                         ? 4
                         : M
                           ? 2
-                          : +!!j,
-            [n, null == w ? void 0 : w.is_canceled, M, j],
+                          : +!!k,
+            [n, null == w ? void 0 : w.is_canceled, M, k],
         ),
-        Z = y(B, G, p, L, k),
+        Z = y(B, G, p, L, j),
         {
             Icon: F,
             iconColor: V,

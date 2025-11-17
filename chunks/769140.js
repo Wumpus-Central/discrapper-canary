@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(388685);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -33,8 +33,8 @@ var i = n(120356),
     x = n(670451),
     L = n(981631),
     M = n(671955),
-    j = n(388032),
-    k = n(704543),
+    k = n(388032),
+    j = n(704543),
     U = n(936524),
     G = n(924482),
     B = n(774797);
@@ -112,7 +112,7 @@ function Z(e) {
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: "text-sm/medium",
-                                            children: er ? j.intl.string(j.t.uQZTBV) : j.intl.string(j.t.pgUTZC),
+                                            children: er ? k.intl.string(k.t.uQZTBV) : k.intl.string(k.t.pgUTZC),
                                         }),
                                     ],
                                 }),
@@ -153,7 +153,7 @@ function Z(e) {
             V !== M.l.MODAL && V !== M.l.MODAL_V2
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: k.details,
+                      className: j.details,
                       children: [
                           (0, r.jsx)(P.Z, {
                               channel: W,
@@ -174,7 +174,7 @@ function Z(e) {
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: "text-muted",
-                              "aria-label": j.intl.string(j.t["jNqDh/"]),
+                              "aria-label": k.intl.string(k.t["jNqDh/"]),
                           }),
                           V === M.l.MODAL_V2 && ec(),
                       ],
@@ -193,14 +193,14 @@ function Z(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: k.actions,
+                      className: j.actions,
                       children: (0, r.jsx)(w.Z, {
                           channel: W,
                           onAction: X,
                           onClose: F,
                       }),
                   }),
-        eu = null != z ? j.intl.formatToPlainString(j.t["4CQq9Q"], { name: z.name }) : j.intl.string(j.t["Jpkr/q"]);
+        eu = null != z ? k.intl.formatToPlainString(k.t["4CQq9Q"], { name: z.name }) : k.intl.string(k.t["Jpkr/q"]);
     return (0, r.jsx)(m.Gt, {
         value: q,
         children: (0, r.jsxs)(N.Z, {
@@ -220,10 +220,10 @@ function Z(e) {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: k.body,
+                    className: j.body,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: k.content,
+                            className: j.content,
                             children: [eo(), es(), V === M.l.MODAL && ec()],
                         }),
                         el(),

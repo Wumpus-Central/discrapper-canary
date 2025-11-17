@@ -1,6 +1,6 @@
-n.d(t, { Z: () => x }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => O }), n(388685);
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(112724),
     s = n(358221),
@@ -18,9 +18,9 @@ var r = n(951288),
 function y(e) {
     return e.type === d.Ui.VOICE;
 }
-let x = (0, a.Z)((e) => {
+let O = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: x, onScroll: O, popoutType: j } = e,
+    let { channel: a, width: O, onScroll: j, popoutType: x } = e,
         {
             selectedParticipantId: v,
             largeStream: C,
@@ -40,8 +40,8 @@ let x = (0, a.Z)((e) => {
         P = (0, c.w8)(a.id, d.pV.SPEAKER),
         T = P.filter(y),
         N = null != P.find((e) => e.type === d.Ui.STREAM),
-        R = Math.floor((x - 32) / 102),
-        w = x < 424 ? 1 : x < 624 ? 2 : x < 824 || I ? 3 : 4,
+        R = Math.floor((O - 32) / 102),
+        w = O < 424 ? 1 : O < 624 ? 2 : O < 824 || I ? 3 : 4,
         A = {
             [d.pV.SPEAKER]: w,
             [d.pV.AUDIENCE]: R,
@@ -57,8 +57,8 @@ let x = (0, a.Z)((e) => {
                 speakerTileWidth: n,
                 speakerTileHeight: r,
             };
-        })(x, w),
-        H = C ? x - 32 : Math.min(x - 64, 3 * U + 8),
+        })(O, w),
+        H = C ? O - 32 : Math.min(O - 64, 3 * U + 8),
         F = (e) => e === L.length - 1 || (0 === E && 1 === e),
         [B, V] = i.useState(!1),
         [z, W] = i.useState(!1);
@@ -116,7 +116,7 @@ let x = (0, a.Z)((e) => {
                                 channel: a,
                                 participant: l[0],
                                 width: H,
-                                popoutType: j,
+                                popoutType: x,
                             }),
                         },
                         "selected-participant",
@@ -131,7 +131,7 @@ let x = (0, a.Z)((e) => {
                                 channel: a,
                                 participants: l,
                                 selectedParticipant: Z,
-                                popoutType: j,
+                                popoutType: x,
                             }),
                         },
                         "speakers-".concat(t, "-").concat(n),
@@ -159,6 +159,6 @@ let x = (0, a.Z)((e) => {
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!F(e)),
         className: _.scroller,
         chunkSize: 60,
-        onScroll: O,
+        onScroll: j,
     });
 });

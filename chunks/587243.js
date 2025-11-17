@@ -3,11 +3,11 @@ n.d(t, {
     I: () => j,
 }),
     n(953529);
-var a = n(951288);
-n(647438);
-var i = n(722770),
+var a = n(54381);
+n(473749);
+var l = n(722770),
     r = n(481060),
-    l = n(734934),
+    i = n(734934),
     s = n(158238),
     o = n(695346),
     c = n(70956),
@@ -47,25 +47,25 @@ function f(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function b(e) {
-    let { status: t, currentStatus: n, description: i } = e,
-        l = t !== m.Skl.ONLINE,
+    let { status: t, currentStatus: n, description: l } = e,
+        i = t !== m.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
             children: x.map((e) => {
-                let { duration: i, label: l } = e;
+                let { duration: l, label: i } = e;
                 return (0, a.jsx)(
                     r.sNh,
                     {
-                        id: "".concat(t, "-").concat(i),
-                        label: l(),
+                        id: "".concat(t, "-").concat(l),
+                        label: i(),
                         action: () =>
                             (0, u.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
-                                durationMillis: i,
+                                durationMillis: l,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != i ? i : g,
+                    null != l ? l : g,
                 );
             }),
         });
@@ -73,7 +73,7 @@ function b(e) {
         id: t,
         className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: l,
+        hasSubmenu: i,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
@@ -89,10 +89,10 @@ function b(e) {
                         className: h.status,
                         children: (0, d.u5)(t),
                     }),
-                    null != i &&
+                    null != l &&
                         (0, a.jsx)("div", {
                             className: h.description,
-                            children: i,
+                            children: l,
                         }),
                 ],
             });
@@ -104,7 +104,7 @@ function b(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: l ? s : void 0,
+        children: i ? s : void 0,
     });
 }
 function v(e) {
@@ -113,11 +113,11 @@ function v(e) {
         n = f(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let i = f(t, a);
+    let l = f(t, a);
     return n
         ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: p.intl.data.formatTime(t, { format: "short" }) })
         : p.intl.formatToPlainString(p.t["9OFjSe"], {
-              dateString: i
+              dateString: l
                   ? p.intl.data.formatRelativeTime(1, "day", { numeric: "auto" })
                   : p.intl.data.formatDate(t, { dateStyle: "short" }),
               timeString: p.intl.data.formatTime(t, { format: "short" }),
@@ -125,7 +125,7 @@ function v(e) {
 }
 function j(e) {
     let t = o.Cr.useSetting(),
-        n = (0, l.p)(),
+        n = (0, i.p)(),
         c = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         d = o.fv.useSetting(),
         u = e === m.Skl.DND,
@@ -143,14 +143,14 @@ function j(e) {
         },
         j = (0, a.jsx)(a.Fragment, {
             children: x.map((t) => {
-                let { duration: n, label: i } = t;
+                let { duration: n, label: l } = t;
                 return (0, a.jsx)(
                     r.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
-                        label: i(),
+                        label: l(),
                         action: () => {
-                            (0, l.oW)(!0, n);
+                            (0, i.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
@@ -214,7 +214,7 @@ function j(e) {
                                                               : u
                                                                 ? p.intl.string(p.t.gH3Frd)
                                                                 : p.intl.string(p.t["64pl82"]),
-                                                          color: n ? i.Z.BRAND_500 : u ? i.Z.RED_400 : i.Z.PRIMARY_500,
+                                                          color: n ? l.Z.BRAND_500 : u ? l.Z.RED_400 : l.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),
@@ -238,7 +238,7 @@ function j(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, l.oW)(!n);
+                                      (0, i.oW)(!n);
                                   },
                                   dontCloseOnAction: !0,
                                   children: j,

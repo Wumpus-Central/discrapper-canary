@@ -4,13 +4,13 @@ n.d(t, {
     r: () => eS,
 }),
     n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(203463),
+    c = n(636606),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -43,8 +43,8 @@ var i = n(951288),
     U = n(853170),
     B = n(140465),
     H = n(800966),
-    V = n(675547),
-    F = n(641015),
+    F = n(675547),
+    V = n(641015),
     G = n(618158),
     z = n(390322),
     W = n(791592),
@@ -491,7 +491,7 @@ let eA = function (e) {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
-        G = (0, V.Z)({
+        G = (0, F.Z)({
             channel: n,
             location: "center-control-tray",
         }),
@@ -503,7 +503,7 @@ let eA = function (e) {
             autoTrackExposure: !0,
         }),
         { showRefreshedAudioContextMenu: en } = (0, U.e)({ location: v.Z.VOICE_CONTROL_TRAY }),
-        ei = (0, F.Z)(n),
+        ei = (0, V.Z)(n),
         ed = r.useRef(null),
         ef = r.useRef(null),
         eg = Q

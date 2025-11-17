@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(388685);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     a = n(120356),
     i = n.n(a),
     o = n(481060),
@@ -13,9 +13,9 @@ function m(e) {
     var t, n, a, m;
     let { defaultCategory: h, onCategoryChange: f, className: b } = e,
         [g, v] = l.useState(h),
-        [x, j] = l.useState(null),
+        [P, x] = l.useState(null),
         y = (0, s.Z)(),
-        P = l.useMemo(
+        j = l.useMemo(
             () => [
                 {
                     name: u.intl.string(u.t["6Zuivx"]),
@@ -25,8 +25,8 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => j(d.KN.Trick),
-                    onMouseLeave: () => j(null),
+                    onMouseEnter: () => x(d.KN.Trick),
+                    onMouseLeave: () => x(null),
                 },
                 {
                     name: u.intl.string(u.t["2UeOlY"]),
@@ -36,8 +36,8 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => j(d.KN.Treat),
-                    onMouseLeave: () => j(null),
+                    onMouseEnter: () => x(d.KN.Treat),
+                    onMouseLeave: () => x(null),
                 },
             ],
             [],
@@ -60,11 +60,11 @@ function m(e) {
         className: i()(p.container, b),
         children: [
             (0, r.jsx)(c.w, {
-                options: P,
+                options: j,
                 value: g,
                 onChange: S,
             }),
-            x === d.KN.Trick &&
+            P === d.KN.Trick &&
                 null != _ &&
                 (0, r.jsx)("div", {
                     className: i()(p.animationOverlay, p.trickAnimation),
@@ -75,10 +75,10 @@ function m(e) {
                         className: p.lottieAnimation,
                         importData: _,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(x === d.KN.Trick),
+                        versionKey: +(P === d.KN.Trick),
                     }),
                 }),
-            x === d.KN.Treat &&
+            P === d.KN.Treat &&
                 null != O &&
                 (0, r.jsx)("div", {
                     className: i()(p.animationOverlay, p.treatAnimation),
@@ -89,7 +89,7 @@ function m(e) {
                         className: p.lottieAnimation,
                         importData: O,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(x === d.KN.Treat),
+                        versionKey: +(P === d.KN.Treat),
                     }),
                 }),
         ],

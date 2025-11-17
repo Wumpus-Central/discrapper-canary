@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
-var a = n(951288);
-n(647438);
-var i = n(132392),
+n.d(t, { Z: () => i });
+var a = n(54381);
+n(473749);
+var l = n(132392),
     r = n(342781);
-let l = (e) => {
+let i = (e) => {
     var t;
-    let { onSubmit: n, disabled: l } = e,
-        { task: s } = (0, i.T)(),
+    let { onSubmit: n, disabled: i } = e,
+        { task: s } = (0, l.T)(),
         o = r.o[s.ui_component.component.type];
     return null == o
         ? null
@@ -16,6 +16,6 @@ let l = (e) => {
               taskId: s.task_id,
               flowId: null == (t = s.flow_context) ? void 0 : t.flow_id,
               assignmentId: s.assignment_id,
-              disabled: l,
+              disabled: i,
           });
 };

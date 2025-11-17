@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Y }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -80,8 +80,8 @@ function M(e, t) {
         e
     );
 }
-let j = s.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
-    k = (0, v.isWindows)(),
+let k = s.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
+    j = (0, v.isWindows)(),
     U = 18,
     G = "https://www.igdb.com/about";
 function B(e) {
@@ -145,7 +145,7 @@ function Z(e) {
         })),
         D = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
         [w, L] = i.useState(!1),
-        j = i.useMemo(
+        k = i.useMemo(
             () =>
                 (0, g.le)(I)
                     ? O
@@ -154,7 +154,7 @@ function Z(e) {
                     : I.name,
             [I, O],
         ),
-        [G, B] = i.useState(null != j ? j : "???"),
+        [G, B] = i.useState(null != k ? k : "???"),
         F = o()(P.flexCenter, {
             [N.game]: !a,
             [N.activeGame]: a,
@@ -186,8 +186,8 @@ function Z(e) {
                       (0, r.jsx)(
                           e,
                           M(x({}, t), {
-                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: j }),
-                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: j }),
+                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: k }),
+                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: k }),
                               actions: [
                                   {
                                       text: C.intl.string(C.t["ETE/oC"]),
@@ -241,7 +241,7 @@ function Z(e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: N.gameName,
-                          children: j,
+                          children: k,
                       }),
                       (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
@@ -298,7 +298,7 @@ function Z(e) {
         );
     }
     function Q() {
-        if (!k || null != v) return null;
+        if (!j || null != v) return null;
         let { overlay: e, overlayWarn: t } = I,
             n = e
                 ? (0, r.jsx)(c.pzj, {
@@ -475,7 +475,7 @@ function F() {
 }
 function V(e) {
     let { children: t } = e;
-    return (0, r.jsxs)(j, {
+    return (0, r.jsxs)(k, {
         className: D.marginTop40,
         children: [
             (0, r.jsx)(c.oxh, {

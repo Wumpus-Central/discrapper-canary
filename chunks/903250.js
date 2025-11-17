@@ -1,6 +1,6 @@
 n.d(t, { Z: () => D });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -38,11 +38,11 @@ let P = (e, t) => {
             { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
             L = (0, g._O)(),
             M = (0, m.Nx)(),
-            j = (0, s.e7)([h.Z], () => h.Z.affinities),
-            k = (0, E.Z)(),
-            U = null != k,
+            k = (0, s.e7)([h.Z], () => h.Z.affinities),
+            j = (0, E.Z)(),
+            U = null != j,
             G = P ? l.Tt.WHITE : l.Tt.BRAND,
-            B = j.length > 0,
+            B = k.length > 0,
             Z = S.intl.string(S.t.YCZldK),
             F = (0, p.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
@@ -66,7 +66,7 @@ let P = (e, t) => {
                                     children: Z,
                                 }),
                                 U
-                                    ? (0, r.jsx)(O.Z, { referrer: k })
+                                    ? (0, r.jsx)(O.Z, { referrer: j })
                                     : B &&
                                       (0, r.jsx)("div", {
                                           className: A.affinityDescriptionContainer,

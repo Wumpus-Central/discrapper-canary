@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(140835),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(698342);
 let L = 5,
     M = "placeholder",
-    j = [, , , , ,].fill(M);
-function k(e) {
+    k = [, , , , ,].fill(M);
+function j(e) {
     var t, n;
     let { context: a, command: o, section: l, sectionName: c } = e,
         d = i.useCallback(() => {
@@ -218,7 +218,7 @@ function B(e) {
                           e === M
                               ? (0, r.jsx)(U, {}, e + n)
                               : (0, r.jsx)(
-                                    k,
+                                    j,
                                     {
                                         context: t,
                                         command: e,
@@ -288,7 +288,7 @@ function Z(e) {
                   (0, r.jsx)(B, {
                       context: n,
                       section: p,
-                      commands: _ ? j : E,
+                      commands: _ ? k : E,
                       headerName: D.intl.string(D.t.DUU9L3),
                       sectionName: o,
                       children:

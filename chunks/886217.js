@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C }), n(804061), n(704826), n(35282);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(317261),
     o = n(423875),
     s = n(442837),
@@ -61,14 +61,14 @@ let S = (e, t, n, r) => {
             }, [N, R, t, n, D, x, w, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(x, g.y9)) return null;
-        let j = () => {
+        let k = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id)
                         : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
             },
-            k = () => {
+            j = () => {
                 let e = v.Hw.ARTIST,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.artist.external_id)
@@ -78,9 +78,9 @@ let S = (e, t, n, r) => {
         return (0, r.jsxs)(b.yR, {
             children: [
                 (0, r.jsx)(b.wG, {
-                    onClickTitle: j,
-                    onClickSubtitle: k,
-                    onClickThumbnail: j,
+                    onClickTitle: k,
+                    onClickSubtitle: j,
+                    onClickThumbnail: k,
                     channel: t,
                     entry: n,
                     headerIcons:

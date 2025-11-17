@@ -1,6 +1,6 @@
 n.d(t, { _: () => w }), n(642613), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(913527),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(793030),
     d = n(442837),
     p = n(481060),
-    h = n(724757),
-    f = n(294218),
+    f = n(724757),
+    h = n(294218),
     g = n(703656),
     m = n(45251),
     b = n(156012),
@@ -48,7 +48,7 @@ function T() {
         ),
         n = (0, d.e7)([b.Z], () => b.Z.loading, []),
         l = i.useRef(null),
-        o = (0, h.Z)("scheduled-messages", l);
+        o = (0, f.Z)("scheduled-messages", l);
     return n
         ? (0, r.jsx)(p.$jN, { className: N.loadingPlaceholder })
         : 0 === t.length
@@ -242,7 +242,7 @@ let R = i.memo(function (e) {
                     (0, C.vE)(e);
             }
         })(t.state),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             (0, m.gD)(t.scheduledMessageId)
                 .then(() => {
                     (0, y.C$)();
@@ -275,7 +275,7 @@ let R = i.memo(function (e) {
                               className: N.channelMessageAndButtons,
                               children: [
                                   (0, r.jsx)(
-                                      f.Z,
+                                      h.Z,
                                       {
                                           message: a,
                                           channel: n,
@@ -297,7 +297,7 @@ let R = i.memo(function (e) {
                                           }),
                                           (0, r.jsx)(u.hU, {
                                               icon: p.k$p,
-                                              onClick: h,
+                                              onClick: f,
                                               "aria-label": P.intl.string(P.t.O3sL8F),
                                               variant: "icon-only",
                                           }),

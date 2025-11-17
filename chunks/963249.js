@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(97613),
     a = n.n(i),
     o = n(772848),
@@ -107,8 +107,8 @@ function R(e) {
             analyticsSourceLocation: x,
             confirmationFooter: L,
             isGift: M = !1,
-            giftMessage: j,
-            giftStyle: k,
+            giftMessage: k,
+            giftStyle: j,
             giftingOrigin: U,
             subscriptionTier: G,
             trialId: B,
@@ -141,8 +141,8 @@ function R(e) {
                         subscriptionTier: G,
                         skuId: ee,
                         isGift: M,
-                        giftMessage: j,
-                        giftStyle: k,
+                        giftMessage: k,
+                        giftStyle: j,
                         giftingOrigin: U,
                         giftRecipient: Y,
                         initialPlanId: i,

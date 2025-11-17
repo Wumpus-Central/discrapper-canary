@@ -1,6 +1,6 @@
 n.d(t, { H: () => T }), n(953529);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(399606),
     a = n(159691),
     o = n(166081),
@@ -69,15 +69,15 @@ function T(e) {
         }),
         L = (0, o.U)(t, I),
         M = (0, m.C)(t),
-        j = (0, f.SO)(w),
-        { shouldHideGuildPurchaseEntryPoints: k } = (0, l.uP)(n),
+        k = (0, f.SO)(w),
+        { shouldHideGuildPurchaseEntryPoints: j } = (0, l.uP)(n),
         U = (0, m.k)(t),
         G = (0, E.Z)({
             guildId: n,
             guildProductListingId: t.id,
             sourceAnalyticsLocations: O,
         });
-    if (null == w || k) return null;
+    if (null == w || j) return null;
     let B = () =>
             (0, b.e)({
                 guildId: n,
@@ -96,13 +96,13 @@ function T(e) {
         H = (0, r.jsx)(g.m, {
             product: t,
             guildId: n,
-            showEditProduct: j,
+            showEditProduct: k,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: j ? Z : () => {},
+            onEditProduct: k ? Z : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: F,

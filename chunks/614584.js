@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P });
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     a = n(25209),
     o = n(39154),
@@ -79,8 +79,8 @@ let S = r.memo(function (e) {
         M = S.state === f.Y.LOADED ? S.message : void 0,
         R = (0, y.Uj)(M),
         L = (0, u.p)(),
-        D = s.d.useExperiment({ location: "repliedMessage" }).enabled,
-        k = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        k = s.d.useExperiment({ location: "repliedMessage" }).enabled,
+        D = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         U = r.useMemo(() => {
             if (null == M) return null;
             let e = (0, o.Z)(M);
@@ -133,18 +133,18 @@ let S = r.memo(function (e) {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
-                              allowGameMentions: D,
+                              allowGameMentions: k,
                           })
                         : E(O({}, t), {
                               formatInline: !0,
-                              allowHeading: k,
-                              allowList: k,
-                              allowGameMentions: D,
+                              allowHeading: D,
+                              allowList: D,
+                              allowGameMentions: k,
                           });
                 return (0, b.ZP)(e, n).content;
             }
             return null;
-        }, [M, R, P, k, L, D]),
+        }, [M, R, P, D, L, k]),
         { isReplyAuthorBlocked: B, isReplyAuthorIgnored: H } = (0, l.cj)(
             [m.Z],
             () => ({
@@ -153,8 +153,8 @@ let S = r.memo(function (e) {
             }),
             [M],
         ),
-        V = (0, _.wq)(null == M ? void 0 : M.author.id, P.id),
-        F = (0, _.$3)(n, M),
+        F = (0, _.wq)(null == M ? void 0 : M.author.id, P.id),
+        V = (0, _.$3)(n, M),
         G = (0, _.Wl)(M, P, Z, N),
         z = (0, _.rY)(T, N),
         W = r.useCallback(() => {
@@ -179,8 +179,8 @@ let S = r.memo(function (e) {
         renderPopout: v.Z,
         onClickAvatar: z,
         onClickUsername: G,
-        onClickReply: F,
-        onContextMenu: V,
+        onClickReply: V,
+        onContextMenu: F,
         onPopoutRequestClose: W,
         isReplySpineClickable: A,
         showReplySpine: w,

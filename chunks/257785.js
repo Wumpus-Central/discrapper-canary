@@ -4,30 +4,30 @@ n.d(t, {
     wl: () => m,
 }),
     n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(481060),
     o = n(572004),
     c = n(451429);
 function d(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)("dl", {
-        className: l()(c.properties, t),
+        className: i()(c.properties, t),
         children: n,
     });
 }
 let u = (e) => {
     let { name: t, children: n, copyValue: r } = e,
-        [l, d] = i.useState(!1);
+        [i, d] = l.useState(!1);
     return (
-        i.useEffect(() => {
-            if (l) {
+        l.useEffect(() => {
+            if (i) {
                 let e = setTimeout(() => d(!1), 1000);
                 return () => clearTimeout(e);
             }
-        }, [l]),
+        }, [i]),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)("dt", {
@@ -43,7 +43,7 @@ let u = (e) => {
                                   tag: "span",
                                   className: c.copyPropertyButton,
                                   onClick: () => (0, o.JG)(r, () => d(!0)),
-                                  children: l
+                                  children: i
                                       ? (0, a.jsx)(s.kmB, {
                                             color: "currentColor",
                                             size: "sm",

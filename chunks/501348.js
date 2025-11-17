@@ -1,6 +1,6 @@
 n.d(t, { Z: () => es }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(740492),
     L = n(695346),
     M = n(313789),
-    j = n(329013),
-    k = n(333859),
+    k = n(329013),
+    j = n(333859),
     U = n(273313),
     G = n(518596),
     B = n(726985),
@@ -198,7 +198,7 @@ let Q = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(j.g, {}),
+                (0, r.jsx)(k.g, {}),
             ],
         }),
     ei = () =>
@@ -299,7 +299,7 @@ class ea extends i.Component {
                   label: H.intl.string(H.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(er, {}),
-                      children: (0, r.jsx)(j.i, {}),
+                      children: (0, r.jsx)(k.i, {}),
                   }),
               });
     }
@@ -358,7 +358,7 @@ class ea extends i.Component {
             }),
             n = (0, r.jsx)(N.F, {
                 setting: B.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(k.c, {}),
+                children: (0, r.jsx)(j.c, {}),
             }),
             i = [
                 {

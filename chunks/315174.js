@@ -3,18 +3,18 @@ n.d(t, {
     wD: () => Z,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(509442),
+    a = n(636606),
     s = n(873546),
     c = n(442837),
     u = n(28664),
     d = n(481060),
     p = n(666188),
-    h = n(340541),
-    f = n(159300),
+    f = n(340541),
+    h = n(159300),
     g = n(553984),
     m = n(695346),
     b = n(496675),
@@ -212,8 +212,8 @@ function T(e) {
 let A = [j._, v.STv];
 function R(e) {
     var t;
-    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: h, children: m } = e,
-        _ = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, o)),
+    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: f, children: m } = e,
+        _ = (0, c.e7)([b.Z], () => (0, h.b)(b.Z, o)),
         y = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
@@ -240,7 +240,7 @@ function R(e) {
                     guildName: null != (t = null == o ? void 0 : o.name) ? t : "",
                 }),
                 "aria-controls": p,
-                "aria-expanded": h,
+                "aria-expanded": f,
                 onContextMenu: s,
                 onClick: a,
                 children: [
@@ -289,7 +289,7 @@ let D = i.memo(function (e) {
             className: a,
             onClick: c,
             onContextMenu: u,
-            onMouseDown: f,
+            onMouseDown: h,
             disableBannerAnimation: g,
             "aria-expanded": b,
             "aria-controls": O,
@@ -331,7 +331,7 @@ let D = i.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        X = (0, h._k)({ location: "guild_header" }),
+        X = (0, f._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
             guild: j,
@@ -360,7 +360,7 @@ let D = i.memo(function (e) {
                             [C.communityInfoVisible]: U || (D && G),
                             [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
-                        onMouseDown: f,
+                        onMouseDown: h,
                         onClick: X.isGuildEntrypointEnabled ? void 0 : c,
                         onContextMenu: u,
                         children: [

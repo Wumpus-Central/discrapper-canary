@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(493773),
     d = n(110924),
     p = n(622822),
-    h = n(198620),
-    f = n(294218),
+    f = n(198620),
+    h = n(294218),
     g = n(598999),
     m = n(216789),
     b = n(695346),
@@ -51,7 +51,7 @@ function Z(e) {
             messages: l,
             hasMore: s,
             loading: p,
-            guildFilter: f,
+            guildFilter: h,
             roleFilter: b,
             everyoneFilter: y,
         } = (0, a.cj)([v.ZP], () => ({
@@ -63,15 +63,15 @@ function Z(e) {
             everyoneFilter: v.ZP.everyoneFilter,
         })),
         j = (0, m.Us)({ location: "RecentMentions" }),
-        x = (0, d.Z)(f),
+        x = (0, d.Z)(h),
         C = (0, d.Z)(b),
         P = (0, d.Z)(y);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != x && f !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
-    }, [x, f, C, b, P, y, n, !0]),
+        ((null != x && h !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
+    }, [x, h, C, b, P, y, n, !0]),
         (0, u.ZP)(() => {
-            (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
+            (null == l ? void 0 : l.some(f.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
         i.useEffect(
             () => () => {
@@ -152,7 +152,7 @@ function T(e) {
                         onJump: n,
                     }),
                     (0, r.jsx)(
-                        f.Z,
+                        h.Z,
                         {
                             message: t,
                             channel: l,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
-var a = n(951288),
-    i = n(296009),
+var a = n(54381),
+    l = n(296009),
     r = n(481060),
-    l = n(592183),
+    i = n(592183),
     s = n(86419),
     o = n(172416),
     c = n(667108);
@@ -28,35 +28,35 @@ function d() {
                               (0, a.jsx)(r.Button, {
                                   variant: "primary",
                                   text: "Add Favorite Game",
-                                  onClick: () => t(i.l.FAVORITE_GAMES),
+                                  onClick: () => t(l.l.FAVORITE_GAMES),
                               }),
                               (0, a.jsx)(r.Button, {
                                   variant: "primary",
                                   text: "Add Current Game",
-                                  onClick: () => t(i.l.CURRENT_GAMES),
+                                  onClick: () => t(l.l.CURRENT_GAMES),
                               }),
                               (0, a.jsx)(r.Button, {
                                   variant: "primary",
                                   text: "Add Want to Play Game",
-                                  onClick: () => t(i.l.WANT_TO_PLAY_GAMES),
+                                  onClick: () => t(l.l.WANT_TO_PLAY_GAMES),
                               }),
                               (0, a.jsx)(r.Button, {
                                   variant: "primary",
                                   text: "Add Played Game",
-                                  onClick: () => t(i.l.PLAYED_GAMES),
+                                  onClick: () => t(l.l.PLAYED_GAMES),
                               }),
                               (0, a.jsx)(r.Button, {
                                   variant: "active",
                                   text: "Show Empty State",
                                   onClick: () => {
-                                      l.Z.setPendingWidgets([]);
+                                      i.Z.setPendingWidgets([]);
                                   },
                               }),
                               (0, a.jsx)(r.Button, {
                                   variant: "critical-primary",
                                   text: "Clear Pending Changes",
                                   onClick: () => {
-                                      l.Z.clearPendingWidgets();
+                                      i.Z.clearPendingWidgets();
                                   },
                               }),
                           ],

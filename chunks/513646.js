@@ -1,39 +1,13 @@
-r.d(t, { Z: () => l });
-var n = r(647438),
-    o = r(782497),
-    a = r(329022),
-    i = r(962438);
-let l = function (e) {
-    var t = e.colors,
-        r = e.onClick,
-        l = e.onSwatchHover,
-        s = (0, o.default)({
-            default: {
-                swatches: { marginRight: "-10px" },
-                swatch: {
-                    width: "22px",
-                    height: "22px",
-                    float: "left",
-                    marginRight: "10px",
-                    marginBottom: "10px",
-                    borderRadius: "4px",
-                },
-                clear: { clear: "both" },
-            },
-        });
-    return n.createElement(
-        "div",
-        { style: s.swatches },
-        (0, a.Z)(t, function (e) {
-            return n.createElement(i.m4, {
-                key: e,
-                color: e,
-                style: s.swatch,
-                onClick: r,
-                onHover: l,
-                focusStyle: { boxShadow: "0 0 4px " + e },
-            });
-        }),
-        n.createElement("div", { style: s.clear }),
-    );
-};
+n.d(t, { h: () => a }), n(642613);
+var r = n(237292),
+    i = n(403485),
+    l = n(604849);
+function a(e) {
+    let t = (0, r.y0)({ location: "safety-tools-button" }),
+        n = (0, l.c)(),
+        a = (0, i.h)(e);
+    if (!t || !n) return;
+    let s = a.filter((e) => null != e.dismiss_timestamp);
+    if (0 !== s.length)
+        return s.sort((e, t) => (e.type > t.type || e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
+}

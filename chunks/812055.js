@@ -3,10 +3,10 @@ n.d(t, {
     b: () => y,
 }),
     n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(442837),
-    l = n(704215),
+    i = n(704215),
     s = n(907862),
     o = n(243778),
     c = n(246133),
@@ -23,7 +23,7 @@ let v = p.Z.Millis.HOUR,
     j = p.Z.Millis.DAY,
     _ = 4 * p.Z.Millis.DAY;
 function y() {
-    let [e, t] = i.useState(Date.now()),
+    let [e, t] = l.useState(Date.now()),
         n = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
         a = (0, r.e7)([m.Z], () => m.Z.getStatus()),
         s = d.P4.useSetting(),
@@ -36,7 +36,7 @@ function y() {
             disable: !f,
         });
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             if (a === g.Sk.DND) {
                 t(Date.now());
                 let e = setInterval(() => t(Date.now()), v);
@@ -44,7 +44,7 @@ function y() {
             }
         }, [a]),
         (0, o.bf)(
-            b && !n ? l.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
+            b && !n ? i.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
             {
                 cooldownDurationMs: _,
                 numTimesToRecur: 2,
@@ -55,10 +55,10 @@ function y() {
     );
 }
 function C(e) {
-    let { targetElementRef: t, onDismiss: n, children: i } = e,
+    let { targetElementRef: t, onDismiss: n, children: l } = e,
         {
             enabled: r,
-            titleText: l,
+            titleText: i,
             bodyText: o,
         } = (0, h.a)({
             location: "popover",
@@ -67,10 +67,10 @@ function C(e) {
     return null != t.current && r
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  i,
+                  l,
                   (0, a.jsx)(s.J2, {
                       targetElementRef: t,
-                      title: f.intl.string(l),
+                      title: f.intl.string(i),
                       body: f.intl.string(o),
                       caretConfig: { align: "start" },
                       gradientColor: "purple",
@@ -90,5 +90,5 @@ function C(e) {
                   }),
               ],
           })
-        : i;
+        : l;
 }

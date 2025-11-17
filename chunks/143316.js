@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(755721),
     o = n(481060),
     a = n(626135),
@@ -11,7 +11,7 @@ var r = n(951288),
 function p(e) {
     let { type: t, onClick: n } = e,
         [l, p] = i.useState(!1),
-        f = () => {
+        h = () => {
             n(),
                 a.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
@@ -19,13 +19,13 @@ function p(e) {
                 });
         },
         g = (e) => {
-            e.shiftKey ? f() : p(!0);
+            e.shiftKey ? h() : p(!0);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             l
-                ? (0, r.jsx)(h, {
-                      confirm: f,
+                ? (0, r.jsx)(f, {
+                      confirm: h,
                       cancel: () => p(!1),
                   })
                 : null,
@@ -48,7 +48,7 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function f(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(o.sYh, {
         dismissable: !0,

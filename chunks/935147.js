@@ -1,6 +1,6 @@
 n.d(t, { Z: () => z }), n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(809206),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(235433),
     L = n(504983),
     M = n(134795),
-    j = n(513901),
-    k = n(451392),
+    k = n(513901),
+    j = n(451392),
     U = n(490220),
     G = n(981631),
     B = n(474936),
@@ -199,7 +199,7 @@ function z(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(k.Z, {
+                                  (0, r.jsx)(j.Z, {
                                       className: V.customizationSection,
                                       user: H,
                                       pendingAvatarSrc: (0, I.SD)({
@@ -238,7 +238,7 @@ function z(e) {
                                       className: V.customizationSection,
                                   }),
                                   !eo &&
-                                      (0, r.jsx)(j.Z, {
+                                      (0, r.jsx)(k.Z, {
                                           className: V.customizationSection,
                                           sectionTitle: F.intl.string(F.t.wR5wOo),
                                           user: H,

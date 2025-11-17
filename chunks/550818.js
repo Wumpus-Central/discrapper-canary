@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(793030),
     a = n(442837),
     s = n(481060),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(502762),
     _ = n(848780),
     y = n(907179),
-    x = n(671955),
-    O = n(388032),
-    j = n(491010),
+    O = n(671955),
+    j = n(388032),
+    x = n(491010),
     v = n(268293);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,32 +68,32 @@ function I(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: x.l.SIDEBAR,
+                themeType: O.l.SIDEBAR,
                 themeOverride: E,
                 children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
-                        className: j.container,
+                        className: x.container,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
                                 src: v,
-                                className: j.preview,
+                                className: x.preview,
                                 "aria-hidden": !0,
                             }),
                             (0, r.jsxs)("div", {
-                                className: j.body,
+                                className: x.body,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: j.headerContainer,
+                                        className: x.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: O.intl.string(O.t.b33pLD),
+                                                children: j.intl.string(j.t.b33pLD),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: O.intl.format(Z ? O.t["8F+WNz"] : O.t["/cZp5s"], {
+                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5s"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),

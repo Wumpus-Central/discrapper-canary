@@ -1,11 +1,11 @@
 n.d(t, { Z: () => o });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(956748),
-    l = n(566697),
+    i = n(566697),
     s = n(346284);
-let o = i.memo(function (e) {
-    let { user: t, nameplate: n, isHighlighted: i, isPurchased: o, size: c = "default" } = e,
+let o = l.memo(function (e) {
+    let { user: t, nameplate: n, isHighlighted: l, isPurchased: o, size: c = "default" } = e,
         d = "small" === c ? 62 : 94,
         u = "small" === c ? 72 : 110;
     return (0, a.jsx)("div", {
@@ -25,12 +25,12 @@ let o = i.memo(function (e) {
                     opacity: 0.85,
                     size: c,
                 }),
-                (0, a.jsx)(l.Z, {
+                (0, a.jsx)(i.Z, {
                     user: t,
                     nameplate: n,
                     className: s.nameplatePreviewSampleItem,
-                    isHighlighted: i,
-                    showPlaceholderUser: !i,
+                    isHighlighted: l,
+                    showPlaceholderUser: !l,
                     showStatus: !0,
                     isPurchased: o,
                     nameplatePreviewSize: "small" === c ? "small" : "default",

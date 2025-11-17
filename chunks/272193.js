@@ -1,28 +1,28 @@
 n.d(t, { Z: () => m });
-var a = n(951288);
-n(647438);
-var i = n(442837),
+var a = n(54381);
+n(473749);
+var l = n(442837),
     r = n(755721),
-    l = n(481060),
+    i = n(481060),
     s = n(570140),
     o = n(441623),
     c = n(246992),
     d = n(636503),
     u = n(451429);
 function m() {
-    let e = (0, i.e7)([o.Z], () => o.Z.getDevToolTotalFriendAnniversaries()),
+    let e = (0, l.e7)([o.Z], () => o.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
             s.Z.dispatch({
                 type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT",
                 total: e,
             });
         };
-    return (0, a.jsx)(l.zJl, {
+    return (0, a.jsx)(i.zJl, {
         className: u.panel,
         children: (0, a.jsxs)("div", {
             className: d.panelInner,
             children: [
-                (0, a.jsx)(l.Text, {
+                (0, a.jsx)(i.Text, {
                     className: d.panelHeader,
                     variant: "text-lg/bold",
                     children: "Friend Anniversary",
@@ -30,11 +30,11 @@ function m() {
                 (0, a.jsxs)("div", {
                     className: d.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
                             children: "Reset gift message cooldown",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -47,11 +47,11 @@ function m() {
                 (0, a.jsxs)("div", {
                     className: d.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
                             children: "Reset badge cooldown",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -64,11 +64,11 @@ function m() {
                 (0, a.jsxs)("div", {
                     className: d.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
                             children: "Clear last seen friend anniversaries in All Friends",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Clear",
@@ -81,11 +81,11 @@ function m() {
                 (0, a.jsxs)("div", {
                     className: d.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
                             children: "Select number of friend anniversaries to generate",
                         }),
-                        (0, a.jsx)(l.q4e, {
+                        (0, a.jsx)(i.q4e, {
                             className: d.anniversaryCountSelect,
                             options: [
                                 {

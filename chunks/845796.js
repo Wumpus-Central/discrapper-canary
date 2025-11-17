@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b }), n(642613);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(497598),
@@ -8,17 +8,17 @@ var r = n(951288),
     c = n(481060),
     u = n(626135),
     d = n(381585),
-    g = n(501431),
-    p = n(811847),
+    p = n(501431),
+    g = n(811847),
     f = n(215023),
     h = n(981631),
     C = n(388032),
     m = n(182668),
     _ = n(219588);
 let b = () => {
-    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.S)(),
+    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, p.S)(),
         i = (0, d.sp)(),
-        b = (0, p.B)("CollectiblesSortSelect"),
+        b = (0, g.B)("CollectiblesSortSelect"),
         v = n(),
         x = l.useMemo(() => f.aP.filter((e) => e.sortType !== s.E.RELEVANCE || v), [v]),
         E = l.useCallback((e) => {
@@ -48,7 +48,7 @@ let b = () => {
                           value: "popularity",
                       };
         }, []),
-        S = l.useCallback(
+        O = l.useCallback(
             (e) =>
                 ({
                     recent: {
@@ -74,9 +74,9 @@ let b = () => {
                 })[e],
             [],
         ),
-        O = l.useCallback(
+        S = l.useCallback(
             (e) => {
-                let n = E(S(e));
+                let n = E(O(e));
                 u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == i ? void 0 : i.sessionId,
                     page_section: null == i ? void 0 : i.pageSection,
@@ -86,16 +86,16 @@ let b = () => {
                     cta_name: "sort by ".concat(n.label.toLowerCase()),
                     page_type: "catalog",
                 }),
-                    t(S(e));
+                    t(O(e));
             },
-            [i, E, S, t],
+            [i, E, O, t],
         ),
         y = E(e);
     return (0, r.jsx)("div", {
         className: a()(m.container, { [_.customCursors]: b }),
         children: (0, r.jsx)(c.PhF, {
             options: x.map(E),
-            select: O,
+            select: S,
             isSelected: (e) => e === y.value,
             serialize: (e) => e,
             popoutWidth: 224,

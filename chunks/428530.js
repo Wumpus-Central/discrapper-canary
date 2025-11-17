@@ -1,9 +1,9 @@
 n.d(t, { Z: () => x }), n(388685), n(35282);
-var a = n(951288);
-n(647438);
-var i = n(805203),
+var a = n(54381);
+n(473749);
+var l = n(686225),
     r = n(692547),
-    l = n(410030),
+    i = n(410030),
     s = n(411405),
     o = n(981631),
     c = n(451429);
@@ -33,10 +33,10 @@ function h(e) {
 }
 function x(e) {
     let { data: t } = e,
-        n = (0, l.ZP)();
+        n = (0, i.ZP)();
     return (0, a.jsx)("div", {
         className: c.inspectorWrapper,
-        children: (0, a.jsx)(i.L, {
+        children: (0, a.jsx)(l.L, {
             data: t,
             theme: "light" === n ? p : m,
             invertTheme: !1,

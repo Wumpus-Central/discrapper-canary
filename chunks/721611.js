@@ -1,18 +1,18 @@
 n.d(t, { Z: () => y }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    o = n.n(i),
     a = n(512722),
     c = n.n(a),
-    s = n(509442),
+    s = n(636606),
     u = n(91192),
     d = n(481060),
     f = n(996435),
     b = n(910557);
 function p(e) {
     var t;
-    let { category: n, onClick: l, active: o } = e,
+    let { category: n, onClick: l, active: i } = e,
         { useTitle: a, useNavigationTitle: s, key: f } = n,
         p = null == a ? void 0 : a(),
         y = null != (t = null == s ? void 0 : s()) ? t : p;
@@ -52,7 +52,7 @@ function p(e) {
                         {
                             onClick: l,
                             tag: "li",
-                            className: i()({ [b.active]: o }),
+                            className: o()({ [b.active]: i }),
                         },
                         e,
                     )),
@@ -78,8 +78,8 @@ function p(e) {
 }
 function y(e) {
     let { categories: t } = e,
-        [n, o] = l.useState(t[0].key),
-        i = l.useMemo(
+        [n, i] = l.useState(t[0].key),
+        o = l.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -88,7 +88,7 @@ function y(e) {
             [t, n],
         ),
         a = (0, d.q_F)({
-            y: 36 * i,
+            y: 36 * o,
             config: {
                 mass: 0.1,
                 friction: 20,
@@ -112,7 +112,7 @@ function y(e) {
                         {
                             onClick: () => {
                                 var t;
-                                o((t = e.key)),
+                                i((t = e.key)),
                                     f.Z.setState({
                                         targetKey: t,
                                         showNavigationMobile: !1,

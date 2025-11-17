@@ -1,6 +1,6 @@
 n.d(t, { s: () => E });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
@@ -87,8 +87,8 @@ function E(e) {
             iconProps: x,
         } = e,
         { onSelect: L, onInteraction: M } = i.useContext(c.p),
-        j = i.useRef(null),
-        k = i.useCallback(
+        k = i.useRef(null),
+        j = i.useCallback(
             (e) => {
                 var t;
                 if ((null == M || M({ type: c.U.DEFAULT }), null == S)) return !1;
@@ -101,20 +101,20 @@ function E(e) {
         );
     return (
         i.useEffect(() => {
-            I && ((0, u.F)(j), null == C || C());
+            I && ((0, u.F)(k), null == C || C());
         }, [I, C]),
         (0, r.jsxs)(
             s.P3F,
             g(
                 h(
                     {
-                        innerRef: j,
+                        innerRef: k,
                         className: o()(_.item, _.labelContainer, f._[t], N, {
                             [_.disabled]: v,
                             [_.focused]: I,
                             [null != R ? R : ""]: I,
                         }),
-                        onClick: v ? void 0 : k,
+                        onClick: v ? void 0 : j,
                         "aria-disabled": v,
                     },
                     T,

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => q }), n(997841), n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(512722),
@@ -24,14 +24,14 @@ var i = n(951288),
     N = n(346486),
     S = n(600164),
     E = n(925329),
-    w = n(666657),
-    I = n(664452),
-    P = n(560114),
+    I = n(666657),
+    P = n(664452),
+    w = n(560114),
     T = n(685929),
     Z = n(592125),
     k = n(699516),
-    D = n(594174),
-    A = n(630388),
+    A = n(594174),
+    D = n(630388),
     R = n(634755),
     L = n(757539),
     M = n(981631),
@@ -121,7 +121,7 @@ function K(e) {
                                 (0, i.jsx)(g.Text, {
                                     variant: "text-xs/normal",
                                     color: "header-secondary",
-                                    children: (0, C.F6)(l, D.default, k.Z, !0),
+                                    children: (0, C.F6)(l, A.default, k.Z, !0),
                                 }),
                         ],
                     }),
@@ -184,7 +184,7 @@ function z(e) {
                 children: a ? "..." : n.code,
             }),
             inviteSourceTrailingContent:
-                !a && (0, A.yE)(null != (t = n.flags) ? t : 0, u.$.IS_APPLICATION_BYPASS)
+                !a && (0, D.yE)(null != (t = n.flags) ? t : 0, u.$.IS_APPLICATION_BYPASS)
                     ? (0, i.jsxs)("div", {
                           className: B.bypass,
                           children: [
@@ -216,9 +216,9 @@ function z(e) {
 function V(e) {
     let { applicationId: t, channel: r, showChannel: l = !1, inviteDisabled: a = !1 } = e,
         o = (0, _.q)(t),
-        s = (0, p.e7)([D.default], () => {
+        s = (0, p.e7)([A.default], () => {
             var e;
-            return D.default.getUser(null == (e = r.linkedLobby) ? void 0 : e.linked_by);
+            return A.default.getUser(null == (e = r.linkedLobby) ? void 0 : e.linked_by);
         }),
         c = (0, T.Y)(r);
     return (0, i.jsx)(K, {
@@ -312,7 +312,7 @@ function q(e) {
             (0, g.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        P.default,
+                        w.default,
                         F(G({}, e), {
                             channel: u,
                             guild: l,
@@ -323,11 +323,11 @@ function q(e) {
         },
         [E, T] = r.useState(62),
         k = () => {
-            let e = { source: w.Zu.GUILD_SETTINGS };
+            let e = { source: I.Zu.GUILD_SETTINGS };
             (0, g.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        I.default,
+                        P.default,
                         F(G({}, t), {
                             guildId: l.id,
                             analyticsData: e,

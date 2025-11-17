@@ -9,12 +9,12 @@ n.d(t, {
     n(388685),
     n(642613),
     n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    s = n(209739),
-    a = n.n(s),
+    s = n.n(l),
+    o = n(209739),
+    a = n.n(o),
     c = n(268146),
     d = n(442837),
     u = n(846519),
@@ -39,8 +39,8 @@ var r = n(951288),
     I = n(989941),
     E = n(39540),
     N = n(958707),
-    A = n(152165),
-    R = n(133179),
+    R = n(152165),
+    A = n(133179),
     M = n(70722),
     k = n(761274),
     D = n(46140),
@@ -75,13 +75,13 @@ function U(e) {
 function F(e, t, n, r) {
     let i = (0, C.isWindows)() ? (0, I.Z)(_.ZP, y.Z) : null,
         l = _.ZP.getRunningGames(),
-        o = null == n ? void 0 : n.split(":")[1],
-        s = e.id.split(":")[1];
-    if (null != o && o === s) return 0;
+        s = null == n ? void 0 : n.split(":")[1],
+        o = e.id.split(":")[1];
+    if (null != s && s === o) return 0;
     if (null != t && t === e.id) return 5;
     if (null != i && (0, w.Z)(e.id, i.windowHandle)) return 4;
     if (null != l.find((t) => (0, w.Z)(e.id, t.windowHandle))) return 3;
-    let a = null == r ? void 0 : r[s];
+    let a = null == r ? void 0 : r[o];
     return null != a && M.Mm.has(a) ? 2 : 1;
 }
 function H(e, t, n) {
@@ -92,15 +92,15 @@ function H(e, t, n) {
             var i, l;
             let n = t.find((e) => (0, w.Z)(r.id, e.windowHandle));
             if ((null == n ? void 0 : n.id) == null) continue;
-            let o = (0, x.lQ)(e, n.id);
+            let s = (0, x.lQ)(e, n.id);
             if (
-                null != o &&
-                (null == (i = o.userStatus) ? void 0 : i.enrolledAt) != null &&
-                (null == (l = o.userStatus) ? void 0 : l.completedAt) == null
+                null != s &&
+                (null == (i = s.userStatus) ? void 0 : i.enrolledAt) != null &&
+                (null == (l = s.userStatus) ? void 0 : l.completedAt) == null
             )
                 return {
                     source: r,
-                    quest: o,
+                    quest: s,
                 };
         }
         return null;
@@ -109,14 +109,14 @@ function H(e, t, n) {
 function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        s = S.Z.supports(B.AN.GO_LIVE_HARDWARE),
+        o = S.Z.supports(B.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
         [x, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
         [P, T] = i.useState(c.vA.WINDOW),
         [I, E] = i.useState(!1),
-        A = i.useRef(null),
+        R = i.useRef(null),
         M = i.useRef(new u.Xp()),
         D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
         U = H(
@@ -160,7 +160,7 @@ function W(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((A.current = e), E(!e.isScrolledToTop()));
+            null !== e && ((R.current = e), E(!e.isScrolledToTop()));
         }, []),
         [V, J] = i.useState(void 0);
     i.useEffect(() => {
@@ -196,10 +196,10 @@ function W(e) {
         return (0, r.jsx)(
             f.P3F,
             {
-                className: o()(G.tile, { [G.selected]: l }),
+                className: s()(G.tile, { [G.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    R.Z,
+                    A.Z,
                     {
                         source: e,
                         selectedSource: t,
@@ -230,7 +230,7 @@ function W(e) {
                             ];
                             return (
                                 l &&
-                                    s &&
+                                    o &&
                                     w &&
                                     e.push({
                                         name: L.intl.string(L.t.cWt5Up),
@@ -253,7 +253,7 @@ function W(e) {
                 ref: z,
                 className: G.sourceScroller,
                 onScroll: function () {
-                    let e = A.current;
+                    let e = R.current;
                     null != e && E(!e.isScrolledToTop());
                 },
                 children: [
@@ -283,11 +283,11 @@ function z(e) {
         "aria-checked": !1,
         onClick: n,
         tabIndex: 0,
-        className: o()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
+        className: s()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(A.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
@@ -298,7 +298,7 @@ function z(e) {
     });
 }
 function V(e) {
-    let { id: t, name: n, text: l, icon: s, onSelect: a } = e,
+    let { id: t, name: n, text: l, icon: o, onSelect: a } = e,
         c = i.useCallback(() => {
             a({
                 id: "prepicked:" + t,
@@ -311,11 +311,11 @@ function V(e) {
         "aria-checked": !1,
         onClick: c,
         tabIndex: 0,
-        className: o()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
+        className: s()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceTypeButtonInner,
             children: [
-                (0, r.jsx)(s, { size: "lg" }),
+                (0, r.jsx)(o, { size: "lg" }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-sm/medium",
                     color: "none",
@@ -327,7 +327,7 @@ function V(e) {
 }
 function J(e) {
     let { onSourceSelect: t, selectedSource: n } = e,
-        [l, s] = i.useState([]),
+        [l, o] = i.useState([]),
         [c, d] = i.useState({}),
         h = i.useRef(new u.Xp());
     i.useEffect(() => {
@@ -337,7 +337,7 @@ function J(e) {
                     let [t, n] = e;
                     return !n.disabled;
                 });
-                s(e),
+                o(e),
                     d(
                         U(
                             {},
@@ -433,7 +433,7 @@ function J(e) {
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: o()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
+                      className: s()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
                               onClick: j,
@@ -474,7 +474,7 @@ function J(e) {
 }
 function X(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: l } = e,
-        { lastPickerAction: o, lastPickerError: s } = (0, E.Z)(t, n);
+        { lastPickerAction: s, lastPickerError: o } = (0, E.Z)(t, n);
     return (
         i.useEffect(() => {
             (0, C.isLinux)() ||
@@ -482,14 +482,14 @@ function X(e) {
                 ? (0, P.T)(l)
                 : (0, P.t)();
         }, [l]),
-        o === T.Uc.Error
+        s === T.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: null != s && s.length > 0 ? s : L.intl.string(L.t.CKsXk3),
+                  children: null != o && o.length > 0 ? o : L.intl.string(L.t.CKsXk3),
               })
-            : (0, r.jsx)(A.Z, {
+            : (0, r.jsx)(R.Z, {
                   animated: !0,
                   className: G.nativePickerGuide,
               })

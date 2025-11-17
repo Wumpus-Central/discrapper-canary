@@ -1,9 +1,9 @@
 n.d(t, { Z: () => j }), n(388685), n(361932), n(187205);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     l = n.n(a),
-    o = n(509442),
+    o = n(636606),
     c = n(442837),
     s = n(481060),
     u = n(607070),
@@ -15,8 +15,8 @@ var r = n(951288),
     b = n(872269),
     h = n(228168),
     y = n(981631),
-    v = n(388032),
-    O = n(461671);
+    O = n(388032),
+    v = n(461671);
 function j(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, f.KZ)(),
@@ -57,7 +57,7 @@ function j(e) {
         );
     }, []),
         i.useEffect(() => {
-            I && s.uvj.announce(v.intl.string(v.t["0Y/qkL"]));
+            I && s.uvj.announce(O.intl.string(O.t["0Y/qkL"]));
         }, [I]);
     let T = i.useCallback(async () => {
             try {
@@ -100,29 +100,29 @@ function j(e) {
                   className: t,
                   style: e,
                   children: (0, r.jsxs)("section", {
-                      className: l()(O.content, { [O.emphasized]: a }),
-                      "aria-label": v.intl.string(v.t["odDw+z"]),
+                      className: l()(v.content, { [v.emphasized]: a }),
+                      "aria-label": O.intl.string(O.t["odDw+z"]),
                       children: [
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/medium",
                               color: "text-primary",
-                              className: O.message,
-                              children: v.intl.string(v.t["/lQiX/"]),
+                              className: v.message,
+                              children: O.intl.string(O.t["/lQiX/"]),
                           }),
                           (0, r.jsxs)("div", {
-                              className: O.actions,
+                              className: v.actions,
                               children: [
                                   (0, r.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: v.intl.string(v.t.yBZMsQ),
+                                      text: O.intl.string(O.t.yBZMsQ),
                                       onClick: C,
                                       disabled: !I || w,
                                   }),
                                   (0, r.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "primary",
-                                      text: v.intl.string(v.t["R3BPH+"]),
+                                      text: O.intl.string(O.t["R3BPH+"]),
                                       onClick: T,
                                       loading: w,
                                       disabled: !I || w,

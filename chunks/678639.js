@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685), n(642613);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(665149),
@@ -17,10 +17,10 @@ function g(e, t) {
 }
 function f(e) {
     let { store: t, dataGetter: n } = e,
-        [r, l] = i.useState(n(t));
+        [r, i] = l.useState(n(t));
     return (
-        i.useEffect(() => {
-            let e = () => l(n(t));
+        l.useEffect(() => {
+            let e = () => i(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -82,15 +82,15 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: i, renderSelectedTab: r } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: l, renderSelectedTab: r } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
         className: x.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(i, {}),
+            (0, a.jsx)(l, {}),
             (0, a.jsxs)(c.ZP, {
-                className: l()(h.headerBar, x.subPanelHeaderBar),
+                className: i()(h.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -104,10 +104,10 @@ function j(e) {
     });
 }
 function _() {
-    let e = i.useRef(null),
-        [t, n] = i.useState(""),
+    let e = l.useRef(null),
+        [t, n] = l.useState(""),
         r = s.yh.getAll(),
-        c = i
+        c = l
             .useMemo(
                 () =>
                     r
@@ -124,11 +124,11 @@ function _() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t),
             ),
-        [d, u] = i.useState(),
+        [d, u] = l.useState(),
         p = r.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(h.panel, x.panel),
+        className: i()(h.panel, x.panel),
         children: [
             (0, a.jsx)("div", {
                 className: x.toolbar,

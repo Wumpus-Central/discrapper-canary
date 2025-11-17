@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(442837),
     l = n(481060),
     o = n(434479),
@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(688438),
     d = n(981631),
     p = n(388032);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ let g = [
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            h(f({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
                                 directoryChannelId: t.id,
@@ -98,7 +98,7 @@ let g = [
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            h(f({}, n), {
                                 guild: e,
                                 channel: t,
                                 source: d.t4x.HUB_SIDEBAR,

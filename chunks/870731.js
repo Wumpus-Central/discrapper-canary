@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C }), n(388685);
-var l = n(951288),
-    r = n(647438),
+var l = n(54381),
+    r = n(473749),
     i = n(120356),
     a = n.n(i),
     s = n(399606),
@@ -15,8 +15,8 @@ var l = n(951288),
     b = n(52436),
     h = n(981631),
     v = n(332325),
-    g = n(388032),
-    j = n(245725);
+    j = n(388032),
+    g = n(245725);
 let O = r.memo(function (e) {
         let { allClips: t } = e,
             { query: i, setQuery: a } = (0, b.f)(),
@@ -87,47 +87,47 @@ let O = r.memo(function (e) {
             C = r.useCallback(() => a(""), [a]),
             w = null != d ? y.BB(d.shortcut, !0) : null;
         return (0, l.jsxs)("div", {
-            className: j.sidebarHeader,
+            className: g.sidebarHeader,
             children: [
                 (0, l.jsxs)("div", {
-                    className: j.profileHeader,
+                    className: g.profileHeader,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: j.titleWithKeybind,
+                            className: g.titleWithKeybind,
                             children: [
                                 (0, l.jsx)(o.Heading, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
-                                    children: g.intl.string(g.t.z2jK6X),
+                                    children: j.intl.string(j.t.z2jK6X),
                                 }),
                                 null != w &&
                                     (0, l.jsx)(o.M2$, {
-                                        className: j.keybind,
+                                        className: g.keybind,
                                         shortcut: w,
                                     }),
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: j.headerActions,
+                            className: g.headerActions,
                             children: [
                                 (0, l.jsx)(c.u, {
-                                    text: g.intl.string(g.t.X7yRDm),
+                                    text: j.intl.string(j.t.X7yRDm),
                                     children: (0, l.jsx)(o.hU, {
                                         onClick: x,
                                         icon: o.gXV,
                                         size: "sm",
                                         variant: p ? "active" : "icon-only",
-                                        "aria-label": g.intl.string(g.t.X7yRDm),
+                                        "aria-label": j.intl.string(j.t.X7yRDm),
                                     }),
                                 }),
                                 (0, l.jsx)(c.u, {
-                                    text: g.intl.string(g.t["3D5yo/"]),
+                                    text: j.intl.string(j.t["3D5yo/"]),
                                     children: (0, l.jsx)(o.hU, {
                                         onClick: O,
                                         icon: o.ewm,
                                         size: "sm",
                                         variant: "icon-only",
-                                        "aria-label": g.intl.string(g.t["3D5yo/"]),
+                                        "aria-label": j.intl.string(j.t["3D5yo/"]),
                                     }),
                                 }),
                             ],
@@ -135,9 +135,9 @@ let O = r.memo(function (e) {
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: j.searchContainer,
+                    className: g.searchContainer,
                     children: (0, l.jsx)(o.E1j, {
-                        placeholder: g.intl.string(g.t["5h0QOP"]),
+                        placeholder: j.intl.string(j.t["5h0QOP"]),
                         query: i,
                         onChange: a,
                         onClear: C,
@@ -150,23 +150,23 @@ let O = r.memo(function (e) {
     x = r.memo(function (e) {
         let { name: t, count: n, icon: r, isSelected: i, onClick: s } = e;
         return (0, l.jsxs)(o.P3F, {
-            className: a()(j.gameItem, { [j.selected]: i }),
+            className: a()(g.gameItem, { [g.selected]: i }),
             onClick: s,
             children: [
                 (0, l.jsxs)("div", {
-                    className: j.gameItemContent,
+                    className: g.gameItemContent,
                     children: [
                         r,
                         (0, l.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "currentColor",
-                            className: j.gameName,
+                            className: g.gameName,
                             children: t,
                         }),
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: j.countBadge,
+                    className: g.countBadge,
                     children: (0, l.jsx)(o.Text, {
                         variant: "text-xs/semibold",
                         color: "currentColor",
@@ -186,27 +186,27 @@ function C(e) {
         y = r.useCallback(() => c("favorites"), [c]),
         h = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
     return (0, l.jsxs)("div", {
-        className: j.sidebar,
+        className: g.sidebar,
         children: [
             (0, l.jsx)(O, { allClips: a }),
             (0, l.jsxs)(o.zJl, {
-                className: j.sidebarContent,
+                className: g.sidebarContent,
                 fade: !0,
                 children: [
                     (0, l.jsx)("div", {
-                        className: j.sidebarSection,
+                        className: g.sidebarSection,
                         children: (0, l.jsxs)("div", {
-                            className: j.gamesList,
+                            className: g.gamesList,
                             children: [
                                 (0, l.jsx)(x, {
-                                    name: g.intl.string(g.t.dPVrEv),
+                                    name: j.intl.string(j.t.dPVrEv),
                                     count: n.length,
                                     icon: (0, l.jsx)(o.AlX, {}),
                                     isSelected: null === s,
                                     onClick: f,
                                 }),
                                 (0, l.jsx)(x, {
-                                    name: g.intl.string(g.t["9rlCk1"]),
+                                    name: j.intl.string(j.t["9rlCk1"]),
                                     count: i.length,
                                     icon: (0, l.jsx)(o.h_8, {}),
                                     isSelected: "favorites" === s,
@@ -217,16 +217,16 @@ function C(e) {
                     }),
                     t.length > 0 &&
                         (0, l.jsxs)("div", {
-                            className: j.sidebarSection,
+                            className: g.sidebarSection,
                             children: [
                                 (0, l.jsx)(o.Heading, {
                                     variant: "heading-sm/medium",
                                     color: "text-tertiary",
-                                    className: j.sectionLabel,
-                                    children: g.intl.string(g.t.URyqtP),
+                                    className: g.sectionLabel,
+                                    children: j.intl.string(j.t.URyqtP),
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: j.gamesList,
+                                    className: g.gamesList,
                                     children: t.map((e) => {
                                         let { name: t, count: n, applicationId: r } = e;
                                         return (0, l.jsx)(

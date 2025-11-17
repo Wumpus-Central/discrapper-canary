@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
-var a = n(951288),
-    i = n(647438),
-    r = n(509442),
-    l = n(481060),
+var a = n(54381),
+    l = n(473749),
+    r = n(636606),
+    i = n(481060),
     s = n(313201),
     o = n(921944),
     c = n(388032),
@@ -10,8 +10,8 @@ var a = n(951288),
 function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, s.Dt)(),
-        x = i.useRef(null),
-        g = (0, l.q_F)({
+        x = l.useRef(null),
+        g = (0, i.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
                 height: p,
@@ -39,16 +39,16 @@ function u(e) {
                 (0, a.jsxs)("div", {
                     className: d.headerRow,
                     children: [
-                        (0, a.jsx)(l.P3F, {
+                        (0, a.jsx)(i.P3F, {
                             innerRef: x,
                             "aria-label": c.intl.string(c.t.WAI6xu),
                             className: d.closeButton,
                             onClick: () => {
                                 t(o.L.USER_DISMISS);
                             },
-                            children: (0, a.jsx)(l.Dio, { color: "currentColor" }),
+                            children: (0, a.jsx)(i.Dio, { color: "currentColor" }),
                         }),
-                        (0, a.jsx)(l.Heading, {
+                        (0, a.jsx)(i.Heading, {
                             id: h,
                             variant: "heading-lg/semibold",
                             children: n,
@@ -56,12 +56,12 @@ function u(e) {
                     ],
                 }),
                 null != u &&
-                    (0, a.jsx)(l.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
                         children: u,
                     }),
-                (0, a.jsx)(l.Ttm, {
+                (0, a.jsx)(i.Ttm, {
                     className: d.scroller,
                     fade: !0,
                     children: (0, a.jsx)("div", {

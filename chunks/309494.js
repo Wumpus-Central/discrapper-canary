@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p });
-var a = n(951288);
-n(647438);
-var i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var a = n(54381);
+n(473749);
+var l = n(120356),
+    r = n.n(l),
+    i = n(481060),
     s = n(320161),
     o = n(572004),
     c = n(51144),
@@ -12,7 +12,7 @@ var i = n(120356),
     m = n(508929);
 function p(e) {
     let { user: t, isVisible: n } = e,
-        { trackUserProfileAction: i } = (0, d.KZ)();
+        { trackUserProfileAction: l } = (0, d.KZ)();
     return o.wS
         ? (0, a.jsx)(s.Z, {
               text: u.intl.string(u.t.y5MwJy),
@@ -22,11 +22,11 @@ function p(e) {
                   decoration: "never",
                   identifiable: "always",
               }),
-              onCopy: () => i({ action: "COPY_USERNAME" }),
+              onCopy: () => l({ action: "COPY_USERNAME" }),
               children: (e) => {
-                  var t, i;
+                  var t, l;
                   return (0, a.jsx)(
-                      l.P3F,
+                      i.P3F,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -52,17 +52,17 @@ function p(e) {
                           }
                           return e;
                       })({}, e)),
-                      (i = i =
+                      (l = l =
                           {
                               className: r()(m.copyButton, { [m.visible]: n }),
                               "aria-label": u.intl.string(u.t.y5MwJy),
-                              children: (0, a.jsx)(l.TIy, {
+                              children: (0, a.jsx)(i.TIy, {
                                   size: "xs",
                                   color: "currentColor",
                               }),
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -70,8 +70,8 @@ function p(e) {
                                     n.push.apply(n, a);
                                 }
                                 return n;
-                            })(Object(i)).forEach(function (e) {
-                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                            })(Object(l)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
                             }),
                       t),
                   );

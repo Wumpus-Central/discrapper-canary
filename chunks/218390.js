@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => eh,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(913527),
@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(78839),
     L = n(483444),
     M = n(626135),
-    j = n(63063),
-    k = n(74538),
+    k = n(63063),
+    j = n(74538),
     U = n(140465),
     G = n(695349),
     B = n(46062),
@@ -72,7 +72,7 @@ function ed(e) {
         c = n || o,
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         d = $.GP[t.planIdFromItems],
-        _ = k.ZP.formatPriceString(k.ZP.getDefaultPrice(d.id), d.interval),
+        _ = j.ZP.formatPriceString(j.ZP.getDefaultPrice(d.id), d.interval),
         { enabled: h } = B.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
         m = () => {
             var e, t, n;
@@ -148,7 +148,7 @@ function ef() {
                               color: "always-white",
                               className: en.fractionalPremiumSubheader,
                               children: et.intl.format(et.t.sK7fGl, {
-                                  helpCenterLink: j.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: k.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -390,7 +390,7 @@ let eh = function () {
             note: null,
         });
     if ((!D && !L) || l) return (0, r.jsx)(p.$jN, {});
-    let j = !!(null == a ? void 0 : a.hasActiveTrial);
+    let k = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(v.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {
@@ -404,7 +404,7 @@ let eh = function () {
                         (0, r.jsx)(Q.Z, {
                             hideCTAs: !0,
                             headingOverride: et.intl.string(et.t.dnVvQS),
-                            hidePill: !j,
+                            hidePill: !k,
                             selectedPlanColumnClassName: en.tier2PlanComparisonTableBackground,
                             selectedPlanTier: $.PremiumTypes.TIER_2,
                         }),

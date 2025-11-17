@@ -1,6 +1,6 @@
 n.d(t, { Z: () => G }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(239091),
     d = n(146773),
     p = n(595519),
-    h = n(619915),
-    f = n(622822),
+    f = n(619915),
+    h = n(622822),
     g = n(201895),
     m = n(873696),
     b = n(66999),
@@ -105,8 +105,8 @@ class M extends I.ZP {
                 mentionCount: u,
                 connectChannelDropTarget: d,
                 connectChannelDragSource: p,
-                connectDragPreview: h,
-                canReorderChannel: f,
+                connectDragPreview: f,
+                canReorderChannel: h,
                 isSubscriptionGated: b,
                 isFavoriteSuggestion: _,
                 subtitle: y,
@@ -148,7 +148,7 @@ class M extends I.ZP {
                             subtitleColor: null == S ? void 0 : S.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
-                            connectDragPreview: f ? h : null,
+                            connectDragPreview: h ? f : null,
                             isFavoriteSuggestion: _,
                             channelTypeOverride: O ? w.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: j,
@@ -179,7 +179,7 @@ class M extends I.ZP {
                         }),
                 }),
             });
-        return f ? d(p(I)) : I;
+        return h ? d(p(I)) : I;
     }
     constructor(...e) {
         super(...e),
@@ -316,7 +316,7 @@ function G(e) {
         v = (0, a.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: E, isSubscriptionGated: S } = (0, b.Z)(t.id),
         I = (0, a.e7)([C.ZP], () => C.ZP.isFavorite(n.id, t.id)),
-        N = (0, f.$5)(t),
+        N = (0, h.$5)(t),
         Z = (0, p.NX)(t.id),
         A = (0, P.Z)({
             channel: t,
@@ -329,7 +329,7 @@ function G(e) {
             enableActivities: Z,
             resolvedUnreadSetting: g,
         }),
-        R = (0, h.ZP)(t);
+        R = (0, f.ZP)(t);
     return (0, r.jsx)(
         k,
         L(D({}, d, m, e), {

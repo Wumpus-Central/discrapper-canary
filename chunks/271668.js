@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -32,8 +32,8 @@ let w = 512,
     x = 7,
     L = 56,
     M = 16,
-    j = 32,
-    k = 20,
+    k = 32,
+    j = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
@@ -87,11 +87,11 @@ let w = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: k,
+                scrollOffset: j,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - w;
+                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - w;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -278,7 +278,7 @@ let w = 512,
                         rowCount: q.length,
                         rowCountBySection: eo,
                         rowHeight: L,
-                        sectionHeaderHeight: j,
+                        sectionHeaderHeight: k,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,

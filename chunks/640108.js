@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r,
     i,
-    a = n(951288),
-    o = n(647438),
+    a = n(54381),
+    o = n(473749),
     s = n(120356),
     l = n.n(s),
     c = n(392711),
@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -385,7 +385,7 @@ class q extends o.Component {
                                 duration: 200,
                             }),
                         ]),
-                        d.Z.spring(t, k(M({ toValue: 1.5 }, Z), { friction: 80 })),
+                        d.Z.spring(t, j(M({ toValue: 1.5 }, Z), { friction: 80 })),
                     ]).start();
             });
     }

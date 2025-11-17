@@ -5,11 +5,11 @@ n.d(t, {
 }),
     n(415506),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
-    o = n.n(l),
-    s = n(856901),
+    s = n.n(l),
+    o = n(856901),
     a = n(268146),
     c = n(442837),
     d = n(579806),
@@ -133,7 +133,7 @@ function C(e, t) {
                 l = j(v({}, e), { selectedSource: i }),
                 c = null == i ? void 0 : i.name;
             if (null != i && (null == (n = i.id) ? void 0 : n.startsWith(a.vA.CAMERA)) && null != c) {
-                let e = o().maxBy(Object.values(h.Z.getInputDevices()), (e) => (0, s.default)(c, e.name));
+                let e = s().maxBy(Object.values(h.Z.getInputDevices()), (e) => (0, o.default)(c, e.name));
                 l.audioSourceId = null != (r = null == e ? void 0 : e.id) ? r : h.Z.getInputDeviceId();
             }
             return l;
@@ -160,13 +160,13 @@ function O(e) {
 }
 function w(e, t, n) {
     var r, l;
-    let { defaultAutoQuality: o, allowAutoQuality: s } = (0, m._I)({ location: "useCreateGoLiveModalState" }),
+    let { defaultAutoQuality: s, allowAutoQuality: o } = (0, m._I)({ location: "useCreateGoLiveModalState" }),
         { preset: a, resolution: S, fps: y, soundshareEnabled: O } = (0, c.cj)([p.Z], () => p.Z.getState());
-    o && (a = g.ApplicationStreamPresets.PRESET_AUTO);
+    s && (a = g.ApplicationStreamPresets.PRESET_AUTO);
     let w = (0, c.e7)([h.Z], () => h.Z.getInputDeviceId()),
         P = null != (r = f.I0.useSetting()) && r,
         T = null != (l = f.eo.useSetting()) && l;
-    (a in g.ApplicationStreamPresets && (a !== g.ApplicationStreamPresets.PRESET_AUTO || s)) ||
+    (a in g.ApplicationStreamPresets && (a !== g.ApplicationStreamPresets.PRESET_AUTO || o)) ||
         (a = g.ApplicationStreamPresets.PRESET_VIDEO),
         (0, _.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, S, y, t, n) ||
             ((S = g.ApplicationStreamResolutions.RESOLUTION_720), (y = g.ApplicationStreamFPS.FPS_30));

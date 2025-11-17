@@ -1,9 +1,9 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(268146),
-    o = n(481060),
-    s = n(855403),
+    s = n(481060),
+    o = n(855403),
     a = n(59468),
     c = n(615161),
     d = n(157707);
@@ -19,18 +19,18 @@ function u() {
                     return;
                 }
                 (0, a.t)({
-                    width: 800,
-                    height: 451,
+                    width: 960,
+                    height: 540,
                     types: [l.vA.SCREEN, l.vA.WINDOW],
                 }).then((t) => {
                     var r;
                     let { screenSources: i, windowSources: l } = t,
-                        o =
+                        s =
                             null !=
-                            (r = l.find((t) => ("windowHandle" in e ? (0, s.Z)(t.id, e.windowHandle) : t.id === e.id)))
+                            (r = l.find((t) => ("windowHandle" in e ? (0, o.Z)(t.id, e.windowHandle) : t.id === e.id)))
                                 ? r
                                 : i.find((t) => e.id === t.id);
-                    null != o && n(o.url);
+                    null != s && n(s.url);
                 });
             }
         }, [e]),
@@ -38,7 +38,7 @@ function u() {
             className: d.root,
             children:
                 null == t
-                    ? (0, r.jsx)(o.$jN, {})
+                    ? (0, r.jsx)(s.$jN, {})
                     : (0, r.jsx)("img", {
                           src: t,
                           alt: "",

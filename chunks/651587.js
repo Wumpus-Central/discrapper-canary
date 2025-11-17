@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x }), n(388685), n(539854), n(953529);
-var l = n(951288),
-    r = n(647438),
+var l = n(54381),
+    r = n(473749),
     i = n(990547),
     a = n(442837),
     s = n(481060),
@@ -15,8 +15,8 @@ var l = n(951288),
     b = n(388032),
     h = n(280407);
 let v = 16 / 9,
-    g = [0, 16, 0, 16],
-    j = g[1] + g[3];
+    j = [0, 16, 0, 16],
+    g = j[1] + j[3];
 function O(e, t) {
     return Math.ceil(t / e);
 }
@@ -48,7 +48,7 @@ function x(e) {
             ),
             [],
         );
-    let Z = r.useMemo(() => {
+    let D = r.useMemo(() => {
             let e = [],
                 t = new Map(),
                 n = [],
@@ -92,11 +92,11 @@ function x(e) {
                 e
             );
         }, [x]),
-        { width: D } = I,
+        { width: Z } = I,
         { tileWidth: L, columns: H } = r.useMemo(
             () =>
                 (function (e, t) {
-                    let n = t - j,
+                    let n = t - g,
                         l = Math.max(1, Math.floor((n + 16) / 336)),
                         r = Math.max(320, (n - 16 * (l - 1)) / l),
                         i = O(l, e);
@@ -105,8 +105,8 @@ function x(e) {
                         columns: l,
                         rows: i,
                     };
-                })(x.length, D),
-            [x.length, D],
+                })(x.length, Z),
+            [x.length, Z],
         );
     r.useEffect(() => {
         !(async function () {
@@ -181,13 +181,13 @@ function x(e) {
             },
             [t],
         ),
-        A = r.useMemo(() => Z.map((e) => O(H, e.clips.length)), [Z, H]),
+        A = r.useMemo(() => D.map((e) => O(H, e.clips.length)), [D, H]),
         R = r.useMemo(() => A.reduce((e, t) => e + t, 0), [A]),
         V = Math.floor(L / v),
         _ = r.useCallback(
             (e, t) => {
                 let { sectionIndex: n, sectionRowIndex: r } = t,
-                    i = Z[n];
+                    i = D[n];
                 if (null == i) return null;
                 let a = r * H,
                     s = i.clips.slice(a, a + H);
@@ -214,18 +214,18 @@ function x(e) {
                     "row-".concat(n, "-").concat(r),
                 );
             },
-            [Z, H, L, M, N, T, w],
+            [D, H, L, M, N, T, w],
         ),
         U = r.useCallback(
             (e) => {
-                let t = Z[e];
+                let t = D[e];
                 return (null == t ? void 0 : t.description) != null ? 66 : 44;
             },
-            [Z],
+            [D],
         ),
         z = r.useCallback(
             (e) => {
-                let t = Z[e];
+                let t = D[e];
                 return null == t
                     ? null
                     : (0, l.jsxs)(
@@ -250,16 +250,16 @@ function x(e) {
                           "header-".concat(e),
                       );
             },
-            [Z],
+            [D],
         );
-    return P || 0 !== Z.length
+    return P || 0 !== D.length
         ? P
             ? (0, l.jsx)("div", {
                   className: h.spinnerContainer,
                   children: (0, l.jsx)(s.$jN, {}),
               })
             : (0, l.jsx)(o.Z, {
-                  listPadding: g,
+                  listPadding: j,
                   renderRow: _,
                   renderSectionHeader: z,
                   rowCount: R,

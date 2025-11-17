@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(481060),
@@ -74,8 +74,8 @@ let b = (e) => {
             currentCategoryId: m,
             handleSelectCategory: _,
             categoryCounts: y,
-            allEntriesCount: x,
-            isLoading: O,
+            allEntriesCount: O,
+            isLoading: j,
         } = e;
         return (0, r.jsx)("div", {
             className: h.pageContainer,
@@ -104,7 +104,7 @@ let b = (e) => {
                                     {
                                         className: f.tabBarItem,
                                         id: d.AR.ALL,
-                                        children: "".concat(p.intl.string(p.t.hEAa2a), " (").concat(x, ")"),
+                                        children: "".concat(p.intl.string(p.t.hEAa2a), " (").concat(O, ")"),
                                     },
                                     d.AR.ALL,
                                 ),
@@ -125,7 +125,7 @@ let b = (e) => {
                             ],
                         }),
                     }),
-                    O && null == n
+                    j && null == n
                         ? (0, r.jsx)(s.$jN, { className: h.spinner })
                         : null == n
                           ? void 0

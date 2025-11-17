@@ -1,6 +1,6 @@
 n.d(t, { $: () => B }), n(388685), n(781311);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(348327),
@@ -33,8 +33,8 @@ var i = n(951288),
     M = n(388032),
     R = n(787267),
     L = n(334405),
-    D = n(977007);
-function k(e) {
+    k = n(977007);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -79,7 +79,7 @@ function U(e, t) {
 }
 function B(e) {
     var t, n, l, o;
-    let { channel: B, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: V, setPopoutRef: F } = e,
+    let { channel: B, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: F, setPopoutRef: V } = e,
         G = r.useRef(null),
         z = (0, u.e7)([v.Z], () => v.Z.getCustomHangStatus()),
         W = (0, E.Z)(),
@@ -108,7 +108,7 @@ function B(e) {
     r.useEffect(() => {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
-            U(k({}, (0, x.Z)(B.id)), {
+            U(D({}, (0, x.Z)(B.id)), {
                 num_favorites: q.length,
                 num_recents: W.length,
             }),
@@ -122,8 +122,8 @@ function B(e) {
             en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? H(!0) : H(!1);
         }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, H, en]),
         r.useEffect(() => {
-            null == F || F(null == J ? void 0 : J.current);
-        }, [J, F]);
+            null == V || V(null == J ? void 0 : J.current);
+        }, [J, V]);
     let eg = r.useCallback(
             (e) => {
                 e !== er && ((0, y.Zx)(e, !0), null != ee && et(null), "" !== Q.trim() && $(""));
@@ -199,7 +199,7 @@ function B(e) {
                 let n = (0, j.Z)(t);
                 (!ep || e) &&
                     ((0, y.tg)(n ? t : t.status, n ? null : t.emoji),
-                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, x.Z)(B.id)), { favorited: !e })));
+                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(D({}, (0, x.Z)(B.id)), { favorited: !e })));
             },
             [B.id, ep],
         ),
@@ -268,7 +268,7 @@ function B(e) {
                 shouldShow: ef === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
                     type: "image",
-                    src: D.Z,
+                    src: k.Z,
                 },
                 targetElementRef: J,
                 onRequestClose: () => em(w.L.DISMISS),
@@ -297,7 +297,7 @@ function B(e) {
                                             setCustomStatusEmoji: et,
                                             selectedDefaultStatus: en || eh ? null : er,
                                             defaultStatusVariant: K,
-                                            setIsEmojiPickerOpen: V,
+                                            setIsEmojiPickerOpen: F,
                                         }),
                                     },
                                     trailing:

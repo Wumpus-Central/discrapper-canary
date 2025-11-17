@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g });
-var r = n(951288),
-    l = n(647438),
+n.d(t, { Z: () => p });
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(481060),
@@ -8,10 +8,10 @@ var r = n(951288),
     c = n(215023),
     u = n(388032),
     d = n(219588);
-function g(e) {
+function p(e) {
     let { handleTransition: t, onClose: n } = e,
         i = (0, s.B)("CollectiblesIndexPageContextMenu"),
-        g = l.useMemo(
+        p = l.useMemo(
             () => [
                 {
                     label: u.intl.string(u.t.dRZYNE),
@@ -44,7 +44,7 @@ function g(e) {
             onClose: n,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
-            children: g.map((e) =>
+            children: p.map((e) =>
                 (0, r.jsx)(
                     o.sNh,
                     {

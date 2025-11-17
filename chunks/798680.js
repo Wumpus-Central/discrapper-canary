@@ -6,8 +6,8 @@ n.d(t, {
     n(415506),
     n(388685);
 var r,
-    i = n(951288),
-    l = n(647438),
+    i = n(54381),
+    l = n(473749),
     a =
         (((r = {})[(r.BASIC_INFO = 0)] = "BASIC_INFO"),
         (r[(r.TIERS = 1)] = "TIERS"),

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x }), n(388685), n(642613), n(583741);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(359110),
     d = n(601070),
     p = n(91159),
-    h = n(488131),
-    f = n(496675),
+    f = n(488131),
+    h = n(496675),
     g = n(306680),
     m = n(594174),
     b = n(768581),
@@ -21,13 +21,13 @@ var r = n(951288),
     j = n(531198);
 function x(e) {
     let { channel: t } = e,
-        l = (0, a.Wu)([d.Z, g.ZP, f.Z], () => {
+        l = (0, a.Wu)([d.Z, g.ZP, h.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return o()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && f.Z.can(y.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && h.Z.can(y.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
@@ -110,7 +110,7 @@ function C(e) {
     return (0, r.jsxs)(s.P3F, {
         className: j.row,
         onClick: (e) => {
-            (0, h.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
+            (0, f.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
         },
         children: [
             null == n

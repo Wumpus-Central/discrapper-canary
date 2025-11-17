@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b }), n(388685), n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(481060),
     s = n(592125),
@@ -21,9 +21,9 @@ function b(e) {
         }),
         _ = (0, c.GG)(t),
         y = (0, c.YB)(t),
-        x = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        O = null == x ? void 0 : x.name,
-        j = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
+        O = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        j = null == O ? void 0 : O.name,
+        x = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
         v = i.useMemo(() => {
             let e = {};
             for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
@@ -34,7 +34,7 @@ function b(e) {
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: b.map((e) => e.id),
     }),
-    null == x)
+    null == O)
         ? (0, r.jsx)("div", {
               className: m.__invalid_spinnerContainer,
               children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner }),
@@ -46,8 +46,8 @@ function b(e) {
                       variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
                       children: g.intl.format(g.t.xHMpym, {
-                          serverName: O,
-                          channelName: null == j ? void 0 : j.name,
+                          serverName: j,
+                          channelName: null == x ? void 0 : x.name,
                       }),
                   }),
                   (0, r.jsx)(a.Text, {

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(388685);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     o = n(622535),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(63063),
     u = n(597688),
     d = n(297651),
-    g = n(794324),
-    p = n(215023),
+    p = n(794324),
+    g = n(215023),
     f = n(981631),
     h = n(388032),
     C = n(310582);
@@ -19,12 +19,12 @@ let m = (e) => {
         v = u.Z.getCategoryByStoreListingId(m.categoryStoreListingId),
         x = l.useRef(null),
         E = l.useRef(null),
-        [S, O] = l.useState();
+        [O, S] = l.useState();
     l.useEffect(() => {
         let e = E.current;
         if (null == e) return;
         let t = () => {
-            e.naturalWidth > 0 && e.naturalHeight > 0 && O(1080 * (e.naturalHeight / e.naturalWidth));
+            e.naturalWidth > 0 && e.naturalHeight > 0 && S(1080 * (e.naturalHeight / e.naturalWidth));
         };
         return (
             e.complete ? t() : (e.onload = t),
@@ -35,9 +35,9 @@ let m = (e) => {
     }, []);
     let y = null != (t = null == v ? void 0 : v.skuId) ? t : "",
         { handleCardVisibilityChange: j } = (0, d.E)(y, "home", "marketing wide banner"),
-        { bannerURL: k } = (0, g.UI)(m);
+        { bannerURL: k } = (0, p.UI)(m);
     if (null == k) return null;
-    let I = b === p.AW.ORBS;
+    let I = b === g.AW.ORBS;
     return (0, r.jsx)(o.$, {
         innerRef: x,
         onChange: j,
@@ -53,12 +53,12 @@ let m = (e) => {
                         src: k,
                         alt: m.title,
                         className: a()(C.wideBannerArt, { [C.wideBannerArtOrbs]: I }),
-                        style: { height: null != S ? "".concat(S, "px") : "auto" },
+                        style: { height: null != O ? "".concat(O, "px") : "auto" },
                     }),
                 }),
                 (0, r.jsx)("div", {
                     className: C.wideBannerContentContainer,
-                    style: { maxHeight: null != S ? "".concat(S, "px") : "auto" },
+                    style: { maxHeight: null != O ? "".concat(O, "px") : "auto" },
                     children: (0, r.jsxs)("div", {
                         className: C.wideBannerTextContainer,
                         children: [

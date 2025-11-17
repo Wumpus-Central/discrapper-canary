@@ -1,6 +1,6 @@
 n.d(t, { Z: () => en }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(392711),
     o = n.n(a),
     s = n(442837),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(313789),
     L = n(263937),
     M = n(996073),
-    j = n(273313),
-    k = n(518596),
+    k = n(273313),
+    j = n(518596),
     U = n(526761),
     G = n(726985),
     B = n(981631),
@@ -109,7 +109,7 @@ function en(e) {
     let t = (0, m.A)("UserSettingsAccessibility"),
         n = y.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         i = (0, E.A)("UserSettingsAccessibility");
-    return (0, r.jsx)(j.Z, {
+    return (0, r.jsx)(k.Z, {
         title: V.intl.string(V.t.G0neg7),
         children: (0, r.jsxs)(c.Kqy, {
             gap: 16,
@@ -175,7 +175,7 @@ function en(e) {
                         variant: "text-md/normal",
                         children: V.intl.format(V.t.DHpTjT, {
                             onAppearanceClick() {
-                                (0, k.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, j.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -394,7 +394,7 @@ function ed() {
                         label: V.intl.string(V.t["sSY+mD"]),
                         description: V.intl.format(V.t.u6UjrL, {
                             onThemeClick() {
-                                (0, k.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, j.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
                         }),
                         checked: e,

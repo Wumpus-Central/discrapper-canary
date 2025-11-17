@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(335818),
     a = n(481060),
     o = n(501431),
@@ -10,7 +10,7 @@ function u() {
     let { itemTypeFilters: e, searchQuery: t } = (0, o.S)((e) => e),
         { totalCount: n, isFetchingResults: u } = (0, s.a)(),
         d = (0, o.S)((e) => e.hasFilters()),
-        g = l.useCallback(() => {
+        p = l.useCallback(() => {
             if (!d) return "";
             if (u) return c.intl.string(c.t["/FaMSE"]);
             if ("" !== t) {
@@ -32,6 +32,6 @@ function u() {
         }, [e, n, d, t, u]);
     return (0, r.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
-        children: g(),
+        children: p(),
     });
 }

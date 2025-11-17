@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Q }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(512722),
     o = n.n(a),
     s = n(442837),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(626135),
     L = n(74538),
     M = n(413182),
-    j = n(695346),
-    k = n(265159),
+    k = n(695346),
+    j = n(265159),
     U = n(532495),
     G = n(981631),
     B = n(921944),
@@ -146,7 +146,7 @@ function Q() {
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
         Y = (0, s.e7)([D.Z], () => D.Z.showNotice()),
-        z = j.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
+        z = k.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
         Q = L.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, h.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
     q(), X(), i.useEffect(() => () => d.Z.wait(f.W3), []);
@@ -168,7 +168,7 @@ function Q() {
                                   {
                                       user: t,
                                       canUsePremiumCustomization: Q,
-                                      onUpsellClick: k.Z,
+                                      onUpsellClick: j.Z,
                                       pendingBio: z,
                                   },
                                   R,

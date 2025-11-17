@@ -1,10 +1,10 @@
 n.d(t, {
-    Z: () => j,
+    Z: () => k,
     p: () => M,
 }),
     n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(313666),
@@ -43,14 +43,14 @@ var r = n(951288),
             e
         );
     })({});
-function j(e) {
+function k(e) {
     let {
             containerContext: t,
             image: n,
             title: a,
             description: M,
-            enableSocialProof: j,
-            analyticsLocationSection: k,
+            enableSocialProof: k,
+            analyticsLocationSection: j,
             upsellViewedTrackingData: U,
             onClose: G,
             onDisplay: B,
@@ -60,16 +60,16 @@ function j(e) {
         V = (0, l.e7)([E.Z], () => E.Z.affinities),
         H = (0, l.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
-        !H && j && d.MH();
-    }, [H, j]),
+        !H && k && d.MH();
+    }, [H, k]),
         i.useEffect(() => {
             h.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, U), null == B || B();
         }, [B, U]);
-    let Y = V.length > 1 && j,
+    let Y = V.length > 1 && k,
         W = () => (2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
         K = () => {
             h.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: k,
+                location_section: j,
                 location_object: A.qAy.NAVIGATION_LINK,
             }),
                 null == Z || Z(),
@@ -149,7 +149,7 @@ function j(e) {
                                     }),
                                     (0, r.jsx)(O.Z, {
                                         premiumModalAnalyticsLocation: {
-                                            section: k,
+                                            section: j,
                                             object: A.qAy.BUTTON_CTA,
                                         },
                                         subscriptionTier: S.Si.TIER_2,
@@ -219,7 +219,7 @@ function j(e) {
                             (0, r.jsx)(v.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: k,
+                                    section: j,
                                     object: A.qAy.BUTTON_CTA,
                                 },
                                 subscriptionTier: S.Si.TIER_2,

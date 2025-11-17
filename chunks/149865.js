@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
-var r = n(951288),
-    l = n(647438),
-    o = n(481060),
-    i = n(36361),
+var r = n(54381),
+    l = n(473749),
+    i = n(481060),
+    o = n(36361),
     a = n(700875);
 let c = l.memo(function (e) {
     let { node: t } = e,
@@ -23,7 +23,7 @@ let c = l.memo(function (e) {
                 (0, r.jsxs)("div", {
                     className: a.header,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(i.Text, {
                             tag: "legend",
                             variant: "text-md/semibold",
                             color: "header-primary",
@@ -31,7 +31,7 @@ let c = l.memo(function (e) {
                             children: f,
                         }),
                         y
-                            ? (0, r.jsx)(o.Text, {
+                            ? (0, r.jsx)(i.Text, {
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
                                   id: p,
@@ -41,7 +41,7 @@ let c = l.memo(function (e) {
                             : null,
                     ],
                 }),
-                (0, r.jsx)(o.Kqy, {
+                (0, r.jsx)(i.Kqy, {
                     direction: "vertical",
                     gap: 8,
                     children: d.map((e, t) =>
@@ -49,10 +49,10 @@ let c = l.memo(function (e) {
                             l.Fragment,
                             {
                                 children: [
-                                    (0, r.jsx)(i.Z, { node: e }),
+                                    (0, r.jsx)(o.Z, { node: e }),
                                     "separators" === s &&
                                         t !== d.length - 1 &&
-                                        (0, r.jsx)(o.izJ, { className: a.divider }),
+                                        (0, r.jsx)(i.izJ, { className: a.divider }),
                                 ],
                             },
                             e.key,

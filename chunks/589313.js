@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g });
-var r = n(951288),
-    o = n(647438),
+n.d(t, { Z: () => E });
+var r = n(54381),
+    o = n(473749),
     l = n(692547),
     i = n(28664),
     a = n(481060),
@@ -12,27 +12,27 @@ var r = n(951288),
     p = n(215113),
     f = n(46140),
     v = n(388032);
-function g() {
+function E() {
     var e, t, n;
-    let { quest: g, sourceQuestContent: E, onClose: O } = o.useContext(p.VideoQuestModalContext),
+    let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(p.VideoQuestModalContext),
         { enabled: b } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
-        h = (0, c.tP)(g),
-        S = null != (0, s.LM)(g.config),
+        h = (0, c.tP)(E),
+        S = null != (0, s.LM)(E.config),
         C = (0, m.D)({
-            quest: g,
+            quest: E,
             questContent: u.jn.QUEST_HOME_DESKTOP,
-            sourceQuestContent: E,
+            sourceQuestContent: g,
             onClick: O,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
         y =
-            (null == (e = g.userStatus) ? void 0 : e.claimedAt) != null
+            (null == (e = E.userStatus) ? void 0 : e.claimedAt) != null
                 ? S
                     ? v.intl.string(v.t.WYchde)
                     : v.intl.string(v.t.vTgCWx)
                 : v.intl.string(v.t.cfY4PE),
         _ =
-            (null == (t = g.userStatus) ? void 0 : t.completedAt) == null && b
+            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null && b
                 ? h
                     ? v.intl.string(v.t.NJ6Bnm)
                     : v.intl.string(v.t.USNO1K)
@@ -56,10 +56,10 @@ function g() {
                                 },
                             },
                         };
-                })(g, b),
+                })(E, b),
                 onClick: C,
                 text: y,
-                disabled: (null == (n = g.userStatus) ? void 0 : n.completedAt) == null,
+                disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,
             }),
         }),
     });

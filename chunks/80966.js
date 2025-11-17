@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(403182),
     o = n(124347),
     s = n(640108),
@@ -109,8 +109,8 @@ class m extends i.Component {
                 onControlsHide: x,
                 onVolumeChange: L,
                 onMute: M,
-                disableArrowKeySeek: j,
-                alt: k = c.intl.string(c.t.FlNoSV),
+                disableArrowKeySeek: k,
+                alt: j = c.intl.string(c.t.FlNoSV),
             } = e,
             U = p(e, [
                 "src",
@@ -147,7 +147,7 @@ class m extends i.Component {
             _(
                 d(
                     {
-                        alt: k,
+                        alt: j,
                         className: i,
                         src: f,
                     },
@@ -167,7 +167,7 @@ class m extends i.Component {
                             } = e,
                             d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
-                            alt: k,
+                            alt: j,
                             className: u,
                             forceExternal: d,
                             src: t,
@@ -196,7 +196,7 @@ class m extends i.Component {
                             onControlsHide: x,
                             mimeType: S,
                             downloadable: b,
-                            disableArrowKeySeek: j,
+                            disableArrowKeySeek: k,
                         });
                     },
                 },

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(997841), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(533800),
     o = n(28664),
     s = n(481060),
@@ -61,7 +61,7 @@ function T(e) {
             currentUserId: x,
         } = e,
         L = x === w.author.id,
-        { channel: M, approximate_member_count: j, approximate_presence_count: k } = D,
+        { channel: M, approximate_member_count: k, approximate_presence_count: j } = D,
         U = D.state === b.r2o.ACCEPTING,
         G = null != M ? (0, p.jD)(M) : null,
         B = null != P,
@@ -154,10 +154,10 @@ function T(e) {
                       }),
                   ],
               })))
-            : (null != j && j >= 5) || (null != k && k > 0)
+            : (null != k && k >= 5) || (null != j && j > 0)
               ? (S = (0, r.jsx)(_.Z.Data, {
-                    members: j,
-                    membersOnline: k,
+                    members: k,
+                    membersOnline: j,
                 }))
               : Z &&
                 (S = (0, r.jsx)(_.Z.Channel, {

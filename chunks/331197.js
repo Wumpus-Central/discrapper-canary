@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     a = n(704215),
     o = n(582019),
@@ -32,10 +32,10 @@ function O(e) {
         { mute: w, suppress: M } = (0, y.Z)(t),
         R = (0, l.e7)([C.Z], () => C.Z.isDeaf()),
         L = w || M || R,
-        D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
-        [k, U] = (0, h.cv)(D),
+        k = (0, m.sR)({ isSoundboardButtonDisabled: L }),
+        [D, U] = (0, h.cv)(k),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: H, setIsHovered: V, onMouseEnter: F, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { isHovered: H, setIsHovered: F, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -97,7 +97,7 @@ function O(e) {
         (0, d.v)(P, d.d.SOUNDBOARD),
             E === x.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != E ? (Z(), F()) : Z(), null == S || S(x.D.SOUNDBOARD));
+                : (null != E ? (Z(), V()) : Z(), null == S || S(x.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
@@ -109,7 +109,7 @@ function O(e) {
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            V(!1), null == S || S(void 0);
+            F(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -117,14 +117,14 @@ function O(e) {
                 ? null
                 : (0, i.jsx)(v.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: F,
+                          onMouseEnter: V,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  D === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, i.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U,
@@ -151,7 +151,7 @@ function O(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    F(), T();
+                    V(), T();
                 },
                 onMouseLeave: () => {
                     null == E && (G(), N());

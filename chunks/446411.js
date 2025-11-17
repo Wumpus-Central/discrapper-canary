@@ -7,8 +7,8 @@ n.d(t, {
     n(953529),
     n(35282);
 var r,
-    i = n(951288),
-    a = n(647438),
+    i = n(54381),
+    a = n(473749),
     o = n(120356),
     s = n.n(o),
     l = n(481060),
@@ -39,8 +39,8 @@ var r,
     x = n(591759),
     L = n(468846),
     M = n(401419),
-    j = n(249458),
-    k = n(981631),
+    k = n(249458),
+    j = n(981631),
     U = n(217702),
     G = n(388032),
     B = n(781452),
@@ -141,7 +141,7 @@ function et(e) {
             onMute: w,
             href: x,
             placeholder: M,
-            placeholderVersion: j,
+            placeholderVersion: k,
             sourceMetadata: U,
         } = e,
         [G, Z] = a.useState(y),
@@ -153,12 +153,12 @@ function et(e) {
                 null == I || I(!1),
                 Z(!0),
                 F &&
-                    (N.S.dispatch(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
-                    N.S.subscribeOnce(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V));
+                    (N.S.dispatch(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
+                    N.S.subscribeOnce(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V));
         };
     a.useEffect(
         () => () => {
-            F && N.S.unsubscribe(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
+            F && N.S.unsubscribe(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
         },
         [F, V],
     );
@@ -179,7 +179,7 @@ function et(e) {
                 poster: X,
                 src: d.proxyURL,
                 placeholder: M,
-                placeholderVersion: j,
+                placeholderVersion: k,
                 width: Y,
                 height: W,
                 responsive: p,
@@ -267,7 +267,7 @@ function et(e) {
                 containerClassName: B.embedVideoImageComponent,
                 imageClassName: B.embedVideoImageComponentInner,
                 placeholder: M,
-                placeholderVersion: j,
+                placeholderVersion: k,
                 onClick: b && null != d ? H : null,
                 sourceMetadata: U,
                 analyticsSource: "EmbedVideo",
@@ -385,7 +385,7 @@ class er extends (r = a.PureComponent) {
                         height: 18,
                     }),
                 })
-              : (0, i.jsx)(j.G.Consumer, {
+              : (0, i.jsx)(k.G.Consumer, {
                     children: (o) => {
                         let { disableAnimations: l } = o;
                         return (0, i.jsxs)("div", {
@@ -485,7 +485,7 @@ class er extends (r = a.PureComponent) {
             { sourceMetadata: s } = this.state;
         return null == t
             ? null
-            : (0, i.jsx)(j.G.Consumer, {
+            : (0, i.jsx)(k.G.Consumer, {
                   children: (i) => {
                       let { disableAnimations: l } = i;
                       return a({
@@ -633,7 +633,7 @@ class er extends (r = a.PureComponent) {
     handleImageHover() {
         var e;
         let t = S.Z.getChannel(null == (e = this.props.message) ? void 0 : e.channel_id);
-        C.default.track(k.rMx.IMAGE_HOVERED, {
+        C.default.track(j.rMx.IMAGE_HOVERED, {
             guild_id: null == t ? void 0 : t.guild_id,
             channel_id: null == t ? void 0 : t.id,
             image_recommendations_shown: !1,
@@ -706,7 +706,7 @@ class er extends (r = a.PureComponent) {
             (0, i.jsx)(_.h.Consumer, {
                 children: (e) =>
                     (0, i.jsx)(
-                        j.G.Consumer,
+                        k.G.Consumer,
                         {
                             children: (t) => {
                                 let { disableAnimations: r } = t;
@@ -748,7 +748,7 @@ class er extends (r = a.PureComponent) {
         if (e)
             return null == o
                 ? null
-                : (0, i.jsx)(j.G.Consumer, {
+                : (0, i.jsx)(k.G.Consumer, {
                       children: (e) => {
                           let { disableAnimations: s } = e;
                           return (0, i.jsx)(en, {
@@ -801,7 +801,7 @@ class er extends (r = a.PureComponent) {
         let { autoPlayGif: e } = this.props,
             { footer: t, timestamp: n } = this.props.embed;
         return null != t
-            ? (0, i.jsx)(j.G.Consumer, {
+            ? (0, i.jsx)(k.G.Consumer, {
                   children: (r) => {
                       let { disableAnimations: a } = r;
                       return (0, i.jsxs)("div", {
@@ -855,7 +855,7 @@ class er extends (r = a.PureComponent) {
         });
         return (0, i.jsx)(l.Eep, {
             className: t,
-            readyState: k.zo9.READY,
+            readyState: j.zo9.READY,
             src: "",
             width: s,
             height: c,
@@ -872,13 +872,13 @@ class er extends (r = a.PureComponent) {
             { isVisible: n } = this.state;
         if (this.shouldShowStaticPlaceholder) return this.renderStaticPlaceholderMedia();
         switch (t.type) {
-            case k.hBH.GIFV:
+            case j.hBH.GIFV:
                 return this.renderVideo({
                     gifv: !0,
                     hiddenSpoiler: e,
                     isVisible: n,
                 });
-            case k.hBH.VIDEO:
+            case j.hBH.VIDEO:
             default:
                 if (null != t.video)
                     return this.renderVideo({
@@ -908,9 +908,9 @@ class er extends (r = a.PureComponent) {
             o = this.renderAuthor(i),
             s = this.renderTitle(i);
         switch (n.type) {
-            case k.hBH.IMAGE:
-            case k.hBH.VIDEO:
-            case k.hBH.GIFV:
+            case j.hBH.IMAGE:
+            case j.hBH.VIDEO:
+            case j.hBH.GIFV:
                 break;
             default:
                 e = this.renderDescription();
@@ -920,7 +920,7 @@ class er extends (r = a.PureComponent) {
         let c = this.renderFooter(),
             u = null == t;
         return (
-            n.type === k.hBH.RICH && (u = null == n.video),
+            n.type === j.hBH.RICH && (u = null == n.video),
             {
                 provider: a,
                 author: o,
@@ -946,9 +946,9 @@ class er extends (r = a.PureComponent) {
             maxWidth: o,
             maxHeight: s,
         });
-        if (!e && (i === k.hBH.VIDEO || c >= 300)) return c + W;
-        if (i === k.hBH.RICH && void 0 !== n) return X;
-        if (i === k.hBH.GIFV) {
+        if (!e && (i === j.hBH.VIDEO || c >= 300)) return c + W;
+        if (i === j.hBH.RICH && void 0 !== n) return X;
+        if (i === j.hBH.GIFV) {
             var u, d, f, _;
             let { width: e } = (0, D.Tj)({
                 width:
@@ -991,10 +991,10 @@ class er extends (r = a.PureComponent) {
     usesJustifiedAutoStyle() {
         let { embed: e } = this.props;
         return (
-            e.type === k.hBH.IMAGE ||
-            e.type === k.hBH.VIDEO ||
-            e.type === k.hBH.GIFV ||
-            ((e.type === k.hBH.RICH || e.type === k.hBH.ARTICLE) && (null != e.video || null != e.image))
+            e.type === j.hBH.IMAGE ||
+            e.type === j.hBH.VIDEO ||
+            e.type === j.hBH.GIFV ||
+            ((e.type === j.hBH.RICH || e.type === j.hBH.ARTICLE) && (null != e.video || null != e.image))
         );
     }
     getEmbedColor(e) {
@@ -1009,7 +1009,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: l, maxMediaHeight: u } = this.state;
         if (!this.usesJustifiedAutoStyle()) return;
         let d = e ? void 0 : this.getMaxWidth(!1);
-        if (void 0 === d && void 0 === i && o !== k.hBH.RICH) {
+        if (void 0 === d && void 0 === i && o !== j.hBH.RICH) {
             let e = null != r ? r : a;
             if (void 0 !== e) {
                 let { minWidth: n, minHeight: r } = null != (t = this.getMinSize()) ? t : {},
@@ -1054,7 +1054,7 @@ class er extends (r = a.PureComponent) {
                     embed: t,
                     className: r,
                 })
-              : (null == (e = t.provider) ? void 0 : e.name) === "Amazon Music" && t.type === k.hBH.RICH
+              : (null == (e = t.provider) ? void 0 : e.name) === "Amazon Music" && t.type === j.hBH.RICH
                 ? (0, i.jsx)(h.Z, {
                       embed: t,
                       className: r,

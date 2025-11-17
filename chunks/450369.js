@@ -2,8 +2,8 @@ n.d(t, {
     Q: () => k,
     Z: () => H,
 });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(512722),
     a = n.n(l),
     s = n(990547),
@@ -19,9 +19,9 @@ var r = n(951288),
     b = n(795318),
     _ = n(258609),
     y = n(569545),
-    x = n(102172),
-    O = n(728285),
-    j = n(352978),
+    O = n(102172),
+    j = n(728285),
+    x = n(352978),
     v = n(880395),
     C = n(456077),
     I = n(199902),
@@ -146,7 +146,7 @@ let k = 16 / 9,
                 popoutType: h,
             } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
-            { id: g, blocked: b, ignored: O } = t,
+            { id: g, blocked: b, ignored: j } = t,
             v = (0, o.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
             { selectedParticipant: C, largeStream: S } = (0, o.cj)([m.Z], () => ({
                 selectedParticipant: null != l ? m.Z.getSelectedParticipant(l.id) : null,
@@ -158,7 +158,7 @@ let k = 16 / 9,
                         e.type === A.fO.STREAM &&
                         0 === v.filter((t) => (0, y.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
                     ) {
-                        if (!(0, x.p9)(l, P.Z, E.Z, Z.Z, _.default)[0]) return;
+                        if (!(0, O.p9)(l, P.Z, E.Z, Z.Z, _.default)[0]) return;
                         (0, p.rn)((0, y.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == C ? void 0 : C.id) === e.id
@@ -174,9 +174,9 @@ let k = 16 / 9,
             {
                 participant: n,
                 aspectRatio: k,
-                fit: n.type === A.fO.USER ? j.L.COVER : void 0,
+                fit: n.type === A.fO.USER ? x.L.COVER : void 0,
                 blocked: b,
-                ignored: O,
+                ignored: j,
                 channel: l,
                 className: D.tile,
                 inCall: !0,
@@ -194,13 +194,13 @@ let k = 16 / 9,
         var t;
         let { participant: i, channel: l, width: c, popoutType: d } = e,
             { newestAnalyticsLocation: p } = (0, f.ZP)(h.Z.STAGE_TILE),
-            _ = (0, O.bp)(),
+            _ = (0, j.bp)(),
             y = l.getGuildId(),
-            x = S.default.getId();
+            O = S.default.getId();
         a()(null != y, "Channel cannot be guildless");
-        let { user: j } = i,
+        let { user: x } = i,
             C = (0, o.e7)([m.Z], () => m.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            I = (0, o.e7)([T.ZP], () => T.ZP.isModerator(j.id, l.id), [l.id, j.id]);
+            I = (0, o.e7)([T.ZP], () => T.ZP.isModerator(x.id, l.id), [l.id, x.id]);
         if (null == C || C.type === A.fO.ACTIVITY) return null;
         let E = (e) => {
                 (0, g.h)({
@@ -208,7 +208,7 @@ let k = 16 / 9,
                     name: s.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: "StageTile",
-                        is_tile_owner: j.id === x,
+                        is_tile_owner: x.id === O,
                         tile_type: e,
                     },
                 });
@@ -231,7 +231,7 @@ let k = 16 / 9,
                                                 exitFullscreen: () => {},
                                                 onInteraction: (0, b.u)("StreamContextMenu", p, {
                                                     entrypoint: a,
-                                                    targetUserId: j.id,
+                                                    targetUserId: x.id,
                                                     tileType: A.TH.STREAM,
                                                 }),
                                             }),
@@ -243,12 +243,12 @@ let k = 16 / 9,
                     case A.fO.USER:
                     default:
                         if ((E(A.TH.USER), i))
-                            return (0, v.D)(t, j, l, { context: _ }, (e, t) =>
+                            return (0, v.D)(t, x, l, { context: _ }, (e, t) =>
                                 (0, b.o)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: A.A5.THREE_DOT,
-                                    targetUserId: j.id,
+                                    targetUserId: x.id,
                                     location: p,
                                     tileType: A.TH.USER,
                                 }),
@@ -267,14 +267,14 @@ let k = 16 / 9,
                                     (0, r.jsx)(
                                         e,
                                         M(L({}, t), {
-                                            user: j,
+                                            user: x,
                                             guildId: y,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
                                             showChatItems: !1,
                                             onInteraction: (0, b.u)("GuildChannelUserContextMenu", p, {
-                                                targetUserId: j.id,
+                                                targetUserId: x.id,
                                                 tileType: A.TH.USER,
                                             }),
                                         }),
@@ -290,7 +290,7 @@ let k = 16 / 9,
                   rtcParticipant: C,
                   channel: l,
                   guildId: y,
-                  user: j,
+                  user: x,
                   width: c,
                   isModerator: I,
                   onContextMenu: Z,
@@ -301,7 +301,7 @@ let k = 16 / 9,
                   rtcParticipant: C,
                   channel: l,
                   guildId: y,
-                  user: j,
+                  user: x,
                   width: c,
                   isModerator: I,
                   onContextMenu: Z,

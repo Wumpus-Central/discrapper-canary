@@ -1,6 +1,6 @@
 n.d(t, { Z: () => o });
-var r = n(647438),
-    i = n(603113);
+var r = n(473749),
+    i = n(24156);
 let a = Object.freeze({ box: "border-box" });
 function o(e) {
     let { ref: t, onUpdate: n, resizeObserver: o, listenerMap: s, key: l } = e;

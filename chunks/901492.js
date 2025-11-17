@@ -1,6 +1,6 @@
 n.d(t, { default: () => c });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(755721),
     l = n(481060),
     o = n(933557),
@@ -32,7 +32,7 @@ function c(e) {
             return i;
         })(e, ["channel", "category"]);
     let p = (0, o.ZP)(c, !0),
-        h = (0, o.ZP)(u);
+        f = (0, o.ZP)(u);
     return (0, r.jsx)(
         l.ConfirmModal,
         ((t = (function (e) {
@@ -76,7 +76,7 @@ function c(e) {
                     selectable: !1,
                     children: a.intl.format(a.t["iKW+jY"], {
                         channelName: p,
-                        categoryName: h,
+                        categoryName: f,
                     }),
                 }),
             }),

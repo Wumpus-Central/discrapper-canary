@@ -2,7 +2,7 @@ n.d(t, {
     S$: () => m,
     yj: () => _,
 });
-var r = n(951288),
+var r = n(54381),
     i = n(442837),
     l = n(481060),
     o = n(695346),
@@ -12,8 +12,8 @@ var r = n(951288),
     u = n(88658),
     d = n(782896),
     p = n(981631),
-    h = n(361742),
-    f = n(388032),
+    f = n(361742),
+    h = n(388032),
     g = n(95049);
 let m = () => {
     (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: p.oAB.ACTIVITY_PRIVACY });
@@ -50,7 +50,7 @@ function _(e) {
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/semibold",
-                      children: f.intl.string(n ? h.default["3GrhnF"] : h.default["54ycKJ"]),
+                      children: h.intl.string(n ? f.default["3GrhnF"] : f.default["54ycKJ"]),
                   }),
                   (0, r.jsx)(d.c, { guildIds: p }),
               ],

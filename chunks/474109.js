@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(18998),
     a = n(664915),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(771845),
     d = n(613060),
     p = n(451478),
-    h = n(251625),
-    f = n(981631),
+    f = n(251625),
+    h = n(981631),
     g = n(388032);
 let m = "app-download-item",
     b = "add-server-item";
@@ -21,18 +21,18 @@ function y(e) {
     var t;
     let n = s.default.getMutableGuildStates();
     return (
-        (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) ||
+        (e === h.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(h.x8Z.SERVER_DISCOVERY_BADGE)) ||
         (e !== m && e !== b && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
     );
 }
-let O = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
+let O = (0, f.oH)((e, t, n) => ["null", ...t, ...e, b, h.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
     v = i.forwardRef(function (e, t) {
         var n, i;
         let d = (0, l.Wu)([u.ZP, c.Z, s.default], () =>
                 O(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
             ),
-            h = (0, l.e7)([p.Z], () => p.Z.isFocused()),
-            f = (0, l.e7)([a.Z], () => a.Z.getExpandedFolders());
+            f = (0, l.e7)([p.Z], () => p.Z.isFocused()),
+            h = (0, l.e7)([a.Z], () => a.Z.getExpandedFolders());
         return (0, r.jsx)(
             o.Z,
             ((n = (function (e) {
@@ -68,8 +68,8 @@ let O = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                     textUnread: g.intl.string(g.t.y2b7CA),
                     textMention: g.intl.string(g.t.y2b7CA),
                     isMentioned: y,
-                    animate: h,
-                    expandedFolders: f,
+                    animate: f,
+                    expandedFolders: h,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

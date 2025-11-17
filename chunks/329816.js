@@ -1,6 +1,6 @@
 n.d(t, { Z: () => $ });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(873546),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(429142),
     L = n(728285),
     M = n(813744),
-    j = n(746106),
-    k = n(526665),
+    k = n(746106),
+    j = n(526665),
     U = n(811513),
     G = n(314897),
     B = n(819640),
@@ -75,7 +75,7 @@ let X = (0, F.Un)({
     }),
     J = i.memo(function () {
         let e = (0, u.e7)([B.Z], () => B.Z.hasLayers()),
-            t = (0, k.wy)("AppSkeleton"),
+            t = (0, j.wy)("AppSkeleton"),
             n = (0, u.e7)([B.Z], () => B.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
             i = (0, f.s9z)(f.$sL),
             a = (0, u.e7)([G.default], () => G.default.isAuthenticated());
@@ -90,13 +90,13 @@ let X = (0, F.Un)({
             a = (0, Z.getPlatform)(),
             d = s.tq || s.Em,
             m = (0, u.e7)([g.Z], () => (g.Z.useForcedColors ? "yes" : "no")),
-            k = i.useRef(document.body),
+            j = i.useRef(document.body),
             G = "".concat(m);
         return (
             (0, C.G)(),
             (0, P.G)("AppSkeleton"),
             (0, r.jsx)(
-                j.w,
+                k.w,
                 {
                     children: (0, r.jsxs)(E.Z, {
                         children: [
@@ -104,7 +104,7 @@ let X = (0, F.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(R.Z, {
                                     children: (0, r.jsxs)(f.JcV, {
-                                        containerRef: k,
+                                        containerRef: j,
                                         children: [
                                             (0, r.jsx)(W.Co, {}),
                                             (0, r.jsx)(Y.ZP, {}),

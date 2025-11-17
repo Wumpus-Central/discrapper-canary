@@ -1,14 +1,14 @@
 n.d(t, { Z: () => c });
-var r = n(951288),
+var r = n(54381),
     l = n(793030),
-    o = n(28682);
-function i(e) {
+    i = n(28682);
+function o(e) {
     let { notice: t } = e,
-        { noticeType: n, useText: o } = t,
-        i = o();
+        { noticeType: n, useText: i } = t,
+        o = i();
     return (0, r.jsx)(l.M14, {
         type: n,
-        children: i,
+        children: o,
     });
 }
 function a(e) {
@@ -19,9 +19,9 @@ function a(e) {
 function c(e) {
     let { notice: t } = e;
     switch (t.type) {
-        case o.y1.INLINE_NOTICE:
-            return (0, r.jsx)(i, { notice: t });
-        case o.y1.STRONGLY_DISCOURAGED_CUSTOM:
+        case i.y1.INLINE_NOTICE:
+            return (0, r.jsx)(o, { notice: t });
+        case i.y1.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(a, { notice: t });
     }
 }

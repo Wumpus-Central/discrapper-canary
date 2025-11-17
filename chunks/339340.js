@@ -5,8 +5,8 @@ n.d(t, {
     n(388685),
     n(704826),
     n(35282);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(793030),
     o = n(399606),
     s = n(343817),
@@ -42,10 +42,10 @@ function T(e) {
             location_stack: T,
         });
     }, [t.guild_id, T]);
-    let j = (e) => {
+    let k = (e) => {
             x(new s.Hx(e, e.status).getAnyErrorMessage());
         },
-        k = (e) => {
+        j = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, L, t.id);
@@ -58,7 +58,7 @@ function T(e) {
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),
-                { hasErrors: a } = k(i);
+                { hasErrors: a } = j(i);
             if (!a) {
                 try {
                     let e = await l.ZP.updateVoiceChannelStatus(t.id, i.content);
@@ -72,9 +72,9 @@ function T(e) {
                               location_stack: T,
                           }),
                           S())
-                        : j(e);
+                        : k(e);
                 } catch (e) {
-                    j(e);
+                    k(e);
                 }
                 D(!1);
             }

@@ -5,8 +5,8 @@ n.d(t, {
     n(953529),
     n(388685),
     n(539854);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(692547),
     o = n(313666),
     s = n(635041),
@@ -137,8 +137,8 @@ function g(e) {
         { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: x } = C,
         L = null == y ? void 0 : y.horizontalControlColumnWidth,
         M = "group" === g || "radiogroup" === g,
-        j = M ? "span" : "label",
-        k = M ? "fieldset" : "div",
+        k = M ? "span" : "label",
+        j = M ? "fieldset" : "div",
         U = M
             ? (0, r.jsx)("legend", {
                   id: N,
@@ -152,7 +152,7 @@ function g(e) {
                   "aria-hidden": M,
                   "data-interactive": I,
                   id: N,
-                  tag: j,
+                  tag: k,
                   variant: "text-md/medium",
                   color: "text-primary",
                   htmlFor: R,
@@ -193,7 +193,7 @@ function g(e) {
         });
     return (0, r.jsx)(d.z.Provider, {
         value: C,
-        children: (0, r.jsxs)(k, {
+        children: (0, r.jsxs)(j, {
             role: g,
             ref: A,
             className: f.container,

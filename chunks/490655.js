@@ -1,6 +1,6 @@
-n.d(t, { Z: () => I }), n(388685), n(539854);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => P }), n(388685), n(539854);
+var i = n(54381),
+    r = n(473749),
     l = n(392711),
     a = n.n(l),
     o = n(442837),
@@ -24,7 +24,7 @@ var i = n(951288),
     N = n(981631),
     S = n(388032),
     E = n(134850);
-function w(e, t) {
+function I(e, t) {
     switch (e) {
         case N.b4C.APPLICATION:
             var n;
@@ -45,18 +45,18 @@ function w(e, t) {
             return "";
     }
 }
-let I = r.memo(function (e) {
+let P = r.memo(function (e) {
     let {
             section: t,
             sectionId: n,
             guild: l,
-            channel: I,
-            integrations: P,
+            channel: P,
+            integrations: w,
             editedIntegration: T,
             webhooks: Z,
             editedWebhook: k,
-            isFetchingWebhooks: D,
-            refToScroller: A,
+            isFetchingWebhooks: A,
+            refToScroller: D,
             errors: R,
             hasChanges: L,
         } = e,
@@ -74,7 +74,7 @@ let I = r.memo(function (e) {
                 "id",
             ),
         ),
-        H = null != I ? I : M,
+        H = null != P ? P : M,
         G = t === N.b4C.APPLICATION ? n : null,
         [F, K] = r.useState(d.$x),
         z = r.useCallback(
@@ -103,8 +103,8 @@ let I = r.memo(function (e) {
                 n = {},
                 i = [],
                 r = [];
-            if (null != P)
-                for (let i of P)
+            if (null != w)
+                for (let i of w)
                     if ("discord" === i.type) {
                         if (null != i.application) {
                             var l;
@@ -131,9 +131,9 @@ let I = r.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: r,
             };
-        }, [P, B, W, Z]);
+        }, [w, B, W, Z]);
     r.useEffect(() => {
-        if (!D)
+        if (!A)
             switch (t) {
                 case N.b4C.TWITCH:
                     null == J[N.ABu.TWITCH] && c.Z.setSection(N.b4C.OVERVIEW);
@@ -144,7 +144,7 @@ let I = r.memo(function (e) {
                 case N.b4C.APPLICATION:
                     (null != G && (G in Y || G in q)) || c.Z.setSection(N.b4C.OVERVIEW);
             }
-    }, [q, Y, J, G, t, D]),
+    }, [q, Y, J, G, t, A]),
         r.useEffect(() => {
             (null == l ? void 0 : l.id) != null &&
                 b.Z.getEntitlementsForGuildFetchState(l.id) === b.M.NOT_FETCHED &&
@@ -221,7 +221,7 @@ let I = r.memo(function (e) {
         case N.b4C.WEBHOOKS:
             $ = (0, i.jsx)(C.Z, {
                 guild: l,
-                channel: I,
+                channel: P,
                 customWebhooks: Q,
                 editedWebhook: k,
                 selectableWebhookChannels: (function (e) {
@@ -250,7 +250,7 @@ let I = r.memo(function (e) {
                     return e;
                 })({}, B, W),
                 canNavigate: z,
-                refToScroller: A,
+                refToScroller: D,
                 errors: R,
             });
             break;
@@ -260,12 +260,12 @@ let I = r.memo(function (e) {
         default:
             $ = (0, i.jsx)(_.Z, {
                 guild: l,
-                channel: I,
+                channel: P,
                 applicationIntegrations: q,
                 builtInIntegrations: J,
                 customWebhooks: Q,
                 followedChannelWebhooks: X,
-                isLoadingWebhooks: D || null == l,
+                isLoadingWebhooks: A || null == l,
                 canCreateWebhook: null != H,
                 onManageCustomWebhooks: () => {
                     c.Z.setSection(N.b4C.WEBHOOKS);
@@ -299,13 +299,13 @@ let I = r.memo(function (e) {
                     t === N.b4C.OVERVIEW
                         ? (0, i.jsx)(s.Heading, {
                               variant: "heading-lg/semibold",
-                              children: w(N.b4C.OVERVIEW),
+                              children: I(N.b4C.OVERVIEW),
                           })
                         : (0, i.jsx)(s.OoM, {
                               activeId: t.toString(),
                               breadcrumbs: [N.b4C.OVERVIEW, t].map((e) => ({
                                   id: e.toString(),
-                                  label: w(e, q[G]),
+                                  label: I(e, q[G]),
                               })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && V(parseInt(e.id));

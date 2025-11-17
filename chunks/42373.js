@@ -1,6 +1,6 @@
 n.d(t, { Z: () => C }), n(953529);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -148,8 +148,8 @@ let A = (e) => {
             x = (0, h.rO)(),
             L = i.useRef(null),
             M = i.useRef(0),
-            j = S(n),
-            k = i.useMemo(
+            k = S(n),
+            j = i.useMemo(
                 () =>
                     (0, s.debounce)(() => {
                         p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
@@ -204,7 +204,7 @@ let A = (e) => {
                             (0, r.jsx)(A, {
                                 descriptionCta: c,
                                 onClick: R,
-                                debouncedOnClickAnalytics: k,
+                                debouncedOnClickAnalytics: j,
                                 enablePremiumBrandRefreshDesign: w,
                             }),
                     ],
@@ -240,7 +240,7 @@ let A = (e) => {
                           children: [(0, r.jsx)(F, {}), (0, r.jsx)(Z, {})],
                       }),
             Y = {
-                className: o()(w ? y.backgroundColor : j, B.boxContainer, B["".concat(D)], w && y.gradientBackground),
+                className: o()(w ? y.backgroundColor : k, B.boxContainer, B["".concat(D)], w && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => U }), n(388685), n(539854), n(35282);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -81,10 +81,10 @@ function M(e, t) {
     );
 }
 new g.Z("ChannelEditor.tsx");
-let j = function () {
+let k = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    k = 1000;
+    j = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,7 +106,7 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
@@ -250,8 +250,8 @@ class U extends i.Component {
                 required: P,
                 maxCharacterCount: w,
                 allowNewLines: L,
-                isEditorIdle: j,
-                currentAutocompleteType: k,
+                isEditorIdle: k,
+                currentAutocompleteType: j,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 accessibilityLabel: B,
@@ -292,8 +292,8 @@ class U extends i.Component {
                 }),
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                isEditorIdle: j,
-                currentAutocompleteType: k,
+                isEditorIdle: k,
+                currentAutocompleteType: j,
                 disableAutoFocus: u.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = V.id) ? a : void 0,
@@ -456,7 +456,7 @@ class U extends i.Component {
                     },
                     v = null != s ? s : c,
                     { files: I, errors: T } = G(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (j(
+                return (k(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => S }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(509442),
+    a = n(636606),
     s = n(893999),
     c = n(442837),
     u = n(28664),
     d = n(481060),
     p = n(570140),
-    h = n(45114),
-    f = n(367907),
+    f = n(45114),
+    h = n(367907),
     g = n(703656),
     m = n(592125),
     b = n(259580),
@@ -58,7 +58,7 @@ let S = i.memo(function (e) {
                 r = n > t ? e - (n - t) : e;
             c([e, e - r]);
         }
-        let { opacity: p, size: h } = (0, d.q_F)(
+        let { opacity: p, size: f } = (0, d.q_F)(
                 {
                     config: {
                         clamp: !0,
@@ -73,16 +73,16 @@ let S = i.memo(function (e) {
                 },
                 "animate-always",
             ),
-            f = {
+            h = {
                 opacity: p,
-                height: h.to((e) => {
+                height: f.to((e) => {
                     var t, n;
                     return u ? ((t = o), (n = s) + (t - n) * e) : "auto";
                 }),
             };
         return (0, r.jsx)(a.animated.div, {
             ref: l,
-            style: f,
+            style: h,
             children: (0, r.jsx)(I, E({}, e)),
         });
     }),
@@ -98,7 +98,7 @@ let S = i.memo(function (e) {
                     "messages" !== t.type ||
                     0 !== t.messages.length ||
                     p.Z.wait(() => {
-                        (0, h.ack)(
+                        (0, f.ack)(
                             t.channelId,
                             {
                                 section: j.jXE.INBOX,
@@ -114,7 +114,7 @@ let S = i.memo(function (e) {
         )
             return null;
         let s = (e, r) => {
-            (0, f.yw)(j.rMx.INBOX_CHANNEL_CLICKED, {
+            (0, h.yw)(j.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
             });
@@ -172,7 +172,7 @@ function P(e) {
               }),
         onClick: function () {
             o && null != t.guildId ? i(t.guildId) : n(t),
-                (0, f.yw)(j.rMx.INBOX_CHANNEL_ACKED, {
+                (0, h.yw)(j.rMx.INBOX_CHANNEL_ACKED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     marked_all_channels_as_read: !1,
@@ -189,7 +189,7 @@ function N(e) {
             className: o()(C.collapseButton, { [C.collapsed]: t.collapsed }),
             onClick: function () {
                 n(t),
-                    (0, f.yw)(j.rMx.INBOX_CHANNEL_COLLAPSED, {
+                    (0, h.yw)(j.rMx.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         num_unread_channels_remaining: i(),

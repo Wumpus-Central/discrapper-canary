@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    o = n(481060),
-    i = n(550964);
+var r = n(54381),
+    l = n(473749),
+    i = n(481060),
+    o = n(550964);
 function a(e) {
     let { node: t } = e,
         {
@@ -20,8 +20,8 @@ function a(e) {
         j = u(),
         m = null == d ? void 0 : d(),
         v = null == f ? void 0 : f();
-    return (0, r.jsx)(i.X, {
-        children: (0, r.jsx)(o.iRW, {
+    return (0, r.jsx)(o.X, {
+        children: (0, r.jsx)(i.iRW, {
             label: j,
             description: m,
             disabled: v,

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(539854);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(990547),
     a = n(731965),
     o = n(442837),
@@ -38,8 +38,8 @@ function S(e) {
         M = (0, o.e7)([y.Z], () => y.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, x.d)(),
         L = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
-        D = (0, b.bt)(I.id, t),
-        k = r.useCallback(() => {
+        k = (0, b.bt)(I.id, t),
+        D = r.useCallback(() => {
             (0, a.j)(() => {
                 x.d.setState({ dismissedActivityEntryPointTileChannel: I.id });
             });
@@ -54,11 +54,11 @@ function S(e) {
     let U = (0, o.e7)([C.Z], () => I.isPrivate() || (0, f.b)(C.Z, M, I), [M, I]),
         B = (null == M ? void 0 : M.afkChannelId) === I.id,
         H = I.userLimit <= 0 || I.userLimit > 1,
-        V = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        F = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        V = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
         z = null != R && R === I.id,
-        W = D.map(
+        W = k.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     _.ZP,
@@ -92,18 +92,18 @@ function S(e) {
     ),
         null != M &&
             !B &&
-            (!(L >= 2) || !V || G || F || z
+            (!(L >= 2) || !F || G || V || z
                 ? H &&
                   1 === L &&
                   U &&
-                  (V && !G
+                  (F && !G
                       ? W.push((e) =>
                             (0, i.jsx)(v.h, {
                                 channel: I,
                                 guild: M,
                                 width: e,
                                 inPopout: w,
-                                handleClose: k,
+                                handleClose: D,
                                 userParticipantCount: L,
                             }),
                         )
@@ -121,16 +121,16 @@ function S(e) {
                           guild: M,
                           width: e,
                           inPopout: w,
-                          handleClose: k,
+                          handleClose: D,
                           userParticipantCount: L,
                       }),
                   ));
     let q = r.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = D[e]) ? void 0 : t.id) ? n : "empty-tile";
+            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : "empty-tile";
         },
-        [D],
+        [k],
     );
     return (0, i.jsx)(g.Z, {
         className: Z,

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => x });
-var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+n.d(t, { Z: () => g });
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    o = n.n(i),
     a = n(481060),
     c = n(782568),
     s = n(163379),
@@ -42,7 +42,7 @@ function v(e) {
         }),
     });
 }
-function x() {
+function g() {
     let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
@@ -96,7 +96,7 @@ function x() {
                             return (0, r.jsx)(v, { onClose: t });
                         },
                         children: (t, n) => {
-                            var l, o;
+                            var l, i;
                             return (0, r.jsx)(
                                 a.Anchor,
                                 ((l = (function (e) {
@@ -124,11 +124,11 @@ function x() {
                                     }
                                     return e;
                                 })({}, t)),
-                                (o = o =
+                                (i = i =
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: i()(m.moreButton, { [m.active]: n.isShown }),
+                                        className: o()(m.moreButton, { [m.active]: n.isShown }),
                                         children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
@@ -137,7 +137,7 @@ function x() {
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -145,8 +145,8 @@ function x() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(o)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                      })(Object(i)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                       }),
                                 l),
                             );

@@ -5,8 +5,8 @@ n.d(t, {
     n(997841),
     n(388685);
 var r,
-    i = n(951288),
-    a = n(647438),
+    i = n(54381),
+    a = n(473749),
     o = n(120356),
     s = n.n(o),
     l = n(512722),
@@ -37,8 +37,8 @@ var r,
     x = n(122810),
     L = n(833664),
     M = n(503438),
-    j = n(802856),
-    k = n(420660),
+    k = n(802856),
+    j = n(420660),
     U = n(39628),
     G = n(701488),
     B = n(981631),
@@ -156,7 +156,7 @@ class $ extends (r = a.PureComponent) {
         return (0, D.l)(F, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
-        return (0, k.Z)(this.activity) && "ActivityFeed" === this.props.type;
+        return (0, j.Z)(this.activity) && "ActivityFeed" === this.props.type;
     }
     renderHeader(e) {
         let t,
@@ -233,7 +233,7 @@ class $ extends (r = a.PureComponent) {
         let { type: u } = this.props,
             { assets: d, application_id: _ } = e;
         if (null == d || (null == d.large_image && null == d.small_image)) return null;
-        (0, k.Z)(e) && (o = q[u]);
+        (0, j.Z)(e) && (o = q[u]);
         let p = (0, M.Z)(e),
             h =
                 null != d.large_image
@@ -434,7 +434,7 @@ class $ extends (r = a.PureComponent) {
         }
         return null == o || "" === o
             ? null
-            : ((0, k.Z)(e) && (o = Z.intl.formatToPlainString(Z.t.gmCZRY, { game: o })), null != t)
+            : ((0, j.Z)(e) && (o = Z.intl.formatToPlainString(Z.t.gmCZRY, { game: o })), null != t)
               ? (0, i.jsx)(f.P3F, {
                     onClick: t,
                     title: null != s ? s : void 0,
@@ -443,7 +443,7 @@ class $ extends (r = a.PureComponent) {
                 })
               : (0, i.jsx)("div", {
                     title: null != s ? s : void 0,
-                    className: (0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
+                    className: (0, j.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
                     children: o,
                 });
     }
@@ -452,11 +452,11 @@ class $ extends (r = a.PureComponent) {
         return n && null != t
             ? null == r
                 ? (0, i.jsx)("div", {
-                      className: (0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
+                      className: (0, j.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
                       children: Z.intl.format(Z.t["hq/Qze"], { guildName: t.name }),
                   })
                 : (0, i.jsxs)("div", {
-                      className: s()((0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details, F.guildDetails),
+                      className: s()((0, j.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details, F.guildDetails),
                       children: [
                           (0, i.jsx)(O.Z, {
                               guild: t,
@@ -591,7 +591,7 @@ class $ extends (r = a.PureComponent) {
         let u = "ActivityFeed" === t,
             d = "StreamPreview" === t,
             _ = !1;
-        (0, j.Z)(c)
+        (0, k.Z)(c)
             ? ((e = this.renderXboxImage()), (_ = !0))
             : null == (e = this.renderImage(c)) && (_ = null != (e = this.renderGameImage(c)));
         let p = this.renderName(c),

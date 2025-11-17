@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
     o = n.n(l),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(481060),
     d = n(884338),
     p = n(100527),
-    h = n(906732),
-    f = n(150039),
+    f = n(906732),
+    h = n(150039),
     g = n(892001),
     m = n(271383),
     b = n(430824),
@@ -140,9 +140,9 @@ class S {
 function I(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        l = (0, f.gc)(n),
+        l = (0, h.gc)(n),
         o = Array(l.length).fill(null),
-        { analyticsLocations: g } = (0, h.ZP)(p.Z.AKA),
+        { analyticsLocations: g } = (0, f.ZP)(p.Z.AKA),
         m = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: r } = e,
                 l = (0, a.e7)([_.default], () => _.default.getUser(t), [t]),
@@ -178,7 +178,7 @@ function I(e) {
         }, [O]);
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
         ? (0, r.jsx)("div", { className: C.spacer })
-        : (0, r.jsxs)(h.Gt, {
+        : (0, r.jsxs)(f.Gt, {
               value: g,
               children: [
                   (0, r.jsx)(v.iz, { className: C.divider }),

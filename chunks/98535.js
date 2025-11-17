@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v }), n(388685);
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     i = n(442837),
     a = n(607070),
     o = n(594174),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(597688),
     u = n(1870),
     d = n(870289),
-    g = n(149705),
-    p = n(929255),
+    p = n(149705),
+    g = n(929255),
     f = n(752053),
     h = n(81136),
     C = n(566564),
@@ -28,7 +28,7 @@ function v(e) {
         h = x();
     E(h);
     let v = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        [S, O] = l.useState(void 0),
+        [O, S] = l.useState(void 0),
         [y, j] = l.useState(!0),
         k = l.useCallback(
             (e) => {
@@ -42,12 +42,12 @@ function v(e) {
                 c(t, n);
                 let a = r && !v,
                     s = i ? _.AW.ORBS : _.AW.CATALOG;
-                O(n), j(!l), o(s, a);
+                S(n), j(!l), o(s, a);
             },
             [v, o, c],
         ),
         I = (0, d.FF)("CollectiblesContent"),
-        { searchError: T } = (0, g.a)();
+        { searchError: T } = (0, p.a)();
     return I && null != T
         ? (0, r.jsx)(m.Z, {})
         : null != h
@@ -62,13 +62,13 @@ function v(e) {
                   tab: t,
                   transitionState: s,
               })
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(g.Z, {
                   tab: t,
                   sortedCategories: n,
-                  initialCategoryId: S,
+                  initialCategoryId: O,
                   showFilterInitially: y,
                   onUnmount: () => {
-                      O(void 0), j(!0);
+                      S(void 0), j(!0);
                   },
               });
 }

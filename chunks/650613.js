@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685), n(361932), n(187205);
-var a = n(951288),
-    i = n(442837),
+var a = n(54381),
+    l = n(442837),
     r = n(481060),
-    l = n(100527),
+    i = n(100527),
     s = n(892001),
     o = n(594174),
     c = n(719247),
@@ -14,14 +14,14 @@ var a = n(951288),
     x = n(281327);
 function g(e) {
     let { id: t } = e,
-        n = (0, i.e7)([o.default], () => o.default.getUser(t));
+        n = (0, l.e7)([o.default], () => o.default.getUser(t));
     return null == n
         ? null
         : (0, a.jsx)(r.P3F, {
               className: x.entryAuthor,
               onClick: function () {
                   (0, s.openUserProfileModal)({
-                      sourceAnalyticsLocations: [l.Z.DEV_TOOLS],
+                      sourceAnalyticsLocations: [i.Z.DEV_TOOLS],
                       userId: t,
                   });
               },
@@ -33,16 +33,16 @@ function g(e) {
 }
 function f() {
     var e;
-    let t = (0, i.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
-        n = (0, i.e7)([u.Z], () => u.Z.getFilters()),
-        l = (0, i.cj)([c.Z], () => {
+    let t = (0, l.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
+        n = (0, l.e7)([u.Z], () => u.Z.getFilters()),
+        i = (0, l.cj)([c.Z], () => {
             var e;
             let n = {};
             for (let a of null != (e = null == t ? void 0 : t.entries) ? e : [])
                 n[(0, c.T)(a.content)] = c.Z.canRenderContent(a.content);
             return n;
         }, [t]),
-        s = (0, i.e7)([d.Z], () => d.Z.getImpressionCappedItemIds());
+        s = (0, l.e7)([d.Z], () => d.Z.getImpressionCappedItemIds());
     if (null == n) return null;
     let o =
         null == t || null == (e = t.entries)
@@ -50,7 +50,7 @@ function f() {
             : e.flatMap((e) => {
                   let { content: t } = e;
                   if (!(0, m.g)(n, t)) return [];
-                  let i = l[(0, c.T)(t)];
+                  let l = i[(0, c.T)(t)];
                   return (0, a.jsxs)(
                       "li",
                       {
@@ -60,7 +60,7 @@ function f() {
                                   type: t.author_type,
                                   id: t.author_id,
                               }),
-                              !i &&
+                              !l &&
                                   (0, a.jsx)(r.Text, {
                                       variant: "text-md/normal",
                                       children: "Expired or no matching presence",

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(881052),
+    i = n(881052),
     s = n(972959),
     o = n(729345),
     c = n(620481),
@@ -29,13 +29,13 @@ function p() {
         x = m.useField("isUploading"),
         g = m.useField("isSuccess"),
         f = m.useField("errorMessage"),
-        b = i.useCallback(async () => {
+        b = l.useCallback(async () => {
             let {
                 includeFrecency: e,
                 includeFriends: t,
                 includeGDMs: n,
                 includeDMs: a,
-                includeQuickSwitcherState: i,
+                includeQuickSwitcherState: l,
                 includeUserSearchWorkerState: r,
                 isUploading: s,
             } = m.getState();
@@ -50,7 +50,7 @@ function p() {
                         n && (0, c.mo)(),
                         a && (0, c.FB)(),
                         e && (0, c.Sr)(),
-                        i && (0, c.OC)(),
+                        l && (0, c.OC)(),
                         r && (0, c.Jt)(),
                         await (0, o.E)(u.GU0.WEB_APP),
                         m.setState({
@@ -58,7 +58,7 @@ function p() {
                             errorMessage: null,
                         });
                 } catch (t) {
-                    let e = new l.Hx(t);
+                    let e = new i.Hx(t);
                     m.setState({ errorMessage: e.getAnyErrorMessage() });
                 } finally {
                     m.setState({ isUploading: !1 });

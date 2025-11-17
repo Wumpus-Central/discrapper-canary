@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -113,7 +113,7 @@ let O = function (e) {
             onMouseEnter: L,
             onMouseLeave: M,
         } = e,
-        j = b(e, [
+        k = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -136,12 +136,12 @@ let O = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let k = (0, s.e7)([_.Z], () =>
+    let j = (0, s.e7)([_.Z], () =>
             (null == x ? void 0 : x.guildId) == null || (null == x ? void 0 : x.colorRoleId) == null
                 ? null
                 : _.Z.getRole(x.guildId, x.colorRoleId),
         ),
-        U = (0, f.yH)(null == x ? void 0 : x.guildId, k) && (0, d.S2)(x),
+        U = (0, f.yH)(null == x ? void 0 : x.guildId, j) && (0, d.S2)(x),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
@@ -187,7 +187,7 @@ let O = function (e) {
                                     }),
                                     ref: N,
                                 },
-                                j,
+                                k,
                             ),
                             {
                                 role: "article",

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O });
-var i = n(951288);
-n(647438);
+var i = n(54381);
+n(473749);
 var r = n(442837),
     l = n(481060),
     a = n(812206),
@@ -34,13 +34,13 @@ function O(e) {
         M = (0, h.Z)(I),
         R = (0, y.Z)(I),
         L = (0, m.Z)(O, T, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
-        D = (0, p.Z)(I),
-        k = (0, C.Z)(),
+        k = (0, p.Z)(I),
+        D = (0, C.Z)(),
         U = (0, c.$A)(I),
         B = (0, c.j8)(I),
         H = (0, b.Z)(A, P),
-        V = (0, g.Z)(w, I),
-        F = (0, f.Z)(),
+        F = (0, g.Z)(w, I),
+        V = (0, f.Z)(),
         G = (0, o.Z)(O);
     return (0, i.jsxs)(l.v2r, {
         className: j.menu,
@@ -55,16 +55,16 @@ function O(e) {
                 children: [
                     Z === _.d4z.GUILD_STAGE_VOICE ? U : null,
                     Z === _.d4z.GUILD_STAGE_VOICE ? B : null,
-                    E || Z === _.d4z.GUILD_STAGE_VOICE ? null : D,
-                    F,
+                    E || Z === _.d4z.GUILD_STAGE_VOICE ? null : k,
+                    V,
                     Z !== _.d4z.GUILD_STAGE_VOICE ? M : null,
                     Z === _.d4z.GUILD_STAGE_VOICE || Z === _.d4z.GUILD_VOICE ? R : null,
                 ],
             }),
             (0, i.jsx)(l.kSQ, { children: G }),
-            (0, i.jsx)(l.kSQ, { children: k }),
+            (0, i.jsx)(l.kSQ, { children: D }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != A ? H : null, null != w ? V : null],
+                children: [null != A ? H : null, null != w ? F : null],
             }),
         ],
     });

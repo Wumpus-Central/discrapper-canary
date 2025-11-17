@@ -1,6 +1,6 @@
 n.d(t, { Z: () => F }), n(539854), n(361932), n(187205);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(512722),
@@ -32,7 +32,7 @@ var r = n(951288),
     x = n(245335),
     L = n(388032),
     M = n(969016);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -207,18 +207,18 @@ function F(e) {
                 return b.id === t;
             });
         }),
-        j = I.Z.getChannel(null == (n = s.channel) ? void 0 : n.id),
-        k = (0, c.e7)([S.Z], () => null != j && S.Z.can(D.Plq.USE_EMBEDDED_ACTIVITIES, j), [j]),
+        k = I.Z.getChannel(null == (n = s.channel) ? void 0 : n.id),
+        j = (0, c.e7)([S.Z], () => null != k && S.Z.can(D.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: U } = (0, h.ZP)(p.Z.INVITE_EMBED),
         G = (0, c.Wu)(
             [_.ZP],
             () =>
-                null != j
-                    ? _.ZP.getEmbeddedActivitiesForChannel(j.id)
+                null != k
+                    ? _.ZP.getEmbeddedActivitiesForChannel(k.id)
                           .filter((e) => e.applicationId === b.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [j, b.id],
+            [k, b.id],
         ),
         B = (0, c.Wu)([A.default], () => G.map((e) => A.default.getUser(e)).filter((e) => null != e), [G]),
         Z = i.useCallback(() => {
@@ -250,8 +250,8 @@ function F(e) {
               ? L.intl.string(L.t.sqe0hj)
               : L.intl.string(L.t.RscU7I)
         : L.intl.string(L.t["2BP08E"]);
-    let Y = (H && !k) || (H && w);
-    return (k || (o = L.intl.string(L.t.hHGrWz)), null == s.code || "" === s.code || null == N)
+    let Y = (H && !j) || (H && w);
+    return (j || (o = L.intl.string(L.t.hHGrWz)), null == s.code || "" === s.code || null == N)
         ? null
         : (0, r.jsx)(h.Gt, {
               value: U,
@@ -259,7 +259,7 @@ function F(e) {
                   app: N,
                   activityUsers: B,
                   isMember: H,
-                  channel: j,
+                  channel: k,
                   guild: v,
                   message: u,
                   members: m,
@@ -317,7 +317,7 @@ function V(e) {
     return (0, r.jsx)(
         m.W,
         G(
-            k(
+            j(
                 {
                     header: t.name,
                     title: L.intl.string(L.t["7vb6nw"]),

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -54,12 +54,12 @@ function R() {
             (0, p.Z)(R.id, R.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
     }, [null == a ? void 0 : a.id, R]);
     let M = !0,
-        j = !0;
+        k = !0;
     return (
         w &&
             1 === x.length &&
             (x.includes(A.s6.PROFILE_SERVER_PROFILES)
-                ? (L(S.NB.GUILD), (j = !1))
+                ? (L(S.NB.GUILD), (k = !1))
                 : x.includes(A.s6.PROFILE_USER_PROFILE) && (L(S.NB.USER_PROFILE), (M = !1))),
         (0, r.jsxs)(h.N, {
             header: C.intl.string(C.t["vi7f+q"]),
@@ -71,7 +71,7 @@ function R() {
                     selectedItem: P,
                     onItemSelect: L,
                     children: [
-                        j
+                        k
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {

@@ -4,17 +4,17 @@ n.d(t, {
     c: () => c,
     g: () => o,
 });
-var a = n(951288);
-n(647438);
-var i = n(793030),
+var a = n(54381);
+n(473749);
+var l = n(793030),
     r = n(481060),
-    l = n(281598),
+    i = n(281598),
     s = n(117910);
 let o = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal",
     d = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(i.Modal, {
+        return (0, a.jsx)(l.Modal, {
             transitionState: t,
             title: "Upload Instructions",
             actions: [
@@ -57,7 +57,7 @@ let o = "shop-assets-preview-instructions-modal",
                     }),
                     (0, a.jsx)("ul", {
                         className: s.instructionsList,
-                        children: Object.keys(l.Kj).map((e) => (0, a.jsx)("li", { children: e }, e)),
+                        children: Object.keys(i.Kj).map((e) => (0, a.jsx)("li", { children: e }, e)),
                     }),
                 ],
             }),
@@ -65,7 +65,7 @@ let o = "shop-assets-preview-instructions-modal",
     },
     u = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(i.Modal, {
+        return (0, a.jsx)(l.Modal, {
             transitionState: t,
             title: "PFX Preview Instructions",
             actions: [

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => D }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(370523),
     l = n(442837),
     o = n(952265),
@@ -15,8 +15,8 @@ var r = n(951288),
     b = n(602733),
     h = n(594174),
     y = n(221292),
-    v = n(621853),
-    O = n(471341),
+    O = n(621853),
+    v = n(471341),
     j = n(661462),
     x = n(319396),
     _ = n(654544),
@@ -81,12 +81,12 @@ function D(e) {
             wishlistId: n,
             currentUser: _,
             wishlistSettings: P,
-        } = (0, l.cj)([v.Z, h.default], () => {
-            let e = v.Z.getFirstWishlistId(t.id);
+        } = (0, l.cj)([O.Z, h.default], () => {
+            let e = O.Z.getFirstWishlistId(t.id);
             return {
                 wishlistId: e,
                 currentUser: h.default.getCurrentUser(),
-                wishlistSettings: null != e ? v.Z.getWishlistSettings(t.id, e) : null,
+                wishlistSettings: null != e ? O.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
         D = (0, g.c)({ location: "user-profile-modal-v2-wishlist" }),
@@ -97,8 +97,8 @@ function D(e) {
     i.useEffect(() => {
         (null == P ? void 0 : P.visibility) != null && R(P.visibility === a.f.PUBLIC);
     }, [null == P ? void 0 : P.visibility]);
-    let { wishlist: G, error: L } = (0, b.kZ)(n, t.id),
-        B = i.useCallback(
+    let { wishlist: L, error: M } = (0, b.kZ)(n, t.id),
+        G = i.useCallback(
             (e) => {
                 let { wishlistId: t, action: n, skuId: r } = e;
                 null != t &&
@@ -111,23 +111,23 @@ function D(e) {
             },
             [k],
         ),
-        M = (0, O.Z)({
+        B = (0, v.Z)({
             wishlistId: n,
-            onAction: B,
+            onAction: G,
         }),
         U = i.useCallback(() => {
             var e;
             if (null == n) return;
             let t = Z ? a.f.PRIVATE : a.f.PUBLIC;
             R(!Z), m.Z.updateWishlistVisibility(n, t);
-            let r = null != (e = null == G ? void 0 : G.hasThirdPartySku()) && e;
+            let r = null != (e = null == L ? void 0 : L.hasThirdPartySku()) && e;
             (0, y.Er)({
                 wishlistId: n,
                 action: Z ? I.NW.WISHLIST_TOGGLE_PRIVATE : I.NW.WISHLIST_TOGGLE_PUBLIC,
                 analyticsLocations: k,
                 hasThirdPartySku: r,
             });
-        }, [n, Z, k, G]),
+        }, [n, Z, k, L]),
         F = i.useCallback(() => {
             (0, o.pT)(),
                 (0, f.mK)({
@@ -138,9 +138,9 @@ function D(e) {
         W = i.useCallback(() => {
             (0, o.pT)(), (0, p.Z)({ guildId: w.ON });
         }, []);
-    return null != L
+    return null != M
         ? null
-        : null == G || 0 === G.items.length
+        : null == L || 0 === L.items.length
           ? (0, r.jsx)(j.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
@@ -190,7 +190,7 @@ function D(e) {
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        ref: M,
+                        ref: B,
                         className: E.headerRow,
                         children: [
                             (0, r.jsxs)("div", {
@@ -199,7 +199,7 @@ function D(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: S.intl.format(S.t.r6Y1Lg, { count: G.items.length }),
+                                        children: S.intl.format(S.t.r6Y1Lg, { count: L.items.length }),
                                     }),
                                     !Z &&
                                         (0, r.jsx)(c.u, {
@@ -252,7 +252,7 @@ function D(e) {
                         ],
                     }),
                     (0, r.jsx)(x.Z, {
-                        items: G.items,
+                        items: L.items,
                         profileOwner: t,
                         isOwner: N,
                     }),

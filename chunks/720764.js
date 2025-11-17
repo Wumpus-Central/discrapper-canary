@@ -1,6 +1,6 @@
 n.d(t, { Z: () => j }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var i = n(54381),
+    r = n(473749),
     l = n(780384),
     a = n(481060),
     o = n(668781),
@@ -28,8 +28,8 @@ function j(e) {
             canNavigate: N,
         } = e,
         S = (0, d.ZP)(),
-        [E, w] = r.useState(null),
-        [I, P] = r.useState(null);
+        [E, I] = r.useState(null),
+        [P, w] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(y);
@@ -57,7 +57,7 @@ function j(e) {
                     null
                 );
             });
-            null != e && (P(e.id), w(e));
+            null != e && (w(e.id), I(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {

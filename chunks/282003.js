@@ -1,383 +1,198 @@
-n.d(t, { k: () => b }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(481060),
-    o = n(821849),
-    s = n(45474),
-    l = n(29594),
-    c = n(146528),
-    u = n(729154),
-    d = n(981631),
-    f = n(362786),
-    _ = n(474936),
-    p = n(231338);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let b = () => {
-        let [e, t] = i.useState(_.PremiumTypes.TIER_0),
-            [n, h] = i.useState(s.R.WHAT_YOU_LOSE),
-            [g, b] = i.useState(null),
-            [O, v] = i.useState(_.Xh.PREMIUM_MONTH_TIER_0),
-            [I, T] = i.useState([]),
-            [S, A] = i.useState(() => {
-                let e = new Date();
-                return e.setMonth(e.getMonth() + 1), e;
-            }),
-            [C, N] = i.useState(null),
-            [R, P] = i.useState(!1),
-            [D, w] = i.useState(!1),
-            [x, L] = i.useState(!1);
-        (0, i.useEffect)(() => {
-            (0, o.Y2)();
-        }, []),
-            (0, i.useEffect)(() => {
-                let e = new Date();
-                switch (O) {
-                    case _.Xh.PREMIUM_MONTH_TIER_0:
-                    case _.Xh.PREMIUM_MONTH_TIER_1:
-                    case _.Xh.PREMIUM_MONTH_TIER_2:
-                        e.setMonth(e.getMonth() + 1);
-                        break;
-                    case _.Xh.PREMIUM_YEAR_TIER_0:
-                    case _.Xh.PREMIUM_YEAR_TIER_1:
-                    case _.Xh.PREMIUM_YEAR_TIER_2:
-                        e.setFullYear(e.getFullYear() + 1);
-                }
-                A(e);
-            }, [O]),
-            (0, i.useEffect)(() => {
-                switch (e) {
-                    case _.PremiumTypes.TIER_0:
-                        T([
-                            {
-                                label: "Nitro Basic Monthly",
-                                value: _.Xh.PREMIUM_MONTH_TIER_0,
-                            },
-                            {
-                                label: "Nitro Basic Yearly",
-                                value: _.Xh.PREMIUM_YEAR_TIER_0,
-                            },
-                        ]),
-                            v(_.Xh.PREMIUM_MONTH_TIER_0);
-                        break;
-                    case _.PremiumTypes.TIER_1:
-                        T([
-                            {
-                                label: "Nitro Classic Monthly",
-                                value: _.Xh.PREMIUM_MONTH_TIER_1,
-                            },
-                            {
-                                label: "Nitro Classic Yearly",
-                                value: _.Xh.PREMIUM_YEAR_TIER_1,
-                            },
-                        ]),
-                            v(_.Xh.PREMIUM_MONTH_TIER_1);
-                        break;
-                    case _.PremiumTypes.TIER_2:
-                        T([
-                            {
-                                label: "Nitro Monthly",
-                                value: _.Xh.PREMIUM_MONTH_TIER_2,
-                            },
-                            {
-                                label: "Nitro Yearly",
-                                value: _.Xh.PREMIUM_YEAR_TIER_2,
-                            },
-                        ]),
-                            v(_.Xh.PREMIUM_MONTH_TIER_2);
-                }
-            }, [e]),
-            (0, i.useEffect)(() => {
-                [s.R.CONFIRM_DISCOUNT, s.R.DISCOUNT_APPLIED].includes(n) && null === g && b(y()),
-                    n === s.R.PREVIEW &&
-                        null === C &&
-                        N(
-                            new c.Z({
-                                id: "",
-                                invoiceItems: [
-                                    {
-                                        id: "",
-                                        subscriptionPlanId: O,
-                                        subscriptionPlanPrice: 200,
-                                        amount: 400,
-                                        quantity: 1,
-                                        discounts: [],
-                                    },
-                                    {
-                                        id: "",
-                                        subscriptionPlanId: _.Xh.PREMIUM_MONTH_GUILD,
-                                        subscriptionPlanPrice: 400,
-                                        amount: 100,
-                                        quantity: 1,
-                                        discounts: [],
-                                    },
-                                ],
-                                total: 200,
-                                currency: p.pK.USD,
-                                tax: 0,
-                                taxInclusive: !0,
-                                subscriptionPeriodStart: new Date(),
-                                subscriptionPeriodEnd: S,
-                                status: d.hUK.PAID,
-                            }),
-                        ),
-                    n !== s.R.PREVIEW && null !== C && N(null);
-            }, [n, g, S, O, C]);
-        let M = i.useCallback(async () => {
-            L(!0),
-                await (0, a.ZDy)(
-                    async () => (t) =>
-                        (0, r.jsx)(
-                            u.x,
-                            E(m({}, t), {
-                                onClose: () => {
-                                    t.onClose(), L(!1);
-                                },
-                                premiumType: e,
-                                churnDiscount: g,
-                                planId: O,
-                                renewalInvoice: C,
-                                renewalInvoiceDetails: {
-                                    intervalType: _.rV.MONTH,
-                                    intervalCount: 1,
-                                },
-                                errorOnCancel: R,
-                                errorOnRedeem: D,
-                                setActiveStep: (e) => {
-                                    h(e), t.onClose();
-                                },
-                                activeStep: n,
-                                premiumSubscription: {
-                                    id: "",
-                                    planId: O,
-                                    type: p.NY.PREMIUM,
-                                    items: [],
-                                    createdAt: new Date(),
-                                    canceledAt: null,
-                                    currentPeriodStart: new Date(),
-                                    currentPeriodEnd: S,
-                                    status: d.O0b.ACTIVE,
-                                    paymentSourceId: null,
-                                    paymentGateway: null,
-                                    paymentGatewayPlanId: null,
-                                    paymentGatewaySubscriptionId: null,
-                                    trialId: null,
-                                    trialEndsAt: null,
-                                    renewalMutations: null,
-                                    streakStartedAt: null,
-                                    currency: p.pK.USD,
-                                    pauseEndsAt: null,
-                                    pauseReason: f.Id.UNKNOWN,
-                                },
-                            }),
-                        ),
-                );
-        }, [e, g, O, C, R, D, n, S]);
+var r =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        },
+    i = n(512722),
+    a = n(543251),
+    o = n(227705),
+    s = n(879173),
+    l = n(947827),
+    c = n(791059),
+    u = n(605507),
+    d = n(190040),
+    f = n(46817),
+    _ = n(187006);
+n(830884);
+var p = n(365049),
+    h = n(687560),
+    m = n(875583),
+    g = function (e, t, n) {
+        if (e instanceof s) {
+            var i = r({}, t),
+                a = r({}, t);
+            for (var o in t) {
+                var l = t[o],
+                    c = l.x,
+                    u = l.y;
+                void 0 !== c && void 0 !== u && ((i[o] = c), (a[o] = u));
+            }
+            return y([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
+        }
+        return null;
+    },
+    E = function e(t, n) {
         return (
-            (0, i.useEffect)(() => {
-                x && M();
-            }, [n, x, M]),
-            (0, r.jsxs)(l.pg, {
-                children: [
-                    (0, r.jsxs)(l.BZ, {
-                        children: [
-                            (0, r.jsx)(a.Text, {
-                                variant: "text-md/semibold",
-                                children: "Premium Subscription",
-                            }),
-                            (0, r.jsx)(a.PhF, {
-                                placeholder: "Premium Type",
-                                select: (e) => t(e),
-                                isSelected: (t) => e === t,
-                                serialize: (e) => "".concat(e),
-                                options: [
-                                    {
-                                        label: "Nitro Basic",
-                                        value: _.PremiumTypes.TIER_0,
-                                    },
-                                    {
-                                        label: "Nitro Classic",
-                                        value: _.PremiumTypes.TIER_1,
-                                    },
-                                    {
-                                        label: "Nitro",
-                                        value: _.PremiumTypes.TIER_2,
-                                    },
-                                ],
-                            }),
-                        ],
-                    }),
-                    I.length > 0 &&
-                        (0, r.jsxs)(l.BZ, {
-                            children: [
-                                (0, r.jsx)(a.Text, {
-                                    variant: "text-md/semibold",
-                                    children: "Subscription Interval",
-                                }),
-                                (0, r.jsx)(a.PhF, {
-                                    placeholder: "Premium Type",
-                                    select: (e) => {
-                                        v(e);
-                                    },
-                                    isSelected: (e) => O === e,
-                                    serialize: (e) => e,
-                                    options: I,
-                                }),
-                            ],
-                        }),
-                    (0, r.jsxs)(l.BZ, {
-                        children: [
-                            (0, r.jsx)(a.Text, {
-                                variant: "text-md/semibold",
-                                children: "Modal Step",
-                            }),
-                            (0, r.jsx)(a.PhF, {
-                                placeholder: "Premium Type",
-                                select: (e) => {
-                                    h(e);
-                                },
-                                isSelected: (e) => n === e,
-                                serialize: (e) => "".concat(e),
-                                options: [
-                                    {
-                                        label: "What You Lose",
-                                        value: s.R.WHAT_YOU_LOSE,
-                                    },
-                                    {
-                                        label: "Confirm Discount",
-                                        value: s.R.CONFIRM_DISCOUNT,
-                                    },
-                                    {
-                                        label: "Discount Applied",
-                                        value: s.R.DISCOUNT_APPLIED,
-                                    },
-                                    {
-                                        label: "Confirm Cancel",
-                                        value: s.R.CONFIRM,
-                                    },
-                                    {
-                                        label: "Preview Invoice",
-                                        value: s.R.PREVIEW,
-                                    },
-                                ],
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)(l.BZ, {
-                        children: (0, r.jsx)(a.Checkbox, {
-                            checked: null !== g,
-                            onChange: () => {
-                                if (null === g) return void b(y());
-                                b(null);
-                            },
-                            label: "Churn Discount",
-                        }),
-                    }),
-                    (0, r.jsx)(l.BZ, {
-                        children: (0, r.jsx)(a.Checkbox, {
-                            checked: D,
-                            onChange: () => {
-                                w(!D);
-                            },
-                            label: "Error on Redeem Offer",
-                        }),
-                    }),
-                    (0, r.jsx)(l.BZ, {
-                        children: (0, r.jsx)(a.Checkbox, {
-                            checked: R,
-                            onChange: () => {
-                                P(!R);
-                            },
-                            label: "Error on Cancel",
-                        }),
-                    }),
-                    (0, r.jsx)(l.dv, {}),
-                    (0, r.jsx)(a.Button, {
-                        onClick: () => {
-                            L(!0);
-                        },
-                        variant: "primary",
-                        size: "md",
-                        text: "Open Cancellation Modal",
-                    }),
-                ],
-            })
+            g(t, n, e) || {
+                start: function (e) {
+                    var r = t,
+                        i = n;
+                    r.stopTracking(),
+                        n.toValue instanceof a ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
+                },
+                stop: function () {
+                    t.stopAnimation();
+                },
+            }
         );
     },
-    y = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            { discount: t = {} } = e;
-        return E(
-            m(
-                {
-                    id: "",
-                    discount_id: "",
-                    user_id: "",
-                },
-                e,
-            ),
-            {
-                discount: m(
-                    {
-                        id: "",
-                        plan_ids: [],
-                        user_usage_limit: 3,
-                        user_usage_limit_interval: _.EA.MONTH,
-                        user_usage_limit_interval_count: 3,
-                        amount: "40",
-                    },
-                    t,
-                ),
+    b = function (e) {
+        var t = 0;
+        return {
+            start: function (n) {
+                var r = function r(i) {
+                    if (!i.finished || ++t === e.length) {
+                        n && n(i);
+                        return;
+                    }
+                    e[t].start(r);
+                };
+                0 === e.length ? n && n({ finished: !0 }) : e[t].start(r);
             },
+            stop: function () {
+                t < e.length && e[t].stop();
+            },
+        };
+    },
+    y = function (e, t) {
+        var n = 0,
+            r = {},
+            i = !(t && !1 === t.stopTogether),
+            a = {
+                start: function (t) {
+                    if (n === e.length) {
+                        t && t({ finished: !0 });
+                        return;
+                    }
+                    e.forEach(function (o, s) {
+                        var l = function (o) {
+                            if (((r[s] = !0), ++n === e.length)) {
+                                (n = 0), t && t(o);
+                                return;
+                            }
+                            !o.finished && i && a.stop();
+                        };
+                        o ? o.start(l) : l({ finished: !0 });
+                    });
+                },
+                stop: function () {
+                    e.forEach(function (e, t) {
+                        r[t] || e.stop(), (r[t] = !0);
+                    });
+                },
+            };
+        return a;
+    },
+    O = function (e) {
+        return E(new o(0), {
+            toValue: 0,
+            delay: e,
+            duration: 0,
+        });
+    },
+    v = function (e, t) {
+        return y(
+            t.map(function (t, n) {
+                return b([O(e * n), t]);
+            }),
         );
+    },
+    I = function (e, t) {
+        return function () {
+            for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
+            var s = function e(t, n, r) {
+                if ("number" == typeof n) {
+                    i(
+                        t instanceof o,
+                        "Bad mapping of type " + typeof t + " for key " + r + ", event value must map to AnimatedValue",
+                    ),
+                        t.setValue(n);
+                    return;
+                }
+                for (var r in (i("object" == typeof t, "Bad mapping of type " + typeof t + " for key " + r),
+                i("object" == typeof n, "Bad event of type " + typeof n + " for key " + r),
+                t))
+                    e(t[r], n[r], r);
+            };
+            e.forEach(function (e, t) {
+                s(e, r[t], "arg" + t);
+            }),
+                t && t.listener && t.listener.apply(null, r);
+        };
     };
+e.exports = {
+    Value: o,
+    ValueXY: s,
+    decay: function e(t, n) {
+        return (
+            g(t, n, e) || {
+                start: function (e) {
+                    var r = t,
+                        i = n;
+                    r.stopTracking(), r.animate(new h(i), e);
+                },
+                stop: function () {
+                    t.stopAnimation();
+                },
+            }
+        );
+    },
+    timing: E,
+    spring: function e(t, n) {
+        return (
+            g(t, n, e) || {
+                start: function (e) {
+                    var r = t,
+                        i = n;
+                    r.stopTracking(),
+                        n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                },
+                stop: function () {
+                    t.stopAnimation();
+                },
+            }
+        );
+    },
+    add: function (e, t) {
+        return new l(e, t);
+    },
+    multiply: function (e, t) {
+        return new c(e, t);
+    },
+    modulo: function (e, t) {
+        return new u(e, t);
+    },
+    template: function (e) {
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+        return new d(e, n);
+    },
+    delay: O,
+    sequence: b,
+    parallel: y,
+    stagger: v,
+    event: I,
+    isAnimated: _,
+    createAnimatedComponent: n(533254),
+    inject: {
+        ApplyAnimatedValues: n(171726).inject,
+        InteractionManager: n(344665).inject,
+        FlattenStyle: n(330890).inject,
+        RequestAnimationFrame: n(907237).inject,
+        CancelAnimationFrame: n(712742).inject,
+    },
+    __PropsOnlyForTests: n(808669),
+};

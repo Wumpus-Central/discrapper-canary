@@ -18,8 +18,8 @@ n.d(t, {
     xi: () => ei,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
@@ -51,8 +51,8 @@ var r = n(951288),
     x = n(626135),
     L = n(823379),
     M = n(589530),
-    j = n(709054),
-    k = n(217702),
+    k = n(709054),
+    j = n(217702),
     U = n(981631),
     G = n(814249),
     B = n(295907),
@@ -175,7 +175,7 @@ function J(e) {
     (a = null == a ? M.FC : a), (s = null == s ? M.rs : s);
     let [y, O] = i.useState(!0),
         [v, T] = i.useState(!1),
-        S = h === k.hV.MOSAIC || !0 === p,
+        S = h === j.hV.MOSAIC || !0 === p,
         A = (y || v) && !f && N.H1.getSetting() && null != l && "" !== l && !0 !== _,
         C = (e) => {
             let { altText: t } = e;
@@ -316,7 +316,7 @@ function en(e) {
             imageContainerStyle: _,
             mosaicStyleAlt: h,
         } = e,
-        m = f === k.hV.MOSAIC || !0 === h,
+        m = f === j.hV.MOSAIC || !0 === h,
         g = !c && N.H1.getSetting() && null != t && "" !== t && !0 !== n,
         E = (e) => {
             let { altText: t } = e;
@@ -503,7 +503,7 @@ function ed(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: n,
-                      messageId: j.default.castChannelIdAsMessageId(n),
+                      messageId: k.default.castChannelIdAsMessageId(n),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -567,9 +567,9 @@ function ef(e) {
             var e;
             return null != (e = A.Z.summaries(s.id)) ? e : [];
         }, [s]),
-        k = (0, g.Z)(M);
+        j = (0, g.Z)(M);
     i.useEffect(() => {
-        l().isEqual(k, M) ||
+        l().isEqual(j, M) ||
             x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: M.length,
                 message_counts: M.map((e) => e.count),
@@ -580,7 +580,7 @@ function ef(e) {
                 channel_id: s.id,
                 channel_type: s.type,
             });
-    }, [M, k, s.guild_id, s.id, s.type]);
+    }, [M, j, s.guild_id, s.id, s.type]);
     let B = (0, u.e7)(
             [D.default],
             () => {
@@ -756,7 +756,7 @@ function ef(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: s.id,
-                      messageId: j.default.castChannelIdAsMessageId(s.id),
+                      messageId: k.default.castChannelIdAsMessageId(s.id),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -936,9 +936,9 @@ function eh(e) {
             ep,
         ),
         M = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
-        j = null == N || null == (t = N[M]) ? void 0 : t.topic;
-    null == j && null == h && (null == N ? void 0 : N.length) >= 1 && (j = null == (a = N[0]) ? void 0 : a.topic);
-    let k = i.useMemo(() => l().get(N, M - 1), [M, N]),
+        k = null == N || null == (t = N[M]) ? void 0 : t.topic;
+    null == k && null == h && (null == N ? void 0 : N.length) >= 1 && (k = null == (a = N[0]) ? void 0 : a.topic);
+    let j = i.useMemo(() => l().get(N, M - 1), [M, N]),
         B = i.useMemo(() => l().get(N, M + 1), [M, N]),
         V = i.useMemo(
             () =>
@@ -1085,7 +1085,7 @@ function eh(e) {
     if (!(0, u.e7)([A.Z], () => A.Z.shouldShowTopicsBar())) return null;
     let et = Z.intl.string(Z.t["38qwgO"]);
     return (
-        N.length > 0 && (et = "" === j || null == j ? Z.intl.string(Z.t.DwnFuG) : j),
+        N.length > 0 && (et = "" === k || null == k ? Z.intl.string(Z.t.DwnFuG) : k),
         p
             ? null
             : (0, r.jsxs)("div", {
@@ -1143,7 +1143,7 @@ function eh(e) {
                                           "aria-label": Z.intl.string(Z.t["58KOoF"]),
                                           onClick: X,
                                           className: o()(F.topicsPillCaret, F.topicsCaretRight, {
-                                              [F.topicsPillCaretDisabled]: null == k,
+                                              [F.topicsPillCaretDisabled]: null == j,
                                           }),
                                           children: (0, r.jsx)(w.Z, {
                                               width: 16,

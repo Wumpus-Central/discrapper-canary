@@ -1,6 +1,6 @@
-n.d(t, { Z: () => h });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => f });
+var r = n(54381),
+    i = n(473749),
     l = n(990547),
     o = n(91192),
     a = n(481060),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(441358),
     d = n(426521),
     p = n(837284);
-function h(e) {
-    let { initialized: t, items: n, loading: h, loadMore: f } = e,
+function f(e) {
+    let { initialized: t, items: n, loading: f, loadMore: h } = e,
         g = i.useRef(null),
         m = (0, s.Z)("for-you", g);
     (0, c.Z)(
@@ -25,7 +25,7 @@ function h(e) {
     let b = () => {
         var e;
         let t = null == (e = g.current) ? void 0 : e.getScrollerState();
-        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && f();
+        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && h();
     };
     return t
         ? 0 === n.length
@@ -103,7 +103,7 @@ function h(e) {
                                       onScroll: b,
                                       children: [
                                           (0, r.jsx)(d.U, { items: n }),
-                                          h ? (0, r.jsx)(a.$jN, { className: p.spinner }) : null,
+                                          f ? (0, r.jsx)(a.$jN, { className: p.spinner }) : null,
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors

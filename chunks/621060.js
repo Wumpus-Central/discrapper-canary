@@ -5,10 +5,10 @@ n.d(t, {
 }),
     n(388685);
 var a,
-    i = n(951288),
-    r = n(647438),
-    l = n(120356),
-    s = n.n(l),
+    l = n(54381),
+    r = n(473749),
+    i = n(120356),
+    s = n.n(i),
     o = n(755721),
     c = n(481060),
     d = n(393238),
@@ -49,33 +49,33 @@ let f = [
         "Development",
     ],
     b = r.forwardRef(function (e, t) {
-        let { id: n, selected: a, onClick: r, children: l } = e;
-        return (0, i.jsx)(c.P3F, {
+        let { id: n, selected: a, onClick: r, children: i } = e;
+        return (0, l.jsx)(c.P3F, {
             className: s()(x.tabItem, { [x.selected]: a }),
             "data-tab-id": n,
             innerRef: t,
             onClick: r,
-            children: l,
+            children: i,
         });
     });
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
-        l = r.useRef(new Map()),
+        i = r.useRef(new Map()),
         [s, g] = r.useState(() => new Set()),
         { ref: f, width: v } = (0, d.ZP)(),
         j = r.useRef(null),
         _ = (0, h.F)(t, a);
     r.useEffect(() => {
-        var e, a, i, r;
+        var e, a, l, r;
         if (null == v) return;
         let s = new Set(),
             o = null != v ? v : 0;
         for (let c of ((o -=
-            null != (a = null == (e = l.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0),
+            null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0),
         t))
             c.id !== n &&
                 (o -=
-                    null != (r = null == (i = l.current.get(c.id)) ? void 0 : i.getBoundingClientRect().width)
+                    null != (r = null == (l = i.current.get(c.id)) ? void 0 : l.getBoundingClientRect().width)
                         ? r
                         : 0) < 0 &&
                 s.add(c.id);
@@ -84,7 +84,7 @@ function v(e) {
     let y = r.useCallback(
         (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(c.v2r, {
+            return (0, l.jsx)(c.v2r, {
                 navId: "devtools-overflow",
                 variant: "fixed",
                 onClose: t,
@@ -95,10 +95,10 @@ function v(e) {
         },
         [_],
     );
-    return (0, i.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: x.tabBarContainer,
         children: [
-            (0, i.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: x.tabBar,
                 ref: f,
                 children: [
@@ -106,7 +106,7 @@ function v(e) {
                         .map((e) => {
                             let { id: t, name: r } = e;
                             if (!s.has(t))
-                                return (0, i.jsx)(
+                                return (0, l.jsx)(
                                     b,
                                     {
                                         id: t,
@@ -118,17 +118,17 @@ function v(e) {
                                 );
                         })
                         .filter(m.lm),
-                    (0, i.jsx)("div", {
+                    (0, l.jsx)("div", {
                         className: x.tabMeasurer,
                         children: t.map((e) => {
                             let { id: t, name: r } = e;
-                            return (0, i.jsx)(
+                            return (0, l.jsx)(
                                 b,
                                 {
                                     id: t,
                                     selected: n === t,
                                     ref: (e) => {
-                                        l.current.set(t, e);
+                                        i.current.set(t, e);
                                     },
                                     onClick: n !== t ? () => a(t) : void 0,
                                     children: r,
@@ -139,11 +139,11 @@ function v(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", {
+            (0, l.jsx)("div", {
                 className: x.menu,
                 children:
                     s.size > 0 &&
-                    (0, i.jsx)(c.yRy, {
+                    (0, l.jsx)(c.yRy, {
                         targetElementRef: j,
                         layerContext: p.O$,
                         renderPopout: y,
@@ -153,7 +153,7 @@ function v(e) {
                         spacing: 0,
                         children: (e) => {
                             var t, n;
-                            return (0, i.jsx)(
+                            return (0, l.jsx)(
                                 o.zx,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
@@ -186,7 +186,7 @@ function v(e) {
                                         className: x.overflowChevron,
                                         size: o.zx.Sizes.ICON,
                                         look: o.zx.Looks.BLANK,
-                                        children: (0, i.jsx)(u.Z, {
+                                        children: (0, l.jsx)(u.Z, {
                                             className: x.__invalid_overflowIcon,
                                             width: 16,
                                             height: 16,
@@ -213,13 +213,13 @@ function v(e) {
     });
 }
 function j(e, t) {
-    var n, a, l;
+    var n, a, i;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
         [d, u] = r.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
     return {
         TabBar: r.useCallback(
             () =>
-                (0, i.jsx)(v, {
+                (0, l.jsx)(v, {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {
@@ -228,7 +228,7 @@ function j(e, t) {
                 }),
             [d, u, c, ...t],
         ),
-        renderSelectedTab: null != (l = null == (a = s.find((e) => e.id === d)) ? void 0 : a.render) ? l : () => null,
+        renderSelectedTab: null != (i = null == (a = s.find((e) => e.id === d)) ? void 0 : a.render) ? i : () => null,
         selectedTabId: d,
     };
 }

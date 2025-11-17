@@ -1,6 +1,6 @@
 n.d(t, { Z: () => N }), n(997841), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(793030),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(904245),
     d = n(933557),
     p = n(576855),
-    h = n(372900),
-    f = n(726521),
+    f = n(372900),
+    h = n(726521),
     g = n(501517),
     m = n(699516),
     b = n(594174),
@@ -75,7 +75,7 @@ class P extends i.PureComponent {
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
             { channel: o, message: c, showContextMenuHint: u, moderatorReportData: d } = l,
-            f = (function (e, t) {
+            h = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -128,7 +128,7 @@ class P extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(h.Z.Provider, {
+            return (0, r.jsx)(f.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsx)(
                     a.Modal,
@@ -152,14 +152,14 @@ class P extends i.PureComponent {
                                           onChange: (e) => this.handleToggleResolveFlag(e),
                                       }),
                             },
-                            f,
+                            h,
                         ),
                         { children: b },
                     ),
                 ),
             });
         }
-        return (0, r.jsx)(h.Z.Provider, {
+        return (0, r.jsx)(f.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
                 title: g ? j.intl.string(j.t.aIz1oV) : j.intl.string(j.t.MWMcg7),
@@ -167,7 +167,7 @@ class P extends i.PureComponent {
                 actions: [
                     {
                         text: j.intl.string(j.t["ETE/oC"]),
-                        onClick: f.onClose,
+                        onClick: h.onClose,
                         variant: "secondary",
                     },
                     {
@@ -176,8 +176,8 @@ class P extends i.PureComponent {
                         variant: "critical-primary",
                     },
                 ],
-                onClose: f.onClose,
-                transitionState: f.transitionState,
+                onClose: h.onClose,
+                transitionState: h.transitionState,
                 children: b,
             }),
         });
@@ -193,7 +193,7 @@ class P extends i.PureComponent {
                     { channel: n, message: r, moderatorReportData: i } = this.props,
                     { moderatorReportChannelId: l, isFlagResolved: o } = null != i ? i : {};
                 e
-                    ? (0, f.ak)(r, "message_delete_alert", () =>
+                    ? (0, h.ak)(r, "message_delete_alert", () =>
                           u.Z.deleteMessage(n.id, r.id).then(() => {
                               if (null != l) {
                                   var e, n;
@@ -229,7 +229,7 @@ let N = {
                 (i = e.isPrivate()
                     ? j.intl.string(j.t.hMRngA)
                     : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(h.Z.Provider, {
+                (0, r.jsx)(f.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsx)(
                         a.Modal,
@@ -274,7 +274,7 @@ let N = {
     },
     confirmUnpin: function (e, t) {
         (0, s.h7j)((n) =>
-            (0, r.jsx)(h.Z.Provider, {
+            (0, r.jsx)(f.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     a.Modal,

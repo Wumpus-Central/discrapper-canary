@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(388685), n(35282);
-var a = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => T }), n(388685), n(35282);
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(602715),
     o = n(442837),
     c = n(481060),
@@ -24,8 +24,8 @@ var a = n(951288),
 function E() {
     var e;
     let t = (0, o.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
-        [n, r] = i.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: l, options: d } = (0, o.cj)([h.Z, g.default, x.Z], () => ({
+        [n, r] = l.useState(t.length > 0 ? t[0].channelId : void 0),
+        { selectedChannel: i, options: d } = (0, o.cj)([h.Z, g.default, x.Z], () => ({
             selectedChannel: h.Z.getChannel(n),
             options: t.map((e) => {
                 let t = h.Z.getChannel(e.channelId);
@@ -35,16 +35,16 @@ function E() {
                 };
             }),
         })),
-        v = i.useCallback(() => {
+        v = l.useCallback(() => {
             var e;
-            if (null == l || !l.isPrivate()) return;
-            let t = (0, b.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            p.Z.updatePrivateChannelRecipientFlags(l.id, t);
-        }, [l]),
+            if (null == i || !i.isPrivate()) return;
+            let t = (0, b.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            p.Z.updatePrivateChannelRecipientFlags(i.id, t);
+        }, [i]),
         j =
-            null != l &&
-            !!l.isPrivate() &&
-            (0, b.yE)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            null != i &&
+            !!i.isPrivate() &&
+            (0, b.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -85,8 +85,8 @@ function E() {
         ],
     });
 }
-function T() {
-    let e = i.useCallback(() => {
+function O() {
+    let e = l.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
     return (0, a.jsx)(c.Button, {
@@ -96,13 +96,13 @@ function T() {
         onClick: e,
     });
 }
-function O() {
+function T() {
     let e = (0, o.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], o.pF).map((e) => {
-        let [t, n, { label: i }] = e;
+        let [t, n, { label: l }] = e;
         return (0, a.jsx)(
             c.rsf,
             {
-                label: i,
+                label: l,
                 description: t,
                 checked: n,
                 onChange: (e) => (0, v.Z)(t, e),
@@ -111,13 +111,13 @@ function O() {
         );
     });
     return (0, a.jsxs)("div", {
-        className: l()(S.panel, C.panel),
+        className: i()(S.panel, C.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: C.divider }),
             (0, a.jsx)(E, {}),
             (0, a.jsx)("div", { className: C.divider }),
-            (0, a.jsx)(T, {}),
+            (0, a.jsx)(O, {}),
         ],
     });
 }

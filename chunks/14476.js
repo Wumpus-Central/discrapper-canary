@@ -1,6 +1,6 @@
 n.d(t, { c: () => g });
-var r = n(951288),
-    l = n(647438),
+var r = n(54381),
+    l = n(473749),
     a = n(120356),
     i = n.n(a),
     o = n(979554),
@@ -20,25 +20,25 @@ let g = (e) => {
             skuId: a,
             assetId: g,
             user: v,
-            claimed: x,
-            onSelect: j,
+            claimed: P,
+            onSelect: x,
             productName: y,
-            a11yLabel: P,
+            a11yLabel: j,
             selectedSkuId: S,
             category: _,
             type: O,
-            palette: C,
+            palette: w,
         } = e,
-        w = l.useRef(null),
-        { isHoveringOrFocusing: k } = (0, u.Z)(w),
-        E = !x && k,
+        C = l.useRef(null),
+        { isHoveringOrFocusing: k } = (0, u.Z)(C),
+        E = !P && k,
         I = (0, c.ZP)(),
         T = (0, s.wj)(I);
     return (
         O === o.Z.AVATAR_DECORATION
             ? ((t = {
                   type: o.Z.AVATAR_DECORATION,
-                  label: P,
+                  label: j,
                   asset: g,
               }),
               (n = (0, r.jsxs)(r.Fragment, {
@@ -48,9 +48,9 @@ let g = (e) => {
                           user: v,
                           isHighlighted: E,
                           avatarSize: d.EFr.SIZE_96,
-                          isPurchased: x,
+                          isPurchased: P,
                       }),
-                      x &&
+                      P &&
                           (0, r.jsx)(d.dz2, {
                               size: "custom",
                               width: 48,
@@ -63,26 +63,26 @@ let g = (e) => {
             : O === o.Z.NAMEPLATE &&
               ((t = {
                   type: o.Z.NAMEPLATE,
-                  label: P,
+                  label: j,
                   asset: g,
-                  palette: null != C ? C : "none",
+                  palette: null != w ? w : "none",
               }),
               (n = (0, r.jsx)(h.Z, {
                   nameplate: t,
                   user: v,
                   isHighlighted: E,
-                  isPurchased: x,
+                  isPurchased: P,
                   size: "small",
               }))),
         (0, r.jsx)(d.tEY, {
             children: (0, r.jsxs)(d.kL8, {
-                ref: w,
+                ref: C,
                 "aria-label": null != y ? y : "",
                 onClick: () => {
-                    null == a || null == j || x || j(a);
+                    null == a || null == x || P || x(a);
                 },
                 className: i()(T ? b.shopCardDark : b.shopCard, {
-                    [b.shopCardAnimation]: !x,
+                    [b.shopCardAnimation]: !P,
                     [T ? b.shopCardDarkHighlighted : b.shopCardHighlighted]: E,
                     [b.shopCardSelected]: S === a,
                 }),
@@ -93,7 +93,7 @@ let g = (e) => {
                             [b.nameplatePreview]: O === o.Z.NAMEPLATE,
                             [b.previewTrick]: _ === p.KN.Trick,
                             [b.previewTreat]: _ === p.KN.Treat,
-                            [b.shopCardClaimed]: x,
+                            [b.shopCardClaimed]: P,
                         }),
                         children: null != t && n,
                     }),
@@ -106,7 +106,7 @@ let g = (e) => {
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: x ? f.intl.string(f.t["6cfuDj"]) : f.intl.string(f.t.QQsaCc),
+                                children: P ? f.intl.string(f.t["6cfuDj"]) : f.intl.string(f.t.QQsaCc),
                             }),
                         ],
                     }),

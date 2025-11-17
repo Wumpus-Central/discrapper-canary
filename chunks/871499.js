@@ -2,8 +2,8 @@ n.d(t, {
     Z: () => I,
     d: () => A,
 });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(212605),
@@ -250,22 +250,22 @@ function A(e) {
     i.useEffect(() => {
         null != L.current && (M ? L.current.pause() : L.current.play());
     }, [M]);
-    let j = null != (t = P.onContextMenu) ? t : v,
-        k = null == v && !N,
+    let k = null != (t = P.onContextMenu) ? t : v,
+        j = null == v && !N,
         U = null != v && !N,
         G = N && null != v,
         B = (0, r.jsx)(
             I,
             y(E({}, P), {
                 grow: !1,
-                onContextMenu: j,
-                iconClassName: o()(b, m.centerIcon, k && m.fullRegionIcon),
+                onContextMenu: k,
+                iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
                 className: o()(
                     x || R ? g : null,
                     l && m.active,
                     m.centerButton,
                     S[D],
-                    k && m.fullRegionButton,
+                    j && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
             }),

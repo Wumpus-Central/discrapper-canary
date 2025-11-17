@@ -1,154 +1,154 @@
 n.d(t, { Z: () => O });
-var a = n(951288),
-    r = n(647438),
+var r = n(54381),
+    a = n(473749),
     i = n(319245),
-    s = n(793030),
-    o = n(681715),
+    o = n(793030),
+    s = n(681715),
     l = n(410030),
     c = n(624138),
     d = n(617136),
     u = n(915750),
     m = n(509212),
     p = n(113434),
-    b = n(497505),
+    C = n(497505),
     f = n(475595),
     h = n(566078),
-    x = n(477005),
-    C = n(78826),
-    _ = n(667105),
-    j = n(46140),
-    g = n(231338),
-    y = n(388032),
-    v = n(985952);
-function N(e) {
-    let { quest: t, sourceQuestContent: n, onLoadComplete: N } = e,
+    j = n(477005),
+    x = n(78826),
+    y = n(667105),
+    g = n(46140),
+    v = n(231338),
+    b = n(388032),
+    _ = n(985952);
+function w(e) {
+    let { quest: t, sourceQuestContent: n, onLoadComplete: w } = e,
         O = (0, l.ZP)(),
-        T = (0, s.wjy)(O) ? g.BR.DARK : g.BR.LIGHT,
-        w = (0, p.ly)(t),
-        P = (0, u.aM)(),
-        S = (0, m.vB)(t.config),
-        L = r.useMemo(() => {
+        P = (0, o.wjy)(O) ? v.BR.DARK : v.BR.LIGHT,
+        N = (0, p.ly)(t),
+        E = (0, u.aM)(),
+        T = (0, m.vB)(t.config),
+        D = a.useMemo(() => {
             var e;
             let n = null == (e = t.config.ctaConfig) ? void 0 : e.subtitle;
             if (null != n) return n;
-            let a = h.r.build(t.config),
-                r = a.defaultWatchVideoTask,
-                s = null == r ? void 0 : r.messages.videoEndCtaSubtitle;
-            return (0, c.Ew)(s)
-                ? a.questType !== i.W.GAMEPLAY || t.config.features.includes(j.S7.NON_GAMING_PLAY_QUEST) || (0, m.Pb)(t)
-                    ? y.intl.string(y.t.y8Xf3k)
-                    : y.intl.string(y.t["wirwN+"])
-                : s;
+            let r = h.r.build(t.config),
+                a = r.defaultWatchVideoTask,
+                o = null == a ? void 0 : a.messages.videoEndCtaSubtitle;
+            return (0, c.Ew)(o)
+                ? r.questType !== i.W.GAMEPLAY || t.config.features.includes(g.S7.NON_GAMING_PLAY_QUEST) || (0, m.Pb)(t)
+                    ? b.intl.string(b.t.y8Xf3k)
+                    : b.intl.string(b.t["wirwN+"])
+                : o;
         }, [t]),
-        { isLoading: E } = (0, C.d7)();
-    r.useEffect(() => {
-        E || N();
-    }, [E, N]);
-    let R = (0, _.yc)({
-        isShareable: S,
+        { isLoading: I } = (0, x.d7)();
+    a.useEffect(() => {
+        I || w();
+    }, [I, w]);
+    let A = (0, y.yc)({
+        isShareable: T,
         questId: t.id,
-        trackingCtx: r.useMemo(
+        trackingCtx: a.useMemo(
             () => ({
-                content: b.jn.REWARD_MODAL,
+                content: C.jn.REWARD_MODAL,
                 ctaContent: d.jZ.REWARD_MODAL_COPY_LINK,
-                impressionId: P,
+                impressionId: E,
                 sourceQuestContent: n,
             }),
-            [P, n],
+            [E, n],
         ),
     });
-    return (0, a.jsxs)("div", {
-        className: v.container,
+    return (0, r.jsxs)("div", {
+        className: _.container,
         children: [
-            (0, a.jsx)(C.Fl, {
+            (0, r.jsx)(x.Fl, {
                 id: "hero-display",
                 children: (e) =>
-                    (0, a.jsx)(x.Z, {
+                    (0, r.jsx)(j.Z, {
                         quest: t,
                         imageSize: {
                             width: 908,
                             height: 380,
                         },
-                        containerClassName: v.heroDisplayContainer,
+                        containerClassName: _.heroDisplayContainer,
                         isInteracting: !0,
                         assetRef: e,
                     }),
             }),
-            (0, a.jsx)("div", {
-                className: v.partnerLogotypeContainer,
-                children: (0, a.jsx)(C.Fl, {
+            (0, r.jsx)("div", {
+                className: _.partnerLogotypeContainer,
+                children: (0, r.jsx)(x.Fl, {
                     id: "partner-logotype",
                     children: (e) =>
-                        (0, a.jsx)("img", {
+                        (0, r.jsx)("img", {
                             ref: e,
-                            className: v.partnerLogotype,
-                            alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
-                            src: (0, f.fh)(t, f.eC.LOGO_TYPE, T).url,
+                            className: _.partnerLogotype,
+                            alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
+                            src: (0, f.fh)(t, f.eC.LOGO_TYPE, P).url,
                         }),
                 }),
             }),
-            (0, a.jsxs)("div", {
-                className: v.partnerContentContainer,
+            (0, r.jsxs)("div", {
+                className: _.partnerContentContainer,
                 children: [
-                    (0, a.jsxs)("div", {
-                        className: v.partnerCopyContainer,
+                    (0, r.jsxs)("div", {
+                        className: _.partnerCopyContainer,
                         children: [
-                            (0, a.jsx)(s.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                className: v.partnerTitle,
+                                className: _.partnerTitle,
                                 children: t.config.messages.questName,
                             }),
-                            (0, a.jsx)(s.xvT, {
+                            (0, r.jsx)(o.xvT, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: L,
+                                children: D,
                             }),
                         ],
                     }),
-                    (0, a.jsx)(C.Fl, {
+                    (0, r.jsx)(x.Fl, {
                         id: "partner-game-tile",
                         children: (e) =>
-                            (0, a.jsx)("img", {
+                            (0, r.jsx)("img", {
                                 ref: e,
-                                className: v.partnerGameTile,
-                                alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
-                                src: (0, f.fh)(t, f.eC.GAME_TILE, T).url,
+                                className: _.partnerGameTile,
+                                alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
+                                src: (0, f.fh)(t, f.eC.GAME_TILE, P).url,
                             }),
                     }),
                 ],
             }),
-            (0, a.jsx)("div", {
-                className: v.bottomContainer,
-                children: (0, a.jsxs)(s.hE2, {
+            (0, r.jsx)("div", {
+                className: _.bottomContainer,
+                children: (0, r.jsxs)(o.hE2, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        S &&
-                            (0, a.jsx)(o.u, {
-                                text: y.intl.string(y.t.WmfZHZ),
-                                children: (0, a.jsx)(s.hU, {
-                                    icon: s.xPt,
-                                    onClick: R,
-                                    "aria-label": y.intl.string(y.t.WmfZHZ),
+                        T &&
+                            (0, r.jsx)(s.u, {
+                                text: b.intl.string(b.t.WmfZHZ),
+                                children: (0, r.jsx)(o.hU, {
+                                    icon: o.xPt,
+                                    onClick: A,
+                                    "aria-label": b.intl.string(b.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, a.jsx)(s.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             variant: "primary",
-                            text: w,
+                            text: N,
                             onClick: () => {
                                 (0, m.nc)(t, {
-                                    content: b.jn.REWARD_MODAL,
+                                    content: C.jn.REWARD_MODAL,
                                     ctaContent: d.jZ.OPEN_GAME_LINK,
-                                    impressionId: P,
+                                    impressionId: E,
                                     sourceQuestContent: n,
                                 });
                             },
                             fullWidth: !0,
-                            icon: s.zFc,
+                            icon: o.zFc,
                             iconPosition: "end",
                         }),
                     ],
@@ -159,33 +159,33 @@ function N(e) {
 }
 function O(e) {
     let { quest: t, location: n } = e;
-    return (0, a.jsx)(C.p, {
+    return (0, r.jsx)(x.p, {
         source: n,
         questId: t.id,
         isPreview: t.preview,
-        children: (0, a.jsx)(
-            N,
+        children: (0, r.jsx)(
+            w,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        a = Object.keys(n);
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (a = a.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        a.forEach(function (t) {
-                            var a;
-                            (a = n[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: a,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = a);
+                                    : (e[t] = r);
                         });
                 }
                 return e;

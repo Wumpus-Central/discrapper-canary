@@ -1,6 +1,6 @@
 n.d(t, { U: () => P }), n(388685), n(781311);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(688619),
     o = n.n(a),
     s = n(120356),
@@ -25,7 +25,7 @@ function v() {
     });
 }
 let I = (0, c.Un)({
-        createPromise: () => Promise.all([n.e("3115"), n.e("35855")]).then(n.bind(n, 164267)),
+        createPromise: () => Promise.all([n.e("66382"), n.e("35855")]).then(n.bind(n, 164267)),
         webpackId: 164267,
         name: "CustomThemeColorPickerControlV2",
         renderLoader: v,
@@ -126,7 +126,7 @@ function P(e) {
                     (0, E.J4)(), w(e);
                 } catch (e) {}
         },
-        j = () => {
+        k = () => {
             if (o.length === T) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
@@ -134,7 +134,7 @@ function P(e) {
                 n = [...o, t];
             s(n), S(n.length - 1);
         },
-        k = (e) => {
+        j = (e) => {
             if (o.length > 1) {
                 (0, E.JL)();
                 let t = o.filter((t, n) => n !== e);
@@ -191,7 +191,7 @@ function P(e) {
                                     children: (0, r.jsx)(_.hU, {
                                         variant: "icon-only",
                                         size: "sm",
-                                        onClick: () => k(v),
+                                        onClick: () => j(v),
                                         icon: p.V_R,
                                         "aria-label": y.intl.string(y.t.N86XcP),
                                     }),
@@ -204,7 +204,7 @@ function P(e) {
                 (0, r.jsx)(_.zxk, {
                     variant: "secondary",
                     size: "md",
-                    onClick: j,
+                    onClick: k,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdT),
                     fullWidth: !0,

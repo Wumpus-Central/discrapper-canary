@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(657707),
@@ -88,14 +88,14 @@ function I(e) {
         x = (0, f.Sl)(E.Il.WHITE).hex,
         L = (0, f.Sl)(E.Il.RED_430).hex,
         M = D ? x : void 0,
-        j = i.useCallback(() => {
+        k = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
     return (0, r.jsxs)("div", {
         className: O.badgeContainer,
         children: [
             (0, r.jsxs)(m.S4, {
-                onSelect: t ? void 0 : j,
+                onSelect: t ? void 0 : k,
                 isSelected: !1,
                 showSelectionCircle: P,
                 name: y.intl.string(b.default.KSBBpC),

@@ -3,8 +3,8 @@ n.d(t, {
     b6: () => c.b,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(481060),
@@ -81,20 +81,20 @@ let h = () =>
             }, [x, R]);
         let L = x || C,
             M = C ? null : a,
-            [j, k] = (0, i.useState)(null),
+            [k, j] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
             G = (0, i.useCallback)(() => {
-                (U.current = null), k(null);
+                (U.current = null), j(null);
             }, []),
             B = (0, i.useCallback)(
                 (e) => {
-                    let t = j === U.current;
-                    e > 0 && ("earn" !== j || !t) && k("earn");
+                    let t = k === U.current;
+                    e > 0 && ("earn" !== k || !t) && j("earn");
                 },
-                [k, j],
+                [j, k],
             ),
             Z = {
-                currentAnimationType: j,
+                currentAnimationType: k,
                 animationTypeRef: U,
                 onSetAnimationDurationMS: w,
             };

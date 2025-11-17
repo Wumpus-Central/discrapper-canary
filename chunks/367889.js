@@ -1,5 +1,5 @@
 n.d(e, { F: () => O });
-var i = n(951288),
+var i = n(54381),
     l = n(657707),
     u = n(793030),
     r = n(692547),
@@ -9,18 +9,18 @@ var i = n(951288),
     c = n(28682),
     E = n(313789),
     S = n(726985),
-    d = n(388032);
-let T = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
+    T = n(388032);
+let d = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
         render: a.Z,
     }),
     I = (0, o.wf)(E.n.SUBSCRIPTIONS_PANEL, {
-        useTitle: () => d.intl.string(d.t.trSpHX),
-        buildLayout: () => [T],
+        useTitle: () => T.intl.string(T.t.trSpHX),
+        buildLayout: () => [d],
     }),
     O = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
         icon: l.XOf,
-        useTitle: () => d.intl.string(d.t.trSpHX),
+        useTitle: () => T.intl.string(T.t.trSpHX),
         getLegacySearchKey: () => S.s6.SUBSCRIPTIONS,
         buildLayout: () => [I],
         trailing: {

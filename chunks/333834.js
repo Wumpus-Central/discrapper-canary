@@ -1,6 +1,6 @@
 n.d(t, { Z: () => D }), n(539854), n(583741), n(388685), n(642613);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(392711),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(442837),
     d = n(755721),
     p = n(481060),
-    h = n(724757),
-    f = n(100527),
+    f = n(724757),
+    h = n(100527),
     g = n(906732),
     m = n(306680),
     b = n(585483),
@@ -57,7 +57,7 @@ function T(e) {
 }
 let A = [S.KZ.UNREAD, S.KZ.TODAY, S.KZ.YESTERDAY, S.KZ.OLDER];
 function R() {
-    let { analyticsLocations: e } = (0, g.ZP)(f.Z.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, g.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
         className: Z.emptyStateContainer,
         children: (0, r.jsxs)(p.Kqy, {
@@ -99,14 +99,14 @@ function D(e) {
             loadMore: l,
             renderLoadingState: a,
             renderMessageGroup: d,
-            scrollerClassName: f,
+            scrollerClassName: h,
             className: g,
             listName: P,
             ignoreGrouping: N = !1,
         } = e,
         D = (0, O.fJ)(),
         L = i.useRef(null),
-        M = (0, h.Z)(P, L),
+        M = (0, f.Z)(P, L),
         { entrypoint: k, notificationCenterVariant: G } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: U,
@@ -354,7 +354,7 @@ function D(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: o()(Z.messagesPopout, f),
+                                    className: o()(Z.messagesPopout, h),
                                     onScroll: K,
                                     fade: !0,
                                 },

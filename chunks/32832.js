@@ -1,4 +1,4 @@
-n.d(e, { Z: () => O }), n(951288), n(647438);
+n.d(e, { Z: () => O }), n(54381), n(473749);
 var i = n(442837);
 n(481060);
 var l = n(292556),
@@ -16,11 +16,11 @@ let S = {
         useDisabled: u.p,
         useDisabledMessage: () => ((0, u.p)() ? E.intl.string(E.t.cIRG0s) : void 0),
     },
-    d = {
+    T = {
         useLabel: () => E.intl.string(E.t.XBrJT6),
         sound: "call_ringing",
     },
-    T = (0, r.qs)(a.n.SELECTED_CHANNEL_NOTIFICATIONS, {
+    d = (0, r.qs)(a.n.SELECTED_CHANNEL_NOTIFICATIONS, {
         useTitle: () => E.intl.string(E.t.TzjwV9),
         useValue: () => (0, i.e7)([s.Z], () => s.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (t) => l.default.setNotifyMessagesInSelectedChannel(t),
@@ -35,5 +35,5 @@ let S = {
         useTitle: () => E.intl.string(E.t.ONU22R),
         variant: "separators",
         ContextProvider: o.u,
-        buildLayout: () => [(0, c.j)(S), T, (0, c.j)(d), I],
+        buildLayout: () => [(0, c.j)(S), d, (0, c.j)(T), I],
     });

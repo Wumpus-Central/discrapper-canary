@@ -1,6 +1,6 @@
 n.d(t, { F: () => a });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var o = n(692547),
     l = n(390507),
     i = n(325767);
@@ -33,7 +33,7 @@ let a = (e) => {
         })(e, ["size", "width", "height", "color"]);
     let f = (0, l.m)(c),
         v = null != (a = null == f ? void 0 : f.width) ? a : u,
-        g = null != (s = null == f ? void 0 : f.height) ? s : d;
+        E = null != (s = null == f ? void 0 : f.height) ? s : d;
     return (0, r.jsxs)(
         "svg",
         ((t = (function (e) {
@@ -65,7 +65,7 @@ let a = (e) => {
             {
                 xmlns: "http://www.w3.org/2000/svg",
                 width: v,
-                height: g,
+                height: E,
                 fill: "none",
                 viewBox: "0 0 32 32",
                 children: [

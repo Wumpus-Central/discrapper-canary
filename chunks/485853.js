@@ -1,99 +1,50 @@
-n.d(t, { N: () => o });
-var r = n(503461),
-    i = n(190313);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o {
-    get prefix() {
-        return this.table.prefix;
-    }
-    withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
-    }
-    get(e) {
-        return this.table.get([e]);
-    }
-    getMany(e) {
-        return this.table.getMany([], e);
-    }
-    getRange(e, t, n) {
-        return this.table.getRange([e], [t], n);
-    }
-    getKvEntries() {
-        return this.table.getKvEntries();
-    }
-    getMapEntries() {
-        return this.table.getMapEntries();
-    }
-    getIds() {
-        return this.table.getChildIds([]);
-    }
-    getParentId(e) {
-        return this.table.getParentId([null, e]);
-    }
-    put(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
-        return this.table.put(
-            {
-                key: [e],
-                data: t,
-                generation: null,
-            },
-            n,
+n.d(t, {
+    S: () => s,
+    T: () => l,
+});
+var r = n(158821),
+    i = n(473749),
+    a = n(921448);
+let o = {
+    border: 0,
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
+    height: "1px",
+    margin: "-1px",
+    overflow: "hidden",
+    padding: 0,
+    position: "absolute",
+    width: "1px",
+    whiteSpace: "nowrap",
+};
+function s(e = {}) {
+    let { style: t, isFocusable: n } = e,
+        [r, l] = (0, i.useState)(!1),
+        { focusWithinProps: c } = (0, a.L)({
+            isDisabled: !n,
+            onFocusWithinChange: (e) => l(e),
+        }),
+        u = (0, i.useMemo)(
+            () =>
+                r
+                    ? t
+                    : t
+                      ? {
+                            ...o,
+                            ...t,
+                        }
+                      : o,
+            [r],
         );
-    }
-    delete(e) {
-        return 0 == arguments.length ? this.table.delete() : this.table.delete([e]);
-    }
-    transaction(e, t) {
-        return this.table.transaction((t) => e(new s(t)), t);
-    }
-    upgradeTransaction(e) {
-        return new s(this.table.upgradeTransaction(e));
-    }
-    getManySyncUnsafe(e) {
-        return this.table.getManySyncUnsafe([], e);
-    }
-    getMapEntriesSyncUnsafe() {
-        return this.table.getMapEntriesSyncUnsafe();
-    }
-    constructor(e, t, n, r = !0) {
-        a(this, "originalPrefix", void 0),
-            a(this, "table", void 0),
-            (this.originalPrefix = e),
-            (this.table = new i.i([e], t, n, r));
-    }
+    return {
+        visuallyHiddenProps: {
+            ...c,
+            style: u,
+        },
+    };
 }
-class s {
-    static fromDatabaseTransaction(e, t, n) {
-        return new s(new i.E(e, t, n));
-    }
-    put(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
-        this.transaction.put(
-            {
-                key: [e],
-                data: t,
-                generation: null,
-            },
-            n,
-        );
-    }
-    delete(e) {
-        return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
-    }
-    constructor(e) {
-        a(this, "transaction", void 0), (this.transaction = e);
-    }
+function l(e) {
+    let { children: t, elementType: n = "div", isFocusable: a, style: o, ...l } = e,
+        { visuallyHiddenProps: c } = s(e);
+    return i.createElement(n, (0, r.d)(l, c), t);
 }

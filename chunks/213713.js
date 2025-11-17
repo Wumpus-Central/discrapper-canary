@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(120356),
-    l = n.n(r),
+    i = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(876215),
@@ -22,16 +22,16 @@ var a = n(951288),
     C = n(550532),
     S = n(71585),
     E = n(146282),
-    T = n(780106),
-    O = n(650613),
+    O = n(780106),
+    T = n(650613),
     N = n(789086),
     P = n(206583),
-    I = n(680027),
-    w = n(451429);
+    w = n(680027),
+    I = n(451429);
 let k = [
     {
         key: "type",
-        cellClassName: l()(I.cell, I.cellType),
+        cellClassName: i()(w.cell, w.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(p.Text, {
@@ -42,7 +42,7 @@ let k = [
     },
     {
         key: "count",
-        cellClassName: l()(I.cell, I.cellCount),
+        cellClassName: i()(w.cell, w.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -55,7 +55,7 @@ let k = [
     },
     {
         key: "only?",
-        cellClassName: I.cell,
+        cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(R, { type: t });
@@ -64,20 +64,20 @@ let k = [
 ];
 function R(e) {
     var t, n;
-    let { type: i } = e,
+    let { type: l } = e,
         r = (0, u.e7)([E.Z], () => E.Z.getFilters()),
-        l = null != (n = null == r || null == (t = r.types) ? void 0 : t.has(i)) && n;
+        i = null != (n = null == r || null == (t = r.types) ? void 0 : t.has(l)) && n;
     return (0, a.jsx)(p.rsf, {
-        checked: l,
+        checked: i,
         onChange: function () {
-            l
+            i
                 ? h.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
                       filters: void 0,
                   })
                 : h.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
-                      filters: { types: new Set([i]) },
+                      filters: { types: new Set([l]) },
                   });
         },
     });
@@ -86,7 +86,7 @@ function A() {
     var e, t;
     let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
         r = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
-        l = (0, u.e7)([S.Z], () => S.Z.getDebugFastImpressionCappingEnabled()),
+        i = (0, u.e7)([S.Z], () => S.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -102,7 +102,7 @@ function A() {
             var e;
             return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [R, A] = i.useState(""),
+        [R, A] = l.useState(""),
         D = (0, u.e7)([_.Z, x.Z], () => {
             var e, t, n;
             return parseInt(R) > 0
@@ -130,9 +130,9 @@ function A() {
         U = (0, g.Z)(M).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: w.panel,
+        className: I.panel,
         children: (0, a.jsxs)(p.zJl, {
-            className: I.content,
+            className: w.content,
             children: [
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
@@ -195,7 +195,7 @@ function A() {
                         }),
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
-                            text: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
+                            text: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
@@ -204,7 +204,7 @@ function A() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(O.Z, {}),
+                (0, a.jsx)(T.Z, {}),
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
                     children: [
@@ -248,7 +248,7 @@ function A() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.PhF, {
-                            options: T.h.map((e) => ({
+                            options: O.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),

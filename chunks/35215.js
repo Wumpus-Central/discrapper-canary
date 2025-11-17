@@ -1,6 +1,6 @@
 n.d(t, { Z: () => W }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(442837),
     o = n(930295),
     s = n(28664),
@@ -80,8 +80,8 @@ function w(e, t) {
 let x = 10,
     L = 20,
     M = 15,
-    j = 4,
-    k = 5,
+    k = 4,
+    j = 5,
     U = 8,
     G = 10;
 function B(e) {
@@ -280,7 +280,7 @@ function H(e) {
         ),
         O = i.useMemo(() => {
             let e = y.length;
-            return e <= j ? j - e : e === k ? 0 : e <= U ? U - e : G - e;
+            return e <= k ? k - e : e === j ? 0 : e <= U ? U - e : G - e;
         }, [y.length]);
     if (
         (i.useEffect(() => {

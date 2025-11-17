@@ -1,6 +1,6 @@
 n.d(t, { Z: () => ee }), n(388685), n(539854), n(457542);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(526665),
     L = n(349728),
     M = n(494620),
-    j = n(273313),
-    k = n(205266),
+    k = n(273313),
+    j = n(205266),
     U = n(216153),
     G = n(981631),
     B = n(856651),
@@ -176,7 +176,7 @@ function q(e) {
         [S, C] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
         [P, w] = i.useState(null),
-        [j, Z] = i.useState(!1),
+        [k, Z] = i.useState(!1),
         [H, W] = i.useState([]),
         q = (0, y.rR)(n.type),
         X = b.Z.get(q);
@@ -267,7 +267,7 @@ function q(e) {
             : e.type === G.ABu.XBOX
               ? (0, r.jsx)(U.Y, {})
               : e.type === G.ABu.PLAYSTATION
-                ? (0, r.jsx)(k.t, {})
+                ? (0, r.jsx)(j.t, {})
                 : null;
     }
     function et(e) {
@@ -349,7 +349,7 @@ function q(e) {
                             text: s,
                             variant: "secondary",
                             size: "sm",
-                            loading: j,
+                            loading: k,
                             disabled: o,
                             "aria-label": F.intl.string(F.t.sCkLYH),
                             onClick: o
@@ -633,7 +633,7 @@ let ee = () => {
     }, []),
     e)
         ? (0, r.jsx)(m.Z, {})
-        : (0, r.jsxs)(j.Z, {
+        : (0, r.jsxs)(k.Z, {
               title: F.intl.string(F.t["3fe7U5"]),
               children: [
                   (0, r.jsx)(X, {}),

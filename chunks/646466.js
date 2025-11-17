@@ -1,8 +1,8 @@
 n.d(t, { O: () => E }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(373071),
+    i = n(373071),
     s = n(637443),
     o = n(619899),
     c = n(18868),
@@ -81,9 +81,9 @@ let h = [
               );
     },
     v = () => {
-        let e = (0, l.lb)(),
+        let e = (0, i.lb)(),
             { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, o.N9)(),
-            s = i.useMemo(
+            s = l.useMemo(
                 () => [
                     x,
                     ...e.map((e) => ({
@@ -125,7 +125,7 @@ let h = [
     j = () => {
         let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, o.N9)(),
             { avatarDecorationAssets: n } = (0, o.xq)(),
-            l = i.useMemo(
+            i = l.useMemo(
                 () => [
                     g,
                     ...n.map((e) => ({
@@ -146,7 +146,7 @@ let h = [
                           children: "Preview Avatar Decorations",
                       }),
                       (0, a.jsx)(r.q4e, {
-                          options: l,
+                          options: i,
                           value: e,
                           maxVisibleItems: 30,
                           onChange: (e) => t(e),
@@ -156,18 +156,18 @@ let h = [
     },
     _ = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: l } = (0, o.xq)(),
+            { collectionAssets: i } = (0, o.xq)(),
             { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
-            d = i.useMemo(
+            d = l.useMemo(
                 () =>
-                    Object.values(l).map((e) => ({
+                    Object.values(i).map((e) => ({
                         label: e.name,
                         value: e.type,
                     })),
-                [l],
+                [i],
             ),
-            u = i.useCallback((e) => s(e), [s]),
-            p = i.useCallback(() => {
+            u = l.useCallback((e) => s(e), [s]),
+            p = l.useCallback(() => {
                 c(), t(), n();
             }, [c, t, n]);
         return 0 === d.length
@@ -258,12 +258,12 @@ let h = [
               });
     },
     C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: s } = (0, u.g)(),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, u.g)(),
             o = Object.entries(s),
-            d = Object.entries(l),
+            d = Object.entries(i),
             p = o.length > 0,
             h = d.length > 0,
-            x = i.useCallback(
+            x = l.useCallback(
                 (n) => {
                     t(), e(n);
                 },
@@ -310,7 +310,7 @@ let h = [
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
                                 children: o.map((e, t) => {
-                                    let [n, i] = e;
+                                    let [n, l] = e;
                                     return (0, a.jsxs)(
                                         "li",
                                         {
@@ -320,10 +320,10 @@ let h = [
                                                     color: "text-danger",
                                                     children: n,
                                                 }),
-                                                i.length > 0 &&
+                                                l.length > 0 &&
                                                     (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
-                                                        children: i.map((e, t) =>
+                                                        children: l.map((e, t) =>
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
@@ -355,8 +355,8 @@ let h = [
                             (0, a.jsx)(r.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
-                                children: Object.entries(l).map((e, t) => {
-                                    let [n, i] = e;
+                                children: Object.entries(i).map((e, t) => {
+                                    let [n, l] = e;
                                     return (0, a.jsxs)(
                                         "li",
                                         {
@@ -366,10 +366,10 @@ let h = [
                                                     color: "text-feedback-warning",
                                                     children: n,
                                                 }),
-                                                i.length > 0 &&
+                                                l.length > 0 &&
                                                     (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
-                                                        children: i.map((e, t) =>
+                                                        children: l.map((e, t) =>
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
@@ -396,8 +396,8 @@ let h = [
     },
     S = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
-            { ignoredFilenames: l, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
-            h = i.useCallback(
+            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+            h = l.useCallback(
                 (e) => {
                     n(), p(e);
                 },
@@ -437,14 +437,14 @@ let h = [
                     clearIgnoredFiles: u,
                 }),
                 (0, a.jsx)(y, {
-                    ignoredFiles: l,
+                    ignoredFiles: i,
                     handleClearIgnoredFiles: u,
                 }),
             ],
         });
     },
     E = () => {
-        let [e, t] = i.useState("preview");
+        let [e, t] = l.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.container,
             children: [

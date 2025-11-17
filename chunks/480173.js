@@ -1,14 +1,14 @@
 n.d(t, { Z: () => p });
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(442837),
-    l = n(481060),
+    i = n(481060),
     s = n(607070),
     o = n(7093),
     c = n(817466),
     d = n(388032),
     u = n(119290);
-let m = i.lazy(() => n.e("77898").then(n.bind(n, 739859)));
+let m = l.lazy(() => n.e("77898").then(n.bind(n, 739859)));
 function p() {
     let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         t = (0, o.Z)((e) => e.shouldRenderTenureLevelUp),
@@ -17,25 +17,25 @@ function p() {
 }
 function h(e) {
     let { levelUpData: t } = e,
-        n = i.useRef(null),
-        r = i.useCallback(() => {
+        n = l.useRef(null),
+        r = l.useCallback(() => {
             o.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        i.useEffect(() => r, [r]),
-        (0, a.jsx)(l.EqS, {
+        l.useEffect(() => r, [r]),
+        (0, a.jsx)(i.EqS, {
             containerRef: n,
             children: (0, a.jsxs)("div", {
                 className: u.wrapper,
                 children: [
                     (0, a.jsx)("div", {
                         className: u.closeButton,
-                        children: (0, a.jsx)(l.aML, {
+                        children: (0, a.jsx)(i.aML, {
                             text: d.intl.string(d.t.cpT0Cq),
                             children: (e) => {
                                 var t, n;
                                 return (0, a.jsx)(
-                                    l.hU,
+                                    i.hU,
                                     ((t = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function h(e) {
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            icon: l.Dio,
+                                            icon: i.Dio,
                                             variant: "secondary",
                                             size: "sm",
                                             onClick: r,
@@ -86,7 +86,7 @@ function h(e) {
                             },
                         }),
                     }),
-                    (0, a.jsx)(i.Suspense, {
+                    (0, a.jsx)(l.Suspense, {
                         fallback: null,
                         children: (0, a.jsx)(m, { levelUpData: t }),
                     }),

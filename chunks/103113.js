@@ -1,6 +1,6 @@
 n.d(t, { Z: () => P }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(481060),
     o = n(100527),
     s = n(906732),
@@ -64,12 +64,12 @@ function P(e) {
             openedAt: x,
             setPopoutRef: L,
             closePopout: M,
-            disableUserProfileLink: j = __OVERLAY__,
-            newAnalyticsLocations: k = [],
+            disableUserProfileLink: k = __OVERLAY__,
+            newAnalyticsLocations: j = [],
             disableAutoFocus: U = !1,
         } = e,
         G = (0, h.ZP)(n.id, N),
-        { analyticsLocations: B } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: B } = (0, s.ZP)([...j, o.Z.USER_PROFILE_POPOUT]),
         Z = (0, _.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -95,7 +95,7 @@ function P(e) {
                     ),
                 );
         },
-        Y = !j && (0, l.Z)(n.id),
+        Y = !k && (0, l.Z)(n.id),
         W = () =>
             Y
                 ? (0, r.jsx)(a.sNh, {

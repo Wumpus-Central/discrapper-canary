@@ -1,16 +1,16 @@
 n.d(t, { k: () => Z }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(595697),
+    a = n(734610),
     s = n(442837),
     c = n(524437),
     u = n(481060),
     d = n(100527),
     p = n(906732),
-    h = n(602478),
-    f = n(2818),
+    f = n(602478),
+    h = n(2818),
     g = n(768943),
     m = n(453473),
     b = n(216789),
@@ -82,9 +82,9 @@ function Z(e) {
             k(!M), M ? null == n || n() : null == t || t();
         }, [n, t, M]);
     i.useEffect(() => (O.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void O.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
-    let { enabled: z, inInbox: W } = f.Z.useExperiment({ location: "RecentsPopout" }),
+    let { enabled: z, inInbox: W } = h.Z.useExperiment({ location: "RecentsPopout" }),
         K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && z && W,
-        { enabled: Y } = h.Z.useExperiment({ location: "RecentsPopout" });
+        { enabled: Y } = f.Z.useExperiment({ location: "RecentsPopout" });
     i.useEffect(() => {
         G !== c.X.BOOKMARKS || z || W || U(c.X.MENTIONS);
     });

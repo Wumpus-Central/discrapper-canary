@@ -1,7 +1,7 @@
 n.d(t, { Z: () => H }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(509442),
+var r = n(54381),
+    i = n(473749),
+    l = n(636606),
     a = n(793030),
     s = n(442837),
     o = n(481060),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(621853),
     _ = n(787309),
     y = n(687158),
-    x = n(612600),
-    O = n(510659),
-    j = n(892001),
+    O = n(612600),
+    j = n(510659),
+    x = n(892001),
     v = n(899007),
     C = n(867176),
     I = n(451834),
@@ -76,13 +76,13 @@ function H(e) {
         }),
         q = i.useRef(null),
         { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, O.$m)(),
+        X = (0, j.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, j.openUserProfileModal)(
+            (0, x.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -93,7 +93,7 @@ function H(e) {
                 ),
             );
         },
-        ee = (0, x.Z)({ location: "UserProfileSidebar" }),
+        ee = (0, O.Z)({ location: "UserProfileSidebar" }),
         et = (null == B ? void 0 : B.widgets) != null && B.widgets.length > 0,
         en = (0, _.g)({ location: "UserProfileSidebar" }),
         { defaultWishlistId: er } = (0, s.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
@@ -107,7 +107,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(O.NJ, {
+            children: (0, r.jsx)(j.NJ, {
                 value: X,
                 children: (0, r.jsxs)(S.Z, {
                     ref: q,

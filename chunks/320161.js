@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(392711),
     o = n(846519),
     s = n(481060),
@@ -131,7 +131,7 @@ function I(e) {
         M = (e, t) => {
             !C && S && t.phase === d.UkZ.LEAVE && A(!1);
         },
-        j = () => {
+        k = () => {
             null == f || f(),
                 (0, c.JG)(n),
                 l.default.track(d.rMx.TEXT_COPIED),
@@ -155,7 +155,7 @@ function I(e) {
             return u(
                 m(p({}, g(e, ["onClick", "onMouseEnter"])), {
                     onClick: () => {
-                        null == t || t(), j();
+                        null == t || t(), k();
                     },
                     onMouseEnter: () => {
                         if (!S) {

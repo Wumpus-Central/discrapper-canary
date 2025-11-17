@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685), n(704826), n(35282), n(539854);
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(525654),
@@ -85,8 +85,8 @@ function O(e) {
     let { compact: _ = !1 } = e,
         m = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "467765",
-        v = "31ae85216b6894fa391781fd12e7706186e80b53".substring(0, 7),
+        O = "468965",
+        v = "5f49698fa107bf9724e11024475f5cfebb93ed1b".substring(0, 7),
         I = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         T = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         S = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),

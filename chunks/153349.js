@@ -1,6 +1,6 @@
 n.d(t, { Z: () => M }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(512722),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(884902),
     _ = n(456077),
     y = n(271383),
-    x = n(496675),
-    O = n(158776),
-    j = n(471253),
+    O = n(496675),
+    j = n(158776),
+    x = n(471253),
     v = n(431328),
     C = n(145834),
     I = n(590415),
@@ -94,17 +94,17 @@ let w = i.memo(function (e) {
         var t;
         let { channel: l, participant: a, tempDisableOnInit: s = !1 } = e,
             m = i.useRef(null),
-            [x, v] = i.useState(s);
+            [O, v] = i.useState(s);
         (0, f.ZP)(() => {
-            if (!x) return;
+            if (!O) return;
             let e = setTimeout(() => v(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = l.getGuildId();
         o()(null != S, "Channel cannot be guildless");
-        let { isMobile: E, status: Z } = (0, c.cj)([O.Z], () => ({
-                isMobile: O.Z.isMobileOnline(a.user.id),
-                status: O.Z.getStatus(a.user.id, S),
+        let { isMobile: E, status: Z } = (0, c.cj)([j.Z], () => ({
+                isMobile: j.Z.isMobileOnline(a.user.id),
+                status: j.Z.getStatus(a.user.id, S),
             })),
             w = (0, c.e7)([y.ZP], () => y.ZP.getMember(S, a.user.id)),
             A = (0, b.X7)(
@@ -200,9 +200,9 @@ let w = i.memo(function (e) {
                             asContainer: !0,
                             children: (0, r.jsx)(u.hU, {
                                 onClick: function () {
-                                    (0, j.DT)(l, a.user.id, !1);
+                                    (0, x.DT)(l, a.user.id, !1);
                                 },
-                                disabled: L || x,
+                                disabled: L || O,
                                 icon: u.Lrb,
                                 variant: "secondary",
                                 "aria-label": L ? P.intl.string(P.t.h9rsTd) : P.intl.string(P.t.f0T7hI),
@@ -214,7 +214,7 @@ let w = i.memo(function (e) {
                             children: (0, r.jsx)(u.hU, {
                                 "aria-label": P.intl.string(P.t.moABMy),
                                 onClick: function () {
-                                    (0, j.DT)(l, a.user.id, !0);
+                                    (0, x.DT)(l, a.user.id, !0);
                                 },
                                 icon: u.Dio,
                                 variant: "secondary",
@@ -258,7 +258,7 @@ function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, v.Fd)(t.id),
         s = [
-            +!!(0, c.e7)([x.Z], () => x.Z.can(Z.Pl.MANAGE_CHANNELS, t) || x.Z.can(Z.Pl.MANAGE_ROLES, t)),
+            +!!(0, c.e7)([O.Z], () => O.Z.can(Z.Pl.MANAGE_CHANNELS, t) || O.Z.can(Z.Pl.MANAGE_ROLES, t)),
             Math.max(1, l.length),
         ];
     return (0, r.jsxs)("div", {

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => j }), n(539854);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => k }), n(539854);
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
@@ -189,7 +189,7 @@ function L(e) {
 function M(e) {
     (0, u.ZDy)(async () => (t) => (0, r.jsx)(h.default, D(R({}, t), { guildBoostSlotId: e.id })));
 }
-let j = function (e) {
+let k = function (e) {
     let t,
         n,
         a,
@@ -203,8 +203,8 @@ let j = function (e) {
         N = p && !T,
         {
             appliedGuildBoostSlots: P,
-            unappliedGuildBoostSlots: j,
-            numActiveGuildBoostSlots: k,
+            unappliedGuildBoostSlots: k,
+            numActiveGuildBoostSlots: j,
             hasCooldownBoosts: U,
             allGuildBoostsAreOnCooldown: G,
         } = i.useMemo(() => {
@@ -230,7 +230,7 @@ let j = function (e) {
         }, [c]),
         B = null != _ ? y.ZP.getNumIncludedPremiumGuildSubscriptionSlots(_.planId) : 0,
         Z = Math.max(0, B - P.length),
-        F = k > B,
+        F = j > B,
         V = B === c.length,
         H = V ? Z : 1,
         Y = i.useMemo(() => {
@@ -248,9 +248,9 @@ let j = function (e) {
                 );
             return e;
         }, [H, v]),
-        W = i.useMemo(() => j.find((e) => e.isAvailable()), [j]);
-    if (0 === j.length) return null;
-    let K = j.length;
+        W = i.useMemo(() => k.find((e) => e.isAvailable()), [k]);
+    if (0 === k.length) return null;
+    let K = k.length;
     if (
         ((t = V
             ? A.intl.formatToPlainString(G ? A.t["3DW6Dc"] : A.t["/u15Qc"], { numUnappliedGuildBoostSlots: K })
@@ -345,7 +345,7 @@ let j = function (e) {
                     (!V || U) &&
                         (0, r.jsx)("ul", {
                             className: C.unappliedBoostSlots,
-                            children: j.map((e) =>
+                            children: k.map((e) =>
                                 (0, r.jsx)(
                                     w,
                                     {

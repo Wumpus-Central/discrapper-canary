@@ -1,6 +1,6 @@
 n.d(t, { U: () => I });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(512722),
     o = n.n(a),
     s = n(481060),
@@ -36,8 +36,8 @@ function I(e) {
         } = (0, m.JL)(),
         { isGift: w, selectedGiftStyle: x, giftRecipient: L } = (0, h.wD)(),
         M = (null == R ? void 0 : R.productLine) === E.POd.COLLECTIBLES,
-        j = (null == R ? void 0 : R.productLine) === E.POd.SOCIAL_LAYER_GAME_ITEM,
-        k = w && (0, p.pO)(L) && S === g.h8.CONFIRM && null != x && !M && !j,
+        k = (null == R ? void 0 : R.productLine) === E.POd.SOCIAL_LAYER_GAME_ITEM,
+        j = w && (0, p.pO)(L) && S === g.h8.CONFIRM && null != x && !M && !k,
         U = null != n && null != S,
         G = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
         B = null != S && !G.includes(S) && null != T,
@@ -50,7 +50,7 @@ function I(e) {
         if (null == S) return;
         let e = null;
         return (
-            k
+            j
                 ? (e = (0, r.jsxs)("div", {
                       className: O.container,
                       children: [
@@ -90,5 +90,5 @@ function I(e) {
                       }))),
             e
         );
-    }, [x, I, C, n, A, T, S, F, Y, k, B, U, N, w, L, P, D]);
+    }, [x, I, C, n, A, T, S, F, Y, j, B, U, N, w, L, P, D]);
 }

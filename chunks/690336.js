@@ -1,15 +1,15 @@
-n.d(t, { Z: () => E }), n(539854), n(388685);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => v }), n(539854), n(388685);
+var i = n(54381),
+    r = n(473749),
     l = n(442837),
     o = n(481060),
     a = n(355863),
     s = n(451478),
-    u = n(830917),
-    c = n(388627),
+    c = n(830917),
+    u = n(388627),
     d = n(892127),
-    p = n(444982),
-    h = n(561064),
+    h = n(444982),
+    p = n(561064),
     f = n(757744);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,11 +68,11 @@ function y(e, t, n, r) {
           );
 }
 let O = [],
-    E = r.memo(function (e) {
+    v = r.memo(function (e) {
         let { className: t } = e,
-            n = (0, h.Z)(),
-            d = (0, l.e7)([s.Z], () => s.Z.windowSize((0, u.ZY)(n))),
-            E = (0, l.e7)(
+            n = (0, p.Z)(),
+            d = (0, l.e7)([s.Z], () => s.Z.windowSize((0, c.ZY)(n))),
+            v = (0, l.e7)(
                 [a.Z],
                 () => {
                     let e = a.Z.getLayout(f.$S);
@@ -81,15 +81,15 @@ let O = [],
                     for (let n of e.widgets) {
                         let e = a.Z.getWidget(n);
                         if (null == e) continue;
-                        let i = p.Z[e.type];
+                        let i = h.Z[e.type];
                         null != i && (null == i.predicate || i.predicate()) && t.push(m({ widget: e }, i));
                     }
                     return t;
                 },
                 [],
-                c.HP,
+                u.HP,
             ),
-            v = r.useCallback(
+            E = r.useCallback(
                 (e) =>
                     (0, i.jsx)("div", {
                         className: t,
@@ -99,9 +99,9 @@ let O = [],
                 [t, d],
             );
         return (0, i.jsx)(o.W3x, {
-            items: E,
+            items: v,
             renderItem: y,
             getItemKey: g,
-            wrapChildren: v,
+            wrapChildren: E,
         });
     });

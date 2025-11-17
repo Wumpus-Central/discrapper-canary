@@ -6,8 +6,8 @@ n.d(t, {
     jG: () => w,
     yI: () => A,
 });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(494497),
@@ -17,8 +17,8 @@ var i = n(120356),
     u = n(100527),
     d = n(703656),
     p = n(430824),
-    h = n(326660),
-    f = n(156732),
+    f = n(326660),
+    h = n(156732),
     g = n(639777),
     m = n(441536),
     b = n(795338),
@@ -88,9 +88,9 @@ function A(e) {
             return null == (e = p.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: c } = (0, _.ZP)(t, n[0]),
-        d = (0, f.Z)(n[0], !0);
+        d = (0, h.Z)(n[0], !0);
     if (0 === n.length) return;
-    let h =
+    let f =
             n.length >= 3
                 ? E.intl.formatToPlainString(C.default["6Sv+3M"], {
                       perk: n[0].title,
@@ -114,7 +114,7 @@ function A(e) {
                       className: S.image,
                   }),
         title: E.intl.formatToPlainString(C.default.LmpChE, { guildName: s }),
-        body: h,
+        body: f,
         actions: [
             {
                 text: g ? E.intl.string(C.default.gSxlHf) : E.intl.string(E.t.RzWDqY),
@@ -183,9 +183,9 @@ function D(e) {
             src: I.Z,
             className: l()(S.image, S.gameServerHostingImage),
         }),
-        title: E.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? x.default.wXLChx : x.default["8z8RpY"]),
+        title: E.intl.string(n === f.J.GAME_SERVER_HOSTING_AVAILABLE ? x.default.wXLChx : x.default["8z8RpY"]),
         body:
-            n === h.J.GAME_SERVER_HOSTING_AVAILABLE
+            n === f.J.GAME_SERVER_HOSTING_AVAILABLE
                 ? E.intl.string(x.default.lZ6m7Q)
                 : E.intl.format(x.default["IQ1E+d"], { boostCount: a }),
         actions: [

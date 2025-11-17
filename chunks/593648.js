@@ -1,6 +1,6 @@
 n.d(t, { Z: () => ei }), n(539854), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(392711),
     o = n.n(a),
     s = n(442837),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(45640),
     L = n(695346),
     M = n(675478),
-    j = n(273313),
-    k = n(33656),
+    k = n(273313),
+    j = n(33656),
     U = n(726985),
     G = n(981631),
     B = n(468788),
@@ -376,7 +376,7 @@ class Q extends i.PureComponent {
                     label:
                         0 === e ? F.intl.string(F.t["0QN7cZ"]) : F.intl.formatToPlainString(F.t.iXLF9W, { minutes: e }),
                 }));
-        return (0, r.jsx)(j.Z, {
+        return (0, r.jsx)(k.Z, {
             title: F.intl.string(F.t.HcoRu0),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
@@ -436,7 +436,7 @@ class Q extends i.PureComponent {
                         disableAllSounds: s,
                         notifyMessagesInSelectedChannel: l,
                     }),
-                    (0, r.jsx)(k.Z, {}),
+                    (0, r.jsx)(j.Z, {}),
                 ],
             }),
         });

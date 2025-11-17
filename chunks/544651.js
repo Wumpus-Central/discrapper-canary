@@ -1,13 +1,13 @@
 n.d(t, { r: () => o }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var a = n(54381),
+    l = n(473749),
     r = n(481060),
-    l = n(259580),
+    i = n(259580),
     s = n(547481);
 function o(e) {
     let { title: t, initExpanded: n, highlight: o, children: c } = e,
-        [d, u] = i.useState(n),
-        m = i.useCallback(() => {
+        [d, u] = l.useState(n),
+        m = l.useCallback(() => {
             u(!d);
         }, [d]),
         p = o ? "status-warning" : "text-default";
@@ -32,8 +32,8 @@ function o(e) {
                               color: p,
                               children: t,
                           }),
-                          (0, a.jsx)(l.Z, {
-                              direction: d ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
+                          (0, a.jsx)(i.Z, {
+                              direction: d ? i.Z.Directions.DOWN : i.Z.Directions.RIGHT,
                               className: s.headerCaret,
                           }),
                       ],

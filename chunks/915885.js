@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(704215),
     a = n(481060),
@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(826581),
     d = n(246364),
     p = n(98493),
-    h = n(434479),
-    f = n(496675),
+    f = n(434479),
+    h = n(496675),
     g = n(527379),
     m = n(981631),
     b = n(388032);
 function _(e) {
     let { guild: t, selected: n } = e,
-        _ = (0, l.e7)([f.Z], () => f.Z.can(m.Plq.KICK_MEMBERS, t)),
+        _ = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
         y = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         O = _ && null != y ? y : 0;
     i.useEffect(() => {
@@ -35,7 +35,7 @@ function _(e) {
         j = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
     return (0, r.jsx)("div", {
         ref: j,
-        children: (0, r.jsx)(h.m, {
+        children: (0, r.jsx)(f.m, {
             id: "members-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(a.BFJ, {

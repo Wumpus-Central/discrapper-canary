@@ -1,10 +1,10 @@
 n.d(t, {
     Q: () => v,
-    Z: () => k,
+    Z: () => S,
 }),
     n(388685);
-var a = n(951288),
-    r = n(647438),
+var a = n(54381),
+    r = n(473749),
     l = n(120356),
     i = n.n(l),
     o = n(748780),
@@ -17,9 +17,9 @@ var a = n(951288),
     h = n(124347),
     g = n(524444),
     C = n(585483),
-    b = n(981631),
-    f = n(925962);
-function _(e) {
+    _ = n(981631),
+    b = n(925962);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -61,11 +61,11 @@ let v = 747,
     I = (e) => {
         var t, n;
         return (0, g.lV)(
-            ((t = _({}, e)),
+            ((t = f({}, e)),
             (n = n =
                 {
-                    className: f.videoWrapper,
-                    mediaPlayerClassName: f.mediaPlayer,
+                    className: b.videoWrapper,
+                    mediaPlayerClassName: b.mediaPlayer,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -82,8 +82,8 @@ let v = 747,
             t),
         );
     },
-    j = (e) => (0, a.jsx)(h.ZP, _({}, e));
-function P(e) {
+    P = (e) => (0, a.jsx)(h.ZP, f({}, e));
+function j(e) {
     let { item: t, onPlay: n, onEnded: r, onClick: l, playable: i } = e,
         o = (0, a.jsx)(u.BC, {
             href: null,
@@ -105,32 +105,32 @@ function P(e) {
             onPlay: n,
             onEnded: r,
             playable: i,
-            className: f.video,
+            className: b.video,
             volume: 1,
             autoMute: !0,
             autoPlay: i,
             renderVideoComponent: I,
-            renderImageComponent: j,
+            renderImageComponent: P,
             renderLinkComponent: g.iT,
         });
     return i
         ? o
         : (0, a.jsx)(s.P3F, {
-              className: f.itemImageWrapper,
+              className: b.itemImageWrapper,
               onClick: l,
               children: o,
           });
 }
-let k = (0, c.Z)((e) => {
+let S = (0, c.Z)((e) => {
     let { items: t, className: n, paused: l = !1, autoplayInterval: c = 8000, onItemChange: u } = e,
         [h, g] = (0, r.useState)(0),
-        _ = (0, r.useRef)(0),
+        f = (0, r.useRef)(0),
         I = (0, r.useRef)(t.length),
-        [j, k] = (0, r.useState)(!0),
-        [S, y] = (0, r.useState)(!1),
-        [w, N] = (0, r.useState)(!1),
-        [O, E] = (0, r.useState)(!1),
-        [R, Z] = (0, r.useState)(!1),
+        [P, S] = (0, r.useState)(!0),
+        [k, y] = (0, r.useState)(!1),
+        [N, w] = (0, r.useState)(!1),
+        [O, R] = (0, r.useState)(!1),
+        [E, T] = (0, r.useState)(!1),
         L = (0, r.useCallback)(
             (e, n) => {
                 var a;
@@ -155,112 +155,112 @@ let k = (0, c.Z)((e) => {
             },
             [t],
         ),
-        B = (0, r.useCallback)(function (e) {
+        A = (0, r.useCallback)(function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            y(!1), N(t);
+            y(!1), w(t);
             let n = I.current,
-                a = (0, p.gN)(_.current, n),
+                a = (0, p.gN)(f.current, n),
                 r = (0, p.gN)(e, n);
-            (_.current = r), g(r), k(1 === Math.abs(r - a) || (r === n - 1 && 0 === a) || (0 === r && a === n - 1));
+            (f.current = r), g(r), S(1 === Math.abs(r - a) || (r === n - 1 && 0 === a) || (0 === r && a === n - 1));
         }, []),
-        T = (0, r.useCallback)(() => {
-            B(_.current + 1, !1);
-        }, [B]),
+        Z = (0, r.useCallback)(() => {
+            A(f.current + 1, !1);
+        }, [A]),
+        B = (0, r.useCallback)(() => {
+            A(f.current + 1);
+        }, [A]),
         W = (0, r.useCallback)(() => {
-            B(_.current + 1);
-        }, [B]),
-        A = (0, r.useCallback)(() => {
-            B(_.current - 1);
-        }, [B]),
-        H = (0, r.useCallback)((e) => {
-            y(!0), N(!e);
+            A(f.current - 1);
+        }, [A]),
+        D = (0, r.useCallback)((e) => {
+            y(!0), w(!e);
         }, []),
-        D = (0, r.useCallback)(() => {
-            w || T();
-        }, [w, T]),
-        z = (0, r.useCallback)((e) => {
-            let t = _.current;
-            e < t ? E(!0) : e > t && Z(!0);
+        H = (0, r.useCallback)(() => {
+            N || Z();
+        }, [N, Z]),
+        F = (0, r.useCallback)((e) => {
+            let t = f.current;
+            e < t ? R(!0) : e > t && T(!0);
         }, []),
-        F = (0, r.useCallback)(() => {
-            E(!1), Z(!1);
+        U = (0, r.useCallback)(() => {
+            R(!1), T(!1);
         }, []),
-        Q = (0, r.useCallback)(
+        z = (0, r.useCallback)(
             (e, t, n) =>
                 n
                     ? (0, a.jsx)(s.P3F, {
-                          onClick: () => N(!0),
-                          className: f.itemImageWrapper,
+                          onClick: () => w(!0),
+                          className: b.itemImageWrapper,
                           children: (0, a.jsx)("img", {
                               src: e.src,
                               alt: "",
-                              className: f.currentImage,
+                              className: b.currentImage,
                           }),
                       })
                     : (0, a.jsx)(s.P3F, {
-                          onClick: () => B(t),
-                          className: f.itemImageWrapper,
+                          onClick: () => A(t),
+                          className: b.itemImageWrapper,
                           children: (0, a.jsx)("img", {
                               alt: "",
-                              className: f.itemImage,
+                              className: b.itemImage,
                               src: e.src,
                               draggable: !1,
                           }),
                       }),
-            [B],
+            [A],
         ),
-        U = (0, r.useCallback)(
+        M = (0, r.useCallback)(
             (e, n, r) => {
                 let l = n === (0, p.gN)(h, t.length);
                 return (0, a.jsx)(o.Z.div, {
-                    className: i()(f.item, { [f.currentItem]: l }),
+                    className: i()(b.item, { [b.currentItem]: l }),
                     style: null != r ? L(n, r) : null,
-                    onMouseEnter: l ? null : () => z(n),
-                    onMouseLeave: l ? null : F,
+                    onMouseEnter: l ? null : () => F(n),
+                    onMouseLeave: l ? null : U,
                     children:
                         "video" === e.type
-                            ? (0, a.jsx)(P, {
+                            ? (0, a.jsx)(j, {
                                   item: e,
-                                  onPlay: H,
-                                  onEnded: D,
+                                  onPlay: D,
+                                  onEnded: H,
                                   playable: l,
-                                  onClick: () => B(n),
+                                  onClick: () => A(n),
                               })
-                            : Q(e, n, l),
+                            : z(e, n, l),
                 });
             },
-            [h, t.length, L, z, F, H, D, B, Q],
+            [h, t.length, L, F, U, D, H, A, z],
         ),
-        M = (0, r.useCallback)(() => {
+        Q = (0, r.useCallback)(() => {
             let e = (0, a.jsx)(p.ZP, {
-                className: f.carousel,
+                className: b.carousel,
                 items: t,
                 itemSize: {
                     width: v,
                     margin: 12,
                 },
-                renderItem: U,
+                renderItem: M,
                 currentIndex: h,
-                animate: j,
+                animate: P,
                 edgeItems: 2,
             });
             return t.length <= 1
                 ? e
                 : (0, a.jsxs)("div", {
-                      className: f.carouselButtonsContainer,
+                      className: b.carouselButtonsContainer,
                       children: [
                           e,
                           (0, a.jsx)(m.am, {
-                              onClick: A,
-                              className: i()(f.arrow, { [f.arrowHovered]: O }),
+                              onClick: W,
+                              className: i()(b.arrow, { [b.arrowHovered]: O }),
                           }),
                           (0, a.jsx)(m.Pz, {
-                              onClick: W,
-                              className: i()(f.arrow, { [f.arrowHovered]: R }),
+                              onClick: B,
+                              className: i()(b.arrow, { [b.arrowHovered]: E }),
                           }),
                       ],
                   });
-        }, [t, U, h, j, A, W, O, R]),
+        }, [t, M, h, P, W, B, O, E]),
         G = (0, r.useCallback)(
             (e, t) => {
                 let n = h === t;
@@ -268,12 +268,12 @@ let k = (0, c.Z)((e) => {
                     "div",
                     {
                         className: i()(
-                            f.paginationItem,
-                            n ? f.selectedStorePaginationItem : f.unselectedStorePaginationItem,
+                            b.paginationItem,
+                            n ? b.selectedStorePaginationItem : b.unselectedStorePaginationItem,
                         ),
                         children: (0, a.jsx)("img", {
                             alt: "",
-                            className: f.storePaginationImg,
+                            className: b.storePaginationImg,
                             src:
                                 null != e.thumbnailSrc
                                     ? e.thumbnailSrc
@@ -293,13 +293,13 @@ let k = (0, c.Z)((e) => {
     return (
         (0, r.useEffect)(
             () => (
-                C.S.subscribe(b.CkL.CAROUSEL_PREV, A),
-                C.S.subscribe(b.CkL.CAROUSEL_NEXT, W),
+                C.S.subscribe(_.CkL.CAROUSEL_PREV, W),
+                C.S.subscribe(_.CkL.CAROUSEL_NEXT, B),
                 () => {
-                    C.S.unsubscribe(b.CkL.CAROUSEL_PREV, A), C.S.unsubscribe(b.CkL.CAROUSEL_NEXT, W);
+                    C.S.unsubscribe(_.CkL.CAROUSEL_PREV, W), C.S.unsubscribe(_.CkL.CAROUSEL_NEXT, B);
                 }
             ),
-            [A, W],
+            [W, B],
         ),
         (0, r.useEffect)(() => {
             I.current = t.length;
@@ -309,21 +309,21 @@ let k = (0, c.Z)((e) => {
         }, [h, t, u]),
         (0, a.jsxs)(d.Z, {
             pauseOnHover: !0,
-            onInterval: T,
+            onInterval: Z,
             interval: c,
             className: n,
-            disable: S || w || l,
+            disable: k || N || l,
             children: [
-                M(),
+                Q(),
                 (0, a.jsx)("div", {
-                    className: f.pagination,
+                    className: b.pagination,
                     children: (0, a.jsx)(m.ZP, {
                         renderItem: G,
                         scrollToPadding: 40,
                         items: t,
                         selectedIndex: h,
-                        onSetItem: B,
-                        paginationContainerClass: f.scroller,
+                        onSetItem: A,
+                        paginationContainerClass: b.scroller,
                         align: m.ZP.Align.CENTER,
                     }),
                 }),

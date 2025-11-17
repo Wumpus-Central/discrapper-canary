@@ -1,9 +1,9 @@
 n.d(t, { Z: () => s });
-var a = n(951288);
-n(647438);
-var i = n(509442),
+var a = n(54381);
+n(473749);
+var l = n(636606),
     r = n(481060),
-    l = n(572797);
+    i = n(572797);
 function s(e) {
     let { text: t } = e,
         n = (0, r.Yzy)(t, {
@@ -21,10 +21,10 @@ function s(e) {
             },
         });
     return (0, a.jsx)("div", {
-        className: l.container,
+        className: i.container,
         children: n((e, t) =>
-            (0, a.jsx)(i.animated.div, {
-                className: l.animatedText,
+            (0, a.jsx)(l.animated.div, {
+                className: i.animatedText,
                 style: e,
                 children: t,
             }),

@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => g,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(392711),
     o = n.n(l),
     a = n(442837),
@@ -13,8 +13,8 @@ var r = n(951288),
     u = n(174767),
     d = n(240126),
     p = n(326838),
-    h = n(388032),
-    f = n(201848);
+    f = n(388032),
+    h = n(201848);
 function g() {
     let e = (0, a.Wu)([c.Z], () => c.Z.getInvites()),
         t = (0, a.e7)([c.Z], () => c.Z.getInviteStatuses()),
@@ -34,21 +34,21 @@ function g() {
     }),
     0 === e.length)
         ? (0, r.jsx)("div", {
-              className: f.__invalid_emptyStateContainer,
+              className: h.__invalid_emptyStateContainer,
               children: (0, r.jsx)(d.Z, {
                   Icon: s.iWm,
-                  header: h.intl.string(h.t.PbSPWc),
-                  tip: h.intl.string(h.t.BxNbSz),
+                  header: f.intl.string(f.t.PbSPWc),
+                  tip: f.intl.string(f.t.BxNbSz),
               }),
           })
         : (0, r.jsx)(s.h21, {
               children: (0, r.jsxs)("div", {
-                  className: f.invitesContainer,
+                  className: h.invitesContainer,
                   children: [
                       n.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: h.intl.string(h.t.yflAJV) }),
+                                  (0, r.jsx)(m, { title: f.intl.string(f.t.yflAJV) }),
                                   n.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -64,7 +64,7 @@ function g() {
                       l.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: h.intl.string(h.t.f0Ia4V) }),
+                                  (0, r.jsx)(m, { title: f.intl.string(f.t.f0Ia4V) }),
                                   l.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -84,15 +84,15 @@ function g() {
 function m(e) {
     let { title: t } = e;
     return (0, r.jsxs)("div", {
-        className: f.headerContainer,
+        className: h.headerContainer,
         children: [
             (0, r.jsx)(s.Text, {
-                className: f.headerTitle,
+                className: h.headerTitle,
                 variant: "text-xs/semibold",
                 color: "interactive-normal",
                 children: t,
             }),
-            (0, r.jsx)("div", { className: f.headerDivider }),
+            (0, r.jsx)("div", { className: h.headerDivider }),
         ],
     });
 }
@@ -155,7 +155,7 @@ function _() {
     return 0 === (0, a.Wu)([c.Z], () => c.Z.getInvites()).length
         ? null
         : (0, r.jsx)(s.M0o, {
-              tooltip: h.intl.string(h.t["Zy3MR/"]),
+              tooltip: f.intl.string(f.t["Zy3MR/"]),
               color: s.YX$.SECONDARY,
               icon: (0, r.jsx)(s.XHJ, { size: "xs" }),
               onClick: b,

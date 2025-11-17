@@ -1,6 +1,6 @@
 n.d(t, { Z: () => G }), n(853839), n(570086), n(479048), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(692547),
@@ -79,7 +79,7 @@ function M(e, t) {
         return null != (e = R(null != n ? n : [], r)) ? e : A;
     }, [n, r]);
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let [r, a] = i.useState(e),
         [o, s] = i.useState(e),
         l = i.useRef(o);
@@ -93,16 +93,16 @@ function j(e, t, n) {
         [r, o]
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = (0, l.dQu)(s.Z.colors.INTERACTIVE_MUTED).hex(),
         r = (0, l.dQu)(s.Z.colors.INTERACTIVE_NORMAL).hex(),
         i = (0, l.dQu)(s.Z.colors.INTERACTIVE_ACTIVE).hex(),
         a = (0, l.dQu)(s.Z.unsafe_rawColors.BRAND_430).hex(),
         o = (0, l.dQu)(s.Z.unsafe_rawColors.WHITE_500).hex(),
         c = t ? a : n,
-        [u, d] = j(c, t, e),
-        [f, _] = j(t ? o : e ? i : r, t, e),
-        [p, h] = j(e ? c : r, t, e);
+        [u, d] = k(c, t, e),
+        [f, _] = k(t ? o : e ? i : r, t, e),
+        [p, h] = k(e ? c : r, t, e);
     return {
         lastBackgroundFillColor: u,
         backgroundFillColor: d,
@@ -141,10 +141,10 @@ function G(e) {
             lastBackgroundFillColor: R,
             backgroundFillColor: D,
             lastActiveFillColor: w,
-            activeFillColor: j,
+            activeFillColor: k,
             lastInactiveFillColor: G,
             inactiveFillColor: B,
-        } = k(l, d),
+        } = j(l, d),
         Z = {
             currentTime: a,
             duration: s,
@@ -208,7 +208,7 @@ function G(e) {
                 i.fill();
                 let [f, _] = U(G, B, n, A.current);
                 o = o || _;
-                let [p, h] = U(w, j, n, A.current);
+                let [p, h] = U(w, k, n, A.current);
                 o = o || h;
                 for (let e = 0; e < a.length; e++) {
                     let t = a[e],
@@ -234,7 +234,7 @@ function G(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [g, N, O, E, a, s, l, d, R, D, w, j, G, B]);
+        }, [g, N, O, E, a, s, l, d, R, D, w, k, G, B]);
     let [, V] = (0, u.Z)({
         ref: g,
         onDrag: f,

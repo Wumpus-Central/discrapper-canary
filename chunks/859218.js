@@ -1,5 +1,5 @@
 n.d(t, { Z: () => l });
-var s = n(951288);
+var s = n(54381);
 function l(e) {
     let { color: t = "white", className: n } = e;
     return (0, s.jsx)("svg", {

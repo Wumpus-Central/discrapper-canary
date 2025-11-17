@@ -3,8 +3,8 @@ n.d(t, {
     default: () => R,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
@@ -89,7 +89,7 @@ let A = (e) => {
                     })
                 );
             },
-            j = (e) => {
+            k = (e) => {
                 let { eligibleRecipients: t } = e;
                 return (0, r.jsx)(y.Z, {
                     users: t,
@@ -147,7 +147,7 @@ let A = (e) => {
                       input: L(),
                       actions: [],
                       actionBarInput: M({ eligibleRecipients: x }),
-                      children: j({ eligibleRecipients: x }),
+                      children: k({ eligibleRecipients: x }),
                   });
     },
     C = (e) => {

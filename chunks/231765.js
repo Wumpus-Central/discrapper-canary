@@ -1,6 +1,6 @@
 n.d(t, { Z: () => K }), n(953529), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(392711),
     o = n(442837),
     s = n(692547),
@@ -149,7 +149,7 @@ function M(e) {
         children: t,
     });
 }
-function j(e) {
+function k(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
@@ -197,7 +197,7 @@ function j(e) {
         onChange: s,
     });
 }
-function k(e) {
+function j(e) {
     let {
             settings: {
                 enabled: t,
@@ -500,7 +500,7 @@ function V(e) {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t.AtCukI),
                 }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     settings: a,
                     updateSettings: h,
                 }),
@@ -513,7 +513,7 @@ function V(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     settings: a,
                     updateSettings: h,
                 }),

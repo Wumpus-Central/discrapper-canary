@@ -1,9 +1,9 @@
 n.d(t, {
     Z: () => U,
-    v: () => k,
+    v: () => j,
 });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     a = n(758713),
     o = n(442837),
     s = n(481060),
@@ -35,8 +35,8 @@ var r = n(951288),
     x = n(410441),
     L = n(797342),
     M = n(981631),
-    j = n(388032);
-let k = {
+    k = n(388032);
+let j = {
         [a.z.DESKTOP]: null,
         [a.z.LINUX]: null,
         [a.z.MACOS]: null,
@@ -64,7 +64,7 @@ let k = {
             { streamPreviewUrl: J, stream: $ } = (0, T.Z)(y),
             { displayParticipants: ee, participant1: et, participant2: en, numOtherParticipants: er } = (0, I.Z)(y, 3),
             ei = y.extra.platform,
-            ea = null != ei ? k[ei] : null,
+            ea = null != ei ? j[ei] : null,
             eo = ei === a.z.XBOX ? M.ABu.XBOX : ei === a.z.PLAYSTATION ? M.ABu.PLAYSTATION : void 0,
             es = (0, N.Z)(eo),
             { data: el } = (0, m.IX)(y.extra.application_id),
@@ -116,9 +116,9 @@ let k = {
                                   : (0, r.jsx)(x.Z, {
                                         onClick: es,
                                         Icon: ea,
-                                        "aria-label": j.intl.string(j.t.YR4cHH),
+                                        "aria-label": k.intl.string(k.t.YR4cHH),
                                     }),
-                          userDescription: (0, S.kr)(y) ? j.t.vPg1JT : j.t.rPqqts,
+                          userDescription: (0, S.kr)(y) ? k.t.vPg1JT : k.t.rPqqts,
                           title: W,
                           subtitle: Y,
                           badges: ef,
@@ -132,7 +132,7 @@ let k = {
                           title: y.extra.game_name,
                           subtitle: Y,
                           badges: ef,
-                          userDescription: j.t["6oWFUN"],
+                          userDescription: k.t["6oWFUN"],
                           entry: y,
                           stream: $,
                           onUserPopoutClosed: Z,

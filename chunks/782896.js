@@ -1,6 +1,6 @@
 n.d(t, { c: () => m }), n(388685), n(290780);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(481060),
     a = n(686546),
@@ -9,11 +9,11 @@ var r = n(951288),
     u = n(797670),
     d = n(361742),
     p = n(388032),
-    h = n(906530);
-function f(e) {
+    f = n(906530);
+function h(e) {
     let { children: t } = e;
     return (0, r.jsx)(a.ZP, {
-        className: h.facepileItemContainer,
+        className: f.facepileItemContainer,
         mask: a.ZP.Masks.SQUIRCLE,
         width: 25,
         height: 25,
@@ -23,13 +23,13 @@ function f(e) {
 function g(e) {
     let { guilds: t, numTruncated: n } = e;
     return (0, r.jsxs)("div", {
-        className: h.guildIconList,
+        className: f.guildIconList,
         children: [
             t.map((e) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: h.guildIconItem,
+                        className: f.guildIconItem,
                         children: [
                             (0, r.jsx)("div", {
                                 children: (0, r.jsx)(u.V, {
@@ -38,7 +38,7 @@ function g(e) {
                                 }),
                             }),
                             (0, r.jsx)(o.Text, {
-                                className: h.guildIconItemText,
+                                className: f.guildIconItemText,
                                 variant: "text-xs/medium",
                                 children: e.name,
                             }),
@@ -94,11 +94,11 @@ function m(e) {
         }),
         position: "top",
         children: (0, r.jsxs)("div", {
-            className: h.facepile,
+            className: f.facepile,
             children: [
                 b.map((e) =>
                     (0, r.jsx)(
-                        f,
+                        h,
                         {
                             children: (0, r.jsx)(u.V, {
                                 guild: e,
@@ -109,9 +109,9 @@ function m(e) {
                     ),
                 ),
                 _ > 0 &&
-                    (0, r.jsx)(f, {
+                    (0, r.jsx)(h, {
                         children: (0, r.jsxs)(o.Text, {
-                            className: h.textItem,
+                            className: f.textItem,
                             color: "text-secondary",
                             variant: "text-xxs/semibold",
                             children: ["+", _],

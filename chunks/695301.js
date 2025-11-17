@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     o = n(481060),
     a = n(746916),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(486472),
     d = n(888369),
     p = n(430824),
-    h = n(451478),
-    f = n(61634),
+    f = n(451478),
+    h = n(61634),
     g = n(325257),
     m = n(144618);
 let b = i.memo(function (e) {
@@ -19,10 +19,10 @@ let b = i.memo(function (e) {
         y = b.id,
         O = (0, l.e7)([p.Z], () => p.Z.getGuild(y)),
         v = (0, a.E)(O),
-        j = (0, l.e7)([h.Z], () => h.Z.isFocused()),
+        j = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         x = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
         C = (0, c.Z)((e) => e.guildId),
-        E = (0, f.Z)(y),
+        E = (0, h.Z)(y),
         {
             badge: S,
             unread: I,

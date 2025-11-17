@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(442837),
     l = n(704215),
     o = n(481060),
@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(306680),
     d = n(9156),
     p = n(434479),
-    h = n(490897),
-    f = n(388032),
+    f = n(490897),
+    h = n(388032),
     g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -61,8 +61,8 @@ function _(e) {
         { hasUnread: y, mentionCount: O } = (0, i.cj)(
             [u.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT),
+                hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, f.W.GUILD_EVENT),
             }),
             [t.id],
         ),
@@ -75,7 +75,7 @@ function _(e) {
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: x.length }) : f.intl.string(f.t.tlopTM);
+        C = x.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSu, { number: x.length }) : h.intl.string(h.t.tlopTM);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>

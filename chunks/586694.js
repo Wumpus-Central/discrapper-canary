@@ -3,8 +3,8 @@ n.d(t, {
     q: () => m,
 }),
     n(415506);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(974674),
@@ -13,7 +13,7 @@ var r = n(951288),
     u = n(419061),
     d = n(268685),
     p = n(536537);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,8 +63,8 @@ function g(e) {
             onClick: l,
             onMouseDown: a,
             onKeyDown: d,
-            onContextMenu: h,
-            onMouseEnter: f,
+            onContextMenu: f,
+            onMouseEnter: h,
             onMouseLeave: g,
             className: m,
             ariaHidden: b,
@@ -154,10 +154,10 @@ function g(e) {
               className: o()(p.wrapper, p.pointer, m),
               style: E,
               onClick: l,
-              onContextMenu: h,
+              onContextMenu: f,
               onMouseDown: a,
               onKeyDown: d,
-              onMouseEnter: null != f ? f : void 0,
+              onMouseEnter: null != h ? h : void 0,
               onMouseLeave: null != g ? g : void 0,
               "aria-label": null != C ? C : void 0,
               "aria-hidden": b,
@@ -166,8 +166,8 @@ function g(e) {
         : (0, r.jsxs)("div", {
               className: o()(p.wrapper, m),
               style: E,
-              onContextMenu: null != h ? h : void 0,
-              onMouseEnter: null != f ? f : void 0,
+              onContextMenu: null != f ? f : void 0,
+              onMouseEnter: null != h ? h : void 0,
               onMouseLeave: null != g ? g : void 0,
               role: "img",
               "aria-label": null != C ? C : void 0,
@@ -191,7 +191,7 @@ function m(e) {
         x = (0, i.useId)();
     return (0, r.jsx)(
         g,
-        f(h({}, e), {
+        h(f({}, e), {
             ariaLabel: s,
             ariaHidden: l,
             specs: v,
@@ -240,7 +240,7 @@ function m(e) {
                     null != m &&
                         (0, r.jsx)(
                             "foreignObject",
-                            f(h({}, _(v, b, O)), {
+                            h(f({}, _(v, b, O)), {
                                 mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                                 children: (0, r.jsx)("img", {
                                     src: m,
@@ -274,7 +274,7 @@ function b(e) {
         E = _(v, u, m);
     return (0, r.jsx)(
         g,
-        f(h({}, e), {
+        h(f({}, e), {
             ariaLabel: a,
             ariaHidden: l,
             specs: v,
@@ -336,7 +336,7 @@ function b(e) {
                     null != s &&
                         (0, r.jsx)(
                             "foreignObject",
-                            f(h({}, E), {
+                            h(f({}, E), {
                                 mask: "url(#".concat(O, ")"),
                                 children: (0, r.jsx)("img", {
                                     src: s,

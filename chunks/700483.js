@@ -1,6 +1,6 @@
 n.d(t, { Z: () => eg }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(481060),
     s = n(287734),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(795318),
     _ = n(258609),
     y = n(74299),
-    x = n(924301),
-    O = n(459502),
-    j = n(856691),
+    O = n(924301),
+    j = n(459502),
+    x = n(856691),
     v = n(728285),
     C = n(357156),
     I = n(923973),
@@ -45,7 +45,7 @@ var r = n(951288),
     W = n(88751),
     Y = n(427679),
     q = n(368442),
-    K = n(600518),
+    K = n(255726),
     Q = n(485287),
     X = n(754277),
     J = n(719100),
@@ -116,13 +116,13 @@ function ed(e) {
         o = (0, v.bp)(),
         { canManageGuildEvent: c } = (0, C.XJ)(t),
         p = (0, l.e7)([Y.Z], () => Y.Z.getStageInstanceByChannel(t.id), [t.id]),
-        h = (0, l.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
+        h = (0, l.e7)([O.ZP], () => O.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
         { suppress: f } = (0, Z.Z)(t),
         g = M.default.getId(),
         [_] = (0, er.Z)(t),
         y = W.ZP.isModerator(g, t.id),
-        O = (0, V.B)(t.id),
-        j = c(h),
+        j = (0, V.B)(t.id),
+        x = c(h),
         { parentAnalyticsLocation: I } = (0, u.ZP)(),
         S = i.useRef(null),
         E = () =>
@@ -134,7 +134,7 @@ function ed(e) {
                 channel: t,
                 appContext: o,
             });
-    return (y || j) && null != p
+    return (y || x) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: S,
               renderPopout: (e) => {
@@ -172,7 +172,7 @@ function ed(e) {
                   });
               },
           })
-        : (f && !O) || _
+        : (f && !j) || _
           ? (0, r.jsx)(A.Z, {
                 label: el.intl.string(el.t.SMKyih),
                 onClick: E,
@@ -228,8 +228,8 @@ let eh = i.memo(function (e) {
         { suppress: s, selfMute: o, mute: c } = (0, Z.Z)(t),
         d = (0, V.B)(t.id),
         m = (0, ee.Z)(t.id),
-        x = (0, l.e7)([_.default], () => null != _.default.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: O, enabled: j } = (0, I.Z)(),
+        O = (0, l.e7)([_.default], () => null != _.default.getAwaitingRemoteSessionInfo()),
+        { cameraUnavailable: j, enabled: x } = (0, I.Z)(),
         v = (0, E.Z)(t),
         { limit: C, reachedLimit: w } = (0, S.Z)(t),
         A = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
@@ -266,8 +266,8 @@ let eh = i.memo(function (e) {
                 ref: K,
                 centerButton: !0,
                 hasPermission: v,
-                enabled: j,
-                cameraUnavailable: O,
+                enabled: x,
+                cameraUnavailable: j,
                 onChange: P.r,
                 onCameraUnavailable: N.Z,
                 channelLimitReached: w,
@@ -318,7 +318,7 @@ let eh = i.memo(function (e) {
                                       suppress: s,
                                       popoutOpen: i,
                                       onClick: () => (0, g.Z)(c, s, "Stage Channel Controls"),
-                                      awaitingRemote: x,
+                                      awaitingRemote: O,
                                   });
                               },
                           }),
@@ -381,10 +381,10 @@ let eg = i.memo(function (e) {
                     (0, r.jsxs)("div", {
                         className: ea.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(O.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, r.jsx)(j.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: ea.separator }),
                             u && s && !o
-                                ? (0, r.jsx)(j.Z, {
+                                ? (0, r.jsx)(x.Z, {
                                       highlight: !0,
                                       channel: t,
                                   })

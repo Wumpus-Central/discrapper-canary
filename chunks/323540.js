@@ -1,6 +1,6 @@
 t.d(n, { $: () => u }), t(388685);
-var l = t(951288),
-    i = t(647438),
+var l = t(54381),
+    i = t(473749),
     a = t(793030),
     r = t(393238),
     d = t(840724),
@@ -11,7 +11,7 @@ function u(e) {
     var n;
     let { applicationId: t, guildId: u, page: p } = e,
         { ref: g, width: I } = (0, r.ZP)(),
-        [x, v] = i.useMemo(
+        [x, m] = i.useMemo(
             () =>
                 (null == p ? void 0 : p.skuIds) == null || (null == p ? void 0 : p.skuIds.length) === 0
                     ? [[], []]
@@ -39,7 +39,7 @@ function u(e) {
                       (0, l.jsx)(s.Z, {
                           applicationId: t,
                           guildId: u,
-                          skuIds: v,
+                          skuIds: m,
                       }),
                       null == (n = p.sections)
                           ? void 0

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(442837),
     l = n(481060),
     a = n(961675),
@@ -18,22 +18,22 @@ function g(e) {
         g = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
         m = (0, u.c)(t.id),
         { sortOrder: b, tagFilter: _, tagSetting: y } = (0, c.H)(t.id),
-        x = (0, i.e7)(
+        O = (0, i.e7)(
             [o.Z, p.Z],
             () => !!(o.Z.getThreadIds(t.id, b, _, y).length > 0) || !!(p.Z.getThreads(t.id, b, _, y).length > 0),
             [t.id, b, _, y],
         ),
-        O = t.isMediaChannel();
-    if (!n || m || (O && x)) return null;
-    let j = g
-        ? O
+        j = t.isMediaChannel();
+    if (!n || m || (j && O)) return null;
+    let x = g
+        ? j
             ? f.intl.string(f.t["WP/IE1"])
             : f.intl.string(f.t.zfq9V4)
-        : O
+        : j
           ? f.intl.string(f.t.p60yF1)
           : f.intl.string(f.t.SNOqYC);
     return (0, r.jsx)(h.JO, {
-        tooltip: j,
+        tooltip: x,
         icon: l.d3s,
         onClick: () => s.Z.hideAdminOnboarding(t.id, !g),
         selected: !g,

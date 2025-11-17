@@ -1,6 +1,6 @@
 n.d(e, { Z: () => f }), n(539854);
-var i = n(951288),
-    l = n(647438),
+var i = n(54381),
+    l = n(473749),
     u = n(793030),
     r = n(442837),
     s = n(481060),
@@ -9,8 +9,8 @@ var i = n(951288),
     c = n(131951),
     E = n(63063),
     S = n(210887),
-    d = n(313789),
-    T = n(803567),
+    T = n(313789),
+    d = n(803567),
     I = n(981631),
     O = n(388032);
 let g = n(775322),
@@ -26,7 +26,7 @@ function N() {
 }
 function A() {
     let t = l.useCallback((t) => {
-            a.Z.setNoiseCancellation(t === T.Q4.KRISP, T.MP), a.Z.setNoiseSuppression(t === T.Q4.STANDARD, T.MP);
+            a.Z.setNoiseCancellation(t === d.Q4.KRISP, d.MP), a.Z.setNoiseSuppression(t === d.Q4.STANDARD, d.MP);
         }, []),
         {
             noiseCancellation: e,
@@ -39,24 +39,24 @@ function A() {
             isNoiseSuppressionSupported: c.Z.isNoiseSuppressionSupported(),
             isNoiseCancellationSupported: c.Z.isNoiseCancellationSupported(),
         })),
-        S = n ? T.Q4.STANDARD : T.Q4.NONE,
-        d = e ? T.Q4.KRISP : S,
+        S = n ? d.Q4.STANDARD : d.Q4.NONE,
+        T = e ? d.Q4.KRISP : S,
         g = l.useMemo(() => {
             let t = [];
             return (
                 o &&
                     t.push({
                         label: O.intl.string(O.t.rdoNzt),
-                        value: T.Q4.KRISP,
+                        value: d.Q4.KRISP,
                     }),
                 u &&
                     t.push({
                         label: O.intl.string(O.t.qXeYHw),
-                        value: T.Q4.STANDARD,
+                        value: d.Q4.STANDARD,
                     }),
                 t.push({
                     label: O.intl.string(O.t.wkYAlz),
-                    value: T.Q4.NONE,
+                    value: d.Q4.NONE,
                 }),
                 t
             );
@@ -70,7 +70,7 @@ function A() {
                 label: O.intl.string(O.t.t8Qhib),
                 description: _,
                 layout: "horizontal",
-                value: d,
+                value: T,
                 onChange: t,
                 options: g,
             }),
@@ -78,7 +78,7 @@ function A() {
         ],
     });
 }
-let f = (0, o.ON)(d.n.VOICE_NOISE_SUPPRESSION_SETTING, {
+let f = (0, o.ON)(T.n.VOICE_NOISE_SUPPRESSION_SETTING, {
     usePredicate: function () {
         return (0, r.e7)([c.Z], () => c.Z.isInputProfileCustom() && c.Z.isNoiseSuppressionSupported());
     },

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => w });
-var r = n(951288);
-n(647438);
+var r = n(54381);
+n(473749);
 var i = n(657707),
     l = n(442837),
     a = n(692547),
@@ -17,9 +17,9 @@ var i = n(657707),
     b = n(280885),
     _ = n(483424),
     y = n(681837),
-    x = n(78806),
-    O = n(91433),
-    j = n(900927),
+    O = n(78806),
+    j = n(91433),
+    x = n(900927),
     v = n(944043),
     C = n(678738),
     I = n(638970),
@@ -71,7 +71,7 @@ function w(e) {
             }),
             M === P.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
-                    children: (0, r.jsx)(O.Z, {
+                    children: (0, r.jsx)(j.Z, {
                         user: t,
                         channelId: A.id,
                         applicationId: k,
@@ -81,7 +81,7 @@ function w(e) {
                 (0, r.jsx)(
                     S.Z.Overlay,
                     {
-                        children: (0, r.jsx)(O.Z, {
+                        children: (0, r.jsx)(j.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -145,12 +145,12 @@ function w(e) {
                         (0, r.jsx)(C.Z, {
                             heading: N.intl.string(N.t["Uv/eTx"]),
                             headingColor: "header-primary",
-                            children: (0, r.jsx)(x.Z, { applicationIds: G }),
+                            children: (0, r.jsx)(O.Z, { applicationIds: G }),
                         }),
                     (0, r.jsx)(C.Z, {
                         heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
                         headingColor: "header-primary",
-                        children: (0, r.jsx)(j.Z, { userId: t.id }),
+                        children: (0, r.jsx)(x.Z, { userId: t.id }),
                     }),
                 ],
             }),

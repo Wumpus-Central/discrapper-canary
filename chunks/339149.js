@@ -5,8 +5,8 @@ n.d(t, {
     n(388685),
     n(539854);
 var r,
-    i = n(951288),
-    l = n(647438),
+    i = n(54381),
+    l = n(473749),
     o = n(120356),
     a = n.n(o),
     s = n(748780),
@@ -14,8 +14,8 @@ var r,
     u = n(692547),
     d = n(215569),
     p = n(28664),
-    h = n(481060),
-    f = n(812206),
+    f = n(481060),
+    h = n(812206),
     g = n(707409),
     m = n(703656),
     b = n(417363),
@@ -138,10 +138,10 @@ class I extends l.PureComponent {
                     c = 0 !== s ? Math.max(1, (o - l) / s) : null,
                     u = S[a],
                     d = null != u ? Object.keys(u) : [],
-                    { unit: p, time: h } = (0, g.CI)(null != c ? c / 60 : null, d);
+                    { unit: p, time: f } = (0, g.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != p) {
                     let e = u[p];
-                    return null != e ? e(r.name, h) : null;
+                    return null != e ? e(r.name, f) : null;
                 }
                 return null;
             });
@@ -184,10 +184,10 @@ class P extends (r = l.PureComponent) {
                 position: "right",
                 "aria-label": !1,
                 children: (0, i.jsx)("div", {
-                    children: (0, i.jsx)(h._3P, {
+                    children: (0, i.jsx)(f._3P, {
                         percent: e,
                         colorOverride: t ? u.Z.unsafe_rawColors.PRIMARY_500.css : null,
-                        children: (0, i.jsx)(h._8t, {
+                        children: (0, i.jsx)(f._8t, {
                             size: "md",
                             color: "currentColor",
                             className: x.downloadIcon,
@@ -213,15 +213,15 @@ function N(e, t) {
         return null != l && e.push(l), e;
     }, []);
 }
-C(P, "defaultProps", { strokeSize: h._3P.StrokeSizes.MEDIUM });
-let Z = c.ZP.connectStores([_.Z, b.Z, f.Z], () => {
+C(P, "defaultProps", { strokeSize: f._3P.StrokeSizes.MEDIUM });
+let Z = c.ZP.connectStores([_.Z, b.Z, h.Z], () => {
     let e = _.Z.activeItems,
         t = N(e, b.Z),
         { total: n, progress: r } = y.lK(t);
     return {
         percent: y.xI(r, n),
         isPaused: _.Z.paused,
-        firstApplication: e.length > 0 ? f.Z.getApplication(e[0].applicationId) : null,
+        firstApplication: e.length > 0 ? h.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null,
     };
 })((e) => {

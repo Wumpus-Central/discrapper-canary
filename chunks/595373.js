@@ -2,8 +2,8 @@ n.d(e, {
     Z: () => f,
     p: () => N,
 });
-var i = n(951288),
-    l = n(647438),
+var i = n(54381),
+    l = n(473749),
     u = n(818710),
     r = n(793030),
     s = n(442837),
@@ -12,8 +12,8 @@ var i = n(951288),
     c = n(131951),
     E = n(313789),
     S = n(325808),
-    d = n(962100),
-    T = n(518596),
+    T = n(962100),
+    d = n(518596),
     I = n(345655),
     O = n(981631),
     g = n(65154),
@@ -32,9 +32,9 @@ function A() {
             () =>
                 u.FB || o !== g.pM.PUSH_TO_TALK
                     ? _.intl.format(_.t.HVvn5T, {
-                          onClick: () => (0, T.openUserSettings)(E.n.KEYBINDS_PANEL, { section: O.oAB.KEYBINDS }),
+                          onClick: () => (0, d.openUserSettings)(E.n.KEYBINDS_PANEL, { section: O.oAB.KEYBINDS }),
                       })
-                    : _.intl.format(_.t.zvMPOc, { onDownloadClick: () => (0, d.y)("Help Text PTT") }),
+                    : _.intl.format(_.t.zvMPOc, { onDownloadClick: () => (0, T.y)("Help Text PTT") }),
             [o],
         );
     return (0, i.jsxs)(r.Kqy, {

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => ed }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     o = n.n(l),
     a = n(392711),
     s = n.n(a),
-    c = n(843611),
+    c = n(828700),
     u = n(91192),
     d = n(374470),
     p = n(442837),
-    h = n(902704),
-    f = n(846519),
+    f = n(902704),
+    h = n(846519),
     g = n(692547),
     m = n(481060),
     b = n(925549),
@@ -119,7 +119,7 @@ class ea {
             (this.sizes = l),
             (this.scrollerRef = i.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new f.V7()),
+            (this.timeout = new h.V7()),
             (this.setResizeObserver = () => {
                 var e;
                 let t = null == (e = this.scrollerRef.current) ? void 0 : e.getScrollerNode();
@@ -292,11 +292,11 @@ function eu(e) {
             return [e, e.version];
         }),
         d = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
-        h = i.useMemo(() => (n ? [] : d), [d, n]),
+        f = i.useMemo(() => (n ? [] : d), [d, n]),
         b = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
         { isSorting: y, startSorting: C, stopSorting: E } = (0, M.Z)(),
         N = i.useRef(!1),
-        [T] = i.useState(() => new f.V7()),
+        [T] = i.useState(() => new h.V7()),
         A = i.useRef(null),
         R = i.useRef(null),
         B = (0, u.OP)(),
@@ -363,11 +363,11 @@ function eu(e) {
         ),
         [ep],
     );
-    let { analyticsLocations: eh } = (0, v.ZP)(O.Z.GUILDS_LIST),
-        ef = eo(er);
+    let { analyticsLocations: ef } = (0, v.ZP)(O.Z.GUILDS_LIST),
+        eh = eo(er);
     (0, _.Ng)(() => {
         if (!N.current && 0 !== s.size) {
-            if (!ef) {
+            if (!eh) {
                 let { scrollTop: e } = w.Z.getGuildListDimensions();
                 ep.scrollTo({
                     to: e,
@@ -435,12 +435,12 @@ function eu(e) {
             [C, E, y, ep.setNodeRef],
         ),
         eb = (0, r.jsx)(W.Z, {
-            selected: ef,
+            selected: eh,
             className: en.discoveryIcon,
         }),
         e_ = eu === I.u3.SERVER_RAIL_BOTTOM;
     return (0, r.jsx)(v.Gt, {
-        value: eh,
+        value: ef,
         children: (0, r.jsx)(m.f6W, {
             theme: a,
             children: (e) => {
@@ -478,7 +478,7 @@ function eu(e) {
                                                 children: [
                                                     (0, r.jsx)(es, {
                                                         scrollToTop: eg,
-                                                        lurkingGuildIds: h,
+                                                        lurkingGuildIds: f,
                                                     }),
                                                     (0, r.jsx)(Y.Z, {}),
                                                     (0, r.jsx)(ec, {
@@ -486,7 +486,7 @@ function eu(e) {
                                                         disableAppDownload: t,
                                                         isOverlay: n,
                                                         renderTreeNode: em,
-                                                        lurkingGuildIds: h,
+                                                        lurkingGuildIds: f,
                                                     }),
                                                 ],
                                             }),
@@ -542,5 +542,5 @@ let ed = i.memo(
             children: (0, r.jsx)(eu, ei({}, e)),
         });
     },
-    (e, t) => !1 === t.isVisible || (0, h.Z)(e, t),
+    (e, t) => !1 === t.isVisible || (0, f.Z)(e, t),
 );

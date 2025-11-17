@@ -1,6 +1,6 @@
 n.d(t, { Z: () => X }), n(388685), n(583741);
-var r = n(951288),
-    i = n(647438),
+var r = n(54381),
+    i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(392711),
@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(100527),
     _ = n(906732),
     y = n(82295),
-    x = n(623624),
-    O = n(518738),
-    j = n(850020),
+    O = n(623624),
+    j = n(518738),
+    x = n(850020),
     v = n(48950),
     C = n(965376),
     I = n(159299),
@@ -84,7 +84,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            O = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
+            j = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
@@ -142,7 +142,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, O.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, j.K)({
+            q = (0, x.K)({
                 user: b,
                 guildId: t.guild_id,
             }),
@@ -204,7 +204,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: O,
+                            status: j,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -236,7 +236,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, O.p9)({
+            a = (0, j.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -355,7 +355,7 @@ function X(e) {
                 listRef: r,
             };
         })(l, Y),
-        x = 0 === u.length || u.every((e) => 0 === e.userIds.length);
+        O = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             D.default.track(H.rMx.MEMBER_LIST_VIEWED, {
@@ -364,11 +364,11 @@ function X(e) {
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id, t.type]),
-        x)
+        O)
     )
         return (0, r.jsx)(J, { channel: t });
-    let O = o().omit(g.containerProps, ["ref"]),
-        j = M.iJ(n);
+    let j = o().omit(g.containerProps, ["ref"]),
+        x = M.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
@@ -409,7 +409,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: j,
+                                                guildOwnerId: x,
                                             },
                                             l[i],
                                         );
@@ -422,7 +422,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                O,
+                                j,
                                 e,
                             ),
                             l,

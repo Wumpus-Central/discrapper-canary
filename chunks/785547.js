@@ -1,7 +1,7 @@
-n.d(t, { Z: () => k }), n(415506), n(388685);
+n.d(t, { Z: () => j }), n(415506), n(388685);
 var r,
-    i = n(951288),
-    a = n(647438),
+    i = n(54381),
+    a = n(473749),
     o = n(442837),
     s = n(692547),
     l = n(28664),
@@ -117,7 +117,7 @@ function M(e) {
     let t = v.en(e.sku);
     return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZC, { date: t }) : null;
 }
-class j extends (r = a.Component) {
+class k extends (r = a.Component) {
     get analyticsLocation() {
         return D(R({}, this.props.analyticsContext.location), { object: S.qAy.BUTTON_CTA });
     }
@@ -282,14 +282,14 @@ class j extends (r = a.Component) {
             });
     }
 }
-function k(e) {
+function j(e) {
     let { libraryApplication: t } = e,
         n = (0, f.O)(),
         [r, a] = (0, o.Wu)([E.Z, b.Z], () => [(0, m.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
         s = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
         l = (0, o.e7)([h.Z], () => h.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
-        j,
+        k,
         D(R({}, e), {
             analyticsContext: n,
             actionState: r,
@@ -299,11 +299,11 @@ function k(e) {
         }),
     );
 }
-N(j, "defaultProps", {
+N(k, "defaultProps", {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: "top",
 }),
-    N(j, "ButtonStates", w);
+    N(k, "ButtonStates", w);

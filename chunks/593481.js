@@ -1,13 +1,13 @@
 n.d(t, {
     QR: () => y,
     Yj: () => b,
-    ZP: () => _,
+    ZP: () => v,
 });
 var i,
-    r = n(951288),
-    s = n(647438),
-    o = n(120356),
-    l = n.n(o),
+    r = n(54381),
+    o = n(473749),
+    l = n(120356),
+    s = n.n(l),
     a = n(481060),
     c = n(294033),
     d = n(388032),
@@ -56,7 +56,7 @@ let f = (e) => e.stopPropagation(),
             className: u.hintSubtleText,
             children: t,
         });
-class v extends (i = s.PureComponent) {
+class _ extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -94,7 +94,7 @@ class v extends (i = s.PureComponent) {
             let i = e(n, t);
             return null != i
                 ? (0, r.jsxs)(
-                      s.Fragment,
+                      o.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), i],
                       },
@@ -103,7 +103,7 @@ class v extends (i = s.PureComponent) {
                 : null;
         }
         return (0, r.jsxs)(
-            s.Fragment,
+            o.Fragment,
             {
                 children: [
                     (0, r.jsx)(m, {}),
@@ -122,15 +122,15 @@ class v extends (i = s.PureComponent) {
     }
     renderFooter() {
         let {
-            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: o },
-            state: { expanded: l },
+            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: l },
+            state: { expanded: s },
         } = this;
-        if (!l) return null != o ? this.renderHint() : null;
+        if (!s) return null != l ? this.renderHint() : null;
         if (null != this.props.renderFooter) {
-            let e = this.props.renderFooter(l);
+            let e = this.props.renderFooter(s);
             return null != e
                 ? (0, r.jsxs)(
-                      s.Fragment,
+                      o.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), e],
                       },
@@ -140,7 +140,7 @@ class v extends (i = s.PureComponent) {
         }
         return null != n || null != i
             ? (0, r.jsxs)(
-                  s.Fragment,
+                  o.Fragment,
                   {
                       children: [
                           (0, r.jsx)(m, {}),
@@ -202,7 +202,7 @@ class v extends (i = s.PureComponent) {
                         }),
                         null != e
                             ? (0, r.jsx)("div", {
-                                  className: l()(u.body, h.marginTop4),
+                                  className: s()(u.body, h.marginTop4),
                                   style: {
                                       WebkitLineClamp: n,
                                       lineClamp: n,
@@ -225,7 +225,7 @@ class v extends (i = s.PureComponent) {
             onMouseOver: n ? void 0 : this.handleMouseEnter,
             onFocus: n ? void 0 : this.handleMouseEnter,
             onClick: null != e ? e : void 0,
-            className: l()(u.container, {
+            className: s()(u.container, {
                 [u.themePrimary]: !0,
                 [u.clickable]: null != e && !t,
             }),
@@ -261,9 +261,9 @@ class v extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(v, "defaultProps", {
+p(_, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let _ = v;
+let v = _;
