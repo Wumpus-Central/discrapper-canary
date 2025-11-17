@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(539854);
+n.d(t, { Z: () => I }), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(913527),
@@ -21,10 +21,11 @@ var r = n(54381),
     j = n(388032),
     x = n(557047);
 let C = {
-    left: 4,
-    right: -12,
-};
-function E(e) {
+        left: 4,
+        right: -12,
+    },
+    E = [v.uaV.THREAD_CREATED];
+function S(e) {
     var t, n, l;
     let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
         g = (0, a.JA)(null != (t = s.id) ? t : ""),
@@ -36,7 +37,8 @@ function E(e) {
                 }
             },
             [o.id],
-        );
+        ),
+        b = E.includes(s.type);
     return (0, r.jsx)(c.tEY, {
         offset: C,
         children: (0, r.jsxs)(
@@ -75,10 +77,11 @@ function E(e) {
             (l = l =
                 {
                     children: [
-                        (0, r.jsx)(y.Z, {
-                            className: x.jumpButton,
-                            onJump: (e) => f(e, s.id),
-                        }),
+                        !b &&
+                            (0, r.jsx)(y.Z, {
+                                className: x.jumpButton,
+                                onJump: (e) => f(e, s.id),
+                            }),
                         (0, r.jsx)(h.Z, {
                             id: s.id,
                             message: s,
@@ -109,13 +112,13 @@ function E(e) {
         ),
     });
 }
-function S(e) {
+function I(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
         { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         y = g.jU.useSetting(),
         C = (0, p.P1)(l),
-        S = !1,
+        E = !1,
         I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
         P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
         N = [];
@@ -140,10 +143,10 @@ function S(e) {
             }
             let i = null == t || (0, d.Z)(l, t, n);
             (t = n),
-                (S = S || (0, p.DQ)(n)),
+                (E = E || (0, p.DQ)(n)),
                 N.push(
                     (0, r.jsx)(
-                        E,
+                        S,
                         {
                             channel: l,
                             message: n,
@@ -172,7 +175,7 @@ function S(e) {
             0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        S && C && u.Z.trackExposure({ location: "20e3b0_2" }),
+        E && C && u.Z.trackExposure({ location: "20e3b0_2" }),
         (0, r.jsx)("div", {
             className: x.messages,
             children: N,
