@@ -6,19 +6,20 @@ var i = n(442837),
     s = n(131951),
     a = n(313789),
     o = n(846071),
-    c = n(345655),
-    E = n(388032);
-let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
-        useTitle: () => E.intl.string(E.t.LM3U3k),
+    c = n(375258),
+    E = n(345655),
+    S = n(388032);
+let T = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
+        useTitle: () => S.intl.string(S.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: t } = (0, o.P)({ location: "SettingsRendererConfig" });
             return t.length > 0;
         },
-        useSearchTerms: () => [E.intl.string(E.t.nuFtHH), E.intl.string(E.t.VZPR0R), E.intl.string(E.t.cjPbpT)],
+        useSearchTerms: () => [S.intl.string(S.t.nuFtHH), S.intl.string(S.t.VZPR0R), S.intl.string(S.t.cjPbpT)],
         useValue: function () {
             return (0, i.e7)([s.Z], () => {
                 var t;
-                return null != (t = s.Z.getActiveInputProfile()) ? t : c._.CUSTOM;
+                return null != (t = s.Z.getActiveInputProfile()) ? t : E._.CUSTOM;
             });
         },
         setValue: function (t) {
@@ -29,19 +30,19 @@ let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             let { enabledInputProfiles: t } = (0, o.G)({ location: "InputProfileCategory" });
             return [
                 {
-                    value: c._.VOICE_ISOLATION,
-                    name: E.intl.string(E.t.cjPbpT),
-                    desc: E.intl.string(E.t.CzhvnE),
+                    value: E._.VOICE_ISOLATION,
+                    name: S.intl.string(S.t.cjPbpT),
+                    desc: S.intl.string(S.t.CzhvnE),
                 },
                 {
-                    value: c._.STUDIO,
-                    name: E.intl.string(E.t.VZPR0R),
-                    desc: E.intl.string(E.t.ZaJksS),
+                    value: E._.STUDIO,
+                    name: S.intl.string(S.t.VZPR0R),
+                    desc: S.intl.string(S.t.ZaJksS),
                 },
                 {
-                    value: c._.CUSTOM,
-                    name: E.intl.string(E.t["N/PQjv"]),
-                    desc: E.intl.string(E.t.SnBmuY),
+                    value: E._.CUSTOM,
+                    name: S.intl.string(S.t["N/PQjv"]),
+                    desc: S.intl.string(S.t.SnBmuY),
                 },
             ].filter((e) => {
                 let { value: n } = e;
@@ -49,4 +50,6 @@ let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    d = (0, r.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, { buildLayout: () => [S] });
+    d = (0, r.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
+        buildLayout: () => [T, c.h],
+    });
