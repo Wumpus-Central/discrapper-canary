@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(313201),
     E = n(877371),
     b = n(243778),
-    y = n(594928),
+    y = n(272157),
     O = n(829716),
     v = n(786761),
     I = n(3148),
@@ -107,7 +107,7 @@ let Q = (0, g.hQ)(),
 function en(e) {
     _.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled;
     let t = (0, m.A)("UserSettingsAccessibility"),
-        n = y.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
+        n = (0, y.i)({ location: "UserSettingsAccessibility" }),
         i = (0, E.A)("UserSettingsAccessibility");
     return (0, r.jsx)(k.Z, {
         title: V.intl.string(V.t.G0neg7),

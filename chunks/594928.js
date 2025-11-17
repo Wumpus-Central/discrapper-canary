@@ -59,18 +59,15 @@ let o = (0, r.B)({
 (0, i.le)({
     name: "2025-10-display-name-styles-mobile",
     kind: "user",
-    defaultConfig: {
-        enabled: !1,
-        dmEffects: !1,
-    },
+    defaultConfig: { enabled: !1 },
     variations: {
         1: {
             enabled: !0,
-            dmEffects: !1,
+            surfaces: 2,
         },
         2: {
             enabled: !0,
-            dmEffects: !0,
+            surfaces: 1,
         },
     },
 });
