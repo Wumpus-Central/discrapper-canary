@@ -49421,6 +49421,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     overflow: hidden
 }
 
+.clickable_dfa8b6 {
+    cursor: pointer
+}
+
 .roleRemoveIcon_dfa8b6 {
     display: none;
     height: 10px;

@@ -36,15 +36,16 @@ function R(e) {
             onOpenProfile: w,
             channelId: x,
             onClose: L,
+            onRoleClick: M,
         } = e,
-        M = c.ZP.getName(null == P ? void 0 : P.id, x, t),
+        k = c.ZP.getName(null == P ? void 0 : P.id, x, t),
         j = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        k = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
-        U = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
-        G = (0, d.b)({ location: "BotUserProfilePopoutBody" });
+        U = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
+        G = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        B = (0, d.b)({ location: "BotUserProfilePopoutBody" });
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
         className: N.body,
@@ -53,7 +54,7 @@ function R(e) {
                 user: t,
                 guildId: null == P ? void 0 : P.id,
                 onOpenProfile: w,
-                nickname: M,
+                nickname: k,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
@@ -63,7 +64,7 @@ function R(e) {
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(h.Z, { userId: t.id }),
-                        !U &&
+                        !G &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
                                 isVisible: D,
@@ -94,10 +95,10 @@ function R(e) {
             (0, r.jsx)(v.Z, {
                 user: t,
                 bio: null == R ? void 0 : R.bio,
-                hidePersonalInformation: U,
+                hidePersonalInformation: G,
                 onClose: L,
             }),
-            G
+            B
                 ? (0, r.jsx)(g.Z, {
                       user: t,
                       currentUser: n,
@@ -112,11 +113,11 @@ function R(e) {
                       onClose: L,
                   }),
             (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
-                null != k &&
+                null != U &&
                 (0, r.jsx)(f.Z, {
                     applicationId: j.id,
                     commandIds: j.popularApplicationCommandIds,
-                    channel: k,
+                    channel: U,
                     guildId: null == P ? void 0 : P.id,
                     onClick: L,
                 }),
@@ -127,6 +128,7 @@ function R(e) {
                         user: t,
                         currentUser: n,
                         guild: P,
+                        onRoleClick: M,
                     }),
                 }),
         ],
