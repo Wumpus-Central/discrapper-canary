@@ -8,9 +8,10 @@ var r = n(54381),
     s = n(476804);
 let u = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: u, init: d, useBadge: f, notice: b } = t,
+        { useTitle: n, layout: u, init: d, useBadge: f, useNotice: b } = t,
         p = null == n ? void 0 : n(),
-        y = null == f ? void 0 : f();
+        y = null == f ? void 0 : f(),
+        j = null == b ? void 0 : b();
     return (
         l.useEffect(() => {
             null == d || d();
@@ -22,10 +23,10 @@ let u = l.memo(function (e) {
                     title: p,
                     badge: y,
                 }),
-                null != b &&
+                null != j &&
                     (0, r.jsx)("div", {
                         className: s.notice,
-                        children: (0, r.jsx)(c.Z, { notice: b }),
+                        children: (0, r.jsx)(c.Z, { notice: j }),
                     }),
                 u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
             ],

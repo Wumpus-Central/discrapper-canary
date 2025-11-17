@@ -9,7 +9,7 @@ let o = (0, u.qs)(s.n.VOICE_BYPASS_SYSTEM_INPUT_PROCESSING_SETTING, {
     useTitle: () => a.intl.string(a.t.DFPXIG),
     useSubtitle: () => a.intl.string(a.t["UyRX+C"]),
     usePredicate: function () {
-        return (0, i.e7)([r.Z], () => r.Z.showBypassSystemInputProcessing());
+        return (0, i.e7)([r.Z], () => r.Z.showBypassSystemInputProcessing() && r.Z.isInputProfileCustom());
     },
     useValue: function () {
         return (0, i.e7)([r.Z], () => r.Z.getBypassSystemInputProcessing());

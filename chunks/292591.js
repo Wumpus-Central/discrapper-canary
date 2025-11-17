@@ -11,7 +11,7 @@ let E = (0, u.qs)(a.n.VOICE_AUTOMATIC_GAIN_CONTROL_SETTING, {
     useTitle: () => c.intl.string(c.t.cUMdH0),
     useSubtitle: () => c.intl.string(c.t["6EjbvA"]),
     usePredicate: function () {
-        return (0, i.e7)([s.Z], () => s.Z.isAutomaticGainControlSupported());
+        return (0, i.e7)([s.Z], () => s.Z.isAutomaticGainControlSupported() && s.Z.isInputProfileCustom());
     },
     useDisabled: function () {
         return (0, i.e7)([s.Z, r.Z], () => {

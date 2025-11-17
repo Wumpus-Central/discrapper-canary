@@ -24,4 +24,7 @@ let E = (0, u.qs)(a.n.VOICE_ECHO_CANCELLATION_SETTING, {
             section: o.jXE.SETTINGS_VOICE_AND_VIDEO,
         });
     },
+    usePredicate: function () {
+        return (0, i.e7)([s.Z], () => s.Z.isInputProfileCustom());
+    },
 });

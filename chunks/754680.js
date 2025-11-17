@@ -10,7 +10,7 @@ let c = (0, u.qs)(s.n.ADVANCED_VOICE_ACTIVITY_PROCESSING_SETTING, {
     useTitle: () => o.intl.string(o.t.BbESsg),
     useSubtitle: () => o.intl.string(o.t.LoOB1F),
     usePredicate: function () {
-        return (0, i.e7)([r.Z], () => r.Z.isAdvancedVoiceActivitySupported());
+        return (0, i.e7)([r.Z], () => r.Z.isAdvancedVoiceActivitySupported() && r.Z.isInputProfileCustom());
     },
     useDisabled: function () {
         return (0, i.e7)([r.Z], () => {
