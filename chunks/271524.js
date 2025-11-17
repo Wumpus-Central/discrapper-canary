@@ -8,8 +8,8 @@ var i = n(442837),
     o = n(981631),
     c = n(388032);
 let E = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
-    useTitle: () => c.intl.string(c.t.VIm5MO),
-    useSubtitle: () => c.intl.string(c.t["+4dnA5"]),
+    useTitle: () => c.intl.string(c.t.JZxxGx),
+    useSubtitle: () => c.intl.string(c.t.HDLtJl),
     useValue: () => (0, i.e7)([s.Z], () => s.Z.getTTSType()),
     setValue: (t) => l.default.setTTSType(t),
     usePredicate: () => u.Zh,
@@ -19,7 +19,7 @@ let E = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
             value: o.PrB.ALL_CHANNELS,
         },
         {
-            name: c.intl.string(c.t.uM2rNr),
+            name: c.intl.string(c.t.uzZg9e),
             value: o.PrB.SELECTED_CHANNEL,
         },
         {
