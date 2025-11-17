@@ -509,6 +509,7 @@ var r = (function (e) {
             (e[(e.DISPLAY_NAME_STYLES_MOBILE_ANNOUNCEMENT_MODAL = 648)] =
                 "DISPLAY_NAME_STYLES_MOBILE_ANNOUNCEMENT_MODAL"),
             (e[(e.DISPLAY_NAME_STYLES_MOBILE_NEW_BADGE = 649)] = "DISPLAY_NAME_STYLES_MOBILE_NEW_BADGE"),
+            (e[(e.COLLECTIBLES_SHOP_WIDE_BANNER = 650)] = "COLLECTIBLES_SHOP_WIDE_BANNER"),
             e
         );
     })({}),

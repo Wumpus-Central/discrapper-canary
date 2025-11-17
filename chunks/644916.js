@@ -1,4 +1,4 @@
-n.d(t, { t: () => d });
+n.d(t, { t: () => f });
 var r = n(115434),
     i = n(704215),
     a = n(283693),
@@ -6,8 +6,9 @@ var r = n(115434),
     s = n(317381),
     l = n(416587),
     c = n(874703),
-    u = n(885472);
-function d(e) {
+    u = n(65679),
+    d = n(885472);
+function f(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             var t, n;
@@ -18,7 +19,7 @@ function d(e) {
         case i.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case i.z.GIFTING_PROMOTION_REMINDER:
-            return (0, u.m)();
+            return (0, d.m)();
         case i.z.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, l.O)({
                 storeState: s.ZP.getState(),
@@ -26,6 +27,8 @@ function d(e) {
             });
         case i.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
             return 0;
+        case i.z.COLLECTIBLES_SHOP_WIDE_BANNER:
+            return (0, u.k)();
         default:
             return (0, a.UT)(e, { andFail: !1 }), 0;
     }

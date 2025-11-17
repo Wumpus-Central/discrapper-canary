@@ -26,6 +26,11 @@ class a {
             i(this, "oldBannerURL", void 0),
             i(this, "bannerURL", void 0),
             i(this, "bannerAnimatedURL", void 0),
+            i(this, "logoURL", void 0),
+            i(this, "ctaText", void 0),
+            i(this, "ctaRoute", void 0),
+            i(this, "isDismissible", void 0),
+            i(this, "dismissibleContentVersion", void 0),
             (this.type = r.z.WIDE_BANNER),
             (this.title = e.title),
             (this.body = e.body),
@@ -34,6 +39,11 @@ class a {
             (this.disableCta = e.disable_cta),
             (this.oldBannerURL = e.banner_url),
             (this.bannerURL = e.wide_banner_url),
-            (this.bannerAnimatedURL = e.wide_banner_animated_url);
+            (this.bannerAnimatedURL = e.wide_banner_animated_url),
+            (this.logoURL = e.logo_url),
+            (this.ctaText = e.cta_text),
+            (this.ctaRoute = e.cta_route),
+            (this.isDismissible = e.is_dismissible),
+            (this.dismissibleContentVersion = e.dismissible_content_version);
     }
 }
