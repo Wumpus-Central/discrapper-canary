@@ -485,6 +485,19 @@ let l = [
             },
             enabled: !0,
         },
+        {
+            type: s.ABu.META_QUEST,
+            name: "Meta Quest",
+            icon: {
+                lightPNG: n(637291),
+                darkPNG: n(172471),
+                whitePNG: n(629350),
+                lightSVG: n(324064),
+                darkSVG: n(861380),
+                whiteSVG: n(916803),
+            },
+            enabled: !1,
+        },
     ],
     c = i().keyBy(l, "type"),
     u = {};
