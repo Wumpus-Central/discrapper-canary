@@ -1,19 +1,21 @@
-n.d(t, { M: () => I });
+n.d(t, { M: () => S });
 var r = n(951288),
     i = n(647438),
-    a = n(793030),
-    o = n(159691),
-    s = n(70097),
-    l = n(312097),
-    c = n(920155),
-    u = n(744399),
-    d = n(966902),
-    f = n(562618),
-    _ = n(803866),
-    p = n(681287),
-    h = n(388032),
-    m = n(37751);
-function g(e, t, n) {
+    a = n(150677),
+    o = n(793030),
+    s = n(159691),
+    l = n(70097),
+    c = n(312097),
+    u = n(920155),
+    d = n(744399),
+    f = n(966902),
+    _ = n(562618),
+    p = n(803866),
+    h = n(231338),
+    m = n(681287),
+    g = n(388032),
+    E = n(37751);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +39,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +56,22 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +79,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,25 +88,28 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
-    var {
-            title: t,
-            body: n,
-            assetUrl: g,
-            previewUrl: b = g,
-            disableMediaViewer: v = !1,
-            action: I,
-            caretConfig: T = {
+function S(e) {
+    var t,
+        n,
+        b,
+        {
+            title: O,
+            body: T,
+            assetUrl: S,
+            previewUrl: A = S,
+            disableMediaViewer: C = !1,
+            action: N,
+            caretConfig: R = {
                 position: "bottom",
                 align: "center",
             },
-            badge: S,
-            textLink: A,
-            onWatchVideo: C,
-            onRequestClose: N,
-            popoverRef: R,
+            badge: P,
+            textLink: D,
+            onWatchVideo: w,
+            onRequestClose: x,
+            popoverRef: L,
         } = e,
-        P = O(e, [
+        M = I(e, [
             "title",
             "body",
             "assetUrl",
@@ -118,90 +123,98 @@ function I(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let D = i.useRef(null),
-        w = (0, a.j1L)(b),
-        x = i.useCallback(
+    let { reducedMotion: k } = i.useContext(o.Sfi),
+        j = (0, a.C)(),
+        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : j,
+        G = i.useRef(null),
+        B = (0, o.j1L)(A),
+        Z = i.useCallback(
             () => ({
                 type: "VIDEO",
-                url: g,
-                proxyUrl: g,
-                alt: t,
+                url: S,
+                proxyUrl: S,
+                alt: O,
                 width: 1280,
                 height: 720,
-                className: m.media,
+                className: E.media,
             }),
-            [g, t],
-        ),
-        L = i.useCallback(() => {
-            null !== D.current && D.current.pause(), null == N || N();
-        }, [N]),
-        M = i.useCallback(() => {
-            null !== D.current && D.current.pause(), null == N || N();
-        }, [N]),
-        j = i.useCallback(() => {
-            null !== D.current && D.current.pause();
-            let e = x();
-            (0, l.K)({
+            [S, O],
+        );
+    i.useEffect(() => {
+        var e, t;
+        null != G.current &&
+            (!k.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
+    }, [U, k.enabled]);
+    let F = i.useCallback(() => {
+            null !== G.current && G.current.pause(), null == x || x();
+        }, [x]),
+        V = i.useCallback(() => {
+            null !== G.current && G.current.pause(), null == x || x();
+        }, [x]),
+        H = i.useCallback(() => {
+            null !== G.current && G.current.pause();
+            let e = Z();
+            (0, c.K)({
                 items: [e],
                 startingIndex: 0,
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == N || N(),
-                null == C || C();
-        }, [x, C, N]),
-        k = w
-            ? (0, r.jsx)(a.zsu, {
+                null == x || x(),
+                null == w || w();
+        }, [Z, w, x]),
+        Y = B
+            ? (0, r.jsx)(o.zsu, {
                   type: "image",
-                  src: b,
+                  src: A,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(s.Z, {
-                          ref: D,
-                          src: b,
+                      (0, r.jsx)(l.Z, {
+                          ref: G,
+                          src: A,
                           width: 232,
                           height: 131,
-                          autoPlay: !0,
+                          autoPlay: !k.enabled && U,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
                           controls: !1,
                           preload: "metadata",
                       }),
-                      !v &&
+                      !C &&
                           (0, r.jsx)("div", {
-                              className: m.playButton,
-                              children: (0, r.jsx)(o.JM1, {
+                              className: E.playButton,
+                              children: (0, r.jsx)(s.JM1, {
                                   playing: !1,
                                   size: "sm",
-                                  "aria-label": h.intl.string(p.default.YpT3kk),
-                                  onClick: j,
+                                  "aria-label": g.intl.string(m.default.YpT3kk),
+                                  onClick: H,
                               }),
                           }),
                   ],
               });
     return (0, r.jsx)(
-        c.m,
-        y(E({}, P), {
-            onRequestClose: L,
+        u.m,
+        v(y({}, M), {
+            onRequestClose: F,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
-                ref: R,
+                ref: L,
                 children: [
-                    (0, r.jsx)(_.N, { onClick: M }),
-                    (0, r.jsx)(d.$, { caretConfig: T }),
+                    (0, r.jsx)(p.N, { onClick: V }),
+                    (0, r.jsx)(f.$, { caretConfig: R }),
                     (0, r.jsx)("div", {
-                        className: m.assetContainer,
-                        children: k,
+                        className: E.assetContainer,
+                        children: Y,
                     }),
-                    (0, r.jsx)(f.Y, {
-                        title: t,
-                        body: n,
-                        badge: S,
-                        textLink: A,
+                    (0, r.jsx)(_.Y, {
+                        title: O,
+                        body: T,
+                        badge: P,
+                        textLink: D,
                     }),
-                    null != I ? (0, r.jsx)(u.k, { actions: [I] }) : null,
+                    null != N ? (0, r.jsx)(d.k, { actions: [N] }) : null,
                 ],
             }),
         }),
