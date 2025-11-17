@@ -1,6 +1,6 @@
 n.d(t, {
     $7l: () => b.$7,
-    $92: () => e2,
+    $92: () => e3,
     $Ab: () => x,
     $R1: () => E.$R,
     $VG: () => E.$V,
@@ -18,7 +18,7 @@ n.d(t, {
     AzA: () => rm,
     B1h: () => E.B1,
     B9o: () => tf,
-    BFP: () => t3,
+    BFP: () => t2,
     BRd: () => E.BR,
     BVn: () => rV,
     BZL: () => E.BZ,
@@ -54,7 +54,7 @@ n.d(t, {
     GZQ: () => E.GZ,
     GuildFeatures: () => G,
     H0J: () => E.H0,
-    HGf: () => n5,
+    HGf: () => n8,
     HN8: () => eF,
     HeQ: () => E.He,
     Hqc: () => nS,
@@ -90,7 +90,7 @@ n.d(t, {
     McO: () => rY,
     NYc: () => E.NY,
     NYg: () => nV,
-    N_j: () => n2,
+    N_j: () => n3,
     NgX: () => T,
     O0b: () => n_,
     O0n: () => es,
@@ -104,7 +104,7 @@ n.d(t, {
     OYC: () => $,
     OcF: () => e9,
     Odu: () => ee,
-    PEY: () => e3,
+    PEY: () => e2,
     PNu: () => ek,
     POd: () => rf,
     PRK: () => e0,
@@ -131,7 +131,7 @@ n.d(t, {
     Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nN,
-    SOq: () => n8,
+    SOq: () => n5,
     SRg: () => nT,
     STv: () => eE,
     SaU: () => tZ,
@@ -148,7 +148,7 @@ n.d(t, {
     TzF: () => nJ,
     U66: () => E.U6,
     ULH: () => P,
-    UWR: () => t2,
+    UWR: () => t3,
     Ucd: () => rU,
     Uk1: () => E.Uk,
     UkZ: () => rD,
@@ -163,13 +163,13 @@ n.d(t, {
     VqG: () => E.Vq,
     Vzj: () => E.Vz,
     WND: () => nu,
-    WtW: () => e5,
+    WtW: () => e8,
     Wyy: () => ne,
     X5t: () => E.X5,
     X6Q: () => E.X6,
     X7u: () => E.X7,
     XAJ: () => eT,
-    XKF: () => n3,
+    XKF: () => n2,
     XmY: () => e1,
     Xyh: () => e4,
     YeM: () => ec,
@@ -222,7 +222,7 @@ n.d(t, {
     fMv: () => b.fM,
     fo$: () => ts,
     frH: () => E.fr,
-    fzT: () => t8,
+    fzT: () => t5,
     gLR: () => rZ,
     gg$: () => E.gg,
     hBH: () => s.h,
@@ -264,7 +264,7 @@ n.d(t, {
     oCV: () => nl,
     o_z: () => eb,
     p3w: () => tm,
-    p6O: () => t5,
+    p6O: () => t8,
     pAY: () => th,
     pJs: () => D,
     pKx: () => E.pK,
@@ -330,7 +330,7 @@ n.d(t, {
     yb: () => W,
     ylB: () => rw,
     yqN: () => ng,
-    ys_: () => e8,
+    ys_: () => e5,
     z7k: () => tI,
     zMe: () => E.zM,
     zQD: () => rK,
@@ -2203,10 +2203,10 @@ let eD = 100,
     e$ = 10485760,
     e0 = 524288000,
     e1 = (e) => "||".concat(e, "||"),
-    e2 = /^\|\|([\s\S]+?)\|\|/,
-    e3 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e3 = /^\|\|([\s\S]+?)\|\|/,
+    e2 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e4 = /^\d{17,19}$/;
-var e8 = (function (e) {
+var e5 = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -2222,7 +2222,7 @@ var e8 = (function (e) {
             e
         );
     })({}),
-    e5 = (function (e) {
+    e8 = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
     e6 = (function (e) {
@@ -3695,16 +3695,16 @@ var t$ = (function (e) {
     t1 = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let t2 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
-    t3 = new Set(["facebook", "contacts"]),
+let t3 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
+    t2 = new Set(["facebook", "contacts"]),
     t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
-    t8 = Object.freeze({
+    t5 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t5 = 10070709,
-    t6 = (0, d.Rf)(t5),
+    t8 = 10070709,
+    t6 = (0, d.Rf)(t8),
     t7 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
@@ -5195,6 +5195,8 @@ var nE = (function (e) {
             (e.E2EE_STREAM_VERIFICATION_CODE_COPIED = "e2ee_stream_verification_code_copied"),
             (e.E2EE_SETTINGS_USER_DELETE = "e2ee_settings_user_delete"),
             (e.E2EE_SETTINGS_DEVICE_DELETE = "e2ee_settings_device_delete"),
+            (e.RTC_GAME_SHOP_BUTTON_VIEWED = "rtc_game_shop_button_viewed"),
+            (e.RTC_GAME_SHOP_BUTTON_CLICKED = "rtc_game_shop_button_clicked"),
             (e.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH = "game_detection_debugging_keyword_match"),
             (e.GDM_BLOCKED_USER_WARNING_ENGAGEMENT = "gdm_blocked_user_warning_engagement"),
             (e.GDM_BLOCKED_USER_WARNING_VIEWED = "gdm_blocked_user_warning_viewed"),
@@ -6096,12 +6098,12 @@ let n1 = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    n2 = 6016,
-    n3 = 3384;
+    n3 = 6016,
+    n2 = 3384;
 var n4 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
-    n8 = (function (e) {
+    n5 = (function (e) {
         return (
             (e[(e.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
             (e[(e.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
@@ -6109,7 +6111,7 @@ var n4 = (function (e) {
             e
         );
     })({});
-let n5 = 14,
+let n8 = 14,
     n6 = 30;
 var n7 = (function (e) {
     return (
