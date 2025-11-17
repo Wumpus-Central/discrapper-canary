@@ -29,9 +29,9 @@ var r = n(54381),
     O = n(899457),
     S = n(110560),
     T = n(78826),
-    w = n(37303),
-    P = n(134483),
-    N = n(683650),
+    w = n(134483),
+    P = n(683650),
+    N = n(752367),
     A = n(70956),
     R = n(188764);
 function B(e, t, n) {
@@ -796,7 +796,7 @@ function W() {
                                     questId: "0",
                                     children: (0, r.jsx)("div", {
                                         className: R.questChannelCallHeaderPreview,
-                                        children: (0, r.jsx)(P.Z, {
+                                        children: (0, r.jsx)(w.Z, {
                                             channelId: "123",
                                             previewQuest: W,
                                             isParticipatingOverride: G,
@@ -824,9 +824,9 @@ function W() {
                                 children: "Quest Card Embed",
                             }),
                             X
-                                ? (0, r.jsx)(N.o, { questId: W.id })
+                                ? (0, r.jsx)(P.o, { questId: W.id })
                                 : (0, r.jsx)(
-                                      w.Z,
+                                      N.X,
                                       {
                                           quest: W,
                                           location: g.jn.QUESTS_EMBED,

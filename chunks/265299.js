@@ -6,10 +6,10 @@ var r = n(54381),
     s = n(509212),
     l = n(113434),
     c = n(497505),
-    u = n(37303),
-    d = n(722334),
-    f = n(683650),
-    _ = n(864306),
+    u = n(722334),
+    d = n(683650),
+    f = n(864306),
+    _ = n(752367),
     p = n(506207);
 function h(e) {
     let { questId: t } = e,
@@ -31,19 +31,19 @@ function h(e) {
         ? (0, r.jsx)(o.$jN, { className: p.spinner })
         : null == g
           ? null != E
-              ? (0, r.jsx)(d.W, { questId: t })
-              : (0, r.jsx)(f.o, {
+              ? (0, r.jsx)(u.W, { questId: t })
+              : (0, r.jsx)(d.o, {
                     questId: t,
-                    reason: f.X.NOT_FOUND,
+                    reason: d.X.NOT_FOUND,
                 })
           : (0, s.HJ)(g) && !b
-            ? (0, r.jsx)(f.o, {
+            ? (0, r.jsx)(d.o, {
                   questId: t,
-                  reason: f.X.MOBILE_ONLY,
+                  reason: d.X.MOBILE_ONLY,
               })
             : (0, s.vB)(g.config)
               ? (0, r.jsx)(
-                    u.Z,
+                    _.X,
                     {
                         quest: g,
                         location: c.jn.QUESTS_EMBED,
@@ -51,5 +51,5 @@ function h(e) {
                     },
                     g.id,
                 )
-              : (0, r.jsx)(_.J, { questId: t });
+              : (0, r.jsx)(f.J, { questId: t });
 }
