@@ -6033,6 +6033,7 @@ var nW = (function (e) {
             (e.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST = "35372187686295"),
             (e.GAME_SERVER_HOSTING = "35370817986839"),
             (e.RECURRING_PROMOTION = "35479903794199"),
+            (e.PREMIUM_GROUP_ABOUT = "36320645875479"),
             e
         );
     })({}),
