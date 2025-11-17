@@ -110,7 +110,9 @@ let M = (0, v.IC)(90),
                     }),
                 [n, X.rankedSkuIds, ec.length],
             ),
-            { cardContainerRef: ed, totalCards: ep } = ((e) => {
+            ed = U === Z.AW.ORBS,
+            ep = null != W && W.isOrbsExclusive,
+            { cardContainerRef: eg, totalCards: ef } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
                     i = (0, g.Z)(() => {
@@ -132,15 +134,14 @@ let M = (0, v.IC)(90),
                     totalCards: e ? t : void 0,
                 };
             })(U !== Z.AW.ORBS),
-            eg = (0, O.a)()(ec),
-            ef = (0, S.l)(eg).slice(0, ep),
-            eh = (0, P.St)(ef),
-            eC = U === Z.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
-            em = (0, E.FF)("CollectiblesContent"),
-            e_ = null != W && W.isOrbsExclusive,
-            eb = x.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
-            ev = () => {
-                U === Z.AW.ORBS
+            eh = (0, O.a)()(ec),
+            eC = (0, S.l)(eh).slice(0, ef),
+            em = (0, P.St)(eC),
+            e_ = ed ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
+            eb = (0, E.FF)("CollectiblesContent"),
+            ev = x.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
+            ex = () => {
+                ed
                     ? ((0, h.Y)({
                           pageType: w.ZY5.SHOP_ORBS_TAB,
                           sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
@@ -149,9 +150,9 @@ let M = (0, v.IC)(90),
                       (0, f.navigateToQuestHome)({ fromContent: s.j.ORBS_SHOP_HERO_CTA }))
                     : (i({
                           sourceButton: "shop latest category hero",
-                          categorySkuId: !em || e_ ? X.categorySkuId : void 0,
+                          categorySkuId: !eb || ep ? X.categorySkuId : void 0,
                           isInternalShopDeeplink: !0,
-                          isOrbsExclusive: e_,
+                          isOrbsExclusive: ep,
                       }),
                       m.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == Q ? void 0 : Q.sessionId,
@@ -200,8 +201,8 @@ let M = (0, v.IC)(90),
                                             !n &&
                                             (0, r.jsx)(d.Button, {
                                                 variant: "overlay-primary",
-                                                onClick: ev,
-                                                text: eC,
+                                                onClick: ex,
+                                                text: e_,
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
@@ -242,10 +243,8 @@ let M = (0, v.IC)(90),
                                                                       }),
                                                                   "" !== X.summary &&
                                                                       (0, r.jsx)(d.Text, {
-                                                                          variant: e_
-                                                                              ? "text-lg/medium"
-                                                                              : "text-md/normal",
-                                                                          className: e_
+                                                                          variant: "text-md/normal",
+                                                                          className: ed
                                                                               ? D.orbsSubHeaderText
                                                                               : D.subHeaderText,
                                                                           style:
@@ -263,8 +262,8 @@ let M = (0, v.IC)(90),
                                                     className: D.heroHeaderButtonContainer,
                                                     children: (0, r.jsx)(d.Button, {
                                                         variant: "overlay-primary",
-                                                        onClick: ev,
-                                                        text: eC,
+                                                        onClick: ex,
+                                                        text: e_,
                                                     }),
                                                 }),
                                         ],
@@ -274,16 +273,16 @@ let M = (0, v.IC)(90),
                                       [D.row]: U === Z.AW.HOME,
                                       [D.feed]: U === Z.AW.ORBS,
                                   }),
-                                  ref: ed,
+                                  ref: eg,
                                   children:
                                       n || eu
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: [...Array(null != ep ? ep : 4)].map((e, t) =>
-                                                    eb ? (0, r.jsx)(T.Z, {}, t) : (0, r.jsx)(y.K, {}, t),
+                                                children: [...Array(null != ef ? ef : 4)].map((e, t) =>
+                                                    ev ? (0, r.jsx)(T.Z, {}, t) : (0, r.jsx)(y.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(r.Fragment, {
-                                                children: eh.map((e, t) => {
+                                                children: em.map((e, t) => {
                                                     let n = b.Z.getCategoryForProduct(e.skuId);
                                                     return null == e || null == n
                                                         ? null
@@ -296,7 +295,7 @@ let M = (0, v.IC)(90),
                                                                       categoryPosition: 0,
                                                                   },
                                                                   children:
-                                                                      eb && (null == e ? void 0 : e.skuId) != null
+                                                                      ev && (null == e ? void 0 : e.skuId) != null
                                                                           ? (0, r.jsx)(
                                                                                 k.Z,
                                                                                 {
