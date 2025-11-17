@@ -44,7 +44,7 @@ let b = () =>
                       (0, r.jsxs)(i.IX, {
                           transitionState: t,
                           "aria-labelledby": O,
-                          size: "xl",
+                          size: "xxl",
                           onClose: a,
                           children: [
                               (0, r.jsx)("div", {

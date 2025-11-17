@@ -7,6 +7,7 @@ var r = {
     "size-md": "size-md__8a031",
     "size-lg": "size-lg__8a031",
     "size-xl": "size-xl__8a031",
+    "size-xxl": "size-xxl__8a031",
     fullScreenOnMobile: "fullScreenOnMobile__8a031",
     section: "section__8a031",
     header: "header__8a031",

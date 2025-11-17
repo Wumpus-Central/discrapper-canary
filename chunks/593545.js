@@ -351,7 +351,7 @@ function D(e) {
         (0, r.jsx)(u.IX, {
             transitionState: o,
             "aria-label": m.intl.string(m.t["qxQjc+"]),
-            size: "xl",
+            size: "xxl",
             onClose: d,
             children: (0, r.jsxs)("div", {
                 className: g.modalContent,
