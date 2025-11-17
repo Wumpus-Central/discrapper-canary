@@ -506,8 +506,8 @@ let eW = i.memo(function () {
                                 _.Z.show({
                                     title: eR.intl.string(eR.t.LykQYk),
                                     body: eR.intl.format(eR.t.azKEPy, { email: null == a ? void 0 : a.email }),
-                                    secondaryConfirmText: eR.intl.string(eR.t.oP5zGA),
-                                    onConfirmSecondary: w.j,
+                                    cancelText: eR.intl.string(eR.t.Vm8akB),
+                                    onCancel: w.j,
                                 });
                         },
                         children: eR.intl.string(eR.t.WnX4J2),
