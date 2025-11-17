@@ -15,11 +15,9 @@ function u(e) {
             () =>
                 (null == p ? void 0 : p.skuIds) == null || (null == p ? void 0 : p.skuIds.length) === 0
                     ? [[], []]
-                    : (null == p ? void 0 : p.leaderboard) == null || null == I || I <= 516
+                    : (null == p ? void 0 : p.leaderboard) == null || null == I || I <= 516 || I < 1104
                       ? [[], null == p ? void 0 : p.skuIds]
-                      : I < 1104
-                        ? [null == p ? void 0 : p.skuIds.slice(0, 1), null == p ? void 0 : p.skuIds.slice(1)]
-                        : [null == p ? void 0 : p.skuIds.slice(0, 2), null == p ? void 0 : p.skuIds.slice(2)],
+                      : [null == p ? void 0 : p.skuIds.slice(0, 2), null == p ? void 0 : p.skuIds.slice(2)],
             [p, I],
         );
     return null == p
