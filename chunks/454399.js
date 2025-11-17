@@ -141,7 +141,7 @@ function I(e) {
                             children: [
                                 j &&
                                     (0, r.jsx)(l.Text, {
-                                        variant: "text-sm/bold",
+                                        variant: "text-sm/medium",
                                         children: a,
                                     }),
                                 (0, r.jsx)(l.Text, {
