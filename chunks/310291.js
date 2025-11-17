@@ -1,5 +1,5 @@
 n.d(t, { Z: () => s }), n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(392711),
     l = n.n(i),
     a = n(232473);
@@ -23,24 +23,28 @@ let s = (e, t) => {
             u();
         }, [u]),
         {
-            payoutsByPeriod: r.useMemo(() => {
-                var e = null != i ? c.filter((e) => e.user_id === i) : c;
-                let t = {};
-                for (let n of e) {
-                    let e = "".concat(n.period_starting_at, ",").concat(n.status);
-                    null == t[e] &&
-                        (t[e] = {
-                            key: e,
-                            periodStartingAt: n.period_starting_at,
-                            ppgs: {},
-                            paymentsCount: 0,
-                            amount: 0,
-                        });
-                    let r = t[e];
-                    (r.amount += n.amount), (r.paymentsCount += n.payments_count), (r.ppgs[n.grouping_id] = n);
-                }
-                return l().orderBy(Object.values(t), ["periodStartingAt"], ["desc"]);
-            }, [c, i]),
+            payoutsByPeriod: r.useMemo(
+                () =>
+                    ((e) => {
+                        let t = {};
+                        for (let n of e) {
+                            let e = new Date(n.period_starting_at),
+                                r = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), 1)).toISOString();
+                            null == t[r] &&
+                                (t[r] = {
+                                    key: r,
+                                    periodStartingAt: r,
+                                    ppgs: {},
+                                    paymentsCount: 0,
+                                    amount: 0,
+                                });
+                            let i = t[r];
+                            (i.amount += n.amount), (i.paymentsCount += n.payments_count), (i.ppgs[n.grouping_id] = n);
+                        }
+                        return l().orderBy(Object.values(t), ["periodStartingAt"], ["desc"]);
+                    })(null != i ? c.filter((e) => e.user_id === i) : c),
+                [c, i],
+            ),
             loading: s,
         }
     );
