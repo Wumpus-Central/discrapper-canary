@@ -1,11 +1,13 @@
-n.d(t, { Z: () => D }), n(388685), n(704826), n(35282), n(642613), n(368063);
-var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(449908),
-    s = n(657871),
-    l = n(240458);
-function c(e, t, n) {
+let r;
+n.d(t, { Z: () => x }), n(388685), n(704826), n(35282), n(642613), n(368063);
+var i,
+    a = n(442837),
+    o = n(570140),
+    s = n(353926),
+    l = n(449908),
+    c = n(657871),
+    u = n(240458);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,119 +20,124 @@ function c(e, t, n) {
         e
     );
 }
-let u = 5,
-    d = 250,
-    f = 0.001,
-    _ = 0.01,
-    p = 10,
-    h = o.t.createEstimate(f, _),
-    m = new Map(),
-    g = 0;
-function E(e) {
+let f = 5,
+    _ = 250,
+    p = 0.001,
+    h = 0.01,
+    m = 10,
+    g = new Map(),
+    E = 0;
+function b(e) {
     return e.replace(/[^\w\s]|\b\d+\b/g, "");
 }
-function b(e) {
-    return E(e)
+function y(e) {
+    return b(e)
         .replace(
             /(https?:\/\/[^\s]+|ftp:\/\/[^\s]+|www\.[^\s]+|[^\s]*\.[a-z]{2,}\/[^\s]*|[^\s]*\.(?:com|org|net)[^\s]*|<a?:(\w+):(\d+)>|<@(?:!|&)?\d+>)/g,
             "",
         )
         .split(/\s+/);
 }
-function y(e) {
+function O(e) {
     return Array.from(e.entries()).sort((e, t) => t[1] - e[1]);
 }
-function O(e, t) {
+function v(e, t) {
     if (e.size <= t) return;
-    let n = y(e);
+    let n = O(e);
     e.clear();
     for (let r = 0; r < t; r++) {
         let [t, i] = n[r];
         e.set(t, i);
     }
 }
-function v() {
+function I() {
     let e = 1000,
         t = 5000,
         n = 0.05;
-    return g < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (g - e) / (t - e)) + n;
+    return E < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (E - e) / (t - e)) + n;
 }
-function I(e) {
+function T(e) {
+    null == r && (r = l.t.createEstimate(p, h));
     let t = !1;
     for (let n of e)
-        if (v())
-            for (let e of b(n.content.toLowerCase())) {
-                if (0 === e.length || e.length > u) continue;
-                h.update(e);
-                let n = h.query(e);
-                m.set(e, n), n > g && (g = n), (t = !0);
+        if (I())
+            for (let e of y(n.content.toLowerCase())) {
+                if (0 === e.length || e.length > f) continue;
+                r.update(e);
+                let n = r.query(e);
+                g.set(e, n), n > E && (E = n), (t = !0);
             }
-    O(m, d), t && P.emitChange();
+    v(g, _), t && w.emitChange();
 }
-function T() {
-    let e = l.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !0 }).enabled,
-        t = (0, s.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
+function S() {
+    let e = u.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !0 }).enabled,
+        t = (0, c.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
     return e || t;
 }
-function S(e) {
+function A() {
     return (
-        !!T() &&
-        (requestIdleCallback(() => {
-            I(e);
-        }),
-        !1)
+        !!s.Z.hasLoadedExperiments &&
+        u.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !1 }).resetDataIfUnused
     );
 }
-let A = (e) => {
+let C = () => {
+    (r = void 0), g.clear(), (E = 0);
+};
+function N(e) {
+    return S()
+        ? (requestIdleCallback(() => {
+              T(e);
+          }),
+          !1)
+        : !!A() && g.size > 0 && (C(), !0);
+}
+let R = (e) => {
         let { messages: t } = e;
-        return S(t);
+        return N(t);
     },
-    C = (e) => {
+    P = (e) => {
         let { message: t } = e;
-        return S([t]);
-    },
-    N = (e) => {
-        (h = o.t.createEstimate(f, _)), m.clear(), (g = 0);
+        return N([t]);
     };
-class R extends (r = i.ZP.PersistedStore) {
+class D extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        if (null != e) {
+        if ((this.waitFor(s.Z), null != e)) {
             var t;
             if (e.wordSketchData)
                 try {
-                    e.wordSketchData && (h = o.t.fromJSON(e.wordSketchData));
+                    e.wordSketchData && (r = l.t.fromJSON(e.wordSketchData));
                 } catch (e) {
-                    h = o.t.createEstimate(f, _);
+                    r = void 0;
                 }
-            m = new Map(null != (t = e.wordCounts) ? t : []);
+            g = new Map(null != (t = e.wordCounts) ? t : []);
         }
-        let n = y(m);
+        let n = O(g);
         if (n.length > 0) {
-            let [, e] = n[0];
-            g = e;
+            let [e, t] = n[0];
+            E = t;
         }
     }
     getState() {
         return {
-            wordCounts: y(m),
-            wordSketchData: h.toJSON(),
+            wordCounts: O(g),
+            wordSketchData: null == r ? void 0 : r.toJSON(),
         };
     }
     getMaxWordCount() {
-        return g;
+        return E;
     }
     getAllWordsSorted() {
-        return y(m);
+        return O(g);
     }
     isFrequentlyUsedWord(e) {
-        let t = m.get(e.toLowerCase());
-        return null != t && t > p;
+        let t = g.get(e.toLowerCase());
+        return null != t && t > m;
     }
 }
-c(R, "displayName", "WordFrequencyStore"), c(R, "persistKey", "WordFrequencyStore");
-let P = new R(a.Z, {
-        LOAD_MESSAGES_SUCCESS: A,
-        MESSAGE_CREATE: C,
-        DEV_TOOLS_WORD_FREQUENCY_RESET: N,
+d(D, "displayName", "WordFrequencyStore"), d(D, "persistKey", "WordFrequencyStore");
+let w = new D(o.Z, {
+        LOAD_MESSAGES_SUCCESS: R,
+        MESSAGE_CREATE: P,
+        DEV_TOOLS_WORD_FREQUENCY_RESET: C,
     }),
-    D = P;
+    x = w;
