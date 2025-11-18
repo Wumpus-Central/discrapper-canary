@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(670596),
     u = n(743236),
     d = n(939350),
-    f = n(334405);
+    f = n(515527);
 function _(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ function g(e) {
             p(
                 {
                     innerRef: I,
-                    className: o()(f.item, f.checkboxContainer, f.labelContainer, d._[t], y, {
+                    className: o()(f.item, f.checkboxContainer, f.labelContainer, d._e[t], y, {
                         [f.disabled]: h,
                         [f.focused]: g,
                         [null != O ? O : ""]: g,

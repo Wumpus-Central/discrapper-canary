@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(743236),
     d = n(481060),
     f = n(939350),
-    _ = n(334405);
+    _ = n(515527);
 function p(e, t, n) {
     return (
         t in e
@@ -90,7 +90,7 @@ function E(e) {
             h(
                 {
                     innerRef: v,
-                    className: o()(_.item, _.labelContainer, f._[t], {
+                    className: o()(_.item, _.labelContainer, f._e[t], {
                         [_.disabled]: m,
                         [_.focused]: E,
                     }),

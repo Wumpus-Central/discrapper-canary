@@ -1,4 +1,4 @@
-n.d(t, { _: () => b }), n(388685);
+n.d(t, { _: () => y }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,8 +8,9 @@ var r = n(54381),
     c = n(682973),
     u = n(743236),
     d = n(481060),
-    f = n(334405);
-function _(e, t, n) {
+    f = n(939350),
+    _ = n(515527);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,22 +51,22 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = E(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +74,7 @@ function g(e, t) {
     }
     return i;
 }
-function E(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,62 +83,63 @@ function E(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function b(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: _, renderSubmenu: h } = e,
-        { focusIndex: E, isUsingKeyboardNavigation: b } = _,
-        y = g(_, ["focusIndex", "isUsingKeyboardNavigation"]),
-        O = i.useRef(null),
+function y(e) {
+    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: p, renderSubmenu: m } = e,
+        { focusIndex: b, isUsingKeyboardNavigation: y } = p,
+        O = E(p, ["focusIndex", "isUsingKeyboardNavigation"]),
         v = i.useRef(null),
         I = i.useRef(null),
-        [T, S] = i.useState(!1);
+        T = i.useRef(null),
+        [S, A] = i.useState(!1);
     i.useLayoutEffect(() => {
-        S(!0);
+        A(!0);
     }, []),
         i.useLayoutEffect(() => {
             var e;
-            a && ((0, u.F)(O), null == (e = I.current) || e.focus());
+            a && ((0, u.F)(v), null == (e = T.current) || e.focus());
         }, [a]);
-    let A = (0, r.jsx)("div", {
-            className: f.submenuPaddingContainer,
+    let C = (0, r.jsx)("div", {
+            className: _.submenuPaddingContainer,
             children: (0, r.jsx)(
                 "div",
-                m(p({ className: o()(f.submenu, t) }, y), {
-                    ref: I,
+                g(h({ className: o()(_.submenu, t) }, O), {
+                    ref: T,
                     children: (0, r.jsx)(l.zJl, {
-                        className: f.scroller,
-                        children: h(),
+                        className: _.scroller,
+                        children: m(),
                     }),
                 }),
             ),
         }),
-        C = (0, c.E)("MenuSubmenuItem"),
-        [N, R] = i.useState(!1);
-    if (C)
+        N = (0, c.E)("MenuSubmenuItem"),
+        [R, P] = i.useState(!1);
+    if (N)
         return (0, r.jsx)(s.pS, {
-            open: N,
-            onOpenChange: R,
+            open: R,
+            viewportPadding: f.sb,
+            onOpenChange: P,
             spacing: 4,
             placement: "right-start",
             portal: !1,
             trigger: "hover",
-            renderLayer: () => A,
+            renderLayer: () => C,
             children: (e) => {
                 let { ref: t, props: i } = e;
-                return (0, r.jsx)("div", m(p({ ref: t }, i), { children: n }));
+                return (0, r.jsx)("div", g(h({ ref: t }, i), { children: n }));
             },
         });
-    let P = (0, r.jsx)(d.jRF, {
-        targetRef: v,
+    let D = (0, r.jsx)(d.jRF, {
+        targetRef: I,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         fixed: !0,
         spacing: 4,
         position: "right",
         align: "top",
-        children: () => A,
+        children: () => C,
     });
     return (0, r.jsxs)("div", {
-        ref: O,
-        children: [(0, r.jsx)("div", { ref: v }), n, a && T ? P : null],
+        ref: v,
+        children: [(0, r.jsx)("div", { ref: I }), n, a && S ? D : null],
     });
 }

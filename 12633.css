@@ -52756,6 +52756,7 @@ h2.title_feb59c {
 }
 
 .menu_c1e9c4 {
+    --custom-menu-viewport-padding: 16px;
     background: var(--background-surface-high);
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
@@ -52765,7 +52766,7 @@ h2.title_feb59c {
     cursor: default;
     display: flex;
     height: auto;
-    max-height: calc(100vh - 32px);
+    max-height: calc(100vh - var(--custom-menu-viewport-padding)*2);
     z-index: 1
 }
 

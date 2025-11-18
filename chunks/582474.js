@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(743236),
     c = n(481060),
     u = n(939350),
-    d = n(334405);
+    d = n(515527);
 function f(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ function m(e) {
             _(
                 {
                     ref: y,
-                    className: o()(d.item, d.switchItem, d.hideInteraction, u._[t], E, { [d.disabled]: f }),
+                    className: o()(d.item, d.switchItem, d.hideInteraction, u._e[t], E, { [d.disabled]: f }),
                     "aria-checked": a,
                     "aria-disabled": f,
                 },
