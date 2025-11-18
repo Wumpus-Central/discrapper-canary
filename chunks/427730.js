@@ -32,9 +32,11 @@ let c = () => {
                 maximum: n,
                 variant: f,
                 override: {
-                    background: p,
-                    gradientStart: m,
-                    gradientEnd: E,
+                    default: {
+                        background: p,
+                        gradientStart: m,
+                        gradientEnd: E,
+                    },
                 },
             }),
             (0, r.jsx)(l.dv, {}),
@@ -82,8 +84,14 @@ let c = () => {
             }),
             (0, r.jsx)(l.dv, {}),
             (0, r.jsx)(o.Text, {
-                variant: "text-md/semibold",
+                variant: "text-lg/semibold",
+                color: "status-danger",
                 children: "To use overrides, the variant must be set to UNSET",
+            }),
+            (0, r.jsx)(o.Text, {
+                variant: "text-md/normal",
+                children:
+                    'Note: this component allows setting overrides per theme. For simplicity in this story, we only set the "default" override which applies to all themes',
             }),
             (0, r.jsx)(l.BZ, {
                 children: (0, r.jsx)(o.oil, {

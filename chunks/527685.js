@@ -1,40 +1,44 @@
 n.d(t, {
-    Z: () => c,
-    y: () => l,
+    Z: () => u,
+    y: () => c,
 });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a);
 n(512722);
-var s = n(49552),
-    l = (function (e) {
+var s = n(410030),
+    l = n(49552),
+    c = (function (e) {
         return (e.UNSET = "unset"), (e.BLUE = "blue"), (e.ORANGE = "orange"), e;
     })({});
-let c = (e) => {
-    let { progress: t, minimum: n = 0, maximum: a = 100, variant: l, override: c, labelledBy: u } = e,
-        d = null != c && "unset" === l,
-        f = i.useMemo(() => ((t - n) / (a - n)) * 100, [t, n, a]),
-        _ = 24 + (f / 100) * 30,
-        p = (_ - 10) / 2,
-        h = t === n;
+let u = (e) => {
+    var t;
+    let { progress: n, minimum: a = 0, maximum: c = 100, variant: u, override: d, labelledBy: f } = e,
+        _ = null != d && "unset" === u,
+        p = (0, s.ZP)(),
+        h = null != (t = null == d ? void 0 : d[p]) ? t : null == d ? void 0 : d.default,
+        m = i.useMemo(() => ((n - a) / (c - a)) * 100, [n, a, c]),
+        g = 24 + (m / 100) * 30,
+        E = (g - 10) / 2,
+        b = n === a;
     return (0, r.jsx)("div", {
-        className: o()(s.progressContainer, s[l]),
-        style: { background: d ? (null == c ? void 0 : c.background) : void 0 },
+        className: o()(l.progressContainer, l[u]),
+        style: { background: _ ? (null == h ? void 0 : h.background) : void 0 },
         children: (0, r.jsxs)("div", {
-            className: o()(s.progress, { [s.empty]: h }),
-            style: { width: "".concat(f, "%") },
+            className: o()(l.progress, { [l.empty]: b }),
+            style: { width: "".concat(m, "%") },
             role: "meter",
-            "aria-valuenow": t,
-            "aria-valuemin": n,
-            "aria-valuemax": a,
-            "aria-labelledby": u,
+            "aria-valuenow": n,
+            "aria-valuemin": a,
+            "aria-valuemax": c,
+            "aria-labelledby": f,
             children: [
                 (0, r.jsxs)("svg", {
                     width: "100%",
-                    height: _,
-                    style: { transform: "translate(0, -".concat(p, "px)") },
-                    className: o()(s.glow, { [s.empty]: h }),
+                    height: g,
+                    style: { transform: "translate(0, -".concat(E, "px)") },
+                    className: o()(l.glow, { [l.empty]: b }),
                     viewBox: "0 0 220 24",
                     preserveAspectRatio: "none",
                     fill: "none",
@@ -43,9 +47,9 @@ let c = (e) => {
                         (0, r.jsx)("g", {
                             filter: "url(#filter0_f_650_66545)",
                             children: (0, r.jsx)("path", {
-                                className: o()(s.fill, s[l]),
+                                className: o()(l.fill, l[u]),
                                 d: "M220 6.70215L220 16.7021L115.211 12.3494L6.70215 11.7022L115.211 11.0549L220 6.70215Z",
-                                fill: d ? (null == c ? void 0 : c.gradientEnd) : void 0,
+                                fill: _ ? (null == h ? void 0 : h.gradientEnd) : void 0,
                             }),
                         }),
                         (0, r.jsx)("defs", {
@@ -78,16 +82,16 @@ let c = (e) => {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: o()(s.bar, s[l], { [s.empty]: h }),
+                    className: o()(l.bar, l[u], { [l.empty]: b }),
                     style: {
-                        background: d
-                            ? h
-                                ? null == c
+                        background: _
+                            ? b
+                                ? null == h
                                     ? void 0
-                                    : c.gradientEnd
+                                    : h.gradientEnd
                                 : "linear-gradient(90deg, "
-                                      .concat(null == c ? void 0 : c.gradientStart, " 0%, ")
-                                      .concat(null == c ? void 0 : c.gradientEnd, " 100%)")
+                                      .concat(null == h ? void 0 : h.gradientStart, " 0%, ")
+                                      .concat(null == h ? void 0 : h.gradientEnd, " 100%)")
                             : void 0,
                     },
                 }),

@@ -51945,16 +51945,57 @@ screen and (max-width:485px) {
     padding-inline: 0
 }
 
+.theme-light .progressContainer__9258b.blue__9258b {
+    --custom-gradient-start: var(--blurple-80);
+    --custom-gradient-end: var(--blurple-38);
+    --custom-gradient-glow: var(--blurple-38)
+}
+
+.theme-light .progressContainer__9258b.orange__9258b {
+    --custom-gradient-start: var(--orange-new-80);
+    --custom-gradient-end: var(--orange-new-24);
+    --custom-gradient-glow: var(--orange-new-24)
+}
+
+.theme-dark .progressContainer__9258b.blue__9258b {
+    --custom-gradient-start: var(--blurple-44);
+    --custom-gradient-end: var(--blurple-24);
+    --custom-gradient-glow: var(--blurple-24)
+}
+
+.theme-dark .progressContainer__9258b.orange__9258b {
+    --custom-gradient-start: var(--orange-new-40);
+    --custom-gradient-end: var(--orange-new-10);
+    --custom-gradient-glow: var(--orange-new-10)
+}
+
+.theme-darker .progressContainer__9258b.blue__9258b {
+    --custom-gradient-start: var(--blurple-54);
+    --custom-gradient-end: var(--blurple-24);
+    --custom-gradient-glow: var(--blurple-24)
+}
+
+.theme-darker .progressContainer__9258b.orange__9258b {
+    --custom-gradient-start: var(--orange-new-48);
+    --custom-gradient-end: var(--orange-new-10);
+    --custom-gradient-glow: var(--orange-new-10)
+}
+
+.theme-midnight .progressContainer__9258b.blue__9258b {
+    --custom-gradient-start: var(--blurple-59);
+    --custom-gradient-end: var(--blurple-24);
+    --custom-gradient-glow: var(--blurple-24)
+}
+
+.theme-midnight .progressContainer__9258b.orange__9258b {
+    --custom-gradient-start: var(--orange-new-48);
+    --custom-gradient-end: var(--orange-new-10);
+    --custom-gradient-glow: var(--orange-new-10)
+}
+
 .progressContainer__9258b {
     --custom-expressive-progress-height: 10px;
-    --custom-gradient-start-blue: #0c228a;
-    --custom-gradient-end-blue: #74b9fa;
-    --custom-gradient-glow-blue: #bdfffb;
-    --custom-gradient-start-orange: #571b00;
-    --custom-gradient-end-orange: #fbc7ac;
-    --custom-gradient-glow-orange: #fbc7ac;
-    --custom-background-blue: #2f3035;
-    --custom-background-orange: #2d1111;
+    --custom-background: var(--background-mod-normal);
     border-radius: 5px;
     height: var(--custom-expressive-progress-height);
     overflow: visible;
@@ -51962,28 +52003,16 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-.progressContainer__9258b.unset__9258b {
-    background: unset
-}
-
-.progressContainer__9258b.blue__9258b {
-    background: var(--custom-background-blue)
-}
-
-.progressContainer__9258b.orange__9258b {
-    background: var(--custom-background-orange)
+.progressContainer__9258b:not(.unset__9258b) {
+    background: var(--custom-background)
 }
 
 .fill__9258b {
     transition: fill .15s ease
 }
 
-.fill__9258b.blue__9258b {
-    fill: var(--custom-gradient-glow-blue)
-}
-
-.fill__9258b.orange__9258b {
-    fill: var(--custom-gradient-glow-orange)
+.fill__9258b:not(.unset__9258b) {
+    fill: var(--custom-gradient-glow)
 }
 
 .progress__9258b {
@@ -52016,24 +52045,12 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-.bar__9258b.unset__9258b {
-    background: unset
+.bar__9258b:not(.unset__9258b) {
+    background: linear-gradient(90deg, var(--custom-gradient-start) 0, var(--custom-gradient-end) 100%)
 }
 
-.bar__9258b.blue__9258b {
-    background: linear-gradient(90deg, var(--custom-gradient-start-blue) 0, var(--custom-gradient-end-blue) 100%)
-}
-
-.bar__9258b.blue__9258b.empty__9258b {
-    background: var(--custom-gradient-end-blue)
-}
-
-.bar__9258b.orange__9258b {
-    background: linear-gradient(90deg, var(--custom-gradient-start-orange) 0, var(--custom-gradient-end-orange) 100%)
-}
-
-.bar__9258b.orange__9258b.empty__9258b {
-    background: var(--custom-gradient-end-orange)
+.bar__9258b:not(.unset__9258b).empty__9258b {
+    background: var(--custom-gradient-end)
 }
 
 .orbIconSVG__85200 {
