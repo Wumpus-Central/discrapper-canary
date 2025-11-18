@@ -1,64 +1,34 @@
-n.d(t, {
-    Hj: () => s,
-    Pz: () => u,
-    ZH: () => l,
-}),
-    n(539854),
-    n(415506),
-    n(49124),
-    n(388685),
-    n(583741);
-var r = n(427786),
-    i = n.n(r);
-let a = 5000,
-    o = new (i())(a);
-function s(e) {
-    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-    let i = c(n);
+r.d(e, { Hj: () => a }), r(539854), r(415506), r(49124), r(388685), r(583741);
+var n = r(427786);
+let i = new (r.n(n)())(5000);
+function a(t) {
+    for (var e = arguments.length, r = Array(e > 1 ? e - 1 : 0), n = 1; n < e; n++) r[n - 1] = arguments[n];
+    let a = (function (t) {
+        let e = "";
+        for (let r of t) {
+            let t = typeof r;
+            "string" === t || "number" === t || "boolean" === t
+                ? (e += r + " ")
+                : r instanceof Error
+                  ? (e += r.message + "\n" + r.stack + " ")
+                  : (e += JSON.stringify(r) + " ");
+        }
+        return e;
+    })(r);
     for (
-        "string" == typeof e
-            ? o.push({
+        "string" == typeof t
+            ? i.push({
                   time: Date.now(),
-                  category: e,
-                  message: i,
+                  category: t,
+                  message: a,
               })
-            : o.push({
+            : i.push({
                   time: Date.now(),
-                  category: e.name,
-                  timing: e.timing,
-                  message: i,
+                  category: t.name,
+                  timing: t.timing,
+                  message: a,
               });
-        o.length > a;
+        i.length > 5000;
     )
-        o.shift();
-}
-function l() {
-    o.clear();
-}
-function c(e) {
-    let t = "";
-    for (let n of e) {
-        let e = typeof n;
-        "string" === e || "number" === e || "boolean" === e
-            ? (t += n + " ")
-            : n instanceof Error
-              ? (t += n.message + "\n" + n.stack + " ")
-              : (t += JSON.stringify(n) + " ");
-    }
-    return t;
-}
-function u(e) {
-    return o
-        .toArray()
-        .filter((t) => null == e || e.includes(t.category))
-        .map((e) => {
-            let t = [];
-            return (
-                t.push(new Date(e.time).toISOString()),
-                null != e.timing && t.push(e.timing),
-                t.push(e.category, e.message),
-                t.join(" -> ")
-            );
-        })
-        .join("\n");
+        i.shift();
 }
