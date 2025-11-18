@@ -317,25 +317,27 @@ function eu(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : er,
         {
             quests: n,
-            isFetchingCurrentQuests: r,
-            hasFetched: i,
+            excludedQuests: r,
+            isFetchingCurrentQuests: i,
+            hasFetched: a,
         } = Y({
             fetchPolicy: "cache-and-network",
             callerSource: "use_filtered_quests",
         }),
-        a = new Map(n.map((e) => [e.id, e])),
-        o = eo(n, t),
-        s = es(n),
-        l = [],
-        c = [];
-    for (let t of (l = "all" === e ? o : s)) {
-        let e = a.get(t);
-        null != e && c.push(e);
+        o = new Map(n.map((e) => [e.id, e])),
+        s = eo(n, t),
+        l = es(n),
+        c = [],
+        u = [];
+    for (let t of (c = "all" === e ? s : l)) {
+        let e = o.get(t);
+        null != e && u.push(e);
     }
     return {
-        quests: c,
-        isFetchingCurrentQuests: r,
-        hasFetched: i,
+        quests: u,
+        excludedQuests: r,
+        isFetchingCurrentQuests: i,
+        hasFetched: a,
     };
 }
 function ed() {

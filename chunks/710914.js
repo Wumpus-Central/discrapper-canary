@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -6,39 +6,48 @@ var r = n(54381),
     s = n(392711),
     o = n(828700),
     c = n(481060),
-    u = n(497505),
-    d = n(415104),
-    p = n(388032),
-    f = n(334525);
-function h(e) {
-    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: h = !1, onClearFilters: g } = e,
-        m = i.useRef(!1),
-        _ = (0, o.TH)(),
-        b = i.useMemo(() => {
-            if (_.hash.length > 0) {
-                let e = _.hash.slice(1);
-                for (let n of t) if (n.id === e) return e;
+    u = n(509212),
+    d = n(497505),
+    p = n(415104),
+    f = n(388032),
+    h = n(701913);
+function g(e) {
+    let {
+            quests: t,
+            excludedQuests: n,
+            isFetching: l,
+            hasFetched: g,
+            hasFiltersApplied: m = !1,
+            onClearFilters: _,
+        } = e,
+        b = i.useRef(!1),
+        E = (0, o.TH)(),
+        O = i.useMemo(() => {
+            if (E.hash.length > 0) {
+                let e = E.hash.slice(1),
+                    r = (0, u._x)(e, t, n);
+                if (null != r) return r.id;
             }
             return null;
-        }, [t, _.hash]);
+        }, [t, n, E.hash]);
     i.useEffect(() => {
-        m.current = !1;
-    }, [_.hash]),
+        b.current = !1;
+    }, [E.hash]),
         i.useEffect(() => {
-            if (null == b || m.current || n || !l) return;
-            let e = document.getElementById("quest-tile-".concat(b));
+            if (null == O || b.current || l || !g) return;
+            let e = document.getElementById("quest-tile-".concat(O));
             null == e ||
                 e.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                 }),
-                (m.current = !0);
-        }, [t, b, _, n, l]);
-    let E = null != b,
-        [O, y] = i.useState(window.innerWidth);
+                (b.current = !0);
+        }, [t, O, E, l, g]);
+    let y = null != O,
+        [v, I] = i.useState(window.innerWidth);
     i.useEffect(() => {
         let e = (0, s.debounce)(() => {
-            y(window.innerWidth);
+            I(window.innerWidth);
         }, 250);
         return (
             window.addEventListener("resize", e),
@@ -47,47 +56,47 @@ function h(e) {
             }
         );
     }, []);
-    let v = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
-    return n && 0 === t.length
-        ? (0, r.jsx)(c.$jN, { className: f.spinner })
+    let C = v >= 1610 ? 3 : v >= 1340 ? 2 : 1;
+    return l && 0 === t.length
+        ? (0, r.jsx)(c.$jN, { className: h.spinner })
         : 0 === t.length
           ? (0, r.jsxs)("div", {
-                className: f.emptyStateContainer,
+                className: h.emptyStateContainer,
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
-                        children: p.intl.string(h ? p.t.PBfFnx : p.t.NqFP6z),
+                        children: f.intl.string(m ? f.t.PBfFnx : f.t.NqFP6z),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: g }) : p.intl.string(p.t.LhD4yH),
+                        children: m ? f.intl.format(f.t.LdYS1H, { onClick: _ }) : f.intl.string(f.t.LhD4yH),
                     }),
                 ],
             })
           : (0, r.jsx)(
                 "div",
                 {
-                    className: f.container,
+                    className: h.container,
                     children: t.map((e, t) => {
-                        let n = Math.floor(t / v);
+                        let n = Math.floor(t / C);
                         return (0, r.jsx)(
-                            d.Z,
+                            p.Z,
                             {
                                 quest: e,
-                                questContent: u.jn.QUEST_HOME_DESKTOP,
+                                questContent: d.jn.QUEST_HOME_DESKTOP,
                                 contentPosition: t,
                                 rowIndex: n,
-                                className: a()(f.questTile, {
-                                    [f.selected]: E && e.id === b,
-                                    [f.unselected]: E && e.id !== b,
+                                className: a()(h.questTile, {
+                                    [h.selected]: y && e.id === O,
+                                    [h.unselected]: y && e.id !== O,
                                 }),
-                                sourceQuestContent: u.jn.QUEST_HOME_DESKTOP,
+                                sourceQuestContent: d.jn.QUEST_HOME_DESKTOP,
                             },
                             e.id,
                         );
                     }),
                 },
-                b,
+                O,
             );
 }

@@ -33,14 +33,15 @@ function u(e) {
 }
 function d(e) {
     let { onSelectTab: t } = e,
-        { quests: n, isFetchingCurrentQuests: a, hasFetched: u } = (0, l.bA)(l.e5.CLAIMED);
-    return a && 0 === n.length
+        { quests: n, excludedQuests: a, isFetchingCurrentQuests: u, hasFetched: d } = (0, l.bA)(l.e5.CLAIMED);
+    return u && 0 === n.length
         ? (0, r.jsx)(i.$jN, { className: c.spinner })
         : 0 === n.length
           ? (0, r.jsx)(s.Z, { onClick: () => t(l.e5.ALL) })
           : (0, r.jsx)(o.Z, {
                 quests: n,
-                isFetching: a,
-                hasFetched: u,
+                excludedQuests: a,
+                isFetching: u,
+                hasFetched: d,
             });
 }

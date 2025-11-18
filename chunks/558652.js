@@ -9,15 +9,16 @@ var r = n(54381),
     u = n(710914),
     d = n(46140),
     p = n(388032),
-    f = n(872058);
+    f = n(937018);
 let h = [];
 function g() {
     let [e, t] = i.useState(d.yq.SUGGESTED),
         [n, g] = i.useState(h),
         {
             quests: m,
-            isFetchingCurrentQuests: _,
-            hasFetched: b,
+            excludedQuests: _,
+            isFetchingCurrentQuests: b,
+            hasFetched: E,
         } = (0, s.bA)(
             s.e5.ALL,
             i.useMemo(
@@ -28,19 +29,19 @@ function g() {
                 [e, n],
             ),
         ),
-        E = i.useCallback(() => {
+        O = i.useCallback(() => {
             g(h);
         }, []),
-        O = i.useRef(null),
         y = i.useRef(null),
-        v = (0, l.TH)(),
-        I = (0, l.k6)();
+        v = i.useRef(null),
+        I = (0, l.TH)(),
+        C = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== v.hash && null != O.current && null != y.current) {
+            if ("" !== I.hash && null != y.current && null != v.current) {
                 var t, r;
-                (e !== O.current || n !== y.current) &&
-                    I.replace(
+                (e !== y.current || n !== v.current) &&
+                    C.replace(
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +66,7 @@ function g() {
                                     });
                             }
                             return e;
-                        })({}, v)),
+                        })({}, I)),
                         (r = r = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -82,12 +83,12 @@ function g() {
                         t),
                     );
             }
-        }, [e, n, v, I]),
+        }, [e, n, I, C]),
         i.useEffect(() => {
-            O.current = e;
+            y.current = e;
         }, [e]),
         i.useEffect(() => {
-            y.current = n;
+            v.current = n;
         }, [n]),
         (0, s.SU)({
             selectedSortMethod: e,
@@ -121,10 +122,11 @@ function g() {
                 }),
                 (0, r.jsx)(u.Z, {
                     quests: m,
-                    isFetching: _,
-                    hasFetched: b,
+                    excludedQuests: _,
+                    isFetching: b,
+                    hasFetched: E,
                     hasFiltersApplied: n.length > 0,
-                    onClearFilters: E,
+                    onClearFilters: O,
                 }),
             ],
         })
