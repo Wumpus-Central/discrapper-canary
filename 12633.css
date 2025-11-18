@@ -49423,10 +49423,6 @@ html:not(.chat-input) .inputInner_b1f01d {
     overflow: hidden
 }
 
-.clickable_dfa8b6 {
-    cursor: pointer
-}
-
 .roleRemoveIcon_dfa8b6 {
     display: none;
     height: 10px;
@@ -52512,7 +52508,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59848,9 +59844,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

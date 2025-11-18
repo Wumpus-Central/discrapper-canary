@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => N });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -12,14 +12,13 @@ var r = n(54381),
     _ = n(481060),
     p = n(239091),
     h = n(607070),
-    m = n(559475),
-    g = n(134433),
-    E = n(518738),
-    b = n(884902),
-    y = n(48950),
-    O = n(388032),
-    v = n(787185);
-function I(e, t, n) {
+    m = n(134433),
+    g = n(518738),
+    E = n(884902),
+    b = n(48950),
+    y = n(388032),
+    O = n(139205);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +31,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +42,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,22 +59,22 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +82,7 @@ function C(e, t) {
     }
     return i;
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,174 +91,129 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = i.forwardRef(function (e, t) {
-    var a, I, S;
-    let N,
-        {
-            canRemove: R,
-            className: P,
-            role: D,
-            onRemove: w,
-            guildId: x,
-            disableBorderColor: L,
-            onMouseDown: M,
-            onRoleClick: k,
-        } = e,
-        j = (0, s.JA)(D.id),
-        { tabIndex: U } = j,
-        G = C(j, ["tabIndex"]),
-        B = (0, E.p9)({
-            roleId: D.id,
+let N = i.forwardRef(function (e, t) {
+    var a, v, T;
+    let C,
+        { canRemove: N, className: R, role: P, onRemove: D, guildId: w, disableBorderColor: L, onMouseDown: x } = e,
+        M = (0, s.JA)(P.id),
+        { tabIndex: j } = M,
+        k = A(M, ["tabIndex"]),
+        U = (0, g.p9)({
+            roleId: P.id,
             size: 16,
-            guildId: x,
+            guildId: w,
         }),
-        Z = (0, c.e7)([h.Z], () => h.Z.roleStyle),
-        F = (0, m.t)("user_profile_member_role"),
-        V = (null == (a = D.tags) ? void 0 : a.guild_connections) === null,
-        H = i.useCallback(
+        G = (0, c.e7)([h.Z], () => h.Z.roleStyle),
+        B = (null == (a = P.tags) ? void 0 : a.guild_connections) === null,
+        Z = i.useCallback(
             (e) => {
                 (0, p.jW)(e, async () => {
-                    let { default: e } = await n.e("5396").then(n.bind(n, 999588));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            A(T({}, t), {
-                                id: D.id,
-                                label: O.intl.string(O.t.sMsaLg),
+                            S(I({}, t), {
+                                id: P.id,
+                                label: y.intl.string(y.t.sMsaLg),
                             }),
                         );
                 });
             },
-            [D.id],
+            [P.id],
         ),
-        Y = i.useCallback(() => {
-            if (F) {
-                if (null != k) return void k(D.id);
-                (0, _.ZDy)(async () => {
-                    let { default: e } = await n.e("88146").then(n.bind(n, 501171));
-                    return (t) =>
-                        (0, r.jsx)(
-                            e,
-                            A(T({}, t), {
-                                guildId: x,
-                                roleId: D.id,
-                                channelId: void 0,
-                            }),
-                        );
-                });
-            }
-        }, [F, x, D.id, k]),
-        W = (0, _.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        K = null != (I = D.colorString) ? I : W,
-        z = null != (S = (0, l.wK)(K, 0.6)) ? S : void 0,
-        q = u.Z.unsafe_rawColors.WHITE_500.css,
-        X = (0, l._i)(K);
-    null != X && 0.3 > (0, l.Bd)(X) && (q = u.Z.unsafe_rawColors.PRIMARY_630.css);
-    let Q = (0, b._f)(x, D, D.colorStrings);
-    N = V
-        ? (0, r.jsx)(g.Z, {
-              className: v.roleFlowerStar,
-              iconClassName: R ? v.roleVerifiedIcon : void 0,
-              color: K,
+        F = (0, _.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        V = null != (v = P.colorString) ? v : F,
+        H = null != (T = (0, l.wK)(V, 0.6)) ? T : void 0,
+        Y = u.Z.unsafe_rawColors.WHITE_500.css,
+        W = (0, l._i)(V);
+    null != W && 0.3 > (0, l.Bd)(W) && (Y = u.Z.unsafe_rawColors.PRIMARY_630.css);
+    let K = (0, E._f)(w, P, P.colorStrings);
+    C = B
+        ? (0, r.jsx)(m.Z, {
+              className: O.roleFlowerStar,
+              iconClassName: N ? O.roleVerifiedIcon : void 0,
+              color: V,
               size: 14,
           })
-        : "dot" === Z
+        : "dot" === G
           ? (0, r.jsx)(_.FhE, {
-                className: v.roleDot,
-                color: K,
+                className: O.roleDot,
+                color: V,
                 background: !1,
-                colors: Q,
+                colors: K,
                 tooltip: !1,
             })
           : (0, r.jsx)(_.xko, {
-                color: K,
-                colors: Q,
-                className: v.roleCircle,
+                color: V,
+                colors: K,
+                className: O.roleCircle,
             });
-    let J = i.useMemo(() => {
+    let z = i.useMemo(() => {
             var t;
-            return T({ borderColor: L ? void 0 : z }, null != (t = e.style) ? t : {});
-        }, [z, L, e.style]),
-        $ = () =>
-            R
+            return I({ borderColor: L ? void 0 : H }, null != (t = e.style) ? t : {});
+        }, [H, L, e.style]),
+        q = () =>
+            N
                 ? (0, r.jsx)(f.u, {
                       asContainer: !0,
-                      text: O.intl.string(O.t.u3RVsH),
+                      text: y.intl.string(y.t.u3RVsH),
                       children: (0, r.jsxs)(_.P3F, {
-                          className: o()(v.roleRemoveButtonCanRemove, v.roleRemoveButton),
-                          onClick: (e) => {
-                              e.stopPropagation(), w(e);
-                          },
-                          tabIndex: U,
-                          focusProps: { focusClassName: v.roleRemoveIconFocused },
+                          className: o()(O.roleRemoveButtonCanRemove, O.roleRemoveButton),
+                          onClick: D,
+                          tabIndex: j,
+                          focusProps: { focusClassName: O.roleRemoveIconFocused },
                           "aria-hidden": !1,
-                          "aria-label": O.intl.formatToPlainString(O.t.QrxwhY, { roleName: D.name }),
+                          "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: P.name }),
                           children: [
-                              N,
+                              C,
                               (0, r.jsx)(_.Dio, {
                                   size: "md",
-                                  color: q,
-                                  className: v.roleRemoveIcon,
+                                  color: Y,
+                                  className: O.roleRemoveIcon,
                                   "aria-hidden": !0,
                               }),
                           ],
                       }),
                   })
-                : (0, r.jsx)("div", {
-                      className: v.roleRemoveButton,
-                      children: N,
-                  }),
-        ee = (0, r.jsxs)(r.Fragment, {
-            children: [
-                $(),
-                null != B ? (0, r.jsx)(y.Z, A(T({ className: v.roleIcon }, B), { enableTooltip: !1 })) : null,
-                (0, r.jsx)("div", {
-                    className: v.roleName,
-                    "aria-hidden": !0,
-                    children: (0, r.jsx)(_.Text, {
-                        variant: "text-xs/medium",
-                        children: (0, r.jsx)(d.Z, { children: D.name }),
-                    }),
-                }),
-            ],
-        });
+                : (0, r.jsx)(_.P3F, {
+                      className: O.roleRemoveButton,
+                      tabIndex: -1,
+                      focusProps: { focusClassName: O.roleRemoveIconFocused },
+                      "aria-hidden": !0,
+                      "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: P.name }),
+                      children: C,
+                  });
     return (0, r.jsx)(_.tEY, {
-        children: F
-            ? (0, r.jsx)(
-                  _.P3F,
-                  A(
-                      T(
-                          {
-                              innerRef: t,
-                              onClick: Y,
-                              className: o()(v.role, v.clickable, P),
-                              style: J,
-                              onContextMenu: H,
-                              "aria-label": D.name,
-                              tabIndex: U,
-                          },
-                          G,
-                      ),
-                      { children: ee },
-                  ),
-              )
-            : (0, r.jsx)(
-                  "div",
-                  A(
-                      T(
-                          {
-                              ref: t,
-                              onMouseDown: M,
-                              className: o()(v.role, P),
-                              style: J,
-                              onContextMenu: H,
-                              "aria-label": D.name,
-                              tabIndex: U,
-                          },
-                          G,
-                      ),
-                      { children: ee },
-                  ),
-              ),
+        children: (0, r.jsxs)(
+            "div",
+            S(
+                I(
+                    {
+                        ref: t,
+                        className: o()(O.role, R),
+                        style: z,
+                        onContextMenu: Z,
+                        onMouseDown: x,
+                        "aria-label": P.name,
+                        tabIndex: j,
+                    },
+                    k,
+                ),
+                {
+                    children: [
+                        q(),
+                        null != U ? (0, r.jsx)(b.Z, S(I({ className: O.roleIcon }, U), { enableTooltip: !1 })) : null,
+                        (0, r.jsx)("div", {
+                            "aria-hidden": !0,
+                            className: O.roleName,
+                            children: (0, r.jsx)(_.Text, {
+                                variant: "text-xs/medium",
+                                children: (0, r.jsx)(d.Z, { children: P.name }),
+                            }),
+                        }),
+                    ],
+                },
+            ),
+        ),
     });
 });

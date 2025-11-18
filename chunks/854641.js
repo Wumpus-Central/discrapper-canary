@@ -9,5 +9,4 @@ e.exports = {
     memberGroupsPlaceholder: "memberGroupsPlaceholder_c8ffbb",
     roleIcon: "roleIcon_c8ffbb",
     fullWidth: "fullWidth_c8ffbb",
-    roleGroup: "roleGroup_c8ffbb",
 };

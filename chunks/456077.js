@@ -116,9 +116,8 @@ function O(e) {
             onClosePopout: A,
             shouldShow: C,
             shouldPreload: N = !0,
-            onRoleClick: R,
         } = e,
-        P = m(e, [
+        R = m(e, [
             "children",
             "user",
             "currentUser",
@@ -137,10 +136,9 @@ function O(e) {
             "onClosePopout",
             "shouldShow",
             "shouldPreload",
-            "onRoleClick",
         ]);
-    let D = i.useRef(void 0),
-        w = i.useCallback(
+    let P = i.useRef(void 0),
+        D = i.useCallback(
             () =>
                 null != v
                     ? v()
@@ -153,10 +151,10 @@ function O(e) {
                       }),
             [v, a, n, O, s, d],
         ),
-        x = i.useCallback(
+        w = i.useCallback(
             (e) =>
-                ((D.current = Date.now()), null != I)
-                    ? I(e, D.current)
+                ((P.current = Date.now()), null != I)
+                    ? I(e, P.current)
                     : (0, r.jsx)(
                           c.Z,
                           h(_({}, e), {
@@ -169,14 +167,13 @@ function O(e) {
                               disableUserProfileLink: g,
                               newAnalyticsLocations: b,
                               appContext: y,
-                              openedAt: D.current,
+                              openedAt: P.current,
                               closePopout: () => {
                                   e.closePopout(), null == A || A();
                               },
-                              onRoleClick: R,
                           }),
                       ),
-            [n, a, I, s, d, p, f, g, b, y, A, R],
+            [n, a, I, s, d, p, f, g, b, y, A],
         );
     return (0, r.jsx)(
         o.yRy,
@@ -185,12 +182,12 @@ function O(e) {
                 {
                     popoutKey: u.Tg,
                     shouldShow: C,
-                    preload: N ? w : void 0,
-                    renderPopout: x,
+                    preload: N ? D : void 0,
+                    renderPopout: w,
                     onRequestOpen: T,
                     onRequestClose: S,
                 },
-                P,
+                R,
             ),
             { children: t },
         ),
