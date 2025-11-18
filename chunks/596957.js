@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685), n(539854);
+n.d(t, { Z: () => D }), n(415506), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,22 +9,24 @@ var r = n(54381),
     u = n(100527),
     d = n(906732),
     p = n(835473),
-    f = n(795448),
-    h = n(699516),
-    g = n(974042),
-    m = n(451478),
-    _ = n(701861),
-    b = n(437314),
-    E = n(696577),
-    O = n(163417),
-    y = n(830880),
-    v = n(492347),
-    I = n(42575),
-    C = n(617015),
-    S = n(981631),
-    T = n(388032),
-    N = n(983703);
-function j(e) {
+    f = n(522558),
+    h = n(795448),
+    g = n(699516),
+    m = n(974042),
+    _ = n(451478),
+    b = n(701861),
+    E = n(437314),
+    O = n(696577),
+    y = n(163417),
+    v = n(830880),
+    I = n(492347),
+    C = n(42575),
+    S = n(617015),
+    T = n(981631),
+    N = n(474936),
+    j = n(388032),
+    P = n(983703);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +51,7 @@ function j(e) {
     }
     return e;
 }
-function P(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,23 +69,23 @@ function P(e, t) {
         e
     );
 }
-let x = [];
-function A() {
-    s.Z.transitionToSection(S.pJs.ADD_FRIEND, { explicit: !0 });
+let Z = [];
+function w() {
+    s.Z.transitionToSection(T.pJs.ADD_FRIEND, { explicit: !0 });
 }
-function Z() {
+function L() {
     (0, a.ZDy)(async () => {
         let { default: e } = await n.e("36312").then(n.bind(n, 153932));
-        return (t) => (0, r.jsx)(e, j({}, t));
+        return (t) => (0, r.jsx)(e, x({}, t));
     });
 }
-function w(e) {
+function R(e) {
     let { section: t, showSpamCta: n } = e,
-        l = i.useMemo(() => (n ? Z : t !== S.pJs.PENDING ? A : void 0), [n, t]);
+        l = i.useMemo(() => (n ? L : t !== T.pJs.PENDING ? w : void 0), [n, t]);
     return (0, r.jsx)("div", {
-        className: N.emptyStateContainer,
+        className: P.emptyStateContainer,
         children: (0, r.jsx)(
-            b.Z,
+            E.Z,
             {
                 type: t,
                 onClick: l,
@@ -92,21 +94,21 @@ function w(e) {
         ),
     });
 }
-let L = function (e) {
+let D = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(u.Z.FRIENDS_LIST),
-        { rows: s, section: A } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
-        L = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        { relationshipCount: R, hasBlockedOrIgnored: D } = (0, l.cj)([h.Z], () => ({
-            relationshipCount: h.Z.getRelationshipCount(),
-            hasBlockedOrIgnored: h.Z.getBlockedOrIgnoredIDs().length > 0,
+        { rows: s, section: w } = (0, l.cj)([m.ZP], () => m.ZP.getState()),
+        D = (0, l.e7)([_.Z], () => _.Z.isFocused()),
+        { relationshipCount: M, hasBlockedOrIgnored: k } = (0, l.cj)([g.Z], () => ({
+            relationshipCount: g.Z.getRelationshipCount(),
+            hasBlockedOrIgnored: g.Z.getBlockedOrIgnoredIDs().length > 0,
         })),
-        [M, k] = i.useState(() => {
+        [U, G] = i.useState(() => {
             let e = {};
-            for (let t of Object.values(S.pJs)) e[t] = "";
+            for (let t of Object.values(T.pJs)) e[t] = "";
             return e;
         }),
-        U = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 let { key: t } = e,
                     n = (function (e, t) {
@@ -132,172 +134,199 @@ let L = function (e) {
                         }
                         return i;
                     })(e, ["key"]);
-                switch (A) {
-                    case S.pJs.PENDING:
-                        return (0, r.jsx)(E.Z, P(j({}, n), { isFocused: L }), t);
-                    case S.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(I.Z, P(j({}, n), { isFocused: L }), t);
-                    case S.pJs.ONLINE:
-                    case S.pJs.ALL:
+                switch (w) {
+                    case T.pJs.PENDING:
+                        return (0, r.jsx)(O.Z, A(x({}, n), { isFocused: D }), t);
+                    case T.pJs.SUGGESTIONS:
+                        return (0, r.jsx)(C.Z, A(x({}, n), { isFocused: D }), t);
+                    case T.pJs.ONLINE:
+                    case T.pJs.ALL:
                     default:
-                        return (0, r.jsx)(_.Z, P(j({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(b.Z, A(x({}, n), { isFocused: D }), t);
                 }
             },
-            [L, A],
+            [D, w],
         ),
-        G = i.useCallback(
+        H = i.useCallback(
             (e) => {
-                k(P(j({}, M), { [A]: e }));
+                G(A(x({}, U), { [w]: e }));
             },
-            [M, A],
+            [U, w],
         ),
-        B = i.useCallback(() => {
-            k(P(j({}, M), { [A]: "" }));
-        }, [M, A]),
-        H = i.useMemo(
+        V = i.useCallback(() => {
+            G(A(x({}, U), { [w]: "" }));
+        }, [U, w]),
+        F = i.useMemo(
             () =>
-                A === S.pJs.PENDING && (s.filter(S.pJs.SPAM).length > 0 || s.filter(S.pJs.PENDING_IGNORED).length > 0),
-            [s, A],
+                w === T.pJs.PENDING && (s.filter(T.pJs.SPAM).length > 0 || s.filter(T.pJs.PENDING_IGNORED).length > 0),
+            [s, w],
         ),
-        V = i.useMemo(() => s.filter(A, M[A]), [s, M, A]),
-        F = A === S.pJs.PENDING,
-        z = i.useMemo(() => {
-            if (!F) return x;
+        z = i.useMemo(() => s.filter(w, U[w]), [s, U, w]),
+        Y = w === T.pJs.PENDING,
+        W = i.useMemo(() => {
+            if (!Y) return Z;
             let e = [];
             return (
-                V.forEach((t) => {
+                z.forEach((t) => {
                     let { applicationId: n } = t;
                     null != n && e.push(n);
                 }),
                 e
             );
-        }, [F, V]);
-    (0, p.Z)(z, F);
-    let Y = i.useMemo(() => {
-            if (A !== S.pJs.PENDING) return [V];
-            {
-                let e = [],
-                    t = [];
-                return (
-                    V.forEach((n) => {
-                        n.type === S.OGo.PENDING_INCOMING ? e.push(n) : n.type === S.OGo.PENDING_OUTGOING && t.push(n);
-                    }),
-                    [e, t]
-                );
-            }
-        }, [V, A]),
-        W = i.useMemo(() => V.filter((e) => e.type === S.OGo.PENDING_INCOMING).length, [V]),
-        q = A === S.pJs.PENDING && W > 0 && W >= C.yf,
-        K = i.useCallback(
-            (e) => {
-                e.stopPropagation(), o.Z.confirmClearPendingRelationships(W);
-            },
-            [W],
-        ),
-        Q = i.useCallback(
-            (e) => {
-                let n = (function (e, t, n) {
-                    switch (e) {
-                        case S.pJs.ONLINE:
-                            return T.intl.formatToPlainString(T.t.BagU2U, { online: t.toString() });
-                        case S.pJs.PENDING:
-                            if (0 === n) return T.intl.formatToPlainString(T.t["g+3FIa"], { count: t.toString() });
-                            if (1 === n) return T.intl.formatToPlainString(T.t.npJsRl, { count: t.toString() });
-                            throw Error("Unexpected pending friend requests section index: ".concat(n));
-                        case S.pJs.SUGGESTIONS:
-                            return T.intl.formatToPlainString(T.t["DYMZ/p"], { count: t.toString() });
-                        default:
-                            return T.intl.formatToPlainString(T.t.rHRrhC, { count: t.toString() });
+        }, [Y, z]);
+    (0, p.Z)(W, Y);
+    let q = i.useMemo(() => {
+            switch (w) {
+                case T.pJs.PENDING:
+                    let e = [],
+                        t = [];
+                    return (
+                        z.forEach((n) => {
+                            n.type === T.OGo.PENDING_INCOMING
+                                ? e.push(n)
+                                : n.type === T.OGo.PENDING_OUTGOING && t.push(n);
+                        }),
+                        [e, t]
+                    );
+                case T.pJs.ONLINE:
+                    if (!((0, f.i)(u.Z.FRIENDS_LIST) && z.some((e) => e.giftIntentType === N.hX.FRIEND_ANNIVERSARY)))
+                        return [z];
+                    {
+                        let e = [],
+                            t = [];
+                        return (
+                            z.forEach((n) => {
+                                n.giftIntentType === N.hX.FRIEND_ANNIVERSARY ? e.push(n) : t.push(n);
+                            }),
+                            [e, t]
+                        );
                     }
-                })(A, Y[e].length, e);
-                return A === S.pJs.PENDING && 0 === e
+                default:
+                    return [z];
+            }
+        }, [z, w]),
+        K = i.useMemo(() => z.filter((e) => e.type === T.OGo.PENDING_INCOMING).length, [z]),
+        Q = w === T.pJs.PENDING && K > 0 && K >= S.yf,
+        J = i.useCallback(
+            (e) => {
+                e.stopPropagation(), o.Z.confirmClearPendingRelationships(K);
+            },
+            [K],
+        ),
+        X = i.useCallback(
+            (e) => {
+                let n = q[e],
+                    i = (function (e, t, n, r) {
+                        switch (e) {
+                            case T.pJs.ONLINE:
+                                if ((0, f.i)(u.Z.FRIENDS_LIST) && r)
+                                    if (0 === n) return j.intl.string(j.t.Thb5MO);
+                                    else if (1 === n);
+                                    else throw Error("Unexpected friends online section index: ".concat(n));
+                                return j.intl.formatToPlainString(j.t.BagU2U, { online: t.toString() });
+                            case T.pJs.PENDING:
+                                if (0 === n) return j.intl.formatToPlainString(j.t["g+3FIa"], { count: t.toString() });
+                                if (1 === n) return j.intl.formatToPlainString(j.t.npJsRl, { count: t.toString() });
+                                throw Error("Unexpected pending friend requests section index: ".concat(n));
+                            case T.pJs.SUGGESTIONS:
+                                return j.intl.formatToPlainString(j.t["DYMZ/p"], { count: t.toString() });
+                            default:
+                                return j.intl.formatToPlainString(j.t.rHRrhC, { count: t.toString() });
+                        }
+                    })(
+                        w,
+                        n.length,
+                        e,
+                        n.some((e) => null !== e.giftIntentType),
+                    );
+                return w === T.pJs.PENDING && 0 === e
                     ? (0, r.jsxs)(
                           "div",
                           {
-                              className: N.sectionTitle,
+                              className: P.sectionTitle,
                               children: [
-                                  (0, r.jsx)(v.Z, {
+                                  (0, r.jsx)(I.Z, {
                                       id: t,
-                                      title: n,
+                                      title: i,
                                   }),
-                                  q &&
+                                  Q &&
                                       (0, r.jsx)("div", {
-                                          className: N.clearButton,
+                                          className: P.clearButton,
                                           children: (0, r.jsx)(a.Avr, {
-                                              text: T.intl.string(T.t.O8k7O4),
-                                              onClick: K,
-                                              "aria-label": T.intl.string(T.t.O8k7O4),
+                                              text: j.intl.string(j.t.O8k7O4),
+                                              onClick: J,
+                                              "aria-label": j.intl.string(j.t.O8k7O4),
                                               textVariant: "text-sm/medium",
                                           }),
                                       }),
                               ],
                           },
-                          n,
+                          i,
                       )
                     : (0, r.jsx)(
                           "div",
                           {
-                              className: N.sectionTitle,
-                              children: (0, r.jsx)(v.Z, {
+                              className: P.sectionTitle,
+                              children: (0, r.jsx)(I.Z, {
                                   id: t,
-                                  title: n,
+                                  title: i,
                               }),
                           },
-                          n,
+                          i,
                       );
             },
-            [Y, A, t, q, K],
+            [q, w, t, Q, J],
         );
     if (
         (i.useEffect(() => {
-            A === S.pJs.ALL && (0, f.d$)();
-        }, [A]),
-        0 === V.length && "" === M[A])
+            w === T.pJs.ALL && (0, h.d$)();
+        }, [w]),
+        0 === z.length && "" === U[w])
     )
-        return (0, r.jsx)(w, {
-            section: A,
-            showSpamCta: H,
+        return (0, r.jsx)(R, {
+            section: w,
+            showSpamCta: F,
         });
-    let J = "" !== M[A],
-        X = 0 === V.length && J;
+    let $ = "" !== U[w],
+        ee = 0 === z.length && $;
     return (0, r.jsx)(d.Gt, {
         value: n,
         children: (0, r.jsxs)(c.Z, {
-            section: S.jXE.FRIENDS_LIST,
+            section: T.jXE.FRIENDS_LIST,
             children: [
-                D && (0, r.jsx)(y.R, {}),
+                k && (0, r.jsx)(v.R, {}),
                 (0, r.jsx)("div", {
-                    className: N.searchBar,
+                    className: P.searchBar,
                     children: (0, r.jsx)(a.E1j, {
-                        query: M[A],
-                        onChange: G,
-                        onClear: B,
+                        query: U[w],
+                        onChange: H,
+                        onClear: V,
                     }),
                 }),
-                (0, r.jsx)(O.Z, {
-                    rows: Y,
-                    renderRow: U,
-                    renderSection: Q,
-                    sectionFilter: A,
-                    isVirtualizedList: R >= C.nG,
-                    hasSearchQuery: J,
+                (0, r.jsx)(y.Z, {
+                    rows: q,
+                    renderRow: B,
+                    renderSection: X,
+                    sectionFilter: w,
+                    isVirtualizedList: M >= S.nG,
+                    hasSearchQuery: $,
                     footer:
-                        H && !X
+                        F && !ee
                             ? (0, r.jsx)("div", {
-                                  className: N.viewSpamButton,
+                                  className: P.viewSpamButton,
                                   children: (0, r.jsx)(a.Avr, {
-                                      text: T.intl.string(T.t.R40bU2),
-                                      onClick: Z,
+                                      text: j.intl.string(j.t.R40bU2),
+                                      onClick: L,
                                       textVariant: "text-xs/medium",
                                       variant: "secondary",
                                   }),
                               })
                             : null,
                 }),
-                X &&
+                ee &&
                     (0, r.jsx)("div", {
-                        className: N.emptyStateContainer,
-                        children: (0, r.jsx)(b.Z, { type: b.j.SECTION_NO_RESULTS }, A),
+                        className: P.emptyStateContainer,
+                        children: (0, r.jsx)(E.Z, { type: E.j.SECTION_NO_RESULTS }, w),
                     }),
             ],
         }),

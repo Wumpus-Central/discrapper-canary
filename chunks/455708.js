@@ -174,6 +174,7 @@ class N extends i.PureComponent {
                   searchTotalResults: l,
                   suggestions: c,
                   onSelectSuggestion: this.handleSelectSuggestion,
+                  selectedGIF: this.props.selectedGIF,
               });
     }
     render() {
@@ -276,6 +277,7 @@ let R = i.forwardRef((e, t) => {
                 searchTotalResults: p.Z.getResultItems().length,
                 searchLimit: null,
                 searchBarRef: g,
+                selectedGIF: e.selectedGIF,
             }),
         )
     );

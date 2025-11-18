@@ -1,5 +1,4 @@
 n.d(t, {
-    Gk: () => s,
     Ni: () => o,
     PV: () => a,
     d$: () => i,
@@ -19,7 +18,4 @@ function o(e) {
         type: "GIFT_INTENT_FLOW_PURCHASED_GIFT",
         recipientUserId: e,
     });
-}
-function s() {
-    r.Z.dispatch({ type: "FRIENDS_TAB_BADGE_DISMISS" });
 }

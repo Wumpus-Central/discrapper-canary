@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => x,
-    Z: () => L,
+    U: () => L,
+    Z: () => x,
 });
 var r = n(54381),
     i = n(473749),
@@ -32,16 +32,16 @@ var r = n(54381),
     P = n(268685),
     D = n(388032),
     w = n(553517),
-    x = (function (e) {
+    L = (function (e) {
         return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
     })({});
-function L(e) {
+function x(e) {
     let {
             giftIntentType: t,
             premiumGiftIntentCardType: n,
             recipientUser: a,
-            onMouseEnter: x,
-            onMouseLeave: L,
+            onMouseEnter: L,
+            onMouseLeave: x,
             popoutPosition: M,
             analyticsPage: k,
             analyticsSection: j,
@@ -64,10 +64,10 @@ function L(e) {
     }, [t, n]);
     let V = () =>
             t === C.hX.FRIEND_ANNIVERSARY
-                ? D.intl.formatToPlainString(D.t.BWJvAK, { friendUserName: v.ZP.getName(a) })
+                ? D.intl.formatToPlainString(D.t.rtRr04, { friendUserName: v.ZP.getName(a) })
                 : (0, I.Ou)(t),
         H = () =>
-            t === C.hX.FRIEND_ANNIVERSARY ? D.intl.formatToPlainString(D.t.S3fdq7, { numberOfYears: F }) : (0, I.Ou)(t),
+            t === C.hX.FRIEND_ANNIVERSARY ? D.intl.formatToPlainString(D.t.PpG27s, { numberOfYears: F }) : (0, I.Ou)(t),
         Y = () => {
             switch (G) {
                 case C.X2.VIEW_ALL:
@@ -78,10 +78,7 @@ function L(e) {
                     return;
             }
         },
-        W = () =>
-            t === C.hX.FRIEND_ANNIVERSARY
-                ? D.intl.formatToPlainString(D.t["L2s/N3"], { numberOfYears: F })
-                : (0, I.Ou)(t),
+        W = () => (t === C.hX.FRIEND_ANNIVERSARY ? D.intl.string(D.t.OrwKgi) : (0, I.Ou)(t)),
         K = (e) => {
             e.stopPropagation();
             let r = (0, A.F)(t);
@@ -135,8 +132,8 @@ function L(e) {
             [w.outerGlow]: U,
             [w.contentCoachmark]: q,
         }),
-        onMouseEnter: x,
-        onMouseLeave: L,
+        onMouseEnter: L,
+        onMouseLeave: x,
         children: (0, r.jsxs)("div", {
             className: o()(X, { [w.innerGlow]: U }),
             children: [

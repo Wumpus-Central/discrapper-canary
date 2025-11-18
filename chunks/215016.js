@@ -82,11 +82,11 @@ function w(e, t, n, i) {
                   i,
               );
 }
-function x(e, t) {
+function L(e, t) {
     var n, r;
     return e > 0 ? "" : null != (r = null == (n = R[t]) ? void 0 : n.id) ? r : "";
 }
-function L(e) {
+function x(e) {
     return e === u.EO.VIDEO;
 }
 function M(e) {
@@ -154,8 +154,8 @@ class U extends i.PureComponent {
             : null;
     }
     render() {
-        let { item: e, renderExtras: t, format: n, coords: i, focused: a } = this.props,
-            { color: o, loaded: s } = this.state;
+        let { item: e, renderExtras: t, format: n, coords: i, focused: a, selected: o } = this.props,
+            { color: s, loaded: l } = this.state;
         return (0, r.jsxs)(f.P3F, {
             tabIndex: -1,
             innerRef: (e) => {
@@ -163,9 +163,10 @@ class U extends i.PureComponent {
             },
             className: I.result,
             "data-focused": a,
+            "data-selected": o,
             onClick: this.handleClick,
-            style: S({ backgroundColor: s ? void 0 : o }, i),
-            children: [L(n) ? null : this.renderGIF(), null != t ? t(e) : null],
+            style: S({ backgroundColor: l ? void 0 : s }, i),
+            children: [x(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
     constructor(e) {
@@ -186,7 +187,7 @@ class U extends i.PureComponent {
             color: null == n ? l().sample(A) : n,
             loaded: !1,
         }),
-            L(t) ||
+            x(t) ||
                 ((this._image = r.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
                 (this._image.src = e.src));
@@ -321,25 +322,27 @@ class G extends i.PureComponent {
             T(this, "renderItem", (e, t, n, i) => {
                 if (e > 0) return null;
                 let { focusedId: a } = this.state,
-                    o = this.props.data[t];
-                return null == o
-                    ? null
-                    : (0, r.jsx)(
-                          U,
-                          {
-                              item: o,
-                              index: t,
-                              format: o.format,
-                              src: o.src,
-                              coords: n,
-                              onClick: this.handleClickItem,
-                              renderExtras: () => (0, r.jsx)(E.Z, S({ className: I.favButton }, o)),
-                              focused: P(o) === a,
-                              imagePool: this.props.imagePool,
-                              videoPool: this.props.videoPool,
-                          },
-                          i,
-                      );
+                    { selectedGIF: o } = this.props,
+                    s = this.props.data[t];
+                if (null == s) return null;
+                let l = null != o && P(o) === P(s);
+                return (0, r.jsx)(
+                    U,
+                    {
+                        item: s,
+                        index: t,
+                        format: s.format,
+                        src: s.src,
+                        coords: n,
+                        onClick: this.handleClickItem,
+                        renderExtras: () => (0, r.jsx)(E.Z, S({ className: I.favButton }, s)),
+                        focused: P(s) === a,
+                        imagePool: this.props.imagePool,
+                        videoPool: this.props.videoPool,
+                        selected: l,
+                    },
+                    i,
+                );
             }),
             T(this, "getItemHeight", (e, t, n) => {
                 if (e > 0) return 0;
@@ -404,7 +407,7 @@ class G extends i.PureComponent {
                               sections: [R.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: x,
+                              getItemKey: L,
                               getItemHeight: D,
                               renderItem: w,
                               chunkSize: 128,

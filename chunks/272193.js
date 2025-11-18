@@ -49,14 +49,14 @@ function m() {
                     children: [
                         (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
-                            children: "Reset badge cooldown",
+                            children: "Reset gift unread notification cooldown",
                         }),
                         (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
                             onClick: () => {
-                                s.Z.dispatch({ type: "DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET" });
+                                s.Z.dispatch({ type: "DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET" });
                             },
                         }),
                     ],
