@@ -102,7 +102,10 @@ let d = function (e) {
                 return;
             }
             D(), b("opening-keyboard");
-        }, [D, E]);
+        }, [D, E]),
+        k = i.useCallback(() => {
+            "opening-keyboard" === E && w(!1);
+        }, [w, E]);
     i.useEffect(() => {
         "opening-mouse" === E &&
             (y.current = window.setTimeout(() => {
@@ -110,8 +113,11 @@ let d = function (e) {
             }, c));
     }, [E, c, d]),
         i.useEffect(() => {
-            "opening-keyboard" === E && (b("open-keyboard"), null == d || d());
-        }, [E, d]),
+            "opening-keyboard" === E &&
+                (y.current = window.setTimeout(() => {
+                    b("open-keyboard"), null == d || d();
+                }, c));
+        }, [E, c, d]),
         i.useEffect(() => {
             if ("closing" === E) {
                 let e = window.setTimeout(() => {
@@ -127,7 +133,7 @@ let d = function (e) {
             };
             return document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0);
         }, [T, w, n]);
-    let k = i.useMemo(
+    let j = i.useMemo(
             () =>
                 null == m
                     ? m
@@ -141,13 +147,14 @@ let d = function (e) {
                       ),
             [m, w],
         ),
-        j = i.useCallback((e) => {
+        U = i.useCallback((e) => {
             R(e);
         }, []);
     return (0, r.jsxs)("div", {
         onMouseEnter: x,
         onMouseLeave: L,
         onFocus: M,
+        onBlur: k,
         children: [
             t,
             (0, r.jsx)(a.RB, {
@@ -159,7 +166,7 @@ let d = function (e) {
                 body: _,
                 graphic: p,
                 size: h,
-                actions: k,
+                actions: j,
                 gradientColor: g,
                 showCloseButton: A,
                 modal: S,
@@ -170,7 +177,7 @@ let d = function (e) {
                     align: "custom",
                     customOffset: N,
                 },
-                onNudgeChange: j,
+                onNudgeChange: U,
                 onRequestClose: (e) => {
                     w(
                         null != e &&
