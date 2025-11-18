@@ -1,5 +1,6 @@
 e.exports = {
     container: "container_c0c49a",
+    containerHovered: "containerHovered_c0c49a",
     iconContainer: "iconContainer_c0c49a",
     giftBoxIcon: "giftBoxIcon_c0c49a",
     trinketsIcon: "trinketsIcon_c0c49a",

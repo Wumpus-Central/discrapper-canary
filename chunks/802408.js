@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(953529);
+n.d(t, { Z: () => d }), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -12,13 +12,29 @@ function d(e) {
         p = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         h = (0, l.ZP)(),
         m = i.useRef(null),
-        g = {
+        g = i.useRef(null),
+        [E, b] = i.useState(0);
+    i.useEffect(() => {
+        let e = () => {
+                let e = m.current,
+                    t = g.current;
+                if (null == e || null == t) return;
+                let n = e.getBoundingClientRect(),
+                    r = t.getBoundingClientRect();
+                b(n.left + n.width / 2 - (r.left + r.width / 2));
+            },
+            t = new ResizeObserver(e),
+            n = m.current,
+            r = g.current;
+        return null != n && t.observe(n), null != r && (t.observe(r), e()), () => t.disconnect();
+    }, []);
+    let y = {
             text: f.cta(),
             onClick: () => {
                 n(), t(), d(u.L.TAKE_ACTION);
             },
         },
-        E = () => {
+        O = () => {
             t(), d(u.L.USER_DISMISS);
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -35,12 +51,14 @@ function d(e) {
                 title: f.title(),
                 body: f.description(),
                 assetUrl: f.getImageUrl((0, s.wj)(h), p),
-                action: g,
+                action: y,
                 caretConfig: {
                     position: "bottom",
-                    align: "center",
+                    align: "custom",
+                    customOffset: E,
                 },
-                onRequestClose: E,
+                onRequestClose: O,
+                popoverRef: g,
             }),
         ],
     });
