@@ -26,7 +26,7 @@ var r = n(54381),
     C = n(556638),
     N = n(981631),
     R = n(388032),
-    P = n(80568);
+    P = n(666998);
 function D(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function w(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,7 +83,7 @@ function M(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != t ? t : R.intl.string(R.t.eXan7B);
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? R.intl.string(R.t["9FaEzi"])
@@ -92,7 +92,7 @@ function k(e, t) {
               : R.intl.string(R.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
-function j(e) {
+function k(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
         { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
@@ -105,7 +105,7 @@ function j(e) {
             let { tooltip: t } = (0, O.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(k(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
@@ -139,11 +139,11 @@ function B(e) {
         animateEmoji: O = !0,
         hasQuest: R = !1,
         hideEmoji: D = !1,
-        hideTooltip: x = !1,
+        hideTooltip: L = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
     let M = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        k = (0, h.Cf)(M),
+        j = (0, h.Cf)(M),
         B = (0, g.E)("ActivityStatus", l),
         Z = i.useMemo(() => {
             var e, t;
@@ -180,7 +180,7 @@ function B(e) {
                                   return (
                                       t !== N.IIU.CUSTOM_STATUS &&
                                       t !== N.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -189,8 +189,8 @@ function B(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == Z ? void 0 : Z.state) != null,
@@ -199,7 +199,7 @@ function B(e) {
         Q = H.length + (q || X ? 1 : 0),
         J = Q > 1,
         $ = ((null == Z ? void 0 : Z.state) != null || null != V) && "xs" === y,
-        ee = j({
+        ee = k({
             streamActivity: Y,
             otherActivities: H,
             voiceActivityChannel: X ? l : null,
@@ -207,7 +207,7 @@ function B(e) {
     if (K) return null;
     let et = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || x;
+                t = !0 === e || L;
             if (null != M)
                 return (0, r.jsx)(I.Z, {
                     stream: M,
@@ -255,7 +255,7 @@ function B(e) {
                     e.push(
                         (0, r.jsx)(
                             I.Z,
-                            L(
+                            x(
                                 w(
                                     {
                                         stream: M,
@@ -271,7 +271,7 @@ function B(e) {
                 H.forEach((n, i) => {
                     e.push((0, r.jsx)(S.Z, w({ activity: n }, t), "activity-".concat(i)));
                 }),
-                X && e.push((0, r.jsx)(A.Z, L(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                X && e.push((0, r.jsx)(A.Z, x(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -286,7 +286,7 @@ function B(e) {
             0 === Q
                 ? null
                 : J && !W
-                  ? x
+                  ? L
                       ? (0, r.jsxs)("div", {
                             className: o()(P.activityContainer, $ && P.iconOnly),
                             children: [et(), er()],
@@ -300,7 +300,7 @@ function B(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    L(w({ className: o()(P.activityContainer, $ && P.iconOnly) }, e), {
+                                    x(w({ className: o()(P.activityContainer, $ && P.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),
@@ -318,7 +318,7 @@ function B(e) {
                       textSize: y,
                       animateEmoji: O,
                       hideEmoji: D,
-                      hideTooltip: x,
+                      hideTooltip: L,
                       textClassName: _,
                       iconClassName: p,
                       tooltipClassName: ea,

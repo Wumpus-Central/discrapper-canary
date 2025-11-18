@@ -26,14 +26,14 @@ var r = n(54381),
     C = n(689079),
     N = n(981631),
     R = n(388032),
-    P = n(57507),
+    P = n(587222),
     D = n(239840);
 let w = 512,
-    x = 7,
-    L = 56,
+    L = 7,
+    x = 56,
     M = 16,
-    k = 32,
-    j = 20,
+    j = 32,
+    k = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
@@ -70,7 +70,7 @@ let w = 512,
                     applicationCommands: !a,
                 },
                 options: {
-                    placeholderCount: x,
+                    placeholderCount: L,
                     limit: C.tn,
                     includeFrecency: !0,
                 },
@@ -87,11 +87,11 @@ let w = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: j,
+                scrollOffset: k,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - w;
+                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - w;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -152,7 +152,7 @@ let w = 512,
                 },
                 onMoveSelection: (e) => {
                     if (0 === J.length) return !0;
-                    let t = Q ? x : 0,
+                    let t = Q ? L : 0,
                         n = J.length + t,
                         r = null == Z ? 0 : Z + e;
                     return r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0;
@@ -277,8 +277,8 @@ let w = 512,
                         renderSectionHeader: ec,
                         rowCount: q.length,
                         rowCountBySection: eo,
-                        rowHeight: L,
-                        sectionHeaderHeight: k,
+                        rowHeight: x,
+                        sectionHeaderHeight: j,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,

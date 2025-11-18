@@ -106,9 +106,9 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async open(e, t, r, i) {
             var a;
             await Promise.all([
+                n.e("61924"),
                 n.e("57804"),
-                n.e("13599"),
-                n.e("70018"),
+                n.e("70363"),
                 n.e("49049"),
                 n.e("36599"),
                 n.e("7654"),
@@ -118,19 +118,19 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("51453"),
                 n.e("845"),
                 n.e("38697"),
-                n.e("86736"),
+                n.e("99063"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("63575"),
                 n.e("62856"),
                 n.e("44686"),
-                n.e("384"),
+                n.e("32923"),
                 n.e("66201"),
                 n.e("93375"),
                 n.e("39206"),
                 n.e("22516"),
                 n.e("18295"),
-                n.e("72615"),
+                n.e("60389"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.GuildFeatures.COMMUNITY)) &&
                     (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)),
@@ -290,8 +290,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     profile: D,
                     moderatorReportingEnabled: w,
                 } = t,
-                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                L = A(
+                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                x = A(
                     T(
                         {
                             name: n,
@@ -327,8 +327,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 i.tn
                     .patch({
                         url: O.ANM.GUILD(e),
-                        query: { for_discovery: x.isForDiscovery },
-                        body: L,
+                        query: { for_discovery: L.isForDiscovery },
+                        body: x,
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     })
@@ -347,7 +347,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                                     errors: e.body,
                                 }),
                                 R.error("Failed to save guild settings", { errors: e.body }),
-                                x.throwErr)
+                                L.throwErr)
                             )
                                 throw e.body;
                         },

@@ -12,8 +12,8 @@ var r = n(54381),
     g = n(720196),
     m = n(981631),
     p = n(388032),
-    f = n(710509),
-    _ = n(197571);
+    f = n(926609),
+    _ = n(10198);
 function x(e) {
     let { setOriginalEmail: t, setSlide: s, ready: x, token: E } = e,
         [v, j] = i.useState(!1),

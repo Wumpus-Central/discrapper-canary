@@ -25,12 +25,12 @@ var r = n(54381),
     A = n(441536),
     C = n(535396),
     N = n(981631),
-    R = n(732031),
-    P = n(18853),
+    R = n(719662),
+    P = n(501669),
     D = n(388032),
-    w = n(765179),
-    x = n(630564),
-    L = n(611087);
+    w = n(722177),
+    L = n(546241),
+    x = n(611087);
 function M(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -100,9 +100,9 @@ function G(e) {
         { analyticsLocations: T } = (0, _.ZP)(),
         S = n !== C.A3.INACTIVE,
         R = (0, I.Z)(t),
-        [L, M] = i.useState(!1),
-        [j, G] = i.useState(!1),
-        B = j,
+        [x, M] = i.useState(!1),
+        [k, G] = i.useState(!1),
+        B = k,
         Z = i.useCallback(() => {
             let e = m.Z.getGuild(t);
             null != e &&
@@ -145,7 +145,7 @@ function G(e) {
         }, []),
         z = (0, l.O)(K);
     return (0, r.jsxs)("div", {
-        className: o()(x.topPerksCard, x.animatedTopPerksCard, w.powerupCard, { [x.animate]: L }),
+        className: o()(L.topPerksCard, L.animatedTopPerksCard, w.powerupCard, { [L.animate]: x }),
         onMouseEnter: () => {
             G(!0), null == v || v(!0);
         },
@@ -154,21 +154,21 @@ function G(e) {
         },
         children: [
             (0, r.jsx)("div", {
-                className: x.intObserver,
+                className: L.intObserver,
                 ref: z,
             }),
             (0, r.jsx)("div", {
-                className: x.topPerksCardImageWrapper,
+                className: L.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(x.topPerksCardImage, w.image),
+                    className: o()(L.topPerksCardImage, w.image),
                     src: E,
                     alt: "",
                     style: H,
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: U(k({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
-                className: o()(x.contentContainer, w.contentContainer),
+                style: U(j({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
+                className: o()(L.contentContainer, w.contentContainer),
                 children: [
                     (0, r.jsx)(h.xm, {
                         heading: a,
@@ -181,10 +181,10 @@ function G(e) {
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: W,
-                        className: x.buttonsContainer,
+                        className: L.buttonsContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: x.button,
+                                className: L.button,
                                 children: (0, r.jsx)(d.Button, {
                                     variant: "primary",
                                     text: D.intl.string(D.t.oPAx73),
@@ -194,7 +194,7 @@ function G(e) {
                             }),
                             R &&
                                 (0, r.jsx)("div", {
-                                    className: x.button,
+                                    className: L.button,
                                     children: (0, r.jsx)(d.Button, {
                                         variant: "secondary",
                                         text: D.intl.string(D.t.GoCQxU),
@@ -208,10 +208,10 @@ function G(e) {
             }),
             y &&
                 (0, r.jsx)(d.IGR, {
-                    className: x.topPerksCardNew,
+                    className: L.topPerksCardNew,
                     text: D.intl.string(D.t.y2b7CA),
                 }),
-            L && (0, r.jsx)("div", { className: x.shineLine }),
+            x && (0, r.jsx)("div", { className: L.shineLine }),
         ],
     });
 }
@@ -283,7 +283,7 @@ let Z = 3,
                                       description: D.intl.string(R.default.EGkJAG),
                                       cost: s,
                                       costDecorator: "+",
-                                      imageUrl: L.Z,
+                                      imageUrl: x.Z,
                                       onClose: a,
                                       isNew: !0,
                                   }),

@@ -1,4 +1,4 @@
-n.d(t, { J: () => C }), n(388685);
+n.d(t, { J: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
     o = n(120356),
@@ -15,13 +15,13 @@ var r = n(54381),
     g = n(778033),
     v = n(967021),
     y = n(709706),
-    j = n(56848),
-    O = n(378441),
+    O = n(56848),
+    j = n(378441),
     h = n(981631),
     x = n(509571),
     _ = n(388032),
-    P = n(478875);
-function w(e) {
+    P = n(71634);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,19 +46,19 @@ function w(e) {
     }
     return e;
 }
-let C = (e) => {
+let w = (e) => {
     let { voiceFilter: t, hasNitro: n, analyticsContext: o } = e,
-        { activeVoice: C, mostRecentlyRequestedVoiceId: E } = (0, O.o)(),
-        I = (0, j.z)(t.id),
-        T = t.id === C,
+        { activeVoice: w, mostRecentlyRequestedVoiceId: E } = (0, j.o)(),
+        I = (0, O.z)(t.id),
+        T = t.id === w,
         S = !t.available && !t.temporarilyAvailable,
         N = t.temporarilyAvailable && !n && !T,
         Z = !T && t.id === E,
-        [D, k] = i.useState(!1);
+        [k, D] = i.useState(!1);
     i.useEffect(() => {
-        let e = Z ? setTimeout(() => k(Z), 200) : void 0;
+        let e = Z ? setTimeout(() => D(Z), 200) : void 0;
         return () => {
-            clearTimeout(e), k(!1);
+            clearTimeout(e), D(!1);
         };
     }, [Z]);
     let M = (0, v.J_)({
@@ -78,16 +78,16 @@ let C = (e) => {
         z = P[t.styleKey],
         B = i.useCallback(() => {
             n || !S
-                ? ((0, b.v6)(C === t.id ? null : t.id, o),
+                ? ((0, b.v6)(w === t.id ? null : t.id, o),
                   N &&
                       m.default.track(
                           h.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED,
-                          w({ voice_filter_id: t.id }, (0, g.w)(o)),
+                          C({ voice_filter_id: t.id }, (0, g.w)(o)),
                       ))
                 : (0, d.i)();
-        }, [n, S, C, t.id, o, N]),
+        }, [n, S, w, t.id, o, N]),
         q = i.useCallback(() => {
-            m.default.track(h.rMx.VOICE_FILTER_PREVIEW_PLAYED, w({ voice_filter_id: t.id }, (0, g.w)(o))),
+            m.default.track(h.rMx.VOICE_FILTER_PREVIEW_PLAYED, C({ voice_filter_id: t.id }, (0, g.w)(o))),
                 U({
                     volume: 0.5,
                     outputChannel: x.w.VOICE,
@@ -178,7 +178,7 @@ let C = (e) => {
                                             }),
                                         }),
                                     }),
-                                D &&
+                                k &&
                                     (0, r.jsx)("div", {
                                         className: P.spinnerWrapper,
                                         children: (0, r.jsx)(u.$jN, {

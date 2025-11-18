@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(981631),
     T = n(474936),
     S = n(388032),
-    A = n(22706);
+    A = n(697485);
 function C(e, t, n) {
     return (
         t in e
@@ -125,12 +125,12 @@ function w(e) {
             analyticsSourceLocation: C,
             priceOptions: R,
         } = e,
-        { analyticsLocations: w, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
-        { theme: L } = (0, u.TCT)(),
-        M = (0, l.ap)(L) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
-        k = null == n || null == n.premiumSubscriptionType,
-        j = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
-        U = (0, v.T4)(j.amount, j.currency),
+        { analyticsLocations: w, sourceAnalyticsLocations: L } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { theme: x } = (0, u.TCT)(),
+        M = (0, l.ap)(x) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
+        j = null == n || null == n.premiumSubscriptionType,
+        k = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
+        U = (0, v.T4)(k.amount, k.currency),
         G = (0, h.N)(),
         B = null == G ? void 0 : G.trial_id,
         Z = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === T.Si.TIER_2;
@@ -138,9 +138,9 @@ function w(e) {
         i.useEffect(() => {
             b.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: x,
+                location_stack: L,
             });
-        }, [x]),
+        }, [L]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(u.hzk, {
@@ -161,7 +161,7 @@ function w(e) {
                                     ? S.intl.string(S.t.AoSzEr)
                                     : S.intl.format(S.t["7vePZb"], { monthlyPrice: U }),
                         }),
-                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: k }),
+                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: j }),
                     ],
                 }),
                 (0, r.jsxs)(u.mzw, {

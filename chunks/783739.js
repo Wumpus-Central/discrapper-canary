@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    T = n(28616);
+    T = n(136588);
 function S(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),
@@ -32,31 +32,31 @@ function S(e) {
         P = N.length > 0 || R.length > 0,
         D = S.length > 0,
         w = i.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
-        x = w.length > 0,
-        L = S.length > w.length,
+        L = w.length > 0,
+        x = S.length > w.length,
         M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: k } = (0, o.Z)({ forceFetch: !0 }),
-        j = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === I.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === I.a$.NONE,
-        G = C && k === I.a$.FP_SUB_PAUSED;
+        { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
+        k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && j === I.a$.NONE,
+        G = C && j === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
             (0, r.jsx)(E.Z, {
                 hasGuildBoostSlots: D,
-                hasAppliedGuildBoosts: x,
+                hasAppliedGuildBoosts: L,
                 hasBoostPerk: G,
                 canAddBoosts: U,
             }),
-            k === I.a$.NONE &&
+            j === I.a$.NONE &&
                 (0, r.jsx)(O.Z, {
-                    hasAppliedGuildBoosts: x,
+                    hasAppliedGuildBoosts: L,
                     hasBoostPerk: G,
                     hasGuildAffinitiesOrInGuild: P,
-                    subscriptionIsPausedOrPausePending: j,
+                    subscriptionIsPausedOrPausePending: k,
                 }),
             !P && (0, r.jsx)(b.Z, {}),
-            (null == t ? void 0 : t.isPaused) && k !== I.a$.FP_SUB_PAUSED
+            (null == t ? void 0 : t.isPaused) && j !== I.a$.FP_SUB_PAUSED
                 ? (0, r.jsx)(g.r, {
                       appliedGuildBoosts: M,
                       premiumSubscription: t,
@@ -67,11 +67,11 @@ function S(e) {
                   }),
             (0, r.jsx)(v.Z, {
                 guildBoostSlots: S,
-                fractionalPremiumState: k,
+                fractionalPremiumState: j,
             }),
             (0, r.jsx)(y.Z, {
-                canAddBoosts: x && U,
-                canApplyBoosts: L,
+                canAddBoosts: L && U,
+                canApplyBoosts: x,
             }),
             (0, r.jsx)(u.Z, {
                 className: T.tierComparisonTable,

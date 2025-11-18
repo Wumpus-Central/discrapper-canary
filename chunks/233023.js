@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(741570),
     f = n(584973),
     _ = n(556638),
-    p = n(80568);
+    p = n(666998);
 let h = 14;
 function m(e) {
     let {
@@ -55,7 +55,7 @@ function m(e) {
               hideTooltip: I || P,
           }));
     let w = P && (null != D ? " ".concat(R) : R),
-        x = () => {
+        L = () => {
             let e = null != N && !v && !P;
             return I || e
                 ? (0, r.jsxs)(r.Fragment, {
@@ -71,6 +71,6 @@ function m(e) {
         variant: "text-".concat(y, "/medium"),
         color: "none",
         className: a()(p.truncated, n),
-        children: x(),
+        children: L(),
     });
 }

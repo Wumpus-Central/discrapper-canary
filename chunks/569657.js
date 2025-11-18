@@ -18,7 +18,7 @@ var r = n(54381),
     j = n(981631),
     _ = n(921944),
     v = n(388032),
-    O = n(739499);
+    O = n(57663);
 function C(e) {
     let { guild: t } = e;
     i.useEffect(() => {

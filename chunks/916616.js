@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(981631),
     h = n(217702),
     m = n(388032),
-    g = n(12464),
+    g = n(609966),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -106,11 +106,11 @@ let A = i.forwardRef((e, t) => {
             minWidth: P = 0,
             minHeight: D = 0,
             mediaLayoutType: w,
-            limitResponsiveWidth: x = !0,
-            accessory: L,
+            limitResponsiveWidth: L = !0,
+            accessory: x,
             zoomable: M = !0,
-            original: k,
-            children: j = (e) => {
+            original: j,
+            children: k = (e) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)("img", {
                     className: null != a ? a : void 0,
@@ -166,7 +166,7 @@ let A = i.forwardRef((e, t) => {
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== p.zo9.ERROR
-        ? (n = j({
+        ? (n = k({
               src: f,
               size: K,
               alt: b,
@@ -189,7 +189,7 @@ let A = i.forwardRef((e, t) => {
         }));
     let q = null != U ? U() : null;
     return (
-        (q = null != q ? q : L),
+        (q = null != q ? q : x),
         (0, r.jsx)(l.tEY, {
             ringTarget: Y,
             focusTarget: W,
@@ -209,19 +209,19 @@ let A = i.forwardRef((e, t) => {
                                 },
                                 a,
                             ),
-                            style: N(K, x, F, w),
+                            style: N(K, L, F, w),
                         },
                         H,
                     ),
                     {
                         children: [
-                            null != k &&
+                            null != j &&
                                 (0, r.jsx)("a", {
                                     tabIndex: -1,
                                     onClick: G,
                                     "aria-hidden": !0,
                                     className: g.originalLink,
-                                    href: k,
+                                    href: j,
                                     ref: Y,
                                     "data-role": "img",
                                     "data-safe-src": null != Z ? Z : f,

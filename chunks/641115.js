@@ -9,24 +9,24 @@ var l = t(54381),
     u = t(681715),
     d = t(755721),
     m = t(481060),
-    x = t(410575),
-    g = t(2052),
+    g = t(410575),
+    x = t(2052),
     h = t(924557),
     j = t(600164),
     v = t(436774),
     p = t(140465),
     f = t(592125),
     Z = t(944486),
-    S = t(594174),
-    N = t(74538),
+    N = t(594174),
+    S = t(74538),
     b = t(451467),
     C = t(122186),
     P = t(37113),
     T = t(981631),
     y = t(388032),
-    O = t(542257),
-    E = t(381994),
-    I = t(197571);
+    O = t(79985),
+    E = t(763021),
+    I = t(10198);
 function k(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -87,8 +87,8 @@ function D(e) {
             needsDemo: c,
             analyticsLocation: o,
             onClick: d,
-            onClose: x,
-            setIsHovering: g,
+            onClose: g,
+            setIsHovering: x,
         } = e,
         { value: h, label: j } = r;
     return (
@@ -103,8 +103,8 @@ function D(e) {
                   }),
                   children: (0, l.jsx)("div", {
                       className: E.textContainer,
-                      onMouseEnter: () => g(!0),
-                      onMouseLeave: () => g(!1),
+                      onMouseEnter: () => x(!0),
+                      onMouseLeave: () => x(!1),
                       children: (0, l.jsx)(m.Text, {
                           variant: "text-xs/bold",
                           className: s()(E.selectorNitroText, E.enhancedSelectorNitroText),
@@ -115,7 +115,7 @@ function D(e) {
               (t = () =>
                   R({
                       analyticsLocation: o,
-                      onClose: x,
+                      onClose: g,
                   })))
             : ((n = (0, l.jsx)("div", {
                   className: E.textContainer,
@@ -149,13 +149,13 @@ function U(e) {
             targetGuildPremiumTier: U,
             captureDeviceSelected: _,
         } = e,
-        w = (0, o.e7)([S.default], () => {
-            let e = S.default.getCurrentUser();
+        w = (0, o.e7)([N.default], () => {
+            let e = N.default.getCurrentUser();
             return c()(null != e, "StreamSettings: user cannot be undefined"), e;
         }),
         M = (0, o.e7)([Z.Z, f.Z], () => f.Z.getChannel(Z.Z.getVoiceChannelId())),
-        L = N.ZP.canStreamQuality(N.U2.MID, w),
-        { location: B } = (0, g.O)(),
+        L = S.ZP.canStreamQuality(S.U2.MID, w),
+        { location: B } = (0, x.O)(),
         G = (0, h.Zq)({ autoTrackExposure: !1 }),
         z = (0, p.B4)(),
         F = !L && !G,
@@ -256,7 +256,7 @@ function U(e) {
                       ],
                   });
     return (0, l.jsx)(
-        x.Z,
+        g.Z,
         A(k({}, X), {
             children: (0, l.jsx)("div", {
                 className: O.modalContent,

@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(682947),
     I = n(981631),
     T = n(388032),
-    S = n(73704);
+    S = n(767991);
 function A(e, t, n) {
     return (
         t in e
@@ -146,7 +146,7 @@ let w = {
     },
     [y.Q.NONE]: {},
 };
-function x(e) {
+function L(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
         className: S.tooltipPremiumFooterContainer,
@@ -177,7 +177,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let { badgeType: t, guildTraits: n } = e,
         { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, v.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
@@ -206,7 +206,7 @@ function L(e) {
                         : null,
                 ],
             }),
-            n.premium ? (0, r.jsx)(x, { guildTraits: n }) : null,
+            n.premium ? (0, r.jsx)(L, { guildTraits: n }) : null,
         ],
     });
 }
@@ -241,14 +241,14 @@ function M(e) {
             ]).size)
                 ? a
                 : 18,
-        x = (0, s.e7)([m.default, h.ZP], () => {
+        L = (0, s.e7)([m.default, h.ZP], () => {
             let e = m.default.getCurrentUser();
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
         M = (0, s.e7)([p.Z], () => p.Z.theme),
-        k = (0, O.XX)(o),
-        j = (0, y.i)(k),
-        U = i.useMemo(() => k.premium && x && !A, [A, k.premium, x]),
+        j = (0, O.XX)(o),
+        k = (0, y.i)(j),
+        U = i.useMemo(() => j.premium && L && !A, [A, j.premium, L]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -264,7 +264,7 @@ function M(e) {
             },
             [U, o.id],
         );
-    if (j === y.Q.NONE) return null;
+    if (k === y.Q.NONE) return null;
     let {
         IconComponent: B,
         backgroundDarkColor: Z,
@@ -274,9 +274,9 @@ function M(e) {
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = w[j];
+    } = w[k];
     if (null == B) return null;
-    k.premium && ((t = W), (n = Y));
+    j.premium && ((t = W), (n = Y));
     let z = (0, c.wj)(M) ? V : H,
         q = (0, c.wj)(M) ? Z : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
@@ -285,9 +285,9 @@ function M(e) {
         color: l,
         position: d,
         "aria-label": N,
-        text: (0, r.jsx)(L, {
-            badgeType: j,
-            guildTraits: k,
+        text: (0, r.jsx)(x, {
+            badgeType: k,
+            guildTraits: j,
         }),
         tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>

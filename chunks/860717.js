@@ -27,7 +27,7 @@ var r = n(54381),
     E = n(750312),
     T = n(919498),
     C = n(388032),
-    D = n(18827);
+    D = n(895652);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -219,9 +219,9 @@ function L(e) {
                 })(t, ["body"]);
             return (0, r.jsx)(B, N(k({}, i), { body: G(n) }));
         case "GRID":
-            return (0, r.jsx)(U, { children: G(t.children) });
+            return (0, r.jsx)(F, { children: G(t.children) });
         case "FIELD":
-            return (0, r.jsx)(F, {
+            return (0, r.jsx)(U, {
                 value: M(t.value),
                 name: M(t.name),
             });
@@ -285,14 +285,14 @@ function B(e) {
         ],
     });
 }
-function U(e) {
+function F(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: D.grid,
         children: t,
     });
 }
-function F(e) {
+function U(e) {
     let { name: t, value: n } = e;
     return (0, r.jsxs)("div", {
         children: [n, t],
@@ -523,8 +523,8 @@ let $ = Object.assign(
                               children: G,
                           }),
                       }),
-            U = (0, o.e7)([_.default], () => _.default.locale),
-            F = i.useMemo(() => {
+            F = (0, o.e7)([_.default], () => _.default.locale),
+            U = i.useMemo(() => {
                 let e = (function (e, t, n) {
                     var r, i, a;
                     let l = new Intl.NumberFormat(n, {
@@ -582,7 +582,7 @@ let $ = Object.assign(
                               config: t,
                               numberFormat: l,
                           };
-                })(null != j ? j : null, null != h ? h : null, U);
+                })(null != j ? j : null, null != h ? h : null, F);
                 return Z.map(function t(n) {
                     switch (n.type) {
                         case "HERO":
@@ -622,7 +622,7 @@ let $ = Object.assign(
                             return n;
                     }
                 });
-            }, [h, j, U]);
+            }, [h, j, F]);
         return (0, r.jsxs)(
             E.Z,
             N(k({}, e), {
@@ -644,7 +644,7 @@ let $ = Object.assign(
                         value: e,
                         children: (0, r.jsx)(Q, {
                             widget: n,
-                            children: (0, r.jsx)(L, { component: F }),
+                            children: (0, r.jsx)(L, { component: U }),
                         }),
                     }),
                     f &&

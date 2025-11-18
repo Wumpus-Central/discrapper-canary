@@ -29,19 +29,19 @@ var r = n(54381),
     P = n(626135),
     D = n(63063),
     w = n(695346),
-    x = n(313789),
-    L = n(263937),
+    L = n(313789),
+    x = n(263937),
     M = n(996073),
-    k = n(273313),
-    j = n(518596),
+    j = n(273313),
+    k = n(518596),
     U = n(526761),
     G = n(726985),
     B = n(981631),
     Z = n(611480),
     F = n(653477),
     V = n(388032),
-    H = n(88406),
-    Y = n(953752),
+    H = n(308274),
+    Y = n(133991),
     W = n(328756);
 function K(e, t, n) {
     return (
@@ -109,7 +109,7 @@ function en(e) {
     let t = (0, m.A)("UserSettingsAccessibility"),
         n = (0, y.i)({ location: "UserSettingsAccessibility" }),
         i = (0, E.A)("UserSettingsAccessibility");
-    return (0, r.jsx)(k.Z, {
+    return (0, r.jsx)(j.Z, {
         title: V.intl.string(V.t.G0neg7),
         children: (0, r.jsxs)(c.Kqy, {
             gap: 16,
@@ -175,7 +175,7 @@ function en(e) {
                         variant: "text-md/normal",
                         children: V.intl.format(V.t.DHpTjT, {
                             onAppearanceClick() {
-                                (0, j.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, k.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -394,7 +394,7 @@ function ed() {
                         label: V.intl.string(V.t["sSY+mD"]),
                         description: V.intl.format(V.t.u6UjrL, {
                             onThemeClick() {
-                                (0, j.openUserSettings)(x.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, k.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
                         }),
                         checked: e,
@@ -447,12 +447,12 @@ function e_() {
             systemPrefersReducedMotion: o,
             gifAutoPlayOverrideReason: l,
             animateEmojiOverrideReason: u,
-        } = (0, s.cj)([f.Z, L.Z], () => ({
+        } = (0, s.cj)([f.Z, x.Z], () => ({
             systemPrefersReducedMotion: f.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: f.Z.rawPrefersReducedMotion,
             useReducedMotion: f.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: L.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
-            animateEmojiOverrideReason: L.Z.getAppliedOverrideReasonKey("animateEmoji"),
+            gifAutoPlayOverrideReason: x.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
+            animateEmojiOverrideReason: x.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
         _ = "auto" === a,
         p = i.useRef(null);
@@ -511,7 +511,7 @@ function e_() {
 }
 function ep() {
     let e = w.Wp.useSetting(),
-        t = (0, s.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
+        t = (0, s.e7)([x.Z], () => x.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
             w.Wp.updateSetting(e);
         }, []);

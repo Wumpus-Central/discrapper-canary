@@ -6,15 +6,15 @@ var l = t(54381),
     a = t(481060),
     c = t(493773),
     o = t(958707),
-    u = t(542257),
-    d = t(308300);
+    u = t(79985),
+    d = t(378671);
 function m(e) {
     let { title: n, scrollerClassName: t, scrollerInnerClassName: i, children: m } = e,
-        x = r.useRef(null),
-        [g, h] = r.useState(!1),
+        g = r.useRef(null),
+        [x, h] = r.useState(!1),
         [j, v] = r.useState(!1),
         p = r.useCallback(() => {
-            let { current: e } = x;
+            let { current: e } = g;
             null != e && (h(!e.isScrolledToTop()), v(!e.isScrolledToBottom()));
         }, []);
     return (
@@ -29,13 +29,13 @@ function m(e) {
                             className: u.formItemTitle,
                             children: n,
                         }),
-                        (0, l.jsx)(o.Z, { separator: g }),
+                        (0, l.jsx)(o.Z, { separator: x }),
                     ],
                 }),
                 (0, l.jsx)("div", {
                     className: t,
                     children: (0, l.jsx)(a.Den, {
-                        ref: x,
+                        ref: g,
                         className: s()(d.scrollerInner, i, { [d.bottomSeparator]: j }),
                         onScroll: p,
                         children: m,

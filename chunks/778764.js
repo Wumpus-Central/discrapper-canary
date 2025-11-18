@@ -27,7 +27,7 @@ var r = n(54381),
     v = n(755733),
     I = n(981631),
     T = n(388032),
-    S = n(421156);
+    S = n(830445);
 function A(e, t, n) {
     return (
         t in e
@@ -93,9 +93,9 @@ function P(e) {
         [A, C] = i.useState(T.intl.string(T.t["I/sJtJ"])),
         [N, R] = i.useState(!1),
         [P, D] = i.useState(m),
-        [w, x] = i.useState(""),
-        [L, M] = i.useState(null),
-        k = async () => {
+        [w, L] = i.useState(""),
+        [x, M] = i.useState(null),
+        j = async () => {
             let e;
             D(v.x.REGISTER);
             let t =
@@ -108,7 +108,7 @@ function P(e) {
                 E.Z.captureException(e), M(T.intl.string(T.t.xSCvBf)), D(v.x.INIT);
                 return;
             }
-            x(e), D(v.x.NAME);
+            L(e), D(v.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -154,11 +154,11 @@ function P(e) {
                                     }),
                                     (0, r.jsx)("div", {
                                         children:
-                                            null != L &&
+                                            null != x &&
                                             (0, r.jsx)(l.Text, {
                                                 variant: "text-md/normal",
                                                 color: "status-danger",
-                                                children: L,
+                                                children: x,
                                             }),
                                     }),
                                     (0, r.jsx)("div", {
@@ -173,7 +173,7 @@ function P(e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: T.intl.string(T.t.oibaQa),
-                                    onClick: k,
+                                    onClick: j,
                                 }),
                             }),
                         ],
@@ -340,7 +340,7 @@ function D(e) {
                 label: T.intl.string(T.t.bt75uw),
                 action: () => {
                     (0, l.ZDy)(async () => {
-                        let { default: e } = await n.e("58760").then(n.bind(n, 89616));
+                        let { default: e } = await n.e("804").then(n.bind(n, 89616));
                         return (t) => (0, r.jsx)(e, C({ credential: i }, t));
                     });
                 },
@@ -410,7 +410,7 @@ function w() {
                 e.length > 0 &&
                     (0, r.jsx)("div", {
                         className: S.credentialList,
-                        children: e.map(L),
+                        children: e.map(x),
                     }),
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(l.Button, {
@@ -426,14 +426,14 @@ function w() {
         })
     );
 }
-function x(e) {
+function L(e) {
     if (null !== e.last_used)
         return (0, r.jsx)(l.Text, {
             variant: "text-sm/normal",
             children: T.intl.format(T.t["7JgxF5"], { lastUsed: (0, u.p)(e.last_used) }),
         });
 }
-function L(e) {
+function x(e) {
     return (0, r.jsxs)(
         "div",
         {
@@ -443,7 +443,7 @@ function L(e) {
                     variant: "text-md/semibold",
                     children: e.name,
                 }),
-                x(e),
+                L(e),
                 (0, r.jsx)(s.zx, {
                     look: s.zx.Looks.BLANK,
                     color: s.zx.Colors.TRANSPARENT,

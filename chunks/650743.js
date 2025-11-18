@@ -18,7 +18,7 @@ var i = n(399606),
     E = n(763296),
     b = n(981631),
     y = n(388032),
-    O = n(638527);
+    O = n(45517);
 function v(e, t, n) {
     return (
         t in e
@@ -90,7 +90,7 @@ function T(e) {
         },
         D = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
         w = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        x =
+        L =
             null != R && (0, m.isWindows)() && !D
                 ? y.intl.format(y.t.udMTth, {
                       keybind: (0, g.BB)(R.shortcut, !0),
@@ -105,7 +105,7 @@ function T(e) {
                           ),
                   })
                 : null;
-    return null == x
+    return null == L
         ? null
         : (0, r.jsxs)("div", {
               className: O.keybindHint,
@@ -121,7 +121,7 @@ function T(e) {
                       variant: "text-sm/medium",
                       color: "text-default",
                       className: O.keybindHintText,
-                      children: x,
+                      children: L,
                   }),
                   (0, r.jsx)(o.P3F, {
                       className: O.closeButton,

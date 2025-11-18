@@ -4,7 +4,7 @@ r(473749);
 var o = r(793030),
     i = r(481060),
     c = r(388032),
-    l = r(76349),
+    l = r(614905),
     s = r(768982);
 let a = (t) => {
     let { text: e, icon: r, foreground: o } = t;

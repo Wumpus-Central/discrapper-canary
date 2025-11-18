@@ -1,8 +1,8 @@
 n.d(t, {
     W2: () => P,
     ZP: () => M,
-    rT: () => x,
-    xI: () => L,
+    rT: () => L,
+    xI: () => x,
 }),
     n(388685);
 var r = n(54381),
@@ -27,7 +27,7 @@ var r = n(54381),
     v = n(981631),
     I = n(65154),
     T = n(388032),
-    S = n(197571);
+    S = n(10198);
 function A(e, t, n) {
     return (
         t in e
@@ -152,7 +152,7 @@ function w(e) {
         ),
     );
 }
-function x(e) {
+function L(e) {
     (0, s.h7j)((t) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -177,7 +177,7 @@ function x(e) {
         ),
     );
 }
-async function L(e) {
+async function x(e) {
     let { onUploadStart: t, onUploadFinish: n } = e;
     null == t || t();
     try {
@@ -202,7 +202,7 @@ function M() {
         d = (0, a.e7)([m.default], () => m.default.isStreamInfoOverlayEnabled),
         _ = (0, a.e7)([E.ZP], () => E.ZP.shouldRecordNextConnection()),
         p = i.useCallback(async () => {
-            await L({ onUploadStart: () => t(!0) });
+            await x({ onUploadStart: () => t(!0) });
         }, []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -258,7 +258,7 @@ function M() {
                             label: T.intl.string(T.t["726JHL"]),
                             description: T.intl.string(T.t["/7ak9Q"]),
                             checked: n,
-                            onChange: x,
+                            onChange: L,
                         }),
                         (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",

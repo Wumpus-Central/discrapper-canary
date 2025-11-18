@@ -10,9 +10,9 @@ var r = n(54381),
     d = n(973772),
     p = n(279604),
     f = n(535396),
-    h = n(18853),
+    h = n(501669),
     g = n(388032),
-    m = n(362320);
+    m = n(123879);
 function b(e) {
     var t, n;
     let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: x } = e,

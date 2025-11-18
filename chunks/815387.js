@@ -29,11 +29,11 @@ var r = n(54381),
     P = n(471253),
     D = n(565799),
     w = n(590415),
-    x = n(911560),
-    L = n(488131),
+    L = n(911560),
+    x = n(488131),
     M = n(814820),
-    k = n(314897),
-    j = n(523746),
+    j = n(314897),
+    k = n(523746),
     U = n(592125),
     G = n(430824),
     B = n(496675),
@@ -110,7 +110,7 @@ function ew(e) {
     }
     return e;
 }
-function ex(e, t) {
+function eL(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -122,12 +122,12 @@ function ex(e, t) {
     }
     return n;
 }
-function eL(e, t) {
+function ex(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ex(Object(t)).forEach(function (n) {
+            : eL(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -136,12 +136,12 @@ function eL(e, t) {
 function eM(e) {
     K.Z.captureException(e), new p.Z("SystemMessage").error("", e);
 }
-function ek(e) {
+function ej(e) {
     let { message: t, compact: n, channel: o } = e,
         { id: s, author: l } = t,
-        u = k.default.getId(),
+        u = j.default.getId(),
         d = t.getChannelId(),
-        f = (0, a.e7)([j.Z], () => j.Z.isCallActive(d, s), [d, s]),
+        f = (0, a.e7)([k.Z], () => k.Z.isCallActive(d, s), [d, s]),
         _ = (0, a.e7)([H.Z], () => H.Z.getVoiceState(eN.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
@@ -162,7 +162,7 @@ function ek(e) {
         onClickJoinCall: m,
     });
 }
-function ej(e) {
+function ek(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -267,16 +267,16 @@ function eZ(e) {
                 var n;
                 let r = null == (n = t.messageReference) ? void 0 : n.channel_id;
                 if (null != r) {
-                    await x.Z.loadThread(r);
+                    await L.Z.loadThread(r);
                     let t = U.Z.getChannel(r);
-                    null != t && (0, L.ok)(t, e.shiftKey);
+                    null != t && (0, x.ok)(t, e.shiftKey);
                 }
             },
             [t],
         ),
         d = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
+                let { default: e } = await Promise.all([n.e("91315"), n.e("91792")]).then(n.bind(n, 223901));
                 return (t) => (0, r.jsx)(e, ew({ channel: a }, t));
             });
         }, [a]),
@@ -286,10 +286,10 @@ function eZ(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("43233")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("68869")]).then(
                             n.bind(n, 422200),
                         );
-                        return (t) => (0, r.jsx)(e, eL(ew({}, t), { channel: a }));
+                        return (t) => (0, r.jsx)(e, ex(ew({}, t), { channel: a }));
                     });
             },
             [t],
@@ -732,8 +732,8 @@ let ti = Object.freeze({
     [eN.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eN.uaV.RECIPIENT_ADD]: eB,
     [eN.uaV.RECIPIENT_REMOVE]: eF,
-    [eN.uaV.CALL]: ek,
-    [eN.uaV.CHANNEL_NAME_CHANGE]: ej,
+    [eN.uaV.CALL]: ej,
+    [eN.uaV.CHANNEL_NAME_CHANGE]: ek,
     [eN.uaV.CHANNEL_ICON_CHANGE]: eU,
     [eN.uaV.CHANNEL_PINNED_MESSAGE]: eG,
     [eN.uaV.USER_JOIN]: eV,

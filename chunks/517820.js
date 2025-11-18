@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(83561),
     D = n(834129),
     w = n(981631),
-    x = n(674563),
-    L = n(388032),
-    M = n(682392);
-function k(e, t, n) {
+    L = n(674563),
+    x = n(388032),
+    M = n(78642);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -126,14 +126,14 @@ function F(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "header-secondary",
-                    children: L.intl.string(L.t.VdZCcC),
+                    children: x.intl.string(x.t.VdZCcC),
                 }),
             ],
         }),
         content: (0, r.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(L.t["NxHYX/"]),
+            children: x.intl.string(x.t["NxHYX/"]),
         }),
     });
 }
@@ -150,14 +150,14 @@ function V(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "header-secondary",
-                    children: L.intl.string(L.t["2qTBw/"]),
+                    children: x.intl.string(x.t["2qTBw/"]),
                 }),
             ],
         }),
         content: (0, r.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(L.t.Dc9wCp),
+            children: x.intl.string(x.t.Dc9wCp),
         }),
     });
 }
@@ -188,7 +188,7 @@ function H(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "text-feedback-positive",
-                    children: L.intl.string(L.t.lVLiFp),
+                    children: x.intl.string(x.t.lVLiFp),
                 }),
             ],
         }),
@@ -205,7 +205,7 @@ function H(e) {
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-default",
-                                    children: L.intl.string(L.t.qlFrXW),
+                                    children: x.intl.string(x.t.qlFrXW),
                                 }),
                                 (0, r.jsx)(T.Z, {
                                     targetElementRef: h,
@@ -217,7 +217,7 @@ function H(e) {
                                         (0, r.jsxs)(
                                             p.P3F,
                                             G(
-                                                j(
+                                                k(
                                                     {
                                                         innerRef: h,
                                                         className: M.alertsEnabledSubHeaderAvatarUsername,
@@ -228,7 +228,7 @@ function H(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             "div",
-                                                            G(j({}, f), {
+                                                            G(k({}, f), {
                                                                 children: (0, r.jsx)(p.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,
@@ -266,7 +266,7 @@ function H(e) {
         content: (0, r.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(L.t["QV/8u5"]),
+            children: x.intl.string(x.t["QV/8u5"]),
         }),
     });
 }
@@ -298,7 +298,7 @@ function Y(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "text-danger",
-                    children: N ? L.intl.string(L.t["8+lHUb"]) : L.intl.string(L.t.xMwcwV),
+                    children: N ? x.intl.string(x.t["8+lHUb"]) : x.intl.string(x.t.xMwcwV),
                 }),
             ],
         }),
@@ -309,13 +309,13 @@ function Y(e) {
                     (0, r.jsx)(p.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: L.intl.format(L.t["4ylIiu"], { joinCount: o }),
+                        children: x.intl.format(x.t["4ylIiu"], { joinCount: o }),
                     }),
                 null != u &&
                     (0, r.jsx)(p.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: L.intl.format(L.t["5C8Mh3"], { dmsSent: u }),
+                        children: x.intl.format(x.t["5C8Mh3"], { dmsSent: u }),
                     }),
                 null != s &&
                     (0, r.jsxs)(i.Fragment, {
@@ -335,8 +335,8 @@ function Y(e) {
                 ? (0, r.jsx)(p.Text, {
                       variant: "text-md/normal",
                       color: "text-muted",
-                      children: L.intl.format(L.t["4QIIZl"], {
-                          dateTime: s.toLocaleString(L.intl.currentLocale, g.pQ),
+                      children: x.intl.format(x.t["4QIIZl"], {
+                          dateTime: s.toLocaleString(x.intl.currentLocale, g.pQ),
                       }),
                   })
                 : null,
@@ -356,7 +356,7 @@ function Y(e) {
                                   variant: "primary",
                                   size: "sm",
                                   textVariant: "text-xs/medium",
-                                  text: L.intl.string(L.t.DEoVWZ),
+                                  text: x.intl.string(x.t.DEoVWZ),
                                   onClick: A,
                               }),
                           ],
@@ -403,7 +403,7 @@ function W(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "text-danger",
-                    children: L.intl.string(L.t.C2uIXE),
+                    children: x.intl.string(x.t.C2uIXE),
                 }),
             ],
         }),
@@ -420,7 +420,7 @@ function W(e) {
         content: (0, r.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(L.t.SWIWEV),
+            children: x.intl.string(x.t.SWIWEV),
         }),
         footerButtons: (0, r.jsxs)("div", {
             className: M.footerRow,
@@ -431,7 +431,7 @@ function W(e) {
                         variant: "primary",
                         textVariant: "text-xs/medium",
                         size: "sm",
-                        text: L.intl.string(L.t.oX14El),
+                        text: x.intl.string(x.t.oX14El),
                         onClick: d,
                     }),
                 }),
@@ -442,7 +442,7 @@ function W(e) {
                         variant: "primary",
                         textVariant: "text-xs/medium",
                         size: "sm",
-                        text: L.intl.string(L.t["1R7QIx"]),
+                        text: x.intl.string(x.t["1R7QIx"]),
                         onClick: f,
                     }),
                 }),
@@ -514,10 +514,10 @@ function z(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: M.username,
-                                    children: L.intl.string(L.t.hG1StD),
+                                    children: x.intl.string(x.t.hG1StD),
                                 }),
                                 (0, r.jsx)(h.Z, {
-                                    type: x.Hb.SYSTEM_DM,
+                                    type: L.Hb.SYSTEM_DM,
                                     className: M.systemTag,
                                 }),
                                 f &&
@@ -526,7 +526,7 @@ function z(e) {
                                         color: "header-primary",
                                         tag: "span",
                                         className: M.spanCorrection,
-                                        children: L.intl.string(L.t.ufawcw),
+                                        children: x.intl.string(x.t.ufawcw),
                                     }),
                             ],
                         }),

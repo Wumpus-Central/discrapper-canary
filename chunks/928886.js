@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(981631),
     b = n(474936),
     y = n(231338),
-    O = n(315);
+    O = n(864976);
 function v(e, t) {
     return e in t;
 }
@@ -34,10 +34,10 @@ function I(e) {
             enablePremiumBrandRefresh: P,
             isDisplayingWowMomentConfirmation: D,
         } = (0, m.JL)(),
-        { isGift: w, selectedGiftStyle: x, giftRecipient: L } = (0, h.wD)(),
+        { isGift: w, selectedGiftStyle: L, giftRecipient: x } = (0, h.wD)(),
         M = (null == R ? void 0 : R.productLine) === E.POd.COLLECTIBLES,
-        k = (null == R ? void 0 : R.productLine) === E.POd.SOCIAL_LAYER_GAME_ITEM,
-        j = w && (0, p.pO)(L) && S === g.h8.CONFIRM && null != x && !M && !k,
+        j = (null == R ? void 0 : R.productLine) === E.POd.SOCIAL_LAYER_GAME_ITEM,
+        k = w && (0, p.pO)(x) && S === g.h8.CONFIRM && null != L && !M && !j,
         U = null != n && null != S,
         G = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
         B = null != S && !G.includes(S) && null != T,
@@ -50,13 +50,13 @@ function I(e) {
         if (null == S) return;
         let e = null;
         return (
-            j
+            k
                 ? (e = (0, r.jsxs)("div", {
                       className: O.container,
                       children: [
                           (0, r.jsx)(d.Z, {
                               defaultAnimationState: l.SR.LOOP,
-                              giftStyle: x,
+                              giftStyle: L,
                               className: O.seasonalGiftBoxHeaderIcon,
                           }),
                           (0, r.jsx)(s.olH, {
@@ -83,12 +83,12 @@ function I(e) {
                           showTrialBadge: F,
                           showDiscountBadge: Y,
                           isGift: w,
-                          giftRecipient: L,
+                          giftRecipient: x,
                           isEligibleForTrial: F,
                           enablePremiumBrandRefresh: P,
                           isDisplayingWowMomentConfirmation: D,
                       }))),
             e
         );
-    }, [x, I, C, n, A, T, S, F, Y, j, B, U, N, w, L, P, D]);
+    }, [L, I, C, n, A, T, S, F, Y, k, B, U, N, w, x, P, D]);
 }

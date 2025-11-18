@@ -2,7 +2,7 @@ n.d(t, {
     AG: () => R,
     Z$: () => w,
     jH: () => P,
-    zH: () => x,
+    zH: () => L,
 }),
     n(388685);
 var r = n(54381),
@@ -19,7 +19,7 @@ var r = n(54381),
     p = n(44315),
     h = n(981631),
     m = n(388032),
-    g = n(701224);
+    g = n(68701);
 function E(e, t, n) {
     return (
         t in e
@@ -251,7 +251,7 @@ function D(e) {
         });
     }, [A, D]),
         i.useEffect(() => s, [s]);
-    let x = (e) => {
+    let L = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
             if (!(0, c.FX)(t)) return void w((e) => O(b({}, e), { input: t }));
             let n = (0, c._i)(t),
@@ -266,11 +266,11 @@ function D(e) {
             }),
                 a(n);
         },
-        L = async () => {
+        x = async () => {
             if (null != I)
                 try {
                     let { sRGBHex: e } = await I.open();
-                    x(e);
+                    L(e);
                 } catch (e) {}
         },
         M = i.useCallback(
@@ -285,10 +285,10 @@ function D(e) {
             },
             [n, a],
         ),
-        k = (e) => {
+        j = (e) => {
             a((0, c._i)(e));
         },
-        j = (0, r.jsxs)(r.Fragment, {
+        k = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -296,7 +296,7 @@ function D(e) {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return k(t);
+                            return j(t);
                         },
                         color: D.pending.hsl,
                     }),
@@ -304,14 +304,14 @@ function D(e) {
                 p,
                 (0, r.jsx)(f.oil, {
                     value: D.input.slice(1),
-                    onChange: x,
+                    onChange: L,
                     maxLength: S - 1,
                     leading: "#",
                     trailing:
                         E && null != I
                             ? {
                                   icon: f.ilE,
-                                  onClick: L,
+                                  onClick: x,
                                   "aria-label": m.intl.string(m.t["0dU9Ny"]),
                               }
                             : void 0,
@@ -327,7 +327,7 @@ function D(e) {
                                     "aria-label": "",
                                     style: { backgroundColor: e },
                                     className: g.suggestedColor,
-                                    onClick: () => x(e),
+                                    onClick: () => L(e),
                                 },
                                 "".concat(e, "-").concat(t),
                             ),
@@ -340,11 +340,11 @@ function D(e) {
     return (0, r.jsx)(U, {
         "aria-label": m.intl.string(m.t.WTqQ5e),
         className: o()(g.customColorPicker, v),
-        children: j,
+        children: k,
     });
 }
 let w = i.memo(D);
-function x(e) {
+function L(e) {
     let {
             className: t,
             defaultColor: n,

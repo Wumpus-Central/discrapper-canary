@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(228168),
     T = n(231338),
     S = n(388032),
-    A = n(31948);
+    A = n(923805);
 function C(e, t, n) {
     return (
         t in e
@@ -77,7 +77,7 @@ function P(e, t) {
 }
 let D = 250,
     w = 24;
-function x(e, t) {
+function L(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
             return P(N({}, e), {
@@ -98,7 +98,7 @@ function x(e, t) {
             return (0, h.vE)(t);
     }
 }
-let L = {
+let x = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
@@ -107,7 +107,7 @@ function M(e) {
         R = (0, f.Dt)(),
         { analyticsLocations: P } = (0, d.ZP)(),
         { trackUserProfileAction: M } = (0, m.KZ)(),
-        { live: k, stream: j } = (0, g.Z)(t.id),
+        { live: j, stream: k } = (0, g.Z)(t.id),
         { voiceChannel: U, voiceActivity: G } = (0, E.Z)({
             userId: t.id,
             guildId: a,
@@ -118,14 +118,14 @@ function M(e) {
             return e === T.Sk.OFFLINE || e === T.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, u.U)({ location: "UserProfileStackedActivity" }),
-        V = F && null == j && null == G && null != U,
+        V = F && null == k && null == G && null != U,
         H = (0, b.yi)(),
         Y = (null == H ? void 0 : H.interactionSource) === I.n_.ACTIVITY,
         W = i.useRef(null),
         K = i.useRef(null),
         z = i.useRef(null),
         q = i.useRef(null),
-        [X, Q] = i.useReducer(x, L),
+        [X, Q] = i.useReducer(L, x),
         { height: J, animationPhase: $ } = X,
         ee = "awaitingInput" !== $,
         et = "animating" === $ || "done" === $,
@@ -136,8 +136,8 @@ function M(e) {
             className: A.card,
             onClose: C,
         };
-    null != j && en.push((0, r.jsx)(O.Z, N({ stream: j }, er), "stream")),
-        k.forEach((e, t) => {
+    null != k && en.push((0, r.jsx)(O.Z, N({ stream: k }, er), "stream")),
+        j.forEach((e, t) => {
             en.push((0, r.jsx)(y.Z, N({ activity: e }, er), "live-".concat(t)));
         }),
         V && en.push((0, r.jsx)(v.Z, N({ voiceChannel: U }, er), "voice"));

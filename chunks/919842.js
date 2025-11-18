@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(793030),
     l = n(665149),
     a = n(231338),
-    s = n(892694),
+    s = n(79046),
     o = n(388032);
 function c(e) {
     let { className: t } = e;

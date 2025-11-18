@@ -4,11 +4,11 @@ var r = n(54381),
     i = n(622535),
     l = n(481060),
     s = n(783097),
-    o = n(66637),
+    o = n(526571),
     c = n(768581),
     d = n(956965),
     u = n(388032),
-    p = n(401346);
+    p = n(366722);
 let m = function (e) {
     var t, n, m;
     let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,

@@ -21,7 +21,7 @@ var r = n(54381),
     y = n(66747),
     O = n(852479),
     H = n(295907),
-    _ = n(655804);
+    _ = n(47473);
 let w = {
         transform: "translate3d(15%, 0, 0)",
         opacity: 0.3,

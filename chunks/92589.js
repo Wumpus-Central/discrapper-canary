@@ -1,13 +1,13 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var l = n(907331),
     i = n(481060),
     a = n(168020),
-    o = n(794324),
-    s = n(859788),
+    s = n(794324),
+    o = n(859788),
     c = n(388032),
-    u = n(449177);
+    u = n(80931);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,29 +33,29 @@ function d(e) {
     }
     return e;
 }
-let p = (e) => {
+let g = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
-        p = (0, l.O)(
+        g = (0, l.O)(
             (e) => {
                 null == n || n(e);
             },
             0.33,
             null != n,
         ),
-        { bannerUrl: g, bannerAnimatedUrl: f } = (0, o._M)(t),
+        { bannerUrl: p, bannerAnimatedUrl: f } = (0, s._M)(t),
         h = null != t.textColor ? { color: t.textColor } : void 0,
         C = null != t.body && "" !== t.body,
         m = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
-        ref: p,
+        ref: g,
         className: u.immersiveBannerBlock,
         children: [
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != g &&
-                    (0, r.jsx)(s.Z, {
-                        bannerStatic: g,
+                    null != p &&
+                    (0, r.jsx)(o.Z, {
+                        bannerStatic: p,
                         bannerAnimated: f,
                     }),
             }),

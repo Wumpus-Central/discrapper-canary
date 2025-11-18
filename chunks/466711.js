@@ -25,8 +25,8 @@ var r = n(54381),
     A = n(981631),
     C = n(921944),
     N = n(388032),
-    R = n(30989),
-    P = n(564355);
+    R = n(276088),
+    P = n(744114);
 function D(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function w(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -102,7 +102,7 @@ function M(e) {
         }),
     });
 }
-function k(e) {
+function j(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         { tooltipsWithKeybinds: a } = I.n.useConfig({ location: "TrinketsAnimationButton" }),
         o = () => {
@@ -114,7 +114,7 @@ function k(e) {
         text: N.intl.string(N.t.Ve9Ge6),
         children: (0, r.jsx)(
             S.Z,
-            L(
+            x(
                 w(
                     {
                         className: P.button,
@@ -153,7 +153,7 @@ function k(e) {
         ),
     });
 }
-let j = y.Z.Millis.DAYS_30;
+let k = y.Z.Millis.DAYS_30;
 function U(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
@@ -163,12 +163,12 @@ function U(e) {
         N = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         P = null != N ? O.default.age(N.id) : 0,
         { giftBoxAnimation: D, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        x = null != n.firstTimeNotice && !s && S && P >= j,
-        [L, U] = (0, _.XR)(
-            x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
+        L = null != n.firstTimeNotice && !s && S && P >= k,
+        [x, U] = (0, _.XR)(
+            L ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, f.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        G = null != L,
+        G = null != x,
         B = y || G,
         Z = (0, v.Ft)(l),
         F = (0, h.yc)({ location: "gift-button" }),
@@ -210,7 +210,7 @@ function U(e) {
                       onClick: Y,
                   })
                 : void 0 !== w
-                  ? (0, r.jsx)(k, {
+                  ? (0, r.jsx)(j, {
                         config: w,
                         hovered: B,
                         onClick: Y,

@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(999642);
+    v = n(39162);
 function I(e, t, n) {
     return (
         t in e
@@ -138,7 +138,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                     ? O.intl.formatToPlainString(O.t["9FI9Z0"], { names: e })
                     : e;
             },
-            x = d && !R;
+            L = d && !R;
         return (0, r.jsx)(l.tEY, {
             children: (0, r.jsx)(
                 "button",
@@ -164,7 +164,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                         size: b,
                         surrogateCodePoint: I,
                         allowAnimatedEmoji: S,
-                        isLocked: x,
+                        isLocked: L,
                     }),
                 }),
             ),
@@ -186,11 +186,11 @@ function D(e) {
             selectedItemClassName: N,
             getEmojiItemProps: D,
             isMediumSize: w,
-            isLargeSize: x,
-            pulseItemKey: L,
+            isLargeSize: L,
+            pulseItemKey: x,
             allowAnimatedEmoji: M,
-            setPulseItemKey: k,
-            messageId: j,
+            setPulseItemKey: j,
+            messageId: k,
             isBurstReaction: U,
             rowPosition: G,
             inNitroLockedSection: B,
@@ -203,7 +203,7 @@ function D(e) {
         X = (e) => {
             if ((e.stopPropagation(), y.current || v.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && k(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && j(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 E(t, {
                     isFinalSelection: !e.shiftKey,
@@ -237,11 +237,11 @@ function D(e) {
                         ref: l,
                         emoji: W,
                         isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(W),
-                        isLargeSize: x,
+                        isLargeSize: L,
                         isMediumSize: w,
                         isInspected: o,
                         isDisabled: z,
-                        showPulse: L === a,
+                        showPulse: x === a,
                         allowAnimatedEmoji: M,
                         onFocus: null != u ? u : Q,
                         onMouseMove: Q,
@@ -251,7 +251,7 @@ function D(e) {
                             if (
                                 null != Y.current &&
                                 null != G &&
-                                null != j &&
+                                null != k &&
                                 !e.shiftKey &&
                                 null != W.name &&
                                 U &&
@@ -260,7 +260,7 @@ function D(e) {
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
-                                (t.x = G.x + (q + 1) * K), F(R(q, f)), (0, m.U)(j, e, W.id, t);
+                                (t.x = G.x + (q + 1) * K), F(R(q, f)), (0, m.U)(k, e, W.id, t);
                             }
                             X(e);
                         },

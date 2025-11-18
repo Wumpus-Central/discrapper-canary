@@ -32,16 +32,16 @@ var r = n(54381),
     P = n(229555),
     D = n(768865),
     w = n(391110),
-    x = n(75077),
-    L = n(474936),
+    L = n(75077),
+    x = n(474936),
     M = n(981631),
-    k = n(921944),
-    j = n(228168),
+    j = n(921944),
+    k = n(228168),
     U = n(526761),
     G = n(332325),
     B = n(388032),
-    Z = n(422129),
-    F = n(88406),
+    Z = n(994838),
+    F = n(308274),
     V = n(660372),
     H = n(926433),
     Y = n(302036),
@@ -110,16 +110,16 @@ var r = n(54381),
 let eb = () => {
     let { analyticsLocations: e } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, s.ZP)(),
-        n = (0, S.BU)(L.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, S.BU)(x.Uq / 1024, { useKibibytes: !0 }),
         eE = (0, a.e7)([T.Z], () => T.Z.getPremiumTypeSubscription()),
         eb = null != eE ? C.ZP.getPremiumPlanItem(eE) : null,
-        ey = (null != eb ? C.ZP.getSkuIdForPlan(eb.planId) : null) === L.Si.TIER_2,
+        ey = (null != eb ? C.ZP.getSkuIdForPlan(eb.planId) : null) === x.Si.TIER_2,
         eO = I.default.getCurrentUser(),
-        ev = (0, C.I5)(eO, L.PremiumTypes.TIER_2),
-        eI = (0, C.I5)(eO, L.PremiumTypes.TIER_0),
+        ev = (0, C.I5)(eO, x.PremiumTypes.TIER_2),
+        eI = (0, C.I5)(eO, x.PremiumTypes.TIER_0),
         eT = (0, d.Z)(v.Z),
         { isFractionalPremiumActive: eS } = (0, u.Z)(),
-        eA = null != eE && eE.hasPremiumAtLeast(L.PremiumTypes.TIER_2),
+        eA = null != eE && eE.hasPremiumAtLeast(x.PremiumTypes.TIER_2),
         eC = (0, _.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eN = p.JH.useExperiment({ location: "usePremiumPerksCards" }).enabled,
         eR = (0, m.Z)({
@@ -145,10 +145,10 @@ let eb = () => {
                 analyticsLocations: e,
             });
         },
-        ex = () => {
+        eL = () => {
             (0, g.uL)(M.Z5c.COLLECTIBLES_SHOP);
         },
-        eL = () => {
+        ex = () => {
             (0, y.Z)(G.Z.CLIPS, { analyticsLocations: e });
         },
         eM = () => {
@@ -157,18 +157,18 @@ let eb = () => {
                 scrollPosition: U.h1.CUSTOM_APP_ICONS,
             });
         },
-        ek = () => {
+        ej = () => {
             window.open(A.Z.getArticleURL(M.BhN.CLIPS), "_blank");
         },
-        ej = () => {
-            eC || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), eR();
+        ek = () => {
+            eC || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: j.L.TAKE_ACTION }), eR();
         },
         eU = () => {
             (0, E.openUserProfileModal)({
                 userId: eO.id,
                 sourceAnalyticsLocations: e,
                 hideRestrictedProfile: !0,
-                section: j.oh.WIDGETS,
+                section: k.oh.WIDGETS,
             });
         },
         eG = i.useCallback(() => {
@@ -202,7 +202,7 @@ let eb = () => {
                       description: B.intl.string(B.t.Z6v86b),
                       descriptionCta: eT ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.hvVgAZ),
                       pillText: B.intl.string(B.t.EYxi0o),
-                      onCtaClick: eT ? eL : ek,
+                      onCtaClick: eT ? ex : ej,
                       perkImage: X,
                   }
                 : {
@@ -313,7 +313,7 @@ let eb = () => {
                 subtitle: B.intl.string(B.t.opgqDZ),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             specialMemberPricingSeeAllVariant: {
@@ -322,7 +322,7 @@ let eb = () => {
                 subtitle: B.intl.string(B.t.opgqDZ),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             specialShopPerks: {
@@ -331,7 +331,7 @@ let eb = () => {
                 subtitle: B.intl.string(B.t.chRZiX),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             superReactions: {
@@ -382,14 +382,14 @@ let eb = () => {
                 name: "customSoundsEverywhere",
                 title: B.intl.string(B.t.LWsArT),
                 subtitle: B.intl.string(B.t.bTzbVk),
-                perkImage: (0, x.gx)(t, H, Y),
+                perkImage: (0, L.gx)(t, H, Y),
                 description: B.intl.string(B.t.JLnOM2),
             },
             specialStickerAccess: {
                 name: "specialStickerAccess",
                 title: B.intl.string(B.t.tzdIwI),
                 subtitle: B.intl.string(B.t.FXlU24),
-                perkImage: (0, x.gx)(t, W, el),
+                perkImage: (0, L.gx)(t, W, el),
                 description: B.intl.string(B.t.e7FKCi),
             },
             largeUploads: {
@@ -443,7 +443,7 @@ let eb = () => {
                 description: B.intl.format(B.t.Pd7olh, { learnMoreLink: A.Z.getArticleURL(M.BhN.PERMADECOS) }),
                 descriptionCta: ev ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.JST6jl),
                 isPremiumGetCta: !ev,
-                onCtaClick: ev ? ej : void 0,
+                onCtaClick: ev ? ek : void 0,
                 pillText: eC || !ev ? void 0 : B.intl.string(B.t.y2b7CA).toLocaleUpperCase(),
                 perkImage: eg.Z,
             },

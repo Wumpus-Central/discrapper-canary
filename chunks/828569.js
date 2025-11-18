@@ -26,7 +26,7 @@ var n = t(54381),
     E = t(981631),
     k = t(474936),
     v = t(388032),
-    I = t(803414);
+    I = t(23152);
 let T = (e) => {
         let { locale: r } = e;
         return (0, n.jsxs)(n.Fragment, {

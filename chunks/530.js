@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(172751),
     h = n(228168),
     m = n(388032),
-    g = n(954677);
+    g = n(69295);
 function E(e) {
     let {
             user: t,
@@ -48,7 +48,7 @@ function E(e) {
             guildId: n,
             pendingDisplayNameStyles: O,
         }),
-        x = null != w;
+        L = null != w;
     return (0, r.jsxs)("div", {
         className: a()(g.container, { [g.bot]: null != D }, I),
         children: [
@@ -56,7 +56,7 @@ function E(e) {
                 className: g.usernameRow,
                 children: [
                     R(
-                        x
+                        L
                             ? (0, r.jsx)(s.Text, {
                                   variant: N,
                                   children: (0, r.jsx)(_.Z, {

@@ -19,11 +19,11 @@ var r = n(54381),
     y = n(250285),
     O = n(292352),
     v = n(134612),
-    I = n(597754),
+    I = n(313570),
     T = n(388032),
-    S = n(519279),
-    A = n(790680),
-    C = n(197571),
+    S = n(152269),
+    A = n(153437),
+    C = n(10198),
     N = n(926895);
 function R(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function L(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, r.jsxs)("div", {
         className: A.step,
@@ -104,7 +104,7 @@ function x(e) {
         ],
     });
 }
-function L() {
+function x() {
     return (0, r.jsxs)("div", {
         className: o()(A.box, S.box, A.linkingBanner, A.linkingBannerParent),
         children: [
@@ -136,17 +136,17 @@ function L() {
             (0, r.jsxs)("div", {
                 className: A.steps,
                 children: [
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(L, {
                         header: T.intl.string(I.default["7xxAni"]),
                         description: T.intl.string(I.default["1M9So2"]),
                         stepNumber: 1,
                     }),
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(L, {
                         header: T.intl.string(I.default["AXgx+a"]),
                         description: T.intl.string(I.default.GzMFnb),
                         stepNumber: 2,
                     }),
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(L, {
                         header: T.intl.string(I.default.MZn1tG),
                         description: T.intl.string(I.default["8rLBxD"]),
                         stepNumber: 3,
@@ -187,7 +187,7 @@ function M() {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { sectionType: t, sectionTitle: n, requests: a } = e,
         o = i.useRef(null),
         s = "".concat(t, "-list"),
@@ -264,7 +264,7 @@ function k(e) {
         }),
     });
 }
-let j = () => {
+let k = () => {
         let e = (0, p.Z)(),
             t = (0, h.zu)(),
             n = e ? O.AG : O.i0,
@@ -277,7 +277,7 @@ let j = () => {
                 T.intl.formatToPlainString(I.default["pu6/U0"], i),
             );
         return t.length > 0
-            ? (0, r.jsx)(k, {
+            ? (0, r.jsx)(j, {
                   sectionType: O.ne.ACTIVE,
                   sectionTitle: a,
                   requests: t,
@@ -356,7 +356,7 @@ let j = () => {
             );
         return 0 === e.length
             ? null
-            : (0, r.jsx)(k, {
+            : (0, r.jsx)(j, {
                   sectionType: O.ne.PENDING,
                   sectionTitle: t,
                   requests: e,
@@ -367,8 +367,8 @@ let j = () => {
         return (0, r.jsxs)("div", {
             className: A.container,
             children: [
-                e ? (0, r.jsx)(L, {}) : (0, r.jsx)(M, {}),
-                (0, r.jsx)(j, {}),
+                e ? (0, r.jsx)(x, {}) : (0, r.jsx)(M, {}),
+                (0, r.jsx)(k, {}),
                 (0, r.jsx)(B, {}),
                 (0, r.jsx)(U, {}),
                 (0, r.jsx)(G, {}),

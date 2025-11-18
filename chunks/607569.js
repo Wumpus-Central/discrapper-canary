@@ -13,7 +13,7 @@ var r = n(54381),
     m = n(915509),
     b = n(592286),
     h = n(388032),
-    f = n(1904);
+    f = n(567147);
 let x = "MULTIPLE_CHOICE",
     y = (e) => {
         let { choice: t, index: n, onChange: i, onClear: s, onReorder: u, isDropHovered: g } = e,

@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(122943),
     y = n(556638),
     O = n(981631),
-    v = n(80568);
+    v = n(666998);
 function I(e) {
     let {
         user: t,
@@ -36,10 +36,10 @@ function I(e) {
     (0, u.Z)(null == t ? void 0 : t.id);
     let D = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         w = (0, f.E)("ActivityStatus", I),
-        x = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)),
-        L = (0, l.e7)([d.Z], () =>
+        L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)),
+        x = (0, l.e7)([d.Z], () =>
             w
-                ? x
+                ? L
                     ? d.Z.getHangStatusActivity()
                     : null != n
                       ? n.find((e) => e.type === O.IIU.HANG_STATUS)
@@ -60,8 +60,8 @@ function I(e) {
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([p.Z], () => p.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let k = (null == t ? void 0 : t.bot) === !0,
-        j = ((null == M ? void 0 : M.state) != null || null != L) && "xs" === A,
+    let j = (null == t ? void 0 : t.bot) === !0,
+        k = ((null == M ? void 0 : M.state) != null || null != x) && "xs" === A,
         U = () => {
             if (null != D)
                 return (0, r.jsx)(m.Z, {
@@ -70,8 +70,8 @@ function I(e) {
                     textVariant: "text-".concat(A, "/medium"),
                     textClassName: T,
                     iconClassName: S,
-                    hideText: j,
-                    hideIcon: k,
+                    hideText: k,
+                    hideIcon: j,
                     hideTooltip: P,
                 });
             let e =
@@ -87,8 +87,8 @@ function I(e) {
                       textVariant: "text-".concat(A, "/medium"),
                       textClassName: T,
                       iconClassName: S,
-                      hideText: j,
-                      hideIcon: k,
+                      hideText: k,
+                      hideIcon: j,
                       hideTooltip: P,
                   })
                 : null != I
@@ -97,7 +97,7 @@ function I(e) {
                         textVariant: "text-".concat(A, "/medium"),
                         textClassName: T,
                         iconClassName: S,
-                        hideText: j,
+                        hideText: k,
                         hideTooltip: P,
                     })
                   : null;
@@ -107,7 +107,7 @@ function I(e) {
             [v.textSm]: "sm" === A,
         }),
         B = () =>
-            null == M && null == L
+            null == M && null == x
                 ? null
                 : (0, r.jsx)(g.Z, {
                       customStatusActivity: M,
@@ -119,7 +119,7 @@ function I(e) {
                       iconClassName: S,
                       tooltipClassName: G,
                       voiceChannel: I,
-                      hangStatus: L,
+                      hangStatus: x,
                       userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {

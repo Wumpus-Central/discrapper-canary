@@ -24,7 +24,7 @@ var r = n(54381),
     I = n(228168),
     w = n(582113),
     S = n(388032),
-    E = n(10094);
+    E = n(363725);
 function T(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: i } = e;
     return t
@@ -115,7 +115,7 @@ function D(e) {
             wishlistId: n,
             onAction: G,
         }),
-        U = i.useCallback(() => {
+        F = i.useCallback(() => {
             var e;
             if (null == n) return;
             let t = Z ? a.f.PRIVATE : a.f.PUBLIC;
@@ -128,7 +128,7 @@ function D(e) {
                 hasThirdPartySku: r,
             });
         }, [n, Z, k, L]),
-        F = i.useCallback(() => {
+        U = i.useCallback(() => {
             (0, o.pT)(),
                 (0, f.mK)({
                     analyticsLocations: k,
@@ -170,7 +170,7 @@ function D(e) {
                                         size: "sm",
                                         icon: s.EOn,
                                         text: S.intl.string(S.t.ZbS4QB),
-                                        onClick: F,
+                                        onClick: U,
                                     }),
                                 D &&
                                     (0, r.jsx)(s.Button, {
@@ -240,13 +240,13 @@ function D(e) {
                                 ? (0, r.jsx)(C, {
                                       isSocialLayerStorefrontEnabled: D,
                                       isWishlistPublic: Z,
-                                      handleOpenShop: F,
+                                      handleOpenShop: U,
                                       handleOpenGameShop: W,
-                                      handleToggleWishlistVisibility: U,
+                                      handleToggleWishlistVisibility: F,
                                   })
                                 : (0, r.jsx)(T, {
                                       isSocialLayerStorefrontEnabled: D,
-                                      handleOpenShop: F,
+                                      handleOpenShop: U,
                                       handleOpenGameShop: W,
                                   }),
                         ],

@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(486324),
     h = n(200299),
     b = n(388032),
-    x = n(197530);
+    x = n(359449);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(m.GuildFeatures.BANNER),
@@ -22,7 +22,7 @@ let j = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>

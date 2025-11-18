@@ -12,9 +12,9 @@ var r = n(54381),
     _ = n(562618),
     p = n(803866),
     h = n(231338),
-    m = n(681287),
+    m = n(936806),
     g = n(388032),
-    E = n(37751);
+    E = n(869918);
 function b(e, t, n) {
     return (
         t in e
@@ -106,8 +106,8 @@ function S(e) {
             badge: P,
             textLink: D,
             onWatchVideo: w,
-            onRequestClose: x,
-            popoverRef: L,
+            onRequestClose: L,
+            popoverRef: x,
         } = e,
         M = I(e, [
             "title",
@@ -123,9 +123,9 @@ function S(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let { reducedMotion: k } = i.useContext(o.Sfi),
-        j = (0, a.C)(),
-        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : j,
+    let { reducedMotion: j } = i.useContext(o.Sfi),
+        k = (0, a.C)(),
+        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : k,
         G = i.useRef(null),
         B = (0, o.j1L)(A),
         Z = i.useCallback(
@@ -143,14 +143,14 @@ function S(e) {
     i.useEffect(() => {
         var e, t;
         null != G.current &&
-            (!k.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
-    }, [U, k.enabled]);
+            (!j.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
+    }, [U, j.enabled]);
     let F = i.useCallback(() => {
-            null !== G.current && G.current.pause(), null == x || x();
-        }, [x]),
+            null !== G.current && G.current.pause(), null == L || L();
+        }, [L]),
         V = i.useCallback(() => {
-            null !== G.current && G.current.pause(), null == x || x();
-        }, [x]),
+            null !== G.current && G.current.pause(), null == L || L();
+        }, [L]),
         H = i.useCallback(() => {
             null !== G.current && G.current.pause();
             let e = Z();
@@ -160,9 +160,9 @@ function S(e) {
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == x || x(),
+                null == L || L(),
                 null == w || w();
-        }, [Z, w, x]),
+        }, [Z, w, L]),
         Y = B
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
@@ -175,7 +175,7 @@ function S(e) {
                           src: A,
                           width: 232,
                           height: 131,
-                          autoPlay: !k.enabled && U,
+                          autoPlay: !j.enabled && U,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
@@ -200,7 +200,7 @@ function S(e) {
             onRequestClose: F,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
-                ref: L,
+                ref: x,
                 children: [
                     (0, r.jsx)(p.N, { onClick: V }),
                     (0, r.jsx)(f.$, { caretConfig: R }),

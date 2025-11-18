@@ -24,7 +24,7 @@ var r = n(54381),
     v = n(359135),
     I = n(516817),
     T = n(388032),
-    S = n(63053),
+    S = n(365616),
     A = n(460400),
     C = n(943549);
 let N = {
@@ -43,11 +43,11 @@ let N = {
                 className: P,
                 innerClassName: D,
                 isHighlighted: w,
-                showStatus: x,
-                showPlaceholderUser: L,
+                showStatus: L,
+                showPlaceholderUser: x,
                 pendingGlobalName: M,
-                pendingNickname: k,
-                pendingAvatarDecoration: j,
+                pendingNickname: j,
+                pendingAvatarDecoration: k,
                 pendingDisplayNameStyles: U,
                 nameplatePreviewSize: G = "default",
                 isPurchased: B = !1,
@@ -64,14 +64,14 @@ let N = {
             X =
                 null != t
                     ? (0, b.Ly)({
-                          pendingNickname: k,
+                          pendingNickname: j,
                           pendingGlobalName: M,
                           user: t,
                           guildMember: q,
                       })
                     : void 0,
             Q = (0, E.Ys)({
-                pendingValue: j,
+                pendingValue: k,
                 userValue: null == t ? void 0 : t.avatarDecoration,
                 guildValue: null == q ? void 0 : q.avatarDecoration,
                 guildId: n,
@@ -113,7 +113,7 @@ let N = {
                                 nameplate: Y,
                                 hovered: w,
                                 placement: v.i.PREVIEW,
-                                content: L ? void 0 : z,
+                                content: x ? void 0 : z,
                             },
                             null == a ? void 0 : a.skuId,
                         ),
@@ -122,14 +122,14 @@ let N = {
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(S.avatarContainer, !L && S.avatarVisible),
+                                      className: o()(S.avatarContainer, !x && S.avatarVisible),
                                       children: (0, r.jsx)(d.Z, {
                                           ref: z,
                                           avatar: (0, r.jsx)(f.Z, {
                                               user: t,
                                               guildId: n,
                                               avatarSize: J,
-                                              status: x ? W : void 0,
+                                              status: L ? W : void 0,
                                               avatarDecorationOverride: Q,
                                               "aria-hidden": !0,
                                           }),
@@ -150,7 +150,7 @@ let N = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(S.avatarContainer, L && S.avatarVisible),
+                                className: o()(S.avatarContainer, x && S.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: H ? A : C,

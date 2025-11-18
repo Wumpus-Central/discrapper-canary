@@ -27,9 +27,9 @@ var r = n(54381),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    D = n(343396),
-    w = n(197571);
-function x(e, t, n) {
+    D = n(719766),
+    w = n(10198);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -209,7 +209,7 @@ class U extends i.PureComponent {
                     text: P.intl.string(P.t.qZZUy6),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(j, { code: e }, e.code));
+            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
             e = (0, r.jsxs)(c.Kqy, {
                 gap: 16,
                 children: [
@@ -324,18 +324,18 @@ class U extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, c.h7j)((t) => (0, r.jsx)(E.default, L({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
+        (0, c.h7j)((t) => (0, r.jsx)(E.default, x({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", {
+            L(this, "state", {
                 revealed: !1,
                 password: "",
             }),
-            x(this, "togglePhoneNumberVisibility", (e) => {
+            L(this, "togglePhoneNumberVisibility", (e) => {
                 e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            x(this, "handleDisableMFA", () => {
+            L(this, "handleDisableMFA", () => {
                 d.Z.show({
                     title: P.intl.string(P.t["D+aE7g"]),
                     body: P.intl.string(P.t.EA4ZEk),
@@ -343,15 +343,15 @@ class U extends i.PureComponent {
                     onConfirm: () => u.Z.disable(),
                 });
             }),
-            x(this, "generateBackupCodes", async () => {
+            L(this, "generateBackupCodes", async () => {
                 let e = O.Z.getVerificationKey();
                 await u.Z.confirmViewBackupCodes(e, !0);
             }),
-            x(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+            L(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         g.Z,
-                        k(L({}, e), {
+                        j(x({}, e), {
                             handleSubmit: (e) =>
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
@@ -362,12 +362,12 @@ class U extends i.PureComponent {
                     ),
                 );
             }),
-            x(this, "viewBackupCodes", (e) => {
+            L(this, "viewBackupCodes", (e) => {
                 (0, c.h7j)(
                     (t) =>
                         (0, r.jsx)(
                             p.Z,
-                            k(L({}, t), {
+                            j(x({}, t), {
                                 handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                                 maxLength: 8,
                                 title: P.intl.string(P.t["mGppp/"]),
@@ -383,7 +383,7 @@ class U extends i.PureComponent {
                     { stackingBehavior: "stack" },
                 );
             }),
-            x(this, "getDownloadFileContents", () => {
+            L(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
@@ -396,18 +396,18 @@ class U extends i.PureComponent {
                     t = P.intl.formatToPlainString(P.t["uYWwh/"], { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            x(this, "handleChangePhoneNumber", () => {
+            L(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            x(this, "handleEnableSMS", () => {
+            L(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: u.Z.enableSMS }) : u.Z.enableSMS();
             }),
-            x(this, "handleDisableSMS", () => {
+            L(this, "handleDisableSMS", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         g.Z,
-                        k(L({}, e), {
+                        j(x({}, e), {
                             handleSubmit: u.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnit),
                             children: P.intl.string(P.t["W0/Duf"]),
@@ -424,5 +424,5 @@ function G(e) {
         togglingSMS: O.Z.togglingSMS,
         hasTOTPEnabled: y.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(U, L({ currentUser: t }, n, e));
+    return (0, r.jsx)(U, x({ currentUser: t }, n, e));
 }

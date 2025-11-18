@@ -3,13 +3,13 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(702486),
+    s = n(481060),
+    o = n(702486),
     c = n(626135),
     u = n(381585),
     d = n(870289),
-    p = n(501431),
-    g = n(888302),
+    g = n(501431),
+    p = n(888302),
     f = n(193227),
     h = n(426171),
     C = n(845796),
@@ -20,15 +20,15 @@ var r = n(54381),
     x = n(215023),
     E = n(981631),
     O = n(388032),
-    S = n(452785);
+    S = n(25616);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
-    (0, p.A)();
-    let g = (0, d.FF)("CollectiblesBrowse"),
+    (0, g.A)();
+    let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: C } = (0, s.z)(f, t),
+        { handleScroll: C } = (0, o.z)(f, t),
         { setCategoryRef: _, handleScrollToCategory: b } = (0, h.xV)(f.current),
-        [v, x] = l.useState(g && c),
+        [v, x] = l.useState(p && c),
         [E, O] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -47,14 +47,14 @@ function y(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            g || x(!1);
-        }, [g, x]),
+            p || x(!1);
+        }, [p, x]),
         (0, r.jsx)("div", {
-            className: a()(S.pageWrapper, { [S.pageWrapperFilter]: g }),
+            className: a()(S.pageWrapper, { [S.pageWrapperFilter]: p }),
             children: (0, r.jsxs)("main", {
-                className: a()(S.page, { [S.pageFilter]: g }),
+                className: a()(S.page, { [S.pageFilter]: p }),
                 children: [
-                    (0, r.jsx)(o.yWw, {
+                    (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
                         ref: f,
                         onScroll: C,
@@ -71,7 +71,7 @@ function y(e) {
                     v && !E && (0, r.jsx)("div", { className: S.divider }),
                     v &&
                         !E &&
-                        (0, r.jsx)(o.Ttm, {
+                        (0, r.jsx)(s.Ttm, {
                             className: S.filterBar,
                             children: (0, r.jsx)(m.Z, {}),
                         }),
@@ -85,14 +85,14 @@ let j = (e) => {
             isSmallScreen: t,
             filterBarOpen: n,
             setFilterBarOpen: i,
-            tab: s,
+            tab: o,
             scrollerRef: h,
             sortedCategories: y,
             setCategoryRef: j,
         } = e,
         k = (0, d.FF)("CollectiblesBrowse"),
         I = l.useRef(null),
-        T = (0, p.S)((e) => e.hasDefaultFilters()),
+        T = (0, g.S)((e) => e.hasDefaultFilters()),
         L = (0, u.sp)(),
         { handlePageChange: B, currentPage: P } = (0, _.h)(h),
         N = l.useCallback(
@@ -144,7 +144,7 @@ let j = (e) => {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: S.controlsLeftSide,
-                                    children: (0, r.jsx)(g.Z, {}),
+                                    children: (0, r.jsx)(p.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
                                     className: a()(S.controlsRightSide, { [S.controlsRightSideResponsive]: t }),
@@ -152,7 +152,7 @@ let j = (e) => {
                                         (0, r.jsxs)("div", {
                                             className: S.sortBy,
                                             children: [
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: "text-md/semibold",
                                                     children: O.intl.string(O.t.uaX705),
                                                 }),
@@ -161,7 +161,7 @@ let j = (e) => {
                                         }),
                                         (0, r.jsx)("div", {
                                             ref: A,
-                                            children: (0, r.jsx)(o.Button, {
+                                            children: (0, r.jsx)(s.Button, {
                                                 onClick: () => {
                                                     let e = !n;
                                                     c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -177,7 +177,7 @@ let j = (e) => {
                                                 },
                                                 variant: "secondary",
                                                 text: O.intl.string(n ? O.t.fYtm6f : O.t["TeTYE+"]),
-                                                icon: o.gXV,
+                                                icon: s.gXV,
                                                 iconPosition: "end",
                                             }),
                                         }),
@@ -188,7 +188,7 @@ let j = (e) => {
                                     (0, r.jsx)("div", {
                                         className: S.filterOverlay,
                                         ref: I,
-                                        children: (0, r.jsx)(o.Den, {
+                                        children: (0, r.jsx)(s.Den, {
                                             className: S.filterOverlayContent,
                                             children: (0, r.jsx)(m.Z, {}),
                                         }),
@@ -200,18 +200,18 @@ let j = (e) => {
                               b.Z,
                               {
                                   scrollerRef: h,
-                                  tab: s,
+                                  tab: o,
                               },
-                              s,
+                              o,
                           )
-                        : (0, x.RE)(s)
+                        : (0, x.RE)(o)
                           ? (0, r.jsx)(
                                 v.Z,
                                 {
                                     scrollerRef: h,
-                                    tab: s,
+                                    tab: o,
                                 },
-                                s,
+                                o,
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: P },

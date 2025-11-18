@@ -37,7 +37,7 @@ var i = n(54381),
     w = n(927923),
     M = n(70722),
     R = n(388032),
-    L = n(92024);
+    L = n(2628);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -122,8 +122,8 @@ let H = (0, h.$)(function (e) {
             channel: U,
             mute: B,
             localMute: H,
-            localVideoDisabled: F,
-            deaf: V,
+            localVideoDisabled: V,
+            deaf: F,
             video: G,
             embeddedApplication: z,
             serverMute: W,
@@ -204,7 +204,7 @@ let H = (0, h.$)(function (e) {
                     n.e("66165"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("96306"),
+                    n.e("87157"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, i.jsx)(
@@ -242,12 +242,12 @@ let H = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eF = () =>
+        eV = () =>
             (0, i.jsx)(E.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        eV = () =>
+        eF = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(x.Z, {
@@ -286,13 +286,13 @@ let H = (0, h.$)(function (e) {
                                 disconnected: Q,
                                 mute: B,
                                 localMute: H,
-                                localVideoDisabled: F,
+                                localVideoDisabled: V,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
                                 priority: er,
                                 ringing: Y,
-                                deaf: V,
+                                deaf: F,
                                 nick: K,
                                 collapsed: l,
                                 overlap: l,
@@ -327,9 +327,9 @@ let H = (0, h.$)(function (e) {
                             ey && eA
                                 ? (c = eH)
                                 : et
-                                  ? (c = eV)
+                                  ? (c = eF)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eF)
+                                    ? (c = eV)
                                     : ey && (c = eH),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,

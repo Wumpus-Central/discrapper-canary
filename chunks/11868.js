@@ -1,6 +1,6 @@
 n.d(t, {
-    Qt: () => x,
-    ZP: () => j,
+    Qt: () => L,
+    ZP: () => k,
 }),
     n(953529);
 var r = n(54381),
@@ -30,7 +30,7 @@ var r = n(54381),
     C = n(139712),
     N = n(765305),
     R = n(388032),
-    P = n(182279);
+    P = n(98435);
 let D = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -38,7 +38,7 @@ let D = (e, t) => (n) => {
         let r = p.Z.getChannel(e.channel_id);
         null != r && (n.stopPropagation(), (0, _.Cq)(r), null == t || t(n));
     },
-    x = (e, t) => {
+    L = (e, t) => {
         switch (null == e ? void 0 : e.entity_type) {
             case N.WX.STAGE_INSTANCE:
                 return w(e, t);
@@ -47,7 +47,7 @@ let D = (e, t) => (n) => {
         }
         return () => {};
     },
-    L = (e, t) => t && [N.WX.STAGE_INSTANCE, N.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
+    x = (e, t) => t && [N.WX.STAGE_INSTANCE, N.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
     M = i.memo(function (e) {
         var t;
         let { guild: n, guildScheduledEvent: a, channel: o, isMember: u } = e,
@@ -65,7 +65,7 @@ let D = (e, t) => (n) => {
             ),
             E = i.useCallback(
                 (e) => {
-                    x(a)(e);
+                    L(a)(e);
                 },
                 [a],
             );
@@ -119,7 +119,7 @@ let D = (e, t) => (n) => {
                         }),
                         (0, r.jsx)("div", {
                             className: P.channelInfoContainer,
-                            children: L(a, u)
+                            children: x(a, u)
                                 ? (0, r.jsx)(l.P3F, {
                                       className: P.channelLocationLink,
                                       onClick: E,
@@ -132,7 +132,7 @@ let D = (e, t) => (n) => {
             ],
         });
     }),
-    k = i.memo(function (e) {
+    j = i.memo(function (e) {
         let {
                 guildId: t,
                 guildScheduledEventId: n,
@@ -188,7 +188,7 @@ let D = (e, t) => (n) => {
                   variant: "active",
               });
     }),
-    j = i.memo(function (e) {
+    k = i.memo(function (e) {
         var t;
         let {
                 guildScheduledEvent: n,
@@ -246,7 +246,7 @@ let D = (e, t) => (n) => {
                                 guildScheduledEvent: n,
                                 isMember: c,
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(j, {
                                 isActive: A,
                                 isEnded: C,
                                 isMember: c,

@@ -9,19 +9,19 @@ var l = t(54381),
     u = t(481060),
     d = t(670863),
     m = t(72897),
-    x = t(537135),
-    g = t(176940),
+    g = t(537135),
+    x = t(176940),
     h = t(65154),
     j = t(388032),
-    v = t(591554),
-    p = t(542257),
-    f = t(197571);
+    v = t(477302),
+    p = t(79985),
+    f = t(10198);
 function Z(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: i } = e;
     s()(null != n, "Camera capture device cannot be null");
-    let a = (0, g.Z)(),
-        [Z, S] = (0, m.Ls)(h.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
-        N = Z.concat(S),
+    let a = (0, x.Z)(),
+        [Z, N] = (0, m.Ls)(h.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        S = Z.concat(N),
         [b, C] = r.useState(
             (function (e, n, t) {
                 var l;
@@ -31,7 +31,7 @@ function Z(e) {
                     (0, o.stringSimilarity)(r.name, n.name) > (0, o.stringSimilarity)(r.name, e.name) ? n : e,
                 );
                 return null != (l = null == i ? void 0 : i.id) ? l : null;
-            })(n.id, a, N),
+            })(n.id, a, S),
         );
     return (
         null != b && i(b),
@@ -48,7 +48,7 @@ function Z(e) {
                     children: [
                         (0, l.jsx)("div", {
                             className: f.marginTop8,
-                            children: (0, l.jsxs)(x.Z, {
+                            children: (0, l.jsxs)(g.Z, {
                                 children: [
                                     (0, l.jsx)("span", {
                                         className: v.ellipsisText,

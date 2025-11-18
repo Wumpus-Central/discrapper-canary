@@ -29,11 +29,11 @@ var r = n(54381),
     P = n(659947),
     D = n(273313),
     w = n(981631),
-    x = n(295907),
-    L = n(388032),
-    M = n(894462),
-    k = n(620842),
-    j = n(197571);
+    L = n(295907),
+    x = n(388032),
+    M = n(958047),
+    j = n(504401),
+    k = n(10198);
 function U(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ function F(e) {
 }
 function V() {
     return l()((0, m.Rv)())
-        .filter((e) => e.description !== L.intl.string(L.t.HnNtEI))
+        .filter((e) => e.description !== x.intl.string(x.t.HnNtEI))
         .groupBy((e) => e.group)
         .value();
 }
@@ -103,12 +103,12 @@ class H extends i.PureComponent {
         return g.Z.hasBind(t)
             ? (0, r.jsx)(d.Wn, {
                   messageType: d.QYI.ERROR,
-                  children: L.intl.string(L.t["7lQlw3"]),
+                  children: x.intl.string(x.t["7lQlw3"]),
               })
-            : x.Sp.has(t)
+            : L.Sp.has(t)
               ? (0, r.jsx)(d.Wn, {
                     messageType: d.QYI.ERROR,
-                    children: L.intl.format(L.t.MOIaNd, {
+                    children: x.intl.format(x.t.MOIaNd, {
                         keyboardNavArticle: A.Z.getArticleURL(w.BhN.KEYBOARD_NAVIGATION),
                     }),
                 })
@@ -121,12 +121,12 @@ class H extends i.PureComponent {
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)("div", {
-            className: o()(M.keybindGroup, { [k.card]: !this.props.isUserSettingsRedesignEnabled }),
+            className: o()(M.keybindGroup, { [j.card]: !this.props.isUserSettingsRedesignEnabled }),
             children: [
                 !e &&
                     !this.props.isUserSettingsRedesignEnabled &&
                     (0, r.jsx)(_.Z, {
-                        "aria-label": L.intl.string(L.t.qEHmmB),
+                        "aria-label": x.intl.string(x.t.qEHmmB),
                         className: M.removeKeybindFloating,
                         onClick: this.handleDeleteKeybind,
                     }),
@@ -136,7 +136,7 @@ class H extends i.PureComponent {
                         (0, r.jsx)("div", {
                             className: M.item,
                             children: (0, r.jsx)(d.q4e, {
-                                label: L.intl.string(L.t.UUpAD6),
+                                label: x.intl.string(x.t.UUpAD6),
                                 value: this.props.keybind.action,
                                 options: this.props.keybindActionTypes,
                                 onChange: this.handleActionChanged,
@@ -146,7 +146,7 @@ class H extends i.PureComponent {
                         (0, r.jsx)("div", {
                             className: M.item,
                             children: (0, r.jsx)(d.gNt, {
-                                label: L.intl.string(L.t["1La4tC"]),
+                                label: x.intl.string(x.t["1La4tC"]),
                                 children: (0, r.jsx)(p.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange,
@@ -161,14 +161,14 @@ class H extends i.PureComponent {
                                     variant: "icon-only",
                                     onClick: this.handleDeleteKeybind,
                                     icon: d.XHJ,
-                                    "aria-label": L.intl.string(L.t.qEHmmB),
+                                    "aria-label": x.intl.string(x.t.qEHmmB),
                                 }),
                             }),
                         (0, r.jsx)("div", {
                             className: M.switch,
                             children: (0, r.jsx)(d.aML, {
                                 "data-migration-pending": !0,
-                                text: L.intl.string(L.t.uCD7qK),
+                                text: x.intl.string(x.t.uCD7qK),
                                 children: (e) =>
                                     (0, r.jsx)(
                                         "div",
@@ -228,105 +228,105 @@ class Y extends i.PureComponent {
                 ? [
                       {
                           value: w.kg4.VAD_PRIORITY,
-                          label: L.intl.string(L.t["49d6Nd"]),
+                          label: x.intl.string(x.t["49d6Nd"]),
                       },
                   ]
                 : [],
             o = [
                 {
                     value: w.kg4.UNASSIGNED,
-                    label: L.intl.string(L.t["0Uh579"]),
+                    label: x.intl.string(x.t["0Uh579"]),
                 },
                 {
                     value: w.kg4.PUSH_TO_TALK,
-                    label: L.intl.string(L.t.Y5lgTP),
+                    label: x.intl.string(x.t.Y5lgTP),
                 },
                 {
                     value: w.kg4.PUSH_TO_TALK_PRIORITY,
-                    label: L.intl.string(L.t.DkSwJ2),
+                    label: x.intl.string(x.t.DkSwJ2),
                 },
                 {
                     value: w.kg4.PUSH_TO_MUTE,
-                    label: L.intl.string(L.t.hSCRqd),
+                    label: x.intl.string(x.t.hSCRqd),
                 },
                 ...a,
                 {
                     value: w.kg4.TOGGLE_MUTE,
-                    label: L.intl.string(L.t.PlkYKD),
+                    label: x.intl.string(x.t.PlkYKD),
                 },
                 {
                     value: w.kg4.TOGGLE_DEAFEN,
-                    label: L.intl.string(L.t.NvGq1K),
+                    label: x.intl.string(x.t.NvGq1K),
                 },
                 {
                     value: w.kg4.TOGGLE_VOICE_MODE,
-                    label: L.intl.string(L.t.Wa5H9S),
+                    label: x.intl.string(x.t.Wa5H9S),
                 },
                 {
                     value: w.kg4.TOGGLE_STREAMER_MODE,
-                    label: L.intl.string(L.t.BK0Ncc),
+                    label: x.intl.string(x.t.BK0Ncc),
                 },
             ];
         return (
             (0, O.l)() &&
                 o.push({
                     value: w.kg4.TOGGLE_CAMERA,
-                    label: L.intl.string(L.t.hf8JVT),
+                    label: x.intl.string(x.t.hf8JVT),
                 }),
             e &&
                 (o.push({
                     value: w.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
-                    label: L.intl.string(L.t.VsAZcC),
+                    label: x.intl.string(x.t.VsAZcC),
                 }),
                 o.push({
                     value: w.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
-                    label: L.intl.string(L.t.hurHWo),
+                    label: x.intl.string(x.t.hurHWo),
                 })),
             t &&
                 ((0, C.isWindows)() || T.Z.getUseSystemScreensharePicker()) &&
                 o.push({
                     value: w.kg4.TOGGLE_GO_LIVE_STREAMING,
-                    label: L.intl.string(L.t.ybdjJD),
+                    label: x.intl.string(x.t.ybdjJD),
                 }),
             (0, C.isDesktop)() &&
                 (o.push(
                     {
                         value: w.kg4.NAVIGATE_BACK,
-                        label: L.intl.string(L.t.gRSaOa),
+                        label: x.intl.string(x.t.gRSaOa),
                     },
                     {
                         value: w.kg4.NAVIGATE_FORWARD,
-                        label: L.intl.string(L.t.zOXpjU),
+                        label: x.intl.string(x.t.zOXpjU),
                     },
                     {
                         value: w.kg4.SWITCH_TO_VOICE_CHANNEL,
-                        label: L.intl.string(L.t.ty7Lxy),
+                        label: x.intl.string(x.t.ty7Lxy),
                     },
                     {
                         value: w.kg4.DISCONNECT_FROM_VOICE_CHANNEL,
-                        label: L.intl.string(L.t.CV7mT7),
+                        label: x.intl.string(x.t.CV7mT7),
                     },
                 ),
                 n &&
                     o.push(
                         {
                             value: w.kg4.SOUNDBOARD,
-                            label: L.intl.string(L.t.yPH4xm),
+                            label: x.intl.string(x.t.yPH4xm),
                         },
                         {
                             value: w.kg4.SOUNDBOARD_HOLD,
-                            label: L.intl.string(L.t["1xFbP/"]),
+                            label: x.intl.string(x.t["1xFbP/"]),
                         },
                     ),
                 r &&
                     (o.push({
                         value: w.kg4.SAVE_CLIP,
-                        label: L.intl.string(L.t.U4URzP),
+                        label: x.intl.string(x.t.U4URzP),
                     }),
                     i &&
                         o.push({
                             value: w.kg4.SAVE_SCREENSHOT,
-                            label: L.intl.string(L.t["+WloFH"]),
+                            label: x.intl.string(x.t["+WloFH"]),
                         }))),
             o
         );
@@ -334,29 +334,29 @@ class Y extends i.PureComponent {
     get keybindDescriptions() {
         let { overlaySupported: e, canGoLive: t, enableClips: n, enableScreenshotKeybind: r } = this.props,
             i = {
-                [w.kg4.UNASSIGNED]: L.intl.string(L.t.rvlNLv),
-                [w.kg4.PUSH_TO_MUTE]: L.intl.string(L.t.xtESim),
-                [w.kg4.PUSH_TO_TALK]: L.intl.string(L.t.wTcBSy),
-                [w.kg4.PUSH_TO_TALK_PRIORITY]: L.intl.string(L.t.FhHvWH),
-                [w.kg4.TOGGLE_MUTE]: L.intl.string(L.t.X2fbUm),
-                [w.kg4.TOGGLE_DEAFEN]: L.intl.string(L.t.MjREZV),
-                [w.kg4.TOGGLE_VOICE_MODE]: L.intl.string(L.t.snm5YW),
-                [w.kg4.TOGGLE_STREAMER_MODE]: L.intl.string(L.t.YszLLx),
+                [w.kg4.UNASSIGNED]: x.intl.string(x.t.rvlNLv),
+                [w.kg4.PUSH_TO_MUTE]: x.intl.string(x.t.xtESim),
+                [w.kg4.PUSH_TO_TALK]: x.intl.string(x.t.wTcBSy),
+                [w.kg4.PUSH_TO_TALK_PRIORITY]: x.intl.string(x.t.FhHvWH),
+                [w.kg4.TOGGLE_MUTE]: x.intl.string(x.t.X2fbUm),
+                [w.kg4.TOGGLE_DEAFEN]: x.intl.string(x.t.MjREZV),
+                [w.kg4.TOGGLE_VOICE_MODE]: x.intl.string(x.t.snm5YW),
+                [w.kg4.TOGGLE_STREAMER_MODE]: x.intl.string(x.t.YszLLx),
             };
         return (
             y.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind &&
-                (i[w.kg4.VAD_PRIORITY] = L.intl.string(L.t.rSe8IZ)),
-            (0, O.l)() && (i[w.kg4.TOGGLE_CAMERA] = L.intl.string(L.t.v1JBtL)),
-            e && (i[w.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = L.intl.string(L.t.IoP5vc)),
-            t && (0, C.isWindows)() && (i[w.kg4.TOGGLE_GO_LIVE_STREAMING] = L.intl.string(L.t.s4C238)),
+                (i[w.kg4.VAD_PRIORITY] = x.intl.string(x.t.rSe8IZ)),
+            (0, O.l)() && (i[w.kg4.TOGGLE_CAMERA] = x.intl.string(x.t.v1JBtL)),
+            e && (i[w.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = x.intl.string(x.t.IoP5vc)),
+            t && (0, C.isWindows)() && (i[w.kg4.TOGGLE_GO_LIVE_STREAMING] = x.intl.string(x.t.s4C238)),
             (0, C.isDesktop)() &&
-                ((i[w.kg4.NAVIGATE_BACK] = L.intl.string(L.t.nKDlEt)),
-                (i[w.kg4.NAVIGATE_FORWARD] = L.intl.string(L.t.DK0FFk)),
-                (i[w.kg4.SOUNDBOARD] = (0, C.isWindows)() ? L.intl.string(L.t["5wJefL"]) : L.intl.string(L.t.gzjsSP)),
-                (i[w.kg4.SOUNDBOARD_HOLD] = (0, C.isWindows)() ? L.intl.string(L.t.RRkZc9) : L.intl.string(L.t.laNlTl)),
+                ((i[w.kg4.NAVIGATE_BACK] = x.intl.string(x.t.nKDlEt)),
+                (i[w.kg4.NAVIGATE_FORWARD] = x.intl.string(x.t.DK0FFk)),
+                (i[w.kg4.SOUNDBOARD] = (0, C.isWindows)() ? x.intl.string(x.t["5wJefL"]) : x.intl.string(x.t.gzjsSP)),
+                (i[w.kg4.SOUNDBOARD_HOLD] = (0, C.isWindows)() ? x.intl.string(x.t.RRkZc9) : x.intl.string(x.t.laNlTl)),
                 n &&
-                    ((i[w.kg4.SAVE_CLIP] = L.intl.string(L.t.z3Wbam)),
-                    r && (i[w.kg4.SAVE_SCREENSHOT] = L.intl.string(L.t.m0zd57)))),
+                    ((i[w.kg4.SAVE_CLIP] = x.intl.string(x.t.z3Wbam)),
+                    r && (i[w.kg4.SAVE_SCREENSHOT] = x.intl.string(x.t.m0zd57)))),
             i
         );
     }
@@ -397,7 +397,7 @@ class Y extends i.PureComponent {
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/medium",
                     color: "text-secondary",
-                    children: L.intl.string(L.t.NoKjWP),
+                    children: x.intl.string(x.t.NoKjWP),
                 }),
             ],
         });
@@ -426,7 +426,7 @@ class Y extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(D.Z, {
-                    title: L.intl.string(L.t.T9DA2K),
+                    title: x.intl.string(x.t.T9DA2K),
                     children: C.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -439,7 +439,7 @@ class Y extends i.PureComponent {
                                               children: (0, r.jsx)(d.Button, {
                                                   size: "md",
                                                   onClick: this.handleAddKeybind,
-                                                  text: L.intl.string(L.t.zk6Xbs),
+                                                  text: x.intl.string(x.t.zk6Xbs),
                                                   variant: "primary",
                                               }),
                                           }),
@@ -457,15 +457,15 @@ class Y extends i.PureComponent {
                         : (0, r.jsx)(d.Wn, {
                               messageType: d.QYI.INFO,
                               className: M.browserNotice,
-                              children: L.intl.format(L.t.mPi3F3, { downloadLink: w.EYA.DOWNLOAD }),
+                              children: x.intl.format(x.t.mPi3F3, { downloadLink: w.EYA.DOWNLOAD }),
                           }),
                 }),
-                (0, r.jsx)(d.izJ, { className: j.marginBottom60 }),
+                (0, r.jsx)(d.izJ, { className: k.marginBottom60 }),
                 (0, r.jsxs)(d.Kqy, {
                     gap: 48,
                     children: [
                         (0, r.jsx)(d.C3N, {
-                            label: L.intl.string(L.t.Lz5KHI),
+                            label: x.intl.string(x.t.Lz5KHI),
                             children: (0, r.jsx)("div", {
                                 className: M.defaultKeybindGroup,
                                 children: (0, r.jsxs)("div", {
@@ -473,7 +473,7 @@ class Y extends i.PureComponent {
                                     children: [
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-md/normal",
-                                            children: L.intl.string(L.t.sMWLBj),
+                                            children: x.intl.string(x.t.sMWLBj),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: M.defaultKeybindShortcutGroup,

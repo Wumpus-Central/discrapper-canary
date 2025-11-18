@@ -29,11 +29,11 @@ var r = n(54381),
     P = n(171393),
     D = n(837268),
     w = n(32300),
-    x = n(371651),
-    L = n(398269),
+    L = n(371651),
+    x = n(398269),
     M = n(921801),
-    k = n(857192),
-    j = n(558724),
+    j = n(857192),
+    k = n(558724),
     U = n(808506),
     G = n(626135),
     B = n(709054),
@@ -47,9 +47,9 @@ var r = n(54381),
     z = n(726985),
     q = n(981631),
     X = n(908442),
-    Q = n(674336),
-    J = n(620842),
-    $ = n(197571);
+    Q = n(670873),
+    J = n(504401),
+    $ = n(10198);
 function ee(e, t, n) {
     return (
         t in e
@@ -663,9 +663,9 @@ function eu() {
     let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, S.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
-        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([k.default], () => ({
-            cssDebuggingEnabled: k.default.cssDebuggingEnabled,
-            layoutDebuggingEnabled: k.default.layoutDebuggingEnabled,
+        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([j.default], () => ({
+            cssDebuggingEnabled: j.default.cssDebuggingEnabled,
+            layoutDebuggingEnabled: j.default.layoutDebuggingEnabled,
         })),
         u = (0, C.Z)("highlight_void_toggleables"),
         f = (0, C.Z)("highlight_mana_components");
@@ -758,16 +758,16 @@ function ed() {
             disableAppCollectionsCache: s,
             preventPopoutClose: l,
             logKeyboardMismatches: c,
-        } = (0, d.cj)([k.default], () => ({
-            isTracingRequests: k.default.isTracingRequests,
-            isForcedCanary: k.default.isForcedCanary,
-            isAxeEnabled: k.default.isAxeEnabled,
-            isSourceMapsEnabled: k.default.sourceMapsEnabled,
-            isIdleStatusIndicatorEnabled: k.default.isIdleStatusIndicatorEnabled,
-            onlyShowPreviewAppCollections: k.default.onlyShowPreviewAppCollections,
-            disableAppCollectionsCache: k.default.disableAppCollectionsCache,
-            preventPopoutClose: k.default.preventPopoutClose,
-            logKeyboardMismatches: k.default.logKeyboardMismatches,
+        } = (0, d.cj)([j.default], () => ({
+            isTracingRequests: j.default.isTracingRequests,
+            isForcedCanary: j.default.isForcedCanary,
+            isAxeEnabled: j.default.isAxeEnabled,
+            isSourceMapsEnabled: j.default.sourceMapsEnabled,
+            isIdleStatusIndicatorEnabled: j.default.isIdleStatusIndicatorEnabled,
+            onlyShowPreviewAppCollections: j.default.onlyShowPreviewAppCollections,
+            disableAppCollectionsCache: j.default.disableAppCollectionsCache,
+            preventPopoutClose: j.default.preventPopoutClose,
+            logKeyboardMismatches: j.default.logKeyboardMismatches,
         })),
         u = (0, P.Z)("go_back_to_regular_input"),
         f = V.zY.useSetting();
@@ -892,11 +892,11 @@ function ef() {
         isLoggingOverlayEvents: t,
         isLoggingAnalyticsEvents: n,
         isAnalyticsDebuggerEnabled: i,
-    } = (0, d.cj)([k.default], () => ({
-        isLoggingGatewayEvents: k.default.isLoggingGatewayEvents,
-        isLoggingOverlayEvents: k.default.isLoggingOverlayEvents,
-        isLoggingAnalyticsEvents: k.default.isLoggingAnalyticsEvents,
-        isAnalyticsDebuggerEnabled: k.default.isAnalyticsDebuggerEnabled,
+    } = (0, d.cj)([j.default], () => ({
+        isLoggingGatewayEvents: j.default.isLoggingGatewayEvents,
+        isLoggingOverlayEvents: j.default.isLoggingOverlayEvents,
+        isLoggingAnalyticsEvents: j.default.isLoggingAnalyticsEvents,
+        isAnalyticsDebuggerEnabled: j.default.isAnalyticsDebuggerEnabled,
     }));
     return (0, r.jsx)(M.F, {
         setting: z.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
@@ -952,7 +952,7 @@ function ep(e) {
 }
 function eh() {
     let e = (0, w.XE)("developer_settings"),
-        t = (0, d.e7)([x.default], () => x.default.getForcedRenderMode()),
+        t = (0, d.e7)([L.default], () => L.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
         l = e || t === D.R5.OUT_OF_PROCESS_V3 || t === D.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
@@ -974,7 +974,7 @@ function eh() {
                                   ? (0, r.jsx)(p.Button, {
                                         variant: "primary",
                                         text: "Open Overlay",
-                                        onClick: () => (0, L.f)(),
+                                        onClick: () => (0, x.f)(),
                                     })
                                   : (0, r.jsx)(p.Button, {
                                         variant: "primary",
@@ -1095,7 +1095,7 @@ function eh() {
           });
 }
 function em() {
-    let e = (0, d.e7)([j.Z], () => j.Z.getSurveyOverride()),
+    let e = (0, d.e7)([k.Z], () => k.Z.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
         a = (e) => {
             e.preventDefault(), t.length > 0 ? E.Xq(t) : E.Xq(null);

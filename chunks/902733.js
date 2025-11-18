@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(315322),
     o = n(531578),
     c = n(388032),
-    d = n(62511);
+    d = n(985464);
 function u(e) {
     let { rating: t, onClick: n } = e,
         s = t === o.aZ.BAD ? l.kZ9 : l.lbB,
@@ -32,7 +32,7 @@ let p = function (e) {
         (e) => {
             l(),
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await n.e("80819").then(n.bind(n, 229612));
+                    let { default: i } = await n.e("11298").then(n.bind(n, 229612));
                     return (n) => {
                         var l, a;
                         return (0, r.jsx)(

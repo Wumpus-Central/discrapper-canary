@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854);
+n.d(t, { Z: () => j }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(981631),
     S = n(474936),
     A = n(388032),
-    C = n(387473);
+    C = n(79665);
 function N(e, t, n) {
     return (
         t in e
@@ -171,7 +171,7 @@ function w(e) {
         t.id,
     );
 }
-function x(e) {
+function L(e) {
     (0, u.ZDy)(
         async () => (t) =>
             (0, r.jsx)(
@@ -183,13 +183,13 @@ function x(e) {
             ),
     );
 }
-function L(e) {
+function x(e) {
     (0, u.ZDy)(async () => (t) => (0, r.jsx)(p.default, D(R({}, t), { guildBoostSlot: e })));
 }
 function M(e) {
     (0, u.ZDy)(async () => (t) => (0, r.jsx)(h.default, D(R({}, t), { guildBoostSlotId: e.id })));
 }
-let k = function (e) {
+let j = function (e) {
     let t,
         n,
         a,
@@ -203,8 +203,8 @@ let k = function (e) {
         N = p && !T,
         {
             appliedGuildBoostSlots: P,
-            unappliedGuildBoostSlots: k,
-            numActiveGuildBoostSlots: j,
+            unappliedGuildBoostSlots: j,
+            numActiveGuildBoostSlots: k,
             hasCooldownBoosts: U,
             allGuildBoostsAreOnCooldown: G,
         } = i.useMemo(() => {
@@ -230,7 +230,7 @@ let k = function (e) {
         }, [c]),
         B = null != _ ? y.ZP.getNumIncludedPremiumGuildSubscriptionSlots(_.planId) : 0,
         Z = Math.max(0, B - P.length),
-        F = j > B,
+        F = k > B,
         V = B === c.length,
         H = V ? Z : 1,
         Y = i.useMemo(() => {
@@ -248,9 +248,9 @@ let k = function (e) {
                 );
             return e;
         }, [H, v]),
-        W = i.useMemo(() => k.find((e) => e.isAvailable()), [k]);
-    if (0 === k.length) return null;
-    let K = k.length;
+        W = i.useMemo(() => j.find((e) => e.isAvailable()), [j]);
+    if (0 === j.length) return null;
+    let K = j.length;
     if (
         ((t = V
             ? A.intl.formatToPlainString(G ? A.t["3DW6Dc"] : A.t["/u15Qc"], { numUnappliedGuildBoostSlots: K })
@@ -334,7 +334,7 @@ let k = function (e) {
                                                 ),
                                                 {
                                                     disabled: null == W || N,
-                                                    onClick: null != W ? () => x(W) : void 0,
+                                                    onClick: null != W ? () => L(W) : void 0,
                                                 },
                                             ),
                                         ),
@@ -345,13 +345,13 @@ let k = function (e) {
                     (!V || U) &&
                         (0, r.jsx)("ul", {
                             className: C.unappliedBoostSlots,
-                            children: k.map((e) =>
+                            children: j.map((e) =>
                                 (0, r.jsx)(
                                     w,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: F,
-                                        onCancel: L,
+                                        onCancel: x,
                                         onUncancel: M,
                                         premiumSubscription: _,
                                         useReducedMotion: v,

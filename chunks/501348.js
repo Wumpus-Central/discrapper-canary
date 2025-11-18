@@ -29,11 +29,11 @@ var r = n(54381),
     P = n(594174),
     D = n(358085),
     w = n(210887),
-    x = n(740492),
-    L = n(695346),
+    L = n(740492),
+    x = n(695346),
     M = n(313789),
-    k = n(329013),
-    j = n(333859),
+    j = n(329013),
+    k = n(333859),
     U = n(273313),
     G = n(518596),
     B = n(726985),
@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(921944),
     V = n(959517),
     H = n(388032),
-    Y = n(226518),
-    W = n(197571);
+    Y = n(5874),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -198,7 +198,7 @@ let Q = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(k.g, {}),
+                (0, r.jsx)(j.g, {}),
             ],
         }),
     ei = () =>
@@ -299,7 +299,7 @@ class ea extends i.Component {
                   label: H.intl.string(H.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(er, {}),
-                      children: (0, r.jsx)(k.i, {}),
+                      children: (0, r.jsx)(j.i, {}),
                   }),
               });
     }
@@ -321,7 +321,7 @@ class ea extends i.Component {
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => L.hg.updateSetting(e),
+            onChange: (e) => x.hg.updateSetting(e),
             value: e,
         });
     }
@@ -358,7 +358,7 @@ class ea extends i.Component {
             }),
             n = (0, r.jsx)(N.F, {
                 setting: B.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(j.c, {}),
+                children: (0, r.jsx)(k.c, {}),
             }),
             i = [
                 {
@@ -458,11 +458,11 @@ class ea extends i.Component {
             }),
             K(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                L.jU.updateSetting(t === J), (0, h.ZZ)();
+                x.jU.updateSetting(t === J), (0, h.ZZ)();
             }),
             K(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && L.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && x.YC.updateSetting(t);
             });
     }
 }
@@ -474,12 +474,12 @@ let eo = (e) => {
         });
 };
 function es() {
-    let e = L.jU.useSetting(),
-        t = L.RS.useSetting(),
-        n = L.NA.useSetting(),
-        a = L.L1.useSetting(),
-        o = L.hg.useSetting(),
-        c = L.YC.useSetting(),
+    let e = x.jU.useSetting(),
+        t = x.RS.useSetting(),
+        n = x.NA.useSetting(),
+        a = x.L1.useSetting(),
+        o = x.hg.useSetting(),
+        c = x.YC.useSetting(),
         u = O.y.useConfig({ location: "UserSettingsAppearance" }).enabled,
         d = (0, E.T)("UserSettingsAppearance");
     (0, _.ZP)(() => {
@@ -493,16 +493,16 @@ function es() {
             d && eo(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [d]);
     let f = (0, R.A6)(),
-        p = (0, s.cj)([w.Z, x.ZP, m.Z, P.default, b.Z], () => {
+        p = (0, s.cj)([w.Z, L.ZP, m.Z, P.default, b.Z], () => {
             var e, t;
             return {
                 theme: w.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: x.ZP.useSystemTheme,
+                useSystemTheme: L.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,
                 zoom: m.Z.zoom,
                 messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: x.ZP.displayCompactAvatars,
+                displayCompactAvatars: L.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: b.Z.gradientPreset,
             };

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
-var i = n(956636);
+var i = n(82977);
 function a(e) {
     let { games: t, renderGame: n } = e;
     return (0, r.jsx)("ul", {

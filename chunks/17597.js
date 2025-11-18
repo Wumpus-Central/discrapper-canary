@@ -17,9 +17,9 @@ var a = n(54381),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(760902),
+    _ = n(662653),
     y = n(388032),
-    C = n(70402),
+    C = n(450192),
     S = n(736056);
 function E(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -47,14 +47,14 @@ function E(e) {
 let O = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: T } = e,
         [N, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        w = l.useRef(N),
-        [I, k] = (0, c.US)([N], void 0, !0),
+        I = l.useRef(N),
+        [w, k] = (0, c.US)([N], void 0, !0),
         R = l.useMemo(() => (0, r.Z)(), []),
         A = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
-        w.current = I;
-    }, [I]);
+        I.current = w;
+    }, [w]);
     let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
         onClose: () => {
             null == j || j(), u();
@@ -68,7 +68,7 @@ let O = function (e) {
         l.useLayoutEffect(
             () => () => {
                 if (A.current) return;
-                let e = w.current;
+                let e = I.current;
                 null != e &&
                     ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({

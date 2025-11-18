@@ -26,8 +26,8 @@ var a = n(54381),
     T = n(899007),
     N = n(648052),
     P = n(867176),
-    w = n(537006),
-    I = n(483424),
+    I = n(537006),
+    w = n(483424),
     k = n(681837),
     R = n(638970),
     A = n(502762),
@@ -56,8 +56,8 @@ var a = n(54381),
     ea = n(228168),
     el = n(671955),
     er = n(388032),
-    ei = n(54482),
-    es = n(116649);
+    ei = n(138005),
+    es = n(593540);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -115,8 +115,8 @@ function ec(e) {
         eT = F.Sb.useSetting(),
         eN = (0, $.I)(ey),
         eP = (0, q.g)(n),
-        ew = (0, v.Z)({ analyticsLocations: eg }),
-        eI = (0, H.I5)(t),
+        eI = (0, v.Z)({ analyticsLocations: eg }),
+        ew = (0, H.I5)(t),
         ek = (0, h.p)({ location: "UserProfileAccountPopout" }),
         eR = (0, C.b)({ location: "UserProfileAccountPopout" }),
         eA = l.useRef(null),
@@ -151,8 +151,8 @@ function ec(e) {
             eH(en.L.USER_DISMISS), n();
         }, [eH, n]),
         eq = l.useCallback(() => {
-            (ep && null != em) || (ew(), eK());
-        }, [ew, eK, ep, em]),
+            (ep && null != em) || (eI(), eK());
+        }, [eI, eK, ep, em]),
         eY = ep && null != em,
         eJ = (0, K.K)(em, eg, eW, n, eK),
         eX = (0, y.k)({ location: "UserProfileAccountPopout" });
@@ -245,8 +245,8 @@ function ec(e) {
                                                 n(), eF({ section: ea.oh.WIDGETS });
                                             },
                                         }),
-                                    (0, a.jsx)(w.Z, {
-                                        isPremiumUser: eI,
+                                    (0, a.jsx)(I.Z, {
+                                        isPremiumUser: ew,
                                         onInteraction: n,
                                     }),
                                     eR
@@ -256,7 +256,7 @@ function ec(e) {
                                               onOpenUserProfileModal: eF,
                                               onClose: n,
                                           })
-                                        : (0, a.jsx)(I.Z, {
+                                        : (0, a.jsx)(w.Z, {
                                               user: t,
                                               currentUser: t,
                                               onClose: n,

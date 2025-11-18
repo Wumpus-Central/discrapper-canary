@@ -31,8 +31,8 @@ var i = n(54381),
     A = n(981631),
     w = n(921944),
     M = n(388032),
-    R = n(787267),
-    L = n(334405),
+    R = n(34101),
+    L = n(515527),
     k = n(977007);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -79,7 +79,7 @@ function U(e, t) {
 }
 function B(e) {
     var t, n, l, o;
-    let { channel: B, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: F, setPopoutRef: V } = e,
+    let { channel: B, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: V, setPopoutRef: F } = e,
         G = r.useRef(null),
         z = (0, u.e7)([v.Z], () => v.Z.getCustomHangStatus()),
         W = (0, E.Z)(),
@@ -122,8 +122,8 @@ function B(e) {
             en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? H(!0) : H(!1);
         }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, H, en]),
         r.useEffect(() => {
-            null == V || V(null == J ? void 0 : J.current);
-        }, [J, V]);
+            null == F || F(null == J ? void 0 : J.current);
+        }, [J, F]);
     let eg = r.useCallback(
             (e) => {
                 e !== er && ((0, y.Zx)(e, !0), null != ee && et(null), "" !== Q.trim() && $(""));
@@ -297,7 +297,7 @@ function B(e) {
                                             setCustomStatusEmoji: et,
                                             selectedDefaultStatus: en || eh ? null : er,
                                             defaultStatusVariant: K,
-                                            setIsEmojiPickerOpen: F,
+                                            setIsEmojiPickerOpen: V,
                                         }),
                                     },
                                     trailing:

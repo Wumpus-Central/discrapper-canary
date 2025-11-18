@@ -17,41 +17,41 @@ var r = n(54381),
     x = n(100527),
     v = n(906732),
     j = n(594190),
-    b = n(695346),
-    S = n(131951),
+    S = n(695346),
+    b = n(131951),
     y = n(19780),
     C = n(594174),
     O = n(449224),
     w = n(358085),
     P = n(74538),
-    T = n(299570),
-    Z = n(960861),
-    I = n(989941),
-    E = n(562224),
+    Z = n(299570),
+    I = n(960861),
+    E = n(989941),
+    T = n(562224),
     N = n(544753),
-    R = n(853030),
-    A = n(560749),
+    A = n(853030),
+    R = n(560749),
     M = n(485299),
     k = n(615161),
     D = n(289989),
-    B = n(328242),
-    L = n(565574),
+    L = n(328242),
+    B = n(565574),
     G = n(286420),
-    U = n(173044),
+    U = n(51708),
     F = n(801604),
     H = n(577257),
     W = n(70722),
-    z = n(604415),
+    z = n(266734),
     V = n(388032),
-    J = n(468918);
+    J = n(374079);
 function X(e) {
     var t;
     let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: X = [], selectSource: K = !0 } = e,
-        Y = i.useRef(performance.now()),
-        q = (0, u.e7)(
-            [S.Z],
+        q = i.useRef(performance.now()),
+        Y = (0, u.e7)(
+            [b.Z],
             () =>
-                S.Z.getUseSystemScreensharePicker() &&
+                b.Z.getUseSystemScreensharePicker() &&
                 ((0, w.isLinux)() ||
                     ((0, w.isMac)() && a().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, W.jR))),
         ),
@@ -60,13 +60,13 @@ function X(e) {
         ee = (0, N.Z)(),
         { state: et, dispatch: en } = (0, k.Ti)(o, $, ee),
         er = (0, m.Z)((0, w.isWindows)() && null != o && K ? "confirm" : "source_select");
-    (0, H.Z)(q, en, "confirm" === er);
+    (0, H.Z)(Y, en, "confirm" === er);
     let ei = !P.ZP.canStreamQuality(P.ZP.StreamQuality.HIGH, $),
         el = !(0, w.isLinux)(),
         es = "confirm" === er,
         eo = !K && null != o && !es,
         ea = es || et.sourceType === d.vA.CAMERA,
-        ec = q && et.sourceType !== d.vA.CAMERA,
+        ec = Y && et.sourceType !== d.vA.CAMERA,
         ed = i.useMemo(() => {
             let e = [
                 {
@@ -81,7 +81,7 @@ function X(e) {
                 },
             ];
             return (
-                q ||
+                Y ||
                     e.splice(1, 0, {
                         name: V.intl.string(V.t.slM8rG),
                         value: d.vA.SCREEN,
@@ -89,18 +89,18 @@ function X(e) {
                     }),
                 e
             );
-        }, [q]),
+        }, [Y]),
         { sourceType: eu } = et,
         ef = i.useCallback(
             async (e) => {
-                b.eo.updateSetting(et.notifyFriends), b.I0.updateSetting(et.hidePreview);
-                let [t, r] = await (0, E.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
+                S.eo.updateSetting(et.notifyFriends), S.I0.updateSetting(et.hidePreview);
+                let [t, r] = await (0, T.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: et.preset,
                     fps: et.fps,
                     resolution: et.resolution,
                     soundshareEnabled: !et.muteStreamAudio,
                     previewDisabled: et.hidePreview,
-                    goLiveModalDurationMs: performance.now() - Y.current,
+                    goLiveModalDurationMs: performance.now() - q.current,
                     audioSourceId: et.audioSourceId,
                     analyticsLocations: Q,
                 });
@@ -121,7 +121,7 @@ function X(e) {
         var e;
         ef({
             id: "prepicked:" + et.nativeSourceType,
-            name: null != (e = Z.ZP.getLastPickedContentTitle()) ? e : V.intl.string(V.t.KKcy95),
+            name: null != (e = I.ZP.getLastPickedContentTitle()) ? e : V.intl.string(V.t.KKcy95),
             url: "",
         });
     }, [ef, et.nativeSourceType]);
@@ -138,7 +138,7 @@ function X(e) {
                     impressionProperties: {
                         location_stack: Q,
                         application_id: (0, w.isWindows)()
-                            ? null == (t = (0, I.Z)(j.ZP, O.Z))
+                            ? null == (t = (0, E.Z)(j.ZP, O.Z))
                                 ? void 0
                                 : t.id
                             : void 0,
@@ -148,13 +148,13 @@ function X(e) {
             },
             children: (0, r.jsxs)("div", {
                 className: s()(J.root, {
-                    [J.nativePicker]: q && null == o,
+                    [J.nativePicker]: Y && null == o,
                     [J.channelSelector]: eo,
                     [J.confirmStep]: es,
                 }),
                 children: [
                     eo
-                        ? (0, r.jsx)(A.Z, {
+                        ? (0, r.jsx)(R.Z, {
                               className: s()(J.channelSelectorComponent, J.withFooter),
                               onSelectChannel: ep,
                           })
@@ -182,9 +182,9 @@ function X(e) {
                                     (0, r.jsx)(f.w0Z, {
                                         className: J.content,
                                         children:
-                                            q && eu !== d.vA.CAMERA
+                                            Y && eu !== d.vA.CAMERA
                                                 ? (0, r.jsx)(D.Z, { onSourceSelect: eh })
-                                                : (0, r.jsx)(B.Z, {
+                                                : (0, r.jsx)(L.Z, {
                                                       onClick: function (e) {
                                                           var t;
                                                           (null == (t = e.id) ? void 0 : t.startsWith(d.vA.CAMERA))
@@ -211,10 +211,10 @@ function X(e) {
                                             ei && (0, r.jsx)(G.Z, { onClose: n }),
                                             ec &&
                                                 !ea &&
-                                                (0, r.jsx)(R.Z, {
+                                                (0, r.jsx)(A.Z, {
                                                     mainCTADisabled: !el && "" === et.nativeSourceType,
                                                     mainCTAOnClick: () => {
-                                                        (0, T.t)(), (0, T.T)(et.nativeSourceType);
+                                                        (0, Z.t)(), (0, Z.T)(et.nativeSourceType);
                                                     },
                                                     align: "right",
                                                     ctaText: V.intl.string(V.t.FiBjwU),
@@ -222,7 +222,7 @@ function X(e) {
                                                 }),
                                             ea &&
                                                 !ec &&
-                                                (0, r.jsx)(R.Z, {
+                                                (0, r.jsx)(A.Z, {
                                                     mainCTADisabled: null == et.selectedSource,
                                                     mainCTAOnClick: () => {
                                                         null != et.selectedChannel
@@ -233,7 +233,7 @@ function X(e) {
                                                     hideOptionsButton: !ei,
                                                     ctaText: V.intl.string(z.default["5AyH/p"]),
                                                 }),
-                                            (!ei || !(ea || ec)) && (0, r.jsx)(L.Z, { align: "right" }),
+                                            (!ei || !(ea || ec)) && (0, r.jsx)(B.Z, { align: "right" }),
                                         ],
                                     }),
                                 ],

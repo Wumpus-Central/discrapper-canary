@@ -88,7 +88,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
+n(521510);
 let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function A(e) {
     var t,
@@ -110,8 +110,8 @@ function A(e) {
             canSelect: P = !0,
             autoplay: D,
             registerInnerRef: w,
-            registerAnimatedElementRef: x,
-            surrogate: L,
+            registerAnimatedElementRef: L,
+            surrogate: x,
         } = e,
         M = I(e, [
             "src",
@@ -133,7 +133,7 @@ function A(e) {
             "registerAnimatedElementRef",
             "surrogate",
         ]);
-    let [k, j] = i.useState(!1),
+    let [j, k] = i.useState(!1),
         [U, G] = i.useState(void 0),
         B = i.useRef(void 0),
         { triggerAnimation: Z, untriggerAnimation: F } = i.useContext(u.Rm),
@@ -148,13 +148,13 @@ function A(e) {
                 let e = !0 === C && Y;
                 return h.ZP.getEmojiURL({
                     id: f,
-                    animated: H && !0 === O && (e || k || !0 === A),
+                    animated: H && !0 === O && (e || j || !0 === A),
                     size: W,
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, p, W, H, k, A, C, a]),
+        }, [O, Y, f, p, W, H, j, A, C, a]),
         q = i.useCallback(() => {
             null != z &&
                 (B.current = (0, d.po)(z, (e) => {
@@ -163,13 +163,13 @@ function A(e) {
         }, [z]),
         X = i.useCallback(
             (e) => {
-                O && j(!0), null == f && Z(p), null == N || N(e);
+                O && k(!0), null == f && Z(p), null == N || N(e);
             },
             [O, p, N, Z, f],
         ),
         Q = i.useCallback(
             (e) => {
-                O && j(!1), null == f && F(p), null == R || R(e);
+                O && k(!1), null == f && F(p), null == R || R(e);
             },
             [O, f, p, R, F],
         ),
@@ -195,9 +195,9 @@ function A(e) {
     );
     let $ = i.useCallback(
             (e) => {
-                (K.current = e), null == w || w(e), null == x || x(e);
+                (K.current = e), null == w || w(e), null == L || L(e);
             },
-            [w, x],
+            [w, L],
         ),
         ee = (0, l.Z)(K);
     return null == z || "" === z
@@ -206,7 +206,7 @@ function A(e) {
               v(y({}, J), {
                   ref: $,
                   className: o()("emoji", "emoji-text"),
-                  children: null != L ? L : p,
+                  children: null != x ? x : p,
               }),
           )
         : (0, r.jsxs)(r.Fragment, {

@@ -65,7 +65,7 @@ function u(e) {
 let d = (e) => {
     let { analyticsLocations: t, initialSelectedDecoration: a, isTryItOut: o, guild: l, onClose: u } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e("79589"), n.e("87510")]).then(n.bind(n, 235400));
+        let { default: e } = await Promise.all([n.e("79589"), n.e("1517")]).then(n.bind(n, 235400));
         return (n) =>
             (0, r.jsx)(
                 e,

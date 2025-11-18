@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(981631),
     R = n(231338),
     P = n(388032),
-    D = n(85468);
+    D = n(419953);
 function w(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,11 +57,11 @@ function x(e) {
     }
     return e;
 }
-let L = "8px",
+let x = "8px",
     M = "11px",
-    k = 222;
-function j(e) {
-    var t, I, w, j, U;
+    j = 222;
+function k(e) {
+    var t, I, w, k, U;
     let {
             quest: G,
             memberListItemRef: B,
@@ -137,7 +137,7 @@ function j(e) {
         ec = () => {
             ea.dispatch(N.CkL.POPOUT_CLOSE);
         },
-        eu = "top" === F ? "".concat(L, " ").concat(L, " 0 0") : "0 0 ".concat(L, " ").concat(L),
+        eu = "top" === F ? "".concat(x, " ").concat(x, " 0 0") : "0 0 ".concat(x, " ").concat(x),
         ed = () => {
             (0, E._3)({
                 questId: G.id,
@@ -182,7 +182,7 @@ function j(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              x(
+                              L(
                                   {
                                       username: null != W ? W : "",
                                       onConfirm: () => (
@@ -244,7 +244,7 @@ function j(e) {
         "aria-expanded": er,
         className: D.wrapper,
         style: {
-            width: null != (U = null == (j = B.current) ? void 0 : j.clientWidth) ? U : k,
+            width: null != (U = null == (k = B.current) ? void 0 : k.clientWidth) ? U : j,
             height: es.height,
             overflow: er ? "visible" : "hidden",
             borderRadius: eu,
@@ -346,6 +346,6 @@ function U(e) {
         questContent: y.jn.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
         sourceQuestContent: y.jn.MEMBERS_LIST,
-        children: (t) => (0, r.jsx)(j, x({ impressionRef: t }, e)),
+        children: (t) => (0, r.jsx)(k, L({ impressionRef: t }, e)),
     });
 }

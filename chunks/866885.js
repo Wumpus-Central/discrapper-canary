@@ -29,12 +29,12 @@ var r = n(54381),
     P = n(208156),
     D = n(748492),
     w = n(701488),
-    x = n(918559),
-    L = n(981631),
+    L = n(918559),
+    x = n(981631),
     M = n(354459),
-    k = n(505386),
-    j = n(186880),
-    U = n(315091);
+    j = n(51434),
+    k = n(533362),
+    U = n(285236);
 function G(e, t, n) {
     return (
         t in e
@@ -125,7 +125,7 @@ function V(e) {
         $ = W || null != q,
         ee = (0, R.Z)(null == _ ? void 0 : _.id),
         et = ee && (null == Q ? void 0 : Q.type) !== M.fO.ACTIVITY,
-        en = !ee && V === x.Ez.PIP,
+        en = !ee && V === L.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
         ea = ei && null != O.Z.pipVideoWindow && null != O.Z.pipActivityWindow;
@@ -140,7 +140,7 @@ function V(e) {
                         instanceId: B.compositeInstanceId,
                     }),
                 );
-            let t = null != (e = _.getGuildId()) ? e : L.ME;
+            let t = null != (e = _.getGuildId()) ? e : x.ME;
             d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
         }
         null == q && (0, f.Ou)();
@@ -173,7 +173,7 @@ function V(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            eo(), (0, T.tg)(x.Ez.PANEL);
+                            eo(), (0, T.tg)(L.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,
@@ -188,7 +188,7 @@ function V(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: k.clickShield,
+                                  className: j.clickShield,
                                   onDoubleClick: eo,
                               }),
                               (0, r.jsx)(D.YB, {
@@ -242,14 +242,14 @@ function V(e) {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(k.root, {
-                        [k.pipMode]: ei,
+                    className: o()(j.root, {
+                        [j.pipMode]: ei,
                         [U.elevationHigh]: ei,
-                        [j.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [k.pipModeShort]: ei && !C,
-                        [k.pipModeTall]: ei && C,
-                        [k.hidden]: z,
-                        [k.multiPIPMode]: ea,
+                        [k.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
+                        [j.pipModeShort]: ei && !C,
+                        [j.pipModeTall]: ei && C,
+                        [j.hidden]: z,
+                        [j.multiPIPMode]: ea,
                     }),
                     noBorder: !ei,
                     children: [
@@ -265,9 +265,9 @@ function V(e) {
                         }),
                         p || F
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
                                   }),
                               })
                             : (0, r.jsx)(P.J, {
@@ -275,10 +275,10 @@ function V(e) {
                                   referrerPolicy: w.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: eu,
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
-                                      [k.pipNonInteractive]:
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
+                                      [j.pipNonInteractive]:
                                           ei && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !ei && W,

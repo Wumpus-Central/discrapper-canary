@@ -16,8 +16,8 @@ var r = n(54381),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(88406),
-    O = n(147164);
+    y = n(308274),
+    O = n(714892);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,
         I = u.JH.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
@@ -32,8 +32,8 @@ function v(e) {
         P = [];
     I && P.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
     let [D, w] = (0, c.US)(P),
-        x = D === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
-        L = (0, i.useCallback)(() => {
+        L = D === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+        x = (0, i.useCallback)(() => {
             w(E.L.TAKE_ACTION),
                 _.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
                 (0, d.I)({
@@ -44,15 +44,15 @@ function v(e) {
         M = (0, i.useCallback)(() => {
             (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),
-        k = (0, i.useCallback)(() => {
+        j = (0, i.useCallback)(() => {
             (0, f.N_)(null);
         }, []),
-        j = void 0 !== N || (null != n ? null != C : null != A);
-    if (!I && !j) return null;
+        k = void 0 !== N || (null != n ? null != C : null != A);
+    if (!I && !k) return null;
     let U = void 0 !== N ? N : C;
     return (0, r.jsx)(m.Z, {
         title: b.intl.string(y.default["86GtGH"]),
-        titleIcon: x
+        titleIcon: L
             ? (0, r.jsx)(o.IGR, {
                   text: b.intl.string(b.t.y2b7CA),
                   className: O.newBadge,
@@ -69,10 +69,10 @@ function v(e) {
                         variant: "primary",
                         size: "sm",
                         text: b.intl.string(y.default.vJqrIg),
-                        onClick: L,
+                        onClick: x,
                     }),
                 null == n &&
-                    j &&
+                    k &&
                     (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
@@ -85,7 +85,7 @@ function v(e) {
                         variant: "secondary",
                         size: "sm",
                         text: b.intl.string(y.default["j/KRxc"]),
-                        onClick: k,
+                        onClick: j,
                     }),
             ],
         }),

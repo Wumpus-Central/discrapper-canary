@@ -19,7 +19,7 @@ var r = n(54381),
     g = n(626135),
     E = n(153066),
     b = n(981631),
-    y = n(855364);
+    y = n(21874);
 function O(e, t, n) {
     return (
         t in e
@@ -143,7 +143,7 @@ function N(e) {
                   : null;
         }),
         w = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
-        x = (0, a.e7)([c.Z], () => {
+        L = (0, a.e7)([c.Z], () => {
             if (null != t)
                 if (null != t.application_id) return c.Z.getApplication(t.application_id);
                 else return c.Z.getApplicationByName(t.name);
@@ -169,7 +169,7 @@ function N(e) {
               T(v({}, I), {
                   activity: t,
                   user: n,
-                  application: x,
+                  application: L,
                   hideHeader: y,
                   activityGuild: null != D ? D : w,
                   showChannelDetails: O,

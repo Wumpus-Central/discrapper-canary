@@ -34,11 +34,11 @@ var i = n(120356),
     P = n(52741),
     D = n(474936),
     w = n(388032),
-    x = n(1721),
-    L = n(895601),
+    L = n(518520),
+    x = n(895601),
     M = n(381126),
-    k = n(234286);
-function j(e, t, n) {
+    j = n(234286);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -109,15 +109,15 @@ function Z(e) {
         S = null != T,
         A = (0, c.ap)((0, d.ZP)()),
         w = (0, y.yc)({ location: "PremiumBrandRefreshTierCards" }),
-        L = (0, r.jsxs)(r.Fragment, {
+        x = (0, r.jsxs)(r.Fragment, {
             children: [
                 S &&
                     (0, r.jsx)(C.E, {
                         text: T,
-                        className: x.pill,
+                        className: L.pill,
                     }),
                 (0, r.jsx)(g.Z, {
-                    className: x.wordmark,
+                    className: L.wordmark,
                     color: A ? "black" : "white",
                 }),
                 (0, r.jsx)(P.Z, {
@@ -130,9 +130,9 @@ function Z(e) {
                     enablePremiumBrandRefresh: !0,
                     headingVariant: "text-md/medium",
                     headingColor: "text-primary",
-                    headerClassName: x.priceHeader,
+                    headerClassName: L.priceHeader,
                 }),
-                (0, r.jsx)("hr", { className: x.divider }),
+                (0, r.jsx)("hr", { className: L.divider }),
                 (0, r.jsx)(R.ql, {
                     enablePremiumBrandRefresh: !0,
                     isApplicationHome: _,
@@ -143,12 +143,12 @@ function Z(e) {
     return w
         ? (0, r.jsx)(u.$1m, {
               color: "nitro-green",
-              className: a()(x.card, x.tier0, o, { [x.pillMargin]: !_ && S }),
-              children: L,
+              className: a()(L.card, L.tier0, o, { [L.pillMargin]: !_ && S }),
+              children: x,
           })
         : (0, r.jsx)("div", {
-              className: a()(x.card, x.tier0, o, { [x.pillMargin]: !_ && S }),
-              children: L,
+              className: a()(L.card, L.tier0, o, { [L.pillMargin]: !_ && S }),
+              children: x,
           });
 }
 function F(e) {
@@ -166,10 +166,10 @@ function F(e) {
             isApplicationHome: T = !1,
         } = e,
         S = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-        j = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         U = (0, I.N)(),
         G = null == U || null == (t = U.subscription_trial) ? void 0 : t.sku_id,
-        B = (null == S ? void 0 : S.hasActiveTrial) ? (null == j ? void 0 : j.premiumType) : null,
+        B = (null == S ? void 0 : S.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
         Z = (0, v.N)(),
         F = (0, b.t7)(),
         V = null != G || null != B ? D.C.PREMIUM_TRIAL : null != Z || F ? D.C.PREMIUM_DISCOUNT : null,
@@ -181,31 +181,31 @@ function F(e) {
                     (0, r.jsx)("img", {
                         src: M,
                         alt: "",
-                        className: a()(x.bigCloud, x[y]),
+                        className: a()(L.bigCloud, L[y]),
                     }),
                     (0, r.jsx)("img", {
-                        src: L,
+                        src: x,
                         alt: "",
-                        className: a()(x.smallCloud, x[y]),
+                        className: a()(L.smallCloud, L[y]),
                     }),
                     (0, r.jsx)("img", {
-                        src: k,
+                        src: j,
                         alt: "",
-                        className: a()(x.wumpus, x[y]),
+                        className: a()(L.wumpus, L[y]),
                     }),
                 ],
             });
     return (0, r.jsxs)(u.$1m, {
         color: "nitro-pink",
-        className: a()(x.card, l, { [x.withGiftBanner]: g }),
+        className: a()(L.card, l, { [L.withGiftBanner]: g }),
         children: [
             (0, r.jsx)(W, {}),
             (0, r.jsx)(C.E, {
                 text: null != Y ? Y : w.intl.string(w.t["6bEcYr"]),
-                className: x.pill,
+                className: L.pill,
             }),
             (0, r.jsx)(E.Z, {
-                className: x.wordmark,
+                className: L.wordmark,
                 color: H ? "black" : "white",
             }),
             (0, r.jsx)(P.Z, {
@@ -218,16 +218,16 @@ function F(e) {
                 enablePremiumBrandRefresh: !0,
                 headingVariant: "text-md/medium",
                 headingColor: "text-primary",
-                headerClassName: x.priceHeader,
+                headerClassName: L.priceHeader,
             }),
-            (0, r.jsx)("hr", { className: x.divider }),
+            (0, r.jsx)("hr", { className: L.divider }),
             (0, r.jsx)(R.nT, {
                 featureSet: o,
                 isModal: _,
                 isGift: f,
                 enablePremiumBrandRefresh: !0,
                 isApplicationHome: T,
-                firstFeatureItemClassName: "inCard" === y ? x.firstFeatureItemContainer : void 0,
+                firstFeatureItemClassName: "inCard" === y ? L.firstFeatureItemContainer : void 0,
             }),
             n,
             g && (0, r.jsx)(O.f, {}),
@@ -244,7 +244,7 @@ let V = (e) => {
         }),
         { disabled: _ } = d,
         p = (0, r.jsx)("div", {
-            className: x.CTAButton,
+            className: L.CTAButton,
             children: (0, r.jsx)(
                 l.zxk,
                 B(
@@ -260,12 +260,12 @@ let V = (e) => {
             ),
         }),
         h = (0, r.jsx)("div", {
-            className: a()({ [x.premiumCardHover]: !n }),
+            className: a()({ [L.premiumCardHover]: !n }),
             children: (0, r.jsx)(
                 c,
                 U(
                     {
-                        className: x.applicationHomeCard,
+                        className: L.applicationHomeCard,
                         ctaButton: p,
                         showYearlyPrice: !0,
                         isApplicationHome: !0,
@@ -299,27 +299,27 @@ function H(e) {
     return (0, r.jsx)(p.Gt, {
         value: i,
         children: (0, r.jsxs)("div", {
-            className: a()(x.premiumCardsContainer, n),
+            className: a()(L.premiumCardsContainer, n),
             children: [
                 (0, r.jsx)(o.X, {
                     variant: "display-md",
                     color: "header-primary",
-                    className: x.premiumCardsHeader,
+                    className: L.premiumCardsHeader,
                     children: w.intl.string(w.t.vLz3Zs),
                 }),
                 (0, r.jsxs)("div", {
                     ref: l,
-                    className: x.premiumCards,
+                    className: L.premiumCards,
                     children: [
                         (0, r.jsx)(V, {
                             subscriptionTier: D.Si.TIER_0,
                             isReducedMotion: c,
-                            className: x.tier0CardOrder,
+                            className: L.tier0CardOrder,
                         }),
                         (0, r.jsx)(V, {
                             subscriptionTier: D.Si.TIER_2,
                             isReducedMotion: c,
-                            className: x.tier2CardOrder,
+                            className: L.tier2CardOrder,
                             tierCardProps: { wumpusPosition: "inCorner" },
                         }),
                     ],

@@ -1,5 +1,8 @@
 e.exports = {
-    container: "container_a28278",
-    switchIndicator: "switchIndicator_a28278",
-    thumb: "thumb_a28278",
+    container: "container__0b406",
+    loadedContentContainer: "loadedContentContainer__0b406",
+    iframeAndHeaderContainer: "iframeAndHeaderContainer__0b406",
+    headerContainer: "headerContainer__0b406",
+    iframeContainer: "iframeContainer__0b406",
+    iframe: "iframe__0b406",
 };

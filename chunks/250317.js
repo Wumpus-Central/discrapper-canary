@@ -22,7 +22,7 @@ var a = n(54381),
     P = n(939716),
     j = n(231338),
     S = n(388032),
-    k = n(424215);
+    k = n(73262);
 function y(e) {
     var t, n, r, l;
     let { sku: i, guildId: o, shouldShowShopLink: u, onClose: d } = e;

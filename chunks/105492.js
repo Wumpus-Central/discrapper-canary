@@ -1,22 +1,7 @@
-t(864733)(r, "__esModule", { value: !0 }),
-    (r.default = void 0),
-    (r.default = {
-        abstract: !1,
-        accessibleNameRequired: !1,
-        baseConcepts: [],
-        childrenPresentational: !1,
-        nameFrom: ["author"],
-        prohibitedProps: [],
-        props: {},
-        relatedConcepts: [
-            {
-                concept: { name: "math" },
-                module: "HTML",
-            },
-        ],
-        requireContextRole: [],
-        requiredContextRole: [],
-        requiredOwnedElements: [],
-        requiredProps: {},
-        superClass: [["roletype", "structure", "section"]],
-    });
+e.exports = {
+    container: "container__99486",
+    preview: "preview__99486",
+    disabled: "disabled__99486",
+    icon: "icon__99486",
+    uploaderIcon: "uploaderIcon__99486",
+};

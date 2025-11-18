@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    C = n(999642);
+    C = n(39162);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,17 +97,17 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let L = (e) => {
+let x = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: a,
             onSelect: N,
             onSelectSoundmoji: P,
-            onInspect: x,
-            surrogateCodePoint: L,
+            onInspect: L,
+            surrogateCodePoint: x,
             getEmojiItemProps: M,
-            getEmojiRowProps: k,
-            isScrolling: j,
+            getEmojiRowProps: j,
+            isScrolling: k,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
             allowAnimatedEmoji: B,
@@ -170,7 +170,7 @@ let L = (e) => {
                         b = w(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            j.current || U.current || x(e);
+                            k.current || U.current || L(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -203,7 +203,7 @@ let L = (e) => {
                         a = el.rowIndex === t && el.columnIndex === i,
                         o = (t) => {
                             t.stopPropagation(),
-                                j.current ||
+                                k.current ||
                                     U.current ||
                                     (N(e, {
                                         isFinalSelection: !0,
@@ -247,7 +247,7 @@ let L = (e) => {
                     if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
-                            j.current ||
+                            k.current ||
                                 U.current ||
                                 (N(e, {
                                     isFinalSelection: !0,
@@ -278,13 +278,13 @@ let L = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: o,
-                            isScrolling: j,
+                            isScrolling: k,
                             isUsingKeyboardNavigation: U,
-                            surrogateCodePoint: L,
+                            surrogateCodePoint: x,
                             allowAnimatedEmoji: B,
                             selectedItemClassName: H,
                             onSelect: N,
-                            onInspect: x,
+                            onInspect: L,
                             channelGuildId: F,
                             getEmojiItemProps: M,
                             isMediumSize: ep,
@@ -307,7 +307,7 @@ let L = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                D(R({}, k(G)), {
+                D(R({}, j(G)), {
                     className: o()(C.emojiListRow, {
                         [C.emojiListRowLargeSize]: e_,
                         [C.emojiListRowMediumSize]: ep,

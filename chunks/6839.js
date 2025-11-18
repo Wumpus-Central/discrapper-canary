@@ -29,11 +29,11 @@ var r = n(54381),
     P = n(271383),
     D = n(542578),
     w = n(375954),
-    x = n(496675),
-    L = n(699516),
+    L = n(496675),
+    x = n(699516),
     M = n(594174),
-    k = n(768581),
-    j = n(176354),
+    j = n(768581),
+    k = n(176354),
     U = n(5192),
     G = n(709054),
     B = n(91047),
@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(995774),
     V = n(981631),
     H = n(388032),
-    Y = n(302854),
-    W = n(197571);
+    Y = n(839489),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function et(e) {
 function en(e, t, n, i) {
     let a =
         null == e.id
-            ? j.ZP.getURL(e.name)
-            : k.ZP.getEmojiURL({
+            ? k.ZP.getURL(e.name)
+            : j.ZP.getEmojiURL({
                   id: e.id,
                   animated: e.animated,
                   size: t,
@@ -145,7 +145,7 @@ let er = (e) => {
                 return (
                     l(!0),
                     !(async function () {
-                        let n = await (0, j.B6)(t);
+                        let n = await (0, k.B6)(t);
                         Array.isArray(n) && n.length > 0 && !e && u(n);
                     })(),
                     () => {
@@ -247,8 +247,8 @@ function ea(e) {
         d = (0, u.e7)([N.default], () => N.default.getId()),
         f = (0, u.e7)([M.default], () => M.default.getUser(n.id), [n]),
         p = (0, A.$R)(a),
-        g = (0, u.e7)([x.Z], () => x.Z.can(V.Plq.MANAGE_MESSAGES, a) && p) || d === n.id,
-        b = (0, u.e7)([P.ZP, R.Z, L.Z], () => U.ZP.getName(o, a.id, n));
+        g = (0, u.e7)([L.Z], () => L.Z.can(V.Plq.MANAGE_MESSAGES, a) && p) || d === n.id,
+        b = (0, u.e7)([P.ZP, R.Z, x.Z], () => U.ZP.getName(o, a.id, n));
     function y() {
         Z.WO({
             channelId: a.id,

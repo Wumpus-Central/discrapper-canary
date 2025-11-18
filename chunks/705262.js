@@ -35,11 +35,11 @@ var r = n(54381),
     P = n(981631),
     D = n(474936),
     w = n(874893),
-    x = n(526761),
-    L = n(231338),
+    L = n(526761),
+    x = n(231338),
     M = n(388032),
-    k = n(227674);
-function j(e, t, n) {
+    j = n(90290);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -116,8 +116,8 @@ var V = (function (e) {
     return (e.EDITOR = "EDITOR"), (e.SETTINGS = "SETTINGS"), e;
 })({});
 let H = Object.freeze({
-        EDITOR: x.fy.SLOW_USER_ACTION,
-        SETTINGS: x.fy.INFREQUENT_USER_ACTION,
+        EDITOR: L.fy.SLOW_USER_ACTION,
+        SETTINGS: L.fy.INFREQUENT_USER_ACTION,
     }),
     Y = i.createContext({}),
     W = (e) => {
@@ -153,15 +153,15 @@ let H = Object.freeze({
                 )
                 .otherwise(() => M.intl.string(M.t.hjV0fZ));
         return (0, r.jsxs)("div", {
-            className: k.title,
+            className: j.title,
             children: [
                 (0, r.jsx)(c.Heading, {
                     "aria-label": o,
-                    className: k.titleText,
+                    className: j.titleText,
                     variant: "text-md/medium",
                     children: o,
                 }),
-                (0, r.jsx)(b.Z, { className: k.premiumIcon }),
+                (0, r.jsx)(b.Z, { className: j.premiumIcon }),
             ],
         });
     },
@@ -200,7 +200,7 @@ let H = Object.freeze({
             .otherwise(() => M.intl.string(M.t["np0X/u"]));
         return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
-            className: k.subtext,
+            className: j.subtext,
             children: l,
         });
     },
@@ -217,10 +217,10 @@ let H = Object.freeze({
                   children: M.intl.format(M.t.G8yQXi, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
-                  className: k.header,
+                  className: j.header,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: k.headings,
+                          className: j.headings,
                           children: [
                               (0, r.jsx)(K, {
                                   type: l,
@@ -283,7 +283,7 @@ let H = Object.freeze({
                         theme: e.theme,
                         useSystemTheme: m ? w.KW.OFF : void 0,
                     },
-                    x.fy.SLOW_USER_ACTION,
+                    L.fy.SLOW_USER_ACTION,
                 ),
                     (0, p.XO)(p.wh.CLIENT_THEMES),
                     (0, I.default)();
@@ -297,7 +297,7 @@ let H = Object.freeze({
                     return e;
                 }
                 return (0, r.jsxs)("div", {
-                    className: k.easterEggSelection,
+                    className: j.easterEggSelection,
                     children: [
                         (0, r.jsx)(N.DR, {
                             preset: e,
@@ -307,7 +307,7 @@ let H = Object.freeze({
                         (0, r.jsx)(c.Fmz, {
                             importData: t,
                             shouldAnimate: !v,
-                            className: k.sparkles,
+                            className: j.sparkles,
                         }),
                     ],
                 });
@@ -392,24 +392,24 @@ let H = Object.freeze({
                         onSelect: () => p("system"),
                     }),
                 (0, r.jsx)(N.bD, {
-                    theme: L.BR.LIGHT,
-                    isSelected: c && !d && l === L.BR.LIGHT,
-                    onSelect: () => p(L.BR.LIGHT),
+                    theme: x.BR.LIGHT,
+                    isSelected: c && !d && l === x.BR.LIGHT,
+                    onSelect: () => p(x.BR.LIGHT),
                 }),
                 (0, r.jsx)(N.bD, {
-                    theme: L.BR.DARK,
-                    isSelected: c && !d && l === L.BR.DARK,
-                    onSelect: () => p(L.BR.DARK),
+                    theme: x.BR.DARK,
+                    isSelected: c && !d && l === x.BR.DARK,
+                    onSelect: () => p(x.BR.DARK),
                 }),
                 (0, r.jsx)(N.bD, {
-                    theme: L.BR.DARKER,
-                    isSelected: c && !d && l === L.BR.DARKER,
-                    onSelect: () => p(L.BR.DARKER),
+                    theme: x.BR.DARKER,
+                    isSelected: c && !d && l === x.BR.DARKER,
+                    onSelect: () => p(x.BR.DARKER),
                 }),
                 (0, r.jsx)(N.bD, {
-                    theme: L.BR.MIDNIGHT,
-                    isSelected: c && !d && l === L.BR.MIDNIGHT,
-                    onSelect: () => p(L.BR.MIDNIGHT),
+                    theme: x.BR.MIDNIGHT,
+                    isSelected: c && !d && l === x.BR.MIDNIGHT,
+                    onSelect: () => p(x.BR.MIDNIGHT),
                 }),
                 !n &&
                     !t &&
@@ -434,7 +434,7 @@ let H = Object.freeze({
                 t &&
                     a &&
                     (0, r.jsx)(c.Heading, {
-                        className: k.upsellText,
+                        className: j.upsellText,
                         variant: "heading-sm/semibold",
                         children: M.intl.string(M.t.POSLGY),
                     }),
@@ -470,7 +470,7 @@ let H = Object.freeze({
             children: (0, r.jsx)(
                 "div",
                 B(U({ ref: s }, c), {
-                    className: k.__invalid_container,
+                    className: j.__invalid_container,
                     children: n,
                 }),
             ),

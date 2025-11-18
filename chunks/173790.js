@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(675993),
     b = n(689079),
     y = n(388032),
-    O = n(30787),
+    O = n(808888),
     v = n(413097);
 let I = 2048,
     T = 84;
@@ -30,7 +30,7 @@ function S(e) {
         N = (0, p.ye)(C) ? A : E.Z,
         R = i.useRef(null),
         [P, D] = i.useState(!1),
-        { iconURL: w, name: x } = i.useMemo(
+        { iconURL: w, name: L } = i.useMemo(
             () =>
                 (0, p.sl)(C, {
                     fakeAppIconURL: v,
@@ -38,25 +38,25 @@ function S(e) {
                 }),
             [C],
         ),
-        L = (0, u.PL)(!0, !0),
+        x = (0, u.PL)(!0, !0),
         M = (0, u.LD)(null == I ? void 0 : I.guild_id, !0),
-        k = i.useMemo(() => (0, u.If)(n, C.id), [L, M, n, C.id]),
-        j = !k.isGuildInstalled && !k.isUserInstalled;
+        j = i.useMemo(() => (0, u.If)(n, C.id), [x, M, n, C.id]),
+        k = !j.isGuildInstalled && !j.isUserInstalled;
     return (
         i.useEffect(() => {
-            j && u.ZP.queryInstallOnDemandApp(C.id, null == I ? void 0 : I.id);
-        }, [C.id, null == I ? void 0 : I.id, j]),
+            k && u.ZP.queryInstallOnDemandApp(C.id, null == I ? void 0 : I.id);
+        }, [C.id, null == I ? void 0 : I.id, k]),
         (0, r.jsxs)(s.u2D, {
             className: O.container,
             fade: !0,
             ref: R,
             role: "region",
-            "aria-label": y.intl.formatToPlainString(y.t["4OP4Uk"], { applicationName: x }),
+            "aria-label": y.intl.formatToPlainString(y.t["4OP4Uk"], { applicationName: L }),
             children: [
                 (0, r.jsx)(g.Z, {
                     application: C,
                     context: n,
-                    name: x,
+                    name: L,
                     iconURL: w,
                     scrollerRef: R,
                     sectionName: c,
@@ -78,7 +78,7 @@ function S(e) {
                           context: n,
                           application: C,
                           sectionName: c,
-                          installOnDemand: j,
+                          installOnDemand: k,
                           setHasCommands: D,
                       })
                     : null,

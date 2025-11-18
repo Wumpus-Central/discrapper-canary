@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(124650);
+    I = n(95457);
 function T(e, t, n) {
     return (
         t in e
@@ -61,17 +61,17 @@ function A(e) {
         })),
         D = R === y.z.SERVER_SHOP,
         w = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        x = null != T ? A[(0, u.lV)(T)] : null,
-        [L, M] = i.useState(() => {
+        L = null != T ? A[(0, u.lV)(T)] : null,
+        [x, M] = i.useState(() => {
             let e = null == P ? [] : g.default.keys(P);
-            return null != x && e.push(x.id), e;
+            return null != L && e.push(L.id), e;
         }),
-        k = i.useRef(T);
+        j = i.useRef(T);
     i.useEffect(() => {
         let e = {},
-            t = k.current;
+            t = j.current;
         if (null != t && null != R) {
-            for (let t of L) {
+            for (let t of x) {
                 let n = A[t];
                 null != n && (e[t] = n);
             }
@@ -80,8 +80,8 @@ function A(e) {
                 roles: e,
             });
         }
-    }, [L, R, A]);
-    let j = null != T && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
+    }, [x, R, A]);
+    let k = null != T && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
                 null != T && null != n
@@ -90,9 +90,9 @@ function A(e) {
                               var t;
                               return !D || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == j ? void 0 : j.id) === e.id || m.r6(T, n.id, j, e))
+                          .filter((e) => (null == k ? void 0 : k.id) === e.id || m.r6(T, n.id, k, e))
                     : [],
-            [T, n, D, j, N],
+            [T, n, D, k, N],
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({
@@ -104,17 +104,17 @@ function A(e) {
             }));
             return (
                 null != T &&
-                    null != x &&
+                    null != L &&
                     e.push({
-                        leading: C(x),
-                        value: x.id,
-                        label: x.name,
-                        id: x.id.toString(),
+                        leading: C(L),
+                        value: L.id,
+                        label: L.name,
+                        id: L.id.toString(),
                         disabled: !0,
                     }),
                 e
             );
-        }, [U, T, x]);
+        }, [U, T, L]);
     if (null == n || null == T || null == w) return null;
     let B = {};
     return (w.roles.forEach((e) => {
@@ -133,7 +133,7 @@ function A(e) {
               children: (0, r.jsxs)(s.uz, {
                   selectionMode: "multiple",
                   options: G,
-                  value: L,
+                  value: x,
                   onSelectionChange: (e) => {
                       M(e);
                   },

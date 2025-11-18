@@ -1,8 +1,8 @@
 n.d(t, {
-    MM: () => k,
+    MM: () => j,
     Q5: () => R,
-    hn: () => L,
-    p7: () => x,
+    hn: () => x,
+    p7: () => L,
     wk: () => D,
 }),
     n(467055),
@@ -25,7 +25,7 @@ var r = n(54381),
     E = n(561448),
     b = n(981631),
     y = n(231338),
-    O = n(26973);
+    O = n(599695);
 function v(e, t, n) {
     return (
         t in e
@@ -269,18 +269,18 @@ let N = [f.h8.PAYMENT_ELEMENT],
             ],
         });
     },
-    x = () =>
+    L = () =>
         (0, r.jsx)("div", {
             className: O.loadingContainer,
             children: (0, r.jsx)(c.$jN, { type: c.$jN.Type.PULSING_ELLIPSIS }),
         }),
-    L = (e) => {
+    x = (e) => {
         var { onSetupError: t } = e,
             n = A(e, ["onSetupError"]);
         let { elementsOptions: i, isLoading: o, setupError: s } = (0, m.S)({ onSetupError: t }),
             { stripe: l } = (0, d.JL)();
         return o || null != s || null == l
-            ? (0, r.jsx)(x, {})
+            ? (0, r.jsx)(L, {})
             : (0, r.jsx)(a.Elements, {
                   stripe: l,
                   options: I({}, i),
@@ -288,7 +288,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
               });
     },
     M = ["applePay", "googlePay", "link"],
-    k = (e) => {
+    j = (e) => {
         let {
                 step: t,
                 handleStepChange: n,

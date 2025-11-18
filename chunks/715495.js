@@ -14,7 +14,7 @@ var a = n(54381),
     x = n(711325),
     g = n(852630),
     f = n(731994),
-    b = n(30827);
+    b = n(761804);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ function _() {
             },
             [_],
         ),
-        w = (0, l.useCallback)((e) => {
+        I = (0, l.useCallback)((e) => {
             g((t) =>
                 null == t
                     ? null
@@ -100,7 +100,7 @@ function _() {
                       }),
             );
         }, []),
-        I = (0, l.useCallback)(
+        w = (0, l.useCallback)(
             (e) => {
                 T(e);
             },
@@ -140,7 +140,7 @@ function _() {
                                 (0, a.jsx)(x.Z, {
                                     selected: null == h || null == (e = h.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        (null == h ? void 0 : h.src) != null && O(h.src, h.src, e), w(e);
+                                        (null == h ? void 0 : h.src) != null && O(h.src, h.src, e), I(e);
                                     },
                                 }),
                         ],
@@ -178,7 +178,7 @@ function _() {
                                         {
                                             src: t,
                                             onSetStatic: P,
-                                            removeAsset: I,
+                                            removeAsset: w,
                                         },
                                         t,
                                     );
@@ -187,7 +187,7 @@ function _() {
                             (0, a.jsx)(E, {
                                 label: "gradient override",
                                 onChange: (e) =>
-                                    w({
+                                    I({
                                         name: m._j,
                                         darkBackground: e,
                                         lightBackground: e,

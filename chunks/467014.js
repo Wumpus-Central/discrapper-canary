@@ -9,7 +9,7 @@ var r = n(54381),
     c = n(776767),
     E = n(50493),
     d = n(388032),
-    _ = n(87819);
+    _ = n(152540);
 function A(e) {
     let { userId: t, guildId: n } = e,
         A = (0, i.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),

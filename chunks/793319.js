@@ -43,8 +43,8 @@ var i = n(54381),
     U = n(853170),
     B = n(140465),
     H = n(800966),
-    F = n(675547),
-    V = n(641015),
+    V = n(675547),
+    F = n(641015),
     G = n(618158),
     z = n(390322),
     W = n(791592),
@@ -77,7 +77,7 @@ var i = n(54381),
     eC = n(981631),
     ev = n(354459),
     e_ = n(921944),
-    ex = n(32312);
+    ex = n(817675);
 function ej() {
     return (ej =
         Object.assign ||
@@ -491,7 +491,7 @@ let eA = function (e) {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
-        G = (0, F.Z)({
+        G = (0, V.Z)({
             channel: n,
             location: "center-control-tray",
         }),
@@ -503,7 +503,7 @@ let eA = function (e) {
             autoTrackExposure: !0,
         }),
         { showRefreshedAudioContextMenu: en } = (0, U.e)({ location: v.Z.VOICE_CONTROL_TRAY }),
-        ei = (0, V.Z)(n),
+        ei = (0, F.Z)(n),
         ed = r.useRef(null),
         ef = r.useRef(null),
         eg = Q

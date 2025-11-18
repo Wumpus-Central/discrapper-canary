@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(78946);
+    y = n(445143);
 function O(e) {
     let {
             user: t,
@@ -54,8 +54,8 @@ function O(e) {
                 location_stack: C,
             });
     }, [N, C]);
-    let x = A || void 0 !== P ? null != P : null != R;
-    function L() {
+    let L = A || void 0 !== P ? null != P : null != R;
+    function x() {
         A ? (0, d.Ju)(null) : (0, p.UK)(null, null == n ? void 0 : n.id);
     }
     let M = T ? l.gtL : s.zx;
@@ -76,7 +76,7 @@ function O(e) {
                     className: o()({ [y.buttonHighlighted]: T }),
                     children: b.intl.string(b.t["/dRfCf"]),
                 }),
-                x &&
+                L &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: y.removeButton,
@@ -84,7 +84,7 @@ function O(e) {
                             variant: "secondary",
                             size: "sm",
                             text: null != n ? b.intl.string(b.t.CHf9iJ) : b.intl.string(b.t.uMuafO),
-                            onClick: L,
+                            onClick: x,
                         }),
                     }),
             ],

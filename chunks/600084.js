@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => F });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -36,9 +36,9 @@ var i = n(54381),
     k = n(981631),
     D = n(176505),
     U = n(388032),
-    B = n(963392),
-    H = n(197571);
-function F(e) {
+    B = n(40036),
+    H = n(10198);
+function V(e) {
     let { canManageRoles: t, channel: n } = e,
         r = t && (0, p.Yk)(n),
         a = (0, l.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -49,7 +49,7 @@ function F(e) {
     if (r) return (0, i.jsx)(A.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
-function V(e) {
+function F(e) {
     var t, n;
     let { channel: p, showingBanner: h } = e,
         C = (0, d.ZP)(p),
@@ -61,7 +61,7 @@ function V(e) {
             canReadMessageHistory: x.Z.can(k.Plq.READ_MESSAGE_HISTORY, p),
         })),
         L = (0, l.e7)([b.Z], () => (_ === k.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, _]),
-        { systemDMRedesignEnabled: V } = g.Z.useExperiment(
+        { systemDMRedesignEnabled: F } = g.Z.useExperiment(
             { location: "bf1a4f_1" },
             { autoTrackExposure: null != (t = p.isSystemDM()) && t },
         ),
@@ -83,7 +83,7 @@ function V(e) {
         }, [null == P ? void 0 : P.bot, W]),
         p.isSystemDM())
     )
-        return V
+        return F
             ? (0, i.jsx)(w.Z, { channel: p })
             : (0, i.jsx)(N.Z, {
                   channel: p,
@@ -149,7 +149,7 @@ function V(e) {
                 children: U.intl.format(U.t.MFwcqO, { name: C }),
             });
     return R
-        ? (0, i.jsx)(F, {
+        ? (0, i.jsx)(V, {
               channel: p,
               canManageRoles: M,
           })

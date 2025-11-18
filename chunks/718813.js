@@ -18,8 +18,8 @@ var r,
     E = n(585483),
     O = n(981631),
     y = n(388032),
-    v = n(892694),
-    I = n(256076);
+    v = n(79046),
+    I = n(590939);
 function C(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ let N = (0, g.Un)({
     }),
     x = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("7654"), n.e("86736"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("7654"), n.e("99063"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
@@ -104,11 +104,11 @@ let N = (0, g.Un)({
                 n.e("15851"),
                 n.e("51453"),
                 n.e("845"),
-                n.e("86736"),
+                n.e("99063"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("44686"),
-                n.e("384"),
+                n.e("32923"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
         webpackId: 994763,

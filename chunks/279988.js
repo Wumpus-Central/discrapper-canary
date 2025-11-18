@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    g = n(31829);
+    g = n(866234);
 let m = function (e) {
     let {
             channelId: t,

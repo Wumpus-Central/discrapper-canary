@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(783097),
     p = n(772606),
     h = n(488977),
-    m = n(42659);
+    m = n(236050);
 let g = 20;
 function E(e, t, n) {
     return t === n ? 1 : (0, s.clamp)((e - t) / (n - t), 0, 1);
@@ -55,15 +55,15 @@ function O(e) {
                 : P;
         }, [P, T]),
         w = y(S),
-        x = y(A),
-        L = i.useCallback(() => {
+        L = y(A),
+        x = i.useCallback(() => {
             var e, t, n;
             let r = v.current,
                 i = S.current,
                 a = C.current,
                 o = null == N ? void 0 : N.current,
                 l = parseInt(null != (e = null == w ? void 0 : w.height) ? e : ""),
-                c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
+                c = parseInt(null != (t = null == L ? void 0 : L.height) ? t : "");
             if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
                     t = 0 !== r.scrollHeight ? r.scrollHeight : c + g,
@@ -80,15 +80,15 @@ function O(e) {
                     (a.style.transform = "translateY(".concat(b(l / 4, 0, _), "px)")),
                     null != o && (o.style.opacity = "".concat(b(1, 0, _)));
             }
-        }, [D, P, null == x ? void 0 : x.height, T, v, null == w ? void 0 : w.height]);
+        }, [D, P, null == L ? void 0 : L.height, T, v, null == w ? void 0 : w.height]);
     return (
         i.useEffect(() => {
-            L();
-        }, [L, T]),
+            x();
+        }, [x, T]),
         i.useEffect(() => {
             let e = v.current,
                 t = () => {
-                    L();
+                    x();
                 };
             return (
                 null == e || e.addEventListener("scroll", t),
@@ -96,7 +96,7 @@ function O(e) {
                     null == e || e.removeEventListener("scroll", t);
                 }
             );
-        }, [v, L]),
+        }, [v, x]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {

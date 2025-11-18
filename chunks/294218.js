@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(145807),
     S = n(56744),
     A = n(981631),
-    C = n(360514);
+    C = n(5898);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,18 +97,18 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function L(e) {
+function x(e) {
     var t, n;
     let {
             message: i,
             compact: a = !1,
             className: N,
             onContextMenu: P,
-            onClick: x,
-            hideSimpleEmbedContent: L = !0,
+            onClick: L,
+            hideSimpleEmbedContent: x = !0,
             channel: M,
-            isGroupStart: k,
-            animateAvatar: j,
+            isGroupStart: j,
+            animateAvatar: k,
             subscribeToComponentDispatch: U,
             renderThreadAccessory: G,
             trackAnnouncementViews: B = !1,
@@ -131,7 +131,7 @@ function L(e) {
         V = i.isFirstMessageInForumPost(M),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
-            hideSimpleEmbedContent: L,
+            hideSimpleEmbedContent: x,
             allowList: V || H,
             allowHeading: V || H,
             allowLinks: !0,
@@ -179,7 +179,7 @@ function L(e) {
                 childrenMessageContent: (0, O.Z)(e, Y),
                 childrenSystemMessage: (0, I.Z)(D(R({}, e), { disableInteraction: F })),
                 onContextMenu: P,
-                onClick: x,
+                onClick: L,
                 hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),
                 hasReply: i.type === A.uaV.REPLY,
                 "aria-labelledby": ee,
@@ -192,4 +192,4 @@ function L(e) {
         ),
     );
 }
-let M = i.memo(L);
+let M = i.memo(x);

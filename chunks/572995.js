@@ -3,7 +3,7 @@ n.d(t, {
     ZP: () => e_,
     y$: () => eu,
 });
-var r = n(647438),
+var r = n(473749),
     i = n(100527),
     a = n(906732),
     o = n(550385),
@@ -20,8 +20,8 @@ var r = n(647438),
     g = n(981631),
     E = n(526761),
     b = n(388032),
-    y = n(422129),
-    O = n(88406),
+    y = n(994838),
+    O = n(308274),
     v = n(509614),
     I = n(880511),
     T = n(985443),
@@ -33,8 +33,8 @@ var r = n(647438),
     P = n(119121),
     D = n(404583),
     w = n(295349),
-    x = n(631572),
-    L = n(999675),
+    L = n(631572),
+    x = n(999675),
     M = n(238027),
     j = n(997585),
     k = n(138431),
@@ -144,11 +144,11 @@ let ef = (e, t) =>
                       },
                       emojis: {
                           thumbnail: w.Z,
-                          assetUrl: e ? D.Z : x.Z,
+                          assetUrl: e ? D.Z : L.Z,
                       },
                       noLimits: {
                           thumbnail: M.Z,
-                          assetUrl: e ? L.Z : j.Z,
+                          assetUrl: e ? x.Z : j.Z,
                       },
                   }
                 : {
@@ -241,7 +241,7 @@ let ef = (e, t) =>
                 badgeText: b.intl.string(b.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: N.displayNameStyles.assetUrl,
             },
-            x = {
+            L = {
                 name: "recurring3PPromotions",
                 title: b.intl.string(b.t.m7PucM),
                 description: b.intl.format(b.t.mqSNPd, {}),
@@ -253,7 +253,7 @@ let ef = (e, t) =>
                 previewImage: N.recurring3PPromotions.thumbnail,
                 videoUrl: N.recurring3PPromotions.thumbnail,
             },
-            L = {
+            x = {
                 name: "showYourStyle",
                 title: b.intl.string(b.t.Ij3Zmv),
                 description: b.intl.string(b.t.UsOUxY),
@@ -286,7 +286,7 @@ let ef = (e, t) =>
                 videoUrl: N.noLimits.assetUrl,
             };
         return {
-            whatsNewBoxes: v ? [[w], [D, P]] : I.enabled ? [[x], [R, P]] : [[D], [R, P]],
-            bestOfBoxes: [[L], [M], [j, k]],
+            whatsNewBoxes: v ? [[w], [D, P]] : I.enabled ? [[L], [R, P]] : [[D], [R, P]],
+            bestOfBoxes: [[x], [M], [j, k]],
         };
     };

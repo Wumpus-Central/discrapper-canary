@@ -10,7 +10,7 @@ var a = n(54381),
     i = n(481060),
     s = n(732380),
     o = n(388032),
-    c = n(54482);
+    c = n(138005);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -129,7 +129,7 @@ function p(e) {
                     }),
                 ],
             }),
-        w = (e) => {
+        I = (e) => {
             let t;
             return (
                 (t = E
@@ -205,12 +205,12 @@ function p(e) {
                   renderPopout: g,
                   shouldShow: j,
                   onRequestClose: N,
-                  children: w,
+                  children: I,
               }),
           })
         : (0, a.jsx)("li", {
               className: c.menuItem,
-              children: w(),
+              children: I(),
           });
 }
 function h(e) {

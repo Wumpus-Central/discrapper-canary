@@ -28,12 +28,12 @@ var r = n(54381),
     R = n(21023),
     P = n(474936),
     D = n(388032),
-    w = n(17355),
-    x = n(102655),
-    L = n(768236),
+    w = n(213599),
+    L = n(102655),
+    x = n(768236),
     M = n(314907),
-    k = n(826701);
-function j(e, t, n) {
+    j = n(826701);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -106,7 +106,7 @@ let Z = () => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? x : L) : (0, l.wj)(i) ? M : k;
+        t = n === P.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? M : j;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -183,12 +183,12 @@ let Z = () => {
             {
                 className: a,
                 hideCTAs: C = !1,
-                headingOverride: x,
-                hidePill: L = !1,
+                headingOverride: L,
+                hidePill: x = !1,
                 selectedPlanColumnClassName: M,
-                selectedPlanTier: k = P.PremiumTypes.TIER_2,
+                selectedPlanTier: j = P.PremiumTypes.TIER_2,
             } = e,
-            { analyticsLocations: j } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: k } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, s.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
             W = (0, h.V)(P.nS),
             K = (0, d.ZP)(),
@@ -282,7 +282,7 @@ let Z = () => {
                   withBottomBorderRadius: !0,
                   buttonsRow: null == J,
               }),
-            (n = L
+            (n = x
                 ? null
                 : null != J || null != $
                   ? (0, r.jsx)(N.Cy, {
@@ -302,9 +302,9 @@ let Z = () => {
                   : el
                     ? (0, r.jsx)(Z, {})
                     : (0, r.jsx)(F, {}));
-        let ef = J === P.Si.TIER_0 || $ === P.PremiumTypes.TIER_0 || k === P.PremiumTypes.TIER_0;
+        let ef = J === P.Si.TIER_0 || $ === P.PremiumTypes.TIER_0 || j === P.PremiumTypes.TIER_0;
         return (0, r.jsx)(_.Gt, {
-            value: j,
+            value: k,
             children: (0, r.jsxs)("div", {
                 className: o()(w.root, a),
                 "data-testid": "v2-marketing-page-comparison-table",
@@ -312,7 +312,7 @@ let Z = () => {
                     (0, r.jsx)(u.Heading, {
                         className: o()(w.titleText, w.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: null != x ? x : D.intl.string(D.t.FIbMh9),
+                        children: null != L ? L : D.intl.string(D.t.FIbMh9),
                     }),
                     (0, r.jsxs)("div", {
                         className: w.tableWrapper,

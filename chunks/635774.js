@@ -4,7 +4,7 @@ n(473749);
 var i = n(481060),
     a = n(518596),
     o = n(388032),
-    s = n(631936);
+    s = n(38579);
 function l(e) {
     let { onClose: t } = e;
     return (0, r.jsxs)("div", {

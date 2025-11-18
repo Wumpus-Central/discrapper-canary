@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(701488),
     B = n(815660),
     H = n(388032),
-    F = n(97508);
-function V(e, t, n) {
+    V = n(989028);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function G(e) {
                 }),
             )),
             i.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -210,7 +210,7 @@ class W extends r.PureComponent {
                                               (0, i.jsx)(
                                                   c.P3F,
                                                   z(G({ innerRef: this.upsellTargetRef }, e), {
-                                                      className: F.clickableChannelTextArea,
+                                                      className: V.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: p,
                                                   }),
@@ -225,14 +225,14 @@ class W extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            V(this, "state", {
+            F(this, "state", {
                 submitting: !1,
                 shouldShowLurkerModeUpsellPopout: !1,
                 shouldShowLurkerModeSuccessPopout: !1,
             }),
-            V(this, "textAreaContainerRef", r.createRef()),
-            V(this, "upsellTargetRef", r.createRef()),
-            V(this, "renderSuccessPopout", (e) => {
+            F(this, "textAreaContainerRef", r.createRef()),
+            F(this, "upsellTargetRef", r.createRef()),
+            F(this, "renderSuccessPopout", (e) => {
                 let { closePopout: t } = e,
                     { guild: n } = this.props;
                 return (
@@ -243,7 +243,7 @@ class W extends r.PureComponent {
                     })
                 );
             }),
-            V(this, "handleCancelApplication", () => {
+            F(this, "handleCancelApplication", () => {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.h7j)((t) =>
@@ -270,7 +270,7 @@ class W extends r.PureComponent {
                         ),
                     );
             }),
-            V(this, "handleViewApplicationRejection", () => {
+            F(this, "handleViewApplicationRejection", () => {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.ZDy)(async () => {
@@ -278,14 +278,14 @@ class W extends r.PureComponent {
                         return (n) => (0, i.jsx)(t, G({ guildId: e.id }, n));
                     });
             }),
-            V(this, "handleShowMemberVerification", () => {
+            F(this, "handleShowMemberVerification", () => {
                 let { guild: e } = this.props;
                 null != e && (0, b.hk)(e.id);
             }),
-            V(this, "handleClaimAccount", () => {
+            F(this, "handleClaimAccount", () => {
                 f.j();
             }),
-            V(this, "handleVerifyPhone", () => {
+            F(this, "handleVerifyPhone", () => {
                 (0, c.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
@@ -294,7 +294,7 @@ class W extends r.PureComponent {
                     { modalKey: B.M },
                 );
             }),
-            V(this, "handleResendVerification", () => {
+            F(this, "handleResendVerification", () => {
                 var e;
                 u.Z.verifyResend();
                 let t = null == (e = M.default.getCurrentUser()) ? void 0 : e.email;
@@ -314,11 +314,11 @@ class W extends r.PureComponent {
                         ),
                     );
             }),
-            V(this, "handleTextAreaClick", () => {
+            F(this, "handleTextAreaClick", () => {
                 let { showLurkerModeUpsellPopout: e } = this.props;
                 this.setState({ shouldShowLurkerModeUpsellPopout: e });
             }),
-            V(this, "handleJoinServer", async () => {
+            F(this, "handleJoinServer", async () => {
                 this.setState({ submitting: !0 });
                 let e = this.props.channel.getGuildId();
                 try {
@@ -327,20 +327,20 @@ class W extends r.PureComponent {
                     this.setState({ submitting: !1 });
                 }
             }),
-            V(this, "handleGoBack", () => {
+            F(this, "handleGoBack", () => {
                 this.setState({ submitting: !0 }), (0, P.s1)().goBack();
             }),
-            V(this, "handleFollowAnnouncement", () => {
+            F(this, "handleFollowAnnouncement", () => {
                 let { channel: e } = this.props;
                 (0, c.ZDy)(async () => {
                     let { default: t } = await n.e("30571").then(n.bind(n, 28180));
                     return (n) => (0, i.jsx)(t, G({ channel: e }, n));
                 });
             }),
-            V(this, "closeLurkerModeUpsellPopout", () => {
+            F(this, "closeLurkerModeUpsellPopout", () => {
                 this.setState({ shouldShowLurkerModeUpsellPopout: !1 });
             }),
-            V(this, "renderLurkerModeUpsellPopout", () => {
+            F(this, "renderLurkerModeUpsellPopout", () => {
                 let { guild: e } = this.props;
                 return (
                     a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
@@ -351,7 +351,7 @@ class W extends r.PureComponent {
                     })
                 );
             }),
-            V(this, "renderMemberVerificationSuccessModal", () => {
+            F(this, "renderMemberVerificationSuccessModal", () => {
                 let { guild: e, guildJoinRequest: t } = this.props,
                     n = (null == t ? void 0 : t.applicationStatus) === y.wB.APPROVED;
                 if (null == e || null == t || !n || (0, g.d3)(t)) return null;

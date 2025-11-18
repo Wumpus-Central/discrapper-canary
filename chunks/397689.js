@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(445924),
     p = n(654904),
     h = n(486324),
-    m = n(86698);
+    m = n(729295);
 function g(e, t, n) {
     return (
         t in e
@@ -85,7 +85,7 @@ function v(e) {
         { analyticsLocations: R, newestAnalyticsLocation: P } = (0, c.ZP)(),
         D = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
         w = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
-        x = (0, r.jsx)(O, {
+        L = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
             imageClassName: o()(T, { [m.overlay]: !S }),
@@ -98,7 +98,7 @@ function v(e) {
     return S
         ? (0, r.jsx)("div", {
               className: m.avatar,
-              children: x,
+              children: L,
           })
         : w
           ? (0, r.jsx)(l.yRy, {
@@ -131,7 +131,7 @@ function v(e) {
                             innerRef: N,
                             className: o()(m.avatar, m.clickable),
                             children: [
-                                x,
+                                L,
                                 (0, r.jsx)(l.vdY, {
                                     size: "custom",
                                     className: m.overlayIcon,
@@ -147,7 +147,7 @@ function v(e) {
                 onClick: C,
                 className: o()(m.avatar, m.clickable),
                 children: [
-                    x,
+                    L,
                     (0, r.jsx)(l.SrA, {
                         size: "custom",
                         className: m.overlayIcon,

@@ -104,11 +104,11 @@ function R(e) {
             analyticsLocations: P,
             analyticsObject: D,
             analyticsLocation: w,
-            analyticsSourceLocation: x,
-            confirmationFooter: L,
+            analyticsSourceLocation: L,
+            confirmationFooter: x,
             isGift: M = !1,
-            giftMessage: k,
-            giftStyle: j,
+            giftMessage: j,
+            giftStyle: k,
             giftingOrigin: U,
             subscriptionTier: G,
             trialId: B,
@@ -130,7 +130,7 @@ function R(e) {
         et = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("4125")]).then(n.bind(n, 7305));
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);
@@ -141,8 +141,8 @@ function R(e) {
                         subscriptionTier: G,
                         skuId: ee,
                         isGift: M,
-                        giftMessage: k,
-                        giftStyle: j,
+                        giftMessage: j,
+                        giftStyle: k,
                         giftingOrigin: U,
                         giftRecipient: Y,
                         initialPlanId: i,
@@ -176,8 +176,8 @@ function R(e) {
                         analyticsLocations: P,
                         analyticsObject: D,
                         analyticsLocation: w,
-                        analyticsSourceLocation: x,
-                        confirmationFooter: L,
+                        analyticsSourceLocation: L,
+                        confirmationFooter: x,
                         trialId: B,
                         postSuccessGuild: Z,
                         planGroup: v.Y1,
@@ -210,7 +210,7 @@ function R(e) {
                         load_id: X,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
                         location: null != w ? w : D,
-                        source: x,
+                        source: L,
                         subscription_type: O.NYc.PREMIUM,
                         is_gift: M,
                         sku_id: ee,

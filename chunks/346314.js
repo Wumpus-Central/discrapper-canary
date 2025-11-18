@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(607070),
     f = n(865672),
     _ = n(109161),
-    p = n(836484);
+    p = n(10515);
 function h(e, t, n) {
     return (
         t in e
@@ -123,19 +123,19 @@ function O(e) {
             roleStyle: "username",
             animateGradient: E || v || (null == O ? void 0 : O.animate),
         }),
-        x = (0, f.EJ)(n),
-        L = {
+        L = (0, f.EJ)(n),
+        x = {
             className: o()(p.name, g, y, {
                 [p.username]: A,
                 [D]: R,
             }),
-            children: x,
+            children: L,
         },
         M = {
             className: o()(p.nameGlow, w, y),
             children: n,
         },
-        k = C
+        j = C
             ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: N ? c : null,
@@ -149,7 +149,7 @@ function O(e) {
         onMouseEnter: T,
         onMouseLeave: S,
         children: [
-            "left" === d && k,
+            "left" === d && j,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
                 style: m({ color: A && !N && null != a ? a : void 0 }, R ? P : {}),
@@ -163,10 +163,10 @@ function O(e) {
                                       color: "currentColor",
                                       variant: b,
                                   },
-                                  L,
+                                  x,
                               ),
                           )
-                        : (0, r.jsx)("span", m({}, L)),
+                        : (0, r.jsx)("span", m({}, x)),
                     R &&
                         (null != b
                             ? (0, r.jsx)(
@@ -184,7 +184,7 @@ function O(e) {
                             : (0, r.jsx)("span", m({ "aria-hidden": !0 }, M))),
                 ],
             }),
-            "right" === d && k,
+            "right" === d && j,
         ],
     });
 }

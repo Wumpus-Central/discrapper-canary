@@ -18,67 +18,67 @@ var r = n(54381),
     b = n(840724),
     y = n(231338),
     O = n(388032),
-    v = n(54602);
+    v = n(953692);
 function I(e) {
     var t, n, I, T, S, A, C, N;
     let { guildId: R, skuId: P, channel: D } = e,
         w = (0, o.e7)([f.Z], () => f.Z.isFetchingForSKU(P)),
-        x = (0, o.e7)([d.Z], () => d.Z.get(P)),
-        L = null == x ? void 0 : x.applicationId;
+        L = (0, o.e7)([d.Z], () => d.Z.get(P)),
+        x = null == L ? void 0 : L.applicationId;
     (0, c.p2)();
     let M = (0, o.e7)([u.default], () =>
             D.isDM() && null != D.recipients && 0 !== D.recipients.length ? u.default.getUser(D.recipients[0]) : null,
         ),
-        { primaryIconAsset: k, primaryIconLabel: j } = i.useMemo(() => (0, p.FE)(x, L), [x, L]);
+        { primaryIconAsset: j, primaryIconLabel: k } = i.useMemo(() => (0, p.FE)(L, x), [L, x]);
     i.useEffect(() => {
         null == R || null == P || f.Z.isFetchingForSKU(P) || (0, h.y)(R, P);
     }, [R, P]);
     let U = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (null == x ? void 0 : x.applicationId) != null &&
+                    (null == L ? void 0 : L.applicationId) != null &&
                         null != R &&
                         (0, m.g)({
                             skuId: P,
-                            applicationId: x.applicationId,
+                            applicationId: L.applicationId,
                             guildId: R,
                             isStorefront: !1,
                         });
             },
-            [P, null == x ? void 0 : x.applicationId, R],
+            [P, null == L ? void 0 : L.applicationId, R],
         ),
         G = i.useCallback(() => {
-            null != x &&
+            null != L &&
                 (0, g.P)(
-                    x,
+                    L,
                     { isGift: !1 },
                     { analyticsLocations: [l.Z.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON] },
                 );
-        }, [x]),
+        }, [L]),
         B = i.useCallback(() => {
-            null != x &&
+            null != L &&
                 (0, g.P)(
-                    x,
+                    L,
                     {
                         isGift: !0,
                         giftRecipient: null != M ? M : void 0,
                     },
                     { analyticsLocations: [l.Z.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
-        }, [x, M]);
-    return w && null == x
+        }, [L, M]);
+    return w && null == L
         ? (0, r.jsx)("div", {
               className: v.container,
               children: (0, r.jsx)(s.$jN, { className: v.spinner }),
           })
-        : null == x
+        : null == L
           ? null
           : (0, r.jsxs)("div", {
                 className: v.container,
                 children: [
                     (0, r.jsx)(b.C, {
                         className: v.card,
-                        applicationId: x.applicationId,
+                        applicationId: L.applicationId,
                         skuId: P,
                         variant: b.Z.EMBEDDED,
                         onClick: U,
@@ -92,23 +92,23 @@ function I(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-md/bold",
                                         lineClamp: 1,
-                                        children: x.name,
+                                        children: L.name,
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: v.detailsDescription,
                                         children: [
-                                            null != k &&
+                                            null != j &&
                                                 (0, r.jsx)("img", {
-                                                    src: k.toString(),
-                                                    alt: j,
+                                                    src: j.toString(),
+                                                    alt: k,
                                                     className: v.iconAsset,
                                                 }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-md/semibold",
                                                 lineClamp: 1,
                                                 children: (0, _.T4)(
-                                                    null != (S = null == (t = x.price) ? void 0 : t.amount) ? S : 0,
-                                                    null != (A = null == (n = x.price) ? void 0 : n.currency)
+                                                    null != (S = null == (t = L.price) ? void 0 : t.amount) ? S : 0,
+                                                    null != (A = null == (n = L.price) ? void 0 : n.currency)
                                                         ? A
                                                         : y.pK.USD,
                                                 ),
@@ -132,8 +132,8 @@ function I(e) {
                                         onClick: G,
                                         text: O.intl.format(O.t.Xp5WTn, {
                                             price: (0, _.T4)(
-                                                null != (C = null == (I = x.price) ? void 0 : I.amount) ? C : 0,
-                                                null != (N = null == (T = x.price) ? void 0 : T.currency)
+                                                null != (C = null == (I = L.price) ? void 0 : I.amount) ? C : 0,
+                                                null != (N = null == (T = L.price) ? void 0 : T.currency)
                                                     ? N
                                                     : y.pK.USD,
                                             ),

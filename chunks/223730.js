@@ -12,9 +12,9 @@ var r = n(54381),
     u = n(88658),
     d = n(782896),
     p = n(981631),
-    f = n(361742),
+    f = n(872793),
     h = n(388032),
-    g = n(95049);
+    g = n(905618);
 let m = () => {
     (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: p.oAB.ACTIVITY_PRIVACY });
 };
