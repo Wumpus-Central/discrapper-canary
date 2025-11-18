@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => L });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -78,10 +78,10 @@ function w(e, t) {
         e
     );
 }
-let x = (e) => {
+let L = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
         D = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
-        x = (0, i.e7)([E.Z], () => E.Z.getGuildId());
+        L = (0, i.e7)([E.Z], () => E.Z.getGuildId());
     return (0, r.jsx)(v.ZP, {
         contentTypes: [t],
         groupName: I.R.NOTICE_BAR,
@@ -140,7 +140,10 @@ let x = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PLAYSTATION,
                         children: [
-                            (0, r.jsx)(o.RyX, { onClick: () => i(I.L.UNKNOWN) }),
+                            (0, r.jsx)(o.RyX, {
+                                noticeType: R,
+                                onClick: () => i(I.L.UNKNOWN),
+                            }),
                             (0, r.jsx)("img", {
                                 alt: "",
                                 className: N.platformIcon,
@@ -356,7 +359,7 @@ let x = (e) => {
                                     window.open(
                                         "https://discord.sjc1.qualtrics.com/jfe/form/SV_9zz09xNJ3Qvyb78?user_id="
                                             .concat(null == D ? void 0 : D.id, "&guild_id=")
-                                            .concat(x),
+                                            .concat(L),
                                         "_blank",
                                     ),
                                         i(I.L.TAKE_ACTION);

@@ -1,4 +1,4 @@
-t.r(e), t.d(e, { default: () => R });
+t.r(n), t.d(n, { default: () => _ });
 var s = t(54381);
 t(473749);
 var a = t(442837),
@@ -23,6 +23,7 @@ function p() {
                 children: g.intl.string(g.t["MG+Bzb"]),
             }),
             (0, s.jsx)(r.u3T, {
+                noticeType: u.kVF.SAFETY_SUSPENDED_USER_WARNING,
                 href: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                 children: (0, s.jsx)(r.Text, {
                     variant: "text-md/normal",
@@ -33,22 +34,22 @@ function p() {
         ],
     });
 }
-function x(n) {
-    let {} = n,
-        e = (0, a.e7)([c.Z], () => c.Z.getAgeCheckStatus());
-    return e === d.oE.NONE
+function E(e) {
+    let {} = e,
+        n = (0, a.e7)([c.Z], () => c.Z.getAgeCheckStatus());
+    return n === d.oE.NONE
         ? null
-        : e === d.oE.SUCCESS
+        : n === d.oE.SUCCESS
           ? (0, s.jsx)(r.Wn, {
                 messageType: r.QYI.POSITIVE,
                 children: g.intl.format(g.t.maZDL6, { login: "/login" }),
             })
-          : e === d.oE.ERROR
+          : n === d.oE.ERROR
             ? (0, s.jsx)(r.Wn, {
                   messageType: r.QYI.ERROR,
                   children: g.intl.string(g.t["4sILBU"]),
               })
-            : e === d.oE.FAILURE
+            : n === d.oE.FAILURE
               ? (0, s.jsx)(r.Wn, {
                     messageType: r.QYI.ERROR,
                     children: g.intl.string(g.t["40R63o"]),
@@ -58,19 +59,19 @@ function x(n) {
                     children: g.intl.string(g.t["nhhy/R"]),
                 });
 }
-function E() {
+function x() {
     return (0, s.jsxs)("div", {
         className: h.pageContainer,
-        children: [(0, s.jsx)(x, {}), (0, s.jsx)(o.Z, {})],
+        children: [(0, s.jsx)(E, {}), (0, s.jsx)(o.Z, {})],
     });
 }
-function R() {
+function _() {
     return (
         null == (0, a.e7)([l.default], () => l.default.getSuspendedUserToken()) &&
             (0, i.uL)(u.Z5c.LOGIN, { source: "suspended_user_safety_hub_page" }),
         (0, s.jsxs)("div", {
             className: h.container,
-            children: [(0, s.jsx)(p, {}), (0, s.jsx)(E, {})],
+            children: [(0, s.jsx)(p, {}), (0, s.jsx)(x, {})],
         })
     );
 }

@@ -1,7 +1,10 @@
-n.d(t, { I: () => u });
+n.d(t, { I: () => _ });
 var r = n(54381),
-    i = n(481060);
-function a(e, t, n) {
+    i = n(481060),
+    a = n(626135),
+    o = n(582113),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +17,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,12 +28,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -42,20 +45,20 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = "social-layer-storefront-item-claimed-successfully-modal",
-    u = (e) => {
-        let { sku: t, application: a } = e;
+let f = "social-layer-storefront-item-claimed-successfully-modal",
+    _ = (e) => {
+        let { sku: t, application: l, analyticsLocations: u } = e;
         (0, i.ZDy)(
             async () => {
                 let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await n
@@ -64,12 +67,23 @@ let c = "social-layer-storefront-item-claimed-successfully-modal",
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        l(o({}, n), {
+                        d(c({}, n), {
                             sku: t,
-                            application: a,
+                            application: l,
+                            analyticsLocations: u,
                         }),
                     );
             },
-            { modalKey: c },
+            {
+                modalKey: f,
+                onCloseCallback: () => {
+                    a.default.track(s.rMx.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                        type: o.ng,
+                        sku_id: t.id,
+                        application_id: l.id,
+                        location_stack: null != u ? u : [],
+                    });
+                },
+            },
         );
     };

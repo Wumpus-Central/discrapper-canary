@@ -507,6 +507,7 @@ var r = (function (e) {
         (e.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION = "now playing item rich presence section"),
         (e.NOW_PLAYING_ITEM_GAME_SECTION = "now playing item game section"),
         (e.FREQUENT_FRIENDS_ROW = "frequent friends row"),
+        (e.BILLING_SETTINGS_BILLING = "billing settings billing"),
         (e.SLAYER_STOREFRONT_PAYMENT_MODAL = "slayer storefront payment modal"),
         (e.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON = "slayer storefront card purchase button"),
         (e.SLAYER_STOREFRONT_CARD_GIFT_BUTTON = "slayer storefront card gift button"),
@@ -519,6 +520,8 @@ var r = (function (e) {
         (e.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON = "slayer storefront wishlist item card gift button"),
         (e.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON =
             "slayer storefront breadcrumb wishlist item card gift button"),
+        (e.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL = "social layer claim purchased item modal"),
+        (e.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL = "social layer gift code claim modal"),
         e
     );
 })(r || {});

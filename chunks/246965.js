@@ -97,7 +97,11 @@ let v = function (e) {
         : (0, r.jsxs)(a.qXd, {
               color: y(s),
               children: [
-                  (0, r.jsx)(a.RyX, { onClick: n }),
+                  (0, r.jsx)(a.RyX, {
+                      noticeType:
+                          s === h.Si.TIER_2 ? m.kVF.PREMIUM_TIER_2_TRIAL_ENDING : m.kVF.PREMIUM_TIER_0_TRIAL_ENDING,
+                      onClick: n,
+                  }),
                   (0, r.jsx)(a.SrA, {
                       size: "md",
                       color: "currentColor",

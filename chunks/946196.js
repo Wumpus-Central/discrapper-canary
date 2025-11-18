@@ -1,20 +1,21 @@
-n.d(t, { l: () => d }), n(388685);
+n.d(t, { l: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(636606),
+    o = n(878342),
     l = n(442837),
     a = n(481060),
     s = n(709706),
-    c = n(388032),
-    u = n(240527);
-function d() {
+    c = n(981631),
+    u = n(388032),
+    d = n(240527);
+function p() {
     let e = (0, l.e7)([s.Z], () => s.Z.getError());
-    return e ? (0, r.jsx)(p, { error: e }) : null;
+    return e ? (0, r.jsx)(m, { error: e }) : null;
 }
-let p = (e) => {
+let m = (e) => {
     let { error: t } = e,
         [n, l] = (0, i.useState)(!1),
-        d = (0, a.Yzy)(
+        p = (0, a.Yzy)(
             !n,
             {
                 from: {
@@ -32,31 +33,34 @@ let p = (e) => {
             },
             "respect-motion-settings",
         ),
-        p = (() => {
+        m = (() => {
             switch (t) {
                 case s.r.ERROR_DOWNLOADING_DEPENDENCY:
-                    return c.intl.string(c.t.D9neaH);
+                    return u.intl.string(u.t.D9neaH);
                 case s.r.ERROR_ACTIVATING_VOICE_FILTER:
-                    return c.intl.string(c.t.mNMZZg);
+                    return u.intl.string(u.t.mNMZZg);
                 default:
-                    return c.intl.string(c.t.F8FvUy);
+                    return u.intl.string(u.t.F8FvUy);
             }
         })();
-    return d((e) =>
+    return p((e) =>
         n
             ? null
             : (0, r.jsx)(o.animated.div, {
                   style: e,
-                  className: u.floaterWrapper,
+                  className: d.floaterWrapper,
                   children: (0, r.jsxs)("div", {
-                      className: u.visibleFloater,
+                      className: d.visibleFloater,
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/semibold",
                               color: "always-white",
-                              children: p,
+                              children: m,
                           }),
-                          (0, r.jsx)(a.RyX, { onClick: () => l(!0) }),
+                          (0, r.jsx)(a.RyX, {
+                              noticeType: c.kVF.VOICE_FILTERS_ERROR,
+                              onClick: () => l(!0),
+                          }),
                       ],
                   }),
               }),
