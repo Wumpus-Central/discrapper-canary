@@ -1,21 +1,19 @@
 n.d(t, {
-    wl: () => O,
-    yX: () => y,
+    wl: () => h,
+    yX: () => b,
 }),
     n(388685),
     n(781311);
 var r = n(54381),
     i = n(473749),
     a = n(423802),
-    l = n(442837),
-    o = n(481060),
-    c = n(510231),
-    s = n(706454),
-    u = n(785717),
-    d = n(86419),
-    f = n(388032),
-    g = n(302627);
-function p(e) {
+    l = n(481060),
+    o = n(510231),
+    c = n(785717),
+    s = n(86419),
+    u = n(388032),
+    d = n(302627);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +38,7 @@ function p(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +56,7 @@ function m(e, t) {
         e
     );
 }
-function b(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,96 +76,94 @@ function b(e, t) {
     }
     return i;
 }
-function h(e) {
-    var { widgetType: t, widget: n, onAddGame: h, children: y } = e,
-        O = b(e, ["widgetType", "widget", "onAddGame", "children"]);
-    let [v] = (0, o.ynZ)(),
-        [j, x] = i.useState(""),
-        _ = i.useRef(""),
-        P = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
-        { trackUserProfileEditAction: I } = (0, u.KZ)(),
-        w = (0, l.e7)([s.default], () => ["en-US", "en-GB"].includes(s.default.locale)),
-        S = i.useCallback(
+function m(e) {
+    var { widgetType: t, widget: n, onAddGame: m, children: b } = e,
+        h = p(e, ["widgetType", "widget", "onAddGame", "children"]);
+    let [y] = (0, l.ynZ)(),
+        [O, v] = i.useState(""),
+        j = i.useRef(""),
+        x = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
+        { trackUserProfileEditAction: _ } = (0, c.KZ)(),
+        P = i.useCallback(
             (e) => {
-                (0, d.ES)(t, { applicationId: e }),
-                    o.uvj.announce(f.intl.string(f.t.q0U3DE)),
-                    I({
+                (0, s.ES)(t, { applicationId: e }),
+                    l.uvj.announce(u.intl.string(u.t.q0U3DE)),
+                    _({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: t,
                     }),
-                    null == h || h();
+                    null == m || m();
             },
-            [t, I, h],
+            [t, _, m],
         ),
-        { options: E, matchSorterOptions: T } = (0, c.h)(),
-        C = i.useCallback(
-            (e) => ("" === e.trim() ? E : (0, a.Lu)(E, e, m(p({}, T), { threshold: a.Lu.rankings.CONTAINS }))),
-            [E, T],
+        { options: I, matchSorterOptions: w } = (0, o.h)(),
+        S = i.useCallback(
+            (e) => ("" === e.trim() ? I : (0, a.Lu)(I, e, g(f({}, w), { threshold: a.Lu.rankings.CONTAINS }))),
+            [I, w],
         ),
-        D = i.useCallback(
+        E = i.useCallback(
             (e) => {
-                "" === j.trim() &&
+                "" === O.trim() &&
                     "" !== e.trim() &&
-                    I({
+                    _({
                         action: "GAME_SEARCH_SESSION_STARTED",
                         widgetEdited: t,
                         numCharacters: e.trim().length,
-                        numResults: C(e).length,
+                        numResults: S(e).length,
                     }),
-                    x(e),
-                    (_.current = e);
+                    v(e),
+                    (j.current = e);
             },
-            [j, I, t, C],
+            [O, _, t, S],
         ),
-        k = i.useMemo(
-            () =>
-                "" !== j.trim() && w ? f.intl.format(f.t.jhiTsN, { searchTerm: j.trim() }) : f.intl.string(f.t.QwSXv8),
-            [j, w],
+        T = i.useMemo(
+            () => ("" !== O.trim() ? u.intl.format(u.t.jhiTsN, { searchTerm: O.trim() }) : u.intl.string(u.t.QwSXv8)),
+            [O],
         );
     return (0, r.jsx)(
-        o.yRy,
-        m(p({}, O), {
+        l.yRy,
+        g(f({}, h), {
             onRequestOpen: () => {
-                I({
+                _({
                     action: "PRESS_ADD_GAME",
                     widgetEdited: t,
                 }),
-                    x(""),
-                    (_.current = "");
+                    v(""),
+                    (j.current = "");
             },
             onRequestClose: () => {
-                I({
+                _({
                     action: "GAME_SEARCH_SESSION_ENDED",
                     widgetEdited: t,
-                    numCharacters: _.current.trim().length,
-                    numResults: C(_.current).length,
+                    numCharacters: j.current.trim().length,
+                    numResults: S(j.current).length,
                 });
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(o.DBG, {
-                    className: g.gameSearchCombobox,
-                    placeholder: f.intl.string(f.t["5h0QOP"]),
+                return (0, r.jsx)(l.DBG, {
+                    className: d.gameSearchCombobox,
+                    placeholder: u.intl.string(u.t["5h0QOP"]),
                     autoFocus: !0,
-                    value: v,
+                    value: y,
                     onChange: (e) => {
-                        S(e), t();
+                        P(e), t();
                     },
                     multiSelect: !1,
                     maxVisibleItems: 7,
-                    emptyStateText: k,
+                    emptyStateText: T,
                     emptyStateHeader: "",
-                    onQueryChange: D,
+                    onQueryChange: E,
                     children: (e) =>
-                        C(e).map((e) =>
+                        S(e).map((e) =>
                             (0, r.jsx)(
-                                o.lo1,
+                                l.lo1,
                                 {
-                                    disabled: P.has(e.value),
+                                    disabled: x.has(e.value),
                                     value: String(e.value),
-                                    children: (0, r.jsx)(o.lo1.Label, {
-                                        children: (0, r.jsx)(o.Text, {
+                                    children: (0, r.jsx)(l.lo1.Label, {
+                                        children: (0, r.jsx)(l.Text, {
                                             variant: "text-md/medium",
                                             color: "header-secondary",
                                             children: e.label,
@@ -179,18 +175,18 @@ function h(e) {
                         ),
                 });
             },
-            children: (e) => y(e),
+            children: (e) => b(e),
         }),
     );
 }
-function y(e) {
+function b(e) {
     var { disabled: t } = e,
-        n = b(e, ["disabled"]);
+        n = p(e, ["disabled"]);
     let a = i.useRef(null);
     return (0, r.jsx)(
-        h,
-        m(
-            p(
+        m,
+        g(
+            f(
                 {
                     targetElementRef: a,
                     position: "bottom",
@@ -201,14 +197,14 @@ function y(e) {
             {
                 children: (e) =>
                     (0, r.jsx)(
-                        o.Button,
-                        p(
+                        l.Button,
+                        f(
                             {
                                 buttonRef: a,
                                 variant: "secondary",
                                 size: "sm",
-                                icon: o.qJs,
-                                text: f.intl.string(f.t.SgTOtX),
+                                icon: l.qJs,
+                                text: u.intl.string(u.t.SgTOtX),
                                 disabled: t,
                             },
                             e,
@@ -218,12 +214,12 @@ function y(e) {
         ),
     );
 }
-function O(e) {
+function h(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        h,
-        m(
-            p(
+        m,
+        g(
+            f(
                 {
                     targetElementRef: t,
                     position: "right",
@@ -234,17 +230,17 @@ function O(e) {
             {
                 children: (e) =>
                     (0, r.jsx)(
-                        o.P3F,
-                        m(
-                            p(
+                        l.P3F,
+                        g(
+                            f(
                                 {
                                     innerRef: t,
-                                    className: g.coverButton,
-                                    "aria-label": f.intl.string(f.t.SgTOtX),
+                                    className: d.coverButton,
+                                    "aria-label": u.intl.string(u.t.SgTOtX),
                                 },
                                 e,
                             ),
-                            { children: (0, r.jsx)(o.svS, { color: "currentColor" }) },
+                            { children: (0, r.jsx)(l.svS, { color: "currentColor" }) },
                         ),
                     ),
             },

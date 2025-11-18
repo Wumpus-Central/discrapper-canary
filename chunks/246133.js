@@ -1,11 +1,15 @@
-n.d(t, { Z: () => _ });
-var r = n(381499),
-    i = n(601992),
-    a = n(675478),
-    o = n(885110),
-    s = n(626135),
-    l = n(981631);
-function c(e, t, n) {
+n.d(t, { Z: () => E });
+var r = n(925477),
+    i = n(381499),
+    a = n(601992),
+    o = n(675478),
+    s = n(885110),
+    l = n(626135),
+    c = n(51144),
+    u = n(174415),
+    d = n(981631),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +22,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +33,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,44 +50,58 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-async function _(e) {
-    let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: d, disableTracking: _ = !1 } = e;
-    if (
-        (null == n && (n = o.Z.getStatus()),
-        await a.hW.updateAsync(
-            "status",
-            (e) => {
-                (e.status = r.Gm.create({ value: t })),
-                    (e.statusExpiresAtMs = null != d ? "".concat(Date.now() + d) : "0"),
-                    (e.statusCreatedAtMs =
-                        n === t && null != e.statusCreatedAtMs
-                            ? e.statusCreatedAtMs
-                            : r.wA.create({ value: "".concat(Date.now()) }));
-            },
-            a.fy.INFREQUENT_USER_ACTION,
-        ),
-        _)
-    )
-        return;
-    let p = u(
+function g(e, t) {
+    let n = (0, c.u5)(e);
+    if ("0" === t) return f.intl.formatToPlainString(f.t.dO2aLi, { statusLabel: n });
+    let { kind: r, dateString: i, timeString: a } = (0, u.k)(t);
+    return "today" === r
+        ? f.intl.formatToPlainString(f.t["r50t/S"], {
+              statusLabel: n,
+              timeString: a,
+          })
+        : f.intl.formatToPlainString(f.t["J+GJHv"], {
+              statusLabel: n,
+              dateString: i,
+              timeString: a,
+          });
+}
+async function E(e) {
+    let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: u, disableTracking: f = !1 } = e;
+    null == n && (n = s.Z.getStatus());
+    let _ = null != u ? "".concat(Date.now() + u) : "0";
+    await o.hW.updateAsync(
+        "status",
+        (e) => {
+            (e.status = i.Gm.create({ value: t })),
+                (e.statusExpiresAtMs = _),
+                (e.statusCreatedAtMs =
+                    n === t && null != e.statusCreatedAtMs
+                        ? e.statusCreatedAtMs
+                        : i.wA.create({ value: "".concat(Date.now()) }));
+        },
+        o.fy.INFREQUENT_USER_ACTION,
+    );
+    let h = g(t, _);
+    if ((r.uv.announce(h), f)) return;
+    let E = p(
         {
             next_status: t,
             prev_status: n,
         },
-        i.Z.getGlobalStats(),
+        a.Z.getGlobalStats(),
     );
-    null != d && (p = f(u({}, p), { expire_duration_minutes: null != d ? d / 60000 : null })),
-        null != c && (p = u({}, p, c)),
-        s.default.track(l.rMx.USER_STATUS_UPDATED, p);
+    null != u && (E = m(p({}, E), { expire_duration_minutes: null != u ? u / 60000 : null })),
+        null != c && (E = p({}, E, c)),
+        l.default.track(d.rMx.USER_STATUS_UPDATED, E);
 }

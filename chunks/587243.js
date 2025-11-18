@@ -12,45 +12,43 @@ var l = n(722770),
     o = n(695346),
     c = n(70956),
     d = n(51144),
-    u = n(246133),
-    m = n(981631),
-    p = n(388032),
-    h = n(54482);
-let x = [
+    u = n(174415),
+    m = n(246133),
+    p = n(981631),
+    h = n(388032),
+    x = n(54482);
+let g = [
         {
             duration: 15 * c.Z.Millis.MINUTE,
-            label: () => p.intl.string(p.t["8ot6gv"]),
+            label: () => h.intl.string(h.t["8ot6gv"]),
         },
         {
             duration: c.Z.Millis.HOUR,
-            label: () => p.intl.string(p.t.UMWBZr),
+            label: () => h.intl.string(h.t.UMWBZr),
         },
         {
             duration: 8 * c.Z.Millis.HOUR,
-            label: () => p.intl.string(p.t.EpAXPC),
+            label: () => h.intl.string(h.t.EpAXPC),
         },
         {
             duration: c.Z.Millis.DAY,
-            label: () => p.intl.string(p.t["755t4q"]),
+            label: () => h.intl.string(h.t["755t4q"]),
         },
         {
             duration: 3 * c.Z.Millis.DAY,
-            label: () => p.intl.string(p.t["f3/1ch"]),
+            label: () => h.intl.string(h.t["f3/1ch"]),
         },
         {
             duration: void 0,
-            label: () => p.intl.string(p.t["46dqJY"]),
+            label: () => h.intl.string(h.t["46dqJY"]),
         },
     ],
-    g = "forever";
-function f(e, t) {
-    return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
-}
+    f = "forever";
 function b(e) {
     let { status: t, currentStatus: n, description: l } = e,
-        i = t !== m.Skl.ONLINE,
+        i = t !== p.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
-            children: x.map((e) => {
+            children: g.map((e) => {
                 let { duration: l, label: i } = e;
                 return (0, a.jsx)(
                     r.sNh,
@@ -58,47 +56,47 @@ function b(e) {
                         id: "".concat(t, "-").concat(l),
                         label: i(),
                         action: () =>
-                            (0, u.Z)({
+                            (0, m.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
                                 durationMillis: l,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != l ? l : g,
+                    null != l ? l : f,
                 );
             }),
         });
     return (0, a.jsx)(r.sNh, {
         id: t,
-        className: h.expiringStatusMenuItem,
+        className: x.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: i,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
-                className: h.statusItem,
+                className: x.statusItem,
                 children: [
                     (0, a.jsx)(r.qbd, {
                         status: t,
-                        className: h.icon,
+                        className: x.icon,
                         size: 10,
                         color: n ? "currentColor" : void 0,
                     }),
                     (0, a.jsx)("div", {
-                        className: h.status,
+                        className: x.status,
                         children: (0, d.u5)(t),
                     }),
                     null != l &&
                         (0, a.jsx)("div", {
-                            className: h.description,
+                            className: x.description,
                             children: l,
                         }),
                 ],
             });
         },
         action: () => {
-            (0, u.Z)({
+            (0, m.Z)({
                 nextStatus: t,
                 prevStatus: n,
             });
@@ -109,18 +107,12 @@ function b(e) {
 }
 function v(e) {
     if (null == e || "0" === e) return;
-    let t = new Date(Number(e)),
-        n = f(t, new Date()),
-        a = new Date();
-    a.setDate(a.getDate() + 1);
-    let l = f(t, a);
-    return n
-        ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: p.intl.data.formatTime(t, { format: "short" }) })
-        : p.intl.formatToPlainString(p.t["9OFjSe"], {
-              dateString: l
-                  ? p.intl.data.formatRelativeTime(1, "day", { numeric: "auto" })
-                  : p.intl.data.formatDate(t, { dateStyle: "short" }),
-              timeString: p.intl.data.formatTime(t, { format: "short" }),
+    let { kind: t, dateString: n, timeString: a } = (0, u.k)(e);
+    return "today" === t
+        ? h.intl.formatToPlainString(h.t.ZxxHIO, { timeString: a })
+        : h.intl.formatToPlainString(h.t["9OFjSe"], {
+              dateString: n,
+              timeString: a,
           });
 }
 function j(e) {
@@ -128,21 +120,21 @@ function j(e) {
         n = (0, i.p)(),
         c = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         d = o.fv.useSetting(),
-        u = e === m.Skl.DND,
-        f = (n) => {
+        u = e === p.Skl.DND,
+        m = (n) => {
             let a = v(t);
             if (e === n && null != a) return a;
             switch (n) {
-                case m.Skl.DND:
-                    return c ? p.intl.string(p.t.day5A6) : p.intl.string(p.t["tq/fMK"]);
-                case m.Skl.INVISIBLE:
-                    return p.intl.string(p.t.zPc6Mc);
+                case p.Skl.DND:
+                    return c ? h.intl.string(h.t.day5A6) : h.intl.string(h.t["tq/fMK"]);
+                case p.Skl.INVISIBLE:
+                    return h.intl.string(h.t.zPc6Mc);
                 default:
                     return;
             }
         },
         j = (0, a.jsx)(a.Fragment, {
-            children: x.map((t) => {
+            children: g.map((t) => {
                 let { duration: n, label: l } = t;
                 return (0, a.jsx)(
                     r.sNh,
@@ -154,28 +146,28 @@ function j(e) {
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : g,
+                    null != n ? n : f,
                 );
             }),
         }),
         _ = b({
-            status: m.Skl.ONLINE,
+            status: p.Skl.ONLINE,
             currentStatus: e,
         }),
         y = b({
-            status: m.Skl.IDLE,
+            status: p.Skl.IDLE,
             currentStatus: e,
-            description: f(m.Skl.IDLE),
+            description: m(p.Skl.IDLE),
         }),
         C = b({
-            status: m.Skl.DND,
+            status: p.Skl.DND,
             currentStatus: e,
-            description: f(m.Skl.DND),
+            description: m(p.Skl.DND),
         }),
         S = b({
-            status: m.Skl.INVISIBLE,
+            status: p.Skl.INVISIBLE,
             currentStatus: e,
-            description: f(m.Skl.INVISIBLE),
+            description: m(p.Skl.INVISIBLE),
         });
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -193,38 +185,38 @@ function j(e) {
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
-                                  className: h.expiringStatusMenuItem,
+                                  className: x.expiringStatusMenuItem,
                                   keepItemStyles: !0,
                                   hasSubmenu: !0,
                                   label: () =>
                                       (0, a.jsxs)("div", {
-                                          className: h.statusItem,
+                                          className: x.statusItem,
                                           children: [
                                               (0, a.jsx)(r.owu, {
                                                   size: "xxs",
-                                                  className: h.icon,
+                                                  className: x.icon,
                                               }),
                                               (0, a.jsxs)("div", {
-                                                  className: h.focusModeTitle,
+                                                  className: x.focusModeTitle,
                                                   children: [
-                                                      p.intl.string(p.t.gJRnwK),
+                                                      h.intl.string(h.t.gJRnwK),
                                                       (0, a.jsx)(r.IGR, {
                                                           text: n
-                                                              ? p.intl.string(p.t.ApAu9f)
+                                                              ? h.intl.string(h.t.ApAu9f)
                                                               : u
-                                                                ? p.intl.string(p.t.gH3Frd)
-                                                                : p.intl.string(p.t["64pl82"]),
+                                                                ? h.intl.string(h.t.gH3Frd)
+                                                                : h.intl.string(h.t["64pl82"]),
                                                           color: n ? l.Z.BRAND_500 : u ? l.Z.RED_400 : l.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),
                                               (0, a.jsx)("div", {
-                                                  className: h.description,
+                                                  className: x.description,
                                                   children:
                                                       n && null != d && "0" !== d
-                                                          ? p.intl.formatToPlainString(p.t.BWD8fs, {
+                                                          ? h.intl.formatToPlainString(h.t.BWD8fs, {
                                                                 endTime: new Date(Number(d)).toLocaleString(
-                                                                    p.intl.currentLocale,
+                                                                    h.intl.currentLocale,
                                                                     {
                                                                         month: "numeric",
                                                                         day: "numeric",
@@ -233,7 +225,7 @@ function j(e) {
                                                                     },
                                                                 ),
                                                             })
-                                                          : p.intl.string(p.t["Br1q+x"]),
+                                                          : h.intl.string(h.t["Br1q+x"]),
                                               }),
                                           ],
                                       }),
