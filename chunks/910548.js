@@ -106,8 +106,8 @@ var P = (function (e) {
 })({});
 let D = ["TOP_LEFT", "TOP_RIGHT"],
     w = (0, c.Mg)(u.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    x = 11,
-    L = 125,
+    L = 11,
+    x = 125,
     M = {
         leafPosition: {
             x: 85,
@@ -124,8 +124,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
     F = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
-                x: e - x,
-                y: e - L,
+                x: e - L,
+                y: e - x,
             }),
             confettiVelocityDirection: {
                 x: 1,
@@ -139,8 +139,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
         },
         TOP_RIGHT: {
             getConfettiPosition: (e) => ({
-                x: x,
-                y: e - L,
+                x: L,
+                y: e - x,
             }),
             confettiVelocityDirection: {
                 x: -1,
@@ -154,8 +154,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
         },
         BOTTOM_LEFT: C(S({}, M), {
             getConfettiPosition: (e) => ({
-                x: e - x,
-                y: L,
+                x: e - L,
+                y: x,
             }),
             confettiVelocityDirection: {
                 x: 1,
@@ -164,8 +164,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
         }),
         BOTTOM_RIGHT: C(S({}, M), {
             getConfettiPosition: (e) => ({
-                x: x,
-                y: L,
+                x: L,
+                y: x,
             }),
             confettiVelocityDirection: {
                 x: -1,
@@ -379,34 +379,34 @@ function en(e) {
         { reducedMotion: P } = i.useContext(d.Sfi),
         D = (0, b.ZP)(n),
         w = D.nick,
-        x = s(D);
+        L = s(D);
     t =
         null == c || null == o
             ? u > 1
                 ? v.intl.format(v.t.yfC9ds, {
                       username: w,
-                      usernameHook: x,
+                      usernameHook: L,
                       numSubscriptions: u,
                   })
                 : v.intl.format(v.t["57St/7"], {
                       username: w,
-                      usernameHook: x,
+                      usernameHook: L,
                   })
             : u > 1
               ? v.intl.format(v.t.PO9uJD, {
                     username: w,
-                    usernameHook: x,
+                    usernameHook: L,
                     numSubscriptions: u,
                     guildName: o.name,
                     newTierName: (0, E.nW)(c),
                 })
               : v.intl.format(v.t.cUfTTE, {
                     username: w,
-                    usernameHook: x,
+                    usernameHook: L,
                     guildName: o.name,
                     newTierName: (0, E.nW)(c),
                 });
-    let L = i.useCallback(() => {
+    let x = i.useCallback(() => {
             if (!P.enabled)
                 if (A || 0 !== Math.floor(Math.random() * N)) {
                     var e;
@@ -430,23 +430,29 @@ function en(e) {
             [k],
         );
     i.useEffect(() => S(j));
-    let U = (0, r.jsx)(d.P3F, {
-        className: I.iconWrapper,
-        innerRef: R,
-        onClick: l,
-        children: (0, r.jsx)(d.Ucv, {
-            color: d.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-            className: I.icon,
-            onMouseEnter: L,
-        }),
-    });
+    let U = i.useCallback(
+            (e) => {
+                e.target === e.currentTarget && l(e);
+            },
+            [l],
+        ),
+        G = (0, r.jsx)(d.P3F, {
+            className: I.iconWrapper,
+            innerRef: R,
+            onClick: l,
+            children: (0, r.jsx)(d.Ucv, {
+                color: d.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                className: I.icon,
+                onMouseEnter: x,
+            }),
+        });
     return (0, r.jsxs)(y.Z, {
-        iconNode: U,
+        iconNode: G,
         timestamp: n.timestamp,
         compact: a,
         children: [
             (0, r.jsx)("div", {
-                onClick: l,
+                onClick: U,
                 className: I.message,
                 children: t,
             }),
