@@ -17,29 +17,30 @@ var r = n(54381),
     y = n(388032),
     O = n(267233);
 function v() {
-    let { trackUserProfileEditAction: e } = (0, f.KZ)(),
-        t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: v, config: j } = (0, p.G)(),
-        { token: x, fetched: _ } = (0, s.o)(null == j ? void 0 : j.application_id),
-        P = i.useMemo(
+    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
+        v = i.useRef(!1),
+        j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        { application: x, config: _ } = (0, p.G)(),
+        { token: P, fetched: I } = (0, s.o)(null == _ ? void 0 : _.application_id),
+        w = i.useMemo(
             () =>
-                (null == j ? void 0 : j.application_id) != null
+                (null == _ ? void 0 : _.application_id) != null
                     ? new g.q({
                           type: a.l.APPLICATION,
-                          applicationId: j.application_id,
+                          applicationId: _.application_id,
                       })
                     : null,
-            [null == j ? void 0 : j.application_id],
+            [null == _ ? void 0 : _.application_id],
         ),
-        I = i.useCallback(() => {
-            e({ action: "PRESS_ADD_WIDGET" }),
+        S = i.useCallback(() => {
+            t({ action: "PRESS_ADD_WIDGET" }),
                 (0, c.ZDy)(
                     async () => {
-                        let { default: t } = await n.e("38576").then(n.bind(n, 925170));
+                        let { default: e } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
                             var i, a;
                             return (0, r.jsx)(
-                                t,
+                                e,
                                 ((i = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +66,7 @@ function v() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a = { trackUserProfileEditAction: e }),
+                                (a = a = { trackUserProfileEditAction: t }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
@@ -84,14 +85,28 @@ function v() {
                     },
                     { stackingBehavior: "stack" },
                 );
-        }, [e]);
-    if (null == t || null == v || null == P || !_)
+        }, [t]),
+        E = null == j || null == x || null == w || !I,
+        T = null != P;
+    if (
+        (i.useEffect(() => {
+            !E &&
+                T &&
+                (v.current ||
+                    (e({
+                        action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE",
+                        applicationId: x.id,
+                    }),
+                    (v.current = !0)));
+        }, [E, T, e, null == x ? void 0 : x.id]),
+        E)
+    )
         return (0, r.jsx)("div", {
             className: O.loading,
             children: (0, r.jsx)(c.$jN, {}),
         });
-    if (null == x) return (0, r.jsx)(h.Z, {});
-    let w = (0, r.jsxs)(c.Kqy, {
+    if (!T) return (0, r.jsx)(h.Z, {});
+    let C = (0, r.jsxs)(c.Kqy, {
         gap: 4,
         className: O.header,
         children: [
@@ -103,7 +118,7 @@ function v() {
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: y.intl.format(y.t.YnNFWa, { applicationName: v.name }),
+                children: y.intl.format(y.t.YnNFWa, { applicationName: x.name }),
             }),
         ],
     });
@@ -111,19 +126,19 @@ function v() {
         contentTypes: [o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: n, markAsDismissed: i } = e;
-            switch (n) {
+            let { visibleContent: t, markAsDismissed: n } = e;
+            switch (t) {
                 case o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET:
                     return (0, r.jsxs)(c.Kqy, {
                         gap: 16,
                         align: "center",
                         children: [
                             (0, r.jsx)(c.LZC, { size: 32 }),
-                            w,
+                            C,
                             (0, r.jsx)(m.Z, {
-                                user: t,
-                                application: v,
-                                onDismiss: i,
+                                user: j,
+                                application: x,
+                                onDismiss: n,
                             }),
                             (0, r.jsx)(b.Z, {}),
                         ],
@@ -134,13 +149,13 @@ function v() {
                         align: "center",
                         children: [
                             (0, r.jsx)(c.LZC, { size: 128 }),
-                            w,
+                            C,
                             (0, r.jsx)(c.Button, {
                                 icon: c.qJs,
                                 text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: I,
+                                onClick: S,
                             }),
                         ],
                     });

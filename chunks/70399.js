@@ -1,75 +1,86 @@
 n.d(t, {
-    T: () => h,
-    Z: () => f,
+    T: () => m,
+    Z: () => g,
 });
 var r = n(54381),
-    i = n(120356),
-    l = n.n(i),
-    a = n(793030),
-    s = n(442837),
-    o = n(535139),
-    c = n(835473),
-    u = n(621853),
-    d = n(388032),
-    p = n(685009);
-function f(e) {
+    i = n(473749),
+    l = n(120356),
+    a = n.n(l),
+    s = n(793030),
+    o = n(442837),
+    c = n(535139),
+    u = n(835473),
+    d = n(785717),
+    p = n(621853),
+    f = n(388032),
+    h = n(373942);
+function g(e) {
     let { applicationId: t, size: n = "default" } = e,
-        i = (0, s.e7)([u.Z], () => u.Z.getApplicationWidgetApplicationConfig(t));
+        i = (0, o.e7)([p.Z], () => p.Z.getApplicationWidgetApplicationConfig(t));
     return (0, r.jsxs)("div", {
-        className: l()(p.container, { [p.sizeSmall]: "small" === n }),
+        className: a()(h.container, { [h.sizeSmall]: "small" === n }),
         children: [
             (0, r.jsxs)("div", {
-                className: p.content,
+                className: h.content,
                 children: [
-                    (0, r.jsx)("div", { className: p.header }),
-                    (0, r.jsx)("div", { className: p.divider }),
+                    (0, r.jsx)("div", { className: h.header }),
+                    (0, r.jsx)("div", { className: h.divider }),
                     (0, r.jsxs)("div", {
-                        className: p.stats,
+                        className: h.stats,
                         children: [
-                            (0, r.jsx)("div", { className: p.stat }),
-                            (0, r.jsx)("div", { className: p.stat }),
-                            (0, r.jsx)("div", { className: p.stat }),
-                            (0, r.jsx)("div", { className: p.stat }),
-                            (0, r.jsx)("div", { className: p.stat }),
-                            (0, r.jsx)("div", { className: p.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
+                            (0, r.jsx)("div", { className: h.stat }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: p.imageContainer,
+                className: h.imageContainer,
                 children:
                     (null == i ? void 0 : i.mini_preview_image) != null
                         ? (0, r.jsx)("img", {
                               src: i.mini_preview_image,
                               alt: "",
-                              className: p.previewImage,
+                              className: h.previewImage,
                           })
-                        : (0, r.jsx)("div", { className: p.previewImagePlaceholder }),
+                        : (0, r.jsx)("div", { className: h.previewImagePlaceholder }),
             }),
         ],
     });
 }
-function h(e) {
+function m(e) {
     let { applicationId: t, size: n = "default" } = e,
-        i = (0, c.q)(t),
-        { hasAlreadyLinked: l, canStartAuthorization: s, startAuthorization: u, fetched: f } = (0, o.F)(i);
-    return "default" !== n || null == i
+        { trackUserProfileAction: l } = (0, d.KZ)(),
+        a = (0, u.q)(t),
+        { hasAlreadyLinked: o, canStartAuthorization: p, startAuthorization: g, fetched: m } = (0, c.F)(a),
+        _ = i.useCallback(() => {
+            p &&
+                (l({
+                    action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT",
+                    applicationId: t,
+                }),
+                g());
+        }, [p, l, t, g]);
+    return "default" !== n || null == a
         ? null
         : (0, r.jsxs)("div", {
-              className: p.footer,
+              className: h.footer,
               children: [
-                  (0, r.jsx)(a.uIJ, { size: "xs" }),
-                  (0, r.jsx)(a.xvT, {
+                  (0, r.jsx)(s.uIJ, { size: "xs" }),
+                  (0, r.jsx)(s.xvT, {
                       variant: "text-sm/medium",
                       color: "text-secondary",
-                      children: f
-                          ? l
-                              ? d.intl.format(d.t.wiyuG9, { applicationName: i.name })
-                              : s
-                                ? d.intl.format(d.t.RNWFOQ, { onConnect: u })
-                                : d.intl.string(d.t["9TX4UT"])
-                          : (0, r.jsx)("div", { className: p.footerPlaceholder }),
+                      children: m
+                          ? o
+                              ? f.intl.format(f.t.wiyuG9, { applicationName: a.name })
+                              : p
+                                ? f.intl.format(f.t.RNWFOQ, { onConnect: _ })
+                                : f.intl.string(f.t["9TX4UT"])
+                          : (0, r.jsx)("div", { className: h.footerPlaceholder }),
                   }),
               ],
           });

@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(652853),
     b = n(671955),
     y = n(388032),
-    O = n(350917);
+    O = n(987364);
 let v = 4;
 function I(e) {
     let t = (0, u.Z)(e.map((e) => e.applicationId));
@@ -57,7 +57,8 @@ function T(e) {
         T = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
         [A, C] = (0, i.useState)([]),
         { themeType: N } = (0, E.z)(),
-        R = N === b.l.SIDEBAR;
+        R = N === b.l.SIDEBAR,
+        P = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
             if (T) return void c.Z.getDetectableGames();
@@ -83,6 +84,9 @@ function T(e) {
                     .slice(0, v),
             );
         }, [u, T]),
+        (0, i.useEffect)(() => {
+            0 !== A.length && (P.current || (a({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (P.current = !0)));
+        }, [a, A.length]),
         (0, r.jsx)(l.P3F, {
             "aria-label": y.intl.string(y.t.JjiwFx),
             onClick: () => {

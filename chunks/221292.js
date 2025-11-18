@@ -1,12 +1,12 @@
 n.d(t, {
     Er: () => M,
     NE: () => P,
-    Of: () => x,
+    Of: () => L,
     QN: () => A,
     Qf: () => D,
     RV: () => N,
     TY: () => w,
-    V1: () => L,
+    V1: () => x,
     pQ: () => C,
     te: () => T,
     z7: () => R,
@@ -176,6 +176,7 @@ let v = (e) => {
             analyticsLocations: s,
             action: l,
             section: c,
+            applicationId: d,
         } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTION,
@@ -186,6 +187,7 @@ let v = (e) => {
                 source_message_id: i,
                 source_role_id: a,
                 widget_type: o,
+                application_id: d,
             }),
         );
     },
@@ -307,7 +309,7 @@ let v = (e) => {
             profile_has_theme_animation: (null == i ? void 0 : i.popoutAnimationParticleType) != null,
         });
     },
-    x = (e) => {
+    L = (e) => {
         let {
             guildId: t,
             channelId: n,
@@ -317,6 +319,7 @@ let v = (e) => {
             gameId: s,
             numResults: l,
             numCharacters: c,
+            applicationId: d,
         } = e;
         C(O(b({}, e), { action: a })),
             u.default.track(
@@ -328,10 +331,11 @@ let v = (e) => {
                     game_id: s,
                     num_results: l,
                     num_characters: c,
+                    application_id: d,
                 }),
             );
     },
-    L = (e) => {
+    x = (e) => {
         let {
             guildId: t,
             channelId: n,

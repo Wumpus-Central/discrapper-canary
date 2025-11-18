@@ -25,7 +25,7 @@ function y(e) {
         { trackUserProfileEditAction: E } = (0, u.KZ)(),
         O = (0, i.e7)([b.default], () => b.default.getId()),
         { config: T, application: N } = (0, h.G)(),
-        { fetched: P, hasAlreadyLinked: w, canStartAuthorization: I, startAuthorization: k } = (0, c.F)(N),
+        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: w, startAuthorization: k } = (0, c.F)(N),
         R = (0, x.ZP)(O),
         A =
             null == R || null == (t = R.widgets)
@@ -34,11 +34,11 @@ function y(e) {
     return null != T && null != T.edit_profile_upsell_image && null != N && P
         ? (0, a.jsx)(d.ZP, {
               bypassAutoDismiss: !0,
-              contentTypes: w
+              contentTypes: I
                   ? A
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : I
+                  : w
                     ? [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
@@ -81,6 +81,7 @@ function y(e) {
                                                         E({
                                                             action: "WIDGET_ADDED",
                                                             widgetEdited: r.l.APPLICATION,
+                                                            applicationId: N.id,
                                                         }),
                                                         (0, f.L$)(j.qb.WIDGET_ADDED);
                                                 })

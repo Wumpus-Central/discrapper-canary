@@ -1,5 +1,5 @@
 n.d(t, {
-    F3: () => x,
+    F3: () => k,
     KK: () => w,
     NW: () => d,
     OV: () => l,
@@ -7,6 +7,7 @@ n.d(t, {
     Rb: () => u,
     Se: () => m,
     Sy: () => P,
+    T_: () => M,
     XE: () => f,
     YB: () => b,
     Yo: () => _,
@@ -364,6 +365,30 @@ function w(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return D.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function x() {
-    v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), P("OVERLAY_INITIALIZED"), w("OVERLAY_INITIALIZED");
+let L = (0, a.B)({
+    id: "2025-11_overlay_bug_reporter",
+    label: "Overlay Bug Reporter",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: "Enable Bug Reporter",
+            config: { enabled: !0 },
+        },
+    ],
+});
+function x(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return L.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+}
+function M(e) {
+    return L.useExperiment({ location: e }).enabled;
+}
+function k() {
+    v("OVERLAY_INITIALIZED"),
+        S("OVERLAY_INITIALIZED"),
+        P("OVERLAY_INITIALIZED"),
+        w("OVERLAY_INITIALIZED"),
+        x("OVERLAY_INITIALIZED");
 }

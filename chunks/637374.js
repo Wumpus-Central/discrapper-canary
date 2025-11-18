@@ -29,15 +29,15 @@ var r = n(54381),
     P = n(55563),
     D = n(199480),
     w = n(626135),
-    x = n(669079),
-    L = n(74538),
+    L = n(669079),
+    x = n(74538),
     M = n(296848),
     k = n(51144),
     j = n(626799),
     U = n(981631),
     G = n(474936),
     B = n(388032),
-    Z = n(494452);
+    Z = n(584645);
 function F(e, t, n) {
     return (
         t in e
@@ -206,7 +206,7 @@ class z extends i.Component {
             o =
                 (!e.isSubscription && null != t) ||
                 (!e.isSelfRedeemable && i) ||
-                (e.isExistingPremiumSubscriptionDisallowed && (0, L.I5)(n));
+                (e.isExistingPremiumSubscriptionDisallowed && (0, x.I5)(n));
         return (
             (e.redeemed || o || e.isClaimed || !n.verified) && ((a.color = u.zx.Colors.BRAND), (a.disabled = !0)),
             (0, r.jsx)(
@@ -321,19 +321,19 @@ class z extends i.Component {
         });
     }
     renderEmbed() {
-        let { giftCode: e, width: t } = this.props;
-        return null == e
-            ? null
-            : (0, r.jsx)(j.$, {
-                  skuId: e.skuId,
-                  onEmbedClick: this.handleEmbedClick,
-                  analyticsSection: U.jXE.GIFT_CODE_EMBED,
-                  renderCustomActions: () => this.renderActions(e),
-                  renderCustomTitle: () => this.renderTitle(e),
-                  renderCustomTagline: () => this.renderBody(e),
-                  renderCustomMedia: null == e.giftStyle ? void 0 : () => this.renderCustomGiftBox(e),
-                  width: t,
-              });
+        let { giftCode: e, width: t, sku: n } = this.props;
+        if (null == e) return null;
+        let i = null != e.giftStyle && !(0, v.K$)(n);
+        return (0, r.jsx)(j.$, {
+            skuId: e.skuId,
+            onEmbedClick: this.handleEmbedClick,
+            analyticsSection: U.jXE.GIFT_CODE_EMBED,
+            renderCustomActions: () => this.renderActions(e),
+            renderCustomTitle: () => this.renderTitle(e),
+            renderCustomTagline: () => this.renderBody(e),
+            renderCustomMedia: i ? () => this.renderCustomGiftBox(e) : void 0,
+            width: t,
+        });
     }
     render() {
         let { giftCode: e, resolved: t, width: n, isSelfGift: i } = this.props;
@@ -451,7 +451,7 @@ let q = (0, p.Z)((0, _.Z)(z)),
             s = (0, c.e7)([P.Z], () => (null != i ? P.Z.get(i.skuId) : null)),
             l = (0, c.e7)([N.Z], () =>
                 null != s && (null == i ? void 0 : i.entitlementBranches) != null
-                    ? x.z2(i.entitlementBranches, s, N.Z)
+                    ? L.z2(i.entitlementBranches, s, N.Z)
                     : null,
             ),
             u = (0, h.q)(null == s ? void 0 : s.applicationId),

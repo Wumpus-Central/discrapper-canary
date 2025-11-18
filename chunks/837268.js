@@ -95,6 +95,7 @@ var r = (function (e) {
             (e.OVERLAY_RENDERING = "overlay_rendering"),
             (e.OVERLAY_CRASHED = "overlay_crashed"),
             (e.OVERLAY_CRASHED_DISABLED = "overlay_crashed_disabled"),
+            (e.GAME_UNTRACKED = "game_untracked"),
             e
         );
     })({});

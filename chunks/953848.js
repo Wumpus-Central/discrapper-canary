@@ -16,46 +16,46 @@ var l = n(54381),
     x = n(543733);
 function b(e) {
     var t, n;
-    let { onClose: b, transitionState: _, onSubmitted: f, detectedActivity: j } = e,
-        [O, w] = a.useState("issue_selection"),
-        [y, P] = a.useState(null),
-        [k, I] = a.useState(""),
-        [G, N] = a.useState(null),
-        [D, T] = a.useState(""),
-        S = a.useMemo(() => (0, d.fP)(), []),
-        C = (0, o.e7)([u.Z], () => u.Z.games),
-        E = null != j,
-        A = (0, o.e7)([s.Z], () =>
+    let { onClose: b, transitionState: _, onSubmitted: f, detectedActivity: j, defaultStep: O = "issue_selection" } = e,
+        [w, y] = a.useState(O),
+        [P, k] = a.useState(null),
+        [I, G] = a.useState(""),
+        [N, D] = a.useState(null),
+        [T, S] = a.useState(""),
+        C = a.useMemo(() => (0, d.fP)(), []),
+        E = (0, o.e7)([u.Z], () => u.Z.games),
+        A = null != j,
+        Z = (0, o.e7)([s.Z], () =>
             (null == j ? void 0 : j.application_id) != null ? s.Z.getApplication(j.application_id) : null,
         ),
-        Z = a.useMemo(
+        M = a.useMemo(
             () =>
-                k.trim().length < 1
+                I.trim().length < 1
                     ? []
-                    : C.filter((e) => e.name.toLowerCase().includes(k.toLowerCase()))
+                    : E.filter((e) => e.name.toLowerCase().includes(I.toLowerCase()))
                           .slice(0, 20)
                           .map((e) => ({
                               value: e.id,
                               label: e.name,
                               game: e,
                           })),
-            [C, k],
+            [E, I],
         ),
-        M = () => {
+        L = () => {
             var e, t;
             (0, d.MH)({
-                viewId: S,
+                viewId: C,
                 applicationId: null != (e = null == j ? void 0 : j.application_id) ? e : "",
-                suggestedGameName: "" !== k.trim() ? k.trim() : void 0,
-                suggestedGameApplicationId: null != (t = null == G ? void 0 : G.id) ? t : null,
-                feedback: "" !== D.trim() ? D.trim() : void 0,
+                suggestedGameName: "" !== I.trim() ? I.trim() : void 0,
+                suggestedGameApplicationId: null != (t = null == N ? void 0 : N.id) ? t : null,
+                feedback: "" !== T.trim() ? T.trim() : void 0,
                 submitted: !0,
             }),
-                null == f || f(),
+                null == f || f(null != N ? N : null),
                 b();
         },
-        L = (() => {
-            switch (O) {
+        F = (() => {
+            switch (w) {
                 case "issue_selection":
                     return {
                         title: v.intl.string(v.t["6tnjbD"]),
@@ -63,13 +63,13 @@ function b(e) {
                     };
                 case "game_search":
                     return {
-                        title: E ? v.intl.string(v.t.TZgkxY) : v.intl.string(v.t["+ie+wX"]),
+                        title: A ? v.intl.string(v.t.TZgkxY) : v.intl.string(v.t["+ie+wX"]),
                         actions: [
                             {
                                 text: v.intl.string(v.t.geKm7t),
-                                onClick: M,
+                                onClick: L,
                                 variant: "primary",
-                                disabled: "" === k.trim(),
+                                disabled: "" === I.trim(),
                             },
                         ],
                     };
@@ -79,9 +79,9 @@ function b(e) {
                         actions: [
                             {
                                 text: v.intl.string(v.t.geKm7t),
-                                onClick: M,
+                                onClick: L,
                                 variant: "primary",
-                                disabled: "" === D.trim(),
+                                disabled: "" === T.trim(),
                             },
                         ],
                     };
@@ -118,14 +118,14 @@ function b(e) {
                     });
             }
             return e;
-        })({}, L)),
+        })({}, F)),
         (n = n =
             {
                 transitionState: _,
                 onClose: b,
                 trackingProps: { impression: { impressionName: i.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
                 children: (() => {
-                    switch (O) {
+                    switch (w) {
                         case "issue_selection":
                             return (0, l.jsxs)("div", {
                                 className: x.content,
@@ -138,10 +138,10 @@ function b(e) {
                                     (0, l.jsx)("div", {
                                         className: x.radioGroup,
                                         children: (0, l.jsx)(c.FXm, {
-                                            value: null != y ? y : void 0,
+                                            value: null != P ? P : void 0,
                                             onChange: (e) => {
                                                 var t;
-                                                P(e),
+                                                k(e),
                                                     m.default.track(h.rMx.GAME_DETECTION_FEEDBACK_MODAL, {
                                                         selected_option: e,
                                                         application_id:
@@ -151,11 +151,11 @@ function b(e) {
                                                     }),
                                                     setTimeout(() => {
                                                         "game_not_detected" === e || "wrong_game_shown" === e
-                                                            ? w("game_search")
-                                                            : w("other_feedback");
+                                                            ? y("game_search")
+                                                            : y("other_feedback");
                                                     }, 100);
                                             },
-                                            options: E
+                                            options: A
                                                 ? [
                                                       {
                                                           name: v.intl.string(v.t.TZgkxY),
@@ -188,9 +188,9 @@ function b(e) {
                                     (0, l.jsx)(c.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        children: E ? v.intl.string(v.t["79o/iq"]) : v.intl.string(v.t["r/2pZy"]),
+                                        children: A ? v.intl.string(v.t["79o/iq"]) : v.intl.string(v.t["r/2pZy"]),
                                     }),
-                                    E &&
+                                    A &&
                                         (0, l.jsxs)(l.Fragment, {
                                             children: [
                                                 (0, l.jsxs)("div", {
@@ -201,7 +201,7 @@ function b(e) {
                                                             let a = p.ZP.getApplicationIconURL({
                                                                 id: null != (e = j.application_id) ? e : "",
                                                                 icon:
-                                                                    null != (t = null == A ? void 0 : A.icon)
+                                                                    null != (t = null == Z ? void 0 : Z.icon)
                                                                         ? t
                                                                         : null,
                                                             });
@@ -212,7 +212,7 @@ function b(e) {
                                                                           null != j.name && "" !== j.name
                                                                               ? j.name
                                                                               : null !=
-                                                                                  (n = null == A ? void 0 : A.name)
+                                                                                  (n = null == Z ? void 0 : Z.name)
                                                                                 ? n
                                                                                 : "",
                                                                       className: x.detectedGameIcon,
@@ -238,9 +238,9 @@ function b(e) {
                                                             children:
                                                                 null != j.name && "" !== j.name
                                                                     ? j.name
-                                                                    : null == A
+                                                                    : null == Z
                                                                       ? void 0
-                                                                      : A.name,
+                                                                      : Z.name,
                                                         }),
                                                     ],
                                                 }),
@@ -249,30 +249,30 @@ function b(e) {
                                         }),
                                     (0, l.jsx)(c.VcW, {
                                         className: x.searchNoToggle,
-                                        options: Z,
-                                        value: null != (e = null == G ? void 0 : G.id) ? e : null,
+                                        options: M,
+                                        value: null != (e = null == N ? void 0 : N.id) ? e : null,
                                         onChange: (e) => {
                                             var t;
-                                            let n = C.find((t) => t.id === e);
-                                            N(null != n ? n : null),
-                                                I(null != (t = null == n ? void 0 : n.name) ? t : "");
+                                            let n = E.find((t) => t.id === e);
+                                            D(null != n ? n : null),
+                                                G(null != (t = null == n ? void 0 : n.name) ? t : "");
                                         },
                                         onSearchChange: (e) => {
-                                            I(e), null != G && e !== G.name && N(null);
+                                            G(e), null != N && e !== N.name && D(null);
                                         },
-                                        placeholder: E ? v.intl.string(v.t["/SGi7v"]) : v.intl.string(v.t.ss9Zwa),
+                                        placeholder: A ? v.intl.string(v.t["/SGi7v"]) : v.intl.string(v.t.ss9Zwa),
                                         clearable: !0,
                                         filter: !1,
                                         maxVisibleItems: 5,
                                         clearQueryOnSelect: !1,
                                         onKeyDown: (e) => {
-                                            0 === Z.length &&
+                                            0 === M.length &&
                                                 ("ArrowDown" === e.key || "ArrowUp" === e.key) &&
                                                 e.preventDefault();
                                         },
                                         renderOptionPrefix: (e) => {
                                             if (null == e) return null;
-                                            let t = C.find((t) => t.id === e.value);
+                                            let t = E.find((t) => t.id === e.value);
                                             return null != t
                                                 ? (0, l.jsx)("img", {
                                                       src: p.ZP.getApplicationIconURL({
@@ -302,8 +302,8 @@ function b(e) {
                                         children: v.intl.string(v.t.IblYEw),
                                     }),
                                     (0, l.jsx)(c.Kx8, {
-                                        value: D,
-                                        onChange: T,
+                                        value: T,
+                                        onChange: S,
                                         placeholder: v.intl.string(v.t.aiPKV4),
                                         maxLength: 300,
                                         rows: 4,

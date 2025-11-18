@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => P }), n(415506);
 var r,
     i = n(442837),
     a = n(579092),
@@ -28,7 +28,7 @@ let p = new a.Yd("OverlayV3NativeModuleStore"),
     g = null,
     E = !1,
     b = null,
-    y = new Set(),
+    y = null,
     O = (() => {
         async function e() {
             I(), (g = d._.getInstance());
@@ -42,24 +42,26 @@ let p = new a.Yd("OverlayV3NativeModuleStore"),
                 R.emitChange();
             }
         }
-        return () => (null == b && (b = e()), b);
+        return () => (null == y && (y = e()), y);
     })();
 function v(e) {
     !__OVERLAY__ && f.iP && (m = e);
 }
 function I() {
-    !__OVERLAY__ && f.iP && (p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
+    !__OVERLAY__ &&
+        f.iP &&
+        ((b = null), (E = !1), p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
 }
 function T(e) {
     let { oopEnabled: t } = e;
-    v(t);
+    (b = null), v(t);
 }
 function S() {
-    return O(), !1;
+    return (b = null), O(), !1;
 }
 function A(e) {
-    let { pid: t, isCrashedDisabled: n } = e;
-    return !0 === n && (E = !0), !!y.has(t) || !0 === E;
+    let { isCrashedDisabled: t, error: n } = e;
+    return !0 === t && (E = !0), null != n && (b = n instanceof Error ? n.message : String(n)), !0;
 }
 function C() {
     return O(), !1;
@@ -69,7 +71,7 @@ class N extends (r = i.ZP.Store) {
         this.waitFor(s.Z);
     }
     get isModuleLoading() {
-        return null != b;
+        return null != y;
     }
     get isOverlayEnabled() {
         return m;
@@ -82,6 +84,9 @@ class N extends (r = i.ZP.Store) {
     }
     get isCrashedDisabled() {
         return E;
+    }
+    get errorMessage() {
+        return b;
     }
     getNativeModule() {
         return g;

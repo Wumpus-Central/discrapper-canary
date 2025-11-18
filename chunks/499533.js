@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685), n(35282);
 var r = n(392711),
     i = n.n(r),
     a = n(492435),
@@ -18,7 +18,17 @@ function c(e) {
         return (0, a.W9)(e, n), n;
     }
 }
-let u = {
+function u(e, t) {
+    try {
+        let [n, r] = e.split("-");
+        if (null == r) return !1;
+        let i = r.slice(0, 2);
+        return new Date("".concat(n, "-").concat(i, "-01")) > t;
+    } catch (e) {
+        return !1;
+    }
+}
+let d = {
     getFirstEligibleUserExperiment: l,
     isInExperimentBucket: function (e, t) {
         return o.Z.getUserExperimentBucket(e) === t;
@@ -36,5 +46,11 @@ let u = {
     getExperimentBucketName: function (e) {
         let t;
         return e === s.NZ.CONTROL ? "Control" : e === s.NZ.NOT_ELIGIBLE ? "Not Eligible" : "Treatment ".concat(e);
+    },
+    getRecentExperimentBuckets: function (e, t) {
+        return Object.entries(e).reduce((e, n) => {
+            let [r, i] = n;
+            return u(r, t) && i > s.NZ.CONTROL && (e[r] = i), e;
+        }, {});
     },
 };

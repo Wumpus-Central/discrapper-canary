@@ -1,18 +1,19 @@
 n.d(t, {
-    DH: () => N,
+    DH: () => R,
     H8: () => A,
     HD: () => f,
     O0: () => p,
-    PD: () => R,
+    PD: () => P,
     P_: () => E,
     aW: () => _,
     hj: () => T,
     hs: () => h,
-    qT: () => P,
+    qT: () => D,
     qc: () => S,
     sS: () => g,
 }),
-    n(388685);
+    n(388685),
+    n(642613);
 var r = n(593472),
     i = n(710845),
     a = n(594190),
@@ -111,18 +112,24 @@ function A(e) {
     return null != t && null != t.name && S(t);
 }
 let C = new Set([r.Jx.UNKNOWN, r.Jx.FULLSCREEN]);
-function N(e, t, n) {
+function N(e) {
+    let t = Object.keys(e)
+        .map(Number)
+        .sort((e, t) => t - e);
+    return 0 === t.length ? r.Jx.UNKNOWN : e[t.length > 1 ? t[1] : t[0]];
+}
+function R(e, t, n) {
     if (e.overlayMethod !== c.gl.OutOfProcess && e.overlayMethod !== c.gl.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case r.Jx.UNKNOWN:
-            return C.has(e.previousFullscreenType);
+            return C.has(N(e.fullscreenHistory));
         case r.Jx.FULLSCREEN:
             return !0;
     }
     return !1;
 }
-function R(e, t) {
+function P(e, t) {
     if (!t) return !1;
     switch (e) {
         case r.Jx.UNKNOWN:
@@ -132,7 +139,7 @@ function R(e, t) {
     }
     return !0;
 }
-function P(e) {
+function D(e) {
     return null == e
         ? {
               source: c.d0.DEFAULT,

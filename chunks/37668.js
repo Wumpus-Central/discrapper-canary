@@ -1,70 +1,72 @@
-i.d(e, { default: () => b });
-var n = i(54381),
-    r = i(473749),
-    s = i(793030),
-    l = i(442837),
-    a = i(481060),
-    c = i(594174),
-    d = i(63063),
-    o = i(86419),
-    u = i(778414),
-    x = i(872269),
-    h = i(228168),
-    p = i(388032),
-    w = i(107669);
-function g(t) {
-    let { widget: e, user: i } = t;
-    return (0, n.jsx)(u.Z, {
-        widget: e,
-        user: i,
+e.d(i, { default: () => b });
+var n = e(54381),
+    a = e(473749),
+    r = e(793030),
+    l = e(442837),
+    s = e(481060),
+    c = e(594174),
+    d = e(63063),
+    o = e(931847),
+    u = e(86419),
+    p = e(778414),
+    x = e(872269),
+    h = e(228168),
+    w = e(388032),
+    g = e(817638);
+function v(t) {
+    let { widget: i, user: e } = t;
+    return (0, n.jsx)(p.Z, {
+        widget: i,
+        user: e,
         disableInteraction: !0,
     });
 }
 function b(t) {
-    let { transitionState: e, widget: i, userId: u, onClose: b, trackUserProfileEditAction: v } = t,
-        E = r.useCallback(() => {
-            (0, o.y8)(i.type),
-                v({
+    let { transitionState: i, widget: e, userId: p, onClose: b, trackUserProfileEditAction: f } = t,
+        E = a.useCallback(() => {
+            (0, u.y8)(e.type),
+                f({
                     action: "WIDGET_REMOVED",
-                    widgetEdited: i.type,
+                    widgetEdited: e.type,
+                    applicationId: e instanceof o.q ? e.applicationId : void 0,
                 }),
                 b(),
                 (0, x.L$)(h.qb.WIDGET_REMOVED);
-        }, [i.type, b, v]),
-        f = (0, l.e7)([c.default], () => c.default.getUser(u));
-    return null == f
+        }, [e, b, f]),
+        m = (0, l.e7)([c.default], () => c.default.getUser(p));
+    return null == m
         ? null
-        : (0, n.jsxs)(s.Modal, {
-              transitionState: e,
+        : (0, n.jsxs)(r.Modal, {
+              transitionState: i,
               onClose: b,
-              title: p.intl.string(p.t.Mm07Yc),
-              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: d.w }),
+              title: w.intl.string(w.t.Mm07Yc),
+              subtitle: w.intl.format(w.t["x+djI4"], { helpUrl: d.w }),
               actions: [
                   {
                       variant: "secondary",
-                      text: p.intl.string(p.t["ETE/oC"]),
+                      text: w.intl.string(w.t["ETE/oC"]),
                       onClick: b,
                   },
                   {
                       variant: "critical-primary",
-                      text: p.intl.string(p.t.Mm07Yc),
+                      text: w.intl.string(w.t.Mm07Yc),
                       onClick: E,
                   },
               ],
               children: [
                   (0, n.jsx)("div", {
-                      className: w.widgetPreview,
-                      children: (0, n.jsx)(g, {
-                          widget: i,
-                          user: f,
+                      className: g.widgetPreview,
+                      children: (0, n.jsx)(v, {
+                          widget: e,
+                          user: m,
                       }),
                   }),
                   (0, n.jsx)("div", {
-                      className: w.hintText,
-                      children: (0, n.jsx)(a.Text, {
+                      className: g.hintText,
+                      children: (0, n.jsx)(s.Text, {
                           color: "text-secondary",
                           variant: "text-sm/normal",
-                          children: p.intl.string(p.t.bQNGeT),
+                          children: w.intl.string(w.t.bQNGeT),
                       }),
                   }),
               ],

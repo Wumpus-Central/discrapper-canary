@@ -4,7 +4,7 @@ e.exports = {
     overlayBackground: "overlayBackground_eb35c5",
     overlayActive: "overlayActive_eb35c5",
     overlayLocked: "overlayLocked_eb35c5",
-    closeContainer: "closeContainer_eb35c5",
+    topRightContainer: "topRightContainer_eb35c5",
     layoutLocked: "layoutLocked_eb35c5",
     layoutUnlocked: "layoutUnlocked_eb35c5 layoutLocked_eb35c5",
     windowContainerDebug: "windowContainerDebug_eb35c5",

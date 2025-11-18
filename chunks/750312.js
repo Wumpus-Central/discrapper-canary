@@ -15,7 +15,7 @@ var r = n(54381),
     b = n(840367),
     h = n(34335),
     y = n(388032),
-    O = n(415734);
+    O = n(546178);
 function v(e) {
     let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: o } = e,
         c = i.useRef(null),
@@ -80,7 +80,7 @@ function j(e) {
         P = (0, c.e7)([u.default], () => u.default.getId() === t),
         { trackUserProfileAction: I } = (0, d.KZ)(),
         w = (0, g.Z)({
-            widgetType: n.type,
+            widget: n,
             onAction: I,
         }),
         S = P && null != p && !a,

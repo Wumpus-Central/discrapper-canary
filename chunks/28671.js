@@ -29,6 +29,7 @@ function b(e) {
                 h({
                     action: "WIDGET_ADDED",
                     widgetEdited: y.type,
+                    applicationId: y.applicationId,
                 }),
                 (0, d.L$)(g.qb.WIDGET_ADDED));
         }, [y, h]);

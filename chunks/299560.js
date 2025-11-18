@@ -97,6 +97,7 @@ function I(e) {
                 O({
                     action: "WIDGET_ADDED",
                     widgetEdited: n,
+                    applicationId: j instanceof p.q ? j.applicationId : void 0,
                 }),
                 (0, m.L$)(E.qb.WIDGET_ADDED),
                 null == l || l());

@@ -3953,6 +3953,7 @@ var nE = (function (e) {
             (e.PUSH_NOTIFICATION_RECEIVED = "push_notification_received"),
             (e.GAME_MENTIONS_NOTIFICATION_SETTING_UPDATED = "game_mentions_notification_settings_updated"),
             (e.OVERLAY_DISABLED_SURVEY = "overlay_disabled_survey"),
+            (e.OVERLAY_BUG_REPORT = "overlay_bug_report"),
             (e.NOTIFICATION_REPORT_SUBMITTED = "notification_report_submitted"),
             (e.NOTIFICATION_PERMISSION_PREPROMPT_ACKED = "notification_permission_preprompt_acked"),
             (e.MOBILE_APP_DOWNLOAD_MODAL_ACKED = "mobile_app_download_modal_acked"),
