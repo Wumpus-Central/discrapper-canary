@@ -60,16 +60,19 @@ function m() {
     let [e, t] = l.useState(null),
         [n, r] = l.useState(null),
         [s, o] = l.useState(null),
-        c = l.useRef(null),
-        [u, m] = l.useState(400),
+        [c, u] = l.useState([]),
+        m = l.useRef(null),
         [x, g] = l.useState(400),
-        f = l.useCallback(() => {
+        [f, b] = l.useState(400),
+        v = l.useCallback(() => {
             setTimeout(() => {
-                var e, t;
-                o(null != (t = null == (e = c.current) ? void 0 : e.getProperties()) ? t : {}), r({});
+                var e, t, n, a;
+                o(null != (n = null == (e = m.current) ? void 0 : e.getProperties()) ? n : {}),
+                    u(null != (a = null == (t = m.current) ? void 0 : t.getArtboards()) ? a : []),
+                    r({});
             }, 1000);
         }, []),
-        b = l.useCallback(
+        j = l.useCallback(
             (e, t) => {
                 null != n &&
                     r((n) => {
@@ -125,7 +128,7 @@ function m() {
             },
             [s, n],
         ),
-        v = l.useCallback((e) => {
+        _ = l.useCallback((e) => {
             o(null), r(null), t(e);
         }, []);
     return (0, a.jsxs)(i.Kqy, {
@@ -133,18 +136,18 @@ function m() {
         children: [
             (0, a.jsx)(h, {
                 riveName: "Rive inspector",
-                onRiveLoad: v,
+                onRiveLoad: _,
             }),
             null != e &&
                 (0, a.jsx)("div", {
                     style: {
-                        width: u,
-                        height: x,
+                        width: x,
+                        height: f,
                     },
                     children: (0, a.jsx)(d.BmE, {
                         src: e,
-                        ref: c,
-                        onLoad: f,
+                        ref: m,
+                        onLoad: v,
                         dynamicDataBinding: null != n ? n : {},
                     }),
                 }),
@@ -162,14 +165,14 @@ function m() {
                                 (0, a.jsx)(d.oil, {
                                     type: "number",
                                     label: "width",
-                                    value: u.toString(),
-                                    onChange: (e) => m(parseInt(e)),
+                                    value: x.toString(),
+                                    onChange: (e) => g(parseInt(e)),
                                 }),
                                 (0, a.jsx)(d.oil, {
                                     type: "number",
                                     label: "height",
-                                    value: x.toString(),
-                                    onChange: (e) => g(parseInt(e)),
+                                    value: f.toString(),
+                                    onChange: (e) => b(parseInt(e)),
                                 }),
                             ],
                         }),
@@ -193,7 +196,8 @@ function m() {
                                                     : null == s || null == (r = s[e])
                                                       ? void 0
                                                       : r.value,
-                                            onChange: (t) => b(e, t),
+                                            onChange: (t) => j(e, t),
+                                            artboards: c,
                                         },
                                         e,
                                     );
@@ -206,7 +210,7 @@ function m() {
     });
 }
 function p(e) {
-    let { property: t, type: n, value: l, onChange: r } = e;
+    let { property: t, type: n, value: l, onChange: r, artboards: c } = e;
     return "string" === n
         ? (0, a.jsx)(d.oil, {
               label: t,
@@ -244,6 +248,7 @@ function p(e) {
                         value: l,
                         onSelectionChange: (e) => r(e),
                         closeOnSelect: !0,
+                        placeholder: "Select a color...",
                         options: Object.entries(s.Z.colors).map((e) => {
                             let [t, n] = e;
                             return {
@@ -253,7 +258,21 @@ function p(e) {
                             };
                         }),
                     })
-                  : null;
+                  : "artboard" === n
+                    ? (0, a.jsx)(o.V, {
+                          selectionMode: "single",
+                          label: t,
+                          value: l,
+                          onSelectionChange: (e) => r(e),
+                          closeOnSelect: !0,
+                          placeholder: "Select an artboard...",
+                          options: c.map((e) => ({
+                              label: e,
+                              value: e,
+                              id: e,
+                          })),
+                      })
+                    : null;
 }
 function h(e) {
     var t;

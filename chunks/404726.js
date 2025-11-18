@@ -1,8 +1,8 @@
 n.d(t, { v: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(902778),
-    o = n(865288),
+    a = n(662386),
+    o = n(123314),
     s = n(150677),
     l = n(213305),
     c = n(402453),
@@ -33,14 +33,14 @@ function f(e) {
         } = e,
         D = i.useContext(l.S),
         w = (0, s.C)(),
-        x = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : w,
-        [L, M] = i.useState(void 0),
+        L = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : w,
+        [x, M] = i.useState(void 0),
         k = i.useRef(null),
         { rive: j, RiveComponent: U } = (0, o.useRive)({
             eventTarget: null == E ? void 0 : E.current,
             buffer: f,
             autoplay: _,
-            stateMachines: L,
+            stateMachines: x,
             artboard: b,
             useOffscreenRenderer: !0,
             layout: new o.Layout({
@@ -66,8 +66,25 @@ function f(e) {
                         null == j || null == (e = j.viewModelInstance)
                             ? void 0
                             : e.properties.reduce((e, t) => {
-                                  var n, r, i;
+                                  var n, r, i, a, o;
                                   return (
+                                      "viewModel" === t.type &&
+                                          (null == j ||
+                                              null == (o = j.viewModelInstance) ||
+                                              null == (a = o.viewModel(t.name)) ||
+                                              a.properties.forEach((n) => {
+                                                  var r, i, a;
+                                                  e[t.name + "/" + n.name] = {
+                                                      type: n.type,
+                                                      value:
+                                                          null == j ||
+                                                          null == (a = j.viewModelInstance) ||
+                                                          null == (i = a[n.type]) ||
+                                                          null == (r = i.call(a, "".concat(t.name, "/").concat(n.name)))
+                                                              ? void 0
+                                                              : r.value,
+                                                  };
+                                              })),
                                       (e[t.name] = {
                                           type: t.type,
                                           value:
@@ -83,6 +100,16 @@ function f(e) {
                               }, {}))
                     ? t
                     : {};
+            },
+            getArtboards: () => {
+                if (null == j) return [];
+                let e = new Set(),
+                    t = j.riveFile.getInstance();
+                for (let n = 0; n < t.artboardCount(); n++) {
+                    let r = t.artboardByIndex(n);
+                    e.add(r.name);
+                }
+                return Array.from(e);
             },
         }),
         [j],
@@ -126,7 +153,7 @@ function f(e) {
         }, [j, h]),
         i.useEffect(() => {
             null != j &&
-                null == L &&
+                null == x &&
                 (M(j.stateMachineNames),
                 j.reset({
                     stateMachines: j.stateMachineNames,
@@ -135,7 +162,7 @@ function f(e) {
                     autoBind: !0,
                 }),
                 j.setupRiveListeners());
-        }, [j, _, L, b]);
+        }, [j, _, x, b]);
     let G = i.useRef(0);
     i.useEffect(() => {
         if (null == j) return;
@@ -160,14 +187,14 @@ function f(e) {
         i.useEffect(() => {
             if (null != j)
                 return (
-                    !x && B.current && j.isPlaying && G.current > 0
+                    !L && B.current && j.isPlaying && G.current > 0
                         ? j.pause()
-                        : x && !j.isPlaying && B.current && j.play(),
+                        : L && !j.isPlaying && B.current && j.play(),
                     () => {
-                        null != j && x && (B.current = null != j.frameRequestId);
+                        null != j && L && (B.current = null != j.frameRequestId);
                     }
                 );
-        }, [j, x]),
+        }, [j, L]),
         (0, r.jsx)(U, {
             className: p,
             style: g,

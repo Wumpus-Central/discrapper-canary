@@ -9,52 +9,53 @@ n.d(t, {
     B: () => ey,
     B8: () => I,
     BQ: () => eN,
-    C2: () => ek,
+    Bm: () => ta,
+    C2: () => ej,
     Cn: () => ea,
-    D7: () => ex,
+    D7: () => eL,
     DZ: () => ev,
     F8: () => em,
-    G0: () => ts,
     G6: () => ti,
     H0: () => q,
     Hh: () => eY,
     IU: () => eJ,
     KD: () => en,
     KE: () => eB,
-    KJ: () => ta,
+    KH: () => ts,
     Mc: () => ed,
     OU: () => eK,
-    On: () => ej,
+    On: () => ek,
     Or: () => tg,
     R7: () => e$,
     RC: () => eo,
-    Rb: () => e8,
+    Rb: () => e5,
     Rs: () => eq,
     S: () => ei,
     S6: () => J,
     Tc: () => e1,
-    UE: () => eL,
+    UE: () => ex,
     Ub: () => v,
     Uj: () => eC,
-    V3: () => e3,
+    V3: () => e2,
     Vr: () => eO,
     Wl: () => tf,
     Wt: () => ez,
     XP: () => t_,
     YA: () => eG,
     Yc: () => e0,
-    Z5: () => e2,
+    Z5: () => e3,
     Zk: () => K,
     Zs: () => X,
     a9: () => eS,
     aQ: () => eM,
     am: () => eW,
+    bG: () => to,
     d$: () => Q,
     dE: () => e7,
     dJ: () => M,
     dN: () => eb,
     eD: () => eR,
-    eW: () => S,
+    eW: () => T,
     ej: () => eZ,
     ex: () => eP,
     fY: () => tl,
@@ -66,8 +67,7 @@ n.d(t, {
     jm: () => eU,
     jx: () => eE,
     k7: () => eI,
-    kI: () => to,
-    kK: () => e5,
+    kK: () => e8,
     kn: () => el,
     kr: () => eA,
     mO: () => e4,
@@ -85,12 +85,12 @@ n.d(t, {
     qb: () => eg,
     qt: () => th,
     r3: () => ew,
-    rs: () => T,
+    rs: () => S,
     sB: () => e6,
     uX: () => ec,
     up: () => eH,
     vH: () => $,
-    vz: () => k,
+    vz: () => j,
     w7: () => eX,
     xB: () => Z,
     xH: () => eF,
@@ -281,37 +281,37 @@ function v(e) {
 function I(e, t, n, i, a) {
     r.installLogCallback(e, t, n, i, a);
 }
-function T(e, t) {
-    return r.rustMultiply(e, t);
-}
-function S() {
+function T() {
     return r.initLibdiscore();
+}
+function S(e, t) {
+    return r.rustMultiply(e, t);
 }
 function A() {
     r.crash();
 }
 function C(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h2a939e4ee92a7144(
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
         e,
         t,
     );
 }
 function N(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h4bf5429fc1029200(
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h458d4dbdc7d6e3c4(
         e,
         t,
     );
 }
 function R(e, t, n) {
-    r.closure541_externref_shim(e, t, n);
+    r.closure575_externref_shim(e, t, n);
 }
 function P(e, t, n, i) {
-    r.closure575_externref_shim(e, t, n, i);
+    r.closure611_externref_shim(e, t, n, i);
 }
 let D = ["bytes"],
     w = ["omit", "same-origin", "include"],
-    x = ["same-origin", "no-cors", "cors", "navigate"],
-    L =
+    L = ["same-origin", "no-cors", "cors", "navigate"],
+    x =
         "undefined" == typeof FinalizationRegistry
             ? {
                   register: () => {},
@@ -321,7 +321,7 @@ let D = ["bytes"],
 class M {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), L.unregister(this), e;
+        return (this.__wbg_ptr = 0), x.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -340,17 +340,17 @@ class M {
         r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
     }
 }
-let j =
+let k =
     "undefined" == typeof FinalizationRegistry
         ? {
               register: () => {},
               unregister: () => {},
           }
         : new FinalizationRegistry((e) => r.__wbg_experimentcacher_free(e >>> 0, 1));
-class k {
+class j {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), j.unregister(this), e;
+        return (this.__wbg_ptr = 0), k.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -384,17 +384,17 @@ class G {
         let e = this.__destroy_into_raw();
         r.__wbg_intounderlyingbytesource_free(e, 0);
     }
-    get type() {
-        return D[r.intounderlyingbytesource_type(this.__wbg_ptr)];
-    }
     get autoAllocateChunkSize() {
         return r.intounderlyingbytesource_autoAllocateChunkSize(this.__wbg_ptr) >>> 0;
+    }
+    pull(e) {
+        return r.intounderlyingbytesource_pull(this.__wbg_ptr, e);
     }
     start(e) {
         r.intounderlyingbytesource_start(this.__wbg_ptr, e);
     }
-    pull(e) {
-        return r.intounderlyingbytesource_pull(this.__wbg_ptr, e);
+    get type() {
+        return D[r.intounderlyingbytesource_type(this.__wbg_ptr)];
     }
     cancel() {
         let e = this.__destroy_into_raw();
@@ -417,16 +417,16 @@ class Z {
         let e = this.__destroy_into_raw();
         r.__wbg_intounderlyingsink_free(e, 0);
     }
-    write(e) {
-        return r.intounderlyingsink_write(this.__wbg_ptr, e);
+    abort(e) {
+        let t = this.__destroy_into_raw();
+        return r.intounderlyingsink_abort(t, e);
     }
     close() {
         let e = this.__destroy_into_raw();
         return r.intounderlyingsink_close(e);
     }
-    abort(e) {
-        let t = this.__destroy_into_raw();
-        return r.intounderlyingsink_abort(t, e);
+    write(e) {
+        return r.intounderlyingsink_write(this.__wbg_ptr, e);
     }
 }
 let F =
@@ -670,12 +670,12 @@ function ew() {
         return new Request(l(e, t), n);
     }, arguments);
 }
-function ex() {
+function eL() {
     return u(function (e) {
         return new Blob(e);
     }, arguments);
 }
-function eL(e) {
+function ex(e) {
     return e.next;
 }
 function eM() {
@@ -683,10 +683,10 @@ function eM() {
         return e.next();
     }, arguments);
 }
-function ej(e, t, n) {
+function ek(e, t, n) {
     return e.open(l(t, n));
 }
-function ek(e, t) {
+function ej(e, t) {
     return e.push(t);
 }
 function eU(e, t, n) {
@@ -738,7 +738,7 @@ function eQ(e, t, n) {
     e.method = l(t, n);
 }
 function eJ(e, t) {
-    e.mode = x[t];
+    e.mode = L[t];
 }
 function e$(e, t) {
     e.signal = t;
@@ -749,11 +749,11 @@ function e0(e, t) {
 function e1(e) {
     return e.signal;
 }
-function e2() {
+function e3() {
     let e = "undefined" == typeof global ? null : global;
     return d(e) ? 0 : c(e);
 }
-function e3() {
+function e2() {
     let e = "undefined" == typeof globalThis ? null : globalThis;
     return d(e) ? 0 : c(e);
 }
@@ -761,11 +761,11 @@ function e4() {
     let e = "undefined" == typeof self ? null : self;
     return d(e) ? 0 : c(e);
 }
-function e8() {
+function e5() {
     let e = "undefined" == typeof window ? null : window;
     return d(e) ? 0 : c(e);
 }
-function e5(e) {
+function e8(e) {
     return e.status;
 }
 function e6() {
@@ -799,13 +799,13 @@ function ti(e) {
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
 function ta(e, t, n) {
-    return y(e, t, 542, R);
+    return y(e, t, 576, R);
 }
 function to(e, t, n) {
-    return y(e, t, 359, C);
+    return y(e, t, 389, C);
 }
 function ts(e, t, n) {
-    return y(e, t, 384, N);
+    return y(e, t, 429, N);
 }
 function tl(e, t) {
     let n = m(O(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
