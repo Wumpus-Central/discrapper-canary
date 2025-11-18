@@ -67,6 +67,8 @@ let c = "collectibles shop product details modal",
             analyticsLocations: d,
             returnRef: f,
             tab: _,
+            isRental: p,
+            rentalDuration: h,
         } = e;
         (0, i.ZDy)(
             async () => {
@@ -82,6 +84,8 @@ let c = "collectibles shop product details modal",
                             analyticsLocations: d,
                             returnRef: f,
                             tab: _,
+                            isRental: p,
+                            rentalDuration: h,
                         }),
                     );
             },

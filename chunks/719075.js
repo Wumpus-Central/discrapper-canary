@@ -12,73 +12,75 @@ var r = n(54381),
     g = n(409116),
     f = n(786040),
     h = n(58201),
-    C = n(445794),
-    m = n(956472),
+    m = n(445794),
+    C = n(956472),
     _ = n(388032),
     b = n(997033);
 let v = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
             c = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-            f = s.ZP.canUseCollectibles(c),
-            { isDisabled: h } = (0, d.G)(t.skuId),
-            { isPurchased: v, isPartiallyOwnedBundle: x } = (0, p.L)(t),
-            E = (0, u.G1)(t),
-            O = (0, u.rN)(t),
-            S = l.useMemo(() => (0, u.BH)(t, f), [t, f]),
-            y = (0, C.Iw)(t),
+            h = (0, f.$l)(),
+            v = s.ZP.canUseCollectibles(c),
+            { isDisabled: x } = (0, d.G)(t.skuId),
+            { isPurchased: E, isPartiallyOwnedBundle: O } = (0, p.L)(t),
+            S = (0, u.G1)(t),
+            y = (0, u.rN)(t),
+            j = l.useMemo(() => (0, u.BH)(t, v), [t, v]),
+            k = (0, m.Iw)(t),
             {
-                checkoutEligiblePrices: j,
-                hasSufficientOrbs: k,
-                shouldCheckoutWithOrbs: I,
-            } = (0, m.Ip)({
+                checkoutEligiblePrices: I,
+                hasSufficientOrbs: T,
+                shouldCheckoutWithOrbs: L,
+            } = (0, C.Ip)({
                 product: t,
-                isPremiumUser: f,
+                isPremiumUser: v,
                 prioritizedCurrency: n,
-                hasDiscountOffer: null != y,
+                hasDiscountOffer: null != k,
+                isRental: h,
             }),
-            T = E && !f;
-        return h
+            B = S && !v;
+        return x
             ? (0, r.jsx)(a.Text, {
                   variant: "text-md/medium",
                   color: "text-tertiary",
                   lineClamp: 1,
                   children: _.intl.string(_.t.wu4gyV),
               })
-            : x
+            : O
               ? (0, r.jsx)(a.Text, {
                     variant: "text-md/medium",
                     color: "text-tertiary",
                     lineClamp: 1,
                     children: _.intl.string(_.t.BEjTij),
                 })
-              : v && !T
+              : E && !B
                 ? (0, r.jsx)(a.Text, {
                       variant: "text-md/medium",
                       color: "text-tertiary",
                       lineClamp: 1,
                       children: _.intl.string(_.t["6cfuDj"]),
                   })
-                : O
+                : y
                   ? (0, r.jsx)(a.Text, {
                         variant: "text-md/bold",
                         lineClamp: 1,
                         children: _.intl.string(_.t.nBtvYB),
                     })
-                  : E
+                  : S
                     ? (0, r.jsx)(a.Text, {
                           variant: "text-md/bold",
                           lineClamp: 1,
                           children: _.intl.string(_.t.rt69oo),
                       })
-                    : 0 === j.length
+                    : 0 === I.length
                       ? null
                       : (0, r.jsx)(g.F, {
-                            price: j[0],
-                            discount: S,
-                            nitroIconType: f ? "default" : void 0,
+                            price: I[0],
+                            discount: j,
+                            nitroIconType: v ? "default" : void 0,
                             nitroIconSize: "sm",
-                            discountOfferAmount: y,
-                            className: I && !k ? b.insufficientOrbs : void 0,
+                            discountOfferAmount: k,
+                            className: L && !T ? b.insufficientOrbs : void 0,
                             variant: "text-md/bold",
                         });
     },

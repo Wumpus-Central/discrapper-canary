@@ -1,5 +1,5 @@
 n.d(t, { f: () => o }), n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(751648),
     a = n(388032);
 function o() {
@@ -8,21 +8,23 @@ function o() {
         [s, l] = (0, r.useState)(null),
         [c, u] = (0, r.useState)(!1);
     function d(e, t, n) {
-        let r = () => {
+        let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            a = () => {
                 u(!0), l(null);
             },
-            a = (e) => {
+            s = (e) => {
                 o(e), u(!1), null == n || n(e);
             },
-            s = (e) => {
+            c = (e) => {
                 l(e), u(!1);
             };
         return (0, i.df)({
             skuId: e,
             loadId: t,
-            onRedeemStart: r,
-            onRedeemSucceed: a,
-            onRedeemFail: s,
+            onRedeemStart: a,
+            onRedeemSucceed: s,
+            onRedeemFail: c,
+            isRental: r,
         });
     }
     return (

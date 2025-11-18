@@ -1,6 +1,6 @@
 n.d(t, {
-    A3: () => L,
-    f4: () => x,
+    A3: () => x,
+    f4: () => L,
     f9: () => M,
     gY: () => w,
 });
@@ -111,32 +111,32 @@ let N = (e) => {
         });
     },
     R = (e) => {
-        var { orbBalance: t, orbPriceAmount: n, loading: o, onClick: s } = e,
-            l = A(e, ["orbBalance", "orbPriceAmount", "loading", "onClick"]);
-        let c = I(
+        var { orbBalance: t, orbPriceAmount: n, loading: o, onClick: s, isRental: l } = e,
+            c = A(e, ["orbBalance", "orbPriceAmount", "loading", "onClick", "isRental"]);
+        let u = I(
             {
                 variant: "active",
                 type: "submit",
                 "data-testid": "submitButton",
-                text: y.intl.string(y.t.wmcDyu),
+                text: l ? y.intl.string(y.t["2n5l8j"]) : y.intl.string(y.t.wmcDyu),
             },
-            l,
+            c,
         );
         return null === n
             ? (0, r.jsx)(i.u, {
                   text: y.intl.string(y.t["c/rcUu"]),
                   asContainer: !0,
-                  children: (0, r.jsx)(a.zxk, S(I({}, c), { disabled: !0 })),
+                  children: (0, r.jsx)(a.zxk, S(I({}, u), { disabled: !0 })),
               })
             : null === t || n > t
               ? (0, r.jsx)(i.u, {
                     text: y.intl.string(y.t.keFvXM),
                     asContainer: !0,
-                    children: (0, r.jsx)(a.zxk, S(I({}, c), { disabled: !0 })),
+                    children: (0, r.jsx)(a.zxk, S(I({}, u), { disabled: !0 })),
                 })
               : (0, r.jsx)(
                     a.zxk,
-                    S(I({}, c), {
+                    S(I({}, u), {
                         loading: o,
                         onClick: s,
                     }),
@@ -202,7 +202,7 @@ let N = (e) => {
             })
         );
     },
-    x = (e) => {
+    L = (e) => {
         let { skuId: t } = e;
         return (0, u.N3)({
             skuId: t,
@@ -211,7 +211,7 @@ let N = (e) => {
             ? (0, r.jsx)(_.Z, { message: y.intl.format(y.t.fsOXXO, {}) })
             : null;
     },
-    L = (e) => {
+    x = (e) => {
         let { skuId: t, orbPriceAmount: n, orbBalance: i } = e;
         return (0, r.jsxs)("div", {
             className: O.stepBody,
@@ -237,7 +237,7 @@ let N = (e) => {
         });
     },
     M = (e) => {
-        let { orbPriceAmount: t, orbBalance: n, isSubmitting: i, onClickCheckout: a } = e;
+        let { orbPriceAmount: t, orbBalance: n, isSubmitting: i, onClickCheckout: a, isRental: s } = e;
         return (0, r.jsxs)(o.mzw, {
             align: d.Z.Align.CENTER,
             "data-migration-pending": !0,
@@ -247,6 +247,7 @@ let N = (e) => {
                     orbPriceAmount: t,
                     loading: i,
                     onClick: a,
+                    isRental: s,
                 }),
                 (0, r.jsx)(f.Z, {}),
             ],

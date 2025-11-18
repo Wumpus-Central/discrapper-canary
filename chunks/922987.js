@@ -123,7 +123,7 @@ let D = {
                 ),
             );
     },
-    x = () => {
+    L = () => {
         let { activitySessionId: e, hasPaymentSources: t, contextMetadata: n } = (0, u.JL)(),
             { loadId: r, startTime: a } = n,
             { skuId: o, orbProductContext: s, analyticsLocations: l, analyticsSourceLocation: c } = (0, y.C)(),
@@ -198,7 +198,7 @@ let D = {
             ),
         };
     },
-    L = (e) => {
+    x = (e) => {
         let { handleClose: t, handleStepChange: n } = e,
             { blockedPayments: a } = (0, u.JL)();
         return ((0, i.useEffect)(() => {
@@ -213,16 +213,17 @@ let D = {
         let { handleClose: n } = e,
             { selectedSkuId: s, purchaseState: c, setPurchaseState: d } = (0, u.JL)(),
             { product: _ } = (0, l.T)(s),
-            { emitOrbCheckoutPaymentFlowEvent: p } = x(),
+            { emitOrbCheckoutPaymentFlowEvent: p } = L(),
             {
                 skuId: g,
                 onRedeemVirtualCurrency: E,
                 isRedeeming: I,
                 orbRedemptionError: T,
                 orbProductContext: S,
+                isRental: A,
             } = (0, y.C)(),
-            A = (0, b.cR)(),
-            C = (0, i.useRef)(A);
+            C = (0, b.cR)(),
+            N = (0, i.useRef)(C);
         (0, o.ZP)(() => {
             p(v.rMx.PAYMENT_FLOW_LOADED);
         }),
@@ -230,18 +231,18 @@ let D = {
                 c === f.A.COMPLETED && n();
             }, [c, n]),
             (0, i.useEffect)(() => {
-                null != T && null !== C.current && (p(v.rMx.PAYMENT_FLOW_FAILED, T), (C.current = null));
+                null != T && null !== N.current && (p(v.rMx.PAYMENT_FLOW_FAILED, T), (N.current = null));
             }, [T, p]);
-        let N = (0, i.useCallback)(() => {
-            (C.current = A),
+        let R = (0, i.useCallback)(() => {
+            (N.current = C),
                 p(v.rMx.PAYMENT_FLOW_COMPLETED),
                 E(() => {
                     d(f.A.COMPLETED), p(v.rMx.PAYMENT_FLOW_SUCCEEDED);
                 });
-        }, [E, d, A, p]);
+        }, [E, d, C, p]);
         if (null == s || null == _) return (0, r.jsx)(a.$jN, { type: a.$jN.Type.WANDERING_CUBES });
-        let R = null != (t = C.current) ? t : A,
-            P = null != S ? S.orbPriceAmount : null;
+        let P = null != (t = N.current) ? t : C,
+            D = null != S ? S.orbPriceAmount : null;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(h.Z, {}),
@@ -254,17 +255,18 @@ let D = {
                         }),
                         (0, r.jsx)(O.A3, {
                             skuId: g,
-                            orbPriceAmount: P,
-                            orbBalance: R,
+                            orbPriceAmount: D,
+                            orbBalance: P,
                         }),
                     ],
                 }),
                 (0, r.jsx)(m.O3, {
                     children: (0, r.jsx)(O.f9, {
-                        orbPriceAmount: P,
-                        orbBalance: R,
+                        orbPriceAmount: D,
+                        orbBalance: P,
                         isSubmitting: I,
-                        onClickCheckout: N,
+                        onClickCheckout: R,
+                        isRental: A,
                     }),
                 }),
             ],
@@ -273,7 +275,7 @@ let D = {
     k = [
         {
             key: null,
-            renderStep: (e) => (0, r.jsx)(L, A({}, e)),
+            renderStep: (e) => (0, r.jsx)(x, A({}, e)),
         },
         {
             key: d.h8.REVIEW,
@@ -291,7 +293,7 @@ let D = {
         var { skuId: t, analyticsLocations: n = [] } = e,
             a = R(e, ["skuId", "analyticsLocations"]);
         let { orbProductContext: o } = (0, y.C)(),
-            { emitOrbCheckoutPaymentFlowEvent: s } = x(),
+            { emitOrbCheckoutPaymentFlowEvent: s } = L(),
             l = (0, i.useMemo)(() => {
                 var e, t;
                 if (null != o)
@@ -320,8 +322,22 @@ let D = {
         });
     },
     G = (e) => {
-        var { skuId: t, loadId: n, onCheckoutSuccess: i, analyticsSourceLocation: a, analyticsLocations: o = [] } = e,
-            s = R(e, ["skuId", "loadId", "onCheckoutSuccess", "analyticsSourceLocation", "analyticsLocations"]);
+        var {
+                skuId: t,
+                loadId: n,
+                onCheckoutSuccess: i,
+                analyticsSourceLocation: a,
+                analyticsLocations: o = [],
+                isRental: s,
+            } = e,
+            l = R(e, [
+                "skuId",
+                "loadId",
+                "onCheckoutSuccess",
+                "analyticsSourceLocation",
+                "analyticsLocations",
+                "isRental",
+            ]);
         return (0, r.jsx)(u.PaymentContextProvider, {
             applicationId: (0, E.Nb)(t),
             activeSubscription: null,
@@ -337,6 +353,7 @@ let D = {
                 onCheckoutSuccess: i,
                 analyticsLocations: o,
                 analyticsSourceLocation: a,
+                isRental: s,
                 children: (0, r.jsx)(c.b6, {
                     children: (0, r.jsx)(
                         U,
@@ -345,7 +362,7 @@ let D = {
                                 skuId: t,
                                 analyticsLocations: o,
                             },
-                            s,
+                            l,
                         ),
                     ),
                 }),

@@ -91,16 +91,18 @@ let p = "orb-checkout-payment-modal-key",
                 analyticsSourceLocation: u,
                 onCloseCallback: _,
                 onCheckoutSuccess: h,
+                isRental: m,
             } = e,
-            m = f(e, [
+            g = f(e, [
                 "skuId",
                 "analyticsLocations",
                 "analyticsSourceLocation",
                 "onCloseCallback",
                 "onCheckoutSuccess",
+                "isRental",
             ]);
-        let g = !1,
-            E = (0, i.Z)();
+        let E = !1,
+            b = (0, i.Z)();
         return (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
@@ -114,22 +116,23 @@ let p = "orb-checkout-payment-modal-key",
                                     analyticsLocations: l,
                                     analyticsSourceLocation: u,
                                     onCheckoutSuccess: (e) => {
-                                        g || h(e), (g = !0);
+                                        E || h(e), (E = !0);
                                     },
+                                    isRental: m,
                                 },
-                                m,
+                                g,
                                 n,
                             ),
-                            { loadId: E },
+                            { loadId: b },
                         ),
                     );
             },
             {
                 onCloseCallback: _,
                 onCloseRequest() {
-                    g ||
+                    E ||
                         (0, o._Y)(s.rMx.PAYMENT_FLOW_CANCELED, {
-                            loadId: E,
+                            loadId: b,
                             skuId: t,
                             analyticsLocations: l,
                             analyticsSourceLocation: u,

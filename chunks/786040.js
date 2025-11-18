@@ -1,11 +1,12 @@
 n.d(t, {
-    J7: () => v,
-    LJ: () => T,
-    Zh: () => b,
-    jB: () => E,
-    rC: () => I,
-    tA: () => y,
-    wO: () => O,
+    $l: () => E,
+    J7: () => I,
+    LJ: () => S,
+    Zh: () => y,
+    jB: () => b,
+    rC: () => T,
+    tA: () => O,
+    wO: () => v,
     zp: () => m,
 }),
     n(388685);
@@ -27,10 +28,13 @@ function g() {
     return r.useContext(m).flattenProductVariants;
 }
 function E() {
+    return r.useContext(m).isRental;
+}
+function b() {
     var e;
     return null != (e = r.useContext(m).rentalDuration) ? e : 0;
 }
-var b = (function (e) {
+var y = (function (e) {
         return (
             (e.NONE = "none"),
             (e.NEW = "new"),
@@ -42,10 +46,10 @@ var b = (function (e) {
             e
         );
     })({}),
-    y = (function (e) {
+    O = (function (e) {
         return (e.FIAT = "fiat"), (e.ORBS = "orbs"), e;
     })({});
-let O = (e, t, n) => (r) => {
+let v = (e, t, n) => (r) => {
         l.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
             collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
             sku_id: e.skuId,
@@ -59,32 +63,34 @@ let O = (e, t, n) => (r) => {
             cta_name: r,
         });
     },
-    v = (e, t, n) => {
-        let i = (0, u.Nd)(),
-            l = null == i ? void 0 : i.tab,
-            { analyticsLocations: _ } = (0, s.ZP)(o.Z.COLLECTIBLES_SHOP_CARD),
-            p = (0, a.e7)([c.Z], () => c.Z.getCategoryForProduct(e.skuId)),
-            h = r.useRef(null);
+    I = (e, t, n, i, l) => {
+        let _ = (0, u.Nd)(),
+            p = null == _ ? void 0 : _.tab,
+            { analyticsLocations: h } = (0, s.ZP)(o.Z.COLLECTIBLES_SHOP_CARD),
+            m = (0, a.e7)([c.Z], () => c.Z.getCategoryForProduct(e.skuId)),
+            g = r.useRef(null);
         return r.useCallback(
             (t) => (r) => {
-                if (null == p) return;
-                let i = (0, f.oQ)({ product: e });
-                (h.current = r.currentTarget),
+                if (null == m) return;
+                let a = (0, f.oQ)({ product: e });
+                (g.current = r.currentTarget),
                     null == n || n(),
                     (0, d.T)({
                         product: e,
-                        category: p,
-                        shouldCheckoutWithOrbs: i,
-                        analyticsLocations: _,
+                        category: m,
+                        shouldCheckoutWithOrbs: a,
+                        analyticsLocations: h,
                         analyticsSource: t,
-                        returnRef: h,
-                        tab: l,
+                        returnRef: g,
+                        tab: p,
+                        isRental: i,
+                        rentalDuration: l,
                     });
             },
-            [e, l, p, _, n],
+            [e, p, m, h, n, i, l],
         )(t);
     },
-    I = (e) => {
+    T = (e) => {
         if (null == e) return null;
         if (e.type === i.Z.VARIANTS_GROUP) {
             if (null == e.variants || 0 === e.variants.length) return null;
@@ -95,7 +101,7 @@ let O = (e, t, n) => (r) => {
         }
         return e.type;
     },
-    T = (e) => {
+    S = (e) => {
         let t = g(),
             n = (0, a.e7)([c.Z], () => {
                 var n;
