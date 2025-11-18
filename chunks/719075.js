@@ -1,96 +1,106 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => E });
 var r = n(54381),
     l = n(473749),
     i = n(399606),
     a = n(481060),
-    o = n(594174),
-    s = n(74538),
-    c = n(429368),
-    u = n(884697),
-    d = n(290175),
+    s = n(594174),
+    o = n(55935),
+    c = n(74538),
+    u = n(429368),
+    d = n(884697),
+    g = n(290175),
     p = n(724994),
-    g = n(409116),
-    f = n(786040),
+    f = n(409116),
+    m = n(786040),
     h = n(58201),
-    m = n(445794),
-    C = n(956472),
-    _ = n(388032),
-    b = n(997033);
-let v = (e) => {
+    C = n(445794),
+    _ = n(956472),
+    b = n(388032),
+    v = n(189084);
+let x = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
-            c = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-            h = (0, f.$l)(),
-            v = s.ZP.canUseCollectibles(c),
-            { isDisabled: x } = (0, d.G)(t.skuId),
-            { isPurchased: E, isPartiallyOwnedBundle: O } = (0, p.L)(t),
-            S = (0, u.G1)(t),
-            y = (0, u.rN)(t),
-            j = l.useMemo(() => (0, u.BH)(t, v), [t, v]),
-            k = (0, m.Iw)(t),
+            u = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+            h = (0, m.$l)(),
+            x = c.ZP.canUseCollectibles(u),
+            { isDisabled: E } = (0, g.G)(t.skuId),
+            { isPurchased: O, isPartiallyOwnedBundle: S, isRented: y, rentalExpiresAt: j } = (0, p.L)(t),
+            k = (0, d.G1)(t),
+            I = (0, d.rN)(t),
+            T = l.useMemo(() => (0, d.BH)(t, x), [t, x]),
+            L = (0, C.Iw)(t),
             {
-                checkoutEligiblePrices: I,
-                hasSufficientOrbs: T,
-                shouldCheckoutWithOrbs: L,
-            } = (0, C.Ip)({
+                checkoutEligiblePrices: B,
+                hasSufficientOrbs: P,
+                shouldCheckoutWithOrbs: N,
+            } = (0, _.Ip)({
                 product: t,
-                isPremiumUser: v,
+                isPremiumUser: x,
                 prioritizedCurrency: n,
-                hasDiscountOffer: null != k,
+                hasDiscountOffer: null != L,
                 isRental: h,
             }),
-            B = S && !v;
-        return x
+            A = k && !x;
+        if (E)
+            return (0, r.jsx)(a.Text, {
+                variant: "text-md/medium",
+                color: "text-tertiary",
+                lineClamp: 1,
+                children: b.intl.string(b.t.wu4gyV),
+            });
+        if (S)
+            return (0, r.jsx)(a.Text, {
+                variant: "text-md/medium",
+                color: "text-tertiary",
+                lineClamp: 1,
+                children: b.intl.string(b.t.BEjTij),
+            });
+        if (y && null != j) {
+            let e = (0, o.TD)(Date.now(), j);
+            return (0, r.jsx)(a.Text, {
+                variant: "text-md/medium",
+                color: "text-tertiary",
+                lineClamp: 1,
+                children: b.intl.format(b.t.Io7ozn, { days: e.days.toString() }),
+            });
+        }
+        return O && !A
             ? (0, r.jsx)(a.Text, {
                   variant: "text-md/medium",
                   color: "text-tertiary",
                   lineClamp: 1,
-                  children: _.intl.string(_.t.wu4gyV),
+                  children: b.intl.string(b.t["6cfuDj"]),
               })
-            : O
+            : I
               ? (0, r.jsx)(a.Text, {
-                    variant: "text-md/medium",
-                    color: "text-tertiary",
+                    variant: "text-md/bold",
                     lineClamp: 1,
-                    children: _.intl.string(_.t.BEjTij),
+                    children: b.intl.string(b.t.nBtvYB),
                 })
-              : E && !B
+              : k
                 ? (0, r.jsx)(a.Text, {
-                      variant: "text-md/medium",
-                      color: "text-tertiary",
+                      variant: "text-md/bold",
                       lineClamp: 1,
-                      children: _.intl.string(_.t["6cfuDj"]),
+                      children: b.intl.string(b.t.rt69oo),
                   })
-                : y
-                  ? (0, r.jsx)(a.Text, {
+                : 0 === B.length
+                  ? null
+                  : (0, r.jsx)(f.F, {
+                        price: B[0],
+                        discount: T,
+                        nitroIconType: x ? "default" : void 0,
+                        nitroIconSize: "sm",
+                        discountOfferAmount: L,
+                        className: N && !P ? v.insufficientOrbs : void 0,
                         variant: "text-md/bold",
-                        lineClamp: 1,
-                        children: _.intl.string(_.t.nBtvYB),
-                    })
-                  : S
-                    ? (0, r.jsx)(a.Text, {
-                          variant: "text-md/bold",
-                          lineClamp: 1,
-                          children: _.intl.string(_.t.rt69oo),
-                      })
-                    : 0 === I.length
-                      ? null
-                      : (0, r.jsx)(g.F, {
-                            price: I[0],
-                            discount: j,
-                            nitroIconType: v ? "default" : void 0,
-                            nitroIconSize: "sm",
-                            discountOfferAmount: k,
-                            className: L && !T ? b.insufficientOrbs : void 0,
-                            variant: "text-md/bold",
-                        });
+                    });
     },
-    x = (e) => {
+    E = (e) => {
         let { skuId: t, prioritizedCurrency: n } = e,
-            l = (0, f.LJ)(t),
-            i = (0, c.o)(l);
+            l = (0, m.LJ)(t),
+            i = (0, u.o)(l);
         if (null == l) return null;
         let a = (0, h.W)(l, i);
-        return (0, r.jsx)(v, {
+        return (0, r.jsx)(x, {
             product: a,
             prioritizedCurrency: n,
         });

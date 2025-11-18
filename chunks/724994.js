@@ -8,30 +8,39 @@ var r = n(24217),
     o = n(442837),
     s = n(1870);
 let l = (e, t) => {
-        var n, r, o;
-        let s = null != e.getPurchase(t.skuId),
-            l = null != (n = t.items) ? n : [],
-            c = i()(l.map((t) => e.getPurchase(t.skuId)));
+        var n, r, o, s;
+        let l = e.getPurchase(t.skuId),
+            c = null != l,
+            u = null != (n = null == l ? void 0 : l.expiresAt) ? n : null,
+            d = null != u,
+            f = null != (r = t.items) ? r : [],
+            _ = i()(f.map((t) => e.getPurchase(t.skuId)));
         switch (null == t ? void 0 : t.type) {
             case a.Z.BUNDLE:
                 return {
-                    isPurchased: s || (l.length > 0 && c.length === l.length),
-                    isPartiallyOwnedBundle: c.length > 0 && c.length < l.length,
+                    isPurchased: c || (f.length > 0 && _.length === f.length),
+                    isPartiallyOwnedBundle: _.length > 0 && _.length < f.length,
                     isPartiallyOwnedVariantsGroup: !1,
+                    isRented: !1,
+                    rentalExpiresAt: null,
                 };
             case a.Z.VARIANTS_GROUP:
-                let u = null == (r = t.variants) ? void 0 : r.every((t) => null != e.getPurchase(t.skuId)),
-                    d = (null == (o = t.variants) ? void 0 : o.some((t) => null != e.getPurchase(t.skuId))) && !u;
+                let p = null == (o = t.variants) ? void 0 : o.every((t) => null != e.getPurchase(t.skuId)),
+                    h = (null == (s = t.variants) ? void 0 : s.some((t) => null != e.getPurchase(t.skuId))) && !p;
                 return {
-                    isPurchased: null != u && u,
+                    isPurchased: null != p && p,
                     isPartiallyOwnedBundle: !1,
-                    isPartiallyOwnedVariantsGroup: null != d && d,
+                    isPartiallyOwnedVariantsGroup: null != h && h,
+                    isRented: d,
+                    rentalExpiresAt: u,
                 };
             default:
                 return {
-                    isPurchased: s,
+                    isPurchased: c,
                     isPartiallyOwnedBundle: !1,
                     isPartiallyOwnedVariantsGroup: !1,
+                    isRented: d,
+                    rentalExpiresAt: u,
                 };
         }
     },

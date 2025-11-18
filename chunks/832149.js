@@ -43,6 +43,9 @@ let l = (e) => {
         itemConsumed: f,
         purchaseType: _ = a.o8.FIAT,
         overrideGraphic: p,
+        isRental: h = !1,
+        rentalDuration: m,
+        rentalExpiresAt: g,
     } = e;
     (0, i.ZDy)(
         async () => {
@@ -77,6 +80,9 @@ let l = (e) => {
                             shouldShowPromotionalExperience: u,
                             purchaseType: _,
                             overrideGraphic: p,
+                            isRental: h,
+                            rentalDuration: m,
+                            rentalExpiresAt: g,
                         },
                         n,
                     ),
