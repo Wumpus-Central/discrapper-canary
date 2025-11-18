@@ -1,17 +1,17 @@
 n.d(t, {
     Ic: () => j,
-    O5: () => G,
-    Zk: () => B,
-    _3: () => k,
-    _F: () => U,
-    _b: () => R,
+    O5: () => U,
+    Zk: () => G,
+    _3: () => M,
+    _F: () => k,
+    _b: () => N,
     dA: () => L,
-    jZ: () => M,
-    mH: () => x,
-    uk: () => P,
+    jZ: () => x,
+    mH: () => w,
+    uk: () => R,
 }),
     n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(772848),
     a = n(516796),
     o = n(930446),
@@ -28,10 +28,9 @@ var r = n(647438),
     g = n(497505),
     E = n(727160),
     b = n(36243),
-    y = n(566078),
-    O = n(46140),
-    v = n(981631);
-function I(e, t, n) {
+    y = n(46140),
+    O = n(981631);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +43,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +54,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,24 +71,24 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = Object.keys(g.jn),
-    N = new Set([v.rMx.QUEST_CONTENT_VIEWED, v.rMx.QUEST_CONTENT_CLICKED]);
-function R(e) {
+let A = Object.keys(g.jn),
+    C = new Set([O.rMx.QUEST_CONTENT_VIEWED, O.rMx.QUEST_CONTENT_CLICKED]);
+function N(e) {
     var t;
-    return null != (t = C.find((t) => g.jn[t] === e)) ? t : "";
+    return null != (t = A.find((t) => g.jn[t] === e)) ? t : "";
 }
-function P(e) {
+function R(e) {
     var t, n, r;
     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null
         ? "COMPLETED_CLAIMED"
@@ -99,7 +98,7 @@ function P(e) {
             ? "ENROLLED"
             : "NONE";
 }
-function D(e) {
+function P(e) {
     var t, n;
     return E.T.getConfig({ location: "quest_analytics" }).use_ad_session_id
         ? e
@@ -107,27 +106,26 @@ function D(e) {
           ? n
           : null;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     var r;
-    let i = y.r.build(e.config),
-        a = (0, o.Gy)(n).uuid;
-    return T(
+    let i = (0, o.Gy)(n).uuid;
+    return I(
         {
             quest_id: e.id,
-            quest_type: i.questType,
-            game_id: i.application.id,
-            game_name: i.application.name,
+            quest_type: (0, h.BI)(e.config),
+            game_id: e.config.application.id,
+            game_name: e.config.application.name,
             application_ids: null != (r = (0, h.MC)(e)) ? r : [],
-            client_ad_session_id: a,
-            billing_session_id: D(a),
+            client_ad_session_id: i,
+            billing_session_id: P(i),
         },
         (0, h.qe)(e.id, t),
     );
 }
-function x(e, t, n) {
+function w(e, t, n) {
     return {
         content_id: e,
-        content_name: R(e),
+        content_name: N(e),
         content_position: t,
         row_index: n,
     };
@@ -142,15 +140,15 @@ function L(e) {
             sourceQuestContent: o,
         } = e,
         s = m.Z.quests.get(t);
-    if (null == s || ((0, b.X)({ location: O.dr.QUEST_PREVIEW_TOOL }) && d.Z.getLayers().includes(v.S9g.USER_SETTINGS)))
+    if (null == s || ((0, b.X)({ location: y.dr.QUEST_PREVIEW_TOOL }) && d.Z.getLayers().includes(O.S9g.USER_SETTINGS)))
         return;
-    let c = T({}, w(s, o, a), r);
+    let c = I({}, D(s, o, a), r);
     if ((u.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, c), s.preview)) return;
-    let _ = N.has(n);
+    let _ = C.has(n);
     if (i) return l.ZP.trackWithMetadata(n, c, _);
     f.default.track(n, c, { flush: _ });
 }
-var M = (function (e) {
+var x = (function (e) {
     return (
         (e.LEARN_MORE = "LEARN_MORE"),
         (e.SHOW_REWARD = "SHOW_REWARD"),
@@ -209,7 +207,7 @@ var M = (function (e) {
         e
     );
 })({});
-async function k(e) {
+async function M(e) {
     let {
             questId: t,
             questContent: n,
@@ -221,14 +219,14 @@ async function k(e) {
             sourceQuestContent: d,
         } = e,
         f = m.Z.getQuest(t),
-        p = await (0, a.S)(R(n)),
+        p = await (0, a.S)(N(n)),
         g = (0, h.jY)(n);
     L({
         questId: t,
-        event: v.rMx.QUEST_CONTENT_CLICKED,
-        properties: A(T({}, x(n, o, s), (0, c.Z)()), {
+        event: O.rMx.QUEST_CONTENT_CLICKED,
+        properties: S(I({}, w(n, o, s), (0, c.Z)()), {
             cta_name: r,
-            quest_status: null != f ? P(f) : null,
+            quest_status: null != f ? R(f) : null,
             impression_id: l,
             apple_advertising_id: null != p && (0, _.isIOS)() ? p.advertisingId : null,
             android_advertising_id: null != p && (0, _.isAndroid)() ? p.advertisingId : null,
@@ -242,10 +240,10 @@ async function k(e) {
 }
 function j(e) {
     let { questContent: t, sourceQuestContent: n, questId: r, mode: i, prevMode: a } = e,
-        o = x(t);
+        o = w(t);
     L({
         questId: r,
-        event: v.rMx.QUEST_BAR_MODE_CHANGED,
+        event: O.rMx.QUEST_BAR_MODE_CHANGED,
         properties: {
             content_id: o.content_id,
             content_name: o.content_name,
@@ -255,17 +253,17 @@ function j(e) {
         sourceQuestContent: n,
     });
 }
-function U() {
+function k() {
     let e = (0, p.WD)();
     return r.useCallback(
         (t) => {
-            L(A(T({}, t), { properties: A(T({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
+            L(S(I({}, t), { properties: S(I({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
         },
         [e],
     );
 }
-function G() {
-    let e = U();
+function U() {
+    let e = k();
     return r.useCallback(
         (t) => {
             let {
@@ -279,13 +277,13 @@ function G() {
                 } = t,
                 f = m.Z.getQuest(n),
                 p = (0, h.jY)(r);
-            (0, a.S)(R(r)).then((t) => {
+            (0, a.S)(N(r)).then((t) => {
                 e({
                     questId: n,
-                    event: v.rMx.QUEST_CONTENT_CLICKED,
-                    properties: A(T({}, x(r, s, l), (0, c.Z)()), {
+                    event: O.rMx.QUEST_CONTENT_CLICKED,
+                    properties: S(I({}, w(r, s, l), (0, c.Z)()), {
                         cta_name: o,
-                        quest_status: null != f ? P(f) : null,
+                        quest_status: null != f ? R(f) : null,
                         click_id: (0, i.Z)(),
                         apple_advertising_id: null != t && (0, _.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, _.isAndroid)() ? t.advertisingId : null,
@@ -300,13 +298,13 @@ function G() {
         [e],
     );
 }
-function B(e, t) {
+function G(e, t) {
     r.useEffect(() => {
-        Z(t, e);
+        B(t, e);
     }, [e, t]);
 }
-function Z(e, t) {
-    l.ZP.trackWithMetadata(v.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+function B(e, t) {
+    l.ZP.trackWithMetadata(O.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
         quest_id: e,
         reason: t,
     });

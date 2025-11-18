@@ -1,96 +1,93 @@
-n.d(t, { default: () => g }), n(388685);
+n.d(t, { default: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
     o = n(22095),
     s = n(509212),
     l = n(113434),
-    c = n(497505),
-    d = n(566078),
-    u = n(644646),
-    m = n(515108),
-    f = n(291967),
-    p = n(46140),
-    x = n(388032),
-    h = n(258910);
-function C(e) {
+    c = n(644646),
+    d = n(515108),
+    u = n(291967),
+    m = n(46140),
+    f = n(388032),
+    x = n(522144);
+function p(e) {
     let { quest: t, rewardName: n, location: i, sourceQuestContent: o } = e;
     return (0, r.jsxs)("div", {
-        className: h.contentContainer,
+        className: x.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: h.rewardTileContainer,
-                children: (0, r.jsx)(u.Z, {
+                className: x.rewardTileContainer,
+                children: (0, r.jsx)(c.Z, {
                     autoplay: !0,
-                    className: h.rewardTile,
+                    className: x.rewardTile,
                     learnMoreStyle: null,
                     quest: t,
                     questContent: i,
-                    location: p.dr.INGAME_REWARD_MODAL,
+                    location: m.dr.INGAME_REWARD_MODAL,
                     sourceQuestContent: o,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.copyContainer,
+                className: x.copyContainer,
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: h.heading,
-                        children: x.intl.string(x.t["0/Yz+Y"]),
+                        className: x.heading,
+                        children: f.intl.string(f.t["0/Yz+Y"]),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: x.intl.format(x.t["v1u/zq"], { rewardName: n }),
+                        children: f.intl.format(f.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
             }),
             (0, r.jsx)(a.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: x.intl.string(x.t.OD6Tvf),
+                text: f.intl.string(f.t.OD6Tvf),
                 disabled: !0,
                 fullWidth: !0,
             }),
         ],
     });
 }
-function g(e) {
+function C(e) {
     var t, n;
-    let { initialQuest: a, onClose: u, transitionState: x, location: h, sourceQuestContent: g } = e,
-        _ = null != (n = (0, l.B4)(a.id)) ? n : a,
-        j = i.useMemo(() => (0, s.K)(_.config), [_]),
-        v = (null == (t = _.userStatus) ? void 0 : t.claimedAt) != null,
-        y = !_.preview && !v,
-        [N, b] = i.useState(y ? "loading" : "claimed");
+    let { initialQuest: a, onClose: c, transitionState: f, location: x, sourceQuestContent: C } = e,
+        g = null != (n = (0, l.B4)(a.id)) ? n : a,
+        h = i.useMemo(() => (0, s.K)(g.config), [g]),
+        j = (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null,
+        _ = !g.preview && !j,
+        [v, N] = i.useState(_ ? "loading" : "claimed");
     i.useEffect(() => {
-        if (y) {
-            let e = d.r.build(_.config),
-                t = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : c.y$.CROSS_PLATFORM;
-            (0, o.QB)(_.id, t, h)
-                .then(() => b("claimed"))
-                .catch(() => b("error"));
+        if (_) {
+            let e = (0, s.zG)(g.config);
+            (0, o.QB)(g.id, e, x)
+                .then(() => N("claimed"))
+                .catch(() => N("error"));
         }
-    }, [_, h, y]);
-    let w = "error" === N || null == j;
-    return (0, r.jsx)(m.Z, {
-        onClose: u,
-        transitionState: x,
-        quest: _,
-        sourceQuestContent: g,
-        location: p.dr.INGAME_REWARD_MODAL,
-        isRewardContentLoading: "loading" === N,
-        rewardContentHasError: w,
-        rewardContent: w
+    }, [g, x, _]);
+    let y = "error" === v || null == h;
+    return (0, r.jsx)(d.Z, {
+        onClose: c,
+        transitionState: f,
+        quest: g,
+        sourceQuestContent: C,
+        location: m.dr.INGAME_REWARD_MODAL,
+        isRewardContentLoading: "loading" === v,
+        rewardContentHasError: y,
+        rewardContent: y
             ? null
-            : (0, r.jsx)(f.Z, {
-                  rewardName: j.messages.name,
-                  children: (0, r.jsx)(C, {
-                      quest: _,
-                      rewardName: j.messages.name,
-                      location: h,
-                      sourceQuestContent: g,
+            : (0, r.jsx)(u.Z, {
+                  rewardName: h.messages.name,
+                  children: (0, r.jsx)(p, {
+                      quest: g,
+                      rewardName: h.messages.name,
+                      location: x,
+                      sourceQuestContent: C,
                   }),
               }),
     });

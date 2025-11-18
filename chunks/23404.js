@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -14,18 +14,17 @@ var r = n(54381),
     g = n(497505),
     m = n(373370),
     _ = n(475595),
-    b = n(566078),
-    E = n(602667),
-    O = n(611855),
-    y = n(110560),
-    v = n(670638),
-    I = n(667105),
-    C = n(860151),
-    S = n(46140),
-    T = n(981631),
-    N = n(388032),
-    j = n(408228);
-function P(e) {
+    b = n(602667),
+    E = n(611855),
+    O = n(110560),
+    y = n(670638),
+    v = n(667105),
+    I = n(860151),
+    C = n(46140),
+    S = n(981631),
+    T = n(388032),
+    N = n(123611);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,50 +49,50 @@ function P(e) {
     }
     return e;
 }
-function x(e) {
+function P(e) {
     var t;
     let { quest: n } = e,
         i = (0, f.B6)(n.config.expiresAt),
-        l = (0, f.B6)(b.r.build(n.config).rewardsExpireAt),
+        l = (0, f.B6)(n.config.rewardsConfig.rewardsExpireAt),
         a = (0, s.e7)([c.Z], () => c.Z.getState().theme),
-        u = (0, o.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
+        u = (0, o.wjy)(a) ? S.BRd.DARK : S.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
     return (0, r.jsxs)("div", {
-        className: j.heading,
+        className: N.heading,
         children: [
             (0, r.jsx)("img", {
-                className: j.headingGameTile,
+                className: N.headingGameTile,
                 alt: "",
                 src: (0, _.fh)(n, _.eC.GAME_TILE, u).url,
             }),
             (0, r.jsxs)("div", {
-                className: j.headingCopy,
+                className: N.headingCopy,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children: d
-                            ? N.intl.string(N.t.XBboAK)
-                            : N.intl.formatToPlainString(N.t.EQa7os, { questName: n.config.messages.questName }),
+                            ? T.intl.string(T.t.XBboAK)
+                            : T.intl.formatToPlainString(T.t.EQa7os, { questName: n.config.messages.questName }),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         children: d
-                            ? N.intl.formatToPlainString(N.t.APddvF, { expirationDate: l })
-                            : N.intl.formatToPlainString(N.t["pX+fmn"], { expirationDate: i }),
+                            ? T.intl.formatToPlainString(T.t.APddvF, { expirationDate: l })
+                            : T.intl.formatToPlainString(T.t["pX+fmn"], { expirationDate: i }),
                     }),
                 ],
             }),
         ],
     });
 }
-function A(e) {
+function x(e) {
     var t, n, l;
     let { nodeRef: c, quest: _ } = e,
         b = (0, d.O5)(),
-        E = (0, s.e7)([h.Z], () => h.Z.isEnrolling(_.id), [_]),
-        [T, A] = i.useState(!1),
+        S = (0, s.e7)([h.Z], () => h.Z.isEnrolling(_.id), [_]),
+        [x, A] = i.useState(!1),
         Z = i.useCallback(() => A(!0), []),
         w = i.useCallback(() => A(!1), []),
         { launchInGameActivity: L } = (0, f.zB)(_),
@@ -116,7 +115,7 @@ function A(e) {
                     questContentCTA: d.jZ.TRACK_PROGRESS,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
-                (0, y.navigateToQuestHome)({
+                (0, O.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: _.id,
                 }));
@@ -128,12 +127,12 @@ function A(e) {
                 questContentCTA: d.jZ.LEARN_MORE,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL,
             }),
-                (0, y.navigateToQuestHome)({
+                (0, O.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: _.id,
                 });
         }, [_.id, b]),
-        U = (0, I.hf)({
+        U = (0, v.hf)({
             quest: _,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
@@ -144,18 +143,18 @@ function A(e) {
         V = (0, m.DD)({
             quest: _,
             taskDetails: H,
-            location: S.dr.ACTIVITY_PANEL,
+            location: C.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
         }),
         F = (0, p.Rt)(_),
         z = (0, m.CR)({ quest: _ }),
-        Y = F ? z : N.intl.string(N.t.l7E81v);
+        Y = F ? z : T.intl.string(T.t.l7E81v);
     return (0, r.jsxs)("div", {
         ref: (e) => {
             c.current = e;
         },
-        className: a()(j.wrapper, { [j.wrapperQuestAccepted]: G }),
+        className: a()(N.wrapper, { [N.wrapperQuestAccepted]: G }),
         onClick: R,
         onKeyPress: R,
         onFocus: Z,
@@ -164,10 +163,10 @@ function A(e) {
         onMouseLeave: w,
         children: [
             (0, r.jsxs)("div", {
-                className: j.utils,
+                className: N.utils,
                 children: [
-                    G ? (0, r.jsx)(x, { quest: _ }) : (0, r.jsx)(O.Z, {}),
-                    (0, r.jsx)(v.r, {
+                    G ? (0, r.jsx)(P, { quest: _ }) : (0, r.jsx)(E.Z, {}),
+                    (0, r.jsx)(y.r, {
                         quest: _,
                         questContent: g.jn.ACTIVITY_PANEL,
                         shouldShowDisclosure: (null == (l = _.userStatus) ? void 0 : l.enrolledAt) == null,
@@ -177,14 +176,14 @@ function A(e) {
                             var t, n;
                             return (0, r.jsx)(
                                 o.P3F,
-                                ((t = P({}, e)),
+                                ((t = j({}, e)),
                                 (n = n =
                                     {
-                                        "aria-label": N.intl.string(N.t.DEoVWZ),
+                                        "aria-label": T.intl.string(T.t.DEoVWZ),
                                         children: (0, r.jsx)(o.xhG, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: j.submenuIcon,
+                                            className: N.submenuIcon,
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -208,9 +207,9 @@ function A(e) {
             !G &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(x, { quest: _ }),
+                        (0, r.jsx)(P, { quest: _ }),
                         (0, r.jsx)("div", {
-                            className: j.instructions,
+                            className: N.instructions,
                             children: (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
@@ -221,17 +220,17 @@ function A(e) {
                 }),
             G &&
                 !B &&
-                (0, r.jsx)(C.Z, {
-                    autoplay: T,
-                    className: j.rewardTileWithInstructions,
+                (0, r.jsx)(I.Z, {
+                    autoplay: x,
+                    className: N.rewardTileWithInstructions,
                     quest: _,
                     questContent: g.jn.ACTIVITY_PANEL,
-                    location: S.dr.ACTIVITY_PANEL,
+                    location: C.dr.ACTIVITY_PANEL,
                     taskDetails: H,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
             (0, r.jsxs)("div", {
-                className: j.ctas,
+                className: N.ctas,
                 children: [
                     !G &&
                         (0, r.jsxs)(o.ButtonGroup, {
@@ -241,15 +240,15 @@ function A(e) {
                             children: [
                                 (0, r.jsx)(o.Button, {
                                     variant: "secondary",
-                                    text: N.intl.string(N.t.LLLLPD),
+                                    text: T.intl.string(T.t.LLLLPD),
                                     onClick: k,
                                 }),
                                 (0, r.jsx)(o.Button, {
                                     variant: "primary",
                                     text: Y,
                                     onClick: D,
-                                    loading: E,
-                                    icon: (0, y.getPrimaryCtaIcon)(_),
+                                    loading: S,
+                                    icon: (0, O.getPrimaryCtaIcon)(_),
                                 }),
                             ],
                         }),
@@ -259,7 +258,7 @@ function A(e) {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
-                            text: N.intl.string(N.t.VN1Ajl),
+                            text: T.intl.string(T.t.VN1Ajl),
                             onClick: M,
                         }),
                     B &&
@@ -267,7 +266,7 @@ function A(e) {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
-                            text: N.intl.string(N.t.cfY4PE),
+                            text: T.intl.string(T.t.cfY4PE),
                             onClick: U,
                         }),
                 ],
@@ -275,11 +274,11 @@ function A(e) {
         ],
     });
 }
-let Z = function (e) {
-    return (0, r.jsx)(E.A, {
+let A = function (e) {
+    return (0, r.jsx)(b.A, {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(A, P({ nodeRef: t }, e)),
+        children: (t) => (0, r.jsx)(x, j({ nodeRef: t }, e)),
     });
 };

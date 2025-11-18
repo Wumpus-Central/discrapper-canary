@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(878342),
+    s = n(636606),
     l = n(722770),
     c = n(28664),
     u = n(481060),
@@ -13,18 +13,17 @@ var r = n(54381),
     p = n(617136),
     h = n(113434),
     m = n(497505),
-    g = n(566078),
-    E = n(477005),
-    b = n(685613),
-    y = n(611855),
-    O = n(644646),
-    v = n(670638),
-    I = n(724684),
-    T = n(46140),
-    S = n(231338),
-    A = n(388032),
-    C = n(849138);
-function N(e, t, n) {
+    g = n(477005),
+    E = n(685613),
+    b = n(611855),
+    y = n(644646),
+    O = n(670638),
+    v = n(724684),
+    I = n(46140),
+    T = n(231338),
+    S = n(388032),
+    A = n(815874);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-function R(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +47,12 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,141 +64,141 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let w = (0, s.animated)(u.CJ0),
-    x = (e) => {
+let D = (0, s.animated)(u.CJ0),
+    w = (e) => {
         var t;
         let {
                 isQuestExpired: n,
                 quest: a,
-                location: N,
-                size: P,
-                expansionSpring: x,
+                location: C,
+                size: R,
+                expansionSpring: w,
                 isAnimating: L,
-                isExpanded: M,
-                isInteracting: k,
+                isExpanded: x,
+                isInteracting: M,
                 contentPosition: j,
-                toggleExpanded: U,
-                sourceQuestContent: G,
+                toggleExpanded: k,
+                sourceQuestContent: U,
             } = e,
-            { ref: B, height: Z } = (0, d.ZP)(),
-            [F, V] = i.useState(null),
-            [H, Y] = i.useState(null),
-            W = (0, _.Z)((e) => {
+            { ref: G, height: B } = (0, d.ZP)(),
+            [Z, F] = i.useState(null),
+            [V, H] = i.useState(null),
+            Y = (0, _.Z)((e) => {
                 let t = e.target;
-                V(t.offsetWidth), Y(t.scrollWidth);
+                F(t.offsetWidth), H(t.scrollWidth);
             }),
-            K = (0, f.y)(W),
-            z = (0, I.uq)(N),
-            q = N === m.jn.QUESTS_EMBED,
-            X = (0, h.t5)(a, T.dr.QUESTS_CARD, N, G),
-            Q = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
-            J = (0, p.O5)(),
-            $ = (0, h.B6)(a.config.expiresAt),
-            ee = (0, h.B6)(g.r.build(a.config).rewardsExpireAt),
-            et = i.useMemo(() => null != a.config.cosponsorMetadata, [a]),
-            en = (e) => {
+            W = (0, f.y)(Y),
+            K = (0, v.uq)(C),
+            z = C === m.jn.QUESTS_EMBED,
+            q = (0, h.t5)(a, I.dr.QUESTS_CARD, C, U),
+            X = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
+            Q = (0, p.O5)(),
+            J = (0, h.B6)(a.config.expiresAt),
+            $ = (0, h.B6)(a.config.rewardsConfig.rewardsExpireAt),
+            ee = i.useMemo(() => null != a.config.cosponsorMetadata, [a]),
+            et = (e) => {
                 e.stopPropagation(),
                     e.currentTarget.blur(),
-                    U(),
-                    J({
+                    k(),
+                    Q({
                         questId: a.id,
-                        questContent: N,
-                        questContentCTA: M ? p.jZ.COLLAPSE : p.jZ.EXPAND,
+                        questContent: C,
+                        questContentCTA: x ? p.jZ.COLLAPSE : p.jZ.EXPAND,
                         questContentPosition: j,
-                        sourceQuestContent: G,
+                        sourceQuestContent: U,
                     });
             },
-            er = () => null != F && null != H && F < H,
-            ei = (0, r.jsx)(b.ZP, {
-                className: C.partnerBranding,
-                logotypeClassName: et ? C.partnerBrandingLogotypes : void 0,
-                gameTileSize: b.fF.MEDIUM,
+            en = () => null != Z && null != V && Z < V,
+            er = (0, r.jsx)(E.ZP, {
+                className: A.partnerBranding,
+                logotypeClassName: ee ? A.partnerBrandingLogotypes : void 0,
+                gameTileSize: E.fF.MEDIUM,
                 quest: a,
-                separatorSpacing: b.US.MEDIUM,
-                theme: S.BR.DARK,
-                withGameTile: !q || null == a.config.cosponsorMetadata,
+                separatorSpacing: E.US.MEDIUM,
+                theme: T.BR.DARK,
+                withGameTile: !z || null == a.config.cosponsorMetadata,
             });
         return (0, r.jsxs)("div", {
-            className: o()(C.outerContainer, {
-                [C.outerContainerGiftInventory]: z,
-                [C.outerContainerEmbed]: q,
-                [C.outerContainerXs]: "xs" === P,
+            className: o()(A.outerContainer, {
+                [A.outerContainerGiftInventory]: K,
+                [A.outerContainerEmbed]: z,
+                [A.outerContainerXs]: "xs" === R,
             }),
-            "aria-label": A.intl.string(A.t.dcl9MQ),
-            style: { height: z ? Z : void 0 },
+            "aria-label": S.intl.string(S.t.dcl9MQ),
+            style: { height: K ? B : void 0 },
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(g.Z, {
                     quest: a,
-                    isInteracting: k,
-                    containerClassName: C.questSplashContainer,
+                    isInteracting: M,
+                    containerClassName: A.questSplashContainer,
                     imageSize: {
                         width: 660,
                         height: 185,
                     },
-                    imageClassName: C.questSplashImage,
+                    imageClassName: A.questSplashImage,
                 }),
                 (0, r.jsxs)("div", {
-                    className: C.header,
-                    "aria-expanded": M,
+                    className: A.header,
+                    "aria-expanded": x,
                     children: [
                         (0, r.jsxs)(s.animated.div, {
-                            className: o()(C.headerContent, { [C.headerContentEmbed]: q }),
+                            className: o()(A.headerContent, { [A.headerContentEmbed]: z }),
                             style: {
-                                y: z
-                                    ? x.to({
+                                y: K
+                                    ? w.to({
                                           range: [0, 1],
-                                          output: [I.DJ, 0],
+                                          output: [v.DJ, 0],
                                       })
                                     : void 0,
                             },
                             children: [
-                                z &&
+                                K &&
                                     (0, r.jsx)(s.animated.div, {
-                                        className: C.headerCollapsedContent,
+                                        className: A.headerCollapsedContent,
                                         style: {
-                                            opacity: x.to({
+                                            opacity: w.to({
                                                 range: [0, 1],
                                                 output: [1, 0],
                                             }),
-                                            visibility: L || !M ? "inherit" : "hidden",
+                                            visibility: L || !x ? "inherit" : "hidden",
                                         },
-                                        "aria-hidden": !L && M,
+                                        "aria-hidden": !L && x,
                                         children: (0, r.jsxs)(u.kL8, {
-                                            "aria-label": A.intl.string(A.t.dcl9MQ),
-                                            onClick: en,
-                                            className: C.headerCollapsedClickableContainer,
+                                            "aria-label": S.intl.string(S.t.dcl9MQ),
+                                            onClick: et,
+                                            className: A.headerCollapsedClickableContainer,
                                             children: [
                                                 (0, r.jsx)("div", {
-                                                    className: C.headerCollapsedContentRewardWrapper,
-                                                    children: (0, r.jsx)(O.Z, {
+                                                    className: A.headerCollapsedContentRewardWrapper,
+                                                    children: (0, r.jsx)(y.Z, {
                                                         quest: a,
-                                                        questContent: N,
-                                                        className: C.headerCollapsedRewardTile,
-                                                        location: T.dr.QUESTS_CARD,
-                                                        sourceQuestContent: G,
+                                                        questContent: C,
+                                                        className: A.headerCollapsedRewardTile,
+                                                        location: I.dr.QUESTS_CARD,
+                                                        sourceQuestContent: U,
                                                     }),
                                                 }),
                                                 (0, r.jsxs)("div", {
-                                                    className: C.headerCollapsedContentCopyWrapper,
+                                                    className: A.headerCollapsedContentCopyWrapper,
                                                     children: [
                                                         (0, r.jsxs)("div", {
-                                                            className: C.headerCollapsedContentCopyLogos,
-                                                            children: [ei, (0, r.jsx)(y.Z, { color: "always-white" })],
+                                                            className: A.headerCollapsedContentCopyLogos,
+                                                            children: [er, (0, r.jsx)(b.Z, { color: "always-white" })],
                                                         }),
                                                         (0, r.jsx)(u.Text, {
                                                             variant: "text-xs/medium",
-                                                            children: X,
+                                                            children: q,
                                                         }),
                                                     ],
                                                 }),
@@ -208,44 +207,44 @@ let w = (0, s.animated)(u.CJ0),
                                     }),
                                 (0, r.jsx)(s.animated.div, {
                                     ref: (e) => {
-                                        B.current = e;
+                                        G.current = e;
                                     },
-                                    className: o()(C.headerExpandedContent, {
-                                        [C.outerContainerGiftInventory]: z,
-                                        [C.outerContainerEmbed]: q,
+                                    className: o()(A.headerExpandedContent, {
+                                        [A.outerContainerGiftInventory]: K,
+                                        [A.outerContainerEmbed]: z,
                                     }),
                                     style: {
-                                        opacity: x.to({
+                                        opacity: w.to({
                                             range: [0, 1],
                                             output: [0, 1],
                                         }),
-                                        visibility: L || M ? "inherit" : "hidden",
+                                        visibility: L || x ? "inherit" : "hidden",
                                     },
-                                    "aria-hidden": !L && !M,
+                                    "aria-hidden": !L && !x,
                                     children: (0, r.jsxs)("div", {
-                                        className: C.headerExpandedWrapper,
+                                        className: A.headerExpandedWrapper,
                                         children: [
                                             (0, r.jsxs)("div", {
-                                                className: C.iconLogotypeContainer,
-                                                children: [ei, q ? null : (0, r.jsx)(y.Z, { color: "always-white" })],
+                                                className: A.iconLogotypeContainer,
+                                                children: [er, z ? null : (0, r.jsx)(b.Z, { color: "always-white" })],
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: C.questInfo,
+                                                className: A.questInfo,
                                                 children: [
                                                     (0, r.jsx)(c.u, {
                                                         __unsupportedReactNodeAsText: a.config.messages.questName,
-                                                        shouldShow: er(),
+                                                        shouldShow: en(),
                                                         children: (0, r.jsx)(u.Heading, {
-                                                            ref: K,
+                                                            ref: W,
                                                             variant:
-                                                                "lg" === P
+                                                                "lg" === R
                                                                     ? "heading-xxl/bold"
-                                                                    : "sm" === P
+                                                                    : "sm" === R
                                                                       ? "heading-xl/bold"
                                                                       : "heading-lg/bold",
-                                                            className: C.heading,
+                                                            className: A.heading,
                                                             color: "always-white",
-                                                            children: A.intl.format(A.t.EAYZAr, {
+                                                            children: S.intl.format(S.t.EAYZAr, {
                                                                 questName: a.config.messages.questName,
                                                             }),
                                                         }),
@@ -253,16 +252,16 @@ let w = (0, s.animated)(u.CJ0),
                                                     (0, r.jsx)(u.Text, {
                                                         variant: "text-xs/normal",
                                                         color: "always-white",
-                                                        children: Q
-                                                            ? A.intl.formatToPlainString(A.t.APddvF, {
-                                                                  expirationDate: ee,
+                                                        children: X
+                                                            ? S.intl.formatToPlainString(S.t.APddvF, {
+                                                                  expirationDate: $,
                                                               })
                                                             : n
-                                                              ? A.intl.formatToPlainString(A.t.v7xMw7, {
-                                                                    expirationDate: $,
+                                                              ? S.intl.formatToPlainString(S.t.v7xMw7, {
+                                                                    expirationDate: J,
                                                                 })
-                                                              : A.intl.formatToPlainString(A.t["pX+fmn"], {
-                                                                    expirationDate: $,
+                                                              : S.intl.formatToPlainString(S.t["pX+fmn"], {
+                                                                    expirationDate: J,
                                                                 }),
                                                     }),
                                                 ],
@@ -273,36 +272,36 @@ let w = (0, s.animated)(u.CJ0),
                             ],
                         }),
                         (0, r.jsxs)(s.animated.div, {
-                            className: C.iconsContainer,
+                            className: A.iconsContainer,
                             style: {
-                                top: z
-                                    ? x.to({
+                                top: K
+                                    ? w.to({
                                           range: [0, 1],
-                                          output: [I.DJ / 2 - I.Z$ / 2, I.jc],
+                                          output: [v.DJ / 2 - v.Z$ / 2, v.jc],
                                       })
-                                    : I.jc,
+                                    : v.jc,
                             },
                             children: [
-                                (0, r.jsx)(v.r, {
-                                    questContent: N,
+                                (0, r.jsx)(O.r, {
+                                    questContent: C,
                                     quest: a,
                                     questContentPosition: j,
                                     shouldShowDisclosure: !0,
-                                    hideLearnMore: z,
-                                    showShareLink: !n && q,
-                                    sourceQuestContent: G,
+                                    hideLearnMore: K,
+                                    showShareLink: !n && z,
+                                    sourceQuestContent: U,
                                     children: (e) =>
                                         (0, r.jsx)(s.animated.div, {
                                             style: {
-                                                opacity: x,
-                                                visibility: L || M ? "inherit" : "hidden",
+                                                opacity: w,
+                                                visibility: L || x ? "inherit" : "hidden",
                                             },
-                                            "aria-hidden": !L && !M,
+                                            "aria-hidden": !L && !x,
                                             children: (0, r.jsx)(
                                                 u.P3F,
-                                                D(R({}, e), {
-                                                    className: C.iconWrapper,
-                                                    "aria-label": A.intl.string(A.t.DEoVWZ),
+                                                P(N({}, e), {
+                                                    className: A.iconWrapper,
+                                                    "aria-label": S.intl.string(S.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {
                                                         size: "md",
                                                         color: l.Z.WHITE,
@@ -311,14 +310,14 @@ let w = (0, s.animated)(u.CJ0),
                                             ),
                                         }),
                                 }),
-                                !(0, I.W_)(N) &&
+                                !(0, v.W_)(C) &&
                                     (0, r.jsx)(u.P3F, {
-                                        onClick: en,
-                                        className: C.iconWrapper,
-                                        "aria-label": M ? A.intl.string(A.t.iTcuma) : A.intl.string(A.t.dcl9MQ),
-                                        children: (0, r.jsx)(w, {
+                                        onClick: et,
+                                        className: A.iconWrapper,
+                                        "aria-label": x ? S.intl.string(S.t.iTcuma) : S.intl.string(S.t.dcl9MQ),
+                                        children: (0, r.jsx)(D, {
                                             style: {
-                                                rotate: x.to({
+                                                rotate: w.to({
                                                     range: [0, 1],
                                                     output: [0, 180],
                                                 }),
