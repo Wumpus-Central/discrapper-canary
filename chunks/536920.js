@@ -1,214 +1,158 @@
-n.d(t, { default: () => j }), n(388685), n(953529);
+n.d(e, { default: () => y }), n(388685);
 var a = n(54381),
-    r = n(473749),
-    i = n(442837),
-    s = n(379649),
-    l = n(755721),
-    o = n(481060),
+    i = n(473749),
+    l = n(793030),
+    r = n(442837),
+    o = n(379649),
+    s = n(481060),
     d = n(493773),
-    c = n(579806),
-    u = n(594190),
+    u = n(579806),
+    c = n(594190),
     m = n(77498),
     _ = n(626135),
-    h = n(837268),
-    x = n(371651),
-    v = n(981631),
-    g = n(388032),
-    p = n(94092);
-function j(e) {
-    let { onClose: t, transitionState: n, clientSettingType: j, gameId: C } = e,
-        [y, b] = r.useState("unreported"),
-        [k, f] = r.useState(""),
-        [S, w] = r.useState(!1),
-        [N, z] = r.useState(!1),
-        [R, B] = r.useState(!1),
-        [H, M] = r.useState(!1),
-        P = (0, i.e7)([m.Z, u.ZP], () => {
-            var e;
-            let t = null != C ? C : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
-            return null == t ? null : m.Z.getDetectableGame(t);
+    v = n(837268),
+    g = n(371651),
+    h = n(981631),
+    p = n(388032),
+    x = n(94092);
+function y(t) {
+    let { onClose: e, transitionState: n, clientSettingType: y, gameId: C } = t,
+        [f, k] = i.useState("unreported"),
+        [b, w] = i.useState(""),
+        [S, j] = i.useState(!1),
+        [Z, M] = i.useState(!1),
+        [H, P] = i.useState(!1),
+        [F, R] = i.useState(!1),
+        D = (0, r.e7)([m.Z, c.ZP], () => {
+            var t;
+            let e = null != C ? C : null == (t = c.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id;
+            return null == e ? null : m.Z.getDetectableGame(e);
         }),
-        Z = (0, i.e7)([x.default], () => {
-            var e;
-            let t =
+        E = (0, r.e7)([g.default], () => {
+            var t;
+            let e =
                 null !=
-                (e = null === x.default || void 0 === x.default ? void 0 : x.default.getMostRecentOverlayRenderMethod())
-                    ? e
+                (t = null === g.default || void 0 === g.default ? void 0 : g.default.getMostRecentOverlayRenderMethod())
+                    ? t
                     : void 0;
-            return null != t ? h.gl[t] : void 0;
+            return null != e ? v.gl[e] : void 0;
         }),
-        A = r.useMemo(() => {
-            let e = {
-                not_working: g.t.CHXHFX,
-                not_useful: g.t.a95skc,
-                game_crashes_occurred: g.t.IFZ0Sa,
-                poor_performance: g.t.exRczv,
-                too_many_notifications: g.t.XuBFBM,
-                multiple_monitors: g.t.p8Ekyz,
-                in_the_way_of_game: g.t.YP7Pin,
-                other: g.t["YP/Ttl"],
+        L = i.useMemo(() => {
+            let t = {
+                not_working: p.t.CHXHFX,
+                not_useful: p.t.a95skc,
+                game_crashes_occurred: p.t.IFZ0Sa,
+                poor_performance: p.t.exRczv,
+                too_many_notifications: p.t.XuBFBM,
+                multiple_monitors: p.t.p8Ekyz,
+                in_the_way_of_game: p.t.YP7Pin,
+                other: p.t["YP/Ttl"],
             };
-            return Object.keys(e).map((t) => ({
-                name: g.intl.string(e[t]),
-                value: t,
+            return Object.keys(t).map((e) => ({
+                name: p.intl.string(t[e]),
+                value: e,
             }));
         }, []),
-        D = async () => {
-            var e, n, a;
-            if ("unreported" === y && 0 === k.length) {
-                B(!0), await (0, s._v)(100), B(!1), M(!0);
+        O = i.useCallback(async () => {
+            var t, n, a;
+            if ("unreported" === f && 0 === b.length) {
+                P(!0), await (0, o._v)(100), P(!1), R(!0);
                 return;
             }
-            w(!0),
-                await _.default.track(v.rMx.OVERLAY_DISABLED_SURVEY, {
-                    reason: y,
-                    comment: k,
-                    client_setting_type: j,
-                    application_id: null == P ? void 0 : P.id,
-                    application_name: null == P ? void 0 : P.name,
-                    most_recent_overlay_render_method: Z,
+            j(!0),
+                await _.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
+                    reason: f,
+                    comment: b,
+                    client_setting_type: y,
+                    application_id: null == D ? void 0 : D.id,
+                    application_name: null == D ? void 0 : D.name,
+                    most_recent_overlay_render_method: E,
                     hardware_display_count:
                         null !=
-                        (a = await (null === c.Z ||
-                        void 0 === c.Z ||
-                        null == (n = c.Z.hardware) ||
-                        null == (e = n.getDisplayCount)
+                        (a = await (null === u.Z ||
+                        void 0 === u.Z ||
+                        null == (n = u.Z.hardware) ||
+                        null == (t = n.getDisplayCount)
                             ? void 0
-                            : e.call(n)))
+                            : t.call(n)))
                             ? a
                             : null,
                 }),
-                await (0, s._v)(1000),
-                w(!1),
-                z(!0),
-                await (0, s._v)(1500),
-                t();
-        };
-    return (
-        (0, d.ZP)(() => {
-            _.default.track(v.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
-        }),
-        (0, a.jsxs)(o.Y0X, {
-            transitionState: n,
-            "aria-label": g.intl.string(g.t.bomhnX),
-            size: o.CgR.DYNAMIC,
-            className: p.root,
-            parentComponent: "OverlayDisabledSurveyModal",
-            children: [
-                (0, a.jsxs)(o.xBx, {
-                    children: [
-                        (0, a.jsxs)("div", {
-                            className: p.header,
-                            children: [
-                                (0, a.jsx)(o.Heading, {
-                                    variant: "heading-lg/semibold",
-                                    color: "header-primary",
-                                    children: g.intl.string(g.t["9JKzxe"]),
-                                }),
-                                (0, a.jsx)(o.Text, {
-                                    variant: "text-sm/medium",
-                                    color: "text-secondary",
-                                    className: p.description,
-                                    children: g.intl.string(g.t["2yjnmb"]),
-                                }),
-                            ],
-                        }),
-                        (0, a.jsx)(o.olH, {
-                            onClick: t,
-                            className: p.closeButton,
-                        }),
-                    ],
-                }),
-                (0, a.jsx)(o.hzk, {
-                    className: p.reasonContainer,
-                    children: (0, a.jsxs)(o.Ttm, {
-                        children: [
-                            (0, a.jsxs)("div", {
-                                children: [
-                                    (0, a.jsx)(o.UkV, {
-                                        isShaking: R,
-                                        intensity: 1,
-                                        className: p.radioHeader,
-                                        children: (0, a.jsx)(o.Text, {
-                                            variant: "text-sm/semibold",
-                                            color: H ? "text-danger" : "text-muted",
-                                            children: g.intl.string(g.t.yhUvdd),
-                                        }),
-                                    }),
-                                    (0, a.jsx)(o.FXm, {
-                                        value: y,
-                                        options: A,
-                                        onChange: (e) => {
-                                            b(e), M(!1), B(!1);
-                                        },
-                                    }),
-                                ],
-                            }),
-                            (0, a.jsxs)("div", {
-                                className: p.commentContainer,
-                                children: [
-                                    (0, a.jsx)(o.Text, {
-                                        variant: "text-sm/semibold",
-                                        color: "text-muted",
-                                        className: p.commentHeader,
-                                        children: g.intl.string(g.t.LYnrhc),
-                                    }),
-                                    (0, a.jsx)(o.Kx8, {
-                                        autosize: !0,
-                                        value: k,
-                                        maxLength: 1000,
-                                        showRemainingCharacterCount: !1,
-                                        placeholder: g.intl.string(g.t["gU+bVJ"]),
-                                        onChange: f,
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                }),
-                (0, a.jsxs)(o.mzw, {
-                    className: p.buttons,
-                    children: [
-                        (0, a.jsx)(o.Button, {
-                            variant: "secondary",
-                            text: g.intl.string(g.t["5Wxrcd"]),
-                            disabled: S,
-                            onClick: () => {
-                                t();
-                            },
-                        }),
-                        (0, a.jsx)(o.UkV, {
-                            isShaking: R,
-                            intensity: 1,
-                            children: (0, a.jsx)(l.zx, {
-                                disabled: S,
-                                submitting: S,
-                                onClick: D,
-                                color: (() => {
-                                    switch (!0) {
-                                        case N:
-                                            return l.zx.Colors.GREEN;
-                                        case R:
-                                            return l.zx.Colors.PRIMARY;
-                                        default:
-                                            return l.zx.Colors.BRAND;
-                                    }
-                                })(),
-                                children: (() => {
-                                    switch (!0) {
-                                        case N:
-                                            return (0, a.jsx)(o.kmB, {});
-                                        case S:
-                                            return (0, a.jsx)(o.$jN, { type: o.RAz.PULSING_ELLIPSIS });
-                                        default:
-                                            return g.intl.string(g.t.geKm7t);
-                                    }
-                                })(),
-                            }),
-                        }),
-                    ],
-                }),
-            ],
-        })
+                await (0, o._v)(1000),
+                j(!1),
+                M(!0),
+                await (0, o._v)(1500),
+                e();
+        }, [f, b, y, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
+    (0, d.ZP)(() => {
+        _.default.track(h.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+    });
+    let U = i.useMemo(
+        () => [
+            {
+                variant: "secondary",
+                text: p.intl.string(p.t["5Wxrcd"]),
+                onClick: e,
+                disabled: S,
+            },
+            {
+                variant: H ? "secondary" : "primary",
+                text: Z ? p.intl.string(p.t.bxiZU6) : p.intl.string(p.t.geKm7t),
+                onClick: O,
+                disabled: S || Z,
+                loading: S,
+                autoFocus: !1,
+            },
+        ],
+        [e, S, Z, O, H],
     );
+    return (0, a.jsxs)(l.Modal, {
+        onClose: e,
+        transitionState: n,
+        title: p.intl.string(p.t["9JKzxe"]),
+        subtitle: p.intl.string(p.t["2yjnmb"]),
+        actions: U,
+        children: [
+            (0, a.jsxs)("div", {
+                children: [
+                    (0, a.jsx)(s.UkV, {
+                        isShaking: H,
+                        intensity: 1,
+                        className: x.radioHeader,
+                        children: (0, a.jsx)(s.Text, {
+                            variant: "text-sm/semibold",
+                            color: F ? "text-danger" : "text-muted",
+                            children: p.intl.string(p.t.yhUvdd),
+                        }),
+                    }),
+                    (0, a.jsx)(s.FXm, {
+                        value: f,
+                        options: L,
+                        onChange: (t) => {
+                            k(t), R(!1), P(!1);
+                        },
+                    }),
+                ],
+            }),
+            (0, a.jsxs)("div", {
+                className: x.commentContainer,
+                children: [
+                    (0, a.jsx)(s.Text, {
+                        variant: "text-sm/semibold",
+                        color: "text-muted",
+                        className: x.commentHeader,
+                        children: p.intl.string(p.t.LYnrhc),
+                    }),
+                    (0, a.jsx)(s.Kx8, {
+                        autosize: !0,
+                        value: b,
+                        maxLength: 1000,
+                        showRemainingCharacterCount: !1,
+                        placeholder: p.intl.string(p.t["gU+bVJ"]),
+                        onChange: w,
+                    }),
+                ],
+            }),
+        ],
+    });
 }
