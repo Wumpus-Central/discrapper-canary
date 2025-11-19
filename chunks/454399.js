@@ -1,19 +1,20 @@
-n.d(t, { i: () => I }), n(35282), n(415506);
+n.d(t, { i: () => T }), n(35282), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(635041),
-    l = n(481060),
-    c = n(314910),
-    u = n(550656),
-    d = n(725027),
-    f = n(464281),
-    _ = n(102725),
-    p = n(342134),
-    h = n(966327),
-    m = n(890955);
-function g(e, t, n) {
+    l = n(793030),
+    c = n(481060),
+    u = n(314910),
+    d = n(550656),
+    f = n(725027),
+    _ = n(464281),
+    p = n(102725),
+    h = n(342134),
+    m = n(966327),
+    g = n(890955);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +55,22 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +78,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,30 +87,32 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function T(e) {
     let t;
     var {
             children: n,
             title: a,
-            body: g,
-            asset: b,
-            asContainer: v = !1,
-            element: I = "span",
-            position: T = "top",
-            align: S = "center",
-            spacing: A,
-            caretConfig: C,
-            layerContext: N,
-            targetElementRef: R,
-            anchorRef: P,
-            positionKey: D,
-            ariaHidden: w = !1,
+            body: E,
+            asset: y,
+            assetSize: I = 48,
+            asContainer: T = !1,
+            element: S = "span",
+            position: A = "top",
+            align: C = "center",
+            spacing: N,
+            caretConfig: R,
+            layerContext: P,
+            targetElementRef: D,
+            anchorRef: w,
+            positionKey: L,
+            ariaHidden: x = !1,
         } = e,
-        L = O(e, [
+        M = v(e, [
             "children",
             "title",
             "body",
             "asset",
+            "assetSize",
             "asContainer",
             "element",
             "position",
@@ -122,60 +125,62 @@ function I(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let x = (0, h.c)(R),
-        M = i.useId(),
-        k = w ? void 0 : M,
-        j = null != a && ("string" != typeof a || "" !== a),
-        U = i.useMemo(
+    let j = (0, m.c)(D),
+        k = i.useId(),
+        U = x ? void 0 : k,
+        G = null != a && ("string" != typeof a || "" !== a),
+        B = null != y && !i.isValidElement(y),
+        Z = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: o()(m.richTooltipContent, { [m.noAsset]: null == b }),
+                    className: o()(g.richTooltipContent, { [g.noAsset]: null == y }),
                     children: [
-                        null != b &&
+                        null != y &&
                             (0, r.jsx)("div", {
-                                className: m.assetContainer,
-                                children: b,
+                                className: g.assetContainer,
+                                style: { width: I },
+                                children: B ? (0, r.jsx)(l.zsu, b({}, y)) : y,
                             }),
                         (0, r.jsxs)("div", {
-                            className: m.textContent,
+                            className: g.textContent,
                             children: [
-                                j &&
-                                    (0, r.jsx)(l.Text, {
+                                G &&
+                                    (0, r.jsx)(c.Text, {
                                         variant: "text-sm/medium",
                                         children: a,
                                     }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
-                                    color: j ? "text-secondary" : "text-default",
-                                    children: g,
+                                    color: G ? "text-secondary" : "text-default",
+                                    children: E,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [b, a, g, j],
+            [y, I, a, E, G, B],
         ),
-        { isVisible: G, triggerProps: B } = (0, _.l)(E({ targetElementRef: x.targetElementRef }, L)),
-        Z = null != D ? D : "".concat((0, f.Sw)(null != a ? a : ""), "|").concat((0, f.Sw)(g)),
-        F = (0, p.Q)({ shouldShow: G });
-    if (v) {
-        let e = w
-            ? B
-            : y(E({}, B), {
-                  onFocus: (0, f.tS)(B.onFocus, (e) => {
+        { isVisible: F, triggerProps: V } = (0, p.l)(b({ targetElementRef: j.targetElementRef }, M)),
+        H = null != L ? L : "".concat((0, _.Sw)(null != a ? a : ""), "|").concat((0, _.Sw)(E)),
+        Y = (0, h.Q)({ shouldShow: F });
+    if (T) {
+        let e = x
+            ? V
+            : O(b({}, V), {
+                  onFocus: (0, _.tS)(V.onFocus, (e) => {
                       let t = e.target;
                       if (null != t) {
                           var n;
-                          let e = (0, f.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, M);
+                          let e = (0, _.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, k);
                           t.setAttribute("aria-describedby", e);
                       }
                   }),
-                  onBlur: (0, f.tS)(B.onBlur, (e) => {
+                  onBlur: (0, _.tS)(V.onBlur, (e) => {
                       let t = e.target;
                       if (null != t) {
                           let e = t.getAttribute("aria-describedby");
                           if (null != e) {
-                              let n = e.split(" ").filter((e) => e !== M);
+                              let n = e.split(" ").filter((e) => e !== k);
                               n.length > 0
                                   ? t.setAttribute("aria-describedby", n.join(" "))
                                   : t.removeAttribute("aria-describedby");
@@ -183,34 +188,34 @@ function I(e) {
                       }
                   }),
               });
-        t = (0, f.FX)({
-            tag: I,
+        t = (0, _.FX)({
+            tag: S,
             children: n,
             triggerHandlers: e,
-            triggerRef: x.triggerRef,
+            triggerRef: j.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, f.C9)(n, B, k, x.triggerRef);
+        t = (0, _.C9)(n, V, U, j.triggerRef);
     }
-    let V = F((e, t) =>
+    let W = Y((e, t) =>
         t
-            ? (0, r.jsx)(d.pn, {
+            ? (0, r.jsx)(f.pn, {
                   isRichTooltip: !0,
-                  children: (0, r.jsx)(u.N, {
-                      isVisible: G,
+                  children: (0, r.jsx)(d.N, {
+                      isVisible: F,
                       isRendered: !0,
-                      targetElementRef: x.targetElementRef,
-                      anchorRef: P,
-                      id: M,
-                      content: U,
-                      position: T,
-                      align: S,
-                      spacing: A,
-                      caretConfig: C,
-                      layerContext: null != N ? N : c.nz,
+                      targetElementRef: j.targetElementRef,
+                      anchorRef: w,
+                      id: k,
+                      content: Z,
+                      position: A,
+                      align: C,
+                      spacing: N,
+                      caretConfig: R,
+                      layerContext: null != P ? P : u.nz,
                       animationStyle: e,
-                      positionKey: Z,
+                      positionKey: H,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
@@ -219,13 +224,13 @@ function I(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            w || null == U
+            x || null == Z
                 ? null
                 : (0, r.jsx)(s.n, {
-                      id: M,
-                      children: U,
+                      id: k,
+                      children: Z,
                   }),
-            V,
+            W,
         ],
     });
 }

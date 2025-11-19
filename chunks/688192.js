@@ -55,7 +55,7 @@ function x(e) {
                   size: c.EFr.SIZE_48,
                   "aria-label": U,
               })
-            : null,
+            : void 0,
         V = (0, i.jsx)("div", {
             className: j.cardStateIconWrapper,
             children: (0, i.jsx)(c.sV5, {
