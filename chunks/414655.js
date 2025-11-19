@@ -24,7 +24,7 @@ var r = n(54381),
     I = n(228168),
     w = n(582113),
     S = n(388032),
-    E = n(363725);
+    E = n(10094);
 function T(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: i } = e;
     return t

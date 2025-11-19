@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(388032),
-    s = n(335591);
+    s = n(28767);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
         d = i.useRef(null);

@@ -1,18 +1,18 @@
-n.d(t, { A: () => i });
+n.d(t, { A: () => r });
 var a = n(54381);
 n(473749);
 var l = n(159691),
-    r = n(58119);
-let i = (e) => {
+    i = n(277923);
+let r = (e) => {
     let { actions: t, footerInput: n } = e;
     return 0 === t.length && null == n
         ? null
         : (0, a.jsxs)("footer", {
-              className: r.footer,
+              className: i.footer,
               children: [
                   null != n && (0, a.jsx)("div", { children: n }),
                   (0, a.jsx)(l.hE2, {
-                      className: r.buttonGroup,
+                      className: i.buttonGroup,
                       justify: "end",
                       children: t.map((e, t) =>
                           (0, a.jsx)(

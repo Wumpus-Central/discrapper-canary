@@ -10,9 +10,9 @@ var r = n(54381),
     u = n(221292),
     p = n(471341),
     h = n(502762),
-    f = n(179505),
+    f = n(5337),
     g = n(388032),
-    m = n(373863);
+    m = n(815743);
 function b(e) {
     let { wishlistItems: t = [], profileOwner: n, onClick: b, wishlistId: _ } = e,
         { analyticsLocations: y } = (0, a.ZP)(),

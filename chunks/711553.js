@@ -1,31 +1,31 @@
 n.d(t, { Z: () => h });
 var i = n(54381),
     r = n(473749),
-    o = n(120356),
-    l = n.n(o),
-    s = n(481060),
+    s = n(120356),
+    o = n.n(s),
+    l = n(481060),
     a = n(518084),
     c = n(981631),
     d = n(388032),
-    u = n(924957);
+    u = n(71264);
 let h = function (e) {
     let t,
-        { title: n, header: o, children: h, renderSettings: p, onDragStart: f } = e,
+        { title: n, header: s, children: h, renderSettings: p, onDragStart: f } = e,
         g = r.useRef(null);
     return (
         (t =
             null != n
                 ? (0, i.jsxs)(a.ZP.Bar, {
-                      className: l()(u.header, u.draggableStartArea),
+                      className: o()(u.header, u.draggableStartArea),
                       onMouseDown: f,
                       children: [
                           (0, i.jsx)(a.ZP.Content, {
-                              className: l()(u.headerTitle, u.draggableStartArea),
+                              className: o()(u.headerTitle, u.draggableStartArea),
                               dynamicSize: !0,
                               children: n,
                           }),
                           (0, i.jsx)(a.ZP.Content, {
-                              children: (0, i.jsx)(s.yRy, {
+                              children: (0, i.jsx)(l.yRy, {
                                   targetElementRef: g,
                                   position: "right",
                                   renderPopout: null != p ? p : c.dG4,
@@ -61,7 +61,7 @@ let h = function (e) {
                                           })({}, e)),
                                           (n = n =
                                               {
-                                                  icon: s.ewm,
+                                                  icon: l.ewm,
                                                   label: d.intl.string(d.t["3D5yo/"]),
                                                   ref: g,
                                               }),
@@ -84,7 +84,7 @@ let h = function (e) {
                           }),
                       ],
                   })
-                : o),
+                : s),
         (0, i.jsxs)("div", {
             className: u.sidebar,
             children: [

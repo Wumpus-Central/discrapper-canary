@@ -1,8 +1,8 @@
-n.d(t, { default: () => O }), n(388685), n(953529);
+n.d(t, { default: () => N }), n(388685), n(953529);
 var a = n(54381),
     l = n(473749),
-    r = n(772848),
-    i = n(793030),
+    i = n(772848),
+    r = n(793030),
     s = n(704215),
     o = n(481060),
     c = n(243778),
@@ -17,9 +17,9 @@ var a = n(54381),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(662653),
+    _ = n(760902),
     y = n(388032),
-    C = n(450192),
+    C = n(70402),
     S = n(736056);
 function E(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -44,13 +44,13 @@ function E(e) {
             })
           : null;
 }
-let O = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: T } = e,
-        [N, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = l.useRef(N),
-        [w, k] = (0, c.US)([N], void 0, !0),
-        R = l.useMemo(() => (0, r.Z)(), []),
-        A = l.useRef(!1),
+let N = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: T } = e,
+        [O, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        I = l.useRef(O),
+        [w, k] = (0, c.US)([O], void 0, !0),
+        A = l.useMemo(() => (0, i.Z)(), []),
+        R = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
         I.current = w;
@@ -67,10 +67,10 @@ let O = function (e) {
     return (
         l.useLayoutEffect(
             () => () => {
-                if (A.current) return;
+                if (R.current) return;
                 let e = I.current;
                 null != e &&
-                    ((A.current = !0),
+                    ((R.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -79,13 +79,13 @@ let O = function (e) {
             [],
         ),
         l.useEffect(() => {
-            (0, g.lA)(R, g.d_.EXPRESSIVE_PRIMARY, n);
-        }, [R, n]),
-        (0, a.jsx)(i.ExpressiveModal, {
+            (0, g.lA)(A, g.d_.EXPRESSIVE_PRIMARY, n);
+        }, [A, n]),
+        (0, a.jsx)(r.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: O,
+            dismissable: N,
             graphic: {
                 type: "image",
                 src: S.Z,
@@ -96,11 +96,11 @@ let O = function (e) {
                 : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, g.x3)(R, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
+                              (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
                       },
                   }),
             actionBarInput: (0, a.jsx)(E, {
-                modalSessionId: R,
+                modalSessionId: A,
                 entryPoint: n,
             }),
             children: (0, a.jsxs)(o.Kqy, {
@@ -164,7 +164,7 @@ let O = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: D,
-                                          onButtonPress: () => l(R),
+                                          onButtonPress: () => l(A),
                                       },
                                       t,
                                   );

@@ -3,7 +3,7 @@ var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(636606),
+    o = n(790519),
     s = n(481060),
     c = n(110924),
     u = n(988980),
@@ -18,8 +18,8 @@ var i = n(54381),
     C = n(796638),
     v = n(981631),
     _ = n(354459),
-    x = n(450906),
-    j = n(74246);
+    x = n(394024),
+    j = n(597843);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,8 +85,8 @@ function I(e) {
             layout: B,
             idle: H,
         } = e,
-        V = h.Z.getVideoComponent(),
-        F = p.default.getId(),
+        F = h.Z.getVideoComponent(),
+        V = p.default.getId(),
         [G, z] = r.useState(null),
         W = (0, c.Z)(G),
         [q, K] = r.useState(!0),
@@ -172,7 +172,7 @@ function I(e) {
         e_ = r.useCallback((e) => {
             z(e), K(!1);
         }, []),
-        ex = et ? [] : (0, y.n3)(T, R, F),
+        ex = et ? [] : (0, y.n3)(T, R, V),
         { visibleParticipants: ej, participantTileWidth: eO } = (0, C.ZB)(D, N);
     return (0, i.jsxs)("div", {
         className: a()(j.root, x.flexCenter, k),
@@ -204,7 +204,7 @@ function I(e) {
                                                           noBorder: eu >= D || ec >= U,
                                                           channel: M,
                                                           className: x.focusedVideo,
-                                                          videoComponent: V,
+                                                          videoComponent: F,
                                                           width: D,
                                                           participant: t,
                                                           onClick: l,

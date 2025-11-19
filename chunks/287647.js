@@ -1,8 +1,8 @@
 n.d(t, { e: () => v });
 var a = n(54381),
     l = n(473749),
-    r = n(442837),
-    i = n(264418),
+    i = n(442837),
+    r = n(264418),
     s = n(906732),
     o = n(710845),
     c = n(313789),
@@ -11,7 +11,7 @@ var a = n(54381),
     m = n(829716),
     p = n(981631),
     h = n(921944),
-    x = n(308274),
+    x = n(88406),
     g = n(388032),
     f = n(374104);
 let b = new o.Z("DisplayNameStylesCoachmark");
@@ -19,7 +19,7 @@ function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.ZP)(),
         j = (0, l.useRef)(null),
-        _ = (0, r.e7)([u.Z], () => u.Z.isFocused()),
+        _ = (0, i.e7)([u.Z], () => u.Z.isFocused()),
         y = (0, l.useCallback)(() => {
             t(h.L.TAKE_ACTION),
                 (0, d.openUserSettings)(
@@ -46,7 +46,7 @@ function v(e) {
         (0, a.jsxs)(a.Fragment, {
             children: [
                 o,
-                (0, a.jsx)(i.J, {
+                (0, a.jsx)(r.J, {
                     targetElementRef: n,
                     shouldShow: !0,
                     onRequestClose: C,

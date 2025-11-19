@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(140031),
     d = n(981631),
     u = n(388032),
-    g = n(555091);
+    g = n(49465);
 function m(e) {
     let { guild: t } = e,
         n = i.useId(),

@@ -14,7 +14,7 @@ var a = n(54381),
     g = n(371651),
     h = n(981631),
     p = n(388032),
-    x = n(94092);
+    x = n(361902);
 function y(t) {
     let { onClose: e, transitionState: n, clientSettingType: y, gameId: C } = t,
         [f, k] = i.useState("unreported"),

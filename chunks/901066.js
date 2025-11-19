@@ -23,8 +23,8 @@ var l = n(54381),
     T = n(981631),
     E = n(131085),
     N = n(388032),
-    O = n(473262),
-    P = n(598256);
+    O = n(59678),
+    P = n(428331);
 function y(e) {
     let { icon: t, label: n, onClick: r, disabled: i } = e;
     return (0, l.jsxs)(d.P3F, {

@@ -7,9 +7,9 @@ var r = n(54381),
     s = n(692547),
     c = n(899667),
     u = n(317169),
-    d = n(501669),
+    d = n(18853),
     p = n(388032),
-    f = n(296594);
+    f = n(874622);
 function m(e) {
     let { guildId: t, powerupNames: n, warnings: m } = e,
         { spent: g } = (0, u.Z)(t),

@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(981631),
     B = n(356659),
     H = n(921944),
-    V = n(388032),
-    F = n(935730);
+    F = n(388032),
+    V = n(90274);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -129,7 +129,7 @@ let W = r.memo(function (e) {
     function ev() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("61342"), n.e("9260")]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("61342"), n.e("69311")]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, i.jsx)(
                         e,
@@ -190,7 +190,7 @@ let W = r.memo(function (e) {
     let eN = (0, i.jsx)(c.svS, {
             size: "refresh_sm",
             color: "currentColor",
-            colorClass: F.attachButtonPlus,
+            colorClass: V.attachButtonPlus,
         }),
         eA = (0, i.jsx)(c.yRy, {
             targetElementRef: et,
@@ -246,10 +246,10 @@ let W = r.memo(function (e) {
                         G(
                             {
                                 ref: et,
-                                className: a()(F.attachButton, W),
-                                childClassName: F.attachButtonInner,
+                                className: a()(V.attachButton, W),
+                                childClassName: V.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": V.intl.string(V.t.d56gCa),
+                                "aria-label": F.intl.string(F.t.d56gCa),
                                 onDoubleClick: eb
                                     ? () => {
                                           var e;
@@ -267,7 +267,7 @@ let W = r.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: F.uploadInput,
+                className: V.uploadInput,
                 children: (0, i.jsx)(u.Z, {
                     ref: ee,
                     onChange: (e) => {
@@ -289,15 +289,15 @@ let W = r.memo(function (e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: F.attachWrapper,
+                className: V.attachWrapper,
                 children: (0, i.jsx)(R.Z, {
                     channel: q,
                     isOmniMenuOpen: "attachMenu" === eh,
                     openOmniMenu: () => ef("attachMenu"),
                     enabled: eS,
-                    animationContainerClassName: F.buttonAnimation,
-                    glowClassName: F.buttonAnimationGlow,
-                    trinketsClassName: F.buttonAnimationTrinkets,
+                    animationContainerClassName: V.buttonAnimation,
+                    glowClassName: V.buttonAnimationGlow,
+                    trinketsClassName: V.buttonAnimationTrinkets,
                     children: eA,
                 }),
             }),

@@ -19,7 +19,7 @@ var r = n(54381),
     O = n(176505),
     v = n(490897),
     j = n(388032),
-    C = n(88448);
+    C = n(885525);
 function x(e) {
     let { guild: t, selected: x } = e,
         E = (0, p.Z)(t),

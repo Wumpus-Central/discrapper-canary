@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(194774),
     c = n(981631),
     d = n(388032),
-    u = n(479447);
+    u = n(64929);
 function g(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)("div", {

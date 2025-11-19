@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(22928),
-    o = n(872246);
+    o = n(73930);
 let s = 20,
     l = (e) => {
         let { application: t, iconSize: n = s } = e;

@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(840724),
     y = n(231338),
     O = n(388032),
-    v = n(953692);
+    v = n(54602);
 function I(e) {
     var t, n, I, T, S, A, C, N;
     let { guildId: R, skuId: P, channel: D } = e,

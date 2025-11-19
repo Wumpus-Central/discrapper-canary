@@ -35,7 +35,7 @@ var r = n(54381),
     Z = n(228488),
     w = n(950796),
     L = n(741764),
-    R = n(851352);
+    R = n(82504);
 let D = (0, s.U)(() => ({ isOpen: !0 }));
 function M(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;

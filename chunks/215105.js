@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    I = n(336821);
+    I = n(36190);
 let T = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,

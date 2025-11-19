@@ -20,7 +20,7 @@ var r = n(54381),
     x = n(215023),
     E = n(981631),
     O = n(388032),
-    S = n(25616);
+    S = n(452785);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
     (0, f.A)();

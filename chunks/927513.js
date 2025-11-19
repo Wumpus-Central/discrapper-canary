@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(483444),
     s = n(787528),
     l = n(388032),
-    c = n(58858);
+    c = n(854826);
 let u = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
         u = (0, s.J)(n.id);

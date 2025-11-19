@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(436660),
     B = n(680835),
     H = n(28546),
-    V = n(295474),
-    F = n(521476),
+    F = n(295474),
+    V = n(521476),
     G = n(69882),
     z = n(71619),
     W = n(185145),
@@ -92,13 +92,13 @@ var i = n(54381),
     eU = n(583027),
     eB = n(25007),
     eH = n(685722),
-    eV = n(199649),
-    eF = n(1397),
+    eF = n(199649),
+    eV = n(1397),
     eG = n(641861),
     ez = n(981631),
     eW = n(959517),
     eq = n(388032),
-    eK = n(161655);
+    eK = n(97009);
 function eY(e, t, n) {
     return (
         t in e
@@ -840,11 +840,11 @@ class e3 extends r.PureComponent {
                                                             children: [
                                                                 v && (0, i.jsx)(el.Z, { channelId: n.id }),
                                                                 n.isPrivate()
-                                                                    ? (0, i.jsx)(eV.Z, {
+                                                                    ? (0, i.jsx)(eF.Z, {
                                                                           channel: n,
                                                                           children: R,
                                                                       })
-                                                                    : (0, i.jsx)(eF.Z, {
+                                                                    : (0, i.jsx)(eV.Z, {
                                                                           channel: n,
                                                                           children: R,
                                                                       }),
@@ -955,7 +955,7 @@ class e3 extends r.PureComponent {
                               disabledUntil: l,
                           })
                         : a
-                          ? (0, i.jsx)(F.h, { guild: r })
+                          ? (0, i.jsx)(V.h, { guild: r })
                           : null;
             });
     }
@@ -965,7 +965,7 @@ let e4 = r.memo(function (e) {
         { placeholder: a, accessibilityLabel: o } = (0, eD.Z)({ channel: t }),
         s = (0, eo.S)(eP.default.getCurrentUser(), t),
         [c] = (0, z.AB)(null == n ? void 0 : n.id),
-        u = (0, V.Ux)(null == n ? void 0 : n.id),
+        u = (0, F.Ux)(null == n ? void 0 : n.id),
         h = (0, d.e7)([eP.default], () => eP.default.getCurrentUser()),
         f = (0, d.e7)([ex.ZP], () => {
             var e, t, i;

@@ -21,8 +21,8 @@ n.d(t, { Z: () => y }),
     n(539854);
 var a = n(54381),
     l = n(473749),
-    r = n(345959),
-    i = n.n(r),
+    i = n(345959),
+    r = n.n(i),
     s = n(442837),
     o = n(755721),
     c = n(481060),
@@ -34,8 +34,8 @@ var a = n(54381),
     x = n(131951),
     g = n(246992),
     f = n(65154),
-    b = n(25016),
-    v = n(866403);
+    b = n(653301),
+    v = n(451429);
 function j(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -68,7 +68,7 @@ function j(e) {
     });
 }
 function _(e) {
-    let { recording: t, playing: n, onPlay: l, onStop: r } = e;
+    let { recording: t, playing: n, onPlay: l, onStop: i } = e;
     return (0, a.jsx)(c.zF9, {
         collapsibleContent: (0, a.jsx)(j, { recording: t }),
         children: (e) => {
@@ -84,7 +84,7 @@ function _(e) {
                     (0, a.jsx)(c.P3F, {
                         tag: "span",
                         onClick: (e) => {
-                            e.stopPropagation(), n ? r() : l(t);
+                            e.stopPropagation(), n ? i() : l(t);
                         },
                         children: n ? (0, a.jsx)(c.fpf, { size: "xxs" }) : (0, a.jsx)(c.o1U, { size: "xxs" }),
                     }),
@@ -92,7 +92,7 @@ function _(e) {
                         tag: "span",
                         onClick: (e) => {
                             e.stopPropagation();
-                            let n = new Blob([i()(t.audioBuffer)], { type: "audio/wav" }),
+                            let n = new Blob([r()(t.audioBuffer)], { type: "audio/wav" }),
                                 a = URL.createObjectURL(n),
                                 l = document.createElement("a");
                             (l.href = a),
@@ -112,26 +112,26 @@ function _(e) {
 function y() {
     let { name: e } = (0, h.p6)(f.h7.AUDIO_INPUT),
         [t, n] = l.useState(!1),
-        [r, i] = l.useState([]),
+        [i, r] = l.useState([]),
         j = (0, s.e7)([x.Z], () => x.Z.getKrispSuppressionLevel()),
         [y, C] = l.useState(null),
         S = l.useRef(null),
         E = l.useRef(null),
-        [O, T] = l.useState(0.5),
+        [N, T] = l.useState(0.5),
         {
-            krispModels: N,
+            krispModels: O,
             krispModelOverride: P,
             inputMode: I,
             echoCancellation: w,
             autoThreshold: k,
-            vadUseKrisp: R,
-            vadKrispActivationThreshold: A,
+            vadUseKrisp: A,
+            vadKrispActivationThreshold: R,
             noiseCancellation: Z,
             noiseSuppression: D,
             noiseSuppressionSupported: L,
             noiseCancellationSupported: M,
             noiseCancellationEnableStats: U,
-            vadDuringPreProcess: F,
+            vadDuringPreProcess: B,
         } = (0, s.cj)([x.Z], () => ({
             krispModels: x.Z.getKrispModels(),
             krispModelOverride: x.Z.getKrispModelOverride(),
@@ -147,21 +147,21 @@ function y() {
             noiseCancellationEnableStats: x.Z.getKrispEnableStats(),
             vadDuringPreProcess: x.Z.getModeOptions().vadDuringPreProcess,
         })),
-        B = Z ? "KRISP" : D ? "STANDARD" : "NONE",
+        F = Z ? "KRISP" : D ? "STANDARD" : "NONE",
         G = (0, m.N)(),
         z = l.useCallback(() => {
             var e;
             null == (e = S.current) || e.stop(), (S.current = null), C(null);
         }, []);
-    function V() {
+    function H() {
         x.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function H(e) {
-        if ((t && V(), z(), null == G)) return;
+    function V(e) {
+        if ((t && H(), z(), null == G)) return;
         let n = G.createBufferSource();
         (n.buffer = e.audioBuffer),
             (E.current = G.createGain()),
-            (E.current.gain.value = O),
+            (E.current.gain.value = N),
             n.connect(E.current),
             E.current.connect(G.destination),
             (n.loop = !0),
@@ -210,14 +210,14 @@ function y() {
                     }),
                     (0, a.jsx)(c.q4e, {
                         label: "Noise Cancellation",
-                        value: B,
+                        value: F,
                         onChange: (e) => {
                             d.Z.setNoiseCancellation("KRISP" === e), d.Z.setNoiseSuppression("STANDARD" === e);
                         },
                         options: W,
                         popoutLayerContext: g.O$,
                     }),
-                    "KRISP" === B &&
+                    "KRISP" === F &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(c.iRW, {
@@ -234,7 +234,7 @@ function y() {
                                         d.Z.setKrispModelOverride("");
                                     },
                                     isSelected: (e) => e === P,
-                                    options: N.map((e) => ({
+                                    options: O.map((e) => ({
                                         label: e,
                                         value: e,
                                     })),
@@ -264,13 +264,13 @@ function y() {
                                         children: [
                                             (0, a.jsx)(c.rsf, {
                                                 label: "Use Krisp VAD",
-                                                checked: R,
+                                                checked: A,
                                                 onChange: (e) => d.Z.setMode(f.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                             }),
-                                            R &&
+                                            A &&
                                                 (0, a.jsx)(c.iRW, {
                                                     label: "Krisp VAD Activation Threshold",
-                                                    initialValue: A,
+                                                    initialValue: R,
                                                     onValueChange: (e) =>
                                                         d.Z.setMode(f.pM.VOICE_ACTIVITY, {
                                                             vadKrispActivationThreshold: e,
@@ -282,7 +282,7 @@ function y() {
                                     }),
                                 (0, a.jsx)(c.rsf, {
                                     label: "Run Before Processing",
-                                    checked: null != F && F,
+                                    checked: null != B && B,
                                     onChange: (e) => d.Z.setMode(f.pM.VOICE_ACTIVITY, { vadDuringPreProcess: e }),
                                 }),
                             ],
@@ -302,14 +302,14 @@ function y() {
                             (0, a.jsx)(o.zx, {
                                 color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                                 onClick: t
-                                    ? V
+                                    ? H
                                     : function () {
                                           z(),
                                               n(!0),
                                               d.Z.setLoopback("krisp_test", !0),
                                               x.Z.getMediaEngine().startRecordingRawSamples((t, a, l) => {
                                                   n(!1), d.Z.setLoopback("krisp_test", !1);
-                                                  let r = new AudioBuffer({
+                                                  let i = new AudioBuffer({
                                                       length: t.length,
                                                       sampleRate: l,
                                                       numberOfChannels: a,
@@ -318,15 +318,15 @@ function y() {
                                                       let n = new Float32Array(t.length / a);
                                                       for (let l = 0; l < t.length / a; l++)
                                                           n[l] = t[l * a + e] / 32768;
-                                                      r.copyToChannel(n, e);
+                                                      i.copyToChannel(n, e);
                                                   }
-                                                  i((t) => [
+                                                  r((t) => [
                                                       ...t,
                                                       {
                                                           inputName: e,
-                                                          audioBuffer: r,
+                                                          audioBuffer: i,
                                                           createdAt: Date.now(),
-                                                          suppression: B,
+                                                          suppression: F,
                                                           echoCancellation: w,
                                                           krispSuppressionLevel: j,
                                                       },
@@ -339,7 +339,7 @@ function y() {
                     }),
                     (0, a.jsx)(c.iRW, {
                         label: "Volume",
-                        initialValue: O,
+                        initialValue: N,
                         asValueChanges: function (e) {
                             null != E.current && ((E.current.gain.value = e), T(e));
                         },
@@ -353,13 +353,13 @@ function y() {
                                 variant: "text-sm/semibold",
                                 children: "Recordings",
                             }),
-                            r.map((e, t) =>
+                            i.map((e, t) =>
                                 (0, a.jsx)(
                                     _,
                                     {
                                         recording: e,
                                         playing: e === y,
-                                        onPlay: H,
+                                        onPlay: V,
                                         onStop: z,
                                     },
                                     t,

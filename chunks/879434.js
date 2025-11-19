@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(793030),
     o = n(442837),
     c = n(678717),
@@ -11,7 +11,7 @@ var a = n(54381),
     m = n(538645),
     p = n(383036),
     h = n(981631),
-    x = n(6051);
+    x = n(511130);
 let g = (e) => {
         let { setTab: t } = e,
             n = (0, o.e7)([u.Z], () => u.Z.getWindowOpen(h.KJ3.DEVTOOLS_POPOUT));
@@ -23,7 +23,7 @@ let g = (e) => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.pfxBanner),
+                        className: r()(x.banner, x.pfxBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -36,7 +36,7 @@ let g = (e) => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.nameplateBanner),
+                        className: r()(x.banner, x.nameplateBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -49,7 +49,7 @@ let g = (e) => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.bundlesBanner),
+                        className: r()(x.banner, x.bundlesBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",

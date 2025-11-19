@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(481060),
     o = n(259580),
-    c = n(81364);
+    c = n(422665);
 function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: r,
+            subtitle: i,
             children: d,
             className: u,
             isExpanded: m,
@@ -38,7 +38,7 @@ function d(e) {
             }
         }, [g, C, j]);
     return (0, a.jsxs)("div", {
-        className: i()(c.accordionContainer, u, { [c.opened]: C }),
+        className: r()(c.accordionContainer, u, { [c.opened]: C }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -57,17 +57,17 @@ function d(e) {
                                 color: "header-secondary",
                                 children: n,
                             }),
-                            null != r &&
-                                "" !== r &&
+                            null != i &&
+                                "" !== i &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "interactive-normal",
-                                    children: r,
+                                    children: i,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: i()(c.caret, { [c.opened]: C }),
+                        className: r()(c.caret, { [c.opened]: C }),
                         children: (0, a.jsx)(o.Z, {
                             width: 18,
                             height: 18,
@@ -78,7 +78,7 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: i()(c.content, { [c.opened]: C }),
+                className: r()(c.content, { [c.opened]: C }),
                 style: E,
                 children: d,
             }),

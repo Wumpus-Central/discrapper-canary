@@ -6,8 +6,8 @@ n.d(t, {
 var a = n(54381);
 n(473749);
 var l = n(722770),
-    r = n(481060),
-    i = n(734934),
+    i = n(481060),
+    r = n(734934),
     s = n(158238),
     o = n(695346),
     c = n(70956),
@@ -16,7 +16,7 @@ var l = n(722770),
     m = n(246133),
     p = n(981631),
     h = n(388032),
-    x = n(138005);
+    x = n(54482);
 let g = [
         {
             duration: 15 * c.Z.Millis.MINUTE,
@@ -46,15 +46,15 @@ let g = [
     f = "forever";
 function b(e) {
     let { status: t, currentStatus: n, description: l } = e,
-        i = t !== p.Skl.ONLINE,
+        r = t !== p.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
             children: g.map((e) => {
-                let { duration: l, label: i } = e;
+                let { duration: l, label: r } = e;
                 return (0, a.jsx)(
-                    r.sNh,
+                    i.sNh,
                     {
                         id: "".concat(t, "-").concat(l),
-                        label: i(),
+                        label: r(),
                         action: () =>
                             (0, m.Z)({
                                 nextStatus: t,
@@ -67,17 +67,17 @@ function b(e) {
                 );
             }),
         });
-    return (0, a.jsx)(r.sNh, {
+    return (0, a.jsx)(i.sNh, {
         id: t,
         className: x.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: i,
+        hasSubmenu: r,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
                 className: x.statusItem,
                 children: [
-                    (0, a.jsx)(r.qbd, {
+                    (0, a.jsx)(i.qbd, {
                         status: t,
                         className: x.icon,
                         size: 10,
@@ -102,7 +102,7 @@ function b(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: i ? s : void 0,
+        children: r ? s : void 0,
     });
 }
 function v(e) {
@@ -117,7 +117,7 @@ function v(e) {
 }
 function j(e) {
     let t = o.Cr.useSetting(),
-        n = (0, i.p)(),
+        n = (0, r.p)(),
         c = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         d = o.fv.useSetting(),
         u = e === p.Skl.DND,
@@ -137,12 +137,12 @@ function j(e) {
             children: g.map((t) => {
                 let { duration: n, label: l } = t;
                 return (0, a.jsx)(
-                    r.sNh,
+                    i.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
                         label: l(),
                         action: () => {
-                            (0, i.oW)(!0, n);
+                            (0, r.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
@@ -172,16 +172,16 @@ function j(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             _,
-            (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
+            (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
             y,
             C,
             S,
             c || n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
+                          (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
                           (0, a.jsx)(
-                              r.sNh,
+                              i.sNh,
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
@@ -192,7 +192,7 @@ function j(e) {
                                       (0, a.jsxs)("div", {
                                           className: x.statusItem,
                                           children: [
-                                              (0, a.jsx)(r.owu, {
+                                              (0, a.jsx)(i.owu, {
                                                   size: "xxs",
                                                   className: x.icon,
                                               }),
@@ -200,7 +200,7 @@ function j(e) {
                                                   className: x.focusModeTitle,
                                                   children: [
                                                       h.intl.string(h.t.gJRnwK),
-                                                      (0, a.jsx)(r.IGR, {
+                                                      (0, a.jsx)(i.IGR, {
                                                           text: n
                                                               ? h.intl.string(h.t.ApAu9f)
                                                               : u
@@ -230,7 +230,7 @@ function j(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, i.oW)(!n);
+                                      (0, r.oW)(!n);
                                   },
                                   dontCloseOnAction: !0,
                                   children: j,

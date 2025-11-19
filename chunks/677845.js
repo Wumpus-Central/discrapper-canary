@@ -21,7 +21,7 @@ var i = n(54381),
     x = n(251564),
     j = n(695492),
     O = n(981631),
-    E = n(53155);
+    E = n(312439);
 function S(e) {
     let {
             participants: t,
@@ -54,8 +54,8 @@ function S(e) {
     let U = (0, o.e7)([C.Z], () => I.isPrivate() || (0, f.b)(C.Z, M, I), [M, I]),
         B = (null == M ? void 0 : M.afkChannelId) === I.id,
         H = I.userLimit <= 0 || I.userLimit > 1,
-        V = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        F = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        V = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
         z = null != R && R === I.id,
         W = k.map(
@@ -92,11 +92,11 @@ function S(e) {
     ),
         null != M &&
             !B &&
-            (!(L >= 2) || !V || G || F || z
+            (!(L >= 2) || !F || G || V || z
                 ? H &&
                   1 === L &&
                   U &&
-                  (V && !G
+                  (F && !G
                       ? W.push((e) =>
                             (0, i.jsx)(v.h, {
                                 channel: I,

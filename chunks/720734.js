@@ -111,13 +111,13 @@ var a = n(54381),
     e$ = n(585483),
     e0 = n(70956),
     e1 = n(823379),
-    e3 = n(5192),
-    e4 = n(374023),
+    e4 = n(5192),
+    e3 = n(374023),
     e8 = n(51144),
-    e5 = n(998502),
-    e6 = n(660230),
+    e2 = n(998502),
+    e5 = n(660230),
     e7 = n(853170),
-    e2 = n(422202),
+    e6 = n(422202),
     e9 = n(870569),
     te = n(345243),
     tt = n(115530),
@@ -126,7 +126,7 @@ var a = n(54381),
     tl = n(46140),
     ti = n(65154),
     tr = n(388032),
-    ts = n(490579);
+    ts = n(25874);
 function to(e, t, n) {
     return (
         t in e
@@ -174,7 +174,7 @@ function td(e, t) {
         e
     );
 }
-let tu = e5.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
+let tu = e2.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
     tm = 2 * e0.Z.Millis.MINUTE,
     tp = 3 * e0.Z.Millis.SECOND,
     th = 5 * e0.Z.Millis.SECOND;
@@ -815,7 +815,7 @@ function tf(e) {
     });
 }
 function tb(e) {
-    let { shouldShowDeviceChangedNotifications: t } = (0, e2.P)({
+    let { shouldShowDeviceChangedNotifications: t } = (0, e6.P)({
             location: "Account.useDeviceChangedTooltip",
             autoTrackExposure: !1,
         }),
@@ -826,7 +826,7 @@ function tb(e) {
     l.useEffect(() => {
         n &&
             a &&
-            ((0, e2._)({
+            ((0, e6._)({
                 location: "Account.useDeviceChangedTooltip (exposure tracking)",
                 autoTrackExposure: !0,
             }),
@@ -853,7 +853,7 @@ function tv() {
     var e;
     let t = (0, d.e7)([eK.default], () => eK.default.getCurrentUser()),
         n = (0, d.e7)([eL.default], () => eL.default.getId()),
-        l = e6.K.useConfig({ location: "AccountConnected" }).transitionAccountPanel,
+        l = e5.K.useConfig({ location: "AccountConnected" }).transitionAccountPanel,
         {
             activities: i,
             streaming: r,
@@ -894,14 +894,14 @@ function tv() {
         w = (0, d.e7)([eF.Z], () => eF.Z.getSpeakingWhileMuted()),
         Z = (0, d.e7)([R.Z], () => R.Z.isFullscreenInContext()),
         D = (0, d.e7)([eB.Z], () => eB.Z.hasLayers()),
-        L = (0, g.s9z)(g.JQI) || D || e4.s.isDisallowPopupsSet() || Z,
+        L = (0, g.s9z)(g.JQI) || D || e3.s.isDisallowPopupsSet() || Z,
         M = (0, es.b)(),
         U = (0, d.e7)([X.default], () => null != X.default.getAwaitingRemoteSessionInfo()),
         B = (0, d.e7)([ez.Z], () => ez.Z.getGuildId()),
         F = null == t ? void 0 : t.avatarDecoration,
         G = (0, P.R)(t, null != B ? B : void 0),
         z = (0, I.Z)(l ? G : F),
-        V = e3.ZP.useName(null != B ? B : void 0, null, t),
+        V = e4.ZP.useName(null != B ? B : void 0, null, t),
         K = null != (e = e8.ZP.useName(t)) ? e : "",
         { voiceActivityStatusEnabled: q } = (0, y.U)({ location: "Account" }),
         [Y, J] = (0, $.G)(null != B ? B : null),

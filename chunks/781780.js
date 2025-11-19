@@ -3,7 +3,7 @@ var r = t(54381),
     o = t(963614),
     i = t(208156),
     l = t(701488),
-    a = t(201126);
+    a = t(62307);
 function c(e) {
     var n, t, c;
     let { channelId: u, guildId: s, embeddedActivity: d, application: p } = e,
