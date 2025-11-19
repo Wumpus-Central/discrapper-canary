@@ -192,7 +192,6 @@ class en extends V.ZP {
                             targetElementRef: this.channelItemRef,
                             position: "right",
                             renderPopout: this.renderPopout,
-                            spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
                             shouldShow: (P && !d && !p && !N) || N,
                             children: () =>

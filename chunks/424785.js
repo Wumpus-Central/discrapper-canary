@@ -150,7 +150,6 @@ class Y extends L.ZP {
                         targetElementRef: this.channelItemRef,
                         position: "right",
                         renderPopout: this.renderPopout,
-                        spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
                         shouldShow: j,
                         children: () =>
