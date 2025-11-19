@@ -68,9 +68,10 @@ let p = () => {
                         .then((e) => {
                             e && t(u._n.INSTALLED);
                         })
-                        .catch((e) =>
+                        .catch((e) => {
                             l.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP" } }),
-                        );
+                                t(u._n.ERROR);
+                        });
             }, [e, t, r]),
             (0, i.useEffect)(() => {
                 if (e !== u._n.INSTALLING) return;
