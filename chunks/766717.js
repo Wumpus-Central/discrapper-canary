@@ -1,56 +1,53 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(681715),
     a = n(481060),
-    s = n(607550),
-    o = n(221292),
-    c = n(239990);
-let d = i.forwardRef(function (e, t) {
+    s = n(221292),
+    o = n(239990);
+let c = i.forwardRef(function (e, t) {
     let {
             onCardClick: n,
             tooltipTitle: i,
-            tooltipBody: d,
-            shouldScalePreview: u = !0,
-            renderPreview: p,
-            moreCount: h,
-            isSingleCard: f = !1,
-            skuId: g,
-            analyticsLocations: m,
-            wishlistId: b,
+            tooltipBody: c,
+            shouldScalePreview: d = !0,
+            renderPreview: u,
+            moreCount: p,
+            isSingleCard: h = !1,
+            skuId: f,
+            analyticsLocations: g,
+            wishlistId: m,
+            productLine: b,
         } = e,
-        _ = u ? c.cardPreview : c.cardPreviewNoScale,
-        y = f ? c.cardSingle : c.card,
-        O = null != h && h > 0,
+        _ = d ? o.cardPreview : o.cardPreviewNoScale,
+        y = h ? o.cardSingle : o.card,
+        O = null != p && p > 0,
         j = (0, r.jsxs)(a.P3F, {
             onClick: () => {
-                var e;
-                n();
-                let t = null != b ? s.Z.getWishlist(b) : null,
-                    r = null != (e = null == t ? void 0 : t.hasThirdPartySku()) && e;
-                (0, o.Er)({
-                    action: O ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                    analyticsLocations: m,
-                    skuId: O ? null : g,
-                    wishlistId: b,
-                    hasThirdPartySku: r,
-                });
+                n(),
+                    (0, s.Er)({
+                        action: O ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        analyticsLocations: g,
+                        skuId: O ? null : f,
+                        wishlistId: m,
+                        productLines: new Set([b]),
+                    });
             },
             className: y,
-            "aria-label": d,
+            "aria-label": c,
             innerRef: t,
             children: [
                 (0, r.jsx)("div", {
                     className: _,
-                    children: p(),
+                    children: u(),
                 }),
                 O &&
                     (0, r.jsx)("div", {
-                        className: c.moreOverlay,
+                        className: o.moreOverlay,
                         children: (0, r.jsxs)(a.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", h],
+                            children: ["+", p],
                         }),
                     }),
             ],
@@ -59,11 +56,11 @@ let d = i.forwardRef(function (e, t) {
         ? (0, r.jsx)(l.i_, {
               asContainer: !0,
               title: i,
-              body: d,
+              body: c,
               children: j,
           })
         : (0, r.jsx)(l.u, {
-              text: d,
+              text: c,
               position: "top",
               children: j,
           });

@@ -167,6 +167,7 @@ function S(e, t) {
         (0, r.jsx)(
             I,
             {
+                productLine: e.skuProductLine,
                 onCardClick: () => {
                     if (h) return void a();
                     (0, g.P)(

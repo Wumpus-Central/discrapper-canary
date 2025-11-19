@@ -1,14 +1,25 @@
-n.d(t, { e: () => r });
-let r = (0, n(818083).B)({
-    kind: "user",
-    id: "2025-09_promotion_endpoint_migration",
-    label: "Promotion Endpoint Migration",
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Use New Endpoint",
-            config: { enabled: !0 },
-        },
-    ],
-});
+e.exports = {
+    card: "card__0c0bf",
+    addEntryCard: "addEntryCard__0c0bf card__0c0bf",
+    addServerText: "addServerText__0c0bf",
+    cardHeader: "cardHeader__0c0bf",
+    splash: "splash__0c0bf",
+    splashImage: "splashImage__0c0bf",
+    guildIcon: "guildIcon__0c0bf",
+    icon: "icon__0c0bf",
+    actionButtonsContainer: "actionButtonsContainer__0c0bf",
+    forceButtonsShow: "forceButtonsShow__0c0bf",
+    overflowIcon: "overflowIcon__0c0bf",
+    iconMask: "iconMask__0c0bf",
+    guildInfo: "guildInfo__0c0bf",
+    title: "title__0c0bf",
+    guildBadge: "guildBadge__0c0bf",
+    guildName: "guildName__0c0bf",
+    description: "description__0c0bf",
+    memberInfo: "memberInfo__0c0bf",
+    memberCount: "memberCount__0c0bf",
+    statusDot: "statusDot__0c0bf",
+    dotOnline: "dotOnline__0c0bf statusDot__0c0bf",
+    dotOffline: "dotOffline__0c0bf statusDot__0c0bf",
+    joinButton: "joinButton__0c0bf",
+};

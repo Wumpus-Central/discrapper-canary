@@ -161,6 +161,8 @@ class I extends a.Z {
                 return (0, d.eJ)(h.eR.GAMESCOPE_CAPTURE);
             case h.AN.ASYNC_VIDEO_INPUT_DEVICE_INIT:
                 return (0, d.eJ)(h.eR.ASYNC_VIDEO_INPUT_DEVICE_INIT);
+            case h.AN.ASYNC_CLIPS_SOURCE_DEINIT:
+                return (0, d.eJ)(h.eR.ASYNC_CLIPS_SOURCE_DEINIT);
             case h.AN.DIAGNOSTICS:
             case h.AN.NATIVE_PING:
             case h.AN.AUTOMATIC_VAD:
@@ -286,6 +288,11 @@ class I extends a.Z {
         var t, n, r, i;
         null == (t = (n = (0, d.zS)()).setAsyncVideoInputDeviceInitSetting) || t.call(n, e),
             null == (r = (i = (0, d.zS)()).setAsyncVideoInputDeviceInit) || r.call(i, e);
+    }
+    setAsyncClipsSourceDeinit(e) {
+        var t, n, r, i;
+        null == (t = (n = (0, d.zS)()).setAsyncClipsSourceDeinitSetting) || t.call(n, e),
+            null == (r = (i = (0, d.zS)()).setAsyncClipsSourceDeinit) || r.call(i, e);
     }
     getSupportedVideoCodecs(e) {
         (0, d.zS)().getSupportedVideoCodecs(e);

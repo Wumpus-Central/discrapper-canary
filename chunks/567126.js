@@ -301,7 +301,7 @@ function V(e) {
     let { id: t, name: n, text: l, icon: o, onSelect: a } = e,
         c = i.useCallback(() => {
             a({
-                id: "prepicked:" + t,
+                id: ("gamescope" === t ? "screen:" : "prepicked:") + t,
                 name: n,
                 url: "",
             });
@@ -386,29 +386,31 @@ function J(e) {
         ),
         _ = (0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR),
         g = (0, C.isMac)(),
-        [x, v] = i.useState(!1),
-        j = i.useCallback(() => {
-            v(!x);
-        }, [x]),
-        S = _
+        x = b.Z.getUseGamescopeCapture(),
+        [v, j] = i.useState(!1),
+        S = i.useCallback(() => {
+            j(!v);
+        }, [v]),
+        y = _
             ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
                   children: [
                       (0, r.jsx)(V, {
                           onSelect: t,
-                          id: "screen",
+                          id: x ? "gamescope" : "screen",
                           name: B.intl.string(B.t.R4wpLN),
                           text: B.intl.string(B.t.cVUFXY),
                           icon: f.pzj,
                       }),
-                      (0, r.jsx)(V, {
-                          onSelect: t,
-                          id: "window",
-                          name: B.intl.string(B.t["+SLJCh"]),
-                          text: B.intl.string(B.t.dG2A1E),
-                          icon: f.GON,
-                      }),
+                      !x &&
+                          (0, r.jsx)(V, {
+                              onSelect: t,
+                              id: "window",
+                              name: B.intl.string(B.t["+SLJCh"]),
+                              text: B.intl.string(B.t.dG2A1E),
+                              icon: f.GON,
+                          }),
                       g
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
@@ -429,14 +431,14 @@ function J(e) {
                 color: "interactive-normal",
                 children: B.intl.string(B.t.XyYoFc),
             }),
-            S,
+            y,
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: s()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
+                      className: s()(G.nativePickerCaptureSection, v ? null : G.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
-                              onClick: j,
+                              onClick: S,
                               className: G.nativePickerLabel,
                               children: [
                                   (0, r.jsx)(f.Text, {
@@ -477,10 +479,11 @@ function X(e) {
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
         i.useEffect(() => {
-            (0, C.isLinux)() ||
-            ((0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR))
-                ? (0, P.T)(l)
-                : (0, P.t)();
+            b.Z.getUseGamescopeCapture() ||
+                ((0, C.isLinux)() ||
+                ((0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR))
+                    ? (0, P.T)(l)
+                    : (0, P.t)());
         }, [l]),
         s === Z.Uc.Error
             ? (0, r.jsx)(f.Text, {

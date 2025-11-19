@@ -1,7 +1,8 @@
 n.d(t, {
-    U: () => C,
-    Z: () => x,
-});
+    U: () => j,
+    Z: () => C,
+}),
+    n(388685);
 var r,
     i = n(54381),
     l = n(473749),
@@ -10,147 +11,144 @@ var r,
     s = n(681715),
     c = n(481060),
     u = n(906732),
-    d = n(607550),
-    p = n(602733),
-    h = n(594174),
-    f = n(626135),
-    g = n(51144),
-    m = n(221292),
-    b = n(461631),
-    _ = n(228168),
-    y = n(981631),
-    O = n(474936),
-    v = n(388032),
-    j = n(232644),
-    C = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), (r.LARGE = "large"), r);
-function x(e) {
+    d = n(602733),
+    p = n(594174),
+    h = n(626135),
+    f = n(51144),
+    g = n(221292),
+    m = n(461631),
+    b = n(228168),
+    _ = n(981631),
+    y = n(474936),
+    O = n(388032),
+    v = n(232644),
+    j = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), (r.LARGE = "large"), r);
+function C(e) {
     let {
             item: t,
             wishlistId: n,
             isOwner: r,
             cardSize: o = "medium",
-            showOverlayButton: C = !0,
-            cardRef: x,
-            renderItemPreview: E,
-            accessibleLabel: S,
-            onCardClick: I,
-            buttonCTALabel: P,
-            buttonIcon: N,
-            isOwned: Z = !1,
-            renderSourceIcon: w,
-            giftingOrigin: T,
-            source: A,
+            showOverlayButton: j = !0,
+            cardRef: C,
+            renderItemPreview: x,
+            accessibleLabel: E,
+            onCardClick: S,
+            buttonCTALabel: I,
+            buttonIcon: P,
+            isOwned: N = !1,
+            renderSourceIcon: Z,
+            giftingOrigin: w,
+            source: T,
         } = e,
+        A = l.useRef(null),
         R = l.useRef(null),
-        D = l.useRef(null),
-        L = null != x ? x : D,
-        { analyticsLocations: M } = (0, u.ZP)(),
-        k = r && !0 === t.isOwned && null != t.gifterUserId,
-        G = null != t.gifterUserId ? h.default.getUser(t.gifterUserId) : null,
-        U = null != G ? g.ZP.getName(G) : null,
-        B = k && null != G && null != U && "" !== U,
-        F = B
+        D = null != C ? C : R,
+        { analyticsLocations: L } = (0, u.ZP)(),
+        M = r && !0 === t.isOwned && null != t.gifterUserId,
+        k = null != t.gifterUserId ? p.default.getUser(t.gifterUserId) : null,
+        G = null != k ? f.ZP.getName(k) : null,
+        U = M && null != k && null != G && "" !== G,
+        B = U
             ? (0, i.jsx)(c.qEK, {
-                  src: G.getAvatarURL(void 0, 48),
+                  src: k.getAvatarURL(void 0, 48),
                   size: c.EFr.SIZE_48,
-                  "aria-label": U,
+                  "aria-label": G,
               })
             : void 0,
-        V = (0, i.jsx)("div", {
-            className: j.cardStateIconWrapper,
+        F = (0, i.jsx)("div", {
+            className: v.cardStateIconWrapper,
             children: (0, i.jsx)(c.sV5, {
                 size: "custom",
                 color: c.TVs.colors.WHITE,
                 width: 38,
                 height: 38,
-                className: a()(j.cardStateIcon, j.checkmark),
-                "aria-label": v.intl.string(v.t.L5Pt9L),
+                className: a()(v.cardStateIcon, v.checkmark),
+                "aria-label": O.intl.string(O.t.L5Pt9L),
             }),
         }),
-        H = (0, i.jsx)("div", {
-            className: j.overlay,
+        V = (0, i.jsx)("div", {
+            className: v.overlay,
             children: (0, i.jsx)(c.Button, {
-                focusProps: { ringTarget: L },
+                focusProps: { ringTarget: D },
                 variant: "primary",
                 size: "sm",
-                text: P,
-                icon: N,
+                text: I,
+                icon: P,
                 onClick: (e) => {
-                    e.stopPropagation(), z();
+                    e.stopPropagation(), H();
                 },
                 fullWidth: !0,
             }),
         }),
-        z = () => {
-            if (T === O.Wt.DM_CHANNEL_WISHLIST) {
-                let e = A === p.lr.WISHLIST ? "wishlist" : "shop";
-                f.default.track(y.rMx.GIFTING_ITEM_CLICKED, {
+        H = () => {
+            if (w === y.Wt.DM_CHANNEL_WISHLIST) {
+                let e = T === d.lr.WISHLIST ? "wishlist" : "shop";
+                h.default.track(_.rMx.GIFTING_ITEM_CLICKED, {
                     sku_id: t.skuId,
                     item_source: e,
-                    wishlist_id: A === p.lr.WISHLIST ? n : null,
+                    wishlist_id: T === d.lr.WISHLIST ? n : null,
+                    product_line: t.skuProductLine,
                 });
-            } else if (null != n) {
-                var e;
-                let r = d.Z.getWishlist(n),
-                    i = null != (e = null == r ? void 0 : r.hasThirdPartySku()) && e;
-                (0, m.Er)({
-                    wishlistId: n,
-                    action: _.NW.WISHLIST_ITEM_CLICKED,
-                    skuId: t.skuId,
-                    analyticsLocations: M,
-                    hasThirdPartySku: i,
-                });
-            }
-            I();
+            } else
+                null != n &&
+                    (0, g.Er)({
+                        wishlistId: n,
+                        action: b.NW.WISHLIST_ITEM_CLICKED,
+                        skuId: t.skuId,
+                        analyticsLocations: L,
+                        productLines: new Set([t.skuProductLine]),
+                    });
+            S();
         },
-        W = (0, i.jsxs)("div", {
-            ref: R,
-            className: j.container,
+        z = (0, i.jsxs)("div", {
+            ref: A,
+            className: v.container,
             children: [
                 (0, i.jsxs)("div", {
-                    ref: L,
-                    className: a()(j.card, {
-                        [j.isOwned]: Z,
-                        [j.smallCard]: "small" === o,
-                        [j.largeCard]: "large" === o,
+                    ref: D,
+                    className: a()(v.card, {
+                        [v.isOwned]: N,
+                        [v.smallCard]: "small" === o,
+                        [v.largeCard]: "large" === o,
                     }),
-                    onClick: z,
+                    onClick: H,
                     children: [
-                        (0, i.jsx)(c.nn4, { children: (0, i.jsx)(c.H, { children: S }) }),
+                        (0, i.jsx)(c.nn4, { children: (0, i.jsx)(c.H, { children: E }) }),
                         (0, i.jsx)("div", {
-                            className: j.cardPreview,
-                            children: E(),
+                            className: v.cardPreview,
+                            children: x(),
                         }),
-                        Z && V,
-                        C
-                            ? H
+                        N && F,
+                        j
+                            ? V
                             : (0, i.jsx)(c.P3F, {
-                                  "aria-label": P,
-                                  focusProps: { ringTarget: L },
+                                  "aria-label": I,
+                                  focusProps: { ringTarget: D },
                                   onClick: (e) => {
-                                      e.stopPropagation(), z();
+                                      e.stopPropagation(), H();
                                   },
                               }),
                     ],
                 }),
-                null != w && w(),
+                null != Z && Z(),
                 r &&
                     null != n &&
-                    (0, i.jsx)(b.Z, {
+                    (0, i.jsx)(m.Z, {
                         iconSize: "sm",
                         item: t,
                         wishlistId: n,
-                        className: j.removeItemButton,
+                        className: v.removeItemButton,
                     }),
             ],
         });
-    return B
+    return U
         ? (0, i.jsx)(s.i_, {
               asContainer: !0,
-              title: v.intl.formatToPlainString(v.t.TL4ktE, { username: U }),
+              title: O.intl.formatToPlainString(O.t.TL4ktE, { username: G }),
               body: t.skuName,
-              asset: F,
-              children: W,
+              asset: B,
+              children: z,
           })
-        : W;
+        : z;
 }

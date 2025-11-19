@@ -180,6 +180,7 @@ function w(e, t, n) {
             hidePreview: P,
             notifyFriends: Z,
             selectedSource: e,
+            nativeSourceType: h.Z.getUseGamescopeCapture() ? "gamescope" : "",
             audioSourceId: w,
         }),
     );

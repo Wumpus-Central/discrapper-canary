@@ -1,5 +1,4 @@
 n.d(t, {
-    Ag: () => m,
     P3: () => _,
     ZK: () => f,
     en: () => h,
@@ -216,7 +215,4 @@ function h(e) {
         if (a.isValid()) return a.format(r);
     }
     return n;
-}
-function m(e) {
-    return e === o.POd.SOCIAL_LAYER_GAME_ITEM;
 }

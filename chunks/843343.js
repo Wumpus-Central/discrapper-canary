@@ -20,7 +20,6 @@ function f() {
         : (0, r.jsx)(c.H, {
               children: (0, r.jsx)(u.Z, {
                   text: p.intl.format(p.t["TnH05/"], { count: n }),
-                  color: o.aML.Colors.RED,
                   children: (0, r.jsx)(
                       o.Anchor,
                       ((e = (function (e) {

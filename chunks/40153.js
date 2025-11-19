@@ -85,7 +85,6 @@ function O(e) {
         shouldShow: s,
         forceOpen: s,
         disableWrapper: !0,
-        tooltipClass: m.centerTargetTooltip,
         children: (0, r.jsx)("div", {
             ref: (e) => {
                 (d.current = e), u(e);

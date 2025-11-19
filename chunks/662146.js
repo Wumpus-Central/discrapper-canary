@@ -34,37 +34,33 @@ function u(e) {
     let {
         children: t,
         text: n,
-        color: l,
-        disableWrapper: u = !1,
-        disabled: d = !1,
-        hideOnClick: p = !0,
-        shouldShow: h,
-        forceOpen: f,
-        selected: g = !1,
-        tooltipClass: m,
-        tooltipContentClass: b,
+        disableWrapper: l = !1,
+        disabled: u = !1,
+        hideOnClick: d = !0,
+        shouldShow: p,
+        forceOpen: h,
+        selected: f = !1,
     } = e;
     return (0, r.jsx)(a.aML, {
-        shouldShow: h,
-        forceOpen: f,
+        "data-migration-pending": !0,
+        shouldShow: p,
+        forceOpen: h,
         spacing: 12,
-        hideOnClick: p,
-        text: d ? null : n,
+        hideOnClick: d,
+        text: u ? null : n,
         position: "right",
-        color: l,
         "aria-label": !1,
-        tooltipClassName: o()(s.listItemTooltip, m),
-        tooltipContentClassName: b,
+        tooltipClassName: s.listItemTooltip,
         children: (e) => {
-            var n, l;
-            return u
+            var n, a;
+            return l
                 ? i.cloneElement(i.Children.only(t), c({}, e))
                 : (0, r.jsx)(
                       "div",
-                      ((n = c({ className: o()(s.listItemWrapper, { [s.selected]: g }) }, e)),
-                      (l = l = { children: t }),
+                      ((n = c({ className: o()(s.listItemWrapper, { [s.selected]: f }) }, e)),
+                      (a = a = { children: t }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -72,8 +68,8 @@ function u(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(l)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                            })(Object(a)).forEach(function (e) {
+                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                             }),
                       n),
                   );

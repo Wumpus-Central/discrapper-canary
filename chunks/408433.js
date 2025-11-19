@@ -1,12 +1,13 @@
 n.d(t, {
-    En: () => P,
-    dY: () => S,
-    eC: () => R,
-    jz: () => C,
-    kC: () => v,
-    l3: () => A,
-    o3: () => T,
-    vP: () => N,
+    En: () => L,
+    HK: () => P,
+    dY: () => C,
+    eC: () => w,
+    jz: () => R,
+    kC: () => T,
+    l3: () => N,
+    o3: () => A,
+    vP: () => D,
 }),
     n(413496),
     n(433524),
@@ -36,17 +37,19 @@ let f = /sketchfab/i,
     h = 1492472454139,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
     g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    E = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop");
-function b(e) {
+    E = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
+    b = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
+    y = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
+function O(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function y(e, t, n) {
+function v(e, t, n) {
     if ((null != t && f.test(t.name)) || _.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }
-function O(e) {
+function I(e) {
     let {
         url: t,
         proxy_url: n,
@@ -71,7 +74,7 @@ function O(e) {
         contentType: null != d ? d : void 0,
     };
 }
-function v(e, t, n) {
+function T(e, t, n) {
     let r = {
         id: i().uniqueId("embed_"),
         url: n.url,
@@ -105,28 +108,28 @@ function v(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = o()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, s.ho)(n.color, !0)),
-        null != n.thumbnail && b(n.thumbnail))
+        null != n.thumbnail && O(n.thumbnail))
     )
         switch (r.type) {
             case u.hBH.ARTICLE:
             case u.hBH.IMAGE:
-                r.image = O(n.thumbnail);
+                r.image = I(n.thumbnail);
                 break;
             default:
-                r.thumbnail = O(n.thumbnail);
+                r.thumbnail = I(n.thumbnail);
         }
     if (
-        (null != n.image && b(n.image) && (r.image = O(n.image)),
+        (null != n.image && O(n.image) && (r.image = I(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                b(n.video) &&
+                O(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: I(n.video.proxy_url, { format: "webp" }),
+                    url: S(n.video.proxy_url, { format: "webp" }),
                 }),
-            null != r.thumbnail && b(n.video) && y(t, n.provider, n.video) && (r.video = O(n.video))),
+            null != r.thumbnail && O(n.video) && v(t, n.provider, n.video) && (r.video = I(n.video))),
         d.k.has(r.type))
     ) {
         var a;
@@ -141,7 +144,7 @@ function v(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function I(e, t) {
+function S(e, t) {
     let n = new URL(e);
     return (
         Object.keys(t).forEach((e) => {
@@ -150,7 +153,7 @@ function I(e, t) {
         n.toString()
     );
 }
-function T(e) {
+function A(e) {
     let t = new Map(),
         n = [];
     return (
@@ -168,17 +171,20 @@ function T(e) {
         n
     );
 }
-function S(e) {
+function C(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }
-function A(e) {
+function N(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
-function C(e) {
+function R(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && E.test(e.url);
 }
-function N(e, t, n) {
+function P(e) {
+    return e.type === u.hBH.ARTICLE && null != e.url && (y.test(e.url) || b.test(e.url));
+}
+function D(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -195,10 +201,10 @@ function N(e, t, n) {
                 maxMediaHeight: 300,
             };
 }
-function R(e, t) {
+function w(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
 }
-function P(e) {
+function L(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );

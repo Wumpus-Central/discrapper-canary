@@ -156,7 +156,7 @@ function eo(e) {
                 ? l
                 : [Y.ApplicationStreamResolutions.RESOLUTION_720, Y.ApplicationStreamFPS.FPS_30],
         { lastPickerAction: eC } = (0, f.e7)([H.ZP], () => H.ZP.getPickerState()),
-        eO = T.Z.getUseSystemScreensharePicker();
+        eO = T.Z.getUseSystemScreensharePicker() || T.Z.getUseGamescopeCapture();
     (0, H.UB)();
     let ew = eO && (0, D.isMac)() && u().satisfies(null === v.Z || void 0 === v.Z ? void 0 : v.Z.os.release, q.jR),
         eP = [];
@@ -275,7 +275,7 @@ function eo(e) {
             },
             [e1],
         ),
-        e7 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
                 eL(e),
                     null != e &&
@@ -287,7 +287,7 @@ function eo(e) {
             },
             [eO],
         ),
-        e8 = i.useCallback(
+        e7 = i.useCallback(
             (e) => {
                 eQ(e);
                 eN(K ? 2 : 3);
@@ -433,7 +433,14 @@ function eo(e) {
                     onSubmit: function (e) {
                         if ((e.preventDefault(), 1 === eT)) return e4();
                         if (2 === eT) return eN(3);
-                        if (null != e1) return eN(1);
+                        if ("gamescope" === e1)
+                            eL({
+                                id: "screen:gamescope",
+                                name: et.intl.string(et.t.R4wpLN),
+                                url: "",
+                            }),
+                                e5();
+                        else if (null != e1) return eN(1);
                         let t = (0, X.Z)(ex, eD, O.ZP.getRunningGames());
                         if (L.ZP.supportsFeature(Q.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
                             var i;
@@ -462,7 +469,7 @@ function eo(e) {
                                     id: 0,
                                     children: (0, r.jsx)("div", {
                                         className: en.modalSize,
-                                        children: (0, r.jsx)(V.Z, { onSelectGuild: e8 }),
+                                        children: (0, r.jsx)(V.Z, { onSelectGuild: e7 }),
                                     }),
                                 }),
                                 (0, r.jsx)(m.Mi4, {
@@ -471,12 +478,12 @@ function eo(e) {
                                         className: en.modalSize,
                                         children: eO
                                             ? (0, r.jsx)(J.se, {
-                                                  onSourceSelect: e7,
+                                                  onSourceSelect: e8,
                                                   selectedSource: eD,
                                               })
                                             : (0, r.jsx)(J.oA, {
                                                   selectedSource: eD,
-                                                  onChangeSelectedSource: e7,
+                                                  onChangeSelectedSource: e8,
                                               }),
                                     }),
                                 }),
@@ -498,7 +505,7 @@ function eo(e) {
                                             onChangeSelectedResolution: (e) => e3(eU, e, ez),
                                             onChangeSelectedPreset: (e) => e3(e, eH, ez),
                                             onChangeSelectedChannelId: ek,
-                                            onChangeSelectedSource: e7,
+                                            onChangeSelectedSource: e8,
                                             onChangeSource: () => tt(),
                                             onChangeAudioDevice: (e) => eG(e),
                                             onChangeGuild: () => eN(0),

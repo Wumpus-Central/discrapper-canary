@@ -168,7 +168,6 @@ function L(e) {
                         className: R.pill,
                     }),
                     (0, r.jsx)(P.Z, {
-                        color: s.aML.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: U,
                         selected: o,

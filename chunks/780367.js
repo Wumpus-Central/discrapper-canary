@@ -32,7 +32,6 @@ function b() {
                 className: m.pill,
             }),
             (0, r.jsx)(h.Z, {
-                color: s.aML.Colors.PRIMARY,
                 hideOnClick: !0,
                 text: g.intl.string(g.t.YUU0RF),
                 selected: b,

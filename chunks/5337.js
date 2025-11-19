@@ -58,6 +58,7 @@ function f(e, t) {
             skuId: e.skuId,
             analyticsLocations: s,
             wishlistId: f,
+            productLine: e.skuProductLine,
         },
         e.skuId,
     );
