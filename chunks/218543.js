@@ -146,16 +146,18 @@ class _ {
     }
     record() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-        if (0 === this.time_)
-            (this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name);
+        if (0 === this.time_) this.recordState_(e);
         else if (!this.onlyOnce) {
             if (this.alwaysRecord) {
-                (this.time_ = 0), this.record(e);
+                this.recordState_(e), c();
                 return;
             }
             r.Z.mark(this.emoji, this.name);
         }
         c();
+    }
+    recordState_(e) {
+        (this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name);
     }
     hasData() {
         return this.time_ > 0;
