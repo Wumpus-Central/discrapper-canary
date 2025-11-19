@@ -103,7 +103,7 @@ function y(e) {
                                 "aria-label": E.intl.string(E.t.I61IsE),
                                 onClick: () => {
                                     (0, s.ZDy)(async () => {
-                                        let { default: e } = await n.e("19345").then(n.bind(n, 171793));
+                                        let { default: e } = await n.e("5890").then(n.bind(n, 171793));
                                         return (t) =>
                                             (0, r.jsx)(
                                                 e,

@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(88406),
+    y = n(677065),
     O = n(147164);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,

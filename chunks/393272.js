@@ -1,3 +1,7 @@
-e.exports = JSON.parse(
-    '{"/cp93l":["Næste måned"],"raS6yf":["Forrige måned"],"JA5C7L":["Ryd"],"I8kUqR":["Åbn kalender"],"db85vU":["Ingen genstande at vise"],"bPKiId":["Ingen resultater for \\"",[1,"query"],"\\""],"WfH9in":["Luk"],"m3Vfcs":["Vis ikke dette igen?"],"cgdAs2":["(Åbner i en ny fane)"],"/Y7vRd":["Tryk på Slet for at fjerne."],"VMNfsY":["Valgt"],"A+pfVR":["Vælg ..."],"YpT3kk":["Forstør og afspil video"]}',
-);
+e.exports = {
+    selected: "selected_dcc822",
+    siblingSelected: "siblingSelected_dcc822",
+    list: "list_dcc822",
+    sectionTitle: "sectionTitle_dcc822",
+    titleDivider: "titleDivider_dcc822",
+};
