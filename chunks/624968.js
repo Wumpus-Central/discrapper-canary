@@ -130,8 +130,9 @@ let f = 200,
             ref: P,
             style: j,
             className: o()(d.container, {
-                [d.endLeft]: !I,
-                [d.endRight]: !S,
+                [d.scrollLeft]: I,
+                [d.scrollRight]: S,
+                [d.scrollBoth]: I && S,
             }),
             children: [
                 O &&
