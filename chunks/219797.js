@@ -13,7 +13,7 @@ var r = n(54381),
     i = n(473749),
     a = n(442837),
     o = n(993365),
-    s = n(506802),
+    s = n(28664),
     l = n(481060),
     c = n(543651),
     u = n(177751),
@@ -115,20 +115,22 @@ function A(e) {
         a = i.useCallback(() => {
             var e;
             return (0, p.yE)(null != (e = n.flags) ? e : 0, E.J0y.IS_CLIP)
-                ? (0, r.jsxs)(s.jS, {
+                ? (0, r.jsx)(s.u, {
                       text: b.intl.string(b.t["/fgfWh"]),
-                      className: y.clipPill,
-                      children: [
-                          (0, r.jsx)(l.AlX, {
-                              size: "xs",
-                              color: "currentColor",
-                          }),
-                          (0, r.jsx)(o.x, {
-                              variant: "text-xs/semibold",
-                              color: "always-white",
-                              children: b.intl.string(b.t.oA4afG),
-                          }),
-                      ],
+                      children: (0, r.jsxs)("div", {
+                          className: y.clipPill,
+                          children: [
+                              (0, r.jsx)(l.AlX, {
+                                  size: "xs",
+                                  color: "currentColor",
+                              }),
+                              (0, r.jsx)(o.x, {
+                                  variant: "text-xs/semibold",
+                                  color: "always-white",
+                                  children: b.intl.string(b.t.oA4afG),
+                              }),
+                          ],
+                      }),
                   })
                 : null;
         }, [n]),
