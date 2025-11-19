@@ -18,9 +18,10 @@ n.d(t, {
     g_: () => _,
     hs: () => E,
     j4: () => C,
-    ks: () => F,
+    ks: () => H,
     lX: () => b,
     m_: () => p,
+    rh: () => B,
     tj: () => g,
     uw: () => A,
     wN: () => U,
@@ -42,7 +43,7 @@ function d(e, t) {
         let n = c.uM[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = B[n];
+        let r = Z[n];
         if (null == r)
             return (
                 u.warn(
@@ -94,7 +95,8 @@ let j = new f(r.q.INCREASED_GUILD_LIMIT),
     k = new f(r.q.INCREASED_MESSAGE_LENGTH),
     U = new f("increasedVideoUploadQuality"),
     G = new f("uploadLargeFiles"),
-    B = Object.freeze({
+    B = new f("warpPrivateBrowsing"),
+    Z = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [_, p, h, v, M, U, G, S]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [_, p, b, y, v, C, R, w, U, G, S]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
@@ -125,12 +127,17 @@ let j = new f(r.q.INCREASED_GUILD_LIMIT),
             T,
             D,
             E,
+            B,
         ]),
     }),
-    Z = [C, N];
-function F(e, t) {
+    F = [C, N, B],
+    V = [B];
+function H(e, t, n) {
     return (
-        !((0, s.U)("canUserUse", t) || (null != t && t.isPremiumWithFractionalPremiumOnly() && Z.includes(e))) &&
-        e.getFeatureValue(t)
+        !(
+            (0, s.U)("canUserUse", t) ||
+            (null != t && t.isPremiumWithFractionalPremiumOnly() && F.includes(e)) ||
+            (n && V.includes(e))
+        ) && e.getFeatureValue(t)
     );
 }

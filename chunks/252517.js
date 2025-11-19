@@ -24,7 +24,7 @@ async function r() {
         n.e("70070").then(n.bind(n, 373459)),
         Promise.resolve().then(n.bind(n, 662653)),
         n.e("89323").then(n.bind(n, 967604)),
-        n.e("26843").then(n.bind(n, 595969)),
+        Promise.resolve().then(n.bind(n, 80354)),
     ]);
 }
 n.d(t, { f: () => r }), n(388685);

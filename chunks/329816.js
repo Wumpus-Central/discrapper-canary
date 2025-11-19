@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ });
+n.d(t, { Z: () => et });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -32,135 +32,142 @@ var r = n(54381),
     L = n(429142),
     x = n(728285),
     M = n(813744),
-    j = n(746106),
-    k = n(526665),
-    U = n(811513),
-    G = n(314897),
-    B = n(819640),
-    Z = n(358085),
-    F = n(663993),
-    V = n(823453),
-    H = n(744048),
-    Y = n(436774),
-    W = n(686546),
-    K = n(950796),
-    z = n(981631),
-    q = n(654924);
+    j = n(953865),
+    k = n(254621),
+    U = n(746106),
+    G = n(526665),
+    B = n(811513),
+    Z = n(314897),
+    F = n(819640),
+    V = n(358085),
+    H = n(663993),
+    Y = n(823453),
+    W = n(744048),
+    K = n(436774),
+    z = n(686546),
+    q = n(950796),
+    X = n(981631),
+    Q = n(654924);
 n(29973),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            Z.isPlatformEmbedded
+            V.isPlatformEmbedded
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
     (0, d.E)({ getDefaultLinkInterceptor: m.default }),
-    (0, F.Un)({
+    (0, H.Un)({
         createPromise: () =>
             Promise.all([n.e("50448"), n.e("82821"), n.e("30634"), n.e("33551")]).then(n.bind(n, 849493)),
         webpackId: 849493,
     }),
-    (0, F.Un)({
+    (0, H.Un)({
         createPromise: () =>
             Promise.all([n.e("50448"), n.e("82821"), n.e("30634"), n.e("58493")]).then(n.bind(n, 80753)),
         webpackId: 80753,
     });
-let X = (0, F.Un)({
+let J = (0, H.Un)({
         createPromise: () => n.e("67110").then(n.bind(n, 177741)),
         webpackId: 177741,
     }),
-    Q = (0, F.Un)({
+    $ = (0, H.Un)({
         createPromise: () => n.e("13474").then(n.bind(n, 420541)),
         webpackId: 420541,
     }),
-    J = i.memo(function () {
-        let e = (0, u.e7)([B.Z], () => B.Z.hasLayers()),
-            t = (0, k.wy)("AppSkeleton"),
-            n = (0, u.e7)([B.Z], () => B.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
+    ee = i.memo(function () {
+        let e = (0, u.e7)([F.Z], () => F.Z.hasLayers()),
+            t = (0, G.wy)("AppSkeleton"),
+            n = (0, u.e7)([F.Z], () => F.Z.getLayers().includes(X.S9g.USER_SETTINGS)),
             i = (0, f.s9z)(f.$sL),
-            a = (0, u.e7)([G.default], () => G.default.isAuthenticated());
+            a = (0, u.e7)([Z.default], () => Z.default.isAuthenticated());
         if (!n || !t)
-            return (0, r.jsx)(K.Dg, {
+            return (0, r.jsx)(q.Dg, {
                 fixed: !0,
                 show: e || i || !a,
             });
     }),
-    $ = function (e) {
+    et = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            a = (0, Z.getPlatform)(),
+            a = (0, V.getPlatform)(),
             d = s.tq || s.Em,
             m = (0, u.e7)([g.Z], () => (g.Z.useForcedColors ? "yes" : "no")),
-            k = i.useRef(document.body),
-            G = "".concat(m);
+            G = i.useRef(document.body),
+            Z = "".concat(m);
         return (
             (0, C.G)(),
             (0, P.G)("AppSkeleton"),
             (0, r.jsx)(
-                j.w,
+                U.w,
                 {
                     children: (0, r.jsxs)(E.Z, {
                         children: [
-                            (0, r.jsx)(V.Z, { skipsSettingDefaultPageTitle: n }),
+                            (0, r.jsx)(Y.Z, { skipsSettingDefaultPageTitle: n }),
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(R.Z, {
                                     children: (0, r.jsxs)(f.JcV, {
-                                        containerRef: k,
+                                        containerRef: G,
                                         children: [
-                                            (0, r.jsx)(W.Co, {}),
-                                            (0, r.jsx)(Y.ZP, {}),
+                                            (0, r.jsx)(z.Co, {}),
+                                            (0, r.jsx)(K.ZP, {}),
                                             (0, r.jsx)(c.OUJ, {}),
                                             (0, r.jsx)(x.Wu, {
-                                                appContext: z.IlC.APP,
+                                                appContext: X.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(D.yP, {
                                                     children: [
-                                                        null != a ? (0, r.jsx)(J, {}) : null,
+                                                        null != a ? (0, r.jsx)(ee, {}) : null,
                                                         (0, r.jsxs)("div", {
                                                             className: o()(
-                                                                q.appAsidePanelWrapper,
-                                                                d && q.mobileAppAsidePanelWrapper,
+                                                                Q.appAsidePanelWrapper,
+                                                                d && Q.mobileAppAsidePanelWrapper,
                                                             ),
                                                             children: [
                                                                 (0, r.jsx)(A.K, {}),
                                                                 (0, r.jsx)("div", {
-                                                                    className: q.notAppAsidePanel,
+                                                                    className: Q.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
                                                                     children: (0, r.jsx)(S.m, {
                                                                         children: (0, r.jsx)(L.OR, {
                                                                             children: (0, r.jsx)(b.Z.Provider, {
                                                                                 value: y.Z,
-                                                                                children: (0, r.jsxs)(T.p, {
-                                                                                    children: [
-                                                                                        (0, r.jsx)("div", {
-                                                                                            className: o()(
-                                                                                                d ? q.mobileApp : q.app,
-                                                                                            ),
-                                                                                            children: t,
-                                                                                        }),
-                                                                                        (0, r.jsx)(_.Z, {}),
-                                                                                        (0, r.jsx)(v.Z, {}),
-                                                                                        (0, r.jsx)(p.Z, {}),
-                                                                                        (0, r.jsx)(f.nKe, {}),
-                                                                                        (0, r.jsx)(U.Z, {}),
-                                                                                        (0, r.jsx)(w.Ox, {}),
-                                                                                        (0, r.jsx)(l.uZ, {}),
-                                                                                        (0, r.jsx)(D.Un, {}),
-                                                                                        (0, r.jsx)(L.ot, {}),
-                                                                                        (0, r.jsx)(f.Ixi, {
-                                                                                            appContext: z.IlC.APP,
-                                                                                        }),
-                                                                                        (0, r.jsx)(O.Z, {}),
-                                                                                        (0, r.jsx)(M.Z, {}),
-                                                                                        (0, r.jsx)(X, {}),
-                                                                                        (0, r.jsx)(Q, {}),
-                                                                                    ],
+                                                                                children: (0, r.jsx)(T.p, {
+                                                                                    children: (0, r.jsxs)(j.ov, {
+                                                                                        children: [
+                                                                                            (0, r.jsx)("div", {
+                                                                                                className: o()(
+                                                                                                    d
+                                                                                                        ? Q.mobileApp
+                                                                                                        : Q.app,
+                                                                                                ),
+                                                                                                children: t,
+                                                                                            }),
+                                                                                            (0, r.jsx)(_.Z, {}),
+                                                                                            (0, r.jsx)(v.Z, {}),
+                                                                                            (0, r.jsx)(p.Z, {}),
+                                                                                            (0, r.jsx)(f.nKe, {}),
+                                                                                            (0, r.jsx)(B.Z, {}),
+                                                                                            (0, r.jsx)(w.Ox, {}),
+                                                                                            (0, r.jsx)(l.uZ, {}),
+                                                                                            (0, r.jsx)(D.Un, {}),
+                                                                                            (0, r.jsx)(L.ot, {}),
+                                                                                            (0, r.jsx)(f.Ixi, {
+                                                                                                appContext: X.IlC.APP,
+                                                                                            }),
+                                                                                            (0, r.jsx)(O.Z, {}),
+                                                                                            (0, r.jsx)(M.Z, {}),
+                                                                                            (0, r.jsx)(J, {}),
+                                                                                            (0, r.jsx)($, {}),
+                                                                                            (0, r.jsx)(k.Z, {}),
+                                                                                        ],
+                                                                                    }),
                                                                                 }),
                                                                             }),
                                                                         }),
                                                                     }),
                                                                 }),
                                                                 (0, r.jsx)(I.Z, {}),
-                                                                (0, r.jsx)(H.Z, { mobile: d }),
+                                                                (0, r.jsx)(W.Z, { mobile: d }),
                                                                 (0, r.jsx)(N.Z, { mobile: d }),
                                                             ],
                                                         }),
@@ -176,7 +183,7 @@ let X = (0, F.Un)({
                         ],
                     }),
                 },
-                G,
+                Z,
             )
         );
     };

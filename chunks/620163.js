@@ -1,9 +1,11 @@
 n.d(t, {
-    $Z: () => eZ,
-    OF: () => eV,
-    W8: () => eH,
-    c$: () => eF,
-    iE: () => eW,
+    $Z: () => eF,
+    OF: () => eH,
+    W8: () => eY,
+    c$: () => eV,
+    h5: () => eK,
+    iE: () => eq,
+    kQ: () => eW,
 }),
     n(539854),
     n(388685);
@@ -21,21 +23,21 @@ var r = n(54381),
     p = n(782568),
     h = n(368763),
     m = n(758182),
-    g = n(49226),
-    E = n(163379),
-    b = n(703288),
-    y = n(574755),
-    O = n(296812),
-    v = n(377171),
-    I = n(243778),
-    T = n(594928),
-    S = n(18438),
-    A = n(778825),
-    C = n(288047),
-    N = n(351780),
-    R = n(231765),
-    P = n(125900),
-    D = n(813732),
+    g = n(163379),
+    E = n(703288),
+    b = n(574755),
+    y = n(296812),
+    O = n(377171),
+    v = n(243778),
+    I = n(594928),
+    T = n(18438),
+    S = n(778825),
+    A = n(288047),
+    C = n(351780),
+    N = n(231765),
+    R = n(125900),
+    P = n(813732),
+    D = n(299886),
     w = n(398140),
     L = n(564344),
     x = n(145158),
@@ -94,8 +96,9 @@ var r = n(54381),
     eL = n(388032),
     ex = n(308274),
     eM = n(313570),
-    ej = n(756464);
-function ek(e, t, n) {
+    ej = n(80354),
+    ek = n(756464);
+function eU(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -108,7 +111,7 @@ function ek(e, t, n) {
         e
     );
 }
-function eU(e) {
+function eG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -119,12 +122,12 @@ function eU(e) {
                 }),
             )),
             r.forEach(function (t) {
-                ek(e, t, n[t]);
+                eU(e, t, n[t]);
             });
     }
     return e;
 }
-function eG(e, t) {
+function eB(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -136,18 +139,18 @@ function eG(e, t) {
     }
     return n;
 }
-function eB(e, t) {
+function eZ(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : eG(Object(t)).forEach(function (n) {
+            : eB(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let eZ = () => {
+let eF = () => {
         let e = [
             a.z.CLIENT_THEMES_SETTINGS_BADGE,
             a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE,
@@ -159,9 +162,9 @@ let eZ = () => {
             e
         );
     },
-    eF = () => {
-        let e = eZ(),
-            [t] = (0, I.US)(e);
+    eV = () => {
+        let e = eF(),
+            [t] = (0, v.US)(e);
         return t === a.z.CLIENT_THEMES_SETTINGS_BADGE || t === a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
             ? (0, r.jsx)(s.lBU, { text: eL.intl.string(eL.t.y2b7CA) })
             : t === a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE ||
@@ -169,53 +172,64 @@ let eZ = () => {
               ? (0, r.jsx)(s.IGR, { text: eL.intl.string(eL.t.y2b7CA) })
               : null;
     },
-    eV = () => {
+    eH = () => {
         let e = [];
         return (
             (0, M.hL)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
-            T.JH.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
+            I.JH.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
                 e.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE),
             e
         );
     },
-    eH = () => {
-        let e = eV(),
-            [t] = (0, I.US)(e);
+    eY = () => {
+        let e = eH(),
+            [t] = (0, v.US)(e);
         return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
             ? (0, r.jsx)(s.IGR, { text: eL.intl.string(eL.t.y2b7CA) })
             : null;
     },
-    eY = eO.Z,
-    eW = (e) => {
+    eW = () => {
+        let e = [];
+        return (
+            D.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
+        );
+    },
+    eK = () => {
+        let e = eW(),
+            [t] = (0, v.US)(e);
+        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(s.IGR, { text: eL.intl.string(eL.t.y2b7CA) }) : null;
+    },
+    ez = eO.Z,
+    eq = (e) => {
         let {
             unseenGiftCount: t,
             showPrepaidPaymentPastDueWarning: h,
-            searchParams: I,
-            numOfPendingFamilyRequests: T,
+            searchParams: v,
+            numOfPendingFamilyRequests: I,
             isOverlaySupported: M,
-            isClipsBetaTagShowing: ek = !1,
-            shouldMergeGameSettings: eG,
+            isClipsBetaTagShowing: eU = !1,
+            shouldMergeGameSettings: eB,
             isKeywordFilteringEnabled: eW,
-            isStaff: eK,
-            isInappropriateConversationWarningEnabled: ez,
-            isInapproprateConversationsDefaultOn: eq,
-            paymentsBlocked: eX,
-            isEligibleForQuests: eQ,
-            isStricterMessageRequestsEnabled: eJ,
-            hasLibraryApplication: e$,
-            hasTOTPEnabled: e0,
-            developerMode: e1,
-            isAdultUser: e3,
-            hasSecureFramesVerifiedUserIds: e2,
-            hasIgnoredUsers: e4,
-            hasBlockedUsers: e5,
-            isEligibleForSensitiveContentDefaults: e8,
-            inputMode: e6,
-            activeInputProfile: e7,
-            isInputProfileCustom: e9,
-            isDataUsage3PToggleEnabled: te,
-            isChatMentionSuggestionsSettingEnabled: tt,
-            isCrossDMSearchEnabledSettingVisible: tn,
+            isStaff: eq,
+            isInappropriateConversationWarningEnabled: eX,
+            isInapproprateConversationsDefaultOn: eQ,
+            paymentsBlocked: eJ,
+            isEligibleForQuests: e$,
+            isStricterMessageRequestsEnabled: e0,
+            hasLibraryApplication: e1,
+            hasTOTPEnabled: e3,
+            developerMode: e2,
+            isAdultUser: e4,
+            hasSecureFramesVerifiedUserIds: e5,
+            hasIgnoredUsers: e8,
+            hasBlockedUsers: e6,
+            isEligibleForSensitiveContentDefaults: e7,
+            inputMode: e9,
+            activeInputProfile: te,
+            isInputProfileCustom: tt,
+            isDataUsage3PToggleEnabled: tn,
+            isChatMentionSuggestionsSettingEnabled: tr,
+            isCrossDMSearchEnabledSettingVisible: ti,
         } = e;
         return Object.freeze({
             [eR.s6.SEARCH_NO_RESULTS]: {
@@ -260,7 +274,7 @@ let eZ = () => {
                 ],
                 section: eD.oAB.ACCOUNT,
                 parent: eR.s6.ACCOUNT_PROFILE,
-                predicate: () => e8,
+                predicate: () => e7,
             },
             [eR.s6.ACCOUNT_USERNAME]: {
                 searchableTitles: [eL.intl.string(eL.t["+JkHPw"])],
@@ -296,13 +310,13 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t.cDgKte)],
                 section: eD.oAB.ACCOUNT,
                 parent: eR.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e0,
+                predicate: () => !e3,
             },
             [eR.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eL.intl.string(eL.t["D+aE7g"])],
                 section: eD.oAB.ACCOUNT,
                 parent: eR.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e0,
+                predicate: () => e3,
             },
             [eR.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eL.intl.string(eL.t.fZSi1D)],
@@ -340,7 +354,7 @@ let eZ = () => {
                 label: eL.intl.string(eL.t.URyqtP),
                 ariaLabel: eL.intl.string(eL.t.URyqtP),
                 element: eS.Z,
-                predicate: () => eG,
+                predicate: () => eB,
             },
             [eR.s6.GAMES_MY_GAMES]: {
                 section: eD.oAB.GAMES,
@@ -369,15 +383,15 @@ let eZ = () => {
                 label: eL.intl.string(eL.t["vi7f+q"]),
                 ariaLabel: eL.intl.string(eL.t["vi7f+q"]),
                 element: L.Z,
-                newIndicator: (0, r.jsx)(eH, {}),
-                newIndicatorDismissibleContentTypes: [...eV()],
+                newIndicator: (0, r.jsx)(eY, {}),
+                newIndicatorDismissibleContentTypes: [...eH()],
                 notice: {
-                    stores: [B.Z, A.Z],
+                    stores: [B.Z, S.Z],
                     element: w.Z,
                 },
                 onSettingsClose: () => {
                     l.Z.wait(() => {
-                        (0, S.It)(), (0, u.P6)(), d.Z.clearSubsection(eD.oAB.PROFILE_CUSTOMIZATION);
+                        (0, T.It)(), (0, u.P6)(), d.Z.clearSubsection(eD.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
                 url: eD.Z5c.SETTINGS("profile-customization"),
@@ -574,7 +588,7 @@ let eZ = () => {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eL.intl.string(eL.t["3o2ojh"])],
                 parent: eR.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                predicate: () => !eJ,
+                predicate: () => !e0,
             },
             [eR.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
@@ -605,7 +619,7 @@ let eZ = () => {
                 section: eD.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eL.intl.string(eL.t.CyLYKZ)],
                 parent: eR.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-                predicate: () => te,
+                predicate: () => tn,
             },
             [eR.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
                 section: eD.oAB.DATA_AND_PRIVACY,
@@ -627,13 +641,13 @@ let eZ = () => {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eL.intl.string(eL.t.qFsx5q)],
                 parent: eR.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => ez && !e3 && !eq,
+                predicate: () => eX && !e4 && !eQ,
             },
             [eR.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: eD.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eL.intl.string(eL.t["5b3FNI"])],
                 parent: eR.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e2,
+                predicate: () => e5,
             },
             [eR.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eD.oAB.FAMILY_CENTER,
@@ -641,10 +655,10 @@ let eZ = () => {
                 label: eL.intl.string(eM.default.gntCQT),
                 ariaLabel: eL.intl.string(eM.default.gntCQT),
                 element: el.Z,
-                badgeCount: T,
+                badgeCount: I,
                 newIndicator: (0, r.jsx)(s.IGR, {
                     text: eL.intl.string(eL.t.y2b7CA),
-                    color: v.Z.BG_BRAND,
+                    color: O.Z.BG_BRAND,
                 }),
                 newIndicatorDismissibleContentTypes: [a.z.FAMILY_CENTER_NEW_BADGE],
                 url: eD.Z5c.SETTINGS("family-center"),
@@ -669,7 +683,7 @@ let eZ = () => {
                 element: eg.Z,
                 newIndicatorDismissibleContentTypes: [a.z.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
-                impressionProperties: { source: null == I ? void 0 : I.source },
+                impressionProperties: { source: null == v ? void 0 : v.source },
             },
             [eR.s6.CONNECTIONS]: {
                 section: eD.oAB.CONNECTIONS,
@@ -678,7 +692,7 @@ let eZ = () => {
                 ariaLabel: eL.intl.string(eL.t["3fe7U5"]),
                 element: ei.Z,
                 impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
-                impressionProperties: { source: null == I ? void 0 : I.source },
+                impressionProperties: { source: null == v ? void 0 : v.source },
                 newIndicatorDismissibleContentTypes: [a.z.NEW_CRUNCHYROLL_CONNECTION],
                 url: eD.Z5c.SETTINGS("connections"),
             },
@@ -704,9 +718,9 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t.z2jK6X)],
                 label: eL.intl.string(eL.t.z2jK6X),
                 ariaLabel: eL.intl.string(eL.t.z2jK6X),
-                icon: ek ? (0, r.jsx)(b.Z, {}) : void 0,
-                element: y.Z,
-                predicate: () => !eG,
+                icon: eU ? (0, r.jsx)(E.Z, {}) : void 0,
+                element: b.Z,
+                predicate: () => !eB,
                 url: eD.Z5c.SETTINGS("clips"),
             },
             [eR.s6.CLIPS_RECORDING_TAB]: {
@@ -729,7 +743,7 @@ let eZ = () => {
                 parent: eR.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
                 label: eL.intl.string(eL.t["3wRort"]),
                 element: eA.ZP,
-                predicate: () => e4 || e5,
+                predicate: () => e8 || e6,
             },
             [eR.s6.BLOCKED_USERS]: {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
@@ -737,7 +751,7 @@ let eZ = () => {
                 label: eL.intl.string(eL.t.PFOUKW),
                 searchableTitles: [eL.intl.string(eL.t.PFOUKW)],
                 element: eA.GF,
-                predicate: () => e5,
+                predicate: () => e6,
             },
             [eR.s6.IGNORED_USERS]: {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
@@ -745,7 +759,7 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t["93ZDWE"])],
                 label: eL.intl.string(eL.t["93ZDWE"]),
                 element: eA.yo,
-                predicate: () => e4,
+                predicate: () => e8,
             },
             [eR.s6.PREMIUM]: {
                 section: eD.oAB.PREMIUM,
@@ -753,7 +767,7 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t.Ipxkog)],
                 label: eL.intl.string(eL.t.Ipxkog),
                 element: q.Z,
-                className: ej.premiumTab,
+                className: ek.premiumTab,
             },
             [eR.s6.GUILD_BOOSTING]: {
                 section: eD.oAB.GUILD_BOOSTING,
@@ -766,7 +780,7 @@ let eZ = () => {
                 ariaLabel: eL.intl.string(eL.t.trSpHX),
                 searchableTitles: [eL.intl.string(eL.t.trSpHX)],
                 label: eL.intl.string(eL.t.trSpHX),
-                element: D.Z,
+                element: P.Z,
                 icon: h
                     ? (0, r.jsx)(s.Mgn, {
                           size: "xs",
@@ -791,25 +805,25 @@ let eZ = () => {
                 section: eD.oAB.INVENTORY,
                 searchableTitles: [eL.intl.string(eL.t["il+VCo"])],
                 parent: eR.s6.GIFT_INVENTORY,
-                predicate: () => !eX,
+                predicate: () => !eJ,
             },
             [eR.s6.GIFT_INVENTORY_QUESTS]: {
                 section: eD.oAB.INVENTORY,
                 searchableTitles: [eL.intl.string(eL.t.JALI2K)],
                 parent: eR.s6.GIFT_INVENTORY,
-                predicate: () => eQ,
+                predicate: () => e$,
             },
             [eR.s6.GIFT_INVENTORY_LIST]: {
                 section: eD.oAB.INVENTORY,
                 searchableTitles: [eL.intl.string(eL.t["9KeUbY"])],
                 parent: eR.s6.GIFT_INVENTORY,
-                predicate: () => !eX,
+                predicate: () => !eJ,
             },
             [eR.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: eD.oAB.INVENTORY,
                 searchableTitles: [eL.intl.string(eL.t.vwMEHS)],
                 parent: eR.s6.GIFT_INVENTORY,
-                predicate: () => eX,
+                predicate: () => eJ,
             },
             [eR.s6.BILLING]: {
                 section: eD.oAB.BILLING,
@@ -834,8 +848,8 @@ let eZ = () => {
                 label: eL.intl.string(eL.t["iHH+ky"]),
                 ariaLabel: eL.intl.string(eL.t["iHH+ky"]),
                 element: et.Z,
-                newIndicator: (0, r.jsx)(eF, {}),
-                newIndicatorDismissibleContentTypes: eZ(),
+                newIndicator: (0, r.jsx)(eV, {}),
+                newIndicatorDismissibleContentTypes: eF(),
                 url: eD.Z5c.SETTINGS("appearance"),
             },
             [eR.s6.APPEARANCE_THEME]: {
@@ -864,7 +878,7 @@ let eZ = () => {
                 parent: eR.s6.APPEARANCE,
                 newIndicator: (0, r.jsx)(s.IGR, {
                     text: eL.intl.string(eL.t.y2b7CA),
-                    color: v.Z.BG_BRAND,
+                    color: O.Z.BG_BRAND,
                 }),
             },
             [eR.s6.APPEARANCE_SCALING_SPACING]: {
@@ -921,7 +935,7 @@ let eZ = () => {
                 section: eD.oAB.ACCESSIBILITY,
                 searchableTitles: [eL.intl.string(eL.t["+Isihb"])],
                 parent: eR.s6.ACCESSIBILITY,
-                predicate: () => (0, O.A)("SettingsRendererConfig"),
+                predicate: () => (0, y.A)("SettingsRendererConfig"),
             },
             [eR.s6.ACCESSIBILITY_ROLE_STYLE]: {
                 section: eD.oAB.ACCESSIBILITY,
@@ -1097,13 +1111,13 @@ let eZ = () => {
                 section: eD.oAB.VOICE,
                 searchableTitles: [eL.intl.string(eL.t["pS+K2L"]), eL.intl.string(eL.t.nuFtHH)],
                 parent: eR.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => e7 !== eN._.STUDIO,
+                predicate: () => te !== eN._.STUDIO,
             },
             [eR.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
                 section: eD.oAB.VOICE,
                 searchableTitles: [eL.intl.string(eL.t["sqUm+k"]), eL.intl.string(eL.t.nuFtHH)],
                 parent: eR.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => e6 === ew.pM.VOICE_ACTIVITY && e9,
+                predicate: () => e9 === ew.pM.VOICE_ACTIVITY && tt,
             },
             [eR.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT]: {
                 section: eD.oAB.VOICE,
@@ -1161,7 +1175,7 @@ let eZ = () => {
                 section: eD.oAB.VOICE,
                 searchableTitles: [eL.intl.string(eL.t["6I6GUv"])],
                 parent: eR.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => e9,
+                predicate: () => tt,
             },
             [eR.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
                 section: eD.oAB.VOICE,
@@ -1280,7 +1294,7 @@ let eZ = () => {
                 parent: eR.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
                 predicate: () =>
                     ("canary" === Y.ZP.releaseChannel || "development" === Y.ZP.releaseChannel) &&
-                    eK &&
+                    eq &&
                     G.Z.supports(ew.AN.CONNECTION_REPLAY),
             },
             [eR.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
@@ -1300,12 +1314,12 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t.AtCukI)],
                 label: eL.intl.string(eL.t.AtCukI),
                 ariaLabel: eL.intl.string(eL.t.AtCukI),
-                element: R.Z,
-                predicate: () => N.Z.settingsVisible,
+                element: N.Z,
+                predicate: () => C.Z.settingsVisible,
                 icon: (0, r.jsx)("img", {
                     alt: "",
                     src: n(348621),
-                    className: ej.poggermodeIcon,
+                    className: ek.poggermodeIcon,
                 }),
             },
             [eR.s6.CHAT]: {
@@ -1320,13 +1334,13 @@ let eZ = () => {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t.VYODPD)],
                 parent: eR.s6.CHAT,
-                predicate: () => tn,
+                predicate: () => ti,
             },
             [eR.s6.MESSAGE_SEARCH_ALL_DMS]: {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t["t4+fbe"])],
                 parent: eR.s6.MESSAGE_SEARCH,
-                predicate: () => tn,
+                predicate: () => ti,
             },
             [eR.s6.CHAT_INLINE_MEDIA]: {
                 section: eD.oAB.TEXT,
@@ -1387,13 +1401,13 @@ let eZ = () => {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t.EHlAMc)],
                 parent: eR.s6.CHAT,
-                predicate: () => (0, P.dX)({ location: "SettingsRendererConfig" }),
+                predicate: () => (0, R.dX)({ location: "SettingsRendererConfig" }),
             },
             [eR.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE]: {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t["CtYr+U"])],
                 parent: eR.s6.CHAT_SOUNDMOJI,
-                predicate: () => (0, P.dX)({ location: "SettingsRendererConfig" }),
+                predicate: () => (0, R.dX)({ location: "SettingsRendererConfig" }),
             },
             [eR.s6.CHAT_TEXT_BOX]: {
                 section: eD.oAB.TEXT,
@@ -1424,7 +1438,7 @@ let eZ = () => {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t.uXQ2xT)],
                 parent: eR.s6.CHAT_TEXT_BOX,
-                predicate: () => tt,
+                predicate: () => tr,
             },
             [eR.s6.NOTIFICATIONS]: {
                 section: eD.oAB.NOTIFICATIONS,
@@ -1540,7 +1554,7 @@ let eZ = () => {
                 section: eD.oAB.NOTIFICATIONS,
                 searchableTitles: [eL.intl.string(eL.t["uvIi/4"])],
                 parent: eR.s6.NOTIFICATIONS,
-                predicate: () => (0, C.bH)("SettingsRendererConfig"),
+                predicate: () => (0, A.bH)("SettingsRendererConfig"),
             },
             [eR.s6.NOTIFICATIONS_USER_RESURRECTION]: {
                 section: eD.oAB.NOTIFICATIONS,
@@ -1577,7 +1591,7 @@ let eZ = () => {
                 section: eD.oAB.LINUX,
                 searchableTitles: [eL.intl.string(eL.t["7pPjTW"])],
                 label: eL.intl.string(eL.t["7pPjTW"]),
-                element: eY,
+                element: ez,
                 predicate: () => H.isPlatformEmbedded && (0, H.isLinux)(),
             },
             [eR.s6.STREAMER_MODE]: {
@@ -1642,6 +1656,8 @@ let eZ = () => {
                 label: eL.intl.string(eL.t["8/udY0"]),
                 ariaLabel: eL.intl.string(eL.t["8/udY0"]),
                 element: ee.ZP,
+                newIndicator: (0, r.jsx)(eK, {}),
+                newIndicatorDismissibleContentTypes: [a.z.NITRO_PRIVACY_PERK_NEW_BADGE],
             },
             [eR.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
                 section: eD.oAB.ADVANCED,
@@ -1659,13 +1675,13 @@ let eZ = () => {
                 section: eD.oAB.ADVANCED,
                 searchableTitles: [eL.intl.string(eL.t.fi3UQN)],
                 parent: eR.s6.SETTINGS_ADVANCED,
-                predicate: () => e$,
+                predicate: () => e1,
             },
             [eR.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
                 section: eD.oAB.ADVANCED,
                 searchableTitles: [eL.intl.string(eL.t.erOqlh)],
                 parent: eR.s6.SETTINGS_ADVANCED,
-                predicate: () => e1,
+                predicate: () => e2,
             },
             [eR.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eD.oAB.ADVANCED,
@@ -1674,10 +1690,9 @@ let eZ = () => {
             },
             [eR.s6.SETTINGS_ADVANCED_CF_WARP]: {
                 section: eD.oAB.ADVANCED,
-                searchableTitles: ["CF WARP", "CloudFlare WARP"],
+                searchableTitles: [eL.intl.string(ej.default.SsTtq3)],
                 parent: eR.s6.SETTINGS_ADVANCED,
-                predicate: () =>
-                    g.Z.getCurrentConfig({ location: "SettingsRendererConfig" }, { autoTrackExposure: !1 }).enable,
+                predicate: () => D.H.getConfig({ location: "SettingsRendererConfig" }).enabled,
             },
             [eR.s6.ACTIVITY_PRIVACY]: {
                 section: eD.oAB.ACTIVITY_PRIVACY,
@@ -1685,23 +1700,23 @@ let eZ = () => {
                 label: eL.intl.string(eL.t.Cq98yL),
                 ariaLabel: eL.intl.string(eL.t.Cq98yL),
                 element: $.Z,
-                predicate: () => !eG,
+                predicate: () => !eB,
                 url: eD.Z5c.SETTINGS("activity-privacy"),
             },
             [eR.s6.ACTIVITY_PRIVACY_STATUS]: {
-                section: eG ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
+                section: eB ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eL.intl.string(eL.t["8ka8li"])],
-                parent: eG ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
+                parent: eB ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
             },
             [eR.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-                section: eG ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
+                section: eB ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eL.intl.string(eL.t.VOszPA)],
-                parent: eG ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
+                parent: eB ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
             },
             [eR.s6.ACTIVITY_PRIVACY_TOS]: {
-                section: eG ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
+                section: eB ? eD.oAB.GAMES : eD.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eR.CF],
-                parent: eG ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
+                parent: eB ? eR.s6.GAMES_ACTIVITY_PRIVACY : eR.s6.ACTIVITY_PRIVACY,
             },
             [eR.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY]: {
                 section: eD.oAB.ACTIVITY_PRIVACY,
@@ -1713,18 +1728,18 @@ let eZ = () => {
                 searchableTitles: [eL.intl.string(eL.t.AVDyEj)],
                 label: eL.intl.string(eL.t.AVDyEj),
                 element: ec.Z,
-                predicate: () => !eG && (0, eT.Jw)(),
+                predicate: () => !eB && (0, eT.Jw)(),
             },
             [eR.s6.OVERLAY]: {
                 section: eD.oAB.OVERLAY,
                 searchableTitles: [eL.intl.string(eL.t["9cb1Uz"]), eL.intl.string(eL.t.HcoRu0)],
                 label: eL.intl.string(eL.t["9cb1Uz"]),
                 element: ep.Z,
-                predicate: () => !eG && M,
+                predicate: () => !eB && M,
             },
             [eR.s6.CHANGELOG]: {
                 section: "changelog",
-                onClick: () => (0, E.Z)(!0),
+                onClick: () => (0, g.Z)(!0),
                 searchableTitles: [eL.intl.string(eL.t.LRmNAl)],
                 label: eL.intl.string(eL.t.LRmNAl),
             },
@@ -1831,7 +1846,7 @@ let eZ = () => {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Always deliver ads"],
                 parent: eR.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
@@ -1849,7 +1864,7 @@ let eZ = () => {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Idle Status Indicator"],
                 parent: eR.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
@@ -1861,43 +1876,43 @@ let eZ = () => {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["CSS Debugging"],
                 parent: eR.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_HIGHLIGHT_MANA_COMPONENTS]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Highlight Mana Components"],
                 parent: eR.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Highlight Void Toggleable Components"],
                 parent: eR.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Layout Debugging"],
                 parent: eR.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Layout Debugging"],
                 parent: eR.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && k.Z.isDeveloper && U.default.layoutDebuggingEnabled,
+                predicate: () => eq && k.Z.isDeveloper && U.default.layoutDebuggingEnabled,
             },
             [eR.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Preview Unpublished Collections"],
                 parent: eR.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Disable App Collections Cache"],
                 parent: eR.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && k.Z.isDeveloper,
+                predicate: () => eq && k.Z.isDeveloper,
             },
             [eR.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
                 section: eD.oAB.DEVELOPER_OPTIONS,
@@ -1990,8 +2005,8 @@ let eZ = () => {
                     (0, s.h7j)((e) =>
                         (0, r.jsx)(
                             s.ConfirmModal,
-                            eB(
-                                eU(
+                            eZ(
+                                eG(
                                     {
                                         header: eL.intl.string(eL.t["2jxGer"]),
                                         confirmText: eL.intl.string(eL.t["2jxGer"]),
