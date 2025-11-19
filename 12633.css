@@ -72592,68 +72592,15 @@ html .progress__61462 {
 
 .actionButtons_e8b59c {
     display: none;
-    inset-inline-end: 12px;
+    inset-inline-end: var(--space-8);
     position: absolute;
-    top: 12px
+    top: var(--space-8)
 }
 
 .messageGroupWrapper_e8b59c:focus-within .actionButtons_e8b59c,
 .messageGroupWrapper_e8b59c:hover .actionButtons_e8b59c {
-    display: flex
-}
-
-.jumpButton_e8b59c {
-    background-color: var(--background-surface-high);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-xs);
-    color: var(--interactive-normal);
-    cursor: pointer;
     display: flex;
-    font-size: 11px;
-    font-weight: var(--font-weight-medium);
-    height: 14px;
-    line-height: 14px;
-    margin-inline: 6px 4px;
-    padding: 2px 8px;
-    position: relative;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
-}
-
-.jumpButton_e8b59c:hover {
-    color: var(--interactive-active)
-}
-
-.keyboard-mode .jumpButton_e8b59c:focus {
-    box-shadow: 0 0 0 4px var(--blue-345)
-}
-
-.jumpButton_e8b59c .loading_e8b59c {
-    align-items: center;
-    display: flex;
-    inset: 0;
-    justify-content: center;
-    opacity: 0;
-    position: absolute
-}
-
-.jumpButton_e8b59c .loading_e8b59c.visible_e8b59c {
-    opacity: 1
-}
-
-.closeIcon_e8b59c {
-    color: var(--interactive-normal);
-    cursor: pointer;
-    display: block;
-    height: 16px;
-    width: 16px
-}
-
-.closeIcon_e8b59c:active,
-.closeIcon_e8b59c:hover {
-    color: var(--interactive-active)
+    gap: var(--space-8)
 }
 
 .enable-forced-colors .messagesPopoutWrap_e8b59c {
@@ -79739,7 +79686,10 @@ div.nagbar_d74ef8 {
 }
 
 .backupCode__2666b {
-    display: inline-block;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
     outline: none
 }
 
@@ -79767,7 +79717,7 @@ div.nagbar_d74ef8 {
 }
 
 .noticeTextButton__2666b,
-.userSettingsSecurity__2666b .codeCheckbox__2666b {
+.userSettingsSecurity__2666b .backupCode__2666b {
     color: var(--text-default)
 }
 
