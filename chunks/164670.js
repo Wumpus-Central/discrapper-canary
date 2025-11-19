@@ -25,6 +25,7 @@ function u(e) {
         applicationId: e.application_id,
         title: e.title,
         logoAssetId: e.logo_asset_id,
+        lightThemeLogoAssetId: e.light_theme_logo_asset_id,
         pages: e.pages.map((e) => ({
             title: e.title,
             leaderboard:
