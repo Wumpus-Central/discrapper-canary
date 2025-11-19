@@ -14,8 +14,4 @@ e.exports = {
     loadingPlaceholder: "loadingPlaceholder_e8b59c",
     body: "body_e8b59c",
     actionButtons: "actionButtons_e8b59c",
-    jumpButton: "jumpButton_e8b59c",
-    loading: "loading_e8b59c",
-    visible: "visible_e8b59c",
-    closeIcon: "closeIcon_e8b59c",
 };

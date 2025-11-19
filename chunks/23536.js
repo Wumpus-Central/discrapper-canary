@@ -76,6 +76,7 @@ function _(e) {
                 return t.isPrivate() ? m.intl.string(m.t["3dLGAs"]) : m.intl.string(m.t.KTbRcg);
             },
             listName: "pins",
+            closeAriaLabel: m.intl.string(m.t["Bse+F/"]),
         }),
     });
 }
