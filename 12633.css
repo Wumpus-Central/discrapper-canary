@@ -6545,22 +6545,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     margin-top: 1px
 }
 
-.spacing_a959b1 {
-    margin-bottom: 20px
-}
-
-.error_a959b1 {
-    margin-top: 8px
-}
-
-.card_a959b1 {
-    padding: 10px
-}
-
-.warning_a959b1 {
-    color: var(--white-500)
-}
-
 .loadingPopout__58f1c {
     background-color: var(--background-base-lower);
     display: flex;
@@ -79411,6 +79395,22 @@ div.nagbar_d74ef8 {
 
 .error__6aefd {
     margin-top: 8px
+}
+
+.spacing_a959b1 {
+    margin-bottom: 20px
+}
+
+.error_a959b1 {
+    margin-top: 8px
+}
+
+.card_a959b1 {
+    padding: 10px
+}
+
+.warning_a959b1 {
+    color: var(--white-500)
 }
 
 .spacer__5ecaa {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(953529), n(539854), n(388685);
+n.d(t, { Z: () => R }), n(953529), n(539854), n(388685);
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -14,12 +14,10 @@ var r = n(990547),
     h = n(314897),
     m = n(271383),
     g = n(430824),
-    E = n(546796),
-    b = n(573261),
-    y = n(999382),
-    O = n(981631),
-    v = n(388032);
-function I(e, t, n) {
+    E = n(573261),
+    b = n(999382),
+    y = n(981631);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +41,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,22 +58,22 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +81,7 @@ function C(e, t) {
     }
     return i;
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,8 +90,8 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = new s.Z("GuildSettingsActionCreators"),
-    P = {
+let C = new s.Z("GuildSettingsActionCreators"),
+    N = {
         init(e, t, n, r) {
             a.Z.dispatch({
                 type: "GUILD_SETTINGS_INIT",
@@ -132,12 +130,12 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("18295"),
                 n.e("59231"),
             ]).then(n.bind(n, 994763)),
-                (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.GuildFeatures.COMMUNITY)) &&
-                    (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)),
-                    t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
-                P.init(e, t, r, i),
+                (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(y.GuildFeatures.COMMUNITY)) &&
+                    (t === y.pNK.GUILD_AUTOMOD && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_AUTOMOD)),
+                    t === y.pNK.MEMBER_VERIFICATION && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
+                N.init(e, t, r, i),
                 p.Z.closeGuildSidebar(e),
-                (0, o.jN)(O.S9g.GUILD_SETTINGS);
+                (0, o.jN)(y.S9g.GUILD_SETTINGS);
         },
         close() {
             a.Z.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
@@ -150,11 +148,11 @@ let R = new s.Z("GuildSettingsActionCreators"),
         },
         setSection(e, t) {
             var n;
-            let r = y.Z.getGuildId();
+            let r = b.Z.getGuildId();
             null != r &&
-                ((null == (n = g.Z.getGuild(r)) ? void 0 : n.features.has(O.GuildFeatures.COMMUNITY)) &&
-                    (e === O.pNK.GUILD_AUTOMOD && ((e = O.pNK.SAFETY), (t = O.KsC.SAFETY_AUTOMOD)),
-                    e === O.pNK.MEMBER_VERIFICATION && ((e = O.pNK.SAFETY), (t = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
+                ((null == (n = g.Z.getGuild(r)) ? void 0 : n.features.has(y.GuildFeatures.COMMUNITY)) &&
+                    (e === y.pNK.GUILD_AUTOMOD && ((e = y.pNK.SAFETY), (t = y.KsC.SAFETY_AUTOMOD)),
+                    e === y.pNK.MEMBER_VERIFICATION && ((e = y.pNK.SAFETY), (t = y.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
                 a.Z.dispatch({
                     type: "GUILD_SETTINGS_SET_SECTION",
                     section: e,
@@ -176,7 +174,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         updateEmbed: (e, t, n) =>
             i.tn
                 .patch({
-                    url: O.ANM.GUILD_WIDGET(e),
+                    url: y.ANM.GUILD_WIDGET(e),
                     body: {
                         enabled: t,
                         channel_id: n,
@@ -193,33 +191,25 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     });
                 }),
         updateMFALevel(e) {
-            let { guildId: t, level: n, isEnabled: r } = e;
-            return (0, E.Z)(
-                (e) =>
-                    i.tn.post({
-                        url: O.ANM.GUILD_MFA(t),
-                        body: T({ level: n }, e),
-                        oldFormErrors: !0,
-                        rejectWithError: !1,
+            let { guildId: t, level: n } = e;
+            return i.tn
+                .post({
+                    url: y.ANM.GUILD_MFA(t),
+                    body: { level: n },
+                    oldFormErrors: !0,
+                    rejectWithError: !1,
+                })
+                .then((e) =>
+                    a.Z.dispatch({
+                        type: "GUILD_SETTINGS_SET_MFA_SUCCESS",
+                        level: e.body.level,
                     }),
-                {
-                    modalProps: {
-                        title: v.intl.string(v.t.Wi9LEV),
-                        actionText: r ? v.intl.string(v.t["MP0Ho+"]) : v.intl.string(v.t.yZcYGa),
-                    },
-                    checkEnabled: !1,
-                },
-            ).then((e) =>
-                a.Z.dispatch({
-                    type: "GUILD_SETTINGS_SET_MFA_SUCCESS",
-                    level: e.body.level,
-                }),
-            );
+                );
         },
         updateIcon(e, t) {
             i.tn
                 .patch({
-                    url: O.ANM.GUILD(e),
+                    url: y.ANM.GUILD(e),
                     body: { icon: t },
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -248,14 +238,14 @@ let R = new s.Z("GuildSettingsActionCreators"),
         updateGuild(e) {
             var t,
                 { safetyAlertsChannelId: n, profile: r } = e;
-            let i = T({}, C(e, ["safetyAlertsChannelId", "profile"]));
-            null != r && (i.profile = T({}, null != (t = i.profile) ? t : {}, r)),
-                null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n),
-                a.Z.dispatch(T({ type: "GUILD_SETTINGS_UPDATE" }, i));
+            let i = v({}, S(e, ["safetyAlertsChannelId", "profile"]));
+            null != r && (i.profile = v({}, null != (t = i.profile) ? t : {}, r)),
+                null != b.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n),
+                a.Z.dispatch(v({ type: "GUILD_SETTINGS_UPDATE" }, i));
         },
         updateGuildProfile(e, t) {
             a.Z.dispatch(
-                T(
+                v(
                     {
                         type: "GUILD_SETTINGS_PROFILE_UPDATE",
                         guildId: e,
@@ -280,19 +270,19 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     explicitContentFilter: g,
                     features: E,
                     systemChannelFlags: b,
-                    preferredLocale: y,
-                    rulesChannelId: v,
-                    safetyAlertsChannelId: I,
-                    ownerConfiguredContentLevel: S,
-                    discoverySplash: C,
-                    publicUpdatesChannelId: N,
+                    preferredLocale: O,
+                    rulesChannelId: I,
+                    safetyAlertsChannelId: S,
+                    ownerConfiguredContentLevel: A,
+                    discoverySplash: N,
+                    publicUpdatesChannelId: R,
                     premiumProgressBarEnabled: P,
                     profile: D,
                     moderatorReportingEnabled: w,
                 } = t,
                 L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                x = A(
-                    T(
+                x = T(
+                    v(
                         {
                             name: n,
                             description: r,
@@ -301,7 +291,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                             banner: u,
                             home_header: d,
                             features: E,
-                            preferred_locale: y,
+                            preferred_locale: O,
                             afk_channel_id: f,
                             afk_timeout: _,
                             system_channel_id: p,
@@ -309,11 +299,11 @@ let R = new s.Z("GuildSettingsActionCreators"),
                             default_message_notifications: m,
                             explicit_content_filter: g,
                             system_channel_flags: b,
-                            rules_channel_id: v,
-                            owner_configured_content_level: S,
-                            discovery_splash: C,
-                            public_updates_channel_id: N,
-                            safety_alerts_channel_id: I,
+                            rules_channel_id: I,
+                            owner_configured_content_level: A,
+                            discovery_splash: N,
+                            public_updates_channel_id: R,
+                            safety_alerts_channel_id: S,
                         },
                         null != P ? { premium_progress_bar_enabled: P } : null,
                     ),
@@ -326,7 +316,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 a.Z.dispatch({ type: "GUILD_SETTINGS_SUBMIT" }),
                 i.tn
                     .patch({
-                        url: O.ANM.GUILD(e),
+                        url: y.ANM.GUILD(e),
                         query: { for_discovery: L.isForDiscovery },
                         body: x,
                         oldFormErrors: !0,
@@ -346,7 +336,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                                     type: "GUILD_SETTINGS_SUBMIT_FAILURE",
                                     errors: e.body,
                                 }),
-                                R.error("Failed to save guild settings", { errors: e.body }),
+                                C.error("Failed to save guild settings", { errors: e.body }),
                                 L.throwErr)
                             )
                                 throw e.body;
@@ -357,7 +347,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         updateGuildModeration: (e, t) =>
             i.tn
                 .patch({
-                    url: O.ANM.GUILD(e),
+                    url: y.ANM.GUILD(e),
                     body: {
                         verification_level: t.verificationLevel,
                         explicit_content_filter: t.explicitContentFilter,
@@ -369,40 +359,27 @@ let R = new s.Z("GuildSettingsActionCreators"),
         transferOwnership(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
                 i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return (0, E.Z)(
-                (a) =>
-                    b.Z.patch({
-                        url: O.ANM.GUILD(e),
-                        body: T(
-                            {
-                                owner_id: t,
-                                code: i,
-                            },
-                            a,
-                        ),
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: r.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP,
-                            properties: {
-                                guild_id: e,
-                                verification_type: n,
-                            },
-                        },
-                        rejectWithError: !1,
-                    }),
-                {
-                    modalProps: {
-                        title: v.intl.string(v.t.Z5s7PM),
-                        actionText: v.intl.string(v.t.Z5s7PM),
-                    },
-                    checkEnabled: !1,
+            return E.Z.patch({
+                url: y.ANM.GUILD(e),
+                body: {
+                    owner_id: t,
+                    code: i,
                 },
-            );
+                oldFormErrors: !0,
+                trackedActionData: {
+                    event: r.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP,
+                    properties: {
+                        guild_id: e,
+                        verification_type: n,
+                    },
+                },
+                rejectWithError: !1,
+            });
         },
         sendTransferOwnershipPincode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return b.Z.put({
-                url: O.ANM.GUILD_PINCODE(e),
+            return E.Z.put({
+                url: y.ANM.GUILD_PINCODE(e),
                 oldFormErrors: !0,
                 trackedActionData: {
                     event: r.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -414,42 +391,32 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 rejectWithError: !1,
             });
         },
-        deleteGuild: (e, t) =>
-            (0, E.Z)(
-                (t) =>
-                    i.tn.post({
-                        url: O.ANM.GUILD_DELETE(e),
-                        body: t,
-                        oldFormErrors: !0,
-                        rejectWithError: !1,
-                    }),
-                {
-                    modalProps: {
-                        title: v.intl.formatToPlainString(v.t.us7mC1, { name: t }),
-                        actionText: v.intl.string(v.t.l3hWP6),
-                        disallowBackupCodes: !0,
-                    },
-                    checkEnabled: !1,
-                },
-            ).then(() => {
-                P.close();
-            }),
+        deleteGuild: (e) =>
+            i.tn
+                .post({
+                    url: y.ANM.GUILD_DELETE(e),
+                    oldFormErrors: !0,
+                    rejectWithError: !1,
+                })
+                .then(() => {
+                    N.close();
+                }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = f.Z.isLurking(e);
             await i.tn.del({
-                url: O.ANM.GUILD_LEAVE(e),
+                url: y.ANM.GUILD_LEAVE(e),
                 body: { lurking: n || m.ZP.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-                P.close(),
-                t && n && (0, _.uL)(O.Z5c.GUILD_DISCOVERY);
+                N.close(),
+                t && n && (0, _.uL)(y.Z5c.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, r, o) {
             if (d.Z.isFullServerPreview(e) && t === h.default.getId()) return void (0, u.og)(e, n);
             await i.tn.patch({
-                url: O.ANM.GUILD_MEMBER(e, t),
+                url: y.ANM.GUILD_MEMBER(e, t),
                 body: { roles: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -474,7 +441,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         bulkAddMemberRoles: (e, t, n) =>
             i.tn
                 .patch({
-                    url: O.ANM.GUILD_ROLE_MEMBERS(e, t),
+                    url: y.ANM.GUILD_ROLE_MEMBERS(e, t),
                     body: { member_ids: n },
                     rejectWithError: !1,
                 })
@@ -488,7 +455,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 }),
         enableIntegration: (e, t, n) =>
             i.tn.post({
-                url: O.ANM.GUILD_INTEGRATIONS(e),
+                url: y.ANM.GUILD_INTEGRATIONS(e),
                 body: {
                     type: t,
                     id: n,
@@ -498,7 +465,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
             }),
         disableIntegration: (e, t) =>
             i.tn.del({
-                url: O.ANM.GUILD_INTEGRATION(e, t),
+                url: y.ANM.GUILD_INTEGRATION(e, t),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
@@ -509,7 +476,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 enable_emoticons: a,
             };
             return i.tn.patch({
-                url: O.ANM.GUILD_INTEGRATION(e, t),
+                url: y.ANM.GUILD_INTEGRATION(e, t),
                 body: o,
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -517,7 +484,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         },
         syncIntegration(e, t) {
             i.tn.post({
-                url: O.ANM.GUILD_INTEGRATION_SYNC(e, t),
+                url: y.ANM.GUILD_INTEGRATION_SYNC(e, t),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             });
@@ -525,7 +492,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async migratePinPermission(e) {
             await i.tn
                 .post({
-                    url: O.ANM.GUILD_MIGRATE_PIN_PERMISSION(e),
+                    url: y.ANM.GUILD_MIGRATE_PIN_PERMISSION(e),
                     rejectWithError: !0,
                 })
                 .then(() =>
@@ -538,7 +505,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async migrateSlowmodePermission(e) {
             await i.tn
                 .post({
-                    url: O.ANM.GUILD_MIGRATE_SLOWMODE_PERMISSION(e),
+                    url: y.ANM.GUILD_MIGRATE_SLOWMODE_PERMISSION(e),
                     rejectWithError: !0,
                 })
                 .then(() =>
@@ -551,7 +518,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: r } = t,
                 i = [];
-            n && i.push(P.migratePinPermission(e)), r && i.push(P.migrateSlowmodePermission(e)), await Promise.all(i);
+            n && i.push(N.migratePinPermission(e)), r && i.push(N.migrateSlowmodePermission(e)), await Promise.all(i);
         },
     },
-    D = P;
+    R = N;

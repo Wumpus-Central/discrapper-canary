@@ -14,7 +14,7 @@ var i = n(392711),
     p = n(449226),
     f = n(981631),
     h = n(388032),
-    b = n(298392);
+    b = n(824804);
 function x(e) {
     let t,
         { guild: n } = e,
@@ -30,7 +30,6 @@ function x(e) {
                 (await m.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? f.BpS.ELEVATED : f.BpS.NONE,
-                    isEnabled: !e,
                 }));
         }, 1000);
     if (!j) return null;

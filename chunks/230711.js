@@ -1,14 +1,12 @@
-n.d(t, { Z: () => m }), n(415506);
+n.d(t, { Z: () => f }), n(415506);
 var r = n(544891),
     i = n(433517),
     a = n(570140),
     o = n(330055),
-    s = n(546796),
-    l = n(37234),
-    c = n(981631),
-    u = n(792101),
-    d = n(388032);
-function f(e, t, n) {
+    s = n(37234),
+    l = n(981631),
+    c = n(792101);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +19,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,41 +30,18 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let m = {
+let f = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
         a.Z.dispatch(
-            _(
+            d(
                 {
                     type: "USER_SETTINGS_MODAL_OPEN",
                     section: e,
@@ -75,7 +50,7 @@ let m = {
                 n,
             ),
         ),
-            (0, l.jN)(c.S9g.USER_SETTINGS);
+            (0, s.jN)(l.S9g.USER_SETTINGS);
     },
     close() {
         a.Z.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
@@ -84,7 +59,7 @@ let m = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         a.Z.dispatch(
-            _(
+            d(
                 {
                     type: "USER_SETTINGS_MODAL_SET_SECTION",
                     section: e,
@@ -120,88 +95,70 @@ let m = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
-        let { username: n, email: l, emailToken: f, password: p, avatar: m, newPassword: g, discriminator: E } = e,
-            { close: b } = t;
-        return (0, s.Z)(
-            (e) => {
-                let t = h(
-                        _(
-                            {
-                                username: n,
-                                email: l,
-                                email_token: f,
-                                password: p,
-                                avatar: m,
-                                new_password: g,
-                            },
-                            e,
-                        ),
-                        { discriminator: null != E && "" !== E ? E : void 0 },
-                    ),
-                    a = i.K.get(c.JkL),
-                    o = (0, u.xJ)();
-                null != o && null != a && ((t.push_provider = o), (t.push_token = a));
-                let s = i.K.get(c.scU);
-                return (
-                    null != u.mv && null != s && ((t.push_voip_provider = u.mv), (t.push_voip_token = s)),
-                    r.tn.patch({
-                        url: c.ANM.ME,
-                        oldFormErrors: !0,
-                        body: t,
-                        rejectWithError: !1,
-                    })
-                );
+        let { username: n, email: s, emailToken: u, password: d, avatar: f, newPassword: _, discriminator: p } = e,
+            { close: h } = t,
+            m = {
+                username: n,
+                email: s,
+                email_token: u,
+                password: d,
+                avatar: f,
+                new_password: _,
+                discriminator: null != p && "" !== p ? p : void 0,
             },
-            {
-                checkEnabled: !1,
-                modalProps: { title: d.intl.string(d.t.clQc1f) },
-                hooks: {
-                    onEarlyClose: () =>
+            g = i.K.get(l.JkL),
+            E = (0, c.xJ)();
+        null != E && null != g && ((m.push_provider = E), (m.push_token = g));
+        let b = i.K.get(l.scU);
+        return (
+            null != c.mv && null != b && ((m.push_voip_provider = c.mv), (m.push_voip_token = b)),
+            r.tn
+                .patch({
+                    url: l.ANM.ME,
+                    oldFormErrors: !0,
+                    body: m,
+                    rejectWithError: !1,
+                })
+                .then(
+                    (e) => {
+                        let t = e.body,
+                            n = t.token;
+                        return (
+                            delete t.token,
+                            a.Z.dispatch({
+                                type: "UPDATE_TOKEN",
+                                token: n,
+                                userId: t.id,
+                            }),
+                            a.Z.dispatch({
+                                type: "CURRENT_USER_UPDATE",
+                                user: t,
+                            }),
+                            void 0 !== f && (0, o.Z)({ avatarHash: t.avatar }),
+                            null != _ &&
+                                a.Z.dispatch({
+                                    type: "USER_PASSWORD_UPDATE",
+                                    user: t,
+                                    newPassword: _,
+                                }),
+                            null != d &&
+                                null != _ &&
+                                a.Z.dispatch({
+                                    type: "PASSWORD_UPDATED",
+                                    userId: t.id,
+                                }),
+                            h ? this.close() : this.submitComplete(),
+                            e
+                        );
+                    },
+                    (e) => (
                         a.Z.dispatch({
                             type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
-                            errors: {},
+                            errors: e.body,
                         }),
-                },
-            },
-        ).then(
-            (e) => {
-                let t = e.body,
-                    n = t.token;
-                return (
-                    delete t.token,
-                    a.Z.dispatch({
-                        type: "UPDATE_TOKEN",
-                        token: n,
-                        userId: t.id,
-                    }),
-                    a.Z.dispatch({
-                        type: "CURRENT_USER_UPDATE",
-                        user: t,
-                    }),
-                    void 0 !== m && (0, o.Z)({ avatarHash: t.avatar }),
-                    null != g &&
-                        a.Z.dispatch({
-                            type: "USER_PASSWORD_UPDATE",
-                            user: t,
-                            newPassword: g,
-                        }),
-                    null != p &&
-                        null != g &&
-                        a.Z.dispatch({
-                            type: "PASSWORD_UPDATED",
-                            userId: t.id,
-                        }),
-                    b ? this.close() : this.submitComplete(),
-                    e
-                );
-            },
-            (e) => (
-                a.Z.dispatch({
-                    type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
-                    errors: e.body,
-                }),
-                e
-            ),
+                        e
+                    ),
+                )
         );
     },
 };

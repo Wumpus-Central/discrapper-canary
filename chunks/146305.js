@@ -69,7 +69,7 @@ var r = n(54381),
     eh = n(981631),
     eb = n(135899),
     ex = n(388032),
-    ej = n(929958);
+    ej = n(566386);
 function e_(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -510,7 +510,7 @@ let eO = {
                         let { name: i } = t.guild,
                             l = () => {
                                 E.S.subscribeOnce(eh.CkL.LAYER_POP_COMPLETE, () => {
-                                    S.Z.deleteGuild(t.guild.id, i);
+                                    S.Z.deleteGuild(t.guild.id);
                                 }),
                                     (0, s.xf)();
                             };

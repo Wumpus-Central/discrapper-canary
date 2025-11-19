@@ -28,7 +28,7 @@ var r = n(54381),
     y = n(181339),
     N = n(981631),
     E = n(388032),
-    I = n(984734);
+    I = n(776853);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -250,7 +250,6 @@ function D(e) {
                     (await _.Z.updateMFALevel({
                         guildId: t.id,
                         level: e ? N.BpS.ELEVATED : N.BpS.NONE,
-                        isEnabled: !e,
                     })));
         }, 1000);
     return l
