@@ -7,7 +7,8 @@ var i = n(442837),
     a = n(313789),
     o = n(388032);
 let c = (0, u.qs)(a.n.VOICE_SILENCE_WARNING_SETTING, {
-    useTitle: () => o.intl.string(o.t.jtiiCw),
+    useTitle: () => o.intl.string(o.t["4rsOPQ"]),
+    useSubtitle: () => o.intl.string(o.t.jtiiCw),
     useValue: function () {
         return (0, i.e7)([r.Z], () => r.Z.getEnableSilenceWarning());
     },

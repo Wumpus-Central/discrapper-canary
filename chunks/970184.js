@@ -1,7 +1,7 @@
 n.d(t, {
     CJ: () => G,
     Ee: () => U,
-    Il: () => j,
+    Il: () => k,
     h4: () => B,
 }),
     n(388685),
@@ -129,20 +129,21 @@ let P = (e) => {
             );
         }),
         [, o] = (0, c.AB)(null == t ? void 0 : t.guild_id),
-        s = (0, p.tc)(t);
+        s = (0, p.Xb)(t),
+        l = (0, p.tc)(t);
     return (
         !!(
             !n ||
             r ||
             i ||
-            (null == t ? void 0 : t.isLockedThread()) ||
-            ((null == t ? void 0 : t.isArchivedThread()) && !s)
+            ((null == t ? void 0 : t.isLockedThread()) && !s) ||
+            ((null == t ? void 0 : t.isArchivedThread()) && !l)
         ) || !!o
     );
 };
 function D(e, t) {
     var n, r;
-    let a = i.useContext(k),
+    let a = i.useContext(j),
         o = i.useCallback(
             (t) => {
                 var n;
@@ -244,8 +245,8 @@ function M(e) {
         throw Error("".concat(e, " does not support parents"));
     };
 }
-let k = i.createContext(null);
-function j(e) {
+let j = i.createContext(null);
+function k(e) {
     let {
             children: t,
             message: n,
@@ -289,18 +290,18 @@ function j(e) {
                 };
             throw Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
         }, [n, a, o, u, s, l, c]);
-    return (0, r.jsx)(k.Provider, {
+    return (0, r.jsx)(j.Provider, {
         value: d,
         children: t,
     });
 }
 function U(e, t) {
-    return i.useContext(k).useComponentState(e, t);
+    return i.useContext(j).useComponentState(e, t);
 }
 function G() {
-    return i.useContext(k);
+    return i.useContext(j);
 }
 function B(e) {
     var t, n;
-    return null != (n = null == (t = i.useContext(k).validationErrors) ? void 0 : t[e.id]) ? n : null;
+    return null != (n = null == (t = i.useContext(j).validationErrors) ? void 0 : t[e.id]) ? n : null;
 }

@@ -7,7 +7,8 @@ var i = n(818710),
     a = n(546997),
     o = n(388032);
 let c = (0, u.qs)(s.n.STREAMING_OS_MENU_SCREEN_CAPTURE, {
-    useTitle: () => o.intl.string(o.t.ie1mgY),
+    useTitle: () => o.intl.string(o.t.lt8rRx),
+    useSubtitle: () => o.intl.string(o.t.ie1mgY),
     usePredicate: function () {
         return (0, l.e7)([r.Z], () => r.Z.supportsSystemScreensharePicker() && (0, i.V5)());
     },
