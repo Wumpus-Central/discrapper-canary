@@ -8318,8 +8318,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     align-items: center;
     display: flex;
     flex-shrink: 0;
-    justify-content: center;
-    width: var(--space-48)
+    justify-content: center
 }
 
 .assetContainer_a89985>* {
@@ -27037,18 +27036,177 @@ span.clanTag__5d473 {
     margin-top: 2px
 }
 
-.dialogWrapper_b1f768 {
-    background-color: var(--background-surface-high);
-    border-radius: var(--radius-sm);
-    box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
+.navigationIcon__90d72 {
+    display: block;
+    height: 48px;
+    width: 48px
+}
+
+.badgeIcon__90d72 {
+    height: 12px;
+    width: 12px
+}
+
+.guildSeparator__90d72 {
+    background-color: var(--border-subtle);
+    border-radius: 1px;
+    height: 2px;
+    width: 32px
+}
+
+.guildsError__90d72 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-color: var(--status-danger);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
     box-sizing: border-box;
     color: var(--text-default);
+    display: flex;
+    font-size: 20px;
+    height: 48px;
+    justify-content: center;
+    padding: 0;
+    transition: background-color .15s ease-out;
+    width: 48px
+}
+
+.errorInner__90d72 {
+    font-weight: var(--font-weight-bold)
+}
+
+.guildsError__90d72:hover {
+    background-color: var(--status-danger);
+    border-color: var(--status-danger);
+    color: var(--white-500);
+    text-decoration: none
+}
+
+.circleButtonBase__90d72 {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    transition: color .15s ease-out, background-color .15s ease-out;
+    width: 48px
+}
+
+.circleIconButton__90d72 {
+    background-color: var(--background-base-low);
+    color: var(--green-360)
+}
+
+.circleIconButton__90d72.selected__90d72 {
+    background-color: var(--green-360);
+    color: var(--white-500)
+}
+
+.nitroUpsell__90d72 {
+    background: linear-gradient(135deg, var(--premium-tier-2-purple) 0, var(--premium-tier-2-pink) 100%);
+    color: var(--white-500)
+}
+
+.nitroUpsellIcon__90d72 {
+    stroke: #000 2px
+}
+
+.circleIcon__90d72 {
+    height: 24px;
+    width: 24px
+}
+
+.plus__90d72 {
+    font-size: 40px;
+    font-weight: var(--font-weight-normal);
+    line-height: 40px;
+    position: relative;
+    top: -1px
+}
+
+.createJoinContainer__90d72 {
+    position: relative;
+    width: 50px
+}
+
+.pill__90d72 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.listItem__90d72 {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 8px;
+    position: relative;
+    width: var(--custom-guild-list-width)
+}
+
+.listItemWrapper__90d72:active {
+    transform: translateY(1px) translateZ(0)
+}
+
+.listItemTooltip__90d72 {
     font-size: 16px;
     font-weight: var(--font-weight-semibold);
     line-height: 20px;
-    max-width: 200px;
-    padding: var(--space-12);
-    width: auto
+    max-width: 196px;
+    word-wrap: break-word
+}
+
+.placeholderMask__90d72 {
+    display: block
+}
+
+.dragInner__90d72 {
+    height: 48px;
+    width: 48px
+}
+
+.iconBadge__90d72 {
+    background-color: var(--background-accent)
+}
+
+.iconBadge__90d72.participating__90d72 {
+    background-color: var(--green-360)
+}
+
+.unavailableBadge__90d72 {
+    background-color: var(--white-500);
+    color: var(--red-400) !important
+}
+
+.dragInner__90d72 {
+    background-color: var(--background-base-low)
+}
+
+.tutorialContainer__90d72 {
+    position: relative
+}
+
+.upsellTooltip__90d72 {
+    display: flex
+}
+
+.upsellIcon__90d72 {
+    flex: 0 0 auto;
+    margin-inline: -6px 8px
+}
+
+.upsellText__90d72 {
+    flex: 1 1 auto;
+    line-height: 22px
+}
+
+.listItemTooltip__90d72 {
+    color: var(--text-default)
+}
+
+.listItemTooltipContent__90d72 {
+    padding: 8px
 }
 
 .guildIcon__0fa6d {
@@ -51844,17 +52002,39 @@ screen and (max-width:485px) {
 .container__16719 {
     overflow: hidden;
     position: relative;
-    width: 100%
+    width: 100%;
+    --custom-edge-fade-width: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+    transition: -webkit-mask-image .3s linear;
+    transition: mask-image .3s linear;
+    transition: mask-image .3s linear, -webkit-mask-image .3s linear
+}
+
+.container__16719.scrollRight__16719 {
+    -webkit-mask-image: linear-gradient(90deg, #000, #000 calc(100% - var(--custom-edge-fade-width)), transparent);
+    mask-image: linear-gradient(90deg, #000, #000 calc(100% - var(--custom-edge-fade-width)), transparent)
+}
+
+.container__16719.scrollLeft__16719 {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width));
+    mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width))
+}
+
+.container__16719.scrollBoth__16719 {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width), #000 calc(100% - var(--custom-edge-fade-width)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width), #000 calc(100% - var(--custom-edge-fade-width)), transparent)
+}
+
+.container__16719.noScroll__16719 {
+    -webkit-mask-image: none;
+    mask-image: none
 }
 
 .children__16719 {
-    display: flex;
-    flex-direction: row;
     flex-shrink: auto;
-    max-width: 100%;
     overflow-x: scroll;
-    scrollbar-width: none;
-    width: content-fit
+    scrollbar-width: none
 }
 
 .children__16719>* {
@@ -51867,8 +52047,10 @@ screen and (max-width:485px) {
     flex-direction: row;
     inset: 0;
     justify-content: space-between;
+    padding: var(--space-8);
     pointer-events: none;
-    position: absolute
+    position: absolute;
+    z-index: 1
 }
 
 .actions__16719>* {
@@ -60787,7 +60969,7 @@ screen and (max-width:485px) {
 }
 
 .card__6df1a.withGiftBanner__6df1a {
-    padding-bottom: 80px
+    padding-bottom: 90px
 }
 
 .tier0__6df1a.pillMargin__6df1a {
@@ -74312,15 +74494,16 @@ html .progress__61462 {
     justify-content: center;
     -webkit-margin-start: var(--space-16);
     gap: 2px;
-    margin-inline-start: var(--space-16)
+    margin-inline-start: var(--space-16);
+    max-width: 57%
 }
 
 .avatar__72cd3 {
     align-items: center;
+    bottom: -20%;
     display: flex;
     inset-inline-end: 10px;
     position: absolute;
-    top: -40px;
     z-index: 1
 }
 
@@ -74331,7 +74514,7 @@ html .progress__61462 {
 
 .bannerImage__72cd3 {
     background-position-x: 95%;
-    background-position-y: 10%;
+    background-position-y: 100%;
     background-repeat: no-repeat;
     background-size: 300%;
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);

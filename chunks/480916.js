@@ -37,6 +37,8 @@ var r = n(626135),
             (e.EXPRESSIVE_GET_STARTED = "expressive_get_started"),
             (e.STAGE_CHANNEL_RAISE_HAND = "stage_channel_raise_hand"),
             (e.START_STAGE_PROMPT = "start_stage_prompt"),
+            (e.AGE_RESTRICTED_DM_COMMANDS_SETTINGS = "age_restricted_dm_commands_settings"),
+            (e.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS = "age_restricted_servers_access_settings"),
             e
         );
     })({}),

@@ -1,24 +1,38 @@
-n.d(t, { Z: () => u });
-var r = n(54381);
-n(473749);
-var i = n(695346),
-    a = n(682578),
-    o = n(838436),
-    s = n(51331),
-    l = n(726985),
-    c = n(388032);
-function u() {
+n.d(t, { Z: () => p });
+var r = n(54381),
+    i = n(473749),
+    a = n(168107),
+    o = n(480916),
+    s = n(622822),
+    l = n(695346),
+    c = n(682578),
+    u = n(838436),
+    d = n(51331),
+    f = n(726985),
+    _ = n(388032);
+function p() {
     var e;
-    let t = null == (e = (0, a.J)()) || e,
-        n = i.DC.useSetting();
-    return (0, r.jsx)(o.U, {
-        setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
-        children: (0, r.jsx)(s.ZP, {
-            title: c.intl.string(c.t["L+yTsa"]),
+    let t = null == (e = (0, c.J)()) || e,
+        n = l.DC.useSetting(),
+        p = (0, s.xi)(),
+        h = i.useCallback(
+            (e) => {
+                if (p && e)
+                    return void a.Z.showAgeVerificationGetStartedModal({
+                        entryPoint: o.cU.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS,
+                    });
+                l.DC.updateSetting(e);
+            },
+            [p],
+        );
+    return (0, r.jsx)(u.U, {
+        setting: f.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
+        children: (0, r.jsx)(d.ZP, {
+            title: _.intl.string(_.t["L+yTsa"]),
             value: n,
-            onChange: i.DC.updateSetting,
+            onChange: h,
             disabled: !t,
-            note: c.intl.string(c.t.hiM8pU),
+            note: _.intl.string(_.t.hiM8pU),
         }),
     });
 }

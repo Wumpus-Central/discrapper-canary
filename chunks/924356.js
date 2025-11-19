@@ -1,22 +1,37 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => p });
 var r = n(54381),
-    i = n(695346),
-    a = n(682578),
-    o = n(838436),
-    s = n(51331),
-    l = n(726985),
-    c = n(388032);
-function u() {
+    i = n(473749),
+    a = n(168107),
+    o = n(480916),
+    s = n(622822),
+    l = n(695346),
+    c = n(682578),
+    u = n(838436),
+    d = n(51331),
+    f = n(726985),
+    _ = n(388032);
+function p() {
     var e;
-    let t = i.xM.useSetting(),
-        n = null == (e = (0, a.J)()) || e;
-    return (0, r.jsx)(o.U, {
-        setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2,
-        children: (0, r.jsx)(s.ZP, {
+    let t = l.xM.useSetting(),
+        n = null == (e = (0, c.J)()) || e,
+        p = (0, s.xi)(),
+        h = i.useCallback(
+            (e) => {
+                if (p && e)
+                    return void a.Z.showAgeVerificationGetStartedModal({
+                        entryPoint: o.cU.AGE_RESTRICTED_DM_COMMANDS_SETTINGS,
+                    });
+                l.xM.updateSetting(e);
+            },
+            [p],
+        );
+    return (0, r.jsx)(u.U, {
+        setting: f.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2,
+        children: (0, r.jsx)(d.ZP, {
             value: !!n && t,
-            onChange: i.xM.updateSetting,
-            title: c.intl.string(c.t.XahVjj),
-            note: c.intl.string(c.t.R9fXyS),
+            onChange: h,
+            title: _.intl.string(_.t.XahVjj),
+            note: _.intl.string(_.t.R9fXyS),
             disabled: !n,
         }),
     });
