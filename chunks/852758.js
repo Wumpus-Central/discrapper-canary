@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(990547),
-    i = n(442837),
+    i = n(990547),
+    r = n(442837),
     s = n(544891),
     o = n(481060),
     c = n(893776),
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function O(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,17 +65,17 @@ function O(e, t) {
     );
 }
 function T() {
-    let { action: e, theme: t } = (0, i.cj)([b.Z, f.Z], () => ({
+    let { action: e, theme: t } = (0, r.cj)([b.Z, f.Z], () => ({
             action: b.Z.getAction(),
             theme: f.Z.theme,
         })),
         T = v.Z.getVerificationTypes(e),
-        [N, P] = l.useState(0),
+        [O, P] = l.useState(0),
         I = (0, m.Z)(T);
     (0, h.Z)(
         {
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.USER_ACTION_REQUIRED,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: T[0],
                 verification_types: T,
@@ -112,11 +112,11 @@ function T() {
                 (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.resolve().then(n.bind(n, 273352));
+                        let { default: e } = await n.e("84112").then(n.bind(n, 273352));
                         return (t) =>
                             (0, a.jsx)(
                                 e,
-                                O(E({}, t), {
+                                N(E({}, t), {
                                     title: S.intl.string(S.t.KLnLIP),
                                     body: S.intl.string(S.t.XGbCq3),
                                     confirmText: S.intl.string(S.t["3oK4qw"]),
@@ -132,7 +132,7 @@ function T() {
         }, [T, I]),
         (0, a.jsx)(j.Z, {
             types: T,
-            captchaKey: N,
+            captchaKey: O,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -177,7 +177,7 @@ function T() {
                         return (n) =>
                             (0, a.jsx)(
                                 e,
-                                O(
+                                N(
                                     E(
                                         {
                                             header: S.intl.string(S.t["2jxGer"]),

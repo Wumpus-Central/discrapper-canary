@@ -1,12 +1,9 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => u }), n(539854);
 var r = n(54381);
 n(473749);
-var i = n(793030),
-    a = n(273352),
-    o = n(952265),
-    s = n(755721),
-    l = n(388032);
-function c(e, t, n) {
+var i = n(481060),
+    a = n(388032);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +16,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +27,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,98 +44,80 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = {
+let u = {
     show(e) {
         let {
             title: t,
-            body: n,
-            confirmColor: c,
-            confirmText: d,
-            confirmVariant: _ = "primary",
-            cancelText: p,
-            onConfirm: h,
-            onCancel: m,
-            onCloseCallback: g,
-            secondaryConfirmText: E,
-            onConfirmSecondary: b,
-            className: y,
-            titleClassName: O,
-            contextKey: v,
+            body: o,
+            confirmText: l,
+            confirmVariant: u = "primary",
+            cancelText: d,
+            onConfirm: f,
+            onCancel: _,
+            onCloseCallback: p,
+            contextKey: h,
         } = e;
-        (0, o.h7)(
-            (e) => {
-                if (null == E) {
-                    let a = [];
+        (0, i.ZDy)(
+            async () => {
+                let { Modal: e } = await Promise.resolve().then(n.bind(n, 775086));
+                return (n) => {
+                    let i = [];
                     return (
-                        null != p &&
-                            "" !== p &&
-                            a.push({
-                                text: p,
-                                onClick: () => {
-                                    null == m || m(), e.onClose();
+                        null != d &&
+                            "" !== d &&
+                            i.push({
+                                text: d,
+                                onClick: async () => {
+                                    null == _ || _(), await n.onClose();
                                 },
                                 variant: "secondary",
                             }),
-                        a.push({
-                            text: null != d ? d : l.intl.string(l.t.BddRzS),
-                            onClick: () => {
-                                null == h || h(), e.onClose();
+                        i.push({
+                            text: null != l ? l : a.intl.string(a.t.BddRzS),
+                            onClick: async () => {
+                                null == f || f(), await n.onClose();
                             },
-                            variant: _,
+                            variant: u,
                         }),
                         (0, r.jsx)(
-                            i.Modal,
-                            f(u({}, e), {
+                            e,
+                            c(s({}, n), {
                                 size: "sm",
                                 title: t,
-                                subtitle: n,
-                                actions: a,
+                                subtitle: o,
+                                actions: i,
                             }),
                         )
                     );
-                }
-                return (0, r.jsx)(
-                    a.default,
-                    f(u({}, e), {
-                        title: t,
-                        body: n,
-                        confirmColor: "critical-primary" === _ ? s.Tt.RED : s.Tt.BRAND,
-                        confirmText: d,
-                        cancelText: p,
-                        onConfirm: h,
-                        onCancel: m,
-                        secondaryConfirmText: E,
-                        onConfirmSecondary: b,
-                        className: y,
-                        titleClassName: O,
-                    }),
-                );
+                };
             },
-            { onCloseCallback: g },
-            v,
+            {
+                onCloseCallback: p,
+                contextKey: h,
+            },
         );
     },
     close() {},
     confirm(e) {
         return new Promise((t) => {
             this.show(
-                u(
+                s(
                     {
                         onConfirm() {
                             t(!0);
                         },
-                        cancelText: l.intl.string(l.t["ETE/oC"]),
+                        cancelText: a.intl.string(a.t["ETE/oC"]),
                         onCancel() {
                             t(!1);
                         },

@@ -102,7 +102,7 @@ n.d(t, {
     Mjp: () => K.Mjp,
     Mko: () => K.Mko,
     Mmi: () => K.Mmi,
-    Modal: () => G.u,
+    Modal: () => G.Modal,
     MqZ: () => K.MqZ,
     NIo: () => eb.N,
     NQW: () => K.NQW,

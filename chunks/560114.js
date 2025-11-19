@@ -411,7 +411,7 @@ class ed extends (i = s.PureComponent) {
             case $.RV.MAIN:
                 let { title: r, subtitle: a } = this.getHeaderContent(),
                     { bodyContent: o, controls: u, listProps: d } = this.getBodyContent();
-                return (0, l.jsx)(h.u, {
+                return (0, l.jsx)(h.Modal, {
                     transitionState: n,
                     onClose: i,
                     title: r,

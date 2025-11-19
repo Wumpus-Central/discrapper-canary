@@ -18,7 +18,7 @@ let a = (e) => {
             transitionState: p,
         } = e,
         { maxAgeOptions: I, maxAge: m, maxUses: x, temporary: S, flags: f } = n;
-    return (0, i.jsx)(l.u, {
+    return (0, i.jsx)(l.Modal, {
         transitionState: p,
         onClose: v,
         title: r.intl.string(r.t.Atdlyu),
