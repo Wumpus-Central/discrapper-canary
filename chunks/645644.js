@@ -74,7 +74,7 @@ function R(e, t) {
         e
     );
 }
-let P = 6,
+let P = 7,
     D = !1,
     w = new c.Z("OverlayUsageStatsManager");
 D || (w.verbose = () => {});
@@ -229,43 +229,44 @@ class j {
         }
     }
     getAnalytics() {
-        var e, t;
-        let n = (e) => this.counters[e].elapsed().asMilliseconds(),
-            r = {
-                [o.Jx.UNKNOWN]: n(o.Jx.UNKNOWN),
-                [o.Jx.WINDOWED]: n(o.Jx.WINDOWED),
-                [o.Jx.MAXIMIZED]: n(o.Jx.MAXIMIZED),
-                [o.Jx.BORDERLESS_FULLSCREEN]: n(o.Jx.BORDERLESS_FULLSCREEN),
-                [o.Jx.FULLSCREEN]: n(o.Jx.FULLSCREEN),
-                [o.Jx.MINIMIZED]: n(o.Jx.MINIMIZED),
+        var e, t, n;
+        let r = (e) => this.counters[e].elapsed().asMilliseconds(),
+            i = {
+                [o.Jx.UNKNOWN]: r(o.Jx.UNKNOWN),
+                [o.Jx.WINDOWED]: r(o.Jx.WINDOWED),
+                [o.Jx.MAXIMIZED]: r(o.Jx.MAXIMIZED),
+                [o.Jx.BORDERLESS_FULLSCREEN]: r(o.Jx.BORDERLESS_FULLSCREEN),
+                [o.Jx.FULLSCREEN]: r(o.Jx.FULLSCREEN),
+                [o.Jx.MINIMIZED]: r(o.Jx.MINIMIZED),
             },
-            i = Object.entries(r).sort((e, t) => {
+            a = Object.entries(i).sort((e, t) => {
                 let [n, r] = e,
                     [i, a] = t;
                 return a - r;
             })[0],
-            a = parseInt(i[0], 10),
-            s = isNaN(a) ? o.Jx.UNKNOWN : a;
-        isNaN(a) && w.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(i), r);
-        let l = I.c.getGameDisplayMode(null != (e = this.game.name) ? e : this.game.id);
-        I.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, s);
-        let c = {
-            screentype_unknown_duration: r[o.Jx.UNKNOWN],
-            screentype_windowed_duration: r[o.Jx.WINDOWED],
-            screentype_maximized_duration: r[o.Jx.MAXIMIZED],
-            screentype_borderless_fullscreen_duration: r[o.Jx.BORDERLESS_FULLSCREEN],
-            screentype_fullscreen_duration: r[o.Jx.FULLSCREEN],
-            screentype_minimized_duration: r[o.Jx.MINIMIZED],
+            s = parseInt(a[0], 10),
+            l = isNaN(s) ? o.Jx.UNKNOWN : s;
+        isNaN(s) && w.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(a), i);
+        let c = I.c.getGameDisplayMode(null != (e = this.game.name) ? e : this.game.id);
+        I.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, l);
+        let u = {
+            screentype_unknown_duration: i[o.Jx.UNKNOWN],
+            screentype_windowed_duration: i[o.Jx.WINDOWED],
+            screentype_maximized_duration: i[o.Jx.MAXIMIZED],
+            screentype_borderless_fullscreen_duration: i[o.Jx.BORDERLESS_FULLSCREEN],
+            screentype_fullscreen_duration: i[o.Jx.FULLSCREEN],
+            screentype_minimized_duration: i[o.Jx.MINIMIZED],
         };
-        return R(C({}, c), {
+        return R(C({}, u), {
             screentype_global_supported_duration:
-                c.screentype_windowed_duration +
-                c.screentype_maximized_duration +
-                c.screentype_borderless_fullscreen_duration,
-            screentype_global_unsupported_duration: c.screentype_fullscreen_duration,
+                u.screentype_windowed_duration +
+                u.screentype_maximized_duration +
+                u.screentype_borderless_fullscreen_duration,
+            screentype_global_unsupported_duration: u.screentype_fullscreen_duration,
             screentype_initial: o.Jx[this.game.fullscreenType],
-            screentype_most_used: o.Jx[s],
-            screentype_most_used_previous: null == l ? null : o.Jx[l],
+            screentype_most_used: o.Jx[l],
+            screentype_most_used_previous: null == c ? null : o.Jx[c],
+            screentype_last: o.Jx[null != (n = this.lastscreenType) ? n : o.Jx.UNKNOWN],
             game_display_mode_is_adjustment_supported: b.ZP.GameDisplayModeIsGameSupported(this.game.name),
         });
     }
@@ -391,11 +392,10 @@ class U {
                 overlayMethodStats: this.overlayMethodStats,
             });
     }
-    setOverlayState(e) {
-        (this.overlayState = e), (this.overlayStateRaw = e);
-    }
-    setOverlayStateRawOnly(e) {
-        this.overlayStateRaw = e;
+    setOverlayState(e, t, n) {
+        n || ((this.overlayState = e), (this.overlayStateReason = t)),
+            (this.overlayStateRaw = e),
+            (this.overlayStateRawReason = t);
     }
     getSettingMethod() {
         return null == this.overlayMethod ? f.gl[f.gl.Disabled] : f.gl[this.overlayMethod];
@@ -479,6 +479,8 @@ class U {
                     current_method: v,
                     last_overlay_state: this.overlayState,
                     last_overlay_state_raw: this.overlayStateRaw,
+                    last_overlay_state_reason: this.overlayStateReason,
+                    last_overlay_state_raw_reason: this.overlayStateRawReason,
                 },
             ),
             notifications: this.notificationAnalytics.getCounterAnalytics(this.uuid),
@@ -530,6 +532,8 @@ class U {
             A(this, "overlayMethodStats", void 0),
             A(this, "overlayState", void 0),
             A(this, "overlayStateRaw", void 0),
+            A(this, "overlayStateReason", void 0),
+            A(this, "overlayStateRawReason", void 0),
             A(this, "notificationAnalytics", void 0),
             A(this, "widgetAnalytics", void 0),
             A(this, "screenAnalytics", void 0),
@@ -558,6 +562,8 @@ class U {
             (this.overlayMethodStats = null),
             (this.overlayState = null),
             (this.overlayStateRaw = null),
+            (this.overlayStateReason = null),
+            (this.overlayStateRawReason = null),
             (this.notificationAnalytics = new x()),
             (this.widgetAnalytics = new M()),
             (this.uiUnlockedCount = 0),
@@ -723,8 +729,8 @@ function $(e) {
     let t = U.getByPid(e.pid);
     if (null == t) return void w.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, U.debug);
     if (e.newState !== f.mM.OVERLAY_TEARING_DOWN) {
-        if (e.reason.includes("Unknown fullscreen type")) return void t.setOverlayStateRawOnly(e.newState);
-        t.setOverlayState(e.newState);
+        if (e.reason.includes("Unknown fullscreen type")) return void t.setOverlayState(e.newState, e.reason, !0);
+        t.setOverlayState(e.newState, e.reason, !1);
     }
 }
 A(U, "gamesByPid", {}), A(U, "gamesByName", {}), A(U, "desktopMainWindowHasFocus", document.hasFocus());

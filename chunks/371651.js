@@ -323,10 +323,11 @@ function eo(e, t) {
         }
         case l.Jx.FULLSCREEN: {
             let e = (0, v.qT)(i),
-                t = e.enabledLegacy && z();
+                t = e.enabledLegacy && z(),
+                n = t ? e.overlayMethod : b.gl.Disabled;
             return R(C({}, e), {
-                overlayMethod: t ? e.overlayMethod : b.gl.Disabled,
-                reason: "Fullscreen - using legacy overlay",
+                overlayMethod: n,
+                reason: "Fullscreen - legacyEnabled: ".concat(t, ", newOverlayMethod: ").concat(n),
             });
         }
         case l.Jx.UNKNOWN:
