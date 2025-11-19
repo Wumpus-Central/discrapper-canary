@@ -627,11 +627,6 @@ let i = {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(269278).Z,
     },
-    DistributedClipsManager: {
-        actions: ["MESSAGE_CREATE", "CLIPS_REMOTE_TRIGGER"],
-        inlineRequire: () => n(663879).Z,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     CustomCallSoundsManager: {
         actions: ["RTC_CONNECTION_STATE", "SOUNDBOARD_MUTE_JOIN_SOUND", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(783295).Z,

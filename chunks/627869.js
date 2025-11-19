@@ -102,20 +102,14 @@ function h() {
         ),
         y = i.useCallback(
             (e) => {
-                l.Rr(p(f({}, n), { enableDistributedSignals: e }));
-            },
-            [n],
-        ),
-        O = i.useCallback(
-            (e) => {
                 l.Rr(p(f({}, n), { enablePhraseSignals: e }));
             },
             [n],
         ),
-        v = i.useCallback((e) => {
+        O = i.useCallback((e) => {
             l.W6(Math.floor(e));
         }, []),
-        I = i.useMemo(() => {
+        v = i.useMemo(() => {
             let e = [c.qb];
             for (let t = 10; t <= c.b0; t += 10) e.push(t);
             return e[e.length - 1] !== c.b0 && e.push(c.b0), e;
@@ -130,8 +124,8 @@ function h() {
                 onValueRender: (e) => "".concat(Math.floor(e)),
                 minValue: c.qb,
                 maxValue: c.b0,
-                onValueChange: v,
-                markers: I,
+                onValueChange: O,
+                markers: v,
                 onMarkerRender: (e) => "".concat(Math.floor(e)),
             }),
             (0, r.jsx)(o.izJ, {}),
@@ -142,16 +136,10 @@ function h() {
                 onChange: b,
             }),
             (0, r.jsx)(o.rsf, {
-                label: u.intl.string(u.t["01JPeO"]),
-                description: u.intl.string(u.t["Xnx+Co"]),
-                checked: n.enableDistributedSignals,
-                onChange: y,
-            }),
-            (0, r.jsx)(o.rsf, {
                 label: u.intl.string(u.t.nHsilt),
                 description: u.intl.string(u.t["s6wq+m"]),
                 checked: n.enablePhraseSignals,
-                onChange: O,
+                onChange: y,
             }),
             n.enablePhraseSignals &&
                 (0, r.jsx)(o.oil, {

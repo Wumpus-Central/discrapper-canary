@@ -1,85 +1,51 @@
-n.d(t, { Z: () => f }), n(388685);
-var r = n(147913),
-    i = n(594190),
-    a = n(314897),
-    o = n(19780),
-    s = n(885110),
-    l = n(924557),
-    c = n(981631);
-function u(e, t, n) {
+l.d(i, { Z: () => g }), l(388685);
+var t = l(147913),
+    r = l(594190),
+    a = l(314897),
+    n = l(885110),
+    s = l(924557),
+    c = l(981631);
+function u(e, i, l) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        i in e
+            ? Object.defineProperty(e, i, {
+                  value: l,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[i] = l),
         e
     );
 }
-class d extends r.Z {
+class d extends t.Z {
     registerCallback(e) {
         this.callback = e;
     }
     unregisterCallback() {
         this.callback = null;
     }
-    handleMessageCreate(e) {
-        var t, n, r;
-        let { message: i, channelId: s } = e;
-        if (!(0, l.NS)()) return;
-        let c = null == (t = i.author) ? void 0 : t.id;
-        if (null == c || (null == (n = i.author) ? void 0 : n.id) === a.default.getId()) return;
-        let u = o.Z.getChannelId();
-        if (null == u || s !== u) return;
-        let d = i.content;
-        if (null == d) return;
-        let f = "__REMOTE_CLIP_TRIGGER__",
-            _ = d.indexOf(f);
-        if (-1 === _) return;
-        let p = _ + f.length,
-            h = d.substring(p);
-        try {
-            let e = JSON.parse(h);
-            this.handleRemoteClipTrigger(
-                {
-                    type: "CLIPS_REMOTE_TRIGGER",
-                    userId: c,
-                    applicationId: e.applicationId,
-                    partyId: null != (r = e.activityPartyId) ? r : null,
-                },
-                e.triggerClipId,
-            );
-        } catch (e) {
-            return;
-        }
-    }
-    handleRemoteClipTrigger(e, t) {
-        let { userId: n, applicationId: r, partyId: o } = e;
-        if (!(0, l.NS)() || n === a.default.getId()) return;
-        let u = s.Z.getActivities().find(
-                (e) => e.type === c.IIU.PLAYING && null != e.application_id && e.application_id === r,
+    handleRemoteClipTrigger(e, i) {
+        let { userId: l, applicationId: t, partyId: u } = e;
+        if (!(0, s.NS)() || l === a.default.getId()) return;
+        let d = n.Z.getActivities().find(
+                (e) => e.type === c.IIU.PLAYING && null != e.application_id && e.application_id === t,
             ),
-            d = i.ZP.getVisibleGame(),
-            f = null != u,
-            _ = (null == d ? void 0 : d.id) === r;
-        if (f || _) {
-            if (null != o) {
-                var p;
-                if ((null == u || null == (p = u.party) ? void 0 : p.id) !== o) return;
+            g = r.ZP.getVisibleGame(),
+            o = null != d,
+            b = (null == g ? void 0 : g.id) === t;
+        if (o || b) {
+            if (null != u) {
+                var h;
+                if ((null == d || null == (h = d.party) ? void 0 : h.id) !== u) return;
             }
-            null != this.callback && null != t && this.callback(n, t);
+            null != this.callback && null != i && this.callback(l, i);
         }
     }
     constructor(...e) {
         super(...e),
             u(this, "callback", null),
-            u(this, "actions", {
-                MESSAGE_CREATE: (e) => this.handleMessageCreate(e),
-                CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e),
-            });
+            u(this, "actions", { CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e) });
     }
 }
-let f = new d();
+let g = new d();
