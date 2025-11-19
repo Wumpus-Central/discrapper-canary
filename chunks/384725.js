@@ -10,7 +10,7 @@ let a = {
             classificationId: e,
         }),
             (0, o.ZDy)(async () => {
-                let { default: t } = await Promise.all([n.e("65652"), n.e("59474")]).then(n.bind(n, 208265));
+                let { default: t } = await Promise.all([n.e("65652"), n.e("67332")]).then(n.bind(n, 208265));
                 return (n) =>
                     (0, i.jsx)(
                         t,

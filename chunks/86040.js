@@ -8,7 +8,7 @@ var i = n(159691),
     a = n(481060),
     o = n(600164),
     s = n(388032),
-    l = n(391970);
+    l = n(123472);
 let c = (e) => {
         let { className: t, isEmailResent: n, resendEmail: i } = e;
         return (0, r.jsx)("div", {

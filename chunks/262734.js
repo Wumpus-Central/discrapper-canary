@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(981631),
     C = n(918559),
     S = n(388032),
-    T = n(680317);
+    T = n(909357);
 let N = {
     [C.MI.NO_CHAT]: T.noChat,
     [C.MI.RESIZABLE]: T.resizable,

@@ -84,16 +84,16 @@ function N(e) {
             (M = y.y.GUILD_ROLE_SUBSCRIPTIONS),
             N && x.push(y.y.GUILD_PRODUCTS_PREVIEW)),
         (a = null != a ? a : M);
-    let [j, k] = i.useState(a),
-        U = (N && !w) || j === y.y.GUILD_PRODUCTS_PREVIEW;
+    let [k, j] = i.useState(a),
+        U = (N && !w) || k === y.y.GUILD_PRODUCTS_PREVIEW;
     i.useEffect(() => {
-        k(a);
+        j(a);
     }, [a]);
     let G = (e) => {
         (0, u.Q3)(l.z.SERVER_SHOP_PHANTOM_PREVIEW);
         let t = S({}, (0, c.hH)(o));
-        if (j === y.y.GUILD_PRODUCTS_PREVIEW)
-            e.stopPropagation(), k(y.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = v.mz.DISMISS_TAB_PREVIEW);
+        if (k === y.y.GUILD_PRODUCTS_PREVIEW)
+            e.stopPropagation(), j(y.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = v.mz.DISMISS_TAB_PREVIEW);
         else {
             var n;
             (0, p.dL)(I.Z5c.CHANNEL(o, null == (n = h.ZP.getDefaultChannel(o)) ? void 0 : n.id)),
@@ -103,8 +103,8 @@ function N(e) {
     };
     return (0, r.jsx)(A.Provider, {
         value: {
-            selectedTab: j,
-            setSelectedTab: k,
+            selectedTab: k,
+            setSelectedTab: j,
             categoryTabs: x,
             isPhantomPreview: U,
             handlePreviewDismiss: G,

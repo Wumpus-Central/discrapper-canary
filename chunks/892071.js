@@ -52,8 +52,8 @@ function b(e) {
         } = e,
         x = window.CSS.supports("selector(::-webkit-scrollbar)"),
         M = (0, l.e7)([d.Z], () => d.Z.zoom),
-        j = w ? "" : "--custom-zoom: ".concat(M, ";"),
-        k = "font-size: ".concat(y, "%; --saturation-factor: ").concat(T, "; ").concat(j),
+        k = w ? "" : "--custom-zoom: ".concat(M, ";"),
+        j = "font-size: ".concat(y, "%; --saturation-factor: ").concat(T, "; ").concat(k),
         U = (0, h.Z)("highlight_mana_buttons"),
         G = (0, h.Z)("highlight_mana_components"),
         B = (0, h.Z)("highlight_void_toggleables"),
@@ -93,11 +93,11 @@ function b(e) {
         V = i.useMemo(
             () => ({
                 lang: n,
-                style: k,
+                style: j,
                 className: F,
                 focused: b,
             }),
-            [n, k, F, b],
+            [n, j, F, b],
         );
     return (
         (0, u.ZP)(() => {

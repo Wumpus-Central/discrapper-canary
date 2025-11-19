@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     l = n(442837),
-    r = n(907862),
-    i = n(607070),
+    i = n(907862),
+    r = n(607070),
     s = n(100527),
     o = n(314897),
     c = n(172416),
@@ -13,12 +13,12 @@ var a = n(54381),
 function h(e) {
     let { targetElementRef: t, markAsDismissed: n, children: h } = e,
         x = (0, l.e7)([o.default], () => o.default.getId()),
-        g = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
+        g = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         f = (0, c.bg)({ location: "GameWidgetsPopover" });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             h,
-            (0, a.jsx)(r.J2, {
+            (0, a.jsx)(i.J2, {
                 targetElementRef: t,
                 badge: f
                     ? {

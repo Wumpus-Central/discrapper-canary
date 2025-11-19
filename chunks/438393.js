@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(330711),
     a = n(793030),
-    o = n(829346);
+    o = n(994768);
 let s = 96;
 function l(e) {
     let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,

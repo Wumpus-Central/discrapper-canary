@@ -17,7 +17,7 @@ var r = n(54381),
     x = n(273504),
     j = n(981631),
     _ = n(388032),
-    v = n(716971);
+    v = n(894780);
 function O(e) {
     var t, n;
     let { guildId: O, setPreventNavigation: C = () => {} } = e,

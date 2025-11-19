@@ -160,14 +160,14 @@ function x(e) {
 function M(e) {
     P(T(e));
 }
-function j(e) {
+function k(e) {
     return null != e && e.length > 1;
 }
-function k(e) {
+function j(e) {
     let t = {},
         n = {},
         { query: r } = e;
-    if (j(r)) {
+    if (k(r)) {
         let [e, n] = (0, p.C)(r);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
@@ -302,7 +302,7 @@ async function H(e) {
         s = T(e),
         l = R(s),
         [c, u] = F(e, l, o),
-        d = U(k(i), u),
+        d = U(j(i), u),
         f = null != (t = i.selectedSort) ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (V(s, d) && (0, a.isEqual)(c, l.cursor)) return;
     let _ = D(s, d, c, o, f);

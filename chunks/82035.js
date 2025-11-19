@@ -16,7 +16,7 @@ var e = n(54381),
     m = n(51144),
     E = n(981631),
     h = n(388032),
-    C = n(174804);
+    C = n(277081);
 function p(l) {
     let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: s, hasNick: d } = l,
         c = r.useRef(null),

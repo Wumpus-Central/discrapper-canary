@@ -16,7 +16,7 @@ function c(e) {
               icon: t ? i.VZI : void 0,
               action: () => {
                   (0, i.ZDy)(async () => {
-                      let { default: t } = await Promise.all([n.e("36599"), n.e("61"), n.e("51725")]).then(
+                      let { default: t } = await Promise.all([n.e("36599"), n.e("61"), n.e("98878")]).then(
                           n.bind(n, 779250),
                       );
                       return (n) => {

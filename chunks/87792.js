@@ -36,8 +36,8 @@ var r = n(54381),
     L = n(597754),
     x = n(388032),
     M = n(37742),
-    j = n(519279);
-function k(e, t, n) {
+    k = n(519279);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -162,17 +162,17 @@ function Z(e) {
             [R, v, s],
         );
     if (0 === c.length) return null;
-    let j = c.slice(0, I);
+    let k = c.slice(0, I);
     return (0, r.jsxs)("div", {
         className: M.actionSection,
         children: [
             w(),
             (0, r.jsx)("div", {
                 className: M.actions,
-                style: { maxHeight: j.length * G },
-                children: j.map((e, t) => P({ row: t })),
+                style: { maxHeight: k.length * G },
+                children: k.map((e, t) => P({ row: t })),
             }),
-            j.length < d
+            k.length < d
                 ? (0, r.jsx)(u.P3F, {
                       className: o()(M.loadMoreBar, { [M.disabled]: y }),
                       onClick: N,
@@ -187,7 +187,7 @@ function Z(e) {
                                 className: M.loadMore,
                                 variant: "text-sm/bold",
                                 children: x.intl.format(L.default["7dMmJY"], {
-                                    pageSize: Math.max(1, Math.min(d - j.length, D.iB)),
+                                    pageSize: Math.max(1, Math.min(d - k.length, D.iB)),
                                 }),
                             }),
                   })
@@ -318,7 +318,7 @@ let H = () => {
                     children: [(0, r.jsx)(F, {}), (0, r.jsx)(B, {})],
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.box,
+                    className: k.box,
                     children: [
                         (0, r.jsx)("div", {
                             className: M.header,

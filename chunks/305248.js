@@ -15,7 +15,7 @@ var r = n(54381),
     m = n(709054),
     b = n(981631),
     _ = n(124368),
-    y = n(681604);
+    y = n(479014);
 function O(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         O = (0, a.Wu)(

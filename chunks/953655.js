@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(953528),
     u = n(788822),
     d = n(388032),
-    f = n(687983);
+    f = n(310582);
 let g = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             l = (0, c.QH)("collectibles_featured_block");

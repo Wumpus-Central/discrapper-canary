@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(190007),
     f = n(290511),
     h = n(388032),
-    b = n(671940);
+    b = n(784547);
 function x(e) {
     let { connection: t, index: l, onDragStart: x, onDragReset: j, onDragComplete: _, draggingId: v } = e,
         O = (0, d.ZP)(),

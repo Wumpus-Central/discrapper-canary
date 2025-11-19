@@ -40,8 +40,8 @@ var r = n(54381),
     L = n(703656),
     x = n(944486),
     M = n(914010),
-    j = n(594174),
-    k = n(626135),
+    k = n(594174),
+    j = n(626135),
     U = n(768581),
     G = n(900849),
     B = n(74538),
@@ -51,7 +51,7 @@ var r = n(54381),
     H = n(176505),
     Y = n(474936),
     W = n(388032),
-    K = n(702417);
+    K = n(975900);
 function z(e, t, n) {
     return (
         t in e
@@ -313,7 +313,7 @@ let J = 32,
                 demoMode: x = !1,
                 nonce: U,
             } = e,
-            G = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
+            G = (0, l.e7)([k.default], () => k.default.getCurrentUser()),
             z = (0, l.e7)([M.Z], () => M.Z.getGuildId()),
             q = B.ZP.isPremium(G),
             X = null != z && (z === (null == v ? void 0 : v.id) || z === (null == S ? void 0 : S.id)),
@@ -368,7 +368,7 @@ let J = 32,
                 shouldHideRoleSubscriptionCTA: eo,
                 onOpenPremiumSettings: () => {
                     A(),
-                        k.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
+                        j.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: $.page,
                             location_section: $.section,
                         }),
@@ -483,7 +483,7 @@ let J = 32,
                     i = () => {
                         n &&
                             (null == P || P(),
-                            em || x || k.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
+                            em || x || j.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
                             eg(!em));
                     },
                     a = () => {

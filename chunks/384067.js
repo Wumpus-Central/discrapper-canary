@@ -16,7 +16,7 @@ var r = n(54381),
     C = n(921944),
     _ = n(231338),
     b = n(388032),
-    v = n(687983);
+    v = n(310582);
 let x = (e) => {
     var t;
     let { wideBannerBlock: n, handleTransition: i, tab: x } = e,

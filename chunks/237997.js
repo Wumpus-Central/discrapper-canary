@@ -114,8 +114,8 @@ let N = Object.freeze({
     L = !1,
     x = !1,
     M = !1,
-    j = new Set(),
-    k = !1;
+    k = new Set(),
+    j = !1;
 function U(e) {
     let t = P[e];
     return null == t && (t = P[e] = I({}, N)), t;
@@ -327,22 +327,22 @@ function z() {
 function q() {
     if (!__OVERLAY__) return !1;
     let e = R === (0, E.getPID)(),
-        t = w.has((0, E.getPID)()) || j.size > 0;
+        t = w.has((0, E.getPID)()) || k.size > 0;
     e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
 }
 function X() {}
 function Q(e) {
     let { locked: t, pid: n } = e;
-    t ? w.delete(n) : w.add(n), $(), q(), (k = !1);
+    t ? w.delete(n) : w.add(n), $(), q(), (j = !1);
 }
 function J(e) {
     let { region: t } = e;
-    if (R !== (0, E.getPID)() || j.has(t)) return !1;
-    j.add(t);
+    if (R !== (0, E.getPID)() || k.has(t)) return !1;
+    k.add(t);
 }
 function $() {
     if (R !== (0, E.getPID)()) return !1;
-    j.clear();
+    k.clear();
 }
 function ee(e) {
     let { pid: t } = e;
@@ -362,11 +362,11 @@ function er() {
 function ei() {
     if (__OVERLAY__) {
         let e = b.Z.windowSize();
-        (0, E.validResolution)(e) || (k = !1);
+        (0, E.validResolution)(e) || (j = !1);
     }
 }
 function ea(e) {
-    k = e.isPreviewingInGame;
+    j = e.isPreviewingInGame;
 }
 function eo(e) {
     let { mode: t } = e;
@@ -578,13 +578,13 @@ class eT extends (r = i.ZP.PersistedStore) {
         return L;
     }
     getActiveRegions() {
-        return j;
+        return k;
     }
     getTextWidgetOpacity() {
         return G.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return k;
+        return j;
     }
     getTrackedGame(e) {
         var t;

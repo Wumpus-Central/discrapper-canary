@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(207035),
     d = n(823748),
     u = n(981631),
-    p = n(706071);
+    p = n(815523);
 function b(e) {
     let { windowKey: t, channel: n } = e;
     return (0, r.jsx)(l.Z, {

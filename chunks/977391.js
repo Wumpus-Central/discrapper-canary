@@ -11,7 +11,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(566898),
     s = n(981631),
-    c = n(169757);
+    c = n(835025);
 function u(e) {
     let { compact: t, messageGroups: n, groupRange: i, attachments: r, fontSize: l, groupSpacing: c } = e;
     if (r > n)

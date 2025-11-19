@@ -29,7 +29,7 @@ var r = n(54381),
     P = n(981631),
     D = n(959517),
     w = n(388032),
-    L = n(963167),
+    L = n(823708),
     x = n(527455);
 function M(e, t, n) {
     return (
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,10 +85,10 @@ function U(e, t) {
 }
 function G(e) {
     var t, n, a, M;
-    let { embedUrl: k, message: G, channel: B } = e,
+    let { embedUrl: j, message: G, channel: B } = e,
         Z = i.useRef(null),
         F = i.useRef(null),
-        V = (0, R.J)(k, G),
+        V = (0, R.J)(j, G),
         { setPopout: H } = (0, b.Z)(G.id, D.d$),
         Y = (0, E.qo)(G, B, H, !0),
         W = v.QK.useSetting(),
@@ -177,7 +177,7 @@ function G(e) {
                           children: (e) =>
                               (0, r.jsx)(
                                   u.rz2,
-                                  U(j({}, e), {
+                                  U(k({}, e), {
                                       ref: Z,
                                       name: V.authorName,
                                       colorString: et,
@@ -279,7 +279,7 @@ function G(e) {
                                             onMouseLeave: e_,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                U(j({}, e), {
+                                                U(k({}, e), {
                                                     ref: F,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,

@@ -42,8 +42,8 @@ function y(e) {
         L = (0, h.Z)(O, A),
         x = (0, p.Z)(O, A, g.Vq),
         M = null != C && D && (!C.startsWith("screen") || w),
-        j = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
-        k = i.useCallback(() => {
+        k = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
+        j = i.useCallback(() => {
             (null == C ? void 0 : C.startsWith("prepicked:"))
                 ? f.Z.getMediaEngine().eachConnection((e) => {
                       e.context === E.Yn.STREAM && e.presentDesktopSourcePicker("window");
@@ -114,13 +114,13 @@ function y(e) {
               })
             : null,
         Y =
-            !P || T || j
+            !P || T || k
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "change-windows",
                       label: Z,
                       icon: o.hGI,
-                      action: k,
+                      action: j,
                   }),
         W = (0, r.jsx)(o.sNh, {
             id: "stop-streaming",

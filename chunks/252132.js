@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(27457),
     l = n(131951),
-    a = n(723262);
+    a = n(441997);
 function s(e) {
     var { aspectRatio: t, className: n, children: s, width: o } = e,
         c = (function (e, t) {

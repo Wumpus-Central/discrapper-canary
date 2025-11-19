@@ -21,7 +21,7 @@ n.d(t, {
     jv: () => et,
     rO: () => er,
     sS: () => en,
-    yg: () => k,
+    yg: () => j,
     yi: () => F,
     yl: () => H,
     zq: () => ee,
@@ -101,7 +101,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -112,7 +112,7 @@ function j(e, t) {
         e
     );
 }
-async function k(e) {
+async function j(e) {
     let { allowVoiceRecording: t } = e;
     await f.tU.updateSetting(t),
         y.default.track(w.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }),
@@ -140,12 +140,12 @@ function G(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     a.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: j(x({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t }),
+        settings: k(x({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t }),
     }),
         n &&
             y.default.track(
                 w.rMx.CLIPS_SETTINGS_UPDATED,
-                j(x({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
+                k(x({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
             );
 }
 function B(e) {
@@ -215,7 +215,7 @@ function W(e, t) {
             a = null != (n = h.get(i)) ? n : 0;
         h.set(i, a + r);
     }
-    return j(x({}, e), {
+    return k(x({}, e), {
         frames_encoded_nvidia_cuda: null != (r = h.get(s.Su.NVIDIA_CUDA)) ? r : 0,
         frames_encoded_nvidia_direct3d: null != (i = h.get(s.Su.NVIDIA_DIRECT_3D)) ? i : 0,
         frames_encoded_openh264: null != (a = h.get(s.Su.OPENH264)) ? a : 0,
@@ -259,7 +259,7 @@ async function K(e) {
     null != e &&
         a.Z.dispatch({
             type: "CLIPS_SAVE_CLIP_PLACEHOLDER",
-            clip: j(x({}, s), {
+            clip: k(x({}, s), {
                 pending: !0,
                 filepath: u,
             }),
@@ -285,7 +285,7 @@ async function K(e) {
             (s.length = e),
             D.jF.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(r.length, " bytes thumbnail.")),
             await d.updateClipMetadata(u, JSON.stringify(s)),
-            j(x({}, s), { filepath: u })
+            k(x({}, s), { filepath: u })
         );
     } catch (r) {
         if (
@@ -434,7 +434,7 @@ async function q(e, t) {
     let v = (0, d.GN)("clip_save", 0.5),
         C = performance.now();
     try {
-        let e = j(x({}, _), {
+        let e = k(x({}, _), {
                 filepath: y,
                 length: 0,
                 thumbnail: "",
@@ -492,7 +492,7 @@ async function et(e) {
     let n = await o.Z.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
-        let t = await (0, N.w)(j(x({}, e.metadata), { filepath: e.filepath }));
+        let t = await (0, N.w)(k(x({}, e.metadata), { filepath: e.filepath }));
         null != t && r.push(t);
     }
     a.Z.dispatch({

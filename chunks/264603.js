@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(442837),
     o = n(524437),
     c = n(481060),
@@ -17,8 +17,8 @@ var a = n(54381),
     b = n(881998),
     v = n(449224),
     j = n(246992),
-    _ = n(866403),
-    y = n(963801);
+    _ = n(451429),
+    y = n(441900);
 let C = [
     {
         label: "Unset",
@@ -40,7 +40,7 @@ let C = [
 function S() {
     let e = l.useRef(null),
         t = f.JG.useSetting(),
-        [n, r] = l.useState(""),
+        [n, i] = l.useState(""),
         o = (0, s.e7)([x.ZP, v.Z], () => (0, g.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
         E = (0, s.Wu)([p.Z], () => {
@@ -53,9 +53,9 @@ function S() {
                 ? t
                 : [];
         }),
-        O = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
+        N = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
         T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
-        N = (0, m.F)(S),
+        O = (0, m.F)(S),
         { canDeauthorize: P, deauthorize: I } = (function (e) {
             let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
                 n = l.useCallback(() => {
@@ -68,7 +68,7 @@ function S() {
         })(null == S ? void 0 : S.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(_.panel, y.panel),
+        className: r()(_.panel, y.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: y.container,
@@ -97,11 +97,11 @@ function S() {
                     (0, a.jsx)(c.oil, {
                         label: "Application ID",
                         value: n,
-                        onChange: r,
+                        onChange: i,
                     }),
                     null != o && null != o.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => r(o.id),
+                              onClick: () => i(o.id),
                               variant: "primary",
                               text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
                           })
@@ -135,8 +135,8 @@ function S() {
                         children: "Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: N.startAuthorization,
+                        disabled: !O.canStartAuthorization,
+                        onClick: O.startAuthorization,
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -147,8 +147,8 @@ function S() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !O.canStartAuthorization,
-                        onClick: O.startAuthorization,
+                        disabled: !N.canStartAuthorization,
+                        onClick: N.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),

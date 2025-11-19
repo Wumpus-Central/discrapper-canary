@@ -12,7 +12,7 @@ var r = n(100527),
     p = n(320427),
     h = n(145010),
     f = n(159909),
-    m = n(834818);
+    m = n(474830);
 function g(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(r.Z.VOICE_CONTROL_TRAY),

@@ -16,7 +16,7 @@ var r = n(54381),
     d = n(700026),
     p = n(301342),
     h = n(327530),
-    f = n(344110);
+    f = n(776677);
 let g = i.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         l = i.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);

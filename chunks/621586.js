@@ -10,7 +10,7 @@ var i = n(54381),
     d = n(851397),
     p = n(582113),
     h = n(388032),
-    f = n(255839);
+    f = n(842350);
 let m = "vc-gifting-".concat((0, l.Z)());
 function g(e) {
     var t;

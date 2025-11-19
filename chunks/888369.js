@@ -99,7 +99,7 @@ function x(e) {
 function M(e) {
     return "flags" in e;
 }
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         !(
             ((0, u.bw)(e.type) && 0 === t) ||
@@ -110,7 +110,7 @@ function j(e, t, n) {
         (t > 0 || b.ZP.resolveUnreadSetting(e) === I.i.ALL_MESSAGES)
     );
 }
-function k(e) {
+function j(e) {
     switch (e) {
         case A:
         case null:
@@ -153,7 +153,7 @@ function F(e, t, n) {
     );
 }
 function V(e, t) {
-    let n = k(e),
+    let n = j(e),
         r = D(n),
         i = G(n, r),
         a = !1;
@@ -187,7 +187,7 @@ function H(e, t) {
     return (r.unreadByType[I.W.GUILD_EVENT] = U(e, t)), F(e, r, n);
 }
 function Y(e, t) {
-    let n = k(e),
+    let n = j(e),
         r = P(n);
     if (null == n) {
         let e = _.Z.getMutablePrivateChannels();
@@ -222,7 +222,7 @@ function Y(e, t) {
             if (!_ && a) continue;
             let p = !s && (!a || _) && d;
             (p || _) &&
-                j(n, l, c) &&
+                k(n, l, c) &&
                 (p && ((r.unreadByType[I.W.CHANNEL] = !0), (r.unreadChannelId = t)),
                 _ &&
                     (f ? (r.lowImportanceMentionCount += l) : (r.highImportanceMentionCount += l),

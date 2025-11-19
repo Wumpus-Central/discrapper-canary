@@ -22,7 +22,7 @@ var i = n(120356),
     E = n(937615),
     b = n(981631),
     y = n(388032),
-    O = n(553869);
+    O = n(221152);
 let v = (e, t) => {
         let n = null != t && e.productLine === b.POd.COLLECTIBLES && t.type !== l.Z.BUNDLE,
             r = e.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM;

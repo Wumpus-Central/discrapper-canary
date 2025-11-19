@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    l = n(902352);
+    l = n(601374);
 function a(e) {
     let { step: t, header: n, children: a } = e;
     return (0, r.jsxs)("div", {

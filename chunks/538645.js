@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -13,23 +13,23 @@ var a = n(54381),
     h = n(25251),
     x = n(373071),
     g = n(782691),
-    f = n(664046);
+    f = n(558270);
 let b = "Make sure you're only uploading text files!",
     v = (e) => {
         var t, n, l;
-        let { effect: r, onClick: i } = e,
+        let { effect: i, onClick: r } = e,
             { deleteConfig: s } = (0, x.n6)();
         return (0, a.jsxs)(c.P3F, {
             className: f.previewCard,
             onClick: () => {
-                i(r);
+                r(i);
             },
             children: [
                 (0, a.jsx)("div", {
                     className: f.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
-                            null == (l = r.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
+                            null == (l = i.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
                             ")",
                         ),
                     },
@@ -39,13 +39,13 @@ let b = "Make sure you're only uploading text files!",
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
-                            children: r.name,
+                            children: i.name,
                         }),
                         (0, a.jsx)(c.Button, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), s(r.skuId);
+                                e.preventDefault(), e.stopPropagation(), s(i.skuId);
                             },
                         }),
                     ],
@@ -55,7 +55,7 @@ let b = "Make sure you're only uploading text files!",
     };
 function j() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
-        [r, j] = l.useState(),
+        [i, j] = l.useState(),
         _ = l.useRef(null),
         y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects()),
         [C, S] = l.useState("");
@@ -68,20 +68,20 @@ function j() {
                     ? y
                     : y.filter((e) => {
                           var t, n, a, l;
-                          let r = C.toLowerCase(),
-                              i = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
+                          let i = C.toLowerCase(),
+                              r = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
                               s = null != (l = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? l : "";
-                          return i.includes(r) || s.includes(r);
+                          return r.includes(i) || s.includes(i);
                       }),
             [C, y],
         ),
-        O = l.useCallback(
+        N = l.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, m.Eo)(b);
                 let [a, l] = n.split(",");
                 if (!a.includes("text/plain")) return (0, m.Eo)(b);
-                let r = JSON.parse(atob(l));
-                (r.skuId = (0, s.Z)()), t(r), (0, m.XA)("Profile Effect (maybe??) imported!");
+                let i = JSON.parse(atob(l));
+                (i.skuId = (0, s.Z)()), t(i), (0, m.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
@@ -90,21 +90,21 @@ function j() {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, m.Eo)("Error uploading file. Try again!");
-                (0, m.Kr)(e.currentTarget.files, O, m.Eo);
+                (0, m.Kr)(e.currentTarget.files, N, m.Eo);
             },
-            [O],
+            [N],
         );
     return (0, a.jsxs)("div", {
         className: f.root,
         children: [
-            null == r &&
+            null == i &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
                             className: f.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: i()(f.section, f.row),
+                                    className: r()(f.section, f.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -142,7 +142,7 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: i()(f.row, f.end, f.section),
+                            className: r()(f.row, f.end, f.section),
                             children: [
                                 (0, a.jsxs)("div", {
                                     className: f.uploadButton,
@@ -221,7 +221,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != r && (0, a.jsx)(g.Z, { effect: r }),
+            null != i && (0, a.jsx)(g.Z, { effect: i }),
         ],
     });
 }

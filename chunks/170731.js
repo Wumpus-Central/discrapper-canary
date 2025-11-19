@@ -23,7 +23,7 @@ var r = i(54381),
     S = i(981631),
     x = i(228168),
     C = i(388032),
-    P = i(967362);
+    P = i(694781);
 let y = {
     FULL_WISHLIST: {
         title: C.intl.string(C.t["7lZ31J"]),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854), n(388685);
+n.d(t, { Z: () => j }), n(539854), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -128,7 +128,7 @@ function x() {
 function M() {
     return (0, m.Lq)("soundboard_event_store");
 }
-class j extends (r = l.ZP.PersistedStore) {
+class k extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(p.Z, d.Z, f.default),
             (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache),
@@ -154,8 +154,8 @@ class j extends (r = l.ZP.PersistedStore) {
         return S.frequently;
     }
 }
-b(j, "displayName", "SoundboardEventStore"), b(j, "persistKey", "SoundboardEventStore");
-let k = new j(c.Z, {
+b(k, "displayName", "SoundboardEventStore"), b(k, "persistKey", "SoundboardEventStore");
+let j = new k(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
     USER_SETTINGS_PROTO_UPDATE: L,

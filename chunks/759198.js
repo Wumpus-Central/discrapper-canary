@@ -4,7 +4,7 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    a = n(377651);
+    a = n(977072);
 function s(e) {
     var { className: t, color: n } = e,
         i = (function (e, t) {

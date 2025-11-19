@@ -94,16 +94,16 @@ function M(e, t) {
         e
     );
 }
-let j = R.isPlatformEmbedded && (0, R.isWindows)(),
-    k = j && 10 > parseFloat(l.Z.os.release),
+let k = R.isPlatformEmbedded && (0, R.isWindows)(),
+    j = k && 10 > parseFloat(l.Z.os.release),
     U = !0;
-if (j && !k) {
+if (k && !j) {
     let [e, , t] = l.Z.os.release.split(".");
     U = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let G = new u.Z("NotificationUtils"),
     B =
-        (j && U) ||
+        (k && U) ||
         ("Chrome" === s().name && 47 > parseFloat(s().version)) ||
         ("Firefox" === s().name && 52 > parseFloat(s().version));
 async function Z() {
@@ -149,9 +149,9 @@ let K = a().throttle(W, 1000, { leading: !0 });
 function z() {
     P.ZP.flashFrame(!1);
 }
-j && (window.addEventListener("focus", z), P.ZP.on("MAIN_WINDOW_FOCUS", z));
+k && (window.addEventListener("focus", z), P.ZP.on("MAIN_WINDOW_FOCUS", z));
 let q = window.Notification;
-if (k) {
+if (j) {
     let e = {};
     P.ZP.on("NOTIFICATION_CLICK", (t, n) => {
         let r = e[n];
@@ -275,9 +275,9 @@ async function et(e, t, n, r, i) {
             (null == E ? void 0 : E.authorizationStatus) === "authorized" ||
             (null == E ? void 0 : E.authorizationStatus) === "provisional",
         x = null != E ? w : await J(),
-        k = w,
+        j = w,
         F = I.Z.disableNotifications && null == i.overrideStreamerMode,
-        V = !R.isPlatformEmbedded || ((0, R.isMac)() && k) || P.ZP.shouldDisplayNotifications(),
+        V = !R.isPlatformEmbedded || ((0, R.isMac)() && j) || P.ZP.shouldDisplayNotifications(),
         H = !F && x && V,
         W = M(L({}, r), {
             action: void 0,
@@ -298,7 +298,7 @@ async function et(e, t, n, r, i) {
     t.includes("\0") && (G.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (G.warn("Notification body contains null character, setting to empty string"), (n = ""));
     let Q = null != (o = null == i ? void 0 : i.tag) ? o : null,
-        $ = k && (null == E ? void 0 : E.sound) === !0 && (null == E ? void 0 : E.authorizationStatus) === "authorized",
+        $ = j && (null == E ? void 0 : E.sound) === !0 && (null == E ? void 0 : E.authorizationStatus) === "authorized",
         et = (e, t) => {
             var n;
             null == (n = i.onShown) || n.call(i),
@@ -310,8 +310,8 @@ async function et(e, t, n, r, i) {
     if (
         (null == i.sound || $ || (ee(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)),
         i.isUserAvatar && null != e && (e = await (0, h.D)(e)),
-        j && O.Z.taskbarFlash && P.ZP.flashFrame(!0),
-        k)
+        k && O.Z.taskbarFlash && P.ZP.flashFrame(!0),
+        j)
     ) {
         let a = {
             title: t,
@@ -402,7 +402,7 @@ async function et(e, t, n, r, i) {
             G.warn("Native notification failed with error: ", e);
         }
     }
-    null != i.sound && k && (ee(i.sound, null != (m = i.volume) ? m : 1, i.soundpack), (r.ping = !0));
+    null != i.sound && j && (ee(i.sound, null != (m = i.volume) ? m : 1, i.soundpack), (r.ping = !0));
     let en = {
         icon: e,
         body: n,

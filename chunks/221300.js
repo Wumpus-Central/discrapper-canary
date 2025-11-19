@@ -7,7 +7,7 @@ var i = n(979554),
     a = n(566697),
     s = n(876917),
     c = n(688192),
-    u = n(988388);
+    u = n(232644);
 function d(e) {
     let { item: t, profileOwner: n, isHighlighted: d, cardSize: p = c.U.MEDIUM } = e,
         h = t.collectiblesItem;

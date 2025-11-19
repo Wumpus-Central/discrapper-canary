@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(704826), n(35282), n(781311);
+n.d(t, { Z: () => k }), n(704826), n(35282), n(781311);
 var r = n(54381),
     i = n(923010),
     a = n(952265),
@@ -189,7 +189,7 @@ function M() {
             });
     });
 }
-let j = {
+let k = {
     cleanUpSearchState: N,
     fetchMessages: P,
     setSearchInputText: w,

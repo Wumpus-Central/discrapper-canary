@@ -35,8 +35,8 @@ let a = {
     L = 65534,
     x = 65535,
     M = "JFIF",
-    j = "Exif",
-    k = "http://ns.adobe.com/xap/1.0/\0",
+    k = "Exif",
+    j = "http://ns.adobe.com/xap/1.0/\0",
     U = "http://ns.adobe.com/xmp/extension/\0",
     G = "Photoshop 3.0";
 function B(e) {
@@ -112,15 +112,15 @@ function W(e, t) {
     return e.getUint16(t) === N && (0, r.oH)(e, t + c, n) === M && 0 === e.getUint8(t + c + n);
 }
 function K(e, t) {
-    let n = j.length;
-    return e.getUint16(t) === R && (0, r.oH)(e, t + c, n) === j && 0 === e.getUint8(t + c + n);
+    let n = k.length;
+    return e.getUint16(t) === R && (0, r.oH)(e, t + c, n) === k && 0 === e.getUint8(t + c + n);
 }
 function z(e, t) {
     return e.getUint16(t) === R && q(e, t);
 }
 function q(e, t) {
-    let n = k.length;
-    return (0, r.oH)(e, t + c, n) === k;
+    let n = j.length;
+    return (0, r.oH)(e, t + c, n) === j;
 }
 function X(e, t) {
     return e.getUint16(t) === R && Q(e, t);

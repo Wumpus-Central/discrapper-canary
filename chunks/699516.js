@@ -163,7 +163,7 @@ function M(e) {
         g.delete(e.relationship.id),
         D();
 }
-function j(e) {
+function k(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
         null == t.since ? delete m[t.id] : (m[t.id] = t.since),
@@ -176,7 +176,7 @@ function j(e) {
             : (E.delete(t.id), b.delete(t.id)),
         D();
 }
-function k(e) {
+function j(e) {
     for (let e of p.keys()) p.get(e) === l.OGo.PENDING_INCOMING && (P(e), g.delete(e), b.delete(e), delete v[e]);
     D();
 }
@@ -307,7 +307,7 @@ let B = new G(a.Z, {
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
     RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: j,
-    RELATIONSHIP_PENDING_INCOMING_REMOVED: k,
+    RELATIONSHIP_UPDATE: k,
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
     UPDATE_STRANGER_STATUS: U,
 });

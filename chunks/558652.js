@@ -1,48 +1,96 @@
-n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => O }), n(35282), n(388685), n(704826);
 var r = n(54381),
     i = n(473749),
     l = n(828700),
     a = n(481060),
-    s = n(113434),
-    o = n(264282),
-    c = n(78606),
-    u = n(710914),
-    d = n(46140),
-    p = n(388032),
-    f = n(937018);
-let h = [];
-function g() {
-    let [e, t] = i.useState(d.yq.SUGGESTED),
-        [n, g] = i.useState(h),
+    s = n(823379),
+    o = n(624138),
+    c = n(113434),
+    u = n(264282),
+    d = n(78606),
+    p = n(710914),
+    f = n(395995),
+    h = n(46140),
+    g = n(388032),
+    m = n(872058);
+let _ = [],
+    b = c.tR.SORT,
+    E = c.tR.FILTER;
+function O() {
+    let [e, t] = (0, f.P)(),
+        n = i.useMemo(() => {
+            var t, n;
+            return null !==
+                ((n = e.get(b)), (t = (0, o.Ew)(n) ? null : Object.values(h.yq).find((e) => e === n) || null)) &&
+                void 0 !== t
+                ? t
+                : h.yq.SUGGESTED;
+        }, [e]),
+        O = i.useMemo(() => {
+            var t;
+            return null !=
+                (t = (function (e) {
+                    if ((0, o.Ew)(e)) return null;
+                    let t = e
+                        .split(",")
+                        .map((e) => (0, h.fI)(e))
+                        .filter(s.lm);
+                    return t.length > 0 ? t : null;
+                })(e.get(E)))
+                ? t
+                : _;
+        }, [e]),
+        y = i.useCallback(
+            (e) => {
+                t({ [b]: e });
+            },
+            [t],
+        ),
+        v = i.useCallback(
+            (e) => {
+                t({
+                    [E]:
+                        0 === e.length
+                            ? null
+                            : e
+                                  .map((e) => {
+                                      let { filter: t } = e;
+                                      return t;
+                                  })
+                                  .join(","),
+                });
+            },
+            [t],
+        ),
         {
-            quests: m,
-            excludedQuests: _,
-            isFetchingCurrentQuests: b,
-            hasFetched: E,
-        } = (0, s.bA)(
-            s.e5.ALL,
+            quests: I,
+            excludedQuests: C,
+            isFetchingCurrentQuests: S,
+            hasFetched: T,
+        } = (0, c.bA)(
+            c.e5.ALL,
             i.useMemo(
                 () => ({
-                    sortMethod: e,
-                    filters: n,
+                    sortMethod: n,
+                    filters: O,
                 }),
-                [e, n],
+                [n, O],
             ),
         ),
-        O = i.useCallback(() => {
-            g(h);
-        }, []),
-        y = i.useRef(null),
-        v = i.useRef(null),
-        I = (0, l.TH)(),
-        C = (0, l.k6)();
+        N = i.useCallback(() => {
+            v(_);
+        }, [v]),
+        j = i.useRef(null),
+        P = i.useRef(null),
+        x = (0, l.TH)(),
+        A = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== I.hash && null != y.current && null != v.current) {
-                var t, r;
-                (e !== y.current || n !== v.current) &&
-                    C.replace(
-                        ((t = (function (e) {
+            if ("" !== x.hash && null != j.current && null != P.current) {
+                var e, t;
+                (n !== j.current || O !== P.current) &&
+                    A.replace(
+                        ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -66,10 +114,10 @@ function g() {
                                     });
                             }
                             return e;
-                        })({}, I)),
-                        (r = r = { hash: void 0 }),
+                        })({}, x)),
+                        (t = t = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -77,56 +125,56 @@ function g() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                              })(Object(t)).forEach(function (n) {
+                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                               }),
-                        t),
+                        e),
                     );
             }
-        }, [e, n, I, C]),
+        }, [n, O, x, A]),
         i.useEffect(() => {
-            y.current = e;
-        }, [e]),
-        i.useEffect(() => {
-            v.current = n;
+            j.current = n;
         }, [n]),
-        (0, s.SU)({
-            selectedSortMethod: e,
-            selectedFilters: n,
-            numQuestsVisible: m.length,
+        i.useEffect(() => {
+            P.current = O;
+        }, [O]),
+        (0, c.SU)({
+            selectedSortMethod: n,
+            selectedFilters: O,
+            numQuestsVisible: I.length,
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.headingWrapper,
+                    className: m.headingWrapper,
                     children: [
                         (0, r.jsx)(a.Heading, {
                             variant: "heading-lg/medium",
-                            children: p.intl.string(p.t.giYD00),
+                            children: g.intl.string(g.t.giYD00),
                         }),
                         (0, r.jsxs)("div", {
-                            className: f.headingControls,
+                            className: m.headingControls,
                             children: [
-                                (0, r.jsx)(c.Z, {
-                                    onChange: t,
-                                    optionClassName: f.filterSortOption,
-                                    selectedSortMethod: e,
+                                (0, r.jsx)(d.Z, {
+                                    onChange: y,
+                                    optionClassName: m.filterSortOption,
+                                    selectedSortMethod: n,
                                 }),
-                                (0, r.jsx)(o.Z, {
-                                    onChange: g,
-                                    selectedFilters: n,
+                                (0, r.jsx)(u.Z, {
+                                    onChange: v,
+                                    selectedFilters: O,
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsx)(u.Z, {
-                    quests: m,
-                    excludedQuests: _,
-                    isFetching: b,
-                    hasFetched: E,
-                    hasFiltersApplied: n.length > 0,
-                    onClearFilters: O,
+                (0, r.jsx)(p.Z, {
+                    quests: I,
+                    excludedQuests: C,
+                    isFetching: S,
+                    hasFetched: T,
+                    hasFiltersApplied: O.length > 0,
+                    onClearFilters: N,
                 }),
             ],
         })

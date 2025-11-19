@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(981631),
     b = n(957825),
     y = n(388032),
-    O = n(744114);
+    O = n(564355);
 function v(e, t) {
     let { disabled: n, type: a } = e,
         [v, I] = i.useState(!1),
@@ -52,7 +52,7 @@ function v(e, t) {
         x = (0, h.v)(d.O),
         M = a === m.Ie.NORMAL ? x : void 0;
     if (n) return null;
-    let j = S === b.X1.GIF && A === a;
+    let k = S === b.X1.GIF && A === a;
     return (0, r.jsx)(u.u, {
         keyboardShortcut: T ? void 0 : M,
         text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),
@@ -68,10 +68,10 @@ function v(e, t) {
                 onClick: () => {
                     P(), L();
                 },
-                isActive: j,
+                isActive: k,
                 pulse: v,
                 "aria-label": y.intl.string(y.t.PtVpk2),
-                "aria-expanded": j,
+                "aria-expanded": k,
                 "aria-haspopup": "dialog",
                 "aria-controls": C,
                 children: (0, r.jsx)(D, {

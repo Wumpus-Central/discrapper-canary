@@ -2,7 +2,7 @@ n.d(t, {
     BU: () => tz,
     CX: () => tR,
     F3: () => ey,
-    UE: () => tj,
+    UE: () => tk,
     _7: () => eL,
     mH: () => tF,
     vt: () => eY,
@@ -75,8 +75,8 @@ var y = new WeakMap(),
     L = new WeakMap(),
     x = new WeakMap(),
     M = new WeakMap(),
-    j = new WeakMap(),
     k = new WeakMap(),
+    j = new WeakMap(),
     U = new WeakMap(),
     G = new WeakMap(),
     B = new WeakMap(),
@@ -522,7 +522,7 @@ var y = new WeakMap(),
             var t;
             null == (t = x.get(e)) || t();
         },
-        androidPendingDiffs: (e) => k.get(e),
+        androidPendingDiffs: (e) => j.get(e),
     },
     eO = ["anchor", "focus"],
     ev = ["anchor", "focus"],
@@ -629,7 +629,7 @@ var y = new WeakMap(),
                 text: r,
                 parent: i,
                 renderPlaceholder: a,
-                renderLeaf: o = (e) => c.createElement(ej, Object.assign({}, e)),
+                renderLeaf: o = (e) => c.createElement(ek, Object.assign({}, e)),
             } = e,
             s = (0, c.useRef)(null),
             l = (0, c.useRef)(null),
@@ -710,11 +710,11 @@ var y = new WeakMap(),
             d.xv.equals(t.leaf, e.leaf) &&
             t.leaf[Z] === e.leaf[Z],
     ),
-    ej = (e) => {
+    ek = (e) => {
         var { attributes: t, children: n } = e;
         return c.createElement("span", Object.assign({}, t), n);
     },
-    ek = (e) => {
+    ej = (e) => {
         for (
             var { decorations: t, isLast: n, parent: r, renderPlaceholder: i, renderLeaf: a, text: o } = e,
                 s = eL(),
@@ -759,7 +759,7 @@ var y = new WeakMap(),
         );
     },
     eU = c.memo(
-        ek,
+        ej,
         (e, t) =>
             t.parent === e.parent &&
             t.isLast === e.isLast &&
@@ -1185,7 +1185,7 @@ function ta(e, t) {
         : null;
 }
 function to(e, t, n) {
-    var r = k.get(e),
+    var r = j.get(e),
         i =
             null == r
                 ? void 0
@@ -1398,8 +1398,8 @@ function th(e) {
             if ((o && (clearTimeout(o), (o = null)), s && (clearTimeout(s), (s = null)), !y() && !b())) return void u();
             i || ((i = !0), setTimeout(() => (i = !1))), b() && (i = "action");
             var e = t.selection && d.ML.rangeRef(t, t.selection, { affinity: "forward" });
-            j.set(t, t.marks), t_("flush", U.get(t), k.get(t));
-            for (var a = y(); (l = null == (_ = k.get(t)) ? void 0 : _[0]); ) {
+            k.set(t, t.marks), t_("flush", U.get(t), j.get(t));
+            for (var a = y(); (l = null == (_ = j.get(t)) ? void 0 : _[0]); ) {
                 var l,
                     _,
                     p,
@@ -1408,9 +1408,9 @@ function th(e) {
                 var m = tr(l);
                 (t.selection && d.e6.equals(t.selection, m)) || d.YR.select(t, m),
                     l.diff.text ? d.ML.insertText(t, l.diff.text) : d.ML.deleteFragment(t),
-                    k.set(
+                    j.set(
                         t,
-                        null == (p = k.get(t))
+                        null == (p = j.get(t))
                             ? void 0
                             : p.filter((e) => {
                                   var { id: t } = e;
@@ -1420,7 +1420,7 @@ function th(e) {
                     e6(t, l) ||
                         ((a = !1),
                         U.delete(t),
-                        j.delete(t),
+                        k.delete(t),
                         (i = "action"),
                         G.delete(t),
                         n.cancel(),
@@ -1431,8 +1431,8 @@ function th(e) {
             if ((!g || G.get(t) || (t.selection && d.e6.equals(g, t.selection)) || d.YR.select(t, g), b()))
                 return void f();
             a && n(), n.flush(), r.flush(), u();
-            var E = j.get(t);
-            j.delete(t), void 0 !== E && ((t.marks = E), t.onChange());
+            var E = k.get(t);
+            k.delete(t), void 0 !== E && ((t.marks = E), t.onChange());
         },
         p = (e) => {
             a && clearTimeout(a),
@@ -1453,8 +1453,8 @@ function th(e) {
         },
         m = (e, n) => {
             var r,
-                i = null != (r = k.get(t)) ? r : [];
-            k.set(t, i);
+                i = null != (r = j.get(t)) ? r : [];
+            j.set(t, i);
             var a = d.NB.leaf(t, e),
                 o = i.findIndex((t) => d.y$.equals(t.path, e));
             if (o < 0) {
@@ -1535,7 +1535,7 @@ function th(e) {
                             start: h.offset,
                             end: E.offset,
                         },
-                        I = k.get(t),
+                        I = j.get(t),
                         T = null == I ? void 0 : I.find((e) => d.y$.equals(e.path, y)),
                         S = T ? [T.diff, O] : [O];
                     if ((0 === e7(b.text, ...S).length && (l = !1), d.e6.isExpanded(r))) {
@@ -1634,9 +1634,9 @@ function th(e) {
                                 { at: r },
                             );
                         if (d.y$.equals(r.anchor.path, r.focus.path)) {
-                            var [j, U] = d.e6.edges(r),
+                            var [k, U] = d.e6.edges(r),
                                 G = {
-                                    start: j.offset,
+                                    start: k.offset,
                                     end: U.offset,
                                     text: x,
                                 };
@@ -1651,9 +1651,9 @@ function th(e) {
                                     (null === c
                                         ? G
                                         : !!(c && d.e6.isCollapsed(r)) &&
-                                          c.end + c.text.length === j.offset &&
+                                          c.end + c.text.length === k.offset &&
                                           tu(tu({}, c), {}, { text: c.text + x }));
-                            if (l) return void m(j.path, G);
+                            if (l) return void m(k.path, G);
                         }
                         return g(() => d.ML.insertText(t, x), { at: r });
                 }
@@ -1662,7 +1662,7 @@ function th(e) {
         b = () => !!U.get(t),
         y = () => {
             var e;
-            return !!(null != (e = k.get(t)) && e.length);
+            return !!(null != (e = j.get(t)) && e.length);
         },
         O = () => b() || y(),
         v = (e) => {
@@ -1860,7 +1860,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
             C = g(e, tT),
             N = eX(),
             [L, x] = (0, c.useState)(!1),
-            k = (0, c.useRef)(null),
+            j = (0, c.useRef)(null),
             U = (0, c.useRef)([]),
             { onUserInput: G, receivedUserInput: V } = tI(),
             [, Y] = (0, c.useReducer)((e) => e + 1, 0);
@@ -1881,7 +1881,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
             [],
         ),
             (0, c.useEffect)(() => {
-                k.current && a && k.current.focus();
+                j.current && a && j.current.focus();
             }, [a]);
         var q = (0, c.useCallback)(
                 l()(() => {
@@ -1918,13 +1918,13 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
             ),
             Q = (0, c.useMemo)(() => o()(q, 0), [q]),
             J = tv({
-                node: k,
+                node: j,
                 onDOMSelectionChange: q,
                 scheduleOnDOMSelectionChange: Q,
             });
         eC(() => {
-            k.current && (e = H(k.current))
-                ? (v.set(N, e), I.set(N, k.current), A.set(N, k.current), S.set(k.current, N))
+            j.current && (e = H(j.current))
+                ? (v.set(N, e), I.set(N, j.current), A.set(N, j.current), S.set(j.current, N))
                 : A.delete(N);
             var e,
                 { selection: t } = N,
@@ -2147,11 +2147,11 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                           Q.cancel(),
                           I.delete(N),
                           A.delete(N),
-                          k.current && eb && k.current.removeEventListener("beforeinput", $))
+                          j.current && eb && j.current.removeEventListener("beforeinput", $))
                         : eb && e.addEventListener("beforeinput", $),
-                        (k.current = e);
+                        (j.current = e);
                 },
-                [k, $, q, Q],
+                [j, $, q, Q],
             );
         eC(() => {
             var e = ey.getWindow(N);
@@ -2213,7 +2213,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 c.createElement(
                     e8,
                     {
-                        node: k,
+                        node: j,
                         receivedUserInput: V,
                     },
                     c.createElement(
@@ -2349,10 +2349,10 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                         ) {
                                             var t = M.get(N);
                                             M.delete(N),
-                                                void 0 !== t && (j.set(N, N.marks), (N.marks = t)),
+                                                void 0 !== t && (k.set(N, N.marks), (N.marks = t)),
                                                 d.ML.insertText(N, e.data);
-                                            var n = j.get(N);
-                                            j.delete(N), void 0 !== n && (N.marks = n);
+                                            var n = k.get(N);
+                                            k.delete(N), void 0 !== n && (N.marks = n);
                                         }
                                     },
                                     [C.onCompositionEnd],
@@ -2713,8 +2713,8 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
         return null != n ? n : e.defaultPrevented;
     },
     tM = (0, c.createContext)(!1),
-    tj = () => (0, c.useContext)(tM);
-function tk(e) {
+    tk = () => (0, c.useContext)(tM);
+function tj(e) {
     return e instanceof Error;
 }
 var tU = (0, c.createContext)({}),
@@ -2866,13 +2866,13 @@ var tz = function (e) {
             (n.addMark = (e, t) => {
                 var r, i;
                 null == (r = x.get(n)) || r(),
-                    !M.get(n) && null != (i = k.get(n)) && i.length && M.set(n, null),
-                    j.delete(n),
+                    !M.get(n) && null != (i = j.get(n)) && i.length && M.set(n, null),
+                    k.delete(n),
                     o(e, t);
             }),
             (n.removeMark = (e) => {
                 var t;
-                !M.get(n) && null != (t = k.get(n)) && t.length && M.set(n, null), j.delete(n), s(e);
+                !M.get(n) && null != (t = j.get(n)) && t.length && M.set(n, null), k.delete(n), s(e);
             }),
             (n.deleteBackward = (e) => {
                 if ("line" !== e) return a(e);
@@ -2892,10 +2892,10 @@ var tz = function (e) {
             (n.apply = (e) => {
                 var t,
                     i = [],
-                    a = k.get(n);
+                    a = j.get(n);
                 if (null != a && a.length) {
                     var o = a.map((t) => tl(t, e)).filter(Boolean);
-                    k.set(n, o);
+                    j.set(n, o);
                 }
                 var s = G.get(n);
                 s && G.set(n, ts(n, s, e));

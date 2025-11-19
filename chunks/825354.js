@@ -7,7 +7,7 @@ var r = n(54381),
     c = n(239091),
     s = n(726521),
     u = n(388032),
-    d = n(923915);
+    d = n(595342);
 function f(e) {
     let { widget: t, userId: n, className: a, menuItems: f } = e,
         g = i.useRef(null),

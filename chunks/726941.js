@@ -10,7 +10,7 @@ var r = n(54381),
     u = n(678694),
     p = n(292191),
     m = n(683544),
-    h = n(514956);
+    h = n(547070);
 let g = function (e) {
     var t;
     let { tabId: n, onSelectApplication: g, onScroll: _ } = e,

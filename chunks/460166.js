@@ -205,9 +205,9 @@ function x(e) {
     return t;
 }
 function M(e, t) {
-    return k(e)
+    return j(e)
         ? U(e, t)
-        : j(e)
+        : k(e)
           ? {
                 value: "",
                 attributes: {},
@@ -223,10 +223,10 @@ function M(e, t) {
                   ? X(e, t)
                   : J(e, t);
 }
-function j(e) {
+function k(e) {
     return "Resource" === e.attributes["rdf:parseType"] && "string" == typeof e.value && "" === e.value.trim();
 }
-function k(e) {
+function j(e) {
     return Array.isArray(e);
 }
 function U(e, t) {

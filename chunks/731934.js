@@ -187,7 +187,7 @@ function M() {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { sectionType: t, sectionTitle: n, requests: a } = e,
         o = i.useRef(null),
         s = "".concat(t, "-list"),
@@ -264,7 +264,7 @@ function j(e) {
         }),
     });
 }
-let k = () => {
+let j = () => {
         let e = (0, p.Z)(),
             t = (0, h.zu)(),
             n = e ? O.AG : O.i0,
@@ -277,7 +277,7 @@ let k = () => {
                 T.intl.formatToPlainString(I.default["pu6/U0"], i),
             );
         return t.length > 0
-            ? (0, r.jsx)(j, {
+            ? (0, r.jsx)(k, {
                   sectionType: O.ne.ACTIVE,
                   sectionTitle: a,
                   requests: t,
@@ -356,7 +356,7 @@ let k = () => {
             );
         return 0 === e.length
             ? null
-            : (0, r.jsx)(j, {
+            : (0, r.jsx)(k, {
                   sectionType: O.ne.PENDING,
                   sectionTitle: t,
                   requests: e,
@@ -368,7 +368,7 @@ let k = () => {
             className: A.container,
             children: [
                 e ? (0, r.jsx)(x, {}) : (0, r.jsx)(M, {}),
-                (0, r.jsx)(k, {}),
+                (0, r.jsx)(j, {}),
                 (0, r.jsx)(B, {}),
                 (0, r.jsx)(U, {}),
                 (0, r.jsx)(G, {}),

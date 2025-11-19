@@ -3,7 +3,7 @@ var l = n(54381);
 n(473749);
 var i = n(481060),
     r = n(388032),
-    o = n(851581);
+    o = n(462097);
 function a(e) {
     let { displayName: t, description: n, icon: a, isLoading: c, isConnected: s, canConnect: u, onConnect: d } = e;
     return (0, l.jsxs)("div", {

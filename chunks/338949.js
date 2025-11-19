@@ -115,10 +115,10 @@ function M() {
                 });
         }, y));
 }
-function j(e) {
+function k(e) {
     return e ? M() : U(), !0;
 }
-function k() {
+function j() {
     return null != b;
 }
 function U() {
@@ -166,7 +166,7 @@ function K(e) {
 }
 function z(e) {
     let { enabled: t } = e;
-    return j(t), !0;
+    return k(t), !0;
 }
 class q extends (i = s.ZP.Store) {
     initialize() {
@@ -185,7 +185,7 @@ class q extends (i = s.ZP.Store) {
         return x(e);
     }
     isModuleLoggingEnabled() {
-        return k();
+        return j();
     }
     isStateDebuggingEnabled() {
         return null != E;

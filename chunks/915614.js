@@ -5,7 +5,7 @@ var r = n(120356),
     l = n.n(r),
     o = n(481060),
     a = n(809357),
-    s = n(465888);
+    s = n(795482);
 function c(e) {
     let { onClick: t, keybind: n, className: r, IconComponent: c } = e,
         u = (0, a.o)();

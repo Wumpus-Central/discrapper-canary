@@ -31,8 +31,8 @@ var r = n(98405),
     L = n(335024),
     x = n(199838),
     M = n(176682),
-    j = x.get,
-    k = x.set,
+    k = x.get,
+    j = x.set,
     U = x.enforce,
     G = D.f,
     B = w.f,
@@ -51,7 +51,7 @@ var r = n(98405),
         P(e, t, {
             configurable: !0,
             get: function () {
-                return j(this)[t];
+                return k(this)[t];
             },
         });
     },
@@ -100,11 +100,11 @@ o
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = j(e);
+                  var n = k(e);
                   return n.view[c](t * o + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = j(e);
+                  var i = k(e);
                   i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
@@ -166,7 +166,7 @@ o
                         else return a(C, E, t);
                     else i = new F((s = (l = h(t)) * o));
                     for (
-                        k(e, {
+                        j(e, {
                             buffer: i,
                             byteOffset: d,
                             byteLength: s,

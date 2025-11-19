@@ -159,13 +159,13 @@ function O(e) {
         M = i.useCallback(() => {
             null == v || v();
         }, [v]),
-        j = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 null == v || v(e);
             },
             [v],
         ),
-        k = i.useCallback((e) => {
+        j = i.useCallback((e) => {
             L(e);
         }, []),
         U = C ? _.caretHoverable : void 0;
@@ -175,7 +175,7 @@ function O(e) {
             position: w,
             onRequestClose: M,
             gradientColor: O,
-            onPositionChange: k,
+            onPositionChange: j,
             onNudgeChange: P,
             scrollBehavior: S,
             modal: N,
@@ -186,7 +186,7 @@ function O(e) {
                 children: [
                     A &&
                         (0, r.jsx)(u.u, {
-                            onClick: j,
+                            onClick: k,
                             variant: null != O ? "color-mix" : void 0,
                         }),
                     null != p &&

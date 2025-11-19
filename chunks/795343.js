@@ -22,7 +22,7 @@ var r = n(54381),
     O = n(81136),
     S = n(440617),
     y = n(981631),
-    j = n(843084);
+    j = n(891131);
 let k = { flattenProductVariants: !0 };
 function I(e) {
     var t;

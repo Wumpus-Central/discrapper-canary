@@ -12,7 +12,7 @@ var r = n(54381),
     c = n(317257),
     u = n(583478),
     d = n(976845),
-    f = n(646855);
+    f = n(647917);
 function _(e, t, n) {
     return (
         t in e
@@ -81,20 +81,20 @@ let h = () =>
             }, [L, R]);
         let x = L || C,
             M = C ? null : a,
-            [j, k] = (0, i.useState)(null),
+            [k, j] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
             G = (0, i.useCallback)(() => {
-                (U.current = null), k(null);
+                (U.current = null), j(null);
             }, []),
             B = (0, i.useCallback)(
                 (e) => {
-                    let t = j === U.current;
-                    e > 0 && ("earn" !== j || !t) && k("earn");
+                    let t = k === U.current;
+                    e > 0 && ("earn" !== k || !t) && j("earn");
                 },
-                [k, j],
+                [j, k],
             ),
             Z = {
-                currentAnimationType: j,
+                currentAnimationType: k,
                 animationTypeRef: U,
                 onSetAnimationDurationMS: w,
             };

@@ -15,9 +15,9 @@ var r = n(54381),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(994838),
+    b = n(422129),
     y = n(388032),
-    O = n(617385);
+    O = n(279457);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,
@@ -88,14 +88,14 @@ function I(e) {
         L = (0, f.Sl)(E.Il.WHITE).hex,
         x = (0, f.Sl)(E.Il.RED_430).hex,
         M = D ? L : void 0,
-        j = i.useCallback(() => {
+        k = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
     return (0, r.jsxs)("div", {
         className: O.badgeContainer,
         children: [
             (0, r.jsxs)(m.S4, {
-                onSelect: t ? void 0 : j,
+                onSelect: t ? void 0 : k,
                 isSelected: !1,
                 showSelectionCircle: P,
                 name: y.intl.string(b.default.KSBBpC),

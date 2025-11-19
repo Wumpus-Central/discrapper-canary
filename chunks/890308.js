@@ -140,7 +140,7 @@
                 return E.test(e) ? L(e.slice(4).toLowerCase()) : e;
             });
         }
-        function j(e) {
+        function k(e) {
             return C(e, function (e) {
                 return b.test(e) ? "xn--" + x(e) : e;
             });
@@ -154,7 +154,7 @@
                 },
                 decode: L,
                 encode: x,
-                toASCII: j,
+                toASCII: k,
                 toUnicode: M,
             }),
             "function" == typeof define && "object" == typeof define.amd && define.amd)

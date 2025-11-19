@@ -1,5 +1,5 @@
 n.d(t, {
-    g: () => j,
+    g: () => k,
     i: () => x,
 });
 var r = n(54381),
@@ -31,7 +31,7 @@ var r = n(54381),
     R = n(921944),
     P = n(474936),
     D = n(388032),
-    w = n(352334);
+    w = n(505575);
 let L = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: R.L.PRIMARY,
@@ -161,7 +161,7 @@ function M() {
               ],
           });
 }
-let j = () =>
+let k = () =>
     (0, a.e7)([_.Z], () => _.Z.isPreview)
         ? null
         : (0, r.jsx)(l.Button, {

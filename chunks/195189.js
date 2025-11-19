@@ -6,7 +6,7 @@ var i = n(28664),
     a = n(449226),
     s = n(231338),
     o = n(388032),
-    c = n(298392);
+    c = n(824804);
 function d(e) {
     let { title: t, details: n } = e;
     return (0, r.jsxs)("div", {

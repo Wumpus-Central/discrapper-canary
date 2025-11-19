@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(981631),
     y = n(245335),
     O = n(388032),
-    v = n(739236);
+    v = n(105341);
 function I(e) {
     let t,
         n,
@@ -52,9 +52,9 @@ function I(e) {
             D.channelId === a.channel.id &&
             D.guildId === a.guild.id;
     o()(null != a, "Invite cannot be null");
-    let { target_type: M, target_user: j } = a;
-    o()(M === y.Iq.STREAM && null != j, "invalid streaming invite");
-    let k = I === j.id,
+    let { target_type: M, target_user: k } = a;
+    o()(M === y.Iq.STREAM && null != k, "invalid streaming invite");
+    let j = I === k.id,
         U = a.state === b.r2o.ACCEPTING,
         G = i.useCallback(() => {
             let e = "noop";
@@ -75,14 +75,14 @@ function I(e) {
         T = (0, m.Qs)(a.guild);
     }
     let Z = null != a.channel ? (0, _.jD)(a.channel) : null,
-        F = g.ZP.getName(j),
+        F = g.ZP.getName(k),
         V = "active";
     B && !x
-        ? (n = k ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: F }))
+        ? (n = j ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: F }))
         : ((t = O.intl.string(O.t.I6JG46)),
           (V = "active"),
           L && ((t = O.intl.string(O.t.Q1W99y)), (V = "secondary")),
-          (n = k ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: F })));
+          (n = j ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: F })));
     let H =
         R === T.id && null != Z
             ? (0, r.jsx)(f.Z.Channel, { channel: Z })

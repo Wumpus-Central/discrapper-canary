@@ -66,7 +66,7 @@ function O(e, t, n) {
             },
         }),
         M = (0, m.useMemo)(() => new (0, h.d)(I, { maximumFractionDigits: 0 }), [I]),
-        j = () => {
+        k = () => {
             if (
                 (e.text === e.placeholder && R.focusPrevious(),
                 !M.isValidPartialNumber(e.text) || t.isReadOnly || e.isPlaceholder)
@@ -79,7 +79,7 @@ function O(e, t, n) {
                     (O.current = n);
             }
         },
-        k = (e) => {
+        j = (e) => {
             if (
                 ("a" === e.key && ((0, s.V5)() ? e.metaKey : e.ctrlKey) && e.preventDefault(),
                 !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey)
@@ -87,7 +87,7 @@ function O(e, t, n) {
                 switch (e.key) {
                     case "Backspace":
                     case "Delete":
-                        e.preventDefault(), e.stopPropagation(), j();
+                        e.preventDefault(), e.stopPropagation(), k();
                 }
         },
         { startsWith: U } = (0, b.L)({ sensitivity: "base" }),
@@ -192,7 +192,7 @@ function O(e, t, n) {
             switch ((r.preventDefault(), r.inputType)) {
                 case "deleteContentBackward":
                 case "deleteContentForward":
-                    M.isValidPartialNumber(e.text) && !t.isReadOnly && j();
+                    M.isValidPartialNumber(e.text) && !t.isReadOnly && k();
                     break;
                 case "insertCompositionText":
                     (K.current = n.current.textContent), (n.current.textContent = n.current.textContent);
@@ -252,7 +252,7 @@ function O(e, t, n) {
             [parseInt(m.version, 10) >= 17 ? "enterKeyHint" : "enterkeyhint"]: X ? "next" : void 0,
             inputMode: t.isDisabled || "dayPeriod" === e.type || "era" === e.type || !X ? void 0 : "numeric",
             tabIndex: t.isDisabled ? void 0 : 0,
-            onKeyDown: k,
+            onKeyDown: j,
             onFocus: Y,
             style: $,
             onPointerDown(e) {

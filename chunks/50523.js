@@ -37,10 +37,10 @@ function v(e) {
             let e = E.ZP.getEmbeddedActivitiesForChannel(L).filter((e) => e.applicationId === I.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
-        j = (0, i.e7)([E.ZP], () => E.ZP.getCurrentEmbeddedActivity()),
-        k = (0, b.Z)(),
+        k = (0, i.e7)([E.ZP], () => E.ZP.getCurrentEmbeddedActivity()),
+        j = (0, b.Z)(),
         U = x === y.jy.CAN_LAUNCH,
-        G = null != M && (null == j ? void 0 : j.compositeInstanceId) === M,
+        G = null != M && (null == k ? void 0 : k.compositeInstanceId) === M,
         B = null != T ? T : S.customId,
         Z = [];
     U &&
@@ -52,7 +52,7 @@ function v(e) {
                     channelId: null != L ? L : void 0,
                     applicationId: I.id,
                     isStart: null == M,
-                    embeddedActivitiesManager: k,
+                    embeddedActivitiesManager: j,
                     customId: B,
                     referrerId: A,
                     analyticsLocations: w,

@@ -26,7 +26,7 @@ var r = n(54381),
     C = n(314734),
     N = n(981631),
     R = n(388032),
-    P = n(712658);
+    P = n(399235);
 function D(e, t, n) {
     return (
         t in e
@@ -82,8 +82,8 @@ function x(e, t) {
 let M = Array(6)
         .fill(0)
         .map((e, t) => t),
-    j = [, , ,].fill(0).map((e, t) => t),
-    k = [, , , ,].fill(0).map((e, t) => t),
+    k = [, , ,].fill(0).map((e, t) => t),
+    j = [, , , ,].fill(0).map((e, t) => t),
     U = 4,
     G = 5;
 function B(e) {
@@ -206,20 +206,20 @@ function F(e) {
             });
     }, [o.length, v, b]);
     let M = D || L,
-        j = D ? T.Z.buttonTypes.VIEW_LESS : T.Z.buttonTypes.VIEW_MORE,
-        k = M ? o : E;
+        k = D ? T.Z.buttonTypes.VIEW_LESS : T.Z.buttonTypes.VIEW_MORE,
+        j = M ? o : E;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(T.Z, {
                 title: R.intl.string(R.t["0hKkS+"]),
-                buttonType: j,
+                buttonType: k,
                 onClickViewButton: _ ? I : void 0,
             }),
             (0, r.jsx)("div", {
                 className: P.sectionContentContainer,
                 ref: w,
                 onTransitionEnd: x,
-                children: k.map((e, t) => {
+                children: j.map((e, t) => {
                     let { command: n, application: i, section: o } = e;
                     return (0, r.jsx)(
                         S.Z,
@@ -304,7 +304,7 @@ function H(e) {
                                   i.id,
                               );
                           }),
-                          i && j.map((e) => (0, r.jsx)(A.Z, {}, e)),
+                          i && k.map((e) => (0, r.jsx)(A.Z, {}, e)),
                       ],
                   }),
               ],
@@ -332,7 +332,7 @@ function H(e) {
                                   i.id,
                               );
                           }),
-                          i && k.map((e) => (0, r.jsx)(y.Z, { look: b.U4.LARGE_BANNER }, e)),
+                          i && j.map((e) => (0, r.jsx)(y.Z, { look: b.U4.LARGE_BANNER }, e)),
                       ],
                   }),
               ],
@@ -358,7 +358,7 @@ function W() {
             (0, r.jsx)(T.Z, { title: R.intl.string(R.t.PHjkRE) }),
             (0, r.jsx)("div", {
                 className: P.sectionContentContainer,
-                children: j.map((e) => (0, r.jsx)(A.Z, {}, e)),
+                children: k.map((e) => (0, r.jsx)(A.Z, {}, e)),
             }),
         ],
     });

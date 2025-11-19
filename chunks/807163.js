@@ -38,8 +38,8 @@ var r = n(54381),
     L = n(430824),
     x = n(594174),
     M = n(314884),
-    j = n(626135),
-    k = n(768581),
+    k = n(626135),
+    j = n(768581),
     U = n(63063),
     G = n(74538),
     B = n(998502),
@@ -53,7 +53,7 @@ var r = n(54381),
     z = n(474936),
     q = n(981631),
     X = n(388032),
-    Q = n(819019),
+    Q = n(616885),
     J = n(834982),
     $ = n(912450),
     ee = n(703548),
@@ -196,7 +196,7 @@ function eO(e) {
         c = () => {
             a(),
                 (0, w.openUserSettings)(D.n.PROFILE_PANEL, { section: q.oAB.PROFILE_CUSTOMIZATION }),
-                j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "user_profile_customization" });
+                k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "user_profile_customization" });
         };
     return (
         (t =
@@ -300,7 +300,7 @@ function ev(e) {
                 analyticsLocations: c,
                 displayProfile: null,
             }),
-            j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
+            k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
     };
     return (0, r.jsx)(eb, {
         description: X.intl.format(v, { time: O }),
@@ -329,7 +329,7 @@ function eI(e) {
         l = t === z.PremiumTypes.TIER_1,
         c = () => {
             window.open(U.Z.getArticleURL(q.BhN.PREMIUM_DETAILS)),
-                j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
+                k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
         };
     return (0, r.jsx)(eb, {
         description: l ? X.intl.format(X.t.couiKJ, {}) : X.intl.format(X.t["0hUHi6"], {}),
@@ -343,7 +343,7 @@ function eI(e) {
                               .map((e) =>
                                   null == e.id
                                       ? e.url
-                                      : k.ZP.getEmojiURL({
+                                      : j.ZP.getEmojiURL({
                                             id: e.id,
                                             animated: !i && e.animated,
                                             size: 58,
@@ -414,7 +414,7 @@ function eT(e) {
         m = () => {
             n(),
                 (0, w.openUserSettings)(D.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: q.oAB.GUILD_BOOSTING }),
-                j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
+                k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
         };
     return (0, r.jsx)(eb, {
         description: t === z.PremiumTypes.TIER_1 ? X.intl.format(X.t.K4Hv69, {}) : X.intl.format(X.t.wRxEDW, {}),
@@ -469,7 +469,7 @@ let eS = () => {
     let e = eE().screenShareItemVisual,
         t = () => {
             window.open(U.Z.getArticleURL(q.BhN.STREAM_QUALITY_SETTINGS)),
-                j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
+                k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
         };
     return (0, r.jsx)(eb, {
         description: X.intl.format(X.t.wK04T1, {}),
@@ -486,7 +486,7 @@ function eA(e) {
         n = eE().uploadsMessagesItemVisual,
         i = () => {
             window.open(U.Z.getArticleURL(q.BhN.PREMIUM_DETAILS)),
-                j.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
+                k.default.track(q.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
         };
     return (0, r.jsx)(eb, {
         description: t === z.PremiumTypes.TIER_2 ? X.intl.format(X.t.GsOFRJ, {}) : X.intl.format(X.t.wFWO6D, {}),
@@ -645,7 +645,7 @@ let eP = function (e) {
     let y = null != h && !p;
     return (i.useEffect(() => {
         y &&
-            j.default.track(q.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
+            k.default.track(q.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: f,
                 discount_id: null == h ? void 0 : h.discount_id,
             });

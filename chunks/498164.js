@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685), n(190126), n(368063);
+n.d(t, { Z: () => M }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685), n(642613), n(190126), n(368063);
 var r = n(54381);
 n(473749);
 var i = n(772848),
@@ -90,7 +90,7 @@ let M = {
             return (
                 P.ZP.focus(),
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("10570")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
                     return (t) => {
                         var n, l;
                         return (0, r.jsx)(
@@ -199,13 +199,17 @@ let M = {
                         D(n.fingerprint, (0, Z.O)(t)));
                     break;
                 case Z.jE.QUEST_HOME:
-                    null != n
-                        ? ((0, I.dL)({
-                              pathname: w.Z5c.QUEST_HOME_V2,
-                              hash: n.questId,
-                          }),
-                          D(n.fingerprint, (0, Z.O)(t)))
-                        : (0, I.dL)(w.Z5c.QUEST_HOME_V2);
+                    if (null != n) {
+                        let e = new URLSearchParams();
+                        null != n.sort && e.set(y.tR.SORT, n.sort),
+                            null != n.filter && e.set(y.tR.FILTER, n.filter),
+                            (0, I.dL)({
+                                pathname: w.Z5c.QUEST_HOME_V2,
+                                hash: n.questId,
+                                search: "?".concat(e.toString()),
+                            }),
+                            D(n.fingerprint, (0, Z.O)(t));
+                    } else (0, I.dL)(w.Z5c.QUEST_HOME_V2);
                     break;
                 case Z.jE.QUEST_PREVIEW_TOOL:
                     if ((0, v.T)({ location: L.dr.QUEST_PREVIEW_TOOL_2 }) && null != n) {

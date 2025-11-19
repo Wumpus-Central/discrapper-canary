@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(453032),
     h = n(493075),
     m = n(987338),
-    g = n(587748);
+    g = n(941189);
 function E(e) {
     let { url: t } = e,
         n = i.useCallback(() => {

@@ -32,7 +32,7 @@ var r = n(54381),
     L = n(388032),
     x = n(564651),
     M = n(975900);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -171,7 +171,7 @@ let X = (e) => {
                 let { channel: e } = m.current;
                 T.default.track(
                     D.rMx.OPEN_POPOUT,
-                    k(
+                    j(
                         {
                             type: D.jXE.STICKER_POPOUT,
                             guild_id: e.getGuildId(),
@@ -240,8 +240,8 @@ let X = (e) => {
             { sticker: n, channel: a, closePopout: l, refreshPositionKey: y } = e,
             [A, C] = i.useState(null),
             [N, P] = i.useState(!1),
-            j = I.default.getCurrentUser(),
-            U = S.ZP.canUseCustomStickersEverywhere(j),
+            k = I.default.getCurrentUser(),
+            U = S.ZP.canUseCustomStickersEverywhere(k),
             B = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             Z = null != B,
             [H, W] = i.useState(!1),
@@ -253,7 +253,7 @@ let X = (e) => {
                 }),
                 [a.guild_id],
             ),
-            { current: J } = i.useRef(k({ guild_id: a.getGuildId() }, (0, p.v_)(a))),
+            { current: J } = i.useRef(j({ guild_id: a.getGuildId() }, (0, p.v_)(a))),
             $ = {
                 stickerSourceGuild: B,
                 refreshPositionKey: y,
@@ -299,7 +299,7 @@ let X = (e) => {
                 e();
             }, [N, A]),
             (0, _.ZP)(() => {
-                T.default.track(D.rMx.OPEN_POPOUT, k({ type: ei }, J));
+                T.default.track(D.rMx.OPEN_POPOUT, j({ type: ei }, J));
             }),
             !N)
         )
@@ -405,7 +405,7 @@ let X = (e) => {
                                                 children: t.map((e) =>
                                                     (0, r.jsx)(
                                                         c.u,
-                                                        G(k({ text: e.name }, b.b_), {
+                                                        G(j({ text: e.name }, b.b_), {
                                                             children: (0, r.jsx)(
                                                                 "div",
                                                                 {

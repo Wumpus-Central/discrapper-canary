@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(56314),
     f = n(566006),
     _ = n(287151),
-    p = n(487111),
-    h = n(639543);
+    p = n(127947),
+    h = n(893973);
 function m(e, t, n) {
     return (
         t in e
@@ -118,7 +118,7 @@ let v = i.memo(function (e) {
             a = null != (M = (0, l.wK)(null != r ? r : "", i)) ? M : "";
         R && (x.borderColor = r), (x.background = a), (t = e), (n = e);
     }
-    let j = {
+    let k = {
         minWidth: L,
         color: t,
         borderColor: n,
@@ -139,7 +139,7 @@ let v = i.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: D.reactionCount,
-                style: j,
+                style: k,
                 children: w,
             }),
         ],

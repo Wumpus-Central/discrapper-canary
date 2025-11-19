@@ -41,12 +41,12 @@ var r = n(54381),
     L = n(695676),
     x = n(176412),
     M = n(226026),
-    j = n(570949),
-    k = n(753972),
+    k = n(570949),
+    j = n(753972),
     U = n(981631),
     G = n(217702),
     B = n(388032),
-    Z = n(159498),
+    Z = n(992878),
     F = n(413097),
     V = n(969728);
 function H(e, t, n) {
@@ -195,7 +195,7 @@ function J(e) {
             (e) => {
                 if ((0, w.BQ)(t)) {
                     let n = t instanceof A.ZP ? t : A.ZP.createFromServer(t);
-                    (0, u.vq)(e, (e) => (0, r.jsx)(j.Z, Y({ application: n }, e)));
+                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, Y({ application: n }, e)));
                 }
             },
             [t],
@@ -247,7 +247,7 @@ function $(e) {
         children: (0, r.jsxs)("div", {
             className: o()(Z.iconContainer, n),
             children: [
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(j.Z, {
                     src: c,
                     className: Z.iconCard,
                     "aria-hidden": !0,
@@ -334,7 +334,7 @@ function ee(e) {
             (0, r.jsxs)("div", {
                 className: o()(Z.appDetailsContainer, { [Z.appDetailsRowContainer]: "row" === n }),
                 children: [
-                    (0, r.jsx)(k.Z, {
+                    (0, r.jsx)(j.Z, {
                         src: m,
                         className: o()(Z.icon, { [Z.rowIcon]: "row" === n }),
                         "aria-hidden": !0,

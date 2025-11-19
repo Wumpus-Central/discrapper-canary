@@ -21,7 +21,7 @@ function u(e) {
         analyticsLocations: c,
     } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("56060")]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("91304")]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 e,

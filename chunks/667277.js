@@ -109,13 +109,13 @@ function S(e, t, n, g) {
                     (L =
                         null != (x = null == g ? void 0 : g.firstWeekContainsDate)
                             ? x
-                            : null == g || null == (M = g.locale) || null == (j = M.options)
+                            : null == g || null == (M = g.locale) || null == (k = M.options)
                               ? void 0
-                              : j.firstWeekContainsDate)
+                              : k.firstWeekContainsDate)
                         ? L
                         : v.firstWeekContainsDate)
                     ? w
-                    : null == (k = v.locale) || null == (U = k.options)
+                    : null == (j = v.locale) || null == (U = j.options)
                       ? void 0
                       : U.firstWeekContainsDate)
             ? D
@@ -154,8 +154,8 @@ function S(e, t, n, g) {
         L,
         x,
         M,
-        j,
         k,
+        j,
         U,
         G,
         B,

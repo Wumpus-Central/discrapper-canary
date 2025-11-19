@@ -22,7 +22,7 @@ var r = n(54381),
     C = n(293810),
     y = n(333866),
     N = n(388032),
-    E = n(947091);
+    E = n(858760);
 let I = (0, x.Mg)(u.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function S(e) {
     var t;

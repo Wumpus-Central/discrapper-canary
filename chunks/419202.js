@@ -1,64 +1,64 @@
-function a(e, t, n) {
+function a(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-n.d(t, { Z: () => r }),
-    n(410992),
-    n(227481),
-    n(730884),
-    n(20464),
-    n(341884),
-    n(364341),
-    n(629680),
-    n(505025),
-    n(918970),
-    n(121784),
-    n(644351),
-    n(146733),
-    n(415506),
-    n(388685),
-    n(259475),
-    n(539854);
-class i {
+t.d(n, { Z: () => o }),
+    t(410992),
+    t(227481),
+    t(730884),
+    t(20464),
+    t(341884),
+    t(364341),
+    t(629680),
+    t(505025),
+    t(918970),
+    t(121784),
+    t(644351),
+    t(146733),
+    t(415506),
+    t(388685),
+    t(259475),
+    t(539854);
+class r {
     appendBytes(e) {
         if (this._offset + e.length > this._buffer.length) {
-            let t = this._offset + e.length,
-                n = new Uint8Array(Math.pow(2, Math.ceil(Math.log2(Math.max(2 * this._buffer.length, t)))));
-            n.set(this._buffer.subarray(0, this._offset)), (this._buffer = n);
+            let n = this._offset + e.length,
+                t = new Uint8Array(Math.pow(2, Math.ceil(Math.log2(Math.max(2 * this._buffer.length, n)))));
+            t.set(this._buffer.subarray(0, this._offset)), (this._buffer = t);
         }
         this._buffer.set(e, this._offset), (this._offset += e.length);
     }
     addPage(e) {
         if (e.segments.length > 255)
             throw Error("Too many segments: ".concat(e.segments.length, " exceeds limit of ").concat(255));
-        for (let [t, n] of e.segments.entries())
-            if (n.length > 255)
+        for (let [n, t] of e.segments.entries())
+            if (t.length > 255)
                 throw Error(
-                    "Segment at index ".concat(t, " too large (length ").concat(n.length, " exceeds ").concat(255, ")"),
+                    "Segment at index ".concat(n, " too large (length ").concat(t.length, " exceeds ").concat(255, ")"),
                 );
-        let t = e.segments.reduce((e, t) => e + t.length, 0),
-            n = 27 + e.segments.length + t;
-        if (n > 65307) throw Error("Page too large (size ".concat(n, " exceeds ").concat(65307, ")"));
+        let n = e.segments.reduce((e, n) => e + n.length, 0),
+            t = 27 + e.segments.length + n;
+        if (t > 65307) throw Error("Page too large (size ".concat(t, " exceeds ").concat(65307, ")"));
         let a = this._offset,
-            i = 0;
+            r = 0;
         switch (e.pageType) {
             case 1:
-                i = 1;
+                r = 1;
                 break;
             case 2:
-                i = 2;
+                r = 2;
                 break;
             case 4:
-                i = 4;
+                r = 4;
         }
         this.appendBytes([
             79,
@@ -66,7 +66,7 @@ class i {
             103,
             83,
             0,
-            i,
+            r,
             255 & e.granulePosition,
             (e.granulePosition >> 8) & 255,
             (e.granulePosition >> 16) & 255,
@@ -84,13 +84,13 @@ class i {
             (this._pageSequenceNumber >> 16) & 255,
             (this._pageSequenceNumber >> 24) & 255,
         ]);
-        let r = this._offset;
-        for (let t of (this.appendBytes([0, 0, 0, 0, e.segments.length]),
+        let o = this._offset;
+        for (let n of (this.appendBytes([0, 0, 0, 0, e.segments.length]),
         this.appendBytes(e.segments.map((e) => e.length)),
         e.segments))
-            this.appendBytes(t);
-        let o = this._buffer.subarray(a, this._offset).reduce((e, t) => ((e << 8) >>> 0) ^ l[(e >>> 24) ^ t], 0) >>> 0;
-        this._buffer.set([255 & o, (o >> 8) & 255, (o >> 16) & 255, (o >> 24) & 255], r), this._pageSequenceNumber++;
+            this.appendBytes(n);
+        let l = this._buffer.subarray(a, this._offset).reduce((e, n) => ((e << 8) >>> 0) ^ i[(e >>> 24) ^ n], 0) >>> 0;
+        this._buffer.set([255 & l, (l >> 8) & 255, (l >> 16) & 255, (l >> 24) & 255], o), this._pageSequenceNumber++;
     }
     finalize(e) {
         this.addPage({
@@ -98,18 +98,18 @@ class i {
             granulePosition: e,
             segments: [],
         });
-        let t = this._buffer,
-            n = this._offset;
+        let n = this._buffer,
+            t = this._offset;
         return (
-            (this._buffer = new Uint8Array(4096)), (this._offset = 0), (this._pageSequenceNumber = 0), t.subarray(0, n)
+            (this._buffer = new Uint8Array(4096)), (this._offset = 0), (this._pageSequenceNumber = 0), n.subarray(0, t)
         );
     }
     constructor() {
         a(this, "_buffer", new Uint8Array(4096)), a(this, "_pageSequenceNumber", 0), a(this, "_offset", 0);
     }
 }
-function r(e, t) {
-    let n = new Uint8Array([
+function o(e, n) {
+    let t = new Uint8Array([
             79,
             112,
             117,
@@ -119,56 +119,56 @@ function r(e, t) {
             97,
             100,
             1,
-            t.channelCount,
+            n.channelCount,
             0,
             0,
-            255 & t.inputSampleRate,
-            (t.inputSampleRate >> 8) & 255,
-            (t.inputSampleRate >> 16) & 255,
-            (t.inputSampleRate >> 24) & 255,
-            255 & t.outputGain,
-            (t.outputGain >> 8) & 255,
-            t.channelMappingFamily,
+            255 & n.inputSampleRate,
+            (n.inputSampleRate >> 8) & 255,
+            (n.inputSampleRate >> 16) & 255,
+            (n.inputSampleRate >> 24) & 255,
+            255 & n.outputGain,
+            (n.outputGain >> 8) & 255,
+            n.channelMappingFamily,
         ]),
         a = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-        r = new i();
-    r.addPage({
+        o = new r();
+    o.addPage({
         pageType: 2,
         granulePosition: 0,
-        segments: [n],
+        segments: [t],
     });
-    let l = 0;
-    for (let t of (r.addPage({
+    let i = 0;
+    for (let n of (o.addPage({
         pageType: 0,
-        granulePosition: l,
+        granulePosition: i,
         segments: [a],
     }),
     e)) {
         let e = (function (e) {
-            let t = Math.floor(e.length / 255),
-                n = [];
-            for (let a = 0; a <= t; a++) {
-                let i = 0 === a ? 0 : 255 * a,
-                    r = a === t ? e.length : (a + 1) * 255;
-                n.push(e.slice(i, r));
+            let n = Math.floor(e.length / 255),
+                t = [];
+            for (let a = 0; a <= n; a++) {
+                let r = 0 === a ? 0 : 255 * a,
+                    o = a === n ? e.length : (a + 1) * 255;
+                t.push(e.slice(r, o));
             }
-            return n;
-        })(t.buffer);
-        (l += t.numSamples),
-            r.addPage({
+            return t;
+        })(n.buffer);
+        (i += n.numSamples),
+            o.addPage({
                 pageType: 0,
-                granulePosition: l,
+                granulePosition: i,
                 segments: e,
             });
     }
-    return r.finalize(l);
+    return o.finalize(i);
 }
-let l = (function () {
+let i = (function () {
     let e = new Uint32Array(256);
-    for (let t = 256; t > 0; t--) {
-        let n = t << 24;
-        for (let e = 8; e > 0; e--) n = 2147483648 & n ? 79764919 ^ (n << 1) : n << 1;
-        e[t] = n;
+    for (let n = 256; n > 0; n--) {
+        let t = n << 24;
+        for (let e = 8; e > 0; e--) t = 2147483648 & t ? 79764919 ^ (t << 1) : t << 1;
+        e[n] = t;
     }
     return e;
 })();

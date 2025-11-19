@@ -49,8 +49,8 @@ let C = 10,
     L = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     x = /^\/activities\/([0-9-]+)\/?$/,
     M = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    j = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))\/([0-9]+)(?:\/([^\/]+))?$/,
-    k = /^\/channels\/([0-9]+)\/shop$/,
+    k = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))\/([0-9]+)(?:\/([^\/]+))?$/,
+    j = /^\/channels\/([0-9]+)\/shop$/,
     U = /^\/quests\/([0-9-]+)\/?$/,
     G = /^\/oauth2\/authorize/,
     B = /^#itemSkuId=([0-9]+)$/,
@@ -235,9 +235,9 @@ function es(e) {
         }
         let I = null == u ? void 0 : u.match(M);
         null != I && d(S.g.GUILD_PRODUCT, "".concat(I[1], "-").concat(I[2]));
-        let T = null == u ? void 0 : u.match(k);
+        let T = null == u ? void 0 : u.match(j);
         null != T && d(S.g.SERVER_SHOP, T[1]);
-        let A = null == u ? void 0 : u.match(j);
+        let A = null == u ? void 0 : u.match(k);
         null != A && d(S.g.SOCIAL_LAYER_STOREFRONT, "".concat(A[3], "-").concat(null != (o = A[1]) ? o : A[2]));
         let D = el(e);
         if ((null != D && d(S.g.QUESTS_EMBED, D), "/shop" === u)) {

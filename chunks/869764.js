@@ -25,7 +25,7 @@ var l = n(54381),
     x = n(981631),
     T = n(372897),
     _ = n(388032),
-    j = n(195286);
+    j = n(371882);
 function v(e) {
     var { title: t, emojiId: n, emojiName: r, icon: i, completed: s, Icon: c, onClick: d } = e,
         u = (function (e, t) {

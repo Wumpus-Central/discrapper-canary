@@ -131,7 +131,7 @@ function S(e) {
             autoTrackExposure: !0,
         }),
         M = C(),
-        j = (0, i.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
+        k = (0, i.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
     return r.useMemo(() => {
         let e = 0,
             r = 0,
@@ -161,7 +161,7 @@ function S(e) {
                       sections: i,
                       guildIds: N,
                       allSounds: E,
-                      potentialSoundIdsForSection: j,
+                      potentialSoundIdsForSection: k,
                       sectionType: h.bg.RECENTLY_HEARD,
                   }),
               x &&
@@ -203,7 +203,7 @@ function S(e) {
                       lockedCustomSoundCount: r,
                   },
               });
-    }, [N, E, y, j, M, x, L, D, w, t, P, R, n, S, u, A]);
+    }, [N, E, y, k, M, x, L, D, w, t, P, R, n, S, u, A]);
 }
 function A(e, t, n) {
     return r.useMemo(

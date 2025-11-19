@@ -179,7 +179,7 @@ function M(e) {
     let { guildScheduledEvent: t } = e;
     A(t);
 }
-function j(e) {
+function k(e) {
     let { guildId: t, guildScheduledEvents: n } = e,
         r = y.values(g.GUILD_EVENT(t), !0).map((e) => e.id),
         i = n.map((e) => e.id);
@@ -192,7 +192,7 @@ function j(e) {
         A(e);
     return !0;
 }
-function k(e) {
+function j(e) {
     let { guild: t } = e;
     return G(t.id, !1), t.guild_scheduled_events.forEach((e) => A(e)), !0;
 }
@@ -355,10 +355,10 @@ class en extends (r = o.ZP.Store) {
 _(en, "displayName", "GuildScheduledEventStore");
 let er = new en(l.Z, {
     CONNECTION_OPEN: x,
-    GUILD_CREATE: k,
+    GUILD_CREATE: j,
     GUILD_DELETE: U,
     FETCH_GUILD_EVENT: M,
-    FETCH_GUILD_EVENTS_FOR_GUILD: j,
+    FETCH_GUILD_EVENTS_FOR_GUILD: k,
     GUILD_SCHEDULED_EVENT_CREATE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_SCHEDULED_EVENT_DELETE: Z,

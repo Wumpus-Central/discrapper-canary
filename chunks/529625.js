@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     l = n(473749),
-    r = n(481060),
-    i = n(881052),
+    i = n(481060),
+    r = n(881052),
     s = n(972959),
     o = n(729345),
     c = n(823385),
@@ -45,24 +45,24 @@ function h() {
                         errorMessage: null,
                     });
             } catch (t) {
-                let e = new i.Hx(t);
+                let e = new r.Hx(t);
                 p.setState({ errorMessage: e.getAnyErrorMessage() });
             } finally {
                 p.setState({ isUploading: !1 });
             }
     }, []);
-    return (0, a.jsxs)(r.C3N, {
+    return (0, a.jsxs)(i.C3N, {
         label: "Debug Logs Session",
         description:
             "Click to emit debug logs as you search in the Quick Switcher. Includes your search term and all results. For each result, includes the record id, associated names, and frecency scores.",
         children: [
-            (0, a.jsx)(r.Wn, {
-                messageType: r.QYI.INFO,
+            (0, a.jsx)(i.Wn, {
+                messageType: i.QYI.INFO,
                 children: "When you are done, please remember to upload the logs.",
             }),
-            (0, a.jsxs)(r.ButtonGroup, {
+            (0, a.jsxs)(i.ButtonGroup, {
                 children: [
-                    (0, a.jsx)(r.Button, {
+                    (0, a.jsx)(i.Button, {
                         variant: e ? "critical-primary" : "primary",
                         onClick: () => p.setState({ isRecording: !e }),
                         text: e ? "Stop Recording" : "Start Recording",

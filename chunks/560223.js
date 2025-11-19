@@ -14,7 +14,7 @@ var r = n(54381),
     h = n(391110),
     m = n(75077),
     g = n(51636),
-    E = n(118461);
+    E = n(484327);
 function b(e, t, n) {
     return (
         t in e
@@ -120,7 +120,7 @@ let I = (e) => {
             L = (0, u.bg)({ location: "PremiumPerks" }),
             x = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
-            j = (0, m.ZM)({
+            k = (0, m.ZM)({
                 perksCards: R,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
@@ -131,7 +131,7 @@ let I = (e) => {
                 showDisplayNameStyles: x,
                 recurring3PPromotionExperiment: M,
             }),
-            k = j.some((e) => null != e.pillText);
+            j = k.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
             ref: S,
             className: o()(
@@ -156,7 +156,7 @@ let I = (e) => {
                         [E.subtitle]: null == O || b,
                         [E.subtitleWithButton]: null != O && !b,
                         [E.fullWidth]: A || b,
-                        [E.moreSubtitleMargin]: k,
+                        [E.moreSubtitleMargin]: j,
                         [E.leftAlignSubtitle]: b,
                         [E.centerAlignSubtitle]: !b,
                     }),
@@ -170,7 +170,7 @@ let I = (e) => {
                     }),
                 (0, r.jsx)("div", {
                     className: E.cardContainer,
-                    children: j.map((e, t) =>
+                    children: k.map((e, t) =>
                         (0, r.jsx)(g.Z, v(y({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
                     ),
                 }),

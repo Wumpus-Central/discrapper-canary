@@ -3,7 +3,7 @@ n.d(t, {
     _e: () => i,
     sb: () => a,
 });
-var r = n(515527);
+var r = n(334405);
 let i = {
         default: r.colorDefault,
         brand: r.colorBrand,

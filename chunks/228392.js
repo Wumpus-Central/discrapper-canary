@@ -2,14 +2,14 @@ n.d(t, {
     B: () => w,
     B5: () => R,
     Do: () => D,
-    GX: () => j,
+    GX: () => k,
     HR: () => F,
     Hr: () => N,
     Je: () => A,
     Js: () => b,
     KR: () => P,
     MO: () => U,
-    N3: () => k,
+    N3: () => j,
     Oq: () => S,
     P_: () => v,
     Vn: () => T,
@@ -294,11 +294,11 @@ function M(e) {
     let { added: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function j(e) {
+function k(e) {
     let { readGuideCta: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }
-function k(e) {
+function j(e) {
     let { isMobile: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }

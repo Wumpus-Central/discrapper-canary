@@ -11,7 +11,7 @@ var r = n(54381),
     g = n(268350),
     m = n(419922),
     p = n(388032),
-    f = n(783248);
+    f = n(539437);
 let h = (e) => {
     let { className: t, isDisabled: l, sticker: h, canManageSticker: b } = e,
         [x, j] = i.useState(!1),
@@ -76,7 +76,7 @@ let h = (e) => {
                                               (0, o.ZDy)(async () => {
                                                   let { default: e } = await Promise.all([
                                                       n.e("93626"),
-                                                      n.e("72997"),
+                                                      n.e("34765"),
                                                   ]).then(n.bind(n, 136735));
                                                   return (t) =>
                                                       (0, r.jsx)(

@@ -6,7 +6,7 @@ var r = n(54381),
     a = n(481060),
     c = n(924052),
     s = n(670304),
-    u = n(880745);
+    u = n(764516);
 function d(e) {
     let { notice: t, children: n } = e,
         { showNotice: s, handleStoreUpdate: d } = (0, c.Cu)(),

@@ -98,7 +98,7 @@ function L(e, t) {
         L = i.useRef(!1),
         x = i.useRef(() => {}),
         M = i.useRef(!1),
-        j = (0, a.iW)(() => {
+        k = (0, a.iW)(() => {
             var e;
             let t = null == (e = o.current.openEvent) ? void 0 : e.type;
             return (null == t ? void 0 : t.includes("mouse")) && "mousedown" !== t;
@@ -119,7 +119,7 @@ function L(e, t) {
         i.useEffect(() => {
             if (!u || !E.current || !n) return;
             function e(e) {
-                j() && r(!1, e, "hover");
+                k() && r(!1, e, "hover");
             }
             let t = (0, a.Me)(c.floating).documentElement;
             return (
@@ -128,8 +128,8 @@ function L(e, t) {
                     t.removeEventListener("mouseleave", e);
                 }
             );
-        }, [c.floating, n, r, u, E, j]);
-    let k = i.useCallback(
+        }, [c.floating, n, r, u, E, k]);
+    let j = i.useCallback(
             function (e, t, n) {
                 void 0 === t && (t = !0), void 0 === n && (n = "hover");
                 let i = D(b.current, "close", v.current);
@@ -196,7 +196,7 @@ function L(e, t) {
                         x: e.clientX,
                         y: e.clientY,
                         onClose() {
-                            G(), U(), B() || k(e, !0, "safe-polygon");
+                            G(), U(), B() || j(e, !0, "safe-polygon");
                         },
                     }));
                 let r = T.current;
@@ -206,7 +206,7 @@ function L(e, t) {
                     });
                 return;
             }
-            ("touch" === v.current && (0, a.r3)(c.floating, e.relatedTarget)) || k(e);
+            ("touch" === v.current && (0, a.r3)(c.floating, e.relatedTarget)) || j(e);
         }
         function i(e) {
             !B() &&
@@ -218,7 +218,7 @@ function L(e, t) {
                         x: e.clientX,
                         y: e.clientY,
                         onClose() {
-                            G(), U(), B() || k(e);
+                            G(), U(), B() || j(e);
                         },
                     })(e));
         }
@@ -226,12 +226,12 @@ function L(e, t) {
             R(I);
         }
         function d(e) {
-            B() || k(e, !1);
+            B() || j(e, !1);
         }
-    }, [c, u, e, _, h, k, U, G, r, n, y, m, b, E, o, B, O]),
+    }, [c, u, e, _, h, j, U, G, r, n, y, m, b, E, o, B, O]),
         (0, a.Xj)(() => {
             var e, t;
-            if (u && n && null != (e = E.current) && null != (e = e.__options) && e.blockPointerEvents && j()) {
+            if (u && n && null != (e = E.current) && null != (e = e.__options) && e.blockPointerEvents && k()) {
                 L.current = !0;
                 let e = c.floating;
                 if ((0, s.kK)(c.domReference) && e) {
@@ -255,7 +255,7 @@ function L(e, t) {
                     );
                 }
             }
-        }, [u, n, g, c, m, E, j]),
+        }, [u, n, g, c, m, E, k]),
         (0, a.Xj)(() => {
             n || ((v.current = void 0), (M.current = !1), U(), G());
         }, [n, U, G]),
@@ -292,7 +292,7 @@ function L(e, t) {
 }
 let x = null,
     M = 0;
-function j(e, t) {
+function k(e, t) {
     if (!e || !t) return !1;
     let n = null == t.getRootNode ? void 0 : t.getRootNode();
     if (e.contains(t)) return !0;
@@ -305,7 +305,7 @@ function j(e, t) {
     }
     return !1;
 }
-function k(e) {
+function j(e) {
     return "composedPath" in e ? e.composedPath()[0] : e.target;
 }
 function U(e) {
@@ -1066,10 +1066,10 @@ function ev(e) {
             if ((R(i), !c.domReference || !c.floating || null == l || null == n || null == o)) return;
             let { clientX: h, clientY: m } = e,
                 g = [h, m],
-                E = k(e),
+                E = j(e),
                 b = "mouseleave" === e.type,
-                y = j(c.floating, E),
-                O = j(c.domReference, E),
+                y = k(c.floating, E),
+                O = k(c.domReference, E),
                 v = c.domReference.getBoundingClientRect(),
                 I = c.floating.getBoundingClientRect(),
                 T = l.split("-")[0],
@@ -1088,7 +1088,7 @@ function ev(e) {
                 return;
             }
             if (
-                (b && (0, s.kK)(e.relatedTarget) && j(c.floating, e.relatedTarget)) ||
+                (b && (0, s.kK)(e.relatedTarget) && k(c.floating, e.relatedTarget)) ||
                 (_ && eb(_.nodesRef.current, f).length)
             )
                 return;

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(392711),
     o = n.n(a),
-    s = n(636606),
+    s = n(790519),
     l = n(818405),
     c = n(587158),
     u = n(286379),
@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(987650),
     C = n(981631),
     N = n(388032),
-    R = n(460063);
+    R = n(534887);
 function P(e, t, n) {
     return (
         t in e
@@ -108,7 +108,7 @@ function L(e) {
             [c, o],
         ),
         M = (0, d.e7)([T.Z], () => T.Z.getFocusedRunningGame()),
-        j = g
+        k = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -137,14 +137,14 @@ function L(e) {
                   ],
               })
             : null,
-        k = g ? null : N.intl.string(N.t.oEJEFq),
+        j = g ? null : N.intl.string(N.t.oEJEFq),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(S.Y, {
         title: N.intl.string(N.t.U38qZj),
-        body: j,
-        hint: U ? k : void 0,
+        body: k,
+        hint: U ? j : void 0,
         confirmText: N.intl.string(N.t.a3HlgJ),
         cancelText: null != M ? N.intl.string(N.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(b.Z, {

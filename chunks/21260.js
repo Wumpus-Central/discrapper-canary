@@ -12,7 +12,7 @@ var r = n(54381),
     s = n(28664),
     l = n(393238),
     c = n(388032),
-    u = n(595296);
+    u = n(384934);
 function d(e) {
     let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: o } = e,
         s = 0,

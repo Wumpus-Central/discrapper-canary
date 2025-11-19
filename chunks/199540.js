@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(430824),
     p = n(674552),
     h = n(388032),
-    f = n(855031);
+    f = n(106663);
 function g(e) {
     let { guildId: t, animate: n } = e,
         i = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),

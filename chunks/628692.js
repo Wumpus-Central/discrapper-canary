@@ -21,7 +21,7 @@ var r = n(54381),
     b = n(695346),
     y = n(592125),
     O = n(388032),
-    v = n(695560);
+    v = n(766106);
 function I(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(c.P3F, {

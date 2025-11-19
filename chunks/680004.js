@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(442837),
-    i = n(481060),
+    i = n(442837),
+    r = n(481060),
     s = n(435064),
     o = n(894694),
     c = n(39604);
@@ -50,7 +50,7 @@ function u(e, t) {
     );
 }
 function m() {
-    let { mlPipelinesEnabled: e } = (0, r.cj)([s.Z], () => ({
+    let { mlPipelinesEnabled: e } = (0, i.cj)([s.Z], () => ({
             mlPipelinesEnabled: s.Z.getSettings().mlPipelinesEnabled,
         })),
         [t, n] = l.useState(
@@ -89,18 +89,18 @@ function m() {
             },
             [t],
         );
-    return (0, a.jsx)(i.Ttm, {
-        children: (0, a.jsxs)(i.l09, {
+    return (0, a.jsx)(r.Ttm, {
+        children: (0, a.jsxs)(r.l09, {
             children: [
-                (0, a.jsx)(i.C3N, {
+                (0, a.jsx)(r.C3N, {
                     label: "Send Test Signals",
-                    children: (0, a.jsxs)(i.NIo, {
+                    children: (0, a.jsxs)(r.NIo, {
                         children: [
-                            (0, a.jsx)(i.Button, {
+                            (0, a.jsx)(r.Button, {
                                 text: "Manual",
                                 onClick: () => c.XK({ type: o.Bs.MANUAL }),
                             }),
-                            (0, a.jsx)(i.Button, {
+                            (0, a.jsx)(r.Button, {
                                 text: "Distributed",
                                 onClick: () =>
                                     c.XK({
@@ -109,7 +109,7 @@ function m() {
                                         remoteTriggerClipId: "456",
                                     }),
                             }),
-                            (0, a.jsx)(i.Button, {
+                            (0, a.jsx)(r.Button, {
                                 text: "Phrase: Clip",
                                 onClick: () =>
                                     c.XK({
@@ -117,7 +117,7 @@ function m() {
                                         text: "clip",
                                     }),
                             }),
-                            (0, a.jsx)(i.Button, {
+                            (0, a.jsx)(r.Button, {
                                 text: "Yelling",
                                 onClick: () =>
                                     c.XK({
@@ -128,12 +128,12 @@ function m() {
                         ],
                     }),
                 }),
-                (0, a.jsxs)(i.C3N, {
+                (0, a.jsxs)(r.C3N, {
                     label: "Game Event Creator",
                     children: [
-                        (0, a.jsxs)(i.NIo, {
+                        (0, a.jsxs)(r.NIo, {
                             children: [
-                                (0, a.jsx)(i.q4e, {
+                                (0, a.jsx)(r.q4e, {
                                     label: "Event Type",
                                     value: m,
                                     onChange: (e) => p(e),
@@ -180,7 +180,7 @@ function m() {
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(i.q4e, {
+                                (0, a.jsx)(r.q4e, {
                                     label: "Importance",
                                     value: h,
                                     onChange: x,
@@ -201,19 +201,19 @@ function m() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(i.oil, {
+                        (0, a.jsx)(r.oil, {
                             label: "Title (optional)",
                             value: g,
                             onChange: f,
                             placeholder: "e.g., First Blood",
                         }),
-                        (0, a.jsx)(i.oil, {
+                        (0, a.jsx)(r.oil, {
                             label: "Description (optional)",
                             value: b,
                             onChange: v,
                             placeholder: "e.g., Killed enemy ADC in bot lane",
                         }),
-                        (0, a.jsx)(i.Button, {
+                        (0, a.jsx)(r.Button, {
                             text: "Create Game Event",
                             onClick: () => {
                                 c.XK({
@@ -227,54 +227,54 @@ function m() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(i.izJ, {}),
-                (0, a.jsxs)(i.C3N, {
+                (0, a.jsx)(r.izJ, {}),
+                (0, a.jsxs)(r.C3N, {
                     label: "ML Pipelines Enabled",
                     children: [
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Emotion Classifier",
                             checked: e.emotionClassifier,
                             onChange: (t) => c.So(u(d({}, e), { emotionClassifier: t })),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Wake Word Detector",
                             checked: e.wakeWordDetector,
                             onChange: (t) => c.So(u(d({}, e), { wakeWordDetector: t })),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Yell Detector",
                             checked: e.yellDetector,
                             onChange: (t) => c.So(u(d({}, e), { yellDetector: t })),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
                             onChange: (t) => c.So(u(d({}, e), { whisperTranscription: t })),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(i.C3N, {
+                (0, a.jsxs)(r.C3N, {
                     label: "ML Debug Logging (window.__CLIPS_DEBUG__)",
                     children: [
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Wake Word Debug",
                             description: "Log wake word detection events to console",
                             checked: t.wakeWord,
                             onChange: () => j("wakeWord"),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Emotion Debug",
                             description: "Log emotion classification events to console",
                             checked: t.emotion,
                             onChange: () => j("emotion"),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Yell Debug",
                             description: "Show yell classification events to console",
                             checked: t.yell,
                             onChange: () => j("yell"),
                         }),
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(r.rsf, {
                             label: "Whisper Debug",
                             description: "Log whisper transcription events to console",
                             checked: t.whisper,

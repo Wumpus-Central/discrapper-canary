@@ -27,7 +27,7 @@ var l = n(54381),
     S = n(273391),
     w = n(981631),
     M = n(388032),
-    R = n(176898);
+    R = n(342745);
 let A = new h.Z("EmojiStudio"),
     T = (e) => {
         var t;

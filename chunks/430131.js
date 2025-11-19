@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(981631),
     _ = n(474936),
     p = n(388032),
-    h = n(356683);
+    h = n(473385);
 function m(e) {
     let { errors: t, pendingNick: n, currentNick: m, username: g, user: E, guild: b } = e,
         y = null != n ? n : m,

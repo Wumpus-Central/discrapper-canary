@@ -201,7 +201,7 @@
                             }
                             return (L[t] = n), n;
                         },
-                        j = {
+                        k = {
                             __proto__: null,
                             "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
                             "%ArrayPrototype%": ["Array", "prototype"],
@@ -255,20 +255,20 @@
                             "%WeakMapPrototype%": ["WeakMap", "prototype"],
                             "%WeakSetPrototype%": ["WeakSet", "prototype"],
                         },
-                        k = n(5049),
+                        j = n(5049),
                         U = n(5215),
-                        G = k.call(P, Array.prototype.concat),
-                        B = k.call(R, Array.prototype.splice),
-                        Z = k.call(P, String.prototype.replace),
-                        F = k.call(P, String.prototype.slice),
-                        V = k.call(P, RegExp.prototype.exec),
+                        G = j.call(P, Array.prototype.concat),
+                        B = j.call(R, Array.prototype.splice),
+                        Z = j.call(P, String.prototype.replace),
+                        F = j.call(P, String.prototype.slice),
+                        V = j.call(P, RegExp.prototype.exec),
                         H =
                             /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
                         Y = /\\(\\)?/g,
                         W = function (e, t) {
                             var n,
                                 r = e;
-                            if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(L, r))) {
+                            if ((U(k, r) && (r = "%" + (n = k[r])[0] + "%"), U(L, r))) {
                                 var i = L[r];
                                 if ((i === D && (i = M(r)), void 0 === i && !t))
                                     throw new u(
@@ -582,8 +582,8 @@
                         ),
                         x = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         M = "object" == typeof n.g && n.g && n.g.Object === Object && n.g,
-                        j = "object" == typeof self && self && self.Object === Object && self,
-                        k = M || j || Function("return this")(),
+                        k = "object" == typeof self && self && self.Object === Object && self,
+                        j = M || k || Function("return this")(),
                         U =
                             ((i = {
                                 À: "A",
@@ -781,7 +781,7 @@
                                 return null == i ? void 0 : i[e];
                             }),
                         G = Object.prototype.toString,
-                        B = k.Symbol,
+                        B = j.Symbol,
                         Z = B ? B.prototype : void 0,
                         F = Z ? Z.toString : void 0;
                     function V(e) {
@@ -929,8 +929,8 @@
                         return b.call(t, n, "$&_");
                     }
                     var M = n(2634),
-                        j = M.custom,
-                        k = Y(j) ? j : null,
+                        k = M.custom,
+                        j = Y(k) ? k : null,
                         U = {
                             __proto__: null,
                             double: '"',
@@ -1010,7 +1010,7 @@
                         var N = void 0 === l.depth ? 5 : l.depth;
                         if ((void 0 === i && (i = 0), i >= N && N > 0 && "object" == typeof t))
                             return V(t) ? "[Array]" : "[Object]";
-                        var j,
+                        var k,
                             G = (function (e, t) {
                                 var n;
                                 if ("\t" === e.indent) n = "\t";
@@ -1051,10 +1051,10 @@
                             return "object" != typeof t || P ? ei : J(ei);
                         }
                         if (
-                            (j = t) &&
-                            "object" == typeof j &&
-                            (("undefined" != typeof HTMLElement && j instanceof HTMLElement) ||
-                                ("string" == typeof j.nodeName && "function" == typeof j.getAttribute))
+                            (k = t) &&
+                            "object" == typeof k &&
+                            (("undefined" != typeof HTMLElement && k instanceof HTMLElement) ||
+                                ("string" == typeof k.nodeName && "function" == typeof k.getAttribute))
                         ) {
                             for (
                                 var ea = "<" + O.call(String(t.nodeName)), eo = t.attributes || [], es = 0;
@@ -1092,7 +1092,7 @@
                                 : "{ [" + String(t) + "] " + T.call(I.call("[cause]: " + W(t.cause), ec), ", ") + " }";
                         }
                         if ("object" == typeof t && h) {
-                            if (k && "function" == typeof t[k] && M) return M(t, { depth: N - i });
+                            if (j && "function" == typeof t[j] && M) return M(t, { depth: N - i });
                             if ("symbol" !== h && "function" == typeof t.inspect) return t.inspect();
                         }
                         if (
@@ -1436,11 +1436,11 @@
                             var x = f ? String(n).replace(/\./g, "%2E") : String(n),
                                 M = o && l(A) && 1 === A.length ? x + "[]" : x;
                             if (s && l(A) && 0 === A.length) return M + "[]";
-                            for (var j = 0; j < D.length; ++j) {
-                                var k = D[j],
-                                    U = "object" == typeof k && k && void 0 !== k.value ? k.value : A[k];
+                            for (var k = 0; k < D.length; ++k) {
+                                var j = D[k],
+                                    U = "object" == typeof j && j && void 0 !== j.value ? j.value : A[j];
                                 if (!d || null !== U) {
-                                    var G = E && f ? String(k).replace(/\./g, "%2E") : String(k),
+                                    var G = E && f ? String(j).replace(/\./g, "%2E") : String(j),
                                         B = l(A)
                                             ? "function" == typeof a
                                                 ? a(M, G)
@@ -2045,7 +2045,7 @@
                             }
                             return (L[t] = n), n;
                         },
-                        j = {
+                        k = {
                             __proto__: null,
                             "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
                             "%ArrayPrototype%": ["Array", "prototype"],
@@ -2099,20 +2099,20 @@
                             "%WeakMapPrototype%": ["WeakMap", "prototype"],
                             "%WeakSetPrototype%": ["WeakSet", "prototype"],
                         },
-                        k = n(5049),
+                        j = n(5049),
                         U = n(5215),
-                        G = k.call(P, Array.prototype.concat),
-                        B = k.call(R, Array.prototype.splice),
-                        Z = k.call(P, String.prototype.replace),
-                        F = k.call(P, String.prototype.slice),
-                        V = k.call(P, RegExp.prototype.exec),
+                        G = j.call(P, Array.prototype.concat),
+                        B = j.call(R, Array.prototype.splice),
+                        Z = j.call(P, String.prototype.replace),
+                        F = j.call(P, String.prototype.slice),
+                        V = j.call(P, RegExp.prototype.exec),
                         H =
                             /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
                         Y = /\\(\\)?/g,
                         W = function (e, t) {
                             var n,
                                 r = e;
-                            if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(L, r))) {
+                            if ((U(k, r) && (r = "%" + (n = k[r])[0] + "%"), U(L, r))) {
                                 var i = L[r];
                                 if ((i === D && (i = M(r)), void 0 === i && !t))
                                     throw new u(
@@ -2448,7 +2448,7 @@
                             }
                             return (L[t] = n), n;
                         },
-                        j = {
+                        k = {
                             __proto__: null,
                             "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
                             "%ArrayPrototype%": ["Array", "prototype"],
@@ -2502,20 +2502,20 @@
                             "%WeakMapPrototype%": ["WeakMap", "prototype"],
                             "%WeakSetPrototype%": ["WeakSet", "prototype"],
                         },
-                        k = n(5049),
+                        j = n(5049),
                         U = n(5215),
-                        G = k.call(P, Array.prototype.concat),
-                        B = k.call(R, Array.prototype.splice),
-                        Z = k.call(P, String.prototype.replace),
-                        F = k.call(P, String.prototype.slice),
-                        V = k.call(P, RegExp.prototype.exec),
+                        G = j.call(P, Array.prototype.concat),
+                        B = j.call(R, Array.prototype.splice),
+                        Z = j.call(P, String.prototype.replace),
+                        F = j.call(P, String.prototype.slice),
+                        V = j.call(P, RegExp.prototype.exec),
                         H =
                             /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
                         Y = /\\(\\)?/g,
                         W = function (e, t) {
                             var n,
                                 r = e;
-                            if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(L, r))) {
+                            if ((U(k, r) && (r = "%" + (n = k[r])[0] + "%"), U(L, r))) {
                                 var i = L[r];
                                 if ((i === D && (i = M(r)), void 0 === i && !t))
                                     throw new u(
@@ -2982,7 +2982,7 @@
                         if (a) throw Error("Cannot pass both accountId and accountTypeId");
                     }
                     var M = l(h),
-                        j = o()(
+                        k = o()(
                             {
                                 "client-version": "5.3.1",
                                 "container-id": t,
@@ -3022,7 +3022,7 @@
                         (e.allow = "camera;microphone;clipboard-write"),
                         e.setAttribute("sandbox", b.concat(A).join(" ")),
                         (e.frameBorder = "0"),
-                        (e.src = M + "/widget" + j),
+                        (e.src = M + "/widget" + k),
                         (e.onload = function () {}),
                         e
                     );

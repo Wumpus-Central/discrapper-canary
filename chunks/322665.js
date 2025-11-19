@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l });
 var r = n(54381),
     a = n(648113),
-    i = n(795396);
+    i = n(196073);
 function l() {
     let e = (0, a.C)();
     return (0, r.jsx)("div", {

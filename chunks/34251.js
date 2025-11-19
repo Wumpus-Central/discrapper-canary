@@ -10,7 +10,7 @@ var r = n(54381),
     u = n(291967),
     m = n(46140),
     f = n(388032),
-    x = n(522144);
+    x = n(258910);
 function p(e) {
     let { quest: t, rewardName: n, location: i, sourceQuestContent: o } = e;
     return (0, r.jsxs)("div", {

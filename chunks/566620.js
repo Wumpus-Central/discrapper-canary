@@ -51,8 +51,8 @@ var r = n(990547),
     L = n(314897),
     x = n(592125),
     M = n(430824),
-    j = n(496675),
-    k = n(594174),
+    k = n(496675),
+    j = n(594174),
     U = n(979651),
     G = n(626135),
     B = n(630388),
@@ -161,7 +161,7 @@ async function el(e) {
             channelId: null != r ? r : null,
             proxyTicket: t,
         });
-        let n = k.default.getCurrentUser();
+        let n = j.default.getCurrentUser();
         if (
             (null != n &&
                 (0, Q.Z)({
@@ -303,7 +303,7 @@ async function eu(e) {
             r = H.ZP.getCurrentEmbeddedActivity();
         (null == r ? void 0 : r.applicationId) != null &&
             (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
-        let i = k.default.getCurrentUser();
+        let i = j.default.getCurrentUser();
         if (
             null != i &&
             !(await (0, Y.p)({
@@ -376,7 +376,7 @@ async function ed(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
         c = L.default.getSessionId(),
-        u = k.default.getCurrentUser(),
+        u = j.default.getCurrentUser(),
         d = n;
     if (null == d)
         return {
@@ -404,7 +404,7 @@ async function ed(e) {
         channelId: i,
         ChannelStore: x.Z,
         GuildStore: M.Z,
-        PermissionStore: j.Z,
+        PermissionStore: k.Z,
         VoiceStateStore: U.Z,
     });
     if (p !== z.jy.CAN_LAUNCH) {
@@ -512,7 +512,7 @@ function ef(e) {
     if (null != a) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
-            t = null == (o = k.default.getCurrentUser()) ? void 0 : o.id,
+            t = null == (o = j.default.getCurrentUser()) ? void 0 : o.id,
             r = H.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
         e ===

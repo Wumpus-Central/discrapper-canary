@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(981631),
     y = n(65154),
     O = n(388032),
-    v = n(918165);
+    v = n(118896);
 function I(e, t, n) {
     return (
         t in e
@@ -119,8 +119,8 @@ function R(e) {
         ]);
     let { setDevice: P, Icon: D, getCanSetDevice: w, getWarningMessage: L, getLocation: x } = N(t),
         { analyticsLocations: M } = (0, d.ZP)(),
-        j = (0, s.e7)([f.Z], () => f.Z.theme),
-        [k, U] = i.useState(u),
+        k = (0, s.e7)([f.Z], () => f.Z.theme),
+        [j, U] = i.useState(u),
         G = x(a),
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
@@ -166,7 +166,7 @@ function R(e) {
             (t = f.subName));
         let _ = p.Z.getCertifiedDeviceName(s, d);
         if (p.Z.isCertified(s)) {
-            let e = (0, l.ap)(j) ? n(561259) : n(887695);
+            let e = (0, l.ap)(k) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
                 alt: O.intl.string(O.t.smSKsj),
@@ -220,7 +220,7 @@ function R(e) {
                 };
             },
             t = B.map(e);
-        if (k || 0 === Z.length) {
+        if (j || 0 === Z.length) {
             let n = Z.map(e);
             return t.concat(n);
         }

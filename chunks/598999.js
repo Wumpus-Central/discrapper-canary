@@ -29,7 +29,7 @@ var r = n(54381),
     T = n(294218),
     S = n(981631),
     A = n(388032),
-    C = n(509447);
+    C = n(129633);
 function N(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function L(e, t) {
 }
 let x = 43,
     M = 25,
-    j = 40,
-    k = 250;
+    k = 40,
+    j = 250;
 function U(e) {
     e.stopPropagation();
 }
@@ -241,7 +241,7 @@ function V(e) {
     let Z = i.useCallback(() => {
             var e;
             let t = null == (e = P.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < k && a && !s && (null == f || f());
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < j && a && !s && (null == f || f());
         }, [a, f, s]),
         F = [],
         V = !0;
@@ -307,7 +307,7 @@ function V(e) {
                   })
                 : null,
         K = { maxHeight: B.height - x - M - 48 };
-    G && (K.maxHeight -= j);
+    G && (K.maxHeight -= k);
     let z = null != f && a;
     return (0, r.jsx)("div", {
         className: o()(T, C.messagesPopoutWrap),

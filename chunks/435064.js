@@ -123,7 +123,7 @@ async function M() {
     let e = await o.Z.remoteApp.getPath("documents");
     (x.clipsSettings.storageLocation = e), ec.emitChange();
 }
-function j(e) {
+function k(e) {
     let { classification: t } = e,
         n = x.hardwareClassification;
     (x.hardwareClassificationVersion = _.WM),
@@ -138,7 +138,7 @@ function j(e) {
             x.clipsSettings.clipsEnabled &&
             (x.clipsSettings.decoupledClipsEnabled = !0);
 }
-function k(e) {
+function j(e) {
     let { clip: t } = e;
     for (let [e, n] of v.entries())
         if (n.id === t.id) {
@@ -534,11 +534,11 @@ let ec = new el(a.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: ee,
         CLIPS_LOAD_DIRECTORY_SUCCESS: Q,
         CLIPS_DELETE_CLIP: J,
-        CLIPS_UPDATE_METADATA: k,
+        CLIPS_UPDATE_METADATA: j,
         RTC_CONNECTION_FLAGS: et,
         CLIPS_SHOW_CALL_WARNING: Y,
         VOICE_CHANNEL_SELECT: W,
-        CLIPS_CLASSIFY_HARDWARE: j,
+        CLIPS_CLASSIFY_HARDWARE: k,
         CLIPS_INIT: K,
         CLIPS_INIT_FAILURE: z,
         CLIPS_DISMISS_EDUCATION: er,

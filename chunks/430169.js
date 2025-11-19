@@ -26,7 +26,7 @@ var i = n(54381),
     j = n(987650),
     N = n(981631),
     Z = n(388032),
-    w = n(700460);
+    w = n(796212);
 function T(e) {
     let { user: t, application: n, runningGame: r } = e;
     return null != n || null != r

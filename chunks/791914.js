@@ -17,7 +17,7 @@ var i = n(399606),
     b = n(946443),
     _ = n(264233),
     y = n(388032),
-    O = n(629775);
+    O = n(407067);
 function v(e) {
     let { tab: t, setTab: n, badgeState: f, closePopout: m } = e,
         { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),

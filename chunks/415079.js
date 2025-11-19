@@ -168,8 +168,8 @@ b((e) => ({
     get: (t, n, r) => (M(t, n) ? x : e.get(t, n, r)),
     has: (t, n) => M(t, n) || e.has(t, n),
 }));
-let j = "sprigReplayIframeLoaded",
-    k = "sprigReplayIframeSettings",
+let k = "sprigReplayIframeLoaded",
+    j = "sprigReplayIframeSettings",
     U = "sprigReplayIframeTakeFullSnapshot",
     G = "sprigReplayTeardown",
     B = [],
@@ -679,8 +679,8 @@ let ev = new (class {
     eL = !1,
     ex = !1,
     eM = [],
-    ej = !1,
-    ek = () => eL && !eD && Date.now() <= eA,
+    ek = !1,
+    ej = () => eL && !eD && Date.now() <= eA,
     eU = ({ apiUrl: e, config: t, triggerSnapshot: n, forceInit: r = !1 }) => {
         (eL && !r) ||
             (l.a.isStorageAvailable
@@ -706,17 +706,17 @@ let ev = new (class {
     eB = (e) => e.type === f.Custom || (e.type === f.IncrementalSnapshot && eG.includes(e.data.source)),
     eZ = (e) => e.some(eB),
     eF = async () => {
-        if (!ek()) return void window.clearInterval(eR);
+        if (!ej()) return void window.clearInterval(eR);
         if ((eV(), !eZ(eI))) return;
         let e = eI[0].timestamp;
         Date.now() - e > 35000 && (null == eN || eN());
     },
     eV = async () => {
-        if (eP.length || ej) return;
-        ej = !0;
+        if (eP.length || ek) return;
+        ek = !0;
         let e = await ez();
         if (!e) return void (eD = !0);
-        eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ej = !1);
+        eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ek = !1);
     },
     eH = () => {
         let e = l.a.getItem("sprig.alwayson.info");
@@ -751,7 +751,7 @@ let ev = new (class {
         }
     },
     eK = async (e, t) => {
-        if (!ek() || !e) return;
+        if (!ej() || !e) return;
         let n = await (async (e) => {
             let t = new TextEncoder(),
                 n = new CompressionStream("gzip"),
@@ -770,7 +770,7 @@ let ev = new (class {
             );
     },
     ez = async () => {
-        if (!ek()) return;
+        if (!ej()) return;
         let { surveyId: e, responseGroupUuid: t } = eT,
             n = {
                 responseGroupUuid: t,
@@ -828,7 +828,7 @@ let ev = new (class {
             });
     },
     eQ = (e, t) => {
-        ek() &&
+        ej() &&
             !ex &&
             (e || eI.length) &&
             (e &&
@@ -844,7 +844,7 @@ let ev = new (class {
     };
 window.addEventListener("beforeunload", async () => {
     (ex = !0),
-        ek() &&
+        ej() &&
             (l.b.info("Always On handle page unload"),
             (() => {
                 let e;
@@ -1339,7 +1339,7 @@ let eJ = async (e, t) => {
                     ey(async () => {
                         await tt(!0);
                     }, "Error uploading ready pending captures");
-                    let o = Math.max(e ?? 0, 30 * !!ek());
+                    let o = Math.max(e ?? 0, 30 * !!ej());
                     if (!o) return l.b.debug("MissingDuration");
                     l.b.debug("ReplayInit"),
                         await ey(async () => {
@@ -1396,7 +1396,7 @@ let eJ = async (e, t) => {
                                     (((e, t) => {
                                         window.addEventListener("message", (n) => {
                                             var r;
-                                            n.data.type === j &&
+                                            n.data.type === k &&
                                                 (B.push({
                                                     source: n.source,
                                                     origin: n.origin,
@@ -1404,7 +1404,7 @@ let eJ = async (e, t) => {
                                                 null == (r = n.source) ||
                                                     r.postMessage(
                                                         {
-                                                            type: k,
+                                                            type: j,
                                                             settings: e,
                                                             replayLibraryUrl: t,
                                                         },

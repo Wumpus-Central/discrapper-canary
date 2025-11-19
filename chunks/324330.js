@@ -15,7 +15,7 @@ var i = n(392711),
     u = n(999382),
     g = n(981631),
     m = n(388032),
-    p = n(935697);
+    p = n(703662);
 function f(e) {
     if (null == e) return !1;
     let t = e.features.has(g.GuildFeatures.COMMUNITY),

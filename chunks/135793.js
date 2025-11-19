@@ -33,7 +33,7 @@ var r = n(54381),
     N = n(981631),
     R = n(921944),
     P = n(388032),
-    D = n(183608),
+    D = n(393919),
     w = n(99713);
 function L(e, t, n) {
     return (
@@ -76,7 +76,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function j(e, t) {
         e
     );
 }
-let k = 190,
+let j = 190,
     U = 178,
     G = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     B = (e) => {
@@ -101,7 +101,7 @@ let k = 190,
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(x({}, t), {
+                            k(x({}, t), {
                                 channel: d,
                                 message: i,
                                 onRedeem: a,
@@ -461,7 +461,7 @@ let V = (e) => {
                     (0, r.jsx)(u.Eep, {
                         src: w,
                         width: U,
-                        height: k,
+                        height: j,
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/normal",

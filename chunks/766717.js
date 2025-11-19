@@ -5,7 +5,7 @@ var r = n(54381),
     a = n(481060),
     s = n(607550),
     o = n(221292),
-    c = n(226291);
+    c = n(239990);
 let d = i.forwardRef(function (e, t) {
     let {
             onCardClick: n,

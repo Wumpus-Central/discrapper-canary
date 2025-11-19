@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(292419),
     C = n(756043),
     N = n(388032),
-    R = n(319194);
+    R = n(975279);
 function P(e) {
     let { dropping: t, fileInputRef: n, minValues: i, maxValues: a, guildId: s } = e,
         l = (0, v.dg)(s),
@@ -164,9 +164,9 @@ function L(e) {
     let O = null == (t = g.modal) ? void 0 : t.customId;
     l()(null != O, "FileUploadActionComponent requires modalCustomId from context");
     let { uploadIds: v, setUploadIds: L, currentUploads: x, error: M } = (0, C.t)(e),
-        j = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
-    l()(null != j, "FileUploadActionComponent requires a valid channel");
-    let k = i.useCallback((e) => {
+        k = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
+    l()(null != k, "FileUploadActionComponent requires a valid channel");
+    let j = i.useCallback((e) => {
             var t;
             e.preventDefault(), (null == (t = e.dataTransfer) ? void 0 : t.types.includes("Files")) && m(!0);
         }, []),
@@ -182,7 +182,7 @@ function L(e) {
                         title: N.intl.string(N.t.wOr6hB),
                         help: N.intl.formatToPlainString(N.t.dy6viJ, { maxValues: a }),
                     });
-                if ((0, T.Bf)(e, j.guild_id)) return (0, I.G)(j, e);
+                if ((0, T.Bf)(e, k.guild_id)) return (0, I.G)(k, e);
                 let n = e.map((e) => {
                     let n = (0, A.VD)(O),
                         r = {
@@ -204,7 +204,7 @@ function L(e) {
                 });
                 L(v.concat(n));
             },
-            [v, a, j, L, O, E],
+            [v, a, k, L, O, E],
         ),
         B = i.useCallback(
             (e) => {
@@ -225,16 +225,16 @@ function L(e) {
     return (i.useEffect(() => {
         let e = u.current;
         return (
-            null == e || e.addEventListener("dragover", k),
+            null == e || e.addEventListener("dragover", j),
             null == e || e.addEventListener("dragleave", U),
             null == e || e.addEventListener("drop", B),
             () => {
-                null == e || e.removeEventListener("dragover", k),
+                null == e || e.removeEventListener("dragover", j),
                     null == e || e.removeEventListener("dragleave", U),
                     null == e || e.removeEventListener("drop", B);
             }
         );
-    }, [k, U, B]),
+    }, [j, U, B]),
     1 === a && 1 === x.length)
         ? (0, r.jsx)(w, {
               upload: x[0],
@@ -255,7 +255,7 @@ function L(e) {
                             fileInputRef: s,
                             minValues: n,
                             maxValues: a,
-                            guildId: j.guild_id,
+                            guildId: k.guild_id,
                         }),
                   x.length > 0 &&
                       (0, r.jsx)("div", {

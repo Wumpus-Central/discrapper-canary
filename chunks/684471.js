@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(955708),
     d = n(850165),
     u = n(388032),
-    p = n(581697),
+    p = n(394968),
     x = n(282668);
 function g(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: g } = t,

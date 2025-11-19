@@ -21,7 +21,7 @@ var a = n(54381),
     N = n(847004),
     C = n(981631),
     b = n(388032),
-    y = n(237186);
+    y = n(207417);
 function I(e) {
     let { name: t, imageUrl: n, selected: i, onTap: r } = e;
     return (0, a.jsxs)(d.P3F, {

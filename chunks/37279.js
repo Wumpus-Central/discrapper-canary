@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(801729),
     s = n(377171),
     l = n(388032),
-    c = n(671575);
+    c = n(959576);
 let u = (e) => {
     let { className: t = "" } = e;
     return (0, r.jsx)(o.IG, {

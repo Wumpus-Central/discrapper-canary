@@ -15,7 +15,7 @@ var i,
     p = n(347469),
     h = n(740492),
     f = n(36645),
-    m = n(994425),
+    m = n(875675),
     g =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),

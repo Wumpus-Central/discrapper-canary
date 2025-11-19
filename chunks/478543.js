@@ -15,7 +15,7 @@ var r = n(54381),
     m = n(145022),
     g = n(981631),
     E = n(388032),
-    b = n(511473);
+    b = n(322108);
 function y(e, t) {
     return null != t && null != t.discord_web && e.id === t.discord_web.id && e.type === t.discord_web.type;
 }

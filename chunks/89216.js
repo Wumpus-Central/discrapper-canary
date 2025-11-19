@@ -14,7 +14,7 @@ var t = a(54381),
     C = a(633302),
     p = a(984933),
     j = a(388032),
-    v = a(955827);
+    v = a(809822);
 function b(e) {
     var l, s, i;
     let { onClose: c, handleReviewPermissions: d } = e,

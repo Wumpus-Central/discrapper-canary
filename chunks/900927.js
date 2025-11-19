@@ -11,7 +11,7 @@ var i = n(399606),
     u = n(430824),
     p = n(709054),
     h = n(388032),
-    f = n(143144);
+    f = n(131806);
 function g(e) {
     let { userId: t, guildId: n, textClassName: g, tooltipDelay: m } = e,
         b = (0, i.e7)([c.default], () => c.default.locale),

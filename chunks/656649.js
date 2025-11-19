@@ -1,38 +1,38 @@
-n.d(s, {
-    KJ: () => u,
-    UV: () => d,
-    vJ: () => c,
+n.d(t, {
+    KJ: () => d,
+    UV: () => s,
+    vJ: () => u,
 });
-var l = n(54381);
+var r = n(54381);
 n(473749);
-var r = n(120356),
-    t = n.n(r),
-    a = n(726542),
-    i = n(981631),
-    o = n(655860);
-function c(e) {
-    return null != e && Object.values(i.ABu).includes(e) ? e : null;
+var c = n(120356),
+    o = n.n(c),
+    l = n(726542),
+    a = n(981631),
+    i = n(698706);
+function u(e) {
+    return null != e && Object.values(a.ABu).includes(e) ? e : null;
 }
-function d(e) {
-    let { children: s, platformType: n } = e,
-        r = a.Z.get(n);
-    return (0, l.jsx)("div", {
-        className: o.verifyConnectedAccount,
-        children: (0, l.jsxs)("div", {
-            children: [(0, l.jsx)(u, { platform: r }), s],
+function s(e) {
+    let { children: t, platformType: n } = e,
+        c = l.Z.get(n);
+    return (0, r.jsx)("div", {
+        className: i.verifyConnectedAccount,
+        children: (0, r.jsxs)("div", {
+            children: [(0, r.jsx)(d, { platform: c }), t],
         }),
     });
 }
-function u(e) {
-    let { platform: s, className: n } = e;
-    return (0, l.jsxs)("div", {
-        className: t()(o.logos, n),
+function d(e) {
+    let { platform: t, className: n } = e;
+    return (0, r.jsxs)("div", {
+        className: o()(i.logos, n),
         children: [
-            (0, l.jsx)("div", { className: t()(o.logo, o.logoDiscord) }),
-            (0, l.jsx)("div", { className: o.logosDivider }),
-            (0, l.jsx)("div", {
-                className: o.logo,
-                style: { backgroundImage: 'url("'.concat(s.icon.whiteSVG, '")') },
+            (0, r.jsx)("div", { className: o()(i.logo, i.logoDiscord) }),
+            (0, r.jsx)("div", { className: i.logosDivider }),
+            (0, r.jsx)("div", {
+                className: i.logo,
+                style: { backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")') },
             }),
         ],
     });

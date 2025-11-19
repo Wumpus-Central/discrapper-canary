@@ -8,7 +8,7 @@ var r = e(793030),
     c = e(471253),
     l = e(430104),
     h = e(388032),
-    u = e(374378),
+    u = e(981038),
     d = e(768982);
 function p(t) {
     let { transitionState: n, onClose: e, channel: p } = t,

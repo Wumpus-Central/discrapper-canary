@@ -10,7 +10,7 @@ var l = n(54381),
     d = n(822869),
     h = n(912332),
     m = n(388032),
-    g = n(132358);
+    g = n(773921);
 function f(e) {
     let { message: t, canSend: n, selectedDestinations: f, onSend: p, inputValue: v, setInputValue: w } = e,
         b = (0, o.Z)(),

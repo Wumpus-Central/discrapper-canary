@@ -64,7 +64,7 @@ function d(e, t) {
 function f(e) {
     let { eventId: t, recurrenceId: a } = e;
     (0, i.ZD)(async () => {
-        let { default: e } = await Promise.all([n.e("4096"), n.e("43157")]).then(n.bind(n, 697849));
+        let { default: e } = await Promise.all([n.e("4096"), n.e("25046")]).then(n.bind(n, 697849));
         return (n) =>
             (0, r.jsx)(
                 e,

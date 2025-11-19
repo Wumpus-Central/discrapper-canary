@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(131085),
     b = n(526761),
     y = n(388032),
-    O = n(221627);
+    O = n(999087);
 let v = (0, l.hQ)(),
     I = i.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: l } = e,
@@ -115,16 +115,16 @@ let v = (0, l.hQ)(),
             ),
             x = i.useCallback((e) => e === C, [C]),
             M = i.useCallback((e) => e, []),
-            j = i.useCallback(() => {
+            k = i.useCallback(() => {
                 T(g.L.TAKE_ACTION), null == l || l(null);
             }, [T, l]),
-            k = i.useRef(null);
+            j = i.useRef(null);
         return (
-            (0, p.Z)(k, b.Y_.GUILD_TAG),
+            (0, p.Z)(j, b.Y_.GUILD_TAG),
             (0, r.jsxs)(_.Z, {
                 title: y.intl.string(y.t.Pdd1nd),
                 titleId: v,
-                ref: k,
+                ref: j,
                 titleIcon:
                     I === o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
                     (0, r.jsx)(s.IGR, {
@@ -147,7 +147,7 @@ let v = (0, l.hQ)(),
                         renderTrailing: D,
                         renderOptionValue: w,
                         serialize: M,
-                        clear: j,
+                        clear: k,
                         clearable: null != C,
                         maxVisibleItems: 8,
                     }),

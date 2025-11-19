@@ -6,15 +6,15 @@ n.d(t, {
     V_: () => T,
     lG: () => y,
     mo: () => j,
-    tb: () => O,
+    tb: () => N,
 }),
     n(539854),
     n(388685),
     n(415506);
 var a = n(279779),
     l = n(933557),
-    r = n(710845),
-    i = n(823385),
+    i = n(710845),
+    r = n(823385),
     s = n(592125),
     o = n(580005),
     c = n(720202),
@@ -26,7 +26,7 @@ var a = n(279779),
     x = n(709054),
     g = n(51144),
     f = n(727785);
-let b = new r.Z("SearchDebugUtils");
+let b = new i.Z("SearchDebugUtils");
 function v() {
     b.info("--------------------------");
 }
@@ -51,11 +51,11 @@ function j() {
                     let n = t.username,
                         a = g.ZP.getGlobalName(t),
                         l = m.Z.getNickname(t.id),
-                        r = d.ZP.getNicknames(t.id);
+                        i = d.ZP.getNicknames(t.id);
                     b.info("username: ".concat(n)),
                         b.info("global name: ".concat(a)),
                         b.info("nickname: ".concat(l)),
-                        b.info("guild nicknames: ".concat(r)),
+                        b.info("guild nicknames: ".concat(i)),
                         v();
                 });
         }),
@@ -67,10 +67,10 @@ function j() {
             let n = e.getRecipientId(),
                 a = p.default.getUser(n);
             if (null == a) return;
-            let r = a.username,
-                i = g.ZP.getGlobalName(a),
+            let i = a.username,
+                r = g.ZP.getGlobalName(a),
                 s = m.Z.getNickname(a.id);
-            b.info("username: ".concat(r)), b.info("global name: ".concat(i)), b.info("nickname: ".concat(s)), v();
+            b.info("username: ".concat(i)), b.info("global name: ".concat(r)), b.info("nickname: ".concat(s)), v();
         }),
         b.info("END Logging DM Channels\n");
 }
@@ -95,11 +95,11 @@ function _() {
                     let n = t.username,
                         a = g.ZP.getGlobalName(t),
                         l = m.Z.getNickname(t.id),
-                        r = d.ZP.getNicknames(t.id);
+                        i = d.ZP.getNicknames(t.id);
                     b.info("username: ".concat(n)),
                         b.info("global name: ".concat(a)),
                         b.info("nickname: ".concat(l)),
-                        b.info("guild nicknames: ".concat(r)),
+                        b.info("guild nicknames: ".concat(i)),
                         v();
                 });
         }),
@@ -111,10 +111,10 @@ function _() {
             let n = e.getRecipientId(),
                 a = p.default.getUser(n);
             if (null == a) return;
-            let r = a.username,
-                i = g.ZP.getGlobalName(a),
+            let i = a.username,
+                r = g.ZP.getGlobalName(a),
                 s = m.Z.getNickname(a.id);
-            b.info("username: ".concat(r)), b.info("global name: ".concat(i)), b.info("nickname: ".concat(s)), v();
+            b.info("username: ".concat(i)), b.info("global name: ".concat(r)), b.info("nickname: ".concat(s)), v();
         }),
         b.info("END Logging DM Channels\n");
 }
@@ -127,11 +127,11 @@ function y() {
             let n = t.username,
                 a = g.ZP.getGlobalName(t),
                 l = m.Z.getNickname(t.id),
-                r = d.ZP.getNicknames(t.id);
+                i = d.ZP.getNicknames(t.id);
             b.info("username: ".concat(n)),
                 b.info("global name: ".concat(a)),
                 b.info("nickname: ".concat(l)),
-                b.info("guild nicknames: ".concat(r)),
+                b.info("guild nicknames: ".concat(i)),
                 v();
         }),
         b.info("END Discord Friends\n");
@@ -141,9 +141,9 @@ function C() {
         t = [],
         n = [],
         a = [],
-        r = [];
+        i = [];
     e.forEach((e) => {
-        (0, h.lM)(e) ? t.push(e) : e.isDM() ? a.push(e) : e.isMultiUserDM() ? r.push(e) : n.push(e);
+        (0, h.lM)(e) ? t.push(e) : e.isDM() ? a.push(e) : e.isMultiUserDM() ? i.push(e) : n.push(e);
     }),
         b.info("START Frecency"),
         b.info("Guilds"),
@@ -159,7 +159,7 @@ function C() {
         }),
         v(),
         b.info("Group DM Channels"),
-        r.forEach((e) => {
+        i.forEach((e) => {
             let t = o.Z.getScoreWithoutFetchingLatest(e.id);
             b.info("id: ".concat(e.id, " - Frecency Score: ").concat(t)),
                 b.info("default name: ".concat((0, l.on)(e, p.default, m.Z))),
@@ -175,7 +175,7 @@ function C() {
         b.info("END Frecency\n");
 }
 function S() {
-    let e = i.Z.getProps();
+    let e = r.Z.getProps();
     b.info("START Quick Switcher State"),
         b.info("Query: ".concat(e.query)),
         e.results.forEach((e) => {
@@ -246,35 +246,35 @@ async function E() {
     }),
         b.info("END User Search Worker State\n");
 }
-async function O() {
+async function N() {
     let e = await a.Z.requestDebugState();
     if (null == e) throw Error("Unable to get debug state from User Search Worker");
     let t = JSON.parse(e.users),
         n = p.default.getUsers(),
         l = new Set(Object.keys(t)),
-        r = x.default.keys(n),
-        i = [];
+        i = x.default.keys(n),
+        r = [];
     return (
-        r.forEach((e) => {
-            l.has(e) || i.push(e);
+        i.forEach((e) => {
+            l.has(e) || r.push(e);
         }),
-        i
+        r
     );
 }
 async function T(e) {
     let t = await a.Z.requestDebugState(),
         n = null != t ? JSON.parse(t.users)[e] : null,
         l = u.Z.getGuildIds(),
-        r = [];
+        i = [];
     l.forEach((t) => {
         let n = d.ZP.getMember(t, e);
-        null != n && r.push(n);
+        null != n && i.push(n);
     });
-    let i = c.Z.getDebugState(e);
+    let r = c.Z.getDebugState(e);
     return {
         user: p.default.getUser(e),
         searchWorkerUser: n,
-        guildMembers: r,
-        guildMemberRequests: i,
+        guildMembers: i,
+        guildMemberRequests: r,
     };
 }

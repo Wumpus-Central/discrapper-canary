@@ -1,11 +1,11 @@
 n(388685);
 var i = n(54381),
     r = n(149765),
-    o = n(481060),
-    l = n(570140),
-    s = n(700785);
+    s = n(481060),
+    o = n(570140),
+    l = n(700785);
 __OVERLAY__ &&
-    l.Z.subscribe("OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN", function (e) {
+    o.Z.subscribe("OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN", function (e) {
         var {
                 clientId: t,
                 authorizeProps: { authorizations: a, permissions: c },
@@ -19,14 +19,14 @@ __OVERLAY__ &&
                         var n,
                             i,
                             r = {},
-                            o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            s = Object.keys(e);
+                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++)
-                        (n = o[i]),
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < s.length; i++)
+                        (n = s[i]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
@@ -34,17 +34,17 @@ __OVERLAY__ &&
         let u = "OAuth2Authorize_".concat(t, "_").concat(d.guildId, "_").concat(d.channelId);
         function h(e) {
             let { location: n } = e;
-            l.Z.dispatch({
+            o.Z.dispatch({
                 type: "OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE",
                 clientId: t,
                 location: n,
             });
         }
-        let p = s.Hn;
+        let p = l.Hn;
         try {
             p = r.vB(null != c ? c : 0);
         } catch (e) {}
-        (0, o.ZDy)(
+        (0, s.ZDy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) => {
@@ -101,7 +101,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, o.Mr3)(u), h({});
+                    (0, s.Mr3)(u), h({});
                 },
             },
         );

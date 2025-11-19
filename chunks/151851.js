@@ -19,7 +19,7 @@ var i = n(120356),
     b = n(358085),
     y = n(998502),
     O = n(388032),
-    v = n(676517);
+    v = n(325645);
 let I = "#ffffff",
     T = (e) => y.ZP.close(e),
     S = (e) => y.ZP.minimize(e),

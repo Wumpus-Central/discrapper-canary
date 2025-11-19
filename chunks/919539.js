@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(736530),
     T = n(981631),
     S = n(388032),
-    A = n(313570);
+    A = n(597754);
 function C(e) {
     let { ingress: t, guildId: n } = e,
         C = (0, m.c_)(),
@@ -53,9 +53,9 @@ function C(e) {
     function M(e, t) {
         if (!e && (0, _.S)())
             return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
-        t ? L(e) : j(!e);
+        t ? L(e) : k(!e);
     }
-    function j(e) {
+    function k(e) {
         let t = () => {
                 h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), x(e, !0);
             },

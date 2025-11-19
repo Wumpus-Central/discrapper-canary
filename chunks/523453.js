@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(834129),
     h = n(981631),
     m = n(388032),
-    g = n(539461);
+    g = n(582602);
 function E(e) {
     let t = "__CLIP_METADATA__",
         n = e.indexOf(t);

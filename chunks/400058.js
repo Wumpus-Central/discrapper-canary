@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(78839),
     C = n(981631),
     N = n(474936),
-    R = n(609778);
+    R = n(605532);
 function P(e, t, n) {
     return (
         t in e
@@ -112,8 +112,8 @@ let M = {
                         value: e,
                         label: e.name,
                     })),
-                    [M, j] = i.useState(w.length > 0 ? w[0].value : null),
-                    [k, U] = i.useState(""),
+                    [M, k] = i.useState(w.length > 0 ? w[0].value : null),
+                    [j, U] = i.useState(""),
                     [G, B] = i.useState({
                         plan_id: N.Xh.PREMIUM_MONTH_TIER_2,
                         gift: "true",
@@ -221,7 +221,7 @@ let M = {
                                             label: "Boost",
                                             value: M,
                                             options: w,
-                                            onChange: (e) => j(e),
+                                            onChange: (e) => k(e),
                                         }),
                                         null != M
                                             ? (0, r.jsx)(m.Z, {
@@ -248,13 +248,13 @@ let M = {
                                                 (0, r.jsx)(c.oil, {
                                                     label: "Standalone: Trial Promotion Redemption",
                                                     placeholder: "Promotion Code",
-                                                    value: k,
+                                                    value: j,
                                                     onChange: (e) => U(e),
                                                 }),
                                                 (0, r.jsx)(c.aML, {
                                                     "data-migration-pending": !0,
                                                     text: "Need Promotion Code",
-                                                    shouldShow: k.length < 1,
+                                                    shouldShow: j.length < 1,
                                                     children: (e) =>
                                                         (0, r.jsx)(
                                                             c.Button,
@@ -263,14 +263,14 @@ let M = {
                                                                     {
                                                                         variant: "primary",
                                                                         text: "Open Link",
-                                                                        disabled: k.length < 1,
+                                                                        disabled: j.length < 1,
                                                                     },
                                                                     e,
                                                                 ),
                                                                 {
                                                                     onClick: () => {
                                                                         window.open(
-                                                                            C.Z5c.BILLING_PROMOTION_REDEMPTION(k),
+                                                                            C.Z5c.BILLING_PROMOTION_REDEMPTION(j),
                                                                         );
                                                                     },
                                                                 },

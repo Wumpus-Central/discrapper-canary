@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i,
     a = n(442837),
     o = n(433517),
@@ -117,7 +117,7 @@ function M() {
         null != (null == (n = _.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || N(r));
     });
 }
-class j extends (i = a.ZP.Store) {
+class k extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(f.default, l.Z, _.Z, p.Z, u.Z, h.Z),
             this.syncWith([p.Z], x),
@@ -137,8 +137,8 @@ class j extends (i = a.ZP.Store) {
         return !A && S.size > 0;
     }
 }
-g(j, "displayName", "IncomingCallStore");
-let k = new j(s.Z, {
+g(k, "displayName", "IncomingCallStore");
+let j = new k(s.Z, {
     CALL_CREATE: R,
     CALL_UPDATE: R,
     CALL_DELETE: P,

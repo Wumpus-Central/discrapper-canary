@@ -24,7 +24,7 @@ var i = n(120356),
     T = n(670451),
     S = n(671955),
     A = n(388032),
-    C = n(663907);
+    C = n(704543);
 function N(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
         { themeType: P } = (0, g.z)(),
@@ -42,8 +42,8 @@ function N(e) {
         }),
         x = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
         M = (0, p.Z)(i),
-        j = (0, d.ZP)(i),
-        { channelStatusEnabled: k } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
+        k = (0, d.ZP)(i),
+        { channelStatusEnabled: j } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbX"]) : A.intl.string(A.t.xOVEjc);
@@ -74,7 +74,7 @@ function N(e) {
             className: a()(C.card, N),
             onAction: w,
             onClose: R,
-            "aria-label": "".concat(B, ", ").concat(j),
+            "aria-label": "".concat(B, ", ").concat(k),
             children: [
                 (0, r.jsx)(b.Z, {
                     text: B,
@@ -103,7 +103,7 @@ function N(e) {
                                         onAction: w,
                                         onClose: R,
                                     }),
-                                    k &&
+                                    j &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(v.Z, {
                                             voiceChannel: i,

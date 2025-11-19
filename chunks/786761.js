@@ -2,7 +2,7 @@ n.d(t, {
     Pv: () => U,
     e5: () => R,
     gx: () => P,
-    lp: () => k,
+    lp: () => j,
     wi: () => D,
 }),
     n(997841),
@@ -120,7 +120,7 @@ function R(e) {
         D = e.message_reference,
         w = A(e),
         x = null,
-        k = null == e ? void 0 : e.gift_info,
+        j = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
         G = null != e.interaction ? c.Z.createFromServer(e.interaction) : null,
         B =
@@ -165,7 +165,7 @@ function R(e) {
                   content: Z,
                   referralTrialOfferId: p,
                   call: L(e.call, O.timestamp),
-                  messageSnapshots: j(e),
+                  messageSnapshots: k(e),
                   reactions: M(null != h ? h : e.reactions, e.poll),
                   interaction: G,
                   interactionData: null != b ? b : e.interaction_data,
@@ -175,7 +175,7 @@ function R(e) {
                   poll: null == e.poll ? void 0 : (0, s.Z)(e.poll),
                   sharedClientTheme: e.shared_client_theme,
                   potions: e.potions,
-                  giftInfo: null == k ? void 0 : k,
+                  giftInfo: null == j ? void 0 : j,
                   giftingPrompt: U,
               }),
     );
@@ -203,7 +203,7 @@ function D(e, t) {
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", x(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", j(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", k(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new d.Z(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
@@ -286,7 +286,7 @@ function M(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
-function j(e) {
+function k(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
@@ -297,7 +297,7 @@ function j(e) {
               });
           });
 }
-let k = (e) => 0 === (0, l.cv)(e).length || "" !== e.content;
+let j = (e) => 0 === (0, l.cv)(e).length || "" !== e.content;
 function U(e) {
     return e.hasFlag(y.iLy.EPHEMERAL) && e.type !== y.uaV.IN_GAME_MESSAGE_NUX;
 }

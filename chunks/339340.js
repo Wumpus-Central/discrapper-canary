@@ -22,7 +22,7 @@ var r = n(54381),
     g = n(626135),
     E = n(981631),
     b = n(388032),
-    y = n(418128),
+    y = n(459931),
     O = n(740353);
 let v = "VoiceChannelStatusModal",
     I = 500;
@@ -42,10 +42,10 @@ function T(e) {
             location_stack: T,
         });
     }, [t.guild_id, T]);
-    let j = (e) => {
+    let k = (e) => {
             L(new s.Hx(e, e.status).getAnyErrorMessage());
         },
-        k = (e) => {
+        j = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
@@ -58,7 +58,7 @@ function T(e) {
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),
-                { hasErrors: a } = k(i);
+                { hasErrors: a } = j(i);
             if (!a) {
                 try {
                     let e = await l.ZP.updateVoiceChannelStatus(t.id, i.content);
@@ -72,9 +72,9 @@ function T(e) {
                               location_stack: T,
                           }),
                           S())
-                        : j(e);
+                        : k(e);
                 } catch (e) {
-                    j(e);
+                    k(e);
                 }
                 D(!1);
             }

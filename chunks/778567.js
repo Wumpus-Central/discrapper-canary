@@ -8,7 +8,7 @@ var r = n(54381),
     s = n(732380),
     u = n(981631),
     d = n(388032),
-    f = n(918139);
+    f = n(367155);
 let g = c.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
 function p(e) {
     let { isOwner: t, isWishlistPublic: n, onToggleVisibility: c } = e,

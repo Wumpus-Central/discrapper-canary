@@ -9,7 +9,7 @@ var i = e(54381),
     u = e(853856),
     d = e(117984),
     p = e(388032),
-    x = e(380041);
+    x = e(589253);
 function h(t) {
     let { channelId: n, onClose: e, transitionState: h, heading: m, formTitle: f, allowReset: v = !1 } = t,
         C = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),

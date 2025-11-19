@@ -8,7 +8,7 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(636606),
+    l = n(790519),
     c = n(681715),
     u = n(481060),
     d = n(596454),
@@ -24,7 +24,7 @@ var r = n(54381),
     O = n(354459),
     v = n(185923),
     I = n(295907),
-    T = n(378158);
+    T = n(339051);
 function S(e, t, n) {
     return (
         t in e
@@ -152,8 +152,8 @@ function L(e) {
         } = e,
         L = (0, f.Dt)(),
         [x, M] = i.useState(!1),
-        j = (0, p.wC)(t.guild_id),
-        k = (0, s.uniqBy)([...j, ...P], "name")
+        k = (0, p.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...k, ...P], "name")
             .filter(
                 (e) =>
                     !b.ZP.isEmojiFilteredOrLocked({
@@ -163,7 +163,7 @@ function L(e) {
                     }),
             )
             .slice(0, O.e5);
-    null != y && y.length > 0 && k.splice(k.length - 1, 1, y[0]);
+    null != y && y.length > 0 && j.splice(j.length - 1, 1, y[0]);
     let U = (e) => {
             M(e), null == h || h(e);
         },
@@ -215,7 +215,7 @@ function L(e) {
                         className: T.slotsContainer,
                         children: (0, r.jsx)("div", {
                             className: o()(T.slots, T.slotsWide),
-                            children: k.map((e) => {
+                            children: j.map((e) => {
                                 let n = b.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,

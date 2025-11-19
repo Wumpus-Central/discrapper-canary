@@ -12,7 +12,7 @@ var r = n(54381),
     m = n(8426),
     p = n(969632),
     f = n(388032),
-    h = n(359449);
+    h = n(197530);
 let b = function (e) {
     let { guildId: t, resourceChannel: l, index: b, onDragComplete: x, onDragStart: j, onDragReset: _ } = e,
         { title: v, channelId: O, description: C } = l,
@@ -57,7 +57,7 @@ let b = function (e) {
         D = i.useCallback(
             () =>
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e("76396").then(n.bind(n, 462499));
+                    let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                     return (n) => {
                         var i, a;
                         return (0, r.jsx)(

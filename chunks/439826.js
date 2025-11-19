@@ -3,7 +3,7 @@ var r = n(54381),
     s = n(473749),
     o = n(120356),
     a = n.n(o),
-    i = n(636606),
+    i = n(790519),
     l = n(28664),
     c = n(780384),
     d = n(481060),
@@ -27,7 +27,7 @@ var r = n(54381),
     w = n(642145),
     P = n(981631),
     N = n(388032),
-    A = n(904846);
+    A = n(518388);
 function R(e) {
     var t;
     let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: c } = e,

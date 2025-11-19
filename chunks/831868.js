@@ -34,10 +34,10 @@ var f = 0,
     x = 512,
     M = Array(576);
 d(M);
-var j = Array(2 * y);
-d(j);
-var k = Array(x);
+var k = Array(2 * y);
 d(k);
+var j = Array(x);
+d(j);
 var U = Array(m - h + 1);
 d(U);
 var G = Array(g);
@@ -55,7 +55,7 @@ function F(e, t) {
     (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
 }
 function V(e) {
-    return e < 256 ? k[e] : k[256 + (e >>> 7)];
+    return e < 256 ? j[e] : j[256 + (e >>> 7)];
 }
 function H(e, t) {
     (e.pending_buf[e.pending++] = 255 & t), (e.pending_buf[e.pending++] = (t >>> 8) & 255);
@@ -138,15 +138,15 @@ function Q() {
         s,
         l = Array(I + 1);
     for (o = 0, n = 0; o < g - 1; o++) for (e = 0, G[o] = n; e < 1 << P[o]; e++) U[n++] = o;
-    for (U[n - 1] = o, s = 0, o = 0; o < 16; o++) for (e = 0, B[o] = s; e < 1 << D[o]; e++) k[s++] = o;
-    for (s >>= 7; o < y; o++) for (e = 0, B[o] = s << 7; e < 1 << (D[o] - 7); e++) k[256 + s++] = o;
+    for (U[n - 1] = o, s = 0, o = 0; o < 16; o++) for (e = 0, B[o] = s; e < 1 << D[o]; e++) j[s++] = o;
+    for (s >>= 7; o < y; o++) for (e = 0, B[o] = s << 7; e < 1 << (D[o] - 7); e++) j[256 + s++] = o;
     for (t = 0; t <= I; t++) l[t] = 0;
     for (e = 0; e <= 143; ) (M[2 * e + 1] = 8), e++, l[8]++;
     for (; e <= 255; ) (M[2 * e + 1] = 9), e++, l[9]++;
     for (; e <= 279; ) (M[2 * e + 1] = 7), e++, l[7]++;
     for (; e <= 287; ) (M[2 * e + 1] = 8), e++, l[8]++;
-    for (X(M, b + 1, l), e = 0; e < y; e++) (j[2 * e + 1] = 5), (j[2 * e] = K(e, 5));
-    (r = new Z(M, P, E + 1, b, I)), (i = new Z(j, D, 0, y, I)), (a = new Z([], w, 0, O, S));
+    for (X(M, b + 1, l), e = 0; e < y; e++) (k[2 * e + 1] = 5), (k[2 * e] = K(e, 5));
+    (r = new Z(M, P, E + 1, b, I)), (i = new Z(k, D, 0, y, I)), (a = new Z([], w, 0, O, S));
 }
 function J(e) {
     var t;
@@ -320,7 +320,7 @@ function e_(e, t, n, r) {
         n + 4 <= i && -1 !== t
             ? ed(e, t, n, r)
             : e.strategy === s || a === i
-              ? (Y(e, (_ << 1) + +!!r, 3), er(e, M, j))
+              ? (Y(e, (_ << 1) + +!!r, 3), er(e, M, k))
               : (Y(e, (p << 1) + +!!r, 3),
                 el(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, o + 1),
                 er(e, e.dyn_ltree, e.dyn_dtree)),

@@ -6,7 +6,7 @@ var i = n(120356),
     l = n(481060),
     o = n(937615),
     s = n(388032),
-    c = n(662404);
+    c = n(410187);
 let u = (e) => {
     let {
             price: { amount: t, currency: n },

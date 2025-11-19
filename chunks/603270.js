@@ -32,7 +32,7 @@ var r = n(54381),
     A = n(981631),
     C = n(979007),
     N = n(388032),
-    R = n(418746);
+    R = n(561498);
 let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
         getQueryId: A.McO.SKU,
         get: (e) => {
@@ -115,7 +115,7 @@ function L(e) {
     if (!o || null == u) return null;
     let P = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("15351")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
                 return (n) =>
                     (0, r.jsx)(e, {
                         transitionState: n.transitionState,
@@ -178,11 +178,11 @@ function x(e) {
             initialSubscribeForGuild: O,
         });
     if (!D || null == b || null == m) return null;
-    let j = m.type === A.epS.SUBSCRIPTION,
-        k = !!j && (0, _.KW)(m.flags),
+    let k = m.type === A.epS.SUBSCRIPTION,
+        j = !!k && (0, _.KW)(m.flags),
         U = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("15351")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
                 return (t) =>
                     (0, r.jsx)(e, {
                         transitionState: t.transitionState,
@@ -194,8 +194,8 @@ function x(e) {
         },
         G = () => {
             (0, l.ZDy)(async () => {
-                let e = j ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                    t = j ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                let e = k ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                    t = k ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                 return (n) => {
                     let i = () => {
                         n.onClose(), U();
@@ -206,7 +206,7 @@ function x(e) {
                               appId: b.id,
                               skuId: m.id,
                               guildId: O,
-                              subscriptionType: k ? "user" : "guild",
+                              subscriptionType: j ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: i,
                           })
@@ -223,8 +223,8 @@ function x(e) {
             });
         },
         B = 12,
-        Z = j
-            ? k
+        Z = k
+            ? j
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.tBG, {
@@ -296,12 +296,12 @@ function x(e) {
                     onClick: V,
                     text: N.intl.string(N.t.DXYfjO),
                 }),
-                j
+                k
                     ? null != g
                         ? (0, r.jsx)(S.pV, {
                               onClick: L,
                               appId: b.id,
-                              subscriptionType: k ? "user" : "guild",
+                              subscriptionType: j ? "user" : "guild",
                               skuId: m.id,
                               icon: l.EOn,
                               onHasClicked: H,

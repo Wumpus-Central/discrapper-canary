@@ -56,16 +56,16 @@ o(
                 }
                 for (var C = "", N = 0, R = 0; R < b.length; R++) {
                     for (
-                        var P, D, w = b[R], L = _(w[0]), x = y(O(d(w.index), s.length), 0), M = [], j = 1;
-                        j < w.length;
-                        j++
+                        var P, D, w = b[R], L = _(w[0]), x = y(O(d(w.index), s.length), 0), M = [], k = 1;
+                        k < w.length;
+                        k++
                     )
-                        I(M, A(w[j]));
-                    var k = w.groups;
+                        I(M, A(w[k]));
+                    var j = w.groups;
                     if (p) {
                         var U = v([L], M, x, s);
-                        void 0 !== k && I(U, k), (D = _(r(i, void 0, U)));
-                    } else D = g(L, s, x, M, k, i);
+                        void 0 !== j && I(U, j), (D = _(r(i, void 0, U)));
+                    } else D = g(L, s, x, M, j, i);
                     x >= N && ((C += S(s, N, x) + D), (N = x + L.length));
                 }
                 return C + S(s, N);

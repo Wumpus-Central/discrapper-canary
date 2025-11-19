@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(962293),
     l = n(45251),
     c = n(388032),
-    u = n(988530);
+    u = n(740926);
 function d(e) {
     let { pendingScheduledMessage: t } = e,
         { channelId: n, scheduledTimestamp: i } = t;

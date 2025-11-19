@@ -14,7 +14,7 @@ var i = t(54381),
     v = t(185923),
     g = t(295907),
     b = t(388032),
-    y = t(984915);
+    y = t(851458);
 function f(e) {
     var n;
     let { transitionState: t, onClose: f, channelId: h, guildId: C, tag: O } = e,

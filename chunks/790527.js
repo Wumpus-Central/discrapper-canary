@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(474936),
     S = n(981631),
     A = n(388032),
-    C = n(418548),
+    C = n(144867),
     N = n(769860);
 function R(e, t) {
     if (null == e) return {};
@@ -70,8 +70,8 @@ function w(e) {
             guildBoostProps: L,
             analyticsSource: x,
             analyticsLocation: M,
-            body: j,
-            context: k,
+            body: k,
+            context: j,
             glowUp: U,
             modalClassName: G,
             modalContentClassName: B,
@@ -270,7 +270,7 @@ function w(e) {
                                         ? a
                                         : T.Si.TIER_2,
                                 headingText: P,
-                                context: k,
+                                context: j,
                                 analyticsLocationObject: M,
                                 discountOffer: eE,
                                 trialOffer: eg,
@@ -293,7 +293,7 @@ function w(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: e_ ? "text-sm/normal" : "text-md/normal",
                                                 className: o()(H, C.subHeader),
-                                                children: j,
+                                                children: k,
                                             }),
                                         ],
                                     }),

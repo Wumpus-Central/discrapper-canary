@@ -32,8 +32,8 @@ var r,
     L = c("".charAt),
     x = c(/./.exec),
     M = c([].join),
-    j = c((1).toString),
-    k = c([].pop),
+    k = c((1).toString),
+    j = c([].pop),
     U = c([].push),
     G = c("".replace),
     B = c([].shift),
@@ -85,7 +85,7 @@ var r,
             if (((o = n[r]), r === t - 1)) {
                 if (o >= w(256, 5 - t)) return null;
             } else if (o > 255) return null;
-        for (r = 0, s = k(n); r < n.length; r++) s += n[r] * w(256, 3 - r);
+        for (r = 0, s = j(n); r < n.length; r++) s += n[r] * w(256, 3 - r);
         return s;
     },
     el = function (e) {
@@ -161,7 +161,7 @@ var r,
             for (n = 0, t = "", r = ec(e); n < 8; n++)
                 (!i || 0 !== e[n]) &&
                     (i && (i = !1),
-                    r === n ? ((t += n ? ":" : "::"), (i = !0)) : ((t += j(e[n], 16)), n < 7 && (t += ":")));
+                    r === n ? ((t += n ? ":" : "::"), (i = !0)) : ((t += k(e[n], 16)), n < 7 && (t += ":")));
             return "[" + t + "]";
         }
         return e;
@@ -237,8 +237,8 @@ var r,
     eL = {},
     ex = {},
     eM = {},
-    ej = {},
     ek = {},
+    ej = {},
     eU = {},
     eG = {},
     eB = {},
@@ -433,7 +433,7 @@ eF.prototype = {
                 case eD:
                 case ew:
                     if (t && "file" === l.scheme) {
-                        c = ej;
+                        c = ek;
                         continue;
                     }
                     if (":" !== a || p)
@@ -441,7 +441,7 @@ eF.prototype = {
                             if (l.isSpecial() && "" === d) return K;
                             if (t && "" === d && (l.includesCredentials() || null !== l.port)) return;
                             if ((s = l.parseHost(d))) return s;
-                            if (((d = ""), (c = ek), t)) return;
+                            if (((d = ""), (c = ej), t)) return;
                             continue;
                         } else "[" === a ? (p = !0) : "]" === a && (p = !1), (d += a);
                     else {
@@ -461,7 +461,7 @@ eF.prototype = {
                             (l.port = l.isSpecial() && v === em[l.scheme] ? null : v), (d = "");
                         }
                         if (t) return;
-                        c = ek;
+                        c = ej;
                         continue;
                     }
                     break;
@@ -494,7 +494,7 @@ eF.prototype = {
                     break;
                 case eM:
                     if ("/" === a || "\\" === a) {
-                        c = ej;
+                        c = ek;
                         break;
                     }
                     n &&
@@ -503,22 +503,22 @@ eF.prototype = {
                         (eg(n.path[0], !0) ? U(l.path, n.path[0]) : (l.host = n.host)),
                         (c = eU);
                     continue;
-                case ej:
+                case ek:
                     if (a === r || "/" === a || "\\" === a || "?" === a || "#" === a) {
                         if (!t && eg(d)) c = eU;
                         else if ("" === d) {
                             if (((l.host = ""), t)) return;
-                            c = ek;
+                            c = ej;
                         } else {
                             if ((s = l.parseHost(d))) return s;
                             if (("localhost" === l.host && (l.host = ""), t)) return;
-                            (d = ""), (c = ek);
+                            (d = ""), (c = ej);
                         }
                         continue;
                     }
                     d += a;
                     break;
-                case ek:
+                case ej:
                     if (l.isSpecial()) {
                         if (((c = eU), "/" !== a && "\\" !== a)) continue;
                     } else if (t || "?" !== a)
@@ -690,7 +690,7 @@ eF.prototype = {
         return this.cannotBeABaseURL ? e[0] : e.length ? "/" + M(e, "/") : "";
     },
     setPathname: function (e) {
-        this.cannotBeABaseURL || ((this.path = []), this.parse(e, ek));
+        this.cannotBeABaseURL || ((this.path = []), this.parse(e, ej));
     },
     getSearch: function () {
         var e = this.query;

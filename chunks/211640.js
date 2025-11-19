@@ -9,7 +9,7 @@ var i = n(54381),
     u = n(375954),
     d = n(496675),
     p = n(796263),
-    h = n(826688),
+    h = n(797013),
     f = n(388032);
 function m(e) {
     let { message: t, user: n, guild: m, channel: g } = e,

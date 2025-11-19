@@ -14,7 +14,7 @@ var r = n(54381),
     g = n(270759),
     m = n(981631),
     _ = n(388032),
-    b = n(194783);
+    b = n(236202);
 let E = function () {
     i.useEffect(() => {
         s.Y(m.Z5c.ME_ACTIVITY), (0, p.e)("activity"), h.default.track(m.rMx.ACTIVITY_FEED_VIEWED, {});

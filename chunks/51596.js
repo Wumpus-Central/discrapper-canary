@@ -1,5 +1,5 @@
 n.d(t, {
-    $Z: () => k,
+    $Z: () => j,
     Cp: () => U,
     F_: () => L,
     Se: () => F,
@@ -164,20 +164,20 @@ function M(e, t) {
     }
     O.default.track(e, h);
 }
-function j() {
+function k() {
     i.Z.dispatch({ type: "QUICKSWITCHER_HIDE" });
 }
-function k() {
+function j() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     x(e), i.Z.dispatch(N({ type: "QUICKSWITCHER_SHOW" }, L(t)));
 }
 function U() {
-    M(S.rMx.QUICKSWITCHER_CLOSED), j();
+    M(S.rMx.QUICKSWITCHER_CLOSED), k();
 }
 function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
-    T.Z.isOpen() ? U() : k(e);
+    T.Z.isOpen() ? U() : j(e);
 }
 function B(e) {
     i.Z.dispatch(N({ type: "QUICKSWITCHER_SEARCH" }, L(e)));
@@ -191,7 +191,7 @@ function Z(e) {
 function F(e) {
     let t,
         m = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    j(), (0, r.pTH)(), M(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    k(), (0, r.pTH)(), M(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: b, record: y } = e,
         O = { page: S.ZY5.QUICK_SWITCHER };
     switch (b) {

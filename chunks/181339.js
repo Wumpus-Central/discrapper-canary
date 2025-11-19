@@ -26,7 +26,7 @@ var r = n(54381),
     C = n(449226),
     y = n(981631),
     N = n(388032),
-    E = n(298392);
+    E = n(824804);
 function I(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: s } = e,
         h = (0, m.BT)(t),

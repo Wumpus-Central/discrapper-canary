@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(474936),
     C = n(671955),
     N = n(388032),
-    R = n(640637);
+    R = n(131151);
 function P(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {

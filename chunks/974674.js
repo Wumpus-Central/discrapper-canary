@@ -10,7 +10,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(636606),
+    s = n(790519),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -22,7 +22,7 @@ var r = n(54381),
     m = n(419061),
     g = n(268685),
     E = n(388032),
-    b = n(257702);
+    b = n(536537);
 function y(e, t, n) {
     return (
         t in e
@@ -363,7 +363,7 @@ let M = {
     "\uD83D\uDD25":
         "M3 14a9 9 0 1 0 18 0c0-2.63-.61-5.22-1.79-7.58L18.2 4.38a.7.7 0 0 0-1.3.18l-.78 3.9a.66.66 0 0 1-1.27.11L12.22 1.6a.9.9 0 0 0-1.48-.33l-4.2 4.2A12.07 12.07 0 0 0 3 14Zm9.26-.84a.57.57 0 0 0-1-.23L9.6 15a3.08 3.08 0 1 0 5.12.48c-.14-.26-.5-.28-.71-.06L13 16.5l-.74-3.34Z",
 };
-function j(e, t, n, i, a) {
+function k(e, t, n, i, a) {
     let o = M[i];
     if (null != o) {
         let i = n / 20;
@@ -393,7 +393,7 @@ function j(e, t, n, i, a) {
         fill: "black",
     });
 }
-function k(e, t, n, i) {
+function j(e, t, n, i) {
     let { status: a, isMobile: o, isTyping: s } = n,
         l = t.size - t.status - t.offset,
         c = t.offset,
@@ -419,7 +419,7 @@ function k(e, t, n, i) {
                     ry: u.avatarCutoutRadius,
                     fill: "black",
                 }),
-            null != i && j(l, c, t.status, i, t),
+            null != i && k(l, c, t.status, i, t),
         ],
     });
 }
@@ -637,7 +637,7 @@ function V(e) {
             CutoutIcon: P,
             avatarTooltipAsset: L,
             avatarTooltipText: M,
-            avatarTooltipTitle: j,
+            avatarTooltipTitle: k,
         } = e,
         B = n !== h.Skl.UNKNOWN ? n : null,
         V = (0, g.UC)(a),
@@ -662,7 +662,7 @@ function V(e) {
                 "aria-hidden": !0,
                 children: [
                     null != L &&
-                        k(
+                        j(
                             K,
                             V,
                             {
@@ -719,13 +719,13 @@ function V(e) {
                           })
                         : null,
                     null != P && U(V, P),
-                    null != j &&
+                    null != k &&
                         G(
                             V,
                             l,
                             f,
                             {
-                                avatarTooltipTitle: j,
+                                avatarTooltipTitle: k,
                                 avatarTooltipText: M,
                             },
                             L,
@@ -768,7 +768,7 @@ function W(e) {
             statusBackdropColor: w,
             "aria-hidden": L = !1,
             "aria-label": M,
-            imageClassName: k,
+            imageClassName: j,
             pulseStatusIcon: V,
             CutoutIcon: W,
             avatarTooltipAsset: K,
@@ -879,7 +879,7 @@ function W(e) {
                                 rx: eo,
                                 ry: eo,
                             }),
-                            null != K && j(eu.size - eu.status - eu.offset, eu.offset, eu.status, K, eu),
+                            null != K && k(eu.size - eu.status - eu.offset, eu.offset, eu.status, K, eu),
                         ],
                     }),
                     (0, r.jsx)("foreignObject", {
@@ -893,7 +893,7 @@ function W(e) {
                             src: v,
                             isSpeaking: m,
                             isLatched: E,
-                            className: k,
+                            className: j,
                         }),
                     }),
                     null != w && x(w, f, eu, S),

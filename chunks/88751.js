@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => j }), n(388685);
+n.d(t, { ZP: () => k }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -144,7 +144,7 @@ class M extends (r = o.ZP.Store) {
     }
 }
 E(M, "displayName", "StageChannelRoleStore");
-let j = new M(s.Z, {
+let k = new M(s.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: L,
     GUILD_MEMBER_REMOVE: P,

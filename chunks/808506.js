@@ -60,8 +60,8 @@ var i,
     L = n(355863),
     x = n(626135),
     M = n(866119),
-    j = n(671999),
-    k = n(998502),
+    k = n(671999),
+    j = n(998502),
     U = n(145597),
     G = n(372679),
     B = n(981631),
@@ -439,7 +439,7 @@ function eg(e, t) {
 }
 async function eE(e) {
     try {
-        if (k.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
+        if (j.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
             if (q.size > 0) {
                 e_ = "reconcile.getOverlayURL";
                 let t = await eT();
@@ -727,14 +727,14 @@ function eM(e) {
     let { region: t } = e;
     eo.add(t), ew(!1, $);
 }
-function ej() {
+function ek() {
     eo.clear(), ew(!0, $);
 }
-function ek(e) {
+function ej(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "8a854c848462bdc0792afa8ca80da1f78e3d532a"),
+    n.append("build_id", "b9237c513b1b65a94f4a20064aadcc393225b7cc"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -794,8 +794,8 @@ function eW(e) {
     setTimeout(() => {
         let e = Math.ceil(t * window.innerWidth),
             r = Math.ceil(n * window.innerHeight),
-            i = (0, j.B)("click", e, r);
-        (0, j.J)(i, e, r);
+            i = (0, k.B)("click", e, r);
+        (0, k.J)(i, e, r);
     }, 50);
 }
 function eK(e) {
@@ -912,8 +912,8 @@ let e0 = new e$(
                   OVERLAY_FOCUSED: eG,
                   OVERLAY_SET_INPUT_LOCKED: ex,
                   OVERLAY_ACTIVATE_REGION: eM,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: ej,
-                  RPC_SERVER_READY: ek,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: ek,
+                  RPC_SERVER_READY: ej,
                   OVERLAY_CALL_PRIVATE_CHANNEL: eU,
                   OVERLAY_JOIN_GAME: eY,
                   OVERLAY_CRASHED: eB,

@@ -10,7 +10,7 @@ var i = n(915009),
     u = n(726985),
     d = n(981631),
     f = n(388032),
-    _ = n(313570);
+    _ = n(597754);
 function p() {
     let e = o.bh.useSetting(),
         t = (0, s.W)("DataUsageQuestsSetting"),

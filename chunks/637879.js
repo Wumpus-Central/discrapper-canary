@@ -6,7 +6,7 @@ n.d(t, {
     V4: () => z,
     YQ: () => W,
     _B: () => R,
-    dI: () => j,
+    dI: () => k,
     do: () => L,
     f: () => w,
     mW: () => D,
@@ -37,7 +37,7 @@ var i = n(120356),
     O = n(981631),
     v = n(268685),
     I = n(388032),
-    T = n(465262);
+    T = n(493090);
 function S(e, t, n) {
     return (
         t in e
@@ -228,7 +228,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
         { rows: s, title: l, trailingIcon: c } = n.data;
@@ -265,7 +265,7 @@ function j(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { size: t, user: n, className: i } = e,
         a = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
         s = (0, v.px)(t);
@@ -359,7 +359,7 @@ function Z(e) {
         : (0, r.jsxs)("div", {
               className: T.answerPill,
               children: [
-                  (0, r.jsx)(k, {
+                  (0, r.jsx)(j, {
                       size: l.EFr.SIZE_16,
                       user: a,
                   }),
@@ -451,7 +451,7 @@ function H(e) {
               label: (0, r.jsxs)("div", {
                   className: T.labelWithElements,
                   children: [
-                      (0, r.jsx)(k, {
+                      (0, r.jsx)(j, {
                           size: l.EFr.SIZE_16,
                           user: n,
                       }),
@@ -560,7 +560,7 @@ function K(e) {
             className: T.itemIcon,
         });
     if (null != a)
-        return (0, r.jsx)(k, {
+        return (0, r.jsx)(j, {
             size: l.EFr.SIZE_20,
             user: a,
             className: T.itemIcon,

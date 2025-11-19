@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(481060),
     c = n(410030),
     d = n(688465),
-    u = n(795396);
+    u = n(196073);
 function p(e) {
     let { title: t, betaTag: n, color: a = "header-primary" } = e;
     return (0, r.jsxs)(o.Heading, {

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => j,
+    Z: () => k,
     p: () => M,
 }),
     n(953529);
@@ -28,9 +28,9 @@ var r = n(54381),
     S = n(474936),
     A = n(981631),
     C = n(388032),
-    N = n(398068),
-    R = n(885807),
-    P = n(815847),
+    N = n(124527),
+    R = n(591867),
+    P = n(325380),
     D = n(428946),
     w = n(42948),
     L = n(109194),
@@ -43,14 +43,14 @@ var r = n(54381),
             e
         );
     })({});
-function j(e) {
+function k(e) {
     let {
             containerContext: t,
             image: n,
             title: a,
             description: M,
-            enableSocialProof: j,
-            analyticsLocationSection: k,
+            enableSocialProof: k,
+            analyticsLocationSection: j,
             upsellViewedTrackingData: U,
             onClose: G,
             onDisplay: B,
@@ -60,16 +60,16 @@ function j(e) {
         V = (0, l.e7)([E.Z], () => E.Z.affinities),
         H = (0, l.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
-        !H && j && d.MH();
-    }, [H, j]),
+        !H && k && d.MH();
+    }, [H, k]),
         i.useEffect(() => {
             h.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, U), null == B || B();
         }, [B, U]);
-    let Y = V.length > 1 && j,
+    let Y = V.length > 1 && k,
         W = () => (2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
         K = () => {
             h.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: k,
+                location_section: j,
                 location_object: A.qAy.NAVIGATION_LINK,
             }),
                 null == Z || Z(),
@@ -149,7 +149,7 @@ function j(e) {
                                     }),
                                     (0, r.jsx)(O.Z, {
                                         premiumModalAnalyticsLocation: {
-                                            section: k,
+                                            section: j,
                                             object: A.qAy.BUTTON_CTA,
                                         },
                                         subscriptionTier: S.Si.TIER_2,
@@ -219,7 +219,7 @@ function j(e) {
                             (0, r.jsx)(v.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: k,
+                                    section: j,
                                     object: A.qAy.BUTTON_CTA,
                                 },
                                 subscriptionTier: S.Si.TIER_2,

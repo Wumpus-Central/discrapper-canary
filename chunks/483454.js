@@ -1,5 +1,5 @@
 n.d(t, {
-    MM: () => j,
+    MM: () => k,
     Q5: () => R,
     hn: () => x,
     p7: () => L,
@@ -288,7 +288,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
               });
     },
     M = ["applePay", "googlePay", "link"],
-    j = (e) => {
+    k = (e) => {
         let {
                 step: t,
                 handleStepChange: n,

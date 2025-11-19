@@ -32,7 +32,7 @@ var r = n(54381),
     L = n(681642),
     x = n(388032),
     M = n(517793);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -102,7 +102,7 @@ function Z(e) {
             className: a,
             badgeClassName: p,
             displayProfile: y,
-            onClose: j,
+            onClose: k,
             shouldOpenBadgeTooltip: U,
             shouldGlowTenureBadge: Z,
         } = e,
@@ -128,7 +128,7 @@ function Z(e) {
                     if (
                         (Y({ action: "PRESS_BADGE" }),
                         (0, A.NE)(
-                            k(
+                            j(
                                 {
                                     badge: e.id,
                                     analyticsLocations: V,
@@ -159,34 +159,34 @@ function Z(e) {
                                       analyticsLocations: V,
                                       displayProfile: y,
                                   }),
-                                null == j || j();
+                                null == k || k();
                             return;
                         }
                         if (O) {
                             let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: V }) : null;
                             if (null == n) return;
-                            return null == j || j(), n(t);
+                            return null == k || k(), n(t);
                         }
                         return (
                             (0, h.k)({
                                 analyticsLocations: V,
                                 displayProfile: y,
                             }),
-                            void (null == j || j())
+                            void (null == k || k())
                         );
                     }
                     let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: V }) : null;
-                    if (null != n) return null == j || j(), n(t);
+                    if (null != n) return null == k || k(), n(t);
                 },
                 S = () => {
                     e.id === C.i &&
                         v.default.track(
                             P.rMx.QUEST_CONTENT_VIEWED,
-                            G(k({}, (0, m.mH)(g.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            G(j({}, (0, m.mH)(g.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         Y({ action: "HOVER_BADGE" }),
                         (0, A.Qf)(
-                            k(
+                            j(
                                 {
                                     badge: e.id,
                                     analyticsLocations: V,
@@ -212,7 +212,7 @@ function Z(e) {
             if (w) {
                 let n = (0, r.jsx)(
                     s.Anchor,
-                    G(k({}, z), {
+                    G(j({}, z), {
                         ref: F,
                         children: x,
                     }),
@@ -231,7 +231,7 @@ function Z(e) {
             if (N) {
                 let n = (0, r.jsx)(
                     s.Anchor,
-                    G(k({}, z), {
+                    G(j({}, z), {
                         ref: F,
                         children: x,
                     }),
@@ -254,7 +254,7 @@ function Z(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            let Q = (0, r.jsx)(s.Anchor, G(k({}, z), { children: x })),
+            let Q = (0, r.jsx)(s.Anchor, G(j({}, z), { children: x })),
                 J = B({
                     badge: e,
                     tieredTenureBadge: u && e.id !== L.a ? a : void 0,

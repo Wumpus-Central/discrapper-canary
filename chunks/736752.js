@@ -35,12 +35,12 @@ var r = n(54381),
     L = n(730820),
     x = n(888256),
     M = n(2719),
-    j = n(194530),
-    k = n(726985),
+    k = n(194530),
+    j = n(726985),
     U = n(981631),
     G = n(801461),
     B = n(388032),
-    Z = n(719766);
+    Z = n(343396);
 function F(e, t, n) {
     return (
         t in e
@@ -189,16 +189,16 @@ class K extends i.PureComponent {
                       })
                     : null,
                 (0, r.jsx)(E.F, {
-                    setting: k.s6.ACCOUNT_CHANGE_PASSWORD,
+                    setting: j.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
                         text: B.intl.string(B.t["FRep5/"]),
-                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(j.default, Y(V({}, e), { onSuccess: e.onClose }))),
+                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, Y(V({}, e), { onSuccess: e.onClose }))),
                     }),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: k.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                    setting: j.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, r.jsx)(L.Z, { backupCodes: e }),
                 }),
             ],
@@ -297,15 +297,15 @@ class K extends i.PureComponent {
             children: [
                 this.renderConfirmModals(),
                 (0, r.jsx)(E.F, {
-                    setting: k.s6.ACCOUNT_PROFILE,
+                    setting: j.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: k.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+                    setting: j.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings(),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: k.s6.ACCOUNT_REMOVAL,
+                    setting: j.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings(),
                 }),
             ],
@@ -316,12 +316,12 @@ class K extends i.PureComponent {
         return (0, r.jsx)(D.N, {
             header: B.intl.string(B.t["JAIM/m"]),
             children: (0, r.jsx)(w.Z, {
-                parentSetting: k.s6.ACCOUNT,
+                parentSetting: j.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: Z.tabPanel,
                 onTabChange: (e) => {
                     C.default.track(U.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
-                        target_tab_name: e === k.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
+                        target_tab_name: e === j.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
                     });
                 },
                 defaultTabIndex: "ACCOUNT_STANDING" === e ? 1 : void 0,
@@ -329,12 +329,12 @@ class K extends i.PureComponent {
                     {
                         title: B.intl.string(B.t.Am9YHi),
                         component: () => this.renderSecuritySettingsRedesign(),
-                        setting: k.s6.ACCOUNT_SECURITY_TAB,
+                        setting: j.s6.ACCOUNT_SECURITY_TAB,
                     },
                     {
                         title: B.intl.string(B.t["Vov/9o"]),
                         component: g.Z,
-                        setting: k.s6.PRIVACY_AND_SAFETY_STANDING,
+                        setting: j.s6.PRIVACY_AND_SAFETY_STANDING,
                     },
                 ],
             }),

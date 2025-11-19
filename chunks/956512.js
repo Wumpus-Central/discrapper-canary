@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(709054),
     y = n(915553),
     O = n(967249),
-    v = n(609422),
+    v = n(621844),
     I = n(388032);
 function T(e, t, n) {
     return (
@@ -88,8 +88,8 @@ function N(e) {
                 return null != n && t === n.id;
             }),
         ),
-        j = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
-        k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
+        k = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
+        j = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         U = b.default.extractTimestamp(T.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(T, N, t) }),
         { newestAnalyticsLocation: B } = (0, l.ZP)(R, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
@@ -98,9 +98,9 @@ function N(e) {
     return (
         U
             ? ((Z = I.intl.string(v.default.u4QmWl)), (F = !0))
-            : null != j
+            : null != k
               ? ((Z = I.intl.string(v.default.P0wwmM)), (F = !0))
-              : k !== N.id
+              : j !== N.id
                 ? ((Z = I.intl.string(v.default.qRXats)), (F = !0))
                 : null == M && ((Z = I.intl.string(v.default["43zohO"])), (F = !0)),
         (0, r.jsx)(c.W, {
@@ -127,7 +127,7 @@ function N(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),
                                                     n.e("4093"),
-                                                    n.e("33840"),
+                                                    n.e("47863"),
                                                     n.e("39173"),
                                                 ]).then(n.bind(n, 60594));
                                                 return (t) => (0, r.jsx)(e, C(S({}, t), { analyticsLocation: B }));

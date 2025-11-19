@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(215023),
     p = n(474936),
     h = n(388032),
-    m = n(176343);
+    m = n(498138);
 let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error("Missing base rate for legal fine print"),
@@ -54,7 +54,7 @@ let g = (e, t, n, r) => {
                 (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)),
                 (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n));
         } else null != b && ((t = b.interval), (n = b.intervalCount));
-        let j = (0, a.K)({
+        let k = (0, a.K)({
                 purchaseType: C || f.GZQ.SUBSCRIPTION,
                 plan: b,
                 premiumSubscription: null == D ? null : D,
@@ -63,12 +63,12 @@ let g = (e, t, n, r) => {
                 planGroup: M,
                 isPrepaidPaymentSource: !1,
             }),
-            k = h.intl.format(h.t.Y2Rkqc, {
-                primaryText: j,
+            j = h.intl.format(h.t.Y2Rkqc, {
+                primaryText: k,
                 paidURL: f.EYA.PAID_TERMS,
             }),
             U = h.intl.format(h.t.H2uH5b, {
-                primaryText: j,
+                primaryText: k,
                 paidURL: f.EYA.PAID_TERMS,
             }),
             G = "",
@@ -109,22 +109,22 @@ let g = (e, t, n, r) => {
         else if (C === f.GZQ.ONE_TIME)
             switch (N) {
                 case f.POd.COLLECTIBLES:
-                    (B = k),
+                    (B = j),
                         (G = y
                             ? h.intl.format(h.t.Amdf8X, { paidURL: f.EYA.PAID_TERMS })
                             : h.intl.format(h.t["40vM4o"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (B = k), (G = h.intl.format(h.t["GEAQ+u"], { paidURL: f.EYA.PAID_TERMS }));
+                    (B = j), (G = h.intl.format(h.t["GEAQ+u"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.SOCIAL_LAYER_GAME_ITEM:
-                    (B = k), (G = h.intl.format(h.t.CVITgq, { applicationName: null != L ? L : "game's" }));
+                    (B = j), (G = h.intl.format(h.t.CVITgq, { applicationName: null != L ? L : "game's" }));
                     break;
                 default:
                     (B = U), (G = h.intl.string(h.t["9/siSQ"]));
             }
         else if (null == b || y)
-            switch ((y && (B = k), t)) {
+            switch ((y && (B = j), t)) {
                 case p.rV.MONTH:
                     (G = y ? h.intl.string(h.t.IjNapk) : h.intl.string(h.t["/sGXPr"])),
                         (G = y

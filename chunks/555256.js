@@ -387,8 +387,8 @@ let N = { replay: null },
     L = "",
     x = !1,
     M = !1,
-    j = [],
-    k = (e) =>
+    k = [],
+    j = (e) =>
         e._config && e._config.installationMethod
             ? e._config.installationMethod
             : e._gtm
@@ -410,7 +410,7 @@ function B(e = {}) {
         "Content-Type": "application/json",
         "userleap-platform": "web",
         "x-ul-sdk-version": "2.34.0",
-        "x-ul-installation-method": k(e),
+        "x-ul-installation-method": j(e),
         "sprig-modules": P(),
     };
     return (
@@ -429,7 +429,7 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
         if (e) return { status: 429 };
         {
             let e = new C(t);
-            return j.push(e), e.promise;
+            return k.push(e), e.promise;
         }
     },
     F = async (e, t) => {
@@ -465,8 +465,8 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
             }
             if (
                 ((x = !1),
-                j.length &&
-                    (j.map((e) => {
+                k.length &&
+                    (k.map((e) => {
                         let t = e.payload;
                         F(t.url, {
                             ...t.options,
@@ -476,7 +476,7 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
                             e.resolveRequest(t);
                         });
                     }),
-                    (j = [])),
+                    (k = [])),
                 t.ok)
             ) {
                 if (249 === t.status) return G(), s;

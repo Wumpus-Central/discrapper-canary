@@ -5,8 +5,8 @@ var r = n(54381),
     o = n.n(a),
     s = n(481060),
     l = n(741914),
-    c = n(223283),
-    u = n(602009);
+    c = n(104559),
+    u = n(430864);
 function d(e) {
     let { color: t, className: n, variant: a, text: d, lineClamp: f } = e,
         _ = (0, s.xSt)(),

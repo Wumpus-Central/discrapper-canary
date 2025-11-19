@@ -31,15 +31,15 @@ var c = n(748721),
     D = n(896361),
     w = n(746106),
     L = n(177692);
-n(987528);
+n(986484);
 var x = n(857192),
-    M = n(395715),
-    j = n(44163),
-    k = n(710845),
+    M = n(113752),
+    k = n(44163),
+    j = n(710845),
     U = n(70956),
     G = n(378799),
     B = n(758731);
-x.default.cssDebuggingEnabled && n.e("64535").then(n.bind(n, 583949)), (0, G.s5)();
+x.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, G.s5)();
 let Z = 5 * U.Z.Millis.MINUTE,
     F = document.getElementById("app-mount");
 d()(null != F, "Could not find app-mount"), (F.className = __OVERLAY__ ? "" : M.appMount);
@@ -75,7 +75,7 @@ if (null != P.Z) {
         .filter((e) => null != n[e])
         .map((e) => "".concat(e, ": ").concat(n[e]))
         .join(", ");
-    new k.Z().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(l, ", build: ").concat(t)),
+    new j.Z().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(l, ", build: ").concat(t)),
         v.ZP.pauseFrameEvictor(),
         v.ZP.initializeExitHook(),
         v.ZP.initializeWERHandler();
@@ -102,7 +102,7 @@ else {
         _.Z.initialize(),
         p.Z.init(),
         E.Z.init(),
-        j.Z.init(),
+        k.Z.init(),
         h.Z.initialize(),
         O.Z.initialize(),
         I.Z.initialize(),

@@ -12,7 +12,7 @@ var r = n(54381),
     f = n(279604),
     m = n(279475),
     g = n(535396),
-    v = n(470039);
+    v = n(237522);
 function x(e) {
     let { guildId: t, powerup: n } = e,
         [x, _] = i.useState(void 0);

@@ -32,8 +32,8 @@ var r,
     L = n(378233),
     x = n(419922),
     M = n(313789),
-    j = n(342386),
-    k = n(518596),
+    k = n(342386),
+    j = n(518596),
     U = n(46141),
     G = n(485386),
     B = n(430824),
@@ -54,7 +54,7 @@ var r,
     et = n(474936),
     en = n(231338),
     er = n(388032),
-    ei = n(708016);
+    ei = n(982710);
 function ea(e, t, n) {
     return (
         t in e
@@ -204,7 +204,7 @@ function ev(e) {
             (null == s ? void 0 : s.features.has(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE))
                 ? await (0, N.Z)(ee.Z5c.GUILD_PRODUCT(t, n))
                 : await (0, N.Z)(ee.Z5c.CHANNEL(t)),
-                (0, j.default)();
+                (0, k.default)();
         }, [s, t, n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -511,7 +511,7 @@ class eT extends (r = a.PureComponent) {
                                     variant: "primary",
                                     text: er.intl.string(er.t["jcSP+g"]),
                                     onClick: () =>
-                                        (0, k.openUserSettings)(M.n.GIFT_PANEL, { section: ee.oAB.INVENTORY }),
+                                        (0, j.openUserSettings)(M.n.GIFT_PANEL, { section: ee.oAB.INVENTORY }),
                                 }),
                             }),
                     ],

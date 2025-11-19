@@ -88,8 +88,8 @@ let N = new h.Z("ChannelStore"),
     L = null,
     x = {},
     M = {},
-    j = {},
-    k = 0,
+    k = {},
+    j = 0,
     U = {},
     G = {},
     B = new Set(),
@@ -215,7 +215,7 @@ function $(e) {
 }
 function ee(e) {
     if (null != e.recipients.find((e) => (0, p.Z)(e))) return !1;
-    (w[e.id] = e), e.type === I.d4z.DM && (j[e.getRecipientId()] = e.id), (k += 1);
+    (w[e.id] = e), e.type === I.d4z.DM && (k[e.getRecipientId()] = e.id), (j += 1);
 }
 function et(e) {
     let t = P[e.parent_id];
@@ -244,7 +244,7 @@ function er(e) {
     en(e);
 }
 function ei(e) {
-    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (k += 1);
+    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (j += 1);
     else {
         var t;
         U[e.guild_id] = (null != (t = U[e.guild_id]) ? t : 0) + 1;
@@ -252,7 +252,7 @@ function ei(e) {
 }
 function ea(e) {
     let t = D;
-    for (let n of ((j = {}),
+    for (let n of ((k = {}),
     (P = {}),
     (D = {}),
     (M = {}),
@@ -335,7 +335,7 @@ function ec(e) {
 }
 function eu() {
     N.fileOnly("initializeClear()"),
-        (j = {}),
+        (k = {}),
         (P = {}),
         (D = {}),
         (U = {}),
@@ -415,7 +415,7 @@ function ey(e) {
 function eO(e) {
     if ("basicPermissions" in e || e.type !== I.d4z.DM) return;
     let t = e.getRecipientId();
-    j[t] === e.id && delete j[t];
+    k[t] === e.id && delete k[t];
 }
 function ev(e) {
     if (null == e) return;
@@ -534,19 +534,19 @@ class eL extends (r = s.ZP.Store) {
             .value();
     }
     getDMFromUserId(e) {
-        if (null != e) return j[e];
+        if (null != e) return k[e];
     }
     getDMChannelFromUserId(e) {
-        if (null != e) return this.getChannel(j[e]);
+        if (null != e) return this.getChannel(k[e]);
     }
     getMutableDMsByUserIds() {
-        return j;
+        return k;
     }
     getDMUserIds() {
-        return b.default.keys(j);
+        return b.default.keys(k);
     }
     getPrivateChannelsVersion() {
-        return k;
+        return j;
     }
     getGuildChannelsVersion(e) {
         var t;

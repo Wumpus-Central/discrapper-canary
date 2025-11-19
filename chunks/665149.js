@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(290297),
     d = n(686546),
     f = n(79712),
-    _ = n(994515);
+    _ = n(191984);
 function p(e, t, n) {
     return (
         t in e
@@ -157,9 +157,9 @@ let y = 24,
                 "aria-checked": L,
                 "aria-expanded": x,
                 "aria-haspopup": M,
-                "data-jump-section": j,
+                "data-jump-section": k,
             } = e,
-            k = null != g ? { secondaryColorClass: g } : {},
+            j = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
                 h(
@@ -173,7 +173,7 @@ let y = 24,
                         colorClass: null != m ? m : void 0,
                         color: null != p ? p : "currentColor",
                     },
-                    k,
+                    j,
                 ),
             ),
             G = D;
@@ -212,7 +212,7 @@ let y = 24,
                                           onFocus: I,
                                           onBlur: T,
                                       },
-                                      k,
+                                      j,
                                   ),
                               ),
                           })
@@ -238,7 +238,7 @@ let y = 24,
                               "aria-haspopup": M,
                               "aria-expanded": x,
                               tabIndex: l || null == O ? -1 : 0,
-                              "data-jump-section": j,
+                              "data-jump-section": k,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {

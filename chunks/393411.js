@@ -36,8 +36,8 @@ var i = n(120356),
     w = n(981631),
     L = n(362786),
     x = n(388032),
-    M = n(587277);
-function j(e, t, n) {
+    M = n(965406);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -224,7 +224,7 @@ function W() {
 }
 let K = function (e) {
     var t;
-    let { subscription: i, renewalInvoicePreview: o, paymentSource: p, busy: N, analyticsLocation: j } = e,
+    let { subscription: i, renewalInvoicePreview: o, paymentSource: p, busy: N, analyticsLocation: k } = e,
         U = "subscription_header",
         { analyticsLocations: W } = (0, f.ZP)(d.Z.SUBSCRIPTION_HEADER),
         { fractionalState: K } = (0, _.Z)({ forceFetch: !1 }),
@@ -252,9 +252,9 @@ let K = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        G(k({}, n), {
+                        G(j({}, n), {
                             premiumSubscription: i,
-                            analyticsLocation: j,
+                            analyticsLocation: k,
                             analyticsLocations: W,
                             initialStep: e,
                         }),
@@ -277,7 +277,7 @@ let K = function (e) {
                         : (0, h.Z)({
                               initialPlanId: i.premiumPlanIdFromItems,
                               analyticsLocations: W,
-                              analyticsLocation: j,
+                              analyticsLocation: k,
                               analyticsObject: Z,
                               subscription: i,
                           });
@@ -296,7 +296,7 @@ let K = function (e) {
                 ? (0, h.Z)({
                       initialPlanId: i.premiumPlanIdFromItems,
                       analyticsLocations: W,
-                      analyticsLocation: j,
+                      analyticsLocation: k,
                       analyticsObject: Z,
                       subscription: i,
                       skipConfirm: !0,
@@ -376,7 +376,7 @@ let K = function (e) {
                                 onClick: () => {
                                     (0, h.Z)({
                                         analyticsLocations: W,
-                                        analyticsLocation: j,
+                                        analyticsLocation: k,
                                         analyticsObject: Z,
                                         subscription: i,
                                     });

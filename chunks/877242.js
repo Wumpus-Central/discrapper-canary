@@ -14,7 +14,7 @@ var r = n(54381),
     v = n(215113),
     E = n(684245),
     g = n(388032),
-    O = n(290691);
+    O = n(273339);
 function h() {
     var e;
     let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: h } = o.useContext(v.VideoQuestModalContext),

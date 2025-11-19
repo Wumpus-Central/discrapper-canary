@@ -70,10 +70,10 @@ function M(e) {
         n
     );
 }
-function j(e) {
+function k(e) {
     return D.nonPositionalChannelIdUpdate(e.id);
 }
-function k(e) {
+function j(e) {
     return D.clearGuildId(e.guildId);
 }
 function U(e) {
@@ -272,7 +272,7 @@ let eu = new ec(s.Z, {
     CHANNEL_MUTE_EXPIRED: B,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: Y,
     CHANNEL_SELECT: J,
-    CHANNEL_STATUSES: k,
+    CHANNEL_STATUSES: j,
     CHANNEL_UPDATES: M,
     CONNECTION_OPEN_SUPPLEMENTAL: ei,
     CONNECTION_OPEN: w,
@@ -336,7 +336,7 @@ let eu = new ec(s.Z, {
     VOICE_CATEGORY_COLLAPSE: et,
     VOICE_CATEGORY_EXPAND: et,
     VOICE_CHANNEL_SELECT: J,
-    VOICE_CHANNEL_STATUS_UPDATE: j,
+    VOICE_CHANNEL_STATUS_UPDATE: k,
     VOICE_STATE_UPDATES: $,
     WINDOW_FOCUS: W,
 });

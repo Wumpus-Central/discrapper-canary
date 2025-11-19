@@ -14,7 +14,7 @@ var r = n(54381),
     g = n(652853),
     m = n(981631),
     b = n(671955),
-    _ = n(788485);
+    _ = n(777267);
 let y = o.EFr.SIZE_40,
     O = (0, o.pxk)(y);
 function v(e) {
@@ -46,7 +46,7 @@ function v(e) {
         onClick: x,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("73444")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                     n.bind(n, 881351),
                 );
                 return (n) => {

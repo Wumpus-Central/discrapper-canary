@@ -1,5 +1,5 @@
 var e = n(779688),
-    o = n(525320),
+    o = n(829575),
     i = n(6837),
     u = n(620214),
     s = Object.isExtensible;

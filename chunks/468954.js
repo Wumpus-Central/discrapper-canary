@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(98528),
     s = n(429155),
     l = n(810462),
-    c = n(181845);
+    c = n(681561);
 function u(e, t, n) {
     return (
         t in e
@@ -86,8 +86,8 @@ function p(e) {
             listPaddingRight: L,
             itemNodeMargin: x,
             listPadding: M,
-            gridNavigatorId: j,
-            gridNotice: k,
+            gridNavigatorId: k,
+            gridNotice: j,
             renderHeader: U,
             renderUpsell: G,
         } = e,
@@ -128,7 +128,7 @@ function p(e) {
             expressionsGrid: K,
             onSelectItem: p,
             store: f,
-            gridNavigatorId: j,
+            gridNavigatorId: k,
         }),
         er = i.useCallback(
             (e, t) =>
@@ -175,7 +175,7 @@ function p(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: et,
                 expressionsListRef: Z,
-                gridNavigatorId: j,
+                gridNavigatorId: k,
                 defaultSearchPlaceholder: E,
                 emptySearchPlaceholder: b,
             }),
@@ -195,10 +195,10 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           C(Z),
-                          null != k &&
+                          null != j &&
                               (0, r.jsx)("div", {
                                   className: c.gridNoticeWrapper,
-                                  children: k,
+                                  children: j,
                               }),
                           (0, r.jsx)(
                               "div",
@@ -207,7 +207,7 @@ function p(e) {
                                       {
                                           ref: B,
                                           className: c.listWrapper,
-                                          id: j,
+                                          id: k,
                                       },
                                       ee,
                                   ),

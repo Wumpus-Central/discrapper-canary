@@ -60,7 +60,7 @@ let y = (0, a.U)((e) => ({
                 { disableTrack: !x },
                 [x],
             );
-        let j = () => {
+        let k = () => {
             D(g.L.USER_DISMISS), C(null);
         };
         return (0, r.jsx)(l.J2, {
@@ -82,7 +82,7 @@ let y = (0, a.U)((e) => ({
                     onClick: L,
                 },
             ],
-            onRequestClose: j,
+            onRequestClose: k,
         });
     },
     v = (e) => {

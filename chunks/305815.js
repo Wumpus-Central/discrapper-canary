@@ -21,7 +21,7 @@ var r = t(54381),
     y = t(291967),
     N = t(46140),
     b = t(388032),
-    w = t(691864);
+    w = t(129034);
 function A(e) {
     var n;
     let { quest: t, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,

@@ -113,7 +113,7 @@ function x(e) {
 }
 function M(e) {
     let t = O.Z.getChannel(e.channelId);
-    if (null == t) return k();
+    if (null == t) return j();
     (C = v.QZA.OPEN),
         (o = a = t),
         (w = "location" in e && null != e.location ? e.location : null),
@@ -124,7 +124,7 @@ function M(e) {
     let n = o.isModeratorReportChannel() ? v.CoT.PERMISSIONS : v.CoT.OVERVIEW;
     return (
         (N = {}),
-        j({
+        k({
             type: "CHANNEL_SETTINGS_SET_SECTION",
             section: null != r ? r : n,
             subsection: i,
@@ -132,7 +132,7 @@ function M(e) {
         !0
     );
 }
-function j(e) {
+function k(e) {
     (r = e.section),
         (i = e.subsection),
         null != o &&
@@ -155,7 +155,7 @@ function j(e) {
                     () => (P = !1),
                 ));
 }
-function k() {
+function j() {
     (D = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function U() {
@@ -333,12 +333,12 @@ let $ = new J(m.Z, {
         CHANNEL_SETTINGS_SUBMIT: U,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: G,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: B,
-        CHANNEL_SETTINGS_CLOSE: k,
+        CHANNEL_SETTINGS_CLOSE: j,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: Q,
         CHANNEL_SETTINGS_UPDATE: F,
-        CHANNEL_SETTINGS_SET_SECTION: j,
+        CHANNEL_SETTINGS_SET_SECTION: k,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,
         CHANNEL_DELETE: X,

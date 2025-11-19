@@ -88,8 +88,8 @@ let P = new f.Z("GuildMemberStore"),
     L = {},
     x = {},
     M = {},
-    j = !1,
-    k = 0,
+    k = !1,
+    j = 0,
     U = 0,
     G = {},
     B = {},
@@ -113,7 +113,7 @@ function V(e, t) {
         }
 }
 function H(e) {
-    (k += 1), (G[e] = k);
+    (j += 1), (G[e] = j);
 }
 function Y(e) {
     K(e) === O.default.getId() && (0, h.l)(z(e)), delete M[e];
@@ -215,7 +215,7 @@ function X(e) {
     return x;
 }
 function Q(e) {
-    j ? (j = !1) : ((D = {}), (w = {})), (M = {}), $(e);
+    k ? (k = !1) : ((D = {}), (w = {})), (M = {}), $(e);
 }
 function J(e) {
     e.guilds.forEach((e) => {
@@ -242,7 +242,7 @@ function ee(e) {
 }
 function et(e) {
     let { guildMembers: t, guilds: n } = e;
-    (j = !0), (D = C({}, t)), (w = {}), (x = {}), er(n);
+    (k = !0), (D = C({}, t)), (w = {}), (x = {}), er(n);
 }
 function en(e) {
     let { guilds: t } = e;
@@ -263,9 +263,9 @@ function er(e) {
 function ei(e) {
     var t, n;
     if (null == e.guildId || null == T.Z.getGuild(e.guildId)) return !1;
-    (j = !0), (D[e.guildId] = null != (t = D[e.guildId]) ? t : {});
+    (k = !0), (D[e.guildId] = null != (t = D[e.guildId]) ? t : {});
     let r = !1;
-    for (let t of ((j = !0), (D[e.guildId] = null != (n = D[e.guildId]) ? n : {}), e.members))
+    for (let t of ((k = !0), (D[e.guildId] = null != (n = D[e.guildId]) ? n : {}), e.members))
         null == D[e.guildId][t.userId] && ((r = !0), (D[e.guildId][t.userId] = t));
     return r;
 }
@@ -660,12 +660,12 @@ function eM(e) {
     }),
         eL({ messages: n });
 }
-function ej(e) {
+function ek(e) {
     let { location: t, participants: n } = e,
         r = (0, c.j)(t);
     return null != r && ev(r, n);
 }
-function ek(e) {
+function ej(e) {
     let t = v.Z.getChannel(e.channelId);
     return eR(e.resolved, null == t ? void 0 : t.guild_id);
 }
@@ -766,7 +766,7 @@ class eU extends (r = o.ZP.Store) {
         return M;
     }
     getCommunicationDisabledVersion() {
-        return k;
+        return j;
     }
     getPendingRoleUpdates(e) {
         var t;
@@ -820,6 +820,6 @@ let eG = new eU(s.Z, {
     SEARCH_MESSAGES_SUCCESS: eM,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: eM,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eg,
-    EMBEDDED_ACTIVITY_UPDATE_V2: ej,
-    INTERACTION_MODAL_CREATE: ek,
+    EMBEDDED_ACTIVITY_UPDATE_V2: ek,
+    INTERACTION_MODAL_CREATE: ej,
 });

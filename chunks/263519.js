@@ -38,10 +38,10 @@ function y(e) {
         L = null == T ? void 0 : T.applicationId,
         x = (null == S ? void 0 : S.published) === !0 && (null == T ? void 0 : T.isAvailable()) === !0,
         { app: M } = (0, d.Rt)(L),
-        { analyticsLocations: j } = (0, c.ZP)(),
-        k = (0, m.Ev)(C, null != i ? i : void 0),
-        U = null == k ? void 0 : k.subscription,
-        G = null == k ? void 0 : k.subscriptionPlan,
+        { analyticsLocations: k } = (0, c.ZP)(),
+        j = (0, m.Ev)(C, null != i ? i : void 0),
+        U = null == j ? void 0 : j.subscription,
+        G = null == j ? void 0 : j.subscriptionPlan,
         B = (0, m.cr)(C, null != i ? i : void 0),
         Z = null == B ? void 0 : B.subscriptionPlan,
         { entitlementsLoaded: F } = (0, m.LM)({ guildId: i });
@@ -79,12 +79,12 @@ function y(e) {
                         subscriptionGroupPlanIds: P,
                         initialSubscribeForGuild: i,
                         disableGuildSelector: I,
-                        analyticsLocations: j,
+                        analyticsLocations: k,
                         analyticsLocation: y,
                     }).then(() => {
                         null == v || v();
                     });
-            }, [M, O, x, A, T, P, i, I, j, y, v]),
+            }, [M, O, x, A, T, P, i, I, k, y, v]),
             subscriptionPurchaseButtonState: Y,
             isGuildSubscribed: w,
         }

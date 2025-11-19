@@ -34,7 +34,7 @@ var r = n(54381),
     w = n(981631),
     T = n(921944),
     A = n(388032),
-    R = n(239249);
+    R = n(258628);
 function D(e, t, n) {
     if (null == e) return !1;
     if (null != n) return n.applicationId === e.id;
@@ -118,7 +118,7 @@ let L = i.memo(function (e) {
                 let e = null != G && (0, S.vd)(G.type) ? G : null,
                     t = null != e ? e.getGuildId() : T;
                 (0, u.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("4093"), n.e("33840"), n.e("33641")]).then(
+                    let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
                         n.bind(n, 60594),
                     );
                     return (n) => {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(54381);
 n(473749);
 var l = n(120356),
-    r = n.n(l),
-    i = n(149765),
+    i = n.n(l),
+    r = n(149765),
     s = n(442837),
     o = n(481060),
     c = n(933557),
@@ -14,19 +14,19 @@ var l = n(120356),
     h = n(914010),
     x = n(233608),
     g = n(71080),
-    f = n(215572),
-    b = n(866403);
+    f = n(989295),
+    b = n(451429);
 function v(e) {
     let { title: t, can: n } = e,
         l = n ? o.dz2 : o.Dio,
-        i = (0, a.jsx)("div", {
-            className: r()(f.iconOuter, n ? f.iconCheck : f.iconCross),
+        r = (0, a.jsx)("div", {
+            className: i()(f.iconOuter, n ? f.iconCheck : f.iconCross),
             children: (0, a.jsx)(l, { className: f.icon }),
         });
     return (0, a.jsxs)("div", {
         className: f.scope,
         children: [
-            i,
+            r,
             (0, a.jsx)("div", {
                 className: f.scopeInner,
                 children: (0, a.jsx)(o.Text, {
@@ -49,7 +49,7 @@ function j() {
         S = null != l ? x.Z.getGuildPermissionSpecMap(l) : null,
         E = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = i.e$(j, n);
+                l = r.e$(j, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -59,9 +59,9 @@ function j() {
                 t,
             );
         }),
-        O = Object.values(null != S ? S : {}).map((e) => {
+        N = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = i.e$(_, n);
+                l = r.e$(_, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -72,7 +72,7 @@ function j() {
             );
         });
     return (0, a.jsx)("div", {
-        className: r()(b.panel, f.panel),
+        className: i()(b.panel, f.panel),
         children: (0, a.jsxs)("div", {
             className: f.panelInner,
             children: [
@@ -93,7 +93,7 @@ function j() {
                             variant: "heading-md/semibold",
                             children: null != l ? "Permissions in ".concat(l.name) : "No guild selected",
                         }),
-                        O,
+                        N,
                     ],
                 }),
             ],

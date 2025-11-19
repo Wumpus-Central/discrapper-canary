@@ -22,7 +22,7 @@ var r = n(54381),
     O = n(81136),
     S = n(619899),
     y = n(215023),
-    j = n(654664);
+    j = n(887353);
 function k(e) {
     let { products: t, header: n, category: l } = e,
         i = (0, o.e7)([u.default], () => u.default.getCurrentUser()),

@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(358595),
     b = n(981631),
     y = n(388032),
-    O = n(739236);
+    O = n(105341);
 function v(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ function T(e) {
             currentUserId: L,
         } = e,
         x = L === w.author.id,
-        { channel: M, approximate_member_count: j, approximate_presence_count: k } = D,
+        { channel: M, approximate_member_count: k, approximate_presence_count: j } = D,
         U = D.state === b.r2o.ACCEPTING,
         G = null != M ? (0, p.jD)(M) : null,
         B = null != P,
@@ -154,10 +154,10 @@ function T(e) {
                       }),
                   ],
               })))
-            : (null != j && j >= 5) || (null != k && k > 0)
+            : (null != k && k >= 5) || (null != j && j > 0)
               ? (S = (0, r.jsx)(_.Z.Data, {
-                    members: j,
-                    membersOnline: k,
+                    members: k,
+                    membersOnline: j,
                 }))
               : Z &&
                 (S = (0, r.jsx)(_.Z.Channel, {
@@ -212,7 +212,7 @@ function T(e) {
                                 children: y.intl.format(y.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, s.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("7082"), n.e("72688")]).then(
+                                            let { default: e } = await Promise.all([n.e("7082"), n.e("98639")]).then(
                                                 n.bind(n, 650233),
                                             );
                                             return (t) => (0, r.jsx)(e, I({}, t));

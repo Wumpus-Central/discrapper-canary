@@ -21,7 +21,7 @@ function h(e) {
         c = (0, d.useRef)(null),
         u = (0, d.useRef)([]),
         { parentNode: h } = (0, d.useContext)(f) || {},
-        g = (0, d.useMemo)(() => new k({ scopeRef: u }), [u]);
+        g = (0, d.useMemo)(() => new j({ scopeRef: u }), [u]);
     (0, r.b)(() => {
         let e = h || U.root;
         if (U.getTreeNode(e.scopeRef) && p && !T(p, e.scopeRef)) {
@@ -522,7 +522,7 @@ function M(e) {
     while (t);
     return n;
 }
-class j {
+class k {
     get size() {
         return this.fastMap.size;
     }
@@ -532,7 +532,7 @@ class j {
     addTreeNode(e, t, n) {
         let r = this.fastMap.get(null != t ? t : null);
         if (!r) return;
-        let i = new k({ scopeRef: e });
+        let i = new j({ scopeRef: e });
         r.addChild(i), (i.parent = r), this.fastMap.set(e, i), n && (i.nodeToRestore = n);
     }
     addNode(e) {
@@ -559,7 +559,7 @@ class j {
     }
     clone() {
         var e, t;
-        let n = new j();
+        let n = new k();
         for (let r of this.traverse())
             n.addTreeNode(
                 r.scopeRef,
@@ -569,10 +569,10 @@ class j {
         return n;
     }
     constructor() {
-        (this.fastMap = new Map()), (this.root = new k({ scopeRef: null })), this.fastMap.set(null, this.root);
+        (this.fastMap = new Map()), (this.root = new j({ scopeRef: null })), this.fastMap.set(null, this.root);
     }
 }
-class k {
+class j {
     addChild(e) {
         this.children.add(e), (e.parent = this);
     }
@@ -583,4 +583,4 @@ class k {
         (this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef);
     }
 }
-let U = new j();
+let U = new k();

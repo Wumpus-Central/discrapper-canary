@@ -4,7 +4,7 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(70097),
-    s = n(484186),
+    s = n(883079),
     o = n(201284);
 let c = (e) => {
     let { className: t, isAnimated: n = !1, questName: i } = e,

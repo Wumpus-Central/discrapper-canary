@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(323873),
     B = n(271383),
     H = n(430824),
-    V = n(607744),
-    F = n(496675),
+    F = n(607744),
+    V = n(496675),
     G = n(626135),
     z = n(572004),
     W = n(176354),
@@ -56,7 +56,7 @@ var i = n(54381),
     ei = n(981631),
     er = n(185923),
     el = n(388032),
-    ea = n(271425);
+    ea = n(785727);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -215,12 +215,12 @@ function ep(e) {
                 { firstMessage: v } = (0, u.e7)([y.Z], () => y.Z.getMessage(t.id), [t.id]),
                 _ = k.nc.useSetting(),
                 x = k.Sb.useSetting(),
-                O = (0, u.e7)([V.Z], () => null == t.guild_id || V.Z.canChatInGuild(t.guild_id), [t]),
+                O = (0, u.e7)([F.Z], () => null == t.guild_id || F.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: E, canAddNewReactions: S } = (0, u.cj)(
-                    [F.Z],
+                    [V.Z],
                     () => ({
-                        canAddNewReactions: O && F.Z.can(ei.Plq.ADD_REACTIONS, t),
-                        canManageMessages: F.Z.can(ei.Plq.MANAGE_MESSAGES, t),
+                        canAddNewReactions: O && V.Z.can(ei.Plq.ADD_REACTIONS, t),
+                        canManageMessages: V.Z.can(ei.Plq.MANAGE_MESSAGES, t),
                     }),
                     [t, O],
                 ),
@@ -255,7 +255,7 @@ function ep(e) {
                 en =
                     null != et &&
                     n.type === ei.uaV.USER_JOIN &&
-                    F.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
+                    V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
                 er = (0, C.a)(n),
                 { enabled: el } = M.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([R.Z], () => null != R.Z.getSavedMessage(t.id, n.id)),

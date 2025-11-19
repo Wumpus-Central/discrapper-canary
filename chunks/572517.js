@@ -9,7 +9,7 @@ var r = n(54381),
     c = n(347896),
     u = n(717401),
     p = n(897942),
-    m = n(947007);
+    m = n(432483);
 function h() {
     var e, t;
     let n = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -19,25 +19,25 @@ function h() {
         g = null == b ? void 0 : b.planSelectionBanner,
         { claimableRewards: v } = (0, d.wD)();
     if (null == g || null == v) return null;
-    let P = null == (e = g.getBackgroundImageUrl) ? void 0 : e.call(g, f),
-        x = (0, u.Yr)(P),
-        y =
+    let x = null == (e = g.getBackgroundImageUrl) ? void 0 : e.call(g, f),
+        y = (0, u.Yr)(x),
+        P =
             null == (t = g.gradientConfig)
                 ? void 0
                 : t.call(g, {
                       isDarkMode: f,
                       isAndroid: !1,
                   }),
-        j = (0, u.Tl)(y, {
+        S = (0, u.Tl)(P, {
             colorStops: [0, 12, 100],
         }),
-        S = (0, u.$q)(x, j, {
+        j = (0, u.$q)(y, S, {
             backgroundSize: "cover, auto",
             backgroundPosition: "right center, 0% 0%",
         });
     return (0, r.jsxs)("div", {
         className: m.promotionalFooterBanner,
-        style: S,
+        style: j,
         children: [
             (0, r.jsx)("div", {
                 className: m.avatar,

@@ -44,19 +44,19 @@ let T = !1,
     L = Object.freeze([]),
     x = [],
     M = [];
-function j(e) {
+function k(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
     for (let r of e) r.type === v.IIU.PLAYING ? n.push(r) : t.push(r);
     return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(y.f)[0]].sort(y.f);
 }
-function k(e) {
+function j(e) {
     return (0, h.OT)(e, E.Z);
 }
 function U(e) {
     let t = m.Z.getGameByName(e);
-    return null != t ? k(t.id) : f.G6.getSetting();
+    return null != t ? j(t.id) : f.G6.getSetting();
 }
 function G(e) {
     var t;
@@ -64,14 +64,14 @@ function G(e) {
     switch (e.type) {
         case v.IIU.LISTENING:
             if ((0, u.Z)(e)) return d.Z.shouldShowActivity();
-            if (null != e.application_id) return k(e.application_id);
+            if (null != e.application_id) return j(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? k(e.application_id) : U(e.name);
+            return null != e.application_id ? j(e.application_id) : U(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
-            return null == e.application_id || k(e.application_id);
+            return null == e.application_id || j(e.application_id);
     }
 }
 function B() {
@@ -88,13 +88,13 @@ function Z() {
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
         n = D || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
-    a()(N, n) || ((N = n), (R = j(n)), (t = !0));
+    a()(N, n) || ((N = n), (R = k(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
     L !== i && (L = i),
         t &&
-            (M = j(
+            (M = k(
                 (x = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                     .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                     .value()),

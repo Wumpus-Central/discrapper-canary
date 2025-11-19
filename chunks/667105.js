@@ -11,7 +11,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(636606),
+    a = n(790519),
     o = n(442837),
     s = n(481060),
     l = n(638730),
@@ -70,7 +70,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,12 +82,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -244,7 +244,7 @@ function F(e) {
                 });
         }, []),
         x = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
-        { launchInGameActivity: j } = (0, b.zB)(n),
+        { launchInGameActivity: k } = (0, b.zB)(n),
         G = (0, E.Rt)(n),
         B = i.useMemo(() => n.config.features.includes(P.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE), [n.config.features]);
     return i.useMemo(() => {
@@ -326,7 +326,7 @@ function F(e) {
                                                 questContentRowIndex: l,
                                                 sourceQuestContent: O,
                                             }),
-                                      j());
+                                      k());
                         },
                     }
                 );
@@ -375,7 +375,7 @@ function F(e) {
                         text: e,
                         tooltipText: L.intl.string(L.t.hsbwjv),
                         onClick: () => {
-                            n.config.features.includes(P.S7.START_QUEST_CTA) && j();
+                            n.config.features.includes(P.S7.START_QUEST_CTA) && k();
                         },
                     };
                 }
@@ -401,8 +401,8 @@ function F(e) {
                         onClick: v,
                         text: (0, E.wj)(n.config) ? L.intl.string(L.t.bAGFz3) : L.intl.string(L.t.vTgCWx),
                     };
-                if (a) return k(M({}, i), { text: L.intl.string(L.t.MAS7uK) });
-                if ((0, E.vQ)(n.config)) return k(M({}, i), { text: L.intl.string(L.t.vTgCWx) });
+                if (a) return j(M({}, i), { text: L.intl.string(L.t.MAS7uK) });
+                if ((0, E.vQ)(n.config)) return j(M({}, i), { text: L.intl.string(L.t.vTgCWx) });
                 if ((0, E.Bg)(n.config))
                     return {
                         tooltipText: null,
@@ -415,9 +415,9 @@ function F(e) {
                         text: L.intl.string(L.t.WYchde),
                         onClick: R,
                     };
-                return k(M({}, i), { text: L.intl.string(L.t.bAGFz3) });
+                return j(M({}, i), { text: L.intl.string(L.t.bAGFz3) });
         }
-    }, [r, p, I, _, v, a, n, o, s, l, x, T, C, R, y, j, O, B, G]);
+    }, [r, p, I, _, v, a, n, o, s, l, x, T, C, R, y, k, O, B, G]);
 }
 function V() {
     let { enableNewRequestBehavior: e } = v.Z.useConfig({ location: "useQuestBarQuest" }),

@@ -1,9 +1,9 @@
 n.d(t, {
-    Ic: () => j,
+    Ic: () => k,
     O5: () => U,
     Zk: () => G,
     _3: () => M,
-    _F: () => k,
+    _F: () => j,
     _b: () => N,
     dA: () => L,
     jZ: () => x,
@@ -238,7 +238,7 @@ async function M(e) {
         sourceQuestContent: d,
     });
 }
-function j(e) {
+function k(e) {
     let { questContent: t, sourceQuestContent: n, questId: r, mode: i, prevMode: a } = e,
         o = w(t);
     L({
@@ -253,7 +253,7 @@ function j(e) {
         sourceQuestContent: n,
     });
 }
-function k() {
+function j() {
     let e = (0, p.WD)();
     return r.useCallback(
         (t) => {
@@ -263,7 +263,7 @@ function k() {
     );
 }
 function U() {
-    let e = k();
+    let e = j();
     return r.useCallback(
         (t) => {
             let {

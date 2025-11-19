@@ -37,10 +37,10 @@ var r = n(54381),
     L = n(388627),
     x = n(532658),
     M = n(501787),
-    j = n(981631),
-    k = n(65154),
+    k = n(981631),
+    j = n(65154),
     U = n(388032),
-    G = n(133214);
+    G = n(213285);
 function B(e, t, n) {
     return (
         t in e
@@ -146,7 +146,7 @@ function W(e) {
 let K = i.memo(function (e) {
     let {
             id: t,
-            context: n = k.Yn.DEFAULT,
+            context: n = j.Yn.DEFAULT,
             channel: a,
             overlayVoiceStates: o,
             displayNameMode: c,
@@ -175,7 +175,7 @@ let K = i.memo(function (e) {
         );
     i.useEffect(() => {
         T &&
-            (0, P.zi)(j.Odu.VOICE_V3, {
+            (0, P.zi)(k.Odu.VOICE_V3, {
                 locked: A.default.isInstanceLocked(),
                 shownUserIds: Array.from(O),
                 liveUserIds: S,
@@ -192,7 +192,7 @@ let K = i.memo(function (e) {
         R = y !== M.Og ? I.slice(0, y) : I,
         w = y !== M.Og ? I.slice(y) : [],
         L = v.get(w[0]),
-        B = u === j.OYC.ALWAYS && y !== M.Og;
+        B = u === k.OYC.ALWAYS && y !== M.Og;
     return T
         ? (0, r.jsxs)("div", {
               className: G.voiceUserContainer,
@@ -323,7 +323,7 @@ function q(e) {
     let { isSettingsPreview: n } = e,
         i = (0, s.e7)([O.Z, y.Z], () => y.Z.getChannel(O.Z.getVoiceChannelId())),
         a = (0, f.ZP)(i),
-        o = z(k.Yn.DEFAULT, e.maxDisplayedVoiceStates),
+        o = z(j.Yn.DEFAULT, e.maxDisplayedVoiceStates),
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
         c = (0, L.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),

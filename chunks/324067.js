@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685);
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -140,7 +140,7 @@ class M extends (r = i.ZP.Store) {
     }
 }
 _(M, "displayName", "GuildCategoryStore");
-let j = new M(a.Z, {
+let k = new M(a.Z, {
     CHANNEL_SELECT: w,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,

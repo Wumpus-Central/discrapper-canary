@@ -44,15 +44,15 @@ var R = n(701190),
     L = n(626135),
     x = n(591759),
     M = n(782568),
-    j = n(981631);
+    k = n(981631);
 n(215023);
-var k = n(46140);
+var j = n(46140);
 async function U(e, t) {
     await a.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: e,
         code: t,
-        context: j.IlC.APP,
+        context: k.IlC.APP,
     });
 }
 async function G(e) {
@@ -63,7 +63,7 @@ async function G(e) {
         n = t;
     }
     if (null == n) return;
-    if (n.state === j.r2o.EXPIRED || n.state === j.r2o.BANNED || n.state === j.r2o.ERROR)
+    if (n.state === k.r2o.EXPIRED || n.state === k.r2o.BANNED || n.state === k.r2o.ERROR)
         return void (await U(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
@@ -106,7 +106,7 @@ function Z(e) {
             return (
                 null == s
                     ? (0, M.Z)(e)
-                    : (L.default.track(j.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    : (L.default.track(k.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
                           device_platform: r.tq ? "mobile_web" : "desktop_web",
                           guild_id: c,
@@ -197,7 +197,7 @@ function Z(e) {
                 !0
             );
         };
-    if (null != R && R.type === m.g.QUESTS_EMBED && (0, T.c)({ location: k.dr.EMBED_MOBILE }))
+    if (null != R && R.type === m.g.QUESTS_EMBED && (0, T.c)({ location: j.dr.EMBED_MOBILE }))
         return (e) => {
             var t, r, a;
             let o, s;
@@ -279,7 +279,7 @@ function Z(e) {
                 null == e || e.preventDefault(),
                 null != R &&
                     R.type === m.g.APP_OAUTH2_LINK &&
-                    f.ZP.trackWithMetadata(j.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
+                    f.ZP.trackWithMetadata(k.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
                 r(i),
                 !0
             );
@@ -289,7 +289,7 @@ function Z(e) {
         return (e) => {
             null == e || e.preventDefault();
             let t = D.Z.getGuildId();
-            null != Y.guildId && "" !== Y.guildId && Y.guildId !== t && (0, v.Z)(j.Z5c.CHANNEL(Y.guildId));
+            null != Y.guildId && "" !== Y.guildId && Y.guildId !== t && (0, v.Z)(k.Z5c.CHANNEL(Y.guildId));
             let n = b.ZP.getGuildScheduledEvent(Y.guildEventId);
             return null != n && (0, E.bO)({ eventId: n.id }), !0;
         };
@@ -311,12 +311,12 @@ function Z(e) {
     return H && (null == Z ? void 0 : Z.startsWith("/discovery/quests"))
         ? (e) => (null == e || e.preventDefault(), (0, S.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
         : H && (null == Z ? void 0 : Z.startsWith("/quest-home"))
-          ? (e) => (null == e || e.preventDefault(), (0, A.uL)(j.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
+          ? (e) => (null == e || e.preventDefault(), (0, A.uL)(k.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
           : H && (null == Z ? void 0 : Z.startsWith("/quest-preview"))
             ? (e) => {
-                  if ((null == e || e.preventDefault(), (0, I.T)({ location: k.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
+                  if ((null == e || e.preventDefault(), (0, I.T)({ location: j.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (
-                          (0, A.uL)(j.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(Z.split("/").at(-1))), !0
+                          (0, A.uL)(k.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(Z.split("/").at(-1))), !0
                       );
               }
             : H && (null == Z ? void 0 : Z.startsWith("/discovery/servers"))

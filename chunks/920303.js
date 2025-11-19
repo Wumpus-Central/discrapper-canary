@@ -120,11 +120,11 @@ function M() {
         .reverse()
         .value();
 }
-function j(e) {
+function k(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, c.O)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     (O = !1), (T = !0), (v = !1);
 }
-function k(e) {
+function j(e) {
     if (e.channel.id !== S) return !1;
     P();
 }
@@ -166,9 +166,9 @@ let V = new F(d.Z, {
     CONNECTION_OPEN: P,
     THREAD_DELETE: G,
     THREAD_UPDATE: B,
-    CHANNEL_DELETE: k,
+    CHANNEL_DELETE: j,
     LOAD_ARCHIVED_THREADS: w,
     LOAD_ARCHIVED_THREADS_SUCCESS: L,
-    LOAD_ARCHIVED_THREADS_FAIL: j,
+    LOAD_ARCHIVED_THREADS_FAIL: k,
     RESORT_THREADS: x,
 });

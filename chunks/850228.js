@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(559725),
     u = n(439041),
     d = n(388032),
-    f = n(992876);
+    f = n(969590);
 class _ extends i.PureComponent {
     componentDidMount() {
         null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.cp();

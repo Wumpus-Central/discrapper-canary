@@ -31,7 +31,7 @@ var r = n(54381),
     b = n(683101),
     v = n(981631),
     P = n(388032),
-    j = n(944106);
+    j = n(858283);
 function y(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;

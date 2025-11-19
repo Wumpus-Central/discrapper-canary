@@ -38,8 +38,8 @@ var r = n(54381),
     L = n(346071),
     x = n(314182),
     M = n(42818),
-    j = n(900683),
-    k = n(706454),
+    k = n(900683),
+    j = n(706454),
     U = n(246946),
     G = n(594174),
     B = n(351402),
@@ -57,7 +57,7 @@ var r = n(54381),
     J = n(474936),
     $ = n(231338),
     ee = n(388032),
-    et = n(124795);
+    et = n(540798);
 function en(e, t, n) {
     return (
         t in e
@@ -219,7 +219,7 @@ function ed(e) {
                 ? ee.intl.format(ee.t.hf6YOY, { planName: K.ZP.getDisplayPremiumType(p.planId) })
                 : ee.intl.format(eh ? ee.t.ba1L74 : ee.t.fkffDT, {
                       onPremiumSubscriptionClick: m,
-                      discountPercentage: (0, W.T3)(k.default.locale, J.Rr / 100),
+                      discountPercentage: (0, W.T3)(j.default.locale, J.Rr / 100),
                       freeSubscriptionCount: J.cb,
                   }),
         ev = g.filter((e) => (0, H.tl)(e)).length,
@@ -354,8 +354,8 @@ function ed(e) {
                     }),
                 }),
                 ey
-                    ? (0, r.jsx)(j.e, {})
-                    : (0, r.jsx)(j.Z, {
+                    ? (0, r.jsx)(k.e, {})
+                    : (0, r.jsx)(k.Z, {
                           text: eO,
                           color: O.JX.PREMIUM_TIER_2,
                       }),
@@ -489,7 +489,7 @@ function e_(e) {
         L = (0, u.e7)([U.Z], () => U.Z.hidePersonalInformation);
     n = null != l ? (0, K.Zx)(l, y[0].quantity, y[0].planId) : y;
     let { analyticsLocations: M } = (0, b.ZP)(),
-        [j] = (0, T.ED)({
+        [k] = (0, T.ED)({
             subscriptionId: null == l ? void 0 : l.id,
             items: n,
             renewal: !1,
@@ -499,7 +499,7 @@ function e_(e) {
             analyticsLocations: M,
             analyticsLocation: E.Z.GUILD_BOOSTING_REVIEW_PRORATED,
         }),
-        [k] = (0, T.ED)({
+        [j] = (0, T.ED)({
             subscriptionId: null == l ? void 0 : l.id,
             items: n,
             renewal: !0,
@@ -508,7 +508,7 @@ function e_(e) {
             analyticsLocations: M,
             analyticsLocation: E.Z.GUILD_BOOSTING_REVIEW_RENEWAL,
         }),
-        G = k;
+        G = j;
     null != G &&
         (a = {
             amount: G.subtotal,
@@ -519,16 +519,16 @@ function e_(e) {
     let F = c.M.EEA_COUNTRIES.has(B.Z.ipCountryCodeWithFallback);
     return (
         i.useEffect(() => {
-            R(j);
-        }, [R, j]),
+            R(k);
+        }, [R, k]),
         (0, r.jsxs)("div", {
             children: [
-                null != j && null != k
+                null != k && null != j
                     ? (0, r.jsx)(ef, {
                           premiumSubscription: l,
                           premiumSubscriptionPlan: h,
-                          proratedInvoicePreview: j,
-                          renewalInvoicePreview: k,
+                          proratedInvoicePreview: k,
+                          renewalInvoicePreview: j,
                           priceOptions: s,
                       })
                     : null,
@@ -569,12 +569,12 @@ function e_(e) {
                             finePrint: (0, r.jsx)(p.Z, {
                                 subscriptionPlan: h,
                                 paymentSourceType: D,
-                                proratedAmount: null != j ? j.total : void 0,
+                                proratedAmount: null != k ? k.total : void 0,
                                 basePrice: a,
                                 productLine: X.POd.BOOST,
                             }),
                             showPricingLink:
-                                (null != (t = null == j ? void 0 : j.currency) ? t : $.pK.USD) !== $.pK.USD,
+                                (null != (t = null == k ? void 0 : k.currency) ? t : $.pK.USD) !== $.pK.USD,
                             showWithdrawalWaiver: F,
                             subscriptionPlan: h,
                         }),

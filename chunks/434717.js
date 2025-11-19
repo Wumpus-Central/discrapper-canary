@@ -18,7 +18,7 @@ var r = n(54381),
     y = n(46140),
     g = n(231338),
     v = n(388032),
-    b = n(834586);
+    b = n(985952);
 function _(e) {
     let { quest: t, sourceQuestContent: n, onLoadComplete: _ } = e,
         w = (0, l.ZP)(),

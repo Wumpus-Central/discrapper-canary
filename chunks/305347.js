@@ -12,7 +12,7 @@ var r = n(54381),
     c = n(451478),
     u = n(768581),
     d = n(624138),
-    f = n(995663);
+    f = n(272714);
 function _(e) {
     let { guildName: t, iconSize: n, className: i } = e,
         a = (0, d.Zg)(t);

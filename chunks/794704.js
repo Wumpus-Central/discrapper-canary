@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(486016),
     x = n(837268),
     M = n(32300),
-    j = n(809357),
-    k = n(371651),
+    k = n(809357),
+    j = n(371651),
     U = n(829907),
     G = n(624864),
     B = n(610394),
@@ -67,7 +67,7 @@ var r = n(54381),
     ep = n(987650),
     eh = n(501787),
     em = n(388032),
-    eg = n(289726),
+    eg = n(607547),
     eE = n(131970),
     eb = n(730462);
 function ey(e, t, n) {
@@ -287,7 +287,7 @@ function eM(e) {
         },
     });
 }
-let ej = new Set([
+let ek = new Set([
         x.mM.INITIALIZING,
         x.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION,
         x.mM.WAITING_FOR_MODULE_TRACKING,
@@ -298,7 +298,7 @@ let ej = new Set([
         x.mM.WAITING_FOR_PID_FOCUS,
         x.mM.WAITING_FOR_SUCCESSFUL_SHOW,
     ]),
-    ek = (e) => {
+    ej = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
 function eU(e) {
@@ -306,8 +306,8 @@ function eU(e) {
     let { runningGame: o, runningGameApplication: s } = e,
         c = null == o ? void 0 : o.pid,
         u = (0, _.e7)(
-            [k.default],
-            () => (null == o || null == c ? null : k.default.getTrackedGameByPid(c)),
+            [j.default],
+            () => (null == o || null == c ? null : j.default.getTrackedGameByPid(c)),
             [o, c],
             l(),
         ),
@@ -335,7 +335,7 @@ function eU(e) {
     }, [f, d]);
     let A = !(0, eu.supportsLegacy)(),
         N = !(0, eu.supportsOutOfProcess)(),
-        { legacyEnabled: R, oopEnabled: L } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { legacyEnabled: R, oopEnabled: L } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
@@ -362,7 +362,7 @@ function eU(e) {
                     null != (i = o.id) ? i : null,
                 );
         },
-        j = (e, t) => {
+        k = (e, t) => {
             let n = !t && e,
                 r = !L && g,
                 i = !R && y,
@@ -420,7 +420,7 @@ function eU(e) {
         V = !y && !L && g && !N,
         H = (null == u ? void 0 : u.overlayMethod) === x.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === x.mM.OVERLAY_RENDERING && !H,
-        W = (null == u ? void 0 : u.state) != null && ej.has(u.state) && !H,
+        W = (null == u ? void 0 : u.state) != null && ek.has(u.state) && !H,
         K = (null == u ? void 0 : u.overlayMethod) === x.gl.OutOfProcess,
         z = (null == u ? void 0 : u.overlayMethod) === x.gl.OutOfProcessLimitedInteraction,
         X = (null == u ? void 0 : u.overlayMethod) === x.gl.Hook,
@@ -621,12 +621,12 @@ function eU(e) {
               }),
               "aria-label": em.intl.string(em.t["87O5GC"]),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => ek(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: (g && L) || (y && R),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, j(e, (g && L) || (y && R)));
+                          U(e, k(e, (g && L) || (y && R)));
                       },
                   }),
               }),
@@ -733,7 +733,7 @@ function eB(e) {
 }
 function eZ() {
     let [e, t] = i.useState(!1),
-        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([C.ZP], () => C.ZP.getGamesSeen(!0)).filter((e) => !(0, K.le)(e)),
         s = (0, S.Z)(o.map((e) => e.id)),
         l = !(0, eu.supportsLegacy)(),
@@ -781,7 +781,7 @@ function eZ() {
               description: d,
               "aria-label": em.intl.string(em.t.BfFpW1),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => ek(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: n,
                       disabled: l,
@@ -823,7 +823,7 @@ function eZ() {
 }
 function eF() {
     let [e, t] = i.useState(!1),
-        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = !(0, eu.supportsOutOfProcess)(),
         s = (0, _.Wu)([C.ZP], () => C.ZP.getGamesSeen(!0)).filter((e) => !(0, K.le)(e)),
         l = (0, S.Z)(s.map((e) => e.id)),
@@ -868,7 +868,7 @@ function eF() {
               description: d,
               "aria-label": em.intl.string(em.t["7BlVIs"]),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => ek(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: n,
                       disabled: o,
@@ -1328,7 +1328,7 @@ function eJ(e) {
         a = null == n ? void 0 : n.id,
         o = (0, _.e7)([G.Z], () => G.Z.isLimitedInteractionOverrideEnabled(a), [a]),
         s = i.useMemo(() => null != t && (0, U.H8)(t.pid), [t]),
-        l = (0, j.Z)({ location: "overlay_user_settings" }),
+        l = (0, k.Z)({ location: "overlay_user_settings" }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, _.cj)([ea.default], () => ({
             disableClickableRegions: ea.default.disableClickableRegions,
             shouldShowKeybindIndicators: ea.default.showKeybindIndicators,

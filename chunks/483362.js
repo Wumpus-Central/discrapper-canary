@@ -175,7 +175,7 @@ function M(e, t, n, r, o) {
     }
     return l;
 }
-function j(e, t, n) {
+function k(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
@@ -186,7 +186,7 @@ function j(e, t, n) {
         r
     );
 }
-function k(e) {
+function j(e) {
     if (-1 === e._status) {
         var t = e._result;
         (t = t()).then(
@@ -223,9 +223,9 @@ var U =
           };
 function G() {}
 (t.Children = {
-    map: j,
+    map: k,
     forEach: function (e, t, n) {
-        j(
+        k(
             e,
             function () {
                 t.apply(this, arguments);
@@ -236,7 +236,7 @@ function G() {}
     count: function (e) {
         var t = 0;
         return (
-            j(e, function () {
+            k(e, function () {
                 t++;
             }),
             t
@@ -244,7 +244,7 @@ function G() {}
     },
     toArray: function (e) {
         return (
-            j(e, function (e) {
+            k(e, function (e) {
                 return e;
             }) || []
         );
@@ -343,7 +343,7 @@ function G() {}
                 _status: -1,
                 _result: e,
             },
-            _init: k,
+            _init: j,
         };
     }),
     (t.memo = function (e, t) {

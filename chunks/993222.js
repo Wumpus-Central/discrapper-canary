@@ -16,7 +16,7 @@ var l = n(120356),
     h = n(445794),
     C = n(956472),
     _ = n(388032),
-    b = n(809854);
+    b = n(944525);
 let v = (e) => {
         let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: d, prioritizedCurrency: m } = e,
             v = (0, p.jB)(),

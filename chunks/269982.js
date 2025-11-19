@@ -1,79 +1,79 @@
-n.d(t, { Z: () => f });
-var r = n(54381);
-n(473749);
-var i = n(979554),
-    l = n(481060),
-    o = n(906732),
-    s = n(436774),
-    c = n(474936),
-    a = n(388032),
-    u = n(106867);
+r.d(t, { Z: () => m });
+var n = r(54381);
+r(473749);
+var i = r(979554),
+    l = r(481060),
+    s = r(906732),
+    a = r(436774),
+    o = r(474936),
+    c = r(388032),
+    u = r(178368);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function f(e) {
-    let { product: t, onClose: f } = e,
-        { newestAnalyticsLocation: p } = (0, o.ZP)(),
-        m =
+function m(e) {
+    let { product: t, onClose: m } = e,
+        { newestAnalyticsLocation: p } = (0, s.ZP)(),
+        h =
             t.type === i.Z.AVATAR_DECORATION
-                ? c.cd.AVATAR_DECORATION_MODAL_UPSELL
+                ? o.cd.AVATAR_DECORATION_MODAL_UPSELL
                 : t.type === i.Z.PROFILE_EFFECT
-                  ? c.cd.PROFILE_EFFECT_MODAL_UPSELL
+                  ? o.cd.PROFILE_EFFECT_MODAL_UPSELL
                   : t.type === i.Z.NAMEPLATE
-                    ? c.cd.NAMEPLATE_MODAL_UPSELL
+                    ? o.cd.NAMEPLATE_MODAL_UPSELL
                     : null;
-    return null == m
+    return null == h
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               className: u.nitroUpsellContainer,
               children: [
-                  (0, r.jsx)(l.SrA, {
+                  (0, n.jsx)(l.SrA, {
                       className: u.nitroWheel,
                       size: "md",
-                      color: s.JX.PREMIUM_TIER_2,
+                      color: a.JX.PREMIUM_TIER_2,
                   }),
-                  (0, r.jsx)(l.Text, {
+                  (0, n.jsx)(l.Text, {
                       className: u.nitroText,
                       variant: "text-md/medium",
                       children:
-                          m === c.cd.AVATAR_DECORATION_MODAL_UPSELL
-                              ? a.intl.format(a.t["aFR/EI"], {
+                          h === o.cd.AVATAR_DECORATION_MODAL_UPSELL
+                              ? c.intl.format(c.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, l.ZDy)(async () => {
-                                            let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                            let { default: e } = await r.e("43360").then(r.bind(r, 73415));
                                             return (t) =>
-                                                (0, r.jsx)(
+                                                (0, n.jsx)(
                                                     e,
                                                     d(
                                                         {
-                                                            premiumUpsellType: m,
-                                                            title: a.intl.string(a.t.JI7uhc),
-                                                            body: a.intl.string(a.t["5XvsdZ"]),
-                                                            glowUp: a.intl.string(a.t["5XvsdZ"]),
+                                                            premiumUpsellType: h,
+                                                            title: c.intl.string(c.t.JI7uhc),
+                                                            body: c.intl.string(c.t["5XvsdZ"]),
+                                                            glowUp: c.intl.string(c.t["5XvsdZ"]),
                                                             analyticsSource: p,
-                                                            onSecondaryClick: f,
+                                                            onSecondaryClick: m,
                                                         },
                                                         t,
                                                     ),
@@ -81,22 +81,22 @@ function f(e) {
                                         });
                                     },
                                 })
-                              : m === c.cd.PROFILE_EFFECT_MODAL_UPSELL
-                                ? a.intl.format(a.t.eWNONM, {
+                              : h === o.cd.PROFILE_EFFECT_MODAL_UPSELL
+                                ? c.intl.format(c.t.eWNONM, {
                                       onClick: () => {
                                           (0, l.ZDy)(async () => {
-                                              let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                              let { default: e } = await r.e("43360").then(r.bind(r, 73415));
                                               return (t) =>
-                                                  (0, r.jsx)(
+                                                  (0, n.jsx)(
                                                       e,
                                                       d(
                                                           {
-                                                              premiumUpsellType: m,
-                                                              title: a.intl.string(a.t.sYm15X),
-                                                              body: a.intl.string(a.t["Hza+Bu"]),
-                                                              glowUp: a.intl.string(a.t["Hza+Bu"]),
+                                                              premiumUpsellType: h,
+                                                              title: c.intl.string(c.t.sYm15X),
+                                                              body: c.intl.string(c.t["Hza+Bu"]),
+                                                              glowUp: c.intl.string(c.t["Hza+Bu"]),
                                                               analyticsSource: p,
-                                                              onSecondaryClick: f,
+                                                              onSecondaryClick: m,
                                                           },
                                                           t,
                                                       ),
@@ -104,22 +104,22 @@ function f(e) {
                                           });
                                       },
                                   })
-                                : m === c.cd.NAMEPLATE_MODAL_UPSELL
-                                  ? a.intl.format(a.t.G6b8TF, {
+                                : h === o.cd.NAMEPLATE_MODAL_UPSELL
+                                  ? c.intl.format(c.t.G6b8TF, {
                                         onClick: () => {
                                             (0, l.ZDy)(async () => {
-                                                let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                                let { default: e } = await r.e("43360").then(r.bind(r, 73415));
                                                 return (t) =>
-                                                    (0, r.jsx)(
+                                                    (0, n.jsx)(
                                                         e,
                                                         d(
                                                             {
-                                                                premiumUpsellType: m,
-                                                                title: a.intl.string(a.t.k7UN4k),
-                                                                body: a.intl.string(a.t["0/QPxO"]),
-                                                                glowUp: a.intl.string(a.t["0/QPxO"]),
+                                                                premiumUpsellType: h,
+                                                                title: c.intl.string(c.t.k7UN4k),
+                                                                body: c.intl.string(c.t["0/QPxO"]),
+                                                                glowUp: c.intl.string(c.t["0/QPxO"]),
                                                                 analyticsSource: p,
-                                                                onSecondaryClick: f,
+                                                                onSecondaryClick: m,
                                                             },
                                                             t,
                                                         ),

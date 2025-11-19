@@ -24,7 +24,7 @@ function f(e) {
         a = new Set(
             (0, r.e7)([u.ZP], () => (null == t ? [] : u.ZP.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        p = (0, r.e7)(
+        p = (0, r.Wu)(
             [s.ZP, c.default],
             () =>
                 s.ZP.getMembers(l)

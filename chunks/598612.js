@@ -1,7 +1,7 @@
 n.d(t, { Y: () => o });
 var r = n(54381),
     l = n(793030),
-    i = n(146122);
+    i = n(836519);
 function o(e) {
     let { title: t, subtitle: n, badge: o, type: a = "primary" } = e;
     return "secondary" === a

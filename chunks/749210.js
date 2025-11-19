@@ -89,7 +89,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -97,7 +97,7 @@ function M(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -106,7 +106,7 @@ function j(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let k = (e) => {
+let j = (e) => {
         C.Z.show({
             title: P.intl.string(P.t.cTaRxF),
             body: P.intl.formatToPlainString(P.t["VSd+Aj"], { quantity: e }),
@@ -209,7 +209,7 @@ let F = {
                 (null == (s = t.body) ? void 0 : s.code) === N.evJ.TOO_MANY_USER_GUILDS)
             ) {
                 let e = v.default.getCurrentUser();
-                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? k(N.tHP) : k(N.DZw);
+                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? j(N.tHP) : j(N.DZw);
             }
             throw (
                 ((null == (u = t.body) ? void 0 : u.code) === N.evJ.GUILD_AT_CAPACITY && G(),

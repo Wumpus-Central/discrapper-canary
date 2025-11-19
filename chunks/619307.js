@@ -1,5 +1,5 @@
 n.d(t, {
-    Ph: () => j,
+    Ph: () => k,
     UN: () => R,
     cY: () => A,
     gz: () => C,
@@ -24,7 +24,7 @@ var r = n(54381),
     h = n(98650),
     m = n(383056),
     g = n(388032),
-    E = n(786614);
+    E = n(361421);
 function b(e, t, n) {
     return (
         t in e
@@ -181,8 +181,8 @@ function w(e) {
             popoutLayerContext: w,
             optionClassName: x,
             closeOnSelect: M,
-            select: j,
-            isSelected: k,
+            select: k,
+            isSelected: j,
             serialize: U,
             clear: G,
             hideIcon: B = !1,
@@ -216,12 +216,12 @@ function w(e) {
         er = (0, c.O)(en),
         ei = i.useCallback(
             (e) => {
-                if ((j(e), M)) {
+                if ((k(e), M)) {
                     var t;
                     null == (t = J.current) || t.focus();
                 }
             },
-            [j, M, J],
+            [k, M, J],
         ),
         ea = i.useCallback(
             (e) => {
@@ -229,7 +229,7 @@ function w(e) {
             },
             [G],
         ),
-        eo = t.filter((e) => k(e.value));
+        eo = t.filter((e) => j(e.value));
     return (
         i.useLayoutEffect(() => {
             if (f) {
@@ -255,7 +255,7 @@ function w(e) {
                     closeOnSelect: M,
                     maxVisibleItems: l,
                     width: "auto" === h ? void 0 : null != h ? h : $,
-                    isSelected: k,
+                    isSelected: j,
                     closePopout: n,
                     buttonHeight: null != ee ? ee : 0,
                     onSelect: ei,
@@ -612,7 +612,7 @@ function M(e) {
     }
     return (0, r.jsx)(w, v(y({}, o, l), { renderOptionLabel: null != N ? N : D() }));
 }
-function j(e) {
+function k(e) {
     var t,
         n,
         { renderLeading: i, renderTrailing: a } = e,

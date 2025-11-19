@@ -169,11 +169,11 @@ function M(e) {
     let { pid: t } = e;
     return I(t), !0;
 }
-function j(e) {
+function k(e) {
     let { lastAssociatedPID: t } = e;
     if (t !== l.UNSET_PID) return A(t), R(), !0;
 }
-function k(e) {
+function j(e) {
     var t, n;
     let { pid: r } = e,
         i = null != (n = null == (t = T(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime();
@@ -206,8 +206,8 @@ let G = new U(
               OVERLAY_V3_PRE_CREATE_POPOUT: w,
               OVERLAY_V3_POST_CREATE_POPOUT: L,
               OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: x,
-              OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: j,
-              OVERLAY_SUCCESSFULLY_SHOWN: k,
+              OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: k,
+              OVERLAY_SUCCESSFULLY_SHOWN: j,
               OVERLAY_CRASHED: D,
               OVERLAY_V3_NATIVE_TRACK_GAME: M,
           },

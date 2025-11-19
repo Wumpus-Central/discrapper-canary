@@ -110,14 +110,14 @@ function O(e, t) {
             for (var D = this.hostname.split(/\./), N = 0, w = D.length; N < w; N++) {
                 var L = D[N];
                 if (L && !L.match(f)) {
-                    for (var x = "", M = 0, j = L.length; M < j; M++) L.charCodeAt(M) > 127 ? (x += "x") : (x += L[M]);
+                    for (var x = "", M = 0, k = L.length; M < k; M++) L.charCodeAt(M) > 127 ? (x += "x") : (x += L[M]);
                     if (!x.match(f)) {
-                        var k = D.slice(0, N),
+                        var j = D.slice(0, N),
                             U = D.slice(N + 1),
                             G = L.match(_);
-                        G && (k.push(G[1]), U.unshift(G[2])),
+                        G && (j.push(G[1]), U.unshift(G[2])),
                             U.length && (y = "/" + U.join(".") + y),
-                            (this.hostname = k.join("."));
+                            (this.hostname = j.join("."));
                         break;
                     }
                 }

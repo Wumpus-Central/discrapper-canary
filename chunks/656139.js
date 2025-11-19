@@ -25,7 +25,7 @@ var r = n(54381),
     v = n(382271),
     I = n(981631),
     T = n(388032),
-    S = n(400889);
+    S = n(476034);
 let A = (e) => {
         let { onClose: t, onShare: n } = e,
             a = (0, l.e7)([b.Z], () => b.Z.getReferralsRemaining()),
@@ -89,7 +89,7 @@ let A = (e) => {
                     })
                 );
             },
-            j = (e) => {
+            k = (e) => {
                 let { eligibleRecipients: t } = e;
                 return (0, r.jsx)(y.Z, {
                     users: t,
@@ -147,7 +147,7 @@ let A = (e) => {
                       input: x(),
                       actions: [],
                       actionBarInput: M({ eligibleRecipients: L }),
-                      children: j({ eligibleRecipients: L }),
+                      children: k({ eligibleRecipients: L }),
                   });
     },
     C = (e) => {

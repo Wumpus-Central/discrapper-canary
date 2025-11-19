@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    I = n(826191);
+    I = n(671982);
 function T(e, t, n) {
     return (
         t in e
@@ -99,7 +99,7 @@ let P = 490,
     L = 200,
     x = 120,
     M = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, M, j, k, U;
+        var n, a, T, A, R, M, k, j, U;
         let { channel: G, type: B, editorHeight: Z, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
             Y = (0, h.Dt)(),
             W = (0, l.e7)([E.Z], () => {
@@ -170,10 +170,10 @@ let P = 490,
         null != $ &&
             (ei = (null == (M = B.autocomplete) ? void 0 : M.small)
                 ? L
-                : (null == (j = z.query) ? void 0 : j.type) === b.eq.EMOJIS_AND_STICKERS
+                : (null == (k = z.query) ? void 0 : k.type) === b.eq.EMOJIS_AND_STICKERS
                   ? D
                   : w);
-        let ea = Math.max(Z, null != (k = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? k : 0),
+        let ea = Math.max(Z, null != (j = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? j : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
         ei = Math.min(window.innerHeight - x - eo - (null != H ? H : 0), ei);
         let es = (0, r.jsx)(_.ZP, {

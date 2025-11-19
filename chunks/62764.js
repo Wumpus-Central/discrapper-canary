@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -34,11 +34,11 @@ var i = n(54381),
     R = n(228392),
     L = n(981631),
     k = n(388032),
-    D = n(826688),
-    U = n(243777),
-    B = n(487111),
-    H = n(332103);
-function V(e) {
+    D = n(797013),
+    U = n(319720),
+    B = n(127947),
+    H = n(577650);
+function F(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
         a = (0, O.P0)(t),
@@ -75,11 +75,11 @@ function V(e) {
           })
         : null;
 }
-function F(e) {
+function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: j, width: O } = (0, h.ZP)(),
         [S, D] = r.useState(3),
-        [F, G] = r.useState(!n),
+        [V, G] = r.useState(!n),
         [z, W] = (0, f.Z)(!1, 2000),
         q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
         { firstMessage: K } = (0, M.cl)(q),
@@ -137,7 +137,7 @@ function F(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: a()(U.container, { [U.header]: F }),
+                className: a()(U.container, { [U.header]: V }),
                 ref: j,
                 children: [
                     et
@@ -202,7 +202,7 @@ function F(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(V, { channel: q })
+                                ? (0, i.jsx)(F, { channel: q })
                                 : (0, i.jsx)(c.u, {
                                       text: k.intl.string(k.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {

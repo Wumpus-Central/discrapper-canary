@@ -38,8 +38,8 @@ function P(e) {
             planError: L,
             onPurchaseError: x,
             baseAnalyticsData: M,
-            flowStartTime: j,
-            trialId: k,
+            flowStartTime: k,
+            trialId: j,
             planGroup: U,
             analyticsLocation: G,
             purchaseTokenAuthState: B,
@@ -89,7 +89,7 @@ function P(e) {
             (eg.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0),
             (eg.sound_id = null == ef ? void 0 : ef.soundId));
     let eE = null == K ? void 0 : K.id,
-        eb = (0, T.sE)(k, z.paymentSourceId, eE),
+        eb = (0, T.sE)(j, z.paymentSourceId, eE),
         { analyticsLocations: ey } = (0, d.ZP)(),
         eO = (0, A.m)($, J),
         [ev, eI] = i.useState(eb),
@@ -122,10 +122,10 @@ function P(e) {
                 baseAnalyticsData: M,
                 analyticsLocation: G,
                 analyticsLocations: ey,
-                flowStartTime: j,
+                flowStartTime: k,
                 subscriptionPlan: K,
                 planGroup: U,
-                trialId: k,
+                trialId: j,
                 priceOptions: z,
                 paymentSource: eO,
                 isPrepaidPaymentPastDue: eR,
@@ -145,7 +145,7 @@ function P(e) {
         },
         eM = {
             baseAnalyticsData: M,
-            flowStartTime: j,
+            flowStartTime: k,
             makePurchase: ex,
             onNext: s,
             onPurchaseError: x,
@@ -154,16 +154,16 @@ function P(e) {
             purchaseTokenAuthState: B,
             setPurchaseState: n,
         },
-        ej = i.useRef(eM);
+        ek = i.useRef(eM);
     i.useEffect(() => {
-        ej.current = eM;
+        ek.current = eM;
     }),
         i.useEffect(() => {
-            let { makePurchase: e } = ej.current;
+            let { makePurchase: e } = ek.current;
             eb && !el && null == t && e();
         }, [eb, el, t]);
-    let ek = null != Z || (Q === N.GZQ.ONE_TIME && !el),
-        eU = V && !ek;
+    let ej = null != Z || (Q === N.GZQ.ONE_TIME && !el),
+        eU = V && !ej;
     return eb
         ? null
         : (0, r.jsxs)(u.mzw, {

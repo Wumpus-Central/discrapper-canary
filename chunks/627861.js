@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(952164),
     x = n(829820),
     M = n(789407),
-    j = n(314897),
-    k = n(831506),
+    k = n(314897),
+    j = n(831506),
     U = n(293273),
     G = n(375954),
     B = n(158776),
@@ -65,8 +65,8 @@ var r = n(54381),
     ef = n(967249),
     e_ = n(616922),
     ep = n(388032),
-    eh = n(463736),
-    em = n(575452);
+    eh = n(723295),
+    em = n(520816);
 let eg = 8;
 function eE(e, t) {
     var n, r, i, a;
@@ -397,7 +397,7 @@ function eA(e) {
         } = e,
         x = (0, I.A)(T),
         M = (0, m.ye)(T),
-        { iconSrc: j, name: k } = eE(P, T),
+        { iconSrc: k, name: j } = eE(P, T),
         U =
             null !=
             (o = (0, el.v)({
@@ -551,7 +551,7 @@ function eA(e) {
         },
         { disableTrack: !eC },
     );
-    let eN = (0, z.dQ)(k, null == (t = P.activity) ? void 0 : t.type, Z),
+    let eN = (0, z.dQ)(j, null == (t = P.activity) ? void 0 : t.type, Z),
         eR = (0, A.N)(T.id).some((e) => (0, v.ig)(e) === l.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -576,16 +576,16 @@ function eA(e) {
                 className: eh.description,
                 color: "none",
                 lineClamp: 3,
-                children: (0, z.wR)(P, k, S, C, e),
+                children: (0, z.wR)(P, j, S, C, e),
             });
         return eA.length > 0
             ? (0, r.jsx)(g.W, {
                   header: eN,
-                  title: k,
+                  title: j,
                   staticBannerSrc: eA.length > 0 ? U : void 0,
                   onClickBanner: ey,
                   bannerAspectRatio: B,
-                  iconSrc: null != j ? j : void 0,
+                  iconSrc: null != k ? k : void 0,
                   info: t,
                   actions: eA,
                   onClickContent: ey,
@@ -640,7 +640,7 @@ function eA(e) {
             className: eh.tagline,
             color: "none",
             lineClamp: 2,
-            children: [F ? (0, z.$v)(P, k, S, C, Z) : ew, F ? null : eR],
+            children: [F ? (0, z.$v)(P, j, S, C, Z) : ew, F ? null : eR],
         }),
         ex = (0, r.jsxs)("div", {
             className: eh.info,
@@ -648,11 +648,11 @@ function eA(e) {
         });
     return (0, r.jsx)(g.W, {
         header: eN,
-        title: k,
+        title: j,
         staticBannerSrc: U,
         onClickBanner: ey,
         bannerAspectRatio: B,
-        iconSrc: null != j ? j : void 0,
+        iconSrc: null != k ? k : void 0,
         info: ex,
         actions: eA,
         onClickContent: ey,
@@ -672,7 +672,7 @@ function eC(e) {
     var t, n;
     let { analyticsLocations: a, app: o, channel: s, message: l, hideParty: c, onView: d } = e,
         f = (0, b.O)(o),
-        _ = (0, u.e7)([j.default], () => j.default.getId()),
+        _ = (0, u.e7)([k.default], () => k.default.getId()),
         p = (0, u.e7)([B.Z], () => {
             if (null == l.application) return B.Z.findActivity(l.author.id, (e) => e.type === ed.IIU.LISTENING);
             {
@@ -687,9 +687,9 @@ function eC(e) {
             var e;
             return null != (e = U.Z.getApplicationActivity(f.id)) ? e : Z.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
-        m = (0, u.Wu)([k.Z], () => {
+        m = (0, u.Wu)([j.Z], () => {
             var e;
-            return null == p || null == p.party ? [] : Array.from(null != (e = k.Z.getParty(p.party.id)) ? e : []);
+            return null == p || null == p.party ? [] : Array.from(null != (e = j.Z.getParty(p.party.id)) ? e : []);
         }, [p]),
         { partySize: g, maxPartySize: E } = (0, ee._)(p),
         y = i.useMemo(

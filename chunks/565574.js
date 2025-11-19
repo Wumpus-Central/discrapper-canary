@@ -5,7 +5,7 @@ var r = n(54381),
     s = n(481060),
     o = n(812652),
     a = n(388032),
-    c = n(962721);
+    c = n(439003);
 function d(e) {
     let { align: t = "left" } = e,
         n = i.useRef(null);

@@ -10,7 +10,7 @@ var r = n(54381),
 n(288552);
 var d = n(981631),
     p = n(388032),
-    h = n(629775);
+    h = n(407067);
 function f(e) {
     let { closePopout: t, onSelect: n } = e,
         i = (0, l.e7)([s.Z, c.Z], () => s.Z.getChannel(c.Z.getChannelId())),

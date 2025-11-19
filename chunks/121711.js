@@ -56,7 +56,7 @@ var r = n(54381),
     er = n(215023),
     ei = n(186901),
     el = n(388032),
-    ea = n(838997),
+    ea = n(728963),
     es = n(13299),
     eo = n(890631),
     ec = n(164792),
@@ -242,10 +242,16 @@ let em = function (e) {
         }
         let r = performance.getEntriesByType("navigation")[0];
         if ("POP" === h.action && (null == r ? void 0 : r.type) === "navigate" && n && t !== G.e5.PREVIEW_TOOL) {
-            let e = (0, k.Ew)(l.hash) ? null : l.hash.substring(1);
+            let t = (0, k.Ew)(l.hash) ? null : l.hash.substring(1),
+                n = e.get(G.tR.SORT),
+                r = e.get(G.tR.FILTER);
             _.Z.openNativeAppModal("quests", en.Etm.DEEP_LINK, {
                 type: ei.jE.QUEST_HOME,
-                params: (0, k.Ew)(e) ? void 0 : { questId: e },
+                params: {
+                    questId: (0, k.Ew)(t) ? void 0 : t,
+                    sort: n,
+                    filter: r,
+                },
             });
         }
     }, [l.search, T, ep, h.action, l.hash, n]),

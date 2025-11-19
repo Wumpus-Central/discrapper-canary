@@ -20,8 +20,8 @@ n.d(t, {
     l7: () => O,
     md: () => E,
     qm: () => p,
-    rZ: () => k,
-    t9: () => j,
+    rZ: () => j,
+    t9: () => k,
     yZ: () => C,
     yx: () => h,
     zz: () => T,
@@ -210,7 +210,7 @@ function M(e) {
             }
           : null;
 }
-function j(e) {
+function k(e) {
     let t = [];
     return (
         0 !== e.connection_type && 1 !== e.connection_type
@@ -229,11 +229,11 @@ function j(e) {
         t
     );
 }
-function k(e) {
+function j(e) {
     let t = [],
         n = new Set();
     for (let [r, i] of e.entries()) {
-        let e = j(i);
+        let e = k(i);
         t.push(...e.map((e) => "Connection ".concat(r + 1, ": ").concat(e)));
         let a = x(i);
         n.has(a) && t.push("Duplicate connection configuration"), n.add(a);

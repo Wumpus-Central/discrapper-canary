@@ -60,13 +60,13 @@ var r = n(644387),
             L = n ? n.height : d(t.height) - D - N,
             x = w + T + R + A,
             M = L + S + N + C,
-            j = Object.freeze({
+            k = Object.freeze({
                 devicePixelContentBoxSize: f(Math.round(w * devicePixelRatio), Math.round(L * devicePixelRatio), o),
                 borderBoxSize: f(x, M, o),
                 contentBoxSize: f(w, L, o),
                 contentRect: new i.N(b, m, w, L),
             });
-        return s.set(e, j), j;
+        return s.set(e, k), k;
     },
     h = function (e, t) {
         var n = p(e),

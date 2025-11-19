@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(573702),
     _ = n(474936),
     p = n(388032),
-    h = n(491881),
+    h = n(108626),
     m = n(236078),
     g = n(278345),
     E = n(895601),
@@ -104,18 +104,18 @@ let T = function (e) {
             : [];
     });
     if (0 === M.length) return null;
-    let j = (M = M.filter((e) => {
+    let k = (M = M.filter((e) => {
             let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                 n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
             return !b || (b && (t || n));
         })).find((e) => e.id === D),
-        k =
-            null != (i = null == j || null == (n = j.sectionHeaderText) ? void 0 : n.call(j))
+        j =
+            null != (i = null == k || null == (n = k.sectionHeaderText) ? void 0 : n.call(k))
                 ? i
-                : null == j
+                : null == k
                   ? void 0
-                  : j.label,
-        U = null != k && null != D,
+                  : k.label,
+        U = null != j && null != D,
         G = C && U && D === l.h8.REVIEW,
         B = A ? "nitro-pink" : "nitro-green",
         Z = A ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t["t9uG/o"]);
@@ -162,7 +162,7 @@ let T = function (e) {
                   U &&
                       (0, r.jsx)(v, {
                           isOneStepCheckout: C,
-                          headerText: k,
+                          headerText: j,
                           step: D,
                           filteredBreadcrumbs: M,
                       }),

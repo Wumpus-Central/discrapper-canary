@@ -74,11 +74,11 @@ function M(e, t) {
     let i = (0, O.V9)(r);
     return i !== w && ((w = i), (0, o.rn)(r, { noFocus: !0 }), !0);
 }
-function j(e, t) {
+function k(e, t) {
     let n = null != t ? t : h.Z.getPreferredRegion();
     null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, o.dV)(e, n);
 }
-function k(e, t) {
+function j(e, t) {
     var n;
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
@@ -97,7 +97,7 @@ class U extends s.Z {
                 let { streamKey: t, allowMultiple: n } = e,
                     { channelId: r } = (0, O.my)(t),
                     i = _.Z.getChannel(r);
-                k(t, null == i ? void 0 : i.isGuildStageVoice()),
+                j(t, null == i ? void 0 : i.isGuildStageVoice()),
                     L(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
@@ -108,7 +108,7 @@ class U extends s.Z {
             T(this, "handleStreamStart", (e) => {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
-                k(
+                j(
                     (0, O.V9)({
                         streamType: n,
                         guildId: r,
@@ -190,12 +190,12 @@ class U extends s.Z {
             T(this, "handleCallUpdate", (e) => {
                 let { channelId: t, region: n } = e,
                     r = d.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && j((0, O.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && k((0, O.V9)(r), n);
             }),
             T(this, "handleChannelUpdates", (e) => {
                 let { channels: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && j((0, O.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && k((0, O.V9)(n), e.rtcRegion);
             }),
             T(this, "actions", {
                 STREAM_WATCH: this.handleStreamWatch,

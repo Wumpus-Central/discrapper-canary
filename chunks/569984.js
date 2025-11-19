@@ -8,8 +8,8 @@ var N,
     L = n(570140),
     x = n(70956),
     M = n(509212),
-    j = n(497505),
-    k = n(184299),
+    k = n(497505),
+    j = n(184299),
     U = n(704161),
     G = n(5881),
     B = n(46140);
@@ -170,7 +170,7 @@ function es(e) {
     for (let e of t)
         s.set(e.id, e),
             a.set(e.id, (0, M.zi)(e)),
-            e.targetedContent.includes(j.jn.QUEST_BAR) &&
+            e.targetedContent.includes(k.jn.QUEST_BAR) &&
                 (0, G.T)({ location: B.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
@@ -312,18 +312,18 @@ function eM(e) {
     let { previewQuestUserStatus: t } = e;
     $(t.questId, { userStatus: t }),
         null == t.claimedAt && (E = new Map(E)).delete(t.questId),
-        null == t.enrolledAt && ((v = new Map(v)).delete(t.questId), k.ZP.getState().resetQuest(t.questId));
+        null == t.enrolledAt && ((v = new Map(v)).delete(t.questId), j.ZP.getState().resetQuest(t.questId));
     let n = s.get(t.questId);
     if (null != n) {
         let e = (0, M.zi)(n);
         T.get(t.questId) !== e && (T = new Map(T).set(t.questId, e));
     }
 }
-function ej(e) {
+function ek(e) {
     let { questId: t } = e;
     O = O === t ? null : t;
 }
-function ek(e) {
+function ej(e) {
     let { questId: t, platform: n } = e;
     (v = new Map(v)), null == n ? v.delete(t) : v.set(t, n);
 }
@@ -335,7 +335,7 @@ function eU(e) {
 }
 function eG(e) {
     let { questId: t } = e;
-    W.has(t) && W.delete(t), k.ZP.getState().resetQuest(t);
+    W.has(t) && W.delete(t), j.ZP.getState().resetQuest(t);
 }
 function eB(e) {
     let {
@@ -533,8 +533,8 @@ let eq = new ez(L.Z, {
         STREAM_CLOSE: eE,
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eL,
         QUESTS_PREVIEW_UPDATE_SUCCESS: eM,
-        QUESTS_DELIVERY_OVERRIDE: ej,
-        QUESTS_SELECT_TASK_PLATFORM: ek,
+        QUESTS_DELIVERY_OVERRIDE: ek,
+        QUESTS_SELECT_TASK_PLATFORM: ej,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eU,
         QUESTS_RESET_OPTIMISTIC_PROGRESS: eG,
         QUESTS_USER_COMPLETION_UPDATE: eK,

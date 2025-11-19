@@ -1,5 +1,5 @@
 n.d(t, {
-    $7: () => k,
+    $7: () => j,
     $8: () => ex,
     $X: () => eb,
     $e: () => f,
@@ -20,7 +20,7 @@ n.d(t, {
     F$: () => T,
     F_: () => c,
     GP: () => R,
-    HO: () => ej,
+    HO: () => ek,
     IW: () => S,
     Lw: () => eC,
     M_: () => e3,
@@ -42,7 +42,7 @@ n.d(t, {
     TD: () => eY,
     TL: () => Q,
     Tp: () => ez,
-    UA: () => j,
+    UA: () => k,
     UD: () => O,
     Ue: () => U,
     Uq: () => eR,
@@ -51,7 +51,7 @@ n.d(t, {
     X2: () => e$,
     XB: () => eO,
     Xh: () => b,
-    Y1: () => ek,
+    Y1: () => ej,
     YQ: () => m,
     Z1: () => v,
     Zh: () => u,
@@ -377,8 +377,8 @@ let R = Object.freeze({
     L = 5,
     x = 30,
     M = 2,
-    j = 3,
-    k = 28,
+    k = 3,
+    j = 28,
     U = 30,
     G = 30,
     B = 7,
@@ -602,7 +602,7 @@ let eA = Object.freeze({
         [i.Eu4.TIER_2]: 36,
         [i.Eu4.TIER_3]: 48,
     },
-    ej = Object.freeze({
+    ek = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
@@ -668,7 +668,7 @@ let eA = Object.freeze({
             },
         },
     }),
-    ek = [
+    ej = [
         "978380692553465866",
         "1024422698568122368",
         "511651871736201216",

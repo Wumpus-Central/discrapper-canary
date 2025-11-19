@@ -44,8 +44,8 @@ let D = {},
     L = [],
     x = new A.Z(),
     M = !1,
-    j = !1,
     k = !1,
+    j = !1,
     U = !1,
     G = I.default.fromTimestamp(Date.now()),
     B = !0,
@@ -152,8 +152,8 @@ function z() {
         (L = []),
         (x = new A.Z()),
         (M = !1),
-        (j = !1),
         (k = !1),
+        (j = !1),
         (G = I.default.fromTimestamp(Date.now())),
         (B = !0),
         (U = !1),
@@ -258,7 +258,7 @@ function ei() {
 }
 function ea(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (M = !1), t ? (U = !0) : (null != n && (B = n), (k = !0)), (F = null != r ? r : null);
+    (M = !1), t ? (U = !0) : (null != n && (B = n), (j = !0)), (F = null != r ? r : null);
 }
 function eo(e) {
     var t;
@@ -274,13 +274,13 @@ function eo(e) {
                 : t.notificationCenterVariant) &&
         null != w &&
         !M &&
-        !j &&
+        !k &&
         (!n || !U) &&
         B
     );
 }
 function es() {
-    (M = !1), (F = null), (j = !0);
+    (M = !1), (F = null), (k = !0);
 }
 function el(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
@@ -304,7 +304,7 @@ function ec(e) {
     ) && (Z = null);
 }
 function eu() {
-    j = !1;
+    k = !1;
 }
 function ed() {
     Z = null;
@@ -372,7 +372,7 @@ class eE extends (r = o.ZP.Store) {
         return M;
     }
     get hasLoadedEver() {
-        return k;
+        return j;
     }
     get hasPreloaded() {
         return U;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(35282), n(388685), n(49124), n(975844), n(781311);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(299608),
     o = n.n(s),
     c = n(913527),
@@ -22,9 +22,9 @@ var a = n(54381),
     C = n(484036),
     S = n(681619),
     E = n(621060),
-    O = n(981631),
-    T = n(578970),
-    N = n(866403);
+    N = n(981631),
+    T = n(687278),
+    O = n(451429);
 function P(e) {
     return parseFloat(e.toFixed(3));
 }
@@ -109,9 +109,9 @@ let k = [
         },
     },
 ];
-function R(e) {
+function A(e) {
     let { actionLog: t, initialHeight: n } = e,
-        r = l.useMemo(
+        i = l.useMemo(
             () =>
                 t.error
                     ? [
@@ -127,11 +127,11 @@ function R(e) {
                                   return (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)("div", {
-                                              className: i()(T.errorToolbar, N.toolbar),
+                                              className: r()(T.errorToolbar, O.toolbar),
                                               children: (0, a.jsx)("div", {
-                                                  className: N.toolbarGroup,
+                                                  className: O.toolbarGroup,
                                                   children: (0, a.jsx)(m.zx, {
-                                                      className: N.toolbarButton,
+                                                      className: O.toolbarButton,
                                                       size: m.zx.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: "Log to Console",
@@ -150,7 +150,7 @@ function R(e) {
                     : k,
             [t],
         ),
-        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: r }, [r]);
+        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: i }, [i]);
     return (0, a.jsxs)(C.Z, {
         className: T.subPanel,
         minHeight: 100,
@@ -158,15 +158,15 @@ function R(e) {
         children: [
             (0, a.jsx)(s, {}),
             (0, a.jsxs)(x.ZP, {
-                className: i()(N.headerBar, T.subPanelHeaderBar),
+                className: r()(O.headerBar, T.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(x.ZP.Icon, {
                         icon: p.xVZ,
                         tooltip: t.name,
                     }),
                     (0, a.jsx)(x.ZP.Title, {
-                        wrapperClassName: i()(N.headerTitle, N.dispatcherHeader),
-                        className: N.headerTitleText,
+                        wrapperClassName: r()(O.headerTitle, O.dispatcherHeader),
+                        className: O.headerTitleText,
                         children: t.name,
                     }),
                     (0, a.jsx)(x.ZP.Icon, {
@@ -177,7 +177,7 @@ function R(e) {
                             let n = JSON.stringify(
                                 Object.keys((e = t.action)).reduce((t, n) => {
                                     var a;
-                                    return (t[n] = ((a = e[n]), O.Jn9.test(a) ? "REDACTED" : a)), t;
+                                    return (t[n] = ((a = e[n]), N.Jn9.test(a) ? "REDACTED" : a)), t;
                                 }, {}),
                                 null,
                                 2,
@@ -197,7 +197,7 @@ function R(e) {
         ],
     });
 }
-let A = [
+let R = [
         {
             key: "action",
             cellClassName: T.actionColumn,
@@ -236,7 +236,7 @@ let A = [
 function D() {
     let e = l.useRef(null),
         [t, n] = l.useState(""),
-        r = (function (e) {
+        i = (function (e) {
             let [t, n] = l.useState(e.logs);
             return (
                 l.useEffect(() => {
@@ -255,13 +255,13 @@ function D() {
         })(h.Z.actionLogger),
         s = l.useMemo(
             () =>
-                r
+                i
                     .map((e) => ({
                         key: e.id.toString(),
                         actionLog: e,
                     }))
                     .toReversed(),
-            [r],
+            [i],
         ),
         [c, d] = l.useState(s),
         [m, x] = l.useState(s),
@@ -279,21 +279,21 @@ function D() {
         ),
         C = t.trim().length > 0,
         E = l.useMemo(() => (C ? m : g ? c : s), [s, m, C, g, c]),
-        O = g ? "Enable Event Tracking" : "Pause Event Tracking";
+        N = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(N.panel, T.panel),
+        className: r()(O.panel, T.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: T.toolbar,
                 children: [
                     (0, a.jsx)(u.u, {
-                        text: O,
+                        text: N,
                         children: (0, a.jsx)(p.hU, {
                             size: "sm",
                             variant: g ? "primary" : "active",
                             icon: g ? p.o1U : p.fpf,
-                            "aria-label": O,
+                            "aria-label": N,
                             onClick: () => y(!g),
                         }),
                     }),
@@ -307,13 +307,13 @@ function D() {
                 ],
             }),
             (0, a.jsx)(S.Z, {
-                columns: A,
+                columns: R,
                 data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
                 onClickRow: (e) => j(e.actionLog),
             }),
             null != v &&
-                (0, a.jsx)(R, {
+                (0, a.jsx)(A, {
                     actionLog: v,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(237872),
     f = n(562618),
     _ = n(945909),
-    p = n(929618);
+    p = n(254477);
 function h(e, t, n) {
     return (
         t in e
@@ -133,10 +133,10 @@ function O(e) {
             },
             [S],
         ),
-        j = i.useCallback(() => {
+        k = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
-        k = i.useCallback((e) => {
+        j = i.useCallback((e) => {
             w(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
@@ -145,14 +145,14 @@ function O(e) {
             position: D,
             onRequestClose: M,
             gradientColor: T,
-            onPositionChange: k,
+            onPositionChange: j,
             scrollBehavior: R,
             children: (0, r.jsxs)("div", {
                 ref: A,
                 "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: j,
+                        onClick: k,
                         variant: null != T ? "color-mix" : void 0,
                     }),
                     null != y &&

@@ -114,7 +114,7 @@ function f(e) {
         let n = u(c(t));
         null != n && D(n);
     }, [t, x, T, D, f, _]);
-    let j = r.useCallback((e) => {
+    let k = r.useCallback((e) => {
         v.current && null == e && M(!0);
     }, []);
     r.useEffect(() => {
@@ -123,7 +123,7 @@ function f(e) {
         r.useEffect(() => {
             T && (N || w(f, _), R(!1));
         }, [f, _]);
-    let k = r.useCallback(
+    let j = r.useCallback(
             (e) => {
                 if (!v.current) return;
                 if (
@@ -183,11 +183,11 @@ function f(e) {
                 "aria-colcount": B,
                 tabIndex: T && E ? -1 : 0,
                 "data-ref-id": t,
-                onKeyDown: k,
+                onKeyDown: j,
                 onFocus: U,
                 onBlur: G,
             }),
-            [n.length, B, T, E, t, k, U, G],
+            [n.length, B, T, E, t, j, U, G],
         ),
         F = r.useCallback(
             (e, n) => {
@@ -199,9 +199,9 @@ function f(e) {
                     tabIndex: E && e === f && n === _ ? 0 : -1,
                     onFocus: P.get("".concat(e, ",").concat(n)),
                 };
-                return e === f && n === _ && (r.ref = j), r;
+                return e === f && n === _ && (r.ref = k), r;
             },
-            [t, E, f, _, P, j],
+            [t, E, f, _, P, k],
         ),
         V = r.useCallback(
             (e) => ({

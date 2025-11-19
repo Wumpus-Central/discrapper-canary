@@ -1,19 +1,19 @@
 t.a(e, async function (e, r) {
     try {
         t.d(n, {
-            Kq: () => _,
+            Kq: () => c,
             ZP: () => a,
         });
         var o = t(54381),
             i = t(31675),
             u = t(473749),
-            c = e([i]);
-        i = (c.then ? (await c)() : c)[0];
+            _ = e([i]);
+        i = (_.then ? (await _)() : _)[0];
         let d = (0, u.createContext)(null);
-        function _() {
+        function c() {
             return (0, u.useContext)(d);
         }
-        let s = new Set([
+        let b = new Set([
             "bold",
             "italic",
             "underline",
@@ -150,7 +150,7 @@ t.a(e, async function (e, r) {
         }
         function a({ content: e, renderers: n }) {
             let t = (0, u.useMemo)(() => {
-                    let e = Object.keys(n).filter((e) => s.has(e));
+                    let e = Object.keys(n).filter((e) => b.has(e));
                     return e.length > 0 ? e : null;
                 }, [n]),
                 r = (0, u.useMemo)(() => (0, i.Q)(e, t), [e, t]);

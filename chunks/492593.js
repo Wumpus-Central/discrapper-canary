@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(606318),
     f = n(402235),
     _ = n(485386),
-    p = n(136907);
+    p = n(724913);
 function h(e, t, n) {
     return (
         t in e
@@ -113,7 +113,7 @@ let O = function (e) {
             onMouseEnter: x,
             onMouseLeave: M,
         } = e,
-        j = b(e, [
+        k = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -136,12 +136,12 @@ let O = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let k = (0, s.e7)([_.Z], () =>
+    let j = (0, s.e7)([_.Z], () =>
             (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
                 ? null
                 : _.Z.getRole(L.guildId, L.colorRoleId),
         ),
-        U = (0, f.yH)(null == L ? void 0 : L.guildId, k) && (0, d.S2)(L),
+        U = (0, f.yH)(null == L ? void 0 : L.guildId, j) && (0, d.S2)(L),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
@@ -187,7 +187,7 @@ let O = function (e) {
                                     }),
                                     ref: N,
                                 },
-                                j,
+                                k,
                             ),
                             {
                                 role: "article",

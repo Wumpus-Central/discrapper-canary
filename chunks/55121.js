@@ -8,7 +8,7 @@ var a = n(120356),
     l = n(22928),
     r = n(438926),
     u = n(388032),
-    d = n(440995);
+    d = n(475495);
 function _(t) {
     let {
         sku: e,
@@ -19,7 +19,7 @@ function _(t) {
         hasAlreadyLinked: _,
         canStartAuthorization: x,
         bodyText: m,
-        title: p,
+        title: g,
     } = t;
     return (0, i.jsxs)(o.IX, {
         transitionState: s,
@@ -27,7 +27,7 @@ function _(t) {
         children: [
             (0, i.jsx)(r.y, {
                 sku: e,
-                title: p,
+                title: g,
             }),
             (0, i.jsxs)(o.fef, {
                 children: [

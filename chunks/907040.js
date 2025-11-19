@@ -37,8 +37,8 @@ var r = n(54381),
     L = n(984933),
     x = n(594174),
     M = n(626135),
-    j = n(111361),
-    k = n(624138),
+    k = n(111361),
+    j = n(624138),
     U = n(543241),
     G = n(253696),
     B = n(199257),
@@ -55,7 +55,7 @@ var r = n(54381),
     Q = n(981631),
     J = n(921944),
     $ = n(185923),
-    ee = n(593391);
+    ee = n(359175);
 function et(e, t, n) {
     return (
         t in e
@@ -108,8 +108,8 @@ function ei(e, t) {
         e
     );
 }
-let ea = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
-    eo = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+let ea = (0, j.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
+    eo = (0, j.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     es = 8,
     el = (e) => e.stopPropagation();
 var ec = (function (e) {
@@ -265,7 +265,7 @@ let eu = (e, t) => {
                 closePopout: p,
                 emojiSize: A = X.Su.MEDIUM,
                 hasTabWrapper: R = !1,
-                containerContext: k = 0,
+                containerContext: j = 0,
                 includeCreateEmojiButton: et,
                 onSelectEmoji: er,
                 onSelectSoundmoji: ec,
@@ -287,18 +287,18 @@ let eu = (e, t) => {
                 showAddEmojiButton: eD = !1,
             } = e,
             { onFocus: ew, onKeyDown: eL, autoFocus: ex = !0, accessory: eM } = ev,
-            ej = (0, u.e7)([L.ZP], () => (null != f ? L.ZP.getDefaultChannel(f) : null), [f]),
-            [ek, eU] = i.useState(null),
+            ek = (0, u.e7)([L.ZP], () => (null != f ? L.ZP.getDefaultChannel(f) : null), [f]),
+            [ej, eU] = i.useState(null),
             eG = i.useRef(""),
             eB = (0, S.Iu)((e) => e.searchQuery),
             eZ = i.useRef(null),
             eF = i.useRef(null),
             eV = i.useRef(null);
-        null == c && null != ej && (c = ej);
+        null == c && null != ek && (c = ek);
         let eH = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
             [eY, eW] = i.useState(!1),
             eK = x.default.getCurrentUser(),
-            ez = (0, j.I5)(eK);
+            ez = (0, k.I5)(eK);
         i.useImperativeHandle(t, () => ({ onPickerOpen: ta }));
         let { location: eq } = (0, m.O)(),
             { page: eX, section: eQ, object: eJ, openPopoutType: e$, popoutLocation: e0 } = eO,
@@ -443,12 +443,12 @@ let eu = (e, t) => {
             }, [eB, e1, e5, e4, l]);
         let t_ = null != eI ? eI : R ? "div" : _.VqE,
             tp = null != e9;
-        if ((null == ek ? void 0 : ek.type) === Y.Bg.PREMIUM) {
+        if ((null == ej ? void 0 : ej.type) === Y.Bg.PREMIUM) {
             let e = D.p.NONE;
-            2 === k ? (e = D.p.PARENT_CONTAINER) : 1 === k && (e = D.p.TAB_PARENT_CONTAINER),
+            2 === j ? (e = D.p.PARENT_CONTAINER) : 1 === j && (e = D.p.TAB_PARENT_CONTAINER),
                 (s = (0, r.jsx)(q.Z, {
                     onLearnMore: ts,
-                    emojiDescriptor: ek.emojiDescriptor,
+                    emojiDescriptor: ej.emojiDescriptor,
                     pickerIntention: l,
                     analyticsLocation: e1,
                     onClose: () => eU(null),
@@ -456,11 +456,11 @@ let eu = (e, t) => {
                     containerContext: e,
                 }));
         } else
-            (null == ek ? void 0 : ek.type) === Y.Bg.ROLE_SUBSCRIPTION
+            (null == ej ? void 0 : ej.type) === Y.Bg.ROLE_SUBSCRIPTION
                 ? (s = (0, r.jsx)(N.Z, {
                       onClose: () => eU(null),
-                      guildId: ek.guildId,
-                      emojiId: ek.emojiId,
+                      guildId: ej.guildId,
+                      emojiId: ej.emojiId,
                   }))
                 : eY && !ez && (s = (0, r.jsx)(Z.Z, { onDismiss: () => eW(!1) }));
         let th = (e, t) => {

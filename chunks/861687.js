@@ -32,8 +32,8 @@ var r = n(654861),
     L = n(314897),
     x = n(592125),
     M = n(131951),
-    j = n(19780),
-    k = n(226961),
+    k = n(19780),
+    j = n(226961),
     U = n(936349),
     G = n(594174),
     B = n(626135),
@@ -566,7 +566,7 @@ class eN extends d.Z {
                     }),
                 ),
                 (this._encountered_socket_failure = !0)),
-            j.Z.getRemoteDisconnectVoiceChannelId() === this.channelId &&
+            k.Z.getRemoteDisconnectVoiceChannelId() === this.channelId &&
                 (null == (l = this._connection) || l.wasRemoteDisconnected());
         let R = "Force Close" !== r;
         if (R) {
@@ -2060,7 +2060,7 @@ class eN extends d.Z {
         (this._remoteVideoSinkWants = J.Yy),
             eo.w.on(eo.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             eo.w.on(eo.e.WindowVisibilityChanged, this.windowVisibilityChanged),
-            k.ZP.shouldRecordNextConnection()
+            j.ZP.shouldRecordNextConnection()
                 ? ((this._recordingEnabled = !0), g.TC(!1))
                 : (this._recordingEnabled = !1),
             (this._soundshareStats = new $.Z()),

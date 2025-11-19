@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(110560),
     y = n(78826),
     O = n(388032),
-    v = n(497377);
+    v = n(858191);
 function I(e) {
     let { appFocused: t, location: n } = e,
         { shouldUseShine: i } = h.Z.useConfig({ location: n });
@@ -50,7 +50,7 @@ let T = function (e) {
         L = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         x = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
-        j = i.useCallback(
+        k = i.useCallback(
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -69,19 +69,19 @@ let T = function (e) {
             },
             [D, a.id, e, A],
         ),
-        k = i.useRef(null),
+        j = i.useRef(null),
         U = i.useRef(h),
         G = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
-            if (null != k.current) {
+            if (null != j.current) {
                 if (!x.isAnimated || L) {
-                    (k.current.currentTime = 0), k.current.pause();
+                    (j.current.currentTime = 0), j.current.pause();
                     return;
                 }
                 h && !U.current
-                    ? k.current.play()
-                    : !h && U.current && ((k.current.currentTime = 0), k.current.pause()),
+                    ? j.current.play()
+                    : !h && U.current && ((j.current.currentTime = 0), j.current.pause()),
                     (U.current = h);
             }
         }, [h, x, L]),
@@ -120,7 +120,7 @@ let T = function (e) {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  (t.current = e), (k.current = e);
+                                  (t.current = e), (j.current = e);
                               },
                               autoPlay: !L && h,
                               loop: !0,
@@ -155,7 +155,7 @@ let T = function (e) {
               })
             : (0, r.jsxs)(c.P3F, {
                   className: o()(v.questRewardTileInteractive, v.questRewardTile, v.rewardHighlight, n),
-                  onClick: j,
+                  onClick: k,
                   style: N,
                   children: [
                       t,

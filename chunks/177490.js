@@ -48,7 +48,7 @@ function l(e, t) {
 }
 var c = n(329554),
     u = n(613990),
-    d = n(229450),
+    d = n(590297),
     f = n(410937),
     _ = n(493807),
     p = n(529742),
@@ -101,7 +101,7 @@ var c = n(329554),
             t
         );
     })(b.Component),
-    j = (function (e) {
+    k = (function (e) {
         function t(t) {
             var n;
             return (
@@ -397,7 +397,7 @@ var c = n(329554),
             t
         );
     })(b.Component);
-s(j, "defaultProps", {
+s(k, "defaultProps", {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -410,4 +410,4 @@ s(j, "defaultProps", {
     spellCheck: !1,
     stripPastedStyles: !1,
 }),
-    (e.exports = j);
+    (e.exports = k);

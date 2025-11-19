@@ -20,7 +20,7 @@ var r = n(442837),
     v = n(354459),
     _ = n(981631),
     x = n(388032),
-    j = n(371882);
+    j = n(895634);
 function O(e) {
     let { onClose: t, onSelect: n, channel: O, remoteMode: E, onInteraction: S } = e,
         P = (0, s.bp)(),
@@ -39,8 +39,8 @@ function O(e) {
         U = (0, c.$A)(I),
         B = (0, c.j8)(I),
         H = (0, b.Z)(A, P),
-        V = (0, g.Z)(w, I),
-        F = (0, f.Z)(),
+        F = (0, g.Z)(w, I),
+        V = (0, f.Z)(),
         G = (0, o.Z)(O);
     return (0, i.jsxs)(l.v2r, {
         className: j.menu,
@@ -56,7 +56,7 @@ function O(e) {
                     Z === _.d4z.GUILD_STAGE_VOICE ? U : null,
                     Z === _.d4z.GUILD_STAGE_VOICE ? B : null,
                     E || Z === _.d4z.GUILD_STAGE_VOICE ? null : k,
-                    F,
+                    V,
                     Z !== _.d4z.GUILD_STAGE_VOICE ? M : null,
                     Z === _.d4z.GUILD_STAGE_VOICE || Z === _.d4z.GUILD_VOICE ? R : null,
                 ],
@@ -64,7 +64,7 @@ function O(e) {
             (0, i.jsx)(l.kSQ, { children: G }),
             (0, i.jsx)(l.kSQ, { children: D }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != A ? H : null, null != w ? V : null],
+                children: [null != A ? H : null, null != w ? F : null],
             }),
         ],
     });

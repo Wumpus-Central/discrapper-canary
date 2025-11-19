@@ -41,7 +41,7 @@ var r = t(54381),
     W = t(225639),
     Y = t(981631),
     M = t(388032),
-    J = t(985822);
+    J = t(896681);
 let V = D.u8.SIZE_24;
 function G(e) {
     let { applicationId: n, channelId: t } = e,

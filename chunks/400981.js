@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(54381),
     l = n(473749),
     a = n(979554),
@@ -15,29 +15,29 @@ var r = n(54381),
     b = n(347896),
     g = n(594174),
     v = n(614277),
-    P = n(215023),
-    x = n(365112);
-function y(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: y } = e,
-        j = (0, i.e7)([g.default], () => g.default.getCurrentUser()),
-        S = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+    x = n(215023),
+    y = n(473936);
+function P(e) {
+    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: P } = e,
+        S = (0, i.e7)([g.default], () => g.default.getCurrentUser()),
+        j = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         { analyticsLocations: _ } = (0, c.ZP)(),
-        O = s.EFr.SIZE_32,
-        w = (0, u.Z)(null == y ? void 0 : y.assetId, O, !S),
+        w = s.EFr.SIZE_32,
+        O = (0, u.Z)(null == P ? void 0 : P.assetId, w, !j),
         C = (0, b.Z)(),
         k = null == C ? void 0 : C.giftPurchaseConfirmation,
-        E = (null == y ? void 0 : y.type) === a.Z.NAMEPLATE,
+        E = (null == P ? void 0 : P.type) === a.Z.NAMEPLATE,
         [I, T] = l.useState(!1),
         N = l.useMemo(() => {
             var e, t;
-            return E && (null == y ? void 0 : y.assetId) != null
+            return E && (null == P ? void 0 : P.assetId) != null
                 ? {
-                      src: y.assetId,
-                      palette: (0, h.t1)(null != (t = y.palette) ? t : "sky"),
-                      imgAlt: null == (e = y.a11yLabel) ? void 0 : e.call(y),
+                      src: P.assetId,
+                      palette: (0, h.t1)(null != (t = P.palette) ? t : "sky"),
+                      imgAlt: null == (e = P.a11yLabel) ? void 0 : e.call(P),
                   }
                 : null;
-        }, [E, y]);
+        }, [E, P]);
     return null == n || null == k
         ? null
         : (0, r.jsx)(v.O3, {
@@ -45,15 +45,15 @@ function y(e) {
                   align: m.Z.Align.CENTER,
                   "data-migration-pending": !0,
                   children: (0, r.jsxs)("div", {
-                      className: x.promotionalFooter,
+                      className: y.promotionalFooter,
                       children: [
                           E && null != N
                               ? (0, r.jsx)("div", {
-                                    className: x.nameplatePreviewContainer,
+                                    className: y.nameplatePreviewContainer,
                                     onMouseEnter: () => T(!0),
                                     onMouseLeave: () => T(!1),
                                     children: (0, r.jsx)(f.R, {
-                                        user: j,
+                                        user: S,
                                         nameplate: null,
                                         nameplateData: N,
                                         showPlaceholderUser: !0,
@@ -62,10 +62,10 @@ function y(e) {
                                     }),
                                 })
                               : (0, r.jsx)(s.Xo$, {
-                                    "aria-label": null == j ? void 0 : j.username,
-                                    size: O,
-                                    src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(O), !S),
-                                    avatarDecoration: w,
+                                    "aria-label": null == S ? void 0 : S.username,
+                                    size: w,
+                                    src: null == S ? void 0 : S.getAvatarURL(void 0, (0, s.pxk)(w), !j),
+                                    avatarDecoration: O,
                                 }),
                           (0, r.jsx)(o.zxk, {
                               variant: "primary",
@@ -76,7 +76,7 @@ function y(e) {
                                           product: n,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: _,
-                                          purchaseType: P.o8.PROMOTIONAL,
+                                          purchaseType: x.o8.PROMOTIONAL,
                                       });
                               },
                           }),

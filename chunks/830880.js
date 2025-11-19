@@ -12,7 +12,7 @@ var r = n(54381),
     f = n(526761),
     h = n(726985),
     g = n(388032),
-    m = n(270879);
+    m = n(252319);
 function _() {
     let [e, t] = (0, a.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return i.useMemo(() => e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])

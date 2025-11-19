@@ -19,7 +19,7 @@ var a = t(54381),
     _ = t(46140),
     v = t(675654),
     N = t(388032),
-    w = t(889179);
+    w = t(798144);
 function R(e) {
     var n;
     let { transitionState: t, onClose: r, quest: m, location: C, reward: x, sourceQuestContent: f } = e,

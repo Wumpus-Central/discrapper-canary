@@ -20,7 +20,7 @@ var i = n(120356),
     y = n(981631),
     O = n(671955),
     v = n(388032),
-    I = n(670563);
+    I = n(448239);
 function T(e) {
     var t, n;
     let {
@@ -37,8 +37,8 @@ function T(e) {
             pendingNickname: L,
             pendingGlobalName: x,
             pendingThemeColors: M,
-            pendingProfileEffect: j,
-            pendingLegacyUsernameDisabled: k,
+            pendingProfileEffect: k,
+            pendingLegacyUsernameDisabled: j,
             pendingDisplayNameStyles: U,
             avatarClassName: G,
             containerClassName: B,
@@ -69,7 +69,7 @@ function T(e) {
             showPending: !0,
         }),
         et = (0, h.Ys)({
-            pendingValue: j,
+            pendingValue: k,
             userValue: null == X || null == (t = X._userProfile) ? void 0 : t.profileEffect,
             guildValue: null == X || null == (n = X._guildMemberProfile) ? void 0 : n.profileEffect,
             guildId: null == T ? void 0 : T.id,
@@ -133,7 +133,7 @@ function T(e) {
                     pendingGlobalName: x,
                     pendingBio: R,
                     pendingPronouns: P,
-                    pendingLegacyUsernameDisabled: k,
+                    pendingLegacyUsernameDisabled: j,
                     pendingDisplayNameStyles: U,
                     isTryItOut: Z,
                     hideBioSection: H,

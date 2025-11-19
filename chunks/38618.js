@@ -45,8 +45,8 @@ let D = new c.Z("ConnectionStore"),
     L = 0,
     x = null,
     M = !0,
-    j = null,
-    k = null;
+    k = null,
+    j = null;
 function U() {
     return T.Wb.isClosed()
         ? (D.verbose("Socket is reconnecting because of starting new session"), T.Wb.connect())
@@ -92,13 +92,13 @@ async function Z(e) {
                 (0, d.Db)(n));
         }
     }
-    T.GC.update(t, !0), (M = !1), (k = null);
+    T.GC.update(t, !0), (M = !1), (j = null);
 }
 function F() {
     D.verbose("connection closed dispatched"), (L = Date.now());
 }
 function V() {
-    k = null;
+    j = null;
 }
 function H(e) {
     return e.resetSocket && (T.Wb.close(), T.Wb.dispatcher.clear(), T.Wb.connect()), !1;
@@ -109,9 +109,9 @@ function Y(e) {
             guildId: e.guildId,
             channelId: e.channelId,
         }),
-        (k = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+        (j = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
         (0, v.isIOS)() &&
-            j === C.$7l.BACKGROUND &&
+            k === C.$7l.BACKGROUND &&
             (null == e.channelId ? T.Wb.close(!0) : T.Wb.isClosed() && (S.Y(!1), T.Wb.connect())),
         !1
     );
@@ -130,7 +130,7 @@ function z(e) {
     return t.reduce((e, t) => {
         if (_.default.getId() !== t.userId) return e;
         if (t.sessionId === x) {
-            if (null != k) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
+            if (null != j) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", j), e;
             T.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
@@ -155,7 +155,7 @@ function q(e) {
 function X(e) {
     let { channelId: t } = e;
     if (t === T.GC.channelId) {
-        if (k === t) return !1;
+        if (j === t) return !1;
         T.GC.setState({
             guildId: null,
             channelId: null,
@@ -178,13 +178,13 @@ function $(e) {
     return (
         (0, v.isIOS)()
             ? (_.default.isAuthenticated() &&
-                  (j === C.$7l.INACTIVE && e.state === C.$7l.BACKGROUND && null == T.GC.channelId
+                  (k === C.$7l.INACTIVE && e.state === C.$7l.BACKGROUND && null == T.GC.channelId
                       ? T.Wb.close(!0)
-                      : j === C.$7l.BACKGROUND &&
+                      : k === C.$7l.BACKGROUND &&
                         e.state === C.$7l.ACTIVE &&
                         T.Wb.isClosed() &&
                         (S.Y(!1), T.Wb.connect())),
-              (j = e.state))
+              (k = e.state))
             : e.state === C.$7l.ACTIVE &&
               (S.Y(!1), _.default.isAuthenticated() && T.Wb.resetBackoff("App state is active")),
         !1

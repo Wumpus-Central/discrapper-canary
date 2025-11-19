@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(755721),
     u = n(481060),
     d = n(565138),
-    f = n(772530);
+    f = n(120230);
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Z.Sizes.SMALLER;
     switch (e) {

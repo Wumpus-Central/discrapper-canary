@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    l = n(566481);
+    l = n(332812);
 function a() {
     return (0, r.jsx)("div", {
         className: l.centerContainer,

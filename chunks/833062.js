@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var r = n(54381),
     i = n(925329),
-    a = n(934227);
+    a = n(436083);
 function o(e) {
     let { application: t, useComma: n = !1 } = e;
     return (0, r.jsxs)("div", {

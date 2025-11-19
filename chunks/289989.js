@@ -16,7 +16,7 @@ var i = n(120356),
     _ = n(70722),
     g = n(231338),
     x = n(388032),
-    v = n(819112);
+    v = n(341338);
 function j(e) {
     let { id: t, text: n, icon: i, selected: s, onClick: o } = e;
     return (0, r.jsx)(c.P3F, {

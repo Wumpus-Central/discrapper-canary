@@ -32,8 +32,8 @@ var r = n(98405),
     L = D("iterator"),
     x = "URLSearchParams",
     M = x + "Iterator",
-    j = m.set,
-    k = m.getterFor(x),
+    k = m.set,
+    j = m.getterFor(x),
     U = m.getterFor(M),
     G = a("fetch"),
     B = a("Request"),
@@ -141,9 +141,9 @@ var r = n(98405),
     },
     eh = h(
         function (e, t) {
-            j(this, {
+            k(this, {
                 type: M,
-                target: k(e).entries,
+                target: j(e).entries,
                 index: 0,
                 kind: t,
             });
@@ -228,7 +228,7 @@ em.prototype = {
 var eg = function () {
         g(this, eE);
         var e = arguments.length > 0 ? arguments[0] : void 0,
-            t = j(this, new em(e));
+            t = k(this, new em(e));
         c || (this.size = t.entries.length);
     },
     eE = eg.prototype;
@@ -237,7 +237,7 @@ if (
         eE,
         {
             append: function (e, t) {
-                var n = k(this);
+                var n = j(this);
                 P(arguments.length, 2),
                     Q(n.entries, {
                         key: T(e),
@@ -248,7 +248,7 @@ if (
             },
             delete: function (e) {
                 for (
-                    var t = k(this),
+                    var t = j(this),
                         n = P(arguments.length, 1),
                         r = t.entries,
                         i = T(e),
@@ -265,20 +265,20 @@ if (
                 c || (this.size = r.length), t.updateURL();
             },
             get: function (e) {
-                var t = k(this).entries;
+                var t = j(this).entries;
                 P(arguments.length, 1);
                 for (var n = T(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
-                var t = k(this).entries;
+                var t = j(this).entries;
                 P(arguments.length, 1);
                 for (var n = T(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
                 return r;
             },
             has: function (e) {
                 for (
-                    var t = k(this).entries,
+                    var t = j(this).entries,
                         n = P(arguments.length, 1),
                         r = T(e),
                         i = n < 2 ? void 0 : arguments[1],
@@ -293,7 +293,7 @@ if (
             },
             set: function (e, t) {
                 var n,
-                    r = k(this);
+                    r = j(this);
                 P(arguments.length, 1);
                 for (var i = r.entries, a = !1, o = T(e), s = T(t), l = 0; l < i.length; l++)
                     (n = i[l]).key === o && (a ? ee(i, l--, 1) : ((a = !0), (n.value = s)));
@@ -306,7 +306,7 @@ if (
                     r.updateURL();
             },
             sort: function () {
-                var e = k(this);
+                var e = j(this);
                 w(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
@@ -314,7 +314,7 @@ if (
             },
             forEach: function (e) {
                 for (
-                    var t, n = k(this).entries, r = y(e, arguments.length > 1 ? arguments[1] : void 0), i = 0;
+                    var t, n = j(this).entries, r = y(e, arguments.length > 1 ? arguments[1] : void 0), i = 0;
                     i < n.length;
                 )
                     r((t = n[i++]).value, t.key, this);
@@ -336,14 +336,14 @@ if (
         eE,
         "toString",
         function () {
-            return k(this).serialize();
+            return j(this).serialize();
         },
         { enumerable: !0 },
     ),
     c &&
         f(eE, "size", {
             get: function () {
-                return k(this).entries.length;
+                return j(this).entries.length;
             },
             configurable: !0,
             enumerable: !0,
@@ -412,5 +412,5 @@ if (
 }
 e.exports = {
     URLSearchParams: eg,
-    getState: k,
+    getState: j,
 };

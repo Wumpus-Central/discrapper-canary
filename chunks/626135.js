@@ -120,8 +120,8 @@ let C = { location: {} },
     L = 120000,
     x = 300000,
     M = 900000,
-    j = 3600000,
-    k = 86400000,
+    k = 3600000,
+    j = 86400000,
     U = 0.001,
     G = performance.now(),
     B = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
@@ -185,7 +185,7 @@ let V = {
                   : [e.channel_id, e.channel_view],
     },
     [g.rMx.TEXT_IN_VOICE_OPENED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.NOTIFICATION_VIEWED]: {
@@ -240,25 +240,25 @@ let V = {
         throttleKeys: () => [],
     },
     [g.rMx.RPC_SERVER_ERROR_CAUGHT]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: () => [],
     },
     [g.rMx.RPC_COMMAND_SENT]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id, e.command],
         throttlePercent: U,
     },
     [g.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id, e.event],
         throttlePercent: U,
     },
     [g.rMx.ACTIVITY_HANDSHAKE]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id],
     },
     [g.rMx.CHANNEL_BANNER_VIEWED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
@@ -310,7 +310,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
-        throttlePeriod: j,
+        throttlePeriod: k,
         throttleKeys: () => [],
     },
     [g.rMx.KEYWORD_FILTER_MATCH]: {
@@ -359,7 +359,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.NOTIFICATION_PERMISSION_STATUS]: {
-        throttlePeriod: 12 * j,
+        throttlePeriod: 12 * k,
         throttleKeys: (e) => [
             e.os_enabled,
             e.notification_authorization_status,
@@ -368,23 +368,23 @@ let V = {
         ],
     },
     [g.rMx.SEARCH_BAR_VIEWED]: {
-        throttlePeriod: j,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.search_type],
     },
     [g.rMx.AD_IDENTIFIER_FETCHED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: () => [],
     },
     [g.rMx.ACTIVITY_PANEL_SDK_LINK_VIEWED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id],
     },
     [g.rMx.LIBDISCORE_SLOW_TIMERS]: {
-        throttlePeriod: j,
+        throttlePeriod: k,
         throttleKeys: () => [],
     },
     [g.rMx.DEBUG_MISSING_STRING]: {
-        throttlePeriod: j,
+        throttlePeriod: k,
         throttleKeys: () => [],
     },
     [g.rMx.VIDEO_STREAM_ZOOM_CHANGED]: {

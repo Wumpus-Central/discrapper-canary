@@ -334,11 +334,11 @@ e.exports = function (e) {
             className: "subst",
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
         }),
-        j = (e = "") => ({
+        k = (e = "") => ({
             className: "subst",
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/),
         }),
-        k = (e = "") => ({
+        j = (e = "") => ({
             className: "subst",
             label: "interpol",
             begin: r(/\\/, e, /\(/),
@@ -347,12 +347,12 @@ e.exports = function (e) {
         U = (e = "") => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), j(e), k(e)],
+            contains: [M(e), k(e), j(e)],
         }),
         G = (e = "") => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), k(e)],
+            contains: [M(e), j(e)],
         }),
         B = {
             className: "string",

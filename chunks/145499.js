@@ -24,7 +24,7 @@ var r = n(54381),
     N = n(981631),
     E = n(535396),
     I = n(388032),
-    S = n(663494);
+    S = n(486217);
 let T = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: i, tier: l } = e,
             a = n < l,
@@ -72,7 +72,7 @@ let T = (e) => {
                     ((e) => {
                         let { guildId: t } = e;
                         (0, c.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e("93626"), n.e("72997")]).then(
+                            let { default: e } = await Promise.all([n.e("93626"), n.e("34765")]).then(
                                 n.bind(n, 136735),
                             );
                             return (n) =>

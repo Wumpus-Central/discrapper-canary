@@ -1,18 +1,18 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(442837),
     l = n(481060),
-    c = n(496675),
-    o = n(981631),
-    a = n(388032);
-function u(e, t) {
-    let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        s = (0, i.e7)([c.Z], () => c.Z.can(o.Plq.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !s) return null;
-    let b = () => {
+    o = n(496675),
+    a = n(981631),
+    c = n(388032);
+function s(e, t) {
+    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
+        u = (0, i.e7)([o.Z], () => o.Z.can(a.Plq.MANAGE_CHANNELS, e), [e]);
+    if (__OVERLAY__ || !u) return null;
+    let d = () => {
         (0, l.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("33285"), n.e("29497"), n.e("75139")]).then(n.bind(n, 241865));
+            let { default: t } = await Promise.all([n.e("33285"), n.e("29497"), n.e("26861")]).then(n.bind(n, 241865));
             return (n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -44,7 +44,7 @@ function u(e, t) {
                     })({}, n)),
                     (l = l =
                         {
-                            channelType: u,
+                            channelType: s,
                             guildId: e.guild_id,
                             categoryId: e.parent_id,
                         }),
@@ -65,18 +65,18 @@ function u(e, t) {
             };
         });
     };
-    switch (u) {
-        case o.d4z.GUILD_TEXT:
+    switch (s) {
+        case a.d4z.GUILD_TEXT:
             return (0, r.jsx)(l.sNh, {
                 id: "create-text-channel",
-                label: a.intl.string(a.t.HHkTJP),
-                action: b,
+                label: c.intl.string(c.t.HHkTJP),
+                action: d,
             });
-        case o.d4z.GUILD_VOICE:
+        case a.d4z.GUILD_VOICE:
             return (0, r.jsx)(l.sNh, {
                 id: "create-voice-channel",
-                label: a.intl.string(a.t.AlbZaI),
-                action: b,
+                label: c.intl.string(c.t.AlbZaI),
+                action: d,
             });
         default:
             return null;

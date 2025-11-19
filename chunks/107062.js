@@ -60,7 +60,7 @@ let P = (e, t) =>
                 entry: n,
                 showCoverImage: !1,
             }),
-            { user: j, details: k, activity: U, embeddedActivity: G } = (0, C.n)(n),
+            { user: k, details: j, activity: U, embeddedActivity: G } = (0, C.n)(n),
             { primaryColor: B, secondaryColor: Z } = (0, T.Z)(null == M ? void 0 : M.src),
             F = (0, a.e7)([g.default], () => g.default.locale),
             { displayParticipants: V, participant1: H, participant2: Y, numOtherParticipants: W } = (0, O.Z)(n, 3),
@@ -69,7 +69,7 @@ let P = (e, t) =>
             },
             z = i.useCallback(
                 (e) => {
-                    if ((null == M ? void 0 : M.src) == null || null == t || null == j) return;
+                    if ((null == M ? void 0 : M.src) == null || null == t || null == k) return;
                     let r =
                         W > 0
                             ? w({
@@ -78,7 +78,7 @@ let P = (e, t) =>
                                   users: [H, Y],
                                   countOthers: W,
                               })
-                            : D(n, t, j);
+                            : D(n, t, k);
                     return (0, I.C4)({
                         entry: n,
                         applicationImageSrc: null == M ? void 0 : M.src,
@@ -89,7 +89,7 @@ let P = (e, t) =>
                         channelId: e,
                     });
                 },
-                [null == M ? void 0 : M.src, t, V, n, F, W, H, Y, B, Z, j],
+                [null == M ? void 0 : M.src, t, V, n, F, W, H, Y, B, Z, k],
             ),
             { data: q } = (0, h.IX)(n.extra.application_id),
             X = (0, u.Z)({
@@ -100,7 +100,7 @@ let P = (e, t) =>
                 { location: "MemberListAcitivtyContentPopout" },
                 { autoTrackExposure: !0 },
             );
-        if (null == j) return null;
+        if (null == k) return null;
         let J = (0, r.jsx)(S.PZ, {
                 location: S.Gt.POPOUT,
                 entry: n,
@@ -109,7 +109,7 @@ let P = (e, t) =>
                 channel: t,
                 userDescription: (0, v.kr)(n) ? R.t.vPg1JT : R.t.rPqqts,
                 title: n.extra.activity_name,
-                subtitle: k,
+                subtitle: j,
                 badges: J,
                 entry: n,
                 showCoverImage: !1,
@@ -122,7 +122,7 @@ let P = (e, t) =>
                 ? (0, r.jsx)(d.Z, {
                       embeddedActivity: G,
                       activity: U,
-                      user: j,
+                      user: k,
                       variant: "primary",
                       size: "md",
                       icon: o.YVR,
@@ -159,10 +159,10 @@ let P = (e, t) =>
                     children: (0, r.jsx)(A.WT, {
                         onReaction: b,
                         onVoiceChannelPreview: L,
-                        user: j,
+                        user: k,
                         channel: t,
                         generateReactionImage: z,
-                        reactionImageAltText: P(n, j),
+                        reactionImageAltText: P(n, k),
                         entry: n,
                         buttons: ea,
                     }),

@@ -1,46 +1,46 @@
-n.d(e, {
-    X: () => c,
-    h: () => r,
+n.d(t, {
+    X: () => r,
+    h: () => i,
 }),
     n(704826),
     n(35282),
     n(388685);
 var a = n(473749),
     l = n(902676);
-function r(t) {
-    let { protocol: e, hostname: n } = a.useMemo(
+function i(e) {
+    let { protocol: t, hostname: n } = a.useMemo(
             () => ({
-                protocol: (0, l.E)(t),
-                hostname: (0, l.F)(t),
+                protocol: (0, l.E)(e),
+                hostname: (0, l.F)(e),
             }),
-            [t],
+            [e],
         ),
-        r = "//" === t.substr(e.length, 2) ? "//" : "",
-        c = "".concat(e).concat(r).concat(n);
+        i = "//" === e.substr(t.length, 2) ? "//" : "",
+        r = "".concat(t).concat(i).concat(n);
     return {
-        protocol: e,
-        authorityPrefix: r,
+        protocol: t,
+        authorityPrefix: i,
         hostname: n,
-        theRestOfTheUrl: t.replace(c, ""),
+        theRestOfTheUrl: e.replace(r, ""),
     };
 }
-function c(t) {
-    let { url: e, trustUrl: n, onConfirm: l, onCancel: c, onClose: i } = t,
-        [o, s] = a.useState(!1),
-        { protocol: d, authorityPrefix: u, hostname: x, theRestOfTheUrl: m } = r(e),
+function r(e) {
+    let { url: t, trustUrl: n, onConfirm: l, onCancel: r, onClose: s } = e,
+        [o, c] = a.useState(!1),
+        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: p } = i(t),
         h = a.useCallback(() => {
-            o && n(e), null == i || i(), l();
-        }, [e, o, n, l, i]);
+            o && n(t), null == s || s(), l();
+        }, [t, o, n, l, s]);
     return {
         protocol: d,
         authorityPrefix: u,
-        hostname: x,
-        theRestOfTheUrl: m,
+        hostname: m,
+        theRestOfTheUrl: p,
         shouldTrustUrl: o,
-        setShouldTrustUrl: s,
+        setShouldTrustUrl: c,
         handleConfirm: h,
         handleCancel: a.useCallback(() => {
-            null == i || i(), c();
-        }, [c, i]),
+            null == s || s(), r();
+        }, [r, s]),
     };
 }

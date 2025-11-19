@@ -29,7 +29,7 @@ var i = n(54381),
     T = n(921944),
     N = n(489887),
     A = n(388032),
-    w = n(878066);
+    w = n(749723);
 let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function R() {
     let e = (0, a.e7)([x.Z], () => x.Z.hasCurrentUserSentMessageSinceAppStart()),
@@ -71,7 +71,7 @@ function L(e) {
             setValue: B,
             openClips: H,
         } = e,
-        { analyticsLocations: V, newestAnalyticsLocation: F } = (0, d.ZP)(),
+        { analyticsLocations: F, newestAnalyticsLocation: V } = (0, d.ZP)(),
         G = (0, y.Dt)({ channel: t }),
         z = (0, a.e7)([v.Z], () => v.Z.isInProgress());
     function W() {
@@ -152,7 +152,7 @@ function L(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: F,
+                analyticsLocation: V,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: V[V.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: V[V.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: V[V.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },

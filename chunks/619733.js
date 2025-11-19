@@ -1,6 +1,6 @@
 n.d(t, {
     AK: () => c,
-    EK: () => i,
+    EK: () => r,
     IX: () => s,
     SW: () => h,
     SY: () => d,
@@ -13,8 +13,8 @@ n.d(t, {
 });
 var a,
     l = n(763600),
-    r = n(48541),
-    i = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+    i = n(48541),
+    r = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
 let s = {
         steps: {
             "select-game": {
@@ -45,7 +45,7 @@ let s = {
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
               : "1415025086791942144";
-l.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, r.C.STAGING;
+l.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, i.C.STAGING;
 let x = { [l.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
     g = (e, t) =>
         "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t);

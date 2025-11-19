@@ -3,7 +3,7 @@ var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(636606),
+    o = n(790519),
     s = n(91192),
     c = n(442837),
     u = n(481060),
@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(419388),
     B = n(406534),
     H = n(981631),
-    V = n(388032),
-    F = n(266834);
+    F = n(388032),
+    V = n(151227);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -243,11 +243,11 @@ let q = (0, o.animated)(u.eTT),
                     );
                 }),
                 eu = r.useMemo(
-                    () => (R ? (k ? F.chatTypingGradientAtBottom : F.chatTypingGradientNotAtBottom) : F.chatGradient),
+                    () => (R ? (k ? V.chatTypingGradientAtBottom : V.chatTypingGradientNotAtBottom) : V.chatGradient),
                     [R, k],
                 ),
                 ed = r.useMemo(
-                    () => (R ? (k ? F.typingGradientAtBottom : F.typingGradientNotAtBottom) : F.gradientDefault),
+                    () => (R ? (k ? V.typingGradientAtBottom : V.typingGradientNotAtBottom) : V.gradientDefault),
                     [R, k],
                 );
             return (0, i.jsxs)(s.bG, {
@@ -255,7 +255,7 @@ let q = (0, o.animated)(u.eTT),
                 children: [
                     null != ei && ei,
                     (0, i.jsxs)("div", {
-                        className: a()(F.messagesWrapper, l, "group-spacing-".concat(o)),
+                        className: a()(V.messagesWrapper, l, "group-spacing-".concat(o)),
                         children: [
                             null == ei && ee,
                             (0, i.jsxs)(
@@ -265,8 +265,8 @@ let q = (0, o.animated)(u.eTT),
                                         {
                                             ref: es,
                                             customTheme: !0,
-                                            className: a()(p, F.scroller, ec ? ed : void 0),
-                                            contentClassName: F.scrollerContent,
+                                            className: a()(p, V.scroller, ec ? ed : void 0),
+                                            contentClassName: V.scrollerContent,
                                             onResize: X.handleResize,
                                             onScroll: X.handleScroll,
                                             onMouseDown: X.handleMouseDown,
@@ -284,10 +284,10 @@ let q = (0, o.animated)(u.eTT),
                                                 z(
                                                     G(
                                                         {
-                                                            className: a()(F.scrollerInner, {
-                                                                [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
+                                                            className: a()(V.scrollerInner, {
+                                                                [V.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiL, {
+                                                            "aria-label": F.intl.formatToPlainString(F.t.XarRiL, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -296,17 +296,17 @@ let q = (0, o.animated)(u.eTT),
                                                     {
                                                         children: [
                                                             (0, i.jsx)("span", {
-                                                                className: F.navigationDescription,
+                                                                className: V.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: V.intl.string(V.t["Spb3s/"]),
+                                                                children: F.intl.string(F.t["Spb3s/"]),
                                                             }),
                                                             $,
                                                             (0, i.jsx)("div", {
                                                                 className: a()({
-                                                                    [F.scrollerSpacer]: !N,
-                                                                    [F.empty]: 0 === g.length && !g.loadingMore,
-                                                                    [F.emptyForum]:
+                                                                    [V.scrollerSpacer]: !N,
+                                                                    [V.empty]: 0 === g.length && !g.loadingMore,
+                                                                    [V.emptyForum]:
                                                                         1 === g.length &&
                                                                         !g.loadingMore &&
                                                                         m.isForumPost() &&
@@ -402,8 +402,8 @@ let q = (0, o.animated)(u.eTT),
             {
                 messages: U,
                 channelStream: B,
-                oldestUnreadMessageId: V,
-                editingMessageId: F,
+                oldestUnreadMessageId: F,
+                editingMessageId: V,
             } = (function (e) {
                 var t, n;
                 let i = (0, c.e7)([I.Z], () => I.Z.getMessages(e.id), [e.id]),
@@ -475,9 +475,9 @@ let q = (0, o.animated)(u.eTT),
                         permissionVersion: h,
                         uploads: (0, c.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([T.ZP], () => T.ZP.getUnreadCount(t.id), [t]),
-                        hasUnreads: null != V,
+                        hasUnreads: null != F,
                         canChat: C,
-                        editingMessageId: F,
+                        editingMessageId: V,
                         fontSize: E,
                         keyboardModeEnabled: D,
                         showingQuarantineBanner: n,

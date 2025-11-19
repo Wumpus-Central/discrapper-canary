@@ -16,7 +16,7 @@ var l = n(54381),
     f = n(433355),
     g = n(384433),
     p = n(388032),
-    v = n(401853);
+    v = n(350013);
 let C = (e) => {
     let { tabs: t, selectedTab: n, onTabSelect: r, onClose: i } = e;
     return (0, l.jsx)(d.v2r, {

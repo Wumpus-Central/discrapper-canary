@@ -3,7 +3,7 @@ var r = n(54381),
     l = n(473749),
     i = n(481060),
     o = n(36361),
-    a = n(337030);
+    a = n(700875);
 let c = l.memo(function (e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: c, variant: s = "default", ContextProvider: u } = t,

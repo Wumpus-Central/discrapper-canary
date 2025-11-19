@@ -17,36 +17,36 @@ n.d(t, { Z: () => u }),
     n(146733);
 var a = n(54381),
     l = n(473749),
-    r = n(164617),
-    i = n(793030),
+    i = n(164617),
+    r = n(793030),
     s = n(692547),
     o = n(333200),
     c = n(159691),
     d = n(481060);
 function u() {
-    let e = Object.keys(r).map((e) => (0, a.jsx)(h, { riveName: e }, e));
-    return (0, a.jsx)(i.w0Z, {
+    let e = Object.keys(i).map((e) => (0, a.jsx)(h, { riveName: e }, e));
+    return (0, a.jsx)(r.w0Z, {
         style: { maxHeight: "100%" },
-        children: (0, a.jsxs)(i.Kqy, {
+        children: (0, a.jsxs)(r.Kqy, {
             gap: 24,
             padding: 8,
             style: { boxSizing: "border-box" },
             children: [
-                (0, a.jsx)(i.X6q, {
+                (0, a.jsx)(r.X6q, {
                     variant: "heading-lg/medium",
                     children: "Rive Inspector",
                 }),
-                (0, a.jsx)(i.xvT, {
+                (0, a.jsx)(r.xvT, {
                     variant: "text-md/normal",
                     children:
                         "Upload a .riv file to view the animation and interact with its data binding configuration.",
                 }),
                 (0, a.jsx)(m, {}),
-                (0, a.jsx)(i.X6q, {
+                (0, a.jsx)(r.X6q, {
                     variant: "heading-lg/medium",
                     children: "Rive Overrides",
                 }),
-                (0, a.jsx)(i.xvT, {
+                (0, a.jsx)(r.xvT, {
                     variant: "text-md/normal",
                     children:
                         "Upload a .riv file to replace an existing Rive animation in the app with the new one. Useful for previewing updated versions of existing animations before uploading them via the Rive pipeline.",
@@ -58,7 +58,7 @@ function u() {
 }
 function m() {
     let [e, t] = l.useState(null),
-        [n, r] = l.useState(null),
+        [n, i] = l.useState(null),
         [s, o] = l.useState(null),
         [c, u] = l.useState([]),
         m = l.useRef(null),
@@ -69,14 +69,14 @@ function m() {
                 var e, t, n, a;
                 o(null != (n = null == (e = m.current) ? void 0 : e.getProperties()) ? n : {}),
                     u(null != (a = null == (t = m.current) ? void 0 : t.getArtboards()) ? a : []),
-                    r({});
+                    i({});
             }, 1000);
         }, []),
         j = l.useCallback(
             (e, t) => {
                 null != n &&
-                    r((n) => {
-                        var a, l, r;
+                    i((n) => {
+                        var a, l, i;
                         return (
                             (l = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -103,7 +103,7 @@ function m() {
                                 }
                                 return e;
                             })({}, n)),
-                            (r = r =
+                            (i = i =
                                 {
                                     [e]: {
                                         type: null == s || null == (a = s[e]) ? void 0 : a.type,
@@ -111,7 +111,7 @@ function m() {
                                     },
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -119,8 +119,8 @@ function m() {
                                           n.push.apply(n, a);
                                       }
                                       return n;
-                                  })(Object(r)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                   }),
                             l
                         );
@@ -129,9 +129,9 @@ function m() {
             [s, n],
         ),
         _ = l.useCallback((e) => {
-            o(null), r(null), t(e);
+            o(null), i(null), t(e);
         }, []);
-    return (0, a.jsxs)(i.Kqy, {
+    return (0, a.jsxs)(r.Kqy, {
         gap: 16,
         children: [
             (0, a.jsx)(h, {
@@ -151,14 +151,14 @@ function m() {
                         dynamicDataBinding: null != n ? n : {},
                     }),
                 }),
-            null != e && null == n ? (0, a.jsx)(i.$jN, {}) : null,
+            null != e && null == n ? (0, a.jsx)(r.$jN, {}) : null,
             null != n &&
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     children: [
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.X6q, {
+                                (0, a.jsx)(r.X6q, {
                                     variant: "heading-lg/medium",
                                     children: "Dimensions",
                                 }),
@@ -176,26 +176,26 @@ function m() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.X6q, {
+                                (0, a.jsx)(r.X6q, {
                                     variant: "heading-lg/medium",
                                     children: "Data Binding",
                                 }),
                                 Object.keys(null != s ? s : {}).map((e) => {
-                                    var t, l, r, i;
+                                    var t, l, i, r;
                                     return (0, a.jsx)(
                                         p,
                                         {
                                             property: e,
                                             type: null == s || null == (t = s[e]) ? void 0 : t.type,
                                             value:
-                                                null != (i = null == n || null == (l = n[e]) ? void 0 : l.value)
-                                                    ? i
-                                                    : null == s || null == (r = s[e])
+                                                null != (r = null == n || null == (l = n[e]) ? void 0 : l.value)
+                                                    ? r
+                                                    : null == s || null == (i = s[e])
                                                       ? void 0
-                                                      : r.value,
+                                                      : i.value,
                                             onChange: (t) => j(e, t),
                                             artboards: c,
                                         },
@@ -210,43 +210,43 @@ function m() {
     });
 }
 function p(e) {
-    let { property: t, type: n, value: l, onChange: r, artboards: c } = e;
+    let { property: t, type: n, value: l, onChange: i, artboards: c } = e;
     return "string" === n
         ? (0, a.jsx)(d.oil, {
               label: t,
               value: l,
-              onChange: (e) => r(e),
+              onChange: (e) => i(e),
           })
         : "number" === n
           ? (0, a.jsx)(d.oil, {
                 type: "number",
                 label: t,
                 value: l,
-                onChange: (e) => r(parseInt(e)),
+                onChange: (e) => i(parseInt(e)),
             })
           : "boolean" === n
-            ? (0, a.jsx)(i.rsf, {
+            ? (0, a.jsx)(r.rsf, {
                   label: t,
                   checked: l,
-                  onChange: (e) => r(e),
+                  onChange: (e) => i(e),
               })
             : "trigger" === n
-              ? (0, a.jsx)(i.zxk, {
+              ? (0, a.jsx)(r.zxk, {
                     text: "Trigger ".concat(t),
-                    onClick: () => r(Number.isSafeInteger(l) ? l + 1 : 1),
+                    onClick: () => i(Number.isSafeInteger(l) ? l + 1 : 1),
                 })
               : "image" === n
                 ? (0, a.jsx)(d.oil, {
                       label: t,
                       value: l,
-                      onChange: (e) => r(e),
+                      onChange: (e) => i(e),
                   })
                 : "color" === n
                   ? (0, a.jsx)(o.V, {
                         selectionMode: "single",
                         label: t,
                         value: l,
-                        onSelectionChange: (e) => r(e),
+                        onSelectionChange: (e) => i(e),
                         closeOnSelect: !0,
                         placeholder: "Select a color...",
                         options: Object.entries(s.Z.colors).map((e) => {
@@ -263,7 +263,7 @@ function p(e) {
                           selectionMode: "single",
                           label: t,
                           value: l,
-                          onSelectionChange: (e) => r(e),
+                          onSelectionChange: (e) => i(e),
                           closeOnSelect: !0,
                           placeholder: "Select an artboard...",
                           options: c.map((e) => ({
@@ -277,17 +277,17 @@ function p(e) {
 function h(e) {
     var t;
     let { riveName: n, onRiveLoad: s } = e,
-        o = null == (t = r[n]) ? void 0 : t.riveSrc,
+        o = null == (t = i[n]) ? void 0 : t.riveSrc,
         u = null == o,
         m = l.useRef(null),
         p = (0, d.o8M)(o);
     return (0, a.jsxs)(
-        i.Kqy,
+        r.Kqy,
         {
             gap: 8,
             children: [
                 (0, a.jsx)("label", { children: n }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     justify: "space-between",
                     direction: "horizontal",
                     align: "center",

@@ -1,4 +1,4 @@
-n.d(t, { b: () => S });
+n.d(t, { b: () => j });
 var r = n(54381),
     l = n(473749),
     a = n(512722),
@@ -15,19 +15,19 @@ var r = n(54381),
     b = n(563132),
     g = n(107998),
     v = n(614277),
-    P = n(400981),
-    x = n(435020),
-    y = n(698708),
-    j = n(921944);
-function S(e) {
+    x = n(400981),
+    y = n(435020),
+    P = n(698708),
+    S = n(921944);
+function j(e) {
     let t,
         {
             handleClose: n,
             planGroup: a,
-            onSubscriptionConfirmation: S,
+            onSubscriptionConfirmation: j,
             renderPurchaseConfirmation: _,
-            postSuccessGuild: O,
-            followupSKUInfo: w,
+            postSuccessGuild: w,
+            followupSKUInfo: O,
             continueSessionToInitialStep: C,
         } = e,
         {
@@ -56,22 +56,22 @@ function S(e) {
         Y = (0, d.Z)(),
         V = (0, c.a5)(T),
         q = (0, c.tK)(null == z ? void 0 : z.skuId),
-        J = (0, x.$)(E, I),
+        J = (0, y.$)(E, I),
         Q = L && null != z && V;
     i()(null != T, "Expected plan to selected"),
         i()(null != N, "Expected selectedSkuId"),
         i()(null != R, "Step should be set");
     let X = l.useCallback(() => {
-        n(), null == S || S();
-    }, [n, S]);
+        n(), null == j || j();
+    }, [n, j]);
     l.useEffect(() => {
-        !L || null == B || null == D || F || H || (0, m.pO)(B) || G({ onSubscriptionConfirmation: S });
-    }, [G, L, B, D, F, H, S]),
+        !L || null == B || null == D || F || H || (0, m.pO)(B) || G({ onSubscriptionConfirmation: j });
+    }, [G, L, B, D, F, H, j]),
         l.useEffect(() => {
             null != Y &&
                 null != Y.reminderNotice &&
                 W &&
-                (0, s.wH)(o.z.GIFTING_PROMOTION_REMINDER, (0, u.m)(), { dismissAction: j.L.INDIRECT_ACTION });
+                (0, s.wH)(o.z.GIFTING_PROMOTION_REMINDER, (0, u.m)(), { dismissAction: S.L.INDIRECT_ACTION });
         }, [Y, W]);
     let $ = null != C ? p.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != _) t = _(T, X, M);
@@ -83,9 +83,9 @@ function S(e) {
     else {
         let e =
             A.current === T.id
-                ? { postSuccessGuild: O }
+                ? { postSuccessGuild: w }
                 : {
-                      followupSKUInfo: w,
+                      followupSKUInfo: O,
                       startingPremiumSubscriptionPlanId: A.current,
                       isDowngrade: null != k && (0, h.GY)(k, T.id, a),
                   };
@@ -131,12 +131,12 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(v.C3, {
-                children: [(0, r.jsx)(y.Z, {}), t],
+                children: [(0, r.jsx)(P.Z, {}), t],
             }),
             null != K && K,
             Q &&
                 null != q &&
-                (0, r.jsx)(P.Z, {
+                (0, r.jsx)(x.Z, {
                     onClose: X,
                     selectedPromotionalDecoPurchaseRecord: q,
                     selectedGiftingPromotionReward: z,

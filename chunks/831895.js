@@ -8,14 +8,14 @@ var r = n(54381),
     d = n(699758),
     c = n(913338),
     u = n(388032),
-    p = n(577806);
+    p = n(807276);
 function m(e) {
     var t, n, a, m;
     let { defaultCategory: h, onCategoryChange: f, className: b } = e,
         [g, v] = l.useState(h),
-        [P, x] = l.useState(null),
-        y = (0, s.Z)(),
-        j = l.useMemo(
+        [x, y] = l.useState(null),
+        P = (0, s.Z)(),
+        S = l.useMemo(
             () => [
                 {
                     name: u.intl.string(u.t["6Zuivx"]),
@@ -25,8 +25,8 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => x(d.KN.Trick),
-                    onMouseLeave: () => x(null),
+                    onMouseEnter: () => y(d.KN.Trick),
+                    onMouseLeave: () => y(null),
                 },
                 {
                     name: u.intl.string(u.t["2UeOlY"]),
@@ -36,35 +36,35 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => x(d.KN.Treat),
-                    onMouseLeave: () => x(null),
+                    onMouseEnter: () => y(d.KN.Treat),
+                    onMouseLeave: () => y(null),
                 },
             ],
             [],
         ),
-        S = l.useCallback(
+        j = l.useCallback(
             (e) => {
                 v(e.value), f(e.value);
             },
             [f],
         ),
         _ =
-            null == y || null == (n = y.segmentedControlAnimations) || null == (t = n.trick)
+            null == P || null == (n = P.segmentedControlAnimations) || null == (t = n.trick)
                 ? void 0
                 : t.getAnimationData,
-        O =
-            null == y || null == (m = y.segmentedControlAnimations) || null == (a = m.treat)
+        w =
+            null == P || null == (m = P.segmentedControlAnimations) || null == (a = m.treat)
                 ? void 0
                 : a.getAnimationData;
     return (0, r.jsxs)("div", {
         className: i()(p.container, b),
         children: [
             (0, r.jsx)(c.w, {
-                options: j,
+                options: S,
                 value: g,
-                onChange: S,
+                onChange: j,
             }),
-            P === d.KN.Trick &&
+            x === d.KN.Trick &&
                 null != _ &&
                 (0, r.jsx)("div", {
                     className: i()(p.animationOverlay, p.trickAnimation),
@@ -75,11 +75,11 @@ function m(e) {
                         className: p.lottieAnimation,
                         importData: _,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(P === d.KN.Trick),
+                        versionKey: +(x === d.KN.Trick),
                     }),
                 }),
-            P === d.KN.Treat &&
-                null != O &&
+            x === d.KN.Treat &&
+                null != w &&
                 (0, r.jsx)("div", {
                     className: i()(p.animationOverlay, p.treatAnimation),
                     children: (0, r.jsx)(o.Fmz, {
@@ -87,9 +87,9 @@ function m(e) {
                         loop: !0,
                         autoplay: !0,
                         className: p.lottieAnimation,
-                        importData: O,
+                        importData: w,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(P === d.KN.Treat),
+                        versionKey: +(x === d.KN.Treat),
                     }),
                 }),
         ],

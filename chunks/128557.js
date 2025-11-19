@@ -31,7 +31,7 @@ var i = n(54381),
     P = n(981631),
     I = n(231873),
     Z = n(388032),
-    T = n(797553);
+    T = n(183334);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -130,8 +130,8 @@ function M(e) {
         { guildPopulated: D, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: H,
-            handleMessage: V,
-            handlePersonalize: F,
+            handleMessage: F,
+            handlePersonalize: V,
             handleDownload: G,
             handleAddApplication: z,
         } = (function (e) {
@@ -142,7 +142,7 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89334")]).then(
+                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                                     n.bind(n, 560114),
                                 );
                                 return (n) =>
@@ -311,7 +311,7 @@ function M(e) {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
                             completed: B,
-                            onClick: F,
+                            onClick: V,
                         }),
                     },
                     "customize",
@@ -328,7 +328,7 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: V,
+                            onClick: F,
                         }),
                     },
                     "message",

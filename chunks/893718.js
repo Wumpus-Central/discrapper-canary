@@ -3,7 +3,7 @@ n.d(t, {
     Sg: () => eT,
     TE: () => eL,
     ZP: () => eB,
-    aT: () => ek,
+    aT: () => ej,
     ae: () => eS,
     bL: () => eI,
     hJ: () => eN,
@@ -50,8 +50,8 @@ var r = n(54381),
     L = n(657871),
     x = n(849522),
     M = n(780291),
-    j = n(328908),
-    k = n(913663),
+    k = n(328908),
+    j = n(913663),
     U = n(268350),
     G = n(378233),
     B = n(665906),
@@ -82,7 +82,7 @@ var r = n(54381),
     ed = n(981631),
     ef = n(761652),
     e_ = n(957825),
-    ep = n(744114);
+    ep = n(564355);
 function eh(e, t, n) {
     return (
         t in e
@@ -153,11 +153,11 @@ function eI(e, t, a, o, s) {
                 c(!0);
                 let y =
                         null !=
-                        (E = null == (g = k.Z.getStickerPreview(s, t.drafts.type)) ? void 0 : g.map((e) => e.id))
+                        (E = null == (g = j.Z.getStickerPreview(s, t.drafts.type)) ? void 0 : g.map((e) => e.id))
                             ? E
                             : [],
                     O = null != (b = W.Z.getUploads(s, t.drafts.type)) ? b : [],
-                    v = (0, j.q5)(s);
+                    v = (0, k.q5)(s);
                 if (null == d && !_ && !m && (0, D.CB)(O, s)) {
                     c(!1),
                         (0, p.ZDy)(async () => {
@@ -166,7 +166,7 @@ function eI(e, t, a, o, s) {
                                 n.e("90508"),
                                 n.e("22173"),
                                 n.e("95546"),
-                                n.e("44576"),
+                                n.e("48890"),
                             ]).then(n.bind(n, 273602));
                             return (t) =>
                                 (0, r.jsx)(
@@ -254,7 +254,7 @@ function eA(e) {
                     ? ((0, er._H)({
                           sticker: e,
                           stickerSelectLocation: i,
-                          isReplacement: null != k.Z.getStickerPreview(a, o.drafts.type),
+                          isReplacement: null != j.Z.getStickerPreview(a, o.drafts.type),
                           analyticsLocations: l,
                       }),
                       (0, U.eu)(a, e, o.drafts.type))
@@ -455,7 +455,7 @@ function eM(e, t, n) {
         ),
     };
 }
-function ej(e, t) {
+function ek(e, t) {
     let [n, r] = i.useState(null),
         a = i.useCallback(() => {
             var e, n;
@@ -478,7 +478,7 @@ function ej(e, t) {
         n
     );
 }
-let ek = (e) => {
+let ej = (e) => {
         let { enabled: t, onlyExactMatch: n } = (0, L.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [r, a] = i.useState(!0),
             o = i.useRef(null);
@@ -519,8 +519,8 @@ function eG(e, t) {
         id: D,
         required: w,
         disabled: L,
-        placeholder: j,
-        accessibilityLabel: k,
+        placeholder: k,
+        accessibilityLabel: j,
         channel: U,
         type: G,
         focused: B,
@@ -626,11 +626,11 @@ function eG(e, t) {
         { editorHeight: tT, handleResize: tS } = ew(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = eM(tm, eQ, ta),
         { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tD } = ex(G, e$),
-        tw = ej(tc, e$),
-        tL = ek(f),
+        tw = ek(tc, e$),
+        tL = ej(f),
         { currentAutocompleteType: tx, handleAutocompleteVisibilityChange: tM } = eU(),
-        { moveAppsEntrypointToOverflow: tj } = $.n.useConfig({ location: "ChannelAppLauncher" }),
-        tk = (0, S.Z)({ type: G });
+        { moveAppsEntrypointToOverflow: tk } = $.n.useConfig({ location: "ChannelAppLauncher" }),
+        tj = (0, S.Z)({ type: G });
     (0, J.S)(tc, U.guild_id, U.id);
     let tU = null != W,
         tG = (e9 && !((e6 || e7) && tn)) || (t_ && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
@@ -655,9 +655,9 @@ function eG(e, t) {
             ref: eJ,
             className: ep.hiddenAppLauncherAnchor,
         }),
-        tz = tk
+        tz = tj
             ? (0, r.jsx)(v.Z, {
-                  align: tj && G !== ee.Ie.SIDEBAR ? "left" : "right",
+                  align: tk && G !== ee.Ie.SIDEBAR ? "left" : "right",
                   positionTargetRef: eJ,
                   channel: U,
               })
@@ -744,7 +744,7 @@ function eG(e, t) {
                                     onMouseDown: tD,
                                     children: [
                                         tz,
-                                        tj && tK,
+                                        tk && tK,
                                         tB,
                                         (0, r.jsx)(p.tEY, {
                                             ringTarget: eX,
@@ -757,9 +757,9 @@ function eG(e, t) {
                                                 textValue: f,
                                                 richValue: h,
                                                 disabled: e9,
-                                                placeholder: j,
+                                                placeholder: k,
                                                 required: w,
-                                                accessibilityLabel: k,
+                                                accessibilityLabel: j,
                                                 isPreviewing: (e6 || e7) && tn,
                                                 channel: U,
                                                 type: G,
@@ -799,7 +799,7 @@ function eG(e, t) {
                                             }),
                                         }),
                                         tq,
-                                        !tj && tK,
+                                        !tk && tK,
                                     ],
                                 }),
                             ],

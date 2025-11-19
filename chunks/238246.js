@@ -36,15 +36,15 @@ var r,
     L = n(22205),
     x = n(984802),
     M = n(746106),
-    j = n(892071),
-    k = n(358085),
+    k = n(892071),
+    j = n(358085),
     U = n(62883),
     G = n(998502),
     B = n(473159),
     Z = n(928518),
     F = n(981631),
     V = n(501787),
-    H = n(688474);
+    H = n(413943);
 function Y(e, t, n) {
     return (
         t in e
@@ -99,7 +99,7 @@ function z(e, t) {
 }
 function q(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && k.isPlatformEmbedded && !n;
+    return t && j.isPlatformEmbedded && !n;
 }
 class X extends (r = a.Component) {
     componentDidMount() {
@@ -110,7 +110,7 @@ class X extends (r = a.Component) {
             this.updateClientTheme(),
             (0, B.O)(e),
             e.addEventListener("blur", this.handleBlur),
-            k.isPlatformEmbedded
+            j.isPlatformEmbedded
                 ? t.addEventListener("contextmenu", U.contextMenuCallbackNative, !1)
                 : t.addEventListener("contextmenu", U.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
@@ -125,7 +125,7 @@ class X extends (r = a.Component) {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            k.isPlatformEmbedded
+            j.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", U.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", U.contextMenuCallbackWeb),
             (0, d.j)(() => h.s9z.setState((e) => z(W({}, e), { [h.u1M]: [] }))),
@@ -252,7 +252,7 @@ class X extends (r = a.Component) {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
                         Z.Z.unmountWindow(this.props.windowKey),
-                            k.isPlatformEmbedded && G.ZP.close(this.props.windowKey);
+                            j.isPlatformEmbedded && G.ZP.close(this.props.windowKey);
                     };
                 null != t
                     ? t({
@@ -270,7 +270,7 @@ class X extends (r = a.Component) {
 Y(X, "defaultProps", { withTitleBar: !0 });
 let Q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
-            { lang: l, style: u, className: d } = (0, j.vP)();
+            { lang: l, style: u, className: d } = (0, k.vP)();
         return (
             a.useEffect(() => {
                 let e = n.document.documentElement;

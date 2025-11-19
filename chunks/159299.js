@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(642613), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -287,7 +287,7 @@ class M extends (r = o.ZP.Store) {
     }
 }
 b(M, "displayName", "ThreadMemberListStore");
-let j = new M(s.Z, {
+let k = new M(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: I,
     THREAD_UPDATE: D,

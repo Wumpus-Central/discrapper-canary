@@ -9,7 +9,7 @@ var i = e(54381),
     u = e(981631),
     x = e(176505),
     d = e(388032),
-    h = e(175109);
+    h = e(820954);
 let f = function (t) {
     let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: f, transitionState: p, onConfirm: C } = t,
         {

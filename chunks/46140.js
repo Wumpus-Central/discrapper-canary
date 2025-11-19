@@ -18,6 +18,7 @@ n.d(t, {
     a_: () => c.a,
     cd: () => h,
     dr: () => d,
+    fI: () => M,
     l$: () => C,
     oH: () => w,
     tD: () => g,
@@ -174,30 +175,43 @@ var D = (function (e) {
         );
     })({});
 let x = [
-        {
-            group: "task",
-            filter: "task_play",
-        },
-        {
-            group: "task",
-            filter: "task_video",
-        },
-        {
-            group: "reward",
-            filter: "reward_virtual_currency",
-        },
-        {
-            group: "reward",
-            filter: "reward_collectible",
-        },
-        {
-            group: "reward",
-            filter: "reward_in_game",
-        },
-    ],
-    M = ["reward", "task"],
+    {
+        group: "task",
+        filter: "task_play",
+    },
+    {
+        group: "task",
+        filter: "task_video",
+    },
+    {
+        group: "reward",
+        filter: "reward_virtual_currency",
+    },
+    {
+        group: "reward",
+        filter: "reward_collectible",
+    },
+    {
+        group: "reward",
+        filter: "reward_in_game",
+    },
+];
+function M(e) {
+    return Object.values(w).includes(e)
+        ? {
+              group: "task",
+              filter: e,
+          }
+        : Object.values(L).includes(e)
+          ? {
+                group: "reward",
+                filter: e,
+            }
+          : null;
+}
+let k = ["reward", "task"],
     j = Object.entries((0, r.groupBy)(x, "group")).sort((e, t) => {
-        let n = M.indexOf(e[0]),
-            r = M.indexOf(t[0]);
+        let n = k.indexOf(e[0]),
+            r = k.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });

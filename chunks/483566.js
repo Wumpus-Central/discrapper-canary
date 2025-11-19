@@ -14,7 +14,7 @@ var r = n(54381),
     c = n(22202),
     u = n(777207),
     d = n(590154),
-    f = n(545150);
+    f = n(877222);
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -137,8 +137,8 @@ function g(e) {
         { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: L } = C,
         x = null == y ? void 0 : y.horizontalControlColumnWidth,
         M = "group" === g || "radiogroup" === g,
-        j = M ? "span" : "label",
-        k = M ? "fieldset" : "div",
+        k = M ? "span" : "label",
+        j = M ? "fieldset" : "div",
         U = M
             ? (0, r.jsx)("legend", {
                   id: N,
@@ -152,7 +152,7 @@ function g(e) {
                   "aria-hidden": M,
                   "data-interactive": I,
                   id: N,
-                  tag: j,
+                  tag: k,
                   variant: "text-md/medium",
                   color: "text-primary",
                   htmlFor: R,
@@ -193,7 +193,7 @@ function g(e) {
         });
     return (0, r.jsx)(d.z.Provider, {
         value: C,
-        children: (0, r.jsxs)(k, {
+        children: (0, r.jsxs)(j, {
             role: g,
             ref: A,
             className: f.container,

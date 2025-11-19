@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(728285),
     B = n(788983),
     H = n(928518),
-    V = n(703656),
-    F = n(880395),
+    F = n(703656),
+    V = n(880395),
     G = n(740492),
     z = n(793319),
     W = n(3861),
@@ -89,7 +89,7 @@ var i = n(54381),
     eL = n(354459),
     ek = n(981631),
     eD = n(388032),
-    eU = n(563712);
+    eU = n(598411);
 function eB(e, t, n) {
     return (
         t in e
@@ -119,7 +119,7 @@ function eH(e) {
     }
     return e;
 }
-function eV(e, t) {
+function eF(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -137,7 +137,7 @@ function eV(e, t) {
         e
     );
 }
-let eF = {
+let eV = {
         [ek.AEg.NORMAL]: eU.normal,
         [ek.AEg.MINIMUM]: eU.minimum,
         [ek.AEg.NO_CHAT]: eU.noChat,
@@ -227,15 +227,15 @@ class ez extends r.PureComponent {
                 canStayOnTop: u,
             };
         if (!i)
-            return eV(eH({}, d), {
+            return eF(eH({}, d), {
                 canFullscreen: l,
                 useTheme: !0,
             });
         switch (e) {
             case ek.AEg.FULL_SCREEN:
-                return eV(eH({}, d), { canPopout: !this.inPopout && this.popoutOpen && d.canPopout });
+                return eF(eH({}, d), { canPopout: !this.inPopout && this.popoutOpen && d.canPopout });
             case ek.AEg.MINIMUM:
-                return eV(eH({}, d), {
+                return eF(eH({}, d), {
                     canPopout: !1,
                     useTheme: !0,
                 });
@@ -272,7 +272,7 @@ class ez extends r.PureComponent {
             (this._lastIdleProps = e),
             (0, i.jsx)(
                 J.Z,
-                eV(
+                eF(
                     eH(
                         {
                             renderHeader: this.renderHeader,
@@ -334,7 +334,7 @@ class ez extends r.PureComponent {
             m = e !== ek.AEg.NO_CHAT && e !== ek.AEg.FULL_SCREEN && null != c,
             g = ek.BRd.MIDNIGHT;
         return (0, i.jsxs)("div", {
-            className: a()(eU.wrapper, eF[e], eG[o], {
+            className: a()(eU.wrapper, eV[e], eG[o], {
                 [eU.poppedOut]: this.popoutOpen && !this.inPopout && e !== ek.AEg.NO_CHAT && t.isPrivate(),
                 [eU.video]: f,
                 [eU.sidebarOpen]: l || d,
@@ -487,7 +487,7 @@ class ez extends r.PureComponent {
                                     return (n) =>
                                         (0, i.jsx)(
                                             t,
-                                            eV(eH({}, n), {
+                                            eF(eH({}, n), {
                                                 stream: e.stream,
                                                 exitFullscreen: this.maybeLeaveFullScreen,
                                                 appContext: u,
@@ -509,7 +509,7 @@ class ez extends r.PureComponent {
                         let h = eh.default.getUser(e.id);
                         if (null != h) {
                             if (r)
-                                return (0, F.D)(t, h, c, p, (e, t) =>
+                                return (0, V.D)(t, h, c, p, (e, t) =>
                                     (0, eM.o)({
                                         menuItemProps: t,
                                         menuName: e,
@@ -528,12 +528,12 @@ class ez extends r.PureComponent {
                                                 n.e("79695"),
                                                 n.e("66165"),
                                                 n.e("56826"),
-                                                n.e("10493"),
+                                                n.e("31589"),
                                             ]).then(n.bind(n, 131404));
                                             return (n) =>
                                                 (0, i.jsx)(
                                                     t,
-                                                    eV(eH({}, n), {
+                                                    eF(eH({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
                                                         user: h,
@@ -556,12 +556,12 @@ class ez extends r.PureComponent {
                                             let { default: t } = await Promise.all([
                                                 n.e("79695"),
                                                 n.e("66165"),
-                                                n.e("92775"),
+                                                n.e("49062"),
                                             ]).then(n.bind(n, 354589));
                                             return (n) =>
                                                 (0, i.jsx)(
                                                     t,
-                                                    eV(eH({}, n), {
+                                                    eF(eH({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
                                                         showChatItems: d === ek.AEg.MINIMUM || d === ek.AEg.NORMAL,
@@ -592,12 +592,12 @@ class ez extends r.PureComponent {
                                                     n.e("66165"),
                                                     n.e("8982"),
                                                     n.e("7717"),
-                                                    n.e("87157"),
+                                                    n.e("96306"),
                                                 ]).then(n.bind(n, 757387));
                                                 return (n) =>
                                                     (0, i.jsx)(
                                                         t,
-                                                        eV(eH({}, n), {
+                                                        eF(eH({}, n), {
                                                             showMediaItems: !0,
                                                             showChannelCallItems: !0,
                                                             showChatItems: !1,
@@ -641,7 +641,7 @@ class ez extends r.PureComponent {
                     n = async () => {
                         (null == t ? void 0 : t.applicationId) != null && (await (0, E.nJ)(t.applicationId, e.id));
                         let n = e.getGuildId();
-                        null != n && (0, V.uL)((0, eg.LY)(n)), B.hP(e);
+                        null != n && (0, F.uL)((0, eg.LY)(n)), B.hP(e);
                     };
                 null == t || (0, j.R)() ? n() : (0, I.Z)({ onConfirm: n });
             }),
@@ -909,8 +909,8 @@ let eW = function (e) {
             layout: k,
             participantsOpen: D,
             participantsListOpen: B,
-            chatOpen: V,
-            selectedParticipant: F,
+            chatOpen: F,
+            selectedParticipant: V,
         } = (0, u.cj)([e_.Z], () => {
             let e = y === ek.IlC.POPOUT,
                 t = e_.Z.getMode(n.id);
@@ -934,8 +934,8 @@ let eW = function (e) {
         z = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
         { selectedStream: W } = (0, u.cj)(
             [el.Z],
-            () => ({ selectedStream: null != F ? el.Z.getActiveStreamForStreamKey(F.id) : null }),
-            [F],
+            () => ({ selectedStream: null != V ? el.Z.getActiveStreamForStreamKey(V.id) : null }),
+            [V],
         ),
         q = (0, u.e7)([ec.Z], () => ec.Z.getGuild(n.getGuildId())),
         K = (0, u.e7)([es.Z], () => es.Z.getCall(n.id), [n.id]),
@@ -1009,11 +1009,11 @@ let eW = function (e) {
                             filteredParticipants: T,
                             participantsVersion: A,
                             layout: k,
-                            chatOpen: V,
+                            chatOpen: F,
                             maxSidebarWidth: eE,
                             shouldUseVoiceEffectsActionBar: eb,
                             currentUserId: X,
-                            selectedParticipant: F,
+                            selectedParticipant: V,
                             allActiveStreams: z,
                             useNewInviteButton: eh,
                             connectedEmbeddedActivity: null != eg ? eg : void 0,

@@ -1,15 +1,15 @@
 n.d(t, {
     _Y: () => T,
     aB: () => E,
-    th: () => O,
-    ub: () => N,
+    th: () => N,
+    ub: () => O,
 }),
     n(388685),
     n(457542);
 var a = n(473749),
     l = n(524437),
-    r = n(809206),
-    i = n(153867),
+    i = n(809206),
+    r = n(153867),
     s = n(857595),
     o = n(607070),
     c = n(1870),
@@ -46,7 +46,7 @@ async function E() {
                 let e = j.qt[l];
                 t = null != (n = null == e ? void 0 : e.theme) ? n : v.BRd.DARK;
             } else t = S([v.BRd.DARK, v.BRd.DARKER, v.BRd.MIDNIGHT]);
-            await i.ZI(
+            await r.ZI(
                 {
                     theme: t,
                     backgroundGradientPresetId: null != l ? l : void 0,
@@ -56,7 +56,7 @@ async function E() {
             );
         } else {
             let e = S(y);
-            await i.ZI(
+            await r.ZI(
                 {
                     theme: e,
                     backgroundGradientPresetId: void 0,
@@ -67,7 +67,7 @@ async function E() {
         }
     } catch (e) {}
 }
-async function O() {
+async function N() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
@@ -84,8 +84,8 @@ async function O() {
                 (0, u.Wh)(e);
             }
             let e = g.Z.getAllPending(),
-                i = (0, m.ED)(e);
-            await (0, r.Mn)(i).finally(r.si);
+                r = (0, m.ED)(e);
+            await (0, i.Mn)(r).finally(i.si);
         } catch (e) {}
 }
 function T() {
@@ -98,7 +98,7 @@ function T() {
         h.YC.updateSetting(n);
     } catch (e) {}
 }
-function N() {
+function O() {
     a.useEffect(() => {
         var e, t, n, a, l;
         let b = f.default.getCurrentUser(),
@@ -109,15 +109,15 @@ function N() {
             C = p.Z.theme,
             S = v.backgroundGradientPresetId,
             E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            O = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            N = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
             T = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
-            N = null != O && null != (l = y.find((e) => e.skuId === O)) ? l : null,
+            O = null != N && null != (l = y.find((e) => e.skuId === N)) ? l : null,
             P = o.Z.fontSize,
             I = o.Z.messageGroupSpacing,
             w = h.YC.getSetting();
         return () => {
             try {
-                i.ZI(
+                r.ZI(
                     {
                         theme: C,
                         backgroundGradientPresetId: null != S ? S : void 0,
@@ -126,10 +126,10 @@ function N() {
                     x.fy.INFREQUENT_USER_ACTION,
                 ),
                     (0, u.PO)(T),
-                    (0, u.Wh)(N);
+                    (0, u.Wh)(O);
                 let e = g.Z.getAllPending(),
                     t = (0, m.ED)(e);
-                (0, r.Mn)(t).finally(r.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
+                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
             } catch (e) {}
         };
     }, []);

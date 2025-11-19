@@ -28,7 +28,7 @@ var r = n(54381),
     R = n(474936),
     P = n(981631),
     D = n(388032),
-    w = n(184388),
+    w = n(677599),
     L = n(865215);
 let x = (e) => {
     let { userId: t } = e;
@@ -38,19 +38,19 @@ let x = (e) => {
         });
     }, [t]),
         i.useEffect(() => {
-            j(!0);
+            k(!0);
         }, []),
         (0, p.z)(_.X);
     let n = i.useRef(null),
         a = i.useRef(null),
         x = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
-        [M, j] = i.useState(!1),
-        k = (0, y.$)(),
+        [M, k] = i.useState(!1),
+        j = (0, y.$)(),
         U = i.useRef(null),
         [G, B] = i.useState(!1),
         [Z, F] = i.useState(!1),
-        V = null != k && null != x && x.status === P.O0b.CANCELED,
-        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, k, x),
+        V = null != j && null != x && x.status === P.O0b.CANCELED,
+        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, j, x),
         Y = !Z && V,
         { analyticsLocations: W } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [K, z] = i.useState(!1),
@@ -82,7 +82,7 @@ let x = (e) => {
                                               buttonVisibilityRef: U,
                                               className: w.heroHeading,
                                               enablePremiumBrandRefresh: X,
-                                              userDiscountOffer: k,
+                                              userDiscountOffer: j,
                                               discountedPrice: H,
                                           }),
                                       }),
@@ -141,7 +141,7 @@ let x = (e) => {
                               (0, r.jsx)(v.Z, {
                                   isVisible: Y && M,
                                   premiumSubscription: x,
-                                  churnDiscountOffer: k,
+                                  churnDiscountOffer: j,
                                   discountedPrice: H,
                               }),
                       ],

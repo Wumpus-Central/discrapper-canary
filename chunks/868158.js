@@ -1,6 +1,6 @@
 n.d(t, {
     Eb: () => w,
-    Fx: () => j,
+    Fx: () => k,
     IM: () => L,
     J2: () => F,
     r$: () => D,
@@ -107,15 +107,15 @@ function D(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = S(e, ["guilds", "merged_members", "merged_presences"]);
-    let s = k(P, null == a ? void 0 : a.friends),
+    let s = j(P, null == a ? void 0 : a.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = k(P, null == a ? void 0 : a.guilds[t]),
-                              r = k(P, null == i ? void 0 : i[t]);
+                          let n = j(P, null == a ? void 0 : a.guilds[t]),
+                              r = j(P, null == i ? void 0 : i[t]);
                           return T(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -162,7 +162,7 @@ function L(e, t, n) {
         { users: a, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ["users", "relationships", "private_channels", "merged_members", "guilds"]);
     G(n);
-    let f = k((P = o().keyBy(a, (e) => e.id)), s);
+    let f = j((P = o().keyBy(a, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
@@ -176,7 +176,7 @@ function L(e, t, n) {
                 null == u
                     ? void 0
                     : u.map((e, t) =>
-                          !0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), Z(e)),
+                          !0 === e.unavailable ? e : ((e.members = j(P, null == c ? void 0 : c[t])), Z(e)),
                       ))
                 ? r
                 : [],
@@ -199,7 +199,7 @@ function M(e) {
     let t = p.Z.getGuildEmojis(e);
     return null != t ? Object.values(t) : null;
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     let r = E.Z.getGuild(e.id),
         i = F(
@@ -221,7 +221,7 @@ function j(e, t) {
         i
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = [];
     return (
         null == t ||

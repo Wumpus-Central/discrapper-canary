@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(864879),
     x = n(238649),
     M = n(47840),
-    j = n(975978),
-    k = n(836332),
+    k = n(975978),
+    j = n(836332),
     U = n(903250),
     G = n(954003),
     B = n(664134),
@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(474936),
     V = n(981631),
     H = n(231338),
-    Y = n(650714),
-    W = n(909197),
+    Y = n(379039),
+    W = n(810392),
     K = n(107283);
 let z = () => {
     (0, m.z)(h.X);
@@ -186,7 +186,7 @@ let z = () => {
                         (0, r.jsx)("div", {
                             className: eA.planComparisonTableContainer,
                             ref: eS.ref,
-                            children: em ? (0, r.jsx)(j.Z, {}) : (0, r.jsx)(w.Z, {}),
+                            children: em ? (0, r.jsx)(k.Z, {}) : (0, r.jsx)(w.Z, {}),
                         }),
                     ],
                 }),
@@ -217,7 +217,7 @@ let z = () => {
                     },
                     children: em
                         ? (0, r.jsx)(L.Z, { ref: q })
-                        : (0, r.jsx)(k.Z, {
+                        : (0, r.jsx)(j.Z, {
                               ref: q,
                               isFooterVisible: et,
                               isDarkMode: J,

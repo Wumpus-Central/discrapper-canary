@@ -29,7 +29,7 @@ var r = n(54381),
     L = n(215023),
     B = n(981631),
     P = n(388032),
-    N = n(687983);
+    N = n(310582);
 let A = (e) => {
         var t, n, i;
         let { handleTransition: c, numVisibleItems: u, isFetchingCategories: f, tab: b } = e,

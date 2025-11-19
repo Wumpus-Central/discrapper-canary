@@ -6,9 +6,9 @@ n.d(t, {
     n(388685);
 var a,
     l = n(54381),
-    r = n(473749),
-    i = n(120356),
-    s = n.n(i),
+    i = n(473749),
+    r = n(120356),
+    s = n.n(r),
     o = n(755721),
     c = n(481060),
     d = n(393238),
@@ -16,7 +16,7 @@ var a,
     m = n(823379),
     p = n(246992),
     h = n(252899),
-    x = n(866403),
+    x = n(451429),
     g =
         (((a = {}).NONE = ""),
         (a.DISMISSIBLE_CONTENT = "Dismissible Content"),
@@ -48,40 +48,40 @@ let f = [
         "Audio / Video",
         "Development",
     ],
-    b = r.forwardRef(function (e, t) {
-        let { id: n, selected: a, onClick: r, children: i } = e;
+    b = i.forwardRef(function (e, t) {
+        let { id: n, selected: a, onClick: i, children: r } = e;
         return (0, l.jsx)(c.P3F, {
             className: s()(x.tabItem, { [x.selected]: a }),
             "data-tab-id": n,
             innerRef: t,
-            onClick: r,
-            children: i,
+            onClick: i,
+            children: r,
         });
     });
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
-        i = r.useRef(new Map()),
-        [s, g] = r.useState(() => new Set()),
+        r = i.useRef(new Map()),
+        [s, g] = i.useState(() => new Set()),
         { ref: f, width: v } = (0, d.ZP)(),
-        j = r.useRef(null),
+        j = i.useRef(null),
         _ = (0, h.F)(t, a);
-    r.useEffect(() => {
-        var e, a, l, r;
+    i.useEffect(() => {
+        var e, a, l, i;
         if (null == v) return;
         let s = new Set(),
             o = null != v ? v : 0;
         for (let c of ((o -=
-            null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0),
+            null != (a = null == (e = r.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0),
         t))
             c.id !== n &&
                 (o -=
-                    null != (r = null == (l = i.current.get(c.id)) ? void 0 : l.getBoundingClientRect().width)
-                        ? r
+                    null != (i = null == (l = r.current.get(c.id)) ? void 0 : l.getBoundingClientRect().width)
+                        ? i
                         : 0) < 0 &&
                 s.add(c.id);
         g(s);
     }, [t, v, f, n]);
-    let y = r.useCallback(
+    let y = i.useCallback(
         (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.v2r, {
@@ -104,7 +104,7 @@ function v(e) {
                 children: [
                     t
                         .map((e) => {
-                            let { id: t, name: r } = e;
+                            let { id: t, name: i } = e;
                             if (!s.has(t))
                                 return (0, l.jsx)(
                                     b,
@@ -112,7 +112,7 @@ function v(e) {
                                         id: t,
                                         selected: n === t,
                                         onClick: n !== t ? () => a(t) : void 0,
-                                        children: r,
+                                        children: i,
                                     },
                                     t,
                                 );
@@ -121,17 +121,17 @@ function v(e) {
                     (0, l.jsx)("div", {
                         className: x.tabMeasurer,
                         children: t.map((e) => {
-                            let { id: t, name: r } = e;
+                            let { id: t, name: i } = e;
                             return (0, l.jsx)(
                                 b,
                                 {
                                     id: t,
                                     selected: n === t,
                                     ref: (e) => {
-                                        i.current.set(t, e);
+                                        r.current.set(t, e);
                                     },
                                     onClick: n !== t ? () => a(t) : void 0,
-                                    children: r,
+                                    children: i,
                                 },
                                 t,
                             );
@@ -213,11 +213,11 @@ function v(e) {
     });
 }
 function j(e, t) {
-    var n, a, i;
+    var n, a, r;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
-        [d, u] = r.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
+        [d, u] = i.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
     return {
-        TabBar: r.useCallback(
+        TabBar: i.useCallback(
             () =>
                 (0, l.jsx)(v, {
                     tabs: s,
@@ -228,7 +228,7 @@ function j(e, t) {
                 }),
             [d, u, c, ...t],
         ),
-        renderSelectedTab: null != (i = null == (a = s.find((e) => e.id === d)) ? void 0 : a.render) ? i : () => null,
+        renderSelectedTab: null != (r = null == (a = s.find((e) => e.id === d)) ? void 0 : a.render) ? r : () => null,
         selectedTabId: d,
     };
 }

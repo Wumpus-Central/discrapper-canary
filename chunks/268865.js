@@ -5,7 +5,7 @@ var l = n(567400),
     i = n(429368),
     a = n(786040),
     s = n(143941),
-    o = n(619550);
+    o = n(652100);
 let c = (e) => {
         let { product: t, selectedVariantIndex: n, isCardHovered: l } = e;
         return (0, r.jsx)(s.a, {

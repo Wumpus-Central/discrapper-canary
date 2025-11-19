@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(112843),
     y = n(524484),
     O = n(388032),
-    v = n(892879);
+    v = n(749714);
 function I(e, t, n) {
     return (
         t in e
@@ -149,7 +149,7 @@ function M(e) {
         children: t,
     });
 }
-function j(e) {
+function k(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
@@ -197,7 +197,7 @@ function j(e) {
         onChange: s,
     });
 }
-function k(e) {
+function j(e) {
     let {
             settings: {
                 enabled: t,
@@ -500,7 +500,7 @@ function V(e) {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t.AtCukI),
                 }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     settings: a,
                     updateSettings: h,
                 }),
@@ -513,7 +513,7 @@ function V(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     settings: a,
                     updateSettings: h,
                 }),

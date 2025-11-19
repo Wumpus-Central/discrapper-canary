@@ -43,8 +43,8 @@ var r = n(512722),
     L = n(508569),
     x = n(183139),
     M = n(645436),
-    j = n(866483),
-    k = n(833508),
+    k = n(866483),
+    j = n(833508),
     U = n(981631);
 function G(e, t, n) {
     return (
@@ -104,7 +104,7 @@ function Y(e) {
     let { actuallySkipped: t, reason: n } = e;
     if (!(0, P.n)()) return;
     let r = M.a(),
-        i = j.Pf(),
+        i = k.Pf(),
         a = m.Z.getState(),
         o = i.length > 0 ? "".concat(n, " + ").concat(i) : n,
         s = r ? "paused" : "request_state";
@@ -122,7 +122,7 @@ function Y(e) {
                     client_app_state: m.Z.getState(),
                     skip_context: s,
                     original_connect_reason: o,
-                    gateway_connect_reasons: j.Pf(),
+                    gateway_connect_reasons: k.Pf(),
                 });
             }, 200);
 }
@@ -156,7 +156,7 @@ function W(e) {
                 (d = l.state.messages),
                 (f = l.state.clientState);
         }
-    null == t && ((t = (0, k.Z)(n)).binaryType = "arraybuffer"),
+    null == t && ((t = (0, j.Z)(n)).binaryType = "arraybuffer"),
         r(t),
         c && i(u, f),
         null != d && d.forEach(a),
@@ -235,7 +235,7 @@ class ei extends x.Z {
     _connect(e) {
         if (!this.willReconnect()) return void V.verbose("Skipping _connect because willReconnect is false");
         let t = M.a();
-        if ((t || !j.RZ()) && (V.info("Skipping _connect because socket is paused"), Y({ reason: e }), t)) return;
+        if ((t || !k.RZ()) && (V.info("Skipping _connect because socket is paused"), Y({ reason: e }), t)) return;
         (this.connectionState = C.Z.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let n = this.compressionHandler.getAlgorithm(),
             r = H.getName(),
@@ -732,7 +732,7 @@ class ei extends x.Z {
     }
     networkStateChange(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        j.RZ() ||
+        k.RZ() ||
             Y({
                 reason: t,
                 actuallySkipped: !1,

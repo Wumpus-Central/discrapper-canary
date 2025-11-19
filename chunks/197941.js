@@ -52,7 +52,7 @@ let E = {
                         : null != u
                           ? (0, s.WH)(p.guild_id, p.id, { pid: u.pid })
                           : (0, l.ZDy)(async () => {
-                                let { default: e } = await Promise.all([n.e("4093"), n.e("33840")]).then(
+                                let { default: e } = await Promise.all([n.e("4093"), n.e("47863")]).then(
                                     n.bind(n, 60594),
                                 );
                                 return (t) => {

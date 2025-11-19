@@ -15,7 +15,7 @@ var i = n(54381),
     f = n(485386),
     h = n(768581),
     x = n(388032),
-    j = n(310625);
+    j = n(144645);
 function v(e) {
     var t;
     let { guild: n, applicationIntegration: v } = e,

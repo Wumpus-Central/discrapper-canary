@@ -36,8 +36,8 @@ var r = n(54381),
     L = n(74551),
     x = n(981631),
     M = n(388032),
-    j = n(912960);
-function k(e, t, n) {
+    k = n(125919);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -121,7 +121,7 @@ function H(e) {
     return (0, r.jsx)(p.VqE, {
         "aria-label": M.intl.string(M.t["2pAkDA"]),
         children: (0, r.jsxs)("div", {
-            className: j.popoutContainer,
+            className: k.popoutContainer,
             children: [
                 (0, r.jsx)(y.h4, {
                     icon: p.plf,
@@ -217,7 +217,7 @@ function K(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: j.messagesScroller,
+                                    className: k.messagesScroller,
                                 },
                                 o,
                             ),
@@ -267,10 +267,10 @@ function z(e) {
         );
     return null != s && null != t.message && c
         ? (0, r.jsxs)("div", {
-              className: j.messageContainer,
+              className: k.messageContainer,
               children: [
                   (0, r.jsx)(p.P3F, {
-                      className: j.clickableMessageBackground,
+                      className: k.clickableMessageBackground,
                       onClick: l,
                       "aria-label": M.intl.string(M.t["+TSRGD"]),
                   }),
@@ -286,7 +286,7 @@ function z(e) {
                       {
                           message: t.message,
                           channel: s,
-                          className: j.message,
+                          className: k.message,
                           compact: O.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: V,
@@ -295,7 +295,7 @@ function z(e) {
                       t.message.id,
                   ),
                   (0, r.jsx)(b.ZP, {
-                      className: j.hoverBar,
+                      className: k.hoverBar,
                       children: (0, r.jsx)(X, {
                           savedMessage: t,
                           jumpToMessage: l,
@@ -304,10 +304,10 @@ function z(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(j.messageContainer, j.deletedMessage),
+              className: o()(k.messageContainer, k.deletedMessage),
               children: [
                   (0, r.jsx)("div", {
-                      className: j.deleteIcon,
+                      className: k.deleteIcon,
                       children: (0, r.jsx)(p.Mgn, {
                           size: "xxs",
                           color: p.TVs.colors.INTERACTIVE_ACTIVE,
@@ -319,7 +319,7 @@ function z(e) {
                       children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+j"]) : M.intl.string(M.t.o572Fe),
                   }),
                   (0, r.jsx)(b.ZP, {
-                      className: j.hoverBar,
+                      className: k.hoverBar,
                       children: (0, r.jsx)(
                           b.sF,
                           {

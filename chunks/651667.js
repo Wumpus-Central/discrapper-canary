@@ -1,5 +1,5 @@
 function a(e) {
-    var t, n, a, l, r, i, s, o, c, d;
+    var t, n, a, l, i, r, s, o, c, d;
     let u = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
@@ -27,7 +27,7 @@ function a(e) {
                 ? d
                 : "",
         provider:
-            null == (i = e.tenant_metadata) || null == (r = i.guild_monetization) || null == (l = r.game_server)
+            null == (r = e.tenant_metadata) || null == (i = r.guild_monetization) || null == (l = i.game_server)
                 ? void 0
                 : l.provider,
         plans: u,

@@ -2,15 +2,15 @@ n.d(t, { U: () => x });
 var a = n(54381);
 n(473749);
 var l = n(442837),
-    r = n(755721),
-    i = n(481060),
+    i = n(755721),
+    r = n(481060),
     s = n(767714),
     o = n(594174),
     c = n(74538),
     d = n(921944),
     u = n(474936),
     m = n(388032),
-    p = n(716537),
+    p = n(972979),
     h = n(217379);
 function x(e) {
     let { markAsDismissed: t, onCTA: n } = e,
@@ -21,10 +21,10 @@ function x(e) {
         children: (0, a.jsxs)("div", {
             className: p.content,
             children: [
-                (0, a.jsx)(i.P3F, {
+                (0, a.jsx)(r.P3F, {
                     className: p.closeIcon,
                     onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, a.jsx)(i.Dio, { size: "xs" }),
+                    children: (0, a.jsx)(r.Dio, { size: "xs" }),
                 }),
                 (0, a.jsx)("img", {
                     src: h,
@@ -33,13 +33,13 @@ function x(e) {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             className: p.title,
                             children: m.intl.string(m.t.PRXV49),
                         }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(r.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: m.intl.string(m.t["RSHtF+"]),
@@ -47,7 +47,7 @@ function x(e) {
                     ],
                 }),
                 g
-                    ? (0, a.jsx)(i.Button, {
+                    ? (0, a.jsx)(r.Button, {
                           text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,
                           onClick: () => {
@@ -60,8 +60,8 @@ function x(e) {
                           },
                           showGradient: !0,
                           subscriptionTier: u.Si.TIER_2,
-                          size: r.zx.Sizes.LARGE,
-                          color: r.zx.Colors.CUSTOM,
+                          size: i.zx.Sizes.LARGE,
+                          color: i.zx.Colors.CUSTOM,
                           textOptions: { textOverride: m.intl.string(m.t.pj0XBN) },
                           className: p.button,
                       }),

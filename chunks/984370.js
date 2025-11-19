@@ -22,7 +22,7 @@ var i = n(873546),
     E = n(665149),
     b = n(981631),
     y = n(176505),
-    O = n(477962);
+    O = n(979905);
 function v(e, t, n) {
     return (
         t in e
@@ -131,8 +131,8 @@ function R(e) {
         } = e,
         x = null == s || (0, y.AB)(s) ? null : s,
         M = (0, a.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
-        j = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
-        { enabled: k, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
+        k = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
+        { enabled: j, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
     function B() {
         if (null == T) return null;
@@ -154,17 +154,17 @@ function R(e) {
                             )
                           : null,
                       w && (0, r.jsx)(E.ZP.Divider, {}),
-                      k && !U ? (0, r.jsx)(f.Z, {}) : null,
+                      j && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
                           M &&
                           null != x &&
-                          !j &&
+                          !k &&
                           l === b.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
                               className: O.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(E.ZP.Divider, {}),
-                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !j) }),
+                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !k) }),
                               ],
                           }),
                   ],

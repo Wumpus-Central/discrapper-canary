@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(30513),
     d = n(981631),
     u = n(388032),
-    g = n(124437);
+    g = n(131115);
 function m(e) {
     let { guild: t, banner: n } = e;
     return (0, r.jsx)("div", {

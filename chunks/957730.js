@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -183,7 +183,7 @@ let V = f.Z.RULES,
                     !(i = G(
                         "@",
                         e,
-                        t.users.map((e) => U(j({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) => U(k({}, e), { text: e.text.split("#")[0] })),
                         "mention",
                     ))
                 )
@@ -277,7 +277,7 @@ let V = f.Z.RULES,
                       };
             },
         },
-        text: U(j({}, H), {
+        text: U(k({}, H), {
             match: (e, t) =>
                 "string" == typeof t.textExclusions && "" !== t.textExclusions
                     ? (0, _.T9)(t.textExclusions).exec(e)
@@ -382,14 +382,14 @@ let V = f.Z.RULES,
             match: o().anyScopeRegex(w.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
-        timestamp: U(j({}, V.timestamp), {
+        timestamp: U(k({}, V.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                 let r = V.timestamp.parse(...t);
                 return "text" === r.type ? { content: r.content } : { content: r.formatted };
             },
         }),
-        text: j({}, H),
+        text: k({}, H),
     };
 [J, $].forEach((e) => {
     Object.keys(e).forEach((t, n) => {

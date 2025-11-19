@@ -32,8 +32,8 @@ var r = n(278074),
     L = n(413605),
     x = n(366980),
     M = n(467512),
-    j = n(779832),
-    k = n(786761),
+    k = n(779832),
+    j = n(786761),
     U = n(459618),
     G = n(541288),
     B = n(3148),
@@ -137,8 +137,8 @@ function ew(e, t) {
 let eL = null,
     ex = new I.Z("MessageActionCreators"),
     eM = new I.Z("MessageQueue"),
-    ej = !1;
-class ek {
+    ek = !1;
+class ej {
     markComplete() {
         this.completed = !0;
     }
@@ -598,7 +598,7 @@ let eV = {
                     rejectWithError: !1,
                 })
                 .then((e) => {
-                    if (e.body.length > 0) return (0, k.e5)(e.body[0]);
+                    if (e.body.length > 0) return (0, j.e5)(e.body[0]);
                 });
         },
         fetchMessages(e) {
@@ -646,7 +646,7 @@ let eV = {
             let O = c.Z.getOrCreate(t).loadStart(y);
             c.Z.commit(O), s.Z.dispatch({ type: "LOAD_MESSAGES" });
             let v = null == y ? void 0 : y.messageId,
-                I = new ek();
+                I = new ej();
             return (
                 d || this.fetchLocalMessages(t, n, r, i, I),
                 a.tn
@@ -872,7 +872,7 @@ let eV = {
             let o = null != (n = i.nonce) ? n : (0, Z.r)();
             i = ew(eP({}, i), { nonce: o });
             let s = () => eH._sendMessage(e, t, i),
-                l = j.ZP.backgroundify(s, void 0);
+                l = k.ZP.backgroundify(s, void 0);
             return (U.Z.recordMessageSendAttempt(e, o, i), eu.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
@@ -1067,8 +1067,8 @@ let eV = {
                     messageReference: w,
                     allowedMentions: L,
                     poll: x,
-                    sharedCustomTheme: j,
-                    contentInventoryEntry: k,
+                    sharedCustomTheme: k,
+                    contentInventoryEntry: j,
                     attachments: K,
                     attachmentsToUpload: $,
                     onAttachmentUploadError: ee,
@@ -1085,8 +1085,8 @@ let eV = {
                 null == I &&
                 null == C &&
                 null == x &&
-                null == j &&
                 null == k &&
+                null == j &&
                 !eu &&
                 (null == K || 0 === K.length) &&
                 !ei &&
@@ -1107,16 +1107,16 @@ let eV = {
                     flags: 0 !== ea ? ea : void 0,
                     nonce: ef,
                     poll: (0, Y.x9)(x),
-                    sharedCustomTheme: j,
+                    sharedCustomTheme: k,
                 });
             if (
                 (!1 !== n.eagerDispatch &&
                     ((0, V.EL)(e, eE.id),
                     null != C && (eE.sticker_items = C.map((e) => en.Z.getStickerById(e)).filter((e) => null != e)),
                     eH.receiveMessage(e, eE, !0, n)),
-                !ej && null != E && E.length > 0)
+                !ek && null != E && E.length > 0)
             ) {
-                ej = !0;
+                ek = !0;
                 let t = eh.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: r } = eH.validateMessage(E, t, e);
                 eH.sendBotMessage(e, n, r);
@@ -1164,11 +1164,11 @@ let eV = {
             }
             if (
                 (null != x && (eb.message.poll = x),
-                null != j && (eb.message.shared_client_theme = j),
+                null != k && (eb.message.shared_client_theme = k),
                 null != C && (eb.message.sticker_ids = C),
                 H.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
                 ei && (eb.message.with_checkpoint = !0),
-                null != k && (eb.message.content_inventory_entry = k),
+                null != j && (eb.message.content_inventory_entry = j),
                 null != D && ((eb.message.confetti_potion = (0, q.vY)(D)), D.callback()),
                 null != K && K.length > 0 && (eb.message.attachments = K),
                 null != $ && $.length > 0)
@@ -1332,7 +1332,7 @@ let eV = {
                                               ? s.Z.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" })
                                               : o.body.code === eT.evJ.EXPLICIT_CONTENT
                                                 ? (t = eC.xi.EXPLICIT_CONTENT)
-                                                : null != x || eu || null != k || eH.sendClydeError(e, o.body.code);
+                                                : null != x || eu || null != j || eH.sendClydeError(e, o.body.code);
                                 i
                                     ? eH.deleteMessage(e, e_, !0)
                                     : (null != h &&

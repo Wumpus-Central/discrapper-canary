@@ -4,7 +4,7 @@ m(473749);
 var i = m(120356),
     r = m.n(i),
     s = m(162190),
-    c = m(740000);
+    c = m(205582);
 function n(e) {
     let { instance: a } = e,
         m = (0, s.Z)(a.gameId, "cover");

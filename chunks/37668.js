@@ -12,7 +12,7 @@ var n = e(54381),
     x = e(872269),
     h = e(228168),
     w = e(388032),
-    g = e(817638);
+    g = e(107669);
 function v(t) {
     let { widget: i, user: e } = t;
     return (0, n.jsx)(p.Z, {

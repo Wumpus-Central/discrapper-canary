@@ -22,7 +22,7 @@ var i = n(120356),
     g = n(95291),
     E = n(390966),
     b = n(388032),
-    y = n(726768);
+    y = n(396934);
 function O(e) {
     let { className: t, creator: n, guildId: i, isNew: m, guildEvent: g, eventPreview: O, recurrenceId: v } = e,
         I = (0, _.Z)(i, g.id, v),

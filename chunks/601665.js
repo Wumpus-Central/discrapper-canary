@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(161572),
     S = n(671955),
     A = n(388032),
-    C = n(593540);
+    C = n(116649);
 function N(e, t, n) {
     return (
         t in e
@@ -64,11 +64,11 @@ function P(e) {
             openedAt: L,
             closePopout: x,
             setPopoutRef: M,
-            disableUserProfileLink: j = __OVERLAY__,
-            newAnalyticsLocations: k = [],
+            disableUserProfileLink: k = __OVERLAY__,
+            newAnalyticsLocations: j = [],
             disableAutoFocus: U = !1,
         } = e,
-        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...j, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -98,7 +98,7 @@ function P(e) {
                 );
         },
         W = () =>
-            j
+            k
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "view-profile",
@@ -165,7 +165,7 @@ function P(e) {
                                         guildId: N,
                                         channelId: P,
                                         themeType: S.l.POPOUT,
-                                        onOpenProfile: j ? void 0 : Y,
+                                        onOpenProfile: k ? void 0 : Y,
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         user: t,
@@ -181,7 +181,7 @@ function P(e) {
                                 displayProfile: Z,
                                 guild: F,
                                 isHoveringOrFocusing: H,
-                                onOpenProfile: j ? void 0 : Y,
+                                onOpenProfile: k ? void 0 : Y,
                                 channelId: P,
                                 onClose: x,
                             }),

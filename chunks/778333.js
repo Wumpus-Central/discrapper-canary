@@ -15,7 +15,7 @@ var r = n(54381),
     m = n(51144),
     g = n(981631),
     E = n(388032),
-    b = n(739236);
+    b = n(105341);
 function y(e) {
     var t;
     let { invite: n, message: y, getAcceptInviteContext: O } = e,

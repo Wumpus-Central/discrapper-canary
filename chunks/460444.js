@@ -927,8 +927,8 @@
                             }
                             var x = [],
                                 M = [],
-                                j = [];
-                            function k() {
+                                k = [];
+                            function j() {
                                 var e = a.preRun.shift();
                                 x.unshift(e);
                             }
@@ -1729,7 +1729,7 @@
                                 return ((e + n) >>> 0) % eS.length;
                             }
                             function ex(e, t) {
-                                var n = 16384 == (61440 & e.mode) ? ((n = ek(e, "x")) ? n : 2 * !e.j.ja) : 54;
+                                var n = 16384 == (61440 & e.mode) ? ((n = ej(e, "x")) ? n : 2 * !e.j.ja) : 54;
                                 if (n) throw new eC(n);
                                 for (n = eS[eL(e.id, t)]; n; n = n.ec) {
                                     var r = n.name;
@@ -1742,11 +1742,11 @@
                                     (t = eL((e = new eP(e, t, n, r)).parent.id, e.name)), (e.ec = eS[t]), (eS[t] = e)
                                 );
                             }
-                            function ej(e) {
+                            function ek(e) {
                                 var t = ["r", "w", "rw"][3 & e];
                                 return 512 & e && (t += "w"), t;
                             }
-                            function ek(e, t) {
+                            function ej(e, t) {
                                 return eA
                                     ? 0
                                     : (t.includes("r") && !(292 & e.mode)) ||
@@ -1759,7 +1759,7 @@
                                 try {
                                     return ex(e, t), 20;
                                 } catch (e) {}
-                                return ek(e, "wx");
+                                return ej(e, "wx");
                             }
                             function eG(e) {
                                 if (!(e = eI[e])) throw new eC(8);
@@ -1869,9 +1869,9 @@
                                     (n = i
                                         ? 40960 == (61440 & i.mode)
                                             ? 32
-                                            : 16384 == (61440 & i.mode) && ("r" !== ej(t) || 512 & t)
+                                            : 16384 == (61440 & i.mode) && ("r" !== ek(t) || 512 & t)
                                               ? 31
-                                              : ek(i, ej(t))
+                                              : ej(i, ek(t))
                                         : 44)
                                 )
                                     throw new eC(n);
@@ -1880,7 +1880,7 @@
                                         throw new eC(63);
                                     if (16384 == (61440 & n.mode)) throw new eC(31);
                                     if (32768 != (61440 & n.mode)) throw new eC(28);
-                                    if ((r = ek(n, "w"))) throw new eC(r);
+                                    if ((r = ej(n, "w"))) throw new eC(r);
                                     n.j.P(n, {
                                         size: 0,
                                         timestamp: Date.now(),
@@ -2178,7 +2178,7 @@
                                     throw new e3(`Cannot pass deleted object as a pointer of type ${this.name}`);
                                 return tx(t.g.o, t.g.u.i, this.i);
                             }
-                            function tj(e, t) {
+                            function tk(e, t) {
                                 if (null === t) {
                                     if (this.La) throw new e3(`null is not a valid ${this.name}`);
                                     if (this.sa) {
@@ -2225,7 +2225,7 @@
                                 }
                                 return n;
                             }
-                            function tk(e, t) {
+                            function tj(e, t) {
                                 if (null === t) {
                                     if (this.La) throw new e3(`null is not a valid ${this.name}`);
                                     return 0;
@@ -2252,8 +2252,8 @@
                                     (this.ic = c),
                                     (this.O = u),
                                     i || void 0 !== t.C
-                                        ? (this.toWireType = tj)
-                                        : ((this.toWireType = r ? tM : tk), (this.L = null));
+                                        ? (this.toWireType = tk)
+                                        : ((this.toWireType = r ? tM : tj), (this.L = null));
                             }
                             var tG,
                                 tB,
@@ -3864,9 +3864,9 @@
                                                 a.postRun.length;
                                             ) {
                                                 var e = a.postRun.shift();
-                                                j.unshift(e);
+                                                k.unshift(e);
                                             }
-                                        J(j);
+                                        J(k);
                                     }
                                 }
                                 if (!(0 < U)) {
@@ -3875,7 +3875,7 @@
                                             "function" == typeof a.preRun && (a.preRun = [a.preRun]);
                                             a.preRun.length;
                                         )
-                                            k();
+                                            j();
                                     J(x),
                                         0 < U ||
                                             (a.setStatus
@@ -4599,14 +4599,14 @@
                         Fit: () => e,
                         Layout: () => O,
                         LoopType: () => s,
-                        Rive: () => j,
+                        Rive: () => k,
                         RiveEventType: () => a,
                         RiveFile: () => M,
                         RuntimeLoader: () => v,
                         StateMachineInput: () => I,
                         StateMachineInputType: () => i,
                         Testing: () => J,
-                        ViewModel: () => k,
+                        ViewModel: () => j,
                         ViewModelInstance: () => G,
                         ViewModelInstanceArtboard: () => q,
                         ViewModelInstanceAssetImage: () => z,
@@ -5891,7 +5891,7 @@
                             e
                         );
                     })(),
-                    j = (function () {
+                    k = (function () {
                         function t(e) {
                             var t,
                                 n = this;
@@ -6875,11 +6875,11 @@
                             }),
                             (t.prototype.viewModelByIndex = function (e) {
                                 var t = this.file.viewModelByIndex(e);
-                                return null !== t ? new k(t) : null;
+                                return null !== t ? new j(t) : null;
                             }),
                             (t.prototype.viewModelByName = function (e) {
                                 var t = this.file.viewModelByName(e);
-                                return null !== t ? new k(t) : null;
+                                return null !== t ? new j(t) : null;
                             }),
                             (t.prototype.enums = function () {
                                 if (null === this._dataEnums) {
@@ -6893,7 +6893,7 @@
                             (t.prototype.defaultViewModel = function () {
                                 if (this.artboard) {
                                     var e = this.file.defaultArtboardViewModel(this.artboard);
-                                    if (e) return new k(e);
+                                    if (e) return new j(e);
                                 }
                                 return null;
                             }),
@@ -6919,7 +6919,7 @@
                             t
                         );
                     })(),
-                    k = (function () {
+                    j = (function () {
                         function e(e) {
                             this._viewModel = e;
                         }

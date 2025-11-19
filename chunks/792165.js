@@ -16,7 +16,7 @@ var i = n(442837),
     m = n(474936),
     g = n(526761),
     E = n(388032),
-    b = n(538972);
+    b = n(262381);
 function y(e) {
     return e === m.PremiumTypes.TIER_2
         ? E.intl.string(E.t.jqO5Qn)

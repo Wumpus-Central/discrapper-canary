@@ -16,7 +16,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(636606),
+    c = n(790519),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -49,8 +49,8 @@ var i = n(54381),
     U = n(746877),
     B = n(541716),
     H = n(667829),
-    V = n(258696),
-    F = n(893718),
+    F = n(258696),
+    V = n(893718),
     G = n(273031),
     z = n(303628),
     W = n(981631),
@@ -58,8 +58,8 @@ var i = n(54381),
     K = n(224837),
     Y = n(200299),
     X = n(388032),
-    J = n(310069),
-    Q = n(744114);
+    J = n(593514),
+    Q = n(564355);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -164,7 +164,7 @@ let ei = r.memo(
             eI = null == (u = null == eO ? void 0 : eO.createThread) || u;
         s()(null != D, "chat input type must be set");
         let { analyticsLocations: eZ } = (0, v.ZP)(C.Z.CHANNEL_TEXT_AREA),
-            eT = (0, F.qz)(t),
+            eT = (0, V.qz)(t),
             eN = r.useRef(null),
             eA = r.useRef(null),
             ew = r.useRef(null),
@@ -185,18 +185,18 @@ let ei = r.memo(
                 disabled: eD,
                 canAttachFiles: eU,
                 canEveryoneSendMessages: eB,
-            } = (0, F.TE)(L, D, eR, I),
+            } = (0, V.TE)(L, D, eR, I),
             eH = !A.dN.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
-            eV = !eH || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
-            eF = (0, T.Z)(),
+            eF = !eH || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+            eV = (0, T.Z)(),
             { fontSize: eG } = (0, d.cj)([y.Z], () => ({
                 fontSize: y.Z.fontSize,
                 isSubmitButtonEnabled: y.Z.isSubmitButtonEnabled,
             })),
             ez = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
             eW = (0, N.NE)(L);
-        (0, F.hJ)(D, eD);
-        let { eventEmitter: eq, handleEditorSelectionChanged: eK } = (0, F.x2)(eA, p, h),
+        (0, V.hJ)(D, eD);
+        let { eventEmitter: eq, handleEditorSelectionChanged: eK } = (0, V.x2)(eA, p, h),
             eY = r.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -272,13 +272,13 @@ let ei = r.memo(
                 },
                 [ed, eE, eS, L.id, eI, eP, eW],
             ),
-            { submit: eX, handleSubmit: eJ } = (0, F.bL)(eY, D, eA, eM, L.id),
-            { autocompleteRef: eQ, handleMaybeShowAutocomplete: e$, handleHideAutocomplete: e0 } = (0, F.jx)(),
+            { submit: eX, handleSubmit: eJ } = (0, V.bL)(eY, D, eA, eM, L.id),
+            { autocompleteRef: eQ, handleMaybeShowAutocomplete: e$, handleHideAutocomplete: e0 } = (0, V.jx)(),
             e1 = r.useCallback(() => {
                 var e;
                 return null == eM || null == (e = eM.current) ? void 0 : e.hide();
             }, []),
-            { editorHeight: e2, handleResize: e3 } = (0, F.oR)(ei),
+            { editorHeight: e2, handleResize: e3 } = (0, V.oR)(ei),
             {
                 handleTab: e4,
                 handleEnter: e7,
@@ -314,13 +314,13 @@ let ei = r.memo(
                         [n],
                     ),
                 };
-            })(eQ, eN, eV),
-            { expressionPickerView: e5, shouldHideExpressionPicker: e6, handleOuterClick: e9 } = (0, F.iV)(D, eA),
-            te = (0, F.aT)(p),
-            { currentAutocompleteType: tt, handleAutocompleteVisibilityChange: tn } = (0, F.vB)(),
-            ti = (0, F.ae)(eA),
-            tr = (0, F.Sg)(eX, D, eA),
-            tl = (0, F.O1)({
+            })(eQ, eN, eF),
+            { expressionPickerView: e5, shouldHideExpressionPicker: e6, handleOuterClick: e9 } = (0, V.iV)(D, eA),
+            te = (0, V.aT)(p),
+            { currentAutocompleteType: tt, handleAutocompleteVisibilityChange: tn } = (0, V.vB)(),
+            ti = (0, V.ae)(eA),
+            tr = (0, V.Sg)(eX, D, eA),
+            tl = (0, V.O1)({
                 editorRef: eA,
                 disabled: eD,
                 textValue: p,
@@ -439,7 +439,7 @@ let ei = r.memo(
                                                             type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eU,
                                                             uploadPromptCharacterCount: W.en1,
-                                                            maxCharacterCount: null != em ? em : eF,
+                                                            maxCharacterCount: null != em ? em : eV,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eb,
                                                             onChange: Y,
@@ -487,7 +487,7 @@ let ei = r.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, i.jsx)(ea, { channel: L }),
-                                            (0, i.jsx)(V.Z, {
+                                            (0, i.jsx)(F.Z, {
                                                 type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eD,
                                                 channel: L,

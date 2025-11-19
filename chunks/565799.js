@@ -73,7 +73,7 @@ function x(e) {
 function M(e) {
     return null != e && e.isGuildStageVoice() && O.ZP.countVoiceStatesForChannel(e.id) > 0;
 }
-function j(e, t) {
+function k(e, t) {
     let n = p.Z.getChannel(e);
     return null != n && n.isGuildStageVoice()
         ? 0 === t.size()
@@ -81,16 +81,16 @@ function j(e, t) {
             : null == C.get(n.id) && C.set(n.id, n)
         : B(e);
 }
-function k(e) {
+function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
     return t.reduce((t, n) => {
         let r = x(n);
-        return e(r) ? (j(n, r), !0) : t;
+        return e(r) ? (k(n, r), !0) : t;
     }, !1);
 }
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
-    return k((t) => t.updateParticipant(e), t);
+    return j((t) => t.updateParticipant(e), t);
 }
 function G(e) {
     for (let t of C.values(e)) C.delete(t.id), delete R[t.id];
@@ -163,11 +163,11 @@ function J(e) {
                 null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), C.set(t.id, t)), e
             );
         }, []);
-    return k((e) => e.rebuild(), n), n.length > 0;
+    return j((e) => e.rebuild(), n), n.length > 0;
 }
 function $(e) {
     let { guildId: t } = e;
-    if (N.has(t)) return k((e) => e.rebuild(), D(t));
+    if (N.has(t)) return j((e) => e.rebuild(), D(t));
 }
 let ee = [];
 class et extends (r = l.ZP.Store) {

@@ -7,7 +7,7 @@ var i = n(876215),
     s = n(835473),
     o = n(594174),
     c = n(388032),
-    u = n(524086);
+    u = n(716587);
 function d(e) {
     let { item: t } = e,
         n = "contentInventory" === t.data.kind ? t.data.content : null,

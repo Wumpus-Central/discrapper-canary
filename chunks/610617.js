@@ -14,7 +14,7 @@ var a = t(54381),
     C = t(593214),
     p = t(378337),
     I = t(388032),
-    _ = t(873206);
+    _ = t(345986);
 function E(e) {
     let { transitionState: n, onClose: t, parentId: l } = e,
         c = (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds()[0]),

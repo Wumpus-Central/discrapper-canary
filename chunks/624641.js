@@ -79,8 +79,8 @@ function p(e) {
         L = w && ("replace" === n.selectionBehavior ? !D : !D || n.isEmpty),
         x = w && D && "replace" === n.selectionBehavior,
         M = L || x,
-        j = (0, _.useRef)(null),
-        k = M && D,
+        k = (0, _.useRef)(null),
+        j = M && D,
         U = (0, _.useRef)(!1),
         G = (0, _.useRef)(!1),
         B = n.getItemProps(p),
@@ -97,7 +97,7 @@ function p(e) {
     if (
         (E
             ? ((F.onPressStart = (e) => {
-                  (j.current = e.pointerType), (U.current = k), "keyboard" === e.pointerType && (!M || m()) && A(e);
+                  (k.current = e.pointerType), (U.current = j), "keyboard" === e.pointerType && (!M || m()) && A(e);
               }),
               I
                   ? ((F.onPressUp = L
@@ -116,8 +116,8 @@ function p(e) {
                             : "keyboard" !== e.pointerType && D && A(e);
                     }))
             : ((F.onPressStart = (e) => {
-                  (j.current = e.pointerType),
-                      (U.current = k),
+                  (k.current = e.pointerType),
+                      (U.current = j),
                       (G.current = L),
                       D && (("mouse" === e.pointerType && !L) || ("keyboard" === e.pointerType && (!w || m()))) && A(e);
               }),
@@ -148,17 +148,17 @@ function p(e) {
     let { pressProps: V, isPressed: H } = (0, u.r)(F),
         Y = x
             ? (e) => {
-                  "mouse" === j.current && (e.stopPropagation(), e.preventDefault(), Z(e));
+                  "mouse" === k.current && (e.stopPropagation(), e.preventDefault(), Z(e));
               }
             : void 0,
         { longPressProps: W } = (0, d.T)({
-            isDisabled: !k,
+            isDisabled: !j,
             onLongPress(e) {
                 "touch" === e.pointerType && (A(e), n.setSelectionBehavior("toggle"));
             },
         }),
         K = (e) => {
-            "touch" === j.current && U.current && e.preventDefault();
+            "touch" === k.current && U.current && e.preventDefault();
         },
         z =
             "none" !== T && n.isLink(p)
@@ -170,7 +170,7 @@ function p(e) {
         itemProps: (0, s.d)(
             C,
             D || L || (b && !O) ? V : {},
-            k ? W : {},
+            j ? W : {},
             {
                 onDoubleClick: Y,
                 onDragStartCapture: K,

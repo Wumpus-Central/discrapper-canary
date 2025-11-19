@@ -39,8 +39,8 @@ var r = n(54381),
     L = n(585483),
     x = n(630388),
     M = n(74538),
-    j = n(276554),
-    k = n(739566),
+    k = n(276554),
+    j = n(739566),
     U = n(421399),
     G = n(453687),
     B = n(318713),
@@ -49,7 +49,7 @@ var r = n(54381),
     V = n(935910),
     H = n(981631),
     Y = n(388032),
-    W = n(136907),
+    W = n(724913),
     K = n(121282);
 function z(e, t, n) {
     return (
@@ -168,7 +168,7 @@ let et = i.memo(function (e) {
             subscribeToGroupId: y,
             hideGuildTag: v,
         } = e,
-        I = (0, k.ZP)(t, n),
+        I = (0, j.ZP)(t, n),
         T = i.useMemo(
             () =>
                 (0, F.x)({
@@ -228,7 +228,7 @@ let et = i.memo(function (e) {
                 i = M.ZP.isPremium(P),
                 o = null == a ? void 0 : a.isPrivate();
             return (
-                (0, j.R)(null != c, "Message Username") &&
+                (0, k.R)(null != c, "Message Username") &&
                     n &&
                     !s &&
                     !o &&
@@ -366,8 +366,8 @@ function er(e) {
         R = i.useRef(null),
         [P, x] = i.useState(!1),
         { analyticsLocations: M } = (0, f.ZP)(d.Z.AVATAR),
-        j = (0, l.e7)([D.default], () => D.default.getCurrentUser()),
-        k = (0, l.e7)([N.ZP], () => {
+        k = (0, l.e7)([D.default], () => D.default.getCurrentUser()),
+        j = (0, l.e7)([N.ZP], () => {
             var e;
             return null != (e = o.displayCompactAvatars) ? e : N.ZP.displayCompactAvatars;
         }),
@@ -375,7 +375,7 @@ function er(e) {
         G = g ? J : $,
         { pendingAvatarDecoration: B } = (0, T.Z)({ guildId: c }),
         Z = (0, b.Ys)({
-            pendingValue: h.author.id === (null == j ? void 0 : j.id) ? B : void 0,
+            pendingValue: h.author.id === (null == k ? void 0 : k.id) ? B : void 0,
             userValue: null == (t = h.author) ? void 0 : t.avatarDecoration,
             guildValue: null == m ? void 0 : m.guildMemberAvatarDecoration,
             guildId: c,
@@ -440,7 +440,7 @@ function er(e) {
                     () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(h.author.id), x)
                 );
         }, [h.author.id, E]),
-        !g || k)
+        !g || j)
     )
         return null != u && null != A
             ? (0, r.jsx)(f.Gt, {
@@ -636,9 +636,9 @@ let es = i.memo(function (e) {
                     e
                 );
             }, [t]),
-            j = (0, G.XX)(t, _),
-            k = (0, G.Dv)(t),
-            U = p ? "".concat(j) : "".concat(j, " ").concat(k),
+            k = (0, G.XX)(t, _),
+            j = (0, G.Dv)(t),
+            U = p ? "".concat(k) : "".concat(k, " ").concat(j),
             B = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, G.Gq)(t) : void 0,
             Z = !0 !== p;
         return (0, r.jsx)(ei, {

@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(636606),
+    s = n(790519),
     l = n(442837),
     c = n(704215),
     u = n(681715),
@@ -22,7 +22,7 @@ var r = n(54381),
     b = n(921944),
     y = n(185923),
     O = n(388032),
-    v = n(162600);
+    v = n(345857);
 function I(e, t, n) {
     return (
         t in e
@@ -121,19 +121,19 @@ let L = function (e) {
             ref: L,
             allowKeybindHint: x,
         } = e,
-        [M, j] = i.useState(!1),
-        [k, U] = i.useState(50),
+        [M, k] = i.useState(!1),
+        [j, U] = i.useState(50),
         G = M || I,
         B = (0, E.l)(v, "emojiButton", G ? "Hovered" : "Normal"),
-        Z = w(k),
+        Z = w(j),
         F = i.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * R);
-            j(!0), U(e), (0, m.x)(y.qR.EmojiButtonMouseEntered);
-        }, [G, j, U]),
+            k(!0), U(e), (0, m.x)(y.qR.EmojiButtonMouseEntered);
+        }, [G, k, U]),
         V = i.useCallback(() => {
-            j(!1);
-        }, [j]),
+            k(!1);
+        }, [k]),
         H = i.useCallback(() => (0, m.x)(y.qR.EmojiButtonFocused), []),
         Y = (0, g.B4)(),
         [W, K] = (0, h.US)(Y ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),

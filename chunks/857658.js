@@ -15,9 +15,9 @@ var r = n(54381),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(994838),
+    b = n(422129),
     y = n(388032),
-    O = n(970281);
+    O = n(209289);
 function v() {
     return (0, r.jsx)("div", {
         className: O.loader,
@@ -126,7 +126,7 @@ function P(e) {
                     (0, E.J4)(), w(e);
                 } catch (e) {}
         },
-        j = () => {
+        k = () => {
             if (o.length === T) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
@@ -134,7 +134,7 @@ function P(e) {
                 n = [...o, t];
             s(n), S(n.length - 1);
         },
-        k = (e) => {
+        j = (e) => {
             if (o.length > 1) {
                 (0, E.JL)();
                 let t = o.filter((t, n) => n !== e);
@@ -191,7 +191,7 @@ function P(e) {
                                     children: (0, r.jsx)(_.hU, {
                                         variant: "icon-only",
                                         size: "sm",
-                                        onClick: () => k(v),
+                                        onClick: () => j(v),
                                         icon: p.V_R,
                                         "aria-label": y.intl.string(y.t.N86XcP),
                                     }),
@@ -204,7 +204,7 @@ function P(e) {
                 (0, r.jsx)(_.zxk, {
                     variant: "secondary",
                     size: "md",
-                    onClick: j,
+                    onClick: k,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdT),
                     fullWidth: !0,

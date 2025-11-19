@@ -1,42 +1,42 @@
-t.d(n, {
-    Z: () => v,
-    m: () => b,
+n.d(t, {
+    Z: () => g,
+    m: () => d,
 });
-var i,
-    o = t(493683),
-    a = t(904245),
-    r = t(710845),
-    s = t(592125),
-    _ = t(70956),
-    c = t(651655);
-let d = +_.Z.Millis.SECOND + 10;
-var b = (((i = {})[(i.GROUP_DM = 0)] = "GROUP_DM"), (i[(i.USER = 1)] = "USER"), (i[(i.CHANNEL = 2)] = "CHANNEL"), i);
-class l extends c.Z {
-    _sendInvite(e, n, t, i, o) {
-        a.Z.sendInvite(e.id, n, t, i).then(
-            () => o(null, !0),
-            () => o(null, !1),
+var r,
+    i = n(493683),
+    l = n(904245),
+    a = n(710845),
+    s = n(592125),
+    o = n(70956),
+    c = n(651655);
+let u = +o.Z.Millis.SECOND + 10;
+var d = (((r = {})[(r.GROUP_DM = 0)] = "GROUP_DM"), (r[(r.USER = 1)] = "USER"), (r[(r.CHANNEL = 2)] = "CHANNEL"), r);
+class h extends c.Z {
+    _sendInvite(e, t, n, r, i) {
+        l.Z.sendInvite(e.id, t, n, r).then(
+            () => i(null, !0),
+            () => i(null, !1),
         );
     }
-    drain(e, n) {
-        let { location: t, inviteAnalyticsMetadata: i } = e;
+    drain(e, t) {
+        let { location: n, inviteAnalyticsMetadata: r } = e;
         switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(e.channel, e.inviteKey, t, i, n);
+                this._sendInvite(e.channel, e.inviteKey, n, r, t);
                 break;
             case 1:
-                o.Z.ensurePrivateChannel(e.user.id).then(
-                    (o) => {
-                        let a = s.Z.getChannel(o);
-                        null != a && this._sendInvite(a, e.inviteKey, t, i, n);
+                i.Z.ensurePrivateChannel(e.user.id).then(
+                    (i) => {
+                        let l = s.Z.getChannel(i);
+                        null != l && this._sendInvite(l, e.inviteKey, n, r, t);
                     },
-                    () => n(null, !1),
+                    () => t(null, !1),
                 );
         }
     }
     constructor() {
-        super(new r.Z("InviteQueue"), d);
+        super(new a.Z("InviteQueue"), u);
     }
 }
-let v = new l();
+let g = new h();

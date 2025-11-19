@@ -17,7 +17,7 @@ var i = n(120356),
     f = n(246946),
     _ = n(594174),
     p = n(51144),
-    h = n(486321);
+    h = n(495824);
 function m(e) {
     let { channel: t, className: n } = e;
     if (t.isDM()) {

@@ -15,7 +15,7 @@ var r = n(54381),
     b = n(840367),
     h = n(34335),
     y = n(388032),
-    O = n(546178);
+    O = n(415734);
 function v(e) {
     let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: o } = e,
         c = i.useRef(null),

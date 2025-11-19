@@ -18,7 +18,7 @@ var r = a(54381),
     v = a(747545),
     C = a(981631),
     k = a(388032),
-    E = a(146371);
+    E = a(142768);
 function O(e) {
     let { transitionState: t, videoEnabled: a, onEnable: O, onClose: P } = e,
         _ = m.Z.getCameraComponent(),

@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(176412),
-    o = n(835877);
+    o = n(291190);
 function s(e) {
     let { searchQuery: t, textContent: n, type: s } = e;
     return (

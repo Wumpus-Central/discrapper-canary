@@ -93,8 +93,8 @@ let O = "scientist:triggered",
     L = {},
     x = {},
     M = {},
-    j = {},
-    k = null,
+    k = {},
+    j = null,
     U = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, c.fD)(),
     G = {};
 function B(e) {
@@ -468,7 +468,7 @@ function es(e) {
         (N = t.trackedExposureExperiments),
         (w = t.loadedUserExperiments),
         (M = t.userExperimentOverrides),
-        (j = t.guildExperimentOverrides),
+        (k = t.guildExperimentOverrides),
         (D = y(E({}, D), {
             source: t.assignmentSource,
             sessionId: t.assignmentSessionId,
@@ -479,7 +479,7 @@ function es(e) {
         __OVERLAY__)
     ) {
         var r;
-        (k = null != (r = t.cookieOverrides) ? r : null), ef();
+        (j = null != (r = t.cookieOverrides) ? r : null), ef();
     }
 }
 function el() {
@@ -488,7 +488,7 @@ function el() {
 function ec(e) {
     let { isSwitchingAccount: t } = e;
     s.K.remove(O),
-        t || (s.K.remove(v), s.K.remove(I), s.K.remove(T), (M = {}), (j = {})),
+        t || (s.K.remove(v), s.K.remove(I), s.K.remove(T), (M = {}), (k = {})),
         (w = {}),
         (D = y(E({}, D), { rawUserExperiments: [] })),
         (N = {}),
@@ -508,7 +508,7 @@ function ed() {
 }
 function ef() {
     let e = !1,
-        t = __OVERLAY__ ? k : (0, c._S)();
+        t = __OVERLAY__ ? j : (0, c._S)();
     for (let n in t)
         (M[n] = {
             type: h.xY.USER,
@@ -519,7 +519,7 @@ function ef() {
             assignmentSource: "override",
             bucket: t[n],
         }),
-            (j[n] = {
+            (k[n] = {
                 type: h.xY.GUILD,
                 revision: 1,
                 override: !0,
@@ -533,7 +533,7 @@ function ef() {
 function e_() {
     var e, t, n;
     let r = [null != (e = s.K.get(v)) ? e : {}, null != (t = s.K.get(I)) ? t : {}, null != (n = s.K.get(T)) ? n : {}];
-    (M = {}), (j = {});
+    (M = {}), (k = {});
     let a = !i().isEmpty(r[0]);
     for (let e of r)
         for (let t in e) {
@@ -546,7 +546,7 @@ function e_() {
                 ? (delete e[t], (a = !0))
                 : n.type === h.xY.USER
                   ? (M[t] = n)
-                  : (j[t] = n);
+                  : (k[t] = n);
         }
     (a = ef() || a) && ep();
 }
@@ -561,7 +561,7 @@ function ep() {
             });
     }
     try {
-        s.K.set(T, j);
+        s.K.set(T, k);
     } catch (e) {
         A.error("Error saving guild experiment overrides, unsaved data will be lost", e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -601,7 +601,7 @@ function eg(e) {
     if (null == o) return !1;
     if (
         (null == r
-            ? ((M = E({}, M)), delete M[n], (j = E({}, j)), delete j[n])
+            ? ((M = E({}, M)), delete M[n], (k = E({}, k)), delete k[n])
             : "user" === o
               ? (M = y(E({}, M), {
                     [n]: {
@@ -612,7 +612,7 @@ function eg(e) {
                         override: !0,
                     },
                 }))
-              : (j = y(E({}, j), {
+              : (k = y(E({}, k), {
                     [n]: {
                         type: o,
                         revision: 1,
@@ -622,7 +622,7 @@ function eg(e) {
                 })),
         !a)
     )
-        for (let e of [M, j]) for (let t in e) null == P[t] && delete M[t];
+        for (let e of [M, k]) for (let t in e) null == P[t] && delete M[t];
     ep();
 }
 function eE(e) {
@@ -668,7 +668,7 @@ class eb extends f.Z {
     }
     getGuildExperimentDescriptor(e, t) {
         let n = null != t ? t : m.lds,
-            r = j[e];
+            r = k[e];
         if (U && null != r) return r;
         let i = "".concat(n, ":").concat(e);
         if (i in x) return x[i];
@@ -711,11 +711,11 @@ class eb extends f.Z {
         return P;
     }
     getAllExperimentOverrideDescriptors() {
-        return U ? E({}, M, j) : {};
+        return U ? E({}, M, k) : {};
     }
     getExperimentOverrideDescriptor(e) {
         var t;
-        return U ? (null != (t = M[e]) ? t : j[e]) : null;
+        return U ? (null != (t = M[e]) ? t : k[e]) : null;
     }
     getAllExperimentAssignments() {
         let e = {},
@@ -742,7 +742,7 @@ class eb extends f.Z {
             loadedUserExperiments: w,
             loadedGuildExperiments: e,
             userExperimentOverrides: M,
-            guildExperimentOverrides: j,
+            guildExperimentOverrides: k,
             cookieOverrides: (0, c._S)(),
             assignmentSource: D.source,
             assignmentSessionId: D.sessionId,

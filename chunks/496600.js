@@ -1,5 +1,5 @@
 n.d(t, {
-    Ct: () => j,
+    Ct: () => k,
     px: () => U,
     uz: () => M,
 }),
@@ -25,10 +25,10 @@ var r = n(54381),
     O = n(626921),
     v = n(415540),
     I = n(483753),
-    T = n(936806),
+    T = n(681287),
     S = n(388032),
-    A = n(484050),
-    C = n(693697);
+    A = n(680765),
+    C = n(430490);
 function N(e, t, n) {
     return (
         t in e
@@ -125,8 +125,8 @@ function M(e) {
         [P, D] = i.useState(""),
         [L, M] = i.useState(""),
         {
-            options: j,
-            loading: k,
+            options: k,
+            loading: j,
             onQueryChange: U,
         } = (0, v.U)({
             active: null == o || o,
@@ -142,15 +142,15 @@ function M(e) {
         i.useEffect(() => {
             o || A(null);
         }, [o, A]);
-    let B = i.useMemo(() => ("" === P ? j : null != E ? E(j, P) : (0, s.Lu)(j, P, null != b ? b : x)), [j, P, E, b]),
+    let B = i.useMemo(() => ("" === P ? k : null != E ? E(k, P) : (0, s.Lu)(k, P, null != b ? b : x)), [k, P, E, b]),
         Z = i.useRef(void 0),
         F = i.useMemo(
             () =>
-                ("single" === d && (Z.current = j.find((e) => e.value === g)),
+                ("single" === d && (Z.current = k.find((e) => e.value === g)),
                 null == g || (Array.isArray(g) && 0 === g.length))
                     ? []
-                    : (Array.isArray(g) ? g : [g]).map((e) => j.find((t) => t.value === e)).filter((e) => null != e),
-            [g, j, d],
+                    : (Array.isArray(g) ? g : [g]).map((e) => k.find((t) => t.value === e)).filter((e) => null != e),
+            [g, k, d],
         );
     i.useEffect(() => {
         if (o) {
@@ -187,13 +187,13 @@ function M(e) {
                 isCollapsible: n,
                 hasValue: Y,
                 value: g,
-                options: j,
+                options: k,
                 filteredOptions: B,
                 selectedOptions: F,
                 maxOptionsVisible: a,
                 query: L,
                 setQuery: G,
-                loading: k,
+                loading: j,
                 handleSelectionChange: H,
                 isOpen: o,
                 setIsOpen: l,
@@ -205,7 +205,7 @@ function M(e) {
         children: t,
     });
 }
-function j(e) {
+function k(e) {
     var { ref: t } = e,
         n = w(e, ["ref"]);
     let { fieldProps: a, props: o } = (0, c.X)(n),
@@ -216,11 +216,11 @@ function j(e) {
         D(R({}, a), {
             "data-mana-component": "combobox",
             layoutConfig: l,
-            children: (0, r.jsx)(k, D(R({}, o), { ref: t })),
+            children: (0, r.jsx)(j, D(R({}, o), { ref: t })),
         }),
     );
 }
-function k(e) {
+function j(e) {
     let {
             id: t,
             autoFocus: n,
@@ -241,8 +241,8 @@ function k(e) {
         x = i.useRef(null),
         M = i.useContext(u.z),
         {
-            activeDescendantIndex: j,
-            setActiveDescendantIndex: k,
+            activeDescendantIndex: k,
+            setActiveDescendantIndex: j,
             selectionMode: U,
             disabled: G,
             readOnly: B,
@@ -268,7 +268,7 @@ function k(e) {
             setIsEditing: eo,
         } = (0, y.T)(),
         es = "multiple" === U && q,
-        el = null != j ? (0, I.cA)(H, j) : void 0;
+        el = null != k ? (0, I.cA)(H, k) : void 0;
     i.useEffect(() => {
         var e;
         null != el &&
@@ -349,7 +349,7 @@ function k(e) {
                             0 === t || (e.preventDefault(), null == $ || $(!0), e.altKey))
                         )
                             return;
-                        k((e) => {
+                        j((e) => {
                             if (null === e) return 0;
                             let r = e + n;
                             return r >= t && W ? 0 : Math.min(r, t - 1);
@@ -359,7 +359,7 @@ function k(e) {
                     case "PageUp":
                         if (((n = "PageUp" === e.key ? 10 : 1), 0 === t)) return;
                         e.preventDefault(),
-                            k((e) => {
+                            j((e) => {
                                 if (null === e) return 0;
                                 let r = e - n;
                                 return r < 0 && W ? t - 1 : Math.max(r, 0);
@@ -367,8 +367,8 @@ function k(e) {
                             null == $ || $(!0);
                         break;
                     case "Enter":
-                        if ((e.preventDefault(), e.stopPropagation(), null == j || 0 === t)) return;
-                        let r = en[j];
+                        if ((e.preventDefault(), e.stopPropagation(), null == k || 0 === t)) return;
+                        let r = en[k];
                         if (!0 === r.disabled || (V && 1 === et.length && et.includes(r))) return;
                         X("single" === U ? [r] : (0, I.cq)(U, et, r));
                         break;
@@ -383,21 +383,21 @@ function k(e) {
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
-                        k(0);
+                        j(0);
                         break;
                     case "End":
                         if ((e.preventDefault(), 0 === t)) return;
-                        k(t - 1);
+                        j(t - 1);
                 }
                 null == v || v(e);
             },
-            [U, V, F, q, W, v, eu, X, et, er, $, en, j, k],
+            [U, V, F, q, W, v, eu, X, et, er, $, en, k, j],
         ),
         eE = i.useCallback(
             (e) => {
-                eo(!0), ei(e.target.value), null == $ || $(!0), null == p || p(e), k(null);
+                eo(!0), ei(e.target.value), null == $ || $(!0), null == p || p(e), j(null);
             },
-            [p, eo, ei, $, k],
+            [p, eo, ei, $, j],
         ),
         eb = i.useMemo(() => {
             if (0 === et.length) return null;

@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(786040),
     C = n(215023),
     _ = n(388032),
-    b = n(687983);
+    b = n(310582);
 let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
         v = (0, s.e7)([c.default], () => c.default.getCurrentUser()),

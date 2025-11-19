@@ -32,9 +32,9 @@ var r = n(54381),
     L = n(31543),
     x = n(15350),
     M = n(151189),
-    j = n(611480),
-    k = n(981631),
-    U = n(698336);
+    k = n(611480),
+    j = n(981631),
+    U = n(349778);
 function G(e, t, n) {
     return (
         t in e
@@ -159,12 +159,12 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case N.al.CREATE_STICKER:
-                            O.default.track(k.rMx.OPEN_MODAL, {
-                                type: k.jXE.CREATE_STICKER_MODAL,
+                            O.default.track(j.rMx.OPEN_MODAL, {
+                                type: j.jXE.CREATE_STICKER_MODAL,
                                 location: Z,
                             }),
                                 (0, u.ZDy)(async () => {
-                                    let { default: t } = await Promise.all([n.e("93626"), n.e("38236")]).then(
+                                    let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
                                         n.bind(n, 136735),
                                     );
                                     return (n) => (0, r.jsx)(t, B({ guildId: e.guild_id }, n));
@@ -189,7 +189,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 onGridItemSelect: eN,
                 store: p.ZN,
                 setInspectedStickerPosition: p.ZN.setInspectedExpressionPosition,
-                gridNavigatorId: j.Vr,
+                gridNavigatorId: k.Vr,
             });
         i.useEffect(() => p.ZN.resetStoreState, []);
         let ex = () => {
@@ -224,7 +224,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }, []);
         let eM = i.useCallback(() => {
             G(),
-                O.default.track(k.rMx.PREMIUM_PROMOTION_OPENED, { location_section: k.jXE.STICKER_PICKER_UPSELL }),
+                O.default.track(j.rMx.PREMIUM_PROMOTION_OPENED, { location_section: j.jXE.STICKER_PICKER_UPSELL }),
                 (0, g.z)();
         }, [G]);
         return (0, r.jsxs)(_.Gt, {
@@ -254,7 +254,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                           {
                                               ref: X,
                                               className: U.listWrapper,
-                                              id: j.Vr,
+                                              id: k.Vr,
                                           },
                                           eD,
                                       ),
@@ -295,8 +295,8 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         (0, A.fP)(),
         (0, r.jsx)("div", {
             className: U.wrapper,
-            id: j.nZ,
-            "aria-labelledby": j.ED,
+            id: k.nZ,
+            "aria-labelledby": k.ED,
             role: "tabpanel",
             children: e.isLoading
                 ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator })

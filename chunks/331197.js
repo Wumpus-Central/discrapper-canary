@@ -35,7 +35,7 @@ function O(e) {
         k = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [D, U] = (0, h.cv)(k),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: H, setIsHovered: V, onMouseEnter: F, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { isHovered: H, setIsHovered: F, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -97,7 +97,7 @@ function O(e) {
         (0, d.v)(P, d.d.SOUNDBOARD),
             E === x.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != E ? (Z(), F()) : Z(), null == S || S(x.D.SOUNDBOARD));
+                : (null != E ? (Z(), V()) : Z(), null == S || S(x.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
@@ -109,7 +109,7 @@ function O(e) {
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            V(!1), null == S || S(void 0);
+            F(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -117,7 +117,7 @@ function O(e) {
                 ? null
                 : (0, i.jsx)(v.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: F,
+                          onMouseEnter: V,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -151,7 +151,7 @@ function O(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    F(), T();
+                    V(), T();
                 },
                 onMouseLeave: () => {
                     null == E && (G(), N());

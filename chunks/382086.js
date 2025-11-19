@@ -12,7 +12,7 @@ var l = e(755721),
     c = e(675999),
     o = e(981631),
     C = e(388032),
-    m = e(804283);
+    m = e(470816);
 let p = 0.5 > Math.random();
 function u(t) {
     let { onClose: n, onBack: e, onCreationIntentChosen: u, hasFooter: g = !0 } = t,

@@ -26,7 +26,7 @@ var r = n(54381),
     O = n(258971),
     E = n(981631),
     N = n(388032),
-    T = n(490451);
+    T = n(219923);
 let A = "start_application_install",
     L = "launch_activity";
 function R(e) {

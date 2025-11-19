@@ -8,7 +8,7 @@ var i = n(54381),
     c = n(39604),
     u = n(176127),
     d = n(388032),
-    p = n(811485);
+    p = n(945202);
 function h(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: h } = e;
     return (r.useEffect(

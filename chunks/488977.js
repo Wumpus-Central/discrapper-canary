@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(314734),
     C = n(981631),
     N = n(388032),
-    R = n(333616);
+    R = n(820607);
 function P(e, t, n) {
     return (
         t in e
@@ -82,9 +82,9 @@ function x(e) {
     var t;
     let { application: a, context: P, className: w, sectionName: x } = e,
         M = i.useRef(null),
-        j = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
-        k = (0, T.L1)(a),
-        U = (0, _.Eb)(k),
+        k = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
+        j = (0, T.L1)(a),
+        U = (0, _.Eb)(j),
         G = (0, d.R)(a.id),
         B = (0, s.e7)([g.Z], () => {
             var e;
@@ -114,13 +114,13 @@ function x(e) {
                               applicationId: a.id,
                               referrerId: null == F ? void 0 : F.id,
                           })
-                        : (0, f.J)(D({ id: a.id }, k));
+                        : (0, f.J)(D({ id: a.id }, j));
                     (0, y.JG)(e, () =>
                         (0, l.showToast)((0, l.createToast)(N.intl.string(N.t["L/PwZf"]), l.ToastType.SUCCESS)),
                     ),
                         b.default.track(C.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: a.id,
-                            source: j,
+                            source: k,
                         });
                 },
                 className: o()(R.clickable, w),
@@ -151,7 +151,7 @@ function x(e) {
                                                 (0, l.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("77803"),
-                                                        n.e("15351"),
+                                                        n.e("42124"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, r.jsx)(e, {
@@ -168,10 +168,10 @@ function x(e) {
                                               id: "add-app",
                                               label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
-                                                  null == k.customInstallUrl &&
+                                                  null == j.customInstallUrl &&
                                                       (0, c.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
                                                       (0, v.L)(
-                                                          L(D({}, k), {
+                                                          L(D({}, j), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&

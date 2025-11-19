@@ -32,13 +32,13 @@ var r = n(54381),
     L = n(585483),
     x = n(28546),
     M = n(957825),
-    j = n(981631),
-    k = n(921944),
+    k = n(981631),
+    j = n(921944),
     U = n(149203),
     G = n(185923),
     B = n(611480),
     Z = n(388032),
-    F = n(364744);
+    F = n(887648);
 function V(e, t, n) {
     return (
         t in e
@@ -129,7 +129,7 @@ let q = M.Om + U.Su.MEDIUM,
                 ),
                 {
                     onClick: () => {
-                        E.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                        E.ZP.trackWithMetadata(k.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                             tab: i,
                             badged: !1,
                         }),
@@ -261,7 +261,7 @@ function J(e) {
                 }
                 (0, x._Q)();
                 let r = null == (t = (0, u.uB)(e)) ? void 0 : t.activeElement;
-                (null == r || "BODY" === r.tagName) && L.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
+                (null == r || "BODY" === r.tagName) && L.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
             },
             [et, eg, em, eh],
         ),
@@ -275,13 +275,13 @@ function J(e) {
         return (
             ed.addEventListener("mousedown", eI),
             ed.addEventListener("contextmenu", eI),
-            ef.subscribe(j.CkL.POPOUT_CLOSE, eT),
-            L.S.subscribe(j.CkL.CLOSE_GIF_PICKER, e),
+            ef.subscribe(k.CkL.POPOUT_CLOSE, eT),
+            L.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
             () => {
                 ed.removeEventListener("mousedown", eI),
                     ed.removeEventListener("contextmenu", eI),
-                    ef.unsubscribe(j.CkL.POPOUT_CLOSE, eT),
-                    L.S.unsubscribe(j.CkL.CLOSE_GIF_PICKER, e);
+                    ef.unsubscribe(k.CkL.POPOUT_CLOSE, eT),
+                    L.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [ec, eT, eI, ed, ef]),
@@ -293,7 +293,7 @@ function J(e) {
     }, [ec]),
         i.useEffect(
             () => () => {
-                eC && eA(k.L.TAKE_ACTION);
+                eC && eA(j.L.TAKE_ACTION);
             },
             [eC, eA],
         ),
@@ -313,7 +313,7 @@ function J(e) {
                       ? (null == ea || null == (n = ea.current) ? void 0 : n.onPickerOpen) == null ||
                         e_ ||
                         (null == ea || null == (r = ea.current) || r.onPickerOpen(), (ei.current = !0))
-                      : (E.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_OPENED, {
+                      : (E.ZP.trackWithMetadata(k.rMx.EXPRESSION_PICKER_OPENED, {
                             width: eo.current.offsetWidth,
                             tab: ec,
                             badged: !1,
@@ -350,7 +350,7 @@ function J(e) {
                   }),
               })
             : null,
-        ej = (0, r.jsx)(X, {
+        ek = (0, r.jsx)(X, {
             id: U.td,
             "aria-controls": U.cZ,
             "aria-selected": ec === M.X1.EMOJI,
@@ -359,7 +359,7 @@ function J(e) {
             children: Z.intl.string(Z.t.Xu3wE3),
         });
     return (0, r.jsx)(m.Z, {
-        section: j.jXE.EXPRESSION_PICKER,
+        section: k.jXE.EXPRESSION_PICKER,
         children: (0, r.jsx)(T.W5, {
             className: o()(F.positionLayer, eL),
             targetRef: l,
@@ -403,10 +403,10 @@ function J(e) {
                                                         children: [
                                                             eE
                                                                 ? (0, r.jsxs)(r.Fragment, {
-                                                                      children: [ej, ex, eM],
+                                                                      children: [ek, ex, eM],
                                                                   })
                                                                 : (0, r.jsxs)(r.Fragment, {
-                                                                      children: [ex, eM, ej],
+                                                                      children: [ex, eM, ek],
                                                                   }),
                                                             ep &&
                                                                 eD &&

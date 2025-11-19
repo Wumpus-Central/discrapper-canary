@@ -20,7 +20,7 @@ var r = n(54381),
     x = n(934760),
     E = n(619899),
     O = n(215023),
-    S = n(687983);
+    S = n(310582);
 (0, p.IC)(90);
 let y = (e) => {
     let { isBlockLoading: t = !1, heroBlock: n, tab: i } = e,

@@ -21,20 +21,20 @@ function h(e) {
         } = (0, c.JL)(),
         { isGift: g } = (0, d.wD)(),
         v = null != l ? (0, s.Af)(l) : null,
-        P = null != v ? (0, s.gq)(v.planId) : null,
-        x = null != v ? (0, s.Rd)(v.planId) : null,
-        y = (0, p.Kp)({
+        x = null != v ? (0, s.gq)(v.planId) : null,
+        y = null != v ? (0, s.Rd)(v.planId) : null,
+        P = (0, p.Kp)({
             isTrial: !1,
             isGift: g,
             selectedSkuId: h,
             startedPaymentFlowWithPaymentSources: b.current,
         });
     return (
-        a()(null != x, "Expected premium type"),
+        a()(null != y, "Expected premium type"),
         (0, r.jsx)(o.Z, {
-            premiumType: x,
+            premiumType: y,
             titleText: m.intl.string(m.t["7VcWW0"]),
-            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: P }),
+            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: x }),
             footer: (0, r.jsxs)(i.ButtonGroup, {
                 direction: "horizontal-reverse",
                 align: "center",
@@ -43,7 +43,7 @@ function h(e) {
                         variant: "primary",
                         text: m.intl.string(m.t["3PatSz"]),
                         onClick: () => {
-                            y ? (f((0, p.nA)(h, l)), t(u.h8.REVIEW)) : t(u.h8.PLAN_SELECT);
+                            P ? (f((0, p.nA)(h, l)), t(u.h8.REVIEW)) : t(u.h8.PLAN_SELECT);
                         },
                     }),
                     (0, r.jsx)(i.Button, {

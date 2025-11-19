@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
         default: () => I,
-        openDevToolsPopout: () => O,
+        openDevToolsPopout: () => N,
     }),
     n(388685);
 var a = n(54381),
     l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(990547),
     o = n(442837),
     c = n(481060),
@@ -24,11 +24,11 @@ var a = n(54381),
     j = n(621060),
     _ = n(981631),
     y = n(388032),
-    C = n(246984),
-    S = n(866403);
+    C = n(552883),
+    S = n(451429);
 function E(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
-        r = (0, d.Z)({
+        i = (0, d.Z)({
             minDimension: f.h,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -36,11 +36,11 @@ function E(e) {
             orientation: d.y.HORIZONTAL_LEFT,
         });
     return (0, a.jsx)("div", {
-        onMouseDown: r,
+        onMouseDown: i,
         className: C.resizeHandle,
     });
 }
-function O() {
+function N() {
     (0, h.bA)(
         _.KJ3.DEVTOOLS_POPOUT,
         () =>
@@ -64,8 +64,8 @@ function T(e) {
     let { isPopout: n = !1 } = e,
         l = (0, v.F)(),
         {
-            TabBar: r,
-            renderSelectedTab: i,
+            TabBar: i,
+            renderSelectedTab: r,
             selectedTabId: o,
         } = (0, j.ZP)(
             {
@@ -94,7 +94,7 @@ function T(e) {
                                   (0, a.jsx)(m.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
-                                      onClick: O,
+                                      onClick: N,
                                   }),
                                   (0, a.jsx)(m.ZP.Icon, {
                                       icon: c.Dio,
@@ -111,20 +111,20 @@ function T(e) {
                         (0, a.jsx)(m.ZP.Title, { children: "DevTools" }),
                     ],
                 }),
-                (0, a.jsx)(r, {}),
-                i(),
+                (0, a.jsx)(i, {}),
+                r(),
                 (0, a.jsx)(b.Br, { className: C.layerContainer }),
             ],
         })
     );
 }
-function N() {
+function O() {
     let e = l.useRef(null),
         t = (0, o.e7)([f.Z], () => f.Z.sidebarWidth),
-        [n, r] = l.useState(null),
-        i = l.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
+        [n, i] = l.useState(null),
+        r = l.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
     return (l.useEffect(() => {
-        null === n && null !== t && r(t);
+        null === n && null !== t && i(t);
     }, [t, n]),
     null === n)
         ? null
@@ -139,8 +139,8 @@ function N() {
               children: [
                   (0, a.jsx)(E, {
                       resizableNode: e,
-                      onResize: r,
-                      onResizeEnd: i,
+                      onResize: i,
+                      onResizeEnd: r,
                   }),
                   (0, a.jsx)("div", {
                       className: C.sidebarContent,
@@ -152,7 +152,7 @@ function N() {
 function P() {
     return (0, o.e7)([f.Z], () => f.Z.displayTools)
         ? (0, a.jsx)("div", {
-              className: i()(C.container, C.mobileContainerExpanded),
+              className: r()(C.container, C.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
                   className: C.sidebarContent,
                   children: (0, a.jsx)(T, {}),
@@ -163,7 +163,7 @@ function P() {
               children: (0, a.jsx)(c.P3F, {
                   onClick: g.SO,
                   children: (0, a.jsxs)(m.ZP, {
-                      className: i()(S.headerBar, C.mobileHeaderCollapsed),
+                      className: r()(S.headerBar, C.mobileHeaderCollapsed),
                       toolbar: (0, a.jsx)(x.Z, { direction: x.Z.Directions.UP }),
                       children: [
                           (0, a.jsx)(m.ZP.Icon, {
@@ -185,5 +185,5 @@ function I(e) {
                 className: C.popoutContainer,
                 children: (0, a.jsx)(T, { isPopout: !0 }),
             })
-          : (0, a.jsx)(N, {});
+          : (0, a.jsx)(O, {});
 }

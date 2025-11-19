@@ -102,8 +102,8 @@ let S = {},
     },
     x = {},
     M = {},
-    j = "null",
-    k = new Set(),
+    k = "null",
+    j = new Set(),
     U = new Set(),
     G = {},
     B = {};
@@ -386,7 +386,7 @@ class ep extends (r = o.ZP.PersistedStore) {
     }
     getMutedChannels(e) {
         var t;
-        return null != (t = x[e]) ? t : k;
+        return null != (t = x[e]) ? t : j;
     }
     isChannelMuted(e, t) {
         var n;
@@ -539,7 +539,7 @@ class ep extends (r = o.ZP.PersistedStore) {
     }
     getAddedToMessages() {
         var e;
-        return null != (e = M[j]) ? e : U;
+        return null != (e = M[k]) ? e : U;
     }
     get accountNotificationSettings() {
         return R;

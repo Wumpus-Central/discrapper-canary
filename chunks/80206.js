@@ -5,7 +5,7 @@ var i = n(793030),
     s = n(159691),
     l = n(481060),
     a = n(388905),
-    o = n(926882);
+    o = n(294707);
 function c(e) {
     let { title: t, subtitle: n, buttonText: c, image: u, onButtonClick: d, loading: h } = e;
     return (0, r.jsx)(a.ZP, {

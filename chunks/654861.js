@@ -293,7 +293,7 @@ var r = (function (e) {
         for (var n = e.length - 1; n >= 0; n--) if (e[n] !== t[n]) return e[n] > t[n] ? 1 : -1;
         return 0;
     }
-    function j(e) {
+    function k(e) {
         var t = e.abs();
         return (
             !t.isUnit() &&
@@ -301,7 +301,7 @@ var r = (function (e) {
                 (!(t.isEven() || t.isDivisibleBy(3) || t.isDivisibleBy(5)) && (!!t.lesser(49) || void 0)))
         );
     }
-    function k(e, t) {
+    function j(e, t) {
         for (var n, i, a, o = e.prev(), s = o, l = 0; s.isEven(); ) (s = s.divide(2)), l++;
         t: for (i = 0; i < t.length; i++)
             if (!e.lesser(t[i]) && !((a = r(t[i]).modPow(s, e)).isUnit() || a.equals(o))) {
@@ -655,26 +655,26 @@ var r = (function (e) {
         }),
         (d.prototype.isDivisibleBy = u.prototype.isDivisibleBy = c.prototype.isDivisibleBy),
         (c.prototype.isPrime = function (e) {
-            var t = j(this);
+            var t = k(this);
             if (void 0 !== t) return t;
             var n = this.abs(),
                 i = n.bitLength();
-            if (i <= 64) return k(n, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+            if (i <= 64) return j(n, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
             for (
                 var a = Math.log(2) * i.toJSNumber(), o = Math.ceil(!0 === e ? 2 * Math.pow(a, 2) : a), s = [], l = 0;
                 l < o;
                 l++
             )
                 s.push(r(l + 2));
-            return k(n, s);
+            return j(n, s);
         }),
         (d.prototype.isPrime = u.prototype.isPrime = c.prototype.isPrime),
         (c.prototype.isProbablePrime = function (t, n) {
-            var i = j(this);
+            var i = k(this);
             if (void 0 !== i) return i;
             for (var a = this.abs(), o = e === t ? 5 : t, s = [], l = 0; l < o; l++)
                 s.push(r.randBetween(2, a.minus(2), n));
-            return k(a, s);
+            return j(a, s);
         }),
         (d.prototype.isProbablePrime = u.prototype.isProbablePrime = c.prototype.isProbablePrime),
         (c.prototype.modInv = function (e) {

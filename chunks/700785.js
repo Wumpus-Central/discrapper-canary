@@ -2,7 +2,7 @@ n.d(t, {
     BT: () => W,
     Hn: () => A,
     Hu: () => H,
-    I0: () => k,
+    I0: () => j,
     Og: () => G,
     TP: () => N,
     Uu: () => K,
@@ -149,7 +149,7 @@ function M(e, t, n, r) {
     }
     return n;
 }
-function j(e) {
+function k(e) {
     let {
         userId: t,
         member: n,
@@ -175,7 +175,7 @@ function j(e) {
         x(f, r, t, s)
     );
 }
-function k(e) {
+function j(e) {
     let t,
         { forceRoles: n, context: r, overwrites: i, roles: a, checkElevated: o = !0, excludeGuildPermissions: s } = e,
         l = R;
@@ -188,7 +188,7 @@ function k(e) {
                 ? A
                 : G(
                       r,
-                      k({
+                      j({
                           forceRoles: n,
                           context: e,
                           overwrites: i,
@@ -219,7 +219,7 @@ function k(e) {
         joinedAt: new Date().toISOString(),
         communicationDisabledUntil: null,
     };
-    return j({
+    return k({
         userId: I.lds,
         member: u,
         guild: t,
@@ -268,7 +268,7 @@ function U(e) {
     )
         return x(C, i, h, u);
     let O = g.ZP.getMember(i.id, h);
-    return j({
+    return k({
         userId: h,
         member: O,
         guild: i,

@@ -12,7 +12,7 @@ var r = n(54381),
     m = n(30513),
     p = n(200299),
     f = n(388032),
-    h = n(160193);
+    h = n(308212);
 function b(e) {
     let { guild: t, canManageGuild: n } = e,
         b = t.features.has(g.GuildFeatures.INVITE_SPLASH),

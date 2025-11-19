@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(490095),
     y = n(981631),
     O = n(388032),
-    v = n(950244);
+    v = n(940992);
 function I(e, t, n) {
     return (
         t in e
@@ -107,8 +107,8 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 isUsingKeyboardNavigation: L,
                 onInspect: x,
                 onSelect: M,
-                rowIndex: j,
-                stickerClassName: k,
+                rowIndex: k,
+                stickerClassName: j,
                 stickerDescriptors: U,
                 stickerPadding: G = P,
                 stickerSize: B = R,
@@ -146,7 +146,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         className: v.row,
                         style: z,
                     },
-                    null == I ? void 0 : I(j),
+                    null == I ? void 0 : I(k),
                 ),
                 {
                     children: U.map((e) => {
@@ -176,13 +176,13 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("93626"), n.e("38236")]).then(
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
                                             n.bind(n, 136735),
                                         );
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));
                                     }));
                             },
-                            U = null != (d = null == l ? void 0 : l(e.columnIndex, j)) ? d : {},
+                            U = null != (d = null == l ? void 0 : l(e.columnIndex, k)) ? d : {},
                             { ref: G, tabIndex: K, onFocus: z } = U,
                             J = C(U, ["ref", "tabIndex", "onFocus"]);
                         switch (e.type) {
@@ -192,7 +192,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     A(T({}, J), {
                                         children: (0, r.jsxs)(c.P3F, {
                                             "aria-label": e.name,
-                                            className: o()(v.createSticker, k, { [v.createInspected]: f }),
+                                            className: o()(v.createSticker, j, { [v.createInspected]: f }),
                                             innerRef: G,
                                             tabIndex: K,
                                             onFocus: null != z ? z : R,
@@ -231,7 +231,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     "div",
                                     A(T({}, J), { key: e.sticker.id }),
                                     (0, r.jsxs)(c.P3F, {
-                                        className: o()(v.sticker, k, {
+                                        className: o()(v.sticker, j, {
                                             [v.stickerInspected]: f,
                                             [v.showPulse]: X === e.sticker.id,
                                         }),

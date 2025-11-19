@@ -11,7 +11,7 @@ n.r(t),
         extendSuperProperties: () => z,
         getCampaignParams: () => L,
         getDevice: () => U,
-        getOS: () => k,
+        getOS: () => j,
         getSuperProperties: () => X,
         getSuperPropertiesBase64: () => Q,
         isThrottled: () => K,
@@ -187,7 +187,7 @@ function M() {
     }
     return e;
 }
-function j() {
+function k() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
@@ -207,7 +207,7 @@ function j() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function k() {
+function j() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -234,8 +234,8 @@ function G() {
 function B() {
     let e = {};
     return (
-        (e.os = k()),
-        (e.browser = j()),
+        (e.os = j()),
+        (e.browser = k()),
         (e.device = U()),
         (e.system_locale = (0, _.qf)()),
         (e.has_client_mods = (0, f.e)()),
@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("469916", 10);
+    let i = parseInt("470193", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (

@@ -2,7 +2,7 @@ n.d(t, {
     Bg: () => G,
     Ni: () => Z,
     YH: () => U,
-    ld: () => j,
+    ld: () => k,
     rf: () => B,
 }),
     n(388685),
@@ -88,7 +88,7 @@ function M(e, t) {
         e
     );
 }
-var j = (function (e) {
+var k = (function (e) {
     return (
         (e[(e.EMOJI = 0)] = "EMOJI"),
         (e[(e.CREATE_EMOJI = 1)] = "CREATE_EMOJI"),
@@ -97,7 +97,7 @@ var j = (function (e) {
         e
     );
 })({});
-let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
+let j = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
     U = (e) => {
         let {
                 channel: t,
@@ -108,7 +108,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                 gridWidth: _,
                 emojiPaddingHorizontal: w,
                 emojiSpriteSize: x,
-                shouldShowSoundmojiInEmojiPicker: j,
+                shouldShowSoundmojiInEmojiPicker: k,
                 showOnlyUnicode: U,
             } = e,
             G = (0, s.e7)([c.ZP], () => c.ZP.categories),
@@ -167,16 +167,16 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                             N = !C && null != O && T === O.id && y.length < (0, I.y4)(O),
                             P = C && y.length < h && !ei,
                             w = null != O && C && ei && ea === S.B.WITH_TOP_LIST && er[O.id].length < (0, I.y4)(O),
-                            j = i && Q && null != O && (N || P || w);
-                        j && w && y.length === h && y.shift();
-                        let k = y.length > m && null != O && d.isNitroLocked,
-                            U = k && !X.has(O.id);
+                            k = i && Q && null != O && (N || P || w);
+                        k && w && y.length === h && y.shift();
+                        let j = y.length > m && null != O && d.isNitroLocked,
+                            U = j && !X.has(O.id);
                         if (U) {
-                            let e = !ei && j;
+                            let e = !ei && k;
                             y.splice(m - (e ? 2 : 1));
                         }
-                        let G = ei && j && !_,
-                            B = Math.ceil((j || k ? y.length + 1 : y.length) / h),
+                        let G = ei && k && !_,
+                            B = Math.ceil((k || j ? y.length + 1 : y.length) / h),
                             Z = [];
                         for (let e = 0; e < B; e++) {
                             let t = 0 === e,
@@ -222,7 +222,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                 Z.push(i),
                                 !_)
                             ) {
-                                if (!ei && j && e === B - 1) {
+                                if (!ei && k && e === B - 1) {
                                     let t = Z[e];
                                     t.push({
                                         type: 1,
@@ -234,7 +234,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                         visibleRowIndex: u,
                                     });
                                 }
-                                if (k && e === B - 1) {
+                                if (j && e === B - 1) {
                                     let t = Z[e];
                                     t.push({
                                         type: 2,
@@ -272,7 +272,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                 isNitroLocked: !$,
                             });
                 else {
-                    if (eo && j) {
+                    if (eo && k) {
                         let t = [
                             {
                                 type: 3,
@@ -298,7 +298,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                                 if (null == r) return;
                                 let i = r.filter(
                                     (e) =>
-                                        !k.includes(
+                                        !j.includes(
                                             v.ZP.getEmojiUnavailableReason({
                                                 emoji: e,
                                                 channel: null != t ? t : g.ZP.getDefaultChannel(n),
@@ -395,7 +395,7 @@ let k = [P.Z5.DISALLOW_EXTERNAL, P.Z5.DISALLOW_CUSTOM],
                 rowCountBySection: e,
                 sectionDescriptors: r,
             };
-        }, [V, _, x, w, f, n, ei, ea, er, i, Q, X, t, l, K, z, $, B, Z, q, W, Y, H, ee, eo, j]);
+        }, [V, _, x, w, f, n, ei, ea, er, i, Q, X, t, l, K, z, $, B, Z, q, W, Y, H, ee, eo, k]);
     };
 var G = (function (e) {
     return (e[(e.PREMIUM = 0)] = "PREMIUM"), (e[(e.ROLE_SUBSCRIPTION = 1)] = "ROLE_SUBSCRIPTION"), e;

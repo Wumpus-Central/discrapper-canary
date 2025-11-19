@@ -11,7 +11,7 @@ var r = n(54381),
     g = n(384632),
     m = n(981631),
     p = n(388032),
-    f = n(189114);
+    f = n(140367);
 function h(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         h = l.features.has(m.GuildFeatures.COMMUNITY),
