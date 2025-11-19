@@ -111,4 +111,9 @@ let m = {
             collectRewardButtonText: () => l.intl.string(l.t.kMYVwv),
             rewardCollectedText: () => l.intl.string(l.t.eZrmtq),
         },
+        rewardSelection: {
+            heading: () => l.intl.string(l.t["3JCuX1"]),
+            primarySubtitle: () => l.intl.string(l.t.h2nMp0),
+            secondarySubtitle: () => l.intl.string(l.t.y5wftM),
+        },
     };
