@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(29594),
     c = n(330569);
 let u = () => {
-    let [e, t] = i.useState(10),
+    let [e, t] = i.useState(15),
         [n, u] = i.useState(12),
         d = i.useMemo(
             () =>
@@ -16,8 +16,8 @@ let u = () => {
                         o.P3F,
                         {
                             className: c.child,
-                            onClick: () => console.log(t + 1),
-                            children: t + 1,
+                            onClick: () => console.log(t),
+                            children: t,
                         },
                         t,
                     ),
