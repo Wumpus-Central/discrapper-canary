@@ -1,14 +1,11 @@
-n.d(e, { Z: () => o });
+n.d(e, { Z: () => a });
 var i = n(509613),
-    l = n(462354),
-    u = n(210176),
-    r = n(695346),
-    s = n(313789),
-    a = n(388032);
-let o = (0, i.qs)(s.n.VOICE_ACTIVITY_NOTIFICATIONS, {
-    useTitle: () => a.intl.string(a.t.ypvsEi),
-    useValue: r.d8.useSetting,
-    setValue: u.I,
-    useBadge: () => "beta",
-    usePredicate: () => (0, l.Az)("VoiceActivityNotifications").enabled,
+    l = n(210176),
+    u = n(695346),
+    r = n(313789),
+    s = n(388032);
+let a = (0, i.qs)(r.n.VOICE_ACTIVITY_NOTIFICATIONS, {
+    useTitle: () => s.intl.string(s.t.ypvsEi),
+    useValue: u.d8.useSetting,
+    setValue: l.I,
 });
