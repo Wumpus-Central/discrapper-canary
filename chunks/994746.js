@@ -1,86 +1,91 @@
-n.d(t, { Z: () => s });
-var r = n(750154),
-    i = n(90712),
-    a = n(981631),
-    o = n(388032);
-function s(e) {
-    let t = (0, i.Z)(e),
+n.d(t, { Z: () => l });
+var r = n(177267),
+    i = n(750154),
+    a = n(90712),
+    o = n(981631),
+    s = n(388032);
+function l(e) {
+    let t = (0, a.Z)(e),
         n = null == t ? void 0 : t.icon;
-    return e.type === a.IIU.PLAYING && (null == t ? void 0 : t.type) === a.ABu.XBOX
+    return e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.XBOX
         ? {
-              text: o.intl.formatToPlainString(o.t.A17aM8, { platform: o.intl.string(o.t.Nfvo72) }),
+              text: s.intl.formatToPlainString(s.t.A17aM8, { platform: s.intl.string(s.t.Nfvo72) }),
               platformIcon: n,
           }
-        : e.type === a.IIU.PLAYING && (null == t ? void 0 : t.type) === a.ABu.PLAYSTATION
+        : e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.PLAYSTATION
           ? {
-                text: o.intl.formatToPlainString(o.t.A17aM8, { platform: o.intl.string(o.t.fFl4jo) }),
+                text: s.intl.formatToPlainString(s.t.A17aM8, { platform: s.intl.string(s.t.fFl4jo) }),
                 platformIcon: n,
             }
-          : e.type === a.IIU.PLAYING && (null == t ? void 0 : t.type) === a.ABu.META_QUEST
+          : e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.META_QUEST_OR_HORIZON
             ? {
-                  text: o.intl.formatToPlainString(o.t.A17aM8, { platform: o.intl.string(o.t.p6vL0e) }),
+                  text: s.intl.formatToPlainString(s.t.A17aM8, {
+                      platform: (0, r.Z)(e) ? s.intl.string(s.t.BrHQaq) : s.intl.string(s.t.p6vL0e),
+                  }),
                   platformIcon: n,
               }
-            : e.type === a.IIU.WATCHING && (null == t ? void 0 : t.type) === a.ABu.META_QUEST
+            : e.type === o.IIU.WATCHING && (null == t ? void 0 : t.type) === o.ABu.META_QUEST_OR_HORIZON
               ? {
-                    text: o.intl.formatToPlainString(o.t.ENbTKQ, { platform: o.intl.string(o.t.p6vL0e) }),
+                    text: s.intl.formatToPlainString(s.t.ENbTKQ, {
+                        platform: (0, r.Z)(e) ? s.intl.string(s.t.BrHQaq) : s.intl.string(s.t.p6vL0e),
+                    }),
                     platformIcon: n,
                 }
-              : e.type === a.IIU.STREAMING && (null == t ? void 0 : t.type) === a.ABu.TWITCH
+              : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.TWITCH
                 ? {
-                      text: o.intl.formatToPlainString(o.t["4CQq9Q"], { name: o.intl.string(o.t.q4pBG3) }),
+                      text: s.intl.formatToPlainString(s.t["4CQq9Q"], { name: s.intl.string(s.t.q4pBG3) }),
                       platformIcon: n,
                   }
-                : e.type === a.IIU.STREAMING && (null == t ? void 0 : t.type) === a.ABu.YOUTUBE
+                : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.YOUTUBE
                   ? {
-                        text: o.intl.formatToPlainString(o.t["4CQq9Q"], { name: o.intl.string(o.t.aS6cK4) }),
+                        text: s.intl.formatToPlainString(s.t["4CQq9Q"], { name: s.intl.string(s.t.aS6cK4) }),
                         platformIcon: n,
                     }
-                  : e.type === a.IIU.PLAYING
+                  : e.type === o.IIU.PLAYING
                     ? {
-                          text: o.intl.string(o.t.BMTj28),
+                          text: s.intl.string(s.t.BMTj28),
                           platformIcon: n,
                       }
-                    : e.type === a.IIU.STREAMING
+                    : e.type === o.IIU.STREAMING
                       ? {
-                            text: o.intl.string(o.t["Jpkr/q"]),
+                            text: s.intl.string(s.t["Jpkr/q"]),
                             platformIcon: n,
                         }
-                      : (0, r.dS)(e)
-                        ? { text: o.intl.formatToPlainString(o.t.pW3Ip3, { name: e.name }) }
-                        : e.type === a.IIU.LISTENING && null != e.details
+                      : (0, i.dS)(e)
+                        ? { text: s.intl.formatToPlainString(s.t.pW3Ip3, { name: e.name }) }
+                        : e.type === o.IIU.LISTENING && null != e.details
                           ? {
-                                text: o.intl.formatToPlainString(o.t["b+lA5+"], { name: e.name }),
+                                text: s.intl.formatToPlainString(s.t["b+lA5+"], { name: e.name }),
                                 platformIcon: n,
                             }
-                          : e.type === a.IIU.LISTENING
+                          : e.type === o.IIU.LISTENING
                             ? {
-                                  text: o.intl.string(o.t.dBISa6),
+                                  text: s.intl.string(s.t.dBISa6),
                                   platformIcon: n,
                               }
-                            : e.type === a.IIU.WATCHING && null != e.details
+                            : e.type === o.IIU.WATCHING && null != e.details
                               ? {
-                                    text: o.intl.formatToPlainString(o.t.mqdfDc, { name: e.name }),
+                                    text: s.intl.formatToPlainString(s.t.mqdfDc, { name: e.name }),
                                     platformIcon: n,
                                 }
-                              : e.type === a.IIU.WATCHING
+                              : e.type === o.IIU.WATCHING
                                 ? {
-                                      text: o.intl.string(o.t.GpNXjC),
+                                      text: s.intl.string(s.t.GpNXjC),
                                       platformIcon: n,
                                   }
-                                : e.type === a.IIU.COMPETING && null != e.details
+                                : e.type === o.IIU.COMPETING && null != e.details
                                   ? {
-                                        text: o.intl.formatToPlainString(o.t.oHF7Ch, { name: e.name }),
+                                        text: s.intl.formatToPlainString(s.t.oHF7Ch, { name: e.name }),
                                         platformIcon: n,
                                     }
-                                  : e.type === a.IIU.COMPETING
+                                  : e.type === o.IIU.COMPETING
                                     ? {
-                                          text: o.intl.string(o.t.OzCsIA),
+                                          text: s.intl.string(s.t.OzCsIA),
                                           platformIcon: n,
                                       }
-                                    : e.type === a.IIU.HANG_STATUS
+                                    : e.type === o.IIU.HANG_STATUS
                                       ? {
-                                            text: o.intl.string(o.t.Hi4tob),
+                                            text: s.intl.string(s.t.Hi4tob),
                                             platformIcon: n,
                                         }
                                       : {

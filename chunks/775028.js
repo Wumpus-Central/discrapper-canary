@@ -15,8 +15,8 @@ var r = t(54381),
     g = t(66999),
     _ = t(549631),
     x = t(473403),
-    b = t(454585),
-    C = t(22082),
+    C = t(454585),
+    b = t(22082),
     j = t(703656),
     O = t(6025),
     v = t(922482),
@@ -74,8 +74,8 @@ function k(e, n) {
     );
 }
 let D = new Set([P.d4z.GUILD_FORUM, P.d4z.GUILD_MEDIA]),
-    R = new Set([P.d4z.GUILD_VOICE, P.d4z.GUILD_STAGE_VOICE]);
-function L(e) {
+    L = new Set([P.d4z.GUILD_VOICE, P.d4z.GUILD_STAGE_VOICE]);
+function R(e) {
     let { guild: n, channel: l, onCategoryClick: i } = e,
         o = (0, w.Mf)(n.id, l.id, l.id),
         s = (0, w.t4)(n.id, l.id, l.id);
@@ -149,17 +149,17 @@ let H = l.memo(function () {
                 category: l,
                 guild: i,
                 isFirstChannel: s,
-                isLastChannel: f,
-                onChannelClick: I,
-                tooltipDirection: Z = "right",
+                isLastChannel: p,
+                onChannelClick: f,
+                tooltipDirection: I = "right",
             } = e,
-            { isSubscriptionGated: L } = (0, g.Z)(n.id),
-            U = (0, w.Mf)(i.id, n.id, l.id),
-            G = (0, w.t4)(i.id, n.id, l.id),
-            W = (0, w.EH)(i.id, l.id),
+            { isSubscriptionGated: Z } = (0, g.Z)(n.id),
+            R = (0, w.Mf)(i.id, n.id, l.id),
+            U = (0, w.t4)(i.id, n.id, l.id),
+            G = (0, w.EH)(i.id, l.id),
             F = (0, o.e7)([y.Z], () => y.Z.getActiveThreadCount(i.id, n.id)),
-            q = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
-            z = (function (e, n) {
+            W = (0, o.e7)([b.Z], () => b.Z.shouldIndicateNewChannel(i.id, n.id)),
+            q = (function (e, n) {
                 let t = [];
                 return (
                     P.TPd.GUILD_THREADS_ONLY.has(e.type) &&
@@ -175,7 +175,7 @@ let H = l.memo(function () {
                                 "thread-count",
                             ),
                         ),
-                    R.has(e.type) ||
+                    L.has(e.type) ||
                         t.push(
                             (0, r.jsx)(
                                 h.Text,
@@ -197,7 +197,7 @@ let H = l.memo(function () {
                                     children: (0, r.jsx)(h.Text, {
                                         className: T.topic,
                                         variant: "text-xs/normal",
-                                        children: b.Z.parseTopic(e.topic, !0, { channelId: e.id }),
+                                        children: C.Z.parseTopic(e.topic, !0, { channelId: e.id }),
                                     }),
                                 },
                                 "topic",
@@ -208,26 +208,26 @@ let H = l.memo(function () {
                         .slice(0, -1)
                 );
             })(n, F),
-            V = E.intl.string(E.t.vetGQs);
+            z = E.intl.string(E.t.vetGQs);
         n.isGuildStageVoice() || n.isGuildVoice()
-            ? (V = E.intl.string(E.t.VJlc0S))
-            : n.isForumLikeChannel() && (V = E.intl.string(E.t["3xjX0U"]));
-        let X = G ? "text-muted" : "text-default",
-            Q = (0, h.dQu)(G ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
+            ? (z = E.intl.string(E.t.VJlc0S))
+            : n.isForumLikeChannel() && (z = E.intl.string(E.t["3xjX0U"]));
+        let V = U ? "text-muted" : "text-default",
+            X = (0, h.dQu)(U ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.u, {
-                    text: W,
+                    text: G,
                     delay: 500,
-                    position: Z,
+                    position: I,
                     children: (0, r.jsxs)(h.P3F, {
                         className: a()(T.channelRow, {
                             [T.firstChannel]: s,
-                            [T.lastChannel]: f,
-                            [T.disabled]: G,
+                            [T.lastChannel]: p,
+                            [T.disabled]: U,
                         }),
                         onClick: (e) => {
-                            if (!G) return e.stopPropagation(), I(i.id, n.id, l.id), !0;
+                            if (!U) return e.stopPropagation(), f(i.id, n.id, l.id), !0;
                         },
                         onContextMenu: (e) => {
                             n.isGuildVocal()
@@ -280,17 +280,17 @@ let H = l.memo(function () {
                                                     className: T.channelText,
                                                     variant: "text-md/medium",
                                                     lineClamp: 1,
-                                                    color: X,
+                                                    color: V,
                                                     children: n.name,
                                                 }),
                                             }),
-                                            L
+                                            Z
                                                 ? (0, r.jsx)(_.Z, {
-                                                      color: Q,
+                                                      color: X,
                                                       className: T.premiumIcon,
                                                   })
                                                 : null,
-                                            q
+                                            W
                                                 ? (0, r.jsx)(h.IGR, {
                                                       text: E.intl.string(E.t.y2b7CA),
                                                       color: c.Z.unsafe_rawColors.BRAND_260.css,
@@ -301,7 +301,7 @@ let H = l.memo(function () {
                                     }),
                                     (0, r.jsx)("div", {
                                         className: T.channelSubtitles,
-                                        children: z,
+                                        children: q,
                                     }),
                                 ],
                             }),
@@ -325,23 +325,19 @@ let H = l.memo(function () {
                                                         }),
                                                 !0
                                             ),
-                                            text: V,
+                                            text: z,
                                         }),
                                     }),
-                                    (0, r.jsx)(p.$q, {
-                                        "aria-checked": U,
-                                        value: U,
-                                        type: p.M0.INVERTED,
-                                        disabled: G,
-                                        innerClassName: T.checkboxInner,
-                                        displayOnly: !0,
+                                    (0, r.jsx)(h.FZ5, {
+                                        checked: R,
+                                        disabled: U,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                !f && (0, r.jsx)(H, {}),
+                !p && (0, r.jsx)(H, {}),
             ],
         });
     });
@@ -355,7 +351,7 @@ function G(e) {
                 if (0 === l && -1 === u) return null;
                 let i = n._categories[l + u];
                 return (0, r.jsx)(
-                    L,
+                    R,
                     {
                         channel: i.channel,
                         guild: t,

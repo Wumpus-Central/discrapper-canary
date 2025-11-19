@@ -486,7 +486,7 @@ let l = [
             enabled: !0,
         },
         {
-            type: s.ABu.META_QUEST,
+            type: s.ABu.META_QUEST_OR_HORIZON,
             name: "Meta Quest",
             icon: {
                 lightPNG: n(637291),

@@ -6,6 +6,5 @@ e.exports = {
     inlineNoticeText: "inlineNoticeText__2666b",
     backupCode: "backupCode__2666b",
     noticeTextButton: "noticeTextButton__2666b",
-    codeCheckbox: "codeCheckbox__2666b",
     tabPanel: "tabPanel__2666b",
 };
