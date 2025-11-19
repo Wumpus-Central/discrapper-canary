@@ -49,17 +49,19 @@ function b(e) {
             let n = c.getSuperPropertiesBase64();
             null != n && e.set("X-Super-Properties", n);
             let a = t.getFingerprint();
-            if ((null != a && "" !== a && e.set("X-Fingerprint", a), d)) {
+            null != a && "" !== a && e.set("X-Fingerprint", a);
+            let u = t.getInstallationForTracking();
+            if ((null != u && "" !== u && e.set("X-Installation-ID", u), d)) {
                 let t = [];
                 null != navigator && (t = ((f = [...navigator.languages]), f));
                 let n = b(t);
                 e.set("Accept-Language", n);
             }
             e.set("X-Discord-Locale", s.locale);
-            let u = (0, _.Z)();
-            null != u && e.set("X-Discord-Timezone", u);
-            let h = o.getDebugOptionsHeaderValue();
-            if ((null != h && "" !== h && e.set("X-Debug-Options", h), o.isTracingRequests)) {
+            let h = (0, _.Z)();
+            null != h && e.set("X-Discord-Timezone", h);
+            let y = o.getDebugOptionsHeaderValue();
+            if ((null != y && "" !== y && e.set("X-Debug-Options", y), o.isTracingRequests)) {
                 let t = l.getCurrentUser(),
                     n = m.generate(null != (p = null == t ? void 0 : t.id) ? p : "0");
                 e.set("x-client-trace-id", n);
