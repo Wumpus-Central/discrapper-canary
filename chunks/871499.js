@@ -15,7 +15,7 @@ var r = n(54381),
     _ = n(618158),
     p = n(362267),
     h = n(388032),
-    m = n(119421);
+    m = n(842250);
 function g(e, t, n) {
     return (
         t in e
@@ -113,8 +113,8 @@ function I(e) {
         "aria-label": P,
         look: D,
         buttonText: w,
-        size: x,
-        color: L,
+        size: L,
+        color: x,
     } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.aML, {
@@ -134,8 +134,8 @@ function I(e) {
                             {
                                 "data-migration-pending": !0,
                                 look: null != D ? D : l.zx.Looks.BLANK,
-                                size: null != x ? x : l.zx.Sizes.NONE,
-                                color: L,
+                                size: null != L ? L : l.zx.Sizes.NONE,
+                                color: x,
                                 onKeyDown: (e) => {
                                     null == i || i(e);
                                 },
@@ -244,11 +244,11 @@ function A(e) {
         ]);
     let D = (0, p.Z)(a, l),
         w = null != s ? s : D,
-        x = (0, u.Z)("(max-width: 456px)"),
-        L = i.useRef(null),
+        L = (0, u.Z)("(max-width: 456px)"),
+        x = i.useRef(null),
         M = i.useContext(f.h9);
     i.useEffect(() => {
-        null != L.current && (M ? L.current.pause() : L.current.play());
+        null != x.current && (M ? x.current.pause() : x.current.play());
     }, [M]);
     let k = null != (t = P.onContextMenu) ? t : v,
         j = null == v && !N,
@@ -261,7 +261,7 @@ function A(e) {
                 onContextMenu: k,
                 iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
                 className: o()(
-                    x || R ? g : null,
+                    L || R ? g : null,
                     l && m.active,
                     m.centerButton,
                     S[D],
@@ -270,7 +270,7 @@ function A(e) {
                 ),
             }),
         );
-    return x
+    return L
         ? B
         : (0, r.jsxs)("div", {
               ref: n,

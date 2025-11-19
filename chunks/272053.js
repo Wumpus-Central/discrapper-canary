@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(35282), n(415506), n(539854), n(993155);
+n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -192,25 +192,25 @@ class w {
         m(this, "_nextCheck", void 0), m(this, "_started", void 0), (this._started = !1);
     }
 }
-let x = new w();
-function L() {
-    p.Z.enabled ? x.start() : x.stop();
+let L = new w();
+function x() {
+    p.Z.enabled ? L.start() : L.stop();
 }
 function M(e) {
     var t;
     if (a()(e.stream, T)) return !1;
     T = null != (t = e.stream) ? t : null;
 }
-class j extends (r = o.ZP.Store) {
+class k extends (r = o.ZP.Store) {
     initialize() {
-        L(), this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L);
+        x(), this.waitFor(_.Z, p.Z), this.syncWith([p.Z], x);
     }
     getStream() {
         return T;
     }
 }
-m(j, "displayName", "ExternalStreamingStore");
-let k = new j(l.Z, {
+m(k, "displayName", "ExternalStreamingStore");
+let j = new k(l.Z, {
     STREAMING_UPDATE: M,
-    USER_CONNECTIONS_UPDATE: () => x._check(),
+    USER_CONNECTIONS_UPDATE: () => L._check(),
 });

@@ -1,13 +1,13 @@
-a.d(e, { L: () => i });
-var r = a(617726),
-    _ = a(688838),
-    n = a(151122),
-    o = a(166394);
-let i = (0, n._I)((t) => ({
+_.d(e, { L: () => E });
+var a = _(617726),
+    r = _(688838),
+    n = _(151122),
+    o = _(166394);
+let E = (0, n._I)((t) => ({
         name: "ThirdPartyErrorsFilter",
         setup(t) {
             t.on("beforeEnvelope", (t) => {
-                (0, r.gv)(t, (t, e) => {
+                (0, a.gv)(t, (t, e) => {
                     if ("event" === e) {
                         let e = Array.isArray(t) ? t[1] : void 0;
                         e && ((0, o.CC)(e), (t[1] = e));
@@ -16,27 +16,27 @@ let i = (0, n._I)((t) => ({
             }),
                 t.on("applyFrameMetadata", (e) => {
                     if (e.type) return;
-                    let a = t.getOptions().stackParser;
-                    (0, o.GY)(a, e);
+                    let _ = t.getOptions().stackParser;
+                    (0, o.GY)(_, e);
                 });
         },
         processEvent(e) {
-            let a = (function (t) {
-                let e = (0, _.Fr)(t);
+            let _ = (function (t) {
+                let e = (0, r.Fr)(t);
                 if (e)
                     return e
                         .filter((t) => !!t.filename)
                         .map((t) =>
                             t.module_metadata
                                 ? Object.keys(t.module_metadata)
-                                      .filter((t) => t.startsWith(E))
-                                      .map((t) => t.slice(E.length))
+                                      .filter((t) => t.startsWith(i))
+                                      .map((t) => t.slice(i.length))
                                 : [],
                         );
             })(e);
             if (
-                a &&
-                a[
+                _ &&
+                _[
                     "drop-error-if-contains-third-party-frames" === t.behaviour ||
                     "apply-tag-if-contains-third-party-frames" === t.behaviour
                         ? "some"
@@ -56,4 +56,4 @@ let i = (0, n._I)((t) => ({
             return e;
         },
     })),
-    E = "_sentryBundlerPluginAppKey:";
+    i = "_sentryBundlerPluginAppKey:";

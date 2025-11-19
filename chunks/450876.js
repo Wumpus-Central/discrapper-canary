@@ -18,7 +18,7 @@ var r = n(54381),
     E = n(905423),
     O = n(981631),
     y = n(388032),
-    v = n(822338);
+    v = n(987129);
 function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, p.ZP)(d.Z.ACTIVITY_PANEL),

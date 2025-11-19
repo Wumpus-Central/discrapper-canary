@@ -68,9 +68,9 @@ function g(e, t, n) {
             return 3;
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
-    let x = null != l ? (0, _.ny)(l) : void 0;
+    let L = null != l ? (0, _.ny)(l) : void 0;
     if (
-        null == x ||
+        null == L ||
         o.e$(v, h.Plq.ADMINISTRATOR) ||
         (P && (null == (r = e.integration_types) ? void 0 : r.includes(a.Y.USER_INSTALL)))
     )
@@ -78,12 +78,12 @@ function g(e, t, n) {
     if (!A && R && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
     if (l instanceof c.Sf) {
         i()(void 0 !== N, "missing applicationAllowedForChannel");
-        let t = y(e.permissions, l, x);
+        let t = y(e.permissions, l, L);
         if (b(t) || (!E(t) && b(N))) return 6;
     }
-    let L = O(e.permissions, x, I, T, S);
-    if (E(L)) return 0;
-    if (b(L) || b(C)) return 7;
+    let x = O(e.permissions, L, I, T, S);
+    if (E(x)) return 0;
+    if (b(x) || b(C)) return 7;
     if (
         null != e.defaultMemberPermissions &&
         !(!o.fS(e.defaultMemberPermissions, f.BO) && o.e$(v, e.defaultMemberPermissions))

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(399606),
     d = n(846519),
     p = n(481060),
-    f = n(493683),
-    h = n(239091),
+    h = n(493683),
+    f = n(239091),
     g = n(153867),
     m = n(377171),
     b = n(35225),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(601964),
     v = n(271383),
     j = n(771845),
-    x = n(727258),
-    C = n(276952),
+    C = n(727258),
+    x = n(276952),
     E = n(249792),
     S = n(40153),
     I = n(593618),
@@ -81,7 +81,7 @@ let L = {
     },
 };
 function M(e, t) {
-    (0, h.jW)(e, async () => {
+    (0, f.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("70363"),
             n.e("36599"),
@@ -105,7 +105,7 @@ function M(e, t) {
     });
 }
 let k = i.memo(function (e) {
-    var t, n, l, h, k;
+    var t, n, l, f, k;
     let {
             guildNode: G,
             setRef: U,
@@ -134,10 +134,10 @@ let k = i.memo(function (e) {
         ec = null != (n = e.lowerBadge) ? n : void 0;
     null == ec && X > 0
         ? (ec = null != (l = (0, Z.Ne)(X, Q ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0)
-        : null == ec && null != en && (ec = null != (h = (0, Z.jt)({ guildJoinRequestStatus: en })) ? h : void 0);
+        : null == ec && null != en && (ec = null != (f = (0, Z.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
     let eu = null != (k = e.lowerBadgeSize) ? k : { width: (0, p.OVM)(X) },
         [{ dragging: ed }, ep] = (0, a.c)({
-            type: x.eD.GUILD,
+            type: C.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
                     null == B || B();
@@ -152,9 +152,9 @@ let k = i.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
-        ef = (0, c.Ie)(null != eo ? eo : w.lds, null != ea ? 2 : 1),
-        [eh, eg] = i.useState(!1),
-        em = !ee && eh,
+        eh = (0, c.Ie)(null != eo ? eo : w.lds, null != ea ? 2 : 1),
+        [ef, eg] = i.useState(!1),
+        em = !ee && ef,
         [eb, e_] = i.useState(!1),
         [ey, eO] = i.useState(!1),
         [ev] = i.useState(() => new d.sW(70, () => eO(!0)));
@@ -163,17 +163,17 @@ let k = i.memo(function (e) {
             if (null != V) return void (0, _.uL)(V, { state: L });
             (0, y.X)(eo, { state: L });
         }, [eo, V]),
-        ex = i.useCallback(() => {
+        eC = i.useCallback(() => {
             if (null != V || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
-            null != e && f.Z.preload(H.id, e);
+            null != e && h.Z.preload(H.id, e);
         }, [V, H, q, et]),
-        eC = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
+        ex = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
             (e) => {
-                null == H || eC || J(e, H);
+                null == H || ex || J(e, H);
             },
-            [H, J, eC],
+            [H, J, ex],
         ),
         eS = i.useCallback(
             (e) => {
@@ -229,13 +229,13 @@ let k = i.memo(function (e) {
                                   onMouseLeave: function () {
                                       ee || eg(!1);
                                   },
-                                  onMouseDown: ex,
+                                  onMouseDown: eC,
                                   onContextMenu: eE,
                                   onKeyDown: eS,
                                   icon: (0, O.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em,
                               },
-                              ef,
+                              eh,
                           ),
                           {
                               "aria-setsize": ei,
@@ -271,7 +271,7 @@ let k = i.memo(function (e) {
     return (0, r.jsxs)(N.H, {
         ref: eP,
         children: [
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 hovered: !ed && em,
                 selected: !ed && W,
                 unread: !ed && K,

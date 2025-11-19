@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(594174),
     v = n(614277),
     P = n(215023),
-    x = n(473936);
+    x = n(365112);
 function y(e) {
     let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: y } = e,
         j = (0, i.e7)([g.default], () => g.default.getCurrentUser()),

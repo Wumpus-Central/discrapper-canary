@@ -1,15 +1,15 @@
 n.d(t, {
-    A2: () => e3,
+    A2: () => e2,
     AY: () => ea,
     CM: () => ec,
-    CW: () => ek,
+    CW: () => ej,
     Cr: () => eb,
     DC: () => eu,
     Eo: () => eq,
     Ex: () => eZ,
     Fg: () => et,
     G6: () => em,
-    H1: () => j,
+    H1: () => k,
     HV: () => e4,
     I0: () => G,
     JG: () => eH,
@@ -29,19 +29,19 @@ n.d(t, {
     RS: () => eT,
     R_: () => eF,
     Rt: () => e1,
-    SE: () => ej,
+    SE: () => ek,
     Sb: () => eP,
     Sh: () => ez,
     T4: () => M,
     UP: () => ep,
     V6: () => R,
-    Wp: () => eL,
+    Wp: () => ex,
     Xc: () => V,
-    Xk: () => k,
+    Xk: () => j,
     Xr: () => eh,
-    YC: () => e2,
-    Yk: () => ex,
-    _O: () => L,
+    YC: () => e3,
+    Yk: () => eL,
+    _O: () => x,
     _j: () => eV,
     bh: () => es,
     bm: () => ef,
@@ -49,7 +49,7 @@ n.d(t, {
     cP: () => Y,
     co: () => eE,
     d$: () => F,
-    d4: () => x,
+    d4: () => L,
     d8: () => C,
     dN: () => y,
     eR: () => I,
@@ -76,7 +76,7 @@ n.d(t, {
     no: () => eB,
     qF: () => U,
     rN: () => eC,
-    rR: () => e8,
+    rR: () => e5,
     tU: () => ev,
     uL: () => Z,
     uh: () => eX,
@@ -223,13 +223,13 @@ let C = (0, _.Zc)(
         (e) => e,
     ),
     w = [],
-    x = (0, _.Zc)(
+    L = (0, _.Zc)(
         "textAndImages",
         "emojiPickerCollapsedSections",
         (e) => (null != e ? e : w),
         (e) => e,
     ),
-    L = (0, _.Zc)(
+    x = (0, _.Zc)(
         "textAndImages",
         "stickerPickerCollapsedSections",
         (e) => (null != e ? e : w),
@@ -241,7 +241,7 @@ let C = (0, _.Zc)(
         (e) => (null != e ? e : w),
         (e) => e,
     ),
-    j = (0, _.Zc)(
+    k = (0, _.Zc)(
         "textAndImages",
         "viewImageDescriptions",
         (e) => {
@@ -250,7 +250,7 @@ let C = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    k = (0, _.Zc)(
+    j = (0, _.Zc)(
         "textAndImages",
         "showCommandSuggestions",
         (e) => {
@@ -781,7 +781,7 @@ let eP = (0, _.KM)(
                 return !l.Z.active && (null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value);
             }),
     ),
-    ex = (0, _.R2)(
+    eL = (0, _.R2)(
         (0, _.KM)(
             (0, _.Zc)(
                 "textAndImages",
@@ -806,7 +806,7 @@ let eP = (0, _.KM)(
                 return !l.Z.active && (null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value);
             }),
     ),
-    eL = (0, _.R2)(
+    ex = (0, _.R2)(
         (0, _.KM)(
             (0, _.Zc)(
                 "textAndImages",
@@ -840,13 +840,13 @@ let eP = (0, _.KM)(
             }),
     ),
     eM = [],
-    ej = (0, _.Zc)(
+    ek = (0, _.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
         (e) => (null != e ? e : eM),
         (e) => e,
     ),
-    ek = (0, _.Zc)(
+    ej = (0, _.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
         (e) => (null != e ? e : eM),
@@ -1026,13 +1026,13 @@ let e0 = (0, _.Zc)(
         (e) => null != e && e,
         (e) => e,
     ),
-    e2 = (0, _.Zc)(
+    e3 = (0, _.Zc)(
         "appearance",
         "uiDensity",
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e3 = (0, _.Zc)(
+    e2 = (0, _.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
@@ -1054,7 +1054,7 @@ let e0 = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    e8 = (0, _.Zc)(
+    e5 = (0, _.Zc)(
         "textAndImages",
         "isCrossDmSearchEnabled",
         (e) => (null == e ? void 0 : e.value),

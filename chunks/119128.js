@@ -1,22 +1,22 @@
-a.d(e, { j: () => E });
-var r = a(696486),
-    _ = a(793373),
-    n = a(622916),
-    o = a(454463),
-    i = a(163162);
-function E() {
-    i.m9 && i.m9.document
-        ? i.m9.document.addEventListener("visibilitychange", () => {
-              let t = (0, r.HN)();
+_.d(e, { j: () => i });
+var a = _(696486),
+    r = _(793373),
+    n = _(622916),
+    o = _(454463),
+    E = _(163162);
+function i() {
+    E.m9 && E.m9.document
+        ? E.m9.document.addEventListener("visibilitychange", () => {
+              let t = (0, a.HN)();
               if (!t) return;
-              let e = (0, r.Gx)(t);
-              if (i.m9.document.hidden && e) {
+              let e = (0, a.Gx)(t);
+              if (E.m9.document.hidden && e) {
                   let t = "cancelled",
-                      { op: a, status: i } = (0, r.XU)(e);
-                  o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
-                      i ||
+                      { op: _, status: E } = (0, a.XU)(e);
+                  o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${_}`),
+                      E ||
                           e.setStatus({
-                              code: _.jt,
+                              code: r.jt,
                               message: t,
                           }),
                       e.setAttribute("sentry.cancellation_reason", "document.hidden"),

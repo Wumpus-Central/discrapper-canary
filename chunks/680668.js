@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(358595),
     b = n(981631),
     y = n(388032),
-    O = n(105341);
+    O = n(739236);
 function v(e, t, n) {
     return (
         t in e
@@ -58,9 +58,9 @@ function T(e) {
             guild: P,
             invite: D,
             message: w,
-            currentUserId: x,
+            currentUserId: L,
         } = e,
-        L = x === w.author.id,
+        x = L === w.author.id,
         { channel: M, approximate_member_count: k, approximate_presence_count: j } = D,
         U = D.state === b.r2o.ACCEPTING,
         G = null != M ? (0, p.jD)(M) : null,
@@ -97,7 +97,7 @@ function T(e) {
     }
     let ee = (0, g.e)({
         isVoiceChannel: F,
-        isOwnInvite: L,
+        isOwnInvite: x,
         isGuest: H,
         isHubGuild: Y,
         isStage: V,
@@ -212,7 +212,7 @@ function T(e) {
                                 children: y.intl.format(y.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, s.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("7082"), n.e("98639")]).then(
+                                            let { default: e } = await Promise.all([n.e("7082"), n.e("72688")]).then(
                                                 n.bind(n, 650233),
                                             );
                                             return (t) => (0, r.jsx)(e, I({}, t));

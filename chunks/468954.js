@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(98528),
     s = n(429155),
     l = n(810462),
-    c = n(681561);
+    c = n(181845);
 function u(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ function p(e) {
             sectionHeaderHeight: P,
             sectionFooterHeight: D,
             itemNodeWidth: w,
-            listPaddingRight: x,
-            itemNodeMargin: L,
+            listPaddingRight: L,
+            itemNodeMargin: x,
             listPadding: M,
             gridNavigatorId: k,
             gridNotice: j,
@@ -112,9 +112,9 @@ function p(e) {
             categories: t,
             collapsedCategories: n,
             gridWidth: W,
-            listPaddingRight: x,
+            listPaddingRight: L,
             itemNodeWidth: w,
-            itemNodeMargin: L,
+            itemNodeMargin: x,
         }),
         {
             getItemProps: J,

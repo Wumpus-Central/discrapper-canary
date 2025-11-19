@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(739566),
     y = n(761652),
     O = n(388032),
-    v = n(466002);
+    v = n(949892);
 function I(e, t, n) {
     return (
         t in e
@@ -96,9 +96,9 @@ function P(e) {
             messageId: S,
             parentOptionKey: D,
             commandOptionSpec: w,
-            sourceAnalyticsLocations: x,
+            sourceAnalyticsLocations: L,
         } = e,
-        L = null != D ? D + " " + g.name : g.name;
+        x = null != D ? D + " " + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
@@ -114,7 +114,7 @@ function P(e) {
                             ),
                         ],
                     },
-                    L,
+                    x,
                 ),
             ],
             s = Object.fromEntries(
@@ -129,9 +129,9 @@ function P(e) {
                     channel: v,
                     guild: I,
                     messageId: S,
-                    parentOptionKey: L,
+                    parentOptionKey: x,
                     commandOptionSpec: s[t.name],
-                    sourceAnalyticsLocations: x,
+                    sourceAnalyticsLocations: L,
                 }),
             );
         return e;
@@ -153,7 +153,7 @@ function P(e) {
                                     guildId: v.guild_id,
                                     channelId: v.id,
                                     messageId: S,
-                                    sourceAnalyticsLocations: x,
+                                    sourceAnalyticsLocations: L,
                                 }),
                             children: [y.ME, e.nick],
                         }),
@@ -203,7 +203,7 @@ function P(e) {
                                     (0, p.openUserProfileModal)({
                                         userId: t.id,
                                         guildId: v.guild_id,
-                                        sourceAnalyticsLocations: x,
+                                        sourceAnalyticsLocations: L,
                                     }),
                                 children: [y.ME, e.nick],
                             }),
@@ -236,7 +236,7 @@ function P(e) {
                         f,
                     ],
                 },
-                L,
+                x,
             ),
         ]
     );

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(695346),
     d = n(819640),
     p = n(885110),
-    f = n(626135),
-    h = n(55185),
+    h = n(626135),
+    f = n(55185),
     g = n(981631),
     m = n(921944),
     b = n(46140);
@@ -22,16 +22,16 @@ let _ = (e) => {
                 i = u.G6.useSetting(),
                 o = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(g.S9g.USER_SETTINGS)),
                 a = (0, l.e7)([p.Z], () => p.Z.getStatus()),
-                { isOpen: f } = (0, s.Z)();
-            if (((n && r) || t) && !o && !f && !__OVERLAY__) {
-                if (!i && a === g.Skl.INVISIBLE) return t ? h.NK.ActivityAndStatus : h.NK.ActivityAndStatusNux;
-                if (!i) return t ? h.NK.Activity : h.NK.ActivityNux;
-                if (a === g.Skl.INVISIBLE) return t ? h.NK.Status : h.NK.StatusNux;
+                { isOpen: h } = (0, s.Z)();
+            if (((n && r) || t) && !o && !h && !__OVERLAY__) {
+                if (!i && a === g.Skl.INVISIBLE) return t ? f.NK.ActivityAndStatus : f.NK.ActivityAndStatusNux;
+                if (!i) return t ? f.NK.Activity : f.NK.ActivityNux;
+                if (a === g.Skl.INVISIBLE) return t ? f.NK.Status : f.NK.StatusNux;
             }
             return null;
         })({ isForceShowSharingPopout: n });
     (0, i.useEffect)(() => {
-        n && f.default.track(g.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
+        n && h.default.track(g.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
     let v = n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2];
     return (0, r.jsx)(a.ZP, {
@@ -39,7 +39,7 @@ let _ = (e) => {
         children: (e) => {
             let { visibleContent: i, markAsDismissed: l } = e,
                 a = i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n;
-            return (0, r.jsx)(h.I, {
+            return (0, r.jsx)(f.I, {
                 showPopout: a,
                 popoutState: O,
                 handleClose: () => {

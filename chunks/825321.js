@@ -1,24 +1,24 @@
-a.d(e, { a: () => s });
-var r = a(140955),
-    _ = a(202937),
-    n = a(416987),
-    o = a(596308),
-    i = a(622574),
-    E = a(662355);
+_.d(e, { a: () => s });
+var a = _(140955),
+    r = _(202937),
+    n = _(416987),
+    o = _(596308),
+    E = _(622574),
+    i = _(662355);
 let c = [1800, 3000],
     s = (t, e = {}) => {
-        (0, E.A)(() => {
-            let a,
-                E = (0, n.Y)(),
+        (0, i.A)(() => {
+            let _,
+                i = (0, n.Y)(),
                 s = (0, o.I)("FCP"),
-                l = (0, i.N)("paint", (t) => {
+                l = (0, E.N)("paint", (t) => {
                     t.forEach((t) => {
                         "first-contentful-paint" === t.name &&
                             (l.disconnect(),
-                            t.startTime < E.firstHiddenTime &&
-                                ((s.value = Math.max(t.startTime - (0, _.A)(), 0)), s.entries.push(t), a(!0)));
+                            t.startTime < i.firstHiddenTime &&
+                                ((s.value = Math.max(t.startTime - (0, r.A)(), 0)), s.entries.push(t), _(!0)));
                     });
                 });
-            l && (a = (0, r._)(t, s, c, e.reportAllChanges));
+            l && (_ = (0, a._)(t, s, c, e.reportAllChanges));
         });
     };

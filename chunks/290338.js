@@ -34,8 +34,8 @@ let v = (0, O.createContext)(null),
             [P, D] = (0, a.xc)(!e["aria-label"] && !e["aria-labelledby"]),
             {
                 groupProps: w,
-                labelProps: x,
-                fieldProps: L,
+                labelProps: L,
+                fieldProps: x,
                 buttonProps: M,
                 dialogProps: k,
                 calendarProps: j,
@@ -89,7 +89,7 @@ let v = (0, O.createContext)(null),
                                 isInvalid: N.isInvalid,
                             },
                         ],
-                        [o.bd, L],
+                        [o.bd, x],
                         [
                             r.b,
                             {
@@ -100,7 +100,7 @@ let v = (0, O.createContext)(null),
                         [
                             f.n,
                             {
-                                ...x,
+                                ...L,
                                 ref: P,
                                 elementType: "span",
                             },

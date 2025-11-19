@@ -1,5 +1,5 @@
 n.d(t, { Z: () => d });
-var r = n(647438),
+var r = n(473749),
     i = n(399606),
     l = n(673125),
     a = n(984063),
@@ -11,20 +11,20 @@ function d(e) {
     let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: m } = e,
         _ = r.useRef(!1),
         g = (0, i.e7)([l.Z], () => l.Z.getDrawMode()),
-        v = (0, c.Z)((0, s.Z)(t.id, n, d), f),
-        b = (0, c.Z)((0, u.Z)(t.id, n, d), f),
+        b = (0, c.Z)((0, s.Z)(t.id, n, d), f),
+        v = (0, c.Z)((0, u.Z)(t.id, n, d), f),
         E = r.useCallback(
             (e, t, n) => {
                 if (null == m) return;
                 let { x: r, y: i } = (0, o.hn)(m, n);
                 switch (t.type) {
                     case a.W.LINE:
-                        return v[e](t, r, i);
-                    case a.W.EMOJI_HOSE:
                         return b[e](t, r, i);
+                    case a.W.EMOJI_HOSE:
+                        return v[e](t, r, i);
                 }
             },
-            [m, v, b],
+            [m, b, v],
         ),
         h = r.useCallback(
             (e) => {

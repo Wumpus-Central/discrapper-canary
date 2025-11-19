@@ -85,8 +85,8 @@ function T(e) {
         (0, u.XV)();
     }, []);
     let w = (0, a.cj)([d.Z], () => (D ? d.Z.videoFilterAssets : {})),
-        x = i.useMemo(() => Object.values(w).filter((e) => e.type === m.xV.BACKGROUND), [w]),
-        L = (0, s.O)(),
+        L = i.useMemo(() => Object.values(w).filter((e) => e.type === m.xV.BACKGROUND), [w]),
+        x = (0, s.O)(),
         M = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: v,
@@ -114,10 +114,10 @@ function T(e) {
         },
         U = (e) => {
             v(e),
-                (0, _.FU)(e, T, { location: L.location })
+                (0, _.FU)(e, T, { location: x.location })
                     .then(() => R(null))
                     .catch(() => {
-                        R(b.intl.string(b.t.ejrSLe)), (0, _.FU)(null, T, { location: L.location });
+                        R(b.intl.string(b.t.ejrSLe)), (0, _.FU)(null, T, { location: x.location });
                     });
         },
         G = () => {
@@ -128,7 +128,7 @@ function T(e) {
                         e,
                         I(O({}, n), {
                             onLearnMore: t,
-                            analyticsSource: I(O({}, L.location), { object: g.qAy.BUTTON_CTA }),
+                            analyticsSource: I(O({}, x.location), { object: g.qAy.BUTTON_CTA }),
                         }),
                     );
             });
@@ -141,7 +141,7 @@ function T(e) {
                   errorMessage: N,
                   children: (0, r.jsx)(h.Z, {
                       canUseCustomBackgrounds: D,
-                      customBackgroundOptions: x,
+                      customBackgroundOptions: L,
                       selectedOption: y,
                       onSelectOption: U,
                       onUpsellClick: G,

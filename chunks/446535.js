@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(485386),
     C = n(496675),
     m = n(388032),
-    b = n(797966);
+    b = n(184230);
 let p = (e) => {
     let { guild: t, transitionState: n, onClose: i } = e,
         [p, f] = l.useState(7),

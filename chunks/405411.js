@@ -5,7 +5,7 @@ var r = n(54381),
     l = n(581364),
     s = n(761652),
     o = n(388032),
-    c = n(554498);
+    c = n(524741);
 function d(e) {
     let { application: t } = e,
         n = a.useMemo(() => {

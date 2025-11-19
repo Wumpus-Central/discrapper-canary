@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(51144),
     d = n(785717),
     u = n(388032),
-    m = n(508929);
+    m = n(740363);
 function p(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: l } = (0, d.KZ)();

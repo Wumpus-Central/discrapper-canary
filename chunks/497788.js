@@ -3,33 +3,33 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(393903),
     u = n(448986),
     d = n(381585),
-    p = n(597688),
-    g = n(1870),
+    g = n(597688),
+    p = n(1870),
     f = n(884697),
-    h = n(370039),
-    C = n(937510),
-    m = n(653126),
+    m = n(370039),
+    h = n(937510),
+    C = n(653126),
     _ = n(786040),
     b = n(401975),
     v = n(373183),
     x = n(934760),
     E = n(619899),
     O = n(215023),
-    S = n(310582);
+    S = n(687983);
 (0, f.IC)(90);
 let y = (e) => {
     let { isBlockLoading: t = !1, heroBlock: n, tab: i } = e,
         f = (0, d.sp)(),
-        y = l.useMemo(() => p.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
-        j = (0, o.e7)([g.Z], () => g.Z.getPurchase(n.rewardSkuId)),
+        y = l.useMemo(() => g.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
+        j = (0, s.e7)([p.Z], () => p.Z.getPurchase(n.rewardSkuId)),
         { cardContainerRef: k, totalCards: I } = ((e) => {
             let [t, n] = l.useState(1),
-                r = (0, s.dQu)(s.TVs.space.SPACE_XL),
+                r = (0, o.dQu)(o.TVs.space.SPACE_XL),
                 i = (0, u.Z)(() => {
                     (null == a ? void 0 : a.current) != null &&
                         n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
@@ -51,8 +51,8 @@ let y = (e) => {
         })(i !== O.AW.ORBS),
         { products: T } = ((e, t, n, r) => {
             let i = (0, x.Z)(),
-                a = (0, o.e7)([p.Z], () => p.Z.products),
-                s = l.useMemo(
+                a = (0, s.e7)([g.Z], () => g.Z.products),
+                o = l.useMemo(
                     () =>
                         e
                             ? []
@@ -61,8 +61,8 @@ let y = (e) => {
                               : [],
                     [e, i, t.rankedSkuIds, a, r, t.rewardSkuId],
                 ),
-                c = (0, h.a)()(s),
-                u = (0, C.l)(c).slice(0, n);
+                c = (0, m.a)()(o),
+                u = (0, h.l)(c).slice(0, n);
             return { products: (0, E.St)(u) };
         })(t, n, I, j),
         L = l.useMemo(
@@ -72,7 +72,7 @@ let y = (e) => {
                 !(T.length > 0) &&
                 n.rankedSkuIds.every((e) => {
                     var t;
-                    return (null == (t = p.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
+                    return (null == (t = g.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
                 }),
             [t, n.rankedSkuIds, T.length],
         ),
@@ -106,7 +106,7 @@ let y = (e) => {
                               n.rewardSkuId,
                           ),
                       T.map((e, t) => {
-                          let n = p.Z.getCategoryForProduct(e.skuId);
+                          let n = g.Z.getCategoryForProduct(e.skuId);
                           return null == e || null == n
                               ? null
                               : (0, r.jsx)(
@@ -118,7 +118,7 @@ let y = (e) => {
                                             categoryPosition: 0,
                                         },
                                         children: (0, r.jsx)(
-                                            m.Z,
+                                            C.Z,
                                             {
                                                 skuId: null == e ? void 0 : e.skuId,
                                                 prioritizedCurrency: i === O.AW.ORBS ? _.tA.ORBS : void 0,

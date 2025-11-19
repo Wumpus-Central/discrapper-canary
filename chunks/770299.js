@@ -319,13 +319,13 @@ e.exports = function (e) {
             },
         ],
         w = "([0-9]_*)+",
-        x = "([0-9a-fA-F]_*)+",
-        L = {
+        L = "([0-9a-fA-F]_*)+",
+        x = {
             className: "number",
             relevance: 0,
             variants: [
                 { match: `\\b(${w})(\\.(${w}))?([eE][+-]?(${w}))?\\b` },
-                { match: `\\b0x(${x})(\\.(${x}))?([pP][+-]?(${w}))?\\b` },
+                { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${w}))?\\b` },
                 { match: /\b0o([0-7]_*)+\b/ },
                 { match: /\b0b([01]_*)+\b/ },
             ],
@@ -334,11 +334,11 @@ e.exports = function (e) {
             className: "subst",
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
         }),
-        j = (e = "") => ({
+        k = (e = "") => ({
             className: "subst",
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/),
         }),
-        k = (e = "") => ({
+        j = (e = "") => ({
             className: "subst",
             label: "interpol",
             begin: r(/\\/, e, /\(/),
@@ -347,12 +347,12 @@ e.exports = function (e) {
         U = (e = "") => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), j(e), k(e)],
+            contains: [M(e), k(e), j(e)],
         }),
         G = (e = "") => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), k(e)],
+            contains: [M(e), j(e)],
         }),
         B = {
             className: "string",
@@ -414,7 +414,7 @@ e.exports = function (e) {
                             begin: /\(/,
                             end: /\)/,
                             keywords: I,
-                            contains: [...D, L, B],
+                            contains: [...D, x, B],
                         },
                     ],
                 },
@@ -479,7 +479,7 @@ e.exports = function (e) {
                 ...N,
                 ...R,
                 ...D,
-                L,
+                x,
                 B,
                 ...W,
                 ...K,
@@ -515,7 +515,7 @@ e.exports = function (e) {
                 ...h,
                 ...N,
                 ...D,
-                L,
+                x,
                 B,
                 ...K,
                 z,
@@ -599,7 +599,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => "interpol" === e.label);
         t.keywords = C;
-        let n = [...N, ...R, ...D, L, B, ...W];
+        let n = [...N, ...R, ...D, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -631,7 +631,7 @@ e.exports = function (e) {
             ...N,
             ...R,
             ...D,
-            L,
+            x,
             B,
             ...W,
             ...K,

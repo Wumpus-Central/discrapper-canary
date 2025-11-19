@@ -1,6 +1,6 @@
 n.d(t, {
     AK: () => c,
-    EK: () => l,
+    EK: () => i,
     IX: () => s,
     SW: () => h,
     SY: () => d,
@@ -12,9 +12,9 @@ n.d(t, {
     tq: () => p,
 });
 var a,
-    i = n(763600),
+    l = n(763600),
     r = n(48541),
-    l = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+    i = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
 let s = {
         steps: {
             "select-game": {
@@ -45,7 +45,7 @@ let s = {
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
               : "1415025086791942144";
-i.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, r.C.STAGING;
-let x = { [i.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+l.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, r.C.STAGING;
+let x = { [l.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
     g = (e, t) =>
         "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t);

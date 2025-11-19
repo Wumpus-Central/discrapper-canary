@@ -12,7 +12,7 @@ var r,
     s = n(885524),
     u = n(38755),
     d = n(153066),
-    f = n(412418),
+    f = n(980584),
     p = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
 let m = l.memo(function (e) {
     let {
@@ -24,15 +24,15 @@ let m = l.memo(function (e) {
             fit: m = "contain",
             mirror: _ = !1,
             paused: g = !1,
-            streamPreviewURL: v,
-            videoSpinnerContext: b,
+            streamPreviewURL: b,
+            videoSpinnerContext: v,
             userId: E,
             streamKey: h,
         } = e,
         [y, S] = l.useState(!0);
     (0, u.Z)({
         location: "VideoStream",
-        videoSpinnerContext: b,
+        videoSpinnerContext: v,
         userId: E,
         streamId: t,
         loading: y,
@@ -42,7 +42,7 @@ let m = l.memo(function (e) {
             streamId: t,
             userId: E,
             loading: y,
-            videoSpinnerContext: b,
+            videoSpinnerContext: v,
             streamKey: h,
             paused: g,
         }),
@@ -68,9 +68,9 @@ let m = l.memo(function (e) {
                           y &&
                           (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  null != v
+                                  null != b
                                       ? (0, i.jsx)("img", {
-                                            src: v,
+                                            src: b,
                                             alt: "",
                                             className: f.previewImage,
                                         })

@@ -71,8 +71,8 @@ function _(e) {
                 (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[w]) - c.width),
                 (O *= m ? 1 : -1));
     }
-    var x = Object.assign({ position: h }, g && d),
-        L =
+    var L = Object.assign({ position: h }, g && d),
+        x =
             !0 === E
                 ? f(
                       {
@@ -85,10 +85,10 @@ function _(e) {
                       x: O,
                       y: I,
                   };
-    return ((O = L.x), (I = L.y), m)
+    return ((O = x.x), (I = x.y), m)
         ? Object.assign(
               {},
-              x,
+              L,
               (((n = {})[N] = A ? "0" : ""),
               (n[C] = S ? "0" : ""),
               (n.transform =
@@ -97,7 +97,7 @@ function _(e) {
                       : "translate3d(" + O + "px, " + I + "px, 0)"),
               n),
           )
-        : Object.assign({}, x, (((t = {})[N] = A ? I + "px" : ""), (t[C] = S ? O + "px" : ""), (t.transform = ""), t));
+        : Object.assign({}, L, (((t = {})[N] = A ? I + "px" : ""), (t[C] = S ? O + "px" : ""), (t.transform = ""), t));
 }
 let p = {
     name: "computeStyles",

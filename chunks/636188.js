@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(486324),
     C = n(474936),
     N = n(388032),
-    R = n(199306);
+    R = n(605690);
 function P(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function w(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function x(e, t) {
         e
     );
 }
-let L = 25,
+let x = 25,
     M = 720;
 function k() {
     return [
@@ -210,7 +210,7 @@ function G(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        x(D({}, n), {
+                        L(D({}, n), {
                             backgroundOption: t,
                             optionIsInUse: a,
                         }),
@@ -323,12 +323,12 @@ function F(e) {
 function V(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
         a = (0, c.vRw)(),
-        o = i ? N.intl.formatToPlainString(N.t.ykGFeD, { maxCustomBackgrounds: L }) : N.intl.string(N.t.Qx0tFc),
+        o = i ? N.intl.formatToPlainString(N.t.ykGFeD, { maxCustomBackgrounds: x }) : N.intl.string(N.t.Qx0tFc),
         s = k();
     function l() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(
+                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("50893")]).then(
                     n.bind(n, 28130),
                 );
                 return (n) =>
@@ -380,7 +380,7 @@ function H(e) {
                 ),
             [n],
         ),
-        h = f.length >= L,
+        h = f.length >= x,
         { analyticsLocations: m } = (0, p.ZP)(_.Z.VIDEO_BACKGROUND_OPTIONS),
         g = Object.values((0, v.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
     return (0, r.jsx)(p.Gt, {

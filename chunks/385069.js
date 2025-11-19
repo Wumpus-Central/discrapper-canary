@@ -70,8 +70,8 @@ function h(e, t, n) {
             selectionManager: S,
             hasItemActions: !!(O || v),
         }),
-        x = (0, l.z)(e, { labelable: !0 }),
-        L = (0, u.useCallback)(
+        L = (0, l.z)(e, { labelable: !0 }),
+        x = (0, u.useCallback)(
             (e) => {
                 if (S.isFocused) {
                     e.currentTarget.contains(e.target) || S.setFocused(!1);
@@ -84,13 +84,13 @@ function h(e, t, n) {
         M = (0, u.useMemo)(
             () => ({
                 onBlur: P.onBlur,
-                onFocus: L,
+                onFocus: x,
             }),
-            [L, P.onBlur],
+            [x, P.onBlur],
         ),
         k = (0, _.p)(n, { isDisabled: 0 !== t.collection.size }),
         j = (0, c.d)(
-            x,
+            L,
             {
                 role: "grid",
                 id: D,

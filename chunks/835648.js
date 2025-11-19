@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(957825),
     O = n(474936),
     v = n(388032),
-    I = n(422840);
+    I = n(875825);
 function T(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ function w(e) {
         }),
     );
 }
-function x(e, t, n, i, a, o) {
+function L(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return (0, r.jsx)(
@@ -174,7 +174,7 @@ function x(e, t, n, i, a, o) {
             return null;
     }
 }
-function L(e) {
+function x(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjp);
@@ -209,10 +209,10 @@ function k(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return (0, r.jsx)(c.aML, {
-        text: L(t),
+        text: x(t),
         "aria-label": M(t),
         position: "right",
-        children: (e) => x(t, i, a, e, l, o),
+        children: (e) => L(t, i, a, e, l, o),
     });
 }
 function j(e) {

@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(996435),
     f = n(36361),
     b = n(388032),
-    p = n(214779);
+    p = n(269537);
 function y(e) {
     let { icon: t, label: n, onClick: l } = e;
     return (0, r.jsx)(c.hU, {

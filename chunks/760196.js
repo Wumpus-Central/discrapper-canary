@@ -17,7 +17,7 @@ var r = n(54381),
     p = n(841284),
     h = n(541716),
     m = n(407661),
-    g = n(564355);
+    g = n(744114);
 function E(e) {
     let {
             channel: t,

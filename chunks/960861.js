@@ -3,10 +3,10 @@ n.d(t, {
     UB: () => w,
     Uc: () => I,
     ZP: () => H,
-    kE: () => x,
+    kE: () => L,
 });
 var i,
-    a = n(647438),
+    a = n(473749),
     o = n(442837),
     s = n(570140),
     l = n(872810),
@@ -78,7 +78,7 @@ function w() {
         [],
     );
 }
-function x() {
+function L() {
     return (0, a.useEffect)(
         () => (
             A++,
@@ -90,17 +90,17 @@ function x() {
         [],
     );
 }
-function L() {
+function x() {
     let e = u.Z.getChannel(p.Z.getVoiceChannelId());
     return (T = null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1)), D(), !1;
 }
 function M() {
     return null != r ? (0, E.Z)(r) : null;
 }
-function j() {
+function k() {
     return null != r ? (0, g.Z)(r) : null;
 }
-function k() {
+function j() {
     var e;
     let { soundshareEnabled: t } = c.Z.getState();
     return {
@@ -112,7 +112,7 @@ function k() {
 }
 class U extends (i = o.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, p.Z, u.Z, d.Z, _.Z], L), L();
+        this.syncWith([f.Z, p.Z, u.Z, d.Z, _.Z], x), x();
     }
     supported() {
         return R();
@@ -133,17 +133,17 @@ class U extends (i = o.ZP.Store) {
         return M();
     }
     getLastPickedContentPID() {
-        return j();
+        return k();
     }
     getStreamStartOptions() {
-        return k();
+        return j();
     }
 }
 function G(e) {
     let { existing: t, content: n } = e;
     if (((N = { lastPickerAction: 1 }), (r = n), 0 === S && !t)) {
         let e = u.Z.getChannel(p.Z.getVoiceChannelId());
-        null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1) && (0, l.WH)(e.getGuildId(), e.id, k());
+        null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1) && (0, l.WH)(e.getGuildId(), e.id, j());
     }
 }
 function B() {

@@ -23,7 +23,7 @@ var r = n(54381),
     y = n(27123),
     O = n(921944),
     v = n(388032),
-    I = n(890088);
+    I = n(820657);
 function T(e, t, n) {
     return (
         t in e
@@ -158,14 +158,14 @@ function R(e) {
         { analyticsLocations: P } = (0, d.ZP)(),
         D = g.default.getCurrentUser(),
         w = null != D ? p.Z.getFirstWishlistId(D.id) : null,
-        x = (0, m.ny)(w, t),
-        L = i.useRef(null),
+        L = (0, m.ny)(w, t),
+        x = i.useRef(null),
         [M, k] = i.useState(null);
     i.useEffect(() => {
         k(null);
     }, [t]);
-    let j = null !== M ? M : x,
-        U = (0, f.X)(L),
+    let j = null !== M ? M : L,
+        U = (0, f.X)(x),
         G = j ? u.h_8 : u.Pzh,
         B = j || U ? I.wishlistedOrHoveredIconColor : I.normalIconColor,
         Z = i.useCallback(
@@ -208,7 +208,7 @@ function R(e) {
                   "aria-label": null != y ? y : F,
                   children: (0, r.jsx)(u.P3F, {
                       className: o()(I.wishlistButton, I.disabledButton, a),
-                      innerRef: L,
+                      innerRef: x,
                       onClick: (e) => e.stopPropagation(),
                       "aria-disabled": !0,
                       children: (0, r.jsx)(G, {
@@ -226,7 +226,7 @@ function R(e) {
                     "aria-label": F,
                     children: (0, r.jsx)(u.P3F, {
                         className: o()(I.wishlistButton, a),
-                        innerRef: L,
+                        innerRef: x,
                         onClick: Z,
                         "aria-label": F,
                         children: (0, r.jsx)(G, {
@@ -242,7 +242,7 @@ function R(e) {
                     "aria-label": null != y ? y : F,
                     children: (0, r.jsx)(u.P3F, {
                         className: o()(I.wishlistButton, a),
-                        innerRef: L,
+                        innerRef: x,
                         onClick: Z,
                         "aria-label": F,
                         children: (0, r.jsx)(G, {

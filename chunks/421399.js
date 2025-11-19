@@ -27,7 +27,7 @@ var r = n(54381),
     S = n(935910),
     A = n(392819),
     C = n(131085),
-    N = n(724913);
+    N = n(136907);
 function R(e, t, n) {
     return (
         t in e
@@ -80,11 +80,11 @@ function w(e, t) {
         e
     );
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -92,7 +92,7 @@ function x(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -111,7 +111,7 @@ function k(e) {
             message: a,
             channel: R,
             userOverride: D,
-            compact: L = !1,
+            compact: x = !1,
             withMentionPrefix: M = !1,
             showPopout: k = !1,
             hideGuildTag: j = !1,
@@ -189,7 +189,7 @@ function k(e) {
         },
         ey = i.useMemo(
             () =>
-                L && !j
+                x && !j
                     ? (0, r.jsx)(b.ZP, {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
@@ -198,7 +198,7 @@ function k(e) {
                           badgeSize: C.Gg.SIZE_12,
                       })
                     : null,
-            [L, n.primaryGuild, q, a.author.id, j],
+            [x, n.primaryGuild, q, a.author.id, j],
         ),
         eO = null != D ? D : a.author,
         ev =
@@ -223,7 +223,7 @@ function k(e) {
                       clickTrap: k,
                       children: (e) => {
                           var { onClick: t } = e,
-                              n = x(e, ["onClick"]);
+                              n = L(e, ["onClick"]);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(
@@ -253,7 +253,7 @@ function k(e) {
     return (0, r.jsxs)(p.Gt, {
         value: X,
         children: [
-            null != eI && !U && L
+            null != eI && !U && x
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [" ", eI, " "],
                   })
@@ -268,7 +268,7 @@ function k(e) {
                   })
                 : null,
             ev,
-            !L &&
+            !x &&
                 !j &&
                 (0, r.jsx)(b.ZP, {
                     primaryGuild: n.primaryGuild,
@@ -277,7 +277,7 @@ function k(e) {
                     className: N.clanTagChiplet,
                 }),
             null != eT ? eT : null,
-            null == eI || U || L ? null : eI,
+            null == eI || U || x ? null : eI,
         ],
     });
 }

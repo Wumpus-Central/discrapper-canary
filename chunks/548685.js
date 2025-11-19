@@ -3,17 +3,17 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    s = n(28664),
+    s = n(442837),
+    o = n(28664),
     c = n(481060),
     u = n(782568),
     d = n(607070),
-    p = n(594174),
-    g = n(451478),
+    g = n(594174),
+    p = n(451478),
     f = n(626135),
-    h = n(63063),
-    C = n(74538),
-    m = n(381585),
+    m = n(63063),
+    h = n(74538),
+    C = n(381585),
     _ = n(597688),
     b = n(128922),
     v = n(38900),
@@ -28,8 +28,8 @@ var r = n(54381),
     T = n(215023),
     L = n(981631),
     B = n(388032),
-    P = n(219588),
-    N = n(310582);
+    P = n(664603),
+    N = n(687983);
 let A = (e) => {
     var t;
     let {
@@ -42,8 +42,8 @@ let A = (e) => {
             buttonContainerClassName: H,
             orbsSupportedOnly: D,
         } = e,
-        M = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        F = C.ZP.canUseCollectibles(M),
+        M = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        F = h.ZP.canUseCollectibles(M),
         W = (0, I.B)("FeedBlock"),
         {
             sortType: V,
@@ -59,11 +59,11 @@ let A = (e) => {
             orbsSupportedOnly: D,
         }),
         q = (0, k.St)(z),
-        J = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Q = (0, o.e7)([g.Z], () => g.Z.isFocused()),
+        J = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        Q = (0, s.e7)([p.Z], () => p.Z.isFocused()),
         X = !J && Q,
         { animationPhase: $, startAnimation: ee } = (0, y.y)(),
-        et = (0, m.sp)(),
+        et = (0, C.sp)(),
         en = null != (t = null == et ? void 0 : et.sessionId) ? t : "",
         er = l.useRef(null),
         el = l.useCallback(
@@ -96,13 +96,13 @@ let A = (e) => {
                                       children: i,
                                   }),
                                   Y &&
-                                      (0, r.jsx)(s.u, {
+                                      (0, r.jsx)(o.u, {
                                           text: B.intl.string(B.t["3taPdj"]),
                                           position: "top",
                                           "aria-label": B.intl.string(B.t["3taPdj"]),
                                           children: (0, r.jsx)(c.P3F, {
                                               onClick: () =>
-                                                  (0, u.Z)(h.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                  (0, u.Z)(m.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED)),
                                               className: N.informationIcon,
                                               children: (0, r.jsx)(c.d3s, { size: "sm" }),
                                           }),
@@ -188,7 +188,7 @@ let A = (e) => {
                                               ? (n = N.shuffleIntro)
                                               : $ === y.g.SORT_IN && (n = N.sortChangedIntro);
                                 return (0, r.jsx)(
-                                    m.k0,
+                                    C.k0,
                                     {
                                         newValue: {
                                             tilePosition: t,

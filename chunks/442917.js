@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(266910),
     D = n(788983),
     w = n(703656),
-    x = n(937995),
-    L = n(618158),
+    L = n(937995),
+    x = n(618158),
     M = n(922745),
     k = n(197016),
     j = n(800965),
@@ -56,8 +56,8 @@ var r = n(54381),
     er = n(560688),
     ei = n(981631),
     ea = n(354459),
-    eo = n(306762),
-    es = n(315091);
+    eo = n(431740),
+    es = n(285236);
 function el(e, t, n) {
     return (
         t in e
@@ -232,7 +232,7 @@ class ef extends i.PureComponent {
                               "aria-label": null == n ? void 0 : n.user.username,
                           }),
                       }))),
-            (0, r.jsx)(x.ZP, {
+            (0, r.jsx)(L.ZP, {
                 timeout: 1800,
                 children: (e) => {
                     var t;
@@ -248,7 +248,7 @@ class ef extends i.PureComponent {
                                     onHide: this.handleHidePIP,
                                     renderBottomLeftControls: this.renderBottomLeftControls,
                                     renderBottomRightControls: this.renderBottomRightControls,
-                                    preventIdleComponent: L.Z,
+                                    preventIdleComponent: x.Z,
                                     width: a,
                                     className: es.elevationHigh,
                                     videoControlsClassName:
@@ -340,7 +340,7 @@ class ef extends i.PureComponent {
                         (0, ea._5)(e) || (null == e ? void 0 : e.type) === ea.fO.ACTIVITY,
                         "Cannot render participants for participant type ".concat(null == e ? void 0 : e.type),
                     ),
-                    (0, r.jsx)(L.Z, {
+                    (0, r.jsx)(x.Z, {
                         children: (0, r.jsx)(O.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),

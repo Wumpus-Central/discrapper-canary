@@ -14,7 +14,7 @@ var n = r(54381),
     h = r(401416),
     p = r(920133),
     f = r(388032),
-    x = r(956051),
+    x = r(382716),
     j = r(444812);
 function y(e) {
     let { transitionState: t, guildId: y, onClose: O } = e,

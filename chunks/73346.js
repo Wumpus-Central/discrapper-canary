@@ -1,7 +1,7 @@
 n.d(t, {
-    Gg: () => L,
+    Gg: () => x,
     Kb: () => R,
-    Ww: () => j,
+    Ww: () => k,
     ZI: () => A,
     _W: () => C,
     uF: () => P,
@@ -201,10 +201,10 @@ function w(e, t, n) {
               userInfo: i,
           };
 }
-let x = [];
-function L(e, t, n, r, a) {
+let L = [];
+function x(e, t, n, r, a) {
     let o = t.get(e);
-    if (null == o) return x;
+    if (null == o) return L;
     let s = o.applicationId,
         l = [],
         c = [],
@@ -226,7 +226,7 @@ function L(e, t, n, r, a) {
     return l;
 }
 let M = [];
-function j(e, t, n) {
+function k(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
     if (null == r || null == i) return M;

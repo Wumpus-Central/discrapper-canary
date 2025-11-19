@@ -7,7 +7,7 @@ var i = n(54381),
     o = n(120298),
     c = n(75666),
     d = n(388032),
-    u = n(496563);
+    u = n(205655);
 function m(e) {
     let { guildTemplate: t, onClick: n, autoFocus: s } = e,
         r = l.useCallback(() => {

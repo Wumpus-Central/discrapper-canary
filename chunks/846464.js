@@ -15,7 +15,7 @@ var r = n(54381),
     b = n(48175),
     g = n(474936),
     v = n(388032),
-    P = n(360026);
+    P = n(178397);
 function x(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
         {

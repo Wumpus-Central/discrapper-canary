@@ -5,12 +5,12 @@ var r = n(54381),
     a = n(128557),
     s = n(981631),
     o = n(388032),
-    c = n(957717);
+    c = n(772825);
 let d = (e) => {
     let { guild: t, onAddGuild: d } = e,
         u = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("28297")]).then(n.bind(n, 560114));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(

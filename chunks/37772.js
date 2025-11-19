@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(628238),
     d = n(976853),
     p = n(977683),
-    f = n(869765),
-    h = n(695346),
+    h = n(869765),
+    f = n(695346),
     g = n(592125),
     m = n(699516),
     b = n(709054),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(493892),
     v = n(901461),
     j = n(739566),
-    x = n(443877),
-    C = n(492593),
+    C = n(443877),
+    x = n(492593),
     E = n(453687),
     S = n(938353),
     I = n(25015),
@@ -93,19 +93,19 @@ let B = i.memo(function e(t) {
             treatSpam: W,
         } = t,
         K = D.OBS.has(s.type) ? s.messageReference : void 0,
-        Y = (0, a.e7)([f.Z], () => f.Z.getMessageByReference(K)),
+        Y = (0, a.e7)([h.Z], () => h.Z.getMessageByReference(K)),
         q = (0, a.e7)([g.Z], () =>
-            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED
+            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED
                 ? g.Z.getChannel(Y.message.channel_id)
                 : null,
         ),
-        X = h.x4.useSetting(),
-        Q = h.RS.useSetting(),
-        J = h.NA.useSetting(),
-        $ = h.QK.useSetting(),
+        X = f.x4.useSetting(),
+        Q = f.RS.useSetting(),
+        J = f.NA.useSetting(),
+        $ = f.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
-        { disableReactionCreates: en } = (0, x.Z)(l),
+        { disableReactionCreates: en } = (0, C.Z)(l),
         { content: er, hasSpoilerEmbeds: ei } = (0, I.Z)(s, {
             hideSimpleEmbedContent: Q && J,
             allowList: ee,
@@ -118,7 +118,7 @@ let B = i.memo(function e(t) {
             [g.Z],
             () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
         ),
-        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
+        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED && null != q,
         es = !ea && void 0 === i,
         ec = (0, P.Z)({
             message: s,
@@ -128,7 +128,7 @@ let B = i.memo(function e(t) {
         eu = (0, c.v)(s),
         ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
-        ef = (0, E.iG)(s);
+        eh = (0, E.iG)(s);
     return ea
         ? (0, r.jsx)(
               e,
@@ -150,7 +150,7 @@ let B = i.memo(function e(t) {
                 count: 1,
                 collapsedReason: i,
             })
-          : (0, r.jsx)(C.Z, {
+          : (0, r.jsx)(x.Z, {
                 compact: R,
                 className: o()(M, {
                     [k.ephemeral]: (0, y.Pv)(s),
@@ -197,13 +197,13 @@ let B = i.memo(function e(t) {
                 isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
-                "aria-labelledby": ef,
+                "aria-labelledby": eh,
                 "aria-roledescription": L.intl.string(L.t.BAB0yK),
             });
 });
 function F(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(C.Z, {
+    return (0, r.jsx)(x.Z, {
         className: t,
         compact: i,
         role: "group",

@@ -1,5 +1,5 @@
 n.d(t, { Z: () => l }), n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(907331);
 function l(e) {
     let { wishlistId: t, onAction: n } = e,

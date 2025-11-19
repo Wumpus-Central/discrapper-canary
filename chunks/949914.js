@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(954821),
     D = n(980864),
     w = n(981631),
-    x = n(176505),
-    L = n(526761),
+    L = n(176505),
+    x = n(526761),
     M = n(388032),
-    k = n(602589);
+    k = n(816730);
 let j = (e) => {
         let { label: t, value: n, showInfoIcon: i, infoIconTooltipText: a } = e;
         return (0, r.jsxs)("div", {
@@ -141,12 +141,12 @@ let j = (e) => {
         if (null == a || null == n || null == y) return null;
         let H = () => {
                 null != l &&
-                    ((0, v.uL)(w.Z5c.CHANNEL(l.id, x.oC.ROLE_SUBSCRIPTIONS)),
+                    ((0, v.uL)(w.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)),
                     (0, T.default)(),
                     f.Z.show(w.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, M.intl.string(M.t.DvbaM4), () =>
                         (0, S.openUserSettings)(I.n.SUBSCRIPTIONS_PANEL, {
                             section: w.oAB.SUBSCRIPTIONS,
-                            subsection: L.cP,
+                            subsection: x.cP,
                         }),
                     ));
             },

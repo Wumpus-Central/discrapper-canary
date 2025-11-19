@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(878184),
     h = n(798476),
     m = n(423252),
-    g = n(626807);
+    g = n(189690);
 let E = 50001;
 function b(e) {
     let { guildId: t, name: n, setPopoutRef: a, onClose: b } = e,

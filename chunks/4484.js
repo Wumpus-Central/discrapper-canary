@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(847302),
     D = n(657198),
     w = n(321127),
-    x = n(645174),
-    L = n(120481),
+    L = n(645174),
+    x = n(120481),
     M = n(981631),
-    k = n(867641);
+    k = n(520093);
 let j = i.forwardRef(function (e, t) {
     let {
             value: n,
@@ -205,7 +205,7 @@ let j = i.forwardRef(function (e, t) {
                 );
         }, [j.id, eR, ee, eP, ea]);
     (0, S.Z)(t, eR, j, eD), (0, N.Z)(eR, eO, K);
-    let { handleKeyDown: ew, handleKeyUp: ex } = (0, A.Z)({
+    let { handleKeyDown: ew, handleKeyUp: eL } = (0, A.Z)({
             editor: eR,
             channel: j,
             disableEnterToSubmit: el,
@@ -218,7 +218,7 @@ let j = i.forwardRef(function (e, t) {
             hideAutocomplete: en,
             moveSelection: er,
         }),
-        { handlePaste: eL, handleGlobalPaste: eM } = (0, C.Z)(eR, eS, W),
+        { handlePaste: ex, handleGlobalPaste: eM } = (0, C.Z)(eR, eS, W),
         ek = i.useCallback(
             (e) => {
                 null == et || et();
@@ -259,7 +259,7 @@ let j = i.forwardRef(function (e, t) {
         eG = i.useCallback(
             (e) => {
                 let t = (0, D.Z)(eR, e, j.id);
-                return null == t && (t = (0, x.Z)(eR, e)), null == t && (t = (0, L.Z)(eR, e)), t;
+                return null == t && (t = (0, L.Z)(eR, e)), null == t && (t = (0, x.Z)(eR, e)), t;
             },
             [j.id, eR],
         ),
@@ -288,9 +288,9 @@ let j = i.forwardRef(function (e, t) {
                     onFocus: z,
                     onBlur: q,
                     onClick: ek,
-                    onPaste: eL,
+                    onPaste: ex,
                     onKeyDown: ew,
-                    onKeyUp: ex,
+                    onKeyUp: eL,
                     decorate: eU,
                     renderExtraElement: eG,
                     renderExtraLeaf: eB,

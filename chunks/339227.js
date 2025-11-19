@@ -272,16 +272,16 @@ let P = {
     },
     D = /(-# +)/,
     w = (0, _.Z)([A, P]),
-    x = (0, _.Z)([C, P]),
-    L = l._p(w),
-    M = l._p(x),
-    j = {
+    L = (0, _.Z)([C, P]),
+    x = l._p(w),
+    M = l._p(L),
+    k = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    k = new (o())(j),
-    U = new (o())(j);
+    j = new (o())(k),
+    U = new (o())(k);
 function G(e, t, n) {
     let r = [],
         i = {
@@ -292,8 +292,8 @@ function G(e, t, n) {
             allowGameMentions: !0,
             allowTimeMentionInput: !0,
         },
-        a = n ? M : L,
-        o = n ? U : k,
+        a = n ? M : x,
+        o = n ? U : j,
         s = o.get(e);
     if (null != s) return s;
     let l =

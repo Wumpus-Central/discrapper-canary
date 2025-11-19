@@ -28,7 +28,7 @@ var r = n(54381),
     v = n(726985),
     I = n(65154),
     T = n(388032),
-    S = n(612232);
+    S = n(180568);
 let A = ">=10.0.22000",
     C = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i,
     N = "{E5323777-F976-4f5b-9B55-B94699C46E44}";
@@ -77,7 +77,7 @@ function w(e) {
         { analyticsLocations: N } = (0, f.ZP)(),
         { id: D } = (0, p.p6)(I.h7.VIDEO_INPUT),
         w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
-        x = m.qF.useSetting();
+        L = m.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
@@ -95,7 +95,7 @@ function w(e) {
                 : (0, r.jsx)(c.rsf, {
                       label: T.intl.string(T.t["3Ppr1h"]),
                       description: T.intl.string(T.t.WNbX4O),
-                      checked: x,
+                      checked: L,
                       onChange: (e) => {
                           m.qF.updateSetting(e),
                               b.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });

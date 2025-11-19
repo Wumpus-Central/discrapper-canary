@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(54381),
     o = n(473749),
     l = n(120356),
@@ -14,19 +14,19 @@ var r = n(54381),
     v = n(215113),
     E = n(684245),
     g = n(388032),
-    O = n(273339);
-function b() {
+    O = n(290691);
+function h() {
     var e;
-    let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: b } = o.useContext(v.VideoQuestModalContext),
-        h = (0, m.aM)(),
+    let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: h } = o.useContext(v.VideoQuestModalContext),
+        b = (0, m.aM)(),
         S = (0, p.tP)(t),
         C = o.useRef(null),
         { isHoveringOrFocusing: y } = (0, c.Z)(C),
         _ = (0, E.e)({
             quest: t,
-            onClose: b,
+            onClose: h,
             sourceQuestContent: n,
-            impressionId: h,
+            impressionId: b,
         }),
         x = null == (e = t.config.videoMetadata) ? void 0 : e.messages.videoEndCtaSubtitle,
         j = void 0 !== x && !(0, u.Ew)(x);

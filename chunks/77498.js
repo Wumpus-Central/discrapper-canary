@@ -86,12 +86,12 @@ function D() {
 function w() {
     r = !1;
 }
-function x(e) {
+function L(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && S !== n && (O.clear(), (v = {}), (I = {}), (S = n)), t)) R(C(e));
     (r = void 0), (A = Date.now());
 }
-class L extends (a = o.ZP.PersistedStore) {
+class x extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
@@ -180,9 +180,9 @@ class L extends (a = o.ZP.PersistedStore) {
         (T[e] = !0), s.K.set(E, T);
     }
 }
-g(L, "displayName", "GameStore"),
-    g(L, "persistKey", "GameStore"),
-    g(L, "migrations", [
+g(x, "displayName", "GameStore"),
+    g(x, "persistKey", "GameStore"),
+    g(x, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -210,9 +210,9 @@ g(L, "displayName", "GameStore"),
             detectableGames: [],
         }),
     ]);
-let M = new L(l.Z, {
+let M = new x(l.Z, {
     OVERLAY_INITIALIZE: P,
     GAMES_DATABASE_FETCH: D,
     GAMES_DATABASE_FETCH_FAIL: w,
-    GAMES_DATABASE_UPDATE: x,
+    GAMES_DATABASE_UPDATE: L,
 });

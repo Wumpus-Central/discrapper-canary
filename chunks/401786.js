@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(474936),
     R = n(231338),
     P = n(388032),
-    D = n(569319);
+    D = n(161716);
 function w(e) {
     let {
             premiumSubscription: t,
@@ -73,7 +73,7 @@ function w(e) {
         }),
     });
 }
-function x() {
+function L() {
     let e = Object.values(O.Z.boostSlots),
         t = o().sortBy(
             e.filter((e) => !(0, T.tl)(e)),
@@ -81,8 +81,8 @@ function x() {
         )[0];
     return null != t ? t.id : null;
 }
-async function L(e, t, n, r) {
-    let i = null != r ? r : x();
+async function x(e, t, n, r) {
+    let i = null != r ? r : L();
     if (null == i) throw Error("No slot to cancel");
     let a = (0, S.MY)(e, t);
     await (0, d.pD)(i),
@@ -102,7 +102,7 @@ function M(e) {
     let { premiumSubscription: o, guildBoostSlotId: s, fractionalPremiumInfo: u, onBack: d, onNext: p, onClose: O } = e,
         [I, T] = i.useState(!1),
         [R, w] = i.useState(null),
-        [x, M] = i.useMemo(() => {
+        [L, M] = i.useMemo(() => {
             try {
                 return [(0, g.g)(o, -1), !1];
             } catch (e) {
@@ -133,7 +133,7 @@ function M(e) {
             analyticsLocations: G,
             analyticsLocation: f.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
-        Z = null != U ? (0, S.Zx)(o, null != (a = null == (t = x[0]) ? void 0 : t.quantity) ? a : 0, U.id) : null,
+        Z = null != U ? (0, S.Zx)(o, null != (a = null == (t = L[0]) ? void 0 : t.quantity) ? a : 0, U.id) : null,
         [F] = (0, m.ED)({
             subscriptionId: o.id,
             items: Z,
@@ -154,7 +154,7 @@ function M(e) {
                       let { planId: t } = e;
                       return !N.Z1.has(t);
                   })) != null,
-        H = x.some((e) => {
+        H = L.some((e) => {
             let { planId: t } = e;
             return N.Z1.has(t);
         }),
@@ -220,7 +220,7 @@ function M(e) {
                             disabled: I,
                             onClick: async () => {
                                 try {
-                                    T(!0), w(null), await L(o, x, G, s), p();
+                                    T(!0), w(null), await x(o, L, G, s), p();
                                 } catch (e) {
                                     w(P.intl.string(P.t["5mlOCW"])), T(!1);
                                 }

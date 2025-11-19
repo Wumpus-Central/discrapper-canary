@@ -1,7 +1,7 @@
-a.d(e, { r: () => n });
-var r = a(967752),
-    _ = a(617726);
-function n(t, { metadata: e, tunnel: a, dsn: n }) {
+_.d(e, { r: () => n });
+var a = _(967752),
+    r = _(617726);
+function n(t, { metadata: e, tunnel: _, dsn: n }) {
     let o = {
             event_id: t.event_id,
             sent_at: new Date().toISOString(),
@@ -12,8 +12,8 @@ function n(t, { metadata: e, tunnel: a, dsn: n }) {
                         version: e.sdk.version,
                     },
                 }),
-            ...(!!a && !!n && { dsn: (0, r.RA)(n) }),
+            ...(!!_ && !!n && { dsn: (0, a.RA)(n) }),
         },
-        i = [{ type: "user_report" }, t];
-    return (0, _.Jd)(o, [i]);
+        E = [{ type: "user_report" }, t];
+    return (0, r.Jd)(o, [E]);
 }

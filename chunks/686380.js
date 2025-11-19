@@ -26,7 +26,7 @@ var r = n(54381),
     C = n(474936),
     N = n(981631),
     R = n(388032),
-    P = n(269143),
+    P = n(524994),
     D = n(295234);
 function w(e, t, n) {
     return (
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,7 +74,7 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,7 +86,7 @@ let k = "???",
         g.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 656139));
-                return (t) => (0, r.jsx)(e, M(x({}, t), { startingScreen: i }));
+                return (t) => (0, r.jsx)(e, M(L({}, t), { startingScreen: i }));
             });
     };
 class U extends i.Component {

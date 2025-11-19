@@ -29,12 +29,12 @@ var r = n(54381),
     P = n(69626),
     D = n(142990),
     w = n(382056),
-    x = n(532901),
-    L = n(311739),
+    L = n(532901),
+    x = n(311739),
     M = n(981631),
     k = n(176505),
-    j = n(430864),
-    U = n(154257);
+    j = n(602009),
+    U = n(525685);
 function G(e, t, n) {
     return (
         t in e
@@ -195,7 +195,7 @@ function W(e) {
               }),
     });
 }
-n(324509);
+n(764390);
 let K = {
     blockQuote: {
         react: (e, t, n) =>
@@ -404,14 +404,14 @@ let K = {
 };
 function z(e) {
     return F(B({}, K), {
-        link: (0, x.Z)(e),
+        link: (0, L.Z)(e),
         devLink: (0, D.Z)(e),
         emoji: V(e),
         customEmoji: H(e),
         channelMention: (0, R.Z)(e),
         commandMention: (0, P.ZP)(e),
         attachmentLink: (0, N.Z)(e),
-        shopLink: (0, L.Z)(e),
+        shopLink: (0, x.Z)(e),
         gameMention: w.Z,
     });
 }

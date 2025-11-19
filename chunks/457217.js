@@ -25,7 +25,7 @@ let E = (0, s.Em)(a.n.CLIPS_FRAME_RATE, {
             label: c.intl.formatToPlainString(c.t.Qb44XH, { fps: o.ApplicationStreamFPS.FPS_60 }),
         },
     ],
-    usePredicate: l.Go,
+    usePredicate: l.w9,
     setValue: (t) => {
         let { clipsQuality: e } = u.Z.getSettings();
         r.yi({

@@ -47,7 +47,7 @@ function D() {
 function w() {
     T = 1;
 }
-function x(e) {
+function L(e) {
     let { updates: t } = e;
     t.forEach((e) => {
         let { guildId: t, sounds: n } = e;
@@ -55,7 +55,7 @@ function x(e) {
     }),
         (T = 2);
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     b.delete(t.id);
 }
@@ -67,11 +67,11 @@ function M(e) {
         ? ((n[r] = t), b.set(t.guildId, [...n]))
         : null != n && (null == n || n.push(t), b.set(t.guildId, [...n]));
 }
-function j(e) {
+function k(e) {
     let { guildId: t, soundboardSounds: n } = e;
     b.set(t, n);
 }
-function k(e) {
+function j(e) {
     let { soundId: t, guildId: n } = e,
         r = b.get(n),
         i = null == r ? void 0 : r.findIndex((e) => e.soundId === t);
@@ -226,10 +226,10 @@ let J = new Q(s.Z, {
     GUILD_SOUNDBOARD_FETCH: w,
     GUILD_SOUNDBOARD_SOUND_CREATE: M,
     GUILD_SOUNDBOARD_SOUND_UPDATE: M,
-    GUILD_SOUNDBOARD_SOUND_DELETE: k,
+    GUILD_SOUNDBOARD_SOUND_DELETE: j,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: V,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: H,
-    GUILD_SOUNDBOARD_SOUNDS_UPDATE: j,
+    GUILD_SOUNDBOARD_SOUNDS_UPDATE: k,
     USER_SOUNDBOARD_SET_VOLUME: W,
     VOICE_CHANNEL_SELECT: D,
     USER_SETTINGS_PROTO_UPDATE: z,
@@ -238,8 +238,8 @@ let J = new Q(s.Z, {
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH: B,
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS: Z,
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE: F,
-    SOUNDBOARD_SOUNDS_RECEIVED: x,
-    GUILD_DELETE: L,
+    SOUNDBOARD_SOUNDS_RECEIVED: L,
+    GUILD_DELETE: x,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: q,
     OVERLAY_INITIALIZE: X,
 });

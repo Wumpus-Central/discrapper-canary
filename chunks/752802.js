@@ -34,8 +34,8 @@ var i = n(54381),
     T = n(1226),
     P = n(981631),
     A = n(388032),
-    D = n(379746);
-function k(e) {
+    k = n(838773);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -108,8 +108,8 @@ function M(e) {
                 r = L(e, ["onClick"]);
             return (0, i.jsx)(
                 c.P3F,
-                R(k({}, r), {
-                    className: D.controlAction,
+                R(D({}, r), {
+                    className: k.controlAction,
                     onClick: (e) => {
                         null == n || n(),
                             (0, p.g)((0, y.V9)(t.stream), !1),
@@ -150,8 +150,8 @@ function z(e) {
                 r = L(e, ["onClick"]);
             return (0, i.jsx)(
                 c.P3F,
-                R(k({}, r), {
-                    className: D.controlAction,
+                R(D({}, r), {
+                    className: k.controlAction,
                     onClick: (e) => {
                         e.stopPropagation(),
                             (0, Z.Ws)(P.Odu.GO_LIVE, {
@@ -190,7 +190,7 @@ function V(e, t, r) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        R(k({}, n), {
+                        R(D({}, n), {
                             stream: e.stream,
                             exitFullscreen: () => {},
                             appContext: t,
@@ -211,18 +211,18 @@ function U(e) {
         { enabled: h } = (0, w.aq)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: o()(D.controlBackground, { [D.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)("div", { className: o()(k.controlBackground, { [k.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)("div", {
-                    className: D.watchActionContainer,
+                    className: k.watchActionContainer,
                     children: (0, i.jsx)(c.aML, {
                         "data-migration-pending": !0,
                         text: d,
                         children: (e) =>
                             (0, i.jsxs)(
                                 c.P3F,
-                                R(k({}, e), {
-                                    className: D.watchButton,
+                                R(D({}, e), {
+                                    className: k.watchButton,
                                     onClick: () => {
                                         var t;
                                         null == (t = e.onClick) || t.call(e),
@@ -253,23 +253,23 @@ function U(e) {
                     }),
                 }),
             (0, i.jsxs)("div", {
-                className: D.controls,
+                className: k.controls,
                 children: [
                     (0, i.jsx)("div", {
-                        className: D.controlUser,
+                        className: k.controlUser,
                         children: (0, i.jsxs)("div", {
-                            className: D.controlUserContainer,
+                            className: k.controlUserContainer,
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-md/medium",
                                     color: "always-white",
-                                    className: D.controlUserName,
+                                    className: k.controlUserName,
                                     children: N.ZP.getName(n.stream.guildId, n.stream.channelId, s),
                                 }),
                                 (0, i.jsx)(v.ZP, {
                                     primaryGuild: u.primaryGuild,
                                     userId: u.id,
-                                    containerClassName: D.guildTag,
+                                    containerClassName: k.guildTag,
                                     inline: !1,
                                     onShowProfile: () => {
                                         (0, Z.Ws)(P.Odu.GO_LIVE, {
@@ -283,7 +283,7 @@ function U(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: D.controlActions,
+                        className: k.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
@@ -298,8 +298,8 @@ function U(e) {
                                                 r = L(e, ["onClick"]);
                                             return (0, i.jsx)(
                                                 c.P3F,
-                                                R(k({}, r), {
-                                                    className: D.controlAction,
+                                                R(D({}, r), {
+                                                    className: k.controlAction,
                                                     onClick: V(n, l, t),
                                                     children: (0, i.jsx)(c.xhG, {
                                                         size: "sm",
@@ -332,24 +332,24 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
         return (!p && r) || d
             ? null
             : (0, i.jsxs)("div", {
-                  className: D.tile,
+                  className: k.tile,
                   children: [
                       p &&
                           !r &&
                           (0, i.jsx)(g.ZP, {
                               size: g.ZP.Sizes.SMALL,
-                              className: D.liveIndicator,
+                              className: k.liveIndicator,
                           }),
                       p
                           ? (0, i.jsx)("div", {
-                                className: D.streamTile,
+                                className: k.streamTile,
                                 children: (0, i.jsx)(c.kL8, {
                                     "aria-label": A.intl.formatToPlainString(A.t.gHPz3Q, {
                                         streamerName: t.user.username,
                                     }),
                                     onClick: () => {},
                                     onContextMenu: V(t, u),
-                                    className: D.streamTile,
+                                    className: k.streamTile,
                                     style: { transform: "scale(".concat(f, ")") },
                                     children: (0, i.jsx)(_.Z, {
                                         participant: t,
@@ -358,15 +358,15 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
                                         popoutType: m.P.OVERLAY,
                                         focused: !r,
                                         selected: !1,
-                                        wrapperClassName: r ? D.streamTileWrapper : void 0,
+                                        wrapperClassName: r ? k.streamTileWrapper : void 0,
                                     }),
                                 }),
                             })
                           : (0, i.jsx)("div", {
-                                className: D.streamPreview,
+                                className: k.streamPreview,
                                 children: (0, i.jsx)(O.Z, {
                                     noText: !0,
-                                    className: D.absoluteFill,
+                                    className: k.absoluteFill,
                                     stream: t.stream,
                                 }),
                             }),

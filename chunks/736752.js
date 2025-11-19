@@ -32,15 +32,15 @@ var r = n(54381),
     P = n(418632),
     D = n(10298),
     w = n(526156),
-    x = n(730820),
-    L = n(888256),
+    L = n(730820),
+    x = n(888256),
     M = n(2719),
     k = n(194530),
     j = n(726985),
     U = n(981631),
     G = n(801461),
     B = n(388032),
-    Z = n(343396);
+    Z = n(719766);
 function F(e, t, n) {
     return (
         t in e
@@ -199,7 +199,7 @@ class K extends i.PureComponent {
                 }),
                 (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                    children: (0, r.jsx)(x.Z, { backupCodes: e }),
+                    children: (0, r.jsx)(L.Z, { backupCodes: e }),
                 }),
             ],
         });
@@ -283,7 +283,7 @@ class K extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.izJ, {}),
-                (0, r.jsx)(L.Z, {
+                (0, r.jsx)(x.Z, {
                     currentUser: e,
                     disabled: t,
                     handleDisableAccount: () => this.handleDisableAccount(!1),

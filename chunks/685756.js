@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => w,
-    Z: () => x,
+    Z: () => L,
 }),
     n(410992),
     n(227481),
@@ -189,7 +189,7 @@ var w = (function (e) {
         e
     );
 })({});
-class x extends o.Z {
+class L extends o.Z {
     createWebSocket() {
         this.logger.info("[CONNECT] ".concat(this.url)),
             null !== this.webSocket &&

@@ -41,8 +41,8 @@ function P(e, t, n) {
 }
 let D = "seenQSTutorial",
     w = 5,
-    x = 7,
-    L = 3,
+    L = 7,
+    x = 3,
     M = 100,
     k = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
     j = 0,
@@ -159,7 +159,7 @@ function X() {
         }),
             e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhD))), (i = i.concat(e)));
     }
-    let l = Math.min((i.length > 0 ? L : x) + 1, Y.length),
+    let l = Math.min((i.length > 0 ? x : L) + 1, Y.length),
         c = [];
     for (let e = 1; e < l; e += 1) {
         let t = q(Y[e]);
@@ -234,7 +234,7 @@ function J(e) {
 function $(e) {
     let { channelId: t } = e;
     if (null == t) return !1;
-    (Y = Y.filter((e) => e !== t)).unshift(t), Y.length > x + 1 && (Y.length = x + 1);
+    (Y = Y.filter((e) => e !== t)).unshift(t), Y.length > L + 1 && (Y.length = L + 1);
 }
 function ee(e, t) {
     if (e.length !== t.length) return !1;

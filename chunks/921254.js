@@ -1,8 +1,8 @@
 n.d(t, {
-    Ji: () => x,
+    Ji: () => L,
     O_: () => D,
     qA: () => c,
-    uR: () => L,
+    uR: () => x,
 });
 var r = n(473749),
     i = n(772848);
@@ -756,7 +756,7 @@ var D = r.forwardRef(function (e, t) {
             },
             [E, w, m],
         );
-        var x = r.useCallback(
+        var L = r.useCallback(
                 function (e, t) {
                     A.current.set(e.id, {
                         confetti: e,
@@ -766,13 +766,13 @@ var D = r.forwardRef(function (e, t) {
                 },
                 [w],
             ),
-            L = r.useCallback(
+            x = r.useCallback(
                 function (e, t, n, r, a) {
                     var o,
                         s = R(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
-                    return x(s, t), s;
+                    return L(s, t), s;
                 },
-                [x],
+                [L],
             ),
             M = r.useCallback(function (e) {
                 A.current.delete(e);
@@ -787,8 +787,8 @@ var D = r.forwardRef(function (e, t) {
             t,
             function () {
                 return {
-                    createConfetti: L,
-                    addConfetti: x,
+                    createConfetti: x,
+                    addConfetti: L,
                     deleteConfetti: M,
                     clearConfetti: k,
                     getCanvas: j,
@@ -797,7 +797,7 @@ var D = r.forwardRef(function (e, t) {
                     isReady: v,
                 };
             },
-            [L, x, M, k, j, I, T, v],
+            [x, L, M, k, j, I, T, v],
         );
         var U = r.useCallback(
                 function (e, t) {
@@ -935,7 +935,7 @@ var D = r.forwardRef(function (e, t) {
         height: 0,
         left: "-100%",
     },
-    x = r.forwardRef(function (e, t) {
+    L = r.forwardRef(function (e, t) {
         var n = e.className,
             i = e.visible,
             a = void 0 !== i && i,
@@ -1081,7 +1081,7 @@ var D = r.forwardRef(function (e, t) {
             })
         );
     });
-function L(e, t) {
+function x(e, t) {
     var n,
         i,
         a = r.useState(null != (n = null == t ? void 0 : t.isReady) && n),

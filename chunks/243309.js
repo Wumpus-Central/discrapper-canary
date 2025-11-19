@@ -45,18 +45,18 @@ function l(t) {
                 o.kg.log("[Profiling] max profile duration elapsed, stopping profiling for:", (0, a.XU)(t).description),
                 I();
         }, s.WU),
-        A = t.end.bind(t);
+        N = t.end.bind(t);
     t.end = function () {
         return t
             ? (I().then(
                   () => {
-                      A();
+                      N();
                   },
                   () => {
-                      A();
+                      N();
                   },
               ),
               t)
-            : A();
+            : N();
     };
 }

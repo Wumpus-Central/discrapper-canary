@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(434479),
     d = n(819640),
     p = n(713081),
-    f = n(326660),
-    h = n(441536),
+    h = n(326660),
+    f = n(441536),
     g = n(933104),
     m = n(332538),
     b = n(921944),
@@ -52,24 +52,24 @@ let j = {
             END: 376,
         },
     },
-    x = i.memo(function (e) {
+    C = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            x = (0, m.ZP)(t),
-            C = i.useCallback(() => {
+            C = (0, m.ZP)(t),
+            x = i.useCallback(() => {
                 var e;
                 (0, p.jd)(t),
-                    (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    null == x || null == (e = x.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
-            }, [t, x]),
+                    (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    null == C || null == (e = C.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
+            }, [t, C]),
             E = i.useRef(null),
             S = (0, s.s9z)(s.JQI),
             I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
             P = S || I,
             N = i.useCallback(() => {
                 var e;
-                if ((null == x ? void 0 : x.popout) == null || P) return null;
-                switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
-                    case f.J.LEVEL_REACHED:
+                if ((null == C ? void 0 : C.popout) == null || P) return null;
+                switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
+                    case h.J.LEVEL_REACHED:
                         return (0, r.jsx)(
                             g.jG,
                             v(
@@ -77,10 +77,10 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                x.popout,
+                                C.popout,
                             ),
                         );
-                    case f.J.PERKS_AVAILABLE:
+                    case h.J.PERKS_AVAILABLE:
                         return (0, r.jsx)(
                             g.$h,
                             v(
@@ -88,10 +88,10 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                x.popout,
+                                C.popout,
                             ),
                         );
-                    case f.J.PERKS_PURCHASABLE:
+                    case h.J.PERKS_PURCHASABLE:
                         return (0, r.jsx)(
                             g.yI,
                             v(
@@ -99,10 +99,10 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                x.popout,
+                                C.popout,
                             ),
                         );
-                    case f.J.NEW_PERK_AVAILABLE:
+                    case h.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(
                             g.cO,
                             v(
@@ -110,11 +110,11 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                x.popout,
+                                C.popout,
                             ),
                         );
-                    case f.J.GAME_SERVER_HOSTING_AVAILABLE:
-                    case f.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                    case h.J.GAME_SERVER_HOSTING_AVAILABLE:
+                    case h.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, r.jsx)(
                             g.dJ,
                             v(
@@ -122,17 +122,17 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                x.popout,
+                                C.popout,
                             ),
                         );
                     default:
                         return (0, r.jsx)("div", {});
                 }
-            }, [t, null == x ? void 0 : x.popout, E, P]),
+            }, [t, null == C ? void 0 : C.popout, E, P]),
             [Z, w] = i.useState(null);
         i.useEffect(() => {
-            (null == x ? void 0 : x.popout) == null && w(null);
-        }, [null == x ? void 0 : x.popout]);
+            (null == C ? void 0 : C.popout) == null && w(null);
+        }, [null == C ? void 0 : C.popout]);
         let T = i.useCallback((e) => {
             w(e);
         }, []);
@@ -149,7 +149,7 @@ let j = {
                             color: "currentColor",
                         }),
                     background:
-                        (null == x ? void 0 : x.popout) != null &&
+                        (null == C ? void 0 : C.popout) != null &&
                         (0, r.jsx)("div", {
                             className: O.lottieContainer,
                             children: (0, r.jsx)(s.kci, {
@@ -162,13 +162,13 @@ let j = {
                             }),
                         }),
                     text: (0, r.jsx)("span", {
-                        className: o()({ [O.textImportant]: (null == x ? void 0 : x.showUnread) === !0 }),
+                        className: o()({ [O.textImportant]: (null == C ? void 0 : C.showUnread) === !0 }),
                         children: y.intl.string(_.default.yv3DJJ),
                     }),
                     selected: l,
-                    onClick: C,
-                    showUnread: (null == x ? void 0 : x.showUnread) === !0,
-                    trailing: null == x ? void 0 : x.trailing,
+                    onClick: x,
+                    showUnread: (null == C ? void 0 : C.showUnread) === !0,
+                    trailing: null == C ? void 0 : C.trailing,
                 }),
                 N(),
             ],

@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(555573),
     u = n(761652),
     d = n(388032),
-    f = n(585238);
+    f = n(873105);
 function _(e, t, n) {
     return (
         t in e
@@ -73,7 +73,7 @@ function g(e) {
                 let i = null == E || null == (t = E.rootCommand) ? void 0 : t.id;
                 if (null == i) return void e.preventDefault();
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await n.e("5396").then(n.bind(n, 999588));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(
                             e,

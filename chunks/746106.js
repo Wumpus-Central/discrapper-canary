@@ -24,7 +24,7 @@ var r = n(54381),
     S = n(998502),
     A = n(264783),
     C = n(892071),
-    N = n(681287),
+    N = n(936806),
     R = n(388032);
 function P(e, t, n, r, o) {
     let s = i.useContext(_.Z),
@@ -102,8 +102,8 @@ function D(e) {
             currentWindow: R,
             fontScale: D,
             fontScaleClass: w,
-            keyboardModeEnabled: x,
-            saturation: L,
+            keyboardModeEnabled: L,
+            saturation: x,
             desaturateUserColors: M,
             useForcedColors: k,
             systemForcedColors: j,
@@ -134,7 +134,7 @@ function D(e) {
         F = f.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
         V = (0, h.Z)(R, __OVERLAY__ || N),
         H = 0;
-    1 !== L && (H = (0, u.OdO)(H, u.bgu.REDUCE_SATURATION_ENABLED));
+    1 !== x && (H = (0, u.OdO)(H, u.bgu.REDUCE_SATURATION_ENABLED));
     let Y = (0, A.A)(),
         W = (0, m.Ml)("RootThemeContextProvider"),
         K = (0, m.CL)("RootThemeContextProvider"),
@@ -144,7 +144,7 @@ function D(e) {
         Q = (0, p.On)({ isPopoutWindow: o }),
         J = P(
             b,
-            L,
+            x,
             i.useMemo(() => {
                 let e = [];
                 return (
@@ -164,7 +164,7 @@ function D(e) {
         children: (0, r.jsx)(u.wMY, {
             theme: b,
             flags: H,
-            saturation: L,
+            saturation: x,
             density: Y,
             children: (0, r.jsx)(C.cE, {
                 lang: _,
@@ -173,9 +173,9 @@ function D(e) {
                 focused: N,
                 fontScale: D,
                 fontScaleClass: w,
-                keyboardModeEnabled: x,
+                keyboardModeEnabled: L,
                 mouseMode: V,
-                saturation: L,
+                saturation: x,
                 desaturateUserColors: M,
                 useForcedColors: k,
                 systemForcedColors: j,

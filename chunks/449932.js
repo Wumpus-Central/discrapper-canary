@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,14 +10,14 @@ var i = n(120356),
     u = n(503438),
     d = n(850827),
     p = n(952164),
-    f = n(237583),
-    h = n(131704),
+    h = n(237583),
+    f = n(131704),
     g = n(314897),
     m = n(594174),
     b = n(768581),
     _ = n(51144),
     y = n(754231),
-    O = n(342273);
+    O = n(755359);
 function v(e) {
     var t;
     let { guildId: n, member: i, className: o } = e,
@@ -35,7 +35,7 @@ function v(e) {
 }
 function j(e) {
     let { members: t, guildId: n } = e;
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(h.Z, {
         className: O.partyMembers,
         guildId: n,
         users: t,
@@ -61,12 +61,12 @@ function j(e) {
             ),
     });
 }
-let x = (e) => {
+let C = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: a } = e,
         s = null != l,
-        f = s ? Array.from(l.embeddedActivity.userIds) : [],
+        h = s ? Array.from(l.embeddedActivity.userIds) : [],
         b = (0, o.e7)([m.default, g.default], () => {
-            if (s) return m.default.getUser(f[0]);
+            if (s) return m.default.getUser(h[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0
@@ -78,7 +78,7 @@ let x = (e) => {
         });
     if (null == b) return null;
     let _ = s || (0, u.Z)(n),
-        v = (0, h.vd)(t.type);
+        v = (0, f.vd)(t.type);
     return (0, r.jsxs)("div", {
         className: O.activity,
         children: [

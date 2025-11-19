@@ -1,6 +1,6 @@
 let r, i;
 n.d(t, { Z: () => Q }), n(388685);
-var a = n(843611),
+var a = n(828700),
     o = n(433517),
     s = n(570140),
     l = n(668781),
@@ -88,7 +88,7 @@ function D(e) {
                 avoidInitialScroll: l,
             });
         else {
-            if ((null == d ? void 0 : d.isThread()) && L(n))
+            if ((null == d ? void 0 : d.isThread()) && x(n))
                 return (
                     P.log("Jumping to start of thread ".concat(d.id)),
                     c.Z.fetchMessages({
@@ -131,18 +131,18 @@ function D(e) {
         }
 }
 let w = 90 * T.Z.Millis.DAY,
-    x = "viewedThreadIds";
-function L(e) {
+    L = "viewedThreadIds";
+function x(e) {
     if (O.ZP.hasOpenedThread(e)) return !1;
     if (null == i) {
         var t;
-        i = null != (t = o.K.get(x, {})) ? t : {};
+        i = null != (t = o.K.get(L, {})) ? t : {};
     }
     if (e in i) return !1;
     i[e] = Date.now();
     let n = Date.now() - w;
     for (let e in i) i[e] < n && delete i[e];
-    return o.K.set(x, i), !0;
+    return o.K.set(L, i), !0;
 }
 function M(e) {
     var t;
@@ -156,7 +156,7 @@ function M(e) {
         messageId: null == n || null == (t = n.params) ? void 0 : t.message,
     };
 }
-function j() {
+function k() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
@@ -172,7 +172,7 @@ function j() {
         }),
         Z(t.getGuildId(), t.id);
 }
-function k() {
+function j() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
@@ -311,31 +311,31 @@ function q(e) {
 }
 class X extends d.Z {
     _initialize() {
-        s.Z.subscribe("CONNECTION_OPEN", j);
+        s.Z.subscribe("CONNECTION_OPEN", k);
     }
     _terminate() {
-        s.Z.unsubscribe("CONNECTION_OPEN", j);
+        s.Z.unsubscribe("CONNECTION_OPEN", k);
     }
     constructor(...e) {
         super(...e),
             R(this, "fetchMessages", D),
-            R(this, "loadSelectedChannelIfNecessary", k),
+            R(this, "loadSelectedChannelIfNecessary", j),
             R(this, "stores", new Map().set(E.ZP, F)),
             R(this, "actions", {
                 APP_STATE_UPDATE: q,
-                OVERLAY_INITIALIZE: j,
+                OVERLAY_INITIALIZE: k,
                 CHANNEL_SELECT: U,
                 VOICE_CHANNEL_SELECT: G,
                 THREAD_CREATE: H,
-                THREAD_LIST_SYNC: () => k(),
+                THREAD_LIST_SYNC: () => j(),
                 CHANNEL_CREATE: H,
                 CHANNEL_PRELOAD: V,
-                GUILD_CREATE: () => k(),
+                GUILD_CREATE: () => j(),
                 MESSAGE_END_EDIT: Y,
                 LOAD_MESSAGES_SUCCESS: K,
                 UPLOAD_FAIL: z,
-                CHANNEL_DELETE: () => k(),
-                THREAD_DELETE: () => k(),
+                CHANNEL_DELETE: () => j(),
+                THREAD_DELETE: () => j(),
                 CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: B,
             });
     }

@@ -8,7 +8,7 @@ var a = n(990547),
     o = n(362693),
     u = n(674908),
     c = n(115559),
-    d = n(285006);
+    d = n(121937);
 function m(e) {
     let { clip: t, channelId: n, transitionState: m, onClose: h } = e,
         { analyticsLocations: p } = (0, s.ZP)(r.Z.CLIPS_EDITOR);

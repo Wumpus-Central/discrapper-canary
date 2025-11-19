@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(981631),
     v = n(921944),
     I = n(388032),
-    T = n(505754);
+    T = n(759291);
 function S(e, t, n) {
     return (
         t in e
@@ -78,8 +78,8 @@ let R = i.memo((e) => {
         y = null == e ? void 0 : e.onCtaClick,
         S = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         [C, D] = i.useState(!1),
-        [w, x] = i.useState(!1),
-        L =
+        [w, L] = i.useState(!1),
+        x =
             b === E.gM.CARD_CAROUSEL_FIRST_ROW ||
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             b === E.gM.CARD_CAROUSEL_THIRD_ROW,
@@ -115,14 +115,14 @@ let R = i.memo((e) => {
             C &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(T.flipCard) &&
-                (x(!0),
+                (L(!0),
                 p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
                 null != a && j(v.L.TAKE_ACTION));
         };
     return (i.useEffect(() => {
         S &&
             C &&
-            (x(!0),
+            (L(!0),
             p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
             null != a && j(v.L.TAKE_ACTION));
     }, [S, C, a, t, j]),
@@ -166,8 +166,8 @@ let R = i.memo((e) => {
                     className: T.hoverWrapper,
                     children: (0, r.jsx)("div", {
                         className: o()({
-                            [T.noFlipCardContainer]: !L,
-                            [T.noFlipCardContainerCarousel]: L,
+                            [T.noFlipCardContainer]: !x,
+                            [T.noFlipCardContainerCarousel]: x,
                             [T.forceShadow]: h,
                             [T.reducedMotion]: S,
                         }),

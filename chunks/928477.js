@@ -1,17 +1,17 @@
 n.d(t, {
-    JA: () => k,
+    JA: () => j,
     Jw: () => w,
-    Od: () => j,
+    Od: () => k,
     Wj: () => G,
     gK: () => U,
-    oD: () => L,
-    vH: () => x,
+    oD: () => x,
+    vH: () => L,
 }),
     n(35282),
     n(704826),
     n(539854),
     n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(544891),
     a = n(570140),
     o = n(668781),
@@ -48,18 +48,18 @@ var r = n(647438),
             e
         );
     })({});
-function x(e) {
+function L(e) {
     let t = (0, A.NE)(e);
     return (0, A.Xu)(e) ? (t ? 2 : 3) : 1;
 }
-function L(e, t) {
+function x(e, t) {
     var n;
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
 function M(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
-function j(e, t) {
+function k(e, t) {
     var n, r, i, a, o, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : "",
@@ -88,7 +88,7 @@ function j(e, t) {
         return M(i, 40);
     }
 }
-function k(e) {
+function j(e) {
     let {
         parentChannel: t,
         parentMessageId: n,
@@ -103,10 +103,10 @@ function k(e) {
         async (e, r, _) => {
             var p;
             let h = null == n,
-                m = L(a, o),
+                m = x(a, o),
                 b = null != (p = a.name) ? p : "";
             if ("" === b && d) {
-                let e = j(t, n);
+                let e = k(t, n);
                 b = "" !== e ? e : D.intl.string(D.t["7Xm5QI"]);
             }
             let y = (0, S.WD)(t),

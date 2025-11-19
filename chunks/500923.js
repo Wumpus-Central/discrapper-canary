@@ -3608,7 +3608,7 @@
                     var t = 10000;
                     return (e < 0.000001 && e > 0) || (e > -0.000001 && e < 0) ? r(e * t) / t : e;
                 }
-                function x() {
+                function L() {
                     var e = this.props;
                     return (
                         "matrix(" +
@@ -3648,7 +3648,7 @@
                         (this.applyToTriplePoints = N),
                         (this.applyToPointStringified = P),
                         (this.toCSS = D),
-                        (this.to2dCSS = x),
+                        (this.to2dCSS = L),
                         (this.clone = b),
                         (this.cloneFromProps = y),
                         (this.equals = E),
@@ -7572,14 +7572,14 @@
                 for (m = 0; m < g; m += 1)
                     if (
                         ((E = !1),
-                        13 === (I = (x = e.finalText[m]).charCodeAt(0)) || 3 === I
+                        13 === (I = (L = e.finalText[m]).charCodeAt(0)) || 3 === I
                             ? ((P = 0), c.push(u), (d = u > d ? u : d), (u = -2 * h), (b = ""), (E = !0), (l += 1))
-                            : (b = x),
+                            : (b = L),
                         t.chars
-                            ? ((v = t.getCharData(x, f.fStyle, t.getFontByName(e.f).fFamily)),
+                            ? ((v = t.getCharData(L, f.fStyle, t.getFontByName(e.f).fFamily)),
                               (_ = E ? 0 : (v.w * e.finalSize) / 100))
                             : (_ = t.measureText(b, e.f, e.finalSize)),
-                        " " === x ? (P += _ + h) : ((u += _ + h + P), (P = 0)),
+                        " " === L ? (P += _ + h) : ((u += _ + h + P), (P = 0)),
                         r.push({
                             l: _,
                             an: _,
@@ -7622,30 +7622,30 @@
                 var w = [];
                 for (y = 0; y < O; y += 1) {
                     for (
-                        (L = D[y]).a.sc && (e.strokeColorAnim = !0),
-                            L.a.sw && (e.strokeWidthAnim = !0),
-                            (L.a.fc || L.a.fh || L.a.fs || L.a.fb) && (e.fillColorAnim = !0),
-                            k = 0,
-                            j = L.s.b,
+                        (x = D[y]).a.sc && (e.strokeColorAnim = !0),
+                            x.a.sw && (e.strokeWidthAnim = !0),
+                            (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0),
+                            j = 0,
+                            k = x.s.b,
                             m = 0;
                         m < g;
                         m += 1
                     )
-                        ((M = r[m]).anIndexes[y] = k),
-                            ((1 == j && "" !== M.val) ||
-                                (2 == j && "" !== M.val && " " !== M.val) ||
-                                (3 == j && (M.n || " " == M.val || m == g - 1)) ||
-                                (4 == j && (M.n || m == g - 1))) &&
-                                (1 === L.s.rn && w.push(k), (k += 1));
-                    n.a[y].s.totalChars = k;
-                    var x,
-                        L,
+                        ((M = r[m]).anIndexes[y] = j),
+                            ((1 == k && "" !== M.val) ||
+                                (2 == k && "" !== M.val && " " !== M.val) ||
+                                (3 == k && (M.n || " " == M.val || m == g - 1)) ||
+                                (4 == k && (M.n || m == g - 1))) &&
+                                (1 === x.s.rn && w.push(j), (j += 1));
+                    n.a[y].s.totalChars = j;
+                    var L,
+                        x,
                         M,
-                        j,
                         k,
+                        j,
                         U,
                         G = -1;
-                    if (1 === L.s.rn)
+                    if (1 === x.s.rn)
                         for (m = 0; m < g; m += 1)
                             G != (M = r[m]).anIndexes[y] &&
                                 ((G = M.anIndexes[y]), (U = w.splice(Math.floor(Math.random() * w.length), 1)[0])),
@@ -7878,11 +7878,11 @@
                                 P,
                                 D,
                                 w,
-                                x,
                                 L,
+                                x,
                                 M,
-                                j,
                                 k,
+                                j,
                                 U,
                                 G,
                                 B,
@@ -7930,22 +7930,22 @@
                         if (
                             ((D = this._pathData.pi),
                             (w = this._pathData.f.v),
-                            (k = 0),
-                            (j = 1),
-                            (L = 0),
+                            (j = 0),
+                            (k = 1),
+                            (x = 0),
                             (M = !0),
                             (B = D.segments),
                             w < 0 && Y.v.c)
                         )
                             for (
                                 D.tLength < Math.abs(w) && (w = -Math.abs(w) % D.tLength),
-                                    k = B.length - 1,
-                                    j = (G = B[k].points).length - 1;
+                                    j = B.length - 1,
+                                    k = (G = B[j].points).length - 1;
                                 w < 0;
                             )
-                                (w += G[j].partialLength),
-                                    (j -= 1) < 0 && ((k -= 1), (j = (G = B[k].points).length - 1));
-                        (U = (G = B[k].points)[j - 1]), (Z = (x = G[j]).partialLength);
+                                (w += G[k].partialLength),
+                                    (k -= 1) < 0 && ((j -= 1), (k = (G = B[j].points).length - 1));
+                        (U = (G = B[j].points)[k - 1]), (Z = (L = G[k]).partialLength);
                     }
                     (P = A.length), (C = 0), (N = 0);
                     var z = 1.2 * e.finalSize * 0.714,
@@ -7953,8 +7953,8 @@
                     a = O.length;
                     var X = -1,
                         Q = w,
-                        J = k,
-                        $ = j,
+                        J = j,
+                        $ = k,
                         ee = -1,
                         et = "",
                         en = this.defaultPropsArray;
@@ -7987,11 +7987,11 @@
                                 (w = Q),
                                 (q = !1),
                                 this._hasMaskedPath &&
-                                    ((k = J),
-                                    (j = $),
-                                    (U = (G = B[k].points)[j - 1]),
-                                    (Z = (x = G[j]).partialLength),
-                                    (L = 0)),
+                                    ((j = J),
+                                    (k = $),
+                                    (U = (G = B[j].points)[k - 1]),
+                                    (Z = (L = G[k]).partialLength),
+                                    (x = 0)),
                                 (et = ""),
                                 (E = ""),
                                 (m = ""),
@@ -8032,22 +8032,22 @@
                                                 this._pathData.f.v);
                                     M;
                                 )
-                                    L + Z >= w + el || !G
-                                        ? ((V = (w + el - L) / x.partialLength),
-                                          (c = U.point[0] + (x.point[0] - U.point[0]) * V),
-                                          (u = U.point[1] + (x.point[1] - U.point[1]) * V),
+                                    x + Z >= w + el || !G
+                                        ? ((V = (w + el - x) / L.partialLength),
+                                          (c = U.point[0] + (L.point[0] - U.point[0]) * V),
+                                          (u = U.point[1] + (L.point[1] - U.point[1]) * V),
                                           I.translate(-y[0] * A[R].an * 0.005, -(0.01 * (y[1] * z))),
                                           (M = !1))
                                         : G &&
-                                          ((L += x.partialLength),
-                                          (j += 1) >= G.length &&
-                                              ((j = 0),
-                                              B[(k += 1)]
-                                                  ? (G = B[k].points)
+                                          ((x += L.partialLength),
+                                          (k += 1) >= G.length &&
+                                              ((k = 0),
+                                              B[(j += 1)]
+                                                  ? (G = B[j].points)
                                                   : Y.v.c
-                                                    ? ((j = 0), (G = B[(k = 0)].points))
-                                                    : ((L -= x.partialLength), (G = null))),
-                                          G && ((U = x), (Z = (x = G[j]).partialLength)));
+                                                    ? ((k = 0), (G = B[(j = 0)].points))
+                                                    : ((x -= L.partialLength), (G = null))),
+                                          G && ((U = L), (Z = (L = G[k]).partialLength)));
                                 (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0);
                             } else
                                 (l = A[R].an / 2 - A[R].add),
@@ -8158,9 +8158,9 @@
                                     (I.translate(0, -e.ls), I.translate(0, y[1] * z * 0.01 + N, 0), this._pathData.p.v)
                                 ) {
                                     var ec =
-                                        (180 * Math.atan((H = (x.point[1] - U.point[1]) / (x.point[0] - U.point[0])))) /
+                                        (180 * Math.atan((H = (L.point[1] - U.point[1]) / (L.point[0] - U.point[0])))) /
                                         Math.PI;
-                                    x.point[0] < U.point[0] && (ec += 180), I.rotate((-ec * Math.PI) / 180);
+                                    L.point[0] < U.point[0] && (ec += 180), I.rotate((-ec * Math.PI) / 180);
                                 }
                                 I.translate(c, u, 0),
                                     (w -= y[0] * A[R].an * 0.005),

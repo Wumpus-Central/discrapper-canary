@@ -35,8 +35,8 @@ var r = n(54381),
     P = n(325100),
     D = n(659848),
     w = n(583046),
-    x = n(897829),
-    L = n(74179),
+    L = n(897829),
+    x = n(74179),
     M = n(896246),
     k = n(320317),
     j = n(994427),
@@ -48,7 +48,7 @@ var r = n(54381),
     V = n(283307),
     H = n(981631),
     Y = n(474936),
-    W = n(876414);
+    W = n(695694);
 function K(e, t, n) {
     return (
         t in e
@@ -122,7 +122,7 @@ function ee(e) {
         } = e,
         ec = (0, Z.Z)(),
         eu = (0, h.Q)(),
-        ed = (0, x.Z)(),
+        ed = (0, L.Z)(),
         ef = $[0],
         e_ = (0, c.e7)([I.Z], () => I.Z.get(ef), [ef]),
         ep = null == e_ ? void 0 : e_.eligiblePaymentGateways,
@@ -132,7 +132,7 @@ function ee(e) {
             paymentSourceId: eg,
             setPaymentSourceId: eE,
             hasFetchedPaymentSources: eb,
-        } = (0, L.Z)({
+        } = (0, x.Z)({
             isGift: ee,
             activeSubscription: K,
             eligiblePaymentGateways: ep,
@@ -158,12 +158,12 @@ function ee(e) {
             setStep: eP,
             steps: eD,
             breadcrumbsData: ew,
-            previousStepRef: ex,
+            previousStepRef: eL,
         } = (0, B.Z)({
             stepConfigs: q,
             breadcrumbs: J,
         }),
-        [eL, eM] = (0, j.Z)(eR),
+        [ex, eM] = (0, j.Z)(eR),
         { paymentError: ek, paymentAuthenticationState: ej } = (0, M.Z)(),
         { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, k.Z)(),
         eZ = (0, u.Z)(() => {
@@ -253,10 +253,10 @@ function ee(e) {
         })),
         tD = tR ? W.premiumBrandRefreshBackground : void 0,
         { enabled: tw } = (0, g.l)({ location: "PaymentContext" }),
-        tx = (0, P.uH)({ location: "PaymentModal" }),
-        tL = i.useMemo(() => {
-            if (tx) return V.cL.APPLE_PAYMENT_LINK;
-        }, [tx]);
+        tL = (0, P.uH)({ location: "PaymentModal" }),
+        tx = i.useMemo(() => {
+            if (tL) return V.cL.APPLE_PAYMENT_LINK;
+        }, [tL]);
     return (0, r.jsx)(Q.Provider, {
         value: X(
             z(
@@ -292,8 +292,8 @@ function ee(e) {
                 steps: eD,
                 stepConfigs: q,
                 breadcrumbs: ew,
-                previousStepRef: ex,
-                purchaseState: eL,
+                previousStepRef: eL,
+                purchaseState: ex,
                 setPurchaseState: eM,
                 paymentAuthenticationState: ej,
                 paymentError: ek,
@@ -351,7 +351,7 @@ function ee(e) {
                 isDisplayingWowMomentConfirmation: tP,
                 premiumBrandRefreshBackgroundClassName: tD,
                 wasTier2PremiumBeforePurchase: el,
-                customCheckoutFlow: tL,
+                customCheckoutFlow: tx,
             },
         ),
         children: (0, r.jsx)(a.Elements, {

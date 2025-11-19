@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(771027),
     y = n(981631),
     C = n(388032),
-    v = n(764194),
-    _ = n(254477);
+    v = n(839193),
+    _ = n(929618);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function j(e) {
         let e = m.Z.getGuild(t.guild_id);
         s()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, d.ZDy)(async () => {
-                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89334")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {

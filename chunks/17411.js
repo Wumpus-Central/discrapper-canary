@@ -1,36 +1,36 @@
-a.d(e, { y: () => s });
-var r = a(263449),
-    _ = a(233517),
-    n = a(151122),
-    o = a(899517),
-    i = a(694043);
-let E = o.n,
+_.d(e, { y: () => s });
+var a = _(263449),
+    r = _(233517),
+    n = _(151122),
+    o = _(899517),
+    E = _(694043);
+let i = o.n,
     c = new WeakMap(),
     s = (0, n._I)((t = {}) => {
         let e = t.types || ["crash", "deprecation", "intervention"];
-        function a(t) {
-            if (c.has((0, r.s3)()))
+        function _(t) {
+            if (c.has((0, a.s3)()))
                 for (let e of t)
-                    (0, r.$e)((t) => {
+                    (0, a.$e)((t) => {
                         t.setExtra("url", e.url);
-                        let a = `ReportingObserver [${e.type}]`,
-                            r = "No details available";
+                        let _ = `ReportingObserver [${e.type}]`,
+                            a = "No details available";
                         if (e.body) {
-                            let a = {};
-                            for (let t in e.body) a[t] = e.body[t];
-                            if ((t.setExtra("body", a), "crash" === e.type)) {
+                            let _ = {};
+                            for (let t in e.body) _[t] = e.body[t];
+                            if ((t.setExtra("body", _), "crash" === e.type)) {
                                 let t = e.body;
-                                r = [t.crashId || "", t.reason || ""].join(" ").trim() || r;
-                            } else r = e.body.message || r;
+                                a = [t.crashId || "", t.reason || ""].join(" ").trim() || a;
+                            } else a = e.body.message || a;
                         }
-                        (0, _.uT)(`${a}: ${r}`);
+                        (0, r.uT)(`${_}: ${a}`);
                     });
         }
         return {
             name: "ReportingObserver",
             setupOnce() {
-                (0, i.zb)() &&
-                    new E.ReportingObserver(a, {
+                (0, E.zb)() &&
+                    new i.ReportingObserver(_, {
                         buffered: !0,
                         types: e,
                     }).observe();

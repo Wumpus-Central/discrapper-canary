@@ -4,7 +4,7 @@ n(473749);
 var s = n(120356),
     o = n.n(s),
     a = n(481060),
-    i = n(188764);
+    i = n(745776);
 let l = function (e) {
     let { allowClicks: t = !1, children: n, withBorder: s = !1 } = e;
     return (0, r.jsx)(a.Rny, {

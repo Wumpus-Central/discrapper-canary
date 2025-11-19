@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { Z: () => T });
 var i = n(509613),
     l = n(313789),
     u = n(49658),
@@ -9,7 +9,7 @@ var i = n(509613),
     c = n(342406),
     E = n(250350),
     S = n(388032);
-let d = (0, i.CB)(l.n.VOICE_AND_VIDEO_DIAGNOSTICS_ACCORDION, {
+let T = (0, i.CB)(l.n.VOICE_AND_VIDEO_DIAGNOSTICS_ACCORDION, {
     useTitle: (t) => (t ? S.intl.string(S.t["/B4I8H"]) : S.intl.string(S.t.BTlsWH)),
     useSubtitle: () => S.intl.string(S.t.la1Ys4),
     buildLayout: () => [o.Z, u.Z, a.Z, s.Z, r.Z, c.Z, E.Z],

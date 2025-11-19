@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(43085),
     _ = n(981631),
     p = n(388032),
-    h = n(132045);
+    h = n(729506);
 function m(e, t, n) {
     return (
         t in e
@@ -119,8 +119,8 @@ function T(e, t) {
         R = y(C, ["onFocus"]),
         { handleFocus: P, handleBlur: D } = (0, f.b)(N),
         w = 0 === A,
-        x = null != E,
-        L = (e) => {
+        L = null != E,
+        x = (e) => {
             if (v) {
                 switch (e.which) {
                     case _.yXg.D:
@@ -148,14 +148,14 @@ function T(e, t) {
             b(g({}, R), {
                 onFocus: P,
                 onBlur: D,
-                onKeyDown: L,
+                onKeyDown: x,
                 className: o()(h.upload, a, { [h.sizeClip]: 2 === A }),
                 ref: t,
                 children: (0, r.jsxs)("div", {
                     className: h.uploadContainer,
                     children: [
                         m,
-                        x
+                        L
                             ? (0, r.jsx)("div", {
                                   className: h.actionBarContainer,
                                   children: (0, r.jsx)("div", {

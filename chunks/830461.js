@@ -1,8 +1,8 @@
-n.d(t, { _: () => o }), n(388685);
+n.d(t, { _: () => s }), n(388685);
 var r = n(224706),
     i = n(594190),
     l = n(823379);
-async function o() {
+async function s() {
     let e = i.ZP.getRunningGames();
     return (
         await Promise.all(

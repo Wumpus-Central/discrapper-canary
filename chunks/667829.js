@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(925994),
     R = n(981631),
     P = n(388032),
-    D = n(564355);
+    D = n(744114);
 function w(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,7 +74,7 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -249,7 +249,7 @@ class U extends i.Component {
                 id: N,
                 required: P,
                 maxCharacterCount: w,
-                allowNewLines: L,
+                allowNewLines: x,
                 isEditorIdle: k,
                 currentAutocompleteType: j,
                 "aria-describedby": U,
@@ -279,7 +279,7 @@ class U extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: L,
+                allowNewLines: x,
                 onChange: f,
                 onResize: p,
                 onKeyDown: _,
@@ -308,14 +308,14 @@ class U extends i.Component {
             Y = E
                 ? (0, r.jsx)(
                       C.Z,
-                      M(x({ ref: this.ref }, H), {
+                      M(L({ ref: this.ref }, H), {
                           type: g,
                           value: d && !Z ? (0, I.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: T,
                       }),
                   )
-                : (0, r.jsx)(A.Z, M(x({ ref: this.ref }, H), { value: d && !Z ? "" : l }));
+                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, H), { value: d && !Z ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.d9, {

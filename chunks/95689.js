@@ -9,20 +9,20 @@ var i = n(442837),
     c = n(626135),
     E = n(313789),
     S = n(981631),
-    d = n(468788),
-    T = n(490897),
+    T = n(468788),
+    d = n(490897),
     I = n(388032);
 let O = (0, r.qs)(E.n.EXPERIMENTAL_UNREADS, {
     useTitle: () => I.intl.string(I.t["k6m/si"]),
     useSubtitle: () => I.intl.string(I.t.LGynPs),
     useValue: () => (0, i.e7)([a.ZP], () => a.ZP.useNewNotifications),
     setValue: function (t) {
-        u.Z.setAccountFlag(d.c.USE_NEW_NOTIFICATIONS, t),
+        u.Z.setAccountFlag(T.c.USE_NEW_NOTIFICATIONS, t),
             t ||
                 (l.K.set("turnedOffNewNotifications", !0),
                 c.default.track(S.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
                     num_guilds_with_new_setting: s.Z.getGuildsArray().filter(
-                        (t) => a.ZP.resolveGuildUnreadSetting(t) === T.i.ONLY_MENTIONS,
+                        (t) => a.ZP.resolveGuildUnreadSetting(t) === d.i.ONLY_MENTIONS,
                     ).length,
                 }));
     },

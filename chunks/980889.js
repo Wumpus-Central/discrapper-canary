@@ -1,6 +1,6 @@
 var e = n(884805),
     o = n(468790),
-    i = n(829575),
+    i = n(525320),
     u = n(394370)("species"),
     s = Array;
 t.exports = function (t) {

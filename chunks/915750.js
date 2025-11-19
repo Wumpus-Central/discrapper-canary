@@ -1,5 +1,5 @@
 n.d(t, {
-    B5: () => L,
+    B5: () => x,
     PI: () => P,
     WD: () => j,
     aM: () => U,
@@ -69,7 +69,7 @@ let C = 100,
 function w(e, t) {
     return "".concat(e, "_").concat(t);
 }
-class x {
+class L {
     getId() {
         return this.id;
     }
@@ -263,7 +263,7 @@ class x {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new x({
+                    new L({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -333,7 +333,7 @@ class x {
             (this.sourceQuestContent = f);
     }
 }
-let L = (e, t) => {
+let x = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -371,7 +371,7 @@ function G(e) {
                 o = ((n || c) && !r) || d;
             (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((f.current = new x({
+                    ((f.current = new L({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,

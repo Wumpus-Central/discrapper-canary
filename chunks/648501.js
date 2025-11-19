@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(456269),
     d = n(921711),
     p = n(368442),
-    f = n(601070),
-    h = n(430824),
+    h = n(601070),
+    f = n(430824),
     g = n(496675),
     m = n(306680),
     b = n(979651),
@@ -20,8 +20,8 @@ var i = n(442837),
     O = n(714794),
     v = n(355363),
     j = n(687352),
-    x = n(876548),
-    C = n(25601),
+    C = n(876548),
+    x = n(25601),
     E = n(981631),
     S = n(490897),
     I = n(388032),
@@ -54,18 +54,18 @@ function N(e) {
             video: (H || z) && null == V,
             selected: N,
         }),
-        K = (0, i.e7)([f.Z], () => f.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([h.Z], () => {
+        q = (0, i.e7)([f.Z], () => {
             var e, t;
             return (
                 null !=
-                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
+                    (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
                 t
             );
         });
     if ((0, O.Z)(G))
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(x.Z, {
             mentionsCount: G,
             isMentionLowImportance: U,
         });
@@ -90,7 +90,7 @@ function N(e) {
         });
     let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
     return null != T && T && W
-        ? (0, r.jsx)(x.Z, {
+        ? (0, r.jsx)(C.Z, {
               userCount: X,
               video: H || z,
               channel: n,

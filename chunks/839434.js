@@ -21,8 +21,8 @@ var i,
     E = n(925329),
     S = n(569545),
     Z = n(914923),
-    x = n(662304),
-    j = n(989941),
+    j = n(165393),
+    x = n(989941),
     C = n(552282),
     I = n(345243),
     P = n(565799),
@@ -51,7 +51,7 @@ var i,
     Q = n(981631),
     $ = n(65154),
     ee = n(388032),
-    et = n(226833);
+    et = n(157979);
 function en(e, t, n) {
     return (
         t in e
@@ -124,8 +124,8 @@ function eo(e) {
             userId: i.id,
             context: f,
         }),
-        x = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
-        j = (0, a.e7)([k.Z], () => null != k.Z.getStreamForUser(i.id, g)),
+        j = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
+        x = (0, a.e7)([k.Z], () => null != k.Z.getStreamForUser(i.id, g)),
         C = o.useMemo(() => null != E && E.ownerId !== i.id && S.includes(i.id), [E, i.id, S]);
     if (d === Q.OYC.ONLY_WHILE_SPEAKING && n && !Z) return null;
     let I = i.id === v,
@@ -146,12 +146,12 @@ function eo(e) {
                 nick: l,
                 speaking: !1,
                 flipped: t,
-                isStreaming: j,
+                isStreaming: x,
                 iconClassName: s()(et.voiceIcon, { [et.locked]: n }),
                 isWatching: C,
                 isOverlay: !0,
                 size: u,
-                priority: x,
+                priority: j,
                 mute: P || z || O,
                 localMute: O,
                 serverMute: P || T,
@@ -305,7 +305,7 @@ class el extends (i = o.PureComponent) {
                                       className: et.gameIcon,
                                       game: l,
                                   })
-                                : (0, r.jsx)(x.Z, { title: p }),
+                                : (0, r.jsx)(j.Z, { title: p }),
                             (0, r.jsxs)(v.Z, {
                                 direction: v.Z.Direction.VERTICAL,
                                 justify: v.Z.Justify.BETWEEN,
@@ -406,7 +406,7 @@ class el extends (i = o.PureComponent) {
             en(this, "handleUserContextMenu", (e, t) => {
                 let { context: i } = this.props;
                 (0, p.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
+                    let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("73444")]).then(
                         n.bind(n, 881351),
                     );
                     return (n) =>
@@ -481,12 +481,12 @@ function es(e) {
         s = (0, a.e7)([k.Z], () => k.Z.getStreamerActiveStreamMetadata()),
         c = (0, a.e7)([O.ZP, W.Z, L.Z], () => {
             var e;
-            let t = (0, j.Z)(O.ZP, W.Z);
+            let t = (0, x.Z)(O.ZP, W.Z);
             return null != t ? (null == (e = L.Z.getGameByGameData(t)) ? void 0 : e.id) : null;
         }),
         d = (0, b.q)(c),
         u = (0, a.cj)([O.ZP, W.Z, k.Z, G.default], () => {
-            let e = (0, j.Z)(O.ZP, W.Z),
+            let e = (0, x.Z)(O.ZP, W.Z),
                 t = k.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: G.default.getDisplayUserMode(),

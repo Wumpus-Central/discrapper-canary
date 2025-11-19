@@ -39,7 +39,7 @@ function w(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,14 +72,14 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let j = h.Z.get(D.ABu.SPOTIFY),
-    k = "wss://dealer.spotify.com/?access_token=",
+let k = h.Z.get(D.ABu.SPOTIFY),
+    j = "wss://dealer.spotify.com/?access_token=",
     U = "hm://pusher/v1/connections/",
     G = 30 * C.Z.Millis.SECOND,
     B = 30 * C.Z.Millis.SECOND,
@@ -153,7 +153,7 @@ class eh {
             eU(this.accountId, this.accessToken)
                 .then(() => {
                     (this._requestedConnect = !1),
-                        (this.socket = new WebSocket("".concat(k).concat(this.accessToken))),
+                        (this.socket = new WebSocket("".concat(j).concat(this.accessToken))),
                         (this.socket.onopen = this.handleOpen.bind(this)),
                         (this.socket.onmessage = this.handleMessage.bind(this)),
                         (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
@@ -206,7 +206,7 @@ class eh {
         let { type: t, event: n } = e;
         switch (t) {
             case "PLAYER_STATE_CHANGED":
-                null != n && null != n.state && ek(this.accountId, this.accessToken, n.state);
+                null != n && null != n.state && ej(this.accountId, this.accessToken, n.state);
                 break;
             case "DEVICE_STATE_CHANGED":
                 this.handleDeviceStateChange();
@@ -482,11 +482,11 @@ function ew(e) {
     }
     return !1;
 }
-function ex(e) {
+function eL(e) {
     let { userId: t } = e;
     return ew(t);
 }
-function eL(e) {
+function ex(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n } = t;
@@ -499,17 +499,17 @@ function eM(e) {
     if (null == r) return !1;
     (r.isPremium = n), $.info("Profile updated for ".concat(t, ": isPremium = ").concat(n));
 }
-function ej(e) {
+function ek(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == ec || ec.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === j.name && n
+        null != e && E.ZP.getObservedAppNameForWindow(e) === k.name && n
             ? (ec = new f.Xp()).start(B, eD)
             : (null == ec || ec.stop(), (ec = null));
     } else null == t && (null == ec || ec.stop(), (ec = null));
 }
-function ek(e, t, n) {
+function ej(e, t, n) {
     var r, i, a, o, s, l, c, u, d, f, p, h, m, g;
     let E,
         b,
@@ -549,7 +549,7 @@ function ek(e, t, n) {
                 isLocal: !1,
             });
     if (
-        (null != y && !0 !== y.is_active && (y = M(x({}, y), { is_active: !0 })),
+        (null != y && !0 !== y.is_active && (y = M(L({}, y), { is_active: !0 })),
         null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))
     ) {
         let n = eB.getPlayerState(e);
@@ -593,7 +593,7 @@ function eU(e, t) {
         })
         .then((n) => {
             let r = n.body;
-            null != r ? ek(e, t, r).then(() => n) : ef(e);
+            null != r ? ej(e, t, r).then(() => n) : ef(e);
         })
         .catch(() => ef(e));
 }
@@ -677,7 +677,7 @@ class eG extends (o = u.ZP.Store) {
                 button_urls: [],
             },
             y = {
-                name: j.name,
+                name: k.name,
                 assets: h,
                 details: g,
                 state: e,
@@ -704,8 +704,8 @@ let eB = new eG(_.Z, {
         ACTIVITY_SYNC_STOP: ey,
         SPOTIFY_SET_DEVICES: eA,
         SPOTIFY_SET_ACTIVE_DEVICE: eC,
-        SPEAKING: ex,
-        VOICE_STATE_UPDATES: eL,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ej,
+        SPEAKING: eL,
+        VOICE_STATE_UPDATES: ex,
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ek,
     }),
     eZ = eB;

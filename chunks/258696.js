@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(319417),
     D = n(728386),
     w = n(763679),
-    x = n(957825),
-    L = n(564355);
+    L = n(957825),
+    x = n(744114);
 function M(e) {
     let { disabled: t, channel: n } = e,
         i = (0, E.Z)();
@@ -147,12 +147,12 @@ function k(e) {
                 et ||
                 X.push({
                     key: "spacer",
-                    node: (0, r.jsx)("div", { className: L.spacer }, "spacer"),
+                    node: (0, r.jsx)("div", { className: x.spacer }, "spacer"),
                 })),
         (null == (a = N.emojis) ? void 0 : a.button) != null &&
             (null == V || (null != H && H.type !== u.jw.ATTACHMENT)))
     ) {
-        let e = K && null != q ? q : x.X1.EMOJI;
+        let e = K && null != q ? q : L.X1.EMOJI;
         X.push({
             key: "emoji",
             node: (0, r.jsx)(
@@ -198,7 +198,7 @@ function k(e) {
     return 0 === en.length
         ? null
         : (0, r.jsx)("div", {
-              className: o()(L.buttons, { [L.reducedGap]: z }),
+              className: o()(x.buttons, { [x.reducedGap]: z }),
               children: en,
           });
 }

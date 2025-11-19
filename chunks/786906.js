@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var i = n(54381),
     r = n(473749),
     o = n(120356),
@@ -19,7 +19,7 @@ var i = n(54381),
     v = n(707878),
     O = n(518084),
     E = n(388032),
-    S = n(846602);
+    S = n(507161);
 function Z(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function Z(e, t, n) {
         e
     );
 }
-class x extends r.Component {
+class j extends r.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
@@ -167,7 +167,7 @@ class x extends r.Component {
             });
     }
 }
-function j(e) {
+function x(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -199,7 +199,7 @@ function j(e) {
         a = (0, u.ZP)(t),
         c = (0, s.e7)([b.Z], () => !!t.isDM() && null != t.getRecipientId() && b.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(
-        x,
+        j,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

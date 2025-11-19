@@ -30,7 +30,7 @@ var i = n(54381),
     N = n(558317),
     A = n(981631),
     w = n(388032),
-    M = n(201512);
+    M = n(915062);
 let R = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
     L = "vc-activities-".concat((0, o.Z)());
 function k(e) {
@@ -132,7 +132,7 @@ let D = r.forwardRef(function (e, t) {
         return () => clearTimeout(e);
     }, []);
     let { enabled: H } = P.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        F = r.useCallback(() => {
+        V = r.useCallback(() => {
             (0, y.Z)({
                 context:
                     null != l
@@ -147,7 +147,7 @@ let D = r.forwardRef(function (e, t) {
                 u(),
                 g();
         }, [l, D, g, u, U]),
-        V = r.useCallback(
+        F = r.useCallback(
             (e) => {
                 c(),
                     S.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -177,7 +177,7 @@ let D = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsxs)("div", {
                         className: M.container,
-                        onMouseEnter: V,
+                        onMouseEnter: F,
                         onMouseLeave: u,
                         children: [
                             (0, i.jsxs)("div", {
@@ -199,7 +199,7 @@ let D = r.forwardRef(function (e, t) {
                                     }),
                                     (0, i.jsxs)(p.P3F, {
                                         className: M.titleRight,
-                                        onClick: F,
+                                        onClick: V,
                                         children: [
                                             (0, i.jsx)(p.Text, {
                                                 variant: "eyebrow",

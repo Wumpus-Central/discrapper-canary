@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        default: () => w,
+        default: () => I,
         openDevToolsPopout: () => O,
     }),
     n(388685);
@@ -24,8 +24,8 @@ var a = n(54381),
     j = n(621060),
     _ = n(981631),
     y = n(388032),
-    C = n(552883),
-    S = n(451429);
+    C = n(246984),
+    S = n(866403);
 function E(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         r = (0, d.Z)({
@@ -48,7 +48,7 @@ function O() {
                 windowKey: _.KJ3.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, a.jsx)(w, {
+                children: (0, a.jsx)(I, {
                     mobile: !1,
                     isPopout: !0,
                 }),
@@ -176,7 +176,7 @@ function P() {
               }),
           });
 }
-function w(e) {
+function I(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
         ? (0, a.jsx)(P, {})

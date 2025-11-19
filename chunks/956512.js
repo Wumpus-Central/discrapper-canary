@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(709054),
     y = n(915553),
     O = n(967249),
-    v = n(621844),
+    v = n(609422),
     I = n(388032);
 function T(e, t, n) {
     return (
@@ -75,8 +75,8 @@ function C(e, t) {
 }
 function N(e) {
     let { currentUserId: t, message: T, application: A, channel: N, analyticsLocations: R, onView: P } = e,
-        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: x } = (0, d.E)(A),
-        L = g.ZP.getApplicationIconURL({
+        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: L } = (0, d.E)(A),
+        x = g.ZP.getApplicationIconURL({
             id: A.id,
             icon: A.icon,
         }),
@@ -108,8 +108,8 @@ function N(e) {
             title: A.name,
             staticBannerSrc: D,
             videoBannerSrc: w,
-            bannerAspectRatio: x,
-            iconSrc: null != L ? L : void 0,
+            bannerAspectRatio: L,
+            iconSrc: null != x ? x : void 0,
             info: G,
             actions:
                 T.author.id === t
@@ -127,7 +127,7 @@ function N(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),
                                                     n.e("4093"),
-                                                    n.e("47863"),
+                                                    n.e("33840"),
                                                     n.e("39173"),
                                                 ]).then(n.bind(n, 60594));
                                                 return (t) => (0, r.jsx)(e, C(S({}, t), { analyticsLocation: B }));

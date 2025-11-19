@@ -1,7 +1,7 @@
-a.d(e, { R: () => E });
-var r = a(263449),
-    _ = a(452896),
-    n = a(163162);
+_.d(e, { R: () => i });
+var a = _(263449),
+    r = _(452896),
+    n = _(163162);
 let o = {
         replayIntegration: "replay",
         replayCanvasIntegration: "replay-canvas",
@@ -20,18 +20,18 @@ let o = {
         sessionTimingIntegration: "sessiontiming",
         browserProfilingIntegration: "browserprofiling",
     },
-    i = n.m9;
-async function E(t) {
+    E = n.m9;
+async function i(t) {
     let e = o[t],
-        a = (i.Sentry = i.Sentry || {});
+        _ = (E.Sentry = E.Sentry || {});
     if (!e) throw Error(`Cannot lazy load integration: ${t}`);
-    let E = a[t];
-    if ("function" == typeof E) return E;
+    let i = _[t];
+    if ("function" == typeof i) return i;
     let c = (function (t) {
-            let e = (0, r.s3)(),
-                a = e && e.getOptions(),
-                n = (a && a.cdnBaseUrl) || "https://browser.sentry-cdn.com";
-            return new URL(`/${_.J}/${t}.min.js`, n).toString();
+            let e = (0, a.s3)(),
+                _ = e && e.getOptions(),
+                n = (_ && _.cdnBaseUrl) || "https://browser.sentry-cdn.com";
+            return new URL(`/${r.J}/${t}.min.js`, n).toString();
         })(e),
         s = n.m9.document.createElement("script");
     (s.src = c), (s.crossOrigin = "anonymous"), (s.referrerPolicy = "origin");
@@ -44,7 +44,7 @@ async function E(t) {
     } catch (e) {
         throw Error(`Error when loading integration: ${t}`);
     }
-    let I = a[t];
+    let I = _[t];
     if ("function" != typeof I) throw Error(`Could not load integration: ${t}`);
     return I;
 }

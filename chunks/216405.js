@@ -56,15 +56,15 @@ class S extends o.Z {
                 (n = (0, g.Z)(E.ApplicationStreamPresets.PRESET_DOCUMENTS, N, null == R ? void 0 : R.premiumTier))
                     ? n
                     : [E.ApplicationStreamResolutions.RESOLUTION_SOURCE, E.ApplicationStreamFPS.FPS_5],
-            [w, x] =
+            [w, L] =
                 null != (r = (0, g.Z)(E.ApplicationStreamPresets.PRESET_VIDEO, N, null == R ? void 0 : R.premiumTier))
                     ? r
                     : [E.ApplicationStreamResolutions.RESOLUTION_720, E.ApplicationStreamFPS.FPS_30],
-            L = null;
+            x = null;
         if (
             (A.entropy < y && (S.resolution !== P || S.fps !== D)
                 ? (I.info("Low entropy average, switching to screenshare preset."),
-                  (L = {
+                  (x = {
                       qualityOptions: {
                           preset: E.ApplicationStreamPresets.PRESET_AUTO,
                           resolution: P,
@@ -73,31 +73,31 @@ class S extends o.Z {
                       context: i.Yn.STREAM,
                   }))
                 : A.entropy > O &&
-                  (S.resolution !== w || S.fps !== x) &&
+                  (S.resolution !== w || S.fps !== L) &&
                   (I.info("High entropy average, switching to video preset."),
-                  (L = {
+                  (x = {
                       qualityOptions: {
                           preset: E.ApplicationStreamPresets.PRESET_AUTO,
                           resolution: w,
-                          frameRate: x,
+                          frameRate: L,
                       },
                       context: i.Yn.STREAM,
                   })),
-            null != L)
+            null != x)
         ) {
             if (null != b.desktopSource)
-                L.desktopSettings = {
+                x.desktopSettings = {
                     sourceId: b.desktopSource.id,
                     sound: S.soundshareEnabled,
                 };
             else {
                 if (null == b.cameraSource) return;
-                L.cameraSettings = {
+                x.cameraSettings = {
                     videoDeviceGuid: b.cameraSource.videoDeviceGuid,
                     audioDeviceGuid: b.cameraSource.audioDeviceGuid,
                 };
             }
-            a.Z.setGoLiveSource(L);
+            a.Z.setGoLiveSource(x);
         }
     }
     handlePostConnectionOpen() {

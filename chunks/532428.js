@@ -98,14 +98,14 @@ function w(e, t) {
         e
     );
 }
-function x() {
+function L() {
     return new Set(
         l()
             .months()
             .map((e) => e.toLowerCase()),
     );
 }
-function L() {
+function x() {
     return new Set(
         l()
             .weekdays()
@@ -176,9 +176,9 @@ function q(e, t) {
     return (
         null != a
             ? ([n, r] = a())
-            : x().has(i)
+            : L().has(i)
               ? ([n, r] = U(i, "MMMM", "month"))
-              : L().has(i)
+              : x().has(i)
                 ? ([n, r] = U(i, "dddd", "day"))
                 : M().has(i)
                   ? ([n, r] = U(i, "YYYY", "year"))
@@ -265,7 +265,7 @@ function ee(e) {
     return null != t && "" !== t && (e.setData("author_type", t), !0);
 }
 function et() {
-    return [...Array.from(x()), ...Array.from(L()), ...Array.from(M()), ...Object.keys(G())];
+    return [...Array.from(L()), ...Array.from(x()), ...Array.from(M()), ...Object.keys(G())];
 }
 function en() {
     return o().sample(et());

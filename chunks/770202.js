@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(146773),
     d = n(201895),
     p = n(703656),
-    f = n(592125),
-    h = n(430824),
+    h = n(592125),
+    f = n(430824),
     g = n(496675),
     m = n(98597),
     b = n(473403),
     _ = n(981631),
     y = n(490897),
-    O = n(55940);
+    O = n(33082);
 function v(e, t, n) {
     return (
         t in e
@@ -46,12 +46,12 @@ function j(e) {
     }
     return e;
 }
-function x(e, t) {
+function C(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
     s.Z.preload(n, t.id);
 }
-class C extends m.ZP {
+class x extends m.ZP {
     render() {
         let {
                 channel: e,
@@ -69,7 +69,7 @@ class C extends m.ZP {
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: x,
+                    onMouseDown: C,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: a ? l : null,
                     "aria-label": (0, d.ZP)({ channel: e }),
@@ -83,7 +83,7 @@ class C extends m.ZP {
         super(...e),
             v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = h.Z.getGuild(t.getGuildId());
+                    i = f.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e("99905").then(n.bind(n, 649400));
@@ -131,11 +131,11 @@ class C extends m.ZP {
             });
     }
 }
-let E = (0, u.B)(C),
+let E = (0, u.B)(x),
     S = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
-            l = (0, a.cj)([f.Z, g.Z], () => {
-                let e = f.Z.getChannel(t.parent_id);
+            l = (0, a.cj)([h.Z, g.Z], () => {
+                let e = h.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),
                     canReorderChannel:

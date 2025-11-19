@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(642613), n(583741);
+n.d(t, { Z: () => C }), n(388685), n(642613), n(583741);
 var r = n(54381),
     i = n(473749),
     l = n(392711),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(359110),
     d = n(601070),
     p = n(91159),
-    f = n(488131),
-    h = n(496675),
+    h = n(488131),
+    f = n(496675),
     g = n(306680),
     m = n(594174),
     b = n(768581),
@@ -18,16 +18,16 @@ var r = n(54381),
     y = n(981631),
     O = n(124368),
     v = n(388032),
-    j = n(531198);
-function x(e) {
+    j = n(990912);
+function C(e) {
     let { channel: t } = e,
-        l = (0, a.Wu)([d.Z, g.ZP, h.Z], () => {
+        l = (0, a.Wu)([d.Z, g.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return o()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && h.Z.can(y.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && f.Z.can(y.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
@@ -52,7 +52,7 @@ function x(e) {
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(C, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(x, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
@@ -103,14 +103,14 @@ function x(e) {
         })
     );
 }
-function C(e) {
+function x(e) {
     let { thread: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, p.Ok)(t);
     return (0, r.jsxs)(s.P3F, {
         className: j.row,
         onClick: (e) => {
-            (0, f.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
+            (0, h.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
         },
         children: [
             null == n

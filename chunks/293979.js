@@ -1,7 +1,7 @@
 n.d(t, {
     X9: () => M,
     b8: () => k,
-    hz: () => x,
+    hz: () => L,
 }),
     n(388685),
     n(190126),
@@ -10,7 +10,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749);
-var r = n(647438),
+var r = n(473749),
     i = n(512722),
     a = n.n(i),
     o = n(442837),
@@ -48,13 +48,13 @@ let w = (e) => {
         t
     );
 };
-function x(e) {
+function L(e) {
     var t;
     let n = (0, A.CJ)(),
         r = null == n || null == (t = n.modal) ? void 0 : t.components[0];
     return (null == r ? void 0 : r.type) === u.re.ACTION_ROW && r.components[0].id === e;
 }
-function L(e) {
+function x(e) {
     return r.useMemo(() => {
         let t = y.Z.getGuildId(),
             n = null != t && null != e.bot ? b.ZP.getMember(t, e.bot.id) : void 0,
@@ -100,7 +100,7 @@ function M(e, t) {
             t()),
             b === N.i.ERRORED && _(D.intl.string(D.t.uJgdEu));
     }, [p, b, t, i, e.channelId]);
-    let { applicationIconURL: v, applicationName: I } = L(n);
+    let { applicationIconURL: v, applicationName: I } = x(n);
     return {
         components: a,
         applicationIconURL: v,
@@ -115,7 +115,7 @@ function M(e, t) {
 }
 function k(e) {
     let { application: t, customId: n } = e,
-        { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = L(t),
+        { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = x(t),
         s = g.Z.getChannel(e.channelId);
     a()(null != s, "channel should not be null");
     let l = {

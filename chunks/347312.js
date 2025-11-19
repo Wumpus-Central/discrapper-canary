@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(328187),
     _ = n(607889),
     p = n(94432),
-    h = n(784506);
+    h = n(588900);
 let m = 40,
     g = p.e3 / 1000,
     E = 294,
@@ -62,11 +62,11 @@ function w(e, t, n, r, i) {
         e.arc(t + i, n + i, i, 0, Math.PI, !0),
         e.closePath();
 }
-function x(e) {
+function L(e) {
     let { showAll: t, currentTime: n, duration: r, numSegments: i } = e;
     return t ? i : Math.max(0, Math.round((n / r) * i));
 }
-function L(e) {
+function x(e) {
     let { context: t, devicePixelRatio: n, canvasHeight: r, segmentValue: i, segmentIndex: a, constrainMin: o } = e,
         s = o ? (I - T) * i + T : I * i;
     0 !== s && w(t, a * (2 * y + O) * n, (r / 2 - s / 2) * n, s * n, y * n);
@@ -156,7 +156,7 @@ function G(e) {
     }),
         i.useEffect(() => {
             let { currentTime: e, duration: t, played: n } = F.current,
-                r = x({
+                r = L({
                     showAll: !n,
                     currentTime: e,
                     duration: t,
@@ -167,7 +167,7 @@ function G(e) {
         i.useEffect(() => {
             let e = y.current;
             if (null == e) return;
-            let t = x({
+            let t = L({
                 showAll: !l,
                 currentTime: a,
                 duration: s,
@@ -197,7 +197,7 @@ function G(e) {
                 let [c, u] = U(R, D, n, A.current);
                 (o = o || u), (i.fillStyle = c);
                 for (let e = 0; e < O.length; e++)
-                    L({
+                    x({
                         context: i,
                         devicePixelRatio: N,
                         canvasHeight: s,
@@ -215,7 +215,7 @@ function G(e) {
                         n = Math.max(t.getCurrentValue(), O[e] - 0.1);
                     i.beginPath(),
                         (i.fillStyle = t.isReset ? f : p),
-                        L({
+                        x({
                             context: i,
                             devicePixelRatio: N,
                             canvasHeight: s,

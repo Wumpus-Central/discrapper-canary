@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(981631),
     I = n(710111),
     T = n(388032),
-    S = n(937309);
+    S = n(518025);
 function A(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         o = i.useCallback(async () => {
@@ -71,8 +71,8 @@ function C(e) {
                     w(!1), u();
                 }));
     }, [u, P, t.guildId, t.soundId]);
-    let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
-        M = x === y.y.JOIN_GUILD,
+    let { buttonType: L, description: x } = (0, y.Z)(t, n, v, C),
+        M = L === y.y.JOIN_GUILD,
         k = !E && D,
         j = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
@@ -97,7 +97,7 @@ function C(e) {
                                   }),
                                   (0, r.jsx)(o.xvT, {
                                       variant: "text-sm/normal",
-                                      children: L,
+                                      children: x,
                                   }),
                               ],
                           }),
@@ -120,7 +120,7 @@ function C(e) {
                                           }),
                                       }),
                                       (0, r.jsx)(A, {
-                                          buttonType: x,
+                                          buttonType: L,
                                           discoverableGuildId: null == C ? void 0 : C.id,
                                           closePopout: l,
                                       }),

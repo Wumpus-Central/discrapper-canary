@@ -4,9 +4,9 @@ n.d(t, {
     yD: () => p,
 });
 var a = n(213919),
-    i = n(544891),
+    l = n(544891),
     r = n(570140),
-    l = n(893776),
+    i = n(893776),
     s = n(710845),
     o = n(314897),
     c = n(726745),
@@ -16,19 +16,19 @@ function m() {
     let e = o.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
-            { id: l } = t,
-            s = a.getToken(l);
+            { id: i } = t,
+            s = a.getToken(i);
         if (null == s || "" === s)
             return void r.Z.dispatch({
                 type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-                userId: l,
+                userId: i,
             });
         r.Z.dispatch({
             type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST",
-            userId: l,
+            userId: i,
         });
         try {
-            n = await i.tn.get({
+            n = await l.tn.get({
                 url: d.ANM.ME,
                 headers: { authorization: s },
                 retries: 3,
@@ -38,17 +38,17 @@ function m() {
             let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
             r.Z.dispatch({
                 type: e ? "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE" : "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                userId: l,
+                userId: i,
             });
             return;
         }
         r.Z.dispatch({
-            type: e === l ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
+            type: e === i ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
             user: n.body,
         }),
             r.Z.dispatch({
                 type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                userId: l,
+                userId: i,
             });
     });
 }
@@ -62,7 +62,7 @@ function p(e, t) {
               userId: e,
           }),
           Promise.resolve())
-        : l.Z.switchAccountToken(n, t);
+        : i.Z.switchAccountToken(n, t);
 }
 function h(e) {
     r.Z.dispatch({

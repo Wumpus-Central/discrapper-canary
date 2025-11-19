@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(112843),
     y = n(524484),
     O = n(388032),
-    v = n(749714);
+    v = n(892879);
 function I(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let C = {
             description: O.intl.string(O.t.fiHV7u),
         },
     ],
-    x = () => [
+    L = () => [
         {
             location: y.oZ.CHAT_INPUT,
             title: O.intl.string(O.t.vUcvPP),
@@ -120,7 +120,7 @@ let C = {
             description: O.intl.string(O.t["mqfw/H"]),
         },
     ];
-function L(e) {
+function x(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         o = n.map((e) =>
             (0, r.jsx)(
@@ -261,7 +261,7 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(L, {
+            (0, r.jsx)(x, {
                 disabled: c,
                 locations: w(),
                 settingsLocations: o,
@@ -360,9 +360,9 @@ function G(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(L, {
+            (0, r.jsx)(x, {
                 disabled: d,
-                locations: x(),
+                locations: L(),
                 settingsLocations: a,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1),
             }),

@@ -226,7 +226,7 @@ class O extends a.Z {
             : i.bF.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, x, L, M, j, k, U, G, B;
+        var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j, U, G, B;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -284,12 +284,12 @@ class O extends a.Z {
             (this.nsfwAllowed = null != (R = e.nsfw_allowed) ? R : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (P = e.age_verification_status) ? P : e.ageVerificationStatus),
             (this.guildMemberAvatars = null != (D = e.guildMemberAvatars) ? D : {}),
-            (this.hasBouncedEmail = null != (x = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && x),
+            (this.hasBouncedEmail = null != (L = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && L),
             (this.personalConnectionId =
-                null != (M = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? M : null),
-            (this.globalName = null != (j = e.global_name) ? j : e.globalName),
+                null != (M = null != (x = e.personal_connection_id) ? x : e.personalConnectionId) ? M : null),
+            (this.globalName = null != (k = e.global_name) ? k : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, l.l)(null != (U = null != (k = e.primary_guild) ? k : e.primaryGuild) ? U : null)),
+            (this.primaryGuild = (0, l.l)(null != (U = null != (j = e.primary_guild) ? j : e.primaryGuild) ? U : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (G = e.displayNameStyles) ? G : (0, s.bN)(e.display_name_styles)),
             (this.premiumState = null != (B = e.premiumState) ? B : (0, u.C)(e.premium_state)),

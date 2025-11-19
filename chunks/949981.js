@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(358595),
     E = n(981631),
     b = n(388032),
-    y = n(105341);
+    y = n(739236);
 function O(e) {
     let t,
         { invite: n, message: a, currentUserId: O, onTransitionToInviteChannel: v, onAcceptInstantInvite: I } = e,
@@ -62,12 +62,12 @@ function O(e) {
     let D = b.intl.string(b.t.XpeFYr),
         w = "active";
     N && ((D = b.intl.string(b.t.cEnaWx)), (w = "secondary"));
-    let x = b.intl.string(b.t["3p3/BK"]);
+    let L = b.intl.string(b.t["3p3/BK"]);
     return (
-        T && (x = b.intl.string(b.t.qmtuXE)),
+        T && (L = b.intl.string(b.t.qmtuXE)),
         (0, r.jsxs)(f.Z, {
             children: [
-                (0, r.jsx)(f.Z.Header, { text: x }),
+                (0, r.jsx)(f.Z.Header, { text: L }),
                 (0, r.jsxs)(f.Z.Body, {
                     children: [
                         (0, r.jsxs)("div", {

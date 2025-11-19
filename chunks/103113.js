@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(544989),
     S = n(671955),
     A = n(388032),
-    C = n(116649);
+    C = n(593540);
 function N(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function P(e) {
             channelId: P,
             messageId: D,
             roleId: w,
-            openedAt: x,
-            setPopoutRef: L,
+            openedAt: L,
+            setPopoutRef: x,
             closePopout: M,
             disableUserProfileLink: k = __OVERLAY__,
             newAnalyticsLocations: j = [],
@@ -81,8 +81,8 @@ function P(e) {
         F = i.useRef(null),
         V = (0, u.X)(F);
     i.useEffect(() => {
-        null == L || L(null == F ? void 0 : F.current);
-    }, [F, L]);
+        null == x || x(null == F ? void 0 : F.current);
+    }, [F, x]);
     let H = () => {
             null == M || M(),
                 (0, m.openUserProfileModal)(
@@ -122,7 +122,7 @@ function P(e) {
         value: B,
         children: (0, r.jsx)(_.Mt, {
             value: Z,
-            openedAt: x,
+            openedAt: L,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,

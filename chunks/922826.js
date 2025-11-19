@@ -15,37 +15,37 @@ var r = n(54381),
     E = n(157160),
     g = n(295029),
     O = n(954633),
-    b = n(325916),
-    h = n(939389),
+    h = n(325916),
+    b = n(939389),
     S = n(388032),
-    C = n(273339);
+    C = n(290691);
 let y = "-:--",
     _ = {
-        [b.rq.PLAYING]: {
+        [h.rq.PLAYING]: {
             icon: m.fpf,
             label: S.intl.string(S.t.ZcgDJX),
         },
-        [b.rq.PAUSED]: {
+        [h.rq.PAUSED]: {
             icon: m.o1U,
             label: S.intl.string(S.t.RscU7I),
         },
-        [b.rq.ENDED]: {
+        [h.rq.ENDED]: {
             icon: m.Oe7,
             label: S.intl.string(S.t.hsvh0i),
         },
     },
     x = {
-        [b._H.MD]: b.Cq.MD,
-        [b._H.LG]: b.Cq.LG,
+        [h._H.MD]: h.Cq.MD,
+        [h._H.LG]: h.Cq.LG,
     },
     j = {
-        [b.Cq.MD]: "md",
-        [b.Cq.LG]: "lg",
+        [h.Cq.MD]: "md",
+        [h.Cq.LG]: "lg",
     };
 function D(e) {
     let { current: t, duration: n } = e,
-        o = null != t ? (0, h.yv)(t) : y,
-        l = null != n ? (0, h.yv)(n) : y;
+        o = null != t ? (0, b.yv)(t) : y,
+        l = null != n ? (0, b.yv)(n) : y;
     return (
         (o = o.padStart(l.length, "0")),
         (0, r.jsxs)("div", {
@@ -82,9 +82,9 @@ let P = o.forwardRef(function (e, t) {
             tooltipDelayMs: v = 1500,
             shortcut: E,
             onClick: g,
-            buttonSize: O = b.Cq.MD,
+            buttonSize: O = h.Cq.MD,
         } = e,
-        h = (e) => {
+        b = (e) => {
             var d, f;
             return (0, r.jsx)(
                 m.P3F,
@@ -133,8 +133,8 @@ let P = o.forwardRef(function (e, t) {
                                     (e) => "".concat(l ? e : Math.pow(e, 8)),
                                 ),
                                 height: {
-                                    [b.Cq.LG]: "32px",
-                                    [b.Cq.MD]: "24px",
+                                    [h.Cq.LG]: "32px",
+                                    [h.Cq.MD]: "24px",
                                 }[O],
                             },
                             children: (0, r.jsx)(n, {
@@ -167,16 +167,16 @@ let P = o.forwardRef(function (e, t) {
               text: f,
               keyboardShortcut: "" !== (null != E ? E : "").trim() ? E : void 0,
               delay: v,
-              children: h(),
+              children: b(),
           })
-        : h();
+        : b();
 });
 function T(e) {
     var t, n;
     let {
             videoRef: l,
             playerState: d,
-            animSpring: h,
+            animSpring: b,
             visible: y,
             seekForwardEnabled: j,
             hideCaptionBtn: T,
@@ -200,8 +200,8 @@ function T(e) {
         G = (0, v.km)((e) => e.captionEnabled),
         Q = (0, v.km)((e) => e.fullScreenEnabled),
         W = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
-        K = (0, s.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        [z, X] = o.useState(U ? 0 : B),
+        z = (0, s.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        [K, X] = o.useState(U ? 0 : B),
         [J, $] = o.useState(!1),
         [ee, et] = o.useState(!1),
         [{ volumeAnimSpring: en }, er] = (0, m.q_F)(() => ({
@@ -216,13 +216,13 @@ function T(e) {
         el = (0, f.ZS)(I),
         ei = o.useCallback(
             (e) => {
-                null != l.current && (e !== l.current.volume && (l.current.volume = e), e !== z && X(e));
+                null != l.current && (e !== l.current.volume && (l.current.volume = e), e !== K && X(e));
             },
-            [l, z],
+            [l, K],
         ),
         ea = o.useCallback(() => {
-            null != l.current && (0 === z ? (ei(B), q(!1), F(B)) : (H(z), ei(0), q(!0), F(0)));
-        }, [l, z, ei, B, q, H, F]),
+            null != l.current && (0 === K ? (ei(B), q(!1), F(B)) : (H(K), ei(0), q(!0), F(0)));
+        }, [l, K, ei, B, q, H, F]),
         es = () => {
             $(!0);
         },
@@ -232,29 +232,29 @@ function T(e) {
         eu = o.useCallback(
             (e) => {
                 switch (e.key) {
-                    case b.Y1.PLAYBACK:
+                    case h.Y1.PLAYBACK:
                         A();
                         break;
-                    case b.Y1.SPACE:
-                        K || (e.preventDefault(), A());
+                    case h.Y1.SPACE:
+                        z || (e.preventDefault(), A());
                         break;
-                    case b.Y1.SEEK_BACK:
+                    case h.Y1.SEEK_BACK:
                         L();
                         break;
-                    case b.Y1.SEEK_FORWARD:
+                    case h.Y1.SEEK_FORWARD:
                         V();
                         break;
-                    case b.Y1.CAPTION:
+                    case h.Y1.CAPTION:
                         k();
                         break;
-                    case b.Y1.FULLSCREEN:
+                    case h.Y1.FULLSCREEN:
                         M();
                         break;
-                    case b.Y1.MUTE:
+                    case h.Y1.MUTE:
                         ea();
                 }
             },
-            [k, M, A, L, V, ea, K],
+            [k, M, A, L, V, ea, z],
         );
     o.useEffect(() => {
         null != eo.current && eo.current.focus();
@@ -280,7 +280,7 @@ function T(e) {
             ),
             [eu],
         );
-    let ed = 0 === z ? m.OyP : z < 0.5 ? m.X2j : m.gj8,
+    let ed = 0 === K ? m.OyP : K < 0.5 ? m.X2j : m.gj8,
         { icon: em, label: ep } = _[d];
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -289,11 +289,11 @@ function T(e) {
                 children: [
                     (0, r.jsx)(P, {
                         iconComponent: em,
-                        animationTime: h,
+                        animationTime: b,
                         visible: y,
                         ariaLabel: ep,
                         tooltipLabel: ep,
-                        shortcut: b.Y1.PLAYBACK,
+                        shortcut: h.Y1.PLAYBACK,
                         onClick: A,
                         ref: eo,
                         buttonSize: x[N],
@@ -303,24 +303,24 @@ function T(e) {
                             children: [
                                 (0, r.jsx)(P, {
                                     iconComponent: g.F,
-                                    animationTime: h,
+                                    animationTime: b,
                                     visible: y,
                                     onClick: L,
                                     ariaLabel: S.intl.string(S.t.r9s3Uv),
                                     tooltipLabel: S.intl.string(S.t.r9s3Uv),
-                                    shortcut: b.Y1.SEEK_BACK,
+                                    shortcut: h.Y1.SEEK_BACK,
                                     buttonSize: x[N],
                                 }),
                                 (0, r.jsx)(P, {
                                     iconComponent: O.j,
-                                    animationTime: h,
+                                    animationTime: b,
                                     visible: y,
                                     onClick: V,
                                     disabled: !j,
                                     ariaLabel: j ? S.intl.string(S.t.zWDcNP) : S.intl.string(S.t.xXh3yw),
                                     tooltipLabel: j ? S.intl.string(S.t.zWDcNP) : S.intl.string(S.t.xXh3yw),
                                     tooltipDelayMs: 1500 * !!j,
-                                    shortcut: b.Y1.SEEK_FORWARD,
+                                    shortcut: h.Y1.SEEK_FORWARD,
                                     buttonSize: x[N],
                                 }),
                             ],
@@ -332,7 +332,7 @@ function T(e) {
                 style: {
                     opacity: (0, a.to)(
                         [
-                            h.to({
+                            b.to({
                                 range: [0, 1],
                                 output: [0, 1],
                             }),
@@ -350,12 +350,12 @@ function T(e) {
                         children: [
                             (0, r.jsx)(P, {
                                 iconComponent: ed,
-                                animationTime: h,
+                                animationTime: b,
                                 visible: y,
                                 onClick: ea,
                                 ariaLabel: S.intl.string(S.t["eIl+AK"]),
                                 tooltipLabel: S.intl.string(S.t["eIl+AK"]),
-                                shortcut: b.Y1.MUTE,
+                                shortcut: h.Y1.MUTE,
                                 buttonSize: x[N],
                             }),
                             (0, r.jsx)(a.animated.div, {
@@ -382,7 +382,7 @@ function T(e) {
                                 },
                                 children: (0, r.jsx)(u.i, {
                                     mini: !0,
-                                    initialValue: z,
+                                    initialValue: K,
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
@@ -411,11 +411,11 @@ function T(e) {
                     !R &&
                         (0, r.jsx)(P, {
                             iconComponent: m.hH0,
-                            animationTime: h,
+                            animationTime: b,
                             visible: y,
                             onClick: w,
-                            active: Y && d !== b.rq.ENDED,
-                            disabled: d === b.rq.ENDED,
+                            active: Y && d !== h.rq.ENDED,
+                            disabled: d === h.rq.ENDED,
                             ariaLabel: S.intl.string(S.t.KCzjTi),
                             tooltipLabel: S.intl.string(S.t.KCzjTi),
                             buttonSize: x[N],
@@ -423,23 +423,23 @@ function T(e) {
                     !T &&
                         (0, r.jsx)(P, {
                             iconComponent: E.c,
-                            animationTime: h,
+                            animationTime: b,
                             visible: y,
                             active: G,
                             onClick: k,
                             ariaLabel: S.intl.string(S.t.bDSZO1),
                             tooltipLabel: S.intl.string(S.t.bDSZO1),
-                            shortcut: b.Y1.CAPTION,
+                            shortcut: h.Y1.CAPTION,
                             buttonSize: x[N],
                         }),
                     (0, r.jsx)(P, {
                         iconComponent: Q ? m.wvt : m.NpZ,
-                        animationTime: h,
+                        animationTime: b,
                         visible: y,
                         onClick: M,
                         ariaLabel: S.intl.string(S.t.vKZT5t),
                         tooltipLabel: S.intl.string(S.t.vKZT5t),
-                        shortcut: b.Y1.FULLSCREEN,
+                        shortcut: h.Y1.FULLSCREEN,
                         buttonSize: x[N],
                     }),
                 ],

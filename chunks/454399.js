@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(102725),
     p = n(342134),
     h = n(966327),
-    m = n(890955);
+    m = n(638787);
 function g(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ function I(e) {
             positionKey: D,
             ariaHidden: w = !1,
         } = e,
-        x = O(e, [
+        L = O(e, [
             "children",
             "title",
             "body",
@@ -122,7 +122,7 @@ function I(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let L = (0, h.c)(R),
+    let x = (0, h.c)(R),
         M = i.useId(),
         k = w ? void 0 : M,
         j = null != a && ("string" != typeof a || "" !== a),
@@ -155,7 +155,7 @@ function I(e) {
                 }),
             [b, a, g, j],
         ),
-        { isVisible: G, triggerProps: B } = (0, _.l)(E({ targetElementRef: L.targetElementRef }, x)),
+        { isVisible: G, triggerProps: B } = (0, _.l)(E({ targetElementRef: x.targetElementRef }, L)),
         Z = null != D ? D : "".concat((0, f.Sw)(null != a ? a : ""), "|").concat((0, f.Sw)(g)),
         F = (0, p.Q)({ shouldShow: G });
     if (v) {
@@ -187,11 +187,11 @@ function I(e) {
             tag: I,
             children: n,
             triggerHandlers: e,
-            triggerRef: L.triggerRef,
+            triggerRef: x.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, f.C9)(n, B, k, L.triggerRef);
+        t = (0, f.C9)(n, B, k, x.triggerRef);
     }
     let V = F((e, t) =>
         t
@@ -200,7 +200,7 @@ function I(e) {
                   children: (0, r.jsx)(u.N, {
                       isVisible: G,
                       isRendered: !0,
-                      targetElementRef: L.targetElementRef,
+                      targetElementRef: x.targetElementRef,
                       anchorRef: P,
                       id: M,
                       content: U,

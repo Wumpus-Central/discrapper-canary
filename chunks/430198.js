@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -117,13 +117,13 @@ function w(e) {
     let { channel: t } = e;
     return null != t.guild_id && N(t.guild_id, t.id);
 }
-function x(e) {
+function L(e) {
     let { channels: t } = e,
         n = !1;
     for (let e of t) null != e.guild_id && N(e.guild_id, e.id) && (n = !0);
     return n;
 }
-function L(e) {
+function x(e) {
     let { guildId: t, restrictions: n } = e;
     (0, s.uq)(n) ? I.add(t) : I.delete(t);
 }
@@ -131,7 +131,7 @@ function M(e) {
     let { guildId: t } = e;
     I.add(t);
 }
-class j extends (r = i.ZP.Store) {
+class k extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, m.ZP, g.Z, E.Z, f.Z, b.default), l.Zo.subscribe({ location: "1" }, () => R());
     }
@@ -153,8 +153,8 @@ class j extends (r = i.ZP.Store) {
         );
     }
 }
-O(j, "displayName", "GatedChannelStore");
-let k = new j(a.Z, {
+O(k, "displayName", "GatedChannelStore");
+let j = new k(a.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     CACHE_LOADED_LAZY: R,
@@ -168,7 +168,7 @@ let k = new j(a.Z, {
     IMPERSONATE_STOP: D,
     CHANNEL_CREATE: w,
     CHANNEL_DELETE: w,
-    CHANNEL_UPDATES: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: L,
+    CHANNEL_UPDATES: L,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M,
 });

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(135938),
     d = n(554838),
     p = n(493892),
-    f = n(661824),
-    h = n(37772),
+    h = n(661824),
+    f = n(37772),
     g = n(695346),
     m = n(314897),
     b = n(594174),
@@ -19,15 +19,15 @@ var r = n(54381),
     O = n(809780),
     v = n(981631),
     j = n(388032),
-    x = n(39620);
-let C = {
+    C = n(39620);
+let x = {
         left: 4,
         right: -12,
     },
     E = [v.uaV.THREAD_CREATED];
 function S(e) {
     var t, n, l;
-    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
+    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: h } = e,
         g = (0, a.JA)(null != (t = s.id) ? t : ""),
         m = i.useCallback(
             (e) => {
@@ -40,7 +40,7 @@ function S(e) {
         ),
         b = E.includes(s.type);
     return (0, r.jsx)(c.tEY, {
-        offset: C,
+        offset: x,
         children: (0, r.jsxs)(
             "div",
             ((n = (function (e) {
@@ -69,7 +69,7 @@ function S(e) {
                 return e;
             })(
                 {
-                    className: x.messageContainer,
+                    className: C.messageContainer,
                     onKeyDown: m,
                 },
                 g,
@@ -79,14 +79,14 @@ function S(e) {
                     children: [
                         !b &&
                             (0, r.jsx)(y.Z, {
-                                className: x.jumpButton,
-                                onJump: (e) => f(e, s.id),
+                                className: C.jumpButton,
+                                onJump: (e) => h(e, s.id),
                             }),
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(f.Z, {
                             id: s.id,
                             message: s,
                             channel: o,
-                            className: x.message,
+                            className: C.message,
                             compact: u,
                             animateAvatar: !1,
                             isGroupStart: d,
@@ -115,9 +115,9 @@ function S(e) {
 function I(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
-        { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         y = g.jU.useSetting(),
-        C = (0, p.P1)(l),
+        x = (0, p.P1)(l),
         E = !1,
         I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
         P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
@@ -131,9 +131,9 @@ function I(e) {
                 let t = (0, _.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
-                        f.Z,
+                        h.Z,
                         {
-                            className: x.divider,
+                            className: C.divider,
                             children: t,
                         },
                         t,
@@ -152,7 +152,7 @@ function I(e) {
                             message: n,
                             compact: y,
                             isGroupStart: i,
-                            treatSpam: !P && h && (0, p.DQ)(n) && C,
+                            treatSpam: !P && f && (0, p.DQ)(n) && x,
                             gotoChannel: a,
                         },
                         n.id,
@@ -175,9 +175,9 @@ function I(e) {
             0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        E && C && u.Z.trackExposure({ location: "20e3b0_2" }),
+        E && x && u.Z.trackExposure({ location: "20e3b0_2" }),
         (0, r.jsx)("div", {
-            className: x.messages,
+            className: C.messages,
             children: N,
         })
     );

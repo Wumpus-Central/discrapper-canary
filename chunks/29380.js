@@ -40,7 +40,7 @@ function y(e) {
         {
             onActivityItemSelected: D,
             buttonVariant: w,
-            buttonText: x,
+            buttonText: L,
         } = (0, g.P7)({
             context: t,
             application: n,
@@ -52,7 +52,7 @@ function y(e) {
             submitting: null != A ? A : S,
             onConfirmActivityLaunchChecksAlertOpen: T,
         }),
-        { disabled: L, reason: M } = (0, p.Z)({
+        { disabled: x, reason: M } = (0, p.Z)({
             context: t,
             application: n,
             activityAction: R,
@@ -64,7 +64,7 @@ function y(e) {
             type: "submit",
             size: "md",
             variant: w,
-            disabled: L,
+            disabled: x,
             loading: C,
             onClick: () => {
                 N(!0),
@@ -75,10 +75,10 @@ function y(e) {
                     });
             },
             "aria-label": b.intl.formatToPlainString(b.t["XjP/R+"], {
-                buttonText: x,
+                buttonText: L,
                 applicationName: n.name,
             }),
-            text: x,
+            text: L,
         }),
     });
 }

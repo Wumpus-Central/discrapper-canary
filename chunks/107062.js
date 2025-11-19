@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => x }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => L }), n(804061), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -54,8 +54,8 @@ let P = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    x = (e) => {
-        let { channel: t, entry: n, onReaction: b, onVoiceChannelPreview: x, disableActivityProfileLinks: L } = e,
+    L = (e) => {
+        let { channel: t, entry: n, onReaction: b, onVoiceChannelPreview: L, disableActivityProfileLinks: x } = e,
             { largeImage: M } = (0, y.rv)({
                 entry: n,
                 showCoverImage: !1,
@@ -113,9 +113,9 @@ let P = (e, t) =>
                 badges: J,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: L ? void 0 : K,
-                onClickSubtitle: L ? void 0 : K,
-                onClickThumbnail: L ? void 0 : K,
+                onClickTitle: x ? void 0 : K,
+                onClickSubtitle: x ? void 0 : K,
+                onClickThumbnail: x ? void 0 : K,
             }),
             ee = (0, l.Z)(U, N.xjy.JOIN) || (0, c.Z)(U),
             et = ee
@@ -141,7 +141,7 @@ let P = (e, t) =>
                       }),
             er = Q ? o.iWm : o.jje,
             ei =
-                null != en || L
+                null != en || x
                     ? null
                     : (0, r.jsx)(o.Button, {
                           variant: "primary",
@@ -151,14 +151,14 @@ let P = (e, t) =>
                           text: R.intl.string(R.t.GDWYR8),
                           icon: er,
                       }),
-            ea = [en, ee && !L ? et : ei].filter(E.lm);
+            ea = [en, ee && !x ? et : ei].filter(E.lm);
         return (0, r.jsxs)(A.yR, {
             children: [
                 $,
                 (0, r.jsx)(A.St, {
                     children: (0, r.jsx)(A.WT, {
                         onReaction: b,
-                        onVoiceChannelPreview: x,
+                        onVoiceChannelPreview: L,
                         user: k,
                         channel: t,
                         generateReactionImage: z,

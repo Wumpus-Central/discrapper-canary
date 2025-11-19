@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(911560),
     x = n(488131),
     M = n(814820),
-    j = n(314897),
-    k = n(523746),
+    k = n(314897),
+    j = n(523746),
     U = n(592125),
     G = n(430824),
     B = n(496675),
@@ -136,12 +136,12 @@ function ex(e, t) {
 function eM(e) {
     K.Z.captureException(e), new p.Z("SystemMessage").error("", e);
 }
-function ej(e) {
+function ek(e) {
     let { message: t, compact: n, channel: o } = e,
         { id: s, author: l } = t,
-        u = j.default.getId(),
+        u = k.default.getId(),
         d = t.getChannelId(),
-        f = (0, a.e7)([k.Z], () => k.Z.isCallActive(d, s), [d, s]),
+        f = (0, a.e7)([j.Z], () => j.Z.isCallActive(d, s), [d, s]),
         _ = (0, a.e7)([H.Z], () => H.Z.getVoiceState(eN.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
@@ -162,7 +162,7 @@ function ej(e) {
         onClickJoinCall: m,
     });
 }
-function ek(e) {
+function ej(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -732,8 +732,8 @@ let ti = Object.freeze({
     [eN.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eN.uaV.RECIPIENT_ADD]: eB,
     [eN.uaV.RECIPIENT_REMOVE]: eF,
-    [eN.uaV.CALL]: ej,
-    [eN.uaV.CHANNEL_NAME_CHANGE]: ek,
+    [eN.uaV.CALL]: ek,
+    [eN.uaV.CHANNEL_NAME_CHANGE]: ej,
     [eN.uaV.CHANNEL_ICON_CHANGE]: eU,
     [eN.uaV.CHANNEL_PINNED_MESSAGE]: eG,
     [eN.uaV.USER_JOIN]: eV,

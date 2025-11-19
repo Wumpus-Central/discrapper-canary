@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(488131),
     g = n(981631),
     E = n(388032),
-    b = n(740810);
+    b = n(859497);
 function y(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function I(e) {
     }
     function p(e) {
         (0, l.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("43233")]).then(n.bind(n, 422200));
+            let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("68869")]).then(n.bind(n, 422200));
             return (n) => (0, r.jsx)(e, O({ channel: t }, n));
         });
     }

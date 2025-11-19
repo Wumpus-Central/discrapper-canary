@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var a,
-    i = n(442837),
+    l = n(442837),
     r = n(570140);
-function l(e, t, n) {
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function l(e, t, n) {
 }
 let s = { lastSeenInfos: {} },
     o = s;
-class c extends (a = i.ZP.PersistedStore) {
+class c extends (a = l.ZP.PersistedStore) {
     initialize(e) {
         o = null != e ? e : s;
     }
@@ -29,7 +29,7 @@ class c extends (a = i.ZP.PersistedStore) {
         return null != (t = o.lastSeenInfos[e]) ? t : null;
     }
 }
-l(c, "displayName", "GuildTagChangedCoachmarkStore"), l(c, "persistKey", "GuildTagChangedCoachmarkStore");
+i(c, "displayName", "GuildTagChangedCoachmarkStore"), i(c, "persistKey", "GuildTagChangedCoachmarkStore");
 let d = new c(r.Z, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;

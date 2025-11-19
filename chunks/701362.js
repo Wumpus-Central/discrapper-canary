@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(871118),
     S = n(981631),
     A = n(388032),
-    C = n(839021);
+    C = n(720740);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
         y.default.track(S.rMx.OPEN_POPOUT, {
@@ -197,7 +197,7 @@ function M(e) {
     return (
         (0, u.$)(T, "StreamPreviewPopout"),
         (0, r.jsx)(
-            L,
+            x,
             D(R({}, a), {
                 canWatch: o,
                 unavailableReason: l,

@@ -29,7 +29,7 @@ function I(e) {
     let M = (0, o.e7)([u.default], () =>
             D.isDM() && null != D.recipients && 0 !== D.recipients.length ? u.default.getUser(D.recipients[0]) : null,
         ),
-        { primaryIconAsset: j, primaryIconLabel: k } = i.useMemo(() => (0, p.FE)(L, x), [L, x]);
+        { primaryIconAsset: k, primaryIconLabel: j } = i.useMemo(() => (0, p.FE)(L, x), [L, x]);
     i.useEffect(() => {
         null == R || null == P || f.Z.isFetchingForSKU(P) || (0, h.y)(R, P);
     }, [R, P]);
@@ -97,10 +97,10 @@ function I(e) {
                                     (0, r.jsxs)("div", {
                                         className: v.detailsDescription,
                                         children: [
-                                            null != j &&
+                                            null != k &&
                                                 (0, r.jsx)("img", {
-                                                    src: j.toString(),
-                                                    alt: k,
+                                                    src: k.toString(),
+                                                    alt: j,
                                                     className: v.iconAsset,
                                                 }),
                                             (0, r.jsx)(s.Text, {

@@ -2,13 +2,13 @@ n.d(t, {
     L6: () => F,
     Rc: () => B,
     WH: () => P,
-    aP: () => k,
+    aP: () => j,
     dV: () => Z,
-    g: () => j,
+    g: () => k,
     iV: () => M,
     n9: () => U,
-    pR: () => L,
-    rn: () => x,
+    pR: () => x,
+    rn: () => L,
     tK: () => D,
     xc: () => G,
 });
@@ -94,7 +94,7 @@ function w(e, t) {
     let n = m.Z.getChannel(t);
     return i()(null != n, "Cannot join a null voice channel"), !b.Z.isInChannel(t) && (0, y.rY)(n, b.Z, g.Z);
 }
-function x(e, t) {
+function L(e, t) {
     let { defaultWatchMultipleStreams: n } = (0, c.$)({ location: "StreamActionCreators.watchStream" });
     if (null != l.default.getRemoteSessionId()) return;
     let { guildId: r, channelId: i } = e;
@@ -113,7 +113,7 @@ function x(e, t) {
     }),
         o || (null != t && t.noFocus) || T.Z.selectParticipant(e.channelId, a);
 }
-function L(e, t) {
+function x(e, t) {
     s.Z.dispatch({
         type: "STREAM_UPDATE_SELF_HIDDEN",
         channelId: e,
@@ -123,22 +123,22 @@ function L(e, t) {
 function M(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && w(n, r)) return;
-    x(e, t);
+    L(e, t);
     let i = f.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
         a = E.Z.getVoiceChannelId();
     (i && a === r) || (0, d.Z)(e);
 }
-function j(e) {
+function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    n && k(e, t),
+    n && j(e, t),
         s.Z.dispatch({
             type: "STREAM_STOP",
             streamKey: e,
             appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP,
         });
 }
-function k(e) {
+function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     s.Z.dispatch({
         type: "STREAM_CLOSE",
@@ -205,5 +205,5 @@ function Z(e, t) {
 function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.Z.getCurrentUserActiveStream();
-    null != t && j((0, u.V9)(t), e);
+    null != t && k((0, u.V9)(t), e);
 }

@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(174767),
     d = n(240126),
     p = n(326838),
-    f = n(388032),
-    h = n(201848);
+    h = n(388032),
+    f = n(767117);
 function g() {
     let e = (0, a.Wu)([c.Z], () => c.Z.getInvites()),
         t = (0, a.e7)([c.Z], () => c.Z.getInviteStatuses()),
@@ -34,21 +34,21 @@ function g() {
     }),
     0 === e.length)
         ? (0, r.jsx)("div", {
-              className: h.__invalid_emptyStateContainer,
+              className: f.__invalid_emptyStateContainer,
               children: (0, r.jsx)(d.Z, {
                   Icon: s.iWm,
-                  header: f.intl.string(f.t.PbSPWc),
-                  tip: f.intl.string(f.t.BxNbSz),
+                  header: h.intl.string(h.t.PbSPWc),
+                  tip: h.intl.string(h.t.BxNbSz),
               }),
           })
         : (0, r.jsx)(s.h21, {
               children: (0, r.jsxs)("div", {
-                  className: h.invitesContainer,
+                  className: f.invitesContainer,
                   children: [
                       n.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: f.intl.string(f.t.yflAJV) }),
+                                  (0, r.jsx)(m, { title: h.intl.string(h.t.yflAJV) }),
                                   n.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -64,7 +64,7 @@ function g() {
                       l.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: f.intl.string(f.t.f0Ia4V) }),
+                                  (0, r.jsx)(m, { title: h.intl.string(h.t.f0Ia4V) }),
                                   l.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -84,15 +84,15 @@ function g() {
 function m(e) {
     let { title: t } = e;
     return (0, r.jsxs)("div", {
-        className: h.headerContainer,
+        className: f.headerContainer,
         children: [
             (0, r.jsx)(s.Text, {
-                className: h.headerTitle,
+                className: f.headerTitle,
                 variant: "text-xs/semibold",
                 color: "interactive-normal",
                 children: t,
             }),
-            (0, r.jsx)("div", { className: h.headerDivider }),
+            (0, r.jsx)("div", { className: f.headerDivider }),
         ],
     });
 }
@@ -155,7 +155,7 @@ function _() {
     return 0 === (0, a.Wu)([c.Z], () => c.Z.getInvites()).length
         ? null
         : (0, r.jsx)(s.M0o, {
-              tooltip: f.intl.string(f.t["Zy3MR/"]),
+              tooltip: h.intl.string(h.t["Zy3MR/"]),
               color: s.YX$.SECONDARY,
               icon: (0, r.jsx)(s.XHJ, { size: "xs" }),
               onClick: b,

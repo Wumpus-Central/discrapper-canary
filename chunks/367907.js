@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => F,
     AB: () => G,
-    JS: () => k,
+    JS: () => j,
     ZP: () => Y,
     hH: () => M,
     kO: () => V,
@@ -51,7 +51,7 @@ function w(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,7 +67,7 @@ function x(e) {
     }
     return e;
 }
-function L(e) {
+function x(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
@@ -95,16 +95,16 @@ function M(e) {
         guild_member_perms: String(null != (t = g.Z.getGuildPermissions(n)) ? t : N.Hn),
         guild_is_vip: n.features.has(P.GuildFeatures.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: L(u),
+        num_voice_channels_active: x(u),
     };
 }
-function j(e, t) {
+function k(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1,
     };
 }
-function k(e) {
+function j(e) {
     if (null == e) return null;
     let t = u.Z.getChannel(e);
     return null == t ? null : U(t);
@@ -136,7 +136,7 @@ function G(e) {
     if (null == t) return null;
     let n = m.Z.isVideoEnabled(),
         r = b.Z.getMediaSessionId();
-    return x(
+    return L(
         {
             channel_id: t.id,
             channel_type: t.type,
@@ -167,7 +167,7 @@ function Z(e) {
         i = "guild_id" in t ? t.guild_id : r ? v.Z.getGuildId() : null,
         a = "channel_id" in t ? t.channel_id : r ? O.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
-        s = x({}, t, M(B(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : U(o));
+        s = L({}, t, M(B(o, i)), null != i && null != a && (0, D.AB)(a) ? k(i, a) : U(o));
     A.default.track(e, s, { flush: n });
 }
 function F(e) {

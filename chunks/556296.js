@@ -93,17 +93,17 @@ let D = new f.Z("KeybindsStore"),
         managed: !0,
         params: {},
     };
-function x() {
+function L() {
     var e;
     let t = null != (e = (0, b.pz)(!1).get("Backquote")) ? e : "`";
     return "+" === t ? (t = "plus") : 0 === t.length && (t = "`"), "shift+".concat(t);
 }
-let L = "1001",
+let x = "1001",
     M = 10,
     k = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return {
-            id: L,
+            id: x,
             action: v.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
             shortcut: e,
             enabled: t,
@@ -153,7 +153,7 @@ function G(e) {
             [...n, [S.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
 }
 let B = () => {
-        let e = x();
+        let e = L();
         "shift" === e && (U("Default overlay keybind is only shift", e, null), (e = "shift+`"));
         let t = G(e);
         if (null == t) return k([], !1);
@@ -481,7 +481,7 @@ let eg = [
         );
     },
     function () {
-        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, x());
+        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, L());
     },
     function () {
         return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");

@@ -26,8 +26,8 @@ var a = n(54381),
     T = n(338949),
     N = n(556809),
     P = n(886118),
-    w = n(301801),
-    I = n(352527),
+    I = n(301801),
+    w = n(352527),
     k = n(355863),
     R = n(449224),
     A = n(556296),
@@ -46,8 +46,8 @@ var a = n(54381),
     K = n(981631),
     q = n(757744),
     Y = n(388032),
-    J = n(454741),
-    X = n(451429);
+    J = n(312079),
+    X = n(866403);
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -644,7 +644,7 @@ let ec = l.memo(function (e) {
         let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
             l = (0, B.getPID)(),
             r = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(l), [l]),
-            [i, s] = (0, d.Wu)([I.Z], () => [I.Z.enabled, I.Z.keepOpen]),
+            [i, s] = (0, d.Wu)([w.Z], () => [w.Z.enabled, w.Z.keepOpen]),
             o = (0, d.e7)([Z.default], () => Z.default.getFocusedPID()),
             c = (0, d.e7)([Z.default], () => Z.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
@@ -1265,13 +1265,13 @@ function eO() {
             [y, h, u, o, C],
         ),
         [N, P] = l.useState(O),
-        [I, k] = l.useState(null),
-        R = l.useMemo(() => y.find((e) => e.key === I), [y, I]),
+        [w, k] = l.useState(null),
+        R = l.useMemo(() => y.find((e) => e.key === w), [y, w]),
         A = l.useCallback((e) => {
             P(e);
         }, []),
         { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
-    (0, w.BO)(S, O, A, eE, [y]);
+    (0, I.BO)(S, O, A, eE, [y]);
     let L = l.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
@@ -1407,7 +1407,7 @@ function eO() {
                 children: (0, a.jsx)(H.Z, {
                     columns: ev,
                     data: N,
-                    selectedRowKey: null != I ? I : void 0,
+                    selectedRowKey: null != w ? w : void 0,
                     onClickRow: (e) => k(e.key),
                 }),
             }),
@@ -1495,7 +1495,7 @@ function eP() {
         }),
     });
 }
-let ew = (e) => {
+let eI = (e) => {
         switch (e) {
             case "Disabled":
                 return;
@@ -1505,7 +1505,7 @@ let ew = (e) => {
                 return !0;
         }
     },
-    eI = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
+    ew = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
     ek = l.memo(function () {
         let e = (0, C.xj)(),
             t = (0, d.e7)([A.ZP], () => A.ZP.getOverlayKeybind());
@@ -1535,7 +1535,7 @@ let ew = (e) => {
                     label: "Overlay User Status",
                     description: "Override whether the current user was a new or existing user",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === eI(e.overrideIsNewOverlayUser),
+                    isSelected: (t) => t === ew(e.overrideIsNewOverlayUser),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1551,7 +1551,7 @@ let ew = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.jt)(ew(e));
+                        (0, C.jt)(eI(e));
                     },
                     popoutLayerContext: G.O$,
                 }),
@@ -1559,7 +1559,7 @@ let ew = (e) => {
                     label: "Override Previous Keybind Status",
                     description: "Override whether the user's pre-experiment keybind was the default keybind",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === eI(e.overrideIsUsingDefaultOverlayKeybind),
+                    isSelected: (t) => t === ew(e.overrideIsUsingDefaultOverlayKeybind),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1575,7 +1575,7 @@ let ew = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.FM)(ew(e));
+                        (0, C.FM)(eI(e));
                     },
                     popoutLayerContext: G.O$,
                 }),

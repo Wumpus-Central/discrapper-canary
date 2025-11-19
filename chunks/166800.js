@@ -1,20 +1,20 @@
-a.d(e, { q: () => n });
-var r = a(226377),
-    _ = a(91647);
+_.d(e, { q: () => n });
+var a = _(226377),
+    r = _(91647);
 let n = {
-    increment: function (t, e = 1, a) {
-        r.q.increment(_.P, t, e, a);
+    increment: function (t, e = 1, _) {
+        a.q.increment(r.P, t, e, _);
     },
-    distribution: function (t, e, a) {
-        r.q.distribution(_.P, t, e, a);
+    distribution: function (t, e, _) {
+        a.q.distribution(r.P, t, e, _);
     },
-    set: function (t, e, a) {
-        r.q.set(_.P, t, e, a);
+    set: function (t, e, _) {
+        a.q.set(r.P, t, e, _);
     },
-    gauge: function (t, e, a) {
-        r.q.gauge(_.P, t, e, a);
+    gauge: function (t, e, _) {
+        a.q.gauge(r.P, t, e, _);
     },
-    timing: function (t, e, a = "second", n) {
-        return r.q.timing(_.P, t, e, a, n);
+    timing: function (t, e, _ = "second", n) {
+        return a.q.timing(r.P, t, e, _, n);
     },
 };

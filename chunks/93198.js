@@ -1,6 +1,6 @@
-a.d(e, { i: () => o });
-var r = a(573736),
-    _ = a(886115);
+_.d(e, { i: () => o });
+var a = _(573736),
+    r = _(886115);
 function n(t) {
     return {
         ...t,
@@ -9,18 +9,18 @@ function n(t) {
         unionErrors: "unionErrors" in t ? JSON.stringify(t.unionErrors) : void 0,
     };
 }
-let o = (0, a(151122)._I)((t = {}) => {
+let o = (0, _(151122)._I)((t = {}) => {
     let e = t.limit || 10;
     return {
         name: "ZodErrors",
-        processEvent(t, a) {
+        processEvent(t, _) {
             var o;
             return t.exception &&
                 t.exception.values &&
-                a &&
-                a.originalException &&
-                ((o = a.originalException), (0, r.VZ)(o) && "ZodError" === o.name && Array.isArray(o.errors)) &&
-                0 !== a.originalException.issues.length
+                _ &&
+                _.originalException &&
+                ((o = _.originalException), (0, a.VZ)(o) && "ZodError" === o.name && Array.isArray(o.errors)) &&
+                0 !== _.originalException.issues.length
                 ? {
                       ...t,
                       exception: {
@@ -30,17 +30,17 @@ let o = (0, a(151122)._I)((t = {}) => {
                                   ...t.exception.values[0],
                                   value: (function (t) {
                                       let e = new Set();
-                                      for (let a of t.issues) a.path && a.path[0] && e.add(a.path[0]);
-                                      let a = Array.from(e);
-                                      return `Failed to validate keys: ${(0, _.$G)(a.join(", "), 100)}`;
-                                  })(a.originalException),
+                                      for (let _ of t.issues) _.path && _.path[0] && e.add(_.path[0]);
+                                      let _ = Array.from(e);
+                                      return `Failed to validate keys: ${(0, r.$G)(_.join(", "), 100)}`;
+                                  })(_.originalException),
                               },
                               ...t.exception.values.slice(1),
                           ],
                       },
                       extra: {
                           ...t.extra,
-                          "zoderror.issues": a.originalException.errors.slice(0, e).map(n),
+                          "zoderror.issues": _.originalException.errors.slice(0, e).map(n),
                       },
                   }
                 : t;

@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(131085),
     b = n(526761),
     y = n(388032),
-    O = n(999087);
+    O = n(221627);
 let v = (0, l.hQ)(),
     I = i.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: l } = e,
@@ -107,13 +107,13 @@ let v = (0, l.hQ)(),
                 },
                 [R],
             ),
-            x = i.useCallback(
+            L = i.useCallback(
                 (e) => {
                     T(g.L.TAKE_ACTION), null == l || l(e);
                 },
                 [T, l],
             ),
-            L = i.useCallback((e) => e === C, [C]),
+            x = i.useCallback((e) => e === C, [C]),
             M = i.useCallback((e) => e, []),
             k = i.useCallback(() => {
                 T(g.L.TAKE_ACTION), null == l || l(null);
@@ -140,9 +140,9 @@ let v = (0, l.hQ)(),
                     (0, r.jsx)(s.PhF, {
                         className: O.select,
                         optionClassName: O.selectPopout,
-                        isSelected: L,
+                        isSelected: x,
                         options: N,
-                        select: x,
+                        select: L,
                         renderLeading: P,
                         renderTrailing: D,
                         renderOptionValue: w,

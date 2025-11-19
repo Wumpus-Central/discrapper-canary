@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(496675),
     c = n(981631),
     u = n(388032),
-    d = n(451964);
+    d = n(869306);
 function g(e) {
     let { guild: t, error: n, onClose: g } = e,
         m = t.id,

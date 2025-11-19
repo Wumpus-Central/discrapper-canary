@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(388685);
+n.d(t, { default: () => M }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(70097),
     b = n(507808),
     f = n(43747),
-    h = n(960919),
-    x = n(22095),
+    x = n(960919),
+    h = n(22095),
     C = n(509212),
     _ = n(113434),
     j = n(497505),
@@ -23,12 +23,12 @@ var a = n(54381),
     N = n(981631),
     O = n(215023),
     T = n(388032),
-    w = n(561549),
+    w = n(651353),
     P = n(582425),
     S = n(345554),
     L = n(88490),
-    E = n(466674),
-    R = n(201284);
+    A = n(466674),
+    E = n(201284);
 function Z(e) {
     let { onVideoLoaded: t } = e;
     return (0, a.jsx)(p.Z, {
@@ -39,19 +39,19 @@ function Z(e) {
         loop: !0,
         onCanPlayThrough: t,
         children: (0, a.jsx)("source", {
-            src: R.Z,
+            src: E.Z,
             type: "video/webm",
         }),
     });
 }
-function A(e) {
+function R(e) {
     let { onVideoLoaded: t, isLoading: n } = e,
         i = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [u, m] = r.useState(!i),
         b = (0, c.ZP)(),
         f = (0, l.apv)(b),
-        h = f ? S.Z : P.Z,
-        x = f ? E.Z : L.Z,
+        x = f ? S.Z : P.Z,
+        h = f ? A.Z : L.Z,
         C = r.useRef(null),
         _ = r.useRef(null),
         [j, g] = r.useState(!1),
@@ -87,7 +87,7 @@ function A(e) {
                 controls: !1,
                 onCanPlayThrough: r.useCallback(() => v(!0), []),
                 children: (0, a.jsx)("source", {
-                    src: x,
+                    src: h,
                     type: "video/webm",
                 }),
             }),
@@ -101,7 +101,7 @@ function A(e) {
                 onCanPlayThrough: r.useCallback(() => g(!0), []),
                 onEnded: T,
                 children: (0, a.jsx)("source", {
-                    src: h,
+                    src: x,
                     type: "video/webm",
                 }),
             }),
@@ -135,7 +135,7 @@ function D(e) {
     return (0, a.jsxs)("div", {
         className: w.contentContainer,
         children: [
-            (0, a.jsx)(A, {
+            (0, a.jsx)(R, {
                 isLoading: t,
                 onVideoLoaded: s,
             }),
@@ -145,7 +145,7 @@ function D(e) {
                     (0, a.jsxs)("div", {
                         className: w.heading,
                         children: [
-                            (0, a.jsx)(h.M, {
+                            (0, a.jsx)(x.M, {
                                 shouldUseThemeColor: !0,
                                 className: w.orbsIcon,
                             }),
@@ -188,27 +188,27 @@ function D(e) {
         ],
     });
 }
-function k(e) {
+function M(e) {
     var t, n;
     let { initialQuest: i, onClose: s, transitionState: o, sourceQuestContent: l, location: c } = e,
         d = null != (n = (0, _.B4)(i.id)) ? n : i,
         u = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
         { balance: m, error: p } = (0, f.A)(),
         b = (0, C.LM)(d.config),
-        [h, N] = r.useState(u ? "success" : "loading"),
+        [x, N] = r.useState(u ? "success" : "loading"),
         [O, w] = r.useState(!1),
         P = r.useCallback(() => {
             w(!0);
         }, []);
     r.useEffect(() => {
         u ||
-            "loading" !== h ||
-            (0, x.QB)(d.id, j.y$.CROSS_PLATFORM, c)
+            "loading" !== x ||
+            (0, h.QB)(d.id, j.y$.CROSS_PLATFORM, c)
                 .then(() => N("success"))
                 .catch(() => N("error"));
-    }, [d.id, u, h, c]);
-    let S = !O || "loading" === h || (null == m && null == p),
-        L = "error" === h || null == b || (null == m && null != p);
+    }, [d.id, u, x, c]);
+    let S = !O || "loading" === x || (null == m && null == p),
+        L = "error" === x || null == b || (null == m && null != p);
     return (0, a.jsx)(g.Z, {
         onClose: s,
         transitionState: o,

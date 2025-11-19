@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(453032),
     h = n(493075),
     m = n(987338),
-    g = n(941189);
+    g = n(587748);
 function E(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
@@ -60,16 +60,16 @@ function b(e) {
         w = () => {
             null != R && (D ? (0, d.rX)(I.system, n, null) : (0, d.rX)(I.system, n, R.value));
         },
-        x = (0, r.jsx)(E, { url: t }),
-        L = null;
+        L = (0, r.jsx)(E, { url: t }),
+        x = null;
     return (P === m.su.EXPERIMENT_TREATMENT && null != R
-        ? (L = (0, r.jsx)(o.Text, {
+        ? (x = (0, r.jsx)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: R.label,
           }))
         : null != A &&
-          (L = (0, r.jsxs)(o.Text, {
+          (x = (0, r.jsxs)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", C],
@@ -98,12 +98,12 @@ function b(e) {
                                                       variant: "text-md/semibold",
                                                       children: I.title,
                                                   }),
-                                                  L,
+                                                  x,
                                               ],
                                           }),
                                       ],
                                   }),
-                                  x,
+                                  L,
                               ],
                           }),
                       }),

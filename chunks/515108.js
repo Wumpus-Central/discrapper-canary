@@ -6,17 +6,17 @@ var r = n(54381),
     s = n(497505),
     l = n(602667),
     c = n(434717),
-    d = n(388032),
-    u = n(782034);
+    u = n(388032),
+    d = n(955082);
 function m(e) {
     let { onClose: t, transitionState: n } = e;
     return (0, r.jsx)(i.Modal, {
         size: "md",
-        title: d.intl.string(d.t.Hd3D8W),
+        title: u.intl.string(u.t.Hd3D8W),
         actions: [
             {
                 variant: "primary",
-                text: d.intl.string(d.t.cpT0Cq),
+                text: u.intl.string(u.t.cpT0Cq),
                 onClick: t,
             },
         ],
@@ -25,7 +25,7 @@ function m(e) {
         children: (0, r.jsx)(o.Text, {
             variant: "text-md/medium",
             color: "text-secondary",
-            children: d.intl.string(d.t.Ij97SL),
+            children: u.intl.string(u.t.Ij97SL),
         }),
     });
 }
@@ -34,7 +34,7 @@ function p(e) {
             quest: t,
             sourceQuestContent: n,
             transitionState: i,
-            onClose: d,
+            onClose: u,
             rewardContent: p,
             isRewardContentLoading: C,
             rewardContentHasError: f,
@@ -44,7 +44,7 @@ function p(e) {
         [x, y] = a.useState(!0);
     if (f)
         return (0, r.jsx)(m, {
-            onClose: d,
+            onClose: u,
             transitionState: i,
         });
     let g = C || x;
@@ -57,7 +57,7 @@ function p(e) {
                 children: [
                     g
                         ? (0, r.jsx)(o.$jN, {
-                              className: u.spinner,
+                              className: d.spinner,
                               type: o.$jN.Type.WANDERING_CUBES,
                           })
                         : null,
@@ -68,24 +68,24 @@ function p(e) {
                             "data-migration-pending": !0,
                             transitionState: g ? o.Dvm.HIDDEN : i,
                             size: o.CgR.DYNAMIC,
-                            className: u.modal,
+                            className: d.modal,
                             parentComponent: "QuestRewardV2ModalBase",
                             children: [
                                 (0, r.jsx)(o.olH, {
                                     "data-migration-pending": !0,
-                                    className: u.closeButton,
-                                    onClick: d,
+                                    className: d.closeButton,
+                                    onClick: u,
                                     withCircleBackground: !0,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: u.modalContent,
+                                    className: d.modalContent,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: u.leftPanel,
+                                            className: d.leftPanel,
                                             children: p,
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: u.rightPanel,
+                                            className: d.rightPanel,
                                             children: (0, r.jsx)(c.Z, {
                                                 quest: t,
                                                 sourceQuestContent: n,

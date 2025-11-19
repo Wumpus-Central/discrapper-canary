@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(780900),
     l = n(663507),
     c = n(793030),
-    u = n(121958);
+    u = n(808391);
 function d(e, t, n) {
     return (
         t in e
@@ -108,8 +108,8 @@ function g(e, t, n) {
                 removeEdgeItemGutters: P,
                 sectionGutter: D,
                 padding: w,
-                paddingVertical: x,
-                paddingHorizontal: L,
+                paddingVertical: L,
+                paddingHorizontal: x,
                 fade: M = !1,
                 className: k,
                 style: j,
@@ -173,8 +173,8 @@ function g(e, t, n) {
             removeEdgeItemGutters: P,
             sectionGutter: D,
             padding: w,
-            paddingVertical: x,
-            paddingHorizontal: L,
+            paddingVertical: L,
+            paddingHorizontal: x,
             getScrollerState: q,
             dir: b,
             maxBufferWidth: U,

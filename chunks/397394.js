@@ -36,7 +36,7 @@ var r = n(54381),
     S = n(787025),
     A = n(981631),
     C = n(388032),
-    N = n(295880);
+    N = n(563630);
 function R(e, t, n) {
     return (
         t in e
@@ -89,11 +89,11 @@ function w(e, t) {
         e
     );
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function x(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -142,7 +142,7 @@ function k(e) {
 }
 function j(e) {
     var { guild: t, application: n } = e,
-        a = x(e, ["guild", "application"]);
+        a = L(e, ["guild", "application"]);
     let { onClose: o } = a,
         s = i.useCallback(() => {
             (null == t ? void 0 : t.id) != null &&
@@ -218,7 +218,7 @@ function j(e) {
 }
 function U(e) {
     var { guild: t, application: n } = e,
-        a = x(e, ["guild", "application"]);
+        a = L(e, ["guild", "application"]);
     let o = C.intl.string(C.t.se5gLj);
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
@@ -253,7 +253,7 @@ function U(e) {
 }
 function G(e) {
     var { application: t } = e,
-        n = x(e, ["application"]);
+        n = L(e, ["application"]);
     let { onClose: a } = n;
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });

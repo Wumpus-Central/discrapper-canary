@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(867176),
     D = n(355497),
     w = n(25990),
-    x = n(594174),
-    L = n(572004),
+    L = n(594174),
+    x = n(572004),
     M = n(51144),
     k = n(998502),
     j = n(695346),
@@ -42,7 +42,7 @@ var r = n(54381),
     V = n(815660),
     H = n(801461),
     Y = n(388032),
-    W = n(378846);
+    W = n(538271);
 function K(e, t, n) {
     return (
         t in e
@@ -467,7 +467,7 @@ function ei(e) {
         }),
         a = j.Sb.useSetting(),
         o = i.useRef(null);
-    return a && L.wS
+    return a && x.wS
         ? (0, r.jsx)(f.yRy, {
               targetElementRef: o,
               renderPopout: (e) => {
@@ -546,8 +546,8 @@ function ea(e) {
 }
 function eo() {
     var e;
-    let t = (0, c.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+    let t = (0, c.e7)([L.default], () => {
+            let e = L.default.getCurrentUser();
             return l()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e;
         }),
         n = (0, C.ZP)(t.id),

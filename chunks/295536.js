@@ -8,7 +8,7 @@ var i = n(54381),
     c = n(314897),
     u = n(906605),
     d = n(748855),
-    p = n(972526);
+    p = n(175379);
 function h(e) {
     var t;
     let { guildId: n, onSetActivityStatus: h } = e,

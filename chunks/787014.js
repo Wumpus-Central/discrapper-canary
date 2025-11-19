@@ -118,7 +118,7 @@ async function h(e, t) {
             iconEmoji: D,
             themeColor: w,
         } = t,
-        x = s.Z.getChannel(e);
+        L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await o.Z.unarchiveThreadIfNecessary(e),
@@ -186,8 +186,8 @@ async function h(e, t) {
                         type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
                         channelId: e,
                     });
-                    let n = null == x ? void 0 : x.getGuildId();
-                    return null == n || (null == x ? void 0 : x.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
+                    let n = null == L ? void 0 : L.getGuildId();
+                    return null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({

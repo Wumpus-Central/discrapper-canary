@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(237872),
     d = n(945909),
     f = n(481060),
-    _ = n(420153);
+    _ = n(734520);
 function p(e, t, n) {
     return (
         t in e
@@ -146,18 +146,18 @@ function O(e) {
             "popoverRef",
             "onNudgeChange",
         ]);
-    let [x, L] = i.useState(null != I ? I : "top");
+    let [L, x] = i.useState(null != I ? I : "top");
     i.useEffect(() => {
-        null != I && L(I);
+        null != I && x(I);
     }, [I]);
     let M = i.useMemo(() => {
             var e;
             return {
-                position: (0, d.z)(x),
+                position: (0, d.z)(L),
                 align: null != (e = null == T ? void 0 : T.align) ? e : "center",
                 customOffset: null == T ? void 0 : T.customOffset,
             };
-        }, [x, T]),
+        }, [L, T]),
         k = i.useCallback(
             (e, t) => {
                 null == v || v(t);
@@ -171,13 +171,13 @@ function O(e) {
             [v],
         ),
         U = i.useCallback((e) => {
-            L(e);
+            x(e);
         }, []),
         G = C ? _.caretHoverable : void 0;
     return (0, r.jsx)(
         s.m,
         g(h({}, w), {
-            position: x,
+            position: L,
             onRequestClose: k,
             gradientColor: O,
             onPositionChange: U,

@@ -36,8 +36,8 @@ var r = n(54381),
     P = n(496675),
     D = n(594174),
     w = n(768581),
-    x = n(585483),
-    L = n(630388),
+    L = n(585483),
+    x = n(630388),
     M = n(74538),
     k = n(276554),
     j = n(739566),
@@ -49,7 +49,7 @@ var r = n(54381),
     V = n(935910),
     H = n(981631),
     Y = n(388032),
-    W = n(724913),
+    W = n(136907),
     K = n(121282);
 function z(e, t, n) {
     return (
@@ -364,7 +364,7 @@ function er(e) {
             showAvatarPopout: A,
         } = o,
         R = i.useRef(null),
-        [P, L] = i.useState(!1),
+        [P, x] = i.useState(!1),
         { analyticsLocations: M } = (0, f.ZP)(d.Z.AVATAR),
         k = (0, l.e7)([D.default], () => D.default.getCurrentUser()),
         j = (0, l.e7)([N.ZP], () => {
@@ -436,8 +436,8 @@ function er(e) {
         (i.useEffect(() => {
             if (null != E)
                 return (
-                    x.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(h.author.id), L),
-                    () => void x.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(h.author.id), L)
+                    L.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(h.author.id), x),
+                    () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(h.author.id), x)
                 );
         }, [h.author.id, E]),
         !g || j)
@@ -508,7 +508,7 @@ function ei(e) {
             messageClassname: m,
             badges: g,
         } = e,
-        E = (0, L.yE)(t.flags, H.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
+        E = (0, x.yE)(t.flags, H.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
         b = (0, _.q)(E);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -626,11 +626,11 @@ let es = i.memo(function (e) {
                     }),
                 [t, b, a],
             ),
-            x = (0, l.e7)([R.Z], () => eo(a, D, f, R.Z.getGuild(e.guildId)), [a, D, f, e.guildId]),
+            L = (0, l.e7)([R.Z], () => eo(a, D, f, R.Z.getGuild(e.guildId)), [a, D, f, e.guildId]),
             M = i.useMemo(() => {
                 let e = [];
                 return (
-                    (0, L.yE)(t.flags, H.iLy.SUPPRESS_NOTIFICATIONS) &&
+                    (0, x.yE)(t.flags, H.iLy.SUPPRESS_NOTIFICATIONS) &&
                         e.push((0, r.jsx)(v.Z, {}, "suppress-notifications")),
                     t.hasPotions() && e.push((0, r.jsx)(g.Z, { message: t })),
                     e
@@ -677,7 +677,7 @@ let es = i.memo(function (e) {
             }),
             usernameSpanId: (0, G.XX)(t, _),
             usernameClassName: o()(W.headerText, {
-                [W.hasRoleIcon]: 0 !== x,
+                [W.hasRoleIcon]: 0 !== L,
                 [W.hasBadges]: null != w || M.length > 0,
             }),
             compact: a,

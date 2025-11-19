@@ -16,8 +16,8 @@ function E(e) {
     let { floatRight: t } = e,
         { quest: n, sourceQuestContent: E, isPortrait: g } = o.useContext(m.VideoQuestModalContext),
         O = (0, s.aM)(),
-        { enabled: b, variant: h } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
-        S = h === d.m_.OVERLAY_SHARE_ON_VIDEO,
+        { enabled: h, variant: b } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
+        S = b === d.m_.OVERLAY_SHARE_ON_VIDEO,
         [C, y] = (0, p.G6)(v.intl.string(v.t.RDE0Sc), v.intl.string(v.t["+5kSoW"]), 1700),
         [_, x] = o.useState(!1),
         j = o.useRef(null),
@@ -30,14 +30,14 @@ function E(e) {
                     impressionId: O,
                     sourceQuestContent: E,
                 }),
-                (b || g) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["+5kSoW"]), i.ToastType.SUCCESS)),
+                (h || g) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["+5kSoW"]), i.ToastType.SUCCESS)),
                 y(),
                 x(!0),
                 null != j.current && clearTimeout(j.current),
                 (j.current = setTimeout(() => {
                     x(!1);
                 }, 1700)));
-        }, [O, D, n.id, E, y, b, g]);
+        }, [O, D, n.id, E, y, h, g]);
     return (o.useEffect(
         () => () => {
             null != j.current && clearTimeout(j.current);
@@ -45,7 +45,7 @@ function E(e) {
         [],
     ),
     D)
-        ? b || g
+        ? h || g
             ? (0, r.jsx)("div", {
                   style: { marginLeft: t ? "auto" : void 0 },
                   children: _
@@ -56,10 +56,10 @@ function E(e) {
                             "aria-label": v.intl.string(v.t.RDE0Sc),
                         })
                       : (0, r.jsx)(l.u, {
-                            text: S || !b ? void 0 : v.intl.string(v.t.WqhZss),
+                            text: S || !h ? void 0 : v.intl.string(v.t.WqhZss),
                             children: (0, r.jsx)(i.hU, {
                                 variant: S ? "overlay-secondary" : "secondary",
-                                icon: b ? i.aAc : i.TIy,
+                                icon: h ? i.aAc : i.TIy,
                                 "aria-label": v.intl.string(v.t.RDE0Sc),
                                 onClick: P,
                             }),

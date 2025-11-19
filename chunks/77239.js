@@ -36,11 +36,11 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         P = 0,
         D = 0,
         w = 0,
-        x = 0,
         L = 0,
+        x = 0,
         M = 0,
-        j = 0,
         k = 0,
+        j = 0,
         U = 0,
         G = null,
         B = 0,
@@ -50,11 +50,11 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         H = 0;
     for (R = 0; R <= i; R++) Z[R] = 0;
     for (P = 0; P < p; P++) Z[t[n + P]]++;
-    for (x = N, w = i; w >= 1 && 0 === Z[w]; w--);
-    if ((x > w && (x = w), 0 === w)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
+    for (L = N, w = i; w >= 1 && 0 === Z[w]; w--);
+    if ((L > w && (L = w), 0 === w)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
     for (D = 1; D < w && 0 === Z[D]; D++);
-    for (x < D && (x = D), j = 1, R = 1; R <= i; R++) if (((j <<= 1), (j -= Z[R]) < 0)) return -1;
-    if (j > 0 && (e === s || 1 !== w)) return -1;
+    for (L < D && (L = D), k = 1, R = 1; R <= i; R++) if (((k <<= 1), (k -= Z[R]) < 0)) return -1;
+    if (k > 0 && (e === s || 1 !== w)) return -1;
     for (R = 1, F[1] = 0; R < i; R++) F[R + 1] = F[R] + Z[R];
     for (P = 0; P < p; P++) 0 !== t[n + P] && (g[F[t[n + P]]++] = P);
     if (
@@ -67,18 +67,18 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         (P = 0),
         (R = D),
         (I = m),
-        (L = x),
+        (x = L),
         (M = 0),
         (O = -1),
-        (v = (k = 1 << x) - 1),
-        (e === l && k > a) || (e === c && k > o))
+        (v = (j = 1 << L) - 1),
+        (e === l && j > a) || (e === c && j > o))
     )
         return 1;
     for (;;) {
         (S = R - M),
             g[P] < T ? ((A = 0), (C = g[P])) : g[P] > T ? ((A = V[H + g[P]]), (C = G[B + g[P]])) : ((A = 96), (C = 0)),
             (b = 1 << (R - M)),
-            (D = y = 1 << L);
+            (D = y = 1 << x);
         do h[I + (U >> M) + (y -= b)] = (S << 24) | (A << 16) | C;
         while (0 !== y);
         for (b = 1 << (R - 1); U & b; ) b >>= 1;
@@ -86,12 +86,12 @@ e.exports = function (e, t, n, p, h, m, g, E) {
             if (R === w) break;
             R = t[n + g[P]];
         }
-        if (R > x && (U & v) !== O) {
-            for (0 === M && (M = x), I += D, j = 1 << (L = R - M); L + M < w && !((j -= Z[L + M]) <= 0); )
-                L++, (j <<= 1);
-            if (((k += 1 << L), (e === l && k > a) || (e === c && k > o))) return 1;
-            h[(O = U & v)] = (x << 24) | (L << 16) | (I - m);
+        if (R > L && (U & v) !== O) {
+            for (0 === M && (M = L), I += D, k = 1 << (x = R - M); x + M < w && !((k -= Z[x + M]) <= 0); )
+                x++, (k <<= 1);
+            if (((j += 1 << x), (e === l && j > a) || (e === c && j > o))) return 1;
+            h[(O = U & v)] = (L << 24) | (x << 16) | (I - m);
         }
     }
-    return 0 !== U && (h[I + U] = ((R - M) << 24) | 4194304), (E.bits = x), 0;
+    return 0 !== U && (h[I + U] = ((R - M) << 24) | 4194304), (E.bits = L), 0;
 };

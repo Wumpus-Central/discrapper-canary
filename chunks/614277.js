@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(563132),
     f = n(409813),
     _ = n(474936),
-    p = n(490684);
+    p = n(175556);
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -66,8 +66,8 @@ function E(e) {
         S(null);
     }, [O, S]),
         l()(null != w, "Unknown step for current payment flow.");
-    let x = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
-        L = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
+    let L = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
+        x = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
         M = null == w || null == (a = w.options) ? void 0 : a.sliderBodyClassName;
     switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
         case f.h8.ADD_PAYMENT_STEPS:
@@ -83,13 +83,13 @@ function E(e) {
         children: [
             null == (h = null == w || null == (s = w.options) ? void 0 : s.renderHeader) || h ? E : null,
             w.renderStep(y),
-            null == O || x
+            null == O || L
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(u.hzk, {
                               "data-migration-pending": !0,
-                              className: o()(L, p.body, C, {
+                              className: o()(x, p.body, C, {
                                   [p.reviewStep]: O === f.h8.REVIEW,
                                   [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && D,
                               }),

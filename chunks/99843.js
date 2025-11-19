@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(266076),
     d = n(769409),
     p = n(210975),
-    f = n(626135),
-    h = n(981631),
+    h = n(626135),
+    f = n(981631),
     g = n(388032),
-    m = n(782196);
+    m = n(782562);
 let b = (e) => {
         let { channel: t } = e;
         return (0, p.m$)({ channelId: t.id })
@@ -113,7 +113,7 @@ let b = (e) => {
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
-                            f.default.track(h.rMx.GDM_EDIT_INTERACTED, {
+                            h.default.track(f.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: t.id,
                                 action: "entry_point_hovered",
                                 location: s.Z.HEADER_BAR,

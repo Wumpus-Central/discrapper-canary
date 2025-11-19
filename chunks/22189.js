@@ -35,8 +35,8 @@ var r = n(54381),
     L = n(75077),
     x = n(474936),
     M = n(981631),
-    j = n(921944),
-    k = n(228168),
+    k = n(921944),
+    j = n(228168),
     U = n(526761),
     G = n(332325),
     B = n(388032),
@@ -157,18 +157,18 @@ let eb = () => {
                 scrollPosition: U.h1.CUSTOM_APP_ICONS,
             });
         },
-        ej = () => {
+        ek = () => {
             window.open(A.Z.getArticleURL(M.BhN.CLIPS), "_blank");
         },
-        ek = () => {
-            eC || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: j.L.TAKE_ACTION }), eR();
+        ej = () => {
+            eC || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), eR();
         },
         eU = () => {
             (0, E.openUserProfileModal)({
                 userId: eO.id,
                 sourceAnalyticsLocations: e,
                 hideRestrictedProfile: !0,
-                section: k.oh.WIDGETS,
+                section: j.oh.WIDGETS,
             });
         },
         eG = i.useCallback(() => {
@@ -202,7 +202,7 @@ let eb = () => {
                       description: B.intl.string(B.t.Z6v86b),
                       descriptionCta: eT ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.hvVgAZ),
                       pillText: B.intl.string(B.t.EYxi0o),
-                      onCtaClick: eT ? ex : ej,
+                      onCtaClick: eT ? ex : ek,
                       perkImage: X,
                   }
                 : {
@@ -443,7 +443,7 @@ let eb = () => {
                 description: B.intl.format(B.t.Pd7olh, { learnMoreLink: A.Z.getArticleURL(M.BhN.PERMADECOS) }),
                 descriptionCta: ev ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.JST6jl),
                 isPremiumGetCta: !ev,
-                onCtaClick: ev ? ek : void 0,
+                onCtaClick: ev ? ej : void 0,
                 pillText: eC || !ev ? void 0 : B.intl.string(B.t.y2b7CA).toLocaleUpperCase(),
                 perkImage: eg.Z,
             },

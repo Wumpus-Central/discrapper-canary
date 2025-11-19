@@ -16,7 +16,7 @@ var r = n(54381),
     b = n(24318),
     x = n(822693),
     j = n(388032),
-    _ = n(356086);
+    _ = n(189501);
 function v(e) {
     let { guildId: t } = e,
         { guildProfile: c, fetchGuildProfile: m, fetchStatus: v } = (0, g.u)(t),

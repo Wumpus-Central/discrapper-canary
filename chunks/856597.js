@@ -7,9 +7,9 @@ var l = n(481060),
     s = n(118589),
     o = n(210825),
     c = n(345262),
-    d = n(641689),
+    d = n(240581),
     u = n(388032),
-    m = n(133023);
+    m = n(567666);
 let p = {
         [s.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiR),
         [s.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ3),

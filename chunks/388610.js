@@ -72,7 +72,7 @@ let C = v.QZA.CLOSED,
     P = !1,
     D = !1,
     w = null,
-    x = [
+    L = [
         "name",
         "type",
         "topic_",
@@ -96,7 +96,7 @@ let C = v.QZA.CLOSED,
         "iconEmoji",
         "themeColor",
     ];
-function L(e) {
+function x(e) {
     if (null == a || a.id !== e) return !1;
     if (a === o) {
         let t = O.Z.getChannel(e);
@@ -113,7 +113,7 @@ function L(e) {
 }
 function M(e) {
     let t = O.Z.getChannel(e.channelId);
-    if (null == t) return k();
+    if (null == t) return j();
     (C = v.QZA.OPEN),
         (o = a = t),
         (w = "location" in e && null != e.location ? e.location : null),
@@ -124,7 +124,7 @@ function M(e) {
     let n = o.isModeratorReportChannel() ? v.CoT.PERMISSIONS : v.CoT.OVERVIEW;
     return (
         (N = {}),
-        j({
+        k({
             type: "CHANNEL_SETTINGS_SET_SECTION",
             section: null != r ? r : n,
             subsection: i,
@@ -132,7 +132,7 @@ function M(e) {
         !0
     );
 }
-function j(e) {
+function k(e) {
     (r = e.section),
         (i = e.subsection),
         null != o &&
@@ -155,7 +155,7 @@ function j(e) {
                     () => (P = !1),
                 ));
 }
-function k() {
+function j() {
     (D = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function U() {
@@ -176,7 +176,7 @@ let Z = d().debounce(() => {
     if (null == o || null == a) return !1;
     let e = o.toJS(),
         t = a.toJS();
-    x.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
+    L.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
 }, 500);
 function F(e) {
     let {
@@ -258,7 +258,7 @@ function W(e) {
     R = A(T({}, R), { [e.invite.code]: V(e.invite) });
 }
 function K(e) {
-    return !!L(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
+    return !!x(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
 }
 function z(e) {
     let { channels: t } = e;
@@ -333,12 +333,12 @@ let $ = new J(m.Z, {
         CHANNEL_SETTINGS_SUBMIT: U,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: G,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: B,
-        CHANNEL_SETTINGS_CLOSE: k,
+        CHANNEL_SETTINGS_CLOSE: j,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: Q,
         CHANNEL_SETTINGS_UPDATE: F,
-        CHANNEL_SETTINGS_SET_SECTION: j,
+        CHANNEL_SETTINGS_SET_SECTION: k,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,
         CHANNEL_DELETE: X,

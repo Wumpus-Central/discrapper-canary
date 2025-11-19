@@ -146,7 +146,7 @@ function w(e) {
                 gameActivityHangStatus: o,
             });
 }
-function x(e) {
+function L(e) {
     let { saveAsDefault: t } = e;
     (r = null),
         (i = null),
@@ -159,7 +159,7 @@ function x(e) {
             }),
         (a = null);
 }
-function L(e) {
+function x(e) {
     let { status: t, emoji: n } = e,
         r = !1,
         i = [...C.favoritedStatuses],
@@ -189,7 +189,7 @@ function M() {
     }
     return !1;
 }
-function j(e) {
+function k(e) {
     let { statuses: t } = e,
         n = [...C.recentStatuses],
         s = [...C.favoritedStatuses];
@@ -206,7 +206,7 @@ function j(e) {
         (C.recentStatuses = n),
         (C.favoritedStatuses = s);
 }
-class k extends (s = p.ZP.PersistedStore) {
+class j extends (s = p.ZP.PersistedStore) {
     initialize(e) {
         (C = v({}, N(), null != e ? e : {})), this.waitFor(m.ZP), this.syncWith([m.ZP], M);
     }
@@ -242,9 +242,9 @@ class k extends (s = p.ZP.PersistedStore) {
         );
     }
 }
-O(k, "displayName", "HangStatusStore"),
-    O(k, "persistKey", "HangStatusStore"),
-    O(k, "migrations", [
+O(j, "displayName", "HangStatusStore"),
+    O(j, "persistKey", "HangStatusStore"),
+    O(j, "migrations", [
         (e) => {
             if (null != e.currentDefaultStatus && null == e.currentDefaultStatus.gameActivityHangStatus) {
                 let t = T(v({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
@@ -260,13 +260,13 @@ O(k, "displayName", "HangStatusStore"),
             e
         ),
     ]);
-let U = new k(h.Z, {
+let U = new j(h.Z, {
     LOGOUT: R,
     UPDATE_HANG_STATUS: P,
     UPDATE_HANG_STATUS_CUSTOM: D,
     UPDATE_HANG_STATUS_GAME_ACTIVITY: w,
-    DELETE_INVALID_HANG_STATUSES: j,
-    CLEAR_HANG_STATUS: x,
-    UPDATE_FAVORITE_HANG_STATUS: L,
+    DELETE_INVALID_HANG_STATUSES: k,
+    CLEAR_HANG_STATUS: L,
+    UPDATE_FAVORITE_HANG_STATUS: x,
     RESET_HANG_STATUS_STATE: R,
 });

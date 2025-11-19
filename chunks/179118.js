@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(987209),
     D = n(981631),
     w = n(474936),
-    x = n(388032),
-    L = n(769212);
+    L = n(388032),
+    x = n(507231);
 let M = 1500;
 function k(e) {
     let {
@@ -58,7 +58,7 @@ function k(e) {
         Y = () => {
             let e;
             return null != g
-                ? x.intl.string(x.t.qB8aya)
+                ? L.intl.string(L.t.qB8aya)
                 : null == s
                   ? null
                   : ((e =
@@ -66,24 +66,24 @@ function k(e) {
                             ? k
                                 ? V
                                     ? Z.monthGiftText
-                                    : x.t["4ZJ+7Z"]
-                                : x.t["P+z55d"]
+                                    : L.t["4ZJ+7Z"]
+                                : L.t["P+z55d"]
                             : k
                               ? V
                                   ? Z.yearGiftText
-                                  : x.t.p0pZXP
-                              : x.t.bXqk3o),
-                    x.intl.format(e, {
+                                  : L.t.p0pZXP
+                              : L.t.bXqk3o),
+                    L.intl.format(e, {
                         skuName: (0, N.aq)(s.id),
                         intervalCount: s.intervalCount,
                     }));
         },
         W = () =>
             null != p || (_ && null == g)
-                ? x.intl.string(x.t.zOmK9N)
+                ? L.intl.string(L.t.zOmK9N)
                 : null != g
-                  ? x.intl.string(x.t.d1lrmU)
-                  : x.intl.string(x.t["/s1xR7"]),
+                  ? L.intl.string(L.t.d1lrmU)
+                  : L.intl.string(L.t["/s1xR7"]),
         K = (e, t) => {
             null != a &&
                 (0, C.dM)(
@@ -107,35 +107,35 @@ function k(e) {
             if (null == t) return null;
             switch (O) {
                 case f.kO8.Modes.SUCCESS:
-                    e = x.intl.string(x.t.XVvPjU);
+                    e = L.intl.string(L.t.XVvPjU);
                     break;
                 case f.kO8.Modes.ERROR:
-                    e = x.intl.string(x.t.i4GM3L);
+                    e = L.intl.string(L.t.i4GM3L);
                     break;
                 default:
-                    e = x.intl.string(x.t.OpuAlK);
+                    e = L.intl.string(L.t.OpuAlK);
             }
             return (0, r.jsxs)("div", {
-                className: L.giftCodeSection,
+                className: x.giftCodeSection,
                 children: [
                     null != t &&
                         (0, r.jsx)(f.gNt, {
-                            label: x.intl.string(x.t["/dG4NA"]),
+                            label: L.intl.string(L.t["/dG4NA"]),
                             children: (0, r.jsx)(f.kO8, {
-                                hideMessage: S ? x.intl.string(x.t["0RLn47"]) : null,
+                                hideMessage: S ? L.intl.string(L.t["0RLn47"]) : null,
                                 value: (0, C.Nz)(t),
                                 mode: O,
                                 text: e,
                                 onCopy: (e) => K(e, t),
                                 supportsCopy: A.wS,
-                                className: L.__invalid_copyInput,
+                                className: x.__invalid_copyInput,
                                 buttonColor: d.Tt.LINK,
                                 buttonLook: d.iL.LINK,
                             }),
                         }),
                     (0, r.jsx)("div", {
-                        className: L.subtext,
-                        children: x.intl.string(x.t.QWKUpn),
+                        className: x.subtext,
+                        children: L.intl.string(L.t.QWKUpn),
                     }),
                 ],
             });
@@ -144,7 +144,7 @@ function k(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: L.blurb,
+                        className: x.blurb,
                         children: Y(),
                     }),
                     null == g &&
@@ -152,7 +152,7 @@ function k(e) {
                             giftCode: t,
                             onClose: u,
                         }),
-                    (0, r.jsx)("div", { className: L.divider }),
+                    (0, r.jsx)("div", { className: x.divider }),
                     z(),
                 ],
             }),
@@ -160,21 +160,21 @@ function k(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: L.giftRecipientContainer,
+                        className: x.giftRecipientContainer,
                         children: [
                             (0, r.jsx)(h.Z, {
                                 user: p,
                                 size: f.EFr.SIZE_40,
                             }),
                             (0, r.jsxs)("div", {
-                                className: L.giftRecipientTextContainer,
+                                className: x.giftRecipientTextContainer,
                                 children: [
                                     (0, r.jsx)(f.Heading, {
                                         variant: "heading-md/semibold",
                                         children: R.ZP.getName(p),
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: L.giftRecipientTag,
+                                        className: x.giftRecipientTag,
                                         children: [" ", R.ZP.getUserTag(p)],
                                     }),
                                 ],
@@ -182,19 +182,19 @@ function k(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: L.giftSentMessage,
+                        className: x.giftSentMessage,
                         children: Y(),
                     }),
                 ],
             });
     return y
         ? (0, r.jsxs)("div", {
-              className: L.confirmation,
+              className: x.confirmation,
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
                             game: n,
-                            className: L.__invalid_icon,
+                            className: x.__invalid_icon,
                             size: m.A.LARGE,
                             skuId: H(),
                         })
@@ -203,12 +203,12 @@ function k(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(L.confirmation, { [L.seasonalConfirmationPadding]: V }),
+              className: o()(x.confirmation, { [x.seasonalConfirmationPadding]: V }),
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
                             game: n,
-                            className: L.__invalid_icon,
+                            className: x.__invalid_icon,
                             size: m.A.LARGE,
                             skuId: H(),
                         })
@@ -216,8 +216,8 @@ function k(e) {
                   (0, r.jsx)(f.Heading, {
                       variant: "heading-lg/semibold",
                       className: o()({
-                          [L.header]: null == l && !U,
-                          [L.headerCustomGifting]: null != l && !U,
+                          [x.header]: null == l && !U,
+                          [x.headerCustomGifting]: null != l && !U,
                       }),
                       children: W(),
                   }),
@@ -245,16 +245,16 @@ let j = (e) => {
     if (null == P || 0 === P.length) return null;
     let D = l().sortBy(P, (e) => N.indexOf(e.id));
     return (0, r.jsxs)("div", {
-        className: L.giftRecipientSection,
+        className: x.giftRecipientSection,
         children: [
             (0, r.jsxs)("div", {
-                className: L.giftRecipient,
+                className: x.giftRecipient,
                 children: [
                     (0, r.jsx)(f.VcW, {
-                        label: x.intl.string(x.t.MJw05f),
-                        placeholder: x.intl.string(x.t.J019jZ),
-                        wrapperClassName: L.giftRecipientInputWrapper,
-                        className: s ? L.giftRecipientInputError : void 0,
+                        label: L.intl.string(L.t.MJw05f),
+                        placeholder: L.intl.string(L.t.J019jZ),
+                        wrapperClassName: x.giftRecipientInputWrapper,
+                        className: s ? x.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
@@ -273,7 +273,7 @@ let j = (e) => {
                         })),
                     }),
                     (0, r.jsx)("div", {
-                        className: L.giftRecipientButton,
+                        className: x.giftRecipientButton,
                         children: (0, r.jsx)(u.zxk, {
                             disabled: null == a,
                             loading: m,
@@ -287,14 +287,14 @@ let j = (e) => {
                                             d(!0), E(!1);
                                         });
                             },
-                            text: x.intl.string(x.t["+EgwQn"]),
+                            text: L.intl.string(L.t["+EgwQn"]),
                         }),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s ? L.subtextError : L.subtext,
-                children: s ? x.intl.string(x.t.jo5Vbl) : x.intl.string(x.t["8/N3v3"]),
+                className: s ? x.subtextError : x.subtext,
+                children: s ? L.intl.string(L.t.jo5Vbl) : L.intl.string(L.t["8/N3v3"]),
             }),
         ],
     });

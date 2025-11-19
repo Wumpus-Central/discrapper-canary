@@ -41,7 +41,7 @@ let S = {},
     P = {},
     D = v.hVg.THEATRE,
     w = {};
-function x(e, t, n, i) {
+function L(e, t, n, i) {
     return (
         o()(null != r, "Creating RTCConnection without session."),
         new _.Z({
@@ -56,18 +56,18 @@ function x(e, t, n, i) {
         })
     );
 }
-function L() {
+function x() {
     l().forEach(w, (e, t) => {
         e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete w[t], delete P[t];
     });
 }
 function M(e) {
-    (r = e.sessionId), L();
+    (r = e.sessionId), x();
 }
-function j() {
-    (r = null), L();
+function k() {
+    (r = null), x();
 }
-function k(e) {
+function j(e) {
     let {
             streamType: t,
             guildId: n,
@@ -143,7 +143,7 @@ function G(e) {
             goLiveModalDurationMs: R[t],
             analyticsLocations: null == (c = S[t]) ? void 0 : c.analyticsLocations,
         });
-        (o = x(t, n, r, e)), (w[t] = o);
+        (o = L(t, n, r, e)), (w[t] = o);
     }
     delete P[t],
         d.Z.dispatch({
@@ -317,14 +317,14 @@ let $ = new J(
         ? {}
         : {
               CONNECTION_OPEN: M,
-              CONNECTION_CLOSED: j,
+              CONNECTION_CLOSED: k,
               RTC_CONNECTION_STATE: Y,
               RTC_CONNECTION_PING: Y,
               RTC_CONNECTION_LOSS_RATE: Y,
               RTC_CONNECTION_UPDATE_ID: K,
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: Y,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: W,
-              STREAM_START: k,
+              STREAM_START: j,
               STREAM_STOP: U,
               STREAM_CREATE: G,
               STREAM_SERVER_UPDATE: B,

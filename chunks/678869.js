@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(804061), n(704826), n(35282), n(539854);
+n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(423875),
@@ -25,8 +25,8 @@ var r = n(54381),
     A = n(981631),
     C = n(616922),
     N = n(388032),
-    R = n(119835),
-    P = n(951948);
+    R = n(694505),
+    P = n(826565);
 function D(e, t) {
     return N.intl.formatToPlainString(N.t.h2yWWX, {
         username: t.username,
@@ -45,7 +45,7 @@ let w = (e, t, n) => {
         })
         .replaceAll("*", "");
 };
-function x(e) {
+function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
         { now: a } = (0, T.tS)(),
@@ -84,14 +84,14 @@ function x(e) {
               ],
           });
 }
-function L(e) {
+function x(e) {
     var t;
     let n,
         m,
         T,
-        { channel: R, entry: L, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
-        { largeImage: U } = (0, g.rv)({ entry: L }),
-        { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(L),
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
+        { largeImage: U } = (0, g.rv)({ entry: x }),
+        { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
         K = (0, o.e7)(
@@ -107,7 +107,7 @@ function L(e) {
             var e;
             if (null == R || null == V) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
-                n = (0, E.T_)(null != t ? { start: t } : L, Date.now());
+                n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
                 user: V,
                 channel: R,
@@ -124,7 +124,7 @@ function L(e) {
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n }),
             });
-        }, [G, Z, R, L, null == U ? void 0 : U.src, H, Y, F, V]);
+        }, [G, Z, R, x, null == U ? void 0 : U.src, H, Y, F, V]);
     if (null == G || null == B) return null;
     let q = Z,
         X = [];
@@ -173,7 +173,7 @@ function L(e) {
     let Q = (0, r.jsx)(I.wG, {
         onClickThumbnail: T,
         channel: R,
-        entry: L,
+        entry: x,
         headerIcons:
             B.media.provider === a.p.SPOTIFY
                 ? (0, r.jsx)(S.Z, {
@@ -182,12 +182,12 @@ function L(e) {
                       Icon: h.Z,
                   })
                 : null,
-        userDescription: (0, E.kr)(L) ? N.t.Tzx5D2 : N.t.CcVI1T,
+        userDescription: (0, E.kr)(x) ? N.t.Tzx5D2 : N.t.CcVI1T,
         title: F,
         onClickTitle: m,
         subtitle: q,
         badges: null,
-        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(x, { activity: G }),
+        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G }),
     });
     return (0, r.jsxs)(I.yR, {
         children: [
@@ -200,7 +200,7 @@ function L(e) {
                     channel: R,
                     generateReactionImage: z,
                     reactionImageAltText: D(Z, V),
-                    entry: L,
+                    entry: x,
                     buttons: X,
                 }),
             }),

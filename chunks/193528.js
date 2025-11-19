@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(654904),
     p = n(981631),
     h = n(388032),
-    m = n(707892);
+    m = n(472564);
 function g(e, t, n) {
     return (
         t in e
@@ -105,13 +105,13 @@ function I(e) {
         P = (0, l.Rf)(a),
         D = P === C ? N : P,
         w = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        x = (0, d.Z)(I),
-        L = (0, d.Z)(T),
+        L = (0, d.Z)(I),
+        x = (0, d.Z)(T),
         [M, k] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (x !== I || L !== T) && k((0, s.Z)());
-        }, [T, I, L, x]),
+            (L !== I || x !== T) && k((0, s.Z)());
+        }, [T, I, x, L]),
         (0, r.jsx)(u.yRy, {
             targetElementRef: A,
             positionKey: M,

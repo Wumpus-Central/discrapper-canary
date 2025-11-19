@@ -11,7 +11,7 @@ n.d(t, {
     ap: () => C,
     bT: () => N,
     dw: () => S,
-    ig: () => x,
+    ig: () => L,
     kr: () => E,
     n2: () => y,
     q_: () => D,
@@ -199,7 +199,7 @@ function w(e) {
               tooltipText: u.intl.formatToPlainString(u.t.S5F485, { hours: n }),
           };
 }
-function x(e) {
+function L(e) {
     var t;
     return null == (t = g(e, o.N.TRENDING_CONTENT)) ? void 0 : t.trending;
 }

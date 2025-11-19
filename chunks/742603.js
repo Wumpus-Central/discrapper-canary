@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -35,8 +35,8 @@ var r = n(120356),
     R = n(981631),
     L = n(231338),
     k = n(388032),
-    D = n(39219),
-    U = n(430864);
+    D = n(16517),
+    U = n(602009);
 function B(e) {
     let { focusedParticipant: t, channel: n } = e,
         r = (0, x.bp)(),
@@ -73,7 +73,7 @@ function H(e) {
               ],
           });
 }
-function F(e) {
+function V(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -132,7 +132,7 @@ function F(e) {
         children: t,
     });
 }
-function V(e) {
+function F(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -267,7 +267,7 @@ function V(e) {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(F, {
+                            (0, i.jsx)(V, {
                                 focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,

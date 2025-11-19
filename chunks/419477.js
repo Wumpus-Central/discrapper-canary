@@ -1,4 +1,4 @@
-n.d(e, { z: () => d });
+n.d(e, { z: () => T });
 var i = n(657707),
     l = n(725727),
     u = n(509613),
@@ -15,7 +15,7 @@ let E = (0, u.x1)(s.n.GIFT_PANE, {
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
         buildLayout: () => [E],
     }),
-    d = (0, u.m7)(s.n.GIFT_SIDEBAR_ITEM, {
+    T = (0, u.m7)(s.n.GIFT_SIDEBAR_ITEM, {
         icon: i.OgN,
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
         getLegacySearchKey: () => o.s6.GIFT_INVENTORY,

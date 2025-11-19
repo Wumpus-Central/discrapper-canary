@@ -13,7 +13,7 @@ var l = n(54381),
     h = n(956748),
     g = n(566697),
     x = n(388032),
-    v = n(763740);
+    v = n(118494);
 let _ = (e) => {
     var t, n;
     let { user: r, guildId: _, nameplate: j } = e,

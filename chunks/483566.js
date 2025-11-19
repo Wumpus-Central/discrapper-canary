@@ -14,7 +14,7 @@ var r = n(54381),
     c = n(22202),
     u = n(777207),
     d = n(590154),
-    f = n(877222);
+    f = n(545150);
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -134,8 +134,8 @@ function g(e) {
             ref: A,
         } = e,
         C = h(e),
-        { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: x } = C,
-        L = null == y ? void 0 : y.horizontalControlColumnWidth,
+        { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: L } = C,
+        x = null == y ? void 0 : y.horizontalControlColumnWidth,
         M = "group" === g || "radiogroup" === g,
         k = M ? "span" : "label",
         j = M ? "fieldset" : "div",
@@ -198,7 +198,7 @@ function g(e) {
             ref: A,
             className: f.container,
             "data-layout": b,
-            style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
+            style: null != x ? { "--custom-field-horizontal-control-width": x } : void 0,
             "data-disabled": a,
             "aria-describedby": M ? D : void 0,
             disabled: M ? a : void 0,
@@ -215,7 +215,7 @@ function g(e) {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: x,
+                                      id: L,
                                       children: l,
                                   }),
                               "under-label" === T ? F : null,

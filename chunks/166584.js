@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854), n(642613);
+n.d(t, { Z: () => k }), n(388685), n(539854), n(642613);
 var r = n(54381),
     i = n(473749),
     a = n(772848),
@@ -119,7 +119,7 @@ function M(e) {
             null != t ? (S.current[e] = t) : delete S.current[e];
         },
         [P, M] = i.useState(f),
-        [j, k] = i.useState(w),
+        [k, j] = i.useState(w),
         [U, G] = i.useState(!1),
         B = i.useRef(null),
         Z = i.useRef(null),
@@ -147,7 +147,7 @@ function M(e) {
                     (e += o + D), n.push(i);
                 }
             }
-            M(n.length === P.length ? P : n), k(r), F.current++;
+            M(n.length === P.length ? P : n), j(r), F.current++;
         }, [f, P, U]);
     let V = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
         H = (0, o.ZP)({
@@ -166,7 +166,7 @@ function M(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== P.length - 1 ? w : j },
+                    style: { maxWidth: U || i !== P.length - 1 ? w : k },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => b(e),
@@ -252,7 +252,7 @@ function M(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, E.KZ)(),
         s = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),

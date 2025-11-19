@@ -11,14 +11,14 @@ n.d(t, {
     fw: () => A,
     hs: () => P,
     i_: () => Z,
-    k8: () => k,
+    k8: () => j,
     ox: () => v,
     yL: () => C,
 }),
     n(415506),
     n(467055),
     n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(512722),
     a = n.n(i),
     o = n(741086),
@@ -94,7 +94,7 @@ async function b(e, t) {
 }
 async function y(e, t) {
     var n;
-    let r = x(e),
+    let r = L(e),
         i = await s.tn.get({
             url: _.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
@@ -117,7 +117,7 @@ async function v(e, t) {
         r = await b(e, t);
     await s.tn.post({
         url: _.ANM.SUBMIT_REPORT_MENU(n),
-        body: j(r, e, [
+        body: k(r, e, [
             {
                 nodeRef: r.root_node_id,
                 destination: ["", r.success_node_id],
@@ -136,7 +136,7 @@ function I(e, t, n) {
 function T(e, t, n) {
     return s.tn.post({
         url: _.ANM.SUBMIT_REPORT_MENU(w(t)),
-        body: j(e, t, n),
+        body: k(e, t, n),
         rejectWithError: !1,
     });
 }
@@ -144,7 +144,7 @@ function S(e, t, n) {
     let r = M(e, t, n);
     return s.tn
         .post({
-            url: L(t),
+            url: x(t),
             body: r,
             rejectWithError: !1,
         })
@@ -167,7 +167,7 @@ function A(e, t, n, r) {
     let i = D(t);
     return s.tn.post({
         url: _.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
-        body: j(e, t, n, r),
+        body: k(e, t, n, r),
         rejectWithError: !1,
     });
 }
@@ -217,11 +217,11 @@ function w(e) {
     let t = e.name;
     return a()(Object.values(f.b).includes(t), "Invalid report type ".concat(e.name)), t;
 }
-function x(e) {
+function L(e) {
     let t = e.name;
     return a()(Object.values(f.xw).includes(t), "Invalid report type ".concat(e.name)), t;
 }
-function L(e) {
+function x(e) {
     if ((a()(o.s.REPORT_TO_MOD.has(e.name), "Invalid report type ".concat(e.name)), e.name === f.xw.MESSAGE))
         return _.ANM.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
     throw Error("Invalid report type ".concat(e.name));
@@ -263,7 +263,7 @@ let M = (e, t, n) => {
         }
         return null;
     },
-    j = (e, t, n, r) => {
+    k = (e, t, n, r) => {
         let { version: i, variant: a, language: o } = e,
             s = {
                 channel_id: void 0,
@@ -377,7 +377,7 @@ let M = (e, t, n) => {
             });
         return null;
     };
-function k(e, t, n) {
+function j(e, t, n) {
     c.ZP.trackWithMetadata(_.rMx.IAR_MODAL_CLOSE, {
         report_type: e.name,
         report_id: n,

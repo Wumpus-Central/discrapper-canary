@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     mw: () => M,
-    nH: () => k,
+    nH: () => j,
 }),
     n(415506),
     n(388685),
@@ -85,7 +85,7 @@ function D(e, t) {
     );
 }
 let w = new l.Z("CloudUpload.tsx");
-class x extends Error {
+class L extends Error {
     static getErrorKind(e, t) {
         var n;
         let r = null != (n = null == t ? void 0 : t.status) ? n : 0,
@@ -99,9 +99,9 @@ class x extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof s.Pd) throw new x(e, { response: t });
-            if (t instanceof Error) throw new x(e, { cause: t });
-            throw new x(e, { cause: Error(String(t)) });
+            if (t instanceof s.Pd) throw new L(e, { response: t });
+            if (t instanceof Error) throw new L(e, { cause: t });
+            throw new L(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
@@ -110,7 +110,7 @@ class x extends Error {
     constructor(e, t = {}) {
         var n, r;
         let { cause: i, response: a } = t,
-            o = x.getErrorKind(
+            o = L.getErrorKind(
                 null != i ? i : Error("".concat(null != (n = null == a ? void 0 : a.text) ? n : "Unknown error")),
                 a,
             ),
@@ -131,7 +131,7 @@ class x extends Error {
             (this.messageShort = s);
     }
 }
-let L = "Content-MD5";
+let x = "Content-MD5";
 var M = (function (e) {
     return (
         (e.NOT_STARTED = "NOT_STARTED"),
@@ -144,7 +144,7 @@ var M = (function (e) {
         e
     );
 })({});
-class j {
+class k {
     constructor() {
         N(this, "numUploadAttempts", void 0),
             N(this, "timing", {}),
@@ -182,10 +182,10 @@ class j {
     }
 }
 r = n(224497).Z;
-class k extends I.ZP {
+class j extends I.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new k(t, n, r, i);
+            a = new j(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -258,7 +258,7 @@ class k extends I.ZP {
                 await this.uploadFileWithResumption(this.responseUrl, e, t)
             );
         let r = { "Content-Type": t };
-        void 0 !== this.contentHash && (r[L] = this.contentHash);
+        void 0 !== this.contentHash && (r[x] = this.contentHash);
         let i = R(
             {
                 url: this.responseUrl,
@@ -284,7 +284,7 @@ class k extends I.ZP {
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : x.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : L.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof s.Pd && 308 === e.status) {
@@ -292,7 +292,7 @@ class k extends I.ZP {
                     let n = this.parseRangeHeader(null != (t = e.headers.range) ? t : "");
                     return null != n ? n[1] + 1 : 0;
                 }
-                return x.rejectionHandler("status_check")(e);
+                return L.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
@@ -317,8 +317,8 @@ class k extends I.ZP {
         e.onRequestProgress = a().throttle(this.createResumeAwareProgressFn(t), 50);
         let r = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(x.rejectionHandler("upload"));
-        if (200 !== r.status && 201 !== r.status) throw new x("upload", { response: r });
+            .catch(L.rejectionHandler("upload"));
+        if (200 !== r.status && 201 !== r.status) throw new L("upload", { response: r });
         return r;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -345,7 +345,7 @@ class k extends I.ZP {
                 }
                 return await this.startOrResumeUpload(s, l);
             } catch (e) {
-                if (e instanceof x && e.canRetry()) {
+                if (e instanceof L && e.canRetry()) {
                     w.warn("Error uploading ".concat(this.id, ": ").concat(e.message, ", attempting resumption")),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
                         await y.Z.awaitOnline();
@@ -388,7 +388,7 @@ class k extends I.ZP {
         )
             return void this.handleComplete(this.id);
         if (this.allowOptimization && this.item.platform === I.ow.WEB) {
-            let e = await k.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
+            let e = await j.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
             null != e &&
                 (null != e.convertedFile &&
                     ((this.item.file = e.convertedFile), (this.currentSize = e.convertedFile.size)),
@@ -662,7 +662,7 @@ class k extends I.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new j()),
+            (this.uploadAnalytics = new k()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -776,7 +776,7 @@ class k extends I.ZP {
             N(this, "reactNativeFilePrepped", !1),
             N(this, "allowOptimization", !0),
             N(this, "startTime", void 0),
-            N(this, "uploadAnalytics", new j()),
+            N(this, "uploadAnalytics", new k()),
             N(this, "contentHash", void 0),
             N(this, "etag", void 0),
             N(this, "uploadAttempts", 0),

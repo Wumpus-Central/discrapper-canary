@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(487894),
     d = n(300234),
     u = n(388032),
-    h = n(836227);
+    h = n(572002);
 let g = new Set();
 function m(e) {
     let { channel: t, startThread: n, goToThread: m } = e,

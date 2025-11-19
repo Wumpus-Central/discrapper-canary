@@ -24,7 +24,7 @@ var r = n(54381),
     S = n(46140),
     A = n(981631),
     C = n(388032),
-    N = n(879048);
+    N = n(189730);
 function R(e, t, n) {
     return (
         t in e
@@ -77,8 +77,8 @@ function w(e, t) {
         e
     );
 }
-let x = 10,
-    L = 20,
+let L = 10,
+    x = 20,
     M = 15,
     k = 4,
     j = 5,
@@ -166,7 +166,7 @@ let Z = (e) => {
                 }),
                     await (0, c.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("89311"), n.e("83123")]).then(
+                            let { default: e } = await Promise.all([n.e("89311"), n.e("20074")]).then(
                                 n.bind(n, 644941),
                             );
                             return (t) =>
@@ -276,7 +276,7 @@ function H(e) {
                 .map((e) => p.Z.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, m.z6)(e.applicationId))
-                .slice(0, x),
+                .slice(0, L),
         ),
         O = i.useMemo(() => {
             let e = y.length;
@@ -297,7 +297,7 @@ function H(e) {
         }, [E, t.id, s]),
         g && !E)
     ) {
-        let e = Math.min(o.length, x);
+        let e = Math.min(o.length, L);
         return (0, r.jsxs)("div", {
             className: N.container,
             children: [
@@ -402,7 +402,7 @@ function Y(e) {
         onRequestClose: I,
         position: b,
         align: O,
-        spacing: L,
+        spacing: x,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
         children: (e) => a(e, m),

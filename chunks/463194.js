@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(607070),
     d = n(104505),
     f = n(176354),
-    _ = n(300849);
+    _ = n(382668);
 function p(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;

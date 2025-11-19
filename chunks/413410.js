@@ -1,6 +1,6 @@
 n.d(e, {
-    B: () => d,
-    Z: () => T,
+    B: () => T,
+    Z: () => d,
 });
 var i = n(442837),
     l = n(304680),
@@ -12,7 +12,7 @@ var i = n(442837),
     c = n(313789),
     E = n(65154),
     S = n(388032);
-function d() {
+function T() {
     return (0, i.e7)([a.default, r.Z], () => {
         var t;
         let e = a.default.getCurrentUser(),
@@ -22,10 +22,10 @@ function d() {
         return n && i && l;
     });
 }
-let T = (0, u.qs)(c.n.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
+let d = (0, u.qs)(c.n.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
     useTitle: () => S.intl.string(S.t.U4FgFK),
     useSubtitle: () => S.intl.string(S.t.Lm72RU),
-    usePredicate: d,
+    usePredicate: T,
     useValue: function () {
         return (0, i.e7)([s.ZP], () => s.ZP.shouldRecordNextConnection());
     },

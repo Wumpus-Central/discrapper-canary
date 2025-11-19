@@ -13,7 +13,7 @@ var i = n(54381),
     O = n(923664),
     b = n(981631),
     h = n(388032),
-    m = n(799567);
+    m = n(917105);
 function g(e) {
     let t,
         { isEnabled: n, rateLimitPerUser: o, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,

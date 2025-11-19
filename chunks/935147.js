@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(296810),
     D = n(433411),
     w = n(532432),
-    x = n(235433),
-    L = n(504983),
+    L = n(235433),
+    x = n(504983),
     M = n(134795),
     k = n(513901),
     j = n(451392),
@@ -39,7 +39,7 @@ var r = n(54381),
     B = n(474936),
     Z = n(526761),
     F = n(388032),
-    V = n(553330);
+    V = n(805201);
 function H(e, t, n) {
     return (
         t in e
@@ -155,10 +155,10 @@ function z(e) {
     return z
         ? (0, r.jsx)(c.Gt, {
               value: es,
-              children: (0, r.jsxs)(L.Z, {
+              children: (0, r.jsxs)(x.Z, {
                   ref: ea,
                   className: V.tryItOutSection,
-                  type: L.Y.PREMIUM,
+                  type: x.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
@@ -233,7 +233,7 @@ function z(e) {
                                           user: H,
                                           isTryItOut: !0,
                                       }),
-                                  (0, r.jsx)(x.Z, {
+                                  (0, r.jsx)(L.Z, {
                                       user: H,
                                       className: V.customizationSection,
                                   }),

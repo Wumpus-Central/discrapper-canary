@@ -15,9 +15,9 @@ var r = n(54381),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(422129),
+    b = n(994838),
     y = n(388032),
-    O = n(279457);
+    O = n(617385);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,
@@ -85,9 +85,9 @@ function I(e) {
                 { background: "var(--background-gradient), ".concat(n) }
             );
         }, [N, a, R]),
-        x = (0, f.Sl)(E.Il.WHITE).hex,
-        L = (0, f.Sl)(E.Il.RED_430).hex,
-        M = D ? x : void 0,
+        L = (0, f.Sl)(E.Il.WHITE).hex,
+        x = (0, f.Sl)(E.Il.RED_430).hex,
+        M = D ? L : void 0,
         k = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
@@ -116,7 +116,7 @@ function I(e) {
                 (0, r.jsx)(u.IGR, {
                     className: O.newBadge,
                     text: y.intl.string(y.t.y2b7CA),
-                    color: L,
+                    color: x,
                 }),
         ],
     });

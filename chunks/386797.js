@@ -1,37 +1,37 @@
-a.d(e, { S: () => E });
-var r = a(151122),
-    _ = a(899517),
-    n = a(873567),
-    o = a(394798);
-let i = _.n,
-    E = (0, r._I)((t = {}) => {
+_.d(e, { S: () => i });
+var a = _(151122),
+    r = _(899517),
+    n = _(873567),
+    o = _(394798);
+let E = r.n,
+    i = (0, a._I)((t = {}) => {
         let e = null != t.frameContextLines ? t.frameContextLines : 7;
         return {
             name: "ContextLines",
             processEvent: (t) =>
                 (function (t, e) {
-                    let a = i.document,
-                        r = i.location && (0, n.rt)(i.location.href);
-                    if (!a || !r) return t;
-                    let _ = t.exception && t.exception.values;
-                    if (!_ || !_.length) return t;
-                    let E = a.documentElement.innerHTML;
-                    if (!E) return t;
-                    let c = ["<!DOCTYPE html>", "<html>", ...E.split("\n"), "</html>"];
+                    let _ = E.document,
+                        a = E.location && (0, n.rt)(E.location.href);
+                    if (!_ || !a) return t;
+                    let r = t.exception && t.exception.values;
+                    if (!r || !r.length) return t;
+                    let i = _.documentElement.innerHTML;
+                    if (!i) return t;
+                    let c = ["<!DOCTYPE html>", "<html>", ...i.split("\n"), "</html>"];
                     return (
-                        _.forEach((t) => {
-                            let a = t.stacktrace;
-                            a &&
-                                a.frames &&
-                                (a.frames = a.frames.map((t) => {
-                                    var a, _, n, i;
+                        r.forEach((t) => {
+                            let _ = t.stacktrace;
+                            _ &&
+                                _.frames &&
+                                (_.frames = _.frames.map((t) => {
+                                    var _, r, n, E;
                                     return (
-                                        (a = t),
-                                        (_ = c),
-                                        (n = r),
-                                        (i = e),
-                                        a.filename === n && a.lineno && _.length && (0, o.go)(_, a, i),
-                                        a
+                                        (_ = t),
+                                        (r = c),
+                                        (n = a),
+                                        (E = e),
+                                        _.filename === n && _.lineno && r.length && (0, o.go)(r, _, E),
+                                        _
                                     );
                                 }));
                         }),

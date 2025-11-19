@@ -14,7 +14,7 @@ var r = n(54381),
     h = n(391110),
     m = n(75077),
     g = n(51636),
-    E = n(484327);
+    E = n(118461);
 function b(e, t, n) {
     return (
         t in e
@@ -117,8 +117,8 @@ let I = (e) => {
             P = (0, m.mN)(),
             { fractionalState: D } = (0, l.Z)(),
             w = (0, d.W)(),
-            x = (0, u.bg)({ location: "PremiumPerks" }),
-            L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
+            L = (0, u.bg)({ location: "PremiumPerks" }),
+            x = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
             k = (0, m.ZM)({
                 perksCards: R,
@@ -127,8 +127,8 @@ let I = (e) => {
                 isPremiumSubscriber: P,
                 fractionalState: D,
                 isInReverseTrial: w,
-                showProfileWidgets: x,
-                showDisplayNameStyles: L,
+                showProfileWidgets: L,
+                showDisplayNameStyles: x,
                 recurring3PPromotionExperiment: M,
             }),
             j = k.some((e) => null != e.pillText);

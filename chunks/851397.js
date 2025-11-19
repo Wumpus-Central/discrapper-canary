@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(892001),
     d = n(688192),
     p = n(89196),
-    f = n(937615),
-    h = n(51144),
+    h = n(937615),
+    f = n(51144),
     g = n(436585),
     m = n(594914),
     b = n(848118),
@@ -21,7 +21,7 @@ var r = n(54381),
 function j(e) {
     var t,
         n,
-        { profileOwner: j, hideButtonIcon: x = !1, showPrice: C = !1, showIcons: E = !1 } = e,
+        { profileOwner: j, hideButtonIcon: C = !1, showPrice: x = !1, showIcons: E = !1 } = e,
         S = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -59,8 +59,8 @@ function j(e) {
             var e, t, n, r, i, l, o, c;
             return P || D
                 ? {
-                      buttonCTALabel: C
-                          ? (0, f.T4)(
+                      buttonCTALabel: x
+                          ? (0, h.T4)(
                                 null != (i = null == (n = Z.price) ? void 0 : n.amount) ? i : 0,
                                 null != (l = null == (r = Z.price) ? void 0 : r.currency) ? l : y.pK.USD,
                             )
@@ -78,13 +78,13 @@ function j(e) {
                       },
                   }
                 : {
-                      buttonCTALabel: C
-                          ? (0, f.T4)(
+                      buttonCTALabel: x
+                          ? (0, h.T4)(
                                 null != (o = null == (e = Z.price) ? void 0 : e.amount) ? o : 0,
                                 null != (c = null == (t = Z.price) ? void 0 : t.currency) ? c : y.pK.USD,
                             )
                           : O.intl.string(O.t.ilhtIa),
-                      buttonIcon: x ? void 0 : a.OgN,
+                      buttonIcon: C ? void 0 : a.OgN,
                       handleCardClick: () => {
                           R ||
                               ((0, u.closeUserProfileModal)(),
@@ -99,14 +99,14 @@ function j(e) {
                               ));
                       },
                   };
-        }, [P, D, C, Z, x, T, R, j, N]),
+        }, [P, D, x, Z, C, T, R, j, N]),
         U = i.useCallback(
             () =>
                 E
                     ? (0, r.jsx)("div", {
                           className: v.itemIcon,
                           children: (0, r.jsx)(o.u, {
-                              text: O.intl.formatToPlainString(O.t.p3RmJF, { username: h.ZP.getName(j) }),
+                              text: O.intl.formatToPlainString(O.t.p3RmJF, { username: f.ZP.getName(j) }),
                               position: "top",
                               children: (0, r.jsx)(a.h_8, {
                                   size: "custom",

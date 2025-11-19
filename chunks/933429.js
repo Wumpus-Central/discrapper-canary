@@ -37,8 +37,8 @@ var r,
     P = n(332473),
     D = n(30684),
     w = n(616106),
-    x = n(2109),
-    L = n(518638),
+    L = n(2109),
+    x = n(518638),
     M = n(1844),
     k = n(621615),
     j = n(417626),
@@ -118,7 +118,7 @@ function ew(e) {
     }
     return e;
 }
-function ex(e, t) {
+function eL(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -130,12 +130,12 @@ function ex(e, t) {
     }
     return n;
 }
-function eL(e, t) {
+function ex(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ex(Object(t)).forEach(function (n) {
+            : eL(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -309,8 +309,8 @@ let eQ = [
     e$ = {
         [eS.kVF.GIFTING_PROMOTION_REMINDER]: {
             predicate: () => {
-                let { enabled: e } = x.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
-                    { enabled: t } = x.YW.getConfig({ location: "NoticeStore" });
+                let { enabled: e } = L.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
+                    { enabled: t } = L.YW.getConfig({ location: "NoticeStore" });
                 return (
                     e &&
                     t &&
@@ -409,7 +409,7 @@ let eQ = [
                 );
             },
         },
-        [eS.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, L.tq)() },
+        [eS.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, x.tq)() },
         [eS.kVF.CORRUPT_INSTALLATION]: {
             predicate: () => ey.isPlatformEmbedded && (!s.Z.supported() || eT.Z.isCorruptInstallation()),
         },
@@ -807,7 +807,7 @@ function e0() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eH = eL(ew({}, eV), {
+            eH = ex(ew({}, eV), {
                 type: n,
                 metadata: o,
             });
@@ -832,20 +832,20 @@ function e1(e) {
         e0()
     );
 }
-function e2(e) {
+function e3(e) {
     eH = e.notice;
 }
-function e3(e) {
+function e2(e) {
     return null != eH && (null == e.id || e.id === eH.id) && (eq(eH.type, e.isTemporary, e.untilAtLeast), e0());
 }
 function e4(e) {
     let { noticeType: t } = e;
     return eq(t), e0();
 }
-function e8() {
+function e5() {
     return eu.Z.enabled || delete eZ[eS.kVF.STREAMER_MODE], e0();
 }
-function e5() {
+function e8() {
     return delete eZ[eS.kVF.DISPATCH_ERROR], e0();
 }
 function e6() {
@@ -969,14 +969,14 @@ let tr = new tn(u.Z, {
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: e0,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: e0,
     VOICE_STATE_UPDATES: e1,
-    STREAMER_MODE_UPDATE: e8,
-    RUNNING_STREAMER_TOOLS_CHANGE: e8,
-    DISPATCH_APPLICATION_ERROR: e5,
+    STREAMER_MODE_UPDATE: e5,
+    RUNNING_STREAMER_TOOLS_CHANGE: e5,
+    DISPATCH_APPLICATION_ERROR: e8,
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: e6,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e7,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: e9,
-    NOTICE_SHOW: e2,
-    NOTICE_DISMISS: e3,
+    NOTICE_SHOW: e3,
+    NOTICE_DISMISS: e2,
     NOTICE_DISABLE: e4,
     LOGOUT: tt,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: e0,

@@ -34,8 +34,8 @@ var r = n(54381),
     P = n(444295),
     D = n(981631),
     w = n(388032),
-    x = n(213285);
-function L(e, t, n) {
+    L = n(133214);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -201,7 +201,7 @@ let K = i.memo(function (e) {
             ),
             T = i.useMemo(() => (h || y ? "none" : "block"), [h, y]);
         return (0, r.jsx)(s.animated.div, {
-            className: o()(x.connectedAnimationContainer, { [x.right]: d }),
+            className: o()(L.connectedAnimationContainer, { [L.right]: d }),
             style: {
                 width: v,
                 opacity: I,
@@ -209,17 +209,17 @@ let K = i.memo(function (e) {
             },
             children: (0, r.jsxs)("div", {
                 ref: E,
-                className: o()(x.connectedAnimationInnerContainer, {
-                    [x.exiting]: "exiting" === O,
-                    [x.left]: !d,
-                    [x.right]: d,
+                className: o()(L.connectedAnimationInnerContainer, {
+                    [L.exiting]: "exiting" === O,
+                    [L.left]: !d,
+                    [L.right]: d,
                 }),
                 children: [
                     d &&
                         (0, r.jsx)(c.Fmz, {
                             importData: B,
                             shouldAnimate: !y,
-                            className: x.animation,
+                            className: L.animation,
                         }),
                     (0, r.jsx)("div", {
                         children: (0, r.jsx)(c.Text, {
@@ -232,9 +232,9 @@ let K = i.memo(function (e) {
                         (0, r.jsx)(c.Fmz, {
                             importData: B,
                             shouldAnimate: !y,
-                            className: x.animation,
+                            className: L.animation,
                         }),
-                    (0, r.jsx)("div", { className: x.emptySpace }),
+                    (0, r.jsx)("div", { className: L.emptySpace }),
                 ],
             }),
         });
@@ -244,7 +244,7 @@ let K = i.memo(function (e) {
             o = 2 * t,
             s = -(t / 2);
         return (0, r.jsx)("div", {
-            className: x.effect,
+            className: L.effect,
             style: {
                 top: s,
                 left: s,
@@ -279,7 +279,7 @@ let K = i.memo(function (e) {
                 guildId: S,
                 isSettingsPreview: R = !1,
                 voiceState: w,
-                showStreamPreview: L,
+                showStreamPreview: x,
                 onShowStreamPreview: M,
                 onWatchStream: k,
                 connectedOn: j,
@@ -325,8 +325,8 @@ let K = i.memo(function (e) {
             eo = (0, l.e7)([I.Z], () => I.Z.getStreamForUser(s.id, S)),
             es = null != eo,
             el = i.useCallback(() => {
-                (L || null != es) && M(null);
-            }, [M, L, es]),
+                (x || null != es) && M(null);
+            }, [M, x, es]),
             ec = i.useCallback(
                 () =>
                     (0, r.jsx)(b.Z, {
@@ -342,11 +342,11 @@ let K = i.memo(function (e) {
                                 k(null != eo ? eo : null));
                         },
                         onAction: () => k,
-                        previewIsOpen: L,
+                        previewIsOpen: x,
                         location: D.Sbl.UNLOCKED_OVERLAY,
                         hideTip: !0,
                     }),
-                [s, t, eo, L, el, k],
+                [s, t, eo, x, el, k],
             ),
             eu = i.useCallback(
                 (e) => {
@@ -366,11 +366,11 @@ let K = i.memo(function (e) {
             : n
               ? (0, r.jsxs)(c.P3F, {
                     innerRef: B,
-                    className: o()(x.voiceUser, {
-                        [x.speaking]: ea,
-                        [x.interactive]: !a,
-                        [x.flipped]: n,
-                        [x.justConnected]: H,
+                    className: o()(L.voiceUser, {
+                        [L.speaking]: ea,
+                        [L.interactive]: !a,
+                        [L.flipped]: n,
+                        [L.justConnected]: H,
                     }),
                     onClick: a ? void 0 : (e) => (null == g ? void 0 : g(e, s)),
                     onContextMenu: eu,
@@ -383,12 +383,12 @@ let K = i.memo(function (e) {
                                   targetElementRef: F,
                                   position: "left",
                                   renderPopout: ec,
-                                  shouldShow: L,
+                                  shouldShow: x,
                                   onRequestClose: el,
                                   spacing: 0,
                                   children: () =>
                                       (0, r.jsxs)("div", {
-                                          className: x.username,
+                                          className: L.username,
                                           ref: F,
                                           children: [
                                               (0, r.jsx)(v.nm, {
@@ -396,8 +396,8 @@ let K = i.memo(function (e) {
                                                   user: s,
                                                   video: $.selfVideo,
                                                   isStreaming: es,
-                                                  className: x.voiceIcons,
-                                                  iconClassName: x.voiceIcon,
+                                                  className: L.voiceIcons,
+                                                  iconClassName: L.voiceIcon,
                                                   isWatching: er,
                                                   localMute: ee && !Z,
                                                   localVideoDisabled: en,
@@ -412,7 +412,7 @@ let K = i.memo(function (e) {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
                                                       contextGuildId: S,
-                                                      className: x.clanTag,
+                                                      className: L.clanTag,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
                                                           (0, P.Ws)(D.Odu.VOICE_V3, {
@@ -439,7 +439,7 @@ let K = i.memo(function (e) {
                                 rightAlign: !0,
                             }),
                         (0, r.jsx)(q, {
-                            className: x.avatar,
+                            className: L.avatar,
                             size: e_,
                             src: eh,
                             "aria-hidden": !0,
@@ -454,11 +454,11 @@ let K = i.memo(function (e) {
                 })
               : (0, r.jsxs)(c.P3F, {
                     innerRef: B,
-                    className: o()(x.voiceUser, {
-                        [x.speaking]: ea,
-                        [x.interactive]: !a,
-                        [x.flipped]: n,
-                        [x.justConnected]: H,
+                    className: o()(L.voiceUser, {
+                        [L.speaking]: ea,
+                        [L.interactive]: !a,
+                        [L.flipped]: n,
+                        [L.justConnected]: H,
                     }),
                     onClick: a ? void 0 : (e) => (null == g ? void 0 : g(e, s)),
                     onContextMenu: eu,
@@ -466,7 +466,7 @@ let K = i.memo(function (e) {
                     onMouseLeave: el,
                     children: [
                         (0, r.jsx)(q, {
-                            className: x.avatar,
+                            className: L.avatar,
                             size: e_,
                             src: eh,
                             "aria-hidden": !0,
@@ -484,12 +484,12 @@ let K = i.memo(function (e) {
                                   targetElementRef: F,
                                   position: "right",
                                   renderPopout: ec,
-                                  shouldShow: L,
+                                  shouldShow: x,
                                   onRequestClose: el,
                                   spacing: 0,
                                   children: () =>
                                       (0, r.jsxs)("div", {
-                                          className: o()(x.username, { [x.streaming]: es }),
+                                          className: o()(L.username, { [L.streaming]: es }),
                                           ref: F,
                                           children: [
                                               (0, r.jsx)(c.Text, {
@@ -502,7 +502,7 @@ let K = i.memo(function (e) {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
                                                       contextGuildId: S,
-                                                      className: x.clanTag,
+                                                      className: L.clanTag,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
                                                           (0, P.Ws)(D.Odu.VOICE_V3, {
@@ -517,8 +517,8 @@ let K = i.memo(function (e) {
                                                   user: s,
                                                   video: $.selfVideo,
                                                   isStreaming: es,
-                                                  className: x.voiceIcons,
-                                                  iconClassName: x.voiceIcon,
+                                                  className: L.voiceIcons,
+                                                  iconClassName: L.voiceIcon,
                                                   isWatching: er,
                                                   localMute: ee && !Z,
                                                   localVideoDisabled: en,
@@ -565,7 +565,7 @@ let K = i.memo(function (e) {
         let w = (e) => {
                 A(e);
             },
-            x = (e, t) => {
+            L = (e, t) => {
                 m ||
                     (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
@@ -597,7 +597,7 @@ let K = i.memo(function (e) {
                         );
                     });
             },
-            L = i.useCallback(
+            x = i.useCallback(
                 (e) => {
                     var n, r;
                     let i = null == (n = S.Z.getWidget(t)) ? void 0 : n.layoutId,
@@ -654,13 +654,13 @@ let K = i.memo(function (e) {
                         displayUserMode: l,
                         size: p,
                         locked: k,
-                        onContextMenu: x,
-                        onClick: x,
+                        onContextMenu: L,
+                        onClick: L,
                         context: g,
                         channel: a,
                         showStreamPreview: b.id === T,
                         onShowStreamPreview: w,
-                        onWatchStream: L,
+                        onWatchStream: x,
                         isSettingsPreview: m,
                     });
                 },

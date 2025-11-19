@@ -24,7 +24,7 @@ var a = n(54381),
     h = n(373071),
     x = n(489495),
     g = n(189),
-    f = n(558270),
+    f = n(664046),
     b = n(346537),
     v = n(830318);
 function j(e) {
@@ -83,8 +83,8 @@ let y = {
             [S, E] = l.useState(!0),
             O = l.useRef({}),
             [T, N] = l.useState(!1),
-            [P, w] = l.useState(!1),
-            [I, k] = l.useState([]),
+            [P, I] = l.useState(!1),
+            [w, k] = l.useState([]),
             [R, A] = l.useState(y),
             Z = l.useRef([]),
             [D, L] = l.useState(t.name),
@@ -98,10 +98,10 @@ let y = {
                     accessibilityLabel: C,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
-                    effects: I,
+                    effects: w,
                     animationType: s.y.ANIMATION_TYPE_UNSPECIFIED,
                 }),
-                [I],
+                [w],
             ),
             F = (e) => {
                 let t = e.currentTarget.files;
@@ -153,11 +153,11 @@ let y = {
                     skuId: e.skuId,
                     name: D,
                     config: {
-                        effects: I,
+                        effects: w,
                         stillFrames: R,
                     },
                 });
-        }, [I, R, D]),
+        }, [w, R, D]),
         l.useEffect(
             () => () => {
                 Z.current.forEach((e) => {
@@ -183,7 +183,7 @@ let y = {
                                       let t = F(e);
                                       null != t &&
                                           (0, x.i0)(t, async (e) => {
-                                              let n = await (0, x.Xv)(e, t, I.length);
+                                              let n = await (0, x.Xv)(e, t, w.length);
                                               k((e) => [...e, n]);
                                           });
                                   },
@@ -278,7 +278,7 @@ let y = {
                                                           checked: P,
                                                           className: f.checkBox,
                                                           onChange: () => {
-                                                              w(!P);
+                                                              I(!P);
                                                           },
                                                       }),
                                                   ],
@@ -368,7 +368,7 @@ let y = {
                                                   className: f.row,
                                                   children: [
                                                       (0, a.jsx)(d.Z, {
-                                                          fileContents: () => (0, x.yR)(t.name, I),
+                                                          fileContents: () => (0, x.yR)(t.name, w),
                                                           contentType: "text/plain",
                                                           fileName: "".concat(M, "_timing_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
@@ -383,7 +383,7 @@ let y = {
                                                                   _(j({}, t), {
                                                                       name: D,
                                                                       config: _(j({}, t.config), {
-                                                                          effects: I,
+                                                                          effects: w,
                                                                           stillFrames: R,
                                                                       }),
                                                                   }),
@@ -442,7 +442,7 @@ let y = {
                                               }),
                                           ],
                                       }),
-                                      I.some((e) => {
+                                      w.some((e) => {
                                           var t;
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
@@ -507,7 +507,7 @@ let y = {
                                               },
                                           }),
                                       }),
-                                      I.map((e, t) =>
+                                      w.map((e, t) =>
                                           (0, a.jsxs)(
                                               "div",
                                               {

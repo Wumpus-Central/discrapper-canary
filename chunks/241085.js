@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(292419),
     C = n(756043),
     N = n(388032),
-    R = n(975279);
+    R = n(319194);
 function P(e) {
     let { dropping: t, fileInputRef: n, minValues: i, maxValues: a, guildId: s } = e,
         l = (0, v.dg)(s),
@@ -151,7 +151,7 @@ function w(e) {
         n.id,
     );
 }
-function x(e) {
+function L(e) {
     var t;
     let { minValues: n, maxValues: a } = e,
         s = i.useRef(null),
@@ -163,7 +163,7 @@ function x(e) {
     l()(null != E, "FileUploadActionComponent must be used inside a channel");
     let O = null == (t = g.modal) ? void 0 : t.customId;
     l()(null != O, "FileUploadActionComponent requires modalCustomId from context");
-    let { uploadIds: v, setUploadIds: x, currentUploads: L, error: M } = (0, C.t)(e),
+    let { uploadIds: v, setUploadIds: L, currentUploads: x, error: M } = (0, C.t)(e),
         k = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
     l()(null != k, "FileUploadActionComponent requires a valid channel");
     let j = i.useCallback((e) => {
@@ -202,9 +202,9 @@ function x(e) {
                         n
                     );
                 });
-                x(v.concat(n));
+                L(v.concat(n));
             },
-            [v, a, k, x, O, E],
+            [v, a, k, L, O, E],
         ),
         B = i.useCallback(
             (e) => {
@@ -220,7 +220,7 @@ function x(e) {
             G(Array.from(null != (t = e.currentTarget.files) ? t : []), "file_picker"), (e.currentTarget.value = "");
         },
         F = (e) => {
-            d.Z.remove(E, e, y.d.InteractionModal), x(v.filter((t) => t !== e));
+            d.Z.remove(E, e, y.d.InteractionModal), L(v.filter((t) => t !== e));
         };
     return (i.useEffect(() => {
         let e = u.current;
@@ -235,9 +235,9 @@ function x(e) {
             }
         );
     }, [j, U, B]),
-    1 === a && 1 === L.length)
+    1 === a && 1 === x.length)
         ? (0, r.jsx)(w, {
-              upload: L[0],
+              upload: x[0],
               handleRemoveFile: F,
               singleFileInput: !0,
           })
@@ -257,10 +257,10 @@ function x(e) {
                             maxValues: a,
                             guildId: k.guild_id,
                         }),
-                  L.length > 0 &&
+                  x.length > 0 &&
                       (0, r.jsx)("div", {
                           className: R.files,
-                          children: L.map((e) =>
+                          children: x.map((e) =>
                               (0, r.jsx)(
                                   w,
                                   {

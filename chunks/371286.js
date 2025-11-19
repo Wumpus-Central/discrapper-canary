@@ -6,7 +6,7 @@ var a = n(54381),
     s = n(313201),
     o = n(921944),
     c = n(388032),
-    d = n(18845);
+    d = n(10993);
 function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, s.Dt)(),

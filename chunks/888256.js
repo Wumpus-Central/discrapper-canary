@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(526761),
     c = n(726985),
     u = n(388032),
-    d = n(543879);
+    d = n(530448);
 function f(e) {
     let { currentUser: t, disabled: n, handleDisableAccount: f, handleDeleteAccount: _ } = e,
         p = t.isClaimed(),

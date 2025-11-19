@@ -228,8 +228,8 @@ var m = {
         var n;
         return f({}, e, (((n = {})[t] = void 0), n));
     },
-    x = [m.NOSCRIPT, m.SCRIPT, m.STYLE],
-    L = function (e, t) {
+    L = [m.NOSCRIPT, m.SCRIPT, m.STYLE],
+    x = function (e, t) {
         return (
             void 0 === t && (t = !0),
             !1 === t
@@ -289,8 +289,8 @@ var m = {
                             var i = M(n),
                                 a = P(t);
                             return i
-                                ? "<" + e + ' data-rh="true" ' + i + ">" + L(a, r) + "</" + e + ">"
-                                : "<" + e + ' data-rh="true">' + L(a, r) + "</" + e + ">";
+                                ? "<" + e + ' data-rh="true" ' + i + ">" + x(a, r) + "</" + e + ">"
+                                : "<" + e + ' data-rh="true">' + x(a, r) + "</" + e + ">";
                         })(e, t.title, t.titleAttributes, n);
                     },
                 };
@@ -317,11 +317,11 @@ var m = {
                                             return "innerHTML" !== e && "cssText" !== e;
                                         })
                                         .reduce(function (e, t) {
-                                            var i = void 0 === r[t] ? t : t + '="' + L(r[t], n) + '"';
+                                            var i = void 0 === r[t] ? t : t + '="' + x(r[t], n) + '"';
                                             return e ? e + " " + i : i;
                                         }, ""),
                                     a = r.innerHTML || r.cssText || "",
-                                    o = -1 === x.indexOf(e);
+                                    o = -1 === L.indexOf(e);
                                 return t + "<" + e + ' data-rh="true" ' + i + (o ? "/>" : ">" + a + "</" + e + ">");
                             }, "");
                         })(e, t, n);

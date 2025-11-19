@@ -1,4 +1,4 @@
-n.d(e, { J: () => d });
+n.d(e, { J: () => T });
 var i = n(657707),
     l = n(509613),
     u = n(28682),
@@ -15,7 +15,7 @@ let E = (0, l.x1)(r.n.NITRO_PANE, {
         useTitle: () => c.intl.string(c.t.Ipxkog),
         buildLayout: () => [E],
     }),
-    d = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
+    T = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
         icon: i.SrA,
         useTitle: () => c.intl.string(c.t.Ipxkog),
         getLegacySearchKey: () => o.s6.PREMIUM,

@@ -17,8 +17,8 @@ var a = n(54381),
     b = n(881998),
     v = n(449224),
     j = n(246992),
-    _ = n(451429),
-    y = n(441900);
+    _ = n(866403),
+    y = n(963801);
 let C = [
     {
         label: "Unset",
@@ -56,7 +56,7 @@ function S() {
         O = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
         T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         N = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: w } = (function (e) {
+        { canDeauthorize: P, deauthorize: I } = (function (e) {
             let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
                 n = l.useCallback(() => {
                     null != t && d.Z.delete(t.id);
@@ -160,7 +160,7 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P,
-                        onClick: w,
+                        onClick: I,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

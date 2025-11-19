@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(981631),
     D = n(959517),
     w = n(388032),
-    x = n(823708),
-    L = n(527455);
+    L = n(963167),
+    x = n(527455);
 function M(e, t, n) {
     return (
         t in e
@@ -161,7 +161,7 @@ function G(e) {
                       name: V.authorName,
                       colorString: et,
                       colorStrings: ei,
-                      className: x.authorName,
+                      className: L.authorName,
                   })
                 : (0, r.jsx)(
                       O.Z,
@@ -182,7 +182,7 @@ function G(e) {
                                       name: V.authorName,
                                       colorString: et,
                                       colorStrings: ei,
-                                      className: x.authorName,
+                                      className: L.authorName,
                                   }),
                               ),
                       },
@@ -192,19 +192,19 @@ function G(e) {
         em = null != eh && (0, g.d$)(eh),
         eg = K && (W || z);
     return (0, r.jsxs)("div", {
-        className: x.postPreviewContainer,
+        className: L.postPreviewContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: x.thumbnailContainer,
+                className: L.thumbnailContainer,
                 onMouseEnter: el,
                 onMouseLeave: ec,
                 children: [
                     !X &&
                         (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)("img", {
-                                  src: L,
+                                  src: x,
                                   alt: w.intl.string(w.t.rIbh8H),
-                                  className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
+                                  className: o()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: Y,
                                   onError: () => Q(!0),
                               })
@@ -213,8 +213,8 @@ function G(e) {
                                   backgroundSrc: "".concat(eh, "?format=png"),
                                   alt: w.intl.string(w.t.rIbh8H),
                                   aspectRatio: 16 / 9,
-                                  className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
-                                  imageChildClassName: x.thumbnailImage,
+                                  className: o()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
+                                  imageChildClassName: L.thumbnailImage,
                                   onContextMenu: Y,
                                   onError: () => Q(!0),
                               })),
@@ -222,9 +222,9 @@ function G(e) {
                         (0, r.jsx)(u.P3F, {
                             onClick: eu,
                             children: (0, r.jsx)("div", {
-                                className: x.thumbnailOverlay,
+                                className: L.thumbnailOverlay,
                                 children: (0, r.jsxs)("div", {
-                                    className: x.thumbnailOverlayCta,
+                                    className: L.thumbnailOverlayCta,
                                     children: [
                                         (0, r.jsx)(N.Z, { color: l.Z.WHITE }),
                                         (0, r.jsx)(u.Text, {
@@ -239,27 +239,27 @@ function G(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: x.descriptionContainer,
+                className: L.descriptionContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: x.descriptionHeader,
+                        className: L.descriptionHeader,
                         children: [
                             (0, r.jsx)(u.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                className: x.descriptionHeaderText,
+                                className: L.descriptionHeaderText,
                                 children: V.title,
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                className: o()(x.descriptionHeaderText, x.descriptionSubtitle),
+                                className: o()(L.descriptionHeaderText, L.descriptionSubtitle),
                                 children: V.subtitle,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: x.descriptionFooter,
+                        className: L.descriptionFooter,
                         children: [
                             null != V.authorId &&
                                 null != ef &&
@@ -290,20 +290,20 @@ function G(e) {
                                         }),
                                 }),
                             (0, r.jsxs)("div", {
-                                className: x.descriptionFooterContainer,
+                                className: L.descriptionFooterContainer,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: x.descriptionFooterChannelName,
+                                        className: L.descriptionFooterChannelName,
                                         children: [
                                             null != V.channelName &&
                                                 (0, r.jsx)(u.EAQ, {
                                                     size: "md",
                                                     color: "currentColor",
-                                                    className: x.mediaChannelIcon,
+                                                    className: L.mediaChannelIcon,
                                                 }),
                                             (0, r.jsx)(u.P3F, {
                                                 onClick: eu,
-                                                className: x.channelName,
+                                                className: L.channelName,
                                                 children: (0, r.jsx)(u.Heading, {
                                                     variant: "heading-md/semibold",
                                                     color: "header-primary",
@@ -316,7 +316,7 @@ function G(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
                                             color: "text-muted",
-                                            className: x.descriptionFooterAuthorContainer,
+                                            className: L.descriptionFooterAuthorContainer,
                                             children: w.intl.format(w.t.voIDKa, {
                                                 authorName: V.authorName,
                                                 authorNameHook: ep,

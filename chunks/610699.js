@@ -29,9 +29,9 @@ var r = n(54381),
     P = n(358595),
     D = n(981631),
     w = n(967249),
-    x = n(245335),
-    L = n(388032),
-    M = n(969016);
+    L = n(245335),
+    x = n(388032),
+    M = n(552517);
 function k(e, t, n) {
     return (
         t in e
@@ -101,7 +101,7 @@ function B(e) {
                                 variant: "text-xs/normal",
                                 className: M.count,
                                 color: i,
-                                children: L.intl.format(L.t["LC+S+m"], { membersOnline: n }),
+                                children: x.intl.format(x.t["LC+S+m"], { membersOnline: n }),
                             }),
                         ],
                     },
@@ -120,7 +120,7 @@ function B(e) {
                                 variant: "text-xs/normal",
                                 className: M.count,
                                 color: i,
-                                children: L.intl.format(L.t.zRl6XR, { count: t }),
+                                children: x.intl.format(x.t.zRl6XR, { count: t }),
                             }),
                         ],
                     },
@@ -151,7 +151,7 @@ function Z(e) {
                     children: (0, r.jsx)(d.Text, {
                         variant: "text-xs/normal",
                         color: a,
-                        children: L.intl.format(L.t["dc+LW4"], {
+                        children: x.intl.format(x.t["dc+LW4"], {
                             channelName: t.name,
                             serverName: n.name,
                         }),
@@ -167,7 +167,7 @@ function Z(e) {
                   children: (0, r.jsx)(d.Text, {
                       variant: "text-xs/normal",
                       color: a,
-                      children: L.intl.format(L.t.u0vaDE, { guildName: n.name }),
+                      children: x.intl.format(x.t.u0vaDE, { guildName: n.name }),
                   }),
               }),
           })
@@ -179,7 +179,7 @@ function F(e) {
         o,
         { invite: s, message: u, getAcceptInviteContext: d } = e,
         { approximate_member_count: m, approximate_presence_count: g, target_type: E, target_application: b } = s;
-    l()(E === x.Iq.EMBEDDED_APPLICATION && null != b, "invalid application invite");
+    l()(E === L.Iq.EMBEDDED_APPLICATION && null != b, "invalid application invite");
     let y = i.useCallback(() => {
             var e;
             C.default.track(D.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
@@ -245,13 +245,13 @@ function F(e) {
     }
     a = H
         ? w
-            ? L.intl.string(L.t.DPfdsq)
+            ? x.intl.string(x.t.DPfdsq)
             : M
-              ? L.intl.string(L.t.sqe0hj)
-              : L.intl.string(L.t.RscU7I)
-        : L.intl.string(L.t["2BP08E"]);
+              ? x.intl.string(x.t.sqe0hj)
+              : x.intl.string(x.t.RscU7I)
+        : x.intl.string(x.t["2BP08E"]);
     let Y = (H && !j) || (H && w);
-    return (j || (o = L.intl.string(L.t.hHGrWz)), null == s.code || "" === s.code || null == N)
+    return (j || (o = x.intl.string(x.t.hHGrWz)), null == s.code || "" === s.code || null == N)
         ? null
         : (0, r.jsx)(h.Gt, {
               value: U,
@@ -320,7 +320,7 @@ function V(e) {
             j(
                 {
                     header: t.name,
-                    title: L.intl.string(L.t["7vb6nw"]),
+                    title: x.intl.string(x.t["7vb6nw"]),
                     iconSrc: S,
                 },
                 C,
@@ -341,7 +341,7 @@ function V(e) {
                               (0, r.jsx)(g.K, {
                                   activityUsers: n,
                                   guildId: s.id,
-                                  activityText: L.intl.formatToPlainString(L.t.yJj035, { count: R }),
+                                  activityText: x.intl.formatToPlainString(x.t.yJj035, { count: R }),
                               })
                             : (0, r.jsx)(B, {
                                   members: c,

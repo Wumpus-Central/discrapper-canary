@@ -33,9 +33,9 @@ var r = n(54381),
     P = n(51144),
     D = n(981631),
     w = n(674563),
-    x = n(524484),
-    L = n(388032),
-    M = n(894723);
+    L = n(524484),
+    x = n(388032),
+    M = n(325804);
 function k(e, t, n) {
     return (
         t in e
@@ -115,7 +115,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
             ? (0, r.jsx)(s.u, {
-                  __unsupportedReactNodeAsText: null != i ? i : L.intl.string(L.t.pclUFJ),
+                  __unsupportedReactNodeAsText: null != i ? i : x.intl.string(x.t.pclUFJ),
                   children: (0, r.jsx)(c.CEn, {
                       size: "md",
                       color: "currentColor",
@@ -129,7 +129,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == t
             ? null
             : (0, r.jsx)(s.u, {
-                  text: L.intl.formatToPlainString(L.t.IWkAq7, { date: t }),
+                  text: x.intl.formatToPlainString(x.t.IWkAq7, { date: t }),
                   asContainer: !0,
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
@@ -260,7 +260,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     (0, r.jsx)(T.Z, {
                         confettiSpawnRef: p,
                         shouldFire: d && null != h && t.id !== h.id,
-                        confettiLocation: x.Hn.MEMBER_USER,
+                        confettiLocation: L.Hn.MEMBER_USER,
                     }),
                 ],
             })
@@ -337,8 +337,8 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 shouldAnimateStatus: T = !1,
                 isMobile: R,
                 premiumSince: w,
-                channel: x,
-                guildId: L,
+                channel: L,
+                guildId: x,
                 className: k,
                 nameplate: U,
                 hideClanTag: Z = !1,
@@ -367,7 +367,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             [em, eg] = i.useState(null),
             { voiceChannel: eE } = (0, _.Z)({
                 userId: el,
-                guildId: L,
+                guildId: x,
             }),
             { voiceActivityStatusEnabled: eb } = (0, d.U)({ location: "MemberListItem" }),
             ey = eb ? eE : void 0,
@@ -379,12 +379,12 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 userId: el,
                 size: c.EFr.SIZE_32,
                 animateOnHover: !(t || ef),
-                guildId: L,
+                guildId: x,
             }),
             eT = null != eo ? eo : {},
             { onFocus: eS } = eT,
             eA = B(eT, ["onFocus"]),
-            eC = (0, S.X7)(L, el, null != a ? a : null),
+            eC = (0, S.X7)(x, el, null != a ? a : null),
             [eN, eR] = i.useState(!1);
         i.useEffect(() => {
             t && eR(!1);
@@ -394,10 +394,10 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             ew = i.useCallback(() => {
                 e_(!0);
             }, []),
-            ex = i.useCallback(() => {
+            eL = i.useCallback(() => {
                 e_(!1);
             }, []),
-            eL = i.useCallback(() => {
+            ex = i.useCallback(() => {
                 eh(!0), null == eS || eS();
             }, [eS]),
             eM = i.useCallback(() => {
@@ -458,7 +458,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   onMouseDown: Y,
                                   onContextMenu: J,
                                   onMouseEnter: ew,
-                                  onMouseLeave: ex,
+                                  onMouseLeave: eL,
                                   onBlur: eM,
                                   hovered: ef,
                                   name:
@@ -472,7 +472,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                     colorStrings: eC,
                                                     hideClanTag: Z,
                                                     user: b,
-                                                    guildId: L,
+                                                    guildId: x,
                                                     isHovering: ef,
                                                 }),
                                             })
@@ -487,7 +487,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                         colorStrings: eC,
                                                         hideClanTag: Z,
                                                         user: b,
-                                                        guildId: L,
+                                                        guildId: x,
                                                         isHovering: ef,
                                                     }),
                                                 }),
@@ -514,7 +514,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       applicationStream: v,
                                       voiceStatusChannel: ey,
                                       user: b,
-                                      channel: x,
+                                      channel: L,
                                       isHoveringOrFocusing: ef || ep,
                                       quest: eP,
                                       hideTooltip: H,
@@ -533,7 +533,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   "aria-posinset": en,
                                   id: ei,
                                   tabIndex: ea,
-                                  onFocus: eL,
+                                  onFocus: ex,
                                   focusProps: {
                                       offset: {
                                           top: 4,

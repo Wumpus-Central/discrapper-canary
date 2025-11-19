@@ -34,8 +34,8 @@ var r = n(54381),
     P = n(536442),
     D = n(609218),
     w = n(695346),
-    x = n(984933),
-    L = n(594174),
+    L = n(984933),
+    x = n(594174),
     M = n(626135),
     k = n(111361),
     j = n(624138),
@@ -55,7 +55,7 @@ var r = n(54381),
     Q = n(981631),
     J = n(921944),
     $ = n(185923),
-    ee = n(359175);
+    ee = n(593391);
 function et(e, t, n) {
     return (
         t in e
@@ -286,8 +286,8 @@ let eu = (e, t) => {
                 showOnlyUnicode: eP = !1,
                 showAddEmojiButton: eD = !1,
             } = e,
-            { onFocus: ew, onKeyDown: ex, autoFocus: eL = !0, accessory: eM } = ev,
-            ek = (0, u.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
+            { onFocus: ew, onKeyDown: eL, autoFocus: ex = !0, accessory: eM } = ev,
+            ek = (0, u.e7)([L.ZP], () => (null != f ? L.ZP.getDefaultChannel(f) : null), [f]),
             [ej, eU] = i.useState(null),
             eG = i.useRef(""),
             eB = (0, S.Iu)((e) => e.searchQuery),
@@ -297,7 +297,7 @@ let eu = (e, t) => {
         null == c && null != ek && (c = ek);
         let eH = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
             [eY, eW] = i.useState(!1),
-            eK = L.default.getCurrentUser(),
+            eK = x.default.getCurrentUser(),
             ez = (0, k.I5)(eK);
         i.useImperativeHandle(t, () => ({ onPickerOpen: ta }));
         let { location: eq } = (0, m.O)(),
@@ -406,7 +406,7 @@ let eu = (e, t) => {
                 isBurstReaction: eY,
             });
         ef(eu, eF),
-            e_(eu, e2, eV, eL),
+            e_(eu, e2, eV, ex),
             i.useEffect(() => {
                 eE || (0, S.ql)("");
             }, [eE]),
@@ -475,11 +475,11 @@ let eu = (e, t) => {
                 pickerIntention: l,
                 emojiListRef: eF,
                 onKeyDown: (e) => {
-                    null == td || td(e), null == ex || ex(e);
+                    null == td || td(e), null == eL || eL(e);
                 },
                 searchBarRef: eV,
                 onFocus: ew,
-                autoFocus: eL,
+                autoFocus: ex,
                 accessory: eM,
                 headerClassName: ey,
                 diversitySurrogate: e2,

@@ -4,7 +4,7 @@ var a = n(54381),
     r = n.n(l),
     i = n(481060),
     s = n(981631),
-    o = n(492938);
+    o = n(678006);
 let c = (e) => {
     let { showStatus: t, width: n, opacity: l, size: c = "default" } = e,
         d = "small" === c ? i.EFr.SIZE_24 : i.EFr.SIZE_32;

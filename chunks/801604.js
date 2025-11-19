@@ -18,9 +18,9 @@ var i = n(120356),
     x = n(396678),
     v = n(37113),
     j = n(65154),
-    b = n(604415),
-    S = n(388032),
-    y = n(214795);
+    S = n(266734),
+    b = n(388032),
+    y = n(460255);
 function C() {
     return (0, r.jsx)("span", {
         className: y.ellipsis,
@@ -55,31 +55,31 @@ function O(e) {
 }
 function w() {
     var e, t, n, i;
-    let [{ preset: c, resolution: d, fps: _, muteStreamAudio: w, selectedSource: P, sourceType: T, audioSourceId: Z }] =
+    let [{ preset: c, resolution: d, fps: _, muteStreamAudio: w, selectedSource: P, sourceType: Z, audioSourceId: I }] =
             (0, g.E_)(),
-        [I, E] = (0, u.Ls)(j.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
-        N = I.concat(E),
-        [R, A] = null != (n = (0, x.Z)(c)) ? n : [d, _],
+        [E, T] = (0, u.Ls)(j.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
+        N = E.concat(T),
+        [A, R] = null != (n = (0, x.Z)(c)) ? n : [d, _],
         M = (0, h.L)(c),
-        k = (0, m.M)(R),
-        D = T === s.vA.CAMERA,
-        B = null != P,
-        L = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
+        k = (0, m.M)(A),
+        D = Z === s.vA.CAMERA,
+        L = null != P,
+        B = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
         G = c === v.ApplicationStreamPresets.PRESET_AUTO,
-        U = B
+        U = L
             ? void 0
             : c === v.ApplicationStreamPresets.PRESET_VIDEO
-              ? S.intl.string(b.default.MuHUFe)
+              ? b.intl.string(S.default.MuHUFe)
               : c === v.ApplicationStreamPresets.PRESET_DOCUMENTS
-                ? S.intl.string(b.default.y0JuYR)
+                ? b.intl.string(S.default.y0JuYR)
                 : c === v.ApplicationStreamPresets.PRESET_AUTO
-                  ? S.intl.string(b.default.m4jtlc)
+                  ? b.intl.string(S.default.m4jtlc)
                   : void 0,
         F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
     return (0, r.jsxs)("div", {
         className: y.root,
         children: [
-            B && (0, r.jsx)(O, { source: P }),
+            L && (0, r.jsx)(O, { source: P }),
             (0, r.jsxs)("div", {
                 className: y.summary,
                 children: [
@@ -87,10 +87,10 @@ function w() {
                         className: y.sourceOrPresetName,
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: B
+                        children: L
                             ? null != (i = null == P ? void 0 : P.name)
                                 ? i
-                                : S.intl.string(b.default["hJMA+x"])
+                                : b.intl.string(S.default["hJMA+x"])
                             : M,
                     }),
                     (0, r.jsxs)(a.Text, {
@@ -98,7 +98,7 @@ function w() {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
-                            B &&
+                            L &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)("span", {
@@ -122,7 +122,7 @@ function w() {
                                         (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: k }),
                                         (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: "".concat(A, "fps") }),
+                                        (0, r.jsx)("span", { children: "".concat(R, "fps") }),
                                     ],
                                 }),
                             w &&
@@ -137,18 +137,18 @@ function w() {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                S.intl.string(b.default.FzMGWR),
+                                                b.intl.string(S.default.FzMGWR),
                                             ],
                                         }),
                                     ],
                                 }),
                             !w &&
-                                !L &&
+                                !B &&
                                 F &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), S.intl.string(b.default["n9/rUq"])],
+                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUq"])],
                                 }),
-                            L
+                            B
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(C, {}),
@@ -157,7 +157,7 @@ function w() {
                                                   null ==
                                                   (t = N.find((e) => {
                                                       let { id: t } = e;
-                                                      return Z === t;
+                                                      return I === t;
                                                   }))
                                                       ? void 0
                                                       : t.name,

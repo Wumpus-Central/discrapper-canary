@@ -9,7 +9,7 @@ n.d(t, {
     Un: () => I,
     X: () => b,
     YW: () => _,
-    a4: () => L,
+    a4: () => x,
     ae: () => A,
     b3: () => g,
     cf: () => P,
@@ -20,8 +20,8 @@ n.d(t, {
     l7: () => O,
     md: () => E,
     qm: () => p,
-    rZ: () => k,
-    t9: () => j,
+    rZ: () => j,
+    t9: () => k,
     yZ: () => C,
     yx: () => h,
     zz: () => T,
@@ -192,8 +192,8 @@ let w = new Set([
         o.ABu.LEAGUE_OF_LEGENDS,
         o.ABu.SKYPE,
     ]),
-    x = Object.values(o.ABu).filter((e) => !w.has(e));
-function L(e) {
+    L = Object.values(o.ABu).filter((e) => !w.has(e));
+function x(e) {
     return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
 }
 function M(e) {
@@ -210,7 +210,7 @@ function M(e) {
             }
           : null;
 }
-function j(e) {
+function k(e) {
     let t = [];
     return (
         0 !== e.connection_type && 1 !== e.connection_type
@@ -221,7 +221,7 @@ function j(e) {
                   : 1 === e.connection_type &&
                     ((0, a.Ew)(e.provider_id)
                         ? t.push("Platform ID is required for platform connections")
-                        : x.includes(e.provider_id) || t.push("Invalid platform ID"),
+                        : L.includes(e.provider_id) || t.push("Invalid platform ID"),
                     (0, a.Ew)(e.application_id) || t.push("Application ID not allowed for platform connections")),
               null != e.description &&
                   e.description.length > m &&
@@ -229,13 +229,13 @@ function j(e) {
         t
     );
 }
-function k(e) {
+function j(e) {
     let t = [],
         n = new Set();
     for (let [r, i] of e.entries()) {
-        let e = j(i);
+        let e = k(i);
         t.push(...e.map((e) => "Connection ".concat(r + 1, ": ").concat(e)));
-        let a = L(i);
+        let a = x(i);
         n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
     }
     return t;

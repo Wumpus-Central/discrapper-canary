@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => ea,
-    f: () => L,
+    f: () => x,
 }),
     n(539854),
     n(388685),
@@ -70,24 +70,24 @@ let D = (e) => +!!(0, u.Z)(e);
 function w(e, t) {
     return D(t) - D(e);
 }
-function x(e, t) {
+function L(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
-function L(e, t) {
-    return P(e, t) || w(e, t) || x(e, t);
+function x(e, t) {
+    return P(e, t) || w(e, t) || L(e, t);
 }
 function M(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
     for (let r of e) r.type === E.IIU.PLAYING ? n.push(r) : t.push(r);
-    return n.length <= 1 ? e : [...t, [...n].sort(L)[0]].sort(L);
+    return n.length <= 1 ? e : [...t, [...n].sort(x)[0]].sort(x);
 }
-function j(e, t) {
+function k(e, t) {
     (I[e] = t), (T[e] = M(t));
 }
-function k(e) {
+function j(e) {
     delete I[e], delete T[e];
 }
 function U(e, t) {
@@ -121,7 +121,7 @@ function U(e, t) {
     };
 }
 function G(e) {
-    if ((delete v[e], k(e), delete S[e], delete A[e], null == O[e])) return;
+    if ((delete v[e], j(e), delete S[e], delete A[e], null == O[e])) return;
     let t = Object.values(O[e]),
         n = t.reduce((e, t) => {
             let n = t.processedAtTimestamp,
@@ -132,7 +132,7 @@ function G(e) {
         }, t[0]);
     n.status !== E.Skl.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
         ? ((v[e] = n.status),
-          j(e, n.activities),
+          k(e, n.activities),
           (S[e] = B(
               Object.values(t).flatMap((e) => {
                   var t;
@@ -173,7 +173,7 @@ function Z(e) {
     if (n.status !== E.Skl.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)) {
         var r;
         (v[e] = n.status),
-            j(e, n.activities),
+            k(e, n.activities),
             (S[e] = null != (r = n.hiddenActivities) ? r : []),
             null != n.clientStatus && (A[e] = n.clientStatus);
     }
@@ -204,7 +204,7 @@ function F(e) {
             processedAtTimestamp: l,
         };
     else {
-        let { visible: e, hidden: c } = U(o.length > 1 ? [...o].sort(L) : o, n),
+        let { visible: e, hidden: c } = U(o.length > 1 ? [...o].sort(x) : o, n),
             d = B([...(null != s ? s : []), ...c]),
             f = u[t];
         (o = null != f && a()(f.activities, e) ? f.activities : e),
@@ -244,7 +244,7 @@ function V(e) {
             processedAtTimestamp: s,
         };
     else {
-        let { visible: e, hidden: l } = U(a.length > 1 ? [...a].sort(L) : a, n),
+        let { visible: e, hidden: l } = U(a.length > 1 ? [...a].sort(x) : a, n),
             u = B([...(null != o ? o : []), ...l]);
         c[t] = {
             status: r,
@@ -438,7 +438,7 @@ function et(e) {
 function en(e) {
     let t = m.default.getId();
     if (v[t] === e.status && I[t] === e.activities && S[t] === e.hiddenActivities) return !1;
-    (v[t] = e.status), j(t, [...e.activities].sort(L)), (S[t] = [...e.hiddenActivities].sort(L)), delete C[t];
+    (v[t] = e.status), k(t, [...e.activities].sort(x)), (S[t] = [...e.hiddenActivities].sort(x)), delete C[t];
 }
 function er(e) {
     let { userId: t, metadata: n } = e;
@@ -449,7 +449,7 @@ class ei extends (r = l.ZP.Store) {
         this.waitFor(m.default, d.Z, g.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (v[m.default.getId()] = e), j(m.default.getId(), [...t].sort(L));
+        (v[m.default.getId()] = e), k(m.default.getId(), [...t].sort(x));
     }
     getStatus(e) {
         var t, n;

@@ -1,5 +1,5 @@
 n.d(t, { Z: () => m });
-var r = n(647438),
+var r = n(473749),
     i = n(392711),
     l = n.n(i),
     a = n(772848),
@@ -89,7 +89,7 @@ function m(e, t, n) {
             },
             [e, t, n, m],
         ),
-        v = r.useCallback(
+        b = r.useCallback(
             (r, a, o) => {
                 p.cancel(),
                     (0, c.Df)(t, n, i.current),
@@ -109,14 +109,14 @@ function m(e, t, n) {
             },
             [t, n, e],
         ),
-        b = r.useCallback((e, t, n) => g(e, t, n), [g]);
+        v = r.useCallback((e, t, n) => g(e, t, n), [g]);
     return r.useMemo(
         () => ({
             handleMouseDown: _,
             handleMouseMove: g,
-            handleMouseUp: v,
-            handleMouseEnter: b,
+            handleMouseUp: b,
+            handleMouseEnter: v,
         }),
-        [_, b, g, v],
+        [_, v, g, b],
     );
 }

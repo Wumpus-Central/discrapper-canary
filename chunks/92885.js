@@ -1,4 +1,4 @@
-n.d(e, { D: () => d });
+n.d(e, { D: () => T });
 var i = n(512722),
     l = n.n(i),
     u = n(442837),
@@ -9,7 +9,7 @@ var i = n(512722),
     c = n(313789),
     E = n(871465),
     S = n(388032);
-let d = (0, s.qs)(c.n.NOTIFICATION_HOLIDAY_SOUNDPACK, {
+let T = (0, s.qs)(c.n.NOTIFICATION_HOLIDAY_SOUNDPACK, {
     useTitle: () => {
         let t = r.Z.useHolidaySoundpack();
         return null == t ? "" : S.intl.format(S.t["E/OyBr"], { soundpack: S.intl.string(t.soundpackLabel) });

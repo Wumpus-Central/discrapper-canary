@@ -1,13 +1,13 @@
 n.d(t, {
     O1: () => eA,
     Sg: () => eT,
-    TE: () => ex,
+    TE: () => eL,
     ZP: () => eB,
     aT: () => ej,
     ae: () => eS,
     bL: () => eI,
     hJ: () => eN,
-    iV: () => eL,
+    iV: () => ex,
     jx: () => eP,
     oR: () => ew,
     qz: () => eD,
@@ -47,8 +47,8 @@ var r = n(54381),
     P = n(805680),
     D = n(368844),
     w = n(41776),
-    x = n(657871),
-    L = n(849522),
+    L = n(657871),
+    x = n(849522),
     M = n(780291),
     k = n(328908),
     j = n(913663),
@@ -82,7 +82,7 @@ var r = n(54381),
     ed = n(981631),
     ef = n(761652),
     e_ = n(957825),
-    ep = n(564355);
+    ep = n(744114);
 function eh(e, t, n) {
     return (
         t in e
@@ -166,7 +166,7 @@ function eI(e, t, a, o, s) {
                                 n.e("90508"),
                                 n.e("22173"),
                                 n.e("95546"),
-                                n.e("48890"),
+                                n.e("44576"),
                             ]).then(n.bind(n, 273602));
                             return (t) =>
                                 (0, r.jsx)(
@@ -361,7 +361,7 @@ function ew(e) {
         ),
     };
 }
-function ex(e, t, n, r) {
+function eL(e, t, n, r) {
     let i = e.getGuildId(),
         a = (0, _.e7)([w.Z], () => null != i && w.Z.isLurking(i), [i]),
         o = (0, _.e7)([F.ZP, K.default], () => {
@@ -403,7 +403,7 @@ function ex(e, t, n, r) {
         s,
     );
 }
-function eL(e, t) {
+function ex(e, t) {
     let [n, r] = (0, R.Iu)((e) => [e.activeView, e.activeViewType], u.X),
         a = (0, _.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
     i.useEffect(
@@ -479,7 +479,7 @@ function ek(e, t) {
     );
 }
 let ej = (e) => {
-        let { enabled: t, onlyExactMatch: n } = (0, x.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: t, onlyExactMatch: n } = (0, L.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [r, a] = i.useState(!0),
             o = i.useRef(null);
         return (
@@ -496,7 +496,7 @@ let ej = (e) => {
         );
     },
     eU = () => {
-        let { enabled: e } = (0, x.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: e } = (0, L.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [t, n] = i.useState(null);
         return {
             currentAutocompleteType: t,
@@ -518,7 +518,7 @@ function eG(e, t) {
         editorClassName: R,
         id: D,
         required: w,
-        disabled: x,
+        disabled: L,
         placeholder: k,
         accessibilityLabel: j,
         channel: U,
@@ -584,11 +584,11 @@ function eG(e, t) {
             canAttachFiles: te,
             canCreateThreads: tt,
             canEveryoneSendMessages: tn,
-        } = ex(U, G, e5, x),
+        } = eL(U, G, e5, L),
         tr = G.toolbarType === ee.OW.STATIC,
         ti = !Z.dN.useSetting() && !(0, Q.isAndroidWeb)() && null != window.ResizeObserver,
         ta = !ti || !(null == (n = G.commands) ? void 0 : n.enabled) || !B || f !== ef.GI,
-        to = (0, L.Z)(),
+        to = (0, x.Z)(),
         { fontSize: ts } = (0, _.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
         tl = (0, _.e7)([Y.Z], () => Y.Z.isEnabled());
     eN(G, e9);
@@ -625,10 +625,10 @@ function eG(e, t) {
         }, []),
         { editorHeight: tT, handleResize: tS } = ew(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = eM(tm, eQ, ta),
-        { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tD } = eL(G, e$),
+        { expressionPickerView: tR, shouldHideExpressionPicker: tP, handleOuterClick: tD } = ex(G, e$),
         tw = ek(tc, e$),
-        tx = ej(f),
-        { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tM } = eU(),
+        tL = ej(f),
+        { currentAutocompleteType: tx, handleAutocompleteVisibilityChange: tM } = eU(),
         { moveAppsEntrypointToOverflow: tk } = $.n.useConfig({ location: "ChannelAppLauncher" }),
         tj = (0, S.Z)({ type: G });
     (0, J.S)(tc, U.guild_id, U.id);
@@ -784,8 +784,8 @@ function eG(e, t) {
                                                 fontSize: ts,
                                                 spellcheckEnabled: tl,
                                                 canOnlyUseTextCommands: tU,
-                                                isEditorIdle: tx,
-                                                currentAutocompleteType: tL,
+                                                isEditorIdle: tL,
+                                                currentAutocompleteType: tx,
                                                 className: o()(
                                                     {
                                                         [ep.textAreaThreadCreation]: G === ee.Ie.THREAD_CREATION,
@@ -822,7 +822,7 @@ function eG(e, t) {
                             canSendSoundmoji: null == (u = G.soundmoji) ? void 0 : u.allowSending,
                             textValue: f,
                             focused: B,
-                            isEditorIdle: tx,
+                            isEditorIdle: tL,
                             expressionPickerView: tR,
                             type: G,
                             targetRef: eX,

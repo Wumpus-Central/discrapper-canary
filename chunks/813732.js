@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(580130),
     x = n(626135),
     M = n(63063),
-    j = n(74538),
-    k = n(695349),
+    k = n(74538),
+    j = n(695349),
     U = n(391077),
     G = n(639056),
     B = n(52164),
@@ -74,7 +74,7 @@ function q() {
             label: W.intl.string(W.t["2GKrvn"]),
             description: W.intl.string(W.t.kNEjGm),
             children:
-                null != e && j.ZP.hasAccountCredit(e)
+                null != e && k.ZP.hasAccountCredit(e)
                     ? (0, r.jsx)(G.Z, {
                           className: K.accountCredit,
                           entitlements: e,
@@ -126,14 +126,14 @@ let J = function () {
             var e, t;
             return null != (t = null == (e = w.Z.getActiveApplicationSubscriptions()) ? void 0 : e.length) ? t : 0;
         }),
-        j = (0, s.e7)([w.Z], () => {
+        k = (0, s.e7)([w.Z], () => {
             var e;
             return Object.values(null != (e = w.Z.getSubscriptions()) ? e : {})
                 .filter((e) => e.type === V.NYc.GUILD)
                 .filter((e) => e.status !== V.O0b.ENDED).length;
         }),
         U = (0, m.Z)({ forceFetch: !0 }),
-        G = (0, k.W)(),
+        G = (0, j.W)(),
         W = null !== e ? e.currentPeriodEnd : void 0,
         z =
             !(G && !(U.unactivatedUnits.length > 0)) &&
@@ -175,12 +175,12 @@ let J = function () {
                                   setting: Y.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, r.jsx)(q, {}),
                               }),
-                              j > 0 &&
+                              k > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(Q, {}),
                                           (0, r.jsx)(O.Z, {
-                                              count: j,
+                                              count: k,
                                               onClickManageSubscription: () =>
                                                   (0, C.openUserSettings)(A.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,

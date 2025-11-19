@@ -31,8 +31,8 @@ function y(e) {
     let [N, R] = i.useState(C),
         P = (0, l.iE)(),
         D = (0, l.yX)(),
-        [w, x] = i.useState(),
-        [L, M] = i.useState(
+        [w, L] = i.useState(),
+        [x, M] = i.useState(
             t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? p.intl.string(p.t.ZkOo1U) : c,
         ),
         [k, j] = i.useState(void 0),
@@ -73,7 +73,7 @@ function y(e) {
             setSoundEffect: j,
             emojiConfetti: U,
             setEmojiConfetti: G,
-            customGiftMessage: L,
+            customGiftMessage: x,
             setCustomGiftMessage: M,
             selectedGiftStyle: N,
             setSelectedGiftStyle: R,
@@ -86,7 +86,7 @@ function y(e) {
             claimableRewards: P,
             claimableVariants: D,
             selectedGiftingPromotionReward: w,
-            setSelectedGiftingPromotionReward: x,
+            setSelectedGiftingPromotionReward: L,
         },
         children: E,
     });

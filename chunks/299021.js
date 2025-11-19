@@ -114,17 +114,17 @@ let O = [c.Cm.User],
     P = 2,
     D = 604800000,
     w = {},
-    x = {};
-function L(e) {
-    let t = x[e];
-    return null == t && ((t = a().v3(e)), (x[e] = t)), t;
+    L = {};
+function x(e) {
+    let t = L[e];
+    return null == t && ((t = a().v3(e)), (L[e] = t)), t;
 }
 class M extends (r = o.ZP.PersistedStore) {
     loadStoredState(e, t) {
         for (let n in (null != e && 1 === e.version && ((T = e.clientOverrides), (v = e.evaluatedExperiments)),
         (S = {}),
         t)) {
-            let e = L(n),
+            let e = x(n),
                 r = t[n];
             S[n] = {
                 hashedName: e,
@@ -171,7 +171,7 @@ class M extends (r = o.ZP.PersistedStore) {
     createOverride(e, t) {
         (T = p(f({}, T), {
             [e]: {
-                hashedName: L(e),
+                hashedName: x(e),
                 variantId: t,
                 isOverride: !0,
             },
@@ -209,7 +209,7 @@ class M extends (r = o.ZP.PersistedStore) {
         return null != i ? i : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let r = L(n),
+        let r = x(n),
             i = v[e][t];
         if (null != i) return i.assignments[r];
     }
@@ -222,10 +222,10 @@ class M extends (r = o.ZP.PersistedStore) {
         let i = null != (r = T[n]) ? r : S[n];
         if (null != i) return [void 0, i];
         let a = v[e][t];
-        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[L(n)]];
+        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[x(n)]];
     }
     trackExperimentExposure(e, t, n, r, i, a) {
-        let o = L("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
+        let o = x("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
         this.shouldTrackExposure(o) &&
             "user" === r &&
             (this.track(
@@ -244,7 +244,7 @@ class M extends (r = o.ZP.PersistedStore) {
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds("user")) {
-            let n = L("".concat(t, "|").concat(e));
+            let n = x("".concat(t, "|").concat(e));
             this.shouldTrackExposure(n) &&
                 (this.track(
                     u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
@@ -329,7 +329,7 @@ class M extends (r = o.ZP.PersistedStore) {
         w = {};
     }
     getHash(e) {
-        return L(e);
+        return x(e);
     }
     handleFetchStart(e) {
         C.add(e);

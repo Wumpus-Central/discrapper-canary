@@ -1,18 +1,18 @@
-a.d(e, { r: () => _ });
-var r = a(101284);
-let _ = (0, a(151122)._I)(() => {
-    let t = 1000 * (0, r.ph)();
+_.d(e, { r: () => r });
+var a = _(101284);
+let r = (0, _(151122)._I)(() => {
+    let t = 1000 * (0, a.ph)();
     return {
         name: "SessionTiming",
         processEvent(e) {
-            let a = 1000 * (0, r.ph)();
+            let _ = 1000 * (0, a.ph)();
             return {
                 ...e,
                 extra: {
                     ...e.extra,
                     "session:start": t,
-                    "session:duration": a - t,
-                    "session:end": a,
+                    "session:duration": _ - t,
+                    "session:end": _,
                 },
             };
         },

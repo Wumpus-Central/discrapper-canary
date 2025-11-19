@@ -27,26 +27,26 @@ var r = n(54381),
     x = n(509212),
     v = n(569984),
     j = n(977156),
-    b = n(28798),
-    S = n(131951),
+    S = n(28798),
+    b = n(131951),
     y = n(449224),
     C = n(358085),
     O = n(463727),
     w = n(855403),
     P = n(299570),
-    T = n(960861),
-    Z = n(59468),
-    I = n(989941),
-    E = n(39540),
+    Z = n(960861),
+    I = n(59468),
+    E = n(989941),
+    T = n(39540),
     N = n(958707),
-    R = n(152165),
-    A = n(133179),
+    A = n(152165),
+    R = n(133179),
     M = n(70722),
     k = n(761274),
     D = n(46140),
-    B = n(65154),
-    L = n(388032),
-    G = n(336606);
+    L = n(65154),
+    B = n(388032),
+    G = n(613098);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function U(e) {
     return e;
 }
 function F(e, t, n, r) {
-    let i = (0, C.isWindows)() ? (0, I.Z)(_.ZP, y.Z) : null,
+    let i = (0, C.isWindows)() ? (0, E.Z)(_.ZP, y.Z) : null,
         l = _.ZP.getRunningGames(),
         s = null == n ? void 0 : n.split(":")[1],
         o = e.id.split(":")[1];
@@ -109,14 +109,14 @@ function H(e, t, n) {
 function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        o = S.Z.supports(B.AN.GO_LIVE_HARDWARE),
+        o = b.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
         [x, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
-        [P, T] = i.useState(c.vA.WINDOW),
-        [I, E] = i.useState(!1),
-        R = i.useRef(null),
+        [P, Z] = i.useState(c.vA.WINDOW),
+        [E, T] = i.useState(!1),
+        A = i.useRef(null),
         M = i.useRef(new u.Xp()),
         D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
         U = H(
@@ -136,7 +136,7 @@ function W(e) {
     i.useEffect(() => {
         let e = M.current;
         return (
-            (0, Z.t)({
+            (0, I.t)({
                 width: 176,
                 height: 99,
             }).then((e) => {
@@ -148,7 +148,7 @@ function W(e) {
                     screenSources: e,
                     windowSources: t,
                     cameraSources: n,
-                } = await (0, Z.t)({
+                } = await (0, I.t)({
                     width: 176,
                     height: 99,
                 });
@@ -160,7 +160,7 @@ function W(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((R.current = e), E(!e.isScrolledToTop()));
+            null !== e && ((A.current = e), T(!e.isScrolledToTop()));
         }, []),
         [V, J] = i.useState(void 0);
     i.useEffect(() => {
@@ -182,7 +182,7 @@ function W(e) {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: [L.intl.string(L.t["kW5h/W"]), (0, r.jsx)("br", {}), L.intl.string(L.t["5Jvu1R"])],
+                  children: [B.intl.string(B.t["kW5h/W"]), (0, r.jsx)("br", {}), B.intl.string(B.t["5Jvu1R"])],
               })
             : (0, r.jsx)(h.Z, {
                   className: G.spinner,
@@ -199,7 +199,7 @@ function W(e) {
                 className: s()(G.tile, { [G.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    A.Z,
+                    R.Z,
                     {
                         source: e,
                         selectedSource: t,
@@ -215,16 +215,16 @@ function W(e) {
             (0, r.jsxs)("div", {
                 className: G.segmentContainer,
                 children: [
-                    (0, r.jsx)(N.Z, { separator: I }),
+                    (0, r.jsx)(N.Z, { separator: E }),
                     (0, r.jsx)(f.sY7, {
                         options: (function () {
                             let e = [
                                 {
-                                    name: L.intl.string(L.t.tHoi7u),
+                                    name: B.intl.string(B.t.tHoi7u),
                                     value: c.vA.WINDOW,
                                 },
                                 {
-                                    name: L.intl.string(L.t["/iX8uz"]),
+                                    name: B.intl.string(B.t["/iX8uz"]),
                                     value: c.vA.SCREEN,
                                 },
                             ];
@@ -233,7 +233,7 @@ function W(e) {
                                     o &&
                                     w &&
                                     e.push({
-                                        name: L.intl.string(L.t.cWt5Up),
+                                        name: B.intl.string(B.t.cWt5Up),
                                         value: c.vA.CAMERA,
                                     }),
                                 e
@@ -242,7 +242,7 @@ function W(e) {
                         value: P,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return T(t);
+                            return Z(t);
                         },
                         className: G.segmentControl,
                         optionClassName: G.segmentControlOption,
@@ -253,11 +253,11 @@ function W(e) {
                 ref: z,
                 className: G.sourceScroller,
                 onScroll: function () {
-                    let e = R.current;
-                    null != e && E(!e.isScrolledToTop());
+                    let e = A.current;
+                    null != e && T(!e.isScrolledToTop());
                 },
                 children: [
-                    P === c.vA.WINDOW && null != U && (0, r.jsx)(b.Z, { quest: U.quest }),
+                    P === c.vA.WINDOW && null != U && (0, r.jsx)(S.Z, { quest: U.quest }),
                     (0, r.jsx)(m.Z, {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
@@ -274,7 +274,7 @@ function z(e) {
         n = i.useCallback(() => {
             t({
                 id: "prepicked:",
-                name: L.intl.string(L.t.KKcy95),
+                name: B.intl.string(B.t.KKcy95),
                 url: "",
             });
         }, [t]);
@@ -287,11 +287,11 @@ function z(e) {
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(A.Z, { className: G.nativeSourceSingleTypeImage }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
-                    children: L.intl.string(L.t.Yp6h5W),
+                    children: B.intl.string(B.t.Yp6h5W),
                 }),
             ],
         }),
@@ -333,7 +333,7 @@ function J(e) {
     i.useEffect(() => {
         let e = h.current,
             t = () => {
-                let e = Object.entries(S.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(b.Z.getVideoDevices()).filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
                 });
@@ -390,7 +390,7 @@ function J(e) {
         j = i.useCallback(() => {
             v(!x);
         }, [x]),
-        b = _
+        S = _
             ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
@@ -398,23 +398,23 @@ function J(e) {
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "screen",
-                          name: L.intl.string(L.t.R4wpLN),
-                          text: L.intl.string(L.t.cVUFXY),
+                          name: B.intl.string(B.t.R4wpLN),
+                          text: B.intl.string(B.t.cVUFXY),
                           icon: f.pzj,
                       }),
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "window",
-                          name: L.intl.string(L.t["+SLJCh"]),
-                          text: L.intl.string(L.t.dG2A1E),
+                          name: B.intl.string(B.t["+SLJCh"]),
+                          text: B.intl.string(B.t.dG2A1E),
                           icon: f.GON,
                       }),
                       g
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
                                 id: "app",
-                                name: L.intl.string(L.t.ct7AKQ),
-                                text: L.intl.string(L.t["8lQwf8"]),
+                                name: B.intl.string(B.t.ct7AKQ),
+                                text: B.intl.string(B.t["8lQwf8"]),
                                 icon: f.gw7,
                             })
                           : null,
@@ -427,9 +427,9 @@ function J(e) {
                 className: G.nativePickerLabel,
                 variant: "text-md/semibold",
                 color: "interactive-normal",
-                children: L.intl.string(L.t.XyYoFc),
+                children: B.intl.string(B.t.XyYoFc),
             }),
-            b,
+            S,
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
@@ -443,7 +443,7 @@ function J(e) {
                                       className: G.nativeCaptureDevicesText,
                                       variant: "text-md/semibold",
                                       color: "interactive-normal",
-                                      children: L.intl.string(L.t.rO0Vix),
+                                      children: B.intl.string(B.t.rO0Vix),
                                   }),
                                   (0, r.jsx)(f.CJ0, {
                                       size: "sm",
@@ -474,7 +474,7 @@ function J(e) {
 }
 function X(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: l } = e,
-        { lastPickerAction: s, lastPickerError: o } = (0, E.Z)(t, n);
+        { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
         i.useEffect(() => {
             (0, C.isLinux)() ||
@@ -482,14 +482,14 @@ function X(e) {
                 ? (0, P.T)(l)
                 : (0, P.t)();
         }, [l]),
-        s === T.Uc.Error
+        s === Z.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: null != o && o.length > 0 ? o : L.intl.string(L.t.CKsXk3),
+                  children: null != o && o.length > 0 ? o : B.intl.string(B.t.CKsXk3),
               })
-            : (0, r.jsx)(R.Z, {
+            : (0, r.jsx)(A.Z, {
                   animated: !0,
                   className: G.nativePickerGuide,
               })

@@ -1,49 +1,96 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(846519),
-    c = n(681715),
-    s = n(481060),
-    u = n(393238),
-    d = n(493773),
-    f = n(569545),
-    p = n(687516),
-    m = n(937995),
-    _ = n(158776),
-    g = n(626135),
-    v = n(823789),
-    b = n(352978),
-    E = n(981631),
-    h = n(388032),
-    y = n(412418),
-    S = n(174260);
-function O(e, t, n) {
-    let r = null,
-        i = null;
-    if (null != n && (0, f.DB)(n)) {
-        var l, a;
-        let e = (0, f.my)(n),
-            t = (0, p.L2)(e, _.Z);
-        (r = null != (l = null == t ? void 0 : t.name) ? l : null),
-            (i = null != (a = null == t ? void 0 : t.id) ? a : null);
+    o = n(392711),
+    c = n(636606),
+    s = n(846519),
+    u = n(681715),
+    d = n(481060),
+    f = n(393238),
+    p = n(493773),
+    m = n(569545),
+    _ = n(687516),
+    g = n(937995),
+    b = n(158776),
+    v = n(626135),
+    E = n(823789),
+    h = n(352978),
+    y = n(981631),
+    S = n(388032),
+    O = n(980584),
+    C = n(326242);
+function w(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
+            });
     }
-    g.default.track(E.rMx.VIDEO_STREAM_ZOOM_CHANGED, {
-        zoom_level: e,
-        method: t,
-        share_application_name: r,
-        share_application_id: i,
-    });
+    return e;
 }
-function C(e, t, n) {
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let P = {
+        x: 0,
+        y: 0,
+    },
+    j = (0, o.debounce)((e, t, n) => {
+        let r = null,
+            i = null;
+        if (null != n && (0, m.DB)(n)) {
+            var l, a;
+            let e = (0, m.my)(n),
+                t = (0, _.L2)(e, b.Z);
+            (r = null != (l = null == t ? void 0 : t.name) ? l : null),
+                (i = null != (a = null == t ? void 0 : t.id) ? a : null);
+        }
+        v.default.track(y.rMx.VIDEO_STREAM_ZOOM_CHANGED, {
+            zoom_level: e,
+            method: t,
+            share_application_name: r,
+            share_application_id: i,
+        });
+    }, 2000);
+function x(e, t, n) {
     return Math.min(Math.max(t, e), n);
 }
-let I = i.memo(function (e) {
-    var t,
-        n,
-        { enableZoom: l = !1, initialZoomLevel: f = 1, minZoom: p = 1, maxZoom: _ = 5, idle: g = !1 } = e,
-        E = (function (e, t) {
+let Z = i.memo(function (e) {
+    var { enableZoom: t = !1, minZoom: n = 1, maxZoom: l = 5, controlsBottom: o = 8, idle: m = !1 } = e,
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,217 +110,234 @@ let I = i.memo(function (e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["enableZoom", "initialZoomLevel", "minZoom", "maxZoom", "idle"]);
-    let { streamId: I, streamKey: w, onResize: P, wrapperClassName: j, videoComponent: x, mirror: Z, paused: R } = E,
-        { onActive: T, onPreventIdle: A, onAllowIdle: N } = i.useContext(m.nM),
-        [D, M] = i.useState(!1),
-        [k, L] = i.useState(null),
+        })(e, ["enableZoom", "minZoom", "maxZoom", "controlsBottom", "idle"]);
+    let { streamId: b, streamKey: v, onResize: y, wrapperClassName: Z, videoComponent: R, mirror: T, paused: A } = _,
+        { onActive: N, onPreventIdle: D, onAllowIdle: M } = i.useContext(g.nM),
+        [k, L] = i.useState(!1),
         [F, V] = i.useState(null),
-        [U, z] = i.useState(0),
-        [W, H] = i.useState({
-            x: 0,
-            y: 0,
-        }),
-        [B, Y] = i.useState(null),
-        [q, G] = i.useState(null),
-        [K, Q] = i.useState(!1),
-        [X, J] = i.useState(C(f, p, _)),
-        [$, ee] = i.useState(!1),
-        [et, en] = i.useState(16 / 9),
+        [U, z] = i.useState(null),
+        [W, H] = i.useState(0),
+        [B, q] = i.useState(P),
+        [Y, K] = i.useState(null),
+        [G, Q] = i.useState(null),
+        [X, J] = i.useState(!1),
+        [$, ee] = i.useState(n),
+        [et, en] = i.useState(!1),
         [er, ei] = i.useState(!1),
-        el = i.useRef(new o.V7()),
-        ea = i.useRef(new o.V7()),
-        eo = i.useRef(null),
-        ec = i.useRef(null),
-        es = i.useRef(null),
-        eu = 1 !== X,
-        ed = i.useCallback(
-            (e) => {
-                e.width > 0 && e.height > 0 && en(e.width / e.height), null == P || P(e);
+        [el, ea] = i.useState(16 / 9),
+        [eo, ec] = i.useState(!1),
+        [es, eu] = i.useState(!1),
+        ed = i.useRef(new s.V7()),
+        ef = i.useRef(new s.V7()),
+        ep = i.useRef(new s.V7()),
+        em = i.useRef(new s.V7()),
+        e_ = i.useRef(null),
+        eg = i.useRef(null),
+        eb = i.useRef(null),
+        ev = (0, d.q_F)(
+            {
+                value: o,
+                config: I(w({}, c.config.stiff), { clamp: !0 }),
             },
-            [P],
+            "animate-always",
         ),
-        ef = i.useCallback((e) => {
-            if (null == eo.current)
-                return {
-                    x: 0,
-                    y: 0,
-                };
-            let t = eo.current.getBoundingClientRect();
+        eE = $ > n,
+        eh = i.useCallback(
+            (e) => {
+                e.width > 0 && e.height > 0 && ea(e.width / e.height), null == y || y(e);
+            },
+            [y],
+        ),
+        ey = i.useCallback((e) => {
+            if (null == e_.current) return P;
+            let t = e_.current.getBoundingClientRect();
             return {
                 x: e.clientX - t.left - t.width / 2,
                 y: e.clientY - t.top - t.height / 2,
             };
         }, []),
-        ep = i.useCallback(
-            (e, t, n) => {
-                if (null == eo.current)
-                    return {
-                        x: 0,
-                        y: 0,
-                    };
-                let r = null != n ? n : X,
-                    i = eo.current.clientWidth,
-                    l = eo.current.clientHeight,
-                    a = (i * (r - 1)) / 2,
-                    o = (l * (r - 1)) / 2;
+        eS = i.useCallback(
+            (e, t) => {
+                if (null == e_.current) return P;
+                let n = null != t ? t : $,
+                    r = e_.current.clientWidth,
+                    i = e_.current.clientHeight,
+                    l = (r * (n - 1)) / 2,
+                    a = (i * (n - 1)) / 2;
                 return {
-                    x: C(e, -a, a),
-                    y: C(t, -o, o),
+                    x: x(e.x, -l, l),
+                    y: x(e.y, -a, a),
                 };
             },
-            [X],
+            [$],
         ),
-        em = i.useCallback(
-            (e, t, n) => {
-                let r = C(X + e, p, _);
-                if (null == eo.current || null == t || r === X) return;
-                let i = r / X;
-                H((e) => ep((e.x - t.x) * i + t.x, (e.y - t.y) * i + t.y, r)), J(r), O(r, n, w);
+        eO = i.useCallback(
+            (e, t, r) => {
+                let i = x(e, n, l);
+                if (null == e_.current || null == t || i === $) return;
+                eu(!0);
+                let a = i / $;
+                q((e) =>
+                    eS(
+                        {
+                            x: (e.x - t.x) * a + t.x,
+                            y: (e.y - t.y) * a + t.y,
+                        },
+                        i,
+                    ),
+                ),
+                    ee(i),
+                    j(i, r, v),
+                    em.current.start(2000, () => {
+                        eu(!1);
+                    });
             },
-            [ep, _, p, w, X],
+            [eS, l, n, v, $],
         ),
-        e_ = i.useCallback(
+        eC = i.useCallback(
             (e) => {
-                if (!eu) return;
+                if (!eE) return;
                 e.preventDefault(), e.stopPropagation();
-                let t = ef(e);
-                M(!0), V(t), L(t), z(Date.now()), G(t), Y(W);
+                let t = ey(e);
+                L(!0), z(t), V(t), H(Date.now()), Q(t), K(B);
             },
-            [ef, eu, W],
+            [ey, eE, B],
         ),
-        eg = i.useCallback(
+        ew = i.useCallback(
             (e) => {
-                if (((l || eu) && T(), !D || !eu || null == q || null == B)) return;
+                if (((t || eE) && N(), !k || !eE || null == G || null == Y)) return;
                 e.preventDefault(), e.stopPropagation();
-                let t = ef(e),
-                    n = t.x - q.x,
-                    r = t.y - q.y;
-                H(ep(B.x + n, B.y + r)), L(t);
+                let n = ey(e),
+                    r = n.x - G.x,
+                    i = n.y - G.y;
+                q(
+                    eS({
+                        x: Y.x + r,
+                        y: Y.y + i,
+                    }),
+                ),
+                    V(n);
             },
-            [ep, q, B, l, ef, D, eu, T],
+            [eS, G, Y, t, ey, k, eE, N],
         ),
-        ev = i.useCallback((e) => {
-            e.preventDefault(), e.stopPropagation(), M(!1), G(null), Y(null);
+        eI = i.useCallback((e) => {
+            e.preventDefault(), e.stopPropagation(), L(!1), Q(null), K(null);
         }, []),
-        eb = i.useCallback(
+        eP = i.useCallback(
             (e) => {
-                if (eu && null != F && null != k) {
-                    let { x: t, y: n } = F,
-                        { x: r, y: i } = k;
-                    (Math.sqrt((r - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - U >= 500) &&
+                if (eE && null != U && null != F) {
+                    let { x: t, y: n } = U,
+                        { x: r, y: i } = F;
+                    (Math.sqrt((r - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - W >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [eu, F, U, k],
+            [eE, U, W, F],
         ),
-        eE = i.useCallback(() => {
-            M(!1), G(null), Y(null);
+        ej = i.useCallback(() => {
+            L(!1), Q(null), K(null);
         }, []),
-        eh = i.useCallback(
-            (e) => {
-                l &&
-                    (ee(!0),
-                    em(-e.deltaY / 100, ef(e), "wheel"),
-                    T(),
-                    el.current.start(100, () => {
-                        ee(!1);
-                    }));
-            },
-            [em, l, ef, T],
-        ),
-        ey = i.useCallback(
-            (e) => {
-                e.preventDefault(),
-                    e.stopPropagation(),
-                    em(
-                        0.25,
-                        {
-                            x: 0,
-                            y: 0,
-                        },
-                        "button_zoom_in",
-                    );
-            },
-            [em],
-        ),
-        eS = i.useCallback(
-            (e) => {
-                e.preventDefault(),
-                    e.stopPropagation(),
-                    em(
-                        -0.25,
-                        {
-                            x: 0,
-                            y: 0,
-                        },
-                        "button_zoom_out",
-                    );
-            },
-            [em],
-        ),
-        eO = i.useCallback(
-            (e) => {
-                e.preventDefault(),
-                    e.stopPropagation(),
-                    J(1),
-                    H({
-                        x: 0,
-                        y: 0,
-                    }),
-                    O(1, "button_reset", w);
-            },
-            [w],
-        ),
-        eC = i.useCallback(() => {
-            A("interact");
-        }, [A]),
-        eI = i.useCallback(() => {
-            Q(!1), N("interact");
-        }, [N]),
-        ew = i.useCallback((e) => {
-            e.preventDefault(), e.stopPropagation();
-        }, []),
-        eP = i.useCallback(
-            (e, t) => {
-                if (null == ec.current || null == eo.current) return;
-                let n = ec.current.getBoundingClientRect(),
-                    r = eo.current.clientWidth,
-                    i = eo.current.clientHeight,
-                    l = e - n.left,
-                    a = t - n.top,
-                    o = l / n.width;
-                H(ep((0.5 - o) * r * X, (0.5 - a / n.height) * i * X));
-            },
-            [ep, X],
-        ),
-        ej = i.useCallback(
-            (e) => {
-                e.preventDefault(), e.stopPropagation(), Q(!0), eP(e.clientX, e.clientY);
-            },
-            [eP],
-        ),
         ex = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), K && eP(e.clientX, e.clientY);
+                t &&
+                    (en(!0),
+                    eO($ - e.deltaY / 100, ey(e), "wheel"),
+                    N(),
+                    ed.current.start(100, () => {
+                        en(!1);
+                    }));
             },
-            [K, eP],
+            [t, eO, $, ey, N],
         ),
-        eZ = i.useCallback((e) => {
-            e.preventDefault(), e.stopPropagation(), Q(!1);
+        eZ = i.useCallback(
+            (e) => {
+                e.preventDefault(), e.stopPropagation(), eO($ + 0.25, P, "button");
+            },
+            [eO, $],
+        ),
+        eR = i.useCallback(
+            (e) => {
+                e.preventDefault(), e.stopPropagation(), eO($ - 0.25, P, "button");
+            },
+            [eO, $],
+        ),
+        eT = i.useCallback(
+            (e) => {
+                ei(!0),
+                    eO(e, P, "slider"),
+                    N(),
+                    ef.current.start(100, () => {
+                        ei(!1);
+                    });
+            },
+            [eO, N],
+        ),
+        eA = i.useCallback(() => {
+            D("interact");
+        }, [D]),
+        eN = i.useCallback(() => {
+            J(!1), M("interact");
+        }, [M]),
+        eD = i.useCallback((e) => {
+            e.preventDefault(), e.stopPropagation();
         }, []),
-        eR = i.useCallback((e) => {
+        eM = i.useCallback(
+            (e) => {
+                if (null == eg.current || null == e_.current) return;
+                let t = eg.current.getBoundingClientRect(),
+                    n = e_.current.clientWidth,
+                    r = e_.current.clientHeight,
+                    i = e.x - t.left,
+                    l = e.y - t.top,
+                    a = i / t.width;
+                q(
+                    eS({
+                        x: (0.5 - a) * n * $,
+                        y: (0.5 - l / t.height) * r * $,
+                    }),
+                );
+            },
+            [eS, $],
+        ),
+        ek = i.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    J(!0),
+                    eM({
+                        x: e.clientX,
+                        y: e.clientY,
+                    });
+            },
+            [eM],
+        ),
+        eL = i.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    X &&
+                        eM({
+                            x: e.clientX,
+                            y: e.clientY,
+                        });
+            },
+            [X, eM],
+        ),
+        eF = i.useCallback((e) => {
+            e.preventDefault(), e.stopPropagation(), J(!1);
+        }, []),
+        eV = i.useCallback((e) => {
             e.preventDefault(), e.stopPropagation();
         }, []);
-    (0, u.PM)(
-        eo,
+    (0, f.PM)(
+        e_,
         i.useCallback(
             (e) => {
                 let { width: t, height: n } = e;
-                if (!eu || null == t || null == n) return;
-                let r = es.current;
+                if (!eE || null == t || null == n) return;
+                let r = eb.current;
                 if (null == r) {
-                    es.current = {
+                    eb.current = {
                         width: t,
                         height: n,
                     };
@@ -281,213 +345,181 @@ let I = i.memo(function (e) {
                 }
                 let { width: i, height: l } = r;
                 (1 > Math.abs(t - i) && 1 > Math.abs(n - l)) ||
-                    (ei(!0),
-                    H((e) => {
-                        let r = (i * (X - 1)) / 2,
-                            a = (l * (X - 1)) / 2,
-                            o = (t * (X - 1)) / 2,
-                            c = (n * (X - 1)) / 2,
+                    (ec(!0),
+                    q((e) => {
+                        let r = (i * ($ - 1)) / 2,
+                            a = (l * ($ - 1)) / 2,
+                            o = (t * ($ - 1)) / 2,
+                            c = (n * ($ - 1)) / 2,
                             s = 0 !== r ? e.x / r : 0;
-                        return ep(s * o, (0 !== a ? e.y / a : 0) * c);
+                        return eS({
+                            x: s * o,
+                            y: (0 !== a ? e.y / a : 0) * c,
+                        });
                     }),
-                    (es.current = {
+                    (eb.current = {
                         width: t,
                         height: n,
                     }),
-                    ea.current.start(100, () => {
-                        ei(!1);
+                    ep.current.start(100, () => {
+                        ec(!1);
                     }));
             },
-            [ep, eu, X],
+            [eS, eE, $],
         ),
-        [eu, X],
+        [eE, $],
     ),
-        (0, d.zq)(() => {
-            el.current.stop(), ea.current.stop();
+        (0, p.zq)(() => {
+            ed.current.stop(), ef.current.stop(), ep.current.stop(), em.current.stop();
         }),
         i.useEffect(() => {
-            null != I && (0, v.N)(I, l && eu ? X : 1);
-        }, [l, eu, I, X]);
-    let eT = i.useMemo(() => {
-            let e = ep(W.x, W.y);
+            null != b && (0, E.N)(b, t && eE ? $ : 1);
+        }, [t, eE, b, $]);
+    let eU = i.useMemo(() => {
+            let e = eS(B);
             return {
-                "--custom-zoom-scale": X,
+                "--custom-zoom-scale": $,
                 "--custom-pan-x": "".concat(e.x, "px"),
                 "--custom-pan-y": "".concat(e.y, "px"),
-                "--custom-zoom-transition": D || er || $ ? "none" : "transform 0.15s ease-out",
+                "--custom-zoom-transition": k || eo || et || er ? "none" : "transform 0.15s ease-out",
             };
-        }, [ep, D, er, $, W, X]),
-        eA = i.useMemo(() => {
-            let e = 120 * Math.min(et, 32 / 9);
+        }, [eS, k, eo, et, er, B, $]),
+        ez = i.useMemo(() => {
+            let e = 120 * Math.min(el, 32 / 9);
             return {
                 "--custom-zoom-minimap-width": "".concat(e, "px"),
                 "--custom-zoom-minimap-height": "".concat(120, "px"),
             };
-        }, [et]),
-        eN = i.useMemo(() => {
-            let e = null != eo.current ? eo.current.clientWidth : 1,
-                t = null != eo.current ? eo.current.clientHeight : 1,
-                n = 1 / X,
-                r = 1 / X,
-                i = 0.5 - W.x / (e * X),
-                l = 0.5 - W.y / (t * X);
+        }, [el]),
+        eW = i.useMemo(() => {
+            let e = null != e_.current ? e_.current.clientWidth : 1,
+                t = null != e_.current ? e_.current.clientHeight : 1,
+                n = 1 / $,
+                r = 1 / $,
+                i = 0.5 - B.x / (e * $),
+                l = 0.5 - B.y / (t * $);
             return {
-                "--custom-zoom-indicator-left": "".concat(100 * C(i - n / 2, 0, 1 - n), "%"),
-                "--custom-zoom-indicator-top": "".concat(100 * C(l - r / 2, 0, 1 - r), "%"),
+                "--custom-zoom-indicator-left": "".concat(100 * x(i - n / 2, 0, 1 - n), "%"),
+                "--custom-zoom-indicator-top": "".concat(100 * x(l - r / 2, 0, 1 - r), "%"),
                 "--custom-zoom-indicator-width": "".concat(100 * n, "%"),
                 "--custom-zoom-indicator-height": "".concat(100 * r, "%"),
                 "--custom-zoom-indicator-transition":
-                    D || K || $
+                    k || X || et || er
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [D, K, $, W, X]);
-    return (0, r.jsx)("div", {
-        ref: eo,
-        className: a()(S.wrapper, j, {
-            [S.zoomEnabled]: l && eu,
-            [S.zoomDragging]: D,
+        }, [k, X, et, er, B, $]);
+    return (0, r.jsxs)("div", {
+        ref: e_,
+        className: a()(C.wrapper, Z, {
+            [C.zoomEnabled]: t && eE,
+            [C.zoomDragging]: k,
         }),
-        onMouseDown: e_,
-        onMouseMove: eg,
-        onMouseUp: ev,
-        onMouseLeave: eE,
-        onWheel: eh,
-        children: (0, r.jsxs)(s.P3F, {
-            onClick: eb,
-            children: [
-                null != I &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)("div", {
-                                className: a()(S.videoContainer, S.zoomed),
-                                style: eT,
-                                children: (0, r.jsx)(
-                                    b.Z,
-                                    ((t = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, E)),
-                                    (n = n =
-                                        {
-                                            onResize: ed,
-                                            wrapperClassName: void 0,
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(n)).forEach(function (e) {
-                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                          }),
-                                    t),
-                                ),
+        onMouseDown: eC,
+        onMouseMove: ew,
+        onMouseUp: eI,
+        onMouseLeave: ej,
+        onWheel: ex,
+        children: [
+            (0, r.jsx)(d.P3F, {
+                onClick: eP,
+                children:
+                    null != b &&
+                    (0, r.jsx)("div", {
+                        className: a()(C.videoContainer, C.zoomed),
+                        style: eU,
+                        children: (0, r.jsx)(
+                            h.Z,
+                            I(w({}, _), {
+                                onResize: eh,
+                                wrapperClassName: void 0,
                             }),
-                            l &&
-                                (0, r.jsx)(s.P3F, {
-                                    onClick: eR,
-                                    onMouseEnter: eC,
-                                    onMouseLeave: eI,
+                        ),
+                    }),
+            }),
+            t &&
+                null != b &&
+                (0, r.jsx)(c.animated.div, {
+                    className: a()(C.zoomControlsContainer, { [C.idle]: m }),
+                    style: { bottom: ev.value },
+                    children: (0, r.jsxs)("div", {
+                        className: C.zoomControls,
+                        onMouseEnter: eA,
+                        onMouseLeave: eN,
+                        onClick: eD,
+                        children: [
+                            (es || eE) &&
+                                (0, r.jsx)(d.P3F, {
+                                    onClick: eV,
+                                    onMouseEnter: eA,
+                                    onMouseLeave: eN,
                                     children: (0, r.jsxs)("div", {
-                                        ref: ec,
-                                        className: a()(S.minimap, { [S.fadeOut]: g || !eu }),
-                                        style: eA,
-                                        onMouseDown: ej,
-                                        onMouseMove: ex,
-                                        onMouseUp: eZ,
+                                        ref: eg,
+                                        className: C.minimap,
+                                        style: ez,
+                                        onMouseDown: ek,
+                                        onMouseMove: eL,
+                                        onMouseUp: eF,
                                         children: [
-                                            (0, r.jsx)(x, {
-                                                className: a()(S.minimapVideo, { [y.mirror]: Z }),
-                                                streamId: I,
-                                                paused: R,
+                                            (0, r.jsx)(R, {
+                                                className: a()(C.minimapVideo, { [O.mirror]: T }),
+                                                streamId: b,
+                                                paused: A,
                                                 reportContainerResized: !1,
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: S.minimapIndicator,
-                                                style: eN,
+                                                className: C.minimapIndicator,
+                                                style: eW,
                                             }),
                                         ],
                                     }),
                                 }),
-                        ],
-                    }),
-                l &&
-                    (0, r.jsxs)("div", {
-                        className: a()(S.zoomControls, { [S.fadeOut]: g }),
-                        onMouseEnter: eC,
-                        onMouseLeave: eI,
-                        onClick: ew,
-                        children: [
-                            X > 1 &&
-                                (0, r.jsxs)("div", {
-                                    className: S.zoomLevelIndicator,
-                                    children: [Math.round(100 * X), "%"],
-                                }),
-                            (0, r.jsx)(c.u, {
-                                text: h.intl.string(h.t["9hMafy"]),
-                                position: "top",
-                                children: (0, r.jsx)(s.hU, {
-                                    icon: s.OyE,
-                                    onClick: ey,
-                                    disabled: X >= _,
-                                    variant: "secondary",
-                                    size: "sm",
-                                    "aria-label": h.intl.string(h.t["9hMafy"]),
-                                }),
-                            }),
-                            (0, r.jsx)(c.u, {
-                                text: h.intl.string(h.t.M6Cmwy),
-                                position: "top",
-                                children: (0, r.jsx)(s.hU, {
-                                    icon: s.BlJ,
-                                    onClick: eS,
-                                    disabled: X <= 1,
-                                    variant: "secondary",
-                                    size: "sm",
-                                    "aria-label": h.intl.string(h.t.M6Cmwy),
-                                }),
-                            }),
-                            (0, r.jsx)(c.u, {
-                                text: h.intl.string(h.t.t9GFrr),
-                                position: "top",
-                                children: (0, r.jsx)(s.hU, {
-                                    icon: s.DuK,
-                                    onClick: eO,
-                                    disabled: 1 === X,
-                                    variant: "secondary",
-                                    size: "sm",
-                                    "aria-label": h.intl.string(h.t.t9GFrr),
-                                }),
+                            (0, r.jsxs)("div", {
+                                className: C.zoomControlsRow,
+                                children: [
+                                    (es || eE) &&
+                                        (0, r.jsxs)(r.Fragment, {
+                                            children: [
+                                                (0, r.jsx)(u.u, {
+                                                    text: S.intl.string(S.t.M6Cmwy),
+                                                    position: "top",
+                                                    children: (0, r.jsx)(d.hU, {
+                                                        icon: d.BlJ,
+                                                        onClick: eR,
+                                                        disabled: $ <= n,
+                                                        variant: "secondary",
+                                                        size: "sm",
+                                                        "aria-label": S.intl.string(S.t.M6Cmwy),
+                                                    }),
+                                                }),
+                                                (0, r.jsx)(d.iRW, {
+                                                    minValue: n,
+                                                    maxValue: l,
+                                                    initialValue: $,
+                                                    value: $,
+                                                    asValueChanges: eT,
+                                                    onValueRender: (e) => "".concat(Math.round(100 * e), "%"),
+                                                    "aria-label": S.intl.string(S.t.grzPmr),
+                                                }),
+                                            ],
+                                        }),
+                                    (0, r.jsx)(u.u, {
+                                        text: S.intl.string(S.t["9hMafy"]),
+                                        position: "top",
+                                        children: (0, r.jsx)(d.hU, {
+                                            icon: d.OyE,
+                                            onClick: eZ,
+                                            disabled: $ >= l,
+                                            variant: "secondary",
+                                            size: "sm",
+                                            "aria-label": S.intl.string(S.t["9hMafy"]),
+                                        }),
+                                    }),
+                                ],
                             }),
                         ],
                     }),
-            ],
-        }),
+                }),
+        ],
     });
 });

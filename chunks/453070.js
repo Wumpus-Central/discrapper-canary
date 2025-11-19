@@ -4,7 +4,7 @@ n.d(t, {
     Pq: () => v,
     RJ: () => P,
     Sd: () => M,
-    XW: () => L,
+    XW: () => x,
     el: () => T,
     fP: () => A,
     fQ: () => S,
@@ -13,7 +13,7 @@ n.d(t, {
     n(539854),
     n(388685),
     n(290780);
-var r = n(647438),
+var r = n(473749),
     i = n(442837),
     a = n(357156),
     o = n(695346),
@@ -209,7 +209,7 @@ function w() {
     let e = D();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let x = (e) => {
+let L = (e) => {
         let t = P(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [g.Z, m.Z],
@@ -263,7 +263,7 @@ let x = (e) => {
             ];
         }, [n, t, a, s, o, e]);
     },
-    L = function (e) {
+    x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (0, i.e7)([g.Z], () => g.Z.getStickerById(e.id)),
             [a, o] = r.useState(!0),
@@ -303,6 +303,6 @@ let x = (e) => {
             : [null != n ? n : null, s];
     },
     M = (e) => {
-        let t = x(e);
+        let t = L(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

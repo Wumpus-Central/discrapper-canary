@@ -44,10 +44,10 @@ e.exports = function (e, t) {
             D = P.getBlockForKey(T),
             w = D.getText().slice(N, R);
         if ((y.endsWith(f) && (y = y.slice(0, -1)), y === w)) {
-            var x = t.nativeEvent.inputType;
-            if (x) {
-                var L = _(x, O);
-                L !== O && (e.restoreEditorDOM(), e.update(L));
+            var L = t.nativeEvent.inputType;
+            if (L) {
+                var x = _(L, O);
+                x !== O && (e.restoreEditorDOM(), e.update(x));
             }
             return;
         }

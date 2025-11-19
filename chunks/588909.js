@@ -25,8 +25,8 @@ var r = n(120356),
     I = n(602091),
     C = n(701488),
     j = n(388032),
-    N = n(968803),
-    Z = n(336501);
+    N = n(995544),
+    Z = n(638218);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,7 +89,7 @@ function A(e, t) {
         }),
         C = {},
         A = [],
-        D = [];
+        k = [];
     for (let a of t)
         switch (a.type) {
             case S.nc.WELCOME: {
@@ -109,7 +109,7 @@ function A(e, t) {
                             (0, c.h7)(t, !1, x.IlC.POPOUT);
                     })),
                     r &&
-                        D.push(
+                        k.push(
                             (0, i.jsx)("div", {
                                 className: Z.keybindShortcutReminder,
                                 children: (0, b.Ae)((0, _.wq)(), j.t.mRbUco),
@@ -147,7 +147,7 @@ function A(e, t) {
                                           let { default: e } = await Promise.all([
                                               n.e("38697"),
                                               n.e("4093"),
-                                              n.e("47863"),
+                                              n.e("33840"),
                                               n.e("39173"),
                                           ]).then(n.bind(n, 60594));
                                           return (n) =>
@@ -166,7 +166,7 @@ function A(e, t) {
                                   );
                           };
                 r
-                    ? D.push(
+                    ? k.push(
                           (0, i.jsx)(o.zxk, {
                               size: "sm",
                               variant: "active",
@@ -201,11 +201,11 @@ function A(e, t) {
                     r ? A.push(t) : (C.renderFooter = t);
                 }
         }
-    D.length > 0 &&
+    k.length > 0 &&
         A.unshift(() =>
             (0, i.jsx)("div", {
                 className: l()(Z.container, Z.containerFaint, Z.keybindStreamContainer),
-                children: D,
+                children: k,
             }),
         ),
         null == C.renderFooter &&
@@ -215,7 +215,7 @@ function A(e, t) {
                     className: Z.footerSection,
                     children: A.filter((e) => null != e).map((i) => i(e, t, n)),
                 }));
-    let k = (0, f.zu)(a.z.OVERLAY_OOP_WELCOME_NUX),
+    let D = (0, f.zu)(a.z.OVERLAY_OOP_WELCOME_NUX),
         R = r
             ? void 0
             : () =>
@@ -250,19 +250,19 @@ function A(e, t) {
         {
             onNotificationShow: (e) => {
                 var t;
-                h(), k || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX), null == (t = C.onNotificationShow) || t.call(C, e);
+                h(), D || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX), null == (t = C.onNotificationShow) || t.call(C, e);
             },
             onNotificationClick: (e, t) => {
                 var n;
                 p("unlock"),
                     u.Z.setInputLocked(!1, E.Z.getTargetPID()),
-                    k || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX),
+                    D || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX),
                     null == (n = C.onNotificationClick) || n.call(C, e, t);
             },
             onDismissClick: (e, t) => {
                 var n;
                 p("dismiss"),
-                    k || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX),
+                    D || (0, f.Q3)(a.z.OVERLAY_OOP_WELCOME_NUX),
                     null == (n = C.onDismissClick) || n.call(C, e, t);
             },
         },

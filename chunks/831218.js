@@ -9,8 +9,8 @@ var r,
     u = n(91192),
     d = n(924826),
     p = n(442837),
-    f = n(902704),
-    h = n(481060),
+    h = n(902704),
+    f = n(481060),
     g = n(925549),
     m = n(607070),
     b = n(100527),
@@ -19,8 +19,8 @@ var r,
     O = n(453542),
     v = n(702321),
     j = n(82295),
-    x = n(313201),
-    C = n(860144),
+    C = n(313201),
+    x = n(860144),
     E = n(214852),
     S = n(518311),
     I = n(355298),
@@ -33,7 +33,7 @@ var r,
     R = n(515753),
     D = n(981631),
     L = n(388032),
-    M = n(777126);
+    M = n(704882);
 function k(e, t, n) {
     return (
         t in e
@@ -253,7 +253,7 @@ class F extends (r = l.Component) {
         null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics();
     }
     shouldComponentUpdate(e) {
-        return !(0, f.Z)(this.props, e, ["children"]);
+        return !(0, h.Z)(this.props, e, ["children"]);
     }
     componentDidUpdate(e) {
         let { selectedChannelId: t, homeLink: n } = this.props;
@@ -305,10 +305,10 @@ class F extends (r = l.Component) {
                         }
                         return i;
                     })(r, ["ref", "role"]);
-                return (0, i.jsx)(h.Wdt, {
+                return (0, i.jsx)(f.Wdt, {
                     children: (r) =>
                         (0, i.jsx)(
-                            h.aVo,
+                            f.aVo,
                             G(
                                 {
                                     fade: !0,
@@ -449,13 +449,13 @@ class F extends (r = l.Component) {
                                           popoutAlign: "left",
                                           className: M.privateChannelRecipientsInviteButtonIconContainer,
                                           iconClassName: M.privateChannelRecipientsInviteButtonIcon,
-                                          icon: h.BRu,
+                                          icon: f.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
                                       (0, i.jsx)(S.l, {
                                           popoutAlign: "left",
-                                          icon: h.kL_,
+                                          icon: f.kL_,
                                           text: L.intl.string(L.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
@@ -487,7 +487,7 @@ class F extends (r = l.Component) {
 }
 k(F, "defaultProps", { padding: 8 });
 let V = (e) => {
-    let { density: t } = (0, h.TCT)(),
+    let { density: t } = (0, f.TCT)(),
         {
             version: n,
             theme: r,
@@ -495,17 +495,17 @@ let V = (e) => {
             showDMHeader: a,
             listScrollerRef: s,
             createDMCTAButtonVariant: c,
-            hideAllDMs: f,
+            hideAllDMs: h,
         } = e,
         g = l.Children.count(o),
         _ = w.Z.getMutablePrivateChannels(),
-        O = f ? {} : (0, P.k1)(_),
+        O = h ? {} : (0, P.k1)(_),
         v = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
             let e = A.Z.getPrivateChannelIds(),
                 t = (0, P.tU)(e, [I.Z, N.Z]);
-            return f ? [] : t;
-        }, [f]);
-    (0, E.z)(C.R);
+            return h ? [] : t;
+        }, [h]);
+    (0, E.z)(x.R);
     let { analyticsLocations: j } = (0, y.ZP)(b.Z.CONTACTS_LIST),
         S = (0, Z.Ll)(),
         { keyboardModeEnabled: T, version: R } = (0, p.cj)([m.Z, w.Z], () => ({
@@ -557,7 +557,7 @@ let V = (e) => {
                 }),
             [L],
         ),
-        V = (0, x.Dt)(),
+        V = (0, C.Dt)(),
         H = (0, d.ZP)({
             id: "private-channels-".concat(V),
             isEnabled: T,

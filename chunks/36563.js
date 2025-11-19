@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(5192),
     p = n(51144),
     h = n(388032),
-    m = n(120230);
+    m = n(772530);
 function g(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function I(e) {
             onClickOverflow: P,
             onFocusOverflow: D,
             onUserClick: w,
-            onUserPopoutRequestClose: x,
-            "aria-label": L,
+            onUserPopoutRequestClose: L,
+            "aria-label": x,
             "aria-labelledby": M,
             "aria-hidden": k,
         } = e,
@@ -119,7 +119,7 @@ function I(e) {
         H = () =>
             (0, r.jsx)(u.VqE, {
                 className: m.popoutWrapper,
-                "aria-label": L,
+                "aria-label": x,
                 "aria-labelledby": M,
                 children: (0, r.jsx)(u.Ttm, {
                     className: m.scroller,
@@ -134,7 +134,7 @@ function I(e) {
                                 disablePopout: "function" == typeof R ? R(e.id) : R,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
-                                    U(!1), null == x || x();
+                                    U(!1), null == L || L();
                                 },
                                 onContextMenu: (t) =>
                                     (0, d.jW)(
@@ -143,7 +143,7 @@ function I(e) {
                                             let { default: t } = await Promise.all([
                                                 n.e("79695"),
                                                 n.e("69220"),
-                                                n.e("77635"),
+                                                n.e("73444"),
                                             ]).then(n.bind(n, 881351));
                                             return (n) =>
                                                 (0, r.jsx)(
@@ -244,7 +244,7 @@ function I(e) {
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-label": L,
+              "aria-label": x,
               "aria-labelledby": M,
               className: o()(b, m.avatars),
               "aria-hidden": k,

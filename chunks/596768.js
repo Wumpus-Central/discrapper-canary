@@ -20,8 +20,8 @@ var a = n(54381),
     _ = n(681619),
     y = n(621060),
     C = n(388032),
-    S = n(599832),
-    E = n(451429);
+    S = n(529554),
+    E = n(866403);
 let O = [
         {
             key: "id",
@@ -150,7 +150,7 @@ function N() {
                 enabled: e,
             });
         }, []),
-        w = N ? "Stop Tracking" : "Start Tracking";
+        I = N ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
         ref: n,
         className: i()(E.panel, S.panel),
@@ -159,12 +159,12 @@ function N() {
                 className: S.toolbar,
                 children: [
                     (0, a.jsx)(m.u, {
-                        text: w,
+                        text: I,
                         children: (0, a.jsx)(p.hU, {
                             size: "sm",
                             variant: N ? "active" : "primary",
                             icon: N ? p.fpf : p.o1U,
-                            "aria-label": w,
+                            "aria-label": I,
                             onClick: () => P(!N),
                         }),
                     }),

@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(781990);
+    b = n(170568);
 function y(e) {
     var t, n, i, y;
     let { type: O, textValue: v, maxCharacterCount: I, showRemainingCharsAfterCount: T, className: S } = e,
@@ -27,19 +27,19 @@ function y(e) {
         P = v.length,
         D = null != O.upsellLongMessages && (null != P ? P : 0) > m.J6R && A,
         w = null != O.upsellLongMessages && !A,
-        x = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
-        L = N - P,
-        M = L > R,
-        k = L < 0 && x,
+        L = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
+        x = N - P,
+        M = x > R,
+        k = x < 0 && L,
         j =
-            0 === L
+            0 === x
                 ? E.intl.string(E.t.tU6YQ7)
-                : L > 0
-                  ? E.intl.formatToPlainString(E.t.qH8uFW, { count: L })
+                : x > 0
+                  ? E.intl.formatToPlainString(E.t.qH8uFW, { count: x })
                   : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(c.Z.CHARACTER_COUNT);
-    if (!((D && L >= 0) || !M || (w && !M))) return null;
-    let G = L >= 0;
+    if (!((D && x >= 0) || !M || (w && !M))) return null;
+    let G = x >= 0;
     return (0, r.jsx)(u.Gt, {
         value: U,
         children: (0, r.jsxs)("div", {
@@ -69,17 +69,17 @@ function y(e) {
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: G ? "text-default" : "text-danger",
-                                      children: L,
+                                      children: x,
                                   }),
                               }),
                     ],
                 }),
-                (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: L }) }),
+                (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: x }) }),
                 w && !M
                     ? (0, r.jsx)(h.Z, {
                           className: b.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,
-                          remaining: L,
+                          remaining: x,
                       })
                     : null,
             ],

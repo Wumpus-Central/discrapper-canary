@@ -94,8 +94,8 @@ let T = (e) => {
                   : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let D = null != v ? v.emoji : void 0,
         w = null != D && D.animated,
-        x = null != D && !_.ZP.isInternalEmojiForGuildId(D, null == y ? void 0 : y.getGuildId()),
-        L = null != D ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
+        L = null != D && !_.ZP.isInternalEmojiForGuildId(D, null == y ? void 0 : y.getGuildId()),
+        x = null != D ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
         M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
@@ -115,8 +115,8 @@ let T = (e) => {
             onClose: n,
             upsellViewedTrackingData: {
                 type: t,
-                is_external: x,
-                location: I(O({}, S), { object: L }),
+                is_external: L,
+                location: I(O({}, S), { object: x }),
                 location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.PremiumTypes.TIER_2)),
                 has_search_query: null != R && "" !== R,

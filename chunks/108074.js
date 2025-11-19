@@ -1,47 +1,47 @@
-a.d(e, { W: () => i });
-var r = a(617726),
-    _ = a(967752),
-    n = a(510529);
+_.d(e, { W: () => E });
+var a = _(617726),
+    r = _(967752),
+    n = _(510529);
 function o(t, e) {
-    let a;
-    return (0, r.gv)(t, (t, r) => (e.includes(r) && (a = Array.isArray(t) ? t[1] : void 0), !!a)), a;
+    let _;
+    return (0, a.gv)(t, (t, a) => (e.includes(a) && (_ = Array.isArray(t) ? t[1] : void 0), !!_)), _;
 }
-function i(t, e) {
-    return (a) => {
-        let i = t(a),
-            E = new Map();
-        function c(e, r) {
-            let i = r ? `${e}:${r}` : e,
-                c = E.get(i);
+function E(t, e) {
+    return (_) => {
+        let E = t(_),
+            i = new Map();
+        function c(e, a) {
+            let E = a ? `${e}:${a}` : e,
+                c = i.get(E);
             if (!c) {
-                let s = (0, _.U4)(e);
+                let s = (0, r.U4)(e);
                 if (!s) return;
-                let l = (0, n.U)(s, a.tunnel);
-                (c = r
+                let l = (0, n.U)(s, _.tunnel);
+                (c = a
                     ? ((e) => {
-                          let a = t(e);
+                          let _ = t(e);
                           return {
-                              ...a,
+                              ..._,
                               send: async (t) => {
                                   let e = o(t, ["event", "transaction", "profile", "replay_event"]);
-                                  return e && (e.release = r), a.send(t);
+                                  return e && (e.release = a), _.send(t);
                               },
                           };
                       })({
-                          ...a,
+                          ..._,
                           url: l,
                       })
                     : t({
-                          ...a,
+                          ..._,
                           url: l,
                       })),
-                    E.set(i, c);
+                    i.set(E, c);
             }
             return [e, c];
         }
         return {
             send: async function (t) {
-                let a = e({
+                let _ = e({
                         envelope: t,
                         getEvent: function (e) {
                             return o(t, e && e.length ? e : ["event"]);
@@ -49,12 +49,12 @@ function i(t, e) {
                     })
                         .map((t) => ("string" == typeof t ? c(t, void 0) : c(t.dsn, t.release)))
                         .filter((t) => !!t),
-                    _ = a.length ? a : [["", i]];
+                    r = _.length ? _ : [["", E]];
                 return (
                     await Promise.all(
-                        _.map(([e, a]) =>
-                            a.send(
-                                (0, r.Jd)(
+                        r.map(([e, _]) =>
+                            _.send(
+                                (0, a.Jd)(
                                     e
                                         ? {
                                               ...t[0],
@@ -69,7 +69,7 @@ function i(t, e) {
                 )[0];
             },
             flush: async function (t) {
-                let e = [...E.values(), i];
+                let e = [...i.values(), E];
                 return (await Promise.all(e.map((e) => e.flush(t)))).every((t) => t);
             },
         };

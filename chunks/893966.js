@@ -94,7 +94,7 @@ function w(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function x(e) {
+function L(e) {
     let { guildId: t, addedMembers: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -104,7 +104,7 @@ function x(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function L(e) {
+function x(e) {
     let { guildId: t, members: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -128,11 +128,11 @@ function M(e) {
         }, []);
     return i.updateMembersByMemberIds(a);
 }
-function j(e) {
+function k(e) {
     let { guildId: t, guildMember: n } = e;
     return y(t).updateMembersByMemberIds([n.user.id]);
 }
-function k(e) {
+function j(e) {
     let t = !1;
     return (
         e.guilds.forEach((e) => {
@@ -163,7 +163,7 @@ function U(e) {
     );
 }
 function G(e) {
-    return E ? (E = !1) : v(!0), k(e);
+    return E ? (E = !1) : v(!0), j(e);
 }
 function B(e) {
     return U(e);
@@ -348,12 +348,12 @@ let J = new Q(a.Z, {
     GUILD_MEMBER_REMOVE: R,
     GUILD_ROLE_UPDATE: P,
     GUILD_ROLE_DELETE: P,
-    GUILD_MEMBER_PROFILE_UPDATE: j,
+    GUILD_MEMBER_PROFILE_UPDATE: k,
     GUILD_ROLE_MEMBER_REMOVE: D,
     GUILD_ROLE_MEMBER_ADD: D,
     THREAD_MEMBER_LIST_UPDATE: w,
-    THREAD_MEMBERS_UPDATE: x,
-    LOAD_ARCHIVED_THREADS_SUCCESS: L,
+    THREAD_MEMBERS_UPDATE: L,
+    LOAD_ARCHIVED_THREADS_SUCCESS: x,
     LOAD_FORUM_POSTS: M,
     INITIALIZE_MEMBER_SAFETY_STORE: H,
     MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: Y,

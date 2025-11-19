@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(682662),
     d = n(178088),
     p = n(306680),
-    f = n(944486),
-    h = n(594174),
+    h = n(944486),
+    f = n(594174),
     g = n(821020),
     m = n(370774),
     b = n(128008),
@@ -19,9 +19,9 @@ var r = n(54381),
     O = n(871301),
     v = n(981631),
     j = n(490897),
-    x = n(86517);
-function C() {
-    let e = (0, o.e7)([h.default], () => h.default.getCurrentUser());
+    C = n(86517);
+function x() {
+    let e = (0, o.e7)([f.default], () => f.default.getCurrentUser());
     return (0, o.e7)(
         [p.ZP],
         () => (null == e ? void 0 : e.id) != null && p.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0,
@@ -29,7 +29,7 @@ function C() {
 }
 function E(e) {
     var t, n;
-    let { onClick: d, selectedOverride: p = !1, popoutProps: h, ref: _ } = e,
+    let { onClick: d, selectedOverride: p = !1, popoutProps: f, ref: _ } = e,
         j = (0, l.Ie)("notifications-inbox"),
         [E, S] = i.useState(!1),
         I = (0, m.D)(),
@@ -42,7 +42,7 @@ function E(e) {
         } = (function (e) {
             let { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
                 { unreadChannelIds: n } = (0, m.O4)(),
-                i = C(),
+                i = x(),
                 { badge: l, dimensions: o } = (0, b.h6)({ isSelected: e });
             return t === g.jP.LEGACY
                 ? {
@@ -69,7 +69,7 @@ function E(e) {
                   };
         })(P),
         A = N === g.jP.LEGACY ? a.xx7 : a.Dkj,
-        R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
+        R = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         D = i.useMemo(() => {
             if (N === g.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, R);
         }, [N, R]);
@@ -80,7 +80,7 @@ function E(e) {
                 selected: P && N === g.jP.SIDEBAR,
                 hovered: E && N === g.jP.SIDEBAR,
                 unread: T > 0,
-                className: x.pill,
+                className: C.pill,
                 disabled: N === g.jP.LEGACY,
             }),
             (0, r.jsx)(y.Z, {
@@ -114,7 +114,7 @@ function E(e) {
                                     });
                             }
                             return e;
-                        })({}, j, h)),
+                        })({}, j, f)),
                         (n = n =
                             {
                                 onClick: d,
@@ -125,7 +125,7 @@ function E(e) {
                                 children: (0, r.jsx)(A, {
                                     size: "custom",
                                     color: "currentColor",
-                                    className: x.notificationsIcon,
+                                    className: C.notificationsIcon,
                                     width: 20,
                                     height: 20,
                                 }),
@@ -152,7 +152,7 @@ function E(e) {
 function S() {
     let e = i.useRef(null),
         { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButton" }),
-        n = C(),
+        n = x(),
         l = (0, b.mv)();
     return t === g.jP.SIDEBAR
         ? (0, r.jsx)(E, { onClick: l })
@@ -178,7 +178,7 @@ function S() {
                   targetElementRef: e,
                   popoutPosition: "right",
                   popoutAlign: "top",
-                  dialogClassName: x.positionLayer,
+                  dialogClassName: C.positionLayer,
                   children: (t, n, i) =>
                       (0, r.jsx)(E, {
                           ref: e,

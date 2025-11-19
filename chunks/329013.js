@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => k,
-    i: () => L,
+    i: () => x,
 });
 var r = n(54381),
     i = n(473749),
@@ -31,8 +31,8 @@ var r = n(54381),
     R = n(921944),
     P = n(474936),
     D = n(388032),
-    w = n(505575);
-let x = () => {
+    w = n(352334);
+let L = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: R.L.PRIMARY,
             forceTrack: !0,
@@ -40,7 +40,7 @@ let x = () => {
             (0, m.XO)(m.wh.CLIENT_THEMES),
             (0, C.default)();
     },
-    L = () => {
+    x = () => {
         var e, t;
         let { analyticsLocations: n } = (0, f.ZP)(d.Z.USER_SETTINGS),
             o = (0, a.e7)([_.Z], () => _.Z.isPreview),
@@ -58,7 +58,7 @@ let x = () => {
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             text: D.intl.string(D.t["E+COuA"]),
-                            onClick: () => x(),
+                            onClick: () => L(),
                         }),
                         (0, r.jsx)(y.Z, {
                             subscriptionTier: P.Si.TIER_2,
@@ -90,7 +90,7 @@ let x = () => {
                                 variant: "secondary",
                                 fullWidth: !0,
                                 text: D.intl.string(D.t["E+COuA"]),
-                                onClick: () => x(),
+                                onClick: () => L(),
                             }),
                         }),
                         (0, r.jsx)("div", { className: w.premiumTier2Divider }),
@@ -167,5 +167,5 @@ let k = () =>
         : (0, r.jsx)(l.Button, {
               variant: "primary",
               text: D.intl.string(D.t.qYXrkX),
-              onClick: x,
+              onClick: L,
           });

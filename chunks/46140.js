@@ -1,7 +1,7 @@
 n.d(t, {
     $z: () => S,
     Dp: () => O,
-    Ew: () => j,
+    Ew: () => k,
     HO: () => E,
     Jk: () => T,
     Jp: () => P,
@@ -11,7 +11,7 @@ n.d(t, {
     R4: () => p,
     S7: () => u.S,
     Ts: () => y,
-    UP: () => x,
+    UP: () => L,
     V6: () => I,
     V_: () => v,
     XZ: () => _,
@@ -165,7 +165,7 @@ var D = (function (e) {
     w = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
-    x = (function (e) {
+    L = (function (e) {
         return (
             (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.COLLECTIBLE = "reward_collectible"),
@@ -173,7 +173,7 @@ var D = (function (e) {
             e
         );
     })({});
-let L = [
+let x = [
         {
             group: "task",
             filter: "task_play",
@@ -196,7 +196,7 @@ let L = [
         },
     ],
     M = ["reward", "task"],
-    j = Object.entries((0, r.groupBy)(L, "group")).sort((e, t) => {
+    k = Object.entries((0, r.groupBy)(x, "group")).sort((e, t) => {
         let n = M.indexOf(e[0]),
             r = M.indexOf(t[0]);
         return n < r ? -1 : +(r < n);

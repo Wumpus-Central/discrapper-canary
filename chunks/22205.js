@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(987650),
     C = n(981631),
     N = n(388032),
-    R = n(534887);
+    R = n(460063);
 function P(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ let D = o().throttle(
         { trailing: !1 },
     ),
     w = 10 * y.Z.Millis.SECOND;
-function x(e) {
+function L(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         _ = i.useMemo(() => new s.SpringValue(1), []),
@@ -95,13 +95,13 @@ function x(e) {
             },
             [o, l, O],
         ),
-        x = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (y(!0), null != m.current && clearTimeout(m.current)) : y(!1);
             },
             [y],
         ),
-        L = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == o || o(), null == c || c();
             },
@@ -152,9 +152,9 @@ function x(e) {
             height: 40,
             className: R.notificationIcon,
         }),
-        onNotificationClick: x,
+        onNotificationClick: L,
         onConfirmClick: D,
-        onCancelClick: null != M ? L : void 0,
+        onCancelClick: null != M ? x : void 0,
         onDismissClick: o,
         expand: !0,
         locked: !0,
@@ -167,7 +167,7 @@ function x(e) {
         wrapperClassName: R.errorNotificationWrapper,
     });
 }
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, g.s1)().location;
         this.setState({
@@ -200,7 +200,7 @@ class L extends i.PureComponent {
             ? i
                 ? (0, r.jsx)(I.Z, {
                       className: R.errorClickNotification,
-                      children: (0, r.jsx)(x, {
+                      children: (0, r.jsx)(L, {
                           error: n,
                           onLock: () => {
                               var e;
@@ -238,4 +238,4 @@ class L extends i.PureComponent {
             P(this, "pid", null);
     }
 }
-let M = L;
+let M = x;

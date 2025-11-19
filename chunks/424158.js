@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(970184),
-    o = n(836636);
+    o = n(630448);
 function s(e) {
     let { label: t, description: n, component: s, renderComponent: l } = e,
         c = (0, a.h4)(s);

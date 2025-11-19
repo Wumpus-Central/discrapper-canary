@@ -8,8 +8,8 @@ var i = n(120356),
     l = n.n(i),
     a = n(210753),
     s = n(817053),
-    o = n(932366),
-    c = n(978276);
+    o = n(279280),
+    c = n(651294);
 function u(e) {
     let { applicationId: t } = e,
         { coverImageUrl: n } = (0, a.$)(t);

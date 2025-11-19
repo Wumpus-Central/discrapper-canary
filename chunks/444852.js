@@ -34,8 +34,8 @@ var r = n(392711),
     P = n(502286),
     D = n(297733),
     w = n(981631),
-    x = n(65154);
-function L(e, t, n) {
+    L = n(65154);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -125,17 +125,17 @@ class F {
         goLiveModalDurationMs: a,
         analyticsLocations: o,
     }) {
-        L(this, "streamRegion", void 0),
-            L(this, "streamApplication", void 0),
-            L(this, "streamSourceType", void 0),
-            L(this, "actionContext", void 0),
-            L(this, "maxViewers", void 0),
-            L(this, "nativePickerStyleUsed", void 0),
-            L(this, "startTime", void 0),
-            L(this, "endTime", void 0),
-            L(this, "goLiveModalDurationMs", void 0),
-            L(this, "numViewers", void 0),
-            L(this, "analyticsLocations", void 0),
+        x(this, "streamRegion", void 0),
+            x(this, "streamApplication", void 0),
+            x(this, "streamSourceType", void 0),
+            x(this, "actionContext", void 0),
+            x(this, "maxViewers", void 0),
+            x(this, "nativePickerStyleUsed", void 0),
+            x(this, "startTime", void 0),
+            x(this, "endTime", void 0),
+            x(this, "goLiveModalDurationMs", void 0),
+            x(this, "numViewers", void 0),
+            x(this, "analyticsLocations", void 0),
             (this.streamRegion = e),
             (this.streamApplication = t),
             (this.streamSourceType = n),
@@ -326,7 +326,7 @@ class V extends c.Z {
                                         desktop_capturer_type: u,
                                         media_session_id: m,
                                         rtc_connection_id: g,
-                                        context: x.Yn.STREAM,
+                                        context: L.Yn.STREAM,
                                         activity: d,
                                         soundshare_session:
                                             null !=
@@ -574,7 +574,7 @@ class V extends c.Z {
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
             sender_user_id: i,
-            context: x.Yn.STREAM,
+            context: L.Yn.STREAM,
             guild_id: a,
             stream_region: e,
             stream_source_type: n,
@@ -714,23 +714,23 @@ class V extends c.Z {
             sessionId: e,
             guildId: f,
             channelId: _,
-            context: x.Yn.STREAM,
+            context: L.Yn.STREAM,
             streamServerId: n,
             streamChannelId: u,
             parentMediaSessionId: c,
             joinVoiceId: null,
         }),
-            L(this, "analyticsContext", void 0),
-            L(this, "videoStreamStats", void 0),
-            L(this, "streamContext", void 0),
-            L(this, "streamKey", void 0),
-            L(this, "isStreamer", void 0),
-            L(this, "updateVideoStreamId", void 0),
-            L(this, "bandwidthSamples", []),
-            L(this, "goliveCurrentMaxResolution", void 0),
-            L(this, "_firstFrameDelivered", !1),
-            L(this, "soundshareFailuresReported", {}),
-            L(this, "errorTimer", new s.V7()),
+            x(this, "analyticsContext", void 0),
+            x(this, "videoStreamStats", void 0),
+            x(this, "streamContext", void 0),
+            x(this, "streamKey", void 0),
+            x(this, "isStreamer", void 0),
+            x(this, "updateVideoStreamId", void 0),
+            x(this, "bandwidthSamples", []),
+            x(this, "goliveCurrentMaxResolution", void 0),
+            x(this, "_firstFrameDelivered", !1),
+            x(this, "soundshareFailuresReported", {}),
+            x(this, "errorTimer", new s.V7()),
             (this.streamContext = d),
             (this.streamKey = t),
             (this.isStreamer = o),
@@ -746,7 +746,7 @@ class V extends c.Z {
                     streamId: e,
                     rtcServerId: t,
                     mediaEngineConnectionId: this.getMediaEngineConnectionId(),
-                    context: x.Yn.STREAM,
+                    context: L.Yn.STREAM,
                 });
             }, 200)),
             this.videoStreamStats.start(),

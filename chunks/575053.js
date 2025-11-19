@@ -294,7 +294,7 @@
                       stripe: n,
                   };
         },
-        x = function (e) {
+        L = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -308,8 +308,8 @@
                     url: "https://stripe.com/docs/stripe-js/react",
                 }));
         },
-        L = t.createContext(null);
-    L.displayName = "ElementsContext";
+        x = t.createContext(null);
+    x.displayName = "ElementsContext";
     var M = function (e, t) {
             if (!e)
                 throw Error(
@@ -391,11 +391,11 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(s.stripe);
+                        L(s.stripe);
                     },
                     [s.stripe],
                 ),
-                t.createElement(L.Provider, { value: s }, i)
+                t.createElement(x.Provider, { value: s }, i)
             );
         };
     k.propTypes = {
@@ -403,7 +403,7 @@
         options: O.object,
     };
     var j = function (e) {
-            return M(t.useContext(L), e);
+            return M(t.useContext(x), e);
         },
         U = function () {
             return j("calls useElements()").elements;
@@ -527,7 +527,7 @@
             ),
                 t.useEffect(
                     function () {
-                        x(d.stripe);
+                        L(d.stripe);
                     },
                     [d.stripe],
                 );
@@ -553,7 +553,7 @@
         },
         z = function (e) {
             var n = t.useContext(Z),
-                r = t.useContext(L);
+                r = t.useContext(x);
             if (n && r)
                 throw Error(
                     "You cannot wrap the part of your app that ".concat(
@@ -603,8 +603,8 @@
                         P = l(t.useState(null), 2),
                         D = P[0],
                         w = P[1],
-                        x = t.useRef(null),
-                        L = t.useRef(null);
+                        L = t.useRef(null),
+                        x = t.useRef(null);
                     v(D, "blur", d),
                         v(D, "focus", f),
                         v(D, "escape", h),
@@ -627,7 +627,7 @@
                         v(D, "ready", i),
                         t.useLayoutEffect(
                             function () {
-                                if (null === x.current && null !== L.current && (C || N)) {
+                                if (null === L.current && null !== x.current && (C || N)) {
                                     var t = null;
                                     if (N)
                                         switch (e) {
@@ -664,7 +664,7 @@
                                                 );
                                         }
                                     else C && (t = C.create(e, u));
-                                    (x.current = t), w(t), t && t.mount(L.current);
+                                    (L.current = t), w(t), t && t.mount(x.current);
                                 }
                             },
                             [C, N, u],
@@ -673,25 +673,25 @@
                     return (
                         t.useEffect(
                             function () {
-                                if (x.current) {
+                                if (L.current) {
                                     var e = R(u, M, ["paymentRequest"]);
-                                    e && "update" in x.current && x.current.update(e);
+                                    e && "update" in L.current && L.current.update(e);
                                 }
                             },
                             [u, M],
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
-                                if (x.current && "function" == typeof x.current.destroy)
+                                if (L.current && "function" == typeof L.current.destroy)
                                     try {
-                                        x.current.destroy(), (x.current = null);
+                                        L.current.destroy(), (L.current = null);
                                     } catch (e) {}
                             };
                         }, []),
                         t.createElement("div", {
                             id: a,
                             className: o,
-                            ref: L,
+                            ref: x,
                         })
                     );
                 },
@@ -789,7 +789,7 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(s);
+                        L(s);
                     },
                     [s],
                 );

@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(349803),
     D = n(179984),
     w = n(474936),
-    x = n(981631),
-    L = n(388032),
-    M = n(740150),
-    k = n(689095),
+    L = n(981631),
+    x = n(388032),
+    M = n(163594),
+    k = n(476284),
     j = n(865215);
 let U = (e) => {
         let { inOfferExperience: t } = e;
@@ -161,7 +161,7 @@ let U = (e) => {
                     onChange: (e) => {
                         e &&
                             !Y &&
-                            (g.default.track(x.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
+                            (g.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
                             W(!0));
                     },
                     children: (0, r.jsx)("div", {
@@ -174,7 +174,7 @@ let U = (e) => {
                     className: k.bottomIllustration,
                     width: 112,
                     height: 85,
-                    alt: L.intl.string(L.t.X4IxWL),
+                    alt: x.intl.string(x.t.X4IxWL),
                 }),
             ],
         });

@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    FZ: () => ex,
+    FZ: () => eL,
     ZP: () => e6,
     b6: () => eN,
     ik: () => eP,
@@ -42,8 +42,8 @@ var i,
     P = n(823379),
     D = n(358085),
     w = n(998502),
-    x = n(145597),
-    L = n(581567),
+    L = n(145597),
+    x = n(581567),
     M = n(624126),
     k = n(981631),
     j = n(987650);
@@ -375,7 +375,7 @@ function eN(e) {
                 reason: "Some library application thing?",
             };
     }
-    let o = (0, O.NW)("getRawOverlayGameStatus") && (0, x.supportsOutOfProcess)() && !t,
+    let o = (0, O.NW)("getRawOverlayGameStatus") && (0, L.supportsOutOfProcess)() && !t,
         s = eC(null != a ? a : i),
         l = b.v.legacyEnabled,
         c = o && !s,
@@ -433,7 +433,7 @@ function eD(e) {
 function ew() {
     u.K.set(V, ea);
 }
-function ex(e, t, n, r) {
+function eL(e, t, n, r) {
     let i = Z(G({}, e), {
         played:
             null != e.lastFocused && 0 !== e.lastFocused
@@ -445,7 +445,7 @@ function ex(e, t, n, r) {
     });
     return null != e.id && null != es[e.id] && (i.overlayWarn = es[e.id].warn), i;
 }
-function eL(e) {
+function ex(e) {
     return {
         name: e.name,
         exePath: e.exePath,
@@ -528,7 +528,7 @@ function eU(e) {
         }),
         ea.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ew(),
-        R.Z.setRecentGames(eG().map((e) => ex(e, e8, T.Z, S.Z))));
+        R.Z.setRecentGames(eG().map((e) => eL(e, e8, T.Z, S.Z))));
 }
 function eG() {
     let e = o().values(ea.gameOverrides);
@@ -636,7 +636,7 @@ function e$(e) {
 function e0(e) {
     let t = eS(e.game),
         n = ea.gameOverrides[t];
-    null == n && ((n = eL(e.game)).add = !0), (n.name = e.newName);
+    null == n && ((n = ex(e.game)).add = !0), (n.name = e.newName);
     let r = eS(n);
     delete ea.gameOverrides[t],
         (ea.gameOverrides[r] = n),
@@ -691,7 +691,7 @@ function e4(e) {
             t = new Set();
         r = {};
         let n = T.Z.games,
-            i = (0, O.NW)("handleGamesDatabaseUpdate") && (0, x.supportsOutOfProcess)();
+            i = (0, O.NW)("handleGamesDatabaseUpdate") && (0, L.supportsOutOfProcess)();
         for (let e of n) {
             var a, o, s, l;
             let t = eC(e),
@@ -807,13 +807,13 @@ function e4(e) {
                             orig_game_name_v1: o.origGameName,
                             game_id_v1: null == s ? void 0 : s.id,
                             distributor_v1: o.distributor,
-                            verified_v1: (0, L.vp)(
+                            verified_v1: (0, x.vp)(
                                 o.exePath,
                                 null != (r = null == s ? void 0 : s.executables) ? r : [],
                             ),
                             is_launcher_v1: o.isLauncher,
                             game_detection_enabled_v1: eP(o),
-                            executable_path_v1: (0, L.N6)(o.exePath),
+                            executable_path_v1: (0, x.N6)(o.exePath),
                             distributor_game_id_v1: o.sku,
                             hidden_by_distributor_v1: o.hidden,
                             game_metadata_v1: (0, I.sD)(o),
@@ -821,13 +821,13 @@ function e4(e) {
                             orig_game_name_v2: e.origGameName,
                             game_id_v2: c,
                             distributor_v2: e.distributor,
-                            verified_v2: (0, L.vp)(
+                            verified_v2: (0, x.vp)(
                                 e.exePath,
                                 null != (i = null == l ? void 0 : l.executables) ? i : [],
                             ),
                             is_launcher_v2: e.isLauncher,
                             game_detection_enabled_v2: eP(e),
-                            executable_path_v2: (0, L.N6)(e.exePath),
+                            executable_path_v2: (0, x.N6)(e.exePath),
                             distributor_game_id_v2: e.sku,
                             hidden_by_distributor_v2: e.hidden,
                             game_metadata_v2: (0, I.sD)(e),

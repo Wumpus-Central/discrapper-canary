@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(490095),
     y = n(981631),
     O = n(388032),
-    v = n(940992);
+    v = n(950244);
 function I(e, t, n) {
     return (
         t in e
@@ -104,8 +104,8 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 gutterWidth: S,
                 inspectedStickerPosition: N,
                 isScrolling: w,
-                isUsingKeyboardNavigation: x,
-                onInspect: L,
+                isUsingKeyboardNavigation: L,
+                onInspect: x,
                 onSelect: M,
                 rowIndex: k,
                 stickerClassName: j,
@@ -156,7 +156,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                 e.columnIndex === (null == N ? void 0 : N.columnIndex),
                             I = e.type === m.al.STICKER && F && f,
                             S = (t) => {
-                                if ((null == w ? void 0 : w.current) === !0 || (null == x ? void 0 : x.current) === !0)
+                                if ((null == w ? void 0 : w.current) === !0 || (null == L ? void 0 : L.current) === !0)
                                     return;
                                 let n = t.altKey;
                                 n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id),
@@ -164,10 +164,10 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                             },
                             R = (0, s.throttle)(() => {
                                 (null == w ? void 0 : w.current) === !0 ||
-                                    (null == x ? void 0 : x.current) === !0 ||
+                                    (null == L ? void 0 : L.current) === !0 ||
                                     f ||
-                                    null == L ||
-                                    L(e);
+                                    null == x ||
+                                    x(e);
                             }, D),
                             P = () => {
                                 e.type === m.al.CREATE_STICKER &&
@@ -176,7 +176,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("38236")]).then(
                                             n.bind(n, 136735),
                                         );
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));

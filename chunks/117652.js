@@ -28,9 +28,9 @@ var i = n(442837),
     N = n(981631),
     R = n(474936),
     P = n(388032),
-    D = n(359739),
-    w = n(611344);
-function x(e, t, n) {
+    D = n(561965),
+    w = n(469059);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,14 +54,14 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
 let M = {
     key: A.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(j, L({}, e)),
+    renderStep: (e) => (0, r.jsx)(j, x({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => P.intl.string(P.t["W685+b"]),
@@ -91,8 +91,8 @@ function j(e) {
             giftRecipientError: g,
             setGiftRecipientError: b,
             validatingGiftRecipient: A,
-            giftRecipient: x,
-            recommendedGiftSkuIds: L,
+            giftRecipient: L,
+            recommendedGiftSkuIds: x,
             giftingOrigin: M,
             setValidatingGiftRecipient: j,
         } = (0, T.wD)(),
@@ -116,15 +116,15 @@ function j(e) {
         };
     (0, o.ZP)(() => {
         null != B &&
-            null != x &&
+            null != L &&
             (M !== R.Wt.DM_CHANNEL_WISHLIST &&
                 v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: B }),
-            Q(x, B));
+            Q(L, B));
     });
     let J = (e) => {
             M !== R.Wt.DM_CHANNEL_WISHLIST &&
                 v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }),
-                null != x && Q(x, e),
+                null != L && Q(L, e),
                 Z(e);
         },
         $ = (e) => {
@@ -169,7 +169,7 @@ function j(e) {
                               className: D.selectGiftTitle,
                               children: X.toLocaleUpperCase(),
                           }),
-                          L.map((e) => $(e)),
+                          x.map((e) => $(e)),
                           (0, r.jsx)(U, { handleClose: n }),
                       ],
                   })
@@ -182,7 +182,7 @@ function j(e) {
                 return (0, r.jsxs)("div", {
                     className: D.bodyColumnRight,
                     children: [
-                        (0, r.jsx)(E.s, { giftRecipient: x }),
+                        (0, r.jsx)(E.s, { giftRecipient: L }),
                         (0, r.jsx)(m.q, {
                             isShopGift: !0,
                             className: w.adjustedGiftMainAnimation,
@@ -203,7 +203,7 @@ function j(e) {
                 ? (0, r.jsxs)("div", {
                       className: D.bodyColumnRight,
                       children: [
-                          (0, r.jsx)(E.s, { giftRecipient: x }),
+                          (0, r.jsx)(E.s, { giftRecipient: L }),
                           ee(),
                           null != e &&
                               null != B &&
@@ -261,7 +261,7 @@ function j(e) {
                     children: (0, r.jsx)(k, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != g || null == x || x.id === (null == W ? void 0 : W.id) || s.length > R.$n,
+                        disabled: null != g || null == L || L.id === (null == W ? void 0 : W.id) || s.length > R.$n,
                         loading: A,
                     }),
                 }),

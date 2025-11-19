@@ -63,10 +63,10 @@ let h = null,
     m = null,
     g = {},
     E = !1,
-    b = L(),
+    b = x(),
     y = M(),
     O = null,
-    v = x(),
+    v = L(),
     I = !1,
     T = !1,
     S = null,
@@ -77,7 +77,7 @@ let h = null,
     P = null,
     D = {},
     w = {};
-function x() {
+function L() {
     var e, t, n, r;
     return (null == (t = window) || null == (e = t.location) ? void 0 : e.pathname) === u.ix.FAMILY_CENTER_MY_FAMILY
         ? u.dG.REQUESTS
@@ -85,7 +85,7 @@ function x() {
           ? u.dG.SETTINGS
           : u.dG.ACTIVITY;
 }
-function L() {
+function x() {
     let e = new Map();
     return (
         e.set(u.MY.USER_ADD, new Map()),
@@ -109,7 +109,7 @@ function M() {
         [u.MY.PURCHASES]: 0,
     };
 }
-function j() {
+function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return (
         arguments.length > 1 && arguments[1],
@@ -118,11 +118,11 @@ function j() {
         g
     );
 }
-function k(e) {
+function j(e) {
     void 0 !== e && (y = e);
 }
 function U(e, t) {
-    let n = t ? b : L();
+    let n = t ? b : x();
     return (
         e.forEach((e) => {
             let t = e.display_type,
@@ -179,9 +179,9 @@ function F(e) {
     (h = o),
         (m = l),
         U(r),
-        k(a),
+        j(a),
         G(i),
-        j(t),
+        k(t),
         null != _ && B(_),
         (C = c),
         (N = u),
@@ -193,11 +193,11 @@ function F(e) {
 }
 function V(e) {
     let { linkedUsers: t } = e;
-    j(t);
+    k(t);
 }
 function H(e) {
     let { linkedUsers: t } = e;
-    j(t);
+    k(t);
 }
 function Y(e) {
     let { familyCenterTeenActivity: t } = e;
@@ -217,7 +217,7 @@ function Y(e) {
     (h = a),
         (m = o),
         U(n),
-        k(r),
+        j(r),
         G(i),
         null != f && B(f),
         (C = l),
@@ -234,11 +234,11 @@ function W(e) {
 }
 function K(e) {
     let { linkedUsers: t } = e;
-    j(t);
+    k(t);
 }
 function z(e) {
     let { linkedUsers: t } = e;
-    j(t, !0);
+    k(t, !0);
 }
 function q(e) {
     let { linkCode: t } = e;
@@ -257,12 +257,12 @@ function Q(e) {
         return void 0 === n[t];
     }) && t.linked_users.length > Object.keys(g).length
         ? l.ZP.fetchLinkedUsers()
-        : j(t.linked_users);
+        : k(t.linked_users);
 }
 function J(e) {
     let { linkedUsers: t } = e;
     if (null == t) return !1;
-    j(t);
+    k(t);
 }
 function $(e) {
     var t;
@@ -295,12 +295,12 @@ function er() {
     (h = null),
         (m = null),
         (g = {}),
-        (b = L()),
+        (b = x()),
         (y = M()),
         (w = {}),
         (T = !1),
         (S = null),
-        (v = x()),
+        (v = L()),
         (E = !1),
         (C = []),
         (N = []),
@@ -314,7 +314,7 @@ class ei extends i.Z {
     }
     loadCache() {
         let e = this.readSnapshot(ei.LATEST_SNAPSHOT_VERSION);
-        null != e && (j(e.linkedUsers), G(e.guilds), U(e.teenActivity), en(e.teenActivityTotals));
+        null != e && (k(e.linkedUsers), G(e.guilds), U(e.teenActivity), en(e.teenActivityTotals));
     }
     takeSnapshot() {
         return {

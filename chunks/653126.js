@@ -3,16 +3,16 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(979554),
-    s = n(622535),
+    s = n(979554),
+    o = n(622535),
     c = n(481060),
     u = n(100527),
     d = n(104505),
-    p = n(994587),
-    g = n(297651),
+    g = n(994587),
+    p = n(297651),
     f = n(993222),
-    h = n(932083),
-    m = n(719075),
+    m = n(932083),
+    h = n(719075),
     C = n(558261),
     _ = n(311583),
     b = n(786040),
@@ -22,7 +22,7 @@ var r = n(54381),
     O = n(361110),
     S = n(29121),
     y = n(215023),
-    j = n(213301);
+    j = n(374874);
 let k = l.memo(function (e) {
         let {
                 product: t,
@@ -52,19 +52,19 @@ let k = l.memo(function (e) {
             { previewingVariantIndex: K, handleEntering: Y, handleLeaving: q } = (0, O.f)(t),
             J = (0, b.$l)(),
             Q = (0, b.jB)(),
-            X = (0, p.Nd)(),
+            X = (0, g.Nd)(),
             $ = null == X ? void 0 : X.tab,
             ee = (0, S.zQ)(t),
             et = l.useRef(null),
             { isHoveringOrFocusing: en } = (0, d.Z)(et),
-            { handleCardVisibilityChange: er } = (0, g.E)(t.skuId, $ === y.AW.CATALOG ? "full" : $),
+            { handleCardVisibilityChange: er } = (0, p.E)(t.skuId, $ === y.AW.CATALOG ? "full" : $),
             el = (0, b.J7)(t, u.Z.COLLECTIBLES_SHOP_CARD, G, J, Q),
-            ei = t.type === o.Z.VARIANTS_GROUP && !k,
+            ei = t.type === s.Z.VARIANTS_GROUP && !k,
             ea = !T || !L,
-            eo = !(I && i) || ei,
-            es = eo || ea,
+            es = !(I && i) || ei,
+            eo = es || ea,
             ec = ea || ei;
-        return (0, r.jsx)(s.$, {
+        return (0, r.jsx)(o.$, {
             innerRef: et,
             onChange: er,
             threshold: 0,
@@ -81,7 +81,7 @@ let k = l.memo(function (e) {
                     className: j.productCardContentContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || eo || ec }),
+                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || es || ec }),
                             children: (0, r.jsx)(v.Z, {
                                 skuId: t.skuId,
                                 isCardHovered: en,
@@ -105,14 +105,14 @@ let k = l.memo(function (e) {
                                     }),
                             ],
                         }),
-                        es &&
+                        eo &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", { className: j.footerGradient }),
                                     (0, r.jsxs)("div", {
                                         className: j.footerContainer,
                                         children: [
-                                            eo &&
+                                            es &&
                                                 (0, r.jsxs)("div", {
                                                     className: j.footerInfoContainer,
                                                     children: [
@@ -121,7 +121,7 @@ let k = l.memo(function (e) {
                                                                 className: j.footerInfoLeft,
                                                                 children: [
                                                                     !i &&
-                                                                        (0, r.jsx)(h.Z, {
+                                                                        (0, r.jsx)(m.Z, {
                                                                             skuId: t.skuId,
                                                                             className: a()(W, j.productName),
                                                                         }),
@@ -129,7 +129,7 @@ let k = l.memo(function (e) {
                                                                         (0, r.jsx)("div", {
                                                                             className: j.footerInfoShrinkOnHover,
                                                                             "aria-hidden": !0,
-                                                                            children: (0, r.jsx)(m.Z, {
+                                                                            children: (0, r.jsx)(h.Z, {
                                                                                 skuId: t.skuId,
                                                                                 prioritizedCurrency: z,
                                                                             }),

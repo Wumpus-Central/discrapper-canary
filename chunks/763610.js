@@ -5,7 +5,7 @@ var r = n(54381),
     a = n.n(o),
     i = n(481060),
     l = n(53281),
-    c = n(557441);
+    c = n(642127);
 function d(e) {
     let { filename: t, className: n, filters: o, buttonText: d, placeholder: u, onFileSelect: p } = e,
         m = s.useRef(null),

@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(237872),
     f = n(562618),
     _ = n(945909),
-    p = n(254477);
+    p = n(929618);
 function h(e, t, n) {
     return (
         t in e
@@ -122,7 +122,7 @@ function O(e) {
             "scrollBehavior",
         ]);
     let [D, w] = i.useState(null != C ? C : "top"),
-        [x, L] = i.useState({
+        [L, x] = i.useState({
             position: (0, _.z)(D),
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
@@ -137,7 +137,7 @@ function O(e) {
             null == S || S("user:explicit");
         }, [S]),
         j = i.useCallback((e) => {
-            w(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
+            w(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
         l.m,
@@ -172,7 +172,7 @@ function O(e) {
                         textLink: I,
                     }),
                     null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: x }),
+                    (0, r.jsx)(u.$, { caretConfig: L }),
                 ],
             }),
         }),

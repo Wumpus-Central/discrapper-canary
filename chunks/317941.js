@@ -28,8 +28,8 @@ var r = n(54381),
     R = n(296848),
     P = n(474936),
     D = n(388032),
-    w = n(669255);
-function x(e, t, n) {
+    w = n(786636);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-let L = 512,
+let x = 512,
     M = 1000;
 class k extends i.PureComponent {
     componentWillUnmount() {
@@ -102,9 +102,9 @@ class k extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "_copyModeTimeout", new u.V7()),
-            x(this, "state", { copyMode: f.uA3.DEFAULT }),
-            x(this, "handleCopy", (e) => {
+            L(this, "_copyModeTimeout", new u.V7()),
+            L(this, "state", { copyMode: f.uA3.DEFAULT }),
+            L(this, "handleCopy", (e) => {
                 let { giftCode: t, sku: n } = this.props;
                 (0, N.dM)(t, n),
                     (0, C.JG)(
@@ -232,7 +232,7 @@ class j extends i.PureComponent {
                     onMouseEnter: () => this.setIsHovered(!0),
                     onMouseLeave: () => this.setIsHovered(!1),
                     children: (0, r.jsx)(p.Z.Header, {
-                        splashArtURL: t.getSplashURL(L),
+                        splashArtURL: t.getSplashURL(x),
                         children: (0, r.jsxs)("div", {
                             className: w.cardHeader,
                             children: [
@@ -281,13 +281,13 @@ class j extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "_loadedAt", null),
-            x(this, "state", {
+            L(this, "_loadedAt", null),
+            L(this, "state", {
                 isOpen: !1,
                 isCreating: !1,
                 isHovered: !1,
             }),
-            x(this, "handleGenerateGiftCode", async (e) => {
+            L(this, "handleGenerateGiftCode", async (e) => {
                 e.stopPropagation();
                 let { skuId: t, subscriptionPlanId: n, giftStyle: r } = this.props;
                 this.setState({ isCreating: !0 }),
@@ -297,7 +297,7 @@ class j extends i.PureComponent {
                         isOpen: !0,
                     });
             }),
-            x(this, "handleToggleOpen", () => {
+            L(this, "handleToggleOpen", () => {
                 let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
                     r = !this.state.isOpen;
                 (null == n || null == this._loadedAt || n < this._loadedAt) && r && _.Z.fetchUserGiftCodesForSKU(e, t),

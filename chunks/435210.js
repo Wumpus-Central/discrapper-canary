@@ -179,7 +179,7 @@ function h(e) {
 }
 function m(e, t, n, r, i) {
     for (var a = [], o = 0, s = t.length; o < s; ++o)
-        L(t, String(o)) ? a.push(g(e, t, n, r, String(o), !0)) : a.push("");
+        x(t, String(o)) ? a.push(g(e, t, n, r, String(o), !0)) : a.push("");
     return (
         i.forEach(function (i) {
             i.match(/^\d+$/) || a.push(g(e, t, n, r, i, !0));
@@ -193,7 +193,7 @@ function g(e, t, n, r, i, a) {
         ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get
             ? (s = l.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special"))
             : l.set && (s = e.stylize("[Setter]", "special")),
-        L(r, i) || (o = "[" + i + "]"),
+        x(r, i) || (o = "[" + i + "]"),
         !s &&
             (0 > e.seen.indexOf(l.value)
                 ? (s = O(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf("\n") > -1 &&
@@ -343,16 +343,16 @@ function D(e) {
     }),
     (t.isBuffer = n(102439));
 var w = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-function x() {
+function L() {
     var e = new Date(),
         t = [D(e.getHours()), D(e.getMinutes()), D(e.getSeconds())].join(":");
     return [e.getDate(), w[e.getMonth()], t].join(" ");
 }
-function L(e, t) {
+function x(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
 (t.log = function () {
-    console.log("%s - %s", x(), t.format.apply(t, arguments));
+    console.log("%s - %s", L(), t.format.apply(t, arguments));
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
@@ -361,7 +361,7 @@ function L(e, t) {
         return e;
     });
 var M = "undefined" != typeof Symbol ? Symbol("util.promisify.custom") : void 0;
-function j(e, t) {
+function k(e, t) {
     if (!e) {
         var n = Error("Promise was rejected with a falsy value");
         (n.reason = e), (e = n);
@@ -434,7 +434,7 @@ function j(e, t) {
                     r.nextTick(o.bind(null, null, e));
                 },
                 function (e) {
-                    r.nextTick(j.bind(null, e, o));
+                    r.nextTick(k.bind(null, e, o));
                 },
             );
         }

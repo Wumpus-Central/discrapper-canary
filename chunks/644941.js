@@ -45,7 +45,7 @@ var i = n(54381),
     B = n(978313),
     K = n(206583),
     X = n(388032),
-    J = n(226788);
+    J = n(456486);
 let V = () =>
     (0, i.jsxs)("div", {
         className: J.gameBadge,

@@ -8,9 +8,9 @@ var a = n(54381),
     c = n(244526),
     d = n(853872),
     u = n(246992),
-    m = n(711322),
-    p = n(713243),
-    h = n(451429);
+    m = n(596533),
+    p = n(863308),
+    h = n(866403);
 let x = [
         {
             label: "3DS and Failed Cards",
@@ -1380,14 +1380,14 @@ function v() {
                 }),
                 await (0, o.tZ)();
         },
-        w = async () => {
+        I = async () => {
             await i.tn.del({
                 url: "/debug/payment-source",
                 rejectWithError: !1,
             }),
                 await (0, o.tZ)();
         },
-        I = async () => {
+        w = async () => {
             await i.tn.del({
                 url: "/debug/rate-limits",
                 rejectWithError: !1,
@@ -1466,13 +1466,13 @@ function v() {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Delete All Payment Sources",
-                                    onClick: w,
+                                    onClick: I,
                                 }),
                             (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset API Rate limits and reload app",
-                                onClick: I,
+                                onClick: w,
                             }),
                         ],
                     }),

@@ -12,7 +12,7 @@ var r = n(54381),
     c = n(317257),
     u = n(583478),
     d = n(976845),
-    f = n(647917);
+    f = n(646855);
 function _(e, t, n) {
     return (
         t in e
@@ -67,19 +67,19 @@ let h = () =>
             [C, N] = (0, i.useState)(!1),
             [R, P] = (0, i.useState)(!1),
             [D, w] = (0, i.useState)(0.9 * l.D2),
-            x = null === a;
+            L = null === a;
         (0, i.useEffect)(() => {
-            x &&
+            L &&
                 !C &&
                 (N(!0),
                 setTimeout(() => {
                     P(!0);
                 }, 500));
-        }, [x, N, C]),
+        }, [L, N, C]),
             (0, i.useEffect)(() => {
-                R && !x && N(!1);
-            }, [x, R]);
-        let L = x || C,
+                R && !L && N(!1);
+            }, [L, R]);
+        let x = L || C,
             M = C ? null : a,
             [k, j] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
@@ -99,7 +99,7 @@ let h = () =>
                 onSetAnimationDurationMS: w,
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: L ? void 0 : b,
+            onClick: x ? void 0 : b,
             className: o()(f.clickable, { [f.disabled]: O }),
             id: null != n ? n : m,
             children: (0, r.jsxs)("span", {
@@ -108,13 +108,13 @@ let h = () =>
                 onMouseLeave: O ? void 0 : () => S(!1),
                 ref: t,
                 className: o()(f.container, A, I, {
-                    [f.containerLoading]: L,
+                    [f.containerLoading]: x,
                     [f.inModalOverlay]: v,
                     [f.disabled]: O,
                 }),
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
+                        className: o()(f.orbsLottieContainer, x ? f.orbIconloading : void 0),
                         children: (0, r.jsx)(d.ZP, p({}, Z)),
                     }),
                     (0, r.jsx)(u.Z, {
@@ -122,7 +122,7 @@ let h = () =>
                         onValueChange: B,
                         onValueReached: G,
                         targetTotalCounterTime: D,
-                        className: L ? f.counterLoading : void 0,
+                        className: x ? f.counterLoading : void 0,
                     }),
                     E && (0, r.jsx)(h, {}),
                 ],

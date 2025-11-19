@@ -1,21 +1,21 @@
-a.d(e, { Z: () => o });
-var c = a(54381);
-a(473749);
-var n = a(1249);
+e.d(a, { Z: () => o });
+var c = e(54381);
+e(473749);
+var n = e(1249);
 let o = (r) => {
     let {
-            innerRingPercent: e,
-            outerRingColor: a = "currentColor",
+            innerRingPercent: a,
+            outerRingColor: e = "currentColor",
             innerRingColor: o = "currentColor",
-            strokeWidth: s = 4,
-            children: t,
+            strokeWidth: t = 4,
+            children: s,
             backgroundCircleColor: i,
             backgroundCircleBlurAmount: l = 0,
         } = r,
-        d = Math.min(Math.max(e, 0), 100),
-        g = (100 - s) / 2,
+        d = Math.min(Math.max(a, 0), 100),
+        g = (100 - t) / 2,
         u = g * Math.PI * 2,
-        v = (100 - s) / 2,
+        v = (100 - t) / 2,
         h = v * Math.PI * 2;
     return (0, c.jsxs)("div", {
         className: n.container,
@@ -39,8 +39,8 @@ let o = (r) => {
                         cx: 50,
                         cy: 50,
                         r: g,
-                        strokeWidth: s,
-                        stroke: a,
+                        strokeWidth: t,
+                        stroke: e,
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),
@@ -50,7 +50,7 @@ let o = (r) => {
                         cx: 50,
                         cy: 50,
                         r: v,
-                        strokeWidth: s,
+                        strokeWidth: t,
                         stroke: o,
                         fill: "none",
                         strokeLinecap: "round",
@@ -62,10 +62,10 @@ let o = (r) => {
                     }),
                 ],
             }),
-            null != t &&
+            null != s &&
                 (0, c.jsx)("div", {
                     className: n.overlay,
-                    children: t,
+                    children: s,
                 }),
         ],
     });

@@ -35,8 +35,8 @@ var r = n(54381),
     P = n(652853),
     D = n(313789),
     w = n(518596),
-    x = n(430824),
-    L = n(594174),
+    L = n(430824),
+    x = n(594174),
     M = n(314884),
     k = n(626135),
     j = n(768581),
@@ -53,7 +53,7 @@ var r = n(54381),
     z = n(474936),
     q = n(981631),
     X = n(388032),
-    Q = n(616885),
+    Q = n(819019),
     J = n(834982),
     $ = n(912450),
     ee = n(703548),
@@ -389,14 +389,14 @@ function eT(e) {
     let { premiumType: t, onClose: n } = e;
     i.useEffect(() => p.Z.wait(() => (0, h.X8)()), []);
     let a = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
-        [s, l] = (0, d.Wu)([M.Z, x.Z], () => {
+        [s, l] = (0, d.Wu)([M.Z, L.Z], () => {
             let e = M.Z.boostSlots,
                 t = new Map();
             u()(e)
                 .map("premiumGuildSubscription")
                 .map("guildId")
                 .forEach((e) => {
-                    if (null != x.Z.getGuild(e)) {
+                    if (null != L.Z.getGuild(e)) {
                         var n;
                         let r = null != (n = t.get(e)) ? n : 0;
                         t.set(e, r + 1);
@@ -406,7 +406,7 @@ function eT(e) {
                 r = 0;
             return (
                 t.size > 0 && ([n, r] = Array.from(t.entries()).reduce((e, t) => (t[1] > e[1] ? t : e))),
-                [x.Z.getGuild(n), r]
+                [L.Z.getGuild(n), r]
             );
         }),
         c = null != s && l > 0,
@@ -635,8 +635,8 @@ let eP = function (e) {
             subtitleIcon: g,
             subtitleClassName: E,
         } = e,
-        b = (0, d.e7)([L.default], () => {
-            let e = L.default.getCurrentUser();
+        b = (0, d.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return l()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
         });
     i.useEffect(() => {

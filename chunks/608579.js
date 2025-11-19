@@ -26,7 +26,7 @@ var r = n(54381),
     C = n(302800),
     N = n(215023),
     R = n(231338),
-    P = n(206051);
+    P = n(778305);
 function D(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function w(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,7 +85,7 @@ function M(e) {
             onClose: n,
             onComplete: a,
             onStepChange: D,
-            transitionState: x,
+            transitionState: L,
             loadId: M,
             skuId: k,
             isGift: j = !1,
@@ -148,7 +148,7 @@ function M(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             I.x,
-                            L(w({}, e), {
+                            x(w({}, e), {
                                 confettiCanvas: Y,
                                 analyticsLocations: V,
                                 hideConfetti: null != q,
@@ -196,7 +196,7 @@ function M(e) {
                             skuId: J,
                             initialPlanId: null,
                             analyticsLocations: V,
-                            transitionState: x,
+                            transitionState: L,
                             renderHeader: en,
                             returnRef: F,
                             onStepChange: D,

@@ -24,7 +24,7 @@ var r = n(54381),
     h = n(98650),
     m = n(383056),
     g = n(388032),
-    E = n(361421);
+    E = n(786614);
 function b(e, t, n) {
     return (
         t in e
@@ -179,7 +179,7 @@ function w(e) {
             popoutClassName: N,
             popoutPosition: R = "bottom",
             popoutLayerContext: w,
-            optionClassName: L,
+            optionClassName: x,
             closeOnSelect: M,
             select: k,
             isSelected: j,
@@ -250,7 +250,7 @@ function w(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: n, position: i, updatePosition: a } = e;
-                return (0, r.jsx)(x, {
+                return (0, r.jsx)(L, {
                     className: N,
                     closeOnSelect: M,
                     maxVisibleItems: l,
@@ -262,7 +262,7 @@ function w(e) {
                     options: t,
                     serialize: U,
                     renderOptionLabel: A,
-                    optionClassName: L,
+                    optionClassName: x,
                     updatePosition: a,
                     popoutPosition: i,
                 });
@@ -375,7 +375,7 @@ function w(e) {
         })
     );
 }
-function x(e) {
+function L(e) {
     let {
             className: t,
             onSelect: n,
@@ -426,12 +426,12 @@ function x(e) {
             },
             [a, n, c],
         ),
-        x = i.useMemo(
+        L = i.useMemo(
             () =>
                 f.map((e, t) => {
                     var n;
                     return (0, r.jsx)(
-                        L,
+                        x,
                         {
                             isSelected: d(e.value),
                             value: e.value,
@@ -476,7 +476,7 @@ function x(e) {
                                 ),
                                 {
                                     role: "listbox",
-                                    children: x,
+                                    children: L,
                                 },
                             ),
                         ),
@@ -484,7 +484,7 @@ function x(e) {
                             "aria-hidden": !0,
                             ref: N,
                             className: E.measurement,
-                            children: x.slice(0, p),
+                            children: L.slice(0, p),
                         }),
                     ],
                 });
@@ -492,7 +492,7 @@ function x(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let {
             className: t,
             value: n,
@@ -687,7 +687,7 @@ function k(e) {
             ),
         );
     }
-    function x() {
+    function L() {
         if (null != i || null != a)
             return (e) =>
                 (0, r.jsxs)("div", {
@@ -695,5 +695,5 @@ function k(e) {
                     children: [null == i ? void 0 : i(e), e.label, null == a ? void 0 : a(e)],
                 });
     }
-    return (0, r.jsx)(w, v(y({}, o), { renderOptionLabel: null != R ? R : x() }));
+    return (0, r.jsx)(w, v(y({}, o), { renderOptionLabel: null != R ? R : L() }));
 }

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(864682),
     d = n(975298),
     p = n(550385),
-    f = n(899740),
-    h = n(365113),
+    h = n(899740),
+    f = n(365113),
     g = n(849862),
     m = n(460181),
     b = n(155409),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(431),
     v = n(774343),
     j = n(417363),
-    x = n(941128),
-    C = n(780570),
+    C = n(941128),
+    x = n(780570),
     E = n(278464),
     S = n(276952),
     I = n(682662),
@@ -30,7 +30,7 @@ var r = n(54381),
     w = n(474936),
     T = n(871465),
     A = n(388032),
-    R = n(815141);
+    R = n(688825);
 let D = {
     origin: {
         x: -16,
@@ -45,17 +45,17 @@ let D = {
 };
 function L(e) {
     var t, n;
-    let { selected: o, user: d, badge: f, link: g, showProgressBadge: _ } = e,
+    let { selected: o, user: d, badge: h, link: g, showProgressBadge: _ } = e,
         [y, O] = i.useState(!1),
         [v, j] = i.useState(!1),
-        [x, C] = i.useState(null),
+        [C, x] = i.useState(null),
         [E, w] = i.useState(0),
         L = (0, l.Ie)("home"),
         M = (0, p.oq)().activePanel === p.wh.APP_ICON,
         k = () => {
-            C(null), w(0), clearTimeout(x);
+            x(null), w(0), clearTimeout(C);
         },
-        G = h.o.useConfig({ location: "home button" }).dmsTab;
+        G = f.o.useConfig({ location: "home button" }).dmsTab;
     if (null == d) return null;
     let U = G ? A.intl.string(A.t.Ym2Ri6) : A.intl.string(A.t.YUU0RF);
     v && (U = a.K.get(Z.wli) ? A.intl.string(A.t["nkq1l+"]) : A.intl.string(A.t.Be8Q5E));
@@ -69,9 +69,9 @@ function L(e) {
     let F = o || y || M,
         V = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: f > 0 ? (0, N.Ne)(f) : null,
+            lowerBadge: h > 0 ? (0, N.Ne)(h) : null,
             upperBadge: B,
-            lowerBadgeSize: { width: (0, s.OVM)(f) },
+            lowerBadgeSize: { width: (0, s.OVM)(h) },
             children: (0, r.jsx)(
                 s.LYs,
                 ((t = (function (e) {
@@ -105,7 +105,7 @@ function L(e) {
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != x && clearTimeout(x), C(setTimeout(k, 500)), w(E + 1), 15 === E)
+                                (null != C && clearTimeout(C), x(setTimeout(k, 500)), w(E + 1), 15 === E)
                             ) {
                                 k();
                                 let e = !a.K.get(Z.wli);
@@ -181,10 +181,10 @@ function L(e) {
 }
 function M() {
     let e = (0, E.n)(),
-        t = (0, o.e7)([x.Z, j.Z], () => {
-            let e = (0, c.E)(x.Z.activeItems, j.Z),
-                { total: t, progress: n } = C.lK(e),
-                r = C.xI(n, t);
+        t = (0, o.e7)([C.Z, j.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, j.Z),
+                { total: t, progress: n } = x.lK(e),
+                r = x.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, g.If)(),
@@ -196,9 +196,9 @@ function M() {
         })),
         u = l.fractionalState === w.a$.NONE ? a + s : 0,
         p = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
-        h = (0, f.q)(),
-        m = n + u + h,
-        b = m === u && u > 0 && n + h === 0,
+        f = (0, h.q)(),
+        m = n + u + f,
+        b = m === u && u > 0 && n + f === 0,
         S = v.Z.getHomeLink();
     return (
         b && (S = Z.Z5c.APPLICATION_STORE),

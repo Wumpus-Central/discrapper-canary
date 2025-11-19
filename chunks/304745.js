@@ -43,9 +43,9 @@ function P(e) {
             [R],
         ),
         H = (0, v.bp)() === O.IlC.POPOUT,
-        { parentAnalyticsLocation: F, newestAnalyticsLocation: V } = (0, g.ZP)(),
+        { parentAnalyticsLocation: V, newestAnalyticsLocation: F } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, y.v)(F, y.d.ACTIVITY),
+            (0, y.v)(V, y.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -55,9 +55,9 @@ function P(e) {
                               }
                             : { type: "contextless" },
                     openInPopout: H,
-                    analyticsLocation: V,
+                    analyticsLocation: F,
                 });
-        }, [t, H, V, F]),
+        }, [t, H, F, V]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),

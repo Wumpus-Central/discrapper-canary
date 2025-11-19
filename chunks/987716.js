@@ -15,7 +15,7 @@ var r = n(54381),
     m = n(96848),
     g = n(703926),
     E = n(388032),
-    b = n(611344);
+    b = n(469059);
 function y(e, t, n) {
     return (
         t in e
@@ -102,9 +102,9 @@ let A = (e) => {
         } = (0, c.wD)(),
         [P, D] = i.useState(!1),
         w = i.useRef(null),
-        x = (0, s.Jb)({ orientation: "horizontal" }),
-        { ref: L } = x,
-        M = T(x, ["ref"]),
+        L = (0, s.Jb)({ orientation: "horizontal" }),
+        { ref: x } = L,
+        M = T(L, ["ref"]),
         k = (0, d.MY)(y, t),
         j = k === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         U = k !== d.xr.DEFAULT,
@@ -156,7 +156,7 @@ let A = (e) => {
                             },
                             className: o()(b.giftBoxOptionContainer, a),
                             "aria-label": E.intl.string(E.t.v54NrN),
-                            ref: L,
+                            ref: x,
                         },
                         M,
                     ),

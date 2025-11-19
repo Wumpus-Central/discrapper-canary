@@ -12,8 +12,8 @@ var r = n(54381),
     _ = n(213167),
     p = n(936714),
     h = n(981631),
-    m = n(786491),
-    g = n(605532);
+    m = n(206569),
+    g = n(609778);
 function E(e, t, n) {
     return (
         t in e
@@ -207,7 +207,7 @@ let v = new u.Z("PaymentElement.web.stories"),
     P = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "joined-payment-address-elements" })),
     D = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "stripe-payment-element" })),
     w = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "stripe-address-element" })),
-    x = {
+    L = {
         theme: {
             label: "Theme",
             type: "select",
@@ -238,11 +238,11 @@ let v = new u.Z("PaymentElement.web.stories"),
             defaultValue: "#00000014",
         },
     },
-    L = {
+    x = {
         name: "Joined Payment + Address",
         id: "joined-payment-address-elements",
         component: P,
-        controls: b({}, x),
+        controls: b({}, L),
     },
     M = {
         title: "Payment Elements",
@@ -251,14 +251,14 @@ let v = new u.Z("PaymentElement.web.stories"),
                 name: "Stripe Payment Element",
                 id: "stripe-payment-element",
                 component: D,
-                controls: b({}, x),
+                controls: b({}, L),
             },
             {
                 name: "Stripe Address Element",
                 id: "stripe-address-element",
                 component: w,
-                controls: b({}, x),
+                controls: b({}, L),
             },
-            L,
+            x,
         ],
     };

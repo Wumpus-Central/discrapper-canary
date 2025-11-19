@@ -63,11 +63,11 @@ function T(e) {
             showOpaqueBackground: D = !1,
         } = e,
         w = (0, i.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        x = (0, i.e7)([c.Z], () => {
+        L = (0, i.e7)([c.Z], () => {
             var e;
             return c.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : y.lds);
         }),
-        L = (0, o.U)(t, I),
+        x = (0, o.U)(t, I),
         M = (0, m.C)(t),
         k = (0, f.SO)(w),
         { shouldHideGuildPurchaseEntryPoints: j } = (0, l.uP)(n),
@@ -112,11 +112,11 @@ function T(e) {
     return (0, r.jsx)(
         h.Z,
         {
-            imageUrl: L,
+            imageUrl: x,
             name: t.name,
             description: t.description,
             formattedPrice: U,
-            role: x,
+            role: L,
             ctaComponent: (0, r.jsx)(a.zxk, v({}, G)),
             productType: M,
             shouldShowFullDescriptionButton: T,

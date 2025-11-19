@@ -2,26 +2,26 @@ n.d(t, {
     B: () => w,
     B5: () => R,
     Do: () => D,
-    GX: () => j,
+    GX: () => k,
     HR: () => F,
     Hr: () => N,
     Je: () => A,
     Js: () => b,
     KR: () => P,
     MO: () => U,
-    N3: () => k,
+    N3: () => j,
     Oq: () => S,
     P_: () => v,
     Vn: () => T,
     ab: () => C,
-    e5: () => x,
+    e5: () => L,
     e7: () => O,
     lN: () => B,
     nE: () => G,
     nH: () => I,
     qs: () => E,
     qz: () => Z,
-    ws: () => L,
+    ws: () => x,
     xI: () => M,
     zI: () => y,
 }),
@@ -282,11 +282,11 @@ function w(e) {
         location: n,
     });
 }
-function x(e) {
+function L(e) {
     let { onboardingCTA: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: t });
 }
-function L(e) {
+function x(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
@@ -294,11 +294,11 @@ function M(e) {
     let { added: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function j(e) {
+function k(e) {
     let { readGuideCta: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }
-function k(e) {
+function j(e) {
     let { isMobile: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }

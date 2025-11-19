@@ -3,7 +3,7 @@ n.d(t, {
     CX: () => tR,
     F3: () => ey,
     UE: () => tk,
-    _7: () => ex,
+    _7: () => eL,
     mH: () => tF,
     vt: () => eY,
 });
@@ -72,8 +72,8 @@ var y = new WeakMap(),
     P = new WeakMap(),
     D = new WeakMap(),
     w = new WeakMap(),
-    x = new WeakMap(),
     L = new WeakMap(),
+    x = new WeakMap(),
     M = new WeakMap(),
     k = new WeakMap(),
     j = new WeakMap(),
@@ -520,7 +520,7 @@ var y = new WeakMap(),
         },
         androidScheduleFlush(e) {
             var t;
-            null == (t = L.get(e)) || t();
+            null == (t = x.get(e)) || t();
         },
         androidPendingDiffs: (e) => j.get(e),
     },
@@ -555,7 +555,7 @@ var y = new WeakMap(),
     eC = eE ? c.useLayoutEffect : c.useEffect,
     eN = (e) => {
         var { isLast: t, leaf: n, parent: r, text: i } = e,
-            a = ex(),
+            a = eL(),
             o = ey.findPath(a, i),
             s = d.y$.parent(o),
             l = !0 === n[F];
@@ -617,12 +617,12 @@ var y = new WeakMap(),
         );
     },
     ew = (0, c.createContext)(null),
-    ex = () => {
+    eL = () => {
         var e = (0, c.useContext)(ew);
         if (!e) throw Error("The `useSlateStatic` hook must be used inside the <Slate> component's context.");
         return e;
     },
-    eL = (e) => {
+    ex = (e) => {
         var {
                 leaf: t,
                 isLast: n,
@@ -633,7 +633,7 @@ var y = new WeakMap(),
             } = e,
             s = (0, c.useRef)(null),
             l = (0, c.useRef)(null),
-            u = ex(),
+            u = eL(),
             d = (0, c.useRef)(null);
         (0, c.useEffect)(
             () => () => {
@@ -700,7 +700,7 @@ var y = new WeakMap(),
         });
     },
     eM = c.memo(
-        eL,
+        ex,
         (e, t) =>
             t.parent === e.parent &&
             t.isLast === e.isLast &&
@@ -717,7 +717,7 @@ var y = new WeakMap(),
     ej = (e) => {
         for (
             var { decorations: t, isLast: n, parent: r, renderPlaceholder: i, renderLeaf: a, text: o } = e,
-                s = ex(),
+                s = eL(),
                 l = (0, c.useRef)(null),
                 u = d.xv.decorations(o, t),
                 f = ey.findKey(s, o),
@@ -777,7 +777,7 @@ var y = new WeakMap(),
                 renderLeaf: o,
                 selection: s,
             } = e,
-            l = ex(),
+            l = eL(),
             u = ez(),
             f = l.isInline(n),
             _ = ey.findKey(l, n),
@@ -850,7 +850,7 @@ var y = new WeakMap(),
     ),
     eZ = (e) => {
         var { attributes: t, children: n, element: r } = e,
-            i = ex().isInline(r) ? "span" : "div";
+            i = eL().isInline(r) ? "span" : "div";
         return c.createElement(i, Object.assign({}, t, { style: { position: "relative" } }), n);
     },
     eF = (0, c.createContext)(() => []),
@@ -861,7 +861,7 @@ var y = new WeakMap(),
         for (
             var { decorations: t, node: n, renderElement: r, renderPlaceholder: i, renderLeaf: a, selection: o } = e,
                 s = eV(),
-                l = ex(),
+                l = eL(),
                 u = ey.findPath(l, n),
                 f = [],
                 _ = d.W_.isElement(n) && !l.isInline(n) && d.ML.hasInlines(l, n),
@@ -1578,8 +1578,8 @@ function th(e) {
                         var P,
                             D,
                             { anchor: w } = r,
-                            x = z(a) ? a.isCollapsed : !!(null != (D = a) && D.collapsed);
-                        if (l && x && d.e6.isCollapsed(r) && w.offset > 0)
+                            L = z(a) ? a.isCollapsed : !!(null != (D = a) && D.collapsed);
+                        if (l && L && d.e6.isCollapsed(r) && w.offset > 0)
                             return m(w.path, {
                                 text: "",
                                 start: w.offset - 1,
@@ -1618,15 +1618,15 @@ function th(e) {
                     case "insertReplacementText":
                     case "insertText":
                         if (tp(i)) return g(() => ey.insertData(t, i), { at: r });
-                        var L = null != i ? i : "";
+                        var x = null != i ? i : "";
                         if (
-                            (M.get(t) && (L = L.replace("\uFEFF", "")),
-                            "insertText" === n && /.*\n.*\n$/.test(L) && (L = L.slice(0, -1)),
-                            L.includes("\n"))
+                            (M.get(t) && (x = x.replace("\uFEFF", "")),
+                            "insertText" === n && /.*\n.*\n$/.test(x) && (x = x.slice(0, -1)),
+                            x.includes("\n"))
                         )
                             return g(
                                 () => {
-                                    var e = L.split("\n");
+                                    var e = x.split("\n");
                                     e.forEach((n, r) => {
                                         n && d.ML.insertText(t, n), r !== e.length - 1 && d.ML.insertSoftBreak(t);
                                     });
@@ -1638,9 +1638,9 @@ function th(e) {
                                 G = {
                                     start: k.offset,
                                     end: U.offset,
-                                    text: L,
+                                    text: x,
                                 };
-                            if (L && c && "insertCompositionText" === n) {
+                            if (x && c && "insertCompositionText" === n) {
                                 var B = c.start + c.text.search(/\S|$/);
                                 G.start + G.text.search(/\S|$/) === B + 1 && G.end === c.start + c.text.length
                                     ? ((G.start -= 1), (c = null), A())
@@ -1652,10 +1652,10 @@ function th(e) {
                                         ? G
                                         : !!(c && d.e6.isCollapsed(r)) &&
                                           c.end + c.text.length === k.offset &&
-                                          tu(tu({}, c), {}, { text: c.text + L }));
+                                          tu(tu({}, c), {}, { text: c.text + x }));
                             if (l) return void m(k.path, G);
                         }
-                        return g(() => d.ML.insertText(t, L), { at: r });
+                        return g(() => d.ML.insertText(t, x), { at: r });
                 }
             }
         },
@@ -1769,13 +1769,13 @@ function tv(e) {
     var { node: t } = e,
         n = g(e, tE);
     if (!el) return null;
-    var r = ex(),
+    var r = eL(),
         i = tm(),
         [a] = (0, c.useState)(() => th(ty({ editor: r }, n)));
-    return tg(t, a.handleDomMutations, tO), L.set(r, a.scheduleFlush), i && a.flush(), a;
+    return tg(t, a.handleDomMutations, tO), x.set(r, a.scheduleFlush), i && a.flush(), a;
 }
 function tI() {
-    var e = ex(),
+    var e = eL(),
         t = (0, c.useRef)(!1),
         n = (0, c.useRef)(0),
         r = (0, c.useCallback)(() => {
@@ -1859,7 +1859,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
             } = e,
             C = g(e, tT),
             N = eX(),
-            [x, L] = (0, c.useState)(!1),
+            [L, x] = (0, c.useState)(!1),
             j = (0, c.useRef)(null),
             U = (0, c.useRef)([]),
             { onUserInput: G, receivedUserInput: V } = tI(),
@@ -2009,7 +2009,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
         });
         var $ = (0, c.useCallback)(
                 (e) => {
-                    if ((G(), !_ && ey.hasEditableTarget(N, e.target) && !tL(e, u))) {
+                    if ((G(), !_ && ey.hasEditableTarget(N, e.target) && !tx(e, u))) {
                         if (J) return J.handleDOMBeforeInput(e);
                         Q.flush(), q.flush();
                         var { selection: t } = N,
@@ -2124,7 +2124,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     case "insertFromYank":
                                     case "insertReplacementText":
                                     case "insertText":
-                                        "insertFromComposition" === n && ey.isComposing(N) && (L(!1), D.set(N, !1)),
+                                        "insertFromComposition" === n && ey.isComposing(N) && (x(!1), D.set(N, !1)),
                                             (null == r ? void 0 : r.constructor.name) === "DataTransfer"
                                                 ? ey.insertData(N, r)
                                                 : "string" == typeof r &&
@@ -2163,7 +2163,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
             );
         }, [Q]);
         var et = s([N, []]);
-        if (f && 1 === N.children.length && 1 === Array.from(d.NB.texts(N)).length && "" === d.NB.string(N) && !x) {
+        if (f && 1 === N.children.length && 1 === Array.from(d.NB.texts(N)).length && "" === d.NB.string(N) && !L) {
             var en = d.ML.start(N, []);
             et.push({
                 [Z]: !0,
@@ -2256,7 +2256,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                         if (
                                             !eb &&
                                             !_ &&
-                                            !tx(e, C.onBeforeInput) &&
+                                            !tL(e, C.onBeforeInput) &&
                                             ey.hasSelectableTarget(N, e.target) &&
                                             (e.preventDefault(), !ey.isComposing(N))
                                         ) {
@@ -2267,7 +2267,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     [_],
                                 ),
                                 onInput: (0, c.useCallback)((e) => {
-                                    if (!tx(e, C.onInput)) {
+                                    if (!tL(e, C.onInput)) {
                                         if (J) return void J.handleInput();
                                         for (var t of U.current) t();
                                         U.current = [];
@@ -2279,7 +2279,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                             _ ||
                                             z.isUpdatingSelection ||
                                             !ey.hasSelectableTarget(N, e.target) ||
-                                            tx(e, C.onBlur)
+                                            tL(e, C.onBlur)
                                         )
                                             return;
                                         var t = ey.findDocumentOrShadowRoot(N);
@@ -2305,7 +2305,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 ),
                                 onClick: (0, c.useCallback)(
                                     (e) => {
-                                        if (ey.hasTarget(N, e.target) && !tx(e, C.onClick) && K(e.target)) {
+                                        if (ey.hasTarget(N, e.target) && !tL(e, C.onClick) && K(e.target)) {
                                             var t = ey.toSlateNode(N, e.target),
                                                 n = ey.findPath(N, t);
                                             if (d.ML.hasPath(N, n) && d.NB.get(N, n) === t) {
@@ -2342,9 +2342,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     (e) => {
                                         if (
                                             ey.hasSelectableTarget(N, e.target) &&
-                                            (ey.isComposing(N) && (L(!1), D.set(N, !1)),
+                                            (ey.isComposing(N) && (x(!1), D.set(N, !1)),
                                             null == J || J.handleCompositionEnd(e),
-                                            !tx(e, C.onCompositionEnd) && !el && !eu && !eh && !eo && !eg && !em) &&
+                                            !tL(e, C.onCompositionEnd) && !el && !eu && !eh && !eo && !eg && !em) &&
                                             e.data
                                         ) {
                                             var t = M.get(N);
@@ -2360,9 +2360,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 onCompositionUpdate: (0, c.useCallback)(
                                     (e) => {
                                         !ey.hasSelectableTarget(N, e.target) ||
-                                            tx(e, C.onCompositionUpdate) ||
+                                            tL(e, C.onCompositionUpdate) ||
                                             ey.isComposing(N) ||
-                                            (L(!0), D.set(N, !0));
+                                            (x(!0), D.set(N, !0));
                                     },
                                     [C.onCompositionUpdate],
                                 ),
@@ -2371,9 +2371,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                         if (
                                             ey.hasSelectableTarget(N, e.target) &&
                                             (null == J || J.handleCompositionStart(e),
-                                            !tx(e, C.onCompositionStart) && !el)
+                                            !tL(e, C.onCompositionStart) && !el)
                                         ) {
-                                            L(!0);
+                                            x(!0);
                                             var { selection: t } = N;
                                             if (t) {
                                                 if (d.e6.isExpanded(t)) return void d.ML.deleteFragment(N);
@@ -2399,14 +2399,14 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 onCopy: (0, c.useCallback)(
                                     (e) => {
                                         ey.hasSelectableTarget(N, e.target) &&
-                                            !tx(e, C.onCopy) &&
+                                            !tL(e, C.onCopy) &&
                                             (e.preventDefault(), ey.setFragmentData(N, e.clipboardData, "copy"));
                                     },
                                     [C.onCopy],
                                 ),
                                 onCut: (0, c.useCallback)(
                                     (e) => {
-                                        if (!_ && ey.hasSelectableTarget(N, e.target) && !tx(e, C.onCut)) {
+                                        if (!_ && ey.hasSelectableTarget(N, e.target) && !tL(e, C.onCut)) {
                                             e.preventDefault(), ey.setFragmentData(N, e.clipboardData, "cut");
                                             var { selection: t } = N;
                                             if (t)
@@ -2421,7 +2421,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 ),
                                 onDragOver: (0, c.useCallback)(
                                     (e) => {
-                                        if (ey.hasTarget(N, e.target) && !tx(e, C.onDragOver)) {
+                                        if (ey.hasTarget(N, e.target) && !tL(e, C.onDragOver)) {
                                             var t = ey.toSlateNode(N, e.target);
                                             d.W_.isElement(t) && d.ML.isVoid(N, t) && e.preventDefault();
                                         }
@@ -2430,7 +2430,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 ),
                                 onDragStart: (0, c.useCallback)(
                                     (e) => {
-                                        if (!_ && ey.hasTarget(N, e.target) && !tx(e, C.onDragStart)) {
+                                        if (!_ && ey.hasTarget(N, e.target) && !tL(e, C.onDragStart)) {
                                             var t = ey.toSlateNode(N, e.target),
                                                 n = ey.findPath(N, t);
                                             if (
@@ -2451,7 +2451,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 ),
                                 onDrop: (0, c.useCallback)(
                                     (e) => {
-                                        if (!_ && ey.hasTarget(N, e.target) && !tx(e, C.onDrop)) {
+                                        if (!_ && ey.hasTarget(N, e.target) && !tL(e, C.onDrop)) {
                                             e.preventDefault();
                                             var t = N.selection,
                                                 n = ey.findEventRange(N, e),
@@ -2489,7 +2489,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                             !_ &&
                                             !z.isUpdatingSelection &&
                                             ey.hasEditableTarget(N, e.target) &&
-                                            !tx(e, C.onFocus)
+                                            !tL(e, C.onFocus)
                                         ) {
                                             var t = ey.toDOMNode(N, N);
                                             if (
@@ -2508,8 +2508,8 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                             null == J || J.handleKeyDown(e);
                                             var { nativeEvent: t } = e;
                                             if (
-                                                (ey.isComposing(N) && !1 === t.isComposing && (D.set(N, !1), L(!1)),
-                                                !(tx(e, C.onKeyDown) || ey.isComposing(N)))
+                                                (ey.isComposing(N) && !1 === t.isComposing && (D.set(N, !1), x(!1)),
+                                                !(tL(e, C.onKeyDown) || ey.isComposing(N)))
                                             ) {
                                                 var { selection: n } = N,
                                                     r = N.children[null !== n ? n.focus.path[0] : 0],
@@ -2668,7 +2668,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     (e) => {
                                         !_ &&
                                             ey.hasEditableTarget(N, e.target) &&
-                                            !tx(e, C.onPaste) &&
+                                            !tL(e, C.onPaste) &&
                                             (!eb || X(e.nativeEvent) || eu) &&
                                             (e.preventDefault(), ey.insertData(N, e.clipboardData));
                                     },
@@ -2702,12 +2702,12 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 delete n.getBoundingClientRect;
         }
     },
-    tx = (e, t) => {
+    tL = (e, t) => {
         if (!t) return !1;
         var n = t(e);
         return null != n ? n : e.isDefaultPrevented() || e.isPropagationStopped();
     },
-    tL = (e, t) => {
+    tx = (e, t) => {
         if (!t) return !1;
         var n = t(e);
         return null != n ? n : e.defaultPrevented;
@@ -2772,9 +2772,9 @@ var tZ = ["editor", "children", "onChange", "value"],
             }, [r]);
         (0, c.useEffect)(
             () => (
-                x.set(t, _),
+                L.set(t, _),
                 () => {
-                    x.set(t, () => {}), (o.current = !0);
+                    L.set(t, () => {}), (o.current = !0);
                 }
             ),
             [_],
@@ -2865,7 +2865,7 @@ var tz = function (e) {
             N.set(n, new WeakMap()),
             (n.addMark = (e, t) => {
                 var r, i;
-                null == (r = L.get(n)) || r(),
+                null == (r = x.get(n)) || r(),
                     !M.get(n) && null != (i = j.get(n)) && i.length && M.set(n, null),
                     k.delete(n),
                     o(e, t);
@@ -3001,7 +3001,7 @@ var tz = function (e) {
             }),
             (n.onChange = (e) => {
                 p.unstable_batchedUpdates(() => {
-                    var t = x.get(n);
+                    var t = L.get(n);
                     t && t(), i(e);
                 });
             }),

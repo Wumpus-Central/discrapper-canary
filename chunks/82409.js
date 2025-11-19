@@ -11,8 +11,8 @@ var c = n(481060),
     d = n(45114),
     p = n(493773);
 n(100527), n(906732);
-var f = n(377171),
-    h = n(315174),
+var h = n(377171),
+    f = n(315174),
     g = n(340541),
     m = n(768943),
     b = n(592125),
@@ -21,8 +21,8 @@ var f = n(377171),
     O = n(306680),
     v = n(709054),
     j = n(821020),
-    x = n(948154),
-    C = n(804932),
+    C = n(948154),
+    x = n(804932),
     E = n(725739),
     S = n(787879),
     I = n(370774),
@@ -34,7 +34,7 @@ var f = n(377171),
     A = n(982183),
     R = n(981631),
     D = n(388032),
-    L = n(567133);
+    L = n(546962);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,8 +77,8 @@ let k = [],
 function U(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        a = (0, C.fJ)(),
-        { selectedFilter: f } = (0, E.Z)(),
+        a = (0, x.fJ)(),
+        { selectedFilter: h } = (0, E.Z)(),
         P = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
         Z = (0, s.Wu)([O.ZP, _.Z, S.Z], () =>
@@ -107,13 +107,13 @@ function U(e) {
         ),
         U = i.useCallback(
             (e) => {
-                f !== A.V5.BOOKMARKS &&
-                    x.Z.loadMoreInbox({
+                h !== A.V5.BOOKMARKS &&
+                    C.Z.loadMoreInbox({
                         viewId: a,
                         loadingTrigger: e,
                     });
             },
-            [f, a],
+            [h, a],
         ),
         { hasLoadedEver: B, canLoadMore: W } = (0, s.cj)([S.Z], () => ({
             hasLoadedEver: S.Z.hasLoadedEver,
@@ -168,8 +168,8 @@ function U(e) {
                 }),
             [K],
         ),
-        q = F(Z, f, P),
-        X = F(D, f, null);
+        q = F(Z, h, P),
+        X = F(D, h, null);
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -208,7 +208,7 @@ function U(e) {
                   };
         })(q, X);
         null != r &&
-            x.Z.inboxItemClick({
+            C.Z.inboxItemClick({
                 message: r,
                 channel: { id: r.channel_id },
                 isUnread: i,
@@ -222,14 +222,14 @@ function U(e) {
         });
     let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === j.v8.DROPDOWN && f !== A.V5.ALL,
-        ee = (0, A.H_)(f);
+        $ = Q === j.v8.DROPDOWN && h !== A.V5.ALL,
+        ee = (0, A.H_)(h);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(c.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                h.ZP,
+                f.ZP,
                 ((t = M(
                     {
                         hasSubheader: !0,
@@ -261,16 +261,16 @@ function U(e) {
                 t),
             ),
             children: [
-                f === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || f !== A.V5.ALL }),
+                h === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || h !== A.V5.ALL }),
                 $ && (0, r.jsx)(c.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
                     className: L.messageList,
                     renderMessageGroup: H,
-                    messages: f === A.V5.BOOKMARKS ? Y : q,
-                    unreadMessages: f === A.V5.BOOKMARKS ? [] : X,
+                    messages: h === A.V5.BOOKMARKS ? Y : q,
+                    unreadMessages: h === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
                     renderLoadingState: V,
-                    ignoreGrouping: f === A.V5.BOOKMARKS,
+                    ignoreGrouping: h === A.V5.BOOKMARKS,
                     loadMore: U,
                 }),
             ],
@@ -278,7 +278,7 @@ function U(e) {
     });
 }
 function B(e) {
-    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, M({}, e)) });
+    return (0, r.jsx)(x.HP, { children: (0, r.jsx)(U, M({}, e)) });
 }
 function F(e, t, n) {
     return i.useMemo(
@@ -324,7 +324,7 @@ function z(e) {
                 }),
                 (0, r.jsx)(c.W6s, {
                     size: "sm",
-                    color: f.Z.TEXT_FEEDBACK_POSITIVE,
+                    color: h.Z.TEXT_FEEDBACK_POSITIVE,
                 }),
             ],
         }),

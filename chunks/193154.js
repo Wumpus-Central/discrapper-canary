@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(91192),
@@ -7,7 +7,7 @@ var r = n(54381),
     s = n(768581),
     c = n(682662),
     u = n(662146),
-    d = n(961699);
+    d = n(348619);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,9 +33,9 @@ function p(e) {
     }
     return e;
 }
-function f(e) {
-    let [t, f] = i.useState(!1),
-        h = (0, l.Ie)("guild-".concat(e.id));
+function h(e) {
+    let [t, h] = i.useState(!1),
+        f = (0, l.Ie)("guild-".concat(e.id));
     return (0, r.jsx)(c.H, {
         children: (0, r.jsx)(u.Z, {
             text: e.name,
@@ -53,10 +53,10 @@ function f(e) {
                         {
                             name: e.name,
                             onMouseEnter: () => {
-                                f(!0);
+                                h(!0);
                             },
                             onMouseLeave: () => {
-                                f(!1);
+                                h(!1);
                             },
                             onClick: () => {
                                 (0, o.ZDy)(async () => {
@@ -84,7 +84,7 @@ function f(e) {
                                       })
                                     : null,
                         },
-                        h,
+                        f,
                     ),
                 ),
             }),

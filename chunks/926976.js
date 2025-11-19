@@ -22,8 +22,8 @@ var a = n(54381),
     C = n(681619),
     S = n(621060),
     E = n(388032),
-    O = n(599832),
-    T = n(451429);
+    O = n(529554),
+    T = n(866403);
 let N = [
     {
         key: "event",
@@ -49,7 +49,7 @@ function P(e) {
         children: (0, a.jsx)("dl", { children: t }),
     });
 }
-function w(e) {
+function I(e) {
     let { name: t, children: n, copyValue: r } = e,
         [i, s] = l.useState(!1);
     return (
@@ -85,7 +85,7 @@ function w(e) {
         })
     );
 }
-let I = new Set(["client_performance_cpu", "client_performance_memory"]),
+let w = new Set(["client_performance_cpu", "client_performance_memory"]),
     k = [
         {
             id: "details",
@@ -205,7 +205,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                         (0, a.jsx)(P, {
                             children: Object.entries(n).map((e) => {
                                 let [n, l] = e,
-                                    r = I.has(n)
+                                    r = w.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length)
@@ -230,7 +230,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     {
                                         children: [
                                             (0, a.jsx)(
-                                                w,
+                                                I,
                                                 {
                                                     name: "".concat(n, ":"),
                                                     copyValue: { [n]: l || null },
@@ -247,7 +247,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                             null !== r &&
                                                 null !== r.average &&
                                                 (0, a.jsx)(
-                                                    w,
+                                                    I,
                                                     {
                                                         name: "".concat(n, "_avg:"),
                                                         copyValue: { [n]: l || null },
@@ -320,7 +320,7 @@ function Z() {
         }),
         [f, b] = l.useState(void 0),
         _ = g.find((e) => e.key === f),
-        { TabBar: P, renderSelectedTab: w } = (0, S.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, S.ZP)({ tabs: k }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: i()(T.panel, O.panel),
@@ -385,7 +385,7 @@ function Z() {
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, a.jsx)(P, {}),
-                        w({
+                        I({
                             loggedEvent: _,
                             onClose: () => b(void 0),
                             filteredEvents: g,

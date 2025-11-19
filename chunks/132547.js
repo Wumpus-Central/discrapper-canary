@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -28,9 +28,9 @@ var r = n(54381),
     R = n(474936),
     P = n(981631),
     D = n(388032),
-    w = n(677599),
-    x = n(865215);
-let L = (e) => {
+    w = n(184388),
+    L = n(865215);
+let x = (e) => {
     let { userId: t } = e;
     i.useEffect(() => {
         u.Z.wait(async () => {
@@ -43,14 +43,14 @@ let L = (e) => {
         (0, p.z)(_.X);
     let n = i.useRef(null),
         a = i.useRef(null),
-        L = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
+        x = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         [M, k] = i.useState(!1),
         j = (0, y.$)(),
         U = i.useRef(null),
         [G, B] = i.useState(!1),
         [Z, F] = i.useState(!1),
-        V = null != j && null != L && L.status === P.O0b.CANCELED,
-        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, j, L),
+        V = null != j && null != x && x.status === P.O0b.CANCELED,
+        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, j, x),
         Y = !Z && V,
         { analyticsLocations: W } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [K, z] = i.useState(!1),
@@ -127,7 +127,7 @@ let L = (e) => {
                                           }),
                                       }),
                                       (0, r.jsx)("img", {
-                                          src: x,
+                                          src: L,
                                           className: w.bottomIllustration,
                                           width: 112,
                                           height: 85,
@@ -140,7 +140,7 @@ let L = (e) => {
                               null != H &&
                               (0, r.jsx)(v.Z, {
                                   isVisible: Y && M,
-                                  premiumSubscription: L,
+                                  premiumSubscription: x,
                                   churnDiscountOffer: j,
                                   discountedPrice: H,
                               }),

@@ -104,7 +104,7 @@ function I(e) {
         P = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         { analyticsLocations: D } = (0, o.ZP)(),
         w = (0, p.N)(),
-        x = !C && null != w && null != g && h.nG[w.trial_id].skus.includes(g);
+        L = !C && null != w && null != g && h.nG[w.trial_id].skus.includes(g);
     return N({
         onClick: (e) => {
             var i;
@@ -134,7 +134,7 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            let o = x ? (null == (i = w.subscription_trial) ? void 0 : i.id) : null,
+            let o = L ? (null == (i = w.subscription_trial) ? void 0 : i.id) : null,
                 f = m.AnalyticsObjectTypes.BUY;
             null != o ? (f = m.AnalyticsObjectTypes.TRIAL) : C && (f = m.AnalyticsObjectTypes.GIFT),
                 (0, l.Z)({

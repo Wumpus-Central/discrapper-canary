@@ -1,6 +1,6 @@
 n.d(t, { w: () => r });
 var a = n(81825);
-function i(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,10 +22,10 @@ class r extends a.Z {
     }
     constructor(e) {
         super(),
-            i(this, "id", void 0),
-            i(this, "summary", void 0),
-            i(this, "userIds", void 0),
-            i(this, "password", void 0),
+            l(this, "id", void 0),
+            l(this, "summary", void 0),
+            l(this, "userIds", void 0),
+            l(this, "password", void 0),
             (this.id = e.pool_id),
             (this.summary = e.summary),
             (this.userIds = e.user_ids);

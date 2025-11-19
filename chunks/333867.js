@@ -107,9 +107,9 @@ function T(e) {
         w = (e) => {
             t = e;
         },
-        x = h ? v : O,
-        L = u.default.getCurrentUser();
-    if (!(null == L ? void 0 : L.verified))
+        L = h ? v : O,
+        x = u.default.getCurrentUser();
+    if (!(null == x ? void 0 : x.verified))
         return void (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
             return (t) => {
@@ -154,7 +154,7 @@ function T(e) {
                 );
             },
             {
-                modalKey: x,
+                modalKey: L,
                 onCloseCallback: () => {
                     P ||
                         d.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {
@@ -171,7 +171,7 @@ function T(e) {
                         P && (0, c.qg)({ variantsReturnStyle: R });
                 },
                 onCloseRequest: () => {
-                    null != t && I.has(t) && (0, a.Mr3)(x);
+                    null != t && I.has(t) && (0, a.Mr3)(L);
                 },
             },
         );

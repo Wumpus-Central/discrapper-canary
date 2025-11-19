@@ -15,8 +15,8 @@ var r = n(54381),
     m = n(572995),
     g = n(981631),
     E = n(869783),
-    b = n(642650),
-    y = n(595475);
+    b = n(885257),
+    y = n(411200);
 function O(e, t, n) {
     return (
         t in e
@@ -145,8 +145,8 @@ let A = (e) => {
                 size: D,
                 enablePremiumBrandRefreshDesign: w,
             } = e,
-            x = (0, h.rO)(),
-            L = i.useRef(null),
+            L = (0, h.rO)(),
+            x = i.useRef(null),
             M = i.useRef(0),
             k = S(n),
             j = i.useMemo(
@@ -157,10 +157,10 @@ let A = (e) => {
                 [n],
             ),
             U = () => {
-                null == L.current || N || ((L.current.currentTime = M.current), L.current.play());
+                null == x.current || N || ((x.current.currentTime = M.current), x.current.play());
             },
             G = () => {
-                null == L.current || N || ((M.current = L.current.currentTime), L.current.pause());
+                null == x.current || N || ((M.current = x.current.currentTime), x.current.pause());
             },
             B = w ? y : b;
         t = w
@@ -221,10 +221,10 @@ let A = (e) => {
                             poster: u,
                             loop: !0,
                             className: o()(B.boxVideo, { [C]: null != C }),
-                            ref: L,
+                            ref: x,
                             children: (0, r.jsx)("source", {
                                 src: f,
-                                type: x ? E.m.MP4 : E.m.WEBM,
+                                type: L ? E.m.MP4 : E.m.WEBM,
                             }),
                         },
                         f,

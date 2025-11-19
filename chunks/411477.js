@@ -1,29 +1,29 @@
-n.d(t, { Z: () => s });
-var i = n(54381);
-n(473749);
-var a = n(120356),
-    r = n.n(a),
-    o = n(481060),
-    l = n(436774),
-    c = n(279798);
-function s(e) {
-    let { text: t, className: n, button: a, reducedRightPadding: s = !1 } = e;
-    return (0, i.jsxs)("div", {
-        className: r()(s ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, n),
+i.d(e, { Z: () => d });
+var n = i(54381);
+i(473749);
+var a = i(120356),
+    r = i.n(a),
+    o = i(481060),
+    l = i(436774),
+    s = i(619598);
+function d(t) {
+    let { text: e, className: i, button: a, reducedRightPadding: d = !1 } = t;
+    return (0, n.jsxs)("div", {
+        className: r()(d ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, i),
         children: [
-            (0, i.jsxs)("div", {
-                className: c.noticeLeft,
+            (0, n.jsxs)("div", {
+                className: s.noticeLeft,
                 children: [
-                    (0, i.jsx)(o.SrA, {
+                    (0, n.jsx)(o.SrA, {
                         size: "md",
-                        className: c.icon,
+                        className: s.icon,
                         color: l.JX.PREMIUM_TIER_2,
                     }),
-                    (0, i.jsx)(o.Text, {
-                        className: c.text,
+                    (0, n.jsx)(o.Text, {
+                        className: s.text,
                         variant: "text-md/normal",
                         color: "header-primary",
-                        children: t,
+                        children: e,
                     }),
                 ],
             }),

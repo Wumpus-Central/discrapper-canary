@@ -10,8 +10,8 @@ var i = n(120356),
     u = n(326255),
     d = n(956221),
     p = n(771173),
-    f = n(43267),
-    h = n(933557),
+    h = n(43267),
+    f = n(933557),
     g = n(471445),
     m = n(377171),
     b = n(313201),
@@ -20,10 +20,10 @@ var i = n(120356),
     O = n(592125),
     v = n(430824),
     j = n(158776),
-    x = n(306680),
-    C = n(594174),
+    C = n(306680),
+    x = n(594174),
     E = n(388032),
-    S = n(888097);
+    S = n(692636);
 let I = {
     top: 8,
     bottom: 8,
@@ -116,8 +116,8 @@ function N(e) {
 }
 function Z(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
-        l = null == i ? (0, f.x)(t) : i.getAvatarURL(void 0, 40);
+        i = (0, a.e7)([x.default], () => (t.isDM() ? x.default.getUser(t.getRecipientId()) : null)),
+        l = null == i ? (0, h.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(s.P3F, {
         onClick: n,
         tabIndex: -1,
@@ -148,10 +148,10 @@ function T(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
         o = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
         c = (0, a.e7)([O.Z], () => O.Z.getChannel(t.parent_id)),
-        u = (0, a.e7)([x.ZP], () => x.ZP.getIsMentionLowImportance(t.id)),
+        u = (0, a.e7)([C.ZP], () => C.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
-        p = (0, h.ZP)(t, !1),
-        f =
+        p = (0, f.ZP)(t, !1),
+        h =
             null == c
                 ? null == o
                     ? void 0
@@ -164,7 +164,7 @@ function T(e) {
               : (0, r.jsx)(s.P3F, {
                     className: l()(S.subtext, S.guildName),
                     onClick: n,
-                    children: f,
+                    children: h,
                 });
     return (0, r.jsxs)("div", {
         className: S.channelNameSection,
@@ -217,8 +217,8 @@ function A(e) {
             status: i,
             activities: l,
             applicationStream: o,
-        } = (0, a.cj)([C.default, j.Z, y.Z], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, a.cj)([x.default, j.Z, y.Z], () => {
+            let e = x.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? j.Z.getStatus(e.id) : null,
@@ -227,20 +227,20 @@ function A(e) {
             };
         }),
         { voiceActivityStatusEnabled: s } = (0, c.U)({ location: "RecentsChannelHeader" }),
-        { voiceChannel: f } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
-        h = s ? f : void 0;
+        { voiceChannel: h } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
+        f = s ? h : void 0;
     return (0, u.Z)({
         activities: l,
         status: i,
         applicationStream: o,
-        voiceChannel: h,
+        voiceChannel: f,
     })
         ? (0, r.jsx)(p.Z, {
               location: "RecentsChannelHeader",
               user: n,
               activities: l,
               applicationStream: o,
-              voiceChannel: h,
+              voiceChannel: f,
               hideTooltip: !0,
           })
         : null;

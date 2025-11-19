@@ -4,25 +4,25 @@ n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(907331),
-    o = n(636977),
-    s = n(685816),
+    s = n(636977),
+    o = n(685816),
     c = n(442837),
     u = n(481060),
     d = n(110560),
-    p = n(507808),
-    g = n(594174),
+    g = n(507808),
+    p = n(594174),
     f = n(626135),
-    h = n(381585),
-    C = n(884697),
-    m = n(870289),
+    m = n(381585),
+    h = n(884697),
+    C = n(870289),
     _ = n(794324),
     b = n(859788),
     v = n(497788),
     x = n(215023),
     E = n(981631),
     O = n(388032),
-    S = n(310582);
-(0, C.IC)(90);
+    S = n(687983);
+(0, h.IC)(90);
 let y = {
         rankedSkuIds: [],
         name: "",
@@ -31,13 +31,13 @@ let y = {
         categorySkuId: void 0,
         bannerAsset: void 0,
         summary: "",
-        type: s.z.REWARD_HERO,
+        type: o.z.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
     j = (e) => {
         var t;
-        let { isLoading: n = !1, handleTransition: l, heroBlock: s, tab: C, onVisibilityChange: j } = e,
+        let { isLoading: n = !1, handleTransition: l, heroBlock: o, tab: h, onVisibilityChange: j } = e,
             k = (0, a.O)(
                 (e) => {
                     null == j || j(e);
@@ -45,20 +45,20 @@ let y = {
                 0.1,
                 null != j,
             ),
-            I = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-            T = (0, h.sp)(),
+            I = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+            T = (0, m.sp)(),
             {
                 bannerStyleOverrides: L,
                 logoStyleOverrides: B,
                 heroLogo: P,
                 heroBannerStatic: N,
                 heroBannerAnimated: A,
-            } = (0, _.hr)(s),
+            } = (0, _.hr)(o),
             R = null != (t = null == L ? void 0 : L.responsive) && t,
             Z = null == L ? void 0 : L.backgroundStyle,
-            w = C === x.AW.ORBS ? O.intl.string(O.t["1CdL8d"]) : O.intl.string(O.t.xYKa1T),
-            H = (0, m.FF)("CollectiblesContent");
-        return null != I && (n || s !== y)
+            w = h === x.AW.ORBS ? O.intl.string(O.t["1CdL8d"]) : O.intl.string(O.t.xYKa1T),
+            H = (0, C.FF)("CollectiblesContent");
+        return null != I && (n || o !== y)
             ? (0, r.jsxs)("div", {
                   ref: k,
                   className: S.heroBlock,
@@ -85,7 +85,7 @@ let y = {
                                           : (0, r.jsxs)("div", {
                                                 className: S.heroHeaderBadgeLogoSummaryContainer,
                                                 children: [
-                                                    null != s.unpublishedAt &&
+                                                    null != o.unpublishedAt &&
                                                         (0, r.jsx)(u.IGR, {
                                                             disableColor: !0,
                                                             text: O.intl.string(O.t["h/uBCR"]),
@@ -98,25 +98,25 @@ let y = {
                                                                 (0, r.jsx)("img", {
                                                                     className: S.heroHeaderLogo,
                                                                     src: P,
-                                                                    alt: s.name,
+                                                                    alt: o.name,
                                                                     style: null == B ? void 0 : B.toDesktopStyles(),
                                                                 }),
-                                                            null != s.title &&
+                                                            null != o.title &&
                                                                 (0, r.jsx)(u.Heading, {
                                                                     variant: "heading-xxl/bold",
                                                                     className: S.title,
                                                                     color: "header-primary",
-                                                                    children: s.title,
+                                                                    children: o.title,
                                                                 }),
-                                                            "" !== s.summary &&
+                                                            "" !== o.summary &&
                                                                 (0, r.jsx)(u.Text, {
                                                                     variant: "text-md/normal",
                                                                     className: S.subHeaderText,
                                                                     style:
-                                                                        null != s.bannerTextColor
-                                                                            ? { color: s.bannerTextColor }
+                                                                        null != o.bannerTextColor
+                                                                            ? { color: o.bannerTextColor }
                                                                             : void 0,
-                                                                    children: s.summary,
+                                                                    children: o.summary,
                                                                 }),
                                                         ],
                                                     }),
@@ -128,25 +128,25 @@ let y = {
                                               children: (0, r.jsx)(u.Button, {
                                                   variant: "overlay-primary",
                                                   onClick: () => {
-                                                      C === x.AW.ORBS
-                                                          ? ((0, p.Y)({
+                                                      h === x.AW.ORBS
+                                                          ? ((0, g.Y)({
                                                                 pageType: E.ZY5.SHOP_ORBS_TAB,
                                                                 sectionType: E.jXE.ORBS_SHOP_HERO_BLOCK,
                                                                 ctaObject: E.qAy.CTA_TO_QUEST_HOME,
                                                             }),
                                                             (0, d.navigateToQuestHome)({
-                                                                fromContent: o.j.ORBS_SHOP_HERO_CTA,
+                                                                fromContent: s.j.ORBS_SHOP_HERO_CTA,
                                                             }))
                                                           : (l({
                                                                 sourceButton: "shop reward category hero",
-                                                                categorySkuId: H ? void 0 : s.categorySkuId,
+                                                                categorySkuId: H ? void 0 : o.categorySkuId,
                                                                 isInternalShopDeeplink: !0,
                                                             }),
                                                             f.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                                 collectibles_shop_session_id:
                                                                     null == T ? void 0 : T.sessionId,
-                                                                sku_id: s.categorySkuId,
-                                                                page_type: C,
+                                                                sku_id: o.categorySkuId,
+                                                                page_type: h,
                                                                 page_section: null == T ? void 0 : T.pageSection,
                                                                 page_category: null == T ? void 0 : T.pageCategory,
                                                                 cta_name: "shop reward category hero button",
@@ -159,8 +159,8 @@ let y = {
                               }),
                               (0, r.jsx)(v.Z, {
                                   isBlockLoading: n,
-                                  heroBlock: s,
-                                  tab: C,
+                                  heroBlock: o,
+                                  tab: h,
                               }),
                           ],
                       }),

@@ -24,7 +24,7 @@ var r = n(54381),
     S = n(784222),
     A = n(149203),
     C = n(388032),
-    N = n(545424);
+    N = n(401705);
 let R = 250;
 function P(e) {
     return null != e && "animated" in e;
@@ -37,8 +37,8 @@ let D = (e) => {
     w = i.memo(function (e) {
         let t,
             w,
-            x,
-            { className: L, emojiGrid: M, guildId: k, pickerIntention: j, channel: U } = e,
+            L,
+            { className: x, emojiGrid: M, guildId: k, pickerIntention: j, channel: U } = e,
             { enabled: G } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
@@ -154,7 +154,7 @@ let D = (e) => {
                       shouldAnimate: !H && V,
                   })
                 : null;
-        x =
+        L =
             G && "CREATE_EMOJI" === t.type
                 ? C.intl.string(C.t.XCmLfG)
                 : "EXPAND_OR_COLLAPSE_EMOJI" === t.type
@@ -173,10 +173,10 @@ let D = (e) => {
                       guild: F,
                   });
         return (0, r.jsx)(p.Z, {
-            className: L,
+            className: x,
             graphicPrimary: w,
             graphicSecondary: J,
-            titlePrimary: x,
+            titlePrimary: L,
             titleSecondary: $,
             isFavorite: W,
             emojiSubCategory: q,

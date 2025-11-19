@@ -82,7 +82,7 @@ function w(e, t, n) {
     if (null == r) throw Error("Native breadcrumb has no native id");
     return !(N.size(r) > 0) && ((R = Math.max(R, Number(e.id))), P(A(e, t, n)));
 }
-function x(e, t, n, r) {
+function L(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : f.l6.Info,
         a = C(),
         o = S(a);
@@ -99,7 +99,7 @@ function x(e, t, n, r) {
         stack: void 0,
     });
 }
-function L(e) {
+function x(e) {
     return [N.values(e, !0), N.version];
 }
 function M() {
@@ -115,10 +115,10 @@ function M() {
                 });
         }, y));
 }
-function j(e) {
+function k(e) {
     return e ? M() : U(), !0;
 }
-function k() {
+function j() {
     return null != b;
 }
 function U() {
@@ -162,11 +162,11 @@ function K(e) {
     let {
         breadcrumb: { pid: t, name: n, data: r, type: i, logType: a },
     } = e;
-    return x(n, null != r ? r : {}, i, t, a), !0;
+    return L(n, null != r ? r : {}, i, t, a), !0;
 }
 function z(e) {
     let { enabled: t } = e;
-    return j(t), !0;
+    return k(t), !0;
 }
 class q extends (i = s.ZP.Store) {
     initialize() {
@@ -182,10 +182,10 @@ class q extends (i = s.ZP.Store) {
         return g;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return L(e);
+        return x(e);
     }
     isModuleLoggingEnabled() {
-        return k();
+        return j();
     }
     isStateDebuggingEnabled() {
         return null != E;

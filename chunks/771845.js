@@ -184,7 +184,7 @@ function w(e) {
             null != t && T.moveNextTo(t, o, !0);
         });
 }
-function x(e) {
+function L(e) {
     let { targetId: t } = e,
         n = T.getNode(t);
     if (null == n || n.type !== c.eD.FOLDER) return !1;
@@ -196,7 +196,7 @@ function x(e) {
             null != t && T.moveNextTo(t, n, !0);
         });
 }
-function L(e) {
+function x(e) {
     let { guildId: t, joinedAt: n, user: r } = e,
         i = y.default.getCurrentUser(),
         a = g.Z.getGuild(t);
@@ -211,13 +211,13 @@ function M(e) {
     if (null == n || n.type !== c.eD.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
-function j(e) {
+function k(e) {
     let { folderId: t, expanded: n } = e,
         r = T.getNode(t);
     if (null == r || r.type !== c.eD.FOLDER || r.expanded === n) return !1;
     U(r, n);
 }
-function k() {
+function j() {
     for (let e of T.allNodes()) e.type === c.eD.FOLDER && e.expanded && U(e, !1);
 }
 function U(e, t) {
@@ -279,15 +279,15 @@ class V extends E.Z {
             CACHE_LOADED: () => this.loadCache(),
             GUILD_CREATE: N,
             GUILD_DELETE: N,
-            GUILD_MEMBER_ADD: L,
+            GUILD_MEMBER_ADD: x,
             USER_SETTINGS_PROTO_UPDATE: R,
             GUILD_MOVE_BY_ID: P,
             GUILD_FOLDER_CREATE_LOCAL: D,
             GUILD_FOLDER_EDIT_LOCAL: w,
-            GUILD_FOLDER_DELETE_LOCAL: x,
+            GUILD_FOLDER_DELETE_LOCAL: L,
             TOGGLE_GUILD_FOLDER_EXPAND: M,
-            SET_GUILD_FOLDER_EXPANDED: j,
-            GUILD_FOLDER_COLLAPSE: k,
+            SET_GUILD_FOLDER_EXPANDED: k,
+            GUILD_FOLDER_COLLAPSE: j,
         }),
             O(this, "loadCache", () => {
                 let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION),

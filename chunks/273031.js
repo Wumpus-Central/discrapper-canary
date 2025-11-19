@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(28664),
     l = n(951394),
-    c = n(820230);
+    c = n(283839);
 function u(e) {
     let { onClick: t, children: n, tooltip: a, dangerous: u = !1, className: d, "aria-label": f } = e;
     return (0, r.jsx)(s.u, {

@@ -15,7 +15,7 @@ var r = n(54381),
     m = n(51144),
     g = n(981631),
     E = n(388032),
-    b = n(105341);
+    b = n(739236);
 function y(e) {
     var t;
     let { invite: n, message: y, getAcceptInviteContext: O } = e,
@@ -66,8 +66,8 @@ function y(e) {
         ? ((P = E.intl.string(E.t.xhxnPn)), (D = "secondary"))
         : I && ((P = E.intl.string(E.t.ib7Ng1)), (D = "secondary"));
     let w = I ? E.intl.string(E.t.eQyu1F) : E.intl.string(E.t.PYJHW6),
-        x = null != n.inviter ? "".concat(n.inviter.username) : "",
-        L = null != n.inviter ? m.ZP.getUserTag(n.inviter) : "";
+        L = null != n.inviter ? "".concat(n.inviter.username) : "",
+        x = null != n.inviter ? m.ZP.getUserTag(n.inviter) : "";
     return (0, r.jsxs)(d.Z, {
         children: [
             (0, r.jsx)(d.Z.Header, { text: w }),
@@ -81,9 +81,9 @@ function y(e) {
                                 onClick: A ? R : void 0,
                             }),
                             (0, r.jsx)(d.Z.Info, {
-                                title: x,
+                                title: L,
                                 onClick: A ? R : void 0,
-                                children: L,
+                                children: x,
                             }),
                         ],
                     }),

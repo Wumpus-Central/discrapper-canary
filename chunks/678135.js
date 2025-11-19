@@ -20,7 +20,7 @@ var i = n(120356),
     y = n(981631),
     O = n(671955),
     v = n(388032),
-    I = n(448239);
+    I = n(670563);
 function T(e) {
     var t, n;
     let {
@@ -34,8 +34,8 @@ function T(e) {
             pendingPronouns: P,
             pendingAvatar: D,
             pendingAvatarDecoration: w,
-            pendingNickname: x,
-            pendingGlobalName: L,
+            pendingNickname: L,
+            pendingGlobalName: x,
             pendingThemeColors: M,
             pendingProfileEffect: k,
             pendingLegacyUsernameDisabled: j,
@@ -129,8 +129,8 @@ function T(e) {
                     displayProfile: X,
                     guild: T,
                     pendingAvatar: D,
-                    pendingNickname: x,
-                    pendingGlobalName: L,
+                    pendingNickname: L,
+                    pendingGlobalName: x,
                     pendingBio: R,
                     pendingPronouns: P,
                     pendingLegacyUsernameDisabled: j,

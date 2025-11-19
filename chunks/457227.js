@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(117791),
     s = n(664134),
     l = n(388032),
-    c = n(648685);
+    c = n(143526);
 let u = (e) => Object.values(e).sort((e, t) => e.order - t.order),
     d = (e) => {
         let { navBarSections: t, activeSectionId: n } = e,

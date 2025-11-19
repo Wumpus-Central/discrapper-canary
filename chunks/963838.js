@@ -1,10 +1,10 @@
 n.d(t, {
     Iu: () => G,
-    Jw: () => k,
+    Jw: () => j,
     _r: () => B,
     cX: () => F,
     lv: () => U,
-    v: () => L,
+    v: () => x,
 });
 var r = n(392711),
     i = n.n(r),
@@ -36,16 +36,16 @@ var r = n(392711),
     P = n(768581),
     D = n(176354),
     w = n(353368),
-    x = n(388032);
-let L = {
+    L = n(388032);
+let x = {
         start: 10,
         end: 15,
     },
     M = [a],
-    j = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
-    k = {
+    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    j = {
         [w.q.BASIC]: M,
-        [w.q.PREMIUM]: j,
+        [w.q.PREMIUM]: k,
     },
     U = i().memoize(
         (e) =>
@@ -68,7 +68,7 @@ let L = {
             }),
     ),
     G = (e, t) => {
-        let n = k[e];
+        let n = j[e];
         if (null != t && e === w.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
@@ -108,17 +108,17 @@ function F(e) {
     return s.length < 1
         ? ""
         : 1 === s.length
-          ? x.intl.formatToPlainString(x.t.yZYxzF, {
+          ? L.intl.formatToPlainString(L.t.yZYxzF, {
                 firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c,
             })
           : 2 === s.length
-            ? x.intl.formatToPlainString(x.t["8rmtbd"], {
+            ? L.intl.formatToPlainString(L.t["8rmtbd"], {
                   firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
                   secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c,
               })
-            : x.intl.formatToPlainString(x.t["/okjv0"], {
+            : L.intl.formatToPlainString(L.t["/okjv0"], {
                   firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
                   secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,

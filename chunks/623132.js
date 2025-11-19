@@ -21,8 +21,8 @@ var r = n(54381),
     x = n(919498),
     _ = n(394606),
     P = n(388032),
-    I = n(932366),
-    w = n(776385);
+    I = n(279280),
+    w = n(609369);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -292,11 +292,11 @@ function Z(e) {
             color: "text-default",
         },
         B = f.default.getCurrentUser(),
-        U = (null == B ? void 0 : B.id) === t.id,
-        F = 1 === (0, m.Gv)(s),
-        W = !u && U,
+        F = (null == B ? void 0 : B.id) === t.id,
+        U = 1 === (0, m.Gv)(s),
+        W = !u && F,
         H = W && (0, m.vI)(s),
-        z = W && !F,
+        z = W && !U,
         { registerDragHandleRef: K } = (0, h.C)(),
         V = i.useRef(null);
     if (M) return (0, r.jsx)(O.i, {});
@@ -362,7 +362,7 @@ function Z(e) {
                                   }),
                             (0, r.jsx)(v.Z, {
                                 tags: Z,
-                                isCurrentUser: U,
+                                isCurrentUser: F,
                                 widgetType: s,
                                 applicationId: D,
                                 disableInteraction: u,
@@ -378,7 +378,7 @@ function Z(e) {
                         ],
                     }),
                     !u &&
-                        U &&
+                        F &&
                         (0, r.jsx)(j.Z, {
                             game: o,
                             widgetType: s,

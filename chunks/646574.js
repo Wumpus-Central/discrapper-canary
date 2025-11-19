@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(74538),
     h = n(921944),
     m = n(388032),
-    g = n(975377);
+    g = n(623337);
 let E = {
         tension: 750,
         mass: 2.5,
@@ -76,18 +76,18 @@ function v(e) {
         let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (A(h.L.DISMISS), setTimeout(() => N(e), 200));
     }, [S, A]);
-    let x = C ? m.intl.string(m.t["Osi/uy"]) : O(t),
-        L = C ? m.intl.string(m.t.ORK94p) : void 0;
+    let L = C ? m.intl.string(m.t["Osi/uy"]) : O(t),
+        x = C ? m.intl.string(m.t.ORK94p) : void 0;
     return (0, r.jsxs)(u.jSM, {
         position: "top",
         text: (0, r.jsx)(y, {
             textColor: "always-white",
-            tooltipText: x,
-            headingText: L,
+            tooltipText: L,
+            headingText: x,
         }),
         color: u.aML.Colors.BRAND,
         forceOpen: C,
-        "aria-label": x,
+        "aria-label": L,
         tooltipClassName: g.tooltip,
         children: [
             (0, r.jsx)("input", {

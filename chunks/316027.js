@@ -4,7 +4,7 @@ n(473749);
 var i = n(442837),
     a = n(481060),
     o = n(699516),
-    s = n(973186);
+    s = n(522356);
 function l(e) {
     let { user: t, guildId: n, iconColor: l } = e,
         c = (0, i.e7)([o.Z], () => o.Z.isBlocked(t.id));

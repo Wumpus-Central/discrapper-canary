@@ -15,8 +15,8 @@ var r = n(54381),
 function E() {
     var e, t, n;
     let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(p.VideoQuestModalContext),
-        { enabled: b } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
-        h = (0, c.tP)(E),
+        { enabled: h } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
+        b = (0, c.tP)(E),
         S = null != (0, s.LM)(E.config),
         C = (0, m.D)({
             quest: E,
@@ -32,8 +32,8 @@ function E() {
                     : v.intl.string(v.t.vTgCWx)
                 : v.intl.string(v.t.cfY4PE),
         _ =
-            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null && b
-                ? h
+            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null && h
+                ? b
                     ? v.intl.string(v.t.NJ6Bnm)
                     : v.intl.string(v.t.USNO1K)
                 : void 0;
@@ -41,7 +41,7 @@ function E() {
         text: _,
         children: (0, r.jsx)("div", {
             children: (0, r.jsx)(a.Button, {
-                variant: b ? "secondary" : "primary",
+                variant: h ? "secondary" : "primary",
                 fullWidth: !0,
                 icon: ((e, t) => {
                     var n, r;
@@ -56,7 +56,7 @@ function E() {
                                 },
                             },
                         };
-                })(E, b),
+                })(E, h),
                 onClick: C,
                 text: y,
                 disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,

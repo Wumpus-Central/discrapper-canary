@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r,
     i = n(54381),
     a = n(473749),
@@ -16,7 +16,7 @@ var r,
     g = n(451478),
     E = n(956664),
     b = n(153066),
-    y = n(965005);
+    y = n(532168);
 function O(e, t, n) {
     return (
         t in e
@@ -186,10 +186,10 @@ class P extends a.PureComponent {
                 "iconSize",
             ]),
             w = R[c],
-            x = null != h ? f.P3F : "div",
-            L = (0, m.gM)(r);
+            L = null != h ? f.P3F : "div",
+            x = (0, m.gM)(r);
         return (0, i.jsxs)(
-            x,
+            L,
             T(
                 v(
                     {
@@ -201,7 +201,7 @@ class P extends a.PureComponent {
                         "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? v({ fontSize: (null != (t = w[L.length]) ? t : w[w.length - 1]) * d }, u)
+                                ? v({ fontSize: (null != (t = w[x.length]) ? t : w[w.length - 1]) * d }, u)
                                 : u,
                         onClick: null != g || null == h ? void 0 : h,
                         tabIndex: I,
@@ -268,4 +268,4 @@ O(w, "Sizes", C),
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1,
     });
-let x = w;
+let L = w;

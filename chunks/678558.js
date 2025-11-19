@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    I = n(132810);
+    I = n(131092);
 function T(e, t, n) {
     return (
         t in e
@@ -104,8 +104,8 @@ let P = (e) => {
             closeLayer: P = () => {},
             pauseAnimation: D = !1,
             applicationId: w,
-            handleSubscribeModalClose: x,
-            withHighlight: L = !1,
+            handleSubscribeModalClose: L,
+            withHighlight: x = !1,
             icon: M,
             intent: k,
             useExpressiveButton: j = !1,
@@ -149,7 +149,7 @@ let P = (e) => {
                     closeLayer: P,
                     inPopout: B,
                     applicationId: w,
-                    handleSubscribeModalClose: x,
+                    handleSubscribeModalClose: L,
                     intent: k,
                 }),
                 F(!1);
@@ -223,7 +223,7 @@ let P = (e) => {
                         U,
                     ),
                     {
-                        className: o()(U.className, { [I.buttonHighlighted]: L }),
+                        className: o()(U.className, { [I.buttonHighlighted]: x }),
                         submitting: Z,
                         onClick: z,
                         pauseAnimation: D,

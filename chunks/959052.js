@@ -11,7 +11,7 @@ var i = n(120356),
     s = n(481060),
     l = n(231338),
     c = n(388032),
-    u = n(761388);
+    u = n(196684);
 let d = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(s.Heading, {

@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(573702),
     _ = n(474936),
     p = n(388032),
-    h = n(108626),
+    h = n(491881),
     m = n(236078),
     g = n(278345),
     E = n(895601),
@@ -88,8 +88,8 @@ let T = function (e) {
         {
             step: D,
             breadcrumbs: w,
-            startedPaymentFlowWithPaymentSourcesRef: x,
-            isDisplayingWowMomentConfirmation: L,
+            startedPaymentFlowWithPaymentSourcesRef: L,
+            isDisplayingWowMomentConfirmation: x,
         } = (0, s.JL)();
     if (null == w || 0 === w.length) return null;
     let M = w.flatMap((e) => {
@@ -106,7 +106,7 @@ let T = function (e) {
     if (0 === M.length) return null;
     let k = (M = M.filter((e) => {
             let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
-                n = e.id === l.h8.ADD_PAYMENT_STEPS && !x.current;
+                n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
             return !b || (b && (t || n));
         })).find((e) => e.id === D),
         j =
@@ -119,7 +119,7 @@ let T = function (e) {
         G = C && U && D === l.h8.REVIEW,
         B = A ? "nitro-pink" : "nitro-green",
         Z = A ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t["t9uG/o"]);
-    return L
+    return x
         ? (0, r.jsx)("div", {
               className: h.container,
               children: (0, r.jsx)(o.$1m, {

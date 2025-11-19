@@ -32,7 +32,7 @@ var r = n(54381),
     E = n(981631),
     T = n(474936),
     C = n(388032),
-    D = n(232644),
+    D = n(988388),
     k = n(660097);
 let N = (e) => {
     let { size: t = f.EFr.SIZE_80 } = e;
@@ -132,8 +132,8 @@ function R(e) {
     let { item: L, isOwner: M } = R,
         { analyticsLocations: G } = (0, p.ZP)(),
         B = (0, o.TH)(),
-        U = i.useRef(null),
-        { isHoveringOrFocusing: F } = (0, y.Z)(U),
+        F = i.useRef(null),
+        { isHoveringOrFocusing: U } = (0, y.Z)(F),
         [W] = (0, u.Wu)([j.Z], () => [j.Z.hasSentGift(L.skuId, a.id)], [L.skuId, a.id]),
         H = W || !0 === L.isOwned,
         z = L.collectiblesItem.type,
@@ -227,10 +227,10 @@ function R(e) {
                 (0, r.jsx)(w.Z, {
                     item: L,
                     profileOwner: a,
-                    isHighlighted: F,
+                    isHighlighted: U,
                     cardSize: Z,
                 }),
-            [L, a, F, Z],
+            [L, a, U, Z],
         );
     return (0, r.jsx)(
         S.Z,
@@ -261,7 +261,7 @@ function R(e) {
         })({}, R)),
         (n = n =
             {
-                cardRef: U,
+                cardRef: F,
                 accessibleLabel: K,
                 onCardClick: Y,
                 buttonCTALabel: V,

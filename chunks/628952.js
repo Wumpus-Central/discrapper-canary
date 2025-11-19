@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(473608),
     y = n(29121),
     O = n(388032),
-    v = n(855646);
+    v = n(942501);
 function I(e, t, n) {
     return (
         t in e
@@ -85,8 +85,8 @@ let C = (e) => {
         { product: R } = (0, m.T)(t, !0),
         { giftRecipient: P, giftRecipientError: D } = (0, f.wD)(),
         w = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        x = (0, y.kd)(R),
-        L = i.useRef(null);
+        L = (0, y.kd)(R),
+        x = i.useRef(null);
     if (null == R) return null;
     let [M] = R.items;
     l()(null != M, "Product item should not be empty");
@@ -125,7 +125,7 @@ let C = (e) => {
                             (0, r.jsx)(
                                 d.yRy,
                                 {
-                                    targetElementRef: L,
+                                    targetElementRef: x,
                                     preload: () => (0, p.Z)(P.id, P.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
@@ -147,7 +147,7 @@ let C = (e) => {
                                             d.P3F,
                                             A(T({}, e), {
                                                 className: v.previewLink,
-                                                innerRef: L,
+                                                innerRef: x,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-link",
@@ -180,7 +180,7 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/semibold",
-                                        children: x,
+                                        children: L,
                                     }),
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",

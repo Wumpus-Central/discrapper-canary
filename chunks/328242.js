@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(642613);
+n.d(t, { Z: () => E }), n(388685), n(642613);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -17,14 +17,14 @@ var r = n(54381),
     x = n(358085),
     v = n(747268),
     j = n(215915),
-    b = n(855403),
-    S = n(567126),
+    S = n(855403),
+    b = n(567126),
     y = n(615161),
     C = n(761274),
-    O = n(604415),
+    O = n(266734),
     w = n(388032),
-    P = n(602804);
-function T(e) {
+    P = n(615770);
+function Z(e) {
     let { source: t } = e;
     return t.id.startsWith(c.vA.SCREEN)
         ? (0, r.jsx)(u.pzj, { size: "xs" })
@@ -38,7 +38,7 @@ function T(e) {
               : (0, r.jsx)(u.GON, { size: "xs" })
           : (0, r.jsx)(u.Odl, { size: "xs" });
 }
-function Z(e) {
+function I(e) {
     let { source: t, selected: n, onClick: i } = e,
         { url: l, name: o } = t;
     return (0, r.jsxs)(u.P3F, {
@@ -72,7 +72,7 @@ function Z(e) {
             (0, r.jsxs)("div", {
                 className: P.sourceNameContainer,
                 children: [
-                    (0, r.jsx)(T, { source: t }),
+                    (0, r.jsx)(Z, { source: t }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/medium",
                         className: P.sourceName,
@@ -83,7 +83,7 @@ function Z(e) {
         ],
     });
 }
-function I(e) {
+function E(e) {
     let { onClick: t } = e,
         [
             {
@@ -93,41 +93,41 @@ function I(e) {
                 sourceType: o,
                 fetchingSources: g,
                 selectedSource: O,
-                discordSourceId: T,
-                hasPermission: I,
+                discordSourceId: Z,
+                hasPermission: E,
             },
         ] = (0, y.E_)(),
         { smarterSourceOrdering: N } = (0, j.E)({ location: "GoLiveSourceGrid" }),
-        R = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
-        A = (0, d.cj)([p.ZP], () => {
+        A = (0, d.e7)([p.ZP], () => p.ZP.getRunningGames()),
+        R = (0, d.cj)([p.ZP], () => {
             let e = p.ZP.getCandidateGames(),
                 t = {};
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
         M = (0, d.e7)([_.Z], () => _.Z.quests),
-        k = (0, S.jx)(M, R, n);
+        k = (0, b.jx)(M, A, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
         () =>
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, S.ov)(t, null == k ? void 0 : k.source.id, T, A) -
-                          (0, S.ov)(e, null == k ? void 0 : k.source.id, T, A),
+                          (0, b.ov)(t, null == k ? void 0 : k.source.id, Z, R) -
+                          (0, b.ov)(e, null == k ? void 0 : k.source.id, Z, R),
                   )
                 : n,
-        [k, N, n, T, A],
+        [k, N, n, Z, R],
     );
     if (g) {
-        if (!1 === I) {
+        if (!1 === E) {
             let e = !1;
             if ((0, x.isMac)()) {
-                var B, L;
+                var L, B;
                 let t =
-                    null === f.Z || void 0 === f.Z || null == (L = f.Z.remoteApp) || null == (B = L.getVersion)
+                    null === f.Z || void 0 === f.Z || null == (B = f.Z.remoteApp) || null == (L = B.getVersion)
                         ? void 0
-                        : B.call(L);
+                        : L.call(B);
                 e = !v.o || "0.0.0" === t || a().satisfies(t, "0.0.363");
             }
             return (0, r.jsxs)("div", {
@@ -156,18 +156,18 @@ function I(e) {
     }
     let G = [];
     return ((G = o === c.vA.WINDOW ? D : o === c.vA.SCREEN ? s : l), o === c.vA.CAMERA && 0 === G.length)
-        ? (0, r.jsx)(E, {})
+        ? (0, r.jsx)(T, {})
         : (0, r.jsx)("div", {
               className: P.root,
               children: G.map((e) =>
                   (0, r.jsx)(
-                      Z,
+                      I,
                       {
                           onClick: t,
                           source: e,
                           selected:
                               null != O && "windowHandle" in O
-                                  ? (0, b.Z)(e.id, O.windowHandle)
+                                  ? (0, S.Z)(e.id, O.windowHandle)
                                   : (null == O ? void 0 : O.id) === e.id,
                       },
                       e.id,
@@ -175,7 +175,7 @@ function I(e) {
               ),
           });
 }
-function E() {
+function T() {
     return (0, r.jsxs)("div", {
         className: P.emptyState,
         children: [

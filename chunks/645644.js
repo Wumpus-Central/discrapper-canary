@@ -78,7 +78,7 @@ let P = 6,
     D = !1,
     w = new c.Z("OverlayUsageStatsManager");
 D || (w.verbose = () => {});
-class x {
+class L {
     increment(e) {
         ++this.actions[e];
     }
@@ -101,7 +101,7 @@ class x {
         });
     }
 }
-class L {
+class x {
     static makeEmptyGroupAnalytics() {
         return {
             [S.Vk.Nudge]: 0,
@@ -115,7 +115,7 @@ class L {
     static makeCounters() {
         let e = {},
             t = Object.values(S.n0);
-        for (let n of t) e[n] = new x();
+        for (let n of t) e[n] = new L();
         if (Object.keys(e).length !== t.length) throw Error("NotificationAnalytics: Failed to make counters");
         return e;
     }
@@ -163,10 +163,10 @@ class L {
             [S.bv.Clicked]: 0,
         }),
             A(this, "groupCounters", {
-                [S.bv.Viewed]: L.makeEmptyGroupAnalytics(),
-                [S.bv.Clicked]: L.makeEmptyGroupAnalytics(),
+                [S.bv.Viewed]: x.makeEmptyGroupAnalytics(),
+                [S.bv.Clicked]: x.makeEmptyGroupAnalytics(),
             }),
-            A(this, "counters", L.makeCounters());
+            A(this, "counters", x.makeCounters());
     }
 }
 class M {
@@ -558,7 +558,7 @@ class U {
             (this.overlayMethodStats = null),
             (this.overlayState = null),
             (this.overlayStateRaw = null),
-            (this.notificationAnalytics = new L()),
+            (this.notificationAnalytics = new x()),
             (this.widgetAnalytics = new M()),
             (this.uiUnlockedCount = 0),
             (this.uiLockedCount = 0),

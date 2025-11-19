@@ -1,9 +1,9 @@
 n.d(t, {
     fz: () => P,
     ge: () => M,
-    r5: () => j,
+    r5: () => k,
     rk: () => D,
-    wV: () => L,
+    wV: () => x,
 }),
     n(388685),
     n(415506),
@@ -145,7 +145,7 @@ function P(e) {
 }
 async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await j();
+    await k();
     let n = performance.now();
     try {
         let r = p.ZP.getVoiceFilters();
@@ -191,7 +191,7 @@ async function w(e) {
     if (null == o) throw Error("Voice filters catalog signature is missing");
     return await e.setCatalog(r, o), a;
 }
-async function x(e) {
+async function L(e) {
     if (!p.ZP.canCheckVoiceFilterFilesExist()) return;
     let t = Object.keys(e.models).map((e) => ({
             id: e,
@@ -203,14 +203,14 @@ async function x(e) {
     let i = t.map((e) => e.fileName);
     return (0, o.dZ)(i) && (await (0, E.A)(i)), r;
 }
-async function L() {
+async function x() {
     if (!m.Z.isNativeModuleLoaded()) return void S.info("Voice Filter catalog refresh ignored, module not loaded.");
     if (!N)
         try {
             N = !0;
             let e = p.ZP.getVoiceFilters(),
                 t = await w(e),
-                n = null == m.Z.getCatalogLastFetchTime() ? await x(t) : void 0;
+                n = null == m.Z.getCatalogLastFetchTime() ? await L(t) : void 0;
             await s.Z.dispatch({
                 type: "VOICE_FILTER_CATALOG_FETCH_SUCCESS",
                 catalog: t,
@@ -231,7 +231,7 @@ async function L() {
 function M() {
     s.Z.dispatch({ type: "VOICE_FILTER_DOWNLOAD_CANCELED" });
 }
-async function j() {
+async function k() {
     if (!(m.Z.isNativeModuleLoaded() || m.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, f.isWindows)() && !(0, f.isMac)())
             return void s.Z.dispatch({
@@ -258,7 +258,7 @@ async function j() {
                     type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
                     state: g.O.LOADED,
                 }),
-                await L();
+                await x();
             let n = c.Z.getMostRecentlyRequestedVoiceFilter();
             if (null != n) {
                 var e;

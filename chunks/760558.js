@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(4434),
     y = n(981631),
     O = n(388032),
-    v = n(252633);
+    v = n(396849);
 let I = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: I, transitionState: T, onClose: S } = e,
         A = (0, h.vx)(_.Z.boostSlots);
@@ -35,8 +35,8 @@ let I = (e) => {
         ].filter((e) => null != e),
         [N, R] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [P, D] = i.useState(C[0]),
-        [w, x] = i.useState(!1),
-        [L, M] = i.useState(n),
+        [w, L] = i.useState(!1),
+        [x, M] = i.useState(n),
         [k, j] = i.useState(null != t ? t : A.slice(0, 1)),
         U = i.useMemo(
             () =>
@@ -121,13 +121,13 @@ let I = (e) => {
                     selectedSlotGuilds: U,
                 }),
             CONFIRM() {
-                if (null == L) return null;
+                if (null == x) return null;
                 let e = k.filter((e) => (0, h.tl)(e)).length,
                     t = k.length,
                     n = U.length,
                     i = "CONFIRM" === C[0] ? B : () => D(C[C.indexOf(P) - 1]),
                     a = async () => {
-                        if ((x(!1), null != L && (null == k ? void 0 : k.length) !== 0)) {
+                        if ((L(!1), null != x && (null == k ? void 0 : k.length) !== 0)) {
                             o()(
                                 !k.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
@@ -140,7 +140,7 @@ let I = (e) => {
                                     }),
                                 ),
                                     await (0, u.W3)(
-                                        L.id,
+                                        x.id,
                                         k.map((e) => {
                                             let { id: t } = e;
                                             return t;
@@ -149,7 +149,7 @@ let I = (e) => {
                                     ),
                                     D("SUCCESS");
                             } catch (e) {
-                                x(!0);
+                                L(!0);
                             }
                         }
                     },
@@ -178,7 +178,7 @@ let I = (e) => {
                     children: G
                         ? (0, r.jsx)(m.Z.TransferBody, {
                               fromGuilds: U,
-                              toGuild: L,
+                              toGuild: x,
                               blurb: O.intl.formatToPlainString(O.t.SSA2lu, {
                                   slotCount: t,
                                   guildCount: n,
@@ -189,7 +189,7 @@ let I = (e) => {
                               canceledCount: e,
                           })
                         : (0, r.jsx)(m.Z.ApplyBody, {
-                              guild: L,
+                              guild: x,
                               blurb: O.intl.string(O.t.yTlZV0),
                               warning: O.intl.formatToPlainString(O.t.KPnDlu, {
                                   days: y.o3l,
@@ -211,7 +211,7 @@ let I = (e) => {
                     title: e,
                     actions: [],
                     children: (0, r.jsx)(b.R7, {
-                        guild: L,
+                        guild: x,
                         isTransfer: G,
                         guildBoostQuantity: k.length,
                         onClose: B,

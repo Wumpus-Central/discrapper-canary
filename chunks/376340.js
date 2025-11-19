@@ -5,7 +5,7 @@ var r = t(481060),
     s = t(600164),
     l = t(424071),
     i = t(388032),
-    o = t(771831);
+    o = t(200025);
 function c(e) {
     let { onClose: a, img: t, title: c, body: d, content: x } = e;
     return (0, n.jsxs)(l.Z, {

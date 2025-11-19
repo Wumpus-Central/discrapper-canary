@@ -452,14 +452,14 @@ function D(e, t) {
 function w(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
-        x(e, n);
+        L(e, n);
     });
 }
-function x(e, t) {
+function L(e, t) {
     var n;
     i = O(b({}, i), { [e.id]: e.merge({ meta: b({}, null != (n = e.meta) ? n : {}, t) }) });
 }
-function L(e) {
+function x(e) {
     let { widgetId: t, pinned: n } = e;
     return N(t, (e, t) => {
         V(e, n);
@@ -482,13 +482,13 @@ function M(e) {
         null != e && (e.defaultSettings.size = b({ fixed: e.defaultSettings.size.fixed }, s));
     }
 }
-function j(e) {
+function k(e) {
     i = O(b({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
 }
-function k(e) {
+function j(e) {
     let { widgetId: t } = e;
     return N(t, (e, t) => {
-        j(e);
+        k(e);
     });
 }
 function U(e) {
@@ -824,13 +824,13 @@ E(z, "displayName", "LayoutStore"),
     ]);
 let q = new z(d.Z, {
     LAYOUT_CREATE: A,
-    LAYOUT_SET_PINNED: L,
+    LAYOUT_SET_PINNED: x,
     LAYOUT_UPDATE_WIDGET: R,
     LAYOUT_SET_TOP_WIDGET: P,
     LAYOUT_DELETE_WIDGET: U,
     LAYOUT_DELETE_ALL_WIDGETS: G,
     LAYOUT_CREATE_WIDGETS: B,
     LAYOUT_SET_WIDGET_META: w,
-    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: k,
+    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: j,
     LAYOUT_SET_DEFAULT_CONFIG: Z,
 });

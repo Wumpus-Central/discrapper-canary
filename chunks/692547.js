@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => x }), n(388685), n(704826), n(35282);
 var r = n(688619),
     i = n.n(r),
     a = n(595182),
@@ -30,7 +30,7 @@ let { Themes: E } = n(15202).V,
         colors: l()(b, (e, t) => {
             let n = t;
             return {
-                css: x(n),
+                css: L(n),
                 resolve(t) {
                     var r, i, a, o, s, l, c;
                     let u = e[t.theme],
@@ -57,7 +57,7 @@ let { Themes: E } = n(15202).V,
             let n = t,
                 r = N[n];
             return {
-                css: x(n),
+                css: L(n),
                 resolve(e) {
                     var t;
                     return P(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
@@ -65,7 +65,7 @@ let { Themes: E } = n(15202).V,
             };
         }),
         shadows: l()(I, (e, t) => ({
-            css: x(t),
+            css: L(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
@@ -118,9 +118,9 @@ function D(e, t, n) {
 function w(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function x(e, t) {
+function L(e, t) {
     let n = null != t ? w(t) : null,
         r = w(e);
     return "var(--".concat([n, r].filter(Boolean).join("-"), ")");
 }
-let L = R;
+let x = R;

@@ -1,8 +1,8 @@
-n.d(t, { $: () => l });
+n.d(t, { $: () => i });
 var a = n(668781),
-    i = n(743498),
+    l = n(743498),
     r = n(388032);
-function l(e) {
+function i(e) {
     a.Z.show({
         title: r.intl.string(r.t.RpjdL8),
         body: r.intl.string(r.t.nOSopS),
@@ -10,7 +10,7 @@ function l(e) {
         confirmVariant: "critical-primary",
         cancelText: r.intl.string(r.t["7wZ1GY"]),
         onConfirm: () => {
-            (0, i.v6)(null);
+            (0, l.v6)(null);
         },
         onCancel: e,
     });

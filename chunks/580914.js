@@ -11,8 +11,8 @@ var r = n(54381),
     g = n(393903),
     p = n(448986),
     f = n(110560),
-    h = n(507808),
-    m = n(594174),
+    m = n(507808),
+    h = n(594174),
     C = n(626135),
     _ = n(381585),
     b = n(597688),
@@ -36,7 +36,7 @@ var r = n(54381),
     w = n(215023),
     H = n(981631),
     D = n(388032),
-    M = n(310582);
+    M = n(687983);
 let F = (0, v.IC)(90),
     W = {
         rankedSkuIds: [],
@@ -61,7 +61,7 @@ let F = (0, v.IC)(90),
             ),
             Y = l.useRef(null),
             q = (0, R.B)("HeroBlock"),
-            J = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
+            J = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
             Q = (0, P.Z)(),
             X = (0, _.sp)(),
             $ = l.useMemo(() => {
@@ -113,7 +113,7 @@ let F = (0, v.IC)(90),
             ),
             eg = z === w.AW.ORBS,
             ep = null != V && V.isOrbsExclusive,
-            { cardContainerRef: ef, totalCards: eh } = ((e) => {
+            { cardContainerRef: ef, totalCards: em } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
                     i = (0, p.Z)(() => {
@@ -135,8 +135,8 @@ let F = (0, v.IC)(90),
                     totalCards: e ? t : void 0,
                 };
             })(z !== w.AW.ORBS),
-            em = (0, S.a)()(eu),
-            eC = (0, y.l)(em).slice(0, eh),
+            eh = (0, S.a)()(eu),
+            eC = (0, y.l)(eh).slice(0, em),
             e_ = (0, N.St)(eC),
             eb = eg ? D.intl.string(D.t["1CdL8d"]) : D.intl.string(D.t.xYKa1T),
             ev = (0, E.FF)("CollectiblesContent"),
@@ -145,7 +145,7 @@ let F = (0, v.IC)(90),
             eO = (0, O.IT)("HeroBlock"),
             eS = () => {
                 eg
-                    ? ((0, h.Y)({
+                    ? ((0, m.Y)({
                           pageType: H.ZY5.SHOP_ORBS_TAB,
                           sectionType: H.jXE.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
@@ -280,7 +280,7 @@ let F = (0, v.IC)(90),
                                   children:
                                       n || ed
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: [...Array(null != eh ? eh : 4)].map((e, t) =>
+                                                children: [...Array(null != em ? em : 4)].map((e, t) =>
                                                     ex ? (0, r.jsx)(L.Z, {}, t) : (0, r.jsx)(j.K, {}, t),
                                                 ),
                                             })

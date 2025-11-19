@@ -3,13 +3,13 @@ n.d(t, {
     i: () => s,
 });
 var a = n(37234),
-    i = n(156142),
+    l = n(156142),
     r = n(456116),
-    l = n(981631);
+    i = n(981631);
 let s = (e) => {
-    i.PlaygroundStore.setState({
+    l.PlaygroundStore.setState({
         selectedCollection: e,
         selectedStory: null,
     }),
-        (0, a.jN)(l.S9g.COMPONENT_PLAYGROUND);
+        (0, a.jN)(i.S9g.COMPONENT_PLAYGROUND);
 };

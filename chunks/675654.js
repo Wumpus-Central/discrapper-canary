@@ -6,7 +6,7 @@ n.d(t, {
     rq: () => c,
     vv: () => i,
 });
-var r = n(238651);
+var r = n(921254);
 let i = n(177351),
     a = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
     o = [

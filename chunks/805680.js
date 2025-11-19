@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(457040),
     D = n(740492),
     w = n(574254),
-    x = n(585483),
-    L = n(28546),
+    L = n(585483),
+    x = n(28546),
     M = n(957825),
     k = n(981631),
     j = n(921944),
@@ -38,7 +38,7 @@ var r = n(54381),
     G = n(185923),
     B = n(611480),
     Z = n(388032),
-    F = n(887648);
+    F = n(364744);
 function V(e, t, n) {
     return (
         t in e
@@ -133,7 +133,7 @@ let q = M.Om + U.Su.MEDIUM,
                             tab: i,
                             badged: !1,
                         }),
-                            (0, L.hr)(i);
+                            (0, x.hr)(i);
                     },
                     "aria-current": t ? "page" : void 0,
                     className: o()(n, F.navButton, F.navItem, { [F.navButtonActive]: t }),
@@ -226,7 +226,7 @@ function J(e) {
             drawerRef: eo,
             orientation: "left" === $ ? g.y.HORIZONTAL_RIGHT : g.y.HORIZONTAL_LEFT,
         }),
-        ec = (0, L.Iu)((e) => e.activeView),
+        ec = (0, x.Iu)((e) => e.activeView),
         eu = (0, N.fQ)(K),
         { renderWindow: ed, windowDispatch: ef } = i.useContext(S.ZP),
         e_ = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
@@ -259,29 +259,29 @@ function J(e) {
                         return;
                     n = n.parentNode;
                 }
-                (0, L._Q)();
+                (0, x._Q)();
                 let r = null == (t = (0, u.uB)(e)) ? void 0 : t.activeElement;
-                (null == r || "BODY" === r.tagName) && x.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                (null == r || "BODY" === r.tagName) && L.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
             },
             [et, eg, em, eh],
         ),
         eT = i.useCallback(() => {
-            (0, L._Q)();
+            (0, x._Q)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            ec === M.X1.GIF && (0, L._Q)();
+            ec === M.X1.GIF && (0, x._Q)();
         };
         return (
             ed.addEventListener("mousedown", eI),
             ed.addEventListener("contextmenu", eI),
             ef.subscribe(k.CkL.POPOUT_CLOSE, eT),
-            x.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
+            L.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
             () => {
                 ed.removeEventListener("mousedown", eI),
                     ed.removeEventListener("contextmenu", eI),
                     ef.unsubscribe(k.CkL.POPOUT_CLOSE, eT),
-                    x.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
+                    L.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [ec, eT, eI, ed, ef]),
@@ -298,10 +298,10 @@ function J(e) {
             [eC, eA],
         ),
         i.useEffect(() => {
-            (0, L.ql)("");
+            (0, x.ql)("");
         }, []),
         i.useEffect(() => {
-            ((!em && (0, _.$s)()) || (em && !eg)) && (0, L._Q)();
+            ((!em && (0, _.$s)()) || (em && !eg)) && (0, x._Q)();
         }, [eg, em]),
         i.useEffect(() => {
             if (null != eo.current && !ei.current) {
@@ -325,8 +325,8 @@ function J(e) {
         eP = i.useCallback((e, t) => (null == W ? void 0 : W(e, "soundboard_picker", t)), [W]),
         eD = (null == (s = z.soundmoji) ? void 0 : s.allowSending) === !0 && null != W,
         ew = "left" === $ ? "right" : "left",
-        ex = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
-        eL = eb
+        eL = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
+        ex = eb
             ? (0, r.jsx)(X, {
                   id: U._3,
                   "aria-controls": U.vO,
@@ -361,7 +361,7 @@ function J(e) {
     return (0, r.jsx)(m.Z, {
         section: k.jXE.EXPRESSION_PICKER,
         children: (0, r.jsx)(T.W5, {
-            className: o()(F.positionLayer, ex),
+            className: o()(F.positionLayer, eL),
             targetRef: l,
             position: J,
             align: $,
@@ -403,10 +403,10 @@ function J(e) {
                                                         children: [
                                                             eE
                                                                 ? (0, r.jsxs)(r.Fragment, {
-                                                                      children: [ek, eL, eM],
+                                                                      children: [ek, ex, eM],
                                                                   })
                                                                 : (0, r.jsxs)(r.Fragment, {
-                                                                      children: [eL, eM, ek],
+                                                                      children: [ex, eM, ek],
                                                                   }),
                                                             ep &&
                                                                 eD &&

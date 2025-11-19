@@ -23,7 +23,7 @@ var r,
     T = n(701560),
     S = n(981631),
     A = n(388032),
-    C = n(767248);
+    C = n(806698);
 function N(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ var w = (function (e) {
         e
     );
 })(w || {});
-let x = Object.freeze({
+let L = Object.freeze({
         [S.apO.PLAY]: "play",
         [S.apO.INSTALL]: "install",
         [S.apO.UPDATE]: "update",
@@ -101,7 +101,7 @@ let x = Object.freeze({
         [S.apO.MOVE_UP]: "queued",
         [S.apO.RESUME]: "paused",
     }),
-    L = () => [
+    x = () => [
         A.intl.string(A.t.r9wmKn),
         A.intl.string(A.t["6CpimS"]),
         A.intl.string(A.t.ysbNDc),
@@ -133,7 +133,7 @@ class k extends (r = a.Component) {
             case "locate":
                 return A.intl.string(A.t["nIj+a0"]);
             case "uninstalling":
-                let t = L();
+                let t = x();
                 return (
                     null == this._uninstallStringIndex &&
                         (this._uninstallStringIndex = Math.floor(Math.random() * t.length)),
@@ -155,7 +155,7 @@ class k extends (r = a.Component) {
         let { libraryApplication: e, dispatchState: t, actionState: n } = this.props;
         if (e.isHidden()) return "add_to_library";
         if (e.isPreorder()) return "preorder_wait";
-        let r = null != n ? x[n] : null;
+        let r = null != n ? L[n] : null;
         return null != r
             ? r
             : null != t && t.type === S.vxO.UNINSTALLING

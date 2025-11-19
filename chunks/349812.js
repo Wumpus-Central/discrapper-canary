@@ -1,24 +1,24 @@
-a.d(e, { Pd: () => i });
-var r = a(622916),
-    _ = a(617726),
-    n = a(14588),
-    o = a(255768);
-function i(t) {
+_.d(e, { Pd: () => E });
+var a = _(622916),
+    r = _(617726),
+    n = _(14588),
+    o = _(255768);
+function E(t) {
     function e(...t) {
-        o.X && r.kg.info("[Offline]:", ...t);
+        o.X && a.kg.info("[Offline]:", ...t);
     }
-    return (a) => {
-        let r,
-            o = t(a);
-        if (!a.createStore) throw Error("No `createStore` function was provided");
-        let i = a.createStore(a),
-            E = 5000;
+    return (_) => {
+        let a,
+            o = t(_);
+        if (!_.createStore) throw Error("No `createStore` function was provided");
+        let E = _.createStore(_),
+            i = 5000;
         function c(t) {
-            r && clearTimeout(r),
+            a && clearTimeout(a),
                 "number" !=
-                    typeof (r = setTimeout(async () => {
-                        r = void 0;
-                        let t = await i.shift();
+                    typeof (a = setTimeout(async () => {
+                        a = void 0;
+                        let t = await E.shift();
                         t &&
                             (e("Attempting to send previously queued event"),
                             (t[0].sent_at = new Date().toISOString()),
@@ -26,32 +26,32 @@ function i(t) {
                                 e("Failed to retry sending", t);
                             }));
                     }, t)) &&
-                    r.unref &&
-                    r.unref();
+                    a.unref &&
+                    a.unref();
         }
         function s() {
-            r || (c(E), (E = Math.min(2 * E, 3600000)));
+            a || (c(i), (i = Math.min(2 * i, 3600000)));
         }
-        async function l(t, r = !1) {
-            if (!r && (0, _.R)(t, ["replay_event", "replay_recording"])) return await i.push(t), c(100), {};
+        async function l(t, a = !1) {
+            if (!a && (0, r.R)(t, ["replay_event", "replay_recording"])) return await E.push(t), c(100), {};
             try {
                 let e = await o.send(t),
-                    a = 100;
+                    _ = 100;
                 if (e) {
-                    if (e.headers && e.headers["retry-after"]) a = (0, n.JY)(e.headers["retry-after"]);
-                    else if (e.headers && e.headers["x-sentry-rate-limits"]) a = 60000;
+                    if (e.headers && e.headers["retry-after"]) _ = (0, n.JY)(e.headers["retry-after"]);
+                    else if (e.headers && e.headers["x-sentry-rate-limits"]) _ = 60000;
                     else if ((e.statusCode || 0) >= 400) return e;
                 }
-                return c(a), (E = 5000), e;
+                return c(_), (i = 5000), e;
             } catch (n) {
                 var I;
-                if (await ((I = E), !(0, _.R)(t, ["client_report"]) && (!a.shouldStore || a.shouldStore(t, n, I))))
-                    return r ? await i.unshift(t) : await i.push(t), s(), e("Error sending. Event queued.", n), {};
+                if (await ((I = i), !(0, r.R)(t, ["client_report"]) && (!_.shouldStore || _.shouldStore(t, n, I))))
+                    return a ? await E.unshift(t) : await E.push(t), s(), e("Error sending. Event queued.", n), {};
                 throw n;
             }
         }
         return (
-            a.flushAtStartup && s(),
+            _.flushAtStartup && s(),
             {
                 send: l,
                 flush: (t) => o.flush(t),

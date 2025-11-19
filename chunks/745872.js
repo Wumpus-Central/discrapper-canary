@@ -45,7 +45,7 @@ var r,
     P = n(947599),
     D = {},
     w = "undefined" != typeof Uint8Array && A ? A(Uint8Array) : r,
-    x = {
+    L = {
         __proto__: null,
         "%AggregateError%": "undefined" == typeof AggregateError ? r : AggregateError,
         "%Array%": Array,
@@ -132,8 +132,8 @@ if (A)
     try {
         null.error;
     } catch (e) {
-        var L = A(A(e));
-        x["%Error.prototype%"] = L;
+        var x = A(A(e));
+        L["%Error.prototype%"] = x;
     }
 var M = function e(t) {
         var n;
@@ -147,9 +147,9 @@ var M = function e(t) {
             var i = e("%AsyncGenerator%");
             i && A && (n = A(i.prototype));
         }
-        return (x[t] = n), n;
+        return (L[t] = n), n;
     },
-    j = {
+    k = {
         __proto__: null,
         "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
         "%ArrayPrototype%": ["Array", "prototype"],
@@ -203,13 +203,13 @@ var M = function e(t) {
         "%WeakMapPrototype%": ["WeakMap", "prototype"],
         "%WeakSetPrototype%": ["WeakSet", "prototype"],
     },
-    k = n(390976),
+    j = n(390976),
     U = n(706165),
-    G = k.call(P, Array.prototype.concat),
-    B = k.call(R, Array.prototype.splice),
-    Z = k.call(P, String.prototype.replace),
-    F = k.call(P, String.prototype.slice),
-    V = k.call(P, RegExp.prototype.exec),
+    G = j.call(P, Array.prototype.concat),
+    B = j.call(R, Array.prototype.splice),
+    Z = j.call(P, String.prototype.replace),
+    F = j.call(P, String.prototype.slice),
+    V = j.call(P, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
@@ -228,8 +228,8 @@ var M = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(x, r))) {
-            var i = x[r];
+        if ((U(k, r) && (r = "%" + (n = k[r])[0] + "%"), U(L, r))) {
+            var i = L[r];
             if ((i === D && (i = M(r)), void 0 === i && !t))
                 throw new u("intrinsic " + e + " exists, but is not available. Please file an issue!");
             return {
@@ -259,7 +259,7 @@ e.exports = function (e, t) {
             h = F(_, -1);
         if (('"' === p || "'" === p || "`" === p || '"' === h || "'" === h || "`" === h) && p !== h)
             throw new c("property names with quotes must have matching quotes");
-        if ((("constructor" !== _ && f) || (s = !0), (r += "." + _), U(x, (a = "%" + r + "%")))) o = x[a];
+        if ((("constructor" !== _ && f) || (s = !0), (r += "." + _), U(L, (a = "%" + r + "%")))) o = L[a];
         else if (null != o) {
             if (!(_ in o)) {
                 if (!t) throw new u("base intrinsic for " + e + " exists, but the property is not available.");
@@ -269,7 +269,7 @@ e.exports = function (e, t) {
                 var m = O(o, _);
                 o = (f = !!m) && "get" in m && !("originalValue" in m.get) ? m.get : o[_];
             } else (f = U(o, _)), (o = o[_]);
-            f && !s && (x[a] = o);
+            f && !s && (L[a] = o);
         }
     }
     return o;

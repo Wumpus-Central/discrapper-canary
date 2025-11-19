@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var i = n(54381),
     r = n(120356),
     l = n.n(r),
@@ -26,7 +26,7 @@ var i = n(54381),
     j = n(987650),
     N = n(981631),
     Z = n(388032),
-    w = n(796212);
+    w = n(700460);
 function T(e) {
     let { user: t, application: n, runningGame: r } = e;
     return null != n || null != r
@@ -137,7 +137,7 @@ function A(e) {
         ],
     });
 }
-function D(e, t, n) {
+function k(e, t, n) {
     var r, l;
     if (x.Z.isNotificationDisabled(j.n0.StreamWatchNudge)) return null;
     let o = v.default.getUser(e);
@@ -148,18 +148,18 @@ function D(e, t, n) {
         Z = null != f ? d.Z.getApplication(f) : null,
         w = null != f ? y.Z.getDetectableGame(f) : null,
         T = null != f ? p.ZP.getRunningGames().find((e) => e.id === f) : null,
-        D =
+        k =
             null != (l = null != (r = null == T ? void 0 : T.name) ? r : null == w ? void 0 : w.name)
                 ? l
                 : null == Z
                   ? void 0
                   : Z.name,
-        k = (0, E.oY)(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, o),
+        D = (0, E.oY)(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, o),
         { trackView: R, trackClick: L } = (0, C.Rg)(j.n0.StreamWatchNudge, {
             notif_type: j.n0.StreamWatchNudge,
             notif_user_id: o.id,
             activity_type: null == n ? void 0 : n.type,
-            activity_name: null != D ? D : null == n ? void 0 : n.name,
+            activity_name: null != k ? k : null == n ? void 0 : n.name,
         });
     return {
         body: (() => {
@@ -169,7 +169,7 @@ function D(e, t, n) {
                         user: o,
                         application: Z,
                         runningGame: T,
-                        username: k,
+                        username: D,
                         buttonColor: "green",
                     });
                 case _.RD.GRAY_BUTTON_WITH_TEXT:
@@ -177,7 +177,7 @@ function D(e, t, n) {
                         user: o,
                         application: Z,
                         runningGame: T,
-                        username: k,
+                        username: D,
                         buttonColor: "gray",
                     });
                 case _.RD.SINGLE_ICON_BUTTON:
@@ -185,7 +185,7 @@ function D(e, t, n) {
                         user: o,
                         application: Z,
                         runningGame: T,
-                        username: k,
+                        username: D,
                         iconColor: "white",
                     });
             }

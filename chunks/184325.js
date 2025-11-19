@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(228168),
     D = n(981631),
     w = n(215023),
-    x = n(474936),
-    L = n(681642),
+    L = n(474936),
+    x = n(681642),
     M = n(388032),
-    k = n(517793);
+    k = n(311838);
 function j(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ let Z = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === y.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(O.Z, { showSubtext: !i && !t.isPreviewMode })
-        : void 0 !== n && t.id !== L.a
+        : void 0 !== n && t.id !== x.a
           ? (0, r.jsx)(h.Z, {
                 profileBadge: t,
                 tenureBadge: n,
@@ -111,7 +111,7 @@ function F(e) {
         { analyticsLocations: H } = (0, u.ZP)(c.Z.BADGE),
         { context: Y, trackUserProfileAction: W } = (0, A.KZ)(),
         K = v.default.getCurrentUser(),
-        z = (0, T.yd)(null == K ? void 0 : K.premiumType, x.PremiumTypes.TIER_2),
+        z = (0, T.yd)(null == K ? void 0 : K.premiumType, L.PremiumTypes.TIER_2),
         q = (0, R.Of)(null != (t = null == K ? void 0 : K.id) ? t : null),
         X = (0, N.Z)(q).some((e) => e.id === y.l.ORB_PROFILE_BADGE),
         Q = (0, _.c)(K, "UserProfileBadgeList"),
@@ -124,7 +124,7 @@ function F(e) {
             var n;
             let i = e.id === y.l.ORB_PROFILE_BADGE,
                 a = (0, S.fv)(e.id),
-                u = null != a || e.id === L.a,
+                u = null != a || e.id === x.a,
                 f = (null == O ? void 0 : O.userId) === (null == K ? void 0 : K.id),
                 v = (t) => {
                     if (
@@ -197,9 +197,9 @@ function F(e) {
                             ),
                         );
                 },
-                A = void 0 !== a && e.id !== L.a,
+                A = void 0 !== a && e.id !== x.a,
                 R = A && J,
-                x = f && Q && A,
+                L = f && Q && A,
                 M = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
@@ -238,7 +238,7 @@ function F(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            if (x) {
+            if (L) {
                 let n = (0, r.jsx)(
                     s.Anchor,
                     B(U({}, q), {
@@ -260,7 +260,7 @@ function F(e) {
             let $ = (0, r.jsx)(s.Anchor, B(U({}, q), { children: M })),
                 ee = Z({
                     badge: e,
-                    tieredTenureBadge: u && e.id !== L.a ? a : void 0,
+                    tieredTenureBadge: u && e.id !== x.a ? a : void 0,
                     currentUserOwnsOrbBadge: X,
                 });
             return (0, r.jsx)(

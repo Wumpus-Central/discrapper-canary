@@ -6,7 +6,7 @@ var r = n(481060),
     a = n(112560),
     o = n(981631),
     s = n(388032),
-    c = n(105740),
+    c = n(782513),
     u = n(800350);
 function d(e) {
     let { channel: t, guild: d, width: p, inPopout: h } = e;
@@ -19,7 +19,7 @@ function d(e) {
             onCTAClick: () =>
                 (0, r.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                        let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89334")]).then(
                             n.bind(n, 560114),
                         );
                         return (n) => {

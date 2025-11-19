@@ -1,46 +1,46 @@
-a.d(e, {
-    gi: () => i,
-    yo: () => E,
+_.d(e, {
+    gi: () => E,
+    yo: () => i,
 });
-var r = a(370336),
-    _ = a(394798),
-    n = a(305625),
-    o = a(696486);
-function i(t, e) {
-    var a, i, E, c;
+var a = _(370336),
+    r = _(394798),
+    n = _(305625),
+    o = _(696486);
+function E(t, e) {
+    var _, E, i, c;
     let { fingerprint: s, span: l, breadcrumbs: I, sdkProcessingMetadata: R } = e;
     (function (t, e) {
-        let { extra: a, tags: _, user: n, contexts: o, level: i, transactionName: E } = e,
-            c = (0, r.Jr)(a);
+        let { extra: _, tags: r, user: n, contexts: o, level: E, transactionName: i } = e,
+            c = (0, a.Jr)(_);
         c &&
             Object.keys(c).length &&
             (t.extra = {
                 ...c,
                 ...t.extra,
             });
-        let s = (0, r.Jr)(_);
+        let s = (0, a.Jr)(r);
         s &&
             Object.keys(s).length &&
             (t.tags = {
                 ...s,
                 ...t.tags,
             });
-        let l = (0, r.Jr)(n);
+        let l = (0, a.Jr)(n);
         l &&
             Object.keys(l).length &&
             (t.user = {
                 ...l,
                 ...t.user,
             });
-        let I = (0, r.Jr)(o);
+        let I = (0, a.Jr)(o);
         I &&
             Object.keys(I).length &&
             (t.contexts = {
                 ...I,
                 ...t.contexts,
             }),
-            i && (t.level = i),
-            E && "transaction" !== t.type && (t.transaction = E);
+            E && (t.level = E),
+            i && "transaction" !== t.type && (t.transaction = i);
     })(t, e),
         l &&
             (function (t, e) {
@@ -52,51 +52,51 @@ function i(t, e) {
                         dynamicSamplingContext: (0, n.jC)(e),
                         ...t.sdkProcessingMetadata,
                     });
-                let a = (0, o.Gx)(e),
-                    r = (0, o.XU)(a).description;
-                r && !t.transaction && "transaction" === t.type && (t.transaction = r);
+                let _ = (0, o.Gx)(e),
+                    a = (0, o.XU)(_).description;
+                a && !t.transaction && "transaction" === t.type && (t.transaction = a);
             })(t, l),
-        (a = t),
-        (i = s),
-        (a.fingerprint = a.fingerprint ? (0, _.lE)(a.fingerprint) : []),
-        i && (a.fingerprint = a.fingerprint.concat(i)),
-        a.fingerprint && !a.fingerprint.length && delete a.fingerprint,
+        (_ = t),
+        (E = s),
+        (_.fingerprint = _.fingerprint ? (0, r.lE)(_.fingerprint) : []),
+        E && (_.fingerprint = _.fingerprint.concat(E)),
+        _.fingerprint && !_.fingerprint.length && delete _.fingerprint,
         (function (t, e) {
-            let a = [...(t.breadcrumbs || []), ...e];
-            t.breadcrumbs = a.length ? a : void 0;
+            let _ = [...(t.breadcrumbs || []), ...e];
+            t.breadcrumbs = _.length ? _ : void 0;
         })(t, I),
-        (E = t),
+        (i = t),
         (c = R),
-        (E.sdkProcessingMetadata = {
-            ...E.sdkProcessingMetadata,
+        (i.sdkProcessingMetadata = {
+            ...i.sdkProcessingMetadata,
             ...c,
         });
 }
-function E(t, e) {
+function i(t, e) {
     let {
-        extra: a,
-        tags: r,
-        user: _,
+        extra: _,
+        tags: a,
+        user: r,
         contexts: n,
         level: o,
-        sdkProcessingMetadata: i,
-        breadcrumbs: E,
+        sdkProcessingMetadata: E,
+        breadcrumbs: i,
         fingerprint: s,
         eventProcessors: l,
         attachments: I,
         propagationContext: R,
-        transactionName: u,
+        transactionName: N,
         span: A,
     } = e;
-    c(t, "extra", a),
-        c(t, "tags", r),
-        c(t, "user", _),
+    c(t, "extra", _),
+        c(t, "tags", a),
+        c(t, "user", r),
         c(t, "contexts", n),
-        c(t, "sdkProcessingMetadata", i),
+        c(t, "sdkProcessingMetadata", E),
         o && (t.level = o),
-        u && (t.transactionName = u),
+        N && (t.transactionName = N),
         A && (t.span = A),
-        E.length && (t.breadcrumbs = [...t.breadcrumbs, ...E]),
+        i.length && (t.breadcrumbs = [...t.breadcrumbs, ...i]),
         s.length && (t.fingerprint = [...t.fingerprint, ...s]),
         l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),
         I.length && (t.attachments = [...t.attachments, ...I]),
@@ -105,7 +105,7 @@ function E(t, e) {
             ...R,
         });
 }
-function c(t, e, a) {
-    if (a && Object.keys(a).length)
-        for (let r in ((t[e] = { ...t[e] }), a)) Object.prototype.hasOwnProperty.call(a, r) && (t[e][r] = a[r]);
+function c(t, e, _) {
+    if (_ && Object.keys(_).length)
+        for (let a in ((t[e] = { ...t[e] }), _)) Object.prototype.hasOwnProperty.call(_, a) && (t[e][a] = _[a]);
 }

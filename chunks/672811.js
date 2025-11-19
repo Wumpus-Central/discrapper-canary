@@ -1,8 +1,8 @@
-n.d(t, { L: () => o }), n(415506);
+n.d(t, { L: () => s }), n(415506);
 var r = n(37113),
-    i = n(604415),
+    i = n(266734),
     l = n(388032);
-function o(e) {
+function s(e) {
     switch (e) {
         case r.ApplicationStreamPresets.PRESET_CUSTOM:
             return l.intl.string(l.t["+eOtrD"]);

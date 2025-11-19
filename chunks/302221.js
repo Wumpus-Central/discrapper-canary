@@ -10,7 +10,7 @@ n.d(t, {
     rj: () => p,
     vq: () => g,
     wh: () => D,
-    xj: () => L,
+    xj: () => x,
 }),
     n(415506),
     n(388685),
@@ -353,14 +353,14 @@ function w(e) {
                           },
             };
         })
-        .sort(x)[0].hex;
+        .sort(L)[0].hex;
 }
-function x(e, t) {
+function L(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function L(e) {
+function x(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;

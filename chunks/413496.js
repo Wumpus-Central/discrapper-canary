@@ -28,21 +28,21 @@ var r = n(507604),
     P = a("".charAt),
     D = a("".replace),
     w = a("".indexOf),
-    x = a("".slice),
-    L = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
+    L = a("".slice),
+    x = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
     M = /a/g,
-    j = /a/g,
-    k = new A(M) !== M,
+    k = /a/g,
+    j = new A(M) !== M,
     U = h.MISSED_STICKY,
     G = h.UNSUPPORTED_Y,
     B =
         r &&
-        (!k ||
+        (!j ||
             U ||
             I ||
             T ||
             E(function () {
-                return (j[S] = !1), A(M) !== M || A(j) === j || "/a/i" !== String(A(M, "i"));
+                return (k[S] = !1), A(M) !== M || A(k) === k || "/a/i" !== String(A(M, "i"));
             })),
     Z = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = !1; r <= n; r++) {
@@ -64,8 +64,8 @@ var r = n(507604),
                         s = !0;
                         break;
                     case "(" === t:
-                        if (((i += t), "?:" === x(e, r + 1, r + 3))) continue;
-                        R(L, x(e, r + 1)) && ((r += 2), (l = !0)), u++;
+                        if (((i += t), "?:" === L(e, r + 1, r + 3))) continue;
+                        R(x, L(e, r + 1)) && ((r += 2), (l = !0)), u++;
                         continue;
                     case ">" === t && l:
                         if ("" === d || b(o, d)) throw new N("Invalid capture group name");

@@ -9,12 +9,12 @@ var i = n(509613),
     c = n(755322),
     E = n(101870),
     S = n(602304),
-    d = n(513696),
-    T = n(860171),
+    T = n(513696),
+    d = n(860171),
     I = n(960323),
     O = n(249857),
     g = n(388032);
 let _ = (0, i.vB)(l.n.APP_SECTION, {
     useLabel: () => g.intl.string(g.t.f2n1TP),
-    buildLayout: () => [s.z, u.F, I.K, d.g, a.Q, c.m, o.G, S.a, O.R, E.o, T.g, r.w],
+    buildLayout: () => [s.z, u.F, I.K, T.g, a.Q, c.m, o.G, S.a, O.R, E.o, d.g, r.w],
 });

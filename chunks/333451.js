@@ -128,9 +128,9 @@ function w(e) {
         { analyticsLocations: w, sourceAnalyticsLocations: L } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: x } = (0, u.TCT)(),
         M = (0, l.ap)(x) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
-        j = null == n || null == n.premiumSubscriptionType,
-        k = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
-        U = (0, v.T4)(k.amount, k.currency),
+        k = null == n || null == n.premiumSubscriptionType,
+        j = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
+        U = (0, v.T4)(j.amount, j.currency),
         G = (0, h.N)(),
         B = null == G ? void 0 : G.trial_id,
         Z = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === T.Si.TIER_2;
@@ -161,7 +161,7 @@ function w(e) {
                                     ? S.intl.string(S.t.AoSzEr)
                                     : S.intl.format(S.t["7vePZb"], { monthlyPrice: U }),
                         }),
-                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: j }),
+                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: k }),
                     ],
                 }),
                 (0, r.jsxs)(u.mzw, {

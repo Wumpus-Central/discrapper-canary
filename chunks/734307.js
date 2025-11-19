@@ -45,13 +45,13 @@ function w() {
         t = v.Z.getVoiceChannelId();
     return (R = e), (P = t), D.clear();
 }
-function x(e) {
+function L(e) {
     let {
         guild: { id: t },
     } = e;
     return D.clearGuildId(t);
 }
-function L(e) {
+function x(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -70,10 +70,10 @@ function M(e) {
         n
     );
 }
-function j(e) {
+function k(e) {
     return D.nonPositionalChannelIdUpdate(e.id);
 }
-function k(e) {
+function j(e) {
     return D.clearGuildId(e.guildId);
 }
 function U(e) {
@@ -266,13 +266,13 @@ let eu = new ec(s.Z, {
     CATEGORY_EXPAND: ee,
     CHANNEL_ACK: Y,
     CHANNEL_COLLAPSE: F,
-    CHANNEL_CREATE: L,
-    CHANNEL_DELETE: L,
+    CHANNEL_CREATE: x,
+    CHANNEL_DELETE: x,
     CHANNEL_LOCAL_ACK: Y,
     CHANNEL_MUTE_EXPIRED: B,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: Y,
     CHANNEL_SELECT: J,
-    CHANNEL_STATUSES: k,
+    CHANNEL_STATUSES: j,
     CHANNEL_UPDATES: M,
     CONNECTION_OPEN_SUPPLEMENTAL: ei,
     CONNECTION_OPEN: w,
@@ -290,8 +290,8 @@ let eu = new ec(s.Z, {
     GAMES_DATABASE_FETCH: ei,
     GAMES_DATABASE_UPDATE: ei,
     GUILD_APPLICATIONS_FETCH_SUCCESS: ei,
-    GUILD_CREATE: x,
-    GUILD_DELETE: x,
+    GUILD_CREATE: L,
+    GUILD_DELETE: L,
     GUILD_MEMBER_UPDATE: U,
     GUILD_MUTE_EXPIRED: B,
     GUILD_ROLE_CREATE: B,
@@ -303,7 +303,7 @@ let eu = new ec(s.Z, {
     GUILD_SCHEDULED_EVENT_DELETE: eo,
     GUILD_SCHEDULED_EVENT_UPDATE: eo,
     GUILD_TOGGLE_COLLAPSE_MUTED: B,
-    GUILD_UPDATE: x,
+    GUILD_UPDATE: L,
     IMPERSONATE_STOP: B,
     IMPERSONATE_UPDATE: B,
     LOAD_CHANNELS: Z,
@@ -336,7 +336,7 @@ let eu = new ec(s.Z, {
     VOICE_CATEGORY_COLLAPSE: et,
     VOICE_CATEGORY_EXPAND: et,
     VOICE_CHANNEL_SELECT: J,
-    VOICE_CHANNEL_STATUS_UPDATE: j,
+    VOICE_CHANNEL_STATUS_UPDATE: k,
     VOICE_STATE_UPDATES: $,
     WINDOW_FOCUS: W,
 });

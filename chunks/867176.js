@@ -20,7 +20,7 @@ var r = n(54381),
     g = n(768581),
     E = n(28660),
     b = n(934424),
-    y = n(572425);
+    y = n(746804);
 function O(e, t, n) {
     return (
         t in e
@@ -116,15 +116,15 @@ function N(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: w = !1,
         } = e,
-        x = (0, _.Dt)(),
-        [L, M] = i.useState(!1),
+        L = (0, _.Dt)(),
+        [x, M] = i.useState(!1),
         k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         j = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: O,
             size: N,
-            canAnimate: w || !j ? L : k,
+            canAnimate: w || !j ? x : k,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
@@ -142,7 +142,7 @@ function N(e) {
         },
         children: [
             (0, r.jsxs)("mask", {
-                id: x,
+                id: L,
                 children: [
                     (0, r.jsx)("rect", {
                         fill: "white",
@@ -165,7 +165,7 @@ function N(e) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(x, ")"),
+                mask: "url(#".concat(L, ")"),
                 children: [
                     v,
                     (0, r.jsx)("div", {

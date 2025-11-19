@@ -3,17 +3,17 @@ var r = n(54381),
     l = n(473749),
     i = n(979554),
     a = n(399606),
-    o = n(780384),
-    s = n(481060),
+    s = n(780384),
+    o = n(481060),
     c = n(410030),
     u = n(594174),
     d = n(626135),
-    p = n(381585),
-    g = n(597688),
+    g = n(381585),
+    p = n(597688),
     f = n(128922),
-    h = n(370039),
-    C = n(937510),
-    m = n(303952),
+    m = n(370039),
+    h = n(937510),
+    C = n(303952),
     _ = n(38900),
     b = n(709999),
     v = n(653126),
@@ -22,7 +22,7 @@ var r = n(54381),
     O = n(215023),
     S = n(981631),
     y = n(388032),
-    j = n(887353),
+    j = n(654664),
     k = n(558513),
     I = n(662128),
     T = n(676790),
@@ -34,14 +34,14 @@ var r = n(54381),
 function R(e) {
     var t;
     let { isFetchingCategories: n, scrollerRef: R, tab: Z } = e,
-        w = (0, p.sp)(),
+        w = (0, g.sp)(),
         H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
         { noCache: D, includeUnpublished: M } = (0, E.Z)(),
         F = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, a.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
+        W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [V, U] = l.useState(1),
         z = (0, c.Fg)(),
-        G = (0, o.ap)(z),
+        G = (0, s.ap)(z),
         [K, Y, q] = l.useMemo(() => {
             switch (Z) {
                 case O.AW.AVATAR_DECORATIONS:
@@ -54,7 +54,7 @@ function R(e) {
                     return [y.intl.string(y.t.FYFpps), G ? I.Z : k.Z, i.Z.BUNDLE];
             }
         }, [Z, G]),
-        J = (0, h.a)(),
+        J = (0, m.a)(),
         Q = l.useMemo(
             () =>
                 J(
@@ -69,11 +69,11 @@ function R(e) {
                 ),
             [W, q, J],
         ),
-        X = (0, C.l)(Q);
+        X = (0, h.l)(Q);
     l.useEffect(() => {
-        (0, m.n)({
+        (0, C.n)({
             sessionId: H,
-            checkpoint: m.a.SHOP_MOUNTED,
+            checkpoint: C.a.SHOP_MOUNTED,
             tab: Z,
             unpublishedCategoriesShown: M,
             cacheDisabled: D,
@@ -81,9 +81,9 @@ function R(e) {
     }, []),
         l.useEffect(() => {
             n ||
-                (0, m.n)({
+                (0, C.n)({
                     sessionId: H,
-                    checkpoint: m.a.SHOP_RENDERED,
+                    checkpoint: C.a.SHOP_RENDERED,
                     tab: Z,
                     unpublishedCategoriesShown: M,
                     cacheDisabled: D,
@@ -97,7 +97,7 @@ function R(e) {
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(Y, ")") },
                       className: j.bannerContainer,
-                      children: (0, r.jsx)(s.Heading, {
+                      children: (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: K,
                       }),
@@ -105,11 +105,11 @@ function R(e) {
                   (0, r.jsx)("div", {
                       className: j.products,
                       children: X.slice(40 * (V - 1), 40 * V).map((e, t) => {
-                          let n = g.Z.getCategory(e.categorySkuId);
+                          let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(
-                                    p.k0,
+                                    g.k0,
                                     {
                                         newValue: { tilePosition: t },
                                         children: $
@@ -140,7 +140,7 @@ function R(e) {
                       (0, r.jsx)("div", {
                           className: j.paginationContainer,
                           children: (0, r.jsx)("div", {
-                              children: (0, r.jsx)(s.DsT, {
+                              children: (0, r.jsx)(o.DsT, {
                                   currentPage: V,
                                   totalCount: X.length,
                                   pageSize: 40,

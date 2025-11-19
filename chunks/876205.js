@@ -6,7 +6,7 @@ var r = n(442837),
     l = n(556296),
     s = n(13140),
     a = n(981631),
-    c = n(482784);
+    c = n(372452);
 let d = {
     [a.kg4.TOGGLE_MUTE]: {
         slash: o.nRN,

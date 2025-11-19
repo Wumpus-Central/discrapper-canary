@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,9 +10,9 @@ var i = n(120356),
     u = n(872269),
     d = n(228168),
     p = n(388032),
-    f = n(747615);
-function h(e) {
-    let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: h } = e,
+    h = n(624285);
+function f(e) {
+    let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: f } = e,
         { analyticsLocations: g } = (0, s.ZP)(),
         m = async () => {
             try {
@@ -26,10 +26,10 @@ function h(e) {
         children: (0, r.jsx)(a.P3F, {
             onClick: m,
             "aria-label": p.intl.string(p.t.jTW016),
-            className: l()(h, f.clickable),
+            className: l()(f, h.clickable),
             children: (0, r.jsx)(a.XHJ, {
                 size: i,
-                className: f.icon,
+                className: h.icon,
                 color: a.TVs.colors.ICON_FEEDBACK_CRITICAL,
             }),
         }),

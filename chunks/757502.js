@@ -1,33 +1,33 @@
-a.d(e, { v: () => n });
-var r = a(899517),
-    _ = a(679179);
-let n = (0, a(151122)._I)((t = {}) => {
+_.d(e, { v: () => n });
+var a = _(899517),
+    r = _(679179);
+let n = (0, _(151122)._I)((t = {}) => {
     let e = t.root,
-        a = t.prefix || "app:///",
-        n = "window" in r.n && void 0 !== r.n.window,
+        _ = t.prefix || "app:///",
+        n = "window" in a.n && void 0 !== a.n.window,
         o =
             t.iteratee ||
-            (function ({ isBrowser: t, root: e, prefix: a }) {
-                return (r) => {
-                    if (!r.filename) return r;
-                    let n = /^[a-zA-Z]:\\/.test(r.filename) || (r.filename.includes("\\") && !r.filename.includes("/")),
-                        o = /^\//.test(r.filename);
+            (function ({ isBrowser: t, root: e, prefix: _ }) {
+                return (a) => {
+                    if (!a.filename) return a;
+                    let n = /^[a-zA-Z]:\\/.test(a.filename) || (a.filename.includes("\\") && !a.filename.includes("/")),
+                        o = /^\//.test(a.filename);
                     if (t) {
                         if (e) {
-                            let t = r.filename;
-                            0 === t.indexOf(e) && (r.filename = t.replace(e, a));
+                            let t = a.filename;
+                            0 === t.indexOf(e) && (a.filename = t.replace(e, _));
                         }
                     } else if (n || o) {
-                        let t = n ? r.filename.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/") : r.filename,
-                            o = e ? (0, _.Gf)(e, t) : (0, _.EZ)(t);
-                        r.filename = `${a}${o}`;
+                        let t = n ? a.filename.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/") : a.filename,
+                            o = e ? (0, r.Gf)(e, t) : (0, r.EZ)(t);
+                        a.filename = `${_}${o}`;
                     }
-                    return r;
+                    return a;
                 };
             })({
                 isBrowser: n,
                 root: e,
-                prefix: a,
+                prefix: _,
             });
     return {
         name: "RewriteFrames",

@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(565473),
     p = n(927923),
     f = n(388032),
-    h = n(971108);
+    h = n(981912);
 function g(e) {
     let { platform: t } = e;
     return t === p.YE.XBOX

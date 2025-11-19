@@ -63,7 +63,7 @@ function w(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -117,17 +117,17 @@ let B = (e) => {
             n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(E.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(E.Z, x(w({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(C.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, x(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(S.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, x(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(I.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(I.ZP, x(w({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(O.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(O.ZP, x(w({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(m.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(m.Z, x(w({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -175,17 +175,17 @@ let B = (e) => {
             n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(b.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(b.Z, x(w({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(N.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(N.Z, x(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(A.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, x(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(T.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(T.Z, x(w({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(v.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(v.Z, x(w({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(g.ZP, x(w({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -213,10 +213,10 @@ let B = (e) => {
             ),
             A = i.useRef(!1),
             [C, N] = i.useState(!1),
-            [D, x] = i.useState(!1),
+            [D, L] = i.useState(!1),
             k = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && k && x(!0);
+            C && k && L(!0);
         }, [C, k]),
             i.useLayoutEffect(() => {
                 null != m.current && y(!0);
@@ -262,12 +262,12 @@ let B = (e) => {
             W = () => {
                 (A.current = !1),
                     setTimeout(() => {
-                        A.current || (N(!1), x(k));
+                        A.current || (N(!1), L(k));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(Z, L(w({}, _), { targetElementRef: m })),
+                b && (0, r.jsx)(Z, x(w({}, _), { targetElementRef: m })),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
@@ -308,7 +308,7 @@ let B = (e) => {
                             let { isShown: n } = t;
                             return (0, r.jsx)(
                                 u.P3F,
-                                L(w({}, e, O), {
+                                x(w({}, e, O), {
                                     innerRef: m,
                                     focusProps: {
                                         offset: {
@@ -324,7 +324,7 @@ let B = (e) => {
                                     onContextMenu: j,
                                     children: (0, r.jsx)(
                                         B,
-                                        L(w({}, _), {
+                                        x(w({}, _), {
                                             selected: n,
                                             hovered: A.current,
                                         }),

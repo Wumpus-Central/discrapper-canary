@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(215023),
     p = n(474936),
     h = n(388032),
-    m = n(498138);
+    m = n(176343);
 let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error("Missing base rate for legal fine print"),
@@ -42,9 +42,9 @@ let g = (e, t, n, r) => {
                 basePrice: P,
                 currentSubscription: D,
                 skuId: w,
-                applicationName: x,
+                applicationName: L,
             } = e,
-            L = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
+            x = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
         if (A) return null;
         let M = null == e.planGroup ? [] : e.planGroup;
         if (null != T) {
@@ -118,7 +118,7 @@ let g = (e, t, n, r) => {
                     (B = j), (G = h.intl.format(h.t["GEAQ+u"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.SOCIAL_LAYER_GAME_ITEM:
-                    (B = j), (G = h.intl.format(h.t.CVITgq, { applicationName: null != x ? x : "game's" }));
+                    (B = j), (G = h.intl.format(h.t.CVITgq, { applicationName: null != L ? L : "game's" }));
                     break;
                 default:
                     (B = U), (G = h.intl.string(h.t["9/siSQ"]));
@@ -170,7 +170,7 @@ let g = (e, t, n, r) => {
                             contactLink: f.EYA.CONTACT,
                             helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING),
                         })
-                      : L && N === f.POd.BOOST && null != P
+                      : x && N === f.POd.BOOST && null != P
                         ? h.intl.format(h.t["2nKy/0"], {
                               price: (0, u.T4)(P.amount, P.currency),
                               paidServiceTermsArticle: f.EYA.PAID_TERMS,

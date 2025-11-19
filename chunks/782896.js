@@ -7,13 +7,13 @@ var r = n(54381),
     s = n(430824),
     c = n(914010),
     u = n(797670),
-    d = n(361742),
+    d = n(872793),
     p = n(388032),
-    f = n(906530);
-function h(e) {
+    h = n(547752);
+function f(e) {
     let { children: t } = e;
     return (0, r.jsx)(a.ZP, {
-        className: f.facepileItemContainer,
+        className: h.facepileItemContainer,
         mask: a.ZP.Masks.SQUIRCLE,
         width: 25,
         height: 25,
@@ -23,13 +23,13 @@ function h(e) {
 function g(e) {
     let { guilds: t, numTruncated: n } = e;
     return (0, r.jsxs)("div", {
-        className: f.guildIconList,
+        className: h.guildIconList,
         children: [
             t.map((e) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: f.guildIconItem,
+                        className: h.guildIconItem,
                         children: [
                             (0, r.jsx)("div", {
                                 children: (0, r.jsx)(u.V, {
@@ -38,7 +38,7 @@ function g(e) {
                                 }),
                             }),
                             (0, r.jsx)(o.Text, {
-                                className: f.guildIconItemText,
+                                className: h.guildIconItemText,
                                 variant: "text-xs/medium",
                                 children: e.name,
                             }),
@@ -94,11 +94,11 @@ function m(e) {
         }),
         position: "top",
         children: (0, r.jsxs)("div", {
-            className: f.facepile,
+            className: h.facepile,
             children: [
                 b.map((e) =>
                     (0, r.jsx)(
-                        h,
+                        f,
                         {
                             children: (0, r.jsx)(u.V, {
                                 guild: e,
@@ -109,9 +109,9 @@ function m(e) {
                     ),
                 ),
                 _ > 0 &&
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         children: (0, r.jsxs)(o.Text, {
-                            className: f.textItem,
+                            className: h.textItem,
                             color: "text-secondary",
                             variant: "text-xxs/semibold",
                             children: ["+", _],

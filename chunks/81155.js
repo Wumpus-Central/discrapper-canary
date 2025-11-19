@@ -6,7 +6,7 @@ var n = o(54381),
     s = o(690221),
     r = o(460181),
     d = o(388032),
-    u = o(943584);
+    u = o(199750);
 let c = [
     {
         preBold: "That's pretty...",

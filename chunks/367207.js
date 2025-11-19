@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(594174),
     d = n(431),
     p = n(74538),
-    f = n(970645),
-    h = n(30684),
+    h = n(970645),
+    f = n(30684),
     g = n(937579),
     m = n(522558);
 function b(e, t, n) {
@@ -138,7 +138,7 @@ class O extends o.Z {
             }),
             b(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, p.I5)(e) && h.Z.shouldFetchCheckoutRecovery() && (await (0, f.o)());
+                null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
             }),
             b(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getConfig({ location: "PremiumManager" });

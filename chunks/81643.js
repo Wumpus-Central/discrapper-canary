@@ -1,6 +1,6 @@
 n.d(t, {
-    AY: () => L,
-    F5: () => x,
+    AY: () => x,
+    F5: () => L,
     Jm: () => S,
     L0: () => N,
     L5: () => I,
@@ -16,7 +16,7 @@ n.d(t, {
 }),
     n(388685),
     n(35282);
-var r = n(647438),
+var r = n(473749),
     i = n(442837),
     a = n(570140),
     o = n(911969),
@@ -152,7 +152,7 @@ function w(e) {
         initiateAgeVerification: I,
     };
 }
-function x(e) {
+function L(e) {
     let t = (0, i.e7)([_.default], () => {
             var e;
             return null == (e = _.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;
@@ -166,6 +166,6 @@ function x(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
-function L(e) {
+function x(e) {
     return null != e && m.dx.has(e);
 }

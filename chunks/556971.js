@@ -1,5 +1,5 @@
 n.d(t, { b: () => i }), n(388685);
-var r = n(647438);
+var r = n(473749);
 function i(e) {
     let { slideCount: t, intervalMs: n = 3000 } = e,
         [i, a] = (0, r.useState)(0),

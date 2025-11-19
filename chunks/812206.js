@@ -159,7 +159,7 @@ function w(e) {
         n = g.botUserIdToAppUsage[t];
     null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
 }
-function x(e) {
+function L(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -168,7 +168,7 @@ function x(e) {
     }
     return n;
 }
-function L(e) {
+function x(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t)
@@ -181,7 +181,7 @@ function M(e) {
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _.set(t, r);
 }
-function j(e) {
+function k(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -191,7 +191,7 @@ function j(e) {
     }
     return n.size > 0;
 }
-function k(e) {
+function j(e) {
     var t;
     let { payment: n } = e;
     if ((null == (t = n.sku) ? void 0 : t.application) == null) return !1;
@@ -310,14 +310,14 @@ let K = new W(a.Z, {
     APPLICATION_FETCH_FAIL: C,
     APPLICATIONS_FETCH: N,
     APPLICATIONS_FETCH_SUCCESS: P,
-    APPLICATIONS_FETCH_FAIL: x,
+    APPLICATIONS_FETCH_FAIL: L,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: x,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: x,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: x,
     GUILD_APPLICATIONS_FETCH_SUCCESS: M,
-    BILLING_PAYMENTS_FETCH_SUCCESS: j,
-    PAYMENT_UPDATE: k,
+    BILLING_PAYMENTS_FETCH_SUCCESS: k,
+    PAYMENT_UPDATE: j,
     INVITE_RESOLVE_SUCCESS: G,
     GIFT_CODE_RESOLVE_SUCCESS: U,
     LIBRARY_FETCH_SUCCESS: R,

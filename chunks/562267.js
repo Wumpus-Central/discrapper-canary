@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(268350),
     u = n(419922),
     d = n(388032),
-    f = n(135867);
+    f = n(739090);
 function _(e) {
     var t;
     let { channelId: n, chatInputType: _ } = e,

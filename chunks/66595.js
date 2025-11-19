@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(388032),
-    l = n(227797);
+    l = n(881709);
 function c(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.IGR, {

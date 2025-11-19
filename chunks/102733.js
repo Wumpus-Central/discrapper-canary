@@ -1,6 +1,6 @@
-a.d(e, { KV: () => n });
-var r = a(747677),
-    _ = a(444675);
+_.d(e, { KV: () => n });
+var a = _(747677),
+    r = _(444675);
 function n() {
-    return !(0, r.n)() && "[object process]" === Object.prototype.toString.call(void 0 !== _ ? _ : 0);
+    return !(0, a.n)() && "[object process]" === Object.prototype.toString.call(void 0 !== r ? r : 0);
 }

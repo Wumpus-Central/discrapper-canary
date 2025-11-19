@@ -4,7 +4,7 @@ n(473749);
 var s = n(120356),
     r = n.n(s),
     l = n(481060),
-    a = n(126254);
+    a = n(534624);
 let o = function (t) {
     let { children: e, style: n } = t;
     return (0, i.jsx)(l.hzk, {

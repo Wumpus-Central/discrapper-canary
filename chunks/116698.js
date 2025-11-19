@@ -1,5 +1,5 @@
-a.d(e, { b: () => r });
-class r extends Error {
+_.d(e, { b: () => a });
+class a extends Error {
     constructor(t, e = "warn") {
         super(t),
             (this.message = t),

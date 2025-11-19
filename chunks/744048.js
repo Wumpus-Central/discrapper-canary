@@ -17,7 +17,7 @@ var i = n(442837),
     g = n(550385),
     E = n(981631),
     b = n(921944),
-    y = n(223399);
+    y = n(537272);
 let O = function (e) {
     let { mobile: t } = e,
         n = (0, i.e7)([p.Z], () => p.Z.getLayers().includes(E.S9g.USER_SETTINGS)),
@@ -33,9 +33,9 @@ let O = function (e) {
     if (((0, u.HA)(I, C), n)) return null;
     let D = T === g.wh.CLIENT_THEMES || R,
         w = T === g.wh.APP_ICON,
-        x = T === g.wh.CUSTOM_THEME || P;
-    if (!(D || w || x)) return null;
-    let L = () =>
+        L = T === g.wh.CUSTOM_THEME || P;
+    if (!(D || w || L)) return null;
+    let x = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
                 D &&
@@ -55,7 +55,7 @@ let O = function (e) {
                         isCoachmark: !1,
                         markAsDismissed: N,
                     }),
-                x &&
+                L &&
                     (0, r.jsx)(d.Z, {
                         metadata: null != S ? S : {},
                         markAsDismissed: N,
@@ -67,7 +67,7 @@ let O = function (e) {
     return t
         ? (0, r.jsx)("div", {
               className: y.mobileContainer,
-              children: L(),
+              children: x(),
           })
-        : L();
+        : x();
 };

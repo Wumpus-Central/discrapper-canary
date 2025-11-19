@@ -21,7 +21,7 @@ var r = n(54381),
     O = n(765305),
     E = n(981631),
     N = n(388032),
-    P = n(138324);
+    P = n(486129);
 let C = (e) => {
         let { guildId: t, channelType: n, channel: l, onSelectChannel: i, disabled: a, entityType: s } = e,
             d = n === E.d4z.GUILD_STAGE_VOICE,
@@ -211,7 +211,7 @@ function Z(e) {
                                       n.e("38697"),
                                       n.e("33285"),
                                       n.e("29497"),
-                                      n.e("60565"),
+                                      n.e("34189"),
                                   ]).then(n.bind(n, 241865));
                                   return (n) => {
                                       var l, i;

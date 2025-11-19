@@ -12,13 +12,13 @@ var l = n(120356),
     g = n(884697),
     p = n(724994),
     f = n(786040),
-    h = n(58201),
-    m = n(445794),
+    m = n(58201),
+    h = n(445794),
     C = n(956472),
     _ = n(388032),
-    b = n(944525);
+    b = n(809854);
 let v = (e) => {
-        let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: d, prioritizedCurrency: h } = e,
+        let { product: t, badgeOverride: n, skipLimitedTimeCheck: l, className: d, prioritizedCurrency: m } = e,
             v = (0, f.jB)(),
             { isPurchased: x, isPartiallyOwnedBundle: E } = (0, p.L)(t),
             O = (0, g.G1)(t),
@@ -26,11 +26,11 @@ let v = (e) => {
             y = (null == S ? void 0 : S.unpublishedAt) != null ? (0, g.OT)(S.unpublishedAt) : null,
             j = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
             k = c.ZP.canUseCollectibles(j),
-            I = (0, m.Iw)(t),
+            I = (0, h.Iw)(t),
             { isOrbExclusive: T } = (0, C.Ip)({
                 product: t,
                 isPremiumUser: k,
-                prioritizedCurrency: h,
+                prioritizedCurrency: m,
                 hasDiscountOffer: null != I,
             }),
             L = n;
@@ -86,7 +86,7 @@ let v = (e) => {
             s = (0, f.LJ)(t),
             o = (0, d.o)(s);
         if (null == s) return null;
-        let c = (0, h.W)(s, o);
+        let c = (0, m.W)(s, o);
         return (0, r.jsx)(v, {
             product: c,
             badgeOverride: n,

@@ -1,6 +1,6 @@
 n.d(e, {
     W: () => S,
-    Z: () => d,
+    Z: () => T,
 });
 var i = n(818710),
     l = n(442837),
@@ -15,7 +15,7 @@ function S() {
     let t = (0, l.e7)([s.Z], () => s.Z.supports(c.AN.DEBUG_LOGGING));
     return i.FB && t && null != u.Z.fileManager.readLogFiles;
 }
-let d = (0, r.qs)(a.n.VOICE_AND_VIDEO_DEBUG_LOGGING, {
+let T = (0, r.qs)(a.n.VOICE_AND_VIDEO_DEBUG_LOGGING, {
     useTitle: () => E.intl.string(E.t["726JHL"]),
     useSubtitle: () => E.intl.string(E.t["/7ak9Q"]),
     usePredicate: S,

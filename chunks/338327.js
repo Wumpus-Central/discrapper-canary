@@ -5,7 +5,7 @@ var i = n(481060);
 let l = {
     open() {
         (0, i.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("57486"), n.e("45739")]).then(n.bind(n, 87026));
+            let { default: e } = await Promise.all([n.e("57486"), n.e("30373")]).then(n.bind(n, 87026));
             return (t) =>
                 (0, r.jsx)(
                     e,

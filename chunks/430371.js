@@ -111,18 +111,19 @@ function I(e) {
         eu = J && Q ? D : ec * es,
         ed = Math.floor(Math.min(D, eu) / es),
         ep = U > D / es + 72 + P + 8;
-    (n = et || J ? (et ? -16 : -8) : 40 + Math.max(0, 72 - (U - ed) / 2)),
-        r.useEffect(() => {
-            let e = setTimeout(() => {
-                K(!1);
-            }, 250);
-            return () => {
-                clearTimeout(e);
-            };
-        }, []);
-    let eh = q || null == W,
-        ef = eh ? "animate-never" : "animate-always",
-        em = (0, s.q_F)(
+    n = et || J ? (et ? -16 : -8) : 40 + Math.max(0, 72 - (U - ed) / 2);
+    let eh = 8 + Math.max(0, 72 - (U - ed) / 2);
+    r.useEffect(() => {
+        let e = setTimeout(() => {
+            K(!1);
+        }, 250);
+        return () => {
+            clearTimeout(e);
+        };
+    }, []);
+    let ef = q || null == W,
+        em = ef ? "animate-never" : "animate-always",
+        eg = (0, s.q_F)(
             {
                 value: +!!et,
                 delay: ep || !et ? 0 : 100,
@@ -133,30 +134,30 @@ function I(e) {
                     X(!1), f.S.dispatch(v.CkL.REMEASURE_TARGET);
                 },
             },
-            ef,
+            em,
         ),
-        eg = (0, s.q_F)(
+        eb = (0, s.q_F)(
             {
                 value: +!!et,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
-            ef,
+            em,
         ),
-        eb = (0, s.q_F)(
+        ey = (0, s.q_F)(
             {
                 value: eu,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
-            (en === et && eg.value.idle && !el) || ea || eh ? "animate-never" : "animate-always",
+            (en === et && eb.value.idle && !el) || ea || ef ? "animate-never" : "animate-always",
         ),
-        ey = (0, s.q_F)(
+        eC = (0, s.q_F)(
             {
                 value: n,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
             },
-            ef,
+            em,
         ),
-        eC = (0, s.Yzy)(
+        ev = (0, s.Yzy)(
             R,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -166,13 +167,13 @@ function I(e) {
                 enter: { opacity: 1 },
                 leave: { opacity: 0 },
             },
-            ef,
+            em,
         ),
-        ev = r.useCallback((e) => {
+        e_ = r.useCallback((e) => {
             z(e), K(!1);
         }, []),
-        e_ = et ? [] : (0, y.n3)(T, R, F),
-        { visibleParticipants: ex, participantTileWidth: ej } = (0, C.ZB)(D, N);
+        ex = et ? [] : (0, y.n3)(T, R, F),
+        { visibleParticipants: ej, participantTileWidth: eO } = (0, C.ZB)(D, N);
     return (0, i.jsxs)("div", {
         className: a()(j.root, x.flexCenter, k),
         children: [
@@ -182,15 +183,15 @@ function I(e) {
                 children: [
                     (0, i.jsxs)(o.animated.div, {
                         className: j.videoFrame,
-                        style: { top: eg.value.to((e) => (-e * P) / 2) },
+                        style: { top: eb.value.to((e) => (-e * P) / 2) },
                         children: [
                             (0, i.jsx)(o.animated.div, {
-                                style: { width: eb.value },
+                                style: { width: ey.value },
                                 className: j.videoWrapper,
                                 children: (0, i.jsx)("div", {
                                     className: x.videoSizer,
                                     style: { aspectRatio: es },
-                                    children: eC((e, t, n) => {
+                                    children: ev((e, t, n) => {
                                         let { key: r } = n;
                                         return null != t
                                             ? (0, i.jsx)(
@@ -209,9 +210,10 @@ function I(e) {
                                                           onClick: l,
                                                           onDoubleClick: Z,
                                                           onContextMenu: I,
-                                                          onVideoResize: ev,
+                                                          onVideoResize: e_,
                                                           inCall: w,
                                                           popoutType: A,
+                                                          controlsBottom: eh,
                                                       }),
                                                   },
                                                   r,
@@ -223,7 +225,7 @@ function I(e) {
                             er
                                 ? (0, i.jsx)(o.animated.div, {
                                       className: a()(j.actionRow, { [j.idle]: H }),
-                                      style: { bottom: ey.value },
+                                      style: { bottom: eC.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: M.id,
                                           isParticipantsOpen: L,
@@ -236,17 +238,17 @@ function I(e) {
                     (0, i.jsx)(o.animated.div, {
                         className: j.participantsWrapperAnimated,
                         style: {
-                            translateY: em.value.to((e) => (e * P) / 2),
-                            opacity: em.value,
-                            visibility: em.value.to((e) => (0 === e ? "hidden" : "visible")),
+                            translateY: eg.value.to((e) => (e * P) / 2),
+                            opacity: eg.value,
+                            visibility: eg.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
                         children: (0, i.jsx)(C.ZP, {
                             channel: M,
                             onClick: l,
                             onContextMenu: I,
                             onDoubleClick: Z,
-                            participants: ex,
-                            participantTileWidth: ej,
+                            participants: ej,
+                            participantTileWidth: eO,
                             selectedParticipantId: R.id,
                             inCall: w,
                             popoutType: A,
@@ -255,13 +257,13 @@ function I(e) {
                     }),
                 ],
             }),
-            e_.length > 0
+            ex.length > 0
                 ? (0, i.jsx)(b.Z, {
                       onContextMenuParticipant: I,
                       width: D,
                       height: U,
                       channel: M,
-                      participants: e_,
+                      participants: ex,
                       onSelectParticipant: l,
                   })
                 : null,

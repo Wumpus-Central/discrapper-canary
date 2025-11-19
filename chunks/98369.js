@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }),
+n.d(t, { Z: () => w }),
     n(388685),
     n(410992),
     n(227481),
@@ -26,15 +26,15 @@ var r,
     m = n(651941),
     _ = n(981631);
 let g = new Map(),
-    v = new Map(),
-    b = !1,
+    b = new Map(),
+    v = !1,
     E = null;
 function h() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, c.my)(t),
             r = !0 === g.get(n),
-            i = v.get(t) !== r;
-        return v.set(t, r), !!i || e;
+            i = b.get(t) !== r;
+        return b.set(t, r), !!i || e;
     }, !1);
 }
 function y() {
@@ -47,8 +47,8 @@ function y() {
             r = !1;
             break;
         }
-    let i = r !== b;
-    return (b = r), i;
+    let i = r !== v;
+    return (v = r), i;
 }
 function S(e) {
     let { userId: t } = e;
@@ -68,17 +68,17 @@ function S(e) {
     return n || r || i;
 }
 function O() {
-    g.clear(), v.clear(), (b = !1);
+    g.clear(), b.clear(), (v = !1);
 }
 class C extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(s.default, u.Z, d.Z, p.Z, m.Z);
     }
     isCallVerified() {
-        return b;
+        return v;
     }
     isStreamVerified(e) {
-        return v.get(e);
+        return b.get(e);
     }
     isUserVerified(e) {
         return g.get(e);
@@ -92,7 +92,7 @@ class C extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (C[i] = "SecureFramesVerifiedStore");
-let I = new C(o.Z, {
+let w = new C(o.Z, {
     CONNECTION_OPEN: O,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -105,7 +105,7 @@ let I = new C(o.Z, {
         switch (r) {
             case a.Yn.STREAM:
                 if (null == t) return !1;
-                return v.delete(t), y();
+                return b.delete(t), y();
             case a.Yn.DEFAULT:
                 O();
         }

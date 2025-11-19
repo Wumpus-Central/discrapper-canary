@@ -140,7 +140,7 @@ void 0 === b && (b = E),
                 P = !!(m ? m(R, n) : R),
                 D = P ? y(p, u) : p,
                 w = P ? (0, s.Z)({}, T, {}, _) : T,
-                x = (0, s.Z)(
+                L = (0, s.Z)(
                     {
                         "aria-current": (P && i) || null,
                         className: D,
@@ -149,6 +149,6 @@ void 0 === b && (b = E),
                     },
                     C,
                 );
-            return E !== b ? (x.ref = t || A) : (x.innerRef = A), a.createElement(g, x);
+            return E !== b ? (L.ref = t || A) : (L.innerRef = A), a.createElement(g, L);
         });
     });

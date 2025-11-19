@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(45572),
     D = n(435020),
     w = n(119226),
-    x = n(982204),
-    L = n(981631),
+    L = n(982204),
+    x = n(981631),
     M = n(388032),
-    k = n(416439);
+    k = n(138475);
 function j(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
@@ -102,7 +102,7 @@ function U(e) {
                 });
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
     let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0,
-        eh = er.productLine === L.POd.SOCIAL_LAYER_GAME_ITEM,
+        eh = er.productLine === x.POd.SOCIAL_LAYER_GAME_ITEM,
         em = ee && !eh;
     return (0, r.jsxs)("div", {
         className: k.stepBody,
@@ -121,7 +121,7 @@ function U(e) {
                       "TEST_MODE",
                   )
                 : null,
-            (0, A.yE)(U.flags, L.udG.EMBEDDED) && q === h.O.ERROR
+            (0, A.yE)(U.flags, x.udG.EMBEDDED) && q === h.O.ERROR
                 ? (0, r.jsx)(
                       f.Z,
                       {
@@ -145,7 +145,7 @@ function U(e) {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
                 children:
                     null != es
-                        ? (0, r.jsx)(x.B, {
+                        ? (0, r.jsx)(L.B, {
                               sku: er,
                               skuPricePreview: es,
                               application: U,
@@ -155,7 +155,7 @@ function U(e) {
                                 type: c.$jN.Type.WANDERING_CUBES,
                                 className: k.invoiceSpinner,
                             })
-                          : (0, r.jsx)(x.E, {
+                          : (0, r.jsx)(L.E, {
                                 sku: er,
                                 value: "",
                             }),

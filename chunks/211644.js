@@ -6,7 +6,7 @@ n.d(t, {
     bn: () => G,
     cI: () => U,
     cv: () => w,
-    f0: () => L,
+    f0: () => x,
     gE: () => M,
     og: () => k,
 }),
@@ -151,7 +151,7 @@ let m = new (n(499303).I)(),
             ? (m.unschedule(), C(e, N(e)))
             : ((null != e.shownFatigableCandidate && !t) ||
                   m.scheduled() ||
-                  x(e) ||
+                  L(e) ||
                   m.schedule(() => {
                       (0, a.j)(() => {
                           y.setState((e) => {
@@ -162,12 +162,12 @@ let m = new (n(499303).I)(),
                   }, 250),
               e);
     },
-    w = () => x(y.getState()),
-    x = (e) => {
+    w = () => L(y.getState()),
+    L = (e) => {
         let t = new Date().getTime();
         return null == e.shownFatigableCandidate && t - e.lastWinnerTime < E;
     },
-    L = (e) => {
+    x = (e) => {
         let t = d.O.has(e.content);
         (0, a.j)(() => {
             y.setState((n) => {

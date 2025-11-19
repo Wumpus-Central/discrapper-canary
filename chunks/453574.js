@@ -1,16 +1,16 @@
-a.d(e, { l: () => u });
-var r = a(157079),
-    _ = a(151122),
-    n = a(233517),
-    o = a(263449),
-    i = a(946471),
-    E = a(622916),
-    c = a(694043),
-    s = a(64685),
-    l = a(899517),
-    I = a(394798),
-    R = a(454463);
-let u = (0, _._I)((t = {}) => {
+_.d(e, { l: () => N });
+var a = _(157079),
+    r = _(151122),
+    n = _(233517),
+    o = _(263449),
+    E = _(946471),
+    i = _(622916),
+    c = _(694043),
+    s = _(64685),
+    l = _(899517),
+    I = _(394798),
+    R = _(454463);
+let N = (0, r._I)((t = {}) => {
     let e = {
         failedRequestStatusCodes: [[500, 599]],
         failedRequestTargets: [/.*/],
@@ -19,134 +19,134 @@ let u = (0, _._I)((t = {}) => {
     return {
         name: "HttpClient",
         setup(t) {
-            var a, _, i, I;
-            (a = t),
-                (_ = e),
+            var _, r, E, I;
+            (_ = t),
+                (r = e),
                 (0, c.t$)() &&
                     (0, s.Uf)((t) => {
-                        if ((0, o.s3)() !== a) return;
-                        let { response: e, args: r } = t,
-                            [i, E] = r;
+                        if ((0, o.s3)() !== _) return;
+                        let { response: e, args: a } = t,
+                            [E, i] = a;
                         e &&
-                            (function (t, e, a, r) {
-                                if (T(t, a.status, a.url)) {
-                                    var _, o;
+                            (function (t, e, _, a) {
+                                if (T(t, _.status, _.url)) {
+                                    var r, o;
                                     let t,
-                                        i,
                                         E,
+                                        i,
                                         c,
                                         s =
-                                            ((_ = e),
-                                            (!(o = r) && _ instanceof Request) || (_ instanceof Request && _.bodyUsed)
-                                                ? _
-                                                : new Request(_, o));
-                                    f() && (([t, E] = A("Cookie", s)), ([i, c] = A("Set-Cookie", a)));
+                                            ((r = e),
+                                            (!(o = a) && r instanceof Request) || (r instanceof Request && r.bodyUsed)
+                                                ? r
+                                                : new Request(r, o));
+                                    f() && (([t, i] = A("Cookie", s)), ([E, c] = A("Set-Cookie", _)));
                                     let l = d({
                                         url: s.url,
                                         method: s.method,
-                                        status: a.status,
+                                        status: _.status,
                                         requestHeaders: t,
-                                        responseHeaders: i,
-                                        requestCookies: E,
+                                        responseHeaders: E,
+                                        requestCookies: i,
                                         responseCookies: c,
                                     });
                                     (0, n.eN)(l);
                                 }
-                            })(_, i, e, E);
+                            })(r, E, e, i);
                     }),
-                (i = t),
+                (E = t),
                 (I = e),
                 "XMLHttpRequest" in l.n &&
-                    (0, r.UK)((t) => {
-                        if ((0, o.s3)() !== i) return;
+                    (0, a.UK)((t) => {
+                        if ((0, o.s3)() !== E) return;
                         let e = t.xhr,
-                            a = e[r.xU];
-                        if (!a) return;
-                        let { method: _, request_headers: c } = a;
+                            _ = e[a.xU];
+                        if (!_) return;
+                        let { method: r, request_headers: c } = _;
                         try {
-                            !(function (t, e, a, r) {
+                            !(function (t, e, _, a) {
                                 if (T(t, e.status, e.responseURL)) {
-                                    let t, _, o;
+                                    let t, r, o;
                                     if (f()) {
                                         try {
                                             let t =
                                                 e.getResponseHeader("Set-Cookie") ||
                                                 e.getResponseHeader("set-cookie") ||
                                                 void 0;
-                                            t && (_ = N(t));
+                                            t && (r = u(t));
                                         } catch (t) {
-                                            R.X && E.kg.log("Could not extract cookies from response headers");
+                                            R.X && i.kg.log("Could not extract cookies from response headers");
                                         }
                                         try {
                                             o = (function (t) {
                                                 let e = t.getAllResponseHeaders();
                                                 return e
                                                     ? e.split("\r\n").reduce((t, e) => {
-                                                          let [a, r] = e.split(": ");
-                                                          return a && r && (t[a] = r), t;
+                                                          let [_, a] = e.split(": ");
+                                                          return _ && a && (t[_] = a), t;
                                                       }, {})
                                                     : {};
                                             })(e);
                                         } catch (t) {
-                                            R.X && E.kg.log("Could not extract headers from response");
+                                            R.X && i.kg.log("Could not extract headers from response");
                                         }
-                                        t = r;
+                                        t = a;
                                     }
-                                    let i = d({
+                                    let E = d({
                                         url: e.responseURL,
-                                        method: a,
+                                        method: _,
                                         status: e.status,
                                         requestHeaders: t,
                                         responseHeaders: o,
-                                        responseCookies: _,
+                                        responseCookies: r,
                                     });
-                                    (0, n.eN)(i);
+                                    (0, n.eN)(E);
                                 }
-                            })(I, e, _, c);
+                            })(I, e, r, c);
                         } catch (t) {
-                            R.X && E.kg.warn("Error while extracting response event form XHR response", t);
+                            R.X && i.kg.warn("Error while extracting response event form XHR response", t);
                         }
                     });
         },
     };
 });
 function A(t, e) {
-    let a,
-        r = (function (t) {
+    let _,
+        a = (function (t) {
             let e = {};
             return (
-                t.forEach((t, a) => {
-                    e[a] = t;
+                t.forEach((t, _) => {
+                    e[_] = t;
                 }),
                 e
             );
         })(e.headers);
     try {
-        let e = r[t] || r[t.toLowerCase()] || void 0;
-        e && (a = N(e));
+        let e = a[t] || a[t.toLowerCase()] || void 0;
+        e && (_ = u(e));
     } catch (e) {
-        R.X && E.kg.log(`Could not extract cookies from header ${t}`);
+        R.X && i.kg.log(`Could not extract cookies from header ${t}`);
     }
-    return [r, a];
+    return [a, _];
 }
-function N(t) {
+function u(t) {
     return t.split("; ").reduce((t, e) => {
-        let [a, r] = e.split("=");
-        return a && r && (t[a] = r), t;
+        let [_, a] = e.split("=");
+        return _ && a && (t[_] = a), t;
     }, {});
 }
-function T(t, e, a) {
-    var r, _;
+function T(t, e, _) {
+    var a, r;
     return (
-        (r = t.failedRequestStatusCodes),
-        r.some((t) => ("number" == typeof t ? t === e : e >= t[0] && e <= t[1])) &&
-            ((_ = t.failedRequestTargets), _.some((t) => ("string" == typeof t ? a.includes(t) : t.test(a)))) &&
-            !(0, i.W)(a, (0, o.s3)())
+        (a = t.failedRequestStatusCodes),
+        a.some((t) => ("number" == typeof t ? t === e : e >= t[0] && e <= t[1])) &&
+            ((r = t.failedRequestTargets), r.some((t) => ("string" == typeof t ? _.includes(t) : t.test(_)))) &&
+            !(0, E.W)(_, (0, o.s3)())
     );
 }
 function d(t) {
     let e = `HTTP Client Error with status code: ${t.status}`,
-        a = {
+        _ = {
             message: e,
             exception: {
                 values: [
@@ -177,11 +177,11 @@ function d(t) {
             },
         };
     return (
-        (0, I.EG)(a, {
+        (0, I.EG)(_, {
             type: "http.client",
             handled: !1,
         }),
-        a
+        _
     );
 }
 function f() {

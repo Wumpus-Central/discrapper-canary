@@ -72,7 +72,7 @@ function w(e) {
     let t = T.get(e);
     void 0 !== t && (clearTimeout(t), T.delete(e));
 }
-function x() {
+function L() {
     var e;
     let t = null != (e = A.get(v)) ? e : 0;
     if ((t > 0 && t <= y) || (w(v), !D(v))) return;
@@ -88,7 +88,7 @@ function x() {
             v,
             setTimeout(
                 () =>
-                    L({
+                    x({
                         feedId: v,
                         feature: i.L.INBOX,
                     }),
@@ -96,7 +96,7 @@ function x() {
             ),
         );
 }
-async function L(e) {
+async function x(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
     if (D(t) || r)
         try {
@@ -115,7 +115,7 @@ async function L(e) {
                 A.set(t, 0),
                 S.delete(t),
                 P(t, { loading: !1 }),
-                t === v && ((C = null), x());
+                t === v && ((C = null), L());
         } catch (o) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
@@ -125,7 +125,7 @@ async function L(e) {
                     t,
                     setTimeout(
                         () =>
-                            L({
+                            x({
                                 feedId: t,
                                 feature: n,
                                 force: r,
@@ -143,18 +143,18 @@ async function L(e) {
         }
 }
 function M() {
-    x();
-}
-function j() {
-    M();
+    L();
 }
 function k() {
+    M();
+}
+function j() {
     w(v);
 }
 function U(e) {
     let { feedId: t, feature: n } = e;
     w(t),
-        L({
+        x({
             feedId: t,
             feature: n,
             force: !0,
@@ -164,7 +164,7 @@ function G(e) {
     let { refreshAfterMs: t } = e,
         n = m.Z.getFeed(v);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null &&
-        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
+        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), L());
 }
 function B(e) {
     var t;
@@ -172,7 +172,7 @@ function B(e) {
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && N(n, r);
 }
 function Z() {
-    L({
+    x({
         feedId: g.YN.GLOBAL_FEED,
         feature: i.L.GAME_PROFILE,
     });
@@ -181,8 +181,8 @@ class F extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: j,
-                CONNECTION_CLOSED: k,
+                POST_CONNECTION_OPEN: k,
+                CONNECTION_CLOSED: j,
                 WINDOW_FOCUS: M,
                 IDLE: M,
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,

@@ -36,8 +36,8 @@ var r,
     P = n(767714),
     D = n(659215),
     w = n(222677),
-    x = n(995774),
-    L = n(6839),
+    L = n(995774),
+    x = n(6839),
     M = n(695346),
     k = n(592125),
     j = n(430824),
@@ -58,10 +58,10 @@ var r,
     J = n(981631),
     $ = n(474936),
     ee = n(388032),
-    et = n(975900),
-    en = n(127947),
-    er = n(893973),
-    ei = n(827610);
+    et = n(702417),
+    en = n(487111),
+    er = n(639543),
+    ei = n(430534);
 function ea(e, t, n) {
     return (
         t in e
@@ -122,7 +122,7 @@ let ec = 12,
 function ep(e, t, n) {
     (0, h.h7j)((e) =>
         (0, i.jsx)(
-            L.default,
+            x.default,
             el(eo({}, e), {
                 message: t,
                 selectedReaction: n,
@@ -188,7 +188,7 @@ class em extends (r = a.PureComponent) {
                 transform: [{ scale: this.scale }],
                 opacity: this.opacity,
             },
-            L = o ? r : n;
+            x = o ? r : n;
         if (o && null != a) {
             var M;
             let { accentColor: n, backgroundColor: r, opacity: i } = a,
@@ -231,7 +231,7 @@ class em extends (r = a.PureComponent) {
                                         className: D.reactionInner,
                                         onClick: this.handleClick,
                                         "aria-disabled": u,
-                                        "aria-label": (0, x.iD)(this.isMe(), L, c, o),
+                                        "aria-label": (0, L.iD)(this.isMe(), x, c, o),
                                         "aria-pressed": this.isMe(),
                                         children: [
                                             (0, i.jsx)("div", {
@@ -276,12 +276,12 @@ class em extends (r = a.PureComponent) {
                                                 ? null
                                                 : (0, i.jsx)(E.Z, {
                                                       className: D.reactionCount,
-                                                      value: L,
+                                                      value: x,
                                                       color: e,
                                                       digitWidth: ec,
                                                   }),
                                             (0, i.jsx)(R.Z, {
-                                                count: L,
+                                                count: x,
                                                 reactionRef: N,
                                             }),
                                         ],
@@ -344,7 +344,7 @@ class em extends (r = a.PureComponent) {
                             type: $.cd.BURST_REACTION_UPSELL,
                             page:
                                 (null == c ? void 0 : c.getGuildId()) != null ? J.ZY5.GUILD_CHANNEL : J.ZY5.DM_CHANNEL,
-                            section: null != c ? (0, x.s4)(c) : void 0,
+                            section: null != c ? (0, L.s4)(c) : void 0,
                             object: J.qAy.EMOJI_REACTION_UPSELL,
                         },
                     });
@@ -630,7 +630,7 @@ class em extends (r = a.PureComponent) {
                                     (null == i ? void 0 : i.getGuildId()) != null
                                         ? J.ZY5.GUILD_CHANNEL
                                         : J.ZY5.DM_CHANNEL,
-                                section: (0, x.s4)(i),
+                                section: (0, L.s4)(i),
                                 object: J.qAy.EMOJI_REACTION_TOOLTIP_UPSELL,
                             },
                         });
@@ -772,13 +772,13 @@ let eg = a.memo((e) => {
             C)
         )
             return null;
-        let x = () => {
+        let L = () => {
                 b(!E);
             },
-            L = () => {
+            x = () => {
                 let e = ee.intl.string(ee.t["Igv+LS"]);
                 return (0, i.jsxs)(h.P3F, {
-                    onClick: x,
+                    onClick: L,
                     className: et.reactionEmojiDetailsClickable,
                     children: [
                         (0, i.jsx)(h.Text, {
@@ -813,7 +813,7 @@ let eg = a.memo((e) => {
                 });
         return (0, i.jsxs)("div", {
             children: [
-                M ? k() : L(),
+                M ? k() : x(),
                 y
                     ? (0, i.jsx)(z.SE, { className: et.emojiDetailsLoader })
                     : M &&

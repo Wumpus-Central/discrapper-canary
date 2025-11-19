@@ -29,11 +29,11 @@ var r = n(654861),
     P = n(412412),
     D = n(311473),
     w = n(615830),
-    x = n(314897),
-    L = n(592125),
+    L = n(314897),
+    x = n(592125),
     M = n(131951),
-    j = n(19780),
-    k = n(226961),
+    k = n(19780),
+    j = n(226961),
     U = n(936349),
     G = n(594174),
     B = n(626135),
@@ -459,7 +459,7 @@ class eN extends d.Z {
     }
     setNextChannelId(e) {
         this.recordEvent({ c: 9 });
-        let t = L.Z.getChannel(this.channelId),
+        let t = x.Z.getChannel(this.channelId),
             n = null == t ? void 0 : t.type;
         this.logger.info("Updating channel: ".concat(e, "(").concat(n, ")")),
             (this._nextChannelId = e),
@@ -514,7 +514,7 @@ class eN extends d.Z {
     }
     _handleConnecting(e) {
         if (null != this.endpoint) {
-            let e = L.Z.getChannel(this.channelId),
+            let e = x.Z.getChannel(this.channelId),
                 t = null == e ? void 0 : e.type;
             this.logger.info(
                 "Connecting to RTC server "
@@ -566,7 +566,7 @@ class eN extends d.Z {
                     }),
                 ),
                 (this._encountered_socket_failure = !0)),
-            j.Z.getRemoteDisconnectVoiceChannelId() === this.channelId &&
+            k.Z.getRemoteDisconnectVoiceChannelId() === this.channelId &&
                 (null == (l = this._connection) || l.wasRemoteDisconnected());
         let R = "Force Close" !== r;
         if (R) {
@@ -663,7 +663,7 @@ class eN extends d.Z {
                 });
             let n = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null,
                 i = M.Z.getSettings(),
-                a = L.Z.getChannel(this.channelId),
+                a = x.Z.getChannel(this.channelId),
                 o =
                     null == (u = N.Z.getConnectionStats(this.getMediaEngineConnectionId())) ||
                     null == (c = u.stats.rtp.outbound.find((e) => "audio" === e.type))
@@ -823,7 +823,7 @@ class eN extends d.Z {
                 });
         let l = M.Z.getMediaEngine(),
             c = w.Z.getPersistentCodesEnabled(),
-            u = null != (s = x.default.getStaticAuthSessionId()) ? s : void 0,
+            u = null != (s = L.default.getStaticAuthSessionId()) ? s : void 0,
             d = (0, _.zO)(),
             h = l.connect(
                 this.context,
@@ -1273,7 +1273,7 @@ class eN extends d.Z {
         this._soundshareStats.traceEvent(void 0, e);
     }
     _getAnalyticsProperties() {
-        let e = L.Z.getChannel(this.channelId),
+        let e = x.Z.getChannel(this.channelId),
             t = null == e ? void 0 : e.type;
         return {
             guild_id: this.guildId,
@@ -1937,7 +1937,7 @@ class eN extends d.Z {
                 camera_device_count: Object.keys(M.Z.getVideoDevices()).length,
             })),
             eu(this, "_trackVoiceConnectionConnecting", () => {
-                let e = L.Z.getChannel(this.channelId),
+                let e = x.Z.getChannel(this.channelId),
                     t = null == e ? void 0 : e.type;
                 B.default.track(
                     es.rMx.VOICE_CONNECTION_CONNECTING,
@@ -2028,7 +2028,7 @@ class eN extends d.Z {
         let f = M.Z.supports(el.AN.FIRST_FRAME_CALLBACK) && M.Z.supports(el.AN.REMOTE_USER_MULTI_STREAM);
         if (i === el.Yn.DEFAULT) {
             var p;
-            let t = (null == (p = L.Z.getChannel(this.channelId)) ? void 0 : p.type) === es.d4z.GUILD_STAGE_VOICE;
+            let t = (null == (p = x.Z.getChannel(this.channelId)) ? void 0 : p.type) === es.d4z.GUILD_STAGE_VOICE;
             (this._localMediaSinkWantsManager = new J.ZP(e, t, f)),
                 this._localMediaSinkWantsManager.on(J.ai.Update, (e) => {
                     if (this.state === es.hes.RTC_CONNECTED && null != this._socket) {
@@ -2060,7 +2060,7 @@ class eN extends d.Z {
         (this._remoteVideoSinkWants = J.Yy),
             eo.w.on(eo.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             eo.w.on(eo.e.WindowVisibilityChanged, this.windowVisibilityChanged),
-            k.ZP.shouldRecordNextConnection()
+            j.ZP.shouldRecordNextConnection()
                 ? ((this._recordingEnabled = !0), g.TC(!1))
                 : (this._recordingEnabled = !1),
             (this._soundshareStats = new $.Z()),

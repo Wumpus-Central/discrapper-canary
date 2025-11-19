@@ -6,7 +6,7 @@ var i = n(657707),
     o = n(692547),
     a = n(921944),
     s = n(388032),
-    c = n(695610);
+    c = n(708316);
 function u(e) {
     let { notificationConfig: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {

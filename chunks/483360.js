@@ -22,7 +22,7 @@ var i = n(658722),
     o = n(392711),
     s = n.n(o),
     l = n(423802),
-    c = n(509160),
+    c = n(343203),
     u = n(827837),
     d = n(815372),
     f = n(620490),
@@ -46,11 +46,11 @@ var i = n(658722),
     P = n(373228),
     D = n(601070),
     w = n(569471),
-    x = n(675478),
-    L = n(131704),
+    L = n(675478),
+    x = n(131704),
     M = n(345162),
-    j = n(598077),
-    k = n(314897),
+    k = n(598077),
+    j = n(314897),
     U = n(592125),
     G = n(580005),
     B = n(77498),
@@ -150,11 +150,11 @@ let ey = new m.Z("AutocompleteUtils"),
     eP = 3,
     eD = 11,
     ew = 6,
-    ex = 8,
-    eL = 1,
+    eL = 8,
+    ex = 1,
     eM = 1000,
-    ej = 0.2,
-    ek = 0.1,
+    ek = 0.2,
+    ej = 0.1,
     eU = 50,
     eG = () => !0,
     eB = /(\t|\s)/,
@@ -183,22 +183,22 @@ function ez(e) {
             a = r.filter((e) => (0, en.lM)(e));
             break;
         case eu.h8.USER:
-            a = r.filter((e) => e instanceof L.Sf && e.type === ec.d4z.DM);
+            a = r.filter((e) => e instanceof x.Sf && e.type === ec.d4z.DM);
             break;
         case eu.h8.GROUP_DM:
-            a = r.filter((e) => e instanceof L.Sf && e.isMultiUserDM());
+            a = r.filter((e) => e instanceof x.Sf && e.isMultiUserDM());
             break;
         case eu.h8.TEXT_CHANNEL:
-            a = r.filter((e) => e instanceof L.Sf && (0, L.r8)(e.type));
+            a = r.filter((e) => e instanceof x.Sf && (0, x.r8)(e.type));
             break;
         case eu.h8.VOICE_CHANNEL:
-            a = r.filter((e) => e instanceof L.Sf && e.isGuildVocal());
+            a = r.filter((e) => e instanceof x.Sf && e.isGuildVocal());
     }
     let o = {};
     for (let t of a) {
         let { id: n } = t,
             r = G.Z.getScoreWithoutFetchingLatest(n);
-        if (e === eu.h8.USER && t instanceof L.mn) {
+        if (e === eu.h8.USER && t instanceof x.mn) {
             if (t.type === ec.d4z.DM) o[(n = t.getRecipientId())] = 1 + r / i;
             else if (t.type === ec.d4z.GROUP_DM) {
                 let e = t.recipients.length;
@@ -206,8 +206,8 @@ function ez(e) {
             }
         } else o[n] = 1 + r / i;
     }
-    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ej;
-    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ek;
+    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ek;
+    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ej;
     return o;
 }
 let eq = [Z.sH, Z.Zb, ec.d4z.GUILD_CATEGORY];
@@ -255,7 +255,7 @@ function e0(e) {
         let e,
             r,
             f = n[m];
-        f instanceof j.Z
+        f instanceof k.Z
             ? ((r = f), (e = null == (b = F.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = el.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -321,26 +321,26 @@ function e1(e) {
         case P.MO.CORRELATED_EMOJI:
             return ew;
         case P.MO.TAG:
-            return eL;
+            return ex;
         case P.MO.GUILD_NAME:
         case P.MO.PACK_NAME:
-            return ex;
+            return eL;
         default:
             return 1;
     }
 }
-function e2(e) {
-    return e === Z.sH || (e !== Z.Zb && !!(0, L.Q5)(e));
+function e3(e) {
+    return e === Z.sH || (e !== Z.Zb && !!(0, x.Q5)(e));
 }
-function e3(e, t, n) {
+function e2(e, t, n) {
     return (
-        e === t || ((!!n || !!(0, L.Km)(t)) && (e === Z.sH ? (0, L.r8)(t) || (0, L.bw)(t) : e === Z.Zb && (0, L.bw)(t)))
+        e === t || ((!!n || !!(0, x.Km)(t)) && (e === Z.sH ? (0, x.r8)(t) || (0, x.bw)(t) : e === Z.Zb && (0, x.bw)(t)))
     );
 }
 function e4(e, t) {
-    return e === Z.sH && (0, L.bw)(t);
+    return e === Z.sH && (0, x.bw)(t);
 }
-function e8(e) {
+function e5(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
             .split(" ")
@@ -365,7 +365,7 @@ function e8(e) {
     }
     return n;
 }
-function e5(e, t, n) {
+function e8(e, t, n) {
     let r = 0,
         i = null;
     for (let a of t) {
@@ -589,8 +589,8 @@ let te = (0, ee.oH)((e, t, n) => {
                     allowSnowflake: p,
                     includeAllThreads: h,
                 } = e,
-                m = e8(n, c),
-                g = e2(l);
+                m = e5(n, c),
+                g = e3(l);
             t =
                 null != r
                     ? s()(Z.ZP.getChannels(r)[l])
@@ -607,20 +607,20 @@ let te = (0, ee.oH)((e, t, n) => {
             for (let e of t) {
                 var O;
                 if (
-                    !e3(l, e.type, null != r) ||
-                    ((0, L.Km)(e.type) && !W.Z.can(u ? e.accessPermissions : ec.Plq.VIEW_CHANNEL, e)) ||
+                    !e2(l, e.type, null != r) ||
+                    ((0, x.Km)(e.type) && !W.Z.can(u ? e.accessPermissions : ec.Plq.VIEW_CHANNEL, e)) ||
                     !o(e)
                 )
                     continue;
                 let t = [...m],
                     i = e.name.toLocaleLowerCase(),
                     s = p && n === e.id,
-                    c = s ? eO : e5(i, t, a);
+                    c = s ? eO : e8(i, t, a);
                 if (0 !== c) {
                     if (t.length > 0) {
                         for (let n of [e6(e, E), e7(e, E)]) {
                             if (null == n || "" === n) continue;
-                            let e = e5(n, t, !1);
+                            let e = e8(n, t, !1);
                             0 !== e && (c += 0.5 * e);
                         }
                         c = Math.min(eI - eA, c);
@@ -635,7 +635,7 @@ let te = (0, ee.oH)((e, t, n) => {
                             c >= eI ? eO : eI,
                         )),
                         b.push({
-                            type: (0, L.bw)(e.type) ? eu.h8.VOICE_CHANNEL : eu.h8.TEXT_CHANNEL,
+                            type: (0, x.bw)(e.type) ? eu.h8.VOICE_CHANNEL : eu.h8.TEXT_CHANNEL,
                             record: e,
                             score: eK(c, d[e.id]),
                             comparator: (0, _.F6)(e, Q.default, z.Z),
@@ -1074,7 +1074,7 @@ let te = (0, ee.oH)((e, t, n) => {
                     (e.id !== ed.HY.CUSTOMIZE_COMMUNITY || s) &&
                     eQ(e.name.toLocaleLowerCase(), i, !1) > 0 &&
                     c.push(
-                        new L.nl({
+                        new x.nl({
                             id: e.id,
                             name: e.name,
                             type: ec.d4z.UNKNOWN,
@@ -1142,7 +1142,7 @@ let te = (0, ee.oH)((e, t, n) => {
         queryEmojiResults(e) {
             let { query: t, channel: n, intention: r, maxCount: i = ec.rnv, matchComparator: a } = e;
             return (
-                x.DZ.loadIfNecessary(),
+                L.DZ.loadIfNecessary(),
                 {
                     emojis: g.ZP.searchWithoutFetchingLatest({
                         channel: n,
@@ -1160,7 +1160,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 i = Q.default.getCurrentUser(),
                 a = new Set(),
                 o = [];
-            for (let s of (x.DZ.loadIfNecessary(), e)) {
+            for (let s of (L.DZ.loadIfNecessary(), e)) {
                 if ("" === s) continue;
                 let e = s.toLocaleLowerCase(),
                     l = (0, es._I)(e),
@@ -1211,7 +1211,7 @@ let te = (0, ee.oH)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = Q.default.getCurrentUser();
-            S.Z.isFetching() || S.Z.hasFetchedAllSounds() || (0, T.w)(), x.DZ.loadIfNecessary();
+            S.Z.isFetching() || S.Z.hasFetchedAllSounds() || (0, T.w)(), L.DZ.loadIfNecessary();
             let r = Array.from(S.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {
@@ -1284,7 +1284,7 @@ let te = (0, ee.oH)((e, t, n) => {
                           };
                       })
                     : F.ZP.getMembers(n.guild_id).filter(eJ),
-                s = k.default.getId(),
+                s = j.default.getId(),
                 l = Q.default.getUsers(),
                 c = X.Z.getGuildId(),
                 u = t.toLocaleLowerCase(),
@@ -1295,7 +1295,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 let t, o;
                 if (_.length >= r) break;
                 if (
-                    (e instanceof j.Z
+                    (e instanceof k.Z
                         ? ((o = e), (t = null == (m = F.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                         : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId])),
                     null == o || o.id === s || o.bot)

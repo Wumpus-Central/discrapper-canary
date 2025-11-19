@@ -831,7 +831,7 @@ class C extends o.C {
             o = e.pos + t;
         for (; e.pos < o; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.locations.push(L.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) a.locations.push(x.internalBinaryRead(e, e.uint32(), n));
             else {
                 let o = n.readUnknownField;
                 if ("throw" === o)
@@ -846,7 +846,7 @@ class C extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            L.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+            x.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -857,7 +857,7 @@ class C extends o.C {
                 name: "locations",
                 kind: "message",
                 repeat: 1,
-                T: () => L,
+                T: () => x,
             },
         ]);
     }
@@ -1000,7 +1000,7 @@ class D extends o.C {
     }
 }
 let w = new D();
-class x extends o.C {
+class L extends o.C {
     create(e) {
         let t = { location: { oneofKind: void 0 } };
         return (
@@ -1083,7 +1083,7 @@ class x extends o.C {
         ]);
     }
 }
-let L = new x();
+let x = new L();
 class M extends o.C {
     create(e) {
         let t = { blocks: [] };

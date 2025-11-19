@@ -1,24 +1,24 @@
-a.d(e, { V: () => o });
-var r = a(899517),
-    _ = a(578346);
+_.d(e, { V: () => o });
+var a = _(899517),
+    r = _(578346);
 let n = null;
 function o(t) {
     let e = "error";
-    (0, _.Hj)(e, t), (0, _.D2)(e, i);
+    (0, r.Hj)(e, t), (0, r.D2)(e, E);
 }
-function i() {
-    (n = r.n.onerror),
-        (r.n.onerror = function (t, e, a, r, o) {
+function E() {
+    (n = a.n.onerror),
+        (a.n.onerror = function (t, e, _, a, o) {
             return (
-                (0, _.rK)("error", {
-                    column: r,
+                (0, r.rK)("error", {
+                    column: a,
                     error: o,
-                    line: a,
+                    line: _,
                     msg: t,
                     url: e,
                 }),
                 !!n && !n.__SENTRY_LOADER__ && n.apply(this, arguments)
             );
         }),
-        (r.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
+        (a.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
 }

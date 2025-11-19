@@ -55,7 +55,7 @@ function l(e, t) {
 }
 function c(e) {
     (0, i.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("7082"), n.e("98639")]).then(n.bind(n, 650233));
+        let { default: t } = await Promise.all([n.e("7082"), n.e("72688")]).then(n.bind(n, 650233));
         return (n) => (0, r.jsx)(t, l(o({}, n), { inviteCode: e }));
     });
 }

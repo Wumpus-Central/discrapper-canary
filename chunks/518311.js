@@ -47,8 +47,8 @@ var i,
     U = n(544610),
     B = n(19780),
     H = n(306680),
-    F = n(699516),
-    V = n(246946),
+    V = n(699516),
+    F = n(246946),
     G = n(594174),
     z = n(626135),
     W = n(572004),
@@ -61,7 +61,7 @@ var i,
     $ = n(575464),
     ee = n(981631),
     et = n(388032),
-    en = n(918324);
+    en = n(497072);
 function ei(e, t, n) {
     return (
         t in e
@@ -268,7 +268,7 @@ class ed extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !F.Z.isFriend(t);
+        return !V.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -501,7 +501,7 @@ class ed extends (i = l.PureComponent) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
             let n = G.default.getUser(e),
-                i = null != n && F.Z.getRelationshipType(n.id) === ee.OGo.PENDING_OUTGOING;
+                i = null != n && V.Z.getRelationshipType(n.id) === ee.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -881,7 +881,7 @@ function ep(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, E.ZP)(j.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, Z.a)(j.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, P.pT)(Array.from(t), G.default, F.Z);
+    let c = (0, P.pT)(Array.from(t), G.default, V.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -914,14 +914,14 @@ function ep(e) {
 function eh(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([U.Z, D.Z, V.Z], () => {
+    let i = (0, u.cj)([U.Z, D.Z, F.Z], () => {
         let e;
         return (
             null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             el(er({}, U.Z.getState()), {
                 invite: e,
-                hideDiscriminator: V.Z.hidePersonalInformation,
-                hideInstantInvites: V.Z.hideInstantInvites,
+                hideDiscriminator: F.Z.hidePersonalInformation,
+                hideInstantInvites: F.Z.hideInstantInvites,
             })
         );
     });

@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(474936),
     S = n(981631),
     A = n(388032),
-    C = n(144867),
+    C = n(418548),
     N = n(769860);
 function R(e, t) {
     if (null == e) return {};
@@ -67,8 +67,8 @@ function w(e) {
         {
             title: P,
             type: w,
-            guildBoostProps: x,
-            analyticsSource: L,
+            guildBoostProps: L,
+            analyticsSource: x,
             analyticsLocation: M,
             body: k,
             context: j,
@@ -144,7 +144,7 @@ function w(e) {
             "smallText",
             "footerClassName",
         ]);
-    let em = null != x,
+    let em = null != L,
         eg = (0, b.N)(),
         eE = (0, E.N)(),
         eb =
@@ -155,8 +155,8 @@ function w(e) {
         eO = {
             analyticsLocation: M,
             analyticsLocations: ey,
-            analyticsSource: L,
-            guildBoostProps: x,
+            analyticsSource: x,
+            guildBoostProps: L,
             type: w,
         },
         ev = i.useRef(eO);
@@ -198,7 +198,7 @@ function w(e) {
             if (em)
                 return (0, r.jsx)(p.Z, {
                     analyticsLocation: M,
-                    guild: x.guild,
+                    guild: L.guild,
                     onClose: W,
                 });
             let e = eo ? A.intl.string(A.t.pj0XBN) : void 0;

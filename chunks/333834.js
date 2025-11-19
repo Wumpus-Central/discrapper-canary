@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(442837),
     d = n(755721),
     p = n(481060),
-    f = n(724757),
-    h = n(100527),
+    h = n(724757),
+    f = n(100527),
     g = n(906732),
     m = n(306680),
     b = n(585483),
@@ -19,14 +19,14 @@ var r = n(54381),
     O = n(804932),
     v = n(389160),
     j = n(787879),
-    x = n(370774),
-    C = n(334426),
+    C = n(370774),
+    x = n(334426),
     E = n(862149),
     S = n(982183),
     I = n(981631),
-    P = n(133948),
+    P = n(946798),
     N = n(388032),
-    Z = n(809946);
+    Z = n(763888);
 function w(e) {
     e.stopPropagation();
 }
@@ -57,7 +57,7 @@ function T(e) {
 }
 let A = [S.KZ.UNREAD, S.KZ.TODAY, S.KZ.YESTERDAY, S.KZ.OLDER];
 function R() {
-    let { analyticsLocations: e } = (0, g.ZP)(h.Z.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, g.ZP)(f.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
         className: Z.emptyStateContainer,
         children: (0, r.jsxs)(p.Kqy, {
@@ -83,7 +83,7 @@ function R() {
                     ],
                 }),
                 (0, r.jsx)(d.zx, {
-                    onClick: () => (0, x.j4)(e),
+                    onClick: () => (0, C.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
                     children: N.intl.string(P.default.klSpfs),
@@ -99,14 +99,14 @@ function D(e) {
             loadMore: l,
             renderLoadingState: a,
             renderMessageGroup: d,
-            scrollerClassName: h,
+            scrollerClassName: f,
             className: g,
             listName: P,
             ignoreGrouping: N = !1,
         } = e,
         D = (0, O.fJ)(),
         L = i.useRef(null),
-        M = (0, f.Z)(P, L),
+        M = (0, h.Z)(P, L),
         { entrypoint: k, notificationCenterVariant: G } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: U,
@@ -187,7 +187,7 @@ function D(e) {
                               : (i[S.KZ.UNREAD][e.channelId] = [e]);
                     }),
                     s().each(t, (e) => {
-                        let t = (0, x.bl)(e);
+                        let t = (0, C.bl)(e);
                         e.kind === S.fL.MENTION
                             ? r[t].push(e)
                             : e.channelId in i[t]
@@ -243,7 +243,7 @@ function D(e) {
         }, [t, n, a, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
         $ = i.isValidElement(J) && J.type === T,
-        ee = (0, C.d)((e) => e.setInboxReadState);
+        ee = (0, x.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
         X || ee(0 === Y.UNREAD.length);
     }, [Y, X, ee]);
@@ -354,7 +354,7 @@ function D(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: o()(Z.messagesPopout, h),
+                                    className: o()(Z.messagesPopout, f),
                                     onScroll: K,
                                     fade: !0,
                                 },

@@ -30,8 +30,8 @@ var i = n(512722),
     P = n(25990),
     D = n(594174),
     w = n(74538),
-    x = n(388032),
-    L = n(436360);
+    L = n(388032),
+    x = n(341217);
 function M(e, t, n) {
     return (
         t in e
@@ -167,7 +167,7 @@ function G() {
                       "color",
                   );
     return (0, r.jsxs)("div", {
-        className: L.sectionsContainer,
+        className: x.sectionsContainer,
         children: [
             (0, r.jsx)(h.Z, {
                 placeholder: F.username,
@@ -180,7 +180,7 @@ function G() {
             (0, r.jsx)(
                 I.Z,
                 {
-                    sectionTitle: x.intl.string(x.t["+T3RI/"]),
+                    sectionTitle: L.intl.string(L.t["+T3RI/"]),
                     errors: $.pronouns,
                     onPronounsChange: S.ID,
                     pendingPronouns: z,
@@ -195,7 +195,7 @@ function G() {
                     onAvatarChange: s.I5,
                     showRemoveAvatarButton: er,
                     errors: $.avatar,
-                    sectionTitle: x.intl.string(x.t.lqaIxI),
+                    sectionTitle: L.intl.string(L.t.lqaIxI),
                     forcedDivider: !0,
                 },
                 "avatar",
@@ -204,7 +204,7 @@ function G() {
                 _.Z,
                 {
                     user: F,
-                    sectionTitle: x.intl.string(x.t["7v0T9P"]),
+                    sectionTitle: L.intl.string(L.t["7v0T9P"]),
                 },
                 "decoration",
             ),
@@ -213,7 +213,7 @@ function G() {
                 y.Z,
                 {
                     user: F,
-                    sectionTitle: x.intl.string(x.t.wR5wOo),
+                    sectionTitle: L.intl.string(L.t.wR5wOo),
                 },
                 "effect",
             ),
@@ -221,7 +221,7 @@ function G() {
             (0, r.jsx)(
                 f.Z,
                 {
-                    sectionTitle: x.intl.string(x.t.NepzEw),
+                    sectionTitle: L.intl.string(L.t.NepzEw),
                     errors: el,
                     onBioChange: (e) => (0, d.xQ)(e, null == V ? void 0 : V.bio),
                     pendingBio: K,

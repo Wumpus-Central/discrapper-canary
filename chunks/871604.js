@@ -82,7 +82,7 @@ function R(e) {
         P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
         D = (0, s.Z)(P),
         w = t.id,
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             if (null != R)
                 if (D) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
@@ -97,7 +97,7 @@ function R(e) {
                         m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
                 } else (0, b.L)(A({ applicationId: R.id }, R));
         }, [R, D, w, null == P ? void 0 : P.guild_id, n]),
-        L = D ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
+        x = D ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
     if (null == R || !(0, d.Eb)(R)) return null;
     let { customInstallUrl: M } = R,
         k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
@@ -130,10 +130,10 @@ function R(e) {
                           {
                               buttonRef: N,
                               action: "PRESS_ADD_APP",
-                              text: L,
+                              text: x,
                               icon: j,
                               onContextMenu: t,
-                              onClick: x,
+                              onClick: L,
                           },
                           n,
                           S,
@@ -146,9 +146,9 @@ function R(e) {
               A(
                   {
                       action: "PRESS_ADD_APP",
-                      text: L,
+                      text: x,
                       icon: j,
-                      onClick: x,
+                      onClick: L,
                       variant: "primary",
                   },
                   S,

@@ -10,7 +10,7 @@ var o = n(512722),
     u = n(598952),
     f = n(596211),
     d = n(388032),
-    m = n(819994);
+    m = n(242429);
 function p(t) {
     let { attachment: e, guildId: n, productId: o } = t;
     return (0, r.jsxs)("li", {

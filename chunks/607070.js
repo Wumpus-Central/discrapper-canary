@@ -162,19 +162,19 @@ function D() {
 function w(e) {
     v.syncForcedColors = e.syncForcedColors;
 }
-function x(e) {
+function L(e) {
     (v = h({}, v)).saturation = e.saturation;
 }
-function L() {
+function x() {
     (v = h({}, v)).desaturateUserColors = !v.desaturateUserColors;
 }
 function M(e) {
     v.roleStyle = e.roleStyle;
 }
-function j(e) {
+function k(e) {
     v.displayNameStylesEnabled = e.enabled;
 }
-function k() {
+function j() {
     (v = h({}, v)).submitButtonEnabled = !v.submitButtonEnabled;
 }
 function U() {
@@ -438,8 +438,8 @@ let $ = new J(s.Z, {
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: R,
     ACCESSIBILITY_COLORBLIND_TOGGLE: P,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: D,
-    ACCESSIBILITY_SET_SATURATION: x,
-    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
+    ACCESSIBILITY_SET_SATURATION: L,
+    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: x,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: Y,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: F,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: G,
@@ -449,11 +449,11 @@ let $ = new J(s.Z, {
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: V,
     ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: H,
     ACCESSIBILITY_SET_ROLE_STYLE: M,
-    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: j,
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: k,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: W,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: K,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: z,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: j,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: U,
     ACCESSIBILITY_SET_CONTRAST: q,
     ACCESSIBILITY_SET_CONTRAST_MODE: X,

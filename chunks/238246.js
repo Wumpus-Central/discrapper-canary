@@ -33,8 +33,8 @@ var r,
     P = n(280049),
     D = n(314910),
     w = n(728285),
-    x = n(22205),
-    L = n(984802),
+    L = n(22205),
+    x = n(984802),
     M = n(746106),
     k = n(892071),
     j = n(358085),
@@ -44,7 +44,7 @@ var r,
     Z = n(928518),
     F = n(981631),
     V = n(501787),
-    H = n(413943);
+    H = n(688474);
 function Y(e, t, n) {
     return (
         t in e
@@ -182,7 +182,7 @@ class X extends (r = a.Component) {
                 withTitleBar: a,
                 isFullScreen: r,
             }),
-            O = n === V.$J ? x.Z : R.Z;
+            O = n === V.$J ? L.Z : R.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 M.w,
@@ -302,7 +302,7 @@ let Q = a.forwardRef(function (e, t) {
         (0, N.Z)(r, !1);
         let { analyticsLocations: l } = (0, I.ZP)(v.Z.POPOUT_WINDOW),
             { clientThemesClassName: u, clientThemesCSS: d } = (0, T.ZP)(),
-            f = (0, L.Ll)(),
+            f = (0, x.Ll)(),
             _ = null != (n = e.themeOverride) ? n : f;
         return null == r
             ? null

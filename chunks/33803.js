@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(779125),
     D = n(890410),
     w = n(464891),
-    x = n(507418),
-    L = n(348238),
+    L = n(507418),
+    x = n(348238),
     M = n(38267),
     k = n(83561),
     j = n(834129),
@@ -39,7 +39,7 @@ var r = n(54381),
     B = n(674563),
     Z = n(590433),
     F = n(388032),
-    V = n(545869);
+    V = n(116618);
 function H(e, t, n) {
     return (
         t in e
@@ -116,15 +116,15 @@ function q(e, t) {
 function X(e, t) {
     let { popouts: n, selected: r, setPopout: a } = (0, M.Z)(e.id, U.d$),
         { usernameProfile: o, avatarProfile: s } = n,
-        l = (0, L.wq)(e.author.id, t.id),
-        c = (0, L.RN)(e.author.id, t.id, e.id),
-        u = (0, L.XO)(e, t, o, a);
+        l = (0, x.wq)(e.author.id, t.id),
+        c = (0, x.RN)(e.author.id, t.id, e.id),
+        u = (0, x.XO)(e, t, o, a);
     return {
         selected: r,
         onContextMenu: l,
         onContextMenuModerateUser: c,
         onClickUsername: u,
-        onClickAvatar: (0, L.R9)(s, a),
+        onClickAvatar: (0, x.R9)(s, a),
         onPopoutRequestClose: i.useCallback(
             () =>
                 a({
@@ -134,7 +134,7 @@ function X(e, t) {
                 }),
             [a],
         ),
-        renderPopout: x.Z,
+        renderPopout: L.Z,
         showAvatarPopout: s,
         showUsernamePopout: o,
     };
@@ -320,7 +320,7 @@ function ea(e) {
         A = (0, c.JA)(null != n ? n : ""),
         { onFocus: C } = A,
         R = z(A, ["onFocus"]),
-        { isFocused: P, handleFocus: x, handleBlur: M } = (0, L.bb)(C),
+        { isFocused: P, handleFocus: L, handleBlur: M } = (0, x.bb)(C),
         U = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         H = (0, d.e7)([T.Z], () => T.Z.can(G.Plq.MANAGE_MESSAGES, l), [l]),
         {
@@ -511,7 +511,7 @@ function ea(e) {
                                 }),
                                 popoutProps: ep,
                                 zalgo: !0,
-                                onFocus: x,
+                                onFocus: L,
                                 onBlur: M,
                                 onClick: eE,
                             }),

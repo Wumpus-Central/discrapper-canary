@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(600164),
     a = n(112560),
-    o = n(265251);
+    o = n(975987);
 function s(e) {
     let { mainText: t, supportingText: n, errorCodeText: s, children: l, size: c } = e;
     return (0, r.jsxs)(i.Z, {

@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(821795),
     y = n(760692),
     O = n(7284),
-    v = n(492333);
+    v = n(713162);
 let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
     T = i.memo(function (e) {
         var t;
@@ -37,11 +37,11 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 displayNameStyles: a,
                 inProfile: T,
             }),
-            { useReducedMotion: w, saturation: x } = (0, d.cj)([p.Z], () => ({
+            { useReducedMotion: w, saturation: L } = (0, d.cj)([p.Z], () => ({
                 useReducedMotion: p.Z.useReducedMotion,
                 saturation: p.Z.desaturateUserColors ? p.Z.saturation : 1,
             })),
-            { includeNonProfile: L } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
+            { includeNonProfile: x } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
             M = (0, E.Y)({ location: "UserNameWithEffects" }),
             k = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
             j = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
@@ -56,13 +56,13 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                                   foreground: o()(e),
                                   background: j === c.m.TOON ? o()("#333") : o()(k),
                                   ratio: U.minContrastRatio,
-                                  saturationFactor: x,
+                                  saturationFactor: L,
                               }).hex(),
                           )
                         : [],
-                [a, M, j, U.minContrastRatio, x, k],
+                [a, M, j, U.minContrastRatio, L, k],
             );
-        if (!M || (!T && !L) || null == a) return n;
+        if (!M || (!T && !x) || null == a) return n;
         let F = (0, y.K)(j, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,

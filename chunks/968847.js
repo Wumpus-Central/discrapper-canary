@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => G,
-    x: () => x,
+    x: () => C,
 }),
     n(388685);
 var r,
@@ -23,20 +23,20 @@ var r,
     O = n(823379),
     v = n(734307),
     j = n(981631),
-    x =
+    C =
         (((i = {}).HIDDEN = "hidden"),
         (i.UNREAD = "unread"),
         (i.MENTIONS = "mentions"),
         (i.VOICE_CHANNELS = "voice-channels"),
         i);
-let C = {
+let x = {
         mode: "hidden",
         mentionCount: 0,
         targetChannelId: null,
     },
     E = {
-        topBar: C,
-        bottomBar: C,
+        topBar: x,
+        bottomBar: x,
     },
     S = {},
     I = {};
@@ -92,7 +92,7 @@ function w(e) {
     }
     let O = 0,
         j = !1,
-        x = 0,
+        C = 0,
         E = !1;
     if (p || d)
         for (let e = b.length - 1; e >= 0; e--) {
@@ -110,16 +110,16 @@ function w(e) {
             (P(t.id) || a().some(t.threadIds, P)) && (null == u && (u = t.id), (E = !0)),
                 (N(t.id) || a().some(t.threadIds, N)) &&
                     (null == c && (c = t.id),
-                    (x += m.ZP.getMentionCount(t.id)),
-                    (x += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
+                    (C += m.ZP.getMentionCount(t.id)),
+                    (C += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
         }
     let w = null,
         T = null,
         A = null != (r = null == f ? void 0 : f.getChannelRecords()) ? r : [];
-    d && x > 0
+    d && C > 0
         ? (w = {
               mode: "mentions",
-              mentionCount: x,
+              mentionCount: C,
               targetChannelId: c,
           })
         : !h && a().some(A, Z)
@@ -152,8 +152,8 @@ function w(e) {
         D = null != w && ("mentions" === w.mode || !R);
     return (
         (S[e] = {
-            topBar: R && null != T ? T : C,
-            bottomBar: D && null != w ? w : C,
+            topBar: R && null != T ? T : x,
+            bottomBar: D && null != w ? w : x,
         }),
         !0
     );

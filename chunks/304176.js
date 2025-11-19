@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(981631),
     y = n(176505),
     O = n(388032),
-    v = n(804309);
+    v = n(115797);
 function I(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ let C = 40,
             w = () => {
                 (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            x = N ? w : D;
+            L = N ? w : D;
         return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)("div", {
@@ -146,7 +146,7 @@ let C = 40,
                             size: "sm",
                             variant: "secondary",
                             text: O.intl.string(O.t["H930+H"]),
-                            onClick: x,
+                            onClick: L,
                             icon: o.Ucv,
                             fullWidth: !0,
                             autoFocus: !0,

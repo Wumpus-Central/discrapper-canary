@@ -13,7 +13,7 @@ var i = n(120356),
     m = n(889369),
     p = n(838324),
     f = n(388032),
-    h = n(628682);
+    h = n(518676);
 function b(e) {
     let { guild: t, scrollToQuestions: n } = e,
         i = (0, a.e7)([m.Z], () => m.Z.editedDefaultChannelIds),

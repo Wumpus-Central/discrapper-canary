@@ -1,24 +1,24 @@
-a.d(e, { i: () => _ });
-var r = a(573736);
-function _(t, e, a = () => {}) {
-    var n, o, i;
-    let E;
+_.d(e, { i: () => r });
+var a = _(573736);
+function r(t, e, _ = () => {}) {
+    var n, o, E;
+    let i;
     try {
-        E = t();
+        i = t();
     } catch (t) {
-        throw (e(t), a(), t);
+        throw (e(t), _(), t);
     }
     return (
-        (n = E),
+        (n = i),
         (o = e),
-        (i = a),
-        (0, r.J8)(n)
+        (E = _),
+        (0, a.J8)(n)
             ? n.then(
-                  (t) => (i(), t),
+                  (t) => (E(), t),
                   (t) => {
-                      throw (o(t), i(), t);
+                      throw (o(t), E(), t);
                   },
               )
-            : (i(), n)
+            : (E(), n)
     );
 }

@@ -1,15 +1,15 @@
-a.d(e, { V: () => _ });
-var r = a(452896);
-function _(t, e, a = [e], n = "npm") {
+_.d(e, { V: () => r });
+var a = _(452896);
+function r(t, e, _ = [e], n = "npm") {
     let o = t._metadata || {};
     o.sdk ||
         (o.sdk = {
             name: `sentry.javascript.${e}`,
-            packages: a.map((t) => ({
+            packages: _.map((t) => ({
                 name: `${n}:@sentry/${t}`,
-                version: r.J,
+                version: a.J,
             })),
-            version: r.J,
+            version: a.J,
         }),
         (t._metadata = o);
 }

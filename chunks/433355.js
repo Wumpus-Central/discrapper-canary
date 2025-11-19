@@ -1,5 +1,5 @@
 n.d(t, {
-    D5: () => L,
+    D5: () => x,
     ZP: () => J,
     uZ: () => S,
 });
@@ -81,7 +81,7 @@ let S = "message_requests",
     P = {},
     D = !1,
     w = null;
-function x(e) {
+function L(e) {
     if (null == e) return null;
     if ((0, b.AB)(e)) {
         let t = m.Z.getGuildId();
@@ -89,19 +89,19 @@ function x(e) {
     }
     return e;
 }
-function L(e) {
+function x(e) {
     return [c.tI.VIEW_CHANNEL, c.tI.VIEW_THREAD, c.tI.VIEW_MESSAGE_REQUEST, c.tI.VIEW_MOD_REPORT].includes(e.type);
 }
 function M(e) {
     let t = !1;
     D && ((D = !1), (t = !0));
-    let n = x(h.Z.getChannelId());
+    let n = L(h.Z.getChannelId());
     return null != n && n in R && (delete R[n], (t = !0)), t && e ? e : !e;
 }
-function j() {
+function k() {
     D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), C && (C = M(C)), (A = M(A));
 }
-function k() {
+function j() {
     A && (A = M(A)), (C = M(C));
 }
 function U() {
@@ -110,7 +110,7 @@ function U() {
 function G(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     D = !1;
-    let a = x(r);
+    let a = L(r);
     return (
         null != a &&
         ((P[n] = {
@@ -129,7 +129,7 @@ function B(e) {
 function Z(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
     D = !1;
-    let a = x(n);
+    let a = L(n);
     if (null == a) return !1;
     let o = {
         type: t,
@@ -141,7 +141,7 @@ function Z(e) {
 function F(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
     D = !1;
-    let i = x(t);
+    let i = L(t);
     null != i &&
         (R[i] = {
             type: c.tI.CREATE_THREAD,
@@ -192,7 +192,7 @@ function W() {
 }
 function K(e) {
     let { baseChannelId: t } = e,
-        n = x(t);
+        n = L(t);
     null != n && delete R[n];
 }
 function z() {
@@ -229,7 +229,7 @@ class Q extends (r = a.ZP.PersistedStore) {
     }
     getSection(e, t) {
         if (D) return E.ULH.SEARCH;
-        let n = x(e);
+        let n = L(e);
         return null != n && null != R[n]
             ? E.ULH.SIDEBAR_CHAT
             : t && N
@@ -241,14 +241,14 @@ class Q extends (r = a.ZP.PersistedStore) {
                   : E.ULH.NONE;
     }
     getSidebarState(e) {
-        let t = x(e);
+        let t = L(e);
         return null == t ? void 0 : R[t];
     }
     getGuildSidebarState(e) {
         return null == e ? void 0 : P[e];
     }
     getCurrentSidebarChannelId(e) {
-        let t = x(e);
+        let t = L(e);
         if (null == t || D) return null;
         let n = R[t];
         return null == n
@@ -259,7 +259,7 @@ class Q extends (r = a.ZP.PersistedStore) {
     }
     getCurrentSidebarMessageId(e) {
         var t;
-        let n = x(e);
+        let n = L(e);
         if (null == n || D) return null;
         let r = R[n];
         return null == r
@@ -277,9 +277,9 @@ class Q extends (r = a.ZP.PersistedStore) {
 O(Q, "displayName", "ChannelSectionStore"), O(Q, "persistKey", "ChannelSectionStore2");
 let J = new Q(o.Z, {
     SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: X,
-    CHANNEL_TOGGLE_MEMBERS_SECTION: j,
+    CHANNEL_TOGGLE_MEMBERS_SECTION: k,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: U,
-    CHANNEL_TOGGLE_SUMMARIES_SECTION: k,
+    CHANNEL_TOGGLE_SUMMARIES_SECTION: j,
     SIDEBAR_VIEW_CHANNEL: Z,
     SIDEBAR_VIEW_GUILD: G,
     SIDEBAR_CREATE_THREAD: F,

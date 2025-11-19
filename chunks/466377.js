@@ -3,8 +3,8 @@ n.d(t, {
     Y0: () => P,
     YA: () => k,
     fM: () => R,
-    hz: () => x,
-    mz: () => L,
+    hz: () => L,
+    mz: () => x,
     ol: () => M,
     xB: () => D,
 });
@@ -25,7 +25,7 @@ var r = n(54381),
     g = n(602091),
     E = n(231338),
     b = n(388032),
-    y = n(818033);
+    y = n(822054);
 function O(e, t, n) {
     return (
         t in e
@@ -159,8 +159,8 @@ function P(e) {
             },
             "animate-always",
         ),
-        x = i.useRef(null),
-        L = null != R["aria-label"],
+        L = i.useRef(null),
+        x = null != R["aria-label"],
         M = null != R["aria-labelledby"],
         k = i.useId(),
         j = null != (t = R["aria-labelledby"]) ? t : k,
@@ -182,7 +182,7 @@ function P(e) {
                         role: f,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        "aria-labelledby": L ? void 0 : U.headerId,
+                        "aria-labelledby": x ? void 0 : U.headerId,
                     },
                     R,
                 ),
@@ -192,10 +192,10 @@ function P(e) {
                             [y.fullscreenOnMobile]: m,
                             [y.rootWithShadow]: !b,
                         }),
-                        ref: x,
+                        ref: L,
                         style: w,
                         children: (0, r.jsx)(d.JcV, {
-                            containerRef: x,
+                            containerRef: L,
                             children: a,
                         }),
                     }),
@@ -229,7 +229,7 @@ function w(e) {
             return d.h21;
     }
 }
-function x(e) {
+function L(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = S(e, ["className", "children", "scrollerRef", "scrollbarType"]),
         l = w(a);
@@ -248,7 +248,7 @@ function x(e) {
         ),
     );
 }
-function L(e) {
+function x(e) {
     var t, n, i, a, s;
     return (0, r.jsx)(m.Z, {
         grow: 0,

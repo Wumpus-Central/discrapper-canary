@@ -1,5 +1,5 @@
 n.d(t, { Z: () => o }), n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(81063);
 let a = ["embedded_cover", "embedded_background"];
 function o(e) {

@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(481060),
     s = n(686546),
     l = n(601964),
-    c = n(519252);
+    c = n(970996);
 function u(e) {
     let { guild: t, size: n } = e,
         i = (0, l.EB)(t, n, !1, !0),

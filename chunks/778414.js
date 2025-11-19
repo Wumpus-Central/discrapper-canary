@@ -36,7 +36,7 @@ var r = n(54381),
     N = n(661462),
     A = n(795990),
     Z = n(388032),
-    R = n(830202);
+    R = n(479283);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ function B() {
         ],
     });
 }
-function U(e) {
+function F(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
@@ -128,7 +128,7 @@ function U(e) {
               },
           });
 }
-function F(e) {
+function U(e) {
     let { user: t, guildId: n, channelId: a } = e,
         l = (0, P.Z)(t.id),
         c = (0, o.e7)([m.default], () => m.default.getId() === t.id),
@@ -159,7 +159,7 @@ function F(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 c && s && (0, r.jsx)(B, {}),
-                c && (0, r.jsx)(U, { user: t }),
+                c && (0, r.jsx)(F, { user: t }),
                 l.map((e, i) =>
                     (0, r.jsx)(
                         G,
@@ -192,6 +192,6 @@ function W(e) {
         scrollerRef: a,
         className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(F, L({ user: t }, n))],
+        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, L({ user: t }, n))],
     });
 }

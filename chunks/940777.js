@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(493683),
     d = n(239091),
     p = n(317381),
-    f = n(16609),
-    h = n(276952),
+    h = n(16609),
+    f = n(276952),
     g = n(682662),
     m = n(674552),
     b = n(593364),
@@ -19,15 +19,15 @@ var r = n(54381),
     O = n(592125),
     v = n(944486),
     j = n(979651),
-    x = n(709054),
-    C = n(853856),
+    C = n(709054),
+    x = n(853856),
     E = n(593214),
     S = n(919755),
     I = n(110977),
     P = n(603274),
     N = n(981631),
     Z = n(388032),
-    w = n(499951);
+    w = n(492750);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,9 +65,9 @@ function R() {
     let l = (0, a.Ie)("favorites"),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, E.up)(),
         [L, M] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([C.Z], () => ({
-            favoriteChannels: C.Z.getFavoriteChannels(),
-            favoriteServerMuted: C.Z.favoriteServerMuted,
+        { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([x.Z], () => ({
+            favoriteChannels: x.Z.getFavoriteChannels(),
+            favoriteServerMuted: x.Z.favoriteServerMuted,
         })),
         U = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
         B = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
@@ -84,26 +84,26 @@ function R() {
                 i = (0, s.e7)([y.Z], () => y.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([p.ZP], () =>
-                    x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
+                    C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
                 ),
                 a = (0, s.e7)([p.ZP], () =>
                     Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            r = (0, f.p)(n);
+                            r = (0, h.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
                 c = o.length > 0,
                 u = !1,
                 d = !1,
-                h = !1,
+                f = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (h = r), (g = a)) : ((h = i), (g = c)),
+                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
-                    screenshare: h,
+                    screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g,
@@ -116,7 +116,7 @@ function R() {
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(f.Z, {
                 selected: F,
                 hovered: L,
                 unread: H && !k,

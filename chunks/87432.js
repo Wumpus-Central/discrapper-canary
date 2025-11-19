@@ -2,32 +2,32 @@ n.d(e, {
     Z: () =>
         function t(e, n, r) {
             var s, a, o, c, E, S;
-            let d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+            let T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (!n.has(e.key)) return null;
             if (!(0, i.Lk)(e))
                 return (
                     r.register(
                         e,
-                        null == (c = d.panel) ? void 0 : c.key,
-                        null == (E = d.category) ? void 0 : E.key,
-                        null == (S = d.accordion) ? void 0 : S.key,
+                        null == (c = T.panel) ? void 0 : c.key,
+                        null == (E = T.category) ? void 0 : E.key,
+                        null == (S = T.accordion) ? void 0 : S.key,
                     ),
                     e
                 );
-            let T = d;
-            e.type === i.Jq.SIDEBAR_ITEM && (T = u(l({}, d), { panel: e.layout[0] })),
-                e.type === i.Jq.PANEL && (T = u(l({}, d), { panel: e })),
-                e.type === i.Jq.CATEGORY && (T = u(l({}, d), { category: e })),
-                e.type === i.Jq.ACCORDION && (T = u(l({}, d), { accordion: e }));
-            let I = e.layout.map((e) => t(e, n, r, T)).filter((t) => null != t);
+            let d = T;
+            e.type === i.Jq.SIDEBAR_ITEM && (d = u(l({}, T), { panel: e.layout[0] })),
+                e.type === i.Jq.PANEL && (d = u(l({}, T), { panel: e })),
+                e.type === i.Jq.CATEGORY && (d = u(l({}, T), { category: e })),
+                e.type === i.Jq.ACCORDION && (d = u(l({}, T), { accordion: e }));
+            let I = e.layout.map((e) => t(e, n, r, d)).filter((t) => null != t);
             if (0 === I.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
             let O = u(l({}, e), { layout: I });
             return (
                 r.register(
                     O,
-                    null == (s = T.panel) ? void 0 : s.key,
-                    null == (a = T.category) ? void 0 : a.key,
-                    null == (o = T.accordion) ? void 0 : o.key,
+                    null == (s = d.panel) ? void 0 : s.key,
+                    null == (a = d.category) ? void 0 : a.key,
+                    null == (o = d.accordion) ? void 0 : o.key,
                 ),
                 O
             );

@@ -26,11 +26,11 @@ function E(e, t, n) {
         { direction: C } = (0, h.j)(),
         { onAction: N, linkBehavior: R, keyboardNavigationBehavior: P, shouldSelectOnPressUp: D } = r.Co.get(t),
         w = (0, i.mp)(),
-        x = (0, f.useRef)(null),
-        L = () => {
+        L = (0, f.useRef)(null),
+        x = () => {
             var e;
             null === n.current ||
-                ((null == x.current || S.key === x.current) &&
+                ((null == L.current || S.key === L.current) &&
                     (null == (e = n.current) ? void 0 : e.contains(document.activeElement))) ||
                 (0, u.e)(n.current);
         },
@@ -67,7 +67,7 @@ function E(e, t, n) {
                 N || (null == (E = S.props) ? void 0 : E.onAction)
                     ? (0, a.t)(null == (y = S.props) ? void 0 : y.onAction, N ? () => N(S.key) : void 0)
                     : void 0,
-            focus: L,
+            focus: x,
             linkBehavior: R,
         }),
         B = (e) => {
@@ -136,7 +136,7 @@ function E(e, t, n) {
             }
         },
         Z = (e) => {
-            if (((x.current = S.key), e.target !== n.current)) {
+            if (((L.current = S.key), e.target !== n.current)) {
                 (0, _.E)() || t.selectionManager.setFocusedKey(S.key);
                 return;
             }

@@ -54,17 +54,17 @@ let P = (e) => [
         },
         throttleMs: 100,
     },
-    D = {
+    k = {
         searchType: y.S.FUZZY,
         sortType: y.E.JARO_WINKLER,
         searchStringGenerator: P,
         throttleMs: 100,
     },
-    k = r.memo(function (e) {
+    D = r.memo(function (e) {
         let { channel: t, query: n } = e,
             [l] = (0, a.e7)([C.Z], () => [C.Z.getVoiceStatesForChannel(t.id), C.Z.getVoiceStateVersion()], [t.id], N.Q),
             [o, u] = r.useState([]);
-        (0, O.BO)(n, Object.values(l), u, D);
+        (0, O.BO)(n, Object.values(l), u, k);
         let d = (0, a.Wu)(
                 [C.Z, I.default, v.Z, x.Z],
                 () =>
@@ -201,7 +201,7 @@ let P = (e) => [
                       }),
                       (0, i.jsx)("div", {
                           className: T.channelItemAvatars,
-                          children: (0, i.jsx)(k, {
+                          children: (0, i.jsx)(D, {
                               channel: m,
                               currentVoiceChannel: l,
                               query: f,

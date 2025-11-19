@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(953529);
+n.d(t, { Z: () => L }), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -23,8 +23,8 @@ var r = n(54381),
     T = n(783685),
     S = n(981631),
     A = n(388032),
-    C = n(208733),
-    N = n(430864);
+    C = n(451201),
+    N = n(602009);
 function R(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function P(e) {
 }
 let D = 2,
     w = 2000;
-function x(e) {
+function L(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         _ = i.useMemo(() => {
             var e;
@@ -122,11 +122,11 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(L, { application: n }),
+            (0, r.jsx)(x, { application: n }),
         ],
     });
 }
-function L(e) {
+function x(e) {
     let { application: t } = e,
         n = (0, y.Cb)(t),
         i = (0, y.Hu)(t);

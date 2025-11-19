@@ -29,17 +29,17 @@ var r = n(54381),
     C = n(539086),
     N = n(292352),
     R = n(981631),
-    P = n(597754),
+    P = n(313570),
     D = n(388032),
-    w = n(166387);
-let x = {
+    w = n(799114);
+let L = {
         [N.dG.REQUESTS]: S.Z,
         [N.dG.ACTIVITY]: T.Z,
         [N.dG.SETTINGS]: A.Z,
         [N.dG.CONTENT_AND_SOCIAL]: v.Z,
         [N.dG.DATA_AND_PRIVACY]: I.Z,
     },
-    L = {
+    x = {
         [N.dG.REQUESTS]: S.Z,
         [N.dG.ACTIVITY]: T.Z,
         [N.dG.CONTENT_AND_SOCIAL]: v.Z,
@@ -167,7 +167,7 @@ function U() {
             i(e);
         };
     if (a) return null;
-    let s = x[n];
+    let s = L[n];
     return (0, r.jsxs)("main", {
         className: w.container,
         "aria-label": D.intl.string(P.default.RZqaJn),
@@ -212,7 +212,7 @@ function G() {
     };
     if (I) return null;
     let S = O !== N.dG.SETTINGS ? O : N.dG.ACTIVITY,
-        A = L[S];
+        A = x[S];
     return (0, r.jsx)(f.Gt, {
         value: e,
         children: (0, r.jsxs)("main", {

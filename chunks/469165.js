@@ -28,7 +28,7 @@ var r = n(54381),
     v = n(474936),
     I = n(981631),
     T = n(388032),
-    S = n(737963),
+    S = n(927143),
     A = n(180964),
     C = n(730440);
 function N(e, t, n) {
@@ -107,8 +107,8 @@ let w = {
             asset: A.Z,
         },
     },
-    x = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? w[e].logos.dark : w[e].logos.light),
-    L = (e) => {
+    L = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? w[e].logos.dark : w[e].logos.light),
+    x = (e) => {
         let { recurrence: t } = e,
             n = (0, r.jsx)(a.sV5, { color: s.TVs.colors.BUTTON_POSITIVE_BACKGROUND }),
             o = (0, r.jsx)(a.hU, {
@@ -208,7 +208,7 @@ let w = {
         i.useEffect(() => {
             c([t.sort((e, t) => (t.startDate > e.startDate ? 1 : -1))[0]]);
         }, [t]);
-        let p = x(t[0].partnerId),
+        let p = L(t[0].partnerId),
             m = (0, r.jsx)(s.Eep, {
                 src: t[0].asset,
                 className: S.promoCardAsset,
@@ -295,7 +295,7 @@ let w = {
                                         }),
                                     ],
                                 }),
-                                null != e.code && (0, r.jsx)(L, { recurrence: e }),
+                                null != e.code && (0, r.jsx)(x, { recurrence: e }),
                             ],
                         },
                         e.id,

@@ -14,8 +14,8 @@ var r = n(54381),
     m = n(394606),
     b = n(853072),
     h = n(388032),
-    y = n(932366),
-    O = n(133458);
+    y = n(279280),
+    O = n(436136);
 function v(e) {
     let { index: t, widgetType: n, game: a, coverImageUrl: l, gameName: o, children: c } = e,
         { registerDragHandleRef: f, manageFocusOnReorder: g } = (0, d.C)(),

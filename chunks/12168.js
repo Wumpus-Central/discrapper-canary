@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => x,
+    Z: () => L,
     u: () => D,
 }),
     n(388685);
@@ -24,7 +24,7 @@ var r = n(54381),
     O = n(354459),
     v = n(185923),
     I = n(295907),
-    T = n(339051);
+    T = n(378158);
 function S(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ function w(e) {
         ],
     });
 }
-function x(e) {
+function L(e) {
     let {
             channel: t,
             title: n,
@@ -150,8 +150,8 @@ function x(e) {
             analyticsOverride: S,
             ref: C,
         } = e,
-        x = (0, f.Dt)(),
-        [L, M] = i.useState(!1),
+        L = (0, f.Dt)(),
+        [x, M] = i.useState(!1),
         k = (0, p.wC)(t.guild_id),
         j = (0, s.uniqBy)([...k, ...P], "name")
             .filter(
@@ -173,17 +173,17 @@ function x(e) {
             null != t && d(t), U(!n), n && E.kJ.setSearchPlaceholder(null);
         },
         B = (e) => {
-            null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? U(!0) : U(!L));
+            null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? U(!0) : U(!x));
         };
     return (0, r.jsxs)(u.VqE, {
-        "aria-labelledby": x,
+        "aria-labelledby": L,
         ref: C,
         children: [
             (0, r.jsx)(u.y5t, {
                 forceLevel: 2,
                 children: (0, r.jsx)(u.nn4, {
                     children: (0, r.jsx)(u.H, {
-                        id: x,
+                        id: L,
                         children: n,
                     }),
                 }),
@@ -194,17 +194,17 @@ function x(e) {
                     (0, r.jsx)(m.Z, {
                         analyticsOverride: S,
                         channel: t,
-                        className: o()(T.animatedPicker, { [T.animatedPickerTall]: L }),
-                        headerClassName: o()(T.emojiPickerHeader, { [T.emojiPickerHeaderExpanded]: L }),
+                        className: o()(T.animatedPicker, { [T.animatedPickerTall]: x }),
+                        headerClassName: o()(T.emojiPickerHeader, { [T.emojiPickerHeaderExpanded]: x }),
                         closePopout: a,
-                        onSelectEmoji: L ? G : () => {},
-                        shouldHidePickerActions: !L,
+                        onSelectEmoji: x ? G : () => {},
+                        shouldHidePickerActions: !x,
                         wrapper: "div",
                         pickerIntention: R,
                         searchProps: N(A({}, g), {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == g ? void 0 : g.accessory,
-                                isEmojiPickerExpanded: L,
+                                isEmojiPickerExpanded: x,
                                 onSetExpanded: U,
                                 onFocus: l,
                             }),

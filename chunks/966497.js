@@ -1,33 +1,33 @@
-a.d(e, {
+_.d(e, {
     Z: () => o,
-    w: () => i,
+    w: () => E,
 });
-var r = a(622916),
-    _ = a(255768),
-    n = a(696486);
+var a = _(622916),
+    r = _(255768),
+    n = _(696486);
 function o(t) {
-    if (!_.X) return;
-    let { description: e = "< unknown name >", op: a = "< unknown op >", parent_span_id: o } = (0, n.XU)(t),
-        { spanId: i } = t.spanContext(),
-        E = (0, n.Tt)(t),
+    if (!r.X) return;
+    let { description: e = "< unknown name >", op: _ = "< unknown op >", parent_span_id: o } = (0, n.XU)(t),
+        { spanId: E } = t.spanContext(),
+        i = (0, n.Tt)(t),
         c = (0, n.Gx)(t),
         s = c === t,
-        l = `[Tracing] Starting ${E ? "sampled" : "unsampled"} ${s ? "root " : ""}span`,
-        I = [`op: ${a}`, `name: ${e}`, `ID: ${i}`];
+        l = `[Tracing] Starting ${i ? "sampled" : "unsampled"} ${s ? "root " : ""}span`,
+        I = [`op: ${_}`, `name: ${e}`, `ID: ${E}`];
     if ((o && I.push(`parent ID: ${o}`), !s)) {
         let { op: t, description: e } = (0, n.XU)(c);
         I.push(`root ID: ${c.spanContext().spanId}`),
             t && I.push(`root op: ${t}`),
             e && I.push(`root description: ${e}`);
     }
-    r.kg.log(`${l}
+    a.kg.log(`${l}
   ${I.join("\n  ")}`);
 }
-function i(t) {
-    if (!_.X) return;
-    let { description: e = "< unknown name >", op: a = "< unknown op >" } = (0, n.XU)(t),
+function E(t) {
+    if (!r.X) return;
+    let { description: e = "< unknown name >", op: _ = "< unknown op >" } = (0, n.XU)(t),
         { spanId: o } = t.spanContext(),
-        i = (0, n.Gx)(t) === t,
-        E = `[Tracing] Finishing "${a}" ${i ? "root " : ""}span "${e}" with ID ${o}`;
-    r.kg.log(E);
+        E = (0, n.Gx)(t) === t,
+        i = `[Tracing] Finishing "${_}" ${E ? "root " : ""}span "${e}" with ID ${o}`;
+    a.kg.log(i);
 }

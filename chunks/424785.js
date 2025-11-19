@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(481060),
     d = n(475179),
     p = n(239091),
-    f = n(146773),
-    h = n(888651),
+    h = n(146773),
+    f = n(888651),
     g = n(201895),
     m = n(305325),
     b = n(281956),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(359110),
     v = n(922482),
     j = n(431328),
-    x = n(501655),
-    C = n(427679),
+    C = n(501655),
+    x = n(427679),
     E = n(368442),
     S = n(201469),
     I = n(680089),
@@ -39,8 +39,8 @@ var r = n(54381),
     U = n(981631),
     B = n(647086),
     F = n(388032),
-    V = n(55940),
-    H = n(556295);
+    V = n(33082),
+    H = n(783499);
 function z(e, t, n) {
     return (
         t in e
@@ -131,8 +131,8 @@ class Y extends L.ZP {
                 connectUserDropTarget: s,
                 connectDragPreview: d,
                 canReorderChannel: p,
-                canMoveMembers: f,
-                stageInstance: h,
+                canMoveMembers: h,
+                stageInstance: f,
                 isSubscriptionGated: m,
                 needSubscriptionToAccess: b,
                 unread: _,
@@ -141,8 +141,8 @@ class Y extends L.ZP {
                 isFavoriteSuggestion: v,
             } = this.props,
             { shouldShowGuildVerificationPopout: j } = this.state,
-            x = this.getVoiceStatesCount(),
-            C = (0, r.jsxs)("li", {
+            C = this.getVoiceStatesCount(),
+            x = (0, r.jsxs)("li", {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
@@ -159,7 +159,7 @@ class Y extends L.ZP {
                                 children: (0, r.jsxs)(k.ZP, {
                                     ref: this.channelItemRef,
                                     className: V.iconVisibility,
-                                    iconClassName: o()({ [H.iconLive]: null != h }),
+                                    iconClassName: o()({ [H.iconLive]: null != f }),
                                     channel: e,
                                     selected: !v && t,
                                     connected: n,
@@ -180,7 +180,7 @@ class Y extends L.ZP {
                                         channel: e,
                                         unread: _,
                                         mentionCount: O,
-                                        userCount: x,
+                                        userCount: C,
                                         isSubscriptionGated: m,
                                         needSubscriptionToAccess: b,
                                     }),
@@ -198,7 +198,7 @@ class Y extends L.ZP {
                     this.renderVoiceUsers(),
                 ],
             });
-        return f && (C = s(C)), p && (C = l(a(C))), C;
+        return h && (x = s(x)), p && (x = l(a(x))), x;
     }
     constructor(...e) {
         super(...e),
@@ -282,7 +282,7 @@ class Y extends L.ZP {
             });
     }
 }
-let q = (0, f.B)((0, h.Q)(Y));
+let q = (0, h.B)((0, f.Q)(Y));
 function X(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: o, voiceStates: s } = e,
         c = (0, a.cj)([T.ZP], () => ({
@@ -306,9 +306,9 @@ function X(e) {
             };
         }),
         p = (0, a.e7)([I.Z], () => I.Z.isCollapsed(n.parent_id)),
-        f = (0, S.ZP)(n.id),
-        h = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, j.Rk)(n.id, x.pV.AUDIENCE),
+        h = (0, S.ZP)(n.id),
+        f = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]),
+        g = (0, j.Rk)(n.id, C.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: b } = (0, _.Z)(n.id),
         y = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         O = (0, E.xJ)(n.id),
@@ -328,9 +328,9 @@ function X(e) {
             W(
                 {
                     categoryCollapsed: p,
-                    connectAction: f,
+                    connectAction: h,
                     numAudience: g,
-                    stageInstance: h,
+                    stageInstance: f,
                     isSubscriptionGated: m,
                     needSubscriptionToAccess: b,
                 },

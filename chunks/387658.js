@@ -28,9 +28,9 @@ var r = n(54381),
     R = n(981631),
     P = n(689079),
     D = n(388032),
-    w = n(202874),
-    x = n(698342);
-let L = 5,
+    w = n(387206),
+    L = n(613321);
+let x = 5,
     M = "placeholder",
     k = [, , , , ,].fill(M);
 function j(e) {
@@ -61,7 +61,7 @@ function j(e) {
         h = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: x.commandTextContainer,
+                    className: L.commandTextContainer,
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: "text-sm/semibold",
@@ -79,11 +79,11 @@ function j(e) {
             [o.displayName, p],
         );
     return (0, r.jsxs)(u.P3F, {
-        className: x.command,
+        className: L.command,
         onClick: d,
         children: [
             (0, r.jsx)(u.Rny, {
-                className: x.commandFocusBlock,
+                className: L.commandFocusBlock,
                 children: h,
             }),
             f
@@ -114,7 +114,7 @@ function U() {
         a = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: x.commandTextContainerPlaceholder,
+                    className: L.commandTextContainerPlaceholder,
                     children: [
                         (0, r.jsx)("div", {
                             className: w.textPlaceholder,
@@ -143,7 +143,7 @@ function U() {
             [t, n],
         );
     return (0, r.jsx)("div", {
-        className: o()(x.command, w.loadingAnimation, { [w.noAnimation]: e }),
+        className: o()(L.command, w.loadingAnimation, { [w.noAnimation]: e }),
         children: a,
     });
 }
@@ -202,7 +202,7 @@ function B(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: x.commandListHeader,
+                      className: L.commandListHeader,
                       children: [
                           (0, r.jsx)(u.Heading, {
                               variant: "heading-sm/semibold",
@@ -212,7 +212,7 @@ function B(e) {
                       ],
                   }),
                   (0, r.jsx)("ul", {
-                      className: x.commandContainer,
+                      className: L.commandContainer,
                       "aria-label": a,
                       children: n.map((e, n) =>
                           e === M
@@ -269,14 +269,14 @@ function Z(e) {
     let y = (0, T.Z)({
         context: n,
         commands: E,
-        limit: L,
+        limit: x,
     });
     return (i.useEffect(() => {
         l(E.length > 0);
     }, [l, E]),
     _ || 0 !== E.length)
         ? (0, r.jsxs)("ul", {
-              className: x.contentContainer,
+              className: L.contentContainer,
               children: [
                   (0, r.jsx)(B, {
                       context: n,

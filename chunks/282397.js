@@ -99,7 +99,7 @@ function A(e) {
 }
 function C(e) {
     let { nonce: t } = e;
-    j(t);
+    k(t);
 }
 function N(e) {
     let { message: t } = e;
@@ -108,7 +108,7 @@ function N(e) {
         var n;
         let e = y[t.nonce];
         if (null == e) return !1;
-        null == (n = e.onSuccess) || n.call(e), k(t.nonce);
+        null == (n = e.onSuccess) || n.call(e), j(t.nonce);
     }
 }
 function R(e) {
@@ -119,7 +119,7 @@ function R(e) {
     if (null == s) return !1;
     null == (t = s.onFailure) || t.call(s, r, i, a, o),
         s.data.interactionType === c.B8.APPLICATION_COMMAND
-            ? k(n)
+            ? j(n)
             : (y[n] = g(h({}, s), {
                   state: _.F.FAILED,
                   errorCode: r,
@@ -129,20 +129,20 @@ function R(e) {
 function P(e) {
     let { channelId: t } = e;
     if (null == d.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && k(e);
+    for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && j(e);
 }
 function D(e) {
     let { nonce: t } = e;
-    j(t);
+    k(t);
 }
 function w(e) {
     let { application: t, nonce: n } = e;
-    (i = t.id), j(n);
+    (i = t.id), k(n);
 }
-function x() {
+function L() {
     (r = void 0), (i = void 0);
 }
-function L(e) {
+function x(e) {
     let { modalKey: t } = e;
     r = t;
 }
@@ -158,16 +158,16 @@ function M(e) {
     null == s ? ((t = v[o.nonce]), (n = y[o.nonce])) : ((t = s.messageId), (n = s.interaction)),
         null != n &&
             null != t &&
-            (k(o.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
+            (j(o.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
-function j(e) {
+function k(e) {
     var t;
     if (null == e) return !1;
     let n = y[e];
     if (null == n) return !1;
-    null == (t = n.onSuccess) || t.call(n), k(e);
+    null == (t = n.onSuccess) || t.call(n), j(e);
 }
-function k(e) {
+function j(e) {
     if (null != I[e]) return void delete I[e];
     let t = y[e];
     delete y[e];
@@ -218,8 +218,8 @@ let G = new U(s.Z, {
     MESSAGE_CREATE: N,
     CHANNEL_SELECT: P,
     INTERACTION_IFRAME_MODAL_CREATE: w,
-    INTERACTION_IFRAME_MODAL_CLOSE: x,
-    INTERACTION_IFRAME_MODAL_KEY_CREATE: L,
+    INTERACTION_IFRAME_MODAL_CLOSE: L,
+    INTERACTION_IFRAME_MODAL_KEY_CREATE: x,
     INTERACTION_MODAL_CREATE: D,
     EMBEDDED_ACTIVITY_UPDATE_V2: M,
 });

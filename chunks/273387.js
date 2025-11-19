@@ -142,21 +142,21 @@ let y = new _(l.Z, {
         var t, n, r, i, l, o, u, p, f;
         let { channelId: b, entry: _ } = e,
             y = (0, a.MQ)(_),
-            x = null == (t = h[b]) ? void 0 : t[y.guildId];
-        h[b] = d(c({}, h[b]), { [y.guildId]: c({}, x, y) });
-        let O = null != (i = null == x ? void 0 : x.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
-            j = null != (l = y.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
-            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[O]);
-        null != x && O !== j && delete v[y.guildId],
+            O = null == (t = h[b]) ? void 0 : t[y.guildId];
+        h[b] = d(c({}, h[b]), { [y.guildId]: c({}, O, y) });
+        let j = null != (i = null == O ? void 0 : O.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
+            x = null != (l = y.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
+            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[j]);
+        null != O && j !== x && delete v[y.guildId],
             (g[b] = d(c({}, g[b]), {
-                [O]: v,
-                [j]: d(c({}, null == (r = g[b]) ? void 0 : r[j]), { [y.guildId]: c({}, x, y) }),
+                [j]: v,
+                [x]: d(c({}, null == (r = g[b]) ? void 0 : r[x]), { [y.guildId]: c({}, O, y) }),
             })),
-            j !== O &&
+            x !== j &&
                 null != m[b] &&
                 (m[b] = d(c({}, m[b]), {
-                    [O]: (null == (o = m[b]) ? void 0 : o[O]) > 0 ? (null == (u = m[b]) ? void 0 : u[O]) - 1 : 0,
-                    [j]: (null != (f = null == (p = m[b]) ? void 0 : p[j]) ? f : 0) + 1,
+                    [j]: (null == (o = m[b]) ? void 0 : o[j]) > 0 ? (null == (u = m[b]) ? void 0 : u[j]) - 1 : 0,
+                    [x]: (null != (f = null == (p = m[b]) ? void 0 : p[x]) ? f : 0) + 1,
                 }));
     },
     GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {

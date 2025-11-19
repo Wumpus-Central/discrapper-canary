@@ -15,8 +15,8 @@ var r = n(54381),
     u = n(605236),
     d = n(243778),
     p = n(645041),
-    f = n(430824),
-    h = n(823379),
+    h = n(430824),
+    f = n(823379),
     g = n(267642),
     m = n(755458),
     b = n(60482),
@@ -25,8 +25,8 @@ var r = n(54381),
     O = n(905128),
     v = n(326660),
     j = n(158638),
-    x = n(10765),
-    C = n(317169),
+    C = n(10765),
+    x = n(317169),
     E = n(19394),
     S = n(385902),
     I = n(535396),
@@ -36,11 +36,11 @@ function Z(e) {
     let t = (0, o.e7)([y.Z], () => y.Z.getNotificationStateForGuild(e), [e]),
         n = (0, o.e7)([O.Z], () => O.Z.getStateForGuild(e)),
         { trailing: _, showUnread: N } = (function (e, t, n) {
-            let l = (0, C.Z)(e).available,
+            let l = (0, x.Z)(e).available,
                 { shouldShow: d } = (0, S._)(e, "useGuildPowerupsChannelListIndicators"),
                 p = (0, u.OA)(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
-                f = d && !p,
-                h = (0, o.e7)([b.Z], () => b.Z.getStateForGuild(e));
+                h = d && !p,
+                f = (0, o.e7)([b.Z], () => b.Z.getStateForGuild(e));
             return i.useMemo(() => {
                 var e, i, o, a;
                 if (null == t)
@@ -51,12 +51,12 @@ function Z(e) {
                 let { unlockedPowerups: u } = t,
                     d = (0, E.h)([
                         ...Object.values(u),
-                        ...Object.values(null != (i = null == h ? void 0 : h.entitlements) ? i : {}),
+                        ...Object.values(null != (i = null == f ? void 0 : f.entitlements) ? i : {}),
                     ]),
                     p = null != (o = null == n ? void 0 : n.lastSeenWarningNotification) ? o : Date.now(),
                     g = new Date(null == (e = d[d.length - 1]) ? void 0 : e.ends_at).getTime(),
                     m = null != (a = null == n ? void 0 : n.lastBoostCount) ? a : 0;
-                return (d.length > 0 && p < g) || f
+                return (d.length > 0 && p < g) || h
                     ? {
                           trailing: (0, r.jsx)(s.Mgn, {
                               color: s.TVs.colors.STATUS_WARNING,
@@ -81,20 +81,20 @@ function Z(e) {
                 null == n ? void 0 : n.lastBoostCount,
                 null == n ? void 0 : n.lastSeenWarningNotification,
                 t,
-                f,
-                null == h ? void 0 : h.entitlements,
+                h,
+                null == f ? void 0 : f.entitlements,
             ]);
         })(e, n, t),
         Z = (function (e, t) {
             let [n, r] = (0, d.US)(null != t ? [a.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 s = n === a.z.GUILD_POWERUP_PERKS_COACHMARK,
-                { available: c } = (0, C.Z)(e),
-                u = (0, o.e7)([f.Z], () => {
+                { available: c } = (0, x.Z)(e),
+                u = (0, o.e7)([h.Z], () => {
                     var t, n;
                     return (
                         null !=
                             (n =
-                                null == (t = f.Z.getGuild(e))
+                                null == (t = h.Z.getGuild(e))
                                     ? void 0
                                     : t.features.has(P.GuildFeatures.GAME_SERVERS)) && n
                     );
@@ -103,9 +103,9 @@ function Z(e) {
                 y = (function (e, t) {
                     let n = (0, j.qI)(e, "GuildPowerupsChannelRow"),
                         r = (0, m.BU)(e, "GuildPowerupsChannelRow"),
-                        a = (0, o.e7)([f.Z], () => {
+                        a = (0, o.e7)([h.Z], () => {
                             var t;
-                            return null == (t = f.Z.getGuild(e))
+                            return null == (t = h.Z.getGuild(e))
                                 ? void 0
                                 : t.features.has(P.GuildFeatures.GAME_SERVERS);
                         });
@@ -157,7 +157,7 @@ function Z(e) {
                     if (null != n) return n;
                     let r = (function (e, t, n) {
                         var r, i;
-                        let l = null != (i = null == (r = f.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE,
+                        let l = null != (i = null == (r = h.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE,
                             o = Array.from(I.Tg.values())
                                 .flatMap((r) =>
                                     r.length <= 0 ||
@@ -171,12 +171,12 @@ function Z(e) {
                                               let i = t.allPowerups[r];
                                               return null == i ||
                                                   n < i.cost ||
-                                                  (0, x.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  (0, C.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
                                                   ? null
                                                   : i;
                                           }),
                                 )
-                                .filter(h.lm);
+                                .filter(f.lm);
                         if (0 !== o.length) {
                             if (1 === o.length && !(0, p.OY)(a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {

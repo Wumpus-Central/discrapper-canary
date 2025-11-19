@@ -388,22 +388,22 @@ var R = function (e, t, n, r) {
 let P = !1,
     D,
     w = {};
-function x() {
+function L() {
     if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
     null == e || R(e, w) ? null != D && cancelAnimationFrame(D) : ((w = e), null == r || r.invalidate()),
-        (D = requestAnimationFrame(x));
+        (D = requestAnimationFrame(L));
 }
-let L = !1,
+let x = !1,
     M = {
         get ringsEnabled() {
-            return L;
+            return x;
         },
         setRingsEnabled(e) {
-            (L = e), null == r || r.invalidate();
+            (x = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (P = !0), (D = requestAnimationFrame(x));
+            (P = !0), (D = requestAnimationFrame(L));
         },
         disableAnimationTracking() {
             (P = !1), null != D && cancelAnimationFrame(D);

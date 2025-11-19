@@ -37,13 +37,13 @@ function h(e, t) {
     let P = f.Z.getGuildMemberProfile(e, T),
         D = f.Z.getMutualGuilds(e),
         w = f.Z.getMutualFriends(e),
-        x = f.Z.getMutualFriendsCount(e),
-        L = null == w && O,
-        M = null == x && y,
-        j = (null == D && b) || L || M,
-        k = null == T ? null == N : null == P,
-        U = !k && (R || j);
-    if (!k && !U) return Promise.resolve();
+        L = f.Z.getMutualFriendsCount(e),
+        x = null == w && O,
+        M = null == L && y,
+        k = (null == D && b) || x || M,
+        j = null == T ? null == N : null == P,
+        U = !j && (R || k);
+    if (!j && !U) return Promise.resolve();
     let G = null != T ? (null == P ? void 0 : P.profileEffect) : null == N ? void 0 : N.profileEffect;
     null != G && ((0, s.c)("maybeFetchUserProfile") ? (0, o.lW)(G.skuId) : (0, c.t)()), null != t && (0, a.vM)(t);
     let B = {

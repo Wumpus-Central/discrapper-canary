@@ -24,7 +24,7 @@ var r = n(54381),
     S = n(526761),
     A = n(726985),
     C = n(388032),
-    N = n(455734);
+    N = n(683326);
 function R() {
     u.Z.useExperiment({ location: "profile_customization_auto" });
     let e = (0, s.e7)([f.Z], () => f.Z.getGuild()),
@@ -34,8 +34,8 @@ function R() {
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         { subsection: P, setSubsection: D } = (0, v.Z)(),
         w = g.R.useField("hasSearchResults"),
-        x = g.R.useField("searchResults");
-    function L(t) {
+        L = g.R.useField("searchResults");
+    function x(t) {
         if (P !== t) {
             if (n) {
                 y.S.dispatch(I.CkL.SHAKE_APP, {
@@ -57,10 +57,10 @@ function R() {
         k = !0;
     return (
         w &&
-            1 === x.length &&
-            (x.includes(A.s6.PROFILE_SERVER_PROFILES)
-                ? (L(S.NB.GUILD), (k = !1))
-                : x.includes(A.s6.PROFILE_USER_PROFILE) && (L(S.NB.USER_PROFILE), (M = !1))),
+            1 === L.length &&
+            (L.includes(A.s6.PROFILE_SERVER_PROFILES)
+                ? (x(S.NB.GUILD), (k = !1))
+                : L.includes(A.s6.PROFILE_USER_PROFILE) && (x(S.NB.USER_PROFILE), (M = !1))),
         (0, r.jsxs)(h.N, {
             header: C.intl.string(C.t["vi7f+q"]),
             children: [
@@ -69,7 +69,7 @@ function R() {
                     type: "top",
                     look: "brand",
                     selectedItem: P,
-                    onItemSelect: L,
+                    onItemSelect: x,
                     children: [
                         k
                             ? (0, r.jsx)(

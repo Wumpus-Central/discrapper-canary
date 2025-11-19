@@ -71,12 +71,12 @@ function w(e) {
               checkElevated: n,
           });
 }
-function x(e) {
+function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = N[e];
     return null != n ? n : (N[e] = w(e, t));
 }
-function L(e) {
+function x(e) {
     if (null != e) {
         var t;
         R[e] = (null != (t = R[e]) ? t : 0) + 1;
@@ -86,10 +86,10 @@ function M() {
     for (let e in ((C = {}), (N = {}), R)) R[e] += 1;
     P += 1;
 }
-function j() {
+function k() {
     M();
 }
-function k() {
+function j() {
     $();
 }
 function U() {
@@ -113,7 +113,7 @@ function B(e) {
             context: n,
         });
     if (N[n.id] === i) return !1;
-    (N[n.id] = i), (P += 1), L(n.getGuildId());
+    (N[n.id] = i), (P += 1), x(n.getGuildId());
 }
 function Z(e) {
     let { channels: t } = e,
@@ -126,7 +126,7 @@ function Z(e) {
                 user: r,
                 context: t,
             });
-        N[t.id] !== i && ((N[t.id] = i), L(t.getGuildId()), (n = !0));
+        N[t.id] !== i && ((N[t.id] = i), x(t.getGuildId()), (n = !0));
     }
     return !!n && ((P += 1), n);
 }
@@ -135,10 +135,10 @@ function F() {
 }
 function V(e) {
     var t;
-    return (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (L(e.guildId), !0);
+    return (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (x(e.guildId), !0);
 }
 function H(e) {
-    return !!(0, _.s)(e) && (L(e.guildId), !0);
+    return !!(0, _.s)(e) && (x(e.guildId), !0);
 }
 function Y(e) {
     let { messages: t } = e;
@@ -153,7 +153,7 @@ function W(e) {
 }
 function K(e) {
     let { channel: t } = e;
-    return delete N[t.id], (P += 1), L(t.guild_id), !1;
+    return delete N[t.id], (P += 1), x(t.guild_id), !1;
 }
 function z(e) {
     let { guildId: t } = e;
@@ -163,7 +163,7 @@ function z(e) {
         delete N[e.id];
     }),
         (P += 1),
-        L(t);
+        x(t);
 }
 function q(e) {
     let { instance: t } = e,
@@ -185,7 +185,7 @@ function X(e) {
         delete N[e.id];
     }),
         (P += 1),
-        L(t);
+        x(t);
 }
 function Q(e, t, n, r) {
     let i = b.Hn;
@@ -194,7 +194,7 @@ function Q(e, t, n, r) {
             let i = y.Z.getChannel(e.parent_id);
             return null == i ? b.Hn : b.Og(e, Q(i, t, n, r), f.Z.hasJoined(e.id));
         }
-        i = x(e.id);
+        i = L(e.id);
     } else (0, E.lM)(e) && (i = D(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? b.uB({
@@ -212,7 +212,7 @@ class J extends (r = s.ZP.Store) {
         this.waitFor(y.Z, O.ZP, v.Z, c.Z, f.Z, u.Z, d.Z, I.default);
     }
     getChannelPermissions(e) {
-        return p.Ec.has(e.type) ? w(e.id) : x(e.id);
+        return p.Ec.has(e.type) ? w(e.id) : L(e.id);
     }
     getGuildPermissions(e) {
         return D(e.id);
@@ -299,12 +299,12 @@ function $() {
 }
 A(J, "displayName", "PermissionStore");
 let ee = new J(l.Z, {
-    BACKGROUND_SYNC: j,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
-    CACHE_LOADED: j,
-    CACHE_LOADED_LAZY: j,
-    CONNECTION_CLOSED: k,
+    BACKGROUND_SYNC: k,
+    CONNECTION_OPEN: k,
+    OVERLAY_INITIALIZE: k,
+    CACHE_LOADED: k,
+    CACHE_LOADED_LAZY: k,
+    CONNECTION_CLOSED: j,
     GUILD_CREATE: U,
     GUILD_UPDATE: U,
     GUILD_DELETE: U,

@@ -1,15 +1,15 @@
-a.d(e, { b: () => n });
-var r = a(394798),
-    _ = a(696486);
+_.d(e, { b: () => n });
+var a = _(394798),
+    r = _(696486);
 class n {
     constructor(t = {}) {
-        (this._traceId = t.traceId || (0, r.DM)()), (this._spanId = t.spanId || (0, r.DM)().substring(16));
+        (this._traceId = t.traceId || (0, a.DM)()), (this._spanId = t.spanId || (0, a.DM)().substring(16));
     }
     spanContext() {
         return {
             spanId: this._spanId,
             traceId: this._traceId,
-            traceFlags: _.ve,
+            traceFlags: r.ve,
         };
     }
     end(t) {}
@@ -28,7 +28,7 @@ class n {
     isRecording() {
         return !1;
     }
-    addEvent(t, e, a) {
+    addEvent(t, e, _) {
         return this;
     }
     addLink(t) {

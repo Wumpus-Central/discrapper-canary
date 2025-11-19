@@ -135,7 +135,7 @@ function w(e) {
             channelId: n,
         });
 }
-function x(e) {
+function L(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
     let n = v({
@@ -147,7 +147,7 @@ function x(e) {
     let i = d({}, r);
     (i.message = (0, s.wi)(r.message, t)), h.set(n, i);
 }
-function L() {
+function x() {
     if (0 === b.size || m) return !1;
     m = !0;
 }
@@ -156,14 +156,14 @@ function M(e) {
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
-function j(e) {
+function k(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
     let n = !1;
     for (let e of t) O(e.id) && ((m = !0), (n = !0));
     return n;
 }
-function k(e) {
+function j(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
@@ -242,16 +242,16 @@ let Z = new B(o.Z, {
     SAVED_MESSAGE_DELETE: R,
     MESSAGE_DELETE: D,
     MESSAGE_DELETE_BULK: w,
-    MESSAGE_UPDATE: x,
-    GUILD_CREATE: L,
-    GUILD_UPDATE: L,
-    GUILD_DELETE: L,
+    MESSAGE_UPDATE: L,
+    GUILD_CREATE: x,
+    GUILD_UPDATE: x,
+    GUILD_DELETE: x,
     CHANNEL_CREATE: M,
-    CHANNEL_UPDATES: j,
-    CHANNEL_DELETE: k,
+    CHANNEL_UPDATES: k,
+    CHANNEL_DELETE: j,
     GUILD_MEMBER_UPDATE: U,
-    GUILD_ROLE_CREATE: L,
-    GUILD_ROLE_UPDATE: L,
-    GUILD_ROLE_DELETE: L,
+    GUILD_ROLE_CREATE: x,
+    GUILD_ROLE_UPDATE: x,
+    GUILD_ROLE_DELETE: x,
     MESSAGE_REMINDER_DUE: G,
 });

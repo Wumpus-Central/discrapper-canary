@@ -1,27 +1,27 @@
-a.d(e, { f: () => o });
-var r = a(650093),
-    _ = a(867921),
-    n = a(928541);
-function o(t, e = (0, r.L2)("fetch")) {
-    let a = 0,
-        i = 0;
-    return (0, _.q)(t, function (_) {
-        let o = _.body.length;
-        (a += o), i++;
-        let E = {
-            body: _.body,
+_.d(e, { f: () => o });
+var a = _(650093),
+    r = _(867921),
+    n = _(928541);
+function o(t, e = (0, a.L2)("fetch")) {
+    let _ = 0,
+        E = 0;
+    return (0, r.q)(t, function (r) {
+        let o = r.body.length;
+        (_ += o), E++;
+        let i = {
+            body: r.body,
             method: "POST",
             referrerPolicy: "origin",
             headers: t.headers,
-            keepalive: a <= 60000 && i < 15,
+            keepalive: _ <= 60000 && E < 15,
             ...t.fetchOptions,
         };
-        if (!e) return (0, r._6)("fetch"), (0, n.$2)("No fetch implementation available");
+        if (!e) return (0, a._6)("fetch"), (0, n.$2)("No fetch implementation available");
         try {
-            return e(t.url, E).then(
+            return e(t.url, i).then(
                 (t) => (
-                    (a -= o),
-                    i--,
+                    (_ -= o),
+                    E--,
                     {
                         statusCode: t.status,
                         headers: {
@@ -32,7 +32,7 @@ function o(t, e = (0, r.L2)("fetch")) {
                 ),
             );
         } catch (t) {
-            return (0, r._6)("fetch"), (a -= o), i--, (0, n.$2)(t);
+            return (0, a._6)("fetch"), (_ -= o), E--, (0, n.$2)(t);
         }
     });
 }

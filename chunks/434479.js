@@ -1,4 +1,4 @@
-n.d(t, { m: () => h });
+n.d(t, { m: () => f });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -6,9 +6,9 @@ var i = n(120356),
     o = n(91192),
     a = n(589440),
     s = n(481060),
-    c = n(780462),
-    u = n(55940),
-    d = n(509612);
+    c = n(958111),
+    u = n(33082),
+    d = n(516966);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,12 +52,12 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: h,
+            innerClassName: f,
             renderIcon: g,
             text: m,
             selected: b,
@@ -98,19 +98,19 @@ function h(e) {
             "showUnread",
             "ref",
         ]);
-    let x = (0, o.JA)(n),
-        C = null != (t = (0, a.q)(m)) ? t : "";
+    let C = (0, o.JA)(n),
+        x = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
         ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            f(p({}, j), {
-                buttonProps: f(p({}, x), {
+            h(p({}, j), {
+                buttonProps: h(p({}, C), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": C,
+                "aria-label": x,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -129,7 +129,7 @@ function h(e) {
                     y,
                     O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, h]),
+                        className: l()([d.link, d.basicChannelRowLink, f]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

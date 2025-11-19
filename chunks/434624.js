@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(56314),
     f = n(566006),
     _ = n(287151),
-    p = n(127947),
-    h = n(893973);
+    p = n(487111),
+    h = n(639543);
 function m(e, t, n) {
     return (
         t in e
@@ -110,16 +110,16 @@ let v = i.memo(function (e) {
         P = (0, d.v)(N && null != O ? O : []),
         D = i ? h : p,
         w = N ? y : g,
-        x = (0, u.y)(w, _.aO),
-        L = {};
+        L = (0, u.y)(w, _.aO),
+        x = {};
     if (N && null != P) {
         var M;
         let { accentColor: e, backgroundColor: r, opacity: i } = P,
             a = null != (M = (0, l.wK)(null != r ? r : "", i)) ? M : "";
-        R && (L.borderColor = r), (L.background = a), (t = e), (n = e);
+        R && (x.borderColor = r), (x.background = a), (t = e), (n = e);
     }
     let k = {
-        minWidth: x,
+        minWidth: L,
         color: t,
         borderColor: n,
     };
@@ -128,7 +128,7 @@ let v = i.memo(function (e) {
             [D.reactionMe]: R,
             [D.reactionReadOnly]: v && !I && !S && !T,
         }),
-        style: L,
+        style: x,
         children: [
             (0, r.jsx)(c.Z, {
                 className: o()({ [D.hideEmoji]: a }),

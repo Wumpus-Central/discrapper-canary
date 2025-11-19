@@ -48,7 +48,7 @@ function l(e, t) {
 }
 var c = n(329554),
     u = n(613990),
-    d = n(590297),
+    d = n(229450),
     f = n(410937),
     _ = n(493807),
     p = n(529742),
@@ -70,14 +70,14 @@ var c = n(329554),
     P = n(467159),
     D = v.isBrowser("IE"),
     w = !D,
-    x = {
+    L = {
         edit: p,
         composite: d,
         drag: _,
         cut: null,
         render: null,
     },
-    L = !1,
+    x = !1,
     M = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
@@ -175,11 +175,11 @@ var c = n(329554),
                         r = t.onPaste,
                         i = t.onCut,
                         o = t.onCopy,
-                        s = a({}, x.edit);
+                        s = a({}, L.edit);
                     r && (s.onPaste = r),
                         i && (s.onCut = i),
                         o && (s.onCopy = o),
-                        (n._handler = a({}, x, { edit: s })[e]);
+                        (n._handler = a({}, L, { edit: s })[e]);
                 }),
                 s(o(n), "exitCurrentMode", function () {
                     n.setMode("edit");
@@ -382,7 +382,7 @@ var c = n(329554),
             }),
             (r.componentDidMount = function () {
                 (this._blockSelectEvents = !1),
-                    !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
+                    !x && C("draft_ods_enabled") && ((x = !0), g.initODS()),
                     this.setMode("edit"),
                     D &&
                         (this.editor

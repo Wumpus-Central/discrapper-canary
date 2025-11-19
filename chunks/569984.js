@@ -5,8 +5,8 @@ var N,
     P = n(754700),
     D = n(887003),
     w = n(442837),
-    x = n(570140),
-    L = n(70956),
+    L = n(570140),
+    x = n(70956),
     M = n(509212),
     k = n(497505),
     j = n(184299),
@@ -65,7 +65,7 @@ function H(e, t) {
         e
     );
 }
-let Y = 6 * L.Z.Millis.HOUR,
+let Y = 6 * x.Z.Millis.HOUR,
     W = new Map(),
     K = null,
     z = new Map(),
@@ -289,11 +289,11 @@ function ew(e) {
     let { questId: t } = e;
     eR(t);
 }
-function ex(e) {
+function eL(e) {
     let { streamKey: t } = e;
     ei(t);
 }
-function eL(e) {
+function ex(e) {
     let { user_status: t } = e,
         n = (0, G.T)({ location: B.dr.QUESTS_STORE });
     n.log("Received user status update for ".concat(t.quest_id), t);
@@ -501,7 +501,7 @@ class ez extends (N = w.ZP.Store) {
     }
 }
 Z(ez, "displayName", "QuestsStore");
-let eq = new ez(x.Z, {
+let eq = new ez(L.Z, {
         LOGOUT: ea,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: eo,
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: es,
@@ -529,9 +529,9 @@ let eq = new ez(x.Z, {
         QUESTS_DISMISS_CONTENT_BEGIN: eP,
         QUESTS_DISMISS_CONTENT_SUCCESS: eD,
         QUESTS_DISMISS_CONTENT_FAILURE: ew,
-        QUESTS_USER_STATUS_UPDATE: eL,
+        QUESTS_USER_STATUS_UPDATE: ex,
         STREAM_CLOSE: eE,
-        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: ex,
+        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eL,
         QUESTS_PREVIEW_UPDATE_SUCCESS: eM,
         QUESTS_DELIVERY_OVERRIDE: ek,
         QUESTS_SELECT_TASK_PLATFORM: ej,

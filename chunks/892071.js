@@ -48,9 +48,9 @@ function b(e) {
             hardwareAccelerationEnabled: P,
             highContrastMode: D,
             isPopoutWindow: w,
-            children: x,
+            children: L,
         } = e,
-        L = window.CSS.supports("selector(::-webkit-scrollbar)"),
+        x = window.CSS.supports("selector(::-webkit-scrollbar)"),
         M = (0, l.e7)([d.Z], () => d.Z.zoom),
         k = w ? "" : "--custom-zoom: ".concat(M, ";"),
         j = "font-size: ".concat(y, "%; --saturation-factor: ").concat(T, "; ").concat(k),
@@ -67,8 +67,8 @@ function b(e) {
                 "low-saturation": T <= c.AEw,
                 "keyboard-mode": I,
                 "decorate-links": R,
-                "no-webkit-scrollbar": !L,
-                "has-webkit-scrollbar": L,
+                "no-webkit-scrollbar": !x,
+                "has-webkit-scrollbar": x,
                 "mouse-mode": v,
                 "reduce-motion": N,
                 "full-motion": !N,
@@ -108,7 +108,7 @@ function b(e) {
         }),
         (0, r.jsx)(g.Provider, {
             value: V,
-            children: x,
+            children: L,
         })
     );
 }

@@ -9,7 +9,7 @@ n.d(t, {
     X6: () => I,
     aQ: () => U,
     g4: () => N,
-    hi: () => x,
+    hi: () => L,
     kC: () => v,
     kh: () => O,
     px: () => G,
@@ -47,7 +47,7 @@ let g = -1,
     y = (e, t) => {
         let n = d.default.getCurrentUser();
         if (null == n || t === n.id) return m.qn.NONE;
-        let r = x(e, t, [l.Z, u.Z]);
+        let r = L(e, t, [l.Z, u.Z]);
         return null == r ? m.qn.NONE : O(r);
     },
     O = (e) => {
@@ -219,11 +219,11 @@ function R(e, t) {
     if (0 === n.length) return !1;
     switch (e.type) {
         case p.l.Embed:
-            return L(e.media, n);
+            return x(e.media, n);
         case p.l.Attachment:
             return M(e.media, n);
         case p.l.GenericMedia:
-            return j(e.media, n);
+            return k(e.media, n);
         default:
             return !1;
     }
@@ -268,7 +268,7 @@ function w(e) {
     for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function x(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.Z, u.Z],
         [r, i] = n,
         a = r.getChannel(e),
@@ -281,7 +281,7 @@ function x(e, t) {
               : p.n.NON_FRIEND_DM
           : p.n.GUILD;
 }
-function L(e, t) {
+function x(e, t) {
     var n, r, i, a, o, s, l;
     return (
         !(
@@ -309,7 +309,7 @@ function L(e, t) {
                 (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && k(B(e), t)
+        ) && j(B(e), t)
     );
 }
 function M(e, t) {
@@ -324,10 +324,10 @@ function M(e, t) {
                         media: e,
                     }),
             ).length &&
-        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        j(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     return (
         0 !== t.length &&
@@ -339,10 +339,10 @@ function j(e, t) {
                         media: e,
                     }),
             ).length &&
-        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        j(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = h.Z.validContentScanVersion;
     return e !== g && (t.includes(m._.GORE) || t.includes(m._.SELF_HARM) ? null == e || e < n : null == e);
 }

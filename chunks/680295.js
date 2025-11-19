@@ -20,7 +20,7 @@ var r = n(54381),
     g = n(142145),
     E = n(710867),
     b = n(312904),
-    y = n(107225);
+    y = n(341225);
 function O(e, t, n) {
     return (
         t in e
@@ -72,8 +72,8 @@ let I = (e) => {
             { accessibilityLabel: P } = E,
             [D, w] = i.useState(-v),
             {
-                stop: x,
-                reset: L,
+                stop: L,
+                reset: x,
                 ticking: M,
             } = (0, p.Z)((e) => {
                 w((t) => t + e);
@@ -98,14 +98,14 @@ let I = (e) => {
         let [j, U] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === u || l || (x(), w(0)),
-                    !l && j && M.current && (x(), w(0)),
+                !0 === u || l || (L(), w(0)),
+                    !l && j && M.current && (L(), w(0)),
                     a &&
                         l &&
                         !M.current &&
-                        (L(),
+                        (x(),
                         E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? w(d === _.Q.FromStart ? 0 : A) : w(0));
-            }, [l, j, A, a, x, L, M, E.animationType, u, d]),
+            }, [l, j, A, a, L, x, M, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),

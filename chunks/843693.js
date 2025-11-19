@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => j,
+    ZP: () => k,
     wU: () => w,
 }),
     n(388685);
@@ -177,7 +177,7 @@ function D(e) {
 function w(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-function x(e) {
+function L(e) {
     var t, n;
     let {
         channelId: r,
@@ -209,7 +209,7 @@ function x(e) {
     }
     return !1;
 }
-class L extends (r = i.ZP.Store) {
+class x extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default, d.Z, c.Z);
     }
@@ -248,10 +248,10 @@ class L extends (r = i.ZP.Store) {
         return null != i ? (0, f.KH)(i, r) * n : 0;
     }
 }
-h(L, "displayName", "PoggermodeStore");
-let M = new L(s.Z, {
+h(x, "displayName", "PoggermodeStore");
+let M = new x(s.Z, {
         POGGERMODE_UPDATE_COMBO: P,
         POGGERMODE_UPDATE_MESSAGE_COMBO: D,
-        MESSAGE_CREATE: x,
+        MESSAGE_CREATE: L,
     }),
-    j = M;
+    k = M;

@@ -32,8 +32,8 @@ var r = n(54381),
     P = n(91140),
     D = n(297781),
     w = n(591853),
-    x = n(410441),
-    L = n(797342),
+    L = n(410441),
+    x = n(797342),
     M = n(981631),
     k = n(388032);
 let j = {
@@ -58,7 +58,7 @@ let j = {
                 trackRankingItemInteraction: F,
             } = e,
             { largeImage: V } = (0, v.rv)({ entry: y }),
-            { user: H, details: Y, appName: W, activity: K, embeddedActivity: z } = (0, L.n)(y),
+            { user: H, details: Y, appName: W, activity: K, embeddedActivity: z } = (0, x.n)(y),
             { primaryColor: q, secondaryColor: X } = (0, R.Z)(null == V ? void 0 : V.src),
             Q = (0, o.e7)([E.default], () => E.default.locale),
             { streamPreviewUrl: J, stream: $ } = (0, T.Z)(y),
@@ -113,7 +113,7 @@ let j = {
                           headerIcons:
                               null == ea
                                   ? null
-                                  : (0, r.jsx)(x.Z, {
+                                  : (0, r.jsx)(L.Z, {
                                         onClick: es,
                                         Icon: ea,
                                         "aria-label": k.intl.string(k.t.YR4cHH),

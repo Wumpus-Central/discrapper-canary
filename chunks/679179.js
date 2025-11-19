@@ -1,59 +1,59 @@
-a.d(e, {
-    EZ: () => i,
+_.d(e, {
+    EZ: () => E,
     Gf: () => o,
 });
-let r = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
-function _(...t) {
+let a = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+function r(...t) {
     let e = "",
-        a = !1;
-    for (let r = t.length - 1; r >= -1 && !a; r--) {
-        let _ = r >= 0 ? t[r] : "/";
-        _ && ((e = `${_}/${e}`), (a = "/" === _.charAt(0)));
+        _ = !1;
+    for (let a = t.length - 1; a >= -1 && !_; a--) {
+        let r = a >= 0 ? t[a] : "/";
+        r && ((e = `${r}/${e}`), (_ = "/" === r.charAt(0)));
     }
     return (
         (e = (function (t, e) {
-            let a = 0;
+            let _ = 0;
             for (let e = t.length - 1; e >= 0; e--) {
-                let r = t[e];
-                "." === r ? t.splice(e, 1) : ".." === r ? (t.splice(e, 1), a++) : a && (t.splice(e, 1), a--);
+                let a = t[e];
+                "." === a ? t.splice(e, 1) : ".." === a ? (t.splice(e, 1), _++) : _ && (t.splice(e, 1), _--);
             }
-            if (e) for (; a--; ) t.unshift("..");
+            if (e) for (; _--; ) t.unshift("..");
             return t;
         })(
             e.split("/").filter((t) => !!t),
-            !a,
+            !_,
         ).join("/")),
-        (a ? "/" : "") + e || "."
+        (_ ? "/" : "") + e || "."
     );
 }
 function n(t) {
     let e = 0;
     for (; e < t.length && "" === t[e]; e++);
-    let a = t.length - 1;
-    for (; a >= 0 && "" === t[a]; a--);
-    return e > a ? [] : t.slice(e, a - e + 1);
+    let _ = t.length - 1;
+    for (; _ >= 0 && "" === t[_]; _--);
+    return e > _ ? [] : t.slice(e, _ - e + 1);
 }
 function o(t, e) {
-    (t = _(t).slice(1)), (e = _(e).slice(1));
-    let a = n(t.split("/")),
-        r = n(e.split("/")),
-        o = Math.min(a.length, r.length),
-        i = o;
+    (t = r(t).slice(1)), (e = r(e).slice(1));
+    let _ = n(t.split("/")),
+        a = n(e.split("/")),
+        o = Math.min(_.length, a.length),
+        E = o;
     for (let t = 0; t < o; t++)
-        if (a[t] !== r[t]) {
-            i = t;
+        if (_[t] !== a[t]) {
+            E = t;
             break;
         }
-    let E = [];
-    for (let t = i; t < a.length; t++) E.push("..");
-    return (E = E.concat(r.slice(i))).join("/");
+    let i = [];
+    for (let t = E; t < _.length; t++) i.push("..");
+    return (i = i.concat(a.slice(E))).join("/");
 }
-function i(t, e) {
-    let a =
+function E(t, e) {
+    let _ =
         (function (t) {
             let e = t.length > 1024 ? `<truncated>${t.slice(-1024)}` : t,
-                a = r.exec(e);
-            return a ? a.slice(1) : [];
+                _ = a.exec(e);
+            return _ ? _.slice(1) : [];
         })(t)[2] || "";
-    return e && a.slice(-1 * e.length) === e && (a = a.slice(0, a.length - e.length)), a;
+    return e && _.slice(-1 * e.length) === e && (_ = _.slice(0, _.length - e.length)), _;
 }

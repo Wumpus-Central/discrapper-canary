@@ -1,9 +1,9 @@
-function r(t, ...e) {
-    let a = new String(String.raw(t, ...e));
+function a(t, ...e) {
+    let _ = new String(String.raw(t, ...e));
     return (
-        (a.__sentry_template_string__ = t.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s")),
-        (a.__sentry_template_values__ = e),
-        a
+        (_.__sentry_template_string__ = t.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s")),
+        (_.__sentry_template_values__ = e),
+        _
     );
 }
-a.d(e, { X: () => r });
+_.d(e, { X: () => a });

@@ -23,7 +23,7 @@ var r = n(54381),
     T = n(228168),
     S = n(244096),
     A = n(388032),
-    C = n(516089);
+    C = n(711938);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function L(e) {
+function x(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
         className: o()(C.referenceContainer, n),
@@ -147,7 +147,7 @@ let M = i.forwardRef(function (e, t) {
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L, { children: f }),
+                (0, r.jsx)(x, { children: f }),
                 (0, r.jsx)(u.tEY, {
                     ringClassName: C.ring,
                     children: (0, r.jsx)("div", {
@@ -196,12 +196,12 @@ let M = i.forwardRef(function (e, t) {
             P = (0, h.p)({ location: "CustomStatusBubble" }),
             D = null != _ ? S.Hp : 0,
             w = S.hT + D,
-            x = S.YF + D,
+            L = S.YF + D,
             M = i.useRef(null),
             k = i.useRef(null),
             j = i.useRef(null),
             U = i.useRef(w),
-            G = i.useRef(x),
+            G = i.useRef(L),
             B = null != _ && null == p,
             [Z, F] = i.useState(!1),
             [V, H] = i.useState(!0),
@@ -227,13 +227,13 @@ let M = i.forwardRef(function (e, t) {
             W(t > e),
                 (U.current = e),
                 (G.current = t),
-                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? w : x), "px") });
-        }, [K, p, _, Q, V, w, x]);
+                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? w : L), "px") });
+        }, [K, p, _, Q, V, w, L]);
         let J = (e) => {
                 Y &&
                     (e
                         ? Q({
-                              maxHeight: "".concat(Math.min(G.current, x), "px"),
+                              maxHeight: "".concat(Math.min(G.current, L), "px"),
                               delay: z ? 0 : S.zS,
                               config: {
                                   clamp: !0,
@@ -297,7 +297,7 @@ let M = i.forwardRef(function (e, t) {
                     }),
                 }),
             }),
-            eo = (0, r.jsxs)(L, {
+            eo = (0, r.jsxs)(x, {
                 children: [er, ei],
             });
         return null == O
@@ -405,16 +405,16 @@ function U(e) {
             },
             [m],
         ),
-        x = (e) =>
+        L = (e) =>
             null == e
                 ? null
                 : null != e.id
                   ? "`" + ":".concat(e.name, ":") + "`"
                   : g.ZP.translateSurrogatesToInlineEmoji(e.name),
-        L = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
+        x = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
         M = () => {
-            let e = x(t);
-            return null == n ? e : L(e, n);
+            let e = L(t);
+            return null == n ? e : x(e, n);
         };
     return (0, r.jsx)(O.Z, {
         user: a,

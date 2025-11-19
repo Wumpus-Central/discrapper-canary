@@ -21,11 +21,11 @@ var i = n(54381),
     E = n(594174),
     S = n(979651),
     Z = n(362446),
-    x = n(518084),
-    j = n(981631),
+    j = n(518084),
+    x = n(981631),
     C = n(388032),
-    I = n(361979),
-    P = n(890332);
+    I = n(542596),
+    P = n(239545);
 function w(e, t, n) {
     return (
         t in e
@@ -81,9 +81,9 @@ class D extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, E.default, O.Z),
             r = null != t ? "".concat(n, " / ").concat(t.name) : n,
-            o = null != t ? t.id : j.ME;
+            o = null != t ? t.id : x.ME;
         return (0, i.jsx)(s.rU, {
-            to: j.Z5c.CHANNEL(o),
+            to: x.Z5c.CHANNEL(o),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(o, e.id);
             },
@@ -109,9 +109,9 @@ class D extends r.PureComponent {
         } = this.props;
         return null == o
             ? null
-            : (0, i.jsx)(x.ZP.Bar, {
+            : (0, i.jsx)(j.ZP.Bar, {
                   className: l()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(x.ZP.Content, {
+                  children: (0, i.jsxs)(j.ZP.Content, {
                       className: l()(t, I.content),
                       dynamicSize: !0,
                       children: [

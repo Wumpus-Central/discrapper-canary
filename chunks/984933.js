@@ -55,10 +55,10 @@ let T = "SELECTABLE",
             name: "Uncategorized",
         }),
     },
-    x = j(v.kod),
-    L = [],
+    L = k(v.kod),
+    x = [],
     M = {};
-function j(e) {
+function k(e) {
     return {
         id: e,
         [T]: [],
@@ -67,7 +67,7 @@ function j(e) {
         count: 0,
     };
 }
-function k(e) {
+function j(e) {
     let t = C[e];
     return null == t && (t = Y(e)), t;
 }
@@ -133,7 +133,7 @@ function H() {
     (C = {}), (D = {}), (N = {}), (R = {}), null != A && Y(A);
 }
 function Y(e) {
-    let t = j(e);
+    let t = k(e);
     return (C[e] = t), (D[e] = []), V(t), G(t), W(t), en(e), t;
 }
 function W(e) {
@@ -249,7 +249,7 @@ class el extends (r = s.ZP.Store) {
         return C;
     }
     getChannels(e) {
-        return null != e ? k(e) : x;
+        return null != e ? j(e) : L;
     }
     getFirstChannelOfType(e, t, n) {
         let r = this.getChannels(e)[n].find(t);
@@ -296,7 +296,7 @@ class el extends (r = s.ZP.Store) {
                           return t.id;
                       }))
             ? n
-            : L;
+            : x;
     }
     hasSelectableChannel(e, t) {
         return this.getSelectableChannelIds(e).includes(t);

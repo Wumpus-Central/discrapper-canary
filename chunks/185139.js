@@ -16,7 +16,7 @@ var h = n(122289),
     m = n(70956),
     g = n(981631),
     E = n(388032),
-    b = n(987954);
+    b = n(397519);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function O(e) {
     let {
@@ -35,15 +35,15 @@ function O(e) {
             purchaseErrorBlockRef: P,
             planError: D,
             onScroll: w,
-            scrollerClassName: x,
-            hasCurrencies: L = !1,
+            scrollerClassName: L,
+            hasCurrencies: x = !1,
         } = e,
         M = null;
     null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != D && (M = D);
     let k = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && L && (k += " ".concat(E.intl.string(E.t.iWvwQS))),
+        (M.code === f.SM.CARD_DECLINED && x && (k += " ".concat(E.intl.string(E.t.iWvwQS))),
         M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd8)),
         M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWE)));
     let { stripe: j } = (0, _.JL)();
@@ -121,7 +121,7 @@ function O(e) {
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: w,
-                                          className: s()(b.scroller, x),
+                                          className: s()(b.scroller, L),
                                           children: o,
                                       }),
                                   }),

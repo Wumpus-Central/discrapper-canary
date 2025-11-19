@@ -1,13 +1,13 @@
 n.d(t, {
-    PA: () => l,
+    PA: () => i,
     Wl: () => s,
 });
 var a = n(990547);
 n(479531);
-var i = n(573261),
+var l = n(573261),
     r = n(981631);
-async function l() {
-    let e = await i.Z.get({
+async function i() {
+    let e = await l.Z.get({
         url: r.ANM.SAFETY_FLOWS_TASK,
         trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
         rejectWithError: !0,
@@ -16,7 +16,7 @@ async function l() {
 }
 async function s(e) {
     return (
-        await i.Z.post({
+        await l.Z.post({
             url: r.ANM.SAFETY_FLOWS_TASK,
             body: e,
             trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },

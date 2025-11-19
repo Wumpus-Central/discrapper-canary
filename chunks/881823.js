@@ -14,7 +14,7 @@ var r = n(54381),
     h = n(810568),
     m = n(89285),
     g = n(307741),
-    E = n(726332);
+    E = n(518587);
 function b(e) {
     let { applicationId: t, name: n, setPopoutRef: a, onClose: b, source: y } = e,
         O = (0, _.q)(t),

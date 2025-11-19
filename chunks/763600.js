@@ -1,3 +1,3 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => l });
 var a,
-    i = (((a = {}).SHOCKBYTE = "shockbyte"), a);
+    l = (((a = {}).SHOCKBYTE = "shockbyte"), a);

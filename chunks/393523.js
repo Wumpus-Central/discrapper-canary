@@ -1,24 +1,24 @@
-let r;
-a.d(e, { a: () => E });
-var _ = a(578346),
-    n = a(987886),
-    o = a(370336),
-    i = a(395848);
-function E(t) {
+let a;
+_.d(e, { a: () => i });
+var r = _(578346),
+    n = _(987886),
+    o = _(370336),
+    E = _(395848);
+function i(t) {
     let e = "history";
-    (0, _.Hj)(e, t), (0, _.D2)(e, c);
+    (0, r.Hj)(e, t), (0, r.D2)(e, c);
 }
 function c() {
     if (!(0, n.B)()) return;
-    let t = i.m.onpopstate;
+    let t = E.m.onpopstate;
     function e(t) {
         return function (...e) {
-            let a = e.length > 2 ? e[2] : void 0;
-            if (a) {
-                let t = r,
-                    e = String(a);
-                (r = e),
-                    (0, _.rK)("history", {
+            let _ = e.length > 2 ? e[2] : void 0;
+            if (_) {
+                let t = a,
+                    e = String(_);
+                (a = e),
+                    (0, r.rK)("history", {
                         from: t,
                         to: e,
                     });
@@ -26,14 +26,14 @@ function c() {
             return t.apply(this, e);
         };
     }
-    (i.m.onpopstate = function (...e) {
-        let a = i.m.location.href,
-            n = r;
+    (E.m.onpopstate = function (...e) {
+        let _ = E.m.location.href,
+            n = a;
         if (
-            ((r = a),
-            (0, _.rK)("history", {
+            ((a = _),
+            (0, r.rK)("history", {
                 from: n,
-                to: a,
+                to: _,
             }),
             t)
         )
@@ -41,6 +41,6 @@ function c() {
                 return t.apply(this, e);
             } catch (t) {}
     }),
-        (0, o.hl)(i.m.history, "pushState", e),
-        (0, o.hl)(i.m.history, "replaceState", e);
+        (0, o.hl)(E.m.history, "pushState", e),
+        (0, o.hl)(E.m.history, "replaceState", e);
 }

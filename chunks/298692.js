@@ -1,5 +1,5 @@
 n.d(t, { B: () => r });
-var l = n(647438),
+var l = n(473749),
     i = n(788956);
 function r(e) {
     let { loading: t, hasConnection: n, canConnect: r, startConnection: o, account: a } = (0, i.d)(e);

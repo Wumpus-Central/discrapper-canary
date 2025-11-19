@@ -44,7 +44,7 @@ let I = (e, t, n) => {
             P = (0, a.e7)([s.default], () => s.default.locale),
             D = (0, h.Z)(O.ABu.CRUNCHYROLL),
             w = (0, _.ap)(n.extra.media_assets_large_text),
-            x = i.useCallback(
+            L = i.useCallback(
                 (e) => {
                     if (null != A && (null == C ? void 0 : C.src) != null)
                         return (0, p.B)({
@@ -60,7 +60,7 @@ let I = (e, t, n) => {
                 },
                 [t, n, w, P, null == C ? void 0 : C.src, N, R, A],
             ),
-            L = () => {
+            x = () => {
                 if (null == n.extra.url) return;
                 let e = d.Z.safeParseWithQuery(n.extra.url);
                 null != e &&
@@ -90,8 +90,8 @@ let I = (e, t, n) => {
                               location: E.Gt.POPOUT,
                               children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                           }),
-                          onClickTitle: L,
-                          onClickThumbnail: L,
+                          onClickTitle: x,
+                          onClickThumbnail: x,
                       }),
                       (0, r.jsx)(b.St, {
                           children: (0, r.jsx)(b.WT, {
@@ -99,7 +99,7 @@ let I = (e, t, n) => {
                               onVoiceChannelPreview: S,
                               user: A,
                               channel: t,
-                              generateReactionImage: x,
+                              generateReactionImage: L,
                               reactionImageAltText: T(n, A),
                               entry: n,
                           }),

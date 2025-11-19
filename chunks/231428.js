@@ -25,8 +25,8 @@ var r,
     A = n(474936),
     C = n(231338),
     N = n(388032),
-    R = n(504333),
-    P = n(982710);
+    R = n(135582),
+    P = n(708016);
 function D(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function w(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -128,7 +128,7 @@ function U(e) {
                     a = M(e, ["ref"]);
                 return (0, i.jsx)(
                     b.Z,
-                    L(
+                    x(
                         w(
                             {
                                 className: R.verticalFit,
@@ -286,7 +286,7 @@ function Z(e) {
         }, [l, o]),
         (0, i.jsx)(
             G,
-            L(w({}, e), {
+            x(w({}, e), {
                 payments: c,
                 subscription: n,
             }),

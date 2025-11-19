@@ -9,7 +9,7 @@ var r = n(120356),
     s = n(594928),
     l = n(817330),
     c = n(181430),
-    u = n(806539);
+    u = n(677970);
 let d = {
     [a.C.DEFAULT]: "",
     [a.C.CHERRY_BOMB]: u.cherryBomb,

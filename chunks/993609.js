@@ -2,7 +2,7 @@ function r(e, t) {
     return "".concat(e, ":").concat(t);
 }
 n.d(t, { z: () => i }), n(388685);
-let i = (0, n(191336).U)((e, t) => ({
+let i = (0, n(663042).U)((e, t) => ({
     openMenus: new Set(),
     isMenuOpenForMessage: (e) => Array.from(t().openMenus).some((t) => null != e && t.startsWith("".concat(e, ":"))),
     openMenu: (t, n) => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+n.d(t, { Z: () => x }), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(354459),
     v = n(981631),
     I = n(388032),
-    T = n(238377);
+    T = n(390962);
 function S(e, t, n) {
     return (
         t in e
@@ -154,8 +154,8 @@ function w(e) {
         }),
     });
 }
-let x = [];
-function L(e) {
+let L = [];
+function x(e) {
     let {
             channelId: t,
             guildId: a,
@@ -167,24 +167,24 @@ function L(e) {
         } = e,
         S = i.useRef(null),
         C = (0, h.Z)(),
-        [P, L] = i.useState(!1),
-        M = i.useRef(new u.sW(R, () => L(!1))),
+        [P, x] = i.useState(!1),
+        M = i.useRef(new u.sW(R, () => x(!1))),
         k = (0, c.Wu)([g.Z, E.default], () => {
             if (s.type === O.fO.STREAM) {
                 let e = g.Z.getViewerIds(s.id);
-                return e.length > 0 ? e.map((e) => E.default.getUser(e)).filter(b.lm) : x;
+                return e.length > 0 ? e.map((e) => E.default.getUser(e)).filter(b.lm) : L;
             }
             return s.type === O.fO.ACTIVITY && s.participants.length > 0
                 ? Array.from(s.participants)
                       .map((e) => E.default.getUser(e.userId))
                       .filter(b.lm)
-                : x;
+                : L;
         }, [s]);
     i.useEffect(() => {
-        C && (M.current.cancel(), L(!1));
+        C && (M.current.cancel(), x(!1));
     }, [C]);
     let j = i.useCallback(() => {
-            M.current.cancel(), L(!0);
+            M.current.cancel(), x(!0);
         }, []),
         U = i.useCallback(() => {
             M.current.delay();
@@ -195,7 +195,7 @@ function L(e) {
                     (0, _.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("73444")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) => (0, r.jsx)(e, N(A({}, n), { user: t }));

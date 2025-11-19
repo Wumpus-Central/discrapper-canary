@@ -1,41 +1,41 @@
-a.d(e, {
-    $p: () => i,
+_.d(e, {
+    $p: () => E,
     pT: () => o,
 });
-var r = a(285883),
-    _ = a(394798);
+var a = _(285883),
+    r = _(394798);
 let n = RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 function o(t, e) {
-    let a = (function (t) {
+    let _ = (function (t) {
             let e;
             if (!t) return;
-            let a = t.match(n);
-            if (a)
+            let _ = t.match(n);
+            if (_)
                 return (
-                    "1" === a[3] ? (e = !0) : "0" === a[3] && (e = !1),
+                    "1" === _[3] ? (e = !0) : "0" === _[3] && (e = !1),
                     {
-                        traceId: a[1],
+                        traceId: _[1],
                         parentSampled: e,
-                        parentSpanId: a[2],
+                        parentSpanId: _[2],
                     }
                 );
         })(t),
-        o = (0, r.EN)(e),
-        { traceId: i, parentSpanId: E, parentSampled: c } = a || {};
-    return a
+        o = (0, a.EN)(e),
+        { traceId: E, parentSpanId: i, parentSampled: c } = _ || {};
+    return _
         ? {
-              traceId: i || (0, _.DM)(),
-              parentSpanId: E || (0, _.DM)().substring(16),
-              spanId: (0, _.DM)().substring(16),
+              traceId: E || (0, r.DM)(),
+              parentSpanId: i || (0, r.DM)().substring(16),
+              spanId: (0, r.DM)().substring(16),
               sampled: c,
               dsc: o || {},
           }
         : {
-              traceId: i || (0, _.DM)(),
-              spanId: (0, _.DM)().substring(16),
+              traceId: E || (0, r.DM)(),
+              spanId: (0, r.DM)().substring(16),
           };
 }
-function i(t = (0, _.DM)(), e = (0, _.DM)().substring(16), a) {
-    let r = "";
-    return void 0 !== a && (r = a ? "-1" : "-0"), `${t}-${e}${r}`;
+function E(t = (0, r.DM)(), e = (0, r.DM)().substring(16), _) {
+    let a = "";
+    return void 0 !== _ && (a = _ ? "-1" : "-0"), `${t}-${e}${a}`;
 }

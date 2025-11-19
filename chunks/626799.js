@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => M,
-    Z: () => L,
+    Z: () => x,
 }),
     n(388685),
     n(415506);
@@ -26,7 +26,7 @@ var r,
     v = n(73346),
     I = n(981631),
     T = n(388032),
-    S = n(550125);
+    S = n(350003);
 function A(e, t, n) {
     return (
         t in e
@@ -236,6 +236,6 @@ function w(e) {
         libraryApplication: null != n ? E.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let x = (0, m.Z)((0, h.Z)(P)),
-    L = s.ZP.connectStores(D, w)(x),
+let L = (0, m.Z)((0, h.Z)(P)),
+    x = s.ZP.connectStores(D, w)(L),
     M = (0, h.Z)(s.ZP.connectStores(D, w)(P));

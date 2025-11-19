@@ -9,12 +9,12 @@ var r = n(54381),
     u = n(481060),
     d = n(782568),
     p = n(104505),
-    f = n(317632),
-    h = n(174767),
+    h = n(317632),
+    f = n(174767),
     g = n(594174),
     m = n(55935),
     b = n(388032),
-    _ = n(313227);
+    _ = n(845510);
 function y(e) {
     let { invite: t, expired: n } = e,
         l = (0, a.e7)([g.default], () => {
@@ -26,7 +26,7 @@ function y(e) {
         { isHoveringOrFocusing: d } = (0, p.Z)(c);
     return (
         i.useEffect(() => {
-            n || (0, h.Br)(t);
+            n || (0, f.Br)(t);
         }, [t, n]),
         (0, r.jsxs)("div", {
             className: _.container,
@@ -60,7 +60,7 @@ function y(e) {
                                     color: u.YX$.SECONDARY,
                                     icon: (0, r.jsx)(u.XHJ, { size: "xs" }),
                                     onClick: () => {
-                                        (0, h.UF)(t);
+                                        (0, f.UF)(t);
                                     },
                                 }),
                             ],
@@ -95,20 +95,20 @@ function y(e) {
 }
 function O(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
-        o = (0, a.e7)([f.Z], () => f.Z.isInviteGameInstalled(n)),
-        p = (0, a.e7)([f.Z], () => f.Z.isInviteJoinable(n)),
+        o = (0, a.e7)([h.Z], () => h.Z.isInviteGameInstalled(n)),
+        p = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
         [g, m] = i.useState(!1),
         y = i.useCallback(async () => {
             m(!0);
             try {
-                await (0, h.MH)(n);
+                await (0, f.MH)(n);
             } catch (e) {}
             m(!1);
         }, [n]),
         O = i.useCallback(async () => {
             m(!0);
             try {
-                await (0, h.Ol)(n);
+                await (0, f.Ol)(n);
             } catch (e) {}
             m(!1);
         }, [n]);

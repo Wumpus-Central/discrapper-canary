@@ -35,8 +35,8 @@ var r = n(54381),
     P = n(971128),
     D = n(532428),
     w = n(583642),
-    x = n(991896),
-    L = n(611004),
+    L = n(991896),
+    x = n(611004),
     M = n(778177),
     k = n(165017),
     j = n(817190),
@@ -45,7 +45,7 @@ var r = n(54381),
     B = n(125085),
     Z = n(981631),
     F = n(388032),
-    V = n(557818);
+    V = n(339450);
 function H(e, t, n) {
     return (
         t in e
@@ -59,10 +59,10 @@ function H(e, t, n) {
         e
     );
 }
-n(478691);
+n(863947);
 let Y = 512,
     W = (0, h.hQ)(),
-    K = c()(L.Z.fetchMessages, 500);
+    K = c()(x.Z.fetchMessages, 500);
 class z extends i.PureComponent {
     componentDidMount() {
         var e, t;
@@ -97,7 +97,7 @@ class z extends i.PureComponent {
     }
     clearSearch() {
         let { searchContext: e } = this.props;
-        L.Z.cleanUpSearchState(e);
+        x.Z.cleanUpSearchState(e);
     }
     handlePastedFiles() {
         return "handled";
@@ -388,7 +388,7 @@ class z extends i.PureComponent {
             }),
             H(this, "setEditorState", (e) => {
                 let { searchContext: t } = this.props;
-                x.Z.updateSearchEditorState(t, e);
+                L.Z.updateSearchEditorState(t, e);
             }),
             H(this, "getPopoutRef", () => {
                 let { current: e } = this._searchFiltersRedesignPopoutRef,
@@ -407,7 +407,7 @@ class z extends i.PureComponent {
                     if ((e.preventDefault(), v.xb(a))) this.blurEditor();
                     else {
                         let e = v.FZ(a);
-                        x.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
+                        L.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
                     }
                     return !0;
                 }
@@ -455,7 +455,7 @@ function q(e) {
     let l = (0, u.e7)([j.Z], () => j.Z.getIsSearchTokensInitialized()),
         c = i.useRef(l);
     i.useEffect(() => {
-        l && c.current !== l && ((c.current = l), L.Z.ensureSearchInputDecorators(t));
+        l && c.current !== l && ((c.current = l), x.Z.ensureSearchInputDecorators(t));
     }, [l, t]);
     let f = i.useMemo(() => (null != s ? s : v.nR(I.Jl(D.ZP))), [s]),
         { isSearching: _, hasResults: h } = (0, u.cj)([S.Z], () => {
@@ -490,7 +490,7 @@ function q(e) {
                         query: r,
                         queryString: n,
                     }),
-                    x.Z.updateSearchMode(t, Z.QIO.NEWEST),
+                    L.Z.updateSearchMode(t, Z.QIO.NEWEST),
                     K({
                         searchContext: t,
                         searchQueryString: n,

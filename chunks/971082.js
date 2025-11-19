@@ -6,7 +6,7 @@ var i = n(120356),
     l = n(36563),
     o = n(481060),
     c = n(313201),
-    s = n(245583);
+    s = n(806139);
 function u(e) {
     var { label: t, visuallyHideLabel: n = !1, className: i, size: u = o.EFr.SIZE_16, maxUsers: d = 4 } = e,
         f = (function (e, t) {

@@ -201,7 +201,7 @@
         P = / *\n+$/,
         D = RegExp("^( *)(" + I + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + I + " )\\n*|\\s*\n*$)"),
         w = /(?:^|\n)( *)$/,
-        x = (function () {
+        L = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
                 n = /^ *-+: *$/,
@@ -263,10 +263,10 @@
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
             };
         })(),
-        L = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+        x = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
         M = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
-        j = /mailto:/i,
-        k = function (e, t, n) {
+        k = /mailto:/i,
+        j = function (e, t, n) {
             var r = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[r]) {
                 var i = t._defs[r];
@@ -335,8 +335,8 @@
             },
             nptable: {
                 order: G++,
-                match: s(x.NPTABLE_REGEX),
-                parse: x.parseNpTable,
+                match: s(L.NPTABLE_REGEX),
+                parse: L.parseNpTable,
                 react: null,
                 html: null,
             },
@@ -501,8 +501,8 @@
             },
             table: {
                 order: G++,
-                match: s(x.TABLE_REGEX),
-                parse: x.parseTable,
+                match: s(L.TABLE_REGEX),
+                parse: L.parseTable,
                 react: function (e, t, n) {
                     var r = function (t) {
                             return null == e.align[t] ? {} : { textAlign: e.align[t] };
@@ -639,7 +639,7 @@
                     var r = e[1],
                         i = e[1];
                     return (
-                        j.test(i) || (i = "mailto:" + i),
+                        k.test(i) || (i = "mailto:" + i),
                         {
                             type: "link",
                             content: [
@@ -678,7 +678,7 @@
             link: {
                 order: G++,
                 requiredFirstCharacters: ["["],
-                match: o(RegExp("^\\[(" + L + ")\\]\\(" + M + "\\)")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\(" + M + "\\)")),
                 parse: function (e, t, n) {
                     return {
                         content: t(e[1], n),
@@ -703,7 +703,7 @@
             },
             image: {
                 order: G++,
-                match: o(RegExp("^!\\[(" + L + ")\\]\\(" + M + "\\)")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\(" + M + "\\)")),
                 parse: function (e, t, n) {
                     return {
                         alt: e[1],
@@ -733,9 +733,9 @@
             },
             reflink: {
                 order: G++,
-                match: o(RegExp("^\\[(" + L + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return k(e, n, {
+                    return j(e, n, {
                         type: "link",
                         content: t(e[1], n),
                     });
@@ -745,9 +745,9 @@
             },
             refimage: {
                 order: G++,
-                match: o(RegExp("^!\\[(" + L + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return k(e, n, {
+                    return j(e, n, {
                         type: "image",
                         alt: e[1],
                     });

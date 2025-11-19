@@ -1,4 +1,4 @@
-n.d(t, { r: () => L });
+n.d(t, { r: () => x });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -96,7 +96,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function L(e) {
     var t;
     let n = (0, a.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
         u = (0, m.GN)(e.questContent),
@@ -107,13 +107,13 @@ function x(e) {
         D = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
             handleComplete: w,
-            handleProgress: x,
-            handleResetDismissibilityClick: L,
+            handleProgress: L,
+            handleResetDismissibilityClick: x,
             handleResetStatusClick: M,
             handleOverrideDeliveryClick: k,
         } = (0, g.kJ)(e.quest.id),
         j = () => {
-            x(0.9 * Math.random() + 0.03);
+            L(0.9 * Math.random() + 0.03);
         },
         U = i.useCallback(() => {
             if (e.quest.id === I.V6) return void window.open(f.Z.getArticleURL(T.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
@@ -261,7 +261,7 @@ function x(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "dismiss",
                                 label: A.intl.string(A.t.JF6W66),
-                                action: L,
+                                action: x,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
@@ -320,7 +320,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let {
             children: t,
             onOpen: n,
@@ -362,7 +362,7 @@ function L(e) {
             return s
                 ? (0, r.jsx)(u.Z, {
                       children: (0, r.jsx)(
-                          x,
+                          L,
                           P(N({}, _), {
                               quest: l,
                               questContent: c,
@@ -373,7 +373,7 @@ function L(e) {
                       ),
                   })
                 : (0, r.jsx)(
-                      x,
+                      L,
                       P(N({}, _), {
                           quest: l,
                           questContent: c,

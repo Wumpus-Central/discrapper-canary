@@ -15,8 +15,8 @@ var a = n(54381),
     g = n(981631),
     f = n(362786),
     b = n(474936),
-    v = n(711322),
-    j = n(855091);
+    v = n(596533),
+    j = n(533288);
 let _ = {
         [g.O0b.UNPAID]: "Unpaid",
         [g.O0b.ACTIVE]: "Active",
@@ -78,7 +78,7 @@ function S(e) {
     var t, n, r, s, f, S, E;
     let { subscription: O, onUpdated: T } = e,
         [N, P] = l.useState(!1),
-        [w, I] = l.useState(!1),
+        [I, w] = l.useState(!1),
         [k, R] = l.useState(!1),
         [A, Z] = l.useState(!1),
         [D, L] = l.useState(null),
@@ -364,7 +364,7 @@ function S(e) {
                         children: [
                             (0, a.jsxs)(d.P3F, {
                                 onClick: () => {
-                                    I(!w);
+                                    w(!I);
                                 },
                                 className: j.collapsablePaneHeader,
                                 children: [
@@ -374,10 +374,10 @@ function S(e) {
                                             children: "Modifications",
                                         }),
                                     }),
-                                    (0, a.jsx)(u.Z, { direction: w ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
+                                    (0, a.jsx)(u.Z, { direction: I ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
                                 ],
                             }),
-                            w &&
+                            I &&
                                 (0, a.jsxs)(d.Kqy, {
                                     gap: 24,
                                     children: [

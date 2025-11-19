@@ -7,16 +7,16 @@ var i = n(979554),
     a = n(566697),
     s = n(876917),
     c = n(688192),
-    u = n(232644);
+    u = n(988388);
 function d(e) {
     let { item: t, profileOwner: n, isHighlighted: d, cardSize: p = c.U.MEDIUM } = e,
-        f = t.collectiblesItem;
-    switch (f.type) {
+        h = t.collectiblesItem;
+    switch (h.type) {
         case i.Z.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
                 className: u.profileEffectPreview,
                 children: (0, r.jsx)(s.Z, {
-                    skuId: f.skuId,
+                    skuId: h.skuId,
                     isHighlighted: d,
                     isPurchased: !1,
                     removeSetHeight: !0,
@@ -26,7 +26,7 @@ function d(e) {
             return (0, r.jsx)("div", {
                 className: u.avatarDecorationPreview,
                 children: (0, r.jsx)(o.R, {
-                    item: f,
+                    item: h,
                     user: n,
                     isHighlighted: d,
                     isPurchased: !1,
@@ -41,7 +41,7 @@ function d(e) {
                         className: u.nameplateTopLeft,
                         children: (0, r.jsx)(a.Z, {
                             user: n,
-                            nameplate: f,
+                            nameplate: h,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
@@ -55,7 +55,7 @@ function d(e) {
                         "aria-hidden": !0,
                         children: (0, r.jsx)(a.Z, {
                             user: n,
-                            nameplate: f,
+                            nameplate: h,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,

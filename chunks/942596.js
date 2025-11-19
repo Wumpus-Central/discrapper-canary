@@ -34,8 +34,8 @@ var r,
     P = n(630388),
     D = n(153066),
     w = n(740265),
-    x = n(122810),
-    L = n(833664),
+    L = n(122810),
+    x = n(833664),
     M = n(503438),
     k = n(802856),
     j = n(420660),
@@ -43,7 +43,7 @@ var r,
     G = n(701488),
     B = n(981631),
     Z = n(388032),
-    F = n(206733);
+    F = n(402255);
 function V(e, t, n) {
     return (
         t in e
@@ -355,7 +355,7 @@ class $ extends (r = a.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: r, activityGuild: a } = this.props;
-        return null != e.assets || (0, x.Z)(e) || e.type !== B.IIU.PLAYING || "ActivityFeed" === n || t.bot
+        return null != e.assets || (0, L.Z)(e) || e.type !== B.IIU.PLAYING || "ActivityFeed" === n || t.bot
             ? null
             : null == r && null != a
               ? (0, i.jsx)("div", { className: s()(F.gameIcon, F.screenshareIcon) })
@@ -369,7 +369,7 @@ class $ extends (r = a.PureComponent) {
         if (r) return null;
         let { details: a, type: o } = e;
         if (o === B.IIU.CUSTOM_STATUS) return null;
-        let l = (0, L.Z)(e),
+        let l = (0, x.Z)(e),
             c = e.name,
             u = c;
         return (o === B.IIU.HANG_STATUS
@@ -410,7 +410,7 @@ class $ extends (r = a.PureComponent) {
                 (t = () => {
                     (0, S.X)(a.id);
                 });
-        else if (!(0, L.Z)(e)) {
+        else if (!(0, x.Z)(e)) {
             if (((o = r), (s = r), (0, M.Z)(e) && null != r)) {
                 let t = (t, n) =>
                     (0, i.jsx)(
@@ -486,11 +486,11 @@ class $ extends (r = a.PureComponent) {
     }
     renderTimePlayed(e) {
         let { activityGuild: t } = this.props;
-        if (!(0, L.Z)(e) || (0, M.Z)(e)) return null;
+        if (!(0, x.Z)(e) || (0, M.Z)(e)) return null;
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, x.Z)(e)
+            : (0, L.Z)(e)
               ? (0, i.jsx)(X, { timestamps: n })
               : (0, i.jsx)(T.ZP, {
                     start: n.start,
@@ -520,7 +520,7 @@ class $ extends (r = a.PureComponent) {
             c = o,
             u = o;
         if (
-            !(0, L.Z)(e) &&
+            !(0, x.Z)(e) &&
             ((c = null == l ? void 0 : l.large_text), (u = null == l ? void 0 : l.large_text), (0, M.Z)(e) && null != c)
         ) {
             let t = (t, n) =>

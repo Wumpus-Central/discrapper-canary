@@ -6,7 +6,7 @@ var i = n(54381),
     o = n(905693),
     s = n(981631),
     a = n(388032),
-    u = n(119902);
+    u = n(680386);
 function d(e) {
     let { guildId: t, transitionState: n, onClose: d, onConfirm: h } = e,
         { rules: _, rulesAccepted: b } = (0, r.V)(),

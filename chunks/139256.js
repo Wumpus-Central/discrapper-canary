@@ -30,7 +30,7 @@ var r = n(54381),
     v = n(65145),
     I = n(981631),
     T = n(388032),
-    S = n(313464);
+    S = n(397789);
 function A(e, t, n) {
     return (
         t in e
@@ -112,7 +112,7 @@ function w(e) {
         children: n,
     });
 }
-function x(e) {
+function L(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
         "aria-label": T.intl.string(T.t.sJpqBS),
@@ -121,7 +121,7 @@ function x(e) {
         children: n,
     });
 }
-function L(e) {
+function x(e) {
     let { className: t, children: n } = e,
         i = (0, l.Jb)({ orientation: "vertical" }),
         { ref: a } = i,
@@ -186,11 +186,11 @@ function j(e) {
             answersInteraction: n,
         })
             .with({ answersInteraction: y.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: L,
+                ContainerComponent: x,
                 answerElementType: 1,
             }))
             .with({ answersInteraction: y.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: x,
+                ContainerComponent: L,
                 answerElementType: 2,
             }))
             .with(

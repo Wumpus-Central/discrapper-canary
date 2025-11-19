@@ -36,9 +36,9 @@ var r,
     P = n(51144),
     D = n(965386),
     w = n(981631),
-    x = n(185923),
-    L = n(388032),
-    M = n(512746);
+    L = n(185923),
+    x = n(388032),
+    M = n(537221);
 function k(e, t, n) {
     return (
         t in e
@@ -297,7 +297,7 @@ class Q extends Y {
                 }),
                 (0, i.jsxs)("div", {
                     className: M.autocompleteContentWrapper,
-                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], { name: _ }),
+                    "aria-label": x.intl.formatToPlainString(x.t["9v/R+j"], { name: _ }),
                     children: [
                         (0, i.jsx)(D.z5, {
                             children: (0, i.jsx)(f.Text, {
@@ -380,7 +380,7 @@ class J extends Y {
                         ],
                     }),
                 }),
-                t ? null : (0, i.jsx)(D.dY, { children: L.intl.string(L.t["/91tbr"]) }),
+                t ? null : (0, i.jsx)(D.dY, { children: x.intl.string(x.t["/91tbr"]) }),
             ],
         });
     }
@@ -469,7 +469,7 @@ class er extends Y {
                                   ? R.ZP.getEmojiURL({
                                         id: e.id,
                                         animated: e.animated && r,
-                                        size: x.$U,
+                                        size: L.$U,
                                     })
                                   : e.url,
                       })
@@ -510,7 +510,7 @@ class ei extends Y {
                     (0, i.jsxs)(D.z5, {
                         children: [
                             (0, i.jsx)(D.BR, { children: s.name }),
-                            null != r && (0, i.jsx)(D.wL, { children: L.intl.format(L.t.PAutaQ, { queryMatch: r }) }),
+                            null != r && (0, i.jsx)(D.wL, { children: x.intl.format(x.t.PAutaQ, { queryMatch: r }) }),
                         ],
                     }),
                     null != n && (0, i.jsx)(D.dY, { children: n }),

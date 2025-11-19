@@ -8,5 +8,5 @@ var i = n(509613),
     o = n(387076),
     c = n(595373);
 let E = (0, i.k4)(l.n.VOICE_INPUT_MODE_CATEGORY, {
-    buildLayout: () => [c.Z, s.Z, o.Z, a.Z, r.Z, u.Z],
+    buildLayout: () => [c.Z, s.Z, o.Z, a.Z, r.Z, u.E],
 });

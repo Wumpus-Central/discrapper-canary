@@ -1,54 +1,54 @@
-t.d(n, { Z: () => c });
-var l = t(54381),
-    i = t(120356),
-    a = t.n(i),
-    r = t(481060),
-    d = t(73346),
-    o = t(705338),
-    s = t(260999);
-function c(e) {
-    let { guildId: n, storefront: t, selectedPageIndex: i } = e;
-    if (null == t) return null;
-    let c = null != t.logoAssetId ? (0, d._W)(t.applicationId, t.logoAssetId, 75) : null;
-    return (0, l.jsxs)("div", {
+l.d(e, { Z: () => c });
+var t = l(54381),
+    i = l(120356),
+    a = l.n(i),
+    d = l(481060),
+    r = l(73346),
+    o = l(705338),
+    s = l(801519);
+function c(n) {
+    let { guildId: e, storefront: l, selectedPageIndex: i } = n;
+    if (null == l) return null;
+    let c = null != l.logoAssetId ? (0, r._W)(l.applicationId, l.logoAssetId, 75) : null;
+    return (0, t.jsxs)("div", {
         className: s.headerContainer,
         children: [
-            (0, l.jsxs)("div", {
+            (0, t.jsxs)("div", {
                 className: s.titleContainer,
                 children: [
                     null != c &&
-                        (0, l.jsx)("img", {
+                        (0, t.jsx)("img", {
                             className: s.logo,
                             src: c,
-                            alt: t.title,
+                            alt: l.title,
                         }),
-                    (0, l.jsx)(r.Text, {
+                    (0, t.jsx)(d.Text, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: t.title,
+                        children: l.title,
                     }),
                 ],
             }),
-            t.pages.map((e, t) =>
-                (0, l.jsx)(
-                    r.P3F,
+            l.pages.map((n, l) =>
+                (0, t.jsx)(
+                    d.P3F,
                     {
                         onClick: () => {
                             (0, o.Z)({
-                                guildId: n,
-                                pageIndex: t,
+                                guildId: e,
+                                pageIndex: l,
                             });
                         },
-                        className: a()(s.pageTitleContainer, { [s.selectedPageIndicator]: i === t }),
-                        children: (0, l.jsx)(r.Heading, {
+                        className: a()(s.pageTitleContainer, { [s.selectedPageIndicator]: i === l }),
+                        children: (0, t.jsx)(d.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             lineClamp: 1,
-                            children: e.title,
+                            children: n.title,
                         }),
                     },
-                    "".concat(e.title, "-").concat(t),
+                    "".concat(n.title, "-").concat(l),
                 ),
             ),
         ],

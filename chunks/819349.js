@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(771027),
     g = n(981631),
     b = n(388032),
-    y = n(108426),
-    C = n(368736);
+    y = n(214669),
+    C = n(867721);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -182,7 +182,7 @@ function _(e) {
                                           text: b.intl.string(b.t["EE+P0H"]),
                                           overflowOnly: !0,
                                           children: (0, i.jsx)(c.Text, {
-                                              variant: "text-md/normal",
+                                              variant: "text-sm/medium",
                                               className: y.label,
                                               lineClamp: 1,
                                               children: b.intl.string(b.t["EE+P0H"]),

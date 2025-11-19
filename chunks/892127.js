@@ -17,7 +17,7 @@ var i = n(54381),
     O = n(985149),
     v = n(561064),
     E = n(981631),
-    b = n(377409);
+    b = n(156581);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,10 +100,10 @@ let x = r.memo(function (e) {
                 widget_top: g.top,
             });
         }, []),
-        D = r.useCallback((e) => {
+        k = r.useCallback((e) => {
             (0, s.Os)(e);
         }, []),
-        { id: k, pinned: R, zIndex: L, size: M, anchor: z, minSize: V } = t,
+        { id: D, pinned: R, zIndex: L, size: M, anchor: z, minSize: V } = t,
         U = r.useMemo(() => (0, h.w_)(M, P), [M, P]),
         W = (0, h.KR)(z, P),
         { resizeX: G, resizeY: F, dragAnywhere: B } = null != N ? N : {},
@@ -151,7 +151,7 @@ let x = r.memo(function (e) {
             },
             j,
         ),
-        id: k,
+        id: D,
         size: U,
         anchor: W,
         container: Y,
@@ -170,7 +170,7 @@ let x = r.memo(function (e) {
         dragAnywhere: null != B && B,
         active: !w,
         onUpdate: A,
-        onClick: D,
+        onClick: k,
         targetWindow: T,
         forceShowExtras: Z,
         renderExtras: K,

@@ -136,7 +136,7 @@ function A(e) {
                 comparator: i,
             });
     }
-    (j = n), k.emitChange();
+    (j = n), D.emitChange();
 }
 function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
@@ -152,7 +152,7 @@ function R(e) {
 function L() {
     null != i && (i.destroy(), (i = null)), P();
 }
-class D extends (r = a.ZP.Store) {
+class k extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, y.default),
             this.syncWith([y.default, f.Z], Z),
@@ -180,15 +180,15 @@ class D extends (r = a.ZP.Store) {
         };
     }
 }
-(l = "displayName") in D
-    ? Object.defineProperty(D, l, {
+(l = "displayName") in k
+    ? Object.defineProperty(k, l, {
           value: "PrivateChannelRecipientsInviteStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (D[l] = "PrivateChannelRecipientsInviteStore");
-let k = new D(o.Z, {
+    : (k[l] = "PrivateChannelRecipientsInviteStore");
+let D = new k(o.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -221,4 +221,4 @@ let k = new D(o.Z, {
             E.delete(t), (E = new Set(E));
         },
     }),
-    U = k;
+    U = D;

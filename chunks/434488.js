@@ -17,12 +17,12 @@ var i = n(54381),
     y = n(895924),
     C = n(266454),
     v = n(340541),
-    _ = n(416345),
+    _ = n(448239),
     x = n(626135),
     j = n(607187),
     O = n(981631),
     E = n(388032),
-    S = n(348130),
+    S = n(954289),
     P = n(359165);
 function I(e) {
     let { channel: t, guild: n, width: r, inPopout: l, handleClose: a, userParticipantCount: o } = e;
@@ -122,7 +122,7 @@ function T(e) {
     function f() {
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89334")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {

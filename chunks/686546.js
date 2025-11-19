@@ -10,7 +10,7 @@ var r = n(54381),
     s = n(3682),
     l = n(419061),
     c = n(268685),
-    u = n(536380);
+    u = n(634866);
 function d(e, t, n) {
     return (
         t in e
@@ -532,7 +532,7 @@ function w(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     let t = "".concat(e, "-gradient");
     return (0, r.jsxs)("mask", {
         id: e,
@@ -567,7 +567,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1209,13 +1209,13 @@ let el = es,
                     T("svg-mask-header-bar-badge-top", 0.25),
                     T("svg-mask-header-bar-badge-bottom", 0.75),
                     A("svg-mask-voice-user-summary-item"),
-                    x("svg-mask-vertical-fade"),
+                    L("svg-mask-vertical-fade"),
                     S("svg-mask-panel-button"),
                     v("svg-mask-channel-call-control-button"),
                     I("svg-mask-channel-call-control-button-badge-16", 16),
                     I("svg-mask-channel-call-control-button-badge-22", 22),
                     I("svg-mask-channel-call-control-button-badge-29", 29),
-                    L("svg-mask-avatar-default"),
+                    x("svg-mask-avatar-default"),
                     M("svg-mask-avatar-status-round-16", c.EF.SIZE_16),
                     k("svg-mask-avatar-decoration-status-round-16", c.EF.SIZE_16),
                     G("svg-mask-avatar-status-mobile-16", c.EF.SIZE_16),
@@ -1322,7 +1322,7 @@ let el = es,
                     P("svg-mask-diagonal-facepile-status-120", c.EF.SIZE_120),
                     D("svg-mask-diagonal-facepile-typing-120", c.EF.SIZE_120),
                     Z("svg-mask-status-online-mobile"),
-                    L("svg-mask-status-online"),
+                    x("svg-mask-status-online"),
                     F("svg-mask-status-idle"),
                     V("svg-mask-status-dnd"),
                     H("svg-mask-status-offline"),

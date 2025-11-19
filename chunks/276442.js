@@ -89,8 +89,8 @@ function O(e) {
             paymentAuthenticationState: P,
             selectedSkuId: D,
             activeSubscription: w,
-            previousStepRef: x,
-            setPurchaseState: L,
+            previousStepRef: L,
+            setPurchaseState: x,
             paymentElementsEnabled: M,
         } = (0, d.JL)(),
         { isGift: k } = (0, u.wD)(),
@@ -117,14 +117,14 @@ function O(e) {
     let F = (0, a.Z)(() => Date.now(), [I]),
         V = (0, a.Z)(
             () =>
-                null != O && null == x.current
+                null != O && null == L.current
                     ? M && O === f.h8.CREDIT_CARD_INFORMATION
                         ? f.h8.PAYMENT_ELEMENT
                         : O
                     : M
                       ? f.h8.PAYMENT_ELEMENT
                       : f.h8.PAYMENT_TYPE,
-            [O, x.current, M],
+            [O, L.current, M],
         );
     return (0, s.vP)({
         paymentModalArgs: j,
@@ -138,7 +138,7 @@ function O(e) {
         onReturn: Z,
         onComplete: (e) => {
             f.Nj.has(e)
-                ? (L(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
+                ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
                 : c(f.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {

@@ -1,7 +1,7 @@
 n.d(t, {
-    $Z: () => k,
+    $Z: () => j,
     Cp: () => U,
-    F_: () => x,
+    F_: () => L,
     Se: () => F,
     ZN: () => G,
     tF: () => Z,
@@ -87,14 +87,14 @@ function w(e) {
     let n = null != (t = P[e.charAt(0)]) ? t : null;
     return [e.replace(D, ""), n];
 }
-function x(e) {
+function L(e) {
     let [t, n] = w(e);
     return {
         query: t,
         queryMode: n,
     };
 }
-function L(e) {
+function x(e) {
     let t;
     if (T.Z.isOpen()) return;
     let n = y.Z.getGuildId(),
@@ -164,23 +164,23 @@ function M(e, t) {
     }
     O.default.track(e, h);
 }
-function j() {
+function k() {
     i.Z.dispatch({ type: "QUICKSWITCHER_HIDE" });
 }
-function k() {
+function j() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    L(e), i.Z.dispatch(N({ type: "QUICKSWITCHER_SHOW" }, x(t)));
+    x(e), i.Z.dispatch(N({ type: "QUICKSWITCHER_SHOW" }, L(t)));
 }
 function U() {
-    M(S.rMx.QUICKSWITCHER_CLOSED), j();
+    M(S.rMx.QUICKSWITCHER_CLOSED), k();
 }
 function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
-    T.Z.isOpen() ? U() : k(e);
+    T.Z.isOpen() ? U() : j(e);
 }
 function B(e) {
-    i.Z.dispatch(N({ type: "QUICKSWITCHER_SEARCH" }, x(e)));
+    i.Z.dispatch(N({ type: "QUICKSWITCHER_SEARCH" }, L(e)));
 }
 function Z(e) {
     i.Z.dispatch({
@@ -191,7 +191,7 @@ function Z(e) {
 function F(e) {
     let t,
         m = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    j(), (0, r.pTH)(), M(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    k(), (0, r.pTH)(), M(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: b, record: y } = e,
         O = { page: S.ZY5.QUICK_SWITCHER };
     switch (b) {

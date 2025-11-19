@@ -1,9 +1,9 @@
 n.d(t, {
-    H: () => j,
-    T: () => O,
+    H: () => x,
+    T: () => j,
 }),
     n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(442837),
     l = n(570140),
     a = n(439170),
@@ -20,25 +20,25 @@ var r = n(647438),
     b = n(206583),
     _ = n(809017),
     y = n(981631),
-    x = n(388032);
-let O = 0;
-function j(e) {
+    O = n(388032);
+let j = 0;
+function x(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: O },
-            channelId: j,
+            memberStoreProps: { groups: t, rows: n, version: j },
+            channelId: x,
             guildId: v,
         } = e,
         [C, I] = r.useState(!1),
-        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(j),
+        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(x),
         P = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        N = (0, i.e7)([s.Z], () => s.Z.getChannel(j)),
+        N = (0, i.e7)([s.Z], () => s.Z.getChannel(x)),
         R = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
         w = (0, h.E)(R),
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, O];
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, j];
             let r = C ? E.length : 3,
                 i = E.slice(0, r);
             e = P
@@ -54,13 +54,13 @@ function j(e) {
                 key: _.G,
                 count: e.length,
                 index: n.length,
-                title: x.intl.string(x.t["6gwSFY"]),
+                title: O.intl.string(O.t["6gwSFY"]),
                 onToggleExpand: () => {
                     I((e) => {
                         let t = !e;
                         return (
                             d.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: j,
+                                channel_id: x,
                                 guild_id: v,
                                 expanded: t,
                             }),
@@ -73,7 +73,7 @@ function j(e) {
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [j, E, C, t, v, S, n, O, P, A]),
+        }, [x, E, C, t, v, S, n, j, P, A]),
         U = r.useRef(0),
         G = r.useRef(E),
         H = r.useRef(void 0),
@@ -111,7 +111,7 @@ function j(e) {
                             first_shown_at: H.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
-                            channel_id: j,
+                            channel_id: x,
                             guild_id: v,
                             all_item_ids: n,
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
@@ -123,7 +123,7 @@ function j(e) {
                             }));
                 }
             ),
-            [S, j, v, P, T, A],
+            [S, x, v, P, T, A],
         ),
         {
             groups: D,

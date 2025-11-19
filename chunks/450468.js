@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(78839),
     E = n(74538),
     b = n(388032),
-    y = n(409150);
+    y = n(451670);
 async function O(e, t, n, r) {
     let i = (0, E.MY)(e, t);
     await (0, d.bG)(n),
@@ -122,7 +122,7 @@ function T(e) {
                     return [];
             }
         },
-        x = () => {
+        L = () => {
             if (null == y) return (0, r.jsx)(c.$jN, {});
             switch (T) {
                 case 1:
@@ -141,7 +141,7 @@ function T(e) {
             size: "sm",
             title: D(),
             actions: w(),
-            children: x(),
+            children: L(),
         }),
     });
 }

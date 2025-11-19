@@ -36,15 +36,15 @@ var r,
     P = n(408433),
     D = n(956664),
     w = n(624138),
-    x = n(591759),
-    L = n(468846),
+    L = n(591759),
+    x = n(468846),
     M = n(401419),
     k = n(249458),
     j = n(981631),
     U = n(217702),
     G = n(388032),
-    B = n(781452),
-    Z = n(430864);
+    B = n(111925),
+    Z = n(602009);
 function F(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ function $(e, t) {
     return "".concat(r + 1, " / ").concat(r + n + 1);
 }
 function ee(e) {
-    let t = x.Z.toURLSafe(e);
+    let t = L.Z.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
 function et(e) {
@@ -139,7 +139,7 @@ function et(e) {
             onControlsShow: R,
             onVolumeChange: P,
             onMute: w,
-            href: x,
+            href: L,
             placeholder: M,
             placeholderVersion: k,
             sourceMetadata: U,
@@ -236,7 +236,7 @@ function et(e) {
             children: (0, i.jsx)("div", {
                 className: s()(B.embedVideo, o),
                 style: a,
-                children: (0, i.jsx)(L.ZP, {
+                children: (0, i.jsx)(x.ZP, {
                     provider: f,
                     src: d.url,
                     style: e,
@@ -279,7 +279,7 @@ function et(e) {
                     children: b
                         ? (0, i.jsx)(E.Z, {
                               onPlay: null != d ? H : null,
-                              externalURL: x,
+                              externalURL: L,
                               renderLinkComponent: g,
                               messageId: null == U || null == (t = U.message) ? void 0 : t.id,
                               channelId: null == U || null == (n = U.message) ? void 0 : n.channel_id,

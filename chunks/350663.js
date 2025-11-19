@@ -14,7 +14,7 @@ var i = n(54381),
     m = n(461393),
     g = n(340101),
     y = n(981631),
-    O = n(339882);
+    O = n(273523);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ let b = {
             T = (0, c.Z)(S),
             P = _ === g.C5.VERTICAL,
             A = S || T !== S || w !== n,
-            D = r.useMemo(() => {
+            k = r.useMemo(() => {
                 let e = 0,
                     t = 0;
                 return P
@@ -107,19 +107,19 @@ let b = {
                           }),
                       );
             }, [Z, N, P]),
-            k = r.useMemo(
+            D = r.useMemo(
                 () =>
-                    0 === D.length
+                    0 === k.length
                         ? (0, m.MH)(f.bt)
-                        : D.reduce((e, t) => e + t.height, 0) + (P ? N * (D.length - 1) : 0),
-                [D, P, N],
+                        : k.reduce((e, t) => e + t.height, 0) + (P ? N * (k.length - 1) : 0),
+                [k, P, N],
             ),
             R = r.useMemo(
-                () => (0 === D.length ? f.bt : D.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (D.length - 1))),
-                [D, P, N],
+                () => (0 === k.length ? f.bt : k.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (k.length - 1))),
+                [k, P, N],
             ),
             L = (0, s.Yzy)(
-                D,
+                k,
                 {
                     key: (e) => e.key,
                     from: {
@@ -172,7 +172,7 @@ let b = {
                     [O.vertical]: P,
                     [O.horizontal]: !P,
                 }),
-                style: P ? { height: k } : { width: R },
+                style: P ? { height: D } : { width: R },
                 children: L((e, t, r, o) =>
                     (0, i.jsx)(a.animated.div, {
                         className: O.gridItem,

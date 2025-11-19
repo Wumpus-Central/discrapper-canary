@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(592125),
     d = n(306680),
     p = n(9156),
-    f = n(451478);
-function h(e) {
+    h = n(451478);
+function f(e) {
     let t = u.Z.getChannel(e);
     return (
         null != t &&
@@ -54,7 +54,7 @@ let m = i.forwardRef(function (e, t) {
             return i;
         })(e, ["guildId", "guildChannels", "guildChannelsVersion"]);
     let p = (0, o.T)(s, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
-        m = (0, l.e7)([f.Z], () => f.Z.isFocused());
+        m = (0, l.e7)([h.Z], () => h.Z.isFocused());
     return (0, r.jsx)(
         a.Z,
         ((n = (function (e) {
@@ -84,7 +84,7 @@ let m = i.forwardRef(function (e, t) {
         })({ ref: t }, d)),
         (i = i =
             {
-                isUnread: h,
+                isUnread: f,
                 isMentioned: g,
                 items: p,
                 animate: m,

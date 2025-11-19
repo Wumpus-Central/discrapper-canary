@@ -8,7 +8,7 @@ var r = n(54381),
     d = n(699758),
     c = n(913338),
     u = n(388032),
-    p = n(807276);
+    p = n(577806);
 function m(e) {
     var t, n, a, m;
     let { defaultCategory: h, onCategoryChange: f, className: b } = e,

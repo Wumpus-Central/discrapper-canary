@@ -38,7 +38,7 @@ var n = A(54381),
     z = A(981631),
     w = A(674563),
     B = A(388032),
-    L = A(179598);
+    L = A(707449);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
@@ -312,8 +312,8 @@ function J(e) {
         r.useEffect(() => {
             e$ && eJ(void 0);
         }, [e$]);
-    let e2 = r.useRef(null),
-        e8 = !e3 || (!ed && es >= S.dD);
+    let e8 = r.useRef(null),
+        e2 = !e3 || (!ed && es >= S.dD);
     return (0, n.jsxs)(g.Y0X, {
         transitionState: er,
         size: g.CgR.DYNAMIC,
@@ -358,7 +358,7 @@ function J(e) {
                     (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: L.productFieldsSection,
-                            ref: e2,
+                            ref: e8,
                             children: [
                                 (0, n.jsx)(g.oil, {
                                     label: B.intl.string(B.t.Hsk7xT),
@@ -437,7 +437,7 @@ function J(e) {
                                           children: (0, n.jsx)(N.s, {
                                               onFileAdded: () => {
                                                   var e;
-                                                  null == (e = e2.current) ||
+                                                  null == (e = e8.current) ||
                                                       e.scrollIntoView({
                                                           behavior: "smooth",
                                                           block: "end",
@@ -468,7 +468,7 @@ function J(e) {
                             className: L.productPreview,
                             children: [
                                 (0, n.jsx)(X.Z, {
-                                    disabled: e8,
+                                    disabled: e2,
                                     disabledTooltip: ed
                                         ? B.intl.string(B.t["0NQ00t"])
                                         : es >= S.dD

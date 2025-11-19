@@ -1,34 +1,34 @@
-a.d(e, { N: () => u });
-var r = a(395848),
-    _ = a(140955),
-    n = a(202937),
-    o = a(416987),
-    i = a(596308),
-    E = a(622574),
-    c = a(433691),
-    s = a(135813),
-    l = a(662355);
+_.d(e, { N: () => N });
+var a = _(395848),
+    r = _(140955),
+    n = _(202937),
+    o = _(416987),
+    E = _(596308),
+    i = _(622574),
+    c = _(433691),
+    s = _(135813),
+    l = _(662355);
 let I = [2500, 4000],
     R = {},
-    u = (t, e = {}) => {
+    N = (t, e = {}) => {
         (0, l.A)(() => {
-            let a,
+            let _,
                 l = (0, o.Y)(),
-                u = (0, i.I)("LCP"),
+                N = (0, E.I)("LCP"),
                 A = (t) => {
                     let e = t[t.length - 1];
                     e &&
                         e.startTime < l.firstHiddenTime &&
-                        ((u.value = Math.max(e.startTime - (0, n.A)(), 0)), (u.entries = [e]), a());
+                        ((N.value = Math.max(e.startTime - (0, n.A)(), 0)), (N.entries = [e]), _());
                 },
-                N = (0, E.N)("largest-contentful-paint", A);
-            if (N) {
-                a = (0, _._)(t, u, I, e.reportAllChanges);
+                u = (0, i.N)("largest-contentful-paint", A);
+            if (u) {
+                _ = (0, r._)(t, N, I, e.reportAllChanges);
                 let n = (0, s.R)(() => {
-                    R[u.id] || (A(N.takeRecords()), N.disconnect(), (R[u.id] = !0), a(!0));
+                    R[N.id] || (A(u.takeRecords()), u.disconnect(), (R[N.id] = !0), _(!0));
                 });
                 ["keydown", "click"].forEach((t) => {
-                    r.m.document && addEventListener(t, () => setTimeout(n, 0), !0);
+                    a.m.document && addEventListener(t, () => setTimeout(n, 0), !0);
                 }),
                     (0, c.u)(n);
             }

@@ -34,13 +34,13 @@ function a(e, t) {
         P = n - (parseInt(E, 10) || 0),
         D = n + i + R,
         w = r - C,
-        x = r + a + N,
-        L = s + parseInt(u, 10) + A,
+        L = r + a + N,
+        x = s + parseInt(u, 10) + A,
         M = O - S,
         k = l + parseInt(c, 10) + I,
         j = v - T;
-    (P > L || D < M) && (P <= s + A ? (s = P - parseInt(u, 10) - A) : D > O - S && (s += D - O + S)),
-        (w > k || x < j) && (w <= y + I ? (l = w - parseInt(c, 10) - I) : x > v - T && (l += x - v + T)),
+    (P > x || D < M) && (P <= s + A ? (s = P - parseInt(u, 10) - A) : D > O - S && (s += D - O + S)),
+        (w > k || L < j) && (w <= y + I ? (l = w - parseInt(c, 10) - I) : L > v - T && (l += L - v + T)),
         e.scrollTo({
             left: s,
             top: l,

@@ -9,9 +9,9 @@ var i = n(509613),
     c = n(202841),
     E = n(603569),
     S = n(674574),
-    d = n(798922),
-    T = n(388032);
+    T = n(798922),
+    d = n(388032);
 let I = (0, i.vB)(l.n.USER_SECTION, {
-    useLabel: () => T.intl.string(T.t.cduTBL),
-    buildLayout: () => [u.x, o.r, c.f, E.a, r.h, d.F, a.J, S.e_, s.KL],
+    useLabel: () => d.intl.string(d.t.cduTBL),
+    buildLayout: () => [u.x, o.r, c.f, E.a, r.h, T.F, a.J, S.e_, s.KL],
 });

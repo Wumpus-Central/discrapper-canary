@@ -129,7 +129,7 @@ function S(e) {
         let i = e[n];
         Array.isArray(i) || (i = [i]),
             i.forEach((e) => {
-                (0, r.wB)(t, A(e.attributes)), "object" == typeof e.value && (0, r.wB)(t, L(e.value));
+                (0, r.wB)(t, A(e.attributes)), "object" == typeof e.value && (0, r.wB)(t, x(e.value));
             });
     }
     return t;
@@ -174,10 +174,10 @@ function D(e) {
 }
 function w(e) {
     let t = [];
-    for (let n in e) t.push(`${x(n)}: ${P(e[n].value)}`);
+    for (let n in e) t.push(`${L(n)}: ${P(e[n].value)}`);
     return t.join("; ");
 }
-function x(e) {
+function L(e) {
     return "CiAdrCity" === e
         ? "CreatorCity"
         : "CiAdrCtry" === e
@@ -196,7 +196,7 @@ function x(e) {
                       ? "CreatorWorkUrl"
                       : e;
 }
-function L(e) {
+function x(e) {
     let t = {};
     for (let n in e)
         try {
@@ -205,9 +205,9 @@ function L(e) {
     return t;
 }
 function M(e, t) {
-    return k(e)
+    return j(e)
         ? U(e, t)
-        : j(e)
+        : k(e)
           ? {
                 value: "",
                 attributes: {},
@@ -223,10 +223,10 @@ function M(e, t) {
                   ? X(e, t)
                   : J(e, t);
 }
-function j(e) {
+function k(e) {
     return "Resource" === e.attributes["rdf:parseType"] && "string" == typeof e.value && "" === e.value.trim();
 }
-function k(e) {
+function j(e) {
     return Array.isArray(e);
 }
 function U(e, t) {
@@ -277,7 +277,7 @@ function Y(e, t) {
             ((0, r.wB)(n.value, A(e.value["rdf:Description"].attributes)),
             (0, r.wB)(n.attributes, Z(e)),
             (e = e.value["rdf:Description"])),
-        (0, r.wB)(n.value, L(e.value)),
+        (0, r.wB)(n.value, x(e.value)),
         (n.description = P(n.value, t)),
         n
     );

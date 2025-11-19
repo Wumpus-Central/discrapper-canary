@@ -1,60 +1,60 @@
-a.d(e, { R: () => i });
-var r = a(622916),
-    _ = a(688838),
-    n = a(151122),
-    o = a(255768);
-let i = (0, n._I)(() => {
+_.d(e, { R: () => E });
+var a = _(622916),
+    r = _(688838),
+    n = _(151122),
+    o = _(255768);
+let E = (0, n._I)(() => {
     let t;
     return {
         name: "Dedupe",
         processEvent(e) {
             if (e.type) return e;
             try {
-                var a, _;
+                var _, r;
                 if (
-                    ((a = e),
-                    (_ = t) &&
+                    ((_ = e),
+                    (r = t) &&
                         ((function (t, e) {
-                            let a = t.message,
-                                r = e.message;
+                            let _ = t.message,
+                                a = e.message;
                             return (
-                                (!!a || !!r) && (!a || !!r) && (!!a || !r) && a === r && !!c(t, e) && !!E(t, e) && !0
+                                (!!_ || !!a) && (!_ || !!a) && (!!_ || !a) && _ === a && !!c(t, e) && !!i(t, e) && !0
                             );
-                        })(a, _) ||
+                        })(_, r) ||
                             (function (t, e) {
-                                let a = s(e),
-                                    r = s(t);
-                                return !!a && !!r && a.type === r.type && a.value === r.value && !!c(t, e) && !!E(t, e);
-                            })(a, _)))
+                                let _ = s(e),
+                                    a = s(t);
+                                return !!_ && !!a && _.type === a.type && _.value === a.value && !!c(t, e) && !!i(t, e);
+                            })(_, r)))
                 )
                     return (
-                        o.X && r.kg.warn("Event dropped due to being a duplicate of previously captured event."), null
+                        o.X && a.kg.warn("Event dropped due to being a duplicate of previously captured event."), null
                     );
             } catch (t) {}
             return (t = e);
         },
     };
 });
-function E(t, e) {
-    let a = (0, _.Fr)(t),
-        r = (0, _.Fr)(e);
-    if (!a && !r) return !0;
-    if ((a && !r) || (!a && r) || r.length !== a.length) return !1;
-    for (let t = 0; t < r.length; t++) {
-        let e = r[t],
-            _ = a[t];
-        if (e.filename !== _.filename || e.lineno !== _.lineno || e.colno !== _.colno || e.function !== _.function)
+function i(t, e) {
+    let _ = (0, r.Fr)(t),
+        a = (0, r.Fr)(e);
+    if (!_ && !a) return !0;
+    if ((_ && !a) || (!_ && a) || a.length !== _.length) return !1;
+    for (let t = 0; t < a.length; t++) {
+        let e = a[t],
+            r = _[t];
+        if (e.filename !== r.filename || e.lineno !== r.lineno || e.colno !== r.colno || e.function !== r.function)
             return !1;
     }
     return !0;
 }
 function c(t, e) {
-    let a = t.fingerprint,
-        r = e.fingerprint;
-    if (!a && !r) return !0;
-    if ((a && !r) || (!a && r)) return !1;
+    let _ = t.fingerprint,
+        a = e.fingerprint;
+    if (!_ && !a) return !0;
+    if ((_ && !a) || (!_ && a)) return !1;
     try {
-        return a.join("") === r.join("");
+        return _.join("") === a.join("");
     } catch (t) {
         return !1;
     }

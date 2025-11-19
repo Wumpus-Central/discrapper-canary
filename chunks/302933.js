@@ -1,15 +1,15 @@
-n.d(t, { J: () => g });
+n.d(t, { J: () => p });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(636606),
-    s = n(873546),
+    s = n(636606),
+    o = n(873546),
     c = n(435935),
     u = n(481060),
     d = n(168020),
-    p = n(779485);
-let g = l.memo(function (e) {
+    g = n(535123);
+let p = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: n } = e,
         l = (0, u.q_F)({
             transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
@@ -19,8 +19,8 @@ let g = l.memo(function (e) {
                 friction: 12,
             },
         });
-    return (0, r.jsxs)(o.animated.div, {
-        className: a()([p.countDownWrapper, s.tq && p.mobileWrapper]),
+    return (0, r.jsxs)(s.animated.div, {
+        className: a()([g.countDownWrapper, o.tq && g.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -62,7 +62,7 @@ let g = l.memo(function (e) {
                 children: [
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: p.countdownLabel,
+                        className: g.countdownLabel,
                         style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
                         children: t.title,
                     }),
@@ -70,7 +70,7 @@ let g = l.memo(function (e) {
                         "" !== t.body &&
                         (0, r.jsx)(u.Text, {
                             variant: "text-sm/medium",
-                            className: p.countdownBody,
+                            className: g.countdownBody,
                             style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
                             children: t.body,
                         }),

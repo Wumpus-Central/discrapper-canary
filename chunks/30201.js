@@ -1,7 +1,7 @@
 var r = n(220159),
     o = n(642280),
     a = n(779688),
-    i = n(829575),
+    i = n(525320),
     s = n(54978).onFreeze,
     c = Object.freeze;
 r(

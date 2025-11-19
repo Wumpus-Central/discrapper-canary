@@ -16,7 +16,7 @@ var l = t(54381),
     m = t(51144),
     g = t(912332),
     y = t(388032),
-    O = t(296719);
+    O = t(191926);
 function x(e) {
     let { icon: n, label: t } = e;
     return (0, l.jsxs)("div", {

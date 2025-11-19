@@ -6,7 +6,7 @@ var i = n(54381),
     o = n(772848),
     s = n(481060),
     c = n(481051),
-    u = n(753797);
+    u = n(612641);
 function d(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: a = !1 } = e,
         [c] = r.useState(() => (0, o.Z)());

@@ -8,7 +8,7 @@ n.d(t, {
     ko: () => c,
 }),
     n(35282),
-    n(647438);
+    n(473749);
 let r = ["gif", "webp", "png", "apng"];
 function i(e) {
     return "type" in e && "image" === e.type && "string" == typeof e.src;

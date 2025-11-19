@@ -42,7 +42,7 @@ function b() {
                 }),
                 p.rR.updateSetting(t);
         }, []),
-        x = () =>
+        L = () =>
             (0, r.jsx)(a.FXm, {
                 label: E.intl.string(E.t.QgwmVz),
                 description: E.intl.string(E.t.TYnRkS),
@@ -276,7 +276,7 @@ function b() {
                 }),
                 (0, r.jsxs)(f.F, {
                     setting: m.s6.CHAT_SPOILERS,
-                    children: [(0, r.jsx)(a.izJ, {}), x()],
+                    children: [(0, r.jsx)(a.izJ, {}), L()],
                 }),
             ],
         }),

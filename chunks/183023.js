@@ -37,8 +37,8 @@ var r = n(54381),
     P = n(563927),
     D = n(98278),
     w = n(767714),
-    x = n(703656),
-    L = n(944486),
+    L = n(703656),
+    x = n(944486),
     M = n(914010),
     k = n(594174),
     j = n(626135),
@@ -51,7 +51,7 @@ var r = n(54381),
     H = n(176505),
     Y = n(474936),
     W = n(388032),
-    K = n(975900);
+    K = n(702417);
 function z(e, t, n) {
     return (
         t in e
@@ -162,7 +162,7 @@ let J = 32,
             }),
             f = (n = null == n || n) || t.isDiscoverable(),
             p = () => {
-                t.isDiscoverable() ? (0, G.Ub)(a, {}) : n && (0, x.uL)(V.Z5c.CHANNEL(a, L.Z.getChannelId(a)));
+                t.isDiscoverable() ? (0, G.Ub)(a, {}) : n && (0, L.uL)(V.Z5c.CHANNEL(a, x.Z.getChannelId(a)));
             },
             h = () =>
                 null != d && f
@@ -309,8 +309,8 @@ let J = 32,
                 joinedEmojiSourceGuildRecord: S,
                 closePopout: A,
                 onToggleShowMoreEmojis: P,
-                guildEmoji: x,
-                demoMode: L = !1,
+                guildEmoji: L,
+                demoMode: x = !1,
                 nonce: U,
             } = e,
             G = (0, l.e7)([k.default], () => k.default.getCurrentUser()),
@@ -319,7 +319,7 @@ let J = 32,
             X = null != z && (z === (null == v ? void 0 : v.id) || z === (null == S ? void 0 : S.id)),
             Q = null != S,
             J = null != (t = null == v ? void 0 : v.isDiscoverable()) && t;
-        L && ((q = !0), (J = !0), (Q = !1), (X = !1));
+        x && ((q = !0), (J = !0), (Q = !1), (X = !1));
         let $ = ee(),
             {
                 isRoleSubscriptionEmoji: et,
@@ -327,20 +327,20 @@ let J = 32,
                 userIsRoleSubscriber: ei,
             } = i.useMemo(
                 () =>
-                    null == x
+                    null == L
                         ? {
                               isRoleSubscriptionEmoji: !1,
                               isUnusableRoleSubscriptionEmoji: !1,
                               userIsRoleSubscriber: !1,
                           }
                         : {
-                              isRoleSubscriptionEmoji: C.yH(x),
-                              isUnusableRoleSubscriptionEmoji: C.Fv(x, null != z ? z : void 0),
-                              userIsRoleSubscriber: N.Z.getUserSubscriptionRoles(x.guildId).size > 0,
+                              isRoleSubscriptionEmoji: C.yH(L),
+                              isUnusableRoleSubscriptionEmoji: C.Fv(L, null != z ? z : void 0),
+                              userIsRoleSubscriber: N.Z.getUserSubscriptionRoles(L.guildId).size > 0,
                           },
-                [x, z],
+                [L, z],
             ),
-            eo = !!er && (0, O.Ol)(null == x ? void 0 : x.guildId),
+            eo = !!er && (0, O.Ol)(null == L ? void 0 : L.guildId),
             { analyticsLocations: es } = (0, g.ZP)(m.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
         (0, E.Z)(
             {
@@ -348,8 +348,8 @@ let J = 32,
                 name: s.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
                 properties: {
                     location_stack: es,
-                    emoji_guild_id: null != (n = null == x ? void 0 : x.guildId) ? n : null,
-                    emoji_id: null != (a = null == x ? void 0 : x.id) ? a : null,
+                    emoji_guild_id: null != (n = null == L ? void 0 : L.guildId) ? n : null,
+                    emoji_id: null != (a = null == L ? void 0 : L.id) ? a : null,
                 },
             },
             { disableTrack: !et },
@@ -383,13 +383,13 @@ let J = 32,
                 popoutData: ec,
                 emojiSourceGuildId: null == v ? void 0 : v.id,
                 nonce: U,
-                demoMode: L,
+                demoMode: x,
             }),
             e_ = ec.type === Z.$.JOIN_GUILD,
             ep = ec.type === Z.$.GET_PREMIUM,
             eh = () => {
                 let e = async () => {
-                        if (L || null == v || Q) return;
+                        if (x || null == v || Q) return;
                         A();
                         let e = v.id;
                         try {
@@ -483,7 +483,7 @@ let J = 32,
                     i = () => {
                         n &&
                             (null == P || P(),
-                            em || L || j.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
+                            em || x || j.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
                             eg(!em));
                     },
                     a = () => {

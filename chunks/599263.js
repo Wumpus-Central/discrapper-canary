@@ -28,7 +28,7 @@ var r = n(54381),
     I = n(973051),
     Z = n(981631),
     T = n(388032),
-    w = n(718215);
+    w = n(904885);
 function S(e) {
     let { guildId: t } = e,
         { ref: n, width: o, height: S } = (0, u.ZP)(),

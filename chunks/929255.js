@@ -11,9 +11,9 @@ var r = n(54381),
     g = n(501431),
     p = n(888302),
     f = n(193227),
-    h = n(426171),
-    C = n(845796),
-    m = n(841875),
+    m = n(426171),
+    h = n(845796),
+    C = n(841875),
     _ = n(312030),
     b = n(795343),
     v = n(763891),
@@ -26,8 +26,8 @@ function y(e) {
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: C } = (0, o.z)(f, t),
-        { setCategoryRef: _, handleScrollToCategory: b } = (0, h.xV)(f.current),
+        { handleScroll: h } = (0, o.z)(f, t),
+        { setCategoryRef: _, handleScrollToCategory: b } = (0, m.xV)(f.current),
         [v, x] = l.useState(p && c),
         [E, O] = l.useState(!1);
     return (
@@ -57,7 +57,7 @@ function y(e) {
                     (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
                         ref: f,
-                        onScroll: C,
+                        onScroll: h,
                         children: (0, r.jsx)(j, {
                             isSmallScreen: E,
                             filterBarOpen: v,
@@ -73,7 +73,7 @@ function y(e) {
                         !E &&
                         (0, r.jsx)(s.Ttm, {
                             className: S.filterBar,
-                            children: (0, r.jsx)(m.Z, {}),
+                            children: (0, r.jsx)(C.Z, {}),
                         }),
                 ],
             }),
@@ -86,7 +86,7 @@ let j = (e) => {
             filterBarOpen: n,
             setFilterBarOpen: i,
             tab: o,
-            scrollerRef: h,
+            scrollerRef: m,
             sortedCategories: y,
             setCategoryRef: j,
         } = e,
@@ -94,7 +94,7 @@ let j = (e) => {
         I = l.useRef(null),
         T = (0, g.S)((e) => e.hasDefaultFilters()),
         L = (0, u.sp)(),
-        { handlePageChange: B, currentPage: P } = (0, _.h)(h),
+        { handlePageChange: B, currentPage: P } = (0, _.h)(m),
         N = l.useCallback(
             (e) => {
                 c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -156,7 +156,7 @@ let j = (e) => {
                                                     variant: "text-md/semibold",
                                                     children: O.intl.string(O.t.uaX705),
                                                 }),
-                                                (0, r.jsx)(C.Z, {}),
+                                                (0, r.jsx)(h.Z, {}),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
@@ -190,7 +190,7 @@ let j = (e) => {
                                         ref: I,
                                         children: (0, r.jsx)(s.Den, {
                                             className: S.filterOverlayContent,
-                                            children: (0, r.jsx)(m.Z, {}),
+                                            children: (0, r.jsx)(C.Z, {}),
                                         }),
                                     }),
                             ],
@@ -199,7 +199,7 @@ let j = (e) => {
                         ? (0, r.jsx)(
                               b.Z,
                               {
-                                  scrollerRef: h,
+                                  scrollerRef: m,
                                   tab: o,
                               },
                               o,
@@ -208,7 +208,7 @@ let j = (e) => {
                           ? (0, r.jsx)(
                                 v.Z,
                                 {
-                                    scrollerRef: h,
+                                    scrollerRef: m,
                                     tab: o,
                                 },
                                 o,

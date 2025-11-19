@@ -117,8 +117,8 @@ function I(e) {
         return (0, r.jsx)(r.Fragment, { children: u({}) });
     let D = I >= v.length - 1,
         w = D ? s.r6K.RED : s.r6K.GREEN,
-        x = S ? w : s.r6K.PRIMARY,
-        L = () => {
+        L = S ? w : s.r6K.PRIMARY,
+        x = () => {
             var e;
             if (!S) return t;
             let n = (0, a.clamp)(I - 1, 0, v.length - 1),
@@ -143,11 +143,11 @@ function I(e) {
         };
     return (0, r.jsx)(s.aML, {
         "data-migration-pending": !0,
-        text: L(),
+        text: x(),
         delay: h,
         "aria-label": _,
         dataMeticulousIgnore: E,
-        color: x,
+        color: L,
         forceOpen: C,
         onAnimationRest: M,
         children: (e) => {

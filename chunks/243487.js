@@ -34,13 +34,13 @@ var r = n(54381),
     P = n(444295),
     D = n(804570),
     w = n(610394),
-    x = n(388627),
-    L = n(532658),
+    L = n(388627),
+    x = n(532658),
     M = n(501787),
     k = n(981631),
     j = n(65154),
     U = n(388032),
-    G = n(213285);
+    G = n(133214);
 function B(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ let H = (e) => {
 function Y(e) {
     var t, n;
     let { hiddenVoiceStates: i, voiceStateMap: a, size: c, locked: u, flipped: f } = e,
-        _ = (0, L.e5)(c),
+        _ = (0, x.e5)(c),
         p = (0, s.Wu)(
             [I.default, y.Z],
             () =>
@@ -191,7 +191,7 @@ let K = i.memo(function (e) {
                   }),
         R = y !== M.Og ? I.slice(0, y) : I,
         w = y !== M.Og ? I.slice(y) : [],
-        x = v.get(w[0]),
+        L = v.get(w[0]),
         B = u === k.OYC.ALWAYS && y !== M.Og;
     return T
         ? (0, r.jsxs)("div", {
@@ -202,7 +202,7 @@ let K = i.memo(function (e) {
                       return null == i
                           ? null
                           : (0, r.jsx)(
-                                L.ZP,
+                                x.ZP,
                                 {
                                     sortedVoiceState: i,
                                     channel: a,
@@ -221,11 +221,11 @@ let K = i.memo(function (e) {
                   }),
                   B &&
                       1 === w.length &&
-                      null != x &&
+                      null != L &&
                       (0, r.jsx)(
-                          L.ZP,
+                          x.ZP,
                           {
-                              sortedVoiceState: x,
+                              sortedVoiceState: L,
                               channel: a,
                               widgetId: t,
                               flipped: !g,
@@ -244,7 +244,7 @@ let K = i.memo(function (e) {
                       (0, r.jsx)(Y, {
                           hiddenVoiceStates: w,
                           voiceStateMap: v,
-                          size: (0, L.px)(b),
+                          size: (0, x.px)(b),
                           locked: d,
                           flipped: !g,
                       }),
@@ -325,7 +325,7 @@ function q(e) {
         a = (0, f.ZP)(i),
         o = z(j.Yn.DEFAULT, e.maxDisplayedVoiceStates),
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
-        c = (0, x.II)(),
+        c = (0, L.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
         p = (0, s.cj)([E.Z, A.default, w.Z], () => {
             let e = E.Z.getCurrentUserActiveStream();

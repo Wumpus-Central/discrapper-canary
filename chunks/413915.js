@@ -5,7 +5,7 @@ var s = t(54381),
     i = t(731722),
     c = t(172751),
     g = t(131085),
-    r = t(298282);
+    r = t(700731);
 let b = n.memo(function (a) {
     let { guildId: e, guildProfile: t } = a;
     return (0, s.jsx)("div", {

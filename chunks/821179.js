@@ -10,8 +10,8 @@ var i = n(194983),
     u = n(5192),
     d = n(652853),
     p = n(228168),
-    f = n(981631),
-    h = n(671955),
+    h = n(981631),
+    f = n(671955),
     g = n(163514);
 let m = (0, o.pxk)(o.EFr.SIZE_16);
 function b(e) {
@@ -20,7 +20,7 @@ function b(e) {
         j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(o.P3F, {
         focusProps:
-            v === h.l.MODAL_V2
+            v === f.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -115,7 +115,7 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, s.Lq)((0, l.wj)(O) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
+                badgeStrokeColor: (0, s.Lq)((0, l.wj)(O) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
                 badgeTooltipColor: o.r6K.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,

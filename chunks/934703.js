@@ -1,5 +1,5 @@
 n.d(t, { Z: () => v });
-var r = n(647438),
+var r = n(473749),
     o = n(713447),
     l = n(286379),
     i = n(442837),
@@ -49,7 +49,7 @@ function f(e) {
 }
 function v(e) {
     var t;
-    let { quest: n, videoRef: v, hlsRef: g, videoSessionId: E, videoAssetId: O, sourceQuestContent: b, logger: h } = e,
+    let { quest: n, videoRef: v, hlsRef: E, videoSessionId: g, videoAssetId: O, sourceQuestContent: h, logger: b } = e,
         S = (0, c._F)(),
         C = (0, c.O5)(),
         y = (0, i.e7)([s.Z], () => s.Z.getEffectiveConnectionSpeed()),
@@ -66,17 +66,17 @@ function v(e) {
                             {
                                 video_asset_id: O,
                                 network_connection_speed: e,
-                                video_session_id: E,
+                                video_session_id: g,
                                 is_hls_supported: o.ZP.isSupported(),
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, O, E, g, S, b],
+            [j, v, O, g, E, S, h],
         ),
-        T = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 null != v.current &&
                     null != e &&
@@ -88,16 +88,16 @@ function v(e) {
                                 video_asset_id: O,
                                 network_connection_speed: y,
                                 duration: e,
-                                video_session_id: E,
+                                video_session_id: g,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, O, E, g, S, b, y],
+            [j, v, O, g, E, S, h, y],
         ),
-        P = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 null != v.current &&
                     S({
@@ -106,15 +106,15 @@ function v(e) {
                         properties: p(
                             {
                                 duration_ms: e,
-                                video_session_id: E,
+                                video_session_id: g,
                                 video_asset_id: O,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, O, E, g, S, b],
+            [j, v, O, g, E, S, h],
         ),
         R = r.useCallback(() => {
             null != v.current &&
@@ -125,14 +125,14 @@ function v(e) {
                         {
                             progress: (0, u.bA)(v.current.currentTime, v.current.duration),
                             video_timestamp_seconds: v.current.currentTime,
-                            video_session_id: E,
+                            video_session_id: g,
                             video_asset_id: O,
                         },
-                        f(g),
+                        f(E),
                     ),
-                    sourceQuestContent: b,
+                    sourceQuestContent: h,
                 });
-        }, [j, v, E, g, S, O, b]),
+        }, [j, v, g, E, S, O, h]),
         I = r.useCallback(
             (e) => {
                 null != v.current &&
@@ -143,15 +143,15 @@ function v(e) {
                             {
                                 video_timestamp_seconds: v.current.currentTime,
                                 pause_reason: e,
-                                video_session_id: E,
+                                video_session_id: g,
                                 video_asset_id: O,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, E, g, S, O, b],
+            [j, v, g, E, S, O, h],
         ),
         N = r.useCallback(
             (e) => {
@@ -164,17 +164,17 @@ function v(e) {
                             {
                                 video_timestamp_seconds: v.current.currentTime,
                                 reason: e,
-                                video_session_id: E,
+                                video_session_id: g,
                                 video_asset_id: O,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, E, g, S, O, b],
+            [j, v, g, E, S, O, h],
         ),
-        w = r.useCallback(
+        A = r.useCallback(
             (e, t) => {
                 null != v.current &&
                     S({
@@ -183,15 +183,15 @@ function v(e) {
                         properties: {
                             video_timestamp_seconds: v.current.currentTime,
                             video_state: t,
-                            video_session_id: E,
+                            video_session_id: g,
                             video_asset_id: O,
                         },
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, E, S, O, b],
+            [j, v, g, S, O, h],
         ),
-        A = r.useCallback(() => {
+        w = r.useCallback(() => {
             null != v.current &&
                 ((_.current += 1),
                 S({
@@ -202,13 +202,13 @@ function v(e) {
                             video_asset_id: O,
                             network_connection_speed: y,
                             buffer_index: _.current,
-                            video_session_id: E,
+                            video_session_id: g,
                         },
-                        f(g),
+                        f(E),
                     ),
-                    sourceQuestContent: b,
+                    sourceQuestContent: h,
                 }));
-        }, [j, v, O, E, g, S, b, y]),
+        }, [j, v, O, g, E, S, h, y]),
         k = r.useCallback(
             (e) => {
                 null != v.current &&
@@ -222,14 +222,14 @@ function v(e) {
                                 network_connection_speed: y,
                                 duration: e,
                                 buffer_index: _.current,
-                                video_session_id: E,
+                                video_session_id: g,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     }));
             },
-            [j, v, O, E, g, S, b, y],
+            [j, v, O, g, E, S, h, y],
         ),
         M = r.useCallback(
             (e, t) => {
@@ -237,10 +237,10 @@ function v(e) {
                     questId: j,
                     questContent: e,
                     questContentCTA: t,
-                    sourceQuestContent: b,
+                    sourceQuestContent: h,
                 });
             },
-            [j, b, C],
+            [j, h, C],
         ),
         L = r.useCallback(
             (e) => {
@@ -257,7 +257,7 @@ function v(e) {
                                     quest_completed: x,
                                     video_duration_sec: v.current.duration,
                                     video_progress: (0, u.bA)(e.segment_end_sec, v.current.duration),
-                                    video_session_id: E,
+                                    video_session_id: g,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -272,13 +272,13 @@ function v(e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
                 }
             },
-            [S, j, O, x, E, g, v, b],
+            [S, j, O, x, g, E, v, h],
         ),
         V = r.useCallback(
             (e, t) => {
@@ -303,15 +303,15 @@ function v(e) {
                             video_error_type: e,
                             video_asset_id: O,
                             network_connection_speed: y,
-                            video_session_id: E,
+                            video_session_id: g,
                             video_error_code: null == o ? void 0 : o.code,
                             video_error_message: null == o ? void 0 : o.message,
                             video_network_state: i,
                         },
-                        f(g),
+                        f(E),
                         c,
                     ),
-                    sourceQuestContent: b,
+                    sourceQuestContent: h,
                 }),
                     e === d.CY.SOURCE_ERROR &&
                         a.Z.increment({
@@ -319,13 +319,13 @@ function v(e) {
                             tags: ["quest_id:".concat(j), "error_type:".concat(e)],
                         });
             },
-            [j, v, O, E, g, S, b, y],
+            [j, v, O, g, E, S, h, y],
         ),
         Z = r.useCallback(
             (e, t) => {
                 let n;
                 switch (
-                    (h.info(
+                    (b.info(
                         "[QV] | HLS Error: type="
                             .concat(t.type, ", details=")
                             .concat(t.details, ", fatal=")
@@ -353,18 +353,18 @@ function v(e) {
                     fatal: t.fatal,
                 });
             },
-            [h, V],
+            [b, V],
         );
     r.useEffect(() => {
-        if (null == g.current) return;
-        let e = g.current;
+        if (null == E.current) return;
+        let e = E.current;
         return (
             e.on(o.ZP.Events.ERROR, Z),
             () => {
                 e.off(o.ZP.Events.ERROR, Z);
             }
         );
-    }, [g, Z]);
+    }, [E, Z]);
     let F = r.useCallback(
             (e) => {
                 null != v.current &&
@@ -373,15 +373,15 @@ function v(e) {
                         event: e ? m.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED : m.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                         properties: p(
                             {
-                                video_session_id: E,
+                                video_session_id: g,
                                 video_asset_id: O,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, E, g, S, O, b],
+            [j, v, g, E, S, O, h],
         ),
         B = r.useCallback(
             (e) => {
@@ -392,26 +392,26 @@ function v(e) {
                         properties: p(
                             {
                                 volume_threshold: e > 0 && e < 1 ? 0.5 : e,
-                                video_session_id: E,
+                                video_session_id: g,
                                 video_asset_id: O,
                             },
-                            f(g),
+                            f(E),
                         ),
-                        sourceQuestContent: b,
+                        sourceQuestContent: h,
                     });
             },
-            [j, v, O, E, g, S, b],
+            [j, v, O, g, E, S, h],
         );
     return {
         trackQuestVideoLoadingStarted: D,
-        trackQuestVideoLoadingEnded: T,
-        trackQuestVideoTimeToFirstFrame: P,
+        trackQuestVideoLoadingEnded: P,
+        trackQuestVideoTimeToFirstFrame: T,
         trackQuestVideoProgressed: R,
         trackQuestVideoResumed: I,
         trackQuestVideoPaused: N,
-        trackQuestVideoFocusChange: w,
+        trackQuestVideoFocusChange: A,
         trackQuestContentClick: M,
-        trackQuestVideoBufferingStarted: A,
+        trackQuestVideoBufferingStarted: w,
         trackQuestVideoBufferingEnded: k,
         trackWatchTimeAnalytics: L,
         trackQuestVideoFullscreenChanged: F,

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => a });
 var r = n(54381),
-    i = n(950671);
+    i = n(854832);
 let a = (e) => {
     let { assetComponent: t, tooltipWordmarkComponent: n, children: a } = e;
     return (0, r.jsxs)("div", {

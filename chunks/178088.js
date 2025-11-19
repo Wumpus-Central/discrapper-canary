@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(481060),
     d = n(100527),
     p = n(906732),
-    f = n(602478),
-    h = n(2818),
+    h = n(602478),
+    f = n(2818),
     g = n(768943),
     m = n(453473),
     b = n(216789),
@@ -19,13 +19,13 @@ var r = n(54381),
     O = n(585483),
     v = n(153209),
     j = n(903672),
-    x = n(791914),
-    C = n(711165),
+    C = n(791914),
+    x = n(416018),
     E = n(946443),
     S = n(264233),
     I = n(981631),
     P = n(388032),
-    N = n(253107);
+    N = n(427998);
 function Z(e) {
     let {
             onOpen: t,
@@ -82,9 +82,9 @@ function Z(e) {
             k(!M), M ? null == n || n() : null == t || t();
         }, [n, t, M]);
     i.useEffect(() => (O.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void O.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
-    let { enabled: z, inInbox: W } = h.Z.useExperiment({ location: "RecentsPopout" }),
+    let { enabled: z, inInbox: W } = f.Z.useExperiment({ location: "RecentsPopout" }),
         K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && z && W,
-        { enabled: Y } = f.Z.useExperiment({ location: "RecentsPopout" });
+        { enabled: Y } = h.Z.useExperiment({ location: "RecentsPopout" });
     i.useEffect(() => {
         G !== c.X.BOOKMARKS || z || W || U(c.X.MENTIONS);
     });
@@ -112,7 +112,7 @@ function Z(e) {
                     children: (0, r.jsx)("div", {
                         className: o()(N.container, { [N.widerInbox]: X }),
                         children: (0, r.jsx)(u.y5t, {
-                            component: (0, r.jsx)(x.Z, {
+                            component: (0, r.jsx)(C.Z, {
                                 tab: G,
                                 setTab: U,
                                 badgeState: Z,
@@ -128,7 +128,7 @@ function Z(e) {
                                         : z && W && G === c.X.BOOKMARKS
                                           ? (0, r.jsx)(m.K, { closePopout: V })
                                           : G === c.X.SCHEDULED
-                                            ? (0, r.jsx)(C._, {})
+                                            ? (0, r.jsx)(x._, {})
                                             : (0, r.jsx)(a.SV, {
                                                   fallback: (0, r.jsx)(E.h6, {}),
                                                   children: (0, r.jsx)(E.ZP, {

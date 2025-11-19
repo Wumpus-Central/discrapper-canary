@@ -29,19 +29,19 @@ var r = n(54381),
     P = n(430824),
     D = n(496675),
     w = n(699516),
-    x = n(944486),
-    L = n(594174),
+    L = n(944486),
+    x = n(594174),
     M = n(626135),
     k = n(22665),
     j = n(981631),
     U = n(959517),
-    G = n(953278);
+    G = n(417801);
 function B(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
         p = (0, o.e7)(
-            [N.Z, L.default, w.Z, D.Z, P.Z, _.Z],
-            () => f.getForwardInfo(N.Z, L.default, w.Z, D.Z, P.Z, _.Z).footerInfo,
+            [N.Z, x.default, w.Z, D.Z, P.Z, _.Z],
+            () => f.getForwardInfo(N.Z, x.default, w.Z, D.Z, P.Z, _.Z).footerInfo,
             [f],
             s.Z,
         ),
@@ -50,7 +50,7 @@ function B(e) {
             let r = N.Z.getChannel(t.channel_id),
                 i = P.Z.getGuild(null == r ? void 0 : r.guild_id),
                 a = null == (e = t.messageReference) ? void 0 : e.channel_id,
-                o = x.Z.getCurrentlySelectedChannelId(),
+                o = L.Z.getCurrentlySelectedChannelId(),
                 s = C.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
                 l = o === a && s === (null == r ? void 0 : r.id);
             null == r ||

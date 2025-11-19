@@ -1,7 +1,7 @@
 n.d(t, {
     Lc: () => D,
     Yr: () => P,
-    ZP: () => L,
+    ZP: () => x,
     gN: () => R,
     sI: () => w,
 }),
@@ -120,10 +120,10 @@ var w = (function (e) {
         e
     );
 })({});
-function x(e) {
+function L(e) {
     return u.default.getId() === e && p.Z.isCurrentUserPTTLatched();
 }
-class L {
+class x {
     get version() {
         return this.participantByIndex.version;
     }
@@ -201,7 +201,7 @@ class L {
                                           n.id,
                                           C(S({}, n), {
                                               speaking: t,
-                                              latched: x(e),
+                                              latched: L(e),
                                               lastSpoke: this.lastSpoke[e],
                                               soundsharing: p.Z.isSoundSharing(e),
                                           }),
@@ -292,7 +292,7 @@ class L {
                     userId: e,
                     checkIsMuted: !0,
                 }),
-                latched: x(e),
+                latched: L(e),
                 lastSpoke: null != (i = this.lastSpoke[e]) ? i : 0,
                 soundsharing: p.Z.isSoundSharing(e),
                 ringing: D,

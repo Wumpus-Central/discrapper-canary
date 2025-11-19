@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o }), n(388685), n(35282), n(781311);
-var r = n(647438),
+n.d(t, { Z: () => s }), n(388685), n(35282), n(781311);
+var r = n(473749),
     i = n(211266),
     l = n(212819);
-function o(e) {
+function s(e) {
     let { searchOptions: t } = e,
-        [n, o] = r.useState({
+        [n, s] = r.useState({
             results: [],
             query: "",
         }),
-        s = (0, i.Z)(() => {
+        o = (0, i.Z)(() => {
             let e = new l.ZP((e, t) => {
-                o({
+                s({
                     results: e,
                     query: t,
                 });
@@ -18,10 +18,10 @@ function o(e) {
             return e.setLimit(20), e.search(""), e;
         });
     return (
-        r.useEffect(() => () => s.destroy(), [s]),
+        r.useEffect(() => () => o.destroy(), [o]),
         r.useEffect(() => {
-            null != t && t !== s.options && s.setOptions(t);
-        }, [s, t]),
+            null != t && t !== o.options && o.setOptions(t);
+        }, [o, t]),
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -52,12 +52,12 @@ function o(e) {
                     (e) => {
                         var t;
                         let { query: n, resultTypes: r } = e;
-                        (null != s.resultTypes &&
-                            ((t = s.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) ||
-                            (s.setResultTypes(r), s.setLimit(1 === r.length ? 50 : 20)),
-                            s.search("" === n.trim() ? "" : n);
+                        (null != o.resultTypes &&
+                            ((t = o.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) ||
+                            (o.setResultTypes(r), o.setLimit(1 === r.length ? 50 : 20)),
+                            o.search("" === n.trim() ? "" : n);
                     },
-                    [s],
+                    [o],
                 ),
             },
             n,

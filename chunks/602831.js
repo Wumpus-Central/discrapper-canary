@@ -4,7 +4,7 @@ n.d(t, {
 }),
     n(388685);
 var a = n(763600),
-    i = n(660815);
+    l = n(660815);
 let r = [
     {
         id: "1",
@@ -64,7 +64,7 @@ let r = [
         ],
     },
 ];
-function l(e, t) {
+function i(e, t) {
     return {
         id: e,
         name: t,
@@ -75,18 +75,18 @@ function l(e, t) {
     };
 }
 let s = [
-        l("1", "GameServer Test #1"),
-        l("2", "GameServer Test #2"),
-        l("3", "GameServer Test #3"),
-        l("4", "GameServer Test #4"),
-        l("5", "GameServer Test #5"),
-        l("6", "GameServer Test #6"),
-        l("7", "GameServer Test #7"),
-        l("8", "GameServer Test #8"),
-        l("9", "GameServer Test #9"),
-        l("10", "GameServer Test #10"),
-        l("11", "GameServer Test #11"),
-        l("12", "GameServer Test #12"),
+        i("1", "GameServer Test #1"),
+        i("2", "GameServer Test #2"),
+        i("3", "GameServer Test #3"),
+        i("4", "GameServer Test #4"),
+        i("5", "GameServer Test #5"),
+        i("6", "GameServer Test #6"),
+        i("7", "GameServer Test #7"),
+        i("8", "GameServer Test #8"),
+        i("9", "GameServer Test #9"),
+        i("10", "GameServer Test #10"),
+        i("11", "GameServer Test #11"),
+        i("12", "GameServer Test #12"),
     ],
     o = [
         {
@@ -100,7 +100,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "1",
@@ -116,7 +116,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "2",
@@ -132,7 +132,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "3",
@@ -148,7 +148,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "4",
@@ -164,7 +164,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "5",
@@ -180,7 +180,7 @@ let s = [
             planName: r[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.V.ONLINE,
+            status: l.V.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "6",

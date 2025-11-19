@@ -33,7 +33,7 @@ function l(e) {
 let c = {
     showCaptcha: function (e, t) {
         let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: c, captchaService: d, options: u } = e;
+            { sitekey: c, captchaService: u, options: d } = e;
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await n.e("12192").then(n.bind(n, 718742));
@@ -47,11 +47,11 @@ let c = {
                                         captcha_key: e,
                                         captcha_rqtoken: n,
                                     }),
-                                captchaService: d,
+                                captchaService: u,
                                 sitekey: c,
                             },
                             o,
-                            u,
+                            d,
                             n,
                         ),
                     );
@@ -64,7 +64,7 @@ let c = {
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: c, captchaService: d, captchaSessionId: u, options: m } = e;
+            { sitekey: c, captchaService: u, captchaSessionId: d, options: m } = e;
         return new Promise((e, p) => {
             (0, a.ZDy)(
                 async () => {
@@ -78,9 +78,9 @@ let c = {
                                         e({
                                             captcha_key: t,
                                             captcha_rqtoken: n,
-                                            captcha_session_id: u,
+                                            captcha_session_id: d,
                                         }),
-                                    captchaService: d,
+                                    captchaService: u,
                                     sitekey: c,
                                     onReject: (e) => {
                                         e === o.CaptchaError.CANCEL

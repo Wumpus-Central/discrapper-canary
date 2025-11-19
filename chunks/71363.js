@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(75077),
     v = n(981631),
     I = n(388032),
-    T = n(677599),
+    T = n(184388),
     S = n(865215);
 let A = (e) => {
     let t,
@@ -33,7 +33,7 @@ let A = (e) => {
             return !1 !== r.canReveal && "upcomingDropUntimed" !== r.name && (e[n] = r), e;
         }, {}),
         { analyticsLocations: w } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [x, L] = i.useState(!1),
+        [L, x] = i.useState(!1),
         M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         k = (0, O.mN)(),
         { fractionalState: j } = (0, _.Z)(),
@@ -131,9 +131,9 @@ let A = (e) => {
                         innerRef: P,
                         onChange: (e) => {
                             e &&
-                                !x &&
+                                !L &&
                                 (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: w }),
-                                L(!0));
+                                x(!0));
                         },
                         children: (0, r.jsx)("div", {
                             ref: P,

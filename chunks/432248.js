@@ -25,6 +25,6 @@ let E = (0, s.Em)(a.n.CLIPS_LENGTH, {
             label: c.intl.formatToPlainString(c.t.ICo9Nk, { count: 2 }),
         },
     ],
-    usePredicate: l.Go,
+    usePredicate: l.w9,
     setValue: (t) => r.eU(t),
 });

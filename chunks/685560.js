@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var a = n(54381),
     l = n(913527),
     r = n.n(l),
@@ -18,7 +18,7 @@ var a = n(54381),
     v = n(430824),
     j = n(914010),
     _ = n(981631),
-    y = n(617659);
+    y = n(736525);
 let C = [
         o.z.GUILD_POWERUP_PERKS_COACHMARK,
         o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
@@ -73,7 +73,7 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function w() {
+function I() {
     let e = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
         t = (0, i.e7)([v.Z], () => {
             var t;

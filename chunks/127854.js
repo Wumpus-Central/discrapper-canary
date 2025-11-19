@@ -222,7 +222,7 @@ e.exports = (function (e) {
                 P = u.encode(R, 0, 0),
                 D = S(r, o),
                 w = D.CustomComponent,
-                x =
+                L =
                     null != w
                         ? d.createElement(
                               w,
@@ -246,10 +246,10 @@ e.exports = (function (e) {
                               selection: y,
                               tree: C,
                           });
-            if (r.getParentKey()) return x;
-            var L = T(r, a).Element,
+            if (r.getParentKey()) return L;
+            var x = T(r, a).Element,
                 M = A(r, p, P, l, D, this.wrapperRef);
-            return d.createElement(L, M, x);
+            return d.createElement(x, M, L);
         }),
         t
     );

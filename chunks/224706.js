@@ -29,8 +29,8 @@ var r = n(664751),
     P = n(981631),
     D = n(701488),
     w = n(388032);
-let x = 3,
-    L = new f.Z("GamesActionCreators");
+let L = 3,
+    x = new f.Z("GamesActionCreators");
 function M(e) {
     let {
         applicationId: t,
@@ -51,12 +51,12 @@ function M(e) {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
-                        (L.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
+                        (x.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
                         (window.location.href = r));
                 } else window.location.href = r;
                 return Promise.resolve();
             } catch (e) {
-                L.warn("Failed to open deep link, falling back to desktop launch", {
+                x.warn("Failed to open deep link, falling back to desktop launch", {
                     applicationId: t,
                     error: e.message,
                 });
@@ -258,7 +258,7 @@ let G = {
                 new Promise((n, r) => {
                     if (null == t) return void r(Error("Game utils module not loaded"));
                     t.identifyGame(e, (t, i) =>
-                        (L.log("Identified game: ", {
+                        (x.log("Identified game: ", {
                             status: t,
                             name: i.name,
                             iconHash: i.iconHash,
@@ -333,7 +333,7 @@ let G = {
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: s } = e,
             c = (0, d.F)(s);
-        L.log("Reporting unverified game: ", {
+        x.log("Reporting unverified game: ", {
             name: t,
             executableName: s,
             iconHash: n,
@@ -353,7 +353,7 @@ let G = {
                             distributor_application: k(i, a),
                             executable: c,
                             publisher: r,
-                            report_version: x,
+                            report_version: L,
                         },
                         retries: 1,
                         oldFormErrors: !0,

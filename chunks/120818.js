@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(846121),
     d = n(703656),
     p = n(259580),
-    f = n(981631),
-    h = n(176505),
+    h = n(981631),
+    f = n(176505),
     g = n(388032),
     m = n(503769);
 function b(e, t) {
@@ -40,7 +40,7 @@ let _ = i.memo(function (e) {
             );
         }, [O, y]),
         j = null == y ? 0 : y.length,
-        x = (0, l.JA)("progress-bar-".concat(_.id));
+        C = (0, l.JA)("progress-bar-".concat(_.id));
     return (0, r.jsxs)("li", {
         children: [
             (0, r.jsxs)(
@@ -69,14 +69,14 @@ let _ = i.memo(function (e) {
                             });
                     }
                     return e;
-                })({}, x)),
+                })({}, C)),
                 (n = n =
                     {
                         role: "button",
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(f.Z5c.CHANNEL(_.id, h.oC.GUILD_HOME));
+                            (0, d.uL)(h.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)("div", {
@@ -111,7 +111,7 @@ let _ = i.memo(function (e) {
                             }),
                             (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, s.Lq)(f.Ilk.GREEN_300), (0, s.Lq)(f.Ilk.GREEN_230)],
+                                foregroundGradientColor: [(0, s.Lq)(h.Ilk.GREEN_300), (0, s.Lq)(h.Ilk.GREEN_230)],
                                 percent: (v / j) * 100 + 3,
                                 animate: !0,
                             }),

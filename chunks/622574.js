@@ -1,23 +1,23 @@
-a.d(e, { N: () => r });
-let r = (t, e, a) => {
+_.d(e, { N: () => a });
+let a = (t, e, _) => {
     try {
         if (PerformanceObserver.supportedEntryTypes.includes(t)) {
-            let r = new PerformanceObserver((t) => {
+            let a = new PerformanceObserver((t) => {
                 Promise.resolve().then(() => {
                     e(t.getEntries());
                 });
             });
             return (
-                r.observe(
+                a.observe(
                     Object.assign(
                         {
                             type: t,
                             buffered: !0,
                         },
-                        a || {},
+                        _ || {},
                     ),
                 ),
-                r
+                a
             );
         }
     } catch (t) {}

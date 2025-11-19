@@ -116,7 +116,7 @@ function T(e) {
                                   n.e("6915"),
                                   n.e("8982"),
                                   n.e("7717"),
-                                  n.e("20037"),
+                                  n.e("46231"),
                               ]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
@@ -130,8 +130,8 @@ function T(e) {
                                   );
                           });
                   },
-        x = E.ZP.useName(R),
-        L = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(D, b, R));
+        L = E.ZP.useName(R),
+        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(D, b, R));
     if (null == R)
         return (0, r.jsx)(I, {
             userId: O,
@@ -150,7 +150,7 @@ function T(e) {
                     },
                     e,
                 ),
-                { children: "@".concat(null != L ? L : x) },
+                { children: "@".concat(null != x ? x : L) },
             ),
         );
     return S

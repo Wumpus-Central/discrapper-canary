@@ -23,7 +23,7 @@ function s(t, e, _ = (0, a.x)(t.bufferSize || 64)) {
             )
                 return (0, o.WD)({});
             let R = (0, r.Jd)(a[0], s),
-                A = (e) => {
+                N = (e) => {
                     (0, r.gv)(R, (_, a) => {
                         let n = l(_, a);
                         t.recordDroppedEvent(e, (0, r.mL)(a), n);
@@ -40,7 +40,7 @@ function s(t, e, _ = (0, a.x)(t.bufferSize || 64)) {
                         t
                     ),
                     (t) => {
-                        throw (A("network_error"), t);
+                        throw (N("network_error"), t);
                     },
                 ),
             ).then(
@@ -49,7 +49,7 @@ function s(t, e, _ = (0, a.x)(t.bufferSize || 64)) {
                     if (t instanceof i.b)
                         return (
                             c.X && E.kg.error("Skipped sending event because buffer is full."),
-                            A("queue_overflow"),
+                            N("queue_overflow"),
                             (0, o.WD)({})
                         );
                     throw t;

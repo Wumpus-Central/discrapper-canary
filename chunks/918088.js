@@ -140,16 +140,16 @@ function P(e, t) {
         P = N || h || y,
         D = _ && T && (!C || b || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
-        x = null != w ? d.ZP.getSelfMember(w) : null,
-        L = (0, l.EY)(x),
-        M = (0, c.b)(x),
-        j = !E && A && !N && _ && !L && !M;
+        L = null != w ? d.ZP.getSelfMember(w) : null,
+        x = (0, l.EY)(L),
+        M = (0, c.b)(L),
+        k = !E && A && !N && _ && !x && !M;
     return {
         poll: s,
         canTapAnswers: D,
         canRemoveVote: N && _ && !h,
         canShowVoteCounts: P,
-        canSubmitVote: j,
+        canSubmitVote: k,
         expirationLabel: p,
         hasSelectedAnswer: A,
         hasVoted: N,
@@ -187,11 +187,11 @@ function D(e, t) {
             canTapAnswers: R,
             canRemoveVote: D,
             canShowVoteCounts: w,
-            canSubmitVote: x,
-            expirationLabel: L = T.intl.string(T.t["e+J3JZ"]),
+            canSubmitVote: L,
+            expirationLabel: x = T.intl.string(T.t["e+J3JZ"]),
             hasSelectedAnswer: M,
-            hasVoted: j,
-            isEditingVote: k,
+            hasVoted: k,
+            isEditingVote: j,
             isExpired: U,
             isInteractive: G,
             reactions: B,
@@ -217,10 +217,10 @@ function D(e, t) {
                 u = 0 === Y ? 0 : c / Y,
                 d = Z.has(o),
                 f = c >= K && 0 !== c,
-                _ = j && null != (a = null == l ? void 0 : l.me_vote) && a,
+                _ = k && null != (a = null == l ? void 0 : l.me_vote) && a,
                 h = C({
                     didSelfVote: _,
-                    hasVoted: j,
+                    hasVoted: k,
                     isExpired: U,
                     isSelected: d,
                     isLeader: f,
@@ -247,9 +247,9 @@ function D(e, t) {
         }),
         q = (0, r.EQ)({
             isExpired: U,
-            canSubmitVote: x,
-            hasVoted: j,
-            isEditingVote: k,
+            canSubmitVote: L,
+            hasVoted: k,
+            isEditingVote: j,
             canRemoveVote: D,
             isInteractive: G,
             showResults: H,
@@ -283,14 +283,14 @@ function D(e, t) {
             .otherwise(() => ({
                 label: T.intl.string(T.t.JwkNU4),
                 presentation: "button",
-                enabled: x,
+                enabled: L,
                 type: "submit",
             })),
         X = (0, m.isIOS)() ? T.intl.string(T.t["PVATM/"]) : T.intl.string(T.t.cHfFql),
         Q = (0, r.EQ)({
             isExpired: U,
             isInteractive: G,
-            isEditingVote: k,
+            isEditingVote: j,
         })
             .with(
                 {
@@ -311,14 +311,14 @@ function D(e, t) {
             }))
             .otherwise(() => ({
                 label: W,
-                secondaryLabel: L,
+                secondaryLabel: x,
                 accessibilityHint: X,
                 presentation: "text",
                 enabled: !0,
                 type: "showVoterDetails",
             })),
         J =
-            !G || U || j || H
+            !G || U || k || H
                 ? void 0
                 : {
                       label: T.intl.string(T.t["/KHAUF"]),
@@ -363,7 +363,7 @@ function D(e, t) {
         canSelectMultipleAnswers: $,
         hasSelectedAnswer: M,
         canShowVoteCounts: w,
-        hasVoted: j,
+        hasVoted: k,
         isExpired: U,
         myAvatarUrl: g,
         secondaryAction: Q,

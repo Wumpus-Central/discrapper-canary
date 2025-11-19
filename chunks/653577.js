@@ -9,11 +9,11 @@ var r = n(54381),
     u = n(362721),
     d = n(12498),
     p = n(454585),
-    f = n(626135),
-    h = n(981631),
+    h = n(626135),
+    f = n(981631),
     g = n(388032),
-    m = n(158871),
-    b = n(430864);
+    m = n(670080),
+    b = n(602009);
 function _(e) {
     let {
             channel: t,
@@ -25,23 +25,23 @@ function _(e) {
             showEmptyChannelTopic: v,
         } = e,
         j = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        x = null != j && j.length > 0,
-        C = (0, u.ZP)(t, !0),
-        E = (!O || !!v) && C,
+        C = null != j && j.length > 0,
+        x = (0, u.ZP)(t, !0),
+        E = (!O || !!v) && x,
         S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
-            x &&
-                f.default.track(h.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            C &&
+                h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id,
                 });
-        }, [x, t.id, t.guild_id]),
+        }, [C, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
     let I = o()(m.statusDiv, n && E ? m.hoverable : null);
-    return x
+    return C
         ? (0, r.jsx)(c.P3F, {
               className: I,
               onClick: E ? y : void 0,

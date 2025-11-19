@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(849464),
     h = n(765305),
     m = n(388032),
-    g = n(646615);
+    g = n(606532);
 let E = 20;
 function b(e, t) {
     let n = t.toDate(),
@@ -149,7 +149,7 @@ function T(e) {
         D = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjH) : m.intl.string(m.t["X2K3/4"]));
     let w = (0, f.Z)(N, C),
-        [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
+        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
             i.useState((0, _.ub)(t, u));
     i.useEffect(() => {
         U((0, _.ub)(t, u));
@@ -158,12 +158,12 @@ function T(e) {
             clearInterval(e);
         };
     }, [t, u]);
-    let G = x;
-    null != L &&
-        "" !== L &&
+    let G = L;
+    null != x &&
+        "" !== x &&
         (G = m.intl.formatToPlainString(m.t.tXbu7I, {
-            start: x,
-            end: L,
+            start: L,
+            end: x,
         }));
     let B = i.useMemo(
             () =>
@@ -178,7 +178,7 @@ function T(e) {
                           : +!!k,
             [n, null == w ? void 0 : w.is_canceled, M, k],
         ),
-        Z = y(B, G, p, L, j),
+        Z = y(B, G, p, x, j),
         {
             Icon: F,
             iconColor: V,
@@ -191,10 +191,10 @@ function T(e) {
                     textBrand: R,
                     textPositive: P,
                     textDanger: D,
-                    endDateTimeString: L,
-                    startDateTimeString: x,
+                    endDateTimeString: x,
+                    startDateTimeString: L,
                 }),
-            [B, R, P, D, L, x],
+            [B, R, P, D, x, L],
         ),
         W = null;
     if (null != A) {

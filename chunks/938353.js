@@ -39,8 +39,8 @@ var r,
     P = n(761538),
     D = n(674611),
     w = n(294734),
-    x = n(947849),
-    L = n(10433),
+    L = n(947849),
+    x = n(10433),
     M = n(715903),
     k = n(71619),
     j = n(637618),
@@ -93,8 +93,8 @@ var r,
     eP = n(901461),
     eD = n(432376),
     ew = n(384203),
-    ex = n(633957),
-    eL = n(530472),
+    eL = n(633957),
+    ex = n(530472),
     eM = n(29909),
     ek = n(782658),
     ej = n(219797),
@@ -112,7 +112,7 @@ var r,
     eq = n(981631),
     eX = n(474936),
     eQ = n(388032),
-    eJ = n(636428),
+    eJ = n(448494),
     e$ = n(680674);
 function e0(e, t, n) {
     return (
@@ -310,7 +310,7 @@ class tn extends (r = a.Component) {
                       );
                   if (n === S.g.APP_DIRECTORY_PROFILE)
                       return (0, i.jsx)(
-                          L.Z,
+                          x.Z,
                           {
                               code: r,
                               message: e,
@@ -589,7 +589,7 @@ class tn extends (r = a.Component) {
     }
     renderEphemeralAccessories(e) {
         return (0, eA.Pv)(e)
-            ? (0, i.jsx)(eL.Z, {
+            ? (0, i.jsx)(ex.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       _.Z.dismissAutomatedMessage(e);
@@ -702,7 +702,7 @@ class tn extends (r = a.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, i.jsx)(ex.Z, {
+            : (0, i.jsx)(eL.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id,
@@ -883,7 +883,7 @@ class tn extends (r = a.Component) {
                         ? void 0
                         : o.url;
                 return (0, i.jsx)(
-                    x.h.Provider,
+                    L.h.Provider,
                     {
                         value: (0, eK.P)(h, e.image, e.video),
                         children: (0, i.jsx)(
@@ -997,8 +997,8 @@ function tr(e) {
         P = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
         D = (0, z.Z)(null == n ? void 0 : n.id),
         w = (0, Q.Z)(r),
-        x = (0, R.v)(r),
-        L = (0, eN._)(n),
+        L = (0, R.v)(r),
+        x = (0, eN._)(n),
         j = (0, eT.ro)(r.id, r.channel_id),
         U = (0, C.m8)();
     return (0, i.jsx)(
@@ -1018,7 +1018,7 @@ function tr(e) {
                 e,
             ),
             {
-                hasSpoilerEmbeds: e.hasSpoilerEmbeds && L,
+                hasSpoilerEmbeds: e.hasSpoilerEmbeds && x,
                 isLurking: h && p,
                 isGuest: m && p,
                 isPendingMember: g && p,
@@ -1032,7 +1032,7 @@ function tr(e) {
                 showListsAndHeaders: P,
                 showMaskedLinks: P,
                 shouldHideMediaOptions: D,
-                enabledContentHarmTypeFlags: x,
+                enabledContentHarmTypeFlags: L,
                 ctaButtonType: j,
                 shouldAgeVerify: U,
             },

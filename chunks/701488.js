@@ -1,9 +1,9 @@
 n.d(t, {
-    $y: () => L,
+    $y: () => x,
     Cr: () => y,
     Ev: () => s,
     Fu: () => h,
-    GM: () => x,
+    GM: () => L,
     Gu: () => D,
     JT: () => p,
     K8: () => O,
@@ -117,7 +117,7 @@ let N = {
     P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
     D = [...P, i.d4z.GUILD_VOICE],
     w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var x = (function (e) {
+var L = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});
-let L = 21600000;
+let x = 21600000;

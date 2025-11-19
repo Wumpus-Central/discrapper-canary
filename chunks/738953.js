@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(161572),
     x = n(671955),
     M = n(388032),
-    j = n(593540);
-function k(e, t, n) {
+    k = n(593540);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ function Z(e) {
     var t;
     let {
             user: n,
-            currentUser: k,
+            currentUser: j,
             guildId: G,
             channelId: Z,
             messageId: F,
@@ -126,7 +126,7 @@ function Z(e) {
         null == W || W(null == et ? void 0 : et.current);
     }, [et, W]);
     let es = i.useRef(null),
-        el = n.id === k.id,
+        el = n.id === j.id,
         ec = (0, _.p)({ location: "UserProfilePopout" }),
         eu = i.useMemo(() => (0, p.Z)(), []),
         ed = (e) => {
@@ -196,7 +196,7 @@ function Z(e) {
                                 null != ea.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
                                         style: eo,
-                                        className: j.backdrop,
+                                        className: k.backdrop,
                                     }),
                                 (0, r.jsxs)(C.Z, {
                                     children: [
@@ -222,7 +222,7 @@ function Z(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: j.header,
+                                    className: k.header,
                                     children: [
                                         (0, r.jsx)(T.Z, {
                                             user: n,
@@ -232,7 +232,7 @@ function Z(e) {
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             userId: n.id,
-                                            className: j.toast,
+                                            className: k.toast,
                                             onClose: Y,
                                         }),
                                         (0, r.jsx)(I.Z, {
@@ -256,7 +256,7 @@ function Z(e) {
                                 }),
                                 (0, r.jsx)(w.Z, {
                                     user: n,
-                                    currentUser: k,
+                                    currentUser: j,
                                     displayProfile: en,
                                     guild: $,
                                     isHoveringOrFocusing: null == ea.interactionType && er,

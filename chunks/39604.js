@@ -60,8 +60,8 @@ var r = n(46973),
     P = n(341569),
     D = n(659487),
     w = n(711644),
-    x = n(259612),
-    L = n(356659),
+    L = n(259612),
+    x = n(356659),
     M = n(981631),
     k = n(959517);
 function j(e, t, n) {
@@ -251,7 +251,7 @@ function X(e, t) {
 function Q(e) {
     var t, n, r;
     let i = y.Z.getChannelId();
-    if (null == i) return void L.jF.info("[ClipsActionCreators] No voice channel, skipping remote trigger message");
+    if (null == i) return void x.jF.info("[ClipsActionCreators] No voice channel, skipping remote trigger message");
     let a = E.Z.getChannel(i);
     if (null == a) return;
     let s = {
@@ -299,14 +299,14 @@ async function J(e) {
             I.default.track(M.rMx.CLIP_SAVED, n);
         let r = "";
         try {
-            r = await (0, x.R)(s.Z.clips.getClipProtocolURLFromPath(c), 0);
+            r = await (0, L.R)(s.Z.clips.getClipProtocolURLFromPath(c), 0);
         } catch (e) {
-            L.jF.warn("Failed to generate clip thumbnail:", e);
+            x.jF.warn("Failed to generate clip thumbnail:", e);
         }
         return (
             (o.thumbnail = r),
             (o.length = e),
-            L.jF.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(r.length, " bytes thumbnail.")),
+            x.jF.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(r.length, " bytes thumbnail.")),
             await d.updateClipMetadata(c, JSON.stringify(o)),
             B(U({}, o), { filepath: c })
         );
@@ -350,7 +350,7 @@ async function $(e) {
         T = null != e ? e : I,
         C = (() => {
             let e = null != T ? (0, u.my)(T).ownerId : void 0;
-            return e === g.default.getId() ? L.X9.STREAMER : null != e ? L.X9.VIEWER : p ? L.X9.DECOUPLED : L.X9.VOICE;
+            return e === g.default.getId() ? x.X9.STREAMER : null != e ? x.X9.VIEWER : p ? x.X9.DECOUPLED : x.X9.VOICE;
         })(),
         N = await (async () => {
             if (null == T) return;
@@ -360,7 +360,7 @@ async function $(e) {
                 try {
                     let e = (0, i.zS)(),
                         t = await e.getNextVideoOutputFrame(n);
-                    return (0, x.W)(t);
+                    return (0, L.W)(t);
                 } catch (e) {
                     return;
                 }
@@ -387,14 +387,14 @@ async function $(e) {
                         return n - r;
                     })
                     .slice(0, n);
-                for (let t of (L.jF.info(
+                for (let t of (x.jF.info(
                     "Deleting ".concat(r.length, " temporary clips to stay within limit of ").concat(e),
                 ),
                 r))
                     try {
                         await es(t.filepath);
                     } catch (e) {
-                        L.jF.error("Failed to delete temporary clip", e);
+                        x.jF.error("Failed to delete temporary clip", e);
                     }
             }
         }
@@ -405,12 +405,12 @@ async function $(e) {
         }),
             "manual" === n && (0, S.NS)() && Q(e);
     } catch (e) {
-        L.jF.error("Clip Failed to Save", e),
+        x.jF.error("Clip Failed to Save", e),
             null == R || R.stop(),
             (0, _.GN)("clip_error", 0.5),
             a.Z.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
     }
-    L.jF.info(
+    x.jF.info(
         ""
             .concat(A.Z.getSettings().clipsLength / 1000, "s clip save took ")
             .concat(Math.round(performance.now() - D), "ms"),
@@ -431,21 +431,21 @@ async function ee(e, t) {
             .concat(f.id, ".")
             .concat(h),
         y = s.Z.fileManager.join(p, E),
-        O = (null != l ? (0, u.my)(l).ownerId : void 0) === g.default.getId() ? L.X9.STREAMER : L.X9.VIEWER;
+        O = (null != l ? (0, u.my)(l).ownerId : void 0) === g.default.getId() ? x.X9.STREAMER : x.X9.VIEWER;
     if (
         (null != f.applicationId &&
             null != (r = c.ZP.getRunningGames().find((e) => e.id === f.applicationId)) &&
-            L.jF.log("Matched application ID to running game:", f.applicationId, r.name),
+            x.jF.log("Matched application ID to running game:", f.applicationId, r.name),
         null == r &&
             null != f.applicationName &&
             null != (r = c.ZP.getRunningGames().find((e) => e.name === f.applicationName)) &&
-            L.jF.log("Matched application name to running game:", f.applicationName),
-        null == r && null != (r = c.ZP.getVisibleGame()) && L.jF.log("Using visible game for screenshot:", r.name),
+            x.jF.log("Matched application name to running game:", f.applicationName),
+        null == r && null != (r = c.ZP.getVisibleGame()) && x.jF.log("Using visible game for screenshot:", r.name),
         (null == r ? void 0 : r.windowHandle) != null)
     )
-        (n = parseInt(r.windowHandle, 10)), L.jF.log("Using window handle for full resolution screenshot:", n);
+        (n = parseInt(r.windowHandle, 10)), x.jF.log("Using window handle for full resolution screenshot:", n);
     else {
-        L.jF.error("Failed to save screenshot: No window handle available"), (0, _.GN)("clip_error", 0.5);
+        x.jF.error("Failed to save screenshot: No window handle available"), (0, _.GN)("clip_error", 0.5);
         return;
     }
     a.Z.dispatch({
@@ -470,11 +470,11 @@ async function ee(e, t) {
                 type: "CLIPS_SAVE_CLIP",
                 clip: e,
             }),
-            L.jF.info("Screenshot save took ".concat(Math.round(performance.now() - I), "ms")),
-            L.jF.log("Successfully saved screenshot to:", y);
+            x.jF.info("Screenshot save took ".concat(Math.round(performance.now() - I), "ms")),
+            x.jF.log("Successfully saved screenshot to:", y);
     } catch (e) {
         throw (
-            (L.jF.error("Failed to save screenshot:", e),
+            (x.jF.error("Failed to save screenshot:", e),
             null == v || v.stop(),
             (0, _.GN)("clip_error", 0.5),
             a.Z.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }),

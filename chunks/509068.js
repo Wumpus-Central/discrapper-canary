@@ -1,41 +1,41 @@
-a.d(e, {
-    Eg: () => S,
-    Jd: () => v,
+_.d(e, {
+    Eg: () => g,
+    Jd: () => m,
     S1: () => D,
-    jp: () => g,
-    lA: () => m,
-    nV: () => C,
+    jp: () => S,
+    lA: () => y,
+    nV: () => h,
 });
-var r = a(636361),
-    _ = a(502990),
-    n = a(907765),
-    o = a(151122),
-    i = a(511906),
-    E = a(263449),
-    c = a(233517),
-    s = a(510529),
-    l = a(622916),
-    I = a(694043),
-    R = a(688838),
-    u = a(393523),
-    A = a(833772),
-    N = a(454463),
-    T = a(163162),
-    d = a(408720),
-    f = a(515737),
-    L = a(804410),
-    p = a(376457),
-    O = a(42367),
-    h = a(297117),
-    P = a(387486);
-function C(t) {
-    return [(0, r.S)(), (0, _.C)(), (0, f.t)(), (0, d.f)(), (0, L.k)(), (0, O.O)(), (0, n.R)(), (0, p.s)()];
+var a = _(636361),
+    r = _(502990),
+    n = _(907765),
+    o = _(151122),
+    E = _(511906),
+    i = _(263449),
+    c = _(233517),
+    s = _(510529),
+    l = _(622916),
+    I = _(694043),
+    R = _(688838),
+    N = _(393523),
+    A = _(833772),
+    u = _(454463),
+    T = _(163162),
+    d = _(408720),
+    f = _(515737),
+    O = _(804410),
+    L = _(376457),
+    p = _(42367),
+    C = _(297117),
+    P = _(387486);
+function h(t) {
+    return [(0, a.S)(), (0, r.C)(), (0, f.t)(), (0, d.f)(), (0, O.k)(), (0, p.O)(), (0, n.R)(), (0, L.s)()];
 }
 function D(t = {}) {
     let e = (function (t = {}) {
         return {
             ...{
-                defaultIntegrations: C(),
+                defaultIntegrations: h(),
                 release:
                     "string" == typeof __SENTRY_RELEASE__
                         ? __SENTRY_RELEASE__
@@ -52,17 +52,17 @@ function D(t = {}) {
         (function () {
             let t = T.m9,
                 e = t.chrome ? "chrome" : "browser",
-                a = t[e],
-                r = a && a.runtime && a.runtime.id,
-                _ = (T.m9.location && T.m9.location.href) || "",
+                _ = t[e],
+                a = _ && _.runtime && _.runtime.id,
+                r = (T.m9.location && T.m9.location.href) || "",
                 n =
-                    !!r &&
+                    !!a &&
                     T.m9 === T.m9.top &&
                     ["chrome-extension:", "moz-extension:", "ms-browser-extension:"].some((t) =>
-                        _.startsWith(`${t}//`),
+                        r.startsWith(`${t}//`),
                     ),
                 o = void 0 !== t.nw;
-            return !!r && !n && !o;
+            return !!a && !n && !o;
         })()
     )
         return void (0, l.Cf)(() => {
@@ -70,45 +70,45 @@ function D(t = {}) {
                 "[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/",
             );
         });
-    N.X &&
+    u.X &&
         !(0, I.Ak)() &&
         l.kg.warn(
             "No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.",
         );
-    let a = {
+    let _ = {
             ...e,
-            stackParser: (0, R.Sq)(e.stackParser || h.Dt),
+            stackParser: (0, R.Sq)(e.stackParser || C.Dt),
             integrations: (0, o.m8)(e),
             transport: e.transport || P.f,
         },
-        r = (0, i.M)(A.R, a);
+        a = (0, E.M)(A.R, _);
     return (
         e.autoSessionTracking &&
             (function () {
                 if (void 0 === T.m9.document) {
-                    N.X &&
+                    u.X &&
                         l.kg.warn("Session tracking in non-browser environment with @sentry/browser is not supported.");
                     return;
                 }
                 (0, c.yj)({ ignoreDuration: !0 }),
                     (0, c.cg)(),
-                    (0, u.a)(({ from: t, to: e }) => {
+                    (0, N.a)(({ from: t, to: e }) => {
                         void 0 !== t && t !== e && ((0, c.yj)({ ignoreDuration: !0 }), (0, c.cg)());
                     });
             })(),
-        r
+        a
     );
 }
-function g(t = {}) {
+function S(t = {}) {
     if (!T.m9.document) {
-        N.X && l.kg.error("Global document not defined in showReportDialog call");
+        u.X && l.kg.error("Global document not defined in showReportDialog call");
         return;
     }
-    let e = (0, E.nZ)(),
-        a = e.getClient(),
-        r = a && a.getDsn();
-    if (!r) {
-        N.X && l.kg.error("DSN not configured for showReportDialog call");
+    let e = (0, i.nZ)(),
+        _ = e.getClient(),
+        a = _ && _.getDsn();
+    if (!a) {
+        u.X && l.kg.error("DSN not configured for showReportDialog call");
         return;
     }
     if (
@@ -122,8 +122,8 @@ function g(t = {}) {
         let e = (0, c.eW)();
         e && (t.eventId = e);
     }
-    let _ = T.m9.document.createElement("script");
-    (_.async = !0), (_.crossOrigin = "anonymous"), (_.src = (0, s.h)(r, t)), t.onLoad && (_.onload = t.onLoad);
+    let r = T.m9.document.createElement("script");
+    (r.async = !0), (r.crossOrigin = "anonymous"), (r.src = (0, s.h)(a, t)), t.onLoad && (r.onload = t.onLoad);
     let { onClose: n } = t;
     if (n) {
         let t = (e) => {
@@ -137,13 +137,13 @@ function g(t = {}) {
         T.m9.addEventListener("message", t);
     }
     let o = T.m9.document.head || T.m9.document.body;
-    o ? o.appendChild(_) : N.X && l.kg.error("Not injecting report dialog. No injection point found in HTML");
+    o ? o.appendChild(r) : u.X && l.kg.error("Not injecting report dialog. No injection point found in HTML");
 }
-function S() {}
-function m(t) {
+function g() {}
+function y(t) {
     t();
 }
-function v(t) {
-    let e = (0, E.s3)();
+function m(t) {
+    let e = (0, i.s3)();
     e && e.captureUserFeedback(t);
 }

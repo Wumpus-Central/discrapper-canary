@@ -28,11 +28,11 @@ var r = n(687249),
     P = "[object Date]",
     D = "[object Error]",
     w = "[object Function]",
-    x = "[object GeneratorFunction]",
-    L = "[object Map]",
+    L = "[object GeneratorFunction]",
+    x = "[object Map]",
     M = "[object Number]",
-    j = "[object Object]",
-    k = "[object RegExp]",
+    k = "[object Object]",
+    j = "[object RegExp]",
     U = "[object Set]",
     G = "[object String]",
     B = "[object Symbol]",
@@ -51,23 +51,23 @@ var r = n(687249),
     $ = {};
 function ee(e, t, n, N, R, P) {
     var D,
-        L = t & T,
+        x = t & T,
         M = t & S,
-        k = t & A;
+        j = t & A;
     if ((n && (D = R ? n(e, N, R, P) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var U = E(e);
     if (U) {
-        if (((D = h(e)), !L)) return c(e, D);
+        if (((D = h(e)), !x)) return c(e, D);
     } else {
         var G = p(e),
-            B = G == w || G == x;
-        if (b(e)) return l(e, L);
-        if (G == j || G == C || (B && !R)) {
-            if (((D = M || B ? {} : g(e)), !L)) return M ? d(e, s(D, e)) : u(e, o(D, e));
+            B = G == w || G == L;
+        if (b(e)) return l(e, x);
+        if (G == k || G == C || (B && !R)) {
+            if (((D = M || B ? {} : g(e)), !x)) return M ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!$[G]) return R ? e : {};
-            D = m(e, G, L);
+            D = m(e, G, x);
         }
     }
     P || (P = new r());
@@ -82,7 +82,7 @@ function ee(e, t, n, N, R, P) {
               e.forEach(function (r, i) {
                   D.set(i, ee(r, t, n, i, e, P));
               });
-    var F = k ? (M ? _ : f) : M ? keysIn : I,
+    var F = j ? (M ? _ : f) : M ? keysIn : I,
         V = U ? void 0 : F(e);
     return (
         i(V || e, function (r, i) {
@@ -102,10 +102,10 @@ function ee(e, t, n, N, R, P) {
     $[W] =
     $[K] =
     $[z] =
-    $[L] =
+    $[x] =
     $[M] =
-    $[j] =
     $[k] =
+    $[j] =
     $[U] =
     $[G] =
     $[B] =

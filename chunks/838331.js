@@ -13,7 +13,7 @@ var r = n(54381),
     c = n(326452),
     u = n(481060),
     d = n(388032),
-    f = n(792323);
+    f = n(404792);
 function _(e, t, n) {
     return (
         t in e
@@ -129,13 +129,13 @@ function S(e) {
             onQueryChange: P,
         } = e,
         [D, w] = i.useState(""),
-        x = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 w(e), null == P || P(e);
             },
             [P],
         ),
-        [L] = i.useState(!0),
+        [x] = i.useState(!0),
         [M, k] = i.useState(null),
         j = i.useId(),
         U = i.useRef(null);
@@ -195,8 +195,8 @@ function S(e) {
                     ref: n,
                     role: "combobox",
                     "aria-label": O,
-                    "aria-expanded": L,
-                    "aria-controls": L ? j : void 0,
+                    "aria-expanded": x,
+                    "aria-controls": x ? j : void 0,
                     "aria-owns": j,
                     "aria-haspopup": "listbox",
                     className: o()(f.combobox, h),
@@ -208,10 +208,10 @@ function S(e) {
                                 autoFocus: S,
                                 placeholder: t,
                                 query: D,
-                                onChange: x,
+                                onChange: L,
                                 onKeyDown: i,
                                 onBlur: () => k(null),
-                                onClear: () => x(""),
+                                onClear: () => L(""),
                                 inputProps: {
                                     "aria-multiline": !1,
                                     "aria-activedescendant": null != M ? M : void 0,
@@ -220,7 +220,7 @@ function S(e) {
                         }),
                         (0, r.jsx)("div", {
                             children:
-                                L &&
+                                x &&
                                 (B
                                     ? (0, r.jsxs)("div", {
                                           className: f.empty,

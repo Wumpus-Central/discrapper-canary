@@ -9,12 +9,12 @@ var r = n(54381),
     u = n(585483),
     d = n(821020),
     p = n(736670),
-    f = n(82409),
-    h = n(981631),
+    h = n(82409),
+    f = n(981631),
     g = n(388032),
-    m = n(888831);
+    m = n(546373);
 function b(e) {
-    let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: f, spacing: b = 0 } = e,
+    let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: h, spacing: b = 0 } = e,
         { isOpen: y, setIsOpen: O } = (0, p.Z)(),
         v = i.useCallback(() => {
             O(!1);
@@ -29,16 +29,16 @@ function b(e) {
         return s.Z.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => s.Z.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         i.useEffect(
-            () => (u.S.subscribe(h.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(h.CkL.TOGGLE_INBOX, j)),
+            () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, j)),
             [j],
         );
-    let { entrypoint: x } = (0, d.pN)({ location: "NotificationsInboxPopout" });
+    let { entrypoint: C } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: f,
+        targetElementRef: h,
         shouldShow: y,
         align: l,
-        animation: x === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
-        animationPosition: x === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
+        animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
+        animationPosition: C === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
         position: n,
         onRequestClose: v,
         spacing: b,
@@ -46,8 +46,8 @@ function b(e) {
             (0, r.jsx)(a.VqE, {
                 "aria-label": g.intl.string(g.t.GSmTKJ),
                 className: o()({
-                    [m.repositionLayerTitlebarPopout]: x === d.u3.TITLE_BAR_LEFT,
-                    [m.repositionLayerSidebarPopout]: x === d.u3.SERVER_RAIL_TOP,
+                    [m.repositionLayerTitlebarPopout]: C === d.u3.TITLE_BAR_LEFT,
+                    [m.repositionLayerSidebarPopout]: C === d.u3.SERVER_RAIL_TOP,
                 }),
                 children: (0, r.jsx)(_, {}),
             }),
@@ -65,7 +65,7 @@ function _() {
                 className: m.backgroundContainer,
                 children: (0, r.jsx)("span", { className: m.background }),
             }),
-            (0, r.jsx)(f.Z, {}),
+            (0, r.jsx)(h.Z, {}),
         ],
     });
 }

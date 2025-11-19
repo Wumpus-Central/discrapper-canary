@@ -135,7 +135,7 @@ function O(e) {
             className: o()(p.nameGlow, w, y),
             children: n,
         },
-        j = C
+        k = C
             ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: N ? c : null,
@@ -149,7 +149,7 @@ function O(e) {
         onMouseEnter: T,
         onMouseLeave: S,
         children: [
-            "left" === d && j,
+            "left" === d && k,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
                 style: m({ color: A && !N && null != a ? a : void 0 }, R ? P : {}),
@@ -184,7 +184,7 @@ function O(e) {
                             : (0, r.jsx)("span", m({ "aria-hidden": !0 }, M))),
                 ],
             }),
-            "right" === d && j,
+            "right" === d && k,
         ],
     });
 }

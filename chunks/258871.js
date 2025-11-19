@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(688438),
     d = n(981631),
     p = n(388032);
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ let g = [
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            h(f({}, n), {
+                            f(h({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
                                 directoryChannelId: t.id,
@@ -94,11 +94,11 @@ let g = [
             getName: () => p.intl.string(p.t.MJQOuJ),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("28297")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            h(f({}, n), {
+                            f(h({}, n), {
                                 guild: e,
                                 channel: t,
                                 source: d.t4x.HUB_SIDEBAR,

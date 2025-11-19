@@ -2,7 +2,7 @@ n.d(t, {
     Db: () => C,
     HC: () => O,
     NQ: () => E,
-    fe: () => L,
+    fe: () => x,
 }),
     n(388685);
 var r,
@@ -16,7 +16,7 @@ var r,
     d = n(636606),
     f = n(748780),
     _ = n(481060),
-    p = n(298185);
+    p = n(773999);
 function h(e, t, n) {
     return (
         t in e
@@ -520,7 +520,7 @@ let R = {
         EASING_MIDDLE: f.Z.Easing.bezier(0.3, 0.01, 0, 0.99),
         EASING_END: f.Z.Easing.bezier(0, -0.01, 0.99, 0),
     });
-function x(e) {
+function L(e) {
     let { animate: t } = e,
         [n, r] = l.useState(0),
         i = (0, _.bYB)(
@@ -590,7 +590,7 @@ function x(e) {
         }),
     });
 }
-class L extends (o = l.PureComponent) {
+class x extends (o = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case "entry":
@@ -632,9 +632,9 @@ class L extends (o = l.PureComponent) {
                     pauseWhileUnfocused: a,
                     pause: n,
                 }),
-                (0, s.jsx)(x, { animate: !n && "stars" === t }),
+                (0, s.jsx)(L, { animate: !n && "stars" === t }),
             ],
         });
     }
 }
-h(L, "Scenes", N);
+h(x, "Scenes", N);

@@ -8,7 +8,7 @@ var i = n(120356),
     o = n(120998),
     c = n(353042),
     u = n(388032),
-    d = n(496034);
+    d = n(403595);
 let p = function (e) {
     var t;
     let { title: n, className: i, color: p, animate: f, gradientStopColor: h, getHistoricalTotalBytes: g } = e,

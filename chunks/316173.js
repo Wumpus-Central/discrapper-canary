@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(865427),
     p = n(820254),
     f = n(388032),
-    h = n(36398);
+    h = n(94226);
 let g = "isHideDevBanner",
     m = () => {
         var e;
@@ -48,7 +48,7 @@ let g = "isHideDevBanner",
                     className: a()(h.devBanner, h.staging),
                     children: [
                         (0, r.jsx)(p.Z, { className: h.icon }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "468965" }),
+                        f.intl.format(f.t.uyrfYF, { buildNumber: "469895" }),
                         (0, r.jsx)(_, {}),
                     ],
                 })

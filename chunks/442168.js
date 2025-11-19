@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(175470),
     p = n(569545),
     m = n(314910),
-    _ = n(565063);
+    _ = n(833876);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,8 +37,8 @@ function g(e) {
     }
     return e;
 }
-let v = { visibility: "hidden" },
-    b = {
+let b = { visibility: "hidden" },
+    v = {
         precision: 0.0001,
         duration: 300,
     },
@@ -55,8 +55,8 @@ function y(e) {
         S = (0, i.useRef)(null),
         O = f.n.getState().clipsButtonRef,
         C = (0, p.V9)(t),
-        I = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
-        w = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(C)),
+        w = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
+        I = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(C)),
         P = (0, i.useRef)(void 0);
     i.useEffect(
         () => () => {
@@ -65,9 +65,9 @@ function y(e) {
         [C],
     );
     let j = (e) => {
-            if (n !== s.P.NO_POPOUT) return v;
+            if (n !== s.P.NO_POPOUT) return b;
             let t = null == O ? void 0 : O.getBoundingClientRect();
-            if (((P.current = t), e.timestamp !== I || null == t)) return v;
+            if (((P.current = t), e.timestamp !== w || null == t)) return b;
             let { top: r, left: i } = t;
             return {
                 top: r + 36,
@@ -78,19 +78,19 @@ function y(e) {
         },
         x = (0, i.useRef)(null),
         Z = (0, c.Yzy)(
-            w,
+            I,
             {
                 keys: (e) => e.timestamp,
                 ref: x,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: b,
+                config: v,
             },
             "animate-always",
         ),
         R = (0, i.useRef)(null),
         T = (0, c.Yzy)(
-            w,
+            I,
             {
                 ref: R,
                 keys: (e) => e.timestamp,
@@ -105,10 +105,10 @@ function y(e) {
                             ? j(e)
                             : (() => {
                                   var e;
-                                  if (n !== s.P.NO_POPOUT) return v;
+                                  if (n !== s.P.NO_POPOUT) return b;
                                   let t = null == (e = S.current) ? void 0 : e.getBoundingClientRect();
                                   return null == t
-                                      ? v
+                                      ? b
                                       : {
                                             width: t.width,
                                             height: t.height,
@@ -146,7 +146,7 @@ function y(e) {
                 config: y.enabled ? h : E,
                 onRest: (e, t) => {
                     null != t.item &&
-                        null != w.find((e) => e.timestamp === t.item.timestamp) &&
+                        null != I.find((e) => e.timestamp === t.item.timestamp) &&
                         (0, d.Gh)(C, t.item.timestamp);
                 },
             },

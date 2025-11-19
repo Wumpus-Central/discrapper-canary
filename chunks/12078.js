@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(981631),
     b = n(570911),
     x = n(388032),
-    j = n(453921);
+    j = n(823222);
 function _(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         s = (0, d.nv)(),

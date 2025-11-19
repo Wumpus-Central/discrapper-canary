@@ -85,8 +85,8 @@ function f(e) {
         P = i.useRef(null),
         D = i.useRef(null),
         w = i.useRef(E),
-        x = null != m,
-        L = d(m),
+        L = null != m,
+        x = d(m),
         M = d(f),
         k = d(g),
         j = i.useCallback(() => {
@@ -131,10 +131,10 @@ function f(e) {
     ),
         s(() => {
             if ((N && (P.current = N), R && (D.current = R), N && R)) {
-                if (L.current) return L.current(N, R, j);
+                if (x.current) return x.current(N, R, j);
                 j();
             }
-        }, [N, R, j, L, x]);
+        }, [N, R, j, x, L]);
     let G = i.useMemo(
             () => ({
                 reference: P,

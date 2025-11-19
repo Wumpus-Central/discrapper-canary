@@ -1,4 +1,4 @@
-n.d(t, { q: () => x }), n(388685), n(467055), n(49124);
+n.d(t, { q: () => L }), n(388685), n(467055), n(49124);
 var r,
     i = n(135273);
 n(724522);
@@ -42,11 +42,11 @@ function D(e, t, n) {
     );
 }
 let w = new b.Z("CacheStore"),
-    x = !1,
     L = !1,
+    x = !1,
     M = "initializing",
-    j = 0,
-    k = !1,
+    k = 0,
+    j = !1,
     U = !1,
     G = !1;
 function B() {
@@ -56,25 +56,25 @@ function Z() {
     return (U = !1), (G = !0), !1;
 }
 function F() {
-    k = !0;
+    j = !0;
 }
 function V() {
-    (k = !0), (M = "cache-loaded");
+    (j = !0), (M = "cache-loaded");
 }
 function H() {
     M = "no-cache";
 }
 function Y(e) {
     w.log("Clearing cache store"),
-        (j = Date.now()),
+        (k = Date.now()),
         o.K.remove(P.FsG),
         o.K.remove(P.ihW),
         o.K.remove(P.O42),
         (M = "no-cache"),
-        "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (L = !0);
+        "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (x = !0);
 }
 function W() {
-    w.verbose("Writing cache now"), (j = Date.now()), (k = !0), o.K.remove(P.FsG), o.K.remove(P.O42), o.K.remove(P.ihW);
+    w.verbose("Writing cache now"), (k = Date.now()), (j = !0), o.K.remove(P.FsG), o.K.remove(P.O42), o.K.remove(P.ihW);
 }
 function K(e) {
     null != e.channels && (0, N.ZP)(e.channels),
@@ -133,7 +133,7 @@ async function q(e, t, n) {
             null == e
                 ? Promise.resolve([])
                 : i.Z.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => h.Z.getAll(e)),
-        [[N, P], D, x, L, M, j, k] = await Promise.all([_, E, b, O, I, A, C]),
+        [[N, P], D, L, x, M, k, j] = await Promise.all([_, E, b, O, I, A, C]),
         U = performance.now() - f;
     if ((w.verbose("cache loaded in ".concat(U, "ms (channel_history ").concat(N, "ms)")), null == P))
         return (
@@ -143,8 +143,8 @@ async function q(e, t, n) {
         );
     {
         let r = Object.fromEntries(P.members.map((e) => [e.userId, e])),
-            o = null != x.guildId && null != x.channels,
-            f = x.guildId;
+            o = null != L.guildId && null != L.channels,
+            f = L.guildId;
         return (
             a.ZP.Emitter.batched(() => {
                 i.Z.time("\uD83D\uDCBE", "Dispatch Mini Cache", () => {
@@ -152,14 +152,14 @@ async function q(e, t, n) {
                     return s.Z.dispatch({
                         type: "CACHE_LOADED",
                         guilds: D,
-                        privateChannels: L,
-                        initialGuildChannels: null != (e = x.channels) ? e : [],
+                        privateChannels: x,
+                        initialGuildChannels: null != (e = L.channels) ? e : [],
                         users: [...P.users],
                         messages: null == P.channelId ? {} : { [P.channelId]: P.messages },
                         guildMembers: null == P.guildId ? {} : { [P.guildId]: r },
                         userSettings: M,
-                        userGuildSettings: k,
-                        readStates: j,
+                        userGuildSettings: j,
+                        readStates: k,
                     });
                 }),
                     i.Z.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
@@ -177,20 +177,20 @@ async function q(e, t, n) {
                         null == e ? void 0 : e.name,
                         "\n        data:\n          database:\n            private_channels: ",
                     )
-                    .concat(L.length, "\n            channel_history:\n              guild: ")
+                    .concat(x.length, "\n            channel_history:\n              guild: ")
                     .concat(P.guildId, "\n              channel: ")
                     .concat(P.channelId, "\n              messages: ")
                     .concat(P.messages.length, "\n                members: ")
                     .concat(P.members.length, "\n                users: ")
                     .concat(P.users.length, "\n            initial_guild:\n              id: ")
                     .concat(f, "\n              channels: ")
-                    .concat(null == (l = x.channels) ? void 0 : l.length, "\n            user_settings: ")
+                    .concat(null == (l = L.channels) ? void 0 : l.length, "\n            user_settings: ")
                     .concat(Object.keys(M).length, "\n            read_states: ")
-                    .concat(j.length, "\n            user_guild_settings: ")
-                    .concat(k.length, "\n      )"),
+                    .concat(k.length, "\n            user_guild_settings: ")
+                    .concat(j.length, "\n      )"),
             ),
             w.verbose("finished dispatching CACHE_LOADED"),
-            [!0, o && null != f ? f : null, L.length]
+            [!0, o && null != f ? f : null, x.length]
         );
     }
 }
@@ -407,20 +407,20 @@ function en(e) {
 }
 class er extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.default, y.Z, T.Z, S.Z), x || y.Z.getSocket().dispatcher.unpauseDispatchQueue();
+        this.waitFor(I.default, y.Z, T.Z, S.Z), L || y.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
-        return !x || k;
+        return !L || j;
     }
     getLazyCacheStatus() {
-        return x ? M : "no-cache";
+        return L ? M : "no-cache";
     }
     get lastWriteTime() {
-        return j;
+        return k;
     }
     canWriteCaches(e) {
         return (0, A.$8)()
-            ? L
+            ? x
                 ? (w.log("Not writing cache because caches cleared"), !1)
                 : !!e || !!G || (w.log("Not writing cache because never connected"), !1)
             : (w.log("Not writing cache because not authenticated"), !1);
@@ -460,7 +460,7 @@ class er extends (r = a.ZP.Store) {
 D(er, "displayName", "CacheStore"),
     new er(
         s.Z,
-        x
+        L
             ? {
                   CONNECTION_OPEN: B,
                   LOGOUT: Y,

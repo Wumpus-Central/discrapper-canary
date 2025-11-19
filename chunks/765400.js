@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(388032),
-    o = n(317673);
+    o = n(861575);
 let s = () =>
     (0, r.jsx)(i.IGR, {
         color: i.TVs.unsafe_rawColors.YELLOW_300.css,

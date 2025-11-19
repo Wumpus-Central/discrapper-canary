@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(945909),
     _ = n(866577),
     p = n(231338),
-    h = n(254477);
+    h = n(929618);
 function m(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ function S(e) {
             modal: D = !1,
             returnRef: w,
         } = e,
-        [x, L] = i.useState(p),
+        [L, x] = i.useState(p),
         [M, k] = i.useState(E),
         j = i.useRef(E),
         U = i.useRef(0),
@@ -130,13 +130,13 @@ function S(e) {
             );
         }, [a, B]);
     i.useEffect(() => {
-        V && p ? L(!0) : V || L(!1);
+        V && p ? x(!0) : V || x(!1);
     }, [V, p]),
         i.useEffect(() => {
             F(E);
         }, [E, F]);
     let H = () => {
-            L(!1);
+            x(!1);
         },
         Y = (0, _.i)({
             shouldShow: p,
@@ -181,7 +181,7 @@ function S(e) {
         };
     return (0, r.jsx)(u.H, {
         targetElementRef: a,
-        shouldShow: x,
+        shouldShow: L,
         onRequestClose: m,
         position: M,
         align: O,

@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(981631),
     b = n(957825),
     y = n(388032),
-    O = n(564355);
+    O = n(744114);
 function v(e, t) {
     let { disabled: n, type: a } = e,
         [v, I] = i.useState(!1),
@@ -48,9 +48,9 @@ function v(e, t) {
     let P = i.useCallback(() => {
             (0, f.RO)(b.X1.GIF, a);
         }, [a]),
-        { Component: D, events: w, play: x } = (0, c.V)(),
-        L = (0, h.v)(d.O),
-        M = a === m.Ie.NORMAL ? L : void 0;
+        { Component: D, events: w, play: L } = (0, c.V)(),
+        x = (0, h.v)(d.O),
+        M = a === m.Ie.NORMAL ? x : void 0;
     if (n) return null;
     let k = S === b.X1.GIF && A === a;
     return (0, r.jsx)(u.u, {
@@ -66,7 +66,7 @@ function v(e, t) {
                 onMouseEnter: w.onMouseEnter,
                 onMouseLeave: w.onMouseLeave,
                 onClick: () => {
-                    P(), x();
+                    P(), L();
                 },
                 isActive: k,
                 pulse: v,

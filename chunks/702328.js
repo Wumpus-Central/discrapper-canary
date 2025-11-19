@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(306066),
     D = n(349803),
     w = n(8231),
-    x = n(864879),
-    L = n(238649),
+    L = n(864879),
+    x = n(238649),
     M = n(47840),
     k = n(975978),
     j = n(836332),
@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(474936),
     V = n(981631),
     H = n(231338),
-    Y = n(379039),
-    W = n(810392),
+    Y = n(650714),
+    W = n(909197),
     K = n(107283);
 let z = () => {
     (0, m.z)(h.X);
@@ -86,8 +86,8 @@ let z = () => {
             eN.trial_id !== F.a7,
         eD = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eR && null != eR.expires_at,
         ew = eP ? eN.expires_at : eD ? eR.expires_at : null,
-        ex = eC === v.tE.HERO_COUNTDOWN && (eP || eD) && null != ew,
-        eL = (0, r.jsxs)("div", {
+        eL = eC === v.tE.HERO_COUNTDOWN && (eP || eD) && null != ew,
+        ex = (0, r.jsxs)("div", {
             className: o()(eA.container, eA.responsiveContainer, {
                 [eA.containerBackground]: em || J,
                 [Y.fadeInFromTop]: !X && em,
@@ -98,7 +98,7 @@ let z = () => {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(P.Z, {
-                                className: o()(Y.topOfPageGradient, { [Y.topOfPageGradientWithCountdown]: ex }),
+                                className: o()(Y.topOfPageGradient, { [Y.topOfPageGradientWithCountdown]: eL }),
                             }),
                             (0, r.jsx)(Z.Z, {
                                 navBarSections: eb,
@@ -129,11 +129,11 @@ let z = () => {
                                 threshold: 0,
                                 active: !0,
                                 children: em
-                                    ? (0, r.jsx)(L.Z, {
+                                    ? (0, r.jsx)(x.Z, {
                                           ref: a,
                                           subscriptionTier: ef,
                                           isEligibleForBogoPromotion: e_,
-                                          offerExpiresAt: ex ? ew : null,
+                                          offerExpiresAt: eL ? ew : null,
                                       })
                                     : (0, r.jsx)(U.Z, {
                                           ref: a,
@@ -216,7 +216,7 @@ let z = () => {
                         en(e);
                     },
                     children: em
-                        ? (0, r.jsx)(x.Z, { ref: q })
+                        ? (0, r.jsx)(L.Z, { ref: q })
                         : (0, r.jsx)(j.Z, {
                               ref: q,
                               isFooterVisible: et,
@@ -244,7 +244,7 @@ let z = () => {
             (0, r.jsx)(u.yWw, {
                 className: o()(eA.scroller, t),
                 ref: e,
-                children: eL,
+                children: ex,
             }),
     });
 };

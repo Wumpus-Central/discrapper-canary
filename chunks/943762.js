@@ -8,7 +8,7 @@ var i = n(481060),
     a = n(884338),
     o = n(981631),
     s = n(388032),
-    l = n(188206);
+    l = n(633082);
 function c(e) {
     let { activityUsers: t, guildId: n, activityText: o } = e;
     return (0, r.jsxs)("div", {

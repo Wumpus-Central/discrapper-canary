@@ -433,39 +433,39 @@
                 P = r.constructor,
                 D = r.s == i.s ? 1 : -1,
                 w = r.d,
-                x = i.d;
+                L = i.d;
             if (!r.s) return new P(r);
             if (!i.s) throw Error(o + "Division by zero");
-            for (u = 0, c = r.e - i.e, N = x.length, S = w.length, g = (m = new P(D)).d = []; x[u] == (w[u] || 0); )
+            for (u = 0, c = r.e - i.e, N = L.length, S = w.length, g = (m = new P(D)).d = []; L[u] == (w[u] || 0); )
                 ++u;
-            if ((x[u] > (w[u] || 0) && --c, (O = null == a ? (a = P.precision) : s ? a + (v(r) - v(i)) + 1 : a) < 0))
+            if ((L[u] > (w[u] || 0) && --c, (O = null == a ? (a = P.precision) : s ? a + (v(r) - v(i)) + 1 : a) < 0))
                 return new P(0);
             if (((O = (O / _ + 2) | 0), (u = 0), 1 == N))
-                for (d = 0, x = x[0], O++; (u < S || d) && O--; u++)
-                    (I = d * f + (w[u] || 0)), (g[u] = (I / x) | 0), (d = (I % x) | 0);
+                for (d = 0, L = L[0], O++; (u < S || d) && O--; u++)
+                    (I = d * f + (w[u] || 0)), (g[u] = (I / L) | 0), (d = (I % L) | 0);
             else {
                 for (
-                    (d = (f / (x[0] + 1)) | 0) > 1 && ((x = e(x, d)), (w = e(w, d)), (N = x.length), (S = w.length)),
+                    (d = (f / (L[0] + 1)) | 0) > 1 && ((L = e(L, d)), (w = e(w, d)), (N = L.length), (S = w.length)),
                         T = N,
                         b = (E = w.slice(0, N)).length;
                     b < N;
                 )
                     E[b++] = 0;
-                (R = x.slice()).unshift(0), (A = x[0]), x[1] >= f / 2 && ++A;
+                (R = L.slice()).unshift(0), (A = L[0]), L[1] >= f / 2 && ++A;
                 do
                     (d = 0),
-                        (l = t(x, E, N, b)) < 0
+                        (l = t(L, E, N, b)) < 0
                             ? ((y = E[0]),
                               N != b && (y = y * f + (E[1] || 0)),
                               (d = (y / A) | 0) > 1
                                   ? (d >= f && (d = f - 1),
-                                    (h = (p = e(x, d)).length),
+                                    (h = (p = e(L, d)).length),
                                     (b = E.length),
-                                    1 == (l = t(p, E, h, b)) && (d--, n(p, N < h ? R : x, h)))
-                                  : (0 == d && (l = d = 1), (p = x.slice())),
+                                    1 == (l = t(p, E, h, b)) && (d--, n(p, N < h ? R : L, h)))
+                                  : (0 == d && (l = d = 1), (p = L.slice())),
                               (h = p.length) < b && p.unshift(0),
                               n(E, p, b),
-                              -1 == l && ((b = E.length), (l = t(x, E, N, b)) < 1 && (d++, n(E, N < b ? R : x, b))),
+                              -1 == l && ((b = E.length), (l = t(L, E, N, b)) < 1 && (d++, n(E, N < b ? R : L, b))),
                               (b = E.length))
                             : 0 === l && (d++, (E = [0])),
                         (g[u++] = d),

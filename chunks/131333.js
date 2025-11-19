@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(146128),
     f = n(981631),
     _ = n(675654),
-    p = n(433661);
+    p = n(950176);
 function h(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ function w(e) {
     for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
 }
-let x = {
+let L = {
     enter: {
         BEG: 0,
         END: 22,
@@ -100,7 +100,7 @@ let x = {
         END: 200,
     },
 };
-function L() {
+function x() {
     return n
         .e("77843")
         .then(n.t.bind(n, 931152, 19))
@@ -246,10 +246,10 @@ function j(e) {
                                     animationRef: I,
                                     className: p.lottieAnimation,
                                     nextScene: l,
-                                    sceneSegments: x,
+                                    sceneSegments: L,
                                     onScenePlay: O,
                                     onSceneComplete: v,
-                                    importData: L,
+                                    importData: x,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),

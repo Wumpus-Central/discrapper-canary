@@ -43,9 +43,9 @@ let g = (e) => {
             null != n,
         ),
         { bannerUrl: p, bannerAnimatedUrl: f } = (0, s._M)(t),
-        h = null != t.textColor ? { color: t.textColor } : void 0,
-        C = null != t.body && "" !== t.body,
-        m = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        m = null != t.textColor ? { color: t.textColor } : void 0,
+        h = null != t.body && "" !== t.body,
+        C = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: g,
         className: u.immersiveBannerBlock,
@@ -74,21 +74,21 @@ let g = (e) => {
                             variant: "heading-xxl/bold",
                             className: u.title,
                             color: "header-primary",
-                            style: d({}, h),
+                            style: d({}, m),
                             children: t.title,
                         }),
-                        C || m
+                        h || C
                             ? (0, r.jsxs)(i.Text, {
                                   variant: "text-md/medium",
-                                  style: d({}, h),
+                                  style: d({}, m),
                                   children: [
-                                      C && t.body,
-                                      C && m && " ",
-                                      m &&
+                                      h && t.body,
+                                      h && C && " ",
+                                      C &&
                                           (0, r.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
-                                              style: d({}, h),
+                                              style: d({}, m),
                                               children: c.intl.string(c.t.O7ADgv),
                                           }),
                                   ],

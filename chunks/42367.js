@@ -1,15 +1,15 @@
-a.d(e, { O: () => o });
-var r = a(151122),
-    _ = a(642112),
-    n = a(878719);
-let o = (0, r._I)((t = {}) => {
+_.d(e, { O: () => o });
+var a = _(151122),
+    r = _(642112),
+    n = _(878719);
+let o = (0, a._I)((t = {}) => {
     let e = t.limit || 5,
-        a = t.key || "cause";
+        _ = t.key || "cause";
     return {
         name: "LinkedErrors",
-        preprocessEvent(t, r, o) {
-            let i = o.getOptions();
-            (0, _.Z)(n.GJ, i.stackParser, i.maxValueLength, a, e, t, r);
+        preprocessEvent(t, a, o) {
+            let E = o.getOptions();
+            (0, r.Z)(n.GJ, E.stackParser, E.maxValueLength, _, e, t, a);
         },
     };
 });

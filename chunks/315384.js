@@ -6,7 +6,7 @@ var a = n(54381),
     s = n(481060),
     o = n(317951),
     c = n(959546),
-    d = n(625299);
+    d = n(838303);
 let u = "/users/@me/debug/consumables/",
     m = {
         [o.FX]: "HD Streaming Potion",

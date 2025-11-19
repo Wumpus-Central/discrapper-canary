@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(997841);
+n.d(t, { Z: () => x }), n(997841);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(314734),
     C = n(981631),
     N = n(388032),
-    R = n(820607);
+    R = n(333616);
 function P(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function w(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,9 +78,9 @@ function x(e, t) {
         e
     );
 }
-function L(e) {
+function x(e) {
     var t;
-    let { application: a, context: P, className: w, sectionName: L } = e,
+    let { application: a, context: P, className: w, sectionName: x } = e,
         M = i.useRef(null),
         k = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
         j = (0, T.L1)(a),
@@ -93,7 +93,7 @@ function L(e) {
         Z = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: a.id,
-            section_name: L,
+            section_name: x,
             source: I.Z.lastShownEntrypoint(),
         },
         F = E.default.getCurrentUser(),
@@ -151,7 +151,7 @@ function L(e) {
                                                 (0, l.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("77803"),
-                                                        n.e("42124"),
+                                                        n.e("15351"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, r.jsx)(e, {
@@ -171,7 +171,7 @@ function L(e) {
                                                   null == j.customInstallUrl &&
                                                       (0, c.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
                                                       (0, v.L)(
-                                                          x(D({}, j), {
+                                                          L(D({}, j), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
@@ -217,7 +217,7 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         l.P3F,
-                        x(D({ innerRef: M }, e), {
+                        L(D({ innerRef: M }, e), {
                             onClick: e.onClick,
                             className: o()(R.clickable, w),
                             "aria-label": N.intl.string(N.t["UKOtz+"]),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(35282);
+n.d(t, { Z: () => L }), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -24,7 +24,7 @@ var r = n(54381),
     S = n(666984),
     A = n(670451),
     C = n(671955),
-    N = n(704543);
+    N = n(663907);
 function R(e, t, n) {
     return (
         t in e
@@ -77,10 +77,10 @@ function w(e, t) {
         e
     );
 }
-function x(e) {
+function L(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: D } = e,
-        x = (0, p.Dt)(),
         L = (0, p.Dt)(),
+        x = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
         k = (0, _.Z)({
             activity: a,
@@ -165,11 +165,11 @@ function x(e) {
             className: o()(N.card, R),
             onAction: Z,
             onClose: D,
-            "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
+            "aria-labelledby": U ? "".concat(x, " ").concat(L) : L,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    w(P({ textId: L }, j), {
+                    w(P({ textId: x }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
@@ -203,7 +203,7 @@ function x(e) {
                                                 onClick: () => {
                                                     Z({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.aG)(a);
                                                 },
-                                                id: x,
+                                                id: L,
                                             }),
                                             V(),
                                         ],

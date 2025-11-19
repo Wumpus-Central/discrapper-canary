@@ -9,8 +9,8 @@ var i = n(313361),
     c = n(109434),
     d = n(228392),
     u = n(388032),
-    m = n(797013),
-    h = n(377741);
+    m = n(826688),
+    h = n(203606);
 function g(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: g, layoutType: f, tagSetting: x } = (0, c.H)(t.id),

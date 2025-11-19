@@ -11,9 +11,9 @@ var r = n(54381),
     g = n(429368),
     p = n(724994),
     f = n(786040),
-    h = n(508925),
-    C = n(616066),
-    m = n(684263),
+    m = n(508925),
+    h = n(616066),
+    C = n(684263),
     _ = n(396728),
     b = n(58201),
     v = n(201964),
@@ -53,7 +53,7 @@ let E = (e) => {
                     removeSetHeight: !0,
                 });
             case a.Z.AVATAR_DECORATION:
-                return (0, r.jsx)(C.R, {
+                return (0, r.jsx)(h.R, {
                     item: s,
                     user: l,
                     isHighlighted: n,
@@ -68,14 +68,14 @@ let E = (e) => {
                     isPurchased: !1,
                 });
             case a.Z.BUNDLE:
-                return (0, r.jsx)(m.U, {
+                return (0, r.jsx)(C.U, {
                     product: t,
                     user: l,
                     isHighlighted: n,
                     isPurchased: !1,
                 });
             case a.Z.EXTERNAL_SKU:
-                return (0, r.jsx)(h.b, {
+                return (0, r.jsx)(m.b, {
                     product: t,
                     animationState: n ? "on" : "off",
                 });

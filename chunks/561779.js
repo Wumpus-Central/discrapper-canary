@@ -11,7 +11,7 @@ var r,
     f = n(793030),
     _ = n(506802),
     p = n(607070),
-    h = n(89079);
+    h = n(43404);
 function m(e, t, n) {
     return (
         t in e
@@ -122,7 +122,11 @@ function v(e, t) {
 }
 class I extends (r = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
-        return e.initialValue !== t.initialValueProp ? b(g({}, v(e, t.value)), { active: t.active }) : null;
+        return null != e.value && e.value !== t.value
+            ? b(g({}, v(e, e.value)), { active: t.active })
+            : e.initialValue !== t.initialValueProp
+              ? b(g({}, v(e, t.value)), { active: t.active })
+              : null;
     }
     componentWillUnmount() {
         this.reset();
@@ -158,8 +162,8 @@ class I extends (r = a.PureComponent) {
                 onValueRender: P,
                 renderMarker: D,
                 getAriaValueText: w,
-                barClassName: x,
-                grabberClassName: L,
+                barClassName: L,
+                grabberClassName: x,
                 grabberStyles: M = {},
                 markerPosition: k = 0,
                 "aria-hidden": j,
@@ -258,7 +262,7 @@ class I extends (r = a.PureComponent) {
                                             children: H,
                                         }),
                                         (0, i.jsx)("div", {
-                                            className: s()(h.bar, x),
+                                            className: s()(h.bar, L),
                                             style: I,
                                             children: (0, i.jsx)("div", {
                                                 className: h.barFill,
@@ -278,7 +282,7 @@ class I extends (r = a.PureComponent) {
                                                     (0, i.jsx)(
                                                         "div",
                                                         b(g({}, e), {
-                                                            className: s()(h.grabber, L),
+                                                            className: s()(h.grabber, x),
                                                             style: b(g({}, M), { left: V }),
                                                             onMouseDown: this.handleMouseDown,
                                                             ref: this.grabberRef,

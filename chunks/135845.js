@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(981631),
     y = n(245335),
     O = n(388032),
-    v = n(105341);
+    v = n(739236);
 function I(e) {
     let t,
         n,
@@ -43,8 +43,8 @@ function I(e) {
             [a, N],
         ),
         { analyticsLocations: w } = (0, d.ZP)(u.Z.INVITE_EMBED),
-        x = null != a && a.target_type === y.Iq.STREAM && null != a.target_user && null != P,
-        L =
+        L = null != a && a.target_type === y.Iq.STREAM && null != a.target_user && null != P,
+        x =
             null != a &&
             null != D &&
             null != a.channel &&
@@ -58,7 +58,7 @@ function I(e) {
         U = a.state === b.r2o.ACCEPTING,
         G = i.useCallback(() => {
             let e = "noop";
-            x ? (A(), (e = "transition")) : (C(), (e = "accept")),
+            L ? (A(), (e = "transition")) : (C(), (e = "accept")),
                 (0, c.r$)(
                     {
                         invite: a,
@@ -68,7 +68,7 @@ function I(e) {
                     },
                     w,
                 );
-        }, [a, S, w, x, A, C]),
+        }, [a, S, w, L, A, C]),
         B = null != T;
     if (null == T) {
         if (null == a.guild) return (0, r.jsx)(E.Z, {});
@@ -77,11 +77,11 @@ function I(e) {
     let Z = null != a.channel ? (0, _.jD)(a.channel) : null,
         F = g.ZP.getName(k),
         V = "active";
-    B && !L
+    B && !x
         ? (n = j ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: F }))
         : ((t = O.intl.string(O.t.I6JG46)),
           (V = "active"),
-          x && ((t = O.intl.string(O.t.Q1W99y)), (V = "secondary")),
+          L && ((t = O.intl.string(O.t.Q1W99y)), (V = "secondary")),
           (n = j ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: F })));
     let H =
         R === T.id && null != Z
@@ -97,20 +97,20 @@ function I(e) {
                         children: [
                             (0, r.jsx)(f.Z.Icon, {
                                 guild: T,
-                                onClick: B && L ? G : void 0,
+                                onClick: B && x ? G : void 0,
                             }),
                             (0, r.jsx)(f.Z.Info, {
                                 title: n,
-                                onClick: B && L ? G : void 0,
+                                onClick: B && x ? G : void 0,
                                 children: H,
                             }),
                         ],
                     }),
-                    L
+                    x
                         ? (0, r.jsx)(s.zxk, {
                               onClick: G,
                               loading: U,
-                              disabled: x,
+                              disabled: L,
                               variant: V,
                               text: t,
                           })

@@ -34,8 +34,8 @@ var r = n(54381),
     P = n(474936),
     D = n(981631),
     w = n(388032),
-    x = n(717582),
-    L = n(867250);
+    L = n(846288),
+    x = n(867250);
 function M(e) {
     if (null == e) return null;
     let t = u()(e),
@@ -55,27 +55,27 @@ function k(e) {
         f = null == u ? void 0 : u.subscription_trial,
         _ = null != (i = null != (n = e.subscriptionTier) ? n : null == f ? void 0 : f.sku_id) ? i : P.Si.TIER_2;
     return (0, r.jsxs)("div", {
-        className: o()(a, x.gradientUpsellWrapper, {
-            [x.gradientUpsellWrapperTier0]: _ === P.Si.TIER_0,
-            [x.gradientUpsellWrapperTier2]: _ === P.Si.TIER_2,
-            [x.gradientUpsellWrapperWithBottomMargin]: l,
+        className: o()(a, L.gradientUpsellWrapper, {
+            [L.gradientUpsellWrapperTier0]: _ === P.Si.TIER_0,
+            [L.gradientUpsellWrapperTier2]: _ === P.Si.TIER_2,
+            [L.gradientUpsellWrapperWithBottomMargin]: l,
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: x.logo,
+                className: L.logo,
                 children: [
                     (0, r.jsx)(h.SrA, {
                         size: "md",
                         color: "currentColor",
-                        className: x.logoIcon,
+                        className: L.logoIcon,
                     }),
-                    _ === P.Si.TIER_0 && (0, r.jsx)(O.Z, { className: x.logoWordmark }),
-                    _ === P.Si.TIER_2 && (0, r.jsx)(y.Z, { className: x.logoWordmark }),
+                    _ === P.Si.TIER_0 && (0, r.jsx)(O.Z, { className: L.logoWordmark }),
+                    _ === P.Si.TIER_2 && (0, r.jsx)(y.Z, { className: L.logoWordmark }),
                 ],
             }),
             (0, r.jsx)(h.Text, {
                 variant: "text-md/medium",
-                className: x.copy,
+                className: L.copy,
                 color: "none",
                 children: s,
             }),
@@ -88,7 +88,7 @@ function k(e) {
             }),
             (0, r.jsx)(h.Text, {
                 variant: "eyebrow",
-                className: x.countdownText,
+                className: L.countdownText,
                 children: M(d),
             }),
         ],
@@ -134,9 +134,9 @@ function U(e) {
         a = null != (n = null == i ? void 0 : i.sku_id) ? n : P.Si.TIER_2;
     return (0, r.jsx)(h.Text, {
         variant: "text-xs/bold",
-        className: o()(x.trialBadge, e.className, {
-            [x.trialBadgeGradientTier0]: a === P.Si.TIER_0,
-            [x.trialBadgeGradientTier2]: a === P.Si.TIER_2,
+        className: o()(L.trialBadge, e.className, {
+            [L.trialBadgeGradientTier0]: a === P.Si.TIER_0,
+            [L.trialBadgeGradientTier2]: a === P.Si.TIER_2,
         }),
         color: "none",
         children: (0, I.a5)({
@@ -148,18 +148,18 @@ function U(e) {
 function G(e) {
     let { subscriptionTier: t, onClose: n, analyticsLocationObject: i, trialOffer: a, discountOffer: o } = e;
     return (0, r.jsxs)("div", {
-        className: x.footer,
+        className: L.footer,
         children: [
             (0, r.jsx)(p.zx, {
                 "data-migration-pending": !0,
                 onClick: n,
                 size: p.zx.Sizes.SMALL,
                 look: p.iL.BLANK,
-                className: x.cancelButton,
+                className: L.cancelButton,
                 children: w.intl.string(w.t.cpT0Cq),
             }),
             (0, r.jsx)(j, {
-                className: x.subscribeButton,
+                className: L.subscribeButton,
                 subscriptionTier: t,
                 analyticsLocationObject: i,
                 onClose: n,
@@ -173,10 +173,10 @@ function B(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
         i = (0, C.N)();
     return (0, r.jsxs)("div", {
-        className: x.tryOutUpsellContainer,
+        className: L.tryOutUpsellContainer,
         children: [
             (0, r.jsx)(R.Cy, {
-                className: x.topRimPill,
+                className: L.topRimPill,
                 text: w.intl.string(w.t["8CVUrV"]),
                 colorOptions: R.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
@@ -187,14 +187,14 @@ function B(e) {
             }),
             (0, r.jsx)(j, {
                 trialOffer: i,
-                className: x.subscribeButtonWide,
+                className: L.subscribeButtonWide,
                 subscriptionTier: P.Si.TIER_2,
                 analyticsLocationObject: n,
                 onClose: t,
             }),
             (0, r.jsx)(h.Text, {
                 variant: "eyebrow",
-                className: x.countdownTextInSetting,
+                className: L.countdownTextInSetting,
                 children: M(null == i ? void 0 : i.expires_at),
             }),
         ],
@@ -203,7 +203,7 @@ function B(e) {
 function Z(e) {
     let { headingText: t, context: n, children: i, trialOffer: a, discountOffer: o } = e;
     return (0, r.jsxs)("div", {
-        className: x.contentContainer,
+        className: L.contentContainer,
         children: [
             (0, r.jsx)(h.Heading, {
                 variant: "heading-xl/semibold",
@@ -211,7 +211,7 @@ function Z(e) {
             }),
             null != n &&
                 (0, r.jsx)(h.Text, {
-                    className: x.context,
+                    className: L.context,
                     variant: "text-md/normal",
                     children: n,
                 }),
@@ -243,7 +243,7 @@ function F(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(h.P3F, {
-                        className: x.upsellClose,
+                        className: L.upsellClose,
                         onClick: s,
                         children: (0, r.jsx)(h.Dio, {
                             size: "md",
@@ -251,11 +251,11 @@ function F(e) {
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: x.contentContainer,
+                        className: L.contentContainer,
                         children: [
                             (0, r.jsx)("img", {
-                                className: x.upsellImage,
-                                src: L,
+                                className: L.upsellImage,
+                                src: x,
                                 alt: w.intl.string(w.t.do7AoM),
                             }),
                             (0, r.jsx)(h.Heading, {
@@ -291,11 +291,11 @@ function F(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: x.contentContainer,
+                            className: L.contentContainer,
                             children: [
                                 (0, r.jsx)("img", {
-                                    className: x.upsellImage,
-                                    src: L,
+                                    className: L.upsellImage,
+                                    src: x,
                                     alt: w.intl.string(w.t.do7AoM),
                                 }),
                                 (0, r.jsx)(h.Heading, {
@@ -332,11 +332,11 @@ function F(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: x.contentContainer,
+                        className: L.contentContainer,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                className: x.upsellImage,
+                                className: L.upsellImage,
                                 src: R,
                             }),
                             (0, r.jsx)(h.Heading, {
@@ -407,7 +407,7 @@ function F(e) {
             return (
                 l()(null != M, "There must be some upsell context"),
                 (0, r.jsxs)("div", {
-                    className: x.contentContainer,
+                    className: L.contentContainer,
                     children: [
                         (0, r.jsx)(h.Heading, {
                             variant: "heading-xl/bold",
@@ -428,7 +428,7 @@ function F(e) {
             );
         case P.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
             return (0, r.jsxs)("div", {
-                className: x.contentContainer,
+                className: L.contentContainer,
                 children: [
                     (0, r.jsx)(h.Heading, {
                         variant: "heading-xl/bold",
@@ -448,7 +448,7 @@ function F(e) {
                         }),
                     }),
                     (0, r.jsx)(j, {
-                        className: x.upsellButton,
+                        className: L.upsellButton,
                         subscriptionTier: u,
                         analyticsLocationObject: p,
                         onClose: s,
@@ -472,7 +472,7 @@ function F(e) {
             );
         case P.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, r.jsxs)("div", {
-                className: o()(x.messageLengthUpsellContainer, { [x.messageLengthUpsellAppearAnimation]: !A }),
+                className: o()(L.messageLengthUpsellContainer, { [L.messageLengthUpsellAppearAnimation]: !A }),
                 children: [
                     (0, r.jsx)(h.Text, {
                         variant: "text-lg/bold",
@@ -482,14 +482,14 @@ function F(e) {
                     (0, r.jsx)(h.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
-                        className: x.messageLengthUpsellHeader,
+                        className: L.messageLengthUpsellHeader,
                         children: w.intl.string(w.t.ZvHg3N),
                     }),
-                    (0, r.jsx)("div", { className: x.divider }),
+                    (0, r.jsx)("div", { className: L.divider }),
                     (0, r.jsx)(k, {
                         trialOffer: y,
                         discountOffer: O,
-                        className: x.messageLengthBrandedContainer,
+                        className: L.messageLengthBrandedContainer,
                         subscriptionTier: u,
                         children: w.intl.format(w.t.GUHtE3, {
                             premiumMaxMessageLength: D.en1,

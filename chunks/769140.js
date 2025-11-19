@@ -30,12 +30,12 @@ var i = n(120356),
     P = n(265386),
     D = n(668700),
     w = n(384298),
-    x = n(670451),
-    L = n(981631),
+    L = n(670451),
+    x = n(981631),
     M = n(671955),
     k = n(388032),
-    j = n(704543),
-    U = n(936524),
+    j = n(663907),
+    U = n(875055),
     G = n(924482),
     B = n(774797);
 function Z(e) {
@@ -71,7 +71,7 @@ function Z(e) {
         ),
         [ee, et] = (0, b.wq)(W),
         en = (0, p.Kt)() && (0, p.zd)(null == W ? void 0 : W.id),
-        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(L.S7T.CONNECT, W)),
+        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(x.S7T.CONNECT, W)),
         ei = (0, d.Z)($ ? null : J),
         ea = $ || null == J ? ei : J;
     if (null == Y || null == W || !1 === i.discoverable) return null;
@@ -98,7 +98,7 @@ function Z(e) {
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: H === L.BRd.LIGHT ? B : G,
+                                src: H === x.BRd.LIGHT ? B : G,
                             }),
                             V !== M.l.MODAL &&
                                 V !== M.l.MODAL_V2 &&
@@ -213,7 +213,7 @@ function Z(e) {
                 (0, r.jsx)(R.Z, {
                     text: eu,
                     tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
-                    contextMenu: (0, r.jsx)(x.Z, {
+                    contextMenu: (0, r.jsx)(L.Z, {
                         display: "live",
                         user: t,
                         onClose: F,

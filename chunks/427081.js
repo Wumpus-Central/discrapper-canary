@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(754700),
     i = n(670081),
     a = n(147913),
@@ -311,4 +311,4 @@ class w extends a.Z {
             });
     }
 }
-let x = new w();
+let L = new w();

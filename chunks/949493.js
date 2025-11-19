@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r = n(54381),
     i = n(442837),
     a = n(921801),
@@ -63,7 +63,7 @@ let R = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(D, {})],
         });
-function x() {
+function L() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
         t = [
             {

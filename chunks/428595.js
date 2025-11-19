@@ -29,8 +29,8 @@ var r = n(392711),
     P = n(364458),
     D = n(981631),
     w = n(689079),
-    x = n(388032);
-function L(e, t, n) {
+    L = n(388032);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,12 +54,12 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -116,10 +116,10 @@ let H = (e) => {
     W = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: k(M({}, o().defaultRules.escape), {
+        escape: j(M({}, o().defaultRules.escape), {
             match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)),
         }),
-        blockQuote: k(M({}, o().defaultRules.blockQuote), {
+        blockQuote: j(M({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [" ", ">"],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
@@ -153,12 +153,12 @@ let H = (e) => {
             },
         }),
         link: v.ZP,
-        autolink: k(M({}, o().defaultRules.autolink), { parse: V }),
-        mailto: k(M({}, o().defaultRules.mailto), {
+        autolink: j(M({}, o().defaultRules.autolink), { parse: V }),
+        mailto: j(M({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ["<"],
         }),
-        tel: k(M({}, o().defaultRules.mailto), {
+        tel: j(M({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ["<"],
             match: o().inlineRegex(
                 /^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/,
@@ -181,7 +181,7 @@ let H = (e) => {
                 );
             },
         }),
-        url: k(M({}, o().defaultRules.url), {
+        url: j(M({}, o().defaultRules.url), {
             requiredFirstCharacters: ["h", "s"],
             match(e, t) {
                 if (!t.inline) return null;
@@ -208,11 +208,11 @@ let H = (e) => {
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: A.ZP,
-        inlineCode: k(M({}, o().defaultRules.inlineCode), {
+        inlineCode: j(M({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
                 return !0 === n.parseInlineCodeChildContent
-                    ? k(M({}, r), { validationChildContent: t(r.content, n) })
+                    ? j(M({}, r), { validationChildContent: t(r.content, n) })
                     : r;
             },
         }),
@@ -255,7 +255,7 @@ let H = (e) => {
                 if (null == d)
                     return {
                         type: "text",
-                        content: "@".concat(x.intl.string(x.t["YV4F/n"])),
+                        content: "@".concat(L.intl.string(L.t["YV4F/n"])),
                     };
                 let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
@@ -310,7 +310,7 @@ let H = (e) => {
                 }
                 let l = e[1],
                     c = null != l && D.Xyh.test(l.trim()),
-                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(x.intl.string(x.t.sKdZ6U)) : e[0];
+                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6U)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -387,7 +387,7 @@ let H = (e) => {
                         content: [
                             {
                                 type: "text",
-                                content: x.intl.string(x.t["11pdXZ"]),
+                                content: L.intl.string(L.t["11pdXZ"]),
                             },
                         ],
                         icon: void 0,
@@ -402,7 +402,7 @@ let H = (e) => {
                         {
                             type: "text",
                             content: "".concat(
-                                null != (a = null == l ? void 0 : l.name) ? a : x.intl.string(x.t["11pdXZ"]),
+                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXZ"]),
                             ),
                         },
                     ],
@@ -610,7 +610,7 @@ let er = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = k(M({}, n), { parseDepth: i + 1 }),
+                        a = j(M({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

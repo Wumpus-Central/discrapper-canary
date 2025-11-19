@@ -4,7 +4,7 @@ var r = n(54381),
     o = n(159691),
     a = n(481060),
     l = n(388032),
-    s = n(658855);
+    s = n(432079);
 function u(t) {
     let { onConfirm: e, onClose: n, guildName: u, transitionState: c } = t,
         [d, m] = i.useState(""),

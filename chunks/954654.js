@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => k,
-    xX: () => L,
+    xX: () => x,
 }),
     n(388685);
 var r = n(54381);
@@ -30,7 +30,7 @@ var i = n(120356),
     A = n(985184),
     C = n(424158),
     N = n(892519),
-    R = n(429577);
+    R = n(478236);
 function P(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ function w(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function x(e, t) {
         e
     );
 }
-function L(e) {
+function x(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
             children: [M(e, t.toString()), (0, r.jsx)(o.nn4, { children: "," })],
@@ -93,7 +93,7 @@ function L(e) {
 function M(e, t) {
     switch (e.type) {
         case s.re.ACTION_ROW:
-            return (0, r.jsx)(S.Z, x(D({}, e), { renderComponents: L }), t);
+            return (0, r.jsx)(S.Z, L(D({}, e), { renderComponents: x }), t);
         case s.re.BUTTON:
             return (0, r.jsx)(d.Z, D({}, e), t);
         case s.re.STRING_SELECT:
@@ -107,7 +107,7 @@ function M(e, t) {
         case s.re.TEXT_INPUT:
             return (0, r.jsx)(m.Z, D({}, e), t);
         case s.re.SECTION:
-            return (0, r.jsx)(N.Z, x(D({}, e), { renderComponents: L }), t);
+            return (0, r.jsx)(N.Z, L(D({}, e), { renderComponents: x }), t);
         case s.re.TEXT_DISPLAY:
             return (0, r.jsx)(O.Z, D({}, e), t);
         case s.re.MEDIA_GALLERY:
@@ -121,9 +121,9 @@ function M(e, t) {
         case s.re.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(T.Z, D({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(A.Z, x(D({}, e), { renderComponents: L }), t);
+            return (0, r.jsx)(A.Z, L(D({}, e), { renderComponents: x }), t);
         case s.re.LABEL:
-            return (0, r.jsx)(C.Z, x(D({}, e), { renderComponent: M }), t);
+            return (0, r.jsx)(C.Z, L(D({}, e), { renderComponent: M }), t);
         case s.re.FILE_UPLOAD:
             return (0, r.jsx)(_.Z, D({}, e), t);
         case s.re.CHECKPOINT_CARD:
@@ -151,7 +151,7 @@ function k(e) {
                               (0, r.jsx)("div", {
                                   ref: e,
                                   className: a()([R.container, { [R.isComponentsV2]: (0, l.hv)(t) }]),
-                                  children: L(i),
+                                  children: x(i),
                               }),
                       }),
                   }),

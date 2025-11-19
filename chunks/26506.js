@@ -1,8 +1,8 @@
-a.d(e, { j: () => n });
-var r = a(102733),
-    _ = a(899517);
+_.d(e, { j: () => n });
+var a = _(102733),
+    r = _(899517);
 function n() {
     return (
-        "undefined" != typeof window && (!(0, r.KV)() || (void 0 !== _.n.process && "renderer" === _.n.process.type))
+        "undefined" != typeof window && (!(0, a.KV)() || (void 0 !== r.n.process && "renderer" === r.n.process.type))
     );
 }

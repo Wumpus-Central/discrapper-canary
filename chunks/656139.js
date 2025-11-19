@@ -25,7 +25,7 @@ var r = n(54381),
     v = n(382271),
     I = n(981631),
     T = n(388032),
-    S = n(476034);
+    S = n(400889);
 let A = (e) => {
         let { onClose: t, onShare: n } = e,
             a = (0, l.e7)([b.Z], () => b.Z.getReferralsRemaining()),
@@ -44,8 +44,8 @@ let A = (e) => {
                 selectedUsers: _,
             }),
             [D, w] = i.useState(!1),
-            x = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
-            L = () =>
+            L = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
+            x = () =>
                 (0, r.jsx)(d.Z, {
                     className: S.searchbar,
                     size: d.Z.Sizes.MEDIUM,
@@ -144,10 +144,10 @@ let A = (e) => {
                       title: T.intl.string(T.t["2dVCLl"]),
                       subtitle: T.intl.string(T.t.DXgoi2),
                       onClose: t,
-                      input: L(),
+                      input: x(),
                       actions: [],
-                      actionBarInput: M({ eligibleRecipients: x }),
-                      children: k({ eligibleRecipients: x }),
+                      actionBarInput: M({ eligibleRecipients: L }),
+                      children: k({ eligibleRecipients: L }),
                   });
     },
     C = (e) => {

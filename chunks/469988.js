@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
-    a = n(808709);
+    a = n(231690);
 let s = (e) => {
     let { hasHub: t } = e;
     return (0, r.jsxs)("div", {
@@ -34,7 +34,7 @@ let s = (e) => {
                 variant: t ? "secondary" : "active",
                 onClick: () =>
                     (0, i.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("7082"), n.e("60903")]).then(n.bind(n, 650233));
+                        let { default: e } = await Promise.all([n.e("7082"), n.e("62664")]).then(n.bind(n, 650233));
                         return (t) =>
                             (0, r.jsx)(
                                 e,

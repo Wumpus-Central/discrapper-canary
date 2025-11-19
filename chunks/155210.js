@@ -28,17 +28,17 @@ function O(e, t, n) {
             month: "long",
             timeZone: D.timeZone,
         }),
-        x = (0, E.a)({
+        L = (0, E.a)({
             hour: "numeric",
             hour12: D.hour12,
             timeZone: D.timeZone,
         });
-    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (P = x.format(t.dateValue));
+    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (P = L.format(t.dateValue));
     else {
         let e = w.format(t.dateValue);
         P = e !== P ? `${P} \u{2013} ${e}` : e;
     }
-    let { spinButtonProps: L } = (0, y.G)({
+    let { spinButtonProps: x } = (0, y.G)({
             value: e.value,
             textValue: P,
             minValue: e.minValue,
@@ -238,7 +238,7 @@ function O(e, t, n) {
         ("numeric" === t || "2-digit" === t) && ($.direction = "ltr");
     }
     return {
-        segmentProps: (0, p.d)(L, J, {
+        segmentProps: (0, p.d)(x, J, {
             id: q,
             ...z,
             "aria-invalid": t.isInvalid ? "true" : void 0,

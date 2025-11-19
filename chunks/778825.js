@@ -60,11 +60,11 @@ function w(e) {
     let { bio: t } = e;
     l = t;
 }
-function x(e) {
+function L(e) {
     let { pronouns: t } = e;
     c = t;
 }
-function L(e) {
+function x(e) {
     let { nickname: t } = e;
     u = t;
 }
@@ -72,11 +72,11 @@ function M(e) {
     let { themeColors: t } = e;
     d = t;
 }
-function j(e) {
+function k(e) {
     let { displayNameStyles: t } = e;
     f = t;
 }
-function k() {
+function j() {
     U(), G(), (v = {}), (O = b.QZA.OPEN);
 }
 function U() {
@@ -89,7 +89,7 @@ function B() {
     v = {};
 }
 function Z() {
-    k(), T();
+    j(), T();
 }
 class F extends (h = g.ZP.Store) {
     getFormState() {
@@ -179,15 +179,15 @@ let V = new F(E.Z, {
     USER_PROFILE_UPDATE_FAILURE: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: R,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM: P,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: j,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: k,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: D,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: w,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: x,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: M,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: U,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: G,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: j,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: j,
     GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: B,
 });

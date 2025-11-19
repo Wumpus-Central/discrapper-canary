@@ -20,7 +20,7 @@ var r = n(54381),
     g = n(45572),
     E = n(402426),
     b = n(981631),
-    y = n(839249),
+    y = n(775736),
     O = n(293914),
     v = n(503019);
 let I = 1000,
@@ -44,12 +44,12 @@ let I = 1000,
             }, [I]),
             { isGift: R } = (0, h.wD)(),
             { wasTier2PremiumBeforePurchase: P, selectedSkuId: D, purchaseState: w } = (0, m.JL)(),
-            [x, L] = (0, i.useState)(!1);
+            [L, x] = (0, i.useState)(!1);
         (0, i.useEffect)(() => {
-            w === g.A.PURCHASING && L(!0);
+            w === g.A.PURCHASING && x(!0);
         }, [w]);
         let M = (0, f.P)(R, !!P, D),
-            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!a && M && x),
+            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!a && M && L),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
             [Z, F] = (0, i.useState)(!1),

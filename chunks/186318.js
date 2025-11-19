@@ -76,7 +76,7 @@ let b = () => {
             [C, N] = i.useState(null),
             [R, P] = i.useState(!1),
             [D, w] = i.useState(!1),
-            [x, L] = i.useState(!1);
+            [L, x] = i.useState(!1);
         (0, i.useEffect)(() => {
             (0, o.Y2)();
         }, []),
@@ -174,14 +174,14 @@ let b = () => {
                     n !== s.R.PREVIEW && null !== C && N(null);
             }, [n, g, S, O, C]);
         let M = i.useCallback(async () => {
-            L(!0),
+            x(!0),
                 await (0, a.ZDy)(
                     async () => (t) =>
                         (0, r.jsx)(
                             u.x,
                             E(m({}, t), {
                                 onClose: () => {
-                                    t.onClose(), L(!1);
+                                    t.onClose(), x(!1);
                                 },
                                 premiumType: e,
                                 churnDiscount: g,
@@ -225,8 +225,8 @@ let b = () => {
         }, [e, g, O, C, R, D, n, S]);
         return (
             (0, i.useEffect)(() => {
-                x && M();
-            }, [n, x, M]),
+                L && M();
+            }, [n, L, M]),
             (0, r.jsxs)(l.pg, {
                 children: [
                     (0, r.jsxs)(l.BZ, {
@@ -344,7 +344,7 @@ let b = () => {
                     (0, r.jsx)(l.dv, {}),
                     (0, r.jsx)(a.Button, {
                         onClick: () => {
-                            L(!0);
+                            x(!0);
                         },
                         variant: "primary",
                         size: "md",

@@ -42,8 +42,8 @@ let P = window.DiscordNative;
 T.Wb.dispatcher.getDispatchHandler = A.Z;
 let D = new c.Z("ConnectionStore"),
     w = 100,
-    x = 0,
-    L = null,
+    L = 0,
+    x = null,
     M = !0,
     k = null,
     j = null;
@@ -62,7 +62,7 @@ function B() {
     );
 }
 async function Z(e) {
-    (x = Date.now()), (L = e.sessionId), T.RR.handleConnectionOpen();
+    (L = Date.now()), (x = e.sessionId), T.RR.handleConnectionOpen();
     let t = {},
         n = b.Z.getVoiceChannelId();
     if (null != n) {
@@ -95,7 +95,7 @@ async function Z(e) {
     T.GC.update(t, !0), (M = !1), (j = null);
 }
 function F() {
-    D.verbose("connection closed dispatched"), (x = Date.now());
+    D.verbose("connection closed dispatched"), (L = Date.now());
 }
 function V() {
     j = null;
@@ -129,7 +129,7 @@ function z(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (_.default.getId() !== t.userId) return e;
-        if (t.sessionId === L) {
+        if (t.sessionId === x) {
             if (null != j) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", j), e;
             T.GC.setState({
                 guildId: t.guildId,
@@ -319,7 +319,7 @@ class eb extends (r = o.ZP.Store) {
         return T.Wb.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return x;
+        return L;
     }
 }
 R(eb, "displayName", "GatewayConnectionStore");

@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(834129),
     D = n(956512),
     w = n(171516),
-    x = n(952164),
-    L = n(829820),
+    L = n(952164),
+    x = n(829820),
     M = n(789407),
     k = n(314897),
     j = n(831506),
@@ -65,8 +65,8 @@ var r = n(54381),
     ef = n(967249),
     e_ = n(616922),
     ep = n(388032),
-    eh = n(723295),
-    em = n(520816);
+    eh = n(463736),
+    em = n(575452);
 let eg = 8;
 function eE(e, t) {
     var n, r, i, a;
@@ -143,7 +143,7 @@ function ev(e) {
             guildId: m,
         } = e,
         b = (0, $.g)(c, h),
-        y = (0, L.Lz)(h, f.author, "Invite Embed"),
+        y = (0, x.Lz)(h, f.author, "Invite Embed"),
         v = !(0, er.Z)(h, f, l.id),
         I = [],
         T = i.useMemo(() => {
@@ -163,7 +163,7 @@ function ev(e) {
             return e;
         }, [b, y]),
         S = i.useMemo(() => {
-            if (null != h) return () => (0, x.aG)(h);
+            if (null != h) return () => (0, L.aG)(h);
         }, [h]),
         A = (0, z.dQ)(l.name, null == (t = f.activity) ? void 0 : t.type, v);
     if (v) {
@@ -393,22 +393,22 @@ function eA(e) {
             message: P,
             onView: D,
             partyStatusElement: w,
-            presenceActivity: x,
+            presenceActivity: L,
         } = e,
-        L = (0, I.A)(T),
+        x = (0, I.A)(T),
         M = (0, m.ye)(T),
         { iconSrc: k, name: j } = eE(P, T),
         U =
             null !=
             (o = (0, el.v)({
                 messageId: P.id,
-                presenceActivity: x,
+                presenceActivity: L,
                 application: T,
             }))
                 ? o
                 : void 0,
         B = g.u.ACTIVITY,
-        Z = !(0, er.Z)(x, P, T.id),
+        Z = !(0, er.Z)(L, P, T.id),
         F = (0, J.H)(P),
         { openGameProfileModal: H, launchableAppId: Y } = eI(T.id, P.author.id),
         W = !!Y,
@@ -429,22 +429,22 @@ function eA(e) {
             [K],
         ),
         { canJoin: ee, remoteJoinPlatform: et } = (0, q.h)({
-            presenceActivity: x,
+            presenceActivity: L,
             currentUserPresenceActivity: N,
             currentUserId: C,
             message: P,
             application: T,
             isEmbeddedApplication: M,
-            isFrameApplication: L,
+            isFrameApplication: x,
             isGameLaunchable: W,
         }),
-        eo = eO(x, N, P, T),
-        ec = (0, $.g)(N, x),
-        eu = (0, X.L)(x, P, T, C),
+        eo = eO(L, N, P, T),
+        ec = (0, $.g)(N, L),
+        eu = (0, X.L)(L, P, T, C),
         e_ = (0, u.e7)(
             [V.Z],
             () =>
-                null != x && null != x.application_id && V.Z.getState(x.application_id, ed.mFx.JOIN) === ed.OcF.LOADING,
+                null != L && null != L.application_id && V.Z.getState(L.application_id, ed.mFx.JOIN) === ed.OcF.LOADING,
         ),
         em = i.useMemo(
             () =>
@@ -457,14 +457,14 @@ function eA(e) {
                               var e, t;
                               _.Z.join({
                                   userId: P.author.id,
-                                  sessionId: x.session_id,
-                                  applicationId: x.application_id,
+                                  sessionId: L.session_id,
+                                  applicationId: L.application_id,
                                   channelId: S.id,
                                   messageId: P.id,
                                   source: ed.Sbl.MESSAGE_EMBED,
                                   analyticsLocations: b,
-                                  embedded: (0, en.Z)(x, ed.xjy.EMBEDDED),
-                                  remotePartyId: null != et ? (null == (e = x.party) ? void 0 : e.id) : void 0,
+                                  embedded: (0, en.Z)(L, ed.xjy.EMBEDDED),
+                                  remotePartyId: null != et ? (null == (e = L.party) ? void 0 : e.id) : void 0,
                               }),
                                   (0, ea.Z)({
                                       type: ed.q5t.JOIN,
@@ -472,8 +472,8 @@ function eA(e) {
                                       userId: P.author.id,
                                       guildId: S.guild_id,
                                       channelId: S.id,
-                                      applicationId: x.application_id,
-                                      partyId: null == (t = x.party) ? void 0 : t.id,
+                                      applicationId: L.application_id,
+                                      partyId: null == (t = L.party) ? void 0 : t.id,
                                       messageId: P.id,
                                       analyticsLocations: b,
                                       remoteJoinPlatform: et,
@@ -485,7 +485,7 @@ function eA(e) {
                             label: ep.intl.string(ep.t.VJlc0S),
                             trackingArea: E.j_.SYNC,
                             onClick: () => {
-                                null != x && p.Z_(x, P.author.id);
+                                null != L && p.Z_(L, P.author.id);
                             },
                         }
                       : eu
@@ -493,11 +493,11 @@ function eA(e) {
                               label: ep.intl.string(ep.t["hC/Zey"]),
                               trackingArea: E.j_.INVITE,
                               onClick: () => {
-                                  null != x &&
+                                  null != L &&
                                       f.Z.sendActivityInvite({
                                           type: ed.mFx.JOIN,
                                           channelId: S.id,
-                                          activity: x,
+                                          activity: L,
                                           location: ed.Sbl.MESSAGE_EMBED,
                                       });
                               },
@@ -514,7 +514,7 @@ function eA(e) {
                           : null != Q
                             ? Q
                             : void 0,
-            [ee, eo, eu, ec, Q, P.author.id, P.id, x, S.id, S.guild_id, b, et, C, e_],
+            [ee, eo, eu, ec, Q, P.author.id, P.id, L, S.id, S.guild_id, b, et, C, e_],
         ),
         eg = i.useMemo(
             () =>
@@ -540,8 +540,8 @@ function eA(e) {
         ev = (0, u.e7)([G.Z], () => G.Z.getMessages(S.id)),
         eA = i.useMemo(() => {
             let e = [];
-            return Z || null == em ? Z && null != eg && (0, ei.b)(P.id, ev, T.id, x) && e.push(eg) : e.push(em), e;
-        }, [eg, Z, em, P.id, T.id, x, ev]),
+            return Z || null == em ? Z && null != eg && (0, ei.b)(P.id, ev, T.id, L) && e.push(eg) : e.push(em), e;
+        }, [eg, Z, em, P.id, T.id, L, ev]),
         eC = i.useMemo(() => eA.some((e) => e.trackingArea === E.j_.CLOUD_PLAY), [eA]);
     (0, h.Z)(
         {
@@ -566,7 +566,7 @@ function eA(e) {
         eP = ec
             ? null
             : (0, r.jsx)(eT, {
-                  presenceActivity: x,
+                  presenceActivity: L,
                   remoteJoinPlatform: et,
               });
     if (Z) {
@@ -609,11 +609,11 @@ function eA(e) {
               });
     }
     let eD =
-            null != (c = null == x || null == (n = x.timestamps) ? void 0 : n.start)
+            null != (c = null == L || null == (n = L.timestamps) ? void 0 : n.start)
                 ? c
-                : null == x
+                : null == L
                   ? void 0
-                  : x.created_at,
+                  : L.created_at,
         ew =
             null != eD
                 ? (0, r.jsxs)("div", {
@@ -626,7 +626,7 @@ function eA(e) {
                           (0, r.jsx)(O.x3, {
                               entry: {
                                   start: eD,
-                                  end: null == x || null == (a = x.timestamps) ? void 0 : a.end,
+                                  end: null == L || null == (a = L.timestamps) ? void 0 : a.end,
                               },
                               textColor: "currentColor",
                               textTabularNumbers: !1,
@@ -635,16 +635,16 @@ function eA(e) {
                       ],
                   })
                 : null,
-        ex = (0, r.jsxs)(d.Text, {
+        eL = (0, r.jsxs)(d.Text, {
             variant: "text-xs/normal",
             className: eh.tagline,
             color: "none",
             lineClamp: 2,
             children: [F ? (0, z.$v)(P, j, S, C, Z) : ew, F ? null : eR],
         }),
-        eL = (0, r.jsxs)("div", {
+        ex = (0, r.jsxs)("div", {
             className: eh.info,
-            children: [ex, R || F ? null : w],
+            children: [eL, R || F ? null : w],
         });
     return (0, r.jsx)(g.W, {
         header: eN,
@@ -653,7 +653,7 @@ function eA(e) {
         onClickBanner: ey,
         bannerAspectRatio: B,
         iconSrc: null != k ? k : void 0,
-        info: eL,
+        info: ex,
         actions: eA,
         onClickContent: ey,
         trackingConfig: {

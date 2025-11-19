@@ -5,7 +5,7 @@ var i = r(120356),
     a = r.n(i),
     o = r(481060),
     l = r(422559),
-    s = r(347044);
+    s = r(880672);
 function c(e) {
     let {
         grantedPermissions: t,

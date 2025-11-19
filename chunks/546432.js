@@ -30,8 +30,8 @@ var r = n(54381),
     v = n(217702),
     I = n(981631),
     T = n(388032),
-    S = n(337595),
-    A = n(374299);
+    S = n(908011),
+    A = n(348594);
 function C(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = 200,
-    L = 50;
+let L = 200,
+    x = 50;
 function M(e) {
     return "IMAGE" === e || "VIDEO" === e;
 }
@@ -211,8 +211,8 @@ function U(e) {
             imgContainerClassName: P,
             imgClassName: D,
             focusable: w,
-            hiddenSpoilers: x,
-            mediaLayoutType: L,
+            hiddenSpoilers: L,
+            mediaLayoutType: x,
             maxWidth: M,
             maxHeight: k,
             hasFooter: U,
@@ -250,7 +250,7 @@ function U(e) {
             });
         }, [J]),
         ei = i.useCallback(() => {
-            if (L === v.hV.MOSAIC) {
+            if (x === v.hV.MOSAIC) {
                 let e = (!$ && ["VIDEO", "CLIP", "AUDIO"].includes(K)) || "OTHER" === K;
                 return et
                     ? null
@@ -276,7 +276,7 @@ function U(e) {
                     }),
                 })
             );
-        }, [L, s, W, $, K, et, q, ee, n, en, B, c]);
+        }, [x, s, W, $, K, et, q, ee, n, en, B, c]);
     if (V)
         return (0, r.jsx)(l.Eep, {
             className: R,
@@ -286,7 +286,7 @@ function U(e) {
             height: null != Y ? Y : 350,
             maxWidth: M,
             maxHeight: k,
-            mediaLayoutType: L,
+            mediaLayoutType: x,
             useFullWidth: G,
             zoomable: !1,
         });
@@ -299,7 +299,7 @@ function U(e) {
                         message: t,
                         width: H,
                         height: Y,
-                        autoPlay: a && !x,
+                        autoPlay: a && !L,
                         onClick: u,
                         onContextMenu: f,
                         shouldHideMediaOptions: $,
@@ -309,9 +309,9 @@ function U(e) {
                         className: P,
                         imageClassName: D,
                         shouldLink: w,
-                        hiddenSpoilers: x,
+                        hiddenSpoilers: L,
                         responsive: !0,
-                        mediaLayoutType: L,
+                        mediaLayoutType: x,
                         maxWidth: M,
                         maxHeight: k,
                         useFullWidth: G,
@@ -334,7 +334,7 @@ function U(e) {
                 className: o()(R, { [S.hasFooter]: U }),
                 playable: w,
                 responsive: !0,
-                mediaLayoutType: L,
+                mediaLayoutType: x,
                 maxWidth: M,
                 maxHeight: k,
                 useFullWidth: G,
@@ -353,7 +353,7 @@ function U(e) {
                 imageClassName: D,
                 maxWidth: M,
                 maxHeight: k,
-                mediaLayoutType: L,
+                mediaLayoutType: x,
                 useFullWidth: G,
             });
         case "AUDIO":
@@ -436,7 +436,7 @@ let B = function (e) {
         [T, A] = i.useState(null != I),
         C = (0, d.JO)(I),
         R = c === v.hV.MOSAIC,
-        w = !R && ((null != E && E < x) || (null != b && b < L)),
+        w = !R && ((null != E && E < L) || (null != b && b < x)),
         k = M(y),
         j = (0, O.R_)(y),
         B = u && null != I && (0, d.yf)(E, b),

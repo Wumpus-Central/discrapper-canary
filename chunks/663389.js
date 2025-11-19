@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r,
     i = n(442837),
     a = n(570140),
@@ -167,7 +167,7 @@ class w extends (r = i.ZP.Store) {
     }
 }
 l(w, "displayName", "UserSettingsModalStore");
-let x = new w(a.Z, {
+let L = new w(a.Z, {
     USER_SETTINGS_MODAL_OPEN: O,
     USER_SETTINGS_MODAL_INIT: v,
     USER_SETTINGS_MODAL_CLOSE: I,

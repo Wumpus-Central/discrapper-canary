@@ -25,10 +25,10 @@ var r = n(54381),
     O = n(626921),
     v = n(415540),
     I = n(483753),
-    T = n(681287),
+    T = n(936806),
     S = n(388032),
-    A = n(680765),
-    C = n(430490);
+    A = n(484050),
+    C = n(693697);
 function N(e, t, n) {
     return (
         t in e
@@ -85,7 +85,7 @@ function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -93,7 +93,7 @@ function w(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -102,7 +102,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let L = { keys: ["label"] };
+let x = { keys: ["label"] };
 function M(e) {
     var { children: t, isCollapsible: n = !1, maxOptionsVisible: a = 5, isOpen: o, setIsOpen: l, options: c } = e,
         u = w(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]);
@@ -123,7 +123,7 @@ function M(e) {
         [S, A] = i.useState(null),
         [C, N] = i.useState(!1),
         [P, D] = i.useState(""),
-        [x, M] = i.useState(""),
+        [L, M] = i.useState(""),
         {
             options: k,
             loading: j,
@@ -142,7 +142,7 @@ function M(e) {
         i.useEffect(() => {
             o || A(null);
         }, [o, A]);
-    let B = i.useMemo(() => ("" === P ? k : null != E ? E(k, P) : (0, s.Lu)(k, P, null != b ? b : L)), [k, P, E, b]),
+    let B = i.useMemo(() => ("" === P ? k : null != E ? E(k, P) : (0, s.Lu)(k, P, null != b ? b : x)), [k, P, E, b]),
         Z = i.useRef(void 0),
         F = i.useMemo(
             () =>
@@ -191,7 +191,7 @@ function M(e) {
                 filteredOptions: B,
                 selectedOptions: F,
                 maxOptionsVisible: a,
-                query: x,
+                query: L,
                 setQuery: G,
                 loading: j,
                 handleSelectionChange: H,
@@ -237,8 +237,8 @@ function j(e) {
             ref: P,
         } = e,
         w = i.useRef(null),
-        x = i.useRef(null),
         L = i.useRef(null),
+        x = i.useRef(null),
         M = i.useContext(u.z),
         {
             activeDescendantIndex: k,
@@ -283,14 +283,14 @@ function j(e) {
         }, [K, J, $]),
         eu = i.useCallback(() => {
             var e;
-            "multiple" === U ? Q([]) : Q(null), ei(""), null == (e = x.current) || e.focus();
+            "multiple" === U ? Q([]) : Q(null), ei(""), null == (e = L.current) || e.focus();
         }, [Q, U, ei]),
         ed = i.useCallback(
             (e) => {
                 var t, n, r;
                 eo(!0),
                     null == m || m(e),
-                    null == (t = x.current) ||
+                    null == (t = L.current) ||
                         t.setSelectionRange(
                             null != (n = null == er ? void 0 : er.length) ? n : 0,
                             null != (r = null == er ? void 0 : er.length) ? r : 0,
@@ -312,9 +312,9 @@ function j(e) {
     i.useEffect(() => {
         es &&
             !N &&
-            (L.current = setTimeout(() => {
+            (x.current = setTimeout(() => {
                 var e;
-                null == (e = x.current) ||
+                null == (e = L.current) ||
                     e.scrollIntoView({
                         behavior: "smooth",
                         block: "nearest",
@@ -323,11 +323,11 @@ function j(e) {
     }, [et, es, N]);
     let ep = i.useCallback(() => {
             var e;
-            K || (null == $ || $(!0), null == (e = x.current) || e.focus());
+            K || (null == $ || $(!0), null == (e = L.current) || e.focus());
         }, [$, K]),
         eh = i.useCallback(() => {
             var e;
-            null == (e = x.current) || e.select();
+            null == (e = L.current) || e.select();
         }, []),
         em = i.useCallback(
             (e) => {
@@ -468,7 +468,7 @@ function j(e) {
                             (0, r.jsx)(_.tEY, {
                                 ringTarget: Y,
                                 children: (0, r.jsx)(h.I, {
-                                    ref: x,
+                                    ref: L,
                                     id: t,
                                     className: o()(C.input, A.comboBoxInput, {
                                         [A.hiddenVisually]: "single" === U && q && !ea,

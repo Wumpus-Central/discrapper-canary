@@ -22,7 +22,7 @@ var r = n(54381),
     E = n(373228),
     b = n(378233),
     y = n(388032),
-    O = n(353681);
+    O = n(365278);
 let v = (e) => e.preventDefault(),
     I = 0.7,
     T = 33,
@@ -232,7 +232,7 @@ let P = (e) => {
                   }),
               });
     },
-    x = (e) => {
+    L = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -286,7 +286,7 @@ let P = (e) => {
                                     (0, r.jsx)(c.animated.div, {
                                         className: O.overlayStickerWrapper,
                                         style: e,
-                                        children: (0, r.jsx)(L, {
+                                        children: (0, r.jsx)(x, {
                                             className: O.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -313,7 +313,7 @@ let P = (e) => {
             )
         );
     },
-    L = (e) => {
+    x = (e) => {
         let {
                 isInteracting: t = !1,
                 disableAnimation: n = !1,
@@ -352,7 +352,7 @@ let P = (e) => {
                         onError: h,
                     }),
                     a &&
-                        (0, r.jsx)(x, {
+                        (0, r.jsx)(L, {
                             disableAnimation: n,
                             enlargeScaleFactor: s,
                             enlargeWithName: o,
@@ -366,4 +366,4 @@ let P = (e) => {
             "".concat(u.id, ",").concat(c),
         );
     },
-    M = L;
+    M = x;

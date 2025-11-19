@@ -2,12 +2,12 @@ n.d(t, { Z: () => c });
 var r = n(442837),
     i = n(592125),
     l = n(430824),
-    o = n(944486),
-    s = n(594174),
+    s = n(944486),
+    o = n(594174),
     a = n(537413);
 function c(e) {
-    let t = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        n = (0, r.e7)([o.Z, i.Z], () => i.Z.getChannel(o.Z.getVoiceChannelId())),
+    let t = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        n = (0, r.e7)([s.Z, i.Z], () => i.Z.getChannel(s.Z.getVoiceChannelId())),
         c = null == n ? void 0 : n.getGuildId(),
         d = (0, r.e7)([l.Z], () => {
             var e;

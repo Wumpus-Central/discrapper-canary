@@ -33,7 +33,7 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableSounds: t }),
     }),
-    d = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+    T = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
         useValue: () =>
             (0, i.e7)([s.Z], () => {
@@ -42,7 +42,7 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableNotifications: t }),
     }),
-    T = (0, r.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
+    d = (0, r.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
         useTitle: () => o.intl.string(o.t["iA81+a"]),
         useSubtitle: () => o.intl.string(o.t.P4vj0h),
         usePredicate: () => {
@@ -68,5 +68,5 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     I = (0, r.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),
         variant: "separators",
-        buildLayout: () => [c, E, S, d, T],
+        buildLayout: () => [c, E, S, T, d],
     });

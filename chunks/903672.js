@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(493773),
     d = n(110924),
     p = n(622822),
-    f = n(198620),
-    h = n(294218),
+    h = n(198620),
+    f = n(294218),
     g = n(598999),
     m = n(216789),
     b = n(695346),
@@ -19,11 +19,11 @@ var r = n(54381),
     O = n(944486),
     v = n(455199),
     j = n(655354),
-    x = n(324081),
-    C = n(240126),
+    C = n(324081),
+    x = n(240126),
     E = n(981631),
     S = n(388032),
-    I = n(889833);
+    I = n(969604);
 let P = {
     offset: {
         left: 4,
@@ -51,7 +51,7 @@ function Z(e) {
             messages: l,
             hasMore: s,
             loading: p,
-            guildFilter: h,
+            guildFilter: f,
             roleFilter: b,
             everyoneFilter: y,
         } = (0, a.cj)([v.ZP], () => ({
@@ -63,15 +63,15 @@ function Z(e) {
             everyoneFilter: v.ZP.everyoneFilter,
         })),
         j = (0, m.Us)({ location: "RecentMentions" }),
-        x = (0, d.Z)(h),
-        C = (0, d.Z)(b),
+        C = (0, d.Z)(f),
+        x = (0, d.Z)(b),
         P = (0, d.Z)(y);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != x && h !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
-    }, [x, h, C, b, P, y, n, !0]),
+        ((null != C && f !== C) || (null != x && b !== x) || (null != P && y !== P)) && N(n, !0);
+    }, [C, f, x, b, P, y, n, !0]),
         (0, u.ZP)(() => {
-            (null == l ? void 0 : l.some(f.k5)) && (c.Z.clearMentions(), N(n, !0));
+            (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
         i.useEffect(
             () => () => {
@@ -127,7 +127,7 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(C.Z, {
                 channel: l,
                 gotoChannel: n,
                 children:
@@ -152,7 +152,7 @@ function T(e) {
                         onJump: n,
                     }),
                     (0, r.jsx)(
-                        h.Z,
+                        f.Z,
                         {
                             message: t,
                             channel: l,
@@ -171,7 +171,7 @@ function T(e) {
     });
 }
 function A() {
-    return (0, r.jsx)(C.Z, {
+    return (0, r.jsx)(x.Z, {
         Icon: s.lOy,
         header: S.intl.string(S.t.bgDz74),
         tip: S.intl.string(S.t.NS15vk),

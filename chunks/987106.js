@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(970184),
     m = n(280501),
     g = n(388032),
-    E = n(392061);
+    E = n(500278);
 function b(e, t, n) {
     return (
         t in e
@@ -108,11 +108,11 @@ function S(e) {
         P = R && (null == N ? void 0 : N.disabled),
         D = R ? (null == N ? void 0 : N.label) : n,
         w = null != g,
-        x = null != D && D.length > 0,
-        L = i === d.ZJ.LINK && null != b && b.length > 0,
+        L = null != D && D.length > 0,
+        x = i === d.ZJ.LINK && null != b && b.length > 0,
         M = A === m.gH.LOADING || (R && null == N);
     return (
-        (t = L
+        (t = x
             ? () => {
                   (0, p.q)({
                       href: null != b ? b : "",
@@ -131,9 +131,9 @@ function S(e) {
             disabled: _ || A === m.gH.DISABLED || C || P,
             onClick: t,
             onContextMenu: (e) => {
-                L && (0, c.vq)(e, (e) => (0, r.jsx)(T, v(y({}, e), { url: b })));
+                x && (0, c.vq)(e, (e) => (0, r.jsx)(T, v(y({}, e), { url: b })));
             },
-            role: L ? "link" : "button",
+            role: x ? "link" : "button",
             children: [
                 (0, r.jsxs)("div", {
                     className: a()(E.content, {
@@ -153,20 +153,20 @@ function S(e) {
                             : null,
                         w
                             ? (0, r.jsx)(u.Z, {
-                                  className: a()({ [E.textEmoji]: x }),
+                                  className: a()({ [E.textEmoji]: L }),
                                   src: g.src,
                                   emojiId: g.id,
                                   emojiName: g.name,
                                   animated: g.animated,
                               })
                             : null,
-                        x
+                        L
                             ? (0, r.jsx)("div", {
                                   className: E.label,
                                   children: D,
                               })
                             : null,
-                        L
+                        x
                             ? (0, r.jsx)(l.rgF, {
                                   size: "xs",
                                   color: "currentColor",

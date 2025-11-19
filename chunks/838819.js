@@ -3,17 +3,17 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(772848),
-    s = n(399606),
+    s = n(772848),
+    o = n(399606),
     c = n(952265),
     u = n(481060),
     d = n(150063),
-    p = n(211266),
-    g = n(906732),
+    g = n(211266),
+    p = n(906732),
     f = n(977395),
-    h = n(214852),
-    C = n(602733),
-    m = n(594174),
+    m = n(214852),
+    h = n(602733),
+    C = n(594174),
     _ = n(381585),
     b = n(597688),
     v = n(994587),
@@ -32,8 +32,8 @@ var r = n(54381),
     N = n(215023),
     A = n(981631),
     R = n(295907),
-    Z = n(887353),
-    w = n(219588);
+    Z = n(654664),
+    w = n(664603);
 let H = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
@@ -50,10 +50,10 @@ let H = (e) => {
     },
     D = function (e) {
         let { tab: t = N.AW.HOME } = e;
-        (0, h.z)(f.f), (0, S.f)();
-        let n = (0, p.Z)((0, o.Z)()),
-            i = (0, s.e7)([m.default], () => m.default.getCurrentUser());
-        (0, C.p2)();
+        (0, m.z)(f.f), (0, S.f)();
+        let n = (0, g.Z)((0, s.Z)()),
+            i = (0, o.e7)([C.default], () => C.default.getCurrentUser());
+        (0, h.p2)();
         let c = (0, P.B)("CollectiblesShop"),
             { onClose: R } = (0, L.Db)(),
             { currentTab: D, hasFilters: M } = (0, j.S)(),
@@ -67,7 +67,7 @@ let H = (e) => {
             ),
             U = (0, O.O)(W),
             [z, G] = l.useState(),
-            K = (0, s.e7)([b.Z], () => {
+            K = (0, o.e7)([b.Z], () => {
                 var e;
                 return null == (e = b.Z.getCategory(z)) ? void 0 : e.name;
             }),
@@ -93,7 +93,7 @@ let H = (e) => {
                 null == (e = en.current) || e.focus();
             }, []);
         let { analyticsLocations: er } = (0, x.MV)(Q);
-        return (0, r.jsx)(g.Gt, {
+        return (0, r.jsx)(p.Gt, {
             value: er,
             children: (0, r.jsx)(_.k0, {
                 newValue: {

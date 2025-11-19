@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => x,
+    Z: () => L,
     u: () => P,
 }),
     n(388685);
@@ -22,7 +22,7 @@ var r = n(54381),
     b = n(921944),
     y = n(185923),
     O = n(388032),
-    v = n(345857);
+    v = n(162600);
 function I(e, t, n) {
     return (
         t in e
@@ -109,7 +109,7 @@ function w(e) {
         "--custom-emoji-sprite-col": e % C,
     };
 }
-let x = function (e) {
+let L = function (e) {
     let {
             tabIndex: t,
             className: n,
@@ -118,8 +118,8 @@ let x = function (e) {
             onClick: S,
             "aria-controls": C,
             focusProps: N,
-            ref: x,
-            allowKeybindHint: L,
+            ref: L,
+            allowKeybindHint: x,
         } = e,
         [M, k] = i.useState(!1),
         [j, U] = i.useState(50),
@@ -141,7 +141,7 @@ let x = function (e) {
         q = !I && z,
         X = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         Q = i.useRef(null),
-        J = null != x ? x : Q,
+        J = null != L ? L : Q,
         $ = (0, p.v)(f.S),
         { tooltipsWithKeybinds: ee, expressionsCombinedIntoEmojiButton: et } = p.n.useConfig({
             location: "EmojiButton",
@@ -219,7 +219,7 @@ let x = function (e) {
                 targetElementRef: J,
                 shouldShow: !0,
                 text: en,
-                keyboardShortcut: et ? void 0 : L ? $ : void 0,
+                keyboardShortcut: et ? void 0 : x ? $ : void 0,
                 children: er({}),
             })
           : er({});

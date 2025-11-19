@@ -39,8 +39,8 @@ var i = n(54381),
     T = n(763296),
     P = n(603074),
     A = n(879815),
-    D = n(189771),
-    k = n(294629),
+    k = n(189771),
+    D = n(294629),
     R = n(67844),
     L = n(544384),
     M = n(890828),
@@ -190,7 +190,7 @@ function ec(e) {
     var t;
     let { voiceChannel: n, locked: o } = e,
         a = r.useRef(null),
-        { suppress: s, selfMute: c, mute: u } = (0, k.Z)(n),
+        { suppress: s, selfMute: c, mute: u } = (0, D.Z)(n),
         h = c || u || s,
         p = (0, O.Z)(c, u, s, !1),
         { Component: f, play: g, events: y } = (0, G.b)(h);
@@ -358,7 +358,7 @@ function ed(e) {
         c = (0, l.e7)([Y.Z], () => Object.values(Y.Z.getVideoDevices())[0]),
         p = null == (t = null == c ? void 0 : c.disabled) || t,
         f = !1 === p,
-        m = (0, D.Z)(n),
+        m = (0, k.Z)(n),
         g = (e) => {
             h.Z.setVideoEnabled(e);
         },
@@ -433,7 +433,7 @@ function eh(e) {
         { voiceChannel: n, locked: o } = e,
         a = r.useRef(null),
         c = (0, l.e7)([X.default], () => X.default.getCurrentUser()),
-        u = (0, D.Z)(n),
+        u = (0, k.Z)(n),
         h = (0, l.cj)([Y.Z], () => (0, C.Z)(Y.Z)),
         p = (0, l.e7)([F.Z], () => F.Z.getCurrentUserActiveStream()),
         f = (0, l.e7)([et.Z], () => et.Z.getTargetPID()),
@@ -532,7 +532,7 @@ function ep(e) {
     let { voiceChannel: o, locked: a } = e,
         s = r.useRef(null),
         u = null != (t = null == o ? void 0 : o.getGuildId()) ? t : null,
-        { mute: h, suppress: f } = (0, k.Z)(o),
+        { mute: h, suppress: f } = (0, D.Z)(o),
         m = (0, l.e7)([Y.Z], () => Y.Z.isDeaf()),
         y = null == o || h || f || m,
         { analyticsLocations: O } = (0, g.ZP)();

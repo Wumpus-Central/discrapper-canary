@@ -13,7 +13,7 @@ var r = n(54381),
     d = n(841878),
     f = n(897037),
     _ = n(388032),
-    p = n(430490);
+    p = n(693697);
 function h(e, t, n) {
     return (
         t in e
@@ -193,8 +193,8 @@ function T(e) {
             trailing: P,
             validateOn: D = "change",
             size: w = "md",
-            fullWidth: x = !1,
-            clearable: L = !1,
+            fullWidth: L = !1,
+            clearable: x = !1,
             showCharacterCount: M = !1,
         } = e,
         k = b(e, [
@@ -255,7 +255,7 @@ function T(e) {
         K = k.readOnly;
     null == K && !1 === a && (K = !0);
     let z = null;
-    ("boolean" == typeof L ? L && null != y && "" !== y && !K : L.show)
+    ("boolean" == typeof x ? x && null != y && "" !== y && !K : x.show)
         ? (z = (0, r.jsx)(I, {
               inputSize: w,
               onClick: Y,
@@ -286,7 +286,7 @@ function T(e) {
                 ref: W,
                 disabled: n,
                 validation: U,
-                fullWidth: x,
+                fullWidth: L,
                 readOnly: K,
                 className: o()(p.container, p[w], {
                     [p.hasLeading]: null != q,

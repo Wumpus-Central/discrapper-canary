@@ -27,7 +27,7 @@ var r = n(54381),
     v = n(544978),
     I = n(893182),
     T = n(388032),
-    S = n(793701);
+    S = n(918319);
 function A(e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(l.P3F, {
@@ -106,10 +106,10 @@ function R(e) {
         R = (0, c.Z)("(max-width: 1439px)"),
         { selectedTab: P, isPhantomPreview: D } = (0, O.m)(),
         w = P === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/H"]) : T.intl.string(T.t.XyqKh8),
-        x = (e) => {
+        L = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
-    function L(e, t) {
+    function x(e, t) {
         return (0, r.jsx)(
             "span",
             {
@@ -164,7 +164,7 @@ function R(e) {
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)("div", {
-                                ref: x,
+                                ref: L,
                                 children: (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
@@ -180,7 +180,7 @@ function R(e) {
                                 color: "text-default",
                                 children: T.intl.format(T.t["7JwrlH"], {
                                     username: d,
-                                    usernameHook: L,
+                                    usernameHook: x,
                                 }),
                             }),
                             (0, r.jsx)(l.LZC, { size: 9 }),

@@ -1,8 +1,8 @@
-a.d(e, {
+_.d(e, {
     Wz: () => s,
-    m9: () => E,
+    m9: () => i,
     re: () =>
-        function t(e, a = {}, n) {
+        function t(e, _ = {}, n) {
             if ("function" != typeof e) return e;
             try {
                 let t = e.__sentry_wrapped__;
@@ -11,22 +11,22 @@ a.d(e, {
             } catch (t) {
                 return e;
             }
-            let E = function () {
+            let i = function () {
                 let o = Array.prototype.slice.call(arguments);
                 try {
                     n && "function" == typeof n && n.apply(this, arguments);
-                    let r = o.map((e) => t(e, a));
-                    return e.apply(this, r);
+                    let a = o.map((e) => t(e, _));
+                    return e.apply(this, a);
                 } catch (t) {
                     throw (
                         (c++,
                         setTimeout(() => {
                             c--;
                         }),
-                        (0, r.$e)((e) => {
+                        (0, a.$e)((e) => {
                             e.addEventProcessor(
                                 (t) => (
-                                    a.mechanism && ((0, i.Db)(t, void 0, void 0), (0, i.EG)(t, a.mechanism)),
+                                    _.mechanism && ((0, E.Db)(t, void 0, void 0), (0, E.EG)(t, _.mechanism)),
                                     (t.extra = {
                                         ...t.extra,
                                         arguments: o,
@@ -34,29 +34,29 @@ a.d(e, {
                                     t
                                 ),
                             ),
-                                (0, _.Tb)(t);
+                                (0, r.Tb)(t);
                         }),
                         t)
                     );
                 }
             };
             try {
-                for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (E[t] = e[t]);
+                for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (i[t] = e[t]);
             } catch (t) {}
-            (0, o.$Q)(E, e), (0, o.xp)(e, "__sentry_wrapped__", E);
+            (0, o.$Q)(i, e), (0, o.xp)(e, "__sentry_wrapped__", i);
             try {
-                Object.getOwnPropertyDescriptor(E, "name").configurable &&
-                    Object.defineProperty(E, "name", { get: () => e.name });
+                Object.getOwnPropertyDescriptor(i, "name").configurable &&
+                    Object.defineProperty(i, "name", { get: () => e.name });
             } catch (t) {}
-            return E;
+            return i;
         },
 });
-var r = a(263449),
-    _ = a(233517),
-    n = a(899517),
-    o = a(370336),
-    i = a(394798);
-let E = n.n,
+var a = _(263449),
+    r = _(233517),
+    n = _(899517),
+    o = _(370336),
+    E = _(394798);
+let i = n.n,
     c = 0;
 function s() {
     return c > 0;

@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var r = n(54381),
     i = n(481060),
     a = n(388032),
-    o = n(831605);
+    o = n(842973);
 function s() {
     return (0, r.jsx)("div", {
         className: o.container,

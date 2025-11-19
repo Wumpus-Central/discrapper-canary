@@ -38,7 +38,7 @@ var r = n(98405),
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
     w = function () {
-        _(this, x);
+        _(this, L);
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], "Error"),
@@ -57,8 +57,8 @@ var r = n(98405),
             (i.name = v), c(this, "stack", l(1, E(i.stack, 1)));
         }
     },
-    x = (w.prototype = s(C)),
-    L = function (e) {
+    L = (w.prototype = s(C)),
+    x = function (e) {
         return {
             enumerable: !0,
             configurable: !0,
@@ -66,26 +66,26 @@ var r = n(98405),
         };
     },
     M = function (e) {
-        return L(function () {
+        return x(function () {
             return R(this)[e];
         });
     };
-y && (d(x, "code", M("code")), d(x, "message", M("message")), d(x, "name", M("name"))), c(x, "constructor", l(1, w));
-var j = o(function () {
+y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, w));
+var k = o(function () {
         return !(new S() instanceof T);
     }),
-    k =
-        j ||
+    j =
+        k ||
         o(function () {
             return C.toString !== h || "2: 1" !== String(new S(1, 2));
         }),
     U =
-        j ||
+        k ||
         o(function () {
             return 25 !== new S(1, "DataCloneError").code;
         }),
-    G = j || 25 !== S[I] || 25 !== A[I],
-    B = O ? k || U || G : j;
+    G = k || 25 !== S[I] || 25 !== A[I],
+    B = O ? j || U || G : k;
 r(
     {
         global: !0,
@@ -96,14 +96,14 @@ r(
 );
 var Z = i(v),
     F = Z.prototype;
-for (var V in (k && (O || S === Z) && u(F, "toString", h),
+for (var V in (j && (O || S === Z) && u(F, "toString", h),
 U &&
     y &&
     S === Z &&
     d(
         F,
         "code",
-        L(function () {
+        x(function () {
             return D(p(this).name);
         }),
     ),

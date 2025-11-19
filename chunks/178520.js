@@ -13,10 +13,10 @@ function s(t, e, n) {
                 S =
                     (function (t, e, n, i) {
                         var s, a, o, c, E, S;
-                        let d = null == (s = t.getLegacySearchKey) ? void 0 : s.call(t);
-                        if (null != d) return e.length < 2 || i.has(d);
+                        let T = null == (s = t.getLegacySearchKey) ? void 0 : s.call(t);
+                        if (null != T) return e.length < 2 || i.has(T);
                         if (t.type === r.Jq.SECTION && t.hoisted) return !0;
-                        let T = "useTitle" in t ? (null == (a = t.useTitle) ? void 0 : a.call(t, !1)) : void 0,
+                        let d = "useTitle" in t ? (null == (a = t.useTitle) ? void 0 : a.call(t, !1)) : void 0,
                             I =
                                 "useNavigationTitle" in t
                                     ? null == (o = t.useNavigationTitle)
@@ -24,13 +24,13 @@ function s(t, e, n) {
                                         : o.call(t)
                                     : void 0,
                             O = "useSearchTerms" in t ? (null == (c = t.useSearchTerms) ? void 0 : c.call(t)) : void 0;
-                        if (n || (null == T && null == I && null == O)) return !1;
+                        if (n || (null == d && null == I && null == O)) return !1;
                         if ("" === e) return !0;
                         let g = e.toLowerCase();
                         for (let t of null != O ? O : []) if (l()(g, t.toLowerCase())) return !0;
                         let _ = !1;
-                        if (null != T) {
-                            let t = null == (E = (0, u.qgQ)(T)) ? void 0 : E.toLowerCase();
+                        if (null != d) {
+                            let t = null == (E = (0, u.qgQ)(d)) ? void 0 : E.toLowerCase();
                             null != t && (_ = l()(g, t));
                         }
                         if (null != I && !_) {
@@ -39,9 +39,9 @@ function s(t, e, n) {
                         }
                         return _;
                     })(t, e, E, n) || c,
-                d = !1;
-            if ((0, r.Lk)(t)) for (let e of t.layout) d = s(e, E, S) || d;
-            return !E && (S || d) && i.add(t.key), S || d;
+                T = !1;
+            if ((0, r.Lk)(t)) for (let e of t.layout) T = s(e, E, S) || T;
+            return !E && (S || T) && i.add(t.key), S || T;
         };
     return s(t), i;
 }

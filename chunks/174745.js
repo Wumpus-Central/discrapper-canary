@@ -117,15 +117,15 @@ e.exports = (function (e) {
                     P = N.getType(),
                     D = n(N),
                     w = void 0,
-                    x = void 0,
-                    L = void 0;
-                D && ((w = D.component), (x = D.props), (L = D.editable));
+                    L = void 0,
+                    x = void 0;
+                D && ((w = D.component), (L = D.props), (x = D.editable));
                 var M = g || v.get(R),
                     k = c.encode(R, 0, 0),
                     j = {
                         contentState: E,
                         block: N,
-                        blockProps: x,
+                        blockProps: L,
                         blockStyleFn: r,
                         customStyleMap: o,
                         customStyleFn: s,
@@ -154,9 +154,9 @@ e.exports = (function (e) {
                         "data-offset-key": k,
                         key: R,
                     };
-                void 0 !== L &&
+                void 0 !== x &&
                     (Y = a({}, Y, {
-                        contentEditable: L,
+                        contentEditable: x,
                         suppressContentEditableWarning: !0,
                     }));
                 var W = u.createElement(B, Y, u.createElement(H, i({}, j, { key: R })));

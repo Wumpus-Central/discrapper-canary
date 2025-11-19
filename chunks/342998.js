@@ -38,7 +38,7 @@ let y = (0, a.U)((e) => ({
         i.useEffect(() => {
             S && null === A && C(t.id);
         }, [A, S, t.id, C]);
-        let x = () => {
+        let L = () => {
             null == I || I();
         };
         i.useEffect(
@@ -47,18 +47,18 @@ let y = (0, a.U)((e) => ({
             },
             [w, D, C],
         );
-        let [L, M] = i.useState(!1);
+        let [x, M] = i.useState(!1);
         i.useEffect(() => {
-            w && !L && M(!0);
-        }, [w, L]),
+            w && !x && M(!0);
+        }, [w, x]),
             (0, _.Z)(
                 {
                     name: o.ImpressionNames.CLOUD_PLAY_CTA,
                     type: o.ImpressionTypes.VIEW,
                     properties: { location_stack: v },
                 },
-                { disableTrack: !L },
-                [L],
+                { disableTrack: !x },
+                [x],
             );
         let k = () => {
             D(g.L.USER_DISMISS), C(null);
@@ -79,7 +79,7 @@ let y = (0, a.U)((e) => ({
                 {
                     icon: c.v3n,
                     text: E.intl.string(E.t["jaYS/h"]),
-                    onClick: x,
+                    onClick: L,
                 },
             ],
             onRequestClose: k,

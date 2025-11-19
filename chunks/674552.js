@@ -1,5 +1,5 @@
 n.d(t, {
-    Ne: () => h,
+    Ne: () => f,
     Ny: () => g,
     Or: () => b,
     jt: () => _,
@@ -15,8 +15,8 @@ var i = n(120356),
     c = n(246364),
     u = n(460562),
     d = n(981631),
-    p = n(816827);
-function f(e) {
+    p = n(207972);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t, n) {
+function f(e, t, n) {
     return (0, r.jsx)(o.mAB, {
         count: e,
         color: t,
@@ -58,7 +58,7 @@ function g() {
 function m(e) {
     let { enabled: t } = a.c.useExperiment({ location: "renderMediaBadge" }, { autoTrackExposure: !0 }),
         n = t ? o.iWm : o.nG3;
-    return (0, r.jsx)(n, f({}, e));
+    return (0, r.jsx)(n, h({}, e));
 }
 function b(e) {
     let t,
@@ -109,7 +109,7 @@ function y(e) {
         a = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
     return (0, r.jsx)(
         o.G2e,
-        f(
+        h(
             {
                 icon: t,
                 className: l()(p.iconBadge, { [p.isCurrentUserConnected]: i }),

@@ -84,15 +84,15 @@ let m = "x-science-test",
     P = 0,
     D = null,
     w = 0,
-    x = Number.MAX_SAFE_INTEGER,
-    L = 0,
+    L = Number.MAX_SAFE_INTEGER,
+    x = 0,
     M = 0,
-    j = null,
-    k = !1,
+    k = null,
+    j = !1,
     U = null,
     G = null;
 function B() {
-    (C = 0), (N = 0), (R = 0), (w = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (M = 0), (D = Date.now()), (P = A);
+    (C = 0), (N = 0), (R = 0), (w = 0), (L = Number.MAX_SAFE_INTEGER), (x = 0), (M = 0), (D = Date.now()), (P = A);
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -140,7 +140,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             let e = Y.slice();
             (Y = []), (w = Z(w));
             let t = e.length;
-            (x = Math.min(x, t)), (L = Math.max(L, t)), (M = Z(M, t));
+            (L = Math.min(L, t)), (x = Math.max(x, t)), (M = Z(M, t));
             let n = ee(e);
             return (
                 n.then(
@@ -166,7 +166,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 i = e.map((e) => h(_({}, e), { properties: h(_({}, e.properties), { client_send_timestamp: n }) })),
                 a = {};
             return (
-                k || ((G = (0, o.Z)()), (a[m] = G), (k = !0)),
+                j || ((G = (0, o.Z)()), (a[m] = G), (j = !0)),
                 c.tn
                     .post({
                         url: t,
@@ -200,8 +200,8 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     telemetry_period_end_timestamp: Date.now(),
                     event_queue_rejection_count: C,
                     event_queue_batch_count: w,
-                    event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
-                    event_queue_batch_max_size: L,
+                    event_queue_batch_min_size: L === Number.MAX_SAFE_INTEGER ? 0 : L,
+                    event_queue_batch_max_size: x,
                     event_queue_batch_avg_size: w > 0 ? M / w : 0,
                     science_request_id: G,
                     science_response: U,
@@ -211,24 +211,24 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             return B(), ee([e], d.tx.CLIENT_TELEMETRY);
         }
         function en() {
-            if (null == j) return !1;
-            switch (j.type) {
+            if (null == k) return !1;
+            switch (k.type) {
                 case "timeout":
-                    clearTimeout(j.id);
+                    clearTimeout(k.id);
                     break;
                 case "interval":
-                    clearInterval(j.id);
+                    clearInterval(k.id);
                     break;
                 default:
-                    j.type;
+                    k.type;
             }
-            return (j = null), !0;
+            return (k = null), !0;
         }
         function er() {
-            if (null != j) return;
+            if (null != k) return;
             let e = () => {
                 let t = 0.1 * v;
-                j = {
+                k = {
                     type: "timeout",
                     id: setTimeout(
                         () => {
@@ -238,7 +238,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     ),
                 };
             };
-            j = {
+            k = {
                 type: "timeout",
                 id: setTimeout(
                     () => {

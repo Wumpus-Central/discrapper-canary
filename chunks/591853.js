@@ -37,8 +37,8 @@ var c = n(442837),
     P = n(871118),
     D = n(565138),
     w = n(66999),
-    x = n(359110),
-    L = n(12168),
+    L = n(359110),
+    x = n(12168),
     M = n(237583),
     k = n(131704),
     j = n(592125),
@@ -68,7 +68,7 @@ var c = n(442837),
     es = n(981631),
     el = n(959517),
     ec = n(388032),
-    eu = n(951948);
+    eu = n(826565);
 function ed(e, t, n) {
     return (
         t in e
@@ -191,10 +191,10 @@ function ey(e) {
         }),
         { embeddedActivity: D } = (0, $.Z)(o),
         w = eA(D),
-        x = null != P && 0 === s.length ? [P] : s,
-        L = x.length > 0,
-        M = x.length >= 2,
-        [k, U] = i.useState(!L),
+        L = null != P && 0 === s.length ? [P] : s,
+        x = L.length > 0,
+        M = L.length >= 2,
+        [k, U] = i.useState(!x),
         B = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         Z =
             null != t && g
@@ -336,7 +336,7 @@ function ey(e) {
                                           })
                                     : void 0,
                             }),
-                            L &&
+                            x &&
                                 (0, r.jsx)(p.P3F, {
                                     onClick: () => X(!1),
                                     className: eu.primaryActionPopoutMessageCloseIcon,
@@ -365,7 +365,7 @@ function ey(e) {
                                         },
                                         "toggleMessageMode",
                                     ),
-                                x,
+                                L,
                             ],
                         }),
                 ],
@@ -410,7 +410,7 @@ let eO = (e) => {
                               position: "top",
                               "aria-label": ec.intl.formatToPlainString(ec.t.kilW3l, { emojiName: t.name }),
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(L.u, {
+                              children: (0, r.jsx)(x.u, {
                                   emoji: t,
                                   isDisabled: !a,
                                   onClick: () => n({ emoji: t }),
@@ -668,7 +668,7 @@ function eS(e) {
         ),
         T = O ? I : void 0,
         { activity: S, activityApplication: D, fallbackApplication: w } = (0, $.Z)(y),
-        { largeImage: x, smallImage: L } = (0, z.YC)(S, null != D ? D : w),
+        { largeImage: L, smallImage: x } = (0, z.YC)(S, null != D ? D : w),
         { largeImage: M } = (0, z.rv)({ entry: y });
     return (0, r.jsxs)("div", {
         className: eu.popoutContentWrapper,
@@ -706,12 +706,12 @@ function eS(e) {
                     (0, r.jsxs)("div", {
                         className: eu.streamingPopoutHeader,
                         children: [
-                            null != x &&
+                            null != L &&
                                 (0, r.jsx)("div", {
                                     className: eu.popoutThumbnailContainer,
                                     children: (0, r.jsx)(Q.E, {
-                                        image: x,
-                                        smallImage: L,
+                                        image: L,
+                                        smallImage: x,
                                         onClick: null != l ? l : T,
                                         size: Q.J.SIZE_72,
                                     }),
@@ -767,7 +767,7 @@ function eA(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               "aria-label": ec.intl.string(ec.t["W/A4Qp"]),
-                              onClick: () => (0, x.Kh)(n.id),
+                              onClick: () => (0, L.Kh)(n.id),
                               className: eu.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(D.Z, {
@@ -843,7 +843,7 @@ function eC(e) {
         };
     let E = null != o,
         b = () => {
-            m.Z.updateChatOpen(s.id, !0), (0, x.Kh)(s.id), null == a || a(s);
+            m.Z.updateChatOpen(s.id, !0), (0, L.Kh)(s.id), null == a || a(s);
         },
         y = () => {
             v.Z.handleVoiceConnect({

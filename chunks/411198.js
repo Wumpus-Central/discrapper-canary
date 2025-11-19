@@ -79,7 +79,7 @@ function _(e) {
     return (0, o.Wh)(s.VI, e);
 }
 function p(e, t, n) {
-    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, D, x, L;
+    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, D, L, x;
     return (0, o.oI)(s.VI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -115,8 +115,8 @@ function p(e, t, n) {
         nsfwLevel: null != (N = e.nsfw_level) ? N : s.Cx.nsfwLevel,
         ownerConfiguredContentLevel: null != (R = e.owner_configured_content_level) ? R : null,
         hubType: null != (D = e.hub_type) ? D : null,
-        latestOnboardingQuestionId: null != (x = e.latest_onboarding_question_id) ? x : null,
-        profile: null != (L = e.profile) ? L : null,
+        latestOnboardingQuestionId: null != (L = e.latest_onboarding_question_id) ? L : null,
+        profile: null != (x = e.profile) ? x : null,
         premiumFeatures: null != e.premium_features ? P(e.premium_features) : null,
         moderatorReporting: null != e.moderator_reporting ? w(e.moderator_reporting) : null,
     });
@@ -332,7 +332,7 @@ function A(e) {
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
-        moderator_reporting: null != e.moderatorReporting ? x(e.moderatorReporting) : null,
+        moderator_reporting: null != e.moderatorReporting ? L(e.moderatorReporting) : null,
         incidents_data: null,
     };
 }
@@ -371,7 +371,7 @@ function w(e) {
         moderatorReportChannelId: e.moderator_report_channel_id,
     };
 }
-function x(e) {
+function L(e) {
     return {
         moderator_reporting_enabled: e.moderatorReportingEnabled,
         moderator_report_channel_id: e.moderatorReportChannelId,

@@ -63,13 +63,13 @@ function E(e, t, n) {
                 e
             );
         }, [T, P, I, S, D, b, t, v]),
-        x = "";
+        L = "";
     "anchorDate" in t &&
         A &&
         !t.isReadOnly &&
         N &&
-        (x = t.anchorDate ? I.format("finishRangeSelectionPrompt") : I.format("startRangeSelectionPrompt"));
-    let L = (0, s.P)(x),
+        (L = t.anchorDate ? I.format("finishRangeSelectionPrompt") : I.format("startRangeSelectionPrompt"));
+    let x = (0, s.P)(L),
         M = (0, m.useRef)(!1),
         k = (0, m.useRef)(!1),
         j = (0, m.useRef)(void 0),
@@ -158,7 +158,7 @@ function E(e, t, n) {
             "aria-disabled": !N || void 0,
             "aria-label": w,
             "aria-invalid": R || void 0,
-            "aria-describedby": [R ? O : void 0, L["aria-describedby"]].filter(Boolean).join(" ") || void 0,
+            "aria-describedby": [R ? O : void 0, x["aria-describedby"]].filter(Boolean).join(" ") || void 0,
             onPointerEnter(e) {
                 "highlightDate" in t && ("touch" !== e.pointerType || t.isDragging) && N && t.highlightDate(b);
             },

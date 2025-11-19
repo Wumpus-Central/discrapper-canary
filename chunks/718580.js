@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(699682),
     h = n(793903),
     m = n(906732),
-    g = n(430723);
+    g = n(827221);
 function E(e, t, n) {
     return (
         t in e
@@ -137,12 +137,12 @@ function N(e) {
         P = (0, p.Z)(I.activeSlide),
         D = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
         { reducedMotion: w } = i.useContext(d.Sfi),
-        x = i.useContext(h.Z),
-        L = C[R].impressionName,
+        L = i.useContext(h.Z),
+        x = C[R].impressionName,
         M = O(b({}, C[R].impressionProperties), { location_stack: N });
-    x({
+    L({
         type: l.ImpressionTypes.MODAL,
-        name: L,
+        name: x,
         properties: M,
         _stackContext: { isSlide: !0 },
     });

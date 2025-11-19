@@ -20,7 +20,7 @@ var r = n(54381),
     y = n(981631),
     v = n(46140),
     I = n(388032),
-    C = n(933767);
+    C = n(662401);
 function S(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),

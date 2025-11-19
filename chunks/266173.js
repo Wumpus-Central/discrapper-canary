@@ -210,8 +210,8 @@ function D() {
     return Object.values(u.i);
 }
 let w = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]),
-    x = "overlay-negative-widget-experiment-bucket";
-class L extends s.Z {
+    L = "overlay-negative-widget-experiment-bucket";
+class x extends s.Z {
     constructor() {
         var e, t;
         super(),
@@ -221,7 +221,7 @@ class L extends s.Z {
             h(this, "_isProcessing", !1),
             h(this, "_appliedExperimentBucket", "control"),
             h(this, "setAppliedExperimentBucket", (e) => {
-                (this._appliedExperimentBucket = e), i.K.set(x, e);
+                (this._appliedExperimentBucket = e), i.K.set(L, e);
             }),
             h(this, "getRawAppliedExperimentBucket", () => (0, d.hb)("applied-experiment-bucket")),
             h(this, "getWidgetExperimentSettings", (e) => {
@@ -338,7 +338,7 @@ class L extends s.Z {
                 OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: this.handleSetNotificationDisabledSetting,
                 LAYOUT_SET_PINNED: this.handleSetPinned,
             }),
-            (this._appliedExperimentBucket = null != (t = i.K.get(x)) ? t : "control");
+            (this._appliedExperimentBucket = null != (t = i.K.get(L)) ? t : "control");
     }
 }
-let M = new L();
+let M = new x();

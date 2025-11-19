@@ -18,7 +18,7 @@ var r = n(54381),
     g = n(920952),
     x = n(518596),
     h = n(388032),
-    O = n(942408);
+    O = n(885684);
 function P(e) {
     let { destinationPanel: t, originPanel: n } = e;
     (0, y.QB)({

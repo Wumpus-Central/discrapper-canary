@@ -57,8 +57,8 @@ var i,
     P = n(48481),
     D = n(314897),
     w = n(77498),
-    x = n(355863),
-    L = n(626135),
+    L = n(355863),
+    x = n(626135),
     M = n(866119),
     k = n(671999),
     j = n(998502),
@@ -384,7 +384,7 @@ let e_ = "none",
                     success: !1,
                 }),
             ),
-                L.default.track(B.rMx.OVERLAY_HOOK_RESULT, eu((0, U.getPID)()));
+                x.default.track(B.rMx.OVERLAY_HOOK_RESULT, eu((0, U.getPID)()));
         },
         timeoutMs: 180000,
     });
@@ -405,7 +405,7 @@ function em() {
                     var t, n, r, i, a, o, s;
                     if (null == l) continue;
                     let e = null != l.processName ? w.Z.getGameByExecutable(l.processName) : null;
-                    L.default.track(B.rMx.OVERLAY_HOOK_CRASHED, {
+                    x.default.track(B.rMx.OVERLAY_HOOK_CRASHED, {
                         process_name: null == l ? void 0 : l.processName,
                         game_name: null != (t = null == e ? void 0 : e.name) ? t : null,
                         game_id: null != (n = null == e ? void 0 : e.id) ? n : null,
@@ -617,12 +617,12 @@ function eC(e, t, n) {
             n,
         );
     ed(e, V({}, o)),
-        (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv, {
+        (0, d.te)(U.OVERLAY_LAYOUT_ID, L.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv, {
             width: n.graphics_width,
             height: n.graphics_height,
         });
     let s = eu(e);
-    L.default.track(B.rMx.OVERLAY_HOOK_RESULT, s),
+    x.default.track(B.rMx.OVERLAY_HOOK_RESULT, s),
         el.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), s),
         t
             ? (f.Z.updateOverlayState(e, I.mM.OVERLAY_RENDERING, "onConnectComplete"), eg(e, "CONNECTED", "CONNECTING"))
@@ -654,7 +654,7 @@ function eP(e) {
         case B.BmY.CONNECT:
             let t = D.default.getToken();
             if (null == t) break;
-            (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv),
+            (0, d.te)(U.OVERLAY_LAYOUT_ID, L.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv),
                 Promise.all([(0, T.Z)(t, e.pid), o.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -710,16 +710,16 @@ async function eD(e, t) {
 function ew(e, t) {
     e ? setTimeout(() => eD(e, t), 200) : eD(e, t);
 }
-let ex = null;
-function eL(e) {
+let eL = null;
+function ex(e) {
     let { locked: t, pid: n } = e,
         r = q.get(n);
     if ((ee.has(n) && ev(void 0), null != r && null != K[n]) && (t || "READY" === r || "CRASHED" === r)) {
-        if ((t ? en.delete(n) : en.add(n), eo.clear(), null != ex && (clearTimeout(ex), (ex = null), t))) return;
+        if ((t ? en.delete(n) : en.add(n), eo.clear(), null != eL && (clearTimeout(eL), (eL = null), t))) return;
         t
             ? ew(t, n)
-            : (ex = setTimeout(() => {
-                  ew(t, n), (ex = null);
+            : (eL = setTimeout(() => {
+                  ew(t, n), (eL = null);
               }, 100));
     }
 }
@@ -734,7 +734,7 @@ function ej(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "0edd54b00ea5697fdf73613df029ab6060c375e1"),
+    n.append("build_id", "7a261b32ab1b02e768a3cf352b486f4a55e8dcea"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -845,7 +845,7 @@ class e$ extends (i = o.ZP.Store) {
     initialize() {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(D.default, E.Z, w.Z, x.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
+            (this.waitFor(D.default, E.Z, w.Z, L.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
             this.syncWith([E.Z], eX),
             m.sr(eP, eR),
             D.default.addChangeListener(eN),
@@ -910,7 +910,7 @@ let e0 = new e$(
                   RUNNING_GAMES_CHANGE: eK,
                   OVERLAY_SET_ENABLED: eH,
                   OVERLAY_FOCUSED: eG,
-                  OVERLAY_SET_INPUT_LOCKED: eL,
+                  OVERLAY_SET_INPUT_LOCKED: ex,
                   OVERLAY_ACTIVATE_REGION: eM,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: ek,
                   RPC_SERVER_READY: ej,

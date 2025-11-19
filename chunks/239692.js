@@ -7,7 +7,7 @@ var r = n(54381),
     l = n.n(s),
     c = n(155127),
     u = n(780900),
-    d = n(901259);
+    d = n(247679);
 function f(e, t, n) {
     return (
         t in e
@@ -190,8 +190,8 @@ function v(e, t, n, a) {
                 sidebarHeight: P,
                 listHeaderHeight: D = 0,
                 renderSection: w,
-                renderRow: x,
-                renderFooter: L,
+                renderRow: L,
+                renderFooter: x,
                 renderSidebar: M,
                 renderListHeader: k,
                 stickyListHeader: j,
@@ -342,7 +342,7 @@ function v(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== ea.current.dirty && (ea.current.dirty = 2);
-            }, [ec, w, x, L, U, el, es, ea]),
+            }, [ec, w, L, x, U, el, es, ea]),
             (0, u.rS)({
                 scrollerRef: ei,
                 anchor: e_,
@@ -388,14 +388,14 @@ function v(e, t, n, a) {
                                                 renderListHeader: k,
                                                 stickyListHeader: j,
                                                 renderSection: w,
-                                                renderRow: x,
-                                                renderFooter: L,
+                                                renderRow: L,
+                                                renderFooter: x,
                                                 wrapSection: U,
                                                 spacerTop: es,
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, w, x, L, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, k, j, w, L, x, U, es],
                             ),
                             i.useMemo(
                                 () =>

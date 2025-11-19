@@ -8,7 +8,7 @@ var i = n(481060),
     l = n(981631),
     c = n(474936),
     u = n(388032),
-    d = n(560553);
+    d = n(155886);
 function f(e) {
     var t, n;
     let f = (0, a.m)(c.PremiumTypes.TIER_2);

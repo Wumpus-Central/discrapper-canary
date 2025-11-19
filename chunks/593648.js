@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(626135),
     D = n(912101),
     w = n(709054),
-    x = n(45640),
-    L = n(695346),
+    L = n(45640),
+    x = n(695346),
     M = n(675478),
     k = n(273313),
     j = n(33656),
@@ -368,7 +368,7 @@ class Q extends i.PureComponent {
                 notifyMessagesInSelectedChannel: l,
                 focusMode: c,
             } = this.props,
-            d = x.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            d = L.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
             f = o()
                 .range(d, 11)
                 .map((e) => ({
@@ -422,7 +422,7 @@ class Q extends i.PureComponent {
                                 label: F.intl.string(F.t.TTvjd9),
                                 description: F.intl.string(F.t.Xytv9C),
                                 value: t,
-                                onChange: L.CM.updateSetting,
+                                onChange: x.CM.updateSetting,
                                 options: f,
                             }),
                             (0, r.jsx)(u.izJ, { gap: 16 }),
@@ -561,10 +561,10 @@ function ei() {
         ttsType: C.Z.getTTSType(),
         notifyMessagesInSelectedChannel: C.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(er, W(H({}, e), { afkTimeout: L.CM.useSetting() }));
+    return (0, r.jsx)(er, W(H({}, e), { afkTimeout: x.CM.useSetting() }));
 }
 function ea() {
-    let e = L.fz.useSetting(),
+    let e = x.fz.useSetting(),
         t = [
             {
                 name: F.intl.string(F.t["9x/RtT"]),
@@ -599,8 +599,8 @@ function ea() {
         : null;
 }
 function eo() {
-    let e = L.d8.useSetting(),
-        t = L.JN.useSetting();
+    let e = x.d8.useSetting(),
+        t = x.JN.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(I.F, {
@@ -619,14 +619,14 @@ function eo() {
                     label: F.intl.string(F.t.pW4TMp),
                     description: F.intl.string(F.t["H+WYqZ"]),
                     checked: t,
-                    onChange: L.JN.updateSetting,
+                    onChange: x.JN.updateSetting,
                 }),
             }),
         ],
     });
 }
 function es() {
-    let e = L.JY.useSetting();
+    let e = x.JY.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_FRIEND_ONLINE,
         children: (0, r.jsx)(u.rsf, {
@@ -638,7 +638,7 @@ function es() {
     });
 }
 function el() {
-    let e = L.V6.useSetting();
+    let e = x.V6.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_USER_RESURRECTION,
         children: (0, r.jsx)(u.rsf, {

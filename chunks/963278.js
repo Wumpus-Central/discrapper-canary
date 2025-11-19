@@ -3,27 +3,27 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(594174),
     u = n(381585),
     d = n(597688),
-    p = n(128922),
-    g = n(937510),
+    g = n(128922),
+    p = n(937510),
     f = n(709999),
-    h = n(653126),
-    C = n(786040),
-    m = n(215023),
+    m = n(653126),
+    h = n(786040),
+    C = n(215023),
     _ = n(388032),
-    b = n(310582);
+    b = n(687983);
 let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
-        v = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        x = (0, o.e7)([d.Z], () => d.Z.getCategory(t.categorySkuId)),
-        E = p.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        v = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        x = (0, s.e7)([d.Z], () => d.Z.getCategory(t.categorySkuId)),
+        E = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
         O = (0, u.sp)(),
         S = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
-        y = (0, g.l)(S).slice(0, 4);
+        y = (0, p.l)(S).slice(0, 4);
     return null == v
         ? null
         : (0, r.jsxs)("div", {
@@ -32,11 +32,11 @@ let v = (e) => {
                   (0, r.jsxs)("div", {
                       className: b.blockHeader,
                       children: [
-                          (0, r.jsx)(s.Heading, {
+                          (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(s.Button, {
+                          (0, r.jsx)(o.Button, {
                               variant: "secondary",
                               text: _.intl.formatToPlainString(_.t.bc9RBE, { category_name: t.name }),
                               onClick: () => {
@@ -67,11 +67,11 @@ let v = (e) => {
                                       },
                                       children: E
                                           ? (0, r.jsx)(
-                                                h.Z,
+                                                m.Z,
                                                 {
                                                     skuId: a,
-                                                    prioritizedCurrency: i === m.AW.ORBS ? C.tA.ORBS : void 0,
-                                                    onClickAnalytics: (0, C.wO)(e, i, O),
+                                                    prioritizedCurrency: i === C.AW.ORBS ? h.tA.ORBS : void 0,
+                                                    onClickAnalytics: (0, h.wO)(e, i, O),
                                                 },
                                                 a,
                                             )

@@ -48,11 +48,11 @@ function E(e) {
     i.useEffect(() => {
         n(145260);
     }, []);
-    let x = i.useCallback(() => {
+    let L = i.useCallback(() => {
             (null == T ? void 0 : T.id) != null &&
                 (c.Z.open(T.id, m.pNK.INTEGRATIONS), s.Z.setSection(m.b4C.APPLICATION, I), null == v || v());
         }, [I, null == T ? void 0 : T.id, v]),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             (0, f.openUserSettings)(u.n.AUTHORIZED_APPS_PANEL, { section: m.oAB.AUTHORIZED_APPS });
             let e = "";
             null != b ? (e = b.name) : null != E && (e = E.username),
@@ -70,7 +70,7 @@ function E(e) {
                     {
                         id: "manage-server-integration",
                         label: g.intl.string(g.t.IuSJT8),
-                        action: x,
+                        action: L,
                     },
                     "manage-server-integration",
                 ),
@@ -83,7 +83,7 @@ function E(e) {
                     {
                         id: "manage-authorized-app",
                         label: g.intl.string(g.t.V8ruvz),
-                        action: L,
+                        action: x,
                     },
                     "manage-authorized-app",
                 ),

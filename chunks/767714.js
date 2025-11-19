@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(648613),
     d = n(433390),
     f = n(474936),
-    _ = n(402623);
+    _ = n(664838);
 function p(e, t, n) {
     return (
         t in e
@@ -124,12 +124,12 @@ let y = function (e) {
             "iconColor",
         ]);
     let w = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        x = (0, d.Z)({
+        L = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == m ? void 0 : m.textOverride,
             defaultTextOverride: null == m ? void 0 : m.subscribeText,
         }),
-        L = {
+        x = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: y,
@@ -142,7 +142,7 @@ let y = function (e) {
         let n = null != R ? R : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            g(h({}, L), {
+            g(h({}, x), {
                 children: (o) => {
                     let { onClick: c } = o;
                     return (0, r.jsxs)(
@@ -151,7 +151,7 @@ let y = function (e) {
                             h(
                                 {
                                     "data-migration-pending": !0,
-                                    disabled: x.disabled,
+                                    disabled: L.disabled,
                                     onClick: c,
                                     innerClassName: _.premiumSubscribeButton,
                                     color: n,
@@ -185,7 +185,7 @@ let y = function (e) {
                                         }),
                                     (0, r.jsx)("span", {
                                         className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: x.buttonText,
+                                        children: L.buttonText,
                                     }),
                                 ],
                             },
@@ -195,10 +195,10 @@ let y = function (e) {
             }),
         );
     }
-    return null != x.buttonTooltipText
+    return null != L.buttonTooltipText
         ? (0, r.jsx)(l.aML, {
               "data-migration-pending": !0,
-              text: x.buttonTooltipText,
+              text: L.buttonTooltipText,
               children: M,
           })
         : M();

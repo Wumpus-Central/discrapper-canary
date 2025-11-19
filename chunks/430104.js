@@ -14,6 +14,6 @@ function o() {
     return (0, i.U)("isStageSpeakingDisabledForCurrentUser") && e;
 }
 function s() {
-    let e = (0, r.kJ)();
+    let e = (0, r.M$)();
     return (0, i.U)("shouldAgeVerifyToSpeakForCurrentUser") && !e;
 }

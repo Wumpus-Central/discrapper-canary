@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(708154),
     D = n(705262),
     w = n(981631),
-    x = n(921944),
-    L = n(474936),
+    L = n(921944),
+    x = n(474936),
     M = n(388032),
-    k = n(204089);
+    k = n(826425);
 let j = () =>
         (0, r.jsx)("div", {
             className: k.editorHeader,
@@ -52,7 +52,7 @@ let j = () =>
         let { markAsDismissed: t } = e,
             n = (0, R.q)(),
             i = () => {
-                null != t && t(x.L.DISMISS), n(w.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.C)();
+                null != t && t(L.L.DISMISS), n(w.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.C)();
             };
         return (0, r.jsxs)("div", {
             className: k.editorHeader,
@@ -88,13 +88,13 @@ let j = () =>
             }),
             g = d
                 ? M.intl.string(M.t.IJI7yk)
-                : (null == _ || null == (i = _.subscription_trial) ? void 0 : i.sku_id) === L.Si.TIER_2
+                : (null == _ || null == (i = _.subscription_trial) ? void 0 : i.sku_id) === x.Si.TIER_2
                   ? p
                   : M.intl.string(M.t.mr4K7D),
             E = (e) => {
                 e &&
                     (null == a || a(),
-                    null != o && o(x.L.PRIMARY),
+                    null != o && o(L.L.PRIMARY),
                     null != u &&
                         ((0, D.Yk)({
                             isPersisted: !0,
@@ -107,7 +107,7 @@ let j = () =>
                         })));
             };
         return (0, r.jsx)(y.Z, {
-            subscriptionTier: L.Si.TIER_2,
+            subscriptionTier: x.Si.TIER_2,
             defaultTextOverride: g,
             premiumModalAnalyticsLocation: {
                 object: w.qAy.BUTTON_CTA,
@@ -123,7 +123,7 @@ let j = () =>
             [o, c] = i.useState(!1),
             d = (0, R.q)(),
             f = () => {
-                null != t && t(x.L.DISMISS),
+                null != t && t(L.L.DISMISS),
                     d(w.rMx.CLIENT_THEME_PREVIEW_CLOSED),
                     (0, N.C)(),
                     n || (0, I.openUserSettings)(v.n.APPEARANCE_PANEL, { section: w.oAB.APPEARANCE });
@@ -177,7 +177,7 @@ function Z(e) {
         i.useEffect(() => {
             s &&
                 S.default.track(w.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a,
                 });
         }, [s, a]);

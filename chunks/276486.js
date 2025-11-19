@@ -10,7 +10,7 @@ var l = n(28664),
     a = n(489813),
     o = n(815660),
     c = n(388032),
-    u = n(624463);
+    u = n(162359);
 function d() {
     return (0, r.jsx)(a.PU, {
         className: u.editableRequirementContainer,

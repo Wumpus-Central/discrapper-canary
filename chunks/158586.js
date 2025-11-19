@@ -8,7 +8,7 @@ var i = n(54381),
     s = n(946458),
     d = n(185923),
     u = n(388032),
-    m = n(172107);
+    m = n(592115);
 let j = (e) => {
     var t, n, j, p, b, h, x;
     let { channel: v, onClose: f, transitionState: y } = e,

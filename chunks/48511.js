@@ -31,14 +31,14 @@ var r = "function" == typeof Map && Map.prototype,
             ? Symbol.toStringTag
             : null,
     w = Object.prototype.propertyIsEnumerable,
-    x =
+    L =
         ("function" == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
         ([].__proto__ === Array.prototype
             ? function (e) {
                   return e.__proto__;
               }
             : null);
-function L(e, t) {
+function x(e, t) {
     if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || v.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ("number" == typeof e) {
@@ -52,8 +52,8 @@ function L(e, t) {
     return b.call(t, n, "$&_");
 }
 var M = n(706827),
-    j = M.custom,
-    k = X(j) ? j : null,
+    k = M.custom,
+    j = X(k) ? k : null,
     U = {
         __proto__: null,
         double: '"',
@@ -141,11 +141,11 @@ e.exports = function e(t, r, i, s) {
     if ("number" == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? "0" : "-0";
         var _ = String(t);
-        return f ? L(t, _) : _;
+        return f ? x(t, _) : _;
     }
     if ("bigint" == typeof t) {
         var h = String(t) + "n";
-        return f ? L(t, h) : h;
+        return f ? x(t, h) : h;
     }
     var m = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= m && m > 0 && "object" == typeof t)) return V(t) ? "[Array]" : "[Object]";
@@ -171,12 +171,12 @@ e.exports = function e(t, r, i, s) {
         return "object" != typeof t || P ? N : ed(N);
     }
     if (el(t)) {
-        for (var j = "<" + O.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++)
-            j += " " + G[F].name + "=" + B(Z(G[F].value), "double", l);
+        for (var k = "<" + O.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++)
+            k += " " + G[F].name + "=" + B(Z(G[F].value), "double", l);
         return (
-            (j += ">"),
-            t.childNodes && t.childNodes.length && (j += "..."),
-            (j += "</" + O.call(String(t.nodeName)) + ">")
+            (k += ">"),
+            t.childNodes && t.childNodes.length && (k += "..."),
+            (k += "</" + O.call(String(t.nodeName)) + ">")
         );
     }
     if (V(t)) {
@@ -193,7 +193,7 @@ e.exports = function e(t, r, i, s) {
             : "{ [" + String(t) + "] " + T.call(I.call("[cause]: " + y(t.cause), eu), ", ") + " }";
     }
     if ("object" == typeof t && d) {
-        if (k && "function" == typeof t[k] && M) return M(t, { depth: m - i });
+        if (j && "function" == typeof t[j] && M) return M(t, { depth: m - i });
         else if ("symbol" !== d && "function" == typeof t.inspect) return t.inspect();
     }
     if (er(t)) {
@@ -228,7 +228,7 @@ e.exports = function e(t, r, i, s) {
         return "{ [object globalThis] }";
     if (!H(t) && !Y(t)) {
         var ey = eg(t, y),
-            eO = x ? x(t) === Object.prototype : t instanceof Object || t.constructor === Object,
+            eO = L ? L(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             ev = t instanceof Object ? "" : "null prototype",
             eI = !eO && D && Object(t) === t && D in t ? E.call(ee(t), 8, -1) : ev ? "Object" : "",
             eT =

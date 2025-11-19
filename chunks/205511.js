@@ -68,7 +68,7 @@ function E(e) {
                               children: E.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
                                       let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          o = (0, f.C9)(e),
+                                          o = (0, f.Uy)(e),
                                           a = (0, f._j)(e);
                                       return (0, r.jsx)(
                                           y,
@@ -144,7 +144,7 @@ let O = function (e) {
         o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, h.z6)(),
         i = s.useMemo(
-            () => (0, f.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            () => (0, f._4)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
             [a.xboxAndPlaystationAccounts, t],
         ),
         {

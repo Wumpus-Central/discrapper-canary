@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(28664),
     d = n(481060),
     p = n(493683),
-    f = n(239091),
-    h = n(99690),
+    h = n(239091),
+    f = n(99690),
     g = n(471445),
     m = n(569471),
     b = n(488131),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(594174),
     v = n(979651),
     j = n(938475),
-    x = n(990734),
-    C = n(714794),
+    C = n(990734),
+    x = n(714794),
     E = n(876548),
     S = n(25601),
     I = n(207055),
@@ -182,7 +182,7 @@ let k = i.memo(function (e) {
             isMentionLowImportance: y.ZP.getIsMentionLowImportance(t.id),
         })),
         V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
-        H = (0, x.p)({ location: "GuildSidebarThreadListEntry" }),
+        H = (0, C.p)({ location: "GuildSidebarThreadListEntry" }),
         z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
@@ -197,7 +197,7 @@ let k = i.memo(function (e) {
             (e) => {
                 let i = _.Z.getChannel(t.id);
                 null != i &&
-                    (0, f.jW)(e, async () => {
+                    (0, h.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                         return (t) => (0, r.jsx)(e, D(R({}, t), { channel: i }));
                     });
@@ -290,7 +290,7 @@ let k = i.memo(function (e) {
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(h.Z, {
+                                                          : (0, r.jsx)(f.Z, {
                                                                 user: z,
                                                                 size: d.EFr.SIZE_16,
                                                             }),
@@ -313,7 +313,7 @@ let k = i.memo(function (e) {
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, C.Z)(B)
+                                                (0, x.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,

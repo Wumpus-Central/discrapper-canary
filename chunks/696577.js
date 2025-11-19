@@ -17,7 +17,7 @@ var r = n(54381),
     b = n(170245),
     E = n(981631),
     O = n(388032),
-    y = n(507694);
+    y = n(469314);
 function v(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,

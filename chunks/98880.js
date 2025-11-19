@@ -38,15 +38,15 @@ var r = n(54381),
     P = n(768581),
     D = n(541099),
     w = n(783097),
-    x = n(695676),
-    L = n(176412),
+    L = n(695676),
+    x = n(176412),
     M = n(226026),
     k = n(570949),
     j = n(753972),
     U = n(981631),
     G = n(217702),
     B = n(388032),
-    Z = n(992878),
+    Z = n(159498),
     F = n(413097),
     V = n(969728);
 function H(e, t, n) {
@@ -270,7 +270,7 @@ function ee(e) {
             showsPromoted: h,
         } = e,
         { iconURL: m, name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: F }), [t]),
-        b = i.useMemo(() => (null == E ? null : (0, L.ae)(E)), [E]),
+        b = i.useMemo(() => (null == E ? null : (0, x.ae)(E)), [E]),
         y = (0, I.ZP)(m, ""),
         [v, T] = i.useState(!1),
         S = i.useCallback(() => {
@@ -507,7 +507,7 @@ function eo(e) {
 }
 function es(e) {
     let { application: t, sectionName: n, resultsPosition: r, query: a, installOnDemand: o, location: s } = e,
-        { pushHistory: l } = (0, x.hH)(),
+        { pushHistory: l } = (0, L.hH)(),
         { friends: c } = (0, m.Z)(t);
     return {
         onClickAppCard: i.useCallback(
@@ -524,7 +524,7 @@ function es(e) {
                         num_friends_who_play: c.length,
                     }),
                     l({
-                        type: x.gc.APPLICATION,
+                        type: L.gc.APPLICATION,
                         application: t,
                         installOnDemand: o,
                         sectionName: n,
@@ -554,7 +554,7 @@ function ec(e) {
             activityAction: y,
             buttonVariant: O,
             buttonText: v,
-        } = (0, L.P7)({
+        } = (0, x.P7)({
             context: t,
             application: n,
             location: a,

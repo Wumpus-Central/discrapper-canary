@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(259580),
     d = n(981631),
     u = n(388032),
-    g = n(824804);
+    g = n(298392);
 function m(e) {
     let { guild: t } = e,
         l = t.verificationLevel,

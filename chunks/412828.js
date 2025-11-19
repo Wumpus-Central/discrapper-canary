@@ -1,23 +1,23 @@
-let r;
-a.d(e, {
+let a;
+_.d(e, {
     U: () => c,
     Y: () => s,
 });
-var _ = a(622574);
+var r = _(622574);
 let n = 0,
     o = 1 / 0,
-    i = 0,
-    E = (t) => {
+    E = 0,
+    i = (t) => {
         t.forEach((t) => {
             t.interactionId &&
-                ((o = Math.min(o, t.interactionId)), (n = (i = Math.max(i, t.interactionId)) ? (i - o) / 7 + 1 : 0));
+                ((o = Math.min(o, t.interactionId)), (n = (E = Math.max(E, t.interactionId)) ? (E - o) / 7 + 1 : 0));
         });
     },
-    c = () => (r ? n : performance.interactionCount || 0),
+    c = () => (a ? n : performance.interactionCount || 0),
     s = () => {
         "interactionCount" in performance ||
-            r ||
-            (r = (0, _.N)("event", E, {
+            a ||
+            (a = (0, r.N)("event", i, {
                 type: "event",
                 buffered: !0,
                 durationThreshold: 0,

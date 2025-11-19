@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(657707),
     d = n(821541),
     f = n(777207),
-    _ = n(726550);
+    _ = n(997562);
 function p(e) {
     let {
             checked: t,
@@ -43,7 +43,7 @@ function p(e) {
             null != a && a(e);
         },
         w = o()(_.checkboxOption, "string" == typeof S && _[S], "indicator" !== O && _.spacing),
-        x = (0, r.jsxs)(r.Fragment, {
+        L = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: _.checkboxIndicator,
@@ -109,7 +109,7 @@ function p(e) {
               className: w,
               "data-selected": t || void 0,
               "data-disabled": p || void 0,
-              children: x,
+              children: L,
           })
         : (0, r.jsx)(c.tE, {
               focusTarget: I,
@@ -125,7 +125,7 @@ function p(e) {
                   "data-mana-component": "checkbox",
                   className: w,
                   value: String(b),
-                  children: x,
+                  children: L,
               }),
           });
 }

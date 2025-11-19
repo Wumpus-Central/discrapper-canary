@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(213609),
     c = n(63063),
     u = n(388032),
-    d = n(671713);
+    d = n(940413);
 let f = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e;
     (0, l.Z)({

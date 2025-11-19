@@ -41,7 +41,7 @@ let E = (0, s.Em)(a.n.CLIPS_RESOLUTION, {
             label: c.intl.string(c.t.XjXqzh),
         },
     ],
-    usePredicate: l.Go,
+    usePredicate: l.w9,
     setValue: (t) => {
         let { clipsQuality: e } = u.Z.getSettings();
         r.yi({

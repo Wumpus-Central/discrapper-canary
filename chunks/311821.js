@@ -8,7 +8,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(388032),
-    l = n(831371);
+    l = n(804849);
 let c = (e) => {
         let { className: t, onClick: n, children: i } = e;
         return (0, r.jsx)(o.Anchor, {

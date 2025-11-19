@@ -1,11 +1,11 @@
 n.d(t, {
-    E: () => l,
+    E: () => i,
     Z: () => s,
 });
 var a = n(818083),
-    i = n(875527),
+    l = n(875527),
     r = n(987338);
-let l = (0, a.B)({
+let i = (0, a.B)({
     kind: "user",
     id: "2025-06_voice_filters_ea",
     label: "Voice Filters EA",
@@ -26,8 +26,8 @@ let l = (0, a.B)({
 });
 function s(e) {
     let { location: t } = e,
-        { enabled: n } = l.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-        a = (0, i.Hu)({
+        { enabled: n } = i.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+        a = (0, l.Hu)({
             location: "VoiceFiltersEarlyAccess",
             autoTrackExposure: !0,
         });

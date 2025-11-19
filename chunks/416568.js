@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(91192),
     d = n(374470),
     p = n(442837),
-    f = n(902704),
-    h = n(846519),
+    h = n(902704),
+    f = n(846519),
     g = n(692547),
     m = n(481060),
     b = n(925549),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(100527),
     v = n(906732),
     j = n(358221),
-    x = n(706590),
-    C = n(940777),
+    C = n(706590),
+    x = n(940777),
     E = n(113544),
     S = n(41776),
     I = n(821020),
@@ -52,7 +52,7 @@ var r = n(54381),
     $ = n(921230),
     ee = n(981631),
     et = n(388032),
-    en = n(933774);
+    en = n(878109);
 function er(e, t, n) {
     return (
         t in e
@@ -119,7 +119,7 @@ class ea {
             (this.sizes = l),
             (this.scrollerRef = i.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new h.V7()),
+            (this.timeout = new f.V7()),
             (this.setResizeObserver = () => {
                 var e;
                 let t = null == (e = this.scrollerRef.current) ? void 0 : e.getScrollerNode();
@@ -229,7 +229,7 @@ class ea {
 }
 function es(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: i } = e,
-        l = (0, x.Z)(),
+        l = (0, C.Z)(),
         o = (0, p.Wu)([R.Z, A.ZP], () => R.Z.getGuildIds().filter((e) => A.ZP.isCurrentUserGuest(e))),
         a = i.concat(o),
         { entrypoint: s } = (0, I.pN)({ location: "GuildsBar" }),
@@ -239,7 +239,7 @@ function es(e) {
             (0, r.jsx)(K.u, {}),
             c && (0, r.jsx)(H.Z, {}),
             s === I.u3.SERVER_RAIL_TOP && (0, r.jsx)(P.Z, {}),
-            l ? (0, r.jsx)(C.Z, {}) : null,
+            l ? (0, r.jsx)(x.Z, {}) : null,
             !t && (0, r.jsx)(B.Z, {}),
             a.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)),
             (0, r.jsx)(J.Z, { onActivate: n }),
@@ -292,11 +292,11 @@ function eu(e) {
             return [e, e.version];
         }),
         d = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
-        f = i.useMemo(() => (n ? [] : d), [d, n]),
+        h = i.useMemo(() => (n ? [] : d), [d, n]),
         b = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
-        { isSorting: y, startSorting: C, stopSorting: E } = (0, M.Z)(),
+        { isSorting: y, startSorting: x, stopSorting: E } = (0, M.Z)(),
         N = i.useRef(!1),
-        [T] = i.useState(() => new h.V7()),
+        [T] = i.useState(() => new f.V7()),
         A = i.useRef(null),
         R = i.useRef(null),
         B = (0, u.OP)(),
@@ -326,7 +326,7 @@ function eu(e) {
         [z, K] = i.useState(!1),
         q = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         J = (0, m.dQu)(g.Z.space.SPACE_XS),
-        $ = (0, x.Z)(),
+        $ = (0, C.Z)(),
         { pathname: er } = (0, c.TH)(),
         { entrypoint: eu } = (0, I.pN)({ location: "GuildsBar" }),
         ed = +!!$ + +(eu === I.u3.SERVER_RAIL_TOP),
@@ -363,11 +363,11 @@ function eu(e) {
         ),
         [ep],
     );
-    let { analyticsLocations: ef } = (0, v.ZP)(O.Z.GUILDS_LIST),
-        eh = eo(er);
+    let { analyticsLocations: eh } = (0, v.ZP)(O.Z.GUILDS_LIST),
+        ef = eo(er);
     (0, _.Ng)(() => {
         if (!N.current && 0 !== s.size) {
-            if (!eh) {
+            if (!ef) {
                 let { scrollTop: e } = w.Z.getGuildListDimensions();
                 ep.scrollTo({
                     to: e,
@@ -405,7 +405,7 @@ function eu(e) {
                                 setNodeRef: ep.setNodeRef,
                                 draggable: !0,
                                 sorting: y,
-                                onDragStart: C,
+                                onDragStart: x,
                                 onDragEnd: E,
                                 renderChildNode: e,
                                 "aria-setsize": i,
@@ -421,7 +421,7 @@ function eu(e) {
                                 setRef: ep.setNodeRef,
                                 draggable: !0,
                                 sorting: y,
-                                onDragStart: C,
+                                onDragStart: x,
                                 onDragEnd: E,
                                 "aria-setsize": i,
                                 "aria-posinset": void 0 !== n ? n + 1 : void 0,
@@ -432,15 +432,15 @@ function eu(e) {
                         return null;
                 }
             },
-            [C, E, y, ep.setNodeRef],
+            [x, E, y, ep.setNodeRef],
         ),
         eb = (0, r.jsx)(W.Z, {
-            selected: eh,
+            selected: ef,
             className: en.discoveryIcon,
         }),
         e_ = eu === I.u3.SERVER_RAIL_BOTTOM;
     return (0, r.jsx)(v.Gt, {
-        value: ef,
+        value: eh,
         children: (0, r.jsx)(m.f6W, {
             theme: a,
             children: (e) => {
@@ -478,7 +478,7 @@ function eu(e) {
                                                 children: [
                                                     (0, r.jsx)(es, {
                                                         scrollToTop: eg,
-                                                        lurkingGuildIds: f,
+                                                        lurkingGuildIds: h,
                                                     }),
                                                     (0, r.jsx)(Y.Z, {}),
                                                     (0, r.jsx)(ec, {
@@ -486,7 +486,7 @@ function eu(e) {
                                                         disableAppDownload: t,
                                                         isOverlay: n,
                                                         renderTreeNode: em,
-                                                        lurkingGuildIds: f,
+                                                        lurkingGuildIds: h,
                                                     }),
                                                 ],
                                             }),
@@ -542,5 +542,5 @@ let ed = i.memo(
             children: (0, r.jsx)(eu, ei({}, e)),
         });
     },
-    (e, t) => !1 === t.isVisible || (0, f.Z)(e, t),
+    (e, t) => !1 === t.isVisible || (0, h.Z)(e, t),
 );

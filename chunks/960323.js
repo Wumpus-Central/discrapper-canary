@@ -1,4 +1,4 @@
-n.d(e, { K: () => L });
+n.d(e, { K: () => C });
 var i = n(657707),
     l = n(509613),
     u = n(131951),
@@ -9,8 +9,8 @@ var i = n(657707),
     c = n(98022),
     E = n(279362),
     S = n(264413),
-    d = n(556080),
-    T = n(90794),
+    T = n(556080),
+    d = n(90794),
     I = n(756893),
     O = n(927947),
     g = n(776570),
@@ -22,14 +22,14 @@ let A = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
         usePredicate: () => !(0, s.BK)("LegacyVoiceAndVideoPane"),
     }),
     f = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [g.Z, d.Z, S.Z, o.Z, O.Z, I.Z, T.Z, c.Z, E.Z],
+        buildLayout: () => [g.Z, T.Z, S.Z, o.Z, O.Z, I.Z, d.Z, c.Z, E.Z],
         usePredicate: () => (0, s.BK)("VoiceAndVideoPane"),
     }),
     Z = (0, l.wf)(r.n.VOICE_AND_VIDEO_PANEL, {
         useTitle: () => N.intl.string(N.t.B1fFpf),
         buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [f] : [A]),
     }),
-    L = (0, l.m7)(r.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
+    C = (0, l.m7)(r.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         icon: i.S6n,
         useTitle: () => N.intl.string(N.t.B1fFpf),
         usePredicate: () => u.Z.isSupported(),

@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(606318),
     f = n(402235),
     _ = n(485386),
-    p = n(724913);
+    p = n(136907);
 function h(e, t, n) {
     return (
         t in e
@@ -109,8 +109,8 @@ let O = function (e) {
             hasThread: P,
             isSystemMessage: D,
             hasReply: w,
-            author: x,
-            onMouseEnter: L,
+            author: L,
+            onMouseEnter: x,
             onMouseLeave: M,
         } = e,
         k = b(e, [
@@ -137,17 +137,17 @@ let O = function (e) {
             "onMouseLeave",
         ]);
     let j = (0, s.e7)([_.Z], () =>
-            (null == x ? void 0 : x.guildId) == null || (null == x ? void 0 : x.colorRoleId) == null
+            (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
                 ? null
-                : _.Z.getRole(x.guildId, x.colorRoleId),
+                : _.Z.getRole(L.guildId, L.colorRoleId),
         ),
-        U = (0, f.yH)(null == x ? void 0 : x.guildId, j) && (0, d.S2)(x),
+        U = (0, f.yH)(null == L ? void 0 : L.guildId, j) && (0, d.S2)(L),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
-                B(!0), null == L || L(e);
+                B(!0), null == x || x(e);
             },
-            [L],
+            [x],
         ),
         F = i.useCallback(
             (e) => {
@@ -173,8 +173,8 @@ let O = function (e) {
                                         [p.gradient]: U,
                                         [p.withDisplayNameStyles]:
                                             V &&
-                                            (null == x ? void 0 : x.displayNameStyles) != null &&
-                                            (null == x ? void 0 : x.guildId) == null,
+                                            (null == L ? void 0 : L.displayNameStyles) != null &&
+                                            (null == L ? void 0 : L.guildId) == null,
                                         [p.wrapper]: !0,
                                         [p.contentOnly]: a,
                                         [p.compact]: n,

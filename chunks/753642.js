@@ -1,15 +1,15 @@
-a.d(e, { h: () => o });
-var r = a(899517),
-    _ = a(578346);
+_.d(e, { h: () => o });
+var a = _(899517),
+    r = _(578346);
 let n = null;
 function o(t) {
     let e = "unhandledrejection";
-    (0, _.Hj)(e, t), (0, _.D2)(e, i);
+    (0, r.Hj)(e, t), (0, r.D2)(e, E);
 }
-function i() {
-    (n = r.n.onunhandledrejection),
-        (r.n.onunhandledrejection = function (t) {
-            return (0, _.rK)("unhandledrejection", t), !n || !!n.__SENTRY_LOADER__ || n.apply(this, arguments);
+function E() {
+    (n = a.n.onunhandledrejection),
+        (a.n.onunhandledrejection = function (t) {
+            return (0, r.rK)("unhandledrejection", t), !n || !!n.__SENTRY_LOADER__ || n.apply(this, arguments);
         }),
-        (r.n.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
+        (a.n.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
 }

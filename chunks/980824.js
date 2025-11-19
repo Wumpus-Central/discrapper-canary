@@ -1,6 +1,6 @@
 n.d(t, {
     NI: () => ed,
-    XI: () => x,
+    XI: () => L,
     YF: () => ec,
     Y_: () => eE,
     bQ: () => es,
@@ -80,7 +80,7 @@ function D(e, t, n) {
 function w(e) {
     return "function" == typeof e ? e() : e;
 }
-function x(e, t) {
+function L(e, t) {
     void 0 === t && (t = {});
     let { open: n, onOpenChange: r, dataRef: o, events: l, elements: c } = e,
         { enabled: u = !0, delay: d = 0, handleClose: f = null, mouseOnly: _ = !1, restMs: p = 0, move: h = !0 } = t,
@@ -95,8 +95,8 @@ function x(e, t) {
         T = i.useRef(),
         S = i.useRef(-1),
         N = i.useRef(!0),
-        x = i.useRef(!1),
-        L = i.useRef(() => {}),
+        L = i.useRef(!1),
+        x = i.useRef(() => {}),
         M = i.useRef(!1),
         k = (0, a.iW)(() => {
             var e;
@@ -140,12 +140,12 @@ function x(e, t) {
             [b, r],
         ),
         U = (0, a.iW)(() => {
-            L.current(), (T.current = void 0);
+            x.current(), (T.current = void 0);
         }),
         G = (0, a.iW)(() => {
-            if (x.current) {
+            if (L.current) {
                 let e = (0, a.Me)(c.floating).body;
-                (e.style.pointerEvents = ""), e.removeAttribute(P), (x.current = !1);
+                (e.style.pointerEvents = ""), e.removeAttribute(P), (L.current = !1);
             }
         }),
         B = (0, a.iW)(() => !!o.current.openEvent && ["click", "mousedown"].includes(o.current.openEvent.type));
@@ -186,7 +186,7 @@ function x(e, t) {
         }
         function t(e) {
             if (B()) return void G();
-            L.current();
+            x.current();
             let t = (0, a.Me)(c.floating);
             if ((R(S), (M.current = !1), E.current && o.current.floatingContext)) {
                 n || R(I),
@@ -201,7 +201,7 @@ function x(e, t) {
                     }));
                 let r = T.current;
                 t.addEventListener("mousemove", r),
-                    (L.current = () => {
+                    (x.current = () => {
                         t.removeEventListener("mousemove", r);
                     });
                 return;
@@ -232,7 +232,7 @@ function x(e, t) {
         (0, a.Xj)(() => {
             var e, t;
             if (u && n && null != (e = E.current) && null != (e = e.__options) && e.blockPointerEvents && k()) {
-                x.current = !0;
+                L.current = !0;
                 let e = c.floating;
                 if ((0, s.kK)(c.domReference) && e) {
                     let n = (0, a.Me)(c.floating).body;
@@ -290,7 +290,7 @@ function x(e, t) {
     }, [_, r, n, y, O]);
     return i.useMemo(() => (u ? { reference: Z } : {}), [u, Z]);
 }
-let L = null,
+let x = null,
     M = 0;
 function k(e, t) {
     if (!e || !t) return !1;
@@ -553,7 +553,7 @@ function es(e, t) {
                 Array.from(d).every((e) => !(0, a.r3)(_, e))
             )
                 return;
-            if ((0, s.Re)(c) && L) {
+            if ((0, s.Re)(c) && x) {
                 let t = (0, s.Py)(c),
                     n = (0, s.Dx)(c),
                     r = /auto|scroll/,
@@ -654,7 +654,7 @@ function es(e, t) {
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
-    let x = i.useMemo(
+    let L = i.useMemo(
             () => ({
                 onKeyDown: R,
                 ...(_ && {
@@ -670,7 +670,7 @@ function es(e, t) {
             }),
             [R, r, _, p],
         ),
-        L = i.useMemo(
+        x = i.useMemo(
             () => ({
                 onKeyDown: R,
                 onMouseDown() {
@@ -689,11 +689,11 @@ function es(e, t) {
         () =>
             c
                 ? {
-                      reference: x,
-                      floating: L,
+                      reference: L,
+                      floating: x,
                   }
                 : {},
-        [c, x, L],
+        [c, L, x],
     );
 }
 function el(e) {
@@ -1080,8 +1080,8 @@ function ev(e) {
                 P = I.height > v.height,
                 D = (N ? v : I).left,
                 w = (N ? v : I).right,
-                x = (P ? v : I).top,
-                L = (P ? v : I).bottom;
+                L = (P ? v : I).top,
+                x = (P ? v : I).bottom;
             if (y && ((a = !0), !b)) return;
             if ((O && (a = !1), O && !b)) {
                 a = !0;
@@ -1119,18 +1119,18 @@ function ev(e) {
                     break;
                 case "left":
                     M = [
-                        [I.right - 1, L],
                         [I.right - 1, x],
-                        [v.left + 1, x],
+                        [I.right - 1, L],
                         [v.left + 1, L],
+                        [v.left + 1, x],
                     ];
                     break;
                 case "right":
                     M = [
-                        [v.right - 1, L],
                         [v.right - 1, x],
-                        [I.left + 1, x],
+                        [v.right - 1, L],
                         [I.left + 1, L],
+                        [I.left + 1, x],
                     ];
             }
             function U(e) {

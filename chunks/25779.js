@@ -1,23 +1,23 @@
-a.d(e, { j: () => I }), a(388685);
-var r = a(509068),
-    _ = a(804410),
-    n = a(408720),
-    o = a(233517),
-    i = a(931327),
-    E = a(903772),
-    c = a(97145);
+_.d(e, { j: () => I }), _(388685);
+var a = _(509068),
+    r = _(804410),
+    n = _(408720),
+    o = _(233517),
+    E = _(931327),
+    i = _(903772),
+    c = _(97145);
 let s = ["oppobrowser", "realmebrowser", "heytapbrowser"],
     l = (0, c.f)({
         maxBudgetMinute: 1,
         maxBudgetHour: 3,
     });
 function I() {
-    r.S1({
+    a.S1({
         tunnel: "/error-reporting-proxy/web",
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-31ae85216b6894fa391781fd12e7706186e80b53",
+        release: "discord_web-7a261b32ab1b02e768a3cf352b486f4a55e8dcea",
         beforeSend: function (t, e) {
             return !(
                 (null != t.exception &&
@@ -29,7 +29,7 @@ function I() {
                     "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
                 s.some((t) => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)
             ) &&
-                !(0, E.e)() &&
+                !(0, i.e)() &&
                 "Aborted" !== t.message &&
                 "cancel captcha" !== t.message &&
                 l()
@@ -37,7 +37,7 @@ function I() {
                 : null;
         },
         integrations: [
-            _.k({
+            r.k({
                 onerror: !0,
                 onunhandledrejection: !0,
             }),
@@ -81,9 +81,9 @@ function I() {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        o.YA("buildNumber", "467765"),
-        o.YA("builtAt", String("1763061031998"));
+        o.YA("buildNumber", "469895"),
+        o.YA("builtAt", String("1763512186622"));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && "object" == typeof t) for (let e in t) o.YA(e, t[e]);
-    return i;
+    return E;
 }

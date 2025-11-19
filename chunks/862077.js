@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(907179),
     E = n(671955),
     b = n(388032),
-    y = n(637079),
+    y = n(836061),
     O = n(609440);
 function v(e, t, n) {
     return (
@@ -62,7 +62,7 @@ function T(e) {
         } = e,
         D = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
         { analyticsLocations: w } = (0, l.ZP)([...R, D ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
-        x = (0, d.ZB)({
+        L = (0, d.ZB)({
             layout: "POPOUT",
             userId: t.id,
             guildId: n,
@@ -70,23 +70,23 @@ function T(e) {
             messageId: S,
             roleId: A,
         }),
-        L = i.useRef(null),
+        x = i.useRef(null),
         M = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
-        null == v || v(null == L ? void 0 : L.current);
-    }, [L, v]);
+        null == v || v(null == x ? void 0 : x.current);
+    }, [x, v]);
     let k = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
         j = P ? "div" : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: w,
         children: (0, r.jsx)(d.Mt, {
-            value: x,
+            value: L,
             openedAt: C,
             fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
             fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
             isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(j, {
-                ref: L,
+                ref: x,
                 "aria-label": t.username,
                 children: (0, r.jsx)(h.Z, {
                     user: t,
@@ -136,7 +136,7 @@ function T(e) {
                                                                     action: k,
                                                                     analyticsLocations: w,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },
@@ -151,7 +151,7 @@ function T(e) {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                     analyticsLocations: w,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },

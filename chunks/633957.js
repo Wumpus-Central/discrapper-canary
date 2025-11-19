@@ -29,17 +29,17 @@ var r = n(54381),
     P = n(768581),
     D = n(70956),
     w = n(823379),
-    x = n(506071),
-    L = n(226378),
+    L = n(506071),
+    x = n(226378),
     M = n(981631),
     k = n(701488),
     j = n(967249),
     U = n(388032),
-    G = n(853392);
+    G = n(833788);
 function B(e) {
     var t, n, a;
     let l,
-        { application: d, channelId: I, guildId: D, message: x } = e,
+        { application: d, channelId: I, guildId: D, message: L } = e,
         { analyticsLocations: B } = (0, g.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED),
         F = (0, u.O)(),
         V = (0, s.e7)([A.Z], () => A.Z.getChannel(I), [I]),
@@ -88,7 +88,7 @@ function B(e) {
             application: $,
         }),
         et = null == W,
-        en = (0, L.NL)({
+        en = (0, x.NL)({
             embeddedActivity: W,
             joinability: ee,
             currentEmbeddedActivity: K,
@@ -228,7 +228,7 @@ function B(e) {
             linkType: j.U.ACTIVITY_INSTANCE,
             guildId: D,
             channelId: I,
-            messageId: x.id,
+            messageId: L.id,
             isDeadEnd: et,
         },
     });
@@ -236,7 +236,7 @@ function B(e) {
 let Z = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        a = (0, x.n)(),
+        a = (0, L.n)(),
         o = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         c = !1 === a || o;
     return (

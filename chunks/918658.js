@@ -30,7 +30,7 @@ var r = n(54381),
     N = n(302463),
     R = n(293810),
     P = n(388032),
-    D = n(829675);
+    D = n(342325);
 function w(e) {
     let { className: t, onClick: n, children: i, buttonRef: a } = e;
     return (0, r.jsx)(u.zx, {
@@ -44,14 +44,14 @@ function w(e) {
         children: i,
     });
 }
-function x(e) {
+function L(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(w, {
         onClick: t,
         children: P.intl.string(P.t.R9GHya),
     });
 }
-function L(e) {
+function x(e) {
     switch (e) {
         case A.pNK.INTEGRATIONS:
             return P.intl.string(P.t.k7LGdh);
@@ -82,7 +82,7 @@ function k() {
             isServerShopPreview: null != t && T.Z.isViewingServerShop(t),
         }));
     if (null == a || null == t) return null;
-    let k = L(o),
+    let k = x(o),
         j = M(o),
         U = n === C.oC.GUILD_ONBOARDING,
         G = (e) => {
@@ -172,7 +172,7 @@ function k() {
                               }),
                       ],
                   }),
-            u || o === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(x, { onClick: () => G({ backToSettings: !1 }) }),
+            u || o === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(L, { onClick: () => G({ backToSettings: !1 }) }),
         ],
     });
 }

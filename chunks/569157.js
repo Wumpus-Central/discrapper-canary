@@ -5,7 +5,7 @@ var a = n(54381),
     i = n(934819),
     s = n(529625),
     o = n(681140),
-    c = n(530146);
+    c = n(575043);
 function d() {
     return (0, a.jsxs)(l.zJl, {
         className: c.panel,

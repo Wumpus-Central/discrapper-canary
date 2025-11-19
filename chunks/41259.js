@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(981631),
     h = n(268685),
     m = n(388032),
-    g = n(604483);
+    g = n(972731);
 function E(e) {
     let { user: t, application: n, bot: E, accountScopes: b, showLogout: y, location: O, scopes: v } = e,
         I = (0, _.X)(),

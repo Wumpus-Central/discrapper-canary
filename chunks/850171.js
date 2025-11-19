@@ -262,19 +262,19 @@ let C = async (e, t, r) => {
         });
     let D,
         M,
-        k,
+        j,
         U,
         G = document.createElement("div"),
         B = (e) => {
             let { "view.version": t } = e;
-            t !== A["x-ul-sdk-version"] && x(), s.e.removeListener("verify.view.version", B);
+            t !== A["x-ul-sdk-version"] && L(), s.e.removeListener("verify.view.version", B);
         };
     s.e.on("verify.view.version", B),
         (window.UserLeap.useMobileStyling = P),
         (0, s.h)(A)
             ? ((D = "ul-direct-embeded-frame"),
               (M = document.head),
-              (k = window),
+              (j = window),
               (U = !1),
               (() => {
                   let e = (0, s.g)(window.UserLeap),
@@ -286,7 +286,7 @@ let C = async (e, t, r) => {
                   (w(O, f),
                   (G.id = D),
                   window.UserLeap.container.appendChild(G),
-                  L(),
+                  x(),
                   s.e.emit(s.S.SurveyLifeCycle, { state: "presented" }),
                   s.e.emit(s.S.SurveyPresented, {
                       name: s.S.SurveyPresented,
@@ -295,10 +295,10 @@ let C = async (e, t, r) => {
             : ({
                   frameId: D,
                   contentWinDocHead: M,
-                  contentWindow: k,
+                  contentWindow: j,
                   hasOverlay: U,
                   iframe: G,
-              } = j({
+              } = k({
                   productConfig: m,
                   useMobileStyling: P,
                   surveyId: O,
@@ -340,8 +340,8 @@ let C = async (e, t, r) => {
         upchunkLibraryURL: window.UserLeap.upchunkLibraryURL,
         useMobileStyling: P,
         userId: v,
-        viewDocument: null == k ? void 0 : k.document,
-        viewWindow: k,
+        viewDocument: null == j ? void 0 : j.document,
+        viewWindow: j,
         visitorAttributes: {
             externalUserId: window.UserLeap.userId,
             email: window.UserLeap.email,
@@ -355,7 +355,7 @@ let C = async (e, t, r) => {
             startingQuestionIdx: null,
         }),
         (Z.customStyles = (f ? window.UserLeap.feedbackCustomStyles : window.UserLeap.customStyles) ?? m.customStyles),
-        k && (k.__cfg = Z);
+        j && (j.__cfg = Z);
     let F = window.UserLeap.viewSDKURL ? window.UserLeap.viewSDKURL : Z.path,
         V = document.getElementById(b);
     V && V.remove();
@@ -376,8 +376,8 @@ let C = async (e, t, r) => {
                 H.addEventListener("load", () => {
                     window.UserLeap.container && Y();
                 }),
-            null == k ||
-                k.addEventListener(
+            null == j ||
+                j.addEventListener(
                     "error",
                     (e) => {
                         e.target instanceof HTMLScriptElement &&
@@ -423,7 +423,7 @@ let D = "0px",
             ? r.appendChild(window.UserLeap.container)
             : document.body.appendChild(window.UserLeap.container);
     },
-    x = (e, t) => {
+    L = (e, t) => {
         var n;
         G();
         let r = window.UserLeap.container;
@@ -444,9 +444,9 @@ let D = "0px",
                     t instanceof Error && window.UserLeap.reportError("dismissActiveSurvey", t);
             }
     },
-    L = () => {
+    x = () => {
         s.e.once(s.S.SurveyWillClose, ({ initiator: e, studyType: t }) => {
-            s.e.removeAllListeners(s.S.CloseSurveyOnOverlayClick), x(e, t);
+            s.e.removeAllListeners(s.S.CloseSurveyOnOverlayClick), L(e, t);
         });
     },
     M = (e, t, n, r) => {
@@ -534,7 +534,7 @@ let D = "0px",
             d
         );
     },
-    j = ({ productConfig: e, useMobileStyling: t, surveyId: n, isFeedback: r }) => {
+    k = ({ productConfig: e, useMobileStyling: t, surveyId: n, isFeedback: r }) => {
         var i, a;
         let o = P,
             l = r && "slider" === e.desktopDisplay;
@@ -542,7 +542,7 @@ let D = "0px",
         let c = document.createElement("iframe");
         (c.id = o), c.setAttribute("title", "Sprig User Feedback Dialog");
         let u = M(c, e, t, r);
-        L();
+        x();
         let d = !1;
         c.setHeight = (e) => {
             (parseInt(c.style.height) == e && d) ||
@@ -593,19 +593,19 @@ let D = "0px",
             iframe: c,
         };
     },
-    k = {
+    j = {
         [s.S.SurveyFadingOut]: () => {
             window.UserLeap.container &&
                 Object.assign(window.UserLeap.container.style, { "background-color": "rgba(0,0,0,0)" });
         },
     },
     U = () => {
-        Object.entries(k).forEach(([e, t]) => {
+        Object.entries(j).forEach(([e, t]) => {
             s.e.on(e, t);
         });
     },
     G = () => {
-        Object.entries(k).forEach(([e, t]) => {
+        Object.entries(j).forEach(([e, t]) => {
             s.e.off(e, t);
         });
     },
@@ -1141,11 +1141,11 @@ let eg = (e) => {
                 })(),
                 eD());
     },
-    ex = "test",
-    eL = ["popState", "pushState", "replaceState"],
+    eL = "test",
+    ex = ["popState", "pushState", "replaceState"],
     eM = {},
-    ej = "!email",
-    ek = "pageUrl",
+    ek = "!email",
+    ej = "pageUrl",
     eU = window.location.href;
 function eG(e) {
     var t, n;
@@ -1178,7 +1178,7 @@ function eG(e) {
             c &&
             c !== window.location.href &&
             e &&
-            eL.includes(e.type) &&
+            ex.includes(e.type) &&
             window.UserLeap("dismissActiveSurvey", s.D.PageChange);
 }
 let eB = { capture: !0 },
@@ -1242,7 +1242,7 @@ function eY(e, t, n, r) {
         if (!c) return;
         window.UserLeap.debugMode && console.info("[DEBUG] Sprig trackPageView", e);
         let u = { url: e };
-        r && (u.trackPageView = !0), window.UserLeap._queue.push(["track", ek, t, u, n]);
+        r && (u.trackPageView = !0), window.UserLeap._queue.push(["track", ej, t, u, n]);
     } catch (t) {
         t instanceof Error && ((t.stack = e), window.UserLeap.reportError("trackPageView", t)),
             console.warn("[Sprig] (ERR-428) Failed to track page view", t);
@@ -1273,7 +1273,7 @@ function eW() {
 }
 async function eK(e, t) {
     let n = S();
-    e && !t && (window.UserLeap._config.mode = ex);
+    e && !t && (window.UserLeap._config.mode = eL);
     let r = N((0, s.g)(window.UserLeap)),
         i = await I(
             (function (e) {
@@ -1345,7 +1345,7 @@ let eq = function (e) {
             var n, r, i, l, c;
             let { userId: u, anonymousId: d, metadata: f = {}, properties: _, showSurveyCallback: p } = t,
                 { eventName: h } = t;
-            if ((window.UserLeap.debugMode && h !== ek && console.info("[DEBUG] Sprig track", t), "test" === e.mode))
+            if ((window.UserLeap.debugMode && h !== ej && console.info("[DEBUG] Sprig track", t), "test" === e.mode))
                 return;
             let m = s.l.getItem("sprig.previewKey") ?? void 0;
             if (e.requireUserIdForTracking && !window.UserLeap.userId && !u) {
@@ -1581,7 +1581,7 @@ let eq = function (e) {
                     );
                 }
                 if (a)
-                    for (let e of (a.email && !a[ej] && ((a[ej] = a.email), delete a.email), Object.keys(a)))
+                    for (let e of (a.email && !a[ek] && ((a[ek] = a.email), delete a.email), Object.keys(a)))
                         a[e] === eM[e] && delete a[e];
                 if (
                     !(
@@ -1608,7 +1608,7 @@ let eq = function (e) {
                               body: JSON.stringify(o),
                               method: "PUT",
                           })),
-                    a && a[ej] && (window.UserLeap.email = a[ej]),
+                    a && a[ek] && (window.UserLeap.email = a[ek]),
                     n.ok && (r && T("uid", r), i && T("aid", i)),
                     { success: !!n.ok }
                 );
@@ -1830,7 +1830,7 @@ let eq = function (e) {
             setVisitorAttribute: (e, t) => (
                 console.warn("[Sprig] setVisitorAttribute is deprecated. Please use setAttribute"), r.setAttribute(e, t)
             ),
-            setEmail: async (e) => r.setAttribute(ej, e),
+            setEmail: async (e) => r.setAttribute(ek, e),
             setVisitorEmail: async (e) => (
                 console.warn("[Sprig] setVisitorEmail is deprecated. Please use setEmail"), r.setEmail(e)
             ),

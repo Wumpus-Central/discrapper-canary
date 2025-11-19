@@ -67,7 +67,7 @@ var r = n(54381),
     eg = n(981631),
     ef = n(124368),
     ex = n(388032),
-    ep = n(816922);
+    ep = n(440282);
 function eb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -561,13 +561,13 @@ function eO(e) {
         }),
         e3 = i.useRef(null),
         {
-            updateMasonryListScrollerRef: e1,
-            getItemKey: e6,
-            renderGridSection: e4,
-            renderGridItem: e8,
+            updateMasonryListScrollerRef: e6,
+            getItemKey: e1,
+            renderGridSection: e8,
+            renderGridItem: e4,
             getGridSectionHeight: e9,
-            getSectionProps: e5,
-            handleGridFocus: e2,
+            getSectionProps: e2,
+            handleGridFocus: e5,
         } = (function (e) {
             let {
                     masonryListScrollerRef: t,
@@ -777,7 +777,7 @@ function eO(e) {
         tn = (0, em.ZP)({
             id: "forum-grid-view",
             isEnabled: eo && te && !tt,
-            setFocus: e2,
+            setFocus: e5,
         }),
         tr = (0, eh.Z)({
             listRef: ea,
@@ -836,19 +836,19 @@ function eO(e) {
                                                       null != (t = null == e ? void 0 : e.getScrollerNode())
                                                           ? t
                                                           : null),
-                                                      e1(e);
+                                                      e6(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
                                               className: ep.grid,
                                               columns: eZ,
                                               sections: ez,
-                                              getItemKey: e6,
+                                              getItemKey: e1,
                                               getSectionHeight: e9,
                                               getItemHeight: ti,
-                                              renderSection: e4,
-                                              renderItem: e8,
-                                              getSectionProps: e5,
+                                              renderSection: e8,
+                                              renderItem: e4,
+                                              getSectionProps: e2,
                                               onScroll: j ? e7 : void 0,
                                               chunkSize: 350,
                                           },

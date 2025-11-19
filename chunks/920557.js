@@ -1,4 +1,4 @@
-n.d(t, { K: () => x }), n(388685), n(314940);
+n.d(t, { K: () => L }), n(388685), n(314940);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(139256),
     b = n(294608),
     y = n(388032),
-    O = n(390840);
+    O = n(525799);
 function v(e, t, n) {
     return (
         t in e
@@ -268,7 +268,7 @@ function w(e) {
         ],
     });
 }
-function x(e) {
+function L(e) {
     var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: a } = e,
         o = T(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
     return (0, r.jsx)(

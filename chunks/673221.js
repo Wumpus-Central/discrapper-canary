@@ -15,9 +15,9 @@ var r = n(54381),
     m = n(415540),
     g = n(345729),
     E = n(483753),
-    b = n(681287),
+    b = n(936806),
     y = n(388032),
-    O = n(680765);
+    O = n(484050);
 function v(e, t, n) {
     return (
         t in e
@@ -103,8 +103,8 @@ function P(e) {
             closeOnSelect: T = !0,
             shouldFocusWrap: C,
             placeholder: P = y.intl.string(b.default["A+pfVR"]),
-            name: x,
-            form: L,
+            name: L,
+            form: x,
             autoComplete: M,
             maxOptionsVisible: k = 5,
             options: j,
@@ -335,8 +335,8 @@ function P(e) {
                                 ),
                             ),
                             (0, r.jsx)(_.M, {
-                                name: x,
-                                form: L,
+                                name: L,
+                                form: x,
                                 disabled: ec,
                                 autoComplete: M,
                                 selectionMode: t,

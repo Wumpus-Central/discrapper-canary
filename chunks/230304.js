@@ -1,32 +1,32 @@
-a.r(t),
-    a.d(t, { default: () => c }),
-    a(388685),
-    a(539854),
-    a(49124),
-    a(704826),
-    a(35282),
-    a(781311),
-    a(413496),
-    a(433524),
-    a(421244);
-var o = a(710845),
-    i = a(435064),
-    l = a(894694),
-    n = a(431927);
-function s(e, t, a) {
+o.r(t),
+    o.d(t, { default: () => c }),
+    o(388685),
+    o(539854),
+    o(49124),
+    o(704826),
+    o(35282),
+    o(781311),
+    o(413496),
+    o(433524),
+    o(421244);
+var a = o(710845),
+    i = o(435064),
+    l = o(894694),
+    n = o(431927);
+function s(e, t, o) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: a,
+                  value: o,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = a),
+            : (e[t] = o),
         e
     );
 }
-let r = new o.Z("MLSignalHandler");
+let r = new a.Z("MLSignalHandler");
 class d {
     start() {
         r.info("ML signal handler started"), n.Z.start(this.handleMLResult.bind(this), () => {});
@@ -60,12 +60,12 @@ class d {
     }
     handleYellClassification(e) {
         var t;
-        let { userId: a, percentiles: o, yelling: i, debug: n, timestamp: s } = e;
+        let { userId: o, percentiles: a, yelling: i, debug: n, timestamp: s } = e;
         (null == (t = window.__CLIPS_DEBUG__) ? void 0 : t.yell) &&
             (this.yellHistory.push({
                 timestamp: s,
-                userId: a,
-                percentiles: o,
+                userId: o,
+                percentiles: a,
                 debug: n,
             }),
             this.yellHistory.length > 50 && this.yellHistory.shift()),
@@ -73,27 +73,27 @@ class d {
                 this.emitSignal(
                     {
                         type: l.Bs.YELLING,
-                        userId: a,
+                        userId: o,
                     },
                     s,
                 );
     }
     handleWakeWord(e) {
         var t;
-        let { userId: a, probabilities: o, timestamp: n } = e,
-            s = Object.entries(o)
+        let { userId: o, probabilities: a, timestamp: n } = e,
+            s = Object.entries(a)
                 .map((e) => {
-                    let [t, a] = e,
-                        o = "number" == typeof a ? a : 0,
-                        i = Math.round(20 * o),
+                    let [t, o] = e,
+                        a = "number" == typeof o ? o : 0,
+                        i = Math.round(20 * a),
                         l = "*".repeat(i),
                         n = " ".repeat(20 - i);
-                    return "".concat(t, ": |").concat(l).concat(n, "| (").concat(o.toFixed(3), ")");
+                    return "".concat(t, ": |").concat(l).concat(n, "| (").concat(a.toFixed(3), ")");
                 })
                 .join("  ");
-        (null == (t = window.__CLIPS_DEBUG__) ? void 0 : t.wakeWord) && r.info("Wake word: ".concat(a, ": ").concat(s));
+        (null == (t = window.__CLIPS_DEBUG__) ? void 0 : t.wakeWord) && r.info("Wake word: ".concat(o, ": ").concat(s));
         let d = i.Z.getSettings().autoClipPhrases;
-        for (let [e, t] of Object.entries(o))
+        for (let [e, t] of Object.entries(a))
             if (("number" == typeof t ? t : 0) >= 0.5 && d.includes(e)) {
                 this.emitSignal(
                     {
@@ -107,21 +107,21 @@ class d {
     }
     handleEmotionClassification(e) {
         var t;
-        let { userId: a, emotions: o, timestamp: i } = e;
+        let { userId: o, emotions: a, timestamp: i } = e;
         this.emotionHistory.push({
             timestamp: i,
-            userId: a,
-            emotions: o,
+            userId: o,
+            emotions: a,
         }),
             this.emotionHistory.length > 10 && this.emotionHistory.shift(),
             (null == (t = window.__CLIPS_DEBUG__) ? void 0 : t.emotion) &&
-                r.info("Emotion classification: ".concat(a, ": ").concat(JSON.stringify(o)));
+                r.info("Emotion classification: ".concat(o, ": ").concat(JSON.stringify(a)));
     }
     handleWhisperTranscription(e) {
         var t;
-        let { userId: a, transcription: o, timestamp: n } = e;
+        let { userId: o, transcription: a, timestamp: n } = e;
         (null == (t = window.__CLIPS_DEBUG__) ? void 0 : t.whisper) &&
-            r.info("Whisper transcription: ".concat(a, ": ").concat(JSON.stringify(o)));
+            r.info("Whisper transcription: ".concat(o, ": ").concat(JSON.stringify(a)));
         let d = i.Z.getSettings().autoClipPhrases;
         if (0 === d.length) return;
         let c = (e) =>
@@ -132,14 +132,14 @@ class d {
                     .toLowerCase(),
             u = d.map((e) => c(e).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
             f = RegExp("(".concat(u.join("|"), ")"), "g");
-        for (let e of o)
+        for (let e of a)
             for (let t of c(e.text).matchAll(f)) {
-                let a = t[0],
-                    o = d.find((e) => c(e) === a);
-                if (null != o) {
+                let o = t[0],
+                    a = d.find((e) => c(e) === o);
+                if (null != a) {
                     let t = n + 1000 * e.t0;
                     if (null != e.words && e.words.length > 0) {
-                        let a = c(o).split(" "),
+                        let o = c(a).split(" "),
                             i = e.words.map((e) =>
                                 (function (e, t) {
                                     return (
@@ -147,30 +147,30 @@ class d {
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                                             : (function (e, t) {
-                                                  var a = Object.keys(e);
+                                                  var o = Object.keys(e);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var o = Object.getOwnPropertySymbols(e);
-                                                      a.push.apply(a, o);
+                                                      var a = Object.getOwnPropertySymbols(e);
+                                                      o.push.apply(o, a);
                                                   }
-                                                  return a;
-                                              })(Object(t)).forEach(function (a) {
-                                                  Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(t, a));
+                                                  return o;
+                                              })(Object(t)).forEach(function (o) {
+                                                  Object.defineProperty(e, o, Object.getOwnPropertyDescriptor(t, o));
                                               }),
                                         e
                                     );
                                 })(
                                     (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
-                                            var a = null != arguments[t] ? arguments[t] : {},
-                                                o = Object.keys(a);
+                                            var o = null != arguments[t] ? arguments[t] : {},
+                                                a = Object.keys(o);
                                             "function" == typeof Object.getOwnPropertySymbols &&
-                                                (o = o.concat(
-                                                    Object.getOwnPropertySymbols(a).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                                (a = a.concat(
+                                                    Object.getOwnPropertySymbols(o).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(o, e).enumerable;
                                                     }),
                                                 )),
-                                                o.forEach(function (t) {
-                                                    s(e, t, a[t]);
+                                                a.forEach(function (t) {
+                                                    s(e, t, o[t]);
                                                 });
                                         }
                                         return e;
@@ -178,9 +178,9 @@ class d {
                                     { cleanText: c(e.text) },
                                 ),
                             );
-                        for (let e = 0; e <= i.length - a.length; e++) {
-                            let l = i.slice(e, e + a.length);
-                            if (l.map((e) => e.cleanText).join(" ") === c(o)) {
+                        for (let e = 0; e <= i.length - o.length; e++) {
+                            let l = i.slice(e, e + o.length);
+                            if (l.map((e) => e.cleanText).join(" ") === c(a)) {
                                 t = n + 1000 * l[0].t0;
                                 break;
                             }
@@ -189,7 +189,7 @@ class d {
                     this.emitSignal(
                         {
                             type: l.Bs.PHRASE,
-                            text: o,
+                            text: a,
                         },
                         t,
                     );

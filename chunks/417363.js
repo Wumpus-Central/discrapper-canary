@@ -77,11 +77,11 @@ let T = 200,
     P = !1,
     D = 0,
     w = 0,
-    x = 0,
-    L = [],
+    L = 0,
+    x = [],
     M = [],
-    j = [],
-    k = !1;
+    k = [],
+    j = !1;
 function U() {
     P = !1;
 }
@@ -234,12 +234,12 @@ function H(e) {
 function Y(e) {
     let t = Date.now(),
         n = t - A;
-    L = (L = [
+    x = (x = [
         {
             bytes: e,
             timestamp: t,
         },
-        ...L,
+        ...x,
     ])
         .slice(0, S)
         .filter((e) => {
@@ -248,12 +248,12 @@ function Y(e) {
         });
 }
 function W(e) {
-    j = (j = [
+    k = (k = [
         {
             bytes: e,
             timestamp: Date.now(),
         },
-        ...j,
+        ...k,
     ]).slice(0, S);
 }
 let K = a().throttle(H, T),
@@ -280,7 +280,7 @@ function Q(e) {
                 let r = X(n, o, F);
                 r > 0 && q((w += r));
                 let s = X(n, o, V);
-                if ((s > 0 && z((x += s)), i === t)) {
+                if ((s > 0 && z((L += s)), i === t)) {
                     let e = n[o];
                     if (
                         !0 !== e.paused &&
@@ -297,7 +297,7 @@ function Q(e) {
                         }
                 }
             }
-            if (!k) {
+            if (!j) {
                 let r = l.Z.fileManager.dirname(n[o].installPath);
                 E.Z.getInstallationPath(e, t) !== r &&
                     s.Z.wait(() => {
@@ -324,7 +324,7 @@ function Q(e) {
         }
     a || "dispatch_application_progress" !== c.Z.taskID || c.Z.clearProgress("dispatch_application_progress"),
         (C = n),
-        (k = !0);
+        (j = !0);
 }
 class J extends (r = o.ZP.Store) {
     initialize() {
@@ -366,13 +366,13 @@ class J extends (r = o.ZP.Store) {
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {
-        return L;
+        return x;
     }
     getHistoricalTotalBytesDownloaded() {
         return M;
     }
     getHistoricalTotalBytesWritten() {
-        return j;
+        return k;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

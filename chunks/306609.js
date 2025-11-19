@@ -15,29 +15,29 @@ var r = n(54381),
     g = n(728285),
     v = n(670863),
     y = n(53691),
-    j = n(457165),
-    O = n(131951),
+    O = n(457165),
+    j = n(131951),
     h = n(594174),
     x = n(626135),
     _ = n(111361),
     P = n(74538),
-    w = n(743498),
-    C = n(967021),
+    C = n(743498),
+    w = n(967021),
     E = n(709706),
     I = n(378441),
     T = n(358820),
     S = n(448697),
     N = n(946196),
     Z = n(365831),
-    D = n(639539),
-    k = n(627325),
+    k = n(639539),
+    D = n(627325),
     M = n(981631),
     A = n(354459),
     R = n(474936),
     L = n(65154),
-    V = n(196901),
+    V = n(372329),
     F = n(388032),
-    U = n(640292);
+    U = n(998193);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +100,7 @@ function z(e) {
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         { activeVoice: er } = (0, I.o)(),
-        ei = (0, C.HM)({
+        ei = (0, w.HM)({
             location: W[0],
             autoTrackExposure: !0,
         }),
@@ -136,7 +136,7 @@ function z(e) {
         es = i.useRef(null);
     (0, u.ZP)(() => {
         (0, T.r5)(),
-            ei && (0, w.jG)(),
+            ei && (0, C.jG)(),
             x.default.track(M.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != er ? er : null });
     });
     let ec = i.useCallback(() => q(""), [q]),
@@ -166,7 +166,7 @@ function z(e) {
                         query: B,
                         onClear: ec,
                     }),
-                (0, r.jsx)(k.w, {
+                (0, r.jsx)(D.w, {
                     query: B,
                     columns: n ? 5 : 4,
                     handleScroll: (e) => {
@@ -185,7 +185,7 @@ function z(e) {
                             null != J &&
                                 (0, r.jsx)(a.animated.div, {
                                     style: eo,
-                                    children: (0, r.jsx)(D.J, {
+                                    children: (0, r.jsx)(k.J, {
                                         catalogUpdateTime: J,
                                         isScrolled: $,
                                     }),
@@ -201,7 +201,7 @@ function z(e) {
                                         showUpsell: !0,
                                         text: F.intl.format(F.t.XMDm8z, {
                                             nitroTierName: (0, P.Px)(R.PremiumTypes.TIER_2),
-                                            onClick: () => (0, j.i)(),
+                                            onClick: () => (0, O.i)(),
                                         }),
                                         button: F.intl.string(F.t.cRCCJ3),
                                         buttonAnalyticsObject: { section: M.jXE.VOICE_FILTERS_FLOATING_UPSELL },
@@ -228,7 +228,7 @@ function z(e) {
                             onOpen: () => {
                                 var e;
                                 x.default.track(M.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, {
-                                    active_voice_filter_id: null != (e = O.Z.getActiveVoiceFilter()) ? e : null,
+                                    active_voice_filter_id: null != (e = j.Z.getActiveVoiceFilter()) ? e : null,
                                 });
                             },
                             popoutPosition: "top",

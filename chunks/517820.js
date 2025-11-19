@@ -32,7 +32,7 @@ var r = n(54381),
     L = n(674563),
     x = n(388032),
     M = n(78642);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -217,7 +217,7 @@ function H(e) {
                                         (0, r.jsxs)(
                                             p.P3F,
                                             G(
-                                                k(
+                                                j(
                                                     {
                                                         innerRef: h,
                                                         className: M.alertsEnabledSubHeaderAvatarUsername,
@@ -228,7 +228,7 @@ function H(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             "div",
-                                                            G(k({}, f), {
+                                                            G(j({}, f), {
                                                                 children: (0, r.jsx)(p.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,

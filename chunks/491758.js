@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(981631),
     T = n(37113),
     S = n(388032),
-    A = n(556865);
+    A = n(298291);
 function C(e, t, n) {
     return (
         t in e
@@ -82,14 +82,14 @@ function D() {
         { remindersEnabled: a, clipsLength: C, clipsQuality: R } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
         D = (0, s.e7)([g.Z], () => g.Z.getHardwareClassification()),
         w = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        x = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0)),
-        L = (0, b.Z)(_.Z),
+        L = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0)),
+        x = (0, b.Z)(_.Z),
         { showClipsHeaderEntrypoint: M } = m.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         ),
         k = (0, m.PP)();
-    o()(null != w, "Save clip keybind unset"), o()(null != x, "Save screenshot keybind unset");
+    o()(null != w, "Save clip keybind unset"), o()(null != L, "Save screenshot keybind unset");
     let j = (0, s.e7)([d.default], () => d.default.locale),
         U = i.useMemo(
             () => [
@@ -166,9 +166,9 @@ function D() {
         ),
         F = i.useCallback(
             (e) => {
-                c.Z.setKeybind(P(N({}, x), { shortcut: e }));
+                c.Z.setKeybind(P(N({}, L), { shortcut: e }));
             },
-            [x],
+            [L],
         );
     return (0, r.jsxs)(l.C3N, {
         children: [
@@ -190,7 +190,7 @@ function D() {
                     }),
             }),
             n &&
-                L &&
+                x &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(l.rsf, {
                         label: S.intl.string(S.t.yXvykv),
@@ -259,7 +259,7 @@ function D() {
                     children: (0, r.jsx)("div", {
                         className: A.keyRecorder,
                         children: (0, r.jsx)(u.Z, {
-                            defaultValue: x.shortcut,
+                            defaultValue: L.shortcut,
                             onChange: F,
                         }),
                     }),

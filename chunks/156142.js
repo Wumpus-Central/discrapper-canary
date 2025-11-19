@@ -29,7 +29,7 @@ var r = n(54381),
     T = n(561466),
     S = n(231338),
     A = n(388032),
-    C = n(409738);
+    C = n(894793);
 function N(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ let w = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
-function x() {
+function L() {
     let e = (0, b.Z)(),
         t = (0, E.Z)(),
         n = (0, y.Z)();
@@ -114,11 +114,11 @@ function x() {
         ],
     });
 }
-function L() {
+function x() {
     let e = i.useRef(null);
     return (0, r.jsx)(f.y, {
         targetElementRef: e,
-        renderPopout: () => (0, r.jsx)(x, {}),
+        renderPopout: () => (0, r.jsx)(L, {}),
         position: "bottom",
         align: "center",
         animation: f.y.Animation.SCALE,
@@ -253,7 +253,7 @@ function M(e) {
                                 : null,
                             (0, r.jsx)("div", {
                                 className: C.headerRight,
-                                children: (0, r.jsx)(L, {}),
+                                children: (0, r.jsx)(x, {}),
                             }),
                         ],
                     }),

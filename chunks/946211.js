@@ -4,7 +4,7 @@ n(473749);
 var o = n(409813),
     c = n(443650),
     l = n(464797),
-    i = n(594816);
+    i = n(605078);
 function u(e) {
     let { onClose: t } = e,
         { guildProductListing: n } = (0, l._)();

@@ -17,7 +17,7 @@ var i = n(120356),
     O = n(981631),
     h = n(185923),
     m = n(388032),
-    v = n(561782);
+    v = n(174852);
 let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 function S(e) {
     let { emoji: t, isFocused: n } = e,

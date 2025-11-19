@@ -1,15 +1,15 @@
-a.d(e, {
-    OP: () => _,
-    Q0: () => i,
+_.d(e, {
+    OP: () => r,
+    Q0: () => E,
     ix: () => o,
     jt: () => n,
-    pq: () => r,
+    pq: () => a,
 });
-let r = 0,
-    _ = 1,
+let a = 0,
+    r = 1,
     n = 2;
 function o(t) {
-    if (t < 400 && t >= 100) return { code: _ };
+    if (t < 400 && t >= 100) return { code: r };
     if (t >= 400 && t < 500)
         switch (t) {
             case 401:
@@ -81,8 +81,8 @@ function o(t) {
         message: "unknown_error",
     };
 }
-function i(t, e) {
+function E(t, e) {
     t.setAttribute("http.response.status_code", e);
-    let a = o(e);
-    "unknown_error" !== a.message && t.setStatus(a);
+    let _ = o(e);
+    "unknown_error" !== _.message && t.setStatus(_);
 }

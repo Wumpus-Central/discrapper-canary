@@ -5,7 +5,7 @@ var i = n(692547),
     l = n(28664),
     a = n(311888),
     s = n(388032),
-    o = n(318681);
+    o = n(228378);
 let c = () =>
     (0, r.jsx)(l.u, {
         text: s.intl.string(s.t.GMZqSi),

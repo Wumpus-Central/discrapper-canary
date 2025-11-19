@@ -7,7 +7,7 @@ var i = n(755721),
     s = n(391110),
     l = n(981631),
     c = n(388032),
-    u = n(677599);
+    u = n(184388);
 let d = (e) => {
     let { setIsAllPerksVisible: t, previousComponent: n } = e;
     return (0, r.jsx)(a.gtL, {

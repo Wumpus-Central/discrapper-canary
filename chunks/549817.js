@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(472816), n(794429), n(415506), n(388685), n(997841);
+n.d(t, { Z: () => L }), n(472816), n(794429), n(415506), n(388685), n(997841);
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -149,7 +149,7 @@ function w(e, t, n) {
             removedRoleIds: n,
         });
 }
-let x = {
+let L = {
     selectOption(e, t, n, r) {
         let a = O.Z.getOnboardingPrompt(t);
         if (null == a) return;
@@ -176,9 +176,9 @@ let x = {
             C = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
             R = (0, I.v)(e, new Set(b), C, !0).length,
             w = null == n ? [] : n.options.map((e) => e.id),
-            x = O.Z.getConnections(e),
-            L = (0, v.OZ)(x),
-            M = (0, v.N4)(x);
+            L = O.Z.getConnections(e),
+            x = (0, v.OZ)(L),
+            M = (0, v.N4)(L);
         if (
             (m.default.track(
                 T.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
@@ -193,8 +193,8 @@ let x = {
                     channels_granted: R,
                     guild_onboarding_covered_channel_ids: c.map((e) => e.id),
                     guild_onboarding_uncovered_channel_ids: f.map((e) => e.id),
-                    provider_connections_connected: L.connected,
-                    provider_connections_not_connected: L.notConnected,
+                    provider_connections_connected: x.connected,
+                    provider_connections_not_connected: x.notConnected,
                     application_connections_connected: M.connected,
                     application_connections_not_connected: M.notConnected,
                 }),
@@ -206,8 +206,8 @@ let x = {
             (0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i));
             let t = h.default.getCurrentUser();
             if (null != t) {
-                var j, k;
-                let n = null != (k = null == (j = p.ZP.getMember(e, t.id)) ? void 0 : j.flags) ? k : 0;
+                var k, j;
+                let n = null != (j = null == (k = p.ZP.getMember(e, t.id)) ? void 0 : k.flags) ? j : 0;
                 (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, S.q.COMPLETED_ONBOARDING, !0) } });
             }
         }

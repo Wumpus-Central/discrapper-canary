@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(904245),
     d = n(933557),
     p = n(576855),
-    f = n(372900),
-    h = n(726521),
+    h = n(372900),
+    f = n(726521),
     g = n(501517),
     m = n(699516),
     b = n(594174),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(294218),
     v = n(981631),
     j = n(388032),
-    x = n(797013),
-    C = n(625221);
+    C = n(826688),
+    x = n(421846);
 function E(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ class P extends i.PureComponent {
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
             { channel: o, message: c, showContextMenuHint: u, moderatorReportData: d } = l,
-            h = (function (e, t) {
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -99,12 +99,12 @@ class P extends i.PureComponent {
             g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(c.flags, v.iLy.CROSSPOSTED);
         u &&
             (e = (0, r.jsx)(p.Z, {
-                className: C.spacingTop,
+                className: x.spacingTop,
                 children: j.intl.format(j.t.IxY7E6, {}),
             })),
             (0, y.vc)(c) &&
                 (t = (0, r.jsx)("div", {
-                    className: C.spacingTop,
+                    className: x.spacingTop,
                     children: (0, r.jsx)(s.rsf, {
                         label: j.intl.string(j.t.x0jzo9),
                         checked: n,
@@ -115,7 +115,7 @@ class P extends i.PureComponent {
             b = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: C.message,
+                        className: x.message,
                         children: (0, r.jsx)(O.Z, {
                             channel: o,
                             message: c,
@@ -128,7 +128,7 @@ class P extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(f.Z.Provider, {
+            return (0, r.jsx)(h.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsx)(
                     a.Modal,
@@ -148,18 +148,18 @@ class P extends i.PureComponent {
                                     ? void 0
                                     : (0, r.jsx)(s.Checkbox, {
                                           checked: i,
-                                          label: j.intl.string(x.default["8yIKem"]),
+                                          label: j.intl.string(C.default["8yIKem"]),
                                           onChange: (e) => this.handleToggleResolveFlag(e),
                                       }),
                             },
-                            h,
+                            f,
                         ),
                         { children: b },
                     ),
                 ),
             });
         }
-        return (0, r.jsx)(f.Z.Provider, {
+        return (0, r.jsx)(h.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
                 title: g ? j.intl.string(j.t.aIz1oV) : j.intl.string(j.t.MWMcg7),
@@ -167,7 +167,7 @@ class P extends i.PureComponent {
                 actions: [
                     {
                         text: j.intl.string(j.t["ETE/oC"]),
-                        onClick: h.onClose,
+                        onClick: f.onClose,
                         variant: "secondary",
                     },
                     {
@@ -176,8 +176,8 @@ class P extends i.PureComponent {
                         variant: "critical-primary",
                     },
                 ],
-                onClose: h.onClose,
-                transitionState: h.transitionState,
+                onClose: f.onClose,
+                transitionState: f.transitionState,
                 children: b,
             }),
         });
@@ -193,7 +193,7 @@ class P extends i.PureComponent {
                     { channel: n, message: r, moderatorReportData: i } = this.props,
                     { moderatorReportChannelId: l, isFlagResolved: o } = null != i ? i : {};
                 e
-                    ? (0, h.ak)(r, "message_delete_alert", () =>
+                    ? (0, f.ak)(r, "message_delete_alert", () =>
                           u.Z.deleteMessage(n.id, r.id).then(() => {
                               if (null != l) {
                                   var e, n;
@@ -229,7 +229,7 @@ let N = {
                 (i = e.isPrivate()
                     ? j.intl.string(j.t.hMRngA)
                     : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(f.Z.Provider, {
+                (0, r.jsx)(h.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsx)(
                         a.Modal,
@@ -257,7 +257,7 @@ let N = {
                             ),
                             {
                                 children: (0, r.jsx)("div", {
-                                    className: C.message,
+                                    className: x.message,
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -274,7 +274,7 @@ let N = {
     },
     confirmUnpin: function (e, t) {
         (0, s.h7j)((n) =>
-            (0, r.jsx)(f.Z.Provider, {
+            (0, r.jsx)(h.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     a.Modal,
@@ -303,7 +303,7 @@ let N = {
                         {
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: o()(C.message, C.spacing),
+                                    className: o()(x.message, x.spacing),
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -364,7 +364,7 @@ let N = {
                     {
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: C.spacing,
+                            className: x.spacing,
                             children: j.intl.string(j.t.grBcM8),
                         }),
                     },

@@ -68,7 +68,7 @@ function D(e) {
                 ? t
                 : {
                       results: [],
-                      context: l.Z.getUserSearchContext(k.bind(null, e)),
+                      context: l.Z.getUserSearchContext(j.bind(null, e)),
                   };
     return A.set(n, r), r;
 }
@@ -86,7 +86,7 @@ function w(e) {
         autocompletes: [],
     };
 }
-function x(e) {
+function L(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: o } = e;
     return (
         D(t),
@@ -100,7 +100,7 @@ function x(e) {
         }
     );
 }
-function L(e) {
+function x(e) {
     let { id: t } = e,
         n = A.get(t);
     null != n && (n.context.destroy(), (n.results = []), A.delete(t)), S.delete(t), (T = null);
@@ -108,20 +108,20 @@ function L(e) {
 function M(e) {
     return null != e && (e === O.dCx.FILTER_FROM || e === O.dCx.FILTER_MENTIONS);
 }
-function j(e) {
+function k(e) {
     let t = M(e.filter);
     return e.type === O.Sap.FILTER_ALL || (e.type === O.Sap.FILTER && t);
 }
-function k(e, t) {
+function j(e, t) {
     let { results: n } = t,
         r = (0, E.Tm)(e),
         i = A.get(r),
         a = S.get(r);
-    if (null == i || null == a || !j(a.mode)) return;
+    if (null == i || null == a || !k(a.mode)) return;
     i.results = U(n, a.mode.type === O.Sap.FILTER ? C : N);
     let { query: o, mode: s, tokens: l, cursorScope: c } = a,
         u = K(e, s, l),
-        d = x({
+        d = L({
             searchContext: e,
             query: o,
             mode: s,
@@ -164,7 +164,7 @@ function Z(e) {
         l = S.get(s),
         c = !0;
     if (null != l && a === l.query && (null == l.mode || l.mode.filter === o.filter)) (t = l.autocompletes), (c = !1);
-    else if (j(o)) {
+    else if (k(o)) {
         var u, d;
         let e = D(n),
             i = o.token,
@@ -184,7 +184,7 @@ function Z(e) {
         let e = A.get(s);
         null != e && (e.context.clearQuery(), (e.results = [])), (t = K(n, o, r));
     }
-    let f = x({
+    let f = L({
         searchContext: n,
         query: a,
         mode: o,
@@ -367,7 +367,7 @@ function q(e) {
     s.forEach((e) => {
         e.group !== O.rtL.HISTORY && l.push(e);
     });
-    let c = x({
+    let c = L({
         searchContext: n,
         query: r,
         mode: i,
@@ -389,7 +389,7 @@ function J(e) {
         n = S.get(t);
     if (null == n) return !1;
     let { query: r, mode: i, tokens: a, cursorScope: o } = n,
-        s = x({
+        s = L({
             searchContext: e,
             query: r,
             mode: i,
@@ -422,7 +422,7 @@ I(et, "displayName", "SearchAutocompleteStore");
 let en = new et(s.Z, {
         SEARCH_AUTOCOMPLETE_INITIALIZE: B,
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: Z,
-        SEARCH_EDITOR_STATE_CLEAR: L,
+        SEARCH_EDITOR_STATE_CLEAR: x,
         CHANNEL_CREATE: z,
         CHANNEL_DELETE: z,
         STREAMER_MODE_UPDATE: $,

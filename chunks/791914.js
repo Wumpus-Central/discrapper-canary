@@ -10,20 +10,20 @@ var i = n(399606),
     u = n(598999),
     d = n(2818),
     p = n(768943),
-    f = n(216789),
-    h = n(153209),
+    h = n(216789),
+    f = n(153209),
     g = n(818186),
     m = n(999671),
     b = n(946443),
     _ = n(264233),
     y = n(388032),
-    O = n(407067);
+    O = n(629775);
 function v(e) {
-    let { tab: t, setTab: n, badgeState: h, closePopout: m } = e,
+    let { tab: t, setTab: n, badgeState: f, closePopout: m } = e,
         { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),
-        v = (0, f.Us)({ location: "RecentsHeader" }),
-        { enabled: x } = c.Z.useExperiment({ location: "RecentsHeader" }),
-        C = (0, i.e7)([s.Z], () => s.Z.getUnseenInviteCount()),
+        v = (0, h.Us)({ location: "RecentsHeader" }),
+        { enabled: C } = c.Z.useExperiment({ location: "RecentsHeader" }),
+        x = (0, i.e7)([s.Z], () => s.Z.getUnseenInviteCount()),
         E = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
     return (0, r.jsxs)(u.h4, {
         className: O.header,
@@ -66,7 +66,7 @@ function v(e) {
                             className: O.tab,
                             children: [
                                 y.intl.string(y.t["En+D+u"]),
-                                (null == h ? void 0 : h.badgeForYou)
+                                (null == f ? void 0 : f.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
                                           color: a.Z.STATUS_DANGER,
                                           className: O.iconBadge,
@@ -85,14 +85,14 @@ function v(e) {
                             className: O.tab,
                             children: y.intl.string(y.t.GRZF96),
                         }),
-                        x
+                        C
                             ? (0, r.jsxs)(o.njP.Item, {
                                   "aria-label": "game_invites",
                                   id: l.X.GAME_INVITES,
                                   className: O.tab,
                                   children: [
                                       y.intl.string(y.t.apq3cU),
-                                      C > 0
+                                      x > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: a.Z.STATUS_DANGER,
                                                 className: O.iconBadge,
@@ -129,7 +129,7 @@ function v(e) {
 function j(e) {
     let { tab: t } = e;
     return t === l.X.FOR_YOU
-        ? (0, r.jsx)(h.Gp, {})
+        ? (0, r.jsx)(f.Gp, {})
         : t === l.X.UNREADS
           ? (0, r.jsx)(b.QP, {})
           : t === l.X.MENTIONS

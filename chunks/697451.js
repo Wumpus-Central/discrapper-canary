@@ -29,9 +29,9 @@ var r = n(54381),
     P = n(421399),
     D = n(310423),
     w = n(223021),
-    x = n(981631),
-    L = n(388032),
-    M = n(724913);
+    L = n(981631),
+    x = n(388032),
+    M = n(136907);
 function k(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ function W(e, t, n) {
         children: (e) => {
             var { onClick: t } = e,
                 i = B(e, ["onClick"]);
-            if (a.type === x.uaV.CHAT_INPUT_COMMAND || a.type === x.uaV.INTERACTION_PREMIUM_UPSELL)
+            if (a.type === L.uaV.CHAT_INPUT_COMMAND || a.type === L.uaV.INTERACTION_PREMIUM_UPSELL)
                 return (0, r.jsx)(
                     f.P3F,
                     G(j({}, i), {
@@ -259,7 +259,7 @@ function W(e, t, n) {
                 });
             {
                 let e = () => {
-                        C.S.dispatchToLastSubscribed(x.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
+                        C.S.dispatchToLastSubscribed(L.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
                     },
                     t = (0, b.XZ)(c);
                 return (0, r.jsx)(
@@ -325,7 +325,7 @@ function q(e) {
             ),
             [b, s, a.id],
         ),
-        x = i.useMemo(
+        L = i.useMemo(
             () => (e) => (
                 l()(null != s, "ExecutedCommand: channel cannot be null"),
                 (0, r.jsx)(
@@ -379,10 +379,10 @@ function q(e) {
         };
     if ((null == a ? void 0 : a.activityInstance) === null || (0, v.g)(a)) {
         let t = () => {
-            let t = W(e, x, C);
+            let t = W(e, L, C);
             return (0, r.jsx)(i.Fragment, { children: t }, "command");
         };
-        (n = L.intl.format(L.t["rg7U+C"], {
+        (n = x.intl.format(x.t["rg7U+C"], {
             userHook: X,
             commandHook: t,
         })),
@@ -415,15 +415,15 @@ function q(e) {
                     onClick: e,
                     children: (0, r.jsx)("div", {
                         className: o()(M.commandName, M.clickable),
-                        children: L.intl.string(L.t.YTgRvn),
+                        children: x.intl.string(x.t.YTgRvn),
                     }),
                 });
         n = z
-            ? L.intl.format(L.t.kfV8WM, {
+            ? x.intl.format(x.t.kfV8WM, {
                   userHook: X,
                   activityHook: t,
               })
-            : L.intl.format(L.t["6FeSyT"], { userHook: X });
+            : x.intl.format(x.t["6FeSyT"], { userHook: X });
     }
     return (0, r.jsx)(E.Gt, {
         value: c,

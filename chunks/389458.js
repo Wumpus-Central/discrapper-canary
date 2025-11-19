@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => x }), n(388685), n(704826), n(35282), n(642613), n(368063);
+n.d(t, { Z: () => L }), n(388685), n(704826), n(35282), n(642613), n(368063);
 var i,
     a = n(442837),
     o = n(570140),
@@ -140,4 +140,4 @@ let w = new D(o.Z, {
         MESSAGE_CREATE: P,
         DEV_TOOLS_WORD_FREQUENCY_RESET: C,
     }),
-    x = w;
+    L = w;

@@ -29,14 +29,14 @@ var r = n(54381),
     P = n(607802),
     D = n(532428),
     w = n(991896),
-    x = n(611004),
-    L = n(579612),
+    L = n(611004),
+    x = n(579612),
     M = n(817190),
     k = n(315322),
     j = n(723642),
     U = n(981631),
     G = n(388032),
-    B = n(495824);
+    B = n(486321);
 function Z(e, t, n) {
     return (
         t in e
@@ -176,12 +176,12 @@ let X = (e, t, n) => {
             : (0, r.jsxs)("div", {
                   className: B.resultChannel,
                   children: [
-                      (0, r.jsx)(L.MC, {
+                      (0, r.jsx)(x.MC, {
                           channel: i,
                           className: B.searchResultChannelIcon,
                       }),
-                      (0, r.jsx)(L.GQ, { channel: i }),
-                      (0, r.jsx)(L.P, { channel: i }),
+                      (0, r.jsx)(x.GQ, { channel: i }),
+                      (0, r.jsx)(x.P, { channel: i }),
                   ],
               });
     },
@@ -467,7 +467,7 @@ class ei extends i.PureComponent {
                 (0, k.bh)({
                     searchContext: this.props.searchContext,
                     searchQuery: M.Z.getSearchResultsQuery(t),
-                    searchQueryString: x.Z.getSearchInputText(this.props.searchContext),
+                    searchQueryString: L.Z.getSearchInputText(this.props.searchContext),
                     searchTokenType: this.props.resultsState.mode.filter,
                     searchAutocompleteGroup: U.rtL.DATES,
                     searchAutocompleteMode: this.props.resultsState.mode,
@@ -549,7 +549,7 @@ class ei extends i.PureComponent {
                     (0, k.bh)({
                         searchContext: this.props.searchContext,
                         searchQuery: M.Z.getSearchResultsQuery(p),
-                        searchQueryString: x.Z.getSearchInputText(this.props.searchContext),
+                        searchQueryString: L.Z.getSearchInputText(this.props.searchContext),
                         searchTokenType: d,
                         searchAutocompleteGroup: null != (u = s.group) ? u : a,
                         searchAutocompleteMode: this.props.resultsState.mode,

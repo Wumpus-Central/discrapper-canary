@@ -1,15 +1,15 @@
-n.d(t, { Z: () => h }), n(642613), n(388685);
-var i = n(647438),
+n.d(t, { Z: () => p }), n(642613), n(388685);
+var i = n(473749),
     r = n(884439),
     l = n(442837),
     o = n(567409),
     a = n(752048),
     s = n(70956),
-    u = n(709054),
-    c = n(26033),
+    c = n(709054),
+    u = n(26033),
     d = n(561308);
-let p = s.Z.Millis.WEEK;
-function h(e) {
+let h = s.Z.Millis.WEEK;
+function p(e) {
     let t = (0, o.N)(e),
         n = (0, l.cj)([a.Z], () => a.Z.getUserAffinitiesMap());
     return i.useMemo(
@@ -19,7 +19,7 @@ function h(e) {
                 : t
                       .filter(
                           (t) =>
-                              (0, c.dX)(t) && (0, c.m9)(t) && t.extra.application_id === e && u.default.age(t.id) < p,
+                              (0, u.dX)(t) && (0, u.m9)(t) && t.extra.application_id === e && c.default.age(t.id) < h,
                       )
                       .sort((e, t) => m(n, t) - m(n, e)),
         [t, e, n],
@@ -36,7 +36,7 @@ function m(e, t) {
                 return (null != (n = null == i ? void 0 : i.communicationProbability) ? n : 0) + 0.0001;
             }),
         ),
-        l = Math.exp(-((u.default.age(t.id) / 1000 / f) * 0.01)),
+        l = Math.exp(-((c.default.age(t.id) / 1000 / f) * 0.01)),
         o = t.traits.some((e) => e.type !== r.N.DURATION_SECONDS),
         a = (0, d.n2)(t);
     return i * l * (1 + 0.6 * (o && !a ? 1 : 0));

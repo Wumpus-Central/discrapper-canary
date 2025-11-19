@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    f = n(153867),
-    h = n(591146),
+    h = n(153867),
+    f = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
@@ -19,11 +19,11 @@ var r = n(54381),
     O = n(40153),
     v = n(252686),
     j = n(682662),
-    x = n(662146),
-    C = n(981631),
+    C = n(662146),
+    x = n(981631),
     E = n(388032),
-    S = n(106663),
-    I = n(534175);
+    S = n(855031),
+    I = n(857668);
 let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(p.Kqy),
     Z = i.memo(function (e) {
@@ -53,7 +53,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, h.Ml)("FolderItem");
+            J = (0, f.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -105,7 +105,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         unread: w,
                         className: I.pill,
                     }),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(C.Z, {
                         text: er,
                         disabled: R,
                         selected: l,
@@ -152,8 +152,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null,
                 ],
             }),
-            eu = null != t.color ? t.color : C.Wyy,
-            ed = eu === C.Wyy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : x.Wyy,
+            ed = eu === x.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)("div", {
             ref: es,
             className: o()(S.folderGroup, {

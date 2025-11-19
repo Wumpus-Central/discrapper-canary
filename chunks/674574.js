@@ -9,16 +9,16 @@ var i = n(657707),
     c = n(802),
     E = n(348911),
     S = n(388032);
-let d = (0, l.x1)(u.n.NOTIFICATIONS_PANE, {
+let T = (0, l.x1)(u.n.NOTIFICATIONS_PANE, {
         buildLayout: () => [c.Z, E.Z, a.Z, o.Z, s.Z],
     }),
-    T = (0, l.wf)(u.n.NOTIFICATIONS_PANEL, {
+    d = (0, l.wf)(u.n.NOTIFICATIONS_PANEL, {
         useTitle: () => S.intl.string(S.t.HcoRu0),
-        buildLayout: () => [d],
+        buildLayout: () => [T],
     }),
     I = (0, l.m7)(u.n.NOTIFICATIONS_SIDEBAR_ITEM, {
         icon: i.Dkj,
         useTitle: () => S.intl.string(S.t.HcoRu0),
         usePredicate: () => (0, r.gj)("NotificationsPanel"),
-        buildLayout: () => [T],
+        buildLayout: () => [d],
     });

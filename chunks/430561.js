@@ -27,7 +27,7 @@ var r = n(54381),
     b = n(620954),
     y = n(985149),
     O = n(388032),
-    v = n(962967);
+    v = n(246722);
 function I(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {

@@ -33,8 +33,8 @@ function v(e) {
             disallowTypeAhead: P = !1,
             shouldUseVirtualFocus: D,
             allowsTabNavigation: w = !1,
-            isVirtualized: x,
-            scrollRef: L = I,
+            isVirtualized: L,
+            scrollRef: x = I,
             linkBehavior: M = "action",
         } = e,
         { direction: k } = (0, O.j)(),
@@ -198,15 +198,15 @@ function v(e) {
             left: 0,
         });
     (0, l.z)(
-        L,
+        x,
         "scroll",
-        x
+        L
             ? void 0
             : () => {
                   var e, t, n, r;
                   G.current = {
-                      top: null != (n = null == (e = L.current) ? void 0 : e.scrollTop) ? n : 0,
-                      left: null != (r = null == (t = L.current) ? void 0 : t.scrollLeft) ? r : 0,
+                      top: null != (n = null == (e = x.current) ? void 0 : e.scrollTop) ? n : 0,
+                      left: null != (r = null == (t = x.current) ? void 0 : t.scrollLeft) ? r : 0,
                   };
               },
     );
@@ -226,8 +226,8 @@ function v(e) {
                         ? r(null != (a = n.lastSelectedKey) ? a : null == (t = v.getLastKey) ? void 0 : t.call(v))
                         : r(null != (o = n.firstSelectedKey) ? o : null == (i = v.getFirstKey) ? void 0 : i.call(v));
                 } else
-                    !x && L.current && ((L.current.scrollTop = G.current.top), (L.current.scrollLeft = G.current.left));
-                if (null != n.focusedKey && L.current) {
+                    !L && x.current && ((x.current.scrollTop = G.current.top), (x.current.scrollLeft = G.current.left));
+                if (null != n.focusedKey && x.current) {
                     let e = (0, r.D0)(I, n.focusedKey);
                     e instanceof HTMLElement &&
                         (e.contains(document.activeElement) || D || (0, s.A)(e),
@@ -309,7 +309,7 @@ function v(e) {
             n.isFocused &&
             null != n.focusedKey &&
             (n.focusedKey !== K.current || W.current) &&
-            L.current &&
+            x.current &&
             I.current
         ) {
             let e = (0, b.Jz)(),
@@ -318,8 +318,8 @@ function v(e) {
             ("keyboard" === e || W.current) &&
                 (z.current && cancelAnimationFrame(z.current),
                 (z.current = requestAnimationFrame(() => {
-                    L.current &&
-                        ((0, c.z)(L.current, t), "virtual" !== e && (0, c.G)(t, { containingElement: I.current }));
+                    x.current &&
+                        ((0, c.z)(x.current, t), "virtual" !== e && (0, c.G)(t, { containingElement: I.current }));
                 })));
         }
         !D && n.isFocused && null == n.focusedKey && null != K.current && I.current && (0, y.e)(I.current),
@@ -340,7 +340,7 @@ function v(e) {
             onFocus: B,
             onBlur: Z,
             onMouseDown(e) {
-                L.current === e.target && e.preventDefault();
+                x.current === e.target && e.preventDefault();
             },
         },
         { typeSelectProps: X } = (0, i.i)({

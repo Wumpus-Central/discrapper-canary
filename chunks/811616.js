@@ -19,7 +19,7 @@ var i = n(120356),
     b = n(622909),
     y = n(474936),
     O = n(388032),
-    v = n(399377);
+    v = n(924005);
 function I(e) {
     let {
             premiumSubscription: t,
@@ -37,9 +37,9 @@ function I(e) {
         { isGift: P, giftRecipient: D } = (0, u.wD)(),
         w = P && (0, _.pO)(D);
     s()(null != R, "Missing subscriptionPlan");
-    let x = null != t && t.planId === n,
-        L =
-            x ||
+    let L = null != t && t.planId === n,
+        x =
+            L ||
             (n === y.Xh.PREMIUM_MONTH_TIER_2 &&
                 null != t &&
                 [y.Xh.PREMIUM_YEAR_TIER_0, y.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
@@ -75,13 +75,13 @@ function I(e) {
         Y = () =>
             Z
                 ? V()
-                : (R.interval === y.rV.YEAR && null != t) || (G && !x)
+                : (R.interval === y.rV.YEAR && null != t) || (G && !L)
                   ? R.interval === y.rV.YEAR && null != t
                       ? (0, r.jsxs)("span", {
                             className: v.planOptionMonthsFree,
                             children: ["(", O.intl.string(O.t["122kWB"]), ")"],
                         })
-                      : G && !x
+                      : G && !L
                         ? H()
                         : void 0
                   : null,
@@ -138,14 +138,14 @@ function I(e) {
                 bottom: 0,
             },
         },
-        onClick: L ? void 0 : () => i(n),
+        onClick: x ? void 0 : () => i(n),
         className: a()(v.planOptionClickableContainer, {
             [v.selectedPlan]: w && o,
             [v.selectionBox]: w,
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: a()(v.planOption, { [v.planOptionDisabled]: L }),
+                className: a()(v.planOption, { [v.planOptionDisabled]: x }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: v.planOptionClickable,
@@ -161,7 +161,7 @@ function I(e) {
                                     }),
                                 }),
                             W(),
-                            x &&
+                            L &&
                                 (0, r.jsxs)("span", {
                                     className: v.planOptionCurrentPlan,
                                     children: ["(", O.intl.string(O.t.ymSxhy), ")"],

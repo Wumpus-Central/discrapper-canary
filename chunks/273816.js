@@ -13,7 +13,7 @@ var i = n(54381),
     f = n(333031),
     m = n(76623),
     g = n(501787),
-    y = n(533449);
+    y = n(580259);
 function O(e) {
     let { locked: t, pinned: n, anchorLeft: l } = e,
         O = (0, a.e7)([h.Z], () => h.Z.getSocket()),
@@ -32,20 +32,20 @@ function O(e) {
             frameCheckerEffect: w,
         } = (0, d.d6)(!0, b, !0),
         [T, P, A] = (0, d.ZF)(O),
-        [D, k] = (0, d.Y5)(T, w, E),
+        [k, D] = (0, d.Y5)(T, w, E),
         R = performance.now() - _.current < d.MC,
         L = P(x, Z.current);
     (0, u.ZP)(
         () => (
-            D(),
+            k(),
             () => {
-                k();
+                D();
             }
         ),
     );
     let M = r.useCallback(() => {
-            C(), A(), D();
-        }, [C, A, D]),
+            C(), A(), k();
+        }, [C, A, k]),
         [z, V] = r.useState(!0),
         [U, W] = r.useState(!0),
         [G, F] = r.useState(!0),

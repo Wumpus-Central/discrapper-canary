@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(657707),
     h = n(454389),
     m = n(402453),
-    g = n(170382);
+    g = n(878644);
 function E(e, t, n) {
     return (
         t in e
@@ -113,8 +113,8 @@ function T(e) {
         { disabled: R, errorMessage: P, required: D = !1 } = N,
         w = { hasError: null != P && "" !== P },
         {
-            refs: x,
-            floatingStyles: L,
+            refs: L,
+            floatingStyles: x,
             isOpen: M,
             setIsOpen: k,
             context: j,
@@ -149,7 +149,7 @@ function T(e) {
                             {
                                 className: g.inputField,
                                 validation: w,
-                                ref: x.setReference,
+                                ref: L.setReference,
                             },
                             G(),
                         ),
@@ -199,8 +199,8 @@ function T(e) {
                                         (0, r.jsx)(
                                             "div",
                                             O(b({}, U()), {
-                                                ref: x.setFloating,
-                                                style: L,
+                                                ref: L.setFloating,
+                                                style: x,
                                                 className: g.popover,
                                                 children: (0, r.jsx)(u.Vq, {
                                                     style: Z,

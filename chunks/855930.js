@@ -1,6 +1,6 @@
 r.d(t, { Z: () => o });
 var a = r(665352),
-    n = r(216397);
+    n = r(973805);
 let o = new a.Z({
     id: "hsl",
     name: "HSL",

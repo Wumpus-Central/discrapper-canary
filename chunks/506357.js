@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(981631),
     E = n(176505),
     b = n(388032),
-    y = n(752338);
+    y = n(882826);
 function O(e, t, n) {
     return (
         t in e
@@ -78,10 +78,10 @@ function S(e) {
         N = (0, a.e7)([u.Z], () => (null != C ? u.Z.getGuild(C) : null), [C]),
         { shouldShowIncidentActions: R, incidentData: P, isUnderLockdown: D } = (0, p.mI)(C),
         w = (0, l.n2)(null != (t = null == N ? void 0 : N.id) ? t : g.lds),
-        x = i.useCallback(() => null != N && (0, c._X)(N.id), [N]);
+        L = i.useCallback(() => null != N && (0, c._X)(N.id), [N]);
     if (null == N || null == P || !R) return null;
-    let L = (e) => {
-            if (e && w && A !== E.oC.MEMBER_SAFETY && x())
+    let x = (e) => {
+            if (e && w && A !== E.oC.MEMBER_SAFETY && L())
                 return void _.default.track(g.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: g.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: N.id,
@@ -121,7 +121,7 @@ function S(e) {
                 k,
                 (0, r.jsx)(o.EyT, {
                     className: y.actionButton,
-                    onClick: () => L(!1),
+                    onClick: () => x(!1),
                     children: (0, r.jsxs)("div", {
                         className: y.actionButtonInner,
                         children: [
@@ -154,7 +154,7 @@ function S(e) {
             !U &&
                 (0, r.jsx)(o.EyT, {
                     className: y.actionButton,
-                    onClick: () => L(!0),
+                    onClick: () => x(!0),
                     children: (0, r.jsx)("div", {
                         className: y.actionButtonInner,
                         children: (0, r.jsx)("span", { children: b.intl.string(b.t.zDJDhr) }),

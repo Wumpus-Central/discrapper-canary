@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(410030),
     s = n(231338),
     l = n(388032),
-    c = n(110563);
+    c = n(770937);
 let u =
         "https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png",
     d =

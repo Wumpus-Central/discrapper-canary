@@ -7,11 +7,11 @@ var r = n(54381),
     s = n(288552),
     c = n(981631),
     u = n(388032),
-    d = n(407067);
+    d = n(629775);
 function p(e) {
     let { type: t, onClick: n } = e,
         [l, p] = i.useState(!1),
-        h = () => {
+        f = () => {
             n(),
                 a.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
@@ -19,13 +19,13 @@ function p(e) {
                 });
         },
         g = (e) => {
-            e.shiftKey ? h() : p(!0);
+            e.shiftKey ? f() : p(!0);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             l
-                ? (0, r.jsx)(f, {
-                      confirm: h,
+                ? (0, r.jsx)(h, {
+                      confirm: f,
                       cancel: () => p(!1),
                   })
                 : null,
@@ -48,7 +48,7 @@ function p(e) {
         ],
     });
 }
-function f(e) {
+function h(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(o.sYh, {
         dismissable: !0,

@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(996435),
     y = n(854014),
     j = n(388032),
-    m = n(845435);
+    m = n(565184);
 function v(e) {
     let { root: t, header: n, footer: i, onClose: y, emptyState: v } = e,
         x = p.Z.useField("showNavigationMobile"),

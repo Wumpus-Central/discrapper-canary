@@ -373,7 +373,7 @@ function V() {
               channelId: e.channelId,
           });
 }
-function Y(e, t) {
+function q(e, t) {
     if (null == e) return null;
     let n = e.split(Z);
     if (1 === n.length) return n[0];
@@ -396,7 +396,7 @@ function Y(e, t) {
     }
     return r;
 }
-function q(e, t) {
+function Y(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
     let i = null == (r = e.match(Z)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
@@ -601,8 +601,8 @@ let ee = Object.assign(
                             return {
                                 type: "HERO",
                                 body: n.body.map(t),
-                                title: Y(n.title, e),
-                                image: q(n.image, e),
+                                title: q(n.title, e),
+                                image: Y(n.image, e),
                                 imagePlaceholder: null == (r = e.config) ? void 0 : r.hero_placeholder_image,
                             };
                         case "GRID":
@@ -619,13 +619,13 @@ let ee = Object.assign(
                         case "TEXT":
                             return {
                                 type: "TEXT",
-                                content: Y(n.content, e),
+                                content: q(n.content, e),
                             };
                         case "TEXT_WITH_IMAGE":
                             return {
                                 type: "TEXT_WITH_IMAGE",
-                                content: Y(n.content, e),
-                                image: q(n.image, e),
+                                content: q(n.content, e),
+                                image: Y(n.image, e),
                                 imagePosition: n.imagePosition,
                             };
                         case "SEPARATOR":

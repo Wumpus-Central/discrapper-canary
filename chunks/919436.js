@@ -9,8 +9,8 @@ var r,
     u = n(239091),
     d = n(358221),
     p = n(43267),
-    f = n(933557),
-    h = n(266076),
+    h = n(933557),
+    f = n(266076),
     g = n(199902),
     m = n(19780),
     b = n(306680),
@@ -19,11 +19,11 @@ var r,
     O = n(451478),
     v = n(276952),
     j = n(682662),
-    x = n(662146),
-    C = n(674552),
+    C = n(662146),
+    x = n(674552),
     E = n(981631),
     S = n(388032),
-    I = n(514483);
+    I = n(117000);
 function P(e, t, n) {
     return (
         t in e
@@ -159,7 +159,7 @@ class A extends (r = l.PureComponent) {
                 unread: d,
                 treeItemProps: p,
             } = this.props,
-            { hovered: f, animating: g } = this.state,
+            { hovered: h, animating: g } = this.state,
             m = e.isMultiUserDM() && null == e.icon,
             b = () =>
                 (0, i.jsx)(
@@ -169,7 +169,7 @@ class A extends (r = l.PureComponent) {
                             to: E.Z5c.CHANNEL(E.ME, e.id),
                             onMouseEnter: () => this.setState({ hovered: !0 }),
                             onMouseLeave: () => this.setState({ hovered: !1 }),
-                            selected: n || f,
+                            selected: n || h,
                             ariaLabel:
                                 null != t
                                     ? S.intl.formatToPlainString(S.t.hKarnZ, {
@@ -181,7 +181,7 @@ class A extends (r = l.PureComponent) {
                             icon: m ? void 0 : this.getChannelIcon(),
                             backgroundStyle: m ? "on-hover" : "always",
                             children: m
-                                ? (0, i.jsx)(h.Z, {
+                                ? (0, i.jsx)(f.Z, {
                                       channel: e,
                                       size: c.EFr.SIZE_40,
                                       facepileSizeOverride: c.EFr.SIZE_32,
@@ -197,19 +197,19 @@ class A extends (r = l.PureComponent) {
             children: (0, i.jsxs)(j.H, {
                 children: [
                     (0, i.jsx)(v.Z, {
-                        hovered: !g && f,
+                        hovered: !g && h,
                         selected: !g && n,
                         unread: !g && d,
                         className: I.pill,
                     }),
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(C.Z, {
                         text: null != t ? t : "",
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, C.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, C.Or)({
+                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, x.Or)({
                                 audio: l,
                                 video: a,
                                 screenshare: s,
@@ -244,7 +244,7 @@ class A extends (r = l.PureComponent) {
                               n.e("79695"),
                               n.e("66165"),
                               n.e("56826"),
-                              n.e("31899"),
+                              n.e("55599"),
                           ]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, i.jsx)(
@@ -277,31 +277,31 @@ P(A, "defaultProps", {
 });
 let R = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, f.ZP)(e.channel),
+        r = (0, h.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([m.Z], () => m.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : E.WtW.VOICE), [o]),
         p = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        h = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
+        f = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, s.e7)([b.ZP], () => b.ZP.getMentionCount(n), [n]),
         O = o === n,
         v = !1,
         j = !1;
     O && ((v = u === E.WtW.VOICE), (j = u === E.WtW.VIDEO));
-    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+    let C = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         A,
         Z(N({}, e), {
             ref: t,
             channelName: r,
             unread: y > 0,
-            selected: h === n,
+            selected: f === n,
             badge: y,
             audio: v,
             video: j,
             stream: p,
             isCurrentUserInThisDMCall: O,
-            size: x,
+            size: C,
             treeItemProps: l,
         }),
     );

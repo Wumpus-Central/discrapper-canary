@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(354459),
     y = n(474936),
     O = n(388032),
-    v = n(572065);
+    v = n(605299);
 function I(e, t, n) {
     return (
         t in e
@@ -121,13 +121,13 @@ function D(e) {
         N = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), y.PremiumTypes.TIER_1)),
         D = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         w = i.useMemo(() => (null != n ? [n] : []), [n]),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null != D && (0, f.Z)(D.getGuildId(), D.id, I);
         }, [D, I]);
     if (null == n || null == D) return null;
-    let L = R;
+    let x = R;
     return (
-        t || N || (L = P),
+        t || N || (x = P),
         (0, r.jsx)(o.yRy, {
             targetElementRef: v,
             position: "top",
@@ -140,7 +140,7 @@ function D(e) {
                         activeStreams: w,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: x,
+                        handleGoLive: L,
                         onInteraction: (0, c.u)("ManageStreamsButton", null != S ? S : u, {
                             entrypoint: b.A5.OTHER_BUTTON,
                         }),
@@ -155,7 +155,7 @@ function D(e) {
                         A(T({}, e), {
                             buttonRef: v,
                             label: O.intl.string(O.t.tmiYpF),
-                            iconComponent: L,
+                            iconComponent: x,
                             onClick: (t) => {
                                 (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS),
                                     null == e || e.onClick(t);

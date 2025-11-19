@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(921944),
     R = n(474936),
     P = n(388032),
-    D = n(164161);
+    D = n(549258);
 let w = () => {
         var e, t, n;
         let i = (0, s.e7)([O.default], () => I.ZP.isPremium(O.default.getCurrentUser())),
@@ -48,7 +48,7 @@ let w = () => {
             subscriptionTier: R.Si.TIER_2,
         });
     },
-    x = (e) => {
+    L = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
                 null == t || t(N.L.DISMISS), (0, h.Ll)(), (0, T.O)();
@@ -78,7 +78,7 @@ let w = () => {
             ],
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([S.Z], () => S.Z.isUpsellPreview),
             a = () => {
@@ -130,7 +130,7 @@ function M(e) {
                   "data-app-right-panel": !0,
                   children: (0, r.jsxs)(u.y5t, {
                       children: [
-                          (0, r.jsx)(x, { markAsDismissed: n }),
+                          (0, r.jsx)(L, { markAsDismissed: n }),
                           (0, r.jsx)(u.Ttm, {
                               className: D.editorBody,
                               children: (0, r.jsx)(A.Z, {
@@ -138,7 +138,7 @@ function M(e) {
                                   isEditor: !0,
                               }),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, r.jsx)(x, {
                               markAsDismissed: n,
                               isCoachmark: t,
                           }),

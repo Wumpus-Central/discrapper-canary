@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(709054),
     h = n(997431),
     m = n(388032),
-    g = n(212229);
+    g = n(923641);
 function E(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         l = t.id,

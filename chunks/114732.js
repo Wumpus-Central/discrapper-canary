@@ -4,9 +4,9 @@ t(473749);
 var o = t(780384),
     r = t(481060),
     i = t(410030),
-    l = t(388032),
-    s = t(597412),
-    d = t(167969),
+    s = t(388032),
+    d = t(791863),
+    l = t(167969),
     c = t(557256);
 let u = function (e) {
     let { onClose: n } = e,
@@ -17,40 +17,40 @@ let u = function (e) {
             (0, a.jsxs)(r.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: s.header,
+                className: d.header,
                 children: [
                     (0, a.jsx)("img", {
                         alt: "",
-                        className: s.headerImage,
-                        src: u ? d : c,
+                        className: d.headerImage,
+                        src: u ? l : c,
                     }),
                     (0, a.jsx)(r.Heading, {
-                        className: s.title,
+                        className: d.title,
                         variant: "heading-xl/medium",
-                        children: l.intl.string(l.t["tWYWJ+"]),
+                        children: s.intl.string(s.t["tWYWJ+"]),
                     }),
                     (0, a.jsx)(r.olH, {
                         "data-migration-pending": !0,
                         onClick: n,
-                        className: s.modalCloseButton,
+                        className: d.modalCloseButton,
                     }),
                 ],
             }),
             (0, a.jsx)(r.hzk, {
                 "data-migration-pending": !0,
-                className: s.content,
+                className: d.content,
                 scrollbarType: "none",
                 children: (0, a.jsx)(r.Text, {
                     variant: "text-md/normal",
-                    children: l.intl.string(l.t.JNQRU4),
+                    children: s.intl.string(s.t.JNQRU4),
                 }),
             }),
             (0, a.jsx)(r.mzw, {
                 "data-migration-pending": !0,
-                className: s.modalFooter,
+                className: d.modalFooter,
                 children: (0, a.jsx)(r.Button, {
                     variant: "primary",
-                    text: l.intl.string(l.t.cpT0Cq),
+                    text: s.intl.string(s.t.cpT0Cq),
                     onClick: n,
                 }),
             }),

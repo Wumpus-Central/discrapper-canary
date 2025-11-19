@@ -1,32 +1,32 @@
-a.d(e, { X: () => l });
-var r = a(622916),
-    _ = a(899517),
-    n = a(910731),
-    o = a(954211),
-    i = a(394798),
-    E = a(886115),
-    c = a(263449),
-    s = a(233517);
-let l = (0, a(151122)._I)((t = {}) => {
-    let e = t.levels || r.RU;
+_.d(e, { X: () => l });
+var a = _(622916),
+    r = _(899517),
+    n = _(910731),
+    o = _(954211),
+    E = _(394798),
+    i = _(886115),
+    c = _(263449),
+    s = _(233517);
+let l = (0, _(151122)._I)((t = {}) => {
+    let e = t.levels || a.RU;
     return {
         name: "CaptureConsole",
         setup(t) {
-            "console" in _.n &&
-                (0, n.e)(({ args: a, level: r }) => {
+            "console" in r.n &&
+                (0, n.e)(({ args: _, level: a }) => {
                     (0, c.s3)() === t &&
-                        e.includes(r) &&
+                        e.includes(a) &&
                         (function (t, e) {
-                            let a = {
+                            let _ = {
                                 level: (0, o.V)(e),
                                 extra: { arguments: t },
                             };
-                            (0, c.$e)((r) => {
+                            (0, c.$e)((a) => {
                                 if (
-                                    (r.addEventProcessor(
+                                    (a.addEventProcessor(
                                         (t) => (
                                             (t.logger = "console"),
-                                            (0, i.EG)(t, {
+                                            (0, E.EG)(t, {
                                                 handled: !1,
                                                 type: "console",
                                             }),
@@ -36,17 +36,17 @@ let l = (0, a(151122)._I)((t = {}) => {
                                     "assert" === e)
                                 ) {
                                     if (!t[0]) {
-                                        let e = `Assertion failed: ${((0, E.nK))(t.slice(1), " ") || "console.assert"}`;
-                                        r.setExtra("arguments", t.slice(1)), (0, s.uT)(e, a);
+                                        let e = `Assertion failed: ${((0, i.nK))(t.slice(1), " ") || "console.assert"}`;
+                                        a.setExtra("arguments", t.slice(1)), (0, s.uT)(e, _);
                                     }
                                     return;
                                 }
-                                let _ = t.find((t) => t instanceof Error);
-                                if (_) return void (0, s.Tb)(_, a);
-                                let n = (0, E.nK)(t, " ");
-                                (0, s.uT)(n, a);
+                                let r = t.find((t) => t instanceof Error);
+                                if (r) return void (0, s.Tb)(r, _);
+                                let n = (0, i.nK)(t, " ");
+                                (0, s.uT)(n, _);
                             });
-                        })(a, r);
+                        })(_, a);
                 });
         },
     };

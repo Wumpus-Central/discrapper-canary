@@ -1,5 +1,5 @@
 n.d(t, {
-    OG: () => x,
+    OG: () => C,
     ZP: () => v,
     Zu: () => j,
 }),
@@ -14,10 +14,10 @@ var r = n(54381),
     u = n(749210),
     d = n(626135),
     p = n(727258),
-    f = n(662146),
-    h = n(981631),
+    h = n(662146),
+    f = n(981631),
     g = n(388032),
-    m = n(606989);
+    m = n(494862);
 function b(e) {
     let t = i.useRef(null),
         n = e.map((e) => e[0]);
@@ -45,7 +45,7 @@ function _(e, t) {
                 (e.type !== p.eD.FOLDER || null == t.parentId),
             drop(e) {
                 let { nodeId: i } = e;
-                r && t.type !== p.eD.FOLDER && d.default.track(h.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r);
+                r && t.type !== p.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r);
             },
             collect: (e) => ({
                 canDrop: e.canDrop(),
@@ -58,13 +58,13 @@ function y(e) {
     let { name: t, targetNode: n, combine: l, below: o } = e,
         a = i.useMemo(() => _([p.eD.GUILD, p.eD.FOLDER], n, o, l), [n, o, l]),
         [{ canDrop: s, isOver: u }, d] = (0, c.L)(a),
-        f = b([
+        h = b([
             [s, m.autoPointerEvents],
             [u, m.dragOver],
         ]);
     return (0, r.jsx)("div", {
         ref: (e) => {
-            (f.current = e), d(e);
+            (h.current = e), d(e);
         },
         "data-dnd-name": g.intl.formatToPlainString(g.t["A5aDw+"], { itemName: t }),
         className: m.target,
@@ -80,7 +80,7 @@ function O(e) {
         [a, m.autoPointerEvents],
         [s, m.dragOver],
     ]);
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(h.Z, {
         text: t,
         shouldShow: s,
         forceOpen: s,
@@ -141,7 +141,7 @@ function j(e) {
         }),
     });
 }
-function x(e) {
+function C(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)("div", {

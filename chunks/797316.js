@@ -96,11 +96,11 @@ function D(e) {
 function w() {
     S.reset();
 }
-function x(e) {
+function L(e) {
     let { guild: t } = e;
     t.id === v.Z.getGuildId() && V();
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     S.clearWithoutFlushing(t.id, !0);
 }
@@ -113,7 +113,7 @@ function M(e) {
         !1
     );
 }
-function j(e) {
+function k(e) {
     let { guildId: t, userIds: n } = e;
     return (
         n.forEach((e) => {
@@ -122,7 +122,7 @@ function j(e) {
         !1
     );
 }
-function k(e) {
+function j(e) {
     let { guildId: t } = e;
     S.subscribeToMemberUpdates(t);
 }
@@ -215,11 +215,11 @@ let q = new z(l.Z, {
     LOGOUT: w,
     VOICE_CHANNEL_SELECT: F,
     CHANNEL_SELECT: F,
-    GUILD_CREATE: x,
-    GUILD_DELETE: L,
+    GUILD_CREATE: L,
+    GUILD_DELETE: x,
     GUILD_SUBSCRIPTIONS_MEMBERS_ADD: M,
-    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: j,
-    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: k,
+    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: k,
+    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: j,
     GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: U,
     GUILD_SUBSCRIPTIONS_CHANNEL: B,
     GUILD_SUBSCRIPTIONS: G,

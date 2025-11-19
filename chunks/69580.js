@@ -49,8 +49,8 @@ var r = n(54381),
     P = n(973616),
     D = n(598077),
     w = n(314897),
-    x = n(630388),
-    L = n(700785),
+    L = n(630388),
+    x = n(700785),
     M = n(591759),
     k = n(807675),
     j = n(489863),
@@ -71,7 +71,7 @@ var r = n(54381),
     J = n(981631),
     $ = n(186901),
     ee = n(388032),
-    et = n(565870);
+    et = n(847446);
 function en(e, t, n) {
     return (
         t in e
@@ -341,14 +341,14 @@ function ec(e) {
         w.default.isAuthenticated() && !eR && E.Z.getExperiments();
     }, [eR]);
     let [eP, eD] = i.useState(null),
-        [ew, ex] = i.useState(null),
-        [eL, eM] = i.useState(null),
+        [ew, eL] = i.useState(null),
+        [ex, eM] = i.useState(null),
         [ek, ej] = i.useState(!1),
         [eU, eG] = i.useState(!1),
         eB = null == eP ? void 0 : eP.guilds,
         [eZ, eF] = i.useState(null != e_ ? e_ : null),
         [eV, eH] = i.useState(null != ep ? ep : null),
-        [eY, eW] = i.useState(L.Hn),
+        [eY, eW] = i.useState(x.Hn),
         [eK, ez] = i.useState(!1),
         eq = i.useMemo(
             () => ((null == eP ? void 0 : eP.user) != null ? new D.Z(eP.user) : null),
@@ -388,7 +388,7 @@ function ec(e) {
         e6 = i.useMemo(() => {
             var e;
             let t = e0 ? f.vB(null != (e = null == e2 ? void 0 : e2.permissions) ? e : 0) : ef;
-            return null != t ? t : L.Hn;
+            return null != t ? t : x.Hn;
         }, [null == e2 ? void 0 : e2.permissions, ef, e0]),
         e7 = i.useRef(!1),
         [e9, te] = i.useState(null != eT ? eT : []),
@@ -416,7 +416,7 @@ function ec(e) {
             if (!w.default.isAuthenticated()) return void (0, j.c$)(eN, "oauth2_error_not_authenticated");
             e();
         }
-    }, [$, eN, eT, te, eM, tn, ex]);
+    }, [$, eN, eT, te, eM, tn, eL]);
     let tr = i.useCallback(
             async (e) => {
                 if (null != ev) {
@@ -473,7 +473,7 @@ function ec(e) {
                 } catch (t) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? eM(Error(e.message)) : eM(e),
-                        ex("AUTHORIZE_SCOPES"),
+                        eL("AUTHORIZE_SCOPES"),
                         ej(!1);
                 }
             },
@@ -573,15 +573,15 @@ function ec(e) {
             if (null == ew && (!e0 || null != e1) && eR)
                 if (null != eC) {
                     var e;
-                    e$(null != (e = eC.integration_type) ? e : u.Y.GUILD_INSTALL), ex("AUTHORIZE_SCOPES");
+                    e$(null != (e = eC.integration_type) ? e : u.Y.GUILD_INSTALL), eL("AUTHORIZE_SCOPES");
                 } else
                     to.length > 1
-                        ? ex("SELECT_INSTALL_TYPE")
+                        ? eL("SELECT_INSTALL_TYPE")
                         : (1 === to.length ? e$(to[0]) : null != eh ? e$(eh) : e$(u.Y.GUILD_INSTALL),
-                          ex("AUTHORIZE_SCOPES"));
+                          eL("AUTHORIZE_SCOPES"));
         }, [eC, to, e1, e0, eh, ew, eR]),
         i.useEffect(() => {
-            if (null == eJ || null != eP || null != eL) return;
+            if (null == eJ || null != eP || null != ex) return;
             eJ === u.Y.USER_INSTALL && (eF(null), eH(null));
             let e = e5.filter((e) => !B.ak.includes(e));
             0 === e5.length
@@ -591,14 +591,14 @@ function ec(e) {
                   : (0, G._$)(e6)
                     ? eM(Error("Invalid permission(s) provided."))
                     : ta();
-        }, [tt, ta, e5, e6, eJ, eP, eL]);
+        }, [tt, ta, e5, e6, eJ, eP, ex]);
     let tl = i.useCallback((e) => {
             e && eG(!0);
         }, []),
         tc = (0, l.O)(tl);
-    if (eL instanceof Error)
+    if (ex instanceof Error)
         return eS
-            ? { body: (0, r.jsx)(X.Lk, { message: eL.message }) }
+            ? { body: (0, r.jsx)(X.Lk, { message: ex.message }) }
             : eA
               ? {
                     label: ee.intl.string(ee.t.j2d6Km),
@@ -610,7 +610,7 @@ function ec(e) {
                     body: (0, r.jsx)(g.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: eL.message,
+                        children: ex.message,
                     }),
                     actions: [
                         {
@@ -622,7 +622,7 @@ function ec(e) {
                 }
               : {
                     title: ee.intl.string(ee.t.j2d6Km),
-                    subtitle: eL.message,
+                    subtitle: ex.message,
                     actions: [
                         {
                             onClick: eI,
@@ -631,7 +631,7 @@ function ec(e) {
                     ],
                 };
     let tu = (e) => {
-            e$(e), eD(null), ex("AUTHORIZE_SCOPES");
+            e$(e), eD(null), eL("AUTHORIZE_SCOPES");
         },
         td = (e, t) => {
             eW((n) => (e ? f.Od(n, t) : f.IH(n, t)));
@@ -669,14 +669,14 @@ function ec(e) {
                     label: ee.intl.string(ee.t.ZTNur7),
                     body: (0, r.jsx)(el, {}),
                 };
-            let tE = null == eL || eL instanceof Error ? {} : eL,
+            let tE = null == ex || ex instanceof Error ? {} : ex,
                 tb = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 ty = eJ === u.Y.GUILD_INSTALL && e5.includes(d.x.WEBHOOK_INCOMING),
                 tO =
                     ty ||
                     (eJ === u.Y.GUILD_INSTALL && (e5.includes(d.x.BOT) || e5.includes(d.x.APPLICATIONS_COMMANDS))),
                 tv =
-                    (0, x.yE)(null != (n = eP.application.flags) ? n : 0, J.udG.EMBEDDED) &&
+                    (0, L.yE)(null != (n = eP.application.flags) ? n : 0, J.udG.EMBEDDED) &&
                     eJ === u.Y.USER_INSTALL &&
                     e4.enabled;
             (y = (0, r.jsxs)(r.Fragment, {
@@ -730,7 +730,7 @@ function ec(e) {
                         : null,
                 ],
             })),
-                e5.includes(d.x.BOT) && !f.fS(e6, L.Hn) && (A = "AUTHORIZE_BOT_PERMISSIONS"),
+                e5.includes(d.x.BOT) && !f.fS(e6, x.Hn) && (A = "AUTHORIZE_BOT_PERMISSIONS"),
                 to.length > 1 && (S = "SELECT_INSTALL_TYPE"),
                 (t_ = (tO && null == eQ) || (ty && null == eV)),
                 (tf = !0);
@@ -794,7 +794,7 @@ function ec(e) {
                 null != S
                     ? {
                           variant: "secondary",
-                          onClick: () => ex(S),
+                          onClick: () => eL(S),
                           text: ee.intl.string(ee.t["13/7kX"]),
                       }
                     : {
@@ -807,7 +807,7 @@ function ec(e) {
                 tI.push(
                     eU
                         ? {
-                              onClick: null != A ? () => ex(A) : () => tr(!0),
+                              onClick: null != A ? () => eL(A) : () => tr(!0),
                               loading: ek,
                               disabled: null == N || t_,
                               text: t_

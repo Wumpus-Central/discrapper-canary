@@ -1,26 +1,26 @@
-a.d(e, { I: () => i });
-var r = a(395848),
-    _ = a(383704),
-    n = a(202937),
-    o = a(896247);
-let i = (t, e) => {
-    let a = (0, o.W)(),
-        i = "navigate";
+_.d(e, { I: () => E });
+var a = _(395848),
+    r = _(383704),
+    n = _(202937),
+    o = _(896247);
+let E = (t, e) => {
+    let _ = (0, o.W)(),
+        E = "navigate";
     return (
-        a &&
-            ((r.m.document && r.m.document.prerendering) || (0, n.A)() > 0
-                ? (i = "prerender")
-                : r.m.document && r.m.document.wasDiscarded
-                  ? (i = "restore")
-                  : a.type && (i = a.type.replace(/_/g, "-"))),
+        _ &&
+            ((a.m.document && a.m.document.prerendering) || (0, n.A)() > 0
+                ? (E = "prerender")
+                : a.m.document && a.m.document.wasDiscarded
+                  ? (E = "restore")
+                  : _.type && (E = _.type.replace(/_/g, "-"))),
         {
             name: t,
             value: void 0 === e ? -1 : e,
             rating: "good",
             delta: 0,
             entries: [],
-            id: (0, _.f)(),
-            navigationType: i,
+            id: (0, r.f)(),
+            navigationType: E,
         }
     );
 };

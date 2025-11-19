@@ -25,10 +25,10 @@ let P = N.QZA.CLOSED,
 function w() {
     (P = N.QZA.OPEN), (D = {});
 }
-function x() {
+function L() {
     (P = N.QZA.CLOSED), (D = {});
 }
-function L() {
+function x() {
     (P = N.QZA.SUBMITTING), (D = {});
 }
 function M(e) {
@@ -36,11 +36,11 @@ function M(e) {
     if (P !== N.QZA.SUBMITTING) return !1;
     (P = N.QZA.OPEN), (D = null != (t = e.errors) ? t : {});
 }
-function j(e) {
+function k(e) {
     let { section: t } = e;
     return t === N.oAB.ACCOUNT && w();
 }
-function k(e) {
+function j(e) {
     let { avatar: t } = e;
     (r = t), (g = void 0);
 }
@@ -141,7 +141,7 @@ function el() {
     p = void 0;
 }
 function ec() {
-    er(), eo(), x();
+    er(), eo(), L();
 }
 class eu extends (v = T.ZP.Store) {
     getFormState() {
@@ -251,12 +251,12 @@ let ed = new eu(S.Z, {
     USER_SETTINGS_ACCOUNT_INIT: w,
     USER_SETTINGS_MODAL_INIT: w,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: w,
-    USER_SETTINGS_MODAL_SET_SECTION: j,
-    USER_SETTINGS_ACCOUNT_CLOSE: x,
+    USER_SETTINGS_MODAL_SET_SECTION: k,
+    USER_SETTINGS_ACCOUNT_CLOSE: L,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ec,
-    USER_SETTINGS_ACCOUNT_SUBMIT: L,
+    USER_SETTINGS_ACCOUNT_SUBMIT: x,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: M,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM: B,

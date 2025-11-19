@@ -37,8 +37,8 @@ var i = n(54381),
     T = n(409057),
     P = n(199902),
     A = n(592125),
-    D = n(293273),
-    k = n(158776),
+    k = n(293273),
+    D = n(158776),
     R = n(699516),
     L = n(594174),
     M = n(801077),
@@ -51,7 +51,7 @@ var i = n(54381),
     B = n(981631),
     H = n(959517),
     Y = n(388032),
-    Q = n(847121);
+    Q = n(988486);
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -216,7 +216,7 @@ function q(e) {
     let { entry: n, currentUserActivity: l, variant: o } = e,
         a = (0, u.e7)([L.default], () => L.default.getUser(n.author_id)),
         s = null != (t = null == l ? void 0 : l.application_id) ? t : n.extra.application_id,
-        c = (0, u.e7)([k.Z], () => (null != a ? k.Z.getApplicationActivity(a.id, s) : null), [s, a]),
+        c = (0, u.e7)([D.Z], () => (null != a ? D.Z.getApplicationActivity(a.id, s) : null), [s, a]),
         [m, g] = r.useState("unsent");
     if (!(null != c && (0, E.Z)(c, B.xjy.JOIN))) return null;
     let y = async (e) => {
@@ -274,7 +274,7 @@ function $(e) {
         o = (0, u.e7)([L.default], () => L.default.getUser(t.author_id)),
         a = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: s, status: c } = (0, u.cj)(
-            [k.Z],
+            [D.Z],
             () =>
                 null == o
                     ? {
@@ -282,8 +282,8 @@ function $(e) {
                           status: void 0,
                       }
                     : {
-                          isMobileOnline: k.Z.isMobileOnline(o.id),
-                          status: k.Z.getStatus(o.id),
+                          isMobileOnline: D.Z.isMobileOnline(o.id),
+                          status: D.Z.getStatus(o.id),
                       },
             [o],
         );
@@ -407,7 +407,7 @@ function en(e) {
     (0, v.ZP)(() => {
         (0, Z._)();
     });
-    let o = (0, u.e7)([D.Z], () => (null == t ? null : D.Z.getApplicationActivity(t)), [t]),
+    let o = (0, u.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         d = (0, u.Wu)([M.Z, R.Z, w.Z], () => {
             if (null == t) return [];
             let e = M.Z.nowPlayingCards,
@@ -543,7 +543,7 @@ function el(e) {
         o = (0, I.Z)(r),
         a = (0, u.e7)([L.default], () => L.default.getCurrentUser()),
         s = null != l ? l : r,
-        c = (0, u.e7)([D.Z], () => (null == s ? null : D.Z.getApplicationActivity(s)), [s]);
+        c = (0, u.e7)([k.Z], () => (null == s ? null : k.Z.getApplicationActivity(s)), [s]);
     (0, v.ZP)(() => (j.L(), () => j.v()));
     let d = en({
         gamingId: s,

@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(921944),
     p = n(228168),
     h = n(388032),
-    m = n(700803);
+    m = n(885820);
 let g = () => {
     let [e, t] = (0, l.US)([a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE]),
         n = e === a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,

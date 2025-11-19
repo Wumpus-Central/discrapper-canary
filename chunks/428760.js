@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(481060),
     o = n(730671),
     c = n(388032),
-    d = n(554867);
+    d = n(650121);
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: g, initialValue: m } = e,
         p = i.useMemo(() => (null != m ? m : []), [m]),

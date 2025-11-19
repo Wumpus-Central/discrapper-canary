@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -16,7 +16,7 @@ var i = n(120356),
     _ = n(70722),
     g = n(231338),
     x = n(388032),
-    v = n(341338);
+    v = n(819112);
 function j(e) {
     let { id: t, text: n, icon: i, selected: s, onClick: o } = e;
     return (0, r.jsx)(c.P3F, {
@@ -38,7 +38,7 @@ function j(e) {
         }),
     });
 }
-function b(e) {
+function S(e) {
     let { onSourceSelect: t } = e;
     (0, f.UB)(), (0, p.Z)(t, g.Vq);
     let [{ nativeSourceType: n }, i] = (0, m.E_)(),

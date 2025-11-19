@@ -5,7 +5,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(28664),
     s = n(826298),
-    c = n(688919);
+    c = n(501934);
 let u = r.memo(function (e) {
     var t;
     let { className: n, channel: r, section: l } = e,

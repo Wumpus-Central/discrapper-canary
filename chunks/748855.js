@@ -8,8 +8,8 @@ var i = n(54381),
     c = n(481060),
     u = n(106301),
     d = n(388032),
-    p = n(948790),
-    h = n(334405);
+    p = n(103198),
+    h = n(515527);
 function f(e) {
     let { label: t, icon: n, setStatus: l, isFavorited: f, onFavoriteClick: m } = e,
         [g, b] = r.useState(!1),

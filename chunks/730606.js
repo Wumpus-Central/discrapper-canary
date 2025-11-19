@@ -27,7 +27,7 @@ var r = n(54381),
     I = n(549635),
     T = n(981631),
     S = n(388032),
-    A = n(810348);
+    A = n(652683);
 function C(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: o, height: s } = (0, b.p)(i, {
@@ -127,17 +127,17 @@ function D(e) {
             },
             c,
         ),
-        x = d
+        L = d
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
-        L = t.length > 1;
+        x = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.ZP, {
                 children: (e) =>
-                    L
+                    x
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(v.Z, {
@@ -173,11 +173,11 @@ function D(e) {
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
-                                onContextMenu: x,
+                                onContextMenu: L,
                             }),
                     }),
             }),
-            L &&
+            x &&
                 (0, r.jsx)(y.ZP, {
                     children: (e) =>
                         (0, r.jsx)(O.Z, {

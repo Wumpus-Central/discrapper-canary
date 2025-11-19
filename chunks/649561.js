@@ -21,11 +21,11 @@ var i = n(54381),
     E = n(41534),
     S = n(837268),
     Z = n(692546),
-    x = n(518084),
-    j = n(987650),
+    j = n(518084),
+    x = n(987650),
     C = n(981631),
     I = n(388032),
-    P = n(975290);
+    P = n(577694);
 function w(e, t, n) {
     return (
         t in e
@@ -60,7 +60,7 @@ function D() {
 class k extends r.PureComponent {
     componentDidMount() {
         (this.notificationTimer = setTimeout(this.hideNotification, T)),
-            f.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: j.n0.OverlayCrashed });
+            f.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -98,11 +98,11 @@ class k extends r.PureComponent {
                                       locked: !1,
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(x.ZP, {
+                                      ? (0, i.jsxs)(j.ZP, {
                                             className: P.stackTrace,
                                             children: [
-                                                (0, i.jsx)(x.ZP.Bar, { children: "Error Details" }),
-                                                (0, i.jsx)(x.ZP.Content, {
+                                                (0, i.jsx)(j.ZP.Bar, { children: "Error Details" }),
+                                                (0, i.jsx)(j.ZP.Content, {
                                                     className: P.stackTraceCode,
                                                     children: (0, i.jsx)("code", {
                                                         className: P.code,
@@ -136,7 +136,7 @@ class k extends r.PureComponent {
                     f.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: j.n0.OverlayCrashed,
+                            notif_type: x.n0.OverlayCrashed,
                             action_type: "reload",
                         },
                         !0,

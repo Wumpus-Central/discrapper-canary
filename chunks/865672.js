@@ -15,7 +15,7 @@ var r = n(54381),
     s = n(442837),
     l = n(607070),
     c = n(981631),
-    u = n(842926);
+    u = n(715882);
 let d = RegExp("\\p{Extended_Pictographic}", "gu");
 function f(e) {
     var t, n, r;

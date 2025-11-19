@@ -25,7 +25,7 @@ var r = n(54381),
     A = n(981631),
     C = n(957825),
     N = n(388032),
-    R = n(911166);
+    R = n(357668);
 function P(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function w(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function x(e, t) {
         e
     );
 }
-let L = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
+let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
     k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
@@ -87,7 +87,7 @@ let L = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     Z = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     F = k + M + 2 * U,
-    V = L + M,
+    V = x + M,
     H = V + (B + 2 * Z),
     Y = k + j + 2 * U,
     W = 7;
@@ -108,7 +108,7 @@ function K(e) {
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
-            x(D({}, p), {
+            L(D({}, p), {
                 "aria-label": (0, O.Nf)(l, E),
                 className: o()({
                     [R.categoryItemGuildCategory]: null != E,
@@ -204,8 +204,8 @@ let z = (e) => {
                 }),
             [b, v, A, y, P, D],
         ),
-        x = i.useMemo(() => [8, 8, 0, 8], []),
-        L = i.useCallback(
+        L = i.useMemo(() => [8, 8, 0, 8], []),
+        x = i.useCallback(
             (e, t) => {
                 let n = A[t];
                 if (n.type === S.En.RECENT) return F;
@@ -289,12 +289,12 @@ let z = (e) => {
         className: t,
         store: h.kJ,
         categories: A,
-        listPadding: x,
+        listPadding: L,
         onScroll: $,
         renderCategoryListItem: w,
         renderSection: en,
         rowCount: A.length,
-        categoryHeight: L,
+        categoryHeight: x,
         getScrollOffsetForIndex: et,
         rowCountBySection: X,
         children: (e) =>

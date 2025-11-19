@@ -1,40 +1,40 @@
-a.d(e, {
+_.d(e, {
     V: () => o,
     y: () => n,
 });
-var r = a(370336);
-let _ = "_sentryMetrics";
+var a = _(370336);
+let r = "_sentryMetrics";
 function n(t) {
-    let e = t[_];
+    let e = t[r];
     if (!e) return;
-    let a = {};
-    for (let [, [t, _]] of e) (a[t] || (a[t] = [])).push((0, r.Jr)(_));
-    return a;
+    let _ = {};
+    for (let [, [t, r]] of e) (_[t] || (_[t] = [])).push((0, a.Jr)(r));
+    return _;
 }
-function o(t, e, a, r, n, o, i) {
-    let E = t[_] || (t[_] = new Map()),
-        c = `${e}:${a}@${n}`,
-        s = E.get(i);
+function o(t, e, _, a, n, o, E) {
+    let i = t[r] || (t[r] = new Map()),
+        c = `${e}:${_}@${n}`,
+        s = i.get(E);
     if (s) {
         let [, t] = s;
-        E.set(i, [
+        i.set(E, [
             c,
             {
-                min: Math.min(t.min, r),
-                max: Math.max(t.max, r),
+                min: Math.min(t.min, a),
+                max: Math.max(t.max, a),
                 count: (t.count += 1),
-                sum: (t.sum += r),
+                sum: (t.sum += a),
                 tags: t.tags,
             },
         ]);
     } else
-        E.set(i, [
+        i.set(E, [
             c,
             {
-                min: r,
-                max: r,
+                min: a,
+                max: a,
                 count: 1,
-                sum: r,
+                sum: a,
                 tags: o,
             },
         ]);

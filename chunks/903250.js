@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(638631),
     T = n(869783),
     S = n(388032),
-    A = n(876544),
+    A = n(452761),
     C = n(181960),
     N = n(313199),
     R = n(821969);
@@ -35,8 +35,8 @@ let P = (e, t) => {
                 isEligibleForBogoPromotion: D,
                 videoRef: w,
             } = e,
-            { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            L = (0, g._O)(),
+            { analyticsLocations: L } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
+            x = (0, g._O)(),
             M = (0, m.Nx)(),
             k = (0, s.e7)([h.Z], () => h.Z.affinities),
             j = (0, E.Z)(),
@@ -47,7 +47,7 @@ let P = (e, t) => {
             F = (0, p.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)(f.Gt, {
-            value: x,
+            value: L,
             children: (0, r.jsxs)("div", {
                 className: o()(A.container, A.heroHeadingContainer, n),
                 ref: t,
@@ -76,7 +76,7 @@ let P = (e, t) => {
                                               isApplicationHome: !0,
                                           }),
                                       }),
-                                L
+                                x
                                     ? (0, r.jsx)("div", {
                                           className: o()(A.buttonContainer, A.marketingPageCTAContainer, {
                                               [A.marketingPageCTAMargin]: !(B || U),

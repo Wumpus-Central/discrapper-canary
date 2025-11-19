@@ -6,8 +6,8 @@ var i = n(120356),
     a = n(481060),
     s = n(782568),
     o = n(388032),
-    c = n(520310),
-    d = n(315665);
+    c = n(880637),
+    d = n(912220);
 let u = (e) => {
     let {
         data: { url: t, link_text: n, link_description: i, is_localized: o },

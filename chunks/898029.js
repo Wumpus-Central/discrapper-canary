@@ -1,23 +1,23 @@
-a.d(e, { E: () => s });
-var r = a(573736),
-    _ = a(202811),
-    n = a(370336),
-    o = a(886115),
-    i = a(622916),
-    E = a(151122),
-    c = a(255768);
-let s = (0, E._I)((t = {}) => {
-    let { depth: e = 3, captureErrorCause: a = !0 } = t;
+_.d(e, { E: () => s });
+var a = _(573736),
+    r = _(202811),
+    n = _(370336),
+    o = _(886115),
+    E = _(622916),
+    i = _(151122),
+    c = _(255768);
+let s = (0, i._I)((t = {}) => {
+    let { depth: e = 3, captureErrorCause: _ = !0 } = t;
     return {
         name: "ExtraErrorData",
-        processEvent(t, E, s) {
+        processEvent(t, i, s) {
             let { maxValueLength: l = 250 } = s.getOptions();
-            return (function (t, e = {}, a, E, s) {
-                if (!e.originalException || !(0, r.VZ)(e.originalException)) return t;
+            return (function (t, e = {}, _, i, s) {
+                if (!e.originalException || !(0, a.VZ)(e.originalException)) return t;
                 let l = e.originalException.name || e.originalException.constructor.name,
-                    I = (function (t, e, a) {
+                    I = (function (t, e, _) {
                         try {
-                            let _ = [
+                            let r = [
                                     "name",
                                     "message",
                                     "stack",
@@ -30,33 +30,33 @@ let s = (0, E._I)((t = {}) => {
                                 ],
                                 n = {};
                             for (let e of Object.keys(t)) {
-                                if (-1 !== _.indexOf(e)) continue;
-                                let i = t[e];
-                                n[e] = (0, r.VZ)(i) || "string" == typeof i ? (0, o.$G)(`${i}`, a) : i;
+                                if (-1 !== r.indexOf(e)) continue;
+                                let E = t[e];
+                                n[e] = (0, a.VZ)(E) || "string" == typeof E ? (0, o.$G)(`${E}`, _) : E;
                             }
                             if (
                                 (e &&
                                     void 0 !== t.cause &&
-                                    (n.cause = (0, r.VZ)(t.cause) ? t.cause.toString() : t.cause),
+                                    (n.cause = (0, a.VZ)(t.cause) ? t.cause.toString() : t.cause),
                                 "function" == typeof t.toJSON)
                             ) {
                                 let e = t.toJSON();
                                 for (let t of Object.keys(e)) {
-                                    let a = e[t];
-                                    n[t] = (0, r.VZ)(a) ? a.toString() : a;
+                                    let _ = e[t];
+                                    n[t] = (0, a.VZ)(_) ? _.toString() : _;
                                 }
                             }
                             return n;
                         } catch (t) {
-                            c.X && i.kg.error("Unable to extract extra data from the Error object:", t);
+                            c.X && E.kg.error("Unable to extract extra data from the Error object:", t);
                         }
                         return null;
-                    })(e.originalException, E, s);
+                    })(e.originalException, i, s);
                 if (I) {
                     let e = { ...t.contexts },
-                        o = (0, _.Fv)(I, a);
+                        o = (0, r.Fv)(I, _);
                     return (
-                        (0, r.PO)(o) && ((0, n.xp)(o, "__sentry_skip_normalization__", !0), (e[l] = o)),
+                        (0, a.PO)(o) && ((0, n.xp)(o, "__sentry_skip_normalization__", !0), (e[l] = o)),
                         {
                             ...t,
                             contexts: e,
@@ -64,7 +64,7 @@ let s = (0, E._I)((t = {}) => {
                     );
                 }
                 return t;
-            })(t, E, e, a, l);
+            })(t, i, e, _, l);
         },
     };
 });

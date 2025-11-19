@@ -29,10 +29,10 @@ var r = n(54381),
     P = n(753194),
     D = n(458034),
     w = n(856651),
-    x = n(981631),
-    L = n(228168),
+    L = n(981631),
+    x = n(228168),
     M = n(388032),
-    k = n(852529);
+    k = n(953605);
 function j(e, t, n) {
     return (
         t in e
@@ -236,7 +236,7 @@ function V(e) {
         } = e;
     i.useEffect(() => {
         S.default.track(
-            x.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
+            L.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
             U(
                 {
                     other_user_id: s,
@@ -330,7 +330,7 @@ function H(e) {
                               guildId: a.id,
                               channelId: s.id,
                               roleId: u.id,
-                              subsection: L.Tb.CONNECTIONS,
+                              subsection: x.Tb.CONNECTIONS,
                               sourceAnalyticsLocations: l,
                           }),
                               i();

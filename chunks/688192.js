@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => x,
-    Z: () => C,
+    U: () => C,
+    Z: () => x,
 });
 var r,
     i = n(54381),
@@ -12,8 +12,8 @@ var r,
     u = n(906732),
     d = n(607550),
     p = n(602733),
-    f = n(594174),
-    h = n(626135),
+    h = n(594174),
+    f = n(626135),
     g = n(51144),
     m = n(221292),
     b = n(461631),
@@ -21,16 +21,16 @@ var r,
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    j = n(232644),
-    x = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), (r.LARGE = "large"), r);
-function C(e) {
+    j = n(988388),
+    C = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), (r.LARGE = "large"), r);
+function x(e) {
     let {
             item: t,
             wishlistId: n,
             isOwner: r,
             cardSize: o = "medium",
-            showOverlayButton: x = !0,
-            cardRef: C,
+            showOverlayButton: C = !0,
+            cardRef: x,
             renderItemPreview: E,
             accessibleLabel: S,
             onCardClick: I,
@@ -43,10 +43,10 @@ function C(e) {
         } = e,
         R = l.useRef(null),
         D = l.useRef(null),
-        L = null != C ? C : D,
+        L = null != x ? x : D,
         { analyticsLocations: M } = (0, u.ZP)(),
         k = r && !0 === t.isOwned && null != t.gifterUserId,
-        G = null != t.gifterUserId ? f.default.getUser(t.gifterUserId) : null,
+        G = null != t.gifterUserId ? h.default.getUser(t.gifterUserId) : null,
         U = null != G ? g.ZP.getName(G) : null,
         B = k && null != G && null != U && "" !== U,
         F = B
@@ -84,7 +84,7 @@ function C(e) {
         z = () => {
             if (T === O.Wt.DM_CHANNEL_WISHLIST) {
                 let e = A === p.lr.WISHLIST ? "wishlist" : "shop";
-                h.default.track(y.rMx.GIFTING_ITEM_CLICKED, {
+                f.default.track(y.rMx.GIFTING_ITEM_CLICKED, {
                     sku_id: t.skuId,
                     item_source: e,
                     wishlist_id: A === p.lr.WISHLIST ? n : null,
@@ -122,7 +122,7 @@ function C(e) {
                             children: E(),
                         }),
                         Z && V,
-                        x
+                        C
                             ? H
                             : (0, i.jsx)(c.P3F, {
                                   "aria-label": P,

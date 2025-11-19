@@ -2,7 +2,7 @@ n.d(t, {
     Pv: () => U,
     e5: () => R,
     gx: () => P,
-    lp: () => k,
+    lp: () => j,
     wi: () => D,
 }),
     n(997841),
@@ -102,7 +102,7 @@ function N(e) {
             timestamp: new Date(e.timestamp),
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             attachments: w(e),
-            embeds: L(e),
+            embeds: x(e),
             components: (0, o.uZ)(null != (t = e.components) ? t : []),
             codedLinks: y.V$x.NON_PARSED.has(e.type) ? [] : (0, a.ZP)(e.content),
         }),
@@ -119,8 +119,8 @@ function R(e) {
         P = null != (l = e.mention_games) ? l : [],
         D = e.message_reference,
         w = A(e),
-        L = null,
-        k = null == e ? void 0 : e.gift_info,
+        x = null,
+        j = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
         G = null != e.interaction ? c.Z.createFromServer(e.interaction) : null,
         B =
@@ -134,7 +134,7 @@ function R(e) {
         (e.type === y.uaV.PREMIUM_REFERRAL &&
             ((p = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = "")),
         C(e))
-            ? T(v({}, L), {
+            ? T(v({}, x), {
                   id: e.id,
                   channel_id: e.channel_id,
                   type: y.uaV.DEFAULT,
@@ -142,7 +142,7 @@ function R(e) {
                   timestamp: O.timestamp,
                   isUnsupported: !0,
               })
-            : T(v({}, e, L, O.toJS()), {
+            : T(v({}, e, x, O.toJS()), {
                   author: w,
                   webhookId: e.webhook_id,
                   blocked: _.Z.isBlockedForMessage(e) || (null != B && _.Z.isBlocked(B)),
@@ -164,8 +164,8 @@ function R(e) {
                   giftCodes: (0, m.Fp)(e) ? (0, m.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, m.Q_)(e.content),
                   content: Z,
                   referralTrialOfferId: p,
-                  call: x(e.call, O.timestamp),
-                  messageSnapshots: j(e),
+                  call: L(e.call, O.timestamp),
+                  messageSnapshots: k(e),
                   reactions: M(null != h ? h : e.reactions, e.poll),
                   interaction: G,
                   interactionData: null != b ? b : e.interaction_data,
@@ -175,7 +175,7 @@ function R(e) {
                   poll: null == e.poll ? void 0 : (0, s.Z)(e.poll),
                   sharedClientTheme: e.shared_client_theme,
                   potions: e.potions,
-                  giftInfo: null == k ? void 0 : k,
+                  giftInfo: null == j ? void 0 : j,
                   giftingPrompt: U,
               }),
     );
@@ -197,13 +197,13 @@ function D(e, t) {
     let n = e,
         r = !1;
     if (
-        (null != t.call && (n = n.set("call", x(t.call, e.timestamp))),
+        (null != t.call && (n = n.set("call", L(t.call, e.timestamp))),
         null != t.attachments && (n = n.set("attachments", w(t))),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
-        null != t.embeds && (n = n.set("embeds", L(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", j(t))),
+        null != t.embeds && (n = n.set("embeds", x(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", k(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new d.Z(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
@@ -240,7 +240,7 @@ function D(e, t) {
 function w(e) {
     return null == e.attachments ? [] : e.attachments.map((e) => T(v({}, e), { spoiler: e.filename.startsWith(b._j) }));
 }
-function x(e, t) {
+function L(e, t) {
     if (null != e) {
         let n = null != e.ended_timestamp ? i()(new Date(e.ended_timestamp)) : null,
             r = null != n ? i().duration(n.diff(t)) : null;
@@ -252,7 +252,7 @@ function x(e, t) {
     }
     return null;
 }
-function L(e) {
+function x(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, h.kC)(e.channel_id, e.id, t));
     return (0, h.o3)(t);
@@ -286,7 +286,7 @@ function M(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
-function j(e) {
+function k(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
@@ -297,7 +297,7 @@ function j(e) {
               });
           });
 }
-let k = (e) => 0 === (0, l.cv)(e).length || "" !== e.content;
+let j = (e) => 0 === (0, l.cv)(e).length || "" !== e.content;
 function U(e) {
     return e.hasFlag(y.iLy.EPHEMERAL) && e.type !== y.uaV.IN_GAME_MESSAGE_NUX;
 }

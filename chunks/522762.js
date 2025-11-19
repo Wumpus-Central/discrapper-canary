@@ -1,17 +1,17 @@
-n.d(t, { Z: () => u });
-var r = n(54381);
+n.d(t, { Z: () => o });
+var i = n(54381);
 n(473749);
-var i = n(442837),
-    l = n(481060),
-    a = n(5036),
-    c = n(9156),
-    o = n(388032);
-function u(e) {
-    let t = (0, i.e7)([c.ZP], () => c.ZP.isGuildCollapsed(e), [e]);
-    return (0, r.jsx)(l.S89, {
+var r = n(442837),
+    s = n(481060),
+    l = n(5036),
+    a = n(9156),
+    c = n(388032);
+function o(e) {
+    let t = (0, r.e7)([a.ZP], () => a.ZP.isGuildCollapsed(e), [e]);
+    return (0, i.jsx)(s.S89, {
         id: "hide-muted-channels",
-        label: o.intl.string(o.t.UwOLJO),
-        action: () => a.Z.toggleCollapseGuild(e),
+        label: c.intl.string(c.t.UwOLJO),
+        action: () => l.Z.toggleCollapseGuild(e),
         checked: t,
     });
 }

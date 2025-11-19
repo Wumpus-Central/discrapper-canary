@@ -28,12 +28,12 @@ var r = n(98405),
     P = n(573078),
     D = n(117895),
     w = n(840991),
-    x = n(335024),
-    L = n(199838),
+    L = n(335024),
+    x = n(199838),
     M = n(176682),
-    j = L.get,
-    k = L.set,
-    U = L.enforce,
+    k = x.get,
+    j = x.set,
+    U = x.enforce,
     G = D.f,
     B = w.f,
     Z = i.RangeError,
@@ -51,7 +51,7 @@ var r = n(98405),
         P(e, t, {
             configurable: !0,
             get: function () {
-                return j(this)[t];
+                return k(this)[t];
             },
         });
     },
@@ -100,11 +100,11 @@ o
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = j(e);
+                  var n = k(e);
                   return n.view[c](t * o + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = j(e);
+                  var i = k(e);
                   i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
@@ -133,7 +133,7 @@ o
                                               ? new _(t, m(n, o))
                                               : new _(t)
                                         : q(t)
-                                          ? x(E, t)
+                                          ? L(E, t)
                                           : a(C, E, t)
                                     : new _(h(t));
                             })(),
@@ -162,11 +162,11 @@ o
                                 if (f % o || (s = f - d) < 0) throw new Z(Q);
                             } else if ((s = p(r) * o) + d > f) throw new Z(Q);
                             l = s / o;
-                        } else if (q(t)) return x(E, t);
+                        } else if (q(t)) return L(E, t);
                         else return a(C, E, t);
                     else i = new F((s = (l = h(t)) * o));
                     for (
-                        k(e, {
+                        j(e, {
                             buffer: i,
                             byteOffset: d,
                             byteLength: s,

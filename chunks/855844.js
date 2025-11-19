@@ -16,14 +16,14 @@ var i = n(990547),
     g = n(131951),
     v = n(19780),
     y = n(556296),
-    j = n(358085),
-    O = n(130067),
+    O = n(358085),
+    j = n(130067),
     h = n(822556),
     x = n(981631),
     _ = n(345655),
     P = n(65154),
-    w = n(388032),
-    C = n(895634);
+    C = n(388032),
+    w = n(371882);
 function E(e) {
     let {
             appContext: t,
@@ -34,8 +34,8 @@ function E(e) {
             renderDeafenCheckbox: S = !1,
             renderInputProfiles: N = !1,
             renderOutputDevices: Z = !1,
-            renderOutputVolume: D = !1,
-            renderInputDevices: k = !1,
+            renderOutputVolume: k = !1,
+            renderInputDevices: D = !1,
             renderInputVolume: M = !1,
             maybeRenderInputMeter: A = !1,
             renderSettingsButton: R = !1,
@@ -81,11 +81,11 @@ function E(e) {
             onClose: I,
             navId: "audio-device-context",
             variant: "fixed",
-            "aria-label": w.intl.string(w.t.ZR1Ss6),
-            className: C.menu,
+            "aria-label": C.intl.string(C.t.ZR1Ss6),
+            className: w.menu,
             children: [
                 (0, r.jsxs)(a.kSQ, {
-                    children: [k && F, N && H, Z && U],
+                    children: [D && F, N && H, Z && U],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
@@ -95,24 +95,24 @@ function E(e) {
                             (0, r.jsx)(a.II_, {
                                 id: "input-device-meter",
                                 control: () =>
-                                    (0, r.jsx)(O.Z, {
-                                        notchBackground: O._.BLACK,
+                                    (0, r.jsx)(j.Z, {
+                                        notchBackground: j._.BLACK,
                                         location: { section: x.jXE.CONTEXT_MENU },
                                         meterOnly: !0,
-                                        containerClassName: C.customMenuItem,
-                                        notchClassName: C.customNotches,
+                                        containerClassName: w.customMenuItem,
+                                        notchClassName: w.customNotches,
                                     }),
                             }),
-                        D && B,
+                        k && B,
                     ],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        T && j.isPlatformEmbedded && K
+                        T && O.isPlatformEmbedded && K
                             ? (0, r.jsx)(a.S89, {
                                   checked: X === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
-                                  label: w.intl.string(w.t.Q8gkVL),
+                                  label: C.intl.string(C.t.Q8gkVL),
                                   action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: L }),
                                   disabled: Y === _._.STUDIO,
                               })
@@ -122,7 +122,7 @@ function E(e) {
                                 a.S89,
                                 {
                                     id: "deafen",
-                                    label: w.intl.string(w.t.wjcRFX),
+                                    label: C.intl.string(C.t.wjcRFX),
                                     action: () =>
                                         s.Z.toggleSelfDeaf({
                                             context: q,

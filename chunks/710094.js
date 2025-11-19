@@ -1,4 +1,4 @@
-n.d(t, { l: () => L }), n(388685), n(415506);
+n.d(t, { l: () => x }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -28,13 +28,13 @@ var r = n(54381),
     R = n(474936),
     P = n(231338),
     D = n(388032),
-    w = n(108626);
-let x = 500;
-function L(e) {
+    w = n(491881);
+let L = 500;
+function x(e) {
     var t, n;
     let a,
         {
-            handleStepChange: L,
+            handleStepChange: x,
             trialId: M,
             trialFooterMessageOverride: k,
             reviewWarningMessage: j,
@@ -81,7 +81,7 @@ function L(e) {
         { isGift: eO, giftMessage: ev, giftRecipient: eI, claimableRewards: eT } = (0, m.wD)();
     o()(null != ec, "Step should be set");
     let eS = i.useRef(null),
-        [eA, eC] = (0, l.Z)(!1, x),
+        [eA, eC] = (0, l.Z)(!1, L),
         eN = null != (n = null != M ? M : F) ? n : null,
         eR = null != eN && (!ed || R.nG[eN].skus.includes(er)) ? eN : null,
         eP = (0, f.N)(F),
@@ -90,22 +90,22 @@ function L(e) {
     i.useEffect(() => {
         null != $ && null != eS.current && eS.current.scrollIntoView({ behavior: "smooth" });
     }, [$]);
-    let ex = i.useCallback(
+    let eL = i.useCallback(
             (e, t, n) => {
                 K(e),
                     null != t && ep(t),
                     null != n && eh(n),
-                    L(E.h8.CONFIRM, {
+                    x(E.h8.CONFIRM, {
                         fulfillment: {
                             subscription: e,
                             entitlements: t,
                         },
                     });
             },
-            [L, K, ep, eh],
+            [x, K, ep, eh],
         ),
-        eL = (0, S.m)(Q, X),
-        eM = null != en && R.o4.has(en.id) && null != eL && !(0, c.aQ)(eL) ? Error(D.intl.string(D.t["2ik8ih"])) : null,
+        ex = (0, S.m)(Q, X),
+        eM = null != en && R.o4.has(en.id) && null != ex && !(0, c.aQ)(ex) ? Error(D.intl.string(D.t["2ik8ih"])) : null,
         ek = i.useRef(null),
         [ej, eU] = i.useState(null),
         eG = !eO && null != eP && null != er && R.nG[eP.trial_id].skus.includes(er),
@@ -125,17 +125,17 @@ function L(e) {
         ez = i.useCallback(
             () =>
                 eH
-                    ? void L(E.h8.SKU_SELECT)
+                    ? void x(E.h8.SKU_SELECT)
                     : eK
-                      ? void L(E.h8.SELECT_FREE_SKU)
+                      ? void x(E.h8.SELECT_FREE_SKU)
                       : eY
-                        ? L(E.h8.GIFT_CUSTOMIZATION)
-                        : L(E.h8.PLAN_SELECT),
-            [L, eH, eY, eK],
+                        ? x(E.h8.GIFT_CUSTOMIZATION)
+                        : x(E.h8.PLAN_SELECT),
+            [x, eH, eY, eK],
         ),
         eq = !1,
         eX = () => {
-            L(E.h8.ADD_PAYMENT_STEPS);
+            x(E.h8.ADD_PAYMENT_STEPS);
         };
     return (
         e_ === P.GZ.ONE_TIME
@@ -144,9 +144,9 @@ function L(e) {
                   hasLegalTermsFlash: eA,
                   legalTermsNodeRef: ek,
                   onPaymentSourceChange: (e) => eo(null != e ? e.id : null),
-                  handlePaymentSourceAdd: () => L(E.h8.ADD_PAYMENT_STEPS),
+                  handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS),
               })))
-            : ((eq = null == eg || (!eO && null != eL && e_ === P.GZ.SUBSCRIPTION && eG && !eL.canRedeemTrial())),
+            : ((eq = null == eg || (!eO && null != ex && e_ === P.GZ.SUBSCRIPTION && eG && !ex.canRedeemTrial())),
               null == W || eE || eO
                   ? (o()(null != en, "Expected plan to be selected"),
                     (a = (0, r.jsx)(_.Z, {
@@ -157,7 +157,7 @@ function L(e) {
                         priceOptions: J,
                         currencies: q,
                         onCurrencyChange: (e) => ea(e),
-                        handlePaymentSourceAdd: () => L(E.h8.ADD_PAYMENT_STEPS),
+                        handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: ef,
                         legalTermsNodeRef: ek,
                         hasLegalTermsFlash: eA,
@@ -212,7 +212,7 @@ function L(e) {
                         premiumSubscription: null != W ? W : null,
                         setPurchaseState: es,
                         onBack: ez,
-                        onNext: ex,
+                        onNext: eL,
                         onPurchaseError: (e) => el(e),
                         legalTermsNodeRef: ek,
                         flashLegalTerms: () => eC(!0),

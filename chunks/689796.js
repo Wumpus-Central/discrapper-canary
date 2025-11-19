@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(600164),
     o = n(981631),
     c = n(388032),
-    u = n(315208);
+    u = n(709793);
 class d extends i.PureComponent {
     renderContentRatingImage() {
         let { contentRating: e, contentRatingAgency: t } = this.props.sku;

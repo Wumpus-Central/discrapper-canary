@@ -18,7 +18,7 @@ var r,
     _ = n(110924),
     p = n(358085),
     h = n(425493),
-    m = n(630016);
+    m = n(551955);
 function g(e, t, n) {
     return (
         t in e
@@ -321,7 +321,7 @@ let P = function (e) {
             ],
         });
     }
-    function x() {
+    function L() {
         return null == t
             ? null
             : (0, i.jsx)(f.f6W, {
@@ -355,7 +355,7 @@ let P = function (e) {
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: m.standardSidebarView,
-                children: [!t && x(), w()],
+                children: [!t && L(), w()],
             }),
         ),
     });

@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(215124),
     b = n(981631),
     x = n(388032),
-    j = n(150043);
+    j = n(440701);
 function _(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)()

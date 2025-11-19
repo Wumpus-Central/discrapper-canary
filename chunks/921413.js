@@ -1,4 +1,4 @@
-var e = n(829575),
+var e = n(525320),
     o = String,
     i = TypeError;
 t.exports = function (t) {

@@ -29,12 +29,12 @@ var r = n(54381),
     P = n(622909),
     D = n(639119),
     w = n(2359),
-    x = n(132547),
-    L = n(474936),
+    L = n(132547),
+    x = n(474936),
     M = n(981631),
-    k = n(166893);
+    k = n(790595);
 let j = function (e) {
-    let { entrypoint: t = L.EZ.UserSettings } = e;
+    let { entrypoint: t = x.EZ.UserSettings } = e;
     (0, y.z)(b.X);
     let n = (0, m.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: j } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
@@ -44,10 +44,10 @@ let j = function (e) {
         Z = null == B ? void 0 : B.id,
         F = (0, D.N)(),
         V = (0, P.N)(),
-        H = (0, g.V)(L.nS),
+        H = (0, g.V)(x.nS),
         [Y, W] = i.useState(!0),
         K = i.useRef(0),
-        z = (0, A.M5)(B, L.PremiumTypes.TIER_2),
+        z = (0, A.M5)(B, x.PremiumTypes.TIER_2),
         q = (0, R.Z)({ location: "PremiumMarketingPage" }),
         X = (0, s.e7)([C.Z], () => C.Z.hasFetched);
     i.useEffect(() => {
@@ -72,7 +72,7 @@ let j = function (e) {
             n && (null != F || null != V) && (0, N.ab)(F, V);
         }, [n, F, V]);
     let Q = (0, s.e7)([O.Z], () => O.Z.enabled),
-        J = t === L.EZ.ApplicationStoreHome,
+        J = t === x.EZ.ApplicationStoreHome,
         $ = Q
             ? (0, r.jsx)(f.Z, {})
             : n
@@ -80,7 +80,7 @@ let j = function (e) {
               : J && z
                 ? (0, r.jsx)(h.Gt, {
                       value: j,
-                      children: (0, r.jsx)(x.Z, { userId: Z }),
+                      children: (0, r.jsx)(L.Z, { userId: Z }),
                   })
                 : U && H && G
                   ? null

@@ -71,7 +71,7 @@ function T() {
         })),
         T = v.Z.getVerificationTypes(e),
         [N, P] = l.useState(0),
-        w = (0, m.Z)(T);
+        I = (0, m.Z)(T);
     (0, h.Z)(
         {
             type: r.ImpressionTypes.MODAL,
@@ -84,7 +84,7 @@ function T() {
         {},
         [T.toString()],
     );
-    let I = () => {
+    let w = () => {
         (0, u.FD)(),
             (0, o.ZDy)(
                 async () => {
@@ -108,7 +108,7 @@ function T() {
             [],
         ),
         l.useEffect(() => {
-            (null == w ? void 0 : w[0]) === y.PUi.PHONE &&
+            (null == I ? void 0 : I[0]) === y.PUi.PHONE &&
                 (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
@@ -126,10 +126,10 @@ function T() {
                     {
                         modalKey: _.HR,
                         Layer: x.ZP,
-                        onCloseCallback: I,
+                        onCloseCallback: w,
                     },
                 );
-        }, [T, w]),
+        }, [T, I]),
         (0, a.jsx)(j.Z, {
             types: T,
             captchaKey: N,
@@ -148,7 +148,7 @@ function T() {
             theme: t,
             onClick: (e) => {
                 e === y.PUi.EMAIL_OR_PHONE || e === y.PUi.EMAIL || e === y.PUi.REVERIFY_EMAIL
-                    ? I()
+                    ? w()
                     : (0, o.ZDy)(
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 607018));

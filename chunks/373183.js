@@ -8,15 +8,15 @@ var r = n(54381),
     c = n(28664),
     u = n(481060),
     d = n(104505),
-    p = n(527685),
-    g = n(335131),
+    g = n(527685),
+    p = n(335131),
     f = n(597688),
-    h = n(1870),
-    m = n(832149),
+    m = n(1870),
+    h = n(832149),
     C = n(911390),
     _ = n(388032),
-    b = n(213301),
-    v = n(290181),
+    b = n(374874),
+    v = n(812388),
     x = n(250967),
     E = n(182975),
     O = n(655603);
@@ -25,7 +25,7 @@ let S = l.memo(function (e) {
         i = l.useRef(null),
         { isHoveringOrFocusing: S } = (0, d.Z)(i),
         { readyToClaim: y, collectibleProductSkuIds: j, collectedSkuIds: k } = (0, C.q)(t, n),
-        I = (0, o.e7)([h.Z], () => h.Z.isClaiming === n);
+        I = (0, o.e7)([m.Z], () => m.Z.isClaiming === n);
     return (0, r.jsx)("div", {
         ref: i,
         className: a()(b.productCardContainer, v.defaultCursor, { [b.hovered]: S }),
@@ -83,8 +83,8 @@ let S = l.memo(function (e) {
                                     className: b.footerInfoShrinkOnHover,
                                     children: (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(p.Z, {
-                                                variant: p.y.BLUE,
+                                            (0, r.jsx)(g.Z, {
+                                                variant: g.y.BLUE,
                                                 progress: k.length,
                                                 maximum: j.length,
                                             }),
@@ -123,11 +123,11 @@ let S = l.memo(function (e) {
                                     onClick: (e) => {
                                         e.stopPropagation(),
                                             y &&
-                                                (0, g.wW)(t.skuId, n)
+                                                (0, p.wW)(t.skuId, n)
                                                     .then(() => {
                                                         let e = f.Z.getProduct(n);
                                                         null != e &&
-                                                            (0, m.Z)({
+                                                            (0, h.Z)({
                                                                 product: e,
                                                                 analyticsLocations: [],
                                                                 overrideGraphic: {

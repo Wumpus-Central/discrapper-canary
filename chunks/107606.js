@@ -14,7 +14,7 @@ var l = n(442837),
     h = n(594174),
     x = n(176038),
     g = n(469115),
-    f = n(685960);
+    f = n(535548);
 function b() {
     var e, t, n, b, v, j, _, y;
     (0, u.mw)();
@@ -25,10 +25,10 @@ function b() {
         T = (0, l.e7)([c.Z], () => c.Z.purchases),
         N = (0, d.Ad)(T),
         P = (0, d.jT)(T),
-        w = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
-        I = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-        k = null != w && null != (v = N.find((e) => e.skuId === w)) ? v : null,
-        R = null != I && null != (j = P.find((e) => e.skuId === I)) ? j : null,
+        I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
+        w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+        k = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
         A = (0, l.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
         Z = (0, l.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, l.e7)([s.Z], () => s.Z.fontSize),

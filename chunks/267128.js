@@ -30,8 +30,8 @@ var r = n(54381),
     C = n(217702),
     N = n(981631),
     R = n(388032),
-    P = n(724913),
-    D = n(430864);
+    P = n(136907),
+    D = n(602009);
 function w(e) {
     let { width: t = 12, height: n = 8, color: i = "currentColor", className: a, foreground: o } = e;
     return (0, r.jsx)("svg", {
@@ -46,7 +46,7 @@ function w(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
     return (0, r.jsx)("svg", {
         className: i,
@@ -60,7 +60,7 @@ function x(e) {
         }),
     });
 }
-function L(e, t, n, i, a, s) {
+function x(e, t, n, i, a, s) {
     return (0, r.jsx)("img", {
         alt: "",
         src:
@@ -110,7 +110,7 @@ function M(e, t, n) {
         a.message.type === N.uaV.GUILD_DEADCHAT_REVIVE_PROMPT ||
         a.message.type === N.uaV.GUILD_GAMING_STATS_PROMPT
     )
-        return (0, r.jsx)(x, { className: P.userJoinSystemMessageIcon });
+        return (0, r.jsx)(L, { className: P.userJoinSystemMessageIcon });
     if (a.message.type === N.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
         return (0, r.jsx)(c.Prq, {
             size: "md",
@@ -124,7 +124,7 @@ function M(e, t, n) {
             height: C.WW,
             size: "custom",
         });
-    let y = () => L(a.message.author, f, o.guild_id, p, h, b);
+    let y = () => x(a.message.author, f, o.guild_id, p, h, b);
     return null != t && null != _
         ? (0, r.jsx)(d.Gt, {
               value: E,
@@ -246,7 +246,7 @@ function U(e, t, n, i, a, s) {
         A = null != E.interaction,
         C = E.hasFlag(N.iLy.IS_VOICE_MESSAGE),
         w = E.isPoll(),
-        x = E.type === N.uaV.POLL_RESULT;
+        L = E.type === N.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
             (g = (0, r.jsx)(h.Z, {
@@ -267,13 +267,13 @@ function U(e, t, n, i, a, s) {
         });
     else if (I)
         if (w) {
-            var L, M;
+            var x, M;
             u = (0, r.jsx)("div", {
                 className: o()(P.repliedTextContent, D.markup),
-                children: null == E || null == (M = E.poll) || null == (L = M.question) ? void 0 : L.text,
+                children: null == E || null == (M = E.poll) || null == (x = M.question) ? void 0 : x.text,
             });
         } else
-            x
+            L
                 ? (l = (0, m.N4)(E))
                 : S
                   ? (l = R.intl.string(R.t.kHdYCW))
@@ -324,7 +324,7 @@ function U(e, t, n, i, a, s) {
                       height: v,
                   }))
                 : (E.attachments.length > 0 || E.embeds.length > 0) &&
-                  !x &&
+                  !L &&
                   (d = (0, r.jsx)(c.XBm, {
                       size: "custom",
                       color: "currentColor",

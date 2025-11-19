@@ -22,7 +22,7 @@ var i = n(873546),
     E = n(665149),
     b = n(981631),
     y = n(176505),
-    O = n(979905);
+    O = n(477962);
 function v(e, t, n) {
     return (
         t in e
@@ -127,11 +127,11 @@ function R(e) {
             role: P,
             hideSearch: D,
             showDivider: w,
-            disableDoubleClick: x,
+            disableDoubleClick: L,
         } = e,
-        L = null == s || (0, y.AB)(s) ? null : s,
-        M = (0, a.e7)([h.Z], () => h.Z.isInChannel(L) || !1),
-        k = (0, a.e7)([c.Z], () => null != L && c.Z.getParticipantsListOpen(L)),
+        x = null == s || (0, y.AB)(s) ? null : s,
+        M = (0, a.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
+        k = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
         { enabled: j, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
     function B() {
@@ -157,14 +157,14 @@ function R(e) {
                       j && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
                           M &&
-                          null != L &&
+                          null != x &&
                           !k &&
                           l === b.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
                               className: O.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(E.ZP.Divider, {}),
-                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(L, !k) }),
+                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !k) }),
                               ],
                           }),
                   ],
@@ -176,7 +176,7 @@ function R(e) {
         toolbar: B(),
         transparent: v,
         hidden: I,
-        onDoubleClick: () => N(x),
+        onDoubleClick: () => N(L),
         "aria-label": A,
         "aria-labelledby": C,
         role: P,

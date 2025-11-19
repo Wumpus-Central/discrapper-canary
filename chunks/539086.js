@@ -1,5 +1,5 @@
 n.d(t, { M: () => I });
-var r = n(647438),
+var r = n(473749),
     i = n(286379),
     a = n(399606),
     o = n(704215),
@@ -32,7 +32,7 @@ function I(e) {
         { selectedTab: R, handleTabChange: P } = (0, h.Z)(),
         D = f.default.getCurrentUser(),
         w = null != I,
-        x = A && null != D && !w;
+        L = A && null != D && !w;
     (0, s.ZP)(() => {
         (0, d.e)("family-center"),
             null != n && n(),
@@ -42,16 +42,16 @@ function I(e) {
                     forceTrack: !0,
                 });
     });
-    let L = {
+    let x = {
             isConsideredAdult: I,
             numOfAcceptedRequests: T,
             selectedTab: R,
             selectedTeenId: N,
         },
-        M = r.useRef(L);
+        M = r.useRef(x);
     return (
         r.useEffect(() => {
-            M.current = L;
+            M.current = x;
         }),
         r.useEffect(() => {
             if (A && w) {
@@ -67,13 +67,13 @@ function I(e) {
             }
         }, [A, w, t]),
         r.useEffect(() => {
-            x && (0, l.mN)(O.L0.FAMILY_CENTER);
-        }, [x]),
+            L && (0, l.mN)(O.L0.FAMILY_CENTER);
+        }, [L]),
         {
             isLoading: C,
             selectedTab: R,
             handleTabChange: P,
-            showAgeGateModal: x,
+            showAgeGateModal: L,
         }
     );
 }

@@ -1,5 +1,5 @@
 n.d(t, { y6: () => p }), n(388685);
-var r = n(647438),
+var r = n(473749),
     i = n(442837),
     l = n(45114),
     o = n(733427),
@@ -25,8 +25,8 @@ let p = () => {
                 loading: O,
                 items: v,
                 hasMore: j,
-                cursor: x,
-                errored: C,
+                cursor: C,
+                errored: x,
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -46,9 +46,9 @@ let p = () => {
         let I = (0, o.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (C || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !I() && (x || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, v, p, I, C],
+            [n, v, p, I, x],
         ),
             r.useEffect(() => {
                 let e = g && t;
@@ -65,13 +65,13 @@ let p = () => {
                 !m.current &&
                     y &&
                     j &&
-                    null != x &&
-                    (e || !C) &&
+                    null != C &&
+                    (e || !x) &&
                     ((m.current = !0),
                     _(!0),
                     await (0, s.jk)(
                         {
-                            after: x,
+                            after: C,
                             with_mentions: h,
                             roles_filter: E,
                             everyone_filter: S,
@@ -83,7 +83,7 @@ let p = () => {
                     ),
                     _(!1));
             },
-            [y, j, x, C, h, E, S],
+            [y, j, C, x, h, E, S],
         );
         return {
             initialized: y,
@@ -95,7 +95,7 @@ let p = () => {
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: C,
+            errored: x,
         };
     })({
         isFocused: !0,

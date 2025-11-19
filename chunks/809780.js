@@ -8,7 +8,7 @@ n.d(t, {
     n(388685);
 var r,
     i,
-    l = n(647438),
+    l = n(473749),
     o = n(836560),
     a = n(512722),
     s = n.n(a),
@@ -26,8 +26,8 @@ var r,
     O = n(344185),
     v = n(569471),
     j = n(723170),
-    x = n(675478),
-    C = n(581883),
+    C = n(675478),
+    x = n(581883),
     E = n(131704),
     S = n(592125),
     I = n(984933),
@@ -315,13 +315,13 @@ class z extends o.EventEmitter {
                     a = r[o],
                     s = !a.collapsed;
                 (i[t] = s),
-                    (0, x.BU)(
+                    (0, C.BU)(
                         n,
                         t,
                         (e) => {
                             e.collapsedInInbox = s;
                         },
-                        x.fy.FREQUENT_USER_ACTION,
+                        C.fy.FREQUENT_USER_ACTION,
                     ),
                     this.setState({
                         scrollToChannelIndex: o,
@@ -386,7 +386,7 @@ function K() {
     let e = (function () {
             var e, t;
             let n = {},
-                r = null != (t = null == (e = C.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
+                r = null != (t = null == (e = x.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
             for (let e in r)
                 for (let t in r[e].channels) {
                     let i = S.Z.getChannel(t);

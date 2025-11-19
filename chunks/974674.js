@@ -22,7 +22,7 @@ var r = n(54381),
     m = n(419061),
     g = n(268685),
     E = n(388032),
-    b = n(536537);
+    b = n(257702);
 function y(e, t, n) {
     return (
         t in e
@@ -318,7 +318,7 @@ function w(e, t, n) {
         y: e.size - i.height - e.offset,
     });
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let { size: r, status: i, stroke: a, offset: o } = e,
         s = n ? i * g.D6 : i,
         l = (s - i) / 2,
@@ -331,7 +331,7 @@ function x(e, t, n) {
         avatarCutoutRadius: t ? (c + 2 * a) * g.ZC : (i + 2 * a) / 2,
     };
 }
-function L(e, t, n, i) {
+function x(e, t, n, i) {
     let a = w(n, i, t, !1),
         o = (0, u.lm)(i, e);
     if (!t) {
@@ -382,7 +382,7 @@ function k(e, t, n, i, a) {
             }),
         });
     }
-    let s = x(a, !1, !1);
+    let s = L(a, !1, !1);
     return (0, r.jsx)("rect", {
         x: s.avatarCutoutX,
         y: 0 - a.stroke,
@@ -397,7 +397,7 @@ function j(e, t, n, i) {
     let { status: a, isMobile: o, isTyping: s } = n,
         l = t.size - t.status - t.offset,
         c = t.offset,
-        u = x(t, o, s);
+        u = L(t, o, s);
     return (0, r.jsxs)("mask", {
         id: e,
         width: t.size,
@@ -449,7 +449,7 @@ function G(e) {
         a = arguments.length > 4 ? arguments[4] : void 0,
         { avatarTooltipTitle: o, avatarTooltipText: s } = i,
         l = e.size - e.status - e.offset - e.stroke,
-        c = x(e, t, n),
+        c = L(e, t, n),
         u = l,
         d = 0,
         _ = c.avatarCutoutWidth,
@@ -504,7 +504,7 @@ function B(e) {
         o = (0, g.UC)(i);
     return O(
         {},
-        x(o, a, r),
+        L(o, a, r),
         (0, u.Dk)({
             status: t,
             size: o.status,
@@ -635,7 +635,7 @@ function V(e) {
             imageClassName: N,
             ref: R,
             CutoutIcon: P,
-            avatarTooltipAsset: x,
+            avatarTooltipAsset: L,
             avatarTooltipText: M,
             avatarTooltipTitle: k,
         } = e,
@@ -661,7 +661,7 @@ function V(e) {
                 className: o()(b.mask, b.svg),
                 "aria-hidden": !0,
                 children: [
-                    null != x &&
+                    null != L &&
                         j(
                             K,
                             V,
@@ -670,14 +670,14 @@ function V(e) {
                                 isMobile: l,
                                 isTyping: f,
                             },
-                            x,
+                            L,
                         ),
                     (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
                         width: V.size,
                         height: V.size,
-                        mask: null != x ? "url(#".concat(K, ")") : "url(#".concat(D(B, a, l, f), ")"),
+                        mask: null != L ? "url(#".concat(K, ")") : "url(#".concat(D(B, a, l, f), ")"),
                         children: (0, r.jsx)(F, {
                             ref: m,
                             src: t,
@@ -686,7 +686,7 @@ function V(e) {
                             className: N,
                         }),
                     }),
-                    null != B && null != S ? L(S, l, V, B) : null,
+                    null != B && null != S ? x(S, l, V, B) : null,
                     null != B
                         ? (0, r.jsx)(d.aM, {
                               "data-migration-pending": !0,
@@ -728,7 +728,7 @@ function V(e) {
                                 avatarTooltipTitle: k,
                                 avatarTooltipText: M,
                             },
-                            x,
+                            L,
                         ),
                 ],
             }),
@@ -766,7 +766,7 @@ function W(e) {
             statusTooltip: P = !1,
             statusTooltipDelay: D,
             statusBackdropColor: w,
-            "aria-hidden": x = !1,
+            "aria-hidden": L = !1,
             "aria-label": M,
             imageClassName: j,
             pulseStatusIcon: V,
@@ -849,7 +849,7 @@ function W(e) {
         Z,
         I(O({}, e), {
             ariaLabel: M,
-            ariaHidden: x,
+            ariaHidden: L,
             typingOffset: e_,
             specs: eu,
             children: (0, r.jsxs)("svg", {
@@ -896,7 +896,7 @@ function W(e) {
                             className: j,
                         }),
                     }),
-                    null != w && L(w, f, eu, S),
+                    null != w && x(w, f, eu, S),
                     (0, r.jsx)(d.aM, {
                         "data-migration-pending": !0,
                         text: P ? (0, p.u5)(S) : null,

@@ -23,7 +23,7 @@ var r = n(54381),
     p = n(914498),
     h = n(967249),
     m = n(217702),
-    g = n(906376),
+    g = n(666209),
     E = (function (e) {
         return (e[(e.BOT = 0)] = "BOT"), (e[(e.ACTIVITY = 1)] = "ACTIVITY"), e;
     })({});
@@ -94,16 +94,16 @@ function O(e) {
             },
             void 0,
         ),
-        x = null != h,
-        L = null != E && !1 === P,
-        M = x || L,
+        L = null != h,
+        x = null != E && !1 === P,
+        M = L || x,
         k = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
         j = i.useRef(null),
         U = i.useCallback(() => {
             let e = j.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        G = i.useMemo(() => !!L && new URL(E).pathname.endsWith(".gif"), [L, E]),
+        G = i.useMemo(() => !!x && new URL(E).pathname.endsWith(".gif"), [x, E]),
         B = i.useMemo(() => {
             if (null != S)
                 return (e) => {
@@ -139,9 +139,9 @@ function O(e) {
             M &&
                 (0, r.jsxs)(y, {
                     onClick: Z,
-                    className: o()(g.bannerWrapper, k, { [g.showVideoOnFocus]: L }),
+                    className: o()(g.bannerWrapper, k, { [g.showVideoOnFocus]: x }),
                     children: [
-                        L &&
+                        x &&
                             (G
                                 ? (0, r.jsx)("div", {
                                       className: g.videoBanner,
@@ -155,7 +155,7 @@ function O(e) {
                                       muted: !0,
                                       className: g.videoBanner,
                                   })),
-                        x &&
+                        L &&
                             (0, r.jsx)("div", {
                                 className: g.staticBanner,
                                 style: { backgroundImage: "url(".concat(h, ")") },

@@ -45,10 +45,10 @@ let S = (e, t, n, r) => {
             R = n.extra.artist.name,
             P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: D, secondaryColor: w } = (0, m.Z)(N),
-            x = (0, _.Nq)(n),
-            L = i.useCallback(() => {
-                if (null == t || null == P || !(0, d.Hi)(x, g.y9)) return;
-                let e = S(n, t, P, x);
+            L = (0, _.Nq)(n),
+            x = i.useCallback(() => {
+                if (null == t || null == P || !(0, d.Hi)(L, g.y9)) return;
+                let e = S(n, t, P, L);
                 return (0, p.CR)({
                     user: P,
                     channel: t,
@@ -58,9 +58,9 @@ let S = (e, t, n, r) => {
                     colors: [D, w],
                     badges: (0, p.UU)(n),
                 });
-            }, [N, R, t, n, D, x, w, P]),
+            }, [N, R, t, n, D, L, w, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
-        if (null == P || !(0, d.Hi)(x, g.y9)) return null;
+        if (null == P || !(0, d.Hi)(L, g.y9)) return null;
         let k = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered()
@@ -105,7 +105,7 @@ let S = (e, t, n, r) => {
                         onVoiceChannelPreview: f,
                         user: P,
                         channel: t,
-                        generateReactionImage: L,
+                        generateReactionImage: x,
                         reactionImageAltText: A(n, P),
                         entry: n,
                     }),

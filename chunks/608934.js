@@ -2,7 +2,7 @@ n.d(t, { a: () => i });
 var a = n(54381);
 n(473749);
 var l = n(481060),
-    r = n(530146);
+    r = n(575043);
 function i(e) {
     let { isUploading: t, isSuccess: n, errorMessage: i, onClick: s, title: o } = e;
     return (0, a.jsxs)(a.Fragment, {

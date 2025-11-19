@@ -11,9 +11,9 @@ var r = n(54381),
     g = n(626135),
     p = n(381585),
     f = n(501678),
-    h = n(763941),
-    C = n(364111),
-    m = n(303952),
+    m = n(763941),
+    h = n(364111),
+    C = n(303952),
     _ = n(752053),
     b = n(258939),
     v = n(81136),
@@ -29,12 +29,12 @@ var r = n(54381),
     L = n(215023),
     B = n(981631),
     P = n(388032),
-    N = n(310582);
+    N = n(687983);
 let A = (e) => {
         var t, n, i;
         let { handleTransition: c, numVisibleItems: u, isFetchingCategories: g, tab: b } = e,
             { noCache: I, includeUnpublished: B } = (0, v.Z)(),
-            A = (0, h.Pc)("CollectiblesFeedShop") && b === L.AW.ORBS,
+            A = (0, m.Pc)("CollectiblesFeedShop") && b === L.AW.ORBS,
             R =
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -83,9 +83,9 @@ let A = (e) => {
             H = (0, p.sp)(),
             D = null != (t = null == H ? void 0 : H.sessionId) ? t : "";
         l.useEffect(() => {
-            (0, m.n)({
+            (0, C.n)({
                 sessionId: D,
-                checkpoint: m.a.SHOP_MOUNTED,
+                checkpoint: C.a.SHOP_MOUNTED,
                 tab: b,
                 unpublishedCategoriesShown: B,
                 cacheDisabled: I,
@@ -96,7 +96,7 @@ let A = (e) => {
                 fetchShopHomeError: F,
                 shopBlocks: W,
                 refreshShopHome: V,
-            } = (0, C.E)(
+            } = (0, h.E)(
                 b,
                 {
                     noCache: I,
@@ -116,9 +116,9 @@ let A = (e) => {
             null != F ||
                 M ||
                 0 === W.length ||
-                (0, m.n)({
+                (0, C.n)({
                     sessionId: D,
-                    checkpoint: m.a.SHOP_RENDERED,
+                    checkpoint: C.a.SHOP_RENDERED,
                     tab: b,
                     unpublishedCategoriesShown: B,
                     cacheDisabled: I,
@@ -205,8 +205,8 @@ let A = (e) => {
                                     break;
                                 case s.z.WIDE_BANNER:
                                     if (e.isDismissible) {
-                                        var h;
-                                        let t = null != (h = e.dismissibleContentVersion) ? h : 0,
+                                        var m;
+                                        let t = null != (m = e.dismissibleContentVersion) ? m : 0,
                                             { isDismissed: n } = (0, d.H4)(o.z.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (n) return null;
                                     }
@@ -290,15 +290,15 @@ let A = (e) => {
             { handleScroll: s } = (0, u.z)(a, n),
             o = (0, b.R)(),
             d = (0, p.sp)(),
-            [f, h] = l.useState(L.IV),
-            [C, m] = l.useState(!1);
+            [f, m] = l.useState(L.IV),
+            [h, C] = l.useState(!1);
         return (
             l.useEffect(() => {
                 if (null != a.current) {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            f >= 36 ? m(e < 20) : e <= 200 && h((e) => e + L.IV);
+                            f >= 36 ? C(e < 20) : e <= 200 && m((e) => e + L.IV);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -308,7 +308,7 @@ let A = (e) => {
                         }
                     );
                 }
-            }, [a, f, h, m]),
+            }, [a, f, m, C]),
             (0, r.jsx)(c.Den, {
                 className: N.shopScroll,
                 ref: a,
@@ -358,12 +358,12 @@ let A = (e) => {
                             ],
                         }),
                         (0, r.jsx)(I.Z, {
-                            peaking: C,
+                            peaking: h,
                             transitioning: i === L.f7.OUT,
                         }),
                         (0, r.jsx)(I.Z, {
                             style: { left: 1850 },
-                            peaking: C,
+                            peaking: h,
                             transitioning: i === L.f7.OUT,
                         }),
                     ],

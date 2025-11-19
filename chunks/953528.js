@@ -1,5 +1,5 @@
 n.d(t, {
-    QH: () => o,
+    QH: () => s,
     pj: () => i,
 });
 var r,
@@ -21,4 +21,4 @@ let a = (0, l.le)({
             3: { variant: "both_blocks" },
         },
     }),
-    o = (e) => a.useConfig({ location: e }).variant;
+    s = (e) => a.useConfig({ location: e }).variant;

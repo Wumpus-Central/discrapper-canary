@@ -218,20 +218,20 @@ let P = g(h({}, l().defaultRules.link), {
         if (0 === m.trim().length || 0 === P.length) return u();
         let D = R(l().unescapeUrl(o)),
             w = null == D,
-            x = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
-        if (w || x) return u();
-        let L = g(h({}, n), {
+            L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
+        if (w || L) return u();
+        let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0,
             }),
             M = n.allowEmojiLinks ? v : O,
-            j = [...M, ...I],
-            k = [...T, ...S],
-            U = A(t(E, L), j, [f.b.EMOJI]),
-            G = A(t(y, L), k);
+            k = [...M, ...I],
+            j = [...T, ...S],
+            U = A(t(E, x), k, [f.b.EMOJI]),
+            G = A(t(y, x), j);
         if (null == U || null == G || 0 === C(U).trim().length) return u();
         let B = i().pick(t.rules, M),
-            Z = l().parserFor(B)(_.whitespaceSanitized, L),
+            Z = l().parserFor(B)(_.whitespaceSanitized, x),
             F = p.whitespaceSanitized,
             { target: V } = D;
         return {

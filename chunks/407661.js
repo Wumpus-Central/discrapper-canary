@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(962293),
     y = n(981631),
     O = n(388032),
-    v = n(204427);
+    v = n(774185);
 let I = 2,
     T = 10;
 function S(e, t) {
@@ -92,9 +92,9 @@ function C(e) {
         } = (0, f.ZP)(a),
         D = (0, _.X7)(g, R, C),
         w = (0, d.j)({ displayNameStyles: P }),
-        x = S(i, a),
-        L = (0, m.NE)(i, a),
-        M = n.showThreadPromptOnReply && x >= I && L,
+        L = S(i, a),
+        x = (0, m.NE)(i, a),
+        M = n.showThreadPromptOnReply && L >= I && x,
         k = () => (0, h.uL)(y.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
     function j(e) {
         e.stopPropagation(), (0, p.qx)(i.id, !s);
@@ -185,7 +185,7 @@ function C(e) {
                     (0, r.jsx)(A, {
                         channel: i,
                         message: a,
-                        replyChainLength: x,
+                        replyChainLength: L,
                     }),
             ],
         }),

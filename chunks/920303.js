@@ -68,7 +68,7 @@ function w(e) {
         (O = !0),
         (v = !1);
 }
-function x(e) {
+function L(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, c.O)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     let t = e.threads.filter((e) => p.AW.has(e.type)).map((e) => e.id);
     C = C.concat(t);
@@ -89,7 +89,7 @@ function x(e) {
         (O = !1),
         (v = !1);
 }
-function L(e) {
+function x(e) {
     return (null == S || null == e.channelId || S === e.channelId) && M();
 }
 function M() {
@@ -120,11 +120,11 @@ function M() {
         .reverse()
         .value();
 }
-function j(e) {
+function k(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, c.O)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     (O = !1), (T = !0), (v = !1);
 }
-function k(e) {
+function j(e) {
     if (e.channel.id !== S) return !1;
     P();
 }
@@ -166,9 +166,9 @@ let V = new F(d.Z, {
     CONNECTION_OPEN: P,
     THREAD_DELETE: G,
     THREAD_UPDATE: B,
-    CHANNEL_DELETE: k,
+    CHANNEL_DELETE: j,
     LOAD_ARCHIVED_THREADS: w,
-    LOAD_ARCHIVED_THREADS_SUCCESS: x,
-    LOAD_ARCHIVED_THREADS_FAIL: j,
-    RESORT_THREADS: L,
+    LOAD_ARCHIVED_THREADS_SUCCESS: L,
+    LOAD_ARCHIVED_THREADS_FAIL: k,
+    RESORT_THREADS: x,
 });

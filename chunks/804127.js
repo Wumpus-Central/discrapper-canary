@@ -1,126 +1,126 @@
 n.d(t, {
     G$: () => c,
-    In: () => i,
+    In: () => l,
     uL: () => s,
 }),
     n(388685);
-var r = n(647438),
+var r = n(473749),
     a = n(782568),
-    o = n(22095),
-    l = n(617136);
+    i = n(22095),
+    o = n(617136);
 function s(e) {
     let {
             isClaimingReward: t,
             isFetchingRewardCode: n,
             questContent: a,
-            quest: l,
+            quest: o,
             requiresPlatformSelection: s,
-            rewardCode: i,
+            rewardCode: l,
             selectedPlatformType: c,
-            preview: d,
+            preview: u,
         } = e,
-        [u, p] = r.useState(!1),
-        [m, f] = r.useState(!1),
-        b = r.useCallback(async (e, t, n) => {
+        [d, m] = r.useState(!1),
+        [p, C] = r.useState(!1),
+        f = r.useCallback(async (e, t, n) => {
             try {
-                f(!0), await (0, o.QB)(e, t, n), p(!1), f(!1);
+                C(!0), await (0, i.QB)(e, t, n), m(!1), C(!1);
             } catch (e) {
-                p(!0), f(!1);
+                m(!0), C(!1);
             }
         }, []),
-        g = r.useCallback((e) => {
+        h = r.useCallback((e) => {
             try {
-                (0, o.pf)(e);
+                (0, i.pf)(e);
             } catch (e) {
-                p(!0);
+                m(!0);
             }
         }, []);
     return (
         r.useEffect(() => {
             var e, r;
-            !0 === d ||
-                null != i ||
-                u ||
+            !0 === u ||
+                null != l ||
+                d ||
                 t ||
-                m ||
+                p ||
                 n ||
                 s ||
-                (p(!1),
-                (null == (e = l.userStatus) ? void 0 : e.claimedAt) == null && null != c
-                    ? b(l.id, c, a)
-                    : (null == (r = l.userStatus) ? void 0 : r.claimedAt) != null && g(l.id));
-        }, [b, g, u, t, m, n, a, l, s, i, c, d]),
+                (m(!1),
+                (null == (e = o.userStatus) ? void 0 : e.claimedAt) == null && null != c
+                    ? f(o.id, c, a)
+                    : (null == (r = o.userStatus) ? void 0 : r.claimedAt) != null && h(o.id));
+        }, [f, h, d, t, p, n, a, o, s, l, c, u]),
         {
-            claimCode: b,
-            fetchCode: g,
-            hasError: u,
-            setHasError: p,
+            claimCode: f,
+            fetchCode: h,
+            hasError: d,
+            setHasError: m,
         }
     );
 }
-function i(e) {
-    let { quest: t, redemptionLink: n, questContent: o, questContentPosition: s, sourceQuestContent: i } = e,
-        c = (0, l.O5)();
+function l(e) {
+    let { quest: t, redemptionLink: n, questContent: i, questContentPosition: s, sourceQuestContent: l } = e,
+        c = (0, o.O5)();
     return r.useCallback(() => {
         null != n &&
             (c({
                 questId: t.id,
-                questContent: o,
-                questContentCTA: l.jZ.REDEEM_REWARD,
+                questContent: i,
+                questContentCTA: o.jZ.REDEEM_REWARD,
                 questContentPosition: s,
-                sourceQuestContent: i,
+                sourceQuestContent: l,
             }),
             c({
                 questId: t.id,
-                questContent: o,
-                questContentCTA: l.jZ.VISIT_REDEMPTION_LINK,
+                questContent: i,
+                questContentCTA: o.jZ.VISIT_REDEMPTION_LINK,
                 questContentPosition: s,
-                sourceQuestContent: i,
+                sourceQuestContent: l,
             }),
             (0, a.Z)(n));
-    }, [t.id, o, s, i, c, n]);
+    }, [t.id, i, s, l, c, n]);
 }
 function c(e) {
     var t;
     let {
             claimCode: n,
             fetchCode: a,
-            hasError: o,
+            hasError: i,
             onDismiss: s,
             quest: c,
-            questContent: d,
-            questContentCTA: u = l.jZ.GET_REWARD_CODE,
-            questContentPosition: p,
-            requiresPlatformSelection: m,
-            selectedPlatformType: f,
-            redemptionLink: b,
-            sourceQuestContent: g,
+            questContent: u,
+            questContentCTA: d = o.jZ.GET_REWARD_CODE,
+            questContentPosition: m,
+            requiresPlatformSelection: p,
+            selectedPlatformType: C,
+            redemptionLink: f,
+            sourceQuestContent: h,
         } = e,
-        h = (0, l.O5)(),
-        C = i(e);
+        j = (0, o.O5)(),
+        x = l(e);
     return r.useCallback(() => {
         var e;
-        m && null != f
-            ? (n(c.id, f, d),
-              h({
+        p && null != C
+            ? (n(c.id, C, u),
+              j({
                   questId: c.id,
-                  questContent: d,
-                  questContentCTA: u,
-                  questContentPosition: p,
-                  sourceQuestContent: g,
+                  questContent: u,
+                  questContentCTA: d,
+                  questContentPosition: m,
+                  sourceQuestContent: h,
               }))
-            : o
+            : i
               ? (null == (e = c.userStatus) ? void 0 : e.claimedAt) != null
                   ? a(c.id)
-                  : null != f &&
-                    (n(c.id, f, d),
-                    h({
+                  : null != C &&
+                    (n(c.id, C, u),
+                    j({
                         questId: c.id,
-                        questContent: d,
-                        questContentCTA: u,
-                        questContentPosition: p,
-                        sourceQuestContent: g,
+                        questContent: u,
+                        questContentCTA: d,
+                        questContentPosition: m,
+                        sourceQuestContent: h,
                     }))
-              : (null != b && C(), s());
-    }, [n, a, o, s, c.id, null == (t = c.userStatus) ? void 0 : t.claimedAt, d, u, p, m, f, h, b, g, C]);
+              : (null != f && x(), s());
+    }, [n, a, i, s, c.id, null == (t = c.userStatus) ? void 0 : t.claimedAt, u, d, m, p, C, j, f, h, x]);
 }

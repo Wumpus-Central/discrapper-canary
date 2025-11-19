@@ -22,7 +22,7 @@ var r = n(54381),
     g = n(626135),
     E = n(981631),
     b = n(388032),
-    y = n(459931),
+    y = n(418128),
     O = n(740353);
 let v = "VoiceChannelStatusModal",
     I = 500;
@@ -32,8 +32,8 @@ function T(e) {
         C = (0, o.e7)([h.Z], () => h.Z.getMediaSessionId()),
         [N, R] = i.useState(null != A ? A : ""),
         [P, D] = i.useState(!1),
-        [w, x] = i.useState(null),
-        L = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        [w, L] = i.useState(null),
+        x = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         M = N.length > I;
     i.useEffect(() => {
         g.default.track(E.rMx.OPEN_MODAL, {
@@ -43,18 +43,18 @@ function T(e) {
         });
     }, [t.guild_id, T]);
     let k = (e) => {
-            x(new s.Hx(e, e.status).getAnyErrorMessage());
+            L(new s.Hx(e, e.status).getAnyErrorMessage());
         },
         j = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = c.Z.validateMessage(n, L, t.id);
-                return x(e), D(!1), { hasErrors: !0 };
+                let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
+                return L(e), D(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === A && S(), null == e || e.preventDefault(), x(null), D(!0);
+            N === A && S(), null == e || e.preventDefault(), L(null), D(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),

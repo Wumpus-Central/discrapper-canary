@@ -12,7 +12,7 @@ var n = r(54381),
     p = r(190054),
     b = r(760373),
     O = r(388032),
-    y = r(547990);
+    y = r(115093);
 let j = function (e) {
     var t, r;
     let { transitionState: j, streamKey: h, channelId: m, onClose: g } = e,

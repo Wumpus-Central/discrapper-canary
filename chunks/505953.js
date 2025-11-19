@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(789707),
     y = n(981631),
     O = n(531578),
-    v = n(271343);
+    v = n(179078);
 function I(e, t, n) {
     return (
         t in e
@@ -84,9 +84,9 @@ function C(e) {
                     rating: n,
                 });
         },
-        x = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
-        L = (e) => {
-            x &&
+        L = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
+        x = (e) => {
+            L &&
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e("12891").then(n.bind(n, 519620));
                     return (n) => (0, r.jsx)(e, A(T({}, n), { summary: t }));
@@ -95,7 +95,7 @@ function C(e) {
     return (0, r.jsxs)(o.P3F, {
         className: v.container,
         onClick: C,
-        onContextMenu: L,
+        onContextMenu: x,
         onMouseEnter: () => R(!0),
         onMouseLeave: () => R(!1),
         children: [

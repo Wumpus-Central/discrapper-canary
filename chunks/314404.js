@@ -33,8 +33,8 @@ var r = n(54381),
     P = n(639119),
     D = n(811334),
     w = n(553797),
-    x = n(346071),
-    L = n(927699),
+    L = n(346071),
+    x = n(927699),
     M = n(987716),
     k = n(311821),
     j = n(459965),
@@ -44,7 +44,7 @@ var r = n(54381),
     Z = n(981631),
     F = n(231338),
     V = n(388032),
-    H = n(624379);
+    H = n(418274);
 function Y(e, t, n) {
     return (
         t in e
@@ -229,8 +229,8 @@ function J(e) {
             excludeReverseTrialFromCountdown: !0,
         }),
         ew = null != eI && B.nG[eI.trial_id].skus.includes(k),
-        ex = null != eS && J.some((e) => (null == eC ? void 0 : eC.includes(e))) && null != eS.discount,
-        eL = (0, v.aS)(B.Xh.PREMIUM_MONTH_TIER_2, !1, ef, eP);
+        eL = null != eS && J.some((e) => (null == eC ? void 0 : eC.includes(e))) && null != eS.discount,
+        ex = (0, v.aS)(B.Xh.PREMIUM_MONTH_TIER_2, !1, ef, eP);
     i.useEffect(() => {
         $ && S.ZP.trackExposure({ location: "5f89bb_1" });
     }, [$]);
@@ -263,7 +263,7 @@ function J(e) {
                     : V.intl.string(V.t["+S5lrV"]),
             [eT],
         ),
-        eH = !ef && (ex || (null != eT && ew && null != et)),
+        eH = !ef && (eL || (null != eT && ew && null != et)),
         eY =
             null == er ||
             null == (m = er.find((e) => e.subscriptionPlanId === B.Xh.PREMIUM_MONTH_TIER_2)) ||
@@ -295,7 +295,7 @@ function J(e) {
                     ],
                 });
             }
-            if (n && null != eY && null != eL && j === B.Xh.PREMIUM_MONTH_TIER_2) {
+            if (n && null != eY && null != ex && j === B.Xh.PREMIUM_MONTH_TIER_2) {
                 var i;
                 return (0, r.jsxs)("div", {
                     children: [
@@ -304,8 +304,8 @@ function J(e) {
                             className: H.trialPlanSelectHeader,
                             children: V.intl.format(V.t["nG7g/E"], {
                                 numMonths: null != (i = null == eS ? void 0 : eS.discount.user_usage_limit) ? i : "",
-                                discountedPrice: (0, I.T4)(eL.amount - eY, eL.currency),
-                                regularPrice: (0, I.T4)(eL.amount, eL.currency),
+                                discountedPrice: (0, I.T4)(ex.amount - eY, ex.currency),
+                                regularPrice: (0, I.T4)(ex.amount, ex.currency),
                             }),
                         }),
                         (0, r.jsx)("hr", { className: H.planSelectSeparator }),
@@ -344,7 +344,7 @@ function J(e) {
                                 selected: (null == eN ? void 0 : eN.id) === e,
                                 priceOptions: eP,
                                 shouldShowUpdatedPaymentModal: eH,
-                                isEligibleForDiscount: ex,
+                                isEligibleForDiscount: eL,
                                 discountAmountOff: eY,
                                 isEligibleForTrial: ew,
                             },
@@ -366,7 +366,7 @@ function J(e) {
     if (ef) {
         let e = () => {
                 if ((0, y.MY)(e_) === y.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != em)
-                    return (0, r.jsx)(L.Z, {
+                    return (0, r.jsx)(x.Z, {
                         sectionTitle: V.intl.string(V.t.B3miE8),
                         className: H.customGiftMessageWrapper,
                         innerClassName: H.customGiftMessage,
@@ -418,12 +418,12 @@ function J(e) {
             ],
         });
     }
-    let eJ = !ew && !ex && eM && en;
+    let eJ = !ew && !eL && eM && en;
     return (0, r.jsxs)("div", {
         className: H.stepBody,
         children: [
             eQ &&
-                (0, r.jsx)(x.n, {
+                (0, r.jsx)(L.n, {
                     fractionalPremiumInfo: eD,
                     enablePremiumBrandRefresh: ed,
                 }),
@@ -434,7 +434,7 @@ function J(e) {
                     className: H.bodyText,
                     children: Q(eO, k),
                 }),
-            eW(eI, ew, ex),
+            eW(eI, ew, eL),
             ez(),
             eJ && null != eN && null != eG && eK(eN, eG, eN.interval),
             eq(),

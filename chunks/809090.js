@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(271383),
     u = n(768581),
     d = n(895924),
-    f = n(557545),
+    f = n(852802),
     _ = n(970952);
 function p(e, t, n) {
     return (
@@ -125,13 +125,13 @@ function y(e) {
         w = i.useCallback(() => {
             N(!1), null == S || S();
         }, [S]),
-        x = (0, s.e7)([c.ZP], () => {
+        L = (0, s.e7)([c.ZP], () => {
             var e, r, i, a;
             return (null == (r = t.application) || null == (e = r.bot) ? void 0 : e.id) != null
                 ? c.ZP.getMember(n, null == (a = t.application) || null == (i = a.bot) ? void 0 : i.id)
                 : null;
         }),
-        L = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e;
             return t.type !== d.Qi.APPLICATION
                 ? _
@@ -140,10 +140,10 @@ function y(e) {
                       icon: t.icon,
                       bot: null == (e = t.application) ? void 0 : e.bot,
                       botIconFirst: !0,
-                      guildMember: x,
+                      guildMember: L,
                       size: p,
                   });
-        }, [t, p, x]);
+        }, [t, p, L]);
     return (0, r.jsx)(
         "div",
         g(h({}, A), {
@@ -167,7 +167,7 @@ function y(e) {
                         width: p,
                         height: m,
                     },
-                    src: L,
+                    src: x,
                 }),
             }),
         }),

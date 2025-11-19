@@ -34,7 +34,7 @@ var i = n(54381),
     T = n(65154),
     P = n(388032),
     A = n(928578);
-function D(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -59,7 +59,7 @@ function D(e) {
     }
     return e;
 }
-function k(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,7 +88,7 @@ let R = r.memo(function (e) {
             r,
         ])
             ? null
-            : (0, i.jsx)(g.ZP, D({}, e));
+            : (0, i.jsx)(g.ZP, k({}, e));
     }),
     L = r.memo(function (e) {
         let {
@@ -113,7 +113,7 @@ let R = r.memo(function (e) {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    k(D({}, n), {
+                                    D(k({}, n), {
                                         user: l,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
@@ -333,7 +333,7 @@ function V(e) {
                     } = o.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
                     let { width: s, height: c } = z(
-                        k(D({}, a), {
+                        D(k({}, a), {
                             widget: l,
                             operation: I.B.RESIZE_NORTH,
                             computedSize: {
@@ -362,7 +362,7 @@ function V(e) {
         }),
         (0, i.jsx)(
             M,
-            k(D({}, e), {
+            D(k({}, e), {
                 channel: s,
                 participants: j,
                 participantsVersion: g,

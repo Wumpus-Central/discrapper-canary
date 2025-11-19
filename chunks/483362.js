@@ -89,8 +89,8 @@ var D = /\/+/g;
 function w(e, t) {
     return "object" == typeof e && null !== e && null != e.key ? P("" + e.key) : t.toString(36);
 }
-function x() {}
-function L(e) {
+function L() {}
+function x(e) {
     switch (e.status) {
         case "fulfilled":
             return e.value;
@@ -99,7 +99,7 @@ function L(e) {
         default:
             switch (
                 ("string" == typeof e.status
-                    ? e.then(x, x)
+                    ? e.then(L, L)
                     : ((e.status = "pending"),
                       e.then(
                           function (t) {
@@ -166,7 +166,7 @@ function M(e, t, n, r, o) {
     else if ("function" == typeof (u = m(e)))
         for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + w((r = r.value), u++)), (l += M(r, t, n, s, o));
     else if ("object" === s) {
-        if ("function" == typeof e.then) return M(L(e), t, n, r, o);
+        if ("function" == typeof e.then) return M(x(e), t, n, r, o);
         throw Error(
             "Objects are not valid as a React child (found: " +
                 ("[object Object]" === (t = String(e)) ? "object with keys {" + Object.keys(e).join(", ") + "}" : t) +

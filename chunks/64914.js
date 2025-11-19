@@ -133,13 +133,13 @@ function D() {
         {
             warpEnabled: D,
             warpConnecting: w,
-            warpLog: x,
+            warpLog: L,
         } = (0, a.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
             warpConnecting: d.Z.connecting,
             warpLog: d.Z.log,
         })),
-        L = i.useCallback((e) => {
+        x = i.useCallback((e) => {
             e ? d.Z.connect() : d.Z.disconnect();
         }, []);
     return (0, r.jsx)(y.Z, {
@@ -224,12 +224,12 @@ function D() {
                                 label: "Enable WARP",
                                 description: "Enable WARP Proxy Connection",
                                 checked: D,
-                                onChange: L,
+                                onChange: x,
                             }),
                             w ? (0, r.jsx)(s.$jN, {}) : null,
                             (0, r.jsx)(s.Text, {
                                 variant: "code",
-                                children: x.map((e, t) => (0, r.jsx)("div", { children: JSON.stringify(e) }, t)),
+                                children: L.map((e, t) => (0, r.jsx)("div", { children: JSON.stringify(e) }, t)),
                             }),
                         ],
                     }),

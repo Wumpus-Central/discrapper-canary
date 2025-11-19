@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(695346),
     a = n(885110),
     s = n(388032),
-    c = n(973543);
+    c = n(674238);
 function u(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(l.P3F, {

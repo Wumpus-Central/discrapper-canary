@@ -41,11 +41,11 @@ function P(e, t, n) {
 }
 let D = {},
     w = null,
-    x = [],
-    L = new A.Z(),
+    L = [],
+    x = new A.Z(),
     M = !1,
-    j = !1,
     k = !1,
+    j = !1,
     U = !1,
     G = I.default.fromTimestamp(Date.now()),
     B = !0,
@@ -99,7 +99,7 @@ function Y(e) {
         r = E.Z.getMessages(e);
     if (r.hasPresent() && 0 !== r.length)
         return (
-            L.addChannelMessages({
+            x.addChannelMessages({
                 channel: n,
                 channelMessages: r,
                 userId: null == (t = v.default.getCurrentUser()) ? void 0 : t.id,
@@ -123,7 +123,7 @@ function W() {
 }
 function K() {
     let { notifyingChannelIds: e, staleChannelIds: t } = H();
-    (w = e), (x = t), a()(null != w, "notifyingChannelIds should not be null");
+    (w = e), (L = t), a()(null != w, "notifyingChannelIds should not be null");
     let n = w.filter((e) => null == D[e]),
         r = Object.keys(D).filter((e) => !(null == w ? void 0 : w.includes(e)));
     if (0 !== w.length && 0 === n.length && 0 === r.length) return !1;
@@ -144,16 +144,16 @@ function K() {
                         null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : D[e].mostRecentMessageId);
             }
         }
-    L.updateChannelIds(w), W();
+    x.updateChannelIds(w), W();
 }
 function z() {
     (D = {}),
         (w = null),
-        (x = []),
-        (L = new A.Z()),
+        (L = []),
+        (x = new A.Z()),
         (M = !1),
-        (j = !1),
         (k = !1),
+        (j = !1),
         (G = I.default.fromTimestamp(Date.now())),
         (B = !0),
         (U = !1),
@@ -170,7 +170,7 @@ function q() {
             W());
     }
     let r = null != (n = u.ZP.getSettingsFilteredMentions()) ? n : [];
-    L.addMessages(
+    x.addMessages(
         r.map((e) => {
             var t;
             return {
@@ -207,11 +207,11 @@ function $(e) {
     let s = J(a),
         c = s.mentioned;
     if (!o && !c) {
-        if (!x.includes(i)) return !1;
+        if (!L.includes(i)) return !1;
         K();
     }
     if (!o && c && !(0, u.ln)(s)) return !1;
-    L.addMessage({
+    x.addMessage({
         id: a.id,
         channelId: a.channel_id,
         guildId: null == (r = m.Z.getBasicChannel(a.channel_id)) ? void 0 : r.guild_id,
@@ -232,7 +232,7 @@ function et(e) {
     if (0 === t.length) return !1;
     let n = u.ZP.getSettingsFilteredMentions();
     if (null == n || 0 === n.length) return !1;
-    L.addMessages(
+    x.addMessages(
         n.map((e) => {
             var t;
             return {
@@ -247,18 +247,18 @@ function et(e) {
 }
 function en(e) {
     let { id: t } = e;
-    return L.deleteMessages([t]);
+    return x.deleteMessages([t]);
 }
 function er(e) {
     let { ids: t } = e;
-    return L.deleteMessages(t);
+    return x.deleteMessages(t);
 }
 function ei() {
     M = !0;
 }
 function ea(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (M = !1), t ? (U = !0) : (null != n && (B = n), (k = !0)), (F = null != r ? r : null);
+    (M = !1), t ? (U = !0) : (null != n && (B = n), (j = !0)), (F = null != r ? r : null);
 }
 function eo(e) {
     var t;
@@ -274,13 +274,13 @@ function eo(e) {
                 : t.notificationCenterVariant) &&
         null != w &&
         !M &&
-        !j &&
+        !k &&
         (!n || !U) &&
         B
     );
 }
 function es() {
-    (M = !1), (F = null), (j = !0);
+    (M = !1), (F = null), (k = !0);
 }
 function el(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
@@ -304,7 +304,7 @@ function ec(e) {
     ) && (Z = null);
 }
 function eu() {
-    j = !1;
+    k = !1;
 }
 function ed() {
     Z = null;
@@ -333,12 +333,12 @@ function ep(e) {
 }
 function eh(e) {
     let { channel: t } = e;
-    if (!L.getMessages().some((e) => e.channelId === t.id)) return !1;
+    if (!x.getMessages().some((e) => e.channelId === t.id)) return !1;
     X();
 }
 function em(e) {
     let { guild: t } = e;
-    if (!L.getMessages().some((e) => e.guildId === t.id)) return !1;
+    if (!x.getMessages().some((e) => e.guildId === t.id)) return !1;
     X();
 }
 function eg(e) {
@@ -354,7 +354,7 @@ class eE extends (r = o.ZP.Store) {
         return eo({ preload: t });
     }
     getInboxMessages() {
-        return L.getMessages();
+        return x.getMessages();
     }
     getNotifyingChannelIds() {
         return w;
@@ -372,7 +372,7 @@ class eE extends (r = o.ZP.Store) {
         return M;
     }
     get hasLoadedEver() {
-        return k;
+        return j;
     }
     get hasPreloaded() {
         return U;

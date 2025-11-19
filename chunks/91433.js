@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(652853),
     h = n(671955),
     m = n(388032),
-    g = n(976794);
+    g = n(858815);
 function E(e) {
     let { user: t, guildId: n, channelId: a, applicationId: E, isGameRelationship: b = !1, className: y } = e,
         { themeType: O } = (0, p.z)(),

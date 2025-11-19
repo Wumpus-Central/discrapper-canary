@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(793030),
     a = n(442837),
     s = n(607070),
-    c = n(495940);
+    c = n(405029);
 function u(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
         i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);

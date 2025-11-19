@@ -21,7 +21,7 @@ var i = n(54381),
     _ = n(340101),
     S = n(501787),
     x = n(388032),
-    I = n(965365);
+    I = n(491426);
 function C(e) {
     var t, n;
     let {
@@ -33,8 +33,8 @@ function C(e) {
             borderWidth: T,
             opacity: P,
             horizontal: A,
-            pinned: D,
-            anchorTop: k,
+            pinned: k,
+            anchorTop: D,
             anchorLeft: R,
             showEmpty: L = !0,
         } = e,
@@ -87,8 +87,8 @@ function C(e) {
             U,
             (0, l.e7)([p.default], () => p.default.getId()),
             V,
-            (k && z) || (R && A),
-            (!k && z) || (!R && A),
+            (D && z) || (R && A),
+            (!D && z) || (!R && A),
         ),
         H = G.length,
         Y = (0, l.e7)([d.Z], () => d.Z.getWindowState(S.$J), []),
@@ -139,7 +139,7 @@ function C(e) {
     (0, s.ZP)(() => () => {
         a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
-    (et || !D) && Z)
+    (et || !k) && Z)
         ? null
         : et && !Z
           ? L
@@ -164,7 +164,7 @@ function C(e) {
                     activeStreams: F,
                     streamParticipants: G,
                     participantsVersion: B,
-                    pinned: D,
+                    pinned: k,
                     padding: w,
                 }),
             });

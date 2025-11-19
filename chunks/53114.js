@@ -462,11 +462,11 @@ class y extends o.Z {
                 pauseCount: P,
                 freezeCount: D,
                 totalPausesDuration: w,
-                totalFreezesDuration: x,
-                totalFramesDuration: L,
+                totalFreezesDuration: L,
+                totalFramesDuration: x,
                 keyframes: M,
-                passthroughCount: j,
-                cryptorSuccessCount: k,
+                passthroughCount: k,
+                cryptorSuccessCount: j,
                 cryptorFailureCount: U,
                 cryptorDuration: G,
                 cryptorAttempts: B,
@@ -482,11 +482,11 @@ class y extends o.Z {
         return (
             e instanceof _.nt
                 ? ((b.sender_freeze_count = D),
-                  (b.sender_total_freezes_duration = x),
-                  (b.sender_total_frames_duration = L))
+                  (b.sender_total_freezes_duration = L),
+                  (b.sender_total_frames_duration = x))
                 : ((b.receiver_freeze_count = D),
-                  (b.receiver_total_freezes_duration = x),
-                  (b.receiver_total_frames_duration = L),
+                  (b.receiver_total_freezes_duration = L),
+                  (b.receiver_total_frames_duration = x),
                   (b.receiver_pause_count = P),
                   (b.receiver_total_pauses_duration = w)),
             g(h({}, b), {
@@ -503,8 +503,8 @@ class y extends o.Z {
                 num_plis: N,
                 qp_sum: R,
                 num_keyframes: M,
-                cryptor_passthrough_count: j,
-                cryptor_success_count: k,
+                cryptor_passthrough_count: k,
+                cryptor_success_count: j,
                 cryptor_failure_count: U,
                 cryptor_duration: G,
                 cryptor_attempts: B,

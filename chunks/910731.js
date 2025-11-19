@@ -1,26 +1,26 @@
-a.d(e, { e: () => i });
-var r = a(622916),
-    _ = a(370336),
-    n = a(899517),
-    o = a(578346);
-function i(t) {
+_.d(e, { e: () => E });
+var a = _(622916),
+    r = _(370336),
+    n = _(899517),
+    o = _(578346);
+function E(t) {
     let e = "console";
-    (0, o.Hj)(e, t), (0, o.D2)(e, E);
+    (0, o.Hj)(e, t), (0, o.D2)(e, i);
 }
-function E() {
+function i() {
     "console" in n.n &&
-        r.RU.forEach(function (t) {
+        a.RU.forEach(function (t) {
             t in n.n.console &&
-                (0, _.hl)(n.n.console, t, function (e) {
+                (0, r.hl)(n.n.console, t, function (e) {
                     return (
-                        (r.LD[t] = e),
+                        (a.LD[t] = e),
                         function (...e) {
                             (0, o.rK)("console", {
                                 args: e,
                                 level: t,
                             });
-                            let a = r.LD[t];
-                            a && a.apply(n.n.console, e);
+                            let _ = a.LD[t];
+                            _ && _.apply(n.n.console, e);
                         }
                     );
                 });

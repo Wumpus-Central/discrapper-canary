@@ -75,7 +75,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function j(e, t) {
         e
     );
 }
-let k = "https://support.discord.com/hc/en-us";
+let j = "https://support.discord.com/hc/en-us";
 var U = (function (e) {
     return (e[(e.LOADING = 0)] = "LOADING"), (e[(e.DONE = 1)] = "DONE"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
@@ -100,8 +100,8 @@ function G(e) {
             plan: L,
             storeListing: x,
             isGuildSubscription: M,
-            subscriptionForGuild: j,
-            sku: k,
+            subscriptionForGuild: k,
+            sku: j,
             isCancelled: U,
             renewalPlan: G,
         } = (0, s.cj)([v.Z, I.Z, T.Z, O.Z], () => {
@@ -131,8 +131,8 @@ function G(e) {
         }, [y, C, S, p]),
         { data: K } = (0, m.IX)(R),
         z = i.useMemo(() => (null != K ? (0, _.y)(K, 100) : null), [K]),
-        q = null != (n = null == k ? void 0 : k.deleted) && n,
-        X = null != k && (0, A.OL)(k),
+        q = null != (n = null == j ? void 0 : j.deleted) && n,
+        X = null != j && (0, A.OL)(j),
         Q = p.status === P.O0b.PAST_DUE,
         { analyticsLocations: J } = (0, f.ZP)(),
         [$, ee] = (0, E.ED)({
@@ -141,7 +141,7 @@ function G(e) {
             analyticsLocations: J,
             analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE,
         }),
-        et = (null == ee ? void 0 : ee.code) === 100062 && null != y && null == j,
+        et = (null == ee ? void 0 : ee.code) === 100062 && null != y && null == k,
         en = (0, N.p)(p.currentPeriodEnd),
         er = 0 === b;
     return (0, r.jsxs)(a.l, {
@@ -186,13 +186,13 @@ function G(e) {
                               children:
                                   null != K &&
                                   null != x &&
-                                  null != k &&
+                                  null != j &&
                                   !1 === et &&
                                   (0, r.jsx)(H, {
                                       subscription: p,
                                       app: K,
-                                      guild: j,
-                                      sku: k,
+                                      guild: k,
+                                      sku: j,
                                       storeListing: x,
                                       isCancelled: U,
                                       navigateToSwitchPlan: h,
@@ -232,17 +232,17 @@ function G(e) {
                                           className: w.subscriptionTypeRow,
                                           children: [(0, r.jsx)(c.QTo, { size: "xs" }), D.intl.string(D.t.QjL3vn)],
                                       }),
-                                      null != j &&
+                                      null != k &&
                                           (0, r.jsxs)("span", {
                                               className: w.guildSubscriptionContentRow,
                                               children: [
                                                   (0, r.jsx)(c.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "text-muted",
-                                                      children: D.intl.format(D.t["7ZD8p1"], { guildName: j.name }),
+                                                      children: D.intl.format(D.t["7ZD8p1"], { guildName: k.name }),
                                                   }),
                                                   (0, r.jsx)(g.Z, {
-                                                      guild: j,
+                                                      guild: k,
                                                       size: g.Z.Sizes.MINI,
                                                   }),
                                               ],
@@ -404,7 +404,7 @@ function H(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        j(x({}, n), {
+                        k(x({}, n), {
                             application: t,
                             storeListing: a,
                             subscription: l,
@@ -423,7 +423,7 @@ function H(e) {
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            j(x({}, n), {
+                            k(x({}, n), {
                                 storeListing: a,
                                 subscription: y.Z.createFromServer(e),
                             }),
@@ -533,7 +533,7 @@ function W(e) {
                       children: [
                           D.intl.format(D.t.IIHUUF, { subscriptionId: t.id }),
                           (0, r.jsx)("br", {}),
-                          D.intl.format(D.t.fh65ES, { helpLink: k }),
+                          D.intl.format(D.t.fh65ES, { helpLink: j }),
                       ],
                   }),
               })

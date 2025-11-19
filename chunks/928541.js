@@ -1,31 +1,31 @@
-a.d(e, {
-    $2: () => i,
+_.d(e, {
+    $2: () => E,
     WD: () => o,
-    cW: () => E,
+    cW: () => i,
 });
-var r,
-    _,
-    n = a(573736);
+var a,
+    r,
+    n = _(573736);
 function o(t) {
-    return new E((e) => {
+    return new i((e) => {
         e(t);
     });
 }
-function i(t) {
-    return new E((e, a) => {
-        a(t);
+function E(t) {
+    return new i((e, _) => {
+        _(t);
     });
 }
-((r = _ || (_ = {}))[(r.PENDING = 0)] = "PENDING"),
-    (r[(r.RESOLVED = 1)] = "RESOLVED"),
-    (r[(r.REJECTED = 2)] = "REJECTED");
-class E {
+((a = r || (r = {}))[(a.PENDING = 0)] = "PENDING"),
+    (a[(a.RESOLVED = 1)] = "RESOLVED"),
+    (a[(a.REJECTED = 2)] = "REJECTED");
+class i {
     constructor(t) {
-        E.prototype.__init.call(this),
-            E.prototype.__init2.call(this),
-            E.prototype.__init3.call(this),
-            E.prototype.__init4.call(this),
-            (this._state = _.PENDING),
+        i.prototype.__init.call(this),
+            i.prototype.__init2.call(this),
+            i.prototype.__init3.call(this),
+            i.prototype.__init4.call(this),
+            (this._state = r.PENDING),
             (this._handlers = []);
         try {
             t(this._resolve, this._reject);
@@ -34,26 +34,26 @@ class E {
         }
     }
     then(t, e) {
-        return new E((a, r) => {
+        return new i((_, a) => {
             this._handlers.push([
                 !1,
                 (e) => {
                     if (t)
                         try {
-                            a(t(e));
+                            _(t(e));
                         } catch (t) {
-                            r(t);
+                            a(t);
                         }
-                    else a(e);
+                    else _(e);
                 },
                 (t) => {
                     if (e)
                         try {
-                            a(e(t));
+                            _(e(t));
                         } catch (t) {
-                            r(t);
+                            a(t);
                         }
-                    else r(t);
+                    else a(t);
                 },
             ]),
                 this._executeHandlers();
@@ -63,34 +63,34 @@ class E {
         return this.then((t) => t, t);
     }
     finally(t) {
-        return new E((e, a) => {
-            let r, _;
+        return new i((e, _) => {
+            let a, r;
             return this.then(
                 (e) => {
-                    (_ = !1), (r = e), t && t();
+                    (r = !1), (a = e), t && t();
                 },
                 (e) => {
-                    (_ = !0), (r = e), t && t();
+                    (r = !0), (a = e), t && t();
                 },
             ).then(() => {
-                if (_) return void a(r);
-                e(r);
+                if (r) return void _(a);
+                e(a);
             });
         });
     }
     __init() {
         this._resolve = (t) => {
-            this._setResult(_.RESOLVED, t);
+            this._setResult(r.RESOLVED, t);
         };
     }
     __init2() {
         this._reject = (t) => {
-            this._setResult(_.REJECTED, t);
+            this._setResult(r.REJECTED, t);
         };
     }
     __init3() {
         this._setResult = (t, e) => {
-            if (this._state === _.PENDING) {
+            if (this._state === r.PENDING) {
                 if ((0, n.J8)(e)) return void e.then(this._resolve, this._reject);
                 (this._state = t), (this._value = e), this._executeHandlers();
             }
@@ -98,13 +98,13 @@ class E {
     }
     __init4() {
         this._executeHandlers = () => {
-            if (this._state === _.PENDING) return;
+            if (this._state === r.PENDING) return;
             let t = this._handlers.slice();
             (this._handlers = []),
                 t.forEach((t) => {
                     t[0] ||
-                        (this._state === _.RESOLVED && t[1](this._value),
-                        this._state === _.REJECTED && t[2](this._value),
+                        (this._state === r.RESOLVED && t[1](this._value),
+                        this._state === r.REJECTED && t[2](this._value),
                         (t[0] = !0));
                 });
         };

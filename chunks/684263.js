@@ -3,34 +3,34 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    o = n(780384),
-    s = n(481060),
+    s = n(780384),
+    o = n(481060),
     c = n(410030),
     u = n(566697),
     d = n(876917),
-    p = n(328456),
-    g = n(619899),
+    g = n(328456),
+    p = n(619899),
     f = n(616066),
-    h = n(689157),
-    C = n(63243),
-    m = n(244488);
+    m = n(106221),
+    h = n(63243),
+    C = n(244488);
 let _ = l.memo(function (e) {
     let { product: t, isPurchased: n, isHighlighted: l, user: i } = e,
-        { firstProfileEffect: _, firstAvatarDecoration: b, firstNameplate: v } = (0, p.Rj)(t),
-        x = (0, g.O1)(b),
+        { firstProfileEffect: _, firstAvatarDecoration: b, firstNameplate: v } = (0, g.Rj)(t),
+        x = (0, p.O1)(b),
         E = (0, c.ZP)(),
-        O = (0, o.ap)(E),
+        O = (0, s.ap)(E),
         S = null != v && null != b && null != _,
-        y = S ? s.EFr.SIZE_72 : s.EFr.SIZE_80;
+        y = S ? o.EFr.SIZE_72 : o.EFr.SIZE_80;
     return (0, r.jsxs)("div", {
-        className: a()(h.container, {
-            [h.twoItemBundle]: !S,
-            [h.threeItemBundle]: S,
+        className: a()(m.container, {
+            [m.twoItemBundle]: !S,
+            [m.threeItemBundle]: S,
         }),
         children: [
             null != _ &&
                 (0, r.jsx)("div", {
-                    className: h.profileEffectShopPreview,
+                    className: m.profileEffectShopPreview,
                     children: (0, r.jsx)(d.Z, {
                         isHighlighted: l,
                         skuId: _.skuId,
@@ -40,7 +40,7 @@ let _ = l.memo(function (e) {
                 }),
             S &&
                 (0, r.jsx)("div", {
-                    className: h.nameplatePreview,
+                    className: m.nameplatePreview,
                     children: (0, r.jsx)(u.Z, {
                         user: i,
                         nameplate: v,
@@ -52,15 +52,15 @@ let _ = l.memo(function (e) {
                 }),
             null != x &&
                 (0, r.jsx)("div", {
-                    className: h.avatarDecorationPreview,
+                    className: m.avatarDecorationPreview,
                     children: (0, r.jsx)(f.R, {
                         item: x,
                         user: i,
                         avatarSize: y,
                         isPurchased: n,
                         isHighlighted: l,
-                        avatarPlaceholderSrc: O ? m : C,
-                        className: h.avatar,
+                        avatarPlaceholderSrc: O ? C : h,
+                        className: m.avatar,
                     }),
                 }),
         ],

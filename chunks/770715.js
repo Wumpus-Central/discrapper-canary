@@ -11,7 +11,7 @@ let c = (0, s.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
     useSubtitle: () => o.intl.string(o.t.m4Cjj9),
     useValue: () => (0, i.e7)([u.Z], () => u.Z.getSettings().remindersEnabled),
     usePredicate: () => {
-        let t = (0, l.Go)(),
+        let t = (0, l.w9)(),
             { showClipsHeaderEntrypoint: e } = l.NV.useExperiment(
                 { location: "clips_recording_settings" },
                 { autoTrackExposure: !1 },

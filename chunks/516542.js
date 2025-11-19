@@ -14,7 +14,7 @@ var i = n(54381),
     m = n(610394),
     g = n(981631),
     y = n(959517),
-    O = n(572985);
+    O = n(695038);
 function v(e) {
     let { id: t, replyToMessageId: n, channel: v, onSend: E } = e,
         b = (0, f.Z)(),
@@ -49,7 +49,7 @@ function v(e) {
             },
             [t],
         ),
-        D = r.useCallback(
+        k = r.useCallback(
             () => (
                 C.length > b ||
                     (l.Z.sendMessage(v.id, p.ZP.parse(v, C), !1, { location: y.dy.OVERLAY }),
@@ -78,7 +78,7 @@ function v(e) {
             onBlur: T,
             onFocus: w,
             focused: N,
-            onSubmit: D,
+            onSubmit: k,
             onKeyDown: A,
             autoCompletePosition: "bottom",
             disableThemedBackground: !0,

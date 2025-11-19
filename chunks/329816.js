@@ -29,8 +29,8 @@ var r = n(54381),
     P = n(859678),
     D = n(314910),
     w = n(84615),
-    x = n(429142),
-    L = n(728285),
+    L = n(429142),
+    x = n(728285),
     M = n(813744),
     k = n(746106),
     j = n(526665),
@@ -45,7 +45,7 @@ var r = n(54381),
     W = n(686546),
     K = n(950796),
     z = n(981631),
-    q = n(302821);
+    q = n(654924);
 n(29973),
     Promise.resolve()
         .then(n.bind(n, 62883))
@@ -109,7 +109,7 @@ let X = (0, F.Un)({
                                             (0, r.jsx)(W.Co, {}),
                                             (0, r.jsx)(Y.ZP, {}),
                                             (0, r.jsx)(c.OUJ, {}),
-                                            (0, r.jsx)(L.Wu, {
+                                            (0, r.jsx)(x.Wu, {
                                                 appContext: z.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(D.yP, {
@@ -126,7 +126,7 @@ let X = (0, F.Un)({
                                                                     className: q.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
                                                                     children: (0, r.jsx)(S.m, {
-                                                                        children: (0, r.jsx)(x.OR, {
+                                                                        children: (0, r.jsx)(L.OR, {
                                                                             children: (0, r.jsx)(b.Z.Provider, {
                                                                                 value: y.Z,
                                                                                 children: (0, r.jsxs)(T.p, {
@@ -145,7 +145,7 @@ let X = (0, F.Un)({
                                                                                         (0, r.jsx)(w.Ox, {}),
                                                                                         (0, r.jsx)(l.uZ, {}),
                                                                                         (0, r.jsx)(D.Un, {}),
-                                                                                        (0, r.jsx)(x.ot, {}),
+                                                                                        (0, r.jsx)(L.ot, {}),
                                                                                         (0, r.jsx)(f.Ixi, {
                                                                                             appContext: z.IlC.APP,
                                                                                         }),

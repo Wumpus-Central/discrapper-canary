@@ -19,7 +19,7 @@ var r = n(54381),
     m = n(693091),
     g = n(981631),
     E = n(388032),
-    b = n(968803);
+    b = n(995544);
 function y(e, t, n) {
     return (
         t in e
@@ -116,10 +116,10 @@ let C = i.memo(function (e) {
             status: P,
             containerRef: D,
             className: w,
-            wrapperClassName: x,
+            wrapperClassName: L,
         } = e,
-        [L, M] = i.useState(!1),
-        k = n || L || P === g._1z.FOCUSED,
+        [x, M] = i.useState(!1),
+        k = n || x || P === g._1z.FOCUSED,
         j = (0, l.e7)([h.Z, p.Z], () => h.Z.isInputLocked(p.Z.getTargetPID()));
     i.useEffect(() => {
         null == a || a();
@@ -254,7 +254,7 @@ let C = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(b.overflowWrapper, x),
+                className: o()(b.overflowWrapper, L),
                 onScroll: A,
                 children: (0, r.jsx)(u.P3F, {
                     innerRef: D,
@@ -369,10 +369,10 @@ function w(e) {
             },
             [h, c],
         ),
-        x = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        L = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
             props: {
-                onNotificationShow: L,
+                onNotificationShow: x,
                 onDismissClick: M,
                 renderFooter: k,
                 onNotificationClick: j,
@@ -414,7 +414,7 @@ function w(e) {
                     onNotificationClick: A,
                     onConfirmClick: null != p ? P : void 0,
                     onCancelClick: null != h ? w : void 0,
-                    renderFooter: x,
+                    renderFooter: L,
                     expand: !1,
                     index: n,
                     locked: a,

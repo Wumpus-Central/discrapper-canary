@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(110255),
     d = n(268623),
     p = n(324701),
-    f = n(768943),
-    h = n(64247),
+    h = n(768943),
+    f = n(64247),
     g = n(804932),
     m = n(370774),
     b = n(993609),
@@ -43,7 +43,7 @@ function j(e) {
     }
     return e;
 }
-function x(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function x(e, t) {
         e
     );
 }
-let C = {
+let x = {
     [_.ln.MENTION]: [_.r0.SETTINGS],
     [_.ln.REPLY]: [_.r0.SETTINGS],
     [_.ln.REACTION]: [_.r0.SETTINGS],
@@ -100,10 +100,10 @@ function E(e) {
 function S(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: c, interactionType: u, actionType: d } = e,
         p = (0, g.fJ)(),
-        [f, h] = (0, i.useState)(!1),
+        [h, f] = (0, i.useState)(!1),
         [m, _] = (0, i.useState)(!1),
         y = (0, i.useRef)(null),
-        { openMenu: O, closeMenu: C } = (0, b.z)();
+        { openMenu: O, closeMenu: x } = (0, b.z)();
     return (0, r.jsx)(a.yRy, {
         shouldShow: m,
         animation: a.yRy.Animation.NONE,
@@ -112,7 +112,7 @@ function S(e) {
         autoInvert: !1,
         targetElementRef: y,
         onRequestClose: () => {
-            _(!1), C(n.id, d);
+            _(!1), x(n.id, d);
         },
         renderPopout: (e) =>
             (0, r.jsx)(a.VqE, {
@@ -130,8 +130,8 @@ function S(e) {
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
-                onTooltipShow: () => h(!0),
-                onTooltipHide: () => h(!1),
+                onTooltipShow: () => f(!0),
+                onTooltipHide: () => f(!1),
                 children: (0, r.jsx)(a.P3F, {
                     innerRef: y,
                     className: v.action,
@@ -143,15 +143,15 @@ function S(e) {
                         }),
                             e.stopPropagation();
                         let t = !m;
-                        _(t), t ? O(n.id, d) : C(n.id, d);
+                        _(t), t ? O(n.id, d) : x(n.id, d);
                     },
                     children: (0, r.jsx)(
                         s,
-                        x(j({}, e), {
+                        C(j({}, e), {
                             message: n,
                             "aria-label": l,
                             className: v.actionIcon,
-                            size: f ? "sm" : "xs",
+                            size: h ? "sm" : "xs",
                         }),
                     ),
                 }),
@@ -186,20 +186,20 @@ let I = {
         type: "menu",
         label: O.intl.string(O.t["9p3D9p"]),
         Icon: (e) =>
-            null != f.Z.getSavedMessage(e.message.channel_id, e.message.id)
+            null != h.Z.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, r.jsx)(a.plf, j({}, e))
                 : (0, r.jsx)(a.gt9, j({}, e)),
         interactionType: g.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
-                i = (0, l.e7)([f.Z], () => f.Z.getSavedMessage(t.channel_id, t.id)),
+                i = (0, l.e7)([h.Z], () => h.Z.getSavedMessage(t.channel_id, t.id)),
                 o = (0, d.x)({
                     message: t,
                     savedMessage: i,
                 });
             return (0, r.jsxs)(
                 a.v2r,
-                x(j({}, n), {
+                C(j({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": O.intl.string(O.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -245,8 +245,8 @@ let I = {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, r.jsx)(
-                      h.Z,
-                      x(j({}, n), {
+                      f.Z,
+                      C(j({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: O.intl.string(O.t["1NBjqb"]),
@@ -254,7 +254,7 @@ let I = {
                   )
                 : (0, r.jsx)(
                       u.Z,
-                      x(j({}, n), {
+                      C(j({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: O.intl.string(O.t.Xm41aV),
@@ -270,7 +270,7 @@ function P(e) {
             return (0, i.useMemo)(() => {
                 let e = _.ln.MENTION,
                     r = new Set();
-                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), C[e].forEach((e) => r.add(e)), Array.from(r);
+                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), x[e].forEach((e) => r.add(e)), Array.from(r);
             }, [e, t, n]);
         })(t, l);
     return (0, r.jsx)(a.Kqy, {
@@ -285,7 +285,7 @@ function P(e) {
                 case "standard":
                     return (0, r.jsx)(
                         E,
-                        x(j({}, i), {
+                        C(j({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -294,7 +294,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         S,
-                        x(j({}, i), {
+                        C(j({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

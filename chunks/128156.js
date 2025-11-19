@@ -22,7 +22,7 @@ var i = n(442837),
     x = n(228168),
     _ = n(981631),
     P = n(388032),
-    I = n(158069);
+    I = n(837493);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, guildId: S, channelId: E, subsection: T, onClose: C } = e,
         { voiceActivityStatusEnabled: D } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
@@ -38,9 +38,9 @@ function w(e) {
             let e = G ? u.Z.getStatus() : s.Z.getStatus(t.id);
             return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
         }),
-        U = N.length > 0 || null != Z,
-        F = D && null == Z && null == L && null != R,
-        W = !B && (U || F),
+        F = N.length > 0 || null != Z,
+        U = D && null == Z && null == L && null != R,
+        W = !B && (F || U),
         H = A.length > 0;
     if (!W && !H && M)
         return (0, r.jsx)("div", {
@@ -87,7 +87,7 @@ function w(e) {
                           className: I.cards,
                           children: [
                               !k &&
-                                  F &&
+                                  U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
                                           user: t,
@@ -120,7 +120,7 @@ function w(e) {
                                   ),
                               ),
                               k &&
-                                  F &&
+                                  U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
                                           user: t,

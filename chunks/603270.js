@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => L,
-    P: () => x,
+    F: () => x,
+    P: () => L,
 }),
     n(388685),
     n(997841),
@@ -32,7 +32,7 @@ var r = n(54381),
     A = n(981631),
     C = n(979007),
     N = n(388032),
-    R = n(561498);
+    R = n(418746);
 let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
         getQueryId: A.McO.SKU,
         get: (e) => {
@@ -82,7 +82,7 @@ function w(e, t) {
         subscriptionPlan: o,
     };
 }
-function x(e) {
+function L(e) {
     let { appId: t, message: a } = e,
         o = (0, T.R)(t),
         { data: u } = (0, d.IX)(t),
@@ -115,7 +115,7 @@ function x(e) {
     if (!o || null == u) return null;
     let P = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("15351")]).then(n.bind(n, 7225));
                 return (n) =>
                     (0, r.jsx)(e, {
                         transitionState: n.transitionState,
@@ -139,7 +139,7 @@ function x(e) {
                     area: "open_store_button",
                 });
         },
-        x = () => {
+        L = () => {
             (0, I.X)(t, I.B.STORE_EMBED);
         };
     return (0, r.jsx)(M, {
@@ -150,7 +150,7 @@ function x(e) {
             .concat(location.protocol, "//")
             .concat(location.host)
             .concat(A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, C.GlobalDiscoveryAppsSections.STORE)),
-        onLinkCopy: x,
+        onLinkCopy: L,
         iconSrc: E,
         onIconClick: D,
         children: (0, r.jsx)("div", {
@@ -162,7 +162,7 @@ function x(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     var t, a;
     let { appId: o, skuId: c, message: u } = e,
         { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = w(c, o),
@@ -173,7 +173,7 @@ function L(e) {
         }, [u]),
         P = i.useMemo(() => (null != b ? (0, v.y)(b, 45) : void 0), [b]),
         D = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
-        { openModal: x, subscriptionPurchaseButtonState: L } = (0, p.Z)({
+        { openModal: L, subscriptionPurchaseButtonState: x } = (0, p.Z)({
             skuId: c,
             initialSubscribeForGuild: O,
         });
@@ -182,7 +182,7 @@ function L(e) {
         j = !!k && (0, _.KW)(m.flags),
         U = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("15351")]).then(n.bind(n, 7225));
                 return (t) =>
                     (0, r.jsx)(e, {
                         transitionState: t.transitionState,
@@ -299,14 +299,14 @@ function L(e) {
                 k
                     ? null != g
                         ? (0, r.jsx)(S.pV, {
-                              onClick: x,
+                              onClick: L,
                               appId: b.id,
                               subscriptionType: j ? "user" : "guild",
                               skuId: m.id,
                               icon: l.EOn,
                               onHasClicked: H,
                               subscriptionPlan: g,
-                              state: L,
+                              state: x,
                           })
                         : (0, r.jsx)(l.Button, {
                               variant: "primary",

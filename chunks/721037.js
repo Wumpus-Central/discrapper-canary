@@ -28,8 +28,8 @@ var r = n(54381),
     R = n(918559),
     P = n(354459),
     D = n(408491),
-    w = n(639965);
-function x(e, t, n) {
+    w = n(478615);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-let L = {
+let x = {
         [N.NYg.VIDEO]: v.Z,
         [N.NYg.ACTIVITY]: d.Z,
         [N.NYg.FRAME]: h.Z,
@@ -79,7 +79,7 @@ class j extends i.PureComponent {
         return (0, r.jsxs)(g._X, {
             children: [
                 (0, r.jsx)(m.Z, {
-                    pictureInPictureComponents: L,
+                    pictureInPictureComponents: x,
                     selectedPIPWindow: e,
                     pipWindows: t,
                     pipWidth: n,
@@ -100,10 +100,10 @@ class j extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "handleWindowMove", (e, t) => {
+            L(this, "handleWindowMove", (e, t) => {
                 o.Ao(e, t);
             }),
-            x(this, "handleWindowResize", (e) => {
+            L(this, "handleWindowResize", (e) => {
                 o.d7(e, P.cL.VIDEO);
             });
     }
@@ -114,12 +114,12 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         { popoutWindowKey: m, popoutWindowHasTitleBar: g = !1 } = e,
         v = b.Z.getWindowOpen(N.KJ3.CHANNEL_CALL_POPOUT),
         w = b.Z.getWindowOpen(N.KJ3.ACTIVITY_POPOUT),
-        x = s.ZP.getCurrentEmbeddedActivity(),
-        L = (0, c.p)(null == x ? void 0 : x.location),
-        M = null != x && !(0, u.Z)(L, I.Z, S.Z),
+        L = s.ZP.getCurrentEmbeddedActivity(),
+        x = (0, c.p)(null == L ? void 0 : L.location),
+        M = null != L && !(0, u.Z)(x, I.Z, S.Z),
         j = s.ZP.getActivityPanelMode(),
         U = M && j === R.Ez.PANEL,
-        G = null != x && null != L && (null == (t = f.Z.getSelectedParticipant(L)) ? void 0 : t.type) === P.fO.ACTIVITY,
+        G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
         Z = p.Z.getFrameLayoutMode() === D.U.FOCUSED,
         F = null != m,
@@ -144,10 +144,10 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
                 ? e - (0, _.Y7)({ isPopoutWindow: F })
                 : e;
     h =
-        (null != x && w) || (F && M) || (F && null != B)
+        (null != L && w) || (F && M) || (F && null != B)
             ? null
             : F || !v || M || null != B
-              ? null != x && U
+              ? null != L && U
                   ? null != (n = T.Z.pipActivityWindow)
                       ? n
                       : T.Z.pipVideoWindow
@@ -169,7 +169,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         et = S.Z.getChannelId() === ee,
         en = null != ee && f.Z.getChatOpen(ee),
         er = U || G,
-        ei = er && null != x && (0, l.q)(x.applicationId),
+        ei = er && null != L && (0, l.q)(L.applicationId),
         ea = !er && null != h && et && en;
     return {
         selectedPIPWindow: h,

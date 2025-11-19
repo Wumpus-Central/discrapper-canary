@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(213305),
     _ = n(155127),
     p = n(635041),
-    h = n(571755);
+    h = n(148374);
 function m(e, t, n) {
     return (
         t in e
@@ -121,8 +121,8 @@ function D(e) {
         { reducedMotion: S } = i.useContext(f.S),
         D = i.useRef(null),
         w = i.useRef(null),
-        x = null != T ? T : w,
-        L = (0, l.l)({
+        L = null != T ? T : w,
+        x = (0, l.l)({
             isSelected: t,
             onChange: E,
             isDisabled: n,
@@ -138,8 +138,8 @@ function D(e) {
                 "aria-describedby": v,
                 "aria-labelledby": I,
             },
-            L,
             x,
+            L,
         ),
         { hoverProps: U, isHovered: G } = (0, o.X)({ isDisabled: n }),
         B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -180,7 +180,7 @@ function D(e) {
         _.tE,
         b(g({}, y), {
             ringTarget: D,
-            focusTarget: x,
+            focusTarget: L,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(
@@ -244,7 +244,7 @@ function D(e) {
                                 }),
                             }),
                         ),
-                        (0, r.jsx)(p.n, { children: (0, r.jsx)("input", b(g({}, M), { ref: x })) }),
+                        (0, r.jsx)(p.n, { children: (0, r.jsx)("input", b(g({}, M), { ref: L })) }),
                     ],
                 }),
             ),

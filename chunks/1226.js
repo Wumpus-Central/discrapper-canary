@@ -1,7 +1,7 @@
 n.d(t, {
-    BO: () => c,
-    cq: () => p,
-    gI: () => h,
+    BO: () => u,
+    cq: () => h,
+    gI: () => p,
     xN: () => f,
     yA: () => d,
 });
@@ -52,18 +52,18 @@ function s(e, t) {
         e
     );
 }
-let u = (0, l.H)(() => ({ streams: {} }));
-function c(e) {
+let c = (0, l.H)(() => ({ streams: {} }));
+function u(e) {
     var t, n;
     let i = (0, o.V9)(e);
-    return null != (n = null == (t = u.useState((e) => e.streams, r())[i]) ? void 0 : t.zoom) ? n : 100;
+    return null != (n = null == (t = c.useState((e) => e.streams, r())[i]) ? void 0 : t.zoom) ? n : 100;
 }
 function d(e) {
-    return c(e) / 100;
+    return u(e) / 100;
 }
-function p(e, t) {
+function h(e, t) {
     let n = (0, o.V9)(e);
-    u.setState((e) => {
+    c.setState((e) => {
         var i;
         return s(a({}, e), {
             streams: s(a({}, e.streams), {
@@ -75,9 +75,9 @@ function p(e, t) {
         });
     }, !0);
 }
-function h(e, t) {
+function p(e, t) {
     let n = (0, o.V9)(e);
-    u.setState((e) => {
+    c.setState((e) => {
         var i;
         return s(a({}, e), {
             streams: s(a({}, e.streams), {
@@ -92,5 +92,5 @@ function h(e, t) {
 function f(e) {
     var t;
     let n = (0, o.V9)(e);
-    return null == (t = u.useState((e) => e.streams, r())[n]) ? void 0 : t.fitOverride;
+    return null == (t = c.useState((e) => e.streams, r())[n]) ? void 0 : t.fitOverride;
 }
