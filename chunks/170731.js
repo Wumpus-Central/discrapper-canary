@@ -22,35 +22,35 @@ var r = i(54381),
     v = i(474936),
     S = i(981631),
     x = i(228168),
-    C = i(388032),
-    P = i(694781);
+    P = i(388032),
+    C = i(694781);
 let y = {
     FULL_WISHLIST: {
-        title: C.intl.string(C.t["7lZ31J"]),
-        getSubtitle: (e) => C.intl.formatToPlainString(C.t.BjEX38, { username: e }),
+        title: P.intl.string(P.t["7lZ31J"]),
+        getSubtitle: (e) => P.intl.formatToPlainString(P.t.BjEX38, { username: e }),
         showIcons: !1,
     },
     MIXED: {
-        title: C.intl.string(C.t.SK5rmi),
-        getSubtitle: (e) => C.intl.formatToPlainString(C.t.dIDKgi, { username: e }),
+        title: P.intl.string(P.t.SK5rmi),
+        getSubtitle: (e) => P.intl.formatToPlainString(P.t.dIDKgi, { username: e }),
         showIcons: !0,
     },
     SHOP_ONLY: {
-        title: C.intl.string(C.t.SK5rmi),
-        getSubtitle: (e) => C.intl.formatToPlainString(C.t.wyMp1j, { username: e }),
+        title: P.intl.string(P.t.SK5rmi),
+        getSubtitle: (e) => P.intl.formatToPlainString(P.t.wyMp1j, { username: e }),
         showIcons: !1,
     },
 };
 function k(e) {
     let { title: t, subtitle: i, themeClass: n } = e;
     return (0, r.jsx)("div", {
-        className: l()(P.wishlistBannerHeader, n),
+        className: l()(C.wishlistBannerHeader, n),
         children: (0, r.jsxs)("div", {
-            className: P.wishlistBannerTitleContainer,
+            className: C.wishlistBannerTitleContainer,
             children: [
                 (0, r.jsx)(o.Heading, {
                     variant: "display-md",
-                    className: P.wishlistBannerTitle,
+                    className: C.wishlistBannerTitle,
                     children: t,
                 }),
                 (0, r.jsx)(o.Text, {
@@ -64,9 +64,9 @@ function k(e) {
 function L() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.nn4, { children: C.intl.string(C.t.pfChQr) }),
+            (0, r.jsx)(o.nn4, { children: P.intl.string(P.t.pfChQr) }),
             (0, r.jsx)("div", {
-                className: P.wishlistBannerGrid,
+                className: C.wishlistBannerGrid,
                 children: Array.from({ length: I.zL }, (e, t) =>
                     (0, r.jsx)(_.Z, { cardSize: b.U.SMALL }, "placeholder-".concat(t)),
                 ),
@@ -81,7 +81,7 @@ function N(e) {
         : (0, r.jsx)(
               "li",
               {
-                  className: P.wishlistBannerListItem,
+                  className: C.wishlistBannerListItem,
                   children: (0, r.jsx)(h.BO, {
                       item: t.item,
                       remainingCount: i,
@@ -114,14 +114,14 @@ function B(e) {
         onWishlistItemClick: d,
     } = e;
     return (0, r.jsxs)("ul", {
-        className: P.wishlistBannerGrid,
+        className: C.wishlistBannerGrid,
         children: [
             t.map((e) => {
                 let { item: t, source: i } = e;
                 return (0, r.jsx)(
                     "li",
                     {
-                        className: P.wishlistBannerListItem,
+                        className: C.wishlistBannerListItem,
                         children: (0, r.jsx)(g.Z, {
                             item: t,
                             profileOwner: s,
@@ -159,7 +159,7 @@ let T = function (e) {
             isFetchingWishlist: _,
             isValidatingPopularProducts: O,
             isFetchingPopularProducts: v,
-            wishlistError: C,
+            wishlistError: P,
         } = (0, I.ZL)(t),
         {
             displayItems: N,
@@ -169,7 +169,7 @@ let T = function (e) {
         } = (0, I.UD)({
             wishlist: g,
             popularCollectiblesProducts: b,
-            wishlistError: C,
+            wishlistError: P,
         }),
         {
             theme: R,
@@ -216,6 +216,14 @@ let T = function (e) {
                         gift_recipient_id: t.id,
                         sku_ids: e,
                         location_stack: a,
+                        product_lines: Array.from(
+                            new Set(
+                                N.map((e) => {
+                                    let { item: t } = e;
+                                    return t.skuProductLine;
+                                }),
+                            ),
+                        ),
                     }),
                         X(!0);
                 }
@@ -223,16 +231,16 @@ let T = function (e) {
             [F, N, t.id, a],
         ),
         J = (0, s.O)(V, void 0, !F && !K);
-    return null != C
+    return null != P
         ? null
         : (0, r.jsxs)("div", {
               ref: J,
-              className: l()(P.wishlistBanner, W),
+              className: l()(C.wishlistBanner, W),
               style: H,
               children: [
                   null != z &&
                       (0, r.jsx)("div", {
-                          className: P.backgroundImage,
+                          className: C.backgroundImage,
                           style: { backgroundImage: "url(".concat(z, ")") },
                       }),
                   (0, r.jsx)(o.f6W, {

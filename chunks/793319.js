@@ -669,6 +669,7 @@ let eA = function (e) {
                                           }),
                                       G &&
                                           (0, i.jsx)(eh.Z, {
+                                              channel: n,
                                               themeable: !0,
                                               whichPopoutIsOpen: m,
                                               setWhichPopoutIsOpen: g,

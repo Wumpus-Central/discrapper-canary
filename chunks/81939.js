@@ -35,5 +35,6 @@ function c(e) {
     return {
         loading: null == n || (null == n ? void 0 : n.loading),
         wishlistItems: d,
+        wishlistItemSkuIds: c,
     };
 }
