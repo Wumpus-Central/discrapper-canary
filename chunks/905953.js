@@ -92,16 +92,19 @@ function y(e) {
                               : {
                                     text: _.intl.string(_.t["DSJi3+"]),
                                     onClick: () => {
-                                        k(),
-                                            S(!0),
-                                            (0, g.openUserProfileModal)({
-                                                userId: N,
-                                                section: j.oh.WIDGETS,
-                                            })
-                                                .then(() => {
-                                                    l(v.L.TAKE_ACTION), y();
-                                                })
-                                                .finally(() => S(!1));
+                                        k({
+                                            onConfirm: () => {
+                                                S(!0),
+                                                    (0, g.openUserProfileModal)({
+                                                        userId: N,
+                                                        section: j.oh.WIDGETS,
+                                                    })
+                                                        .then(() => {
+                                                            l(v.L.TAKE_ACTION), y();
+                                                        })
+                                                        .finally(() => S(!1));
+                                            },
+                                        });
                                     },
                                     loading: C,
                                 },

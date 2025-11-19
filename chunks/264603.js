@@ -136,7 +136,7 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !O.canStartAuthorization,
-                        onClick: O.startAuthorization,
+                        onClick: () => O.startAuthorization(),
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -148,13 +148,13 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !N.canStartAuthorization,
-                        onClick: N.startAuthorization,
+                        onClick: () => N.startAuthorization(),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !T.canStartAuthorization,
-                        onClick: T.startAuthorization,
+                        onClick: () => T.startAuthorization(),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
