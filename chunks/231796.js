@@ -8,8 +8,6 @@ e.exports = {
     unread: "unread__6fddf",
     friendRequestContainer: "friendRequestContainer__6fddf",
     button: "button__6fddf",
-    acceptButton: "acceptButton__6fddf button__6fddf",
-    ignoreButton: "ignoreButton__6fddf button__6fddf",
     lifecycleContainer: "lifecycleContainer__6fddf",
     lifecycleText: "lifecycleText__6fddf",
     checkbox: "checkbox__6fddf",

@@ -1,6 +1,6 @@
 n.d(t, {
-    RB: () => O,
-    ZP: () => v,
+    R: () => O,
+    Z: () => v,
 }),
     n(388685);
 var r = n(54381),
@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(237872),
     d = n(945909),
     f = n(481060),
-    _ = n(734520);
+    _ = n(420153);
 function p(e, t, n) {
     return (
         t in e
@@ -122,13 +122,12 @@ function O(e) {
             caretConfig: T,
             scrollBehavior: S,
             showCloseButton: A = !0,
-            isTooltip: C = !1,
-            modal: N = !1,
+            isCaretHoverable: C = !1,
+            shouldTrapFocus: N = !1,
             returnRef: R,
-            popoverRef: P,
-            onNudgeChange: D,
+            onNudgeChange: P,
         } = e,
-        w = E(e, [
+        D = E(e, [
             "title",
             "body",
             "graphic",
@@ -140,59 +139,54 @@ function O(e) {
             "caretConfig",
             "scrollBehavior",
             "showCloseButton",
-            "isTooltip",
-            "modal",
+            "isCaretHoverable",
+            "shouldTrapFocus",
             "returnRef",
-            "popoverRef",
             "onNudgeChange",
         ]);
-    let [L, x] = i.useState(null != I ? I : "top");
+    let [w, L] = i.useState(null != I ? I : "top");
     i.useEffect(() => {
-        null != I && x(I);
+        null != I && L(I);
     }, [I]);
-    let M = i.useMemo(() => {
+    let x = i.useMemo(() => {
             var e;
             return {
-                position: (0, d.z)(L),
+                position: (0, d.z)(w),
                 align: null != (e = null == T ? void 0 : T.align) ? e : "center",
                 customOffset: null == T ? void 0 : T.customOffset,
             };
-        }, [L, T]),
+        }, [w, T]),
+        M = i.useCallback(() => {
+            null == v || v();
+        }, [v]),
         j = i.useCallback(
-            (e, t) => {
-                null == v || v(t);
-            },
-            [v],
-        ),
-        k = i.useCallback(
             (e) => {
                 null == v || v(e);
             },
             [v],
         ),
-        U = i.useCallback((e) => {
-            x(e);
+        k = i.useCallback((e) => {
+            L(e);
         }, []),
-        G = C ? _.caretHoverable : void 0;
+        U = C ? _.caretHoverable : void 0;
     return (0, r.jsx)(
         s.m,
-        g(h({}, w), {
-            position: L,
-            onRequestClose: j,
+        g(h({}, D), {
+            position: w,
+            onRequestClose: M,
             gradientColor: O,
-            onPositionChange: U,
-            onNudgeChange: D,
+            onPositionChange: k,
+            onNudgeChange: P,
             scrollBehavior: S,
             modal: N,
             returnRef: R,
             gradientOffsetBottom: 0,
             children: (0, r.jsxs)("div", {
-                ref: P,
                 "data-mana-component": "popover",
                 children: [
                     A &&
                         (0, r.jsx)(u.u, {
-                            onClick: k,
+                            onClick: j,
                             variant: null != O ? "color-mix" : void 0,
                         }),
                     null != p &&
@@ -215,15 +209,14 @@ function O(e) {
                               className: _.actionBar,
                           })
                         : null,
-                    null != M &&
+                    null != x &&
                         (0, r.jsx)(c.$, {
-                            caretConfig: M,
-                            className: G,
+                            caretConfig: x,
+                            className: U,
                         }),
                 ],
             }),
         }),
     );
 }
-n(799607);
 let v = O;

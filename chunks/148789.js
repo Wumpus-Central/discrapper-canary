@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(755721),
+    l = n(793030),
     o = n(298213),
     a = n(388032),
     s = n(231796);
@@ -39,29 +39,26 @@ function c(e) {
             },
             [n, t],
         );
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: s.friendRequestContainer,
-        children: [
-            (0, r.jsx)(l.zx, {
-                className: s.acceptButton,
-                look: l.zx.Looks.FILLED,
-                color: l.zx.Colors.GREEN,
-                size: l.zx.Sizes.NONE,
-                submitting: c,
-                disabled: d,
-                onClick: f,
-                children: a.intl.string(a.t.Zcibdf),
-            }),
-            (0, r.jsx)(l.zx, {
-                className: s.ignoreButton,
-                look: l.zx.Looks.FILLED,
-                color: l.zx.Colors.PRIMARY,
-                size: l.zx.Sizes.NONE,
-                submitting: d,
-                disabled: c,
-                onClick: h,
-                children: a.intl.string(a.t.xuio0C),
-            }),
-        ],
+        children: (0, r.jsxs)(l.hE2, {
+            size: "sm",
+            children: [
+                (0, r.jsx)(l.zxk, {
+                    variant: "active",
+                    onClick: f,
+                    text: a.intl.string(a.t.Zcibdf),
+                    loading: c,
+                    disabled: d,
+                }),
+                (0, r.jsx)(l.zxk, {
+                    variant: "secondary",
+                    onClick: h,
+                    text: a.intl.string(a.t.xuio0C),
+                    loading: d,
+                    disabled: c,
+                }),
+            ],
+        }),
     });
 }

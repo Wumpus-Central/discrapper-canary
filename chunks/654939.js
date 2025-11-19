@@ -112,7 +112,7 @@ let g = (e) => {
                   p(
                       {
                           targetElementRef: E,
-                          tooltipHeight: 300,
+                          estimatedTooltipHeight: 300,
                           delay: g,
                           onShow: T,
                       },
@@ -125,7 +125,7 @@ let g = (e) => {
               children: [
                   _,
                   (0, r.jsx)(
-                      l.ZP,
+                      l.Z,
                       p(
                           {
                               targetElementRef: E,

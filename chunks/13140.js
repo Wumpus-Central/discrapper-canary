@@ -1,4 +1,5 @@
 n.d(t, {
+    Al: () => B,
     BB: () => U,
     C$: () => C,
     H9: () => A,
@@ -297,5 +298,14 @@ function G(e, t) {
                 [s, l, c] = t[r];
             return i === s && a === l && (!n || o === c);
         })
+    );
+}
+function B(e) {
+    return (
+        null != e &&
+        "object" == typeof e &&
+        "nativeEvent" in e &&
+        0 === e.nativeEvent.clientX &&
+        0 === e.nativeEvent.clientY
     );
 }
