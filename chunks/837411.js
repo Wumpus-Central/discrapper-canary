@@ -1,4 +1,7 @@
-n.d(t, { Z: () => u });
+n.d(t, {
+    Z: () => d,
+    n: () => u,
+});
 var r = n(442837),
     i = n(91896),
     a = n(41776),
@@ -6,7 +9,17 @@ var r = n(442837),
     s = n(314897),
     l = n(271383),
     c = n(699516);
-function u(e, t) {
+let u = (e, t) => {
+    let n = s.default.getId() === e,
+        r = null != t && a.Z.isLurking(t),
+        u = o.h2.getSetting(),
+        d = c.Z.isFriend(e);
+    return (
+        (!n && !r && (d || null != l.ZP.memberOf(e).find((e) => !u.includes(e)))) ||
+        (i.Z.getGameFriendsForUser(e).length > 0 && o._j.getSetting())
+    );
+};
+function d(e, t) {
     let n = (0, r.e7)([s.default], () => s.default.getId() === e),
         u = (0, r.e7)([a.Z], () => null != t && a.Z.isLurking(t)),
         d = o.h2.useSetting();

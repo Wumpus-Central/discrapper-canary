@@ -1,45 +1,48 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(442837),
     a = n(481060),
     o = n(700582),
     s = n(987209),
     l = n(752048),
-    c = n(699516),
-    u = n(594174),
-    d = n(51144),
-    f = n(69143),
-    _ = n(388032);
-let p = (e) => {
-    let { selectedSkuId: t, validateSelectedGift: n, className: p, searchableSelectWrapperClassName: h } = e,
-        { affineGiftingEnabled: m, affinityThreshold: g } = f.Z.useConfig({
+    c = n(837411),
+    u = n(699516),
+    d = n(594174),
+    f = n(51144),
+    _ = n(69143),
+    p = n(388032);
+let h = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: h, searchableSelectWrapperClassName: m } = e,
+        { affineGiftingEnabled: g, affinityThreshold: E } = _.Z.useConfig({
             location: "Collectibles Gift Recipient Picker",
         }),
-        E = (0, i.Wu)([c.Z], () => c.Z.getFriendIDs()),
-        b = (0, i.Wu)([l.Z], () =>
+        b = (0, i.Wu)([u.Z], () => u.Z.getFriendIDs()),
+        y = (0, i.Wu)([l.Z], () =>
             l.Z.getUserAffinities()
                 .filter((e) => {
-                    let { isFriend: t, communicationProbability: n, vcProbability: r } = e;
-                    return !t && (n >= g || r > g);
+                    let { isFriend: t, communicationProbability: n, vcProbability: r, otherUserId: i } = e,
+                        a = !t && (n >= E || r >= E),
+                        o = (0, c.n)(i);
+                    return a && o;
                 })
                 .map((e) => {
                     let { otherUserId: t } = e;
                     return t;
                 }),
         ),
-        y = [...E, ...(m ? b : [])],
-        O = (0, i.Wu)([u.default], () => u.default.filter((e) => y.includes(e.id) && !e.bot), [y]),
-        { giftRecipient: v, setGiftRecipient: I } = (0, s.wD)();
+        O = [...b, ...(g ? y : [])],
+        v = (0, i.Wu)([d.default], () => d.default.filter((e) => O.includes(e.id) && !e.bot), [O]),
+        { giftRecipient: I, setGiftRecipient: T } = (0, s.wD)();
     if (null == t) return null;
-    let T = (e) => {
-        n(e, t), I(e);
+    let S = (e) => {
+        n(e, t), T(e);
     };
     return (0, r.jsx)("div", {
-        className: p,
+        className: h,
         children: (0, r.jsx)(a.VcW, {
-            wrapperClassName: h,
-            label: _.intl.string(_.t.xFn72s),
-            placeholder: _.intl.string(_.t.R0vK0N),
+            wrapperClassName: m,
+            label: p.intl.string(p.t.xFn72s),
+            placeholder: p.intl.string(p.t.R0vK0N),
             renderOptionPrefix: (e) =>
                 (null == e ? void 0 : e.value) == null
                     ? null
@@ -47,11 +50,11 @@ let p = (e) => {
                           user: e.value,
                           size: a.EFr.SIZE_20,
                       }),
-            value: v,
-            onChange: T,
-            options: O.map((e) => ({
+            value: I,
+            onChange: S,
+            options: v.map((e) => ({
                 value: e,
-                label: "".concat(d.ZP.getUserTag(e)),
+                label: "".concat(f.ZP.getUserTag(e)),
             })),
         }),
     });
