@@ -17,9 +17,9 @@ var r = n(473749),
     c = n(597688),
     u = n(328347),
     d = n(429368),
-    g = n(410127),
-    p = n(237031),
-    f = n(258939),
+    f = n(410127),
+    g = n(237031),
+    p = n(258939),
     m = n(956472),
     h = n(981631);
 let C = "".concat("#").concat("itemSkuId", "="),
@@ -35,12 +35,12 @@ let C = "".concat("#").concat("itemSkuId", "="),
         }, [e, t.pathname]);
     },
     x = () => {
-        let e = (0, f.R)(),
+        let e = (0, p.R)(),
             t = r.useRef(null),
             n = (0, l.TH)(),
             a = n.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : s.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: C } = (0, o.ZP)(a),
-            b = (0, g.Z)();
+            b = (0, f.Z)();
         r.useEffect(() => {
             let e = _.exec(n.hash);
             null != e ? (t.current = e[1]) : (t.current = null);
@@ -71,7 +71,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
                                     null != r && r > -1 && (0, d.$)(n, r);
                                 }
                             }
-                            (0, p.T)({
+                            (0, g.T)({
                                 product: e,
                                 category: a,
                                 analyticsSource: r,

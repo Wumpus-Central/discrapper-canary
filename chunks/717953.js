@@ -88,14 +88,14 @@ function I(e) {
         L = (0, f.Sl)(E.Il.WHITE).hex,
         x = (0, f.Sl)(E.Il.RED_430).hex,
         M = D ? L : void 0,
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
     return (0, r.jsxs)("div", {
         className: O.badgeContainer,
         children: [
             (0, r.jsxs)(m.S4, {
-                onSelect: t ? void 0 : k,
+                onSelect: t ? void 0 : j,
                 isSelected: !1,
                 showSelectionCircle: P,
                 name: y.intl.string(b.default.KSBBpC),

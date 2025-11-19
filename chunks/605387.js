@@ -549,10 +549,10 @@ var t = (function () {
                             }
                             var M = f[o(r, v) & y];
                             v += 15 & M;
-                            var k = M >>> 4,
-                                j = e.h[k],
-                                U = (j >>> 4) + a(r, v, 15 & j);
-                            for (v += 15 & j, I && (u = s(u, O + 131072)); O < L; )
+                            var j = M >>> 4,
+                                k = e.h[j],
+                                U = (k >>> 4) + a(r, v, 15 & k);
+                            for (v += 15 & k, I && (u = s(u, O + 131072)); O < L; )
                                 (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]);
                             O = L;
                         }
@@ -974,13 +974,13 @@ var t = (function () {
                     D = new Uint8Array(b);
                 S.push(D);
                 for (var y = 0; y < b; y++) {
-                    var k = x[y];
-                    if (0 != y && k == x[y - 1]) D[y] = D[y - 1];
-                    else if (y > M && k == x[y - M]) D[y] = D[y - M];
+                    var j = x[y];
+                    if (0 != y && j == x[y - 1]) D[y] = D[y - 1];
+                    else if (y > M && j == x[y - M]) D[y] = D[y - M];
                     else {
-                        var j = I[k];
-                        if (null == j && ((I[k] = j = T.length), T.push(k), T.length >= 300)) break;
-                        D[y] = j;
+                        var k = I[j];
+                        if (null == k && ((I[j] = k = T.length), T.push(j), T.length >= 300)) break;
+                        D[y] = k;
                     }
                 }
             }
@@ -1086,15 +1086,15 @@ var t = (function () {
                 if (1 != L.blend) {
                     var x = L.rect,
                         M = s[l - 1].rect,
-                        k = Math.min(x.x, M.x),
-                        j = Math.min(x.y, M.y),
+                        j = Math.min(x.x, M.x),
+                        k = Math.min(x.y, M.y),
                         U = Math.max(x.x + x.width, M.x + M.width),
                         G = Math.max(x.y + x.height, M.y + M.height),
                         B = {
-                            x: k,
-                            y: j,
-                            width: U - k,
-                            height: G - j,
+                            x: j,
+                            y: k,
+                            width: U - j,
+                            height: G - k,
                         };
                     (s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, a), p(t, n, r, s, l, B, a);
                 }

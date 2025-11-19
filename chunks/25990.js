@@ -36,11 +36,11 @@ function M(e) {
     if (P !== N.QZA.SUBMITTING) return !1;
     (P = N.QZA.OPEN), (D = null != (t = e.errors) ? t : {});
 }
-function k(e) {
+function j(e) {
     let { section: t } = e;
     return t === N.oAB.ACCOUNT && w();
 }
-function j(e) {
+function k(e) {
     let { avatar: t } = e;
     (r = t), (g = void 0);
 }
@@ -251,12 +251,12 @@ let ed = new eu(S.Z, {
     USER_SETTINGS_ACCOUNT_INIT: w,
     USER_SETTINGS_MODAL_INIT: w,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: w,
-    USER_SETTINGS_MODAL_SET_SECTION: k,
+    USER_SETTINGS_MODAL_SET_SECTION: j,
     USER_SETTINGS_ACCOUNT_CLOSE: L,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ec,
     USER_SETTINGS_ACCOUNT_SUBMIT: x,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: M,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: k,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM: B,

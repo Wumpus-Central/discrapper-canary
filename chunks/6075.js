@@ -52,7 +52,7 @@ function D(e, t) {
             : L(e, t)
         : M(e)
           ? Promise.resolve((0, r.u0)(e))
-          : k(e, t);
+          : j(e, t);
 }
 function w(e, { length: t } = {}) {
     let n = { method: "GET" };
@@ -81,9 +81,9 @@ function x(e) {
 function M(e) {
     return /^data:[^;,]*(;base64)?,/.test(e);
 }
-function k(e, { length: t } = {}) {
+function j(e, { length: t } = {}) {
     return new Promise((n, r) => {
-        let i = j();
+        let i = k();
         i.open(e, (a, o) => {
             a
                 ? r(a)
@@ -108,7 +108,7 @@ function k(e, { length: t } = {}) {
         });
     });
 }
-function j() {
+function k() {
     try {
         return require("fs");
     } catch (e) {
@@ -161,8 +161,8 @@ function V(
             iptcDataOffset: L,
             xmpChunks: x,
             iccChunks: M,
-            mpfDataOffset: k,
-            pngHeaderOffset: j,
+            mpfDataOffset: j,
+            pngHeaderOffset: k,
             pngTextChunks: U,
             pngChunkOffsets: G,
             vp8xChunkOffset: B,
@@ -234,14 +234,14 @@ function V(
         let t = h.Z.read(e, M, n);
         t instanceof Promise ? N.push(t.then(eo)) : eo(t);
     }
-    if (a.Z.USE_MPF && $(k)) {
+    if (a.Z.USE_MPF && $(j)) {
         A = !0;
-        let n = c.Z.read(e, k, i);
+        let n = c.Z.read(e, j, i);
         t ? (C.mpf = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_PNG && a.Z.USE_PNG_FILE && ee(j)) {
+    if (a.Z.USE_PNG && a.Z.USE_PNG_FILE && ee(k)) {
         A = !0;
-        let n = E.Z.read(e, j);
+        let n = E.Z.read(e, k);
         t ? ((C.png = C.png ? (0, r.wB)({}, C.png, n) : n), (C.pngFile = n)) : (C = (0, r.wB)({}, C, n));
     }
     if (a.Z.USE_PNG && et(U)) {

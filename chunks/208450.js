@@ -38,8 +38,8 @@ var r = n(54381),
     L = n(991896),
     x = n(611004),
     M = n(778177),
-    k = n(165017),
-    j = n(817190),
+    j = n(165017),
+    k = n(817190),
     U = n(315322),
     G = n(723642),
     B = n(125085),
@@ -442,7 +442,7 @@ function q(e) {
     let { searchContext: t, className: n } = e,
         a = (0, A.Tm)(t),
         o = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        s = (0, u.e7)([j.Z], () => j.Z.getEditorState(a));
+        s = (0, u.e7)([k.Z], () => k.Z.getEditorState(a));
     i.useEffect(
         () => (
             m.Z.setSelectedSearchContext(a),
@@ -452,7 +452,7 @@ function q(e) {
         ),
         [a],
     );
-    let l = (0, u.e7)([j.Z], () => j.Z.getIsSearchTokensInitialized()),
+    let l = (0, u.e7)([k.Z], () => k.Z.getIsSearchTokensInitialized()),
         c = i.useRef(l);
     i.useEffect(() => {
         l && c.current !== l && ((c.current = l), x.Z.ensureSearchInputDecorators(t));
@@ -476,11 +476,11 @@ function q(e) {
     i.useEffect(() => {
         O === (0, A.Tm)(t) && C(M);
     }, [O, M, t]);
-    let k = (0, d.VXO)(B.L),
-        G = T || k;
+    let j = (0, d.VXO)(B.L),
+        G = T || j;
     i.useEffect(() => {
         w.current && !T && ((w.current = !1), (0, U.IZ)({ searchContext: t })), !w.current && T && (w.current = !0);
-    }, [G, t, T, k]);
+    }, [G, t, T, j]);
     let V = i.useCallback(
             (e) => {
                 let { queryString: n, query: r, searchEverywhere: i } = e;
@@ -539,7 +539,7 @@ function q(e) {
 }
 function X(e) {
     let { className: t, guildId: n, channelId: i } = e,
-        a = (0, k.H)({
+        a = (0, j.H)({
             guildId: n,
             channelId: i,
         });

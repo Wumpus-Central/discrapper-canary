@@ -84,7 +84,7 @@ let R = i.memo((e) => {
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             b === E.gM.CARD_CAROUSEL_THIRD_ROW,
         M = (0, g.Z)(),
-        [k, j] = (0, _.cv)(null != a && n ? [a] : []),
+        [j, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
         F = i.useMemo(
             () =>
@@ -110,22 +110,22 @@ let R = i.memo((e) => {
             null == y || y(), V();
         };
     e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
-    let Y = k !== a || null == a || w,
+    let Y = j !== a || null == a || w,
         W = (e) => {
             C &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(T.flipCard) &&
                 (L(!0),
                 p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-                null != a && j(v.L.TAKE_ACTION));
+                null != a && k(v.L.TAKE_ACTION));
         };
     return (i.useEffect(() => {
         S &&
             C &&
             (L(!0),
             p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-            null != a && j(v.L.TAKE_ACTION));
-    }, [S, C, a, t, j]),
+            null != a && k(v.L.TAKE_ACTION));
+    }, [S, C, a, t, k]),
     (0, f.Z)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD,

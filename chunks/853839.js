@@ -71,21 +71,21 @@ var r = n(98405),
         });
     };
 y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, w));
-var k = o(function () {
+var j = o(function () {
         return !(new S() instanceof T);
     }),
-    j =
-        k ||
+    k =
+        j ||
         o(function () {
             return C.toString !== h || "2: 1" !== String(new S(1, 2));
         }),
     U =
-        k ||
+        j ||
         o(function () {
             return 25 !== new S(1, "DataCloneError").code;
         }),
-    G = k || 25 !== S[I] || 25 !== A[I],
-    B = O ? j || U || G : k;
+    G = j || 25 !== S[I] || 25 !== A[I],
+    B = O ? k || U || G : j;
 r(
     {
         global: !0,
@@ -96,7 +96,7 @@ r(
 );
 var Z = i(v),
     F = Z.prototype;
-for (var V in (j && (O || S === Z) && u(F, "toString", h),
+for (var V in (k && (O || S === Z) && u(F, "toString", h),
 U &&
     y &&
     S === Z &&

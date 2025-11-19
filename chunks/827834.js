@@ -127,13 +127,13 @@ t.default = (function () {
                 value: "select",
                 description: '"select"',
             },
-            k = function (e) {
+            j = function (e) {
                 return {
                     type: "selectFormat",
                     options: e,
                 };
             },
-            j = "=",
+            k = "=",
             U = {
                 type: "literal",
                 value: "=",
@@ -361,7 +361,7 @@ t.default = (function () {
         }
         function eL() {
             var e;
-            return (e = eM()) === i && (e = ej()), e;
+            return (e = eM()) === i && (e = ek()), e;
         }
         function ex() {
             var e, n, r, a, o, s;
@@ -389,7 +389,7 @@ t.default = (function () {
             var e, t;
             return (e = eO), (t = ex()) !== i && ((ev = e), (t = u(t))), (e = t);
         }
-        function ek() {
+        function ej() {
             var e, n, r;
             if ((e = eQ()) === i) {
                 if (
@@ -405,12 +405,12 @@ t.default = (function () {
             }
             return e;
         }
-        function ej() {
+        function ek() {
             var e, n, r, a, o, s, c;
             return (
                 (e = eO),
                 123 === t.charCodeAt(eO) ? ((n = _), eO++) : ((n = i), 0 === eC && eR(p)),
-                n !== i && ez() !== i && (r = ek()) !== i && ez() !== i
+                n !== i && ez() !== i && (r = ej()) !== i && ez() !== i
                     ? ((a = eO),
                       44 === t.charCodeAt(eO) ? ((o = m), eO++) : ((o = i), 0 === eC && eR(g)),
                       o !== i && (s = ez()) !== i && (c = eU()) !== i ? (a = o = [o, s, c]) : ((eO = a), (a = l)),
@@ -477,7 +477,7 @@ t.default = (function () {
                         if (ez() !== i) {
                             if (((a = []), (o = eH()) !== i)) for (; o !== i; ) a.push(o), (o = eH());
                             else a = l;
-                            a !== i ? ((ev = e), (e = n = k(a))) : ((eO = e), (e = l));
+                            a !== i ? ((ev = e), (e = n = j(a))) : ((eO = e), (e = l));
                         } else (eO = e), (e = l);
                     else (eO = e), (e = l);
                 else (eO = e), (e = l);
@@ -489,7 +489,7 @@ t.default = (function () {
             return (
                 (e = eO),
                 (n = eO),
-                61 === t.charCodeAt(eO) ? ((r = j), eO++) : ((r = i), 0 === eC && eR(U)),
+                61 === t.charCodeAt(eO) ? ((r = k), eO++) : ((r = i), 0 === eC && eR(U)),
                 r !== i && (a = eQ()) !== i ? (n = r = [r, a]) : ((eO = n), (n = l)),
                 n !== i && (n = t.substring(e, eO)),
                 (e = n) === i && (e = e$()),

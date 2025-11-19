@@ -205,8 +205,8 @@ let x = (e) => {
         }),
         x = A >= m.OH.ACCEPTED,
         M = A >= m.OH.COMPLETED,
-        k = (0, h.Xv)(n.config),
-        j = _ || b,
+        j = (0, h.Xv)(n.config),
+        k = _ || b,
         U = (0, m.t5)(n, S.dr.QUESTS_CARD, i, T),
         G = (0, p.O5)(),
         B = (0, m.Rf)(n),
@@ -240,8 +240,8 @@ let x = (e) => {
                 [N.outerContainerSm]: "sm" === l,
                 [N.outerContainerXs]: "xs" === l,
             }),
-            style: { visibility: j ? "inherit" : "hidden" },
-            "aria-hidden": !j,
+            style: { visibility: k ? "inherit" : "hidden" },
+            "aria-hidden": !k,
             children: [
                 (0, r.jsx)(s.u, {
                     text: Y ? C.intl.string(C.t["04MTGf"]) : null,
@@ -327,7 +327,7 @@ let x = (e) => {
                                   (0, r.jsx)(w, {
                                       quest: n,
                                       progressState: A,
-                                      isCollectibleQuest: k,
+                                      isCollectibleQuest: j,
                                       questContent: i,
                                       sourceQuestContent: T,
                                   }),

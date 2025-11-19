@@ -105,8 +105,8 @@ function L(e, t) {
 }
 let x = 43,
     M = 25,
-    k = 40,
-    j = 250;
+    j = 40,
+    k = 250;
 function U(e) {
     e.stopPropagation();
 }
@@ -241,7 +241,7 @@ function V(e) {
     let Z = i.useCallback(() => {
             var e;
             let t = null == (e = P.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < j && a && !s && (null == f || f());
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < k && a && !s && (null == f || f());
         }, [a, f, s]),
         F = [],
         V = !0;
@@ -307,7 +307,7 @@ function V(e) {
                   })
                 : null,
         K = { maxHeight: B.height - x - M - 48 };
-    G && (K.maxHeight -= k);
+    G && (K.maxHeight -= j);
     let z = null != f && a;
     return (0, r.jsx)("div", {
         className: o()(T, C.messagesPopoutWrap),

@@ -34,8 +34,8 @@ var c = n(748721),
 n(987528);
 var x = n(857192),
     M = n(395715),
-    k = n(44163),
-    j = n(710845),
+    j = n(44163),
+    k = n(710845),
     U = n(70956),
     G = n(378799),
     B = n(758731);
@@ -75,7 +75,7 @@ if (null != P.Z) {
         .filter((e) => null != n[e])
         .map((e) => "".concat(e, ": ").concat(n[e]))
         .join(", ");
-    new j.Z().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(l, ", build: ").concat(t)),
+    new k.Z().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(l, ", build: ").concat(t)),
         v.ZP.pauseFrameEvictor(),
         v.ZP.initializeExitHook(),
         v.ZP.initializeWERHandler();
@@ -102,7 +102,7 @@ else {
         _.Z.initialize(),
         p.Z.init(),
         E.Z.init(),
-        k.Z.init(),
+        j.Z.init(),
         h.Z.initialize(),
         O.Z.initialize(),
         I.Z.initialize(),

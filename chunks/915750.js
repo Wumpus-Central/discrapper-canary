@@ -1,7 +1,7 @@
 n.d(t, {
     B5: () => x,
     PI: () => P,
-    WD: () => j,
+    WD: () => k,
     aM: () => U,
     ui: () => G,
 }),
@@ -347,14 +347,14 @@ let x = (e, t) => {
             n = (0, c.Z)(t);
         return t !== n;
     },
-    k = i.createContext(void 0);
-function j() {
-    let e = i.useContext(k);
+    j = i.createContext(void 0);
+function k() {
+    let e = i.useContext(j);
     return null == e ? void 0 : e.current;
 }
 function U() {
     var e;
-    return null == (e = j()) ? void 0 : e.getId();
+    return null == (e = k()) ? void 0 : e.getId();
 }
 function G(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
@@ -398,7 +398,7 @@ function G(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(k.Provider, {
+        (0, r.jsx)(j.Provider, {
             value: f,
             children: e.children(o, f),
         })

@@ -80,8 +80,8 @@ function M(e, t) {
         e
     );
 }
-let k = "???",
-    j = (e) => {
+let j = "???",
+    k = (e) => {
         let { analyticsLocations: t, startingScreen: i } = e;
         g.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
@@ -102,9 +102,9 @@ class U extends i.Component {
     }
     getTitleText() {
         let e = h.default.getUser(this.trialOffer.user_id),
-            t = null != e ? e.username : k,
+            t = null != e ? e.username : j,
             n = h.default.getUser(this.trialOffer.referrer_id),
-            r = null != n ? n.username : k;
+            r = null != n ? n.username : j;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
             ? R.intl.formatToPlainString(R.t["Mptau/"], { username: t })
             : this.offerExpired
@@ -173,9 +173,9 @@ class U extends i.Component {
     render() {
         let e = () => {
                 let e = h.default.getUser(this.trialOffer.user_id),
-                    t = null != e ? e.username : k,
+                    t = null != e ? e.username : j,
                     n = h.default.getUser(this.trialOffer.referrer_id),
-                    r = null != n ? n.username : k;
+                    r = null != n ? n.username : j;
                 if (this.isSender)
                     if (this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at)
                         return {
@@ -219,7 +219,7 @@ class U extends i.Component {
                 disabled: !1,
                 size: "md",
                 onClick: () =>
-                    j({
+                    k({
                         analyticsLocations: [],
                         startingScreen:
                             this.referralsSent.size === I.Q

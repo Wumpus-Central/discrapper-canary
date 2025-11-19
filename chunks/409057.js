@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(373826),
     x = n(668700),
     M = n(262210),
-    k = n(670451),
-    j = n(881530),
+    j = n(670451),
+    k = n(881530),
     U = n(981631),
     G = n(701488),
     B = n(671955),
@@ -125,7 +125,7 @@ function K(e) {
         ei = (0, S.Z)(i),
         ea = null != ei.text && "" !== ei.text,
         { largeImage: eo, smallImage: es } = (0, p.FO)(i, V),
-        el = (0, j.Z)({
+        el = (0, k.Z)({
             location: "UserProfileActivityCard",
             user: t,
             currentUser: n,
@@ -395,7 +395,7 @@ function K(e) {
                             ei,
                         ),
                         {
-                            contextMenu: (0, r.jsx)(k.Z, {
+                            contextMenu: (0, r.jsx)(j.Z, {
                                 display: "live",
                                 user: t,
                                 activity: i,

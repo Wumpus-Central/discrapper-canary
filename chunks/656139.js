@@ -89,7 +89,7 @@ let A = (e) => {
                     })
                 );
             },
-            k = (e) => {
+            j = (e) => {
                 let { eligibleRecipients: t } = e;
                 return (0, r.jsx)(y.Z, {
                     users: t,
@@ -147,7 +147,7 @@ let A = (e) => {
                       input: x(),
                       actions: [],
                       actionBarInput: M({ eligibleRecipients: L }),
-                      children: k({ eligibleRecipients: L }),
+                      children: j({ eligibleRecipients: L }),
                   });
     },
     C = (e) => {

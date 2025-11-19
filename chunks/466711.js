@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let { tooltipsWithKeybinds: t } = S.n.useConfig({ location: "TrinketsAnimationButton" });
     return (0, r.jsx)(u.u, {
         shouldShow: t,
@@ -116,7 +116,7 @@ function U(e) {
         text: P.intl.string(P.t.Ve9Ge6),
         children: (0, r.jsx)(
             C.Z,
-            k(
+            j(
                 x(
                     {
                         className: w.button,
@@ -166,7 +166,7 @@ function B(e) {
         P = null != C ? I.default.age(C.id) : 0,
         { giftBoxAnimation: w, trinketsAnimation: L } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         x = null != n.firstTimeNotice && !a && S && P >= G,
-        [M, k] = (0, h.XR)(
+        [M, j] = (0, h.XR)(
             x ? l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, p.t)(l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
@@ -202,11 +202,11 @@ function B(e) {
                   });
         },
         W = () => {
-            v(!1), k(R.L.TAKE_ACTION), Y();
+            v(!1), j(R.L.TAKE_ACTION), Y();
         },
         K =
             void 0 !== w
-                ? (0, r.jsx)(j, {
+                ? (0, r.jsx)(k, {
                       config: w,
                       hovered: Z,
                       onClick: W,
@@ -234,7 +234,7 @@ function B(e) {
                 ? (0, r.jsx)(E.Z, {
                       onComplete: () => v(!1),
                       onCheckItOutClick: Y,
-                      markAsDismissed: k,
+                      markAsDismissed: j,
                       config: n.firstTimeNotice,
                       children: K,
                   })

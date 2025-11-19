@@ -44,19 +44,19 @@ let p = {
             L = t.modifiersData.popperOffsets,
             x = t.rects.reference,
             M = t.rects.popper,
-            k = "function" == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
-            j =
-                "number" == typeof k
+            j = "function" == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
+            k =
+                "number" == typeof j
                     ? {
-                          mainAxis: k,
-                          altAxis: k,
+                          mainAxis: j,
+                          altAxis: j,
                       }
                     : Object.assign(
                           {
                               mainAxis: 0,
                               altAxis: 0,
                           },
-                          k,
+                          j,
                       ),
             U = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
             G = {
@@ -87,8 +87,8 @@ let p = {
                     $ = J[Z],
                     ee = J[F],
                     et = (0, s.u)(0, x[V], Q[V]),
-                    en = P ? x[V] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
-                    er = P ? -x[V] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
+                    en = P ? x[V] / 2 - K - et - $ - k.mainAxis : z - et - $ - k.mainAxis,
+                    er = P ? -x[V] / 2 + K + et + ee + k.mainAxis : q + et + ee + k.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),
                     ea = ei ? ("y" === D ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
                     eo = null != (B = null == U ? void 0 : U[D]) ? B : 0,
@@ -107,8 +107,8 @@ let p = {
                     em = e_ - C[ef],
                     eg = -1 !== [r.we, r.t$].indexOf(N),
                     eE = null != (eu = null == U ? void 0 : U[w]) ? eu : 0,
-                    eb = eg ? eh : e_ - x[ep] - M[ep] - eE + j.altAxis,
-                    ey = eg ? e_ + x[ep] + M[ep] - eE - j.altAxis : em,
+                    eb = eg ? eh : e_ - x[ep] - M[ep] - eE + k.altAxis,
+                    ey = eg ? e_ + x[ep] + M[ep] - eE - k.altAxis : em,
                     eO = T && eg ? (0, s.q)(eb, e_, ey) : (0, s.u)(T ? eb : eh, e_, T ? ey : em);
                 (L[w] = eO), (G[w] = eO - e_);
             }

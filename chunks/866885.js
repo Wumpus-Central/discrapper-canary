@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(918559),
     x = n(981631),
     M = n(354459),
-    k = n(51434),
-    j = n(533362),
+    j = n(51434),
+    k = n(533362),
     U = n(285236);
 function G(e, t, n) {
     return (
@@ -188,7 +188,7 @@ function V(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: k.clickShield,
+                                  className: j.clickShield,
                                   onDoubleClick: eo,
                               }),
                               (0, r.jsx)(D.YB, {
@@ -242,14 +242,14 @@ function V(e) {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(k.root, {
-                        [k.pipMode]: ei,
+                    className: o()(j.root, {
+                        [j.pipMode]: ei,
                         [U.elevationHigh]: ei,
-                        [j.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [k.pipModeShort]: ei && !C,
-                        [k.pipModeTall]: ei && C,
-                        [k.hidden]: z,
-                        [k.multiPIPMode]: ea,
+                        [k.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
+                        [j.pipModeShort]: ei && !C,
+                        [j.pipModeTall]: ei && C,
+                        [j.hidden]: z,
+                        [j.multiPIPMode]: ea,
                     }),
                     noBorder: !ei,
                     children: [
@@ -265,9 +265,9 @@ function V(e) {
                         }),
                         p || F
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
                                   }),
                               })
                             : (0, r.jsx)(P.J, {
@@ -275,10 +275,10 @@ function V(e) {
                                   referrerPolicy: w.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: eu,
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
-                                      [k.pipNonInteractive]:
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
+                                      [j.pipNonInteractive]:
                                           ei && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !ei && W,

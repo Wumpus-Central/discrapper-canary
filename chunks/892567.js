@@ -43,31 +43,31 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
             })),
             { includeNonProfile: x } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
             M = (0, E.Y)({ location: "UserNameWithEffects" }),
-            k = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            j = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
-            U = (0, g.R)(j),
+            j = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            k = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
+            U = (0, g.R)(k),
             G = (0, _.qgQ)(n),
-            B = (0, f.EJ)(G, j === c.m.TOON ? v.emoji : void 0),
+            B = (0, f.EJ)(G, k === c.m.TOON ? v.emoji : void 0),
             Z = i.useMemo(
                 () =>
                     null != a && M
                         ? a.colors.map((e) =>
                               (0, h.wh)({
                                   foreground: o()(e),
-                                  background: j === c.m.TOON ? o()("#333") : o()(k),
+                                  background: k === c.m.TOON ? o()("#333") : o()(j),
                                   ratio: U.minContrastRatio,
                                   saturationFactor: L,
                               }).hex(),
                           )
                         : [],
-                [a, M, j, U.minContrastRatio, L, k],
+                [a, M, k, U.minContrastRatio, L, j],
             );
         if (!M || (!T && !x) || null == a) return n;
-        let F = (0, y.K)(j, Z, {
+        let F = (0, y.K)(k, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,
             }),
-            V = S(j);
+            V = S(k);
         return (0, r.jsxs)("div", {
             className: l()(v.container, D, A, {
                 [v.showEffect]: s !== b.F.PLAIN,

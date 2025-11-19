@@ -83,14 +83,14 @@ function M(e, t, n, r) {
         !n && T && p.Z.resume(),
         D();
 }
-function k(e, t) {
+function j(e, t) {
     let n = (0, _.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
     let i = x(e, t);
     -1 !== i && (v.splice(i, 1), D()), L();
 }
-function j(e) {
+function k(e) {
     let { applicationId: t, branchId: n } = e;
     N.set((0, _.Tu)(t, n), "Install"), M(t, n, !1, "Patch");
 }
@@ -107,7 +107,7 @@ function B(e) {
 }
 function Z(e) {
     let { applicationId: t, branchId: n } = e;
-    k(t, n);
+    j(t, n);
 }
 function F(e) {
     let { applicationId: t, branchId: n } = e,
@@ -172,7 +172,7 @@ function W(e) {
             let { context: e } = t;
             if (null != e) {
                 let { application_id: t, branch_id: n } = e;
-                k(t, n);
+                j(t, n);
             }
         }
     }
@@ -237,7 +237,7 @@ class Q extends (r = o.ZP.Store) {
 }
 b(Q, "displayName", "DispatchManagerStore");
 let J = new Q(l.Z, {
-    DISPATCH_APPLICATION_INSTALL: j,
+    DISPATCH_APPLICATION_INSTALL: k,
     DISPATCH_APPLICATION_UPDATE: B,
     DISPATCH_APPLICATION_UNINSTALL: U,
     DISPATCH_APPLICATION_CANCEL: Z,

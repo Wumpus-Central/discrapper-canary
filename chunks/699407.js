@@ -87,8 +87,8 @@ let m = "x-science-test",
     L = Number.MAX_SAFE_INTEGER,
     x = 0,
     M = 0,
-    k = null,
-    j = !1,
+    j = null,
+    k = !1,
     U = null,
     G = null;
 function B() {
@@ -166,7 +166,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 i = e.map((e) => h(_({}, e), { properties: h(_({}, e.properties), { client_send_timestamp: n }) })),
                 a = {};
             return (
-                j || ((G = (0, o.Z)()), (a[m] = G), (j = !0)),
+                k || ((G = (0, o.Z)()), (a[m] = G), (k = !0)),
                 c.tn
                     .post({
                         url: t,
@@ -211,24 +211,24 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             return B(), ee([e], d.tx.CLIENT_TELEMETRY);
         }
         function en() {
-            if (null == k) return !1;
-            switch (k.type) {
+            if (null == j) return !1;
+            switch (j.type) {
                 case "timeout":
-                    clearTimeout(k.id);
+                    clearTimeout(j.id);
                     break;
                 case "interval":
-                    clearInterval(k.id);
+                    clearInterval(j.id);
                     break;
                 default:
-                    k.type;
+                    j.type;
             }
-            return (k = null), !0;
+            return (j = null), !0;
         }
         function er() {
-            if (null != k) return;
+            if (null != j) return;
             let e = () => {
                 let t = 0.1 * v;
-                k = {
+                j = {
                     type: "timeout",
                     id: setTimeout(
                         () => {
@@ -238,7 +238,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     ),
                 };
             };
-            k = {
+            j = {
                 type: "timeout",
                 id: setTimeout(
                     () => {

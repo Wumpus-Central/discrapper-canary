@@ -38,11 +38,11 @@ let P = (e, t) => {
             { analyticsLocations: L } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
             x = (0, g._O)(),
             M = (0, m.Nx)(),
-            k = (0, s.e7)([h.Z], () => h.Z.affinities),
-            j = (0, E.Z)(),
-            U = null != j,
+            j = (0, s.e7)([h.Z], () => h.Z.affinities),
+            k = (0, E.Z)(),
+            U = null != k,
             G = P ? l.Tt.WHITE : l.Tt.BRAND,
-            B = k.length > 0,
+            B = j.length > 0,
             Z = S.intl.string(S.t.YCZldK),
             F = (0, p.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
@@ -66,7 +66,7 @@ let P = (e, t) => {
                                     children: Z,
                                 }),
                                 U
-                                    ? (0, r.jsx)(O.Z, { referrer: j })
+                                    ? (0, r.jsx)(O.Z, { referrer: k })
                                     : B &&
                                       (0, r.jsx)("div", {
                                           className: A.affinityDescriptionContainer,

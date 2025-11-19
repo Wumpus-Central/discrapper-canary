@@ -89,7 +89,7 @@ function x(e) {
     let n,
         m,
         T,
-        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
+        { channel: R, entry: x, closePopout: M, onReaction: j, onVoiceChannelPreview: k } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -194,8 +194,8 @@ function x(e) {
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: k,
-                    onVoiceChannelPreview: j,
+                    onReaction: j,
+                    onVoiceChannelPreview: k,
                     user: V,
                     channel: R,
                     generateReactionImage: z,

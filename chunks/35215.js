@@ -80,8 +80,8 @@ function w(e, t) {
 let L = 10,
     x = 20,
     M = 15,
-    k = 4,
-    j = 5,
+    j = 4,
+    k = 5,
     U = 8,
     G = 10;
 function B(e) {
@@ -280,7 +280,7 @@ function H(e) {
         ),
         O = i.useMemo(() => {
             let e = y.length;
-            return e <= k ? k - e : e === j ? 0 : e <= U ? U - e : G - e;
+            return e <= j ? j - e : e === k ? 0 : e <= U ? U - e : G - e;
         }, [y.length]);
     if (
         (i.useEffect(() => {

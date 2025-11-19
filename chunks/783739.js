@@ -35,10 +35,10 @@ function S(e) {
         L = w.length > 0,
         x = S.length > w.length,
         M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: k } = (0, o.Z)({ forceFetch: !0 }),
-        j = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === I.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === I.a$.NONE,
-        G = C && k === I.a$.FP_SUB_PAUSED;
+        { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
+        k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && j === I.a$.NONE,
+        G = C && j === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
@@ -48,15 +48,15 @@ function S(e) {
                 hasBoostPerk: G,
                 canAddBoosts: U,
             }),
-            k === I.a$.NONE &&
+            j === I.a$.NONE &&
                 (0, r.jsx)(O.Z, {
                     hasAppliedGuildBoosts: L,
                     hasBoostPerk: G,
                     hasGuildAffinitiesOrInGuild: P,
-                    subscriptionIsPausedOrPausePending: j,
+                    subscriptionIsPausedOrPausePending: k,
                 }),
             !P && (0, r.jsx)(b.Z, {}),
-            (null == t ? void 0 : t.isPaused) && k !== I.a$.FP_SUB_PAUSED
+            (null == t ? void 0 : t.isPaused) && j !== I.a$.FP_SUB_PAUSED
                 ? (0, r.jsx)(g.r, {
                       appliedGuildBoosts: M,
                       premiumSubscription: t,
@@ -67,7 +67,7 @@ function S(e) {
                   }),
             (0, r.jsx)(v.Z, {
                 guildBoostSlots: S,
-                fractionalPremiumState: k,
+                fractionalPremiumState: j,
             }),
             (0, r.jsx)(y.Z, {
                 canAddBoosts: L && U,

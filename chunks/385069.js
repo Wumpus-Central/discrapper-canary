@@ -88,8 +88,8 @@ function h(e, t, n) {
             }),
             [x, P.onBlur],
         ),
-        k = (0, _.p)(n, { isDisabled: 0 !== t.collection.size }),
-        j = (0, c.d)(
+        j = (0, _.p)(n, { isDisabled: 0 !== t.collection.size }),
+        k = (0, c.d)(
             L,
             {
                 role: "grid",
@@ -97,12 +97,12 @@ function h(e, t, n) {
                 "aria-multiselectable": "multiple" === S.selectionMode ? "true" : void 0,
             },
             t.isKeyboardNavigationDisabled ? M : P,
-            (0 === t.collection.size && { tabIndex: k ? -1 : 0 }) || void 0,
+            (0 === t.collection.size && { tabIndex: j ? -1 : 0 }) || void 0,
             w,
         );
     return (
-        h && ((j["aria-rowcount"] = t.collection.size), (j["aria-colcount"] = t.collection.columnCount)),
+        h && ((k["aria-rowcount"] = t.collection.size), (k["aria-colcount"] = t.collection.columnCount)),
         (0, a.B)({ getRowText: y }, t),
-        { gridProps: j }
+        { gridProps: k }
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Recurring3PModal: () => B,
-    gu: () => j,
+    gu: () => k,
     wQ: () => Z,
 }),
     n(388685),
@@ -200,7 +200,7 @@ let w = {
                 t,
             );
         }),
-    k = (e) => {
+    j = (e) => {
         let { promotionRecurrences: t } = e,
             [n, o] = i.useState(t.length > 1),
             [l, c] = i.useState([]),
@@ -316,7 +316,7 @@ let w = {
             ],
         });
     },
-    j = (e) => {
+    k = (e) => {
         let { percentage: t } = e,
             n = () => {
                 let e = 1.8;
@@ -411,7 +411,7 @@ let w = {
                                       children: T.intl.format(T.t["43kZKL"], { days: t - e.getDate() }),
                                   }),
                               }),
-                              (0, r.jsx)(j, { percentage: n }),
+                              (0, r.jsx)(k, { percentage: n }),
                               (0, r.jsx)("div", {
                                   className: S.cards,
                                   children: Object.entries(b)
@@ -422,7 +422,7 @@ let w = {
                                       })
                                       .map((e) => {
                                           let [t, n] = e;
-                                          return (0, r.jsx)(k, { promotionRecurrences: n }, t);
+                                          return (0, r.jsx)(j, { promotionRecurrences: n }, t);
                                       }),
                               }),
                           ],

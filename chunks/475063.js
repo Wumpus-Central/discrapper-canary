@@ -119,7 +119,7 @@ function I(e) {
     let { fieldProps: w, props: L } = (0, s.XF_)(D),
         { disabled: x } = w,
         M = (0, d.U)("UserSettingsDesignSystems"),
-        k = (0, u.m)({
+        j = (0, u.m)({
             validateOn: "change",
             error: y,
             value: n,
@@ -127,7 +127,7 @@ function I(e) {
             maxLength: g,
             defaultDirty: I,
         }),
-        j = i.useMemo(() => {
+        k = i.useMemo(() => {
             if (M) return;
             if (null == g) return O;
             let e = "".concat(g).length;
@@ -135,7 +135,7 @@ function I(e) {
         }, [M, g]),
         U = (e) => {
             let { onChange: t } = L;
-            null == t || t(e.currentTarget.value), k.setShouldValidate(!0);
+            null == t || t(e.currentTarget.value), j.setShouldValidate(!0);
         },
         G =
             M && C
@@ -148,9 +148,9 @@ function I(e) {
         s.gNt,
         E(m({}, w), {
             trailingAuxiliaryContent: G,
-            errorMessage: k.hasError && null != (t = k.errorMessage) ? t : void 0,
+            errorMessage: j.hasError && null != (t = j.errorMessage) ? t : void 0,
             children: (0, r.jsxs)(s.UPk, {
-                validation: k,
+                validation: j,
                 disabled: x,
                 children: [
                     (0, r.jsx)(s.tEY, {
@@ -161,7 +161,7 @@ function I(e) {
                                     {
                                         autosize: f,
                                         className: o()(_.textArea, p.scrollbarDefault),
-                                        style: { paddingRight: j },
+                                        style: { paddingRight: k },
                                         placeholder: a,
                                         value: n,
                                         autoFocus: l,
@@ -188,7 +188,7 @@ function I(e) {
                                       ? (0, r.jsx)(S, {
                                             value: n,
                                             maxLength: g,
-                                            hasError: k.hasError,
+                                            hasError: j.hasError,
                                         })
                                       : null,
                                   C || !1 === N

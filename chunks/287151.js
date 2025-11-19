@@ -39,8 +39,8 @@ var r,
     L = n(995774),
     x = n(6839),
     M = n(695346),
-    k = n(592125),
-    j = n(430824),
+    j = n(592125),
+    k = n(430824),
     U = n(542578),
     G = n(914010),
     B = n(594174),
@@ -195,8 +195,8 @@ class em extends (r = a.PureComponent) {
                 o = null != (M = (0, f.wK)(null != r ? r : "", i)) ? M : "";
             this.isMe() && (w.borderColor = r), (w.background = o), (e = n), (t = n);
         }
-        let k = null == N ? void 0 : N.getBoundingClientRect(),
-            j = null != T && null != k,
+        let j = null == N ? void 0 : N.getBoundingClientRect(),
+            k = null != T && null != j,
             U = null == T;
         return (0, i.jsx)(h.yRy, {
             targetElementRef: { current: N },
@@ -243,12 +243,12 @@ class em extends (r = a.PureComponent) {
                                                     o
                                                         ? (0, i.jsxs)(i.Fragment, {
                                                               children: [
-                                                                  j &&
+                                                                  k &&
                                                                       (0, i.jsx)(O.Z, {
                                                                           messageId: v.id,
                                                                           emoji: c,
                                                                           startPosition: T,
-                                                                          targetPosition: k,
+                                                                          targetPosition: j,
                                                                       }),
                                                                   U &&
                                                                       (0, i.jsx)(Q.Z, {
@@ -330,7 +330,7 @@ class em extends (r = a.PureComponent) {
                         isGuest: s,
                         isForumToolbar: l,
                     } = this.props,
-                    c = k.Z.getChannel(t.getChannelId());
+                    c = j.Z.getChannel(t.getChannelId());
                 if (o || s) {
                     var u, d;
                     null == (d = this.ctaRef) || null == (u = d.current) || u.focus();
@@ -428,8 +428,8 @@ class em extends (r = a.PureComponent) {
             ea(this, "renderLurkerModeUpsellPopout", (e) => {
                 let { closePopout: t } = e,
                     { message: n, isLurking: r } = this.props,
-                    a = k.Z.getChannel(n.getChannelId()),
-                    o = j.Z.getGuild(null == a ? void 0 : a.getGuildId());
+                    a = j.Z.getChannel(n.getChannelId()),
+                    o = k.Z.getGuild(null == a ? void 0 : a.getGuildId());
                 return r && null != o
                     ? (0, i.jsx)(N.Z, {
                           ctaRef: this.ctaRef,
@@ -455,7 +455,7 @@ class em extends (r = a.PureComponent) {
                 let { emoji: e, message: t, type: n, me_burst: r, isBurstReaction: a = !1 } = this.props,
                     { tooltipText: o, tooltipTextAria: l } = this.state,
                     c = (n) => {
-                        let r = k.Z.getChannel(t.getChannelId());
+                        let r = j.Z.getChannel(t.getChannelId());
                         null != r &&
                             (this.handleLeave(),
                             ep(r, t, {
@@ -596,8 +596,8 @@ class em extends (r = a.PureComponent) {
             ea(this, "handleShowVerificationGate", () => {
                 let { message: e, isPendingMember: t } = this.props;
                 if (!t) return null;
-                let n = k.Z.getChannel(e.getChannelId()),
-                    r = j.Z.getGuild(null == n ? void 0 : n.getGuildId());
+                let n = j.Z.getChannel(e.getChannelId()),
+                    r = k.Z.getGuild(null == n ? void 0 : n.getGuildId());
                 null != r && (0, C.hk)(r.id);
             }),
             ea(this, "handleSetReactionRef", (e) => {
@@ -606,7 +606,7 @@ class em extends (r = a.PureComponent) {
             ea(this, "trackReactionTooltipViewed", () => {
                 let { emoji: e, message: t, type: n } = this.props,
                     r = B.default.getCurrentUser(),
-                    i = k.Z.getChannel(t.getChannelId()),
+                    i = j.Z.getChannel(t.getChannelId()),
                     a = n === Y.O.BURST,
                     o = (0, V.I5)(r),
                     s = a ? $.cd.EMOJI_IN_BURST_REACTION_HOVER : $.cd.EMOJI_IN_REACTION_HOVER;
@@ -718,12 +718,12 @@ let eg = a.memo((e) => {
     eb = (e) => {
         var t;
         let { emojiId: n, refreshPositionKey: r, onClose: o, nonce: l } = e,
-            { joinedEmojiSourceGuild: c } = (0, _.cj)([v.ZP, j.Z], () => {
+            { joinedEmojiSourceGuild: c } = (0, _.cj)([v.ZP, k.Z], () => {
                 let e = v.ZP.getCustomEmojiById(n);
                 return {
                     joinedEmojiSourceGuild:
                         (null == e ? void 0 : e.type) === I.B.GUILD
-                            ? j.Z.getGuild(null == e ? void 0 : e.guildId)
+                            ? k.Z.getGuild(null == e ? void 0 : e.guildId)
                             : void 0,
                 };
             }),
@@ -798,7 +798,7 @@ let eg = a.memo((e) => {
                 });
             },
             M = E && (void 0 !== u || void 0 !== f),
-            k = () =>
+            j = () =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)("div", { className: et.reactionEmojiDetailsDivider }),
@@ -813,7 +813,7 @@ let eg = a.memo((e) => {
                 });
         return (0, i.jsxs)("div", {
             children: [
-                M ? k() : x(),
+                M ? j() : x(),
                 y
                     ? (0, i.jsx)(z.SE, { className: et.emojiDetailsLoader })
                     : M &&

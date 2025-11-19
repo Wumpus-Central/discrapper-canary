@@ -108,8 +108,8 @@ let A = new d.Z("PopoutWindowStore"),
     L = "app-mount",
     x = () => $.emitChange(),
     M = s().debounce(x, 150),
-    k = !1;
-function j(e, t) {
+    j = !1;
+function k(e, t) {
     let n = t.document,
         r = n.head;
     for (let e of (a()(null != r, "Body for popout window is null!"), document.querySelectorAll("style"))) {
@@ -173,7 +173,7 @@ function F(e) {
         t.addEventListener("focus", x),
         t.addEventListener("blur", x),
         t.addEventListener("resize", M),
-        k ? j(e, t) : Z(e, t);
+        j ? k(e, t) : Z(e, t);
     let i = (0, l.createRoot)(r.getElementById(L));
     a()(null != i, "No render target for popout!"), (P[e] = i), i.render(n(e));
 }

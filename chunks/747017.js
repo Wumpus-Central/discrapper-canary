@@ -60,8 +60,8 @@ function I(e) {
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([p.Z], () => p.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let k = (null == t ? void 0 : t.bot) === !0,
-        j = ((null == M ? void 0 : M.state) != null || null != x) && "xs" === A,
+    let j = (null == t ? void 0 : t.bot) === !0,
+        k = ((null == M ? void 0 : M.state) != null || null != x) && "xs" === A,
         U = () => {
             if (null != D)
                 return (0, r.jsx)(m.Z, {
@@ -70,8 +70,8 @@ function I(e) {
                     textVariant: "text-".concat(A, "/medium"),
                     textClassName: T,
                     iconClassName: S,
-                    hideText: j,
-                    hideIcon: k,
+                    hideText: k,
+                    hideIcon: j,
                     hideTooltip: P,
                 });
             let e =
@@ -87,8 +87,8 @@ function I(e) {
                       textVariant: "text-".concat(A, "/medium"),
                       textClassName: T,
                       iconClassName: S,
-                      hideText: j,
-                      hideIcon: k,
+                      hideText: k,
+                      hideIcon: j,
                       hideTooltip: P,
                   })
                 : null != I
@@ -97,7 +97,7 @@ function I(e) {
                         textVariant: "text-".concat(A, "/medium"),
                         textClassName: T,
                         iconClassName: S,
-                        hideText: j,
+                        hideText: k,
                         hideTooltip: P,
                     })
                   : null;

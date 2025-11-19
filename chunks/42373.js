@@ -148,8 +148,8 @@ let A = (e) => {
             L = (0, h.rO)(),
             x = i.useRef(null),
             M = i.useRef(0),
-            k = S(n),
-            j = i.useMemo(
+            j = S(n),
+            k = i.useMemo(
                 () =>
                     (0, s.debounce)(() => {
                         p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
@@ -204,7 +204,7 @@ let A = (e) => {
                             (0, r.jsx)(A, {
                                 descriptionCta: c,
                                 onClick: R,
-                                debouncedOnClickAnalytics: j,
+                                debouncedOnClickAnalytics: k,
                                 enablePremiumBrandRefreshDesign: w,
                             }),
                     ],
@@ -240,7 +240,7 @@ let A = (e) => {
                           children: [(0, r.jsx)(F, {}), (0, r.jsx)(Z, {})],
                       }),
             Y = {
-                className: o()(w ? y.backgroundColor : k, B.boxContainer, B["".concat(D)], w && y.gradientBackground),
+                className: o()(w ? y.backgroundColor : j, B.boxContainer, B["".concat(D)], w && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,

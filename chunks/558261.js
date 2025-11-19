@@ -9,9 +9,9 @@ var l = n(311570),
     c = n(333867),
     u = n(767714),
     d = n(706454),
-    g = n(960919),
-    p = n(275388),
-    f = n(594174),
+    f = n(960919),
+    g = n(275388),
+    p = n(594174),
     m = n(74538),
     h = n(335131),
     C = n(1870),
@@ -39,12 +39,12 @@ let N = (e) => {
                 selectedVariantIndex: o,
                 hasDiscountOffer: u,
                 discountOfferAmount: d,
-                text: g,
+                text: f,
             } = e,
-            p = (0, b.XM)(t, i, !1),
-            f = u
+            g = (0, b.XM)(t, i, !1),
+            p = u
                 ? B.intl.formatToPlainString(B.t["5U5RB5"], { discountOfferAmount: d })
-                : B.intl.formatToPlainString(B.t["cNSL/j"], { price: p });
+                : B.intl.formatToPlainString(B.t["cNSL/j"], { price: g });
         return (0, r.jsx)(a.Button, {
             variant: "primary",
             onClick: (e) => {
@@ -59,7 +59,7 @@ let N = (e) => {
                         variantsReturnStyle: l.v.VARIANTS_GROUP,
                     });
             },
-            text: null != g ? g : f,
+            text: null != f ? f : p,
             fullWidth: !0,
         });
     },
@@ -147,12 +147,12 @@ let N = (e) => {
             variant: "primary",
             text: B.intl.format(B.t["4NKuqc"], {
                 orbPrice: T.As,
-                orbIconHook: () => (0, r.jsx)(g.Z, { className: P.orbIconAligned }),
+                orbIconHook: () => (0, r.jsx)(f.Z, { className: P.orbIconAligned }),
             }),
             onClick: (e) => {
                 e.stopPropagation(),
                     null == s || s("rental claim with orbs button"),
-                    (0, p.qA)({
+                    (0, g.qA)({
                         skuId: (0, S.S)({ product: t }),
                         onCheckoutSuccess: (e) => {
                             var r, i;
@@ -201,12 +201,12 @@ let N = (e) => {
                     ? o
                     : B.intl.format(B.t.kAgx5L, {
                           orbPrice: n[0].amount,
-                          orbIconHook: () => (0, r.jsx)(g.Z, { className: P.orbIconAligned }),
+                          orbIconHook: () => (0, r.jsx)(f.Z, { className: P.orbIconAligned }),
                       }),
             onClick: (e) => {
                 e.stopPropagation(),
                     null == c || c("claim with orbs button"),
-                    (0, p.qA)({
+                    (0, g.qA)({
                         skuId: (0, S.S)({
                             product: t,
                             selectedVariantIndex: s,
@@ -250,8 +250,8 @@ let N = (e) => {
                 prioritizedCurrency: u,
                 onClickAnalytics: d,
             } = e,
-            g = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-            p = m.ZP.canUseCollectibles(g),
+            f = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
+            g = m.ZP.canUseCollectibles(f),
             h = (0, O.$l)(),
             { isPurchased: _, isPartiallyOwnedBundle: S } = (0, E.L)(t),
             y = (0, b.G1)(t),
@@ -270,7 +270,7 @@ let N = (e) => {
                 checkoutEligiblePrices: U,
             } = (0, k.Ip)({
                 product: t,
-                isPremiumUser: p,
+                isPremiumUser: g,
                 prioritizedCurrency: u,
                 hasDiscountOffer: P,
                 isRental: h,
@@ -288,7 +288,7 @@ let N = (e) => {
                 skuId: t.skuId,
                 text: c,
             });
-        if (y && !p && !I)
+        if (y && !g && !I)
             return (0, r.jsx)(A, {
                 isClaimPremiumProductDisabled: Y,
                 text: c,
@@ -342,7 +342,7 @@ let N = (e) => {
         return (0, r.jsx)(N, {
             product: t,
             cardRef: n,
-            isPremiumUser: p,
+            isPremiumUser: g,
             analyticsLocations: z,
             selectedVariantIndex: l,
             hasDiscountOffer: P,

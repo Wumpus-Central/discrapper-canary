@@ -157,9 +157,9 @@ let y = 24,
                 "aria-checked": L,
                 "aria-expanded": x,
                 "aria-haspopup": M,
-                "data-jump-section": k,
+                "data-jump-section": j,
             } = e,
-            j = null != g ? { secondaryColorClass: g } : {},
+            k = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
                 h(
@@ -173,7 +173,7 @@ let y = 24,
                         colorClass: null != m ? m : void 0,
                         color: null != p ? p : "currentColor",
                     },
-                    j,
+                    k,
                 ),
             ),
             G = D;
@@ -212,7 +212,7 @@ let y = 24,
                                           onFocus: I,
                                           onBlur: T,
                                       },
-                                      j,
+                                      k,
                                   ),
                               ),
                           })
@@ -238,7 +238,7 @@ let y = 24,
                               "aria-haspopup": M,
                               "aria-expanded": x,
                               tabIndex: l || null == O ? -1 : 0,
-                              "data-jump-section": k,
+                              "data-jump-section": j,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {

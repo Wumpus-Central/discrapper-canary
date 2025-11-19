@@ -108,7 +108,7 @@ function L(e) {
             [c, o],
         ),
         M = (0, d.e7)([T.Z], () => T.Z.getFocusedRunningGame()),
-        k = g
+        j = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -137,14 +137,14 @@ function L(e) {
                   ],
               })
             : null,
-        j = g ? null : N.intl.string(N.t.oEJEFq),
+        k = g ? null : N.intl.string(N.t.oEJEFq),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(S.Y, {
         title: N.intl.string(N.t.U38qZj),
-        body: k,
-        hint: U ? j : void 0,
+        body: j,
+        hint: U ? k : void 0,
         confirmText: N.intl.string(N.t.a3HlgJ),
         cancelText: null != M ? N.intl.string(N.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(b.Z, {

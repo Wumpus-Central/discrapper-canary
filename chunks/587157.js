@@ -37,8 +37,8 @@ function v(e) {
             scrollRef: x = I,
             linkBehavior: M = "action",
         } = e,
-        { direction: k } = (0, O.j)(),
-        j = (0, a.tv)(),
+        { direction: j } = (0, O.j)(),
+        k = (0, a.tv)(),
         U = (e) => {
             var t, i, a, l, c, u, d, f, _, p, m, E, b;
             if (
@@ -54,7 +54,7 @@ function v(e) {
                         });
                         let a = (0, r.D0)(I, t),
                             o = n.getItemProps(t);
-                        a && j.open(a, e, o.href, o.routerOptions);
+                        a && k.open(a, e, o.href, o.routerOptions);
                         return;
                     }
                     n.setFocusedKey(t, i),
@@ -104,14 +104,14 @@ function v(e) {
                         null == t &&
                             S &&
                             (t =
-                                "rtl" === k
+                                "rtl" === j
                                     ? null == (_ = v.getFirstKey)
                                         ? void 0
                                         : _.call(v, n.focusedKey)
                                     : null == (p = v.getLastKey)
                                       ? void 0
                                       : p.call(v, n.focusedKey)),
-                            null != t && (e.preventDefault(), y(t, "rtl" === k ? "first" : "last"));
+                            null != t && (e.preventDefault(), y(t, "rtl" === j ? "first" : "last"));
                     }
                     break;
                 case "ArrowRight":
@@ -125,14 +125,14 @@ function v(e) {
                         null == t &&
                             S &&
                             (t =
-                                "rtl" === k
+                                "rtl" === j
                                     ? null == (E = v.getLastKey)
                                         ? void 0
                                         : E.call(v, n.focusedKey)
                                     : null == (b = v.getFirstKey)
                                       ? void 0
                                       : b.call(v, n.focusedKey)),
-                            null != t && (e.preventDefault(), y(t, "rtl" === k ? "last" : "first"));
+                            null != t && (e.preventDefault(), y(t, "rtl" === j ? "last" : "first"));
                     }
                     break;
                 case "Home":

@@ -80,8 +80,8 @@ let N = new s.Z("OverlayV3Store"),
     L = null,
     x = null,
     M = null,
-    k = null,
     j = null,
+    k = null,
     U = null,
     G = {},
     B = {},
@@ -125,7 +125,7 @@ function K(e) {
         if (null == D) return;
         D.untrackGame(e), N.verbose("Removing tracked game ".concat(e));
         let t = R.values().next().value;
-        j === e && (j = null != t ? t : null);
+        k === e && (k = null != t ? t : null);
     } catch (t) {
         N.error("Error removing tracked game:", t), (0, _.PV)(e, t, { crashType: "native" });
     }
@@ -156,14 +156,14 @@ async function q() {
 }
 function X(e) {
     let t = l.ZP.getGameOrTransformedSubgameForPID(e);
-    o.Z.setAssociatedGame(null != j ? j : d.UNSET_PID, e, t);
+    o.Z.setAssociatedGame(null != k ? k : d.UNSET_PID, e, t);
 }
 function Q() {
     var e;
-    null != k &&
-        M === k &&
+    null != j &&
+        M === j &&
         null != D &&
-        ((k = null),
+        ((j = null),
         (0, _.PY)(M, "renderer_window_refreshing_finished"),
         null == (e = D.readyToShow) || e.call(D, M),
         o.Z.updateOverlayState(M, f.mM.OVERLAY_RENDERING, "checkPopoutRefresh"),
@@ -233,7 +233,7 @@ function ea() {
 }
 function eo(e) {
     let { createWindowTriggeringPID: t } = e;
-    (H = C(S({}, H), { popoutOpened: !0 })), X(t), (j = t), (x = t), (0, d.setPID)(t);
+    (H = C(S({}, H), { popoutOpened: !0 })), X(t), (k = t), (x = t), (0, d.setPID)(t);
 }
 function es(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
@@ -249,14 +249,14 @@ function el(e) {
         });
 }
 function ec() {
-    $(), null != j && V(j), (j = null), (x = null), (0, d.setPID)(d.UNSET_PID), Y();
+    $(), null != k && V(k), (k = null), (x = null), (0, d.setPID)(d.UNSET_PID), Y();
 }
 function eu(e) {
     let { refreshingPID: t } = e;
     return (
         N.verbose("Refreshing OOP host window for pid ".concat(t)),
-        (k = t),
         (j = t),
+        (k = t),
         (x = t),
         (0, d.setPID)(t),
         X(t),

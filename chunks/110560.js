@@ -89,7 +89,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -100,7 +100,7 @@ function k(e, t) {
         e
     );
 }
-let j = "in-app",
+let k = "in-app",
     U = "Discord Widget";
 function G(e) {
     let {
@@ -119,7 +119,7 @@ function G(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    k(x({}, n), {
+                    j(x({}, n), {
                         initialQuest: t,
                         preview: o,
                         sourceQuestContent: c,
@@ -131,7 +131,7 @@ function G(e) {
         return (e) =>
             (0, r.jsx)(
                 u,
-                k(x({}, e), {
+                j(x({}, e), {
                     questId: t.id,
                     questContentPosition: a,
                     questContent: i,
@@ -150,7 +150,7 @@ function B(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      k(x({}, n), {
+                      j(x({}, n), {
                           quest: e,
                           location: t,
                       }),
@@ -165,7 +165,7 @@ function Z(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    k(x({}, n), {
+                    j(x({}, n), {
                         initialQuest: e,
                         location: t,
                         sourceQuestContent: i,
@@ -176,7 +176,7 @@ function Z(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(x({}, n), {
+                j(x({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -191,7 +191,7 @@ function F(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    k(x({}, n), {
+                    j(x({}, n), {
                         initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -202,7 +202,7 @@ function F(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(x({}, n), {
+                j(x({}, n), {
                     quest: e,
                     location: t,
                 }),
@@ -216,7 +216,7 @@ function V(e, t, i, a) {
             return (n) =>
                 (0, r.jsx)(
                     o,
-                    k(x({}, n), {
+                    j(x({}, n), {
                         initialQuest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -228,7 +228,7 @@ function V(e, t, i, a) {
         return (n) =>
             (0, r.jsx)(
                 o,
-                k(x({}, n), {
+                j(x({}, n), {
                     quest: e,
                     location: t,
                     preview: a,
@@ -242,7 +242,7 @@ function H(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                k(x({}, n), {
+                j(x({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -264,7 +264,7 @@ function Y(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    k(x({}, n), {
+                    j(x({}, n), {
                         questContent: t.content,
                         quest: e,
                     }),
@@ -279,7 +279,7 @@ function W() {
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, N.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: U,
-        utmMediumCurrent: j,
+        utmMediumCurrent: k,
         utmCampaignCurrent: t,
         utmContentCurrent: Object.keys(y.jn).find((t) => y.jn[t] === e),
     });
@@ -344,7 +344,7 @@ function X(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    k(x({}, t), {
+                    j(x({}, t), {
                         openStartClockTime: performance.now(),
                         questId: n.id,
                         autoplay: c,
@@ -440,7 +440,7 @@ function et(e) {
         return (n) =>
             (0, r.jsx)(
                 t,
-                k(x({}, n), {
+                j(x({}, n), {
                     questId: e.id,
                     questName: e.config.messages.questName,
                 }),

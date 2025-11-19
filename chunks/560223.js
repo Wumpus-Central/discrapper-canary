@@ -120,7 +120,7 @@ let I = (e) => {
             L = (0, u.bg)({ location: "PremiumPerks" }),
             x = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
-            k = (0, m.ZM)({
+            j = (0, m.ZM)({
                 perksCards: R,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
@@ -131,7 +131,7 @@ let I = (e) => {
                 showDisplayNameStyles: x,
                 recurring3PPromotionExperiment: M,
             }),
-            j = k.some((e) => null != e.pillText);
+            k = j.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
             ref: S,
             className: o()(
@@ -156,7 +156,7 @@ let I = (e) => {
                         [E.subtitle]: null == O || b,
                         [E.subtitleWithButton]: null != O && !b,
                         [E.fullWidth]: A || b,
-                        [E.moreSubtitleMargin]: j,
+                        [E.moreSubtitleMargin]: k,
                         [E.leftAlignSubtitle]: b,
                         [E.centerAlignSubtitle]: !b,
                     }),
@@ -170,7 +170,7 @@ let I = (e) => {
                     }),
                 (0, r.jsx)("div", {
                     className: E.cardContainer,
-                    children: k.map((e, t) =>
+                    children: j.map((e, t) =>
                         (0, r.jsx)(g.Z, v(y({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
                     ),
                 }),

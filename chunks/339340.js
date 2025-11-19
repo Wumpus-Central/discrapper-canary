@@ -42,10 +42,10 @@ function T(e) {
             location_stack: T,
         });
     }, [t.guild_id, T]);
-    let k = (e) => {
+    let j = (e) => {
             L(new s.Hx(e, e.status).getAnyErrorMessage());
         },
-        j = (e) => {
+        k = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
@@ -58,7 +58,7 @@ function T(e) {
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),
-                { hasErrors: a } = j(i);
+                { hasErrors: a } = k(i);
             if (!a) {
                 try {
                     let e = await l.ZP.updateVoiceChannelStatus(t.id, i.content);
@@ -72,9 +72,9 @@ function T(e) {
                               location_stack: T,
                           }),
                           S())
-                        : k(e);
+                        : j(e);
                 } catch (e) {
-                    k(e);
+                    j(e);
                 }
                 D(!1);
             }

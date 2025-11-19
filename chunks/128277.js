@@ -82,19 +82,19 @@ function L(e) {
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
-        k = (0, _.Z)({
+        j = (0, _.Z)({
             activity: a,
             user: t,
         }),
-        j = (0, E.Z)(a),
-        U = null != j.text && "" !== j.text,
+        k = (0, E.Z)(a),
+        U = null != k.text && "" !== k.text,
         { largeImage: G } = (0, d.FO)(a),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, m.Z)({
             display: "live",
             user: t,
             activity: a,
-            entry: k,
+            entry: j,
             analyticsLocations: B,
         }),
         F = (0, g.Z)({
@@ -169,12 +169,12 @@ function L(e) {
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    w(P({ textId: x }, j), {
+                    w(P({ textId: x }, k), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
                             activity: a,
-                            entry: k,
+                            entry: j,
                             onClose: D,
                         }),
                     }),

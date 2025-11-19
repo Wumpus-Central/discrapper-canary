@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(381585),
     u = n(501431),
     d = n(215023),
-    g = n(981631),
-    p = n(388032),
-    f = n(55918);
+    f = n(981631),
+    g = n(388032),
+    p = n(55918);
 function m(e) {
     let { handleTransition: t, selectedTab: n } = e,
         { searchQuery: m, onSetSearchQuery: h } = (0, u.S)(),
@@ -29,10 +29,10 @@ function m(e) {
         }, [m]),
         (0, r.jsx)(a.P3F, {
             ignoreKeyPress: !0,
-            className: f.searchBar,
+            className: p.searchBar,
             onClick: () => {
                 n !== d.AW.CATALOG && t(d.AW.CATALOG),
-                    o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    o.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                         page_section: null == b ? void 0 : b.pageSection,
                         page_category: null == b ? void 0 : b.pageCategory,
@@ -51,7 +51,7 @@ function m(e) {
                 onChange: _,
                 onClear: () => {
                     _(""),
-                        o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        o.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                             page_section: null == b ? void 0 : b.pageSection,
                             page_category: null == b ? void 0 : b.pageCategory,
@@ -61,7 +61,7 @@ function m(e) {
                             page_type: n,
                         });
                 },
-                placeholder: "en-US" === v ? p.intl.string(p.t.arz34K) : p.intl.string(p.t["hIt/Nm"]),
+                placeholder: "en-US" === v ? g.intl.string(g.t.arz34K) : g.intl.string(g.t["hIt/Nm"]),
             }),
         })
     );

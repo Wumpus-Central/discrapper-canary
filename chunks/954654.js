@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => j,
     xX: () => x,
 }),
     n(388685);
@@ -132,7 +132,7 @@ function M(e, t) {
             return (0, r.jsx)(I.Z, {}, t);
     }
 }
-function k(e) {
+function j(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: i } = t,
         [o, s] = (0, u.e4)();

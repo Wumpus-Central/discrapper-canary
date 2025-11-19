@@ -107,10 +107,10 @@ function I(e) {
         w = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
         L = (0, d.Z)(I),
         x = (0, d.Z)(T),
-        [M, k] = i.useState((0, s.Z)());
+        [M, j] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (L !== I || x !== T) && k((0, s.Z)());
+            (L !== I || x !== T) && j((0, s.Z)());
         }, [T, I, x, L]),
         (0, r.jsx)(u.yRy, {
             targetElementRef: A,

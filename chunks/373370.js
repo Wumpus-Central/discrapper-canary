@@ -1,5 +1,5 @@
 n.d(t, {
-    CR: () => k,
+    CR: () => j,
     DD: () => L,
 }),
     n(953529);
@@ -430,7 +430,7 @@ function x(e) {
 function M(e) {
     return r.useMemo(() => x(e), [e]);
 }
-function k(e) {
+function j(e) {
     let { quest: t, shortText: n = !1 } = e;
     switch (M(t)) {
         case 0:

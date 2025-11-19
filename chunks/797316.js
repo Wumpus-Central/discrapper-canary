@@ -113,7 +113,7 @@ function M(e) {
         !1
     );
 }
-function k(e) {
+function j(e) {
     let { guildId: t, userIds: n } = e;
     return (
         n.forEach((e) => {
@@ -122,7 +122,7 @@ function k(e) {
         !1
     );
 }
-function j(e) {
+function k(e) {
     let { guildId: t } = e;
     S.subscribeToMemberUpdates(t);
 }
@@ -218,8 +218,8 @@ let q = new z(l.Z, {
     GUILD_CREATE: L,
     GUILD_DELETE: x,
     GUILD_SUBSCRIPTIONS_MEMBERS_ADD: M,
-    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: k,
-    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: j,
+    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: j,
+    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: k,
     GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: U,
     GUILD_SUBSCRIPTIONS_CHANNEL: B,
     GUILD_SUBSCRIPTIONS: G,

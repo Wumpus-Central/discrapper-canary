@@ -1,7 +1,7 @@
 n.d(t, {
     EB: () => m,
-    MV: () => p,
-    q3: () => f,
+    MV: () => g,
+    q3: () => p,
 }),
     n(388685);
 var r = n(473749),
@@ -13,8 +13,8 @@ var r = n(473749),
     c = n(328347),
     u = n(215023),
     d = n(981631),
-    g = n(474936);
-let p = (e) => {
+    f = n(474936);
+let g = (e) => {
         let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
             r = ((e) => {
                 switch (e) {
@@ -42,10 +42,10 @@ let p = (e) => {
             currentTabLocation: r,
         };
     },
-    f = (e, t, n, l, i) => {
-        let { analyticsLocations: a, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = p(t);
+    p = (e, t, n, l, i) => {
+        let { analyticsLocations: a, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: f } = g(t);
         r.useEffect(() => {
-            if (l !== u.f7.VISIBLE || g !== c) return;
+            if (l !== u.f7.VISIBLE || f !== c) return;
             let r = t === u.AW.CATALOG ? i : o;
             s.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
                 location_stack: a,
@@ -54,15 +54,15 @@ let p = (e) => {
                 page_type: t === u.AW.CATALOG ? "full" : t,
                 category: t === u.AW.HOME ? void 0 : n,
             });
-        }, [a, e, t, n, c, l, i, o, g]);
+        }, [a, e, t, n, c, l, i, o, f]);
     },
     m = (e, t) => {
-        let { analyticsLocations: n } = p(e);
+        let { analyticsLocations: n } = g(e);
         r.useEffect(() => {
             null == t ||
                 o.ZP.canUseCollectibles(t) ||
                 s.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: g.cd.COLLECTIBLES_SHOP,
+                    type: f.cd.COLLECTIBLES_SHOP,
                     location_stack: n,
                 });
         }, [n, t]);

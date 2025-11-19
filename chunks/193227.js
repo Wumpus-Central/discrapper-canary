@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(594174),
     d = n(381585),
-    g = n(128922),
-    p = n(870289),
-    f = n(370039),
+    f = n(128922),
+    g = n(870289),
+    p = n(370039),
     m = n(937510),
     h = n(303952),
     C = n(253355),
@@ -27,8 +27,8 @@ function k(e) {
     let { products: t, header: n, category: l } = e,
         i = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         a = (0, S.St)(t),
-        s = g.Z.useConfig({ location: "Products" }).showCardsV2,
-        p = (0, d.sp)();
+        s = f.Z.useConfig({ location: "Products" }).showCardsV2,
+        g = (0, d.sp)();
     return null == i || 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
@@ -54,7 +54,7 @@ function k(e) {
                                             {
                                                 skuId: e.skuId,
                                                 skipLimitedTimeCheck: !0,
-                                                onClickAnalytics: (0, x.wO)(e, y.AW.CATALOG, p),
+                                                onClickAnalytics: (0, x.wO)(e, y.AW.CATALOG, g),
                                             },
                                             e.skuId,
                                         )
@@ -80,7 +80,7 @@ function k(e) {
 function I(e) {
     let { category: t } = e,
         n = (0, m.l)(t.products),
-        l = (0, f.a)()(n);
+        l = (0, p.a)()(n);
     return (0, r.jsx)(k, {
         products: l,
         category: t,
@@ -102,8 +102,8 @@ function L(e) {
     var t;
     let { sortedCategories: n, setCategoryRef: i, currentPage: s, handlePageChange: o } = e,
         u = (0, d.sp)(),
-        g = (0, E.R)(),
-        f = null != (t = null == u ? void 0 : u.sessionId) ? t : "",
+        f = (0, E.R)(),
+        p = null != (t = null == u ? void 0 : u.sessionId) ? t : "",
         { noCache: m, includeUnpublished: C } = (0, O.Z)(),
         b = l.useMemo(
             () =>
@@ -121,7 +121,7 @@ function L(e) {
         }, [b, s]);
     l.useEffect(() => {
         (0, h.n)({
-            sessionId: f,
+            sessionId: p,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: y.AW.CATALOG,
             unpublishedCategoriesShown: C,
@@ -129,18 +129,18 @@ function L(e) {
         });
     }, []),
         l.useEffect(() => {
-            g ||
+            f ||
                 0 === v.length ||
                 (0, h.n)({
-                    sessionId: f,
+                    sessionId: p,
                     checkpoint: h.a.SHOP_RENDERED,
                     tab: y.AW.CATALOG,
                     unpublishedCategoriesShown: C,
                     cacheDisabled: m,
                 });
-        }, [f, C, m, g, v.length]);
-    let x = (0, p.FF)("CollectiblesBrowse");
-    return g
+        }, [p, C, m, f, v.length]);
+    let x = (0, g.FF)("CollectiblesBrowse");
+    return f
         ? (0, r.jsx)(_.Z, {})
         : (0, r.jsxs)("div", {
               className: a()(j.categories, { [j.categoriesNoFilter]: !x }),

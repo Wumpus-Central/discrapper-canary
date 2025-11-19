@@ -184,16 +184,16 @@ function M(e) {
     let { active: t } = e;
     y.notifCenterActive = t;
 }
-function k(e) {
+function j(e) {
     let { focused: t } = e;
     y.notifCenterTabFocused = t;
 }
-function j(e, t, n) {
+function k(e, t, n) {
     var r;
     return e.type === t && (null == (r = e.other_user) ? void 0 : r.id) === n;
 }
 function U(e, t, n, r) {
-    return j(e, t, n) && e.applicationId === r;
+    return k(e, t, n) && e.applicationId === r;
 }
 function G(e) {
     let { relationship: t } = e,
@@ -209,7 +209,7 @@ function G(e) {
         null == t.user ||
         a ||
         (y.notifCenterLocalItems = y.notifCenterLocalItems.map((e) =>
-            j(e, _.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
+            k(e, _.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
                 ? b(g({}, e), {
                       acked: !0,
                       forceUnacked: !1,
@@ -221,17 +221,17 @@ function G(e) {
         (r === h.OGo.BLOCKED || a) &&
             (y.notifCenterLocalItems = y.notifCenterLocalItems.filter(
                 (e) =>
-                    !j(e, _.O7.INCOMING_FRIEND_REQUESTS, n) &&
-                    !j(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) &&
-                    !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n) &&
-                    !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n),
+                    !k(e, _.O7.INCOMING_FRIEND_REQUESTS, n) &&
+                    !k(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) &&
+                    !k(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n) &&
+                    !k(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n),
             ));
 }
 function B(e) {
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter(
         (t) =>
-            !j(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) &&
-            !j(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id),
+            !k(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) &&
+            !k(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id),
     );
 }
 function Z(e) {
@@ -359,7 +359,7 @@ let z = new K(a.Z, {
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: R,
     RESET_NOTIFICATION_CENTER: () => I(),
     NOTIFICATION_CENTER_SET_ACTIVE: M,
-    NOTIFICATION_CENTER_TAB_FOCUSED: k,
+    NOTIFICATION_CENTER_TAB_FOCUSED: j,
     RELATIONSHIP_ADD: G,
     RELATIONSHIP_UPDATE: G,
     RELATIONSHIP_REMOVE: B,

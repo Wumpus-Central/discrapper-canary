@@ -115,8 +115,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
         },
         leafRotationDirection: 1,
     },
-    k = 10,
-    j = 80,
+    j = 10,
+    k = 80,
     U = 80,
     G = 180,
     B = 8,
@@ -283,11 +283,11 @@ function et(e) {
                     velocity: {
                         type: "static-random",
                         minValue: {
-                            x: k * e.x,
+                            x: j * e.x,
                             y: U * e.y,
                         },
                         maxValue: {
-                            x: j * e.x,
+                            x: k * e.x,
                             y: G * e.y,
                         },
                     },
@@ -418,18 +418,18 @@ function en(e) {
         M = i.useCallback(() => {
             C(!1);
         }, []),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             (0, p.AI)({ settingsVisible: !0 }),
                 (0, g.openUserSettings)(m.n.POGGERMODE_PANEL, { section: O.oAB.POGGERMODE }),
                 C(!1);
         }, []),
-        j = i.useCallback(
+        k = i.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(V)) && k();
+                (null == t ? void 0 : t.id.startsWith(V)) && j();
             },
-            [k],
+            [j],
         );
-    i.useEffect(() => S(j));
+    i.useEffect(() => S(k));
     let U = i.useCallback(
             (e) => {
                 e.target === e.currentTarget && l(e);
@@ -462,7 +462,7 @@ function en(e) {
                           className: I.cannonWrapper,
                           children: (0, r.jsx)(et, {
                               onAnimationComplete: M,
-                              onClick: k,
+                              onClick: j,
                           }),
                       }),
                   })

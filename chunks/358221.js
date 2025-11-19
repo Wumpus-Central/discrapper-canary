@@ -80,8 +80,8 @@ let w = new d.Z("ChannelRTCStore"),
     L = Object.freeze([]),
     x = [],
     M = {},
-    k = {},
     j = {},
+    k = {},
     U = {},
     G = {},
     B = {},
@@ -123,22 +123,22 @@ function Q(e) {
     var t;
     let n = E.Z.getChannel(e),
         r = (null == n ? void 0 : n.isDM()) && 1 ? A.dF.AUTO : A.dF.NONE;
-    return null != (t = k[e]) ? t : [r, A.dF.NONE];
+    return null != (t = j[e]) ? t : [r, A.dF.NONE];
 }
 function J(e) {
-    if (null == k[e]) return !1;
-    let [t] = k[e];
+    if (null == j[e]) return !1;
+    let [t] = j[e];
     return t !== A.dF.NONE;
 }
 function $(e) {
-    null == j[e] &&
-        (j[e] = {
+    null == k[e] &&
+        (k[e] = {
             gridDurationMs: 0,
             focusDurationMs: 0,
             toggleCount: 0,
             lastUpdate: 0,
         });
-    let t = j[e],
+    let t = k[e],
         n = performance.now(),
         r = J(e);
     if (t.lastUpdate > 0) {
@@ -150,7 +150,7 @@ function $(e) {
 function ee(e, t) {
     $(e);
     let n = J(e);
-    null == t ? delete k[e] : (k[e] = t), n !== J(e) && j[e].toggleCount++;
+    null == t ? delete j[e] : (j[e] = t), n !== J(e) && k[e].toggleCount++;
 }
 function et(e) {
     return e.size(S.sI.STREAM) > 0 || e.size(S.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -185,14 +185,14 @@ function er(e) {
     n === C.WtW.VOICE ? (delete U[e], delete G[e]) : (U[e] = n);
 }
 function ei(e) {
-    delete M[e], delete k[e], delete U[e], delete G[e];
+    delete M[e], delete j[e], delete U[e], delete G[e];
 }
 function ea() {
     return q((e) => e.rebuild(), z());
 }
 function eo(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
-    return null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), ea();
+    return null != t ? delete k[t] : null != n && (delete F[n], delete H[n], $(n)), ea();
 }
 function es(e) {
     let { channelId: t, messageId: n } = e,
@@ -376,7 +376,7 @@ function eM(e) {
     let { channelId: t, senderUserId: n, maxResolution: r, maxFrameRate: i } = e;
     return q((e) => e.updateParticipantQuality(n, r, i), [t]);
 }
-function ek(e) {
+function ej(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
     if (
         !p.Z.getCurrentConfig({
@@ -388,7 +388,7 @@ function ek(e) {
     let i = W(t);
     return r.forEach((e) => i.updateGuildRingingUsers(e, !0)), q((e) => e.rebuild(), [t]);
 }
-function ej(e) {
+function ek(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
     if (
         !p.Z.getCurrentConfig({
@@ -468,7 +468,7 @@ class eG extends (r = l.ZP.PersistedStore) {
         return null == t ? null : W(e).getParticipant(t);
     }
     getSelectedParticipantStats(e) {
-        let t = j[e];
+        let t = k[e];
         return null == t
             ? {}
             : {
@@ -555,8 +555,8 @@ let eB = new eG(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_START: ed,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: ed,
     PUSH_TO_TALK_STATE_CHANGE: ef,
-    GUILD_RING_START: ek,
-    GUILD_RING_STOP: ej,
+    GUILD_RING_START: ej,
+    GUILD_RING_STOP: ek,
     USER_UPDATE: e_,
     GUILD_MEMBER_UPDATE: e_,
     GUILD_DELETE: em,

@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(979554),
     u = n(866442),
     d = n(793030),
-    g = n(28664),
-    p = n(209613),
-    f = n(44315),
+    f = n(28664),
+    g = n(209613),
+    p = n(44315),
     m = n(429368),
     h = n(724994),
     C = n(786040),
@@ -83,16 +83,16 @@ function O(e, t) {
 let S = (e) => {
         var t, n;
         let { product: i, onVariantEnter: c, onVariantExit: u, isCollapsed: d } = e,
-            g = (0, m.o)(i),
-            f = null != (n = null == (t = i.variants) ? void 0 : t.length) ? n : 0,
+            f = (0, m.o)(i),
+            p = null != (n = null == (t = i.variants) ? void 0 : t.length) ? n : 0,
             h = l.useCallback(
                 (e, t) => {
                     e.stopPropagation(), (0, m.$)(i, t);
                 },
                 [i],
             ),
-            C = (0, p.Z)("shop-variants-group-".concat(i.storeListingId), o.hy.HORIZONTAL);
-        return 0 === f
+            C = (0, g.Z)("shop-variants-group-".concat(i.storeListingId), o.hy.HORIZONTAL);
+        return 0 === p
             ? null
             : (0, r.jsx)(s.bG, {
                   navigator: C,
@@ -126,10 +126,10 @@ let S = (e) => {
                                                         y,
                                                         {
                                                             variant: e,
-                                                            isSelected: t === g,
+                                                            isSelected: t === f,
                                                             onVariantEnter: () => c(t),
                                                             onVariantExit: u,
-                                                            zIndex: f - Math.abs(g - t),
+                                                            zIndex: p - Math.abs(f - t),
                                                             onClick: (e) => h(e, t),
                                                         },
                                                         e.variantValue,
@@ -145,10 +145,10 @@ let S = (e) => {
     y = (e) => {
         let { variant: t, isSelected: n, onClick: l, onVariantEnter: i, onVariantExit: o, zIndex: c } = e,
             u = (0, s.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(t.variantLabel)),
-            { onFocus: p } = u,
-            f = O(u, ["onFocus"]),
+            { onFocus: g } = u,
+            p = O(u, ["onFocus"]),
             { isPurchased: m } = (0, h.L)(t);
-        return (0, r.jsx)(g.u, {
+        return (0, r.jsx)(f.u, {
             text: b.intl.string(b.t["6cfuDj"]),
             shouldShow: m,
             children: (0, r.jsx)(
@@ -158,7 +158,7 @@ let S = (e) => {
                         {
                             "aria-label": t.variantLabel,
                             onClick: (e) => {
-                                l(e), p();
+                                l(e), g();
                             },
                             onMouseEnter: i,
                             onMouseLeave: o,
@@ -170,7 +170,7 @@ let S = (e) => {
                                 zIndex: c,
                             },
                         },
-                        f,
+                        p,
                     ),
                     { children: m && (0, r.jsx)(j, { variant: t }) },
                 ),
@@ -181,7 +181,7 @@ let S = (e) => {
         let { variant: t } = e,
             n = l.useMemo(() => {
                 let e = (0, u.FX)(t.variantValue) && 0.3 > (0, u.Bd)((0, u._i)(t.variantValue));
-                return (0, f.Lq)(e ? _.Ilk.BLACK_500 : _.Ilk.WHITE_500);
+                return (0, p.Lq)(e ? _.Ilk.BLACK_500 : _.Ilk.WHITE_500);
             }, [t.variantValue]);
         return (0, r.jsx)(d.kSu, {
             className: v.productVariantCheckmark,
@@ -191,7 +191,7 @@ let S = (e) => {
     k = (e) => {
         let { skuId: t, isCollapsed: n = !1, showLabel: l = !1, onVariantEnter: i, onVariantExit: s, className: o } = e,
             u = (0, C.LJ)(t),
-            g = (0, m.o)(u);
+            f = (0, m.o)(u);
         return null == u || u.type !== c.Z.VARIANTS_GROUP || null == u.variants || 0 === u.variants.length
             ? null
             : (0, r.jsxs)("div", {
@@ -207,7 +207,7 @@ let S = (e) => {
                           (0, r.jsx)(d.xvT, {
                               variant: "text-xs/medium",
                               color: "text-secondary",
-                              children: u.variants[g].variantLabel,
+                              children: u.variants[f].variantLabel,
                           }),
                   ],
               });

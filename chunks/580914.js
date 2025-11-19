@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(685816),
     u = n(442837),
     d = n(481060),
-    g = n(393903),
-    p = n(448986),
-    f = n(110560),
+    f = n(393903),
+    g = n(448986),
+    p = n(110560),
     m = n(507808),
     h = n(594174),
     C = n(626135),
@@ -111,16 +111,16 @@ let F = (0, v.IC)(90),
                     }),
                 [n, $.rankedSkuIds, eu.length],
             ),
-            eg = z === w.AW.ORBS,
-            ep = null != V && V.isOrbsExclusive,
-            { cardContainerRef: ef, totalCards: em } = ((e) => {
+            ef = z === w.AW.ORBS,
+            eg = null != V && V.isOrbsExclusive,
+            { cardContainerRef: ep, totalCards: em } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
-                    i = (0, p.Z)(() => {
+                    i = (0, g.Z)(() => {
                         (null == a ? void 0 : a.current) != null &&
                             n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
                     }),
-                    a = (0, g.y)(i, [r, e], {
+                    a = (0, f.y)(i, [r, e], {
                         fireOnMount: !0,
                         fireOnDepsChange: !0,
                         enabled: e,
@@ -138,24 +138,24 @@ let F = (0, v.IC)(90),
             eh = (0, S.a)()(eu),
             eC = (0, y.l)(eh).slice(0, em),
             e_ = (0, N.St)(eC),
-            eb = eg ? D.intl.string(D.t["1CdL8d"]) : D.intl.string(D.t.xYKa1T),
+            eb = ef ? D.intl.string(D.t["1CdL8d"]) : D.intl.string(D.t.xYKa1T),
             ev = (0, E.FF)("CollectiblesContent"),
             ex = x.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
             eE = (0, O.Pc)("HeroBlock") && $.categorySkuId === w.Hi,
             eO = (0, O.IT)("HeroBlock"),
             eS = () => {
-                eg
+                ef
                     ? ((0, m.Y)({
                           pageType: H.ZY5.SHOP_ORBS_TAB,
                           sectionType: H.jXE.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
                       }),
-                      (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
+                      (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                     : (i({
                           sourceButton: "shop latest category hero",
-                          categorySkuId: !ev || ep ? $.categorySkuId : void 0,
+                          categorySkuId: !ev || eg ? $.categorySkuId : void 0,
                           isInternalShopDeeplink: !0,
-                          isOrbsExclusive: ep,
+                          isOrbsExclusive: eg,
                       }),
                       C.default.track(H.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == X ? void 0 : X.sessionId,
@@ -247,7 +247,7 @@ let F = (0, v.IC)(90),
                                                                   "" !== $.summary &&
                                                                       (0, r.jsx)(d.Text, {
                                                                           variant: "text-md/normal",
-                                                                          className: eg
+                                                                          className: ef
                                                                               ? M.orbsSubHeaderText
                                                                               : M.subHeaderText,
                                                                           style:
@@ -276,7 +276,7 @@ let F = (0, v.IC)(90),
                                       [M.row]: z === w.AW.HOME,
                                       [M.feed]: z === w.AW.ORBS,
                                   }),
-                                  ref: ef,
+                                  ref: ep,
                                   children:
                                       n || ed
                                           ? (0, r.jsx)(r.Fragment, {

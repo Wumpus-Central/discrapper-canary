@@ -223,7 +223,7 @@ function R(e, t) {
         case p.l.Attachment:
             return M(e.media, n);
         case p.l.GenericMedia:
-            return k(e.media, n);
+            return j(e.media, n);
         default:
             return !1;
     }
@@ -309,7 +309,7 @@ function x(e, t) {
                 (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && j(B(e), t)
+        ) && k(B(e), t)
     );
 }
 function M(e, t) {
@@ -324,10 +324,10 @@ function M(e, t) {
                         media: e,
                     }),
             ).length &&
-        j(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
-function k(e, t) {
+function j(e, t) {
     var n;
     return (
         0 !== t.length &&
@@ -339,10 +339,10 @@ function k(e, t) {
                         media: e,
                     }),
             ).length &&
-        j(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
-function j(e, t) {
+function k(e, t) {
     let n = h.Z.validContentScanVersion;
     return e !== g && (t.includes(m._.GORE) || t.includes(m._.SELF_HARM) ? null == e || e < n : null == e);
 }

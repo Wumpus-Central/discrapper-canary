@@ -178,7 +178,7 @@ function m(e) {
             }),
             [t, P, D, w, L, I],
         ),
-        k = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -191,7 +191,7 @@ function m(e) {
             },
             [t, I, x, y.focusIndex, A],
         ),
-        j = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = "menuitem" } = e,
                     s = n.join(d);
@@ -220,11 +220,11 @@ function m(e) {
         () => ({
             dispatch: v,
             getContainerProps: M,
-            getSubmenuProps: k,
-            getItemProps: j,
+            getSubmenuProps: j,
+            getItemProps: k,
             isFocused: x,
             isUsingKeyboardNavigation: A,
         }),
-        [v, M, k, j, x, A],
+        [v, M, j, k, x, A],
     );
 }

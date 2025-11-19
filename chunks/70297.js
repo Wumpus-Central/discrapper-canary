@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => b,
+    Z: () => C,
     q: () => x,
 }),
     t(953529);
@@ -22,13 +22,13 @@ var l = t(120356),
 function x(e) {
     return (0, p.te)(e) ? 250 : 152;
 }
-function b(e) {
+function C(e) {
     let { guild: n } = e,
         t = (0, p.te)(n.id),
         l = (0, s.Nj)(a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
         x = t && !l ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
     (0, c.kk)(x);
-    let b = t
+    let C = t
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
@@ -103,7 +103,7 @@ function b(e) {
                     color: "currentColor",
                 }),
             }),
-            b,
+            C,
         ],
     });
 }

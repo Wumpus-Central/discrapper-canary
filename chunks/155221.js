@@ -94,12 +94,12 @@ let x = (0, h.Un)({
         webpackId: 431583,
         name: "DownloadApps",
     }),
-    k = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
     }),
-    j = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("30556")]).then(n.bind(n, 675207)),
         webpackId: 675207,
         name: "VerifyConnectedAccount",
@@ -348,7 +348,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.INVITE_PROXY(y.Hw.channelId()),
-                                        component: k,
+                                        component: j,
                                     }),
                                     (0, r.jsx)(o.l_, {
                                         from: C.Z5c.INVITE(""),
@@ -416,7 +416,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.INVITE_PROXY(y.Hw.channelId()),
-                                        component: k,
+                                        component: j,
                                     }),
                                     (0, r.jsx)(o.l_, {
                                         from: C.Z5c.GIFT_CODE(""),
@@ -473,7 +473,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS(":type"),
-                                        component: j,
+                                        component: k,
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.DOWNLOAD_QR_CODE_REDIRECT,

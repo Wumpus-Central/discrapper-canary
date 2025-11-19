@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -190,9 +190,9 @@ let K = i.memo(function (e) {
             { ref: E, width: b } = (0, p.ZP)(),
             y = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
             O = _ ? "entering" : "exiting",
-            { width: v } = (0, s.useSpring)(j(M({}, H[O]), { width: f ? b : u })),
+            { width: v } = (0, s.useSpring)(k(M({}, H[O]), { width: f ? b : u })),
             { opacity: I } = (0, s.useSpring)(
-                j(M({}, Y[O]), {
+                k(M({}, Y[O]), {
                     opacity: +!!f,
                     onRest: () => {
                         f || m(!0);
@@ -281,13 +281,13 @@ let K = i.memo(function (e) {
                 voiceState: w,
                 showStreamPreview: x,
                 onShowStreamPreview: M,
-                onWatchStream: k,
-                connectedOn: j,
+                onWatchStream: j,
+                connectedOn: k,
                 ref: B,
             } = e,
             Z = (0, l.e7)([T.default], () => T.default.getId() === s.id, [s.id]),
             { ref: F, width: V } = (0, p.ZP)(),
-            { showConnectedAnimation: H } = W(j, R),
+            { showConnectedAnimation: H } = W(k, R),
             Y = null == w ? void 0 : w.sessionId,
             X = t.id,
             Q = s.id,
@@ -339,14 +339,14 @@ let K = i.memo(function (e) {
                                     noFocus: !0,
                                 }),
                                 el(),
-                                k(null != eo ? eo : null));
+                                j(null != eo ? eo : null));
                         },
-                        onAction: () => k,
+                        onAction: () => j,
                         previewIsOpen: x,
                         location: D.Sbl.UNLOCKED_OVERLAY,
                         hideTip: !0,
                     }),
-                [s, t, eo, x, el, k],
+                [s, t, eo, x, el, j],
             ),
             eu = i.useCallback(
                 (e) => {
@@ -433,7 +433,7 @@ let K = i.memo(function (e) {
                         !Z &&
                             (0, r.jsx)(K, {
                                 nick: u,
-                                connectedOn: j,
+                                connectedOn: k,
                                 isSettingsPreview: R,
                                 voiceBackgroundWidth: V,
                                 rightAlign: !0,
@@ -474,7 +474,7 @@ let K = i.memo(function (e) {
                         !Z &&
                             (0, r.jsx)(K, {
                                 nick: u,
-                                connectedOn: j,
+                                connectedOn: k,
                                 isSettingsPreview: R,
                                 voiceBackgroundWidth: V,
                             }),
@@ -578,7 +578,7 @@ let K = i.memo(function (e) {
                             (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    j(M({}, n), {
+                                    k(M({}, n), {
                                         user: t,
                                         channelId: null == a ? void 0 : a.id,
                                         guildId: null == a ? void 0 : a.guild_id,
@@ -628,7 +628,7 @@ let K = i.memo(function (e) {
                 [a, t],
             );
         if (null == b || null == a || null == v) return null;
-        let k = c || h;
+        let j = c || h;
         return (0, r.jsx)(
             O.Z,
             {
@@ -653,7 +653,7 @@ let K = i.memo(function (e) {
                         displayNameMode: s,
                         displayUserMode: l,
                         size: p,
-                        locked: k,
+                        locked: j,
                         onContextMenu: L,
                         onClick: L,
                         context: g,

@@ -70,8 +70,8 @@ function w(e) {
             guildBoostProps: L,
             analyticsSource: x,
             analyticsLocation: M,
-            body: k,
-            context: j,
+            body: j,
+            context: k,
             glowUp: U,
             modalClassName: G,
             modalContentClassName: B,
@@ -270,7 +270,7 @@ function w(e) {
                                         ? a
                                         : T.Si.TIER_2,
                                 headingText: P,
-                                context: j,
+                                context: k,
                                 analyticsLocationObject: M,
                                 discountOffer: eE,
                                 trialOffer: eg,
@@ -293,7 +293,7 @@ function w(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: e_ ? "text-sm/normal" : "text-md/normal",
                                                 className: o()(H, C.subHeader),
-                                                children: k,
+                                                children: j,
                                             }),
                                         ],
                                     }),

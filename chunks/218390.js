@@ -36,8 +36,8 @@ var r = n(54381),
     L = n(78839),
     x = n(483444),
     M = n(626135),
-    k = n(63063),
-    j = n(74538),
+    j = n(63063),
+    k = n(74538),
     U = n(140465),
     G = n(695349),
     B = n(46062),
@@ -72,7 +72,7 @@ function ed(e) {
         c = n || o,
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         d = $.GP[t.planIdFromItems],
-        _ = j.ZP.formatPriceString(j.ZP.getDefaultPrice(d.id), d.interval),
+        _ = k.ZP.formatPriceString(k.ZP.getDefaultPrice(d.id), d.interval),
         { enabled: h } = B.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
         m = () => {
             var e, t, n;
@@ -148,7 +148,7 @@ function ef() {
                               color: "always-white",
                               className: en.fractionalPremiumSubheader,
                               children: et.intl.format(et.t.sK7fGl, {
-                                  helpCenterLink: k.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: j.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -390,7 +390,7 @@ let eh = function () {
             note: null,
         });
     if ((!D && !x) || l) return (0, r.jsx)(p.$jN, {});
-    let k = !!(null == a ? void 0 : a.hasActiveTrial);
+    let j = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(v.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {
@@ -404,7 +404,7 @@ let eh = function () {
                         (0, r.jsx)(Q.Z, {
                             hideCTAs: !0,
                             headingOverride: et.intl.string(et.t.dnVvQS),
-                            hidePill: !k,
+                            hidePill: !j,
                             selectedPlanColumnClassName: en.tier2PlanComparisonTableBackground,
                             selectedPlanTier: $.PremiumTypes.TIER_2,
                         }),

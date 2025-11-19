@@ -178,8 +178,8 @@ function x(e) {
             initialSubscribeForGuild: O,
         });
     if (!D || null == b || null == m) return null;
-    let k = m.type === A.epS.SUBSCRIPTION,
-        j = !!k && (0, _.KW)(m.flags),
+    let j = m.type === A.epS.SUBSCRIPTION,
+        k = !!j && (0, _.KW)(m.flags),
         U = () => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("77803"), n.e("15351")]).then(n.bind(n, 7225));
@@ -194,8 +194,8 @@ function x(e) {
         },
         G = () => {
             (0, l.ZDy)(async () => {
-                let e = k ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                    t = k ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                let e = j ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                    t = j ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                 return (n) => {
                     let i = () => {
                         n.onClose(), U();
@@ -206,7 +206,7 @@ function x(e) {
                               appId: b.id,
                               skuId: m.id,
                               guildId: O,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: i,
                           })
@@ -223,8 +223,8 @@ function x(e) {
             });
         },
         B = 12,
-        Z = k
-            ? j
+        Z = j
+            ? k
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.tBG, {
@@ -296,12 +296,12 @@ function x(e) {
                     onClick: V,
                     text: N.intl.string(N.t.DXYfjO),
                 }),
-                k
+                j
                     ? null != g
                         ? (0, r.jsx)(S.pV, {
                               onClick: L,
                               appId: b.id,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               skuId: m.id,
                               icon: l.EOn,
                               onHasClicked: H,

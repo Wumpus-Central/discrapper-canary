@@ -38,8 +38,8 @@ var r = n(54381),
     L = n(9156),
     x = n(594174),
     M = n(938475),
-    k = n(981631),
-    j = n(388032),
+    j = n(981631),
+    k = n(388032),
     U = n(102647);
 function G(e) {
     let t = e.id,
@@ -49,7 +49,7 @@ function G(e) {
                 ...D.ZP.getChannels(t)
                     [D.Zb].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === k.d4z.GUILD_VOICE;
+                        return t.type === j.d4z.GUILD_VOICE;
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -110,12 +110,12 @@ function G(e) {
         v = (0, c.e7)([N.Z], () => N.Z.getUserAffinitiesMap(), []),
         I = i.useMemo(() => (0, R.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
         L = i.useMemo(() => (0, R.C)(d, v, "GuildTooltip - stageSpeakers"), [d, v]),
-        j = i.useMemo(() => (0, R.C)(O, v, "GuildTooltip - streamUsers"), [O, v]);
+        k = i.useMemo(() => (0, R.C)(O, v, "GuildTooltip - streamUsers"), [O, v]);
     return {
         voiceUsersToShow: I,
         stageSpeakers: L,
         numStageListeners: _,
-        streamUsersToShow: j,
+        streamUsersToShow: k,
         embeddedActivitiesUsers: i.useMemo(() => (0, R.C)(g, v, "GuildTooltip - embeddedActivitiesUsers"), [g, v]),
         hasActivity: d.length > 0 || b.length > 0 || O.length > 0 || g.length > 0,
     };
@@ -179,7 +179,7 @@ function F(e) {
               variant: "text-xs/normal",
               color: "text-muted",
               className: n,
-              children: j.intl.string(j.t.fpKdS1),
+              children: k.intl.string(k.t.fpKdS1),
           })
         : (0, r.jsx)(I.Z, {
               muteConfig: t,
@@ -228,13 +228,13 @@ function V(e) {
 function H(e) {
     switch (e) {
         case b.wB.SUBMITTED:
-            return j.intl.string(j.t["9KFC98"]);
+            return k.intl.string(k.t["9KFC98"]);
         case b.wB.REJECTED:
-            return j.intl.string(j.t["TQY/Rd"]);
+            return k.intl.string(k.t["TQY/Rd"]);
         case b.wB.APPROVED:
-            return j.intl.string(j.t.WXHcq5);
+            return k.intl.string(k.t.WXHcq5);
         default:
-            return j.intl.string(j.t.fjHFC8);
+            return k.intl.string(k.t.fjHFC8);
     }
 }
 function Y(e) {
@@ -282,7 +282,7 @@ function W(e) {
                       className: U.invitesDisabledTooltip,
                       color: "header-secondary",
                       variant: "text-sm/medium",
-                      children: j.intl.string(j.t["2n0/Fk"]),
+                      children: k.intl.string(k.t["2n0/Fk"]),
                   })
                 : null,
             d
@@ -290,7 +290,7 @@ function W(e) {
                       className: U.viewAsRolesWarning,
                       color: "text-default",
                       variant: "text-xs/normal",
-                      children: j.intl.string(j.t["5LwN89"]),
+                      children: k.intl.string(k.t["5LwN89"]),
                   })
                 : f,
         ],

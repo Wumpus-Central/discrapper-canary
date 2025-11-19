@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(613321);
 let x = 5,
     M = "placeholder",
-    k = [, , , , ,].fill(M);
-function j(e) {
+    j = [, , , , ,].fill(M);
+function k(e) {
     var t, n;
     let { context: a, command: o, section: l, sectionName: c } = e,
         d = i.useCallback(() => {
@@ -218,7 +218,7 @@ function B(e) {
                           e === M
                               ? (0, r.jsx)(U, {}, e + n)
                               : (0, r.jsx)(
-                                    j,
+                                    k,
                                     {
                                         context: t,
                                         command: e,
@@ -288,7 +288,7 @@ function Z(e) {
                   (0, r.jsx)(B, {
                       context: n,
                       section: p,
-                      commands: _ ? k : E,
+                      commands: _ ? j : E,
                       headerName: D.intl.string(D.t.DUU9L3),
                       sectionName: o,
                       children:

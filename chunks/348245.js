@@ -156,7 +156,7 @@ function M(e) {
         messageId: null == n || null == (t = n.params) ? void 0 : t.message,
     };
 }
-function k() {
+function j() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
@@ -172,7 +172,7 @@ function k() {
         }),
         Z(t.getGuildId(), t.id);
 }
-function j() {
+function k() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
@@ -311,31 +311,31 @@ function q(e) {
 }
 class X extends d.Z {
     _initialize() {
-        s.Z.subscribe("CONNECTION_OPEN", k);
+        s.Z.subscribe("CONNECTION_OPEN", j);
     }
     _terminate() {
-        s.Z.unsubscribe("CONNECTION_OPEN", k);
+        s.Z.unsubscribe("CONNECTION_OPEN", j);
     }
     constructor(...e) {
         super(...e),
             R(this, "fetchMessages", D),
-            R(this, "loadSelectedChannelIfNecessary", j),
+            R(this, "loadSelectedChannelIfNecessary", k),
             R(this, "stores", new Map().set(E.ZP, F)),
             R(this, "actions", {
                 APP_STATE_UPDATE: q,
-                OVERLAY_INITIALIZE: k,
+                OVERLAY_INITIALIZE: j,
                 CHANNEL_SELECT: U,
                 VOICE_CHANNEL_SELECT: G,
                 THREAD_CREATE: H,
-                THREAD_LIST_SYNC: () => j(),
+                THREAD_LIST_SYNC: () => k(),
                 CHANNEL_CREATE: H,
                 CHANNEL_PRELOAD: V,
-                GUILD_CREATE: () => j(),
+                GUILD_CREATE: () => k(),
                 MESSAGE_END_EDIT: Y,
                 LOAD_MESSAGES_SUCCESS: K,
                 UPLOAD_FAIL: z,
-                CHANNEL_DELETE: () => j(),
-                THREAD_DELETE: () => j(),
+                CHANNEL_DELETE: () => k(),
+                THREAD_DELETE: () => k(),
                 CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: B,
             });
     }

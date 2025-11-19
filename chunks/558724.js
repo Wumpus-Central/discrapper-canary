@@ -105,9 +105,9 @@ function x() {
     !N && (L() || null != I.surveyOverride) && ((N = !0), (0, u.wk)(I.surveyOverride, !0));
 }
 function M(e) {
-    return j(e) && k(e);
+    return k(e) && j(e);
 }
-function k(e) {
+function j(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
     for (let e of t) if (!w.has(e)) return !1;
@@ -150,7 +150,7 @@ function k(e) {
     }
     return !!i && !!a;
 }
-function j(e) {
+function k(e) {
     return !0;
 }
 function U(e) {

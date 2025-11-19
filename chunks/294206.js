@@ -48,7 +48,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -168,7 +168,7 @@ function z(e) {
                         ? (0, T.hs)(t.soundId)
                         : ((0, C.lF)({
                               sound: t,
-                              location: U(k({}, a), { object: P.qAy.SOUNDBOARD_SOUND }),
+                              location: U(j({}, a), { object: P.qAy.SOUNDBOARD_SOUND }),
                           }),
                           (0, T.TB)(t.soundId));
             },
@@ -220,7 +220,7 @@ let X = i.forwardRef(function (e, t) {
             channel: S,
             containerClassName: P,
             className: M,
-            focused: j,
+            focused: k,
             forceSecondaryActions: B = !1,
             interactive: W = !0,
             enableSecondaryActions: X = !1,
@@ -296,8 +296,8 @@ let X = i.forwardRef(function (e, t) {
         eM = i.useCallback(() => {
             eL(!1);
         }, []),
-        ek = eN && en;
-    function ej() {
+        ej = eN && en;
+    function ek() {
         Q || eh(ee);
     }
     function eU(e) {
@@ -309,7 +309,7 @@ let X = i.forwardRef(function (e, t) {
             null != $)
         )
             return void $(e);
-        ej();
+        ek();
     }
     let eG = (0, r.jsx)("div", {
             onMouseEnter: ex,
@@ -322,7 +322,7 @@ let X = i.forwardRef(function (e, t) {
         }),
         eB = (e) =>
             Q || eN
-                ? ek
+                ? ej
                     ? (0, r.jsx)(f.mBM, {
                           size: "xs",
                           color: "currentColor",
@@ -343,7 +343,7 @@ let X = i.forwardRef(function (e, t) {
             }),
         }),
         eF = () =>
-            ek && !er
+            ej && !er
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)("div", { className: x.buttonOverlayBackground }),
@@ -439,8 +439,8 @@ let X = i.forwardRef(function (e, t) {
                 delay: 500,
                 children: (0, r.jsxs)(
                     f.kL8,
-                    U(k({}, ec), {
-                        buttonProps: U(k({}, eA), {
+                    U(j({}, ec), {
+                        buttonProps: U(j({}, eA), {
                             id: eS,
                             role: "button",
                         }),
@@ -458,7 +458,7 @@ let X = i.forwardRef(function (e, t) {
                                 [x.buttonDisabled]: !W && !B,
                                 [x.premiumDisabled]: eN && !B,
                                 [x.buttonDisabledSecondaryActionsEnabled]: !W && B,
-                                [x.focused]: W && j,
+                                [x.focused]: W && k,
                             },
                             M,
                         ),

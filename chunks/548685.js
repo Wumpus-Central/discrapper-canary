@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(782568),
     d = n(607070),
-    g = n(594174),
-    p = n(451478),
-    f = n(626135),
+    f = n(594174),
+    g = n(451478),
+    p = n(626135),
     m = n(63063),
     h = n(74538),
     C = n(381585),
@@ -42,7 +42,7 @@ let A = (e) => {
             buttonContainerClassName: H,
             orbsSupportedOnly: D,
         } = e,
-        M = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        M = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         F = h.ZP.canUseCollectibles(M),
         W = (0, I.B)("FeedBlock"),
         {
@@ -60,7 +60,7 @@ let A = (e) => {
         }),
         q = (0, k.St)(z),
         J = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        Q = (0, s.e7)([p.Z], () => p.Z.isFocused()),
+        Q = (0, s.e7)([g.Z], () => g.Z.isFocused()),
         X = !J && Q,
         { animationPhase: $, startAnimation: ee } = (0, y.y)(),
         et = (0, C.sp)(),
@@ -72,7 +72,7 @@ let A = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => U(e),
                 }),
-                    f.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: en,
                         sort_type: e,
                     });
@@ -139,7 +139,7 @@ let A = (e) => {
                                                   onOutroComplete: K,
                                                   returnRef: er,
                                               }),
-                                                  f.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                  p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                       page_session_id: en,
                                                   });
                                           },

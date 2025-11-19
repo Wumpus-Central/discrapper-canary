@@ -1,4 +1,4 @@
-n.d(t, { B: () => p }), n(388685), n(539854);
+n.d(t, { B: () => g }), n(388685), n(539854);
 var r = n(473749),
     l = n(828700),
     i = n(335818),
@@ -8,37 +8,37 @@ var r = n(473749),
     c = n(149705),
     u = n(215023),
     d = n(981631);
-let g = {
+let f = {
         [u.AW.AVATAR_DECORATIONS]: i.G.AVATAR_DECORATION,
         [u.AW.PROFILE_EFFECTS]: i.G.PROFILE_EFFECT,
         [u.AW.NAMEPLATES]: i.G.NAMEPLATE,
         [u.AW.BUNDLES]: i.G.BUNDLE,
     },
-    p = (e) => {
+    g = (e) => {
         let { enabled: t } = (0, a.WX)({ location: "useShopViewTransition" }),
             n = (0, s.FF)("CollectiblesBrowse"),
-            { setItemTypeFilter: i, reset: p, setCurrentTab: f } = (0, o.S)(),
+            { setItemTypeFilter: i, reset: g, setCurrentTab: p } = (0, o.S)(),
             m = r.useMemo(() => (e !== u.AW.ORBS || t ? ((0, u.RE)(e) && n ? u.AW.CATALOG : e) : u.AW.HOME), [e, t, n]),
             [h, C] = r.useState(m),
             [_, b] = r.useState(u.f7.VISIBLE);
         r.useEffect(() => {
-            f(h);
-        }, [h, f]),
+            p(h);
+        }, [h, p]),
             r.useEffect(() => {
-                if ((C(m), e === u.AW.CATALOG)) p();
+                if ((C(m), e === u.AW.CATALOG)) g();
                 else if ((0, u.RE)(e)) {
-                    let t = g[e];
-                    null != t ? i(t) : p();
+                    let t = f[e];
+                    null != t ? i(t) : g();
                 }
-            }, [m, e, i, p]);
+            }, [m, e, i, g]);
         let { clearError: v } = (0, c.a)(),
             x = (0, l.k6)(),
             E = r.useCallback(
                 async (e, t) => {
-                    if ((v(), e === u.AW.CATALOG)) p();
+                    if ((v(), e === u.AW.CATALOG)) g();
                     else if ((0, u.RE)(e) && e !== h) {
-                        let t = g[e];
-                        null != t ? i(t) : p();
+                        let t = f[e];
+                        null != t ? i(t) : g();
                     }
                     if (h !== e) {
                         if (t) {
@@ -51,7 +51,7 @@ let g = {
                             b(u.f7.VISIBLE);
                     }
                 },
-                [x, i, n, p, h, v],
+                [x, i, n, g, h, v],
             );
         return {
             selectedTab: h,

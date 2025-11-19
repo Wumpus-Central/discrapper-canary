@@ -52,11 +52,11 @@ function M(e) {
     var t;
     return null != (t = m.ZP.lastMessageId(e)) ? t : e;
 }
-function k(e) {
+function j(e) {
     let t = _.Z.getCount(e);
     return null === t || 0 === t;
 }
-function j(e) {
+function k(e) {
     return function (t, n) {
         return (0, b.yv)(t)
             ? -1
@@ -106,7 +106,7 @@ function Z(e) {
                   let { id: t } = e;
                   return t;
               })
-              .sort(j(S));
+              .sort(k(S));
 }
 function F(e) {
     let t = h.Z.getChannel(I);
@@ -121,9 +121,9 @@ function F(e) {
         0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
-            ((w = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (D = o().chain(P).sort(j(l.z.CREATION_DATE))));
+            ((w = o().chain(P).sort(k(l.z.LATEST_ACTIVITY))), (D = o().chain(P).sort(k(l.z.CREATION_DATE))));
     let n = (S === l.z.LATEST_ACTIVITY ? w : D).value(),
-        i = (N = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
+        i = (N = 0 === T.size ? n : n.filter(U(T, A))).find((e) => j(e));
     r = null == i ? null : i;
 }
 function V(e) {

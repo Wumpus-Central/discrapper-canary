@@ -210,7 +210,7 @@ class M {
         });
     }
 }
-class k {
+class j {
     update() {
         let e = this.game,
             t = b.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
@@ -291,7 +291,7 @@ class k {
             (this.updateScreenInterval = setInterval(() => this.update(), 10000));
     }
 }
-function j() {
+function k() {
     try {
         return crypto.randomUUID();
     } catch (e) {
@@ -553,7 +553,7 @@ class U {
             A(this, "muteToggledCount", void 0),
             A(this, "_successfullyShown", void 0),
             (this.game = e),
-            (this.uuid = j()),
+            (this.uuid = k()),
             (this.overlayMethod = null),
             (this.overlayMethodStats = null),
             (this.overlayState = null),
@@ -579,7 +579,7 @@ class U {
             (this.soundboardKeepOpenCount = 0),
             (this.muteToggledCount = 0),
             (this._successfullyShown = !1),
-            (this.screenAnalytics = new k(e)),
+            (this.screenAnalytics = new j(e)),
             (this.overlayStatus = (0, d.b6)(e)),
             (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),

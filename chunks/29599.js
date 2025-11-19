@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -175,7 +175,7 @@ function G(e) {
                     renderModal: (e) =>
                         (0, r.jsx)(
                             b.Z,
-                            U(k({}, e), {
+                            U(j({}, e), {
                                 onClose: S,
                                 onClaim: s,
                                 code: a,
@@ -206,9 +206,9 @@ let B = function () {
             activeOutboundPromotions: g,
             claimedEndedOutboundPromotions: b,
             claimedOutboundPromotionCodeMap: M,
-            addClaimedOutboundPromotionCode: k,
+            addClaimedOutboundPromotionCode: j,
         } = (0, E.lG)(),
-        j = g.length + b.length > 0,
+        k = g.length + b.length > 0,
         U =
             h.g.useExperiment(
                 { location: "EntitlementGifts" },
@@ -216,7 +216,7 @@ let B = function () {
                     autoTrackExposure: !1,
                     disable: a,
                 },
-            ).enabled && j;
+            ).enabled && k;
     function B() {
         (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
     }
@@ -230,7 +230,7 @@ let B = function () {
             }),
             d = (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
-                children: j ? L.intl.string(L.t.wFsj3B) : void 0,
+                children: k ? L.intl.string(L.t.wFsj3B) : void 0,
             }),
             f = U
                 ? (0, r.jsxs)("div", {
@@ -263,7 +263,7 @@ let B = function () {
             className: x.marginContainer,
             children: [
                 d,
-                j ? (0, r.jsx)(u.izJ, { className: x.divider }) : null,
+                k ? (0, r.jsx)(u.izJ, { className: x.divider }) : null,
                 (0, r.jsx)(O.Z, {
                     className: x.gradientContainer,
                     isShown: U,
@@ -280,7 +280,7 @@ let B = function () {
                                     {
                                         outboundPromotion: n,
                                         code: t,
-                                        addClaimedOutboundPromotionCode: k,
+                                        addClaimedOutboundPromotionCode: j,
                                         disabled: !a,
                                     },
                                     n.id,
@@ -292,7 +292,7 @@ let B = function () {
                                     {
                                         outboundPromotion: e,
                                         code: M[e.id],
-                                        addClaimedOutboundPromotionCode: k,
+                                        addClaimedOutboundPromotionCode: j,
                                         disabled: !a,
                                     },
                                     e.id,

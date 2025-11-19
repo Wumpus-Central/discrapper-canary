@@ -158,13 +158,13 @@ function O(e) {
                 customOffset: null == T ? void 0 : T.customOffset,
             };
         }, [L, T]),
-        k = i.useCallback(
+        j = i.useCallback(
             (e, t) => {
                 null == v || v(t);
             },
             [v],
         ),
-        j = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 null == v || v(e);
             },
@@ -178,7 +178,7 @@ function O(e) {
         s.m,
         g(h({}, w), {
             position: L,
-            onRequestClose: k,
+            onRequestClose: j,
             gradientColor: O,
             onPositionChange: U,
             onNudgeChange: D,
@@ -192,7 +192,7 @@ function O(e) {
                 children: [
                     A &&
                         (0, r.jsx)(u.u, {
-                            onClick: j,
+                            onClick: k,
                             variant: null != O ? "color-mix" : void 0,
                         }),
                     null != p &&

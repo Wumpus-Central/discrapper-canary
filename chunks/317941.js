@@ -44,7 +44,7 @@ function L(e, t, n) {
 }
 let x = 512,
     M = 1000;
-class k extends i.PureComponent {
+class j extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
@@ -118,7 +118,7 @@ class k extends i.PureComponent {
             });
     }
 }
-class j extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         this._loadedAt = Date.now();
     }
@@ -263,7 +263,7 @@ class j extends i.PureComponent {
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
                                         n.map((e) =>
                                             (0, r.jsx)(
-                                                k,
+                                                j,
                                                 {
                                                     giftCode: e,
                                                     sku: o,
@@ -321,4 +321,4 @@ let U = c.ZP.connectStores([S.Z, I.Z, v.Z, h.Z, T.Z, O.default], (e) => {
         subscriptionPlan: null != n ? (0, R.oE)(n) : null,
         giftCodes: a,
     };
-})(j);
+})(k);

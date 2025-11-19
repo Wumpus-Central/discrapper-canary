@@ -33,7 +33,7 @@ let R = (e, t) => {
             L = (0, h.Z)(),
             x = null != L,
             M = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-            { visibilityPercentageRef: k, visibilityPercentage: j } = (0, T.E)(!M),
+            { visibilityPercentageRef: j, visibilityPercentage: k } = (0, T.E)(!M),
             U = (0, l.e7)([_.Z], () => _.Z.affinities),
             G = !x && U.length > 0,
             B = (0, m.H)(s.I.MARKETING_PAGE_BANNER);
@@ -44,11 +44,11 @@ let R = (e, t) => {
                 className: o()(N.container, null != R && N.containerWithOfferCountdown, n),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, r.jsx)("div", {
-                    ref: k,
+                    ref: j,
                     children: (0, r.jsxs)("div", {
                         className: N.contentContainer,
                         children: [
-                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: j }),
+                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: k }),
                             D &&
                                 (null != R
                                     ? (0, r.jsx)(y.Z, {

@@ -81,7 +81,7 @@ function w(e) {
 }
 function L() {
     if (null != P) return void X(P);
-    if ((k(), !f.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
+    if ((j(), !f.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
     let { enabled: e } = p.w.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
     if (e) {
         for (let e of _.Z.getFriendIDs()) {
@@ -107,14 +107,14 @@ function x(e) {
 function M() {
     return Array.from(N).some((e) => !A.lastShownFriendsListGiftIntents.includes(e));
 }
-function k() {
+function j() {
     (C.length = 0), N.clear(), (R = {});
 }
-function j() {
-    k();
+function k() {
+    j();
 }
 function U() {
-    (A = S()), k();
+    (A = S()), j();
 }
 function G() {
     A.lastShownFriendsListGiftIntents = Array.from(N);
@@ -162,7 +162,7 @@ function q(e) {
     X(t);
 }
 function X(e) {
-    k();
+    j();
     let { enabled: t } = p.w.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t) return;
     P = e;
@@ -247,7 +247,7 @@ m(Q, "displayName", "PremiumGiftingIntentStore"),
         },
     ]);
 let J = new Q(c.Z, {
-    CONNECTION_OPEN: j,
+    CONNECTION_OPEN: k,
     LOGOUT: U,
     MESSAGE_GIFT_INTENT_SHOWN: B,
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: G,

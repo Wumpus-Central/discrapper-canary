@@ -45,8 +45,8 @@ let w = new b.Z("CacheStore"),
     L = !1,
     x = !1,
     M = "initializing",
-    k = 0,
-    j = !1,
+    j = 0,
+    k = !1,
     U = !1,
     G = !1;
 function B() {
@@ -56,17 +56,17 @@ function Z() {
     return (U = !1), (G = !0), !1;
 }
 function F() {
-    j = !0;
+    k = !0;
 }
 function V() {
-    (j = !0), (M = "cache-loaded");
+    (k = !0), (M = "cache-loaded");
 }
 function H() {
     M = "no-cache";
 }
 function Y(e) {
     w.log("Clearing cache store"),
-        (k = Date.now()),
+        (j = Date.now()),
         o.K.remove(P.FsG),
         o.K.remove(P.ihW),
         o.K.remove(P.O42),
@@ -74,7 +74,7 @@ function Y(e) {
         "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (x = !0);
 }
 function W() {
-    w.verbose("Writing cache now"), (k = Date.now()), (j = !0), o.K.remove(P.FsG), o.K.remove(P.O42), o.K.remove(P.ihW);
+    w.verbose("Writing cache now"), (j = Date.now()), (k = !0), o.K.remove(P.FsG), o.K.remove(P.O42), o.K.remove(P.ihW);
 }
 function K(e) {
     null != e.channels && (0, N.ZP)(e.channels),
@@ -133,7 +133,7 @@ async function q(e, t, n) {
             null == e
                 ? Promise.resolve([])
                 : i.Z.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => h.Z.getAll(e)),
-        [[N, P], D, L, x, M, k, j] = await Promise.all([_, E, b, O, I, A, C]),
+        [[N, P], D, L, x, M, j, k] = await Promise.all([_, E, b, O, I, A, C]),
         U = performance.now() - f;
     if ((w.verbose("cache loaded in ".concat(U, "ms (channel_history ").concat(N, "ms)")), null == P))
         return (
@@ -158,8 +158,8 @@ async function q(e, t, n) {
                         messages: null == P.channelId ? {} : { [P.channelId]: P.messages },
                         guildMembers: null == P.guildId ? {} : { [P.guildId]: r },
                         userSettings: M,
-                        userGuildSettings: j,
-                        readStates: k,
+                        userGuildSettings: k,
+                        readStates: j,
                     });
                 }),
                     i.Z.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
@@ -186,8 +186,8 @@ async function q(e, t, n) {
                     .concat(f, "\n              channels: ")
                     .concat(null == (l = L.channels) ? void 0 : l.length, "\n            user_settings: ")
                     .concat(Object.keys(M).length, "\n            read_states: ")
-                    .concat(k.length, "\n            user_guild_settings: ")
-                    .concat(j.length, "\n      )"),
+                    .concat(j.length, "\n            user_guild_settings: ")
+                    .concat(k.length, "\n      )"),
             ),
             w.verbose("finished dispatching CACHE_LOADED"),
             [!0, o && null != f ? f : null, x.length]
@@ -410,13 +410,13 @@ class er extends (r = a.ZP.Store) {
         this.waitFor(I.default, y.Z, T.Z, S.Z), L || y.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
-        return !L || j;
+        return !L || k;
     }
     getLazyCacheStatus() {
         return L ? M : "no-cache";
     }
     get lastWriteTime() {
-        return k;
+        return j;
     }
     canWriteCaches(e) {
         return (0, A.$8)()

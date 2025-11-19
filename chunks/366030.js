@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(981631),
     x = n(228168),
     M = n(388032),
-    k = n(953605);
-function j(e, t, n) {
+    j = n(953605);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -115,12 +115,12 @@ function Z(e) {
     return null == t
         ? null
         : (0, r.jsxs)("div", {
-              className: k.popoutCheck,
+              className: j.popoutCheck,
               children: [
                   (0, r.jsx)(p.dz2, {
                       size: "md",
                       color: "currentColor",
-                      className: k.popoutCheckIcon,
+                      className: j.popoutCheckIcon,
                   }),
                   (0, r.jsx)(p.Text, {
                       variant: "text-xs/medium",
@@ -150,35 +150,35 @@ function F(e) {
             return (
                 A.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : "")
                     ? (l = (0, r.jsx)(P.Z, {
-                          className: k.botTag,
+                          className: j.botTag,
                           color: i,
                           size: 16,
                       }))
                     : null != g &&
                       (l = (0, r.jsx)(O.Z, {
-                          className: k.botTag,
+                          className: j.botTag,
                           verified: g.isVerifiedBot(),
                       })),
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: k.popoutChecksGroup,
+                        className: j.popoutChecksGroup,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: k.popoutCheckGroupName,
+                                className: j.popoutCheckGroupName,
                                 children: [
                                     null != _
                                         ? (0, r.jsx)("img", {
                                               src: (0, f.wj)(n) ? _.icon.darkSVG : _.icon.lightSVG,
                                               alt: "",
-                                              className: k.popoutCheckGroupPlatformIcon,
+                                              className: j.popoutCheckGroupPlatformIcon,
                                           })
                                         : null,
                                     null != g
                                         ? (0, r.jsx)(m.Z, {
                                               user: g,
                                               size: p.EFr.SIZE_20,
-                                              className: k.popoutCheckGroupPlatformIcon,
+                                              className: j.popoutCheckGroupPlatformIcon,
                                           })
                                         : null,
                                     (0, r.jsx)(p.Text, {
@@ -259,33 +259,33 @@ function V(e) {
                   ? M.intl.format(M.t["0eBj3x"], {})
                   : M.intl.format(M.t.D7uftB, {})),
         (0, r.jsxs)("div", {
-            className: k.popout,
+            className: j.popout,
             children: [
                 (0, r.jsx)("div", {
-                    className: k.popoutHeaderContainer,
+                    className: j.popoutHeaderContainer,
                     children: (0, r.jsx)(p.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
-                        className: k.popoutHeaderText,
+                        className: j.popoutHeaderText,
                         children: t,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: k.popoutChecks,
+                    className: j.popoutChecks,
                     children: (0, r.jsx)(F, { eligibilityStates: o.flat() }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: k.buttonContainer,
+                    className: j.buttonContainer,
                     children: [
                         f
                             ? null
                             : (0, r.jsx)(_.zx, {
-                                  className: k.getRolesButton,
+                                  className: j.getRolesButton,
                                   onClick: n,
                                   children: M.intl.string(M.t.T1t1WV),
                               }),
                         (0, r.jsx)(_.zx, {
-                            className: k.viewConnectionsButton,
+                            className: j.viewConnectionsButton,
                             color: _.zx.Colors.PRIMARY,
                             onClick: a,
                             children: M.intl.string(M.t.hgKDnG),
@@ -353,21 +353,21 @@ function H(e) {
                         U(
                             {
                                 ref: g,
-                                className: k.badge,
+                                className: j.badge,
                             },
                             e,
                         ),
                         {
                             children: [
                                 (0, r.jsx)(R.Z, {
-                                    className: k.badgeVerifiedIcon,
+                                    className: j.badgeVerifiedIcon,
                                     size: 16,
                                     color: u.colorString,
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-xs/bold",
                                     color: "header-primary",
-                                    className: k.roleName,
+                                    className: j.roleName,
                                     children: u.name,
                                 }),
                             ],

@@ -1,6 +1,6 @@
 n.d(t, {
     AW: () => b,
-    As: () => j,
+    As: () => k,
     Cm: () => T,
     HU: () => P,
     Hi: () => G,
@@ -10,7 +10,7 @@ n.d(t, {
     RE: () => O,
     Vt: () => w,
     aK: () => v,
-    aP: () => k,
+    aP: () => j,
     f7: () => E,
     fH: () => B,
     gj: () => h,
@@ -450,7 +450,7 @@ let w = {
     L = new Set(Object.values(w)),
     x = (e) => L.has(e),
     M = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    k = [
+    j = [
         {
             sortType: d.E.RELEVANCE,
             sortDirection: u.F.DESC,
@@ -472,7 +472,7 @@ let w = {
             sortDirection: u.F.DESC,
         },
     ],
-    j = 300,
+    k = 300,
     U = {
         amount: 300,
         currency: p.pKx.DISCORD_ORB,

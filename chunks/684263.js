@@ -8,16 +8,16 @@ var r = n(54381),
     c = n(410030),
     u = n(566697),
     d = n(876917),
-    g = n(328456),
-    p = n(619899),
-    f = n(616066),
+    f = n(328456),
+    g = n(619899),
+    p = n(616066),
     m = n(106221),
     h = n(63243),
     C = n(244488);
 let _ = l.memo(function (e) {
     let { product: t, isPurchased: n, isHighlighted: l, user: i } = e,
-        { firstProfileEffect: _, firstAvatarDecoration: b, firstNameplate: v } = (0, g.Rj)(t),
-        x = (0, p.O1)(b),
+        { firstProfileEffect: _, firstAvatarDecoration: b, firstNameplate: v } = (0, f.Rj)(t),
+        x = (0, g.O1)(b),
         E = (0, c.ZP)(),
         O = (0, s.ap)(E),
         S = null != v && null != b && null != _,
@@ -53,7 +53,7 @@ let _ = l.memo(function (e) {
             null != x &&
                 (0, r.jsx)("div", {
                     className: m.avatarDecorationPreview,
-                    children: (0, r.jsx)(f.R, {
+                    children: (0, r.jsx)(p.R, {
                         item: x,
                         user: i,
                         avatarSize: y,

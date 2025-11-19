@@ -116,15 +116,15 @@ function T(e) {
             refs: L,
             floatingStyles: x,
             isOpen: M,
-            setIsOpen: k,
-            context: j,
+            setIsOpen: j,
+            context: k,
             getFloatingProps: U,
             getReferenceProps: G,
         } = (0, d.O)({
             matchReferenceWidth: !1,
             placement: "bottom-start",
         }),
-        { isMounted: B, styles: Z } = (0, d.Y)(j, {
+        { isMounted: B, styles: Z } = (0, d.Y)(k, {
             common: (e) => {
                 let { side: t } = e;
                 return { transformOrigin: "".concat("top" === t ? "bottom" : "top", " center") };
@@ -136,7 +136,7 @@ function T(e) {
             duration: 100,
         }),
         F = (e) => {
-            null == n || n(e), k(!1);
+            null == n || n(e), j(!1);
         };
     return (0, r.jsx)(
         _.g,
@@ -185,7 +185,7 @@ function T(e) {
                                             }),
                                             (0, r.jsx)(c.z, {
                                                 className: g.calendarButton,
-                                                onClick: () => k(!M),
+                                                onClick: () => j(!M),
                                                 "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                                 children: (0, r.jsx)(p.Que, {
                                                     size: "sm",

@@ -19,8 +19,8 @@ var r = t(54381),
     g = t(775028),
     _ = t(981631),
     x = t(176505),
-    b = t(388032),
-    C = t(781224);
+    C = t(388032),
+    b = t(781224);
 function j(e) {
     let { channelId: n } = e;
     return (0, r.jsx)(o.Z, {
@@ -99,10 +99,10 @@ function O(e) {
     return null == j
         ? null
         : (0, r.jsxs)("div", {
-              className: C.pageBody,
+              className: b.pageBody,
               children: [
                   (0, r.jsxs)("div", {
-                      className: C.header,
+                      className: b.header,
                       children: [
                           (0, r.jsx)(a.E1j, {
                               query: o,
@@ -113,19 +113,19 @@ function O(e) {
                                       s(e.toLowerCase());
                               },
                               onClear: w,
-                              placeholder: b.intl.string(b.t.s5MnmC),
+                              placeholder: C.intl.string(C.t.s5MnmC),
                           }),
                           N
                               ? (0, r.jsx)(a.Button, {
                                     icon: a.qJs,
                                     onClick: Z,
-                                    text: b.intl.string(b.t.CumH4u),
+                                    text: C.intl.string(C.t.CumH4u),
                                 })
                               : null,
                       ],
                   }),
                   (0, r.jsx)(g.Z, {
-                      className: C.browser,
+                      className: b.browser,
                       channels: O,
                       categories: y,
                       guild: j,

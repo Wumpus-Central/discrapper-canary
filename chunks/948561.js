@@ -50,14 +50,14 @@ let w = 3000,
 function M(e) {
     return "".concat(e.channel_id, ":").concat(e.id);
 }
-function k() {
+function j() {
     Object.values(x).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
         (x = {});
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = M(e);
     if (null != x[n]) {
@@ -95,7 +95,7 @@ function U(e, t, n) {
     (0, I.OP)(n, t);
 }
 function G(e) {
-    if (j(e, I.Pq.TIMEOUT)) {
+    if (k(e, I.Pq.TIMEOUT)) {
         let t = m.Z.getMessage(e.channel_id, e.id);
         if (null != t) {
             let { attachmentIds: n, embedIds: r } = (0, A.DQ)(t);
@@ -414,7 +414,7 @@ function z(e) {
                 : null == (i = f.Z.getMessage(s.channel_id, s.id))
                   ? void 0
                   : i.message;
-        null == e || (0, A.MD)((0, u.wi)(e, s)) || j(e, I.Pq.UPDATE);
+        null == e || (0, A.MD)((0, u.wi)(e, s)) || k(e, I.Pq.UPDATE);
     }
     let l = g.Z.getChannelId(),
         c = p.ZP.getCurrentSidebarChannelId(l);
@@ -504,7 +504,7 @@ class eo extends c.Z {
                 SIDEBAR_VIEW_CHANNEL: et,
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
-                LOGOUT: k,
+                LOGOUT: j,
                 SEARCH_MESSAGES_SUCCESS: Q,
                 MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
                 CHANNEL_SELECT: en,

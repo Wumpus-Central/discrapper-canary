@@ -97,10 +97,10 @@ function x() {
 function M() {
     return null != r ? (0, E.Z)(r) : null;
 }
-function k() {
+function j() {
     return null != r ? (0, g.Z)(r) : null;
 }
-function j() {
+function k() {
     var e;
     let { soundshareEnabled: t } = c.Z.getState();
     return {
@@ -133,17 +133,17 @@ class U extends (i = o.ZP.Store) {
         return M();
     }
     getLastPickedContentPID() {
-        return k();
+        return j();
     }
     getStreamStartOptions() {
-        return j();
+        return k();
     }
 }
 function G(e) {
     let { existing: t, content: n } = e;
     if (((N = { lastPickerAction: 1 }), (r = n), 0 === S && !t)) {
         let e = u.Z.getChannel(p.Z.getVoiceChannelId());
-        null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1) && (0, l.WH)(e.getGuildId(), e.id, j());
+        null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1) && (0, l.WH)(e.getGuildId(), e.id, k());
     }
 }
 function B() {

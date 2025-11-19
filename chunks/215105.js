@@ -74,8 +74,8 @@ function C(e) {
         { resetInteraction: P, setInteractionToast: D } = (0, g.Xo)(),
         { primaryColor: w } = (0, b.z)(),
         [L, x] = i.useState(""),
-        [M, k] = i.useState((0, u.JM)(L)),
-        j = i.useRef(!1),
+        [M, j] = i.useState((0, u.JM)(L)),
+        k = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
@@ -134,11 +134,11 @@ function C(e) {
                 textValue: L,
                 richValue: M,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== L && (x(t), j(n));
                 },
-                focused: j.current,
+                focused: k.current,
                 onFocus: () => {
-                    j.current = !0;
+                    k.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,

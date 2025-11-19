@@ -189,7 +189,7 @@ function M() {
     }
     return !1;
 }
-function k(e) {
+function j(e) {
     let { statuses: t } = e,
         n = [...C.recentStatuses],
         s = [...C.favoritedStatuses];
@@ -206,7 +206,7 @@ function k(e) {
         (C.recentStatuses = n),
         (C.favoritedStatuses = s);
 }
-class j extends (s = p.ZP.PersistedStore) {
+class k extends (s = p.ZP.PersistedStore) {
     initialize(e) {
         (C = v({}, N(), null != e ? e : {})), this.waitFor(m.ZP), this.syncWith([m.ZP], M);
     }
@@ -242,9 +242,9 @@ class j extends (s = p.ZP.PersistedStore) {
         );
     }
 }
-O(j, "displayName", "HangStatusStore"),
-    O(j, "persistKey", "HangStatusStore"),
-    O(j, "migrations", [
+O(k, "displayName", "HangStatusStore"),
+    O(k, "persistKey", "HangStatusStore"),
+    O(k, "migrations", [
         (e) => {
             if (null != e.currentDefaultStatus && null == e.currentDefaultStatus.gameActivityHangStatus) {
                 let t = T(v({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
@@ -260,12 +260,12 @@ O(j, "displayName", "HangStatusStore"),
             e
         ),
     ]);
-let U = new j(h.Z, {
+let U = new k(h.Z, {
     LOGOUT: R,
     UPDATE_HANG_STATUS: P,
     UPDATE_HANG_STATUS_CUSTOM: D,
     UPDATE_HANG_STATUS_GAME_ACTIVITY: w,
-    DELETE_INVALID_HANG_STATUSES: k,
+    DELETE_INVALID_HANG_STATUSES: j,
     CLEAR_HANG_STATUS: L,
     UPDATE_FAVORITE_HANG_STATUS: x,
     RESET_HANG_STATUS_STATE: R,

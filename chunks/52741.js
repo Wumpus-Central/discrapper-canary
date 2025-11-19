@@ -58,9 +58,9 @@ function v(e) {
             : w
               ? E.PremiumTypes.TIER_2
               : null,
-        k = (0, h.N)(),
-        j = (0, p.N)(),
-        U = null == k ? void 0 : k.subscription_trial;
+        j = (0, h.N)(),
+        k = (0, p.N)(),
+        U = null == j ? void 0 : j.subscription_trial;
     if (!S && !t && null != M && n === M && null != P && null != P.planIdFromItems) {
         let e = null != P.trialEndsAt ? s()(null == P ? void 0 : P.trialEndsAt).diff(s()(), "d") : 0,
             t = E.GP[P.planIdFromItems],
@@ -116,7 +116,7 @@ function v(e) {
                 }),
             });
         }
-        if (null != j)
+        if (null != k)
             return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: R,
@@ -124,7 +124,7 @@ function v(e) {
                 children: (0, r.jsx)(O, {
                     defaultPriceString: e,
                     subscriptionPlan: E.Xh.PREMIUM_MONTH_TIER_2,
-                    discountOffer: j,
+                    discountOffer: k,
                 }),
             });
     }

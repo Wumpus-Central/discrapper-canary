@@ -1,7 +1,7 @@
 n.d(t, {
     Ir: () => H,
     J: () => V,
-    YN: () => j,
+    YN: () => k,
     ZP: () => W,
     iZ: () => G,
 }),
@@ -90,7 +90,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -98,7 +98,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -107,10 +107,10 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 72,
+let k = 72,
     U = 2000;
 function G(e) {
-    return (null == e ? void 0 : e.type) === _.so.CONTENT_INVENTORY ? j : 0;
+    return (null == e ? void 0 : e.type) === _.so.CONTENT_INVENTORY ? k : 0;
 }
 let B = (e) => {
         var { entry: t } = e,
@@ -214,14 +214,14 @@ let B = (e) => {
             A = i.useRef(!1),
             [C, N] = i.useState(!1),
             [D, L] = i.useState(!1),
-            k = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
+            j = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && k && L(!0);
-        }, [C, k]),
+            C && j && L(!0);
+        }, [C, j]),
             i.useLayoutEffect(() => {
                 null != m.current && y(!0);
             }, []);
-        let j = i.useCallback(
+        let k = i.useCallback(
                 (e) => {
                     v &&
                         (0, d.jW)(e, async () => {
@@ -262,7 +262,7 @@ let B = (e) => {
             W = () => {
                 (A.current = !1),
                     setTimeout(() => {
-                        A.current || (N(!1), L(k));
+                        A.current || (N(!1), L(j));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
@@ -321,7 +321,7 @@ let B = (e) => {
                                     onClick: () => {
                                         C || N(!0);
                                     },
-                                    onContextMenu: j,
+                                    onContextMenu: k,
                                     children: (0, r.jsx)(
                                         B,
                                         x(w({}, _), {

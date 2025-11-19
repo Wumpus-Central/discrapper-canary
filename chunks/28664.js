@@ -122,8 +122,8 @@ function y(e) {
     let w = (0, f.c)(A),
         L = i.useId(),
         { isVisible: x, triggerProps: M } = (0, u.l)(h({ targetElementRef: w.targetElementRef }, D)),
-        k = P ? void 0 : L,
-        j = (0, d.Q)({ shouldShow: x }),
+        j = P ? void 0 : L,
+        k = (0, d.Q)({ shouldShow: x }),
         { defaultLayerContext: U } = (0, o.ZFG)(),
         G = i.useMemo(
             () =>
@@ -180,9 +180,9 @@ function y(e) {
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, c.C9)(n, M, k, w.triggerRef);
+        t = (0, c.C9)(n, M, j, w.triggerRef);
     }
-    let Z = j((e, t) =>
+    let Z = k((e, t) =>
         t
             ? (0, r.jsx)(l.N, {
                   isVisible: x,

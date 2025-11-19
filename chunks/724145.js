@@ -32,14 +32,14 @@ var r = n(54381),
     L = n(921944),
     x = n(474936),
     M = n(388032),
-    k = n(826425);
-let j = () =>
+    j = n(826425);
+let k = () =>
         (0, r.jsx)("div", {
-            className: k.editorHeader,
+            className: j.editorHeader,
             children: (0, r.jsxs)("div", {
-                className: k.bannerUpsell,
+                className: j.bannerUpsell,
                 children: [
-                    (0, r.jsx)(O.Z, { className: k.premiumIcon }),
+                    (0, r.jsx)(O.Z, { className: j.premiumIcon }),
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
@@ -55,15 +55,15 @@ let j = () =>
                 null != t && t(L.L.DISMISS), n(w.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.C)();
             };
         return (0, r.jsxs)("div", {
-            className: k.editorHeader,
+            className: j.editorHeader,
             children: [
                 (0, r.jsx)(d.P3F, {
-                    className: k.closeCircleButton,
+                    className: j.closeCircleButton,
                     onClick: i,
                     children: (0, r.jsx)(d.k$p, {
                         size: "md",
                         color: "currentColor",
-                        className: k.closeCircle,
+                        className: j.closeCircle,
                     }),
                 }),
                 (0, r.jsx)(d.Heading, {
@@ -146,7 +146,7 @@ let j = () =>
                 .with({ isPreview: !0 }, () => _)
                 .otherwise(() => M.intl.string(M.t.Olc2K3));
         return (0, r.jsxs)("div", {
-            className: k.editorFooter,
+            className: j.editorFooter,
             children: [
                 a &&
                     (0, r.jsx)(G, {
@@ -192,19 +192,19 @@ function Z(e) {
             children: (0, r.jsx)("div", {
                 ref: b,
                 "data-app-right-panel": !0,
-                className: o()(k.themeEditor, c ? k.editorAnimate : null),
+                className: o()(j.themeEditor, c ? j.editorAnimate : null),
                 children: (0, r.jsxs)(d.y5t, {
                     children: [
-                        n ? (0, r.jsx)(j, {}) : (0, r.jsx)(U, { markAsDismissed: t }),
+                        n ? (0, r.jsx)(k, {}) : (0, r.jsx)(U, { markAsDismissed: t }),
                         (0, r.jsx)(P.Z, {}),
                         (0, r.jsx)(d.Ttm, {
-                            className: k.editorBody,
+                            className: j.editorBody,
                             children: (0, r.jsxs)(D.ZP, {
                                 type: D.yH.EDITOR,
                                 children: [
-                                    !s && (0, r.jsx)(D.ZP.Basic, { className: k.selectionGroup }),
+                                    !s && (0, r.jsx)(D.ZP.Basic, { className: j.selectionGroup }),
                                     (0, r.jsx)(D.ZP.Gradient, {
-                                        className: k.selectionGroup,
+                                        className: j.selectionGroup,
                                         isCoachmark: n,
                                     }),
                                 ],

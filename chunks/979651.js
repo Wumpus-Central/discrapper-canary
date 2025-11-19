@@ -128,10 +128,10 @@ function M(e) {
         a = null != r && r !== t.id;
     return a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a;
 }
-function k() {
+function j() {
     (m = {}), (b = {}), (O = {}), (y = {}), E.clear();
 }
-function j(e) {
+function k(e) {
     let { voiceStates: t, user: n, sessionId: a } = e;
     for (let [e, n] of ((m = {}), (b = {}), (O = {}), (y = {}), Object.entries(t)))
         for (let [t, r] of Object.entries(n)) R(e, t, () => new u.Z(r));
@@ -227,8 +227,8 @@ class Z extends (a = l.ZP.Store) {
 _(Z, "displayName", "VoiceStateStore");
 let F = new Z(c.Z, {
     CONNECTION_OPEN: M,
-    CONNECTION_OPEN_SUPPLEMENTAL: k,
-    OVERLAY_INITIALIZE: j,
+    CONNECTION_OPEN_SUPPLEMENTAL: j,
+    OVERLAY_INITIALIZE: k,
     VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: P,
     GUILD_DELETE: U,

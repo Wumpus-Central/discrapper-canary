@@ -40,7 +40,7 @@ function _() {
     return s.isPlatformEmbedded;
 }
 async function p() {
-    var e, t, n, r, a, o, s, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j;
+    var e, t, n, r, a, o, s, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, j, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
     let G = [
@@ -66,8 +66,8 @@ async function p() {
                 null != (L = null == (h = U.main) ? void 0 : h.proc_count) ? L : 0,
                 null != (x = null == (m = U.renderer) ? void 0 : m.proc_count) ? x : 0,
                 null != (M = null == (g = U.gpu) ? void 0 : g.proc_count) ? M : 0,
-                null != (k = null == (E = U.crashpad) ? void 0 : E.proc_count) ? k : 0,
-                null != (j = null == (b = U.utility) ? void 0 : b.proc_count) ? j : 0,
+                null != (j = null == (E = U.crashpad) ? void 0 : E.proc_count) ? j : 0,
+                null != (k = null == (b = U.utility) ? void 0 : b.proc_count) ? k : 0,
             ],
         },
         Z = await (0, i.q)();

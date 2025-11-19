@@ -31,18 +31,18 @@ var r = n(507604),
     L = a("".slice),
     x = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
     M = /a/g,
-    k = /a/g,
-    j = new A(M) !== M,
+    j = /a/g,
+    k = new A(M) !== M,
     U = h.MISSED_STICKY,
     G = h.UNSUPPORTED_Y,
     B =
         r &&
-        (!j ||
+        (!k ||
             U ||
             I ||
             T ||
             E(function () {
-                return (k[S] = !1), A(M) !== M || A(k) === k || "/a/i" !== String(A(M, "i"));
+                return (j[S] = !1), A(M) !== M || A(j) === j || "/a/i" !== String(A(M, "i"));
             })),
     Z = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = !1; r <= n; r++) {

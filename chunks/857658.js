@@ -126,7 +126,7 @@ function P(e) {
                     (0, E.J4)(), w(e);
                 } catch (e) {}
         },
-        k = () => {
+        j = () => {
             if (o.length === T) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
@@ -134,7 +134,7 @@ function P(e) {
                 n = [...o, t];
             s(n), S(n.length - 1);
         },
-        j = (e) => {
+        k = (e) => {
             if (o.length > 1) {
                 (0, E.JL)();
                 let t = o.filter((t, n) => n !== e);
@@ -191,7 +191,7 @@ function P(e) {
                                     children: (0, r.jsx)(_.hU, {
                                         variant: "icon-only",
                                         size: "sm",
-                                        onClick: () => j(v),
+                                        onClick: () => k(v),
                                         icon: p.V_R,
                                         "aria-label": y.intl.string(y.t.N86XcP),
                                     }),
@@ -204,7 +204,7 @@ function P(e) {
                 (0, r.jsx)(_.zxk, {
                     variant: "secondary",
                     size: "md",
-                    onClick: k,
+                    onClick: j,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdT),
                     fullWidth: !0,

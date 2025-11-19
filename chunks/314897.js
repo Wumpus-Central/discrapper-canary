@@ -43,8 +43,8 @@ let N = new g.Z("AuthenticationStore"),
     L = null,
     x = null,
     M = null,
-    k = null,
     j = null,
+    k = null,
     U = S.u34.NONE,
     G = !1,
     B = [],
@@ -111,13 +111,13 @@ function $(e) {
             ));
 }
 function ee() {
-    (k = M), (M = null), u.K.remove(R);
+    (j = M), (M = null), u.K.remove(R);
 }
 function et(e, t) {
     Q("setAuthToken called."), (null == t || t !== D) && o.removeAnalyticsToken(), o.setToken(e, t);
 }
 function en(e) {
-    (j = e), o.setAnalyticsToken(e);
+    (k = e), o.setAnalyticsToken(e);
 }
 function er() {
     return Q("removeAuthToken called."), o.removeAnalyticsToken(), o.removeToken();
@@ -194,11 +194,11 @@ function eE(e) {
     null == M
         ? null != t
             ? (y.default.track(S.rMx.USER_FINGERPRINT_CHANGED, {
-                  old_fingerprint: null != k ? (0, s.s)(k) : null,
+                  old_fingerprint: null != j ? (0, s.s)(j) : null,
                   new_fingerprint: (0, s.s)(t),
               }),
               (M = t),
-              (k = t),
+              (j = t),
               u.K.set(R, M))
             : J()
         : null != t &&
@@ -230,7 +230,7 @@ function eO(e) {
     let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
     v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, b.Z)(n)),
         (w = r),
-        (j = i),
+        (k = i),
         et(a, n.id),
         null != i && en(i),
         ee(),
@@ -344,7 +344,7 @@ class ew extends (a = l.ZP.Store) {
         return M;
     }
     getAnalyticsToken() {
-        return null != j ? j : o.getAnalyticsToken();
+        return null != k ? k : o.getAnalyticsToken();
     }
     getMFATicket() {
         return Z;

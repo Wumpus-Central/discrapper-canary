@@ -10,7 +10,7 @@ function u() {
     let { itemTypeFilters: e, searchQuery: t } = (0, s.S)((e) => e),
         { totalCount: n, isFetchingResults: u } = (0, o.a)(),
         d = (0, s.S)((e) => e.hasFilters()),
-        g = l.useCallback(() => {
+        f = l.useCallback(() => {
             if (!d) return "";
             if (u) return c.intl.string(c.t["/FaMSE"]);
             if ("" !== t) {
@@ -32,6 +32,6 @@ function u() {
         }, [e, n, d, t, u]);
     return (0, r.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
-        children: g(),
+        children: f(),
     });
 }

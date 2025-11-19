@@ -7625,24 +7625,24 @@
                         (x = D[y]).a.sc && (e.strokeColorAnim = !0),
                             x.a.sw && (e.strokeWidthAnim = !0),
                             (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0),
-                            j = 0,
-                            k = x.s.b,
+                            k = 0,
+                            j = x.s.b,
                             m = 0;
                         m < g;
                         m += 1
                     )
-                        ((M = r[m]).anIndexes[y] = j),
-                            ((1 == k && "" !== M.val) ||
-                                (2 == k && "" !== M.val && " " !== M.val) ||
-                                (3 == k && (M.n || " " == M.val || m == g - 1)) ||
-                                (4 == k && (M.n || m == g - 1))) &&
-                                (1 === x.s.rn && w.push(j), (j += 1));
-                    n.a[y].s.totalChars = j;
+                        ((M = r[m]).anIndexes[y] = k),
+                            ((1 == j && "" !== M.val) ||
+                                (2 == j && "" !== M.val && " " !== M.val) ||
+                                (3 == j && (M.n || " " == M.val || m == g - 1)) ||
+                                (4 == j && (M.n || m == g - 1))) &&
+                                (1 === x.s.rn && w.push(k), (k += 1));
+                    n.a[y].s.totalChars = k;
                     var L,
                         x,
                         M,
-                        k,
                         j,
+                        k,
                         U,
                         G = -1;
                     if (1 === x.s.rn)
@@ -7881,8 +7881,8 @@
                                 L,
                                 x,
                                 M,
-                                k,
                                 j,
+                                k,
                                 U,
                                 G,
                                 B,
@@ -7930,8 +7930,8 @@
                         if (
                             ((D = this._pathData.pi),
                             (w = this._pathData.f.v),
-                            (j = 0),
-                            (k = 1),
+                            (k = 0),
+                            (j = 1),
                             (x = 0),
                             (M = !0),
                             (B = D.segments),
@@ -7939,13 +7939,13 @@
                         )
                             for (
                                 D.tLength < Math.abs(w) && (w = -Math.abs(w) % D.tLength),
-                                    j = B.length - 1,
-                                    k = (G = B[j].points).length - 1;
+                                    k = B.length - 1,
+                                    j = (G = B[k].points).length - 1;
                                 w < 0;
                             )
-                                (w += G[k].partialLength),
-                                    (k -= 1) < 0 && ((j -= 1), (k = (G = B[j].points).length - 1));
-                        (U = (G = B[j].points)[k - 1]), (Z = (L = G[k]).partialLength);
+                                (w += G[j].partialLength),
+                                    (j -= 1) < 0 && ((k -= 1), (j = (G = B[k].points).length - 1));
+                        (U = (G = B[k].points)[j - 1]), (Z = (L = G[j]).partialLength);
                     }
                     (P = A.length), (C = 0), (N = 0);
                     var z = 1.2 * e.finalSize * 0.714,
@@ -7953,8 +7953,8 @@
                     a = O.length;
                     var X = -1,
                         Q = w,
-                        J = j,
-                        $ = k,
+                        J = k,
+                        $ = j,
                         ee = -1,
                         et = "",
                         en = this.defaultPropsArray;
@@ -7987,10 +7987,10 @@
                                 (w = Q),
                                 (q = !1),
                                 this._hasMaskedPath &&
-                                    ((j = J),
-                                    (k = $),
-                                    (U = (G = B[j].points)[k - 1]),
-                                    (Z = (L = G[k]).partialLength),
+                                    ((k = J),
+                                    (j = $),
+                                    (U = (G = B[k].points)[j - 1]),
+                                    (Z = (L = G[j]).partialLength),
                                     (x = 0)),
                                 (et = ""),
                                 (E = ""),
@@ -8040,14 +8040,14 @@
                                           (M = !1))
                                         : G &&
                                           ((x += L.partialLength),
-                                          (k += 1) >= G.length &&
-                                              ((k = 0),
-                                              B[(j += 1)]
-                                                  ? (G = B[j].points)
+                                          (j += 1) >= G.length &&
+                                              ((j = 0),
+                                              B[(k += 1)]
+                                                  ? (G = B[k].points)
                                                   : Y.v.c
-                                                    ? ((k = 0), (G = B[(j = 0)].points))
+                                                    ? ((j = 0), (G = B[(k = 0)].points))
                                                     : ((x -= L.partialLength), (G = null))),
-                                          G && ((U = L), (Z = (L = G[k]).partialLength)));
+                                          G && ((U = L), (Z = (L = G[j]).partialLength)));
                                 (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0);
                             } else
                                 (l = A[R].an / 2 - A[R].add),

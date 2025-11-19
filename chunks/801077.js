@@ -32,8 +32,8 @@ var r,
     L = n(158776),
     x = n(699516),
     M = n(594174),
-    k = n(979651),
-    j = n(823379),
+    j = n(979651),
+    k = n(823379),
     U = n(981631);
 function G(e, t, n) {
     return (
@@ -146,7 +146,7 @@ function es(e) {
                 : (ea(e), null);
 }
 function el(e) {
-    let t = k.Z.getVoiceStateForUser(e);
+    let t = j.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null &&
         w.Z.canWithPartialContext(U.Plq.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
@@ -210,11 +210,11 @@ function ef(e, t, n) {
                     activity: r,
                     userId: e.id,
                     application: d,
-                    channelId: null == (A = k.Z.getVoiceStateForUser(e.id)) ? void 0 : A.channelId,
+                    channelId: null == (A = j.Z.getVoiceStateForUser(e.id)) ? void 0 : A.channelId,
                     currentUser: i,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: N.Z,
-                    VoiceStateStore: k.Z,
+                    VoiceStateStore: j.Z,
                     PermissionStore: w.Z,
                     GuildStore: D.Z,
                 }) !== c.Fw.CAN_JOIN
@@ -263,7 +263,7 @@ function ef(e, t, n) {
         if ((Z.has(i) && B.has(t)) || null == n || null == o || n.id === o.afkChannelId)
             null == n && ((r = null), (U = !0));
         else {
-            let e = k.Z.getVoiceStatesForChannel(n.id),
+            let e = j.Z.getVoiceStatesForChannel(n.id),
                 l = (0, v.HG)("NowPlayingViewStore - voiceMembers"),
                 c = ed;
             null != l &&
@@ -283,7 +283,7 @@ function ef(e, t, n) {
                     let { userId: t } = e;
                     return M.default.getUser(t);
                 })
-                .filter(j.lm)
+                .filter(k.lm)
                 .orderBy([c], ["desc"])
                 .value();
             u.filter((e) => !d.includes(e.id)).forEach((e) => s.push(e)),
@@ -416,8 +416,8 @@ function eC() {
 }
 class eN extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([M.default, m.Z, L.Z, P.Z, k.Z, C.Z, x.Z, R.Z, O.Z], eT),
-            this.waitFor(m.Z, C.Z, N.Z, R.Z, P.Z, E.Z, D.Z, w.Z, L.Z, x.Z, O.Z, M.default, k.Z);
+        this.syncWith([M.default, m.Z, L.Z, P.Z, j.Z, C.Z, x.Z, R.Z, O.Z], eT),
+            this.waitFor(m.Z, C.Z, N.Z, R.Z, P.Z, E.Z, D.Z, w.Z, L.Z, x.Z, O.Z, M.default, j.Z);
     }
     get currentActivityParties() {
         return q;

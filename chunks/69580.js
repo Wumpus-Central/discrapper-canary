@@ -52,8 +52,8 @@ var r = n(54381),
     L = n(630388),
     x = n(700785),
     M = n(591759),
-    k = n(807675),
-    j = n(489863),
+    j = n(807675),
+    k = n(489863),
     U = n(228763),
     G = n(422559),
     B = n(713938),
@@ -126,7 +126,7 @@ function ea(e, t) {
 }
 function eo() {
     let e = (0, s.TH)(),
-        t = i.useMemo(() => (0, k.y)(e.search), [e.search]);
+        t = i.useMemo(() => (0, j.y)(e.search), [e.search]);
     (0, y.Z)();
     let a = !e.search.includes("response_type"),
         [o, l] = i.useState(!1),
@@ -343,7 +343,7 @@ function ec(e) {
     let [eP, eD] = i.useState(null),
         [ew, eL] = i.useState(null),
         [ex, eM] = i.useState(null),
-        [ek, ej] = i.useState(!1),
+        [ej, ek] = i.useState(!1),
         [eU, eG] = i.useState(!1),
         eB = null == eP ? void 0 : eP.guilds,
         [eZ, eF] = i.useState(null != e_ ? e_ : null),
@@ -378,7 +378,7 @@ function ec(e) {
         e4 = O.w.useExperiment({ location: "oauth2_authorize" }),
         { requestedScopes: e5, accountScopes: e8 } = i.useMemo(() => {
             let e = e0 ? (null == e2 ? void 0 : e2.scopes) : ed,
-                t = (0, k.K)(null != e ? e : []),
+                t = (0, j.K)(null != e ? e : []),
                 n = B.Qe.filter((e) => t.includes(e));
             return {
                 requestedScopes: t,
@@ -402,7 +402,7 @@ function ec(e) {
                 tn(!t), te(e);
             } catch (n) {
                 let { status: e, body: t } = n;
-                if (401 === e) return void (0, j.c$)(eN, "oauth2_error_failed_disclosures");
+                if (401 === e) return void (0, k.c$)(eN, "oauth2_error_failed_disclosures");
                 eM(
                     Error(
                         null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0]),
@@ -413,14 +413,14 @@ function ec(e) {
             }
         };
         if (null == eT) {
-            if (!w.default.isAuthenticated()) return void (0, j.c$)(eN, "oauth2_error_not_authenticated");
+            if (!w.default.isAuthenticated()) return void (0, k.c$)(eN, "oauth2_error_not_authenticated");
             e();
         }
     }, [$, eN, eT, te, eM, tn, eL]);
     let tr = i.useCallback(
             async (e) => {
                 if (null != ev) {
-                    ej(!0), ev(e);
+                    ek(!0), ev(e);
                     return;
                 }
                 if (!e && !eE) {
@@ -434,8 +434,8 @@ function ec(e) {
                 }
                 if (null == eJ) return void eM(Error("No integration type was selected."));
                 try {
-                    ej(!0);
-                    let n = await (0, j.Iq)({
+                    ek(!0);
+                    let n = await (0, k.Iq)({
                         authorize: e,
                         clientId: $,
                         scopes: e5,
@@ -469,12 +469,12 @@ function ec(e) {
                                   },
                               })
                             : (window.location = n.location);
-                    } else ej(!1);
+                    } else ek(!1);
                 } catch (t) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? eM(Error(e.message)) : eM(e),
                         eL("AUTHORIZE_SCOPES"),
-                        ej(!1);
+                        ek(!1);
                 }
             },
             [
@@ -503,14 +503,14 @@ function ec(e) {
         ),
         ti = i.useRef(!1),
         ta = i.useCallback(async () => {
-            if (!w.default.isAuthenticated()) return void (0, j.c$)(eN, "oauth2_error_not_authenticated");
+            if (!w.default.isAuthenticated()) return void (0, k.c$)(eN, "oauth2_error_not_authenticated");
             if (!e7.current && !ti.current) {
                 ti.current = !0;
                 try {
                     let e =
                         null != eC
                             ? eC
-                            : await (0, j.Ww)({
+                            : await (0, k.Ww)({
                                   clientId: $,
                                   scopes: e5,
                                   responseType: en,
@@ -529,7 +529,7 @@ function ec(e) {
                         });
                 } catch (n) {
                     let { status: e, body: t } = n;
-                    if (401 === e) return void (0, j.c$)(eN, "oauth2_error_unauthorized");
+                    if (401 === e) return void (0, k.c$)(eN, "oauth2_error_unauthorized");
                     eM(
                         Error(
                             null != t.message
@@ -808,7 +808,7 @@ function ec(e) {
                     eU
                         ? {
                               onClick: null != A ? () => eL(A) : () => tr(!0),
-                              loading: ek,
+                              loading: ej,
                               disabled: null == N || t_,
                               text: t_
                                   ? ee.intl.string(ee.t.BwwiSM)
@@ -818,7 +818,7 @@ function ec(e) {
                           }
                         : {
                               disabled: !0,
-                              loading: ek,
+                              loading: ej,
                               text: ee.intl.string(ee.t.N22i9F),
                               icon: g.cQm,
                           },
@@ -905,6 +905,6 @@ function e_(e) {
         null != a &&
         (M.Z.isDiscordHostname(n) || r === window.location.host) &&
         (i.startsWith("/api".concat(J.ANM.OAUTH2_AUTHORIZE)) || i.startsWith(J.Z5c.OAUTH2_AUTHORIZE))
-        ? (0, k.y)(a)
+        ? (0, j.y)(a)
         : null;
 }

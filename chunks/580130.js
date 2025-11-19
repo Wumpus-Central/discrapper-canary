@@ -79,10 +79,10 @@ function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) C(e);
 }
-function k() {
+function j() {
     (O = !1), (y = !1), (v = !1);
 }
-function j(e) {
+function k(e) {
     let { entitlements: t } = e;
     for (let e of t) C(e);
 }
@@ -218,8 +218,8 @@ let F = new Z(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: D,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
-    SKU_PURCHASE_SUCCESS: j,
-    VIRTUAL_CURRENCY_REDEEM_SUCCESS: j,
+    SKU_PURCHASE_SUCCESS: k,
+    VIRTUAL_CURRENCY_REDEEM_SUCCESS: k,
     LIBRARY_FETCH_SUCCESS: U,
     ENTITLEMENT_CREATE: G,
     ENTITLEMENT_UPDATE: G,
@@ -227,5 +227,5 @@ let F = new Z(l.Z, {
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: j,
 });

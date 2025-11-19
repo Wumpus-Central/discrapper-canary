@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(410030),
     u = n(594174),
     d = n(626135),
-    g = n(381585),
-    p = n(597688),
-    f = n(128922),
+    f = n(381585),
+    g = n(597688),
+    p = n(128922),
     m = n(370039),
     h = n(937510),
     C = n(303952),
@@ -34,11 +34,11 @@ var r = n(54381),
 function R(e) {
     var t;
     let { isFetchingCategories: n, scrollerRef: R, tab: Z } = e,
-        w = (0, g.sp)(),
+        w = (0, f.sp)(),
         H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
         { noCache: D, includeUnpublished: M } = (0, E.Z)(),
         F = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        W = (0, a.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
         [V, U] = l.useState(1),
         z = (0, c.Fg)(),
         G = (0, s.ap)(z),
@@ -89,7 +89,7 @@ function R(e) {
                     cacheDisabled: D,
                 });
         }, [H, M, D, n, Z]);
-    let $ = f.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
+    let $ = p.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
     return n || null == F
         ? (0, r.jsx)(_.Z, {})
         : (0, r.jsxs)(r.Fragment, {
@@ -105,11 +105,11 @@ function R(e) {
                   (0, r.jsx)("div", {
                       className: j.products,
                       children: X.slice(40 * (V - 1), 40 * V).map((e, t) => {
-                          let n = p.Z.getCategory(e.categorySkuId);
+                          let n = g.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(
-                                    g.k0,
+                                    f.k0,
                                     {
                                         newValue: { tilePosition: t },
                                         children: $

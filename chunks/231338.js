@@ -12,7 +12,7 @@ n.d(t, {
     EK: () => eg,
     ET: () => eb,
     Et: () => q,
-    GZ: () => k,
+    GZ: () => j,
     H0: () => A,
     He: () => I,
     Il: () => o.I,
@@ -39,7 +39,7 @@ n.d(t, {
     X6: () => Y,
     X7: () => P,
     XM: () => et,
-    Zu: () => j,
+    Zu: () => k,
     aO: () => eO,
     aV: () => S,
     am: () => ec,
@@ -238,10 +238,10 @@ Object.freeze({
 var M = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    k = (function (e) {
+    j = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let j = Object.freeze({
+let k = Object.freeze({
     0: "subscription",
     1: "sku",
 });

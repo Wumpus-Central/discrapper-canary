@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(626135),
     x = n(74538),
     M = n(413182),
-    k = n(695346),
-    j = n(265159),
+    j = n(695346),
+    k = n(265159),
     U = n(532495),
     G = n(981631),
     B = n(921944),
@@ -146,7 +146,7 @@ function Q() {
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
         Y = (0, s.e7)([D.Z], () => D.Z.showNotice()),
-        z = k.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
+        z = j.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
         Q = x.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, h.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
     q(), X(), i.useEffect(() => () => d.Z.wait(f.W3), []);
@@ -168,7 +168,7 @@ function Q() {
                                   {
                                       user: t,
                                       canUsePremiumCustomization: Q,
-                                      onUpsellClick: j.Z,
+                                      onUpsellClick: k.Z,
                                       pendingBio: z,
                                   },
                                   R,

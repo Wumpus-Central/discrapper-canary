@@ -71,8 +71,8 @@ function E(e, t, n) {
         (L = t.anchorDate ? I.format("finishRangeSelectionPrompt") : I.format("startRangeSelectionPrompt"));
     let x = (0, s.P)(L),
         M = (0, m.useRef)(!1),
-        k = (0, m.useRef)(!1),
-        j = (0, m.useRef)(void 0),
+        j = (0, m.useRef)(!1),
+        k = (0, m.useRef)(void 0),
         { pressProps: U, isPressed: G } = (0, f.r)({
             shouldCancelOnPointerExit: "anchorDate" in t && !!t.anchorDate,
             preventFocusOnPress: !0,
@@ -89,24 +89,24 @@ function E(e, t, n) {
                             t.setAnchorDate(t.highlightedRange.end),
                                 t.setFocusedDate(b),
                                 t.setDragging(!0),
-                                (k.current = !0);
+                                (j.current = !0);
                             return;
                         } else if ((0, a.KC)(b, t.highlightedRange.end)) {
                             t.setAnchorDate(t.highlightedRange.start),
                                 t.setFocusedDate(b),
                                 t.setDragging(!0),
-                                (k.current = !0);
+                                (j.current = !0);
                             return;
                         }
                     }
                     let n = () => {
-                        t.setDragging(!0), (j.current = void 0), t.selectDate(b), t.setFocusedDate(b), (M.current = !0);
+                        t.setDragging(!0), (k.current = void 0), t.selectDate(b), t.setFocusedDate(b), (M.current = !0);
                     };
-                    "touch" === e.pointerType ? (j.current = setTimeout(n, 200)) : n();
+                    "touch" === e.pointerType ? (k.current = setTimeout(n, 200)) : n();
                 }
             },
             onPressEnd() {
-                (k.current = !1), (M.current = !1), clearTimeout(j.current), (j.current = void 0);
+                (j.current = !1), (M.current = !1), clearTimeout(k.current), (k.current = void 0);
             },
             onPress() {
                 "anchorDate" in t || t.isReadOnly || (t.selectDate(b), t.setFocusedDate(b));
@@ -114,9 +114,9 @@ function E(e, t, n) {
             onPressUp(e) {
                 if (
                     !t.isReadOnly &&
-                    ("anchorDate" in t && j.current && (t.selectDate(b), t.setFocusedDate(b)), "anchorDate" in t)
+                    ("anchorDate" in t && k.current && (t.selectDate(b), t.setFocusedDate(b)), "anchorDate" in t)
                 )
-                    if (k.current) t.setAnchorDate(b);
+                    if (j.current) t.setAnchorDate(b);
                     else if (t.anchorDate && !M.current) t.selectDate(b), t.setFocusedDate(b);
                     else if ("keyboard" !== e.pointerType || t.anchorDate)
                         "virtual" === e.pointerType && (t.selectDate(b), t.setFocusedDate(b));

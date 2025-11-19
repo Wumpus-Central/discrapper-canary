@@ -272,7 +272,7 @@ let D = {
             ],
         });
     },
-    k = [
+    j = [
         {
             key: null,
             renderStep: (e) => (0, r.jsx)(x, A({}, e)),
@@ -283,7 +283,7 @@ let D = {
             options: { useBreadcrumbLabel: () => T.intl.string(T.t.QBnNHq) },
         },
     ],
-    j = (e, t, n) =>
+    k = (e, t, n) =>
         (0, r.jsx)(_.Z, {
             isOrbCheckout: !0,
             step: n,
@@ -316,7 +316,7 @@ let D = {
             onClose: c,
             hideShadow: !0,
             skuId: t,
-            renderHeader: j,
+            renderHeader: k,
             initialPlanId: null,
             analyticsLocations: n,
         });
@@ -342,7 +342,7 @@ let D = {
             applicationId: (0, E.Nb)(t),
             activeSubscription: null,
             loadId: n,
-            stepConfigs: k,
+            stepConfigs: j,
             purchaseType: v.GZQ.ONE_TIME,
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,

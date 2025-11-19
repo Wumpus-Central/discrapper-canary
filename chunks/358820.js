@@ -1,7 +1,7 @@
 n.d(t, {
     fz: () => P,
     ge: () => M,
-    r5: () => k,
+    r5: () => j,
     rk: () => D,
     wV: () => x,
 }),
@@ -145,7 +145,7 @@ function P(e) {
 }
 async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await k();
+    await j();
     let n = performance.now();
     try {
         let r = p.ZP.getVoiceFilters();
@@ -231,7 +231,7 @@ async function x() {
 function M() {
     s.Z.dispatch({ type: "VOICE_FILTER_DOWNLOAD_CANCELED" });
 }
-async function k() {
+async function j() {
     if (!(m.Z.isNativeModuleLoaded() || m.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, f.isWindows)() && !(0, f.isMac)())
             return void s.Z.dispatch({

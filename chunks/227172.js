@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => U,
-    v: () => j,
+    v: () => k,
 });
 var r = n(54381),
     i = n(473749),
@@ -35,8 +35,8 @@ var r = n(54381),
     L = n(410441),
     x = n(797342),
     M = n(981631),
-    k = n(388032);
-let j = {
+    j = n(388032);
+let k = {
         [a.z.DESKTOP]: null,
         [a.z.LINUX]: null,
         [a.z.MACOS]: null,
@@ -64,7 +64,7 @@ let j = {
             { streamPreviewUrl: J, stream: $ } = (0, T.Z)(y),
             { displayParticipants: ee, participant1: et, participant2: en, numOtherParticipants: er } = (0, I.Z)(y, 3),
             ei = y.extra.platform,
-            ea = null != ei ? j[ei] : null,
+            ea = null != ei ? k[ei] : null,
             eo = ei === a.z.XBOX ? M.ABu.XBOX : ei === a.z.PLAYSTATION ? M.ABu.PLAYSTATION : void 0,
             es = (0, N.Z)(eo),
             { data: el } = (0, m.IX)(y.extra.application_id),
@@ -116,9 +116,9 @@ let j = {
                                   : (0, r.jsx)(L.Z, {
                                         onClick: es,
                                         Icon: ea,
-                                        "aria-label": k.intl.string(k.t.YR4cHH),
+                                        "aria-label": j.intl.string(j.t.YR4cHH),
                                     }),
-                          userDescription: (0, S.kr)(y) ? k.t.vPg1JT : k.t.rPqqts,
+                          userDescription: (0, S.kr)(y) ? j.t.vPg1JT : j.t.rPqqts,
                           title: W,
                           subtitle: Y,
                           badges: ef,
@@ -132,7 +132,7 @@ let j = {
                           title: y.extra.game_name,
                           subtitle: Y,
                           badges: ef,
-                          userDescription: k.t["6oWFUN"],
+                          userDescription: j.t["6oWFUN"],
                           entry: y,
                           stream: $,
                           onUserPopoutClosed: Z,

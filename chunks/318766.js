@@ -121,19 +121,19 @@ let L = function (e) {
             ref: L,
             allowKeybindHint: x,
         } = e,
-        [M, k] = i.useState(!1),
-        [j, U] = i.useState(50),
+        [M, j] = i.useState(!1),
+        [k, U] = i.useState(50),
         G = M || I,
         B = (0, E.l)(v, "emojiButton", G ? "Hovered" : "Normal"),
-        Z = w(j),
+        Z = w(k),
         F = i.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * R);
-            k(!0), U(e), (0, m.x)(y.qR.EmojiButtonMouseEntered);
-        }, [G, k, U]),
+            j(!0), U(e), (0, m.x)(y.qR.EmojiButtonMouseEntered);
+        }, [G, j, U]),
         V = i.useCallback(() => {
-            k(!1);
-        }, [k]),
+            j(!1);
+        }, [j]),
         H = i.useCallback(() => (0, m.x)(y.qR.EmojiButtonFocused), []),
         Y = (0, g.B4)(),
         [W, K] = (0, h.US)(Y ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),

@@ -1,5 +1,5 @@
 n.d(t, {
-    $e: () => j,
+    $e: () => k,
     $w: () => F,
     Og: () => H,
     ZY: () => V,
@@ -155,7 +155,7 @@ function M(e) {
         children: s,
     });
 }
-function k(e) {
+function j(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: s, hasSelectedAnyAnswer: l, isFirstAnswer: u } = e;
     t = l ? (s ? 0 : -1) : u ? 0 : -1;
@@ -170,7 +170,7 @@ function k(e) {
         children: i,
     });
 }
-function j(e) {
+function k(e) {
     let {
             answers: t,
             answersInteraction: n,
@@ -246,7 +246,7 @@ function U(e) {
                 children: a,
             });
         case 1:
-            return (0, r.jsx)(k, {
+            return (0, r.jsx)(j, {
                 className: o()(t, f),
                 onClick: p,
                 isSelected: _,

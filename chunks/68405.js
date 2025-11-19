@@ -1,9 +1,9 @@
 n.d(t, {
     PF: () => F,
-    R7: () => k,
+    R7: () => j,
     Tg: () => U,
     UU: () => G,
-    gK: () => j,
+    gK: () => k,
     hM: () => P,
     iy: () => B,
     mO: () => x,
@@ -207,7 +207,7 @@ function M() {
         query: "",
     });
 }
-function k(e) {
+function j(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: s, query: l, gifId: u } = e,
         d = (0, h._)(_.Z.getAnalyticsID(), t, {
             offset: r,
@@ -234,7 +234,7 @@ function k(e) {
                 rejectWithError: !0,
             });
 }
-function j() {
+function k() {
     let e = (0, a.Z)().replace(N, "");
     c.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,

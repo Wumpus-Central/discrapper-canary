@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => j,
     a: () => M,
 });
 var r = n(54381),
@@ -104,7 +104,7 @@ function x(e, t) {
 var M = (function (e) {
     return (e[(e.SYSTEM_TAG = 0)] = "SYSTEM_TAG"), (e[(e.BADGES = 1)] = "BADGES"), e;
 })({});
-function k(e) {
+function j(e) {
     var t;
     let {
             author: n,
@@ -113,8 +113,8 @@ function k(e) {
             userOverride: D,
             compact: x = !1,
             withMentionPrefix: M = !1,
-            showPopout: k = !1,
-            hideGuildTag: j = !1,
+            showPopout: j = !1,
+            hideGuildTag: k = !1,
             hideSystemTag: U = !1,
             className: G,
             onClick: B,
@@ -141,7 +141,7 @@ function k(e) {
         el = (0, O.yH)(null != Y ? Y : q, es),
         ec = (0, S.Z)(a),
         eu = i.useContext(c.d),
-        ed = (null == eu ? void 0 : eu.animate) || k,
+        ed = (null == eu ? void 0 : eu.animate) || j,
         ef = el && (0, y.S2)(n),
         e_ = ei && ef,
         ep = (null == R ? void 0 : R.isPrivate()) && null != en;
@@ -189,7 +189,7 @@ function k(e) {
         },
         ey = i.useMemo(
             () =>
-                x && !j
+                x && !k
                     ? (0, r.jsx)(b.ZP, {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
@@ -198,16 +198,16 @@ function k(e) {
                           badgeSize: C.Gg.SIZE_12,
                       })
                     : null,
-            [x, n.primaryGuild, q, a.author.id, j],
+            [x, n.primaryGuild, q, a.author.id, k],
         ),
         eO = null != D ? D : a.author,
         ev =
-            null != V && null != k
+            null != V && null != j
                 ? (0, r.jsx)(v.Z, {
                       targetElementRef: K,
                       user: eO,
                       renderPopout: V,
-                      shouldShow: k,
+                      shouldShow: j,
                       shouldPreload: ec,
                       position: s.tq ? "window_center" : "right",
                       avatarUrl:
@@ -220,7 +220,7 @@ function k(e) {
                                 })
                               : void 0,
                       onRequestClose: F,
-                      clickTrap: k,
+                      clickTrap: j,
                       children: (e) => {
                           var { onClick: t } = e,
                               n = L(e, ["onClick"]);
@@ -269,7 +269,7 @@ function k(e) {
                 : null,
             ev,
             !x &&
-                !j &&
+                !k &&
                 (0, r.jsx)(b.ZP, {
                     primaryGuild: n.primaryGuild,
                     userId: a.author.id,

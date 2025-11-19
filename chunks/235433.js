@@ -44,11 +44,11 @@ function v(e) {
         M = (0, i.useCallback)(() => {
             (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),
-        k = (0, i.useCallback)(() => {
+        j = (0, i.useCallback)(() => {
             (0, f.N_)(null);
         }, []),
-        j = void 0 !== N || (null != n ? null != C : null != A);
-    if (!I && !j) return null;
+        k = void 0 !== N || (null != n ? null != C : null != A);
+    if (!I && !k) return null;
     let U = void 0 !== N ? N : C;
     return (0, r.jsx)(m.Z, {
         title: b.intl.string(y.default["86GtGH"]),
@@ -72,7 +72,7 @@ function v(e) {
                         onClick: x,
                     }),
                 null == n &&
-                    j &&
+                    k &&
                     (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
@@ -85,7 +85,7 @@ function v(e) {
                         variant: "secondary",
                         size: "sm",
                         text: b.intl.string(y.default["j/KRxc"]),
-                        onClick: k,
+                        onClick: j,
                     }),
             ],
         }),

@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(410030),
     d = n(857595),
-    g = n(607070),
-    p = n(984370),
-    f = n(110560),
+    f = n(607070),
+    g = n(984370),
+    p = n(110560),
     m = n(567400),
     h = n(892001),
     C = n(507808),
@@ -28,7 +28,7 @@ var r = n(54381),
     T = n(180493);
 function L(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
-    return (0, r.jsx)(p.Z.Title, {
+    return (0, r.jsx)(g.Z.Title, {
         onClick: () => i(t),
         wrapperClassName: T.tabWrapper,
         className: a()(T.tab, { [T.selected]: l }),
@@ -38,7 +38,7 @@ function L(e) {
 function B(e) {
     let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
         [o, u] = l.useState(!1),
-        f = l.useRef(null),
+        p = l.useRef(null),
         [m, h] = l.useState(0),
         C = l.useRef(!1),
         _ = (e) => {
@@ -48,7 +48,7 @@ function B(e) {
                         u(e);
                     }, 100),
                 ),
-                e && (C.current = g.Z.keyboardModeEnabled);
+                e && (C.current = f.Z.keyboardModeEnabled);
         },
         b = (e) => {
             ("Enter" === e.key || " " === e.key) && (e.preventDefault(), _(!0));
@@ -58,14 +58,14 @@ function B(e) {
         onMouseEnter: () => _(!0),
         onMouseLeave: () => _(!1),
         children: (0, r.jsx)(c.yRy, {
-            targetElementRef: f,
+            targetElementRef: p,
             shouldShow: o,
             position: "bottom",
             align: "left",
             onRequestOpen: () => _(!0),
             onRequestClose: () => {
                 var e;
-                C.current && !g.Z.keyboardModeEnabled && (0, d.Qj)(), _(!1), null == (e = f.current) || e.focus();
+                C.current && !f.Z.keyboardModeEnabled && (0, d.Qj)(), _(!1), null == (e = p.current) || e.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -78,7 +78,7 @@ function B(e) {
                 var o, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
-                    p.Z.Title,
+                    g.Z.Title,
                     ((o = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -106,7 +106,7 @@ function B(e) {
                     })({}, e)),
                     (u = u =
                         {
-                            ref: f,
+                            ref: p,
                             onClick: () => s(t),
                             onKeyDown: b,
                             wrapperClassName: T.tabWrapper,
@@ -149,7 +149,7 @@ function P(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
         d = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        { enabled: g } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
+        { enabled: f } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
         O = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
         P = [
             {
@@ -161,7 +161,7 @@ function P(e) {
                 displayText: I.intl.string(I.t.Ah5sJo),
             },
         ];
-    g &&
+    f &&
         P.push({
             tab: y.AW.ORBS,
             displayText: I.intl.string(I.t.EBYkzk),
@@ -173,7 +173,7 @@ function P(e) {
                 sectionType: j.jXE.ORBS_BALANCE_MENU,
                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
             }),
-                (0, f.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
+                (0, p.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
         }, [N]),
         R = (0, E.eN)("collectibles_shop_header_bar"),
         Z = l.useCallback(() => {
@@ -187,10 +187,10 @@ function P(e) {
     return (0, r.jsx)(c.f6W, {
         theme: i,
         children: (e) =>
-            (0, r.jsxs)(p.Z, {
+            (0, r.jsxs)(g.Z, {
                 disableDoubleClick: !0,
                 className: a()(e, T.headerBar),
-                innerClassname: g ? T.headerBarInner : void 0,
+                innerClassname: f ? T.headerBarInner : void 0,
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: T.shopHomeLink,
@@ -198,7 +198,7 @@ function P(e) {
                         "aria-label": I.intl.string(I.t.pWG4ze) + " home",
                         children: [
                             (0, r.jsx)(x.Z, { className: T.discordLogo }),
-                            (0, r.jsx)(p.Z.Title, { children: I.intl.string(I.t.pWG4ze) }),
+                            (0, r.jsx)(g.Z.Title, { children: I.intl.string(I.t.pWG4ze) }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -228,7 +228,7 @@ function P(e) {
                                   );
                         }),
                     }),
-                    (g || R || O) &&
+                    (f || R || O) &&
                         (0, r.jsxs)("div", {
                             className: T.alignedRightContent,
                             children: [
@@ -247,7 +247,7 @@ function P(e) {
                                             color: "currentColor",
                                         }),
                                     }),
-                                g &&
+                                f &&
                                     (0, r.jsx)(b.V9, {
                                         analyticsPage: N,
                                         cardAlignment: b.V9.CardAlignment.END,

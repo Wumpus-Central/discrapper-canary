@@ -95,7 +95,7 @@ function P(e) {
         [P, D] = i.useState(m),
         [w, L] = i.useState(""),
         [x, M] = i.useState(null),
-        k = async () => {
+        j = async () => {
             let e;
             D(v.x.REGISTER);
             let t =
@@ -173,7 +173,7 @@ function P(e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: T.intl.string(T.t.oibaQa),
-                                    onClick: k,
+                                    onClick: j,
                                 }),
                             }),
                         ],

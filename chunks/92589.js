@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var l = n(907331),
@@ -33,30 +33,30 @@ function d(e) {
     }
     return e;
 }
-let g = (e) => {
+let f = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
-        g = (0, l.O)(
+        f = (0, l.O)(
             (e) => {
                 null == n || n(e);
             },
             0.33,
             null != n,
         ),
-        { bannerUrl: p, bannerAnimatedUrl: f } = (0, s._M)(t),
+        { bannerUrl: g, bannerAnimatedUrl: p } = (0, s._M)(t),
         m = null != t.textColor ? { color: t.textColor } : void 0,
         h = null != t.body && "" !== t.body,
         C = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
-        ref: g,
+        ref: f,
         className: u.immersiveBannerBlock,
         children: [
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != p &&
+                    null != g &&
                     (0, r.jsx)(o.Z, {
-                        bannerStatic: p,
-                        bannerAnimated: f,
+                        bannerStatic: g,
+                        bannerAnimated: p,
                     }),
             }),
             (0, r.jsx)("div", {

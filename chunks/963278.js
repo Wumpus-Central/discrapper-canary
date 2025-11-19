@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(594174),
     u = n(381585),
     d = n(597688),
-    g = n(128922),
-    p = n(937510),
-    f = n(709999),
+    f = n(128922),
+    g = n(937510),
+    p = n(709999),
     m = n(653126),
     h = n(786040),
     C = n(215023),
@@ -20,10 +20,10 @@ let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
         v = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         x = (0, s.e7)([d.Z], () => d.Z.getCategory(t.categorySkuId)),
-        E = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        E = f.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
         O = (0, u.sp)(),
         S = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
-        y = (0, p.l)(S).slice(0, 4);
+        y = (0, g.l)(S).slice(0, 4);
     return null == v
         ? null
         : (0, r.jsxs)("div", {
@@ -76,7 +76,7 @@ let v = (e) => {
                                                 a,
                                             )
                                           : (0, r.jsx)(
-                                                f.Z,
+                                                p.Z,
                                                 {
                                                     product: e,
                                                     category: l,

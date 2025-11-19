@@ -37,23 +37,23 @@ let I = (e) => {
         [P, D] = i.useState(C[0]),
         [w, L] = i.useState(!1),
         [x, M] = i.useState(n),
-        [k, j] = i.useState(null != t ? t : A.slice(0, 1)),
+        [j, k] = i.useState(null != t ? t : A.slice(0, 1)),
         U = i.useMemo(
             () =>
-                null == k
+                null == j
                     ? []
-                    : k
+                    : j
                           .map((e) => {
                               let { premiumGuildSubscription: t } = e;
                               return f.Z.getGuild(null == t ? void 0 : t.guildId);
                           })
                           .filter((e) => null != e),
-            [k],
+            [j],
         ),
         G = i.useMemo(() => {
             var e;
-            return (null == k || null == (e = k[0]) ? void 0 : e.premiumGuildSubscription) != null;
-        }, [k]),
+            return (null == j || null == (e = j[0]) ? void 0 : e.premiumGuildSubscription) != null;
+        }, [j]),
         B = () => (
             S("SUCCESS" === P),
             p.default.track(y.rMx.MODAL_DISMISSED, {
@@ -94,8 +94,8 @@ let I = (e) => {
                                 className: v.quantitySelectorWrapper,
                                 children: [
                                     (0, r.jsx)(c.FiK, {
-                                        value: k.length,
-                                        onChange: (e) => j(A.slice(0, e)),
+                                        value: j.length,
+                                        onChange: (e) => k(A.slice(0, e)),
                                         minValue: 1,
                                         maxValue: A.length,
                                     }),
@@ -122,26 +122,26 @@ let I = (e) => {
                 }),
             CONFIRM() {
                 if (null == x) return null;
-                let e = k.filter((e) => (0, h.tl)(e)).length,
-                    t = k.length,
+                let e = j.filter((e) => (0, h.tl)(e)).length,
+                    t = j.length,
                     n = U.length,
                     i = "CONFIRM" === C[0] ? B : () => D(C[C.indexOf(P) - 1]),
                     a = async () => {
-                        if ((L(!1), null != x && (null == k ? void 0 : k.length) !== 0)) {
+                        if ((L(!1), null != x && (null == j ? void 0 : j.length) !== 0)) {
                             o()(
-                                !k.some((e) => e.isOnCooldown()),
+                                !j.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
                             );
                             try {
                                 await Promise.all(
-                                    k.map((e) => {
+                                    j.map((e) => {
                                         let { premiumGuildSubscription: t } = e;
                                         return null != t ? (0, u.dG)(t.guildId, t.id) : Promise.resolve();
                                     }),
                                 ),
                                     await (0, u.W3)(
                                         x.id,
-                                        k.map((e) => {
+                                        j.map((e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
@@ -213,7 +213,7 @@ let I = (e) => {
                     children: (0, r.jsx)(b.R7, {
                         guild: x,
                         isTransfer: G,
-                        guildBoostQuantity: k.length,
+                        guildBoostQuantity: j.length,
                         onClose: B,
                         didPurchaseOnFractionalPremium: !1,
                     }),

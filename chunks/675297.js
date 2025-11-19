@@ -69,15 +69,15 @@ function T(e) {
         }),
         x = (0, o.U)(t, I),
         M = (0, m.C)(t),
-        k = (0, f.SO)(w),
-        { shouldHideGuildPurchaseEntryPoints: j } = (0, l.uP)(n),
+        j = (0, f.SO)(w),
+        { shouldHideGuildPurchaseEntryPoints: k } = (0, l.uP)(n),
         U = (0, m.k)(t),
         G = (0, E.Z)({
             guildId: n,
             guildProductListingId: t.id,
             sourceAnalyticsLocations: O,
         });
-    if (null == w || j) return null;
+    if (null == w || k) return null;
     let B = () =>
             (0, b.e)({
                 guildId: n,
@@ -96,13 +96,13 @@ function T(e) {
         H = (0, r.jsx)(g.m, {
             product: t,
             guildId: n,
-            showEditProduct: k,
+            showEditProduct: j,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: k ? Z : () => {},
+            onEditProduct: j ? Z : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: F,

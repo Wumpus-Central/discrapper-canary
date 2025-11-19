@@ -9,12 +9,12 @@ var l = n(120356),
     c = n(953528),
     u = n(788822),
     d = n(388032),
-    g = n(687983);
-let p = (e) => {
+    f = n(687983);
+let g = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         return (0, r.jsx)("div", {
-            className: i()(g.col2, g.centeredSection),
+            className: i()(f.col2, f.centeredSection),
             children:
                 null == n
                     ? void 0
@@ -65,13 +65,13 @@ let p = (e) => {
                       }),
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { handleTransition: t, categories: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         if (null == n || n.length < 2)
             return s.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
-        let [a, p] = n,
-            f =
+        let [a, g] = n,
+            p =
                 (null == a ? void 0 : a.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCR"])
                     : (() => {
@@ -88,7 +88,7 @@ let p = (e) => {
                       ? d.intl.string(d.t.soka7y)
                       : void 0,
             m =
-                (null == p ? void 0 : p.unpublishedAt) != null
+                (null == g ? void 0 : g.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCR"])
                     : (() => {
                             switch (l) {
@@ -99,16 +99,16 @@ let p = (e) => {
                                     return !1;
                             }
                         })() &&
-                        (null == p ? void 0 : p.storeListingId) != null &&
-                        "" !== p.storeListingId
+                        (null == g ? void 0 : g.storeListingId) != null &&
+                        "" !== g.storeListingId
                       ? d.intl.string(d.t.soka7y)
                       : d.intl.string(d.t["o/oRJB"]);
         return (0, r.jsx)("div", {
-            className: i()(g.col2, g.centeredSection),
+            className: i()(f.col2, f.centeredSection),
             children: (0, r.jsxs)(o.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != a ? a.name : null == p ? void 0 : p.name,
+                    pageCategory: null != a ? a.name : null == g ? void 0 : g.name,
                     pageSection: "featured_block",
                     tilePosition: +(null == a),
                 },
@@ -116,12 +116,12 @@ let p = (e) => {
                     null != a &&
                         (0, r.jsx)(u.q, {
                             category: a,
-                            badgeText: f,
+                            badgeText: p,
                             handleTransition: t,
                         }),
-                    null != p &&
+                    null != g &&
                         (0, r.jsx)(u.q, {
-                            category: p,
+                            category: g,
                             badgeText: m,
                             handleTransition: t,
                         }),
@@ -133,25 +133,25 @@ let p = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
         return t
             ? (0, r.jsxs)("div", {
-                  className: i()(g.col2, g.centeredSection),
+                  className: i()(f.col2, f.centeredSection),
                   children: [
                       (0, r.jsx)("div", {
-                          className: i()(g.skeleton, g.featuredBlock),
-                          children: (0, r.jsx)("div", { className: g.skeletonBody }),
+                          className: i()(f.skeleton, f.featuredBlock),
+                          children: (0, r.jsx)("div", { className: f.skeletonBody }),
                       }),
                       (0, r.jsx)("div", {
-                          className: i()(g.skeleton, g.featuredBlock),
-                          children: (0, r.jsx)("div", { className: g.skeletonBody }),
+                          className: i()(f.skeleton, f.featuredBlock),
+                          children: (0, r.jsx)("div", { className: f.skeletonBody }),
                       }),
                   ],
               })
             : null != a
-              ? (0, r.jsx)(p, {
+              ? (0, r.jsx)(g, {
                     featuredBlockRecord: a,
                     handleTransition: n,
                     isLoading: !1,
                 })
-              : (0, r.jsx)(f, {
+              : (0, r.jsx)(p, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1,

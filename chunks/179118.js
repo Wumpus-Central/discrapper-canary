@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613);
+n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -32,7 +32,7 @@ var r = n(54381),
     L = n(388032),
     x = n(507231);
 let M = 1500;
-function k(e) {
+function j(e) {
     let {
             giftCode: t,
             application: n,
@@ -47,7 +47,7 @@ function k(e) {
         } = e,
         [O, I] = i.useState(f.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
-        k = _ || (null != l && null != p),
+        j = _ || (null != l && null != p),
         U = (null == a ? void 0 : a.productLine) === D.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
@@ -63,12 +63,12 @@ function k(e) {
                   ? null
                   : ((e =
                         s.interval === w.rV.MONTH
-                            ? k
+                            ? j
                                 ? V
                                     ? Z.monthGiftText
                                     : L.t["4ZJ+7Z"]
                                 : L.t["P+z55d"]
-                            : k
+                            : j
                               ? V
                                   ? Z.yearGiftText
                                   : L.t.p0pZXP
@@ -148,7 +148,7 @@ function k(e) {
                         children: Y(),
                     }),
                     null == g &&
-                        (0, r.jsx)(j, {
+                        (0, r.jsx)(k, {
                             giftCode: t,
                             onClose: u,
                         }),
@@ -221,11 +221,11 @@ function k(e) {
                       }),
                       children: W(),
                   }),
-                  (_ && null != p && null == g) || k ? X() : q(),
+                  (_ && null != p && null == g) || j ? X() : q(),
               ],
           });
 }
-let j = (e) => {
+let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         p.Z.fetchRelationships(), (0, y._)();

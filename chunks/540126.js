@@ -51,8 +51,8 @@ var r = n(512722),
     L = n(938475),
     x = n(823379),
     M = n(709054),
-    k = n(968358),
-    j = n(203818),
+    j = n(968358),
+    k = n(203818),
     U = n(295454),
     G = n(443063),
     B = n(981631),
@@ -909,7 +909,7 @@ class ed extends ei {
             !e.optInEnabled)
         )
             return;
-        (this.isCollapsed = j.Z.isVoiceCategoryCollapsed(e.id)),
+        (this.isCollapsed = k.Z.isVoiceCategoryCollapsed(e.id)),
             (this.isMuted = !1),
             (this.categoriesById = n),
             (this.channels = o()(t)
@@ -1175,7 +1175,7 @@ function ey(e, t, n) {
                     name: r.name,
                 };
             let i = L.ZP.getVoiceStatesForChannel(e);
-            if (n && t && (0, k.a)(i)) return { type: "go-live" };
+            if (n && t && (0, j.a)(i)) return { type: "go-live" };
             let a = c.Z.getChannelStatus(e);
             if (null != a && a.length > 0)
                 return {
@@ -1254,7 +1254,7 @@ function eS(e, t, n) {
         return !1;
     if (t.isGuildVocal()) {
         if (!(0, U.K)("should_show_in_recents")) return !1;
-        let n = j.Z.isVoiceCategoryCollapsed(e.id);
+        let n = k.Z.isVoiceCategoryCollapsed(e.id);
         if (!n) return !1;
         let r = o().some(w.Z.getVoiceStatesForChannel(t.id));
         if (n && r) return !1;

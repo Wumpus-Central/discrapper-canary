@@ -8,9 +8,9 @@ var r = n(473749),
     c = n(597688),
     u = n(615006),
     d = n(884697),
-    g = n(370039),
-    p = n(937510),
-    f = n(27123),
+    f = n(370039),
+    g = n(937510),
+    p = n(27123),
     m = n(934760),
     h = n(981631),
     C = n(388032);
@@ -30,7 +30,7 @@ function _(e) {
         y = (0, m.Z)(),
         j = (0, s.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         k = (0, s.e7)([u.Z], () => u.Z.getUserDiscounts()),
-        I = (0, g.a)(),
+        I = (0, f.a)(),
         [T, L] = r.useState([]),
         B = r.useCallback(() => {
             S(a.m.RANDOM), L(i().shuffle(j));
@@ -49,12 +49,12 @@ function _(e) {
             let t = y(x);
             e = l ? (0, d.Qf)(t, k) : t;
         } else O === a.m.RANDOM && (e = T);
-        return _ ? (0, f.cf)(I(e)) : I(e);
+        return _ ? (0, p.cf)(I(e)) : I(e);
     }, [O, _, I, n, j, y, v, l, k, x, T]);
     return {
         sortType: O,
         setSortType: S,
-        sortedItems: (0, p.l)(P),
+        sortedItems: (0, g.l)(P),
         sortOptions: r.useMemo(() => {
             let e = [
                 {

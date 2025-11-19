@@ -265,8 +265,8 @@
         })(),
         x = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
         M = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
-        k = /mailto:/i,
-        j = function (e, t, n) {
+        j = /mailto:/i,
+        k = function (e, t, n) {
             var r = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[r]) {
                 var i = t._defs[r];
@@ -639,7 +639,7 @@
                     var r = e[1],
                         i = e[1];
                     return (
-                        k.test(i) || (i = "mailto:" + i),
+                        j.test(i) || (i = "mailto:" + i),
                         {
                             type: "link",
                             content: [
@@ -735,7 +735,7 @@
                 order: G++,
                 match: o(RegExp("^\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return j(e, n, {
+                    return k(e, n, {
                         type: "link",
                         content: t(e[1], n),
                     });
@@ -747,7 +747,7 @@
                 order: G++,
                 match: o(RegExp("^!\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return j(e, n, {
+                    return k(e, n, {
                         type: "image",
                         alt: e[1],
                     });

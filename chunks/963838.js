@@ -1,6 +1,6 @@
 n.d(t, {
     Iu: () => G,
-    Jw: () => j,
+    Jw: () => k,
     _r: () => B,
     cX: () => F,
     lv: () => U,
@@ -42,10 +42,10 @@ let x = {
         end: 15,
     },
     M = [a],
-    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
-    j = {
+    j = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    k = {
         [w.q.BASIC]: M,
-        [w.q.PREMIUM]: k,
+        [w.q.PREMIUM]: j,
     },
     U = i().memoize(
         (e) =>
@@ -68,7 +68,7 @@ let x = {
             }),
     ),
     G = (e, t) => {
-        let n = j[e];
+        let n = k[e];
         if (null != t && e === w.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);

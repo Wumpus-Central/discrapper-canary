@@ -109,8 +109,8 @@ let A = i.forwardRef((e, t) => {
             limitResponsiveWidth: L = !0,
             accessory: x,
             zoomable: M = !0,
-            original: k,
-            children: j = (e) => {
+            original: j,
+            children: k = (e) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)("img", {
                     className: null != a ? a : void 0,
@@ -166,7 +166,7 @@ let A = i.forwardRef((e, t) => {
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== p.zo9.ERROR
-        ? (n = j({
+        ? (n = k({
               src: f,
               size: K,
               alt: b,
@@ -215,13 +215,13 @@ let A = i.forwardRef((e, t) => {
                     ),
                     {
                         children: [
-                            null != k &&
+                            null != j &&
                                 (0, r.jsx)("a", {
                                     tabIndex: -1,
                                     onClick: G,
                                     "aria-hidden": !0,
                                     className: g.originalLink,
-                                    href: k,
+                                    href: j,
                                     ref: Y,
                                     "data-role": "img",
                                     "data-safe-src": null != Z ? Z : f,

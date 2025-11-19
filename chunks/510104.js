@@ -45,13 +45,13 @@ function f(e, t) {
             left: P.left - x.left + A.left,
             right: x.right - P.right + A.right,
         },
-        k = e.modifiersData.offset;
-    if (O === l.k5 && k) {
-        var j = k[_];
+        j = e.modifiersData.offset;
+    if (O === l.k5 && j) {
+        var k = j[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? "y" : "x";
-            M[e] += j[n] * t;
+            M[e] += k[n] * t;
         });
     }
     return M;

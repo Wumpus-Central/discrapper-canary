@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(415506), n(388685);
+n.d(t, { Z: () => k }), n(415506), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -117,7 +117,7 @@ function M(e) {
     let t = v.en(e.sku);
     return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZC, { date: t }) : null;
 }
-class k extends (r = a.Component) {
+class j extends (r = a.Component) {
     get analyticsLocation() {
         return D(R({}, this.props.analyticsContext.location), { object: S.qAy.BUTTON_CTA });
     }
@@ -282,14 +282,14 @@ class k extends (r = a.Component) {
             });
     }
 }
-function j(e) {
+function k(e) {
     let { libraryApplication: t } = e,
         n = (0, f.O)(),
         [r, a] = (0, o.Wu)([E.Z, b.Z], () => [(0, m.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
         s = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
         l = (0, o.e7)([h.Z], () => h.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
-        k,
+        j,
         D(R({}, e), {
             analyticsContext: n,
             actionState: r,
@@ -299,11 +299,11 @@ function j(e) {
         }),
     );
 }
-N(k, "defaultProps", {
+N(j, "defaultProps", {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: "top",
 }),
-    N(k, "ButtonStates", w);
+    N(j, "ButtonStates", w);

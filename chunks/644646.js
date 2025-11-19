@@ -50,7 +50,7 @@ let T = function (e) {
         L = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         x = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
-        k = i.useCallback(
+        j = i.useCallback(
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -69,19 +69,19 @@ let T = function (e) {
             },
             [D, a.id, e, A],
         ),
-        j = i.useRef(null),
+        k = i.useRef(null),
         U = i.useRef(h),
         G = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
-            if (null != j.current) {
+            if (null != k.current) {
                 if (!x.isAnimated || L) {
-                    (j.current.currentTime = 0), j.current.pause();
+                    (k.current.currentTime = 0), k.current.pause();
                     return;
                 }
                 h && !U.current
-                    ? j.current.play()
-                    : !h && U.current && ((j.current.currentTime = 0), j.current.pause()),
+                    ? k.current.play()
+                    : !h && U.current && ((k.current.currentTime = 0), k.current.pause()),
                     (U.current = h);
             }
         }, [h, x, L]),
@@ -120,7 +120,7 @@ let T = function (e) {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  (t.current = e), (j.current = e);
+                                  (t.current = e), (k.current = e);
                               },
                               autoPlay: !L && h,
                               loop: !0,
@@ -155,7 +155,7 @@ let T = function (e) {
               })
             : (0, r.jsxs)(c.P3F, {
                   className: o()(v.questRewardTileInteractive, v.questRewardTile, v.rewardHighlight, n),
-                  onClick: k,
+                  onClick: j,
                   style: N,
                   children: [
                       t,

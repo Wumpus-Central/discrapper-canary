@@ -16,21 +16,21 @@ n.d(t, {
     X_: () => ee,
     Y0: () => X,
     _H: () => eG,
-    bc: () => k,
+    bc: () => j,
     bw: () => D,
     createChannelRecord: () => eB,
     dF: () => q,
     dy: () => ex,
     hv: () => x,
     iR: () => ei,
-    jD: () => ej,
+    jD: () => ek,
     mn: () => eD,
     nl: () => eg,
     oj: () => N,
     ov: () => J,
-    q_: () => ek,
+    q_: () => ej,
     r8: () => I,
-    sR: () => j,
+    sR: () => k,
     tx: () => P,
     uC: () => H,
     vc: () => F,
@@ -188,10 +188,10 @@ function x(e) {
     return L.has(e);
 }
 let M = new Set([m.d4z.GROUP_DM]);
-function k(e) {
+function j(e) {
     return M.has(e);
 }
-let j = new Set([
+let k = new Set([
     m.d4z.DM,
     m.d4z.GROUP_DM,
     m.d4z.GUILD_TEXT,
@@ -201,7 +201,7 @@ let j = new Set([
     m.d4z.PRIVATE_THREAD,
 ]);
 function U(e) {
-    return j.has(e);
+    return k.has(e);
 }
 let G = new Set([
     m.d4z.DM,
@@ -491,7 +491,7 @@ class em extends e_ {
         return this.type === m.d4z.GROUP_DM;
     }
     isMultiUserDM() {
-        return k(this.type);
+        return j(this.type);
     }
     isDM() {
         return this.type === m.d4z.DM;
@@ -1115,11 +1115,11 @@ let eM = {
     [m.d4z.GUILD_FORUM]: eC.fromServer,
     [m.d4z.GUILD_MEDIA]: eC.fromServer,
 };
-function ek(e, t) {
+function ej(e, t) {
     var n, r;
     return (null != (r = eM[null != (n = e.type) ? n : m.d4z.GUILD_TEXT]) ? r : eg.fromServer)(e, t);
 }
-function ej(e) {
+function ek(e) {
     return eB(e);
 }
 let eU = {

@@ -37,10 +37,10 @@ function a(e, t) {
         L = r + a + N,
         x = s + parseInt(u, 10) + A,
         M = O - S,
-        k = l + parseInt(c, 10) + I,
-        j = v - T;
+        j = l + parseInt(c, 10) + I,
+        k = v - T;
     (P > x || D < M) && (P <= s + A ? (s = P - parseInt(u, 10) - A) : D > O - S && (s += D - O + S)),
-        (w > k || L < j) && (w <= y + I ? (l = w - parseInt(c, 10) - I) : L > v - T && (l += L - v + T)),
+        (w > j || L < k) && (w <= y + I ? (l = w - parseInt(c, 10) - I) : L > v - T && (l += L - v + T)),
         e.scrollTo({
             left: s,
             top: l,

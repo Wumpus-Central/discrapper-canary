@@ -112,8 +112,8 @@ let M = {
                         value: e,
                         label: e.name,
                     })),
-                    [M, k] = i.useState(w.length > 0 ? w[0].value : null),
-                    [j, U] = i.useState(""),
+                    [M, j] = i.useState(w.length > 0 ? w[0].value : null),
+                    [k, U] = i.useState(""),
                     [G, B] = i.useState({
                         plan_id: N.Xh.PREMIUM_MONTH_TIER_2,
                         gift: "true",
@@ -221,7 +221,7 @@ let M = {
                                             label: "Boost",
                                             value: M,
                                             options: w,
-                                            onChange: (e) => k(e),
+                                            onChange: (e) => j(e),
                                         }),
                                         null != M
                                             ? (0, r.jsx)(m.Z, {
@@ -248,13 +248,13 @@ let M = {
                                                 (0, r.jsx)(c.oil, {
                                                     label: "Standalone: Trial Promotion Redemption",
                                                     placeholder: "Promotion Code",
-                                                    value: j,
+                                                    value: k,
                                                     onChange: (e) => U(e),
                                                 }),
                                                 (0, r.jsx)(c.aML, {
                                                     "data-migration-pending": !0,
                                                     text: "Need Promotion Code",
-                                                    shouldShow: j.length < 1,
+                                                    shouldShow: k.length < 1,
                                                     children: (e) =>
                                                         (0, r.jsx)(
                                                             c.Button,
@@ -263,14 +263,14 @@ let M = {
                                                                     {
                                                                         variant: "primary",
                                                                         text: "Open Link",
-                                                                        disabled: j.length < 1,
+                                                                        disabled: k.length < 1,
                                                                     },
                                                                     e,
                                                                 ),
                                                                 {
                                                                     onClick: () => {
                                                                         window.open(
-                                                                            C.Z5c.BILLING_PROMOTION_REDEMPTION(j),
+                                                                            C.Z5c.BILLING_PROMOTION_REDEMPTION(k),
                                                                         );
                                                                     },
                                                                 },

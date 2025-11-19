@@ -146,11 +146,11 @@ function N(e) {
         properties: M,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: k, width: j = 0, height: U = 0 } = (0, _.ZP)(R),
+    let { ref: j, width: k = 0, height: U = 0 } = (0, _.ZP)(R),
         G = b({}, T, I.springConfig, w.enabled ? { clamp: !0 } : null),
         B = (0, f.q_F)(
             {
-                width: null != (n = I.width) ? n : j,
+                width: null != (n = I.width) ? n : k,
                 height: U,
                 config: G,
             },
@@ -207,7 +207,7 @@ function N(e) {
             return (0, r.jsx)(
                 s.animated.div,
                 {
-                    ref: t === R ? k : null,
+                    ref: t === R ? j : null,
                     style: b(
                         {
                             position: "absolute",

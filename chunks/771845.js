@@ -211,13 +211,13 @@ function M(e) {
     if (null == n || n.type !== c.eD.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
-function k(e) {
+function j(e) {
     let { folderId: t, expanded: n } = e,
         r = T.getNode(t);
     if (null == r || r.type !== c.eD.FOLDER || r.expanded === n) return !1;
     U(r, n);
 }
-function j() {
+function k() {
     for (let e of T.allNodes()) e.type === c.eD.FOLDER && e.expanded && U(e, !1);
 }
 function U(e, t) {
@@ -286,8 +286,8 @@ class V extends E.Z {
             GUILD_FOLDER_EDIT_LOCAL: w,
             GUILD_FOLDER_DELETE_LOCAL: L,
             TOGGLE_GUILD_FOLDER_EXPAND: M,
-            SET_GUILD_FOLDER_EXPANDED: k,
-            GUILD_FOLDER_COLLAPSE: j,
+            SET_GUILD_FOLDER_EXPANDED: j,
+            GUILD_FOLDER_COLLAPSE: k,
         }),
             O(this, "loadCache", () => {
                 let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION),

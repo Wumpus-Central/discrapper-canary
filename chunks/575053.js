@@ -320,7 +320,7 @@
                 );
             return e;
         },
-        k = function (e) {
+        j = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -398,18 +398,18 @@
                 t.createElement(x.Provider, { value: s }, i)
             );
         };
-    k.propTypes = {
+    j.propTypes = {
         stripe: O.any,
         options: O.object,
     };
-    var j = function (e) {
+    var k = function (e) {
             return M(t.useContext(x), e);
         },
         U = function () {
-            return j("calls useElements()").elements;
+            return k("calls useElements()").elements;
         },
         G = function (e) {
-            return (0, e.children)(j("mounts <ElementsConsumer>"));
+            return (0, e.children)(k("mounts <ElementsConsumer>"));
         };
     G.propTypes = { children: O.func.isRequired };
     var B = ["on", "session"],
@@ -923,7 +923,7 @@
         (e.CardNumberElement = eu),
         (e.CheckoutProvider = W),
         (e.CurrencySelectorElement = ey),
-        (e.Elements = k),
+        (e.Elements = j),
         (e.ElementsConsumer = G),
         (e.EmbeddedCheckout = eo),
         (e.EmbeddedCheckoutProvider = er),

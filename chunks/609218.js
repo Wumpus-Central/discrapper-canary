@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => j,
     p: () => M,
 }),
     n(953529);
@@ -43,14 +43,14 @@ var r = n(54381),
             e
         );
     })({});
-function k(e) {
+function j(e) {
     let {
             containerContext: t,
             image: n,
             title: a,
             description: M,
-            enableSocialProof: k,
-            analyticsLocationSection: j,
+            enableSocialProof: j,
+            analyticsLocationSection: k,
             upsellViewedTrackingData: U,
             onClose: G,
             onDisplay: B,
@@ -60,16 +60,16 @@ function k(e) {
         V = (0, l.e7)([E.Z], () => E.Z.affinities),
         H = (0, l.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
-        !H && k && d.MH();
-    }, [H, k]),
+        !H && j && d.MH();
+    }, [H, j]),
         i.useEffect(() => {
             h.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, U), null == B || B();
         }, [B, U]);
-    let Y = V.length > 1 && k,
+    let Y = V.length > 1 && j,
         W = () => (2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
         K = () => {
             h.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: j,
+                location_section: k,
                 location_object: A.qAy.NAVIGATION_LINK,
             }),
                 null == Z || Z(),
@@ -149,7 +149,7 @@ function k(e) {
                                     }),
                                     (0, r.jsx)(O.Z, {
                                         premiumModalAnalyticsLocation: {
-                                            section: j,
+                                            section: k,
                                             object: A.qAy.BUTTON_CTA,
                                         },
                                         subscriptionTier: S.Si.TIER_2,
@@ -219,7 +219,7 @@ function k(e) {
                             (0, r.jsx)(v.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: j,
+                                    section: k,
                                     object: A.qAy.BUTTON_CTA,
                                 },
                                 subscriptionTier: S.Si.TIER_2,

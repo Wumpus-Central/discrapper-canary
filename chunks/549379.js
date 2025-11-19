@@ -1,35 +1,35 @@
-i.r(t), i.d(t, { default: () => s });
-var r = i(894694),
-    a = i(663879);
-class n {
+l.r(i), l.d(i, { default: () => n });
+var t = l(894694),
+    r = l(663879);
+class a {
     start() {
-        a.Z.registerCallback(this.handleTrigger.bind(this));
+        r.Z.registerCallback(this.handleTrigger.bind(this));
     }
     stop() {
-        a.Z.unregisterCallback();
+        r.Z.unregisterCallback();
     }
     getState() {
         return null;
     }
-    handleTrigger(e, t) {
+    handleTrigger(e, i) {
         this.emitSignal({
-            type: r.Bs.DISTRIBUTED,
+            type: t.Bs.DISTRIBUTED,
             remoteTriggerUserId: e,
-            remoteTriggerClipId: t,
+            remoteTriggerClipId: i,
         });
     }
     constructor(e) {
-        !(function (e, t, i) {
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: i,
+        !(function (e, i, l) {
+            i in e
+                ? Object.defineProperty(e, i, {
+                      value: l,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0,
                   })
-                : (e[t] = i);
+                : (e[i] = l);
         })(this, "emitSignal", void 0),
             (this.emitSignal = e);
     }
 }
-let s = (e) => new n(e);
+let n = (e) => new a(e);

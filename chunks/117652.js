@@ -61,13 +61,13 @@ function x(e) {
 }
 let M = {
     key: A.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(j, x({}, e)),
+    renderStep: (e) => (0, r.jsx)(k, x({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => P.intl.string(P.t["W685+b"]),
     },
 };
-function k(e) {
+function j(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, S.JL)(),
         c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
@@ -83,7 +83,7 @@ function k(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: s = "",
@@ -94,7 +94,7 @@ function j(e) {
             giftRecipient: L,
             recommendedGiftSkuIds: x,
             giftingOrigin: M,
-            setValidatingGiftRecipient: j,
+            setValidatingGiftRecipient: k,
         } = (0, T.wD)(),
         {
             selectedSkuId: B,
@@ -112,7 +112,7 @@ function j(e) {
         q = K && M === R.Wt.DM_CHANNEL,
         X = z === p.u.POPULAR ? P.intl.string(P.t.Kwgrrr) : P.intl.string(P.t.r1huYR),
         Q = async (e, t) => {
-            j(!0), null != g && b(), (await (0, c.B1)(e.id, t)) || b(P.intl.string(P.t["4kgVqQ"])), j(!1);
+            k(!0), null != g && b(), (await (0, c.B1)(e.id, t)) || b(P.intl.string(P.t["4kgVqQ"])), k(!1);
         };
     (0, o.ZP)(() => {
         null != B &&
@@ -258,7 +258,7 @@ function j(e) {
                     "data-migration-pending": !0,
                     justify: _.Z.Justify.BETWEEN,
                     align: _.Z.Align.CENTER,
-                    children: (0, r.jsx)(k, {
+                    children: (0, r.jsx)(j, {
                         onStepChange: t,
                         onBackClick: n,
                         disabled: null != g || null == L || L.id === (null == W ? void 0 : W.id) || s.length > R.$n,

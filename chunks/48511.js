@@ -52,8 +52,8 @@ function x(e, t) {
     return b.call(t, n, "$&_");
 }
 var M = n(706827),
-    k = M.custom,
-    j = X(k) ? k : null,
+    j = M.custom,
+    k = X(j) ? j : null,
     U = {
         __proto__: null,
         double: '"',
@@ -171,12 +171,12 @@ e.exports = function e(t, r, i, s) {
         return "object" != typeof t || P ? N : ed(N);
     }
     if (el(t)) {
-        for (var k = "<" + O.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++)
-            k += " " + G[F].name + "=" + B(Z(G[F].value), "double", l);
+        for (var j = "<" + O.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++)
+            j += " " + G[F].name + "=" + B(Z(G[F].value), "double", l);
         return (
-            (k += ">"),
-            t.childNodes && t.childNodes.length && (k += "..."),
-            (k += "</" + O.call(String(t.nodeName)) + ">")
+            (j += ">"),
+            t.childNodes && t.childNodes.length && (j += "..."),
+            (j += "</" + O.call(String(t.nodeName)) + ">")
         );
     }
     if (V(t)) {
@@ -193,7 +193,7 @@ e.exports = function e(t, r, i, s) {
             : "{ [" + String(t) + "] " + T.call(I.call("[cause]: " + y(t.cause), eu), ", ") + " }";
     }
     if ("object" == typeof t && d) {
-        if (j && "function" == typeof t[j] && M) return M(t, { depth: m - i });
+        if (k && "function" == typeof t[k] && M) return M(t, { depth: m - i });
         else if ("symbol" !== d && "function" == typeof t.inspect) return t.inspect();
     }
     if (er(t)) {

@@ -83,7 +83,7 @@ function M(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != t ? t : R.intl.string(R.t.eXan7B);
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? R.intl.string(R.t["9FaEzi"])
@@ -92,7 +92,7 @@ function k(e, t) {
               : R.intl.string(R.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
-function j(e) {
+function k(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
         { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
@@ -105,7 +105,7 @@ function j(e) {
             let { tooltip: t } = (0, O.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(k(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
@@ -143,7 +143,7 @@ function B(e) {
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
     let M = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        k = (0, h.Cf)(M),
+        j = (0, h.Cf)(M),
         B = (0, g.E)("ActivityStatus", l),
         Z = i.useMemo(() => {
             var e, t;
@@ -180,7 +180,7 @@ function B(e) {
                                   return (
                                       t !== N.IIU.CUSTOM_STATUS &&
                                       t !== N.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -189,8 +189,8 @@ function B(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == Z ? void 0 : Z.state) != null,
@@ -199,7 +199,7 @@ function B(e) {
         Q = H.length + (q || X ? 1 : 0),
         J = Q > 1,
         $ = ((null == Z ? void 0 : Z.state) != null || null != V) && "xs" === y,
-        ee = j({
+        ee = k({
             streamActivity: Y,
             otherActivities: H,
             voiceActivityChannel: X ? l : null,

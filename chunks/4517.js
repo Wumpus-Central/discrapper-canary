@@ -179,7 +179,7 @@ let M = i.forwardRef(function (e, t) {
             ],
         });
     }),
-    k = i.forwardRef(function (e, t) {
+    j = i.forwardRef(function (e, t) {
         var n, a;
         let {
                 emoji: _,
@@ -198,8 +198,8 @@ let M = i.forwardRef(function (e, t) {
             w = S.hT + D,
             L = S.YF + D,
             M = i.useRef(null),
-            k = i.useRef(null),
             j = i.useRef(null),
+            k = i.useRef(null),
             U = i.useRef(w),
             G = i.useRef(L),
             B = null != _ && null == p,
@@ -221,9 +221,9 @@ let M = i.forwardRef(function (e, t) {
             },
         }));
         i.useLayoutEffect(() => {
-            if ((F(!0), null == k.current || null == j.current || !K)) return;
-            let e = k.current.getBoundingClientRect().height,
-                t = j.current.getBoundingClientRect().height;
+            if ((F(!0), null == j.current || null == k.current || !K)) return;
+            let e = j.current.getBoundingClientRect().height,
+                t = k.current.getBoundingClientRect().height;
             W(t > e),
                 (U.current = e),
                 (G.current = t),
@@ -276,12 +276,12 @@ let M = i.forwardRef(function (e, t) {
                       }),
             en = null == ee || "" === p ? et : ee,
             er = (0, r.jsxs)("div", {
-                ref: k,
+                ref: j,
                 className: C.content,
                 children: [$, en],
             }),
             ei = (0, r.jsxs)("div", {
-                ref: j,
+                ref: k,
                 className: o()(C.content, C.unclamped),
                 children: [$, en],
             }),
@@ -363,12 +363,12 @@ let M = i.forwardRef(function (e, t) {
                   ],
               });
     }),
-    j = i.forwardRef(function (e, t) {
+    k = i.forwardRef(function (e, t) {
         var { emoji: n, text: a, onCloseProfile: o } = e,
             s = w(e, ["emoji", "text", "onCloseProfile"]);
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
-            k,
+            j,
             D(R({}, s), {
                 ref: t,
                 emoji: n,
@@ -427,7 +427,7 @@ function U(e) {
         onClose: () => N(!1),
         children: () =>
             (0, r.jsx)(
-                k,
+                j,
                 D(R({}, c), {
                     ref: E,
                     emoji: t,
@@ -479,7 +479,7 @@ let G = i.forwardRef(function (e, t) {
         return (0, r.jsx)(p.Gt, {
             value: b,
             children: (0, r.jsx)(
-                k,
+                j,
                 R(
                     {
                         emoji: e,
@@ -530,7 +530,7 @@ let G = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          j,
+                          k,
                           R(
                               {
                                   emoji: I,
@@ -545,7 +545,7 @@ let G = i.forwardRef(function (e, t) {
                 : (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          k,
+                          j,
                           R(
                               {
                                   emoji: I,

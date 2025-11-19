@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => g,
-    Z: () => p,
+    K: () => f,
+    Z: () => g,
 });
 var r = n(54381);
 n(473749);
@@ -12,7 +12,7 @@ var l = n(120356),
     c = n(654664),
     u = n(970217),
     d = n(670185);
-let g = () =>
+let f = () =>
         (0, r.jsx)("div", {
             className: i()(u.skeleton, d.shopCard),
             children: (0, r.jsxs)("div", {
@@ -25,7 +25,7 @@ let g = () =>
                 ],
             }),
         }),
-    p = () => {
+    g = () => {
         let e = a.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
         return (0, r.jsx)("div", {
             className: u.skeletonsContainer,
@@ -41,7 +41,7 @@ let g = () =>
                                       className: i()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
                                       children: (0, r.jsx)("div", { className: u.bannerBody }),
                                   }),
-                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(s.Z, {}, n) : (0, r.jsx)(g, {}, n))),
+                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(s.Z, {}, n) : (0, r.jsx)(f, {}, n))),
                         ],
                     },
                     n,

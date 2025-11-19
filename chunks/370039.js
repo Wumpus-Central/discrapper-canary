@@ -1,4 +1,4 @@
-n.d(t, { a: () => g });
+n.d(t, { a: () => f });
 var r = n(473749),
     l = n(399606),
     i = n(594174),
@@ -8,7 +8,7 @@ var r = n(473749),
     c = n(27123),
     u = n(330349),
     d = n(724994);
-let g = () => {
+let f = () => {
     let e = (0, l.e7)([i.default], () => i.default.getCurrentUser()),
         t = null != e && a.ZP.canUseCollectibles(e);
     return (0, r.useCallback)(

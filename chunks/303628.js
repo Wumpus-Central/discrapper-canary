@@ -134,7 +134,7 @@ function D(e) {
                 ? e
                 : [];
         }, [L, x]),
-        [k, j] = i.useState([]);
+        [j, k] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -153,7 +153,7 @@ function D(e) {
     });
     let G = {
             isApplicationCommand: w,
-            previousUploadOptions: k,
+            previousUploadOptions: j,
             uploadOptions: M,
         },
         B = i.useRef(G);
@@ -170,7 +170,7 @@ function D(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    j(i);
+                    k(i);
             }
         }, [t, M.length, n]);
     let Z = D.filter((e) => e.filename !== a);

@@ -482,13 +482,13 @@ function M(e) {
         null != e && (e.defaultSettings.size = b({ fixed: e.defaultSettings.size.fixed }, s));
     }
 }
-function k(e) {
+function j(e) {
     i = O(b({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
 }
-function j(e) {
+function k(e) {
     let { widgetId: t } = e;
     return N(t, (e, t) => {
-        k(e);
+        j(e);
     });
 }
 function U(e) {
@@ -831,6 +831,6 @@ let q = new z(d.Z, {
     LAYOUT_DELETE_ALL_WIDGETS: G,
     LAYOUT_CREATE_WIDGETS: B,
     LAYOUT_SET_WIDGET_META: w,
-    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: j,
+    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: k,
     LAYOUT_SET_DEFAULT_CONFIG: Z,
 });

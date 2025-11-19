@@ -99,8 +99,8 @@ let w = new u.Z("OverlayRenderStore"),
     L = b.R5.UNSET,
     x = !1,
     M = !1,
-    k = !1,
-    j = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
+    j = !1,
+    k = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
     U = null,
     G = {},
     B = {},
@@ -587,7 +587,7 @@ async function eE(e, t) {
     else for (let e of J()) await el(e), await (0, a._v)(16);
 }
 function eb() {
-    ef(), (k = !1), (F = null), eM();
+    ef(), (j = !1), (F = null), eM();
 }
 function ey(e) {
     let { legacyEnabled: t, oopEnabled: n } = e;
@@ -707,13 +707,13 @@ function ex(e) {
     null != t && s.Z.updateTrackedGame(e.pid, t);
 }
 function eM() {
-    d.Z.hasLoadedExperiments && !k && ((k = !0), eE(E.v.legacyEnabled, E.v.oopEnabled));
-}
-function ek() {
-    (k = !1), (F = null);
+    d.Z.hasLoadedExperiments && !j && ((j = !0), eE(E.v.legacyEnabled, E.v.oopEnabled));
 }
 function ej() {
-    (k = !1), (F = null), eS();
+    (j = !1), (F = null);
+}
+function ek() {
+    (j = !1), (F = null), eS();
 }
 class eU extends (r = i.ZP.Store) {
     initialize() {
@@ -723,7 +723,7 @@ class eU extends (r = i.ZP.Store) {
         return W;
     }
     getHasLoadedExperiments() {
-        return k;
+        return j;
     }
     getForcedRenderMode() {
         return L;
@@ -808,12 +808,12 @@ class eU extends (r = i.ZP.Store) {
 A(eU, "displayName", "OverlayRenderStore");
 let eG = new eU(
         o.Z,
-        !j
+        !k
             ? {}
             : {
                   CONNECTION_OPEN: eb,
-                  LOGIN: ek,
-                  LOGOUT: ej,
+                  LOGIN: ej,
+                  LOGOUT: ek,
                   EXPERIMENT_OVERRIDE_BUCKET: eb,
                   OVERLAY_SET_ENABLED: ey,
                   GAME_LAUNCH_SUCCESS: eO,

@@ -36,7 +36,7 @@ var r = n(54381),
     L = n(524484),
     x = n(388032),
     M = n(325804);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -245,7 +245,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 children: [
                     (0, r.jsx)(
                         g,
-                        G(j({}, o), {
+                        G(k({}, o), {
                             size: c.EFr.SIZE_32,
                             src: s,
                             isMobile: l,
@@ -339,7 +339,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 premiumSince: w,
                 channel: L,
                 guildId: x,
-                className: k,
+                className: j,
                 nameplate: U,
                 hideClanTag: Z = !1,
                 hideSubtext: F = !1,
@@ -403,17 +403,17 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             eM = i.useCallback(() => {
                 eh(!1);
             }, []),
-            ek = i.useCallback((e) => {
+            ej = i.useCallback((e) => {
                 eg(e);
             }, []),
-            ej = i.useCallback(
+            ek = i.useCallback(
                 (e) =>
                     null == eP
                         ? null
                         : (0, r.jsx)(
                               C.Z,
                               G(
-                                  j(
+                                  k(
                                       {
                                           name: null != E ? E : ec,
                                           quest: eP,
@@ -434,7 +434,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
               })
             : (0, r.jsx)(c.yRy, {
                   targetElementRef: ed,
-                  renderPopout: ej,
+                  renderPopout: ek,
                   position: "bottom",
                   shouldShow: eD,
                   nudgeAlignIntoViewport: !1,
@@ -444,11 +444,11 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   children: () =>
                       (0, r.jsx)(
                           g.Z,
-                          j(
+                          k(
                               {
                                   ref: ed,
                                   selected: t,
-                                  className: o()(M.member, k, {
+                                  className: o()(M.member, j, {
                                       [M.offline]: I === D.Skl.OFFLINE && !t,
                                       [M.flatBottom]: eD,
                                   }),
@@ -502,7 +502,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       isMobile: R,
                                       isTyping: h,
                                       avatarDecorationSrc: eO,
-                                      handleSetTypingRef: ek,
+                                      handleSetTypingRef: ej,
                                       typingRef: em,
                                       currentUser: y,
                                   }),

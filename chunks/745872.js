@@ -149,7 +149,7 @@ var M = function e(t) {
         }
         return (L[t] = n), n;
     },
-    k = {
+    j = {
         __proto__: null,
         "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
         "%ArrayPrototype%": ["Array", "prototype"],
@@ -203,13 +203,13 @@ var M = function e(t) {
         "%WeakMapPrototype%": ["WeakMap", "prototype"],
         "%WeakSetPrototype%": ["WeakSet", "prototype"],
     },
-    j = n(390976),
+    k = n(390976),
     U = n(706165),
-    G = j.call(P, Array.prototype.concat),
-    B = j.call(R, Array.prototype.splice),
-    Z = j.call(P, String.prototype.replace),
-    F = j.call(P, String.prototype.slice),
-    V = j.call(P, RegExp.prototype.exec),
+    G = k.call(P, Array.prototype.concat),
+    B = k.call(R, Array.prototype.splice),
+    Z = k.call(P, String.prototype.replace),
+    F = k.call(P, String.prototype.slice),
+    V = k.call(P, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
@@ -228,7 +228,7 @@ var M = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(k, r) && (r = "%" + (n = k[r])[0] + "%"), U(L, r))) {
+        if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(L, r))) {
             var i = L[r];
             if ((i === D && (i = M(r)), void 0 === i && !t))
                 throw new u("intrinsic " + e + " exists, but is not available. Please file an issue!");

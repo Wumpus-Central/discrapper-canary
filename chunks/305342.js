@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => G,
-    c: () => j,
+    c: () => k,
 }),
     n(388685);
 var r = n(54381),
@@ -86,7 +86,7 @@ let L = 24,
                   ],
               });
     },
-    k = (e) => {
+    j = (e) => {
         let { guildId: t, listingId: n } = e,
             i = (0, y.Z)(t),
             [a] = g.XZ(n, t),
@@ -134,7 +134,7 @@ let L = 24,
                   ],
               });
     },
-    j = (e) => {
+    k = (e) => {
         let { listingId: t, guildId: n, className: i } = e,
             a = (0, O.Z)(n, t),
             [s] = g.UE(t),
@@ -174,7 +174,7 @@ let L = 24,
                           benefits: u,
                           guildId: n,
                       }),
-                      (0, r.jsx)(k, {
+                      (0, r.jsx)(j, {
                           guildId: n,
                           listingId: t,
                       }),
@@ -203,7 +203,7 @@ let L = 24,
             S = (0, s.e7)([_.Z], () => _.Z.isSyncing),
             { activeSubscription: L, activeSubscriptionListing: x } = (0, E.Z)(a),
             M = (null == x ? void 0 : x.id) === t,
-            k = (null == L ? void 0 : L.status) === P.O0b.CANCELED,
+            j = (null == L ? void 0 : L.status) === P.O0b.CANCELED,
             [G, B] = i.useState(!1),
             [Z, F] = i.useState(!1),
             V = i.useCallback((e) => {
@@ -278,8 +278,8 @@ let L = 24,
                                                       ? (0, r.jsx)(c.Button, {
                                                             disabled: !0,
                                                             fullWidth: !0,
-                                                            variant: k ? "secondary" : "primary",
-                                                            text: k
+                                                            variant: j ? "secondary" : "primary",
+                                                            text: j
                                                                 ? D.intl.string(D.t.iKHmu0)
                                                                 : D.intl.string(D.t.XvAuMo),
                                                         })
@@ -330,7 +330,7 @@ let L = 24,
                               }),
                               ee &&
                                   (0, r.jsx)(c.y5t, {
-                                      children: (0, r.jsx)(j, {
+                                      children: (0, r.jsx)(k, {
                                           listingId: t,
                                           guildId: n,
                                       }),

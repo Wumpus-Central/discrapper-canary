@@ -175,8 +175,8 @@ function v(e) {
         L = "".concat(P, "-blob_mask"),
         x = "".concat(P, "-stroke_mask"),
         M = "".concat(P, "-highlight_mask"),
-        k = (null == f ? void 0 : f.width) != null ? f.width : g,
-        j = (null == f ? void 0 : f.height) != null ? f.height : g,
+        j = (null == f ? void 0 : f.width) != null ? f.width : g,
+        k = (null == f ? void 0 : f.height) != null ? f.height : g,
         U = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
@@ -232,10 +232,10 @@ function v(e) {
                                     null != O
                                         ? (0, r.jsx)("rect", {
                                               id: w,
-                                              x: n - (k + 2 * p) + p,
-                                              y: n - (j + 2 * p) + p,
-                                              width: k + 2 * p,
-                                              height: j + 2 * p,
+                                              x: n - (j + 2 * p) + p,
+                                              y: n - (k + 2 * p) + p,
+                                              width: j + 2 * p,
+                                              height: k + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2,
                                           })

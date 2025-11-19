@@ -35,9 +35,9 @@ function b(e, t, n) {
         L,
         x,
         M,
-        k = String(t),
-        j = (0, f.j)(),
-        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : j.locale) ? m : _.Z,
+        j = String(t),
+        k = (0, f.j)(),
+        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : k.locale) ? m : _.Z,
         G = (0, u.Z)(
             null !=
                 (b =
@@ -51,9 +51,9 @@ function b(e, t, n) {
                                   ? void 0
                                   : S.firstWeekContainsDate)
                             ? v
-                            : j.firstWeekContainsDate)
+                            : k.firstWeekContainsDate)
                         ? O
-                        : null == (A = j.locale) || null == (C = A.options)
+                        : null == (A = k.locale) || null == (C = A.options)
                           ? void 0
                           : C.firstWeekContainsDate)
                 ? b
@@ -73,9 +73,9 @@ function b(e, t, n) {
                               ? void 0
                               : L.weekStartsOn)
                         ? P
-                        : j.weekStartsOn)
+                        : k.weekStartsOn)
                     ? R
-                    : null == (x = j.locale) || null == (M = x.options)
+                    : null == (x = k.locale) || null == (M = x.options)
                       ? void 0
                       : M.weekStartsOn)
             ? N
@@ -94,7 +94,7 @@ function b(e, t, n) {
             locale: U,
             _originalDate: Z,
         };
-    return k
+    return j
         .match(h)
         .map(function (e) {
             var t = e[0];

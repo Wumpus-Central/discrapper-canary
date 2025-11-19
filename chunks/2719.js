@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(594174),
     x = n(572004),
     M = n(51144),
-    k = n(998502),
-    j = n(695346),
+    j = n(998502),
+    k = n(695346),
     U = n(313789),
     G = n(461877),
     B = n(518596),
@@ -95,7 +95,7 @@ function X(e, t) {
         e
     );
 }
-let Q = k.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
+let Q = j.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function J() {
     (0, B.openUserSettings)(U.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION });
 }
@@ -465,7 +465,7 @@ function ei(e) {
             id: t.id,
             label: Y.intl.string(Y.t["/AXYnE"]),
         }),
-        a = j.Sb.useSetting(),
+        a = k.Sb.useSetting(),
         o = i.useRef(null);
     return a && x.wS
         ? (0, r.jsx)(f.yRy, {
@@ -552,7 +552,7 @@ function eo() {
         }),
         n = (0, C.ZP)(t.id),
         i = (0, A.Z)(n),
-        a = j.co.useSetting(),
+        a = k.co.useSetting(),
         o = (0, c.e7)([w.Z], () => w.Z.getErrors()),
         s = null == o || null == (e = o.avatar) ? void 0 : e[0],
         { avatarSrc: u, avatarDecorationSrc: d } = (0, N.Z)({

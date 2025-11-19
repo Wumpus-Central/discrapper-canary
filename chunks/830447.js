@@ -431,8 +431,8 @@ function C(e) {
     }, [x.isUsingKeyboardNavigation]);
     let M = i.useRef(null);
     (0, u.Tbt)(M);
-    let k = s ? u.u2D : u.zJl,
-        j = i.useMemo(
+    let j = s ? u.u2D : u.zJl,
+        k = i.useMemo(
             () => ({
                 onSelect: I,
                 onInteraction: C,
@@ -440,7 +440,7 @@ function C(e) {
             [I, C],
         );
     return (0, r.jsx)(h.p.Provider, {
-        value: j,
+        value: k,
         children: (0, r.jsx)(
             "div",
             v(
@@ -454,7 +454,7 @@ function C(e) {
                 {
                     ref: M,
                     "aria-label": e["aria-label"],
-                    children: (0, r.jsxs)(k, {
+                    children: (0, r.jsxs)(j, {
                         className: E.scroller,
                         children: [
                             0 === N.length &&

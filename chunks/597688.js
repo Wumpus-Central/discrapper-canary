@@ -48,11 +48,11 @@ let m = new Map(),
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (D = new Map(D)).set(t, Date.now());
     },
-    k = (e) => {
+    j = (e) => {
         let { skuId: t, product: n } = e;
         v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (D = new Map(D)).delete(t);
     },
-    j = (e) => {
+    k = (e) => {
         (N = !0), (r = void 0), (a = void 0), (w = e.options);
     },
     U = (e) => {
@@ -190,12 +190,12 @@ class K extends (o = l.ZP.Store) {
 }
 h(K, "displayName", "CollectiblesCategoryStore");
 let z = new K(c.Z, {
-    COLLECTIBLES_CATEGORIES_FETCH: j,
+    COLLECTIBLES_CATEGORIES_FETCH: k,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
     COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: B,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
     COLLECTIBLES_PRODUCT_FETCH: x,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: k,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: j,
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: F,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: W,

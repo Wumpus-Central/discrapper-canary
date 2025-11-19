@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(952265),
     u = n(481060),
     d = n(150063),
-    g = n(211266),
-    p = n(906732),
-    f = n(977395),
+    f = n(211266),
+    g = n(906732),
+    p = n(977395),
     m = n(214852),
     h = n(602733),
     C = n(594174),
@@ -50,8 +50,8 @@ let H = (e) => {
     },
     D = function (e) {
         let { tab: t = N.AW.HOME } = e;
-        (0, m.z)(f.f), (0, S.f)();
-        let n = (0, g.Z)((0, s.Z)()),
+        (0, m.z)(p.f), (0, S.f)();
+        let n = (0, f.Z)((0, s.Z)()),
             i = (0, o.e7)([C.default], () => C.default.getCurrentUser());
         (0, h.p2)();
         let c = (0, P.B)("CollectiblesShop"),
@@ -93,7 +93,7 @@ let H = (e) => {
                 null == (e = en.current) || e.focus();
             }, []);
         let { analyticsLocations: er } = (0, x.MV)(Q);
-        return (0, r.jsx)(p.Gt, {
+        return (0, r.jsx)(g.Gt, {
             value: er,
             children: (0, r.jsx)(_.k0, {
                 newValue: {

@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(981631),
     x = n(388032),
     M = n(163594),
-    k = n(476284),
-    j = n(865215);
+    j = n(476284),
+    k = n(865215);
 let U = (e) => {
         let { inOfferExperience: t } = e;
         return t ? (0, r.jsx)(C.Z, { lifted: t }) : null;
@@ -66,7 +66,7 @@ let U = (e) => {
             q(!0);
         }, []);
         let es = (0, r.jsx)("div", {
-            className: k.premiumTierCardsContainerSettings,
+            className: j.premiumTierCardsContainerSettings,
             children: (0, r.jsx)(l.$, {
                 innerRef: n,
                 onChange: (e) => H(e),
@@ -105,20 +105,20 @@ let U = (e) => {
             }),
         });
         return (0, r.jsxs)("div", {
-            className: k.container,
+            className: j.container,
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, r.jsx)(A.Z, {
                     premiumSubscription: X,
-                    className: o()(k.existingSubscriberSpacing, { [k.zIndex1]: en }),
+                    className: o()(j.existingSubscriberSpacing, { [j.zIndex1]: en }),
                 }),
                 (0, r.jsx)(U, { inOfferExperience: en }),
                 (0, r.jsxs)("div", {
-                    className: o()({ [k.settingsContainer]: !en }),
+                    className: o()({ [j.settingsContainer]: !en }),
                     children: [
                         null != ea &&
                             (0, r.jsx)(T.C, {
-                                className: k.giftPromoCard,
+                                className: j.giftPromoCard,
                                 config: ea,
                             }),
                         (0, r.jsx)(l.$, {
@@ -130,10 +130,10 @@ let U = (e) => {
                                 ref: a,
                                 subscriptionTier: $,
                                 className: o()({
-                                    [k.settingsHeroNoBackground]: en,
-                                    [k.trialMarketingMargin]: en,
-                                    [k.settingsHeroBogoHeight]: er,
-                                    [k.noTopPaddingOverride]: null != X,
+                                    [j.settingsHeroNoBackground]: en,
+                                    [j.trialMarketingMargin]: en,
+                                    [j.settingsHeroBogoHeight]: er,
+                                    [j.noTopPaddingOverride]: null != X,
                                 }),
                                 isDarkMode: B,
                             }),
@@ -141,15 +141,15 @@ let U = (e) => {
                     ],
                 }),
                 es,
-                (0, r.jsx)(R.Z, { className: k.perkCardsContainerSpacingSettings }),
+                (0, r.jsx)(R.Z, { className: j.perkCardsContainerSpacingSettings }),
                 (0, r.jsx)("div", {
-                    className: k.planComparisonTableContainer,
+                    className: j.planComparisonTableContainer,
                     children: (0, r.jsx)(D.Z, {
-                        className: k.planComparisonTable,
+                        className: j.planComparisonTable,
                         hideCTAs: !0,
                     }),
                 }),
-                (0, r.jsx)("div", { className: k.footerSpacing }),
+                (0, r.jsx)("div", { className: j.footerSpacing }),
                 (0, r.jsx)(P.Z, {
                     isVisible: K && z,
                     subscriptionTier: $,
@@ -166,12 +166,12 @@ let U = (e) => {
                     },
                     children: (0, r.jsx)("div", {
                         ref: C,
-                        className: k.bottomOfPageVisibilitySensor,
+                        className: j.bottomOfPageVisibilitySensor,
                     }),
                 }),
                 (0, r.jsx)("img", {
-                    src: j,
-                    className: k.bottomIllustration,
+                    src: k,
+                    className: j.bottomIllustration,
                     width: 112,
                     height: 85,
                     alt: x.intl.string(x.t.X4IxWL),

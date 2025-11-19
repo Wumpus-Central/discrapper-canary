@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(626135),
     u = n(381585),
     d = n(870289),
-    g = n(501431),
-    p = n(888302),
-    f = n(193227),
+    f = n(501431),
+    g = n(888302),
+    p = n(193227),
     m = n(426171),
     h = n(845796),
     C = n(841875),
@@ -23,12 +23,12 @@ var r = n(54381),
     S = n(25616);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
-    (0, g.A)();
-    let p = (0, d.FF)("CollectiblesBrowse"),
-        f = l.useRef(null),
-        { handleScroll: h } = (0, o.z)(f, t),
-        { setCategoryRef: _, handleScrollToCategory: b } = (0, m.xV)(f.current),
-        [v, x] = l.useState(p && c),
+    (0, f.A)();
+    let g = (0, d.FF)("CollectiblesBrowse"),
+        p = l.useRef(null),
+        { handleScroll: h } = (0, o.z)(p, t),
+        { setCategoryRef: _, handleScrollToCategory: b } = (0, m.xV)(p.current),
+        [v, x] = l.useState(g && c),
         [E, O] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -47,23 +47,23 @@ function y(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            p || x(!1);
-        }, [p, x]),
+            g || x(!1);
+        }, [g, x]),
         (0, r.jsx)("div", {
-            className: a()(S.pageWrapper, { [S.pageWrapperFilter]: p }),
+            className: a()(S.pageWrapper, { [S.pageWrapperFilter]: g }),
             children: (0, r.jsxs)("main", {
-                className: a()(S.page, { [S.pageFilter]: p }),
+                className: a()(S.page, { [S.pageFilter]: g }),
                 children: [
                     (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
-                        ref: f,
+                        ref: p,
                         onScroll: h,
                         children: (0, r.jsx)(j, {
                             isSmallScreen: E,
                             filterBarOpen: v,
                             setFilterBarOpen: x,
                             tab: t,
-                            scrollerRef: f,
+                            scrollerRef: p,
                             sortedCategories: n,
                             setCategoryRef: _,
                         }),
@@ -92,7 +92,7 @@ let j = (e) => {
         } = e,
         k = (0, d.FF)("CollectiblesBrowse"),
         I = l.useRef(null),
-        T = (0, g.S)((e) => e.hasDefaultFilters()),
+        T = (0, f.S)((e) => e.hasDefaultFilters()),
         L = (0, u.sp)(),
         { handlePageChange: B, currentPage: P } = (0, _.h)(m),
         N = l.useCallback(
@@ -144,7 +144,7 @@ let j = (e) => {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: S.controlsLeftSide,
-                                    children: (0, r.jsx)(p.Z, {}),
+                                    children: (0, r.jsx)(g.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
                                     className: a()(S.controlsRightSide, { [S.controlsRightSideResponsive]: t }),
@@ -215,7 +215,7 @@ let j = (e) => {
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: P },
-                                children: (0, r.jsx)(f.Z, {
+                                children: (0, r.jsx)(p.Z, {
                                     sortedCategories: y,
                                     setCategoryRef: j,
                                     currentPage: P,

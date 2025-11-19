@@ -31,8 +31,8 @@ var r,
     L = 573,
     x = 15,
     M = 3,
-    k = 258,
-    j = 262,
+    j = 258,
+    k = 262,
     U = 32,
     G = 42,
     B = 69,
@@ -97,11 +97,11 @@ function ea(e, t) {
         a = e.strstart,
         o = e.prev_length,
         s = e.nice_match,
-        l = e.strstart > e.w_size - j ? e.strstart - (e.w_size - j) : 0,
+        l = e.strstart > e.w_size - k ? e.strstart - (e.w_size - k) : 0,
         c = e.window,
         u = e.w_mask,
         d = e.prev,
-        f = e.strstart + k,
+        f = e.strstart + j,
         _ = c[a + o - 1],
         p = c[a + o];
     e.prev_length >= e.good_match && (i >>= 2), s > e.lookahead && (s = e.lookahead);
@@ -120,7 +120,7 @@ function ea(e, t) {
             c[++a] === c[++n] &&
             a < f
         );
-        if (((r = k - (f - a)), (a = f - k), r > o)) {
+        if (((r = j - (f - a)), (a = f - j), r > o)) {
             if (((e.match_start = t), (o = r), r >= s)) break;
             (_ = c[a + o - 1]), (p = c[a + o]);
         }
@@ -135,7 +135,7 @@ function eo(e) {
         o,
         s = e.w_size;
     do {
-        if (((a = e.window_size - e.lookahead - e.strstart), e.strstart >= s + (s - j))) {
+        if (((a = e.window_size - e.lookahead - e.strstart), e.strstart >= s + (s - k))) {
             i.arraySet(e.window, e.window, s, s, 0),
                 (e.match_start -= s),
                 (e.strstart -= s),
@@ -162,12 +162,12 @@ function eo(e) {
                 e.insert--,
                 !(e.lookahead + e.insert < M));
             );
-    } while (e.lookahead < j && 0 !== e.strm.avail_in);
+    } while (e.lookahead < k && 0 !== e.strm.avail_in);
 }
 function es(e, t) {
     for (var n, r; ; ) {
-        if (e.lookahead < j) {
-            if ((eo(e), e.lookahead < j && t === c)) return W;
+        if (e.lookahead < k) {
+            if ((eo(e), e.lookahead < k && t === c)) return W;
             if (0 === e.lookahead) break;
         }
         if (
@@ -176,7 +176,7 @@ function es(e, t) {
                 ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + M - 1]) & e.hash_mask),
                 (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
                 (e.head[e.ins_h] = e.strstart)),
-            0 !== n && e.strstart - n <= e.w_size - j && (e.match_length = ea(e, n)),
+            0 !== n && e.strstart - n <= e.w_size - k && (e.match_length = ea(e, n)),
             e.match_length >= M)
         )
             if (
@@ -210,8 +210,8 @@ function es(e, t) {
 }
 function el(e, t) {
     for (var n, r, i; ; ) {
-        if (e.lookahead < j) {
-            if ((eo(e), e.lookahead < j && t === c)) return W;
+        if (e.lookahead < k) {
+            if ((eo(e), e.lookahead < k && t === c)) return W;
             if (0 === e.lookahead) break;
         }
         if (
@@ -225,7 +225,7 @@ function el(e, t) {
             (e.match_length = M - 1),
             0 !== n &&
                 e.prev_length < e.max_lazy_match &&
-                e.strstart - n <= e.w_size - j &&
+                e.strstart - n <= e.w_size - k &&
                 ((e.match_length = ea(e, n)),
                 e.match_length <= 5 &&
                     (e.strategy === y || (e.match_length === M && e.strstart - e.match_start > 4096)) &&
@@ -271,8 +271,8 @@ function el(e, t) {
 }
 function ec(e, t) {
     for (var n, r, i, o, s = e.window; ; ) {
-        if (e.lookahead <= k) {
-            if ((eo(e), e.lookahead <= k && t === c)) return W;
+        if (e.lookahead <= j) {
+            if ((eo(e), e.lookahead <= j && t === c)) return W;
             if (0 === e.lookahead) break;
         }
         if (
@@ -283,7 +283,7 @@ function ec(e, t) {
                 r === s[++i] &&
                 r === s[++i])
         ) {
-            o = e.strstart + k;
+            o = e.strstart + j;
             do;
             while (
                 r === s[++i] &&
@@ -296,7 +296,7 @@ function ec(e, t) {
                 r === s[++i] &&
                 i < o
             );
-            (e.match_length = k - (o - i)), e.match_length > e.lookahead && (e.match_length = e.lookahead);
+            (e.match_length = j - (o - i)), e.match_length > e.lookahead && (e.match_length = e.lookahead);
         }
         if (
             (e.match_length >= M
@@ -709,7 +709,7 @@ function ey(e, t) {
             if (
                 ((0 === e.strstart || e.strstart >= r) &&
                     ((e.lookahead = e.strstart - r), (e.strstart = r), et(e, !1), 0 === e.strm.avail_out)) ||
-                (e.strstart - e.block_start >= e.w_size - j && (et(e, !1), 0 === e.strm.avail_out))
+                (e.strstart - e.block_start >= e.w_size - k && (et(e, !1), 0 === e.strm.avail_out))
             )
                 return W;
         }

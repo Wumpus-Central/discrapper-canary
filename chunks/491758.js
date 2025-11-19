@@ -88,9 +88,9 @@ function D() {
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         ),
-        k = (0, m.PP)();
+        j = (0, m.PP)();
     o()(null != w, "Save clip keybind unset"), o()(null != L, "Save screenshot keybind unset");
-    let j = (0, s.e7)([d.default], () => d.default.locale),
+    let k = (0, s.e7)([d.default], () => d.default.locale),
         U = i.useMemo(
             () => [
                 {
@@ -106,7 +106,7 @@ function D() {
                     label: S.intl.formatToPlainString(S.t.ICo9Nk, { count: 2 }),
                 },
             ],
-            [j],
+            [k],
         ),
         G = i.useMemo(
             () => [
@@ -139,7 +139,7 @@ function D() {
                     label: S.intl.string(S.t.XjXqzh),
                 },
             ],
-            [j],
+            [k],
         ),
         B = i.useMemo(
             () => [
@@ -156,7 +156,7 @@ function D() {
                     label: S.intl.formatToPlainString(S.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_60 }),
                 },
             ],
-            [j],
+            [k],
         ),
         Z = i.useCallback(
             (e) => {
@@ -251,7 +251,7 @@ function D() {
                     }),
                 }),
             }),
-            k &&
+            j &&
                 (0, r.jsx)(l.gNt, {
                     label: S.intl.string(S.t["0U/hj7"]),
                     description: S.intl.string(S.t["5zxkdo"]),

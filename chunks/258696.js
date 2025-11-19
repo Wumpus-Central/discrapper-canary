@@ -45,14 +45,14 @@ function M(e) {
               channel: n,
           });
 }
-function k(e) {
+function j(e) {
     var t, n, i, a, E, b, y;
-    let { type: N, disabled: R, channel: k, handleSubmit: U, isEmpty: G, showAllButtons: B } = e,
+    let { type: N, disabled: R, channel: j, handleSubmit: U, isEmpty: G, showAllButtons: B } = e,
         Z = (0, c.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
-        F = j(k.id, N, G),
+        F = k(j.id, N, G),
         { activeCommand: V, activeCommandOption: H } = (0, c.cj)([_.Z], () => ({
-            activeCommand: _.Z.getActiveCommand(k.id),
-            activeCommandOption: _.Z.getActiveOption(k.id),
+            activeCommand: _.Z.getActiveCommand(j.id),
+            activeCommandOption: _.Z.getActiveOption(j.id),
         })),
         { paymentsBlocked: Y } = p.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         {
@@ -62,10 +62,10 @@ function k(e) {
         } = I.n.useConfig({ location: "ChannelTextAreaButtons" }),
         q = (0, m.Iu)((e) => e.lastActiveView),
         X = [],
-        Q = !k.isDM() || void 0 === k.recipients || k.recipients.length > 1,
-        J = (0, c.e7)([O.default], () => (Q ? null : O.default.getUser(k.recipients[0]))),
+        Q = !j.isDM() || void 0 === j.recipients || j.recipients.length > 1,
+        J = (0, c.e7)([O.default], () => (Q ? null : O.default.getUser(j.recipients[0]))),
         $ = (0, f.R)({
-            channel: k,
+            channel: j,
             chatInputType: N,
         }),
         ee = (0, g.Nt)() && (null == (t = N.confetti) ? void 0 : t.button) != null,
@@ -84,7 +84,7 @@ function k(e) {
                         M,
                         {
                             disabled: R,
-                            channel: k,
+                            channel: j,
                         },
                         "gift",
                     ),
@@ -111,7 +111,7 @@ function k(e) {
                         C.Z,
                         {
                             disabled: R,
-                            channel: k,
+                            channel: j,
                         },
                         "confetti",
                     ),
@@ -138,7 +138,7 @@ function k(e) {
                     {
                         disabled: R,
                         inputType: N,
-                        channel: k,
+                        channel: j,
                     },
                     "upload",
                 ),
@@ -172,7 +172,7 @@ function k(e) {
             node: (0, r.jsx)(
                 h.Z,
                 {
-                    channel: k,
+                    channel: j,
                     type: N,
                 },
                 "appLauncher",
@@ -202,11 +202,11 @@ function k(e) {
               children: en,
           });
 }
-function j(e, t, n) {
+function k(e, t, n) {
     return (0, c.e7)([b.Z, y.Z], () => {
         let r = b.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === y.Z.getUploads(e, t.drafts.type).length && n && !i;
     });
 }
-let U = i.memo(k);
+let U = i.memo(j);

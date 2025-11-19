@@ -113,7 +113,7 @@ let O = function (e) {
             onMouseEnter: x,
             onMouseLeave: M,
         } = e,
-        k = b(e, [
+        j = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -136,12 +136,12 @@ let O = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let j = (0, s.e7)([_.Z], () =>
+    let k = (0, s.e7)([_.Z], () =>
             (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
                 ? null
                 : _.Z.getRole(L.guildId, L.colorRoleId),
         ),
-        U = (0, f.yH)(null == L ? void 0 : L.guildId, j) && (0, d.S2)(L),
+        U = (0, f.yH)(null == L ? void 0 : L.guildId, k) && (0, d.S2)(L),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
@@ -187,7 +187,7 @@ let O = function (e) {
                                     }),
                                     ref: N,
                                 },
-                                k,
+                                j,
                             ),
                             {
                                 role: "article",

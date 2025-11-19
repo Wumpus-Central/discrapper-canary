@@ -1,8 +1,8 @@
 n.d(t, {
     EK: () => G,
-    Io: () => k,
+    Io: () => j,
     N1: () => B,
-    NY: () => j,
+    NY: () => k,
     Ox: () => L,
     Vq: () => M,
     Wf: () => U,
@@ -139,7 +139,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { id: t } = e,
         n = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         i = N.intl.string(N.t.zLZPmk).toLowerCase(),
@@ -158,7 +158,7 @@ function k(e) {
           })
         : (0, r.jsx)("span", { children: "#" + i });
 }
-function j(e) {
+function k(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, p.l)(t),
         o = (0, p.W)(t, n, i);

@@ -27,7 +27,7 @@ n.d(t, {
     n9: () => A,
     nI: () => d,
     o8: () => w,
-    os: () => k,
+    os: () => j,
     p5: () => H,
     sf: () => ep,
     tA: () => eE,
@@ -290,7 +290,7 @@ class D extends o.C {
                     a.inbox = x.internalBinaryRead(e, e.uint32(), n, a.inbox);
                     break;
                 case 3:
-                    a.guilds = k.internalBinaryRead(e, e.uint32(), n, a.guilds);
+                    a.guilds = j.internalBinaryRead(e, e.uint32(), n, a.guilds);
                     break;
                 case 4:
                     a.userContent = X.internalBinaryRead(e, e.uint32(), n, a.userContent);
@@ -323,7 +323,7 @@ class D extends o.C {
                     a.appearance = eP.internalBinaryRead(e, e.uint32(), n, a.appearance);
                     break;
                 case 14:
-                    a.guildFolders = ek.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
+                    a.guildFolders = ej.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
                     break;
                 case 15:
                     a.favorites = eB.internalBinaryRead(e, e.uint32(), n, a.favorites);
@@ -373,7 +373,7 @@ class D extends o.C {
     internalBinaryWrite(e, t, n) {
         e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             e.inbox && x.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
-            e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+            e.guilds && j.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             e.userContent && X.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && en.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.textAndImages && ef.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
@@ -384,7 +384,7 @@ class D extends o.C {
             e.status && ev.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.localization && eA.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eP.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
-            e.guildFolders && ek.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
+            e.guildFolders && ej.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eB.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
                 eW.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
@@ -421,7 +421,7 @@ class D extends o.C {
                 no: 3,
                 name: "guilds",
                 kind: "message",
-                T: () => k,
+                T: () => j,
             },
             {
                 no: 4,
@@ -487,7 +487,7 @@ class D extends o.C {
                 no: 14,
                 name: "guild_folders",
                 kind: "message",
-                T: () => ek,
+                T: () => ej,
             },
             {
                 no: 15,
@@ -698,8 +698,8 @@ class M extends o.C {
         ]);
     }
 }
-let k = new M();
-class j extends o.C {
+let j = new M();
+class k extends o.C {
     create(e) {
         let t = {
             dismissed: !1,
@@ -794,7 +794,7 @@ class j extends o.C {
         ]);
     }
 }
-let U = new j();
+let U = new k();
 class G extends o.C {
     create(e) {
         let t = {
@@ -4089,8 +4089,8 @@ class eM extends o.C {
         ]);
     }
 }
-let ek = new eM();
-class ej extends o.C {
+let ej = new eM();
+class ek extends o.C {
     create(e) {
         let t = { guildIds: [] };
         return (
@@ -4176,7 +4176,7 @@ class ej extends o.C {
         ]);
     }
 }
-let eU = new ej();
+let eU = new ek();
 class eG extends o.C {
     create(e) {
         let t = {

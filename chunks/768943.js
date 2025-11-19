@@ -156,14 +156,14 @@ function M(e) {
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
-function k(e) {
+function j(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
     let n = !1;
     for (let e of t) O(e.id) && ((m = !0), (n = !0));
     return n;
 }
-function j(e) {
+function k(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
@@ -247,8 +247,8 @@ let Z = new B(o.Z, {
     GUILD_UPDATE: x,
     GUILD_DELETE: x,
     CHANNEL_CREATE: M,
-    CHANNEL_UPDATES: k,
-    CHANNEL_DELETE: j,
+    CHANNEL_UPDATES: j,
+    CHANNEL_DELETE: k,
     GUILD_MEMBER_UPDATE: U,
     GUILD_ROLE_CREATE: x,
     GUILD_ROLE_UPDATE: x,

@@ -308,15 +308,15 @@ class D extends (r = a.Component) {
                 srcIsAnimated: w,
             } = this.props,
             { readyState: L, hasMouseOver: x, hasFocus: M } = this.state,
-            k = null != n,
-            j = this.getRatio(),
-            U = (0, o.clamp)(Math.round(h * j), null != g ? g : 0, null != y ? y : 1 / 0),
-            G = (0, o.clamp)(Math.round(m * j), null != E ? E : 0, null != O ? O : 1 / 0),
+            j = null != n,
+            k = this.getRatio(),
+            U = (0, o.clamp)(Math.round(h * k), null != g ? g : 0, null != y ? y : 1 / 0),
+            G = (0, o.clamp)(Math.round(m * k), null != E ? E : 0, null != O ? O : 1 / 0),
             B = {
                 alt: e,
                 readyState: L,
                 onContextMenu: null != a ? a : void 0,
-                zoomable: k,
+                zoomable: j,
                 className: u,
                 imageClassName: d,
                 minWidth: g,
@@ -351,7 +351,7 @@ class D extends (r = a.Component) {
             };
         if (1 === B.width && 1 === B.height) return null;
         switch (
-            ((k || null != I) && (B.onClick = this.onClick), r && (B.original = null != l && "" !== l ? l : B.src), L)
+            ((j || null != I) && (B.onClick = this.onClick), r && (B.original = null != l && "" !== l ? l : B.src), L)
         ) {
             case b.zo9.LOADING:
                 null != t && (B.src = t);
@@ -361,8 +361,8 @@ class D extends (r = a.Component) {
                     B.onMouseLeave = this.onMouseLeave;
                     let e = (s || x || M) && (null == p || p) && D.visibilityObserver.isVisible(this);
                     e
-                        ? ((B.src = this.getSrc(j)), (B.renderAccessory = T))
-                        : ((B.src = this.getSrc(j, !_ || !s)), (B.renderAccessory = this.renderAccessory)),
+                        ? ((B.src = this.getSrc(k)), (B.renderAccessory = T))
+                        : ((B.src = this.getSrc(k, !_ || !s)), (B.renderAccessory = this.renderAccessory)),
                         null != f &&
                             (B.children = (t) => {
                                 let { src: n, size: r, alt: i, mediaLayoutType: a } = t;
@@ -374,7 +374,7 @@ class D extends (r = a.Component) {
                                     mediaLayoutType: a,
                                 });
                             });
-                } else B.src = this.getSrc(j);
+                } else B.src = this.getSrc(k);
         }
         return (0, i.jsx)(c.E, v({ ref: this._imageRef }, B));
     }

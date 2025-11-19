@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => k });
 var i,
     a = n(569048),
     o = n.n(a),
@@ -94,7 +94,7 @@ function x(e) {
 function M(e) {
     delete m[e.channelId];
 }
-class k extends (i = d.ZP.Store) {
+class j extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let {
@@ -122,8 +122,8 @@ class k extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(k, "displayName", "InstantInviteStore");
-let j = new k(f.Z, {
+h(j, "displayName", "InstantInviteStore");
+let k = new j(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: N,

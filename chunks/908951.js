@@ -88,10 +88,10 @@ function L(e) {
             disabled: L = !1,
         } = e,
         M = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        [k, j] = (0, c.Wu)([b.Z], () => [b.Z.paymentSources, b.Z.hasFetchedPaymentSources]),
+        [j, k] = (0, c.Wu)([b.Z], () => [b.Z.paymentSources, b.Z.hasFetchedPaymentSources]),
         U = (0, g.V)((0, I.yb)(t)),
         { analyticsLocations: G } = (0, m.ZP)(),
-        B = i.useMemo(() => Object.values(k).filter((e) => !e.invalid), [k]),
+        B = i.useMemo(() => Object.values(j).filter((e) => !e.invalid), [j]),
         [Z, F] = i.useState(!1),
         [V, H] = i.useState(t.currency),
         Y = async (e, n, r) => {
@@ -200,7 +200,7 @@ function L(e) {
             });
         };
     if (t.isPurchasedExternally) return $(t);
-    if (!j || !U) return (0, r.jsx)(u.$jN, {});
+    if (!k || !U) return (0, r.jsx)(u.$jN, {});
     if (!(B.length > 0)) return J();
     {
         let e = y.Z.get(t.planIdForCurrencies);

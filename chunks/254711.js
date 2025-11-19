@@ -1,6 +1,6 @@
 n.d(t, {
     Kh: () => B,
-    Tm: () => k,
+    Tm: () => j,
 }),
     n(388685),
     n(781311),
@@ -89,7 +89,7 @@ let x = n(227419).Z,
         var n;
         return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
-    k = {
+    j = {
         [S.bi.BUILT_IN]: {
             id: S.bi.BUILT_IN,
             type: T.Qi.BUILT_IN,
@@ -105,7 +105,7 @@ let x = n(227419).Z,
             },
         },
     },
-    j = [
+    k = [
         ...x,
         {
             id: "-1",
@@ -737,11 +737,11 @@ let x = n(227419).Z,
             },
         },
     ],
-    G = j.filter((e) =>
+    G = k.filter((e) =>
         ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
     ),
     B = (e, t, n) => {
-        let r = t ? j : G;
+        let r = t ? k : G;
         return r.filter(
             (t) =>
                 e.includes(t.type) &&

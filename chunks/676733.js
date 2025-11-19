@@ -148,13 +148,13 @@ class M extends u.Mi {
             (this.columnsDirty = !0);
     }
 }
-let k = (0, x.createContext)(null),
-    j = (0, x.createContext)(null),
+let j = (0, x.createContext)(null),
+    k = (0, x.createContext)(null),
     U = (0, x.createContext)(null),
     G = (0, x.createContext)(null),
     B = (0, x.forwardRef)(function (e, t) {
         var n;
-        [e, t] = (0, o.pE)(e, t, j);
+        [e, t] = (0, o.pE)(e, t, k);
         let r = (0, p.q)(e),
             { selectionBehavior: i, selectionMode: a, disallowEmptySelection: s } = r,
             l = !!(null == (n = e.dragAndDropHooks) ? void 0 : n.useDraggableCollectionState),
@@ -188,7 +188,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     let u, d, f;
     [e, t] = (0, o.pE)(e, t, i.lU);
     let { shouldUseVirtualFocus: _, disallowTypeAhead: p, filter: O, ...v } = e,
-        I = (0, x.useContext)(k);
+        I = (0, x.useContext)(j);
     t = (0, R.B)(
         (0, x.useMemo)(() => (0, P.l)(t, null == I ? void 0 : I.tableRef), [t, null == I ? void 0 : I.tableRef]),
     );
@@ -210,7 +210,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
             S,
             t,
         ),
-        j = S.selectionManager,
+        k = S.selectionManager,
         B = !!(null == L ? void 0 : L.useDraggableCollectionState),
         Z = !!(null == L ? void 0 : L.useDroppableCollectionState);
     (0, x.useRef)(B), (0, x.useRef)(Z), (0, x.useEffect)(() => {}, [B, Z]);
@@ -220,7 +220,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     if (B && L) {
         (u = L.useDraggableCollectionState({
             collection: S.collection,
-            selectionManager: j,
+            selectionManager: k,
             preview: L.renderDragPreview ? Y : void 0,
         })),
             L.useDraggableCollection({}, u, t);
@@ -230,12 +230,12 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     if (Z && L) {
         d = L.useDroppableCollectionState({
             collection: S.collection,
-            selectionManager: j,
+            selectionManager: k,
         });
         let e = new (0, g.d)({
                 collection: S.collection,
-                disabledKeys: j.disabledKeys,
-                disabledBehavior: j.disabledBehavior,
+                disabledKeys: k.disabledKeys,
+                disabledBehavior: k.disabledBehavior,
                 ref: t,
                 layoutDelegate: C,
             }),
@@ -316,7 +316,7 @@ function Z({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                     x.createElement(w, {
                         collection: S.collection,
                         scrollRef: null != (l = null == I ? void 0 : I.scrollRef) ? l : t,
-                        persistedKeys: (0, s.y)(j, L, d),
+                        persistedKeys: (0, s.y)(k, L, d),
                     }),
                 ),
             ),
@@ -605,7 +605,7 @@ let $ = (0, d.IW)(
                 onHoverChange: e.onHoverChange,
                 onHoverEnd: e.onHoverEnd,
             }),
-            { checkboxProps: k } = (0, T.M)({ key: n.key }, f);
+            { checkboxProps: j } = (0, T.M)({ key: n.key }, f);
         p &&
             _ &&
             (c = _.useDraggableItem(
@@ -615,7 +615,7 @@ let $ = (0, d.IW)(
                 },
                 p,
             ));
-        let j = (0, x.useRef)(null),
+        let k = (0, x.useRef)(null),
             { visuallyHiddenProps: G } = (0, C.S)();
         h &&
             _ &&
@@ -628,7 +628,7 @@ let $ = (0, d.IW)(
                     },
                 },
                 h,
-                j,
+                k,
             ));
         let B = (0, x.useRef)(null);
         (0, x.useEffect)(() => {
@@ -681,7 +681,7 @@ let $ = (0, d.IW)(
                                 role: "button",
                                 ...G,
                                 ...u.dropIndicatorProps,
-                                ref: j,
+                                ref: k,
                             }),
                         ),
                     ),
@@ -711,7 +711,7 @@ let $ = (0, d.IW)(
                                     {
                                         slots: {
                                             [o.hO]: {},
-                                            selection: k,
+                                            selection: j,
                                         },
                                     },
                                 ],

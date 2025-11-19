@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(702486),
     d = n(605236),
-    g = n(626135),
-    p = n(381585),
-    f = n(501678),
+    f = n(626135),
+    g = n(381585),
+    p = n(501678),
     m = n(763941),
     h = n(364111),
     C = n(303952),
@@ -32,7 +32,7 @@ var r = n(54381),
     N = n(687983);
 let A = (e) => {
         var t, n, i;
-        let { handleTransition: c, numVisibleItems: u, isFetchingCategories: g, tab: b } = e,
+        let { handleTransition: c, numVisibleItems: u, isFetchingCategories: f, tab: b } = e,
             { noCache: I, includeUnpublished: B } = (0, v.Z)(),
             A = (0, m.Pc)("CollectiblesFeedShop") && b === L.AW.ORBS,
             R =
@@ -80,7 +80,7 @@ let A = (e) => {
                       }),
                 n),
             [Z, w] = l.useState(!1),
-            H = (0, p.sp)(),
+            H = (0, g.sp)(),
             D = null != (t = null == H ? void 0 : H.sessionId) ? t : "";
         l.useEffect(() => {
             (0, C.n)({
@@ -183,15 +183,15 @@ let A = (e) => {
                                     );
                                     break;
                                 case s.z.FEED:
-                                    let p = e.sortedSkuIds;
+                                    let g = e.sortedSkuIds;
                                     l = (0, r.jsx)(
                                         O.Z,
                                         {
                                             title:
                                                 b === L.AW.ORBS ? P.intl.string(P.t.dFgeuZ) : P.intl.string(P.t.NSv5KV),
-                                            isLoading: M || g,
+                                            isLoading: M || f,
                                             numVisibleItems: u,
-                                            sortedSkuIds: p,
+                                            sortedSkuIds: g,
                                             buttonContainerClassName:
                                                 (null == t ? void 0 : t.type) === s.z.IMMERSIVE_BANNER
                                                     ? N.feedblockInteractiveBackground
@@ -267,7 +267,7 @@ let A = (e) => {
                                 default:
                                     return null;
                             }
-                            return (0, r.jsx)(f.g6, {
+                            return (0, r.jsx)(p.g6, {
                                 blockType: e.type,
                                 children: (0, r.jsx)(
                                     "div",
@@ -289,8 +289,8 @@ let A = (e) => {
             a = l.useRef(null),
             { handleScroll: s } = (0, u.z)(a, n),
             o = (0, b.R)(),
-            d = (0, p.sp)(),
-            [f, m] = l.useState(L.IV),
+            d = (0, g.sp)(),
+            [p, m] = l.useState(L.IV),
             [h, C] = l.useState(!1);
         return (
             l.useEffect(() => {
@@ -298,7 +298,7 @@ let A = (e) => {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            f >= 36 ? C(e < 20) : e <= 200 && m((e) => e + L.IV);
+                            p >= 36 ? C(e < 20) : e <= 200 && m((e) => e + L.IV);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -308,7 +308,7 @@ let A = (e) => {
                         }
                     );
                 }
-            }, [a, f, m, C]),
+            }, [a, p, m, C]),
             (0, r.jsx)(c.Den, {
                 className: N.shopScroll,
                 ref: a,
@@ -321,12 +321,12 @@ let A = (e) => {
                             children: [
                                 (0, r.jsx)(A, {
                                     handleTransition: t,
-                                    numVisibleItems: f,
+                                    numVisibleItems: p,
                                     isFetchingCategories: o,
                                     tab: n,
                                 }),
                                 n !== L.AW.CATALOG &&
-                                    f >= 36 &&
+                                    p >= 36 &&
                                     (0, r.jsxs)("div", {
                                         className: N.endOfFeed,
                                         children: [
@@ -342,7 +342,7 @@ let A = (e) => {
                                                         sourceButton: "shop all button",
                                                         shouldAnimate: !0,
                                                     }),
-                                                        g.default.track(B.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        f.default.track(B.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == d ? void 0 : d.sessionId,
                                                             page_type: n,

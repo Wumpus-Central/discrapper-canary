@@ -49,8 +49,8 @@ var i = n(658722),
     L = n(675478),
     x = n(131704),
     M = n(345162),
-    k = n(598077),
-    j = n(314897),
+    j = n(598077),
+    k = n(314897),
     U = n(592125),
     G = n(580005),
     B = n(77498),
@@ -153,8 +153,8 @@ let ey = new m.Z("AutocompleteUtils"),
     eL = 8,
     ex = 1,
     eM = 1000,
-    ek = 0.2,
-    ej = 0.1,
+    ej = 0.2,
+    ek = 0.1,
     eU = 50,
     eG = () => !0,
     eB = /(\t|\s)/,
@@ -206,8 +206,8 @@ function ez(e) {
             }
         } else o[n] = 1 + r / i;
     }
-    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ek;
-    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ej;
+    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ej;
+    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ek;
     return o;
 }
 let eq = [Z.sH, Z.Zb, ec.d4z.GUILD_CATEGORY];
@@ -255,7 +255,7 @@ function e0(e) {
         let e,
             r,
             f = n[m];
-        f instanceof k.Z
+        f instanceof j.Z
             ? ((r = f), (e = null == (b = F.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = el.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -1284,7 +1284,7 @@ let te = (0, ee.oH)((e, t, n) => {
                           };
                       })
                     : F.ZP.getMembers(n.guild_id).filter(eJ),
-                s = j.default.getId(),
+                s = k.default.getId(),
                 l = Q.default.getUsers(),
                 c = X.Z.getGuildId(),
                 u = t.toLocaleLowerCase(),
@@ -1295,7 +1295,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 let t, o;
                 if (_.length >= r) break;
                 if (
-                    (e instanceof k.Z
+                    (e instanceof j.Z
                         ? ((o = e), (t = null == (m = F.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                         : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId])),
                     null == o || o.id === s || o.bot)

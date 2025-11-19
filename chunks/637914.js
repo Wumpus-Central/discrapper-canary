@@ -58,8 +58,8 @@ var a,
     L = ["bold", "bolder", "500", "600", "700", "800", "900"],
     x = ["light", "lighter", "normal", "100", "200", "300", "400"],
     M = ["className", "href", "rel", "target", "title"],
-    k = ["alt", "className", "height", "src", "width"],
-    j =
+    j = ["alt", "className", "height", "src", "width"],
+    k =
         (i((a = {}), f("public/DraftStyleDefault/depth0"), 0),
         i(a, f("public/DraftStyleDefault/depth1"), 1),
         i(a, f("public/DraftStyleDefault/depth2"), 2),
@@ -94,8 +94,8 @@ var a,
     B = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return (
-            Object.keys(j).some(function (n) {
-                e.classList.contains(n) && (t = j[n]);
+            Object.keys(k).some(function (n) {
+                e.classList.contains(n) && (t = k[n]);
             }),
             t
         );
@@ -302,7 +302,7 @@ var a,
                 if (I(e)) {
                     var n = e,
                         r = {};
-                    k.forEach(function (e) {
+                    j.forEach(function (e) {
                         var t = n.getAttribute(e);
                         t && (r[e] = t);
                     }),

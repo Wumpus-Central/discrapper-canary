@@ -129,8 +129,8 @@ function D(e) {
         }),
         {
             inputProps: M,
-            labelProps: k,
-            isPressed: j,
+            labelProps: j,
+            isPressed: k,
         } = (0, a.h)(
             {
                 id: m,
@@ -160,7 +160,7 @@ function D(e) {
             {
                 config: { duration: S.enabled ? 200 : 300 },
                 opacity: n ? 0.5 : 1,
-                state: j ? (t ? R[R.length - 2] : N[1]) : +!!t,
+                state: k ? (t ? R[R.length - 2] : N[1]) : +!!t,
             },
             "animate-always",
         ),
@@ -185,7 +185,7 @@ function D(e) {
             offset: -2,
             children: (0, r.jsxs)(
                 "label",
-                b(g({}, k), {
+                b(g({}, j), {
                     className: h.container,
                     children: [
                         (0, r.jsx)(

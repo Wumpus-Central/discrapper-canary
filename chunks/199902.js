@@ -75,10 +75,10 @@ function w(e, t) {
 let L = null,
     x = {},
     M = null;
-function k() {
+function j() {
     (r = new Map()), (i = {}), (a = {}), (o = {});
 }
-function j(e) {
+function k(e) {
     var t;
     null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : C.kod] = e);
 }
@@ -111,7 +111,7 @@ function F(e) {
         let { userId: n, guildId: r, channelId: i, sessionId: a, selfStream: o, discoverable: s } = t;
         if (o && null != i)
             return (
-                j({
+                k({
                     streamType: null != r ? N.lo.GUILD : N.lo.CALL,
                     ownerId: n,
                     guildId: r,
@@ -320,7 +320,7 @@ function ei(e) {
     let t = y.Z.getBasicChannel(e.channelId);
     return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.default)[0];
 }
-k();
+j();
 class ea extends (c = u.ZP.PersistedStore) {
     initialize(e) {
         this.syncWith([I.Z], () => !0),
@@ -457,7 +457,7 @@ let eo = new ea(d.Z, {
     SET_STREAM_APP_INTENT: en,
     RTC_CONNECTION_STATE: ee,
     CHANNEL_RTC_SELECT_PARTICIPANT: Q,
-    CONNECTION_OPEN: k,
-    CONNECTION_CLOSED: k,
-    LOGOUT: k,
+    CONNECTION_OPEN: j,
+    CONNECTION_CLOSED: j,
+    LOGOUT: j,
 });

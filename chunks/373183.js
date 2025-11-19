@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(28664),
     u = n(481060),
     d = n(104505),
-    g = n(527685),
-    p = n(335131),
-    f = n(597688),
+    f = n(527685),
+    g = n(335131),
+    p = n(597688),
     m = n(1870),
     h = n(832149),
     C = n(911390),
@@ -83,8 +83,8 @@ let S = l.memo(function (e) {
                                     className: b.footerInfoShrinkOnHover,
                                     children: (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(g.Z, {
-                                                variant: g.y.BLUE,
+                                            (0, r.jsx)(f.Z, {
+                                                variant: f.y.BLUE,
                                                 progress: k.length,
                                                 maximum: j.length,
                                             }),
@@ -123,9 +123,9 @@ let S = l.memo(function (e) {
                                     onClick: (e) => {
                                         e.stopPropagation(),
                                             y &&
-                                                (0, p.wW)(t.skuId, n)
+                                                (0, g.wW)(t.skuId, n)
                                                     .then(() => {
-                                                        let e = f.Z.getProduct(n);
+                                                        let e = p.Z.getProduct(n);
                                                         null != e &&
                                                             (0, h.Z)({
                                                                 product: e,

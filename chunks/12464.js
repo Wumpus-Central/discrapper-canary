@@ -111,7 +111,7 @@ let p = function (e) {
             [f.cardNumberInput]: "cardNumber" === n,
         });
     }
-    function k() {
+    function j() {
         switch (n) {
             case "cardNumber":
                 return (0, r.jsxs)("div", {
@@ -173,7 +173,7 @@ let p = function (e) {
                     ref: t,
                     className: s()(f.hiddenDiv, _.input),
                 }),
-                k(),
+                j(),
                 (0, r.jsx)(c.pdY, { error: I }),
             ],
         })

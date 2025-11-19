@@ -1,5 +1,5 @@
 n.d(t, {
-    g: () => k,
+    g: () => j,
     i: () => x,
 });
 var r = n(54381),
@@ -161,7 +161,7 @@ function M() {
               ],
           });
 }
-let k = () =>
+let j = () =>
     (0, a.e7)([_.Z], () => _.Z.isPreview)
         ? null
         : (0, r.jsx)(l.Button, {

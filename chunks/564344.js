@@ -54,12 +54,12 @@ function R() {
             (0, p.Z)(R.id, R.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
     }, [null == a ? void 0 : a.id, R]);
     let M = !0,
-        k = !0;
+        j = !0;
     return (
         w &&
             1 === L.length &&
             (L.includes(A.s6.PROFILE_SERVER_PROFILES)
-                ? (x(S.NB.GUILD), (k = !1))
+                ? (x(S.NB.GUILD), (j = !1))
                 : L.includes(A.s6.PROFILE_USER_PROFILE) && (x(S.NB.USER_PROFILE), (M = !1))),
         (0, r.jsxs)(h.N, {
             header: C.intl.string(C.t["vi7f+q"]),
@@ -71,7 +71,7 @@ function R() {
                     selectedItem: P,
                     onItemSelect: x,
                     children: [
-                        k
+                        j
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {

@@ -32,7 +32,7 @@ var r = n(54381),
     L = n(245335),
     x = n(388032),
     M = n(552517);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -207,18 +207,18 @@ function F(e) {
                 return b.id === t;
             });
         }),
-        k = I.Z.getChannel(null == (n = s.channel) ? void 0 : n.id),
-        j = (0, c.e7)([S.Z], () => null != k && S.Z.can(D.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
+        j = I.Z.getChannel(null == (n = s.channel) ? void 0 : n.id),
+        k = (0, c.e7)([S.Z], () => null != j && S.Z.can(D.Plq.USE_EMBEDDED_ACTIVITIES, j), [j]),
         { analyticsLocations: U } = (0, h.ZP)(p.Z.INVITE_EMBED),
         G = (0, c.Wu)(
             [_.ZP],
             () =>
-                null != k
-                    ? _.ZP.getEmbeddedActivitiesForChannel(k.id)
+                null != j
+                    ? _.ZP.getEmbeddedActivitiesForChannel(j.id)
                           .filter((e) => e.applicationId === b.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [k, b.id],
+            [j, b.id],
         ),
         B = (0, c.Wu)([A.default], () => G.map((e) => A.default.getUser(e)).filter((e) => null != e), [G]),
         Z = i.useCallback(() => {
@@ -250,8 +250,8 @@ function F(e) {
               ? x.intl.string(x.t.sqe0hj)
               : x.intl.string(x.t.RscU7I)
         : x.intl.string(x.t["2BP08E"]);
-    let Y = (H && !j) || (H && w);
-    return (j || (o = x.intl.string(x.t.hHGrWz)), null == s.code || "" === s.code || null == N)
+    let Y = (H && !k) || (H && w);
+    return (k || (o = x.intl.string(x.t.hHGrWz)), null == s.code || "" === s.code || null == N)
         ? null
         : (0, r.jsx)(h.Gt, {
               value: U,
@@ -259,7 +259,7 @@ function F(e) {
                   app: N,
                   activityUsers: B,
                   isMember: H,
-                  channel: k,
+                  channel: j,
                   guild: v,
                   message: u,
                   members: m,
@@ -317,7 +317,7 @@ function V(e) {
     return (0, r.jsx)(
         m.W,
         G(
-            j(
+            k(
                 {
                     header: t.name,
                     title: x.intl.string(x.t["7vb6nw"]),

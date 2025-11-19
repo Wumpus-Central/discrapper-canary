@@ -1,7 +1,7 @@
 n.d(t, {
     $5: () => X,
     I8: () => Y,
-    Kt: () => j,
+    Kt: () => k,
     Lj: () => C,
     RW: () => H,
     Y3: () => q,
@@ -10,7 +10,7 @@ n.d(t, {
     _t: () => K,
     a1: () => G,
     bN: () => N,
-    dl: () => k,
+    dl: () => j,
     ft: () => z,
     hO: () => P,
     kH: () => U,
@@ -134,14 +134,14 @@ function M(e) {
         i = (0, o.L5)();
     return null != t && n && i && t.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD);
 }
-function k() {
+function j() {
     let e = (0, s.c_)("age-gate-utils"),
         t = (0, a.u)("age-gate-utils"),
         n = (0, l.U)("age-gate-utils"),
         r = (0, o.sf)();
     return (e || t || n) && r;
 }
-function j() {
+function k() {
     let e = (0, s.pY)("age-gate-utils"),
         t = (0, a.z)("age-gate-utils"),
         n = (0, l.s)("age-gate-utils"),
@@ -156,7 +156,7 @@ function U(e) {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        l = j(),
+        l = k(),
         u = w(e),
         d = b.intl.string(n ? b.t.xi46lg : b.t.ZmwvDc);
     if (l) {
@@ -203,7 +203,7 @@ function U(e) {
 }
 function G(e) {
     let t = (0, o.l6)(),
-        n = j(),
+        n = k(),
         i = e === g.L0.NSFW_SERVER || e === g.L0.NSFW_SERVER_INVITE || e === g.L0.NSFW_SERVER_INVITE_EMBED,
         a = (0, r.e7)([_.default], () => {
             var e;
@@ -245,7 +245,7 @@ function G(e) {
 let B = () => {
         let e = _.default.getCurrentUser();
         if (null == e) return !1;
-        let t = k();
+        let t = j();
         return !0 !== e.nsfwAllowed || t;
     },
     Z = (e) => {
@@ -254,7 +254,7 @@ let B = () => {
         return null != t && (0, c.Y2)(t);
     },
     F = (e) => !!B() && null != e && q(u.Z.getChannel(e)),
-    V = (e) => k() && F(e),
+    V = (e) => j() && F(e),
     H = (e) => !!V(e) && ((0, m.mN)(g.L0.NSFW_VOICE_CHANNEL), !0);
 function Y(e, t, n) {
     if (P(e)) return void (0, m.mN)(g.L0.ACCESS_LARGE_GUILD_UNDERAGE);

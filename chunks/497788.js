@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(393903),
     u = n(448986),
     d = n(381585),
-    g = n(597688),
-    p = n(1870),
-    f = n(884697),
+    f = n(597688),
+    g = n(1870),
+    p = n(884697),
     m = n(370039),
     h = n(937510),
     C = n(653126),
@@ -21,12 +21,12 @@ var r = n(54381),
     E = n(619899),
     O = n(215023),
     S = n(687983);
-(0, f.IC)(90);
+(0, p.IC)(90);
 let y = (e) => {
     let { isBlockLoading: t = !1, heroBlock: n, tab: i } = e,
-        f = (0, d.sp)(),
-        y = l.useMemo(() => g.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
-        j = (0, s.e7)([p.Z], () => p.Z.getPurchase(n.rewardSkuId)),
+        p = (0, d.sp)(),
+        y = l.useMemo(() => f.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
+        j = (0, s.e7)([g.Z], () => g.Z.getPurchase(n.rewardSkuId)),
         { cardContainerRef: k, totalCards: I } = ((e) => {
             let [t, n] = l.useState(1),
                 r = (0, o.dQu)(o.TVs.space.SPACE_XL),
@@ -51,7 +51,7 @@ let y = (e) => {
         })(i !== O.AW.ORBS),
         { products: T } = ((e, t, n, r) => {
             let i = (0, x.Z)(),
-                a = (0, s.e7)([g.Z], () => g.Z.products),
+                a = (0, s.e7)([f.Z], () => f.Z.products),
                 o = l.useMemo(
                     () =>
                         e
@@ -72,7 +72,7 @@ let y = (e) => {
                 !(T.length > 0) &&
                 n.rankedSkuIds.every((e) => {
                     var t;
-                    return (null == (t = g.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
+                    return (null == (t = f.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
                 }),
             [t, n.rankedSkuIds, T.length],
         ),
@@ -106,7 +106,7 @@ let y = (e) => {
                               n.rewardSkuId,
                           ),
                       T.map((e, t) => {
-                          let n = g.Z.getCategoryForProduct(e.skuId);
+                          let n = f.Z.getCategoryForProduct(e.skuId);
                           return null == e || null == n
                               ? null
                               : (0, r.jsx)(
@@ -122,7 +122,7 @@ let y = (e) => {
                                             {
                                                 skuId: null == e ? void 0 : e.skuId,
                                                 prioritizedCurrency: i === O.AW.ORBS ? _.tA.ORBS : void 0,
-                                                onClickAnalytics: (0, _.wO)(e, i, f),
+                                                onClickAnalytics: (0, _.wO)(e, i, p),
                                             },
                                             e.skuId,
                                         ),

@@ -44,8 +44,8 @@ var r,
     L = n(823379),
     x = n(226951),
     M = n(709054),
-    k = n(221518),
-    j = n(906411),
+    j = n(221518),
+    k = n(906411),
     U = n(714424),
     G = n(633302),
     B = n(396352),
@@ -532,7 +532,7 @@ function ew(e) {
             ? e.emoji
             : G.ZP.getByName(G.ZP.convertSurrogateToName(e.emoji.name, !1));
     if (null == t) return !1;
-    eU([t]), ej([t]);
+    eU([t]), ek([t]);
 }
 function eL(e, t) {
     if (s().isEmpty(e) && s().isEmpty(Q.pendingUsages) && T.Z.hasLoaded(Y.yP.FRECENCY_AND_FAVORITES_SETTINGS))
@@ -596,11 +596,11 @@ function eM(e) {
     if ((g.Z.setEmojiLocale(I.default.locale), t !== Y.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
     (Q.pendingUsages = []), (Q.emojiReactionPendingUsages = []);
 }
-function ek(e) {
-    let { emojiUsed: t } = e;
-    ej(t);
-}
 function ej(e) {
+    let { emojiUsed: t } = e;
+    ek(t);
+}
+function ek(e) {
     if (null == e) return !1;
     for (let r of e) {
         var t, n;
@@ -715,7 +715,7 @@ class eF extends (r = d.ZP.PersistedStore) {
                     boostCapitalizedWords: n,
                     boostAtEnd: l,
                     boostsIgnoreDisambiguators: u,
-                } = k.Z.getConfig({ location: "getSearchResultsOrder" }),
+                } = j.Z.getConfig({ location: "getSearchResultsOrder" }),
                 d = RegExp("^".concat(o), "i"),
                 f = RegExp("".concat(o, "$"), "i"),
                 _ = new RegExp("(^|_|[A-Z])".concat(o, "s?([A-Z]|_|$)")),
@@ -773,7 +773,7 @@ class eF extends (r = d.ZP.PersistedStore) {
                     });
                     return (
                         r !== F.Z5.PREMIUM_LOCKED || l
-                            ? null != r || (l && t.type !== j.B.UNICODE) || e.unlocked.push(t)
+                            ? null != r || (l && t.type !== k.B.UNICODE) || e.unlocked.push(t)
                             : e.locked.push(t),
                         e
                     );
@@ -824,7 +824,7 @@ let eV = new eF(f.Z, {
     GUILD_EMOJIS_UPDATE: eR,
     GUILD_DELETE: eP,
     MESSAGE_REACTION_ADD: ew,
-    EMOJI_TRACK_USAGE: ek,
+    EMOJI_TRACK_USAGE: ej,
     USER_SETTINGS_PROTO_UPDATE: eM,
     GUILD_ROLE_CREATE: eG,
     GUILD_ROLE_UPDATE: eG,

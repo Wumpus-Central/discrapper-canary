@@ -137,8 +137,8 @@ function g(e) {
         { labelId: N, controlId: R, errorMessageId: P, describedById: D, helperTextId: w, descriptionId: L } = C,
         x = null == y ? void 0 : y.horizontalControlColumnWidth,
         M = "group" === g || "radiogroup" === g,
-        k = M ? "span" : "label",
-        j = M ? "fieldset" : "div",
+        j = M ? "span" : "label",
+        k = M ? "fieldset" : "div",
         U = M
             ? (0, r.jsx)("legend", {
                   id: N,
@@ -152,7 +152,7 @@ function g(e) {
                   "aria-hidden": M,
                   "data-interactive": I,
                   id: N,
-                  tag: k,
+                  tag: j,
                   variant: "text-md/medium",
                   color: "text-primary",
                   htmlFor: R,
@@ -193,7 +193,7 @@ function g(e) {
         });
     return (0, r.jsx)(d.z.Provider, {
         value: C,
-        children: (0, r.jsxs)(j, {
+        children: (0, r.jsxs)(k, {
             role: g,
             ref: A,
             className: f.container,

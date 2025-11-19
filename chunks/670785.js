@@ -117,11 +117,11 @@ function x(e, t, n, r) {
 function M(e) {
     return D("crashed"), !0;
 }
-function k(e) {
+function j(e) {
     let { zones: t } = e;
     return P(t, "set_click_zones"), !0;
 }
-function j() {
+function k() {
     return D("refresh_host_window"), !0;
 }
 function U() {
@@ -153,9 +153,9 @@ let F = new Z(
         : {
               OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: U,
               OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: G,
-              OVERLAY_SET_CLICK_ZONES: k,
+              OVERLAY_SET_CLICK_ZONES: j,
               OVERLAY_FOCUSED: B,
-              OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: j,
+              OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: k,
               OVERLAY_CRASHED: M,
           },
 );

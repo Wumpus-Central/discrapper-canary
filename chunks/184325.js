@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(474936),
     x = n(681642),
     M = n(388032),
-    k = n(311838);
-function j(e, t, n) {
+    j = n(311838);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -103,7 +103,7 @@ function F(e) {
             className: a,
             badgeClassName: h,
             displayProfile: O,
-            onClose: j,
+            onClose: k,
             shouldOpenBadgeTooltip: G,
             shouldGlowTenureBadge: F,
         } = e,
@@ -117,7 +117,7 @@ function F(e) {
         Q = (0, _.c)(K, "UserProfileBadgeList"),
         J = (0, f.B)("UserProfileBadgeList");
     return (0, r.jsx)("div", {
-        className: o()(k.container, a),
+        className: o()(j.container, a),
         "aria-label": M.intl.string(M.t.VWV0y5),
         role: "group",
         children: n.map((e, t) => {
@@ -161,24 +161,24 @@ function F(e) {
                                       analyticsLocations: H,
                                       displayProfile: O,
                                   }),
-                                null == j || j();
+                                null == k || k();
                             return;
                         }
                         if (f) {
                             let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: H }) : null;
                             if (null == n) return;
-                            return null == j || j(), n(t);
+                            return null == k || k(), n(t);
                         }
                         return (
                             (0, m.k)({
                                 analyticsLocations: H,
                                 displayProfile: O,
                             }),
-                            void (null == j || j())
+                            void (null == k || k())
                         );
                     }
                     let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: H }) : null;
-                    if (null != n) return null == j || j(), n(t);
+                    if (null != n) return null == k || k(), n(t);
                 },
                 T = () => {
                     e.id === N.i &&
@@ -204,7 +204,7 @@ function F(e) {
                     alt: " ",
                     "aria-hidden": !0,
                     src: null != (n = e.iconSrc) ? n : (0, P.Ej)(e.icon),
-                    className: o()(k.badge, h),
+                    className: o()(j.badge, h),
                 }),
                 q = {
                     onClick: v,

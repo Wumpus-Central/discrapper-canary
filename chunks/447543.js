@@ -39,8 +39,8 @@ var r = n(525654),
     L = n(703656),
     x = n(922482),
     M = n(131704),
-    k = n(314897),
-    j = n(592125),
+    j = n(314897),
+    k = n(592125),
     U = n(984933),
     G = n(271383),
     B = n(430824),
@@ -149,7 +149,7 @@ function e_(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === er.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return et.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !M.tx.has(t.type) && (0, T.s)(e)) return et.oC.GUILD_HOME;
-    let a = j.Z.getChannel(t.id);
+    let a = k.Z.getChannel(t.id);
     return F.Z.can($.Plq.VIEW_CHANNEL, a)
         ? t.id
         : null != (i = null == (r = U.ZP.getDefaultChannel(e, !0, $.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id)
@@ -184,7 +184,7 @@ function eh(e) {
         } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && V.Z.getGuildId() !== t) return;
     let { type: p } = r,
-        g = j.Z.getChannel(r.id),
+        g = k.Z.getChannel(r.id),
         E = e_(t, r, i),
         y = p === $.d4z.GUILD_STAGE_VOICE,
         T = $.Z5c.CHANNEL(t, E);
@@ -276,9 +276,9 @@ function eg(e, t, n) {
 }
 let eE = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        j.Z.addConditionalChangeListener(() => {
+        k.Z.addConditionalChangeListener(() => {
             var r;
-            let i = j.Z.getChannel(e),
+            let i = k.Z.getChannel(e),
                 a = H.default.getCurrentUser();
             return (
                 null == i ||
@@ -473,7 +473,7 @@ let ev = {
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
             s = (0, R.fU)(r),
             l = s.baseCode,
-            c = k.default.getSessionId(),
+            c = j.default.getSessionId(),
             d = ef(i, s),
             _ = H.default.getCurrentUser();
         return null != (t = null == _ ? void 0 : _.hasFlag($.xW$.QUARANTINED)) && t

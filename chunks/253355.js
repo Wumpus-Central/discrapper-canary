@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var l = n(399606),
@@ -9,32 +9,32 @@ var l = n(399606),
     c = n(813083),
     u = n(794324),
     d = n(388032),
-    g = n(55783);
-function p(e) {
+    f = n(55783);
+function g(e) {
     let { category: t } = e,
         n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
         o = (0, l.e7)([s.Z], () => s.Z.isFocused()),
-        { catalogBannerStatic: p, catalogBannerAnimated: f } = (0, u.Oi)(t);
+        { catalogBannerStatic: g, catalogBannerAnimated: p } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
-        className: g.catalogBanner,
+        className: f.catalogBanner,
         children: [
             (0, r.jsx)("img", {
-                className: g.catalogBannerImage,
-                src: p,
+                className: f.catalogBannerImage,
+                src: g,
                 alt: t.name,
             }),
-            null != f &&
+            null != p &&
                 !n &&
                 o &&
                 (0, r.jsx)(a.Z, {
-                    src: f,
-                    className: g.animationAsset,
+                    src: p,
+                    className: f.animationAsset,
                     autoPlay: !0,
                     loop: !0,
                 }),
             (0, r.jsx)(c.Z, {
                 category: t,
-                className: g.limitedTimeBadge,
+                className: f.limitedTimeBadge,
                 daysRemainingText: d.t["8gsP5M"],
             }),
         ],

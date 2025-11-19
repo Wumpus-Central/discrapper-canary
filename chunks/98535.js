@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(597688),
     u = n(1870),
     d = n(870289),
-    g = n(149705),
-    p = n(929255),
-    f = n(752053),
+    f = n(149705),
+    g = n(929255),
+    p = n(752053),
     m = n(81136),
     h = n(566564),
     C = n(795477),
@@ -47,14 +47,14 @@ function v(e) {
             [v, s, c],
         ),
         I = (0, d.FF)("CollectiblesContent"),
-        { searchError: T } = (0, g.a)();
+        { searchError: T } = (0, f.a)();
     return I && null != T
         ? (0, r.jsx)(C.Z, {})
         : null != m
-          ? (0, r.jsx)(f.Z, {
+          ? (0, r.jsx)(p.Z, {
                 onRetry: u,
                 errorMessage: m,
-                errorOrigin: f.i.SHOP_PAGE,
+                errorOrigin: p.i.SHOP_PAGE,
             })
           : b.includes(t)
             ? (0, r.jsx)(h.Z, {
@@ -62,7 +62,7 @@ function v(e) {
                   tab: t,
                   transitionState: o,
               })
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(g.Z, {
                   tab: t,
                   sortedCategories: n,
                   initialCategoryId: O,

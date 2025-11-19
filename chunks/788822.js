@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(597688),
     u = n(297651),
     d = n(794324),
-    g = n(981631),
-    p = n(388032),
-    f = n(687983);
+    f = n(981631),
+    g = n(388032),
+    p = n(687983);
 let m = (e) => {
     var t, n, m;
     let h,
@@ -31,7 +31,7 @@ let m = (e) => {
         onChange: E,
         threshold: 0,
         children: (0, r.jsxs)(a.P3F, {
-            className: f.featuredBlock,
+            className: p.featuredBlock,
             innerRef: S,
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ let m = (e) => {
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: null == C ? void 0 : C.isOrbsExclusive,
                 }),
-                    s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    s.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                         sku_id: x,
                         page_type: "home",
@@ -81,25 +81,25 @@ let m = (e) => {
                     (0, r.jsx)(a.IGR, {
                         disableColor: !0,
                         text: b,
-                        className: f.featuredBlockBadge,
+                        className: p.featuredBlockBadge,
                     }),
                 (0, r.jsx)("div", {
-                    className: f.featuredBlockTextContainer,
+                    className: p.featuredBlockTextContainer,
                     children:
                         null != y &&
                         (0, r.jsx)(a.Heading, {
                             lineClamp: 4,
-                            className: f.featuredBlockBodyText,
+                            className: p.featuredBlockBodyText,
                             style: { color: null != (m = null == _ ? void 0 : _.bannerTextColor) ? m : "white" },
                             variant: "heading-md/medium",
                             children: y,
                         }),
                 }),
                 (0, r.jsx)("div", {
-                    className: f.featuredBlockButtonContainer,
+                    className: p.featuredBlockButtonContainer,
                     children: (0, r.jsx)(a.Button, {
                         variant: "overlay-primary",
-                        text: p.intl.string(p.t.jVcuVY),
+                        text: g.intl.string(g.t.jVcuVY),
                         onClick: (e) => {
                             v({
                                 sourceButton: "shop marketing take me there button",
@@ -108,7 +108,7 @@ let m = (e) => {
                                 isOrbsExclusive: null == C ? void 0 : C.isOrbsExclusive,
                             }),
                                 e.stopPropagation(),
-                                s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                s.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                                     sku_id: x,
                                     page_type: "home",

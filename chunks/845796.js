@@ -8,19 +8,19 @@ var r = n(54381),
     c = n(481060),
     u = n(626135),
     d = n(381585),
-    g = n(501431),
-    p = n(811847),
-    f = n(215023),
+    f = n(501431),
+    g = n(811847),
+    p = n(215023),
     m = n(981631),
     h = n(388032),
     C = n(815216),
     _ = n(664603);
 let b = () => {
-    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.S)(),
+    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, f.S)(),
         i = (0, d.sp)(),
-        b = (0, p.B)("CollectiblesSortSelect"),
+        b = (0, g.B)("CollectiblesSortSelect"),
         v = n(),
-        x = l.useMemo(() => f.aP.filter((e) => e.sortType !== o.E.RELEVANCE || v), [v]),
+        x = l.useMemo(() => p.aP.filter((e) => e.sortType !== o.E.RELEVANCE || v), [v]),
         E = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
             return t === o.E.RECENCY

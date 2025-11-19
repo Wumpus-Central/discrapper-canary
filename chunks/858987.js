@@ -130,8 +130,8 @@ function I(e) {
             hasAcceptedTerms: L,
             purchaseType: x,
             paymentSourceId: M,
-            activeSubscription: k,
-            devShelfFetchState: j,
+            activeSubscription: j,
+            devShelfFetchState: k,
             hasPaymentSources: U,
         } = (0, c.JL)(),
         G = O({
@@ -198,7 +198,7 @@ function I(e) {
                     ),
                 ),
         });
-    if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
+    if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && k === s.O.LOADING)
         return (0, r.jsx)(o.aML, {
             "data-migration-pending": !0,
             text: m.intl.string(m.t.cjA5tj),
@@ -254,9 +254,9 @@ function I(e) {
                     ),
                 ),
         });
-    else if (N && null != k && null != M)
+    else if (N && null != j && null != M)
         return (0, r.jsx)(_.Z, {
-            activeSubscription: k,
+            activeSubscription: j,
             onNext: R,
             isSubmitting: h,
             paymentSourceId: M,

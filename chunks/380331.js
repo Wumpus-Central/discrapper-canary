@@ -80,16 +80,16 @@ function L(e, t) {
 }
 let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     Z = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = k + M + 2 * U,
+    F = j + M + 2 * U,
     V = x + M,
     H = V + (B + 2 * Z),
-    Y = k + j + 2 * U,
+    Y = j + k + 2 * U,
     W = 7;
 function K(e) {
     let {
@@ -138,8 +138,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: k,
-                              width: k,
+                              height: j,
+                              width: j,
                               size: "custom",
                           })
                         : null,
@@ -266,7 +266,7 @@ let z = (e) => {
                 let n = A[e];
                 if (null == n) return 0;
                 let r = Q ? G : 0;
-                if (n.type === S.En.RECENT) return t ? 0 : j;
+                if (n.type === S.En.RECENT) return t ? 0 : k;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
                     return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * Z + M + r : M) : t ? r : M;
@@ -310,8 +310,8 @@ let z = (e) => {
                     children: (0, r.jsx)(f.EO4, {
                         size: "custom",
                         color: "currentColor",
-                        height: k,
-                        width: k,
+                        height: j,
+                        width: j,
                     }),
                 },
                 er,

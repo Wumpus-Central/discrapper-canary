@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(740492),
     x = n(695346),
     M = n(313789),
-    k = n(329013),
-    j = n(333859),
+    j = n(329013),
+    k = n(333859),
     U = n(273313),
     G = n(518596),
     B = n(726985),
@@ -198,7 +198,7 @@ let Q = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(k.g, {}),
+                (0, r.jsx)(j.g, {}),
             ],
         }),
     ei = () =>
@@ -299,7 +299,7 @@ class ea extends i.Component {
                   label: H.intl.string(H.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(er, {}),
-                      children: (0, r.jsx)(k.i, {}),
+                      children: (0, r.jsx)(j.i, {}),
                   }),
               });
     }
@@ -358,7 +358,7 @@ class ea extends i.Component {
             }),
             n = (0, r.jsx)(N.F, {
                 setting: B.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(j.c, {}),
+                children: (0, r.jsx)(k.c, {}),
             }),
             i = [
                 {

@@ -15,8 +15,8 @@ var r = t(54381),
     g = t(22082),
     _ = t(433355),
     x = t(430824),
-    b = t(31445),
-    C = t(59350),
+    C = t(31445),
+    b = t(59350),
     j = t(290511),
     O = t(176505),
     v = t(921944),
@@ -25,7 +25,7 @@ var r = t(54381),
     I = t(161655);
 function w(e) {
     let { guild: n } = e,
-        t = (0, b.Z)(n);
+        t = (0, C.Z)(n);
     l.useEffect(() => {
         (0, p.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: v.L.DISMISS });
     });
@@ -54,7 +54,7 @@ function w(e) {
 function Z(e) {
     let { guildId: n, selectedSection: t } = e,
         i = (0, o.e7)([x.Z], () => x.Z.getGuild(n)),
-        s = (0, b.Z)(i),
+        s = (0, C.Z)(i),
         [u, p] = l.useState(null != t ? t : j.l7.CUSTOMIZE);
     l.useEffect(() => {
         null != t && p(t);
@@ -115,7 +115,7 @@ function Z(e) {
                                   (() => {
                                       switch (u) {
                                           case j.l7.CUSTOMIZE:
-                                              return (0, r.jsx)(C.Z, {
+                                              return (0, r.jsx)(b.Z, {
                                                   guildId: n,
                                                   onBrowseChannels: () => p(j.l7.BROWSE),
                                               });

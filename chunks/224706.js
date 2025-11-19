@@ -92,7 +92,7 @@ function M(e) {
             }),
         );
 }
-function k(e, t) {
+function j(e, t) {
     return null == e || "" === e
         ? null
         : {
@@ -100,7 +100,7 @@ function k(e, t) {
               sku: t,
           };
 }
-function j(e) {
+function k(e) {
     return o.tn
         .post({
             url: P.ANM.OAUTH2_AUTHORIZE,
@@ -171,7 +171,7 @@ async function U(e) {
         if (null == e) throw Error("Missing dispatch game when launching");
         let i = y.Z.getLibraryApplication(t, n);
         if (null == i) throw Error("Missing library application when launching");
-        d = j(t).then((t) => T.Z.launchDispatchApplication(e, t, g.default.locale, i.getBranchName(), r));
+        d = k(t).then((t) => T.Z.launchDispatchApplication(e, t, g.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? T.Z.launch(e) : T.Z.launchGame(t);
@@ -350,7 +350,7 @@ let G = {
                             name: t,
                             os: (0, S.getPlatformName)(),
                             icon: n,
-                            distributor_application: k(i, a),
+                            distributor_application: j(i, a),
                             executable: c,
                             publisher: r,
                             report_version: L,

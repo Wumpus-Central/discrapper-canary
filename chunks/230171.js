@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => k,
+    O: () => j,
     U: () => L.U,
 }),
     n(539854),
@@ -40,7 +40,7 @@ var r = n(54381),
     L = n(967249),
     x = n(388032),
     M = n(299650);
-function k(e) {
+function j(e) {
     var t;
     let { app: n, linkType: a, activityCustomId: o, activityReferrerId: l, message: m, onView: g } = e,
         { name: E, bot: O } = (n = (0, P.O)(n)),
@@ -52,7 +52,7 @@ function k(e) {
             bot: O,
         }),
         { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, D.E)(n),
-        k = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
+        j = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: B, instanceId: Z, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
         H = (0, u.Z)(),
@@ -85,7 +85,7 @@ function k(e) {
                                       isStart: null == Z,
                                       embeddedActivitiesManager: H,
                                       customId: o,
-                                      referrerId: k,
+                                      referrerId: j,
                                       analyticsLocations: G,
                                   });
                               },
@@ -102,15 +102,15 @@ function k(e) {
                                       botId: v,
                                       analyticsLocations: G,
                                       customId: o,
-                                      referrerId: k,
+                                      referrerId: j,
                                   });
                               },
                           }))
                     : null != q && e.push(q),
                 e
             );
-        }, [K, W, Z, F, B, n.id, H, o, k, G, I, q, v]),
-        Q = I ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(j, { app: n });
+        }, [K, W, Z, F, B, n.id, H, o, j, G, I, q, v]),
+        Q = I ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
     return (0, r.jsx)(C.W, {
         title: E,
         staticBannerSrc: N,
@@ -124,7 +124,7 @@ function k(e) {
         trackingConfig: {
             id: n.id,
             linkType: a,
-            referrerId: k,
+            referrerId: j,
             activityCustomId: o,
             onView: g,
             guildId: null == (t = y.Z.getChannel(m.channel_id)) ? void 0 : t.guild_id,
@@ -133,7 +133,7 @@ function k(e) {
         },
     });
 }
-function j(e) {
+function k(e) {
     var t, n, o;
     let { app: c } = e,
         u =

@@ -15,8 +15,8 @@ var r = t(54381),
     g = t(665149),
     _ = t(442336),
     x = t(910611),
-    b = t(41776),
-    C = t(703656),
+    C = t(41776),
+    b = t(703656),
     j = t(6025),
     O = t(340501),
     v = t(592125),
@@ -73,30 +73,30 @@ function B(e, n) {
 }
 function A(e) {
     let { channelId: n, baseChannelId: A, channelViewSource: k = "Split View", isResourceChannelView: D } = e,
-        R = (0, i.e7)([v.Z], () => v.Z.getChannel(n)),
-        L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        H = (0, w.ZP)(R),
-        M = (0, i.e7)([b.Z], () => (null == L ? void 0 : L.id) != null && b.Z.isLurking(L.id), [L]),
+        L = (0, i.e7)([v.Z], () => v.Z.getChannel(n)),
+        R = (0, i.e7)([N.Z], () => N.Z.getGuild(null == L ? void 0 : L.getGuildId())),
+        H = (0, w.ZP)(L),
+        M = (0, i.e7)([C.Z], () => (null == R ? void 0 : R.id) != null && C.Z.isLurking(R.id), [R]),
         U = (0, f.Z)(n),
         G = (0, i.e7)([m.Z], () => {
             var e;
-            return null == (e = m.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
+            return null == (e = m.Z.getResourceForChannel(null == R ? void 0 : R.id, n)) ? void 0 : e.title;
         }),
-        W = (0, c.$5)(R),
-        F = l.useRef(!1);
+        F = (0, c.$5)(L),
+        W = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            null == R ||
-                F.current ||
-                ((F.current = !0),
-                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(R.id)), { channel_view: k })),
-                (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id }));
-        }, [R, k]),
-        null == R || null == L)
+            null == L ||
+                W.current ||
+                ((W.current = !0),
+                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(L.id)), { channel_view: k })),
+                (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
+        }, [L, k]),
+        null == L || null == R)
     )
         return null;
     let q = [];
-    return (M || q.push((0, r.jsx)(_.Z, { channel: R }, "notifications")),
+    return (M || q.push((0, r.jsx)(_.Z, { channel: L }, "notifications")),
     q.push(
         (0, r.jsx)(
             g.ZP.Icon,
@@ -108,24 +108,24 @@ function A(e) {
             "close",
         ),
     ),
-    W)
+    F)
         ? (0, r.jsx)(O.Z, {
-              guild: L,
-              channelId: R.id,
+              guild: R,
+              channelId: L.id,
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(s.Z, {
-                      channel: R,
+                      channel: L,
                       draftType: y.d.ChannelMessage,
                   }),
                   (0, r.jsx)(g.ZP, {
                       toolbar: q,
                       "aria-label": S.intl.string(S.t.BIYAqa),
                       children: (0, x.ud)({
-                          channel: R,
+                          channel: L,
                           channelName: U ? G : H,
-                          guild: L,
+                          guild: R,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
@@ -136,19 +136,19 @@ function A(e) {
                                       (0, r.jsx)(
                                           e,
                                           B(T({}, n), {
-                                              channel: R,
-                                              guild: L,
+                                              channel: L,
+                                              guild: R,
                                           }),
                                       );
                               });
                           },
                           handleClick: () => {
-                              let e = I.Z.getMessages(R.id);
+                              let e = I.Z.getMessages(L.id);
                               if (D) {
-                                  (0, C.uL)(P.Z5c.CHANNEL(R.guild_id, R.id)), (0, h.C3)(R.guild_id, null);
+                                  (0, b.uL)(P.Z5c.CHANNEL(L.guild_id, L.id)), (0, h.C3)(L.guild_id, null);
                                   return;
                               }
-                              (0, C.XU)(R.guild_id, R.id, e.jumpTargetId);
+                              (0, b.XU)(L.guild_id, L.id, e.jumpTargetId);
                           },
                       }),
                   }),
@@ -157,8 +157,8 @@ function A(e) {
                       children: (0, r.jsx)(
                           Z.Z,
                           {
-                              channel: R,
-                              guild: L,
+                              channel: L,
+                              guild: R,
                               chatInputType: p.Ie.SIDEBAR,
                           },
                           n,

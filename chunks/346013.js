@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,10 +85,10 @@ function U(e, t) {
 }
 function G(e) {
     var t, n, a, M;
-    let { embedUrl: j, message: G, channel: B } = e,
+    let { embedUrl: k, message: G, channel: B } = e,
         Z = i.useRef(null),
         F = i.useRef(null),
-        V = (0, R.J)(j, G),
+        V = (0, R.J)(k, G),
         { setPopout: H } = (0, b.Z)(G.id, D.d$),
         Y = (0, E.qo)(G, B, H, !0),
         W = v.QK.useSetting(),
@@ -177,7 +177,7 @@ function G(e) {
                           children: (e) =>
                               (0, r.jsx)(
                                   u.rz2,
-                                  U(k({}, e), {
+                                  U(j({}, e), {
                                       ref: Z,
                                       name: V.authorName,
                                       colorString: et,
@@ -279,7 +279,7 @@ function G(e) {
                                             onMouseLeave: e_,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                U(k({}, e), {
+                                                U(j({}, e), {
                                                     ref: F,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,

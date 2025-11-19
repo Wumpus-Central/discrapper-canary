@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => j,
     wU: () => w,
 }),
     n(388685);
@@ -254,4 +254,4 @@ let M = new x(s.Z, {
         POGGERMODE_UPDATE_MESSAGE_COMBO: D,
         MESSAGE_CREATE: L,
     }),
-    k = M;
+    j = M;

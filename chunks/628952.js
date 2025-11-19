@@ -90,7 +90,7 @@ let C = (e) => {
     if (null == R) return null;
     let [M] = R.items;
     l()(null != M, "Product item should not be empty");
-    let k = () => {
+    let j = () => {
             if ((null == R ? void 0 : R.type) === c.Z.BUNDLE) return null;
             switch (M.type) {
                 case c.Z.AVATAR_DECORATION:
@@ -103,7 +103,7 @@ let C = (e) => {
                     return null;
             }
         },
-        j =
+        k =
             null != P &&
             P.id !== (null == w ? void 0 : w.id) &&
             R.type !== c.Z.BUNDLE &&
@@ -121,7 +121,7 @@ let C = (e) => {
                     children: (0, r.jsx)(d.gNt, {
                         label: O.intl.string(O.t.PpoJzt),
                         children:
-                            j &&
+                            k &&
                             (0, r.jsx)(
                                 d.yRy,
                                 {
@@ -185,7 +185,7 @@ let C = (e) => {
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",
                                         color: "header-secondary",
-                                        children: k(),
+                                        children: j(),
                                     }),
                                 ],
                             }),

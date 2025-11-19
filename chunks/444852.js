@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -258,7 +258,7 @@ class V extends c.Z {
         this.on(u.z.State, (e, t, n) => {
             if (
                 (l.Z.dispatch(
-                    j(
+                    k(
                         M(
                             {
                                 type: "RTC_CONNECTION_STATE",
@@ -602,7 +602,7 @@ class V extends c.Z {
         let e = this.isOwner ? (0, D.Z)() : null;
         S.default.track(
             w.rMx.VIDEO_STREAM_STARTED,
-            j(M({}, this.getStreamAnalyticsProperties(), e), {
+            k(M({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: O.Z.getType(),
                 effective_connection_speed: O.Z.getEffectiveConnectionSpeed(),
                 service_provider: O.Z.getServiceProvider(),
@@ -635,7 +635,7 @@ class V extends c.Z {
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 S.default.track(
                     w.rMx.VIDEO_STREAM_ENDED,
-                    j(
+                    k(
                         M(
                             {},
                             a,
@@ -668,7 +668,7 @@ class V extends c.Z {
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     S.default.track(
                         w.rMx.VIDEO_STREAM_ENDED,
-                        j(
+                        k(
                             M(
                                 {},
                                 a,

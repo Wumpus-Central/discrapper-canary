@@ -98,10 +98,10 @@ function M(e) {
     let n = L(h.Z.getChannelId());
     return null != n && n in R && (delete R[n], (t = !0)), t && e ? e : !e;
 }
-function k() {
+function j() {
     D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), C && (C = M(C)), (A = M(A));
 }
-function j() {
+function k() {
     A && (A = M(A)), (C = M(C));
 }
 function U() {
@@ -277,9 +277,9 @@ class Q extends (r = a.ZP.PersistedStore) {
 O(Q, "displayName", "ChannelSectionStore"), O(Q, "persistKey", "ChannelSectionStore2");
 let J = new Q(o.Z, {
     SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: X,
-    CHANNEL_TOGGLE_MEMBERS_SECTION: k,
+    CHANNEL_TOGGLE_MEMBERS_SECTION: j,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: U,
-    CHANNEL_TOGGLE_SUMMARIES_SECTION: j,
+    CHANNEL_TOGGLE_SUMMARIES_SECTION: k,
     SIDEBAR_VIEW_CHANNEL: Z,
     SIDEBAR_VIEW_GUILD: G,
     SIDEBAR_CREATE_THREAD: F,

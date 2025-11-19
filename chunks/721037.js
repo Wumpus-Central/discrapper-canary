@@ -51,8 +51,8 @@ let x = {
         minWidth: P.Rv[P.cL.VIDEO],
         maxWidth: P.$i[P.cL.VIDEO],
     },
-    k = [];
-class j extends i.PureComponent {
+    j = [];
+class k extends i.PureComponent {
     render() {
         let {
                 selectedPIPWindow: e,
@@ -117,8 +117,8 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         L = s.ZP.getCurrentEmbeddedActivity(),
         x = (0, c.p)(null == L ? void 0 : L.location),
         M = null != L && !(0, u.Z)(x, I.Z, S.Z),
-        j = s.ZP.getActivityPanelMode(),
-        U = M && j === R.Ez.PANEL,
+        k = s.ZP.getActivityPanelMode(),
+        U = M && k === R.Ez.PANEL,
         G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
         Z = p.Z.getFrameLayoutMode() === D.U.FOCUSED,
@@ -173,7 +173,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         ea = !er && null != h && et && en;
     return {
         selectedPIPWindow: h,
-        pipWindows: 0 === J.length ? k : J,
+        pipWindows: 0 === J.length ? j : J,
         pipWidth: q,
         maxX: Y.width - (ea ? $ : 0),
         maxY: Y.height,
@@ -188,4 +188,4 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         chatOpen: en,
         callChatSidebarWidth: $,
     };
-})(j);
+})(k);

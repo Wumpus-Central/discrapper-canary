@@ -119,8 +119,8 @@ let C = i.memo(function (e) {
             wrapperClassName: L,
         } = e,
         [x, M] = i.useState(!1),
-        k = n || x || P === g._1z.FOCUSED,
-        j = (0, l.e7)([h.Z, p.Z], () => h.Z.isInputLocked(p.Z.getTargetPID()));
+        j = n || x || P === g._1z.FOCUSED,
+        k = (0, l.e7)([h.Z, p.Z], () => h.Z.isInputLocked(p.Z.getTargetPID()));
     i.useEffect(() => {
         null == a || a();
     }, [a]);
@@ -156,7 +156,7 @@ let C = i.memo(function (e) {
         });
     }
     function H() {
-        let e = "function" == typeof O ? O(k, j) : O;
+        let e = "function" == typeof O ? O(j, k) : O;
         return null != O
             ? (0, r.jsx)(u.Text, {
                   className: b.hint,
@@ -210,7 +210,7 @@ let C = i.memo(function (e) {
                 });
     }
     function K() {
-        let e = null == N ? void 0 : N(k, j);
+        let e = null == N ? void 0 : N(j, k);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -231,7 +231,7 @@ let C = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: "interactive-normal",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
                                           children: S,
                                       })
                                     : null,
@@ -374,8 +374,8 @@ function w(e) {
             props: {
                 onNotificationShow: x,
                 onDismissClick: M,
-                renderFooter: k,
-                onNotificationClick: j,
+                renderFooter: j,
+                onNotificationClick: k,
                 onConfirmClick: U,
                 onCancelClick: G,
                 disableClickableRegions: B = !1,

@@ -44,8 +44,8 @@ function L(e, t, n) {
 }
 let x = 5,
     M = c()().subtract(1, "week"),
-    k = [],
-    j = "",
+    j = [],
+    k = "",
     U = !1;
 function G(e, t) {
     return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: "base" });
@@ -102,7 +102,7 @@ function K(e, t) {
 }
 function z(e) {
     let { query: t } = e;
-    j = t;
+    k = t;
 }
 function q(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
@@ -178,11 +178,11 @@ function Q() {
         );
     return (
         (U = null != g.Z.lastFetched && E.Z.fetched),
-        !s().isEqual(a, k) &&
-            ((k = a),
+        !s().isEqual(a, j) &&
+            ((j = a),
             N.isPlatformEmbedded &&
                 R.ZP.setSystemTrayApplications(
-                    V(k)
+                    V(j)
                         .map((e) => e.application)
                         .slice(0, x),
                 ),
@@ -195,25 +195,25 @@ class J extends (r = u.ZP.Store) {
             this.syncWith([O.Z, h.default], () => !0);
     }
     get applicationFilterQuery() {
-        return j;
-    }
-    get applicationViewItems() {
         return k;
     }
+    get applicationViewItems() {
+        return j;
+    }
     get launchableApplicationViewItems() {
-        return V(k);
+        return V(j);
     }
     get libraryApplicationViewItems() {
-        return F(k);
+        return F(j);
     }
     get filteredLibraryApplicationViewItems() {
-        return H(this.libraryApplicationViewItems, j);
+        return H(this.libraryApplicationViewItems, k);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, h.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
-        return W(k);
+        return W(j);
     }
     get hasFetchedApplications() {
         return U;

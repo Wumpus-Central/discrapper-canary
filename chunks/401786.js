@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(415506), n(388685);
+n.d(t, { default: () => k }), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -109,14 +109,14 @@ function M(e) {
                 return [[], !0];
             }
         }, [o]),
-        k = i.useRef(O);
+        j = i.useRef(O);
     i.useEffect(() => {
-        k.current = O;
+        j.current = O;
     }),
         i.useEffect(() => {
-            M && k.current();
+            M && j.current();
         }, [M]);
-    let { premiumSubscriptionPlan: j, premiumGuildPlan: U } = (0, l.cj)([v.Z], () => {
+    let { premiumSubscriptionPlan: k, premiumGuildPlan: U } = (0, l.cj)([v.Z], () => {
             let e = v.Z.get(o.planId);
             return {
                 premiumSubscriptionPlan: e,
@@ -141,7 +141,7 @@ function M(e) {
             analyticsLocations: G,
             analyticsLocation: f.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         });
-    if (null == F || null == j || null == U || null == B) return (0, r.jsx)(c.$jN, {});
+    if (null == F || null == k || null == U || null == B) return (0, r.jsx)(c.$jN, {});
     let V =
             (o.items.some((e) => {
                 let { planId: t } = e;
@@ -159,7 +159,7 @@ function M(e) {
             return N.Z1.has(t);
         }),
         Y = V || H ? F.total - B.total : -B.total,
-        { interval: W, intervalCount: K } = j,
+        { interval: W, intervalCount: K } = k,
         z = P.intl.format(P.t["0W23cu"], { endDate: F.subscriptionPeriodStart });
     return (
         o.isPausedForFractionalPremium &&
@@ -233,7 +233,7 @@ function M(e) {
         })
     );
 }
-function k(e) {
+function j(e) {
     let { premiumSubscription: t, fractionalPremiumInfo: n, onClose: i, transitionState: a } = e,
         o = t.currentPeriodEnd;
     t.isPausedForFractionalPremium && (o = n.endsAt.toDate());
@@ -259,7 +259,7 @@ function k(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: a, onClose: o } = e;
     i.useEffect(() => {
@@ -302,7 +302,7 @@ function j(e) {
                 });
                 break;
             case 3:
-                t = (0, r.jsx)(k, {
+                t = (0, r.jsx)(j, {
                     premiumSubscription: s,
                     fractionalPremiumInfo: d,
                     onClose: o,

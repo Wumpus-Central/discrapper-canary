@@ -1,107 +1,107 @@
-n.d(t, { Z: () => P });
-var r = n(54381),
-    i = n(473749),
-    l = n(442837),
-    o = n(481060),
-    a = n(616780),
-    c = n(728285),
-    u = n(300284),
-    s = n(484459),
-    b = n(314897),
-    p = n(271383),
-    d = n(430824),
-    O = n(496675),
-    f = n(594174),
-    y = n(981631),
-    g = n(388032),
-    j = n(862336);
-function P(e) {
-    let { guildId: t, userId: P, analyticsLocation: h, analyticsLocations: v, context: E, icon: w } = e,
-        Z = d.Z.getGuild(t),
-        m = b.default.getId(),
-        D = (0, l.e7)([f.default], () => f.default.getUser(P)),
-        S = (0, l.e7)([p.ZP], () => p.ZP.isGuestOrLurker(t, P), [t, P]);
-    (0, l.e7)([O.Z], () => O.Z.getGuildVersion(t), [t]);
-    let C = i.useMemo(() => ({ [t]: [P] }), [t, P]);
-    (0, a.$)(C, "useChangeIdentityItem");
-    let N = E === y.IlC.POPOUT,
-        I = (0, u.Z)({
-            guild: Z,
-            analyticsLocations: v,
+t.d(n, { Z: () => p });
+var l = t(54381),
+    i = t(473749),
+    r = t(442837),
+    a = t(481060),
+    u = t(616780),
+    o = t(728285),
+    s = t(300284),
+    d = t(484459),
+    c = t(314897),
+    g = t(271383),
+    Z = t(430824),
+    f = t(496675),
+    b = t(594174),
+    O = t(981631),
+    m = t(388032),
+    h = t(862336);
+function p(e) {
+    let { guildId: n, userId: p, analyticsLocation: P, analyticsLocations: j, context: v, icon: y } = e,
+        N = Z.Z.getGuild(n),
+        x = c.default.getId(),
+        E = (0, r.e7)([b.default], () => b.default.getUser(p)),
+        _ = (0, r.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, p), [n, p]);
+    (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
+    let C = i.useMemo(() => ({ [n]: [p] }), [n, p]);
+    (0, u.$)(C, "useChangeIdentityItem");
+    let I = v === O.IlC.POPOUT,
+        S = (0, s.Z)({
+            guild: N,
+            analyticsLocations: j,
         }),
-        _ = (0, c.Aq)();
-    if (null == Z || N) return null;
-    let G = m === P && (O.Z.can(y.Plq.CHANGE_NICKNAME, Z) || O.Z.can(y.Plq.MANAGE_NICKNAMES, Z)),
-        k = m === P,
-        x = O.Z.canManageUser(y.Plq.MANAGE_NICKNAMES, P, Z);
-    if (!(G || x || k) || null == D || S) return null;
-    let A = Z.features.has(y.GuildFeatures.HUB) ? g.intl.string(g.t["+MWrWt"]) : g.intl.string(g.t["PKQB/H"]),
-        M = k ? A : g.intl.string(g.t.dilOF6);
-    return (0, r.jsx)(o.sNh, {
+        T = (0, o.Aq)();
+    if (null == N || I) return null;
+    let A = x === p && (f.Z.can(O.Plq.CHANGE_NICKNAME, N) || f.Z.can(O.Plq.MANAGE_NICKNAMES, N)),
+        U = x === p,
+        M = f.Z.canManageUser(O.Plq.MANAGE_NICKNAMES, p, N);
+    if (!(A || M || U) || null == E || _) return null;
+    let k = N.features.has(O.GuildFeatures.HUB) ? m.intl.string(m.t["+MWrWt"]) : m.intl.string(m.t["PKQB/H"]),
+        w = U ? k : m.intl.string(m.t.dilOF6);
+    return (0, l.jsx)(a.sNh, {
         id: "change-nickname",
-        label: (0, r.jsx)("div", {
-            className: j.labelWrapper,
-            children: (0, r.jsx)("span", {
-                className: j.label,
-                children: M,
+        label: (0, l.jsx)("div", {
+            className: h.labelWrapper,
+            children: (0, l.jsx)("span", {
+                className: h.label,
+                children: w,
             }),
         }),
-        icon: w,
+        icon: y,
         action: () => {
-            k
-                ? ((0, s.Z)(D.id, D.getAvatarURL(t, 80), { guildId: t }),
-                  I(),
-                  _.dispatch(y.CkL.POPOUT_CLOSE),
-                  (0, o.pTH)())
-                : (0, o.ZDy)(async () => {
-                      let { default: e } = await n.e("56698").then(n.bind(n, 82035));
-                      return (n) => {
-                          var i, l;
-                          return (0, r.jsx)(
+            U
+                ? ((0, d.Z)(E.id, E.getAvatarURL(n, 80), { guildId: n }),
+                  S(),
+                  T.dispatch(O.CkL.POPOUT_CLOSE),
+                  (0, a.pTH)())
+                : (0, a.ZDy)(async () => {
+                      let { default: e } = await t.e("56698").then(t.bind(t, 82035));
+                      return (t) => {
+                          var i, r;
+                          return (0, l.jsx)(
                               e,
                               ((i = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
+                                  for (var n = 1; n < arguments.length; n++) {
+                                      var t = null != arguments[n] ? arguments[n] : {},
+                                          l = Object.keys(t);
                                       "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          (l = l.concat(
+                                              Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                               }),
                                           )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
+                                          l.forEach(function (n) {
+                                              var l;
+                                              (l = t[n]),
+                                                  n in e
+                                                      ? Object.defineProperty(e, n, {
+                                                            value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0,
                                                         })
-                                                      : (e[t] = r);
+                                                      : (e[n] = l);
                                           });
                                   }
                                   return e;
-                              })({}, n)),
-                              (l = l =
+                              })({}, t)),
+                              (r = r =
                                   {
-                                      guildId: t,
-                                      user: D,
-                                      analyticsSource: h,
-                                      analyticsLocations: v,
+                                      guildId: n,
+                                      user: E,
+                                      analyticsSource: P,
+                                      analyticsLocations: j,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+                                  : (function (e, n) {
+                                        var t = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
+                                            var l = Object.getOwnPropertySymbols(e);
+                                            t.push.apply(t, l);
                                         }
-                                        return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                        return t;
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
                                     }),
                               i),
                           );

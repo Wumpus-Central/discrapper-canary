@@ -53,9 +53,9 @@ function C(e) {
     function M(e, t) {
         if (!e && (0, _.S)())
             return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
-        t ? L(e) : k(!e);
+        t ? L(e) : j(!e);
     }
-    function k(e) {
+    function j(e) {
         let t = () => {
                 h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), x(e, !0);
             },

@@ -7,13 +7,13 @@ n.d(t, {
     _o: () => Z,
     fK: () => G,
     fi: () => H,
-    jr: () => j,
+    jr: () => k,
     lW: () => U,
     mK: () => P,
     oK: () => w,
     oc: () => x,
     p8: () => Y,
-    qg: () => k,
+    qg: () => j,
     wW: () => W,
 }),
     n(388685),
@@ -182,7 +182,7 @@ let P = (e) => {
                 i && (0, _.v)("fetchCollectiblesCategories failed: ".concat(e.message));
         }
     },
-    k = async (e) => {
+    j = async (e) => {
         if (p.Z.isFetching) return;
         s.Z.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
         let t = c.ZP.get("shop_show_debug_overlay");
@@ -214,7 +214,7 @@ let P = (e) => {
             );
         }
     },
-    j = async (e, t) => {
+    k = async (e, t) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_PRODUCT_FETCH",
             skuId: e,
@@ -247,7 +247,7 @@ let P = (e) => {
         }
     },
     U = async (e, t) => {
-        f.Z.isFetchingProduct(e) || (await j(e, t));
+        f.Z.isFetchingProduct(e) || (await k(e, t));
     },
     G = async (e) => {
         s.Z.dispatch({

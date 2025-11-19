@@ -307,7 +307,7 @@ e.exports = function (e) {
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/,
         },
-        k = {
+        j = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/],
@@ -324,7 +324,7 @@ e.exports = function (e) {
             contains: [w],
             illegal: /%/,
         },
-        j = {
+        k = {
             relevance: 0,
             match: /\b[A-Z][A-Z_0-9]+\b/,
             className: "variable.constant",
@@ -465,7 +465,7 @@ e.exports = function (e) {
                     },
                 ],
             },
-            k,
+            j,
             { beginKeywords: "while if switch catch for" },
             {
                 begin:
@@ -497,7 +497,7 @@ e.exports = function (e) {
                 contains: [w],
             },
             G,
-            j,
+            k,
             L,
             Z,
             { match: /\$[(.]/ },

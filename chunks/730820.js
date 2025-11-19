@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function j(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -114,7 +114,7 @@ function k(e) {
         }),
     });
 }
-class j extends i.PureComponent {
+class k extends i.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -205,7 +205,7 @@ class j extends i.PureComponent {
                     text: R.intl.string(R.t.qZZUy6),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
+            let i = (e) => e.map((e) => (0, r.jsx)(j, { code: e }, e.code));
             e = (0, r.jsxs)(l.Kqy, {
                 gap: 16,
                 children: [
@@ -420,5 +420,5 @@ function U(e) {
         togglingSMS: y.Z.togglingSMS,
         hasTOTPEnabled: b.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(j, L({ currentUser: t }, n, e));
+    return (0, r.jsx)(k, L({ currentUser: t }, n, e));
 }

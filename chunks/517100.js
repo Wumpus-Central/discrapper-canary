@@ -138,11 +138,11 @@ function M(e) {
         !1)
     );
 }
-function k() {
+function j() {
     if (!d.Z.getConfig({ location: "handleSettingsProtoUpdate" }).settings_updates) return !1;
     M({});
 }
-class j extends (i = s.ZP.Store) {
+class k extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(h.default);
     }
@@ -162,8 +162,8 @@ class j extends (i = s.ZP.Store) {
         return I;
     }
 }
-E(j, "displayName", "IdleStore");
-let U = new j(l.Z, {
+E(k, "displayName", "IdleStore");
+let U = new k(l.Z, {
     IDLE: D,
     AFK: w,
     SPEAKING: L,
@@ -174,5 +174,5 @@ let U = new j(l.Z, {
     WINDOW_FOCUS: M,
     OVERLAY_INITIALIZE: M,
     OVERLAY_SET_INPUT_LOCKED: M,
-    USER_SETTINGS_PROTO_UPDATE: k,
+    USER_SETTINGS_PROTO_UPDATE: j,
 });

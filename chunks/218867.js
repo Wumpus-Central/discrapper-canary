@@ -40,13 +40,13 @@ let d = i.memo(
             [w, L] = i.useState(-1),
             x = i.useRef(null),
             M = i.useRef(0),
-            k = i.useRef(-1);
+            j = i.useRef(-1);
         (0, l.Ng)(() => {
             var e;
             let t = null == (e = x.current) ? void 0 : e.getScrollerNode();
             null != t && (t.scrollTop = N);
         });
-        let j = i.useCallback(() => {
+        let k = i.useCallback(() => {
                 let e = "function" == typeof I ? I() : I;
                 return null == e ? 0 : e;
             }, [I]),
@@ -94,7 +94,7 @@ let d = i.memo(
                     r = d[0],
                     i = [],
                     a = [];
-                r += j();
+                r += k();
                 for (let o = 0; o < n; o++) {
                     let n = t ? E[o] : g,
                         s = (null == E ? void 0 : E[o]) !== 0;
@@ -126,7 +126,7 @@ let d = i.memo(
                     rowDescriptors: i,
                     sectionDescriptors: a,
                 };
-            }, [U, B, G, Z, d, g, E, j]);
+            }, [U, B, G, Z, d, g, E, k]);
         (F.current = W), (V.current = Y);
         let K = i.useCallback(() => {
             var e;
@@ -158,8 +158,8 @@ let d = i.memo(
                 r = u(x);
             null != t &&
                 null != r &&
-                (r.cancelAnimationFrame(k.current),
-                (k.current = r.requestAnimationFrame(() => {
+                (r.cancelAnimationFrame(j.current),
+                (j.current = r.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
                     (M.current = e), null == n || n(e), D(e);
                 })));
@@ -255,7 +255,7 @@ let d = i.memo(
                     n = 0,
                     r = d[0],
                     i = [],
-                    a = j();
+                    a = k();
                 null != m && e < a ? i.push(m()) : (r += a);
                 for (let a = 0; a < W.length; a++) {
                     let {
@@ -299,7 +299,7 @@ let d = i.memo(
                     visibleItems: i,
                     listOffset: r,
                 };
-            }, [U, B, G, Z, d, f, _, h, p, P, W, T, m, j, w]),
+            }, [U, B, G, Z, d, f, _, h, p, P, W, T, m, k, w]),
             Q = i.useMemo(() => {
                 var e, t, n;
                 return {

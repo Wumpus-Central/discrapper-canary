@@ -81,10 +81,10 @@ function M(e, t) {
     );
 }
 new g.Z("ChannelEditor.tsx");
-let k = function () {
+let j = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    j = 1000;
+    k = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,7 +106,7 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
@@ -250,8 +250,8 @@ class U extends i.Component {
                 required: P,
                 maxCharacterCount: w,
                 allowNewLines: x,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                isEditorIdle: j,
+                currentAutocompleteType: k,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 accessibilityLabel: B,
@@ -292,8 +292,8 @@ class U extends i.Component {
                 }),
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                isEditorIdle: j,
+                currentAutocompleteType: k,
                 disableAutoFocus: u.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = V.id) ? a : void 0,
@@ -456,7 +456,7 @@ class U extends i.Component {
                     },
                     v = null != s ? s : c,
                     { files: I, errors: T } = G(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (k(
+                return (j(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)

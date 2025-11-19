@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     mw: () => M,
-    nH: () => j,
+    nH: () => k,
 }),
     n(415506),
     n(388685),
@@ -144,7 +144,7 @@ var M = (function (e) {
         e
     );
 })({});
-class k {
+class j {
     constructor() {
         N(this, "numUploadAttempts", void 0),
             N(this, "timing", {}),
@@ -182,10 +182,10 @@ class k {
     }
 }
 r = n(224497).Z;
-class j extends I.ZP {
+class k extends I.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new j(t, n, r, i);
+            a = new k(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -388,7 +388,7 @@ class j extends I.ZP {
         )
             return void this.handleComplete(this.id);
         if (this.allowOptimization && this.item.platform === I.ow.WEB) {
-            let e = await j.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
+            let e = await k.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
             null != e &&
                 (null != e.convertedFile &&
                     ((this.item.file = e.convertedFile), (this.currentSize = e.convertedFile.size)),
@@ -662,7 +662,7 @@ class j extends I.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new k()),
+            (this.uploadAnalytics = new j()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -776,7 +776,7 @@ class j extends I.ZP {
             N(this, "reactNativeFilePrepped", !1),
             N(this, "allowOptimization", !0),
             N(this, "startTime", void 0),
-            N(this, "uploadAnalytics", new k()),
+            N(this, "uploadAnalytics", new j()),
             N(this, "contentHash", void 0),
             N(this, "etag", void 0),
             N(this, "uploadAttempts", 0),

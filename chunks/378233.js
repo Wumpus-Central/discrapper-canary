@@ -135,13 +135,13 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    k = [];
-function j() {
+    j = [];
+function k() {
     var e, t;
     return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
         ? t
-        : k;
+        : j;
 }
 function U(e) {
-    return j().includes(e);
+    return k().includes(e);
 }

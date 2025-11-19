@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(605236),
     d = n(63063),
-    g = n(597688),
-    p = n(297651),
-    f = n(794324),
+    f = n(597688),
+    g = n(297651),
+    p = n(794324),
     m = n(215023),
     h = n(981631),
     C = n(921944),
@@ -20,7 +20,7 @@ var r = n(54381),
 let x = (e) => {
     var t;
     let { wideBannerBlock: n, handleTransition: i, tab: x } = e,
-        E = g.Z.getCategoryByStoreListingId(n.categoryStoreListingId),
+        E = f.Z.getCategoryByStoreListingId(n.categoryStoreListingId),
         O = l.useRef(null),
         S = l.useRef(null),
         [y, j] = l.useState(),
@@ -39,8 +39,8 @@ let x = (e) => {
         );
     }, []);
     let T = null != (t = null == E ? void 0 : E.skuId) ? t : "",
-        { handleCardVisibilityChange: L } = (0, p.E)(T, "home", "marketing wide banner"),
-        { bannerURL: B } = (0, f.UI)(n),
+        { handleCardVisibilityChange: L } = (0, g.E)(T, "home", "marketing wide banner"),
+        { bannerURL: B } = (0, p.UI)(n),
         P = x === m.AW.ORBS,
         N =
             !0 !== n.disableCta &&

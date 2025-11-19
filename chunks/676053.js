@@ -123,9 +123,9 @@ function S(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let { reducedMotion: k } = i.useContext(o.Sfi),
-        j = (0, a.C)(),
-        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : j,
+    let { reducedMotion: j } = i.useContext(o.Sfi),
+        k = (0, a.C)(),
+        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : k,
         G = i.useRef(null),
         B = (0, o.j1L)(A),
         Z = i.useCallback(
@@ -143,8 +143,8 @@ function S(e) {
     i.useEffect(() => {
         var e, t;
         null != G.current &&
-            (!k.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
-    }, [U, k.enabled]);
+            (!j.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
+    }, [U, j.enabled]);
     let F = i.useCallback(() => {
             null !== G.current && G.current.pause(), null == L || L();
         }, [L]),
@@ -175,7 +175,7 @@ function S(e) {
                           src: A,
                           width: 232,
                           height: 131,
-                          autoPlay: !k.enabled && U,
+                          autoPlay: !j.enabled && U,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,

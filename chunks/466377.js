@@ -1,7 +1,7 @@
 n.d(t, {
     Cg: () => C,
     Y0: () => P,
-    YA: () => k,
+    YA: () => j,
     fM: () => R,
     hz: () => L,
     mz: () => x,
@@ -162,14 +162,14 @@ function P(e) {
         L = i.useRef(null),
         x = null != R["aria-label"],
         M = null != R["aria-labelledby"],
-        k = i.useId(),
-        j = null != (t = R["aria-labelledby"]) ? t : k,
+        j = i.useId(),
+        k = null != (t = R["aria-labelledby"]) ? t : j,
         U = i.useMemo(
             () => ({
-                headerId: j,
+                headerId: k,
                 headerIdIsManaged: M,
             }),
-            [j, M],
+            [k, M],
         );
     return (0, r.jsx)(g.zM.Provider, {
         value: U,
@@ -281,7 +281,7 @@ function M(e) {
         }),
     });
 }
-function k(e) {
+function j(e) {
     var { className: t, scrollerRef: n } = e,
         i = S(e, ["className", "scrollerRef"]);
     return (0, r.jsx)(

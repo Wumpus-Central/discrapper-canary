@@ -7,7 +7,7 @@ n.d(t, {
     B3: () => ne,
     BI: () => nr,
     BM: () => tT,
-    Bg: () => ek,
+    Bg: () => ej,
     Bz: () => tI,
     C1: () => tL,
     DR: () => er,
@@ -56,11 +56,11 @@ n.d(t, {
     _4: () => tU,
     _D: () => ea,
     _j: () => tD,
-    _p: () => tj,
+    _p: () => tk,
     _x: () => ec,
     b7: () => tl,
     bA: () => tK,
-    f$: () => tk,
+    f$: () => tj,
     f2: () => e5,
     fY: () => tA,
     gI: () => tC,
@@ -86,7 +86,7 @@ n.d(t, {
     vj: () => ee,
     w8: () => t9,
     wj: () => eB,
-    xN: () => ej,
+    xN: () => ek,
     xn: () => eL,
     yH: () => tM,
     yI: () => ev,
@@ -140,8 +140,8 @@ var h = n(231757),
     L = n(569984),
     x = n(497505),
     M = n(184299),
-    k = n(937797),
-    j = n(502288),
+    j = n(937797),
+    k = n(502288),
     U = n(312046),
     G = n(46140),
     B = n(981631),
@@ -541,10 +541,10 @@ function eM(e) {
         }
     }
 }
-function ek(e) {
+function ej(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === c.w.FRACTIONAL_PREMIUM);
 }
-function ej(e) {
+function ek(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === c.w.VIRTUAL_CURRENCY);
 }
 function eU(e) {
@@ -605,7 +605,7 @@ function eQ(e) {
     return null != e && ez({ quest: e });
 }
 function eJ(e) {
-    if (!(0, k.CD)("QuestUtils") || null == e) return !1;
+    if (!(0, j.CD)("QuestUtils") || null == e) return !1;
     let t = ee(e);
     return null != t && t.length > 1;
 }
@@ -982,14 +982,14 @@ function tM(e) {
         r = [];
     return t && r.push(G.cd.DESKTOP), n && r.push(G.cd.CONSOLE), r;
 }
-function tk(e) {
+function tj(e) {
     var t;
     let n = null == (t = eL(e)) ? void 0 : t.expirationMode;
     return null != n && z.has(n);
 }
-function tj(e) {
+function tk(e) {
     var t;
-    return tk(e) && (null == (t = eL(e)) ? void 0 : t.expirationMode) === l.n.PREMIUM_PERMANENT;
+    return tj(e) && (null == (t = eL(e)) ? void 0 : t.expirationMode) === l.n.PREMIUM_PERMANENT;
 }
 function tU(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
@@ -1175,7 +1175,7 @@ function t6(e) {
     }
 }
 function t7(e, t) {
-    if (ek(e)) return (0, j.o8)(e);
+    if (ej(e)) return (0, k.o8)(e);
     let n = nt(e);
     return t ? n.messages.nameWithArticle : n.messages.name;
 }
