@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(481060),
     d = n(24124),
     p = n(636449),
-    f = n(620662),
-    h = n(513202),
+    h = n(620662),
+    f = n(513202),
     g = n(906732),
     m = n(535139),
     b = n(522651),
@@ -23,8 +23,8 @@ var r = n(54381),
     O = n(48131),
     v = n(668519),
     j = n(803647),
-    x = n(746298),
-    C = n(705338),
+    C = n(746298),
+    x = n(705338),
     E = n(445606),
     S = n(131704),
     I = n(944486),
@@ -34,7 +34,7 @@ var r = n(54381),
     w = n(981631),
     T = n(921944),
     A = n(388032),
-    R = n(258628);
+    R = n(239249);
 function D(e, t, n) {
     if (null == e) return !1;
     if (null != n) return n.applicationId === e.id;
@@ -44,7 +44,7 @@ function D(e, t, n) {
             (t.application_id === e.id ||
                 (null == (r = e.linkedGames) ? void 0 : r.some((e) => e.id === t.application_id))) &&
             t.type === w.IIU.PLAYING &&
-            (0, f.Z)(t, w.xjy.JOIN)
+            (0, h.Z)(t, w.xjy.JOIN)
         );
     }
     return !1;
@@ -53,10 +53,10 @@ let L = i.memo(function (e) {
         var t, l;
         let a,
             s,
-            f,
+            h,
             y,
             {
-                stream: C,
+                stream: x,
                 canGoLive: E,
                 guildId: T,
                 isStreaming: L,
@@ -76,7 +76,7 @@ let L = i.memo(function (e) {
                 autoTrackExposure: !1,
             }),
             { parentAnalyticsLocation: X } = (0, g.ZP)(),
-            Q = (0, x.Z)(z),
+            Q = (0, C.Z)(z, "rtc-activity-panel"),
             J = D(z, H, F),
             $ = i.useCallback(() => {
                 var e;
@@ -97,7 +97,7 @@ let L = i.memo(function (e) {
             ee = i.useCallback(
                 (e, t) => () => {
                     (0, b.v)(X, b.d.LEAVE_ACTIVITY),
-                        h.Z.leaveActivity({
+                        f.Z.leaveActivity({
                             location: t,
                             applicationId: e,
                             showFeedback: !0,
@@ -112,13 +112,13 @@ let L = i.memo(function (e) {
                 [X],
             ),
             en = i.useCallback(() => {
-                (0, j.Z)(C);
-            }, [C]),
+                (0, j.Z)(x);
+            }, [x]),
             er = i.useCallback(() => {
                 let e = null != G && (0, S.vd)(G.type) ? G : null,
                     t = null != e ? e.getGuildId() : T;
                 (0, u.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
+                    let { default: e } = await Promise.all([n.e("4093"), n.e("33840"), n.e("33641")]).then(
                         n.bind(n, 60594),
                     );
                     return (n) => {
@@ -195,35 +195,35 @@ let L = i.memo(function (e) {
             i.useEffect(() => {
                 eo && (ep(!1), null != eu.current && (clearTimeout(eu.current), (eu.current = null)));
             }, [eo]);
-        let ef =
+        let eh =
                 null == Q || null == z
                     ? null
                     : (0, r.jsx)(k, {
                           guildId: Q,
                           applicationId: z.id,
                       }),
-            eh =
+            ef =
                 (null != B || null == F || (0, p.R)()) && (L || E)
                     ? (L
                           ? ((a = !1),
                             (s = () => {
                                 en(), (0, b.v)(X, b.d.STREAM, !1);
                             }),
-                            (f = u.g5r),
+                            (h = u.g5r),
                             (y = A.intl.string(A.t.S5anIc)))
                           : U
                             ? ((a = !1),
                               (s = () => {
                                   er(), (0, b.v)(X, b.d.STREAM, !0);
                               }),
-                              (f = u.hGI),
+                              (h = u.hGI),
                               (y =
                                   null != B
                                       ? A.intl.formatToPlainString(A.t.AB5gTy, { game: B.name })
                                       : A.intl.string(A.t.FeUKeA)))
                             : ((a = !0),
                               (s = null),
-                              (f = u.hGI),
+                              (h = u.hGI),
                               (y =
                                   null != G && (0, S.vd)(G.type)
                                       ? A.intl.string(A.t.uQn9B8)
@@ -236,7 +236,7 @@ let L = i.memo(function (e) {
                               tooltipText: y,
                               disabled: a,
                               onClick: s,
-                              icon: f,
+                              icon: h,
                           }),
                       }))
                     : null,
@@ -265,7 +265,7 @@ let L = i.memo(function (e) {
                           onClick: et(V.applicationId),
                           icon: u.PBZ,
                       }),
-            e_ = null == C ? null : (0, r.jsx)(_.Z, {}),
+            e_ = null == x ? null : (0, r.jsx)(_.Z, {}),
             ey =
                 ec && ei && !eo
                     ? (0, r.jsx)(M, {
@@ -298,13 +298,13 @@ let L = i.memo(function (e) {
                           },
                       })
                     : null;
-        return null == eh && null == eg && null == em && null == eb && null == ey && null == ef
+        return null == ef && null == eg && null == em && null == eb && null == ey && null == eh
             ? null
             : (0, r.jsxs)("div", {
                   className: R.actions,
                   children: [
-                      null != (t = null != ef ? ef : ey) ? t : eg,
-                      eh,
+                      null != (t = null != eh ? eh : ey) ? t : eg,
+                      ef,
                       null != (l = null != em ? em : eb) ? l : e_,
                       eO,
                   ],
@@ -335,7 +335,7 @@ function k(e) {
     }, [t]);
     let [o, a] = (0, y.US)([s.z.GAME_SHOP_RTC_POPOVER], T.R.ACCOUNT_NAME_ZONE, !0),
         c = i.useCallback(() => {
-            (0, C.Z)({ guildId: n }), a(T.L.USER_DISMISS);
+            (0, x.Z)({ guildId: n }), a(T.L.USER_DISMISS);
         }, [n, a]),
         d = i.useCallback(() => {
             P.default.track(w.rMx.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), c();

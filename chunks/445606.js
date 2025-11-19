@@ -1,15 +1,16 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(54381),
     i = n(907862),
-    l = n(388032);
-function o(e) {
+    l = n(388032),
+    o = n(30399);
+function a(e) {
     let {
         targetElementRef: t,
         onRequestClose: n,
-        onActionClick: o,
-        position: a = "right",
-        align: s = "top",
-        caretConfig: c = {
+        onActionClick: a,
+        position: s = "right",
+        align: c = "top",
+        caretConfig: u = {
             align: "start",
             position: "top",
         },
@@ -17,10 +18,10 @@ function o(e) {
     return (0, r.jsx)(i.J2, {
         size: "lg",
         shouldShow: !0,
-        position: a,
-        caretConfig: c,
+        position: s,
+        caretConfig: u,
         gradientColor: "purple",
-        align: s,
+        align: c,
         badge: {
             type: "new",
             variant: "default",
@@ -30,12 +31,15 @@ function o(e) {
             {
                 text: l.intl.string(l.t.RzWDqY),
                 variant: "primary",
-                onClick: o,
+                onClick: a,
             },
         ],
         targetElementRef: t,
         title: l.intl.string(l.t.Ylu2JM),
         body: l.intl.string(l.t.vgylLQ),
-        graphic: void 0,
+        graphic: {
+            type: "image",
+            src: o.Z,
+        },
     });
 }

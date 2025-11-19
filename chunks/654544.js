@@ -1,72 +1,74 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
     l = n(835473),
     o = n(768581),
-    c = n(388032),
-    s = n(369929);
-function u(e) {
-    let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: d } = e,
-        f = i.useRef(null),
-        [g, p] = i.useState(!1),
-        m = (0, l.q)(d),
-        b = i.useMemo(() => {
-            if (null == m) return c.intl.string(c.t.apFNLU);
-            let e = o.ZP.getApplicationIconURL({
-                id: m.id,
-                icon: m.icon,
+    c = n(582113),
+    s = n(388032),
+    u = n(123304);
+function d(e) {
+    let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: d, socialLayerStorefrontApplicationId: f } = e,
+        g = i.useRef(null),
+        [p, m] = i.useState(!1),
+        b = (0, l.q)(f),
+        h = i.useMemo(() => {
+            let e = null == b || b.id !== c.t9 ? s.intl.string(s.t.apFNLU) : s.intl.string(s.t["kq/75v"]);
+            if (null == b) return e;
+            let t = o.ZP.getApplicationIconURL({
+                id: b.id,
+                icon: b.icon,
                 size: 20,
             });
             return (0, r.jsxs)("div", {
-                className: s.gameShopLabelContainer,
+                className: u.gameShopLabelContainer,
                 children: [
                     (0, r.jsx)("img", {
-                        className: s.applicationIcon,
-                        src: e,
-                        alt: c.intl.string(c.t.apFNLU),
+                        className: u.applicationIcon,
+                        src: t,
+                        alt: e,
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: c.intl.string(c.t.apFNLU),
+                        children: e,
                     }),
                 ],
             });
-        }, [m]),
-        h = i.useMemo(
+        }, [b]),
+        y = i.useMemo(
             () =>
                 (0, r.jsxs)(a.kSQ, {
                     children: [
                         (0, r.jsx)(a.sNh, {
                             id: "browse-collectibles-shop",
-                            label: c.intl.string(c.t["5upuqx"]),
+                            label: s.intl.string(s.t["5upuqx"]),
                             iconLeft: a.EOn,
                             action: n,
                         }),
                         (0, r.jsx)(a.sNh, {
                             id: "browse-social-layer-storefront",
-                            label: b,
-                            iconLeft: null != m ? void 0 : a.EOn,
-                            action: u,
+                            label: h,
+                            iconLeft: null != b ? void 0 : a.EOn,
+                            action: d,
                         }),
                     ],
                 }),
-            [n, u, b, m],
+            [n, d, h, b],
         );
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: f,
+        targetElementRef: g,
         position: "bottom",
-        onRequestOpen: () => p(!0),
-        onRequestClose: () => p(!1),
+        onRequestOpen: () => m(!0),
+        onRequestClose: () => m(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(a.v2r, {
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
-                "aria-label": c.intl.string(c.t.GdNkvG),
-                children: h,
+                "aria-label": s.intl.string(s.t.GdNkvG),
+                children: y,
             });
         },
         children: (e) =>
@@ -98,10 +100,10 @@ function u(e) {
                     return e;
                 })(
                     {
-                        buttonRef: f,
+                        buttonRef: g,
                         variant: "secondary",
                         size: "sm",
-                        icon: g ? a.Dio : a.CJ0,
+                        icon: p ? a.Dio : a.CJ0,
                         iconPosition: "end",
                         text: t,
                     },

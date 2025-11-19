@@ -1,4 +1,4 @@
-n.d(t, { jM: () => S });
+n.d(t, { jM: () => O });
 var i = n(54381);
 n(473749);
 var l = n(442837),
@@ -9,13 +9,13 @@ var l = n(442837),
     d = n(563132),
     c = n(409813),
     u = n(614277),
-    f = n(927699),
-    g = n(96848),
+    g = n(927699),
+    f = n(96848),
     m = n(311821),
     p = n(251660),
     x = n(321051),
-    v = n(594174),
-    h = n(55563),
+    h = n(594174),
+    v = n(55563),
     C = n(937615),
     j = n(164670),
     b = n(210218),
@@ -23,16 +23,17 @@ var l = n(442837),
     I = n(703400),
     P = n(242723),
     w = n(848118),
-    T = n(981631),
-    N = n(474936),
-    y = n(231338),
-    E = n(388032),
-    k = n(397263);
-let S = {
+    y = n(582113),
+    N = n(981631),
+    T = n(474936),
+    E = n(231338),
+    S = n(388032),
+    k = n(305745);
+let O = {
     key: c.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
-            Z,
+            G,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -61,10 +62,10 @@ let S = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => E.intl.string(E.t["W685+b"]),
+        useBreadcrumbLabel: () => S.intl.string(S.t["W685+b"]),
     },
 };
-function O(e) {
+function Z(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, d.JL)(),
         u = o ? c.h8.REVIEW : c.h8.ADD_PAYMENT_STEPS;
@@ -74,28 +75,28 @@ function O(e) {
                 onClick: () => t(u),
                 disabled: r,
                 loading: s,
-                text: E.intl.string(E.t.XiOHRX),
+                text: S.intl.string(S.t.XiOHRX),
             }),
             l ? (0, i.jsx)(m.Z, { onClick: n }) : null,
         ],
     });
 }
-function Z(e) {
+function G(e) {
     var t;
     let { handleStepChange: n, handleClose: c } = e,
         {
             customGiftMessage: m = "",
             setCustomGiftMessage: b,
             giftRecipient: _,
-            emojiConfetti: T,
-            soundEffect: S,
-            setEmojiConfetti: Z,
-            setSoundEffect: M,
+            emojiConfetti: y,
+            soundEffect: N,
+            setEmojiConfetti: O,
+            setSoundEffect: G,
             giftingOrigin: A,
         } = (0, o.wD)(),
         { selectedSkuId: L, application: W } = (0, d.JL)(),
-        B = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
-        R = (0, l.e7)([h.Z], () => (null != L ? h.Z.get(L) : null), [L]),
+        B = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        R = (0, l.e7)([v.Z], () => (null != L ? v.Z.get(L) : null), [L]),
         H = (0, j.Do)(R),
         D = (0, j.a7)(R),
         F = (0, P.K)(R, { shouldFetchIfMissing: !0 }),
@@ -121,14 +122,14 @@ function Z(e) {
                                     className: k.giftEffectsContainer,
                                     children: [
                                         (0, i.jsx)(x.Z, {
-                                            sound: S,
+                                            sound: N,
                                             onSelect: (e) => {
-                                                null != M && M(null == e ? void 0 : e);
+                                                null != G && G(null == e ? void 0 : e);
                                             },
                                         }),
-                                        (0, i.jsx)(g.Z, {
-                                            setEmojiConfetti: Z,
-                                            emojiConfetti: null == T ? void 0 : T,
+                                        (0, i.jsx)(f.Z, {
+                                            setEmojiConfetti: O,
+                                            emojiConfetti: null == y ? void 0 : y,
                                         }),
                                     ],
                                 }),
@@ -137,15 +138,15 @@ function Z(e) {
                         (0, i.jsxs)("div", {
                             className: k.bodyColumnRight,
                             children: [
-                                null != _ && (A === N.Wt.USER_PROFILE_WISHLIST || A === N.Wt.DM_CHANNEL_WISHLIST)
+                                null != _ && (A === T.Wt.USER_PROFILE_WISHLIST || A === T.Wt.DM_CHANNEL_WISHLIST)
                                     ? (0, i.jsx)(p.s, { giftRecipient: _ })
                                     : (0, i.jsx)(r.Z, {
                                           selectedSkuId: L,
                                           validateSelectedGift: U,
                                           searchableSelectWrapperClassName: k.recipientPickerSelectWrapper,
                                       }),
-                                (0, i.jsx)(f.Z, {
-                                    sectionTitle: E.intl.string(E.t.B3miE8),
+                                (0, i.jsx)(g.Z, {
+                                    sectionTitle: S.intl.string(S.t.B3miE8),
                                     onTextChange: (e) => (null == b ? void 0 : b(e)),
                                     pendingText: m,
                                     currentText: m,
@@ -158,14 +159,14 @@ function Z(e) {
                                     if (null == R) return null;
                                     let r = (0, C.T4)(
                                         null != (n = null == (e = R.price) ? void 0 : e.amount) ? n : 0,
-                                        null != (l = null == (t = R.price) ? void 0 : t.currency) ? l : y.pK.USD,
+                                        null != (l = null == (t = R.price) ? void 0 : t.currency) ? l : E.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
                                         className: k.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(a.vwX, {
                                                 className: k.giftPreviewTitle,
-                                                children: E.intl.string(E.t.PpoJzt),
+                                                children: S.intl.string(S.t.PpoJzt),
                                             }),
                                             (0, i.jsxs)("div", {
                                                 className: k.giftPreviewContent,
@@ -204,7 +205,7 @@ function Z(e) {
                                 })(),
                                 null != F &&
                                     null != R &&
-                                    (0, i.jsx)(G, {
+                                    (0, i.jsx)(M, {
                                         handleClose: c,
                                         sku: R,
                                         guild: F,
@@ -220,27 +221,27 @@ function Z(e) {
                     justify: s.Z.Justify.BETWEEN,
                     align: s.Z.Align.CENTER,
                     className: k.footer,
-                    children: (0, i.jsx)(O, {
+                    children: (0, i.jsx)(Z, {
                         onStepChange: n,
                         onBackClick: c,
-                        disabled: null == _ || _.id === (null == B ? void 0 : B.id) || m.length > N.$n,
+                        disabled: null == _ || _.id === (null == B ? void 0 : B.id) || m.length > T.$n,
                     }),
                 }),
             }),
         ],
     });
 }
-function G(e) {
+function M(e) {
     let { handleClose: t, guild: n, sku: l } = e;
     return (0, i.jsx)("div", {
         className: k.viewItemButton,
         children: (0, i.jsx)(a.Avr, {
-            text: E.intl.string(E.t.ImioFL),
+            text: n.id === y.ON ? S.intl.string(S.t.nyIcya) : S.intl.string(S.t.ImioFL),
             onClick: function () {
                 var e;
                 t();
                 let i = null == (e = b.Z.getStorefrontState(n.id)) ? void 0 : e.activePage;
-                window.location.pathname.includes(T.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, l.id)) ||
+                window.location.pathname.includes(N.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, l.id)) ||
                     ((0, a.pTH)(),
                     (0, _.Z)({
                         guildId: n.id,

@@ -108,7 +108,7 @@ function p(e, t) {
 function h() {
     (0, a.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("92275"), n.e("21854")]).then(n.bind(n, 211912));
+            let { default: e } = await n.e("21854").then(n.bind(n, 211912));
             return (t) => (0, r.jsx)(e, d({}, t));
         },
         { modalKey: "slayer-storefront-announcement-modal" },

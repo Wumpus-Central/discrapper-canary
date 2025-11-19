@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => E,
-    J: () => I,
+    B: () => Z,
+    J: () => S,
 }),
     n(388685);
 var r = n(54381),
@@ -21,9 +21,10 @@ var r = n(54381),
     _ = n(921944),
     y = n(474936),
     O = n(388032),
-    j = n(758650),
-    x = n(976218);
-function v(e) {
+    j = n(470146),
+    x = n(207661),
+    v = n(30399);
+function C(e) {
     let { targetElementRef: t, onRequestClose: n, onActionClick: i } = e;
     return (0, r.jsx)(o.J2, {
         size: "lg",
@@ -35,7 +36,7 @@ function v(e) {
         onRequestClose: n,
         actions: [
             {
-                text: O.intl.string(O.t.RzWDqY),
+                text: O.intl.string(O.t.uB4Gax),
                 variant: "primary",
                 onClick: i,
             },
@@ -43,10 +44,13 @@ function v(e) {
         targetElementRef: t,
         title: O.intl.string(O.t.qh9t5c),
         body: O.intl.string(O.t.iM6fxV),
-        graphic: void 0,
+        graphic: {
+            type: "image",
+            src: v.Z,
+        },
     });
 }
-function C(e) {
+function I(e) {
     var t,
         n,
         { showPopover: o, onViewWishlist: c, onCardClick: d } = e,
@@ -81,7 +85,7 @@ function C(e) {
         x = i.useCallback(() => {
             O(_.L.USER_DISMISS);
         }, [O]),
-        C = i.useCallback(() => {
+        v = i.useCallback(() => {
             O(_.L.USER_DISMISS), c();
         }, [c, O]);
     return (0, r.jsxs)(r.Fragment, {
@@ -136,15 +140,15 @@ function C(e) {
                 y === a.z.GAME_SHOP_WISHLIST_POPOVER &&
                 !m &&
                 !b &&
-                (0, r.jsx)(v, {
+                (0, r.jsx)(C, {
                     targetElementRef: g,
                     onRequestClose: x,
-                    onActionClick: C,
+                    onActionClick: v,
                 }),
         ],
     });
 }
-function I(e, t) {
+function S(e, t) {
     let {
             index: n,
             moreCount: i,
@@ -157,7 +161,7 @@ function I(e, t) {
         u = null != i && i > 0,
         p = u ? O.intl.string(O.t.TxBQzD) : O.intl.string(O.t.ilhtIa);
     return (0, r.jsx)(
-        C,
+        I,
         {
             onCardClick: () => {
                 if (u) return void l();
@@ -192,7 +196,7 @@ function I(e, t) {
         e.skuId,
     );
 }
-function S(e) {
+function E(e) {
     let { item: t, card: n, profileOwner: i } = e,
         { data: l } = (0, u.IX)(t.sku.applicationId);
     return (0, r.jsxs)("div", {
@@ -233,9 +237,9 @@ function S(e) {
         ],
     });
 }
-function E(e, t) {
+function Z(e, t) {
     let { profileOwner: n, analyticsLocations: i, wishlistId: l, onViewWishlist: a } = t,
-        s = I(e, {
+        s = S(e, {
             index: 0,
             profileOwner: n,
             analyticsLocations: i,
@@ -243,7 +247,7 @@ function E(e, t) {
             isSingleCard: !0,
             wishlistId: l,
         });
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(E, {
         item: e,
         card: s,
         profileOwner: n,
