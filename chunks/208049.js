@@ -3,13 +3,13 @@ n.d(t, {
     AA: () => D,
     Db: () => G,
     Dx: () => R,
-    R: () => k,
+    R: () => j,
     TB: () => w,
     XE: () => M,
-    hs: () => x,
+    hs: () => L,
     w: () => N,
-    xR: () => j,
-    xU: () => L,
+    xR: () => k,
+    xU: () => x,
     xz: () => U,
 }),
     n(388685),
@@ -55,7 +55,7 @@ let y = !1,
                 await a.tn.get({
                     url: g.ANM.TOP_SOUNDS_FOR_GUILDS,
                     rejectWithError: !1,
-                    timeout: 500,
+                    timeout: 1000,
                 })
             ).body;
             Object.entries(t.top_sounds_by_guild).forEach((t) => {
@@ -178,7 +178,7 @@ function w(e) {
         E.fy.INFREQUENT_USER_ACTION,
     );
 }
-function x(e) {
+function L(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {
@@ -187,7 +187,7 @@ function x(e) {
         E.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function L(e, t) {
+async function x(e, t) {
     try {
         let n = await a.tn.get({
             url: g.ANM.SOUNDBOARD_SOUND_GUILD_DATA(e, t),
@@ -206,14 +206,14 @@ function M(e, t, n) {
         trigger: n,
     });
 }
-function j(e, t) {
+function k(e, t) {
     o.Z.dispatch({
         type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
         soundId: e,
         userId: t,
     });
 }
-function k(e, t) {
+function j(e, t) {
     o.Z.dispatch({
         type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
         soundId: e,
