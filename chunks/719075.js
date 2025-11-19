@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(429368),
     d = n(884697),
     f = n(290175),
-    g = n(724994),
-    p = n(409116),
+    p = n(724994),
+    g = n(409116),
     m = n(786040),
     h = n(58201),
     C = n(445794),
@@ -23,7 +23,7 @@ let x = (e) => {
             h = (0, m.$l)(),
             x = c.ZP.canUseCollectibles(u),
             { isDisabled: E } = (0, f.G)(t.skuId),
-            { isPurchased: O, isPartiallyOwnedBundle: S, isRented: y, rentalExpiresAt: j } = (0, g.L)(t),
+            { isPurchased: O, isPartiallyOwnedBundle: S, isRented: y, rentalExpiresAt: j } = (0, p.L)(t),
             k = (0, d.G1)(t),
             I = (0, d.rN)(t),
             T = l.useMemo(() => (0, d.BH)(t, x), [t, x]),
@@ -73,18 +73,20 @@ let x = (e) => {
             : I
               ? (0, r.jsx)(a.Text, {
                     variant: "text-md/bold",
+                    color: "text-primary",
                     lineClamp: 1,
                     children: b.intl.string(b.t.nBtvYB),
                 })
               : k
                 ? (0, r.jsx)(a.Text, {
                       variant: "text-md/bold",
+                      color: "text-primary",
                       lineClamp: 1,
                       children: b.intl.string(b.t.rt69oo),
                   })
                 : 0 === B.length
                   ? null
-                  : (0, r.jsx)(p.F, {
+                  : (0, r.jsx)(g.F, {
                         price: B[0],
                         discount: T,
                         nitroIconType: x ? "default" : void 0,
