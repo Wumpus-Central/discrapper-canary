@@ -38,6 +38,7 @@ function b(e) {
         widget: y,
         subtle: !0,
         cta: (0, r.jsx)(f.Z.Cta, {
+            showSuggestedForYou: !0,
             heading: m.intl.format(m.t.OIzLCy, { applicationName: n.name }),
             content: m.intl.format(m.t.BQySru, { applicationName: n.name }),
             buttons: (0, r.jsxs)(r.Fragment, {

@@ -218,9 +218,9 @@ function M(e) {
                     }
                     return i;
                 })(t, ["body"]);
-            return (0, r.jsx)(U, A(N({}, i), { body: B(n) }));
+            return (0, r.jsx)(F, A(N({}, i), { body: B(n) }));
         case "GRID":
-            return (0, r.jsx)(F, { children: B(t.children) });
+            return (0, r.jsx)(U, { children: B(t.children) });
         case "FIELD":
             return (0, r.jsx)(W, {
                 value: G(t.value),
@@ -242,7 +242,7 @@ function G(e, t) {
 function B(e) {
     return e.map((e, t) => G(e, t));
 }
-function U(e) {
+function F(e) {
     let { title: t, body: n, image: i, imagePlaceholder: a } = e;
     return (0, r.jsxs)("div", {
         className: k.heroSection,
@@ -286,7 +286,7 @@ function U(e) {
         ],
     });
 }
-function F(e) {
+function U(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: k.grid,
@@ -373,7 +373,7 @@ function V() {
               channelId: e.channelId,
           });
 }
-function q(e, t) {
+function Y(e, t) {
     if (null == e) return null;
     let n = e.split(Z);
     if (1 === n.length) return n[0];
@@ -396,7 +396,7 @@ function q(e, t) {
     }
     return r;
 }
-function Y(e, t) {
+function q(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
     let i = null == (r = e.match(Z)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
@@ -443,11 +443,12 @@ function $(e) {
             (0, r.jsxs)(s.Kqy, {
                 gap: 4,
                 children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-xs/medium",
-                        color: "text-default",
-                        children: D.intl.string(D.t.zMUr6Z),
-                    }),
+                    e.showSuggestedForYou &&
+                        (0, r.jsx)(s.Text, {
+                            variant: "text-xs/medium",
+                            color: "text-default",
+                            children: D.intl.string(D.t.zMUr6Z),
+                        }),
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-sm/medium",
                         color: "text-default",
@@ -496,8 +497,8 @@ let ee = Object.assign(
                     }),
                     G());
             }, [L, G, t, a.applicationId]),
-            U = null == u && C && !Z && L,
-            F = (0, r.jsxs)(r.Fragment, {
+            F = null == u && C && !Z && L,
+            U = (0, r.jsxs)(r.Fragment, {
                 children: [
                     null != O
                         ? (0, r.jsx)("img", {
@@ -521,7 +522,7 @@ let ee = Object.assign(
                 null == h
                     ? (0, r.jsx)("div", {
                           className: k.header,
-                          children: F,
+                          children: U,
                       })
                     : (0, r.jsx)(c.u, {
                           asContainer: !0,
@@ -530,7 +531,7 @@ let ee = Object.assign(
                               className: l()(k.header, k.headerClickable),
                               onClick: E,
                               "aria-label": D.intl.string(D.t.ajHoOr),
-                              children: F,
+                              children: U,
                           }),
                       }),
             H = (0, o.e7)([_.default], () => _.default.locale),
@@ -600,8 +601,8 @@ let ee = Object.assign(
                             return {
                                 type: "HERO",
                                 body: n.body.map(t),
-                                title: q(n.title, e),
-                                image: Y(n.image, e),
+                                title: Y(n.title, e),
+                                image: q(n.image, e),
                                 imagePlaceholder: null == (r = e.config) ? void 0 : r.hero_placeholder_image,
                             };
                         case "GRID":
@@ -618,13 +619,13 @@ let ee = Object.assign(
                         case "TEXT":
                             return {
                                 type: "TEXT",
-                                content: q(n.content, e),
+                                content: Y(n.content, e),
                             };
                         case "TEXT_WITH_IMAGE":
                             return {
                                 type: "TEXT_WITH_IMAGE",
-                                content: q(n.content, e),
-                                image: Y(n.image, e),
+                                content: Y(n.content, e),
+                                image: q(n.image, e),
                                 imagePosition: n.imagePosition,
                             };
                         case "SEPARATOR":
@@ -661,7 +662,7 @@ let ee = Object.assign(
                         (0, r.jsxs)("div", {
                             className: k.footer,
                             children: [
-                                null == j || null != I || U
+                                null == j || null != I || F
                                     ? null
                                     : (0, r.jsxs)("div", {
                                           className: k.stillSyncing,
@@ -674,7 +675,7 @@ let ee = Object.assign(
                                               }),
                                           ],
                                       }),
-                                U
+                                F
                                     ? (0, r.jsx)($, {
                                           heading: D.intl.string(D.t.UDPRLO),
                                           content: D.intl.string(D.t["OW/2al"]),
