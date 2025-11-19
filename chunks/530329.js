@@ -1,57 +1,62 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(54381),
-    l = n(473749),
-    a = n(120356),
-    i = n.n(a),
-    s = n(53691),
-    o = n(378879),
-    c = n(981631),
-    u = n(486324),
-    d = n(388032),
-    f = n(797192);
-function p(e) {
-    var { uploadType: t, analyticsSource: n, className: a } = e,
-        p = (function (e, t) {
+    a = n(473749),
+    l = n(120356),
+    i = n.n(l),
+    s = n(442837),
+    o = n(594174),
+    c = n(74538),
+    u = n(53691),
+    d = n(378879),
+    f = n(981631),
+    p = n(486324),
+    g = n(388032),
+    m = n(463339);
+function h(e) {
+    var { uploadType: t, analyticsSource: n, className: l } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        a = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return l;
+            return a;
         })(e, ["uploadType", "analyticsSource", "className"]);
-    let g = l.useCallback(() => {
-            (0, o.s)({
+    let b = a.useCallback(() => {
+            (0, d.s)({
                 uploadType: t,
                 analyticsSource: n,
             });
         }, [t, n]),
-        m = l.useMemo(() => {
+        A = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+        j = c.ZP.canUseAnimatedAvatar(A),
+        y = a.useMemo(() => {
             switch (t) {
-                case u.pC.AVATAR:
-                    return d.intl.format(d.t["pvw/HH"], { onClick: g });
-                case u.pC.BANNER:
-                    return d.intl.format(d.t.aCrz1e, { onClick: g });
+                case p.pC.AVATAR:
+                    return g.intl.format(g.t["pvw/HH"], { onClick: b });
+                case p.pC.BANNER:
+                    return g.intl.format(g.t.aCrz1e, { onClick: b });
                 default:
                     return "";
             }
-        }, [t, g]);
-    return t !== u.pC.AVATAR && t !== u.pC.BANNER
+        }, [t, b]);
+    return (t !== p.pC.AVATAR && t !== p.pC.BANNER) || (t === p.pC.AVATAR && j)
         ? null
         : (0, r.jsx)(
-              s.p,
+              u.p,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -78,12 +83,12 @@ function p(e) {
                   return e;
               })(
                   {
-                      text: m,
-                      button: d.intl.string(d.t.BmJkbd),
-                      buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
-                      className: i()(f.container, a),
+                      text: y,
+                      button: g.intl.string(g.t.BmJkbd),
+                      buttonAnalyticsObject: { section: f.jXE.USER_PROFILE },
+                      className: i()(m.container, l),
                   },
-                  p,
+                  h,
               ),
           );
 }
