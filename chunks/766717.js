@@ -9,53 +9,62 @@ var r = n(54381),
 let d = i.forwardRef(function (e, t) {
     let {
             onCardClick: n,
-            tooltipText: i,
-            shouldScalePreview: d = !0,
-            renderPreview: u,
-            moreCount: p,
-            isSingleCard: h = !1,
-            skuId: f,
-            analyticsLocations: g,
-            wishlistId: m,
+            tooltipTitle: i,
+            tooltipBody: d,
+            shouldScalePreview: u = !0,
+            renderPreview: p,
+            moreCount: h,
+            isSingleCard: f = !1,
+            skuId: g,
+            analyticsLocations: m,
+            wishlistId: b,
         } = e,
-        b = d ? c.cardPreview : c.cardPreviewNoScale,
-        _ = h ? c.cardSingle : c.card,
-        y = null != p && p > 0;
-    return (0, r.jsx)(l.u, {
-        text: i,
-        position: "top",
-        children: (0, r.jsxs)(a.P3F, {
+        _ = u ? c.cardPreview : c.cardPreviewNoScale,
+        y = f ? c.cardSingle : c.card,
+        O = null != h && h > 0,
+        j = (0, r.jsxs)(a.P3F, {
             onClick: () => {
                 var e;
                 n();
-                let t = null != m ? s.Z.getWishlist(m) : null,
+                let t = null != b ? s.Z.getWishlist(b) : null,
                     r = null != (e = null == t ? void 0 : t.hasThirdPartySku()) && e;
                 (0, o.Er)({
-                    action: y ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                    analyticsLocations: g,
-                    skuId: y ? null : f,
-                    wishlistId: m,
+                    action: O ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                    analyticsLocations: m,
+                    skuId: O ? null : g,
+                    wishlistId: b,
                     hasThirdPartySku: r,
                 });
             },
-            className: _,
-            "aria-label": i,
+            className: y,
+            "aria-label": d,
             innerRef: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: b,
-                    children: u(),
+                    className: _,
+                    children: p(),
                 }),
-                y &&
+                O &&
                     (0, r.jsx)("div", {
                         className: c.moreOverlay,
                         children: (0, r.jsxs)(a.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", p],
+                            children: ["+", h],
                         }),
                     }),
             ],
-        }),
-    });
+        });
+    return null != i
+        ? (0, r.jsx)(l.i_, {
+              asContainer: !0,
+              title: i,
+              body: d,
+              children: j,
+          })
+        : (0, r.jsx)(l.u, {
+              text: d,
+              position: "top",
+              children: j,
+          });
 });

@@ -23,37 +23,41 @@ function h(e, t, n) {
     });
 }
 function f(e, t) {
-    let {
-            moreCount: n,
-            profileOwner: l,
-            analyticsLocations: a,
-            onViewWishlist: s,
-            isSingleCard: d = !1,
-            wishlistId: p,
+    let n,
+        {
+            moreCount: l,
+            profileOwner: a,
+            analyticsLocations: s,
+            onViewWishlist: d,
+            isSingleCard: p = !1,
+            wishlistId: f,
+            showTypeTooltip: g = !1,
         } = t,
-        f = null != n && n > 0,
-        g = f ? u.intl.string(u.t.TxBQzD) : u.intl.string(u.t.ilhtIa),
-        m = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
+        m = null != l && l > 0,
+        b = m ? u.intl.string(u.t.TxBQzD) : u.intl.string(u.t.ilhtIa);
+    g && !m && (n = u.intl.string(u.t.HFhcqh));
+    let _ = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
     return (0, r.jsx)(
         c.Z,
         {
             onCardClick: () => {
-                if (f) return void s();
-                h(e, l, a);
+                if (m) return void d();
+                h(e, a, s);
             },
-            tooltipText: g,
-            shouldScalePreview: !m,
+            tooltipTitle: n,
+            tooltipBody: b,
+            shouldScalePreview: !_,
             renderPreview: () =>
                 (0, r.jsx)(o.Z, {
                     item: e,
-                    profileOwner: l,
+                    profileOwner: a,
                     isHighlighted: !1,
                 }),
-            moreCount: n,
-            isSingleCard: d,
+            moreCount: l,
+            isSingleCard: p,
             skuId: e.skuId,
-            analyticsLocations: a,
-            wishlistId: p,
+            analyticsLocations: s,
+            wishlistId: f,
         },
         e.skuId,
     );

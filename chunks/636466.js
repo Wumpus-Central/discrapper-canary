@@ -149,51 +149,57 @@ function I(e) {
     });
 }
 function S(e, t) {
-    let {
-            index: n,
-            moreCount: i,
-            onViewWishlist: l,
-            isSingleCard: a = !1,
-            profileOwner: s,
-            analyticsLocations: o,
-            wishlistId: c,
-        } = t,
-        u = null != i && i > 0,
-        p = u ? O.intl.string(O.t.TxBQzD) : O.intl.string(O.t.ilhtIa);
-    return (0, r.jsx)(
-        I,
+    let n,
         {
-            onCardClick: () => {
-                if (u) return void l();
-                (0, g.P)(
-                    e.sku,
-                    {
-                        isGift: !0,
-                        giftRecipient: s,
-                        giftingOrigin: y.Wt.USER_PROFILE_WISHLIST,
-                    },
-                    { analyticsLocations: [d.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
-                );
+            index: i,
+            moreCount: l,
+            onViewWishlist: a,
+            isSingleCard: s = !1,
+            profileOwner: o,
+            analyticsLocations: c,
+            wishlistId: u,
+            showTypeTooltip: p = !1,
+        } = t,
+        h = null != l && l > 0,
+        f = h ? O.intl.string(O.t.TxBQzD) : O.intl.string(O.t.ilhtIa);
+    return (
+        p && !h && (n = O.intl.string(O.t["4yiU7x"])),
+        (0, r.jsx)(
+            I,
+            {
+                onCardClick: () => {
+                    if (h) return void a();
+                    (0, g.P)(
+                        e.sku,
+                        {
+                            isGift: !0,
+                            giftRecipient: o,
+                            giftingOrigin: y.Wt.USER_PROFILE_WISHLIST,
+                        },
+                        { analyticsLocations: [d.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                    );
+                },
+                tooltipTitle: n,
+                tooltipBody: f,
+                shouldScalePreview: !1,
+                renderPreview: () =>
+                    (0, r.jsx)(m.A, {
+                        containerClassName: j.card,
+                        backgroundImageClassName: j.cardBackgroundImage,
+                        foregroundImageClassName: j.cardImage,
+                        sku: e.sku,
+                        shape: "custom",
+                    }),
+                moreCount: l,
+                isSingleCard: s,
+                skuId: e.skuId,
+                analyticsLocations: c,
+                wishlistId: u,
+                showPopover: 0 === i && e.sku.applicationId === b.t9,
+                onViewWishlist: a,
             },
-            tooltipText: p,
-            shouldScalePreview: !1,
-            renderPreview: () =>
-                (0, r.jsx)(m.A, {
-                    containerClassName: j.card,
-                    backgroundImageClassName: j.cardBackgroundImage,
-                    foregroundImageClassName: j.cardImage,
-                    sku: e.sku,
-                    shape: "custom",
-                }),
-            moreCount: i,
-            isSingleCard: a,
-            skuId: e.skuId,
-            analyticsLocations: o,
-            wishlistId: c,
-            showPopover: 0 === n && e.sku.applicationId === b.t9,
-            onViewWishlist: l,
-        },
-        e.skuId,
+            e.skuId,
+        )
     );
 }
 function E(e) {
