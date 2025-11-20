@@ -59786,9 +59786,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -68854,43 +68854,43 @@ html .progress__61462 {
     --custom-app-message-embed-base-info-top: calc(var(--custom-app-message-embed-base-info-gap) - 2px)
 }
 
-.description_c8f246 {
+.description__403f1 {
     margin-top: var(--custom-app-message-embed-base-info-top)
 }
 
-.description_c8f246 * {
+.description__403f1 * {
     font-weight: var(--font-weight-medium)
 }
 
-.info_c8f246 {
+.info__403f1 {
     display: flex;
     flex-direction: column;
     gap: var(--custom-app-message-embed-base-info-gap);
     margin-top: var(--custom-app-message-embed-base-info-top)
 }
 
-.tagline_c8f246,
-.timestampContainer_c8f246 {
+.tagline__403f1,
+.timestampContainer__403f1 {
     align-items: center;
     display: flex;
     gap: 4px
 }
 
-.timestampContainer_c8f246 {
+.timestampContainer__403f1 {
     min-width: 54px
 }
 
-.tag_c8f246:not(:first-of-type):before {
+.tag__403f1:not(:first-of-type):before {
     content: "∙";
     padding: 0 3px
 }
 
-.partyStatusWrapper_c8f246 {
+.partyStatusWrapper__403f1 {
     display: flex;
     gap: 4px
 }
 
-.footer_c8f246 {
+.footer__403f1 {
     align-items: center;
     background-color: var(--opacity-black-20);
     color: var(--app-message-embed-secondary-text);
@@ -68904,24 +68904,24 @@ html .progress__61462 {
     }
 }
 
-.footerSupportedPlatformIconsContainer_c8f246 {
+.footerSupportedPlatformIconsContainer__403f1 {
     gap: 4px
 }
 
-.footerSupportedPlatformIconContainer_c8f246,
-.footerSupportedPlatformIconsContainer_c8f246 {
+.footerSupportedPlatformIconContainer__403f1,
+.footerSupportedPlatformIconsContainer__403f1 {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-.footerSupportedPlatformText_c8f246 {
+.footerSupportedPlatformText__403f1 {
     @container (max-width: 270px) {
         text-align: center
     }
 }
 
-.inlineApplicationText_c8f246 {
+.inlineApplicationText__403f1 {
     align-items: flex-end;
     display: inline-flex;
     flex-direction: row;
