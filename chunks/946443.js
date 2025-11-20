@@ -253,8 +253,4 @@ function P() {
         tip: x.intl.string(x.t.cvcKzX),
     });
 }
-let N = () =>
-    (0, r.jsx)(y.Z, {
-        onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ),
-        type: "top-header",
-    });
+let N = () => (0, r.jsx)(y.Z, { onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ) });
