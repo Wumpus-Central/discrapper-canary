@@ -15,8 +15,8 @@ var r = n(54381),
     b = n(197653),
     h = n(979372),
     y = n(676149),
-    O = n(861529),
-    v = n(768494),
+    v = n(861529),
+    O = n(768494),
     j = n(124347),
     x = n(929677),
     _ = n(706454),
@@ -112,7 +112,7 @@ let Z = /{{(.*?)}}/g,
                     },
                     name: {
                         type: "TEXT",
-                        content: "-# Season High",
+                        content: "-# Highest Rank",
                     },
                 },
                 {
@@ -189,7 +189,7 @@ let Z = /{{(.*?)}}/g,
 function L(e) {
     return null != e && e.loadingState === u.f.LOADED_SUCCESS && null != e.width && null != e.height;
 }
-function M(e) {
+function G(e) {
     let { component: t } = e;
     if (Array.isArray(t)) return B(t);
     switch (t.type) {
@@ -223,8 +223,8 @@ function M(e) {
             return (0, r.jsx)(U, { children: B(t.children) });
         case "FIELD":
             return (0, r.jsx)(W, {
-                value: G(t.value),
-                name: G(t.name),
+                value: M(t.value),
+                name: M(t.name),
             });
         case "TEXT":
             return (0, r.jsx)(H, N({}, t));
@@ -233,14 +233,14 @@ function M(e) {
         case "SEPARATOR":
             return (0, r.jsx)(K, N({}, t));
         case "SOCIAL_PROOF":
-            return (0, r.jsx)(V, {});
+            return (0, r.jsx)(q, {});
     }
 }
-function G(e, t) {
-    return (0, r.jsx)(M, { component: e }, t);
+function M(e, t) {
+    return (0, r.jsx)(G, { component: e }, t);
 }
 function B(e) {
-    return e.map((e, t) => G(e, t));
+    return e.map((e, t) => M(e, t));
 }
 function F(e) {
     let { title: t, body: n, image: i, imagePlaceholder: a } = e;
@@ -304,7 +304,7 @@ function H(e) {
         n = i.useId(),
         a = (0, h._)();
     return null != t
-        ? (0, r.jsx)(O.Z, {
+        ? (0, r.jsx)(v.Z, {
               type: u.re.TEXT_DISPLAY,
               id: n,
               content: t,
@@ -357,7 +357,7 @@ function K(e) {
         spacing: "large" === t ? u.US.LARGE : u.US.SMALL,
     });
 }
-function V() {
+function q() {
     let e = (function () {
             let e = i.useContext(X);
             if (null == e) throw Error("ApplicationWidgetContext provider not found");
@@ -373,7 +373,7 @@ function V() {
               channelId: e.channelId,
           });
 }
-function q(e, t) {
+function V(e, t) {
     if (null == e) return null;
     let n = e.split(Z);
     if (1 === n.length) return n[0];
@@ -478,7 +478,7 @@ let ee = Object.assign(
             { user: n, widget: a, cta: u, subtle: f = !1 } = e,
             m = (0, o.e7)([P.default], () => P.default.getId()) === n.id,
             { application: b, game: h, config: y } = Q(a),
-            O = null == b ? void 0 : b.getIconURL(16),
+            v = null == b ? void 0 : b.getIconURL(16),
             j = (0, x.O)(n.id).data,
             I = null == j ? void 0 : j.find((e) => e.application_id === a.applicationId),
             E = (0, p.Z)({
@@ -488,22 +488,22 @@ let ee = Object.assign(
                 sourceUserId: n.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: C, hasAlreadyLinked: Z, canStartAuthorization: L, startAuthorization: G } = (0, d.F)(b),
+            { fetched: C, hasAlreadyLinked: Z, canStartAuthorization: L, startAuthorization: M } = (0, d.F)(b),
             B = i.useCallback(() => {
                 L &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: a.applicationId,
                     }),
-                    G());
-            }, [L, G, t, a.applicationId]),
+                    M());
+            }, [L, M, t, a.applicationId]),
             F = null == u && C && !Z && L,
             U = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != O
+                    null != v
                         ? (0, r.jsx)("img", {
                               className: k.appIcon,
-                              src: O,
+                              src: v,
                               width: 16,
                               height: 16,
                               alt: "",
@@ -567,7 +567,7 @@ let ee = Object.assign(
                                                       t,
                                                       {
                                                           type: "unfurled_media",
-                                                          media: (0, v.ym)(n),
+                                                          media: (0, O.ym)(n),
                                                       },
                                                   ];
                                           } else if ("string" == typeof n)
@@ -601,7 +601,7 @@ let ee = Object.assign(
                             return {
                                 type: "HERO",
                                 body: n.body.map(t),
-                                title: q(n.title, e),
+                                title: V(n.title, e),
                                 image: Y(n.image, e),
                                 imagePlaceholder: null == (r = e.config) ? void 0 : r.hero_placeholder_image,
                             };
@@ -619,12 +619,12 @@ let ee = Object.assign(
                         case "TEXT":
                             return {
                                 type: "TEXT",
-                                content: q(n.content, e),
+                                content: V(n.content, e),
                             };
                         case "TEXT_WITH_IMAGE":
                             return {
                                 type: "TEXT_WITH_IMAGE",
-                                content: q(n.content, e),
+                                content: V(n.content, e),
                                 image: Y(n.image, e),
                                 imagePosition: n.imagePosition,
                             };
@@ -655,7 +655,7 @@ let ee = Object.assign(
                         value: e,
                         children: (0, r.jsx)(J, {
                             widget: a,
-                            children: (0, r.jsx)(M, { component: z }),
+                            children: (0, r.jsx)(G, { component: z }),
                         }),
                     }),
                     m &&

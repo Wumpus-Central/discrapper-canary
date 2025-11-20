@@ -1955,6 +1955,7 @@ let em = "@me",
         GET_APPLICATION_TOKENS: (e) => "/oauth2/applications/".concat(e, "/tokens"),
         GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-bypass-slowmode-permission"),
         QUEST_PLACEMENT: "/quests/placement-alpha",
+        GAME_UPDATE: (e) => "/game-updates/".concat(e.gopGameId, "/").concat(e.startDate),
     }),
     eA = Object.freeze({
         INDEX: "/",
