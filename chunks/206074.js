@@ -65,7 +65,9 @@ function y(e) {
         i = b(t),
         { bot: s } = null != t ? t : { bot: null },
         l = E(t),
-        { bot: u } = null != l ? l : { bot: null };
+        { bot: u } = null != l ? l : { bot: null },
+        f = null == l ? void 0 : l.id,
+        h = null == u ? void 0 : u.id;
     return r.useMemo(() => {
         if (!i || null == t) return null;
         let e = () => {
@@ -86,20 +88,20 @@ function y(e) {
                           analyticsLocations: null != n ? n : [],
                       });
               }
-            : (null == l ? void 0 : l.id) != null && (null == u ? void 0 : u.id) != null
+            : null != f && null != h
               ? () => {
                     e(),
                         d.default.track(_.rMx.CLOUD_PLAY_CTA_CLICKED, {
                             source_application_id: t.id,
-                            launching_application_id: l.id,
+                            launching_application_id: f,
                             location_stack: n,
                         }),
                         (0, o.W)({
-                            appId: l.id,
-                            botId: u.id,
+                            appId: f,
+                            botId: h,
                             analyticsLocations: null != n ? n : [],
                         });
                 }
               : void 0;
-    }, [i, t, s, null == l ? void 0 : l.id, null == u ? void 0 : u.id, n]);
+    }, [i, t, s, f, h, n]);
 }
