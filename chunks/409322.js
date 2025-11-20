@@ -12,7 +12,7 @@ function u(e) {
         { node: u } = e,
         { useTitle: d } = u,
         [f, b] = l.useState(!1),
-        { layout: p, collapseAfter: y, ContextProvider: j, useCollapsibleTitle: m, useCollapsibleSubtitle: v } = u,
+        { layout: p, collapseAfter: y, ContextProvider: j, useCollapsibleTitle: v, useCollapsedSubtitle: m } = u,
         g = p.filter((e) => {
             var t, n;
             return null == (n = null == (t = e.usePredicate) ? void 0 : t.call(e)) || n;
@@ -20,25 +20,25 @@ function u(e) {
         x = null != y ? g.slice(0, y) : g,
         h = null != y ? g.slice(y) : [],
         O = null != j ? j : l.Fragment,
-        P = null == d ? void 0 : d(),
-        S =
-            null != (t = null == m ? void 0 : m(f, h.length))
+        S = null == d ? void 0 : d(),
+        P =
+            null != (t = null == v ? void 0 : v(f, h.length))
                 ? t
                 : ((n = h.length),
                   f
                       ? c.intl.formatToPlainString(c.t["3SHL+d"], { count: n })
                       : c.intl.formatToPlainString(c.t["8JRFyZ"], { count: n })),
-        C = null == v ? void 0 : v();
+        C = null == m ? void 0 : m();
     return (0, r.jsx)(O, {
         children: (0, r.jsxs)(i.Kqy, {
             gap: 8,
             children: [
-                null != P &&
+                null != S &&
                     (0, r.jsx)(i.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-secondary",
                         className: s.listTitle,
-                        children: P,
+                        children: S,
                     }),
                 x.map((e, t) =>
                     (0, r.jsxs)(
@@ -58,8 +58,8 @@ function u(e) {
                         children: [
                             (0, r.jsx)(i.izJ, { className: s.hoverDivider }),
                             (0, r.jsx)(a.I, {
-                                title: S,
-                                subtitle: C,
+                                title: P,
+                                collapsedSubtitle: C,
                                 isOpen: f,
                                 setIsOpen: b,
                                 children: (0, r.jsx)(i.Kqy, {

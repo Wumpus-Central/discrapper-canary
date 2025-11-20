@@ -1,6 +1,7 @@
 n.d(t, { x: () => s }), n(953529);
-var r = n(54381),
-    l = n(120356),
+var r = n(54381);
+n(473749);
+var l = n(120356),
     i = n.n(l),
     o = n(793030),
     a = n(481060),
@@ -11,17 +12,16 @@ function s(e) {
         primaryTrailingElement: n,
         secondaryTrailingElement: l,
         title: s,
-        secondaryTitle: u,
-        description: d,
-        compact: f = !1,
-        onClick: b,
+        description: u,
+        onClick: d,
+        ref: f,
+        style: b,
     } = e;
     return (0, r.jsxs)(a.P3F, {
-        className: i()(c.baseControlItem, {
-            [c.compact]: f,
-            [c.clickable]: null != b,
-        }),
-        onClick: b,
+        className: i()(c.baseControlItem, { [c.clickable]: null != d }),
+        onClick: d,
+        innerRef: f,
+        style: b,
         children: [
             null != t &&
                 (0, r.jsx)("div", {
@@ -31,29 +31,20 @@ function s(e) {
             (0, r.jsxs)("div", {
                 className: c.baseControlItemContent,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, r.jsx)("div", {
                         className: c.baseControlItemTitle,
-                        children: [
-                            (0, r.jsx)(o.X6q, {
-                                variant: "heading-md/medium",
-                                color: "text-primary",
-                                children: s,
-                            }),
-                            null != u &&
-                                (0, r.jsx)(o.X6q, {
-                                    variant: "heading-md/semibold",
-                                    color: "text-secondary",
-                                    className: c.secondaryTitle,
-                                    children: u,
-                                }),
-                        ],
+                        children: (0, r.jsx)(o.X6q, {
+                            variant: "heading-md/medium",
+                            color: "text-primary",
+                            children: s,
+                        }),
                     }),
-                    null != d &&
+                    null != u &&
                         (0, r.jsx)(o.xvT, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             className: c.baseControlItemDescription,
-                            children: d,
+                            children: u,
                         }),
                 ],
             }),

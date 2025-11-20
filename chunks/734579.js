@@ -8,32 +8,32 @@ var r = n(54381),
     c = n(239091),
     u = n(377171),
     d = n(243778),
-    p = n(703656),
+    f = n(703656),
+    p = n(164670),
     h = n(210218),
-    f = n(445606),
-    g = n(819640),
-    m = n(434479),
-    b = n(981631),
-    _ = n(921944),
-    y = n(582113),
+    g = n(445606),
+    m = n(819640),
+    b = n(434479),
+    _ = n(981631),
+    y = n(921944),
     O = n(388032);
 let v = i.memo(function (e) {
     let { guild: t, selected: v } = e,
         j = i.useRef(null),
-        C = (0, a.f9)(),
-        x = (0, l.e7)([g.Z], () => g.Z.hasLayers()),
+        x = (0, a.f9)(),
+        C = (0, l.e7)([m.Z], () => m.Z.hasLayers()),
         [E, S] = (0, d.ZT)([o.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {
-        v && E === o.z.GAME_SHOP_NEW_BADGE && S(_.L.INDIRECT_ACTION);
+        v && E === o.z.GAME_SHOP_NEW_BADGE && S(y.L.INDIRECT_ACTION);
     }, [S, v, E]);
     let I = i.useCallback(() => {
             var e, n;
-            S(_.L.USER_DISMISS);
+            S(y.L.USER_DISMISS);
             let r = null != (n = null == (e = h.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, p.uL)(b.Z5c.CHANNELS_GAME_SHOP(t.id, r));
+            (0, f.uL)(_.Z5c.CHANNELS_GAME_SHOP(t.id, r));
         }, [t, S]),
         P = i.useCallback(() => {
-            S(_.L.USER_DISMISS);
+            S(y.L.USER_DISMISS);
         }, [S]),
         N = i.useCallback(
             (e) => {
@@ -91,7 +91,7 @@ let v = i.memo(function (e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m.m, {
+            (0, r.jsx)(b.m, {
                 ref: j,
                 id: "game-shop-".concat(t.id),
                 renderIcon: (e) =>
@@ -102,7 +102,8 @@ let v = i.memo(function (e) {
                         height: 20,
                         className: e,
                     }),
-                text: (null == t ? void 0 : t.id) === y.ON ? O.intl.string(O.t.xFQAPs) : O.intl.string(O.t.vyaWs7),
+                text:
+                    (null == t ? void 0 : t.id) === (0, p.ac)() ? O.intl.string(O.t.xFQAPs) : O.intl.string(O.t.vyaWs7),
                 selected: v,
                 onClick: I,
                 onContextMenu: N,
@@ -111,9 +112,9 @@ let v = i.memo(function (e) {
                     color: u.Z.BG_BRAND,
                 }),
             }),
-            C || x || (null == t ? void 0 : t.id) !== y.ON || E !== o.z.GAME_SHOP_NEW_BADGE
+            x || C || (null == t ? void 0 : t.id) !== (0, p.ac)() || E !== o.z.GAME_SHOP_NEW_BADGE
                 ? null
-                : (0, r.jsx)(f.Z, {
+                : (0, r.jsx)(g.Z, {
                       onActionClick: I,
                       onRequestClose: P,
                       targetElementRef: j,

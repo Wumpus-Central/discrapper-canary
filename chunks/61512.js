@@ -1,5 +1,5 @@
-n.d(e, { Z: () => T });
-var i = n(491731),
+n.d(e, { Z: () => S });
+var i = n(323472),
     l = n(509613),
     u = n(313789),
     r = n(291011),
@@ -9,8 +9,8 @@ var i = n(491731),
 let c = u.n.NOTIFICATIONS_ADVANCED_ACCORDION,
     E = (0, l.CB)(c, {
         useTitle: (t) => (t ? o.intl.string(o.t.RyimDk) : o.intl.string(o.t.CUICbO)),
-        useSubtitle: function () {
-            return (0, i.F)(c, {
+        useCollapsedSubtitle: function () {
+            return (0, i.u)(c, {
                 formatter: (t) => {
                     let { title: e, index: n } = t;
                     return "string" != typeof e
@@ -23,7 +23,7 @@ let c = u.n.NOTIFICATIONS_ADVANCED_ACCORDION,
         },
         buildLayout: () => [r.Z, s.Z, a.Z],
     }),
-    T = (0, l.k4)(u.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
+    S = (0, l.k4)(u.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => o.intl.string(o.t["31DySj"]),
         buildLayout: () => [E],
     });

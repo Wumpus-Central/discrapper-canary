@@ -1,4 +1,4 @@
-n.d(t, { jM: () => O });
+n.d(t, { jM: () => k });
 var i = n(54381);
 n(473749);
 var l = n(442837),
@@ -23,17 +23,16 @@ var l = n(442837),
     I = n(703400),
     P = n(242723),
     w = n(848118),
-    y = n(582113),
-    N = n(981631),
+    y = n(981631),
     T = n(474936),
-    E = n(231338),
-    S = n(388032),
-    k = n(397263);
-let O = {
+    N = n(231338),
+    E = n(388032),
+    S = n(397263);
+let k = {
     key: c.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
-            G,
+            Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -62,10 +61,10 @@ let O = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => S.intl.string(S.t["W685+b"]),
+        useBreadcrumbLabel: () => E.intl.string(E.t["W685+b"]),
     },
 };
-function Z(e) {
+function O(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, d.JL)(),
         u = o ? c.h8.REVIEW : c.h8.ADD_PAYMENT_STEPS;
@@ -75,13 +74,13 @@ function Z(e) {
                 onClick: () => t(u),
                 disabled: r,
                 loading: s,
-                text: S.intl.string(S.t.XiOHRX),
+                text: E.intl.string(E.t.XiOHRX),
             }),
             l ? (0, i.jsx)(m.Z, { onClick: n }) : null,
         ],
     });
 }
-function G(e) {
+function Z(e) {
     var t;
     let { handleStepChange: n, handleClose: c } = e,
         {
@@ -89,9 +88,9 @@ function G(e) {
             setCustomGiftMessage: b,
             giftRecipient: _,
             emojiConfetti: y,
-            soundEffect: N,
-            setEmojiConfetti: O,
-            setSoundEffect: G,
+            soundEffect: k,
+            setEmojiConfetti: Z,
+            setSoundEffect: M,
             giftingOrigin: A,
         } = (0, o.wD)(),
         { selectedSkuId: L, application: W } = (0, d.JL)(),
@@ -105,30 +104,30 @@ function G(e) {
         children: [
             (0, i.jsx)(u.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: k.stepBody,
+                    className: S.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: k.bodyColumnLeft,
+                            className: S.bodyColumnLeft,
                             children: [
                                 null != H &&
                                     (0, i.jsx)(w.p, {
-                                        containerClassName: k.skuCardImage,
+                                        containerClassName: S.skuCardImage,
                                         cardImage: H,
                                         cardBackgroundImage: D,
                                         altText: null != (t = null == R ? void 0 : R.name) ? t : "",
                                         shape: "square",
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: k.giftEffectsContainer,
+                                    className: S.giftEffectsContainer,
                                     children: [
                                         (0, i.jsx)(x.Z, {
-                                            sound: N,
+                                            sound: k,
                                             onSelect: (e) => {
-                                                null != G && G(null == e ? void 0 : e);
+                                                null != M && M(null == e ? void 0 : e);
                                             },
                                         }),
                                         (0, i.jsx)(f.Z, {
-                                            setEmojiConfetti: O,
+                                            setEmojiConfetti: Z,
                                             emojiConfetti: null == y ? void 0 : y,
                                         }),
                                     ],
@@ -136,48 +135,48 @@ function G(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: k.bodyColumnRight,
+                            className: S.bodyColumnRight,
                             children: [
                                 null != _ && (A === T.Wt.USER_PROFILE_WISHLIST || A === T.Wt.DM_CHANNEL_WISHLIST)
                                     ? (0, i.jsx)(p.s, { giftRecipient: _ })
                                     : (0, i.jsx)(r.Z, {
                                           selectedSkuId: L,
                                           validateSelectedGift: U,
-                                          searchableSelectWrapperClassName: k.recipientPickerSelectWrapper,
+                                          searchableSelectWrapperClassName: S.recipientPickerSelectWrapper,
                                       }),
                                 (0, i.jsx)(g.Z, {
-                                    sectionTitle: S.intl.string(S.t.B3miE8),
+                                    sectionTitle: E.intl.string(E.t.B3miE8),
                                     onTextChange: (e) => (null == b ? void 0 : b(e)),
                                     pendingText: m,
                                     currentText: m,
                                     disableThemedBackground: !0,
-                                    className: k.customGiftMessageWrapper,
-                                    innerClassName: k.customGiftMessage,
+                                    className: S.customGiftMessageWrapper,
+                                    innerClassName: S.customGiftMessage,
                                 }),
                                 (() => {
                                     var e, t, n, l;
                                     if (null == R) return null;
                                     let r = (0, C.T4)(
                                         null != (n = null == (e = R.price) ? void 0 : e.amount) ? n : 0,
-                                        null != (l = null == (t = R.price) ? void 0 : t.currency) ? l : E.pK.USD,
+                                        null != (l = null == (t = R.price) ? void 0 : t.currency) ? l : N.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
-                                        className: k.giftPreviewContainer,
+                                        className: S.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(a.vwX, {
-                                                className: k.giftPreviewTitle,
-                                                children: S.intl.string(S.t.PpoJzt),
+                                                className: S.giftPreviewTitle,
+                                                children: E.intl.string(E.t.PpoJzt),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: k.giftPreviewContent,
+                                                className: S.giftPreviewContent,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: k.giftPreviewImageContainer,
+                                                        className: S.giftPreviewImageContainer,
                                                         children:
                                                             null != R &&
                                                             null != H &&
                                                             (0, i.jsx)(w.p, {
-                                                                containerClassName: k.giftPreviewCardContainer,
+                                                                containerClassName: S.giftPreviewCardContainer,
                                                                 cardImage: H,
                                                                 cardBackgroundImage: D,
                                                                 altText: R.name,
@@ -185,7 +184,7 @@ function G(e) {
                                                             }),
                                                     }),
                                                     (0, i.jsxs)("div", {
-                                                        className: k.giftPreviewTextContainer,
+                                                        className: S.giftPreviewTextContainer,
                                                         children: [
                                                             null != W && (0, i.jsx)(I.e, { application: W }),
                                                             (0, i.jsx)(a.Text, {
@@ -205,7 +204,7 @@ function G(e) {
                                 })(),
                                 null != F &&
                                     null != R &&
-                                    (0, i.jsx)(M, {
+                                    (0, i.jsx)(G, {
                                         handleClose: c,
                                         sku: R,
                                         guild: F,
@@ -220,8 +219,8 @@ function G(e) {
                     "data-migration-pending": !0,
                     justify: s.Z.Justify.BETWEEN,
                     align: s.Z.Align.CENTER,
-                    className: k.footer,
-                    children: (0, i.jsx)(Z, {
+                    className: S.footer,
+                    children: (0, i.jsx)(O, {
                         onStepChange: n,
                         onBackClick: c,
                         disabled: null == _ || _.id === (null == B ? void 0 : B.id) || m.length > T.$n,
@@ -231,17 +230,17 @@ function G(e) {
         ],
     });
 }
-function M(e) {
+function G(e) {
     let { handleClose: t, guild: n, sku: l } = e;
     return (0, i.jsx)("div", {
-        className: k.viewItemButton,
+        className: S.viewItemButton,
         children: (0, i.jsx)(a.Avr, {
-            text: n.id === y.ON ? S.intl.string(S.t.nyIcya) : S.intl.string(S.t.ImioFL),
+            text: n.id === (0, j.ac)() ? E.intl.string(E.t.nyIcya) : E.intl.string(E.t.ImioFL),
             onClick: function () {
                 var e;
                 t();
                 let i = null == (e = b.Z.getStorefrontState(n.id)) ? void 0 : e.activePage;
-                window.location.pathname.includes(N.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, l.id)) ||
+                window.location.pathname.includes(y.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, l.id)) ||
                     ((0, a.pTH)(),
                     (0, _.Z)({
                         guildId: n.id,

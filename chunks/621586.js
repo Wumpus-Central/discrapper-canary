@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var i = n(54381),
     r = n(473749),
     l = n(772848),
@@ -7,62 +7,63 @@ var i = n(54381),
     s = n(688192),
     c = n(390322),
     u = n(626135),
-    d = n(81939),
-    p = n(851397),
-    h = n(582113),
-    f = n(981631),
-    m = n(388032),
-    g = n(842350);
-let b = "vc-gifting-".concat((0, l.Z)());
-function y(e) {
+    d = n(164670),
+    p = n(81939),
+    h = n(851397),
+    f = n(582113),
+    m = n(981631),
+    g = n(388032),
+    b = n(842350);
+let y = "vc-gifting-".concat((0, l.Z)());
+function C(e) {
     var t;
-    let { isHovered: n, closePopout: l, onMouseEnter: y, onMouseLeave: C, channel: v } = e;
+    let { isHovered: n, closePopout: l, onMouseEnter: C, onMouseLeave: v, channel: _ } = e;
     r.useEffect(() => {
         n || l();
     }, [l, n]);
-    let _ = (0, o.q)(h.t9),
-        { loading: x, wishlistItems: j, wishlistItemSkuIds: O } = (0, d.Z)({ guildId: h.ON });
+    let x = (0, o.q)(f.t9),
+        { loading: j, wishlistItems: O, wishlistItemSkuIds: E } = (0, p.Z)({ guildId: (0, d.ac)() });
     return (
         r.useEffect(() => {
-            0 !== O.length &&
-                u.default.track(f.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: v.guild_id,
-                    channel_id: v.id,
-                    sku_ids: O,
+            0 !== E.length &&
+                u.default.track(m.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                    guild_id: _.guild_id,
+                    channel_id: _.id,
+                    sku_ids: E,
                 });
-        }, [v.id, v.guild_id, O]),
+        }, [_.id, _.guild_id, E]),
         (0, i.jsx)(c.Z, {
             children: (0, i.jsx)(a.VqE, {
-                "aria-labelledby": b,
+                "aria-labelledby": y,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: g.container,
-                    onMouseEnter: y,
-                    onMouseLeave: C,
+                    className: b.container,
+                    onMouseEnter: C,
+                    onMouseLeave: v,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            className: g.title,
+                            className: b.title,
                             variant: "text-lg/bold",
                             color: "text-primary",
-                            children: m.intl.string(m.t.xLP3bi),
+                            children: g.intl.string(g.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
-                            className: g.subtitle,
+                            className: b.subtitle,
                             variant: "text-sm/medium",
                             color: "text-secondary",
-                            children: m.intl.format(m.t["+SqhBF"], {
+                            children: g.intl.format(g.t["+SqhBF"], {
                                 applicationName:
-                                    null != (t = null == _ ? void 0 : _.name) ? t : m.intl.string(m.t["/1hhto"]),
+                                    null != (t = null == x ? void 0 : x.name) ? t : g.intl.string(g.t["/1hhto"]),
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: g.wishlistItemsContainer,
+                            className: b.wishlistItemsContainer,
                             children:
-                                x || 0 === j.length
-                                    ? (0, i.jsx)(a.$jN, { className: g.loading })
-                                    : j.map((e) =>
+                                j || 0 === O.length
+                                    ? (0, i.jsx)(a.$jN, { className: b.loading })
+                                    : O.map((e) =>
                                           (0, i.jsx)(
-                                              p.Z,
+                                              h.Z,
                                               {
                                                   item: e,
                                                   wishlistId: null,

@@ -11,6 +11,6 @@ var i = n(509613),
     S = n(388032);
 let T = (0, i.CB)(l.n.VOICE_AND_VIDEO_DIAGNOSTICS_ACCORDION, {
     useTitle: (t) => (t ? S.intl.string(S.t["/B4I8H"]) : S.intl.string(S.t.BTlsWH)),
-    useSubtitle: () => S.intl.string(S.t.la1Ys4),
+    useCollapsedSubtitle: () => S.intl.string(S.t.la1Ys4),
     buildLayout: () => [o.Z, u.Z, a.Z, s.Z, r.Z, c.Z, E.Z],
 });

@@ -125,15 +125,11 @@ let f = 200,
                     }
                 }, 10);
             },
-            j = { "--custom-edge-fade-width": _(a) };
+            k = { "--custom-edge-fade-width": _(a) };
         return (0, r.jsxs)("div", {
             ref: P,
-            style: j,
-            className: o()(d.container, {
-                [d.scrollLeft]: I,
-                [d.scrollRight]: S,
-                [d.scrollBoth]: I && S,
-            }),
+            style: k,
+            className: d.container,
             children: [
                 O &&
                     (0, r.jsxs)("div", {
@@ -159,7 +155,11 @@ let f = 200,
                     direction: "horizontal",
                     gap: n,
                     ref: D,
-                    className: d.children,
+                    className: o()(d.children, {
+                        [d.scrollLeft]: I,
+                        [d.scrollRight]: S,
+                        [d.scrollBoth]: I && S,
+                    }),
                     tabIndex: 0,
                     onFocus: (e) => {
                         let t = D.current;

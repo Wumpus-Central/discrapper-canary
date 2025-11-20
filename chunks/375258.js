@@ -4,15 +4,15 @@ n.d(e, {
 });
 var i = n(473749),
     l = n(442837),
-    u = n(491731),
+    u = n(323472),
     r = n(509613),
     s = n(28682),
     a = n(463395),
     o = n(131951),
     c = n(313789),
     E = n(292591),
-    T = n(383713),
-    S = n(51397),
+    S = n(383713),
+    T = n(51397),
     d = n(782134),
     I = n(894470),
     O = n(422767),
@@ -26,7 +26,7 @@ function C(t) {
     return t ? Z.intl.string(Z.t.KHsSWK) : Z.intl.string(Z.t.PPDo5V);
 }
 function L() {
-    return [d.Z, T.Z, E.Z, g.Z, I.Z, A.Z, O.Z, S.Z, _.Z, N.Z];
+    return [d.Z, S.Z, E.Z, g.Z, I.Z, A.Z, O.Z, T.Z, _.Z, N.Z];
 }
 function P() {
     let t = (0, l.e7)([a.Z, o.Z], () => {
@@ -50,18 +50,18 @@ function b() {
 }
 function p(t) {
     let e = (0, l.e7)([o.Z], () => o.Z.isInputProfileCustom());
-    return (0, u.F)(t, { limit: e ? 3 : 2 });
+    return (0, u.u)(t, { limit: e ? 3 : 2 });
 }
 let y = (0, r.CB)(c.n.INPUT_MODE_VOICE_ADVANCED_ACCORDION, {
         useTitle: C,
-        useSubtitle: () => p(c.n.INPUT_MODE_VOICE_ADVANCED_ACCORDION),
+        useCollapsedSubtitle: () => p(c.n.INPUT_MODE_VOICE_ADVANCED_ACCORDION),
         useNotice: P,
         buildLayout: L,
         usePredicate: b,
     }),
     D = (0, r.CB)(c.n.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION, {
         useTitle: C,
-        useSubtitle: () => p(c.n.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION),
+        useCollapsedSubtitle: () => p(c.n.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION),
         useNotice: P,
         buildLayout: L,
         usePredicate: () => !b(),

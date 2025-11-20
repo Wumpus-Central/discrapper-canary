@@ -1,4 +1,4 @@
-a.d(t, { default: () => g });
+a.d(t, { default: () => N });
 var r = a(54381),
     s = a(473749),
     n = a(120356),
@@ -8,22 +8,22 @@ var r = a(54381),
     o = a(481060),
     d = a(266454),
     m = a(626135),
-    u = a(705338),
-    f = a(582113),
+    u = a(164670),
+    f = a(705338),
     x = a(981631),
     h = a(231338),
     p = a(388032),
     j = a(487373),
     v = a(867709),
-    N = a(157443);
-function g(e) {
+    g = a(157443);
+function N(e) {
     let { transitionState: t, returnRef: a, onClose: n } = e;
     s.useEffect(() => {
         m.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
             (0, d.Q3)(c.z.GAME_SHOP_ANNOUNCEMENT_MODAL);
     }, []);
-    let g = s.useCallback(() => {
-        (0, u.Z)({ guildId: f.ON }), n();
+    let N = s.useCallback(() => {
+        (0, f.Z)({ guildId: (0, u.ac)() }), n();
     }, [n]);
     return (0, r.jsx)(l.f6W, {
         theme: h.BR.DARK,
@@ -66,7 +66,7 @@ function g(e) {
                                         (0, r.jsx)("div", {
                                             className: j.featureIcon,
                                             children: (0, r.jsx)("img", {
-                                                src: N,
+                                                src: g,
                                                 alt: "",
                                             }),
                                         }),
@@ -119,7 +119,7 @@ function g(e) {
                         (0, r.jsx)(l.zxk, {
                             variant: "primary",
                             text: p.intl.string(p.t.CekBHq),
-                            onClick: g,
+                            onClick: N,
                         }),
                     ],
                 }),

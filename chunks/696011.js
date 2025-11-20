@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(704215),
     i = n(147913),
     a = n(266454),
@@ -6,11 +6,12 @@ var r = n(704215),
     s = n(594190),
     l = n(581883),
     c = n(430824),
-    u = n(699955),
-    d = n(594914),
-    f = n(582113),
-    _ = n(526761);
-function p(e, t, n) {
+    u = n(164670),
+    d = n(699955),
+    f = n(594914),
+    _ = n(582113),
+    p = n(526761);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,16 +24,16 @@ function p(e, t, n) {
         e
     );
 }
-let h = new Set([f.t9, f.h4]);
-class m extends i.Z {
+let m = new Set([_.t9, _.h4]);
+class g extends i.Z {
     constructor(...e) {
         super(...e),
-            p(this, "_didAttemptToOpenModal", !1),
-            p(this, "_didConnectionOpen", !1),
-            p(this, "_didUserSettingsProtoLoad", !1),
-            p(this, "_didGamesSeenLoad", !1),
-            p(this, "actions", { POST_CONNECTION_OPEN: () => this._handlePostConnectionOpen() }),
-            p(
+            h(this, "_didAttemptToOpenModal", !1),
+            h(this, "_didConnectionOpen", !1),
+            h(this, "_didUserSettingsProtoLoad", !1),
+            h(this, "_didGamesSeenLoad", !1),
+            h(this, "actions", { POST_CONNECTION_OPEN: () => this._handlePostConnectionOpen() }),
+            h(
                 this,
                 "stores",
                 new Map()
@@ -40,32 +41,32 @@ class m extends i.Z {
                     .set(s.ZP, () => this._handleGamesSeenUpdate())
                     .set(o.Z, () => this._handleApexExperimentUpdate()),
             ),
-            p(this, "_handlePostConnectionOpen", () => {
+            h(this, "_handlePostConnectionOpen", () => {
                 (this._didConnectionOpen = !0), this._handleShowAnnouncementModal();
             }),
-            p(this, "_handleUserSettingsProtoUpdate", () => {
-                (this._didUserSettingsProtoLoad = l.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS)),
+            h(this, "_handleUserSettingsProtoUpdate", () => {
+                (this._didUserSettingsProtoLoad = l.Z.hasLoaded(p.yP.PRELOADED_USER_SETTINGS)),
                     this._handleShowAnnouncementModal();
             }),
-            p(this, "_handleGamesSeenUpdate", () => {
+            h(this, "_handleGamesSeenUpdate", () => {
                 (this._didGamesSeenLoad = s.ZP.isGamesSeenLoaded()), this._handleShowAnnouncementModal();
             }),
-            p(this, "_handleApexExperimentUpdate", () => {
+            h(this, "_handleApexExperimentUpdate", () => {
                 this._handleShowAnnouncementModal();
             }),
-            p(this, "_handleShowAnnouncementModal", () => {
+            h(this, "_handleShowAnnouncementModal", () => {
                 if (
                     !this._didAttemptToOpenModal &&
                     this._didConnectionOpen &&
                     this._didUserSettingsProtoLoad &&
                     this._didGamesSeenLoad &&
-                    (0, u.n)({ location: "social-layer-storefront-announcement-modal" }) &&
+                    (0, d.n)({ location: "social-layer-storefront-announcement-modal" }) &&
                     ((this._didAttemptToOpenModal = !0), !(0, a.zu)(r.z.GAME_SHOP_ANNOUNCEMENT_MODAL))
                 ) {
-                    if (null != c.Z.getGuild(f.ON)) return void (0, d.b)();
-                    for (let e of s.ZP.getGamesSeen(!1, !1)) if (null != e.id && h.has(e.id)) return void (0, d.b)();
+                    if (null != c.Z.getGuild((0, u.ac)())) return void (0, f.b)();
+                    for (let e of s.ZP.getGamesSeen(!1, !1)) if (null != e.id && m.has(e.id)) return void (0, f.b)();
                 }
             });
     }
 }
-let g = new m();
+let E = new g();

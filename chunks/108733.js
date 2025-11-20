@@ -1,29 +1,29 @@
 n.d(t, { Z: () => u }), n(388685);
-var i = n(54381),
-    l = n(473749),
+var a = n(54381),
+    i = n(473749),
     r = n(793030),
-    a = n(705338),
-    s = n(810568),
-    o = n(981631),
-    c = n(582113),
+    l = n(164670),
+    s = n(705338),
+    o = n(810568),
+    c = n(981631),
     d = n(388032);
 function u(e) {
     var t, n;
-    let { invite: u, trackClick: m, closeModal: f } = e,
-        g = l.useCallback(() => {
-            (null == u ? void 0 : u.guild) != null && ((0, a.Z)({ invite: u }), f(), m(s.as.GameShop));
-        }, [f, u, m]);
+    let { invite: u, trackClick: m, closeModal: g } = e,
+        f = i.useCallback(() => {
+            (null == u ? void 0 : u.guild) != null && ((0, s.Z)({ invite: u }), g(), m(o.as.GameShop));
+        }, [g, u, m]);
     return new Set(null == u || null == (t = u.guild) ? void 0 : t.features).has(
-        o.GuildFeatures.SOCIAL_LAYER_STOREFRONT,
+        c.GuildFeatures.SOCIAL_LAYER_STOREFRONT,
     )
-        ? (0, i.jsx)(r.zxk, {
+        ? (0, a.jsx)(r.zxk, {
               variant: "primary",
               text:
-                  (null == u || null == (n = u.guild) ? void 0 : n.id) === c.ON
+                  (null == u || null == (n = u.guild) ? void 0 : n.id) === (0, l.ac)()
                       ? d.intl.string(d.t.WTXyEQ)
                       : d.intl.string(d.t.v8UpgE),
               icon: r.EOn,
-              onClick: g,
+              onClick: f,
               fullWidth: !0,
           })
         : null;
