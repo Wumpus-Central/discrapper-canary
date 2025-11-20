@@ -273,7 +273,10 @@ let w = {
                                                               size: "sm",
                                                               text: T.intl.string(T.t.vwASIl),
                                                               onClick: () => {
-                                                                  (0, h.A2)(e.id)
+                                                                  (0, h.A2)({
+                                                                      promotionId: e.id,
+                                                                      analyticsLocations: [],
+                                                                  })
                                                                       .then((n) => {
                                                                           c([
                                                                               ...l.slice(0, t),
