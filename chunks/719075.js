@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(429368),
     d = n(884697),
     f = n(290175),
-    p = n(724994),
-    g = n(409116),
+    g = n(724994),
+    p = n(409116),
     m = n(786040),
     h = n(58201),
     C = n(445794),
@@ -20,10 +20,10 @@ var r = n(54381),
 let x = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
             u = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            h = (0, m.$l)(),
+            h = (0, m.jB)(),
             x = c.ZP.canUseCollectibles(u),
             { isDisabled: E } = (0, f.G)(t.skuId),
-            { isPurchased: O, isPartiallyOwnedBundle: S, isRented: y, rentalExpiresAt: j } = (0, p.L)(t),
+            { isPurchased: O, isPartiallyOwnedBundle: S, isRented: y, rentalExpiresAt: j } = (0, g.L)(t),
             k = (0, d.G1)(t),
             I = (0, d.rN)(t),
             T = l.useMemo(() => (0, d.BH)(t, x), [t, x]),
@@ -37,7 +37,7 @@ let x = (e) => {
                 isPremiumUser: x,
                 prioritizedCurrency: n,
                 hasDiscountOffer: null != L,
-                isRental: h,
+                isRental: null != h,
             }),
             A = k && !x;
         if (E)
@@ -86,7 +86,7 @@ let x = (e) => {
                   })
                 : 0 === B.length
                   ? null
-                  : (0, r.jsx)(g.F, {
+                  : (0, r.jsx)(p.F, {
                         price: B[0],
                         discount: T,
                         nitroIconType: x ? "default" : void 0,

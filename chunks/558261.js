@@ -108,7 +108,7 @@ let N = (e) => {
             fullWidth: !0,
         });
     },
-    H = (e) => {
+    D = (e) => {
         let {
                 product: t,
                 isClaimPremiumProductDisabled: n,
@@ -139,7 +139,7 @@ let N = (e) => {
             fullWidth: !0,
         });
     },
-    D = (e) => {
+    H = (e) => {
         let { product: t, analyticsLocations: n, onClickAnalytics: s } = e,
             o = (0, O.jB)(),
             c = (0, i.e7)([d.default], () => d.default.locale);
@@ -173,7 +173,6 @@ let N = (e) => {
                                 analyticsLocations: n,
                                 itemConsumed: null == (i = a[0]) ? void 0 : i.consumed,
                                 purchaseType: T.o8.ORB,
-                                isRental: !0,
                                 rentalDuration: o,
                                 rentalExpiresAt: s,
                             });
@@ -252,7 +251,7 @@ let N = (e) => {
             } = e,
             f = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
             g = m.ZP.canUseCollectibles(f),
-            h = (0, O.$l)(),
+            h = (0, O.jB)(),
             { isPurchased: _, isPartiallyOwnedBundle: S } = (0, E.L)(t),
             y = (0, b.G1)(t),
             I = (0, b.rN)(t),
@@ -273,7 +272,7 @@ let N = (e) => {
                 isPremiumUser: g,
                 prioritizedCurrency: u,
                 hasDiscountOffer: P,
-                isRental: h,
+                isRental: null != h,
             }),
             { analyticsLocations: z } = (0, o.ZP)(s.Z.COLLECTIBLES_SHOP_CARD),
             G = (0, O.J7)(t, s.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, d),
@@ -305,7 +304,7 @@ let N = (e) => {
                 text: c,
             });
         if (y)
-            return (0, r.jsx)(H, {
+            return (0, r.jsx)(D, {
                 product: t,
                 isClaimPremiumProductDisabled: Y,
                 isClaiming: K,
@@ -314,8 +313,8 @@ let N = (e) => {
                 onClickAnalytics: d,
             });
         if (W && V)
-            return h
-                ? (0, r.jsx)(D, {
+            return null != h
+                ? (0, r.jsx)(H, {
                       product: t,
                       analyticsLocations: z,
                       onClickAnalytics: d,

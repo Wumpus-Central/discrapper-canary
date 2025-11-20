@@ -39,8 +39,8 @@ let k = l.memo(function (e) {
                 onClickSecondaryCTA: R,
                 onMouseEnter: Z,
                 onMouseLeave: w,
-                onFocus: H,
-                onBlur: D,
+                onFocus: D,
+                onBlur: H,
                 primaryCTAText: M,
                 secondaryCTAIcon: F,
                 productNameClassName: W,
@@ -50,41 +50,40 @@ let k = l.memo(function (e) {
                 onClickAnalytics: G,
             } = e,
             { previewingVariantIndex: K, handleEntering: Y, handleLeaving: q } = (0, O.f)(t),
-            J = (0, b.$l)(),
-            Q = (0, b.jB)(),
-            X = (0, f.Nd)(),
-            $ = null == X ? void 0 : X.tab,
-            ee = (0, S.zQ)(t),
-            et = l.useRef(null),
-            { isHoveringOrFocusing: en } = (0, d.Z)(et),
-            { handleCardVisibilityChange: er } = (0, g.E)(t.skuId, $ === y.AW.CATALOG ? "full" : $),
-            el = (0, b.J7)(t, u.Z.COLLECTIBLES_SHOP_CARD, G, J, Q),
-            ei = t.type === s.Z.VARIANTS_GROUP && !k,
-            ea = !T || !L,
-            es = !(I && i) || ei,
-            eo = es || ea,
-            ec = ea || ei;
+            J = (0, b.jB)(),
+            Q = (0, f.Nd)(),
+            X = null == Q ? void 0 : Q.tab,
+            $ = (0, S.zQ)(t),
+            ee = l.useRef(null),
+            { isHoveringOrFocusing: et } = (0, d.Z)(ee),
+            { handleCardVisibilityChange: en } = (0, g.E)(t.skuId, X === y.AW.CATALOG ? "full" : X),
+            er = (0, b.J7)(t, u.Z.COLLECTIBLES_SHOP_CARD, G, J),
+            el = t.type === s.Z.VARIANTS_GROUP && !k,
+            ei = !T || !L,
+            ea = !(I && i) || el,
+            es = ea || ei,
+            eo = ei || el;
         return (0, r.jsx)(o.$, {
-            innerRef: et,
-            onChange: er,
+            innerRef: ee,
+            onChange: en,
             threshold: 0,
             children: (0, r.jsx)(c.kL8, {
-                ref: et,
-                onClick: null != N ? N : el,
-                "aria-label": ee,
-                className: a()(U, j.productCardContainer, { [j.hovered]: en }),
-                onFocus: () => (null == H ? void 0 : H(t.skuId)),
-                onBlur: () => (null == D ? void 0 : D(t.skuId)),
+                ref: ee,
+                onClick: null != N ? N : er,
+                "aria-label": $,
+                className: a()(U, j.productCardContainer, { [j.hovered]: et }),
+                onFocus: () => (null == D ? void 0 : D(t.skuId)),
+                onBlur: () => (null == H ? void 0 : H(t.skuId)),
                 onMouseEnter: () => (null == Z ? void 0 : Z(t.skuId)),
                 onMouseLeave: () => (null == w ? void 0 : w(t.skuId)),
                 children: (0, r.jsxs)("div", {
                     className: j.productCardContentContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || es || ec }),
+                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || ea || eo }),
                             children: (0, r.jsx)(v.Z, {
                                 skuId: t.skuId,
-                                isCardHovered: en,
+                                isCardHovered: et,
                                 overrideVariantIndex: K,
                             }),
                         }),
@@ -101,18 +100,18 @@ let k = l.memo(function (e) {
                                 !n &&
                                     (0, r.jsx)(E.Z, {
                                         skuId: t.skuId,
-                                        isCardHovered: en,
+                                        isCardHovered: et,
                                     }),
                             ],
                         }),
-                        eo &&
+                        es &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", { className: j.footerGradient }),
                                     (0, r.jsxs)("div", {
                                         className: j.footerContainer,
                                         children: [
-                                            es &&
+                                            ea &&
                                                 (0, r.jsxs)("div", {
                                                     className: j.footerInfoContainer,
                                                     children: [
@@ -136,16 +135,16 @@ let k = l.memo(function (e) {
                                                                         }),
                                                                 ],
                                                             }),
-                                                        ei &&
+                                                        el &&
                                                             (0, r.jsx)(x.Z, {
                                                                 skuId: t.skuId,
-                                                                isCollapsed: !en,
+                                                                isCollapsed: !et,
                                                                 onVariantEnter: Y,
                                                                 onVariantExit: q,
                                                             }),
                                                     ],
                                                 }),
-                                            ea &&
+                                            ei &&
                                                 (0, r.jsx)("div", {
                                                     className: j.footerButtonContainer,
                                                     children: (0, r.jsxs)(c.ButtonGroup, {
@@ -156,7 +155,7 @@ let k = l.memo(function (e) {
                                                             !T &&
                                                                 (0, r.jsx)(C.Z, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: et,
+                                                                    cardRef: ee,
                                                                     onClick: A,
                                                                     text: M,
                                                                     prioritizedCurrency: z,
@@ -165,7 +164,7 @@ let k = l.memo(function (e) {
                                                             !L &&
                                                                 (0, r.jsx)(_.Z, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: et,
+                                                                    cardRef: ee,
                                                                     onClick: R,
                                                                     icon: F,
                                                                     prioritizedCurrency: z,

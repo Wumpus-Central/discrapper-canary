@@ -48,6 +48,19 @@ let o = function (e) {
     },
     u = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = (null == e ? void 0 : e.skuId) != null && (0, a.o0)(null == e ? void 0 : e.skuId);
-        return (0, r.useMemo)(() => (n ? s(e, t) : c(e, t)), [n, e, t]);
+            n = arguments.length > 2 ? arguments[2] : void 0,
+            i = (null == e ? void 0 : e.skuId) != null && (0, a.o0)(null == e ? void 0 : e.skuId);
+        return (0, r.useMemo)(
+            () =>
+                null != n
+                    ? 1 === n
+                        ? l.intl.string(l.t.ggwFN5)
+                        : 3 === n
+                          ? l.intl.string(l.t.QUjmjp)
+                          : l.intl.string(l.t["o+VpXZ"])
+                    : i
+                      ? s(e, t)
+                      : c(e, t),
+            [i, e, t, n],
+        );
     };

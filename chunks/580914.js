@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(442837),
     d = n(481060),
     f = n(393903),
-    p = n(448986),
-    g = n(906732),
+    g = n(448986),
+    p = n(906732),
     m = n(110560),
     h = n(507808),
     C = n(594174),
@@ -102,25 +102,25 @@ let V = (0, x.IC)(90),
             eu = null != (t = null == el ? void 0 : el.responsive) && t,
             ed = null == el ? void 0 : el.backgroundStyle,
             ef = null != ec,
-            ep = (0, u.e7)([v.Z], () => v.Z.products),
-            eg = l.useMemo(() => (n ? [] : ep.size > 0 ? $(et.rankedSkuIds) : []), [n, $, et.rankedSkuIds, ep]),
+            eg = (0, u.e7)([v.Z], () => v.Z.products),
+            ep = l.useMemo(() => (n ? [] : eg.size > 0 ? $(et.rankedSkuIds) : []), [n, $, et.rankedSkuIds, eg]),
             em = l.useMemo(
                 () =>
                     !n &&
                     0 !== et.rankedSkuIds.length &&
-                    !(eg.length > 0) &&
+                    !(ep.length > 0) &&
                     et.rankedSkuIds.every((e) => {
                         var t;
                         return (null == (t = v.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
                     }),
-                [n, et.rankedSkuIds, eg.length],
+                [n, et.rankedSkuIds, ep.length],
             ),
             eh = K === H.AW.ORBS,
             eC = null != z && z.isOrbsExclusive,
             { cardContainerRef: e_, totalCards: eb } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
-                    i = (0, p.Z)(() => {
+                    i = (0, g.Z)(() => {
                         (null == a ? void 0 : a.current) != null &&
                             n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
                     }),
@@ -139,14 +139,14 @@ let V = (0, x.IC)(90),
                     totalCards: e ? t : void 0,
                 };
             })(!eh || en),
-            ev = (0, y.a)()(eg),
+            ev = (0, y.a)()(ep),
             ex = (0, j.l)(ev).slice(0, eb),
             eE = (0, R.St)(ex),
             eO = eh ? F.intl.string(F.t["1CdL8d"]) : F.intl.string(F.t.xYKa1T);
         eh && en && (eO = F.intl.string(F.t.dVz4hi));
         let eS = (0, O.FF)("CollectiblesContent"),
             ey = E.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
-            { analyticsLocations: ej } = (0, g.ZP)(),
+            { analyticsLocations: ej } = (0, p.ZP)(),
             ek = () => {
                 eh
                     ? ((0, h.Y)({
@@ -291,10 +291,7 @@ let V = (0, x.IC)(90),
                                                 ),
                                             })
                                           : (0, r.jsx)(L.zp.Provider, {
-                                                value: {
-                                                    isRental: en,
-                                                    rentalDuration: er,
-                                                },
+                                                value: { rentalDuration: en ? er : void 0 },
                                                 children: eE.map((e, t) => {
                                                     let n = v.Z.getCategoryForProduct(e.skuId);
                                                     return null == e || null == n

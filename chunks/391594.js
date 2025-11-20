@@ -18,9 +18,9 @@ var i = n(473749),
     d = n(1585),
     c = n(318110),
     p = n(98278),
-    f = n(642619),
-    h = n(110560),
-    O = n(313789),
+    O = n(642619),
+    f = n(110560),
+    h = n(313789),
     b = n(518596),
     y = n(507808),
     A = n(626135),
@@ -31,7 +31,7 @@ var i = n(473749),
     P = n(302800),
     R = n(215023),
     S = n(981631),
-    T = n(252183),
+    T = n(956994),
     _ = n(388032);
 let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null),
     v = (t) => {
@@ -42,11 +42,15 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
             shouldShowPromotionalExperience: r,
             productName: l,
             itemConsumed: a,
-            isRental: s,
-            rentalDuration: u,
+            rentalDuration: s,
         } = t;
         if (null != n) return n;
-        if (s) return 1 === u ? _.intl.string(_.t.vAV62L) : _.intl.string(_.t["5Gltxj"]);
+        if (null != s)
+            return 1 === s
+                ? _.intl.string(_.t.vAV62L)
+                : 3 === s
+                  ? _.intl.string(_.t["5Gltxj"])
+                  : _.intl.string(_.t.sYO0Wl);
         if (R.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(T.default.nvaTQq);
         if (R.Vt.FRACTIONAL_PREMIUM === e.skuId)
             if (a) return _.intl.string(_.t.t0xkSB);
@@ -64,14 +68,13 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
             itemConsumed: a,
             isFractionalPremiumActive: o,
             expiresAt: d,
-            isRental: c,
-            rentalExpiresAt: p,
+            isRental: c = !1,
         } = t;
         if (null != n) return n;
-        if (c && null != p)
+        if (c && null != d)
             return _.intl.format(_.t["HQjw+I"], {
                 itemName: i,
-                date: p,
+                date: d,
             });
         if (R.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(T.default.UnPGii);
         {
@@ -111,7 +114,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                 isApplying: s,
                 openProfileSettings: A,
                 itemConsumed: g,
-                isRental: I,
+                isRental: I = !1,
             } = t,
             m = [];
         if (R.Vt.ORB_PROFILE_BADGE === e.skuId)
@@ -133,7 +136,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                                 sectionType: S.jXE.ORBS_BADGE_REDEMPTION_MODAL,
                                 ctaObject: S.qAy.CTA_TO_QUEST_HOME,
                             }),
-                            (0, h.navigateToQuestHome)();
+                            (0, f.navigateToQuestHome)();
                     },
                 },
             );
@@ -163,7 +166,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                           text: _.intl.string(_.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, b.openUserSettings)(O.n.SUBSCRIPTIONS_PANEL, { section: S.oAB.SUBSCRIPTIONS }), n();
+                              (0, b.openUserSettings)(h.n.SUBSCRIPTIONS_PANEL, { section: S.oAB.SUBSCRIPTIONS }), n();
                           },
                       },
                   );
@@ -183,7 +186,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                     }
                     if (e.type === u.Z.PROFILE_EFFECT) {
                         a()(t.type === u.Z.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, f.H)({
+                            (0, O.H)({
                                 initialSelectedEffect: t,
                                 analyticsLocations: i,
                             });

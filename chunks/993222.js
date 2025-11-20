@@ -39,13 +39,15 @@ let v = (e) => {
                 (null == y || l
                     ? !E && !x && (0, f.Yq)(t.skuId)
                         ? (L = p.Zh.NEW)
-                        : 1 === v
+                        : null != v && 1 === v
                           ? (L = p.Zh.ONE_DAY_RENTAL)
-                          : 3 === v
+                          : null != v && 3 === v
                             ? (L = p.Zh.THREE_DAY_RENTAL)
-                            : T
-                              ? (L = p.Zh.ORBS_EXCLUSIVE)
-                              : O && (L = p.Zh.NITRO_EXCLUSIVE)
+                            : null != v
+                              ? (L = p.Zh.RENTAL)
+                              : T
+                                ? (L = p.Zh.ORBS_EXCLUSIVE)
+                                : O && (L = p.Zh.NITRO_EXCLUSIVE)
                     : (L = p.Zh.LIMITED_TIME)),
             null == L || L === p.Zh.NONE)
         )
@@ -74,6 +76,9 @@ let v = (e) => {
                 break;
             case p.Zh.THREE_DAY_RENTAL:
                 B = _.intl.string(_.t["52UXCo"]);
+                break;
+            case p.Zh.RENTAL:
+                B = _.intl.string(_.t.VgsFa1);
         }
         return (0, r.jsx)(s.IGR, {
             text: B,
