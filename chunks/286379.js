@@ -38,6 +38,7 @@ var r = (function (e) {
         (e.DM_SETTINGS_UPSELL_VIEW = "dm_settings_upsell_view"),
         (e.CAPTCHA_SERVE_VOLUME_DISTRIBUTION = "captcha_serve_volume_distribution"),
         (e.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE = "in_app_report_navigate_to_nonexistent_node"),
+        (e.BILLING_MANAGER_OPERATION = "billing_manager.operation"),
         e
     );
 })({});
