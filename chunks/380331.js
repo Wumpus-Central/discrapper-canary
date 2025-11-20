@@ -13,7 +13,7 @@ var r = n(54381),
     p = n(607070),
     h = n(806966),
     m = n(254494),
-    g = n(593618),
+    g = n(648307),
     E = n(451478),
     b = n(626135),
     y = n(624138),
@@ -151,9 +151,8 @@ function K(e) {
     return null != E
         ? (0, r.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(g.Z, {
+                  (0, r.jsx)(g.V, {
                       guild: E,
-                      includeActivity: !1,
                       children: (0, r.jsx)("div", { children: y }),
                   }),
                   N ? (0, r.jsx)("hr", { className: R.guildCategorySeparator }, "separator") : null,
