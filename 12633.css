@@ -52450,7 +52450,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59786,9 +59786,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -67878,16 +67878,18 @@ html .progress__61462 {
     display: flex;
     flex-direction: row;
     gap: 4px;
-    opacity: 1;
-    transition: opacity .5s
+    opacity: 1
+}
+
+.full-motion .descriptionContainer_abfd90 {
+    transition: opacity .25s, transform .25s
 }
 
 .buttonHover_abfd90 {
     bottom: 16px;
     inset-inline: 16px;
-    opacity: 0;
     position: absolute;
-    transform: translateY(20%);
+    transform: translateY(150%);
     z-index: 1
 }
 
@@ -67897,18 +67899,18 @@ html .progress__61462 {
 
 .card_abfd90:focus-within .buttonHover_abfd90,
 .card_abfd90:hover .buttonHover_abfd90 {
-    opacity: 1;
     transform: translateY(0)
 }
 
 .card_abfd90:focus-within .descriptionContainer_abfd90,
 .card_abfd90:hover .descriptionContainer_abfd90 {
-    opacity: 0
+    opacity: 0;
+    transform: translateY(50%)
 }
 
 .card_abfd90:focus-within .titleContainer_abfd90,
 .card_abfd90:hover .titleContainer_abfd90 {
-    transform: translateY(-90%)
+    transform: translateY(-100%)
 }
 
 .card_abfd90:focus-within .bottomGradient_abfd90,
