@@ -181,6 +181,7 @@ function O(e) {
             modal: N,
             returnRef: R,
             gradientOffsetBottom: 0,
+            experimental_ignoreModalClicks: !1,
             children: (0, r.jsxs)("div", {
                 "data-mana-component": "popover",
                 children: [

@@ -105,51 +105,52 @@ function S(e) {
             scrollBehavior: P = "sticky",
             modal: D = !1,
             returnRef: w,
+            experimental_ignoreModalClicks: L = !0,
         } = e,
-        [L, x] = i.useState(p),
-        [M, k] = i.useState(E),
-        j = i.useRef(E),
-        U = i.useRef(0),
-        G = (0, c.e7)([d.Z], () => d.Z.getLayers()),
-        B = null != (t = G[G.length - 1]) ? t : "base",
-        Z = i.useRef(N);
+        [x, M] = i.useState(p),
+        [k, j] = i.useState(E),
+        U = i.useRef(E),
+        G = i.useRef(0),
+        B = (0, c.e7)([d.Z], () => d.Z.getLayers()),
+        Z = null != (t = B[B.length - 1]) ? t : "base",
+        F = i.useRef(N);
     i.useEffect(() => {
-        Z.current = N;
+        F.current = N;
     }, [N]);
-    let F = i.useCallback((e) => {
+    let V = i.useCallback((e) => {
             var t;
-            null != e && e !== j.current && ((j.current = e), k(e), null == (t = Z.current) || t.call(Z, e));
+            null != e && e !== U.current && ((U.current = e), j(e), null == (t = F.current) || t.call(F, e));
         }, []),
-        V = i.useMemo(() => {
+        H = i.useMemo(() => {
             var e, t;
             return (
                 null == a.current ||
                 (null != (t = null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer"))
                     ? t
-                    : "base") === B
+                    : "base") === Z
             );
-        }, [a, B]);
+        }, [a, Z]);
     i.useEffect(() => {
-        V && p ? x(!0) : V || x(!1);
-    }, [V, p]),
+        H && p ? M(!0) : H || M(!1);
+    }, [H, p]),
         i.useEffect(() => {
-            F(E);
-        }, [E, F]);
-    let H = () => {
-            x(!1);
+            V(E);
+        }, [E, V]);
+    let Y = () => {
+            M(!1);
         },
-        Y = (0, _.i)({
+        W = (0, _.i)({
             shouldShow: p,
-            caretPosition: (0, f.z)(M),
-            onExitComplete: H,
+            caretPosition: (0, f.z)(k),
+            onExitComplete: Y,
         }),
-        W = (e) => {
+        K = (e) => {
             var { setPopoutRef: t, position: i, nudge: a } = e,
                 c = y(e, ["setPopoutRef", "position", "nudge"]);
             return (
-                F(i),
-                a !== U.current && ((U.current = a), null == R || R(a)),
-                Y((e, i) => {
+                V(i),
+                a !== G.current && ((G.current = a), null == R || R(a)),
+                W((e, i) => {
                     if (!i) return null;
                     let a = (0, r.jsx)(
                         l.VqE,
@@ -181,9 +182,9 @@ function S(e) {
         };
     return (0, r.jsx)(u.H, {
         targetElementRef: a,
-        shouldShow: L,
+        shouldShow: x,
         onRequestClose: m,
-        position: M,
+        position: k,
         align: O,
         spacing: v + I,
         layerContext: void 0,
@@ -191,11 +192,11 @@ function S(e) {
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === M || "bottom" === M,
+        nudgeAlignIntoViewport: "top" === k || "bottom" === k,
         closeOnClickOutside: !1,
-        ignoreModalClicks: !0,
+        ignoreModalClicks: L,
         scrollBehavior: P,
-        renderPopout: W,
+        renderPopout: K,
         children: T,
     });
 }

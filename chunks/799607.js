@@ -139,9 +139,12 @@ let f = 200,
                     ("Escape" === e.key || "Esc" === e.key) && (e.preventDefault(), e.stopPropagation(), L(!0));
                 };
                 return (
-                    document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0)
+                    document.addEventListener("keydown", e, !0),
+                    () => {
+                        document.removeEventListener("keydown", e, !0);
+                    }
                 );
-            }, [A, L, n]);
+            }, [A, L]);
         let U = i.useMemo(
                 () =>
                     null == E
