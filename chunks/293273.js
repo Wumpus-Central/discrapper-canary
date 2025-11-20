@@ -4,22 +4,22 @@ var r,
     a = n.n(i),
     o = n(392711),
     s = n.n(o),
-    l = n(442837),
-    c = n(570140),
-    u = n(317381),
-    d = n(212517),
-    f = n(812206),
-    _ = n(676035),
-    p = n(594190),
-    h = n(574176),
-    m = n(106301),
-    g = n(406066),
-    E = n(674691),
-    b = n(509003),
-    y = n(768419),
-    O = n(695346),
-    v = n(581883),
-    I = n(630388),
+    l = n(95015),
+    c = n(442837),
+    u = n(570140),
+    d = n(317381),
+    f = n(212517),
+    _ = n(812206),
+    p = n(676035),
+    h = n(594190),
+    m = n(574176),
+    g = n(106301),
+    E = n(406066),
+    b = n(674691),
+    y = n(509003),
+    O = n(768419),
+    v = n(695346),
+    I = n(581883),
     T = n(199902),
     S = n(592125),
     A = n(272053),
@@ -84,11 +84,11 @@ let M = [],
 function j() {
     var e, t;
     let n = [],
-        r = O.Ok.getSetting();
+        r = v.Ok.getSetting();
     null != r &&
         ("0" === r.expiresAtMs || new Date(Number(r.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
-        n.push((0, _.I)(r));
-    let i = g.Z.getActivities();
+        n.push((0, p.I)(r));
+    let i = E.Z.getActivities();
     n.push(...i);
     let o = A.Z.getStream();
     null != o && n.push(w({ type: P.IIU.STREAMING }, o));
@@ -97,12 +97,12 @@ function j() {
         let [, t] = e;
         null != t.application_id && (l.add(t.name), n.push(t));
     });
-    let c = p.ZP.getVisibleGame(),
-        u = null != c && null != c.name && (l.has(c.name) || (0, E.G)(c, [...n, ...R.Z.getRemoteActivities()])),
+    let c = h.ZP.getVisibleGame(),
+        u = null != c && null != c.name && (l.has(c.name) || (0, b.G)(c, [...n, ...R.Z.getRemoteActivities()])),
         d = null != c && c.isLauncher,
         f = null != T.Z.getCurrentUserActiveStream(),
-        v = u || (d && !f);
-    if (null != c && null != c.name && !v) {
+        _ = u || (d && !f);
+    if (null != c && null != c.name && !_) {
         let t = C.Z.getGameByName(c.name);
         n.push(
             w(
@@ -112,16 +112,16 @@ function j() {
                     application_id: null != (e = c.id) ? e : null == t ? void 0 : t.id,
                     timestamps: { start: c.start },
                 },
-                (0, b.LK)(c),
+                (0, y.LK)(c),
             ),
         );
     }
-    let I = y.Z.getActivity();
+    let I = O.Z.getActivity();
     null != I && n.push(w({ type: P.IIU.LISTENING }, I));
-    let D = m.Z.getCurrentHangStatus();
+    let D = g.Z.getCurrentHangStatus();
     if (null != D) {
-        let e = m.Z.getCustomHangStatus(),
-            { defaultStatusVariant: r } = (0, h.gx)({
+        let e = g.Z.getCustomHangStatus(),
+            { defaultStatusVariant: r } = (0, m.gx)({
                 guildId: null == (t = S.Z.getChannel(N.Z.getVoiceChannelId())) ? void 0 : t.guild_id,
                 location: "LocalActivityStore",
             });
@@ -156,25 +156,25 @@ function F() {
         t = !1;
     for (let [i, [a, o, s]] of Object.entries(k)) {
         var n, r;
-        let l = null != (n = o.flags) ? n : 0,
-            c = (0, d.S)(
+        let c = null != (n = o.flags) ? n : 0,
+            u = (0, f.S)(
                 o,
-                (0, I.yE)(null != (r = null == o ? void 0 : o.flags) ? r : 0, P.xjy.INSTANCE),
+                (0, l.yE)(null != (r = null == o ? void 0 : o.flags) ? r : 0, P.xjy.INSTANCE),
                 o.platform === P.M7m.EMBEDDED,
-                (0, d.D)(o),
+                (0, f.D)(o),
                 s,
             );
-        c !== l ? ((e[i] = [a, x(w({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
+        u !== c ? ((e[i] = [a, x(w({}, o), { flags: u }), s]), (t = !0)) : (e[i] = [a, o, s]);
     }
     return t ? ((k = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
 function V() {
     F(), j();
 }
-class H extends (r = l.ZP.Store) {
+class H extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, T.Z, S.Z, u.ZP, A.Z, g.Z, C.Z, m.Z, p.ZP, N.Z, R.Z, y.Z, v.Z),
-            this.syncWith([g.Z, m.Z], () => j());
+        this.waitFor(_.Z, T.Z, S.Z, d.ZP, A.Z, E.Z, C.Z, g.Z, h.ZP, N.Z, R.Z, O.Z, I.Z),
+            this.syncWith([E.Z, g.Z], () => j());
     }
     getActivities() {
         return M;
@@ -200,7 +200,7 @@ class H extends (r = l.ZP.Store) {
     }
 }
 D(H, "displayName", "LocalActivityStore");
-let Y = new H(c.Z, {
+let Y = new H(u.Z, {
     ROBLOX_SUBGAME_UPDATE: j,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: j,
     OVERLAY_INITIALIZE: Z,

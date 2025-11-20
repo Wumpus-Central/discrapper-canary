@@ -4,25 +4,25 @@ var r = n(54381),
     a = n(512722),
     o = n.n(a),
     s = n(742280),
-    l = n(399606),
-    c = n(481060),
-    u = n(16084),
-    d = n(224550),
-    f = n(609194),
-    _ = n(275850),
-    p = n(672971),
-    h = n(115130),
-    m = n(925329),
-    g = n(314182),
-    E = n(396955),
-    b = n(251660),
-    y = n(246946),
-    O = n(351402),
-    v = n(853872),
-    I = n(855775),
-    T = n(695103),
-    S = n(4912),
-    A = n(630388),
+    l = n(95015),
+    c = n(399606),
+    u = n(481060),
+    d = n(16084),
+    f = n(224550),
+    _ = n(609194),
+    p = n(275850),
+    h = n(672971),
+    m = n(115130),
+    g = n(925329),
+    E = n(314182),
+    b = n(396955),
+    y = n(251660),
+    O = n(246946),
+    v = n(351402),
+    I = n(853872),
+    T = n(855775),
+    S = n(695103),
+    A = n(4912),
     C = n(669079),
     N = n(987209),
     R = n(563132),
@@ -40,8 +40,8 @@ function j(e) {
         : (0, r.jsxs)("div", {
               className: k.skuHeading,
               children: [
-                  (0, r.jsx)(m.Z, { game: t }),
-                  (0, r.jsx)(c.Heading, {
+                  (0, r.jsx)(g.Z, { game: t }),
+                  (0, r.jsx)(u.Heading, {
                       variant: "heading-lg/bold",
                       className: k.skuHeadingText,
                       children: n.name,
@@ -50,7 +50,7 @@ function j(e) {
           });
 }
 function U(e) {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: m } = e,
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: g } = e,
         {
             application: U,
             purchaseState: G,
@@ -69,31 +69,31 @@ function U(e) {
         } = (0, R.JL)(),
         { isGift: J, giftRecipient: $ } = (0, N.wD)(),
         ee = J && (0, C.pO)($),
-        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([v.Z], () => ({
-            defaultPaymentSourceId: v.Z.defaultPaymentSourceId,
-            hasFetchedPaymentSources: v.Z.hasFetchedPaymentSources,
+        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, c.cj)([I.Z], () => ({
+            defaultPaymentSourceId: I.Z.defaultPaymentSourceId,
+            hasFetchedPaymentSources: I.Z.hasFetchedPaymentSources,
         }));
     o()(null != Y, "Expected selectedSkuId");
     let er = V[Y],
         ei = null == er ? void 0 : er.eligiblePaymentGateways,
         ea = H[Y],
-        eo = null != Z ? Z : I.c,
+        eo = null != Z ? Z : T.c,
         es = null != ea ? ea[eo] : null;
     o()(null != er, "SKU must exist and be fetched."), o()(null != U, "Application must exist.");
-    let el = (0, l.e7)([h.Z, T.Z], () => T.Z.inTestModeForApplication(U.id) || h.Z.inDevModeForApplication(U.id), [
+    let el = (0, c.e7)([m.Z, S.Z], () => S.Z.inTestModeForApplication(U.id) || m.Z.inDevModeForApplication(U.id), [
             U.id,
         ]),
-        ec = (0, l.e7)([y.Z], () => y.Z.enabled),
-        eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
+        ec = (0, c.e7)([O.Z], () => O.Z.enabled),
+        eu = s.M.EEA_COUNTRIES.has(v.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
         ef = (0, D.m)(B, Z),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
             Z === et &&
-            et !== I.c &&
+            et !== T.c &&
             null == es &&
-            (0, u.x2)(er.applicationId, er.id, et, { isGift: J })
+            (0, d.x2)(er.applicationId, er.id, et, { isGift: J })
                 .then(() => {
                     X(null);
                 })
@@ -101,33 +101,33 @@ function U(e) {
                     X(e);
                 });
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
-    let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0,
+    let ep = null != ei && ei.length > 0 && (Z === T.c || null === e_) && Q ? b.w.SELECT_PAYMENT_METHOD : void 0,
         eh = er.productLine === x.POd.SOCIAL_LAYER_GAME_ITEM,
         em = ee && !eh;
     return (0, r.jsxs)("div", {
         className: k.stepBody,
         children: [
-            (0, r.jsx)(E.Y, { paymentRestrictionBannerType: ep }),
+            (0, r.jsx)(b.Y, { paymentRestrictionBannerType: ep }),
             el
                 ? (0, r.jsx)(
-                      f.Z,
+                      _.Z,
                       {
-                          icon: (0, c.GSL)(S.Z),
-                          iconSize: f.Z.Sizes.SMALL,
-                          color: f.Z.Colors.WARNING,
+                          icon: (0, u.GSL)(A.Z),
+                          iconSize: _.Z.Sizes.SMALL,
+                          color: _.Z.Colors.WARNING,
                           className: k.errorBlock,
                           children: M.intl.string(M.t.OvMyMd),
                       },
                       "TEST_MODE",
                   )
                 : null,
-            (0, A.yE)(U.flags, x.udG.EMBEDDED) && q === h.O.ERROR
+            (0, l.yE)(U.flags, x.udG.EMBEDDED) && q === m.O.ERROR
                 ? (0, r.jsx)(
-                      f.Z,
+                      _.Z,
                       {
-                          icon: (0, c.GSL)(S.Z),
-                          iconSize: f.Z.Sizes.SMALL,
-                          color: f.Z.Colors.ERROR,
+                          icon: (0, u.GSL)(A.Z),
+                          iconSize: _.Z.Sizes.SMALL,
+                          color: _.Z.Colors.ERROR,
                           className: k.errorBlock,
                           children: M.intl.string(M.t.tAmECt),
                       },
@@ -140,8 +140,8 @@ function U(e) {
                 isEmbeddedIAP: W,
             }),
             em && (0, r.jsx)(w.Z, { sku: er }),
-            null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
-            (0, r.jsx)(c.gNt, {
+            null != $ ? (0, r.jsx)(y.s, { giftRecipient: $ }) : null,
+            (0, r.jsx)(u.gNt, {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
                 children:
                     null != es
@@ -151,8 +151,8 @@ function U(e) {
                               application: U,
                           })
                         : null == z
-                          ? (0, r.jsx)(c.$jN, {
-                                type: c.$jN.Type.WANDERING_CUBES,
+                          ? (0, r.jsx)(u.$jN, {
+                                type: u.$jN.Type.WANDERING_CUBES,
                                 className: k.invoiceSpinner,
                             })
                           : (0, r.jsx)(L.E, {
@@ -160,20 +160,20 @@ function U(e) {
                                 value: "",
                             }),
             }),
-            (0, r.jsx)(_.ZP, {
+            (0, r.jsx)(p.ZP, {
                 label: M.intl.string(M.t["mmDvV+"]),
                 paymentSources: Object.values(B),
                 selectedPaymentSourceId: Z,
                 onChange: a,
-                onPaymentSourceAdd: m,
+                onPaymentSourceAdd: g,
                 hidePersonalInformation: ec,
                 paymentGatewayRestrictions: ei,
             }),
-            (0, r.jsxs)(g.Z, {
+            (0, r.jsxs)(E.Z, {
                 isActive: t,
                 ref: n,
                 children: [
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(h.Z, {
                         onChange: F,
                         forceShow: !0,
                         showWithdrawalWaiver: eu,
@@ -182,7 +182,7 @@ function U(e) {
                         finePrintClassname: k.fineprint,
                         purchaseType: K,
                         isGift: J,
-                        finePrint: (0, r.jsx)(d.Z, {
+                        finePrint: (0, r.jsx)(f.Z, {
                             paymentSourceType: e_,
                             isEmbeddedIAP: W,
                             purchaseType: K,
@@ -194,7 +194,7 @@ function U(e) {
                     eh &&
                         (0, r.jsx)("div", {
                             className: k.socialLayerGameItemDisclaimer,
-                            children: (0, r.jsx)(c.M14, {
+                            children: (0, r.jsx)(u.M14, {
                                 type: "warning",
                                 children: M.intl.string(M.t["6fBC//"]),
                             }),

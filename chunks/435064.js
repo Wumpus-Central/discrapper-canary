@@ -1,12 +1,12 @@
 n.d(t, { Z: () => eu }), n(388685), n(997841);
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(579806),
-    s = n(594190),
-    l = n(569545),
-    c = n(314897),
-    u = n(630388);
+    i = n(95015),
+    a = n(442837),
+    o = n(570140),
+    s = n(579806),
+    l = n(594190),
+    c = n(569545),
+    u = n(314897);
 n(137058);
 var d = n(924557),
     f = n(894694),
@@ -119,8 +119,8 @@ let y = "default",
         },
     };
 async function M() {
-    if (x.clipsSettings.storageLocation !== y || null == o.Z || null == o.Z.remoteApp) return;
-    let e = await o.Z.remoteApp.getPath("documents");
+    if (x.clipsSettings.storageLocation !== y || null == s.Z || null == s.Z.remoteApp) return;
+    let e = await s.Z.remoteApp.getPath("documents");
     (x.clipsSettings.storageLocation = e), ec.emitChange();
 }
 function k(e) {
@@ -238,7 +238,7 @@ function q(e) {
     let r = t;
     if (null != n) {
         var i;
-        let e = s.ZP.getGameForPID(n);
+        let e = l.ZP.getGameForPID(n);
         r = null != (i = null == e ? void 0 : e.name) ? i : r;
     }
     if (null == r || "" === r) return !1;
@@ -250,7 +250,7 @@ function q(e) {
 }
 function X(e) {
     let { streamKey: t } = e;
-    if (((P = null), (D[t] = []), null == A || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    if (((P = null), (D[t] = []), null == A || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
     A = 0 === A.newClipIds.length ? null : b(g({}, A), { ended: !0 });
 }
 function Q(e) {
@@ -272,9 +272,9 @@ function ee() {
 }
 function et(e) {
     C[e.userId] = {
-        clipsEnabled: (0, u.yE)(e.flags, p.BVn.CLIPS_ENABLED),
-        allowVoiceRecording: (0, u.yE)(e.flags, p.BVn.ALLOW_VOICE_RECORDING),
-        allowAnyViewerClips: (0, u.yE)(e.flags, p.BVn.ALLOW_ANY_VIEWER_CLIPS),
+        clipsEnabled: (0, i.yE)(e.flags, p.BVn.CLIPS_ENABLED),
+        allowVoiceRecording: (0, i.yE)(e.flags, p.BVn.ALLOW_VOICE_RECORDING),
+        allowAnyViewerClips: (0, i.yE)(e.flags, p.BVn.ALLOW_ANY_VIEWER_CLIPS),
     };
 }
 function en(e) {
@@ -299,7 +299,7 @@ function ei(e) {
     R = null != t ? t : [];
 }
 function ea(e, t, n) {
-    if (!(0, d.NS)() || n !== c.default.getId() || null == t) return !1;
+    if (!(0, d.NS)() || n !== u.default.getId() || null == t) return !1;
     let r = "__CLIP_METADATA__",
         i = t.indexOf(r);
     if (-1 === i) return !1;
@@ -326,9 +326,9 @@ function es(e) {
     }
     return t;
 }
-class el extends (r = i.ZP.DeviceSettingsStore) {
+class el extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (x = e), M(), this.waitFor(s.ZP);
+        null != e && (x = e), M(), this.waitFor(l.ZP);
     }
     getClips() {
         return v;
@@ -520,7 +520,7 @@ m(el, "displayName", "ClipsStore"),
                 }),
             }),
     ]);
-let ec = new el(a.Z, {
+let ec = new el(o.Z, {
         CLIPS_SETTINGS_UPDATE: U,
         CLIPS_SAVE_CLIP: F,
         CLIPS_SAVE_CLIP_PLACEHOLDER: V,

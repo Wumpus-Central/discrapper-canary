@@ -13,47 +13,47 @@ var i = n(54381),
     c = n(313361),
     d = n(697988),
     u = n(683860),
-    h = n(442837),
-    g = n(796027),
-    p = n(780384),
-    m = n(481060),
-    f = n(787014),
-    b = n(771340),
-    x = n(410575),
-    j = n(129865),
-    v = n(902840),
-    y = n(622822),
-    C = n(933557),
-    S = n(541716),
-    N = n(752305),
-    O = n(893718),
-    Z = n(409513),
-    E = n(600164),
-    w = n(313201),
-    T = n(318766),
-    _ = n(907040),
-    R = n(906411),
-    P = n(633302),
-    I = n(109434),
-    L = n(162389),
-    M = n(946458),
-    A = n(968437),
-    D = n(665906),
-    k = n(543855),
-    B = n(747212),
-    H = n(210887),
-    U = n(131704),
-    G = n(601964),
-    V = n(314897),
-    W = n(388610),
-    F = n(430824),
-    z = n(496675),
-    q = n(903223),
-    Y = n(594174),
-    J = n(934415),
-    X = n(55935),
-    Q = n(70956),
-    K = n(630388),
+    h = n(95015),
+    g = n(442837),
+    p = n(796027),
+    m = n(780384),
+    f = n(481060),
+    b = n(787014),
+    x = n(771340),
+    j = n(410575),
+    v = n(129865),
+    y = n(902840),
+    C = n(622822),
+    S = n(933557),
+    N = n(541716),
+    O = n(752305),
+    Z = n(893718),
+    E = n(409513),
+    w = n(600164),
+    T = n(313201),
+    _ = n(318766),
+    R = n(907040),
+    P = n(906411),
+    I = n(633302),
+    L = n(109434),
+    M = n(162389),
+    A = n(946458),
+    D = n(968437),
+    k = n(665906),
+    B = n(543855),
+    H = n(747212),
+    U = n(210887),
+    G = n(131704),
+    V = n(601964),
+    W = n(314897),
+    F = n(388610),
+    z = n(430824),
+    q = n(496675),
+    Y = n(903223),
+    J = n(594174),
+    X = n(934415),
+    Q = n(55935),
+    K = n(70956),
     $ = n(63063),
     ee = n(129724),
     et = n(732335),
@@ -114,10 +114,10 @@ function ep(e, t) {
         e
     );
 }
-let em = (0, w.hQ)(),
-    ef = (0, w.hQ)(),
-    eb = (0, w.hQ)(),
-    ex = (0, U.createChannelRecord)({
+let em = (0, T.hQ)(),
+    ef = (0, T.hQ)(),
+    eb = (0, T.hQ)(),
+    ex = (0, G.createChannelRecord)({
         id: "1",
         type: el.d4z.DM,
     }),
@@ -137,16 +137,16 @@ let em = (0, w.hQ)(),
     },
     ey = "AUTOMATIC_RTC_REGION",
     eC = {
-        breakingChangeDate: (0, X.vc)(o()(el.zQD), "LL"),
+        breakingChangeDate: (0, Q.vc)(o()(el.zQD), "LL"),
         helpCenterLink: $.Z.getArticleURL(el.BhN.SLOWMODE),
     },
-    eS = h.ZP.connectStores([W.Z], () => {
-        let { channel: e, submitting: t } = W.Z.getProps();
+    eS = g.ZP.connectStores([F.Z], () => {
+        let { channel: e, submitting: t } = F.Z.getProps();
         return {
             channel: e,
             submitting: t,
             onReset() {
-                null != e && (0, f.S1)(e.id);
+                null != e && (0, b.S1)(e.id);
             },
             onSave() {
                 if (null == e) return;
@@ -166,13 +166,13 @@ let em = (0, w.hQ)(),
                     rtcRegion: g,
                     videoQualityMode: p,
                     defaultReactionEmoji: m,
-                    availableTags: b,
+                    availableTags: f,
                     defaultSortOrder: x,
                     defaultForumLayout: j,
                     defaultTagSetting: v,
                 } = e;
-                e.isThread() && (t = (0, k.Z)(t, !0)),
-                    (0, f.wk)(e.id, {
+                e.isThread() && (t = (0, B.Z)(t, !0)),
+                    (0, b.wk)(e.id, {
                         name: t,
                         type: n,
                         topic: i,
@@ -190,21 +190,21 @@ let em = (0, w.hQ)(),
                         rtcRegion: g,
                         videoQualityMode: p,
                         defaultReactionEmoji: m,
-                        availableTags: b,
+                        availableTags: f,
                         defaultSortOrder: x,
                         defaultForumLayout: j,
                         defaultTagSetting: v,
                     });
             },
         };
-    })(g.Z);
+    })(p.Z);
 function eN(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = l.useRef(null),
         a = l.useCallback(
             (e) => {
                 let { closePopout: l } = e;
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(R.Z, {
                     channel: n,
                     guildId: r,
                     pickerIntention: es.Hz.CHANNEL_NAME,
@@ -212,7 +212,7 @@ function eN(e) {
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === R.B.UNICODE && t(n.surrogates), i && l();
+                        null != n && n.type === P.B.UNICODE && t(n.surrogates), i && l();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: ev,
@@ -220,16 +220,16 @@ function eN(e) {
             },
             [n, r, t],
         );
-    return (0, i.jsx)(m.yRy, {
+    return (0, i.jsx)(f.yRy, {
         targetElementRef: s,
         renderPopout: a,
-        animation: m.yRy.Animation.NONE,
+        animation: f.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, i.jsx)(
-                T.Z,
+                _.Z,
                 ep(eg({}, e), {
                     ref: s,
                     active: n,
@@ -250,7 +250,7 @@ function eN(e) {
 }
 class eO extends l.PureComponent {
     componentDidMount() {
-        null == this.props.regions && null != this.props.guild && b.Z.fetchRegions(this.props.guild.id);
+        null == this.props.regions && null != this.props.guild && x.Z.fetchRegions(this.props.guild.id);
     }
     componentDidUpdate(e) {
         var t, n, i, l;
@@ -259,7 +259,7 @@ class eO extends l.PureComponent {
             r !== this.state.textTopicValue &&
             this.setState({
                 textTopicValue: r,
-                richTopicValue: (0, N.JM)(r),
+                richTopicValue: (0, O.JM)(r),
             });
     }
     getError(e) {
@@ -284,30 +284,30 @@ class eO extends l.PureComponent {
         return (0, ee.A)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, ee.A)(e * Q.Z.Seconds.MINUTE, !0);
+        return (0, ee.A)(e * K.Z.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
         var n, l, r, a, o, h, g;
         let p,
-            f,
+            m,
             {
                 canManageChannels: b,
-                canSendMessages: j,
+                canSendMessages: x,
                 isThreadModerator: v,
-                canManageThread: C,
-                guild: N,
-                isForumPost: E,
+                canManageThread: y,
+                guild: S,
+                isForumPost: O,
                 isOwner: w,
                 showAdvancedSlowModeSetting: T,
             } = this.props,
-            _ = U.Ec.has(e.type),
+            _ = G.Ec.has(e.type),
             R = e.isForumLikeChannel(),
-            I = R && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
-            D = (null == (l = Y.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
-            k = U.TK.has(e.type)
-                ? (0, i.jsx)(m.gNt, {
+            P = R && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
+            L = (null == (l = J.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
+            k = G.TK.has(e.type)
+                ? (0, i.jsx)(f.gNt, {
                       label: R ? ec.intl.string(ec.t.yR6HwZ) : ec.intl.string(ec.t.X8jMDh),
-                      children: (0, i.jsx)(O.ZP, {
+                      children: (0, i.jsx)(Z.ZP, {
                           className: s()(ed.topicContainer, { [ed.disabled]: !b }),
                           innerClassName: s()(ed.topic, { [ed.disabled]: !b }),
                           characterCountClassName: ed.topicCharacterCount,
@@ -317,7 +317,7 @@ class eO extends l.PureComponent {
                           channel: ex,
                           textValue: this.state.textTopicValue,
                           richValue: this.state.richTopicValue,
-                          type: R ? S.Ie.FORUM_CHANNEL_GUIDELINES : S.Ie.CHANNEL_TOPIC,
+                          type: R ? N.Ie.FORUM_CHANNEL_GUIDELINES : N.Ie.CHANNEL_TOPIC,
                           onFocus: () => {
                               this.setState({ topicFocused: !0 });
                           },
@@ -333,12 +333,12 @@ class eO extends l.PureComponent {
                       }),
                   })
                 : null,
-            H =
-                R && D
-                    ? (0, i.jsx)(m.Kx8, {
+            B =
+                R && L
+                    ? (0, i.jsx)(f.Kx8, {
                           label: ec.intl.string(ec.t.qk2jdY),
                           placeholder: ec.intl.string(ec.t.DDjD1H),
-                          value: P.ZP.translateSurrogatesToInlineEmoji(null != (a = e.template) ? a : ""),
+                          value: I.ZP.translateSurrogatesToInlineEmoji(null != (a = e.template) ? a : ""),
                           onChange: this.handleChangeTemplate,
                           error: this.getError("template"),
                           maxLength: ea.Vb,
@@ -347,19 +347,19 @@ class eO extends l.PureComponent {
                           showCharacterCount: !0,
                       })
                     : null,
-            V = e.isForumLikeChannel()
+            U = e.isForumLikeChannel()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(m.izJ, {}),
-                          (0, i.jsx)(m.gNt, {
+                          (0, i.jsx)(f.izJ, {}),
+                          (0, i.jsx)(f.gNt, {
                               label: ec.intl.string(ec.t["P/y+sj"]),
                               description: ec.intl.string(ec.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
                               id: em,
-                              children: (0, i.jsx)(L.Z, { channel: e }),
+                              children: (0, i.jsx)(M.Z, { channel: e }),
                           }),
-                          (0, i.jsx)(m.Checkbox, {
-                              disabled: !b || I,
+                          (0, i.jsx)(f.Checkbox, {
+                              disabled: !b || P,
                               checked: e.hasFlag(er.zZ.REQUIRE_TAG),
                               onChange: (e) => this.handleRequireTagChanged(e),
                               label: ec.intl.string(ec.t["9g2Zyv"]),
@@ -370,8 +370,8 @@ class eO extends l.PureComponent {
             W = e.isForumLikeChannel()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(m.izJ, {}),
-                          (0, i.jsx)(m.gNt, {
+                          (0, i.jsx)(f.izJ, {}),
+                          (0, i.jsx)(f.gNt, {
                               label: ec.intl.string(ec.t["8ao1+E"]),
                               description: ec.intl.string(ec.t.SdbF0q),
                               children: (0, i.jsxs)("div", {
@@ -379,18 +379,18 @@ class eO extends l.PureComponent {
                                   children: [
                                       (0, i.jsx)("div", {
                                           className: s()(ed.settingsLeft, ed.settingsDefaultReaction),
-                                          children: (0, i.jsxs)(m.ButtonGroup, {
+                                          children: (0, i.jsxs)(f.ButtonGroup, {
                                               align: "center",
                                               children: [
-                                                  (0, i.jsx)(m.yRy, {
+                                                  (0, i.jsx)(f.yRy, {
                                                       targetElementRef: this.defaultReactionButtonRef,
                                                       renderPopout: this.renderEmojiPicker,
                                                       position: "right",
-                                                      animation: m.yRy.Animation.NONE,
+                                                      animation: f.yRy.Animation.NONE,
                                                       align: "center",
                                                       children: (e) =>
                                                           (0, i.jsx)(
-                                                              m.Button,
+                                                              f.Button,
                                                               ep(eg({}, e), {
                                                                   buttonRef: this.defaultReactionButtonRef,
                                                                   text: ec.intl.string(ec.t["59QgaD"]),
@@ -403,7 +403,7 @@ class eO extends l.PureComponent {
                                                           ),
                                                   }),
                                                   null != e.defaultReactionEmoji
-                                                      ? (0, i.jsx)(m.Avr, {
+                                                      ? (0, i.jsx)(f.Avr, {
                                                             text: ec.intl.string(ec.t.N86XcP),
                                                             onClick: () => this.handleChangeDefaultReactionEmoji(null),
                                                             variant: "critical",
@@ -412,7 +412,7 @@ class eO extends l.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, i.jsx)(M.Z, { reactionEmoji: e.defaultReactionEmoji }),
+                                      (0, i.jsx)(A.Z, { reactionEmoji: e.defaultReactionEmoji }),
                                   ],
                               }),
                           }),
@@ -422,13 +422,13 @@ class eO extends l.PureComponent {
             F = e.isForumChannel()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(m.izJ, {}),
+                          (0, i.jsx)(f.izJ, {}),
                           (0, i.jsxs)("div", {
                               className: ed.twoColumnSettings,
                               children: [
                                   (0, i.jsx)("div", {
                                       className: s()(ed.settingsLeft, ed.settingsDefaultView),
-                                      children: (0, i.jsx)(m.q4e, {
+                                      children: (0, i.jsx)(f.q4e, {
                                           label: ec.intl.string(ec.t["kQvoC/"]),
                                           description: ec.intl.string(ec.t.mOSViT),
                                           options: [
@@ -450,12 +450,12 @@ class eO extends l.PureComponent {
                                       : (0, i.jsx)(ei.Z, { className: ed.defaultImageView }),
                               ],
                           }),
-                          (0, i.jsx)(m.izJ, {}),
+                          (0, i.jsx)(f.izJ, {}),
                       ],
                   })
                 : null,
             z = e.isForumLikeChannel()
-                ? (0, i.jsx)(m.q4e, {
+                ? (0, i.jsx)(f.q4e, {
                       label: ec.intl.string(ec.t.gePre2),
                       description: ec.intl.string(ec.t["165cVX"]),
                       options: [
@@ -473,7 +473,7 @@ class eO extends l.PureComponent {
                   })
                 : null,
             q = e.isForumLikeChannel()
-                ? (0, i.jsx)(m.q4e, {
+                ? (0, i.jsx)(f.q4e, {
                       label: ec.intl.string(ec.t.Paxaug),
                       description: ec.intl.string(ec.t.DqOl8J),
                       options: [
@@ -490,10 +490,10 @@ class eO extends l.PureComponent {
                       onChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
-            J = _ ? v : b,
+            Y = _ ? v : b,
             X =
                 null ==
-                (r = Z.Z.getCurrentConfig({
+                (r = E.Z.getCurrentConfig({
                     guildId: e.guild_id,
                     location: "ChannelSettingsOverview",
                 }))
@@ -507,7 +507,7 @@ class eO extends l.PureComponent {
                           channel: e,
                           onChange: this.handleChangeSlowmode,
                       })
-                    : (0, i.jsx)(m.iRW, {
+                    : (0, i.jsx)(f.iRW, {
                           label: ec.intl.string(ec.t.tTHx98),
                           helperText: this.getSlowmodeHelpText(X),
                           initialValue: e.rateLimitPerUser,
@@ -515,21 +515,21 @@ class eO extends l.PureComponent {
                           stickToMarkers: !0,
                           onValueChange: this.handleChangeSlowmode,
                           onMarkerRender: this.getCooldownSliderMarker,
-                          disabled: !J,
+                          disabled: !Y,
                           equidistant: !0,
                           "aria-labelledby": ef,
                           "aria-describedby": eb,
                       }),
-            K = U.X_.has(e.type)
+            K = G.X_.has(e.type)
                 ? R
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(m.izJ, {}),
-                              (0, i.jsxs)(m.C3N, {
+                              (0, i.jsx)(f.izJ, {}),
+                              (0, i.jsxs)(f.C3N, {
                                   label: ec.intl.string(ec.t.O1c02q),
                                   children: [
                                       Q,
-                                      (0, i.jsx)(m.iRW, {
+                                      (0, i.jsx)(f.iRW, {
                                           label: ec.intl.string(ec.t["fkY5+l"]),
                                           helperText: X ? ec.intl.format(ec.t.nZSuEj, eC) : ec.intl.string(ec.t.kdZU6H),
                                           initialValue: null != (h = e.defaultThreadRateLimitPerUser) ? h : 0,
@@ -537,56 +537,56 @@ class eO extends l.PureComponent {
                                           stickToMarkers: !0,
                                           onValueChange: this.handleChangeThreadMessageSlowmode,
                                           onMarkerRender: this.getCooldownSliderMarker,
-                                          disabled: !J,
+                                          disabled: !Y,
                                           equidistant: !0,
                                           "aria-labelledby": ef,
                                           "aria-describedby": eb,
                                       }),
                                   ],
                               }),
-                              (0, i.jsx)(m.izJ, {}),
+                              (0, i.jsx)(f.izJ, {}),
                           ],
                       })
                     : Q
                 : null,
             ee =
                 _ && null != e.threadMetadata
-                    ? (0, i.jsx)(x.Z, {
+                    ? (0, i.jsx)(j.Z, {
                           page: el.ZY5.CHANNEL_SETTINGS,
-                          children: (0, i.jsx)(B.Z, {
-                              isDisabled: !C,
+                          children: (0, i.jsx)(H.Z, {
+                              isDisabled: !y,
                               autoArchiveDuration: null != (g = e.threadMetadata.autoArchiveDuration) ? g : eo.AX,
                               onChange: this.handleAutoArchiveDurationChanged,
-                              helperText: E ? ec.intl.string(ec.t["3aJN9M"]) : ec.intl.string(ec.t.YUXr4Z),
+                              helperText: O ? ec.intl.string(ec.t["3aJN9M"]) : ec.intl.string(ec.t.YUXr4Z),
                           }),
                       })
                     : null,
             es =
                 e.type === el.d4z.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, i.jsx)("div", {
-                          children: (0, i.jsx)(m.rsf, {
+                          children: (0, i.jsx)(f.rsf, {
                               label: ec.intl.string(ec.t.s2rpNf),
                               description: ec.intl.string(ec.t.cSyXJk),
                               checked: e.threadMetadata.invitable,
                               onChange: this.handleInvitableChanged,
-                              disabled: !C,
+                              disabled: !y,
                           }),
                       })
                     : null,
-            eu = null != N && (0, G.Y2)(N),
-            eh = U.ov.has(e.type)
+            eu = null != S && (0, V.Y2)(S),
+            eh = G.ov.has(e.type)
                 ? (0, i.jsxs)("div", {
                       children: [
-                          (0, i.jsx)(m.rsf, {
+                          (0, i.jsx)(f.rsf, {
                               label: ec.intl.string(ec.t.Es25Yf),
                               description: ec.intl.string(ec.t["9eUgwR"]),
                               onChange: this.handleNSFWChange,
-                              checked: (0, y.qF)(e),
+                              checked: (0, C.qF)(e),
                               disabled: !b || null != e.linkedLobby || eu,
                           }),
                           null != e.linkedLobby
-                              ? (0, i.jsx)(m.Wn, {
-                                    messageType: m.QYI.WARNING,
+                              ? (0, i.jsx)(f.Wn, {
+                                    messageType: f.QYI.WARNING,
                                     children: ec.intl.string(ec.t.l6uSVa),
                                 })
                               : null,
@@ -594,15 +594,15 @@ class eO extends l.PureComponent {
                   })
                 : null,
             ej =
-                U.Y0.has(e.type) &&
-                null != N &&
-                N.features.has(el.GuildFeatures.NEWS) &&
-                e.id !== (null == N ? void 0 : N.rulesChannelId) &&
-                e.id !== (null == N ? void 0 : N.publicUpdatesChannelId)
-                    ? (0, i.jsxs)(m.Kqy, {
+                G.Y0.has(e.type) &&
+                null != S &&
+                S.features.has(el.GuildFeatures.NEWS) &&
+                e.id !== (null == S ? void 0 : S.rulesChannelId) &&
+                e.id !== (null == S ? void 0 : S.publicUpdatesChannelId)
+                    ? (0, i.jsxs)(f.Kqy, {
                           gap: 4,
                           children: [
-                              (0, i.jsx)(m.rsf, {
+                              (0, i.jsx)(f.rsf, {
                                   label: ec.intl.string(ec.t.Au2b7m),
                                   description: ec.intl.format(ec.t.tI7KNX, {
                                       documentationLink: $.Z.getArticleURL(el.BhN.ANNOUNCEMENT_CHANNELS),
@@ -611,19 +611,19 @@ class eO extends l.PureComponent {
                                   checked: e.type === el.d4z.GUILD_ANNOUNCEMENT,
                                   disabled: !b,
                               }),
-                              (0, i.jsx)(m.Wn, {
-                                  messageType: m.QYI.INFO,
+                              (0, i.jsx)(f.Wn, {
+                                  messageType: f.QYI.INFO,
                                   children: ec.intl.string(ec.t["2Ab4Id"]),
                               }),
                           ],
                       })
                     : null,
-            ev = U.uC.has(e.type)
-                ? (0, i.jsx)(x.Z, {
+            ev = G.uC.has(e.type)
+                ? (0, i.jsx)(j.Z, {
                       page: el.ZY5.CHANNEL_SETTINGS,
-                      children: (0, i.jsx)(B.Z, {
+                      children: (0, i.jsx)(H.Z, {
                           isDisabled: !b,
-                          autoArchiveDuration: (0, A.WD)(e, null),
+                          autoArchiveDuration: (0, D.WD)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? ec.intl.string(ec.t.fyXclY)
@@ -632,7 +632,7 @@ class eO extends l.PureComponent {
                   })
                 : null,
             ey = this.props.showChannelSummariesSettings
-                ? (0, i.jsx)(m.rsf, {
+                ? (0, i.jsx)(f.rsf, {
                       label: ec.intl.string(ec.t.id3ozj),
                       description: ec.intl.format(ec.t.feJW1z, {
                           helpdeskArticle: $.Z.getArticleURL(el.BhN.CONVERSATION_SUMMARIES),
@@ -641,13 +641,13 @@ class eO extends l.PureComponent {
                       onChange: this.handleChannelSummariesToggled,
                       checked:
                           !e.hasFlag(er.zZ.SUMMARIES_DISABLED) &&
-                          (null == N ? void 0 : N.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
+                          (null == S ? void 0 : S.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
                       disabled:
-                          !b || !(null == N ? void 0 : N.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
+                          !b || !(null == S ? void 0 : S.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
                   })
                 : null,
             eS = e.isMediaChannel()
-                ? (0, i.jsx)(m.rsf, {
+                ? (0, i.jsx)(f.rsf, {
                       label: ec.intl.string(ec.t.u8LZOt),
                       description: ec.intl.string(ec.t.J4wCc7),
                       checked: !e.hasFlag(er.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS),
@@ -656,18 +656,18 @@ class eO extends l.PureComponent {
                   })
                 : null;
         e.type === el.d4z.GUILD_CATEGORY
-            ? ((f = ec.intl.string(ec.t.OCAkGP)), (p = "category-name"))
+            ? ((m = ec.intl.string(ec.t.OCAkGP)), (p = "category-name"))
             : e.isForumPost()
-              ? ((f = ec.intl.string(ec.t.uyVrTN)), (p = "post-title"))
+              ? ((m = ec.intl.string(ec.t.uyVrTN)), (p = "post-title"))
               : _
-                ? ((f = ec.intl.string(ec.t.j3XWjD)), (p = "thread-name"))
-                : ((f = ec.intl.string(ec.t.PVbHDl)), (p = "channel-name"));
-        let eO = w ? j : b;
-        return (0, i.jsxs)(m.Kqy, {
+                ? ((m = ec.intl.string(ec.t.j3XWjD)), (p = "thread-name"))
+                : ((m = ec.intl.string(ec.t.PVbHDl)), (p = "channel-name"));
+        let eO = w ? x : b;
+        return (0, i.jsxs)(f.Kqy, {
             gap: 24,
             children: [
-                (0, i.jsx)(m.oil, {
-                    label: f,
+                (0, i.jsx)(f.oil, {
+                    label: m,
                     fullWidth: !0,
                     inputRef: this.nameInputRef,
                     value: t,
@@ -690,8 +690,8 @@ class eO extends l.PureComponent {
                         : void 0,
                 }),
                 k,
-                H,
-                V,
+                B,
+                U,
                 W,
                 K,
                 ee,
@@ -713,9 +713,9 @@ class eO extends l.PureComponent {
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let l = (0, J.g7)(t, e),
+        let l = (0, X.g7)(t, e),
             r = this.getError("bitrate");
-        return (0, i.jsx)(m.iRW, {
+        return (0, i.jsx)(f.iRW, {
             label: ec.intl.string(ec.t.w2d0vU),
             errorMessage: "" !== r ? r : void 0,
             helperText: l > el.epw ? ec.intl.format(ec.t.SbQJk5, { bitrate: el.epw / 1000 }) : void 0,
@@ -735,9 +735,9 @@ class eO extends l.PureComponent {
         return (
             null != e &&
             null != e.guild_id &&
-            U.vg.has(e.type) &&
+            G.vg.has(e.type) &&
             (e.isGuildVocal() ||
-                D.tM.getCurrentConfig({
+                k.tM.getCurrentConfig({
                     guildId: e.guild_id,
                     location: "9b50bd_1",
                 }).enabled)
@@ -757,7 +757,7 @@ class eO extends l.PureComponent {
                 name: ec.intl.string(ec.t["7jOoJE"]),
             },
         ];
-        return (0, i.jsx)(m.FXm, {
+        return (0, i.jsx)(f.FXm, {
             label: ec.intl.string(ec.t.jhJEJs),
             helperText: ec.intl.format(ec.t.c5W7Ss, {}),
             onChange: (e) => this.handleVideoQualityModeChange(e),
@@ -776,7 +776,7 @@ class eO extends l.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let n = this.getError("user_limit"),
             l = e.isGuildStageVoice() ? el.xGv : el.$pe;
-        return (0, i.jsx)(m.iRW, {
+        return (0, i.jsx)(f.iRW, {
             label: ec.intl.string(ec.t["/AoSGN"]),
             errorMessage: "" !== n ? n : void 0,
             helperText: ec.intl.format(e.isGuildStageVoice() ? ec.t.OqZI8D : ec.t["8yb3JT"], {}),
@@ -806,7 +806,7 @@ class eO extends l.PureComponent {
                 value: ey,
             });
         let a = null != (t = e.rtcRegion) ? t : ey;
-        return (0, i.jsx)(m.q4e, {
+        return (0, i.jsx)(f.q4e, {
             label: ec.intl.string(ec.t["Ms8bX+"]),
             description: ec.intl.string(ec.t["dbTs+z"]),
             options: s,
@@ -821,14 +821,14 @@ class eO extends l.PureComponent {
         return (
             (t =
                 e.type === el.d4z.GUILD_CATEGORY
-                    ? (0, p.wj)(l)
+                    ? (0, m.wj)(l)
                         ? n(309095)
                         : n(925442)
-                    : (0, p.wj)(l)
+                    : (0, m.wj)(l)
                       ? n(316491)
                       : n(301358)),
-            (0, i.jsx)(E.Z, {
-                justify: E.Z.Justify.CENTER,
+            (0, i.jsx)(w.Z, {
+                justify: w.Z.Justify.CENTER,
                 className: eu.marginTop60,
                 children: (0, i.jsx)("img", {
                     alt: "",
@@ -843,11 +843,11 @@ class eO extends l.PureComponent {
         let { channel: e, channelName: t, guild: n } = this.props;
         return null == e || null == t || null == n
             ? null
-            : (0, i.jsxs)(m.C3N, {
+            : (0, i.jsxs)(f.C3N, {
                   label: ec.intl.string(ec.t["/dp6yY"]),
                   children: [
                       this.renderChannelInfo(e, t),
-                      this.showVoiceSettings() ? (0, i.jsx)(m.izJ, { gap: 24 }) : null,
+                      this.showVoiceSettings() ? (0, i.jsx)(f.izJ, { gap: 24 }) : null,
                       this.renderVoiceBitrate(e, n),
                       this.renderVideoQualityMode(e),
                       this.renderUserLimit(e),
@@ -873,7 +873,7 @@ class eO extends l.PureComponent {
             eh(this, "renderEmojiPicker", (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(R.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e) => {
@@ -888,16 +888,16 @@ class eO extends l.PureComponent {
             eh(this, "handleRequireTagChanged", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, K.mB)(t.flags, er.zZ.REQUIRE_TAG, e);
-                (0, f.pW)({ flags: n });
+                let n = (0, h.mB)(t.flags, er.zZ.REQUIRE_TAG, e);
+                (0, b.pW)({ flags: n });
             }),
             eh(this, "handleChangeName", (e) => {
                 var t, n;
                 let { channel: i } = this.props;
                 if (null == i) return;
-                i.isThread() ? (e = (0, k.Z)(e, !1)) : el.TPd.LIMITED_CHANNEL_NAME.has(i.type) && (e = (0, J.Nj)(e));
+                i.isThread() ? (e = (0, B.Z)(e, !1)) : el.TPd.LIMITED_CHANNEL_NAME.has(i.type) && (e = (0, X.Nj)(e));
                 let l = null != (n = null == (t = this.nameInputRef.current) ? void 0 : t.selectionStart) ? n : 0;
-                (0, f.pW)({ name: e }),
+                (0, b.pW)({ name: e }),
                     setTimeout(() => {
                         var e;
                         null == (e = this.nameInputRef.current) || e.setSelectionRange(l, l);
@@ -906,8 +906,8 @@ class eO extends l.PureComponent {
             eh(this, "handleBlurName", () => {
                 let { channel: e, channelName: t } = this.props;
                 if ((null == e ? void 0 : e.isThread()) && null != t) {
-                    let e = (0, k.Z)(t, !0);
-                    e !== t && (0, f.pW)({ name: e });
+                    let e = (0, B.Z)(t, !0);
+                    e !== t && (0, b.pW)({ name: e });
                 }
             }),
             eh(this, "insertEmojiAtPosition", (e) => {
@@ -917,14 +917,14 @@ class eO extends l.PureComponent {
                     r = null != (n = null == i ? void 0 : i.selectionEnd) ? n : 0,
                     s = this.props.channelName,
                     a = (null == s ? void 0 : s.substring(0, l)) + e + (null == s ? void 0 : s.substring(r));
-                (0, f.pW)({ name: a }),
+                (0, b.pW)({ name: a }),
                     setTimeout(() => {
                         let t = l + e.length;
                         null == i || i.focus(), null == i || i.setSelectionRange(t, t);
                     }, 0);
             }),
             eh(this, "handleChangeTopic", (e) => {
-                (0, f.pW)({ topic: P.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, b.pW)({ topic: I.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             eh(this, "handleChangeRichTopic", (e, t, n) => {
                 this.setState({
@@ -934,7 +934,7 @@ class eO extends l.PureComponent {
                     this.handleChangeTopic(t);
             }),
             eh(this, "handleChangeTemplate", (e) => {
-                (0, f.pW)({ template: P.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, b.pW)({ template: I.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             eh(this, "handleChangeDefaultReactionEmoji", (e) => {
                 let t =
@@ -949,107 +949,107 @@ class eO extends l.PureComponent {
                                 emojiId: void 0,
                                 emojiName: e.optionallyDiverseSequence,
                             };
-                (0, f.pW)({ defaultReactionEmoji: t });
+                (0, b.pW)({ defaultReactionEmoji: t });
             }),
             eh(this, "handleChangeDefaultForumLayout", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, f.pW)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
+                (0, b.pW)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
             }),
             eh(this, "handleChangeDefaultSortOrder", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, f.pW)({ defaultSortOrder: e });
+                (0, b.pW)({ defaultSortOrder: e });
             }),
             eh(this, "handleChangeDefaultTagSetting", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, f.pW)({ defaultTagSetting: e });
+                (0, b.pW)({ defaultTagSetting: e });
             }),
             eh(this, "handleChangeBitrate", (e) => {
-                (0, f.pW)({ bitrate: 1000 * Math.round(e / 1000) });
+                (0, b.pW)({ bitrate: 1000 * Math.round(e / 1000) });
             }),
             eh(this, "handleUserLimitChange", (e) => {
-                (0, f.pW)({ userLimit: Math.round(e) });
+                (0, b.pW)({ userLimit: Math.round(e) });
             }),
             eh(this, "handleNSFWChange", (e) => {
-                (0, f.pW)({ nsfw: e });
+                (0, b.pW)({ nsfw: e });
             }),
             eh(this, "handleActiveChannelsRemovedChange", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, K.mB)(t.flags, er.zZ.ACTIVE_CHANNELS_REMOVED, !e);
-                (0, f.pW)({ flags: n });
+                let n = (0, h.mB)(t.flags, er.zZ.ACTIVE_CHANNELS_REMOVED, !e);
+                (0, b.pW)({ flags: n });
             }),
             eh(this, "handleNewsChange", (e) => {
-                (0, f.pW)({ type: e ? el.d4z.GUILD_ANNOUNCEMENT : el.d4z.GUILD_TEXT });
+                (0, b.pW)({ type: e ? el.d4z.GUILD_ANNOUNCEMENT : el.d4z.GUILD_TEXT });
             }),
             eh(this, "handleChangeSlowmode", (e) => {
-                (0, f.pW)({ rateLimitPerUser: e });
+                (0, b.pW)({ rateLimitPerUser: e });
             }),
             eh(this, "handleChangeThreadMessageSlowmode", (e) => {
-                (0, f.pW)({ defaultThreadRateLimitPerUser: e });
+                (0, b.pW)({ defaultThreadRateLimitPerUser: e });
             }),
             eh(this, "handleChangeDefaultAutoArchiveDuration", (e) => {
-                (0, f.pW)({ defaultAutoArchiveDuration: e });
+                (0, b.pW)({ defaultAutoArchiveDuration: e });
             }),
             eh(this, "handleRegionChange", (e) => {
-                (0, f.pW)({ rtcRegion: e === ey ? null : e });
+                (0, b.pW)({ rtcRegion: e === ey ? null : e });
             }),
             eh(this, "handleVideoQualityModeChange", (e) => {
-                (0, f.pW)({ videoQualityMode: e });
+                (0, b.pW)({ videoQualityMode: e });
             }),
             eh(this, "handleAutoArchiveDurationChanged", (e) => {
-                (0, f.pW)({ autoArchiveDuration: e });
+                (0, b.pW)({ autoArchiveDuration: e });
             }),
             eh(this, "handleInvitableChanged", (e) => {
-                (0, f.pW)({ invitable: e });
+                (0, b.pW)({ invitable: e });
             }),
             eh(this, "handleChannelSummariesToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, K.mB)(t.flags, er.zZ.SUMMARIES_DISABLED, !e);
-                (0, f.pW)({ flags: n });
+                let n = (0, h.mB)(t.flags, er.zZ.SUMMARIES_DISABLED, !e);
+                (0, b.pW)({ flags: n });
             }),
             eh(this, "handleShowMediaOptionsToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, K.mB)(t.flags, er.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
-                (0, f.pW)({ flags: n });
+                let n = (0, h.mB)(t.flags, er.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
+                (0, b.pW)({ flags: n });
             });
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : "";
         this.state = {
             textTopicValue: r,
-            richTopicValue: (0, N.JM)(r),
+            richTopicValue: (0, O.JM)(r),
             topicFocused: !1,
             updateNameInputCursorPosition: !1,
         };
     }
 }
 function eZ() {
-    let { errors: e, channel: t, submitting: n, subsection: r } = (0, h.cj)([W.Z], () => W.Z.getProps()),
-        s = (0, h.e7)([q.Z], () => {
+    let { errors: e, channel: t, submitting: n, subsection: r } = (0, g.cj)([F.Z], () => F.Z.getProps()),
+        s = (0, g.e7)([Y.Z], () => {
             var e;
-            return q.Z.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
+            return Y.Z.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
         }),
-        a = (0, h.e7)([H.Z], () => H.Z.theme),
-        o = (0, h.e7)([F.Z], () => F.Z.getGuild(null == t ? void 0 : t.getGuildId())),
-        c = (0, D.C7)(t),
-        d = (0, D.Xb)(t),
-        { canManageChannels: u, canSendMessages: g } = (0, h.cj)([z.Z], () => ({
-            canManageChannels: z.Z.can(el.Plq.MANAGE_CHANNELS, t),
-            canSendMessages: z.Z.can(el.Plq.SEND_MESSAGES, t),
+        a = (0, g.e7)([U.Z], () => U.Z.theme),
+        o = (0, g.e7)([z.Z], () => z.Z.getGuild(null == t ? void 0 : t.getGuildId())),
+        c = (0, k.C7)(t),
+        d = (0, k.Xb)(t),
+        { canManageChannels: u, canSendMessages: h } = (0, g.cj)([q.Z], () => ({
+            canManageChannels: q.Z.can(el.Plq.MANAGE_CHANNELS, t),
+            canSendMessages: q.Z.can(el.Plq.SEND_MESSAGES, t),
         })),
-        p = (0, C.ZP)(t),
-        m = V.default.getId(),
-        f = (0, I.v)(),
+        p = (0, S.ZP)(t),
+        m = W.default.getId(),
+        f = (0, L.v)(),
         b = null == t ? void 0 : t.id,
-        x = (0, v.ts)(t, !1, !0),
-        y = j.Z.useExperiment({
+        x = (0, y.ts)(t, !1, !0),
+        j = v.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: "ChannelSettingsOverview",
         }).enabled,
-        S = l.useCallback(
+        C = l.useCallback(
             (e) => {
                 null != b && f.getState().setLayoutType(b, e);
             },
@@ -1064,14 +1064,14 @@ function eZ() {
         theme: a,
         guild: o,
         canManageChannels: (null == t ? void 0 : t.isThread()) ? c : u,
-        canSendMessages: g,
+        canSendMessages: h,
         isThreadModerator: d,
         canManageThread: c,
         subsection: r,
         isForumPost: null != t && t.isForumPost(),
         isOwner: null == t ? void 0 : t.isOwner(m),
-        handleSetDefaultLayout: S,
+        handleSetDefaultLayout: C,
         showChannelSummariesSettings: x,
-        showAdvancedSlowModeSetting: y,
+        showAdvancedSlowModeSetting: j,
     });
 }

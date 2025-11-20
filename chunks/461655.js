@@ -1,7 +1,7 @@
 n.d(t, { Z: () => _ }), n(953529), n(997841);
 var r = n(314877),
-    i = n(81825),
-    a = n(630388),
+    i = n(95015),
+    a = n(81825),
     o = n(959546),
     s = n(46141),
     l = n(659181),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends i.Z {
+class _ extends a.Z {
     static createFromServer(e) {
         let t = null != e.payment_source ? s.ZP.createFromServer(e.payment_source) : null,
             n = null != e.sku ? l.Z.createFromServer(e.sku) : null,
@@ -78,7 +78,7 @@ class _ extends i.Z {
         );
     }
     get isGift() {
-        return a.yE(this.flags, 1);
+        return i.yE(this.flags, 1);
     }
     get isPremiumGift() {
         return this.isGift && Object.values(d.Si).includes(this.skuId);
@@ -86,7 +86,7 @@ class _ extends i.Z {
     get isGuildProductPurchase() {
         return (
             null != this.sku &&
-            (this.sku.productLine === u.POd.GUILD_PRODUCT || a.yE(this.sku.flags, r.l.GUILD_PRODUCT))
+            (this.sku.productLine === u.POd.GUILD_PRODUCT || i.yE(this.sku.flags, r.l.GUILD_PRODUCT))
         );
     }
     get isSoftDeletedProduct() {

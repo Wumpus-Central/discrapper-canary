@@ -1,14 +1,14 @@
 n.d(t, { Z: () => O }), n(415506), n(997841);
 var r = n(149765),
-    i = n(813820),
-    a = n(81825),
-    o = n(864106),
-    s = n(131016),
-    l = n(602210),
-    c = n(4242),
-    u = n(921383),
-    d = n(768581),
-    f = n(630388),
+    i = n(95015),
+    a = n(813820),
+    o = n(81825),
+    s = n(864106),
+    l = n(131016),
+    c = n(602210),
+    u = n(4242),
+    d = n(921383),
+    f = n(768581),
     _ = n(111361),
     p = n(709054),
     h = n(981631),
@@ -65,7 +65,7 @@ function y(e, t) {
         e
     );
 }
-class O extends a.Z {
+class O extends o.Z {
     get createdAt() {
         return new Date(p.default.extractTimestamp(this.id));
     }
@@ -74,17 +74,17 @@ class O extends a.Z {
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.$k,
+            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.$k,
             i = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != i && null != e
-            ? d.ZP.getGuildMemberAvatarURLSimple({
+            ? f.ZP.getGuildMemberAvatarURLSimple({
                   guildId: e,
                   avatar: i,
                   userId: this.id,
                   canAnimate: n,
                   canWebP: r,
               })
-            : d.ZP.getUserAvatarURL(this, n, t, null, r);
+            : f.ZP.getUserAvatarURL(this, n, t, null, r);
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
@@ -102,9 +102,9 @@ class O extends a.Z {
         if (null != e) {
             let r = this.guildMemberAvatars[e];
             if (null != r)
-                return d.ZP.getAnimatableSourceWithFallback(t, (t) =>
-                    d.ZP.makeSource(
-                        d.ZP.getGuildMemberAvatarURLSimple({
+                return f.ZP.getAnimatableSourceWithFallback(t, (t) =>
+                    f.ZP.makeSource(
+                        f.ZP.getGuildMemberAvatarURLSimple({
                             guildId: e,
                             avatar: r,
                             userId: this.id,
@@ -114,7 +114,7 @@ class O extends a.Z {
                     ),
                 );
         }
-        return d.ZP.getAnimatableSourceWithFallback(t, (e) => d.ZP.getUserAvatarSource(this, e, n));
+        return f.ZP.getAnimatableSourceWithFallback(t, (e) => f.ZP.getUserAvatarSource(this, e, n));
     }
     isClaimed() {
         return null != this.email || null != this.phone;
@@ -129,10 +129,10 @@ class O extends a.Z {
         return "".concat(this.username, "#").concat("".concat(this.discriminator).padStart(4, "0"));
     }
     hasPurchasedFlag(e) {
-        return (0, f.yE)(this.purchasedFlags, e);
+        return (0, i.yE)(this.purchasedFlags, e);
     }
     hasPremiumUsageFlag(e) {
-        return (0, f.yE)(this.premiumUsageFlags, e);
+        return (0, i.yE)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
         let t = m.vL[e];
@@ -165,24 +165,24 @@ class O extends a.Z {
         var e;
         return (
             (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
-            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.SUBSCRIPTION_GROUP
+            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === a.d3.SUBSCRIPTION_GROUP
         );
     }
     isPremiumWithFractionalPremiumOnly() {
         var e, t, n;
         return (
             (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
-            ((null == (e = this.premiumState) ? void 0 : e.premiumSubscriptionType) === i.W$.NONE_UNSPECIFIED ||
-                (null == (t = this.premiumState) ? void 0 : t.premiumSubscriptionType) === i.W$.BOOST_ONLY) &&
-            (null == (n = this.premiumState) ? void 0 : n.premiumSource) === i.d3.FRACTIONAL_NITRO
+            ((null == (e = this.premiumState) ? void 0 : e.premiumSubscriptionType) === a.W$.NONE_UNSPECIFIED ||
+                (null == (t = this.premiumState) ? void 0 : t.premiumSubscriptionType) === a.W$.BOOST_ONLY) &&
+            (null == (n = this.premiumState) ? void 0 : n.premiumSource) === a.d3.FRACTIONAL_NITRO
         );
     }
     isFractionalPremiumWithNoSubscription() {
         var e;
         return (
             (0, _.I5)(this, m.PremiumTypes.TIER_2) &&
-            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === i.d3.FRACTIONAL_NITRO &&
-            this.premiumState.premiumSubscriptionType !== i.W$.TIER_2
+            (null == (e = this.premiumState) ? void 0 : e.premiumSource) === a.d3.FRACTIONAL_NITRO &&
+            this.premiumState.premiumSubscriptionType !== a.W$.TIER_2
         );
     }
     hasUrgentMessages() {
@@ -213,20 +213,20 @@ class O extends a.Z {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, o.FG)(e);
+        this.avatarDecorationData = (0, s.FG)(e);
     }
     get nameplate() {
         var e;
-        return (0, c.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
+        return (0, u.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     get premiumGroupRole() {
         var e, t;
         return null != (t = null == (e = this.premiumState) ? void 0 : e.premiumSubscriptionGroupRole)
             ? t
-            : i.bF.UNSPECIFIED;
+            : a.bF.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, o, c, d, f, _, p, m, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j, U, G, B;
+        var t, n, i, a, o, s, u, f, _, p, m, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j, U, G, B;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -266,8 +266,8 @@ class O extends a.Z {
             (this.username = null != (i = e.username) ? i : ""),
             (this.discriminator = null != (a = e.discriminator) ? a : h.fo$),
             (this.avatar = null != (o = e.avatar) ? o : null),
-            (this.avatarDecoration = null != (c = e.avatar_decoration_data) ? c : e.avatarDecorationData),
-            (this.email = null != (d = e.email) ? d : null),
+            (this.avatarDecoration = null != (s = e.avatar_decoration_data) ? s : e.avatarDecorationData),
+            (this.email = null != (u = e.email) ? u : null),
             (this.verified = null != (f = e.verified) && f),
             (this.bot = null != (_ = e.bot) && _),
             (this.system = null != (p = e.system) && p),
@@ -289,10 +289,10 @@ class O extends a.Z {
                 null != (M = null != (x = e.personal_connection_id) ? x : e.personalConnectionId) ? M : null),
             (this.globalName = null != (k = e.global_name) ? k : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, l.l)(null != (U = null != (j = e.primary_guild) ? j : e.primaryGuild) ? U : null)),
+            (this.primaryGuild = (0, c.l)(null != (U = null != (j = e.primary_guild) ? j : e.primaryGuild) ? U : null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = null != (G = e.displayNameStyles) ? G : (0, s.bN)(e.display_name_styles)),
-            (this.premiumState = null != (B = e.premiumState) ? B : (0, u.C)(e.premium_state)),
+            (this.displayNameStyles = null != (G = e.displayNameStyles) ? G : (0, l.bN)(e.display_name_styles)),
+            (this.premiumState = null != (B = e.premiumState) ? B : (0, d.C)(e.premium_state)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,

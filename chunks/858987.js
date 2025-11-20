@@ -7,11 +7,11 @@ var r = n(54381);
 n(473749);
 var i = n(512722),
     a = n.n(i),
-    o = n(481060),
-    s = n(115130),
-    l = n(906732),
-    c = n(563132),
-    u = n(630388),
+    o = n(95015),
+    s = n(481060),
+    l = n(115130),
+    c = n(906732),
+    u = n(563132),
     d = n(74538),
     f = n(296848),
     _ = n(244923),
@@ -133,7 +133,7 @@ function I(e) {
             activeSubscription: k,
             devShelfFetchState: j,
             hasPaymentSources: U,
-        } = (0, c.JL)(),
+        } = (0, u.JL)(),
         G = O({
             purchaseType: x,
             plan: w,
@@ -145,20 +145,20 @@ function I(e) {
             paymentSourceId: M,
             hasPaymentSources: U,
         }),
-        { analyticsLocations: B } = (0, l.ZP)();
+        { analyticsLocations: B } = (0, c.ZP)();
     if (null != i || null != a || d)
-        return (0, r.jsx)(o.Button, {
+        return (0, r.jsx)(s.Button, {
             variant: "active",
             text: G,
             disabled: !0,
         });
     if (C && U)
-        return (0, r.jsx)(o.aML, {
+        return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
             text: m.intl.string(m.t.L7jbQV),
             children: (e) =>
                 (0, r.jsx)(
-                    o.Button,
+                    s.Button,
                     y(
                         E(
                             {
@@ -176,12 +176,12 @@ function I(e) {
                 ),
         });
     if (C && !U)
-        return (0, r.jsx)(o.aML, {
+        return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
             text: m.intl.string(m.t.L7jbQV),
             children: (e) =>
                 (0, r.jsx)(
-                    o.Button,
+                    s.Button,
                     y(
                         E(
                             {
@@ -198,13 +198,13 @@ function I(e) {
                     ),
                 ),
         });
-    if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
-        return (0, r.jsx)(o.aML, {
+    if ((0, o.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && j === l.O.LOADING)
+        return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
             text: m.intl.string(m.t.cjA5tj),
             children: (e) =>
                 (0, r.jsx)(
-                    o.Button,
+                    s.Button,
                     y(
                         E(
                             {
@@ -222,22 +222,22 @@ function I(e) {
                 ),
         });
     if (S)
-        return (0, r.jsx)(o.Button, {
+        return (0, r.jsx)(s.Button, {
             variant: "expressive",
             "data-testid": L ? "purchase" : "submitButton",
             text: G,
             onClick: L ? A : () => v(n, f),
             loading: h,
             iconPosition: "start",
-            icon: () => (0, r.jsx)(o.SrA, { color: "currentColor" }),
+            icon: () => (0, r.jsx)(s.SrA, { color: "currentColor" }),
         });
     else if (!L)
-        return (0, r.jsx)(o.aML, {
+        return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
             text: m.intl.string(m.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
-                    o.Button,
+                    s.Button,
                     y(
                         E(
                             {
@@ -264,7 +264,7 @@ function I(e) {
             analyticsLocations: B,
         });
     else
-        return (0, r.jsx)(o.Button, {
+        return (0, r.jsx)(s.Button, {
             variant: "active",
             text: G,
             "data-testid": "purchase",

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => g }), n(997841);
-var r = n(928801),
-    i = n(435064),
-    a = n(779618),
-    o = n(341569),
-    s = n(594190),
-    l = n(441167),
-    c = n(695346),
-    u = n(199902),
-    d = n(592125),
-    f = n(131951),
-    _ = n(936349),
-    p = n(630388),
+var r = n(95015),
+    i = n(928801),
+    a = n(435064),
+    o = n(779618),
+    s = n(341569),
+    l = n(594190),
+    c = n(441167),
+    u = n(695346),
+    d = n(199902),
+    f = n(592125),
+    _ = n(131951),
+    p = n(936349),
     h = n(981631);
 function m(e, t, n) {
     return (
@@ -25,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends r.Z {
+class g extends i.Z {
     get guildId() {
         return this.getState().guildId;
     }
@@ -34,30 +34,30 @@ class g extends r.Z {
     }
     computeVoiceFlags() {
         var e, t, n;
-        let r = 0,
-            d = c.tU.getSetting();
-        r = (0, p.mB)(r, h.BVn.ALLOW_VOICE_RECORDING, d);
-        let _ = (0, a.Z)(f.Z),
+        let i = 0,
+            f = u.tU.getSetting();
+        i = (0, r.mB)(i, h.BVn.ALLOW_VOICE_RECORDING, f);
+        let p = (0, o.Z)(_.Z),
             m =
-                (0, o.LI)() &&
-                ((null == (e = u.Z.getCurrentUserActiveStream()) ? void 0 : e.state) === h.jm8.ACTIVE ||
-                    (null == (t = u.Z.getCurrentUserActiveStream()) ? void 0 : t.state) === h.jm8.PAUSED),
-            g = (0, o.CY)() && (null == (n = s.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null;
-        r = (0, p.mB)(r, h.BVn.CLIPS_ENABLED, m || g);
-        let { enableViewerClipping: E } = l.Z.getCurrentConfig(
+                (0, s.LI)() &&
+                ((null == (e = d.Z.getCurrentUserActiveStream()) ? void 0 : e.state) === h.jm8.ACTIVE ||
+                    (null == (t = d.Z.getCurrentUserActiveStream()) ? void 0 : t.state) === h.jm8.PAUSED),
+            g = (0, s.CY)() && (null == (n = l.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null;
+        i = (0, r.mB)(i, h.BVn.CLIPS_ENABLED, m || g);
+        let { enableViewerClipping: E } = c.Z.getCurrentConfig(
                 { location: "computeVoiceFlags" },
                 { autoTrackExposure: !1 },
             ),
-            b = E && _ && i.Z.getSettings().viewerClipsEnabled;
-        return (0, p.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, b);
+            b = E && p && a.Z.getSettings().viewerClipsEnabled;
+        return (0, r.mB)(i, h.BVn.ALLOW_ANY_VIEWER_CLIPS, b);
     }
     getInitialState() {
         return {
             guildId: null,
             channelId: null,
-            selfMute: f.Z.isSelfMute(),
-            selfDeaf: f.Z.isSelfDeaf(),
-            selfVideo: f.Z.isVideoEnabled(),
+            selfMute: _.Z.isSelfMute(),
+            selfDeaf: _.Z.isSelfDeaf(),
+            selfVideo: _.Z.isVideoEnabled(),
             preferredRegion: null,
             preferredRegions: null,
             videoStreamParameters: null,
@@ -69,12 +69,12 @@ class g extends r.Z {
         return {
             guildId: t,
             channelId: n,
-            selfMute: f.Z.isSelfMute(),
-            selfDeaf: f.Z.isSelfDeaf(),
-            selfVideo: f.Z.isVideoEnabled(),
-            preferredRegion: _.Z.getPreferredRegion(),
-            preferredRegions: _.Z.getPreferredRegions(),
-            videoStreamParameters: f.Z.getVideoStreamParameters(),
+            selfMute: _.Z.isSelfMute(),
+            selfDeaf: _.Z.isSelfDeaf(),
+            selfVideo: _.Z.isVideoEnabled(),
+            preferredRegion: p.Z.getPreferredRegion(),
+            preferredRegions: p.Z.getPreferredRegions(),
+            videoStreamParameters: _.Z.getVideoStreamParameters(),
             flags: this.computeVoiceFlags(),
         };
     }
@@ -94,7 +94,7 @@ class g extends r.Z {
             videoStreamParameters: c,
             flags: u = 0,
         } = e;
-        o && (null == (t = d.Z.getChannel(r)) ? void 0 : t.type) === h.d4z.GUILD_STAGE_VOICE
+        o && (null == (t = f.Z.getChannel(r)) ? void 0 : t.type) === h.d4z.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
                   guildId: n,
                   channelId: r,

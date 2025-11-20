@@ -1,16 +1,16 @@
 n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
-var r = n(45792),
-    i = n(782568),
-    l = n(636449),
-    a = n(317381),
-    s = n(611577),
-    o = n(840074),
-    c = n(16609),
-    u = n(812206),
-    d = n(313789),
-    p = n(626135),
-    f = n(12647),
-    h = n(630388),
+var r = n(95015),
+    i = n(45792),
+    l = n(782568),
+    a = n(636449),
+    s = n(317381),
+    o = n(611577),
+    c = n(840074),
+    u = n(16609),
+    d = n(812206),
+    p = n(313789),
+    f = n(626135),
+    h = n(12647),
     g = n(49012),
     m = n(358085),
     _ = n(996106),
@@ -57,24 +57,24 @@ let C = new Set([v.Fu, v.JT]),
                     args: { url: n },
                 } = e;
                 (0, b.bu)(t.transport);
-                let r = a.ZP.getCurrentEmbeddedActivity();
+                let r = s.ZP.getCurrentEmbeddedActivity();
                 try {
-                    var o, d;
+                    var i, c;
                     let e = new URL(n),
-                        a = e.toString();
+                        s = e.toString();
                     if (m.isPlatformEmbedded) {
-                        let e = (0, l.R)() ? y.KJ3.ACTIVITY_POPOUT : null;
-                        f.Z.focus(e, !0);
+                        let e = (0, a.R)() ? y.KJ3.ACTIVITY_POPOUT : null;
+                        h.Z.focus(e, !0);
                     }
-                    let h = u.Z.getApplication(null == (o = t.application) ? void 0 : o.id),
-                        _ = (0, c.p)(null == r ? void 0 : r.location),
-                        b = (null == h ? void 0 : h.id) !== void 0 ? T.get(h.id) : void 0;
+                    let p = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
+                        _ = (0, u.p)(null == r ? void 0 : r.location),
+                        b = (null == p ? void 0 : p.id) !== void 0 ? T.get(p.id) : void 0;
                     if (void 0 !== b && b.trustedUntilEpochMs >= Date.now() && b.trustedHosts.has(e.host))
                         return (
-                            (0, i.Z)(a),
-                            p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
-                                application_id: null == (d = t.application) ? void 0 : d.id,
-                                url: a,
+                            (0, l.Z)(s),
+                            f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                                application_id: null == (c = t.application) ? void 0 : c.id,
+                                url: s,
                                 opened: !0,
                             }),
                             Promise.resolve({ opened: !0 })
@@ -82,23 +82,23 @@ let C = new Set([v.Fu, v.JT]),
                     return new Promise((e) =>
                         (0, g.q)(
                             {
-                                href: a,
+                                href: s,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
                                     var n;
-                                    (0, i.Z)(a),
-                                        p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                                    (0, l.Z)(s),
+                                        f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                             application_id: null == (n = t.application) ? void 0 : n.id,
-                                            url: a,
+                                            url: s,
                                             opened: !0,
                                         }),
                                         e({ opened: !0 });
                                 },
                                 onCancel: () => {
                                     var n;
-                                    p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                                    f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                         application_id: null == (n = t.application) ? void 0 : n.id,
-                                        url: a,
+                                        url: s,
                                         opened: !1,
                                     }),
                                         e({ opened: !1 });
@@ -106,8 +106,8 @@ let C = new Set([v.Fu, v.JT]),
                             },
                             void 0,
                             void 0,
-                            (0, s.z)({
-                                application: h,
+                            (0, o.z)({
+                                application: p,
                                 channelId: _,
                             }),
                         ),
@@ -131,29 +131,29 @@ let C = new Set([v.Fu, v.JT]),
                     );
                 {
                     let { openUserSettings: e } = n(518596);
-                    e(d.n.CONNECTIONS_PANEL, { section: y.oAB.CONNECTIONS });
+                    e(p.n.CONNECTIONS_PANEL, { section: y.oAB.CONNECTIONS });
                 }
             },
         },
-        [y.Etm.SHARE_LINK]: (0, r.S)(y.Etm.SHARE_LINK, {
+        [y.Etm.SHARE_LINK]: (0, i.S)(y.Etm.SHARE_LINK, {
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 var t;
                 let {
                     socket: n,
-                    args: { custom_id: r, message: i, link_id: l },
+                    args: { custom_id: i, message: l, link_id: a },
                 } = e;
                 (0, b.bu)(n.transport);
-                let a = (0, b._f)(n.application);
-                if (null == a) throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "No application.");
-                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, y.udG.EMBEDDED))
+                let s = (0, b._f)(n.application);
+                if (null == s) throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "No application.");
+                if (!(0, r.yE)(null != (t = n.application.flags) ? t : 0, y.udG.EMBEDDED))
                     throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
-                    (0, o._)({
-                        applicationId: a,
-                        customId: r,
-                        linkId: l,
-                        message: i,
+                    (0, c._)({
+                        applicationId: s,
+                        customId: i,
+                        linkId: a,
+                        message: l,
                         onShare: (t, n) => {
                             e({
                                 success: n || t,

@@ -5,15 +5,15 @@ var r = n(54381),
     o = n.n(a),
     s = n(954955),
     l = n.n(s),
-    c = n(507274),
-    u = n(681715),
-    d = n(481060),
-    f = n(255963),
-    _ = n(387188),
-    p = n(222677),
-    h = n(995774),
-    m = n(931651),
-    g = n(630388),
+    c = n(95015),
+    u = n(507274),
+    d = n(681715),
+    f = n(481060),
+    _ = n(255963),
+    p = n(387188),
+    h = n(222677),
+    m = n(995774),
+    g = n(931651),
     E = n(981631),
     b = n(185923),
     y = n(388032),
@@ -75,19 +75,19 @@ class C extends i.Component {
     render() {
         let { message: e, className: t, children: n, useChatFontScaling: i, tabIndex: a = 0 } = this.props,
             { isReactionPickerActive: s } = this.state;
-        if (e.state === E.yb.SENDING || (0, g.yE)(e.flags, E.iLy.EPHEMERAL)) return null;
+        if (e.state === E.yb.SENDING || (0, c.yE)(e.flags, E.iLy.EPHEMERAL)) return null;
         let l = i ? v : O,
-            c = {
+            u = {
                 size: "sm",
                 color: "currentColor",
                 className: l.icon,
             };
         return e.type === E.uaV.EMOJI_ADDED && 0 === e.reactions.length
-            ? (0, r.jsx)(_.e, {
+            ? (0, r.jsx)(p.e, {
                   message: e,
                   className: o()(l.reactionBtn, t),
               })
-            : (0, r.jsx)(d.yRy, {
+            : (0, r.jsx)(f.yRy, {
                   targetElementRef: this.ref,
                   shouldShow: s,
                   onRequestClose: this.handleReactionPickerToggle,
@@ -95,21 +95,21 @@ class C extends i.Component {
                   position: "right",
                   children: (e, i) => {
                       let { isShown: s } = i;
-                      return (0, r.jsx)(u.u, {
+                      return (0, r.jsx)(d.u, {
                           asContainer: !0,
                           text: y.intl.string(y.t.lfIHs4),
                           children: (0, r.jsxs)(
-                              d.P3F,
+                              f.P3F,
                               A(T({}, e), {
                                   innerRef: this.ref,
                                   tabIndex: a,
                                   onClick: (e) => {
                                       this.handleAddReactionClick(e);
                                   },
-                                  onMouseEnter: () => (0, f.x)(b.qR.AddReactionPopoutMouseEntered),
-                                  onFocus: () => (0, f.x)(b.qR.AddReactionPopoutFocused),
+                                  onMouseEnter: () => (0, _.x)(b.qR.AddReactionPopoutMouseEntered),
+                                  onFocus: () => (0, _.x)(b.qR.AddReactionPopoutFocused),
                                   className: o()(l.reactionBtn, { [l.active]: s }, t),
-                                  children: [(0, r.jsx)(d.EO4, T({}, c)), n],
+                                  children: [(0, r.jsx)(f.EO4, T({}, u)), n],
                               }),
                           ),
                       });
@@ -123,7 +123,7 @@ class C extends i.Component {
             I(this, "onAddReaction", (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
-                (0, p.rU)(n.id, r.id, (0, h.g1)(e), i ? p.TW.FORUM_TOOLBAR : p.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                (0, h.rU)(n.id, r.id, (0, m.g1)(e), i ? h.TW.FORUM_TOOLBAR : h.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
             I(this, "handleReactionPickerToggle", () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
@@ -135,7 +135,7 @@ class C extends i.Component {
                 let { closePopout: t } = e,
                     { channel: n, message: i } = this.props,
                     a = { openPopoutType: "message_reaction_emoji_picker" },
-                    o = (0, r.jsx)(m.$, {
+                    o = (0, r.jsx)(g.$, {
                         closePopout: t,
                         channel: n,
                         onSelectEmoji: (e) => {
@@ -145,11 +145,11 @@ class C extends i.Component {
                         analyticsOverride: a,
                         messageId: i.id,
                     });
-                return (0, r.jsx)(c.M.Consumer, {
+                return (0, r.jsx)(u.M.Consumer, {
                     children: (e) => {
                         let { inDialog: t } = e;
                         return t
-                            ? (0, r.jsx)(d.VqE, {
+                            ? (0, r.jsx)(f.VqE, {
                                   "aria-label": y.intl.string(y.t["7Xqzdj"]),
                                   children: o,
                               })

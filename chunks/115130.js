@@ -4,10 +4,10 @@ n.d(t, {
 }),
     n(997841);
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(695346),
-    s = n(630388),
+    i = n(95015),
+    a = n(442837),
+    o = n(570140),
+    s = n(695346),
     l = n(981631);
 function c(e, t, n) {
     return (
@@ -69,7 +69,7 @@ function b(e) {
 }
 function y(e) {
     let { applications: t } = e;
-    (p = "LOADED"), (h = t.filter((e) => null != e.flags && (0, s.yE)(e.flags, l.udG.EMBEDDED)));
+    (p = "LOADED"), (h = t.filter((e) => null != e.flags && (0, i.yE)(e.flags, l.udG.EMBEDDED)));
 }
 function O(e) {
     let { type: t } = e;
@@ -79,7 +79,7 @@ function v(e) {
     let { filter: t } = e;
     f.filter = t;
 }
-class I extends (r = i.ZP.PersistedStore) {
+class I extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         f = u({}, d(), null != e ? e : {});
     }
@@ -87,7 +87,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return f;
     }
     getIsEnabled() {
-        return o.Sb.getSetting() && h.length > 0;
+        return s.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
         return f.lastUsedObject;
@@ -114,7 +114,7 @@ class I extends (r = i.ZP.PersistedStore) {
 c(I, "displayName", "DeveloperActivityShelfStore"),
     c(I, "persistKey", "DeveloperActivityShelfStore"),
     c(I, "migrations", [(e) => (delete e.isEnabled, u({}, e))]);
-let T = new I(a.Z, {
+let T = new I(o.Z, {
     LOGOUT: m,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,
     DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: E,

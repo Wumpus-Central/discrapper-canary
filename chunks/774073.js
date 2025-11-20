@@ -8,19 +8,19 @@ var r = n(473749),
     i = n(512722),
     a = n.n(i),
     o = n(683076),
-    s = n(442837),
-    l = n(812206),
-    c = n(565183),
-    u = n(669764),
-    d = n(210753),
-    f = n(626135),
-    _ = n(630388),
+    s = n(95015),
+    l = n(442837),
+    c = n(812206),
+    u = n(565183),
+    d = n(669764),
+    f = n(210753),
+    _ = n(626135),
     p = n(539746),
     h = n(981631);
 let m = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             r = arguments.length > 3 ? arguments[3] : void 0;
-        f.default.track(h.rMx.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+        _.default.track(h.rMx.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
             game_profile_available: e,
             application_id: t,
             rejection_reason: n,
@@ -31,40 +31,40 @@ let m = function (e, t) {
         let n = [];
         return null == e || null == t
             ? ["no match"]
-            : ((0, _.yE)(t.flags, h.udG.GAME_PROFILE_DISABLED) && n.push("profile disabled"),
+            : ((0, s.yE)(t.flags, h.udG.GAME_PROFILE_DISABLED) && n.push("profile disabled"),
               e.themes.includes(o.i.EROTIC) && n.push("nsfw"),
               (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
               (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
               n);
     },
     E = (e, t) => 0 === g(e, t).length,
-    b = (e) => E(u.Z.getGame(e), l.Z.getApplication(e)),
+    b = (e) => E(d.Z.getGame(e), c.Z.getApplication(e)),
     y = (e) => {
         let {
                 location: t,
                 applicationId: n = "",
                 autoTrackExposure: i = !0,
                 source: o,
-                trackEntryPointImpression: l = !0,
+                trackEntryPointImpression: s = !0,
             } = e,
-            f = r.useRef(!1),
+            c = r.useRef(!1),
             _ = (0, p.xG)(t, i);
-        (0, d.M)(_ && "" !== n ? n : null);
-        let h = (0, s.e7)([u.Z], () => u.Z.getGame(n)),
-            b = (0, c.Z)(n),
+        (0, f.M)(_ && "" !== n ? n : null);
+        let h = (0, l.e7)([d.Z], () => d.Z.getGame(n)),
+            b = (0, u.Z)(n),
             y = r.useMemo(() => (null != h && null != b ? E(h, b) : null), [b, h]);
         return (
             r.useEffect(() => {
-                !f.current &&
+                !c.current &&
                     _ &&
-                    l &&
-                    !1 === u.Z.isFetching(n) &&
+                    s &&
+                    !1 === d.Z.isFetching(n) &&
                     null != h &&
                     null != y &&
                     (a()(null != o, "Cannot track a Game Profile Entry Point Impressions without a source."),
                     m(y, n, g(h), o),
-                    (f.current = !0));
-            }, [y, n, _, h, o, l]),
+                    (c.current = !0));
+            }, [y, n, _, h, o, s]),
             {
                 shouldOpenGameProfile: _ && !0 === y,
                 applicationId: n,

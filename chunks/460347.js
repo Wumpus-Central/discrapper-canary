@@ -3,26 +3,26 @@ n.d(t, {
     m: () => u,
 }),
     n(997841);
-var r = n(442837),
-    i = n(160404),
-    a = n(271383),
-    o = n(70956),
-    s = n(630388),
+var r = n(95015),
+    i = n(442837),
+    a = n(160404),
+    o = n(271383),
+    s = n(70956),
     l = n(372897);
 function c(e, t, n) {
-    var r;
+    var i;
     if (n.isFullServerPreview(e)) return !0;
-    let i = t.getSelfMember(e);
-    if (null == i) return !1;
-    let a = t.getSelfMemberJoinedAt(e);
+    let a = t.getSelfMember(e);
+    if (null == a) return !1;
+    let o = t.getSelfMemberJoinedAt(e);
     return (
-        !(null == a || (0, s.yE)(null != (r = i.flags) ? r : 0, l.q.COMPLETED_HOME_ACTIONS)) &&
-        Date.now() - a.getTime() < o.Z.Millis.WEEK
+        !(null == o || (0, r.yE)(null != (i = a.flags) ? i : 0, l.q.COMPLETED_HOME_ACTIONS)) &&
+        Date.now() - o.getTime() < s.Z.Millis.WEEK
     );
 }
 function u(e) {
-    return c(e, a.ZP, i.Z);
+    return c(e, o.ZP, a.Z);
 }
 function d(e) {
-    return (0, r.e7)([a.ZP, i.Z], () => c(e, a.ZP, i.Z));
+    return (0, i.e7)([o.ZP, a.Z], () => c(e, o.ZP, a.Z));
 }

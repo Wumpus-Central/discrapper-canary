@@ -45559,7 +45559,9 @@ body .headerAnimation_b54a5b {
     width: 100%
 }
 
-.headerBody__2ee1b {}
+.headerBody__2ee1b {
+    width: 90%
+}
 
 .caretHoverable__2ee1b {
     pointer-events: auto

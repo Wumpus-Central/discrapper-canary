@@ -5,24 +5,24 @@ t.d(n, {
 }),
     t(997841),
     t(388685),
-    t(539854),
-    t(524437);
-var r = t(549817);
+    t(539854);
+var r = t(95015);
+t(524437);
+var l = t(549817);
 t(581883);
-var l = t(984933),
-    i = t(271383),
-    a = t(9156),
-    o = t(630388),
+var i = t(984933),
+    a = t(271383),
+    o = t(9156),
     s = t(152376),
     c = t(398758),
     d = t(372897);
 function u(e) {
     var n, t;
-    let r = (0, c.r1)(e),
-        l = null != (t = null == (n = i.ZP.getSelfMember(e)) ? void 0 : n.flags) ? t : 0,
-        s = (0, o.yE)(l, d.q.COMPLETED_ONBOARDING),
-        u = a.ZP.getOptedInChannels(e).size > 0;
-    return !r && !s && !u;
+    let l = (0, c.r1)(e),
+        i = null != (t = null == (n = a.ZP.getSelfMember(e)) ? void 0 : n.flags) ? t : 0,
+        s = (0, r.yE)(i, d.q.COMPLETED_ONBOARDING),
+        u = o.ZP.getOptedInChannels(e).size > 0;
+    return !l && !s && !u;
 }
 function p(e) {
     if (u(e)) return void h(e);
@@ -34,8 +34,8 @@ function p(e) {
 function h(e) {
     let { include: n = new Set(), exclude: t = new Set() } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        i = l.ZP.getChannels(e),
-        a = [...i[l.sH], ...i[l.Zb]]
+        r = i.ZP.getChannels(e),
+        a = [...r[i.sH], ...r[i.Zb]]
             .filter((e) => {
                 let { channel: n } = e;
                 return !n.isThread() && !t.has(n.id);
@@ -44,5 +44,5 @@ function h(e) {
                 let { channel: n } = e;
                 return n.id;
             });
-    n.forEach((e) => a.push(e)), r.Z.onboardExistingMember(e, new Set(a));
+    n.forEach((e) => a.push(e)), l.Z.onboardExistingMember(e, new Set(a));
 }

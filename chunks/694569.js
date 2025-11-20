@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
-    a = n(915009),
-    o = n(630388),
+    a = n(95015),
+    o = n(915009),
     s = n(88658),
     l = n(695346),
     c = n(838436),
@@ -10,11 +10,11 @@ var r = n(54381),
     d = n(726985),
     f = n(981631),
     _ = n(388032),
-    p = n(597754);
+    p = n(744038);
 function h() {
     let e = l.xq.useSetting(),
         t = i.useMemo(() => (0, s.bL)(e), [e]),
-        n = (0, a.LN)();
+        n = (0, o.LN)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.U, {
@@ -34,7 +34,7 @@ function h() {
                     value: t.all || t.mutualFriends,
                     onChange: (t) =>
                         l.xq.updateSetting(
-                            t ? o.pj(e, f.SOq.MUTUAL_FRIENDS) : o.M1(e, f.SOq.MUTUAL_FRIENDS, f.SOq.NO_RELATION),
+                            t ? a.pj(e, f.SOq.MUTUAL_FRIENDS) : a.M1(e, f.SOq.MUTUAL_FRIENDS, f.SOq.NO_RELATION),
                         ),
                     disabled: n,
                     tooltipText: n ? _.intl.string(p.default["6Af/cw"]) : void 0,
@@ -47,7 +47,7 @@ function h() {
                     value: t.all || t.mutualGuilds,
                     onChange: (t) =>
                         l.xq.updateSetting(
-                            t ? o.pj(e, f.SOq.MUTUAL_GUILDS) : o.M1(e, f.SOq.MUTUAL_GUILDS, f.SOq.NO_RELATION),
+                            t ? a.pj(e, f.SOq.MUTUAL_GUILDS) : a.M1(e, f.SOq.MUTUAL_GUILDS, f.SOq.NO_RELATION),
                         ),
                     disabled: n,
                     tooltipText: n ? _.intl.string(p.default["6Af/cw"]) : void 0,

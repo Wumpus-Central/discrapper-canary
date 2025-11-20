@@ -3,7 +3,7 @@ e.d(i, {
     YF: () => a,
     pq: () => r,
 });
-var n = e(630388),
+var n = e(95015),
     l = e(526761);
 function s(t, i) {
     return n.pj(n.M1(t, l.vc.UNREADS_ALL_MESSAGES, l.vc.UNREADS_ONLY_MENTIONS), i);

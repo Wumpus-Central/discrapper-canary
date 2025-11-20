@@ -20,16 +20,16 @@ n.d(t, {
     n(187205),
     n(997841),
     n(539854);
-var r = n(524437),
-    i = n(911969),
-    a = n(432877),
-    o = n(978003),
-    s = n(768494),
-    l = n(592125),
-    c = n(375954),
-    u = n(699516),
-    d = n(594174),
-    f = n(630388),
+var r = n(95015),
+    i = n(524437),
+    a = n(911969),
+    o = n(432877),
+    s = n(978003),
+    l = n(768494),
+    c = n(592125),
+    u = n(375954),
+    d = n(699516),
+    f = n(594174),
     _ = n(823379),
     p = n(991621),
     h = n(774863),
@@ -45,9 +45,9 @@ let g = -1,
         return null == t || null == e ? m.qn.NONE : y(t, n);
     },
     y = (e, t) => {
-        let n = d.default.getCurrentUser();
+        let n = f.default.getCurrentUser();
         if (null == n || t === n.id) return m.qn.NONE;
-        let r = L(e, t, [l.Z, u.Z]);
+        let r = L(e, t, [c.Z, d.Z]);
         return null == r ? m.qn.NONE : O(r);
     },
     O = (e) => {
@@ -103,20 +103,20 @@ function T(e) {
     return (Array.isArray(e) ? e : [e])
         .flatMap((e) => {
             switch (e.type) {
-                case i.re.MEDIA_GALLERY:
+                case a.re.MEDIA_GALLERY:
                     return e.items.map((e) => e.media);
-                case i.re.THUMBNAIL:
+                case a.re.THUMBNAIL:
                     return e.media;
-                case i.re.FILE:
+                case a.re.FILE:
                     return e.file;
-                case i.re.SECTION:
-                case i.re.ACTION_ROW:
+                case a.re.SECTION:
+                case a.re.ACTION_ROW:
                     return e.components.flatMap(T);
                 default:
                     return [];
             }
         })
-        .map((e) => ("proxy_url" in e ? (0, s.ym)(e) : e));
+        .map((e) => ("proxy_url" in e ? (0, l.ym)(e) : e));
 }
 function S(e, t) {
     var n, r;
@@ -214,7 +214,7 @@ function N(e, t) {
     return 0 !== n.length && n.filter((t) => P(t, e)).length > 0;
 }
 function R(e, t) {
-    if (t === m.qn.NONE || a.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    if (t === m.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
     let n = w(t);
     if (0 === n.length) return !1;
     switch (e.type) {
@@ -229,19 +229,19 @@ function R(e, t) {
     }
 }
 function P(e, t) {
-    var n, r, i, o;
+    var n, i, a, s;
     if (null == e) return !1;
-    let s = m.Fj[e];
-    if (null != s.devSettingKey && a.ZP.get(s.devSettingKey)) return !0;
+    let l = m.Fj[e];
+    if (null != l.devSettingKey && o.ZP.get(l.devSettingKey)) return !0;
     switch (t.type) {
         case p.l.Embed:
-            return (0, f.yE)(null != (n = t.media.flags) ? n : 0, s.embedFlag);
+            return (0, r.yE)(null != (n = t.media.flags) ? n : 0, l.embedFlag);
         case p.l.Attachment:
-            return (0, f.yE)(null != (r = t.media.flags) ? r : 0, s.attachmentFlag);
+            return (0, r.yE)(null != (i = t.media.flags) ? i : 0, l.attachmentFlag);
         case p.l.GenericMedia:
-            return (0, f.yE)(
-                null != (o = null == (i = t.media.contentScanMetadata) ? void 0 : i.flags) ? o : 0,
-                s.genericMediaFlag,
+            return (0, r.yE)(
+                null != (s = null == (a = t.media.contentScanMetadata) ? void 0 : a.flags) ? s : 0,
+                l.genericMediaFlag,
             );
         default:
             return !1;
@@ -269,10 +269,10 @@ function w(e) {
     return t;
 }
 function L(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.Z, u.Z],
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [c.Z, d.Z],
         [r, i] = n,
         a = r.getChannel(e),
-        o = d.default.getCurrentUser();
+        o = f.default.getCurrentUser();
     return null == o || t === o.id || null == a
         ? null
         : a.isDM() || a.isGroupDM()
@@ -347,7 +347,7 @@ function j(e, t) {
     return e !== g && (t.includes(m._.GORE) || t.includes(m._.SELF_HARM) ? null == e || e < n : null == e);
 }
 function U(e) {
-    return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);
+    return null != e && [i.Q4.BLOCK, i.Q4.BLUR].includes(e);
 }
 function G(e) {
     var t, n;
@@ -359,9 +359,9 @@ function G(e) {
             authorId: i,
         };
     if (
-        ("channel_id" in e && (r = e.channel_id), "messageReference" in e && (0, o.Z)(e) && null != e.messageReference)
+        ("channel_id" in e && (r = e.channel_id), "messageReference" in e && (0, s.Z)(e) && null != e.messageReference)
     ) {
-        let n = c.Z.getMessage(e.messageReference.channel_id, e.messageReference.message_id);
+        let n = u.Z.getMessage(e.messageReference.channel_id, e.messageReference.message_id);
         null != n && (i = null == (t = n.author) ? void 0 : t.id);
     } else "author" in e ? (i = null == (n = e.author) ? void 0 : n.id) : "author_id" in e && (i = e.author_id);
     return {

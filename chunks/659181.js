@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ }), n(388685), n(997841), n(953529);
 var r = n(913527),
     i = n.n(r),
-    a = n(81825),
-    o = n(164670),
-    s = n(630388),
+    a = n(95015),
+    o = n(81825),
+    s = n(164670),
     l = n(973616),
     c = n(981631);
 function u(e, t, n) {
@@ -21,9 +21,9 @@ function u(e, t, n) {
 }
 let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
 function f(e) {
-    if (null != e && null != e.social_layer) return { socialLayer: (0, o.x6)(e.social_layer) };
+    if (null != e && null != e.social_layer) return { socialLayer: (0, s.x6)(e.social_layer) };
 }
-class _ extends a.Z {
+class _ extends o.Z {
     static createFromServer(e) {
         var t, n, r, a, o, s, c;
         let { price: u } = e;
@@ -129,23 +129,23 @@ class _ extends a.Z {
         return d.includes(this.id);
     }
     get available() {
-        return (0, s.yE)(this.flags, c.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, a.yE)(this.flags, c.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, a.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, s.yE)(this.flags, c.l4R.AVAILABLE);
+        return (0, a.yE)(this.flags, c.l4R.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, s.yE)(this.flags, c.l4R.PREMIUM_PURCHASE) || (0, s.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
+            ((0, a.yE)(this.flags, c.l4R.PREMIUM_PURCHASE) || (0, a.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {

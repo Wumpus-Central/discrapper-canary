@@ -1,14 +1,14 @@
 n.d(t, { Z: () => b }), n(997841);
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(159691),
-    s = n(481060),
-    l = n(435064),
-    c = n(10464),
-    u = n(680056),
-    d = n(375954),
-    f = n(630388),
+    a = n(95015),
+    o = n(442837),
+    s = n(159691),
+    l = n(481060),
+    c = n(435064),
+    u = n(10464),
+    d = n(680056),
+    f = n(375954),
     _ = n(591759),
     p = n(834129),
     h = n(981631),
@@ -33,18 +33,18 @@ function E(e) {
 function b(e) {
     let { message: t, compact: n } = e,
         b = t.channel_id,
-        y = (0, a.e7)(
-            [d.Z],
+        y = (0, o.e7)(
+            [f.Z],
             () =>
                 null != t.messageReference
-                    ? d.Z.getMessage(t.messageReference.channel_id, t.messageReference.message_id)
+                    ? f.Z.getMessage(t.messageReference.channel_id, t.messageReference.message_id)
                     : null,
             [t.messageReference],
         ),
         { clipId: O, remoteTriggerClipId: v } = i.useMemo(() => (null != y ? E(y.content) : {}), [y]),
-        I = (0, a.e7)([l.Z], () => l.Z.getMatchingGroupClip(O, v)),
-        T = (0, a.e7)([l.Z], () => null != I && null != b && l.Z.wasClipSharedInChannel(I.id, b)),
-        { onShareClick: S } = (0, u.Z)(b),
+        I = (0, o.e7)([c.Z], () => c.Z.getMatchingGroupClip(O, v)),
+        T = (0, o.e7)([c.Z], () => null != I && null != b && c.Z.wasClipSharedInChannel(I.id, b)),
+        { onShareClick: S } = (0, d.Z)(b),
         A = i.useCallback(() => {
             var e;
             null != I &&
@@ -61,7 +61,7 @@ function b(e) {
     if (null == y || (null == O && null == v) || null == I || T) return null;
     let C = y.attachments.find((e) => {
             var t;
-            return (0, f.yE)(null != (t = e.flags) ? t : 0, h.J0y.IS_CLIP);
+            return (0, a.yE)(null != (t = e.flags) ? t : 0, h.J0y.IS_CLIP);
         }),
         N = null;
     if ((null == C ? void 0 : C.proxy_url) != null) {
@@ -70,7 +70,7 @@ function b(e) {
     }
     let R = null != N ? [N, I.thumbnail] : [I.thumbnail];
     return (0, r.jsx)(p.Z, {
-        iconNode: (0, r.jsx)(s.AlX, {
+        iconNode: (0, r.jsx)(l.AlX, {
             size: "md",
             color: "currentColor",
         }),
@@ -79,15 +79,15 @@ function b(e) {
         additionalContent: (0, r.jsxs)("div", {
             className: g.previewContainer,
             children: [
-                (0, r.jsx)(c.Z, {
+                (0, r.jsx)(u.Z, {
                     thumbnails: R,
                     variant: "stacked",
                 }),
-                (0, r.jsx)(o.zxk, {
+                (0, r.jsx)(s.zxk, {
                     size: "sm",
                     onClick: A,
                     text: m.intl.string(m.t["5qb8EX"]),
-                    icon: s.n$P,
+                    icon: l.n$P,
                 }),
             ],
         }),

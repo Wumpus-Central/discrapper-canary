@@ -6,13 +6,13 @@ n.d(t, {
     n(997841);
 var r = n(54381),
     i = n(473749),
-    a = n(768494),
-    o = n(124347),
-    s = n(80966),
-    l = n(296182),
-    c = n(524444),
-    u = n(52824),
-    d = n(630388),
+    a = n(95015),
+    o = n(768494),
+    s = n(124347),
+    l = n(80966),
+    c = n(296182),
+    u = n(524444),
+    d = n(52824),
     f = n(589530),
     _ = n(591759),
     p = n(212459),
@@ -93,9 +93,9 @@ function v(e, t) {
 }
 function I(e, t) {
     return y(E({}, e), {
-        type: (0, a.hg)(e),
+        type: (0, o.hg)(e),
         original: e.url,
-        srcIsAnimated: (0, d.yE)(e.flags, a.hR.IS_ANIMATED),
+        srcIsAnimated: (0, a.yE)(e.flags, o.hR.IS_ANIMATED),
         sourceMetadata: { message: t },
     });
 }
@@ -105,7 +105,7 @@ function T(e) {
 }
 function S(e) {
     let t,
-        { media: n, obscured: i = !1, maxWidth: a, maxHeight: l, onContextMenu: u } = e,
+        { media: n, obscured: i = !1, maxWidth: a, maxHeight: o, onContextMenu: c } = e,
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
         N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
@@ -115,15 +115,15 @@ function S(e) {
         var w;
         let e = T(b);
         if (null == e) return null;
-        let t = null != (w = n.renderLinkComponent) ? w : c.iT;
+        let t = null != (w = n.renderLinkComponent) ? w : u.iT;
         return (0, r.jsx)(
-            s.Z,
+            l.Z,
             y(E({}, N), {
                 src: P,
                 width: d,
                 height: _,
                 maxWidth: a,
-                maxHeight: l,
+                maxHeight: o,
                 poster: e,
                 naturalWidth: d,
                 naturalHeight: _,
@@ -134,7 +134,7 @@ function S(e) {
                 renderLinkComponent: t,
                 autoPlay: !i,
                 alt: v,
-                onContextMenu: u,
+                onContextMenu: c,
                 disableArrowKeySeek: !0,
             }),
         );
@@ -143,30 +143,30 @@ function S(e) {
         "IMAGE" === I &&
             (t = D
                 ? (0, r.jsx)(
-                      o.ZP,
+                      s.ZP,
                       y(E({}, N), {
                           src: P,
                           width: d,
                           height: _,
                           maxWidth: a,
-                          maxHeight: l,
+                          maxHeight: o,
                           useFullWidth: !0,
                           shouldLink: !1,
                           className: m.media,
                           animated: !i && n.animated,
                           autoPlay: !i,
                           alt: v,
-                          onContextMenu: u,
+                          onContextMenu: c,
                       }),
                   )
                 : (0, r.jsx)("img", {
                       src: P,
                       alt: v,
-                      onContextMenu: u,
+                      onContextMenu: c,
                       className: m.dimensionlessImage,
                       style: {
                           maxWidth: a,
-                          maxHeight: l,
+                          maxHeight: o,
                       },
                   })),
         null != t ? (0, r.jsx)(h.Z, { children: t }) : null
@@ -175,8 +175,8 @@ function S(e) {
 let A = i.memo(S);
 function C(e, t, n, r, i) {
     return e && _.Z.isDiscordAssetUrl(t, r, i)
-        ? (0, l.s$)(t, r, i)
-        : (0, u.q)({
+        ? (0, c.s$)(t, r, i)
+        : (0, d.q)({
               proxyURL: n,
               url: t,
           });

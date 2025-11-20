@@ -1,35 +1,35 @@
 n.d(t, { Z: () => E }), n(997841);
 var r = n(54381);
 n(473749);
-var i = n(442837),
-    a = n(768494),
-    o = n(549635),
-    s = n(120324),
-    l = n(169525),
-    c = n(499376),
-    u = n(611170),
-    d = n(128854),
-    f = n(884182),
-    _ = n(592125),
-    p = n(52824),
-    h = n(630388),
+var i = n(95015),
+    a = n(442837),
+    o = n(768494),
+    s = n(549635),
+    l = n(120324),
+    c = n(169525),
+    u = n(499376),
+    d = n(611170),
+    f = n(128854),
+    _ = n(884182),
+    p = n(592125),
+    h = n(52824),
     m = n(970184),
     g = n(981631);
 function E(e) {
     let { message: t } = (0, m.CJ)(),
-        n = (0, i.e7)([_.Z], () => _.Z.getChannel(null == t ? void 0 : t.channel_id)),
+        n = (0, a.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.channel_id)),
         {
             shouldHideMediaOptions: E,
             enabledContentHarmTypeFlags: b,
             gifAutoPlay: y,
             getGifFavButton: O,
             getOnMediaItemContextMenu: v,
-        } = (0, d.c)();
+        } = (0, f.c)();
     if (null == t || null == n) return null;
-    let I = e.items.map((e) => (0, o.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
+    let I = e.items.map((e) => (0, s.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
         { srcToOnClickOverride: T, srcToHandlePreloadImage: S } =
             I.length > 1
-                ? (0, s.G)(
+                ? (0, l.G)(
                       I,
                       {
                           shouldHideMediaOptions: E,
@@ -44,48 +44,48 @@ function E(e) {
     function A(e, n) {
         var r;
         let i = e.originalItem;
-        return (0, l.lK)(i.media, n, i.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
+        return (0, c.lK)(i.media, n, i.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
     }
     let C = e.items.map((e, n) => {
         let r = e.media,
-            i = (e, t, n) => {},
-            o = null == v ? void 0 : v(r),
-            s = {
+            a = (e, t, n) => {},
+            s = null == v ? void 0 : v(r),
+            l = {
                 message: t,
                 item: {
                     uniqueId: "".concat(r.proxyUrl, "--").concat(n),
                     originalItem: e,
-                    type: (0, c.pU)(r),
+                    type: (0, u.pU)(r),
                     downloadUrl: r.url,
                     height: r.height,
                     width: r.width,
                     spoiler: e.spoiler,
                     contentType: r.contentType,
-                    srcIsAnimated: (0, h.yE)(r.flags, a.hR.IS_ANIMATED),
+                    srcIsAnimated: (0, i.yE)(r.flags, o.hR.IS_ANIMATED),
                 },
-                onContextMenu: o,
+                onContextMenu: s,
                 autoPlayGif: y,
                 getObscureReason: A,
-                renderImageComponent: u.aB,
-                renderVideoComponent: u.rJ,
-                renderVisualPlaceholderComponent: u.yF,
+                renderImageComponent: d.aB,
+                renderVideoComponent: d.rJ,
+                renderVisualPlaceholderComponent: d.yF,
                 renderAudioComponent: g.dG4,
                 renderPlaintextFilePreview: g.dG4,
                 renderGenericFileComponent: g.dG4,
                 renderMosaicItemFooter: g.dG4,
                 gifFavoriteButton: O(r),
-                onPlay: i,
+                onPlay: a,
                 canRemoveItem: !1,
                 onRemoveItem: g.dG4,
             },
-            l = (0, p.q)({
+            c = (0, h.q)({
                 proxyURL: r.proxyUrl,
                 url: r.url,
             });
-        return l in T && ((s.onClick = T[l]), (s.handlePreloadImage = S[l])), s;
+        return c in T && ((l.onClick = T[c]), (l.handlePreloadImage = S[c])), l;
     });
     return (0, r.jsx)("div", {
-        children: (0, r.jsx)(f.Z, {
+        children: (0, r.jsx)(_.Z, {
             items: C,
             isInAppComponentsV2: !0,
         }),

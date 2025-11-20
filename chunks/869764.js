@@ -7,17 +7,17 @@ var l = n(54381),
     r = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    c = n(933557),
-    d = n(471445),
-    u = n(592125),
-    m = n(271383),
-    g = n(430824),
-    h = n(496675),
-    f = n(186523),
-    N = n(768581),
-    I = n(630388),
+    s = n(95015),
+    o = n(442837),
+    c = n(481060),
+    d = n(933557),
+    u = n(471445),
+    m = n(592125),
+    g = n(271383),
+    h = n(430824),
+    f = n(496675),
+    N = n(186523),
+    I = n(768581),
     p = n(526120),
     O = n(563534),
     E = n(846121),
@@ -27,7 +27,7 @@ var l = n(54381),
     _ = n(388032),
     j = n(371882);
 function v(e) {
-    var { title: t, emojiId: n, emojiName: r, icon: i, completed: s, Icon: c, onClick: d } = e,
+    var { title: t, emojiId: n, emojiName: r, icon: i, completed: s, Icon: o, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -53,12 +53,12 @@ function v(e) {
         g = "static" === u.variant ? u.subtitle : u.channelName,
         h =
             null != m
-                ? N.ZP.getNewMemberActionIconURL({
+                ? I.ZP.getNewMemberActionIconURL({
                       channelId: m,
                       icon: i,
                   })
                 : null;
-    return (0, l.jsxs)(o.Zbd, {
+    return (0, l.jsxs)(c.Zbd, {
         className: a()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
@@ -77,7 +77,7 @@ function v(e) {
                       size: S.R.LARGE,
                       defaultComponent: (0, l.jsx)("div", {
                           className: j.channelIconContainer,
-                          children: (0, l.jsx)(c, {
+                          children: (0, l.jsx)(o, {
                               className: j.channelIcon,
                               color: "currentColor",
                           }),
@@ -86,13 +86,13 @@ function v(e) {
             (0, l.jsxs)("div", {
                 className: j.actionInfo,
                 children: [
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(c.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: t,
                     }),
                     null != g
-                        ? (0, l.jsx)(o.Text, {
+                        ? (0, l.jsx)(c.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               children: g,
@@ -101,13 +101,13 @@ function v(e) {
                 ],
             }),
             s
-                ? (0, l.jsx)(o.owK, {
+                ? (0, l.jsx)(c.owK, {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: "#fff",
                       className: j.checkCircleCompleted,
                   })
-                : (0, l.jsx)(f.Z, {
+                : (0, l.jsx)(N.Z, {
                       className: j.checkCircle,
                       width: 24,
                       height: 24,
@@ -118,24 +118,24 @@ function v(e) {
 function b(e) {
     var t;
     let { action: n, completed: i } = e,
-        { channelId: a, title: m, emoji: g, icon: f } = n,
+        { channelId: a, title: s, emoji: g, icon: h } = n,
         { id: N, name: I } = null != g ? g : {},
-        O = (0, s.e7)([u.Z], () => u.Z.getChannel(a)),
-        E = (0, c.ZP)(O, !0),
-        S = (0, s.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
+        O = (0, o.e7)([m.Z], () => m.Z.getChannel(a)),
+        E = (0, d.ZP)(O, !0),
+        S = (0, o.e7)([f.Z], () => f.Z.can(x.Plq.VIEW_CHANNEL, O)),
         T = r.useMemo(() => {
             if (null != O) return () => (0, p.gp)(O.guild_id, O.id);
         }, [O]);
     if (null == O || !S) return null;
-    let _ = null != (t = (0, d.KS)(O)) ? t : o.VL1;
+    let _ = null != (t = (0, u.KS)(O)) ? t : c.VL1;
     return (0, l.jsx)(v, {
         variant: "channel",
         channelId: a,
-        title: m,
+        title: s,
         channelName: E,
         emojiId: N,
         emojiName: I,
-        icon: f,
+        icon: h,
         completed: i,
         Icon: _,
         onClick: T,
@@ -143,26 +143,26 @@ function b(e) {
 }
 function D(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
-        i = (0, s.e7)([E.Z], () => E.Z.getCompletedActions(t)),
-        c = (0, s.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
-        d = (0, s.e7)([g.Z], () => g.Z.getGuild(t));
+        n = (0, o.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
+        i = (0, o.e7)([E.Z], () => E.Z.getCompletedActions(t)),
+        d = (0, o.e7)([g.ZP], () => g.ZP.getSelfMember(t)),
+        u = (0, o.e7)([h.Z], () => h.Z.getGuild(t));
     r.useEffect(() => {
         var e;
         null == i &&
-            (null == c ? void 0 : c.flags) != null &&
-            (0, I.yE)(null != (e = c.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
+            (null == d ? void 0 : d.flags) != null &&
+            (0, s.yE)(null != (e = d.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
             (0, p.Fg)(t);
-    }, [i, t, null == c ? void 0 : c.flags]);
-    let u = r.useCallback(() => {
-        null != d && null != d.rulesChannelId && (0, p.gp)(d.id, d.rulesChannelId);
-    }, [d]);
-    return null == c || null == n || 0 === n.length
+    }, [i, t, null == d ? void 0 : d.flags]);
+    let m = r.useCallback(() => {
+        null != u && null != u.rulesChannelId && (0, p.gp)(u.id, u.rulesChannelId);
+    }, [u]);
+    return null == d || null == n || 0 === n.length
         ? null
         : (0, l.jsxs)("div", {
               className: j.container,
               children: [
-                  (0, l.jsx)(o.Heading, {
+                  (0, l.jsx)(c.Heading, {
                       variant: "heading-lg/bold",
                       color: "header-primary",
                       children: _.intl.string(_.t.LhlgY9),
@@ -178,14 +178,14 @@ function D(e) {
                           e.channelId,
                       ),
                   ),
-                  (null == d ? void 0 : d.rulesChannelId) != null &&
-                      (0, l.jsxs)(o.Zbd, {
+                  (null == u ? void 0 : u.rulesChannelId) != null &&
+                      (0, l.jsxs)(c.Zbd, {
                           className: a()(j.action, j.clickableAction),
-                          onClick: u,
+                          onClick: m,
                           children: [
                               (0, l.jsx)("div", {
                                   className: j.rulesIconContainer,
-                                  children: (0, l.jsx)(o.snC, {
+                                  children: (0, l.jsx)(c.snC, {
                                       size: "xs",
                                       color: "currentColor",
                                       className: j.rulesIcon,
@@ -193,7 +193,7 @@ function D(e) {
                               }),
                               (0, l.jsx)("div", {
                                   className: j.actionInfo,
-                                  children: (0, l.jsx)(o.Text, {
+                                  children: (0, l.jsx)(c.Text, {
                                       variant: "text-md/semibold",
                                       color: "header-primary",
                                       children: _.intl.string(_.t["K/i3iQ"]),

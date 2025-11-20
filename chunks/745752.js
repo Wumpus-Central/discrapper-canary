@@ -6,14 +6,14 @@ n.d(t, {
     rj: () => b,
 }),
     n(997841);
-var r = n(544891),
-    i = n(570140),
-    a = n(367907),
-    o = n(314897),
-    s = n(271383),
-    l = n(430824),
-    c = n(626135),
-    u = n(630388),
+var r = n(95015),
+    i = n(544891),
+    a = n(570140),
+    o = n(367907),
+    s = n(314897),
+    l = n(271383),
+    c = n(430824),
+    u = n(626135),
     d = n(45966),
     f = n(290511),
     _ = n(981631),
@@ -71,9 +71,9 @@ function E(e, t) {
     );
 }
 function b(e) {
-    c.default.track(
+    u.default.track(
         _.rMx.GUILD_ONBOARDING_LOADED,
-        E(m({}, (0, a.hH)(e)), {
+        E(m({}, (0, o.hH)(e)), {
             has_new_prompts: !1,
             number_of_prompts: 0,
         }),
@@ -81,11 +81,11 @@ function b(e) {
 }
 function y(e) {
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: "GUILD_ONBOARDING_PROMPTS_FETCH_START",
             guildId: e,
         }),
-        r.tn
+        i.tn
             .get({
                 url: _.ANM.GUILD_ONBOARDING(e),
                 rejectWithError: !1,
@@ -94,7 +94,7 @@ function y(e) {
                 (t) => {
                     let { body: n } = t,
                         r = (0, f.cf)(n);
-                    return i.Z.dispatch(
+                    return a.Z.dispatch(
                         m(
                             {
                                 type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS",
@@ -105,7 +105,7 @@ function y(e) {
                     ).then(() => r.prompts);
                 },
                 (t) => (
-                    i.Z.dispatch({
+                    a.Z.dispatch({
                         type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE",
                         guildId: e,
                     }),
@@ -116,21 +116,21 @@ function y(e) {
 }
 async function O(e) {
     var t, n;
-    let r = o.default.getId(),
-        i = (0, u.yE)(
-            null != (n = null == (t = s.ZP.getMember(e, r)) ? void 0 : t.flags) ? n : 0,
+    let i = s.default.getId(),
+        a = (0, r.yE)(
+            null != (n = null == (t = l.ZP.getMember(e, i)) ? void 0 : t.flags) ? n : 0,
             p.q.COMPLETED_ONBOARDING,
         ),
-        a = l.Z.getGuild(e);
-    if (null == a || !a.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
-    let c = d.Z.shouldFetchPrompts(e),
+        o = c.Z.getGuild(e);
+    if (null == o || !o.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
+    let u = d.Z.shouldFetchPrompts(e),
         f = d.Z.getOnboardingPrompts(e);
-    if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? S(e) : i || v(e), Promise.resolve();
+    if (!u && f.length > 0) return f.every((e) => !e.inOnboarding) ? S(e) : a || v(e), Promise.resolve();
     let h = await y(e);
-    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (S(e), Promise.resolve()) : (i || v(e), h);
+    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (S(e), Promise.resolve()) : (a || v(e), h);
 }
 function v(e) {
-    i.Z.dispatch({
+    a.Z.dispatch({
         type: "GUILD_ONBOARDING_START",
         guildId: e,
     });
@@ -138,16 +138,16 @@ function v(e) {
 let I = -2,
     T = -3;
 function S(e) {
-    c.default.track(
+    u.default.track(
         _.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-        E(m({}, (0, a.hH)(e)), {
+        E(m({}, (0, o.hH)(e)), {
             step: I,
             required: !0,
         }),
     ),
-        c.default.track(
+        u.default.track(
             _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-            E(m({}, (0, a.hH)(e)), {
+            E(m({}, (0, o.hH)(e)), {
                 step: I,
                 skipped: !1,
                 is_final_step: !0,

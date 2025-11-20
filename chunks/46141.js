@@ -20,9 +20,9 @@ n.d(t, {
 }),
     n(997841),
     n(415506);
-var r = n(81825),
-    i = n(770555),
-    a = n(630388),
+var r = n(95015),
+    i = n(81825),
+    a = n(770555),
     o = n(823379),
     s = n(981631);
 function l(e, t, n) {
@@ -77,7 +77,7 @@ function d(e, t) {
         e
     );
 }
-class f extends r.Z {
+class f extends i.Z {
     static createFromServer(e) {
         var t;
         let n = null != (t = e.billing_address) ? t : {},
@@ -190,13 +190,13 @@ class f extends r.Z {
         }
     }
     hasFlag(e) {
-        return (0, a.yE)(this.flags, e);
+        return (0, r.yE)(this.flags, e);
     }
     get paymentMethodCountry() {
         return null != this.country && "" !== this.country ? this.country : this.billingAddress.country;
     }
     canRedeemTrial() {
-        let { enabled: e } = i.Z.getCurrentConfig({ location: "3a6d55_1" });
+        let { enabled: e } = a.Z.getCurrentConfig({ location: "3a6d55_1" });
         return this.paymentGateway === s.gg$.ADYEN && this.type === s.HeQ.CASH_APP ? e : !s.H0J.has(this.type);
     }
     constructor(e) {

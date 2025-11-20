@@ -1,8 +1,8 @@
 n.d(t, { U: () => s });
-var r = n(818083),
-    i = n(630388),
+var r = n(95015),
+    i = n(818083),
     a = n(474936);
-let o = (0, r.B)({
+let o = (0, i.B)({
         kind: "user",
         id: "2025-02_reverse_trial_perk_access_kill_switch",
         label: "Reverse Trial Perk Access Kill Switch",
@@ -17,5 +17,5 @@ let o = (0, r.B)({
     }),
     s = (e, t) =>
         null != t &&
-        !!(0, i.yE)(t.purchasedFlags, a.in.ON_REVERSE_TRIAL) &&
+        !!(0, r.yE)(t.purchasedFlags, a.in.ON_REVERSE_TRIAL) &&
         o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;

@@ -2,24 +2,24 @@ t.d(n, { Z: () => _ }), t(472816), t(794429), t(539854), t(388685);
 var r = t(473749),
     l = t(392711),
     i = t.n(l),
-    a = t(442837),
-    o = t(570140),
-    s = t(724213),
-    c = t(9156),
-    d = t(630388),
+    a = t(95015),
+    o = t(442837),
+    s = t(570140),
+    c = t(724213),
+    d = t(9156),
     u = t(823379),
     p = t(549817),
     h = t(45966),
     m = t(526761);
 function f(e) {
-    o.Z.dispatch({
+    s.Z.dispatch({
         type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES",
         guildId: e,
     });
 }
 let g = {};
 function _(e) {
-    let n = (0, a.e7)([h.Z], () => {
+    let n = (0, o.e7)([h.Z], () => {
         var n;
         return null != (n = h.Z.getPendingResponseOptions(e)) ? n : g;
     }, [e]);
@@ -32,7 +32,7 @@ function _(e) {
             handleSelectOption: r.useCallback(
                 (n, t, r) => {
                     let l = h.Z.getOnboardingResponses(e),
-                        { addedRoleIds: a, removedRoleIds: f } = (function (e, n, t, r) {
+                        { addedRoleIds: o, removedRoleIds: f } = (function (e, n, t, r) {
                             var l, a, o, s, c;
                             let d = [],
                                 p = [];
@@ -67,11 +67,11 @@ function _(e) {
                         })(n, t, r, l),
                         { addedChannelIds: g, removedChannelIds: _ } = (function (e) {
                             var n, t, r, l, a;
-                            let { guildId: o, prompt: c, option: d, selected: p, responses: m } = e,
+                            let { guildId: o, prompt: s, option: d, selected: p, responses: m } = e,
                                 f = [],
                                 g = [];
-                            if (c.singleSelect && p) {
-                                let e = c.options.find((e) => m.includes(e.id));
+                            if (s.singleSelect && p) {
+                                let e = s.options.find((e) => m.includes(e.id));
                                 (f = i().difference(
                                     null != (n = d.channelIds) ? n : [],
                                     null != (t = null == e ? void 0 : e.channelIds) ? t : [],
@@ -82,7 +82,7 @@ function _(e) {
                                     ));
                             } else if (p) (f = null != (a = d.channelIds) ? a : []), (g = []);
                             else {
-                                let e = c.options.filter((e) => m.includes(e.id)),
+                                let e = s.options.filter((e) => m.includes(e.id)),
                                     n = e.filter((e) => d.id !== e.id),
                                     t = e
                                         .map((e) => e.channelIds)
@@ -95,7 +95,7 @@ function _(e) {
                                 (f = []), (g = i().difference(t, r));
                             }
                             return (
-                                (0, s.hi)(o) && f.push(...h.Z.getDefaultChannelIds(o)),
+                                (0, c.hi)(o) && f.push(...h.Z.getDefaultChannelIds(o)),
                                 {
                                     addedChannelIds: f,
                                     removedChannelIds: g,
@@ -135,21 +135,21 @@ function _(e) {
                         })(
                             {},
                             g.reduce((n, t) => {
-                                let r = c.ZP.getChannelIdFlags(e, t);
-                                return (n[t] = { flags: (0, d.mB)(r, m.ic.OPT_IN_ENABLED, !0) }), n;
+                                let r = d.ZP.getChannelIdFlags(e, t);
+                                return (n[t] = { flags: (0, a.mB)(r, m.ic.OPT_IN_ENABLED, !0) }), n;
                             }, {}),
                             _.reduce((n, t) => {
-                                let r = c.ZP.getChannelIdFlags(e, t);
-                                return (n[t] = { flags: (0, d.mB)(r, m.ic.OPT_IN_ENABLED, !1) }), n;
+                                let r = d.ZP.getChannelIdFlags(e, t);
+                                return (n[t] = { flags: (0, a.mB)(r, m.ic.OPT_IN_ENABLED, !1) }), n;
                             }, {}),
                         );
                     p.Z.selectOption(e, n.id, t.id, r),
-                        o.Z.dispatch({
+                        s.Z.dispatch({
                             type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
                             guildId: e,
                             overrides: x,
                         }),
-                        p.Z.updateRolesLocal(e, a, f);
+                        p.Z.updateRolesLocal(e, o, f);
                 },
                 [e],
             ),

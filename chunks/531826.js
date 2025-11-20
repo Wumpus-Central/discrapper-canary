@@ -4,10 +4,10 @@ n.d(t, {
     sU: () => m,
 }),
     n(997841);
-var r = n(442837),
-    i = n(812206),
-    a = n(522474),
-    o = n(630388),
+var r = n(95015),
+    i = n(442837),
+    a = n(812206),
+    o = n(522474),
     s = n(636449),
     l = n(317381),
     c = n(16609),
@@ -16,11 +16,11 @@ var r = n(442837),
     f = n(981631);
 function _(e) {
     var t;
-    let { application: n, channelId: r } = e;
-    if (null != n && (0, o.yE)(null != (t = n.flags) ? t : 0, f.udG.EMBEDDED)) {
-        if (a.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW)
+    let { application: n, channelId: i } = e;
+    if (null != n && (0, r.yE)(null != (t = n.flags) ? t : 0, f.udG.EMBEDDED)) {
+        if (o.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW)
             return f.KJ3.ACTIVITY_POPOUT;
-        if (a.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, u.Z)(r) && !(0, s.R)())
+        if (o.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, u.Z)(i) && !(0, s.R)())
             return f.KJ3.CHANNEL_CALL_POPOUT;
     }
 }
@@ -38,7 +38,7 @@ function h(e) {
     let { applicationId: t } = e,
         n = l.ZP.getCurrentEmbeddedActivity();
     if (null == n || n.applicationId !== t) return;
-    let r = i.Z.getApplication(t);
+    let r = a.Z.getApplication(t);
     if (null != r)
         return _({
             application: r,
@@ -47,12 +47,12 @@ function h(e) {
 }
 function m(e) {
     let { channelId: t } = e;
-    return (0, r.e7)([a.Z, l.ZP, i.Z], () => {
+    return (0, i.e7)([o.Z, l.ZP, a.Z], () => {
         let e = p({
             channelId: null != t ? t : l.ZP.getConnectedActivityChannelId(),
             EmbeddedActivitiesStore: l.ZP,
-            ApplicationStore: i.Z,
+            ApplicationStore: a.Z,
         });
-        return null != e ? a.Z.getWindow(e) : void 0;
+        return null != e ? o.Z.getWindow(e) : void 0;
     });
 }

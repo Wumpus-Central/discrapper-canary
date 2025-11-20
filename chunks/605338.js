@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(997841);
-var r = n(81825),
-    i = n(397047),
-    a = n(630388),
+var r = n(95015),
+    i = n(81825),
+    a = n(397047),
     o = n(474936);
 function s(e, t, n) {
     return (
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-class l extends r.Z {
+class l extends i.Z {
     static createFromServer(e) {
         var t, n, r, i, a, o, s, c, u, d;
         return new l({
@@ -43,22 +43,22 @@ class l extends r.Z {
         });
     }
     get isThirdPartyOutbound() {
-        return this.promotionType === i.$k.THIRD_PARTY_OUTBOUND;
+        return this.promotionType === a.$k.THIRD_PARTY_OUTBOUND;
     }
     get isBogo() {
-        return this.promotionType === i.$k.BOGO;
+        return this.promotionType === a.$k.BOGO;
     }
     get isMarketingMoment() {
-        return this.promotionType === i.$k.MARKETING_MOMENT;
+        return this.promotionType === a.$k.MARKETING_MOMENT;
     }
     hasFlag(e) {
-        return (0, a.yE)(this.flags, e);
+        return (0, r.yE)(this.flags, e);
     }
     isCountryRestricted(e) {
         switch (this.promotionType) {
-            case i.$k.THIRD_PARTY_INBOUND:
+            case a.$k.THIRD_PARTY_INBOUND:
                 return this.inboundRestrictedCountries.includes(e);
-            case i.$k.THIRD_PARTY_OUTBOUND:
+            case a.$k.THIRD_PARTY_OUTBOUND:
                 return this.outboundRestrictedCountries.includes(e);
             default:
                 return !1;

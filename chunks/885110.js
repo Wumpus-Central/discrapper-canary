@@ -4,13 +4,13 @@ var r,
     a = n.n(i),
     o = n(392711),
     s = n.n(o),
-    l = n(442837),
-    c = n(570140),
-    u = n(503438),
-    d = n(768419),
-    f = n(695346),
-    _ = n(581883),
-    p = n(630388),
+    l = n(95015),
+    c = n(442837),
+    u = n(570140),
+    d = n(503438),
+    f = n(768419),
+    _ = n(695346),
+    p = n(581883),
     h = n(780570),
     m = n(77498),
     g = n(517100),
@@ -56,14 +56,14 @@ function j(e) {
 }
 function U(e) {
     let t = m.Z.getGameByName(e);
-    return null != t ? j(t.id) : f.G6.getSetting();
+    return null != t ? j(t.id) : _.G6.getSetting();
 }
 function G(e) {
     var t;
-    if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
+    if ((0, l.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
         case v.IIU.LISTENING:
-            if ((0, u.Z)(e)) return d.Z.shouldShowActivity();
+            if ((0, d.Z)(e)) return f.Z.shouldShowActivity();
             if (null != e.application_id) return j(e.application_id);
             return !1;
         case v.IIU.PLAYING:
@@ -82,7 +82,7 @@ function Z() {
     if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), D)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
-        let e = f.co.getSetting();
+        let e = _.co.getSetting();
         S = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
@@ -112,9 +112,9 @@ function H() {
 function Y() {
     H();
 }
-class W extends (r = l.ZP.Store) {
+class W extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, g.Z, E.Z, b.Z, y.Z, O.Z, d.Z, _.Z), this.syncWith([b.Z], Z);
+        this.waitFor(m.Z, g.Z, E.Z, b.Z, y.Z, O.Z, f.Z, p.Z), this.syncWith([b.Z], Z);
     }
     getLocalPresence() {
         return {
@@ -152,7 +152,7 @@ class W extends (r = l.ZP.Store) {
     }
 }
 I(W, "displayName", "SelfPresenceStore");
-let K = new W(c.Z, {
+let K = new W(u.Z, {
     START_SESSION: Z,
     CONNECTION_OPEN: Y,
     CONNECTION_OPEN_SUPPLEMENTAL: H,

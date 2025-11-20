@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var i = n(54381);
 n(473749);
 var l = n(533800),
-    s = n(481060),
-    r = n(630388),
+    s = n(95015),
+    r = n(481060),
     a = n(971130),
     o = n(388032),
     u = n(337709);
@@ -32,29 +32,29 @@ function c(e) {
             onSubmit: p,
             className: u.settingsForm,
             children: [
-                (0, i.jsx)(s.VcW, {
+                (0, i.jsx)(r.VcW, {
                     label: o.intl.string(o.t["60qw2x"]),
                     options: c,
                     value: null != (t = null == E ? void 0 : E.value) ? t : c[0].value,
                     onChange: m,
                 }),
-                (0, i.jsx)(s.VcW, {
+                (0, i.jsx)(r.VcW, {
                     label: o.intl.string(o.t.jDqWHW),
                     options: d,
                     value: null == C ? void 0 : C.value,
                     onChange: x,
                 }),
                 !n &&
-                    (0, i.jsx)(s.rsf, {
+                    (0, i.jsx)(r.rsf, {
                         checked: v,
                         onChange: (e) => I(e),
                         description: o.intl.string(o.t.UN5IRX),
                         label: o.intl.string(o.t["wE+9dr"]),
                     }),
                 S &&
-                    (0, i.jsx)(s.rsf, {
-                        checked: (0, r.yE)(f, l.$.IS_GUEST_INVITE),
-                        onChange: (e) => y((0, r.mB)(f, l.$.IS_GUEST_INVITE, e)),
+                    (0, i.jsx)(r.rsf, {
+                        checked: (0, s.yE)(f, l.$.IS_GUEST_INVITE),
+                        onChange: (e) => y((0, s.mB)(f, l.$.IS_GUEST_INVITE, e)),
                         description: o.intl.string(o.t["/FeTK6"]),
                         label: o.intl.string(o.t.siexRS),
                     }),

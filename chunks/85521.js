@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f }), n(997841);
 var r = n(913527),
     i = n.n(r),
-    a = n(81825),
-    o = n(812206),
-    s = n(630388),
+    a = n(95015),
+    o = n(81825),
+    s = n(812206),
     l = n(959546),
     c = n(981631);
 function u(e, t, n) {
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = "master";
-class f extends a.Z {
+class f extends o.Z {
     static createFromServer(e) {
         return new f({
             id: e.application.id,
@@ -59,7 +59,7 @@ class f extends a.Z {
         return this.flags;
     }
     hasFlag(e) {
-        return s.yE(this.flags, e);
+        return a.yE(this.flags, e);
     }
     isHidden() {
         return this.hasFlag(c.eHb.HIDDEN);
@@ -100,7 +100,7 @@ class f extends a.Z {
         return this.sku.id;
     }
     getAnalyticsData() {
-        let e = o.Z.getApplication(this.id);
+        let e = s.Z.getApplication(this.id);
         return {
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,

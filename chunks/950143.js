@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(997841), n(388685);
 var r = n(533800),
-    i = n(147913),
-    a = n(82085),
-    o = n(630388),
+    i = n(95015),
+    a = n(147913),
+    o = n(82085),
     s = n(461014),
     l = n(981631);
 function c(e, t, n) {
@@ -20,16 +20,16 @@ function c(e, t, n) {
 }
 function u(e) {
     var t, n;
-    let { guild: i } = e.invite,
+    let { guild: a } = e.invite,
         c = null != (n = e.invite.flags) ? n : 0;
-    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.GuildFeatures.HUB)))
-        return void a.Z.onOpenHubInvite(e.invite);
-    !((0, o.yE)(c, r.$.IS_GUEST_INVITE) || (0, o.yE)(c, r.$.IS_APPLICATION_BYPASS)) &&
-        null != i &&
-        (0, s.u)(i) &&
-        (0, s._)(i.id);
+    if (null != a && (null == a || null == (t = a.features) ? void 0 : t.includes(l.GuildFeatures.HUB)))
+        return void o.Z.onOpenHubInvite(e.invite);
+    !((0, i.yE)(c, r.$.IS_GUEST_INVITE) || (0, i.yE)(c, r.$.IS_APPLICATION_BYPASS)) &&
+        null != a &&
+        (0, s.u)(a) &&
+        (0, s._)(a.id);
 }
-class d extends i.Z {
+class d extends a.Z {
     constructor(...e) {
         super(...e), c(this, "actions", { INVITE_ACCEPT_SUCCESS: u });
     }

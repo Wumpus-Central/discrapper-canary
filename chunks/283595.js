@@ -2,11 +2,11 @@ n.d(t, { Z: () => V }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
     a = n.n(i),
-    o = n(442837),
-    s = n(433517),
-    l = n(570140),
-    c = n(85521),
-    u = n(630388),
+    o = n(95015),
+    s = n(442837),
+    l = n(433517),
+    c = n(570140),
+    u = n(85521),
     d = n(780570),
     f = n(314897),
     _ = n(981631);
@@ -65,7 +65,7 @@ function g(e, t) {
 let E = "LibraryApplicationStore";
 function b() {
     var e;
-    return null != (e = s.K.get(E)) ? e : {};
+    return null != (e = l.K.get(E)) ? e : {};
 }
 let y = !1,
     O = {},
@@ -75,14 +75,14 @@ let y = !1,
     S = {},
     A = !1;
 function C() {
-    s.K.set(E, g(h({}, b()), { activeLaunchOptionIds: S }));
+    l.K.set(E, g(h({}, b()), { activeLaunchOptionIds: S }));
 }
 function N() {
-    s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: T }));
+    l.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: T }));
 }
 function R(e) {
     for (let t of e) {
-        let e = c.Z.createFromServer(t);
+        let e = u.Z.createFromServer(t);
         O[(0, d.Tu)(e.id, e.branchId)] = e;
     }
 }
@@ -101,11 +101,11 @@ function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         a = B(t, n);
-    null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
+    null != a && !a.isHidden() && o.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
 }
 function x(e) {
     let { libraryApplication: t } = e,
-        n = c.Z.createFromServer(t),
+        n = u.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
     (O[r] = n), I.delete(r);
 }
@@ -142,10 +142,10 @@ function B(e, t) {
 function Z() {
     return h({}, v, O);
 }
-class F extends (r = o.ZP.Store) {
+class F extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
-        let e = s.K.get(E);
+        let e = l.K.get(E);
         null != e &&
             (null == e.activeLaunchOptionIds ? C() : (S = e.activeLaunchOptionIds),
             null == e.activeLibraryApplicationBranchIds ? N() : (T = e.activeLibraryApplicationBranchIds));
@@ -211,7 +211,7 @@ class F extends (r = o.ZP.Store) {
     }
 }
 p(F, "displayName", "LibraryApplicationStore");
-let V = new F(l.Z, {
+let V = new F(c.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: D,
     SKU_PURCHASE_SUCCESS: w,

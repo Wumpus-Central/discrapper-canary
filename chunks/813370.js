@@ -4,16 +4,16 @@ n.d(t, {
 }),
     n(997841);
 var r = n(473749),
-    i = n(783097),
-    a = n(630388),
+    i = n(95015),
+    a = n(783097),
     o = n(28881),
     s = n(981631);
 function l(e) {
     var t;
-    if (!(0, i.BQ)(e)) return !1;
+    if (!(0, a.BQ)(e)) return !1;
     let n = null != (t = e.flags) ? t : 0,
-        r = (0, a.yE)(n, s.udG.EMBEDDED),
-        o = (0, a.yE)(n, s.udG.CONTEXTLESS_ACTIVITY);
+        r = (0, i.yE)(n, s.udG.EMBEDDED),
+        o = (0, i.yE)(n, s.udG.CONTEXTLESS_ACTIVITY);
     return r && o;
 }
 function c(e) {

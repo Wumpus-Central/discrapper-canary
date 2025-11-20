@@ -10,18 +10,18 @@ n.d(t, {
 var r,
     i = n(392711),
     a = n.n(i),
-    o = n(442837),
-    s = n(570140),
-    l = n(2572),
-    c = n(16609),
-    u = n(864106),
-    d = n(579407),
-    f = n(710845),
-    _ = n(131016),
-    p = n(69882),
-    h = n(134049),
-    m = n(160404),
-    g = n(630388),
+    o = n(95015),
+    s = n(442837),
+    l = n(570140),
+    c = n(2572),
+    u = n(16609),
+    d = n(864106),
+    f = n(579407),
+    _ = n(710845),
+    p = n(131016),
+    h = n(69882),
+    m = n(134049),
+    g = n(160404),
     E = n(823379),
     b = n(625137),
     y = n(709054),
@@ -82,7 +82,7 @@ function R(e, t) {
         e
     );
 }
-let P = new f.Z("GuildMemberStore"),
+let P = new _.Z("GuildMemberStore"),
     D = {},
     w = {},
     L = {},
@@ -98,9 +98,9 @@ let P = new f.Z("GuildMemberStore"),
         removed: [],
     };
 function F(e, t) {
-    if (null == t.communicationDisabledUntil || !(0, p.b)(t)) return V(e, t.userId);
+    if (null == t.communicationDisabledUntil || !(0, h.b)(t)) return V(e, t.userId);
     let n = W(e, t.userId);
-    M[n] !== t.communicationDisabledUntil && (0, p.b)(t) && ((M[n] = t.communicationDisabledUntil), H(n));
+    M[n] !== t.communicationDisabledUntil && (0, h.b)(t) && ((M[n] = t.communicationDisabledUntil), H(n));
 }
 function V(e, t) {
     if (null != t) {
@@ -116,7 +116,7 @@ function H(e) {
     (j += 1), (G[e] = j);
 }
 function Y(e) {
-    K(e) === O.default.getId() && (0, h.l)(z(e)), delete M[e];
+    K(e) === O.default.getId() && (0, m.l)(z(e)), delete M[e];
 }
 function W(e, t) {
     let n = [];
@@ -163,54 +163,54 @@ function X(e) {
             userId: r,
             nick: i,
             guildId: a,
-            avatar: o,
-            avatarDecoration: s,
-            guildRoles: l,
-            roles: c,
-            premiumSince: u,
-            isPending: d,
-            joinedAt: f,
-            communicationDisabledUntil: _,
-            unusualDMActivityUntil: p,
-            fullProfileLoadedTimestamp: h,
+            avatar: s,
+            avatarDecoration: l,
+            guildRoles: c,
+            roles: u,
+            premiumSince: d,
+            isPending: f,
+            joinedAt: _,
+            communicationDisabledUntil: p,
+            unusualDMActivityUntil: h,
+            fullProfileLoadedTimestamp: m,
             flags: E,
             collectibles: b,
             displayNameStyles: v,
         } = e,
-        { colorString: I, colorStrings: T, colorRoleId: A, iconRoleId: N, hoistRoleId: P, highestRoleId: w } = q(l, c),
+        { colorString: I, colorStrings: T, colorRoleId: A, iconRoleId: N, hoistRoleId: P, highestRoleId: w } = q(c, u),
         x = {
             userId: r,
             nick: i,
             guildId: a,
-            avatar: o,
-            avatarDecoration: s,
-            roles: c,
+            avatar: s,
+            avatarDecoration: l,
+            roles: u,
             colorString: I,
             colorStrings: T,
             colorRoleId: A,
             iconRoleId: N,
             hoistRoleId: P,
             highestRoleId: w,
-            premiumSince: u,
-            isPending: d,
-            joinedAt: f,
-            communicationDisabledUntil: _,
-            unusualDMActivityUntil: p,
-            fullProfileLoadedTimestamp: h,
+            premiumSince: d,
+            isPending: f,
+            joinedAt: _,
+            communicationDisabledUntil: p,
+            unusualDMActivityUntil: h,
+            fullProfileLoadedTimestamp: m,
             flags: E,
             collectibles: b,
             displayNameStyles: v,
         };
     if (
-        ((0, g.yE)(null != (t = x.flags) ? t : 0, S.q.IS_GUEST) &&
-            (x.flags = (0, g.pj)(null != (n = x.flags) ? n : 0, S.q.BYPASSES_VERIFICATION)),
+        ((0, o.yE)(null != (t = x.flags) ? t : 0, S.q.IS_GUEST) &&
+            (x.flags = (0, o.pj)(null != (n = x.flags) ? n : 0, S.q.BYPASSES_VERIFICATION)),
         null == D[a])
     )
         return x;
     if (r === O.default.getId())
-        if (m.Z.isViewingRoles(a) || m.Z.isFullServerPreview(a)) {
-            let e = m.Z.getViewingRoles(a);
-            L[a] = R(C({}, x, m.Z.getMemberOptions(a)), { roles: null != e ? y.default.keys(e) : [] });
+        if (g.Z.isViewingRoles(a) || g.Z.isFullServerPreview(a)) {
+            let e = g.Z.getViewingRoles(a);
+            L[a] = R(C({}, x, g.Z.getMemberOptions(a)), { roles: null != e ? y.default.keys(e) : [] });
         } else null != L[a] && delete L[a];
     return x;
 }
@@ -280,7 +280,7 @@ function ea(e) {
             roles: s,
             premiumSince: l,
             isPending: c,
-            joinedAt: d,
+            joinedAt: u,
             communicationDisabledUntil: f,
             unusualDMActivityUntil: _,
             flags: p,
@@ -296,12 +296,12 @@ function ea(e) {
         nick: i,
         guildId: n,
         avatar: a,
-        avatarDecoration: (0, u.FG)(o),
+        avatarDecoration: (0, d.FG)(o),
         guildRoles: I.Z.getUnsafeMutableRoles(E.id),
         roles: s,
         premiumSince: l,
         isPending: c,
-        joinedAt: d,
+        joinedAt: u,
         communicationDisabledUntil: f,
         unusualDMActivityUntil: _,
         fullProfileLoadedTimestamp: null == (t = g[r.id]) ? void 0 : t.fullProfileLoadedTimestamp,
@@ -356,8 +356,8 @@ function el(e) {
         unusualDMActivityUntil: t.unusual_dm_activity_until,
         flags: t.flags,
         fullProfileLoadedTimestamp: Date.now(),
-        collectibles: (0, d.Xm)(t.collectibles),
-        displayNameStyles: (0, _.bN)(t.display_name_styles),
+        collectibles: (0, f.Xm)(t.collectibles),
+        displayNameStyles: (0, p.bN)(t.display_name_styles),
     })),
         F(n, r[t.user.id]);
 }
@@ -426,8 +426,8 @@ function eh(e, t) {
                   fullProfileLoadedTimestamp: null == a ? void 0 : a.fullProfileLoadedTimestamp,
                   unusualDMActivityUntil:
                       null != (i = t.unusual_dm_activity_until) ? i : null == a ? void 0 : a.unusualDMActivityUntil,
-                  collectibles: (0, d.Xm)(t.collectibles),
-                  displayNameStyles: (0, _.bN)(t.display_name_styles),
+                  collectibles: (0, f.Xm)(t.collectibles),
+                  displayNameStyles: (0, p.bN)(t.display_name_styles),
               })),
                   F(e, n[t.user.id]);
           }),
@@ -435,7 +435,7 @@ function eh(e, t) {
           !0);
 }
 function em(e) {
-    return (0, u.FG)(e.avatar_decoration_data);
+    return (0, d.FG)(e.avatar_decoration_data);
 }
 function eg(e) {
     let { guildId: t, members: n } = e;
@@ -467,7 +467,7 @@ function eO(e) {
 function ev(e, t) {
     return eI({
         id: e,
-        members: t.filter(l.Z).map((e) => e.member),
+        members: t.filter(c.Z).map((e) => e.member),
     });
 }
 function eI(e) {
@@ -496,8 +496,8 @@ function eI(e) {
                 flags: a.flags,
                 unusualDMActivityUntil:
                     null != (i = a.unusual_dm_activity_until) ? i : null == s ? void 0 : s.unusualDMActivityUntil,
-                collectibles: (0, d.Xm)(a.collectibles),
-                displayNameStyles: (0, _.bN)(a.display_name_styles),
+                collectibles: (0, f.Xm)(a.collectibles),
+                displayNameStyles: (0, p.bN)(a.display_name_styles),
             });
         (r[o] = l), F(t, l);
     }
@@ -662,16 +662,16 @@ function eM(e) {
 }
 function ek(e) {
     let { location: t, participants: n } = e,
-        r = (0, c.j)(t);
+        r = (0, u.j)(t);
     return null != r && ev(r, n);
 }
 function ej(e) {
     let t = v.Z.getChannel(e.channelId);
     return eR(e.resolved, null == t ? void 0 : t.guild_id);
 }
-class eU extends (r = o.ZP.Store) {
+class eU extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(O.default, v.Z, I.Z, T.Z, m.Z);
+        this.waitFor(O.default, v.Z, I.Z, T.Z, g.Z);
     }
     getMutableAllGuildsAndMembers() {
         return D;
@@ -718,7 +718,7 @@ class eU extends (r = o.ZP.Store) {
             n = D[e];
         if (null == n || null == n[t]) return !1;
         let r = n[t].flags;
-        return null != r && (0, g.yE)(r, S.q.IS_GUEST);
+        return null != r && (0, o.yE)(r, S.q.IS_GUEST);
     }
     getMemberIds(e) {
         if (null == e) return [];
@@ -736,7 +736,7 @@ class eU extends (r = o.ZP.Store) {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        if (null != n && t === O.default.getId() && (m.Z.isViewingRoles(e) || m.Z.isFullServerPreview(e))) {
+        if (null != n && t === O.default.getId() && (g.Z.isViewingRoles(e) || g.Z.isFullServerPreview(e))) {
             var r;
             return null != (r = L[e]) ? r : n;
         }
@@ -783,7 +783,7 @@ class eU extends (r = o.ZP.Store) {
     }
 }
 A(eU, "displayName", "GuildMemberStore");
-let eG = new eU(s.Z, {
+let eG = new eU(l.Z, {
     CONNECTION_OPEN: Q,
     CONNECTION_OPEN_SUPPLEMENTAL: J,
     OVERLAY_INITIALIZE: ee,

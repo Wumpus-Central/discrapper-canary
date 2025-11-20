@@ -1,14 +1,14 @@
 n.d(e, { Z: () => O });
 var r = n(54381);
 n(473749);
-var i = n(442837),
-    l = n(755721),
-    a = n(481060),
-    c = n(58642),
-    o = n(283595),
-    u = n(417363),
-    s = n(626135),
-    b = n(630388),
+var i = n(95015),
+    l = n(442837),
+    a = n(755721),
+    c = n(481060),
+    o = n(58642),
+    u = n(283595),
+    s = n(417363),
+    b = n(626135),
     d = n(981631),
     f = n(388032);
 function p(t) {
@@ -37,18 +37,18 @@ function p(t) {
     return t;
 }
 function O(t, e) {
-    let n = (0, i.e7)([u.Z], () => u.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
-        O = (0, i.e7)([o.Z], () => !o.Z.hasRemovedLibraryApplicationThisSession);
+    let n = (0, l.e7)([s.Z], () => s.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        O = (0, l.e7)([u.Z], () => !u.Z.hasRemovedLibraryApplicationThisSession);
     if (n && !t.isHidden()) return null;
     function y() {
-        let e = (0, b.x9)(t.getFlags(), d.eHb.HIDDEN);
-        c.h(t.id, t.branchId, e),
-            s.default.track(
+        let e = (0, i.x9)(t.getFlags(), d.eHb.HIDDEN);
+        o.h(t.id, t.branchId, e),
+            b.default.track(
                 d.rMx.APPLICATION_SETTINGS_UPDATED,
-                p({ hidden_enabled: (0, b.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData()),
+                p({ hidden_enabled: (0, i.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData()),
             );
     }
-    return (0, r.jsx)(a.sNh, {
+    return (0, r.jsx)(c.sNh, {
         id: "in-library",
         label: t.isHidden() ? f.intl.string(f.t["0dnEUJ"]) : f.intl.string(f.t.TuJXLx),
         action: function () {
@@ -56,23 +56,23 @@ function O(t, e) {
                 null != e &&
                 (t.isHidden() || !O
                     ? y()
-                    : (0, a.h7j)((t) => {
+                    : (0, c.h7j)((t) => {
                           var n, i;
                           return (0, r.jsx)(
-                              a.ConfirmModal,
+                              c.ConfirmModal,
                               ((n = p(
                                   {
                                       header: f.intl.string(f.t.oB7isi),
                                       confirmText: f.intl.string(f.t.OWjIiV),
                                       cancelText: f.intl.string(f.t["ETE/oC"]),
                                       onConfirm: () => y(),
-                                      confirmButtonColor: l.zx.Colors.BRAND,
+                                      confirmButtonColor: a.zx.Colors.BRAND,
                                   },
                                   t,
                               )),
                               (i = i =
                                   {
-                                      children: (0, r.jsx)(a.Text, {
+                                      children: (0, r.jsx)(c.Text, {
                                           variant: "text-md/normal",
                                           children: f.intl.format(f.t.HXfjKt, { name: e.name }),
                                       }),

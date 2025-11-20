@@ -4,11 +4,11 @@ n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(243814),
-    s = n(993365),
-    l = n(481060),
-    c = n(162685),
-    u = n(979200),
-    d = n(630388),
+    s = n(95015),
+    l = n(993365),
+    c = n(481060),
+    u = n(162685),
+    d = n(979200),
     f = n(709054),
     _ = n(941532),
     p = n(713938),
@@ -17,10 +17,10 @@ var i = n(120356),
     g = n(852303);
 let E = (e) => {
     switch (e) {
-        case u.ZC.IP_LOCATION:
-            return l.enf;
-        case u.ZC.DISPLAYS_ADVERTISEMENTS:
-            return l.FLu;
+        case d.ZC.IP_LOCATION:
+            return c.enf;
+        case d.ZC.DISPLAYS_ADVERTISEMENTS:
+            return c.FLu;
         default:
             return null;
     }
@@ -28,10 +28,10 @@ let E = (e) => {
 function b(e) {
     var t;
     let n,
-        { application: i, scopes: s, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: I } = e,
+        { application: i, scopes: l, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: I } = e,
         T = new Date(f.default.extractTimestamp(i.id)),
-        S = (0, p.W3)(s),
-        A = (0, d.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
+        S = (0, p.W3)(l),
+        A = (0, s.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
     if (null != b && !A && !v)
         try {
             let e = new URL(b);
@@ -39,37 +39,37 @@ function b(e) {
         } catch (e) {
             n = null;
         }
-    let C = c.w.useExperiment({ location: "oauth2_authorize" });
+    let C = u.w.useExperiment({ location: "oauth2_authorize" });
     return (0, r.jsxs)("div", {
         className: a()(g.applicationDetails, { [g.noPadding]: C.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
-                      icon: l.xPt,
+                      icon: c.xPt,
                       text: m.intl.format(m.t["5k5OKD"], { origin: n }),
                   })
                 : null,
             (0, r.jsx)(y, {
-                icon: l.mBM,
+                icon: c.mBM,
                 text: (0, _.i)(i),
             }),
             (0, r.jsx)(y, {
-                icon: l.T39,
+                icon: c.T39,
                 text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: T }),
             }),
-            s.includes(o.x.BOT) && null != O
+            l.includes(o.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
-                      icon: l.wGt,
+                      icon: c.wGt,
                       text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: O }),
                   })
                 : null,
             (0, r.jsx)(y, {
-                icon: l.b7C,
+                icon: c.b7C,
                 text: S,
             }),
             null != I
                 ? I.map((e) => {
-                      let t = (0, u.PM)(e),
+                      let t = (0, d.PM)(e),
                           n = E(e);
                       return null != n && null != t
                           ? (0, r.jsx)(y, {
@@ -91,7 +91,7 @@ function y(e) {
                 className: g.entryIcon,
                 color: "currentColor",
             }),
-            (0, r.jsx)(s.x, {
+            (0, r.jsx)(l.x, {
                 variant: "text-xs/normal",
                 className: g.entryInner,
                 children: n,

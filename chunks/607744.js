@@ -1,9 +1,9 @@
 n.d(t, { Z: () => R }), n(388685), n(997841), n(539854);
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(601964),
-    s = n(630388),
+    i = n(95015),
+    a = n(442837),
+    o = n(570140),
+    s = n(601964),
     l = n(709054),
     c = n(271383),
     u = n(485386),
@@ -39,18 +39,18 @@ function b(e) {
     y(e), g.add(e);
     let n = d.Z.getGuild(e),
         r = f.default.getCurrentUser();
-    if (null == n || n.verificationLevel === _.sFg.NONE || null == r || (0, o.eM)(n, r) || r.isPhoneVerified()) return;
-    let i = c.ZP.getMember(n.id, r.id);
-    if (null != i) {
+    if (null == n || n.verificationLevel === _.sFg.NONE || null == r || (0, s.eM)(n, r) || r.isPhoneVerified()) return;
+    let a = c.ZP.getMember(n.id, r.id);
+    if (null != a) {
         var l;
-        if ((0, s.yE)(null != (l = i.flags) ? l : 0, p.q.BYPASSES_VERIFICATION)) return;
+        if ((0, i.yE)(null != (l = a.flags) ? l : 0, p.q.BYPASSES_VERIFICATION)) return;
         let e = new Set();
-        for (let t of i.roles) {
+        for (let t of a.roles) {
             let r = u.Z.getRole(n.id, t);
             null == r || r.managed || e.add(t);
         }
         let t = new Date("2022-12-02 00:00:00"),
-            r = null == i.joinedAt || new Date(i.joinedAt) < t;
+            r = null == a.joinedAt || new Date(a.joinedAt) < t;
         if (!(n.features.has(_.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) && !r) && e.size > 0) return;
     }
     let h = +r.createdAt + 60000 * _.YeM.ACCOUNT_AGE - Date.now(),
@@ -72,7 +72,7 @@ function b(e) {
         S.length > 0 &&
             (t = setTimeout(
                 () =>
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: "GUILD_VERIFICATION_CHECK",
                         guildId: e,
                     }),
@@ -120,7 +120,7 @@ function C(e) {
     let { guildId: t } = e;
     b(t);
 }
-class N extends (r = i.ZP.Store) {
+class N extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.ZP, u.Z, d.Z, f.default);
     }
@@ -133,7 +133,7 @@ class N extends (r = i.ZP.Store) {
     }
 }
 h(N, "displayName", "GuildVerificationStore");
-let R = new N(a.Z, {
+let R = new N(o.Z, {
     CONNECTION_OPEN: O,
     CONNECTION_CLOSED: v,
     CURRENT_USER_UPDATE: A,

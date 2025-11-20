@@ -1,10 +1,10 @@
 n.d(t, { Z: () => _ }), n(997841);
 var r = n(54381),
-    i = n(481060),
-    a = n(783097),
-    o = n(594174),
-    s = n(572004),
-    l = n(630388),
+    i = n(95015),
+    a = n(481060),
+    o = n(783097),
+    s = n(594174),
+    l = n(572004),
     c = n(311819),
     u = n(981631);
 function d(e, t, n) {
@@ -38,29 +38,29 @@ function f(e) {
 }
 function _(e) {
     let { application: t, label: n, onSuccess: d, showIconFirst: _, focusedClassName: p } = e;
-    if (__OVERLAY__ || !s.wS || null == t) return null;
-    let h = o.default.getCurrentUser(),
-        m = (0, a.Ow)(t);
+    if (__OVERLAY__ || !l.wS || null == t) return null;
+    let h = s.default.getCurrentUser(),
+        m = (0, o.Ow)(t);
     function g() {
         var e;
         if (null == t) return;
-        let n = (0, l.yE)(null != (e = t.flags) ? e : 0, u.udG.EMBEDDED)
+        let n = (0, i.yE)(null != (e = t.flags) ? e : 0, u.udG.EMBEDDED)
             ? (0, c.H)({
                   applicationId: t.id,
                   referrerId: null == h ? void 0 : h.id,
               })
             : (0, c.J)(f({ id: t.id }, m));
-        null != n && (0, s.JG)(n, d);
+        null != n && (0, l.JG)(n, d);
     }
     let E = "copy-app-link-".concat(t.id);
     return (0, r.jsx)(
-        i.sNh,
+        a.sNh,
         {
             id: E,
             label: n,
             action: g,
-            icon: _ ? void 0 : i.xPt,
-            iconLeft: _ ? i.xPt : void 0,
+            icon: _ ? void 0 : a.xPt,
+            iconLeft: _ ? a.xPt : void 0,
             focusedClassName: p,
         },
         E,

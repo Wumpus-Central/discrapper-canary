@@ -14,14 +14,14 @@ n.d(t, { Z: () => N }),
 var r = n(392711),
     i = n.n(r),
     a = n(772848),
-    o = n(147913),
-    s = n(131704),
-    l = n(598077),
-    c = n(592125),
-    u = n(271383),
-    d = n(699516),
-    f = n(594174),
-    _ = n(630388),
+    o = n(95015),
+    s = n(147913),
+    l = n(131704),
+    c = n(598077),
+    u = n(592125),
+    d = n(271383),
+    f = n(699516),
+    _ = n(594174),
     p = n(823379),
     h = n(960048),
     m = n(709054),
@@ -43,7 +43,7 @@ function b(e, t, n) {
 let y = 10;
 function O(e) {
     var t, n;
-    if (null == e || d.Z.isBlockedOrIgnored(e.id)) return null;
+    if (null == e || f.Z.isBlockedOrIgnored(e.id)) return null;
     let r = {
         id: e.id,
         username: "0" !== e.discriminator ? "".concat(e.username, "#").concat(e.discriminator) : e.username,
@@ -52,16 +52,16 @@ function O(e) {
     return (
         null != g.ZP.getGlobalName(e) && (r.globalName = e.globalName),
         e.bot && (r.isBot = !0),
-        e instanceof l.Z
+        e instanceof c.Z
             ? (r.isProvisional = e.isProvisional)
             : "flags" in e
-              ? (r.isProvisional = _.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT))
+              ? (r.isProvisional = o.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT))
               : (r.isProvisional = !1),
-        d.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = d.Z.getNickname(e.id))),
-        e instanceof l.Z
+        f.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = f.Z.getNickname(e.id))),
+        e instanceof c.Z
             ? (r.isStaff = e.isStaff())
             : "flags" in e
-              ? (r.isStaff = _.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF))
+              ? (r.isStaff = o.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF))
               : (r.isStaff = !1),
         r
     );
@@ -71,11 +71,11 @@ function v(e, t, n) {
 }
 function I(e) {
     let t = [];
-    if (null == e || !(0, s.hv)(e.type)) return t;
+    if (null == e || !(0, l.hv)(e.type)) return t;
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
-            let r = O(f.default.getUser(n));
+            let r = O(_.default.getUser(n));
             null != e && v(r, e.id), t.push(r);
         }),
         t
@@ -94,7 +94,7 @@ function T(e, t) {
 function S(e) {
     var t;
     let { message: n, nicknameContextId: r } = e,
-        i = c.Z.getChannel(n.channel_id),
+        i = u.Z.getChannel(n.channel_id),
         a =
             null != r
                 ? r
@@ -200,7 +200,7 @@ class A {
             this.subscribe();
     }
 }
-class C extends o.Z {
+class C extends s.Z {
     _initialize() {
         this.rebootWebworker();
     }
@@ -305,14 +305,14 @@ class C extends o.Z {
             }),
             b(this, "_handleConnectionOpen", () => {
                 setTimeout(() => {
-                    let e = f.default.getCurrentUser();
+                    let e = _.default.getCurrentUser();
                     if (null == e) return;
                     let t = O(e),
                         n = { [t.id]: t };
-                    Object.values(f.default.getUsers()).forEach((e) => {
+                    Object.values(_.default.getUsers()).forEach((e) => {
                         n[e.id] = O(e);
                     });
-                    let r = u.ZP.getMutableAllGuildsAndMembers();
+                    let r = d.ZP.getMutableAllGuildsAndMembers();
                     for (let e in r)
                         for (let t in r[e]) {
                             var i, a;
@@ -391,28 +391,28 @@ class C extends o.Z {
                 this.updateUsers([t], "relationship_add");
             }),
             b(this, "_handleRelationshipUpdate", (e) => {
-                let t = O(f.default.getUser(e.relationship.id));
+                let t = O(_.default.getUser(e.relationship.id));
                 this.updateUsers([t], "relationship_update");
             }),
             b(this, "_handleRelationshipRemove", (e) => {
-                let t = O(f.default.getUser(e.relationship.id));
+                let t = O(_.default.getUser(e.relationship.id));
                 this.updateUsers([t], "relationship_remove");
             }),
             b(this, "_handleDMCreate", (e) => {
                 let {
                         channel: { id: t },
                     } = e,
-                    n = I(c.Z.getChannel(t));
+                    n = I(u.Z.getChannel(t));
                 if (0 === n.length) return;
-                let r = O(f.default.getCurrentUser());
+                let r = O(_.default.getCurrentUser());
                 v(r, t), n.push(r), this.updateUsers(n, "dm_create");
             }),
             b(this, "_handleDMUpdates", (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
-                    let t = I(c.Z.getChannel(e.id));
+                    let t = I(u.Z.getChannel(e.id));
                     if (0 === t.length) continue;
-                    let n = O(f.default.getCurrentUser());
+                    let n = O(_.default.getCurrentUser());
                     v(n, e.id), t.push(n), this.updateUsers(t, "dm_updates");
                 }
             }),
