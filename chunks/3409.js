@@ -403,9 +403,7 @@ function eO(e) {
             let tN = (e, t) => {
                     switch (e) {
                         case J.He.CARD:
-                            ei
-                                ? eW(R.h8.AWAITING_BROWSER_CHECKOUT)
-                                : (eZ(eS), eW(ev ? R.h8.PAYMENT_ELEMENT : R.h8.CREDIT_CARD_INFORMATION));
+                            ei ? eW(R.h8.AWAITING_BROWSER_CHECKOUT) : (eZ(eS), eW(R.h8.CREDIT_CARD_INFORMATION));
                             break;
                         case J.He.PAYPAL:
                             eZ(eA), eW(R.h8.PAYPAL_INFORMATION);
