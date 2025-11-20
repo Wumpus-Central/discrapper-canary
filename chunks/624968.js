@@ -12,7 +12,7 @@ let f = 200,
     _ = (e) => "var(--space-".concat(e, ")"),
     p = (e) => null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal"),
     h = (e) => {
-        let { children: t, gap: n = 12, edgeFade: a = "xl" } = e,
+        let { children: t, gap: n = 8, edgeFade: a = "xl" } = e,
             h = i.useRef(0),
             m = i.useRef(0),
             g = i.useRef(0),
@@ -155,10 +155,11 @@ let f = 200,
                             }),
                         ],
                     }),
-                (0, r.jsx)("div", {
+                (0, r.jsx)(l.Kqy, {
+                    direction: "horizontal",
+                    gap: n,
                     ref: D,
                     className: d.children,
-                    style: { gap: n },
                     tabIndex: 0,
                     onFocus: (e) => {
                         let t = D.current;

@@ -78,7 +78,7 @@ let u = [
     ],
     d = () => {
         let [e, t] = i.useState(15),
-            [n, d] = i.useState(12),
+            [n, d] = i.useState(8),
             [f, _] = i.useState("xl"),
             p = i.useMemo(
                 () =>
@@ -115,13 +115,10 @@ let u = [
                     }),
                 }),
                 (0, r.jsx)(l.BZ, {
-                    children: (0, r.jsx)(o.oil, {
-                        type: "number",
-                        min: 0,
-                        value: n.toString(),
-                        onChange: (e) => {
-                            d(+e);
-                        },
+                    children: (0, r.jsx)(o.q4e, {
+                        value: n,
+                        options: u,
+                        onChange: (e) => d(e),
                         label: "Children Gap",
                     }),
                 }),
