@@ -85,7 +85,7 @@ function p(e) {
               storefront: n,
               loading: !1,
               error: !1,
-              fetchedAt: Date.now(),
+              fetchedAt: null,
           }),
         (d = s({}, d));
 }

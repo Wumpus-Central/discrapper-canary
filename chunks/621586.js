@@ -42,7 +42,7 @@ function y(e) {
                     children: [
                         (0, i.jsx)(a.X6q, {
                             className: g.title,
-                            variant: "display-md",
+                            variant: "text-lg/bold",
                             color: "text-primary",
                             children: m.intl.string(m.t.xLP3bi),
                         }),

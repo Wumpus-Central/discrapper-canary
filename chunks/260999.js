@@ -6,4 +6,7 @@ e.exports = {
     titleWrapper: "titleWrapper__8dd9e",
     pageTitleContainer: "pageTitleContainer__8dd9e",
     selectedPageIndicator: "selectedPageIndicator__8dd9e",
+    alignedRightContent: "alignedRightContent__8dd9e",
+    iconButton: "iconButton__8dd9e",
+    wishlistButton: "wishlistButton__8dd9e",
 };

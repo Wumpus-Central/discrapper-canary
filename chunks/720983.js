@@ -1,64 +1,103 @@
-l.d(n, { Z: () => p });
+l.d(n, { Z: () => _ });
 var t = l(54381),
-    i = l(120356),
-    a = l.n(i),
+    i = l(473749),
+    a = l(120356),
+    o = l.n(a),
     r = l(793030),
-    d = l(410030),
-    o = l(984370),
-    s = l(73346),
-    c = l(705338),
-    u = l(260999);
-function p(e) {
-    let { guildId: n, storefront: l, selectedPageIndex: i } = e,
-        p = (0, r.wjy)((0, d.ZP)());
+    d = l(442837),
+    s = l(410030),
+    c = l(984370),
+    u = l(567400),
+    p = l(892001),
+    g = l(594174),
+    I = l(73346),
+    x = l(705338),
+    h = l(228168),
+    m = l(388032),
+    f = l(260999);
+function v(e) {
+    let { icon: n, onClick: l, ariaLabel: i, className: a } = e;
+    return (0, t.jsx)(r.P3F, {
+        className: o()(f.iconButton, a),
+        onClick: l,
+        "aria-label": i,
+        children: n,
+    });
+}
+function _(e) {
+    let { guildId: n, storefront: l, selectedPageIndex: a } = e,
+        _ = (0, r.wjy)((0, s.ZP)()),
+        C = (0, u.Y)({ location: "SocialLayerStorefrontHeader" }),
+        j = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
+        k = i.useCallback(() => {
+            (null == j ? void 0 : j.id) != null &&
+                (0, p.openUserProfileModal)({
+                    userId: j.id,
+                    section: h.oh.WISHLIST,
+                    showGuildProfile: !1,
+                });
+        }, [j]);
     if (null == l) return null;
-    let g = null != l.logoAssetId ? (0, s._W)(l.applicationId, l.logoAssetId, 75) : null,
-        I = null != l.lightThemeLogoAssetId ? (0, s._W)(l.applicationId, l.lightThemeLogoAssetId, 75) : null,
-        x = null;
+    let b = null != l.logoAssetId ? (0, I._W)(l.applicationId, l.logoAssetId, 75) : null,
+        Z = null != l.lightThemeLogoAssetId ? (0, I._W)(l.applicationId, l.lightThemeLogoAssetId, 75) : null,
+        N = null;
     return (
-        (x = p ? (null != g ? g : I) : null != I ? I : g),
-        (0, t.jsxs)(o.Z, {
+        (N = _ ? (null != b ? b : Z) : null != Z ? Z : b),
+        (0, t.jsxs)(c.Z, {
             disableDoubleClick: !0,
-            className: u.headerContainer,
+            className: f.headerContainer,
             children: [
                 (0, t.jsxs)(r.P3F, {
                     onClick: () => {
-                        (0, c.Z)({
+                        (0, x.Z)({
                             guildId: n,
                             pageIndex: 0,
                         });
                     },
-                    className: u.titleContainer,
+                    className: f.titleContainer,
                     children: [
-                        null != x &&
+                        null != N &&
                             (0, t.jsx)("img", {
-                                className: u.logo,
-                                src: x,
+                                className: f.logo,
+                                src: N,
                                 alt: l.title,
                             }),
-                        (0, t.jsx)(o.Z.Title, { children: l.title }),
+                        (0, t.jsx)(c.Z.Title, { children: l.title }),
                     ],
                 }),
                 (0, t.jsx)("div", {
-                    className: u.titles,
+                    className: f.titles,
                     children: l.pages.map((e, l) =>
                         (0, t.jsx)(
-                            o.Z.Title,
+                            c.Z.Title,
                             {
                                 onClick: () => {
-                                    (0, c.Z)({
+                                    (0, x.Z)({
                                         guildId: n,
                                         pageIndex: l,
                                     });
                                 },
-                                wrapperClassName: u.titleWrapper,
-                                className: a()(u.pageTitleContainer, { [u.selectedPageIndicator]: i === l }),
+                                wrapperClassName: f.titleWrapper,
+                                className: o()(f.pageTitleContainer, { [f.selectedPageIndicator]: a === l }),
                                 children: e.title,
                             },
                             "".concat(e.title, "-").concat(l),
                         ),
                     ),
                 }),
+                C &&
+                    (0, t.jsx)("div", {
+                        className: f.alignedRightContent,
+                        children: (0, t.jsx)(v, {
+                            icon: (0, t.jsx)(r.h_8, {
+                                size: "xs",
+                                color: "currentColor",
+                            }),
+                            onClick: k,
+                            ariaLabel: m.intl.string(m.t["7lZ31J"]),
+                            className: f.wishlistButton,
+                        }),
+                    }),
             ],
         })
     );
