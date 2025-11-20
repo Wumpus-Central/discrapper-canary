@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => es,
-    Z: () => eu,
+    O: () => el,
+    Z: () => ed,
 }),
     n(388685),
     n(856094),
@@ -108,10 +108,11 @@ function $(e, t) {
 let ee = 16,
     et = 48,
     en = 32,
-    er = 32 + I.Kn,
-    ei = 150,
-    ea = "3",
-    eo = {
+    er = 8,
+    ei = 32 + I.Kn - er,
+    ea = 150,
+    eo = "3",
+    es = {
         [M.bg.SEARCH]: _.Z.SOUNDBOARD_SEARCH_RESULTS_SECTION,
         [M.bg.DEFAULTS]: _.Z.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
         [M.bg.GUILD]: _.Z.SOUNDBOARD_GUILD_SOUNDS_SECTION,
@@ -119,10 +120,10 @@ let ee = 16,
         [M.bg.RECENTLY_HEARD]: _.Z.SOUNDBOARD_RECENTLY_HEARD_SECTION,
         [M.bg.FREQUENTLY_USED]: _.Z.SOUNDBOARD_FREQUENTLY_USED_SECTION,
     };
-function es(e, t, n) {
+function el(e, t, n) {
     return (null == n && e.type === M.bg.GUILD && !t) || (e.type === M.bg.GUILD && e.guild.id !== n && !t);
 }
-function el(e) {
+function ec(e) {
     let {
         categoryInfo: t,
         collapsed: n,
@@ -227,10 +228,10 @@ function el(e) {
         ],
     });
 }
-function ec() {
+function eu() {
     return (0, r.jsx)(d.Z, { message: z.intl.string(z.t.bgDdNK) });
 }
-function eu(e) {
+function ed(e) {
     let {
             guildId: t,
             channel: a,
@@ -241,7 +242,7 @@ function eu(e) {
             suppressPlaySound: X = !1,
             shouldShowUpsell: J = !0,
             gridNotice: ee,
-            soundButtonOverlay: eu,
+            soundButtonOverlay: er,
             listPadding: ed,
             renderHeader: ef,
             defaultSoundsOnly: e_ = !1,
@@ -318,7 +319,7 @@ function eu(e) {
                 switch (e.item.type) {
                     case M.vB.SOUND:
                         var n;
-                        let r = null != (n = eo[null == e ? void 0 : e.category]) ? n : null,
+                        let r = null != (n = es[null == e ? void 0 : e.category]) ? n : null,
                             i = null == e ? void 0 : e.item.index;
                         return eX(
                             e.item.sound,
@@ -335,7 +336,7 @@ function eu(e) {
         eJ = i.useCallback(
             (e, n, i, s, l) => {
                 let c = eZ[i.sectionIndex],
-                    u = J && es(c.categoryInfo, eS, t) && eV;
+                    u = J && el(c.categoryInfo, eS, t) && eV;
                 return (0, r.jsx)(
                     "ul",
                     $(Q({}, n), {
@@ -361,7 +362,7 @@ function eu(e) {
                                     getItemProps: s,
                                     onSelectItem: eQ,
                                     onItemMouseEnter: l,
-                                    buttonOverlay: eu,
+                                    buttonOverlay: er,
                                     isNitroLocked: u,
                                     shouldShowUpsell: J,
                                     inExpressionPicker: ep,
@@ -373,21 +374,21 @@ function eu(e) {
                     "row-".concat(n["aria-rowindex"]),
                 );
             },
-            [eZ, J, eS, t, X, eQ, a, eK, ez, eC, eE, eu, eV, ep, em],
+            [eZ, J, eS, t, X, eQ, a, eK, ez, eC, eE, er, eV, ep, em],
         ),
         e$ = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !J) return !1;
                 let n = eZ[e],
                     r = eZ[e - 1],
-                    i = es(n.categoryInfo, eS, t),
-                    a = es(r.categoryInfo, eS, t);
+                    i = el(n.categoryInfo, eS, t),
+                    a = el(r.categoryInfo, eS, t);
                 return i && !a;
             },
             [eZ, J, eS],
         ),
         e0 = i.useCallback(() => {
-            let e = x.Z.getSoundById(ea);
+            let e = x.Z.getSoundById(eo);
             null != e && eI(e);
         }, []),
         e1 = i.useCallback(() => {
@@ -397,7 +398,7 @@ function eu(e) {
                 onClick: e0,
             });
         }, [e0]),
-        e3 = i.useCallback((e) => (e$(e, t) ? er : en), [t, e$]),
+        e3 = i.useCallback((e) => (e$(e, t) ? ei : en), [t, e$]),
         e2 = i.useCallback(
             (e) => {
                 let t = e === eZ.length - 1;
@@ -409,7 +410,7 @@ function eu(e) {
         e5 = i.useCallback(
             (e, n) => {
                 let i = "".concat(e.key),
-                    a = J && es(e.categoryInfo, eS, t),
+                    a = J && el(e.categoryInfo, eS, t),
                     o = e$(n, t),
                     s = eW.has(i),
                     l = () => {
@@ -424,7 +425,7 @@ function eu(e) {
                             eq(i);
                     };
                 return (0, r.jsx)(
-                    el,
+                    ec,
                     {
                         categoryInfo: e.categoryInfo,
                         toggleCollapsed: l,
@@ -549,8 +550,8 @@ function eu(e) {
         ti = "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png",
         ta = i.useCallback(() => {
             var e;
-            let t = x.Z.getSoundById(ea),
-                n = new Audio((0, j.Z)(ea));
+            let t = x.Z.getSoundById(eo),
+                n = new Audio((0, j.Z)(eo));
             null != eg.current && eg.current.pause(),
                 (eg.current = n),
                 (n.currentTime = 0),
@@ -616,9 +617,9 @@ function eu(e) {
                     sectionHeaderHeight: e3,
                     sectionFooterHeight: e2,
                     listPadding: eH,
-                    itemNodeWidth: ei,
+                    itemNodeWidth: ea,
                     gridNavigatorId: eP,
-                    renderEmptySearchState: ec,
+                    renderEmptySearchState: eu,
                     renderInspector: tn,
                     gridNotice: ee,
                     renderHeader: ef,
