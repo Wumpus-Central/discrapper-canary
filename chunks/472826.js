@@ -130,6 +130,7 @@ let v = new u.Z("PaymentElement.web.stories"),
                 elementsOptions: S,
                 isLoading: A,
                 setupError: R,
+                customPaymentMethodIdsToSourceTypes: P,
             } = (0, l.S)({
                 onSetupError: (e) => {
                     v.info("Stripe Payment Element options setup error: ", e);
@@ -173,10 +174,19 @@ let v = new u.Z("PaymentElement.web.stories"),
                                                         className: g.hidden,
                                                         children: (0, r.jsx)(
                                                             c.Q5,
-                                                            O(b({}, I), { step: d.h8.PAYMENT_ELEMENT }),
+                                                            O(b({}, I), {
+                                                                customPaymentMethodIdsToSourceTypes: P,
+                                                                step: d.h8.PAYMENT_ELEMENT,
+                                                            }),
                                                         ),
                                                     })
-                                                  : (0, r.jsx)(c.Q5, O(b({}, I), { step: d.h8.PAYMENT_ELEMENT })),
+                                                  : (0, r.jsx)(
+                                                        c.Q5,
+                                                        O(b({}, I), {
+                                                            customPaymentMethodIdsToSourceTypes: P,
+                                                            step: d.h8.PAYMENT_ELEMENT,
+                                                        }),
+                                                    ),
                                               ("joined-payment-address-elements" === E ||
                                                   "stripe-address-element" === E) &&
                                                   (0, r.jsx)(

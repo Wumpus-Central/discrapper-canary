@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => c,
     V: () => u,
+    z: () => c,
 });
 var r = n(544891),
     i = n(351402),
@@ -36,9 +36,7 @@ function l(e) {
     return e;
 }
 async function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = arguments.length > 1 ? arguments[1] : void 0,
-        n = null != t ? { regional_payment_element_source_types: t.regionalPaymentMethods } : void 0;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (
         await r.tn.post(
             l(
@@ -46,23 +44,36 @@ async function c() {
                     url: o.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                    body: n,
                 },
                 e,
             ),
         )
-    ).body.client_secret;
+    ).body;
 }
-let u = function () {
+let u = async function () {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r =
+        s =
             null != t
                 ? t
                 : (0, a.Q)({
                       ipCountryCode: null != (e = i.Z.ipCountryCode) ? e : "ALL",
                       location: "create_setup_intent_for_payment_elements",
-                  }).countryPaymentMethods;
-    return c(l({ failImmediatelyWhenRateLimited: !0 }, n), r.length > 0 ? { regionalPaymentMethods: r } : void 0);
+                  }).countryPaymentMethods,
+        c = s.length > 0 ? { regional_payment_source_types: s } : {};
+    return (
+        await r.tn.post(
+            l(
+                {
+                    url: o.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS,
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                    body: c,
+                    failImmediatelyWhenRateLimited: !0,
+                },
+                n,
+            ),
+        )
+    ).body;
 };
