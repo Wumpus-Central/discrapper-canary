@@ -166,9 +166,7 @@ let Z = (e) => {
                 }),
                     await (0, c.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("89311"), n.e("83123")]).then(
-                                n.bind(n, 644941),
-                            );
+                            let { default: e } = await n.e("89311").then(n.bind(n, 644941));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
