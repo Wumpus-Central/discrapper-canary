@@ -30,16 +30,14 @@ let h = a.Z.Millis.DAY,
     b = 12 * a.Z.Millis.HOUR;
 class y extends r.Z {
     _fetch(e) {
-        if ((0, f.c)({ location: _.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests) {
-            if (
-                ((0, o.xw)(),
-                !c.DL.getConfig({ location: _.dr.QUESTS_MANAGER }).enabled || "focused" === i.Z.getState())
-            ) {
-                let { enableNewRequestBehavior: t } = d.Z.getConfig({ location: "QuestFetchManager" });
-                if (t) return;
-                (0, o.w)(l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e);
-            }
-        }
+        if (
+            !(0, f.c)({ location: _.dr.QUESTS_MANAGER }) ||
+            s.Z.isFetchingCurrentQuests ||
+            ((0, o.xw)(), c.DL.getConfig({ location: _.dr.QUESTS_MANAGER }).enabled && "focused" !== i.Z.getState())
+        )
+            return;
+        let { enableNewRequestBehavior: t } = d.Z.getConfig({ location: "QuestFetchManager" });
+        t || (0, o.w)(l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     constructor(...e) {
         super(...e),

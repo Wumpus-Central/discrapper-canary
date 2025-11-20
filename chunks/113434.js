@@ -118,11 +118,9 @@ function Y() {
                 !t &&
                 !o
             ) {
-                if ((n(!0), (0, A.xw)(), !u.enabled || "focused" === _.Z.getState())) {
-                    let { enableNewRequestBehavior: t } = L.Z.getConfig({ location: "QuestHookUseQuests" });
-                    if (t) return;
-                    (0, A.w)(D.Ok.DESKTOP_ACCOUNT_PANEL_AREA, "use_quests_".concat(e.callerSource));
-                }
+                if ((n(!0), (0, A.xw)(), u.enabled && "focused" !== _.Z.getState())) return;
+                let { enableNewRequestBehavior: t } = L.Z.getConfig({ location: "QuestHookUseQuests" });
+                if (!t) (0, A.w)(D.Ok.DESKTOP_ACCOUNT_PANEL_AREA, "use_quests_".concat(e.callerSource));
             }
         }, [e.fetchPolicy, l, t, o, s, e.callerSource, u.enabled]),
         {
