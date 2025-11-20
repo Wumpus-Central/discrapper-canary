@@ -35,6 +35,7 @@ let _ = (e) => {
             variant: "expressive",
         },
         size: "md",
+        alignmentStrategy: "edge",
         align: "top",
         position: "right",
         caretConfig: { align: "start" },

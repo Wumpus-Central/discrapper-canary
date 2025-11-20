@@ -12,7 +12,7 @@ var r = n(54381),
     _ = n(562618),
     p = n(803866),
     h = n(231338),
-    m = n(681287),
+    m = n(298200),
     g = n(388032),
     E = n(37751);
 function b(e, t, n) {
@@ -99,17 +99,15 @@ function S(e) {
             previewUrl: A = S,
             disableMediaViewer: C = !1,
             action: N,
-            caretConfig: R = {
-                position: "bottom",
-                align: "center",
-            },
+            caretConfig: R = { align: "center" },
             badge: P,
             textLink: D,
             onWatchVideo: w,
             onRequestClose: L,
             popoverRef: x,
+            position: M,
         } = e,
-        M = I(e, [
+        k = I(e, [
             "title",
             "body",
             "assetUrl",
@@ -122,13 +120,14 @@ function S(e) {
             "onWatchVideo",
             "onRequestClose",
             "popoverRef",
+            "position",
         ]);
-    let { reducedMotion: k } = i.useContext(o.Sfi),
-        j = (0, a.C)(),
-        U = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : j,
-        G = i.useRef(null),
-        B = (0, o.j1L)(A),
-        Z = i.useCallback(
+    let { reducedMotion: j } = i.useContext(o.Sfi),
+        U = (0, a.C)(),
+        G = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : U,
+        B = i.useRef(null),
+        Z = (0, o.j1L)(A),
+        F = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: S,
@@ -142,18 +141,18 @@ function S(e) {
         );
     i.useEffect(() => {
         var e, t;
-        null != G.current &&
-            (!k.enabled && U ? null == (e = G.current) || e.play().catch(h.dG) : null == (t = G.current) || t.pause());
-    }, [U, k.enabled]);
-    let F = i.useCallback(() => {
-            null !== G.current && G.current.pause(), null == L || L();
-        }, [L]),
-        V = i.useCallback(() => {
-            null !== G.current && G.current.pause(), null == L || L();
+        null != B.current &&
+            (!j.enabled && G ? null == (e = B.current) || e.play().catch(h.dG) : null == (t = B.current) || t.pause());
+    }, [G, j.enabled]);
+    let V = i.useCallback(() => {
+            null !== B.current && B.current.pause(), null == L || L();
         }, [L]),
         H = i.useCallback(() => {
-            null !== G.current && G.current.pause();
-            let e = Z();
+            null !== B.current && B.current.pause(), null == L || L();
+        }, [L]),
+        Y = i.useCallback(() => {
+            null !== B.current && B.current.pause();
+            let e = F();
             (0, c.K)({
                 items: [e],
                 startingIndex: 0,
@@ -162,8 +161,8 @@ function S(e) {
             }),
                 null == L || L(),
                 null == w || w();
-        }, [Z, w, L]),
-        Y = B
+        }, [F, w, L]),
+        W = Z
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
                   src: A,
@@ -171,11 +170,11 @@ function S(e) {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.Z, {
-                          ref: G,
+                          ref: B,
                           src: A,
                           width: 232,
                           height: 131,
-                          autoPlay: !k.enabled && U,
+                          autoPlay: !j.enabled && G,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
@@ -189,24 +188,39 @@ function S(e) {
                                   playing: !1,
                                   size: "sm",
                                   "aria-label": g.intl.string(m.default.YpT3kk),
-                                  onClick: H,
+                                  onClick: Y,
                               }),
                           }),
                   ],
-              });
+              }),
+        K = y(
+            {
+                targetElementRef: k.targetElementRef,
+                shouldShow: k.shouldShow,
+                scrollBehavior: k.scrollBehavior,
+                position: M,
+                onRequestClose: V,
+                hasVideo: !0,
+                caretConfig: R,
+            },
+            "edge" === k.alignmentStrategy
+                ? {
+                      alignmentStrategy: "edge",
+                      align: k.align,
+                  }
+                : { alignmentStrategy: "trigger-center" },
+        );
     return (0, r.jsx)(
         u.m,
-        v(y({}, M), {
-            onRequestClose: F,
-            hasVideo: !0,
+        v(y({}, K), {
             children: (0, r.jsxs)("div", {
                 ref: x,
                 children: [
-                    (0, r.jsx)(p.N, { onClick: V }),
-                    (0, r.jsx)(f.$, { caretConfig: R }),
+                    (0, r.jsx)(p.N, { onClick: H }),
+                    (0, r.jsx)(f.$, {}),
                     (0, r.jsx)("div", {
                         className: E.assetContainer,
-                        children: Y,
+                        children: W,
                     }),
                     (0, r.jsx)(_.Y, {
                         title: O,

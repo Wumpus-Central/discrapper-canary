@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => O,
-    Z: () => v,
+    R: () => y,
+    Z: () => O,
 }),
     n(388685);
 var r = n(54381),
@@ -11,10 +11,9 @@ var r = n(54381),
     l = n(744399),
     c = n(966902),
     u = n(237872),
-    d = n(945909),
-    f = n(481060),
-    _ = n(420153);
-function p(e, t, n) {
+    d = n(481060),
+    f = n(420153);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +37,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +54,22 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +77,7 @@ function E(e, t) {
     }
     return i;
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,19 +86,19 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function y(e) {
+function b(e) {
     let { title: t, body: n } = e;
     return (0, r.jsxs)("div", {
-        className: _.header,
+        className: f.header,
         children: [
-            (0, r.jsx)(f.Heading, {
+            (0, r.jsx)(d.Heading, {
                 variant: "heading-md/semibold",
-                className: _.title,
+                className: f.title,
                 children: t,
             }),
             (0, r.jsx)("div", {
-                className: _.headerBody,
-                children: (0, r.jsx)(f.Text, {
+                className: f.headerBody,
+                children: (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     color: "none",
                     children: n,
@@ -108,26 +107,26 @@ function y(e) {
         ],
     });
 }
-function O(e) {
+function y(e) {
     var t,
         {
             title: n,
             body: a,
-            graphic: p,
-            size: m = "md",
-            actions: b,
-            gradientColor: O,
-            onRequestClose: v,
-            position: I,
-            caretConfig: T,
-            scrollBehavior: S,
-            showCloseButton: A = !0,
-            isCaretHoverable: C = !1,
-            shouldTrapFocus: N = !1,
-            returnRef: R,
-            onNudgeChange: P,
+            graphic: _,
+            size: h = "md",
+            actions: E,
+            gradientColor: y,
+            onRequestClose: O,
+            position: v,
+            caretConfig: I,
+            scrollBehavior: T,
+            showCloseButton: S = !0,
+            isCaretHoverable: A = !1,
+            shouldTrapFocus: C = !1,
+            returnRef: N,
+            onNudgeChange: R,
         } = e,
-        D = E(e, [
+        P = g(e, [
             "title",
             "body",
             "graphic",
@@ -144,80 +143,89 @@ function O(e) {
             "returnRef",
             "onNudgeChange",
         ]);
-    let [w, L] = i.useState(null != I ? I : "top");
+    let [D, w] = i.useState(null != v ? v : "top");
     i.useEffect(() => {
-        null != I && L(I);
-    }, [I]);
-    let x = i.useMemo(() => {
+        null != v && w(v);
+    }, [v]);
+    let L = i.useMemo(() => {
             var e;
             return {
-                position: (0, d.z)(w),
-                align: null != (e = null == T ? void 0 : T.align) ? e : "center",
-                customOffset: null == T ? void 0 : T.customOffset,
+                align: null != (e = null == I ? void 0 : I.align) ? e : "center",
+                customOffset: null == I ? void 0 : I.customOffset,
             };
-        }, [w, T]),
-        M = i.useCallback(() => {
-            null == v || v();
-        }, [v]),
-        k = i.useCallback(
+        }, [I]),
+        x = i.useCallback(() => {
+            null == O || O();
+        }, [O]),
+        M = i.useCallback(
             (e) => {
-                null == v || v(e);
+                null == O || O(e);
             },
-            [v],
+            [O],
         ),
-        j = i.useCallback((e) => {
-            L(e);
+        k = i.useCallback((e) => {
+            w(e);
         }, []),
-        U = C ? _.caretHoverable : void 0;
+        j = A ? f.caretHoverable : void 0,
+        U = p(
+            {
+                targetElementRef: P.targetElementRef,
+                shouldShow: P.shouldShow,
+                hasVideo: P.hasVideo,
+                position: D,
+                caretConfig: L,
+                onRequestClose: x,
+                gradientColor: y,
+                onPositionChange: k,
+                onNudgeChange: R,
+                scrollBehavior: T,
+                modal: C,
+                returnRef: N,
+                gradientOffsetBottom: 0,
+                experimental_ignoreModalClicks: !1,
+            },
+            "edge" === P.alignmentStrategy
+                ? {
+                      alignmentStrategy: "edge",
+                      align: P.align,
+                  }
+                : { alignmentStrategy: "trigger-center" },
+        );
     return (0, r.jsx)(
         s.m,
-        g(h({}, D), {
-            position: w,
-            onRequestClose: M,
-            gradientColor: O,
-            onPositionChange: j,
-            onNudgeChange: P,
-            scrollBehavior: S,
-            modal: N,
-            returnRef: R,
-            gradientOffsetBottom: 0,
-            experimental_ignoreModalClicks: !1,
+        m(p({}, U), {
             children: (0, r.jsxs)("div", {
                 "data-mana-component": "popover",
                 children: [
-                    A &&
+                    S &&
                         (0, r.jsx)(u.u, {
-                            onClick: k,
-                            variant: null != O ? "color-mix" : void 0,
+                            onClick: M,
+                            variant: null != y ? "color-mix" : void 0,
                         }),
-                    null != p &&
+                    null != _ &&
                         (0, r.jsx)("div", {
-                            className: o()(_.graphic, { [_["graphic--".concat(m)]]: null != m }),
+                            className: o()(f.graphic, { [f["graphic--".concat(h)]]: null != h }),
                             children: (0, r.jsx)(
-                                f.zsu,
-                                g(h({}, p), {
-                                    aspectRatio: null != (t = p.aspectRatio) ? t : "sm" === m ? "2/1" : "16/9",
+                                d.zsu,
+                                m(p({}, _), {
+                                    aspectRatio: null != (t = _.aspectRatio) ? t : "sm" === h ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(b, {
                         title: n,
                         body: a,
                     }),
-                    null != b && b.length > 0
+                    null != E && E.length > 0
                         ? (0, r.jsx)(l.k, {
-                              actions: b,
-                              className: _.actionBar,
+                              actions: E,
+                              className: f.actionBar,
                           })
                         : null,
-                    null != x &&
-                        (0, r.jsx)(c.$, {
-                            caretConfig: x,
-                            className: U,
-                        }),
+                    null != L && (0, r.jsx)(c.$, { className: j }),
                 ],
             }),
         }),
     );
 }
-let v = O;
+let O = y;

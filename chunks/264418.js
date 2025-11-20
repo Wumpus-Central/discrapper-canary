@@ -1,8 +1,7 @@
 n.d(t, {
-    J: () => O,
-    Z: () => v,
-}),
-    n(388685);
+    J: () => y,
+    Z: () => O,
+});
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -13,9 +12,8 @@ var r = n(54381),
     u = n(966902),
     d = n(237872),
     f = n(562618),
-    _ = n(945909),
-    p = n(254477);
-function h(e, t, n) {
+    _ = n(254477);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +37,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,22 +54,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +77,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,25 +86,24 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function O(e) {
+function y(e) {
     var t,
-        n,
         {
-            title: a,
-            body: h,
-            badge: g,
-            graphic: y,
-            size: O = "md",
-            actions: v,
-            textLink: I,
-            gradientColor: T,
-            onRequestClose: S,
-            popoverRef: A,
-            position: C,
-            caretConfig: N,
-            scrollBehavior: R,
+            title: n,
+            body: a,
+            badge: p,
+            graphic: m,
+            size: b = "md",
+            actions: y,
+            textLink: O,
+            gradientColor: v,
+            onRequestClose: I,
+            popoverRef: T,
+            position: S,
+            caretConfig: A,
+            scrollBehavior: C,
         } = e,
-        P = b(e, [
+        N = E(e, [
             "title",
             "body",
             "badge",
@@ -121,61 +118,65 @@ function O(e) {
             "caretConfig",
             "scrollBehavior",
         ]);
-    let [D, w] = i.useState(null != C ? C : "top"),
-        [L, x] = i.useState({
-            position: (0, _.z)(D),
-            align: null != (t = null == N ? void 0 : N.align) ? t : "center",
-            customOffset: null == N ? void 0 : N.customOffset,
-        }),
-        M = i.useCallback(
+    let R = i.useCallback(
             (e, t) => {
-                null == S || S(t);
+                null == I || I(t);
             },
-            [S],
+            [I],
         ),
-        k = i.useCallback(() => {
-            null == S || S("user:explicit");
-        }, [S]),
-        j = i.useCallback((e) => {
-            w(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
-        }, []);
+        P = i.useCallback(() => {
+            null == I || I("user:explicit");
+        }, [I]),
+        D = h(
+            {
+                targetElementRef: N.targetElementRef,
+                shouldShow: N.shouldShow,
+                hasVideo: N.hasVideo,
+                position: S,
+                caretConfig: A,
+                onRequestClose: R,
+                gradientColor: v,
+                scrollBehavior: C,
+            },
+            "edge" === N.alignmentStrategy
+                ? {
+                      alignmentStrategy: "edge",
+                      align: N.align,
+                  }
+                : { alignmentStrategy: "trigger-center" },
+        );
     return (0, r.jsx)(
         l.m,
-        E(m({}, P), {
-            position: D,
-            onRequestClose: M,
-            gradientColor: T,
-            onPositionChange: j,
-            scrollBehavior: R,
+        g(h({}, D), {
             children: (0, r.jsxs)("div", {
-                ref: A,
+                ref: T,
                 "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: k,
-                        variant: null != T ? "color-mix" : void 0,
+                        onClick: P,
+                        variant: null != v ? "color-mix" : void 0,
                     }),
-                    null != y &&
+                    null != m &&
                         (0, r.jsx)("div", {
-                            className: o()(p.graphic, { [p["graphic--".concat(O)]]: null != O }),
+                            className: o()(_.graphic, { [_["graphic--".concat(b)]]: null != b }),
                             children: (0, r.jsx)(
                                 s.zsu,
-                                E(m({}, y), {
-                                    aspectRatio: null != (n = y.aspectRatio) ? n : "sm" === O ? "2/1" : "16/9",
+                                g(h({}, m), {
+                                    aspectRatio: null != (t = m.aspectRatio) ? t : "sm" === b ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
                     (0, r.jsx)(f.Y, {
-                        title: a,
-                        body: h,
-                        badge: g,
-                        textLink: I,
+                        title: n,
+                        body: a,
+                        badge: p,
+                        textLink: O,
                     }),
-                    null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: L }),
+                    null != y && y.length > 0 ? (0, r.jsx)(c.k, { actions: y }) : null,
+                    (0, r.jsx)(u.$, {}),
                 ],
             }),
         }),
     );
 }
-let v = O;
+let O = y;

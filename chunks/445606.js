@@ -10,10 +10,7 @@ function a(e) {
         onActionClick: a,
         position: s = "right",
         align: c = "top",
-        caretConfig: u = {
-            align: "start",
-            position: "top",
-        },
+        caretConfig: u = { align: "start" },
     } = e;
     return (0, r.jsx)(i.J2, {
         size: "lg",
@@ -21,6 +18,7 @@ function a(e) {
         position: s,
         caretConfig: u,
         gradientColor: "purple",
+        alignmentStrategy: "edge",
         align: c,
         badge: {
             type: "new",

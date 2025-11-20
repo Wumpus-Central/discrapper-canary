@@ -67,17 +67,10 @@ function T(e) {
                 (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
             },
         },
-        caretConfig: l
-            ? {
-                  position: "left",
-                  align: "start",
-              }
-            : {
-                  position: "top",
-                  align: "center",
-              },
         position: l ? "right" : "bottom",
+        alignmentStrategy: "edge",
         align: l ? "top" : "center",
+        caretConfig: l ? { align: "start" } : { align: "center" },
         onRequestClose: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
     });
 }
@@ -227,11 +220,12 @@ function M(e) {
             caretConfig: i = { align: "start" },
             position: l = "right",
             align: o = "top",
-            markAsDismissed: a,
-            size: u = "lg",
-            asset: d,
+            alignmentStrategy: a = "edge",
+            markAsDismissed: u,
+            size: d = "lg",
+            asset: p,
         } = e,
-        p = (function (e, t) {
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -251,7 +245,7 @@ function M(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["caretConfig", "position", "align", "markAsDismissed", "size", "asset"]);
+        })(e, ["caretConfig", "position", "align", "alignmentStrategy", "markAsDismissed", "size", "asset"]);
     return (0, r.jsx)(
         c.J2,
         ((t = (function (e) {
@@ -278,20 +272,21 @@ function M(e) {
                     });
             }
             return e;
-        })({}, p)),
+        })({}, h)),
         (n = n =
             {
                 graphic: {
                     type: "dynamic",
                     component: s.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
-                    props: { asset: d },
+                    props: { asset: p },
                 },
-                size: u,
+                size: d,
                 shouldShow: !0,
                 position: l,
                 caretConfig: i,
+                alignmentStrategy: a,
                 align: o,
-                onRequestClose: () => (null == a ? void 0 : a(j.L.USER_DISMISS)),
+                onRequestClose: () => (null == u ? void 0 : u(j.L.USER_DISMISS)),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

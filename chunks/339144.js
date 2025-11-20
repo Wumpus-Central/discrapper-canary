@@ -118,7 +118,7 @@ let L = i.memo(function (e) {
                 let e = null != G && (0, S.vd)(G.type) ? G : null,
                     t = null != e ? e.getGuildId() : T;
                 (0, u.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
+                    let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("50442")]).then(
                         n.bind(n, 60594),
                     );
                     return (n) => {
@@ -358,10 +358,7 @@ function k(e) {
                       targetElementRef: l,
                       position: "top",
                       align: "center",
-                      caretConfig: {
-                          align: "center",
-                          position: "top",
-                      },
+                      caretConfig: { align: "center" },
                   })
                 : null,
         ],

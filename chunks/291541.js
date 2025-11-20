@@ -87,23 +87,50 @@ let m = {
             id: "popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                var { showAsset: t, showActions: n, showTextLink: c, caretAlign: u, size: f } = e,
-                    h = p(e, ["showAsset", "showActions", "showTextLink", "caretAlign", "size"]);
-                let [m, g] = i.useState(!1),
-                    E = i.useRef(null);
+                var {
+                        showAsset: t,
+                        showActions: n,
+                        showTextLink: c,
+                        caretAlign: u,
+                        alignmentStrategy: f,
+                        align: h,
+                        size: m,
+                        position: g,
+                    } = e,
+                    E = p(e, [
+                        "showAsset",
+                        "showActions",
+                        "showTextLink",
+                        "caretAlign",
+                        "alignmentStrategy",
+                        "align",
+                        "size",
+                        "position",
+                    ]);
+                let [b, y] = i.useState(!1),
+                    O = i.useRef(null);
                 return (0, r.jsxs)("div", {
+                    style: {
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        minHeight: "400px",
+                    },
                     children: [
                         (0, r.jsx)(
                             o.J2,
-                            _(d({}, h), {
-                                size: f,
-                                targetElementRef: E,
-                                shouldShow: m,
-                                onRequestClose: () => g(!1),
+                            _(d({}, E), {
+                                position: g,
+                                size: m,
+                                align: h,
+                                alignmentStrategy: f,
+                                targetElementRef: O,
+                                shouldShow: b,
+                                onRequestClose: () => y(!1),
                                 graphic: t
                                     ? {
                                           type: "image",
-                                          src: "sm" === f ? l.Z : s.Z,
+                                          src: "sm" === m ? l.Z : s.Z,
                                       }
                                     : void 0,
                                 caretConfig: { align: u },
@@ -111,7 +138,7 @@ let m = {
                                     ? [
                                           {
                                               text: "Close",
-                                              onClick: () => g(!1),
+                                              onClick: () => y(!1),
                                           },
                                       ]
                                     : void 0,
@@ -123,12 +150,13 @@ let m = {
                                       }
                                     : void 0,
                             }),
+                            g,
                         ),
                         (0, r.jsx)(a.Button, {
                             variant: "primary",
                             text: "Toggle Popover",
-                            buttonRef: E,
-                            onClick: () => g(!m),
+                            buttonRef: O,
+                            onClick: () => y(!b),
                         }),
                     ],
                 });
@@ -143,6 +171,29 @@ let m = {
                     label: "Body Text",
                     type: "text",
                     defaultValue: "This is a sample popover with customizable properties.",
+                },
+                position: {
+                    label: "Position",
+                    type: "select",
+                    defaultValue: "top",
+                    options: [
+                        {
+                            label: "Top",
+                            value: "top",
+                        },
+                        {
+                            label: "Bottom",
+                            value: "bottom",
+                        },
+                        {
+                            label: "Left",
+                            value: "left",
+                        },
+                        {
+                            label: "Right",
+                            value: "right",
+                        },
+                    ],
                 },
                 size: {
                     label: "Size",
@@ -224,6 +275,52 @@ let m = {
                         },
                     ],
                 },
+                alignmentStrategy: {
+                    label: "Alignment Strategy",
+                    type: "select",
+                    defaultValue: "trigger-center",
+                    options: [
+                        {
+                            label: "Trigger Center (caret points at trigger)",
+                            value: "trigger-center",
+                        },
+                        {
+                            label: "Edge (popover edge aligns with trigger)",
+                            value: "edge",
+                        },
+                    ],
+                },
+                align: {
+                    label: 'Align (only applies with "edge" strategy)',
+                    type: "select",
+                    defaultValue: void 0,
+                    options: [
+                        {
+                            label: "None",
+                            value: void 0,
+                        },
+                        {
+                            label: "Top",
+                            value: "top",
+                        },
+                        {
+                            label: "Center",
+                            value: "center",
+                        },
+                        {
+                            label: "Bottom",
+                            value: "bottom",
+                        },
+                        {
+                            label: "Left",
+                            value: "left",
+                        },
+                        {
+                            label: "Right",
+                            value: "right",
+                        },
+                    ],
+                },
                 showAsset: {
                     label: "Show Asset",
                     type: "boolean",
@@ -270,6 +367,7 @@ let m = {
                                       }
                                     : void 0,
                             }),
+                            n.position,
                         ),
                         (0, r.jsx)(a.Button, {
                             variant: "primary",
@@ -293,10 +391,11 @@ let m = {
             id: "multi-step-popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                let { showExpressive: t } = e,
-                    [n, l] = i.useState(!1),
-                    u = i.useRef(null),
-                    d = [
+                var { showExpressive: t } = e,
+                    n = p(e, ["showExpressive"]);
+                let [l, u] = i.useState(!1),
+                    f = i.useRef(null),
+                    h = [
                         {
                             title: "Welcome to the Feature!",
                             body: "This is the first step of our multi-step introduction.",
@@ -339,22 +438,23 @@ let m = {
                     ];
                 return (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(o.e4, {
-                            targetElementRef: u,
-                            shouldShow: n,
-                            onRequestClose: () => l(!1),
-                            steps: d,
-                            caretConfig: {
-                                position: "top",
-                                align: "center",
-                            },
-                            onStepChange: () => {},
-                        }),
+                        (0, r.jsx)(
+                            o.e4,
+                            _(d({}, n), {
+                                targetElementRef: f,
+                                shouldShow: l,
+                                onRequestClose: () => u(!1),
+                                steps: h,
+                                caretConfig: { align: "center" },
+                                onStepChange: () => {},
+                            }),
+                            n.position,
+                        ),
                         (0, r.jsx)(a.Button, {
                             variant: "primary",
                             text: "Show Multi-Step",
-                            buttonRef: u,
-                            onClick: () => l(!n),
+                            buttonRef: f,
+                            onClick: () => u(!l),
                         }),
                     ],
                 });

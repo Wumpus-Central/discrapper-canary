@@ -183,18 +183,19 @@ class N extends (r = a.Component) {
                 nudgeAlignIntoViewport: n,
                 useRawTargetDimensions: r,
                 spacing: a,
-                autoInvert: o,
-                fixed: s,
-                positionKey: l,
-                disablePointerEvents: c,
-                layerContext: u,
-                clickTrap: d = !1,
+                offset: o,
+                autoInvert: s,
+                fixed: l,
+                positionKey: c,
+                disablePointerEvents: u,
+                layerContext: d,
+                clickTrap: _ = !1,
             } = this.props,
-            { resizeKey: _, isLoading: p, shouldShowLoadingState: g } = this.state;
-        return p && !g
+            { resizeKey: p, isLoading: g, shouldShowLoadingState: E } = this.state;
+        return g && !E
             ? null
             : (0, i.jsx)(f.mh4, {
-                  layerContext: null != u ? u : m.nz,
+                  layerContext: null != d ? d : m.nz,
                   children: (0, i.jsx)(h.jRF, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
@@ -206,12 +207,13 @@ class N extends (r = a.Component) {
                       nudgeAlignIntoViewport: n,
                       useRawTargetDimensions: r,
                       spacing: a,
-                      autoInvert: o,
-                      fixed: s,
-                      positionKey: null != l ? l : String(_),
-                      disablePointerEvents: c,
+                      offset: o,
+                      autoInvert: s,
+                      fixed: l,
+                      positionKey: null != c ? c : String(p),
+                      disablePointerEvents: u,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: d,
+                      clickTrap: _,
                       children: this.renderPopout,
                   }),
               });

@@ -22,9 +22,6 @@ function c(e) {
         },
         onRequestClose: () => n(s.L.USER_DISMISS),
         position: "bottom",
-        caretConfig: {
-            position: "top",
-            align: "center",
-        },
+        caretConfig: { align: "center" },
     });
 }

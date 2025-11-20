@@ -24,8 +24,9 @@ let p = (e) => {
         (0, r.jsx)(l.J2, {
             targetElementRef: t,
             position: "right",
-            align: "top",
             size: "md",
+            alignmentStrategy: "edge",
+            align: "top",
             caretConfig: { align: "start" },
             title: u.intl.string(u.t.epBu6F),
             body: u.intl.string(u.t["o8+3AX"]),

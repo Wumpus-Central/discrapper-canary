@@ -29,10 +29,7 @@ function p(e) {
                 body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
                 assetUrl: h,
                 disableMediaViewer: !0,
-                caretConfig: {
-                    position: "top",
-                    align: "center",
-                },
+                caretConfig: { align: "center" },
                 action: {
                     text: d.intl.string(d.t.tQPBml),
                     onClick: t,

@@ -178,31 +178,31 @@ class w extends (r = a.Component) {
         return Math.min(n.offsetWidth - e - i - T, 0);
     }
     getHorizontalAlignmentStyle(e, t, n, r) {
-        let { align: i } = this.props;
+        let { align: i, offset: a = 0 } = this.props;
         switch (i) {
             case "left": {
-                let i = this.formatDimension(this.nudgeLeftAlignment(e.left, t, n)),
-                    a = this.formatDimension(e.left) - i;
+                let i = this.formatDimension(this.nudgeLeftAlignment(e.left + a, t, n)),
+                    o = this.formatDimension(e.left + a) - i;
                 return {
                     style: y(E({}, r), { left: i }),
-                    nudge: a,
+                    nudge: o,
                 };
             }
             case "right": {
-                let i = this.formatDimension(n.offsetWidth - e.right),
-                    a = this.nudgeRightAlignment(i, t, n);
+                let i = this.formatDimension(n.offsetWidth - e.right - a),
+                    o = this.nudgeRightAlignment(i, t, n);
                 return {
-                    style: y(E({}, r), { right: i + a }),
+                    style: y(E({}, r), { right: i + o }),
                     nudge: 0,
                 };
             }
             case "center": {
-                let i = e.left + (e.width - t.offsetWidth) / 2,
-                    a = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
-                    o = this.formatDimension(i) - a;
+                let i = e.left + (e.width - t.offsetWidth) / 2 + a,
+                    o = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
+                    s = this.formatDimension(i) - o;
                 return {
-                    style: y(E({}, r), { left: a }),
-                    nudge: o,
+                    style: y(E({}, r), { left: o }),
+                    nudge: s,
                 };
             }
             default:
@@ -226,31 +226,31 @@ class w extends (r = a.Component) {
         return o > 0 ? Math.max(T, a - o) : a;
     }
     getVerticalAlignmentStyle(e, t, n, r) {
-        let { align: i } = this.props;
+        let { align: i, offset: a = 0 } = this.props;
         switch (i) {
             case "top": {
-                let i = this.formatDimension(this.nudgeTopAlignment(e.top, t, n)),
-                    a = this.formatDimension(e.top) - i;
+                let i = this.formatDimension(this.nudgeTopAlignment(e.top + a, t, n)),
+                    o = this.formatDimension(e.top + a) - i;
                 return {
                     style: y(E({}, r), { top: i }),
-                    nudge: a,
+                    nudge: o,
                 };
             }
             case "bottom": {
-                let i = this.formatDimension(this.nudgeBottomAlignment(e.bottom, t, n)),
-                    a = this.formatDimension(e.bottom) - i;
+                let i = this.formatDimension(this.nudgeBottomAlignment(e.bottom + a, t, n)),
+                    o = this.formatDimension(e.bottom + a) - i;
                 return {
                     style: y(E({}, r), { bottom: i }),
-                    nudge: a,
+                    nudge: o,
                 };
             }
             case "center": {
-                let i = e.top + (e.height - t.offsetHeight) / 2,
-                    a = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
-                    o = this.formatDimension(i) - a;
+                let i = e.top + (e.height - t.offsetHeight) / 2 + a,
+                    o = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
+                    s = this.formatDimension(i) - o;
                 return {
-                    style: y(E({}, r), { top: a }),
-                    nudge: o,
+                    style: y(E({}, r), { top: o }),
+                    nudge: s,
                 };
             }
             default:
