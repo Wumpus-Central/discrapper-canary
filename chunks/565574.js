@@ -1,14 +1,14 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(54381),
     i = n(473749),
-    l = n(755721),
+    l = n(789639),
     s = n(481060),
     o = n(812652),
-    a = n(388032),
-    c = n(439003);
-function d(e) {
+    a = n(388032);
+function c(e) {
     let { align: t = "left" } = e,
-        n = i.useRef(null);
+        n = i.useRef(null),
+        c = (0, l.i)();
     return (0, r.jsx)(s.yRy, {
         targetElementRef: n,
         position: "top",
@@ -20,11 +20,10 @@ function d(e) {
                 onSelect: void 0,
             });
         },
-        children: (e) => {
-            var t, i;
-            return (0, r.jsx)(
-                l.zx,
-                ((t = (function (e) {
+        children: (e) =>
+            (0, r.jsx)(
+                s.hU,
+                (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -50,36 +49,15 @@ function d(e) {
                     return e;
                 })(
                     {
-                        size: l.zx.Sizes.ICON,
-                        "aria-label": a.intl.string(a.t["+1H47t"]),
-                        color: l.zx.Colors.PRIMARY,
-                        className: c.streamOptionsButton,
                         buttonRef: n,
+                        size: "md",
+                        variant: "secondary",
+                        icon: c.Component,
+                        "aria-label": a.intl.string(a.t["+1H47t"]),
                     },
                     e,
-                )),
-                (i = i =
-                    {
-                        children: (0, r.jsx)(s.ewm, {
-                            className: c.settingsIcon,
-                            size: "refresh_sm",
-                            color: "currentColor",
-                        }),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                t),
-            );
-        },
+                    c.events,
+                ),
+            ),
     });
 }
