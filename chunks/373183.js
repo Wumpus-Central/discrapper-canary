@@ -89,6 +89,7 @@ let y = l.memo(function (e) {
                                       (0, r.jsx)("div", {
                                           className: v.footerInfoShrinkOnHover,
                                           children: (0, r.jsxs)("div", {
+                                              className: x.progressContainer,
                                               children: [
                                                   (0, r.jsx)(f.Z, {
                                                       variant: f.y.BLUE,
