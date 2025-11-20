@@ -78,18 +78,59 @@ function f(e, t) {
     return i;
 }
 let _ = {
-    Preview: { "Icon Color": "color" },
-    Friends: { "Icon Color": "color" },
-    Globe: { "Icon Color": "color" },
+    Preview: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Friends: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Globe: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
     "Globe Single Line": {},
-    Emojis: { "Icon Color": "color" },
-    "Wave Line": { "Icon Color": "color" },
-    Games: { "Icon Color": "color" },
-    Voice: { "Icon Color": "color" },
-    Quests: { "Icon Color": "color" },
-    Entry: { "Icon Color": "color" },
-    Servers: { "Icon Color": "color" },
-    Messages: { "Icon Color": "color" },
+    Emojis: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    "Wave Line": {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Games: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Voice: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    "Looping Checkboard": {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    CheckRow: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Quests: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Entry: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Messages: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
+    Servers: {
+        reducedMotion: "boolean",
+        iconColor: "color",
+    },
 };
 function p(e) {
     let { artboard: t = "Preview" } = e,
