@@ -1,24 +1,25 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(570140),
-    a = n(536442),
-    s = n(810788),
-    o = n(592125),
-    c = n(131951),
-    u = n(944486),
-    d = n(556296),
-    p = n(131468),
-    f = n(208049),
-    h = n(763296),
-    g = n(641015),
-    m = n(22382),
-    _ = n(747071),
-    b = n(49230),
-    E = n(981631),
-    O = n(65154);
-function y(e, t, n) {
+    a = n(710845),
+    s = n(536442),
+    o = n(810788),
+    c = n(592125),
+    u = n(131951),
+    d = n(944486),
+    p = n(556296),
+    f = n(131468),
+    h = n(208049),
+    g = n(763296),
+    m = n(641015),
+    _ = n(22382),
+    b = n(747071),
+    E = n(49230),
+    O = n(981631),
+    y = n(65154);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,8 @@ function y(e, t, n) {
         e
     );
 }
-class v extends p.Z {
+let I = new a.Z("SoundboardManager");
+class C extends f.Z {
     _initialize() {
         super._initialize(),
             __OVERLAY__ ||
@@ -52,10 +54,10 @@ class v extends p.Z {
         var t;
         super(...e),
             (t = this),
-            y(this, "playingSoundsWeb", new Map()),
-            y(this, "_stopAndClearSounds", () => {
-                c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
-                    c.Z.getMediaEngine().eachConnection((e) => {
+            v(this, "playingSoundsWeb", new Map()),
+            v(this, "_stopAndClearSounds", () => {
+                u.Z.supports(y.AN.SAMPLE_PLAYBACK) &&
+                    u.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
                     this.playingSoundsWeb.forEach((e) => {
@@ -63,35 +65,37 @@ class v extends p.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            y(this, "_playSound", async function (e) {
+            v(this, "_playSound", async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
-                    l = null != i && u.Z.getVoiceChannelId() === i;
-                if ((null == i || l) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(r))
+                    l = null != i && d.Z.getVoiceChannelId() === i;
+                if ((null == i || l) && !u.Z.isDeaf() && !g.Z.isLocalSoundboardMuted(r))
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
-                            soundURL: (0, m.Z)(e),
-                            soundVolume: (0, _.Z)(n),
-                            reportSoundStartedPlaying: () => (0, f.xR)(e, r),
+                            soundURL: (0, _.Z)(e),
+                            soundVolume: (0, b.Z)(n),
+                            reportSoundStartedPlaying: () => (0, h.xR)(e, r),
                         };
-                        c.Z.supports(O.AN.SAMPLE_PLAYBACK) ? await (0, b.$)(i) : await (0, b.h)(i, t.playingSoundsWeb);
+                        u.Z.supports(y.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(i) : await (0, E.h)(i, t.playingSoundsWeb);
+                    } catch (e) {
+                        I.warn("Error playing soundboard sound: ".concat(e.message));
                     } finally {
-                        (0, f.R)(e, r);
+                        (0, h.R)(e, r);
                     }
             }),
-            y(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
-                (0, f.w)();
+            v(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+                (0, h.w)();
             }),
-            y(this, "_handleOpenEducationModal", (e, t) => {
+            v(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
-                let l = o.Z.getChannel(t),
-                    c = d.ZP.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
+                let l = c.Z.getChannel(t),
+                    a = p.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD);
                 null != l &&
-                    (0, g.Z)(l) &&
-                    null != c &&
-                    s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+                    (0, m.Z)(l) &&
+                    null != a &&
+                    o.Z.hasHotspot(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e("69208").then(n.bind(n, 490166));
                         return (n) =>
@@ -126,14 +130,14 @@ class v extends p.Z {
                                                     }),
                                                 )),
                                                 r.forEach(function (t) {
-                                                    y(e, t, n[t]);
+                                                    v(e, t, n[t]);
                                                 });
                                         }
                                         return e;
                                     })({}, n),
                                     {
                                         guildId: e,
-                                        keybind: c,
+                                        keybind: a,
                                         channel: l,
                                     },
                                 ),
@@ -142,4 +146,4 @@ class v extends p.Z {
             });
     }
 }
-let I = new v();
+let S = new C();
