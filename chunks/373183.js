@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(793030),
-    o = n(442837),
+    o = n(793030),
+    s = n(442837),
     c = n(28664),
     u = n(481060),
     d = n(104505),
@@ -25,7 +25,7 @@ let S = l.memo(function (e) {
         i = l.useRef(null),
         { isHoveringOrFocusing: S } = (0, d.Z)(i),
         { readyToClaim: y, collectibleProductSkuIds: j, collectedSkuIds: k } = (0, C.q)(t, n),
-        I = (0, o.e7)([m.Z], () => m.Z.isClaiming === n);
+        I = (0, s.e7)([m.Z], () => m.Z.isClaiming === n);
     return (0, r.jsx)("div", {
         ref: i,
         className: a()(b.productCardContainer, v.defaultCursor, { [b.hovered]: S }),
@@ -74,7 +74,7 @@ let S = l.memo(function (e) {
                                             position: "top",
                                             children: (0, r.jsx)("span", {
                                                 className: v.questionIconContainer,
-                                                children: (0, r.jsx)(s.idN, { size: "xs" }),
+                                                children: (0, r.jsx)(o.idN, { size: "xs" }),
                                             }),
                                         }),
                                     ],
@@ -92,12 +92,12 @@ let S = l.memo(function (e) {
                                                 className: a()(v.progressTextContainer, { [v.readyToClaimText]: y }),
                                                 children: [
                                                     y
-                                                        ? (0, r.jsx)(s.kmB, {
+                                                        ? (0, r.jsx)(o.kmB, {
                                                               size: "xs",
                                                               color: "currentColor",
                                                           })
                                                         : null,
-                                                    (0, r.jsx)(s.xvT, {
+                                                    (0, r.jsx)(o.xvT, {
                                                         variant: "text-xs/medium",
                                                         color: "currentColor",
                                                         children: _.intl.formatToPlainString(_.t["5TwASM"], {
@@ -114,11 +114,11 @@ let S = l.memo(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: b.footerButtonContainer,
-                            children: (0, r.jsx)(s.hE2, {
+                            children: (0, r.jsx)(o.hE2, {
                                 wrap: !1,
                                 className: b.footerButtonGroup,
                                 fullWidth: !0,
-                                children: (0, r.jsx)(s.zxk, {
+                                children: (0, r.jsx)(o.zxk, {
                                     variant: "primary",
                                     onClick: (e) => {
                                         e.stopPropagation(),
@@ -134,7 +134,8 @@ let S = l.memo(function (e) {
                                                                     type: "video",
                                                                     src: E.Z,
                                                                     fallbackImageSrc: x.Z,
-                                                                    loop: !1,
+                                                                    loop: !0,
+                                                                    loopAt: 6,
                                                                     aspectRatio: "16/9",
                                                                 },
                                                             });
@@ -142,7 +143,7 @@ let S = l.memo(function (e) {
                                                     .catch(() => {
                                                         (0, u.ZDy)(() =>
                                                             Promise.resolve((e) =>
-                                                                (0, r.jsx)(s.Modal, {
+                                                                (0, r.jsx)(o.Modal, {
                                                                     transitionState: e.transitionState,
                                                                     onClose: e.onClose,
                                                                     size: "sm",
