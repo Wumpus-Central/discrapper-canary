@@ -1,7 +1,7 @@
-n.d(t, { default: () => D }), n(388685), n(290780), n(539854), n(704826), n(35282);
+n.d(t, { default: () => _ }), n(388685), n(290780), n(539854), n(704826), n(35282);
 var l = n(54381),
-    a = n(473749),
-    i = n(481060),
+    i = n(473749),
+    a = n(481060),
     r = n(239091),
     o = n(493544),
     s = n(108843),
@@ -22,14 +22,14 @@ var l = n(54381),
     j = n(594791),
     A = n(393431),
     N = n(69021),
-    w = n(981631),
-    _ = n(388032);
-let D = (0, s.Z)(
+    I = n(981631),
+    w = n(388032);
+let _ = (0, s.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
-            [c, D] = a.useState(!1),
+            [c, _] = i.useState(!1),
             x = (0, v.Z)(),
-            I = (0, h.Z)(),
+            D = (0, h.Z)(),
             T = (0, f.Z)(),
             C = (0, y.Z)(),
             m = (0, A.Z)(),
@@ -38,48 +38,57 @@ let D = (0, s.Z)(
             Z = (0, N.Z)(),
             k = (0, P.Z)(),
             { analyticsLocations: V } = (0, u.ZP)(),
-            M = a.useMemo(() => (0, g.j)(), []);
-        async function B() {
+            B = i.useMemo(() => (0, g.j)(), []);
+        async function M() {
             try {
-                D(!0), await (0, d.bF)(), window.location.reload(!0);
+                _(!0), await (0, d.bF)(), window.location.reload(!0);
             } catch (e) {
-                D(!1);
+                _(!1);
             }
         }
         let U = (0, p.wy)("UserSettingsCogContextMenu"),
-            G = (0, E.getWebUserSettingsByUserSettingsSections)(),
+            G = (0, p.gj)("UserSettingsCogContextMenu"),
+            F = (0, E.getWebUserSettingsByUserSettingsSections)(),
             z = (0, O.VO)(),
-            F = a.useMemo(() => {
+            Y = i.useMemo(() => {
                 let e = [];
-                return (
-                    z.forEach((t) => {
+                if (
+                    (z.forEach((t) => {
                         let { section: n, predicate: l } = t;
                         n !== o.ID.HEADER &&
                             n !== o.ID.CUSTOM &&
                             n !== o.ID.DIVIDER &&
                             "logout" !== n &&
                             (null == l || l()) &&
-                            ((U && null == G.get(n)) ||
-                                (U && n === w.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t)));
+                            ((U && null == F.get(n)) ||
+                                (U && n === I.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t)));
                     }),
-                    e
-                );
-            }, [z, U, G]);
+                    G)
+                ) {
+                    let t = e.findIndex((e) => e.section === I.oAB.NOTIFICATIONS),
+                        n = e.findIndex((e) => e.section === I.oAB.CONNECTIONS);
+                    if (-1 !== t && -1 !== n && t > n) {
+                        let [l] = e.splice(t, 1);
+                        e.splice(n + 1, 0, l);
+                    }
+                }
+                return e;
+            }, [z, U, F, G]);
         return (0, l.jsx)(u.Gt, {
             value: V,
-            children: (0, l.jsxs)(i.v2r, {
+            children: (0, l.jsxs)(a.v2r, {
                 navId: "user-settings-cog",
                 onClose: r.Zy,
-                "aria-label": _.intl.string(_.t.opYYHn),
+                "aria-label": w.intl.string(w.t.opYYHn),
                 onSelect: n,
                 onInteraction: s,
                 children: [
-                    F.map((e) => {
+                    Y.map((e) => {
                         var t, n;
-                        let { section: a, label: r, onClick: o } = e,
-                            s = a.replace(/\W/gi, "_");
+                        let { section: i, label: r, onClick: o } = e,
+                            s = i.replace(/\W/gi, "_");
                         return (0, l.jsx)(
-                            i.sNh,
+                            a.sNh,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -113,13 +122,13 @@ let D = (0, s.Z)(
                                         return null != o
                                             ? o()
                                             : (function (e, t, n) {
-                                                  let l = Object.values(w.oAB).filter((e) => e === t)[0];
+                                                  let l = Object.values(I.oAB).filter((e) => e === t)[0];
                                                   null != l &&
                                                       (0, E.openUserSettings)(e, {
                                                           section: l,
                                                           analyticsLocations: n,
                                                       });
-                                              })(null != (e = G.get(a)) ? e : b.n.ACCOUNT_PANEL, a, V);
+                                              })(null != (e = F.get(i)) ? e : b.n.ACCOUNT_PANEL, i, V);
                                     },
                                 },
                             )),
@@ -127,26 +136,26 @@ let D = (0, s.Z)(
                                 {
                                     children: ((e) => {
                                         switch (e) {
-                                            case w.oAB.GAMES:
+                                            case I.oAB.GAMES:
                                                 return x;
-                                            case w.oAB.STREAMER_MODE:
-                                                return I;
-                                            case w.oAB.APPEARANCE:
+                                            case I.oAB.STREAMER_MODE:
+                                                return D;
+                                            case I.oAB.APPEARANCE:
                                                 return T;
-                                            case w.oAB.ACCESSIBILITY:
+                                            case I.oAB.ACCESSIBILITY:
                                                 return C;
-                                            case w.oAB.VOICE:
+                                            case I.oAB.VOICE:
                                                 return m;
-                                            case w.oAB.TEXT:
+                                            case I.oAB.TEXT:
                                                 return L;
-                                            case w.oAB.EXPERIMENTS:
+                                            case I.oAB.EXPERIMENTS:
                                                 return R;
-                                            case w.oAB.DEVELOPER_OPTIONS:
+                                            case I.oAB.DEVELOPER_OPTIONS:
                                                 return Z;
                                             default:
                                                 return null;
                                         }
-                                    })(a),
+                                    })(i),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -165,14 +174,14 @@ let D = (0, s.Z)(
                         );
                     }),
                     e.user.isStaff() && k,
-                    e.user.isStaff() && M.length > 0
-                        ? (0, l.jsx)(i.sNh, {
+                    e.user.isStaff() && B.length > 0
+                        ? (0, l.jsx)(a.sNh, {
                               label: "Build Overrides",
                               id: "build_overrides",
-                              children: (0, l.jsx)(i.kSQ, {
-                                  children: M.map((e) =>
+                              children: (0, l.jsx)(a.kSQ, {
+                                  children: B.map((e) =>
                                       (0, l.jsx)(
-                                          i.k5B,
+                                          a.k5B,
                                           {
                                               id: "input-".concat(e.payload),
                                               group: "build_overrides",
@@ -191,12 +200,12 @@ let D = (0, s.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, l.jsx)(i.kSQ, {
-                              children: (0, l.jsx)(i.sNh, {
+                        ? (0, l.jsx)(a.kSQ, {
+                              children: (0, l.jsx)(a.sNh, {
                                   id: "clear-build-override",
                                   disabled: c,
-                                  label: _.intl.string(_.t["/Nz9rY"]),
-                                  action: B,
+                                  label: w.intl.string(w.t["/Nz9rY"]),
+                                  action: M,
                                   color: "danger",
                               }),
                           })
