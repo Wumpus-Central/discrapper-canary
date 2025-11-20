@@ -3,9 +3,7 @@ n.d(t, {
     Z: () => ed,
 }),
     n(388685),
-    n(856094),
-    n(472816),
-    n(794429);
+    n(856094);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -270,7 +268,7 @@ function ed(e) {
         eR = null != eN && "" !== eN,
         eP = (0, m.Dt)(),
         eD = L.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
-        { categories: ew, allSounds: eL, soundCounts: ex } = (0, B.ZP)(a, {}, e_),
+        { categories: ew, availableSounds: eL, soundCounts: ex } = (0, B.ZP)(a, {}, e_),
         [eM, ek] = i.useState([]),
         ej = (0, B.FS)(ew, eM, eN),
         eU = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
@@ -461,7 +459,7 @@ function ed(e) {
             },
             [eF, eV, eZ.length, em],
         ),
-        e6 = i.useCallback((e) => ek((0, G.cK)(e, Array.from(eL.values()).flat(), eT, a, eE)), [a, eT, eL, eE]),
+        e6 = i.useCallback((e) => ek((0, G.cK)(e, eL, eT, a, eE)), [a, eT, eL, eE]),
         e7 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {

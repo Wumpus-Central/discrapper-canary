@@ -3,7 +3,9 @@ n.d(t, {
     ZP: () => S,
 }),
     n(388685),
-    n(539854);
+    n(539854),
+    n(472816),
+    n(794429);
 var r = n(473749),
     i = n(442837),
     a = n(357156),
@@ -107,103 +109,109 @@ function S(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         o = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.isPremium(o, b.PremiumTypes.TIER_2),
-        [E, y, S] = (0, i.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites(), p.Z.isFetching()]),
-        A = (0, g.t)(),
-        N = (0, m.h)(e, !1),
-        R = (0, i.Wu)([s.Z], () => {
+        [y, S, A] = (0, i.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites(), p.Z.isFetching()]),
+        N = (0, g.t)(),
+        R = (0, m.h)(e, !1),
+        P = (0, i.Wu)([s.Z], () => {
             let e = [];
             return (
-                N.forEach((t) => {
+                R.forEach((t) => {
                     let n = s.Z.getGuild(t);
                     null != n && e.push(n);
                 }),
                 e
             );
         }),
-        P = d.ZP.canUseSoundboardEverywhere(o),
-        D = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        w = (0, i.e7)([l.Z], () => {
-            let { canCreateExpressions: e } = (0, a.Gw)(D);
+        D = d.ZP.canUseSoundboardEverywhere(o),
+        w = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        L = (0, i.e7)([l.Z], () => {
+            let { canCreateExpressions: e } = (0, a.Gw)(w);
             return e;
-        }, [D]),
-        { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: x } = (0, f.k)({
+        }, [w]),
+        { canSeeRecentlyHeard: x, canSeeFrequentlyPlayed: M } = (0, f.k)({
             location: "soundboard-useSoundGrid",
             autoTrackExposure: !0,
         }),
-        M = C(),
-        k = (0, i.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
+        k = C(),
+        j = (0, i.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
     return r.useMemo(() => {
         let e = 0,
             r = 0,
             i = [];
-        return n
-            ? (T(i, E),
-              {
-                  categories: i,
-                  allSounds: E,
-                  isFetching: S,
-                  soundCounts: {
-                      favoriteSoundCount: 0,
-                      unlockedCustomSoundCount: 0,
-                      lockedCustomSoundCount: 0,
-                  },
-              })
-            : (O({
-                  sections: i,
-                  guildIds: N,
-                  allSounds: E,
-                  potentialSoundIdsForSection: Array.from(y),
-                  sectionType: h.bg.FAVORITES,
-                  sortSoundsFn: g.l,
-              }),
-              L &&
-                  O({
-                      sections: i,
-                      guildIds: N,
-                      allSounds: E,
-                      potentialSoundIdsForSection: k,
-                      sectionType: h.bg.RECENTLY_HEARD,
-                  }),
-              x &&
-                  O({
-                      sections: i,
-                      guildIds: N,
-                      allSounds: E,
-                      potentialSoundIdsForSection: M.map((e) => e.soundId),
-                      sectionType: h.bg.FREQUENTLY_USED,
-                  }),
-              void 0 !== D &&
-                  I(i, D, {
-                      currentGuildHasAddPermissions: w,
-                      allSounds: E,
-                      filterOutEmptyCurrentGuild: t,
-                      sortSoundsFn: A,
-                  }),
-              P || T(i, E),
-              v({
-                  sections: i,
-                  guilds: R,
-                  currentGuildId: null == D ? void 0 : D.id,
-                  allSounds: E,
-                  hasNitro: u,
-                  sortSoundsFn: A,
-              }),
-              P && T(i, E),
-              i.forEach((t) => {
-                  t.categoryInfo.type === h.bg.GUILD &&
-                      (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
-              }),
-              {
-                  categories: i,
-                  allSounds: E,
-                  isFetching: S,
-                  soundCounts: {
-                      favoriteSoundCount: y.size,
-                      unlockedCustomSoundCount: e,
-                      lockedCustomSoundCount: r,
-                  },
-              });
-    }, [N, E, y, k, M, x, L, D, w, t, P, R, n, S, u, A]);
+        if (n) {
+            var a;
+            return (
+                T(i, y),
+                {
+                    categories: i,
+                    availableSounds: null != (a = y.get(E.X8)) ? a : E.Hy,
+                    isFetching: A,
+                    soundCounts: {
+                        favoriteSoundCount: 0,
+                        unlockedCustomSoundCount: 0,
+                        lockedCustomSoundCount: 0,
+                    },
+                }
+            );
+        }
+        return (
+            O({
+                sections: i,
+                guildIds: R,
+                allSounds: y,
+                potentialSoundIdsForSection: Array.from(S),
+                sectionType: h.bg.FAVORITES,
+                sortSoundsFn: g.l,
+            }),
+            x &&
+                O({
+                    sections: i,
+                    guildIds: R,
+                    allSounds: y,
+                    potentialSoundIdsForSection: j,
+                    sectionType: h.bg.RECENTLY_HEARD,
+                }),
+            M &&
+                O({
+                    sections: i,
+                    guildIds: R,
+                    allSounds: y,
+                    potentialSoundIdsForSection: k.map((e) => e.soundId),
+                    sectionType: h.bg.FREQUENTLY_USED,
+                }),
+            void 0 !== w &&
+                I(i, w, {
+                    currentGuildHasAddPermissions: L,
+                    allSounds: y,
+                    filterOutEmptyCurrentGuild: t,
+                    sortSoundsFn: N,
+                }),
+            D || T(i, y),
+            v({
+                sections: i,
+                guilds: P,
+                currentGuildId: null == w ? void 0 : w.id,
+                allSounds: y,
+                hasNitro: u,
+                sortSoundsFn: N,
+            }),
+            D && T(i, y),
+            i.forEach((t) => {
+                t.categoryInfo.type === h.bg.GUILD &&
+                    (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
+            }),
+            {
+                categories: i,
+                availableSounds: Array.from(y.values()).flat(),
+                isFetching: A,
+                soundCounts: {
+                    favoriteSoundCount: S.size,
+                    unlockedCustomSoundCount: e,
+                    lockedCustomSoundCount: r,
+                },
+            }
+        );
+    }, [R, y, S, j, k, M, x, w, L, t, D, P, n, A, u, N]);
 }
 function A(e, t, n) {
     return r.useMemo(
