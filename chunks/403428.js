@@ -15,15 +15,17 @@ function a(e, t, n) {
                     _ = null == f ? void 0 : f.variantId,
                     p = null != (a = null == f ? void 0 : f.trackedVariantId) ? a : _,
                     h = null == f ? void 0 : f.revision,
-                    m = null == f ? void 0 : f.isOverride;
+                    m = null == f ? void 0 : f.isOverride,
+                    g = null == f ? void 0 : f.exposureTrackingEnabled;
                 if (
                     ((0, r.useEffect)(() => {
                         null != d &&
                             null != p &&
                             null != h &&
                             !1 === m &&
+                            !0 === g &&
                             t.trackExperimentExposure(d, o, e.location, s, h, p);
-                    }, [u, d, p, h, e.location, m]),
+                    }, [u, d, p, h, e.location, m, g]),
                     null == _)
                 )
                     return c;
@@ -39,12 +41,14 @@ function a(e, t, n) {
                     d = null == u ? void 0 : u.variantId,
                     f = null != (r = null == u ? void 0 : u.trackedVariantId) ? r : d,
                     _ = null == u ? void 0 : u.revision,
-                    p = null == u ? void 0 : u.isOverride;
+                    p = null == u ? void 0 : u.isOverride,
+                    h = null == u ? void 0 : u.exposureTrackingEnabled;
                 if (
                     (null != a &&
                         null != f &&
                         null != _ &&
                         !1 === p &&
+                        !0 === h &&
                         t.trackExperimentExposure(a, o, e.location, s, _, f),
                     null == d)
                 )

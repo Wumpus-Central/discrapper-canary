@@ -138,7 +138,7 @@ function b(e) {
                 pageIndex: T,
                 responses: y,
             });
-            b(t, P), e.isComplete && l.ZP.submitSurveyResponse(t, y, {}), I(e.blockId), S(e.pageIndex), C(e.isComplete);
+            b(t, P), e.isComplete && l.ZP.submitSurveyResponse(t, y), I(e.blockId), S(e.pageIndex), C(e.isComplete);
         }, [n, v, T, y, t, P, b]);
     i.useEffect(() => {
         0 === P.length && D();

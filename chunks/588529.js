@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => m }), n(388685), n(35282), n(49124);
+n.d(t, { ZP: () => f }), n(388685), n(35282), n(49124);
 var r = n(544891),
     i = n(570140),
     a = n(960048),
@@ -8,58 +8,6 @@ var r = n(544891),
     c = n(284881),
     u = n(981631);
 function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function h(e, t, n) {
     let r = l.Z.getSurvey(e);
     if (null == r) return null;
     let i = {};
@@ -91,7 +39,7 @@ function h(e, t, n) {
         i
     );
 }
-let m = {
+let f = {
     fetchSurveyDetails: async function (e) {
         try {
             let t = (
@@ -112,20 +60,16 @@ let m = {
             return a.Z.captureException(e), null;
         }
     },
-    submitSurveyResponse: async function (e, t, n) {
-        let i = s.H.getState().getDisplayedQuestions(e),
-            o = h(e, t, null != i ? i : []);
-        if (null == o) return { responseId: "null" };
+    submitSurveyResponse: async function (e, t) {
+        let n = s.H.getState().getDisplayedQuestions(e),
+            i = d(e, t, null != n ? n : []);
+        if (null == i) return { responseId: "null" };
         try {
             return {
                 responseId: (
                     await r.tn.post({
                         url: u.ANM.EMBEDDED_SURVEY_RESPONSE(e),
-                        body: {
-                            values_json: JSON.stringify(o),
-                            displayedFields: null != i ? i : [],
-                            metadata: p(f({}, n), { timestamp: new Date().toISOString() }),
-                        },
+                        body: { values_json: JSON.stringify(i) },
                         rejectWithError: !0,
                     })
                 ).body.responseId,
