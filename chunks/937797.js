@@ -4,6 +4,7 @@ n.d(t, {
     EO: () => l,
     eC: () => u,
     m_: () => s,
+    n0: () => d,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -97,4 +98,10 @@ let l = (0, r.le)({
                     enabled: t,
                     minutes: 0,
                 };
-    };
+    },
+    d = (0, r.le)({
+        name: "2025-11-quest-home-takeover-client-rollout",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    });

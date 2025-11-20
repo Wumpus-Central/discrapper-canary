@@ -79,6 +79,7 @@ n.d(t, {
     q8: () => tE,
     qe: () => tQ,
     t2: () => eP,
+    t6: () => nl,
     u7: () => tB,
     uN: () => t$,
     vB: () => t4,
@@ -1200,4 +1201,43 @@ function nr(e) {
 }
 function ni(e) {
     return tE({ config: e }) ? d.W.VIDEO : d.W.GAMEPLAY;
+}
+function na(e) {
+    return {
+        altText: e.alt_text,
+        assetType: e.asset_type,
+        url: e.url,
+    };
+}
+function no(e) {
+    return {
+        ctaType: e.cta_type,
+        title: e.title,
+        url: e.url,
+    };
+}
+function ns(e) {
+    return {
+        ctaType: e.cta_type,
+        title: e.title,
+        questId: e.quest_id,
+    };
+}
+function nl(e) {
+    if (1 !== e.version || !(x.rO.QUEST_HOME_BANNER in e.placements)) return null;
+    let t = e.placements[x.rO.QUEST_HOME_BANNER];
+    return null == t
+        ? null
+        : {
+              placementType: x.rO.QUEST_HOME_BANNER,
+              id: t.id,
+              labelTitle: t.label_title,
+              labelSubtitle: t.label_subtitle,
+              assetHeroImage: na(t.asset_hero_image),
+              assetSponsorImage: na(t.asset_sponsor_image),
+              ctaSponsorUrl: no(t.cta_sponsor_url),
+              ctaQuests: t.cta_quests.map(ns),
+              startsAt: t.starts_at,
+              expiresAt: t.expires_at,
+          };
 }

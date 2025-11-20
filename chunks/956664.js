@@ -9,6 +9,7 @@ n.d(t, {
     c0: () => A,
     fD: () => v,
     kD: () => S,
+    pt: () => C,
     rn: () => _,
     rv: () => h,
     zp: () => d,
@@ -149,4 +150,10 @@ async function A(e) {
     let n = await e.text(),
         r = n.indexOf("IDAT");
     return !!(r > 0) && -1 !== n.substring(0, r).indexOf("acTL");
+}
+function C(e) {
+    return new Promise((t, n) => {
+        let r = new Image();
+        r.addEventListener("load", t), r.addEventListener("error", n), (r.src = e);
+    });
 }

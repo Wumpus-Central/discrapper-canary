@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+n.d(t, { Z: () => l });
 var r = n(54381);
 n(473749);
 var i = n(907331),
@@ -8,7 +8,7 @@ var i = n(907331),
 function l(e) {
     let {
             users: t,
-            selectedUsers: n,
+            isUserSelected: n,
             onSelectionChange: l,
             isFetching: c,
             onFetchMore: u,
@@ -20,7 +20,7 @@ function l(e) {
         h = (0, i.O)((e) => {
             e && !c && (null == u || u());
         });
-    return f.length > 0 && 0 === t.size && null != _
+    return f.length > 0 && 0 === t.length && null != _
         ? (0, r.jsxs)("div", {
               className: s.emptySearchResultsContainer,
               children: [
@@ -39,12 +39,12 @@ function l(e) {
         : (0, r.jsxs)(a.u2D, {
               className: p,
               children: [
-                  Array.from(t.values()).map((e) =>
+                  t.map((e) =>
                       (0, r.jsx)(
                           o.Z,
                           {
                               user: e,
-                              checked: n.has(e.id),
+                              checked: n(e),
                               disabled: !!(null == d ? void 0 : d(e)),
                               onChange: (e, t) => {
                                   l(e, t);

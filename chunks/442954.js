@@ -1286,6 +1286,10 @@ let j = {
         let { default: e } = await Promise.all([n.e("44802"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, b({}, t));
     },
+    PremiumGroupFriendsSelectorModal: async () => {
+        let { default: e } = await n.e("86948").then(n.bind(n, 153241));
+        return (t) => (0, a.jsx)(e, b({}, t));
+    },
 };
 function _() {
     let e = l.useMemo(
