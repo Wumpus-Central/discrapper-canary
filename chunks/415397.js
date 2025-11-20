@@ -57,7 +57,7 @@ function x(e) {
         let e = f.Z.getGuild(t.guild_id);
         s()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, u.ZDy)(async () => {
-                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -116,8 +116,8 @@ function x(e) {
                         children: [
                             (0, i.jsx)("div", {
                                 className: C.leading,
-                                children: (0, i.jsx)(u.oLu, {
-                                    size: "refresh_sm",
+                                children: (0, i.jsx)(u.BFJ, {
+                                    size: "xs",
                                     className: C.icon,
                                 }),
                             }),
@@ -214,15 +214,15 @@ function j(e) {
                     lineClamp: 1,
                     children: y.intl.string(y.t["8BEiNn"]),
                 }),
-            (0, i.jsx)(u.Text, {
-                variant: "text-sm/normal",
-                className: C.userIconContainer,
-                children: (0, i.jsx)(u.oLu, {
-                    color: "currentColor",
-                    size: "xs",
-                    className: C.icon,
+            null == b &&
+                (0, i.jsx)("div", {
+                    className: C.userIconContainer,
+                    children: (0, i.jsx)(u.oLu, {
+                        color: "currentColor",
+                        size: "xs",
+                        className: C.icon,
+                    }),
                 }),
-            }),
         ],
     });
 }
