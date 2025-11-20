@@ -122,45 +122,53 @@ function _(e) {
     return (0, l.jsxs)("div", {
         className: p.rtcConnectionStatusWrapper,
         children: [
-            (0, l.jsxs)("div", {
+            (0, l.jsx)("div", {
                 className: a()(p.rtcConnectionStatus, O[t], y),
-                children: [
-                    v &&
-                        (0, l.jsx)(o.u, {
-                            text: t !== h.IE4.UNKNOWN && null != n ? "".concat(n.toFixed(0), " ms") : null,
-                            children: (0, l.jsx)(C, {
-                                quality: t,
-                                largePing: m,
-                            }),
-                        }),
-                    (0, l.jsxs)("div", {
-                        className: p.labelWrapper,
-                        children: [
-                            (0, l.jsx)(s.yRy, {
-                                targetElementRef: b,
-                                renderPopout: x,
-                                position: "top",
-                                children: (e) => {
-                                    let { onClick: t } = e;
-                                    return (0, l.jsx)(s.P3F, {
-                                        innerRef: b,
-                                        onClick: (e) => {
-                                            (0, c.v)(u.Z.RTC_PANEL, c.d.CONNECTION_STATUS), t(e);
-                                        },
-                                        children: (0, l.jsx)(g.Z, {
-                                            text: Z,
-                                            textVariant: I,
-                                            hasVideo: S,
-                                            className: N[P],
-                                            hasConnectedChannel: null != T,
+                ref: b,
+                children: (0, l.jsx)(s.yRy, {
+                    targetElementRef: b,
+                    renderPopout: x,
+                    position: "top",
+                    children: (e) => {
+                        let { onClick: i } = e;
+                        return (0, l.jsxs)(l.Fragment, {
+                            children: [
+                                v &&
+                                    (0, l.jsx)(o.u, {
+                                        text: t !== h.IE4.UNKNOWN && null != n ? "".concat(n.toFixed(0), " ms") : null,
+                                        children: (0, l.jsx)(s.P3F, {
+                                            className: p.clickablePing,
+                                            onClick: (e) => {
+                                                (0, c.v)(u.Z.RTC_PANEL, c.d.CONNECTION_STATUS), i(e);
+                                            },
+                                            children: (0, l.jsx)(C, {
+                                                quality: t,
+                                                largePing: m,
+                                            }),
                                         }),
-                                    });
-                                },
-                            }),
-                            m ? _ : null,
-                        ],
-                    }),
-                ],
+                                    }),
+                                (0, l.jsxs)("div", {
+                                    className: p.labelWrapper,
+                                    children: [
+                                        (0, l.jsx)(s.P3F, {
+                                            onClick: (e) => {
+                                                (0, c.v)(u.Z.RTC_PANEL, c.d.CONNECTION_STATUS), i(e);
+                                            },
+                                            children: (0, l.jsx)(g.Z, {
+                                                text: Z,
+                                                textVariant: I,
+                                                hasVideo: S,
+                                                className: N[P],
+                                                hasConnectedChannel: null != T,
+                                            }),
+                                        }),
+                                        m ? _ : null,
+                                    ],
+                                }),
+                            ],
+                        });
+                    },
+                }),
             }),
             m ? null : _,
         ],

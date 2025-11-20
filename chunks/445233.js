@@ -1,6 +1,7 @@
 e.exports = {
     ping: "ping__06d62",
     largePing: "largePing__06d62",
+    clickablePing: "clickablePing__06d62",
     rtcConnectionStatus: "rtcConnectionStatus__06d62",
     rtcConnectionStatusLabel: "rtcConnectionStatusLabel__06d62",
     rtcConnectionStatusConnected: "rtcConnectionStatusConnected__06d62 rtcConnectionStatusLabel__06d62",
