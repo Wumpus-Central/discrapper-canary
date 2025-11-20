@@ -22,13 +22,13 @@ var r = n(54381),
     v = n(899007),
     C = n(867176),
     I = n(451834),
-    S = n(502762),
-    E = n(952124),
-    Z = n(544989),
-    P = n(481932),
-    T = n(664794),
-    N = n(4517),
-    R = n(350207),
+    S = n(675893),
+    E = n(502762),
+    Z = n(952124),
+    P = n(544989),
+    T = n(481932),
+    N = n(664794),
+    R = n(4517),
     w = n(277117),
     A = n(52639),
     D = n(874139),
@@ -109,7 +109,7 @@ function H(e) {
             isLoaded: null == B ? void 0 : B.isLoaded,
             children: (0, r.jsx)(j.NJ, {
                 value: X,
-                children: (0, r.jsxs)(S.Z, {
+                children: (0, r.jsxs)(E.Z, {
                     ref: q,
                     user: n,
                     displayProfile: B,
@@ -123,13 +123,13 @@ function H(e) {
                             }),
                         (0, r.jsxs)(a.u2D, {
                             children: [
-                                (0, r.jsxs)(Z.Z, {
+                                (0, r.jsxs)(P.Z, {
                                     children: [
-                                        (0, r.jsx)(P.Z, {
+                                        (0, r.jsx)(T.Z, {
                                             user: n,
                                             themeType: M.l.SIDEBAR,
                                         }),
-                                        n.bot ? (0, r.jsx)(E.Z, { user: n }) : (0, r.jsx)(T.Cn, { user: n }),
+                                        n.bot ? (0, r.jsx)(Z.Z, { user: n }) : (0, r.jsx)(N.Cn, { user: n }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
@@ -153,7 +153,7 @@ function H(e) {
                                             themeType: M.l.SIDEBAR,
                                             onOpenProfile: H ? void 0 : $,
                                         }),
-                                        (0, r.jsx)(N.Z, {
+                                        (0, r.jsx)(R.Z, {
                                             user: n,
                                             channelId: k.id,
                                             themeType: M.l.SIDEBAR,
@@ -172,12 +172,11 @@ function H(e) {
                                 ee &&
                                     et &&
                                     (0, r.jsx)("div", {
-                                        className: U.widgetBreadcrumb,
-                                        children: (0, r.jsx)(R.Z, {
+                                        className: U.widgetPreviews,
+                                        children: (0, r.jsx)(S.Z, {
+                                            user: n,
                                             widgets: B.widgets,
-                                            onClick: () => {
-                                                null == $ || $({ section: L.oh.WIDGETS });
-                                            },
+                                            onOpenUserProfileModal: $,
                                         }),
                                     }),
                                 el &&

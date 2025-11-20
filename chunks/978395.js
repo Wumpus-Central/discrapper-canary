@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(442837),
     a = n(481060),
@@ -18,111 +18,110 @@ var r = n(54381),
     b = n(944043),
     y = n(678738),
     O = n(638970),
-    v = n(502762),
-    I = n(530),
-    T = n(827313),
-    S = n(350207),
+    v = n(675893),
+    I = n(502762),
+    T = n(530),
+    S = n(827313),
     A = n(420654),
     C = n(116854),
     N = n(166584),
     R = n(915014),
-    P = n(228168),
-    D = n(981631),
-    w = n(671955),
-    L = n(388032),
-    x = n(116649);
-function M(e) {
+    P = n(981631),
+    D = n(671955),
+    w = n(388032),
+    L = n(116649);
+function x(e) {
     let {
             user: t,
             currentUser: n,
-            displayProfile: M,
-            guild: k,
+            displayProfile: x,
+            guild: M,
             isHoveringOrFocusing: j,
-            onOpenProfile: U,
-            channelId: G,
-            onClose: B,
+            onOpenProfile: k,
+            channelId: U,
+            onClose: G,
         } = e,
-        Z = u.ZP.useName(null == k ? void 0 : k.id, G, t),
-        { relationshipType: F, originApplicationId: V } = (0, i.cj)([l.Z], () => ({
+        B = u.ZP.useName(null == M ? void 0 : M.id, U, t),
+        { relationshipType: Z, originApplicationId: F } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
         })),
-        H = (0, o.vh)(t.id),
-        Y = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        W = (0, f.b)({ location: "UserProfilePopoutBody" }),
-        K = t.id === n.id,
-        z = (0, _.Z)({ location: "UserProfilePopoutBody" }),
-        q = (null == M ? void 0 : M.widgets) != null && M.widgets.length > 0,
-        X = z && q,
-        Q = (0, d.I5)(n);
+        V = (0, o.vh)(t.id),
+        H = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        Y = (0, f.b)({ location: "UserProfilePopoutBody" }),
+        W = t.id === n.id,
+        K = (0, _.Z)({ location: "UserProfilePopoutBody" }),
+        z = (null == x ? void 0 : x.widgets) != null && x.widgets.length > 0,
+        q = K && z,
+        X = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
-        className: x.body,
+        className: L.body,
         children: [
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(T.Z, {
                 user: t,
-                guildId: null == k ? void 0 : k.id,
-                onOpenProfile: U,
-                onClose: B,
+                guildId: null == M ? void 0 : M.id,
+                onOpenProfile: k,
+                onClose: G,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == k ? void 0 : k.id) &&
+                    t.hasAvatarForGuild(null == M ? void 0 : M.id) &&
                     (0, r.jsx)(C.Z, {
                         user: t,
-                        nickname: Z,
+                        nickname: B,
                     }),
-                nickname: Z,
-                pronouns: null == M ? void 0 : M.pronouns,
+                nickname: B,
+                pronouns: null == x ? void 0 : x.pronouns,
                 tags: (0, r.jsx)(p.Z, {
-                    displayProfile: M,
-                    themeType: w.l.POPOUT,
-                    onClose: B,
+                    displayProfile: x,
+                    themeType: D.l.POPOUT,
+                    onClose: G,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(g.Z, { userId: t.id }),
-                        !Y &&
-                            (0, r.jsx)(T.Z, {
+                        !H &&
+                            (0, r.jsx)(S.Z, {
                                 userId: t.id,
                                 isVisible: j,
-                                onOpenProfile: U,
+                                onOpenProfile: k,
                             }),
                     ],
                 }),
             }),
-            F === D.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(v.Z.Overlay, {
+            Z === P.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(I.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == k ? void 0 : k.id,
-                        channelId: G,
-                        applicationId: V,
+                        guildId: null == M ? void 0 : M.id,
+                        channelId: U,
+                        applicationId: F,
                     }),
                 }),
-            H.map((e) =>
+            V.map((e) =>
                 (0, r.jsx)(
-                    v.Z.Overlay,
+                    I.Z.Overlay,
                     {
                         children: (0, r.jsx)(E.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: G,
+                            channelId: U,
                         }),
                     },
                     e.applicationId,
                 ),
             ),
             (0, r.jsx)(b.Z, { user: t }),
-            !K &&
+            !W &&
                 (0, r.jsx)(R.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == U ? void 0 : U({ section: e })),
+                    onOpenProfile: (e) => (null == k ? void 0 : k({ section: e })),
                 }),
             t.isProvisional
-                ? (0, r.jsx)(v.Z.Overlay, {
-                      className: x.card,
+                ? (0, r.jsx)(I.Z.Overlay, {
+                      className: L.card,
                       children: (0, r.jsx)(y.Z, {
-                          heading: L.intl.string(L.t.Iyka0U),
+                          heading: w.intl.string(w.t.Iyka0U),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
                               color: a.TVs.colors.HEADER_PRIMARY,
@@ -133,41 +132,40 @@ function M(e) {
                   })
                 : (0, r.jsx)(A.Z, {
                       user: t,
-                      bio: null == M ? void 0 : M.bio,
-                      hidePersonalInformation: Y,
-                      onClose: B,
+                      bio: null == x ? void 0 : x.bio,
+                      hidePersonalInformation: H,
+                      onClose: G,
                   }),
-            X &&
-                (0, r.jsx)(S.Z, {
-                    widgets: null == M ? void 0 : M.widgets,
-                    onClick: () => {
-                        null == U || U({ section: P.oh.WIDGETS });
-                    },
+            q &&
+                (0, r.jsx)(v.Z, {
+                    user: t,
+                    widgets: null == x ? void 0 : x.widgets,
+                    onOpenUserProfileModal: k,
                 }),
-            K &&
+            W &&
                 (0, r.jsx)(h.Z, {
-                    isPremiumUser: Q,
-                    onInteraction: B,
+                    isPremiumUser: X,
+                    onInteraction: G,
                 }),
-            W
+            Y
                 ? (0, r.jsx)(O.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == k ? void 0 : k.id,
-                      onOpenUserProfileModal: U,
-                      onClose: B,
+                      guildId: null == M ? void 0 : M.id,
+                      onOpenUserProfileModal: k,
+                      onClose: G,
                   })
                 : (0, r.jsx)(m.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == k ? void 0 : k.id,
-                      onClose: B,
+                      guildId: null == M ? void 0 : M.id,
+                      onClose: G,
                   }),
-            null != k &&
+            null != M &&
                 (0, r.jsx)(N.Z, {
                     user: t,
                     currentUser: n,
-                    guild: k,
+                    guild: M,
                 }),
         ],
     });
