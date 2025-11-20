@@ -126,9 +126,8 @@ n.d(t, {
     n(980754),
     n(824928),
     n(539854),
-    n(563775),
-    (e = n.hmd(e));
-let a = new ("undefined" == typeof TextDecoder ? (0, e.require)("util").TextDecoder : TextDecoder)("utf-8", {
+    n(563775);
+let a = new ("undefined" == typeof TextDecoder ? (0, module.require)("util").TextDecoder : TextDecoder)("utf-8", {
     ignoreBOM: !0,
     fatal: !0,
 });
@@ -159,7 +158,7 @@ function f(e, t) {
     return (e >>>= 0), s().subarray(e / 1, e / 1 + t);
 }
 let _ = 0,
-    p = new ("undefined" == typeof TextEncoder ? (0, e.require)("util").TextEncoder : TextEncoder)("utf-8"),
+    p = new ("undefined" == typeof TextEncoder ? (0, module.require)("util").TextEncoder : TextEncoder)("utf-8"),
     h =
         "function" == typeof p.encodeInto
             ? function (e, t) {
@@ -751,7 +750,7 @@ function e1(e) {
     return e.signal;
 }
 function e3() {
-    let e = void 0 === n.g ? null : n.g;
+    let e = "undefined" == typeof global ? null : global;
     return d(e) ? 0 : c(e);
 }
 function e2() {

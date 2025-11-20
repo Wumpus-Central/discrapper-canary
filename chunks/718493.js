@@ -105,7 +105,7 @@ b.a(_, async function (_, a) {
                 installLogCallback: () => c.B8,
                 rustMultiply: () => c.rs,
             });
-        var c = b(294118),
+        var c = b(981),
             n = _([c]);
         (c = (n.then ? (await n)() : n)[0]), a();
     } catch (_) {

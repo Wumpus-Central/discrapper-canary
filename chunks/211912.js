@@ -7,8 +7,8 @@ var r = a(54381),
     l = a(159691),
     o = a(481060),
     d = a(266454),
-    u = a(626135),
-    m = a(705338),
+    m = a(626135),
+    u = a(705338),
     f = a(582113),
     x = a(981631),
     h = a(231338),
@@ -19,11 +19,11 @@ var r = a(54381),
 function g(e) {
     let { transitionState: t, returnRef: a, onClose: n } = e;
     s.useEffect(() => {
-        u.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
+        m.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
             (0, d.Q3)(c.z.GAME_SHOP_ANNOUNCEMENT_MODAL);
     }, []);
     let g = s.useCallback(() => {
-        (0, m.Z)({ guildId: f.ON }), n();
+        (0, u.Z)({ guildId: f.ON }), n();
     }, [n]);
     return (0, r.jsx)(l.f6W, {
         theme: h.BR.DARK,
@@ -117,7 +117,7 @@ function g(e) {
                             ],
                         }),
                         (0, r.jsx)(l.zxk, {
-                            variant: "expressive",
+                            variant: "primary",
                             text: p.intl.string(p.t.CekBHq),
                             onClick: g,
                         }),

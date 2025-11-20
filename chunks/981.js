@@ -105,7 +105,7 @@ b.a(_, async function (_, a) {
             zr: () => n.zr,
         });
         var c = b(842321),
-            n = b(555619),
+            n = b(970711),
             d = _([c]);
         (c = (d.then ? (await d)() : d)[0]), (0, n.oT)(c), c.__wbindgen_start(), a();
     } catch (_) {

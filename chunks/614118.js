@@ -90,7 +90,7 @@ function I(e) {
                                 className: v.detailsTitleDescription,
                                 children: [
                                     (0, r.jsx)(s.Text, {
-                                        variant: "text-md/bold",
+                                        variant: "text-md/medium",
                                         lineClamp: 1,
                                         children: L.name,
                                     }),
@@ -104,7 +104,7 @@ function I(e) {
                                                     className: v.iconAsset,
                                                 }),
                                             (0, r.jsx)(s.Text, {
-                                                variant: "text-md/semibold",
+                                                variant: "text-md/bold",
                                                 lineClamp: 1,
                                                 children: (0, _.T4)(
                                                     null != (S = null == (t = L.price) ? void 0 : t.amount) ? S : 0,

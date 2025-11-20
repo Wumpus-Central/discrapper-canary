@@ -1,10 +1,10 @@
-l.r(e), l.d(e, { default: () => C }), l(35282);
+l.r(n), l.d(n, { default: () => _ }), l(35282);
 var t = l(54381),
     i = l(473749),
     a = l(120356),
-    d = l.n(a),
-    r = l(442837),
-    o = l(481060),
+    r = l.n(a),
+    o = l(442837),
+    d = l(481060),
     s = l(703656),
     c = l(602733),
     u = l(55563),
@@ -13,66 +13,55 @@ var t = l(54381),
     I = l(705338),
     x = l(436585),
     m = l(720983),
-    v = l(323540),
-    f = l(171524),
-    h = l(140594);
-function j(n) {
-    var e, l;
-    let { storefront: a, guildId: d, selectedPageIndex: r, selectedSku: o } = n;
+    h = l(323540),
+    f = l(140594);
+function v(e) {
+    let { storefront: n, guildId: l, selectedPageIndex: a, selectedSku: r } = e;
     return (
         i.useEffect(() => {
-            null != o
+            null != r
                 ? (0, x.g)({
-                      skuId: o.id,
-                      applicationId: a.applicationId,
-                      guildId: d,
+                      skuId: r.id,
+                      applicationId: n.applicationId,
+                      guildId: l,
                       isStorefront: !0,
                       onClose: () => {
                           "POP" !== (0, s.s1)().action &&
                               (0, I.Z)({
-                                  guildId: d,
-                                  pageIndex: r,
+                                  guildId: l,
+                                  pageIndex: a,
                               });
                       },
                   })
-                : null == o && (0, x.U)();
-        }, [d, r, o, a.applicationId]),
-        (0, t.jsxs)(t.Fragment, {
+                : null == r && (0, x.U)();
+        }, [l, a, r, n.applicationId]),
+        (0, t.jsxs)("div", {
+            className: f.container,
             children: [
-                (0, t.jsxs)("div", {
-                    className: h.container,
-                    children: [
-                        (0, t.jsx)(m.Z, {
-                            guildId: d,
-                            storefront: a,
-                            selectedPageIndex: r,
-                        }),
-                        (0, t.jsx)(v.$, {
-                            applicationId: a.applicationId,
-                            guildId: d,
-                            page: a.pages[r],
-                        }),
-                    ],
+                (0, t.jsx)(m.Z, {
+                    guildId: l,
+                    storefront: n,
+                    selectedPageIndex: a,
                 }),
-                (0, t.jsx)(f.n, {
-                    applicationId: a.applicationId,
-                    backgroundImageAssetId:
-                        null == (l = a.pages[r]) || null == (e = l.leaderboard) ? void 0 : e.backgroundImageAssetId,
+                (0, t.jsx)(h.$, {
+                    applicationId: n.applicationId,
+                    guildId: l,
+                    page: n.pages[a],
                 }),
             ],
         })
     );
 }
-function C(n) {
-    let { match: e } = n,
-        { guildId: l, gameShopPageIndex: a, gameShopSkuId: s } = e.params,
+function _(e) {
+    let { match: n } = e,
+        { guildId: l, gameShopPageIndex: a, gameShopSkuId: s } = n.params,
         I = (0, g.Z)({ guildId: l }),
-        x = (0, r.e7)([u.Z], () => u.Z.get(s), [s]);
+        x = (0, o.e7)([u.Z], () => u.Z.get(s), [s]);
     (0, c.p2)();
     let m = i.useMemo(() => {
         if (null == a) return 0;
-        let n = parseInt(a, 10);
-        return isNaN(n) || (null != I && null != I.storefront && n >= I.storefront.pages.length) ? 0 : n;
+        let e = parseInt(a, 10);
+        return isNaN(e) || (null != I && null != I.storefront && e >= I.storefront.pages.length) ? 0 : e;
     }, [a, I]);
     return (i.useEffect(() => {
         null != l && (0, p.m0)(l, m, null != s ? s : null);
@@ -81,14 +70,14 @@ function C(n) {
         !(null == I ? void 0 : I.loading) &&
         null != l &&
         (null == I ? void 0 : I.storefront) != null)
-        ? (0, t.jsx)(j, {
+        ? (0, t.jsx)(v, {
               storefront: I.storefront,
               guildId: l,
               selectedPageIndex: m,
               selectedSku: x,
           })
         : (0, t.jsx)("div", {
-              className: d()(h.spinner, h.container),
-              children: (0, t.jsx)(o.$jN, {}),
+              className: r()(f.spinner, f.container),
+              children: (0, t.jsx)(d.$jN, {}),
           });
 }
