@@ -415,7 +415,14 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     PromotionsManager: {
-        actions: ["POST_CONNECTION_OPEN", "EXPERIMENTS_FETCH_SUCCESS"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "EXPERIMENTS_FETCH_SUCCESS",
+            "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+            "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+            "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
+            "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
+        ],
         inlineRequire: () => n(349540).Z,
     },
     RelationshipManager: {

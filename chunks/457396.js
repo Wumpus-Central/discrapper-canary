@@ -34,7 +34,7 @@ var r = n(54381),
     x = n(331972),
     A = n(622909),
     Z = n(639119),
-    w = n(1844),
+    w = n(715130),
     L = n(655525),
     R = n(244989),
     D = n(675957),
@@ -136,7 +136,7 @@ let J = (e) => {
         let [eU, eG] = (0, _.US)(eM, void 0, !0);
         eN && ek.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK);
         let [eB, eH] = (0, _.US)(ek, void 0, !0),
-            eV = (0, s.e7)([w.Z], () => w.Z.getMarketingComponentByType(a.I.PREMIUM_TAB)),
+            eV = (0, w.H)(a.I.PREMIUM_TAB),
             [eF, ez] = (0, _.TE)(
                 null != eV && "premiumTab" === eV.properties.properties.oneofKind
                     ? o.z.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
