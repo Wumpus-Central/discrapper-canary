@@ -24,6 +24,6 @@ let c = u.n.NOTIFICATIONS_ADVANCED_ACCORDION,
         buildLayout: () => [r.Z, s.Z, a.Z],
     }),
     T = (0, l.k4)(u.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
-        useNavigationTitle: () => o.intl.string(o.t["31DySj"]),
+        useTitle: () => o.intl.string(o.t["31DySj"]),
         buildLayout: () => [E],
     });
