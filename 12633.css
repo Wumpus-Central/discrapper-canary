@@ -12293,11 +12293,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
-    max-width: 240px;
+    max-width: var(--custom-popover-width);
     padding: var(--space-16);
     position: relative;
     text-align: center;
-    width: 240px;
+    width: var(--custom-popover-width);
     --custom-popover-caret-gradient-color-start: transparent;
     --custom-popover-caret-gradient-color-end: transparent
 }
@@ -12322,11 +12322,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
-    max-width: 240px;
+    max-width: var(--custom-popover-width);
     padding: var(--space-16);
     position: relative;
     text-align: center;
-    width: 240px
+    width: var(--custom-popover-width)
 }
 
 .popover--video_d6f39b,
@@ -12483,8 +12483,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .caret__6ec79 {
     --custom-caret-half-width: 11px;
     --custom-caret-half-height: 7px;
-    --custom-caret-edge-offset-horizontal: 20px;
-    --custom-caret-edge-offset-vertical: 22px;
     --custom-caret-horizontal-distance: 18px;
     --custom-caret-border-overlap: 1px;
     color: transparent;

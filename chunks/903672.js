@@ -132,14 +132,8 @@ function T(e) {
                 gotoChannel: n,
                 children:
                     null != i
-                        ? (0, r.jsx)(s.M0o, {
-                              className: I.closeButton,
-                              tooltip: S.intl.string(S.t.cpT0Cq),
-                              color: s.YX$.TERTIARY,
-                              icon: (0, r.jsx)(s.Dio, {
-                                  size: "xs",
-                                  color: "currentColor",
-                              }),
+                        ? (0, r.jsx)(s.PZ7, {
+                              size: "sm",
                               onClick: () => c.Z.deleteRecentMention(t.id),
                           })
                         : null,
