@@ -1,4 +1,4 @@
-n.d(t, { Z: () => es }), n(388685);
+n.d(t, { Z: () => eo }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -14,36 +14,35 @@ var r = n(54381),
     h = n(857595),
     m = n(607070),
     g = n(627845),
-    E = n(368763),
-    b = n(514361),
-    y = n(93262),
-    O = n(990924),
-    v = n(313201),
-    I = n(266454),
-    T = n(786761),
-    S = n(3148),
-    A = n(739566),
-    C = n(753206),
-    N = n(921801),
-    R = n(984802),
-    P = n(594174),
-    D = n(358085),
-    w = n(210887),
-    L = n(740492),
-    x = n(695346),
-    M = n(313789),
-    k = n(329013),
-    j = n(333859),
-    U = n(273313),
-    G = n(518596),
-    B = n(726985),
-    Z = n(981631),
-    F = n(921944),
-    V = n(959517),
-    H = n(388032),
-    Y = n(226518),
-    W = n(197571);
-function K(e, t, n) {
+    E = n(514361),
+    b = n(93262),
+    y = n(990924),
+    O = n(313201),
+    v = n(266454),
+    I = n(786761),
+    T = n(3148),
+    S = n(739566),
+    A = n(753206),
+    C = n(921801),
+    N = n(984802),
+    R = n(594174),
+    P = n(358085),
+    D = n(210887),
+    w = n(740492),
+    L = n(695346),
+    x = n(313789),
+    M = n(329013),
+    k = n(333859),
+    j = n(273313),
+    U = n(518596),
+    G = n(726985),
+    B = n(981631),
+    Z = n(921944),
+    F = n(959517),
+    V = n(388032),
+    H = n(226518),
+    Y = n(197571);
+function W(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +55,7 @@ function K(e, t, n) {
         e
     );
 }
-function z(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,12 +66,12 @@ function z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                K(e, t, n[t]);
+                W(e, t, n[t]);
             });
     }
     return e;
 }
-function q(e, t) {
+function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -84,154 +83,154 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : q(Object(t)).forEach(function (n) {
+            : z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let Q = "cozy",
-    J = "compact",
-    $ = (0, v.hQ)(),
-    ee = (0, v.hQ)(),
-    et = "1337",
-    en = (e) => {
+let X = "cozy",
+    Q = "compact",
+    J = (0, O.hQ)(),
+    $ = (0, O.hQ)(),
+    ee = "1337",
+    et = (e) => {
         let t = 0;
         return [
-            (0, T.e5)(
-                X(
-                    z(
+            (0, I.e5)(
+                q(
+                    K(
                         {},
-                        (0, S.ZP)({
-                            channelId: et,
-                            content: H.intl.string(H.t.oZxkEq),
+                        (0, T.ZP)({
+                            channelId: ee,
+                            content: V.intl.string(V.t.oZxkEq),
                         }),
                     ),
                     {
-                        state: Z.yb.SENT,
+                        state: B.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, T.e5)(
-                X(
-                    z(
+            (0, I.e5)(
+                q(
+                    K(
                         {},
-                        (0, S.ZP)({
-                            channelId: et,
-                            content: (0, u.wj)(e) ? H.intl.string(H.t["WGb/v7"]) : H.intl.string(H.t["62m4mz"]),
+                        (0, T.ZP)({
+                            channelId: ee,
+                            content: (0, u.wj)(e) ? V.intl.string(V.t["WGb/v7"]) : V.intl.string(V.t["62m4mz"]),
                         }),
                     ),
                     {
-                        state: Z.yb.SENT,
+                        state: B.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, T.e5)(
-                X(
-                    z(
+            (0, I.e5)(
+                q(
+                    K(
                         {},
-                        (0, S.ZP)({
-                            channelId: et,
-                            content: H.intl.string(H.t.a0Byo5),
+                        (0, T.ZP)({
+                            channelId: ee,
+                            content: V.intl.string(V.t.a0Byo5),
                         }),
                     ),
                     {
-                        state: Z.yb.SENT,
+                        state: B.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, T.e5)(
-                X(
-                    z(
+            (0, I.e5)(
+                q(
+                    K(
                         {},
-                        (0, S.ZP)({
-                            channelId: et,
-                            content: H.intl.string(H.t.bmwEWJ),
+                        (0, T.ZP)({
+                            channelId: ee,
+                            content: V.intl.string(V.t.bmwEWJ),
                         }),
                     ),
                     {
-                        state: Z.yb.SENT,
+                        state: B.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, T.e5)(
-                X(
-                    z(
+            (0, I.e5)(
+                q(
+                    K(
                         {},
-                        (0, S.ZP)({
-                            channelId: et,
-                            content: H.intl.string(H.t["hK9QW/"]),
+                        (0, T.ZP)({
+                            channelId: ee,
+                            content: V.intl.string(V.t["hK9QW/"]),
                         }),
                     ),
                     {
-                        state: Z.yb.SENT,
+                        state: B.yb.SENT,
                         id: "".concat(t),
                     },
                 ),
             ),
         ];
     },
-    er = () =>
+    en = () =>
         (0, r.jsxs)("div", {
-            className: Y.themeTitle,
+            className: H.themeTitle,
             children: [
                 (0, r.jsxs)("div", {
-                    className: Y.themeTitleContainer,
+                    className: H.themeTitleContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: Y.title,
-                            children: H.intl.string(H.t["0EzVst"]),
+                            className: H.title,
+                            children: V.intl.string(V.t["0EzVst"]),
                         }),
                         (0, r.jsx)(d.R94, {
                             type: d.R94.Types.DESCRIPTION,
-                            className: Y.subtext,
-                            children: H.intl.string(H.t.PV3dGX),
+                            className: H.subtext,
+                            children: V.intl.string(V.t.PV3dGX),
                         }),
                     ],
                 }),
-                (0, r.jsx)(k.g, {}),
+                (0, r.jsx)(M.g, {}),
             ],
         }),
-    ei = () =>
-        H.intl.format(H.t.Jae48E, {
+    er = () =>
+        V.intl.format(V.t.Jae48E, {
             onClick: () => {
-                (0, G.openUserSettings)(M.n.ACCESSIBILITY_PANEL, { section: Z.oAB.ACCESSIBILITY });
+                (0, U.openUserSettings)(x.n.ACCESSIBILITY_PANEL, { section: B.oAB.ACCESSIBILITY });
             },
         });
-class ea extends i.Component {
+class ei extends i.Component {
     renderZoomSlider() {
         return (
-            !D.isPlatformEmbedded,
+            !P.isPlatformEmbedded,
             (0, r.jsx)(d.iRW, {
-                label: H.intl.string(H.t.i19n5L),
-                description: H.intl.string(H.t.ip0uSf),
-                helperText: H.intl.format(H.t.OMkSUo, { modKey: p.Z.modKey }),
+                label: V.intl.string(V.t.i19n5L),
+                description: V.intl.string(V.t.ip0uSf),
+                helperText: V.intl.format(V.t.OMkSUo, { modKey: p.Z.modKey }),
                 initialValue: this.props.zoom,
-                defaultValue: Z.yqN.ZOOM_DEFAULT,
-                markers: Z.yqN.ZOOM_SCALES,
+                defaultValue: B.yqN.ZOOM_DEFAULT,
+                markers: B.yqN.ZOOM_SCALES,
                 stickToMarkers: !0,
                 onValueChange: this.handleZoomChange,
                 onValueRender: this.handleSliderRender,
-                "aria-labelledby": $,
+                "aria-labelledby": J,
             })
         );
     }
     renderFontScaleSlider() {
         return (0, r.jsx)(d.iRW, {
-            label: H.intl.string(H.t.qPOqoK),
-            description: H.intl.string(H.t.XrtbPo),
+            label: V.intl.string(V.t.qPOqoK),
+            description: V.intl.string(V.t.XrtbPo),
             initialValue: this.props.fontSize,
-            defaultValue: Z.yqN.FONT_SIZE_DEFAULT,
-            markers: Z.yqN.FONT_SIZES,
+            defaultValue: B.yqN.FONT_SIZE_DEFAULT,
+            markers: B.yqN.FONT_SIZES,
             stickToMarkers: !0,
             onValueChange: this.handleFontSizeChange,
             onValueRender: this.handleSliderRenderPX,
@@ -242,17 +241,17 @@ class ea extends i.Component {
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: t } = this.props;
         return (0, r.jsx)(d.iRW, {
-            label: H.intl.string(H.t.Q6lKkg),
-            description: H.intl.string(H.t.p7eUrb),
+            label: V.intl.string(V.t.Q6lKkg),
+            description: V.intl.string(V.t.p7eUrb),
             initialValue: t,
-            defaultValue: e ? V.c8 : V.pq,
-            markers: V.fP,
+            defaultValue: e ? F.c8 : F.pq,
+            markers: F.fP,
             stickToMarkers: !0,
             onValueChange: this.handleMessageSpacingChange,
             onValueRender: this.handleSliderRenderPX,
             onMarkerRender: this.handleSliderRenderPX,
             getAriaValueText: this.handleSliderValueText,
-            "aria-labelledby": ee,
+            "aria-labelledby": $,
         });
     }
     renderPreview() {
@@ -261,22 +260,22 @@ class ea extends i.Component {
         return (0, r.jsx)(d.Rny, {
             children: (0, r.jsx)(d.Zbd, {
                 className: o()(
-                    Y.preview,
-                    W.marginBottom40,
-                    e ? Y.compactPreview : void 0,
-                    "group-spacing-".concat(null != n ? n : e ? V.c8 : V.pq),
+                    H.preview,
+                    Y.marginBottom40,
+                    e ? H.compactPreview : void 0,
+                    "group-spacing-".concat(null != n ? n : e ? F.c8 : F.pq),
                 ),
                 outline: !0,
                 "aria-hidden": !0,
                 children: a.map((t, n) =>
                     (0, r.jsx)(
-                        C.Z,
+                        A.Z,
                         {
-                            author: (0, A.ZH)(t),
+                            author: (0, S.ZH)(t),
                             message: t,
                             compact: e,
                             isGroupStart: n % 2 == 0,
-                            className: 0 === n ? Y.firstMessage : void 0,
+                            className: 0 === n ? H.firstMessage : void 0,
                             hideSimpleEmbedContent: i,
                         },
                         t.id,
@@ -289,39 +288,39 @@ class ea extends i.Component {
         let { useForcedColors: e } = this.props;
         return e
             ? (0, r.jsx)(d.C3N, {
-                  label: H.intl.string(H.t.Ksh3ik),
+                  label: V.intl.string(V.t.Ksh3ik),
                   children: (0, r.jsx)(d.Wn, {
                       messageType: d.QYI.INFO,
-                      children: (0, g.b)() ? (0, r.jsx)(ei, {}) : H.intl.string(H.t.AUMSZP),
+                      children: (0, g.b)() ? (0, r.jsx)(er, {}) : V.intl.string(V.t.AUMSZP),
                   }),
               })
             : (0, r.jsx)(d.C3N, {
-                  label: H.intl.string(H.t.Ksh3ik),
+                  label: V.intl.string(V.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
-                      title: (0, r.jsx)(er, {}),
-                      children: (0, r.jsx)(k.i, {}),
+                      title: (0, r.jsx)(en, {}),
+                      children: (0, r.jsx)(M.i, {}),
                   }),
               });
     }
     renderTimestampHourCycle() {
         let { timestampHourCycle: e } = this.props;
         return (0, r.jsx)(d.FXm, {
-            label: H.intl.string(H.t.dyamEI),
+            label: V.intl.string(V.t.dyamEI),
             options: [
                 {
-                    name: H.intl.string(H.t.FMWYvb),
+                    name: V.intl.string(V.t.FMWYvb),
                     value: c.hg.AUTO,
                 },
                 {
-                    name: H.intl.string(H.t.p8NOwi),
+                    name: V.intl.string(V.t.p8NOwi),
                     value: c.hg.H12,
                 },
                 {
-                    name: H.intl.string(H.t["+o/sOo"]),
+                    name: V.intl.string(V.t["+o/sOo"]),
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => x.hg.updateSetting(e),
+            onChange: (e) => L.hg.updateSetting(e),
             value: e,
         });
     }
@@ -332,7 +331,7 @@ class ea extends i.Component {
         return "".concat(e.toFixed(0), "px");
     }
     handleSliderValueText(e) {
-        return H.intl.formatToPlainString(H.t["0hpvOV"], { value: e });
+        return V.intl.formatToPlainString(V.t["0hpvOV"], { value: e });
     }
     handleFontSizeChange(e) {
         (0, h.oL)(e);
@@ -352,173 +351,169 @@ class ea extends i.Component {
     }
     render() {
         let { density: e } = this.props,
-            t = (0, r.jsxs)(N.F, {
-                setting: B.s6.APPEARANCE_THEME,
+            t = (0, r.jsxs)(C.F, {
+                setting: G.s6.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()],
             }),
-            n = (0, r.jsx)(N.F, {
-                setting: B.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(j.c, {}),
+            n = (0, r.jsx)(C.F, {
+                setting: G.s6.APPEARANCE_ICON,
+                children: (0, r.jsx)(k.c, {}),
             }),
             i = [
                 {
-                    name: H.intl.string(H.t["7iegX4"]),
+                    name: V.intl.string(V.t["7iegX4"]),
                     value: c.Pi.COMPACT,
                 },
                 {
-                    name: H.intl.string(H.t.bBvAEH),
+                    name: V.intl.string(V.t.bBvAEH),
                     value: c.Pi.DEFAULT,
                 },
                 {
-                    name: H.intl.string(H.t["4cuYHx"]),
+                    name: V.intl.string(V.t["4cuYHx"]),
                     value: c.Pi.COZY,
                 },
             ],
-            a = (0, r.jsxs)(N.F, {
-                setting: B.s6.APPEARANCE_LIST_SPACING,
+            a = (0, r.jsxs)(C.F, {
+                setting: G.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, r.jsx)(d.FXm, {
-                        label: H.intl.string(H.t["C/5V0A"]),
-                        description: H.intl.string(H.t.QLZhYk),
+                        label: V.intl.string(V.t["C/5V0A"]),
+                        description: V.intl.string(V.t.QLZhYk),
                         options: i,
                         onChange: (e) => this.handleUIDensityChange({ value: e }),
                         value: e,
                     }),
-                    (0, r.jsx)(d.izJ, { className: Y.divider }),
+                    (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            o = (0, r.jsxs)(N.F, {
-                setting: B.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+            o = (0, r.jsxs)(C.F, {
+                setting: G.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, r.jsxs)(d.C3N, {
-                        label: H.intl.string(H.t["2ed/sA"]),
-                        description: H.intl.string(H.t.u9N6Qh),
+                        label: V.intl.string(V.t["2ed/sA"]),
+                        description: V.intl.string(V.t.u9N6Qh),
                         children: [
                             (0, r.jsx)(d.FXm, {
-                                label: H.intl.string(H.t.nKRoPv),
-                                description: H.intl.string(H.t.QntEEG),
+                                label: V.intl.string(V.t.nKRoPv),
+                                description: V.intl.string(V.t.QntEEG),
                                 options: [
                                     {
-                                        name: H.intl.string(H.t.Jqj4cZ),
-                                        value: Q,
+                                        name: V.intl.string(V.t.Jqj4cZ),
+                                        value: X,
                                     },
                                     {
-                                        name: H.intl.string(H.t["1JNcPS"]),
-                                        value: J,
+                                        name: V.intl.string(V.t["1JNcPS"]),
+                                        value: Q,
                                     },
                                 ],
                                 onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
-                                value: this.props.messageDisplayCompact ? J : Q,
+                                value: this.props.messageDisplayCompact ? Q : X,
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, r.jsx)(d.rsf, {
-                                    label: H.intl.string(H.t["//vhWi"]),
+                                    label: V.intl.string(V.t["//vhWi"]),
                                     checked: !this.props.displayCompactAvatars,
                                     onChange: (e) => this.handleDisplayCompactAvatarsChanged(!e),
                                 }),
                             this.renderMessageGroupSpacingSlider(),
                         ],
                     }),
-                    (0, r.jsx)(d.izJ, { className: Y.divider }),
+                    (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            s = (0, r.jsxs)(N.F, {
-                setting: B.s6.APPEARANCE_SCALING_SPACING,
+            s = (0, r.jsxs)(C.F, {
+                setting: G.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, r.jsxs)(d.C3N, {
-                        label: H.intl.string(H.t["0Yh+ZX"]),
+                        label: V.intl.string(V.t["0Yh+ZX"]),
                         children: [this.renderFontScaleSlider(), this.renderZoomSlider()],
                     }),
-                    (0, r.jsx)(d.izJ, { className: Y.divider }),
+                    (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            l = (0, r.jsx)(N.F, {
-                setting: B.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
+            l = (0, r.jsx)(C.F, {
+                setting: G.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                 children: this.renderTimestampHourCycle(),
             }),
             u = (0, r.jsx)(d.Text, {
                 variant: "text-md/normal",
-                className: Y.a11yCallout,
-                children: (0, r.jsx)(ei, {}),
+                className: H.a11yCallout,
+                children: (0, r.jsx)(er, {}),
             });
-        return (0, r.jsxs)(U.Z, {
-            title: H.intl.string(H.t["iHH+ky"]),
+        return (0, r.jsxs)(j.Z, {
+            title: V.intl.string(V.t["iHH+ky"]),
             children: [t, n, a, o, s, l, u],
         });
     }
     constructor(...e) {
         super(...e),
-            K(this, "darkMessages", en(Z.BRd.DARK)),
-            K(this, "lightMessages", en(Z.BRd.LIGHT)),
-            K(this, "handleDisplayCompactAvatarsChanged", (e) => {
+            W(this, "darkMessages", et(B.BRd.DARK)),
+            W(this, "lightMessages", et(B.BRd.LIGHT)),
+            W(this, "handleDisplayCompactAvatarsChanged", (e) => {
                 f.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
-            K(this, "handleDesktopRefreshEnabledChanged", (e) => {
+            W(this, "handleDesktopRefreshEnabledChanged", (e) => {
                 f.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
             }),
-            K(this, "handleMessageDisplayModeChange", (e) => {
+            W(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                x.jU.updateSetting(t === J), (0, h.ZZ)();
+                L.jU.updateSetting(t === Q), (0, h.ZZ)();
             }),
-            K(this, "handleUIDensityChange", (e) => {
+            W(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && x.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && L.YC.updateSetting(t);
             });
     }
 }
-let eo = (e) => {
-    (0, I.zu)(e) ||
-        (0, I.Q3)(e, {
-            dismissAction: F.L.AUTO,
+let ea = (e) => {
+    (0, v.zu)(e) ||
+        (0, v.Q3)(e, {
+            dismissAction: Z.L.AUTO,
             forceTrack: !0,
         });
 };
-function es() {
-    let e = x.jU.useSetting(),
-        t = x.RS.useSetting(),
-        n = x.NA.useSetting(),
-        a = x.L1.useSetting(),
-        o = x.hg.useSetting(),
-        c = x.YC.useSetting(),
-        u = O.y.useConfig({ location: "UserSettingsAppearance" }).enabled,
-        d = (0, E.T)("UserSettingsAppearance");
+function eo() {
+    let e = L.jU.useSetting(),
+        t = L.RS.useSetting(),
+        n = L.NA.useSetting(),
+        i = L.L1.useSetting(),
+        a = L.hg.useSetting(),
+        o = L.YC.useSetting(),
+        c = y.y.useConfig({ location: "UserSettingsAppearance" }).enabled;
     (0, _.ZP)(() => {
-        eo(l.z.CLIENT_THEMES_SETTINGS_BADGE),
-            eo(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE),
-            eo(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK),
-            eo(l.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
-            u && (0, y.w)();
-    }),
-        i.useEffect(() => {
-            d && eo(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
-        }, [d]);
-    let f = (0, R.A6)(),
-        p = (0, s.cj)([w.Z, L.ZP, m.Z, P.default, b.Z], () => {
+        ea(l.z.CLIENT_THEMES_SETTINGS_BADGE),
+            ea(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE),
+            ea(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK),
+            ea(l.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
+            c && (0, b.w)();
+    });
+    let u = (0, N.A6)(),
+        d = (0, s.cj)([D.Z, w.ZP, m.Z, R.default, E.Z], () => {
             var e, t;
             return {
-                theme: w.Z.theme,
+                theme: D.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: L.ZP.useSystemTheme,
+                useSystemTheme: w.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,
                 zoom: m.Z.zoom,
                 messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: L.ZP.displayCompactAvatars,
-                isStaff: null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
-                gradientPreset: b.Z.gradientPreset,
+                displayCompactAvatars: w.ZP.displayCompactAvatars,
+                isStaff: null != (t = null == (e = R.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
+                gradientPreset: E.Z.gradientPreset,
             };
         });
     return (0, r.jsx)(
-        ea,
-        z(
+        ei,
+        K(
             {
                 messageDisplayCompact: e,
                 hideSimpleEmbedContent: t && n,
-                clientTheme: a,
-                timestampHourCycle: o,
-                density: c,
-                darkSidebar: f,
+                clientTheme: i,
+                timestampHourCycle: a,
+                density: o,
+                darkSidebar: u,
             },
-            p,
+            d,
         ),
     );
 }

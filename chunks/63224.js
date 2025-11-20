@@ -5,5 +5,4 @@ e.exports = {
     disabled: "disabled__8a3d7",
     lockedBadgeContainer: "lockedBadgeContainer__8a3d7",
     lockedBadge: "lockedBadge__8a3d7",
-    redCircle: "redCircle__8a3d7",
 };

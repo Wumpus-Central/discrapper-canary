@@ -60,8 +60,6 @@ var a = (function (e) {
             (e.IN_RAINBOWS = "InRainbowsIcon"),
             (e.COLOR_WAVE = "ColorWaveIcon"),
             (e.MIDNIGHT_PRISM = "MidnightPrismIcon"),
-            (e.TRICK = "TrickIcon"),
-            (e.TREAT = "TreatIcon"),
             e
         );
     })({});

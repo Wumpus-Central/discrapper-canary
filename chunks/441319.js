@@ -1,7 +1,7 @@
 n.d(t, {
-    M9: () => P,
-    aW: () => x,
-    wu: () => L,
+    M9: () => N,
+    aW: () => w,
+    wu: () => D,
 }),
     n(388685);
 var r = n(997945),
@@ -28,11 +28,9 @@ var r = n(997945),
     T = n(405571),
     S = n(730886),
     A = n(473974),
-    C = n(936684),
-    N = n(487483),
-    R = n(563856);
-let P = 60;
-function D() {
+    C = n(563856);
+let N = 60;
+function R() {
     return {
         id: r.aH.DEFAULT,
         iconSource: o,
@@ -40,25 +38,8 @@ function D() {
         isPremium: !1,
     };
 }
-function w() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+function P() {
     return [
-        ...(e
-            ? [
-                  {
-                      id: r.Ru.TRICK,
-                      iconSource: N,
-                      isPremium: !0,
-                      name: i.intl.string(i.t["6Zuivx"]),
-                  },
-                  {
-                      id: r.Ru.TREAT,
-                      iconSource: C,
-                      isPremium: !0,
-                      name: i.intl.string(i.t["2UeOlY"]),
-                  },
-              ]
-            : []),
         {
             id: r.Ru.BRAND_DARK,
             iconSource: u,
@@ -115,7 +96,7 @@ function w() {
         },
         {
             id: r.Ru.Y2K,
-            iconSource: R,
+            iconSource: C,
             isPremium: !0,
             name: i.intl.string(i.t["s+KoXO"]),
         },
@@ -193,11 +174,10 @@ function w() {
         },
     ];
 }
-function L() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return [D(), ...w(e)];
+function D() {
+    return [R(), ...P()];
 }
-function x(e) {
-    let t = L(!0).find((t) => t.id === e);
-    return null != t ? t : D();
+function w(e) {
+    let t = D().find((t) => t.id === e);
+    return null != t ? t : R();
 }
