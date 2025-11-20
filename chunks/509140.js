@@ -45,12 +45,10 @@ let p = new a.Yd("OverlayV3NativeModuleStore"),
         return () => (null == y && (y = e()), y);
     })();
 function v(e) {
-    !__OVERLAY__ && f.iP && (m = e);
+    !__OVERLAY__ && f.iP && m !== e && ((m = e), e && (0, l.setOutOfProcessSupport)(!0));
 }
 function I() {
-    !__OVERLAY__ &&
-        f.iP &&
-        ((b = null), (E = !1), p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled), (0, l.setOutOfProcessSupport)(!0));
+    !__OVERLAY__ && f.iP && ((b = null), (E = !1), p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled));
 }
 function T(e) {
     let { oopEnabled: t } = e;
