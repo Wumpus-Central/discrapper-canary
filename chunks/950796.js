@@ -64,7 +64,8 @@ function T(e) {
 function S(e) {
     let { leading: t, title: n, trailing: a, windowKey: s, className: l } = e,
         c = (0, _.getPlatform)(),
-        u = i.useCallback(() => v(s), [s]);
+        u = i.useCallback(() => v(s), [s]),
+        d = c === _.PlatformTypes.WINDOWS || c === _.PlatformTypes.LINUX;
     return (0, r.jsxs)("div", {
         className: o()(m.bar, l),
         onDoubleClick: u,
@@ -83,7 +84,7 @@ function S(e) {
                 onDoubleClick: I,
                 children: [
                     a,
-                    c === _.PlatformTypes.WINDOWS &&
+                    d &&
                         (0, r.jsx)(T, {
                             windowKey: s,
                             showDivider: null != a,
@@ -104,21 +105,21 @@ function A(e) {
             (null != e && Date.now() - e < g) || v(a);
         }, [a]),
         f = s === _.PlatformTypes.WINDOWS;
-    return s === _.PlatformTypes.WEB
-        ? null
-        : (0, r.jsx)("div", {
-              className: o()(m.bar, m.systemBar, {
-                  [m.fixed]: t,
-                  [m.show]: n,
-              }),
-              onClick: u,
-              onDoubleClick: d,
-              children:
-                  f &&
-                  (0, r.jsx)("div", {
-                      className: m.trailing,
-                      onDoubleClick: I,
-                      children: (0, r.jsx)(T, { windowKey: a }),
-                  }),
-          });
+    if (s === _.PlatformTypes.WEB) return null;
+    let p = f || s === _.PlatformTypes.LINUX;
+    return (0, r.jsx)("div", {
+        className: o()(m.bar, m.systemBar, {
+            [m.fixed]: t,
+            [m.show]: n,
+        }),
+        onClick: u,
+        onDoubleClick: d,
+        children:
+            p &&
+            (0, r.jsx)("div", {
+                className: m.trailing,
+                onDoubleClick: I,
+                children: (0, r.jsx)(T, { windowKey: a }),
+            }),
+    });
 }
