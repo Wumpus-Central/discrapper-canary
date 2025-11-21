@@ -18,31 +18,32 @@ let u = (e) => {
         let t = (0, s.zL)(o.jE.HERO_LOGO),
             n = (0, s.zL)(o.jE.HERO_BANNER_STATIC),
             i = (0, s.zL)(o.jE.HERO_BANNER_ANIMATED),
-            l = (0, a.Y)("HeroBlock");
+            l = (0, s.zL)(o.jE.HERO_BANNER_RIVE),
+            c = (0, a.Y)("HeroBlock");
         return r.useMemo(() => {
             var r, a;
-            let s = null != n || null != i,
+            let s = null != n || null != i || null != l,
                 o = null != n && null == i;
-            if (l)
+            if (c)
                 return {
                     bannerStyleOverrides: s ? void 0 : e.bannerDisplayConfig,
                     logoStyleOverrides: s ? void 0 : e.logoDisplayConfig,
                     heroLogo: null != t ? t : e.heroLogoUrl,
                     heroBannerStatic: null != n ? n : e.heroBannerUrl,
                     heroBannerAnimated: o ? void 0 : null != i ? i : e.heroBannerAnimatedUrl,
-                    heroBannerRive: null != i ? i : e.heroRiveUrl,
+                    heroBannerRive: null != l ? l : e.heroRiveUrl,
                 };
-            let c = null == (r = e.bannerAsset) ? void 0 : r.animated,
-                u = (null == c ? void 0 : c.endsWith(".riv")) ? c : e.heroRiveUrl;
+            let u = null == (r = e.bannerAsset) ? void 0 : r.animated,
+                d = (null == u ? void 0 : u.endsWith(".riv")) ? u : e.heroRiveUrl;
             return {
                 bannerStyleOverrides: s ? void 0 : e.bannerDisplayConfig,
                 logoStyleOverrides: s ? void 0 : e.logoDisplayConfig,
                 heroLogo: null != t ? t : e.logoUrl,
                 heroBannerStatic: null != n ? n : null == (a = e.bannerAsset) ? void 0 : a.static,
-                heroBannerAnimated: o ? void 0 : null != i ? i : c,
-                heroBannerRive: o ? void 0 : null != i ? i : u,
+                heroBannerAnimated: o ? void 0 : null != i ? i : u,
+                heroBannerRive: o ? void 0 : null != l ? l : d,
             };
-        }, [t, n, i, e, l]);
+        }, [t, n, i, l, e, c]);
     },
     d = (e, t) => {
         var n, r;

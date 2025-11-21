@@ -2,13 +2,13 @@ n.d(t, {
     BU: () => v,
     CM: () => h,
     Eo: () => m,
-    Kj: () => _,
     Kr: () => b,
     LY: () => R,
     XA: () => g,
-    aB: () => f,
+    aB: () => _,
     hm: () => P,
     jE: () => d,
+    w6: () => f,
 }),
     n(388685),
     n(539854),
@@ -72,54 +72,35 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-        return (
-            (e.CATALOG_BANNER_STATIC = "catalog_banner.jpg"),
-            (e.CATALOG_BANNER_ANIMATED = "catalog_banner_animated.webm"),
-            (e.HERO_BANNER_STATIC = "hero_banner.jpg"),
-            (e.HERO_BANNER_ANIMATED = "hero_banner_animated.webm"),
-            (e.HERO_LOGO = "hero_logo.png"),
-            (e.FEATURED_BLOCK = "featured_block.png"),
-            (e.UPSELL_BANNER = "upsell_banner.jpg"),
-            (e.UPSELL_BANNER_POPOUT = "upsell_banner_popout.png"),
-            (e.PDP_BACKGROUND = "pdp_bg.jpg"),
-            (e.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover.png"),
-            (e.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark.png"),
-            (e.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light.png"),
-            (e.SHOP_BUTTON_BG_RESTING = "shop_button_bg_resting.png"),
-            (e.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark.png"),
-            (e.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light.png"),
-            (e.COACHTIP_AVATAR = "coachtip_avatar.png"),
-            (e.LOGO = "logo.png"),
-            (e.MOBILE_BANNER = "mobile_banner.jpg"),
-            (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
-            e
-        );
-    })({}),
-    f = (function (e) {
-        return (e.PROFILE_EFFECT = "profile_effect"), (e.AVATAR_DECORATION = "avatar_decoration"), e;
-    })({});
-let _ = {
-        "catalog_banner.jpg": "catalog_banner.jpg",
-        "catalog_banner_animated.webm": "catalog_banner_animated.webm",
-        "hero_banner.jpg": "hero_banner.jpg",
-        "hero_banner_animated.webm": "hero_banner_animated.webm",
-        "hero_logo.png": "hero_logo.png",
-        "featured_block.png": "featured_block.png",
-        "upsell_banner.jpg": "upsell_banner.jpg",
-        "upsell_banner_popout.png": "upsell_banner_popout.png",
-        "pdp_bg.jpg": "pdp_bg.jpg",
-        "logo.png": "logo.png",
-        "shop_button_bg_hover.png": "shop_button_bg_hover.png",
-        "shop_button_bg_hover_dark.png": "shop_button_bg_hover_dark.png",
-        "shop_button_bg_hover_light.png": "shop_button_bg_hover_light.png",
-        "shop_button_bg_resting.png": "shop_button_bg_resting.png",
-        "shop_button_bg_resting_dark.png": "shop_button_bg_resting_dark.png",
-        "shop_button_bg_resting_light.png": "shop_button_bg_resting_light.png",
-        "coachtip_avatar.png": "coachtip_avatar.png",
-        "mobile_banner.jpg": "mobile_banner.jpg",
-        "mobile_bg.jpg": "mobile_bg.jpg",
-    },
-    p = ".DS_Store";
+    return (
+        (e.CATALOG_BANNER_STATIC = "catalog_banner.jpg"),
+        (e.CATALOG_BANNER_ANIMATED = "catalog_banner_animated.webm"),
+        (e.HERO_BANNER_STATIC = "hero_banner.jpg"),
+        (e.HERO_BANNER_ANIMATED = "hero_banner_animated.webm"),
+        (e.HERO_BANNER_RIVE = "hero_rive.riv"),
+        (e.HERO_LOGO = "hero_logo.png"),
+        (e.FEATURED_BLOCK = "featured_block.png"),
+        (e.UPSELL_BANNER = "upsell_banner.jpg"),
+        (e.UPSELL_BANNER_POPOUT = "upsell_banner_popout.png"),
+        (e.PDP_BACKGROUND = "pdp_bg.jpg"),
+        (e.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover.png"),
+        (e.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark.png"),
+        (e.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light.png"),
+        (e.SHOP_BUTTON_BG_RESTING = "shop_button_bg_resting.png"),
+        (e.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark.png"),
+        (e.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light.png"),
+        (e.COACHTIP_AVATAR = "coachtip_avatar.png"),
+        (e.LOGO = "logo.png"),
+        (e.MOBILE_BANNER = "mobile_banner.jpg"),
+        (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
+        e
+    );
+})({});
+let f = new Set(Object.values(d));
+var _ = (function (e) {
+    return (e.PROFILE_EFFECT = "profile_effect"), (e.AVATAR_DECORATION = "avatar_decoration"), e;
+})({});
+let p = ".DS_Store";
 var h = (function (e) {
     return (
         (e.COLLECTION = "collection"),
@@ -151,11 +132,8 @@ let m = (e) => {
         for (let n of e) E(n, t);
     },
     y = (e, t) => "".concat(e, "/").concat(t),
-    O = (e) => (0, a.tw)(e.type) || (0, a.X2)(e.type),
-    v = (e) => {
-        var t;
-        return null != (t = _[e.name]) ? t : null;
-    },
+    O = (e) => (0, a.tw)(e.type) || (0, a.X2)(e.type) || (0, a.yn)(e.name),
+    v = (e) => (f.has(e.name) ? e.name : null),
     I = async (e) => {
         let t = [];
         if (e.isFile) {
@@ -181,7 +159,7 @@ let m = (e) => {
             ? T(e, t, r)
             : O(t)
               ? "collection" === n || null === n
-                  ? t.name in _
+                  ? f.has(t.name)
                       ? r.collectionFiles.push(t)
                       : r.ignoredFilenames.push(i)
                   : "avatar_decorations" === n

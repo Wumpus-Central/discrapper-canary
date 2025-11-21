@@ -1,10 +1,11 @@
 n.d(t, {
     CO: () => c,
-    NU: () => T,
-    X2: () => S,
-    cb: () => v,
+    NU: () => S,
+    X2: () => C,
+    cb: () => I,
     d$: () => f,
     tw: () => u,
+    yn: () => A,
 }),
     n(388685),
     n(35282);
@@ -33,9 +34,11 @@ let o = (e, t) => {
     g = /\.(mp4|mov)$/i,
     E = /\.(mp4|webm|mov)$/i,
     b = /\.(mp4|webm|mov)$/i,
-    y = (0, r.isIOS)() ? g : (0, r.isAndroid)() ? E : b,
-    O = (e) => (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoUrl" }).enabled && o(e, m),
-    v = (e) => o(e, y) || O(e),
-    I = (e) => null != e && (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoFile" }).enabled && m.test(e),
-    T = (e) => null != e && (y.test(e) || I(e)),
-    S = (e) => s(e, "video");
+    y = /\.(riv)$/i,
+    O = (0, r.isIOS)() ? g : (0, r.isAndroid)() ? E : b,
+    v = (e) => (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoUrl" }).enabled && o(e, m),
+    I = (e) => o(e, O) || v(e),
+    T = (e) => null != e && (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoFile" }).enabled && m.test(e),
+    S = (e) => null != e && (O.test(e) || T(e)),
+    A = (e) => null != e && y.test(e),
+    C = (e) => s(e, "video");
