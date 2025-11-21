@@ -1,90 +1,91 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(734610),
-    o = n(442837),
-    s = n(956097),
-    l = n(960048),
-    c = n(998054),
-    u = n(5900),
-    d = n(953865),
-    f = n(60995),
-    _ = n(607726);
-let p = () => {
+    o = n(818710),
+    s = n(442837),
+    l = n(956097),
+    c = n(960048),
+    u = n(998054),
+    d = n(5900),
+    f = n(953865),
+    _ = n(60995),
+    p = n(607726);
+let h = () => {
         let {
                 installationStatus: e,
                 setInstallationStatus: t,
                 setConnectionStatus: n,
                 finishSetup: r,
                 getWarpInstallationStatus: a,
-            } = (0, d.xf)(),
-            { status: p } = (0, o.e7)([s.Z], () => s.Z.state, []),
+            } = (0, f.xf)(),
+            { status: o } = (0, s.e7)([l.Z], () => l.Z.state, []),
             [h, m] = (0, i.useState)(0),
-            { installedDiscordPrivateBrowsingPerk: g } = (0, o.e7)([_.Z], () => _.Z.getState(), []),
+            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([p.Z], () => p.Z.getState(), []),
             [E, b] = (0, i.useState)(!1);
         return (
             (0, i.useEffect)(() => {
                 E ||
                     (b(!0),
-                    e !== u._n.INSTALLING &&
-                        (0, c.Y)().then((e) =>
-                            e === u._n.NOT_INSTALLED
-                                ? void t(u._n.NOT_INSTALLED)
-                                : e === u._n.EXISTING_INSTALLATION && g
-                                  ? void t(u._n.INSTALLING)
+                    e !== d._n.INSTALLING &&
+                        (0, u.Y)().then((e) =>
+                            e === d._n.NOT_INSTALLED
+                                ? void t(d._n.NOT_INSTALLED)
+                                : e === d._n.EXISTING_INSTALLATION && g
+                                  ? void t(d._n.INSTALLING)
                                   : void t(e),
                         ));
             }, [t, g, E, e]),
             (0, i.useEffect)(() => {
-                g && e === u._n.NOT_INSTALLED && (0, f._)(!1),
-                    g && e === u._n.EXISTING_INSTALLATION && t(u._n.INSTALLED);
+                g && e === d._n.NOT_INSTALLED && (0, _._)(!1),
+                    g && e === d._n.EXISTING_INSTALLATION && t(d._n.INSTALLED);
             }, [g, e, t]),
             (0, i.useEffect)(() => {
-                if (e !== u._n.INSTALLED) return;
+                if (e !== d._n.INSTALLED) return;
                 let n = setInterval(async () => {
-                    (await a()) === u._n.NOT_INSTALLED && t(u._n.NOT_INSTALLED);
+                    (await a()) === d._n.NOT_INSTALLED && t(d._n.NOT_INSTALLED);
                 }, 1000);
                 return () => clearInterval(n);
             }, [e, t, a]),
             (0, i.useEffect)(() => {
-                if (![u._n.INSTALLED, u._n.EXISTING_INSTALLATION].includes(e)) return void n(u.Ij.DISCONNECTED);
-                switch (p) {
-                    case u.zb.CONNECTED:
-                        n(u.Ij.CONNECTED);
+                if (![d._n.INSTALLED, d._n.EXISTING_INSTALLATION].includes(e)) return void n(d.Ij.DISCONNECTED);
+                switch (o) {
+                    case d.zb.CONNECTED:
+                        n(d.Ij.CONNECTED);
                         break;
-                    case u.zb.CONNECTING:
-                        n(u.Ij.INITIALIZING);
+                    case d.zb.CONNECTING:
+                        n(d.Ij.INITIALIZING);
                         break;
-                    case u.zb.DISCONNECTED:
-                        n(u.Ij.DISCONNECTED);
+                    case d.zb.DISCONNECTED:
+                        n(d.Ij.DISCONNECTED);
                 }
-            }, [p, e, n]),
+            }, [o, e, n]),
             (0, i.useEffect)(() => {
-                h > 10 && (t(u._n.ERROR), m(0));
+                h > 10 && (t(d._n.ERROR), m(0));
             }, [h, t]),
             (0, i.useEffect)(() => {
-                e === u._n.READY_FOR_LICENSE &&
+                e === d._n.READY_FOR_LICENSE &&
                     r()
                         .then((e) => {
-                            e && t(u._n.INSTALLED);
+                            e && t(d._n.INSTALLED);
                         })
                         .catch((e) => {
-                            l.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP" } }),
-                                t(u._n.ERROR);
+                            c.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP" } }),
+                                t(d._n.ERROR);
                         });
             }, [e, t, r]),
             (0, i.useEffect)(() => {
-                if (e !== u._n.INSTALLING) return;
+                if (e !== d._n.INSTALLING) return;
                 let n = setInterval(async () => {
                     let e = await a();
                     switch (e) {
-                        case u._n.ERROR:
+                        case d._n.ERROR:
                             m((e) => e + 1);
                             return;
-                        case u._n.NOT_INSTALLED:
+                        case d._n.NOT_INSTALLED:
                             return;
-                        case u._n.EXISTING_INSTALLATION:
-                            t(u._n.READY_FOR_LICENSE);
+                        case d._n.EXISTING_INSTALLATION:
+                            t(d._n.READY_FOR_LICENSE);
                             return;
                         default:
                             t(e);
@@ -97,8 +98,10 @@ let p = () => {
             null
         );
     },
-    h = () =>
-        (0, r.jsx)(a.SV, {
-            fallback: null,
-            children: (0, r.jsx)(p, {}),
-        });
+    m = () =>
+        (0, o.nI)()
+            ? (0, r.jsx)(a.SV, {
+                  fallback: null,
+                  children: (0, r.jsx)(h, {}),
+              })
+            : null;

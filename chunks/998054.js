@@ -1,40 +1,42 @@
 n.d(t, {
-    Y: () => s,
-    f: () => c,
+    Y: () => l,
+    f: () => u,
 }),
     n(415506);
-var r = n(960048),
-    i = n(998502),
-    a = n(5900),
-    o = n(60995);
-let s = async () => {
+var r = n(818710),
+    i = n(960048),
+    a = n(998502),
+    o = n(5900),
+    s = n(60995);
+let l = async () => {
+        if (!(0, r.nI)()) return o._n.UNKNOWN;
         try {
-            switch ((await l()).account.type.toLowerCase()) {
+            switch ((await c()).account.type.toLowerCase()) {
                 case "unlimited":
                 case "discord":
-                    return a._n.INSTALLED;
+                    return o._n.INSTALLED;
                 case "team":
-                    return a._n.ZERO_TRUST;
+                    return o._n.ZERO_TRUST;
                 default:
-                    return a._n.EXISTING_INSTALLATION;
+                    return o._n.EXISTING_INSTALLATION;
             }
         } catch (e) {
             if (e instanceof Error) {
-                if ("Failed to locate warp-cli" === e.message) return a._n.NOT_INSTALLED;
-                r.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_INSTALLATION_STATUS" } });
+                if ("Failed to locate warp-cli" === e.message) return o._n.NOT_INSTALLED;
+                i.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_INSTALLATION_STATUS" } });
             }
-            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return a._n.INSTALLING;
-            return a._n.ERROR;
+            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return o._n.INSTALLING;
+            return o._n.ERROR;
         }
     },
-    l = () =>
+    c = () =>
         new Promise(async (e, t) => {
             try {
-                var n, r, a;
-                let o = await (null === i.ZP ||
-                void 0 === i.ZP ||
-                null == (a = i.ZP.getDiscordUtils) ||
-                null == (r = a.call(i.ZP)) ||
+                var n, r, i;
+                let o = await (null === a.ZP ||
+                void 0 === a.ZP ||
+                null == (i = a.ZP.getDiscordUtils) ||
+                null == (r = i.call(a.ZP)) ||
                 null == (n = r.runWarpCommand)
                     ? void 0
                     : n.call(r, "registration", "show"));
@@ -44,6 +46,6 @@ let s = async () => {
                 t(e);
             }
         }),
-    c = async () => {
-        await (0, o._)(!0), await i.ZP.getDiscordUtils().installWarp();
+    u = async () => {
+        await (0, s._)(!0), await a.ZP.getDiscordUtils().installWarp();
     };
