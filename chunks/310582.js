@@ -53,7 +53,6 @@ e.exports = {
     wideBannerArt: "wideBannerArt__08415",
     wideBannerArtOrbs: "wideBannerArtOrbs__08415",
     wideBannerOrbsHeading: "wideBannerOrbsHeading__08415",
-    wideBannerBlockButton: "wideBannerBlockButton__08415",
     wideBannerTextContainer: "wideBannerTextContainer__08415",
     wideBannerContentContainer: "wideBannerContentContainer__08415",
     wideBannerWithCTAContentContainer: "wideBannerWithCTAContentContainer__08415",
