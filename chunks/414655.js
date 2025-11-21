@@ -15,7 +15,7 @@ var r = n(54381),
     b = n(277511),
     h = n(602733),
     y = n(594174),
-    v = n(221292),
+    v = n(785717),
     O = n(621853),
     j = n(471341),
     x = n(661462),
@@ -94,57 +94,56 @@ function k(e) {
         }),
         N = (0, p.cZ)({ location: "user-profile-modal-v2-wishlist" }),
         { analyticsLocations: A } = (0, d.ZP)(),
-        Z = (null == I ? void 0 : I.id) === n.id,
-        R = !1 === n.nsfwAllowed,
-        L = S.t9,
-        [G, M] = i.useState(!0);
+        { trackUserProfileWishlistAction: Z } = (0, v.KZ)(),
+        R = (null == I ? void 0 : I.id) === n.id,
+        L = !1 === n.nsfwAllowed,
+        G = S.t9,
+        [M, B] = i.useState(!0);
     i.useEffect(() => {
-        (null == k ? void 0 : k.visibility) != null && M(k.visibility === a.f.PUBLIC);
+        (null == k ? void 0 : k.visibility) != null && B(k.visibility === a.f.PUBLIC);
     }, [null == k ? void 0 : k.visibility]);
-    let { wishlist: B, error: F } = (0, h.kZ)(P, n.id),
-        U = i.useCallback(
+    let { wishlist: F, error: U } = (0, h.kZ)(P, n.id),
+        W = i.useCallback(
             (e) => {
                 let { wishlistId: t, action: n, productLines: r } = e;
                 null != t &&
-                    (0, v.Er)({
+                    Z({
                         wishlistId: t,
                         action: n,
-                        analyticsLocations: A,
                         productLines: r,
                     });
             },
-            [A],
+            [Z],
         ),
-        W = (0, j.Z)({
+        H = (0, j.Z)({
             wishlistId: P,
-            onAction: U,
-            productLines: null != (t = null == B ? void 0 : B.getProductLines()) ? t : null,
+            onAction: W,
+            productLines: null != (t = null == F ? void 0 : F.getProductLines()) ? t : null,
         }),
-        H = i.useCallback(() => {
-            if (null == P) return;
-            let e = G ? a.f.PRIVATE : a.f.PUBLIC;
-            M(!G),
-                b.Z.updateWishlistVisibility(P, e),
-                (0, v.Er)({
-                    wishlistId: P,
-                    action: G ? w.NW.WISHLIST_TOGGLE_PRIVATE : w.NW.WISHLIST_TOGGLE_PUBLIC,
-                    analyticsLocations: A,
-                    productLines: null == B ? void 0 : B.getProductLines(),
-                });
-        }, [P, G, A, B]),
         z = i.useCallback(() => {
+            if (null == P) return;
+            let e = M ? a.f.PRIVATE : a.f.PUBLIC;
+            B(!M),
+                b.Z.updateWishlistVisibility(P, e),
+                Z({
+                    wishlistId: P,
+                    action: M ? w.NW.WISHLIST_TOGGLE_PRIVATE : w.NW.WISHLIST_TOGGLE_PUBLIC,
+                    productLines: null == F ? void 0 : F.getProductLines(),
+                });
+        }, [P, M, Z, F]),
+        K = i.useCallback(() => {
             (0, o.pT)(),
                 (0, f.mK)({
                     analyticsLocations: A,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });
         }, [A]),
-        K = i.useCallback(() => {
+        q = i.useCallback(() => {
             (0, o.pT)(), (0, m.Z)({ guildId: (0, g.ac)() });
         }, []);
-    return null != F
+    return null != U
         ? null
-        : null == B || 0 === B.items.length
+        : null == F || 0 === F.items.length
           ? (0, r.jsx)(x.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
@@ -168,21 +167,21 @@ function k(e) {
                         (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",
                             children: [
-                                Z &&
+                                R &&
                                     (0, r.jsx)(s.Button, {
                                         variant: "primary",
                                         size: "sm",
                                         icon: s.EOn,
                                         text: E.intl.string(E.t.ZbS4QB),
-                                        onClick: z,
+                                        onClick: K,
                                     }),
                                 N &&
                                     (0, r.jsx)(s.Button, {
                                         variant: "primary",
                                         size: "sm",
                                         icon: s.EOn,
-                                        text: L === S.t9 ? E.intl.string(E.t["kq/75v"]) : E.intl.string(E.t.apFNLU),
-                                        onClick: K,
+                                        text: G === S.t9 ? E.intl.string(E.t["kq/75v"]) : E.intl.string(E.t.apFNLU),
+                                        onClick: q,
                                     }),
                             ],
                         }),
@@ -194,7 +193,7 @@ function k(e) {
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        ref: W,
+                        ref: H,
                         className: T.headerRow,
                         children: [
                             (0, r.jsxs)("div", {
@@ -203,9 +202,9 @@ function k(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: E.intl.format(E.t.r6Y1Lg, { count: B.items.length }),
+                                        children: E.intl.format(E.t.r6Y1Lg, { count: F.items.length }),
                                     }),
-                                    !G &&
+                                    !M &&
                                         (0, r.jsx)(c.u, {
                                             text: E.intl.string(E.t.RX7D9h),
                                             asContainer: !0,
@@ -221,8 +220,8 @@ function k(e) {
                                                 }),
                                             }),
                                         }),
-                                    G &&
-                                        R &&
+                                    M &&
+                                        L &&
                                         (0, r.jsx)(c.u, {
                                             text: E.intl.string(E.t.d78ChW),
                                             asContainer: !0,
@@ -240,26 +239,26 @@ function k(e) {
                                         }),
                                 ],
                             }),
-                            Z
+                            R
                                 ? (0, r.jsx)(D, {
                                       isSocialLayerStorefrontEnabled: N,
-                                      isWishlistPublic: G,
-                                      handleOpenShop: z,
-                                      handleOpenGameShop: K,
-                                      handleToggleWishlistVisibility: H,
-                                      socialLayerStorefrontApplicationId: L,
+                                      isWishlistPublic: M,
+                                      handleOpenShop: K,
+                                      handleOpenGameShop: q,
+                                      handleToggleWishlistVisibility: z,
+                                      socialLayerStorefrontApplicationId: G,
                                   })
                                 : (0, r.jsx)(C, {
                                       isSocialLayerStorefrontEnabled: N,
-                                      handleOpenShop: z,
-                                      handleOpenGameShop: K,
+                                      handleOpenShop: K,
+                                      handleOpenGameShop: q,
                                   }),
                         ],
                     }),
                     (0, r.jsx)(_.Z, {
-                        items: B.items,
+                        items: F.items,
                         profileOwner: n,
-                        isOwner: Z,
+                        isOwner: R,
                     }),
                 ],
             });

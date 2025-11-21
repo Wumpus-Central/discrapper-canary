@@ -158,20 +158,19 @@ function E(e, t) {
             onViewWishlist: a,
             isSingleCard: s = !1,
             profileOwner: o,
-            analyticsLocations: c,
-            wishlistId: u,
-            showTypeTooltip: p = !1,
+            wishlistId: c,
+            showTypeTooltip: u = !1,
         } = t,
-        h = null != l && l > 0,
-        f = h ? j.intl.string(j.t.TxBQzD) : j.intl.string(j.t.ilhtIa);
+        p = null != l && l > 0,
+        h = p ? j.intl.string(j.t.TxBQzD) : j.intl.string(j.t.ilhtIa);
     return (
-        p && !h && (n = j.intl.string(j.t["4yiU7x"])),
+        u && !p && (n = j.intl.string(j.t["4yiU7x"])),
         (0, r.jsx)(
             S,
             {
                 productLine: e.skuProductLine,
                 onCardClick: () => {
-                    if (h) return void a();
+                    if (p) return void a();
                     (0, m.P)(
                         e.sku,
                         {
@@ -183,7 +182,7 @@ function E(e, t) {
                     );
                 },
                 tooltipTitle: n,
-                tooltipBody: f,
+                tooltipBody: h,
                 shouldScalePreview: !1,
                 renderPreview: () =>
                     (0, r.jsx)(b.A, {
@@ -196,8 +195,7 @@ function E(e, t) {
                 moreCount: l,
                 isSingleCard: s,
                 skuId: e.skuId,
-                analyticsLocations: c,
-                wishlistId: u,
+                wishlistId: c,
                 showPopover: 0 === i && e.sku.applicationId === _.t9,
                 onViewWishlist: a,
             },

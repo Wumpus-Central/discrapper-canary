@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(681715),
     a = n(481060),
-    s = n(221292),
+    s = n(785717),
     o = n(239990);
 let c = i.forwardRef(function (e, t) {
     let {
@@ -15,22 +15,21 @@ let c = i.forwardRef(function (e, t) {
             moreCount: p,
             isSingleCard: h = !1,
             skuId: f,
-            analyticsLocations: g,
-            wishlistId: m,
-            productLine: b,
+            wishlistId: g,
+            productLine: m,
         } = e,
+        { trackUserProfileWishlistAction: b } = (0, s.KZ)(),
         _ = d ? o.cardPreview : o.cardPreviewNoScale,
         y = h ? o.cardSingle : o.card,
         O = null != p && p > 0,
         j = (0, r.jsxs)(a.P3F, {
             onClick: () => {
                 n(),
-                    (0, s.Er)({
+                    b({
                         action: O ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        analyticsLocations: g,
                         skuId: O ? null : f,
-                        wishlistId: m,
-                        productLines: new Set([b]),
+                        wishlistId: g,
+                        productLines: new Set([m]),
                     });
             },
             className: y,

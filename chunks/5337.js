@@ -56,7 +56,6 @@ function f(e, t) {
             moreCount: l,
             isSingleCard: p,
             skuId: e.skuId,
-            analyticsLocations: s,
             wishlistId: f,
             productLine: e.skuProductLine,
         },

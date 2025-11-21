@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(636466),
     c = n(541699),
     d = n(321947),
-    u = n(221292),
+    u = n(785717),
     p = n(471341),
     h = n(502762),
     f = n(5337),
@@ -16,23 +16,23 @@ var r = n(54381),
 function b(e) {
     let { wishlistItems: t = [], profileOwner: n, onClick: b, wishlistId: _ } = e,
         { analyticsLocations: y } = (0, a.ZP)(),
-        O = (0, i.useCallback)(
+        { trackUserProfileWishlistAction: O } = (0, u.KZ)(),
+        j = (0, i.useCallback)(
             (e) => {
                 let { wishlistId: t, action: n, productLines: r } = e;
                 null != t &&
-                    (0, u.Er)({
+                    O({
                         wishlistId: t,
                         action: n,
-                        analyticsLocations: y,
                         productLines: r,
                     });
             },
-            [y],
+            [O],
         ),
         {
-            cards: j,
-            singleItem: x,
-            productLines: v,
+            cards: x,
+            singleItem: v,
+            productLines: C,
         } = (0, i.useMemo)(() => {
             let e = [],
                 r = null,
@@ -84,31 +84,31 @@ function b(e) {
                 }
             );
         }, [t, n, y, b, _]),
-        C = (0, p.Z)({
+        I = (0, p.Z)({
             wishlistId: null != _ ? _ : null,
-            onAction: O,
-            productLines: v,
+            onAction: j,
+            productLines: C,
         });
-    if (0 === j.length) return null;
-    let I = j;
+    if (0 === x.length) return null;
+    let S = x;
     return (
-        null != x &&
-            ((0, c.Q)(x)
-                ? (I = (0, f.g)(x, {
+        null != v &&
+            ((0, c.Q)(v)
+                ? (S = (0, f.g)(v, {
                       profileOwner: n,
                       analyticsLocations: y,
                       wishlistId: _,
                       onViewWishlist: b,
                   }))
-                : (0, d.F)(x) &&
-                  (I = (0, o.B)(x, {
+                : (0, d.F)(v) &&
+                  (S = (0, o.B)(v, {
                       profileOwner: n,
                       analyticsLocations: y,
                       wishlistId: _,
                       onViewWishlist: b,
                   }))),
         (0, r.jsxs)(h.Z.Overlay, {
-            ref: C,
+            ref: I,
             className: m.container,
             children: [
                 (0, r.jsx)("div", {
@@ -120,7 +120,7 @@ function b(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: m.cardsContainer,
-                    children: I,
+                    children: S,
                 }),
             ],
         })
