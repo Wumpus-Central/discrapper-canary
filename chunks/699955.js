@@ -1,14 +1,28 @@
 n.d(t, {
-    c: () => i,
-    n: () => a,
+    NN: () => o,
+    cZ: () => i,
+    ne: () => a,
 });
 let r = (0, n(427164).le)({
     name: "2025-12-social-layer-storefront-user-experiment",
     kind: "user",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+        wishlistRetargetingEnabled: !1,
+    },
     variations: {
-        0: { enabled: !1 },
-        1: { enabled: !0 },
+        0: {
+            enabled: !1,
+            wishlistRetargetingEnabled: !1,
+        },
+        1: {
+            enabled: !0,
+            wishlistRetargetingEnabled: !1,
+        },
+        2: {
+            enabled: !0,
+            wishlistRetargetingEnabled: !0,
+        },
     },
 });
 function i(e) {
@@ -18,4 +32,8 @@ function i(e) {
 function a(e) {
     let { location: t } = e;
     return r.getConfig({ location: t }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return r.useConfig({ location: t }).wishlistRetargetingEnabled;
 }

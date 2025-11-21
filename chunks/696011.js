@@ -60,7 +60,7 @@ class g extends i.Z {
                     this._didConnectionOpen &&
                     this._didUserSettingsProtoLoad &&
                     this._didGamesSeenLoad &&
-                    (0, d.n)({ location: "social-layer-storefront-announcement-modal" }) &&
+                    (0, d.ne)({ location: "social-layer-storefront-announcement-modal" }) &&
                     ((this._didAttemptToOpenModal = !0), !(0, a.zu)(r.z.GAME_SHOP_ANNOUNCEMENT_MODAL))
                 ) {
                     if (null != c.Z.getGuild((0, u.ac)())) return void (0, f.b)();

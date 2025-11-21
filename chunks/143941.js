@@ -237,21 +237,25 @@ function R(e) {
                         }),
                     }),
                 })
-              : (0, r.jsx)(c.u, {
-                    text: null != y ? y : F,
-                    "aria-label": null != y ? y : F,
-                    children: (0, r.jsx)(u.P3F, {
-                        className: o()(I.wishlistButton, a),
-                        innerRef: x,
-                        onClick: Z,
-                        "aria-label": F,
-                        children: (0, r.jsx)(G, {
-                            colorClass: B,
-                            size: "custom",
-                            height: s,
-                            width: s,
+              : (0, r.jsx)(
+                    c.u,
+                    {
+                        text: null != y ? y : F,
+                        "aria-label": null != y ? y : F,
+                        children: (0, r.jsx)(u.P3F, {
+                            className: o()(I.wishlistButton, a),
+                            innerRef: x,
+                            onClick: Z,
+                            "aria-label": F,
+                            children: (0, r.jsx)(G, {
+                                colorClass: B,
+                                size: "custom",
+                                height: s,
+                                width: s,
+                            }),
                         }),
-                    }),
-                })
+                    },
+                    "wishlist-button-hovering-".concat(b),
+                )
         : null;
 }

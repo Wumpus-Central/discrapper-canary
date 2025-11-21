@@ -92,7 +92,7 @@ function k(e) {
                 wishlistSettings: null != e ? O.Z.getWishlistSettings(n.id, e) : null,
             };
         }),
-        N = (0, p.c)({ location: "user-profile-modal-v2-wishlist" }),
+        N = (0, p.cZ)({ location: "user-profile-modal-v2-wishlist" }),
         { analyticsLocations: A } = (0, d.ZP)(),
         Z = (null == I ? void 0 : I.id) === n.id,
         R = !1 === n.nsfwAllowed,
