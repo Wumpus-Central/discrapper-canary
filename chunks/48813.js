@@ -10,12 +10,12 @@ var a = n(54381),
     d = n(906732),
     _ = n(211242),
     m = n(845220),
-    O = n(588529),
-    f = n(626135),
+    f = n(588529),
+    O = n(626135),
     E = n(74538),
     p = n(937615),
-    b = n(374649),
-    y = n(140465),
+    y = n(374649),
+    b = n(140465),
     S = n(230916),
     C = n(398775),
     P = n(562218),
@@ -23,14 +23,14 @@ var a = n(54381),
     T = n(586920),
     R = n(45474),
     I = n(594135),
-    w = n(881493),
-    A = n(407965),
+    A = n(881493),
+    w = n(407965),
     D = n(501090),
     h = n(323321),
-    g = n(474936),
-    x = n(981631),
-    N = n(320150);
-function M(t) {
+    x = n(474936),
+    N = n(981631),
+    M = n(320150);
+function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             a = Object.keys(n);
@@ -55,7 +55,7 @@ function M(t) {
     }
     return t;
 }
-let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
+let k = [N.O0b.PAST_DUE, N.O0b.PAUSED, N.O0b.BILLING_RETRY],
     L = (t) => {
         var e, n, l;
         let { analyticsLocation: L, analyticsLocations: U, onClose: j, transitionState: F, premiumSubscription: W } = t,
@@ -65,16 +65,16 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
             H = null == (e = (0, E.Af)(W)) ? void 0 : e.planId,
             V = null != H ? E.ZP.getPremiumType(H) : null;
         o()(null != V, "Should not be cancelling Nitro without premiumType");
-        let X = V === g.PremiumTypes.TIER_0 || V === g.PremiumTypes.TIER_1 || V === g.PremiumTypes.TIER_2;
+        let X = V === x.PremiumTypes.TIER_0 || V === x.PremiumTypes.TIER_1 || V === x.PremiumTypes.TIER_2;
         null == B && (B = X ? R.R.WHAT_YOU_LOSE : R.R.CONFIRM);
         let [q, z, K, Q] = (0, D.q)(B, W, U),
             J = (0, _.Q)(),
-            $ = (0, y.UV)(),
-            { churnUserDiscountOffer: tt, isFetchingChurnDiscountOffer: te } = (0, y.WR)(
-                !$ || (W.status === x.O0b.CANCELED && q !== R.R.CONFIRM_DISCOUNT),
+            $ = (0, b.UV)(),
+            { churnUserDiscountOffer: tt, isFetchingChurnDiscountOffer: te } = (0, b.WR)(
+                !$ || (W.status === N.O0b.CANCELED && q !== R.R.CONFIRM_DISCOUNT),
             ),
-            tn = (0, S._n)(W, g.Xh.PREMIUM_MONTH_TIER_2, tt),
-            [ta] = (0, b.ED)({
+            tn = (0, S._n)(W, x.Xh.PREMIUM_MONTH_TIER_2, tt),
+            [ta] = (0, y.ED)({
                 subscriptionId: W.id,
                 items: (0, E.Ue)(null != (l = null == (n = W.renewalMutations) ? void 0 : n.items) ? l : W.items),
                 renewal: !0,
@@ -82,16 +82,16 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
                 analyticsLocation: c.Z.CANCEL_INVOICE_PREVIEW,
             }),
             tr = null !== ta ? E.ZP.getIntervalForInvoice(ta) : null,
-            ti = (0, E.aS)(g.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+            ti = (0, E.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
                 currency: W.currency,
                 paymentSourceId: W.paymentSourceId,
             }),
             tl = (0, p.T4)(ti.amount, ti.currency),
             to = r.useMemo(() => (0, m.b)(), []);
         r.useEffect(() => {
-            f.default.track(
-                x.rMx.CANCELLATION_FLOW_STARTED,
-                M(
+            O.default.track(
+                N.rMx.CANCELLATION_FLOW_STARTED,
+                g(
                     {
                         location_stack: U,
                         load_id: to,
@@ -110,21 +110,21 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
                     case R.R.DISCOUNT_APPLIED:
                         return (0, a.jsx)(T.i, {});
                     case R.R.PREVIEW:
-                        return (0, a.jsx)(w.w, {});
+                        return (0, a.jsx)(A.w, {});
                     case R.R.PAUSE_SELECT:
                         return (0, a.jsx)(C.PremiumSubscriptionPauseModalSelect, {});
                     case R.R.PAUSE_CONFIRM:
                         return (0, a.jsx)(C.Sz, {});
                     case R.R.WHAT_YOU_LOSE:
                     default:
-                        return (0, a.jsx)(A.n, {});
+                        return (0, a.jsx)(w.n, {});
                 }
             }, [q]),
             td = r.useCallback(async () => {
                 if (
-                    (f.default.track(
-                        x.rMx.CANCELLATION_FLOW_COMPLETED,
-                        M(
+                    (O.default.track(
+                        N.rMx.CANCELLATION_FLOW_COMPLETED,
+                        g(
                             {
                                 location_stack: U,
                                 load_id: to,
@@ -151,14 +151,14 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
                         L,
                     );
                 }
-                O.ZP.triggerEmbeddedSurvey("nitro_unsub");
+                f.ZP.fireSurveyAction("nitro_unsub");
             }, [W, U, L, to]),
             t_ = async () => {
                 if (null == tt) throw Error("Churn user discount offer is null");
-                W.status === x.O0b.CANCELED
+                W.status === N.O0b.CANCELED
                     ? await (0, u.df)(W, tt)
                     : await s.tn.post({
-                          url: x.ANM.USER_OFFER_REDEEM,
+                          url: N.ANM.USER_OFFER_REDEEM,
                           body: { user_discount_offer_id: tt.id },
                           rejectWithError: !0,
                       });
@@ -171,9 +171,9 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
                     premiumType: V,
                     onClose: () => {
                         j(),
-                            f.default.track(
-                                x.rMx.CANCELLATION_FLOW_STEP,
-                                M(
+                            O.default.track(
+                                N.rMx.CANCELLATION_FLOW_STEP,
+                                g(
                                     {
                                         from_step: R.O[q],
                                         to_step: null,
@@ -207,7 +207,7 @@ let k = [x.O0b.PAST_DUE, x.O0b.PAUSED, x.O0b.BILLING_RETRY],
                 children: [
                     (0, a.jsx)(i.O_, {
                         ref: Z,
-                        className: N.confettiCanvas,
+                        className: M.confettiCanvas,
                         environment: G.current,
                     }),
                     tc(),

@@ -78,11 +78,19 @@ let f = {
             return a.Z.captureException(e), { responseId: "null" };
         }
     },
-    triggerEmbeddedSurvey: function (e) {
-        o.E.getConfig({ location: "action creator" }).enableNitroUnsubSurvey &&
-            i.Z.dispatch({
-                type: "EMBEDDED_SURVEY_TRIGGER",
-                trigger: e,
-            });
+    fireSurveyAction: async function (e) {
+        if (o.E.getConfig({ location: "action creator" }).enableNitroUnsubSurvey)
+            try {
+                var t;
+                let n = await r.tn.post({
+                    url: u.ANM.EMBEDDED_SURVEY_ACTION,
+                    body: { action_type: e },
+                    rejectWithError: !0,
+                });
+                i.Z.dispatch({
+                    type: "SURVEY_FETCHED",
+                    survey: null == n || null == (t = n.body) ? void 0 : t.survey,
+                });
+            } catch (e) {}
     },
 };
