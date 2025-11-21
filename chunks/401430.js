@@ -1,7 +1,7 @@
 n.d(t, {
-    Wt: () => f,
-    mc: () => _,
-    q$: () => p,
+    Wt: () => _,
+    mc: () => p,
+    q$: () => h,
 }),
     n(415506),
     n(997841),
@@ -11,11 +11,12 @@ var r = n(95015),
     a = n(566620),
     o = n(728345),
     s = n(812206),
-    l = n(973616),
-    c = n(591759),
-    u = n(978085),
-    d = n(981631);
-async function f(e, t) {
+    l = n(550385),
+    c = n(973616),
+    u = n(591759),
+    d = n(978085),
+    f = n(981631);
+async function _(e, t) {
     i.Z.dispatch({
         applicationId: e,
         type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START",
@@ -23,15 +24,15 @@ async function f(e, t) {
     try {
         if (!(await (0, a.W5)(e))) throw Error("Do not have access!");
         let n = s.Z.getApplication(e);
-        null == n && (n = l.ZP.createFromServer(await o.ZP.fetchApplication(e)));
-        let f = (0, r.yE)(n.flags, d.udG.EMBEDDED);
-        if (f && (null == t || !c.Z.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
+        null == n && (n = c.ZP.createFromServer(await o.ZP.fetchApplication(e)));
+        let l = (0, r.yE)(n.flags, f.udG.EMBEDDED);
+        if (l && (null == t || !u.Z.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
         return (
-            f || u.GR(n),
+            l || d.GR(n),
             i.Z.dispatch({
                 type: "DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS",
                 applicationId: e,
-                originURL: f ? t : null,
+                originURL: l ? t : null,
             }),
             n
         );
@@ -46,9 +47,11 @@ async function f(e, t) {
         );
     }
 }
-function _() {
-    i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
-}
 function p() {
-    i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
+    l.oq.getState().activePanel === l.wh.APPLICATION_TEST_MODE_DEBUG && (0, l.Ll)(),
+        i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
+}
+function h() {
+    l.oq.getState().activePanel === l.wh.APPLICATION_TEST_MODE_DEBUG && (0, l.Ll)(),
+        i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
 }

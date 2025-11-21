@@ -8,7 +8,13 @@ n.d(t, {
 var r = n(663042),
     i = n(731965),
     a = (function (e) {
-        return (e.CLIENT_THEMES = "CLIENT_THEMES"), (e.APP_ICON = "APP_ICON"), (e.CUSTOM_THEME = "CUSTOM_THEME"), e;
+        return (
+            (e.CLIENT_THEMES = "CLIENT_THEMES"),
+            (e.APP_ICON = "APP_ICON"),
+            (e.CUSTOM_THEME = "CUSTOM_THEME"),
+            (e.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
+            e
+        );
     })({}),
     o = (function (e) {
         return (
