@@ -34,4 +34,12 @@ let a = {
         bannerHeight: 120,
         themePadding: 0,
     },
+    [i.l.VIDEO_TILE_BACKGROUND]: {
+        avatarSize: r.EF.SIZE_80,
+        avatarOffsetX: 10,
+        avatarOffsetY: 4,
+        bannerWidth: 300,
+        bannerHeight: 105,
+        themePadding: 0,
+    },
 };

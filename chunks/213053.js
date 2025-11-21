@@ -45,6 +45,7 @@ let g = {
         [p.l.MODAL]: "user-profile-modal",
         [p.l.MODAL_V2]: "user-profile-modal-v2",
         [p.l.SIDEBAR]: "user-profile-sidebar",
+        [p.l.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
     },
     E = "custom-user-profile-theme",
     b = Object.freeze({

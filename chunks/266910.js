@@ -1,17 +1,23 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
-    a = n(692547),
-    o = n(481060),
-    s = n(220082),
-    l = n(420596),
-    c = n(880563),
-    u = n(687158),
-    d = n(484459),
-    f = n(695346),
-    _ = n(981631),
-    p = n(182719);
-function h(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(692547),
+    l = n(481060),
+    c = n(220082),
+    u = n(420596),
+    d = n(880563),
+    f = n(168631),
+    _ = n(687158),
+    p = n(213053),
+    h = n(484459),
+    m = n(695346),
+    g = n(775610),
+    E = n(981631),
+    b = n(671955),
+    y = n(182719);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +30,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +41,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +58,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -75,7 +81,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,49 +90,77 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = function (e) {
-    var { style: t, src: n, backgroundSrc: h, userId: g, pulseSpeakingIndicator: y = !1, speaking: O = !1 } = e,
-        v = b(e, ["style", "src", "backgroundSrc", "userId", "pulseSpeakingIndicator", "speaking"]);
-    let I = null != h ? h : n,
-        T = (0, s.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        S = (0, l.c)(!0, "VideoBackground-web").enabled,
-        A = (0, u.ZP)(null != g ? g : _.lds),
-        C =
-            null == A
+let C = function (e) {
+    var t,
+        n,
+        a,
+        O,
+        I,
+        A,
+        {
+            style: C,
+            src: N,
+            backgroundSrc: R,
+            userId: P,
+            guildId: D,
+            pulseSpeakingIndicator: w = !1,
+            speaking: L = !1,
+        } = e,
+        x = S(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
+    let M = null != R ? R : N,
+        k = (0, c.ZP)(M, s.Z.unsafe_rawColors.PRIMARY_800.css),
+        j = (0, u.c)(!0, "VideoBackground-web").enabled,
+        U = (0, _.ZP)(null != P ? P : E.lds, D),
+        G = null != (O = (0, f.V3)(null == U || null == (t = U.themeColors) ? void 0 : t[0])) ? O : E.BRd.DARK,
+        { profileThemeStyle: B, profileThemeClassName: Z } = (0, p.Z)({
+            theme: G,
+            themeType: b.l.VIDEO_TILE_BACKGROUND,
+            primaryColor: null != (I = null == U || null == (n = U.themeColors) ? void 0 : n[0]) ? I : null,
+            secondaryColor: null != (A = null == U || null == (a = U.themeColors) ? void 0 : a[1]) ? A : null,
+        }),
+        F =
+            null == U
                 ? void 0
-                : A.getBannerURL({
+                : U.getBannerURL({
                       size: 1024,
-                      canAnimate: f.QK.getSetting(),
-                  });
+                      canAnimate: m.QK.getSetting(),
+                  }),
+        { useProfileColors: V } = (0, g.$i)("VideoBackground-web"),
+        H = V || j;
     if (
         (i.useEffect(() => {
-            null != g && S && (0, d.Z)(g, void 0, { dispatchWait: !0 });
-        }, [S, g]),
-        null == n)
+            null != P &&
+                H &&
+                (0, h.Z)(P, void 0, {
+                    guildId: D,
+                    dispatchWait: !0,
+                });
+        }, [H, P, D]),
+        null == N)
     )
         return null;
-    let N = (0, r.jsx)(
-            o.qEK,
-            m(
+    let Y = (0, r.jsx)(
+            l.qEK,
+            v(
                 {
-                    className: p.avatarWrapper,
-                    src: n,
+                    className: y.avatarWrapper,
+                    src: N,
                 },
-                v,
+                x,
             ),
         ),
-        R = E(m({}, t), { backgroundColor: T });
+        W = T(v({}, C), { backgroundColor: k });
     return (
-        null != C && O && S && ((R.backgroundImage = "url(".concat(C, ")")), (R.backgroundSize = "cover")),
+        null != F && L && j && ((W.backgroundImage = "url(".concat(F, ")")), (W.backgroundSize = "cover")),
         (0, r.jsx)("div", {
-            style: R,
-            className: p.background,
-            children: y
-                ? (0, r.jsx)(c.Z, {
-                      shouldAnimate: O,
-                      children: N,
+            style: V ? v({}, C, B) : v({}, W),
+            className: o()(y.background, { [Z]: V }),
+            children: w
+                ? (0, r.jsx)(d.Z, {
+                      shouldAnimate: L,
+                      children: Y,
                   })
-                : N,
+                : Y,
         })
     );
 };

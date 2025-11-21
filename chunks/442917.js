@@ -230,6 +230,8 @@ class ef extends i.PureComponent {
                               size: d.EFr.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               "aria-label": null == n ? void 0 : n.user.username,
+                              guildId: e.guild_id,
+                              userId: null == n ? void 0 : n.user.id,
                           }),
                       }))),
             (0, r.jsx)(L.ZP, {

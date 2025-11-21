@@ -11,6 +11,7 @@ let u = {
     [c.l.MODAL]: 26,
     [c.l.MODAL_V2]: 16,
     [c.l.SIDEBAR]: 13,
+    [c.l.VIDEO_TILE_BACKGROUND]: 12,
 };
 function d(e) {
     let {
