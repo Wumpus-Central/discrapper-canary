@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     modalRoot: "modalRoot__45776",
     modalRootV2: "modalRootV2__45776",
     modalRootPortrait: "modalRootPortrait__45776",
@@ -50,7 +50,6 @@ e.exports = {
     transcriptHeader: "transcriptHeader__45776",
     transcriptBody: "transcriptBody__45776",
     stillFrameImageCard: "stillFrameImageCard__45776",
-    stillFrameImageCardHidden: "stillFrameImageCardHidden__45776",
     endScreenPanel: "endScreenPanel__45776",
     endScreenPanelInner: "endScreenPanelInner__45776",
     endScreenPanelTextCont: "endScreenPanelTextCont__45776",

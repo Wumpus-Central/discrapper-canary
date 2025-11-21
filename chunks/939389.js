@@ -1,7 +1,8 @@
 n.d(t, {
+    $R: () => v,
     G6: () => m,
     JC: () => u,
-    PW: () => f,
+    PW: () => p,
     yv: () => d,
 }),
     n(388685);
@@ -41,7 +42,7 @@ function m(e, t) {
         ]
     );
 }
-async function p(e) {
+async function f(e) {
     try {
         var t;
         let n = (0, i.zO)(e);
@@ -59,11 +60,14 @@ async function p(e) {
         return !1;
     }
 }
-async function f(e) {
+async function p(e) {
     try {
         if (c.Z.isDiscordUrl(e)) return !0;
-        return await p(e);
+        return await f(e);
     } catch (e) {
         return !1;
     }
+}
+function v(e, t, n) {
+    return e ? (t.timestampSec >= t.duration ? 0 : t.timestampSec) : Math.max(t.timestampSec, n.progressSeconds);
 }

@@ -1,7 +1,8 @@
 n.r(t),
     n.d(t, {
+        VideoQuestConfigContext: () => F,
         VideoQuestModalContext: () => Z,
-        default: () => B,
+        default: () => H,
     }),
     n(388685);
 var r = n(54381),
@@ -14,16 +15,16 @@ var r = n(54381),
     u = n(442837),
     d = n(481060),
     m = n(393903),
-    p = n(448986),
-    f = n(210887),
+    f = n(448986),
+    p = n(210887),
     v = n(617136),
     E = n(915750),
     g = n(509212),
     O = n(113434),
     h = n(569984),
     b = n(497505),
-    S = n(937797),
-    C = n(475595),
+    C = n(937797),
+    S = n(475595),
     y = n(602667),
     _ = n(667109),
     x = n(589313),
@@ -82,13 +83,14 @@ function V(e, t) {
     );
 }
 let Z = o.createContext({
-    quest: null,
-    sourceQuestContent: null,
-    videoSessionId: "",
-    isPortrait: !1,
-    onClose: () => {},
-});
-function F(e) {
+        quest: null,
+        sourceQuestContent: null,
+        videoSessionId: "",
+        isPortrait: !1,
+        onClose: () => {},
+    }),
+    F = o.createContext({ questConfig: null });
+function B(e) {
     var t, n;
     let {
             transitionState: l,
@@ -102,26 +104,26 @@ function F(e) {
         } = e,
         U = (0, g.il)(h),
         q = (0, O.tP)(h),
-        Y = (0, E.aM)(),
-        [G, Q] = o.useState(U.progressSeconds),
+        Q = (0, E.aM)(),
+        [Y, G] = o.useState(U.progressSeconds),
         [W, z] = o.useState(142),
-        { variant: K, enabled: X } = S.EO.useConfig({ location: A.dr.VIDEO_MODAL }),
+        { variant: K, enabled: X } = C.EO.useConfig({ location: A.dr.VIDEO_MODAL }),
         J = null == (n = h.config.taskConfigV2) || null == (t = n.tasks) ? void 0 : t[c.X.WATCH_VIDEO];
     s()(null != J, "VideoQuestModal: videoTask must not be null");
     let $ = (0, g.ZS)(J),
         ee = "portrait" === $,
-        et = (0, p.Z)((e) => {
+        et = (0, f.Z)((e) => {
             z(e.target.offsetHeight);
         }),
         en = (0, m.y)(et),
-        er = K === S.m_.OVERLAY_SHARE_ON_VIDEO,
+        er = K === C.m_.OVERLAY_SHARE_ON_VIDEO,
         eo = (0, N.e)({
             quest: h,
             onClose: a,
             sourceQuestContent: H,
-            impressionId: Y,
+            impressionId: Q,
         }),
-        el = (0, u.e7)([f.Z], () => f.Z.getState().theme),
+        el = (0, u.e7)([p.Z], () => p.Z.getState().theme),
         ei = (0, d.wjy)(el) ? w.BR.DARK : w.BR.LIGHT,
         ea = o.useMemo(
             () => ({
@@ -188,7 +190,7 @@ function F(e) {
                                                       (0, r.jsx)("img", {
                                                           alt: h.config.messages.gameTitle,
                                                           className: i()(M.contentHeaderLogotype, M.accentOnHover),
-                                                          src: (0, C.fh)(h, C.eC.LOGO_TYPE, ei).url,
+                                                          src: (0, S.fh)(h, S.eC.LOGO_TYPE, ei).url,
                                                       }),
                                                       (0, r.jsx)(T.Z, {}),
                                                       (0, r.jsxs)("div", {
@@ -216,7 +218,7 @@ function F(e) {
                                 (0, r.jsx)(R.Z, {
                                     videoTask: J,
                                     parentTransitionState: l,
-                                    onOptimisticProgressUpdate: Q,
+                                    onOptimisticProgressUpdate: G,
                                     autoplay: y,
                                     performanceClockStartTime: B,
                                     orientation: $,
@@ -292,9 +294,9 @@ function F(e) {
         }),
     });
 }
-function B(e) {
-    var { questId: t, overrideQuest: n, autoplay: o, openStartClockTime: l } = e,
-        i = (function (e, t) {
+function H(e) {
+    var { questId: t, overrideQuest: n, autoplay: l, openStartClockTime: i } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -315,25 +317,31 @@ function B(e) {
             }
             return o;
         })(e, ["questId", "overrideQuest", "autoplay", "openStartClockTime"]);
-    let a = (0, u.e7)([h.Z], () => h.Z.getQuest(t)),
-        s = null != n ? n : a;
-    return null != s
-        ? (0, r.jsx)(y.A, {
-              questOrQuests: s,
-              questContent: b.jn.VIDEO_MODAL,
-              minViewTimeSeconds: I.zw,
-              trackGuildAndChannelMetadata: !0,
-              sourceQuestContent: i.sourceQuestContent,
-              children: (e) =>
-                  (0, r.jsx)(
-                      F,
-                      V(L({}, i), {
-                          parentModalOpenStartClockTime: l,
-                          impressionRef: e,
-                          quest: s,
-                          autoplay: o,
-                      }),
-                  ),
+    let s = (0, u.e7)([h.Z], () => h.Z.getQuest(t)),
+        c = (0, u.e7)([h.Z], () => h.Z.getQuestConfig(t)),
+        d = null != n ? n : s,
+        m = null != n ? n.config : c,
+        f = o.useMemo(() => (null != m ? { questConfig: m } : null), [m]);
+    return null != d && null != m && null != f
+        ? (0, r.jsx)(F.Provider, {
+              value: f,
+              children: (0, r.jsx)(y.A, {
+                  questOrQuests: d,
+                  questContent: b.jn.VIDEO_MODAL,
+                  minViewTimeSeconds: I.zw,
+                  trackGuildAndChannelMetadata: !0,
+                  sourceQuestContent: a.sourceQuestContent,
+                  children: (e) =>
+                      (0, r.jsx)(
+                          B,
+                          V(L({}, a), {
+                              parentModalOpenStartClockTime: i,
+                              impressionRef: e,
+                              quest: d,
+                              autoplay: l,
+                          }),
+                      ),
+              }),
           })
         : null;
 }
