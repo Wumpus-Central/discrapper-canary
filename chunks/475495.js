@@ -7,8 +7,6 @@ t.exports = {
     statusLeft: "statusLeft_a51bc0",
     statusText: "statusText_a51bc0",
     statusIcon: "statusIcon_a51bc0",
-    statusIconConnected: "statusIconConnected_a51bc0",
-    statusIconDisconnected: "statusIconDisconnected_a51bc0",
     statusRight: "statusRight_a51bc0",
     expirationWarningContainer: "expirationWarningContainer_a51bc0",
 };

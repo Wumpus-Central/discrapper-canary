@@ -5,11 +5,11 @@ var i = n(54381),
     r = n.n(a),
     s = n(159691),
     o = n(481060),
-    d = n(906732),
-    c = n(987209),
+    c = n(906732),
+    d = n(987209),
     u = n(563132),
-    g = n(614277),
-    f = n(698708),
+    f = n(614277),
+    g = n(698708),
     m = n(844068),
     p = n(517730),
     x = n(436585),
@@ -19,9 +19,9 @@ var i = n(54381),
 function j(e) {
     var t;
     let { handleClose: n } = e,
-        { analyticsLocations: a } = (0, d.ZP)(),
+        { analyticsLocations: a } = (0, c.ZP)(),
         { skusById: j, selectedSkuId: b, application: _ } = (0, u.JL)(),
-        { isGift: I, giftRecipient: P } = (0, c.wD)();
+        { isGift: I, giftRecipient: P } = (0, d.wD)();
     r()(null != b, "Expected selectedSkuId"), r()(null != _, "Expected application");
     let w = j[b];
     return (r()(null != w, "Expected sku"),
@@ -36,10 +36,10 @@ function j(e) {
             }));
     }, [I, w, _, n, a]),
     I)
-        ? (0, i.jsxs)(g.C3, {
+        ? (0, i.jsxs)(f.C3, {
               children: [
                   (0, i.jsx)(m.Z, {}),
-                  (0, i.jsx)(f.Z, {}),
+                  (0, i.jsx)(g.Z, {}),
                   (0, i.jsxs)("div", {
                       className: C.confirmation,
                       children: [
@@ -49,18 +49,18 @@ function j(e) {
                               containerClassName: C.skuImage,
                           }),
                           (0, i.jsx)(o.Heading, {
-                              variant: "heading-xxl/bold",
+                              variant: "heading-xl/semibold",
                               className: C.confirmationHeader,
                               children: v.intl.string(v.t["5glWta"]),
                           }),
                           (0, i.jsx)(o.Text, {
                               variant: "text-md/normal",
+                              className: C.confirmationDescription,
                               children: v.intl.formatToPlainString(v.t["2VjPTw"], {
                                   itemName: w.name,
                                   giftRecipient: null != (t = null == P ? void 0 : P.username) ? t : "your recipient",
                               }),
                           }),
-                          (0, i.jsx)("div", { className: C.divider }),
                           (0, i.jsx)(s.zxk, {
                               onClick: n,
                               text: v.intl.string(v.t.cpT0Cq),
