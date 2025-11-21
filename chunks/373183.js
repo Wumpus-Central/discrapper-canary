@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => S });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -12,178 +12,169 @@ var r = n(54381),
     g = n(335131),
     p = n(597688),
     m = n(1870),
-    h = n(834943),
-    C = n(832149),
-    _ = n(911390),
-    b = n(388032),
-    v = n(213301),
-    x = n(290181),
-    E = n(250967),
-    O = n(182975),
-    S = n(655603);
-let y = l.memo(function (e) {
+    h = n(832149),
+    C = n(911390),
+    _ = n(388032),
+    b = n(213301),
+    v = n(290181),
+    x = n(250967),
+    E = n(182975),
+    O = n(655603);
+let S = l.memo(function (e) {
     let { category: t, rewardSkuId: n } = e,
-        { hasPromoUpsell: i } = h.Z.useConfig({ location: "RewardProductCard" }),
-        y = l.useRef(null),
-        { isHoveringOrFocusing: j } = (0, d.Z)(y),
-        { readyToClaim: k, collectibleProductSkuIds: I, collectedSkuIds: T } = (0, _.q)(t, n),
-        L = !(i || k),
-        P = (0, s.e7)([m.Z], () => m.Z.isClaiming === n);
-    return L
-        ? null
-        : (0, r.jsx)("div", {
-              ref: y,
-              className: a()(v.productCardContainer, x.defaultCursor, { [v.hovered]: j }),
-              "aria-label": b.intl.formatToPlainString(b.t.Ez6aHE, { category: t.name }),
-              children: (0, r.jsxs)("div", {
-                  className: v.productCardContentContainer,
-                  children: [
-                      (0, r.jsx)("img", {
-                          alt: "Reward Bow",
-                          src: S.Z,
-                          className: x.rewardImage,
-                      }),
-                      (0, r.jsx)("div", {
-                          className: v.headerContainer,
-                          children: (0, r.jsx)(u.IGR, {
-                              text: b.intl.string(b.t.rykAJ9),
-                              disableColor: !0,
-                              className: x.unlockRewardBadge,
-                          }),
-                      }),
-                      (0, r.jsxs)("div", {
-                          className: v.footerContainer,
-                          children: [
-                              (0, r.jsxs)("div", {
-                                  className: x.footerInfoContainer,
-                                  children: [
-                                      (0, r.jsxs)("div", {
-                                          className: x.footerInfo,
-                                          children: [
-                                              (0, r.jsx)(u.Heading, {
-                                                  variant: "heading-md/medium",
-                                                  color: "text-primary",
-                                                  lineClamp: 1,
-                                                  className: v.productName,
-                                                  children: b.intl.string(b.t["0mDmg/"]),
-                                              }),
-                                              (0, r.jsx)(c.u, {
-                                                  text: k
-                                                      ? b.intl.string(b.t.cKH3tk)
-                                                      : b.intl.formatToPlainString(b.t["8aMDPc"], {
-                                                            totalCount: I.length,
-                                                        }),
-                                                  align: "right",
-                                                  caretConfig: {
-                                                      position: "bottom",
-                                                      align: "end",
-                                                  },
-                                                  position: "top",
-                                                  children: (0, r.jsx)("span", {
-                                                      className: x.questionIconContainer,
-                                                      children: (0, r.jsx)(o.idN, { size: "xs" }),
-                                                  }),
-                                              }),
-                                          ],
-                                      }),
-                                      (0, r.jsx)("div", {
-                                          className: v.footerInfoShrinkOnHover,
-                                          "aria-hidden": !0,
-                                          children: (0, r.jsxs)("div", {
-                                              className: x.progressContainer,
-                                              children: [
-                                                  (0, r.jsx)(f.Z, {
-                                                      variant: f.y.BLUE,
-                                                      progress: T.length,
-                                                      maximum: I.length,
-                                                  }),
-                                                  (0, r.jsxs)("div", {
-                                                      className: a()(x.progressTextContainer, {
-                                                          [x.readyToClaimText]: k,
-                                                      }),
-                                                      children: [
-                                                          k
-                                                              ? (0, r.jsx)(o.kmB, {
-                                                                    size: "xs",
-                                                                    color: "currentColor",
-                                                                })
-                                                              : null,
-                                                          (0, r.jsx)(o.xvT, {
-                                                              variant: "text-xs/medium",
+        i = l.useRef(null),
+        { isHoveringOrFocusing: S } = (0, d.Z)(i),
+        { readyToClaim: y, collectibleProductSkuIds: j, collectedSkuIds: k } = (0, C.q)(t, n),
+        I = (0, s.e7)([m.Z], () => m.Z.isClaiming === n);
+    return (0, r.jsx)("div", {
+        ref: i,
+        className: a()(b.productCardContainer, v.defaultCursor, { [b.hovered]: S }),
+        "aria-label": _.intl.formatToPlainString(_.t.Ez6aHE, { category: t.name }),
+        children: (0, r.jsxs)("div", {
+            className: b.productCardContentContainer,
+            children: [
+                (0, r.jsx)("img", {
+                    alt: "Reward Bow",
+                    src: O.Z,
+                    className: v.rewardImage,
+                }),
+                (0, r.jsx)("div", {
+                    className: b.headerContainer,
+                    children: (0, r.jsx)(u.IGR, {
+                        text: _.intl.string(_.t.rykAJ9),
+                        disableColor: !0,
+                        className: v.unlockRewardBadge,
+                    }),
+                }),
+                (0, r.jsxs)("div", {
+                    className: b.footerContainer,
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: v.footerInfoContainer,
+                            children: [
+                                (0, r.jsxs)("div", {
+                                    className: v.footerInfo,
+                                    children: [
+                                        (0, r.jsx)(u.Heading, {
+                                            variant: "heading-md/medium",
+                                            color: "text-primary",
+                                            lineClamp: 1,
+                                            className: b.productName,
+                                            children: _.intl.string(_.t["0mDmg/"]),
+                                        }),
+                                        (0, r.jsx)(c.u, {
+                                            text: y
+                                                ? _.intl.string(_.t.cKH3tk)
+                                                : _.intl.formatToPlainString(_.t["8aMDPc"], { totalCount: j.length }),
+                                            align: "right",
+                                            caretConfig: {
+                                                position: "bottom",
+                                                align: "end",
+                                            },
+                                            position: "top",
+                                            children: (0, r.jsx)("span", {
+                                                className: v.questionIconContainer,
+                                                children: (0, r.jsx)(o.idN, { size: "xs" }),
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                                (0, r.jsx)("div", {
+                                    className: b.footerInfoShrinkOnHover,
+                                    "aria-hidden": !0,
+                                    children: (0, r.jsxs)("div", {
+                                        className: v.progressContainer,
+                                        children: [
+                                            (0, r.jsx)(f.Z, {
+                                                variant: f.y.BLUE,
+                                                progress: k.length,
+                                                maximum: j.length,
+                                            }),
+                                            (0, r.jsxs)("div", {
+                                                className: a()(v.progressTextContainer, { [v.readyToClaimText]: y }),
+                                                children: [
+                                                    y
+                                                        ? (0, r.jsx)(o.kmB, {
+                                                              size: "xs",
                                                               color: "currentColor",
-                                                              children: b.intl.formatToPlainString(b.t["5TwASM"], {
-                                                                  collectedCount: T.length,
-                                                                  totalCount: I.length,
-                                                              }),
-                                                          }),
-                                                      ],
-                                                  }),
-                                              ],
-                                          }),
-                                      }),
-                                  ],
-                              }),
-                              (0, r.jsx)("div", {
-                                  className: v.footerButtonContainer,
-                                  children: (0, r.jsx)(o.hE2, {
-                                      wrap: !1,
-                                      className: v.footerButtonGroup,
-                                      fullWidth: !0,
-                                      children: (0, r.jsx)(o.zxk, {
-                                          variant: "primary",
-                                          onClick: (e) => {
-                                              e.stopPropagation(),
-                                                  k &&
-                                                      (0, g.wW)(t.skuId, n)
-                                                          .then(() => {
-                                                              let e = p.Z.getProduct(n);
-                                                              null != e &&
-                                                                  (0, C.Z)({
-                                                                      product: e,
-                                                                      analyticsLocations: [],
-                                                                      overrideGraphic: {
-                                                                          type: "video",
-                                                                          src: O.Z,
-                                                                          fallbackImageSrc: E.Z,
-                                                                          loop: !0,
-                                                                          loopAt: 6,
-                                                                          aspectRatio: "16/9",
-                                                                      },
-                                                                  });
                                                           })
-                                                          .catch(() => {
-                                                              (0, u.ZDy)(() =>
-                                                                  Promise.resolve((e) =>
-                                                                      (0, r.jsx)(o.Modal, {
-                                                                          transitionState: e.transitionState,
-                                                                          onClose: e.onClose,
-                                                                          size: "sm",
-                                                                          title: b.intl.string(b.t.SRTlyA),
-                                                                          actions: [
-                                                                              {
-                                                                                  text: b.intl.string(b.t.TyCVIq),
-                                                                                  onClick: e.onClose,
-                                                                                  variant: "primary",
-                                                                              },
-                                                                          ],
-                                                                          children: (0, r.jsx)("div", {
-                                                                              children: b.intl.string(b.t["0YpIF/"]),
-                                                                          }),
-                                                                      }),
-                                                                  ),
-                                                              );
-                                                          });
-                                          },
-                                          text: b.intl.string(b.t.VnVTNc),
-                                          fullWidth: !0,
-                                          disabled: !k,
-                                          loading: P,
-                                      }),
-                                  }),
-                              }),
-                          ],
-                      }),
-                  ],
-              }),
-          });
+                                                        : null,
+                                                    (0, r.jsx)(o.xvT, {
+                                                        variant: "text-xs/medium",
+                                                        color: "currentColor",
+                                                        children: _.intl.formatToPlainString(_.t["5TwASM"], {
+                                                            collectedCount: k.length,
+                                                            totalCount: j.length,
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                }),
+                            ],
+                        }),
+                        (0, r.jsx)("div", {
+                            className: b.footerButtonContainer,
+                            children: (0, r.jsx)(o.hE2, {
+                                wrap: !1,
+                                className: b.footerButtonGroup,
+                                fullWidth: !0,
+                                children: (0, r.jsx)(o.zxk, {
+                                    variant: "primary",
+                                    onClick: (e) => {
+                                        e.stopPropagation(),
+                                            y &&
+                                                (0, g.wW)(t.skuId, n)
+                                                    .then(() => {
+                                                        let e = p.Z.getProduct(n);
+                                                        null != e &&
+                                                            (0, h.Z)({
+                                                                product: e,
+                                                                analyticsLocations: [],
+                                                                overrideGraphic: {
+                                                                    type: "video",
+                                                                    src: E.Z,
+                                                                    fallbackImageSrc: x.Z,
+                                                                    loop: !0,
+                                                                    loopAt: 6,
+                                                                    aspectRatio: "16/9",
+                                                                },
+                                                            });
+                                                    })
+                                                    .catch(() => {
+                                                        (0, u.ZDy)(() =>
+                                                            Promise.resolve((e) =>
+                                                                (0, r.jsx)(o.Modal, {
+                                                                    transitionState: e.transitionState,
+                                                                    onClose: e.onClose,
+                                                                    size: "sm",
+                                                                    title: _.intl.string(_.t.SRTlyA),
+                                                                    actions: [
+                                                                        {
+                                                                            text: _.intl.string(_.t.TyCVIq),
+                                                                            onClick: e.onClose,
+                                                                            variant: "primary",
+                                                                        },
+                                                                    ],
+                                                                    children: (0, r.jsx)("div", {
+                                                                        children: _.intl.string(_.t["0YpIF/"]),
+                                                                    }),
+                                                                }),
+                                                            ),
+                                                        );
+                                                    });
+                                    },
+                                    text: _.intl.string(_.t.VnVTNc),
+                                    fullWidth: !0,
+                                    disabled: !y,
+                                    loading: I,
+                                }),
+                            }),
+                        }),
+                    ],
+                }),
+            ],
+        }),
+    });
 });
