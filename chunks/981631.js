@@ -2739,6 +2739,7 @@ var tD = (function (e) {
             (e.GLOBAL_DISCOVERY_QUESTS = "Global Discovery Quests"),
             (e.BOGO_PROMOTION_ACTION_SHEET = "Bogo Promotion Action Sheet"),
             (e.BOGO_PROMOTION_MARKETING_PAGE_BANNER = "Bogo Promotion Marketing Page Banner"),
+            (e.PREMIUM_MARKETING_MOMENT_ACTION_SHEET = "Premium Marketing Moment Action Sheet"),
             e
         );
     })({});

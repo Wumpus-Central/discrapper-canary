@@ -26,6 +26,7 @@ class l extends o.Z {
                 readUnknownField: !0,
                 readerFactory: (e) => new i.o(e, t),
             }),
+            promotionId: e.promotion_id,
         });
     }
     constructor(e) {
@@ -33,8 +34,10 @@ class l extends o.Z {
             s(this, "id", void 0),
             s(this, "componentType", void 0),
             s(this, "properties", void 0),
+            s(this, "promotionId", void 0),
             (this.id = e.id),
             (this.componentType = e.componentType),
-            (this.properties = e.properties);
+            (this.properties = e.properties),
+            (this.promotionId = e.promotionId);
     }
 }
