@@ -1,1 +1,1 @@
-e.exports = { container: "container__69f5f" };
+e.exports = { colorPicker: "colorPicker__69f5f" };

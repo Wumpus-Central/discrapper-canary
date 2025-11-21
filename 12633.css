@@ -48718,7 +48718,7 @@ html:not(.chat-input) .inputInner_b1f01d {
     display: flex
 }
 
-.cardsList__9d597 {
+.container__9d597 {
     --custom-lift-hover: 2px;
     --custom-peek-base: 8px;
     --custom-peek-hover: 2px;
@@ -48726,13 +48726,13 @@ html:not(.chat-input) .inputInner_b1f01d {
     --custom-transition-duration: 200ms
 }
 
+.container__9d597:has(.hasMultipleCards__9d597) {
+    padding-bottom: var(--custom-peek-base)
+}
+
 .cardsList__9d597,
 .firstCardContainer__9d597 {
     position: relative
-}
-
-.hasMultipleCards__9d597 .firstCardContainer__9d597 {
-    margin-bottom: var(--custom-peek-base)
 }
 
 .hasMultipleCards__9d597 .firstCardContainer__9d597 .card__9d597 {
@@ -48744,8 +48744,8 @@ html:not(.chat-input) .inputInner_b1f01d {
     transition: transform var(--custom-transition-duration) ease-in-out
 }
 
-.hasMultipleCards__9d597.cardsList__9d597:focus-within .firstCardContainer__9d597 .card__9d597,
-.hasMultipleCards__9d597.cardsList__9d597:hover .firstCardContainer__9d597 .card__9d597 {
+.hasMultipleCards__9d597:focus-within .firstCardContainer__9d597 .card__9d597,
+.hasMultipleCards__9d597:hover .firstCardContainer__9d597 .card__9d597 {
     transform: translateY(calc(var(--custom-lift-hover)*-1))
 }
 
@@ -52027,7 +52027,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59363,9 +59363,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

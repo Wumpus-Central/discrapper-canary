@@ -16,6 +16,7 @@ function d(e) {
         ? null
         : (0, r.jsxs)("section", {
               "aria-labelledby": null != n ? d : void 0,
+              className: u.container,
               children: [
                   null != n &&
                       (0, r.jsx)(s.nn4, {

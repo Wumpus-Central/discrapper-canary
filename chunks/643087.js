@@ -45,7 +45,6 @@ class f extends o.PureComponent {
                 onClose: t,
                 children: (0, n.jsxs)(i.Kqy, {
                     gap: 16,
-                    className: u.container,
                     children: [
                         (0, n.jsx)(i.oil, {
                             label: p.intl.string(p.t.tGRbjA),
@@ -58,6 +57,7 @@ class f extends o.PureComponent {
                         (0, n.jsx)(i.gNt, {
                             label: p.intl.string(p.t.xpurRF),
                             children: (0, n.jsx)(b, {
+                                className: u.colorPicker,
                                 defaultColor: h.Wyy,
                                 colors: h.pmI,
                                 value: null != o ? o : h.Wyy,
