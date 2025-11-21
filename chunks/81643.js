@@ -1,16 +1,17 @@
 n.d(t, {
-    AY: () => x,
-    F5: () => L,
+    AY: () => M,
+    F5: () => x,
     Jm: () => S,
-    L0: () => N,
+    L0: () => R,
     L5: () => I,
     M$: () => A,
-    WD: () => w,
+    WD: () => L,
     bj: () => O,
-    g0: () => C,
-    kJ: () => P,
-    l6: () => D,
-    pY: () => R,
+    g0: () => N,
+    gD: () => C,
+    kJ: () => D,
+    l6: () => w,
+    pY: () => P,
     sf: () => v,
     yo: () => T,
 }),
@@ -62,13 +63,17 @@ function A() {
     let e = _.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
-var C = (function (e) {
+function C() {
+    let e = (0, i.e7)([_.default], () => _.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
+}
+var N = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
-    N = (function (e) {
+    R = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
-function R(e, t) {
+function P(e, t) {
     let n = f.Z.getMessage(e, t);
     if (
         null == n ||
@@ -81,21 +86,21 @@ function R(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
-function P() {
+function D() {
     let e = _.default.getCurrentUser();
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function D() {
+function w() {
     let e = (0, i.e7)([_.default], () => _.default.getCurrentUser());
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function w(e) {
+function L(e) {
     let {
             onComplete: t,
             entryPoint: n,
@@ -152,7 +157,7 @@ function w(e) {
         initiateAgeVerification: I,
     };
 }
-function L(e) {
+function x(e) {
     let t = (0, i.e7)([_.default], () => {
             var e;
             return null == (e = _.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;
@@ -166,6 +171,6 @@ function L(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
-function x(e) {
+function M(e) {
     return null != e && m.dx.has(e);
 }
